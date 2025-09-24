@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(781311);
+n.d(t, { Z: () => h }), n(388685), n(290780), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -12,67 +12,75 @@ var r = n(951288),
     _ = n(388032),
     p = n(982538);
 let h = function (e) {
-    let { questId: t, setQuestId: n, quest: h, refreshQuest: m } = e,
-        [g, E] = i.useState(!1),
-        [b, y] = i.useState(!1),
-        O = i.useRef(null),
-        v = (0, a.Wu)([u.Z], () => [...u.Z.quests.values()]),
-        I = (0, a.e7)([u.Z], () => (null != t ? u.Z.getFetchQuestPreviewError(t) : null), [t]),
-        T = (0, a.e7)([u.Z], () => null != t && u.Z.isFetchingQuestPreview(t), [t]),
-        S = i.useMemo(
-            () =>
-                v.map((e) => {
-                    var t, n, r;
-                    return {
-                        label: ""
-                            .concat(
-                                null != (r = null == (n = e.config) || null == (t = n.messages) ? void 0 : t.questName)
-                                    ? r
-                                    : e.id,
-                                " (",
-                            )
-                            .concat(e.id, ")"),
-                        value: e.id,
-                    };
-                }),
-            [v],
-        ),
-        A = i.useCallback(async () => {
-            if (null != t) {
-                E(!0);
+    var t, n, h;
+    let { questId: m, setQuestId: g, quest: E, refreshQuest: b } = e,
+        [y, O] = i.useState(!1),
+        [v, I] = i.useState(!1),
+        T = i.useRef(null),
+        S = (0, a.Wu)([u.Z], () => [...u.Z.quests.values()]),
+        A = (0, a.e7)([u.Z], () => (null != m ? u.Z.getFetchQuestPreviewError(m) : null), [m]),
+        C = (0, a.e7)([u.Z], () => null != m && u.Z.isFetchingQuestPreview(m), [m]),
+        N = i.useMemo(() => {
+            let e = S.map((e) => {
+                var t, n, r;
+                return {
+                    label: ""
+                        .concat(
+                            null != (r = null == (n = e.config) || null == (t = n.messages) ? void 0 : t.questName)
+                                ? r
+                                : e.id,
+                            " (",
+                        )
+                        .concat(e.id, ")"),
+                    value: e.id,
+                };
+            });
+            return (
+                null == m ||
+                    e.some((e) => e.value === m) ||
+                    e.unshift({
+                        label: m,
+                        value: m,
+                    }),
+                e
+            );
+        }, [S, m]),
+        R = i.useCallback(async () => {
+            if (null != m) {
+                O(!0);
                 try {
-                    await (0, c.Wf)(t, 1);
+                    await (0, c.Wf)(m, 1);
                 } finally {
-                    E(!1);
+                    O(!1);
                 }
             }
-        }, [t, E]),
-        C = i.useCallback(async () => {
-            if (null != t) {
-                E(!0);
+        }, [m, O]),
+        P = i.useCallback(async () => {
+            if (null != m) {
+                O(!0);
                 try {
-                    await (0, c.eT)(t);
+                    await (0, c.eT)(m);
                 } finally {
-                    E(!1);
+                    O(!1);
                 }
             }
-        }, [t, E]),
-        N = i.useCallback(async () => {
-            if (null != t) {
-                E(!0);
+        }, [m, O]),
+        w = i.useCallback(async () => {
+            if (null != m) {
+                O(!0);
                 try {
                     let e = Math.random();
-                    await (0, c.Wf)(t, e);
+                    await (0, c.Wf)(m, e);
                 } finally {
-                    E(!1);
+                    O(!1);
                 }
             }
-        }, [t, E]),
-        R = i.useCallback(
+        }, [m, O]),
+        D = i.useCallback(
             (e) => {
-                (0, l.Ew)(e) || null == n || n(e);
+                (0, l.Ew)(e) || null == g || g(e);
             },
-            [n],
+            [g],
         );
     return (0, r.jsxs)("div", {
         className: p.controlBar,
@@ -84,73 +92,87 @@ let h = function (e) {
                         children: (0, r.jsxs)("div", {
                             className: p.questInput,
                             children: [
-                                (0, r.jsx)(o.VcW, {
-                                    "aria-label": "Quest ID",
-                                    options: S,
-                                    value: t,
-                                    onChange: R,
-                                    placeholder: "Select or enter Quest ID",
-                                    clearable: !0,
-                                    filter: (e, t) => {
-                                        if ((0, l.Ew)(null == t ? void 0 : t.trim())) return e;
-                                        let n = e.filter(
-                                            (e) =>
-                                                e.label.toLowerCase().includes(t.toLowerCase()) ||
-                                                e.value.toLowerCase().includes(t.toLowerCase()),
-                                        );
-                                        return 0 === n.length && "" !== t.trim()
-                                            ? [
-                                                  {
-                                                      label: t.trim(),
-                                                      value: t.trim(),
-                                                  },
-                                              ]
-                                            : n;
+                                (0, r.jsx)(
+                                    o.VcW,
+                                    {
+                                        "aria-label": "Quest ID",
+                                        options: N,
+                                        value: m,
+                                        onChange: D,
+                                        placeholder: "Select or enter Quest ID",
+                                        clearable: !0,
+                                        filter: (e, t) => {
+                                            if ((0, l.Ew)(null == t ? void 0 : t.trim())) return e;
+                                            let n = e.filter(
+                                                (e) =>
+                                                    e.label.toLowerCase().includes(t.toLowerCase()) ||
+                                                    e.value.toLowerCase().includes(t.toLowerCase()),
+                                            );
+                                            return 0 === n.length && "" !== t.trim()
+                                                ? [
+                                                      {
+                                                          label: t.trim(),
+                                                          value: t.trim(),
+                                                      },
+                                                  ]
+                                                : n;
+                                        },
                                     },
-                                }),
+                                    ""
+                                        .concat(m, "-")
+                                        .concat(
+                                            null !=
+                                                (h =
+                                                    null == E || null == (n = E.config) || null == (t = n.messages)
+                                                        ? void 0
+                                                        : t.questName)
+                                                ? h
+                                                : "",
+                                        ),
+                                ),
                                 (0, r.jsx)(o.hU, {
-                                    onClick: m,
+                                    onClick: b,
                                     "aria-label": _.intl.string(_.t.wzzjk5),
                                     icon: o.DuK,
-                                    loading: T,
+                                    loading: C,
                                 }),
                             ],
                         }),
                     }),
                 }),
             }),
-            null != t &&
-                null != h &&
+            null != m &&
+                null != E &&
                 (0, r.jsx)("div", {
                     className: p.controlsSection,
                     children: (0, r.jsxs)(o.hE2, {
                         className: p.controlButtons,
                         children: [
                             (0, r.jsx)(o.zxk, {
-                                onClick: A,
-                                disabled: g,
-                                loading: g,
+                                onClick: R,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: "Complete Quest",
                             }),
                             (0, r.jsx)(o.zxk, {
-                                onClick: C,
-                                disabled: g,
-                                loading: g,
+                                onClick: P,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: "Reset Quest",
                             }),
                             (0, r.jsx)(o.zxk, {
-                                onClick: N,
-                                disabled: g,
-                                loading: g,
+                                onClick: w,
+                                disabled: y,
+                                loading: y,
                                 variant: "secondary",
                                 text: "Random Progress",
                             }),
                             (0, r.jsx)(o.yRy, {
-                                targetElementRef: O,
-                                shouldShow: b,
-                                onRequestClose: () => y(!1),
+                                targetElementRef: T,
+                                shouldShow: v,
+                                onRequestClose: () => I(!1),
                                 position: "bottom",
                                 align: "center",
                                 renderPopout: () =>
@@ -159,15 +181,15 @@ let h = function (e) {
                                         children: (0, r.jsx)("div", {
                                             className: p.copyInput,
                                             children: (0, r.jsx)(s.Z, {
-                                                value: f.$w.SETTINGS_QUEST_PREVIEW_TOOL_2(t),
+                                                value: f.$w.QUEST_PREVIEW_TOOL_2(m),
                                                 text: "Copy link",
                                             }),
                                         }),
                                     }),
                                 children: () =>
                                     (0, r.jsx)(o.hU, {
-                                        buttonRef: O,
-                                        onClick: () => y(!b),
+                                        buttonRef: T,
+                                        onClick: () => I(!v),
                                         "aria-label": "Share quest link",
                                         icon: o.TIy,
                                         variant: "secondary",
@@ -176,8 +198,8 @@ let h = function (e) {
                         ],
                     }),
                 }),
-            null != I ? (0, r.jsx)(d.W, { error: I }) : null,
-            T ? (0, r.jsx)(o.$jN, {}) : null,
+            null != A ? (0, r.jsx)(d.W, { error: A }) : null,
+            C ? (0, r.jsx)(o.$jN, {}) : null,
         ],
     });
 };

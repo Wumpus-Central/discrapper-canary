@@ -33,6 +33,7 @@ var c = (function (e) {
         (e.FEATURES = "FEATURES"),
         (e.SHOP = "SHOP"),
         (e.ACTIVITIES = "ACTIVITIES"),
+        (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
         e
     );
 })({});
@@ -53,6 +54,8 @@ function u(e) {
             return "guild_settings";
         case "QUEST_HOME":
             return "quest_home";
+        case "QUEST_PREVIEW_TOOL":
+            return "quest_preview_tool";
         case "DISCOVERY_GAME_RESULTS":
             return "discovery_game";
         case "SHOP":

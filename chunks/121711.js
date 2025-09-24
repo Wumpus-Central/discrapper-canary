@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ec });
+n.d(t, { Z: () => eh }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,56 +12,61 @@ var r = n(951288),
     f = n(607070),
     h = n(100527),
     g = n(213609),
-    m = n(335131),
-    b = n(252618),
-    _ = n(70097),
-    O = n(632285),
-    E = n(979233),
-    y = n(17845),
-    v = n(374939),
-    I = n(233374),
-    C = n(611928),
-    S = n(763433),
-    T = n(283293),
-    N = n(507808),
-    P = n(825102),
-    j = n(775451),
-    x = n(451478),
-    A = n(626135),
-    Z = n(526167),
-    w = n(63063),
-    L = n(617136),
-    R = n(113434),
-    D = n(833435),
-    k = n(497505),
-    M = n(220068),
-    U = n(937797),
-    G = n(110560),
-    B = n(150560),
-    V = n(672188),
-    H = n(558652),
-    F = n(736683),
-    z = n(879438),
-    W = n(251360),
-    Y = n(466962),
-    K = n(452081),
-    q = n(46140),
-    Q = n(981631),
-    X = n(215023),
-    J = n(388032),
-    $ = n(728963),
-    ee = n(13299),
-    et = n(890631),
-    en = n(164792),
-    er = n(524777),
-    ei = n(913713),
-    el = n(431115);
-function ea(e) {
+    m = n(625128),
+    b = n(362762),
+    _ = n(335131),
+    O = n(252618),
+    E = n(70097),
+    y = n(632285),
+    v = n(979233),
+    I = n(17845),
+    S = n(374939),
+    C = n(233374),
+    T = n(611928),
+    N = n(763433),
+    P = n(283293),
+    j = n(507808),
+    x = n(825102),
+    A = n(775451),
+    Z = n(451478),
+    w = n(626135),
+    L = n(526167),
+    R = n(63063),
+    D = n(617136),
+    k = n(113434),
+    M = n(833435),
+    U = n(497505),
+    G = n(220068),
+    B = n(937797),
+    V = n(36243),
+    H = n(877109),
+    F = n(110560),
+    z = n(150560),
+    W = n(672188),
+    Y = n(558652),
+    K = n(736683),
+    q = n(879438),
+    Q = n(251360),
+    X = n(466962),
+    J = n(452081),
+    $ = n(46140),
+    ee = n(981631),
+    et = n(215023),
+    en = n(186901),
+    er = n(388032),
+    ei = n(728963),
+    el = n(13299),
+    ea = n(890631),
+    eo = n(164792),
+    es = n(524777),
+    ec = n(913713),
+    eu = n(431115);
+function ed(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, P.WX)({ location: q.dr.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, x.WX)({ location: $.dr.QUEST_HOME_DESKTOP }),
         l = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        o = (0, u.e7)([x.Z], () => x.Z.isFocused()),
-        { ref: s, inViewport: c } = (0, V.a)(),
+        o = (0, u.e7)([Z.Z], () => Z.Z.isFocused()),
+        { ref: s, inViewport: c } = (0, W.a)(),
         d = i.useRef(null);
     if (
         (i.useEffect(() => {
@@ -72,60 +77,60 @@ function ea(e) {
         }, [l, c, o]),
         n)
     ) {
-        let e = (0, Z.rO)();
-        return (0, r.jsx)(_.Z, {
+        let e = (0, L.rO)();
+        return (0, r.jsx)(E.Z, {
             ref: (e) => {
                 (d.current = e), (s.current = e);
             },
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: a()($.bannerAsset, $.orbsBannerAsset),
+            className: a()(ei.bannerAsset, ei.orbsBannerAsset),
             onProgress: t,
             "data-mtctest-ignore": "true",
             controls: !1,
             children: (0, r.jsx)("source", {
-                src: e ? et.Z : en.Z,
+                src: e ? ea.Z : eo.Z,
                 type: e ? "video/mp4" : "video/webm",
             }),
         });
     }
     return (0, r.jsx)("img", {
-        src: ee.ZP,
-        className: a()($.bannerAsset, $.oversizedImg),
+        src: el.ZP,
+        className: a()(ei.bannerAsset, ei.oversizedImg),
         alt: "",
         onLoad: t,
     });
 }
-function eo(e) {
+function ep(e) {
     let { onLoadComplete: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("img", {
-                src: er.ZP,
-                className: a()($.bannerAsset, $.redirectNoticeBannerAsset),
+                src: es.ZP,
+                className: a()(ei.bannerAsset, ei.redirectNoticeBannerAsset),
                 alt: "",
             }),
             (0, r.jsx)("img", {
-                src: el.ZP,
-                className: a()($.bannerAsset, $.redirectNoticeBannerAsset),
+                src: eu.ZP,
+                className: a()(ei.bannerAsset, ei.redirectNoticeBannerAsset),
                 alt: "",
                 onLoad: t,
             }),
             (0, r.jsx)("img", {
-                src: ei.ZP,
-                className: a()($.bannerAsset, $.redirectNoticeBannerAsset),
+                src: ec.ZP,
+                className: a()(ei.bannerAsset, ei.redirectNoticeBannerAsset),
                 alt: "",
             }),
         ],
     });
 }
-function es(e) {
+function ef(e) {
     let { onLoadComplete: t, onScroll: n, onSelectTab: l, selectedTabId: a, scrollerRef: o, tabs: c } = e,
         u = i.useCallback(() => {
-            (0, G.navigateToQuestHome)({ fromContent: k.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
-                A.default.track(
-                    Q.rMx.QUEST_CONTENT_CLICKED,
+            (0, F.navigateToQuestHome)({ fromContent: U.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+                w.default.track(
+                    ee.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -152,52 +157,52 @@ function es(e) {
                         return e;
                     })(
                         {
-                            cta_name: L.jZ.VIEW_QUESTS,
+                            cta_name: D.jZ.VIEW_QUESTS,
                             click_id: (0, s.Z)(),
                             is_targeted: !1,
                         },
-                        (0, L.mH)(k.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
+                        (0, D.mH)(U.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
                     ),
                 );
         }, []);
-    return (0, r.jsx)(Y.t.Provider, {
+    return (0, r.jsx)(X.t.Provider, {
         value: o,
-        children: (0, r.jsxs)(T.Z, {
+        children: (0, r.jsxs)(P.Z, {
             onScroll: n,
             ref: o,
             children: [
-                (0, r.jsx)(S.a, {
+                (0, r.jsx)(N.a, {
                     selectedTabId: a,
                     handleTransition: l,
                     tabs: c,
                     icon: d.qDn,
                 }),
-                (0, r.jsx)(y.Z, {
-                    title: J.intl.string(J.t.z8YP2N),
+                (0, r.jsx)(I.Z, {
+                    title: er.intl.string(er.t.z8YP2N),
                     titleColor: "always-white",
                     button: (0, r.jsx)(d.zxk, {
                         variant: "overlay-primary",
-                        text: J.intl.string(J.t.GURBQk),
+                        text: er.intl.string(er.t.GURBQk),
                         onClick: u,
                     }),
-                    className: $.redirectNoticeBannerContainer,
-                    children: (0, r.jsx)(eo, { onLoadComplete: t }),
+                    className: ei.redirectNoticeBannerContainer,
+                    children: (0, r.jsx)(ep, { onLoadComplete: t }),
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(S.Z, {
                     children: (0, r.jsxs)("div", {
-                        className: $.redirectNoticeContainer,
+                        className: ei.redirectNoticeContainer,
                         children: [
                             (0, r.jsx)(d.X6q, {
                                 variant: "heading-xl/semibold",
-                                children: J.intl.string(J.t.z8YP2N),
+                                children: er.intl.string(er.t.z8YP2N),
                             }),
                             (0, r.jsx)(d.Text, {
                                 color: "text-secondary",
                                 variant: "text-md/normal",
-                                children: J.intl.string(J.t["HdKh6+"]),
+                                children: er.intl.string(er.t["HdKh6+"]),
                             }),
                             (0, r.jsx)(d.Avr, {
-                                text: J.intl.string(J.t["1CdL8f"]),
+                                text: er.intl.string(er.t["1CdL8f"]),
                                 onClick: u,
                                 textVariant: "text-md/normal",
                                 variant: "primary",
@@ -209,26 +214,27 @@ function es(e) {
         }),
     });
 }
-let ec = function () {
+let eh = function () {
     var e;
-    let { enabled: t } = U.m8.useConfig({ location: q.dr.QUEST_HOME_DESKTOP }),
+    let { enabled: t } = B.m8.useConfig({ location: $.dr.QUEST_HOME_DESKTOP }),
         n = (0, o.TH)(),
-        l = (null == (e = (0, o.LX)(n.pathname, Q.Z5c.QUEST_HOME)) ? void 0 : e.isExact) === !0,
+        l = (null == (e = (0, o.LX)(n.pathname, ee.Z5c.QUEST_HOME)) ? void 0 : e.isExact) === !0,
         s = t && l,
-        { selectedTab: u, onSelectTab: f, tabs: _ } = (0, K.z)({ withClaimedQuestsTab: !s });
+        f = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
+        { selectedTab: E, onSelectTab: Z, tabs: w } = (0, J.z)({ withClaimedQuestsTab: !s });
     i.useLayoutEffect(() => {
-        s && u === R.e5.CLAIMED && M.Z.setState({ tab: R.e5.ALL });
-    }, [s, u]);
-    let { onScroll: x, scrollPosition: A } = (0, E.M)(),
-        Z = B.Z.getState().getUtmCurrentContext(),
-        L = (0, D._)({ location: q.dr.QUEST_HOME_DESKTOP }) ? F.Z : F.j,
-        k = (0, z.z)((e) => e.registerAssetLoad),
-        G = i.useRef(Z);
+        s && E === k.e5.CLAIMED && G.Z.setState({ tab: k.e5.ALL });
+    }, [s, E]);
+    let { onScroll: L, scrollPosition: D } = (0, v.M)(),
+        U = z.Z.getState().getUtmCurrentContext(),
+        F = (0, M._)({ location: $.dr.QUEST_HOME_DESKTOP }) ? K.Z : K.j,
+        W = (0, q.z)((e) => e.registerAssetLoad),
+        el = i.useRef(U);
     i.useEffect(() => {
-        G.current = Z;
+        el.current = U;
     }),
         i.useEffect(() => {
-            let { current: e } = G;
+            let { current: e } = el;
             (0, g.h)({
                 name: c.ImpressionNames.QUEST_HOME,
                 type: c.ImpressionTypes.VIEW,
@@ -237,166 +243,186 @@ let ec = function () {
                     utm_medium_current: e.utmMediumCurrent,
                     utm_campaign_current: e.utmCampaignCurrent,
                     utm_content_current: e.utmContentCurrent,
-                    tab: u,
+                    tab: E,
                 },
             });
-        }, [u]);
-    let { enabled: V } = (0, P.WX)({ location: q.dr.QUEST_HOME_DESKTOP }),
-        ee = i.useCallback(() => {
-            if (V) return void window.open(Q.EYA.PAID_TERMS_ORBS);
-            window.open(w.Z.getArticleURL(Q.BhN.QUESTS_LEARN_MORE));
-        }, [V]);
-    (0, b.Tt)({ location: J.intl.string(J.t.JALI2N) });
-    let et = V ? J.intl.format(J.t.BCBIlp, {}) : J.intl.format(J.t.lmMBf3, {}),
-        en = V ? J.intl.format(J.t.U9FY0N, {}) : J.intl.string(J.t.oWCrBg),
-        er = i.useRef(null),
-        ei = i.useCallback(() => {
-            (0, N.Y)({
-                pageType: Q.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: Q.jXE.ORBS_BALANCE_MENU,
-                ctaObject: Q.qAy.CTA_TO_ORBS_SHOP,
+        }, [E]);
+    let { enabled: ea } = (0, x.WX)({ location: $.dr.QUEST_HOME_DESKTOP }),
+        eo = i.useCallback(() => {
+            if (ea) return void window.open(ee.EYA.PAID_TERMS_ORBS);
+            window.open(R.Z.getArticleURL(ee.BhN.QUESTS_LEARN_MORE));
+        }, [ea]);
+    (0, O.Tt)({ location: er.intl.string(er.t.JALI2N) });
+    let es = ea ? er.intl.format(er.t.BCBIlp, {}) : er.intl.format(er.t.lmMBf3, {}),
+        ec = ea ? er.intl.format(er.t.U9FY0N, {}) : er.intl.string(er.t.oWCrBg),
+        eu = i.useRef(null),
+        ep = i.useCallback(() => {
+            (0, j.Y)({
+                pageType: ee.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: ee.jXE.ORBS_BALANCE_MENU,
+                ctaObject: ee.qAy.CTA_TO_ORBS_SHOP,
             }),
-                (0, m.mK)({
+                (0, _.mK)({
                     openInLayer: !1,
-                    tab: X.AW.ORBS,
+                    tab: et.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: h.Z.ORBS_BALANCE_MENU,
                 });
         }, []);
+    i.useEffect(() => {
+        t && (0, p.Y)(ee.Z5c.QUEST_HOME_V2);
+    }, [t]),
+        i.useEffect(() => {
+            y.C.trigger();
+        }, []);
+    let eh = (0, V.T)({ location: $.dr.QUEST_PREVIEW_TOOL_2 });
     return (
         i.useEffect(() => {
-            t && (0, p.Y)(Q.Z5c.QUEST_HOME_V2);
-        }, [t]),
-        i.useEffect(() => {
-            O.C.trigger();
-        }, []),
-        (0, r.jsx)(W.k.Provider, {
-            value: { onAssetLoadComplete: k },
+            if (null != f || !eh) return;
+            let e = new URLSearchParams(n.search),
+                t = e.get(k.tR.TAB),
+                r = e.get(k.tR.QUEST_ID);
+            t === k.e5.PREVIEW_TOOL &&
+                m.Z.openNativeAppModal("quests", ee.Etm.DEEP_LINK, {
+                    type: en.jE.QUEST_PREVIEW_TOOL,
+                    params: {
+                        questId: r,
+                        tab: t,
+                    },
+                });
+        }, [n.search, f, eh]),
+        (0, r.jsx)(Q.k.Provider, {
+            value: { onAssetLoadComplete: W },
             children: (0, r.jsx)("div", {
-                className: $.container,
+                className: ei.container,
                 children: s
-                    ? (0, r.jsx)(es, {
-                          onSelectTab: f,
-                          onScroll: x,
-                          onLoadComplete: k,
-                          scrollerRef: er,
-                          selectedTabId: u,
-                          tabs: _,
+                    ? (0, r.jsx)(ef, {
+                          onSelectTab: Z,
+                          onScroll: L,
+                          onLoadComplete: W,
+                          scrollerRef: eu,
+                          selectedTabId: E,
+                          tabs: w,
                       })
-                    : V
-                      ? (0, r.jsx)(Y.t.Provider, {
-                            value: er,
-                            children: (0, r.jsxs)(T.Z, {
-                                onScroll: x,
-                                ref: er,
+                    : ea
+                      ? (0, r.jsx)(X.t.Provider, {
+                            value: eu,
+                            children: (0, r.jsxs)(P.Z, {
+                                onScroll: L,
+                                ref: eu,
                                 children: [
-                                    (0, r.jsx)(S.a, {
-                                        selectedTabId: u,
-                                        handleTransition: f,
-                                        tabs: _,
+                                    (0, r.jsx)(N.a, {
+                                        selectedTabId: E,
+                                        handleTransition: Z,
+                                        tabs: w,
                                         icon: d.qDn,
-                                        children: (0, r.jsx)(j.V9, {
-                                            analyticsPage: Q.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                            cardAlignment: j.ek.END,
-                                            ctaText: J.intl.string(J.t["J+vlIS"]),
-                                            ctaOnClick: ei,
+                                        children: (0, r.jsx)(A.V9, {
+                                            analyticsPage: ee.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                            cardAlignment: A.ek.END,
+                                            ctaText: er.intl.string(er.t["J+vlIS"]),
+                                            ctaOnClick: ep,
                                         }),
                                     }),
-                                    (0, r.jsxs)(y.Z, {
-                                        title: et,
-                                        description: en,
-                                        button: V
-                                            ? (0, r.jsxs)(d.hE2, {
-                                                  children: [
-                                                      (0, r.jsx)(d.zxk, {
-                                                          variant: "overlay-primary",
-                                                          text: J.intl.string(J.t["1Wm129"]),
-                                                          onClick: () =>
-                                                              (0, m.mK)({
-                                                                  openInLayer: !1,
-                                                                  tab: X.AW.ORBS,
-                                                                  analyticsLocations: [],
-                                                                  analyticsSource: h.Z.INTRO_TO_ORBS_QUEST_BANNER,
-                                                              }),
-                                                      }),
-                                                      (0, r.jsx)(d.zxk, {
-                                                          variant: "overlay-secondary",
-                                                          text: J.intl.string(J.t["7kTAgI"]),
-                                                          onClick: ee,
-                                                      }),
-                                                  ],
-                                              })
-                                            : (0, r.jsx)(d.zxk, {
-                                                  variant: "overlay-primary",
-                                                  text: J.intl.string(J.t.hvVgAQ),
-                                                  onClick: ee,
-                                                  icon: d.Gr1,
-                                                  iconPosition: "end",
-                                              }),
-                                        className: a()($.bannerContainer, { [$.orbsContainer]: V }),
-                                        children: [
-                                            (0, r.jsx)("div", {
-                                                className: a()($.bannerGradient, { [$.orbsGradient]: V }),
-                                            }),
-                                            (0, r.jsx)(ea, { onLoadComplete: k }),
-                                        ],
-                                    }),
-                                    (0, r.jsx)(v.Z, {
+                                    E !== k.e5.PREVIEW_TOOL &&
+                                        (0, r.jsxs)(I.Z, {
+                                            title: es,
+                                            description: ec,
+                                            button: ea
+                                                ? (0, r.jsxs)(d.hE2, {
+                                                      children: [
+                                                          (0, r.jsx)(d.zxk, {
+                                                              variant: "overlay-primary",
+                                                              text: er.intl.string(er.t["1Wm129"]),
+                                                              onClick: () =>
+                                                                  (0, _.mK)({
+                                                                      openInLayer: !1,
+                                                                      tab: et.AW.ORBS,
+                                                                      analyticsLocations: [],
+                                                                      analyticsSource: h.Z.INTRO_TO_ORBS_QUEST_BANNER,
+                                                                  }),
+                                                          }),
+                                                          (0, r.jsx)(d.zxk, {
+                                                              variant: "overlay-secondary",
+                                                              text: er.intl.string(er.t["7kTAgI"]),
+                                                              onClick: eo,
+                                                          }),
+                                                      ],
+                                                  })
+                                                : (0, r.jsx)(d.zxk, {
+                                                      variant: "overlay-primary",
+                                                      text: er.intl.string(er.t.hvVgAQ),
+                                                      onClick: eo,
+                                                      icon: d.Gr1,
+                                                      iconPosition: "end",
+                                                  }),
+                                            className: a()(ei.bannerContainer, { [ei.orbsContainer]: ea }),
+                                            children: [
+                                                (0, r.jsx)("div", {
+                                                    className: a()(ei.bannerGradient, { [ei.orbsGradient]: ea }),
+                                                }),
+                                                (0, r.jsx)(ed, { onLoadComplete: W }),
+                                            ],
+                                        }),
+                                    (0, r.jsx)(S.Z, {
                                         children:
-                                            u === R.e5.CLAIMED
-                                                ? (0, r.jsx)(L, { onSelectTab: f })
-                                                : (0, r.jsx)(H.Z, {}),
+                                            E === k.e5.CLAIMED
+                                                ? (0, r.jsx)(F, { onSelectTab: Z })
+                                                : E === k.e5.PREVIEW_TOOL
+                                                  ? (0, r.jsx)(H.Z, {})
+                                                  : (0, r.jsx)(Y.Z, {}),
                                     }),
                                 ],
                             }),
                         })
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsxs)(C.ZP, {
-                                    variant: C._6.OVERLAY,
+                                (0, r.jsxs)(T.ZP, {
+                                    variant: T._6.OVERLAY,
                                     children: [
-                                        (0, r.jsx)("div", { className: $.dragRegion }),
-                                        (0, r.jsx)(C.z6, { scrollPosition: A }),
-                                        (0, r.jsx)(C.aV, { icon: d.qDn }),
+                                        (0, r.jsx)("div", { className: ei.dragRegion }),
+                                        (0, r.jsx)(T.z6, { scrollPosition: D }),
+                                        (0, r.jsx)(T.aV, { icon: d.qDn }),
                                     ],
                                 }),
-                                (0, r.jsx)(Y.t.Provider, {
-                                    value: er,
-                                    children: (0, r.jsxs)(T.Z, {
-                                        onScroll: x,
-                                        ref: er,
+                                (0, r.jsx)(X.t.Provider, {
+                                    value: eu,
+                                    children: (0, r.jsxs)(P.Z, {
+                                        onScroll: L,
+                                        ref: eu,
                                         children: [
-                                            (0, r.jsxs)(y.Z, {
-                                                title: et,
-                                                description: en,
+                                            (0, r.jsxs)(I.Z, {
+                                                title: es,
+                                                description: ec,
                                                 button: (0, r.jsx)(d.zxk, {
                                                     variant: "overlay-primary",
-                                                    text: J.intl.string(J.t.hvVgAQ),
-                                                    onClick: ee,
+                                                    text: er.intl.string(er.t.hvVgAQ),
+                                                    onClick: eo,
                                                     icon: d.Gr1,
                                                     iconPosition: "end",
                                                 }),
-                                                className: a()($.bannerContainer, { [$.orbsContainer]: V }),
+                                                className: a()(ei.bannerContainer, { [ei.orbsContainer]: ea }),
                                                 children: [
                                                     (0, r.jsx)("div", {
-                                                        className: a()($.bannerGradient, { [$.orbsGradient]: V }),
+                                                        className: a()(ei.bannerGradient, { [ei.orbsGradient]: ea }),
                                                     }),
-                                                    (0, r.jsx)(ea, { onLoadComplete: k }),
+                                                    (0, r.jsx)(ed, { onLoadComplete: W }),
                                                 ],
                                             }),
-                                            (0, r.jsxs)(v.Z, {
+                                            (0, r.jsxs)(S.Z, {
                                                 children: [
                                                     (0, r.jsx)("div", {
-                                                        className: $.tabs,
-                                                        children: (0, r.jsx)(I.Z, {
-                                                            tabs: _,
-                                                            selectedTab: u,
-                                                            onTabSelect: f,
+                                                        className: ei.tabs,
+                                                        children: (0, r.jsx)(C.Z, {
+                                                            tabs: w,
+                                                            selectedTab: E,
+                                                            onTabSelect: Z,
                                                         }),
                                                     }),
-                                                    u === R.e5.CLAIMED
-                                                        ? (0, r.jsx)(L, { onSelectTab: f })
-                                                        : (0, r.jsx)(H.Z, {}),
+                                                    E === k.e5.CLAIMED
+                                                        ? (0, r.jsx)(F, { onSelectTab: Z })
+                                                        : E === k.e5.PREVIEW_TOOL
+                                                          ? (0, r.jsx)(H.Z, {})
+                                                          : (0, r.jsx)(Y.Z, {}),
                                                 ],
                                             }),
                                         ],

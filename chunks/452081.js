@@ -1,6 +1,6 @@
-n.d(t, { z: () => c });
+n.d(t, { z: () => c }), n(35282);
 var r = n(647438),
-    i = n(703656),
+    i = n(843611),
     l = n(823379),
     a = n(113434),
     o = n(220068),
@@ -8,9 +8,14 @@ var r = n(647438),
 function c(e) {
     let { withClaimedQuestsTab: t = !0 } = e,
         n = o.Z.useField("tab"),
-        c = r.useCallback((e) => {
-            (0, i.dL)("#"), o.Z.setState({ tab: e });
-        }, []);
+        c = (0, i.TH)(),
+        u = (0, a.aV)();
+    r.useEffect(() => {
+        o.Z.getState().initializeFromUrl(c.search, u);
+    }, [c.search, u]);
+    let d = r.useCallback((e) => {
+        o.Z.getState().setTab(e);
+    }, []);
     return {
         tabs: r.useMemo(
             () =>
@@ -25,10 +30,16 @@ function c(e) {
                               label: s.intl.string(s.t.zyNYND),
                           }
                         : null,
+                    u
+                        ? {
+                              id: a.e5.PREVIEW_TOOL,
+                              label: s.intl.string(s.t.BDUDam),
+                          }
+                        : null,
                 ].filter(l.lm),
-            [t],
+            [t, u],
         ),
         selectedTab: n,
-        onSelectTab: c,
+        onSelectTab: d,
     };
 }

@@ -104,7 +104,7 @@ function L(e) {
         N = [y.jn.QUEST_BAR_V2, y.jn.QUEST_BAR].includes(e.questContent),
         R = (0, p.O5)(),
         P = (0, h.aM)(),
-        w = (0, E.Yj)(e.quest),
+        w = (0, E.ly)(e.quest),
         D = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
             handleComplete: x,
@@ -194,7 +194,7 @@ function L(e) {
             [k, e.quest.id, null == n ? void 0 : n.id],
         ),
         J = i.useCallback(() => {
-            (0, c.uL)(S.Z5c.SETTINGS_QUEST_PREVIEW_TOOL_2(e.quest.id));
+            (0, c.uL)(S.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
         $ = e.shouldShowDisclosure && e.quest.id !== T.V6,
         { enabled: ee } = O.m8.useConfig({ location: T.dr.QUEST_CONTEXT_MENU });
