@@ -63,7 +63,14 @@ let b = 3,
                 e.body.eligibility
             );
         } catch (e) {
-            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED" }), d.Z.captureException(e);
+            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED" });
+            try {
+                d.Z.captureException(e);
+            } catch (e) {
+                d.Z.captureMessage(
+                    "Sentry Utils Capture Exception Failed along Marketing Campaign Eligibility Fetch Path",
+                );
+            }
         }
     };
 function O() {
