@@ -313,6 +313,10 @@ let i = {
         inlineRequire: () => n(645644).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
+    OverlayWidgetPinManager: {
+        actions: ["OVERLAY_UPDATE_OVERLAY_STATE", "LAYOUT_SET_PINNED"],
+        inlineRequire: () => n(264770).Z,
+    },
     OverlayWindowRAFManager: {
         actions: [
             "OVERLAY_UPDATE_OVERLAY_METHOD",
