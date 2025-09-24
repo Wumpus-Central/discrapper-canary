@@ -10,11 +10,12 @@ var r = n(951288),
     d = n(243778),
     f = n(59662),
     g = n(28682),
-    O = n(829210),
-    y = n(854014),
+    y = n(829210),
+    O = n(854014),
     E = n(921944),
-    b = n(845435);
-function p(e) {
+    b = n(388032),
+    p = n(845435);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,9 +41,9 @@ function p(e) {
     return e;
 }
 function T(e) {
-    let { root: t, header: n, footer: l } = e,
-        { showNavigationMobile: a } = (0, f.t)(),
-        c = i.useMemo(() => {
+    let { root: t, header: n, footer: l, onClose: a } = e,
+        { showNavigationMobile: c } = (0, f.t)(),
+        y = i.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -64,7 +65,7 @@ function T(e) {
                 e
             );
         }, [t.layout]),
-        [O, y] = i.useMemo(() => {
+        [O, E] = i.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -75,22 +76,33 @@ function T(e) {
             );
         }, [t.layout]);
     return (0, r.jsx)(d.ZP, {
-        contentTypes: c,
+        contentTypes: y,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e;
             return (0, r.jsxs)("div", {
-                className: o()(b.sidebar, {
-                    [b.mobile]: s.tq,
-                    [b.mobileNavigationOpen]: a,
+                className: o()(p.sidebar, {
+                    [p.mobile]: s.tq,
+                    [p.mobileNavigationOpen]: c,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.fixedContent,
+                        className: p.fixedContent,
                         children: [
+                            s.tq &&
+                                (0, r.jsx)("div", {
+                                    className: p.mobileCloseButton,
+                                    children: (0, r.jsx)(u.hU, {
+                                        icon: u.Uz9,
+                                        onClick: a,
+                                        variant: "icon-only",
+                                        size: "sm",
+                                        "aria-label": b.intl.string(b.t.cpT0Cg),
+                                    }),
+                                }),
                             (0, r.jsx)("div", {
                                 children: O.map((e) =>
                                     (0, r.jsx)(
-                                        S,
+                                        N,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -104,14 +116,14 @@ function T(e) {
                         ],
                     }),
                     (0, r.jsxs)(u.zJl, {
-                        className: b.navScroller,
+                        className: p.navScroller,
                         fade: !0,
                         children: [
                             (0, r.jsx)("nav", {
-                                className: b.nav,
-                                children: y.map((e) =>
+                                className: p.nav,
+                                children: E.map((e) =>
                                     (0, r.jsx)(
-                                        S,
+                                        N,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -129,7 +141,7 @@ function T(e) {
         },
     });
 }
-function v(e) {
+function j(e) {
     let { dismissibleContentType: t, targetElementRef: n, visibleContent: l, markAsDismissed: o, props: s } = e,
         [u, d] = i.useState(!1),
         f = i.useRef(null);
@@ -149,7 +161,7 @@ function v(e) {
     );
     return (0, r.jsx)(
         a.Z,
-        p(
+        v(
             {
                 targetElementRef: n,
                 shouldShow: u && l === t,
@@ -160,13 +172,13 @@ function v(e) {
         ),
     );
 }
-function N(e) {
+function m(e) {
     let { trailing: t, sectionRef: n, visibleContent: i, markAsDismissed: l } = e;
     if (t.type === g.PU.POPOVER) {
         var o, s;
         return (0, r.jsx)(
-            v,
-            ((o = p({}, t)),
+            j,
+            ((o = v({}, t)),
             (s = s =
                 {
                     targetElementRef: n,
@@ -189,28 +201,28 @@ function N(e) {
         );
     }
 }
-function S(e) {
+function N(e) {
     var t;
     let { section: n, visibleContent: l, markAsDismissed: o } = e,
         s = i.useRef(null),
         a = null == (t = n.useLabel) ? void 0 : t.call(n),
         c = n.trailing;
     return (0, r.jsxs)("ul", {
-        className: b.section,
+        className: p.section,
         children: [
             null != a &&
                 (0, r.jsxs)("div", {
-                    className: b.sectionLabel,
+                    className: p.sectionLabel,
                     ref: s,
                     children: [
                         (0, r.jsx)(u.X6q, {
-                            className: b.label,
+                            className: p.label,
                             variant: "heading-sm/medium",
                             color: "text-tertiary",
                             children: a,
                         }),
                         null != c &&
-                            (0, r.jsx)(N, {
+                            (0, r.jsx)(m, {
                                 trailing: c,
                                 sectionRef: s,
                                 visibleContent: l,
@@ -224,14 +236,14 @@ function S(e) {
                     {
                         children: [
                             e.type === g.Jq.PANEL &&
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(y.Z, {
                                     node: e,
                                     visibleContent: l,
                                 }),
                             e.type === g.Jq.SIDEBAR_ITEM &&
                                 ("render" in e
-                                    ? (0, r.jsx)(y.Z, { render: e.render })
-                                    : (0, r.jsx)(y.Z, {
+                                    ? (0, r.jsx)(O.Z, { render: e.render })
+                                    : (0, r.jsx)(O.Z, {
                                           icon: e.icon,
                                           title: e.useTitle(),
                                           onClick: e.onClick,

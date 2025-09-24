@@ -2,6 +2,7 @@ e.exports = {
     sidebar: "sidebar__409aa",
     mobile: "mobile__409aa",
     mobileNavigationOpen: "mobileNavigationOpen__409aa",
+    mobileCloseButton: "mobileCloseButton__409aa",
     navScroller: "navScroller__409aa",
     nav: "nav__409aa",
     section: "section__409aa",

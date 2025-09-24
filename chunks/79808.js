@@ -53,8 +53,8 @@ function f(e) {
     var t, n, f;
     let { root: g, directory: y, target: O, onClose: E, sidebarHeader: b, sidebarFooter: p } = e,
         [v, T] = i.useState(!0),
-        [j, N] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
-        [S, m] = i.useState(() => y.typedGet(j)),
+        [j, m] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
+        [N, S] = i.useState(() => y.typedGet(j)),
         C = i.useCallback(() => P(void 0), []),
         [_, P] = i.useState({
             target: O,
@@ -77,7 +77,7 @@ function f(e) {
                     if (t.parentPanel.key !== (null == j ? void 0 : j.key)) {
                         let e = t.parentPanel;
                         x(() => {
-                            P(d(c({}, n), { animateScroll: !1 })), m(e), N(e);
+                            P(d(c({}, n), { animateScroll: !1 })), S(e), m(e);
                         });
                     } else P(d(c({}, n), { animateScroll: !0 }));
                 },
@@ -86,7 +86,8 @@ function f(e) {
                 setShowNavigationMobile: T,
             }),
             [y, j, _, v, C, x],
-        );
+        ),
+        A = () => x(E);
     return (0, r.jsx)(a.j.Provider, {
         value: I,
         children: (0, r.jsxs)("div", {
@@ -96,10 +97,11 @@ function f(e) {
                     root: g,
                     header: b,
                     footer: p,
+                    onClose: A,
                 }),
                 (0, r.jsx)(l.Z, {
-                    onClose: () => x(E),
-                    setting: null != (f = I.currentPanel) ? f : S,
+                    onClose: A,
+                    setting: null != (f = I.currentPanel) ? f : N,
                 }),
             ],
         }),
