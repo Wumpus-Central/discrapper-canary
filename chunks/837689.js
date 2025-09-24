@@ -1,8 +1,4 @@
-n.d(t, {
-    V: () => N,
-    Z: () => j,
-}),
-    n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(873546),
@@ -39,9 +35,8 @@ function S(e, t, n) {
         e
     );
 }
-let T = "PremiumServerDriveAnnouncementModal",
-    N = "september-marketing-moment";
-class P extends s.Z {
+let T = "PremiumServerDriveAnnouncementModal";
+class N extends s.Z {
     _initialize() {
         o.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
             o.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview);
@@ -61,7 +56,11 @@ class P extends s.Z {
                     if (!1 === t) {
                         if ((null == i ? void 0 : i.contentIdentifier) === "summer_bogo_content") {
                             if (!(await (0, y.k)())) return !1;
-                        } else if ((null == i ? void 0 : i.contentIdentifier) === N && !(await (0, b.bL)())) return !1;
+                        } else if (
+                            (null == i ? void 0 : i.contentIdentifier) === "september-marketing-moment" &&
+                            !(await (0, b.bL)())
+                        )
+                            return !1;
                     }
                     return (
                         (0, a.Mr3)(T),
@@ -117,4 +116,4 @@ class P extends s.Z {
             });
     }
 }
-let j = new P();
+let P = new N();

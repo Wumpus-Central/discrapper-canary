@@ -18,14 +18,7 @@ let m = (e) => {
         _ = (0, r.jsx)(c.Z, {
             subscriptionTier: u.Si.TIER_2,
             children: (e) => {
-                let { onClick: c } = e,
-                    u =
-                        b === s.TO.COHORT_3
-                            ? f.intl.format(f.t.ufBabW, {
-                                  helpCenterLink: s.lB,
-                                  date: (0, s.WP)(),
-                              })
-                            : f.intl.format(f.t["70LoNT"], { helpCenterLink: s.lB });
+                let { onClick: c } = e;
                 return (0, r.jsx)(i.Z, {
                     targetElementRef: t,
                     position: "right",
@@ -33,7 +26,7 @@ let m = (e) => {
                     size: "video",
                     caretConfig: { align: "start" },
                     title: f.intl.string(f.t.qh6bEx),
-                    body: u,
+                    body: f.intl.format(f.t["70LoNT"], { helpCenterLink: s.lB }),
                     graphic: {
                         type: "video",
                         src: (0, o.rO)() ? h.Z : g.Z,

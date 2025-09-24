@@ -501,10 +501,7 @@ let eg = () => {
             september2025MarketingMoment: {
                 name: "september2025MarketingMoment",
                 title: k.intl.string(k.t.CbHUrK),
-                subtitle: k.intl.format(k.t.sXCmAw, {
-                    helpCenterLink: A.lB,
-                    date: (0, A.WP)(),
-                }),
+                subtitle: k.intl.format(k.t.dA8CJi, { helpCenterLink: A.lB }),
                 pillText: k.intl.string(k.t.OS9KPj).toLocaleUpperCase(),
                 cardVariant: P.zW.PROMOTION_REDEMPTION,
                 perkImage: ed.Z,

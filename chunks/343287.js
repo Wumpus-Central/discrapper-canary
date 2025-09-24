@@ -31,10 +31,7 @@ let _ = (e) => {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-secondary",
-                        children: u.intl.format(u.t["Ee+ram"], {
-                            helpCenterLink: s.lB,
-                            date: (0, s.WP)(),
-                        }),
+                        children: u.intl.format(u.t.WNDJPD, { helpCenterLink: s.lB }),
                     }),
                 ],
             }),

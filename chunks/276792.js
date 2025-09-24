@@ -61,25 +61,18 @@ function O(e, t) {
 function E(e) {
     var t, n, E, y;
     let v,
-        {
-            content: I,
-            renderModalProps: C,
-            analyticsLocations: S,
-            analyticsLocation: T,
-            isLightTheme: N,
-            subHeaderStringOverride: P,
-        } = e,
-        j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: x } = C,
-        A = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
-        Z =
+        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
+        P = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
+        { onClose: j } = C,
+        x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
+        A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), x();
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), j();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -92,7 +85,7 @@ function E(e) {
                         objectType: g.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && x();
+                        e && j();
                     },
                 });
             break;
@@ -108,11 +101,11 @@ function E(e) {
                         objectType: g.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && x();
+                        e && j();
                     },
                 });
     }
-    let w =
+    let Z =
             "" !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -126,22 +119,22 @@ function E(e) {
                           ],
                       })
                 : void 0,
-        L = {
+        w = {
             type: "video",
             src: N ? I.heroArtVideoLinkLightTheme : I.videoLink,
         };
     null != I.heroArtVideoSubtitles &&
-        (L.subtitles = I.heroArtVideoSubtitles.map((e) => ({
+        (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1,
         }))),
         ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
-            (L = {
+            (w = {
                 type: "image",
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
             });
-    let R =
+    let L =
         "" !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(f.mn, {
@@ -152,18 +145,18 @@ function E(e) {
     return {
         renderModalProps: C,
         header: I.header,
-        modalTopExtra: R,
-        subHeader: null != P ? P : I.subheader,
-        subHeaderExtra: w,
+        modalTopExtra: L,
+        subHeader: I.subheader,
+        subHeaderExtra: Z,
         body: I.body,
-        heroArt: L,
+        heroArt: w,
         featureCards: I.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: j,
+        changeLogId: P,
         button: () => {
             let e = Date.now();
             return (0, r.jsx)(o.zxk, {
@@ -171,14 +164,14 @@ function E(e) {
                 size: "md",
                 onClick: () => {
                     d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: j,
-                        cta_type: Z,
+                        change_log_id: P,
+                        cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: j,
+                        target: P,
                     }),
                         v();
                 },
-                text: A,
+                text: x,
                 icon: i.SrA,
             });
         },

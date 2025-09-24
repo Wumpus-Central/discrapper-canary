@@ -45,10 +45,7 @@ let f = (e) => {
                             (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 color: "text-primary",
-                                children: c.intl.format(c.t.C0JUEh, {
-                                    helpCenterLink: o.lB,
-                                    date: (0, o.WP)(),
-                                }),
+                                children: c.intl.format(c.t.hZt7UV, { helpCenterLink: o.lB }),
                             }),
                             (0, r.jsx)(s.Z, {
                                 subscriptionTier: l.Si.TIER_2,
