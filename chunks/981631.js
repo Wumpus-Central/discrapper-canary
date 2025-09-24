@@ -4879,6 +4879,7 @@ var nE = (function (e) {
             (e.USER_PROFILE_REPORT_GAME_DETECTION = "user_profile_report_game_detection"),
             (e.GAME_DETECTION_FEEDBACK_MODAL = "game_detection_feedback_modal"),
             (e.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
+            (e.WISHLIST_UPDATED = "wishlist_updated"),
             (e.PREMIUM_WOW_MOMENT_VIEWED = "premium_wow_moment_viewed"),
             (e.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER = "premium_wow_moment_media_prefetch_trigger"),
             (e.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED = "premium_brand_refresh_wow_moment_viewed"),
