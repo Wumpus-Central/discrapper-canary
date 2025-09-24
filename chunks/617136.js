@@ -192,6 +192,7 @@ var D = (function (e) {
         (e.SPONSORED_QUEST_SHEET = "SPONSORED_QUEST_SHEET"),
         (e.GAME_PROFILE_OPEN = "GAME_PROFILE_OPEN"),
         (e.GAME_STORE_OPEN_GAME_LINK = "GAME_STORE_OPEN_GAME_LINK"),
+        (e.MOBILE_ORBS_ONBOARDING_DC = "MOBILE_ORBS_ONBOARDING_DC"),
         e
     );
 })({});
