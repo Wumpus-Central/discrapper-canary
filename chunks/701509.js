@@ -153,7 +153,7 @@ function S(t) {
                   tn,
               ),
           )
-        : (null == a ? void 0 : a.nsfwAllowed) === !1 && q && !F
+        : (null == a ? void 0 : a.nsfwAllowed) === !1 && (q || B) && !F
           ? (0, l.jsx)(
                 f.I,
                 x(
