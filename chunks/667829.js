@@ -28,7 +28,7 @@ var r = n(951288),
     R = n(925994),
     P = n(981631),
     w = n(388032),
-    D = n(564355);
+    D = n(744114);
 function x(e, t, n) {
     return (
         t in e
@@ -418,11 +418,11 @@ class G extends i.Component {
                     _ = null != (r = null != d ? d : f) ? r : a,
                     b = (0, A._K)(i, this._getEditorWindow()) ? a : _;
                 if (null == l || (!b.isPrivate() && !o) || (b.isPrivate() && b.isManaged())) return !1;
-                let O = async (e, t) => {
+                let O = (e, t) => {
                         var n, r;
                         let i = E.Z.getActiveCommand(b.id);
                         if (null == i)
-                            return await l(e, b, u.drafts.type, {
+                            return l(e, b, u.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: t,
                                 origin: "clipboard",

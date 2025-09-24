@@ -37,9 +37,9 @@ var r = n(951288),
     D = n(541716),
     U = n(752305),
     B = n(190210),
-    F = n(516887),
+    H = n(516887),
     V = n(974251),
-    H = n(893718),
+    F = n(893718),
     G = n(436660),
     z = n(338390),
     W = n(680835),
@@ -91,9 +91,9 @@ var r = n(951288),
     eD = n(709054),
     eU = n(838440),
     eB = n(127654),
-    eF = n(979956),
+    eH = n(979956),
     eV = n(413251),
-    eH = n(655687),
+    eF = n(655687),
     eG = n(165540),
     ez = n(583027),
     eW = n(25007),
@@ -286,11 +286,11 @@ class te extends i.PureComponent {
                           renderAttachButton: this.renderAttachButton,
                           renderAppLauncherButton: g,
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
-                          promptToUpload: eB.d5,
+                          promptToUpload: eB.d,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
-                    : (0, r.jsx)(H.ZP, {
+                    : (0, r.jsx)(F.ZP, {
                           ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
@@ -311,7 +311,7 @@ class te extends i.PureComponent {
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
                           renderAppLauncherButton: g,
                           renderAppCommandButton: b,
-                          promptToUpload: eB.d5,
+                          promptToUpload: eB.d,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                           onCommandSentinelTyped: m,
@@ -585,8 +585,8 @@ class te extends i.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eF.KZ)(n);
-                        if ((0, eF.Bf)(e, null == u ? void 0 : u.id))
+                        let e = (0, eH.KZ)(n);
+                        if ((0, eH.Bf)(e, null == u ? void 0 : u.id))
                             return (
                                 (0, eB.G)(d, e),
                                 {
@@ -670,7 +670,7 @@ class te extends i.PureComponent {
                 }),
             ),
             e3(this, "renderApplicationCommandIcon", (e, t, n) =>
-                (0, r.jsx)(F.Z, {
+                (0, r.jsx)(H.Z, {
                     className: n,
                     command: e,
                     section: t,
@@ -783,7 +783,7 @@ class tt extends i.PureComponent {
             }),
             U = (j && E) || N,
             B = U ? k : L,
-            F = a()({
+            H = a()({
                 [e2.barWithAppLauncherButton]: O,
                 [e2.barWithAppsDMsUI]: j,
             }),
@@ -791,7 +791,7 @@ class tt extends i.PureComponent {
                 guildId: null == I ? void 0 : I.guild_id,
                 location: "ChannelChat",
             }),
-            H = V && null != P && null != I && null != I.guild_id;
+            F = V && null != P && null != I && null != I.guild_id;
         return (0, r.jsx)(
             y.Z,
             {
@@ -825,7 +825,7 @@ class tt extends i.PureComponent {
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
                                     children: [
-                                        H &&
+                                        F &&
                                             (0, r.jsx)(eJ.Z, {
                                                 recipientUser: P,
                                                 voiceChannel: I,
@@ -847,7 +847,7 @@ class tt extends i.PureComponent {
                                                     forceCozy: v,
                                                     filterAfterTimestamp: m,
                                                     showingQuarantineBanner: f,
-                                                    jumpBarClassName: F,
+                                                    jumpBarClassName: H,
                                                     typingGradient: Z,
                                                     isChatInputBottomAligned: T,
                                                 }),
@@ -1030,7 +1030,7 @@ class tt extends i.PureComponent {
 }
 let tn = i.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
-        { placeholder: o, accessibilityLabel: s } = (0, eH.Z)({ channel: t }),
+        { placeholder: o, accessibilityLabel: s } = (0, eF.Z)({ channel: t }),
         c = (0, ep.S)(eA.default.getCurrentUser(), t),
         [u] = (0, J.AB)(null == n ? void 0 : n.id),
         h = (0, Y.Ux)(null == n ? void 0 : n.id),
@@ -1086,10 +1086,10 @@ let tn = i.memo(function (e) {
         D = (0, d.e7)([eT.Z], () => eT.Z.getVoiceChannelId()),
         U = (0, d.e7)([ej.Z], () => ej.Z.getChannel(D)),
         B = (0, d.e7)([eA.default], () => (t.type !== eQ.d4z.DM ? null : eA.default.getUser(t.getRecipientId()))),
-        F = (0, d.e7)([ec.ZP, ex.default], () => ec.ZP.getUserCombo(ex.default.getId(), t.id)),
+        H = (0, d.e7)([ec.ZP, ex.default], () => ec.ZP.getUserCombo(ex.default.getId(), t.id)),
         V = (0, b.iD)(t),
-        H = (0, b.d7)(t),
-        G = V.length > 0 || t.rateLimitPerUser > 0 || null != F || null != H,
+        F = (0, b.d7)(t),
+        G = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
         q = (0, z.Z)("ChannelChat"),
         { showLinkedLobbyApplicationLoadingIndicator: K } = (0, eV.Z)(t.linkedLobby),
         X = (0, W.Z)("ChannelChat");

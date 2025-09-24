@@ -146,7 +146,13 @@ async function d(e) {
             m = 1 - h;
         if (m < l)
             return (
-                s.verbose("[WebP] Insufficient savings: ".concat(Math.round(100 * m), "% < ").concat(100 * l, "%")),
+                s.verbose(
+                    "[WebP] Insufficient savings: "
+                        .concat(Math.round(100 * m), "% < ")
+                        .concat(100 * l, "% (")
+                        .concat(e.size, " -> ")
+                        .concat(p.size, " bytes)"),
+                ),
                 i("insufficient_savings", p.size)
             );
         let g = e.name.lastIndexOf("."),

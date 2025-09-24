@@ -20,17 +20,17 @@ var r = n(951288),
     _ = n(470623),
     C = n(983200),
     y = n(127654),
-    w = n(809639),
-    T = n(388032),
-    O = n(272210);
+    T = n(124252),
+    w = n(388032),
+    O = n(770290);
 let S = [
         {
             name: "Media Post Thumbnail",
             extensions: ["jpg", "jpeg", "png", "gif", "webp"],
         },
     ],
-    P = (0, b.hQ)();
-function N(e) {
+    N = (0, b.hQ)();
+function P(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
         a = (0, C.tu)({
             numAttachments: t.length,
@@ -71,7 +71,7 @@ let I = (e) => {
             return { textAreaState: t };
         }, c.X),
         b = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        j = (0, w.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
+        j = (0, T.Z)(a, null == (t = s.textValue) ? void 0 : t.trim()),
         C = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
         I = null != j && j.length > 0,
         E = i.useMemo(() => {
@@ -84,7 +84,7 @@ let I = (e) => {
         R = i.useCallback(
             (e) => {
                 null != C && h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, y.d5)(e.currentTarget.files, a, f.Ie.CREATE_FORUM_POST.drafts.type, {
+                    (0, y.d)(e.currentTarget.files, a, f.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
@@ -169,12 +169,12 @@ let I = (e) => {
             multiple: !1,
             "aria-hidden": !0,
             filters: S,
-            "aria-describedby": P,
-            "aria-label": I ? T.intl.string(T.t.MxJI3d) : T.intl.string(T.t.CbiofX),
+            "aria-describedby": N,
+            "aria-label": I ? w.intl.string(w.t.MxJI3d) : w.intl.string(w.t.CbiofX),
             children: I
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(N, {
+                          (0, r.jsx)(P, {
                               mediaAttachments: j,
                               containerWidth: E.width,
                               containerHeight: E.height,
@@ -187,7 +187,7 @@ let I = (e) => {
                                   (0, r.jsx)(m.Text, {
                                       variant: "text-xs/medium",
                                       color: "header-secondary",
-                                      children: T.intl.string(T.t.MxJI3d),
+                                      children: w.intl.string(w.t.MxJI3d),
                                   }),
                                   null == C &&
                                       (0, r.jsx)(m.vdY, {
@@ -211,7 +211,7 @@ let I = (e) => {
                           (0, r.jsx)(m.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: T.intl.string(T.t.CbiofX),
+                              children: w.intl.string(w.t.CbiofX),
                           }),
                       ],
                   }),
@@ -226,7 +226,7 @@ let I = (e) => {
                           children: [
                               (0, r.jsx)(x.Z, {
                                   className: O.action,
-                                  tooltip: T.intl.string(T.t.Y8ujqq),
+                                  tooltip: w.intl.string(w.t.Y8ujqq),
                                   onClick: M,
                                   children: (0, r.jsx)(m.vdY, {
                                       size: "xs",
@@ -235,7 +235,7 @@ let I = (e) => {
                               }),
                               (0, r.jsx)(x.Z, {
                                   className: O.action,
-                                  tooltip: T.intl.string(T.t.vN7REx),
+                                  tooltip: w.intl.string(w.t.vN7REx),
                                   onClick: () => h.Z.remove(a.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(m.XHJ, {

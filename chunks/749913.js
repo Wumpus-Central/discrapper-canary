@@ -54,7 +54,7 @@ var r = n(951288),
     et = n(981631),
     en = n(176505),
     er = n(388032),
-    ei = n(153846);
+    ei = n(470581);
 function ea(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -484,7 +484,7 @@ let ec = i.memo(function (e) {
                     null != n &&
                         n.type.startsWith("image/") &&
                         (e.preventDefault(),
-                        await (0, B.d5)([n], t, k.d.FirstThreadMessage, { origin: "clipboard" }),
+                        await (0, B.d)([n], t, k.d.FirstThreadMessage, { origin: "clipboard" }),
                         j.getState().setFormOpenFromUserAction());
                 },
                 [t, j],
@@ -745,7 +745,7 @@ let em = i.memo(function (e) {
                                   }),
                                   onChange: y,
                                   onSubmit: T,
-                                  promptToUpload: B.d5,
+                                  promptToUpload: B.d,
                                   disabled: a,
                                   onKeyDown: (e) => {
                                       ("ArrowUp" === e.key || "ArrowDown" === e.key) && e.stopPropagation(),

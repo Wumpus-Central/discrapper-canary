@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685), n(415506);
+n.d(t, { Z: () => F }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -37,7 +37,7 @@ var r = n(951288),
     D = n(921944),
     U = n(388032),
     B = n(935730);
-function F(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,9 +80,9 @@ function V(e, t) {
         e
     );
 }
-let H = i.memo(function (e) {
+let F = i.memo(function (e) {
     var t, l;
-    let { className: H, channel: G, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
+    let { className: F, channel: G, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
         K = (0, p.bp)(),
         X = i.useRef(null),
         J = i.useRef(null),
@@ -118,7 +118,7 @@ let H = i.memo(function (e) {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await n.e("57478").then(n.bind(n, 542055));
-                return (t) => (0, r.jsx)(e, V(F({}, t), { channelId: G.id }));
+                return (t) => (0, r.jsx)(e, V(H({}, t), { channelId: G.id }));
             },
             { modalKey: L.Qr },
         ),
@@ -191,7 +191,7 @@ let H = i.memo(function (e) {
                     case "recentClips":
                         return (0, r.jsx)(
                             b.Z,
-                            V(F({}, e), {
+                            V(H({}, e), {
                                 onOpenClips: em,
                                 lastClipsSession: ee,
                             }),
@@ -199,7 +199,7 @@ let H = i.memo(function (e) {
                     case "attachMenu":
                         return (0, r.jsx)(
                             M.Z,
-                            V(F({}, e), {
+                            V(H({}, e), {
                                 onClose: () => ec(null),
                                 options: eO,
                                 channel: G,
@@ -221,10 +221,10 @@ let H = i.memo(function (e) {
                 (0, r.jsx)(
                     w.Z,
                     V(
-                        F(
+                        H(
                             {
                                 ref: J,
-                                className: a()(B.attachButton, H),
+                                className: a()(B.attachButton, F),
                                 childClassName: B.attachButtonInner,
                                 isActive: !1,
                                 "aria-label": U.intl.string(U.t.d56gCQ),
@@ -253,7 +253,7 @@ let H = i.memo(function (e) {
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, N.G)(G, [])
-                                : (0, N.d5)(t, G, z, {
+                                : (0, N.d)(t, G, z, {
                                       requireConfirm: !0,
                                       showLargeMessageDialog: r,
                                       origin: "file_picker",

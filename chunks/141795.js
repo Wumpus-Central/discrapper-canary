@@ -13,9 +13,9 @@ var r = n(392711),
     o = n(544891),
     s = n(710845),
     l = n(432877),
-    c = n(893601),
-    u = n(630755),
-    d = n(171638),
+    c = n(630755),
+    u = n(171638),
+    d = n(928405),
     f = n(719755),
     _ = n(481981),
     p = n(740492),
@@ -391,14 +391,14 @@ class k extends v.ZP {
             (await this.maybeConvertToWebP());
         let a = await D.getUploadPayload(this),
             s = (0, I.F)(this.item.target),
-            c = (0, d.G)({ location: "CloudUpload.upload" });
+            d = (0, u.G)({ location: "CloudUpload.upload" });
         if (null == a.filename || "" === a.filename) {
             w.error("File does not have a filename.", JSON.stringify(a)), this.handleError(A.evJ.INVALID_FILE_ASSET);
             return;
         }
-        if (c.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
+        if (d.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
             try {
-                let e = await (0, u.M)(this.item.file);
+                let e = await (0, c.M)(this.item.file);
                 e > 0 && (this.currentSize = e);
             } catch (e) {
                 w.warn("Failed to detect file size, proceeding with original", {
@@ -579,11 +579,14 @@ class k extends v.ZP {
     }
     async maybeConvertToWebP() {
         var e, t;
-        let n;
-        if (!(0, c.U)({ location: "CloudUpload.maybeConvertToWebP" }).enabled) return;
+        let n,
+            r = (0, d.n)({ location: "CloudUpload.maybeConvertToWebP" });
+        if (!r.enabled) return void w.warn("webp conversion skipped for ".concat(this.id, ": not enabled"));
         if (null == this.item.file) return void w.warn("webp conversion skipped for ".concat(this.id, ": no file"));
+        if (null != r.maxFileSizeBytes && this.preCompressionSize > r.maxFileSizeBytes)
+            return void w.warn("webp conversion skipped for ".concat(this.id, ": too big"));
         if (this._aborted) return;
-        let r = performance.now();
+        let i = performance.now();
         try {
             if (((n = await (0, S.lG)(this.item.file)), this._aborted)) return;
             if (n.success)
@@ -608,7 +611,7 @@ class k extends v.ZP {
                 w.warn("webp conversion failed for ".concat(this.id, ":"), e);
         }
         this.uploadAnalytics.timing.compressTimeMs =
-            null != (t = null == n ? void 0 : n.compressTimeMs) ? t : Math.round(performance.now() - r);
+            null != (t = null == n ? void 0 : n.compressTimeMs) ? t : Math.round(performance.now() - i);
     }
     handleError(e) {
         this.setStatus("ERROR"), (this.error = e), this.trackUploadFinished("ERROR");

@@ -14,21 +14,21 @@ var r = n(951288),
     m = n(243778),
     g = n(618857),
     b = n(488131),
-    _ = n(375954),
-    y = n(626135),
-    C = n(585483),
-    x = n(403182),
-    v = n(127654),
+    y = n(375954),
+    C = n(626135),
+    _ = n(585483),
+    v = n(403182),
+    x = n(127654),
     O = n(752305),
     j = n(951211),
     E = n(981631),
     S = n(921944),
-    I = n(489887),
-    P = n(388032),
-    Z = n(749723);
+    P = n(489887),
+    I = n(388032),
+    Z = n(878066);
 let T = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function N() {
-    let e = (0, a.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, a.e7)([y.Z], () => y.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, f.cv)(t);
@@ -46,7 +46,7 @@ function N() {
                 let { visibleContent: t } = e;
                 return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(s.IGR, {
-                          text: P.intl.string(P.t.y2b7CA),
+                          text: I.intl.string(I.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND,
                       })
                     : null;
@@ -60,24 +60,24 @@ function A(e) {
             options: a,
             onFileUpload: f,
             onClose: m,
-            onSelect: _,
+            onSelect: y,
             draftType: A,
             editorTextContent: w,
-            setValue: R,
-            openClips: M,
+            setValue: M,
+            openClips: R,
         } = e,
-        { analyticsLocations: D, newestAnalyticsLocation: L } = (0, d.ZP)(),
-        k = (0, g.Dt)({ channel: t });
+        { analyticsLocations: k, newestAnalyticsLocation: L } = (0, d.ZP)(),
+        D = (0, g.Dt)({ channel: t });
     function U() {
         (0, b.R6)(t, void 0, "Plus Button");
     }
     function B() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, O.JM)("/"));
+        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M("/", (0, O.JM)("/"));
     }
-    function F() {
-        M();
+    function H() {
+        R();
     }
-    function G() {
+    function V() {
         (0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -128,11 +128,11 @@ function A(e) {
                         );
                     };
                 },
-                { modalKey: I.$z },
+                { modalKey: P.$z },
             );
     }
-    function H() {
-        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function F() {
+        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
@@ -150,33 +150,29 @@ function A(e) {
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
-    async function V() {
+    function G() {
         let e = w,
             n = "txt",
             r = "",
             i = w.match(T);
         null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])),
-            await (0, v.d5)(
-                [(0, x.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")],
-                t,
-                A,
-            ),
-            C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT),
-            "" !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+            (0, x.d)([(0, v.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, A),
+            _.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT),
+            "" !== r && _.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {
-            y.default.track(E.rMx.OPEN_POPOUT, {
+            C.default.track(E.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(s.v2r, {
-            onSelect: _,
+            onSelect: y,
             navId: "channel-attach",
             onClose: m,
-            "aria-label": P.intl.string(P.t.Xm41aW),
+            "aria-label": I.intl.string(I.t.Xm41aW),
             className: Z.menu,
             children: a.map(function (e) {
                 var n;
@@ -218,7 +214,7 @@ function A(e) {
                             {
                                 id: "upload-text-as-file",
                                 label: i,
-                                action: V,
+                                action: G,
                             },
                             "upload-text-as-file",
                         );
@@ -228,7 +224,7 @@ function A(e) {
                             {
                                 id: "clips",
                                 label: i,
-                                action: F,
+                                action: H,
                             },
                             "clips",
                         );
@@ -238,7 +234,7 @@ function A(e) {
                             {
                                 id: "poll",
                                 label: i,
-                                action: G,
+                                action: V,
                             },
                             "poll",
                         );
@@ -256,7 +252,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: D[D.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
@@ -277,7 +273,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: D[D.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
@@ -298,7 +294,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: D[D.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
@@ -331,7 +327,7 @@ function A(e) {
                             {
                                 id: "activity",
                                 label: i,
-                                action: H,
+                                action: F,
                                 hint: (0, r.jsx)(N, {}),
                             },
                             "activity",
@@ -343,7 +339,7 @@ function A(e) {
                                 id: "scheduled_message",
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: k,
+                                children: D,
                             },
                             "scheduled_message",
                         );
