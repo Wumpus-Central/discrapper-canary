@@ -31,7 +31,6 @@ function x(e) {
                                 children: u.intl.string(u.t.CueiPT),
                             }),
                             (0, i.jsx)(o.Text, {
-                                className: m.__invalid_subtitle,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
                                 children: l
