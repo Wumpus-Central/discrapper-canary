@@ -1,47 +1,65 @@
 n.d(t, {
-    default: () => m,
-    r: () => g,
+    default: () => y,
+    r: () => E,
 }),
     n(781311);
 var r = n(951288);
 n(647438);
 var i = n(581282),
-    l = n(8853),
-    a = n(481060),
-    o = n(2052),
-    s = n(410030),
-    c = n(100527),
-    u = n(906732),
-    d = n(266454),
-    p = n(960048),
-    f = n(276792),
-    h = n(290347);
-function g(e) {
+    l = n(442837),
+    a = n(8853),
+    o = n(481060),
+    s = n(2052),
+    c = n(410030),
+    u = n(100527),
+    d = n(906732),
+    p = n(266454),
+    f = n(594174),
+    h = n(960048),
+    g = n(266198),
+    m = n(276792),
+    b = n(290347),
+    _ = n(837689),
+    O = n(388032);
+function E(e) {
     let { content: t, isPreview: n } = e,
-        r = l.t.fromBinary((0, i.c)(t));
+        r = a.t.fromBinary((0, i.c)(t));
     return "announcementModalVariant1" !== r.properties.oneofKind ||
         (!n &&
             (0 === r.properties.announcementModalVariant1.dismissKey.trim().length ||
-                (0, d.zu)(Number(r.properties.announcementModalVariant1.dismissKey))))
+                (0, p.zu)(Number(r.properties.announcementModalVariant1.dismissKey))))
         ? null
         : (n && (r.properties.announcementModalVariant1.dismissKey = ""), r);
 }
-function m(e) {
+function y(e) {
     let { renderModalProps: t, properties: n } = e,
-        { location: i } = (0, o.O)(),
-        { analyticsLocations: l } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        d = (0, s.ZP)(),
-        g = (0, a.apv)(d);
+        { location: i } = (0, s.O)(),
+        { analyticsLocations: a } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        p = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        E = (0, c.ZP)(),
+        y = (0, o.apv)(E);
     if ("announcementModalVariant1" === n.properties.oneofKind) {
-        let e = (0, f.N)({
+        let e = null,
+            l = null;
+        if (n.contentIdentifier === _.V) {
+            let t = (0, g.OA)(p);
+            t === g.TO.COHORT_1
+                ? (l = O.t["x2ga+/"])
+                : t === g.TO.COHORT_2
+                  ? (l = O.t.YJchsb)
+                  : t === g.TO.COHORT_3 && (l = O.t.gZXFmZ),
+                null != l && (e = String(O.intl.format(l, { date: (0, g.WP)() })));
+        }
+        let o = (0, m.N)({
             content: n.properties.announcementModalVariant1,
             renderModalProps: t,
-            analyticsLocations: l,
+            analyticsLocations: a,
             analyticsLocation: i,
-            isLightTheme: g,
+            isLightTheme: y,
+            subHeaderStringOverride: e,
         });
         return (0, r.jsx)(
-            h.Z,
+            b.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -66,11 +84,11 @@ function m(e) {
                         });
                 }
                 return e;
-            })({}, e),
+            })({}, o),
         );
     }
     return (
-        p.Z.captureMessage(
+        h.Z.captureMessage(
             "Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal"),
         ),
         null

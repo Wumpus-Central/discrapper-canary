@@ -1,8 +1,10 @@
 n.d(t, {
     Fw: () => b,
     G2: () => S,
+    OA: () => v,
     Q1: () => I,
     TO: () => O,
+    WP: () => C,
     bL: () => A,
     h3: () => T,
     lB: () => g,
@@ -23,7 +25,7 @@ var r = n(913527),
     h = n(474936),
     m = n(304426);
 let g = "https://support.discord.com/hc/articles/34679678303255",
-    E = "2025-09-30",
+    E = "2025-09-30T00:00:00",
     b = "1410030846337093672",
     y = "2025_08-nitro-drop";
 var O = (function (e) {
@@ -75,4 +77,7 @@ async function A() {
     return a.shouldRefetchCampaignEligibility && o
         ? await (0, l.f)({ campaignId: y })
         : null != (t = a.isEligibleForCampaign) && t;
+}
+function C() {
+    return new Date(E);
 }

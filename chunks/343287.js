@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(638212),
     c = n(474936),
     u = n(388032),
-    d = n(756246),
+    d = n(781261),
     f = n(598323);
 let _ = (e) => {
     let { className: t, cohort: n } = e,
@@ -31,7 +31,10 @@ let _ = (e) => {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-secondary",
-                        children: u.intl.format(u.t.WNDJPD, { helpCenterLink: s.lB }),
+                        children: u.intl.format(u.t["Ee+ram"], {
+                            helpCenterLink: s.lB,
+                            date: (0, s.WP)(),
+                        }),
                     }),
                 ],
             }),

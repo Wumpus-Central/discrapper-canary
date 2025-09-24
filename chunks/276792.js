@@ -14,7 +14,7 @@ var i = n(657707),
     h = n(474936),
     g = n(981631),
     m = n(388032),
-    b = n(605548);
+    b = n(570656);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,18 +61,25 @@ function O(e, t) {
 function E(e) {
     var t, n, E, y;
     let v,
-        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
+        {
+            content: I,
+            renderModalProps: C,
+            analyticsLocations: S,
+            analyticsLocation: T,
+            isLightTheme: N,
+            subHeaderStringOverride: P,
+        } = e,
         j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: P } = C,
-        x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
-        A =
+        { onClose: x } = C,
+        A = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
+        Z =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), P();
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), x();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -85,7 +92,7 @@ function E(e) {
                         objectType: g.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && x();
                     },
                 });
             break;
@@ -101,11 +108,11 @@ function E(e) {
                         objectType: g.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && x();
                     },
                 });
     }
-    let Z =
+    let w =
             "" !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -119,22 +126,22 @@ function E(e) {
                           ],
                       })
                 : void 0,
-        w = {
+        L = {
             type: "video",
             src: N ? I.heroArtVideoLinkLightTheme : I.videoLink,
         };
     null != I.heroArtVideoSubtitles &&
-        (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
+        (L.subtitles = I.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1,
         }))),
         ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
-            (w = {
+            (L = {
                 type: "image",
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
             });
-    let L =
+    let R =
         "" !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(f.mn, {
@@ -145,11 +152,11 @@ function E(e) {
     return {
         renderModalProps: C,
         header: I.header,
-        modalTopExtra: L,
-        subHeader: I.subheader,
-        subHeaderExtra: Z,
+        modalTopExtra: R,
+        subHeader: null != P ? P : I.subheader,
+        subHeaderExtra: w,
         body: I.body,
-        heroArt: w,
+        heroArt: L,
         featureCards: I.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
@@ -165,13 +172,13 @@ function E(e) {
                 onClick: () => {
                     d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: j,
-                        cta_type: A,
+                        cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: j,
                     }),
                         v();
                 },
-                text: x,
+                text: A,
                 icon: i.SrA,
             });
         },
