@@ -1,4 +1,4 @@
-n.d(t, { Q: () => h });
+n.d(t, { Q: () => m });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -11,28 +11,43 @@ var i = n(442837),
     d = n(809357),
     f = n(44359),
     _ = n(981631),
-    p = n(388032);
-function h(e, t, n, i) {
-    return (0, r.jsx)(m, {
+    p = n(388032),
+    h = n(8280);
+function m(e, t, n) {
+    let {
+        highlightAdminWarningIfElevated: i,
+        useFlexboxLayout: a,
+        keybindClassName: o,
+    } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    return (0, r.jsx)(g, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
         highlightAdminWarningIfElevated: i,
+        useFlexboxLayout: a,
+        keybindClassName: o,
     });
 }
-function m(e) {
-    let { keybind: t, message: n, messageWithoutKeybind: h, highlightAdminWarningIfElevated: m = !1 } = e,
-        g = (0, d.o)(),
-        E = (0, i.e7)([o.ZP], () => {
+function g(e) {
+    let {
+            keybind: t,
+            message: n,
+            messageWithoutKeybind: m,
+            highlightAdminWarningIfElevated: g = !1,
+            useFlexboxLayout: E = !1,
+            keybindClassName: b,
+        } = e,
+        y = (0, d.o)(),
+        O = (0, i.e7)([o.ZP], () => {
             let e = o.ZP.getVisibleGame();
             return null != e && e.elevated && o.ZP.canShowAdminWarning;
         }),
-        b = (0, l.hi)();
-    return E
+        v = (0, l.hi)();
+    return O
         ? (0, r.jsx)(a.Text, {
               variant: "text-xxs/semibold",
-              color: m ? "text-feedback-warning" : "text-muted",
-              children: b
+              color: g ? "text-feedback-warning" : "text-muted",
+              children: v
                   ? p.intl.format(p.t.MVS9pa, {
                         onSettingsClick: (e) => {
                             e.stopPropagation(),
@@ -42,12 +57,28 @@ function m(e) {
                     })
                   : p.intl.string(p.t.PIeSHB),
           })
-        : g
-          ? (0, r.jsx)(r.Fragment, {
-                children: p.intl.format(n, {
-                    keybind: t,
-                    keybindHook: (e) => (0, r.jsx)(f.Z, { keybind: t }, t.join("+")),
-                }),
-            })
-          : h;
+        : y
+          ? E
+              ? (0, r.jsx)("div", {
+                    className: h.keybindFlexboxLayout,
+                    children: p.intl.format(n, {
+                        keybind: t,
+                        keybindHook: (e) =>
+                            (0, r.jsx)(
+                                f.l,
+                                {
+                                    keybind: t,
+                                    className: b,
+                                },
+                                t.join("+"),
+                            ),
+                    }),
+                })
+              : (0, r.jsx)(r.Fragment, {
+                    children: p.intl.format(n, {
+                        keybind: t,
+                        keybindHook: (e) => (0, r.jsx)(f.t, { keybind: t }, t.join("+")),
+                    }),
+                })
+          : m;
 }

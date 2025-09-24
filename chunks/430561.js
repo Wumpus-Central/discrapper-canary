@@ -135,7 +135,12 @@ function D(e) {
     let { children: t, widgetId: n } = e,
         i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
         a = P(i, w),
-        o = () => (0, E.Q)((0, b.P)(), y.t["1XA04e"], y.intl.string(y.t.uZZGzc), !1);
+        o = () =>
+            (0, E.Q)((0, b.P)(), y.t["1XA04e"], y.intl.string(y.t.uZZGzc), {
+                useFlexboxLayout: !0,
+                highlightAdminWarningIfElevated: !1,
+                keybindClassName: O.keybind,
+            });
     return a
         ? (0, r.jsxs)(r.Fragment, {
               children: [
