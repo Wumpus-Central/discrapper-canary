@@ -142,8 +142,8 @@ class Q extends i.PureComponent {
                         children: H.intl.string(H.t.NAzplJ),
                     }),
                     (0, r.jsx)(L.Z, {
-                        size: d.Ph.SMALL,
-                        color: d.zx.Colors.PRIMARY,
+                        size: "sm",
+                        variant: "secondary",
                     }),
                 ],
             });

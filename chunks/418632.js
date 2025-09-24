@@ -1,21 +1,20 @@
 n.d(t, {
-    Z: () => O,
-    s: () => b,
+    Z: () => b,
+    s: () => E,
 }),
     n(388685);
-var r,
-    i = n(951288),
-    a = n(647438),
-    o = n(512722),
-    s = n.n(o),
-    l = n(442837),
+var r = n(951288),
+    i = n(647438),
+    a = n(512722),
+    o = n.n(a),
+    s = n(442837),
+    l = n(82659),
     c = n(755721),
     u = n(481060),
     d = n(893776),
-    f = n(468026),
-    _ = n(594174),
-    p = n(388032);
-function h(e, t, n) {
+    f = n(594174),
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +38,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,36 +55,36 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
+function E(e) {
     return d.Z.verifyResend()
         .then(() => {
             (0, u.h7j)((t) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     u.ConfirmModal,
-                    E(
-                        m(
+                    g(
+                        h(
                             {
-                                header: p.intl.string(p.t.LykQYm),
-                                confirmText: p.intl.string(p.t.BddRzc),
+                                header: _.intl.string(_.t.LykQYm),
+                                confirmText: _.intl.string(_.t.BddRzc),
                                 confirmButtonColor: c.zx.Colors.BRAND,
                             },
                             t,
                         ),
                         {
-                            children: (0, i.jsx)(u.Text, {
+                            children: (0, r.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: p.intl.format(p.t.azKEPz, { email: e.email }),
+                                children: _.intl.format(_.t.azKEPz, { email: e.email }),
                             }),
                         },
                     ),
@@ -94,15 +93,22 @@ function b(e) {
         })
         .catch((e) => {
             let { body: t } = e,
-                n = p.intl.string(p.t.XcrQNz);
+                n = _.intl.string(_.t.XcrQNz);
             null != t && t.email && (n = t.email),
                 (0, u.h7j)((e) =>
-                    (0, i.jsx)(
-                        f.default,
-                        m(
+                    (0, r.jsx)(
+                        l.Modal,
+                        h(
                             {
-                                title: p.intl.string(p.t.VbTh0N),
-                                body: n,
+                                actions: [
+                                    {
+                                        variant: "primary",
+                                        text: _.intl.string(_.t.BddRzc),
+                                        onClick: e.onClose,
+                                    },
+                                ],
+                                title: _.intl.string(_.t.VbTh0N),
+                                subtitle: n,
                             },
                             e,
                         ),
@@ -110,35 +116,19 @@ function b(e) {
                 );
         });
 }
-class y extends (r = a.Component) {
-    render() {
-        let { color: e, look: t, size: n } = this.props;
-        return (0, i.jsx)(c.zx, {
-            look: t,
-            size: n,
-            color: e,
-            disabled: this.state.isSendingVerificationEmail,
-            onClick: this.handleResendVerification,
-            children: p.intl.string(p.t.lm1UKi),
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            h(this, "state", { isSendingVerificationEmail: !1 }),
-            h(this, "handleResendVerification", () => {
-                let { currentUser: e, onClick: t } = this.props;
-                null == t || t(),
-                    this.setState({ isSendingVerificationEmail: !0 }, () => {
-                        b(e).then(() => this.setState({ isSendingVerificationEmail: !1 }));
-                    });
-            });
-    }
+function b(e) {
+    let { size: t, variant: n } = e,
+        a = (0, s.e7)([f.default], () => f.default.getCurrentUser());
+    o()(null != a, "ResendEmailVerificationButton: currentUser cannot be undefined");
+    let [l, c] = i.useState(!1),
+        d = i.useCallback(() => {
+            c(!0), E(a).then(() => c(!1));
+        }, [a]);
+    return (0, r.jsx)(u.zxk, {
+        size: t,
+        variant: n,
+        onClick: d,
+        text: _.intl.string(_.t.lm1UKi),
+        disabled: l,
+    });
 }
-h(y, "defaultProps", {
-    size: c.zx.Sizes.MEDIUM,
-    color: c.zx.Colors.BRAND,
-});
-let O = l.ZP.connectStores([_.default], () => {
-    let e = _.default.getCurrentUser();
-    return s()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), { currentUser: e };
-})(y);
