@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e_ }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => ey }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(610394),
     E = n(556809),
     N = n(886118),
-    T = n(301801),
-    S = n(352527),
+    S = n(301801),
+    T = n(352527),
     O = n(355863),
     P = n(449224),
     I = n(808506),
@@ -644,7 +644,7 @@ let ea = r.memo(function (e) {
         let n = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             r = (0, Z.getPID)(),
             i = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
-            [l, s] = (0, d.Wu)([S.Z], () => [S.Z.enabled, S.Z.keepOpen]),
+            [l, s] = (0, d.Wu)([T.Z], () => [T.Z.enabled, T.Z.keepOpen]),
             o = (0, d.e7)([I.default], () => I.default.getFocusedPID()),
             c = (0, d.e7)([I.default], () => I.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
@@ -1261,11 +1261,11 @@ function eg() {
         [j, _] = r.useState(v),
         [y, E] = r.useState(null),
         N = r.useMemo(() => e.find((e) => e.key === y), [e, y]),
-        S = r.useCallback((e) => {
+        T = r.useCallback((e) => {
             _(e);
         }, []),
         { renderSelectedTab: O } = (0, F.ZP)({ tabs: ef }, []);
-    (0, T.BO)(b, v, S, eb, [e]);
+    (0, S.BO)(b, v, T, eb, [e]);
     let P = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
@@ -1395,36 +1395,57 @@ function eg() {
     );
 }
 let ev = r.memo(function () {
-    let e = (0, d.e7)([C.ZP], () => C.ZP.DEV_isStateDebuggingEnabled()),
-        t = (0, d.e7)([C.ZP], () => C.ZP.DEV_getDebuggingState());
-    return (0, a.jsxs)("div", {
-        className: V.panelGroup,
-        children: [
-            (0, a.jsx)("div", {
-                className: V.panelHeader,
-                children: (0, a.jsx)(u.$q, {
-                    value: e,
-                    onChange: () => h.Z.setStateDebugging(!e),
-                    size: 18,
-                    type: u.M0.INVERTED,
-                    shape: u.zV.BOX,
+        let e = (0, d.e7)([C.ZP], () => C.ZP.getInitializationStages());
+        return (0, a.jsxs)("div", {
+            className: V.panelGroup,
+            children: [
+                (0, a.jsx)("div", {
+                    className: V.panelHeader,
                     children: (0, a.jsx)(m.Text, {
-                        tag: "span",
-                        variant: "text-md/normal",
-                        color: "text-muted",
-                        children: "Poll Native Module State",
+                        variant: "text-md/bold",
+                        color: "text-primary",
+                        children: "Popout Initialization Stages",
                     }),
                 }),
-            }),
-            (0, a.jsx)(m.Text, {
-                variant: "text-sm/normal",
-                color: "text-secondary",
-                children: (0, a.jsx)("pre", { children: JSON.stringify(t, void 0, 2) }),
-            }),
-        ],
+                (0, a.jsx)(m.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: (0, a.jsx)("pre", { children: JSON.stringify(e, void 0, 2) }),
+                }),
+            ],
+        });
+    }),
+    ej = r.memo(function () {
+        let e = (0, d.e7)([C.ZP], () => C.ZP.DEV_isStateDebuggingEnabled()),
+            t = (0, d.e7)([C.ZP], () => C.ZP.DEV_getDebuggingState());
+        return (0, a.jsxs)("div", {
+            className: V.panelGroup,
+            children: [
+                (0, a.jsx)("div", {
+                    className: V.panelHeader,
+                    children: (0, a.jsx)(u.$q, {
+                        value: e,
+                        onChange: () => h.Z.setStateDebugging(!e),
+                        size: 18,
+                        type: u.M0.INVERTED,
+                        shape: u.zV.BOX,
+                        children: (0, a.jsx)(m.Text, {
+                            tag: "span",
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: "Poll Native Module State",
+                        }),
+                    }),
+                }),
+                (0, a.jsx)(m.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-secondary",
+                    children: (0, a.jsx)("pre", { children: JSON.stringify(t, void 0, 2) }),
+                }),
+            ],
+        });
     });
-});
-function ej() {
+function e_() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsxs)("div", {
             className: l()(H.panel, V.subPanel),
@@ -1436,11 +1457,12 @@ function ej() {
                 (0, a.jsx)(en, {}),
                 (0, a.jsx)(er, {}),
                 (0, a.jsx)(ev, {}),
+                (0, a.jsx)(ej, {}),
             ],
         }),
     });
 }
-function e_() {
+function ey() {
     let [e, t] = r.useState("state");
     return (0, a.jsxs)("div", {
         className: l()(H.panel, V.panel),
@@ -1468,7 +1490,7 @@ function e_() {
                     }),
                 ],
             }),
-            "state" === e && (0, a.jsx)(ej, {}),
+            "state" === e && (0, a.jsx)(e_, {}),
             "logging" === e && (0, a.jsx)(eg, {}),
         ],
     });

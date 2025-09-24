@@ -1,8 +1,8 @@
 let r;
 n.d(t, {
-    A8: () => L,
-    Il: () => j,
-    ZP: () => e6,
+    A8: () => M,
+    Il: () => k,
+    ZP: () => te,
 }),
     n(388685),
     n(415506);
@@ -63,9 +63,32 @@ function x(e) {
     }
     return e;
 }
-let L = "repaint-complete",
-    j = "request-repaint";
-class M {
+function L(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function j(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : L(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let M = "repaint-complete",
+    k = "request-repaint";
+class U {
     constructor() {
         D(this, "gpuBoostRequests", new Set()),
             D(this, "isGPUBoosted", !1),
@@ -92,42 +115,60 @@ class M {
                         ? void 0
                         : e.call(t));
                     if (null == r) return;
-                    E.ZP.SetGPUBoostEnabledByPid(r, n) && (this.isGPUBoosted = n), e5.emitChange();
+                    E.ZP.SetGPUBoostEnabledByPid(r, n) && (this.isGPUBoosted = n), e9.emitChange();
                 } catch (e) {
                     (null == (n = e.message) ? void 0 : n.includes("IPC method called after context was released")) &&
                         this.resetGPUBoosts(),
-                        k.error("Error during GPU boost request flush:", e),
-                        ef(null != K ? K : b.UNSET_PID, e);
+                        G.error("Error during GPU boost request flush:", e),
+                        ep(null != q ? q : b.UNSET_PID, e);
                 }
             });
     }
 }
-let k = new d.Z("OverlayStoreV3");
-function U(e, t, n) {
+let G = new d.Z("OverlayStoreV3");
+function B(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : y.l6.Info;
-    y.JC.addModuleBreadcrumb(t, null != n ? n : {}, y.C7.OOPModule, e, r), e5.emitChange();
+    y.JC.addModuleBreadcrumb(t, null != n ? n : {}, y.C7.OOPModule, e, r), e9.emitChange();
 }
-let G = new Set(),
-    B = new Set(),
-    Z = {},
-    F = new M(),
-    V = new Set(),
-    H = null,
-    Y = !1,
+let Z = new Set(),
+    F = new Set(),
+    V = {},
+    H = new U(),
+    Y = new Set(),
     W = null,
-    K = null,
+    K = !1,
     z = null,
     q = null,
-    X = {},
-    Q = {},
-    J = !1,
-    $ = I.R5.UNSET,
-    ee = null,
-    et = null,
-    en = !1,
-    er = !1,
-    ei = 30000;
-class ea {
+    X = null,
+    Q = null,
+    J = {},
+    $ = {},
+    ee = !1,
+    et = I.R5.UNSET,
+    en = null,
+    er = null,
+    ei = {
+        popoutOpened: !1,
+        windowHandleSentToNative: !1,
+        hasUseEffectFired: !1,
+        trackedPidFocused: !1,
+        reactInitializationStarted: !1,
+        showInactiveCalled: !1,
+        allDone: !1,
+    };
+function ea() {
+    ei = {
+        popoutOpened: !1,
+        windowHandleSentToNative: !1,
+        hasUseEffectFired: !1,
+        trackedPidFocused: !1,
+        reactInitializationStarted: !1,
+        showInactiveCalled: !1,
+        allDone: !1,
+    };
+}
+let eo = 30000;
+class es {
     _setCaptureZones(e) {
         try {
             let t = e.map((e) => ({
@@ -137,9 +178,9 @@ class ea {
                 right: e.right,
                 bottom: e.bottom,
             }));
-            U(K, "capture_zones_set", { capture_zones: t }), null == H || H.setCaptureZones(t);
+            B(q, "capture_zones_set", { capture_zones: t }), null == W || W.setCaptureZones(t);
         } catch (e) {
-            k.error("Error setting capture zones:", e), ef(null != K ? K : b.UNSET_PID, e);
+            G.error("Error setting capture zones:", e), ep(null != q ? q : b.UNSET_PID, e);
         }
     }
     getClickZoneByTimerId(e) {
@@ -156,7 +197,7 @@ class ea {
             (this.focusLostStoredClickZones = [...n]);
     }
     setClickZones(e) {
-        if (!Y) {
+        if (!K) {
             if (0 === this.clickZones.length) return;
             this.clearClickZones();
             return;
@@ -165,7 +206,7 @@ class ea {
         try {
             let t = setTimeout(() => {
                     this.triggerClickZoneTimer(t);
-                }, ei),
+                }, eo),
                 n = e.map((e) => {
                     let n = {
                         name: e.name,
@@ -176,9 +217,9 @@ class ea {
                     };
                     return (this.clickZoneTimers[e.name] = t), n;
                 });
-            null == H || H.setCaptureZones(n);
+            null == W || W.setCaptureZones(n);
         } catch (e) {
-            k.error("Error setting capture zones:", e), ef(null != K ? K : b.UNSET_PID, e);
+            G.error("Error setting capture zones:", e), ep(null != q ? q : b.UNSET_PID, e);
         }
     }
     clearClickZones() {
@@ -202,24 +243,24 @@ class ea {
         D(this, "clickZones", []), D(this, "focusLostStoredClickZones", []), D(this, "clickZoneTimers", {});
     }
 }
-let eo = new ea(),
-    es = new Set();
-function el(e) {
-    var t;
-    return null != (t = Z[e]) ? t : {};
-}
-function ec(e, t) {
-    var n, r;
-    let i = null == (n = Z[e]) ? void 0 : n.error,
-        a = null == (r = Z[e]) ? void 0 : r.error_description;
-    (Z[e] = x({}, Z[e], t)), null != i && (Z[e].error = i), null != a && (Z[e].error_description = a);
-}
+let el = new es(),
+    ec = new Set();
 function eu(e) {
+    var t;
+    return null != (t = V[e]) ? t : {};
+}
+function ed(e, t) {
+    var n, r;
+    let i = null == (n = V[e]) ? void 0 : n.error,
+        a = null == (r = V[e]) ? void 0 : r.error_description;
+    (V[e] = x({}, V[e], t)), null != i && (V[e].error = i), null != a && (V[e].error_description = a);
+}
+function ef(e) {
     var t, n, r;
-    if (null != Z[e]) return;
+    if (null != V[e]) return;
     let i = _.ZP.getGameOrTransformedSubgameForPID(e);
-    Z[e] = {
-        overlay_method: I.gl[null != (t = Q[e]) ? t : I.gl.OutOfProcess],
+    V[e] = {
+        overlay_method: I.gl[null != (t = $[e]) ? t : I.gl.OutOfProcess],
         success: !1,
         game_name: null != (n = null == i ? void 0 : i.name) ? n : null,
         game_id: null != (r = null == i ? void 0 : i.id) ? r : null,
@@ -235,22 +276,22 @@ function eu(e) {
         host_crash_count: 0,
     };
 }
-function ed(e, t) {
+function e_(e, t) {
     let n = _.ZP.getGameOrTransformedSubgameForPID(e);
     return {
         crash_type: t,
         gameName: null == n ? void 0 : n.name,
     };
 }
-function ef(e, t) {
+function ep(e, t) {
     var n;
     e !== b.UNSET_PID &&
-        (ec(e, {
+        (ed(e, {
             host_crash_count: 1,
             error: t.message,
             error_description: t.stack,
         }),
-        (0, O.V6)(t, Q[e], { extra: ed(e, "host") }),
+        (0, O.V6)(t, $[e], { extra: e_(e, "host") }),
         y.JC.addModuleBreadcrumb(
             "host_crash",
             {
@@ -261,18 +302,18 @@ function ef(e, t) {
             e,
             y.l6.Error,
         ),
-        eo.clearClickZones(),
-        e5.emitChange());
+        el.clearClickZones(),
+        e9.emitChange());
 }
-function e_(e, t) {
+function eh(e, t) {
     var n;
     e !== b.UNSET_PID &&
-        (ec(e, {
+        (ed(e, {
             renderer_crash_count: 1,
             error: t.message,
             error_description: t.stack,
         }),
-        (0, O.V6)(t, Q[e], { extra: ed(e, "renderer") }),
+        (0, O.V6)(t, $[e], { extra: e_(e, "renderer") }),
         y.JC.addModuleBreadcrumb(
             "renderer_crash",
             {
@@ -283,66 +324,66 @@ function e_(e, t) {
             e,
             y.l6.Error,
         ),
-        eo.clearClickZones(),
-        e5.emitChange());
+        el.clearClickZones(),
+        e9.emitChange());
 }
-function ep(e, t) {
+function em(e, t) {
     try {
-        if ((null != t && (Q[e] = t), null == H || H.trackGame(e), eu(e), G.has(e))) return;
-        G.add(e),
-            U(e, "game_tracked", { newOverlayMethod: null != t ? I.gl[t] : null }),
+        if ((null != t && ($[e] = t), null == W || W.trackGame(e), ef(e), Z.has(e))) return;
+        Z.add(e),
+            B(e, "game_tracked", { newOverlayMethod: null != t ? I.gl[t] : null }),
             c.Z.updateOverlayState(e, I.mM.WAITING_FOR_POPOUT_OPEN);
     } catch (t) {
-        k.error("Error tracking game:", t), ef(e, t);
+        G.error("Error tracking game:", t), ep(e, t);
     }
 }
-function eh(e) {
+function eg(e) {
     try {
-        null == H || H.untrackGame(e),
-            G.delete(e),
-            delete X[e],
-            delete Q[e],
-            k.verbose("Removing tracked game ".concat(e)),
-            V.delete(e);
+        null == W || W.untrackGame(e),
+            Z.delete(e),
+            delete J[e],
+            delete $[e],
+            G.verbose("Removing tracked game ".concat(e)),
+            Y.delete(e);
     } catch (t) {
-        k.error("Error removing tracked game:", t), ef(e, t);
+        G.error("Error removing tracked game:", t), ep(e, t);
     }
-}
-function em() {
-    try {
-        for (let e of G) null == H || H.untrackGame(e);
-        G.clear(), (X = {}), (Q = {}), V.clear(), k.verbose("Cleared all tracked games");
-    } catch (e) {
-        k.error("Error clearing tracked games:", e), ef(b.UNSET_PID, e);
-    }
-}
-function eg() {
-    return (0, T.NW)("overlay_store_v3", !1);
 }
 function eE() {
-    if (!Y) return void em();
+    try {
+        for (let e of Z) null == W || W.untrackGame(e);
+        Z.clear(), (J = {}), ($ = {}), Y.clear(), G.verbose("Cleared all tracked games");
+    } catch (e) {
+        G.error("Error clearing tracked games:", e), ep(b.UNSET_PID, e);
+    }
+}
+function eb() {
+    return (0, T.NW)("overlay_store_v3", !1);
+}
+function ey() {
+    if (!K) return void eE();
     let e = new Set(
         _.ZP.getRunningGames()
             .filter((e) => _.ZP.getOverlayEnabledForGame(e))
             .map((e) => e.pid),
     );
-    for (let t of new Set([...G].filter((t) => !e.has(t)))) eh(t);
-    for (let e of G) ep(e);
+    for (let t of new Set([...Z].filter((t) => !e.has(t)))) eg(t);
+    for (let e of Z) em(e);
 }
-function eb(e) {
-    if (null == H) return void k.warn("Overlay module not initialized during lock attempt");
+function eO(e) {
+    if (null == W) return void G.warn("Overlay module not initialized during lock attempt");
     try {
         let t = !e;
-        H.setInteractionEnabled(t), F.toggleGPUBoost(I.zS.OVERLAY_UNLOCKED, t);
+        W.setInteractionEnabled(t), H.toggleGPUBoost(I.zS.OVERLAY_UNLOCKED, t);
     } catch (e) {
-        k.error("Error during overlay lock:", e), ef(null != K ? K : b.UNSET_PID, e);
+        G.error("Error during overlay lock:", e), ep(null != q ? q : b.UNSET_PID, e);
     }
 }
-function ey(e) {
+function ev(e) {
     let t = _.ZP.getGameOrTransformedSubgameForPID(e);
-    c.Z.setAssociatedGame(null != K ? K : b.UNSET_PID, e, t);
+    c.Z.setAssociatedGame(null != q ? q : b.UNSET_PID, e, t);
 }
-async function eO() {
+async function eI() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 500,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
     for (let i = 0; i < t; i++) {
@@ -359,126 +400,135 @@ async function eO() {
             if ("" !== e) return e;
         } catch (e) {
             if (a) throw e;
-            k.error("Error getting native window handle, retrying...", e);
+            G.error("Error getting native window handle, retrying...", e);
         }
         if (a) {
-            k.error("Failed to get native window handle, giving up");
+            G.error("Failed to get native window handle, giving up");
             break;
         }
-        k.info("Failed to get window handle on attempt ".concat(i + 1, " of ").concat(t));
+        G.info("Failed to get window handle on attempt ".concat(i + 1, " of ").concat(t));
         let o = Math.pow(2, i + 1) * e;
         await new Promise((e) => setTimeout(e, o));
     }
     return null;
 }
-async function ev(e) {
-    k.verbose("Creating OOP Host Window for pid ".concat(e));
+async function eT(e) {
+    G.verbose("Creating OOP Host Window for pid ".concat(e));
     try {
         let t = new Date().getTime(),
             n = { mounting_started_at: t };
-        ec(e, n), (er = !1), (z = null), U(e, "renderer_window_mounting_started", n), await (0, C.f)($);
+        ed(e, n),
+            ea(),
+            (X = null),
+            B(e, "renderer_window_mounting_started", n),
+            await (0, C.f)(et),
+            (ei = j(x({}, ei), { popoutOpened: !0 }));
         let r = {
             renderer_started: !0,
             fullscreen_type: await (0, A.hj)(e, 0),
             graphics_info_after: new Date().getTime() - t,
         };
-        ec(e, r),
-            U(e, "renderer_window_mounted", r),
+        ed(e, r),
+            B(e, "renderer_window_mounted", r),
             u.Z.window.setBackgroundThrottling(!1),
             E.ZP.IsHardwareAcceleratedGPUSchedulingEnabled() &&
-                F.toggleGPUBoost(I.zS.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
-            F.toggleGPUBoost(I.zS.OVERLAY_RENDERING, !0),
-            ey(e),
-            (K = e),
+                H.toggleGPUBoost(I.zS.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
+            H.toggleGPUBoost(I.zS.OVERLAY_RENDERING, !0),
+            ev(e),
+            (q = e),
             (0, b.setPID)(e),
-            k.info("Getting Native Handle for pid", e);
-        let i = await eO();
+            G.info("Getting Native Handle for pid", e);
+        let i = await eI();
         if (null == i)
             return (
-                k.error("Failed to get native handle for pid", e),
-                ef(e, Error("Failed to get native handle for pid")),
+                G.error("Failed to get native handle for pid", e),
+                ep(e, Error("Failed to get native handle for pid")),
                 ""
             );
-        k.info("Native Handle for pid ".concat(e, ":"), i),
+        G.info("Native Handle for pid ".concat(e, ":"), i),
             c.Z.updateOverlayState(e, I.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE);
         let a = { renderer_started_after: new Date().getTime() - t };
         return (
-            U(e, "renderer_started", a),
-            ec(e, a),
-            eU(!1),
+            B(e, "renderer_started", a),
+            ed(e, a),
+            eZ(!1),
             S.Z.resetWindowState(),
-            (null == H ? void 0 : H.setOnWindowHandleInitializedCallback) == null && eM(!0),
+            (null == W ? void 0 : W.setOnWindowHandleInitializedCallback) == null && eG(!0),
             i
         );
     } catch (t) {
-        k.error("failed to create out of process overlay host window", t),
-            e_(e, t),
+        G.error("failed to create out of process overlay host window", t),
+            eh(e, t),
             c.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED_DISABLED);
+    } finally {
+        e9.emitChange();
     }
-    return eT(e), "";
+    return eA(e), "";
 }
-function eI() {
-    k.verbose("Destroying OOP host window"), F.resetGPUBoosts();
+function eS() {
+    G.verbose("Destroying OOP host window"), H.resetGPUBoosts();
     try {
         var e;
         null === u.Z || void 0 === u.Z || null == (e = u.Z.window) || e.close(P.$J);
     } catch (e) {
-        k.error("Error destroying overlay window:", e), ef(null != K ? K : b.UNSET_PID, e);
+        G.error("Error destroying overlay window:", e), ep(null != q ? q : b.UNSET_PID, e);
     }
     try {
         u.Z.window.setBackgroundThrottling(!0);
     } catch (e) {
-        k.error("Error setting background throttling:", e), ef(null != K ? K : b.UNSET_PID, e);
+        G.error("Error setting background throttling:", e), ep(null != q ? q : b.UNSET_PID, e);
     }
-    eP(),
-        B.clear(),
+    eD(),
+        F.clear(),
         S.Z.resetWindowState(!1),
-        null != K && eT(K),
-        (K = null),
-        (0, b.setPID)(null != K ? K : b.UNSET_PID),
-        (er = !1),
-        (null == H ? void 0 : H.setOnWindowHandleInitializedCallback) == null && eM(!1);
+        null != q && eA(q),
+        (q = null),
+        (0, b.setPID)(null != q ? q : b.UNSET_PID),
+        ea(),
+        e9.emitChange();
 }
-function eT(e) {
-    g.default.track(w.rMx.OVERLAY_HOOK_RESULT, el(e));
+function eA(e) {
+    g.default.track(w.rMx.OVERLAY_HOOK_RESULT, eu(e));
 }
-function eS(e) {
+function eC(e) {
     try {
-        k.verbose("Refreshing OOP host window for pid ".concat(e)),
-            U(e, "renderer_window_refreshing_started"),
-            ey(e),
-            B.delete(null != K ? K : b.UNSET_PID),
-            (K = e),
-            (0, b.setPID)(null != K ? K : b.UNSET_PID);
+        G.verbose("Refreshing OOP host window for pid ".concat(e)),
+            B(e, "renderer_window_refreshing_started"),
+            ev(e),
+            F.delete(null != q ? q : b.UNSET_PID),
+            (q = e),
+            (0, b.setPID)(null != q ? q : b.UNSET_PID);
         let t = p.Z.getWindow(P.$J),
             n = () =>
                 new Promise((e) => {
                     let n = (t) => {
-                        t.data === L && (window.removeEventListener("message", n), e());
+                        t.data === M && (window.removeEventListener("message", n), e());
                     };
                     window.addEventListener("message", n),
-                        null == t || t.postMessage(j, "*"),
+                        null == t || t.postMessage(k, "*"),
                         setTimeout(() => {
-                            let e = new MessageEvent("message", { data: L });
+                            let e = new MessageEvent("message", { data: M });
                             n(e);
                         }, 100);
                 }),
             r = 0,
             i = () => {
                 15 === r
-                    ? (eo.clearClickZones(),
-                      U(e, "renderer_window_refreshing_finished"),
-                      null == H || H.readyToShow(e),
+                    ? (el.clearClickZones(),
+                      B(e, "renderer_window_refreshing_finished"),
+                      null == W || W.readyToShow(e),
                       c.Z.updateOverlayState(e, I.mM.OVERLAY_RENDERING),
-                      k.verbose("Showing overlay v3 for pid ".concat(e)))
+                      G.verbose("Showing overlay v3 for pid ".concat(e)))
                     : ((r += 1), n().then(i));
             };
         i();
     } catch (e) {
-        k.error("failed to refresh out of process overlay host window", e), ef(null != K ? K : b.UNSET_PID, e);
+        G.error("failed to refresh out of process overlay host window", e), ep(null != q ? q : b.UNSET_PID, e);
+    } finally {
+        e9.emitChange();
     }
 }
-function eA(e, t, n, r) {
+function eN(e, t, n, r) {
     let i = p.Z.getWindow(P.$J);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
@@ -495,241 +545,247 @@ function eA(e, t, n, r) {
     if (null == l) throw Error("No node found at point");
     l.dispatchEvent(s);
 }
-function eC(e) {
+function eR(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (
-        (null == e ? eo.storeClickZones() : eo.refreshClickZones(),
-        e !== W &&
-            U(e, "renderer_window_focus_flushed", {
-                focusedPID: W,
+        (null == e ? el.storeClickZones() : el.refreshClickZones(),
+        e !== z &&
+            B(e, "renderer_window_focus_flushed", {
+                focusedPID: z,
                 isUntracked: t,
             }),
         null != e)
     ) {
-        let t = Q[e] === I.gl.OutOfProcessLimitedInteraction;
-        if (t !== z) {
-            z = t;
+        let t = $[e] === I.gl.OutOfProcessLimitedInteraction;
+        if (t !== X) {
+            X = t;
             try {
-                "function" == typeof (null == H ? void 0 : H.setLimitedInteraction)
-                    ? (k.info("Setting limited interaction", t),
-                      U(e, "focus_and_interaction_set", {
+                "function" == typeof (null == W ? void 0 : W.setLimitedInteraction)
+                    ? (G.info("Setting limited interaction", t),
+                      B(e, "focus_and_interaction_set", {
                           isLimitedInteraction: t,
                           focusable: !t,
                       }),
-                      H.setLimitedInteraction(t),
+                      W.setLimitedInteraction(t),
                       E.ZP.setFocusable(P.$J, !t))
-                    : k.info("No setLimitedInteraction function found, skipping");
+                    : G.info("No setLimitedInteraction function found, skipping");
             } catch (t) {
-                k.error("Error setting limited interaction mode:", t), ef(e, t);
+                G.error("Error setting limited interaction mode:", t), ep(e, t);
             }
         }
     }
     c.Z.setFocusedPID(0 === e ? null : e, t);
 }
-function eN(e) {
-    eC(e), e5.emitChange(), e !== W && k.info("OverlayStore: Focused new PID", e);
-}
-function eR(e) {
-    eP(), e5.emitChange();
-}
-function eP() {
-    eC(null, !0), e5.emitChange();
+function eP(e) {
+    eR(e), e9.emitChange(), e !== z && G.info("OverlayStore: Focused new PID", e);
 }
 function ew(e) {
-    return (W = e.pid), !0;
+    eD(), e9.emitChange();
 }
-function eD(e) {
-    if (!V.has(e) || !er) return;
-    let t = el(e).mounting_started_at;
-    ec(e, {
+function eD() {
+    eR(null, !0), e9.emitChange();
+}
+function ex(e) {
+    return (z = e.pid), !0;
+}
+function eL(e) {
+    if (!Y.has(e) || !ei.allDone) return;
+    let t = eu(e).mounting_started_at;
+    ed(e, {
         total_mount_time_ms: null != t ? new Date().getTime() - t : void 0,
         success: !0,
     }),
         c.Z.successfullyShown(e);
 }
-function ex() {
+function ej() {
     var e;
-    return null == H || null == (e = H.onPopoutShowInactive) || e.call(H), !1;
+    (ei = j(x({}, ei), { showInactiveCalled: !0 })), null == W || null == (e = W.onPopoutShowInactive) || e.call(W);
 }
-function eL() {
-    (er = !0),
-        V.forEach((e) => {
-            eD(e);
+function eM() {
+    (ei = j(x({}, ei), { allDone: !0 })),
+        Y.forEach((e) => {
+            eL(e);
         });
 }
-function ej(e) {
-    U(e, "_successfullyShownCallback"), V.add(e), eD(e);
+function ek(e) {
+    let { update: t } = e;
+    ei = x({}, ei, t);
 }
-function eM(e) {
-    (en = e), e && c.Z.updateOverlayState((0, b.getPID)(), I.mM.WAITING_FOR_REACT_INITIALIZATION), e5.emitChange();
+function eU(e) {
+    B(e, "_successfullyShownCallback"), Y.add(e), eL(e);
 }
-let ek = (() => {
+function eG(e) {
+    (ei = j(x({}, ei), { windowHandleSentToNative: e })),
+        e && c.Z.updateOverlayState((0, b.getPID)(), I.mM.WAITING_FOR_REACT_INITIALIZATION),
+        e9.emitChange();
+}
+let eB = (() => {
     let e = null;
     async function t() {
-        if (!N.iP) return void k.error("Attempted to load overlay on an unsupported platform.");
-        k.info("Loading Out of Process Overlay Module");
+        if (!N.iP) return void G.error("Attempted to load overlay on an unsupported platform.");
+        G.info("Loading Out of Process Overlay Module");
         try {
             var e, t, n, r;
             await E.ZP.ensureModule("discord_desktop_overlay");
             let i = E.ZP.requireModule("discord_desktop_overlay");
             null == i || null == (e = i.init) || e.call(i),
-                i.setCaptureZoneCallback(eA),
-                i.setHostWindowCallbacks(ev, eI, eS),
-                i.setFocusCallback(eN),
-                null == (t = i.setFocusLostCallback) || t.call(i, eR),
-                null == (n = i.setSuccessfullyShownCallback) || n.call(i, ej),
-                null == (r = i.setOnWindowHandleInitializedCallback) || r.call(i, eM),
-                (H = i),
+                i.setCaptureZoneCallback(eN),
+                i.setHostWindowCallbacks(eT, eS, eC),
+                i.setFocusCallback(eP),
+                null == (t = i.setFocusLostCallback) || t.call(i, ew),
+                null == (n = i.setSuccessfullyShownCallback) || n.call(i, eU),
+                null == (r = i.setOnWindowHandleInitializedCallback) || r.call(i, eG),
+                (W = i),
                 (0, b.setOutOfProcessSupport)(!0),
-                eE(),
-                k.info("OverlayV3 Module Loaded"),
-                U((0, b.getPID)(), "overlay_v3_module_loaded");
+                ey(),
+                G.info("OverlayV3 Module Loaded"),
+                B((0, b.getPID)(), "overlay_v3_module_loaded");
         } catch (e) {
             throw (
-                (k.error("failed loading overlay module", e),
+                (G.error("failed loading overlay module", e),
                 (0, b.setOutOfProcessSupport)(!1),
-                (0, O.V6)(e, I.gl.OutOfProcess, { extra: ed(null != K ? K : b.UNSET_PID, "module_load") }),
+                (0, O.V6)(e, I.gl.OutOfProcess, { extra: e_(null != q ? q : b.UNSET_PID, "module_load") }),
                 e)
             );
         }
     }
     return () => (null == e && (e = t()), e);
 })();
-function eU(e) {
-    U((0, b.getPID)(), "setInteractionEnabled called", { interactionEnabled: e }),
-        null == H || H.setInteractionEnabled(e);
-}
-function eG(e) {
-    if (N.iP && ((Y = e), null == H && eg())) return void ek();
-}
-async function eB(e) {
-    e.overlayMethod === I.gl.OutOfProcess || e.overlayMethod === I.gl.OutOfProcessLimitedInteraction
-        ? (null == H && (await ek()), ep(e.pid, e.overlayMethod))
-        : eh(e.pid),
-        e5.emitChange();
-}
 function eZ(e) {
-    k.verbose("Updating OverlayMethod", e), eB(e);
+    B((0, b.getPID)(), "setInteractionEnabled called", { interactionEnabled: e }),
+        null == W || W.setInteractionEnabled(e);
 }
 function eF(e) {
-    let { pid: t, error: n } = e;
-    G.has(t) && e_(t, n instanceof Error ? n : Error(null != n ? n : "Unknown error"));
+    if (N.iP && ((K = e), null == W && eb())) return void eB();
 }
-function eV(e) {
-    F.toggleGPUBoost(e.reason, e.enabled);
+async function eV(e) {
+    e.overlayMethod === I.gl.OutOfProcess || e.overlayMethod === I.gl.OutOfProcessLimitedInteraction
+        ? (null == W && (await eB()), em(e.pid, e.overlayMethod))
+        : eg(e.pid),
+        e9.emitChange();
 }
-function eH() {
-    k.verbose("Maybe Enable Overlay"),
-        eg() ? (eG(v.v.oopEnabled), (0, b.setOutOfProcessSupport)(!0), ek()) : Y && eG(!1);
+function eH(e) {
+    G.verbose("Updating OverlayMethod", e), eV(e);
 }
 function eY(e) {
-    let { oopEnabled: t } = e;
-    eG(t);
+    let { pid: t, error: n } = e;
+    Z.has(t) && eh(t, n instanceof Error ? n : Error(null != n ? n : "Unknown error"));
 }
 function eW(e) {
-    let { zones: t } = e;
-    eo.setClickZones(t);
+    H.toggleGPUBoost(e.reason, e.enabled);
 }
-function eK(e) {
-    X[e.pid] = e.overlayState;
+function eK() {
+    G.verbose("Maybe Enable Overlay"),
+        eb() ? (eF(v.v.oopEnabled), (0, b.setOutOfProcessSupport)(!0), eB()) : K && eF(!1);
 }
 function ez(e) {
+    let { oopEnabled: t } = e;
+    eF(t);
+}
+function eq(e) {
+    let { zones: t } = e;
+    el.setClickZones(t);
+}
+function eX(e) {
+    J[e.pid] = e.overlayState;
+}
+function eQ(e) {
     let { locked: t, pid: n } = e,
-        r = X[n];
+        r = J[n];
     if (t || r !== I.mM.OVERLAY_CRASHED_DISABLED) {
         if (
-            (U(n, "setInputLocked called", { locked: t }),
-            t ? B.delete(n) : B.add(n),
-            null != q && (clearTimeout(q), (q = null), t))
+            (B(n, "setInputLocked called", { locked: t }),
+            t ? F.delete(n) : F.add(n),
+            null != Q && (clearTimeout(Q), (Q = null), t))
         )
             return;
         t
-            ? eb(t)
-            : (q = setTimeout(() => {
-                  eb(t), (q = null);
+            ? eO(t)
+            : (Q = setTimeout(() => {
+                  eO(t), (Q = null);
               }, 100));
     }
 }
-function eq(e) {
+function eJ(e) {
     let { region: t } = e;
-    eb(!1);
-}
-function eX() {
-    eb(!0);
-}
-function eQ(e) {
-    let { enabled: t, mode: n } = e;
-    t ? es.add(n) : es.delete(n),
-        n === I.GO.DisabledGPUBoost && F.toggleDisabledGPUBoost(t),
-        n === I.GO.ForceGPUBoost && F.toggleGPUBoost(I.zS.DEV_FORCED_GPU_BOOST, t);
-}
-function eJ() {
-    f.Z.hasLoadedExperiments && !J && ((J = !0), eH());
+    eO(!1);
 }
 function e$() {
-    J = !1;
+    eO(!0);
 }
 function e0(e) {
-    let { mode: t } = e;
-    $ = t;
+    let { enabled: t, mode: n } = e;
+    t ? ec.add(n) : ec.delete(n),
+        n === I.GO.DisabledGPUBoost && H.toggleDisabledGPUBoost(t),
+        n === I.GO.ForceGPUBoost && H.toggleGPUBoost(I.zS.DEV_FORCED_GPU_BOOST, t);
 }
-let e1 = 3000,
-    e2 = 100;
+function e1() {
+    f.Z.hasLoadedExperiments && !ee && ((ee = !0), eK());
+}
+function e2() {
+    ee = !1;
+}
 function e3(e) {
+    let { mode: t } = e;
+    et = t;
+}
+let e4 = 3000,
+    e8 = 100;
+function e5(e) {
     let { enabled: t } = e;
     if (t) {
-        if (null != ee) return !1;
-        ee = setInterval(() => {
-            null == H ||
-                H.getBreadcrumbs({ minBreadcrumbId: y.JC.getLatestBreadcrumbId() }, (e) => {
+        if (null != en) return !1;
+        en = setInterval(() => {
+            null == W ||
+                W.getBreadcrumbs({ minBreadcrumbId: y.JC.getLatestBreadcrumbId() }, (e) => {
                     let { breadcrumbs: t } = e;
                     for (let e of t) y.JC.addNativeBreadcrumb(e, y.C7.NativeOOP, (0, b.getPID)());
-                    e5.emitChange();
+                    e9.emitChange();
                 });
-        }, e1);
-    } else clearInterval(ee), (ee = null);
+        }, e4);
+    } else clearInterval(en), (en = null);
 }
-function e4(e) {
+function e6(e) {
     let { enabled: t } = e;
     if (t) {
-        if (null != et) return !1;
-        et = setInterval(() => {
+        if (null != er) return !1;
+        er = setInterval(() => {
             var e;
-            null == H ||
-                null == (e = H.getDebuggingState) ||
-                e.call(H, (e) => {
-                    o()(r, e) || ((r = e), e5.emitChange());
+            null == W ||
+                null == (e = W.getDebuggingState) ||
+                e.call(W, (e) => {
+                    o()(r, e) || ((r = e), e9.emitChange());
                 });
-        }, e2);
-    } else clearInterval(et), (et = null);
+        }, e8);
+    } else clearInterval(er), (er = null);
 }
-class e8 extends (i = s.ZP.Store) {
+class e7 extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(_.ZP, h.default, f.Z), this.syncWith([f.Z], eJ);
+        this.waitFor(_.ZP, h.default, f.Z), this.syncWith([f.Z], e1);
     }
     DEV_getOverlayLoggingBreadcrumbs(e) {
         return y.JC.getBreadcrumbs(e);
     }
     DEV_isOverlayModuleLoggingEnabled() {
-        return null != ee;
+        return null != en;
     }
     DEV_getDebuggingState() {
         return r;
     }
     DEV_isStateDebuggingEnabled() {
-        return null != et;
+        return null != er;
     }
     isInputLocked(e) {
-        return !B.has(e);
+        return !F.has(e);
     }
     isSupported() {
         return N.iP;
     }
     isOverlayV3Enabled() {
-        return eg();
+        return eb();
     }
     isOverlayV3EnabledForPID(e) {
-        return G.has(e);
+        return Z.has(e);
     }
     getWidgetByType(e) {
         let t = m.Z.getLayout(R.$S);
@@ -750,64 +806,68 @@ class e8 extends (i = s.ZP.Store) {
         return null != t && t.pinned;
     }
     get enabled() {
-        return Y;
+        return K;
     }
     hasRenderDebugMode(e) {
-        return es.has(e);
+        return ec.has(e);
     }
     getFocusedPID() {
-        return W;
+        return z;
     }
     isFocused(e) {
-        return null != W && e !== b.UNSET_PID && (!!G.has(e) || e === b.DEV_PID) && W === e;
+        return null != z && e !== b.UNSET_PID && (!!Z.has(e) || e === b.DEV_PID) && z === e;
     }
     getFocusedRunningGame() {
         var e;
-        return null == W ? null : null != (e = _.ZP.getGameOrTransformedSubgameForPID(W)) ? e : null;
+        return null == z ? null : null != (e = _.ZP.getGameOrTransformedSubgameForPID(z)) ? e : null;
     }
     isReady(e) {
-        return G.has(e);
+        return Z.has(e);
     }
     isGPUBoosted() {
-        return F.isGPUBoosted;
+        return H.isGPUBoosted;
     }
     getOverlayState(e) {
         var t;
-        return null != (t = X[e]) ? t : null;
+        return null != (t = J[e]) ? t : null;
     }
     getOverlayMethod(e) {
         var t;
-        return null != (t = Q[e]) ? t : null;
+        return null != (t = $[e]) ? t : null;
     }
     isWindowHandleInitialized() {
-        return en;
+        return ei.windowHandleSentToNative;
+    }
+    getInitializationStages() {
+        return ei;
     }
 }
-D(e8, "displayName", "OverlayStore-v3");
-let e5 = new e8(
+D(e7, "displayName", "OverlayStore-v3");
+let e9 = new e7(
         l.Z,
         __OVERLAY__
             ? {}
             : {
-                  LOGIN: e$,
-                  LOGOUT: e$,
-                  EXPERIMENT_OVERRIDE_BUCKET: eH,
-                  OVERLAY_SET_ENABLED: eY,
-                  OVERLAY_FORCE_RENDER_MODE: e0,
-                  OVERLAY_SET_CLICK_ZONES: eW,
-                  OVERLAY_SET_INPUT_LOCKED: ez,
-                  OVERLAY_ACTIVATE_REGION: eq,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: eX,
-                  OVERLAY_RENDER_DEBUG_MODE: eQ,
-                  OVERLAY_UPDATE_OVERLAY_METHOD: eZ,
-                  OVERLAY_UPDATE_OVERLAY_STATE: eK,
-                  OVERLAY_SET_GPU_BOOST_REQUESTED: eV,
-                  OVERLAY_CRASHED: eF,
-                  OVERLAY_FOCUSED: ew,
-                  OVERLAY_SET_MODULE_LOGGING: e3,
-                  OVERLAY_SET_STATE_DEBUGGING: e4,
-                  OVERLAY_OOP_UI_INITIALIZED: eL,
-                  OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: ex,
+                  LOGIN: e2,
+                  LOGOUT: e2,
+                  EXPERIMENT_OVERRIDE_BUCKET: eK,
+                  OVERLAY_SET_ENABLED: ez,
+                  OVERLAY_FORCE_RENDER_MODE: e3,
+                  OVERLAY_SET_CLICK_ZONES: eq,
+                  OVERLAY_SET_INPUT_LOCKED: eQ,
+                  OVERLAY_ACTIVATE_REGION: eJ,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: e$,
+                  OVERLAY_RENDER_DEBUG_MODE: e0,
+                  OVERLAY_UPDATE_OVERLAY_METHOD: eH,
+                  OVERLAY_UPDATE_OVERLAY_STATE: eX,
+                  OVERLAY_SET_GPU_BOOST_REQUESTED: eW,
+                  OVERLAY_CRASHED: eY,
+                  OVERLAY_FOCUSED: ex,
+                  OVERLAY_SET_MODULE_LOGGING: e5,
+                  OVERLAY_SET_STATE_DEBUGGING: e6,
+                  OVERLAY_OOP_UI_INITIALIZED: eM,
+                  OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: ej,
+                  OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED: ek,
               },
     ),
-    e6 = e5;
+    te = e9;
