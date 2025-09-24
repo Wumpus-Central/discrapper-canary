@@ -245,6 +245,12 @@ let O = new o.Z("OverlayActionCreators"),
                 enabled: e,
             });
         },
+        setStateDebugging(e) {
+            i.Z.dispatch({
+                type: "OVERLAY_SET_STATE_DEBUGGING",
+                enabled: e,
+            });
+        },
         notificationEvent(e, t) {
             var n, r;
             let a = d.Z.getGame();
