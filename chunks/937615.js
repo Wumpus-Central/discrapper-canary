@@ -18,7 +18,9 @@ function c(e, t, n) {
     var a;
     let o = null != n ? n : {},
         s = null != (a = null == n ? void 0 : n.localeOverride) ? a : i.default.locale;
-    return "en-US" === s && l.includes(i.default.systemLocale) && (o.currencyDisplay = "code"), (0, r.T4)(e, t, s, o);
+    "en-US" === s && l.includes(i.default.systemLocale) && (o.currencyDisplay = "code");
+    let { maximumFractionDigits: c, minimumFractionDigits: u } = o;
+    return 0 === c && null == u && (o.minimumFractionDigits = 0), (0, r.T4)(e, t, s, o);
 }
 function u(e, t, n) {
     if (t === o.rV.YEAR) return s.intl.formatToPlainString(s.t.rS8FAw, { price: e });
