@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(34415),
-    l = n(873546),
+    s = n(873546),
+    l = n(793030),
     c = n(442837),
     u = n(335854),
     d = n(481060),
@@ -87,7 +87,7 @@ let q = (0, B.Un)({
     J = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             a = (0, G.getPlatform)(),
-            u = l.tq || l.Em,
+            u = s.tq || s.Em,
             m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
             M = i.useRef(document.body),
             k = "".concat(m);
@@ -107,7 +107,7 @@ let q = (0, B.Un)({
                                         children: [
                                             (0, r.jsx)(Y.Co, {}),
                                             (0, r.jsx)(H.ZP, {}),
-                                            (0, r.jsx)(s.OU, {}),
+                                            (0, r.jsx)(l.OUJ, {}),
                                             (0, r.jsx)(g.Wu, {
                                                 appContext: K.IlC.APP,
                                                 renderWindow: window,
@@ -166,7 +166,7 @@ let q = (0, B.Un)({
                                                     ],
                                                 }),
                                             }),
-                                            (0, r.jsx)(s.OU, {}),
+                                            (0, r.jsx)(l.OUJ, {}),
                                         ],
                                     }),
                                 }),
