@@ -42192,6 +42192,10 @@ body .headerAnimation_b54a5b {
     margin-left: var(--space-4)
 }
 
+.inheritWidth_fdeafc {
+    width: inherit
+}
+
 .profileEffects__01370 {
     height: 100%;
     left: 0;

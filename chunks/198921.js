@@ -9,4 +9,5 @@ e.exports = {
     nameplatePurchased: "nameplatePurchased_fdeafc",
     placeholderUsername: "placeholderUsername_fdeafc",
     tagChiplet: "tagChiplet_fdeafc",
+    inheritWidth: "inheritWidth_fdeafc",
 };
