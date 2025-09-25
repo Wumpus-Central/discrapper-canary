@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(22267),
     u = n(786761),
     p = n(3148),
-    f = n(739566),
-    m = n(753206),
+    m = n(739566),
+    f = n(753206),
     g = n(678135),
     h = n(643879),
     b = n(687158),
@@ -21,8 +21,8 @@ var r = n(951288),
     C = n(63063),
     O = n(981631),
     v = n(671955),
-    P = n(693450),
-    y = n(388032),
+    y = n(693450),
+    P = n(388032),
     k = n(270816);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,41 +68,41 @@ function E(e, t) {
     );
 }
 function T(e) {
-    let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: R } = e,
+    let { user: t, displayName: n, selectedFontId: l, selectedEffectId: T, selectedColors: R, onClose: L } = e,
         w = (0, c.ZP)(),
         A = (0, s.wjy)(w),
-        [I, L] = (0, o.useState)(A),
-        B = (0, b.ZP)(t.id, null),
-        { bannerSrc: M } = (0, x.Z)({
-            displayProfile: B,
+        [I, B] = (0, o.useState)(A),
+        M = (0, b.ZP)(t.id, null),
+        { bannerSrc: Z } = (0, x.Z)({
+            displayProfile: M,
             size: 413,
             canAnimate: !1,
         }),
         G = (0, i.cj)([_.Z], () => _.Z.getAllPending()),
-        Z = (0, h.SD)({
+        Y = (0, h.SD)({
             userId: t.id,
             image: G.pendingAvatar,
         }),
-        Y = I ? O.BRd.DARK : O.BRd.LIGHT;
-    ((A && I) || (!A && !I)) && (Y = w);
-    let H = (0, o.useCallback)(() => {
-            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), R();
-        }, [R]),
-        z = (0, o.useCallback)((e) => {
-            L(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
+        H = I ? O.BRd.DARK : O.BRd.LIGHT;
+    ((A && I) || (!A && !I)) && (H = w);
+    let z = (0, o.useCallback)(() => {
+            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), L();
+        }, [L]),
+        F = (0, o.useCallback)((e) => {
+            B(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
         }, []),
-        F = (0, o.useMemo)(() => {
-            var e;
-            let r = (0, f.ij)(t, null);
-            return E(N({}, r), {
-                nick: null != (e = G.pendingGlobalName) ? e : r.nick,
-                displayNameStyles: {
-                    fontId: n,
-                    effectId: l,
-                    colors: T,
-                },
-            });
-        }, [t, n, l, T, G.pendingGlobalName]);
+        U = (0, o.useMemo)(
+            () =>
+                E(N({}, (0, m.ij)(t, null)), {
+                    nick: n,
+                    displayNameStyles: {
+                        fontId: l,
+                        effectId: T,
+                        colors: R,
+                    },
+                }),
+            [t, l, T, R, n],
+        );
     return (0, r.jsxs)("div", {
         className: k.previewSection,
         children: [
@@ -112,24 +112,24 @@ function T(e) {
                 className: k.sectionHeader,
                 children: (0, r.jsx)(s.olH, {
                     "data-migration-pending": !0,
-                    onClick: H,
+                    onClick: z,
                     innerClassName: k.closeButton,
                 }),
             }),
-            null != M &&
+            null != Z &&
                 (0, r.jsx)(j.Z, {
                     user: t,
-                    displayProfile: B,
+                    displayProfile: M,
                     themeType: v.l.MODAL_V2,
                     className: k.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, r.jsx)("div", {
                         className: k.bannerBackground,
-                        style: { backgroundImage: "url(".concat(M, ")") },
+                        style: { backgroundImage: "url(".concat(Z, ")") },
                     }),
                 }),
             (0, r.jsx)(s.f6W, {
-                theme: Y,
+                theme: H,
                 children: (e) =>
                     (0, r.jsxs)("div", {
                         className: a()(k.previewCards, e),
@@ -138,8 +138,9 @@ function T(e) {
                             (0, r.jsx)(
                                 g.Z,
                                 E(N({ user: t }, G), {
-                                    pendingAvatar: Z,
-                                    pendingDisplayNameStyles: F.displayNameStyles,
+                                    pendingAvatar: Y,
+                                    pendingGlobalName: n,
+                                    pendingDisplayNameStyles: U.displayNameStyles,
                                     canUsePremiumCustomization: !0,
                                     disabledInputs: !0,
                                     hideCustomStatus: !0,
@@ -149,15 +150,15 @@ function T(e) {
                                     hideExampleButton: !0,
                                 }),
                             ),
-                            (0, r.jsx)(m.Z, {
-                                author: F,
+                            (0, r.jsx)(f.Z, {
+                                author: U,
                                 message: (0, u.e5)(
                                     E(
                                         N(
                                             {},
                                             (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: y.intl.string(P.default.h5Cuen),
+                                                content: P.intl.string(y.default.h5Cuen),
                                             }),
                                         ),
                                         {
@@ -175,8 +176,8 @@ function T(e) {
                                 user: t,
                                 nameplate: G.pendingNameplate,
                                 nameplateData: void 0 === G.pendingNameplate ? t.nameplate : void 0,
-                                pendingGlobalName: G.pendingGlobalName,
-                                pendingDisplayNameStyles: F.displayNameStyles,
+                                pendingGlobalName: n,
+                                pendingDisplayNameStyles: U.displayNameStyles,
                                 isHighlighted: !0,
                                 className: k.nameplate,
                             }),
@@ -189,13 +190,13 @@ function T(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: y.intl.format(P.default.prQba2, {
+                        children: P.intl.format(y.default.prQba2, {
                             helpArticleLink: C.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
                     (0, r.jsx)(D, {
                         darkPreview: I,
-                        onToggleTheme: z,
+                        onToggleTheme: F,
                     }),
                 ],
             }),
@@ -211,14 +212,14 @@ function D(e) {
         options: [
             {
                 name: "",
-                tooltip: y.intl.string(y.t.b8Cei4),
+                tooltip: P.intl.string(P.t.b8Cei4),
                 value: O.BRd.DARK,
                 icon: s.Z6G,
                 className: o === O.BRd.DARK ? k.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: y.intl.string(y.t.K2sFfn),
+                tooltip: P.intl.string(P.t.K2sFfn),
                 value: O.BRd.LIGHT,
                 icon: s.chG,
                 className: o === O.BRd.LIGHT ? k.themeToggleOptionSelected : void 0,

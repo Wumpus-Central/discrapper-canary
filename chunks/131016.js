@@ -2,6 +2,7 @@ n.d(t, {
     aY: () => c,
     bN: () => l,
     hX: () => s,
+    mR: () => u,
 }),
     n(704826),
     n(35282),
@@ -44,4 +45,9 @@ function c() {
         effectId: t,
         colors: e,
     };
+}
+function u(e) {
+    if (null == e) return !1;
+    let t = e.replace(RegExp("[^\\p{L}]", "gu"), "");
+    return RegExp("\\P{Script=Latin}", "u").test(t);
 }

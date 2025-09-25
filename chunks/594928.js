@@ -1,7 +1,7 @@
 n.d(t, {
     JH: () => s,
     fN: () => o,
-    s9: () => l,
+    wL: () => l,
 });
 var r = n(818083),
     i = n(427164),
@@ -57,7 +57,7 @@ let o = (0, r.B)({
         ],
     }),
     l = (0, i.le)({
-        name: "2025-09-display-name-styles-per-server",
+        name: "2025-09-display-name-styles-ga",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
