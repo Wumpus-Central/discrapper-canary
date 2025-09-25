@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(401393),
+    l = n(6383),
     a = n(442837),
     o = n(481060),
     s = n(570140),
@@ -44,7 +44,7 @@ function I(e) {
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,11 +62,11 @@ function C(e, t) {
         e
     );
 }
-function S(e) {
+function C(e) {
     let { className: t } = e,
         n = (0, a.e7)([g.Z], () => g.Z.getPendingCount() > 0),
         b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
-        S = (function () {
+        C = (function () {
             let [e, t] = i.useState(null),
                 { showActivityTicker: n } = (0, O.Z)(),
                 r = i.useRef({}),
@@ -172,7 +172,7 @@ function S(e) {
             );
         })(),
         T = i.useRef(null),
-        N = (0, o.Yzy)(S, {
+        N = (0, o.Yzy)(C, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -218,7 +218,7 @@ function S(e) {
                                   var i;
                                   return (0, r.jsxs)(
                                       l.animated.div,
-                                      C(
+                                      S(
                                           I(
                                               {
                                                   ref: T,
@@ -258,7 +258,7 @@ function S(e) {
                 children: (e, i, l, a) =>
                     (0, r.jsx)(
                         d.JO,
-                        C(I({}, l), {
+                        S(I({}, l), {
                             ref: a,
                             className: t,
                             onClick: e,
@@ -277,5 +277,5 @@ function S(e) {
 function T(e) {
     let { className: t } = e,
         { enableTopNavButton: n } = (0, b.Cq)({ location: "friends-button" });
-    return n ? (0, r.jsx)(S, { className: t }) : null;
+    return n ? (0, r.jsx)(C, { className: t }) : null;
 }

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     l = n(647438),
-    o = n(498607),
-    i = n.n(o),
-    a = n(202841),
+    i = n(498607),
+    o = n.n(i),
+    a = n(6383),
     s = n(748780),
     c = n(692547),
     u = n(481060),
@@ -62,7 +62,7 @@ let b = {
         clamp: !0,
     };
 function f(e) {
-    var { value: t, children: n, equalityFn: o = i(), style: s } = e,
+    var { value: t, children: n, equalityFn: i = o(), style: s } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -72,14 +72,14 @@ function f(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
@@ -100,8 +100,8 @@ function f(e) {
                 });
         }, [g]);
     l.useEffect(() => {
-        null != t && null != h && (o(t, h) || y());
-    }, [y, t, h, o]);
+        null != t && null != h && (i(t, h) || y());
+    }, [y, t, h, i]);
     let O =
             null == j
                 ? void 0
@@ -109,11 +109,11 @@ function f(e) {
                       range: [0, 1],
                       output: ["".concat(x, "00"), "".concat(v, "27")],
                   }),
-        _ = null != s ? m(C({}, s), { backgroundColor: O }) : { backgroundColor: O };
+        H = null != s ? m(C({}, s), { backgroundColor: O }) : { backgroundColor: O };
     return (0, r.jsx)(
         a.animated.tr,
         m(C({}, f), {
-            style: _,
+            style: H,
             children: n,
         }),
     );

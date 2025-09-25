@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(261616),
+    o = n(6383),
     s = n(442837),
     c = n(481060),
     u = n(607070),
@@ -26,11 +26,11 @@ function y(e) {
             return null != (e = g.Z.getSaveablePendingWidgets()) ? e : [];
         }),
         I = (0, s.Wu)([g.Z], () => g.Z.getChangedWidgets()),
-        C = (0, s.Wu)([g.Z], () => g.Z.getRemovedWidgets()),
-        S = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
+        S = (0, s.Wu)([g.Z], () => g.Z.getRemovedWidgets()),
+        C = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
         T = (0, s.e7)([g.Z], () => g.Z.isSubmitting),
         N = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, c.Yzy)(S, {
+        P = (0, c.Yzy)(C, {
             from: {
                 opacity: 0,
                 y: 80 * !N,
@@ -57,9 +57,9 @@ function y(e) {
         );
     }, []),
         i.useEffect(() => {
-            S && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
-        }, [S]);
-    let P = i.useCallback(async () => {
+            C && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
+        }, [C]);
+    let j = i.useCallback(async () => {
             try {
                 await h.Z.savePendingWidgets(v);
             } catch (e) {
@@ -85,16 +85,16 @@ function y(e) {
                     }, 0))),
                     n(t);
             }
-            for (let e of C)
+            for (let e of S)
                 n({
                     widgetEdited: e.type,
                     isWidgetRemoved: !0,
                 });
-        }, [v, I, C, n]),
+        }, [v, I, S, n]),
         x = i.useCallback(() => {
             h.Z.clearPendingWidgets();
         }, []);
-    return j((e, n) =>
+    return P((e, n) =>
         n
             ? (0, r.jsx)(o.animated.div, {
                   className: t,
@@ -117,15 +117,15 @@ function y(e) {
                                       variant: "secondary",
                                       text: O.intl.string(O.t.yBZMsb),
                                       onClick: x,
-                                      disabled: !S || T,
+                                      disabled: !C || T,
                                   }),
                                   (0, r.jsx)(c.zxk, {
                                       size: "sm",
                                       variant: "primary",
                                       text: O.intl.string(O.t.R3BPHx),
-                                      onClick: P,
+                                      onClick: j,
                                       loading: T,
-                                      disabled: !S || T,
+                                      disabled: !C || T,
                                   }),
                               ],
                           }),

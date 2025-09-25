@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
-    s = n(202841),
+    s = n(6383),
     o = n(524825),
     c = n(481060),
     d = n(787014),
@@ -34,17 +34,17 @@ let b = i.memo(function (e) {
     i.useLayoutEffect(() => {
         setTimeout(a, 350);
     }, [j, a]);
-    let [w, T] = i.useState(!j),
+    let [T, w] = i.useState(!j),
         O = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
-            onRest: () => T(!j),
+            onRest: () => w(!j),
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
               style: O,
-              className: w ? x.hiddenVisually : void 0,
+              className: T ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)("div", {
                   className: x.container,
                   children: [

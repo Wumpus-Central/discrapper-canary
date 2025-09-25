@@ -1,9 +1,9 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(202841),
-    a = n(442837),
-    s = n(692547),
+    l = n(6383),
+    s = n(442837),
+    a = n(692547),
     o = n(215569),
     c = n(780384),
     d = n(481060),
@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(367907),
     g = n(626135),
     p = n(585483),
-    h = n(999382),
-    f = n(743475),
+    f = n(999382),
+    h = n(743475),
     b = n(983135),
     x = n(8426),
     j = n(969632),
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,26 +71,26 @@ function Z(e, t) {
         e
     );
 }
-function D() {
-    let e = (0, a.e7)([h.Z], () => h.Z.getGuild());
+function Z() {
+    let e = (0, s.e7)([f.Z], () => f.Z.getGuild());
     return null == e ? null : (0, r.jsx)(A, { guild: e });
 }
 function A(e) {
     let { guild: t } = e,
-        h = t.id,
-        D = (0, a.e7)([O.Z], () => O.Z.getCurrentPage()),
-        A = (0, C.Z)(h),
+        f = t.id,
+        Z = (0, s.e7)([O.Z], () => O.Z.getCurrentPage()),
+        A = (0, C.Z)(f),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: k,
-            hasErrors: M,
-        } = (0, a.cj)([O.Z], () => ({
+            hasErrors: G,
+        } = (0, s.cj)([O.Z], () => ({
             hasChanges: O.Z.hasChanges(),
             hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
             hasErrors: O.Z.hasErrors(),
         })),
-        G = (0, a.e7)([O.Z], () => {
-            let e = (0, y.lg)(D);
+        M = (0, s.e7)([O.Z], () => {
+            let e = (0, y.lg)(Z);
             return null != e && !O.Z.isEducationUpsellDismissed(e);
         }),
         U = (0, u.ZP)(),
@@ -115,30 +115,30 @@ function A(e) {
             }
         );
     }, [H]);
-    let z = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        W = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        V = (0, c.wj)(U) ? z : W,
-        Y = F.to({
+    let z = (0, d.dQu)(a.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+        V = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        W = (0, c.wj)(U) ? z : V,
+        K = F.to({
             range: [0, 1],
-            output: [V, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
+            output: [W, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
-        if (D === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
-        else if (D === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
-        else if (D === y.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
-        else if ((D === y.PG.LANDING || D === y.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
+        if (Z === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
+        else if (Z === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
+        else if (Z === y.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
+        else if ((Z === y.PG.LANDING || Z === y.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
     }
-    let K = D === y.xh[y.xh.length - 1],
-        X = async () => {
+    let Y = Z === y.xh[y.xh.length - 1],
+        q = async () => {
             let e = _.Z.advancedMode;
             if (L)
                 try {
-                    if (D === y.PG.DEFAULT_CHANNELS)
-                        await (0, f.DO)(t).then(() =>
+                    if (Z === y.PG.DEFAULT_CHANNELS)
+                        await (0, h.DO)(t).then(() =>
                             e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (D === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (D === y.PG.HOME_SETTINGS) {
+                    else if (Z === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (Z === y.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
                         await (0, x.oo)(t.id, e);
                     }
@@ -147,48 +147,48 @@ function A(e) {
                 }
             return !0;
         },
-        q = async () => {
+        X = async () => {
             g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                Z(R({}, (0, m.hH)(h)), {
-                    step: y.PG[D],
+                D(R({}, (0, m.hH)(f)), {
+                    step: y.PG[Z],
                     back: !1,
                     skip: !L,
                 }),
             ),
-                (0, b.Nb)((0, y.lg)(D)),
-                (await X()) && (0, b.IG)(h, D);
+                (0, b.Nb)((0, y.lg)(Z)),
+                (await q()) && (0, b.IG)(f, Z);
         },
-        J = async () => {
+        Q = async () => {
             g.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                Z(R({}, (0, m.hH)(h)), {
-                    step: y.PG[D],
+                D(R({}, (0, m.hH)(f)), {
+                    step: y.PG[Z],
                     back: !0,
                     skip: !1,
                 }),
             ),
-                (await X()) && (0, b.Wy)(h, D);
+                (await q()) && (0, b.Wy)(f, Z);
         },
-        Q = null;
-    G &&
-        (D === y.PG.SAFETY_CHECK
-            ? (Q = (0, r.jsx)(N.j7, {}))
-            : D === y.PG.DEFAULT_CHANNELS
-              ? (Q = (0, r.jsx)(N.Io, {}))
-              : D === y.PG.CUSTOMIZATION_QUESTIONS
-                ? (Q = (0, r.jsx)(N.cZ, {}))
-                : D === y.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
+        J = null;
+    M &&
+        (Z === y.PG.SAFETY_CHECK
+            ? (J = (0, r.jsx)(N.j7, {}))
+            : Z === y.PG.DEFAULT_CHANNELS
+              ? (J = (0, r.jsx)(N.Io, {}))
+              : Z === y.PG.CUSTOMIZATION_QUESTIONS
+                ? (J = (0, r.jsx)(N.cZ, {}))
+                : Z === y.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
     let $ = (0, r.jsx)("div", {
-            className: G ? w.hidden : void 0,
+            className: M ? w.hidden : void 0,
             children: (0, r.jsx)(d.zxk, {
                 size: "sm",
                 variant: "secondary",
                 text: P.intl.string(P.t["13/7kZ"]),
                 icon: d.whL,
                 iconPosition: "start",
-                onClick: J,
-                disabled: G || M,
+                onClick: Q,
+                disabled: M || G,
             }),
         }),
         ee = (0, r.jsx)(d.zxk, {
@@ -197,8 +197,8 @@ function A(e) {
             text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t["5WxrcX"]),
             icon: d.ZSh,
             iconPosition: "end",
-            onClick: q,
-            disabled: G || M,
+            onClick: X,
+            disabled: M || G,
         });
     return (0, r.jsx)(o.W, {
         component: "div",
@@ -206,12 +206,12 @@ function A(e) {
             className: w.noticeRegion,
             children: (0, r.jsx)(l.animated.div, {
                 className: w.container,
-                style: { backgroundColor: Y },
+                style: { backgroundColor: K },
                 children: (0, r.jsxs)("div", {
                     className: w.flexContainer,
                     ref: B,
                     children: [
-                        G
+                        M
                             ? (0, r.jsxs)("div", {
                                   className: w.educationUpsellRoot,
                                   children: [
@@ -222,7 +222,7 @@ function A(e) {
                                       }),
                                       (0, r.jsxs)("div", {
                                           className: w.educationUpsell,
-                                          children: [Q, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
+                                          children: [J, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
                                       }),
                                   ],
                               })
@@ -236,14 +236,14 @@ function A(e) {
                                     (0, r.jsxs)("div", {
                                         className: w.next,
                                         children: [
-                                            M
+                                            G
                                                 ? (0, r.jsx)(d.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "status-warning",
                                                       children: P.intl.string(P.t.DhYsPD),
                                                   })
                                                 : null,
-                                            K ? null : ee,
+                                            Y ? null : ee,
                                         ],
                                     }),
                                 ],

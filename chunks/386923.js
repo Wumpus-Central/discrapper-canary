@@ -1,9 +1,9 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
-    s = n(202841),
+    s = n(6383),
     o = n(442837),
     c = n(481060),
     d = n(918222),
@@ -25,7 +25,7 @@ let y = {
         friction: 18,
         clamp: !0,
     },
-    w = (e) => {
+    T = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
@@ -209,7 +209,7 @@ let y = {
             ],
         });
     };
-function T(e) {
+function w(e) {
     let t,
         { guild: n } = e,
         [a, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
@@ -294,7 +294,7 @@ function T(e) {
                                           style: e,
                                           children: [
                                               (0, r.jsx)("hr", { className: j.separator }),
-                                              (0, r.jsx)(w, { guild: n }),
+                                              (0, r.jsx)(T, { guild: n }),
                                           ],
                                       })
                                     : null,

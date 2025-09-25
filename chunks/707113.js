@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v });
 var l = n(951288),
     r = n(647438),
-    a = n(120356),
-    i = n.n(a),
-    s = n(202841),
+    i = n(120356),
+    a = n.n(i),
+    s = n(6383),
     o = n(399606),
     c = n(481060),
     d = n(201070),
@@ -29,7 +29,7 @@ function f(e) {
     });
 }
 function v(e) {
-    let { guild: t, className: n, onPageChange: a, onMemberSelect: s } = e,
+    let { guild: t, className: n, onPageChange: i, onMemberSelect: s } = e,
         v = t.id,
         g = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(v), [v]),
         p = (0, d.$j)(v),
@@ -48,7 +48,7 @@ function v(e) {
             null == (e = E.current) || e.resetSearchText();
         }, []);
     return (0, l.jsx)("div", {
-        className: i()(b.mainTableContainer, n),
+        className: a()(b.mainTableContainer, n),
         children: (0, l.jsxs)(c.Den, {
             className: b.horizatonalScroller,
             ref: N,
@@ -68,7 +68,7 @@ function v(e) {
                 T !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(j.Z, {
                         guildId: t.id,
-                        onPageChange: a,
+                        onPageChange: i,
                     }),
             ],
         }),

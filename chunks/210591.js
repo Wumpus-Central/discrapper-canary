@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(202841),
+    s = n.n(l),
+    a = n(6383),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -26,19 +26,19 @@ function p(e) {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: a()(g.rowIcon, g.rowIconChecked),
+                      className: s()(g.rowIcon, g.rowIconChecked),
                   })
-                : (0, r.jsx)("div", { className: a()(g.rowIcon, g.rowIconEmpty) }),
+                : (0, r.jsx)("div", { className: s()(g.rowIcon, g.rowIconEmpty) }),
         ],
     });
 }
-function h(e) {
+function f(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
-        a = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = a.filter((e) => e).length / a.length,
-        h = 1 === o,
-        f = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
+        s = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = s.filter((e) => e).length / s.length,
+        f = 1 === o,
+        h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
         b = [
             m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
             m.intl.format(m.t["0Fo0wc"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
@@ -49,7 +49,7 @@ function h(e) {
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      !h &&
+                      !f &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -116,12 +116,12 @@ function h(e) {
                         }),
                     ],
                 }),
-                !h &&
+                !f &&
                     (0, r.jsx)("div", {
                         className: g.progressBarOuter,
-                        children: (0, r.jsx)(s.animated.div, {
+                        children: (0, r.jsx)(a.animated.div, {
                             className: g.progressBarInner,
-                            style: f,
+                            style: h,
                         }),
                     }),
                 x,

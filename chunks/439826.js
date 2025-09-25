@@ -1,9 +1,9 @@
-n.d(t, { Z: () => k }), n(784620), n(973216);
+n.d(t, { Z: () => M }), n(784620), n(973216);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(261616),
+    s = n(6383),
     l = n(780384),
     c = n(481060),
     u = n(393238),
@@ -153,7 +153,7 @@ function j(e) {
         }),
     });
 }
-function k(e) {
+function M(e) {
     var t, n, a, s, u;
     let {
             quest: f,
@@ -161,8 +161,8 @@ function k(e) {
             errorHints: C,
             warningHints: w,
             isVisibleInViewport: x,
-            onCtxMenuClose: k,
-            onCtxMenuOpen: M,
+            onCtxMenuClose: M,
+            onCtxMenuOpen: k,
             onCtxMenuSelect: U,
             sourceQuestContent: G,
         } = e,
@@ -271,8 +271,8 @@ function k(e) {
                                                 ),
                                         }),
                                     (0, r.jsx)(I.r, {
-                                        onOpen: M,
-                                        onClose: k,
+                                        onOpen: k,
+                                        onClose: M,
                                         onSelect: U,
                                         questContent: g.jn.QUEST_HOME_DESKTOP,
                                         quest: f,

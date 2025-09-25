@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(401393),
+    o = n(6383),
     s = n(524825),
     c = n(442837),
     u = n(704215),
@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(211242),
     v = n(785203),
     I = n(211644),
-    C = n(266454),
-    S = n(492162),
+    S = n(266454),
+    C = n(492162),
     T = n(43740),
     N = n(596557),
     P = n(817520),
@@ -424,9 +424,9 @@ class eb extends i.PureComponent {
             }),
             ed(this, "handleCloseStudentHubPrivacySettingsTooltip", () => {
                 var e;
-                let t = (0, C.zu)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, S.zu)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null == (e = this.props.guild) ? void 0 : e.features.has(el.oNc.HUB);
-                !t && n && (0, C.Q3)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eo.L.AUTO });
+                !t && n && (0, S.Q3)(u.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eo.L.AUTO });
             }),
             ed(this, "handleCloseSubscribeTooltip", () => {
                 this.showTimeout.stop(),
@@ -531,7 +531,7 @@ function e_(e) {
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: a } = e,
         o = (0, c.e7)([z.Z], () => z.Z.getGuild(n));
     (0, b.J_)(n);
-    let d = (0, S.Z)(n),
+    let d = (0, C.Z)(n),
         p = (0, c.e7)([V.Z], () => V.Z.getGuildDimensions(n).scrollTo),
         h = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         g = (0, c.e7)([Y.Z], () => Y.Z.can(el.Plq.MANAGE_GUILD, o)),
@@ -576,9 +576,9 @@ function e_(e) {
         ey = X.ZP.isNewUser(x),
         ev = M && !ey;
     (0, N.Z)(o);
-    let eI = (0, C.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        eC = (0, R.Z)(n),
-        eS = (0, P.Z)(n),
+    let eI = (0, S.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+        eS = (0, R.Z)(n),
+        eC = (0, P.Z)(n),
         eT = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         eN = (0, c.e7)([K.Z], () => K.Z.desyncedVoiceStatesCount),
         eP = (0, k.Z)(n);
@@ -605,8 +605,8 @@ function e_(e) {
         showRoleSubscriptionUpsell: eu,
         showHubPrivacySettingsTooltip: ed,
         showNewUnreadsBar: eE,
-        showMediaChannelUpsell: eC,
-        showTierTemplatesUpsell: eS,
+        showMediaChannelUpsell: eS,
+        showTierTemplatesUpsell: eC,
         isHeaderPopoutOpen: eO,
         enableStudyGroup: w,
         isGuildHeaderDismissibleTooltipShown: et,

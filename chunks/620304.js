@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(938288),
+    a = n(6383),
     s = n(793030),
     c = n(442837),
     u = n(481060),
@@ -14,16 +14,16 @@ var r = n(951288),
     g = n(259580),
     m = n(639777),
     b = n(495804),
-    O = n(441536),
-    y = n(989308),
-    _ = n(388032),
+    _ = n(441536),
+    O = n(989308),
+    y = n(388032),
     v = n(931942);
 function j(e) {
     let { guild: t, withMargin: l } = e,
         j = (0, b.Z)(t, "GuildPowerupsProgressBar"),
         x = (0, m.Z)(t.id),
         C = i.useCallback(() => {
-            (0, O.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+            (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
         E = (0, c.e7)([h.Z], () => {
             var e;
@@ -130,7 +130,7 @@ function j(e) {
                                 (0, r.jsx)(s.xvT, {
                                     className: v.text,
                                     variant: "text-xs/semibold",
-                                    children: _.intl.string(y.default.NI6IhY),
+                                    children: y.intl.string(O.default.NI6IhY),
                                 }),
                                 t.premiumSubscriberCount >= j &&
                                     (0, r.jsx)(s.xvT, {
@@ -147,8 +147,8 @@ function j(e) {
                                     className: o()(v.text, v.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? _.intl.formatToPlainString(y.default["Ehpq+/"], { appliedBoostCount: E })
-                                        : _.intl.formatToPlainString(y.default["/rbPDg"], {
+                                        ? y.intl.formatToPlainString(O.default["Ehpq+/"], { appliedBoostCount: E })
+                                        : y.intl.formatToPlainString(O.default["/rbPDg"], {
                                               appliedBoostCount: E,
                                               maxBoostCount: j,
                                           }),

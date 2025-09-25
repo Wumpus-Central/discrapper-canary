@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(202841),
+    s = n.n(l),
+    a = n(6383),
     o = n(481060),
     c = n(393238),
     d = n(388032),
@@ -15,8 +15,8 @@ let m = i.memo(function (e) {
             children: m,
             isExpanded: g,
             isStuck: p,
-            onExpand: h,
-            disableAnimation: f,
+            onExpand: f,
+            disableAnimation: h,
             disableBackground: b,
         } = e,
         [x, j] = i.useState(!0),
@@ -52,7 +52,7 @@ let m = i.memo(function (e) {
                                 });
                         }
                         return e;
-                    })({}, s.config.stiff)),
+                    })({}, a.config.stiff)),
                     (n = n = { clamp: !0 }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -74,7 +74,7 @@ let m = i.memo(function (e) {
                     _(!0);
                 },
             },
-            x || f ? "animate-never" : "respect-motion-settings",
+            x || h ? "animate-never" : "respect-motion-settings",
         );
     return (
         i.useLayoutEffect(() => {
@@ -87,18 +87,18 @@ let m = i.memo(function (e) {
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)(o.P3F, {
-            className: a()(u.editCard, {
+            className: s()(u.editCard, {
                 [u.toggled]: g,
                 [u.noBackground]: b,
             }),
-            children: (0, r.jsxs)(s.animated.div, {
-                className: a()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
+            children: (0, r.jsxs)(a.animated.div, {
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {
                         innerRef: O,
-                        onClick: p ? void 0 : h,
-                        className: a()(u.innerHeader, { [u.toggled]: g && p }),
+                        onClick: p ? void 0 : f,
+                        className: s()(u.innerHeader, { [u.toggled]: g && p }),
                         "aria-label": d.intl.string(d.t.dcl9MT),
                         children: l,
                     }),

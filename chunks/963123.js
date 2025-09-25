@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     l = n.n(a),
     i = n(713447),
-    s = n(401393),
+    s = n(6383),
     c = n(524825),
     u = n(754700),
     d = n(670081),
@@ -44,7 +44,7 @@ var r = n(951288),
     G = n(981631),
     Q = n(217702),
     Y = n(388032),
-    W = n(946232);
+    W = n(430799);
 let z = new Set([G.IyS.FIVE_G, G.IyS.FOUR_G, G.IyS.UNKNOWN]),
     K = {
         tension: 250,
@@ -181,13 +181,13 @@ function ee(e) {
         e2 = (0, f.e7)([g.Z], () => g.Z.useReducedMotion),
         e8 = (0, o.useRef)(null),
         e4 = (0, o.useRef)(null),
-        e6 = o.useRef(!0),
-        e7 = (null == (t = et.userStatus) ? void 0 : t.completedAt) != null,
+        e7 = o.useRef(!0),
+        e6 = (null == (t = et.userStatus) ? void 0 : t.completedAt) != null,
         [e3, e9] = o.useState(null),
         [e5, te] = o.useState(!1),
         [tt, tn] = o.useState(!1),
         [tr, to] = o.useState(null),
-        ta = e7
+        ta = e6
             ? null != (A = null == (n = e8.current) ? void 0 : n.duration)
                 ? A
                 : 0
@@ -222,16 +222,16 @@ function ee(e) {
                 subtitle: f ? c : i,
             };
         })(et),
-        tc = e7
+        tc = e6
             ? e$.timestampSec >= e$.duration
                 ? 0
                 : e$.timestampSec
             : Math.max(e$.timestampSec, eD.progressSeconds);
     (0, v.Ng)(() => {
-        e6.current &&
-            ((e6.current = !1),
+        e7.current &&
+            ((e7.current = !1),
             eF(S.Z.getEffectiveConnectionSpeed()),
-            e7 && e$.timestampSec >= e$.duration && eJ(et.id, 0, e$.duration));
+            e6 && e$.timestampSec >= e$.duration && eJ(et.id, 0, e$.duration));
     });
     let {
             videoVariant: tu,
@@ -388,19 +388,19 @@ function ee(e) {
     let tM = o.useCallback(
         (e) => {
             var t;
-            e7 ||
+            e6 ||
                 (null == (t = et.userStatus) ? void 0 : t.enrolledAt) == null ||
                 (tl.info("[QV] sendServerProgressUpdate: ".concat(e)), (0, y.FI)(et, e)),
                 tg();
         },
-        [e7, et, tl, tg],
+        [e6, et, tl, tg],
     );
     o.useEffect(() => {
         (el !== m.Dvm.HIDDEN &&
             el !== m.Dvm.EXITING &&
             el !== m.Dvm.EXITED &&
-            (null == el || !eS || eE || e7) &&
-            (!eC || e_ || e7)) ||
+            (null == el || !eS || eE || e6) &&
+            (!eC || e_ || e6)) ||
             null == e8.current ||
             eO !== V.rq.PLAYING ||
             (tl.info(
@@ -409,11 +409,11 @@ function ee(e) {
                     .concat(el, ", visible: ")
                     .concat(eE, ", focused: ")
                     .concat(e_, ", isQuestCompleted: ")
-                    .concat(e7),
+                    .concat(e6),
             ),
             tL(V.rq.PAUSED),
-            e7 || e9(x.yE.LOST_FOCUS));
-    }, [el, e_, eC, eE, eS, eO, e7, tL, tM, tl]);
+            e6 || e9(x.yE.LOST_FOCUS));
+    }, [el, e_, eC, eE, eS, eO, e6, tL, tM, tl]);
     let [tB, tV] = o.useState(!1),
         tF = o.useRef(null),
         tZ = o.useRef(performance.now()),
@@ -572,14 +572,14 @@ function ee(e) {
             },
         })),
         t8 = (0, o.useRef)(null),
-        [{ captionHeightSpring: t4 }, t6] = (0, m.q_F)(() => ({
+        [{ captionHeightSpring: t4 }, t7] = (0, m.q_F)(() => ({
             from: { captionHeightSpring: 0 },
             config: K,
         }));
     o.useEffect(() => {
         var e, t;
         return (
-            t6({
+            t7({
                 captionHeightSpring:
                     ep && null != tr && null != (t = null == (e = t8.current) ? void 0 : e.clientHeight) ? t : 0,
                 immediate: e2,
@@ -588,7 +588,7 @@ function ee(e) {
                 t4.stop();
             }
         );
-    }, [ep, t6, e2, tr, t4]),
+    }, [ep, t7, e2, tr, t4]),
         o.useEffect(
             () => (
                 t2({
@@ -601,7 +601,7 @@ function ee(e) {
             ),
             [tH, t2, e2, eG, t1],
         );
-    let t7 = eO === V.rq.ENDED,
+    let t6 = eO === V.rq.ENDED,
         t3 = o.useCallback(
             async (e) => {
                 if (ev) {
@@ -625,7 +625,7 @@ function ee(e) {
         ),
         t9 = o.useMemo(() => (0, k.z0)(et, u.X.WATCH_VIDEO, k.n1.VIDEO, k.O.THUMBNAIL), [et]),
         t5 = o.useMemo(() => (0, k.z0)(et, u.X.WATCH_VIDEO, k.n1.VIDEO, k.O.CAPTION), [et]),
-        ne = e7 || e$.maxTimestampSec >= (null != (Z = null == (p = e8.current) ? void 0 : p.currentTime) ? Z : 0) + 1,
+        ne = e6 || e$.maxTimestampSec >= (null != (Z = null == (p = e8.current) ? void 0 : p.currentTime) ? Z : 0) + 1,
         nt = o.useMemo(() => null === (0, k.z0)(et, u.X.WATCH_VIDEO, k.n1.VIDEO, k.O.TRANSCRIPT), [et]);
     return (0, r.jsx)(m.P3F, {
         className: W.videoCont,
@@ -645,14 +645,14 @@ function ee(e) {
                 [W.videoContInnerRelativeLandscape]: "landscape" === eu,
             }),
             children: [
-                t7 &&
+                t6 &&
                     (() => {
                         if (!(0, I.e)({ location: H.dr.VIDEO_MODAL }))
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)($, {
                                         quest: et,
-                                        shouldShow: t7,
+                                        shouldShow: t6,
                                         sourceQuestContent: ec,
                                     }),
                                     (0, r.jsx)("div", { className: W.videoContOverlay }),
@@ -695,7 +695,7 @@ function ee(e) {
                     playsInline: !0,
                     mediaLayoutType: ev ? Q.hV.STATIC : Q.hV.RESPONSIVE,
                     className: l()({
-                        [W.hidden]: t7,
+                        [W.hidden]: t6,
                         [W.videoInner]: !0,
                     }),
                     controls: !1,
@@ -920,8 +920,8 @@ function ee(e) {
                     children: [
                         (0, r.jsx)(M.Z, {
                             percent: eP,
-                            animate: !0 !== e6.current && !eR,
-                            interactionEnabled: e7 && eY,
+                            animate: !0 !== e7.current && !eR,
+                            interactionEnabled: e6 && eY,
                             backgroundColor: tH ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tH ? eM : void 0,
                             duration: null != (ee = null == (C = e8.current) ? void 0 : C.duration) ? ee : 1,

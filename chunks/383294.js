@@ -1,49 +1,49 @@
-n.d(t, { default: () => Z }), n(388685);
+n.d(t, { default: () => T }), n(388685);
 var r = n(951288),
-    c = n(647438),
-    s = n(120356),
-    a = n.n(s),
-    o = n(938288),
-    i = n(442837),
-    l = n(481060),
+    a = n(647438),
+    i = n(120356),
+    l = n.n(i),
+    c = n(6383),
+    s = n(442837),
+    o = n(481060),
     d = n(110924),
     u = n(410030),
-    f = n(607070),
-    b = n(100527),
-    m = n(335131),
-    p = n(70097),
-    h = n(507808),
-    j = n(43747),
-    y = n(82856),
-    x = n(960919),
-    O = n(272008),
-    v = n(497505),
-    g = n(46140),
-    C = n(981631),
-    _ = n(215023),
+    h = n(607070),
+    _ = n(100527),
+    b = n(335131),
+    f = n(70097),
+    C = n(507808),
+    m = n(43747),
+    p = n(82856),
+    R = n(960919),
+    E = n(272008),
+    g = n(497505),
+    y = n(46140),
+    O = n(981631),
+    A = n(215023),
     S = n(388032),
     N = n(378658),
-    P = n(557256),
-    w = n(582425),
-    E = n(345554),
-    A = n(88490),
-    I = n(466674);
-function R() {
-    let e = (0, i.e7)([f.Z], () => f.Z.useReducedMotion),
-        [t, n] = c.useState(!e),
-        [s, d] = c.useState(!1),
-        b = c.useRef(null),
-        m = (0, u.ZP)(),
-        h = (0, l.apv)(m),
-        j = h ? E.Z : w.Z,
-        y = h ? I.Z : A.Z;
-    c.useEffect(() => {
+    v = n(557256),
+    L = n(582425),
+    I = n(345554),
+    B = n(88490),
+    j = n(466674);
+function x() {
+    let e = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+        [t, n] = a.useState(!e),
+        [i, d] = a.useState(!1),
+        _ = a.useRef(null),
+        b = (0, u.ZP)(),
+        C = (0, o.apv)(b),
+        m = C ? I.Z : L.Z,
+        p = C ? j.Z : B.Z;
+    a.useEffect(() => {
         if (!t && !e) {
             var n;
-            null == (n = b.current) || n.play();
+            null == (n = _.current) || n.play();
         }
     }, [t, e]);
-    let x = (0, l.q_F)({
+    let R = (0, o.q_F)({
         from: { y: 50 },
         to: { y: 0 },
         config: {
@@ -51,69 +51,69 @@ function R() {
             friction: 26,
         },
     });
-    return (0, r.jsxs)(o.animated.div, {
+    return (0, r.jsxs)(c.animated.div, {
         className: N.videoLayers,
-        style: x,
+        style: R,
         children: [
-            !s && (0, r.jsx)("div", { className: N.videoPlaceholder }),
-            (0, r.jsx)(p.Z, {
-                ref: b,
+            !i && (0, r.jsx)("div", { className: N.videoPlaceholder }),
+            (0, r.jsx)(f.Z, {
+                ref: _,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: a()(N.videoAsset, { [N.hidden]: t }),
+                className: l()(N.videoAsset, { [N.hidden]: t }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
-                    src: y,
+                    src: p,
                     type: "video/webm",
                 }),
             }),
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(f.Z, {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: a()(N.videoAsset, { [N.hidden]: !t }),
+                className: l()(N.videoAsset, { [N.hidden]: !t }),
                 controls: !1,
                 onLoadedData: () => d(!0),
                 onEnded: () => {
                     n(!1);
                 },
                 children: (0, r.jsx)("source", {
-                    src: j,
+                    src: m,
                     type: "video/webm",
                 }),
             }),
         ],
     });
 }
-function T(e) {
-    let { transitionState: t, balance: n, onSubmit: c, onClose: s, state: a } = e;
-    return (0, r.jsxs)(l.Y0X, {
+function U(e) {
+    let { transitionState: t, balance: n, onSubmit: a, onClose: i, state: l } = e;
+    return (0, r.jsxs)(o.Y0X, {
         "data-migration-pending": !0,
         transitionState: t,
-        size: l.CgR.DYNAMIC,
+        size: o.CgR.DYNAMIC,
         className: N.modal,
         parentComponent: "QuestsOrbsRewardModal",
         children: [
             (0, r.jsx)("div", {
                 className: N.header,
-                children: (0, r.jsx)(l.olH, {
+                children: (0, r.jsx)(o.olH, {
                     "data-migration-pending": !0,
                     className: N.closeBtn,
-                    onClick: s,
+                    onClick: i,
                 }),
             }),
-            "loading" === a
+            "loading" === l
                 ? (0, r.jsx)("div", {
                       className: N.spinnerContainer,
-                      children: (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }),
+                      children: (0, r.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
                   })
-                : "success" === a
+                : "success" === l
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(R, {}),
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(x, {}),
+                            (0, r.jsx)(o.X6q, {
                                 variant: "heading-lg/medium",
                                 className: N.title,
                                 children: S.intl.format(S.t["8l9H0t"], {
@@ -121,7 +121,7 @@ function T(e) {
                                         (0, r.jsxs)("span", {
                                             className: N.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(x.Z, {
+                                                (0, r.jsx)(R.Z, {
                                                     shouldUseThemeColor: !0,
                                                     className: N.orbsBalanceIcon,
                                                 }),
@@ -130,28 +130,28 @@ function T(e) {
                                         }),
                                 }),
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 className: N.subtext,
                                 children: S.intl.string(S.t.EDUOIC),
                             }),
-                            (0, r.jsxs)(l.hE2, {
+                            (0, r.jsxs)(o.hE2, {
                                 className: N.buttonContainer,
                                 fullWidthContainer: !0,
                                 fullWidth: !0,
                                 direction: "vertical",
                                 children: [
-                                    (0, r.jsx)(l.zxk, {
+                                    (0, r.jsx)(o.zxk, {
                                         variant: "primary",
                                         fullWidth: !0,
                                         text: S.intl.string(S.t.WYchdX),
-                                        onClick: c,
+                                        onClick: a,
                                     }),
-                                    (0, r.jsx)(l.zxk, {
+                                    (0, r.jsx)(o.zxk, {
                                         variant: "secondary",
                                         fullWidth: !0,
                                         text: S.intl.string(S.t["7kTAgI"]),
-                                        onClick: () => window.open(C.EYA.PAID_TERMS_ORBS),
+                                        onClick: () => window.open(O.EYA.PAID_TERMS_ORBS),
                                     }),
                                 ],
                             }),
@@ -163,17 +163,17 @@ function T(e) {
                             (0, r.jsx)("img", {
                                 alt: "",
                                 className: N.errorImage,
-                                src: P,
+                                src: v,
                             }),
                             (0, r.jsxs)("div", {
                                 className: N.errorContentContainer,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(o.X6q, {
                                         variant: "heading-xl/medium",
                                         className: N.errorHeader,
                                         children: S.intl.string(S.t.tWYWJy),
                                     }),
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
                                         children: S.intl.string(S.t.JNQRU1),
@@ -182,11 +182,11 @@ function T(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: N.buttonContainer,
-                                children: (0, r.jsx)(l.zxk, {
+                                children: (0, r.jsx)(o.zxk, {
                                     variant: "primary",
                                     fullWidth: !0,
                                     text: S.intl.string(S.t.cpT0Cg),
-                                    onClick: s,
+                                    onClick: i,
                                 }),
                             }),
                         ],
@@ -194,89 +194,89 @@ function T(e) {
         ],
     });
 }
-function Z(e) {
+function T(e) {
     var t,
         n,
-        { quest: s, onClose: a } = e,
-        o = (function (e, t) {
+        { quest: i, onClose: l } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                c = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        c = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
-                    return c;
+                        a = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++)
-                    (n = s[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return c;
+            return a;
         })(e, ["quest", "onClose"]);
-    let { balance: i } = (0, j.A)(),
-        l = (function (e, t, n) {
-            let [r, s] = c.useState("loading"),
-                [a, o] = c.useState(!1),
-                { balance: i } = (0, j.A)(),
-                l = (0, d.Z)(i),
-                [u, f] = c.useState(!1);
-            return (c.useEffect(() => {
+    let { balance: s } = (0, m.A)(),
+        o = (function (e, t, n) {
+            let [r, i] = a.useState("loading"),
+                [l, c] = a.useState(!1),
+                { balance: s } = (0, m.A)(),
+                o = (0, d.Z)(s),
+                [u, h] = a.useState(!1);
+            return (a.useEffect(() => {
                 let e = null;
                 return (
                     "success" === r &&
                         t &&
                         (e = setTimeout(() => {
-                            f(!0);
+                            h(!0);
                         }, 1000)),
                     () => {
                         null != e && clearTimeout(e);
                     }
                 );
             }, [r, t]),
-            c.useEffect(() => {
-                !a && null != i && null != l && i > l && o(!0);
-            }, [i, l, a]),
-            c.useEffect(() => {
-                (0, O.QB)(e, v.y$.CROSS_PLATFORM, n)
+            a.useEffect(() => {
+                !l && null != s && null != o && s > o && c(!0);
+            }, [s, o, l]),
+            a.useEffect(() => {
+                (0, E.QB)(e, g.y$.CROSS_PLATFORM, n)
                     .then((e) => {
-                        if ((null == e ? void 0 : e.claimedAt) != null) return void s("success");
-                        s("error");
+                        if ((null == e ? void 0 : e.claimedAt) != null) return void i("success");
+                        i("error");
                     })
                     .catch(() => {
-                        s("error");
+                        i("error");
                     });
             }, [e, n]),
             "error" === r)
                 ? r
-                : "success" === r && (a || u)
+                : "success" === r && (l || u)
                   ? "success"
                   : "loading";
-        })(s.id, s.preview, o.location),
-        u = c.useCallback(() => {
-            a(),
-                (0, h.Y)({
-                    pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                    sectionType: C.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: C.qAy.CTA_TO_ORBS_SHOP,
+        })(i.id, i.preview, c.location),
+        u = a.useCallback(() => {
+            l(),
+                (0, C.Y)({
+                    pageType: O.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                    sectionType: O.jXE.ORBS_REWARD_MODAL,
+                    ctaObject: O.qAy.CTA_TO_ORBS_SHOP,
                 }),
-                (0, m.mK)({
+                (0, b.mK)({
                     openInLayer: !1,
-                    tab: _.AW.ORBS,
+                    tab: A.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: s.id === g.V6 ? b.Z.INTRO_TO_ORBS_QUEST : b.Z.QUEST_HOME_PAGE,
+                    analyticsSource: i.id === y.V6 ? _.Z.INTRO_TO_ORBS_QUEST : _.Z.QUEST_HOME_PAGE,
                 });
-        }, [a, s.id]);
+        }, [l, i.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.o, {}),
+            (0, r.jsx)(p.o, {}),
             (0, r.jsx)(
-                T,
+                U,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -301,13 +301,13 @@ function Z(e) {
                             });
                     }
                     return e;
-                })({}, o)),
+                })({}, c)),
                 (n = n =
                     {
-                        balance: i,
-                        onClose: a,
+                        balance: s,
+                        onClose: l,
                         onSubmit: u,
-                        state: l,
+                        state: o,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

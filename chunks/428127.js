@@ -1,23 +1,23 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(202841),
+    a = n(6383),
     s = n(442837),
     c = n(481060),
     u = n(492162),
     d = n(237583),
     p = n(451478),
-    h = n(934415),
-    f = n(968847),
+    f = n(934415),
+    h = n(968847),
     g = n(388032),
     m = n(74664);
 let b = {
     friction: 30,
     tension: 300,
 };
-function O(e) {
+function _(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -28,9 +28,9 @@ function O(e) {
             },
             [l],
         ),
-        f = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
-        b = (0, h.c4)({
-            channels: f,
+        h = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
+        b = (0, f.c4)({
+            channels: h,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s,
@@ -62,18 +62,18 @@ function O(e) {
         ],
     });
 }
-function y(e) {
+function O(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: y } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        _ = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: j, mentionCount: v, targetChannelId: x } = "bottom" === t ? h : y,
-        C = j === f.x.HIDDEN,
+        { bottomBar: f, topBar: O } = (0, s.cj)([h.Z], () => h.Z.getUnreadStateForGuildId(n.id)),
+        y = (0, s.e7)([p.Z], () => p.Z.isFocused()),
+        { mode: v, mentionCount: j, targetChannelId: x } = "bottom" === t ? f : O,
+        C = v === h.x.HIDDEN,
         E = (0, c.q_F)(
             {
                 to: { transform: C ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: b,
             },
-            _ ? "respect-motion-settings" : "animate-never",
+            y ? "respect-motion-settings" : "animate-never",
         ),
         S = i.useCallback(
             (e) => {
@@ -91,9 +91,9 @@ function y(e) {
             style: E,
             "aria-hidden": C,
             children:
-                j === f.x.HIDDEN
+                v === h.x.HIDDEN
                     ? (0, r.jsx)("div", { className: o()(m.bar, m.emptyBar) })
-                    : j === f.x.UNREAD
+                    : v === h.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: S,
@@ -121,7 +121,7 @@ function y(e) {
                                 }),
                             ],
                         })
-                      : j === f.x.MENTIONS
+                      : v === h.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: S,
@@ -129,11 +129,11 @@ function y(e) {
                                   variant: "text-xs/semibold",
                                   color: "status-danger-text",
                                   className: m.barText,
-                                  children: g.intl.format(g.t.EQcLys, { count: v }),
+                                  children: g.intl.format(g.t.EQcLys, { count: j }),
                               }),
                           })
-                        : j === f.x.VOICE_CHANNELS
-                          ? (0, r.jsx)(O, {
+                        : v === h.x.VOICE_CHANNELS
+                          ? (0, r.jsx)(_, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,
                                 guildChannelsVersion: l,

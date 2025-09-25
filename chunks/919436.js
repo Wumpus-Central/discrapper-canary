@@ -2,7 +2,7 @@ n.d(t, { Z: () => D }), n(415506), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(401393),
+    o = n(6383),
     a = n(91192),
     s = n(442837),
     c = n(481060),
@@ -14,17 +14,17 @@ var r,
     g = n(266076),
     m = n(199902),
     b = n(19780),
-    O = n(306680),
-    y = n(944486),
-    _ = n(594174),
+    _ = n(306680),
+    O = n(944486),
+    y = n(594174),
     v = n(451478),
     j = n(276952),
     x = n(682662),
     C = n(662146),
     E = n(674552),
     S = n(981631),
-    I = n(388032),
-    P = n(514483);
+    P = n(388032),
+    I = n(514483);
 function N(e, t, n) {
     return (
         t in e
@@ -144,7 +144,7 @@ class R extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === S.d4z.DM ? _.default.getUser(e.getRecipientId()) : null;
+            t = e.type === S.d4z.DM ? y.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, p.x)(e);
     }
     render() {
@@ -163,7 +163,7 @@ class R extends (r = l.PureComponent) {
             } = this.props,
             { hovered: h, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && p,
-            O = () =>
+            _ = () =>
                 (0, i.jsx)(
                     c.LYs,
                     w(
@@ -174,7 +174,7 @@ class R extends (r = l.PureComponent) {
                             selected: n || h,
                             ariaLabel:
                                 null != t
-                                    ? I.intl.formatToPlainString(I.t.hKarnZ, {
+                                    ? P.intl.formatToPlainString(P.t.hKarnZ, {
                                           mentions: r,
                                           name: t,
                                       })
@@ -203,7 +203,7 @@ class R extends (r = l.PureComponent) {
                         hovered: !m && h,
                         selected: !m && n,
                         unread: !m && d,
-                        className: P.pill,
+                        className: I.pill,
                     }),
                     (0, i.jsx)(C.Z, {
                         text: null != t ? t : "",
@@ -219,7 +219,7 @@ class R extends (r = l.PureComponent) {
                                 isCurrentUserConnected: u,
                             }),
                             lowerBadgeSize: { width: (0, c.OVM)(r) },
-                            children: O(),
+                            children: _(),
                         }),
                     }),
                 ],
@@ -240,7 +240,7 @@ class R extends (r = l.PureComponent) {
             }),
             N(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === S.d4z.DM ? _.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === S.d4z.DM ? y.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([
@@ -285,8 +285,8 @@ let D = l.forwardRef(function (e, t) {
         o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : S.WtW.VOICE), [o]),
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        g = (0, s.e7)([y.Z], () => y.Z.getChannelId(), []),
-        _ = (0, s.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
+        g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
+        y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: v } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
         j = o === n,
         x = !1,
@@ -298,9 +298,9 @@ let D = l.forwardRef(function (e, t) {
         Z(w({}, e), {
             ref: t,
             channelName: r,
-            unread: _ > 0,
+            unread: y > 0,
             selected: g === n,
-            badge: _,
+            badge: y,
             audio: x,
             video: C,
             stream: p,

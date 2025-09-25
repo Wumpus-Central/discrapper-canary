@@ -7,7 +7,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(202841),
+    o = n(6383),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -156,8 +156,8 @@ let T = {
                     }));
         }
         let Z = !L && P.fractionalState === h.a$.NONE,
-            V = Z ? s.P3F : "div",
-            F = Z ? { onClick: B } : {};
+            F = Z ? s.P3F : "div",
+            V = Z ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {
             tooltipClassName: E.tooltip,
             text: L
@@ -171,7 +171,7 @@ let T = {
             shouldShow: A !== p.Eu4.NONE,
             children: (e) =>
                 (0, r.jsxs)(
-                    V,
+                    F,
                     v(
                         y(
                             {
@@ -184,7 +184,7 @@ let T = {
                                 style: { left: "".concat(100 * T[A], "%") },
                             },
                             e,
-                            F,
+                            V,
                         ),
                         {
                             children: [

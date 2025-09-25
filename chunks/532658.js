@@ -8,7 +8,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(6383),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -109,8 +109,8 @@ let B = () =>
                 return t;
             }),
     Z = 10000,
-    V = 2600,
-    F = 16,
+    F = 2600,
+    V = 16,
     H = {
         entering: {
             config: {
@@ -157,15 +157,15 @@ function W(e, t) {
                 (l(!1),
                 setTimeout(() => {
                     o(!0);
-                }, F));
+                }, V));
         }),
         (0, m.ZP)(() => {
             let e = setTimeout(() => {
                 r(!1),
                     setTimeout(() => {
                         o(!1);
-                    }, F);
-            }, V);
+                    }, V);
+            }, F);
             return () => clearTimeout(e);
         }),
         i.useMemo(
@@ -286,7 +286,7 @@ let K = i.memo(function (e) {
                 ref: B,
             } = e,
             Z = (0, l.e7)([T.default], () => T.default.getId() === s.id, [s.id]),
-            { ref: V, width: F } = (0, p.ZP)(),
+            { ref: F, width: V } = (0, p.ZP)(),
             { showConnectedAnimation: H } = W(k, R),
             Y = null == D ? void 0 : D.sessionId,
             X = t.id,
@@ -380,7 +380,7 @@ let K = i.memo(function (e) {
                         ef && (d === w.wC$.NEVER || (!ea && d === w.wC$.ONLY_WHILE_SPEAKING))
                             ? null
                             : (0, r.jsx)(c.yRy, {
-                                  targetElementRef: V,
+                                  targetElementRef: F,
                                   position: "left",
                                   renderPopout: ec,
                                   shouldShow: L,
@@ -389,7 +389,7 @@ let K = i.memo(function (e) {
                                   children: () =>
                                       (0, r.jsxs)("div", {
                                           className: x.username,
-                                          ref: V,
+                                          ref: F,
                                           children: [
                                               (0, r.jsx)(v.nm, {
                                                   guildId: S,
@@ -435,7 +435,7 @@ let K = i.memo(function (e) {
                                 nick: u,
                                 connectedOn: k,
                                 isSettingsPreview: R,
-                                voiceBackgroundWidth: F,
+                                voiceBackgroundWidth: V,
                                 rightAlign: !0,
                             }),
                         (0, r.jsx)(q, {
@@ -476,12 +476,12 @@ let K = i.memo(function (e) {
                                 nick: u,
                                 connectedOn: k,
                                 isSettingsPreview: R,
-                                voiceBackgroundWidth: F,
+                                voiceBackgroundWidth: V,
                             }),
                         ef && (d === w.wC$.NEVER || (!ea && d === w.wC$.ONLY_WHILE_SPEAKING))
                             ? null
                             : (0, r.jsx)(c.yRy, {
-                                  targetElementRef: V,
+                                  targetElementRef: F,
                                   position: "right",
                                   renderPopout: ec,
                                   shouldShow: L,
@@ -490,7 +490,7 @@ let K = i.memo(function (e) {
                                   children: () =>
                                       (0, r.jsxs)("div", {
                                           className: o()(x.username, { [x.streaming]: es }),
-                                          ref: V,
+                                          ref: F,
                                           children: [
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/medium",

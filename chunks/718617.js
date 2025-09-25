@@ -1,19 +1,19 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => N });
 var r = n(951288),
     l = n(647438),
-    i = n(938288),
-    a = n(442837),
-    s = n(481060),
+    i = n(6383),
+    s = n(442837),
+    a = n(481060),
     o = n(110924),
     u = n(714338),
     c = n(237617),
-    d = n(433355),
-    E = n(189432),
+    E = n(433355),
+    d = n(189432),
     _ = n(727381),
     A = n(313692),
-    m = n(596443),
-    T = n(50493),
-    I = n(981631);
+    T = n(596443),
+    I = n(50493),
+    m = n(981631);
 function g(e, t) {
     return (n) => {
         if (0 === n) return "auto";
@@ -29,41 +29,41 @@ function g(e, t) {
         );
     };
 }
-function f(e) {
+function N(e) {
     var t;
-    let { userId: n, guildId: f, onClose: h, analyticsLocation: N, className: O } = e,
-        p = (0, a.e7)([d.ZP], () => d.ZP.getGuildSidebarState(f), [f]),
-        R = null != (t = null == p ? void 0 : p.details.modViewPanel) ? t : T.k.INFO,
-        S = (0, o.Z)(n),
-        C = null == R ? null : R === T.k.INFO ? "backwards" : "forwards",
+    let { userId: n, guildId: N, onClose: O, analyticsLocation: h, className: f } = e,
+        R = (0, s.e7)([E.ZP], () => E.ZP.getGuildSidebarState(N), [N]),
+        S = null != (t = null == R ? void 0 : R.details.modViewPanel) ? t : I.k.INFO,
+        p = (0, o.Z)(n),
+        C = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
         D = (0, c.Z)(C),
-        { reducedMotion: L } = l.useContext(s.Sfi),
-        b = l.useCallback(
+        { reducedMotion: L } = l.useContext(a.Sfi),
+        U = l.useCallback(
             (e) => {
-                null != p && (0, E.r)(f, n, p.baseChannelId, { modViewPanel: e });
+                null != R && (0, d.r)(N, n, R.baseChannelId, { modViewPanel: e });
             },
-            [p, f, n],
+            [R, N, n],
         ),
-        U = l.useMemo(
+        M = l.useMemo(
             () => ({
-                [I.EkH.CLOSE_MODAL]: {
+                [m.EkH.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (R === T.k.INFO ? h() : b(T.k.INFO)),
+                    action: () => (S === I.k.INFO ? O() : U(I.k.INFO)),
                 },
             }),
-            [h, R, b],
+            [O, S, U],
         );
-    l.useEffect(() => (u.Z.enable(), u.Z.enableTemp(U), () => u.Z.disableTemp()), [U]);
-    let v = (0, s.Yzy)(
-        R,
+    l.useEffect(() => (u.Z.enable(), u.Z.enableTemp(M), () => u.Z.disableTemp()), [M]);
+    let b = (0, a.Yzy)(
+        S,
         {
             value: 0,
             from: { value: 1 },
             enter: { value: 0 },
             leave: { value: -1 },
         },
-        S !== n ? "animate-never" : "animate-always",
+        p !== n ? "animate-never" : "animate-always",
     );
     return (0, r.jsx)(i.animated.div, {
         style: {
@@ -72,8 +72,8 @@ function f(e) {
             flex: 1,
             overflow: "hidden",
         },
-        children: v((e, t, l) => {
-            var a, s, o;
+        children: b((e, t, l) => {
+            var s, a, o;
             let { key: u } = l;
             return (0, r.jsx)(
                 i.animated.div,
@@ -112,34 +112,34 @@ function f(e) {
                             height: "100%",
                         },
                         L.enabled
-                            ? { opacity: null == (a = e.value) ? void 0 : a.to((e) => 1 - Math.abs(e)) }
+                            ? { opacity: null == (s = e.value) ? void 0 : s.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null == (s = e.value) ? void 0 : s.to(g("left", D)),
+                                  left: null == (a = e.value) ? void 0 : a.to(g("left", D)),
                                   right: null == (o = e.value) ? void 0 : o.to(g("right", D)),
                               },
                     ),
                     children: (function (e) {
                         switch (e) {
-                            case T.k.INFO:
+                            case I.k.INFO:
                                 return (0, r.jsx)(_.Z, {
                                     userId: n,
-                                    guildId: f,
-                                    onNavigate: b,
-                                    className: O,
+                                    guildId: N,
+                                    onNavigate: U,
+                                    className: f,
                                 });
-                            case T.k.MESSAGE_HISTORY:
+                            case I.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(A.Z, {
                                     userId: n,
-                                    guildId: f,
-                                    onNavigate: () => b(T.k.INFO),
-                                    className: O,
+                                    guildId: N,
+                                    onNavigate: () => U(I.k.INFO),
+                                    className: f,
                                 });
-                            case T.k.PERMISSIONS:
-                                return (0, r.jsx)(m.Z, {
+                            case I.k.PERMISSIONS:
+                                return (0, r.jsx)(T.Z, {
                                     userId: n,
-                                    guildId: f,
-                                    onNavigate: () => b(T.k.INFO),
-                                    className: O,
+                                    guildId: N,
+                                    onNavigate: () => U(I.k.INFO),
+                                    className: f,
                                 });
                             default:
                                 return null;

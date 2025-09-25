@@ -5,7 +5,7 @@ var r = n(951288),
     l = n.n(a),
     s = n(913527),
     o = n.n(s),
-    c = n(202841),
+    c = n(6383),
     d = n(524825),
     u = n(831209),
     m = n(149765),
@@ -20,12 +20,12 @@ var r = n(951288),
     _ = n(386923),
     C = n(474366),
     y = n(345162),
-    w = n(485386),
-    T = n(430824),
+    T = n(485386),
+    w = n(430824),
     O = n(186523),
     S = n(585483),
-    P = n(70956),
-    N = n(709054),
+    N = n(70956),
+    P = n(709054),
     I = n(961675),
     E = n(883429),
     R = n(993259),
@@ -112,7 +112,7 @@ class K {
         U(this, "currentIndex", 0), U(this, "steps", []), U(this, "completedSteps", 0);
     }
 }
-let J = (e) => {
+let Y = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)("div", {
             className: B.rolesList,
@@ -132,7 +132,7 @@ let J = (e) => {
             ),
         });
     },
-    Y = {
+    J = {
         mass: 1,
         tension: 250,
         friction: 18,
@@ -178,14 +178,14 @@ let J = (e) => {
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: ee } = (0, M.H)(x.id),
-            et = (0, h.e7)([T.Z], () => T.Z.getGuild(x.getGuildId())),
+            et = (0, h.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
             en = (0, Z.r_)(x),
             { transitions: er, setVisible: ei } = (() => {
                 let [e, t] = i.useState(!0);
                 return {
                     transitions: (0, g.Yzy)(e, {
                         keys: (e) => (e ? "shown" : "hidden"),
-                        config: Y,
+                        config: J,
                         from: { opacity: 0 },
                         enter: { opacity: 1 },
                         leave: { opacity: 0 },
@@ -217,7 +217,7 @@ let J = (e) => {
                     x = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
                     p = (function (e, t, a, l) {
                         let s = null == e ? void 0 : e.id,
-                            o = (0, h.e7)([w.Z], () => (null != s ? w.Z.getSortedRoles(s) : void 0));
+                            o = (0, h.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
                         return i.useMemo(() => {
                             let i,
                                 s = new K(),
@@ -248,7 +248,7 @@ let J = (e) => {
                                                 isDone: o && c,
                                                 shouldWarn: o && !c,
                                                 children: o
-                                                    ? (0, r.jsx)(J, {
+                                                    ? (0, r.jsx)(Y, {
                                                           guild: e,
                                                           roles: s,
                                                       })
@@ -375,7 +375,7 @@ let J = (e) => {
                         u ||
                         x ||
                         !((e) => {
-                            let t = N.default.extractTimestamp(e);
+                            let t = P.default.extractTimestamp(e);
                             return o()().isBefore(o()(t).add(o().duration(15, "days")));
                         })(a.id),
                     _ = i.useRef(0);
@@ -386,7 +386,7 @@ let J = (e) => {
                                 ? clearTimeout(_.current)
                                 : (_.current = setTimeout(() => {
                                       s();
-                                  }, 60 * P.Z.Millis.SECOND)),
+                                  }, 60 * N.Z.Millis.SECOND)),
                             () => clearTimeout(_.current)
                         ),
                         [j, v, s, c],
@@ -413,7 +413,7 @@ let J = (e) => {
         }),
         ((e) => {
             let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-                s = (0, h.e7)([w.Z], () => (null != a ? w.Z.partitionVersion(a) : void 0)),
+                s = (0, h.e7)([T.Z], () => (null != a ? T.Z.partitionVersion(a) : void 0)),
                 o = i.useCallback(() => {
                     S.S.dispatch(z.CkL.REMEASURE_TARGET);
                 }, []);

@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { default: () => T }), n(388685);
+n.r(t), n.d(t, { default: () => w }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    o = n.n(i),
-    a = n(202841),
+    a = n.n(i),
+    o = n(6383),
     s = n(442837),
     c = n(481060),
     u = n(749210),
@@ -19,61 +19,61 @@ var r = n(951288),
     _ = n(302221),
     b = n(549817),
     O = n(45966),
-    C = n(819553),
-    y = n(548473),
-    N = n(15320),
-    E = n(973051),
-    P = n(981631),
+    y = n(819553),
+    N = n(548473),
+    C = n(15320),
+    P = n(973051),
+    E = n(981631),
     Z = n(388032),
     I = n(718215);
-function T(e) {
+function w(e) {
     let { guildId: t } = e,
-        { ref: n, width: i, height: T } = (0, d.ZP)(),
-        w = (0, s.Wu)([O.Z], () => O.Z.getOnboardingPromptsForOnboarding(t)),
-        k = (0, s.e7)([O.Z], () => O.Z.getEnabled(t)),
-        D = l.useCallback(
+        { ref: n, width: i, height: w } = (0, d.ZP)(),
+        T = (0, s.Wu)([O.Z], () => O.Z.getOnboardingPromptsForOnboarding(t)),
+        D = (0, s.e7)([O.Z], () => O.Z.getEnabled(t)),
+        k = l.useCallback(
             (e, n, r) => {
                 b.Z.selectOption(t, e, n, r);
             },
             [t],
         ),
-        R = l.useCallback(() => {
-            b.Z.completeOnboarding(t, w);
-        }, [t, w]),
-        S = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
-        B = l.useMemo(
+        S = l.useCallback(() => {
+            b.Z.completeOnboarding(t, T);
+        }, [t, T]),
+        R = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
+        A = l.useMemo(
             () =>
-                null == S
+                null == R
                     ? null
                     : j.ZP.getGuildSplashURL({
-                          id: S.id,
-                          splash: S.splash,
+                          id: R.id,
+                          splash: R.splash,
                       }),
-            [S],
+            [R],
         ),
-        A = (0, f.N)(B),
-        M = (0, s.e7)([C.ZP], () => C.ZP.getCurrentOnboardingStep(t)),
-        [F, L] = l.useState(null != B ? null : "cover"),
-        V = l.useCallback(
+        B = (0, f.N)(A),
+        M = (0, s.e7)([y.ZP], () => y.ZP.getCurrentOnboardingStep(t)),
+        [F, L] = l.useState(null != A ? null : "cover"),
+        G = l.useCallback(
             (e) => {
                 L(M), b.Z.setUserOnboardingStep(t, e);
             },
             [t, M],
         ),
         q = (0, s.e7)([h.Z], () => h.Z.isFullServerPreview(t)),
-        G = (0, s.e7)([C.ZP], () => C.ZP.getOnboardingStatus(t)),
-        U = null != w && w.length > 0,
+        V = (0, s.e7)([y.ZP], () => y.ZP.getOnboardingStatus(t)),
+        U = null != T && T.length > 0,
         W = l.useCallback(() => {
-            (0, C.kp)(G) && k && U ? V(0) : R();
-        }, [G, k, U, V, R]);
+            (0, y.kp)(V) && D && U ? G(0) : S();
+        }, [V, D, U, G, S]);
     l.useEffect(() => {
-        if (!C.ZP.shouldShowOnboarding(t)) return u.Z.escapeToDefaultChannel(t);
+        if (!y.ZP.shouldShowOnboarding(t)) return u.Z.escapeToDefaultChannel(t);
         (0, p.E)(t);
     }, [t]);
     let H = (0, c.Yzy)(
             M,
             {
-                config: a.config.default,
+                config: o.config.default,
                 from: {
                     scale: 0.8,
                     opacity: 0,
@@ -85,74 +85,74 @@ function T(e) {
             },
             "cover" !== F && null !== F ? "animate-never" : "respect-motion-settings",
         ),
-        z = C.ZP.shouldShowOnboarding(t),
-        X = null == S;
+        z = y.ZP.shouldShowOnboarding(t),
+        X = null == R;
     return (l.useEffect(() => {
         if (!z || X) {
             let e = setTimeout(() => {
-                (0, x.uL)(P.Z5c.CHANNEL(t));
+                (0, x.uL)(E.Z5c.CHANNEL(t));
             }, 1000);
             return () => clearTimeout(e);
         }
     }, [z, X, t]),
-    C.ZP.shouldShowOnboarding(t) && null != S)
+    y.ZP.shouldShowOnboarding(t) && null != R)
         ? (0, r.jsxs)("div", {
-              className: o()(I.main, { [I.fullBorderWithGradient]: null == B }),
+              className: a()(I.main, { [I.fullBorderWithGradient]: null == A }),
               ref: n,
               children: [
-                  null != B
+                  null != A
                       ? (0, r.jsx)(m.Z, {
                             className: I.artwork,
-                            src: B,
+                            src: A,
                             width: i,
-                            height: T,
+                            height: w,
                             imageClassName: I.cover,
                         })
                       : (0, r.jsx)(g.Z, {}),
-                  null != A &&
+                  null != B &&
                       (0, r.jsx)("div", {
                           className: I.gradient,
                           style: {
                               background: "linear-gradient(180deg, "
-                                  .concat((0, _.aD)(A, 0.16), " 0%, ")
-                                  .concat((0, _.aD)(A, 1), " 100%)"),
+                                  .concat((0, _.aD)(B, 0.16), " 0%, ")
+                                  .concat((0, _.aD)(B, 1), " 100%)"),
                           },
                       }),
-                  null == B ? null : (0, r.jsx)("div", { className: I.gradient }),
+                  null == A ? null : (0, r.jsx)("div", { className: I.gradient }),
                   H((e, t, n) => {
                       let { key: l } = n;
                       return (0, r.jsx)(
-                          a.animated.div,
+                          o.animated.div,
                           {
                               style: e,
                               children: (() => {
                                   switch (M) {
                                       case "cover":
-                                          return (0, r.jsx)(y.ZP, {
-                                              guild: S,
-                                              onboardingStatus: C.uX.READY,
+                                          return (0, r.jsx)(N.ZP, {
+                                              guild: R,
+                                              onboardingStatus: y.uX.READY,
                                               onStart: W,
                                               disableTracking: q,
                                           });
                                       case "rules":
-                                          return (0, r.jsx)(E.Z, {
-                                              setCurrentStep: V,
-                                              previousPromptIndex: w.length - 1,
-                                              guild: S,
-                                              prompts: w,
-                                              completeOnboarding: R,
+                                          return (0, r.jsx)(P.Z, {
+                                              setCurrentStep: G,
+                                              previousPromptIndex: T.length - 1,
+                                              guild: R,
+                                              prompts: T,
+                                              completeOnboarding: S,
                                               disableTracking: q,
                                           });
                                       case null:
                                           return null;
                                       default:
-                                          return (0, r.jsx)(N.Z, {
-                                              guild: S,
-                                              prompts: w,
+                                          return (0, r.jsx)(C.Z, {
+                                              guild: R,
+                                              prompts: T,
                                               step: M,
-                                              selectOption: D,
-                                              completeOnboarding: R,
-                                              setCurrentStep: V,
+                                              selectOption: k,
+                                              completeOnboarding: S,
+                                              setCurrentStep: G,
                                               disableTracking: q,
                                           });
                                   }
@@ -167,7 +167,7 @@ function T(e) {
                           children: (0, r.jsx)(c.X6q, {
                               variant: "heading-sm/normal",
                               color: "header-secondary",
-                              children: Z.intl.format(Z.t.kI6UoK, { privacyLink: P.EYA.PRIVACY }),
+                              children: Z.intl.format(Z.t.kI6UoK, { privacyLink: E.EYA.PRIVACY }),
                           }),
                       }),
               ],
