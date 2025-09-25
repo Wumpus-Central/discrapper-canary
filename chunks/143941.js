@@ -77,20 +77,20 @@ let j = (e) => {
         });
     },
     P = (e) => {
-        let { product: t, iconSize: r = 20, className: i, enableHoverEffect: m = !1, isCardHovered: P = !0 } = e,
-            [_, E] = (0, u.US)([o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-            x = _ === o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-            C = (0, p.n)("123", t.skuId),
-            S = l.useRef(null),
-            I = (0, c.Z)(S),
-            A = C ? s.h_8 : s.Pzh,
-            w = C || I ? y.wishlistedOrHoveredIconColor : y.normalIconColor,
-            { isPurchased: R } = (0, b.L)(t),
-            T = (0, f.fp)(t) || (0, f.x6)(t) || (0, f.G1)(t),
-            N = l.useCallback(
+        let { product: t, iconSize: i = 20, className: m, enableHoverEffect: P = !1, isCardHovered: _ = !0 } = e,
+            [E, x] = (0, u.US)([o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+            C = E === o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+            S = (0, p.n)("123", t.skuId),
+            I = l.useRef(null),
+            A = (0, c.Z)(I),
+            w = S ? s.h_8 : s.Pzh,
+            R = S || A ? y.wishlistedOrHoveredIconColor : y.normalIconColor,
+            { isPurchased: T } = (0, b.L)(t),
+            N = (0, f.fp)(t) || (0, f.x6)(t) || (0, f.G1)(t),
+            L = l.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        C
+                        S
                             ? (d.Z.removeSkuFromWishlist("123", t.skuId),
                               (0, s.showToast)(
                                   (0, s.createToast)("", s.ToastType.CUSTOM, {
@@ -103,32 +103,37 @@ let j = (e) => {
                                       component: (0, n.jsx)(j, { message: g.intl.string(g.t["3T2jbW"]) }),
                                   }),
                               ),
-                              x && E(h.L.USER_DISMISS));
+                              C &&
+                                  ((0, s.ZDy)(async () => {
+                                      let { default: e } = await r.e("36340").then(r.bind(r, 874533));
+                                      return (r) => (0, n.jsx)(e, v(O({}, r), { product: t }));
+                                  }),
+                                  x(h.L.USER_DISMISS)));
                 },
-                [C, t.skuId, x, E],
+                [S, t, C, x],
             );
-        if (!P && !C) return null;
-        if (T || R)
+        if (!_ && !S) return null;
+        if (N || T)
             return (0, n.jsx)(s.ua7, {
                 text: g.intl.string(g.t["02QYZG"]),
                 children: (e) =>
                     (0, n.jsx)(
                         s.P3F,
                         v(O({}, e), {
-                            className: a()(y.wishlistButton, y.disabledButton, i),
-                            innerRef: S,
+                            className: a()(y.wishlistButton, y.disabledButton, m),
+                            innerRef: I,
                             onClick: (e) => e.stopPropagation(),
-                            children: (0, n.jsx)(A, {
+                            children: (0, n.jsx)(w, {
                                 colorClass: y.disabledIconColor,
                                 size: "custom",
-                                height: r,
-                                width: r,
+                                height: i,
+                                width: i,
                             }),
                         }),
                     ),
             });
-        let L = C ? g.intl.string(g.t.yr9TTU) : g.intl.string(g.t["8DkMER"]),
-            k = x
+        let k = S ? g.intl.string(g.t.yr9TTU) : g.intl.string(g.t["8DkMER"]),
+            D = C
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(s.Text, {
@@ -141,23 +146,23 @@ let j = (e) => {
                           }),
                       ],
                   })
-                : L;
+                : k;
         return (0, n.jsx)(s.ua7, {
-            text: k,
-            "aria-label": L,
+            text: D,
+            "aria-label": k,
             children: (e) =>
                 (0, n.jsx)(
                     s.P3F,
                     v(O({}, e), {
-                        className: a()(y.wishlistButton, m && y.withHover, i),
-                        innerRef: S,
-                        onClick: N,
-                        "aria-label": L,
-                        children: (0, n.jsx)(A, {
-                            colorClass: w,
+                        className: a()(y.wishlistButton, P && y.withHover, m),
+                        innerRef: I,
+                        onClick: L,
+                        "aria-label": k,
+                        children: (0, n.jsx)(w, {
+                            colorClass: R,
                             size: "custom",
-                            height: r,
-                            width: r,
+                            height: i,
+                            width: i,
                         }),
                     }),
                 ),
