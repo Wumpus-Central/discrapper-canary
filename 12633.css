@@ -46593,7 +46593,7 @@ div.mobilePushContainer__3d3b0 {
     padding-top: 0
 }
 
-.inactive_bc663c * {
+.inactive_bc663c>* {
     pointer-events: none !important;
     z-index: -1
 }
