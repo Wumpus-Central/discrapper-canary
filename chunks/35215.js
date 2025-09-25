@@ -87,12 +87,12 @@ let N = 10,
                     className: v.headerContent,
                     children: [
                         (0, r.jsx)(s.Text, {
-                            variant: "text-xs/semibold",
+                            variant: "text-sm/semibold",
                             color: "text-primary",
                             children: O.intl.string(O.t["D+DkEB"]),
                         }),
                         (0, r.jsx)(s.Text, {
-                            variant: "text-xs/normal",
+                            variant: "text-sm/normal",
                             color: "text-tertiary",
                             children: O.intl.format(O.t.JhwFc3, { count: t }),
                         }),
@@ -361,6 +361,7 @@ function G(e) {
         };
     return (0, r.jsx)(s.yRy, {
         targetElementRef: b,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(U, {
