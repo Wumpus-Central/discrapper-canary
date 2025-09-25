@@ -36,8 +36,8 @@ var r = n(951288),
     L = n(356659),
     D = n(921944),
     U = n(388032),
-    B = n(90274);
-function H(e) {
+    B = n(935730);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function H(e) {
     }
     return e;
 }
-function V(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -118,7 +118,7 @@ let F = i.memo(function (e) {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await n.e("57478").then(n.bind(n, 542055));
-                return (t) => (0, r.jsx)(e, V(H({}, t), { channelId: G.id }));
+                return (t) => (0, r.jsx)(e, H(V({}, t), { channelId: G.id }));
             },
             { modalKey: L.Qr },
         ),
@@ -191,7 +191,7 @@ let F = i.memo(function (e) {
                     case "recentClips":
                         return (0, r.jsx)(
                             b.Z,
-                            V(H({}, e), {
+                            H(V({}, e), {
                                 onOpenClips: em,
                                 lastClipsSession: ee,
                             }),
@@ -199,7 +199,7 @@ let F = i.memo(function (e) {
                     case "attachMenu":
                         return (0, r.jsx)(
                             M.Z,
-                            V(H({}, e), {
+                            H(V({}, e), {
                                 onClose: () => ec(null),
                                 options: eO,
                                 channel: G,
@@ -220,8 +220,8 @@ let F = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     w.Z,
-                    V(
-                        H(
+                    H(
+                        V(
                             {
                                 ref: J,
                                 className: a()(B.attachButton, F),

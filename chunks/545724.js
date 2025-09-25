@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(239091),
     d = n(687683),
-    p = n(978070);
+    p = n(24665);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,9 +65,9 @@ let g = function (e) {
             className: y,
         } = e,
         [v, I] = i.useState(!1),
-        [C, S] = i.useState(!1),
+        [S, C] = i.useState(!1),
         T = () => {
-            I(!0), !_ || O || C || null == E || E();
+            I(!0), !_ || O || S || null == E || E();
         },
         N = () => {
             I(!1);
@@ -86,12 +86,12 @@ let g = function (e) {
                         f(
                             {
                                 className: a()(p.messageRequestItem, y, {
-                                    [p.active]: O || C,
+                                    [p.active]: O || S,
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
                                     null != g &&
-                                        (S(!0),
+                                        (C(!0),
                                         (0, u.jW)(
                                             e,
                                             async () => {
@@ -103,7 +103,7 @@ let g = function (e) {
                                             },
                                             {
                                                 onClose: () => {
-                                                    S(!1);
+                                                    C(!1);
                                                 },
                                             },
                                         ));
@@ -118,7 +118,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(v || O || C) },
+                        { children: l(v || O || S) },
                     ),
                 ),
             }),

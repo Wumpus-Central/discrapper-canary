@@ -1,15 +1,13 @@
-n.d(t, { f: () => E }), n(388685), n(415506);
+n.d(t, { f: () => m }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
     l = n(793030),
-    c = n(742746),
-    u = n(993365),
-    d = n(747127),
-    f = n(525751);
-function _(e, t, n) {
+    c = n(747127),
+    u = n(456208);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +20,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +31,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,103 +48,103 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function h(e) {
     return "string" == typeof e
-        ? (0, r.jsx)(u.x, {
+        ? (0, r.jsx)(l.xvT, {
               variant: "text-md/normal",
               color: "text-secondary",
               children: e,
           })
         : e;
 }
-function E(e) {
+function m(e) {
     let { controls: t, children: n, listProps: i } = e;
     if (null == n && null == t && null == i) return null;
-    let a = g(n);
-    return (0, r.jsx)(b, {
+    let a = h(n);
+    return (0, r.jsx)(g, {
         controls: t,
         children: a,
         listProps: i,
     });
 }
-function b(e) {
+function g(e) {
     var t, n;
-    let { controls: a, children: u, listProps: _ } = e,
-        [h, g] = i.useState(!1),
-        [E, b] = i.useState(null != _),
-        y = i.useRef(null),
-        O = (0, d.Z)(y, null == _ ? void 0 : _.ref),
-        v = i.useRef(null),
-        I = (0, s.throttle)(() => {
+    let { controls: a, children: d, listProps: _ } = e,
+        [h, m] = i.useState(!1),
+        [g, E] = i.useState(null != _),
+        b = i.useRef(null),
+        y = (0, c.Z)(b, null == _ ? void 0 : _.ref),
+        O = i.useRef(null),
+        v = (0, s.throttle)(() => {
             var e;
-            (null == y ? void 0 : y.current) != null &&
+            (null == b ? void 0 : b.current) != null &&
                 null != a &&
-                g((null == (e = y.current) ? void 0 : e.getDistanceFromTop()) > 12);
+                m((null == (e = b.current) ? void 0 : e.getDistanceFromTop()) > 12);
         }, 200),
-        T = null != _;
+        I = null != _;
     return (
         i.useLayoutEffect(() => {
             var e, t;
             let n = new ResizeObserver(() => {
                     var e, t;
-                    if (T) return void b(!0);
+                    if (I) return void E(!0);
                     let n =
-                        null != (t = null == y || null == (e = y.current) ? void 0 : e.getScrollerNode()) ? t : null;
-                    if (null == n || (null == v ? void 0 : v.current) == null) return;
+                        null != (t = null == b || null == (e = b.current) ? void 0 : e.getScrollerNode()) ? t : null;
+                    if (null == n || (null == O ? void 0 : O.current) == null) return;
                     let r = n.getBoundingClientRect();
-                    b(v.current.getBoundingClientRect().height > r.height);
+                    E(O.current.getBoundingClientRect().height > r.height);
                 }),
-                r = null != (t = null == y || null == (e = y.current) ? void 0 : e.getScrollerNode()) ? t : null;
+                r = null != (t = null == b || null == (e = b.current) ? void 0 : e.getScrollerNode()) ? t : null;
             return (
                 null != r && n.observe(r),
-                (null == v ? void 0 : v.current) != null && n.observe(v.current),
+                (null == O ? void 0 : O.current) != null && n.observe(O.current),
                 () => n.disconnect()
             );
-        }, [T]),
+        }, [I]),
         (0, r.jsxs)(l.y5t, {
             children: [
-                (0, r.jsx)("div", { className: o()(f.bodySpacerTop, { [f.bodySpacerTopBorder]: E && null == a }) }),
+                (0, r.jsx)("div", { className: o()(u.bodySpacerTop, { [u.bodySpacerTopBorder]: g && null == a }) }),
                 null != a &&
                     (0, r.jsx)("header", {
-                        className: o()(f.bodyControls, { [f.bodyControlsWithFade]: h }),
+                        className: o()(u.bodyControls, { [u.bodyControlsWithFade]: h }),
                         children: a,
                     }),
                 null != _
                     ? (0, r.jsx)(
-                          c._2,
-                          m(p({}, _), {
-                              className: f.bodyList,
+                          l._2F,
+                          p(f({}, _), {
+                              className: u.bodyList,
                               innerAriaOrientation: null != (t = _.innerAriaOrientation) ? t : "vertical",
                               innerRole: null != (n = _.innerRole) ? n : "listbox",
-                              ref: O,
+                              ref: y,
                               onScroll: (e) => {
                                   var t;
-                                  I(), null == (t = _.onScroll) || t.call(_, e);
+                                  v(), null == (t = _.onScroll) || t.call(_, e);
                               },
                           }),
                       )
                     : (0, r.jsx)(l.yWw, {
-                          ref: y,
-                          className: f.body,
-                          onScroll: I,
+                          ref: b,
+                          className: u.body,
+                          onScroll: v,
                           children: (0, r.jsx)("main", {
-                              ref: v,
-                              className: o()(f.bodyInner, { [f.bodyInnerShouldScroll]: E }),
-                              children: u,
+                              ref: O,
+                              className: o()(u.bodyInner, { [u.bodyInnerShouldScroll]: g }),
+                              children: d,
                           }),
                       }),
-                (0, r.jsx)("div", { className: o()(f.bodySpacerBottom, { [f.bodySpacerBottomBorder]: E }) }),
+                (0, r.jsx)("div", { className: o()(u.bodySpacerBottom, { [u.bodySpacerBottomBorder]: g }) }),
             ],
         })
     );

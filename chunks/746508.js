@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(730749),
     v = n(911969),
     I = n(40851),
-    C = n(317381),
-    S = n(596040),
+    S = n(317381),
+    C = n(596040),
     T = n(314490),
     N = n(374065),
     P = n(451576),
@@ -74,8 +74,8 @@ var r = n(951288),
     ey = n(131951),
     ev = n(496675),
     eI = n(19780),
-    eC = n(699516),
-    eS = n(594174),
+    eS = n(699516),
+    eC = n(594174),
     eT = n(979651),
     eN = n(938475),
     eP = n(626135),
@@ -90,8 +90,8 @@ var r = n(951288),
     ek = n(921944),
     eM = n(190378),
     eU = n(388032),
-    eG = n(890332),
-    eB = n(197571);
+    eG = n(239545),
+    eB = n(10198);
 function eV(e, t, n) {
     return (
         t in e
@@ -247,8 +247,8 @@ function eQ(e) {
         c = (0, eo.Z)(),
         d = (0, ec.Z)(t),
         p = (0, u.e7)(
-            [C.ZP],
-            () => null != C.ZP.getSelfEmbeddedActivityForLocation(C.ZP.getConnectedActivityLocation()),
+            [S.ZP],
+            () => null != S.ZP.getSelfEmbeddedActivityForLocation(S.ZP.getConnectedActivityLocation()),
         ),
         h = (0, X.Z)(t),
         { reachedLimit: _, limit: O } = (0, es.Z)(t),
@@ -268,7 +268,7 @@ function eQ(e) {
             },
             [t, y, s],
         ),
-        S = p || n || h,
+        C = p || n || h,
         { Component: T, play: N, events: P } = (0, f.o)(c.enabled ? "disable" : "enable");
     return (
         i.useEffect(() => () => N(), [c.enabled, N]),
@@ -292,7 +292,7 @@ function eQ(e) {
                             u = ez(e, ["unavailable", "isActive", "label", "iconComponent", "iconColor"]);
                         let d = (0, r.jsx)(T, {
                             size: "md",
-                            className: a()(eG.buttonIcon, { [eG.withText]: !S }),
+                            className: a()(eG.buttonIcon, { [eG.withText]: !C }),
                             color: "currentColor",
                         });
                         return (0, r.jsx)(m.yRy, {
@@ -356,7 +356,7 @@ function eQ(e) {
                                                     wrapperClassName: eG.button,
                                                     fullWidth: !0,
                                                     focusProps: eW,
-                                                    children: S
+                                                    children: C
                                                         ? d
                                                         : (0, r.jsxs)(U.Z, {
                                                               align: U.Z.Align.CENTER,
@@ -381,8 +381,8 @@ function eX(e) {
         s = i === eR.IlC.POPOUT,
         c = (0, N.KF)(t.id),
         p = (0, N.g5)(c),
-        { userInActivity: f } = (0, u.cj)([C.ZP], () => ({
-            userInActivity: null != C.ZP.getSelfEmbeddedActivityForChannel(t.id),
+        { userInActivity: f } = (0, u.cj)([S.ZP], () => ({
+            userInActivity: null != S.ZP.getSelfEmbeddedActivityForChannel(t.id),
         })),
         h = (0, T.p)({
             surface: v.eR.VOICE_LAUNCHER,
@@ -469,19 +469,19 @@ function eJ(e) {
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = i.useRef(null),
         { parentAnalyticsLocation: d, analyticsLocations: f } = (0, A.ZP)(),
-        h = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
+        h = (0, u.e7)([eC.default], () => eC.default.getCurrentUser()),
         b = (0, u.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
         _ = (0, ec.Z)(n),
         O = n.getGuildId(),
-        E = (0, u.cj)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForChannel(n.id)),
+        E = (0, u.cj)([S.ZP], () => null != S.ZP.getSelfEmbeddedActivityForChannel(n.id)),
         y = (0, X.Z)(n),
         v = i.useCallback(() => {
             (0, ef.Z)(O, n.id, f);
         }, [O, n.id, f]),
         I = b.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
-        S = (0, eu.E)(n, h, b);
+        C = (0, eu.E)(n, h, b);
     t = null == I ? (l ? v : ep.Z) : () => (0, z.Z)(I);
-    let T = null != I || S.length > 0,
+    let T = null != I || C.length > 0,
         N = _ ? eU.intl.string(eU.t.fjBNo6) : eU.intl.string(eU.t.uQn9Bw),
         P = E || o || y,
         j = null != I,
@@ -573,7 +573,7 @@ class e$ extends i.PureComponent {
                 matchAccountText: s,
             } = this.props;
         if (null == t) return null;
-        let u = (0, k.F6)(t, eS.default, eC.Z);
+        let u = (0, k.F6)(t, eC.default, eS.Z);
         return (
             null != n
                 ? ((e = eR.Z5c.CHANNEL(n.id, t.id)), (u = "".concat(u, " / ").concat(n.name)))
@@ -844,7 +844,7 @@ function e0(e) {
 let e1 = (0, y.Z)(function (e) {
     let t = (0, V.Z)(),
         n = (0, u.e7)([B.Z], () => B.Z.getAwaitingRemoteSessionInfo()),
-        l = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
+        l = (0, u.e7)([eC.default], () => eC.default.getCurrentUser()),
         a = (0, u.cj)([eI.Z], () =>
             null != t
                 ? {
@@ -885,7 +885,7 @@ let e1 = (0, y.Z)(function (e) {
         E = (0, u.e7)([K.Z], () => K.Z.isViewingRoles(d)),
         y = (0, u.e7)([ev.Z], () => E && !ev.Z.can(eR.Plq.VIEW_CHANNEL, c), [E, c]),
         v = ea.Fg.useSetting(),
-        [I, C, T] = (0, u.Wu)(
+        [I, S, T] = (0, u.Wu)(
             [eN.ZP, $.Z],
             () =>
                 (null == c ? void 0 : c.isGuildStageVoice())
@@ -913,14 +913,14 @@ let e1 = (0, y.Z)(function (e) {
                         : T)
                 ? t
                 : [];
-        }, [I, C, T]),
+        }, [I, S, T]),
         [j, Z] = i.useState(!1),
         w = (0, M.Z)("RTCConnection");
     i.useEffect(() => {
         (E || y) && Z(!1);
     }, [E, y, Z]);
     let { analyticsLocations: L } = (0, A.ZP)(x.Z.RTC_PANEL),
-        R = (0, S.Z)(null != d ? d : eR.lds, null == c ? void 0 : c.id),
+        R = (0, C.Z)(null != d ? d : eR.lds, null == c ? void 0 : c.id),
         D = (0, P.Z)(null == c ? void 0 : c.id);
     return (0, r.jsx)(A.Gt, {
         value: L,

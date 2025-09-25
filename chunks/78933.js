@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(209698),
     E = n(687158),
     N = n(892001),
-    T = n(899007),
-    S = n(648052),
+    S = n(899007),
+    T = n(648052),
     O = n(867176),
     P = n(537006),
     I = n(483424),
@@ -53,8 +53,8 @@ var a = n(951288),
     ee = n(228168),
     et = n(671955),
     en = n(388032),
-    ea = n(54482),
-    er = n(116649);
+    ea = n(138005),
+    er = n(593540);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -109,8 +109,8 @@ function el(e) {
         eC = (0, q.g)(n),
         eE = (0, v.Z)({ analyticsLocations: eu }),
         eN = (0, H.I5)(t),
-        eT = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        eS = (0, C.b)({ location: "UserProfileAccountPopout" }),
+        eS = (0, h.p)({ location: "UserProfileAccountPopout" }),
+        eT = (0, C.b)({ location: "UserProfileAccountPopout" }),
         eO = r.useRef(null),
         eP = r.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
         eI = r.useMemo(() => (0, x.Z)(), []),
@@ -164,7 +164,7 @@ function el(e) {
                                         displayProfile: ed,
                                         themeType: et.l.POPOUT,
                                     }),
-                                    (0, a.jsx)(T.Z, {
+                                    (0, a.jsx)(S.Z, {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.l.POPOUT,
@@ -175,7 +175,7 @@ function el(e) {
                                         user: t,
                                         themeType: et.l.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: eT ? eI : null,
+                                        prompt: eS ? eI : null,
                                     }),
                                 ],
                             }),
@@ -189,7 +189,7 @@ function el(e) {
                                         nickname: V.ZP.getName(null, null, t),
                                         onOpenProfile: ec ? void 0 : eR,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
-                                        tags: (0, a.jsx)(S.Z, {
+                                        tags: (0, a.jsx)(T.Z, {
                                             displayProfile: ed,
                                             themeType: et.l.POPOUT,
                                             onClose: n,
@@ -224,7 +224,7 @@ function el(e) {
                                         isPremiumUser: eN,
                                         onInteraction: n,
                                     }),
-                                    eS
+                                    eT
                                         ? (0, a.jsx)(w.Z, {
                                               user: t,
                                               currentUser: t,

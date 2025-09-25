@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(188493),
     v = n(294330),
     I = n(981631),
-    C = n(857847);
-let S = Object.freeze({
+    S = n(17923);
+let C = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -98,11 +98,11 @@ function j(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16,
                                 },
-                                className: a()(C.heading, { [C.headingTopbar]: !R }),
+                                className: a()(S.heading, { [S.headingTopbar]: !R }),
                                 children: [
                                     !R &&
                                         (0, r.jsxs)("div", {
-                                            className: C.headingFilters,
+                                            className: S.headingFilters,
                                             children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
                                         }),
                                     A && (0, r.jsx)(E.Z, { loadId: t }),
@@ -111,7 +111,7 @@ function j(e) {
                             i,
                         );
                     case 1:
-                        return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
+                        return (0, r.jsx)(c.$jN, { className: a()(S.spinner, { [S.spinnerWithSidebar]: R }) }, i);
                 }
             },
             [A, R, t],
@@ -221,13 +221,13 @@ function j(e) {
                 ),
             [j],
         ),
-        ee = R ? S : T;
+        ee = R ? C : T;
     return (0, r.jsx)("div", {
-        className: C.container,
+        className: S.container,
         ref: F,
         children: (0, r.jsx)(c.GMG, {
             ref: B,
-            className: C.masonryList,
+            className: S.masonryList,
             sections: W,
             columns: M,
             itemGutter: 16,
@@ -242,13 +242,13 @@ function j(e) {
             renderAccessory: (e) =>
                 R
                     ? (0, r.jsx)("div", {
-                          className: C.sidebar,
+                          className: S.sidebar,
                           style: { height: e },
                           children: (0, r.jsxs)("div", {
-                              className: C.sidebarContent,
+                              className: S.sidebarContent,
                               children: [
                                   (0, r.jsx)("div", {
-                                      className: C.sidebarLanguageSelect,
+                                      className: S.sidebarLanguageSelect,
                                       children: (0, r.jsx)(y.Z, { loadId: t }),
                                   }),
                                   (0, r.jsx)(_.Z, { loadId: t }),

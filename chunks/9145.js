@@ -18,8 +18,8 @@ var r = n(951288),
     _ = n(800965),
     O = n(592125),
     j = n(271383),
-    x = n(944486),
-    v = n(594174),
+    v = n(944486),
+    x = n(594174),
     C = n(585483),
     I = n(51144),
     E = n(566620),
@@ -37,7 +37,7 @@ var r = n(951288),
     k = n(918559),
     U = n(981631),
     G = n(388032),
-    H = n(33985);
+    H = n(322678);
 let F = w.u8.SIZE_32,
     B = {
         [k.MI.NO_CHAT]: H.noChat,
@@ -90,7 +90,7 @@ function z(e) {
             : ((e = Math.min(es.height * k.I0)) > es.width && (t = (e = es.width) / k.I0), (ed = (es.width - e) / 2));
     }
     let eh = J.get(null != (l = null == Y ? void 0 : Y.id) ? l : ""),
-        ef = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
+        ef = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         eg = (0, s.Wu)([j.ZP], () => {
             var e;
             return null == Q
@@ -180,7 +180,7 @@ function z(e) {
     let e_ = [];
     null != eh &&
         (e_ = Array.from(eh.embeddedActivity.userIds)
-            .map((e) => v.default.getUser(e))
+            .map((e) => x.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let eO = (e) => {
         var t;

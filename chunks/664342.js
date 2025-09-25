@@ -10,7 +10,7 @@ var r = n(951288),
     u = n(933793),
     p = n(13736),
     h = n(732393),
-    f = n(214906),
+    f = n(71991),
     g = n(612856),
     m = n(137591),
     b = n(299206),
@@ -18,8 +18,8 @@ var r = n(951288),
     _ = n(665149),
     O = n(359110),
     j = n(585483),
-    x = n(407908),
-    v = n(131694),
+    v = n(407908),
+    x = n(739830),
     C = n(488131),
     I = n(981631),
     E = n(388032);
@@ -105,8 +105,8 @@ function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         y = (0, c.Z)(t, "Sidebar Overflow"),
         _ = (0, u.Z)(t),
-        x = (0, f.Z)(t),
-        v = (0, g.Z)(t),
+        v = (0, f.Z)(t),
+        x = (0, g.Z)(t),
         C = (0, a.Z)(t),
         S = (0, d.Z)(t),
         Z = (0, h.Z)(t.id),
@@ -138,7 +138,7 @@ function P(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [x, v],
+                children: [v, x],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [T, _, Z],
@@ -179,8 +179,8 @@ function N(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(v.Z, { channel: t }),
-            t.isModeratorReportChannel() ? (0, r.jsx)(x.Z, { channel: t }) : null,
+            t.isForumPost() ? null : (0, r.jsx)(x.Z, { channel: t }),
+            t.isModeratorReportChannel() ? (0, r.jsx)(v.Z, { channel: t }) : null,
             (0, r.jsx)(T, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,

@@ -8,10 +8,10 @@ var r = n(951288),
     c = n(626135),
     d = n(660662),
     u = n(981631),
-    p = n(693450),
-    f = n(388032),
-    m = n(745993),
-    g = n(959389);
+    p = n(62222),
+    m = n(388032),
+    f = n(621515),
+    g = n(77426);
 function h(e) {
     var t;
     let { selectedColors: n, setSelectedColors: h, defaultColor: b, selectedEffectId: x, className: j } = e,
@@ -43,7 +43,7 @@ function h(e) {
                 variant: "heading-md/semibold",
                 className: g.selectorHeading,
                 children: [
-                    f.intl.string(p.default["JOpi7+"]),
+                    m.intl.string(p.default["JOpi7+"]),
                     (0, r.jsx)(i.SrA, {
                         size: "xs",
                         color: i.TVs.colors.TEXT_DEFAULT,
@@ -51,8 +51,8 @@ function h(e) {
                 ],
             }),
             (0, r.jsx)(s.default, {
-                className: m.colorPicker,
-                colorContainerClassName: m.colorPickerContainer,
+                className: f.colorPicker,
+                colorContainerClassName: f.colorPickerContainer,
                 defaultColor: b,
                 colors: _ ? d.vK : d.gD,
                 value: n[0],
@@ -60,7 +60,7 @@ function h(e) {
                 onChange: S,
                 onChangeGradientColors: C,
                 isGradient: _,
-                gradientButtonClassName: m.gradientPicker,
+                gradientButtonClassName: f.gradientPicker,
                 gradientDegrees: 90,
                 allowBlackCustomColor: !0,
                 customPickerPosition: "top",

@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(812206),
     v = n(770146),
     I = n(600164),
-    C = n(606081),
-    S = n(252618),
+    S = n(606081),
+    C = n(252618),
     T = n(100159),
     N = n(646288),
     P = n(984370),
@@ -43,7 +43,7 @@ var r = n(951288),
     F = n(73346),
     z = n(3570),
     W = n(689796),
-    Y = n(15470),
+    Y = n(978436),
     K = n(506648),
     q = n(449275),
     Q = n(445986),
@@ -58,7 +58,7 @@ var r = n(951288),
     el = n(981631),
     ea = n(186901),
     eo = n(388032),
-    es = n(561537);
+    es = n(868113);
 function ec(e, t, n) {
     return (
         t in e
@@ -356,22 +356,22 @@ class ep extends i.PureComponent {
             l = n.getSplashURL(1024);
         null != l && i.push(l),
             null != t.headerLogoLightTheme && i.unshift((0, F._W)(n.id, t.headerLogoLightTheme, 1024, "jpg"));
-        let a = C.Z.Product({
+        let a = S.Z.Product({
                 name: e.name,
                 description: null != e.summary && "" !== e.summary ? e.summary : t.tagline,
-                image: C.Z.Product.Image(i),
+                image: S.Z.Product.Image(i),
                 sku: e.id,
             }),
             o = e.getPrice();
         if (null != o) {
             let { amount: e, currency: t } = o;
-            a.offers = C.Z.Offer({
+            a.offers = S.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, H.T4)(e, t, { style: "decimal" }),
             });
         }
-        let s = C.Z.ItemPage({ mainEntity: a });
-        return (0, r.jsx)(C.Z, { data: s });
+        let s = S.Z.ItemPage({ mainEntity: a });
+        return (0, r.jsx)(S.Z, { data: s });
     }
     renderSmall(e, t, n) {
         return (0, r.jsxs)("div", {
@@ -442,7 +442,7 @@ class ep extends i.PureComponent {
                   });
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(S.yY, { location: e.name }),
+                    (0, r.jsx)(C.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
                     (0, r.jsx)(X.Z, { game: e }),
@@ -454,7 +454,7 @@ class ep extends i.PureComponent {
             ? (0, r.jsxs)("div", {
                   className: es.listingWrapper,
                   children: [
-                      (0, r.jsx)(S.yY, { location: e.name }),
+                      (0, r.jsx)(C.yY, { location: e.name }),
                       this.renderJsonLD(),
                       (0, r.jsx)(m.Z, {
                           section: el.jXE.NAVIGATION,
@@ -468,7 +468,7 @@ class ep extends i.PureComponent {
               })
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(S.yY, { location: e.name }),
+                      (0, r.jsx)(C.yY, { location: e.name }),
                       this.renderJsonLD(),
                       this.renderHeader(e, t),
                       this.renderListing(),
@@ -513,7 +513,7 @@ class ep extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("37100")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,

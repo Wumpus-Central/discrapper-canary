@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(481060);
 function o(e) {
     return (0, i.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("60728"), n.e("8788")]).then(n.bind(n, 630746));
+        let { default: t } = await Promise.all([n.e("60728"), n.e("25710")]).then(n.bind(n, 630746));
         return (n) =>
             (0, r.jsx)(
                 t,

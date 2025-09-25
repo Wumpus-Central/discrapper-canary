@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => S });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -18,19 +18,19 @@ var r = n(951288),
     O = n(933557),
     E = n(287746),
     y = n(388032),
-    v = n(10832),
-    I = n(419246);
-function C(e) {
+    v = n(952713),
+    I = n(998603);
+function S(e) {
     let { channel: t, baseChannelId: n } = e,
-        C = (0, O.ZP)(t),
-        S = (0, f.K)(),
+        S = (0, O.ZP)(t),
+        C = (0, f.K)(),
         T = (0, f.V)(),
         N = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         P = (0, l.e7)([p.Z], () => p.Z.isSpam(t.id)),
         j = (0, g.V)(t.id, t.getRecipientId()),
         x = i.useCallback(() => {
-            b.Z.closeChannelSidebar(_.uZ), N && S && (0, m.Kh)(t.id), P && T && (0, m.Kh)(t.id);
-        }, [t.id, P, T, N, S]),
+            b.Z.closeChannelSidebar(_.uZ), N && C && (0, m.Kh)(t.id), P && T && (0, m.Kh)(t.id);
+        }, [t.id, P, T, N, C]),
         A = i.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(y.intl.string(y.t.pIQ3h4), o.ToastType.FAILURE));
         }, []),
@@ -57,7 +57,7 @@ function C(e) {
                 "aria-label": y.intl.string(y.t.BIYAqa),
                 children: (0, u.ud)({
                     channel: t,
-                    channelName: C,
+                    channelName: S,
                     inSidebar: !0,
                 }),
             }),

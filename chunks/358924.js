@@ -20,8 +20,8 @@ var r,
     y = n(503438),
     v = n(420660),
     I = n(74433),
-    C = n(206074),
-    S = n(100527),
+    S = n(206074),
+    C = n(100527),
     T = n(906732),
     N = n(213609),
     P = n(728345),
@@ -53,7 +53,7 @@ var r,
     ee = n(599706),
     et = n(981631),
     en = n(388032),
-    er = n(84822);
+    er = n(544284);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -203,7 +203,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
         let { activity: t, analyticsLocations: n, hidden: r } = e,
             { application_id: l, name: a } = t,
             { data: o } = (0, P.IX)(l),
-            s = (0, C.Z)({
+            s = (0, S.Z)({
                 application: o,
                 analyticsLocations: n,
             }),
@@ -457,7 +457,7 @@ let eO = (e) => {
     }),
     (eO.GameSection = (e) => {
         let { icon: t, name: n, partySize: r, members: l, activity: a } = e,
-            { analyticsLocations: o } = (0, T.ZP)(S.Z.NOW_PLAYING_ITEM_GAME_SECTION);
+            { analyticsLocations: o } = (0, T.ZP)(C.Z.NOW_PLAYING_ITEM_GAME_SECTION);
         return (0, i.jsxs)(eu, {
             children: [
                 (0, i.jsxs)("div", {
@@ -492,7 +492,7 @@ let eO = (e) => {
     (eO.RichPresenceSection = (e) => {
         var t, r;
         let { activity: l, getAssetImage: a, user: s } = e,
-            { analyticsLocations: c } = (0, T.ZP)(S.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
+            { analyticsLocations: c } = (0, T.ZP)(C.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { assets: u, details: d, state: p, application_id: f } = l,
             { hasButton: h, isJoinActivityButtonShown: g } = ef({
                 activity: l,

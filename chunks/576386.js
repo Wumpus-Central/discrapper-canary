@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => g });
 var n = r(951288),
     i = r(647438),
     a = r(120356),
@@ -11,23 +11,23 @@ var n = r(951288),
     p = r(74538),
     _ = r(539530),
     m = r(388032),
-    h = r(24391);
+    h = r(801707);
 let v = (e) => {
         var t;
-        let { currentUser: r, nameplate: a, section: c, canUsePremiumCollectibles: p, isSelected: v, onClick: b } = e,
-            f = (0, i.useRef)(null),
-            g = (0, s.Z)(f);
+        let { currentUser: r, nameplate: a, section: c, canUsePremiumCollectibles: p, isSelected: v, onClick: g } = e,
+            b = (0, i.useRef)(null),
+            f = (0, s.Z)(b);
         return (0, n.jsxs)(o.P3F, {
-            innerRef: f,
+            innerRef: b,
             "aria-label": null != (t = a.label) ? t : m.intl.string(m.t.x5CoXV),
             className: h.nameplateItem,
-            onClick: b,
+            onClick: g,
             children: [
                 (0, n.jsx)(u.Z, {
                     nameplate: a,
                     user: r,
                     showPlaceholderUser: !0,
-                    isHighlighted: g,
+                    isHighlighted: f,
                 }),
                 (0, n.jsx)("div", { className: l()(h.nameplateItemOverlay, { [h.selected]: v }) }),
                 (0, n.jsx)(d.Z, {
@@ -39,7 +39,7 @@ let v = (e) => {
             ],
         });
     },
-    b = (e) => {
+    g = (e) => {
         let { currentUser: t, selectedNameplate: r, guildId: i, onSelect: a, onOpenShop: s } = e,
             d = p.ZP.canUseCollectibles(t),
             u = (0, _.ZP)();

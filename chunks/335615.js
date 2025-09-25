@@ -18,8 +18,8 @@ var r = n(951288),
     _ = n(100527),
     O = n(367907),
     j = n(906732),
-    x = n(493324),
-    v = n(611064),
+    v = n(493324),
+    x = n(611064),
     C = n(677432),
     I = n(178762),
     E = n(868671),
@@ -44,7 +44,7 @@ var r = n(951288),
     V = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(32482);
+    q = n(854641);
 function K(e, t, n) {
     return (
         t in e
@@ -141,8 +141,8 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                 channel: _,
                 guildId: O,
                 isTyping: j,
-                isMobileOnline: x,
-                premiumSince: v,
+                isMobileOnline: v,
+                premiumSince: x,
                 nameplate: C,
             } = e,
             I = J(e, [
@@ -166,7 +166,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
             ]),
             E = i.useRef(null),
             [S, Z] = i.useState(!1),
-            T = null != v ? new Date(v) : null,
+            T = null != x ? new Date(x) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -175,7 +175,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -254,7 +254,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                             isTyping: j,
                             channel: _,
                             guildId: O,
-                            isMobile: x,
+                            isMobile: v,
                             onClickPremiumGuildIcon: w,
                             selected: S,
                             itemProps: I,
@@ -348,7 +348,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, v.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -456,7 +456,7 @@ class el extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, v.R)(a)) return (0, i.createElement)(v.Z, X(Q({}, a), { key: "section-".concat(t) }));
+                if ((0, x.R)(a)) return (0, i.createElement)(x.Z, X(Q({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -582,7 +582,7 @@ class el extends i.Component {
             ),
             K(this, "getContentFeedGroup", () => {
                 let e = this.props.groups[E.T];
-                if ((0, v.R)(e)) return e;
+                if ((0, x.R)(e)) return e;
             }),
             K(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
             K(this, "getRowHeightComputer", () => {
@@ -682,7 +682,7 @@ function ea(e) {
         }),
         b = i.useRef(null),
         O = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        x = i.useCallback(
+        v = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -702,7 +702,7 @@ function ea(e) {
             },
             [42],
         ),
-        v = i.useCallback(
+        x = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -726,9 +726,9 @@ function ea(e) {
         ),
         I = (0, d.ZP)({
             id: "members-".concat(t.id),
-            setFocus: x,
+            setFocus: v,
             isEnabled: s,
-            scrollToStart: v,
+            scrollToStart: x,
             scrollToEnd: C,
         });
     return (0, r.jsx)(j.Gt, {

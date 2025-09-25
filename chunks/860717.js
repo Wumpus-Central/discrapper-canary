@@ -16,7 +16,7 @@ var r = n(951288),
     O = n(77498),
     y = n(750312),
     j = n(919498),
-    v = n(18827);
+    v = n(895652);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function x(e, t) {
         e
     );
 }
-function P(e) {
+function _(e) {
     let { component: t } = e;
     if (Array.isArray(t)) return w(t);
     switch (t.type) {
@@ -89,13 +89,13 @@ function P(e) {
                     }
                     return i;
                 })(t, ["body"]);
-            return (0, r.jsx)(E, x(h({}, i), { body: w(n) }));
+            return (0, r.jsx)(I, x(h({}, i), { body: w(n) }));
         case "GRID":
-            return (0, r.jsx)(I, { children: w(t.children) });
+            return (0, r.jsx)(E, { children: w(t.children) });
         case "FIELD":
             return (0, r.jsx)(S, {
-                value: _(t.value),
-                name: _(t.name),
+                value: P(t.value),
+                name: P(t.name),
             });
         case "TEXT":
             return (0, r.jsx)(T, h({}, t));
@@ -107,13 +107,13 @@ function P(e) {
             return (0, r.jsx)(A, {});
     }
 }
-function _(e, t) {
-    return (0, r.jsx)(P, { component: e }, t);
+function P(e, t) {
+    return (0, r.jsx)(_, { component: e }, t);
 }
 function w(e) {
-    return e.map((e, t) => _(e, t));
+    return e.map((e, t) => P(e, t));
 }
-function E(e) {
+function I(e) {
     let { title: t, body: n, imageUrl: i } = e;
     return (0, r.jsxs)("div", {
         className: v.heroSection,
@@ -145,7 +145,7 @@ function E(e) {
         ],
     });
 }
-function I(e) {
+function E(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: v.grid,
@@ -418,7 +418,7 @@ function Z(e) {
                 value: e,
                 children: (0, r.jsx)(R, {
                     widget: l,
-                    children: (0, r.jsx)(P, { component: O }),
+                    children: (0, r.jsx)(_, { component: O }),
                 }),
             }),
         }),

@@ -36,9 +36,9 @@ var r = n(951288),
     L = n(981631),
     D = n(176505),
     U = n(388032),
-    B = n(963392),
-    H = n(197571);
-function V(e) {
+    B = n(40036),
+    V = n(10198);
+function H(e) {
     let { canManageRoles: t, channel: n } = e,
         i = t && (0, p.Yk)(n),
         a = (0, l.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -125,7 +125,7 @@ function F(e) {
                         !P.isProvisional &&
                         (0, r.jsx)(a.X6q, {
                             variant: "heading-xl/medium",
-                            className: H.marginBottom20,
+                            className: V.marginBottom20,
                             children: A,
                         }),
                     U.intl.format(U.t["Qvg+6+"], { username: C }),
@@ -151,7 +151,7 @@ function F(e) {
                 children: U.intl.format(U.t.MFwcqK, { name: C }),
             });
     return R
-        ? (0, r.jsx)(V, {
+        ? (0, r.jsx)(H, {
               channel: p,
               canManageRoles: M,
           })

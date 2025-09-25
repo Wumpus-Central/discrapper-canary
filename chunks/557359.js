@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(388685);
+n.d(t, { A: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,24 +12,24 @@ var r = n(951288),
     g = n(217472),
     p = n(651390),
     f = n(388032),
-    h = n(229271);
-function b(e) {
+    h = n(58801);
+function x(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
-        b = null == l ? void 0 : l.id,
-        x = i.useCallback(
+        x = null == l ? void 0 : l.id,
+        b = i.useCallback(
             (e) => {
-                if (null == b || null == n) return null;
-                g.Z.setPendingInviteRules(b, e, [...n]);
+                if (null == x || null == n) return null;
+                g.Z.setPendingInviteRules(x, e, [...n]);
             },
-            [b, n],
+            [x, n],
         ),
         j = i.useCallback(
             (e) => {
-                if (null == b) return null;
-                g.Z.setPendingInviteRules(b, t, e);
+                if (null == x) return null;
+                g.Z.setPendingInviteRules(x, t, e);
             },
-            [b, t],
+            [x, t],
         );
     return null == l
         ? null
@@ -58,7 +58,7 @@ function b(e) {
                                 ],
                             }),
                             (0, r.jsx)(c.T2, {
-                                onChange: x,
+                                onChange: b,
                                 checked: t,
                             }),
                         ],

@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(981631),
     g = n(295907),
     m = n(388032),
-    b = n(470840),
-    _ = n(197571);
+    b = n(118213),
+    _ = n(10198);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,8 +66,8 @@ let y = n(349181),
         error: null,
     },
     I = (0, p.hQ)(),
-    C = "".concat(I, "-decription"),
-    S = "".concat(I, "-error");
+    S = "".concat(I, "-decription"),
+    C = "".concat(I, "-error");
 function T(e, t) {
     switch (t.type) {
         case "RESET":
@@ -134,7 +134,7 @@ function N(e) {
                     className: b.addFriendWumpusWrapper,
                     children: [
                         (0, r.jsx)(u.R94, {
-                            id: C,
+                            id: S,
                             type: u.R94.Types.DESCRIPTION,
                             children: (0, r.jsx)(u.Text, {
                                 tag: "div",
@@ -200,7 +200,7 @@ function N(e) {
                                 placeholder: t,
                                 "aria-label": t,
                                 "aria-invalid": null != N || void 0,
-                                "aria-describedby": null != N ? S : C,
+                                "aria-describedby": null != N ? C : S,
                             }),
                             null != E &&
                                 (0, r.jsx)("div", {
@@ -222,7 +222,7 @@ function N(e) {
                     (0, r.jsx)("div", {
                         role: "alert",
                         children: (0, r.jsx)(u.Text, {
-                            id: S,
+                            id: C,
                             variant: "text-sm/normal",
                             className: _.marginTop8,
                             color: "text-feedback-critical",

@@ -18,18 +18,18 @@ var r = n(951288),
     O = n(961040),
     E = n(981631),
     y = n(388032),
-    v = n(445202);
+    v = n(10663);
 let I = {
         cozy: 0,
         default: 0,
         compact: 0,
     },
-    C = {
+    S = {
         cozy: 36,
         default: 24,
         compact: 14,
     },
-    S = {
+    C = {
         cozy: 95,
         default: 84,
         compact: 72,
@@ -53,7 +53,7 @@ function T(e) {
         { badge: A, badgeType: Z } = (0, _.h6)({ isSelected: E }),
         w = (0, g.isDesktop)() && N,
         L = (0, f.A)(),
-        R = (0, g.isMac)() ? I[L] : w ? C[L] : S[L];
+        R = (0, g.isMac)() ? I[L] : w ? S[L] : C[L];
     return (0, r.jsxs)(u.Kqy, {
         gap: 0,
         direction: "horizontal",

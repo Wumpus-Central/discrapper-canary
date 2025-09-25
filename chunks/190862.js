@@ -12,7 +12,7 @@ var r = n(951288),
     g = n(173951),
     p = n(455731),
     b = n(272289),
-    m = n(39642);
+    m = n(517143);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,8 +82,8 @@ let j = (e) => {
             v = (0, o.e7)([a.default], () => a.default.getId() === n.id),
             h = v && !i && g,
             x = (0, l.mR)(f),
-            P = (0, l.Hy)(f, { isCurrentUser: v }),
-            _ = (0, l.kQ)(f);
+            _ = (0, l.Hy)(f, { isCurrentUser: v }),
+            P = (0, l.kQ)(f);
         return (0, r.jsx)(
             j,
             O(
@@ -92,13 +92,13 @@ let j = (e) => {
                     user: n,
                     disableInteraction: i,
                     headerTitle: x,
-                    headerSubtitle: P,
+                    headerSubtitle: _,
                     headerActionButtons: v
                         ? [
                               (0, r.jsx)(
                                   u.Z,
                                   {
-                                      disabled: _,
+                                      disabled: P,
                                       widgetType: f.type,
                                       widget: f,
                                   },

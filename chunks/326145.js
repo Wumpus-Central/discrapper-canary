@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(76531),
-    E = n(718215);
+    O = n(812070),
+    E = n(904885);
 function y(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: y, height: v } = (0, c.ZP)(),
@@ -29,33 +29,33 @@ function y(e) {
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
-        S = i.useMemo(
+        S = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        C = i.useMemo(
             () =>
-                null == C
+                null == S
                     ? null
                     : h.ZP.getGuildSplashURL({
-                          id: C.id,
-                          splash: C.splash,
+                          id: S.id,
+                          splash: S.splash,
                       }),
-            [C],
+            [S],
         ),
-        T = (0, d.N)(S);
+        T = (0, d.N)(C);
     return (0, r.jsxs)("div", {
-        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
+        className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == C }),
         ref: l,
         children: [
-            null != S
+            null != C
                 ? (0, r.jsx)(u.Z, {
                       className: E.artwork,
-                      src: S,
+                      src: C,
                       width: y,
                       height: v,
                       imageClassName: E.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
             null != T &&
-                null != S &&
+                null != C &&
                 (0, r.jsx)("div", {
                     className: E.gradient,
                     style: {
@@ -64,7 +64,7 @@ function y(e) {
                             .concat((0, g.aD)(T, 1), " 100%)"),
                     },
                 }),
-            null != S && (0, r.jsx)("div", { className: E.gradient }),
+            null != C && (0, r.jsx)("div", { className: E.gradient }),
             (0, r.jsxs)("div", {
                 className: a()(O.explainerContainer, O.transparentBackground),
                 children: [

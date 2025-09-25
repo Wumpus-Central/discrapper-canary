@@ -52,7 +52,7 @@ var r = n(951288),
     q = n(524484),
     X = n(65154),
     Q = n(388032),
-    J = n(7504);
+    J = n(400872);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -234,18 +234,18 @@ let et = [Y.fO.ACTIVITY],
                 },
                 [M, b],
             ),
-            e4 = i.useCallback(
+            e8 = i.useCallback(
                 (e, t, n) => {
                     null == L || L(b, e, t, n);
                 },
                 [L, b],
             ),
-            e8 = null,
+            e4 = null,
             e6 = null,
             e3 = "";
         switch (b.type) {
             case Y.fO.STREAM:
-                (e8 = (0, r.jsx)(V.Z, {
+                (e4 = (0, r.jsx)(V.Z, {
                     participant: b,
                     selected: ep,
                     width: es,
@@ -267,7 +267,7 @@ let et = [Y.fO.ACTIVITY],
                     (e3 = Q.intl.formatToPlainString(Q.t.gHPz3d, { streamerName: b.user.username }));
                 break;
             case Y.fO.USER:
-                (e8 = (0, r.jsx)(H.Z, {
+                (e4 = (0, r.jsx)(H.Z, {
                     channel: ea,
                     inCall: ed,
                     participant: b,
@@ -289,7 +289,7 @@ let et = [Y.fO.ACTIVITY],
                     (e3 = Q.intl.formatToPlainString(Q.t["iC/x/f"], { username: b.user.username }));
                 break;
             case Y.fO.ACTIVITY:
-                (e8 = (0, r.jsx)(B.ZP, {
+                (e4 = (0, r.jsx)(B.ZP, {
                     interactible: eg,
                     participant: b,
                     selected: ep,
@@ -299,7 +299,7 @@ let et = [Y.fO.ACTIVITY],
                     (e3 = Q.intl.formatToPlainString(Q.t.YCvOsL, { activityName: null == eA ? void 0 : eA.name }));
                 break;
             case Y.fO.HIDDEN_STREAM:
-                e8 = (0, r.jsx)(V.Z, {
+                e4 = (0, r.jsx)(V.Z, {
                     participant: b,
                     selected: ep,
                     width: es,
@@ -312,7 +312,7 @@ let et = [Y.fO.ACTIVITY],
                 });
         }
         let e2 = i.useRef(null),
-            e7 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
+            e5 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: K.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -343,7 +343,7 @@ let et = [Y.fO.ACTIVITY],
                                 "aria-label": e3,
                                 className: J.tileChild,
                                 onDoubleClick: e1,
-                                onContextMenu: (e) => e4(e, b.type === Y.fO.STREAM),
+                                onContextMenu: (e) => e8(e, b.type === Y.fO.STREAM),
                                 onClick: e0,
                                 onMouseDown: z,
                                 onKeyDown: en,
@@ -384,7 +384,7 @@ let et = [Y.fO.ACTIVITY],
                                               }),
                                           })
                                         : null,
-                                    e8,
+                                    e4,
                                     ef
                                         ? null
                                         : (0, r.jsx)("div", {
@@ -394,7 +394,7 @@ let et = [Y.fO.ACTIVITY],
                                     ep
                                         ? (0, r.jsx)("div", {
                                               className: J.selectedScreen,
-                                              children: (0, r.jsx)(e7, {
+                                              children: (0, r.jsx)(e5, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: J.selectedIcon,
@@ -425,7 +425,7 @@ let et = [Y.fO.ACTIVITY],
                                                       localVideoDisabled: eD,
                                                       videoToggleState: eM,
                                                       hideAudioIcon: eV,
-                                                      onContextMenu: e4,
+                                                      onContextMenu: e8,
                                                       onToggleMute: e$,
                                                       participantUserId: eT,
                                                       participantDisplayNameStyles:

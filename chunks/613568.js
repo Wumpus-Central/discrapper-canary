@@ -254,7 +254,8 @@ class b {
         try {
             let e = this._dependencyGraph.overallOrder();
             return (this._orderedCallbackTokens = e), e;
-        } catch (e) {
+        } catch (t) {
+            let e = t;
             if (null != e.cyclePath) {
                 let t = e.cyclePath.map((e) =>
                     "".concat(this._dependencyGraph.getNodeData(e).name, "(").concat(e, ")"),

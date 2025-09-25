@@ -20,15 +20,15 @@ var r,
     p = n(570140),
     f = n(484614),
     h = n(852860),
-    b = n(881052),
-    x = n(751189),
+    x = n(881052),
+    b = n(751189),
     j = n(409059),
     v = n(518936),
     _ = n(999382),
     O = n(260539),
     y = n(388032),
-    C = n(86477),
-    N = n(197571);
+    C = n(232386),
+    N = n(10198);
 function E(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ class I extends (r = d.ZP.Store) {
                 (this.error = e), this.emitChange();
             }),
             E(this, "save", async () => {
-                await x.Z.updateGuildTemplate(
+                await b.Z.updateGuildTemplate(
                     _.Z.getProps().guild.id,
                     this.getTemplate().code,
                     this.name,
@@ -120,7 +120,7 @@ function w() {
                     type: g.geA.DESCRIPTION,
                     children: y.intl.format(y.t.c0m8bG, {}),
                 }),
-                (0, i.jsx)(Z, {}),
+                (0, i.jsx)(D, {}),
                 (0, i.jsx)(g.$i$, { className: C.divider }),
                 (0, i.jsx)(R, {}),
             ],
@@ -139,9 +139,9 @@ function R() {
                     !(async function () {
                         n(!0);
                         try {
-                            await x.Z.loadTemplatesForGuild(e), n(!1);
+                            await b.Z.loadTemplatesForGuild(e), n(!1);
                         } catch (e) {
-                            S.setError(new b.Hx(e));
+                            S.setError(new x.Hx(e));
                         }
                     })();
                 }, [e]),
@@ -197,7 +197,7 @@ function R() {
         ],
     });
 }
-function Z() {
+function D() {
     return (0, i.jsxs)("div", {
         className: C.descriptionBox,
         children: [
@@ -294,7 +294,7 @@ function Z() {
         ],
     });
 }
-function D(e) {
+function Z(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(g.sYh, {
         dismissable: !0,
@@ -374,14 +374,14 @@ function L(e) {
                       className: a()(N.marginTop20, C.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(M, {
+                              (0, i.jsx)(G, {
                                   guild: t,
                                   guildTemplate: n,
                               }),
                           (0, i.jsxs)("div", {
                               className: C.rightButtonContainer,
                               children: [
-                                  (0, i.jsx)(G, {
+                                  (0, i.jsx)(M, {
                                       guild: t,
                                       guildTemplate: n,
                                   }),
@@ -405,9 +405,9 @@ function k(e) {
         a = async () => {
             S.setError(null), s(!0);
             try {
-                await x.Z.createGuildTemplate(t.id, S.name, S.description);
+                await b.Z.createGuildTemplate(t.id, S.name, S.description);
             } catch (e) {
-                S.setError(new b.Hx(e));
+                S.setError(new x.Hx(e));
             }
             s(!1);
         };
@@ -419,15 +419,15 @@ function k(e) {
         onClick: a,
     });
 }
-function M(e) {
+function G(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, s] = l.useState(!1),
         a = async () => {
             S.setError(null), s(!0);
             try {
-                await x.Z.syncGuildTemplate(t.id, n.code);
+                await b.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
-                S.setError(new b.Hx(e));
+                S.setError(new x.Hx(e));
             }
             s(!1);
         };
@@ -442,15 +442,15 @@ function M(e) {
         }),
     });
 }
-function G(e) {
+function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, s] = l.useState(!1),
         a = async () => {
             S.setError(null);
             try {
-                await x.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
+                await b.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
             } catch (e) {
-                S.setError(new b.Hx(e));
+                S.setError(new x.Hx(e));
             }
             s(!1);
         };
@@ -466,7 +466,7 @@ function G(e) {
                 }),
             }),
             r
-                ? (0, i.jsx)(D, {
+                ? (0, i.jsx)(Z, {
                       confirm: a,
                       cancel: () => s(!1),
                   })
@@ -484,7 +484,7 @@ function U(e) {
             text: y.intl.string(y.t.YI3iV1),
             onClick: () =>
                 (0, g.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("10570")]).then(n.bind(n, 766775));
                     return (n) => {
                         var r, l;
                         return (0, i.jsx)(

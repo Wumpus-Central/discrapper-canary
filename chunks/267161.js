@@ -24,8 +24,8 @@ var r = n(951288),
     y = n(340137),
     v = n(522474),
     I = n(141321),
-    C = n(819439),
-    S = n(296241),
+    S = n(819439),
+    C = n(296241),
     T = n(165017),
     N = n(984802),
     P = n(592125),
@@ -38,7 +38,7 @@ var r = n(951288),
     R = n(950796),
     D = n(176505),
     k = n(741764),
-    M = n(82504);
+    M = n(851352);
 let U = (0, o.U)(() => ({ isOpen: !0 }));
 function G(e) {
     let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
@@ -57,7 +57,7 @@ function G(e) {
               withFastTravel: n,
               focusSectionProps: i,
           })
-        : (0, r.jsx)(S.Z, {
+        : (0, r.jsx)(C.Z, {
               searchContext: a,
               focusSectionProps: i,
           });
@@ -65,7 +65,7 @@ function G(e) {
 function B(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e,
         l = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
-        a = (0, C.$)({ location: "TitleText" }),
+        a = (0, S.$)({ location: "TitleText" }),
         o = (0, s.e7)([P.Z], () => {
             let e = P.Z.getChannel(l);
             return null != e && !e.isDirectory() && !e.isGuildVocal();
@@ -91,8 +91,8 @@ let V = i.memo(function () {
     let { notificationCenterVariant: e, entrypoint: t } = (0, E.pN)({ location: "AppTitleBar" }),
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, f.t)({ location: "AppTitleBar" }),
         { backForwardButtons: o, titlebarIconSize: g } = (0, p.T)({ location: "AppTitleBar" }),
-        { hasBugReporterAccess: C } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
-        S = null !== e && t === E.u3.TITLE_BAR_LEFT,
+        { hasBugReporterAccess: S } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
+        C = null !== e && t === E.u3.TITLE_BAR_LEFT,
         T = null === e;
     i.useLayoutEffect(() => {
         Z.ZP.setMinimumSize(k.J, k.N);
@@ -121,7 +121,7 @@ let V = i.memo(function () {
             );
         })({
             showBackForwardButtons: o,
-            showNotificationsInbox: S,
+            showNotificationsInbox: C,
             titlebarFastTravel: n,
             showRecentsButton: T,
         });
@@ -141,7 +141,7 @@ let V = i.memo(function () {
                                     (0, r.jsx)(h.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === x ? e : void 0,
                                     }),
-                                S && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0 }),
+                                C && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0 }),
                             ],
                         }),
                         title: (0, r.jsx)(B, {
@@ -199,7 +199,7 @@ let V = i.memo(function () {
                                               }),
                                         i),
                                     ),
-                                C
+                                S
                                     ? (0, r.jsx)(_.Z, {
                                           focusSectionProps: "HELP" === x ? e : void 0,
                                           className: L,

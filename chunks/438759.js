@@ -9,10 +9,10 @@ var o = n(120356),
     c = n(892567),
     d = n(203872),
     u = n(660662),
-    p = n(693450),
-    f = n(388032),
-    m = n(959389),
-    g = n(771880);
+    p = n(62222),
+    m = n(388032),
+    f = n(77426),
+    g = n(6073);
 function h(e) {
     let { selectedEffectId: t, setSelectedEffectId: n, className: o } = e;
     return (0, r.jsxs)("div", {
@@ -20,9 +20,9 @@ function h(e) {
         children: [
             (0, r.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
-                className: m.selectorHeading,
+                className: f.selectorHeading,
                 children: [
-                    f.intl.string(p.default["1wilMz"]),
+                    m.intl.string(p.default["1wilMz"]),
                     (0, r.jsx)(i.SrA, {
                         size: "xs",
                         color: i.TVs.colors.TEXT_DEFAULT,

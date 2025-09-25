@@ -12,21 +12,21 @@ var r = n(951288),
     g = n(978369),
     p = n(286957),
     b = n(388032),
-    m = n(44258);
+    m = n(200344);
 function O(e) {
     var t;
     let { tags: n, isCurrentUser: o, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
-        P = x.length > 0,
-        _ = l.qH,
-        w = o && !O && (0, f.M8)(c) && x.length < _,
-        { trackUserProfileAction: E } = (0, d.KZ)(),
-        I = (0, i.useRef)(new Map()),
+        _ = x.length > 0,
+        P = l.qH,
+        w = o && !O && (0, f.M8)(c) && x.length < P,
+        { trackUserProfileAction: I } = (0, d.KZ)(),
+        E = (0, i.useRef)(new Map()),
         S = (0, i.useRef)(null),
         T = (0, i.useRef)(null),
         [D, N] = (0, i.useState)(0),
         [A, k] = (0, i.useState)(!1),
-        C = h(S, T, x, I, N);
+        C = h(S, T, x, E, N);
     if (
         ((0, i.useEffect)(
             () => (
@@ -38,14 +38,14 @@ function O(e) {
             ),
             [C, null == x ? void 0 : x.join("")],
         ),
-        !P && !w)
+        !_ && !w)
     )
         return null;
     let R = A ? x : x.slice(0, x.length - D);
     return (0, r.jsxs)("div", {
         className: a()(m.tagListContainer, u),
         children: [
-            P &&
+            _ &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("ul", {
@@ -60,7 +60,7 @@ function O(e) {
                                         applicationId: s,
                                         widgetType: c,
                                         ref: (t) => {
-                                            null != t && I.current.set(e, t);
+                                            null != t && E.current.set(e, t);
                                         },
                                         disableInteraction: O,
                                     },
@@ -72,13 +72,13 @@ function O(e) {
                             (A
                                 ? (0, r.jsx)(v, {
                                       onClick: () => {
-                                          k(!1), E({ action: "COLLAPSE_GAME_TAGS" });
+                                          k(!1), I({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
                                 : (0, r.jsx)(j, {
                                       numHidden: D,
                                       onClick: () => {
-                                          k(!0), E({ action: "EXPAND_GAME_TAGS" });
+                                          k(!0), I({ action: "EXPAND_GAME_TAGS" });
                                       },
                                       ref: S,
                                       disableInteraction: O,

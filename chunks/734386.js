@@ -28,8 +28,8 @@ var r = n(951288),
     Z = n(318374),
     T = n(981631),
     N = n(388032),
-    A = n(338518),
-    w = n(430864);
+    A = n(73288),
+    w = n(602009);
 function M(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
@@ -77,7 +77,7 @@ function M(e) {
                 .value();
         }, [t, k]),
         B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
-        H = i.useCallback(() => l(!1), []);
+        V = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(I.ZP, {
         channelId: t.id,
         children: [
@@ -220,7 +220,7 @@ function M(e) {
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (H(), e.onClose()),
+                                      onClose: () => (V(), e.onClose()),
                                       channelId: t.id,
                                   }),
                               Object.getOwnPropertyDescriptors

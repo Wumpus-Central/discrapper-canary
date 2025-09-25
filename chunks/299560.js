@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(248554),
     b = n(228168),
     _ = n(388032),
-    O = n(229870);
+    O = n(73686);
 let E = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
@@ -61,7 +61,7 @@ function y(e) {
         { placeholder: _, getAriaLabel: y } = E[t],
         v = "small" === l,
         I = (0, d.SM)().data,
-        C = i.useMemo(() => {
+        S = i.useMemo(() => {
             switch (t) {
                 case o.l.CURRENT_GAMES:
                 case o.l.FAVORITE_GAMES:
@@ -80,23 +80,23 @@ function y(e) {
                     });
             }
         }, [t, I]),
-        S = i.useCallback(() => {
+        C = i.useCallback(() => {
             c ||
-                null == C ||
-                ((0, h.qH)(t, C),
+                null == S ||
+                ((0, h.qH)(t, S),
                 u({
                     action: "WIDGET_ADDED",
                     widgetEdited: t,
                 }),
                 (0, g.L$)(b.qb.WIDGET_ADDED),
                 null == n || n());
-        }, [c, t, C, u, n]);
-    return null == C
+        }, [c, t, S, u, n]);
+    return null == S
         ? null
         : (0, r.jsxs)(s.P3F, {
               className: a()(O.addButtonContainer, v && O.sizeSmall, c && O.loading),
-              onClick: S,
-              "aria-label": y(C),
+              onClick: C,
+              "aria-label": y(S),
               "aria-busy": c,
               children: [
                   "details" === _.variant
@@ -119,7 +119,7 @@ function y(e) {
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-primary",
-                              children: (0, h.mR)(C),
+                              children: (0, h.mR)(S),
                           }),
                       ],
                   }),

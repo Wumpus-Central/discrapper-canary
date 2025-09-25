@@ -6,7 +6,7 @@ var i = n(780384),
     s = n(410030),
     a = n(293810),
     o = n(388032),
-    c = n(570734),
+    c = n(62435),
     d = n(934961),
     u = n(568294),
     m = n(867861),
@@ -14,8 +14,8 @@ var i = n(780384),
     p = n(268953),
     f = n(487703),
     h = n(458050),
-    b = n(334364),
-    x = n(431712);
+    x = n(334364),
+    b = n(431712);
 function j(e) {
     return (0, i.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
@@ -185,12 +185,12 @@ function y() {
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionSocial,
-                src: x,
+                src: b,
                 alt: o.intl.string(o.t.yTPpra),
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionLanyardIllo,
-                src: b,
+                src: x,
                 alt: o.intl.string(o.t["+gd9QU"]),
             }),
         ],

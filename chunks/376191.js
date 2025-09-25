@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => S });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -18,7 +18,7 @@ var i = n(442837),
     _ = n(332712),
     O = n(81471),
     E = n(388032),
-    y = n(79072);
+    y = n(418337);
 let v = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
@@ -48,13 +48,13 @@ let v = (e) => {
               });
     },
     I = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function C(e) {
+function S(e) {
     var t;
     let { channel: n, otherUser: c, active: f } = e,
         m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, i.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
-        C = !m && f,
-        S = (0, b.c)(n),
+        S = !m && f,
+        C = (0, b.c)(n),
         { avatarDecorationSrc: T } = (0, d.Z)({
             user: c,
             size: (0, u.y9)(l.EFr.SIZE_40),
@@ -64,7 +64,7 @@ function C(e) {
         children: [
             (0, r.jsx)(I, {
                 className: y.avatar,
-                src: (0, p.x)(n, 40, C),
+                src: (0, p.x)(n, 40, S),
                 avatarDecoration: T,
                 size: l.EFr.SIZE_40,
                 "aria-label": null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t["30mdIy"]),
@@ -87,7 +87,7 @@ function C(e) {
                                 className: y.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: S,
+                                children: C,
                             }),
                         ],
                     }),

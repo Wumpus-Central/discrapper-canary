@@ -25,9 +25,9 @@ var r = n(951288),
     E = n(826946),
     y = n(981631),
     v = n(388032),
-    I = n(972725),
-    C = n(129512),
-    S = n(330065),
+    I = n(8548),
+    S = n(129512),
+    C = n(330065),
     T = n(755386);
 function N(e) {
     let { guild: t, onClick: l, onView: o } = e,
@@ -114,9 +114,9 @@ function N(e) {
             if (R) return T;
             switch (L) {
                 case y.BRd.DARK:
-                    return C;
-                case y.BRd.LIGHT:
                     return S;
+                case y.BRd.LIGHT:
+                    return C;
             }
         }, [t.discoverySplash, t.id, R, L]),
         k = i.useMemo(

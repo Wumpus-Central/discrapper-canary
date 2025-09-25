@@ -13,10 +13,10 @@ var r = n(951288),
     p = n(906732),
     f = n(670188),
     h = n(594174),
-    b = n(626135),
-    x = n(243730),
+    x = n(626135),
+    b = n(243730),
     j = n(434404),
-    v = n(946724),
+    v = n(103576),
     _ = n(130341),
     O = n(95242),
     y = n(420966),
@@ -24,8 +24,8 @@ var r = n(951288),
     N = n(203377),
     E = n(981631),
     I = n(388032),
-    S = n(472039),
-    T = n(21321);
+    S = n(37134),
+    T = n(10083);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -97,11 +97,11 @@ async function R(e, t, n) {
         );
     }
 }
-function Z(e) {
+function D(e) {
     let { member: t, guildId: l, roleId: a, locked: u } = e,
         g = i.useRef(null),
         p = i.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
-    function b(e) {
+    function x(e) {
         if ((e.stopPropagation(), !u)) {
             if (e.shiftKey) return void R(t, l, a);
             let n = v.Z.getRole(a);
@@ -139,11 +139,11 @@ function Z(e) {
             );
         }
     }
-    function x(e) {
+    function b(e) {
         let i = h.default.getUser(t.id);
         null != i &&
             (0, d.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -173,7 +173,7 @@ function Z(e) {
                         w(P({}, e), {
                             innerRef: g,
                             className: S.memberRow,
-                            onContextMenu: x,
+                            onContextMenu: b,
                             children: [
                                 (0, r.jsx)(C.Z, {
                                     className: S.memberDetails,
@@ -193,7 +193,7 @@ function Z(e) {
                                                 c.P3F,
                                                 w(P({}, e), {
                                                     className: s()(S.removeButton, { [S.removeButtonDisabled]: u }),
-                                                    onClick: b,
+                                                    onClick: x,
                                                     children: (0, r.jsx)(c.k$p, {
                                                         size: "xs",
                                                         color: "currentColor",
@@ -209,7 +209,7 @@ function Z(e) {
         })
     );
 }
-function D(e) {
+function Z(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, r.jsx)("div", {
         className: T.contentWidth,
@@ -258,7 +258,7 @@ function A(e) {
         f = i.useMemo(() => l.trim().toLowerCase(), [l]);
     (0, _.rY)(t, f);
     let h = i.useMemo(() => d.filter((e) => (0, _.eg)(f, e)), [d, f]),
-        b = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
+        x = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(p.Gt, {
         value: m,
         children: (0, r.jsx)(c._2F, {
@@ -270,18 +270,18 @@ function A(e) {
             rowHeight: 40,
             renderRow: function (e) {
                 let { row: i } = e;
-                if (0 === b.length)
+                if (0 === x.length)
                     return (0, r.jsx)(
-                        D,
+                        Z,
                         {
                             handleAddClick: u,
                             locked: a,
                         },
                         "empty",
                     );
-                let l = b[i];
+                let l = x[i];
                 return (0, r.jsx)(
-                    Z,
+                    D,
                     {
                         member: l,
                         guildId: t,
@@ -325,18 +325,18 @@ function k(e) {
         j = l.managed || o,
         v = (0, _.e)(t.id, l.id),
         C =
-            (0, a.e7)([x.Z], () => {
+            (0, a.e7)([b.Z], () => {
                 var e, n;
-                return null != (n = null == (e = x.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
+                return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > v.length,
         R = () => {
-            b.default.track(E.rMx.OPEN_MODAL, {
+            x.default.track(E.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
                 location_page: "Role Settings",
                 location_section: "Members",
             }),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,

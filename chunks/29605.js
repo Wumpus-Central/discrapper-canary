@@ -19,8 +19,8 @@ var r = n(951288),
     p = n(755721),
     f = n(481060),
     h = n(668781),
-    b = n(80932),
-    x = n(225433),
+    x = n(80932),
+    b = n(225433),
     j = n(599059),
     v = n(327802),
     _ = n(110924),
@@ -46,8 +46,8 @@ var r = n(951288),
     B = n(981631),
     F = n(185923),
     H = n(388032),
-    z = n(878341),
-    V = n(620842);
+    z = n(52116),
+    V = n(504401);
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,7 +91,7 @@ function K(e, t) {
         e
     );
 }
-let Y = d().throttle(b.OQ, 1000),
+let Y = d().throttle(x.OQ, 1000),
     q = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1, isNewlyAdded: o = !1 } = e,
             [c, d] = i.useState(n.name),
@@ -157,7 +157,7 @@ let Y = d().throttle(b.OQ, 1000),
                                 if (c === n.name) return;
                                 let e = Z.ZP.sanitizeEmojiName(c);
                                 e !== n.name &&
-                                    (0, b.dv)({
+                                    (0, x.dv)({
                                         guildId: t,
                                         emojiId: n.id,
                                         name: e,
@@ -197,10 +197,10 @@ let Y = d().throttle(b.OQ, 1000),
                         }),
                     }),
                 !a &&
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(b.Z, {
                         className: z.emojiRemove,
                         onClick: () => {
-                            (0, b.RE)(t, n.id).catch((e) => {
+                            (0, x.RE)(t, n.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t &&
                                     h.Z.show({
@@ -415,13 +415,13 @@ let Y = d().throttle(b.OQ, 1000),
             {
                 revision: u,
                 emojis: h,
-                autoOpen: b,
+                autoOpen: x,
             } = (0, g.cj)([G.Z], () => ({
                 revision: G.Z.getEmojiRevision(t.id),
                 emojis: G.Z.getEmojis(t.id),
                 autoOpen: G.Z.getEmojiFileInputAutoOpen(),
             })),
-            x = (0, _.Z)(u),
+            b = (0, _.Z)(u),
             [j, S] = i.useState(!1),
             [D, Z] = i.useState(!1),
             A = i.useRef(null),
@@ -443,20 +443,20 @@ let Y = d().throttle(b.OQ, 1000),
             j && eo();
         }, [j]),
             i.useEffect(() => {
-                if (b) {
+                if (x) {
                     if (!er) {
                         var t;
                         null == (t = e.current) || t.activateUploadDialogue();
                     }
                     U.ml({ autoOpen: !1 });
                 }
-            }, [b, er]),
+            }, [x, er]),
             i.useEffect(() => {
                 Y(t.id);
             }, [t.id]),
             i.useEffect(() => {
-                null != x && x < u && Y(t.id);
-            }, [u, x, t.id]),
+                null != b && b < u && Y(t.id);
+            }, [u, b, t.id]),
             i.useEffect(() => {
                 if (null != h && null == et) return void en(h);
             }, [h, et]);

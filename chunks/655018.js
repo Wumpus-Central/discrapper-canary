@@ -26,8 +26,8 @@ var r = n(951288),
     P = n(505905),
     I = n(981631),
     Z = n(388032),
-    T = n(787267),
-    N = n(334405);
+    T = n(34101),
+    N = n(515527);
 function A(e) {
     var t, n, l;
     let { channel: o, setIsHangStatusInputFocused: A, setPopoutRef: w } = e,
@@ -40,20 +40,20 @@ function A(e) {
             location: "HangStatusPicker",
         }),
         B = (0, y.V)(D),
-        H = i.useRef(null),
-        [V, F] = i.useState(null != (n = null == R ? void 0 : R.status) ? n : ""),
+        V = i.useRef(null),
+        [H, F] = i.useState(null != (n = null == R ? void 0 : R.status) ? n : ""),
         [G, z] = i.useState(null != (l = null == R ? void 0 : R.emoji) ? l : null),
         W = (0, u.e7)([b.Z], () => b.Z.getCurrentHangStatus()),
         q = L.length > 0,
-        Y = null == V || "" === V.trim(),
+        Y = null == H || "" === H.trim(),
         K = (0, v.Z)(o),
         X =
-            (V.trim().length > 0 && V.trim() !== (null == R || null == (t = R.status) ? void 0 : t.trim())) ||
+            (H.trim().length > 0 && H.trim() !== (null == R || null == (t = R.status) ? void 0 : t.trim())) ||
             (null != G && !s()(G, null == R ? void 0 : R.emoji)),
         [J, Q] = i.useState(!1);
     i.useEffect(() => {
-        V.trim().length > 0 && J && Q(!1), null == G && J && Q(!1);
-    }, [V, G, J]),
+        H.trim().length > 0 && J && Q(!1), null == G && J && Q(!1);
+    }, [H, G, J]),
         i.useEffect(() => {
             if (null != G) {
                 var e;
@@ -62,20 +62,20 @@ function A(e) {
         }, [G]),
         i.useEffect(() => {
             var e;
-            V !== (null != (e = null == R ? void 0 : R.status) ? e : "") && "" !== V.trim() ? A(!0) : A(!1);
-        }, [V, null == R ? void 0 : R.status, G, null == R ? void 0 : R.emoji, A]),
+            H !== (null != (e = null == R ? void 0 : R.status) ? e : "") && "" !== H.trim() ? A(!0) : A(!1);
+        }, [H, null == R ? void 0 : R.status, G, null == R ? void 0 : R.emoji, A]),
         i.useEffect(() => {
             var e;
             (null == W || W === P.tN.CUSTOM) && (null == (e = M.current) || e.focus());
         }, [W]),
         i.useEffect(() => {
-            null == w || w(null == H ? void 0 : H.current);
-        }, [H, w]);
+            null == w || w(null == V ? void 0 : V.current);
+        }, [V, w]);
     let $ = i.useCallback(
             (e) => {
-                e !== W && ((0, m.Zx)(e, !0), null != G && z(null), "" !== V.trim() && F(""));
+                e !== W && ((0, m.Zx)(e, !0), null != G && z(null), "" !== H.trim() && F(""));
             },
-            [W, G, V],
+            [W, G, H],
         ),
         ee = i.useCallback(
             (e, t) => {
@@ -89,11 +89,11 @@ function A(e) {
             (e) => {
                 var t;
                 null == e || null == (t = e.preventDefault) || t.call(e),
-                    null != G && 0 === V.trim().length && Q(!0),
+                    null != G && 0 === H.trim().length && Q(!0),
                     Y ||
                         ee(
                             {
-                                status: V,
+                                status: H,
                                 emoji:
                                     null != G
                                         ? G
@@ -106,7 +106,7 @@ function A(e) {
                             !0,
                         );
             },
-            [V, G, ee, Y],
+            [H, G, ee, Y],
         ),
         en = i.useCallback(() => {
             let e = null,
@@ -140,8 +140,8 @@ function A(e) {
         }, [A]),
         ei = i.useCallback(() => {
             var e;
-            V !== (null != (e = null == R ? void 0 : R.status) ? e : "") && "" !== V.trim() ? A(!0) : A(!1);
-        }, [A, V, null == R ? void 0 : R.status]),
+            H !== (null != (e = null == R ? void 0 : R.status) ? e : "") && "" !== H.trim() ? A(!0) : A(!1);
+        }, [A, H, null == R ? void 0 : R.status]),
         el = i.useCallback(
             (e, t, n) => {
                 var i;
@@ -191,7 +191,7 @@ function A(e) {
             [D, ee, $, B, null == R ? void 0 : R.emoji, null == R ? void 0 : R.status, W, L, U],
         );
     return (0, r.jsxs)("div", {
-        ref: H,
+        ref: V,
         role: "menu",
         id: "hang-status-picker",
         tabIndex: -1,
@@ -206,7 +206,7 @@ function A(e) {
                     children: [
                         (0, r.jsx)(d.oil, {
                             inputRef: M,
-                            value: V,
+                            value: H,
                             onBlur: er,
                             onFocus: ei,
                             onChange: (e) => F(e.substring(0, P.s0)),

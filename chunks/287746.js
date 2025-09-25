@@ -37,8 +37,8 @@ var r = n(951288),
     D = n(541716),
     U = n(752305),
     B = n(190210),
-    H = n(516887),
-    V = n(974251),
+    V = n(516887),
+    H = n(974251),
     F = n(893718),
     G = n(436660),
     z = n(338390),
@@ -91,10 +91,10 @@ var r = n(951288),
     eD = n(709054),
     eU = n(838440),
     eB = n(127654),
-    eH = n(979956),
-    eV = n(413251),
+    eV = n(979956),
+    eH = n(413251),
     eF = n(655687),
-    eG = n(165540),
+    eG = n(775685),
     ez = n(583027),
     eW = n(25007),
     eq = n(685006),
@@ -105,8 +105,8 @@ var r = n(951288),
     eQ = n(981631),
     e$ = n(959517),
     e0 = n(388032),
-    e1 = n(97009),
-    e2 = n(180376);
+    e1 = n(161655),
+    e2 = n(599610);
 function e3(e, t, n) {
     return (
         t in e
@@ -585,8 +585,8 @@ class te extends i.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eH.KZ)(n);
-                        if ((0, eH.Bf)(e, null == u ? void 0 : u.id))
+                        let e = (0, eV.KZ)(n);
+                        if ((0, eV.Bf)(e, null == u ? void 0 : u.id))
                             return (
                                 (0, eB.G)(d, e),
                                 {
@@ -660,7 +660,7 @@ class te extends i.PureComponent {
                 null != r && (G.Q.select(r, []), r.insertText(e), null == (n = this.editorRef) || n.focus());
             }),
             e3(this, "renderAttachButton", (e, t) =>
-                (0, r.jsx)(V.Z, {
+                (0, r.jsx)(H.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: eE.d.ChannelMessage,
@@ -670,7 +670,7 @@ class te extends i.PureComponent {
                 }),
             ),
             e3(this, "renderApplicationCommandIcon", (e, t, n) =>
-                (0, r.jsx)(H.Z, {
+                (0, r.jsx)(V.Z, {
                     className: n,
                     command: e,
                     section: t,
@@ -783,15 +783,15 @@ class tt extends i.PureComponent {
             }),
             U = (j && E) || N,
             B = U ? k : L,
-            H = a()({
+            V = a()({
                 [e2.barWithAppLauncherButton]: O,
                 [e2.barWithAppsDMsUI]: j,
             }),
-            { enabled: V } = ev.Z.getCurrentConfig({
+            { enabled: H } = ev.Z.getCurrentConfig({
                 guildId: null == I ? void 0 : I.guild_id,
                 location: "ChannelChat",
             }),
-            F = V && null != P && null != I && null != I.guild_id;
+            F = H && null != P && null != I && null != I.guild_id;
         return (0, r.jsx)(
             y.Z,
             {
@@ -847,7 +847,7 @@ class tt extends i.PureComponent {
                                                     forceCozy: v,
                                                     filterAfterTimestamp: m,
                                                     showingQuarantineBanner: f,
-                                                    jumpBarClassName: H,
+                                                    jumpBarClassName: V,
                                                     typingGradient: Z,
                                                     isChatInputBottomAligned: T,
                                                 }),
@@ -1086,12 +1086,12 @@ let tn = i.memo(function (e) {
         D = (0, d.e7)([eT.Z], () => eT.Z.getVoiceChannelId()),
         U = (0, d.e7)([ej.Z], () => ej.Z.getChannel(D)),
         B = (0, d.e7)([eA.default], () => (t.type !== eQ.d4z.DM ? null : eA.default.getUser(t.getRecipientId()))),
-        H = (0, d.e7)([ec.ZP, ex.default], () => ec.ZP.getUserCombo(ex.default.getId(), t.id)),
-        V = (0, b.iD)(t),
+        V = (0, d.e7)([ec.ZP, ex.default], () => ec.ZP.getUserCombo(ex.default.getId(), t.id)),
+        H = (0, b.iD)(t),
         F = (0, b.d7)(t),
-        G = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
+        G = H.length > 0 || t.rateLimitPerUser > 0 || null != V || null != F,
         q = (0, z.Z)("ChannelChat"),
-        { showLinkedLobbyApplicationLoadingIndicator: K } = (0, eV.Z)(t.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: K } = (0, eH.Z)(t.linkedLobby),
         X = (0, W.Z)("ChannelChat");
     return (0, r.jsx)(tt, {
         channel: t,

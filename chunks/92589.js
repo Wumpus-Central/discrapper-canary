@@ -2,11 +2,11 @@ n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var l = n(481060),
-    a = n(434650),
-    s = n(168020),
-    i = n(859788),
+    i = n(434650),
+    a = n(168020),
+    s = n(859788),
     o = n(388032),
-    c = n(449177);
+    c = n(80931);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,7 +34,7 @@ function u(e) {
 }
 let d = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
-        d = (0, a.O)(
+        d = (0, i.O)(
             (e) => {
                 null == n || n(e);
             },
@@ -50,7 +50,7 @@ let d = (e) => {
         children: [
             (0, r.jsx)("div", {
                 className: c.banner,
-                children: (0, r.jsx)(i.Z, {
+                children: (0, r.jsx)(s.Z, {
                     bannerStatic: t.bannerAsset.static,
                     bannerAnimated: t.bannerAsset.animated,
                 }),
@@ -61,7 +61,7 @@ let d = (e) => {
                     className: c.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(s.R, {
+                            ? (0, r.jsx)(a.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })

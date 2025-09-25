@@ -18,14 +18,14 @@ var r = n(951288),
     _ = n(111583),
     O = n(594174),
     j = n(626135),
-    x = n(585483),
-    v = n(233870),
+    v = n(585483),
+    x = n(233870),
     C = n(51144),
     I = n(998502),
     E = n(276264),
     S = n(981631),
     Z = n(388032),
-    T = n(32482);
+    T = n(854641);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,12 +58,12 @@ function w(e) {
         p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
         f = (0, a.e7)([O.default], () => O.default.getCurrentUser()),
         j = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
+        x = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
         T = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("92775")]).then(
                     n.bind(n, 354589),
                 );
                 return (n) => {
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            x.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                x.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            v.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                v.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -157,7 +157,7 @@ function w(e) {
                         onContextMenu: N,
                         selected: D,
                         isMobile: j,
-                        nick: v,
+                        nick: x,
                         nameplate: A,
                         onClick: (e) => {
                             e.shiftKey ? null == w || w() : L((e) => !e);
@@ -190,7 +190,7 @@ function D(e) {
         { listItems: c } = (0, a.e7)(
             [y.Z, O.default, b.Z],
             () => {
-                let e = (0, v.T)(t.recipients, O.default),
+                let e = (0, x.T)(t.recipients, O.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;

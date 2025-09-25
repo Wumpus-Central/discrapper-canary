@@ -15,15 +15,15 @@ var a = n(951288),
     f = n(352138),
     b = n(629235),
     g = n(981631),
-    v = n(398158),
+    v = n(131022),
     j = n(388032),
-    _ = n(70402),
+    _ = n(450192),
     y = n(736056);
 let C = function (e) {
     let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: N } = e,
-        [T, S] = r.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        O = r.useRef(T),
-        [P, I] = (0, c.US)([T], void 0, !0),
+        [S, T] = r.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        O = r.useRef(S),
+        [P, I] = (0, c.US)([S], void 0, !0),
         k = r.useMemo(() => (0, i.Z)(), []),
         w = r.useRef(!1);
     r.useEffect(() => {
@@ -34,7 +34,7 @@ let C = function (e) {
             null == E || E(), C();
         },
         () => {
-            S(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            T(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
     );
     return (

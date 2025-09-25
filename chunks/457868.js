@@ -18,8 +18,8 @@ var r = n(951288),
     _ = n(82295),
     O = n(91218),
     j = n(623624),
-    x = n(518738),
-    v = n(850020),
+    v = n(518738),
+    x = n(850020),
     C = n(965376),
     I = n(159299),
     E = n(670188),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(61722),
-    z = n(32482);
+    B = n(101265),
+    z = n(854641);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +85,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
             O = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getStatus() : P.Z.getStatus(a, t.guild_id))),
-            x = (0, p.e7)([P.Z], () => P.Z.isMobileOnline(a)),
+            v = (0, p.e7)([P.Z], () => P.Z.isMobileOnline(a)),
             C = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getActivities() : P.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, v.K)({
+            q = (0, x.K)({
                 user: b,
                 guildId: t.guild_id,
                 location: "ThreadMembers",
@@ -213,7 +213,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: x,
+                            isMobile: v,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -237,7 +237,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, x.p9)({
+            a = (0, v.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -369,7 +369,7 @@ function X(e) {
     )
         return (0, r.jsx)(J, { channel: t });
     let j = o().omit(g.containerProps, ["ref"]),
-        x = M.iJ(n);
+        v = M.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
@@ -410,7 +410,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: x,
+                                                guildOwnerId: v,
                                             },
                                             l[i],
                                         );

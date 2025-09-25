@@ -8,10 +8,10 @@ var o = n(481060),
     s = n(626135),
     c = n(981631),
     d = n(474936),
-    u = n(693450),
+    u = n(62222),
     p = n(388032),
-    f = n(679101);
-function m(e) {
+    m = n(365875);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function g(e) {
             text: p.intl.string(u.default.NOGFdn),
         }),
         j = (0, r.jsxs)("div", {
-            className: f.subscriberButtonContainer,
+            className: m.subscriberButtonContainer,
             children: [
                 x,
                 (0, r.jsx)(o.ua7, {
@@ -57,7 +57,7 @@ function g(e) {
                         var n, l;
                         return (0, r.jsx)(
                             o.zxk,
-                            ((n = m({}, e)),
+                            ((n = f({}, e)),
                             (l = l =
                                 {
                                     onClick: t,
@@ -86,17 +86,17 @@ function g(e) {
             ],
         }),
         _ = (0, r.jsxs)("div", {
-            className: f.upsell,
+            className: m.upsell,
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.descriptionContainer,
+                    className: m.descriptionContainer,
                     children: [
                         (0, r.jsx)(o.ua7, {
                             text: p.intl.string(p.t["5AFxuL"]),
                             children: (e) =>
                                 (0, r.jsx)(
                                     o.SrA,
-                                    m(
+                                    f(
                                         {
                                             size: "md",
                                             color: o.TVs.colors.ICON_PRIMARY,
@@ -108,7 +108,7 @@ function g(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "text-default",
-                            className: f.description,
+                            className: m.description,
                             children: p.intl.format(u.default.PWf0xc, {
                                 onClickNitro: () => {
                                     s.default.track(c.rMx.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, l.$)(g);
@@ -118,7 +118,7 @@ function g(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.buttonContainer,
+                    className: m.buttonContainer,
                     children: [
                         x,
                         (0, r.jsx)(a.Z, {
@@ -134,7 +134,7 @@ function g(e) {
         });
     return (0, r.jsx)(o.mzw, {
         "data-migration-pending": !0,
-        className: f.footer,
+        className: m.footer,
         children: b ? j : _,
     });
 }

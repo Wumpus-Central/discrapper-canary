@@ -14,7 +14,7 @@ var a = n(951288),
     x = n(711325),
     f = n(852630),
     b = n(731994),
-    g = n(30827);
+    g = n(761804);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,7 +64,7 @@ function _() {
         [s, d] = (0, r.useState)(!1),
         [h, f] = (0, r.useState)(null),
         _ = (0, u.ZP)((e) => e.toolsCache),
-        { setToolsCache: T, removeToolsCache: S } = (0, u.L3)(),
+        { setToolsCache: S, removeToolsCache: T } = (0, u.L3)(),
         { setImgCache: O } = (0, u.W_)(),
         P = (0, r.useCallback)(
             (e) => {
@@ -102,9 +102,9 @@ function _() {
         }, []),
         k = (0, r.useCallback)(
             (e) => {
-                S(e);
+                T(e);
             },
-            [S],
+            [T],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -140,7 +140,7 @@ function _() {
                                 (0, a.jsx)(x.Z, {
                                     selected: null == h || null == (e = h.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        (null == h ? void 0 : h.src) != null && T(h.src, h.src, e), I(e);
+                                        (null == h ? void 0 : h.src) != null && S(h.src, h.src, e), I(e);
                                     },
                                 }),
                         ],
@@ -166,7 +166,7 @@ function _() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         a = await n.arrayBuffer();
-                                    O(t, t, (0, p.xh)(a)), T(t, t, m.jD);
+                                    O(t, t, (0, p.xh)(a)), S(t, t, m.jD);
                                 },
                             }),
                             (0, a.jsx)("div", {
@@ -253,12 +253,12 @@ function y(e) {
                         variant: "text-sm/semibold",
                         children: "Memberlist",
                     }),
-                    (0, a.jsx)(T, { nameplate: t }),
+                    (0, a.jsx)(S, { nameplate: t }),
                     (0, a.jsx)(l.Text, {
                         variant: "text-sm/semibold",
                         children: "DMs",
                     }),
-                    (0, a.jsx)(S, { nameplate: t }),
+                    (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)(l.Text, {
                         variant: "text-sm/semibold",
                         children: "RTC",
@@ -343,7 +343,7 @@ function N(e) {
         ],
     });
 }
-function T(e) {
+function S(e) {
     let { nameplate: t } = e,
         n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (0, a.jsx)("div", {
@@ -385,7 +385,7 @@ function T(e) {
         }),
     });
 }
-function S(e) {
+function T(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: g.preview,

@@ -18,8 +18,8 @@ var r = n(951288),
     C = n(796638),
     _ = n(981631),
     v = n(354459),
-    x = n(394024),
-    O = n(597843);
+    x = n(450906),
+    O = n(74246);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,9 +83,9 @@ function I(e) {
             width: D,
             height: U,
             layout: B,
-            idle: H,
+            idle: V,
         } = e,
-        V = null != A,
+        H = null != A,
         F = h.Z.getVideoComponent(),
         G = p.default.getId(),
         [z, W] = i.useState(null),
@@ -212,7 +212,7 @@ function I(e) {
                                                           onContextMenu: I,
                                                           onVideoResize: ev,
                                                           inCall: w,
-                                                          inPopout: V,
+                                                          inPopout: H,
                                                       }),
                                                   },
                                                   i,
@@ -223,7 +223,7 @@ function I(e) {
                             }),
                             el
                                 ? (0, r.jsx)(o.animated.div, {
-                                      className: a()(O.actionRow, { [O.idle]: H }),
+                                      className: a()(O.actionRow, { [O.idle]: V }),
                                       style: { bottom: eC.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: M.id,
