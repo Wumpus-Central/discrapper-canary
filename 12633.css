@@ -58066,6 +58066,7 @@ h3.improved__1689b:after {
     background: linear-gradient(transparent 50%, var(--background-base-lower) 100%);
     bottom: 0;
     left: 0;
+    pointer-events: none;
     position: absolute;
     right: 0;
     top: 0
