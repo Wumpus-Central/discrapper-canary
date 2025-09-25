@@ -238,7 +238,6 @@ let b = [
                     g(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
                     (t = !0),
                 o.K.get("hidePremiumReactivateNotice") && g(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
-                m(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0),
                 t
             );
         },

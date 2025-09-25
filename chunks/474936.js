@@ -55,7 +55,7 @@ n.d(t, {
     Z1: () => v,
     Zh: () => u,
     _k: () => ej,
-    a$: () => e6,
+    a$: () => e5,
     a1: () => eW,
     a7: () => $,
     b6: () => d,
@@ -95,7 +95,7 @@ n.d(t, {
     tL: () => H,
     u6: () => eE,
     uM: () => E,
-    vK: () => e5,
+    vK: () => e6,
     vL: () => eA,
     w1: () => ev,
     wh: () => q,
@@ -498,7 +498,6 @@ var eT = (function (e) {
             (e.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = "custom profiles settings banner upsell"),
             (e.STICKER_PICKER_UPSELL = "sticker_picker_upsell"),
             (e.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = "animated avatar preview gif modal"),
-            (e.INVITE_SPLASH_UPSELL = "premium_invite_splash_upsell"),
             (e.ANIMATED_USER_AVATAR_MODAL = "animated user avatar upsell modal"),
             (e.UPLOAD_ERROR_UPSELL = "upload error upsell"),
             (e.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE = "premium guild member profile upsell inline"),
@@ -787,7 +786,7 @@ let e8 = [
         "premium_tenure_60_month_v2",
         "premium_tenure_72_month_v2",
     ],
-    e5 = {
+    e6 = {
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
             nameUnformatted: o.t.LR1C0d,
@@ -845,7 +844,7 @@ let e8 = [
             glowColor: "#078292",
         },
     };
-var e6 = (function (e) {
+var e5 = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.FP_ONLY = 1)] = "FP_ONLY"),
