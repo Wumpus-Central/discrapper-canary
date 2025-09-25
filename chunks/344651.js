@@ -1557,6 +1557,12 @@ W(
             quest_enrollment_blocked_until: e.quest_enrollment_blocked_until,
         });
     }),
+    Y(["QUEST_PREVIEW_UPDATE"], (e) => {
+        q({
+            type: "QUEST_PREVIEW_UPDATE",
+            quest_id: e.quest_id,
+        });
+    }),
     Y(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
         q({
             type: t,
