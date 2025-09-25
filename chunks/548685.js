@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     s = n(442837),
     o = n(481060),
     c = n(782568),
@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(38900),
     E = n(709999),
     S = n(653126),
-    x = n(328626),
-    v = n(849275),
+    v = n(328626),
+    x = n(849275),
     O = n(619899),
     T = n(642909),
     y = n(981631),
@@ -30,30 +30,30 @@ let I = (e) => {
     var t;
     let {
             isLoading: n,
-            title: a,
+            title: i,
             sortedSkuIds: I,
             numVisibleItems: P,
-            hasSorting: A,
-            prioritizeUserDiscounts: B,
-            tab: N,
+            hasSorting: N,
+            prioritizeUserDiscounts: A,
+            tab: B,
             buttonContainerClassName: R,
         } = e,
         Z = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         w = h.ZP.canUseCollectibles(Z),
         F = (0, T.G)("FeedBlock"),
         {
-            sortType: H,
-            setSortType: M,
+            sortType: M,
+            setSortType: H,
             sortedItems: D,
             sortOptions: W,
             shuffleProducts: U,
             showRecommendationOption: V,
-        } = (0, v.Z)(I, w, B),
+        } = (0, x.Z)(I, w, A),
         z = (0, O.St)(D),
         G = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         q = (0, s.e7)([g.Z], () => g.Z.isFocused()),
         K = !G && q,
-        { animationPhase: Y, startAnimation: X } = (0, x.y)(),
+        { animationPhase: Y, startAnimation: X } = (0, v.y)(),
         Q = (0, C.sp)(),
         J = null != (t = null == Q ? void 0 : Q.sessionId) ? t : "",
         $ = l.useRef(null),
@@ -61,20 +61,20 @@ let I = (e) => {
             (e) => {
                 X({
                     isShuffling: !1,
-                    onOutroComplete: () => M(e),
+                    onOutroComplete: () => H(e),
                 }),
                     p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: J,
                         sort_type: e,
                     });
             },
-            [X, M, J],
+            [X, H, J],
         ),
         et = m.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
     return null == Z
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(k.popularPicksSection, k.centeredSection),
+              className: a()(k.popularPicksSection, k.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: k.blockHeader,
@@ -84,7 +84,7 @@ let I = (e) => {
                               children: [
                                   (0, r.jsx)(o.X6q, {
                                       variant: "heading-lg/semibold",
-                                      children: a,
+                                      children: i,
                                   }),
                                   V &&
                                       (0, r.jsx)(o.ua7, {
@@ -152,9 +152,9 @@ let I = (e) => {
                                       }),
                               ],
                           }),
-                          A
+                          N
                               ? (0, r.jsxs)("div", {
-                                    className: i()(k.headerRight, { [j.shopTakeOver]: F }),
+                                    className: a()(k.headerRight, { [j.shopTakeOver]: F }),
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
@@ -166,8 +166,8 @@ let I = (e) => {
                                                 options: W,
                                                 select: ee,
                                                 className: k.sortSelect,
-                                                popoutClassName: i()({ [j.shopTakeOver]: F }),
-                                                isSelected: (e) => e === H,
+                                                popoutClassName: a()({ [j.shopTakeOver]: F }),
+                                                isSelected: (e) => e === M,
                                                 serialize: (e) => e,
                                             }),
                                         }),
@@ -187,7 +187,7 @@ let I = (e) => {
                                                             page_session_id: J,
                                                         });
                                                 },
-                                                disabled: Y !== x.g.MOUNTED && Y !== x.g.FINISHED,
+                                                disabled: Y !== v.g.MOUNTED && Y !== v.g.FINISHED,
                                             }),
                                         }),
                                     ],
@@ -206,18 +206,18 @@ let I = (e) => {
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (K)
-                                    if (Y === x.g.SHUFFLE_OUT)
+                                    if (Y === v.g.SHUFFLE_OUT)
                                         return (0, r.jsx)(
                                             "div",
                                             { className: k.shuffleOutro },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        Y === x.g.SORT_OUT
+                                        Y === v.g.SORT_OUT
                                             ? (n = k.sortChangedOutro)
-                                            : Y === x.g.SHUFFLE_IN
+                                            : Y === v.g.SHUFFLE_IN
                                               ? (n = k.shuffleIntro)
-                                              : Y === x.g.SORT_IN && (n = k.sortChangedIntro);
+                                              : Y === v.g.SORT_IN && (n = k.sortChangedIntro);
                                 return (0, r.jsx)(
                                     C.k0,
                                     {
@@ -227,15 +227,12 @@ let I = (e) => {
                                             categoryPosition: 2,
                                         },
                                         children: et
-                                            ? (0, r.jsx)(S.Z, {
-                                                  skuId: null == e ? void 0 : e.skuId,
-                                                  config: { tab: N },
-                                              })
+                                            ? (0, r.jsx)(S.Z, { skuId: null == e ? void 0 : e.skuId })
                                             : (0, r.jsx)(E.Z, {
                                                   product: e,
                                                   category: l,
                                                   user: Z,
-                                                  tab: N,
+                                                  tab: B,
                                                   className: n,
                                               }),
                                     },

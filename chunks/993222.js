@@ -1,50 +1,53 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var l = n(180650),
-    a = n(399606),
-    i = n(481060),
+    i = n(399606),
+    a = n(481060),
     s = n(594174),
     o = n(74538),
     c = n(597688),
-    u = n(884697),
-    d = n(724994),
-    g = n(445794),
-    p = n(956472),
-    f = n(388032),
-    h = n(944525);
-let C = (e) => {
-    let { product: t, config: n } = e,
-        { isPurchased: C, isPartiallyOwnedBundle: _ } = (0, d.L)(t),
-        m = (0, a.e7)([c.Z], () => c.Z.getCategoryForProduct(t.skuId)),
-        b = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
-        E = o.ZP.canUseCollectibles(b),
-        S = (0, g.Iw)(t),
-        { isOrbExclusive: x } = (0, p.Ip)({
+    u = n(994587),
+    d = n(884697),
+    g = n(724994),
+    p = n(445794),
+    f = n(956472),
+    h = n(388032),
+    C = n(944525);
+let _ = (e) => {
+    let { product: t } = e,
+        n = (0, u.Nd)(),
+        _ = null == n ? void 0 : n.tab,
+        { isPurchased: m, isPartiallyOwnedBundle: b } = (0, g.L)(t),
+        E = (0, i.e7)([c.Z], () => c.Z.getCategoryForProduct(t.skuId)),
+        S = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        v = o.ZP.canUseCollectibles(S),
+        x = (0, p.Iw)(t),
+        { isOrbExclusive: O } = (0, f.Ip)({
             product: t,
-            isPremiumUser: E,
-            tab: n.tab,
-            hasDiscountOffer: null != S,
+            isPremiumUser: v,
+            tab: _,
+            hasDiscountOffer: null != x,
         }),
-        v = (0, u.Yq)(t.skuId),
-        O = (null == m ? void 0 : m.skuId) === l.T.ANIME_V3 && (0, u.WW)(t.skuId);
-    return _ || C || !v
-        ? x
-            ? (0, r.jsx)(i.IGR, {
-                  text: f.intl.string(f.t["0TmQRE"]),
+        T = (0, d.Yq)(t.skuId),
+        y = (null == E ? void 0 : E.skuId) === l.T.ANIME_V3 && (0, d.WW)(t.skuId);
+    return b || m || !T
+        ? O
+            ? (0, r.jsx)(a.IGR, {
+                  text: h.intl.string(h.t["0TmQRE"]),
                   disableColor: !0,
-                  className: h.productCardBadge,
+                  className: C.productCardBadge,
               })
-            : O
-              ? (0, r.jsx)(i.IGR, {
-                    text: f.intl.string(f.t.S6kE9v),
+            : y
+              ? (0, r.jsx)(a.IGR, {
+                    text: h.intl.string(h.t.S6kE9v),
                     disableColor: !0,
-                    className: h.productCardBadge,
+                    className: C.productCardBadge,
                 })
               : null
-        : (0, r.jsx)(i.IGR, {
-              text: f.intl.string(f.t.y2b7CA),
+        : (0, r.jsx)(a.IGR, {
+              text: h.intl.string(h.t.y2b7CA),
               disableColor: !0,
-              className: h.productCardBadge,
+              className: C.productCardBadge,
           });
 };

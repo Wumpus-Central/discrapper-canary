@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(979554),
-    i = n(399606),
+    i = n(979554),
+    a = n(399606),
     s = n(780384),
     o = n(481060),
     c = n(410030),
@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(709999),
     E = n(653126),
     S = n(81136),
-    x = n(215023),
-    v = n(981631),
+    v = n(215023),
+    x = n(981631),
     O = n(388032),
     T = n(887353),
     y = n(558513),
@@ -28,29 +28,29 @@ var r = n(951288),
     k = n(665195),
     I = n(42742),
     P = n(283727),
-    A = n(266058),
-    B = n(719138);
-function N(e) {
+    N = n(266058),
+    A = n(719138);
+function B(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: N, scrollerRef: R, tab: Z } = e,
+    let { isFetchingCategories: n, isFullScreen: B, scrollerRef: R, tab: Z } = e,
         w = (0, g.sp)(),
         F = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: H, includeUnpublished: M } = (0, S.Z)(),
-        D = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        { noCache: M, includeUnpublished: H } = (0, S.Z)(),
+        D = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [U, V] = l.useState(1),
         z = (0, c.Fg)(),
         G = (0, s.ap)(z),
         [q, K, Y] = l.useMemo(() => {
             switch (Z) {
-                case x.AW.AVATAR_DECORATIONS:
-                    return [O.intl.string(O.t.dRZYND), G ? k.Z : j.Z, a.Z.AVATAR_DECORATION];
-                case x.AW.PROFILE_EFFECTS:
-                    return [O.intl.string(O.t["1cNjt7"]), G ? B.Z : A.Z, a.Z.PROFILE_EFFECT];
-                case x.AW.NAMEPLATES:
-                    return [O.intl.string(O.t.V68Fq6), G ? P.Z : I.Z, a.Z.NAMEPLATE];
-                case x.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFppq), G ? L.Z : y.Z, a.Z.BUNDLE];
+                case v.AW.AVATAR_DECORATIONS:
+                    return [O.intl.string(O.t.dRZYND), G ? k.Z : j.Z, i.Z.AVATAR_DECORATION];
+                case v.AW.PROFILE_EFFECTS:
+                    return [O.intl.string(O.t["1cNjt7"]), G ? A.Z : N.Z, i.Z.PROFILE_EFFECT];
+                case v.AW.NAMEPLATES:
+                    return [O.intl.string(O.t.V68Fq6), G ? P.Z : I.Z, i.Z.NAMEPLATE];
+                case v.AW.BUNDLES:
+                    return [O.intl.string(O.t.FYFppq), G ? L.Z : y.Z, i.Z.BUNDLE];
             }
         }, [Z, G]),
         X = (0, h.a)(),
@@ -61,7 +61,7 @@ function N(e) {
                         var t;
                         return (
                             e.type === Y ||
-                            (e.type === a.Z.VARIANTS_GROUP &&
+                            (e.type === i.Z.VARIANTS_GROUP &&
                                 (null == (t = e.variants) ? void 0 : t.some((e) => e.type === Y)) === !0)
                         );
                     }),
@@ -74,9 +74,9 @@ function N(e) {
             sessionId: F,
             checkpoint: _.a.SHOP_MOUNTED,
             tab: Z,
-            isFullScreen: N,
-            unpublishedCategoriesShown: M,
-            cacheDisabled: H,
+            isFullScreen: B,
+            unpublishedCategoriesShown: H,
+            cacheDisabled: M,
         });
     }, []),
         l.useEffect(() => {
@@ -85,11 +85,11 @@ function N(e) {
                     sessionId: F,
                     checkpoint: _.a.SHOP_RENDERED,
                     tab: Z,
-                    isFullScreen: N,
-                    unpublishedCategoriesShown: M,
-                    cacheDisabled: H,
+                    isFullScreen: B,
+                    unpublishedCategoriesShown: H,
+                    cacheDisabled: M,
                 });
-        }, [F, N, M, H, n, Z]);
+        }, [F, B, H, M, n, Z]);
     let $ = f.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
     return n || null == D
         ? (0, r.jsx)(m.Z, {})
@@ -114,14 +114,7 @@ function N(e) {
                                     {
                                         newValue: { tilePosition: t },
                                         children: $
-                                            ? (0, r.jsx)(
-                                                  E.Z,
-                                                  {
-                                                      skuId: e.skuId,
-                                                      config: { tab: Z },
-                                                  },
-                                                  e.skuId,
-                                              )
+                                            ? (0, r.jsx)(E.Z, { skuId: e.skuId }, e.skuId)
                                             : (0, r.jsx)(
                                                   b.Z,
                                                   {
@@ -147,7 +140,7 @@ function N(e) {
                                   pageSize: 40,
                                   onPageChange: (e) => {
                                       var t;
-                                      d.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      d.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: null == w ? void 0 : w.sessionId,
                                           page_section: null == w ? void 0 : w.pageSection,
                                           page_category: null == w ? void 0 : w.pageCategory,

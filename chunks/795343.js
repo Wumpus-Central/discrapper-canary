@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685), n(35282);
 var r = n(951288),
     l = n(647438),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     s = n(399606),
     o = n(481060),
     c = n(594174),
@@ -18,48 +18,48 @@ var r = n(951288),
     b = n(709999),
     E = n(653126),
     S = n(81136),
-    x = n(440617),
-    v = n(981631),
+    v = n(440617),
+    x = n(981631),
     O = n(891131);
 function T(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: a, scrollerRef: T, tab: y } = e,
+    let { isFetchingCategories: n, isFullScreen: i, scrollerRef: T, tab: y } = e,
         L = (0, d.sp)(),
         j = null != (t = null == L ? void 0 : L.sessionId) ? t : "",
         { noCache: k, includeUnpublished: I } = (0, S.Z)(),
         P = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        { skus: A, currentPage: B, totalCount: N, isFetchingResults: R } = (0, C.a)(),
-        Z = (0, s.Wu)([g.Z], () => g.Z.getProductsBySkus(A)),
+        { skus: N, currentPage: A, totalCount: B, isFetchingResults: R } = (0, C.a)(),
+        Z = (0, s.Wu)([g.Z], () => g.Z.getProductsBySkus(N)),
         w = l.useCallback(() => {
             var e;
             null == T || null == (e = T.current) || e.scrollToTop({ animate: !0 });
         }, [T]),
-        F = null == A ? void 0 : A.join("");
+        F = null == N ? void 0 : N.join("");
     l.useEffect(() => {
         w();
     }, [F, w]);
-    let H = (0, f.a)(),
-        M = l.useMemo(() => H(Z), [H, Z]);
+    let M = (0, f.a)(),
+        H = l.useMemo(() => M(Z), [M, Z]);
     l.useEffect(() => {
         n ||
             (0, _.n)({
                 sessionId: j,
                 checkpoint: _.a.SHOP_RENDERED,
                 tab: y,
-                isFullScreen: a,
+                isFullScreen: i,
                 unpublishedCategoriesShown: I,
                 cacheDisabled: k,
             });
-    }, [j, a, I, k, n, y]);
+    }, [j, i, I, k, n, y]);
     let D = l.useRef(null),
         { setQueryPageSize: W, setQueryPageOffset: U, queryPageSize: V } = (0, h.S)(),
         [z, G] = l.useState(!1),
         q = n || R || null == P;
     l.useEffect(() => {
         if (q) return void G(!1);
-        M.length > 0 && G(!0);
-    }, [q, M.length]);
-    let K = V > 0 && !q && 0 === M.length;
+        H.length > 0 && G(!0);
+    }, [q, H.length]);
+    let K = V > 0 && !q && 0 === H.length;
     l.useEffect(() => {
         let e = new ResizeObserver(() => {
             null != D.current && W(Math.floor(5 * getComputedStyle(D.current).gridTemplateColumns.split(/\s+/).length));
@@ -68,7 +68,7 @@ function T(e) {
     }, [W]);
     let Y = l.useCallback(
             (e) => {
-                u.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                u.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
                     page_section: null == L ? void 0 : L.pageSection,
                     page_category: null == L ? void 0 : L.pageCategory,
@@ -85,16 +85,16 @@ function T(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: i()({ [O.productsEmpty]: K }),
+                className: a()({ [O.productsEmpty]: K }),
                 children: [
-                    K && (0, r.jsx)(x.Z, {}),
+                    K && (0, r.jsx)(v.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: i()(O.products, { [O.loadIn]: z }),
+                        className: a()(O.products, { [O.loadIn]: z }),
                         ref: D,
                         children: [
                             q && [...Array(V)].map((e, t) => (0, r.jsx)(m.K, {}, t)),
                             !q &&
-                                M.map((e, t) => {
+                                H.map((e, t) => {
                                     let n = g.Z.getCategory(e.categorySkuId);
                                     return null == n
                                         ? null
@@ -103,14 +103,7 @@ function T(e) {
                                               {
                                                   newValue: { tilePosition: t },
                                                   children: X
-                                                      ? (0, r.jsx)(
-                                                            E.Z,
-                                                            {
-                                                                skuId: e.skuId,
-                                                                config: { tab: y },
-                                                            },
-                                                            e.skuId,
-                                                        )
+                                                      ? (0, r.jsx)(E.Z, { skuId: e.skuId }, e.skuId)
                                                       : (0, r.jsx)(
                                                             b.Z,
                                                             {
@@ -129,13 +122,13 @@ function T(e) {
                     }),
                 ],
             }),
-            N > V &&
+            B > V &&
                 (0, r.jsx)("div", {
                     className: O.paginationContainer,
                     children: (0, r.jsx)("div", {
                         children: (0, r.jsx)(o.DsT, {
-                            currentPage: B,
-                            totalCount: N,
+                            currentPage: A,
+                            totalCount: B,
                             pageSize: V,
                             onPageChange: Y,
                             disablePaginationGap: !0,

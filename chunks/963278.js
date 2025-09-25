@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
-    i = n(442837),
+    i = n.n(l),
+    a = n(442837),
     s = n(481060),
     o = n(594174),
     c = n(381585),
@@ -15,12 +15,12 @@ var l = n(120356),
     h = n(310582);
 let C = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        C = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        C = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
         _ = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
     return null == C
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(h.shelfBlockContainer, h.centeredSection),
+              className: i()(h.shelfBlockContainer, h.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: h.blockHeader,
@@ -40,9 +40,9 @@ let C = (e) => {
                       className: h.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
-                              let a = u.Z.getCategoryForProduct(e),
-                                  i = u.Z.getProduct(e);
-                              return null == a || null == i
+                              let i = u.Z.getCategoryForProduct(e),
+                                  a = u.Z.getProduct(e);
+                              return null == i || null == a
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -53,19 +53,12 @@ let C = (e) => {
                                                 categoryPosition: 2,
                                             },
                                             children: _
-                                                ? (0, r.jsx)(
-                                                      p.Z,
-                                                      {
-                                                          skuId: e,
-                                                          config: { tab: l },
-                                                      },
-                                                      e,
-                                                  )
+                                                ? (0, r.jsx)(p.Z, { skuId: e }, e)
                                                 : (0, r.jsx)(
                                                       g.Z,
                                                       {
-                                                          product: i,
-                                                          category: a,
+                                                          product: a,
+                                                          category: i,
                                                           user: C,
                                                           tab: l,
                                                       },
