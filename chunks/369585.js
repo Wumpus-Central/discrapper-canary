@@ -1,19 +1,13 @@
-n.d(t, {
-    B: () => b,
-    G: () => E,
-}),
-    n(856094);
+n.d(t, { G: () => f }), n(856094);
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    a = n.n(i),
-    o = n(793030),
-    s = n(159691),
-    l = n(755721),
-    c = n(490340),
-    u = n(388032),
-    d = n(525751);
-function f(e, t, n) {
+    a = n.n(i);
+n(793030);
+var o = n(159691);
+n(755721), n(614177), n(388032);
+var s = n(456208);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +20,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +31,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,30 +48,7 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = g(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function g(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,22 +57,22 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
+function f(e) {
     let { leading: t, actions: n = [], actionsFullWidth: i = !1 } = e;
     if (null == t && n.length < 1) return null;
-    let o = ["primary", "critical-primary", "expressive"],
-        l = n.findLastIndex((e) => null != e.variant && o.includes(e.variant));
+    let l = ["primary", "critical-primary", "expressive"],
+        u = n.findLastIndex((e) => null != e.variant && l.includes(e.variant));
     return (0, r.jsxs)("footer", {
-        className: a()(d.actionBar, d.section),
+        className: a()(s.actionBar, s.section),
         children: [
             null != t &&
                 (0, r.jsx)("div", {
-                    className: d.actionBarLeading,
+                    className: s.actionBarLeading,
                     children: t,
                 }),
             (0, r.jsx)("div", {
-                className: a()(d.actionBarTrailing, { [d.actionBarTrailingFullWidth]: i }),
-                children: (0, r.jsx)(s.hE2, {
+                className: a()(s.actionBarTrailing, { [s.actionBarTrailingFullWidth]: i }),
+                children: (0, r.jsx)(o.hE2, {
                     fullWidth: i,
                     children:
                         null == n
@@ -109,8 +80,8 @@ function E(e) {
                             : n.map((e, t) => {
                                   var n;
                                   return (0, r.jsx)(
-                                      s.zxk,
-                                      _({ autoFocus: null != (n = e.autoFocus) ? n : l === t }, e),
+                                      o.zxk,
+                                      c({ autoFocus: null != (n = e.autoFocus) ? n : u === t }, e),
                                       t,
                                   );
                               }),
@@ -118,17 +89,4 @@ function E(e) {
             }),
         ],
     });
-}
-function b(e) {
-    var { text: t } = e,
-        n = m(e, ["text"]);
-    return (0, r.jsx)(
-        l.$q,
-        h(_({}, n), {
-            children: (0, r.jsx)(o.xvT, {
-                variant: "text-sm/normal",
-                children: null != t ? t : u.intl.string(c.default.m3Vfcn),
-            }),
-        }),
-    );
 }
