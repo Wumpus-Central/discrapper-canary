@@ -1,62 +1,61 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(951288),
-    i = n(304789),
-    a = n(481060),
-    o = n(266198),
-    s = n(740594),
-    l = n(474936),
-    c = n(388032),
-    u = n(871797),
-    d = n(154545);
-let f = (e) => {
+    i = n(481060),
+    a = n(266198),
+    o = n(740594),
+    s = n(474936),
+    l = n(388032),
+    c = n(871797),
+    u = n(154545);
+let d = (e) => {
     let { cohort: t } = e,
-        n = t === o.TO.COHORT_1 ? c.intl.string(c.t.GVrMQE) : c.intl.string(c.t.JKWTSk);
-    return (0, r.jsxs)(i.$, {
-        className: u.container,
+        n = t === a.TO.COHORT_1 ? l.intl.string(l.t.GVrMQE) : l.intl.string(l.t.JKWTSk);
+    return (0, r.jsxs)(i.$1m, {
+        className: c.container,
         color: "nitro-pink",
         children: [
             (0, r.jsxs)("div", {
-                className: u.topSection,
+                className: c.topSection,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: "display-md",
                         color: "header-primary",
-                        className: u.wordmark,
-                        children: c.intl.string(c.t.Ipxkoq),
+                        className: c.wordmark,
+                        children: l.intl.string(l.t.Ipxkoq),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: c.intl.format(c.t["4mljX1"], { days: (0, o.h3)() }),
+                        children: l.intl.format(l.t["4mljX1"], { days: (0, a.h3)() }),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: u.contentContainer,
+                className: c.contentContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: u.content,
+                        className: c.content,
                         children: [
-                            (0, r.jsx)(a.X6q, {
+                            (0, r.jsx)(i.X6q, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: n,
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 color: "text-primary",
-                                children: c.intl.format(c.t.hZt7UV, { helpCenterLink: o.lB }),
+                                children: l.intl.format(l.t.hZt7UV, { helpCenterLink: a.lB }),
                             }),
-                            (0, r.jsx)(s.Z, {
-                                subscriptionTier: l.Si.TIER_2,
-                                buttonTextOverride: c.intl.string(c.t.J61px8),
+                            (0, r.jsx)(o.Z, {
+                                subscriptionTier: s.Si.TIER_2,
+                                buttonTextOverride: l.intl.string(l.t.J61px8),
                             }),
                         ],
                     }),
                     (0, r.jsx)("img", {
-                        src: d.Z,
+                        src: u.Z,
                         alt: "",
-                        className: u.image,
+                        className: c.image,
                     }),
                 ],
             }),

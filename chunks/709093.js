@@ -1,104 +1,103 @@
-n.d(t, { Z: () => C }), n(361932), n(187205);
+n.d(t, { Z: () => A }), n(361932), n(187205);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(304789),
-    s = n(481060),
-    l = n(410030),
-    c = n(563132),
-    u = n(409813),
-    d = n(614223),
-    f = n(493572),
-    _ = n(756896),
-    p = n(589072),
-    h = n(104494),
-    m = n(573702),
-    g = n(474936),
-    E = n(108626),
-    b = n(236078),
-    y = n(278345),
-    O = n(895601),
-    v = n(381126),
-    I = n(997892),
-    T = n(234286);
-function S(e) {
+    o = n(481060),
+    s = n(410030),
+    l = n(563132),
+    c = n(409813),
+    u = n(614223),
+    d = n(493572),
+    f = n(756896),
+    _ = n(589072),
+    p = n(104494),
+    h = n(573702),
+    m = n(474936),
+    g = n(491881),
+    E = n(236078),
+    b = n(278345),
+    y = n(895601),
+    O = n(381126),
+    v = n(997892),
+    I = n(234286);
+function T(e) {
     let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: a } = e;
     if (t)
         return (0, r.jsx)("div", {
-            className: E.oneStepCheckoutTextWrapper,
-            children: (0, r.jsx)(s.X6q, {
+            className: g.oneStepCheckoutTextWrapper,
+            children: (0, r.jsx)(o.X6q, {
                 variant: "heading-md/bold",
                 children: n,
             }),
         });
-    let o = a.length > 1;
+    let s = a.length > 1;
     return (0, r.jsxs)("div", {
-        className: E.headerTextWrapper,
+        className: g.headerTextWrapper,
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-lg/semibold",
                 children: n,
             }),
-            o &&
-                (0, r.jsx)(f.Z, {
+            s &&
+                (0, r.jsx)(d.Z, {
                     activeId: i,
                     breadcrumbs: a,
                 }),
         ],
     });
 }
-function A(e) {
+function S(e) {
     let { isTier2: t } = e,
-        n = t ? O : b,
-        i = t ? v : y;
+        n = t ? y : E,
+        i = t ? O : b;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("img", {
                 src: n,
                 alt: "",
-                className: E.bigCloud,
+                className: g.bigCloud,
             }),
             (0, r.jsx)("img", {
                 src: i,
                 alt: "",
-                className: E.mediumCloud,
+                className: g.mediumCloud,
             }),
             (0, r.jsx)("img", {
                 src: i,
                 alt: "",
-                className: E.smallCloud,
+                className: g.smallCloud,
             }),
         ],
     });
 }
-let C = function (e) {
+let A = function (e) {
     var t, n, i;
     let {
-            hideCloseButton: f = !1,
-            hideCloseOnFullScreen: b,
-            onClose: y,
-            upgradeToPremiumType: O,
-            isEligibleForTrial: v = !1,
-            showTrialBadge: C = !1,
-            showDiscountBadge: N = !1,
+            hideCloseButton: d = !1,
+            hideCloseOnFullScreen: E,
+            onClose: b,
+            upgradeToPremiumType: y,
+            isEligibleForTrial: O = !1,
+            showTrialBadge: A = !1,
+            showDiscountBadge: C = !1,
         } = e,
-        R = (0, s.apv)((0, l.ZP)()),
-        P = O === g.p9.TIER_2,
-        w = (0, d.Fv)(v),
-        D = (0, h.Ng)(),
-        x = null == D || null == (t = D.discount) ? void 0 : t.amount,
-        L = P ? T : I,
-        j = P ? p.Z : _.Z,
+        N = (0, o.apv)((0, s.ZP)()),
+        R = y === m.p9.TIER_2,
+        P = (0, u.Fv)(O),
+        w = (0, p.Ng)(),
+        D = null == w || null == (t = w.discount) ? void 0 : t.amount,
+        x = R ? I : v,
+        L = R ? _.Z : f.Z,
         {
-            step: M,
-            breadcrumbs: k,
-            startedPaymentFlowWithPaymentSourcesRef: U,
-            isDisplayingWowMomentConfirmation: G,
-        } = (0, c.JL)();
-    if (null == k || 0 === k.length) return null;
-    let B = k.flatMap((e) => {
-        let t = e.useBreadcrumbLabel(v),
+            step: j,
+            breadcrumbs: M,
+            startedPaymentFlowWithPaymentSourcesRef: k,
+            isDisplayingWowMomentConfirmation: U,
+        } = (0, l.JL)();
+    if (null == M || 0 === M.length) return null;
+    let G = M.flatMap((e) => {
+        let t = e.useBreadcrumbLabel(O),
             n = e.sectionHeaderText;
         return null != t
             ? {
@@ -108,70 +107,70 @@ let C = function (e) {
               }
             : [];
     });
-    if (0 === B.length) return null;
-    let Z = (B = B.filter((e) => {
-            let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
-                n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
-            return !v || (v && (t || n));
-        })).find((e) => e.id === M),
-        V =
-            null != (i = null == Z || null == (n = Z.sectionHeaderText) ? void 0 : n.call(Z))
+    if (0 === G.length) return null;
+    let B = (G = G.filter((e) => {
+            let t = e.id !== c.h8.ADD_PAYMENT_STEPS,
+                n = e.id === c.h8.ADD_PAYMENT_STEPS && !k.current;
+            return !O || (O && (t || n));
+        })).find((e) => e.id === j),
+        Z =
+            null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B))
                 ? i
-                : null == Z
+                : null == B
                   ? void 0
-                  : Z.label,
-        F = null != V && null != M,
-        H = w && F && M === u.h8.REVIEW,
-        Y = P ? "nitro-pink" : "nitro-green";
-    return G
+                  : B.label,
+        F = null != Z && null != j,
+        V = P && F && j === c.h8.REVIEW,
+        H = R ? "nitro-pink" : "nitro-green";
+    return U
         ? (0, r.jsx)("div", {
-              className: E.container,
-              children: (0, r.jsx)(o.$, {
-                  color: Y,
-                  className: E.headerContainer,
+              className: g.container,
+              children: (0, r.jsx)(o.$1m, {
+                  color: H,
+                  className: g.headerContainer,
               }),
           })
         : (0, r.jsxs)("div", {
-              className: E.container,
+              className: g.container,
               children: [
-                  (0, r.jsxs)(o.$, {
-                      color: Y,
-                      className: a()(E.headerContainer, { [E.containerBottomPadding]: !F }),
+                  (0, r.jsxs)(o.$1m, {
+                      color: H,
+                      className: a()(g.headerContainer, { [g.containerBottomPadding]: !F }),
                       children: [
-                          (0, r.jsx)(A, { isTier2: P }),
-                          !f &&
-                              (0, r.jsx)(s.olH, {
+                          (0, r.jsx)(S, { isTier2: R }),
+                          !d &&
+                              (0, r.jsx)(o.olH, {
                                   "data-migration-pending": !0,
-                                  hideOnFullscreen: b,
-                                  onClick: y,
-                                  className: E.closeButtonPosition,
+                                  hideOnFullscreen: E,
+                                  onClick: b,
+                                  className: g.closeButtonPosition,
                               }),
                           (0, r.jsx)("img", {
-                              src: L,
+                              src: x,
                               alt: "",
-                              className: H ? E.bigWumpus : E.wumpus,
+                              className: V ? g.bigWumpus : g.wumpus,
                           }),
                           (0, r.jsx)("div", {
-                              className: E.textContainer,
-                              children: (0, r.jsx)(j, {
-                                  color: R ? "black" : "white",
-                                  className: E.wordmark,
+                              className: g.textContainer,
+                              children: (0, r.jsx)(L, {
+                                  color: N ? "black" : "white",
+                                  className: g.wordmark,
                               }),
                           }),
                       ],
                   }),
-                  (C || N) && (0, r.jsx)(m.Z, { discountAmount: x }),
+                  (A || C) && (0, r.jsx)(h.Z, { discountAmount: D }),
                   F &&
-                      (0, r.jsx)(S, {
-                          isOneStepCheckout: w,
-                          headerText: V,
-                          step: M,
-                          filteredBreadcrumbs: B,
+                      (0, r.jsx)(T, {
+                          isOneStepCheckout: P,
+                          headerText: Z,
+                          step: j,
+                          filteredBreadcrumbs: G,
                       }),
-                  H &&
+                  V &&
                       (0, r.jsx)("div", {
-                          className: E.bodyGradientContainer,
-                          children: (0, r.jsx)("div", { className: E.bodyGradient }),
+                          className: g.bodyGradientContainer,
+                          children: (0, r.jsx)("div", { className: g.bodyGradient }),
                       }),
               ],
           });

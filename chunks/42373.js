@@ -1,24 +1,23 @@
-n.d(t, { Z: () => N }), n(953529);
+n.d(t, { Z: () => C }), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(304789),
-    c = n(159691),
-    u = n(780384),
-    d = n(755721),
-    f = n(481060),
-    _ = n(410030),
-    p = n(70097),
-    h = n(626135),
-    m = n(526167),
-    g = n(572995),
-    E = n(981631),
-    b = n(869783),
-    y = n(642650),
-    O = n(595475);
-function v(e, t, n) {
+    l = n(159691),
+    c = n(780384),
+    u = n(755721),
+    d = n(481060),
+    f = n(410030),
+    _ = n(70097),
+    p = n(626135),
+    h = n(526167),
+    m = n(572995),
+    g = n(981631),
+    E = n(869783),
+    b = n(885257),
+    y = n(411200);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +41,12 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,197 +58,197 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function A(e) {
+function S(e) {
     let t;
     switch (e) {
-        case g.NA.EMOJIS:
-            t = y.emojisBackground;
+        case m.NA.EMOJIS:
+            t = b.emojisBackground;
             break;
-        case g.NA.REFERRAL_PROGRAM:
-            t = y.referralProgramBackground;
+        case m.NA.REFERRAL_PROGRAM:
+            t = b.referralProgramBackground;
             break;
-        case g.NA.NO_LIMITS:
-            t = y.noLimitsBackground;
+        case m.NA.NO_LIMITS:
+            t = b.noLimitsBackground;
             break;
-        case g.NA.YOUR_SPACE:
-            t = y.yourSpaceBackground;
+        case m.NA.YOUR_SPACE:
+            t = b.yourSpaceBackground;
             break;
-        case g.NA.SERVER_PROFILES:
-            t = y.serverProfilesBackground;
+        case m.NA.SERVER_PROFILES:
+            t = b.serverProfilesBackground;
             break;
-        case g.NA.SHOW_YOUR_STYLE:
-            t = y.yourStyleBackground;
+        case m.NA.SHOW_YOUR_STYLE:
+            t = b.yourStyleBackground;
             break;
-        case g.NA.PERMADECOS:
-            t = y.permadecosBackground;
+        case m.NA.PERMADECOS:
+            t = b.permadecosBackground;
             break;
-        case g.NA.VOICE_FILTERS:
-            t = y.voiceFiltersBackground;
+        case m.NA.VOICE_FILTERS:
+            t = b.voiceFiltersBackground;
             break;
-        case g.NA.CUSTOM_THEMES:
-            t = y.customThemesBackground;
+        case m.NA.CUSTOM_THEMES:
+            t = b.customThemesBackground;
     }
     return t;
 }
-let C = (e) => {
+let A = (e) => {
         let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: i, enablePremiumBrandRefreshDesign: a } = e,
-            s = (0, _.ZP)(),
-            l = (0, u.wj)(s),
-            f = l ? d.Tt.WHITE : d.Tt.BRAND,
+            s = (0, f.ZP)(),
+            d = (0, c.wj)(s),
+            _ = d ? u.Tt.WHITE : u.Tt.BRAND,
             p = () => {
                 i(), n();
             };
         return a
             ? (0, r.jsx)("div", {
-                  className: O.bentoBoxButton,
-                  children: (0, r.jsx)(c.zxk, {
+                  className: y.bentoBoxButton,
+                  children: (0, r.jsx)(l.zxk, {
                       variant: "secondary",
                       onClick: p,
                       text: t,
                   }),
               })
-            : (0, r.jsx)(d.zx, {
+            : (0, r.jsx)(u.zx, {
                   "data-migration-pending": !0,
-                  look: d.iL.OUTLINED,
-                  color: f,
-                  className: o()(y.bentoBoxButton, l ? y.bentoBoxButtonWhite : y.bentoBoxButtonBrand),
+                  look: u.iL.OUTLINED,
+                  color: _,
+                  className: o()(b.bentoBoxButton, d ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand),
                   onClick: p,
                   children: t,
               });
     },
-    N = (e) => {
+    C = (e) => {
         let t,
             {
                 name: n,
                 title: a,
-                description: c,
-                descriptionCta: u,
-                previewImage: d,
-                videoUrl: _,
-                shouldLoadVideo: v,
-                index: T,
-                customVideoStyle: N,
-                isReducedMotion: R,
-                onClick: P,
-                badgeText: w,
-                size: D,
-                enablePremiumBrandRefreshDesign: x,
+                description: l,
+                descriptionCta: c,
+                previewImage: u,
+                videoUrl: f,
+                shouldLoadVideo: O,
+                index: I,
+                customVideoStyle: C,
+                isReducedMotion: N,
+                onClick: R,
+                badgeText: P,
+                size: w,
+                enablePremiumBrandRefreshDesign: D,
             } = e,
-            L = (0, m.rO)(),
-            j = i.useRef(null),
-            k = i.useRef(0),
-            M = A(n),
-            U = (0, s.debounce)(() => {
-                h.default.track(E.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
+            x = (0, h.rO)(),
+            L = i.useRef(null),
+            j = i.useRef(0),
+            M = S(n),
+            k = (0, s.debounce)(() => {
+                p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
             }, 800),
+            U = () => {
+                null == L.current || N || ((L.current.currentTime = j.current), L.current.play());
+            },
             G = () => {
-                null == j.current || R || ((j.current.currentTime = k.current), j.current.play());
+                null == L.current || N || ((j.current = L.current.currentTime), L.current.pause());
             },
-            B = () => {
-                null == j.current || R || ((k.current = j.current.currentTime), j.current.pause());
-            },
-            Z = x ? O : y;
-        t = x
-            ? D === g.y$.LARGE
+            B = D ? y : b;
+        t = D
+            ? w === m.y$.LARGE
                 ? "heading-xxl/bold"
                 : "heading-xl/bold"
-            : D === g.y$.SMALL
+            : w === m.y$.SMALL
               ? "heading-xl/extrabold"
               : "heading-xxl/extrabold";
-        let F = () =>
+        let Z = () =>
                 (0, r.jsxs)("div", {
-                    className: o()(Z.textBox, Z["".concat(D)]),
+                    className: o()(B.textBox, B["".concat(w)]),
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                null != w &&
+                                null != P &&
                                     (0, r.jsx)("div", {
-                                        className: Z.badge,
-                                        children: (0, r.jsx)(f.X6q, {
+                                        className: B.badge,
+                                        children: (0, r.jsx)(d.X6q, {
                                             variant: "eyebrow",
                                             color: "always-white",
-                                            children: w,
+                                            children: P,
                                         }),
                                     }),
-                                (0, r.jsx)(f.X6q, {
+                                (0, r.jsx)(d.X6q, {
                                     variant: t,
                                     color: "header-primary",
-                                    className: o()(Z.header, !x && Z["".concat(D)]),
+                                    className: o()(B.header, !D && B["".concat(w)]),
                                     children: a,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(f.Text, {
+                        (0, r.jsx)(d.Text, {
                             variant: "text-md/medium",
-                            color: x ? "text-primary" : "text-muted",
-                            className: Z.description,
-                            children: c,
+                            color: D ? "text-primary" : "text-muted",
+                            className: B.description,
+                            children: l,
                         }),
-                        null != u &&
-                            null != P &&
-                            (0, r.jsx)(C, {
-                                descriptionCta: u,
-                                onClick: P,
-                                debouncedOnClickAnalytics: U,
-                                enablePremiumBrandRefreshDesign: x,
+                        null != c &&
+                            null != R &&
+                            (0, r.jsx)(A, {
+                                descriptionCta: c,
+                                onClick: R,
+                                debouncedOnClickAnalytics: k,
+                                enablePremiumBrandRefreshDesign: D,
                             }),
                     ],
                 }),
-            V = () =>
+            F = () =>
                 (0, r.jsx)("div", {
-                    className: o()(Z.boxArtContainer, Z["".concat(D)]),
+                    className: o()(B.boxArtContainer, B["".concat(w)]),
                     children: (0, r.jsx)(
-                        p.Z,
+                        _.Z,
                         {
                             playsInline: !0,
-                            preload: v ? "auto" : "none",
+                            preload: O ? "auto" : "none",
                             muted: !0,
-                            poster: d,
+                            poster: u,
                             loop: !0,
-                            className: o()(Z.boxVideo, { [N]: null != N }),
-                            ref: j,
+                            className: o()(B.boxVideo, { [C]: null != C }),
+                            ref: L,
                             children: (0, r.jsx)("source", {
-                                src: _,
-                                type: L ? b.m.MP4 : b.m.WEBM,
+                                src: f,
+                                type: x ? E.m.MP4 : E.m.WEBM,
                             }),
                         },
-                        _,
+                        f,
                     ),
                 }),
-            H = T % 2 != 0,
-            Y = () =>
-                H
+            V = I % 2 != 0,
+            H = () =>
+                V
                     ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(V, {})],
+                          children: [(0, r.jsx)(Z, {}), (0, r.jsx)(F, {})],
                       })
                     : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(V, {}), (0, r.jsx)(F, {})],
+                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(Z, {})],
                       }),
-            W = {
-                className: o()(x ? O.backgroundColor : M, Z.boxContainer, Z["".concat(D)], x && O.gradientBackground),
-                onMouseEnter: G,
-                onFocus: G,
-                onBlur: B,
-                onMouseLeave: B,
+            Y = {
+                className: o()(D ? y.backgroundColor : M, B.boxContainer, B["".concat(w)], D && y.gradientBackground),
+                onMouseEnter: U,
+                onFocus: U,
+                onBlur: G,
+                onMouseLeave: G,
             };
-        return x
+        return D
             ? (0, r.jsx)(
-                  l.$,
-                  S(I({}, W), {
+                  d.$1m,
+                  T(v({}, Y), {
                       color: "purple",
-                      children: (0, r.jsx)(Y, {}),
+                      children: (0, r.jsx)(H, {}),
                   }),
               )
-            : (0, r.jsx)("div", S(I({}, W), { children: (0, r.jsx)(Y, {}) }));
+            : (0, r.jsx)("div", T(v({}, Y), { children: (0, r.jsx)(H, {}) }));
     };

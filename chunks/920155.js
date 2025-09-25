@@ -1,4 +1,4 @@
-n.d(t, { m: () => A }), n(388685);
+n.d(t, { m: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,13 +7,12 @@ var r = n(951288),
     l = n(793030),
     c = n(442837),
     u = n(930295),
-    d = n(304789),
-    f = n(819640),
-    _ = n(945909),
-    p = n(866577),
-    h = n(231338),
-    m = n(254477);
-function g(e, t, n) {
+    d = n(819640),
+    f = n(945909),
+    _ = n(866577),
+    p = n(231338),
+    h = n(929618);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +53,22 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +76,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,60 +85,60 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = 10,
-    T = 4,
-    S = h.Vq;
-function A(e) {
+let v = 10,
+    I = 4,
+    T = p.Vq;
+function S(e) {
     var t;
     let {
             children: n,
             targetElementRef: a,
-            shouldShow: h = !0,
-            onRequestClose: g,
-            position: b = "top",
-            align: v = "center",
-            hasVideo: A = !1,
-            gradientColor: C,
-            onPositionChange: N,
-            scrollBehavior: R = "sticky",
+            shouldShow: p = !0,
+            onRequestClose: m,
+            position: E = "top",
+            align: O = "center",
+            hasVideo: S = !1,
+            gradientColor: A,
+            onPositionChange: C,
+            scrollBehavior: N = "sticky",
         } = e,
-        [P, w] = i.useState(h),
-        [D, x] = i.useState(b),
-        L = i.useRef(b),
-        j = (0, c.e7)([f.Z], () => f.Z.getLayers()),
-        M = null != (t = j[j.length - 1]) ? t : "base",
-        k = i.useMemo(() => {
+        [R, P] = i.useState(p),
+        [w, D] = i.useState(E),
+        x = i.useRef(E),
+        L = (0, c.e7)([d.Z], () => d.Z.getLayers()),
+        j = null != (t = L[L.length - 1]) ? t : "base",
+        M = i.useMemo(() => {
             var e;
             return (
                 null == a.current ||
-                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === M
+                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === j
             );
-        }, [a, M]);
+        }, [a, j]);
     i.useEffect(() => {
-        k && h ? w(!0) : k || w(!1);
-    }, [k, h]);
-    let U = () => {
-            w(!1);
+        M && p ? P(!0) : M || P(!1);
+    }, [M, p]);
+    let k = () => {
+            P(!1);
         },
-        G = (0, p.i)({
-            shouldShow: h,
-            caretPosition: (0, _.z)(D),
-            onExitComplete: U,
+        U = (0, _.i)({
+            shouldShow: p,
+            caretPosition: (0, f.z)(w),
+            onExitComplete: k,
         }),
-        B = (e) => {
+        G = (e) => {
             var { setPopoutRef: t, position: i } = e,
-                c = O(e, ["setPopoutRef", "position"]);
+                c = y(e, ["setPopoutRef", "position"]);
             return (
-                null != i && i !== L.current && ((L.current = i), x(i), null == N || N(i)),
-                G((e, i) => {
+                null != i && i !== x.current && ((x.current = i), D(i), null == C || C(i)),
+                U((e, i) => {
                     if (!i) return null;
                     let u = (0, r.jsx)(
                         l.VqE,
-                        y(E({}, c), {
+                        b(g({}, c), {
                             setDialogRef: t,
                             modal: !1,
-                            className: o()(null != C ? m.popoverContentWithGradient : m.popover, {
-                                [m["popover--video"]]: A,
+                            className: o()(null != A ? h.popoverContentWithGradient : h.popover, {
+                                [h["popover--video"]]: S,
                             }),
                             returnRef: a,
                             children: n,
@@ -149,11 +148,11 @@ function A(e) {
                         "data-mana-component": "popover",
                         style: e,
                         children:
-                            null != C
-                                ? (0, r.jsx)(d.$, {
+                            null != A
+                                ? (0, r.jsx)(l.$1m, {
                                       offsetBottom: 0.4,
-                                      color: C,
-                                      className: m.popoverGradientWrapper,
+                                      color: A,
+                                      className: h.popoverGradientWrapper,
                                       children: u,
                                   })
                                 : u,
@@ -163,20 +162,20 @@ function A(e) {
         };
     return (0, r.jsx)(u.H, {
         targetElementRef: a,
-        shouldShow: P,
-        onRequestClose: g,
-        position: D,
-        align: v,
-        spacing: I + T,
+        shouldShow: R,
+        onRequestClose: m,
+        position: w,
+        align: O,
+        spacing: v + I,
         layerContext: void 0,
         positionKey: void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === D || "bottom" === D,
+        nudgeAlignIntoViewport: "top" === w || "bottom" === w,
         closeOnClickOutside: !1,
-        scrollBehavior: R,
-        renderPopout: B,
-        children: S,
+        scrollBehavior: N,
+        renderPopout: G,
+        children: T,
     });
 }
