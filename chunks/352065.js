@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(507274),
     d = n(667137),
     f = n(985316),
-    _ = n(163838),
-    p = n(525751);
+    _ = n(823531),
+    p = n(456208);
 function h(e, t, n) {
     return (
         t in e
@@ -104,13 +104,16 @@ function b(e) {
                     impressionType: null != (t = null == y ? void 0 : y.impressionType) ? t : l.ImpressionTypes.MODAL,
                     children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
-                        children: (0, r.jsx)(s.animated.div, {
-                            "data-mana-component": "layer-modal",
-                            className: o()(p.container, _.modal),
-                            style: T,
-                            children: (0, r.jsx)("div", {
-                                className: _.modalContent,
-                                children: O,
+                        children: (0, r.jsx)("div", {
+                            className: _.outerContainer,
+                            children: (0, r.jsx)(s.animated.div, {
+                                "data-mana-component": "layer-modal",
+                                className: o()(p.container, _.modal),
+                                style: T,
+                                children: (0, r.jsx)("div", {
+                                    className: _.modalContent,
+                                    children: O,
+                                }),
                             }),
                         }),
                     }),

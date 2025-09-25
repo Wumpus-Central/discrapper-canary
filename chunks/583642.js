@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(315322),
     v = n(723642),
     I = n(981631),
-    T = n(356702);
+    T = n(935696);
 let S = l()("2015-05-15").local();
 function A(e) {
     let { items: t, navId: n, selectedIndex: i } = e,
@@ -70,11 +70,23 @@ function A(e) {
 }
 let C = i.forwardRef(function (e, t) {
         let { searchContext: n, navId: a, resultsState: o, onSelectedIndexChanged: s, selectedChannel: l } = e,
-            [c, u] = i.useState(-1),
-            d = (e) => {
+            [c, d] = i.useState(-1),
+            f = (e) => {
                 e.stopPropagation(), e.preventDefault();
             },
-            f = i.useCallback(
+            _ = i.useCallback(
+                (e) => {
+                    d(e), s(e);
+                    let t = document.getElementById("".concat(a, "-").concat(e));
+                    null != t &&
+                        t.scrollIntoView({
+                            block: "nearest",
+                            inline: "nearest",
+                        });
+                },
+                [a, s],
+            ),
+            p = i.useCallback(
                 (e) => {
                     let { query: t, performSearch: n, replace: r } = e;
                     E.Z.setSearchQuery({
@@ -83,60 +95,60 @@ let C = i.forwardRef(function (e, t) {
                         replace: r,
                         resultsState: o,
                     }),
-                        u(-1);
+                        _(-1);
                 },
-                [o],
+                [o, _],
             ),
-            { items: _, itemsData: p } = (0, b.Z)({
+            { items: h, itemsData: m } = (0, b.Z)({
                 resultsState: o,
                 searchContext: n,
                 selectedChannel: l,
-                setSearchQuery: f,
+                setSearchQuery: p,
             }),
-            h = (e) => {
+            g = (e) => {
                 let { newSelectedIndex: t, searchAutocompleteSelectAction: n } = e,
                     r = t;
                 return (
                     null == r && (r = c),
                     !(r < 0) &&
-                        !(r > p.length - 1) &&
-                        (p[r].data.onSelect({
+                        !(r > m.length - 1) &&
+                        (m[r].data.onSelect({
                             searchAutocompleteSelectAction: n,
                             selectedIndex: r,
                         }),
                         !0)
                 );
             },
-            m = (e) => {
+            y = (e) => {
                 let t = e;
-                t > p.length - 1 ? (t = 0) : t < 0 && (t = p.length - 1), u(t), s(t);
+                t > m.length - 1 ? (t = 0) : t < 0 && (t = m.length - 1), _(t);
             },
-            g = (e) => {
-                m(c + e);
+            O = (e) => {
+                y(c + e);
             };
         return (
             i.useEffect(() => {
-                o.mode.type === I.Sap.FILTER ? u(0) : u(-1);
-            }, [o.mode.type]),
+                o.mode.type === I.Sap.FILTER ? _(0) : _(-1);
+            }, [o.mode.type, _]),
             i.useImperativeHandle(t, () => ({
                 selectedIndex: c,
                 focusNextOption: () => {
-                    g(1);
+                    O(1);
                 },
                 focusPreviousOption: () => {
-                    g(-1);
+                    O(-1);
                 },
-                selectOption: h,
+                selectOption: g,
             })),
-            (0, r.jsx)("div", {
-                onMouseDown: d,
+            (0, r.jsx)(u.u2D, {
+                onMouseDown: f,
                 role: "listbox",
                 id: a,
                 tabIndex: -1,
                 "aria-activedescendant": "".concat(a, "-").concat(c),
                 className: T.container,
                 children: (0, r.jsx)(A, {
-                    items: _,
+                    items: h,
                     navId: a,
                     selectedIndex: c,
                 }),
@@ -184,7 +196,7 @@ let C = i.forwardRef(function (e, t) {
                 focusPreviousOption: () => {},
                 selectOption: () => {},
             })),
-            (0, r.jsx)("div", {
+            (0, r.jsx)(u.u2D, {
                 onMouseDown: d,
                 role: "listbox",
                 id: n,

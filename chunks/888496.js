@@ -20,7 +20,7 @@ var i = n(120356),
     u = n(275759),
     d = n(856651),
     f = n(388032),
-    _ = n(402987);
+    _ = n(696836);
 function p(e, t, n) {
     return (
         t in e
@@ -314,46 +314,35 @@ function I(e) {
 }
 function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-        i = [],
-        a = Object.keys(e.metadata);
-    if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === a.length) return i;
-    for (let o of s().sortBy(a, (t) => {
+        n = [],
+        i = Object.keys(e.metadata);
+    if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === i.length) return n;
+    for (let a of s().sortBy(i, (t) => {
         var n, r;
         return null == (r = e.application_metadata) || null == (n = r[t]) ? void 0 : n.name;
     })) {
-        let a = e.application_metadata[o];
-        if (null == a) continue;
-        let s = e.metadata[o];
+        let i = e.application_metadata[a];
+        if (null == i) continue;
+        let o = e.metadata[a];
         try {
-            switch (a.type) {
+            switch (i.type) {
                 case d.xn.BOOLEAN_EQUAL:
                 case d.xn.BOOLEAN_NOT_EQUAL:
-                    ((a.type === d.xn.BOOLEAN_EQUAL && "1" === s) ||
-                        (a.type === d.xn.BOOLEAN_NOT_EQUAL && "1" !== s)) &&
-                        i.push(
-                            (0, r.jsx)(
-                                N,
-                                {
-                                    className: t,
-                                    label: a.name,
-                                },
-                                a.key,
-                            ),
-                        );
+                    ((i.type === d.xn.BOOLEAN_EQUAL && "1" === o) ||
+                        (i.type === d.xn.BOOLEAN_NOT_EQUAL && "1" !== o)) &&
+                        n.push((0, r.jsx)(N, { label: i.name }, i.key));
                     break;
                 case d.xn.DATETIME_GREATER_THAN_EQUAL:
                 case d.xn.DATETIME_LESS_THAN_EQUAL:
-                    i.push(
+                    n.push(
                         (0, r.jsx)(
                             A,
                             {
-                                className: t,
-                                date: s,
-                                locale: n,
-                                label: a.name,
+                                date: o,
+                                locale: t,
+                                label: i.name,
                             },
-                            a.key,
+                            i.key,
                         ),
                     );
                     break;
@@ -361,21 +350,20 @@ function T(e) {
                 case d.xn.INTEGER_NOT_EQUAL:
                 case d.xn.INTEGER_GREATER_THAN_EQUAL:
                 case d.xn.INTEGER_LESS_THAN_EQUAL:
-                    i.push(
+                    n.push(
                         (0, r.jsx)(
                             S,
                             {
-                                className: t,
-                                count: Number(s),
-                                label: a.name,
+                                count: Number(o),
+                                label: i.name,
                             },
-                            a.key,
+                            i.key,
                         ),
                     );
             }
         } catch (e) {}
     }
-    return i;
+    return n;
 }
 function S(e) {
     let t,
@@ -391,8 +379,8 @@ function S(e) {
                 : f.intl.format(i, { value: u })),
         (0, r.jsx)(l.Text, {
             className: a()(_.connectedAccountVanityMetadata, o),
-            variant: "text-xs/normal",
-            color: "interactive-active",
+            variant: "text-xxs/normal",
+            color: "text-default",
             children: t,
         })
     );
@@ -401,8 +389,8 @@ function A(e) {
     let { date: t, locale: n, label: i, className: o } = e;
     return (0, r.jsx)(l.Text, {
         className: a()(_.connectedAccountVanityMetadata, o),
-        variant: "text-xs/normal",
-        color: "interactive-active",
+        variant: "text-xxs/normal",
+        color: "text-default",
         children: f.intl.format(f.t.HLoinJ, {
             value: (0, u.FI)(t, n),
             name: i,
@@ -427,8 +415,8 @@ function C(e) {
                     ),
             }),
             (0, r.jsx)(l.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-active",
+                variant: "text-xxs/normal",
+                color: "text-default",
                 children: t,
             }),
         ],
@@ -437,8 +425,8 @@ function C(e) {
 function N(e) {
     let { label: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
-        variant: "text-xs/semibold",
-        color: "interactive-active",
+        variant: "text-xxs/normal",
+        color: "text-default",
         className: a()(_.connectedAccountVanityMetadata, _.connectedAccountVanityMetadataTag, n),
         children: t,
     });

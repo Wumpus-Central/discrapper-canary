@@ -32,6 +32,7 @@ var o = (function (e) {
         return (
             (e.ROLES = "ROLES"),
             (e.CONNECTIONS = "CONNECTIONS"),
+            (e.APPS = "APPS"),
             (e.NOTE = "NOTE"),
             (e.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
             e
