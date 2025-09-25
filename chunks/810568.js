@@ -47,6 +47,7 @@ var r = n(772848),
             (e.MiniGameProfile = "mini_game_profile"),
             (e.GameMention = "game_mention"),
             (e.GameSheet = "game_sheet"),
+            (e.ApplicationWidget = "application_widget"),
             e
         );
     })({}),

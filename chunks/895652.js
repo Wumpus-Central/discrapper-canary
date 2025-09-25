@@ -1,6 +1,7 @@
 e.exports = {
     widgetContainer: "widgetContainer__0ea1a",
     header: "header__0ea1a",
+    headerClickable: "headerClickable__0ea1a",
     appIcon: "appIcon__0ea1a",
     appIconPlaceholder: "appIconPlaceholder__0ea1a",
     container: "container__0ea1a",

@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    o = n.n(i),
-    a = n(79116),
+    a = n.n(i),
+    o = n(79116),
     l = n(481060),
     c = n(239091),
     s = n(313201),
@@ -13,7 +13,7 @@ var i = n(120356),
     g = n(872269),
     p = n(228168),
     b = n(388032),
-    m = n(176870);
+    m = n(640962);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,16 +59,16 @@ function y(e, t) {
 }
 let j = (e) => {
         let { widgetTitle: t, children: n } = e,
-            { isDragging: i } = (0, a.f)((e) => ({ isDragging: e.isDragging() }));
+            { isDragging: i } = (0, o.f)((e) => ({ isDragging: e.isDragging() }));
         return (0, r.jsx)(l.ua7, {
             "aria-label": b.intl.formatToPlainString(b.t.HWNJJC, { widgetTitle: t }),
-            text: (0, r.jsx)(v, {}),
+            text: (0, r.jsx)(h, {}),
             position: "top",
             shouldShow: !0 !== i,
             children: n,
         });
     },
-    v = () =>
+    h = () =>
         (0, r.jsxs)("div", {
             className: m.dragClickTooltipText,
             children: [
@@ -86,13 +86,13 @@ let j = (e) => {
                 }),
             ],
         }),
-    h = (e) => {
-        let { children: t, widget: i, targetRef: o } = e,
-            { trackUserProfileEditAction: a } = (0, d.KZ)(),
-            s = (e) => {
+    v = (e) => {
+        let { children: t, widget: i, targetRef: a, additionalMenuItems: o } = e,
+            { trackUserProfileEditAction: s } = (0, d.KZ)(),
+            m = (e) => {
                 if (e.shiftKey) {
                     (0, f.y8)(i.type),
-                        a({
+                        s({
                             action: "WIDGET_REMOVED",
                             widgetEdited: i.type,
                         }),
@@ -108,7 +108,7 @@ let j = (e) => {
                                 y(O({}, t), {
                                     userId: u.default.getId(),
                                     widget: i,
-                                    trackUserProfileEditAction: a,
+                                    trackUserProfileEditAction: s,
                                 }),
                             );
                     },
@@ -116,7 +116,7 @@ let j = (e) => {
                 );
             };
         return (0, r.jsx)(l.yRy, {
-            targetElementRef: o,
+            targetElementRef: a,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
@@ -129,14 +129,17 @@ let j = (e) => {
                     },
                     onSelect: () => {},
                     "aria-label": b.intl.string(b.t.xpSHSk),
-                    children: (0, r.jsx)(l.kSQ, {
-                        children: (0, r.jsx)(l.sNh, {
-                            id: "remove-widget",
-                            label: b.intl.string(b.t.Mm07YW),
-                            action: s,
-                            color: "danger",
-                            icon: l.XHJ,
-                        }),
+                    children: (0, r.jsxs)(l.kSQ, {
+                        children: [
+                            o,
+                            (0, r.jsx)(l.sNh, {
+                                id: "remove-widget",
+                                label: b.intl.string(b.t.Mm07YW),
+                                action: m,
+                                color: "danger",
+                                icon: l.XHJ,
+                            }),
+                        ],
                     }),
                 });
             },
@@ -144,15 +147,16 @@ let j = (e) => {
         });
     },
     x = (e) => {
-        let { widget: t, className: n, buttonRef: i } = e,
-            a = (0, f.mR)(t),
-            c = (0, s.Dt)();
+        let { widget: t, className: n, buttonRef: i, additionalMenuItems: o } = e,
+            c = (0, f.mR)(t),
+            u = (0, s.Dt)();
         return (0, r.jsx)(j, {
-            widgetTitle: a,
+            widgetTitle: c,
             children: (e) =>
-                (0, r.jsx)(h, {
+                (0, r.jsx)(v, {
                     targetRef: i,
                     widget: t,
+                    additionalMenuItems: o,
                     children: (t) =>
                         (0, r.jsxs)(
                             l.P3F,
@@ -160,10 +164,10 @@ let j = (e) => {
                                 O(
                                     {
                                         innerRef: i,
-                                        className: o()(m.dragHandleButton, n),
-                                        "data-dnd-name": a,
-                                        "aria-label": b.intl.formatToPlainString(b.t.HWNJJC, { widgetTitle: a }),
-                                        "aria-describedby": c,
+                                        className: a()(m.dragHandleButton, n),
+                                        "data-dnd-name": c,
+                                        "aria-label": b.intl.formatToPlainString(b.t.HWNJJC, { widgetTitle: c }),
+                                        "aria-describedby": u,
                                     },
                                     e,
                                     t,
@@ -172,7 +176,7 @@ let j = (e) => {
                                     children: [
                                         (0, r.jsx)(l.Vni, { size: "sm" }),
                                         (0, r.jsx)(l.nn4, {
-                                            id: c,
+                                            id: u,
                                             children: b.intl.string(b.t.bsuqFh),
                                         }),
                                     ],
