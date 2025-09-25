@@ -10,4 +10,5 @@ e.exports = {
     closeButtonContainer: "closeButtonContainer_e0f8ae",
     errorContainer: "errorContainer_e0f8ae",
     errorImage: "errorImage_e0f8ae",
+    instructionsLink: "instructionsLink_e0f8ae",
 };

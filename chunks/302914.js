@@ -1,9 +1,10 @@
-n.d(t, { C: () => u });
+n.d(t, { C: () => d });
 var r = n(951288);
 n(647438), n(952265);
 var i = n(481060),
-    a = n(35215);
-function o(e, t, n) {
+    a = n(35215),
+    o = n(879048);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +28,12 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,38 +45,38 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function u(e) {
+function d(e) {
     let {
         quest: t,
         sourceQuestContent: n,
-        applications: o,
-        popoutTargetElementRef: l,
-        onGameSheetOpened: u,
-        onGameSheetClosed: d,
+        applications: s,
+        popoutTargetElementRef: c,
+        onGameSheetOpened: d,
+        onGameSheetClosed: f,
     } = e;
     return (e) =>
         (0, r.jsx)(a.Z, {
             quest: t,
             sourceQuestContent: n,
-            applications: null != o ? o : [],
-            targetElementRef: l,
-            onGameSheetOpened: u,
-            onGameSheetClosed: d,
+            applications: null != s ? s : [],
+            targetElementRef: c,
+            onGameSheetOpened: d,
+            onGameSheetClosed: f,
             children: (t, n) =>
                 (0, r.jsx)(
                     i.P3F,
-                    c(s({}, t), {
+                    u(l({}, t), {
                         style: {
                             display: "inline-block",
                             cursor: "pointer",
@@ -84,10 +85,7 @@ function u(e) {
                         children: (0, r.jsx)(i.Text, {
                             variant: "text-xs/normal",
                             color: "text-link",
-                            style: {
-                                display: "inline-block",
-                                fontSize: "inherit",
-                            },
+                            className: o.instructionsLink,
                             children: e,
                         }),
                     }),
