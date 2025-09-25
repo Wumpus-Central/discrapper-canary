@@ -33,6 +33,8 @@ class s {
             o(this, "bannerTextColor", void 0),
             o(this, "bannerConfig", void 0),
             o(this, "logoConfig", void 0),
+            o(this, "mobileHeroPath", void 0),
+            o(this, "mobileHeroAnimatedPath", void 0),
             o(this, "mobileTitle", void 0),
             o(this, "mobileSummary", void 0),
             o(this, "mobileProductsTitle", void 0),
@@ -52,6 +54,8 @@ class s {
             (this.logoConfig = null != e.logo_display_config ? a.X.fromServer(e.logo_display_config) : void 0),
             (this.mobileTitle = e.mobile_title),
             (this.mobileSummary = e.mobile_summary),
-            (this.mobileProductsTitle = e.mobile_products_title);
+            (this.mobileProductsTitle = e.mobile_products_title),
+            (this.mobileHeroPath = e.mobile_hero_path),
+            (this.mobileHeroAnimatedPath = e.mobile_hero_animated_path);
     }
 }

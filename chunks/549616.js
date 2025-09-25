@@ -94,8 +94,10 @@ class h extends a.Z {
                 hero_logo: b,
                 hero_banner_config: y,
                 hero_logo_display_config: O,
+                mobile_hero_path: v,
+                mobile_hero_animated_path: I,
             } = e,
-            v = f(e, [
+            T = f(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -109,9 +111,11 @@ class h extends a.Z {
                 "hero_logo",
                 "hero_banner_config",
                 "hero_logo_display_config",
+                "mobile_hero_path",
+                "mobile_hero_animated_path",
             ]);
         return new h(
-            d(c({}, super.fromServer(v)), {
+            d(c({}, super.fromServer(T)), {
                 products: t.reduce((e, t) => {
                     let n = i.Z.fromServer(t);
                     return (p(n.type) || 0 !== n.items.length) && e.push(n), e;
@@ -128,6 +132,8 @@ class h extends a.Z {
                 heroLogo: b,
                 heroBannerConfig: null != y ? o.Z.fromServer(y) : void 0,
                 heroLogoDisplayConfig: null != O ? s.X.fromServer(O) : void 0,
+                mobileHeroPath: v,
+                mobileHeroAnimatedPath: I,
             }),
         );
     }
@@ -146,6 +152,8 @@ class h extends a.Z {
             l(this, "heroLogo", void 0),
             l(this, "heroBannerConfig", void 0),
             l(this, "heroLogoDisplayConfig", void 0),
+            l(this, "mobileHeroPath", void 0),
+            l(this, "mobileHeroAnimatedPath", void 0),
             (this.products = e.products),
             (this.logo = e.logo),
             (this.heroRanking = e.heroRanking),
@@ -158,6 +166,8 @@ class h extends a.Z {
             (this.heroLogo = e.heroLogo),
             (this.heroBannerAsset = e.heroBannerAsset),
             (this.heroBannerConfig = e.heroBannerConfig),
-            (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig);
+            (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig),
+            (this.mobileHeroPath = e.mobileHeroPath),
+            (this.mobileHeroAnimatedPath = e.mobileHeroAnimatedPath);
     }
 }
