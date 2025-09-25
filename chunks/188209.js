@@ -1,4 +1,4 @@
-n.d(t, { default: () => I });
+n.d(t, { default: () => R }), n(704826), n(35282);
 var r = n(951288),
     a = n(647438),
     i = n(442837),
@@ -9,144 +9,168 @@ var r = n(951288),
     d = n(110924),
     u = n(448986),
     p = n(475271),
-    f = n(63954),
-    m = n(246946),
+    m = n(63954),
+    f = n(246946),
     C = n(572004),
-    h = n(617136),
-    _ = n(509212),
+    h = n(624138),
+    _ = n(617136),
+    v = n(509212),
     g = n(569984),
-    v = n(497505),
-    y = n(804127),
+    y = n(497505),
+    w = n(804127),
     j = n(566078),
-    w = n(602667),
+    x = n(602667),
     b = n(644646),
-    x = n(515108),
-    P = n(291967),
-    O = n(46140),
-    T = n(388032),
-    q = n(238905);
-function N(e) {
+    P = n(515108),
+    O = n(291967),
+    T = n(46140),
+    q = n(388032),
+    N = n(644647);
+function E(e) {
     let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: o, buttonColor: s, className: l } = e,
-        d = (0, i.e7)([m.Z], () => m.Z.hidePersonalInformation),
-        u = (0, h.O5)();
+        d = (0, i.e7)([f.Z], () => f.Z.hidePersonalInformation),
+        u = (0, _.O5)();
     return null == t
         ? null
         : (0, r.jsx)(c.Z, {
               className: l,
-              value: d ? T.intl.string(T.t["0n2u0t"]) : t.code,
+              value: d ? q.intl.string(q.t["0n2u0t"]) : t.code,
               buttonColor: s,
               onCopy: () => {
                   d && (0, C.JG)(t.code),
                       u({
                           questId: a,
                           questContent: n,
-                          questContentCTA: h.jZ.COPY_REWARD_CODE,
+                          questContentCTA: _.jZ.COPY_REWARD_CODE,
                           sourceQuestContent: o,
                       });
               },
           });
 }
-function A(e) {
+function I(e) {
     var t;
     let {
             quest: n,
-            questContent: a,
-            sourceQuestContent: i,
-            rewardCode: c,
-            rewardPlatform: d,
-            sharedQuestFields: u,
-            onClose: p,
-            transitionState: f,
+            questContent: i,
+            questContentPosition: c,
+            sourceQuestContent: d,
+            rewardCode: u,
+            rewardPlatform: p,
+            sharedQuestFields: m,
+            onClose: f,
+            transitionState: C,
+            impressionRef: _,
         } = e,
-        m =
+        g =
             null !=
-            (t = (0, _.C1)({
+            (t = (0, v.C1)({
                 quest: n,
-                rewardCode: c,
-                selectedPlatformType: d,
-                sharedQuestFields: u,
+                rewardCode: u,
+                selectedPlatformType: p,
+                sharedQuestFields: m,
             }))
                 ? t
-                : "";
-    return (0, r.jsx)(w.A, {
-        questOrQuests: n,
-        questContent: a,
-        sourceQuestContent: i,
-        children: (e) =>
-            (0, r.jsx)("div", {
-                ref: e,
-                children: (0, r.jsx)(s.Modal, {
-                    size: "md",
-                    title: T.intl.string(T.t.NkZ7OT),
-                    actions: [
-                        {
-                            variant: "primary",
-                            text: T.intl.string(T.t.i4jeWV),
-                            onClick: p,
-                        },
-                    ],
-                    preview: (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(l.Text, {
-                                variant: "eyebrow",
-                                color: "interactive-normal",
-                                className: q.claimInstructionsCodeInputTitle,
-                                children: T.intl.string(T.t.srzsU1),
-                            }),
-                            (0, r.jsx)(N, {
-                                rewardCode: c,
-                                questContent: a,
-                                questId: n.id,
-                                sourceQuestContent: i,
-                                buttonColor: o.Tt.BRAND,
-                            }),
-                        ],
+                : "",
+        y = a.useMemo(() => {
+            var e;
+            let t =
+                null ==
+                (e = (0, v.o9)({
+                    quest: n,
+                    idx: 0,
+                }))
+                    ? void 0
+                    : e.redemptionLink;
+            if ((0, h.Ew)(t)) return null;
+            let r = null == u ? void 0 : u.code;
+            return (0, h.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
+        }, [n, null == u ? void 0 : u.code]),
+        j = (0, w.In)({
+            quest: n,
+            questContent: i,
+            questContentPosition: c,
+            redemptionLink: y,
+            sourceQuestContent: d,
+        });
+    return (0, r.jsx)("div", {
+        ref: _,
+        children: (0, r.jsx)(s.Modal, {
+            size: "md",
+            title: q.intl.string(q.t.NkZ7OT),
+            actions: [
+                null != y
+                    ? {
+                          variant: "primary",
+                          text: q.intl.string(q.t["+zx47e"]),
+                          onClick: j,
+                      }
+                    : {
+                          variant: "primary",
+                          text: q.intl.string(q.t.i4jeWV),
+                          onClick: f,
+                      },
+            ],
+            preview: (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)(l.Text, {
+                        variant: "eyebrow",
+                        color: "interactive-normal",
+                        className: N.claimInstructionsCodeInputTitle,
+                        children: q.intl.string(q.t.srzsU1),
                     }),
-                    onClose: p,
-                    transitionState: f,
-                    children: (0, r.jsx)(l.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-default",
-                        className: q.claimInstructionsText,
-                        children: m,
+                    (0, r.jsx)(E, {
+                        rewardCode: u,
+                        questContent: i,
+                        questId: n.id,
+                        sourceQuestContent: d,
+                        buttonColor: o.Tt.BRAND,
                     }),
-                }),
+                ],
             }),
+            onClose: f,
+            transitionState: C,
+            children: (0, r.jsx)(l.Text, {
+                variant: "text-sm/medium",
+                color: "text-default",
+                className: N.claimInstructionsText,
+                children: g,
+            }),
+        }),
     });
 }
-function E(e) {
+function A(e) {
     let { quest: t, questContent: n, rewardCode: a, sourceQuestContent: i, onClaimInstructions: s } = e;
     return (0, r.jsxs)("div", {
-        className: q.contentContainer,
+        className: N.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: q.rewardTileContainer,
+                className: N.rewardTileContainer,
                 children: (0, r.jsx)(b.Z, {
-                    className: q.rewardTileAsset,
+                    className: N.rewardTileAsset,
                     quest: t,
                     questContent: n,
-                    location: O.dr.REWARD_CODE_MODAL,
+                    location: T.dr.REWARD_CODE_MODAL,
                     sourceQuestContent: i,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: q.copyContainer,
+                className: N.copyContainer,
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
-                        className: q.heading,
-                        children: T.intl.string(T.t["5j/Zys"]),
+                        className: N.heading,
+                        children: q.intl.string(q.t["5j/Zys"]),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: T.intl.format(T.t.ESmp29, { onClaimInstructions: s }),
+                        children: q.intl.format(q.t.ESmp29, { onClaimInstructions: s }),
                     }),
                 ],
             }),
-            (0, r.jsx)(N, {
-                className: q.mainCodeInput,
+            (0, r.jsx)(E, {
+                className: N.mainCodeInput,
                 rewardCode: a,
                 questContent: n,
                 questId: t.id,
@@ -156,29 +180,29 @@ function E(e) {
         ],
     });
 }
-function I(e) {
-    let { quest: t, onClose: n, transitionState: o, preview: s, sourceQuestContent: c } = e,
-        m = j.r.build(t.config),
-        C = m.rewardPlatforms[0],
-        h = v.jn.REWARD_MODAL,
+function R(e) {
+    let { quest: t, onClose: n, transitionState: o, preview: s, sourceQuestContent: c, questContentPosition: f } = e,
+        C = j.r.build(t.config),
+        h = C.rewardPlatforms[0],
+        _ = y.jn.REWARD_MODAL,
         {
-            questStoreRewardCode: _,
-            isFetchingRewardCode: w,
-            isClaimingReward: b,
+            questStoreRewardCode: v,
+            isFetchingRewardCode: b,
+            isClaimingReward: T,
         } = (0, i.cj)([g.Z], () => ({
             questStoreRewardCode: g.Z.getRewardCode(t.id),
             isFetchingRewardCode: g.Z.isFetchingRewardCode(t.id),
             isClaimingReward: g.Z.isClaimingReward(t.id),
         })),
-        O = !0 === s ? (0, f.b)(t) : _,
-        { hasError: T, setHasError: q } = (0, y.u)({
-            isClaimingReward: b,
-            isFetchingRewardCode: w,
+        q = !0 === s ? (0, m.b)(t) : v,
+        { hasError: N, setHasError: E } = (0, w.uL)({
+            isClaimingReward: T,
+            isFetchingRewardCode: b,
             quest: t,
-            questContent: h,
+            questContent: _,
             requiresPlatformSelection: !1,
-            rewardCode: O,
-            selectedPlatformType: C,
+            rewardCode: q,
+            selectedPlatformType: h,
             preview: s,
         });
     !(function (e) {
@@ -190,80 +214,94 @@ function I(e) {
             i && t();
         }, [i, t]);
     })(() => {
-        q(!0);
+        E(!0);
     });
-    let N = null == O && (w || b),
-        I = T && !b && !w;
-    return N || I
+    let R = null == q && (b || T),
+        D = N && !T && !b;
+    return R || D
         ? null
-        : (0, r.jsx)(x.Z, {
+        : (0, r.jsx)(P.Z, {
               onClose: n,
               transitionState: o,
               quest: t,
               sourceQuestContent: c,
-              rewardContent: (0, r.jsx)(P.Z, {
-                  rewardName: m.defaultRewardName,
-                  children: (0, r.jsx)(E, {
+              rewardContent: (0, r.jsx)(O.Z, {
+                  rewardName: C.defaultRewardName,
+                  children: (0, r.jsx)(A, {
                       quest: t,
-                      questContent: h,
-                      rewardCode: O,
+                      questContent: _,
+                      rewardCode: q,
                       sourceQuestContent: c,
                       onClaimInstructions: () => {
                           (0, l.ZDy)(
                               () =>
-                                  Promise.resolve((e) => {
-                                      var n, a;
-                                      return (0, r.jsx)(
-                                          A,
-                                          ((n = (function (e) {
-                                              for (var t = 1; t < arguments.length; t++) {
-                                                  var n = null != arguments[t] ? arguments[t] : {},
-                                                      r = Object.keys(n);
-                                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                                      (r = r.concat(
-                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                          }),
-                                                      )),
-                                                      r.forEach(function (t) {
-                                                          var r;
-                                                          (r = n[t]),
-                                                              t in e
-                                                                  ? Object.defineProperty(e, t, {
-                                                                        value: r,
-                                                                        enumerable: !0,
-                                                                        configurable: !0,
-                                                                        writable: !0,
-                                                                    })
-                                                                  : (e[t] = r);
-                                                      });
-                                              }
-                                              return e;
-                                          })({}, e)),
-                                          (a = a =
-                                              {
-                                                  quest: t,
-                                                  questContent: h,
-                                                  sourceQuestContent: c,
-                                                  rewardCode: O,
-                                                  rewardPlatform: C,
-                                                  sharedQuestFields: m,
-                                              }),
-                                          Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                                              : (function (e, t) {
-                                                    var n = Object.keys(e);
-                                                    if (Object.getOwnPropertySymbols) {
-                                                        var r = Object.getOwnPropertySymbols(e);
-                                                        n.push.apply(n, r);
-                                                    }
-                                                    return n;
-                                                })(Object(a)).forEach(function (e) {
-                                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
-                                                }),
-                                          n),
-                                      );
-                                  }),
+                                  Promise.resolve((e) =>
+                                      (0, r.jsx)(x.A, {
+                                          questOrQuests: t,
+                                          questContent: _,
+                                          sourceQuestContent: c,
+                                          children: (n) => {
+                                              var a, i;
+                                              return (0, r.jsx)(
+                                                  I,
+                                                  ((a = (function (e) {
+                                                      for (var t = 1; t < arguments.length; t++) {
+                                                          var n = null != arguments[t] ? arguments[t] : {},
+                                                              r = Object.keys(n);
+                                                          "function" == typeof Object.getOwnPropertySymbols &&
+                                                              (r = r.concat(
+                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                      return Object.getOwnPropertyDescriptor(n, e)
+                                                                          .enumerable;
+                                                                  }),
+                                                              )),
+                                                              r.forEach(function (t) {
+                                                                  var r;
+                                                                  (r = n[t]),
+                                                                      t in e
+                                                                          ? Object.defineProperty(e, t, {
+                                                                                value: r,
+                                                                                enumerable: !0,
+                                                                                configurable: !0,
+                                                                                writable: !0,
+                                                                            })
+                                                                          : (e[t] = r);
+                                                              });
+                                                      }
+                                                      return e;
+                                                  })({}, e)),
+                                                  (i = i =
+                                                      {
+                                                          impressionRef: n,
+                                                          quest: t,
+                                                          questContent: _,
+                                                          sourceQuestContent: c,
+                                                          rewardCode: q,
+                                                          rewardPlatform: h,
+                                                          sharedQuestFields: C,
+                                                          questContentPosition: f,
+                                                      }),
+                                                  Object.getOwnPropertyDescriptors
+                                                      ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                                                      : (function (e, t) {
+                                                            var n = Object.keys(e);
+                                                            if (Object.getOwnPropertySymbols) {
+                                                                var r = Object.getOwnPropertySymbols(e);
+                                                                n.push.apply(n, r);
+                                                            }
+                                                            return n;
+                                                        })(Object(i)).forEach(function (e) {
+                                                            Object.defineProperty(
+                                                                a,
+                                                                e,
+                                                                Object.getOwnPropertyDescriptor(i, e),
+                                                            );
+                                                        }),
+                                                  a),
+                                              );
+                                          },
+                                      }),
+                                  ),
                               { stackingBehavior: "replace" },
                           );
                       },

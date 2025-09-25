@@ -124,6 +124,7 @@ function F(e) {
                         quest: t,
                         preview: o,
                         sourceQuestContent: c,
+                        questContentPosition: a,
                     }),
                 );
         }
