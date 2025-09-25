@@ -64,10 +64,13 @@ class h extends r.Z {
                 )
                     return;
                 let p = u.Z.getCurrentDefaultStatus();
-                if ((null == p ? void 0 : p.expiresAt) != null && (null == p ? void 0 : p.expiresAt) >= Date.now()) {
+                if (null != p) {
                     if (p.status === f.tN.CUSTOM && null != p.customHangStatus) {
                         let { status: e, emoji: t } = p.customHangStatus;
-                        if (null != t && !(0, d.K)(t, s)) return;
+                        if (null != t && !(0, d.K)(t, s)) {
+                            a && (0, l.Zx)(f.tN.CHILLING);
+                            return;
+                        }
                         (0, l._s)(e, t);
                     } else if (null != p.status) return void (0, l.Zx)(p.status);
                     return;
