@@ -26,7 +26,7 @@ var r = n(951288),
     E = n(618373),
     b = n(620954),
     y = n(388032),
-    O = n(962967);
+    O = n(246722);
 function v(e, t, n) {
     return (
         t in e
@@ -145,7 +145,7 @@ function D(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(g.Z, {
-                      className: O.titleWrapper,
+                      className: O.titleWrapperWithHint,
                       children: (0, r.jsx)(c.P3F, {
                           className: O.titleWrapperClickable,
                           onClick: () => {
@@ -230,15 +230,17 @@ function j(e) {
         "aria-label": i,
         children: (e) =>
             (0, r.jsx)(
-                c.P3F,
+                "div",
                 S(I({}, e), {
-                    className: o()(O.button, n && O.active),
-                    onClick: () => {
-                        a || (0, u.xh)(t);
-                    },
-                    children: (0, r.jsx)(c.k5M, {
-                        size: "xxs",
-                        color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+                    children: (0, r.jsx)(c.P3F, {
+                        className: o()(O.button, n && O.active),
+                        onClick: () => {
+                            a || (0, u.xh)(t);
+                        },
+                        children: (0, r.jsx)(c.k5M, {
+                            size: "xxs",
+                            color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+                        }),
                     }),
                 }),
             ),
