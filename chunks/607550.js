@@ -1,30 +1,30 @@
-r.d(t, { Z: () => c });
-var n = r(442837),
-    l = r(570140);
-let i = {},
-    a = {
+n.d(t, { Z: () => c });
+var r = n(442837),
+    i = n(570140);
+let l = {},
+    a = () => ({
         data: null,
         status: "not_loaded",
-    };
+    });
 function o(e) {
     var t;
-    return null != (t = i[e]) ? t : (i[e] = a);
+    return null != (t = l[e]) ? t : (l[e] = a());
 }
-class s extends n.ZP.Store {
+class s extends r.ZP.Store {
     get(e) {
         var t;
-        return null != (t = i[e]) ? t : a;
+        return null != (t = l[e]) ? t : a();
     }
     getWishlist(e) {
         return this.get(e).data;
     }
     getWishlistItems(e) {
-        var t, r;
-        return null != (r = null == (t = this.get(e).data) ? void 0 : t.getSkuIds()) ? r : [];
+        var t, n;
+        return null != (n = null == (t = this.get(e).data) ? void 0 : t.getSkuIds()) ? n : [];
     }
     hasSkuId(e, t) {
-        var r, n;
-        return null != (n = null == (r = this.get(e).data) ? void 0 : r.hasSkuId(t)) && n;
+        var n, r;
+        return null != (r = null == (n = this.get(e).data) ? void 0 : n.hasSkuId(t)) && r;
     }
     getStatus(e) {
         return this.get(e).status;
@@ -39,21 +39,21 @@ class s extends n.ZP.Store {
         return this.get(e).error;
     }
 }
-let c = new s(l.Z, {
+let c = new s(i.Z, {
     WISHLIST_FETCH_START: function (e) {
         let { wishlistId: t } = e,
-            r = o(t);
-        (r.status = "fetching"), (r.error = void 0);
+            n = o(t);
+        (n.status = "fetching"), (n.error = void 0);
     },
     WISHLIST_FETCH_SUCCESS: function (e) {
-        let { wishlistId: t, wishlistData: r } = e,
-            n = o(t);
-        (n.data = r), (n.status = "success"), (n.error = void 0);
+        let { wishlistId: t, wishlistData: n } = e,
+            r = o(t);
+        (r.data = n), (r.status = "success"), (r.error = void 0);
     },
     WISHLIST_FETCH_FAILURE: function (e) {
-        let { wishlistId: t, error: r } = e,
-            n = o(t);
-        (n.status = "error"), (n.error = r);
+        let { wishlistId: t, error: n } = e,
+            r = o(t);
+        (r.status = "error"), (r.error = n);
     },
     WISHLIST_ADD_SKU: function (e) {
         let {} = e;
