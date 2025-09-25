@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -6,14 +6,16 @@ var i = n(481060),
     a = n(317770),
     o = n(81643),
     s = n(681678),
-    c = n(944486),
-    u = n(914010),
-    d = n(622822),
-    p = n(920644),
-    f = n(723359),
-    h = n(981631),
-    g = n(484710);
-function m(e) {
+    c = n(601964),
+    u = n(944486),
+    d = n(914010),
+    p = n(622822),
+    f = n(165540),
+    h = n(920644),
+    g = n(723359),
+    m = n(981631),
+    b = n(484710);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +40,7 @@ function m(e) {
     }
     return e;
 }
-class b extends a.Z {
+class O extends a.Z {
     _initialize() {
         l.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen),
             l.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect),
@@ -59,42 +61,47 @@ class b extends a.Z {
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;
-        (0, d.I8)(t, n);
+        (0, p.I8)(t, n);
     }
     handleConnectionOpen() {
-        let e = u.Z.getGuildId(),
-            t = c.Z.getChannelId();
-        (0, d.I8)(e, t);
+        let e = d.Z.getGuildId(),
+            t = u.Z.getChannelId();
+        (0, p.I8)(e, t);
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("1716"), n.e("70699")]).then(n.bind(n, 746882));
-                return (n) => (0, r.jsx)(e, m({ source: t }, n));
+                let { default: e } = await Promise.all([n.e("1716"), n.e("83737")]).then(n.bind(n, 701509));
+                return (n) => (0, r.jsx)(e, _({ source: t }, n));
             },
             {
-                modalKey: f.dG,
-                onCloseRequest: h.dG4,
+                modalKey: g.dG,
+                onCloseRequest: m.dG4,
                 backdropStyle: (0, o.bj)(t) ? i.fCB.LIGHTBOX : void 0,
             },
         );
     }
     handleAgeGateSuccess() {
-        s.Z.showSuccessToast(g.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(f.dG);
+        s.Z.showSuccessToast(b.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(g.dG);
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.oav)(f.dG, (e) => (0, r.jsx)(p.default, m({ underageMessage: t }, e)));
+        (0, i.oav)(g.dG, (e) => (0, r.jsx)(h.default, _({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
-        (0, i.Mr3)(f.dG);
+        (0, i.Mr3)(g.dG);
     }
     handleGuildUpdate(e) {
         let { guild: t } = e,
-            n = u.Z.getGuildId();
-        if (null != n && t.id === n && t.owner_configured_content_level === h.V_K.AGE_RESTRICTED)
-            return void (0, d.I8)(t.id, null);
+            n = d.Z.getGuildId();
+        if (
+            null != n &&
+            t.id === n &&
+            (t.owner_configured_content_level === m.V_K.AGE_RESTRICTED ||
+                ((0, f.X)("age_gate_manager") && c.Ov.has(t.nsfw_level)))
+        )
+            return void (0, p.I8)(t.id, null);
     }
 }
-let _ = new b();
+let E = new O();

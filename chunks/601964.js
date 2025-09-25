@@ -1,36 +1,39 @@
 n.d(t, {
-    Cx: () => c,
-    EB: () => u,
-    VI: () => l,
-    Y2: () => g,
-    eM: () => f,
-    gM: () => d,
-    kH: () => m,
-    lV: () => h,
-    yn: () => _,
-    zN: () => p,
+    Cx: () => d,
+    EB: () => f,
+    Ov: () => u,
+    VI: () => c,
+    Y2: () => b,
+    eM: () => p,
+    gM: () => _,
+    kH: () => E,
+    lV: () => g,
+    yn: () => h,
+    zN: () => m,
 }),
     n(388685);
 var r = n(311929),
-    i = n(768581),
-    a = n(709054),
-    o = n(624138),
-    s = n(981631);
-let l = "Guild",
-    c = Object.freeze({
-        mfaLevel: s.BpS.NONE,
+    i = n(165540),
+    a = n(768581),
+    o = n(709054),
+    s = n(624138),
+    l = n(981631);
+let c = "Guild",
+    u = new Set([l.V_K.EXPLICIT, l.V_K.AGE_RESTRICTED]),
+    d = Object.freeze({
+        mfaLevel: l.BpS.NONE,
         preferredLocale: "en-US",
         afkTimeout: 0,
-        defaultMessageNotifications: s.bL.ALL_MESSAGES,
-        verificationLevel: s.sFg.NONE,
-        explicitContentFilter: s.lxg.DISABLED,
+        defaultMessageNotifications: l.bL.ALL_MESSAGES,
+        verificationLevel: l.sFg.NONE,
+        explicitContentFilter: l.lxg.DISABLED,
         premiumProgressBarEnabled: !1,
         systemChannelFlags: 0,
         maxStageVideoChannelUsers: -1,
         maxVideoChannelUsers: -1,
         maxMembers: -1,
-        premiumTier: s.Eu4.NONE,
-        nsfwLevel: s.V_K.DEFAULT,
+        premiumTier: l.Eu4.NONE,
+        nsfwLevel: l.V_K.DEFAULT,
         premiumSubscriberCount: 0,
         features: new Set(),
         description: null,
@@ -55,10 +58,10 @@ let l = "Guild",
         premiumFeatures: null,
         moderatorReporting: null,
     });
-function u(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return i.ZP.getGuildIconURL({
+    return a.ZP.getGuildIconURL({
         id: e.id,
         size: t,
         icon: e.icon,
@@ -66,28 +69,31 @@ function u(e, t) {
         lossless: r,
     });
 }
-function d(e) {
-    return (0, o.Zg)(e.name);
+function _(e) {
+    return (0, s.Zg)(e.name);
 }
-function f(e, t) {
+function p(e, t) {
     let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
-function _(e, t) {
-    return (!!t.mfaEnabled || e.mfaLevel !== s.BpS.ELEVATED) && f(e, t);
+function h(e, t) {
+    return (!!t.mfaEnabled || e.mfaLevel !== l.BpS.ELEVATED) && p(e, t);
 }
-function p(e) {
+function m(e) {
     return null == e.joinedAt;
 }
-function h(e) {
-    return a.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+function g(e) {
+    return o.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
-function m(e, t) {
+function E(e, t) {
     return (0, r.t8)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
-function g(e) {
+function b(e) {
+    var t;
     return (
         null != e &&
-        (e.ownerConfiguredContentLevel === s.V_K.EXPLICIT || e.ownerConfiguredContentLevel === s.V_K.AGE_RESTRICTED)
+        ((0, i.X)("guild_record")
+            ? u.has(e.nsfwLevel)
+            : u.has(null != (t = e.ownerConfiguredContentLevel) ? t : l.V_K.DEFAULT))
     );
 }
