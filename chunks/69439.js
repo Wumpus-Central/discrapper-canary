@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(667105),
     b = n(46140),
     y = n(388032),
-    O = n(179844);
+    O = n(924304);
 let v = [
     {
         value: b.cd.DESKTOP,
@@ -277,7 +277,7 @@ function S(e) {
                                           children: [L.render(), y.intl.string(y.t.nPThNT)],
                                       }),
                                   })
-                            : q || (Q && C.config.features.includes(b.S7.START_QUEST_CTA))
+                            : q
                               ? (0, r.jsx)("div", {
                                     className: O.button,
                                     children: (0, r.jsx)(o.zxk, {
@@ -287,15 +287,26 @@ function S(e) {
                                         fullWidth: !0,
                                     }),
                                 })
-                              : (0, r.jsx)("div", {
-                                    className: O.button,
-                                    children: (0, r.jsx)(o.zxk, {
-                                        variant: "secondary",
-                                        disabled: !0,
-                                        text: y.intl.string(y.t["9KoPyM"]),
-                                        fullWidth: !0,
-                                    }),
-                                }))
+                              : (0, f.Rt)(C)
+                                ? (0, r.jsx)("div", {
+                                      className: O.button,
+                                      children: (0, r.jsx)(o.zxk, {
+                                          variant: "primary",
+                                          icon: C.config.features.includes(b.S7.CLOUD_GAMING_ACTIVITY) ? l.v3n : void 0,
+                                          onClick: null != es ? es : void 0,
+                                          text: eo,
+                                          fullWidth: !0,
+                                      }),
+                                  })
+                                : (0, r.jsx)("div", {
+                                      className: O.button,
+                                      children: (0, r.jsx)(o.zxk, {
+                                          variant: "secondary",
+                                          disabled: !0,
+                                          text: y.intl.string(y.t["9KoPyM"]),
+                                          fullWidth: !0,
+                                      }),
+                                  }))
                     : W &&
                       !F &&
                       (e_ = Z
