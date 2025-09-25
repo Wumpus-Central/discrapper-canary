@@ -21,6 +21,7 @@ e.exports = {
     heroBlock: "heroBlock__08415",
     heroBlockContent: "heroBlockContent__08415",
     rivBannerButtonContainer: "rivBannerButtonContainer__08415",
+    riveEventOverlay: "riveEventOverlay__08415",
     mainContent: "mainContent__08415",
     heroHeaderContainer: "heroHeaderContainer__08415",
     responsive: "responsive__08415",
