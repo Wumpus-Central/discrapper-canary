@@ -4,36 +4,36 @@ n.d(t, {
 }),
     n(388685);
 var r = n(951288),
-    o = n(647438),
-    a = n(120356),
-    s = n.n(a),
+    a = n(647438),
+    o = n(120356),
+    s = n.n(o),
     l = n(481060),
     i = n(957537),
     c = n(839008),
     d = n(797967),
-    u = n(755641),
-    p = n(742409),
-    m = n(369509),
+    u = n(353857),
+    p = n(978088),
+    m = n(9377),
     g = n(101017),
-    _ = n(606318),
-    b = n(141006),
+    b = n(606318),
+    _ = n(141006),
     f = n(981631),
     C = n(131085),
     h = n(388032),
-    j = n(583931),
-    v = n(842926);
+    j = n(947018),
+    v = n(715882);
 function x() {
     var e;
-    let [t, n] = o.useState(() => {
-            let e = Math.floor(Math.random() * b.tl.length);
+    let [t, n] = a.useState(() => {
+            let e = Math.floor(Math.random() * _.tl.length);
             return {
-                primary_color: b.tl[e].start,
-                secondary_color: b.tl[e].end,
+                primary_color: _.tl[e].start,
+                secondary_color: _.tl[e].end,
                 tertiary_color: null,
             };
         }),
-        { gradientStyle: a, gradientClassname: c } = (0, l.Icv)({
-            colorStrings: (0, _.DX)(t),
+        { gradientStyle: o, gradientClassname: c } = (0, l.Icv)({
+            colorStrings: (0, b.DX)(t),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
@@ -46,18 +46,18 @@ function x() {
                 children: (0, r.jsx)(p.l, {
                     avatar: i.Z,
                     username: "Cherry",
-                    usernameStyle: a,
+                    usernameStyle: o,
                     usernameClassName: s()(c, v.animateGradient),
                     message: h.intl.string(h.t["6OSasb"]),
                 }),
             }),
             (0, r.jsx)(d.default, {
                 defaultColor: f.p6O,
-                colors: b.tl,
+                colors: _.tl,
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
-                    var r, o;
+                    var r, a;
                     return n(
                         ((r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -84,9 +84,9 @@ function x() {
                             }
                             return e;
                         })({}, t)),
-                        (o = o = { primary_color: e }),
+                        (a = a = { primary_color: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -94,8 +94,8 @@ function x() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
                         r),
                     );
@@ -113,9 +113,9 @@ function x() {
 }
 function k(e) {
     let { guildId: t } = e,
-        [n, a] = o.useState(C.x_.HEART),
+        [n, o] = a.useState(C.x_.HEART),
         s = (0, g.Z)(),
-        l = o.useMemo(
+        l = a.useMemo(
             () => ({
                 unlockedBadges: s.unlockedBadges.slice(0, 10),
                 lockedBadges: [],
@@ -141,7 +141,7 @@ function k(e) {
             }),
             (0, r.jsx)(u.g, {
                 selectedBadge: n,
-                onBadgeClicked: a,
+                onBadgeClicked: o,
                 badgeCollection: l,
             }),
         ],

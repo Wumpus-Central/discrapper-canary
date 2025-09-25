@@ -1,0 +1,81 @@
+n.d(t, { O: () => h });
+var r = n(951288),
+    i = n(647438),
+    l = n(481060),
+    s = n(906732),
+    a = n(516129),
+    o = n(768581),
+    c = n(821458),
+    d = n(981631),
+    u = n(30513),
+    m = n(486324),
+    g = n(200299),
+    p = n(388032),
+    f = n(903102);
+function h(e) {
+    let { guild: t, canManageGuild: n } = e,
+        h = t.features.has(d.oNc.BANNER),
+        b = t.features.has(d.oNc.ANIMATED_BANNER),
+        x = h && n,
+        { analyticsLocations: j } = (0, s.ZP)(),
+        v = i.useCallback(
+            (e, n) => {
+                (0, c.f4)(t, j, e, n);
+            },
+            [j, t],
+        ),
+        _ = i.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    (0, c.E6)({
+                        guild: t,
+                        analyticsLocations: j,
+                        analyticsSection: d.jXE.GUILD_BANNER,
+                        analyticsObject: d.qAy.UPLOAD_IMAGE,
+                        perks: (0, u.XO)(),
+                    });
+            },
+            [j, t],
+        ),
+        O = (0, r.jsx)(a.Z, {
+            image: t.banner,
+            makeURL: (e) =>
+                null != e
+                    ? o.ZP.getGuildBannerURL(
+                          {
+                              id: t.id,
+                              banner: e,
+                          },
+                          b,
+                      )
+                    : null,
+            disabled: !x,
+            onChange: v,
+            hint: p.intl.string(p.t.uPvxqK),
+            onOpenImageSelectModal: () =>
+                (0, c.mw)({
+                    uploadType: m.pC.GUILD_BANNER,
+                    maxFileSizeBytes: g.B,
+                    onComplete: (e) => {
+                        let { imageUri: t, file: n } = e;
+                        return v(t, n);
+                    },
+                    analyticsLocation: {
+                        page: d.ZY5.GUILD_SETTINGS,
+                        section: d.jXE.GUILD_BANNER,
+                    },
+                    analyticsLocations: j,
+                }),
+            enabled: x,
+        });
+    return h
+        ? O
+        : (0, r.jsx)(l.P3F, {
+              "aria-hidden": !0,
+              tabIndex: -1,
+              className: f.upsell,
+              onClick: _,
+              children: O,
+          });
+}

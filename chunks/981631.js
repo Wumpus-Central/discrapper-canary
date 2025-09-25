@@ -6,7 +6,7 @@ n.d(t, {
     $VG: () => E.$V,
     $Y6: () => tb,
     $pe: () => tc,
-    A2N: () => rI,
+    A2N: () => rO,
     ABu: () => t$,
     ADE: () => nE,
     AEg: () => nA,
@@ -15,12 +15,12 @@ n.d(t, {
     AeJ: () => nB,
     Ai1: () => E.Ai,
     AlD: () => E.Al,
-    AzA: () => rb,
+    AzA: () => rg,
     B1h: () => E.B1,
     B9o: () => tf,
     BFP: () => t3,
     BRd: () => E.BR,
-    BVn: () => rW,
+    BVn: () => rH,
     BZL: () => E.BZ,
     BhN: () => nW,
     BiE: () => eQ,
@@ -42,7 +42,7 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => ns,
     FD8: () => eU,
-    FQ1: () => rP,
+    FQ1: () => rN,
     Fc: () => tr,
     FoC: () => X,
     FsG: () => b.Fs,
@@ -59,34 +59,34 @@ n.d(t, {
     Hqc: () => nS,
     IE4: () => F,
     IIU: () => e5,
-    IWh: () => rw,
+    IWh: () => rR,
     IXf: () => te,
     I_8: () => eg,
     IlC: () => n9,
     Ilk: () => E.Il,
-    IyS: () => rD,
+    IyS: () => rP,
     J0y: () => q,
     J6R: () => eG,
     JjL: () => E.Jj,
     JkL: () => tO,
-    Jn9: () => rV,
+    Jn9: () => rZ,
     JuI: () => ez,
     JwP: () => np,
-    K3D: () => rR,
+    K3D: () => rC,
     KA4: () => tR,
     KFR: () => nx,
-    KJ3: () => rS,
+    KJ3: () => rI,
     KsC: () => C,
     L4X: () => eV,
     LAt: () => tl,
     LPv: () => tQ,
     LYt: () => tg,
-    Lg6: () => rT,
+    Lg6: () => rv,
     M7m: () => t0,
     MAM: () => E.MA,
     ME: () => em,
     MUe: () => b.MU,
-    McO: () => rz,
+    McO: () => rW,
     NYc: () => E.NY,
     NYg: () => nV,
     N_j: () => n2,
@@ -140,7 +140,7 @@ n.d(t, {
     Sbl: () => tL,
     Sc2: () => eI,
     Skl: () => E.Sk,
-    T23: () => rY,
+    T23: () => rV,
     TC2: () => E.TC,
     TNx: () => tN,
     TPd: () => o.T,
@@ -148,12 +148,11 @@ n.d(t, {
     TaA: () => rs,
     TzF: () => nJ,
     U66: () => E.U6,
-    U9i: () => E.U9,
     ULH: () => P,
     UWR: () => t2,
-    Ucd: () => rZ,
+    Ucd: () => rG,
     Uk1: () => E.Uk,
-    UkZ: () => rL,
+    UkZ: () => rD,
     Usc: () => Y,
     Uvt: () => l.U,
     V$x: () => c.V,
@@ -184,7 +183,7 @@ n.d(t, {
     ZfP: () => R,
     Zuq: () => E.Zu,
     _1z: () => er,
-    _8R: () => rG,
+    _8R: () => rk,
     _s_: () => S,
     _vf: () => ei,
     a5g: () => tz,
@@ -196,7 +195,7 @@ n.d(t, {
     ane: () => nk,
     apO: () => ri,
     b2L: () => na,
-    b4C: () => rM,
+    b4C: () => rL,
     b8q: () => tk,
     bL: () => eP,
     c2C: () => nM,
@@ -225,15 +224,14 @@ n.d(t, {
     fo$: () => ts,
     frH: () => E.fr,
     fzT: () => t8,
-    gLR: () => rH,
+    gLR: () => rF,
     gg$: () => E.gg,
-    gkr: () => rh,
     hBH: () => s.h,
-    hCA: () => rB,
+    hCA: () => rU,
     hUK: () => nh,
     hVg: () => nC,
     hes: () => Z,
-    hiG: () => rq,
+    hiG: () => rK,
     i$l: () => E.i$,
     iEv: () => ra,
     iLy: () => z,
@@ -243,8 +241,7 @@ n.d(t, {
     j3N: () => ek,
     j8d: () => E.j8,
     jXE: () => tU,
-    jm8: () => rC,
-    jsM: () => rm,
+    jm8: () => rS,
     jwA: () => nw,
     kEZ: () => U,
     kGb: () => rf,
@@ -254,7 +251,7 @@ n.d(t, {
     kod: () => eO,
     l$U: () => eW,
     l4R: () => u.l,
-    l9w: () => rA,
+    l9w: () => rT,
     lTL: () => E.lT,
     ldS: () => E.ld,
     lds: () => ey,
@@ -275,13 +272,13 @@ n.d(t, {
     pKx: () => E.pK,
     pM4: () => j,
     pNK: () => A,
-    pTL: () => rF,
+    pTL: () => rB,
     pjP: () => n4,
     pmI: () => t7,
     q5t: () => tj,
     q9n: () => nH,
     qAy: () => tG,
-    qWG: () => rk,
+    qWG: () => rj,
     qc2: () => rl,
     qhL: () => tn,
     qrD: () => D,
@@ -291,11 +288,11 @@ n.d(t, {
     rsA: () => nR,
     rtL: () => nr,
     rxP: () => E.rx,
-    s9s: () => rE,
+    s9s: () => rm,
     sFg: () => el,
     sHY: () => ro,
     scU: () => tv,
-    si2: () => rN,
+    si2: () => rA,
     t4x: () => tY,
     tG9: () => eZ,
     tHP: () => eD,
@@ -315,14 +312,14 @@ n.d(t, {
     vtS: () => tV,
     vuo: () => eY,
     vxO: () => rr,
-    w2V: () => rv,
+    w2V: () => ry,
     wC$: () => J,
-    wI2: () => rO,
+    wI2: () => rb,
     wZ8: () => e_,
-    wli: () => rx,
+    wli: () => rw,
     x0X: () => nX,
-    x8Z: () => ry,
-    xAR: () => rU,
+    x8Z: () => rE,
+    xAR: () => rM,
     xGv: () => tu,
     xPJ: () => Q,
     xW$: () => nO,
@@ -333,15 +330,15 @@ n.d(t, {
     yXt: () => E.yX,
     yYS: () => E.yY,
     yb: () => W,
-    ylB: () => rj,
+    ylB: () => rx,
     yqN: () => ng,
     ys_: () => e8,
     z7k: () => tI,
     zMe: () => E.zM,
-    zQD: () => rX,
+    zQD: () => rz,
     zUn: () => nL,
-    zYc: () => rg,
-    zo9: () => rK,
+    zYc: () => rh,
+    zo9: () => rY,
 }),
     n(388685),
     n(743606);
@@ -1556,7 +1553,6 @@ let em = "@me",
         ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
         STORE_ASSET: (e, t, n) => "/store/applications/".concat(e, "/assets/").concat(t, ".").concat(n),
         APPLICATION_ASSET: (e, t, n) => "/applications/".concat(e, "/app-assets/").concat(t, ".").concat(n),
-        HYPESQUAD_ONLINE: "/hypesquad/online",
         APPLICATION_STORAGE: (e, t) => "/applications/".concat(e, "/branches/").concat(t, "/storage"),
         APPLICATION_DISCLOSURES: (e) => "/applications/".concat(e, "/disclosures"),
         GIFS_SEARCH: "/gifs/search",
@@ -2820,8 +2816,6 @@ var tU = (function (e) {
             (e.GUILD_ROLE_SUBSCRIPTION = "Guild Role Subscription"),
             (e.GUILD_ROLE_SUBSCRIPTION_CANCEL = "Guild Role Subscription Cancel"),
             (e.SETTINGS_DATA = "Data"),
-            (e.SETTINGS_HYPESQUAD_ONLINE = "Hypesquad Online"),
-            (e.SETTINGS_TOWNHALL = "Townhall"),
             (e.SETTINGS_VOICE_AND_VIDEO = "Voice & Video"),
             (e.SETTINGS_OVERLAY = "Overlay"),
             (e.SETTINGS_NOTIFICATIONS = "Notifications"),
@@ -3314,8 +3308,6 @@ let tZ = {
         DEVELOPER_OPTIONS: "Developer Options",
         WINDOWS: "Windows",
         LINUX: "Linux",
-        HYPESQUAD_ONLINE: "Hypesquad Online",
-        TOWNHALL: "Townhall",
         DESKTOP_APP: "Desktop Only",
         INVENTORY: "Library Inventory",
         TEXT_COMPONENT: "Text Component",
@@ -6111,10 +6103,6 @@ var rt = (function (e) {
         return (e.WIN32 = "win32"), (e.WIN64 = "win64"), (e.MACOS = "macos"), (e.LINUX = "linux"), e;
     })({}),
     rh = (function (e) {
-        return (e.HOUSE_1 = "HOUSE_1"), (e.HOUSE_2 = "HOUSE_2"), (e.HOUSE_3 = "HOUSE_3"), e;
-    })({});
-let rm = "RANDOM_HYPESQUAD_HOUSE";
-var rg = (function (e) {
         return (
             (e.EMPTY_MESSAGE = "EMPTY_MESSAGE"),
             (e.MESSAGE_TOO_LONG = "MESSAGE_TOO_LONG"),
@@ -6124,10 +6112,10 @@ var rg = (function (e) {
             e
         );
     })({}),
-    rE = (function (e) {
+    rm = (function (e) {
         return (e[(e.IMG = 1)] = "IMG"), (e[(e.YOUTUBE_VIDEO = 2)] = "YOUTUBE_VIDEO"), (e[(e.VIDEO = 3)] = "VIDEO"), e;
     })({}),
-    rb = (function (e) {
+    rg = (function (e) {
         return (
             (e.NOW_PLAYING = "1"),
             (e.RECENTLY_PLAYED = "2"),
@@ -6140,7 +6128,7 @@ var rg = (function (e) {
             e
         );
     })({}),
-    ry = (function (e) {
+    rE = (function (e) {
         return (
             (e.APPLICATION_LIBRARY_BADGE = "application_library_badge_18_11_02"),
             (e.SERVER_DISCOVERY_BADGE = "server_discovery_badge_19_02_11"),
@@ -6148,7 +6136,7 @@ var rg = (function (e) {
             e
         );
     })({}),
-    rO = (function (e) {
+    rb = (function (e) {
         return (
             (e.TRENDING_GIFS = "Trending"),
             (e.FAVORITES = "Favorites"),
@@ -6158,12 +6146,12 @@ var rg = (function (e) {
             e
         );
     })({});
-let rv = new Set([E.pK.USD, E.pK.CAD, E.pK.EUR, E.pK.AUD, E.pK.GBP, E.pK.PHP, E.pK.MYR, E.pK.VND, E.pK.KRW, E.pK.IDR]);
-var rI = (function (e) {
+let ry = new Set([E.pK.USD, E.pK.CAD, E.pK.EUR, E.pK.AUD, E.pK.GBP, E.pK.PHP, E.pK.MYR, E.pK.VND, E.pK.KRW, E.pK.IDR]);
+var rO = (function (e) {
     return (e.ALWAYS = "ALWAYS"), (e.ON_CLICK = "ON_CLICK"), (e.IF_MODERATOR = "IF_MODERATOR"), e;
 })({});
-let rT = [];
-var rS = (function (e) {
+let rv = [];
+var rI = (function (e) {
         return (
             (e.CHANNEL_CALL_POPOUT = "DISCORD_CHANNEL_CALL_POPOUT"),
             (e.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
@@ -6175,10 +6163,10 @@ var rS = (function (e) {
             e
         );
     })({}),
-    rA = (function (e) {
+    rT = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rC = (function (e) {
+    rS = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6189,7 +6177,7 @@ var rS = (function (e) {
             e
         );
     })({}),
-    rN = (function (e) {
+    rA = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6198,13 +6186,13 @@ var rS = (function (e) {
             e
         );
     })({}),
-    rR = (function (e) {
+    rC = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rP = (function (e) {
+    rN = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
-    rw = (function (e) {
+    rR = (function (e) {
         return (
             (e.NONE = "none"),
             (e.WIFI = "wifi"),
@@ -6217,7 +6205,7 @@ var rS = (function (e) {
             e
         );
     })({}),
-    rD = (function (e) {
+    rP = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
             (e.SLOW_TWO_G = "slow-2g"),
@@ -6228,14 +6216,14 @@ var rS = (function (e) {
             e
         );
     })({});
-let rx = "discodoEasterEgg";
-var rL = (function (e) {
+let rw = "discodoEasterEgg";
+var rD = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rj = (function (e) {
+    rx = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rM = (function (e) {
+    rL = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),
@@ -6247,22 +6235,22 @@ var rL = (function (e) {
             e
         );
     })({});
-let rk = 2500,
-    rU = 0,
-    rG = 2592000000;
-var rB = (function (e) {
+let rj = 2500,
+    rM = 0,
+    rk = 2592000000;
+var rU = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
-    rZ = (function (e) {
+    rG = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
-let rF = 100,
-    rV = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var rH = (function (e) {
+let rB = 100,
+    rZ = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var rF = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});
-let rY = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
-var rW = (function (e) {
+let rV = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+var rH = (function (e) {
         return (
             (e[(e.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
             (e[(e.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
@@ -6270,10 +6258,10 @@ var rW = (function (e) {
             e
         );
     })({}),
-    rK = (function (e) {
+    rY = (function (e) {
         return (e.LOADING = "LOADING"), (e.ERROR = "ERROR"), (e.READY = "READY"), e;
     })({});
-let rz = Object.freeze({
+let rW = Object.freeze({
         APPLICATIONS: (e) => (null == e ? null : ["applications", e]),
         APP_PREMIUM_BUTTON: (e) => (null == e ? null : ["premium-button", e]),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null == e || null == t ? null : ["custom-activity-links", e, t]),
@@ -6284,5 +6272,5 @@ let rz = Object.freeze({
         USER_APPLICATION_IDENTITIES: (e) => ["user-application-identities", e],
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null == e ? null : ["useParentSkuData", e]),
     }),
-    rq = 4096,
-    rX = 1768248000000;
+    rK = 4096,
+    rz = 1768248000000;

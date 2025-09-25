@@ -1,0 +1,42 @@
+n.d(t, { Z: () => u });
+var r = n(951288);
+n(647438);
+var i = n(755721),
+    l = n(372444),
+    s = n(267642),
+    a = n(981631),
+    o = n(474936),
+    c = n(388032),
+    d = n(284601);
+function u(e) {
+    let { guild: t, numSounds: n, isOutOfSlots: u } = e,
+        m = t.premiumTier,
+        g = (0, s.FZ)(m),
+        p = o._k[m] - 2;
+    if (null == g || m === a.Eu4.TIER_3 || n < p) return null;
+    let f = u
+        ? {
+              color: i.Tt.GREEN,
+              look: i.iL.FILLED,
+              text: c.intl.string(c.t.cYzxGh),
+          }
+        : void 0;
+    return (0, r.jsx)(l.Z, {
+        header: c.intl.string(c.t.zT9Sxc),
+        text: c.intl.formatToPlainString(c.t.OKqEAQ, {
+            level: g,
+            numAdditional: (0, s.Je)(g),
+        }),
+        headerColor: "header-primary",
+        textColor: "text-default",
+        buttonProps: f,
+        guild: t,
+        analyticsLocation: {
+            page: a.ZY5.GUILD_SETTINGS,
+            section: a.jXE.GUILD_SETTINGS_SOUNDBOARD,
+            object: a.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
+            objectType: (0, s.ge)(g),
+        },
+        className: d.container,
+    });
+}
