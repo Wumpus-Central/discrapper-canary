@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(723307),
     y = n(981631),
     O = n(388032),
-    v = n(189730),
+    v = n(879048),
     I = n(557256);
 function T(e, t, n) {
     return (
@@ -131,7 +131,7 @@ let N = 10,
                 }),
                     await (0, s.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("89311"), n.e("20074")]).then(
+                            let { default: e } = await Promise.all([n.e("89311"), n.e("83123")]).then(
                                 n.bind(n, 644941),
                             );
                             return (t) =>
@@ -378,6 +378,7 @@ function G(e) {
         position: y,
         align: O,
         spacing: R,
+        scrollBehavior: "close",
         children: (e) => a(e, g),
     });
 }
