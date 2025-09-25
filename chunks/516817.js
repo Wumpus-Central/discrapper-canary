@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(168352),
     u = n(379839),
     d = n(359135),
-    f = n(993447);
+    f = n(447304);
 function _(e) {
     let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
         _ = (0, u.p)(s, t, n, a, c),
@@ -20,7 +20,10 @@ function _(e) {
     null == t)
         ? null
         : (0, r.jsx)("div", {
-              className: o()(f.container, { [f.fadeIn]: m.current }),
+              className: o()(f.container, {
+                  [f.fadeIn]: m.current,
+                  [f.fitInAccount]: c === d.i.ACCOUNT,
+              }),
               style: { background: _.background },
               "aria-hidden": !0,
               children: (0, r.jsx)(p, {

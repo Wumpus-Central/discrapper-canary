@@ -1,9 +1,9 @@
 e.exports = {
     chat: "chat_f75fb0",
     threadSidebarOpen: "threadSidebarOpen_f75fb0",
-    form: "form_f75fb0",
     uploadArea: "uploadArea_f75fb0",
     threadSidebarFloating: "threadSidebarFloating_f75fb0",
+    form: "form_f75fb0",
     formWithLoadedChatInput: "formWithLoadedChatInput_f75fb0",
     chatContent: "chatContent_f75fb0",
     cursorPointer: "cursorPointer_f75fb0",

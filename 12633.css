@@ -11002,7 +11002,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-normal);
     border-radius: var(--radius-lg);
-    bottom: var(--space-8);
+    bottom: calc(var(--custom-channel-textarea-text-area-height) + 28px);
     box-shadow: var(--shadow-medium);
     box-sizing: border-box;
     left: 0;
@@ -11028,17 +11028,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     right: -16px
 }
 
-.align-chat-input .bottomBar__0f481 {
-    border-radius: var(--radius-lg);
-    bottom: calc(var(--custom-channel-textarea-text-area-height) + 28px)
-}
-
-.align-chat-input .jumpToPresentBar__0f481 {
-    bottom: 28px;
-    padding-bottom: var(--space-8)
-}
-
 .jumpToPresentBar__0f481 {
+    bottom: 28px;
     color: var(--text-default);
     padding-bottom: var(--space-8)
 }
@@ -20221,6 +20212,13 @@ svg.radioIcon_c1e9c4 {
     position: absolute;
     top: 0;
     width: 100%
+}
+
+.fitInAccount__4bbc6 {
+    height: calc(100% + 2px);
+    left: 0;
+    top: -1px;
+    width: calc(100% + 1px)
 }
 
 .fadeIn__4bbc6 {
@@ -31153,19 +31151,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     top: 0
 }
 
-.align-chat-input .emojiButton__74017 {
-    border-radius: 8px;
-    transition-duration: .2s
-}
-
-.align-chat-input .emojiButton__74017:hover {
-    background-color: var(--background-modifier-selected)
-}
-
-.align-chat-input .stickerButton__74017 {
-    transition: background-color .2s, transform .2s
-}
-
 .has-webkit-scrollbar .buttons__74017 {
     margin-right: 0
 }
@@ -31184,7 +31169,14 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding: 0
 }
 
-.emojiButton__74017 {}
+.emojiButton__74017 {
+    border-radius: 8px;
+    transition-duration: .2s
+}
+
+.emojiButton__74017:hover {
+    background-color: var(--background-modifier-selected)
+}
 
 .stickerIcon__74017 {
     height: 20px !important;
@@ -31192,7 +31184,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .stickerButton__74017 {
-    transition: transform .2s
+    transition: background-color .2s, transform .2s
 }
 
 .stickerButtonWithNotification__74017 {
@@ -40976,12 +40968,12 @@ div.modalOverrideBody__34eac {
     opacity: .5
 }
 
-.align-chat-input .button__24af7:not(.noHover__24af7) {
+.button__24af7:not(.noHover__24af7) {
     border-radius: 8px;
     transition-duration: .2s
 }
 
-.align-chat-input .button__24af7:not(.noHover__24af7):hover {
+.button__24af7:not(.noHover__24af7):hover {
     background-color: var(--background-modifier-selected)
 }
 
@@ -56610,10 +56602,6 @@ h3.improved__1689b:after {
     overflow: hidden;
     position: relative;
     width: 100%;
-    --custom-chat-input-margin-bottom: 24px
-}
-
-.align-chat-input .container_c48ade {
     --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
@@ -86395,10 +86383,6 @@ html .invoiceCancelRow__968a4 {
     justify-content: center;
     min-height: 0;
     position: relative;
-    --custom-chat-input-margin-bottom: 24px
-}
-
-.align-chat-input .content__0bd4a {
     --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
@@ -98529,7 +98513,7 @@ img[alt] {
     --custom-app-top-bar-item-radius: 6px;
     --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs));
     --custom-member-list-width: 264px;
-    --custom-channel-textarea-text-area-height: calc(44px + var(--space-xs));
+    --custom-channel-textarea-text-area-height: 56px;
     --custom-chat-aligned-icon-offset: ((var(--chat-avatar-size) - var(--chat-input-icon-size))/2);
     --custom-message-margin-horizontal: var(--space-md)
 }
@@ -98558,10 +98542,6 @@ img[alt] {
     --custom-guild-list-padding: min(var(--space-md), var(--space-16));
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)*2);
     --custom-channel-header-height: calc(40px + var(--space-xs))
-}
-
-.align-chat-input {
-    --custom-channel-textarea-text-area-height: 56px
 }
 
 .density-compact {

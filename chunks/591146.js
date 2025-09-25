@@ -1,10 +1,9 @@
 n.d(t, {
-    CL: () => o,
-    Ml: () => a,
-    VM: () => s,
+    CL: () => a,
+    Ml: () => i,
+    VM: () => o,
 });
-var r = n(338390);
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-04_desktop_refresh_fast_follows",
     label: "Desktop Refresh Fast Follows",
@@ -61,13 +60,12 @@ let i = (0, n(818083).B)({
         },
     ],
 });
+function i(e) {
+    return !1;
+}
 function a(e) {
-    let t = (0, r.Z)(e);
-    return i.useExperiment({ location: e }).largerGuildIcons && !t;
+    return r.useExperiment({ location: e }).darkerGuildListBackground;
 }
 function o(e) {
-    return i.useExperiment({ location: e }).darkerGuildListBackground;
-}
-function s(e) {
-    return i.useExperiment({ location: e }).distinctBorders;
+    return r.useExperiment({ location: e }).distinctBorders;
 }

@@ -1,18 +1,16 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(338390),
-    l = n(859148);
-function c(e) {
-    let { children: t, className: n } = e,
-        i = (0, s.Z)("PanelTitle");
-    return (0, r.jsx)(o.Text, {
+var l = n(120356),
+    i = n.n(l),
+    a = n(481060),
+    o = n(384448);
+function s(e) {
+    let { children: t, className: n } = e;
+    return (0, r.jsx)(a.Text, {
         color: "none",
-        className: a()(l.title, n),
-        variant: i ? "text-md/medium" : "text-sm/medium",
+        className: i()(o.title, n),
+        variant: "text-md/medium",
         children: t,
     });
 }
