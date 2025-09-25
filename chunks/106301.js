@@ -1,18 +1,25 @@
 let r, i, a, o;
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, {
+    Z: () => U,
+    o: () => S,
+}),
+    n(388685),
+    n(539854);
 var s,
-    l = n(512722),
+    l = n(348327),
     c = n.n(l),
-    u = n(392711),
+    u = n(512722),
     d = n.n(u),
-    f = n(442837),
-    _ = n(570140),
-    p = n(594190),
-    h = n(574176),
-    m = n(54332),
-    g = n(505905),
-    E = n(981631);
-function b(e, t, n) {
+    f = n(392711),
+    _ = n.n(f),
+    p = n(442837),
+    h = n(570140),
+    m = n(594190),
+    g = n(574176),
+    E = n(54332),
+    b = n(505905),
+    y = n(981631);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +32,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +43,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,153 +60,158 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = 7,
-    T = S();
-function S() {
+let S = 6,
+    A = 13,
+    C = N();
+function N() {
     return {
-        recentStatuses: g.ux,
+        recentStatuses: b.ux,
         favoritedStatuses: [],
         currentDefaultStatus: null,
     };
 }
-function A() {
-    T = S();
+function R() {
+    C = N();
 }
-function C(e) {
+function P(e) {
     let { status: t, guildId: n, saveAsDefault: s } = e;
-    if ((c()(t !== g.tN.CUSTOM, "Hang Status cannot be custom"), (r = t), (i = null), (o = null), null != t)) {
-        let e = [...T.recentStatuses],
-            n = e.findIndex((e) => (0, m.Z)(e) && e === t);
-        n >= 0 ? e.splice(n, 1) : e.length === I && e.splice(I - 1, 1), (T.recentStatuses = [t, ...e]);
+    if ((d()(t !== b.tN.CUSTOM, "Hang Status cannot be custom"), (r = t), (i = null), (o = null), null != t)) {
+        let e = [...C.recentStatuses],
+            n = e.findIndex((e) => (0, E.Z)(e) && e === t);
+        n >= 0 ? e.splice(n, 1) : e.length === A && e.splice(A - 1, 1), (C.recentStatuses = [t, ...e]);
     }
     s &&
-        (T.currentDefaultStatus = {
+        (C.currentDefaultStatus = {
             status: t,
             customHangStatus: i,
             gameActivityHangStatus: o,
         });
-    let { defaultStatusVariant: l } = h.n.getCurrentConfig({
+    let { defaultStatusVariant: l } = g.n.getCurrentConfig({
         guildId: n,
         location: "UpdateHangStatus",
     });
     a = {
-        type: E.IIU.HANG_STATUS,
+        type: y.IIU.HANG_STATUS,
         name: "Hang Status",
         state: "".concat(r, ":").concat(l),
     };
 }
-function N(e) {
+function w(e) {
     let { status: t, emoji: n, saveAsDefault: s } = e;
-    (r = g.tN.CUSTOM),
+    (r = b.tN.CUSTOM),
         (o = null),
         (i = {
             status: t,
             emoji: n,
         });
-    let l = [...T.recentStatuses],
-        c = l.findIndex((e) => !(0, m.Z)(e) && e.status === t && d().isEqual(e.emoji, n));
-    c >= 0 ? l.splice(c, 1) : l.length === I && l.splice(I - 1, 1),
-        (T.recentStatuses = [i, ...l]),
+    let l = [...C.recentStatuses],
+        c = l.findIndex((e) => !(0, E.Z)(e) && e.status === t && _().isEqual(e.emoji, n));
+    c >= 0 ? l.splice(c, 1) : l.length === A && l.splice(A - 1, 1),
+        (C.recentStatuses = [i, ...l]),
         s &&
-            (T.currentDefaultStatus = {
+            (C.currentDefaultStatus = {
                 status: r,
                 customHangStatus: i,
                 gameActivityHangStatus: o,
             }),
         (a = {
-            type: E.IIU.HANG_STATUS,
+            type: y.IIU.HANG_STATUS,
             name: "Hang Status",
             state: r,
             details: t,
             emoji: n,
         });
 }
-function R(e) {
+function D(e) {
     let { applicationId: t, saveAsDefault: n } = e;
     (o = t),
         (r = null),
         (i = null),
         (a = null),
         n &&
-            (T.currentDefaultStatus = {
+            (C.currentDefaultStatus = {
                 status: r,
                 customHangStatus: i,
                 gameActivityHangStatus: o,
             });
 }
-function P(e) {
+function x(e) {
     let { saveAsDefault: t } = e;
     (r = null),
         (i = null),
         (o = null),
         t &&
-            (T.currentDefaultStatus = {
+            (C.currentDefaultStatus = {
                 status: null,
                 customHangStatus: null,
                 gameActivityHangStatus: null,
             }),
         (a = null);
 }
-function w(e) {
+function L(e) {
     let { status: t, emoji: n } = e,
-        r = [...T.favoritedStatuses],
-        i = r.findIndex((e) => ((0, m.Z)(e) ? e === t : e.status === t && d().isEqual(e.emoji, n))),
-        a =
+        r = !1,
+        i = [...C.favoritedStatuses],
+        a = i.findIndex((e) => ((0, E.Z)(e) ? e === t : e.status === t && _().isEqual(e.emoji, n))),
+        o =
             null == n
                 ? t
                 : {
                       status: t,
                       emoji: n,
                   };
-    return -1 === i ? r.push(a) : r.splice(i, 1), (T.favoritedStatuses = r), !0;
+    return (
+        -1 === a && i.length < S ? (i.push(o), (r = !0)) : a >= 0 && (i.splice(a, 1), (r = !0)),
+        !!r && ((C.favoritedStatuses = i), !0)
+    );
 }
-function D() {
+function j() {
     if (null == o) return !1;
-    if (!p.ZP.getRunningVerifiedApplicationIds().includes(o)) {
+    if (!m.ZP.getRunningVerifiedApplicationIds().includes(o)) {
         var e;
         return (
             (o = null),
-            (null == (e = T.currentDefaultStatus) ? void 0 : e.gameActivityHangStatus) != null &&
-                (T.currentDefaultStatus.gameActivityHangStatus = null),
+            (null == (e = C.currentDefaultStatus) ? void 0 : e.gameActivityHangStatus) != null &&
+                (C.currentDefaultStatus.gameActivityHangStatus = null),
             !0
         );
     }
     return !1;
 }
-function x(e) {
+function M(e) {
     let { statuses: t } = e,
-        n = [...T.recentStatuses],
-        s = [...T.favoritedStatuses];
+        n = [...C.recentStatuses],
+        s = [...C.favoritedStatuses];
     t.forEach((e) => {
         let { status: t, emoji: l } = e,
-            c = n.findIndex((e) => ((0, m.Z)(e) ? e === t : e.status === t && d().isEqual(e.emoji, l))),
-            u = s.findIndex((e) => ((0, m.Z)(e) ? e === t : e.status === t && d().isEqual(e.emoji, l)));
+            c = n.findIndex((e) => ((0, E.Z)(e) ? e === t : e.status === t && _().isEqual(e.emoji, l))),
+            u = s.findIndex((e) => ((0, E.Z)(e) ? e === t : e.status === t && _().isEqual(e.emoji, l)));
         c >= 0 && n.splice(c, 1),
             u >= 0 && s.splice(u, 1),
             t === (null == i ? void 0 : i.status) &&
-                d().isEqual(l, null == i ? void 0 : i.emoji) &&
-                ((r = null), (i = null), (o = null), (T.currentDefaultStatus = null), (a = null));
+                _().isEqual(l, null == i ? void 0 : i.emoji) &&
+                ((r = null), (i = null), (o = null), (C.currentDefaultStatus = null), (a = null));
     }),
-        (T.recentStatuses = n),
-        (T.favoritedStatuses = s);
+        (C.recentStatuses = n),
+        (C.favoritedStatuses = s);
 }
-class L extends (s = f.ZP.PersistedStore) {
+class k extends (s = p.ZP.PersistedStore) {
     initialize(e) {
-        (T = y({}, S(), null != e ? e : {})), this.waitFor(p.ZP), this.syncWith([p.ZP], D);
+        (C = v({}, N(), null != e ? e : {})), this.waitFor(m.ZP), this.syncWith([m.ZP], j);
     }
     getState() {
-        return T;
+        return C;
     }
     getCurrentHangStatus() {
         return r;
@@ -211,25 +223,32 @@ class L extends (s = f.ZP.PersistedStore) {
         return o;
     }
     getRecentStatuses() {
-        return T.recentStatuses;
+        return C.recentStatuses;
     }
     getFavoritedStatuses() {
-        return T.favoritedStatuses;
+        return C.favoritedStatuses;
     }
     getCurrentDefaultStatus() {
-        return T.currentDefaultStatus;
+        return C.currentDefaultStatus;
     }
     getHangStatusActivity() {
         return null == r ? null : a;
     }
+    isFavorited(e) {
+        let t = (0, E.Z)(e);
+        return C.favoritedStatuses.some(
+            (n) =>
+                ((0, E.Z)(n) && t && n === e) || (!(0, E.Z)(n) && !t && e.status === n.status && c()(e.emoji, n.emoji)),
+        );
+    }
 }
-b(L, "displayName", "HangStatusStore"),
-    b(L, "persistKey", "HangStatusStore"),
-    b(L, "migrations", [
+O(k, "displayName", "HangStatusStore"),
+    O(k, "persistKey", "HangStatusStore"),
+    O(k, "migrations", [
         (e) => {
             if (null != e.currentDefaultStatus && null == e.currentDefaultStatus.gameActivityHangStatus) {
-                let t = v(y({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
-                return v(y({}, e), { currentDefaultStatus: t });
+                let t = T(v({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
+                return T(v({}, e), { currentDefaultStatus: t });
             }
             return e;
         },
@@ -241,12 +260,12 @@ b(L, "displayName", "HangStatusStore"),
             e
         ),
     ]);
-let j = new L(_.Z, {
-    LOGOUT: A,
-    UPDATE_HANG_STATUS: C,
-    UPDATE_HANG_STATUS_CUSTOM: N,
-    UPDATE_HANG_STATUS_GAME_ACTIVITY: R,
-    DELETE_INVALID_HANG_STATUSES: x,
-    CLEAR_HANG_STATUS: P,
-    UPDATE_FAVORITE_HANG_STATUS: w,
+let U = new k(h.Z, {
+    LOGOUT: R,
+    UPDATE_HANG_STATUS: P,
+    UPDATE_HANG_STATUS_CUSTOM: w,
+    UPDATE_HANG_STATUS_GAME_ACTIVITY: D,
+    DELETE_INVALID_HANG_STATUSES: M,
+    CLEAR_HANG_STATUS: x,
+    UPDATE_FAVORITE_HANG_STATUS: L,
 });
