@@ -23,8 +23,8 @@ var r = n(442837),
     i = n(480916),
     a = n(453679),
     o = n(81643),
-    s = n(974814),
-    l = n(500496),
+    s = n(500496),
+    l = n(128064),
     c = n(601964),
     u = n(592125),
     d = n(731290),
@@ -135,13 +135,13 @@ function j(e) {
     return null != t && n && i && t.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD);
 }
 function M() {
-    let e = (0, s.H1)({ location: "age-gate-utils" }),
+    let e = (0, l.c_)("age-gate-utils"),
         t = (0, a.u)("age-gate-utils"),
         n = (0, o.sf)();
     return (e || t) && n;
 }
 function k() {
-    let e = (0, s.s8)({ location: "age-gate-utils" }),
+    let e = (0, l.pY)("age-gate-utils"),
         t = (0, o.L5)(),
         n = (0, a.z)("age-gate-utils");
     return (e || n) && t;
@@ -252,7 +252,7 @@ let B = () => {
         return (
             null != t &&
             (0, c.Y2)(t) &&
-            (0, l.Tz)({
+            (0, s.Tz)({
                 guildId: e,
                 location: "age-gate-utils",
             })
@@ -291,7 +291,7 @@ function q(e) {
     if (null == e) return !1;
     let n = d.Z.didAgree(e.guild_id),
         r = (null == (t = _.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) === !1,
-        i = (0, s.H1)({ location: "age-gate-utils" }),
+        i = (0, l.c_)("age-gate-utils"),
         a = (0, o.sf)(),
         u = !(n && !r) || (a && i);
     if (e.isNSFW() && u) return !0;
@@ -299,7 +299,7 @@ function q(e) {
         h = f.Z.getGuild(p);
     return (
         null != h &&
-        (((0, l.Tz)({
+        (((0, s.Tz)({
             guildId: p,
             location: "age-gate-utils",
         }) &&
@@ -316,8 +316,8 @@ function X(e) {
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         a = j(null == e ? void 0 : e.guild_id),
-        u = (0, s.s8)({ location: "age-gate-utils" }),
-        p = (0, l.j0)({
+        u = (0, l.pY)("age-gate-utils"),
+        p = (0, s.j0)({
             guildId: null == e ? void 0 : e.guild_id,
             location: "age-gate-utils",
         }),
