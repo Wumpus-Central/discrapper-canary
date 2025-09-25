@@ -42,13 +42,13 @@ var r = n(951288),
     H = n(730910),
     z = n(103576),
     V = n(475013),
-    W = n(213956),
-    K = n(702478),
-    Y = n(247031),
-    q = n(29605),
-    X = n(324330),
-    Q = n(651780),
-    J = n(279542),
+    W = n(17699),
+    K = n(213956),
+    Y = n(450377),
+    q = n(702478),
+    X = n(29605),
+    Q = n(324330),
+    J = n(651780),
     $ = n(665324),
     ee = n(208150),
     et = n(353398),
@@ -218,7 +218,7 @@ let e_ = {
                     section: ef.pNK.EMOJI,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
                     label: ex.intl.string(ex.t.sMOuub),
-                    element: q.ZP,
+                    element: X.ZP,
                     predicate: () => t.canManageGuildExpressions,
                 };
             case ef.pNK.STICKERS:
@@ -296,7 +296,7 @@ let e_ = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
                     label: ex.intl.string(ex.t["suhY+f"]),
                     ariaLabel: ex.intl.string(ex.t["suhY+f"]),
-                    element: W.Z,
+                    element: K.Z,
                     newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
                     predicate: () => t.canManageGuild && t.guild.features.has(ef.oNc.COMMUNITY),
                 };
@@ -305,7 +305,7 @@ let e_ = {
                     section: ef.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: ex.intl.string(ex.t["suhY+f"]),
-                    element: J.ZP,
+                    element: Y.ZP,
                     predicate: () => t.canManageGuild && !t.guild.features.has(ef.oNc.COMMUNITY),
                 };
             case ef.pNK.GUILD_AUTOMOD:
@@ -335,7 +335,7 @@ let e_ = {
                     section: ef.pNK.BANS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
                     label: ex.intl.string(ex.t.ZbeITU),
-                    element: Y.Z,
+                    element: W.Z,
                     predicate: () => t.canManageBans,
                 };
             case ef.pNK.COMMUNITY:
@@ -393,7 +393,7 @@ let e_ = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
                     label: ex.intl.string(ex.t["0wWfUF"]),
                     ariaLabel: ex.intl.string(ex.t["0wWfUF"]),
-                    element: K.Z,
+                    element: q.Z,
                     predicate: () => eN,
                 };
             case ef.pNK.DISCOVERY_LANDING_PAGE:
@@ -478,7 +478,7 @@ let e_ = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                     label: ex.intl.string(ex.t["8+VX4+"]),
                     ariaLabel: ex.intl.string(ex.t["8+VX4+"]),
-                    element: Q.Z,
+                    element: J.Z,
                     className: eb.serverBoostTabItem,
                     icon: (0, r.jsx)(s.$Eu, {
                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
@@ -490,13 +490,13 @@ let e_ = {
                 return {
                     section: ef.pNK.MEMBERS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-                    label: (0, r.jsx)(X.$r, {}),
+                    label: (0, r.jsx)(Q.$r, {}),
                     ariaLabel: ex.intl.string(ex.t["9Oq93t"]),
-                    element: X.ZP,
+                    element: Q.ZP,
                     type: o.bT.CUSTOM,
                     predicate: () => t.canAccessMembersPage,
                     onClick: () => {
-                        (0, X.JA)();
+                        (0, Q.JA)();
                     },
                 };
             case ef.pNK.DELETE:
