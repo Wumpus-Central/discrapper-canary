@@ -260,6 +260,7 @@ function Q(e) {
                     : null,
             badges: er,
             widgets: null == (_ = z.widgets) ? void 0 : _.map(Z).filter(h.lm),
+            wishlistSettings: z.wishlist_settings,
         }),
         (null == (E = z.user_profile) || null == (g = E.profile_effect) ? void 0 : g.expires_at) != null)
     ) {
@@ -528,6 +529,14 @@ class eh extends f.Z {
     getWidgets(e) {
         var t;
         return null == (t = w.get(e)) ? void 0 : t.widgets;
+    }
+    getWishlistIds(e) {
+        let t = w.get(e);
+        return (null == t ? void 0 : t.wishlistSettings) != null ? Object.keys(t.wishlistSettings) : [];
+    }
+    getFirstWishlistId(e) {
+        let t = this.getWishlistIds(e);
+        return t.length > 0 ? t[0] : null;
     }
     takeSnapshot() {
         let e = u.default.getId(),
