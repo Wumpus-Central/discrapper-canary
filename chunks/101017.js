@@ -1,38 +1,35 @@
-n.d(t, { Z: () => u }), n(539854), n(388685);
+n.d(t, { Z: () => c }), n(539854), n(388685);
 var r = n(647438),
     s = n(442837),
     i = n(999382),
     l = n(905128),
-    a = n(901005),
-    c = n(131085);
-function u() {
+    a = n(131085);
+function c() {
     let e = (0, s.e7)([i.Z], () => i.Z.getGuild()),
         t = (0, s.e7)([l.Z], () => {
             var t;
             return null == (t = l.Z.getStateForGuild(null == e ? void 0 : e.id)) ? void 0 : t.allPowerups;
-        }),
-        n = (0, a.i)(null == e ? void 0 : e.id, "GuildSettingsTags");
+        });
     return (0, r.useMemo)(() => {
-        let r = c.QV.map((e) => ({ kind: e })),
-            s = [];
+        let n = a.QV.map((e) => ({ kind: e })),
+            r = [];
         return (
-            n &&
-                (null == e ? void 0 : e.features) != null &&
-                Object.keys(c.Ct).forEach((n) => {
-                    let i = c.Ct[n],
-                        l = c.AC[n],
-                        a = null == t ? void 0 : t[l],
-                        u = null == a ? void 0 : a.title,
-                        d = i.map((e) => ({
+            (null == e ? void 0 : e.features) == null ||
+                Object.keys(a.Ct).forEach((s) => {
+                    let i = a.Ct[s],
+                        l = a.AC[s],
+                        c = null == t ? void 0 : t[l],
+                        d = null == c ? void 0 : c.title,
+                        o = i.map((e) => ({
                             kind: e,
-                            packName: u,
+                            packName: d,
                         }));
-                    e.features.has(n) ? r.push(...d) : s.push(...d);
+                    e.features.has(s) ? n.push(...o) : r.push(...o);
                 }),
             {
-                unlockedBadges: r,
-                lockedBadges: s,
+                unlockedBadges: n,
+                lockedBadges: r,
             }
         );
-    }, [null == e ? void 0 : e.features, n, t]);
+    }, [null == e ? void 0 : e.features, t]);
 }

@@ -15,12 +15,12 @@ var r = n(951288),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    O = n(989308),
+    O = n(258640),
     y = n(388032),
-    v = n(931942);
+    v = n(621779);
 function j(e) {
     let { guild: t, withMargin: l } = e,
-        j = (0, b.Z)(t, "GuildPowerupsProgressBar"),
+        j = (0, b.Z)(t),
         x = (0, m.Z)(t.id),
         C = i.useCallback(() => {
             (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
