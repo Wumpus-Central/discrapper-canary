@@ -1534,32 +1534,43 @@ let e_ = r.memo(function () {
     ey = r.memo(function () {
         let e = (0, d.e7)([E.ZP], () => E.ZP.DEV_isStateDebuggingEnabled()),
             t = (0, d.e7)([E.ZP], () => E.ZP.DEV_getDebuggingState());
-        return (0, a.jsxs)("div", {
-            className: H.panelGroup,
-            children: [
-                (0, a.jsx)("div", {
-                    className: H.panelHeader,
-                    children: (0, a.jsx)(u.$q, {
-                        value: e,
-                        onChange: () => h.Z.setStateDebugging(!e),
-                        size: 18,
-                        type: u.M0.INVERTED,
-                        shape: u.zV.BOX,
-                        children: (0, a.jsx)(m.Text, {
-                            tag: "span",
-                            variant: "text-md/normal",
-                            color: "text-muted",
-                            children: "Poll Native Module State",
+        return (
+            r.useEffect(
+                () => (
+                    h.Z.setStateDebugging(!0),
+                    () => {
+                        h.Z.setStateDebugging(!1);
+                    }
+                ),
+                [],
+            ),
+            (0, a.jsxs)("div", {
+                className: H.panelGroup,
+                children: [
+                    (0, a.jsx)("div", {
+                        className: H.panelHeader,
+                        children: (0, a.jsx)(u.$q, {
+                            value: e,
+                            onChange: () => h.Z.setStateDebugging(!e),
+                            size: 18,
+                            type: u.M0.INVERTED,
+                            shape: u.zV.BOX,
+                            children: (0, a.jsx)(m.Text, {
+                                tag: "span",
+                                variant: "text-md/normal",
+                                color: "text-muted",
+                                children: "Poll Native Module State",
+                            }),
                         }),
                     }),
-                }),
-                (0, a.jsx)(m.Text, {
-                    variant: "text-sm/normal",
-                    color: "text-secondary",
-                    children: (0, a.jsx)("pre", { children: JSON.stringify(t, void 0, 2) }),
-                }),
-            ],
-        });
+                    (0, a.jsx)(m.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-secondary",
+                        children: (0, a.jsx)("pre", { children: JSON.stringify(t, void 0, 2) }),
+                    }),
+                ],
+            })
+        );
     });
 function eC() {
     return (0, a.jsx)(m.w0Z, {
