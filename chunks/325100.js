@@ -1,10 +1,11 @@
-n.d(t, { uH: () => c }), n(35282);
+n.d(t, { uH: () => f }), n(35282);
 var r = n(593473),
     i = n(843611);
 n(960048);
 var a = n(833549),
-    o = n(981631);
-function s(e, t, n) {
+    o = n(86922),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,11 +19,32 @@ function s(e, t, n) {
     );
 }
 n(474936);
-let l = (e, t, n) => !t.startsWith(o.Z5c.BILLING_MANAGE_SUBSCRIPTION) && n === o.MUe.APPLE_PAYMENT_LINK && e,
-    c = (e) => {
+let c = (e) => {
         let { location: t } = e,
-            { search: n, pathname: o } = (0, i.TH)(),
-            { enabled: s } = a.E.useConfig({ location: t }),
-            { deep_link_type: c } = (0, r.parse)(n);
-        return l(s, o, c);
+            { enabled: n } = TurtleExperiment.getCurrentConfig({ location: t });
+        return n
+            ? {
+                  enabled: !1,
+                  discountEnabled: !1,
+              }
+            : MobileApplePaymentLinkExperiment.getConfig({ location: t });
+    },
+    u = (e) => {
+        let { location: t } = e,
+            { enabled: n } = o.n.useExperiment({ location: t }),
+            r = a.E.useConfig({ location: t });
+        return n
+            ? {
+                  enabled: !1,
+                  discountEnabled: !1,
+              }
+            : r;
+    },
+    d = (e, t, n) => !t.startsWith(s.Z5c.BILLING_MANAGE_SUBSCRIPTION) && n === s.MUe.APPLE_PAYMENT_LINK && e,
+    f = (e) => {
+        let { location: t } = e,
+            { search: n, pathname: a } = (0, i.TH)(),
+            { enabled: o } = u({ location: t }),
+            { deep_link_type: s } = (0, r.parse)(n);
+        return d(o, a, s);
     };
