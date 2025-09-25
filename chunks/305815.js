@@ -10,9 +10,9 @@ var a = t(951288),
     u = t(164946),
     m = t(25990),
     p = t(594174),
-    C = t(960048),
-    f = t(509212),
-    g = t(272008),
+    g = t(960048),
+    C = t(509212),
+    f = t(272008),
     v = t(113434),
     h = t(497505),
     x = t(475595),
@@ -60,7 +60,7 @@ function b(e) {
             (0, a.jsx)(s.zxk, {
                 variant: "secondary",
                 size: "sm",
-                text: N.intl.string(N.t.MAS7uL),
+                text: m ? N.intl.string(N.t.hjaYYm) : N.intl.string(N.t.MAS7uL),
                 loading: "applying" === o,
                 disabled: "claimed" !== o || m,
                 onClick: i,
@@ -72,7 +72,7 @@ function b(e) {
 function T(e) {
     var n, t;
     let { quest: s, onClose: c, transitionState: v, preview: x, location: N, sourceQuestContent: y } = e,
-        T = r.useMemo(() => (0, f.xn)(s.config), [s]),
+        T = r.useMemo(() => (0, C.xn)(s.config), [s]),
         A = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         [w, P] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
@@ -83,7 +83,7 @@ function T(e) {
                 }, [n, t]),
                 l = async () => {
                     if (null == a)
-                        return C.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                        return g.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
                     (0, o.cV)(a);
                     let e = m.Z.getAllPending(),
                         n = (0, u.ED)(e),
@@ -97,7 +97,7 @@ function T(e) {
         [D, R] = r.useState(k ? "loading" : "claimed");
     r.useEffect(() => {
         k &&
-            (0, g.QB)(s.id, h.y$.CROSS_PLATFORM, N)
+            (0, f.QB)(s.id, h.y$.CROSS_PLATFORM, N)
                 .then(() => R("claimed"))
                 .catch(() => R("error"));
     }, [s, N, k]);
