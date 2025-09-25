@@ -13,8 +13,8 @@ var s = i(951288),
     p = i(933557),
     h = i(313201),
     f = i(434404),
-    v = i(764260),
-    b = i(999382),
+    v = i(999382),
+    b = i(84058),
     g = i(422559),
     N = i(210887),
     j = i(984933),
@@ -669,7 +669,7 @@ let K = (e) => {
         n.useEffect(() => {
             E.default.track(L.rMx.OPEN_MODAL, { type: y.tA });
         }, []);
-        let { guild: a } = (0, o.cj)([b.Z], () => b.Z.getProps()),
+        let { guild: a } = (0, o.cj)([v.Z], () => v.Z.getProps()),
             c = (0, o.e7)([N.Z], () => N.Z.theme),
             [d, u] = n.useState(!1),
             [m, g] = n.useState(!y.$X.some((e) => w.oz(e, a))),
@@ -707,7 +707,7 @@ let K = (e) => {
                 e.add(L.oNc.COMMUNITY);
                 let t = m ? r.Od(q.permissions, y.mu) : q.permissions,
                     i = U(B({}, q), { permissions: t });
-                t !== q.permissions && (await (0, v.Gf)(a.id, [i])),
+                t !== q.permissions && (await (0, b.Gf)(a.id, [i])),
                     f.Z.updateGuild({
                         features: e,
                         rulesChannelId: C,

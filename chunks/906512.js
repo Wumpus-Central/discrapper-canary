@@ -1,0 +1,309 @@
+n.d(t, { Z: () => I }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
+    o = n(692547),
+    c = n(481060),
+    d = n(142497),
+    u = n(338327),
+    m = n(496675),
+    g = n(63063),
+    p = n(981631),
+    f = n(190378),
+    h = n(388032),
+    x = n(275657),
+    b = n(438825),
+    j = n(236140),
+    v = n(37069),
+    _ = n(518513),
+    O = n(40271);
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+let C = [
+        {
+            iconSrc: n(348986),
+            name: "Pokemon GO Paris",
+            position: [-230, -100],
+        },
+        {
+            iconSrc: n(930065),
+            name: "Python",
+            position: [-180, -100],
+            faded: !0,
+            rightAlign: !0,
+        },
+        {
+            iconSrc: _,
+            name: "Learn Latin",
+            position: [-280, -30],
+            faded: !0,
+        },
+        {
+            iconSrc: O,
+            name: "r/leagueoflegends",
+            position: [-320, -30],
+            rightAlign: !0,
+        },
+        {
+            iconSrc: n(345669),
+            name: "Sneaker Fans",
+            position: [-250, 40],
+        },
+        {
+            iconSrc: v,
+            name: "Hogwarts School",
+            position: [-270, 40],
+            faded: !0,
+            rightAlign: !0,
+        },
+    ],
+    N = (e) => {
+        let { icon: t, color: n, size: i = 24, header: l, body: s } = e;
+        return (0, r.jsxs)("div", {
+            className: x.featureCard,
+            children: [
+                (0, r.jsx)("div", {
+                    className: x.featureIcon,
+                    children: (0, r.jsx)(t, {
+                        color: null != n ? n : "currentColor",
+                        width: i,
+                        height: i,
+                        size: "custom",
+                    }),
+                }),
+                (0, r.jsx)(c.X6q, {
+                    variant: "heading-md/semibold",
+                    className: x.featureHeader,
+                    children: l,
+                }),
+                (0, r.jsx)(c.Text, {
+                    color: "header-secondary",
+                    variant: "text-sm/normal",
+                    children: s,
+                }),
+            ],
+        });
+    },
+    E = (e) => {
+        let { iconSrc: t, name: n, position: i, faded: l, rightAlign: a, imageCoordinates: o } = e,
+            d = {
+                [a ? "right" : "left"]: o[0] + i[0],
+                top: o[1] + i[1],
+            };
+        return (0, r.jsxs)("div", {
+            className: s()(x.guildDetails, { [x.faded]: l }),
+            style: d,
+            children: [
+                (0, r.jsx)("div", {
+                    className: x.guildIcon,
+                    children: (0, r.jsx)("img", {
+                        alt: "",
+                        src: t,
+                        width: 24,
+                        height: 24,
+                    }),
+                }),
+                (0, r.jsx)(c.X6q, {
+                    variant: "heading-deprecated-12/semibold",
+                    children: n,
+                }),
+            ],
+        });
+    },
+    I = (e) => {
+        let { guild: t } = e,
+            [n, l] = i.useState(0),
+            [s, v] = i.useState(0),
+            [_, O] = i.useState(),
+            I = (0, a.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
+            S = null == _ ? void 0 : _.offsetWidth,
+            T = null == _ ? void 0 : _.offsetHeight;
+        i.useEffect(() => {
+            null != S && l(S / 2), null != T && v(T / 2);
+        }, [S, T, l, v]),
+            i.useEffect(() => {
+                (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+            }, []);
+        let P = () => {
+            u.Z.open();
+        };
+        return (0, r.jsxs)("div", {
+            className: x.container,
+            children: [
+                (0, r.jsxs)("div", {
+                    className: x.banner,
+                    ref: (e) => O(e),
+                    children: [
+                        C.map((e) => {
+                            var t, i;
+                            return (0, r.jsx)(
+                                E,
+                                ((t = y({}, e)),
+                                (i = i =
+                                    {
+                                        imageCoordinates: [n, s],
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(i)).forEach(function (e) {
+                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                      }),
+                                t),
+                                e.name,
+                            );
+                        }),
+                        (0, r.jsx)("img", {
+                            alt: "",
+                            src: b,
+                            className: x.image,
+                            width: 256,
+                        }),
+                        (0, r.jsx)("img", {
+                            alt: "",
+                            src: j,
+                            className: x.sparkles,
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(c.X6q, {
+                    variant: "heading-xl/semibold",
+                    children: h.intl.string(h.t["M/gBcH"]),
+                }),
+                (0, r.jsx)(c.Text, {
+                    color: "header-secondary",
+                    variant: "text-md/normal",
+                    className: x.body,
+                    children: h.intl.format(h.t["52EgsL"], {
+                        helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                    }),
+                }),
+                (0, r.jsx)(c.ua7, {
+                    text: I ? null : h.intl.string(h.t["pjG+T0"]),
+                    "aria-label": I ? void 0 : h.intl.string(h.t["pjG+T0"]),
+                    children: (e) =>
+                        (0, r.jsx)("div", {
+                            "data-button-hoisted-classname-wrapper": !0,
+                            className: x.button,
+                            children: (0, r.jsx)(
+                                c.zxk,
+                                y(
+                                    {
+                                        variant: "primary",
+                                        text: h.intl.string(h.t.LhlgY2),
+                                        onClick: P,
+                                        disabled: !I,
+                                    },
+                                    e,
+                                ),
+                            ),
+                        }),
+                }),
+                (0, r.jsx)("hr", { className: x.separator }),
+                (0, r.jsx)(c.Text, {
+                    color: "header-secondary",
+                    variant: "text-sm/normal",
+                    children: h.intl.string(h.t.OzLWLC),
+                }),
+                (0, r.jsx)(c.Text, {
+                    color: "header-secondary",
+                    className: x.body,
+                    variant: "text-sm/normal",
+                    children: h.intl.format(h.t.rjhrqK, {
+                        helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE),
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: x.features,
+                    children: [
+                        {
+                            icon: c.IeX,
+                            color: o.Z.unsafe_rawColors.GREEN_360.css,
+                            header: h.intl.string(h.t.oVQF29),
+                            body: h.intl.format(h.t.A6G7am, {
+                                featureHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        "strong",
+                                        {
+                                            className: x.featuredText,
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
+                            }),
+                        },
+                        {
+                            icon: c.IeX,
+                            color: o.Z.unsafe_rawColors.PARTNER.css,
+                            header: h.intl.string(h.t["0rJl9/"]),
+                            body: h.intl.format(h.t.XsCNk5, {
+                                infoHook: () =>
+                                    (0, r.jsx)(c.ua7, {
+                                        text: h.intl.string(h.t.kPJlTk),
+                                        "aria-label": h.intl.string(h.t.kPJlTk),
+                                        children: (e) =>
+                                            (0, r.jsx)(
+                                                c.d3s,
+                                                y(
+                                                    {
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                        className: x.infoIcon,
+                                                    },
+                                                    e,
+                                                ),
+                                            ),
+                                    }),
+                                featureHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        "strong",
+                                        {
+                                            className: x.featuredText,
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
+                            }),
+                        },
+                        {
+                            icon: c.d3s,
+                            color: o.Z.unsafe_rawColors.RED_360.css,
+                            header: h.intl.string(h.t.W2kLJC),
+                            body: h.intl.string(h.t.hyNkHx),
+                        },
+                    ].map((e, t) => (0, r.jsx)(N, y({}, e), t)),
+                }),
+            ],
+        });
+    };

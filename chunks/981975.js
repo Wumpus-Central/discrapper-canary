@@ -12,9 +12,9 @@ var r = n(951288),
     g = n(275759),
     p = n(63063),
     f = n(243730),
-    h = n(764260),
-    b = n(946724),
-    x = n(95242),
+    h = n(84058),
+    x = n(103576),
+    b = n(95242),
     j = n(530198),
     v = n(420966),
     _ = n(203377),
@@ -85,20 +85,20 @@ function T(e) {
 }
 function P(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
-        { headerHeight: P, headerRef: w } = (0, x.Z)(0),
-        { scrolledToTop: R, handleScroll: Z } = (0, v.V)(),
-        D = (0, c.e7)([f.Z], () => {
+        { headerHeight: P, headerRef: w } = (0, b.Z)(0),
+        { scrolledToTop: R, handleScroll: D } = (0, v.V)(),
+        Z = (0, c.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        A = (0, c.Wu)([b.Z], () => {
+        A = (0, c.Wu)([x.Z], () => {
             var e;
-            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
         L = A.length > 1 ? g.O1.OR : g.O1.AND,
         k = i.useMemo(() => (L === g.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
-        M = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
-    function G(e) {
+        G = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
+    function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [...k];
         r.push({
@@ -113,10 +113,10 @@ function P(e) {
     function U() {
         m.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
-            onComplete: (e) => G(e),
-            excludedPlatformTypes: M,
+            onComplete: (e) => M(e),
+            excludedPlatformTypes: G,
             integrations: o,
-            onCompleteApplication: (e) => G(y.Kt, e),
+            onCompleteApplication: (e) => M(y.Kt, e),
         });
     }
     let B = null;
@@ -282,7 +282,7 @@ function P(e) {
     return (0, r.jsx)(u.yWw, {
         className: N.scroller,
         style: { scrollPaddingTop: P },
-        onScroll: Z,
+        onScroll: D,
         children: (0, r.jsxs)("div", {
             className: E.contentWidth,
             children: [
@@ -296,7 +296,7 @@ function P(e) {
                         setSelectedSection: a,
                     }),
                 }),
-                (null != D ? D : 0) > 0
+                (null != Z ? Z : 0) > 0
                     ? (0, r.jsxs)("div", {
                           className: N.warningContainer,
                           children: [

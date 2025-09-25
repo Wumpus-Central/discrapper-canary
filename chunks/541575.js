@@ -1,19 +1,19 @@
-n.d(t, { Z: () => x }), n(953529);
+n.d(t, { Z: () => b }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(367907),
-    a = n(906732),
-    s = n(91218),
+    s = n(906732),
+    a = n(91218),
     o = n(807582),
     c = n(518738),
     d = n(26323),
-    u = n(764260),
+    u = n(84058),
     m = n(981631),
     g = n(30513),
     p = n(388032),
-    h = n(155470);
-function f(e) {
+    f = n(155470);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,15 +56,15 @@ function b(e, t) {
         e
     );
 }
-let x = function (e) {
-    let { guild: t, disabled: x, role: j } = e,
+let b = function (e) {
+    let { guild: t, disabled: b, role: j } = e,
         v = (0, c.oC)(t.id, j),
-        { analyticsLocations: _ } = (0, a.ZP)(),
+        { analyticsLocations: _ } = (0, s.ZP)(),
         O = t.features.has(m.oNc.ROLE_ICONS),
         y = (e) => {
             O ||
                 ((0, l.yw)(m.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: b(f({}, e), { section: m.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: x(h({}, e), { section: m.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
                     location_stack: _,
                 }),
@@ -80,7 +80,7 @@ let x = function (e) {
                 }));
         },
         C = (0, r.jsx)(o.Z, {
-            className: h.availabilityIndicator,
+            className: f.availabilityIndicator,
             guild: t,
             guildFeature: m.oNc.ROLE_ICONS,
             tooltipPosition: "top",
@@ -91,28 +91,28 @@ let x = function (e) {
                     objectType: m.Qqv.TIER_2,
                 }),
         });
-    return (0, r.jsxs)(i.xJW, {
-        className: h.container,
+    return (0, r.jsxs)("div", {
+        className: f.container,
         children: [
             (0, r.jsxs)(i.vwX, {
-                className: h.formTitle,
+                className: f.formTitle,
                 children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJy) }), C],
             }),
             (0, r.jsx)(i.R94, {
-                className: h.description,
+                className: f.description,
                 children: p.intl.string(p.t.I3YQeX),
             }),
             (0, r.jsxs)("div", {
-                className: h.rolePreviewArea,
+                className: f.rolePreviewArea,
                 children: [
                     (0, r.jsx)("div", {
-                        className: h.previewContainer,
+                        className: f.previewContainer,
                         children:
                             null != v
                                 ? (0, r.jsx)(
-                                      s.Z,
-                                      b(f({}, v), {
-                                          className: h.roleIconPreview,
+                                      a.Z,
+                                      x(h({}, v), {
+                                          className: f.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
                                   )
@@ -121,7 +121,7 @@ let x = function (e) {
                                       color: "currentColor",
                                       width: 24,
                                       height: 24,
-                                      className: h.preview,
+                                      className: f.preview,
                                   }),
                     }),
                     (0, r.jsx)(i.zxk, {
@@ -132,7 +132,7 @@ let x = function (e) {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              b(f({}, n), {
+                                              x(h({}, n), {
                                                   guildId: t.id,
                                                   onUploadIcon: (e) => (0, u._l)(j.id, e, null),
                                                   onSelectUnicodeEmoji: (e) => (0, u._l)(j.id, null, e),
@@ -141,7 +141,7 @@ let x = function (e) {
                                   })
                                 : y({ object: m.qAy.UPLOAD_IMAGE }),
                         variant: "primary",
-                        disabled: x,
+                        disabled: b,
                         text: p.intl.string(p.t.mD1oGB),
                     }),
                     null != v
@@ -150,7 +150,7 @@ let x = function (e) {
                                   (0, u._l)(j.id, null, null);
                               },
                               variant: "critical-secondary",
-                              disabled: x,
+                              disabled: b,
                               text: p.intl.string(p.t["uY+Nk5"]),
                           })
                         : null,

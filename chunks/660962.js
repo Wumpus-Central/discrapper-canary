@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(37234),
     f = n(410030),
     h = n(607070),
-    b = n(100527),
-    x = n(663993),
+    x = n(100527),
+    b = n(663993),
     j = n(243778),
     v = n(518738),
     _ = n(753206),
@@ -24,25 +24,25 @@ var r = n(951288),
     N = n(494620),
     E = n(345162),
     I = n(496675),
-    S = n(764260),
-    T = n(946724),
+    S = n(84058),
+    T = n(103576),
     P = n(206950),
     w = n(95242),
     R = n(541575),
-    Z = n(420966),
-    D = n(337344),
+    D = n(420966),
+    Z = n(337344),
     A = n(275296),
     L = n(203377),
     k = n(494831),
-    M = n(981631),
-    G = n(141006),
+    G = n(981631),
+    M = n(141006),
     U = n(388032),
     B = n(989308),
     F = n(12574),
     H = n(21321),
     z = n(179517),
     V = n(79829);
-let W = (0, x.Un)({
+let W = (0, b.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -59,7 +59,7 @@ function Y(e) {
             required: !0,
             type: "text",
             value: l,
-            maxLength: M.VKK,
+            maxLength: G.VKK,
             onChange: function (e) {
                 s(e), K(t.id, e);
             },
@@ -72,7 +72,7 @@ function q(e) {
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, f.ZP)(),
         h = (0, v.oC)(n, t),
-        x = {
+        b = {
             dark: {
                 src: z,
                 name: t.name,
@@ -131,7 +131,7 @@ function q(e) {
                                             },
                                             message: o,
                                             preview: !0,
-                                            roleIcon: null != h ? h : (0, m.ap)(d) ? x.light : x.dark,
+                                            roleIcon: null != h ? h : (0, m.ap)(d) ? b.light : b.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n,
@@ -169,7 +169,7 @@ function q(e) {
                         }),
                         (0, r.jsx)(g.zxk, {
                             onClick: function () {
-                                (0, C.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+                                (0, C.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
                             variant: "expressive",
                             icon: g.$Eu,
@@ -183,7 +183,7 @@ function q(e) {
 function X() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
-            colorStrings: (0, O.DX)(G.SK),
+            colorStrings: (0, O.DX)(M.SK),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -233,8 +233,8 @@ function Q(e) {
                 children: U.intl.string(U.t["9UCxlZ"]),
             }),
             (0, r.jsx)(W, {
-                defaultColor: M.p6O,
-                colors: s === T.g.GRADIENT && a ? G.tl : M.pmI,
+                defaultColor: G.p6O,
+                colors: s === T.g.GRADIENT && a ? M.tl : G.pmI,
                 value: i.color,
                 disabled: l,
                 onChange: (e) => {
@@ -243,8 +243,8 @@ function Q(e) {
                         (t = e),
                         void (
                             i.color !== t &&
-                            (t !== M.p6O || 0 !== i.color) &&
-                            (t === M.p6O && (t = 0), (0, S.OW)(i.id, t))
+                            (t !== G.p6O || 0 !== i.color) &&
+                            (t === G.p6O && (t = 0), (0, S.OW)(i.id, t))
                         )
                     );
                 },
@@ -291,7 +291,7 @@ function J(e) {
             name: t.name,
         },
         u = (0, v.oC)(n, t),
-        p = [M.BRd.DARK, M.BRd.DARKER, M.BRd.MIDNIGHT, M.BRd.LIGHT];
+        p = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
     return (0, r.jsx)(g.Rny, {
         children: (0, r.jsx)("div", {
             className: s()(F.previewContainer, { [F.disableInteraction]: l }),
@@ -316,7 +316,7 @@ function J(e) {
                                             isGroupStart: !0,
                                         }),
                                     }),
-                                    e === M.BRd.LIGHT &&
+                                    e === G.BRd.LIGHT &&
                                         i !== T.g.SOLID &&
                                         (0, r.jsx)(g.Text, {
                                             variant: "text-xs/medium",
@@ -365,8 +365,8 @@ function ee(e) {
         m = (0, E.fI)(n),
         p = i || m,
         f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
-        { scrolledToTop: x, handleScroll: j } = (0, Z.V)();
+        { headerHeight: h, headerRef: x } = (0, w.Z)(0),
+        { scrolledToTop: b, handleScroll: j } = (0, D.V)();
     return (0, r.jsx)(g.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: h },
@@ -375,9 +375,9 @@ function ee(e) {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
-                    ref: b,
-                    children: (0, r.jsx)(Z.Z, {
+                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
+                    ref: x,
+                    children: (0, r.jsx)(D.Z, {
                         guild: t,
                         role: n,
                         selectedSection: L.ZI.DISPLAY,
@@ -438,7 +438,7 @@ function ee(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(g.$i$, { className: F.divider }),
-                              (0, r.jsx)(D.L, {
+                              (0, r.jsx)(Z.L, {
                                   guildId: t.id,
                                   role: n,
                               }),
