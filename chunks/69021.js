@@ -1,18 +1,19 @@
 n.d(t, { Z: () => f }), n(539854);
 var a = n(951288);
 n(647438);
-var l = n(442837),
+var i = n(442837),
     r = n(481060),
-    i = n(179658),
-    o = n(230711),
-    c = n(482215),
+    l = n(179658),
+    o = n(482215),
     s = n(906467),
-    u = n(857192),
-    d = n(594174),
-    g = n(695346),
-    b = n(726985),
-    p = n(981631);
-function y(e) {
+    c = n(857192),
+    u = n(594174),
+    d = n(695346),
+    g = n(313789),
+    b = n(518596),
+    p = n(726985),
+    O = n(981631);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -37,7 +38,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,78 +62,87 @@ function f() {
             isStaff: t,
             isDeveloper: n,
             isLoggingGatewayEvents: f,
-            isLoggingOverlayEvents: E,
+            isLoggingOverlayEvents: S,
             isLoggingAnalyticsEvents: v,
-            isAnalyticsDebuggerEnabled: S,
+            isAnalyticsDebuggerEnabled: P,
             isTracingRequests: h,
             isForcedCanary: j,
-            isSourceMapsEnabled: P,
-            isIdleStatusIndicatorEnabled: w,
-            isAxeEnabled: A,
-            preventPopoutClose: x,
+            isSourceMapsEnabled: A,
+            isIdleStatusIndicatorEnabled: N,
+            isAxeEnabled: w,
+            preventPopoutClose: _,
             onlyShowPreviewAppCollections: D,
-            disableAppCollectionsCache: I,
-        } = (0, l.cj)([u.default, d.default, s.Z], () => {
+            disableAppCollectionsCache: x,
+        } = (0, i.cj)([c.default, u.default, s.Z], () => {
             var e;
             return {
-                layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
-                isStaff: (null == (e = d.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0,
+                layoutDebuggingEnabled: c.default.layoutDebuggingEnabled,
+                isStaff: (null == (e = u.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0,
                 isDeveloper: s.Z.isDeveloper,
-                isLoggingGatewayEvents: u.default.isLoggingGatewayEvents,
-                isLoggingOverlayEvents: u.default.isLoggingOverlayEvents,
-                isLoggingAnalyticsEvents: u.default.isLoggingAnalyticsEvents,
-                isAnalyticsDebuggerEnabled: u.default.isAnalyticsDebuggerEnabled,
-                isTracingRequests: u.default.isTracingRequests,
-                isForcedCanary: u.default.isForcedCanary,
-                isSourceMapsEnabled: u.default.sourceMapsEnabled,
-                isIdleStatusIndicatorEnabled: u.default.isIdleStatusIndicatorEnabled,
-                isAxeEnabled: u.default.isAxeEnabled,
-                preventPopoutClose: u.default.preventPopoutClose,
-                onlyShowPreviewAppCollections: u.default.onlyShowPreviewAppCollections,
-                disableAppCollectionsCache: u.default.disableAppCollectionsCache,
+                isLoggingGatewayEvents: c.default.isLoggingGatewayEvents,
+                isLoggingOverlayEvents: c.default.isLoggingOverlayEvents,
+                isLoggingAnalyticsEvents: c.default.isLoggingAnalyticsEvents,
+                isAnalyticsDebuggerEnabled: c.default.isAnalyticsDebuggerEnabled,
+                isTracingRequests: c.default.isTracingRequests,
+                isForcedCanary: c.default.isForcedCanary,
+                isSourceMapsEnabled: c.default.sourceMapsEnabled,
+                isIdleStatusIndicatorEnabled: c.default.isIdleStatusIndicatorEnabled,
+                isAxeEnabled: c.default.isAxeEnabled,
+                preventPopoutClose: c.default.preventPopoutClose,
+                onlyShowPreviewAppCollections: c.default.onlyShowPreviewAppCollections,
+                disableAppCollectionsCache: c.default.disableAppCollectionsCache,
             };
         }),
-        { horizontalSpacing: _, verticalSpacing: N, maxHorizontalSpacing: T, maxVerticalSpacing: Z } = (0, c.i)(),
-        { setHorizontalSpacing: m, setVerticalSpacing: k } = c.i.getState(),
-        C = g.zY.useSetting(),
-        R = [];
+        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: L } = (0, o.i)(),
+        { setHorizontalSpacing: R, setVerticalSpacing: m } = o.i.getState(),
+        k = d.zY.useSetting(),
+        Z = [];
     return (
         t &&
             n &&
-            (R.push(
+            (Z.push(
                 (0, a.jsx)(
                     r.sNh,
                     {
                         id: "overrides",
                         label: "Overrides",
                         action: () => {
-                            o.Z.open(p.oAB.DEVELOPER_OPTIONS, b.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB);
+                            (0, b.openUserSettings)(g.n.DEVELOPER_OPTIONS_PANEL, {
+                                section: O.oAB.DEVELOPER_OPTIONS,
+                                subsection: p.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                            });
                         },
                     },
                     "overrides",
                 ),
             ),
-            R.push(
+            Z.push(
                 (0, a.jsx)(
                     r.sNh,
                     {
                         id: "manual-triggers",
                         label: "Manual Triggers",
                         action: () => {
-                            o.Z.open(p.oAB.DEVELOPER_OPTIONS, b.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB);
+                            (0, b.openUserSettings)(g.n.DEVELOPER_OPTIONS_PANEL, {
+                                section: O.oAB.DEVELOPER_OPTIONS,
+                                subsection: p.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                            });
                         },
                     },
                     "manual-triggers",
                 ),
             ),
-            R.push(
+            Z.push(
                 (0, a.jsxs)(
                     r.sNh,
                     {
                         id: "developer-flags",
                         label: "Developer Flags",
                         action: () => {
-                            o.Z.open(p.oAB.DEVELOPER_OPTIONS, b.s6.DEVELOPER_OPTIONS_FLAGS_TAB);
+                            (0, b.openUserSettings)(g.n.DEVELOPER_OPTIONS_PANEL, {
+                                section: O.oAB.DEVELOPER_OPTIONS,
+                                subsection: p.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                            });
                         },
                         children: [
                             (0, a.jsx)(
@@ -142,7 +152,7 @@ function f() {
                                     label: "Tracing Requests",
                                     checked: h,
                                     action: () => {
-                                        (0, i.y)({ trace: !h });
+                                        (0, l.y)({ trace: !h });
                                     },
                                 },
                                 "tracing-requests",
@@ -154,7 +164,7 @@ function f() {
                                     label: "Forced Canary",
                                     checked: j,
                                     action: () => {
-                                        (0, i.y)({ canary: !j });
+                                        (0, l.y)({ canary: !j });
                                     },
                                 },
                                 "forced-canary",
@@ -164,9 +174,9 @@ function f() {
                                 {
                                     id: "always-deliver",
                                     label: "Ads auto-targeting",
-                                    checked: C,
+                                    checked: k,
                                     action: () => {
-                                        g.zY.updateSetting(!C);
+                                        d.zY.updateSetting(!k);
                                     },
                                 },
                                 "always-deliver",
@@ -176,9 +186,9 @@ function f() {
                                 {
                                     id: "source-maps",
                                     label: "Source Maps",
-                                    checked: P,
+                                    checked: A,
                                     action: () => {
-                                        (0, i.y)({ sourceMapsEnabled: !P });
+                                        (0, l.y)({ sourceMapsEnabled: !A });
                                     },
                                 },
                                 "source-maps",
@@ -188,9 +198,9 @@ function f() {
                                 {
                                     id: "idle-status",
                                     label: "Idle Status Indicator",
-                                    checked: w,
+                                    checked: N,
                                     action: () => {
-                                        (0, i.y)({ idleStatusIndicatorEnabled: !w });
+                                        (0, l.y)({ idleStatusIndicatorEnabled: !N });
                                     },
                                 },
                                 "idle-status",
@@ -200,9 +210,9 @@ function f() {
                                 {
                                     id: "accessibility-auditing",
                                     label: "Accessibility Auditing",
-                                    checked: A,
+                                    checked: w,
                                     action: () => {
-                                        (0, i.y)({ axeEnabled: !A });
+                                        (0, l.y)({ axeEnabled: !w });
                                     },
                                 },
                                 "accessibility-auditing",
@@ -212,9 +222,9 @@ function f() {
                                 {
                                     id: "prevent-popout-close",
                                     label: "Prevent Popouts From Closing",
-                                    checked: x,
+                                    checked: _,
                                     action: () => {
-                                        (0, i.y)({ preventPopoutClose: !x });
+                                        (0, l.y)({ preventPopoutClose: !_ });
                                     },
                                 },
                                 "prevent-popout-close",
@@ -226,7 +236,7 @@ function f() {
                                     label: "Preview Unpublished Collections",
                                     checked: D,
                                     action: () => {
-                                        (0, i.y)({ onlyShowPreviewAppCollections: !D });
+                                        (0, l.y)({ onlyShowPreviewAppCollections: !D });
                                     },
                                 },
                                 "preview-collections",
@@ -236,9 +246,9 @@ function f() {
                                 {
                                     id: "disable-collections-cache",
                                     label: "Disable Collections Cache",
-                                    checked: I,
+                                    checked: x,
                                     action: () => {
-                                        (0, i.y)({ disableAppCollectionsCache: !I });
+                                        (0, l.y)({ disableAppCollectionsCache: !x });
                                     },
                                 },
                                 "disable-collections-cache",
@@ -248,14 +258,17 @@ function f() {
                     "developer-flags",
                 ),
             ),
-            R.push(
+            Z.push(
                 (0, a.jsxs)(
                     r.sNh,
                     {
                         id: "logging",
                         label: "Logging",
                         action: () => {
-                            o.Z.open(p.oAB.DEVELOPER_OPTIONS, b.s6.DEVELOPER_OPTIONS_LOGGING_TAB);
+                            (0, b.openUserSettings)(g.n.DEVELOPER_OPTIONS_PANEL, {
+                                section: O.oAB.DEVELOPER_OPTIONS,
+                                subsection: p.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                            });
                         },
                         children: [
                             (0, a.jsx)(
@@ -265,7 +278,7 @@ function f() {
                                     label: "Gateway Events",
                                     checked: f,
                                     action: () => {
-                                        (0, i.y)({ logGatewayEvents: !f });
+                                        (0, l.y)({ logGatewayEvents: !f });
                                     },
                                 },
                                 "gateway-events",
@@ -275,9 +288,9 @@ function f() {
                                 {
                                     id: "overlay-events",
                                     label: "Overlay RPC Events",
-                                    checked: E,
+                                    checked: S,
                                     action: () => {
-                                        (0, i.y)({ logOverlayEvents: !E });
+                                        (0, l.y)({ logOverlayEvents: !S });
                                     },
                                 },
                                 "overlay-events",
@@ -289,7 +302,7 @@ function f() {
                                     label: "Analytics Events",
                                     checked: v,
                                     action: () => {
-                                        (0, i.y)({ logAnalyticsEvents: !v });
+                                        (0, l.y)({ logAnalyticsEvents: !v });
                                     },
                                 },
                                 "analytics-events",
@@ -299,9 +312,9 @@ function f() {
                                 {
                                     id: "analytics-debugger",
                                     label: "Analytics Debugger",
-                                    checked: S,
+                                    checked: P,
                                     action: () => {
-                                        (0, i.y)({ analyticsDebuggerEnabled: !S });
+                                        (0, l.y)({ analyticsDebuggerEnabled: !P });
                                     },
                                 },
                                 "analytics-debugger",
@@ -311,14 +324,17 @@ function f() {
                     "logging",
                 ),
             ),
-            R.push(
+            Z.push(
                 (0, a.jsx)(
                     r.sNh,
                     {
                         id: "design-tools",
                         label: "Design Tools",
                         action: () => {
-                            o.Z.open(p.oAB.DEVELOPER_OPTIONS, b.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB);
+                            (0, b.openUserSettings)(g.n.DEVELOPER_OPTIONS_PANEL, {
+                                section: O.oAB.DEVELOPER_OPTIONS,
+                                subsection: p.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                            });
                         },
                         children: (0, a.jsx)(
                             r.S89,
@@ -327,7 +343,7 @@ function f() {
                                 label: "Enable Layout Debugging",
                                 checked: e,
                                 action: () => {
-                                    (0, i.y)({ layoutDebuggingEnabled: !e });
+                                    (0, l.y)({ layoutDebuggingEnabled: !e });
                                 },
                             },
                             "layout-debugging",
@@ -337,7 +353,7 @@ function f() {
                 ),
             ),
             e &&
-                (R.push(
+                (Z.push(
                     (0, a.jsx)(
                         r.II_,
                         {
@@ -346,12 +362,12 @@ function f() {
                             control: (e, t) =>
                                 (0, a.jsx)(
                                     r._wy,
-                                    O(y({}, e), {
+                                    y(E({}, e), {
                                         ref: t,
-                                        value: _,
+                                        value: I,
                                         minValue: 0,
-                                        maxValue: T,
-                                        onChange: (e) => m(e),
+                                        maxValue: C,
+                                        onChange: (e) => R(e),
                                         renderValue: (e) => "".concat(Math.round(e), "px"),
                                         "aria-label": "Horizontal Spacing",
                                     }),
@@ -360,7 +376,7 @@ function f() {
                         "horizontal-spacing",
                     ),
                 ),
-                R.push(
+                Z.push(
                     (0, a.jsx)(
                         r.II_,
                         {
@@ -369,12 +385,12 @@ function f() {
                             control: (e, t) =>
                                 (0, a.jsx)(
                                     r._wy,
-                                    O(y({}, e), {
+                                    y(E({}, e), {
                                         ref: t,
-                                        value: N,
+                                        value: T,
                                         minValue: 0,
-                                        maxValue: Z,
-                                        onChange: (e) => k(e),
+                                        maxValue: L,
+                                        onChange: (e) => m(e),
                                         "aria-label": "Horizontal Spacing",
                                         renderValue: (e) => "".concat(Math.round(e), "px"),
                                     }),
@@ -383,6 +399,6 @@ function f() {
                         "vertical-spacing",
                     ),
                 ))),
-        0 === R.length ? null : R
+        0 === Z.length ? null : Z
     );
 }
