@@ -1,28 +1,27 @@
 n.d(t, {
-    T3: () => f,
-    q1: () => _,
-    rD: () => p,
-    xf: () => d,
+    T3: () => d,
+    q1: () => f,
+    rD: () => _,
+    xf: () => u,
 });
 var r = n(647438),
     i = n(524437),
     a = n(925513),
-    o = n(750832),
-    s = n(722687),
-    l = n(88658),
-    c = n(800651),
-    u = n(652262);
-let d = () => {
-        let e = (0, u.F)(),
-            t = s.sx.useControlledSetting(null == e ? void 0 : e.id);
+    o = n(722687),
+    s = n(88658),
+    l = n(800651),
+    c = n(652262);
+let u = () => {
+        let e = (0, c.F)(),
+            t = o.sx.useControlledSetting(null == e ? void 0 : e.id);
         return null == e
             ? null
             : {
-                  explicitContentNonFriendDm: (0, c.bE)({
+                  explicitContentNonFriendDm: (0, l.bE)({
                       teenId: null == e ? void 0 : e.id,
                       setting: null == t ? void 0 : t.explicitContentNonFriendDm,
                   }),
-                  explicitContentFriendDm: (0, c.bE)({
+                  explicitContentFriendDm: (0, l.bE)({
                       teenId: null == e ? void 0 : e.id,
                       setting: null == t ? void 0 : t.explicitContentFriendDm,
                       isFriend: !0,
@@ -30,14 +29,14 @@ let d = () => {
                   explicitContentGuilds: i.Q4.BLUR,
               };
     },
-    f = () => {
-        let e = (0, u.F)(),
-            t = s.up.useControlledSetting(null == e ? void 0 : e.id);
+    d = () => {
+        let e = (0, c.F)(),
+            t = o.up.useControlledSetting(null == e ? void 0 : e.id);
         if (null == e) return null;
         let { goreContentNonFriendDm: n, goreContentFriendDm: r } = null != t ? t : {};
         return {
-            goreContentNonFriendDm: (0, c.n6)(n) ? n : (0, a.zR)({ isDm: !0 }),
-            goreContentFriendDm: (0, c.n6)(r)
+            goreContentNonFriendDm: (0, l.n6)(n) ? n : (0, a.zR)({ isDm: !0 }),
+            goreContentFriendDm: (0, l.n6)(r)
                 ? r
                 : (0, a.zR)({
                       isDm: !0,
@@ -46,16 +45,15 @@ let d = () => {
             goreContentGuilds: i.Q4.BLUR,
         };
     },
-    _ = () => {
-        let e = (0, u.F)(),
-            t = s.Ov.useControlledSetting(null == e ? void 0 : e.id),
-            n = s.vV.useControlledSetting(null == e ? void 0 : e.id),
-            r = (0, o.nS)("useDefaultGuildsRestricted");
-        return null != n ? n : !!t || !!r || t;
+    f = () => {
+        let e = (0, c.F)(),
+            t = o.Ov.useControlledSetting(null == e ? void 0 : e.id),
+            n = o.vV.useControlledSetting(null == e ? void 0 : e.id);
+        return null != n ? n : !!t || t;
     };
-function p() {
-    let e = (0, u.F)(),
-        t = s.vB.useControlledSetting(null == e ? void 0 : e.id),
-        n = r.useMemo(() => (0, l.bL)(t), [t]);
+function _() {
+    let e = (0, c.F)(),
+        t = o.vB.useControlledSetting(null == e ? void 0 : e.id),
+        n = r.useMemo(() => (0, s.bL)(t), [t]);
     return n.mutualGuilds && !n.all;
 }
