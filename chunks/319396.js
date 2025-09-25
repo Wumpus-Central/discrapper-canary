@@ -6,18 +6,19 @@ var i = n(541699),
     a = n(835255),
     o = n(855587);
 function s(e) {
-    let { item: t, user: n } = e;
+    let { item: t, user: n, profileOwner: l } = e;
     return (0, i.Q)(t)
         ? (0, r.jsx)(a.Z, {
               item: t,
               user: n,
+              profileOwner: l,
           })
         : null;
 }
 function c(e) {
-    let { items: t } = e,
-        n = l.default.getCurrentUser();
-    return null == n
+    let { items: t, profileOwner: n } = e,
+        i = l.default.getCurrentUser();
+    return null == i
         ? null
         : (0, r.jsx)("div", {
               className: o.grid,
@@ -26,7 +27,8 @@ function c(e) {
                       s,
                       {
                           item: e,
-                          user: n,
+                          user: i,
+                          profileOwner: n,
                       },
                       e.skuId,
                   ),

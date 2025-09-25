@@ -137,7 +137,7 @@ function O(e) {
                     channelId: s,
                 })
               : i === h.oh.WISHLIST
-                ? (0, r.jsx)(f.Z, {})
+                ? (0, r.jsx)(f.Z, { profileOwner: t })
                 : null;
 }
 function E(e) {

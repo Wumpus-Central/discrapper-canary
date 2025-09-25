@@ -754,7 +754,12 @@ var eJ = (function (e) {
         return (e.VIEW_ALL = "view_all"), (e.SEND_MESSAGE = "send_message"), e;
     })({}),
     e0 = (function (e) {
-        return (e[(e.DM_CHANNEL = 0)] = "DM_CHANNEL"), (e[(e.SHOP_PAGE = 1)] = "SHOP_PAGE"), e;
+        return (
+            (e[(e.DM_CHANNEL = 0)] = "DM_CHANNEL"),
+            (e[(e.SHOP_PAGE = 1)] = "SHOP_PAGE"),
+            (e[(e.USER_PROFILE_WISHLIST = 2)] = "USER_PROFILE_WISHLIST"),
+            e
+        );
     })({});
 let e1 = 3,
     e2 = 30,

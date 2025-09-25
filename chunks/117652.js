@@ -184,25 +184,42 @@ function j(e) {
                     ],
                 });
             let e = null != B ? (0, O.T4)(B.amount, B.currency) : void 0;
-            return (0, r.jsxs)("div", {
-                className: R.bodyColumnRight,
-                children: [
-                    (0, r.jsx)(d.Z, {
-                        selectedSkuId: U,
-                        className: R.sendTo,
-                        validateSelectedGift: z,
-                    }),
-                    Q(),
-                    null != e &&
-                        (0, r.jsx)(u.Z, {
-                            skuId: U,
-                            price: e,
-                            className: R.giftPreview,
-                            isSelected: !0,
-                            shouldDisplayHeader: !0,
-                        }),
-                ],
-            });
+            return j === C.Wt.USER_PROFILE_WISHLIST
+                ? (0, r.jsxs)("div", {
+                      className: R.bodyColumnRight,
+                      children: [
+                          (0, r.jsx)(g.s, { giftRecipient: D }),
+                          Q(),
+                          null != e &&
+                              null != U &&
+                              (0, r.jsx)(u.Z, {
+                                  skuId: U,
+                                  price: e,
+                                  className: R.giftPreview,
+                                  isSelected: !0,
+                                  shouldDisplayHeader: !0,
+                              }),
+                      ],
+                  })
+                : (0, r.jsxs)("div", {
+                      className: R.bodyColumnRight,
+                      children: [
+                          (0, r.jsx)(d.Z, {
+                              selectedSkuId: U,
+                              className: R.sendTo,
+                              validateSelectedGift: z,
+                          }),
+                          Q(),
+                          null != e &&
+                              (0, r.jsx)(u.Z, {
+                                  skuId: U,
+                                  price: e,
+                                  className: R.giftPreview,
+                                  isSelected: !0,
+                                  shouldDisplayHeader: !0,
+                              }),
+                      ],
+                  });
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
