@@ -1,25 +1,26 @@
 n.d(t, {
-    Dp: () => b,
-    Jp: () => A,
-    Lv: () => T,
-    NH: () => g,
+    Dp: () => y,
+    HO: () => g,
+    Jp: () => C,
+    Lv: () => S,
+    NH: () => E,
     Ot: () => d,
     R4: () => _,
     S7: () => c.S,
-    Ts: () => E,
-    V6: () => O,
-    V_: () => y,
-    XJ: () => N,
+    Ts: () => b,
+    V6: () => v,
+    V_: () => O,
+    XJ: () => R,
     XZ: () => f,
     a_: () => l.a,
     cd: () => p,
     dr: () => u,
-    l$: () => I,
+    l$: () => T,
     tD: () => m,
-    tt: () => S,
-    v6: () => v,
-    vy: () => R,
-    yq: () => C,
+    tt: () => A,
+    v6: () => I,
+    vy: () => P,
+    yq: () => N,
 }),
     n(388685);
 var r = n(754700),
@@ -93,9 +94,10 @@ var p = (function (e) {
 let h = (0, a.K0)(),
     m =
         -1 !== h.indexOf("localhost") || -1 !== h.indexOf("127.0.0.1")
-            ? "".concat(h, "/_cdn_storage/quests/")
-            : "https://cdn.discordapp.com/quests/";
-var g = (function (e) {
+            ? "".concat(h, "/_cdn_storage/")
+            : "https://cdn.discordapp.com/",
+    g = m + "quests/";
+var E = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -105,9 +107,9 @@ var g = (function (e) {
         e
     );
 })({});
-let E = "545364944258990091",
-    b = "{reward_code}";
-var y = (function (e) {
+let b = "545364944258990091",
+    y = "{reward_code}";
+var O = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -115,15 +117,8 @@ var y = (function (e) {
         e
     );
 })({});
-let O = "1333839522189938740",
-    v = new Set([s.Ok.DESKTOP_ACCOUNT_PANEL_AREA, s.Ok.MOBILE_HOME_DOCK_AREA]),
-    I = new Set([
-        r.X.STREAM_ON_DESKTOP,
-        r.X.PLAY_ON_DESKTOP,
-        r.X.PLAY_ON_XBOX,
-        r.X.PLAY_ON_PLAYSTATION,
-        r.X.PLAY_ON_DESKTOP_V2,
-    ]),
+let v = "1333839522189938740",
+    I = new Set([s.Ok.DESKTOP_ACCOUNT_PANEL_AREA, s.Ok.MOBILE_HOME_DOCK_AREA]),
     T = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,
@@ -138,8 +133,15 @@ let O = "1333839522189938740",
         r.X.PLAY_ON_PLAYSTATION,
         r.X.PLAY_ON_DESKTOP_V2,
     ]),
-    A = { is_targeted: !1 };
-var C = (function (e) {
+    A = new Set([
+        r.X.STREAM_ON_DESKTOP,
+        r.X.PLAY_ON_DESKTOP,
+        r.X.PLAY_ON_XBOX,
+        r.X.PLAY_ON_PLAYSTATION,
+        r.X.PLAY_ON_DESKTOP_V2,
+    ]),
+    C = { is_targeted: !1 };
+var N = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -148,7 +150,7 @@ var C = (function (e) {
             e
         );
     })({}),
-    N = (function (e) {
+    R = (function (e) {
         return (
             (e.REWARD_VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.REWARD_COLLECTIBLE = "reward_collectible"),
@@ -158,7 +160,7 @@ var C = (function (e) {
             e
         );
     })({});
-let R = [
+let P = [
     {
         group: "task",
         filter: "task_play",

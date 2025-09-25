@@ -150,12 +150,14 @@ function E(e) {
 }
 function b(e, t, n) {
     if (t.startsWith("blob:")) return E(t);
-    let r = s.tD;
-    return ""
-        .concat(r)
-        .concat(e)
-        .concat((null == n ? void 0 : n.theme) != null ? "/".concat(n.theme) : "", "/")
-        .concat(t);
+    let r = s.HO;
+    return t.includes("/")
+        ? ((r = s.tD), "".concat(r).concat(t))
+        : ""
+              .concat(r)
+              .concat(e)
+              .concat((null == n ? void 0 : n.theme) != null ? "/".concat(n.theme) : "", "/")
+              .concat(t);
 }
 function y(e) {
     var t, n, r;
