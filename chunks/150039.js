@@ -76,7 +76,7 @@ function m(e, t) {
     };
 }
 function g(e, t) {
-    let { enabled: n } = s.s9.useConfig({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }),
+    let { enabled: n } = s.wL.useConfig({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }),
         r = (0, i.e7)([f.ZP], () => (void 0 === t || null == e ? null : f.ZP.getMember(t, e.id))),
         { pendingUserDisplayNameStyles: a, userErrors: o } = (0, i.cj)([_.Z], () => ({
             pendingUserDisplayNameStyles: _.Z.getPendingDisplayNameStyles(),
@@ -90,7 +90,7 @@ function g(e, t) {
         p = null == r ? void 0 : r.displayNameStyles;
     return null != t && n && (null != p || null != l)
         ? {
-              currentDisplayNameStyles: p,
+              currentDisplayNameStyles: null != p ? p : d,
               pendingDisplayNameStyles: l,
               pendingErrors: u,
           }
