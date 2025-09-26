@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(415506);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     l = n(442837),
     c = n(681715),
     s = n(481060),
@@ -83,14 +83,14 @@ function T(e) {
                             var n,
                                 r,
                                 i = {},
-                                a = Object.keys(e);
-                            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                o = Object.keys(e);
+                            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var a = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < a.length; r++)
-                            (n = a[r]),
+                        var o = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < o.length; r++)
+                            (n = o[r]),
                                 !(t.indexOf(n) >= 0) &&
                                     Object.prototype.propertyIsEnumerable.call(e, n) &&
                                     (i[n] = e[n]);
@@ -99,9 +99,9 @@ function T(e) {
                 })(t, ["body"]);
             return (0, r.jsx)(A, E(I({}, i), { body: N(n) }));
         case "GRID":
-            return (0, r.jsx)(k, { children: N(t.children) });
+            return (0, r.jsx)(C, { children: N(t.children) });
         case "FIELD":
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(k, {
                 value: D(t.value),
                 name: D(t.name),
             });
@@ -156,14 +156,14 @@ function A(e) {
         ],
     });
 }
-function k(e) {
+function C(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: w.grid,
         children: t,
     });
 }
-function C(e) {
+function k(e) {
     let { name: t, value: n } = e;
     return (0, r.jsxs)("div", {
         children: [n, t],
@@ -172,21 +172,21 @@ function C(e) {
 function R(e) {
     let { content: t } = e,
         n = i.useId(),
-        a = (0, b._)();
+        o = (0, b._)();
     return null != t
         ? (0, r.jsx)(O.Z, {
               type: u.re.TEXT_DISPLAY,
               id: n,
               content: t,
           })
-        : (0, r.jsx)("div", { className: o()(w.textPlaceholder, a.className) });
+        : (0, r.jsx)("div", { className: a()(w.textPlaceholder, o.className) });
 }
 function Z(e) {
     let { content: t, image: n, imagePosition: i } = e,
-        a = (0, b._)(),
+        o = (0, b._)(),
         l = S(n)
             ? (0, r.jsx)("div", {
-                  className: o()(w.image, a.className),
+                  className: a()(w.image, o.className),
                   children: (0, r.jsx)(j.ZP, {
                       src: n.proxyUrl,
                       alt: "",
@@ -195,7 +195,7 @@ function Z(e) {
                       responsive: !0,
                   }),
               })
-            : (0, r.jsx)("div", { className: o()(w.imagePlaceholder, a.className) });
+            : (0, r.jsx)("div", { className: a()(w.imagePlaceholder, o.className) });
     return (0, r.jsxs)("div", {
         className: w.textWithImage,
         children: ["left" === i ? l : null, (0, r.jsx)(R, { content: t }), "right" === i ? l : null],
@@ -203,10 +203,10 @@ function Z(e) {
 }
 function L(e) {
     let { size: t = "small", divider: n = !1 } = e,
-        a = i.useId();
+        o = i.useId();
     return (0, r.jsx)(m.Z, {
         type: u.re.SEPARATOR,
-        id: a,
+        id: o,
         divider: n,
         spacing: "large" === t ? u.US.LARGE : u.US.SMALL,
     });
@@ -254,7 +254,7 @@ function H(e) {
     });
 }
 function M(e) {
-    var t, i, a;
+    var t, i, o;
     let { user: l, widget: u, containerClassName: d } = e,
         { application: g, game: p } = F(u),
         b = null == g ? void 0 : g.getIconURL(16),
@@ -308,7 +308,7 @@ function M(e) {
                       asContainer: !0,
                       text: P.intl.string(P.t.ajHoOj),
                       children: (0, r.jsx)(s.P3F, {
-                          className: o()(w.header, w.headerClickable),
+                          className: a()(w.header, w.headerClickable),
                           onClick: v,
                           "aria-label": P.intl.string(P.t.ajHoOj),
                           children: _,
@@ -317,7 +317,7 @@ function M(e) {
         D = [
             {
                 type: "HERO",
-                title: null == O || null == (a = O.profile) ? void 0 : a.username,
+                title: null == O || null == (o = O.profile) ? void 0 : o.username,
                 image:
                     (null == j ? void 0 : j.featured_played_character_image) != null
                         ? (0, y.ym)(j.featured_played_character_image)
@@ -460,12 +460,12 @@ function M(e) {
                 ],
             },
         ];
-    return (0, r.jsx)(
+    return (0, r.jsxs)(
         x.Z,
         E(I({}, e), {
             userId: l.id,
             widget: u,
-            className: o()(d, w.widgetContainer),
+            className: a()(d, w.widgetContainer),
             headerTitle: S,
             dragHandleAdditionalMenuItems:
                 null != p
@@ -476,13 +476,28 @@ function M(e) {
                           action: v,
                       })
                     : null,
-            children: (0, r.jsx)(B.Provider, {
-                value: e,
-                children: (0, r.jsx)(H, {
-                    widget: u,
-                    children: (0, r.jsx)(T, { component: D }),
+            children: [
+                (0, r.jsx)(B.Provider, {
+                    value: e,
+                    children: (0, r.jsx)(H, {
+                        widget: u,
+                        children: (0, r.jsx)(T, { component: D }),
+                    }),
                 }),
-            }),
+                null == O
+                    ? (0, r.jsxs)("div", {
+                          className: w.stillSyncing,
+                          children: [
+                              (0, r.jsx)(s.wGF, { size: "xxs" }),
+                              (0, r.jsx)(s.Text, {
+                                  variant: "text-sm/medium",
+                                  color: "text-secondary",
+                                  children: P.intl.string(P.t.z5K4Ul),
+                              }),
+                          ],
+                      })
+                    : null,
+            ],
         }),
     );
 }

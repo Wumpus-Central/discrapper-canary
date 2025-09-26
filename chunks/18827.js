@@ -16,4 +16,5 @@ e.exports = {
     image: "image__0ea1a",
     imagePlaceholder: "imagePlaceholder__0ea1a",
     socialProof: "socialProof__0ea1a",
+    stillSyncing: "stillSyncing__0ea1a",
 };
