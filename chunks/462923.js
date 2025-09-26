@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N }), t(388685);
+t.d(n, { Z: () => I }), t(388685);
 var a = t(951288),
     r = t(647438),
     i = t(120356),
@@ -21,23 +21,23 @@ var a = t(951288),
     O = t(440589),
     y = t(388032),
     C = t(799427);
-function N(e) {
+function I(e) {
     let { guildId: n, instance: t } = e,
         i = (0, j.Z)(t),
-        N = "Portkey",
-        [I, P] = (0, u.US)([l.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        w = I !== l.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        I = "Portkey",
+        [N, P] = (0, u.US)([l.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        w = N !== l.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
         S = (0, c.e7)([m.Z], () => m.Z.getDetectableGame(t.gameId)),
         T = r.useCallback(() => {
             w
-                ? (0, v.Z)(t)
+                ? (0, v.Z)(n, t)
                 : (0, _.Z)({
-                      provider: N,
+                      provider: I,
                       onAccept: () => {
-                          P(h.L.TAKE_ACTION), (0, v.Z)(t);
+                          P(h.L.TAKE_ACTION), (0, v.Z)(n, t);
                       },
                   });
-        }, [t, w, P]),
+        }, [t, w, P, n]),
         E = r.useCallback(() => {
             (0, g.JG)(i), (0, d.showToast)((0, d.createToast)(y.intl.string(y.t["+5kSoa"]), d.ToastType.SUCCESS));
         }, [i]),
@@ -115,9 +115,9 @@ function N(e) {
                                         : (0, a.jsx)(b.Z, {
                                               onClick: () => {
                                                   (0, _.Z)({
-                                                      provider: N,
+                                                      provider: I,
                                                       onAccept: () => {
-                                                          P(h.L.TAKE_ACTION), (0, v.Z)(t);
+                                                          P(h.L.TAKE_ACTION), (0, v.Z)(n, t);
                                                       },
                                                   });
                                               },

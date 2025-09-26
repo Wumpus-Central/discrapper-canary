@@ -1,12 +1,13 @@
 n.d(t, {
     EC: () => x,
-    NE: () => v,
-    TN: () => b,
-    _k: () => _,
-    g$: () => f,
-    po: () => p,
-    s9: () => j,
-    yP: () => g,
+    NE: () => j,
+    TN: () => g,
+    _k: () => y,
+    g$: () => b,
+    iX: () => f,
+    po: () => h,
+    s9: () => _,
+    yP: () => v,
 }),
     n(642613);
 var a = n(544891),
@@ -19,8 +20,8 @@ var a = n(544891),
     d = n(675984),
     u = n(113130),
     m = n(473682),
-    h = n(981631);
-function p(e) {
+    p = n(981631);
+function h(e) {
     var t, n;
     let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (a)
@@ -33,7 +34,7 @@ function p(e) {
         }, 5000);
     let l = null != (n = null == (t = i.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
     return (0, s.Kb)({
-        url: h.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(m.IU),
+        url: p.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(m.IU),
         query: {
             guild_id: e,
             include_unpublished_products: l,
@@ -65,7 +66,7 @@ function x(e) {
           }, 5000)
         : a.tn
               .get({
-                  url: h.ANM.GAME_SERVERS(e),
+                  url: p.ANM.GAME_SERVERS(e),
                   rejectWithError: !0,
               })
               .then((t) => {
@@ -80,27 +81,55 @@ function x(e) {
               });
 }
 function f(e, t) {
+    return a.tn
+        .get({
+            url: p.ANM.PRODUCT_FOR_SKU(t),
+            rejectWithError: !0,
+        })
+        .then((n) => {
+            if (null != n.body) {
+                var a, i, l, s;
+                let o =
+                    null !=
+                    (s =
+                        null == (l = n.body.tenant_metadata) ||
+                        null == (i = l.guild_monetization) ||
+                        null == (a = i.game_server)
+                            ? void 0
+                            : a.instructions.pc)
+                        ? s
+                        : [];
+                r.Z.dispatch({
+                    type: "PORTKEY_FETCH_GAME_INSTRUCTIONS_SUCCESS",
+                    guildId: e,
+                    skuId: t,
+                    instructions: o,
+                });
+            }
+        });
+}
+function b(e, t) {
     if (e) {
         var n;
-        l.default.track(h.rMx.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+        l.default.track(p.rMx.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: null == (n = i.default.getCurrentUser()) ? void 0 : n.id,
             provider: t,
         });
     }
 }
-function b() {
+function g() {
     r.Z.dispatch({ type: "PORTKEY_REGION_PING_STATE_RESET" });
 }
-function g(e, t) {
+function v(e, t) {
     r.Z.dispatch({
         type: "PORTKEY_REGION_PING_STATE_UPDATE",
         pingUrl: e,
         state: t,
     });
 }
-function v(e, t, n, r) {
+function j(e, t, n, r) {
     return a.tn.post({
-        url: h.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: p.ANM.GUILD_POWERUP_TOGGLE(e, t),
         body: {
             game_server_name: n,
             game_server_region: r,
@@ -109,18 +138,18 @@ function v(e, t, n, r) {
         oldFormErrors: !0,
     });
 }
-function j(e, t, n) {
+function _(e, t, n) {
     return a.tn.del({
-        url: h.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: p.ANM.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function _(e) {
+function y(e) {
     return a.tn
         .get({
-            url: h.ANM.GAME_SERVER_REGIONS(e),
+            url: p.ANM.GAME_SERVER_REGIONS(e),
             rejectWithError: !0,
             oldFormErrors: !0,
         })

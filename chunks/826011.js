@@ -1,81 +1,96 @@
-s.d(t, { default: () => x });
-var r = s(951288),
-    n = s(647438),
-    a = s(667202),
-    i = s(481060),
+s.d(t, { default: () => h });
+var n = s(951288),
+    r = s(647438),
+    a = s(442837),
+    i = s(667202),
+    l = s(481060),
     c = s(572004),
-    o = s(943970),
-    l = s(998964),
-    p = s(440589),
-    d = s(388032),
-    m = s(999852);
-function x(e) {
-    let { instance: t, onClose: s, transitionState: x } = e,
-        u = (0, l.Z)(t),
-        h = n.useCallback(() => {
-            (0, c.JG)(u), (0, i.showToast)((0, i.createToast)(d.intl.string(d.t["+5kSoa"]), i.ToastType.SUCCESS));
-        }, [u]),
-        v = (0, o.Z)(t.gameId, "cover");
-    return (0, r.jsx)(a.I, {
+    o = s(744993),
+    p = s(693587),
+    d = s(943970),
+    u = s(998964),
+    m = s(440589),
+    x = s(388032),
+    v = s(999852);
+function h(e) {
+    let { guildId: t, instance: s, onClose: h, transitionState: I } = e,
+        f = (0, a.e7)([p.Z], () => {
+            var e;
+            return null == (e = p.Z.getStateForGuild(t)) ? void 0 : e.instructions[s.planId];
+        });
+    r.useEffect(() => {
+        null == f && (0, o.iX)(t, s.planId);
+    }, [t, s.planId, f]);
+    let j = (0, u.Z)(s),
+        C = r.useCallback(() => {
+            (0, c.JG)(j), (0, l.showToast)((0, l.createToast)(x.intl.string(x.t["+5kSoa"]), l.ToastType.SUCCESS));
+        }, [j]),
+        N = (0, d.Z)(s.gameId, "cover");
+    return (0, n.jsx)(i.I, {
         graphic: {
-            src: v,
+            src: N,
             type: "image",
         },
-        title: t.name,
-        subtitle: t.planName,
+        title: s.name,
+        subtitle: s.planName,
         size: "md",
-        transitionState: x,
-        onClose: s,
-        children: (0, r.jsxs)("div", {
-            className: m.content,
-            children: [
-                (0, r.jsx)("div", {
-                    className: m.stepsContainer,
-                    children: t.instructions.map((e, t) =>
-                        (0, r.jsxs)(
-                            "div",
-                            {
-                                className: m.step,
-                                children: [
-                                    (0, r.jsx)("div", {
-                                        className: m.stepNumber,
-                                        children: (0, r.jsx)(i.Text, {
-                                            variant: "text-sm/semibold",
-                                            color: "text-secondary",
-                                            children: d.intl.formatToPlainString(p.default.e0RxEB, { step: t + 1 }),
-                                        }),
-                                    }),
-                                    (0, r.jsx)(i.Text, {
-                                        variant: "text-md/normal",
-                                        color: "header-primary",
-                                        children: e,
-                                    }),
-                                ],
-                            },
-                            t,
-                        ),
-                    ),
-                }),
-                (0, r.jsxs)("div", {
-                    className: m.serverIpContainer,
-                    children: [
-                        (0, r.jsx)("div", {
-                            className: m.serverIpInput,
-                            children: (0, r.jsx)(i.Text, {
-                                variant: "text-md/medium",
-                                color: "header-primary",
-                                children: u,
-                            }),
-                        }),
-                        (0, r.jsx)(i.zxk, {
-                            variant: "primary",
-                            text: d.intl.string(d.t.OpuAlJ),
-                            onClick: h,
-                            icon: i.TIy,
-                        }),
-                    ],
-                }),
-            ],
-        }),
+        transitionState: I,
+        onClose: h,
+        children:
+            null == f
+                ? (0, n.jsx)(l.$jN, {})
+                : (0, n.jsxs)("div", {
+                      className: v.content,
+                      children: [
+                          (0, n.jsx)("div", {
+                              className: v.stepsContainer,
+                              children: f.map((e, t) =>
+                                  (0, n.jsxs)(
+                                      "div",
+                                      {
+                                          className: v.step,
+                                          children: [
+                                              (0, n.jsx)("div", {
+                                                  className: v.stepNumber,
+                                                  children: (0, n.jsx)(l.Text, {
+                                                      variant: "text-sm/semibold",
+                                                      color: "text-secondary",
+                                                      children: x.intl.formatToPlainString(m.default.e0RxEB, {
+                                                          step: t + 1,
+                                                      }),
+                                                  }),
+                                              }),
+                                              (0, n.jsx)(l.Text, {
+                                                  variant: "text-md/normal",
+                                                  color: "header-primary",
+                                                  children: e,
+                                              }),
+                                          ],
+                                      },
+                                      t,
+                                  ),
+                              ),
+                          }),
+                          (0, n.jsxs)("div", {
+                              className: v.serverIpContainer,
+                              children: [
+                                  (0, n.jsx)("div", {
+                                      className: v.serverIpInput,
+                                      children: (0, n.jsx)(l.Text, {
+                                          variant: "text-md/medium",
+                                          color: "header-primary",
+                                          children: j,
+                                      }),
+                                  }),
+                                  (0, n.jsx)(l.zxk, {
+                                      variant: "primary",
+                                      text: x.intl.string(x.t.OpuAlJ),
+                                      onClick: C,
+                                      icon: l.TIy,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
     });
 }
