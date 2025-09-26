@@ -162,12 +162,13 @@ function V(e, t) {
 function H(e, t, i) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestInGameRewardModal")) {
-            let { default: t } = await n.e("76418").then(n.bind(n, 34251));
+            let { default: a } = await n.e("76418").then(n.bind(n, 34251));
             return (n) =>
                 (0, r.jsx)(
-                    t,
+                    a,
                     G(k({}, n), {
                         quest: e,
+                        location: t,
                         sourceQuestContent: i,
                     }),
                 );
@@ -407,7 +408,7 @@ function et(e) {
 }
 function en(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("33888"), n.e("33628")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("11522"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
             (0, r.jsx)(
                 t,
