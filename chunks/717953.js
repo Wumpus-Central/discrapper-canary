@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -11,15 +11,16 @@ var r = n(951288),
     f = n(44315),
     _ = n(266454),
     p = n(581883),
-    h = n(583901),
-    m = n(576157),
-    g = n(231338),
-    E = n(119475),
-    b = n(388032),
-    y = n(279457);
-function O() {
+    h = n(36982),
+    m = n(583901),
+    g = n(576157),
+    E = n(231338),
+    b = n(119475),
+    y = n(388032),
+    O = n(279457);
+function v() {
     return (0, r.jsxs)("svg", {
-        className: y.newRing,
+        className: O.newRing,
         width: "68",
         height: "68",
         viewBox: "0 0 68 68",
@@ -53,62 +54,67 @@ function O() {
         ],
     });
 }
-function v(e) {
-    var t, n;
-    let { isDisabled: a, onSelect: v } = e,
-        I = (0, l.e7)([p.Z], () => {
+function I(e) {
+    let { isDisabled: t, onSelect: n } = e,
+        a = (0, l.e7)([p.Z], () => {
             var e, t;
             return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings)
                 ? void 0
                 : e.customUserThemeSettings;
         }),
-        { shouldShowNewBadge: T, markNewBadgeAsDismissed: S } = (0, m.w)(),
-        A = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        C = (0, d.ZP)(),
-        N = null != I,
-        R = (0, u.wjy)(C) ? y.darkOverlay : y.lightOverlay,
-        P = (null != (n = null == I || null == (t = I.colors) ? void 0 : t.length) ? n : 0) > 1,
-        w = i.useMemo(() => {
-            if (null == I || null == I.colors || 0 === I.colors.length) return;
-            let e = I.colors[0];
-            if (P) {
-                let { colors: t, gradientAngle: n } = I;
-                e = "linear-gradient(".concat(n, "deg, ").concat(t.join(", "), ")");
+        { shouldShowNewBadge: I, markNewBadgeAsDismissed: T } = (0, g.w)(),
+        S = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        A = (0, d.ZP)(),
+        C = (0, u.wjy)(A) ? O.darkOverlay : O.lightOverlay,
+        N = null != a && null != a.colors && a.colors.length > 0,
+        R = (0, l.e7)([h.Z], () => h.Z.getSavedCustomTheme()),
+        P = N,
+        w = N || null != R,
+        D = i.useMemo(() => {
+            let e, t;
+            if (N) (e = a.colors), (t = a.gradientAngle);
+            else {
+                if (null === R) return;
+                (e = R.colors), (t = R.gradient_angle);
             }
-            return { background: "var(--background-gradient), ".concat(e) };
-        }, [I, P]),
-        D = (0, f.Sl)(g.Il.WHITE).hex,
-        x = (0, f.Sl)(g.Il.RED_430).hex,
-        L = N ? D : void 0,
-        j = i.useCallback(() => {
-            T && S(), null == v || v();
-        }, [T, S, v]);
+            let n = e[0];
+            return (
+                e.length > 1 && (n = "linear-gradient(".concat(t, "deg, ").concat(e.join(", "), ")")),
+                { background: "var(--background-gradient), ".concat(n) }
+            );
+        }, [N, a, R]),
+        x = (0, f.Sl)(E.Il.WHITE).hex,
+        L = (0, f.Sl)(E.Il.RED_430).hex,
+        j = w ? x : void 0,
+        M = i.useCallback(() => {
+            I && T(), null == n || n();
+        }, [I, T, n]);
     return (0, r.jsxs)("div", {
-        className: y.badgeContainer,
+        className: O.badgeContainer,
         children: [
-            (0, r.jsxs)(h.S4, {
-                onSelect: a ? void 0 : j,
+            (0, r.jsxs)(m.S4, {
+                onSelect: t ? void 0 : M,
                 isSelected: !1,
-                showSelectionCircle: N,
-                name: b.intl.string(E.default.KSBBpK),
-                className: o()(y.container, N && R, a && y.disabled),
+                showSelectionCircle: P,
+                name: y.intl.string(b.default.KSBBpK),
+                className: o()(O.container, w && C, t && O.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: w,
+                style: D,
                 children: [
-                    !A && !N && (0, r.jsx)(O, {}),
-                    (0, r.jsx)("div", { className: y.borderOverlay }),
+                    !S && !w && (0, r.jsx)(v, {}),
+                    (0, r.jsx)("div", { className: O.borderOverlay }),
                     (0, r.jsx)(s.V3v, {
-                        color: L,
-                        className: y.paletteIcon,
+                        color: j,
+                        className: O.paletteIcon,
                     }),
                 ],
             }),
-            T &&
+            I &&
                 (0, r.jsx)(u.IGR, {
-                    className: y.newBadge,
-                    text: b.intl.string(b.t.y2b7CA),
-                    color: x,
+                    className: O.newBadge,
+                    text: y.intl.string(y.t.y2b7CA),
+                    color: L,
                 }),
         ],
     });
