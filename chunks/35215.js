@@ -380,6 +380,7 @@ function G(e) {
         align: O,
         spacing: R,
         scrollBehavior: "close",
+        ignoreModalClicks: !0,
         children: (e) => a(e, g),
     });
 }
