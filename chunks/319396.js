@@ -8,21 +8,22 @@ var i = n(442837),
     s = n(835255),
     c = n(855587);
 function u(e) {
-    let { item: t, user: n, profileOwner: i, wishlistId: a } = e;
+    let { item: t, user: n, profileOwner: i, wishlistId: a, canEdit: o } = e;
     return (0, l.Q)(t)
         ? (0, r.jsx)(s.Z, {
               item: t,
               user: n,
               profileOwner: i,
               wishlistId: a,
+              canEdit: o,
           })
         : null;
 }
 function d(e) {
-    let { items: t, profileOwner: n } = e,
-        l = a.default.getCurrentUser(),
-        { defaultWishlistId: s } = (0, i.cj)([o.Z], () => ({ defaultWishlistId: o.Z.getFirstWishlistId(n.id) }));
-    return null == l || null == s
+    let { items: t, profileOwner: n, canEdit: l } = e,
+        s = a.default.getCurrentUser(),
+        { defaultWishlistId: d } = (0, i.cj)([o.Z], () => ({ defaultWishlistId: o.Z.getFirstWishlistId(n.id) }));
+    return null == s || null == d
         ? null
         : (0, r.jsx)("div", {
               className: c.grid,
@@ -31,9 +32,10 @@ function d(e) {
                       u,
                       {
                           item: e,
-                          user: l,
+                          user: s,
                           profileOwner: n,
-                          wishlistId: s,
+                          wishlistId: d,
+                          canEdit: l,
                       },
                       e.skuId,
                   ),

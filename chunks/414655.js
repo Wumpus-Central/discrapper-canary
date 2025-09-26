@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -8,79 +8,87 @@ var r = n(951288),
     c = n(906732),
     u = n(335131),
     d = n(602733),
-    p = n(621853),
-    f = n(661462),
-    h = n(319396),
-    g = n(388032),
-    m = n(10094);
-function b(e) {
+    p = n(594174),
+    f = n(621853),
+    h = n(661462),
+    g = n(319396),
+    m = n(388032),
+    b = n(10094);
+function _(e) {
     let { profileOwner: t } = e,
-        { defaultWishlistId: n } = (0, l.cj)([p.Z], () => ({ defaultWishlistId: p.Z.getFirstWishlistId(t.id) })),
-        { analyticsLocations: b } = (0, c.ZP)(),
-        { wishlist: _, error: O } = (0, d.k)(n),
-        E = i.useCallback(() => {
+        { defaultWishlistId: n, currentUser: _ } = (0, l.cj)([f.Z, p.default], () => ({
+            defaultWishlistId: f.Z.getFirstWishlistId(t.id),
+            currentUser: p.default.getCurrentUser(),
+        })),
+        { analyticsLocations: O } = (0, c.ZP)(),
+        E = (null == _ ? void 0 : _.id) === t.id,
+        { wishlist: y, error: v } = (0, d.k)(n),
+        I = i.useCallback(() => {
             (0, a.pT)(),
                 (0, u.mK)({
-                    analyticsLocations: b,
+                    analyticsLocations: O,
                     analyticsSource: s.Z.USER_PROFILE_WISHLIST,
                     openInLayer: !1,
                 });
-        }, [b]);
-    return null != O
+        }, [O]);
+    return null != v
         ? null
-        : null == _ || 0 === _.items.length
-          ? (0, r.jsx)(f.F, {
+        : null == y || 0 === y.items.length
+          ? (0, r.jsx)(h.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
-                    className: m.emptyStateContainer,
+                    className: b.emptyStateContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: m.emptyStateText,
+                            className: b.emptyStateText,
                             children: [
                                 (0, r.jsx)(o.X6q, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: g.intl.string(g.t.HGnLLS),
+                                    children: m.intl.string(m.t.HGnLLS),
                                 }),
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: g.intl.string(g.t["/X1ny8"]),
+                                    children: m.intl.string(m.t["/X1ny8"]),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            variant: "primary",
-                            icon: o.EOn,
-                            text: g.intl.string(g.t.ZbS4QE),
-                            onClick: E,
-                        }),
+                        E &&
+                            (0, r.jsx)(o.zxk, {
+                                variant: "primary",
+                                icon: o.EOn,
+                                text: m.intl.string(m.t.ZbS4QE),
+                                onClick: I,
+                            }),
                     ],
                 }),
             })
-          : (0, r.jsxs)(f.F, {
+          : (0, r.jsxs)(h.F, {
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: m.headerRow,
+                        className: b.headerRow,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
-                                children: g.intl.format(g.t.r6Y1Li, { count: _.items.length }),
+                                children: m.intl.format(m.t.r6Y1Li, { count: y.items.length }),
                             }),
-                            (0, r.jsx)(o.zxk, {
-                                variant: "secondary",
-                                size: "sm",
-                                icon: o.qJs,
-                                text: g.intl.string(g.t.SDUwMz),
-                                onClick: E,
-                            }),
+                            E &&
+                                (0, r.jsx)(o.zxk, {
+                                    variant: "secondary",
+                                    size: "sm",
+                                    icon: o.qJs,
+                                    text: m.intl.string(m.t.SDUwMz),
+                                    onClick: I,
+                                }),
                         ],
                     }),
-                    (0, r.jsx)(h.Z, {
-                        items: _.items,
+                    (0, r.jsx)(g.Z, {
+                        items: y.items,
                         profileOwner: t,
+                        canEdit: E,
                     }),
                 ],
             });
