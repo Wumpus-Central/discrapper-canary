@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(822183),
     d = n(364125),
     f = n(90753),
-    p = n(9589);
+    p = n(806777);
 function m(e) {
     let { focused: t, channelId: n, streamerId: l, stream: u } = e,
         m = i.useRef(null),

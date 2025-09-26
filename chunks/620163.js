@@ -95,9 +95,9 @@ var i = n(990547),
     ex = n(46140),
     eL = n(65154),
     ej = n(388032),
-    eM = n(62222),
-    ek = n(412297),
-    eU = n(756464);
+    eM = n(693450),
+    ek = n(345909),
+    eU = n(202323);
 function eG(e, t, n) {
     return (
         t in e
@@ -209,8 +209,8 @@ let eV = () => {
             isAdultUser: e3,
             hasSecureFramesVerifiedUserIds: e4,
             hasIgnoredUsers: e8,
-            hasBlockedUsers: e6,
-            isEligibleForSensitiveContentDefaults: e5,
+            hasBlockedUsers: e5,
+            isEligibleForSensitiveContentDefaults: e6,
             inputMode: e7,
             activeInputProfile: e9,
             isInputProfileCustom: te,
@@ -259,7 +259,7 @@ let eV = () => {
                 ],
                 section: eD.oAB.ACCOUNT,
                 parent: eP.s6.ACCOUNT_PROFILE,
-                predicate: () => e5,
+                predicate: () => e6,
             },
             [eP.s6.ACCOUNT_USERNAME]: {
                 searchableTitles: [ej.intl.string(ej.t["+JkHPz"])],
@@ -703,7 +703,7 @@ let eV = () => {
                 parent: eP.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
                 label: ej.intl.string(ej.t["3wRorq"]),
                 element: eC.ZP,
-                predicate: () => e8 || e6,
+                predicate: () => e8 || e5,
             },
             [eP.s6.BLOCKED_USERS]: {
                 section: eD.oAB.CONTENT_AND_SOCIAL,
@@ -711,7 +711,7 @@ let eV = () => {
                 label: ej.intl.string(ej.t.PFOUKS),
                 searchableTitles: [ej.intl.string(ej.t.PFOUKS)],
                 element: eC.GF,
-                predicate: () => e6,
+                predicate: () => e5,
             },
             [eP.s6.IGNORED_USERS]: {
                 section: eD.oAB.CONTENT_AND_SOCIAL,

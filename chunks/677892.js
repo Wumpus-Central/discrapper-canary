@@ -19,8 +19,8 @@ var r = n(951288),
     g = n(974513),
     p = n(290511),
     f = n(388032),
-    h = n(376933);
-function x(e) {
+    h = n(54028);
+function b(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
     switch (o) {
@@ -129,14 +129,14 @@ function x(e) {
         ],
     });
 }
-function b(e) {
+function x(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
         [r, s] = (0, c.VF)(e, n);
     return s.length >= p.md && r.length >= p.X;
 }
 function j(e) {
-    let t = b(e),
+    let t = x(e),
         n = (0, g.O4)(e);
     return t || n;
 }
@@ -147,7 +147,7 @@ function v(e) {
         m = i.useMemo(() => new Set(d), [d]),
         [, j] = (0, c.VF)(t, m),
         v = j.length,
-        _ = b(t),
+        _ = x(t),
         O = (0, g.O4)(t),
         y = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         C = y
@@ -161,7 +161,7 @@ function v(e) {
                     numDefaultChannels: p.md,
                     numChattableChannels: p.X,
                 });
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(b, {
         title: y ? f.intl.string(f.t.YZookZ) : f.intl.string(f.t["4GSygo"]),
         description: C,
         icon: (0, r.jsx)(a.VL1, {
@@ -181,18 +181,18 @@ function _(e) {
         u = d.length,
         [m, g] = (0, c.dF)(t, d, s),
         p = m.length,
-        b = m.length + g.length,
-        j = (p / b) * 100,
+        x = m.length + g.length,
+        j = (p / x) * 100,
         v = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         _ = u > 0,
         O = "none";
     return (
         _ && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
-        (0, r.jsx)(x, {
+        (0, r.jsx)(b, {
             title: v ? f.intl.string(f.t.AGjtFh) : f.intl.string(f.t.dqCzoa),
             description: f.intl.format(f.t.iuNisr, {
                 numChannels: p,
-                numTotalChannels: b,
+                numTotalChannels: x,
                 channelsHook: (e, t) =>
                     (0, r.jsx)(
                         "span",
@@ -218,16 +218,16 @@ function O(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: c } = e,
         g = (0, l.e7)([m.Z], () => m.Z.getSettings()),
         p = (0, l.e7)([o.Z], () => o.Z.getEnabled(t)),
-        b = (0, d.uo)(g),
+        x = (0, d.uo)(g),
         j = g.enabled,
         v = i.useCallback(() => {
             (0, u.To)(t, !j);
         }, [t, j]),
         _ = !(0, d.av)(g),
         O = "none";
-    _ && (b && !c ? (O = "good") : b || (O = "required"));
+    _ && (x && !c ? (O = "good") : x || (O = "required"));
     let y = f.intl.string(f.t.GMOwOD);
-    b ? _ || (y = f.intl.string(f.t.wHOoyM)) : (y = f.intl.string(f.t.wXFbgY));
+    x ? _ || (y = f.intl.string(f.t.wHOoyM)) : (y = f.intl.string(f.t.wXFbgY));
     let C = null;
     return (
         _ &&
@@ -237,10 +237,10 @@ function O(e) {
                 children: (0, r.jsx)(s.T2, {
                     checked: j,
                     onChange: v,
-                    disabled: !b,
+                    disabled: !x,
                 }),
             })),
-        (0, r.jsx)(x, {
+        (0, r.jsx)(b, {
             title: f.intl.string(f.t.mRHqsr),
             description: y,
             icon: (0, r.jsx)(a.Vy8, {

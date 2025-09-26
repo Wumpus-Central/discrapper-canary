@@ -1,4 +1,4 @@
 n.d(t, { f: () => i });
-var r = n(6383);
+var r = n(786920);
 let i = new (n(603767).Z)();
 r.Globals.assign({ frameLoop: i });

@@ -9,7 +9,7 @@ var a = t(951288),
     c = t(174727),
     d = t(882126),
     f = t(943351),
-    m = t(513726);
+    m = t(21243);
 let g = l.memo(function (e) {
     let { playing: n, onPausePlayback: t, onPlaybackChange: i, onChangePosition: g, disabled: h = !1 } = e,
         p = (function (e) {

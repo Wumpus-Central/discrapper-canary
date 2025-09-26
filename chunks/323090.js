@@ -10,16 +10,16 @@ var i = t(442837),
     d = t(621853),
     u = t(172351),
     m = t(280885),
-    f = t(900927),
-    p = t(678738),
+    p = t(900927),
+    f = t(678738),
     h = t(179828),
     j = t(228168),
     x = t(388032),
-    v = t(438160);
+    v = t(54966);
 function g(e) {
     let { user: n, currentUser: t, displayProfile: g, guildId: b, subsection: y, onClose: O } = e,
-        { trackUserProfileAction: Z } = (0, c.KZ)(),
-        I = (0, i.e7)([d.Z], () => {
+        { trackUserProfileAction: I } = (0, c.KZ)(),
+        Z = (0, i.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
@@ -34,11 +34,11 @@ function g(e) {
                     userBio: g.bio,
                     setLineClamp: !1,
                 }),
-            (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
+            (null == Z ? void 0 : Z.popularApplicationCommandIds) != null &&
                 null != P &&
                 (0, l.jsx)(u.Z, {
-                    applicationId: I.id,
-                    commandIds: I.popularApplicationCommandIds,
+                    applicationId: Z.id,
+                    commandIds: Z.popularApplicationCommandIds,
                     channel: P,
                     guildId: b,
                     onClick: O,
@@ -50,22 +50,22 @@ function g(e) {
                     guildId: g.guildId,
                     scrollIntoView: y === j.Tb.ROLES,
                 }),
-            (0, l.jsx)(p.Z, {
+            (0, l.jsx)(f.Z, {
                 heading: x.intl.string(x.t["A//N4u"]),
-                children: (0, l.jsx)(f.Z, {
+                children: (0, l.jsx)(p.Z, {
                     userId: n.id,
                     guildId: b,
                     tooltipDelay: j.vB,
                 }),
             }),
-            (0, l.jsx)(p.Z, {
+            (0, l.jsx)(f.Z, {
                 heading: x.intl.string(x.t["mQKv+v"]),
                 scrollIntoView: y === j.Tb.NOTE,
                 children: (0, l.jsx)(o.Z, {
                     userId: n.id,
                     className: v.note,
                     autoFocus: y === j.Tb.NOTE,
-                    onUpdate: () => Z({ action: "SET_NOTE" }),
+                    onUpdate: () => I({ action: "SET_NOTE" }),
                 }),
             }),
         ],

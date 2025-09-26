@@ -16,7 +16,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(6383),
+    c = n(786920),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -48,9 +48,9 @@ var r = n(951288),
     D = n(127654),
     U = n(746877),
     B = n(541716),
-    H = n(667829),
-    V = n(258696),
-    F = n(893718),
+    F = n(667829),
+    H = n(258696),
+    V = n(893718),
     G = n(273031),
     z = n(303628),
     W = n(981631),
@@ -165,7 +165,7 @@ let er = i.memo(
             eZ = null == (u = null == eE ? void 0 : eE.createThread) || u;
         s()(null != D, "chat input type must be set");
         let { analyticsLocations: eT } = (0, _.ZP)(C.Z.CHANNEL_TEXT_AREA),
-            eN = (0, F.qz)(t),
+            eN = (0, V.qz)(t),
             eA = i.useRef(null),
             ew = i.useRef(null),
             eM = i.useRef(null),
@@ -185,10 +185,10 @@ let er = i.memo(
                 isPendingMember: eD,
                 disabled: eU,
                 canAttachFiles: eB,
-                canEveryoneSendMessages: eH,
-            } = (0, F.TE)(k, D, ek, I),
-            eV = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
-            eF = !eV || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+                canEveryoneSendMessages: eF,
+            } = (0, V.TE)(k, D, ek, I),
+            eH = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
+            eV = !eH || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
             eG = (0, T.Z)(),
             { fontSize: ez } = (0, d.cj)([y.Z], () => ({
                 fontSize: y.Z.fontSize,
@@ -196,8 +196,8 @@ let er = i.memo(
             })),
             eW = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
             eq = (0, N.NE)(k);
-        (0, F.hJ)(D, eU);
-        let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, F.x2)(ew, p, h),
+        (0, V.hJ)(D, eU);
+        let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, V.x2)(ew, p, h),
             eX = i.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -273,13 +273,13 @@ let er = i.memo(
                 },
                 [ed, eS, eP, k.id, eZ, eI, eq],
             ),
-            { submit: eJ, handleSubmit: eQ } = (0, F.bL)(eX, D, ew, eR, k.id),
-            { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, F.jx)(),
+            { submit: eJ, handleSubmit: eQ } = (0, V.bL)(eX, D, ew, eR, k.id),
+            { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, V.jx)(),
             e2 = i.useCallback(() => {
                 var e;
                 return null == eR || null == (e = eR.current) ? void 0 : e.hide();
             }, []),
-            { editorHeight: e3, handleResize: e8 } = (0, F.oR)(er),
+            { editorHeight: e3, handleResize: e8 } = (0, V.oR)(er),
             {
                 handleTab: e4,
                 handleEnter: e7,
@@ -315,16 +315,16 @@ let er = i.memo(
                         [n],
                     ),
                 };
-            })(e$, eA, eF),
+            })(e$, eA, eV),
             {
                 expressionPickerView: e5,
                 shouldHideExpressionPicker: e9,
                 handleAutocompleteVisibilityChange: te,
                 handleOuterClick: tt,
-            } = (0, F.iV)(D, eY, ew),
-            tn = (0, F.ae)(ew),
-            tr = (0, F.Sg)(eJ, D, ew),
-            ti = (0, F.O1)({
+            } = (0, V.iV)(D, eY, ew),
+            tn = (0, V.ae)(ew),
+            tr = (0, V.Sg)(eJ, D, ew),
+            ti = (0, V.O1)({
                 editorRef: ew,
                 disabled: eU,
                 textValue: p,
@@ -427,18 +427,18 @@ let er = i.memo(
                                                     children: (0, r.jsx)(f.tEY, {
                                                         ringTarget: eN,
                                                         ringClassName: Q.focusRing,
-                                                        children: (0, r.jsx)(H.Z, {
+                                                        children: (0, r.jsx)(F.Z, {
                                                             ref: ew,
                                                             id: E,
                                                             focused: G,
-                                                            useSlate: eV,
+                                                            useSlate: eH,
                                                             textValue: p,
                                                             richValue: h,
                                                             disabled: eU,
                                                             placeholder: eg,
                                                             required: P,
                                                             accessibilityLabel: Z,
-                                                            isPreviewing: (eL || eD) && eH,
+                                                            isPreviewing: (eL || eD) && eF,
                                                             channel: k,
                                                             type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eB,
@@ -489,7 +489,7 @@ let er = i.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, r.jsx)(ea, { channel: k }),
-                                            (0, r.jsx)(V.Z, {
+                                            (0, r.jsx)(H.Z, {
                                                 type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eU,
                                                 channel: k,
@@ -574,7 +574,7 @@ let er = i.memo(
                                 channel: k,
                                 canMentionRoles: eh,
                                 canMentionChannels: ef,
-                                useNewSlashCommands: eV,
+                                useNewSlashCommands: eH,
                                 canOnlyUseTextCommands: !1,
                                 canSendStickers: !0,
                                 textValue: p,

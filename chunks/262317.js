@@ -36,7 +36,7 @@ var r = n(951288),
     A = n(927923),
     w = n(70722),
     M = n(388032),
-    R = n(2628);
+    R = n(92024);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -121,9 +121,9 @@ let B = (0, p.$)(function (e) {
             channel: D,
             mute: U,
             localMute: B,
-            localVideoDisabled: V,
+            localVideoDisabled: F,
             deaf: H,
-            video: F,
+            video: V,
             embeddedApplication: G,
             serverMute: z,
             serverDeaf: W,
@@ -195,7 +195,7 @@ let B = (0, p.$)(function (e) {
                     n.e("98783"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("87157"),
+                    n.e("96306"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, r.jsx)(
@@ -275,10 +275,10 @@ let B = (0, p.$)(function (e) {
                                 disconnected: X,
                                 mute: U,
                                 localMute: B,
-                                localVideoDisabled: V,
+                                localVideoDisabled: F,
                                 isStreaming: $,
                                 isGuest: et,
-                                video: F,
+                                video: V,
                                 priority: en,
                                 ringing: Y,
                                 deaf: H,

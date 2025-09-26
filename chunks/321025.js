@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
-    a = n(6383),
+    a = n(786920),
     o = n(613087);
 function s(e) {
     let { expansionSpring: t, isExpanded: n } = e,

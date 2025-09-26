@@ -10,19 +10,19 @@ var i = n(442837),
     d = n(594174),
     u = n(556012),
     m = n(388032),
-    g = n(75765);
+    g = n(464992);
 function p(e) {
     var t;
     let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
-        x = (e) => () => h(e),
-        b = (0, u.c)(n.type, n, p),
+        b = (e) => () => h(e),
+        x = (0, u.c)(n.type, n, p),
         j = null == (t = n.metadata) ? void 0 : t.channelId,
         v = (0, i.e7)([d.default, c.Z, o.Z], () => {
             let e = o.Z.getChannel(j);
             return null == e ? null : (0, a.F6)(e, d.default, c.Z);
         }, [j]);
-    if (null == b) return null;
-    let { headerText: _, descriptionText: O, icon: y } = b;
+    if (null == x) return null;
+    let { headerText: _, descriptionText: O, icon: y } = x;
     return (0, r.jsxs)("div", {
         className: g.actionContainer,
         children: [
@@ -53,7 +53,7 @@ function p(e) {
                             children: [
                                 null != v && m.intl.format(m.t["8Sr/am"], { channelName: v }),
                                 (0, r.jsx)(s.P3F, {
-                                    onClick: x(!0),
+                                    onClick: b(!0),
                                     className: g.editChannel,
                                     tag: "span",
                                     role: "link",
@@ -67,7 +67,7 @@ function p(e) {
                 children: (0, r.jsx)(l.$q, {
                     type: l.M0.INVERTED,
                     value: f,
-                    onChange: x(!1),
+                    onChange: b(!1),
                     className: g.__invalid_actionCheckbox,
                 }),
             }),

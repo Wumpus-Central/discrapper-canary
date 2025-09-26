@@ -37,9 +37,9 @@ var r = n(951288),
     D = n(981631),
     U = n(701488),
     B = n(815660),
-    V = n(388032),
-    H = n(989028);
-function F(e, t, n) {
+    F = n(388032),
+    H = n(97508);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function G(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -128,59 +128,59 @@ class W extends i.PureComponent {
                 useReducedMotion: b,
             };
         if (e && !h) {
-            if (((E.message = V.intl.string(V.t.Hl0Mqq)), null != f && f >= 1000)) {
+            if (((E.message = F.intl.string(F.t.Hl0Mqq)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                E.subtitle = V.intl.formatToPlainString(V.t.C5bgrK, { count: e.toLocaleString() });
+                E.subtitle = F.intl.formatToPlainString(F.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (E.buttonText = V.intl.string(V.t["3aOv+v"])),
+            (E.buttonText = F.intl.string(F.t["3aOv+v"])),
                 (E.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((E.onSecondaryButtonClick = this.handleJoinServer),
-                    (E.secondaryButtonText = V.intl.string(V.t["RLch7+"])));
+                    (E.secondaryButtonText = F.intl.string(F.t["RLch7+"])));
         } else if (n)
-            (E.message = V.intl.string(V.t["Eg3/c3"])),
-                (E.buttonText = V.intl.string(V.t.fiNVio)),
+            (E.message = F.intl.string(F.t["Eg3/c3"])),
+                (E.buttonText = F.intl.string(F.t.fiNVio)),
                 (E.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == _ ? void 0 : _.applicationStatus) {
                 case y.wB.SUBMITTED:
-                    (E.message = V.intl.string(V.t["5iLvS0"])),
-                        (E.subtitle = V.intl.string(V.t.FdsK4u)),
-                        (E.buttonText = V.intl.string(V.t.mqtdmZ)),
+                    (E.message = F.intl.string(F.t["5iLvS0"])),
+                        (E.subtitle = F.intl.string(F.t.FdsK4u)),
+                        (E.buttonText = F.intl.string(F.t.mqtdmZ)),
                         (E.onButtonClick = this.handleCancelApplication);
                     break;
                 case y.wB.REJECTED:
-                    (E.message = V.intl.string(V.t.lk30cX)),
-                        (E.buttonText = V.intl.string(V.t["8RrsHh"])),
+                    (E.message = F.intl.string(F.t.lk30cX)),
+                        (E.buttonText = F.intl.string(F.t["8RrsHh"])),
                         (E.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (E.message = V.intl.string(V.t.rEBKvr)),
-                        (E.buttonText = V.intl.string(V.t["r8/DT0"])),
+                    (E.message = F.intl.string(F.t.rEBKvr)),
+                        (E.buttonText = F.intl.string(F.t["r8/DT0"])),
                         (E.buttonVariant = "primary"),
                         (E.onButtonClick = this.handleShowMemberVerification);
             }
         else if (v || null == x)
             i && !C
-                ? ((E.message = V.intl.string(V.t["2dThMD"])),
-                  (E.buttonText = V.intl.string(V.t["50gfOj"])),
+                ? ((E.message = F.intl.string(F.t["2dThMD"])),
+                  (E.buttonText = F.intl.string(F.t["50gfOj"])),
                   (E.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((E.message = V.intl.string(V.t.FkGPS0)),
-                    (E.buttonText = V.intl.string(V.t.lm1UKi)),
+                  ? ((E.message = F.intl.string(F.t.FkGPS0)),
+                    (E.buttonText = F.intl.string(F.t.lm1UKi)),
                     (E.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((E.message = V.intl.formatToPlainString(V.t.IH7RMD, { min: D.YeM.MEMBER_AGE })),
+                    ? ((E.message = F.intl.formatToPlainString(F.t.IH7RMD, { min: D.YeM.MEMBER_AGE })),
                       (E.countdown = o))
                     : s &&
-                      ((E.message = V.intl.formatToPlainString(V.t["2JA2GB"], { min: D.YeM.ACCOUNT_AGE })),
+                      ((E.message = F.intl.formatToPlainString(F.t["2JA2GB"], { min: D.YeM.ACCOUNT_AGE })),
                       (E.countdown = u));
         else {
             var S;
             (E.imageSrc = null != (S = x.getIconURL(U.Si.SMALL)) ? S : void 0),
-                (E.message = V.intl.format(V.t.EvDn1N, { name: x.name })),
+                (E.message = F.intl.format(F.t.EvDn1N, { name: x.name })),
                 null != x.connectionEntrypointUrl &&
-                    ((E.buttonText = V.intl.string(V.t.S0W8Z2)),
+                    ((E.buttonText = F.intl.string(F.t.S0W8Z2)),
                     (E.onButtonClick = () => {
                         window.open(x.connectionEntrypointUrl, "_blank");
                     }));
@@ -225,14 +225,14 @@ class W extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            F(this, "state", {
+            V(this, "state", {
                 submitting: !1,
                 shouldShowLurkerModeUpsellPopout: !1,
                 shouldShowLurkerModeSuccessPopout: !1,
             }),
-            F(this, "textAreaContainerRef", i.createRef()),
-            F(this, "upsellTargetRef", i.createRef()),
-            F(this, "renderSuccessPopout", (e) => {
+            V(this, "textAreaContainerRef", i.createRef()),
+            V(this, "upsellTargetRef", i.createRef()),
+            V(this, "renderSuccessPopout", (e) => {
                 let { closePopout: t } = e,
                     { guild: n } = this.props;
                 return (
@@ -243,7 +243,7 @@ class W extends i.PureComponent {
                     })
                 );
             }),
-            F(this, "handleCancelApplication", () => {
+            V(this, "handleCancelApplication", () => {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.h7j)((t) =>
@@ -252,9 +252,9 @@ class W extends i.PureComponent {
                             z(
                                 G(
                                     {
-                                        header: V.intl.string(V.t.aIz1oa),
-                                        confirmText: V.intl.string(V.t["cY+Ooa"]),
-                                        cancelText: V.intl.string(V.t["ETE/oK"]),
+                                        header: F.intl.string(F.t.aIz1oa),
+                                        confirmText: F.intl.string(F.t["cY+Ooa"]),
+                                        cancelText: F.intl.string(F.t["ETE/oK"]),
                                         onConfirm: () => m.Z.removeGuildJoinRequest(e.id),
                                         confirmButtonColor: s.Tt.BRAND,
                                     },
@@ -263,14 +263,14 @@ class W extends i.PureComponent {
                                 {
                                     children: (0, r.jsx)(c.Text, {
                                         variant: "text-md/normal",
-                                        children: V.intl.string(V.t["13tjTU"]),
+                                        children: F.intl.string(F.t["13tjTU"]),
                                     }),
                                 },
                             ),
                         ),
                     );
             }),
-            F(this, "handleViewApplicationRejection", () => {
+            V(this, "handleViewApplicationRejection", () => {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.ZDy)(async () => {
@@ -278,14 +278,14 @@ class W extends i.PureComponent {
                         return (n) => (0, r.jsx)(t, G({ guildId: e.id }, n));
                     });
             }),
-            F(this, "handleShowMemberVerification", () => {
+            V(this, "handleShowMemberVerification", () => {
                 let { guild: e } = this.props;
                 null != e && (0, b.hk)(e.id);
             }),
-            F(this, "handleClaimAccount", () => {
+            V(this, "handleClaimAccount", () => {
                 f.j();
             }),
-            F(this, "handleVerifyPhone", () => {
+            V(this, "handleVerifyPhone", () => {
                 (0, c.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
@@ -294,7 +294,7 @@ class W extends i.PureComponent {
                     { modalKey: B.M },
                 );
             }),
-            F(this, "handleResendVerification", () => {
+            V(this, "handleResendVerification", () => {
                 var e;
                 u.Z.verifyResend();
                 let t = null == (e = M.default.getCurrentUser()) ? void 0 : e.email;
@@ -303,22 +303,22 @@ class W extends i.PureComponent {
                         (0, r.jsx)(
                             c.ConfirmModal,
                             z(G({}, e), {
-                                header: V.intl.string(V.t.LykQYm),
-                                confirmText: V.intl.string(V.t.BddRzc),
+                                header: F.intl.string(F.t.LykQYm),
+                                confirmText: F.intl.string(F.t.BddRzc),
                                 confirmButtonColor: s.Tt.BRAND,
                                 children: (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    children: V.intl.format(V.t.azKEPz, { email: t }),
+                                    children: F.intl.format(F.t.azKEPz, { email: t }),
                                 }),
                             }),
                         ),
                     );
             }),
-            F(this, "handleTextAreaClick", () => {
+            V(this, "handleTextAreaClick", () => {
                 let { showLurkerModeUpsellPopout: e } = this.props;
                 this.setState({ shouldShowLurkerModeUpsellPopout: e });
             }),
-            F(this, "handleJoinServer", async () => {
+            V(this, "handleJoinServer", async () => {
                 this.setState({ submitting: !0 });
                 let e = this.props.channel.getGuildId();
                 try {
@@ -327,20 +327,20 @@ class W extends i.PureComponent {
                     this.setState({ submitting: !1 });
                 }
             }),
-            F(this, "handleGoBack", () => {
+            V(this, "handleGoBack", () => {
                 this.setState({ submitting: !0 }), (0, P.s1)().goBack();
             }),
-            F(this, "handleFollowAnnouncement", () => {
+            V(this, "handleFollowAnnouncement", () => {
                 let { channel: e } = this.props;
                 (0, c.ZDy)(async () => {
                     let { default: t } = await n.e("54642").then(n.bind(n, 720589));
                     return (n) => (0, r.jsx)(t, G({ channel: e }, n));
                 });
             }),
-            F(this, "closeLurkerModeUpsellPopout", () => {
+            V(this, "closeLurkerModeUpsellPopout", () => {
                 this.setState({ shouldShowLurkerModeUpsellPopout: !1 });
             }),
-            F(this, "renderLurkerModeUpsellPopout", () => {
+            V(this, "renderLurkerModeUpsellPopout", () => {
                 let { guild: e } = this.props;
                 return (
                     a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
@@ -351,7 +351,7 @@ class W extends i.PureComponent {
                     })
                 );
             }),
-            F(this, "renderMemberVerificationSuccessModal", () => {
+            V(this, "renderMemberVerificationSuccessModal", () => {
                 let { guild: e, guildJoinRequest: t } = this.props,
                     n = (null == t ? void 0 : t.applicationStatus) === y.wB.APPROVED;
                 if (null == e || null == t || !n || (0, g.d3)(t)) return null;

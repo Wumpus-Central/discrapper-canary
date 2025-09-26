@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => Z });
 var l = t(951288);
 t(647438);
 var i = t(442837),
@@ -10,8 +10,8 @@ var i = t(442837),
     d = t(63063),
     u = t(209698),
     m = t(369566),
-    f = t(29899),
-    p = t(678738),
+    p = t(29899),
+    f = t(678738),
     h = t(151545),
     j = t(527790),
     x = t(769140),
@@ -19,16 +19,16 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     y = t(388032),
-    O = t(847540),
-    Z = t(883172);
-function I(e) {
-    let { user: n, currentUser: t, guildId: I, subsection: P, onClose: N } = e,
+    O = t(7994),
+    I = t(878449);
+function Z(e) {
+    let { user: n, currentUser: t, guildId: Z, subsection: P, onClose: N } = e,
         { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
         E = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: A, recent: S, stream: C } = (0, m.Z)(n.id),
-        { voiceChannel: w, voiceActivity: _ } = (0, f.Z)({
+        { voiceChannel: w, voiceActivity: _ } = (0, p.Z)({
             userId: n.id,
-            guildId: I,
+            guildId: Z,
         }),
         D = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         R = n.id === t.id,
@@ -46,7 +46,7 @@ function I(e) {
               fade: !0,
               children: [
                   k
-                      ? (0, l.jsx)(p.Z, {
+                      ? (0, l.jsx)(f.Z, {
                             "aria-label": y.intl.string(y.t.J6STd3),
                             children: (0, l.jsxs)("ul", {
                                 className: O.activityList,
@@ -89,7 +89,7 @@ function I(e) {
                         })
                       : null,
                   B
-                      ? (0, l.jsx)(p.Z, {
+                      ? (0, l.jsx)(f.Z, {
                             heading: y.intl.string(y.t.M0zgnZ),
                             introText: R
                                 ? y.intl.format(y.t["4bk9Ag"], {
@@ -126,7 +126,7 @@ function I(e) {
               ],
           })
         : (0, l.jsx)("div", {
-              className: Z.empty,
+              className: I.empty,
               children: (0, l.jsx)(r.$jN, {}),
           });
 }

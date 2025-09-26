@@ -13,7 +13,7 @@ var r = n(990547),
     _ = n(110223),
     f = n(981631),
     g = n(388032),
-    N = n(73199);
+    N = n(405842);
 function x(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: x, transitionState: h, onClose: E, onJoin: p } = e,
         A = Array.from(n)

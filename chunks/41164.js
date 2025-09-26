@@ -8,7 +8,7 @@ var a = n(481060),
     s = n(188879),
     c = n(981631),
     d = n(726985),
-    u = n(699244);
+    u = n(22860);
 let m = (e) => {
     let { transitionState: t, onClose: n, classificationId: m, source: p } = e,
         f = (0, r.Z)(),

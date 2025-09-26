@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => I });
 var l = t(951288);
 t(647438);
 var i = t(120356),
@@ -10,13 +10,13 @@ var i = t(120356),
     d = t(122021),
     u = t(275759),
     m = t(888496),
-    f = t(768762),
-    p = t(706454),
+    p = t(768762),
+    f = t(706454),
     h = t(49012),
     j = t(981631),
     x = t(856651),
     v = t(388032),
-    g = t(638999);
+    g = t(20163);
 function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -64,7 +64,7 @@ function O(e) {
     var n;
     let { account: t, locale: i, userId: r } = e,
         o = null != (n = t.metadata) ? n : {},
-        p = (0, u.FI)(o[x.PC.CREATED_AT], i),
+        f = (0, u.FI)(o[x.PC.CREATED_AT], i),
         O = a.Z.get((0, d.rR)(t.type));
     return (0, l.jsxs)("li", {
         className: g.connection,
@@ -146,18 +146,18 @@ function O(e) {
                                                               }),
                                                           ),
                                                   }),
-                                                  (0, l.jsx)(f.Z, {
+                                                  (0, l.jsx)(p.Z, {
                                                       className: g.platformUrlIcon,
-                                                      direction: f.Z.Directions.RIGHT,
+                                                      direction: p.Z.Directions.RIGHT,
                                                   }),
                                               ],
                                           }),
                                       });
                             })(),
-                            null != p &&
+                            null != f &&
                                 (0, l.jsx)(s.Text, {
                                     variant: "text-xs/normal",
-                                    children: v.intl.format(v.t["9rfonp"], { date: p }),
+                                    children: v.intl.format(v.t["9rfonp"], { date: f }),
                                 }),
                         ],
                     }),
@@ -183,9 +183,9 @@ function O(e) {
         ],
     });
 }
-function Z(e) {
+function I(e) {
     let { connections: n, userId: t, className: i } = e,
-        s = (0, o.e7)([p.default], () => p.default.locale);
+        s = (0, o.e7)([f.default], () => f.default.locale);
     return 0 === n.length
         ? null
         : (0, l.jsx)("ul", {

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z }), t(388685), t(953529);
+t.d(n, { Z: () => I }), t(388685), t(953529);
 var l = t(951288),
     i = t(442837),
     r = t(481060),
@@ -9,15 +9,15 @@ var l = t(951288),
     d = t(5192),
     u = t(785717),
     m = t(221292),
-    f = t(687158),
-    p = t(316027),
+    p = t(687158),
+    f = t(316027),
     h = t(502762),
     j = t(848780),
     x = t(907179),
     v = t(981631),
     g = t(671955),
     b = t(388032),
-    y = t(65464);
+    y = t(220566);
 function O(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -43,12 +43,12 @@ function O(e) {
     }
     return e;
 }
-function Z(e) {
+function I(e) {
     let {
             user: n,
             guildId: t,
-            channelId: Z,
-            messageId: I,
+            channelId: I,
+            messageId: Z,
             roleId: P,
             transitionState: N,
             openedAt: T,
@@ -63,8 +63,8 @@ function Z(e) {
             userId: n.id,
             showGuildProfile: !0,
             guildId: S,
-            channelId: Z,
-            messageId: I,
+            channelId: I,
+            messageId: Z,
             roleId: P,
         }),
         D = [
@@ -77,8 +77,8 @@ function Z(e) {
                 description: b.intl.string(C ? b.t.QxrDY2 : b.t.W6fjkZ),
             },
         ],
-        R = (0, f.ZP)(n.id, S),
-        L = d.ZP.getName(null == R ? void 0 : R.guildId, Z, n),
+        R = (0, p.ZP)(n.id, S),
+        L = d.ZP.getName(null == R ? void 0 : R.guildId, I, n),
         M = b.intl.formatToPlainString(b.t.KRe1Fh, { name: L });
     return (0, l.jsx)(s.Gt, {
         value: w,
@@ -103,7 +103,7 @@ function Z(e) {
                         (0, l.jsxs)("div", {
                             className: y.content,
                             children: [
-                                (0, l.jsx)(p.Z, {
+                                (0, l.jsx)(f.Z, {
                                     user: n,
                                     guildId: S,
                                 }),

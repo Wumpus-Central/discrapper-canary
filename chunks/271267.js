@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => p,
-    Z: () => b,
+    Z: () => x,
 }),
     n(388685);
 var r = n(951288),
@@ -11,7 +11,7 @@ var r = n(951288),
     o = n(587431),
     c = n(756066),
     d = n(388032),
-    u = n(370191),
+    u = n(52726),
     m = n(270395);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -118,7 +118,7 @@ function h(e) {
         ],
     });
 }
-function x(e) {
+function b(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: i,
@@ -144,7 +144,7 @@ function x(e) {
               refreshEligibility: s,
           });
 }
-function b(e) {
+function x(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
         className: u.ctaContainer,
@@ -169,7 +169,7 @@ function b(e) {
                         children: d.intl.string(d.t["41wkMT"]),
                     }),
                     (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(b, {
                         guild: t,
                         monetizationEligibility: n,
                     }),

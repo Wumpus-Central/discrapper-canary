@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(434404),
     f = n(962086),
     h = n(225675),
-    x = n(703656),
-    b = n(601964),
+    b = n(703656),
+    x = n(601964),
     j = n(485386),
     v = n(430824),
     _ = n(594174),
@@ -26,13 +26,13 @@ var r = n(951288),
     I = n(981631),
     S = n(176505),
     T = n(388032),
-    P = n(514709);
+    P = n(68920);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: w } = (0, y.eD)(t),
         R = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
         D = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        Z = null != R && (0, b.eM)(R, D),
+        Z = null != R && (0, x.eM)(R, D),
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
     (0, m.P)(R);
@@ -47,7 +47,7 @@ function w(e) {
             initialTab: "guild_products",
             returnToSection: I.pNK.GUILD_PRODUCTS,
         }),
-            (0, x.uL)(I.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP));
+            (0, b.uL)(I.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP));
     }, [R]);
     if (!w || A) return (0, r.jsx)(o.$jN, {});
     if (null == R) return null;

@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(434404),
     u = n(185923),
     m = n(388032),
-    g = n(988167),
-    p = n(998918);
+    g = n(83552),
+    p = n(270856);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,7 +37,7 @@ function f(e) {
     return e;
 }
 let h = { label: "" };
-function x(e) {
+function b(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
         m = i.useRef(null),
         g = i.useMemo(
@@ -102,7 +102,7 @@ function x(e) {
               },
           });
 }
-function b(e) {
+function x(e) {
     let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: o } = e,
         c = i.useCallback(() => {
             a(t, s, {
@@ -134,7 +134,7 @@ function b(e) {
             maxLength: 24,
             leading: {
                 type: "emoji",
-                button: (0, r.jsx)(x, {
+                button: (0, r.jsx)(b, {
                     emoji: m,
                     disabled: o,
                     handleSelectEmoji: d,
@@ -174,7 +174,7 @@ function v(e) {
                 children: j.map((e) => {
                     var i;
                     return (0, r.jsx)(
-                        b,
+                        x,
                         {
                             guildId: t.id,
                             trait: null != (i = s[e]) ? i : h,

@@ -1,20 +1,20 @@
-l.d(n, { Z: () => s });
-var a = l(951288);
-l(647438);
-var r = l(481060),
-    i = l(388032),
-    t = l(348234);
-function s() {
-    return (0, a.jsxs)(a.Fragment, {
+r.d(n, { Z: () => i });
+var t = r(951288);
+r(647438);
+var l = r(481060),
+    a = r(388032),
+    o = r(75684);
+function i() {
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, a.jsx)(r.Text, {
-                className: t.marker,
+            (0, t.jsx)(l.Text, {
+                className: o.marker,
                 tag: "span",
                 variant: "text-md/semibold",
                 color: "text-danger",
                 children: "*",
             }),
-            (0, a.jsx)(r.nn4, { children: i.intl.string(i.t.EkokLy) }),
+            (0, t.jsx)(l.nn4, { children: a.intl.string(a.t.EkokLy) }),
         ],
     });
 }
