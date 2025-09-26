@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(488290),
     l = n(278074),
     c = n(754700),
     u = n(442837),
@@ -236,6 +236,7 @@ function z(e) {
                         (null == P ? void 0 : P.shineWipe) &&
                             (0, r.jsx)(_.ZX5, {
                                 className: H.shine,
+                                "data-migration-pending": !0,
                                 shineSize: _.rHe.DEFAULT,
                                 shinePaused: !M || k,
                             }),

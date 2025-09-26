@@ -227,6 +227,7 @@ function U(e) {
         ? (0, r.jsx)(
               c.gtL,
               x(w({}, a), {
+                  "data-migration-pending": !0,
                   wrapperClassName: R.ctaButtonWrapper,
                   color: l.Tt.BRAND,
                   disabled: null == i.onClick,
