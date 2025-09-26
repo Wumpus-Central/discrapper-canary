@@ -132,6 +132,7 @@ function A(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-lg/medium",
+                        className: w.heroTitle,
                         children: null != t ? t : (0, r.jsx)("div", { className: w.textPlaceholder }),
                     }),
                     (0, r.jsx)(b.U, {
@@ -344,7 +345,6 @@ function M(e) {
                                 ? "Top Hero: ".concat(null == j ? void 0 : j.featured_played_character)
                                 : void 0,
                     },
-                    { type: "SOCIAL_PROOF" },
                 ],
             },
             {
