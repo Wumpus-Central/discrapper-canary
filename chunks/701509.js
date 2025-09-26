@@ -56,8 +56,8 @@ function S(t) {
         o = (0, u.e7)([y.Z, _.Z], () => _.Z.getChannel(y.Z.getChannelId())),
         [S, k] = r.useState(null),
         [j, I] = r.useState(null),
-        [w, P] = r.useState(!1),
-        [D, L] = r.useState(0),
+        [w, D] = r.useState(!1),
+        [P, L] = r.useState(0),
         U = r.useRef(null),
         M = r.useRef(null),
         F = n === O.L0.FAMILY_CENTER,
@@ -74,7 +74,7 @@ function S(t) {
     async function H() {
         i()(null != S, "Cannot submit null birthday.");
         try {
-            return I(null), P(!0), await (0, g.Av)(S, n);
+            return I(null), D(!0), await (0, g.Av)(S, n);
         } catch (e) {
             if (null != e.body && null != e.body.date_of_birth) (0, T.C8)(n, e.body.date_of_birth);
             else {
@@ -82,7 +82,7 @@ function S(t) {
                 (null == e || null == (t = e.body) ? void 0 : t.username) != null
                     ? I(N.intl.string(N.t["TGg/2t"]))
                     : I(null == e ? void 0 : e.body.message),
-                    P(!1);
+                    D(!1);
             }
         }
     }
@@ -164,7 +164,7 @@ function S(t) {
                         }),
                         actions: [
                             {
-                                text: N.intl.string(N.t.f3Pet7),
+                                text: N.intl.string(N.t["/g10LC"]),
                                 onClick: Q,
                                 variant: "secondary",
                             },
@@ -177,7 +177,7 @@ function S(t) {
                     tn,
                 ),
             )
-          : 0 === D
+          : 0 === P
             ? (function () {
                   var t, e;
                   let r = (() => {
