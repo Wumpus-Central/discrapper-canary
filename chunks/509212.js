@@ -730,17 +730,17 @@ function e4(e) {
 function e8(e) {
     return (e4(e) || ek(e)) && e.config.features.includes(M.S7.START_QUEST_CTA);
 }
-function e5(e) {
-    return e6(e.targetSeconds - e.progressSeconds);
-}
 function e6(e) {
+    return e5(e.targetSeconds - e.progressSeconds);
+}
+function e5(e) {
     return {
         minutes: Math.max(0, Math.floor(e / 60)),
         seconds: Math.max(0, Math.floor(e % 60)),
     };
 }
 function e7(e) {
-    let t = e5(e);
+    let t = e6(e);
     return e9(t.minutes, t.seconds);
 }
 function e9(e, t) {
@@ -972,7 +972,7 @@ function tk(e) {
 function tU(e, t) {
     let n = new Map();
     for (let [r, i] of e)
-        if (!eG(i)) {
+        if (!(eG(i) || eZ(i, M.S7.NON_GAMING_PLAY_QUEST))) {
             for (let e of tk(i))
                 if (t.has(e)) {
                     n.set(r, i);

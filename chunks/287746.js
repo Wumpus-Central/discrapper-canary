@@ -878,7 +878,6 @@ class te extends i.PureComponent {
                                                                       }),
                                                                 (0, r.jsx)(b.ZP, {
                                                                     channel: n,
-                                                                    poggermodeEnabled: _,
                                                                     isInTextChannel: !0,
                                                                 }),
                                                             ],

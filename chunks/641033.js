@@ -1,8 +1,7 @@
 n.d(t, {
-    Eo: () => f,
+    Eo: () => c,
     KH: () => o,
-    nc: () => u,
-    yz: () => d,
+    yz: () => l,
 }),
     n(388685);
 var r = n(524484),
@@ -42,35 +41,35 @@ let a = function (e, t) {
         [2500, 0.95],
         [9001, 1],
     ],
-    l = s.map((e) => {
-        let [t] = e;
-        return t;
-    }),
-    c = s.map((e) => {
-        let [t, n] = e;
-        return n;
-    }),
-    u = (e) => a(e, [l, c], 1),
-    d = (e) =>
-        1 === e
-            ? { color: i.Ilk.BRAND_500 }
-            : 2 === e || 3 === e
-              ? { color: i.Ilk.GREEN_360 }
-              : 4 === e || 5 === e
-                ? {
-                      color: i.Ilk.YELLOW_300,
-                      square: !0,
-                  }
-                : 6 === e
-                  ? {
-                        color: i.Ilk.RED_400,
-                        square: !0,
-                    }
-                  : {
-                        color: i.Ilk.ORANGE_345,
-                        flair: !0,
-                    };
-function f(e) {
+    l =
+        (s.map((e) => {
+            let [t] = e;
+            return t;
+        }),
+        s.map((e) => {
+            let [t, n] = e;
+            return n;
+        }),
+        (e) =>
+            1 === e
+                ? { color: i.Ilk.BRAND_500 }
+                : 2 === e || 3 === e
+                  ? { color: i.Ilk.GREEN_360 }
+                  : 4 === e || 5 === e
+                    ? {
+                          color: i.Ilk.YELLOW_300,
+                          square: !0,
+                      }
+                    : 6 === e
+                      ? {
+                            color: i.Ilk.RED_400,
+                            square: !0,
+                        }
+                      : {
+                            color: i.Ilk.ORANGE_345,
+                            flair: !0,
+                        });
+function c(e) {
     var t;
     return e.value * (null != (t = e.multiplier) ? t : 1);
 }
