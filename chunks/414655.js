@@ -31,7 +31,32 @@ function b(e) {
         : null == _ || 0 === _.items.length
           ? (0, r.jsx)(f.F, {
                 fade: !0,
-                children: (0, r.jsx)("div", { children: "Empty State" }),
+                children: (0, r.jsxs)("div", {
+                    className: m.emptyStateContainer,
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: m.emptyStateText,
+                            children: [
+                                (0, r.jsx)(o.X6q, {
+                                    variant: "heading-md/medium",
+                                    color: "header-primary",
+                                    children: g.intl.string(g.t.HGnLLS),
+                                }),
+                                (0, r.jsx)(o.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "header-secondary",
+                                    children: g.intl.string(g.t["/X1ny8"]),
+                                }),
+                            ],
+                        }),
+                        (0, r.jsx)(o.zxk, {
+                            variant: "primary",
+                            icon: o.EOn,
+                            text: g.intl.string(g.t.ZbS4QE),
+                            onClick: E,
+                        }),
+                    ],
+                }),
             })
           : (0, r.jsxs)(f.F, {
                 fade: !0,
