@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(981631),
     g = n(388032),
     E = n(756555),
-    b = n(456254);
+    b = n(754761);
 function y(e, t, n) {
     return (
         t in e
@@ -145,7 +145,7 @@ let T = (e) => {
             { referralSentUsers: n } = (0, p.G)(),
             i = (0, o.e7)([_.Z], () => _.Z.getRecipientStatus()),
             l = (0, o.e7)([_.Z], () => _.Z.getHasEligibleFriends()),
-            c = i.size === p.Q && i.values().every((e) => e === f.Fe.REDEEMED),
+            c = i.size === p.Q && [...i.values()].every((e) => e === f.Fe.REDEEMED),
             d = i.size === p.Q,
             b = () =>
                 !1 === l
