@@ -8,14 +8,13 @@ var i = n(442837),
     s = n(835255),
     c = n(855587);
 function u(e) {
-    let { item: t, user: n, profileOwner: i, wishlistId: a, canEdit: o } = e;
+    let { item: t, profileOwner: n, wishlistId: i, canEdit: a } = e;
     return (0, l.Q)(t)
         ? (0, r.jsx)(s.Z, {
               item: t,
-              user: n,
-              profileOwner: i,
-              wishlistId: a,
-              canEdit: o,
+              profileOwner: n,
+              wishlistId: i,
+              canEdit: a,
           })
         : null;
 }
@@ -32,7 +31,6 @@ function d(e) {
                       u,
                       {
                           item: e,
-                          user: s,
                           profileOwner: n,
                           wishlistId: d,
                           canEdit: l,
