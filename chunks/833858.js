@@ -1,7 +1,7 @@
 n.d(t, {
-    O8: () => y,
-    V: () => E,
-    tV: () => b,
+    O8: () => S,
+    V: () => I,
+    tV: () => T,
 });
 var r = n(970683),
     i = n(797156),
@@ -15,7 +15,59 @@ var r = n(970683),
     f = n(558532),
     _ = n(346554),
     p = n(444305);
-let h = () => ({
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let b = () => ({
         [a.tN.CHILLING]: {
             title: s.intl.string(s.t["vkpn7+"]),
             icon: d,
@@ -37,7 +89,7 @@ let h = () => ({
             icon: p,
         },
     }),
-    m = () => ({
+    y = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             icon: c,
@@ -59,7 +111,7 @@ let h = () => ({
             icon: r.Nl,
         },
     }),
-    g = () => ({
+    O = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             emoji: {
@@ -96,27 +148,39 @@ let h = () => ({
             },
         },
     }),
-    E = (e) => {
+    v = () =>
+        E(m({}, O()), {
+            [a.tN.CHILLING]: {
+                title: s.intl.string(s.t.IeolFR),
+                emoji: {
+                    id: void 0,
+                    name: "\uD83D\uDCAD",
+                },
+            },
+        }),
+    I = (e) => {
         switch (e) {
             case "original":
             default:
-                return h();
+                return b();
             case "illocons":
-                return m();
+                return y();
             case "twemoji":
-                return g();
+                return O();
+            case "twemojimild":
+                return v();
         }
     },
-    b = function (e, t) {
+    T = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "original";
         if ((null == t ? void 0 : t.type) !== o.IIU.HANG_STATUS || (null == t ? void 0 : t.state) == null) return null;
         let r = (0, i.F)(e, t.state),
             s = r[0];
         if (s === a.tN.CUSTOM) return null;
-        let l = E(r.length > 1 ? r[1] : n);
+        let l = I(r.length > 1 ? r[1] : n);
         return s in l ? l[s] : null;
     },
-    y = function (e, t) {
+    S = function (e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "original";
         return (null == t ? void 0 : t.type) !== o.IIU.HANG_STATUS || (null == t ? void 0 : t.state) == null
@@ -125,7 +189,7 @@ let h = () => ({
               ? null == t
                   ? void 0
                   : t.details
-              : null == (n = b(e, t, r))
+              : null == (n = T(e, t, r))
                 ? void 0
                 : n.title;
     };

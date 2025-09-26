@@ -44,7 +44,7 @@ let a = (0, r.B)({
                 setDefaultStatus: !0,
                 allowChannelTopic: !0,
                 allowPermanentClear: !1,
-                defaultStatusVariant: "twemoji",
+                defaultStatusVariant: "twemojimild",
             },
         },
         {
@@ -55,7 +55,7 @@ let a = (0, r.B)({
                 setDefaultStatus: !0,
                 allowChannelTopic: !0,
                 allowPermanentClear: !0,
-                defaultStatusVariant: "twemoji",
+                defaultStatusVariant: "twemojimild",
             },
         },
         {
