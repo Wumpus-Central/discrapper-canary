@@ -2040,7 +2040,7 @@ W(
             entitlements: e.entitlements,
         });
     }),
-    Y(["GAME_SERVER_CREATE"], (e, t) => {
+    Y(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (e, t) => {
         q({
             type: t,
             guildId: e.guild_id,

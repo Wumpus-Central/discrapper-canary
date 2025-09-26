@@ -1,12 +1,13 @@
 n.d(t, {
     EC: () => x,
+    EY: () => _,
     NE: () => j,
     TN: () => g,
-    _k: () => y,
+    _k: () => C,
     g$: () => b,
     iX: () => f,
     po: () => h,
-    s9: () => _,
+    s9: () => y,
     yP: () => v,
 }),
     n(642613);
@@ -138,7 +139,18 @@ function j(e, t, n, r) {
         oldFormErrors: !0,
     });
 }
-function _(e, t, n) {
+function _(e, t, n, r) {
+    return a.tn.patch({
+        url: p.ANM.GUILD_POWERUP_UPDATE(e, t),
+        body: {
+            game_server_name: r,
+            sku_id: n,
+        },
+        rejectWithError: !0,
+        oldFormErrors: !0,
+    });
+}
+function y(e, t, n) {
     return a.tn.del({
         url: p.ANM.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
@@ -146,7 +158,7 @@ function _(e, t, n) {
         oldFormErrors: !0,
     });
 }
-function y(e) {
+function C(e) {
     return a.tn
         .get({
             url: p.ANM.GAME_SERVER_REGIONS(e),
