@@ -1,22 +1,62 @@
-n.d(t, { Z: () => s });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    l = n(602733),
-    a = n(621853),
-    o = n(319396);
-function s(e) {
+n.d(t, { Z: () => b });
+var r = n(951288),
+    i = n(647438),
+    l = n(442837),
+    a = n(952265),
+    o = n(481060),
+    s = n(100527),
+    c = n(906732),
+    u = n(335131),
+    d = n(602733),
+    p = n(621853),
+    f = n(661462),
+    h = n(319396),
+    g = n(388032),
+    m = n(10094);
+function b(e) {
     let { profileOwner: t } = e,
-        { defaultWishlistId: n } = (0, i.cj)([a.Z], () => ({ defaultWishlistId: a.Z.getFirstWishlistId(t.id) })),
-        { wishlist: s, isFetching: c, error: u } = (0, l.k)(n);
-    return c
-        ? (0, r.jsx)("div", { children: "Loading wishlist" })
-        : null != u
-          ? (0, r.jsx)("div", { children: "Error loading wishlist" })
-          : null == s || 0 === s.items.length
-            ? (0, r.jsx)("div", { children: "Empty State" })
-            : (0, r.jsx)(o.Z, {
-                  items: s.items,
-                  profileOwner: t,
-              });
+        { defaultWishlistId: n } = (0, l.cj)([p.Z], () => ({ defaultWishlistId: p.Z.getFirstWishlistId(t.id) })),
+        { analyticsLocations: b } = (0, c.ZP)(),
+        { wishlist: _, error: O } = (0, d.k)(n),
+        E = i.useCallback(() => {
+            (0, a.pT)(),
+                (0, u.mK)({
+                    analyticsLocations: b,
+                    analyticsSource: s.Z.USER_PROFILE_WISHLIST,
+                    openInLayer: !1,
+                });
+        }, [b]);
+    return null != O
+        ? null
+        : null == _ || 0 === _.items.length
+          ? (0, r.jsx)(f.F, {
+                fade: !0,
+                children: (0, r.jsx)("div", { children: "Empty State" }),
+            })
+          : (0, r.jsxs)(f.F, {
+                fade: !0,
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: m.headerRow,
+                        children: [
+                            (0, r.jsx)(o.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
+                                children: g.intl.format(g.t.r6Y1Li, { count: _.items.length }),
+                            }),
+                            (0, r.jsx)(o.zxk, {
+                                variant: "secondary",
+                                size: "sm",
+                                icon: o.qJs,
+                                text: g.intl.string(g.t.SDUwMz),
+                                onClick: E,
+                            }),
+                        ],
+                    }),
+                    (0, r.jsx)(h.Z, {
+                        items: _.items,
+                        profileOwner: t,
+                    }),
+                ],
+            });
 }
