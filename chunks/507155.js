@@ -20,16 +20,16 @@ function x(e) {
         O = (0, m._)(a, g, !1),
         y = (0, c.UP)(g),
         { disabled: C } = (0, l.Z)(r, a, y),
-        { onShowDeactivate: h, onActivate: P } = (0, f.ZP)(r, a),
-        k = !t || C,
-        _ = y && !k,
-        w = (0, n.jsxs)(n.Fragment, {
+        { onActivate: h } = (0, f.ZP)(r, a),
+        P = !t || C,
+        k = y && !P,
+        _ = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
                     className: i()(j.perkCardImage, { [j.active]: y }),
                     children: (0, n.jsx)(u.m, {
                         powerup: a,
-                        isHovering: !k && x,
+                        isHovering: !P && x,
                     }),
                 }),
                 (0, n.jsxs)("div", {
@@ -41,7 +41,7 @@ function x(e) {
                                 (0, n.jsx)("div", {
                                     children: (0, n.jsx)(s.Text, {
                                         variant: "text-sm/medium",
-                                        color: (y || x) && !k ? "text-primary" : "text-secondary",
+                                        color: (y || x) && !P ? "text-primary" : "text-secondary",
                                         children: a.description,
                                     }),
                                 }),
@@ -75,13 +75,12 @@ function x(e) {
                                 }),
                             ],
                         }),
-                        _ &&
+                        k &&
                             (0, n.jsx)(p.ZP, {
                                 compact: !0,
                                 iconSize: "md",
                                 guildId: r,
                                 powerup: a,
-                                onClick: h,
                                 className: j.toggleButton,
                             }),
                     ],
@@ -90,19 +89,19 @@ function x(e) {
         });
     return y
         ? (0, n.jsx)("div", {
-              className: i()(j.perkCard, j.activeCard, { [j.disabled]: k }),
+              className: i()(j.perkCard, j.activeCard, { [j.disabled]: P }),
               onMouseEnter: () => b(!0),
               onMouseLeave: () => b(!1),
-              children: w,
+              children: _,
           })
         : (0, n.jsx)(s.P3F, {
-              className: i()(j.perkCard, { [j.disabled]: k }),
+              className: i()(j.perkCard, { [j.disabled]: P }),
               onMouseEnter: () => b(!0),
               onMouseLeave: () => b(!1),
-              "aria-disabled": k,
+              "aria-disabled": P,
               onClick: (e) => {
-                  e.stopPropagation(), k || null == P || P(e, { shouldCloseAllModals: !1 });
+                  e.stopPropagation(), P || null == h || h(e, { shouldCloseAllModals: !1 });
               },
-              children: w,
+              children: _,
           });
 }

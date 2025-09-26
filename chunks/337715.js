@@ -5,11 +5,12 @@ var r = n(951288),
     o = n(740594),
     s = n(474936),
     l = n(388032),
-    c = n(871797),
+    c = n(282490),
     u = n(154545);
 let d = (e) => {
     let { cohort: t } = e,
-        n = t === a.TO.COHORT_1 ? l.intl.string(l.t.GVrMQE) : l.intl.string(l.t.JKWTSk);
+        n = t === a.TO.COHORT_1 ? l.intl.string(l.t.GVrMQE) : l.intl.string(l.t.JKWTSk),
+        d = (0, a.h3)();
     return (0, r.jsxs)(i.$1m, {
         className: c.container,
         color: "nitro-pink",
@@ -23,11 +24,12 @@ let d = (e) => {
                         className: c.wordmark,
                         children: l.intl.string(l.t.Ipxkoq),
                     }),
-                    (0, r.jsx)(i.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-secondary",
-                        children: l.intl.format(l.t["4mljX1"], { days: (0, a.h3)() }),
-                    }),
+                    d > 0 &&
+                        (0, r.jsx)(i.Text, {
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
+                            children: l.intl.format(l.t["4mljX1"], { days: d }),
+                        }),
                 ],
             }),
             (0, r.jsxs)("div", {
