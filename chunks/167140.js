@@ -1,6 +1,7 @@
 n.d(t, {
     PS: () => o,
     Q3: () => c,
+    W0: () => h,
     tL: () => l,
 });
 var r = n(647438);
@@ -131,5 +132,23 @@ function p(e, t) {
             e.validationErrors.length === t.validationErrors.length &&
             e.validationErrors.every((e, n) => e === t.validationErrors[n]) &&
             Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n))
+    );
+}
+function h(...e) {
+    let t = new Set(),
+        n = !1,
+        r = { ...i };
+    for (let i of e) {
+        var a, o;
+        for (let e of i.validationErrors) t.add(e);
+        for (let e in (n || (n = i.isInvalid), r)) (a = r)[(o = e)] || (a[o] = i.validationDetails[e]);
+    }
+    return (
+        (r.valid = !n),
+        {
+            isInvalid: n,
+            validationErrors: [...t],
+            validationDetails: r,
+        }
     );
 }

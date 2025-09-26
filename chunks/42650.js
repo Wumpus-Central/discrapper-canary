@@ -1,27 +1,112 @@
-n.d(t, { XZ: () => E });
+n.d(t, {
+    XZ: () => S,
+    cO: () => T,
+});
 var r = n(532033),
     i = n(477831),
-    a = n(22811),
-    o = n(316266),
-    s = n(241879),
-    l = n(769175),
-    c = n(1334),
+    a = n(627320),
+    o = n(22811),
+    s = n(499339),
+    l = n(286468),
+    c = n(318000),
     u = n(586235),
-    d = n(500282),
-    f = n(922462),
-    _ = n(158573),
-    p = n(981902),
-    h = n(436773),
-    m = n(647438);
-let g = (0, m.createContext)(null),
-    E = (0, m.forwardRef)(function (e, t) {
-        var n, E;
-        let { inputRef: b = null, ...y } = e;
-        [e, t] = (0, i.pE)(y, t, r.cP);
-        let { validationBehavior: O } = (0, i.jn)(a.q) || {},
-            v = null != (E = null != (n = e.validationBehavior) ? n : O) ? E : "native",
-            I = (0, m.useContext)(g),
-            T = (0, _.B)((0, m.useMemo)(() => (0, p.l)(b, void 0 !== e.inputRef ? e.inputRef : null), [b, e.inputRef])),
+    d = n(316266),
+    f = n(241879),
+    _ = n(769175),
+    p = n(1334),
+    h = n(500282),
+    m = n(914054),
+    g = n(922462),
+    E = n(436773),
+    b = n(158573),
+    y = n(981902),
+    O = n(647438);
+let v = (0, O.createContext)(null),
+    I = (0, O.createContext)(null),
+    T = (0, O.forwardRef)(function (e, t) {
+        var n, r;
+        [e, t] = (0, i.pE)(e, t, v);
+        let { validationBehavior: d } = (0, i.jn)(o.q) || {},
+            f = null != (r = null != (n = e.validationBehavior) ? n : d) ? r : "native",
+            _ = (0, m.$)({
+                ...e,
+                validationBehavior: f,
+            }),
+            [p, h] = (0, i.xc)(!e["aria-label"] && !e["aria-labelledby"]),
+            {
+                groupProps: g,
+                labelProps: b,
+                descriptionProps: y,
+                errorMessageProps: T,
+                ...S
+            } = (0, c.u)(
+                {
+                    ...e,
+                    label: h,
+                    validationBehavior: f,
+                },
+                _,
+            ),
+            A = (0, i.aX)({
+                ...e,
+                values: {
+                    isDisabled: _.isDisabled,
+                    isReadOnly: _.isReadOnly,
+                    isRequired: e.isRequired || !1,
+                    isInvalid: _.isInvalid,
+                    state: _,
+                },
+                defaultClassName: "react-aria-CheckboxGroup",
+            }),
+            C = (0, E.z)(e, { global: !0 });
+        return O.createElement(
+            "div",
+            {
+                ...(0, u.d)(C, A, g),
+                ref: t,
+                slot: e.slot || void 0,
+                "data-readonly": _.isReadOnly || void 0,
+                "data-required": e.isRequired || void 0,
+                "data-invalid": _.isInvalid || void 0,
+                "data-disabled": e.isDisabled || void 0,
+            },
+            O.createElement(
+                i.zt,
+                {
+                    values: [
+                        [I, _],
+                        [
+                            s.n,
+                            {
+                                ...b,
+                                ref: p,
+                                elementType: "span",
+                            },
+                        ],
+                        [
+                            l.j,
+                            {
+                                slots: {
+                                    description: y,
+                                    errorMessage: T,
+                                },
+                            },
+                        ],
+                        [a.E, S],
+                    ],
+                },
+                A.children,
+            ),
+        );
+    }),
+    S = (0, O.forwardRef)(function (e, t) {
+        var n, a;
+        let { inputRef: s = null, ...l } = e;
+        [e, t] = (0, i.pE)(l, t, r.cP);
+        let { validationBehavior: c } = (0, i.jn)(o.q) || {},
+            m = null != (a = null != (n = e.validationBehavior) ? n : c) ? a : "native",
+            v = (0, O.useContext)(I),
+            T = (0, b.B)((0, O.useMemo)(() => (0, y.l)(s, void 0 !== e.inputRef ? e.inputRef : null), [s, e.inputRef])),
             {
                 labelProps: S,
                 inputProps: A,
@@ -30,28 +115,28 @@ let g = (0, m.createContext)(null),
                 isReadOnly: R,
                 isPressed: P,
                 isInvalid: w,
-            } = I
-                ? (0, o.a)(
+            } = v
+                ? (0, d.a)(
                       {
                           ...(0, i.vl)(e),
                           value: e.value,
                           children: "function" == typeof e.children || e.children,
                       },
-                      I,
+                      v,
                       T,
                   )
-                : (0, s.O)(
+                : (0, f.O)(
                       {
                           ...(0, i.vl)(e),
                           children: "function" == typeof e.children || e.children,
-                          validationBehavior: v,
+                          validationBehavior: m,
                       },
-                      (0, f.l)(e),
+                      (0, g.l)(e),
                       T,
                   ),
-            { isFocused: D, isFocusVisible: x, focusProps: L } = (0, l.F)(),
+            { isFocused: D, isFocusVisible: x, focusProps: L } = (0, _.F)(),
             j = N || R,
-            { hoverProps: M, isHovered: k } = (0, c.X)({
+            { hoverProps: M, isHovered: k } = (0, p.X)({
                 ...e,
                 isDisabled: j,
             }),
@@ -71,11 +156,11 @@ let g = (0, m.createContext)(null),
                     isRequired: e.isRequired || !1,
                 },
             }),
-            G = (0, h.z)(e, { global: !0 });
+            G = (0, E.z)(e, { global: !0 });
         return (
             delete G.id,
             delete G.onClick,
-            m.createElement(
+            O.createElement(
                 "label",
                 {
                     ...(0, u.d)(G, S, M, U),
@@ -92,10 +177,10 @@ let g = (0, m.createContext)(null),
                     "data-invalid": w || void 0,
                     "data-required": e.isRequired || void 0,
                 },
-                m.createElement(
-                    d.T,
+                O.createElement(
+                    h.T,
                     { elementType: "span" },
-                    m.createElement("input", {
+                    O.createElement("input", {
                         ...(0, u.d)(A, L),
                         ref: T,
                     }),

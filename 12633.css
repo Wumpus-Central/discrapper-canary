@@ -16733,6 +16733,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     --custom-input-padding: var(--space-12)
 }
 
+.group__66d91 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
 .fieldset__5aa75 {
     display: flex;
     flex-direction: column;

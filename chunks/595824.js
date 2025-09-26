@@ -58,7 +58,7 @@ function d(e, t) {
     );
 }
 function f(e) {
-    let { disabled: t, displayOnly: n, label: l, checked: u, onChange: f, labelSize: _ } = e;
+    let { disabled: t, displayOnly: n, label: l, checked: u, onChange: f, labelSize: _, value: p } = e;
     if ((0, i.A)("Checkbox"))
         return (0, r.jsx)(o.C, {
             disabled: t,
@@ -67,8 +67,9 @@ function f(e) {
             onChange: f,
             label: l,
             labelSize: _,
+            value: p,
         });
-    let p =
+    let h =
         null != l && "" !== l
             ? (0, r.jsx)(a.x, {
                   variant: "small" === _ ? "text-sm/normal" : "text-md/normal",
@@ -81,7 +82,7 @@ function f(e) {
         d(c({}, e), {
             value: u,
             onChange: (e, t) => (null == f ? void 0 : f(t)),
-            children: p,
+            children: h,
         }),
     );
 }
