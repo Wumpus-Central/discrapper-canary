@@ -153,8 +153,10 @@ let Z = new Set(),
         hasUseEffectFired: !1,
         trackedPidFocused: !1,
         reactInitializationStarted: !1,
+        cssLoaded: !1,
         showInactiveCalled: !1,
         allDone: !1,
+        errorMessage: null,
     };
 function ea() {
     ei = {
@@ -163,8 +165,10 @@ function ea() {
         hasUseEffectFired: !1,
         trackedPidFocused: !1,
         reactInitializationStarted: !1,
+        cssLoaded: !1,
         showInactiveCalled: !1,
         allDone: !1,
+        errorMessage: null,
     };
 }
 let eo = 30000;
@@ -459,7 +463,8 @@ async function eT(e) {
     } catch (t) {
         G.error("failed to create out of process overlay host window", t),
             eh(e, t),
-            c.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED_DISABLED);
+            c.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED_DISABLED),
+            (ei = j(x({}, ei), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + t }));
     } finally {
         e9.emitChange();
     }
