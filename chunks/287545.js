@@ -54,8 +54,8 @@ function B(e, t, n) {
     );
 }
 let Z = 2000,
-    V = {},
     F = {},
+    V = {},
     H = {};
 function Y(e) {
     var t;
@@ -70,7 +70,7 @@ function W(e) {
     let { applicationId: t, nonce: n, locations: r, source: i } = e;
     return (
         (null != r || null != i) &&
-        ((F[t] = {
+        ((V[t] = {
             nonce: n,
             locations: r,
             source: i,
@@ -79,8 +79,8 @@ function W(e) {
     );
 }
 function K(e, t) {
-    let n = F[e];
-    if (null != n && n.nonce === t) return delete F[e], n;
+    let n = V[e];
+    if (null != n && n.nonce === t) return delete V[e], n;
 }
 function z(e, t) {
     setTimeout(() => K(e, t), Z);
@@ -107,7 +107,7 @@ async function X(e) {
             retries: 2,
             rejectWithError: !1,
         }));
-    let l = V[n],
+    let l = F[n],
         c = (0, L.p)(r),
         u = (0, L.j)(r),
         d = g.Z.getChannel(c),
@@ -147,7 +147,7 @@ async function X(e) {
             duration_ms: o,
             embedded_activity_location_kind: r.kind,
         }),
-        delete V[n];
+        delete F[n];
 }
 function Q(e) {
     var t, n;
@@ -191,8 +191,8 @@ function Q(e) {
             mediaSessionIds: W,
             activitiesInfraVersion: x,
         };
-    V[r] = K;
-    let z = F[r];
+    F[r] = K;
+    let z = V[r];
     (0, T.Ew)(b.nonce) || b.nonce === (null == z ? void 0 : z.nonce) || (z = void 0),
         O.default.track(U.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: v,
@@ -234,7 +234,7 @@ function Q(e) {
         });
 }
 function J(e) {
-    return V[e];
+    return F[e];
 }
 class $ extends c.Z {
     _initialize() {
@@ -244,6 +244,7 @@ class $ extends c.Z {
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", q),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
+            o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
             o.Z.subscribe("EMBEDDED_ACTIVITY_CLOSE", X),
             o.Z.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             o.Z.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
@@ -263,6 +264,7 @@ class $ extends c.Z {
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", q),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
+            o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", X),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             o.Z.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
@@ -339,6 +341,10 @@ class $ extends c.Z {
                     source: null == l ? void 0 : l.source,
                     embedded_activity_location_kind: s,
                 });
+            }),
+            B(this, "handleActivityLaunchCancel", (e) => {
+                let { nonce: t, applicationId: n } = e;
+                K(n, t);
             }),
             B(this, "superHandleRPCDisconnect", (e) => {
                 let { reason: t, application: n } = e,
@@ -449,7 +455,7 @@ class $ extends c.Z {
             }),
             B(this, "handleInteractionQueue", (e) => {
                 let { nonce: t, data: n } = e;
-                if (null == F[n.applicationId]) {
+                if (null == V[n.applicationId]) {
                     let e;
                     n.interactionType === l.B8.APPLICATION_COMMAND
                         ? (e = [u.Z.INTERACTION_APPLICATION_COMMAND])
@@ -468,7 +474,7 @@ class $ extends c.Z {
                 if (null == t) return;
                 let r = H[t];
                 if (null == r) return;
-                let i = F[r];
+                let i = V[r];
                 null != i && (i.interactionId = n);
             }),
             B(this, "handleInteractionSuccess", (e) => {

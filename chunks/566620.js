@@ -189,7 +189,18 @@ async function eo(e) {
                 onConfirmActivityLaunchChecksAlertOpen: y,
                 embeddedActivitiesManager: u,
             });
-            if ("failure" === e.result && 4 !== e.reason) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+            if ("failure" === e.result)
+                if (4 === e.reason)
+                    return (
+                        s.Z.dispatch({
+                            type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL",
+                            nonce: C,
+                            applicationId: a,
+                            channelId: null != r ? r : null,
+                        }),
+                        !1
+                    );
+                else throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
             let e = await ec({
                 applicationId: a,
