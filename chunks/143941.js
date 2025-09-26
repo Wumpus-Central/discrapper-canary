@@ -95,7 +95,7 @@ let _ = (e) => {
             B = (0, h.fp)(t) || (0, h.x6)(t) || (0, h.G1)(t),
             F = l.useCallback(
                 async (e) => {
-                    if ((e.stopPropagation(), k && null != w)) {
+                    if ((e.stopPropagation(), e.currentTarget.blur(), k && null != w)) {
                         L(!1);
                         try {
                             await p.Z.removeSkuFromWishlist(w, t.skuId),
