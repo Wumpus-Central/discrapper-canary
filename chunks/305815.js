@@ -19,7 +19,7 @@ var a = t(951288),
     _ = t(515108),
     j = t(291967),
     N = t(388032),
-    y = t(691864);
+    y = t(129034);
 function b(e) {
     var n;
     let { quest: t, avatarDeco: r, onUseNow: i, user: l, mode: o } = e,
@@ -100,7 +100,7 @@ function T(e) {
             (0, f.QB)(s.id, h.y$.CROSS_PLATFORM, N)
                 .then(() => R("claimed"))
                 .catch(() => R("error"));
-    }, [s, N, k]);
+    }, [s.id, N, k]);
     let L = !0 === x && null === w && (null == T ? void 0 : T.skuId) !== "",
         M = null == w && !0 !== x,
         Z = null == A || M || L || "loading" === D,

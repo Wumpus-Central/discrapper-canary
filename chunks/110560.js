@@ -188,13 +188,14 @@ function H(e, t, i) {
 function Y(e, t, i) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestOrbsRewardModal")) {
-            let { default: t } = await n.e("74560").then(n.bind(n, 246855));
+            let { default: a } = await n.e("74560").then(n.bind(n, 246855));
             return (n) =>
                 (0, r.jsx)(
-                    t,
+                    a,
                     G(k({}, n), {
                         quest: e,
                         sourceQuestContent: i,
+                        location: t,
                     }),
                 );
         }

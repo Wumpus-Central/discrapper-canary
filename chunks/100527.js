@@ -176,6 +176,7 @@ var r = (function (e) {
         (e.HOME_PAGE_SHOP_TAB = "home page shop tab"),
         (e.QUEST_HOME_PAGE = "quest home page"),
         (e.QUEST_EMBED = "quest embed"),
+        (e.QUEST_REWARD_MODAL = "quest reward modal"),
         (e.PREMIUM_MARKETING_SURFACE = "premium marketing surface"),
         (e.PREMIUM_MARKETING_HERO_CTA = "premium marketing hero cta"),
         (e.PREMIUM_MARKETING_FOOTER_CTA = "premium marketing footer cta"),
