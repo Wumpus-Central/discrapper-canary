@@ -18,8 +18,8 @@ var r,
     _ = n(846519),
     p = n(952265),
     h = n(481060),
-    m = n(40851),
-    g = n(314910),
+    m = n(314910),
+    g = n(728285),
     E = n(574254),
     b = n(960048),
     y = n(920676),
@@ -190,11 +190,11 @@ class N extends (r = a.Component) {
                 layerContext: u,
                 clickTrap: d = !1,
             } = this.props,
-            { resizeKey: _, isLoading: p, shouldShowLoadingState: m } = this.state;
-        return p && !m
+            { resizeKey: _, isLoading: p, shouldShowLoadingState: g } = this.state;
+        return p && !g
             ? null
             : (0, i.jsx)(f.mh4, {
-                  layerContext: null != u ? u : g.nz,
+                  layerContext: null != u ? u : m.nz,
                   children: (0, i.jsx)(h.jRF, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
@@ -349,7 +349,7 @@ v(N, "defaultProps", {
     loadingComponent: (0, i.jsx)(y.x, {}),
     closeOnClickOutside: !0,
 }),
-    v(N, "contextType", m.ZP);
+    v(N, "contextType", g.ZP);
 let R = (e) => {
     var t, n, r, i, a, o;
     let s = e.getBoundingClientRect(),

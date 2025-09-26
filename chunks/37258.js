@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(40851),
-    o = n(906732),
+    a = n(906732),
+    o = n(728285),
     s = n(785717),
     l = n(892001),
     c = n(981631),
@@ -61,10 +61,10 @@ function p(e, t) {
 function h(e) {
     var { label: t, onAction: n, icon: d } = e,
         p = _(e, ["label", "onAction", "icon"]);
-    let { analyticsLocations: h } = (0, o.ZP)(),
+    let { analyticsLocations: h } = (0, a.ZP)(),
         { context: m } = (0, s.KZ)(),
-        g = (0, a.Aq)(),
-        E = (0, a.bp)();
+        g = (0, o.Aq)(),
+        E = (0, o.bp)();
     return (0, r.jsx)(i.sNh, {
         id: "user-profile",
         label: null != t ? t : u.intl.string(u.t.LYju5O),

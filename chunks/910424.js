@@ -6,9 +6,9 @@ var i = n(442837),
     o = n(572691),
     s = n(287734),
     l = n(872810),
-    c = n(40851),
-    u = n(595816),
-    d = n(102172),
+    c = n(595816),
+    u = n(102172),
+    d = n(728285),
     f = n(199902),
     _ = n(592125),
     p = n(585483),
@@ -68,7 +68,7 @@ function y(e, t) {
 }
 function O(e) {
     let { isCurrentUser: t, applicationStream: n, onAction: g } = e,
-        { defaultWatchMultipleStreams: b } = (0, u.P)({ location: "WatchStreamButton" }),
+        { defaultWatchMultipleStreams: b } = (0, c.P)({ location: "WatchStreamButton" }),
         { activeStream: O, watchingOtherStream: v } = (0, i.cj)([f.Z], () => ({
             activeStream: f.Z.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
@@ -79,8 +79,8 @@ function O(e) {
                 }).length > 0,
         })),
         I = (0, i.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
-        [T, S] = (0, d.wq)(I),
-        A = (0, c.Aq)(),
+        [T, S] = (0, u.wq)(I),
+        A = (0, d.Aq)(),
         C = null != O && null != n && O.state !== h.jm8.ENDED && O.ownerId === n.ownerId,
         N = (e) => {
             null != n &&
@@ -92,7 +92,7 @@ function O(e) {
                 o.Z.popAll());
         };
     if (null == n) return null;
-    let R = (0, d.P9)(S);
+    let R = (0, u.P9)(S);
     return (
         t ? (R = m.intl.string(m.t.XvBdeX)) : C && (R = m.intl.string(m.t.JH1SJy)),
         (0, r.jsxs)(r.Fragment, {

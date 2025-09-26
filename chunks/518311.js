@@ -30,17 +30,17 @@ var r,
     x = n(425493),
     O = n(794433),
     j = n(493773),
-    E = n(40851),
-    S = n(100527),
-    P = n(367907),
-    I = n(906732),
-    Z = n(43267),
-    T = n(933557),
-    N = n(600164),
-    A = n(313201),
-    w = n(429090),
-    M = n(912114),
-    R = n(366980),
+    E = n(100527),
+    S = n(367907),
+    P = n(906732),
+    I = n(43267),
+    Z = n(933557),
+    T = n(600164),
+    N = n(313201),
+    A = n(429090),
+    w = n(912114),
+    M = n(366980),
+    R = n(728285),
     k = n(703656),
     L = n(93127),
     D = n(752048),
@@ -133,14 +133,14 @@ function eu(e, t) {
     }
     return i;
 }
-let ed = (0, A.hQ)(),
-    ep = (0, A.hQ)();
+let ed = (0, N.hQ)(),
+    ep = (0, N.hQ)();
 function eh(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsxs)(N.Z, {
-        align: N.Z.Align.CENTER,
-        justify: N.Z.Justify.CENTER,
-        direction: N.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(T.Z, {
+        align: T.Z.Align.CENTER,
+        justify: T.Z.Justify.CENTER,
+        direction: T.Z.Direction.VERTICAL,
         className: o()(el.errorState, t),
         children: [(0, i.jsx)("div", { className: o()(el.errorStateIcon, ea.marginBottom20) }), n],
     });
@@ -148,7 +148,7 @@ function eh(e) {
 let ef = (e) => {
         var t;
         let { channel: n, onClose: r } = e,
-            l = null != (t = (0, T.ZP)(n)) ? t : "",
+            l = null != (t = (0, Z.ZP)(n)) ? t : "",
             a = (0, p.e7)([G.ZP], () => {
                 var e;
                 return null != (e = G.ZP.lastMessageId(n.id)) ? e : n.id;
@@ -161,7 +161,7 @@ let ef = (e) => {
                 className: el.confirmChannelItemContainer,
                 children: [
                     (0, i.jsx)(f.qEK, {
-                        src: (0, Z.x)(n),
+                        src: (0, I.x)(n),
                         size: f.EFr.SIZE_24,
                         "aria-label": l,
                     }),
@@ -256,7 +256,7 @@ class eg extends (r = l.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         m.Z.wait(() => _.Z.open(null == e ? void 0 : e.id));
-        let t = (0, P.v_)(e);
+        let t = (0, S.v_)(e);
         Y.default.track(
             er.rMx.OPEN_POPOUT,
             ec(es({}, t), {
@@ -390,8 +390,8 @@ class eg extends (r = l.PureComponent) {
         let e = null != this.scrollerRef.current && this.state.separator,
             t = this.isNotFriends() ? ei.intl.string(ei.t.Xjlbvr) : ei.intl.string(ei.t.CdNhGR);
         return (0, i.jsxs)(f.xBx, {
-            direction: N.Z.Direction.VERTICAL,
-            align: N.Z.Align.STRETCH,
+            direction: T.Z.Direction.VERTICAL,
+            align: T.Z.Align.STRETCH,
             className: el.header,
             separator: e,
             children: [
@@ -500,7 +500,7 @@ class eg extends (r = l.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: r } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let a = null != t ? (0, R.Z)(t.code) : "",
+        let a = null != t ? (0, M.Z)(t.code) : "",
             s = a.length > 0;
         return (0, i.jsxs)(l.Fragment, {
             children: [
@@ -511,7 +511,7 @@ class eg extends (r = l.PureComponent) {
                 }),
                 (0, i.jsx)(f.kO8, {
                     supportsCopy: K.wS,
-                    placeholder: (0, R.Z)(ei.intl.string(ei.t.lPVBqK)),
+                    placeholder: (0, M.Z)(ei.intl.string(ei.t.lPVBqK)),
                     value: s ? (n ? ei.intl.string(ei.t["6HzNgY"]) : a) : "",
                     buttonColor: h.zx.Colors.BRAND,
                     text: s
@@ -694,7 +694,7 @@ class eg extends (r = l.PureComponent) {
             }),
             eo(this, "handleQueryChange", (e) => {
                 let { channel: t } = this.props,
-                    n = (0, P.v_)(t);
+                    n = (0, S.v_)(t);
                 _.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
@@ -740,7 +740,7 @@ class eg extends (r = l.PureComponent) {
             eo(this, "createNewDM", (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    r = (0, P.v_)(n),
+                    r = (0, S.v_)(n),
                     i = !0;
                 1 === e.length && (i = null == b.Z._openCachedDMChannel(e[0])),
                     Y.default.track(
@@ -764,11 +764,11 @@ class eg extends (r = l.PureComponent) {
                         "" !== this.state.newChannelName && (t.name = this.state.newChannelName),
                             null != this.state.previewIcon && (t.icon = this.state.previewIcon),
                             (null != t.name || null != t.icon) &&
-                                b.Z.updateChannel(e, t, S.Z.NEW_GROUP_DM_INVITE_MODAL),
+                                b.Z.updateChannel(e, t, E.Z.NEW_GROUP_DM_INVITE_MODAL),
                             Y.default.track(er.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: e,
                                 channel_type: er.d4z.GROUP_DM,
-                                location: S.Z.NEW_GROUP_DM_INVITE_MODAL,
+                                location: E.Z.NEW_GROUP_DM_INVITE_MODAL,
                                 new_name_set: "" !== this.state.newChannelName,
                                 new_icon_set: null != this.state.previewIcon,
                             });
@@ -776,7 +776,7 @@ class eg extends (r = l.PureComponent) {
             }),
             eo(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
-                    r = (0, P.v_)(e),
+                    r = (0, S.v_)(e),
                     i = V.Z.getChannelId() === e.id;
                 b.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
@@ -860,13 +860,13 @@ class eg extends (r = l.PureComponent) {
 }
 function eb(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: l, onIconRemove: a, onChange: o } = e,
-        { analyticsLocations: s } = (0, I.ZP)(S.Z.NEW_GROUP_DM_INVITE_MODAL);
-    if (!(0, w.a)(S.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, T.pT)(Array.from(t), q.default, z.Z);
+        { analyticsLocations: s } = (0, P.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
+    if (!(0, A.a)(E.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
+    let c = (0, Z.pT)(Array.from(t), q.default, z.Z);
     return (0, i.jsxs)("div", {
         className: el.customizationContainer,
         children: [
-            (0, i.jsx)(M.B, {
+            (0, i.jsx)(w.B, {
                 className: el.iconSelector,
                 channel: null,
                 previewIcon: r,
@@ -911,7 +911,7 @@ function ey(e) {
 function eC(e) {
     let { channel: t, location: n, subscribeToGlobalHotkey: r, initialPopoutOpen: a } = e,
         [o, s] = l.useState(null != a && a),
-        c = (0, w.a)(n),
+        c = (0, A.a)(n),
         u = "channel-invite-modal-".concat(null == t ? void 0 : t.id),
         d = (0, f.VXO)(u),
         p = l.useCallback(
@@ -1111,4 +1111,4 @@ function ex(e) {
 function eO(e) {
     return JSON.stringify(e.sort());
 }
-eo(eg, "contextType", E.ZP);
+eo(eg, "contextType", R.ZP);

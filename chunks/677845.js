@@ -5,13 +5,13 @@ var r = n(951288),
     a = n(731965),
     o = n(442837),
     s = n(704215),
-    c = n(40851),
-    u = n(317381),
-    d = n(374065),
-    p = n(213609),
-    h = n(358221),
-    f = n(266454),
-    m = n(159300),
+    c = n(317381),
+    u = n(374065),
+    d = n(213609),
+    p = n(358221),
+    h = n(266454),
+    f = n(159300),
+    m = n(728285),
     g = n(800329),
     b = n(470956),
     y = n(430824),
@@ -33,10 +33,10 @@ function S(e) {
             inCall: T,
             totalNumberOfParticipants: N,
         } = e,
-        A = (0, c.bp)() === j.IlC.POPOUT,
+        A = (0, m.bp)() === j.IlC.POPOUT,
         w = (0, o.e7)([y.Z], () => y.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: M } = (0, x.d)(),
-        R = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(I.id), [I]),
+        R = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
         k = (0, b.bt)(I.id, t),
         L = i.useCallback(() => {
             (0, a.j)(() => {
@@ -50,12 +50,12 @@ function S(e) {
                 x.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [I.id, M]);
-    let D = (0, o.e7)([C.Z], () => I.isPrivate() || (0, m.b)(C.Z, w, I), [w, I]),
+    let D = (0, o.e7)([C.Z], () => I.isPrivate() || (0, f.b)(C.Z, w, I), [w, I]),
         U = (null == w ? void 0 : w.afkChannelId) === I.id,
         B = I.userLimit <= 0 || I.userLimit > 1,
-        F = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        H = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        V = (0, d.KF)(I.id) !== d.jy.CAN_LAUNCH,
+        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        H = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        V = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
         G = null != M && M === I.id,
         z = k.map(
             (e) => (t) =>
@@ -75,7 +75,7 @@ function S(e) {
                     e.id,
                 ),
         );
-    (0, p.Z)(
+    (0, d.Z)(
         {
             type: l.ImpressionTypes.VIEW,
             name: l.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,

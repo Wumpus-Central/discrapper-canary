@@ -8,13 +8,13 @@ var r = n(951288),
     c = n(481060),
     u = n(53281),
     d = n(110924),
-    p = n(40851),
-    h = n(595519),
-    f = n(924557),
-    m = n(435064),
-    g = n(712114),
-    b = n(266454),
-    y = n(536442),
+    p = n(595519),
+    h = n(924557),
+    f = n(435064),
+    m = n(712114),
+    g = n(266454),
+    b = n(536442),
+    y = n(728285),
     C = n(79390),
     _ = n(216789),
     v = n(665906),
@@ -82,24 +82,24 @@ function F(e, t) {
 let H = i.memo(function (e) {
     var t, l;
     let { className: H, channel: V, draftType: G, editorTextContent: z, setValue: W, canOnlyUseTextCommands: q } = e,
-        Y = (0, p.bp)(),
+        Y = (0, y.bp)(),
         K = i.useRef(null),
         X = i.useRef(null),
         J = (0, o.e7)([P.Z], () => P.Z.getActivities()),
-        Q = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
-        $ = (0, o.e7)([m.Z], () => m.Z.getLastClipsSession()),
-        ee = (0, o.Wu)([m.Z], () => m.Z.getNewClipIds()),
+        Q = (0, o.e7)([f.Z], () => f.Z.getSettings().clipsEnabled),
+        $ = (0, o.e7)([f.Z], () => f.Z.getLastClipsSession()),
+        ee = (0, o.Wu)([f.Z], () => f.Z.getNewClipIds()),
         et = (0, o.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(V.id)),
-        { showClipsHeaderEntrypoint: en } = f.NV.useExperiment(
+        { showClipsHeaderEntrypoint: en } = h.NV.useExperiment(
             { location: "ChannelAttachButton" },
             { autoTrackExposure: !1 },
         ),
-        er = (0, o.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        er = (0, o.e7)([b.qc], () => b.qc.hasHotspot(b.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         ei = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
         el = (0, o.e7)([j.Z], () => j.Z.hasLayers()),
-        ea = (0, o.e7)([m.Z], () => m.Z.hasClips()),
+        ea = (0, o.e7)([f.Z], () => f.Z.hasClips()),
         [eo, es] = i.useState(null),
-        ec = (0, f.Go)() && (Q || ea),
+        ec = (0, h.Go)() && (Q || ea),
         eu = V.isPrivate(),
         ed = (0, o.e7)([S.Z], () => eu || (S.Z.can(R.Plq.ATTACH_FILES, V) && S.Z.can(R.Plq.SEND_MESSAGES, V))),
         ep = (0, d.Z)($);
@@ -139,7 +139,7 @@ let H = i.memo(function (e) {
         eg = (0, v.Xu)(V),
         eb = !x.dN.useSetting() && !(0, Z.isAndroidWeb)() && null != window.ResizeObserver,
         ey = (0, C.UI)(null != V ? V : void 0),
-        eC = (0, h.qB)(),
+        eC = (0, p.qB)(),
         e_ = (0, _.Us)({ location: "ChannelAttachButton" }),
         ev = null != (l = null == ee ? void 0 : ee.length) ? l : 0,
         ex = (0, M.Z)({
@@ -170,18 +170,18 @@ let H = i.memo(function (e) {
             position: "top",
             positionKey: null != eo ? eo : "null",
             onRequestOpen: () => {
-                eh && (0, b.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }),
+                eh && (0, g.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }),
                     es("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.$sL)() ||
-                    (eh && (0, b.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), es(null));
+                    (eh && (0, g.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), es(null));
             },
             renderPopout: (e) => {
                 switch (eo) {
                     case "recentClips":
                         return (0, r.jsx)(
-                            g.Z,
+                            m.Z,
                             F(B({}, e), {
                                 onOpenClips: ef,
                                 lastClipsSession: $,

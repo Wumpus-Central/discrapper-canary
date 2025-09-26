@@ -13,11 +13,11 @@ var r = n(951288),
     u = n(692547),
     p = n(481060),
     h = n(239091),
-    f = n(40851),
-    g = n(100527),
-    m = n(906732),
-    b = n(213609),
-    y = n(795318),
+    f = n(100527),
+    g = n(906732),
+    m = n(213609),
+    b = n(795318),
+    y = n(728285),
     _ = n(670188),
     O = n(314897),
     j = n(271383),
@@ -143,8 +143,8 @@ let Z = i.memo(function (e) {
             { user: s, blocked: u } = t,
             v = l.getGuildId(),
             x = O.default.getId(),
-            { newestAnalyticsLocation: Z } = (0, m.ZP)(g.Z.AUDIENCE_TILE),
-            P = (0, f.bp)(),
+            { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
+            P = (0, y.bp)(),
             N = (0, d.e7)([j.ZP], () => {
                 var e;
                 return null != v && (null == (e = j.ZP.getMember(v, s.id)) ? void 0 : e.premiumSince) != null;
@@ -153,7 +153,7 @@ let Z = i.memo(function (e) {
         o()(null != v, "Channel cannot be guildless");
         let w = i.useCallback(
             (e) => {
-                (0, b.h)({
+                (0, m.h)({
                     type: c.ImpressionTypes.MENU,
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
@@ -182,7 +182,7 @@ let Z = i.memo(function (e) {
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, y.u)("GuildChannelUserContextMenu", Z, {
+                                        onInteraction: (0, b.u)("GuildChannelUserContextMenu", Z, {
                                             targetUserId: s.id,
                                             tileType: C.TH.USER,
                                         }),

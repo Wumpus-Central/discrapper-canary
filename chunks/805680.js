@@ -14,13 +14,13 @@ var r = n(951288),
     h = n(153867),
     m = n(410575),
     g = n(347469),
-    E = n(40851),
-    b = n(367907),
-    y = n(243778),
-    O = n(907040),
-    v = n(556019),
-    I = n(455708),
-    T = n(314910),
+    E = n(367907),
+    b = n(243778),
+    y = n(907040),
+    O = n(556019),
+    v = n(455708),
+    I = n(314910),
+    T = n(728285),
     S = n(125900),
     A = n(603074),
     C = n(453070),
@@ -128,7 +128,7 @@ let z = L.Om + k.Su.MEDIUM,
                 ),
                 {
                     onClick: () => {
-                        b.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                        E.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                             tab: i,
                             badged: !1,
                         }),
@@ -227,7 +227,7 @@ function Q(e) {
         }),
         el = (0, x.Iu)((e) => e.activeView),
         ec = (0, C.fQ)(W),
-        { renderWindow: eu, windowDispatch: ed } = i.useContext(E.ZP),
+        { renderWindow: eu, windowDispatch: ed } = i.useContext(T.ZP),
         ef = (0, d.e7)([N.Z], () => !N.Z.hasLoadedStickerPacks),
         e_ = (0, S.V2)({ location: "expression_picker" }),
         ep = (0, d.e7)([w.Z], () => w.Z.isOpen()),
@@ -236,7 +236,7 @@ function Q(e) {
         eg = (null == (t = K.gifs) ? void 0 : t.allowSending) && !c.tq && null != F,
         eE = (null == (n = K.stickers) ? void 0 : n.allowSending) && null != H,
         eb = !(null == (a = K.expressionPicker) ? void 0 : a.onlyEmojis) && (eg || eE),
-        ey = (0, v.qt)({
+        ey = (0, O.qt)({
             location: "expression_picker",
             autoTrackExposure: !0,
             disable: !eb || el !== L.X1.EMOJI,
@@ -285,7 +285,7 @@ function Q(e) {
         );
     }, [el, eI, ev, eu, ed]),
         (0, p.Tbt)(en);
-    let [eT, eS] = (0, y.US)(e_ ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
+    let [eT, eS] = (0, b.US)(e_ ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
         [eA, eC] = i.useState(!1);
     i.useEffect(() => {
         el === L.X1.SOUNDBOARD && eC(!0);
@@ -312,7 +312,7 @@ function Q(e) {
                       ? (null == ei || null == (n = ei.current) ? void 0 : n.onPickerOpen) == null ||
                         ef ||
                         (null == ei || null == (r = ei.current) || r.onPickerOpen(), (er.current = !0))
-                      : (b.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_OPENED, {
+                      : (E.ZP.trackWithMetadata(j.rMx.EXPRESSION_PICKER_OPENED, {
                             width: ea.current.offsetWidth,
                             tab: el,
                             badged: !1,
@@ -327,7 +327,7 @@ function Q(e) {
         eD = null != $ ? $ : "left" === J ? Z.positionLayerDefaultAlignLeft : Z.positionLayerDefaultAlignRight;
     return (0, r.jsx)(m.Z, {
         section: j.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(T.W5, {
+        children: (0, r.jsx)(I.W5, {
             className: o()(Z.positionLayer, eD),
             targetRef: l,
             position: Q,
@@ -436,18 +436,18 @@ function Q(e) {
                                                 })
                                               : null,
                                           el === L.X1.GIF && eg
-                                              ? (0, r.jsx)(I.Z, {
+                                              ? (0, r.jsx)(v.Z, {
                                                     onSelectGIF: F,
                                                     hideFavorites: h,
                                                     persistSearch: !0,
                                                 })
                                               : null,
                                           el === L.X1.EMOJI
-                                              ? (0, r.jsx)(O.Z, {
+                                              ? (0, r.jsx)(y.Z, {
                                                     hasTabWrapper: !0,
                                                     containerContext: eb
-                                                        ? O.v.TABS_EXPRESSION_PICKER
-                                                        : O.v.NO_TABS_EXPRESSION_PICKER,
+                                                        ? y.v.TABS_EXPRESSION_PICKER
+                                                        : y.v.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
                                                     channel: W,
                                                     containerWidth: eo,

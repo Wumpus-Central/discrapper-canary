@@ -13,23 +13,23 @@ var r = n(951288),
     p = n(114250),
     h = n(735246),
     m = n(315263),
-    g = n(40851),
-    E = n(607070),
-    b = n(899663),
-    y = n(793903),
-    O = n(213609),
-    v = n(613413),
-    I = n(559407),
-    T = n(556766),
-    S = n(195302),
-    A = n(260035),
-    C = n(482215),
-    N = n(366841),
-    R = n(947519),
-    P = n(859678),
-    w = n(314910),
-    D = n(84615),
-    x = n(429142),
+    g = n(607070),
+    E = n(899663),
+    b = n(793903),
+    y = n(213609),
+    O = n(613413),
+    v = n(559407),
+    I = n(556766),
+    T = n(195302),
+    S = n(260035),
+    A = n(482215),
+    C = n(366841),
+    N = n(947519),
+    R = n(859678),
+    P = n(314910),
+    w = n(84615),
+    D = n(429142),
+    x = n(728285),
     L = n(813744),
     j = n(746106),
     M = n(526665),
@@ -88,16 +88,16 @@ let q = (0, B.Un)({
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             a = (0, G.getPlatform)(),
             u = s.tq || s.Em,
-            m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
+            m = (0, c.e7)([g.Z], () => (g.Z.useForcedColors ? "yes" : "no")),
             M = i.useRef(document.body),
             k = "".concat(m);
         return (
-            (0, N.G)(),
-            (0, P.G)("AppSkeleton"),
+            (0, C.G)(),
+            (0, R.G)("AppSkeleton"),
             (0, r.jsx)(
                 j.w,
                 {
-                    children: (0, r.jsxs)(b.Z, {
+                    children: (0, r.jsxs)(E.Z, {
                         children: [
                             (0, r.jsx)(Z.Z, { skipsSettingDefaultPageTitle: n }),
                             (0, r.jsx)(h.T, {
@@ -108,10 +108,10 @@ let q = (0, B.Un)({
                                             (0, r.jsx)(Y.Co, {}),
                                             (0, r.jsx)(H.ZP, {}),
                                             (0, r.jsx)(l.OUJ, {}),
-                                            (0, r.jsx)(g.Wu, {
+                                            (0, r.jsx)(x.Wu, {
                                                 appContext: K.IlC.APP,
                                                 renderWindow: window,
-                                                children: (0, r.jsxs)(w.yP, {
+                                                children: (0, r.jsxs)(P.yP, {
                                                     children: [
                                                         null != a ? (0, r.jsx)(Q, {}) : null,
                                                         (0, r.jsxs)("div", {
@@ -120,15 +120,15 @@ let q = (0, B.Un)({
                                                                 u && z.mobileAppAsidePanelWrapper,
                                                             ),
                                                             children: [
-                                                                (0, r.jsx)(C.K, {}),
+                                                                (0, r.jsx)(A.K, {}),
                                                                 (0, r.jsx)("div", {
                                                                     className: z.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
-                                                                    children: (0, r.jsx)(A.m, {
-                                                                        children: (0, r.jsx)(x.OR, {
-                                                                            children: (0, r.jsx)(y.Z.Provider, {
-                                                                                value: O.Z,
-                                                                                children: (0, r.jsxs)(S.p, {
+                                                                    children: (0, r.jsx)(S.m, {
+                                                                        children: (0, r.jsx)(D.OR, {
+                                                                            children: (0, r.jsx)(b.Z.Provider, {
+                                                                                value: y.Z,
+                                                                                children: (0, r.jsxs)(T.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: o()(
@@ -137,17 +137,17 @@ let q = (0, B.Un)({
                                                                                             children: t,
                                                                                         }),
                                                                                         (0, r.jsx)(f.Z, {}),
-                                                                                        (0, r.jsx)(I.Z, {}),
+                                                                                        (0, r.jsx)(v.Z, {}),
                                                                                         (0, r.jsx)(_.Z, {}),
                                                                                         (0, r.jsx)(d.nKe, {}),
                                                                                         (0, r.jsx)(p.Z, {}),
-                                                                                        (0, r.jsx)(D.Ox, {}),
-                                                                                        (0, r.jsx)(w.Un, {}),
-                                                                                        (0, r.jsx)(x.ot, {}),
+                                                                                        (0, r.jsx)(w.Ox, {}),
+                                                                                        (0, r.jsx)(P.Un, {}),
+                                                                                        (0, r.jsx)(D.ot, {}),
                                                                                         (0, r.jsx)(d.Ixi, {
                                                                                             appContext: K.IlC.APP,
                                                                                         }),
-                                                                                        (0, r.jsx)(v.Z, {}),
+                                                                                        (0, r.jsx)(O.Z, {}),
                                                                                         (0, r.jsx)(L.Z, {}),
                                                                                         (0, r.jsx)(q, {}),
                                                                                         (0, r.jsx)(X, {}),
@@ -157,9 +157,9 @@ let q = (0, B.Un)({
                                                                         }),
                                                                     }),
                                                                 }),
-                                                                (0, r.jsx)(T.Z, {}),
+                                                                (0, r.jsx)(I.Z, {}),
                                                                 (0, r.jsx)(F.Z, { mobile: u }),
-                                                                (0, r.jsx)(R.Z, { mobile: u }),
+                                                                (0, r.jsx)(N.Z, { mobile: u }),
                                                             ],
                                                         }),
                                                         !1,

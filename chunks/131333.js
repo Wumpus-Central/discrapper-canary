@@ -3,10 +3,10 @@ var r = n(951288),
     i = n(647438),
     a = n(238651),
     o = n(481060),
-    s = n(40851),
-    l = n(745510),
-    c = n(661637),
-    u = n(549006),
+    s = n(745510),
+    l = n(661637),
+    c = n(549006),
+    u = n(728285),
     d = n(146128),
     f = n(981631),
     _ = n(675654),
@@ -77,9 +77,9 @@ let b = [],
     P = new Set(["jack_o_lantern", "nose"]),
     w = {
         jack_o_lantern: {
-            sprites: (0, c.Z)(["chocolate_bar", "lollipop", "candy"]),
+            sprites: (0, l.Z)(["chocolate_bar", "lollipop", "candy"]),
         },
-        nose: { sprites: (0, c.Z)(["foot"]) },
+        nose: { sprites: (0, l.Z)(["foot"]) },
     };
 function D(e) {
     if (null == e) return null;
@@ -122,8 +122,8 @@ function j(e) {
 }
 let M = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
-        [o, s] = i.useState(null),
-        { confettiCanvas: c } = i.useContext(l.h),
+        [o, l] = i.useState(null),
+        { confettiCanvas: c } = i.useContext(s.h),
         u = (0, a.uR)(c, o);
     return (
         i.useImperativeHandle(
@@ -167,7 +167,7 @@ let M = i.forwardRef(function (e, t) {
             [u],
         ),
         (0, r.jsx)(a.Ji, {
-            ref: s,
+            ref: l,
             colors: b,
             sprites: n,
             spriteWidth: N,
@@ -178,17 +178,17 @@ let M = i.forwardRef(function (e, t) {
 function k(e) {
     let { children: t } = e,
         n = i.useRef({}),
-        [a, l] = i.useState(null),
-        c = j(a),
+        [a, s] = i.useState(null),
+        l = j(a),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef("jack_o_lantern"),
-        E = (0, s.bp)(),
+        E = (0, u.bp)(),
         b = i.useCallback(
             (e) => {
                 if (!h) {
                     let t = D(e);
-                    null != t && ((g.current = t), m(!0), l(null));
+                    null != t && ((g.current = t), m(!0), s(null));
                 }
             },
             [h],
@@ -201,7 +201,7 @@ function k(e) {
             [b],
         ),
         O = i.useCallback((e) => {
-            l(e);
+            s(e);
         }, []),
         v = i.useCallback((e) => {
             "exit" === e && m(!1);
@@ -239,13 +239,13 @@ function k(e) {
                       );
                   }),
                   h
-                      ? (0, r.jsx)(u.ZP, {
+                      ? (0, r.jsx)(c.ZP, {
                             children: (0, r.jsx)("div", {
                                 className: p.animationWrapper,
                                 children: (0, r.jsx)(o.kci, {
                                     animationRef: I,
                                     className: p.lottieAnimation,
-                                    nextScene: c,
+                                    nextScene: l,
                                     sceneSegments: x,
                                     onScenePlay: O,
                                     onSceneComplete: v,

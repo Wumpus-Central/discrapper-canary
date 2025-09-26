@@ -18,21 +18,21 @@ var r,
     h = n(490173),
     m = n(175724),
     g = n(280492),
-    E = n(40851),
-    b = n(607070),
-    y = n(899663),
-    O = n(317381),
-    v = n(100527),
-    I = n(906732),
-    T = n(168551),
-    S = n(260035),
-    A = n(628123),
-    C = n(686546),
-    N = n(950796);
+    E = n(607070),
+    b = n(899663),
+    y = n(317381),
+    O = n(100527),
+    v = n(906732),
+    I = n(168551),
+    T = n(260035),
+    S = n(628123),
+    A = n(686546),
+    C = n(950796);
 n(151851);
-var R = n(587061),
-    P = n(280049),
-    w = n(314910),
+var N = n(587061),
+    R = n(280049),
+    P = n(314910),
+    w = n(728285),
     D = n(22205),
     x = n(746106),
     L = n(892071),
@@ -141,19 +141,19 @@ class z extends (r = a.Component) {
             r = !1,
             i = n.head;
         c()(null != i, "Window document ".concat(r ? "body" : "head", " was null"));
-        let a = i.querySelector("style[".concat(T.PQ, "]"));
+        let a = i.querySelector("style[".concat(I.PQ, "]"));
         if (null != a) {
             a.textContent = e;
             return;
         }
         let o = n.createElement("style");
-        o.setAttribute(T.PQ, "true"), (o.textContent = e), i.appendChild(o);
+        o.setAttribute(I.PQ, "true"), (o.textContent = e), i.appendChild(o);
     }
     registerPopoutGlobalKeybinds() {
         var e;
         let { guestWindow: t } = this.props,
             n = t.document;
-        for (let t of ((this._combokeys = (0, P.r)(n.documentElement)),
+        for (let t of ((this._combokeys = (0, R.r)(n.documentElement)),
         [g.iN, g.oV, m.f, ...(null != (e = this.props.keybinds) ? e : [])]))
             if (t.comboKeysBindGlobal)
                 for (let e of t.binds)
@@ -181,33 +181,33 @@ class z extends (r = a.Component) {
                 withTitleBar: o,
                 isFullScreen: a,
             }),
-            b = r === Z.$J ? D.Z : A.Z;
+            E = r === Z.$J ? D.Z : S.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 x.w,
                 {
                     windowKey: r,
                     themeOverride: _,
-                    children: (0, i.jsx)(y.Z, {
+                    children: (0, i.jsx)(b.Z, {
                         children: (0, i.jsxs)(p.JcV, {
                             containerRef: this.rootRef,
                             children: [
                                 (0, i.jsx)(q, {
                                     guestWindow: l,
                                     className: c,
-                                    children: (0, i.jsxs)(b, {
+                                    children: (0, i.jsxs)(E, {
                                         children: [
-                                            (0, i.jsx)(C.Co, {}),
-                                            (0, i.jsx)(E.Wu, {
+                                            (0, i.jsx)(A.Co, {}),
+                                            (0, i.jsx)(w.Wu, {
                                                 appContext: B.IlC.POPOUT,
                                                 renderWindow: l,
-                                                children: (0, i.jsx)(S.m, {
-                                                    children: (0, i.jsxs)(w.yP, {
+                                                children: (0, i.jsx)(T.m, {
+                                                    children: (0, i.jsxs)(P.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    g && (0, i.jsx)(N.TF, { windowKey: r }),
+                                                                    g && (0, i.jsx)(C.TF, { windowKey: r }),
                                                                     null,
                                                                     (0, i.jsx)("div", {
                                                                         className: s()(F.content, d),
@@ -217,7 +217,7 @@ class z extends (r = a.Component) {
                                                             }),
                                                             !m && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
-                                                            (0, i.jsx)(w.Un, {}),
+                                                            (0, i.jsx)(P.Un, {}),
                                                         ],
                                                     }),
                                                 }),
@@ -290,17 +290,17 @@ let q = a.forwardRef(function (e, t) {
             isFullScreen: G.Z.isWindowFullScreen(e.windowKey),
         }));
         c()(null != n, "Missing guestWindow reference");
-        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([b.Z, O.ZP], () => ({
-            forcedColors: b.Z.useForcedColors ? "yes" : "no",
-            connectedEmbeddedActivity: O.ZP.getCurrentEmbeddedActivity(),
+        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([E.Z, y.ZP], () => ({
+            forcedColors: E.Z.useForcedColors ? "yes" : "no",
+            connectedEmbeddedActivity: y.ZP.getCurrentEmbeddedActivity(),
         }));
-        (0, R.Z)(n, !1);
-        let { analyticsLocations: l } = (0, I.ZP)(v.Z.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: d } = (0, T.ZP)();
+        (0, N.Z)(n, !1);
+        let { analyticsLocations: l } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
+            { clientThemesClassName: u, clientThemesCSS: d } = (0, I.ZP)();
         return null == n
             ? null
             : (0, i.jsx)(p.Sle, {
-                  children: (0, i.jsx)(I.Gt, {
+                  children: (0, i.jsx)(v.Gt, {
                       value: l,
                       children: (0, i.jsx)(
                           z,

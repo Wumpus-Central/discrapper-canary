@@ -6,9 +6,9 @@ var i = n(512722),
     a = n(442837),
     o = n(481060),
     s = n(24124),
-    c = n(40851),
-    u = n(906732),
-    d = n(522651),
+    c = n(906732),
+    u = n(522651),
+    d = n(728285),
     p = n(430824),
     h = n(293273),
     f = n(496675),
@@ -93,8 +93,8 @@ function C(e) {
             "buttonText",
             "color",
         ]);
-    let A = (0, c.bp)(),
-        { parentAnalyticsLocation: w } = (0, u.ZP)(),
+    let A = (0, d.bp)(),
+        { parentAnalyticsLocation: w } = (0, c.ZP)(),
         M = null == C ? void 0 : C.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
         k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
@@ -103,7 +103,7 @@ function C(e) {
     return null != k && E
         ? (0, r.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(k, !1, A);
+                  null != w && (0, u.v)(w, u.d.INVITE), s.h7(k, !1, A);
               },
               iconComponent: L,
               label: D,
@@ -121,7 +121,7 @@ function C(e) {
                         onClick: () => {
                             l()(null != R, "guild cannot be null"),
                                 l()(null != C, "channel cannot be null"),
-                                null != w && (0, d.v)(w, d.d.INVITE),
+                                null != w && (0, u.v)(w, u.d.INVITE),
                                 (function (e) {
                                     let {
                                         guild: t,

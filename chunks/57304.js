@@ -3,15 +3,15 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(23536),
-    s = n(40851),
-    c = n(622822),
-    u = n(306680),
-    d = n(585483),
+    s = n(23536),
+    o = n(622822),
+    c = n(728285),
+    d = n(306680),
+    u = n(585483),
     p = n(665149),
     h = n(981631),
     f = n(388032);
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,29 +56,29 @@ function g(e, t) {
 }
 let b = function (e) {
     let { channel: t } = e,
-        n = (0, c.$5)(t),
+        n = (0, o.$5)(t),
         [b, y] = i.useState(!1),
-        _ = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
-        C = (0, s.Aq)(),
-        x = i.useRef(null),
+        _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
+        O = (0, c.Aq)(),
+        j = i.useRef(null),
         v = i.useCallback(() => {
             n || y((e) => !e);
         }, [n]);
-    function O(e) {
-        (null == e ? void 0 : e.shiftKey) || C.dispatch(h.CkL.POPOUT_CLOSE);
+    function x(e) {
+        (null == e ? void 0 : e.shiftKey) || O.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                d.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, v),
+                u.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, v),
                 () => {
-                    d.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, v);
+                    u.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, v);
                 }
             ),
             [v],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: x,
+            targetElementRef: j,
             shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
@@ -88,9 +88,9 @@ let b = function (e) {
             onRequestClose: () => y(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
-                    o.Z,
-                    g(m({}, e), {
-                        onJump: O,
+                    s.Z,
+                    m(g({}, e), {
+                        onJump: x,
                         channel: t,
                     }),
                 );
@@ -100,8 +100,8 @@ let b = function (e) {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
                     p.JO,
-                    g(m({}, e), {
-                        ref: x,
+                    m(g({}, e), {
+                        ref: j,
                         onClick: v,
                         tooltip: i ? null : f.intl.string(f.t["mp1N//"]),
                         icon: a.qQX,

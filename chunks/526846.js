@@ -1,4 +1,4 @@
-n.d(t, { m: () => k }), n(997841), n(953529);
+n.d(t, { m: () => D }), n(997841), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,30 +9,30 @@ var r = n(951288),
     u = n(706527),
     d = n(442837),
     p = n(481060),
-    h = n(40851),
-    f = n(607070),
-    m = n(100527),
-    g = n(906732),
-    b = n(783097),
-    _ = n(226026),
+    h = n(607070),
+    f = n(100527),
+    m = n(906732),
+    g = n(783097),
+    b = n(226026),
     y = n(397698),
     C = n(895924),
-    x = n(471518),
+    _ = n(471518),
     v = n(425986),
-    O = n(216780),
+    x = n(216780),
+    O = n(728285),
     j = n(390322),
     E = n(857192),
     S = n(626135),
-    I = n(456100),
-    P = n(566620),
+    P = n(456100),
+    I = n(566620),
     Z = n(127255),
     T = n(5200),
     N = n(558317),
     A = n(981631),
     w = n(388032),
-    R = n(201512);
-let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    D = "vc-activities-".concat((0, o.Z)());
+    M = n(201512);
+let R = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
+    k = "vc-activities-".concat((0, o.Z)());
 function L(e) {
     var t;
     let n,
@@ -41,52 +41,52 @@ function L(e) {
             let e = (0, d.e7)([E.default], () => E.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
             return (
                 i.useEffect(() => {
-                    (0, x.XK)({
-                        surface: M,
+                    (0, _.XK)({
+                        surface: R,
                         activeState: e,
                     });
                 }, [e]),
                 {
                     fetchState: (0, d.e7)([v.Z], () =>
                         v.Z.getFetchState({
-                            surface: M,
+                            surface: R,
                             activeState: e,
                         }),
                     ),
                     voiceBannerCollection: (0, d.e7)([v.Z], () =>
                         v.Z.getCollections({
-                            surface: M,
+                            surface: R,
                             activeState: e,
                         }),
                     )[0],
                 }
             );
         })(),
-        f = c === v.M.FETCHING,
-        g = i.useMemo(() => {
+        m = c === v.M.FETCHING,
+        C = i.useMemo(() => {
             let e = null == h ? void 0 : h.application_directory_collection_items[0];
             return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
         }, [null == h ? void 0 : h.application_directory_collection_items]),
-        { trackItemImpressionRef: C } = (0, _.Z)({
-            applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : "",
-            applicationFlags: null == g ? void 0 : g.application.flags,
+        { trackItemImpressionRef: O } = (0, b.Z)({
+            applicationId: null != (t = null == C ? void 0 : C.application.id) ? t : "",
+            applicationFlags: null == C ? void 0 : C.application.flags,
             sectionName: "app_launcher_in_voice_banner",
-            sectionPosition: null == g ? void 0 : g.position,
+            sectionPosition: null == C ? void 0 : C.position,
             sectionOverallPosition: 0,
-            promotionalLabel: null != g ? (0, b.dF)(g.application) : void 0,
+            promotionalLabel: null != C ? (0, g.dF)(C.application) : void 0,
         });
-    return null == g || null == h || f
+    return null == C || null == h || m
         ? null
-        : (null != g.id &&
-              null != g.image_hash &&
-              (n = (0, O.$_)({
-                  itemId: g.id,
-                  hash: g.image_hash,
+        : (null != C.id &&
+              null != C.image_hash &&
+              (n = (0, x.$_)({
+                  itemId: C.id,
+                  hash: C.image_hash,
                   containerWidth: 584,
               })),
           (0, r.jsxs)(p.P3F, {
-              className: R.clickableBanner,
-              innerRef: C,
+              className: M.clickableBanner,
+              innerRef: O,
               onClick: () => {
                   o(),
                       (0, y.Z)({
@@ -95,44 +95,44 @@ function L(e) {
                               channel: l,
                           },
                           openInPopout: a,
-                          analyticsLocation: m.Z.APP_LAUNCHER_IN_VOICE_BANNER,
-                          initialState: { applicationId: g.application.id },
+                          analyticsLocation: f.Z.APP_LAUNCHER_IN_VOICE_BANNER,
+                          initialState: { applicationId: C.application.id },
                       });
               },
               children: [
                   (0, r.jsx)("img", {
-                      alt: g.description,
+                      alt: C.description,
                       src: n,
-                      className: R.poster,
+                      className: M.poster,
                   }),
-                  (0, r.jsx)("div", { className: R.posterDivider }),
+                  (0, r.jsx)("div", { className: M.posterDivider }),
               ],
           }));
 }
-let k = i.forwardRef(function (e, t) {
+let D = i.forwardRef(function (e, t) {
     var n;
-    let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
-        x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        { id: v, guild_id: O } = l;
+    let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: g, className: b } = e,
+        _ = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        { id: v, guild_id: x } = l;
     i.useEffect(() => {
         S.default.track(A.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: v,
-            guild_id: O,
+            guild_id: x,
         });
-    }, [v, O]),
+    }, [v, x]),
         i.useEffect(() => {
             o || s();
         }, [s, o]);
-    let E = (0, h.bp)(),
-        { analyticsLocations: M, newestAnalyticsLocation: k } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+    let E = (0, O.bp)(),
+        { analyticsLocations: R, newestAnalyticsLocation: D } = (0, m.ZP)(f.Z.ACTIVITIES_MINI_SHELF),
         U = E === A.IlC.POPOUT,
         B = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => P.ux(), 1000);
+        let e = setTimeout(() => I.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: F } = I.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        G = i.useCallback(() => {
+    let { enabled: F } = P.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
+        H = i.useCallback(() => {
             (0, y.Z)({
                 context:
                     null != l
@@ -142,12 +142,12 @@ let k = i.forwardRef(function (e, t) {
                           }
                         : { type: "contextless" },
                 openInPopout: U,
-                analyticsLocation: k,
+                analyticsLocation: D,
             }),
                 u(),
-                b();
-        }, [l, k, b, u, U]),
-        H = i.useCallback(
+                g();
+        }, [l, D, g, u, U]),
+        V = i.useCallback(
             (e) => {
                 c(),
                     S.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -157,38 +157,38 @@ let k = i.forwardRef(function (e, t) {
             },
             [c, l],
         ),
-        V = F ? p.iWm : p.nG3;
-    return (0, r.jsx)(g.Gt, {
-        value: M,
+        G = F ? p.iWm : p.nG3;
+    return (0, r.jsx)(m.Gt, {
+        value: R,
         children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                "aria-labelledby": D,
-                className: _,
+                "aria-labelledby": k,
+                className: b,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: D,
+                                id: k,
                                 children: w.intl.string(w.t["2lnYtL"]),
                             }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: R.container,
-                        onMouseEnter: H,
+                        className: M.container,
+                        onMouseEnter: V,
                         onMouseLeave: u,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: R.titleContainer,
+                                className: M.titleContainer,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: R.titleLeft,
+                                        className: M.titleLeft,
                                         children: [
-                                            (0, r.jsx)(V, {
+                                            (0, r.jsx)(G, {
                                                 size: "md",
-                                                className: R.titleLeftIcon,
+                                                className: M.titleLeftIcon,
                                                 color: "var(--interactive-active)",
                                             }),
                                             (0, r.jsx)(p.Text, {
@@ -198,8 +198,8 @@ let k = i.forwardRef(function (e, t) {
                                         ],
                                     }),
                                     (0, r.jsxs)(p.P3F, {
-                                        className: R.titleRight,
-                                        onClick: G,
+                                        className: M.titleRight,
+                                        onClick: H,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: "eyebrow",
@@ -210,7 +210,7 @@ let k = i.forwardRef(function (e, t) {
                                                 width: 12,
                                                 height: 12,
                                                 color: "var(--interactive-active)",
-                                                className: R.titleRightIcon,
+                                                className: M.titleRightIcon,
                                             }),
                                         ],
                                     }),
@@ -220,11 +220,11 @@ let k = i.forwardRef(function (e, t) {
                                 openInPopout: U,
                                 channel: l,
                                 onClick: () => {
-                                    b(), s();
+                                    g(), s();
                                 },
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.activityContainer,
+                                className: M.activityContainer,
                                 children: [
                                     B.map((e) =>
                                         (0, r.jsx)(
@@ -236,20 +236,20 @@ let k = i.forwardRef(function (e, t) {
                                                 },
                                                 activityItem: e,
                                                 onClick: () => {
-                                                    s(), b();
+                                                    s(), g();
                                                 },
                                                 aspectRatio: T.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                animatedDivClass: R.activitySuggestion,
+                                                animatedDivClass: M.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF,
                                             },
                                             e.application.id,
                                         ),
                                     ),
                                     (0, r.jsx)("div", {
-                                        className: a()(R.wumpusRocketOuterContainer, { [R.wumpusReducedMotion]: x }),
+                                        className: a()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: _ }),
                                         children: (0, r.jsx)("div", {
-                                            className: R.wumpusRocketInnerContainer,
-                                            children: (0, r.jsx)(N.Z, { className: R.wumpusRocket }),
+                                            className: M.wumpusRocketInnerContainer,
+                                            children: (0, r.jsx)(N.Z, { className: M.wumpusRocket }),
                                         }),
                                     }),
                                 ],

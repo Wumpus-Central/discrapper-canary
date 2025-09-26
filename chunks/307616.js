@@ -15,9 +15,9 @@ var r = n(951288),
     c = n(215569),
     u = n(770278),
     d = n(481060),
-    f = n(40851),
-    _ = n(314910),
-    p = n(429142),
+    f = n(314910),
+    _ = n(429142),
+    p = n(728285),
     h = n(585483),
     m = n(952265),
     g = n(602091),
@@ -75,7 +75,7 @@ function I(e, t) {
         e
     );
 }
-let T = [_.ZP, p.ZP];
+let T = [f.ZP, _.ZP];
 class S extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i, dismissable: a } = this.props,
@@ -137,7 +137,7 @@ class S extends i.PureComponent {
     }
 }
 function A() {
-    return (0, m.Vn)((0, f.bp)());
+    return (0, m.Vn)((0, p.bp)());
 }
 function C(e) {
     let t = [],
@@ -178,19 +178,19 @@ function R() {
             let e = a.current;
             (null == e ? void 0 : e.dismissable) !== !1 && h.S.dispatch(E.CkL.MODAL_CLOSE);
         }, []),
-        f = i.useCallback(
+        _ = i.useCallback(
             (t) => {
                 (0, m.Mr)(t, e);
             },
             [e],
         ),
-        p = T.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.ZP)));
+        p = T.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.ZP)));
     return (0, r.jsxs)(c.W, {
         component: i.Fragment,
         children: [
             T.map((e, n) => {
                 var i;
-                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.ZP)),
+                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP)),
                     o = null != (i = null == a ? void 0 : a.backdropStyle) ? i : d.fCB.DARK;
                 return (0, d.OLG)(o)
                     ? (0, r.jsx)(
@@ -223,11 +223,11 @@ function R() {
                     S,
                     {
                         modalKey: i,
-                        LayerComponent: null != a ? a : _.ZP,
+                        LayerComponent: null != a ? a : f.ZP,
                         isVisible: l,
                         isTopModal: t === n.length - 1,
                         render: o,
-                        closeModal: f,
+                        closeModal: _,
                         instant: s,
                         dismissable: c,
                     },

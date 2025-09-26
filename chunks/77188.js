@@ -2,9 +2,9 @@ n.d(t, { Z: () => R }), n(388685);
 var r = n(647438),
     i = n(836560),
     a = n(327432),
-    o = n(40851),
-    s = n(213459),
-    l = n(998698),
+    o = n(213459),
+    s = n(998698),
+    l = n(728285),
     c = n(695346),
     u = n(752305),
     d = n(86724),
@@ -75,7 +75,7 @@ function N(e, t) {
     );
 }
 function R(e) {
-    let t = r.useContext(o.ZP),
+    let t = r.useContext(l.ZP),
         n = c.R$.useSetting(),
         [i] = r.useState(() => {
             let r = (0, a.Jh)();
@@ -99,10 +99,10 @@ function R(e) {
         r.useEffect(() => {
             let e = () => i.onChange();
             return (
-                l.Z.addChangeListener(e),
-                s.ZP.addChangeListener(e),
+                s.Z.addChangeListener(e),
+                o.ZP.addChangeListener(e),
                 () => {
-                    l.Z.removeChangeListener(e), s.ZP.removeChangeListener(e);
+                    s.Z.removeChangeListener(e), o.ZP.removeChangeListener(e);
                 }
             );
         }, [i]),

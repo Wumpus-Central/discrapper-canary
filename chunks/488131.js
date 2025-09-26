@@ -10,10 +10,10 @@ var r = n(512722),
     o = n.n(a),
     s = n(570140),
     l = n(430742),
-    c = n(40851),
-    u = n(367907),
-    d = n(727429),
-    f = n(927723),
+    c = n(367907),
+    u = n(727429),
+    d = n(927723),
+    f = n(728285),
     _ = n(982168),
     p = n(703656),
     h = n(359110),
@@ -26,8 +26,8 @@ var r = n(512722),
     v = n(981631),
     I = n(176505);
 function T(e, t, n) {
-    if (!(0, _.WF)(e.id)) return void (0, f.V)();
-    c.UI.dispatch(v.CkL.POPOUT_CLOSE);
+    if (!(0, _.WF)(e.id)) return void (0, d.V)();
+    f.UI.dispatch(v.CkL.POPOUT_CLOSE);
     let r = !o().isEmpty(b.Z.getVoiceStatesForChannel(e.id));
     if (t || !m.vF.getSetting() || __OVERLAY__ || r) {
         s.Z.dispatch({
@@ -41,7 +41,7 @@ function T(e, t, n) {
     let a = E.Z.getChannelId();
     e.parent_id === a || (0, I.ME)(a) || (0, h.Kh)(e.parent_id),
         (0, p.uL)(
-            v.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, I.ME)(a) ? I.oC.GUILD_HOME : e.parent_id, e.id),
+            v.Z5c.CHANNEL_THREAD_VIEW((0, u.e)(e), (0, I.ME)(a) ? I.oC.GUILD_HOME : e.parent_id, e.id),
             e.isForumPost() ? { source: O.on.FORUM } : void 0,
         ),
         setTimeout(() => {
@@ -52,12 +52,12 @@ function S(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),
-        (0, u.yw)(v.rMx.THREAD_CREATION_STARTED, {
+        (0, c.yw)(v.rMx.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
             guild_id: e.guild_id,
         }),
-        c.UI.dispatch(v.CkL.POPOUT_CLOSE),
+        f.UI.dispatch(v.CkL.POPOUT_CLOSE),
         E.Z.getChannelId() !== e.id && (0, h.Kh)(e.id),
         "" === g.Z.getDraft(e.id, g.d.FirstThreadMessage))
     ) {

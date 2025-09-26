@@ -1,7 +1,7 @@
 n.d(t, { Z: () => U }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(786920),
+    a = n(488290),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(287734),
     f = n(872810),
     _ = n(393238),
-    p = n(40851),
-    h = n(607070),
+    p = n(607070),
+    h = n(728285),
     m = n(210887),
     g = n(592125),
     E = n(617136),
@@ -86,10 +86,10 @@ function k(e) {
         Q = (null == G || null == (D = G.userStatus) ? void 0 : D.completedAt) != null,
         J = (0, s.e7)([m.Z], () => m.Z.getState().theme),
         $ = (0, c.wj)(J) ? R.BR.DARK : R.BR.LIGHT,
-        ee = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+        ee = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         { ref: et, height: en } = (0, _.ZP)(),
         [er, ei] = i.useState(ee),
-        ea = (0, p.Aq)(),
+        ea = (0, h.Aq)(),
         eo = (0, o.eg)();
     i.useEffect(() => {
         let e = eo.current;

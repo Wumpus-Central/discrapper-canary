@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(40851),
+    o = n(728285),
     s = n(357156),
     c = n(390322),
     u = n(88479),
@@ -16,22 +16,22 @@ var r = n(951288),
 function b(e) {
     let { channelId: t, onClick: n } = e,
         b = (0, o.bp)(),
-        _ = (0, m.qY)(t),
-        y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: C } = (0, s.XJ)(y),
-        x = C(_),
-        v = i.useRef(null);
-    if (null == _) return null;
+        y = (0, m.qY)(t),
+        C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        { canManageGuildEvent: _ } = (0, s.XJ)(C),
+        v = _(y),
+        x = i.useRef(null);
+    if (null == y) return null;
     let O = () => {
-            if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
+            if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
             n();
         },
         j = () => {
-            h.Z.endEvent(_.id, _.guild_id);
+            h.Z.endEvent(y.id, y.guild_id);
         };
-    return x
+    return v
         ? (0, r.jsx)(a.yRy, {
-              targetElementRef: v,
+              targetElementRef: x,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(c.Z, {
@@ -56,7 +56,7 @@ function b(e) {
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(u.Z, {
-                      buttonRef: v,
+                      buttonRef: x,
                       label: g.intl.string(g.t["6vrfgo"]),
                       onClick: O,
                       onPopoutClick: t,

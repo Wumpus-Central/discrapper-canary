@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(40851),
-    a = n(340541),
+    l = n(340541),
+    a = n(728285),
     o = n(493754),
     s = n(496675),
     c = n(981631),
@@ -13,7 +13,7 @@ function d(e, t, n, d) {
             streamUserId: n,
             channel: e,
             applicationId: d,
-            appContext: (0, l.bp)(),
+            appContext: (0, a.bp)(),
         },
         h = () => {
             null != t &&
@@ -46,7 +46,7 @@ function d(e, t, n, d) {
                     })({ guild: t }, p),
                 );
         },
-        f = (0, a._k)({ location: "more_settings_invite_item" }),
+        f = (0, l._k)({ location: "more_settings_invite_item" }),
         m = f.isInCallEntrypointEnabled ? i.oLu : i.ejJ;
     if (null != d)
         return (0, r.jsx)(i.sNh, {

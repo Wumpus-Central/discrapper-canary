@@ -7,8 +7,8 @@ var i = n(120356),
     s = n(481060),
     l = n(350810),
     c = n(579806),
-    u = n(40851),
-    d = n(358221),
+    u = n(358221),
+    d = n(728285),
     f = n(754347),
     _ = n(428548),
     p = n(718759),
@@ -120,8 +120,8 @@ let I = "#ffffff",
     };
 function R(e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: a = !1, themeOverride: s } = e,
-        c = (0, u.bp)(),
-        f = (0, o.e7)([d.Z], () => d.Z.isFullscreenInContext(c)),
+        c = (0, d.bp)(),
+        f = (0, o.e7)([u.Z], () => u.Z.isFullscreenInContext(c)),
         _ = (0, l.Z)();
     if (f) return null;
     switch (n) {

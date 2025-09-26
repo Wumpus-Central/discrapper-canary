@@ -9,22 +9,22 @@ var i = n(243814),
     c = n(224706),
     u = n(45114),
     d = n(479531),
-    p = n(40851),
-    f = n(636449),
-    h = n(566620),
-    g = n(531826),
-    m = n(596223),
-    b = n(838195),
-    _ = n(333861),
+    p = n(636449),
+    f = n(566620),
+    h = n(531826),
+    g = n(596223),
+    m = n(838195),
+    b = n(333861),
+    _ = n(728285),
     O = n(928518),
     E = n(23750),
     y = n(592125),
     v = n(293273),
     I = n(885110),
-    C = n(451478),
-    S = n(630388),
-    N = n(823379),
-    T = n(709054),
+    S = n(451478),
+    C = n(630388),
+    T = n(823379),
+    N = n(709054),
     P = n(591759),
     j = n(228488),
     x = n(996106),
@@ -44,7 +44,7 @@ async function U(e, t, n, r) {
             { errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
         );
-    let a = (0, m.Z)(l, I.Z);
+    let a = (0, g.Z)(l, I.Z);
     if (a) {
         let { lock: t } = (0, R.jU)(e);
         return (0, s.h7)(l, a).then(() => {
@@ -172,7 +172,7 @@ let G = {
                 i = t.application;
             if (null == i.id) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
             let { channel: l, guild: o, frame: c } = (0, L.T)(),
-                u = (0, g.ZP)({
+                u = (0, h.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id,
                 }),
@@ -192,7 +192,7 @@ let G = {
             } else
                 (0, a.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
                         return (t) => {
                             var n, a;
                             return (0, r.jsx)(
@@ -263,11 +263,11 @@ let G = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, f.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, p.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
-                        let e = C.Z.getLastFocusedWindowId();
-                        n = null == e ? null : null == (r = (0, p.g0)(e)) ? void 0 : r.renderWindow;
+                        let e = S.Z.getLastFocusedWindowId();
+                        n = null == e ? null : null == (r = (0, _.g0)(e)) ? void 0 : r.renderWindow;
                     }
                     if (null == n) throw new x.Z({ errorCode: k.lTL.UNKNOWN_ERROR }, "No valid window found");
                     let i = n.document.createElement("input");
@@ -282,7 +282,7 @@ let G = {
                             }, 1000);
                     };
                     i.addEventListener("change", () => {
-                        (0, N.lm)(i.files) && e(i.files[0]), l();
+                        (0, T.lm)(i.files) && e(i.files[0]), l();
                     }),
                         i.addEventListener("cancel", () => {
                             l();
@@ -292,8 +292,8 @@ let G = {
                         i.click();
                 })(
                     async (n) => {
-                        let l = await (0, h.kv)(r, i, n);
-                        (0, N.lm)(l) && (0, N.lm)(l.url) && !(l instanceof d.Z) ? e({ image_url: l.url }) : t(l);
+                        let l = await (0, f.kv)(r, i, n);
+                        (0, T.lm)(l) && (0, T.lm)(l.url) && !(l instanceof d.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error("Upload canceled")),
                 );
@@ -317,12 +317,12 @@ let G = {
             (0, A.bu)(n.transport);
             let i = n.application.id;
             if (null == i) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
-            if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
+            if (!(0, C.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let l = (0, w.Z)();
             if (!P.Z.isDiscordCdnUrl(r))
                 throw new x.Z({ errorCode: k.lTL.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
-            (0, b.Z)({
+            (0, m.Z)({
                 applicationId: i,
                 channelId: null == l ? void 0 : l.id,
                 mediaUrl: r,
@@ -351,7 +351,7 @@ let G = {
                 p = r.application.id;
             if (null == p) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No application.");
             if (!M.Cr.includes(p)) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Unsupported application.");
-            if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
+            if (!(0, C.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let f = (0, w.Z)();
             if (null == f && s) throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "No channel found");
@@ -360,7 +360,7 @@ let G = {
                 void 0 !== l &&
                     (e = [
                         {
-                            id: T.default.cast(T.default.fromTimestamp(Date.now())),
+                            id: N.default.cast(N.default.fromTimestamp(Date.now())),
                             size: 0,
                             proxy_url: l.url,
                             filename: "preview",
@@ -370,7 +370,7 @@ let G = {
                         },
                     ]),
                     (n = new E.ZP({
-                        id: T.default.cast(T.default.fromTimestamp(Date.now())),
+                        id: N.default.cast(N.default.fromTimestamp(Date.now())),
                         applicationId: p,
                         content: c,
                         components: o,
@@ -382,7 +382,7 @@ let G = {
                     r = (0, R.jU)(d),
                     l = a.z1l;
                 (O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
-                    (0, _.M)({
+                    (0, b.M)({
                         applicationId: p,
                         channel: f,
                         command: {

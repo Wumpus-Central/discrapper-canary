@@ -6,8 +6,8 @@ var r = n(647438),
     o = n(925549),
     s = n(904245),
     c = n(45114),
-    u = n(40851),
-    d = n(607070),
+    u = n(607070),
+    d = n(728285),
     p = n(703656),
     h = n(479313),
     f = n(796974),
@@ -15,8 +15,8 @@ var r = n(647438),
     g = n(534469),
     b = n(173033),
     y = n(959517),
-    _ = n(981631);
-function C(e, t, n) {
+    C = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -121,7 +121,7 @@ class O {
                         }),
                     )),
                     r.forEach(function (t) {
-                        C(e, t, n[t]);
+                        _(e, t, n[t]);
                     });
             }
             return e;
@@ -161,7 +161,7 @@ class O {
         }
         let a = e.messages.last(),
             o = t.last();
-        if (null != a && a.state === _.yb.SENDING && (null == o ? void 0 : o.id) !== a.id)
+        if (null != a && a.state === C.yb.SENDING && (null == o ? void 0 : o.id) !== a.id)
             return void this.setScrollToBottom();
         let { focusId: s } = this.props;
         if (null != s && n !== s) {
@@ -424,8 +424,8 @@ class O {
         null != t
             ? this.scrollToMessage(t, !1)
             : this.props.hasUnreads &&
-                this.props.channel.type !== _.d4z.GUILD_VOICE &&
-                this.props.channel.type !== _.d4z.GUILD_STAGE_VOICE
+                this.props.channel.type !== C.d4z.GUILD_VOICE &&
+                this.props.channel.type !== C.d4z.GUILD_STAGE_VOICE
               ? this.scrollToNewMessages()
               : null != e
                 ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll)
@@ -438,7 +438,7 @@ class O {
         null == (t = this.ref.current) ||
             t.scrollTo({
                 to: e,
-                animate: !d.Z.useReducedMotion && n,
+                animate: !u.Z.useReducedMotion && n,
                 callback: r,
             }),
             this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced();
@@ -457,7 +457,7 @@ class O {
             { messages: t, channel: n } = this.props;
         if (t.hasMoreAfter) {
             var r;
-            s.Z.jumpToPresent(n.id, _.AQB), (0, p.XU)(null != (r = n.getGuildId()) ? r : _.ME, n.id);
+            s.Z.jumpToPresent(n.id, C.AQB), (0, p.XU)(null != (r = n.getGuildId()) ? r : C.ME, n.id);
         } else
             this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
                 (this.jumping = !1), this.handleScroll();
@@ -493,13 +493,13 @@ class O {
         this.isJumping() ||
             !t ||
             null == n ||
-            d.Z.useReducedMotion ||
+            u.Z.useReducedMotion ||
             (m.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)),
             (this.pinned = !1),
             (this.jumping = !0);
         let i = () => {
             (this.jumping = !1),
-                (0, a.kK)(r) && d.Z.keyboardModeEnabled && r.focus({ preventScroll: !0 }),
+                (0, a.kK)(r) && u.Z.keyboardModeEnabled && r.focus({ preventScroll: !0 }),
                 (this.scrollCounter = 0),
                 this.handleScroll(),
                 this._scrollCompleteCallbacks.forEach((e) => e());
@@ -565,29 +565,29 @@ class O {
             n,
             i = this;
         if (
-            (C(this, "props", void 0),
-            C(this, "ref", r.createRef()),
-            C(this, "automaticAnchor", null),
-            C(this, "messageFetchAnchor", null),
-            C(this, "focusAnchor", null),
-            C(this, "loading", void 0),
-            C(this, "jumping", !1),
-            C(this, "pinned", void 0),
-            C(this, "dragging", !1),
-            C(this, "isAtBottom", !1),
-            C(this, "prevScrollTop", null),
-            C(this, "anchorTimeout", null),
-            C(this, "initialScrollTop", null),
-            C(this, "acking", !1),
-            C(this, "scrollCounter", 0),
-            C(this, "offsetHeightCache", 0),
-            C(this, "scrollHeightCache", 0),
-            C(this, "scrollTopCache", -1),
-            C(this, "_bottomAnchor", null),
-            C(this, "_automaticAnchorCallbacks", []),
-            C(this, "_scrollCompleteCallbacks", []),
-            C(this, "updateVisibleMessagesDebounced", l().debounce(h.JR, 300)),
-            C(this, "handleScroll", (e) => {
+            (_(this, "props", void 0),
+            _(this, "ref", r.createRef()),
+            _(this, "automaticAnchor", null),
+            _(this, "messageFetchAnchor", null),
+            _(this, "focusAnchor", null),
+            _(this, "loading", void 0),
+            _(this, "jumping", !1),
+            _(this, "pinned", void 0),
+            _(this, "dragging", !1),
+            _(this, "isAtBottom", !1),
+            _(this, "prevScrollTop", null),
+            _(this, "anchorTimeout", null),
+            _(this, "initialScrollTop", null),
+            _(this, "acking", !1),
+            _(this, "scrollCounter", 0),
+            _(this, "offsetHeightCache", 0),
+            _(this, "scrollHeightCache", 0),
+            _(this, "scrollTopCache", -1),
+            _(this, "_bottomAnchor", null),
+            _(this, "_automaticAnchorCallbacks", []),
+            _(this, "_scrollCompleteCallbacks", []),
+            _(this, "updateVisibleMessagesDebounced", l().debounce(h.JR, 300)),
+            _(this, "handleScroll", (e) => {
                 var t;
                 if (!this.isInitialized()) return;
                 let n = this.getScrollerState(),
@@ -640,18 +640,18 @@ class O {
                 1 === i ? this.loadMore() : 2 === i ? this.loadMore(!0) : this.enableAutomaticAck(),
                     this.handleScrollSpeed(n);
             }),
-            C(this, "handleResize", (e, t) => {
+            _(this, "handleResize", (e, t) => {
                 let { offsetHeightCache: n, scrollHeightCache: r } = this;
                 "container" === t ? (n = e.contentRect.height) : "content" === t && (r = e.contentRect.height),
                     this.isHeightChange(n, r) && this.fixScrollPosition(n, r);
             }),
-            C(this, "handleMouseDown", (e) => {
+            _(this, "handleMouseDown", (e) => {
                 e.target === e.currentTarget && (this.dragging = !0);
             }),
-            C(this, "handleMouseUp", () => {
+            _(this, "handleMouseUp", () => {
                 (this.dragging = !1), this.handleScroll();
             }),
-            C(this, "loadMore", function () {
+            _(this, "loadMore", function () {
                 let e,
                     t,
                     n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -669,11 +669,11 @@ class O {
                         channelId: i.props.channel.id,
                         before: e,
                         after: t,
-                        limit: _.AQB,
+                        limit: C.AQB,
                         truncate: !0,
                     });
             }),
-            C(this, "updateStoreDimensionsDebounced", l().debounce(this.updateStoreDimensions, 200)),
+            _(this, "updateStoreDimensionsDebounced", l().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
             (this.loading = e.messages.loadingMore),
             null != e.messages.jumpTargetId)
@@ -700,10 +700,10 @@ function j(e) {
             placeholderHeight: o,
             canLoadMore: s = !0,
             handleScrollToBottom: c,
-            handleScrollFromBottom: d,
+            handleScrollFromBottom: u,
             additionalMessagePadding: p = 0,
         } = e,
-        { windowId: h } = r.useContext(u.ZP),
+        { windowId: h } = r.useContext(d.ZP),
         [f] = r.useState(
             () =>
                 new O({
@@ -716,7 +716,7 @@ function j(e) {
                     canLoadMore: s,
                     windowId: h,
                     handleScrollToBottom: c,
-                    handleScrollFromBottom: d,
+                    handleScrollFromBottom: u,
                     additionalMessagePadding: p,
                 }),
         );
@@ -733,7 +733,7 @@ function j(e) {
                 canLoadMore: s,
                 windowId: h,
                 handleScrollToBottom: c,
-                handleScrollFromBottom: d,
+                handleScrollFromBottom: u,
                 additionalMessagePadding: p,
             }),
         ),

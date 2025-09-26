@@ -2,9 +2,9 @@ n.d(t, { k: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(238651),
-    o = n(40851),
-    s = n(745510),
-    l = n(661637),
+    o = n(745510),
+    s = n(661637),
+    l = n(728285),
     c = n(146128),
     u = n(981631);
 function d(e, t, n) {
@@ -113,18 +113,18 @@ let h = 1000 / 60,
         },
     },
     E = ["#FFFFFF"],
-    b = [n(123353), ...(0, l.Z)(["snowflake"])];
+    b = [n(123353), ...(0, s.Z)(["snowflake"])];
 function y(e) {
     let { children: t } = e,
-        [n, l] = i.useState(!1),
-        d = (0, o.bp)(),
+        [n, s] = i.useState(!1),
+        d = (0, l.bp)(),
         [_, y] = i.useState(null),
-        { confettiCanvas: O } = i.useContext(s.h),
+        { confettiCanvas: O } = i.useContext(o.h),
         v = (0, a.uR)(O, _),
         I = i.useMemo(
             () => ({
-                triggerAnimation: () => l(!0),
-                untriggerAnimation: () => l(!1),
+                triggerAnimation: () => s(!0),
+                untriggerAnimation: () => s(!1),
             }),
             [],
         ),

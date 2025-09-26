@@ -11,12 +11,12 @@ var i = n(120356),
     o = n(442837),
     s = n(481060),
     l = n(846027),
-    c = n(40851),
-    u = n(906732),
-    d = n(835473),
-    f = n(221888),
-    _ = n(522651),
-    p = n(600164),
+    c = n(906732),
+    u = n(835473),
+    d = n(221888),
+    f = n(522651),
+    _ = n(600164),
+    p = n(728285),
     h = n(788983),
     m = n(189771),
     g = n(560688),
@@ -59,21 +59,21 @@ function M(e) {
             selectedParticipant: M,
             embeddedActivity: k,
         } = e,
-        U = (0, c.bp)() === P.IlC.POPOUT,
+        U = (0, p.bp)() === P.IlC.POPOUT,
         G = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
         B = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         Z = !1 === (null == (t = null == B ? void 0 : B.disabled) || t),
-        F = (0, d.Z)([s])[0],
+        F = (0, u.Z)([s])[0],
         V = (0, m.Z)(a),
-        { parentAnalyticsLocation: H } = (0, u.ZP)(),
+        { parentAnalyticsLocation: H } = (0, c.ZP)(),
         Y = (e) => {
-            (0, _.v)(H, _.d.CAMERA, e), l.Z.setVideoEnabled(e);
+            (0, f.v)(H, f.d.CAMERA, e), l.Z.setVideoEnabled(e);
         },
         W = () => {
             Z ? Y(!0) : (0, g.Z)();
         },
         K = () => {
-            (0, _.v)(H, _.d.POPOUT, !0),
+            (0, f.v)(H, f.d.POPOUT, !0),
                 null != a &&
                     (0, R.Z)({
                         onConfirm: async () => {
@@ -102,11 +102,11 @@ function M(e) {
             (0, r.jsxs)("div", {
                 className: L.bottomControls,
                 children: [
-                    (0, r.jsxs)(p.Z, {
+                    (0, r.jsxs)(_.Z, {
                         grow: 0,
                         shrink: 1,
                         basis: "50%",
-                        align: p.Z.Align.CENTER,
+                        align: _.Z.Align.CENTER,
                         children: [
                             (0, r.jsx)(T.C, {
                                 className: x.leftPipIcon,
@@ -118,7 +118,7 @@ function M(e) {
                             }),
                             null != a &&
                                 (0, r.jsx)(E.Z, {
-                                    children: (0, r.jsx)(f.Z, {
+                                    children: (0, r.jsx)(d.Z, {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
@@ -128,12 +128,12 @@ function M(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsxs)(p.Z, {
+                    (0, r.jsxs)(_.Z, {
                         grow: 0,
                         shrink: 1,
-                        justify: p.Z.Justify.END,
+                        justify: _.Z.Justify.END,
                         basis: "50%",
-                        align: p.Z.Align.CENTER,
+                        align: _.Z.Align.CENTER,
                         children: [
                             U || (0, A.R)()
                                 ? null
@@ -162,18 +162,18 @@ function k(e) {
             applicationId: o,
             onMouseDown: l,
             onMouseMove: c,
-            onMouseLeave: u,
+            onMouseLeave: d,
             onJumpToChannel: f,
             idle: _,
             users: p,
             embeddedActivity: h,
         } = e,
-        m = (0, d.Z)([o])[0];
+        m = (0, u.Z)([o])[0];
     return (0, r.jsxs)(s.P3F, {
         className: a()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: c,
         onMouseDown: l,
-        onMouseLeave: u,
+        onMouseLeave: d,
         onDoubleClick: f,
         children: [
             (0, r.jsx)("div", {
@@ -226,7 +226,7 @@ function G(e) {
             onMouseMove: o,
             onMouseLeave: l,
             showControls: c,
-            applicationId: u,
+            applicationId: d,
             channel: f,
             onJumpToChannel: _,
             onToggleHeight: p,
@@ -234,7 +234,7 @@ function G(e) {
             hideExpandedButton: m,
             embeddedActivity: g,
         } = e,
-        y = (0, d.Z)([u])[0];
+        y = (0, u.Z)([d])[0];
     return (0, r.jsx)("div", {
         className: x.pipHeader,
         onMouseMove: o,
@@ -272,7 +272,7 @@ function G(e) {
                                               onClick: p,
                                           }),
                                     (0, r.jsx)(O.Z, {
-                                        applicationId: u,
+                                        applicationId: d,
                                         location: g.location,
                                         iconClassName: x.leaveActivityIcon,
                                     }),

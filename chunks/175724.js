@@ -2,8 +2,8 @@ n.d(t, { f: () => A });
 var r = n(475179),
     i = n(904245),
     a = n(45114),
-    o = n(40851),
-    s = n(358221),
+    o = n(358221),
+    s = n(728285),
     l = n(623292),
     c = n(807092),
     u = n(6025),
@@ -30,7 +30,7 @@ let A = {
         if (T.S.hasSubscribers(S.CkL.CALL_DECLINE)) return T.S.dispatch(S.CkL.CALL_DECLINE), !1;
         if (v.Z.close()) return !1;
         if (T.S.hasSubscribers(S.CkL.MEDIA_MODAL_CLOSE)) return T.S.dispatch(S.CkL.MEDIA_MODAL_CLOSE), !1;
-        let t = (0, o.AN)(e);
+        let t = (0, s.AN)(e);
         if (null == t ? void 0 : t.hasSubscribers(S.CkL.POPOUT_CLOSE)) return t.dispatch(S.CkL.POPOUT_CLOSE), !1;
         if (T.S.hasSubscribers(S.CkL.CLOSE_GIF_PICKER)) return T.S.dispatch(S.CkL.CLOSE_GIF_PICKER), !1;
         if (T.S.hasSubscribers(S.CkL.MODAL_CLOSE)) return T.S.dispatch(S.CkL.MODAL_CLOSE), !1;
@@ -55,7 +55,7 @@ let A = {
             _ = N(c);
         return (
             null == i || f || _ || null == l
-                ? null != i && !f && s.Z.getChatOpen(i)
+                ? null != i && !f && o.Z.getChatOpen(i)
                     ? r.Z.updateChatOpen(i, !1)
                     : T.S.dispatch(S.CkL.SCROLLTO_PRESENT)
                 : u.Z.closeChannelSidebar(i),

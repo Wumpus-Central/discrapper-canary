@@ -7,9 +7,9 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(40851),
-    s = n(607070),
-    l = n(633302),
+    o = n(607070),
+    s = n(633302),
+    l = n(728285),
     c = n(375954),
     u = n(378364),
     d = n(197344),
@@ -20,7 +20,7 @@ var r = n(951288),
 function m(e) {
     if (null == e || null == u.Z.emojiAnimationTriggers) return !1;
     for (let t of u.Z.emojiAnimationTriggers) {
-        let n = l.ZP.getByName(t);
+        let n = s.ZP.getByName(t);
         if (null != n) {
             if (":".concat(n.uniqueName, ":") === e) return !0;
             for (let t in n.diversityChildren) {
@@ -38,20 +38,20 @@ let g = i.createContext({
 function E(e) {
     let { children: t } = e,
         { triggerAnimation: n, untriggerAnimation: a } = i.useContext(g),
-        s = (0, o.bp)(),
-        l = i.useMemo(
+        o = (0, l.bp)(),
+        s = i.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    s !== h.IlC.OVERLAY && m(e) && n(e);
+                    o !== h.IlC.OVERLAY && m(e) && n(e);
                 },
                 untriggerAnimation: (e) => {
-                    s !== h.IlC.OVERLAY && m(e) && a(e);
+                    o !== h.IlC.OVERLAY && m(e) && a(e);
                 },
             }),
-            [s, n, a],
+            [o, n, a],
         );
     return (0, r.jsx)(g.Provider, {
-        value: l,
+        value: s,
         children: t,
     });
 }
@@ -87,11 +87,11 @@ function y(e) {
     );
 }
 function O(e) {
-    let { channelId: t, messageId: n, emojiName: i, disable: l, emojiRef: c } = e,
-        u = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { channelId: t, messageId: n, emojiName: i, disable: s, emojiRef: c } = e,
+        u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         f = d.Z.useIsEligible(),
-        _ = (0, o.bp)();
-    return l || _ === h.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !m(i)
+        _ = (0, l.bp)();
+    return s || _ === h.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !m(i)
         ? null
         : (0, r.jsx)(y, {
               emojiRef: c,

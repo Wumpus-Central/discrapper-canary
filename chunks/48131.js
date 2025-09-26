@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u });
-var r = n(40851),
-    i = n(174609),
+var r = n(174609),
+    i = n(728285),
     a = n(555804),
     o = n(981631);
 function s(e, t, n) {
@@ -29,8 +29,8 @@ function l(e, t) {
     return n;
 }
 async function c(e) {
-    let t = (0, r.GB)();
-    await a.launchFrame(e), t === o.IlC.POPOUT && (0, i.Z)();
+    let t = (0, i.GB)();
+    await a.launchFrame(e), t === o.IlC.POPOUT && (0, r.Z)();
 }
 let u = (function (e, t) {
     return (

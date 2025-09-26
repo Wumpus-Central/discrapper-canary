@@ -6,13 +6,13 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
-    o = n(549879),
-    s = n(394821),
-    l = n(841784),
-    c = n(833664),
-    u = n(503438),
-    d = n(579630),
-    f = n(26033),
+    o = n(394821),
+    s = n(841784),
+    l = n(833664),
+    c = n(503438),
+    u = n(579630),
+    d = n(26033),
+    f = n(887413),
     _ = n(313789),
     p = n(518596),
     h = n(594174),
@@ -22,11 +22,11 @@ var i = n(442837),
 let b = () => (0, p.openUserSettings)(_.n.CONNECTIONS_PANEL, { section: g.oAB.CONNECTIONS });
 function y(e) {
     let { activity: t, onOpenGameSettings: n } = e;
-    return (0, d.Z)(t) || (0, u.Z)(t) || (0, s.Z)(t) ? b : (0, c.Z)(t) && !(0, l.Z)(t) ? n : null;
+    return (0, u.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? b : (0, l.Z)(t) && !(0, s.Z)(t) ? n : null;
 }
 function O(e) {
     let { entry: t, onOpenGameSettings: n } = e;
-    return (0, f.aA)(t) || (0, f.y0)(t) || (0, f.dU)(t) ? b : (0, f.dX)(t) ? n : null;
+    return (0, d.aA)(t) || (0, d.y0)(t) || (0, d.dU)(t) ? b : (0, d.dX)(t) ? n : null;
 }
 function v(e) {
     let { activity: t, entry: n, onOpenGameSettings: r } = e;
@@ -43,8 +43,8 @@ function v(e) {
           : null;
 }
 function I(e) {
-    let { user: t, activity: n, entry: s, onAction: l, onClose: c, appContext: u } = e,
-        d = (0, m.Z)();
+    let { user: t, activity: n, entry: o, onAction: s, onClose: l, appContext: c } = e,
+        u = (0, m.Z)();
     if (
         !(0, i.e7)([h.default], () => {
             var e;
@@ -52,18 +52,18 @@ function I(e) {
         })
     )
         return null;
-    let f = v({
+    let d = v({
         activity: n,
-        entry: s,
-        onOpenGameSettings: d,
+        entry: o,
+        onOpenGameSettings: u,
     });
-    return null == f
+    return null == d
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "manage-privacy",
               label: E.intl.string(E.t.anfNPT),
               action: () => {
-                  null == l || l({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), f(), (0, o.i)(u), null == c || c();
+                  null == s || s({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), d(), (0, f.i)(c), null == l || l();
               },
           });
 }

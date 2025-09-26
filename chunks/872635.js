@@ -10,8 +10,8 @@ var r = n(951288),
     s = n(755712),
     l = n(374470),
     c = n(481060),
-    u = n(40851),
-    d = n(314910),
+    u = n(314910),
+    d = n(728285),
     f = n(53529),
     _ = n(50659),
     p = n(436660),
@@ -95,7 +95,7 @@ let b = i.forwardRef(function (e, t) {
         f = i.useRef(null),
         [_, p] = i.useState(!1),
         m = i.useRef(null),
-        b = i.useContext(u.ZP),
+        b = i.useContext(d.ZP),
         y = i.useCallback(() => {
             p(!1), clearTimeout(m.current);
         }, []),
@@ -196,7 +196,7 @@ let b = i.forwardRef(function (e, t) {
     let P = null == (n = a.current) ? void 0 : n.getSlateEditor();
     return null == P
         ? null
-        : (0, r.jsx)(d.ZP, {
+        : (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)("div", {
                   id: "slate-toolbar",
                   ref: f,
