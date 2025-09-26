@@ -24,6 +24,7 @@ var r = n(230367),
             (e[(e.APP = 2)] = "APP"),
             (e[(e.DEVELOPER_PORTAL = 3)] = "DEVELOPER_PORTAL"),
             (e[(e.ADMIN_PANEL = 4)] = "ADMIN_PANEL"),
+            (e[(e.ADS_BUDGET_AB = 5)] = "ADS_BUDGET_AB"),
             e
         );
     })({}),
