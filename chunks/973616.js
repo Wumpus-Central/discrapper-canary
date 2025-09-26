@@ -263,7 +263,8 @@ class m extends h {
             V,
             H,
             Y,
-            W;
+            W,
+            K;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -302,19 +303,20 @@ class m extends h {
             team: null != (D = e.team) ? D : this.team,
             roleConnectionsVerificationUrl:
                 null != (x = e.roleConnectionsVerificationUrl) ? x : this.roleConnectionsVerificationUrl,
-            integrationTypesConfig: null != (L = e.integrationTypesConfig) ? L : this.integrationTypesConfig,
-            isMonetized: null != (j = e.isMonetized) ? j : this.isMonetized,
-            storefront_available: null != (M = e.storefront_available) ? M : this.storefront_available,
-            termsOfServiceUrl: null != (k = e.termsOfServiceUrl) ? k : this.termsOfServiceUrl,
-            privacyPolicyUrl: null != (U = e.privacyPolicyUrl) ? U : this.privacyPolicyUrl,
-            isVerified: null != (G = e.isVerified) ? G : this.isVerified,
-            customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
-            installParams: null != (Z = e.installParams) ? Z : this.installParams,
-            isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
-            directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
-            categories: null != (H = e.categories) ? H : this.categories,
-            linkedGames: null != (Y = e.linkedGames) ? Y : this.linkedGames,
-            deepLinkUri: null != (W = e.deepLinkUri) ? W : this.deepLinkUri,
+            connectionEntrypointUrl: null != (L = e.connectionEntrypointUrl) ? L : this.connectionEntrypointUrl,
+            integrationTypesConfig: null != (j = e.integrationTypesConfig) ? j : this.integrationTypesConfig,
+            isMonetized: null != (M = e.isMonetized) ? M : this.isMonetized,
+            storefront_available: null != (k = e.storefront_available) ? k : this.storefront_available,
+            termsOfServiceUrl: null != (U = e.termsOfServiceUrl) ? U : this.termsOfServiceUrl,
+            privacyPolicyUrl: null != (G = e.privacyPolicyUrl) ? G : this.privacyPolicyUrl,
+            isVerified: null != (B = e.isVerified) ? B : this.isVerified,
+            customInstallUrl: null != (Z = e.customInstallUrl) ? Z : this.customInstallUrl,
+            installParams: null != (F = e.installParams) ? F : this.installParams,
+            isDiscoverable: null != (V = e.isDiscoverable) ? V : this.isDiscoverable,
+            directoryEntry: null != (H = e.directoryEntry) ? H : this.directoryEntry,
+            categories: null != (Y = e.categories) ? Y : this.categories,
+            linkedGames: null != (W = e.linkedGames) ? W : this.linkedGames,
+            deepLinkUri: null != (K = e.deepLinkUri) ? K : this.deepLinkUri,
         });
     }
     getMaxParticipants() {

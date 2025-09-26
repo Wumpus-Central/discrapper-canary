@@ -18,9 +18,9 @@ var r = n(951288),
     g = n(513202),
     m = n(906732),
     b = n(20471),
-    O = n(522651),
-    y = n(311352),
-    _ = n(48131),
+    _ = n(522651),
+    O = n(311352),
+    y = n(48131),
     v = n(220410),
     j = n(668519),
     x = n(803647),
@@ -30,8 +30,8 @@ var r = n(951288),
     P = n(381096),
     I = n(870569),
     N = n(981631),
-    Z = n(388032),
-    w = n(258628);
+    w = n(388032),
+    Z = n(258628);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -96,7 +96,7 @@ let D = i.memo(function (e) {
             f,
             D,
             {
-                stream: M,
+                stream: L,
                 canGoLive: k,
                 guildId: U,
                 isStreaming: G,
@@ -126,7 +126,7 @@ let D = i.memo(function (e) {
                         game_id: null != (e = null == V ? void 0 : V.id) ? e : null,
                         application_id: W.application_id,
                     }),
-                    (0, O.v)(J, O.d.INVITE),
+                    (0, _.v)(J, _.d.INVITE),
                     S.default.track(N.rMx.OPEN_MODAL, {
                         type: "Send Join Invite",
                         application_id: W.application_id,
@@ -136,7 +136,7 @@ let D = i.memo(function (e) {
             }, [W, Y, J, V]),
             en = i.useCallback(
                 (e, t) => () => {
-                    (0, O.v)(J, O.d.LEAVE_ACTIVITY),
+                    (0, _.v)(J, _.d.LEAVE_ACTIVITY),
                         g.Z.leaveActivity({
                             location: t,
                             applicationId: e,
@@ -147,13 +147,13 @@ let D = i.memo(function (e) {
             ),
             er = i.useCallback(
                 (e) => () => {
-                    (0, O.v)(J, O.d.LEAVE_ACTIVITY), _.Z.stopFrame({ applicationId: e });
+                    (0, _.v)(J, _.d.LEAVE_ACTIVITY), y.Z.stopFrame({ applicationId: e });
                 },
                 [J],
             ),
             ei = i.useCallback(() => {
-                (0, x.Z)(M);
-            }, [M]),
+                (0, x.Z)(L);
+            }, [L]),
             el = i.useCallback(() => {
                 let e = null != B && (0, C.vd)(B.type) ? B : null,
                     t = null != e ? e.getGuildId() : U;
@@ -189,7 +189,7 @@ let D = i.memo(function (e) {
                 startAuthorization: es,
                 hasAlreadyLinked: ec,
                 connectionApp: eu,
-            } = (0, b.F)(K),
+            } = (0, b.FG)(K, { allowedFlows: [b.ro.RPC] }),
             ed = P.Z.useConfig({ location: "ActivityActions" }).enabled,
             ep = i.useRef(null),
             [ef, eh] = i.useState(!1);
@@ -207,31 +207,31 @@ let D = i.memo(function (e) {
                     ? (G
                           ? ((l = !1),
                             (a = () => {
-                                ei(), (0, O.v)(J, O.d.STREAM, !1);
+                                ei(), (0, _.v)(J, _.d.STREAM, !1);
                             }),
                             (f = c.g5r),
-                            (D = Z.intl.string(Z.t.S5anIS)))
+                            (D = w.intl.string(w.t.S5anIS)))
                           : F
                             ? ((l = !1),
                               (a = () => {
-                                  el(), (0, O.v)(J, O.d.STREAM, !0);
+                                  el(), (0, _.v)(J, _.d.STREAM, !0);
                               }),
                               (f = c.hGI),
                               (D =
                                   null != V
-                                      ? Z.intl.formatToPlainString(Z.t.AB5gT0, { game: V.name })
-                                      : Z.intl.string(Z.t.FeUKeH)))
+                                      ? w.intl.formatToPlainString(w.t.AB5gT0, { game: V.name })
+                                      : w.intl.string(w.t.FeUKeH)))
                             : ((l = !0),
                               (a = null),
                               (f = c.hGI),
                               (D =
                                   null != B && (0, C.vd)(B.type)
-                                      ? Z.intl.string(Z.t.uQn9Bw)
+                                      ? w.intl.string(w.t.uQn9Bw)
                                       : null != U
-                                        ? Z.intl.string(Z.t.fBXEoK)
-                                        : Z.intl.string(Z.t.n3feND))),
+                                        ? w.intl.string(w.t.fBXEoK)
+                                        : w.intl.string(w.t.n3feND))),
                       (0, r.jsx)("div", {
-                          className: w.panelButtonContainer,
+                          className: Z.panelButtonContainer,
                           children: (0, r.jsx)(I.Z, {
                               tooltipText: D,
                               disabled: l,
@@ -244,7 +244,7 @@ let D = i.memo(function (e) {
                 ee && null == H
                     ? (0, r.jsx)(I.Z, {
                           ref: q,
-                          tooltipText: Z.intl.string(Z.t["hC/Ze3"]),
+                          tooltipText: w.intl.string(w.t["hC/Ze3"]),
                           onClick: et,
                           icon: c.ejJ,
                       })
@@ -253,22 +253,22 @@ let D = i.memo(function (e) {
                 null == H
                     ? null
                     : (0, r.jsx)(I.Z, {
-                          tooltipText: Z.intl.string(Z.t["R/FK4O"]),
+                          tooltipText: w.intl.string(w.t["R/FK4O"]),
                           onClick: en(H.applicationId, H.location),
                           icon: c.PBZ,
                       }),
-            eO =
+            e_ =
                 null == z
                     ? null
                     : (0, r.jsx)(I.Z, {
-                          tooltipText: Z.intl.string(Z.t["R/FK4O"]),
+                          tooltipText: w.intl.string(w.t["R/FK4O"]),
                           onClick: er(z.applicationId),
                           icon: c.PBZ,
                       }),
-            ey = null == M ? null : (0, r.jsx)(y.Z, {}),
-            e_ =
+            eO = null == L ? null : (0, r.jsx)(O.Z, {}),
+            ey =
                 ed && ea && !ec
-                    ? (0, r.jsx)(L, {
+                    ? (0, r.jsx)(M, {
                           runningGame: V,
                           startAuthorization: () => {
                               eh(!0),
@@ -293,8 +293,8 @@ let D = i.memo(function (e) {
             ej =
                 ed && ea && !ec
                     ? (0, r.jsx)(s.J2, {
-                          title: Z.intl.string(Z.t.ULvRFR),
-                          body: Z.intl.string(Z.t.HJJDr6),
+                          title: w.intl.string(w.t.ULvRFR),
+                          body: w.intl.string(w.t.HJJDr6),
                           targetElementRef: X,
                           position: "top",
                           align: "center",
@@ -305,14 +305,14 @@ let D = i.memo(function (e) {
                           },
                       })
                     : null;
-        return null == eg && null == em && null == eb && null == eO && null == e_ && null == ev
+        return null == eg && null == em && null == eb && null == e_ && null == ey && null == ev
             ? null
             : (0, r.jsxs)("div", {
-                  className: w.actions,
-                  children: [null != e_ ? e_ : em, eg, null != (t = null != eb ? eb : eO) ? t : ey, ev, ej],
+                  className: Z.actions,
+                  children: [null != ey ? ey : em, eg, null != (t = null != eb ? eb : e_) ? t : eO, ev, ej],
               });
     }),
-    L = i.forwardRef(function (e, t) {
+    M = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
         return (0, r.jsx)(I.Z, {
             ref: t,
@@ -326,6 +326,6 @@ let D = i.memo(function (e) {
                     i();
             },
             icon: a.u,
-            tooltipText: Z.intl.string(Z.t.sbdnp6),
+            tooltipText: w.intl.string(w.t.sbdnp6),
         });
     });
