@@ -78,33 +78,27 @@ async function g(e, t) {
                     ? m
                     : o.default.getRenderMethod(null == O ? void 0 : O.pid))
                 ? g
-                : null;
-    switch (
-        ((t = h(
-            {},
-            {
-                overlay_game_source: I,
-                overlay_game_name: null != y ? y.name : "Unknown Game",
-                overlay_app_id: null != y ? y.id : null,
-                overlay_render_method: null != T ? a.gl[T] : null,
-                media_session_id: c.Z.getMediaSessionId(),
-                overlay_game_elevated: null == O ? void 0 : O.elevated,
-                input_service_initialized: i.ZP.isInputServiceInitialized(),
-                hardware_display_count:
-                    null !=
-                    (E = await (null === r.Z ||
-                    void 0 === r.Z ||
-                    null == (l = r.Z.hardware) ||
-                    null == (n = l.getDisplayCount)
-                        ? void 0
-                        : n.call(l)))
-                        ? E
-                        : null,
-            },
-            t,
-        )),
-        e)
-    ) {
+                : null,
+        S = {
+            overlay_game_source: I,
+            overlay_game_name: null != y ? y.name : "Unknown Game",
+            overlay_app_id: null != y ? y.id : null,
+            overlay_render_method: null != T ? a.gl[T] : null,
+            media_session_id: c.Z.getMediaSessionId(),
+            overlay_game_elevated: null == O ? void 0 : O.elevated,
+            input_service_initialized: i.ZP.isInputServiceInitialized(),
+            hardware_display_count:
+                null !=
+                (E = await (null === r.Z ||
+                void 0 === r.Z ||
+                null == (l = r.Z.hardware) ||
+                null == (n = l.getDisplayCount)
+                    ? void 0
+                    : n.call(l)))
+                    ? E
+                    : null,
+        };
+    switch ((__OVERLAY__ && (S.overlay_render_method = a.gl[a.gl.Hook]), (t = h({}, S, t)), e)) {
         case _.rMx.VOICE_CHANNEL_SELECTED:
         case _.rMx.SETTINGS_PANE_VIEWED:
         case _.rMx.GUILD_VIEWED:

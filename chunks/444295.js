@@ -36,21 +36,25 @@ async function f(e, t, r) {
         { default: g } = n(371651),
         E = null != (f = null == g ? void 0 : g.getMostRecentOverlayRenderMethod()) ? f : void 0,
         b = null != E ? l.gl[E] : void 0;
-    s.default.track(c.rMx.OVERLAY_TOGGLED, {
-        enabled: e,
-        setting_type: d(t),
-        client_setting_type: t,
-        application_id: null != (_ = null == m ? void 0 : m.id) ? _ : void 0,
-        application_name: null != (p = null == m ? void 0 : m.name) ? p : void 0,
-        most_recent_overlay_render_method: b,
-        hardware_display_count:
-            null !=
-            (h = await (null === i.Z || void 0 === i.Z || null == (u = i.Z.hardware) || null == (o = u.getDisplayCount)
-                ? void 0
-                : o.call(u)))
-                ? h
-                : null,
-    });
+    __OVERLAY__ && (b = l.gl[l.gl.Hook]),
+        s.default.track(c.rMx.OVERLAY_TOGGLED, {
+            enabled: e,
+            setting_type: d(t),
+            client_setting_type: t,
+            application_id: null != (_ = null == m ? void 0 : m.id) ? _ : void 0,
+            application_name: null != (p = null == m ? void 0 : m.name) ? p : void 0,
+            most_recent_overlay_render_method: b,
+            hardware_display_count:
+                null !=
+                (h = await (null === i.Z ||
+                void 0 === i.Z ||
+                null == (u = i.Z.hardware) ||
+                null == (o = u.getDisplayCount)
+                    ? void 0
+                    : o.call(u)))
+                    ? h
+                    : null,
+        });
 }
 function _(e, t) {
     let [n, i] = r.useState(e()),

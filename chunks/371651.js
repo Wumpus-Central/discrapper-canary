@@ -673,7 +673,11 @@ class ej extends (r = i.ZP.Store) {
     }
     getOverlayMethod(e) {
         var t, n;
-        return null != (n = null == (t = z(e)) ? void 0 : t.overlayMethod) ? n : E.gl.Disabled;
+        return __OVERLAY__
+            ? E.gl.Hook
+            : null != (n = null == (t = z(e)) ? void 0 : t.overlayMethod)
+              ? n
+              : E.gl.Disabled;
     }
     isOverlayOOPEnabledForPid(e) {
         let t = this.getOverlayMethod(e);
