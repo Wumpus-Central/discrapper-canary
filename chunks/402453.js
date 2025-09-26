@@ -22,6 +22,7 @@ let a = {
         saturation: 0.5,
         defaultLayerContext: void 0,
         trackImpression: void 0,
+        isWindowFocused: void 0,
     },
     o = i.createContext(a);
 function s() {

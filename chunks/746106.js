@@ -26,9 +26,9 @@ var r = n(951288),
     C = n(264783),
     N = n(892071),
     R = n(388032);
-function P(e, t, n) {
-    let r = i.useContext(f.Z),
-        o = i.useCallback(
+function P(e, t, n, r) {
+    let o = i.useContext(f.Z),
+        s = i.useCallback(
             () => ({
                 i18n: {
                     SPINNER_LOADING_LABEL: R.intl.string(R.t.ZTNur6),
@@ -46,19 +46,20 @@ function P(e, t, n) {
                 saturation: t,
                 defaultLayerContext: b.nz,
                 experiments: { enabledExperiments: n },
-                trackImpression: r,
+                trackImpression: o,
+                isWindowFocused: () => r,
             }),
-            [e, t, n, r],
+            [e, t, n, o, r],
         ),
-        [s, l] = i.useState(o);
+        [l, c] = i.useState(s);
     return (
         i.useLayoutEffect(() => {
             function e() {
-                l(o);
+                c(s);
             }
             (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), R.intl.onLocaleChange(e);
-        }, [o]),
-        s
+        }, [s]),
+        l
     );
 }
 function w(e) {
@@ -131,6 +132,7 @@ function w(e) {
                     e
                 );
             }, [z, q, X, Q, J]),
+            w,
         );
     return (0, r.jsx)(c.kb5, {
         value: en,
