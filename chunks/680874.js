@@ -1,5 +1,5 @@
 let r;
-n.d(t, { l: () => E });
+n.d(t, { l: () => E }), n(388685);
 var i = n(951288),
     a = n(647438),
     o = n(58654),
@@ -102,19 +102,24 @@ let p = 1,
             p = (e) => {
                 (_.current = e), "function" == typeof t ? t(_.current) : null != t && (t.current = e);
             },
-            h = a.useMemo(() => b(_.current, u.rows, u.value), [u.rows, u.value]);
-        return (0, i.jsx)(s.tEY, {
-            children: (0, i.jsx)(
-                "textarea",
-                d(c({}, u), {
-                    ref: p,
-                    style: d(c({}, n), { height: h }),
-                    autoFocus: r,
-                    disabled: o,
-                    autoCorrect: l,
-                }),
-            ),
-        });
+            [h, m] = a.useState(() => b(_.current, u.rows, u.value));
+        return (
+            a.useLayoutEffect(() => {
+                m(b(_.current, u.rows, u.value));
+            }, [u.rows, u.value]),
+            (0, i.jsx)(s.tEY, {
+                children: (0, i.jsx)(
+                    "textarea",
+                    d(c({}, u), {
+                        ref: p,
+                        style: d(c({}, n), { height: h }),
+                        autoFocus: r,
+                        disabled: o,
+                        autoCorrect: l,
+                    }),
+                ),
+            })
+        );
     });
 function b(e, t, n) {
     if (null == e) return;
