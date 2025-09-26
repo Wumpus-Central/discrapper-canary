@@ -13,14 +13,14 @@ var a = n(951288),
     h = n(368326),
     x = n(429467),
     f = n(243778),
-    b = n(440051),
-    g = n(734934),
+    g = n(440051),
+    b = n(734934),
     v = n(300284),
     j = n(680295),
     _ = n(785717),
-    y = n(461133),
-    C = n(209698),
-    E = n(687158),
+    y = n(209698),
+    C = n(687158),
+    E = n(612600),
     N = n(892001),
     S = n(899007),
     T = n(648052),
@@ -33,7 +33,7 @@ var a = n(951288),
     A = n(530),
     Z = n(309494),
     D = n(4517),
-    L = n(252748),
+    L = n(350207),
     M = n(420654),
     U = n(785184),
     F = n(695346),
@@ -83,7 +83,7 @@ function ei(e) {
 function el(e) {
     let { currentUser: t, onClose: n, setPopoutRef: el, highlightBadge: es, openedAt: eo } = e,
         ec = __OVERLAY__,
-        ed = (0, E.ZP)(t.id),
+        ed = (0, C.ZP)(t.id),
         { analyticsLocations: eu } = (0, p.ZP)(m.Z.USER_PROFILE_ACCOUNT_POPOUT),
         em = (0, _.ZB)({
             layout: "ACCOUNT_POPOUT",
@@ -97,20 +97,20 @@ function el(e) {
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
     let ex = (0, l.e7)([B.Z], () => B.Z.getStatus(t.id)),
         ef = F.Cr.useSetting(),
-        eb = (0, X.F)(ef),
-        { expiringStatusProfileFeedback: eg } = b.Y.useExperiment(
+        eg = (0, X.F)(ef),
+        { expiringStatusProfileFeedback: eb } = g.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
         ev = (0, l.e7)([G.Z], () => G.Z.hidePersonalInformation),
-        ej = (0, g.p)(),
+        ej = (0, b.p)(),
         e_ = F.Sb.useSetting(),
         ey = (0, X.I)(ex),
         eC = (0, q.g)(n),
         eE = (0, v.Z)({ analyticsLocations: eu }),
         eN = (0, H.I5)(t),
         eS = (0, h.p)({ location: "UserProfileAccountPopout" }),
-        eT = (0, C.b)({ location: "UserProfileAccountPopout" }),
+        eT = (0, y.b)({ location: "UserProfileAccountPopout" }),
         eO = r.useRef(null),
         eP = r.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
         eI = r.useMemo(() => (0, x.Z)(), []),
@@ -133,7 +133,7 @@ function el(e) {
                     ),
                 );
         },
-        eA = (0, y.P)({ location: "UserProfileAccountPopout" }),
+        eA = (0, E.Z)({ location: "UserProfileAccountPopout" }),
         eZ = (null == ed ? void 0 : ed.widgets) != null && ed.widgets.length > 0,
         eD = eZ ? [] : [s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eL, eM] = (0, f.US)(eD),
@@ -215,7 +215,7 @@ function el(e) {
                                     eA &&
                                         eZ &&
                                         (0, a.jsx)(L.Z, {
-                                            widgets: ed.gameWidgets,
+                                            widgets: ed.widgets,
                                             onClick: () => {
                                                 n(), eR({ section: ee.oh.WIDGETS });
                                             },
@@ -259,7 +259,7 @@ function el(e) {
                                                         (0, a.jsx)(K.V4, {
                                                             action: "PRESS_SET_STATUS",
                                                             label: (0, a.jsx)(Y.Z, {}),
-                                                            sublabel: eg && null != eb && eb,
+                                                            sublabel: eb && null != eg && eg,
                                                             icon: () =>
                                                                 (0, a.jsx)(c.qbd, {
                                                                     status: ex,

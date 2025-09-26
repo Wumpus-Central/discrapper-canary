@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(786920),
+    l = n(488290),
     a = n(793030),
     s = n(481060),
     o = n(727637),
@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(680295),
     h = n(785717),
     f = n(221292),
-    g = n(461133),
-    m = n(687158),
+    g = n(687158),
+    m = n(612600),
     b = n(510659),
     y = n(892001),
     _ = n(899007),
@@ -24,7 +24,7 @@ var r = n(951288),
     I = n(481932),
     E = n(664794),
     S = n(4517),
-    Z = n(252748),
+    Z = n(350207),
     T = n(277117),
     P = n(52639),
     N = n(228168),
@@ -60,7 +60,7 @@ function L(e) {
     var t;
     let { user: n, currentUser: f, channel: w } = e,
         L = __OVERLAY__,
-        k = (0, m.ZP)(n.id),
+        k = (0, g.ZP)(n.id),
         U = (0, c.ZP)(),
         G = i.useRef(Date.now()),
         { analyticsLocations: H } = (0, u.ZP)(d.Z.USER_PROFILE_SIDEBAR),
@@ -88,7 +88,7 @@ function L(e) {
                 ),
             );
         },
-        q = (0, g.P)({ location: "UserProfileSidebar" }),
+        q = (0, m.Z)({ location: "UserProfileSidebar" }),
         K = (null == k ? void 0 : k.widgets) != null && k.widgets.length > 0;
     return (0, r.jsx)(u.Gt, {
         value: H,
@@ -171,7 +171,7 @@ function L(e) {
                                     (0, r.jsx)("div", {
                                         className: A.widgetBreadcrumb,
                                         children: (0, r.jsx)(Z.Z, {
-                                            widgets: k.gameWidgets,
+                                            widgets: k.widgets,
                                             onClick: () => {
                                                 null == Y || Y({ section: N.oh.WIDGETS });
                                             },
