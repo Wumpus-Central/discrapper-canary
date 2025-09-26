@@ -109,19 +109,9 @@ function R(e) {
             z.trim().length > 0 && ee && et(!1), null == q && ee && et(!1);
         }, [z, q, ee]),
         i.useEffect(() => {
-            if (null != q) {
-                var e;
-                null == (e = L.current) || e.focus();
-            }
-        }, [q]),
-        i.useEffect(() => {
             var e;
             z !== (null != (e = null == D ? void 0 : D.status) ? e : "") && "" !== z.trim() ? R(!0) : R(!1);
         }, [z, null == D ? void 0 : D.status, q, null == D ? void 0 : D.emoji, R]),
-        i.useEffect(() => {
-            var e;
-            (null == K || K === I.tN.CUSTOM) && (null == (e = L.current) || e.focus());
-        }, [K]),
         i.useEffect(() => {
             null == k || k(null == G ? void 0 : G.current);
         }, [G, k]);
@@ -141,11 +131,11 @@ function R(e) {
         ),
         el = i.useCallback(
             (e) => {
-                var t;
+                var t, n;
                 null == e || null == (t = e.preventDefault) || t.call(e),
                     null != q && 0 === z.trim().length && et(!0),
                     J ||
-                        ei(
+                        (ei(
                             {
                                 status: z,
                                 emoji:
@@ -158,7 +148,8 @@ function R(e) {
                                           },
                             },
                             !0,
-                        );
+                        ),
+                        null == (n = L.current) || n.blur());
             },
             [z, q, ei, J],
         ),
