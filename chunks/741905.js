@@ -10,8 +10,6 @@ e.exports = {
     settingsLeft: "settingsLeft__0511a",
     settingsDefaultReaction: "settingsDefaultReaction__0511a",
     settingsDefaultView: "settingsDefaultView__0511a",
-    buttonRow: "buttonRow__0511a",
-    removeButton: "removeButton__0511a",
     defaultImageView: "defaultImageView__0511a",
     emojiButton: "emojiButton__0511a",
 };

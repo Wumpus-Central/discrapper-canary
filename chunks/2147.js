@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => eL,
+    G: () => eA,
     Z: () => eD,
 }),
     n(997841),
@@ -29,15 +29,15 @@ var i = n(951288),
     S = n(622822),
     E = n(933557),
     O = n(541716),
-    w = n(752305),
-    Z = n(893718),
+    Z = n(752305),
+    w = n(893718),
     T = n(87432),
     R = n(600164),
     _ = n(313201),
     I = n(318766),
     P = n(907040),
-    L = n(906411),
-    A = n(633302),
+    A = n(906411),
+    L = n(633302),
     M = n(109434),
     D = n(162389),
     k = n(946458),
@@ -127,8 +127,8 @@ let ex = (0, _.hQ)(),
     eS = (0, _.hQ)(),
     eE = (0, _.hQ)(),
     eO = (0, _.hQ)(),
-    ew = (0, _.hQ)(),
     eZ = (0, _.hQ)(),
+    ew = (0, _.hQ)(),
     eT = (0, W.kt)({
         id: "1",
         type: ea.d4z.DM,
@@ -152,7 +152,7 @@ let ex = (0, _.hQ)(),
         breakingChangeDate: (0, K.vc)(o()(ea.zQD), "LL"),
         helpCenterLink: en.Z.getArticleURL(ea.BhN.SLOWMODE),
     },
-    eL = h.ZP.connectStores([X.Z], () => {
+    eA = h.ZP.connectStores([X.Z], () => {
         let { channel: e, submitting: t } = X.Z.getProps();
         return {
             channel: e,
@@ -210,7 +210,7 @@ let ex = (0, _.hQ)(),
             },
         };
     })(y.Z);
-function eA(e) {
+function eL(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = l.useRef(null),
         a = l.useCallback(
@@ -224,7 +224,7 @@ function eA(e) {
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === L.B.UNICODE && t(n.surrogates), i && l();
+                        null != n && n.type === A.B.UNICODE && t(n.surrogates), i && l();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: e_,
@@ -271,7 +271,7 @@ class eM extends l.PureComponent {
             r !== this.state.textTopicValue &&
             this.setState({
                 textTopicValue: r,
-                richTopicValue: (0, w.JM)(r),
+                richTopicValue: (0, Z.JM)(r),
             });
     }
     getError(e) {
@@ -307,31 +307,31 @@ class eM extends l.PureComponent {
                 canSendMessages: C,
                 isThreadModerator: N,
                 canManageThread: E,
-                guild: w,
+                guild: Z,
                 isForumPost: R,
                 isOwner: _,
                 showAdvancedSlowModeSetting: I,
             } = this.props,
             P = W.Ec.has(e.type),
-            L = e.isForumLikeChannel(),
-            M = L && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
+            A = e.isForumLikeChannel(),
+            M = A && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
             V = (null == (l = Y.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
             H = W.TK.has(e.type)
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsx)(m.N, {
-                              label: L ? eh.intl.string(eh.t.yR6Hwc) : eh.intl.string(eh.t.X8jMDg),
-                              children: (0, i.jsx)(Z.ZP, {
+                              label: A ? eh.intl.string(eh.t.yR6Hwc) : eh.intl.string(eh.t.X8jMDg),
+                              children: (0, i.jsx)(w.ZP, {
                                   className: eg.topicContainer,
                                   innerClassName: s()(eg.topic, { [eg.disabled]: !y }),
                                   characterCountClassName: eg.topicCharacterCount,
-                                  maxCharacterCount: L ? eo.Z7 : eo.$x,
+                                  maxCharacterCount: A ? eo.Z7 : eo.$x,
                                   onChange: this.handleChangeRichTopic,
                                   placeholder: eh.intl.string(eh.t["71fbmp"]),
                                   channel: eT,
                                   textValue: this.state.textTopicValue,
                                   richValue: this.state.richTopicValue,
-                                  type: L ? O.Ie.FORUM_CHANNEL_GUIDELINES : O.Ie.CHANNEL_TOPIC,
+                                  type: A ? O.Ie.FORUM_CHANNEL_GUIDELINES : O.Ie.CHANNEL_TOPIC,
                                   onFocus: () => {
                                       this.setState({ topicFocused: !0 });
                                   },
@@ -351,13 +351,13 @@ class eM extends l.PureComponent {
                   })
                 : null,
             G =
-                L && V
+                A && V
                     ? (0, i.jsxs)("div", {
                           children: [
                               (0, i.jsx)(b.Kx8, {
                                   label: eh.intl.string(eh.t.qk2jdX),
                                   placeholder: eh.intl.string(eh.t.DDjD1N),
-                                  value: A.ZP.translateSurrogatesToInlineEmoji(null != (a = e.template) ? a : ""),
+                                  value: L.ZP.translateSurrogatesToInlineEmoji(null != (a = e.template) ? a : ""),
                                   onChange: this.handleChangeTemplate,
                                   error: this.getError("template"),
                                   maxLength: ed.Vb,
@@ -410,8 +410,8 @@ class eM extends l.PureComponent {
                                               className: eg.description,
                                               children: eh.intl.string(eh.t.SdbF0t),
                                           }),
-                                          (0, i.jsxs)("div", {
-                                              className: eg.buttonRow,
+                                          (0, i.jsxs)(b.hE2, {
+                                              align: "center",
                                               children: [
                                                   (0, i.jsx)(b.yRy, {
                                                       targetElementRef: this.defaultReactionButtonRef,
@@ -421,26 +421,23 @@ class eM extends l.PureComponent {
                                                       align: "center",
                                                       children: (e) =>
                                                           (0, i.jsx)(
-                                                              f.zx,
+                                                              b.zxk,
                                                               eb(ef({}, e), {
                                                                   buttonRef: this.defaultReactionButtonRef,
+                                                                  text: eh.intl.string(eh.t["59QgaG"]),
                                                                   disabled: !y,
                                                                   onClick: (t) => {
                                                                       var n;
                                                                       null == (n = e.onClick) || n.call(e, t);
                                                                   },
-                                                                  children: eh.intl.string(eh.t["59QgaG"]),
                                                               }),
                                                           ),
                                                   }),
                                                   null != e.defaultReactionEmoji
-                                                      ? (0, i.jsx)(f.zx, {
-                                                            className: eg.removeButton,
+                                                      ? (0, i.jsx)(b.Avr, {
+                                                            text: eh.intl.string(eh.t.N86XcH),
                                                             onClick: () => this.handleChangeDefaultReactionEmoji(null),
-                                                            size: f.zx.Sizes.MIN,
-                                                            look: f.zx.Looks.LINK,
-                                                            color: f.zx.Colors.RED,
-                                                            children: eh.intl.string(eh.t.N86XcH),
+                                                            variant: "critical",
                                                         })
                                                       : null,
                                               ],
@@ -567,7 +564,7 @@ class eM extends l.PureComponent {
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsx)(b.hjN, {
-                              title: L ? eh.intl.string(eh.t.O1c02t) : void 0,
+                              title: A ? eh.intl.string(eh.t.O1c02t) : void 0,
                               children: (0, i.jsxs)(b.Kqy, {
                                   gap: 20,
                                   children: [
@@ -592,7 +589,7 @@ class eM extends l.PureComponent {
                                                 "aria-labelledby": ey,
                                                 "aria-describedby": eC,
                                             }),
-                                      L
+                                      A
                                           ? (0, i.jsx)(b.iRW, {
                                                 label: eh.intl.string(eh.t["fkY5+v"]),
                                                 helperText: K
@@ -650,7 +647,7 @@ class eM extends l.PureComponent {
                           }),
                       })
                     : null,
-            ec = null != w && (0, F.Y2)(w),
+            ec = null != Z && (0, F.Y2)(Z),
             ep = W.ov.has(e.type)
                 ? (0, i.jsx)("div", {
                       children: (0, i.jsx)(b.j7V, {
@@ -666,10 +663,10 @@ class eM extends l.PureComponent {
                 : null,
             eN =
                 W.Y0.has(e.type) &&
-                null != w &&
-                w.features.has(ea.oNc.NEWS) &&
-                e.id !== (null == w ? void 0 : w.rulesChannelId) &&
-                e.id !== (null == w ? void 0 : w.publicUpdatesChannelId)
+                null != Z &&
+                Z.features.has(ea.oNc.NEWS) &&
+                e.id !== (null == Z ? void 0 : Z.rulesChannelId) &&
+                e.id !== (null == Z ? void 0 : Z.publicUpdatesChannelId)
                     ? (0, i.jsx)("div", {
                           children: (0, i.jsx)(b.j7V, {
                               note: (0, i.jsxs)(i.Fragment, {
@@ -723,9 +720,9 @@ class eM extends l.PureComponent {
                       onChange: this.handleChannelSummariesToggled,
                       value:
                           !e.hasFlag(eo.zZ.SUMMARIES_DISABLED) &&
-                          (null == w ? void 0 : w.features.has(ea.oNc.SUMMARIES_ENABLED_BY_USER)),
+                          (null == Z ? void 0 : Z.features.has(ea.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !y || !(null == w ? void 0 : w.features.has(ea.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !y || !(null == Z ? void 0 : Z.features.has(ea.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, i.jsxs)("div", {
                           className: eg.badgedItem,
                           children: [
@@ -760,7 +757,7 @@ class eM extends l.PureComponent {
               : P
                 ? ((j = eh.intl.string(eh.t.j3XWjI)), (x = "thread-name"))
                 : ((j = eh.intl.string(eh.t.PVbHDg)), (x = "channel-name"));
-        let ew = _ ? C : y;
+        let eZ = _ ? C : y;
         return (0, i.jsxs)("div", {
             children: [
                 (0, i.jsx)(b.oil, {
@@ -773,12 +770,12 @@ class eM extends l.PureComponent {
                     error: this.getError("name"),
                     name: x,
                     autoFocus: !0,
-                    disabled: !ew,
+                    disabled: !eZ,
                     maxLength: ea.HN8,
-                    trailing: ew
+                    trailing: eZ
                         ? {
                               type: "emoji",
-                              button: (0, i.jsx)(eA, {
+                              button: (0, i.jsx)(eL, {
                                   onEmojiPicked: this.insertEmojiAtPosition,
                                   channel: e,
                                   guildId: null == e ? void 0 : e.guild_id,
@@ -917,7 +914,7 @@ class eM extends l.PureComponent {
                 }),
                 "" !== n &&
                     (0, i.jsx)(b.R94, {
-                        id: ew,
+                        id: eZ,
                         type: b.geA.DESCRIPTION,
                         style: { color: g.Z.unsafe_rawColors.RED_400.css },
                         className: em.marginBottom8,
@@ -933,10 +930,10 @@ class eM extends l.PureComponent {
                     maxValue: l,
                     disabled: !t,
                     "aria-labelledby": eO,
-                    "aria-describedby": null != n && "" !== n ? ew : eZ,
+                    "aria-describedby": null != n && "" !== n ? eZ : ew,
                 }),
                 (0, i.jsx)(b.R94, {
-                    id: eZ,
+                    id: ew,
                     type: b.geA.DESCRIPTION,
                     children: eh.intl.format(e.isGuildStageVoice() ? eh.t.OqZI8P : eh.t["8yb3JS"], {}),
                 }),
@@ -1089,7 +1086,7 @@ class eM extends l.PureComponent {
                     }, 0);
             }),
             ep(this, "handleChangeTopic", (e) => {
-                (0, x.pW)({ topic: A.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, x.pW)({ topic: L.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             ep(this, "handleChangeRichTopic", (e, t, n) => {
                 this.setState({
@@ -1099,7 +1096,7 @@ class eM extends l.PureComponent {
                     this.handleChangeTopic(t);
             }),
             ep(this, "handleChangeTemplate", (e) => {
-                (0, x.pW)({ template: A.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, x.pW)({ template: L.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             ep(this, "handleChangeDefaultReactionEmoji", (e) => {
                 let t =
@@ -1185,7 +1182,7 @@ class eM extends l.PureComponent {
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : "";
         this.state = {
             textTopicValue: r,
-            richTopicValue: (0, w.JM)(r),
+            richTopicValue: (0, Z.JM)(r),
             topicFocused: !1,
             updateNameInputCursorPosition: !1,
         };
