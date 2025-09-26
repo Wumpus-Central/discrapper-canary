@@ -338,7 +338,7 @@ function H(e) {
     });
 }
 function Y(e) {
-    let { id: t, icon: n, size: r = f.IXf, bot: i, botIconFirst: a, fallbackAvatar: o = !0 } = e;
+    let { id: t, icon: n, size: r = f.IXf, bot: i, botIconFirst: a, fallbackAvatar: o = !0, keepAspectRatio: s } = e;
     if (null != i && a) {
         let e = R(i, !1, r);
         if (null != e) return e;
@@ -352,6 +352,7 @@ function Y(e) {
             size: r,
             canAnimate: !1,
             canWebP: !1,
+            keepAspectRatio: s,
         });
     if (null != i) {
         let e = R(i, !1, r);

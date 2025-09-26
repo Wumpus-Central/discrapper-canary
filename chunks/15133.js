@@ -1,52 +1,53 @@
-t.r(n), t.d(n, { default: () => p });
+t.r(n), t.d(n, { default: () => j });
 var a = t(951288),
     r = t(647438),
     i = t(657707),
-    o = t(442837),
-    s = t(481060),
-    c = t(665149),
-    l = t(639777),
-    d = t(744993),
-    u = t(693587),
-    b = t(462923),
-    m = t(331500),
-    g = t(440589),
-    f = t(388032),
+    s = t(442837),
+    o = t(481060),
+    c = t(224706),
+    l = t(665149),
+    d = t(639777),
+    u = t(744993),
+    b = t(693587),
+    m = t(462923),
+    g = t(331500),
+    f = t(440589),
+    p = t(388032),
     x = t(50803);
-function p(e) {
+function j(e) {
     var n;
     let { guildId: t } = e;
     r.useEffect(() => {
-        (0, d.EC)(t);
+        (0, u.EC)(t), c.Z.getDetectableGames();
     }, [t]);
-    let p = (0, l.Z)(t),
-        j = (0, o.e7)([u.Z], () => u.Z.getStateForGuild(t)),
-        v = Object.values(null != (n = null == j ? void 0 : j.instances) ? n : {});
+    let j = (0, d.Z)(t),
+        v = (0, s.e7)([b.Z], () => b.Z.getStateForGuild(t)),
+        _ = Object.values(null != (n = null == v ? void 0 : v.instances) ? n : {});
     return (0, a.jsxs)("div", {
         className: x.container,
         children: [
-            (0, a.jsxs)(c.ZP, {
+            (0, a.jsxs)(l.ZP, {
                 className: x.toolbar,
                 toolbar: (0, a.jsx)("div", {}),
                 children: [
-                    (0, a.jsx)(c.ZP.Icon, {
+                    (0, a.jsx)(l.ZP.Icon, {
                         icon: i.$Eu,
                         "aria-label": "",
                     }),
-                    (0, a.jsx)(c.ZP.Title, { children: f.intl.string(g.default.lH9Dio) }),
+                    (0, a.jsx)(l.ZP.Title, { children: p.intl.string(f.default.lH9Dio) }),
                 ],
             }),
             (0, a.jsxs)("div", {
                 className: x.contentContainer,
                 children: [
-                    (null == j ? void 0 : j.instances) != null
-                        ? (0, a.jsx)(s.zJl, {
+                    (null == v ? void 0 : v.instances) != null
+                        ? (0, a.jsx)(o.zJl, {
                               className: x.gameContainerWrapper,
                               children: (0, a.jsx)("div", {
                                   className: x.gameContainer,
-                                  children: v.map((e, n) =>
+                                  children: _.map((e, n) =>
                                       (0, a.jsx)(
-                                          b.Z,
+                                          m.Z,
                                           {
                                               guildId: t,
                                               instance: e,
@@ -58,9 +59,9 @@ function p(e) {
                           })
                         : (0, a.jsx)("div", {
                               className: x.spinnerContainer,
-                              children: (0, a.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
+                              children: (0, a.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
                           }),
-                    p && (0, a.jsx)(m.Z, { guildId: t }),
+                    j && (0, a.jsx)(g.Z, { guildId: t }),
                 ],
             }),
         ],

@@ -1,14 +1,15 @@
-n.d(t, { default: () => u }), n(388685), n(457542);
+n.d(t, { default: () => d }), n(388685), n(457542);
 var r = n(951288),
     o = n(647438),
     a = n(625651),
     i = n(744993),
-    c = n(440589),
-    s = n(388032),
-    l = n(593997);
-function u(e) {
+    c = n(943970),
+    s = n(440589),
+    l = n(388032),
+    u = n(593997);
+function d(e) {
     var { guildId: t, gameInstance: n } = e,
-        u = (function (e, t) {
+        d = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -29,8 +30,9 @@ function u(e) {
             }
             return o;
         })(e, ["guildId", "gameInstance"]);
-    let [d, f] = o.useState(!1),
-        [m, b] = o.useState(void 0);
+    let [f, m] = o.useState(!1),
+        [b, p] = o.useState(void 0),
+        g = (0, c.Z)(n.gameId, "cover");
     return (0, r.jsx)(
         a.f,
         (function (e) {
@@ -62,33 +64,33 @@ function u(e) {
                 size: "sm",
                 title: n.name,
                 body: (0, r.jsx)("div", {
-                    className: l.imageContainer,
+                    className: u.imageContainer,
                     children: (0, r.jsx)("img", {
                         alt: "",
-                        src: "",
-                        className: l.image,
+                        src: null != g ? g : "",
+                        className: u.image,
                     }),
                 }),
-                warningText: s.intl.string(c.default.oHNuWl),
-                isLoading: d,
-                error: m,
+                warningText: l.intl.string(s.default.oHNuWl),
+                isLoading: f,
+                error: b,
                 onDeactivate: () => {
-                    b(void 0),
-                        f(!0),
+                    p(void 0),
+                        m(!0),
                         (0, i.s9)(t, n.planId, n.entitlementId)
                             .then(() => {
-                                u.onClose();
+                                d.onClose();
                             })
                             .catch((e) => {
                                 var t;
-                                b(null != (t = e.body.message) ? t : e.message);
+                                p(null != (t = e.body.message) ? t : e.message);
                             })
                             .finally(() => {
-                                f(!1);
+                                m(!1);
                             });
                 },
             },
-            u,
+            d,
         ),
     );
 }

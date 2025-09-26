@@ -99,6 +99,7 @@ function l(e, t) {
         plans: r,
         regions: i,
         baseCost: Math.min(...r.map((e) => e.cost)),
+        gameId: "1",
     };
 }
 let s = [

@@ -1,62 +1,65 @@
-t.d(n, { Z: () => d }), t(953529);
+t.d(n, { Z: () => u }), t(953529);
 var r = t(951288),
     i = t(647438),
-    a = t(793030),
-    l = t(183369),
-    o = t(440589),
-    s = t(388032),
-    c = t(233019);
-function d() {
-    let { currentGame: e, planId: n } = (0, l.aj)();
+    l = t(793030),
+    a = t(183369),
+    o = t(943970),
+    s = t(440589),
+    c = t(388032),
+    d = t(233019);
+function u() {
+    let { currentGame: e, planId: n } = (0, a.aj)(),
+        t = (0, o.Z)(null == e ? void 0 : e.gameId, "cover");
     if (null == e) return null;
-    let t = null == e ? void 0 : e.plans.find((e) => e.id === n);
+    let u = null == e ? void 0 : e.plans.find((e) => e.id === n);
     return (0, r.jsx)("div", {
-        className: c.container,
+        className: d.container,
         children: (0, r.jsxs)("div", {
-            className: c.content,
+            className: d.content,
             children: [
                 (0, r.jsxs)("div", {
-                    className: c.headerContainer,
+                    className: d.headerContainer,
                     children: [
                         (0, r.jsx)("img", {
-                            className: c.image,
+                            src: null != t ? t : "",
+                            className: d.image,
                             alt: e.name,
                         }),
                         (0, r.jsxs)("div", {
-                            className: c.header,
+                            className: d.header,
                             children: [
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(l.X6q, {
                                     variant: "heading-lg/semibold",
                                     color: "text-primary",
                                     children: e.name,
                                 }),
-                                (0, r.jsx)(a.xvT, {
+                                (0, r.jsx)(l.xvT, {
                                     variant: "text-md/medium",
                                     color: "text-secondary",
-                                    children: null == t ? void 0 : t.name,
+                                    children: null == u ? void 0 : u.name,
                                 }),
                             ],
                         }),
                     ],
                 }),
-                null != t &&
+                null != u &&
                     (0, r.jsx)("div", {
-                        className: c.statsGrid,
-                        children: t.specifications.map((e, n) => {
-                            var l;
+                        className: d.statsGrid,
+                        children: u.specifications.map((e, n) => {
+                            var t;
                             return (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: c.statItem,
+                                            className: d.statItem,
                                             children: [
-                                                (0, r.jsx)(a.X6q, {
+                                                (0, r.jsx)(l.X6q, {
                                                     variant: "heading-sm/semibold",
                                                     color: "text-primary",
                                                     children: e.title,
                                                 }),
-                                                (0, r.jsx)(a.xvT, {
+                                                (0, r.jsx)(l.xvT, {
                                                     variant: "text-sm/medium",
                                                     color: "text-tertiary",
                                                     children: e.description,
@@ -64,8 +67,8 @@ function d() {
                                             ],
                                         }),
                                         n !==
-                                            (null != (l = null == t ? void 0 : t.specifications.length) ? l : 0) - 1 &&
-                                            (0, r.jsx)("div", { className: c.divider }),
+                                            (null != (t = null == u ? void 0 : u.specifications.length) ? t : 0) - 1 &&
+                                            (0, r.jsx)("div", { className: d.divider }),
                                     ],
                                 },
                                 n,
@@ -73,11 +76,11 @@ function d() {
                         }),
                     }),
                 (0, r.jsx)("div", {
-                    className: c.poweredBy,
-                    children: (0, r.jsx)(a.xvT, {
+                    className: d.poweredBy,
+                    children: (0, r.jsx)(l.xvT, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: s.intl.format(o.default.JWpue3, { developer: e.developer }),
+                        children: c.intl.format(s.default.JWpue3, { developer: e.developer }),
                     }),
                 }),
             ],

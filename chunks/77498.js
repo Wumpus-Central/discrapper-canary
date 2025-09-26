@@ -36,7 +36,7 @@ let E = "GameStoreReportedGames",
     S = "",
     A = null;
 function C(e) {
-    var t, n, r, i, a, o, s, l, c;
+    var t, n, r, i, a, o, s, l, c, u;
     return {
         id: e.id,
         name: e.name,
@@ -50,10 +50,11 @@ function C(e) {
         themes: null != (s = e.themes) ? s : [],
         icon: null != (l = e.icon_hash) ? l : void 0,
         thirdPartySkus: null != (c = e.third_party_skus) ? c : [],
+        cover_image_hash: null != (u = e.cover_image_hash) ? u : void 0,
     };
 }
 function N(e) {
-    var t, n;
+    var t, n, r;
     return {
         id: e.id,
         name: e.name,
@@ -67,6 +68,7 @@ function N(e) {
         themes: null != (t = e.themes) ? t : [],
         icon: e.icon,
         thirdPartySkus: null != (n = e.thirdPartySkus) ? n : [],
+        cover_image_hash: null != (r = e.cover_image_hash) ? r : void 0,
     };
 }
 function R(e) {
