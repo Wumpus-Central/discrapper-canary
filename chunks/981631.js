@@ -5019,6 +5019,7 @@ var nE = (function (e) {
             (e.SET_HANG_STATUS = "set_hang_status"),
             (e.CLEAR_HANG_STATUS = "clear_hang_status"),
             (e.SWIPE_HANG_STATUS = "swipe_hang_status"),
+            (e.HANG_STATUS_PICKER_OPENED = "hang_status_picker_opened"),
             (e.VIEW_HANG_STATUS = "view_hang_status"),
             (e.HANG_STATUS_FAVORITE_CLICKED = "hang_status_favorite_clicked"),
             (e.HANG_STATUS_CTA_CLICKED = "hang_status_cta_clicked"),
