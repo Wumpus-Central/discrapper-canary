@@ -1,36 +1,36 @@
-r.d(t, { Z: () => i });
-var n = r(81825);
-function l(e, t, r) {
+n.d(t, { Z: () => l });
+var r = n(81825);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class i extends n.Z {
+class l extends r.Z {
     static fromServer(e) {
         var t,
-            r,
-            { sku_id: n, sku_product_line: a } = e;
-        return new i(
+            n,
+            { sku_id: r, sku_product_line: a, sku_name: o } = e;
+        return new l(
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        n.forEach(function (t) {
-                            l(e, t, r[t]);
+                        r.forEach(function (t) {
+                            i(e, t, n[t]);
                         });
                 }
                 return e;
@@ -38,53 +38,56 @@ class i extends n.Z {
                 {},
                 (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
-                        l = (function (e, t) {
+                    var n,
+                        r,
+                        i = (function (e, t) {
                             if (null == e) return {};
-                            var r,
-                                n,
-                                l = {},
-                                i = Object.keys(e);
-                            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-                            return l;
+                            var n,
+                                r,
+                                i = {},
+                                l = Object.keys(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < i.length; n++)
-                            (r = i[n]),
-                                !(t.indexOf(r) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                    (l[r] = e[r]);
+                        var l = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < l.length; r++)
+                            (n = l[r]),
+                                !(t.indexOf(n) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                    (i[n] = e[n]);
                     }
-                    return l;
-                })(e, ["sku_id", "sku_product_line"]),
+                    return i;
+                })(e, ["sku_id", "sku_product_line", "sku_name"]),
             )),
-            (r = r =
+            (n = n =
                 {
-                    sku_id: n,
+                    sku_id: r,
                     sku_product_line: a,
+                    sku_name: o,
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
-                      var r = Object.keys(e);
+                      var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
-                      return r;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
         );
     }
     constructor(e) {
         super(),
-            l(this, "skuId", void 0),
-            l(this, "skuProductLine", void 0),
+            i(this, "skuId", void 0),
+            i(this, "skuProductLine", void 0),
+            i(this, "skuName", void 0),
             (this.skuId = e.sku_id),
-            (this.skuProductLine = e.sku_product_line);
+            (this.skuProductLine = e.sku_product_line),
+            (this.skuName = e.sku_name);
     }
 }

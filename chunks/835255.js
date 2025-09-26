@@ -18,13 +18,12 @@ function b(e) {
         O = i.useRef(null),
         E = (0, s.Z)(O),
         y = t.collectiblesItem,
-        { analyticsLocations: v } = (0, c.ZP)(),
-        I = y.type === l.Z.PROFILE_EFFECT ? y.title : y.label;
+        { analyticsLocations: v } = (0, c.ZP)();
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [
             (0, r.jsx)(o.ua7, {
-                text: I,
+                text: t.skuName,
                 children: (e) => {
                     var i, s;
                     return (0, r.jsx)(
@@ -68,7 +67,7 @@ function b(e) {
                                         variantsReturnStyle: a.v.VARIANTS_GROUP,
                                     });
                                 },
-                                "aria-label": I,
+                                "aria-label": t.skuName,
                                 children: (0, r.jsx)("div", {
                                     className: m.cardPreview,
                                     children: (() => {
