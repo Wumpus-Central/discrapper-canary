@@ -259,27 +259,27 @@ function L(e) {
                 (0, r.jsxs)(
                     o.kSQ,
                     {
-                        label: "Preview Controls",
+                        label: C.intl.string(C.t["Ape+mp"]),
                         children: [
                             !(q || X) && Q,
                             (0, r.jsx)(o.sNh, {
                                 id: "dismiss",
-                                label: "Reset Dismissibility",
+                                label: C.intl.string(C.t["JF6W6+"]),
                                 action: j,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
-                                label: "Reset Quest",
+                                label: C.intl.string(C.t.taqkwM),
                                 action: z,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "progress",
-                                label: "Set Random Quest Progress",
+                                label: C.intl.string(C.t.cKSLr6),
                                 action: U,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
-                                label: "Complete Quest",
+                                label: C.intl.string(C.t.jQEfRU),
                                 action: x,
                             }),
                             (0, m.$J)(e.quest) &&
@@ -306,7 +306,7 @@ function L(e) {
                                 }),
                             (0, r.jsx)(o.sNh, {
                                 id: "copy-quest-id",
-                                label: "Copy Quest ID",
+                                label: C.intl.string(C.t.oisrFh),
                                 action: () => {
                                     (0, f.JG)(e.quest.id);
                                 },
@@ -314,7 +314,7 @@ function L(e) {
                             (0, v.T)({ location: T.dr.QUEST_PREVIEW_TOOL_2 }) &&
                                 (0, r.jsx)(o.sNh, {
                                     id: "preview",
-                                    label: "View in Preview Tool",
+                                    label: C.intl.string(C.t.tx5Ax8),
                                     action: J,
                                 }),
                         ],
