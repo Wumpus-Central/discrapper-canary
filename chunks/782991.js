@@ -1,5 +1,4 @@
 e.exports = {
-    headingContainer: "headingContainer_b54cfd",
     gameSection: "gameSection_b54cfd",
     disabled: "disabled_b54cfd",
     gameInstanceContainer: "gameInstanceContainer_b54cfd",

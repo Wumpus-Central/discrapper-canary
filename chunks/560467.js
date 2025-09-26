@@ -1,8 +1,8 @@
 t.d(n, { Z: () => O });
 var r = t(951288),
     i = t(647438),
-    a = t(120356),
-    l = t.n(a),
+    l = t(120356),
+    a = t.n(l),
     o = t(442837),
     s = t(681715),
     c = t(481060),
@@ -25,7 +25,7 @@ function C(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: l()(v.optionContainer, i),
+                      className: a()(v.optionContainer, i),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsxs)("div", {
@@ -48,14 +48,14 @@ function C(e) {
           });
 }
 function N(e) {
-    let { region: n, selected: t, disabled: i, className: a } = e,
+    let { region: n, selected: t, disabled: i, className: l } = e,
         { pingText: o, pingCircleStyle: s } = (0, _.t)(n.pingUrl);
     return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: l()(v.optionContainer, { [v.disabled]: i }, a),
+                      className: a()(v.optionContainer, { [v.disabled]: i }, l),
                       children: [
                           (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsx)("div", {
@@ -64,7 +64,7 @@ function N(e) {
                                   ? (0, r.jsx)("span", { children: b.intl.string(j.default["1eK9GR"]) })
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)("div", { className: l()(v.pingCircle, s) }),
+                                            (0, r.jsx)("div", { className: a()(v.pingCircle, s) }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/medium",
                                                 children: o,
@@ -83,14 +83,14 @@ function O() {
         guildId: e,
         currentGame: n,
         regionId: t,
-        portkeyInstance: a,
-        setRegionId: l,
+        portkeyInstance: l,
+        setRegionId: a,
         name: _,
         setName: O,
         planId: y,
         setPlanId: S,
-        planCost: P,
-        stepLoading: E,
+        planCost: E,
+        stepLoading: P,
         error: w,
     } = (0, g.aj)();
     i.useEffect(() => {
@@ -120,7 +120,7 @@ function O() {
                 ? e
                 : [];
         }, [n]),
-        k = (0, f.Z)();
+        G = (0, f.Z)();
     return null == n
         ? (0, r.jsx)("div", {
               className: v.spinnerContainer,
@@ -129,10 +129,6 @@ function O() {
         : (0, r.jsxs)("div", {
               className: v.container,
               children: [
-                  (0, r.jsx)(c.X6q, {
-                      variant: "heading-lg/semibold",
-                      children: b.intl.string(j.default.Eonh9P),
-                  }),
                   (0, r.jsxs)("div", {
                       className: v.contentContainer,
                       children: [
@@ -165,7 +161,7 @@ function O() {
                                               placeholder: b.intl.string(j.default.Kg0Zio),
                                               showCharacterCount: !0,
                                               maxLength: h.gM,
-                                              disabled: E,
+                                              disabled: P,
                                           }),
                                       ],
                                   }),
@@ -205,10 +201,10 @@ function O() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              isDisabled: E,
+                                              isDisabled: P,
                                               options: I,
                                               optionClassName: v.option,
-                                              select: (e) => l(e.id),
+                                              select: (e) => a(e.id),
                                               placeholder: b.intl.string(j.default["op6/kZ"]),
                                               renderOptionLabel: (e) => {
                                                   var n;
@@ -245,7 +241,7 @@ function O() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === y,
-                                              isDisabled: E,
+                                              isDisabled: P,
                                               options: R,
                                               optionClassName: v.option,
                                               select: (e) => S(e.id),
@@ -277,16 +273,16 @@ function O() {
                           }),
                       ],
                   }),
-                  null != a &&
-                      0 !== P &&
+                  null != l &&
+                      0 !== E &&
                       (0, r.jsx)(d.Z, {
                           className: v.infoBox,
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  P < 0
-                                      ? b.intl.format(j.default.H8rHQU, { boostCount: Math.abs(P) })
-                                      : b.intl.format(j.default.h4ZvmJ, { boostCount: P }),
+                                  E < 0
+                                      ? b.intl.format(j.default.H8rHQU, { boostCount: Math.abs(E) })
+                                      : b.intl.format(j.default.h4ZvmJ, { boostCount: E }),
                           }),
                       }),
                   (0, r.jsx)(c.Text, {
@@ -306,7 +302,7 @@ function O() {
                   (0, r.jsxs)(x.ok, {
                       step: h.Vb.SERVER_SETTINGS,
                       className: v.footerContainer,
-                      children: [(0, r.jsx)(x.VS, {}), (0, r.jsx)(x.oh, { disabled: !k })],
+                      children: [(0, r.jsx)(x.VS, {}), (0, r.jsx)(x.oh, { disabled: !G })],
                   }),
               ],
           });

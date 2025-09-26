@@ -1,115 +1,102 @@
 n.d(t, {
-    Y: () => j,
-    Z: () => p,
+    Y: () => p,
+    Z: () => j,
 });
 var l = n(951288),
-    a = n(647438),
-    i = n(120356),
-    r = n.n(i),
+    i = n(647438),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(494620),
-    c = n(748745),
-    u = n(567225),
+    u = n(748745),
+    c = n(567225),
     d = n(183369),
     m = n(422663),
     v = n(473682),
-    g = n(440589),
+    f = n(401561),
     b = n(388032),
-    f = n(555574);
-function j() {
+    g = n(782991);
+function p() {
     return (0, l.jsx)(o.Z, {
-        className: f.maxInstancesWarning,
+        className: g.maxInstancesWarning,
         children: (0, l.jsx)(s.Text, {
             variant: "text-sm/medium",
-            children: b.intl.formatToPlainString(g.default.kUNv8P, { maxInstances: v.zI }),
+            children: b.intl.formatToPlainString(f.default.kUNv8P, { maxInstances: v.zI }),
         }),
     });
 }
-function p() {
+function j() {
     let {
             guildId: e,
             portkeyGames: t,
             instances: n,
-            setPortkeyInstance: i,
+            setPortkeyInstance: a,
             setCurrentGame: o,
-            onNext: p,
+            onNext: j,
         } = (0, d.aj)(),
-        x = a.useCallback(
+        y = i.useCallback(
             (e) => {
-                o(e), p();
+                o(e), j();
             },
-            [o, p],
+            [o, j],
         ),
-        y = a.useCallback(
+        x = i.useCallback(
             (e) => {
-                i(e), p();
+                a(e), j();
             },
-            [i, p],
+            [a, j],
         ),
-        h = n.length >= v.zI,
-        O = n.length > 0;
+        O = n.length >= v.zI,
+        h = n.length > 0;
     return 0 === Object.values(t).length
         ? (0, l.jsx)("div", {
-              className: f.loadingContainer,
+              className: g.loadingContainer,
               children: (0, l.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
           })
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsxs)("div", {
-                      className: f.headingContainer,
-                      children: [
-                          (0, l.jsx)(s.X6q, {
-                              variant: "heading-lg/semibold",
-                              children: b.intl.string(g.default.DG1SHB),
-                          }),
-                          (0, l.jsx)(s.Text, {
-                              variant: "text-sm/medium",
-                              children: b.intl.string(g.default.hkWuWF),
-                          }),
-                      ],
-                  }),
-                  O &&
+                  h &&
                       (0, l.jsxs)("div", {
-                          className: f.gameSection,
+                          className: g.gameSection,
                           children: [
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(g.default.wzC4ws),
+                                  children: b.intl.string(f.default.wzC4ws),
                               }),
                               (0, l.jsx)("div", {
-                                  className: f.gameInstanceContainer,
+                                  className: g.gameInstanceContainer,
                                   children: n.map((t, n) =>
                                       (0, l.jsx)(
-                                          c.Z,
+                                          u.Z,
                                           {
                                               guildId: e,
                                               gameInstance: t,
-                                              onClick: y,
+                                              onClick: x,
                                           },
                                           "instance-".concat(t.id, "-").concat(n),
                                       ),
                                   ),
                               }),
-                              h && (0, l.jsx)(j, {}),
+                              O && (0, l.jsx)(p, {}),
                           ],
                       }),
                   (0, l.jsxs)("div", {
-                      className: r()(f.gameSection, { [f.disabled]: h }),
+                      className: r()(g.gameSection, { [g.disabled]: O }),
                       children: [
-                          O &&
+                          h &&
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(g.default.l4UdiY),
+                                  children: b.intl.string(f.default.l4UdiY),
                               }),
                           (0, l.jsx)("div", {
-                              className: f.gameContainer,
+                              className: g.gameContainer,
                               children: Object.values(t).map((e, t) =>
                                   (0, l.jsx)(
-                                      u.Z,
+                                      c.Z,
                                       {
                                           game: e,
-                                          disabled: h,
-                                          onClick: x,
+                                          disabled: O,
+                                          onClick: y,
                                       },
                                       "game-".concat(e.id, "-").concat(t),
                                   ),
@@ -119,15 +106,15 @@ function p() {
                   }),
                   (0, l.jsxs)(m.ok, {
                       step: v.Vb.SELECT_GAME,
-                      className: f.footerContainer,
+                      className: g.footerContainer,
                       children: [
                           (0, l.jsxs)("div", {
-                              className: f.warningContainer,
+                              className: g.warningContainer,
                               children: [
                                   (0, l.jsx)(s.d3s, { size: "sm" }),
                                   (0, l.jsx)(s.Text, {
                                       variant: "text-sm/medium",
-                                      children: b.intl.string(g.default.RBv43d),
+                                      children: b.intl.string(f.default.RBv43d),
                                   }),
                               ],
                           }),

@@ -1,38 +1,43 @@
-t.d(n, { default: () => x });
-var a = t(951288),
-    i = t(481060),
-    r = t(906732),
-    l = t(678328),
-    s = t(560467),
-    o = t(183369),
-    c = t(473682),
-    d = t(831119);
-function u(e) {
+t.d(n, { default: () => j });
+var r = t(951288),
+    i = t(257465),
+    l = t(213734),
+    a = t(37148),
+    o = t(481060),
+    s = t(906732),
+    c = t(678328),
+    d = t(560467),
+    u = t(183369),
+    m = t(473682),
+    p = t(401561),
+    g = t(388032),
+    x = t(831119);
+function f(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            a = Object.keys(t);
+            r = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            a.forEach(function (n) {
-                var a;
-                (a = t[n]),
+            r.forEach(function (n) {
+                var r;
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: a,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = a);
+                        : (e[n] = r);
             });
     }
     return e;
 }
-function m(e, n) {
+function _(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -40,8 +45,8 @@ function m(e, n) {
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, a);
+                      var r = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, r);
                   }
                   return t;
               })(Object(n)).forEach(function (t) {
@@ -50,57 +55,66 @@ function m(e, n) {
         e
     );
 }
-function p(e) {
-    let { step: n, setFooterNode: t } = (0, o.aj)();
-    return (0, a.jsxs)(
-        i.Y0X,
-        m(u({ className: d.modal }, e), {
-            size: i.CgR.DYNAMIC,
-            parentComponent: "PortkeySetupModal",
+function h(e) {
+    let { step: n, setFooterNode: t } = (0, u.aj)(),
+        { title: s, subtitle: h } = (function (e) {
+            switch (e) {
+                case m.Vb.SELECT_GAME:
+                    return {
+                        title: g.intl.string(p.default.DG1SHB),
+                        subtitle: g.intl.string(p.default.hkWuWF),
+                    };
+                case m.Vb.SERVER_SETTINGS:
+                    return { title: g.intl.string(p.default.Eonh9P) };
+            }
+        })(n);
+    return (0, r.jsxs)(
+        i.IX,
+        _(f({}, e), {
+            size: "lg",
             children: [
-                (0, a.jsx)(i.hzk, {
-                    className: d.modalContent,
-                    style: { width: c.M4 },
-                    scrollbarType: "none",
-                    children: (0, a.jsx)("div", {
-                        style: { padding: c.hK },
-                        children: (0, a.jsxs)(i.MyZ, {
-                            width: c.Ne,
+                (0, r.jsx)(a.x, {
+                    title: s,
+                    subtitle: h,
+                }),
+                (0, r.jsx)(o.zJl, {
+                    className: x.modalContent,
+                    style: { width: m.M4 },
+                    children: (0, r.jsx)("div", {
+                        style: { padding: m.hK },
+                        children: (0, r.jsxs)(o.MyZ, {
+                            width: m.Ne,
                             activeSlide: n,
                             children: [
-                                (0, a.jsx)(
-                                    i.Mi4,
+                                (0, r.jsx)(
+                                    o.Mi4,
                                     {
-                                        id: c.Vb.SELECT_GAME,
-                                        children: (0, a.jsx)(l.Z, {}),
+                                        id: m.Vb.SELECT_GAME,
+                                        children: (0, r.jsx)(c.Z, {}),
                                     },
-                                    c.Vb.SELECT_GAME,
+                                    m.Vb.SELECT_GAME,
                                 ),
-                                (0, a.jsx)(
-                                    i.Mi4,
+                                (0, r.jsx)(
+                                    o.Mi4,
                                     {
-                                        id: c.Vb.SERVER_SETTINGS,
-                                        children: (0, a.jsx)(s.Z, {}),
+                                        id: m.Vb.SERVER_SETTINGS,
+                                        children: (0, r.jsx)(d.Z, {}),
                                     },
-                                    c.Vb.SERVER_SETTINGS,
+                                    m.Vb.SERVER_SETTINGS,
                                 ),
                             ],
                         }),
                     }),
                 }),
-                (0, a.jsx)("div", { ref: (e) => t(e) }),
-                (0, a.jsx)(i.olH, {
-                    onClick: e.onClose,
-                    className: d.closeButton,
-                }),
+                (0, r.jsx)(l.m, { children: (0, r.jsx)("div", { ref: (e) => t(e) }) }),
             ],
         }),
     );
 }
-function x(e) {
-    let { analyticsLocations: n } = (0, r.ZP)();
-    return (0, a.jsx)(r.Gt, {
+function j(e) {
+    let { analyticsLocations: n } = (0, s.ZP)();
+    return (0, r.jsx)(s.Gt, {
         value: n,
-        children: (0, a.jsx)(o.KO, m(u({}, e), { children: (0, a.jsx)(p, u({}, e)) })),
+        children: (0, r.jsx)(u.KO, _(f({}, e), { children: (0, r.jsx)(h, f({}, e)) })),
     });
 }
