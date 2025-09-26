@@ -70,7 +70,7 @@ function Z(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,12 +82,12 @@ function V(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -274,10 +274,12 @@ function z(e, t) {
         o,
         (0, s.Wu)([T.Z, O.Z, v.Z, p.Z], () => {
             let n = Array.from(
-                a.map((e) => {
-                    let { user: t } = e;
-                    return t.id;
-                }),
+                new Set(
+                    a.map((e) => {
+                        let { user: t } = e;
+                        return t.id;
+                    }),
+                ),
             );
             if (t === j.Og || n.length <= t) return n;
             let r = new Map();
@@ -337,7 +339,7 @@ function q(e) {
         });
     return (0, r.jsx)(
         K,
-        F(Z(F(Z({}, p), { application: d }), e), {
+        V(Z(V(Z({}, p), { application: d }), e), {
             overlayVoiceStates: o,
             channel: i,
             guildId: null == i ? void 0 : i.guild_id,
