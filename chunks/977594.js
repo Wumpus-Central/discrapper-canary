@@ -7,4 +7,5 @@ e.exports = {
     closeContainer: "closeContainer_eb35c5",
     layoutLocked: "layoutLocked_eb35c5",
     layoutUnlocked: "layoutUnlocked_eb35c5 layoutLocked_eb35c5",
+    windowContainerDebug: "windowContainerDebug_eb35c5",
 };

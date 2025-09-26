@@ -1,12 +1,18 @@
 n.d(t, {
-    AS: () => o,
-    S4: () => s,
-    X4: () => _,
+    AS: () => _,
+    S4: () => p,
+    X4: () => y,
 }),
     n(388685);
 var r = n(647438),
-    i = n(481060);
-function a(e, t, n) {
+    i = n(481060),
+    a = n(710845),
+    o = n(522474),
+    s = n(594174),
+    l = n(451478),
+    c = n(830917),
+    u = n(501787);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +25,8 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+let f = new a.Z("NotificationLayoutManager");
+class _ {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
@@ -27,11 +34,9 @@ class o {
     }
     initialize(e) {
         if (null == this.resizeObserver) {
-            for (let [, { element: n }] of ((this.resizeObserver = new e.ResizeObserver(this.handleResize)),
-            this.listeners)) {
-                var t;
-                null == (t = this.resizeObserver) || t.observe(n);
-            }
+            for (let [, { element: t }] of ((this.resizeObserver = new e.ResizeObserver(this.handleResize)),
+            this.listeners))
+                this.resizeObserver.observe(t);
             this.queueCompute();
         }
     }
@@ -99,38 +104,38 @@ class o {
         return this.listeners.get(e);
     }
     constructor(e) {
-        a(this, "resizeObserver", void 0),
-            a(this, "listeners", new Map()),
-            a(this, "queuedCompute", !1),
-            a(this, "items", []),
-            a(this, "matchHeight", 0),
-            a(this, "locked", !0),
-            a(this, "handleResize", (e) => {
+        d(this, "resizeObserver", void 0),
+            d(this, "listeners", new Map()),
+            d(this, "queuedCompute", !1),
+            d(this, "items", []),
+            d(this, "matchHeight", 0),
+            d(this, "locked", !0),
+            d(this, "handleResize", (e) => {
                 this.computeLayout();
             }),
             (this.locked = e);
     }
 }
-let s = r.createContext(new o(!0));
-function l(e, t) {
+let p = r.createContext(new _(!0));
+function h(e, t) {
     return t && e > 4 ? 0 : t ? Math.min(1 - e / 4, 1) : 1;
 }
-function c(e, t) {
+function m(e, t) {
     return t ? Math.min(1 - e / 4, 1) : 1;
 }
-function u(e, t, n) {
+function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-function d(e, t) {
+function E(e, t) {
     return t && e > 0 ? 0 : 1;
 }
-let f = {
+let b = {
     mass: 0.8,
     friction: 25,
     tension: 320,
 };
-function _(e, t, n) {
-    let [a, o] = (0, i.q_F)(
+function y(e, t, n) {
+    let [a, d] = (0, i.q_F)(
             () => ({
                 from: {
                     opacity: 0,
@@ -143,58 +148,75 @@ function _(e, t, n) {
             void 0,
             [],
         ),
-        _ = r.useRef(o),
-        p = r.useContext(s),
-        h = r.useMemo(() => {
+        _ = r.useRef(d),
+        y = r.useContext(p),
+        O = r.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
-                    ? p.unsubscribe(e)
-                    : p.subscribe(e, n, (e) => {
-                          let { locked: n, matchHeight: r, height: i, top: a, index: o } = e,
-                              { current: s } = _,
-                              p = {
-                                  opacity: l(o, n),
-                                  scale: c(o, n),
-                                  transform: u(o, n, a),
-                                  contentOpacity: d(o, n),
-                                  height: n ? r : i,
+                    ? y.unsubscribe(e)
+                    : y.subscribe(e, n, (n) => {
+                          var r;
+                          let { locked: i, matchHeight: a, height: d, top: p, index: y } = n;
+                          if (null == (r = s.default.getCurrentUser()) ? void 0 : r.isStaff()) {
+                              let t = o.Z.getWindow(u.$J),
+                                  n = null != t ? l.Z.windowSize((0, c.ZY)(t)) : void 0;
+                              f.info(
+                                  "Notification layout update",
+                                  {
+                                      id: e,
+                                      locked: i,
+                                      matchHeight: a,
+                                      height: d,
+                                      top: p,
+                                      index: y,
+                                  },
+                                  n,
+                              );
+                          }
+                          let { current: O } = _,
+                              v = {
+                                  opacity: h(y, i),
+                                  scale: m(y, i),
+                                  transform: g(y, i, p),
+                                  contentOpacity: E(y, i),
+                                  height: i ? a : d,
                               };
-                          s({
+                          O({
                               from: t
                                   ? void 0
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((n ? r : i) * 1),
+                                        transform: -((i ? a : d) * 1),
                                         contentOpacity: 1,
-                                        height: n ? r : i,
+                                        height: i ? a : d,
                                     },
-                              to: p,
-                              config: f,
+                              to: v,
+                              config: b,
                           }),
                               (t = !0);
                       });
             };
-        }, [e, p]);
+        }, [e, y]);
     return (
         r.useLayoutEffect(() => {
             if (t === i.pJH.YEETED) {
-                let t = p.getLayoutSpecs(e);
+                let t = y.getLayoutSpecs(e);
                 if (null == t) return void n();
                 _.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: u(t.index, p.locked, t.top) + (p.locked ? 0 : t.height / 2),
+                        transform: g(t.index, y.locked, t.top) + (y.locked ? 0 : t.height / 2),
                     },
-                    config: f,
+                    config: b,
                 }),
                     setTimeout(n, 300);
             }
-        }, [t, n, e, p]),
+        }, [t, n, e, y]),
         {
-            ref: h,
+            ref: O,
             springs: a,
         }
     );

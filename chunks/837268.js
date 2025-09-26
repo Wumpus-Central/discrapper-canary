@@ -33,6 +33,7 @@ var r = (function (e) {
         return (
             (e.ClickZones = "click_zones"),
             (e.WidgetAreas = "widget_areas"),
+            (e.WindowContainer = "window_container"),
             (e.DisabledGPUBoost = "disabled_gpu_boost"),
             (e.ForceGPUBoost = "force_gpu_boost"),
             (e.TrackFocusPIDs = "track_focus_pids"),
