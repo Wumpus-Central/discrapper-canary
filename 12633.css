@@ -84432,21 +84432,23 @@ html .invoiceCancelRow__968a4 {
 }
 
 .backgroundOptions__53965 {
-    align-content: space-between;
     display: grid;
     gap: 16px;
-    justify-content: space-between;
     margin-top: 16px
 }
 
 .backgroundOptionsSmall__53965 {
-    grid-auto-rows: 57px;
-    grid-template-columns: repeat(auto-fill, 112px)
+    align-content: flex-start;
+    grid-auto-rows: 67px;
+    grid-template-columns: repeat(auto-fill, 132px);
+    justify-content: flex-start
 }
 
 .backgroundOptionsLarge__53965 {
+    align-content: space-between;
     grid-auto-rows: 91px;
-    grid-template-columns: repeat(auto-fill, 178px)
+    grid-template-columns: repeat(auto-fill, 178px);
+    justify-content: space-between
 }
 
 .backgroundImageOption__53965 {

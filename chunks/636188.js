@@ -24,7 +24,7 @@ var r = n(951288),
     S = n(486324),
     A = n(474936),
     C = n(388032),
-    N = n(199306);
+    N = n(605690);
 function R(e, t, n) {
     return (
         t in e
@@ -281,7 +281,7 @@ function Z() {
         ],
     });
 }
-function V(e) {
+function F(e) {
     let { onClick: t, tooltipText: n, disabled: i = !1 } = e,
         a = (0, s.e7)([m.Z], () => m.Z.hasHotspot(T.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function o() {
@@ -326,7 +326,7 @@ function V(e) {
         ],
     });
 }
-function F(e) {
+function V(e) {
     let { onClick: t } = e,
         n = (0, u.O)(),
         { analyticsLocations: i } = (0, _.ZP)(f.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
@@ -338,7 +338,7 @@ function F(e) {
                 location_stack: i,
             });
         }),
-        (0, r.jsx)(V, {
+        (0, r.jsx)(F, {
             onClick: t,
             tooltipText: C.intl.string(C.t.IqE0T0),
         })
@@ -352,7 +352,7 @@ function H(e) {
     function c() {
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(
+                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("50893")]).then(
                     n.bind(n, 28130),
                 );
                 return (n) =>
@@ -379,7 +379,7 @@ function H(e) {
             { contextKey: a },
         );
     }
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         disabled: i,
         onClick: c,
         tooltipText: o,
@@ -419,7 +419,6 @@ function Y(e) {
                     text: C.intl.string(C.t.fUdMeH),
                 }),
                 (0, r.jsx)(U, {
-                    className: N.__invalid_backgroundOptionBlurred,
                     selected: a === v.f7,
                     icon: l.yMH,
                     onClick: () => o(v.f7),
@@ -431,7 +430,7 @@ function Y(e) {
                           onAddBackgroundImage: c,
                           disabled: p,
                       })
-                    : (0, r.jsx)(F, { onClick: s }),
+                    : (0, r.jsx)(V, { onClick: s }),
                 d.map((e) =>
                     (0, r.jsx)(
                         l.ua7,
