@@ -9,8 +9,8 @@ var a = t(951288),
     d = t(639777),
     u = t(744993),
     b = t(693587),
-    m = t(462923),
-    g = t(331500),
+    g = t(462923),
+    m = t(331500),
     f = t(401561),
     p = t(388032),
     x = t(828843);
@@ -35,6 +35,11 @@ function j(e) {
                         "aria-label": "",
                     }),
                     (0, a.jsx)(l.ZP.Title, { children: p.intl.string(f.default.lH9Dio) }),
+                    (0, a.jsx)(o.IGR, {
+                        disableColor: !0,
+                        text: p.intl.string(p.t.oW0eUV),
+                        className: x.badge,
+                    }),
                 ],
             }),
             (0, a.jsxs)("div", {
@@ -47,7 +52,7 @@ function j(e) {
                                   className: x.gameContainer,
                                   children: _.map((e, n) =>
                                       (0, a.jsx)(
-                                          m.Z,
+                                          g.Z,
                                           {
                                               guildId: t,
                                               instance: e,
@@ -61,7 +66,7 @@ function j(e) {
                               className: x.spinnerContainer,
                               children: (0, a.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
                           }),
-                    j && (0, a.jsx)(g.Z, { guildId: t }),
+                    j && (0, a.jsx)(m.Z, { guildId: t }),
                 ],
             }),
         ],
