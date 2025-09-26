@@ -1,19 +1,20 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(442837),
-    i = n(570140);
-let l = {},
-    a = () => ({
+    i = n(570140),
+    l = n(960048);
+let a = {},
+    o = () => ({
         data: null,
         status: "not_loaded",
     });
-function o(e) {
+function s(e) {
     var t;
-    return null != (t = l[e]) ? t : (l[e] = a());
+    return null != (t = a[e]) ? t : (a[e] = o());
 }
-class s extends r.ZP.Store {
+class c extends r.ZP.Store {
     get(e) {
         var t;
-        return null != (t = l[e]) ? t : a();
+        return null != (t = a[e]) ? t : o();
     }
     getWishlist(e) {
         return this.get(e).data;
@@ -39,26 +40,38 @@ class s extends r.ZP.Store {
         return this.get(e).error;
     }
 }
-let c = new s(i.Z, {
+let u = new c(i.Z, {
     WISHLIST_FETCH_START: function (e) {
         let { wishlistId: t } = e,
-            n = o(t);
+            n = s(t);
         (n.status = "fetching"), (n.error = void 0);
     },
     WISHLIST_FETCH_SUCCESS: function (e) {
         let { wishlistId: t, wishlistData: n } = e,
-            r = o(t);
+            r = s(t);
         (r.data = n), (r.status = "success"), (r.error = void 0);
     },
     WISHLIST_FETCH_FAILURE: function (e) {
         let { wishlistId: t, error: n } = e,
-            r = o(t);
+            r = s(t);
         (r.status = "error"), (r.error = n);
     },
-    WISHLIST_ADD_SKU: function (e) {
-        let {} = e;
+    WISHLIST_ADD_SKU_SUCCESS: function (e) {
+        let { wishlistId: t, wishlistData: n } = e,
+            r = s(t);
+        (r.data = n), (r.status = "success"), (r.error = void 0);
     },
-    WISHLIST_REMOVE_SKU: function (e) {
-        let {} = e;
+    WISHLIST_ADD_SKU_FAILURE: function (e) {
+        let { error: t } = e;
+        l.Z.captureException(t);
+    },
+    WISHLIST_REMOVE_SKU_SUCCESS: function (e) {
+        let { wishlistId: t, wishlistData: n } = e,
+            r = s(t);
+        (r.data = n), (r.status = "success"), (r.error = void 0);
+    },
+    WISHLIST_REMOVE_SKU_FAILURE: function (e) {
+        let { error: t } = e;
+        l.Z.captureException(t);
     },
 });
