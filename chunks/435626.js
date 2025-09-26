@@ -8,14 +8,14 @@ var i = n(120356),
     c = n(493773),
     l = n(100527),
     u = n(906732),
-    _ = n(1585),
-    d = n(821982),
-    p = n(125988),
-    j = n(267097),
-    y = n(109213),
-    O = n(626135),
-    g = n(333867),
-    m = n(963249),
+    d = n(1585),
+    p = n(821982),
+    _ = n(125988),
+    g = n(267097),
+    m = n(109213),
+    j = n(626135),
+    y = n(333867),
+    O = n(963249),
     h = n(981631),
     T = n(217702),
     b = n(474936),
@@ -27,7 +27,7 @@ function I(t) {
     let { analyticsLocations: e, transitionState: n, onClose: i, giftRecipient: o, analyticsObject: r } = t;
     return (
         (0, c.ZP)(() => {
-            O.default.track(h.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
+            j.default.track(h.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
                 location: r,
                 location_stack: e,
             });
@@ -36,12 +36,14 @@ function I(t) {
             children: [
                 (0, a.jsx)(S, {}),
                 (0, a.jsxs)(s.Y0X, {
+                    "data-migration-pending": !0,
                     size: s.CgR.DYNAMIC,
                     transitionState: n,
                     className: E.modalRoot,
                     parentComponent: "GiftCategorySelectModal",
                     children: [
                         (0, a.jsxs)(s.xBx, {
+                            "data-migration-pending": !0,
                             className: E.header,
                             separator: !1,
                             children: [
@@ -50,8 +52,9 @@ function I(t) {
                                     children: x.intl.string(x.t.YBGjsr),
                                 }),
                                 (0, a.jsx)(s.olH, {
+                                    "data-migration-pending": !0,
                                     onClick: () => {
-                                        O.default.track(h.rMx.MODAL_DISMISSED, {
+                                        j.default.track(h.rMx.MODAL_DISMISSED, {
                                             type: h.jXE.GIFT_CATEGORY_SELECT_MODAL,
                                             location_object: h.qAy.BUTTON_CTA,
                                         }),
@@ -62,6 +65,7 @@ function I(t) {
                             ],
                         }),
                         (0, a.jsx)(s.hzk, {
+                            "data-migration-pending": !0,
                             className: E.modalContent,
                             children: (0, a.jsx)(v, {
                                 analyticsLocations: e,
@@ -76,27 +80,27 @@ function I(t) {
         })
     );
 }
-let S = () => ((0, j.Z)(), null);
+let S = () => ((0, g.Z)(), null);
 function v(t) {
     let { giftRecipient: e, analyticsObject: n, onClose: i } = t,
-        { showBothNitroSkusInCategorySelect: c } = y.G.useExperiment(
+        { showBothNitroSkusInCategorySelect: c } = m.G.useExperiment(
             { location: "gift-button" },
             { autoTrackExposure: !1 },
         ),
-        { analyticsLocations: _ } = (0, u.ZP)(l.Z.GIFT_CATEGORY_SELECT_MODAL),
-        d = (t) => {
+        { analyticsLocations: d } = (0, u.ZP)(l.Z.GIFT_CATEGORY_SELECT_MODAL),
+        p = (t) => {
             t && i();
         },
-        p = (t) => {
+        _ = (t) => {
             var a, i;
             let o = h.Qqv.NITRO_SKU_SELECTION;
             t === b.Si.TIER_2 ? (o = h.Qqv.NITRO_STANDARD) : t === b.Si.TIER_0 && (o = h.Qqv.NITRO_BASIC),
-                (0, m.Z)({
+                (0, O.Z)({
                     isGift: !0,
                     giftRecipient: e,
                     giftingOrigin: b.Wt.DM_CHANNEL,
                     initialPlanId: null,
-                    analyticsLocations: _,
+                    analyticsLocations: d,
                     subscriptionTier: t,
                     analyticsObject:
                         ((a = (function (t) {
@@ -143,13 +147,13 @@ function v(t) {
                                   Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(i, t));
                               }),
                         a),
-                    onClose: d,
+                    onClose: p,
                 });
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(s.P3F, {
-                onClick: () => p(c ? b.Si.TIER_2 : void 0),
+                onClick: () => _(c ? b.Si.TIER_2 : void 0),
                 children: (0, a.jsxs)("div", {
                     className: o()(E.categoryButton, E.nitroButton),
                     children: [
@@ -165,7 +169,7 @@ function v(t) {
             }),
             c &&
                 (0, a.jsx)(s.P3F, {
-                    onClick: () => p(b.Si.TIER_0),
+                    onClick: () => _(b.Si.TIER_0),
                     children: (0, a.jsxs)("div", {
                         className: o()(E.nitroBasicButton, E.categoryButton),
                         children: [
@@ -181,13 +185,13 @@ function v(t) {
                 }),
             (0, a.jsx)(s.P3F, {
                 onClick: () => {
-                    (0, g.Z)({
+                    (0, y.Z)({
                         isGift: !0,
                         giftingOrigin: b.Wt.DM_CHANNEL,
-                        analyticsLocations: _,
+                        analyticsLocations: d,
                         analyticsObject: n,
                         giftRecipient: e,
-                        onClose: d,
+                        onClose: p,
                         variantsReturnStyle: r.v.VARIANTS_GROUP,
                     });
                 },
@@ -209,8 +213,8 @@ function v(t) {
 }
 function N(t) {
     let { imageType: e } = t,
-        { avatarPlaceholderSrc: n } = (0, p.Z)({ size: (0, _.y9)(s.EFr.SIZE_80) }),
-        i = (0, d.Z)("a_c3cffc19e9784f7d0b005eecdf1b566e", s.EFr.SIZE_80, !1);
+        { avatarPlaceholderSrc: n } = (0, _.Z)({ size: (0, d.y9)(s.EFr.SIZE_80) }),
+        i = (0, p.Z)("a_c3cffc19e9784f7d0b005eecdf1b566e", s.EFr.SIZE_80, !1);
     return 0 === e || 1 === e
         ? (0, a.jsx)("div", {
               className: E.wumpusImageContainer,
