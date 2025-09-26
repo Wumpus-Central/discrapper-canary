@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(755721),
+    l = n(159691),
     c = n(481060),
     u = n(607070),
     d = n(975298),
@@ -130,18 +130,19 @@ function D(e) {
                                 text: m,
                                 "aria-label": m.toString(),
                                 children: (e) =>
-                                    (0, r.jsx)(
-                                        l.zx,
-                                        w(R({}, e), {
-                                            className: C.unappliedGuildBoostSlotCta,
-                                            color: l.zx.Colors.PRIMARY,
-                                            look: l.zx.Looks.LINK,
-                                            onClick: () => a(t),
-                                            size: l.zx.Sizes.NONE,
-                                            disabled: h,
-                                            children: A.intl.string(A.t.twFU3d),
-                                        }),
-                                    ),
+                                    (0, r.jsx)("div", {
+                                        className: C.unappliedGuildBoostSlotCta,
+                                        children: (0, r.jsx)(
+                                            l.Avr,
+                                            w(R({}, e), {
+                                                variant: "primary",
+                                                text: A.intl.string(A.t.twFU3d),
+                                                onClick: () => a(t),
+                                                disabled: h,
+                                                size: "sm",
+                                            }),
+                                        ),
+                                    }),
                             }),
                         p &&
                             (0, r.jsx)(f.Z, {
@@ -149,18 +150,19 @@ function D(e) {
                                 text: m,
                                 "aria-label": m.toString(),
                                 children: (e) =>
-                                    (0, r.jsx)(
-                                        l.zx,
-                                        w(R({}, e), {
-                                            className: C.unappliedGuildBoostSlotCta,
-                                            color: l.zx.Colors.PRIMARY,
-                                            look: l.zx.Looks.LINK,
-                                            onClick: () => o(t),
-                                            size: l.zx.Sizes.NONE,
-                                            disabled: h,
-                                            children: A.intl.string(A.t["2glQNj"]),
-                                        }),
-                                    ),
+                                    (0, r.jsx)("div", {
+                                        className: C.unappliedGuildBoostSlotCta,
+                                        children: (0, r.jsx)(
+                                            l.Avr,
+                                            w(R({}, e), {
+                                                variant: "primary",
+                                                text: A.intl.string(A.t["2glQNj"]),
+                                                onClick: () => o(t),
+                                                disabled: h,
+                                                size: "sm",
+                                            }),
+                                        ),
+                                    }),
                             }),
                     ],
                 }),
