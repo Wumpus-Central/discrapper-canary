@@ -8,13 +8,13 @@ var r = n(951288),
     c = n(981312),
     d = n(430824),
     u = n(63063),
-    m = n(500496),
-    g = n(999382),
-    p = n(432774),
-    f = n(682255),
+    m = n(999382),
+    g = n(432774),
+    p = n(682255),
+    f = n(888429),
     h = n(217472),
-    x = n(202905),
-    b = n(44867),
+    b = n(202905),
+    x = n(44867),
     j = n(557359),
     v = n(658666),
     _ = n(307375),
@@ -29,7 +29,7 @@ function E(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, p.k)(e), (0, f.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, g.k)(e), (0, p.V)(e), (0, a.le)(), (0, a.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -43,9 +43,9 @@ function E(e) {
                 rules: t.termRules,
             });
         case O.A.APPLY:
-            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
         case O.A.DISCOVERABLE:
-            return (0, r.jsx)(b.c, {
+            return (0, r.jsx)(x.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -75,9 +75,10 @@ function I(e) {
         m = n === y.V_K.AGE_RESTRICTED && a !== y.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(s.hjN, {
         children: (0, r.jsx)(s.j7V, {
+            hideBorder: !0,
+            className: N.contentLevelSetting,
             onChange: c,
             value: o,
-            hideBorder: !0,
             disabled: m,
             note: C.intl.format(C.t["iyQQ6+"], {
                 helpArticleLink: u.Z.getArticleURL(y.BhN.NSFW_SERVER_AGE_RESTRICTION),
@@ -89,17 +90,17 @@ function I(e) {
 function S(e) {
     let { guildId: t } = e,
         n = (0, c.U)();
-    return !(0, m.j0)({
+    return !(0, f.j0)({
         guildId: t,
         location: "guild-settings",
     }) || n
         ? null
         : (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)("div", { className: N.divider }), (0, r.jsx)(I, { guildId: t })],
+              children: [(0, r.jsx)(I, { guildId: t }), (0, r.jsx)("div", { className: N.divider })],
           });
 }
 function T() {
-    let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
+    let e = (0, l.e7)([m.Z], () => m.Z.getProps().guild),
         t = (0, l.e7)([v.Z], () => v.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
@@ -120,6 +121,7 @@ function T() {
                 variant: "heading-lg/semibold",
                 children: C.intl.string(C.t.YJlvBA),
             }),
+            null != e && (0, r.jsx)(S, { guildId: e.id }),
             (0, r.jsx)(_.h, {
                 onTypePicked: n,
                 activeType: a,
@@ -127,7 +129,6 @@ function T() {
             }),
             (0, r.jsx)("div", { className: N.divider }),
             (0, r.jsx)("div", { children: (0, r.jsx)(E, { pendingState: t }) }),
-            null != e && (0, r.jsx)(S, { guildId: e.id }),
         ],
     });
 }
