@@ -1,10 +1,10 @@
-n.d(t, { C: () => p });
+n.d(t, { C: () => m });
 var r = n(951288);
 n(647438);
 var i = n(168545),
     a = n(793030),
     o = n(886025),
-    s = n(507349);
+    s = n(841321);
 function l(e, t, n) {
     return (
         t in e
@@ -57,7 +57,28 @@ function d(e, t) {
         e
     );
 }
-function f(e) {
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function p(e) {
     let { size: t } = e,
         n = "small" === t ? "0 0 20 20" : "0 0 24 24",
         i = "small" === t ? 10 : 12,
@@ -95,14 +116,14 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function h(e) {
     let { desc: t, disabled: n, icon: o, name: l, size: c, index: u } = e;
     return (0, r.jsxs)(i.Y8, {
         className: s.item,
         value: String(u),
         isDisabled: n,
         children: [
-            (0, r.jsx)(f, { size: c }),
+            (0, r.jsx)(p, { size: c }),
             null != o &&
                 (0, r.jsx)(o, {
                     className: s.radioItemIcon,
@@ -129,58 +150,64 @@ function _(e) {
         ],
     });
 }
-function p(e) {
-    let {
+function m(e) {
+    var {
             defaultValue: t,
             onChange: n,
             options: a,
-            label: l,
-            value: u,
-            size: f = "medium",
-            disabled: p = !1,
-            "aria-labelledby": h,
+            value: l,
+            size: u = "medium",
+            disabled: _ = !1,
+            "aria-labelledby": p,
         } = e,
-        m = void 0 === u ? -1 : a.findIndex((e) => e.value === u),
-        g = void 0 === t ? -1 : a.findIndex((e) => e.value === t),
-        E = {
+        m = f(e, ["defaultValue", "onChange", "options", "value", "size", "disabled", "aria-labelledby"]);
+    let g = void 0 === l ? -1 : a.findIndex((e) => e.value === l),
+        E = void 0 === t ? -1 : a.findIndex((e) => e.value === t),
+        b = {
             onChange: (e) => {
                 null != n && n(a[Number(e)].value);
             },
         };
     return (
-        void 0 !== u && m >= 0
-            ? (E.value = String(m))
-            : void 0 === u && void 0 !== t && g >= 0 && (E.defaultValue = String(g)),
-        (0, r.jsx)(o.N, {
-            label: l,
-            children: (0, r.jsx)(
-                i.Ee,
-                d(
-                    c(
-                        {
-                            className: s.group,
-                            isDisabled: p,
-                            "aria-labelledby": h,
-                        },
-                        E,
-                    ),
-                    {
-                        children: a.map((e, t) =>
-                            (0, r.jsx)(
-                                _,
-                                c(
-                                    {
-                                        index: t,
-                                        size: f,
-                                    },
-                                    e,
-                                ),
-                                String(e.value),
+        void 0 !== l && g >= 0
+            ? (b.value = String(g))
+            : void 0 === l && void 0 !== t && E >= 0 && (b.defaultValue = String(E)),
+        (0, r.jsx)(
+            o.N,
+            d(c({}, m), {
+                children: (e) =>
+                    (0, r.jsx)(
+                        i.Ee,
+                        d(
+                            c(
+                                {
+                                    id: e.controlId,
+                                    className: s.group,
+                                    isDisabled: _,
+                                    "aria-labelledby": null != p ? p : e.labelId,
+                                    "aria-describedby": e.describedById,
+                                    "aria-errormessage": e.errorMessageId,
+                                },
+                                b,
                             ),
+                            {
+                                children: a.map((e, t) =>
+                                    (0, r.jsx)(
+                                        h,
+                                        c(
+                                            {
+                                                index: t,
+                                                size: u,
+                                            },
+                                            e,
+                                        ),
+                                        String(e.value),
+                                    ),
+                                ),
+                            },
                         ),
-                    },
-                ),
-            ),
-        })
+                    ),
+            }),
+        )
     );
 }

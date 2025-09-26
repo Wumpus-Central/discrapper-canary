@@ -88,11 +88,15 @@ function p(e) {
             children: [
                 (0, r.jsx)(o.Text, {
                     tag: "legend",
-                    variant: "text-md/medium",
+                    variant: "text-lg/medium",
                     className: s.legend,
                     children: n,
                 }),
-                t,
+                (0, r.jsx)(o.Kqy, {
+                    direction: "vertical",
+                    gap: 16,
+                    children: t,
+                }),
             ],
         }),
     );

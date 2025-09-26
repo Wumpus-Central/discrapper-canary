@@ -3,7 +3,7 @@ var r = n(951288),
     l = n(647438),
     a = n(525769),
     i = n(693789),
-    o = n(19217),
+    o = n(886025),
     c = n(82659),
     s = n(755721),
     u = n(481060),
@@ -253,7 +253,8 @@ function k(e) {
                     inputRef: _,
                 }),
                 (0, r.jsx)(u.LZC, { size: 26 }),
-                (0, r.jsxs)(o.C, {
+                (0, r.jsxs)(o.N, {
+                    role: "group",
                     label: v.intl.string(v.t.oMBfeX),
                     children: [
                         I.map((e, n) =>
