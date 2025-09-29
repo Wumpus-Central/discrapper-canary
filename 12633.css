@@ -2548,15 +2548,6 @@
     --custom-gradient-color-end: var(--expressive-gradient-nitro-green-end)
 }
 
-.sparkles_f99d90 {
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
-
 .wrapper_a35ace svg {
     display: block
 }
@@ -17458,7 +17449,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     flex: 0 0 auto;
     height: 20px;
     margin-left: 8px;
-    position: relative;
     width: 20px
 }
 
@@ -17662,13 +17652,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     align-items: center;
     justify-content: center;
     padding: 16px
-}
-
-.sparkles_c1e9c4 {
-    height: 32px;
-    left: -12px;
-    top: -8px;
-    width: 32px
 }
 
 .custom-theme-background .menu_c1e9c4 {

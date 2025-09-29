@@ -11,7 +11,7 @@ var r = n(951288),
     l = n(377171),
     c = n(951394),
     u = n(388032),
-    d = n(261334);
+    d = n(946866);
 function f(e, t, n) {
     return (
         t in e
@@ -99,12 +99,11 @@ let E = i.forwardRef(function (e, t) {
             disabled: O,
             dangerous: v,
             separator: I,
-            sparkle: T,
-            showNewBadge: S,
-            buttonClassName: A,
-            children: C,
+            showNewBadge: T,
+            buttonClassName: S,
+            children: A,
         } = e,
-        N = m(e, [
+        C = m(e, [
             "label",
             "ariaLabel",
             "tooltipText",
@@ -117,7 +116,6 @@ let E = i.forwardRef(function (e, t) {
             "disabled",
             "dangerous",
             "separator",
-            "sparkle",
             "showNewBadge",
             "buttonClassName",
             "children",
@@ -140,7 +138,7 @@ let E = i.forwardRef(function (e, t) {
                             _(
                                 {
                                     ref: t,
-                                    className: o()(d.hoverBarButton, A),
+                                    className: o()(d.hoverBarButton, S),
                                     onMouseEnter: a,
                                     onMouseLeave: f,
                                     onFocus: m,
@@ -152,7 +150,7 @@ let E = i.forwardRef(function (e, t) {
                                     disabled: O,
                                     dangerous: v,
                                 },
-                                N,
+                                C,
                             ),
                             {
                                 children: [
@@ -168,14 +166,13 @@ let E = i.forwardRef(function (e, t) {
                                               ),
                                           )
                                         : null,
-                                    null != C
+                                    null != A
                                         ? (0, r.jsx)("div", {
                                               className: o()(d.icon, d.buttonContent),
-                                              children: C,
+                                              children: A,
                                           })
                                         : null,
-                                    T && (0, r.jsx)(s.K1N, {}),
-                                    S &&
+                                    T &&
                                         (0, r.jsx)(s.IGR, {
                                             text: u.intl.string(u.t.y2b7CA),
                                             color: l.Z.BG_BRAND,

@@ -33,7 +33,6 @@ var r = {
     colorSuccess: "colorSuccess_c1e9c4 colorDefault_c1e9c4",
     groupLabel: "groupLabel_c1e9c4 labelContainer_c1e9c4",
     loader: "loader_c1e9c4",
-    sparkles: "sparkles_c1e9c4",
     radioIcon: "radioIcon_c1e9c4",
 };
 n.r((e.exports = r));

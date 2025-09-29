@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(743236),
     d = n(525220),
     f = n(939350),
-    _ = n(334405);
+    _ = n(515527);
 function p(e, t, n) {
     return (
         t in e
@@ -84,38 +84,37 @@ function E(e) {
             subMenuIconClassName: P,
             dontCloseOnActionIfHoldingShiftKey: w,
             dontCloseOnAction: D,
-            iconProps: x,
-            sparkle: L,
+            iconProps: L,
         } = e,
-        { onSelect: j, onInteraction: M } = i.useContext(c.p),
-        k = i.useRef(null),
-        U = i.useCallback(
+        { onSelect: x, onInteraction: j } = i.useContext(c.p),
+        M = i.useRef(null),
+        k = i.useCallback(
             (e) => {
                 var t;
-                if ((null == M || M({ type: c.U.DEFAULT }), null == S)) return !1;
+                if ((null == j || j({ type: c.U.DEFAULT }), null == S)) return !1;
                 (e.shiftKey && w) || D || A(),
                     e.persist(),
-                    null == j || j(),
+                    null == x || x(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => S(e));
             },
-            [S, A, j, w, D, M],
+            [S, A, x, w, D, j],
         );
     return (
         i.useEffect(() => {
-            I && ((0, u.F)(k), null == C || C());
+            I && ((0, u.F)(M), null == C || C());
         }, [I, C]),
         (0, r.jsxs)(
             s.P3F,
             g(
                 h(
                     {
-                        innerRef: k,
+                        innerRef: M,
                         className: o()(_.item, _.labelContainer, f._[t], N, {
                             [_.disabled]: v,
                             [_.focused]: I,
                             [null != R ? R : ""]: I,
                         }),
-                        onClick: v ? void 0 : U,
+                        onClick: v ? void 0 : k,
                         "aria-disabled": v,
                     },
                     T,
@@ -128,8 +127,8 @@ function E(e) {
                                 className: o()(_.iconContainerLeft, { [_.iconContainerLarge]: "lg" === m }),
                                 children: (0, r.jsx)(
                                     p,
-                                    g(h({ color: "currentColor" }, x), {
-                                        className: o()(_.icon, null == x ? void 0 : x.className),
+                                    g(h({ color: "currentColor" }, L), {
+                                        className: o()(_.icon, null == L ? void 0 : L.className),
                                     }),
                                 ),
                             }),
@@ -158,22 +157,19 @@ function E(e) {
                                   className: _.iconContainer,
                                   children: (0, r.jsx)(
                                       a,
-                                      g(h({ color: "currentColor" }, x), {
-                                          className: o()(_.icon, null == x ? void 0 : x.className),
+                                      g(h({ color: "currentColor" }, L), {
+                                          className: o()(_.icon, null == L ? void 0 : L.className),
                                       }),
                                   ),
                               }),
                         O &&
-                            (0, r.jsxs)("div", {
+                            (0, r.jsx)("div", {
                                 className: _.iconContainer,
-                                children: [
-                                    (0, r.jsx)(s.Fbu, {
-                                        size: "md",
-                                        color: "currentColor",
-                                        className: o()(_.caret, P),
-                                    }),
-                                    L && (0, r.jsx)(s.K1N, { className: _.sparkles }),
-                                ],
+                                children: (0, r.jsx)(s.Fbu, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: o()(_.caret, P),
+                                }),
                             }),
                     ],
                 },
