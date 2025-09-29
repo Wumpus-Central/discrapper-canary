@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => G,
-    Z: () => F,
+    I: () => B,
+    Z: () => V,
 }),
     n(388685);
 var r = n(951288),
@@ -27,13 +27,14 @@ var r = n(951288),
     T = n(198952),
     S = n(329242),
     A = n(895328),
-    C = n(292352),
-    N = n(981631),
-    R = n(412297),
-    P = n(388032),
-    w = n(742164),
-    D = n(152269);
-function x(e, t, n) {
+    C = n(448524),
+    N = n(292352),
+    R = n(981631),
+    P = n(412297),
+    w = n(388032),
+    D = n(742164),
+    x = n(152269);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +47,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,66 +58,66 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-let j = 65;
-function M() {
+let M = 65;
+function k() {
     let e = i.useCallback(() => {
         (0, l.ZDy)(async () => {
             let { default: e } = await n.e("66462").then(n.bind(n, 756226));
-            return (t) => (0, r.jsx)(e, L({}, t));
+            return (t) => (0, r.jsx)(e, j({}, t));
         });
     }, []);
     return (0, r.jsx)(l.P3F, {
-        className: w.tooltip,
+        className: D.tooltip,
         onClick: e,
         children: (0, r.jsx)(l.d3s, {
             size: "custom",
             color: "currentColor",
-            className: w.icon,
+            className: D.icon,
             width: 15,
             height: 15,
         }),
     });
 }
-function k(e) {
+function U(e) {
     let { displayType: t } = e,
         n = (0, _.PO)("family_center_activity_card"),
         a = i.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(P.intl.string(R.default.Wu8BKy), l.ToastType.FAILURE));
+            (0, l.showToast)((0, l.createToast)(w.intl.string(P.default.Wu8BKy), l.ToastType.FAILURE));
         }, []),
         s = (0, b.Z)(),
         c = (0, g.ws)(t),
         d = (0, g.C7)(t),
         { loadMore: h, isMoreLoading: E } = (0, m.G)({ onError: a }),
         y = (0, f.E2)(n).get(t),
-        [O, T] = i.useState(C.iB),
+        [O, T] = i.useState(N.iB),
         S = (0, p.Xi)({ location: "family_center_activity_section_web" }),
         A = i.useCallback(() => {
-            T((e) => e + C.iB), h(t);
+            T((e) => e + N.iB), h(t);
         }, [t, h]);
     o()(y, "No text for action type: ".concat(t));
-    let N = y.sectionHeader(d),
-        D = i.useCallback(
+    let C = y.sectionHeader(d),
+        R = i.useCallback(
             (e) => {
                 let { row: t } = e,
                     n = c[t];
-                return (0, f.iB)(n)
-                    ? (0, r.jsx)(
-                          I.Z,
-                          {
-                              userId: n.entity_id,
-                              timestamp: u.default.extractTimestamp(n.event_id),
-                              timestampFormatter: y.timestampFormatter,
-                          },
-                          n.event_id,
-                      )
-                    : (0, f.f0)(n)
-                      ? (0, r.jsx)(v.Z, { guildId: n.entity_id }, n.event_id)
-                      : void 0;
+                if ((0, f.iB)(n)) {
+                    let e = u.default.extractTimestamp(n.event_id),
+                        t = (0, f.LI)(e, y.timestampFormatter);
+                    return (0, r.jsx)(
+                        I.Z,
+                        {
+                            userId: n.entity_id,
+                            subText: t,
+                        },
+                        n.event_id,
+                    );
+                }
+                if ((0, f.f0)(n)) return (0, r.jsx)(v.Z, { guildId: n.entity_id }, n.event_id);
             },
             [c, y.timestampFormatter],
         ),
@@ -125,14 +126,14 @@ function k(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.Text, {
-                            className: w.sectionHeader,
+                            className: D.sectionHeader,
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: N,
+                            children: C,
                         }),
                         void 0 !== y.sectionDescription
                             ? (0, r.jsx)(l.Text, {
-                                  className: w.sectionDescription,
+                                  className: D.sectionDescription,
                                   variant: "text-md/medium",
                                   color: "text-muted",
                                   children: y.sectionDescription(null != s && s, S),
@@ -140,34 +141,34 @@ function k(e) {
                             : null,
                     ],
                 }),
-            [N, y, s, S],
+            [C, y, s, S],
         );
     if (0 === c.length) return null;
     let L = c.slice(0, O);
     return (0, r.jsxs)("div", {
-        className: w.actionSection,
+        className: D.actionSection,
         children: [
             x(),
             (0, r.jsx)("div", {
-                className: w.actions,
-                style: { maxHeight: L.length * j },
-                children: L.map((e, t) => D({ row: t })),
+                className: D.actions,
+                style: { maxHeight: L.length * M },
+                children: L.map((e, t) => R({ row: t })),
             }),
             L.length !== d
                 ? (0, r.jsx)(l.P3F, {
-                      className: w.loadMoreBar,
+                      className: D.loadMoreBar,
                       onClick: A,
                       role: "button",
                       children: E
                           ? (0, r.jsx)(l.$jN, {
                                 type: l.$jN.Type.PULSING_ELLIPSIS,
-                                className: w.spinner,
+                                className: D.spinner,
                             })
                           : (0, r.jsx)(l.Text, {
-                                className: w.loadMore,
+                                className: D.loadMore,
                                 variant: "text-sm/bold",
-                                children: P.intl.format(R.default["7dMmJS"], {
-                                    pageSize: Math.min(d - L.length, C.iB),
+                                children: w.intl.format(P.default["7dMmJS"], {
+                                    pageSize: Math.min(d - L.length, N.iB),
                                 }),
                             }),
                   })
@@ -175,12 +176,12 @@ function k(e) {
         ],
     });
 }
-let U = () => {
+let G = () => {
         let e = (0, b.Z)(),
-            t = (0, y.mq)(C.ne.ACTIVE),
+            t = (0, y.mq)(N.ne.ACTIVE),
             n = (0, h.o)(
-                P.intl.formatToPlainString(R.default["7hqFl5"], { activeLinks: t.length }),
-                P.intl.string(R.default["Q/D/0d"]),
+                w.intl.formatToPlainString(P.default["7hqFl5"], { activeLinks: t.length }),
+                w.intl.string(P.default["Q/D/0d"]),
             ),
             i = (0, f.Qr)(!!e),
             a = (0, y.Rd)(i);
@@ -196,7 +197,7 @@ let U = () => {
                           : (0, r.jsx)(l.tEF, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: w.icon,
+                                className: D.icon,
                             }),
                       (0, r.jsx)(l.Text, {
                           variant: "eyebrow",
@@ -205,20 +206,20 @@ let U = () => {
                   ],
               });
     },
-    G = (e) => {
+    B = (e) => {
         let { userId: t, subText: n, avatarSize: i = l.EFr.SIZE_40, hideUserTag: a = !1 } = e,
             o = (0, E.In)(t);
         return void 0 === o
             ? null
             : (0, r.jsxs)("div", {
-                  className: w.accountRow,
+                  className: D.accountRow,
                   children: [
                       (0, r.jsx)(T.r, {
                           user: o,
                           avatarSize: i,
                       }),
                       (0, r.jsxs)("div", {
-                          className: w.headerText,
+                          className: D.headerText,
                           children: [
                               (0, r.jsx)(S.Z, {
                                   user: o,
@@ -236,12 +237,12 @@ let U = () => {
                   ],
               });
     },
-    B = () => {
-        let e = (0, y.mq)(C.ne.ACTIVE),
+    Z = () => {
+        let e = (0, y.mq)(N.ne.ACTIVE),
             t = (0, s.e7)([d.Z], () => d.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, m.G)({}),
             a = (e) => {
-                n(e), c.default.track(N.rMx.FAMILY_CENTER_ACTION, { action: C.YC.SelectTeen });
+                n(e), c.default.track(R.rMx.FAMILY_CENTER_ACTION, { action: N.YC.SelectTeen });
             },
             o = e.map((e) => ({
                 label: e.id,
@@ -249,14 +250,14 @@ let U = () => {
             })),
             u = i.useCallback(
                 (e) =>
-                    (0, r.jsx)(G, {
+                    (0, r.jsx)(B, {
                         userId: e.value,
                         avatarSize: l.EFr.SIZE_24,
                     }),
                 [],
             );
         return (0, r.jsx)(l.PhF, {
-            className: w.select,
+            className: D.select,
             renderOptionLabel: u,
             renderOptionValue: (e) => {
                 let [t] = e;
@@ -268,20 +269,20 @@ let U = () => {
             options: o,
         });
     },
-    Z = (e) => {
+    F = (e) => {
         let { userId: t } = e,
             n = (0, b.Z)(),
-            i = (0, y.mq)(C.ne.ACTIVE),
+            i = (0, y.mq)(N.ne.ACTIVE),
             a = (0, f.Qr)(!!n),
             o = (0, y.Rd)(a);
         return n && 1 !== i.length
-            ? (0, r.jsx)(B, {})
-            : (0, r.jsx)(G, {
+            ? (0, r.jsx)(Z, {})
+            : (0, r.jsx)(B, {
                   userId: t,
                   subText: o,
               });
     },
-    F = (e) => {
+    V = (e) => {
         let { user: t } = e,
             n = (0, _.PO)("family_center_activity_card"),
             i = (0, f._p)(n),
@@ -289,24 +290,24 @@ let U = () => {
             o = (0, f.t3)(),
             s = (0, y.Rd)(o);
         return (0, r.jsxs)("div", {
-            className: n ? w.containerV2 : w.container,
+            className: n ? D.containerV2 : D.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.connectedCounter,
-                    children: [(0, r.jsx)(U, {}), (0, r.jsx)(M, {})],
+                    className: D.connectedCounter,
+                    children: [(0, r.jsx)(G, {}), (0, r.jsx)(k, {})],
                 }),
                 (0, r.jsxs)("div", {
-                    className: D.box,
+                    className: x.box,
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.header,
-                            children: (0, r.jsx)(Z, { userId: t.id }),
+                            className: D.header,
+                            children: (0, r.jsx)(F, { userId: t.id }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: w.content,
+                            className: D.content,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: n ? w.activityCounterRowV2 : w.activityCounterRow,
+                                    className: n ? D.activityCounterRowV2 : D.activityCounterRow,
                                     children: i.map((e) => {
                                         let [t, n] = e;
                                         return (0, r.jsx)(
@@ -319,15 +320,16 @@ let U = () => {
                                         );
                                     }),
                                 }),
+                                n ? (0, r.jsx)(C.Z, {}) : null,
                                 (0, r.jsx)("div", {
-                                    className: w.activityOverview,
+                                    className: D.activityOverview,
                                     children: a
                                         ? i.map((e) => {
                                               let [t] = e;
-                                              return (0, r.jsx)(k, { displayType: t }, "".concat(t, "-list"));
+                                              return (0, r.jsx)(U, { displayType: t }, "".concat(t, "-list"));
                                           })
                                         : (0, r.jsx)(A.Z, {
-                                              className: w.emptyActivity,
+                                              className: D.emptyActivity,
                                               text: null != s ? s : "",
                                           }),
                                 }),

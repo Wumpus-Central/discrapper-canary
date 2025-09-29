@@ -109,29 +109,31 @@ async function g() {
 }
 let E = {
     async initialPageLoad() {
-        var e, t, n, i;
+        var e, t, n, i, o, s;
         a.Z.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let { body: o } = await r.tn.get({
+        let { body: l } = await r.tn.get({
                 url: d.ANM.FAMILY_CENTER_TEEN_ACTIVITY_ME,
                 rejectWithError: !1,
             }),
-            { teen_audit_log: s, linked_users: l, users: c } = o,
-            u = {
-                teenId: null == s ? void 0 : s.teen_user_id,
-                rangeStartId: null == s ? void 0 : s.range_start_id,
-                totals: null != (e = null == s ? void 0 : s.totals) ? e : {},
-                actions: null != (t = null == s ? void 0 : s.actions) ? t : [],
-                users: null != (n = null == s ? void 0 : s.users) ? n : [],
-                guilds: null != (i = null == s ? void 0 : s.guilds) ? i : [],
+            { teen_audit_log: c, linked_users: u, users: f } = l,
+            _ = {
+                teenId: null == c ? void 0 : c.teen_user_id,
+                rangeStartId: null == c ? void 0 : c.range_start_id,
+                totals: null != (e = null == c ? void 0 : c.totals) ? e : {},
+                actions: null != (t = null == c ? void 0 : c.actions) ? t : [],
+                users: null != (n = null == c ? void 0 : c.users) ? n : [],
+                guilds: null != (i = null == c ? void 0 : c.guilds) ? i : [],
+                topUserActivities: null != (o = null == c ? void 0 : c.top_user_activities) ? o : [],
+                topGuildActivities: null != (s = null == c ? void 0 : c.top_guild_activities) ? s : [],
             };
         return (
             a.Z.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
-                familyCenterTeenActivity: u,
-                linkedUsers: l,
-                users: c,
+                familyCenterTeenActivity: _,
+                linkedUsers: u,
+                users: f,
             }),
-            u
+            _
         );
     },
     async fetchLinkedUsers() {
@@ -161,41 +163,47 @@ let E = {
         return a.Z.dispatch(_({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" }, i)), i;
     },
     async fetchTeenActivity(e) {
+        var t, n;
         a.Z.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let t = d.ANM.FAMILY_CENTER_TEEN_ACTIVITY(e),
-            { body: n } = await r.tn.get({
-                url: t,
+        let i = d.ANM.FAMILY_CENTER_TEEN_ACTIVITY(e),
+            { body: o } = await r.tn.get({
+                url: i,
                 rejectWithError: !1,
             }),
-            i = n.teen_audit_log,
-            o = {
-                teenId: i.teen_user_id,
-                rangeStartId: i.range_start_id,
-                totals: i.totals,
-                actions: i.actions,
-                users: i.users,
-                guilds: i.guilds,
+            s = o.teen_audit_log,
+            l = {
+                teenId: s.teen_user_id,
+                rangeStartId: s.range_start_id,
+                totals: s.totals,
+                actions: s.actions,
+                users: s.users,
+                guilds: s.guilds,
+                topUserActivities: null != (t = s.top_user_activities) ? t : [],
+                topGuildActivities: null != (n = s.top_guild_activities) ? n : [],
             };
         return (
             a.Z.dispatch({
                 type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS",
-                familyCenterTeenActivity: o,
+                familyCenterTeenActivity: l,
             }),
-            o
+            l
         );
     },
     async fetchMoreTeenActivity(e, t, n, i) {
-        let { body: o } = await r.tn.get({
+        var o, s;
+        let { body: c } = await r.tn.get({
                 url: d.ANM.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, i),
                 rejectWithError: !1,
             }),
-            { teen_audit_log: s } = o,
-            c = {
-                teenId: s.teen_user_id,
-                rangeStartId: s.range_start_id,
-                actions: s.actions,
-                users: s.users,
-                guilds: s.guilds,
+            { teen_audit_log: f } = c,
+            _ = {
+                teenId: f.teen_user_id,
+                rangeStartId: f.range_start_id,
+                actions: f.actions,
+                users: f.users,
+                guilds: f.guilds,
+                topUserActivities: null != (o = f.top_user_activities) ? o : [],
+                topGuildActivities: null != (s = f.top_guild_activities) ? s : [],
             };
         return (
             l.default.track(d.rMx.FAMILY_CENTER_ACTION, {
@@ -205,9 +213,9 @@ let E = {
             }),
             a.Z.dispatch({
                 type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS",
-                familyCenterTeenActivity: c,
+                familyCenterTeenActivity: _,
             }),
-            s
+            f
         );
     },
     selectTab(e) {

@@ -1,37 +1,38 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(399606),
-    a = n(481060),
-    o = n(594174),
-    s = n(51144),
-    l = n(546791),
-    c = n(198952),
-    u = n(905599);
-let d = (e) => {
-    let { userId: t, timestamp: n, timestampFormatter: d } = e,
-        f = (0, i.e7)([o.default], () => o.default.getUser(t));
+var i = n(120356),
+    a = n.n(i),
+    o = n(399606),
+    s = n(481060),
+    l = n(594174),
+    c = n(51144),
+    u = n(198952),
+    d = n(133870);
+let f = (e) => {
+    let { userId: t, subText: n, className: i } = e,
+        f = (0, o.e7)([l.default], () => l.default.getUser(t));
     return void 0 === f
         ? null
         : (0, r.jsxs)("div", {
-              className: u.container,
+              className: a()(d.container, i),
               children: [
-                  (0, r.jsx)(c.r, {
+                  (0, r.jsx)(u.r, {
                       user: f,
-                      avatarSize: a.EFr.SIZE_40,
+                      avatarSize: s.EFr.SIZE_40,
                   }),
                   (0, r.jsx)("div", {
                       children: (0, r.jsxs)("div", {
-                          className: u.descriptors,
+                          className: d.descriptors,
                           children: [
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
-                                  children: s.ZP.getName(f),
+                                  children: c.ZP.getName(f),
                               }),
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-muted",
-                                  children: (0, l.LI)(new Date(n).getTime(), d),
+                                  children: n,
                               }),
                           ],
                       }),
