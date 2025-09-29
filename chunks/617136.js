@@ -1,35 +1,37 @@
 n.d(t, {
-    Ic: () => L,
-    O5: () => M,
-    Zk: () => k,
-    _3: () => x,
-    _F: () => j,
-    _b: () => C,
-    dA: () => w,
-    jZ: () => D,
-    mH: () => P,
-    uk: () => N,
+    Ic: () => k,
+    O5: () => G,
+    Zk: () => B,
+    _3: () => M,
+    _F: () => U,
+    _b: () => R,
+    dA: () => L,
+    jZ: () => j,
+    mH: () => x,
+    uk: () => P,
 }),
     n(388685);
 var r = n(647438),
     i = n(772848),
     a = n(516796),
     o = n(930446),
-    s = n(367907),
-    l = n(186102),
-    c = n(857192),
-    u = n(819640),
-    d = n(626135),
-    f = n(358085),
-    _ = n(915750),
-    p = n(509212),
-    h = n(569984),
-    m = n(497505),
-    g = n(36243),
-    E = n(566078),
-    b = n(46140),
-    y = n(981631);
-function O(e, t, n) {
+    s = n(912471),
+    l = n(367907),
+    c = n(186102),
+    u = n(857192),
+    d = n(819640),
+    f = n(626135),
+    _ = n(358085),
+    p = n(915750),
+    h = n(509212),
+    m = n(569984),
+    g = n(497505),
+    E = n(727160),
+    b = n(36243),
+    y = n(566078),
+    O = n(46140),
+    v = n(981631);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +44,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +55,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,24 +72,24 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = Object.keys(m.jn),
-    A = new Set([y.rMx.QUEST_CONTENT_VIEWED, y.rMx.QUEST_CONTENT_CLICKED]);
-function C(e) {
+let C = Object.keys(g.jn),
+    N = new Set([v.rMx.QUEST_CONTENT_VIEWED, v.rMx.QUEST_CONTENT_CLICKED]);
+function R(e) {
     var t;
-    return null != (t = S.find((t) => m.jn[t] === e)) ? t : "";
+    return null != (t = C.find((t) => g.jn[t] === e)) ? t : "";
 }
-function N(e) {
+function P(e) {
     var t, n, r;
     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null
         ? "COMPLETED_CLAIMED"
@@ -97,30 +99,40 @@ function N(e) {
             ? "ENROLLED"
             : "NONE";
 }
-function R(e, t, n) {
+function w(e) {
+    var t, n;
+    return E.T.getConfig({ location: "quest_analytics" }).use_ad_session_id
+        ? e
+        : null != (n = null == (t = (0, s.Ai)()) ? void 0 : t.uuid)
+          ? n
+          : null;
+}
+function D(e, t, n) {
     var r, i;
-    let a = E.r.build(e.config);
-    return v(
+    let a = y.r.build(e.config),
+        s = (0, o.Gy)(n).uuid;
+    return T(
         {
             quest_id: e.id,
             quest_type: a.questType,
             game_id: a.application.id,
             game_name: a.application.name,
             application_ids: null != (i = null == (r = a.applications) ? void 0 : r.map((e) => e.id)) ? i : [],
-            client_ad_session_id: (0, o.Gy)(n).uuid,
+            client_ad_session_id: s,
+            billing_session_id: w(s),
         },
-        (0, p.qe)(e.id, t),
+        (0, h.qe)(e.id, t),
     );
 }
-function P(e, t, n) {
+function x(e, t, n) {
     return {
         content_id: e,
-        content_name: C(e),
+        content_name: R(e),
         content_position: t,
         row_index: n,
     };
 }
-function w(e) {
+function L(e) {
     let {
             questId: t,
             event: n,
@@ -129,16 +141,16 @@ function w(e) {
             shouldExtendSession: a = !1,
             sourceQuestContent: o,
         } = e,
-        l = h.Z.quests.get(t);
-    if (null == l || ((0, g.X)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS)))
+        s = m.Z.quests.get(t);
+    if (null == s || ((0, b.X)({ location: O.dr.QUEST_PREVIEW_TOOL }) && d.Z.getLayers().includes(v.S9g.USER_SETTINGS)))
         return;
-    let f = v({}, R(l, o, a), r);
-    if ((c.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, f), l.preview)) return;
-    let _ = A.has(n);
-    if (i) return s.ZP.trackWithMetadata(n, f, _);
-    d.default.track(n, f, { flush: _ });
+    let c = T({}, D(s, o, a), r);
+    if ((u.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, c), s.preview)) return;
+    let _ = N.has(n);
+    if (i) return l.ZP.trackWithMetadata(n, c, _);
+    f.default.track(n, c, { flush: _ });
 }
-var D = (function (e) {
+var j = (function (e) {
     return (
         (e.LEARN_MORE = "LEARN_MORE"),
         (e.SHOW_REWARD = "SHOW_REWARD"),
@@ -196,41 +208,41 @@ var D = (function (e) {
         e
     );
 })({});
-async function x(e) {
+async function M(e) {
     let {
             questId: t,
             questContent: n,
             questContentCTA: r,
             questContentPosition: o,
             questContentRowIndex: s,
-            impressionId: c,
+            impressionId: l,
             trackGuildAndChannelMetadata: u = !1,
             sourceQuestContent: d,
         } = e,
-        _ = h.Z.getQuest(t),
-        m = await (0, a.S)(C(n));
-    w({
+        f = m.Z.getQuest(t),
+        p = await (0, a.S)(R(n));
+    L({
         questId: t,
-        event: y.rMx.QUEST_CONTENT_CLICKED,
-        properties: T(v({}, P(n, o, s), (0, l.Z)()), {
+        event: v.rMx.QUEST_CONTENT_CLICKED,
+        properties: A(T({}, x(n, o, s), (0, c.Z)()), {
             cta_name: r,
-            quest_status: null != _ ? N(_) : null,
-            impression_id: c,
-            apple_advertising_id: null != m && (0, f.isIOS)() ? m.advertisingId : null,
-            android_advertising_id: null != m && (0, f.isAndroid)() ? m.advertisingId : null,
+            quest_status: null != f ? P(f) : null,
+            impression_id: l,
+            apple_advertising_id: null != p && (0, _.isIOS)() ? p.advertisingId : null,
+            android_advertising_id: null != p && (0, _.isAndroid)() ? p.advertisingId : null,
             click_id: (0, i.Z)(),
         }),
         trackGuildAndChannelMetadata: u,
-        shouldExtendSession: (0, p.VB)(n),
+        shouldExtendSession: (0, h.VB)(n),
         sourceQuestContent: d,
     });
 }
-function L(e) {
+function k(e) {
     let { questContent: t, sourceQuestContent: n, questId: r, mode: i, prevMode: a } = e,
-        o = P(t);
-    w({
+        o = x(t);
+    L({
         questId: r,
-        event: y.rMx.QUEST_BAR_MODE_CHANGED,
+        event: v.rMx.QUEST_BAR_MODE_CHANGED,
         properties: {
             content_id: o.content_id,
             content_name: o.content_name,
@@ -240,17 +252,17 @@ function L(e) {
         sourceQuestContent: n,
     });
 }
-function j() {
-    let e = (0, _.WD)();
+function U() {
+    let e = (0, p.WD)();
     return r.useCallback(
         (t) => {
-            w(T(v({}, t), { properties: T(v({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
+            L(A(T({}, t), { properties: A(T({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
         },
         [e],
     );
 }
-function M() {
-    let e = j();
+function G() {
+    let e = U();
     return r.useCallback(
         (t) => {
             let {
@@ -258,24 +270,24 @@ function M() {
                     questContent: r,
                     questContentCTA: o,
                     questContentPosition: s,
-                    questContentRowIndex: c,
+                    questContentRowIndex: l,
                     trackGuildAndChannelMetadata: u = !1,
                     sourceQuestContent: d,
                 } = t,
-                _ = h.Z.getQuest(n);
-            (0, a.S)(C(r)).then((t) => {
+                f = m.Z.getQuest(n);
+            (0, a.S)(R(r)).then((t) => {
                 e({
                     questId: n,
-                    event: y.rMx.QUEST_CONTENT_CLICKED,
-                    properties: T(v({}, P(r, s, c), (0, l.Z)()), {
+                    event: v.rMx.QUEST_CONTENT_CLICKED,
+                    properties: A(T({}, x(r, s, l), (0, c.Z)()), {
                         cta_name: o,
-                        quest_status: null != _ ? N(_) : null,
+                        quest_status: null != f ? P(f) : null,
                         click_id: (0, i.Z)(),
-                        apple_advertising_id: null != t && (0, f.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, f.isAndroid)() ? t.advertisingId : null,
+                        apple_advertising_id: null != t && (0, _.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, _.isAndroid)() ? t.advertisingId : null,
                     }),
                     trackGuildAndChannelMetadata: u,
-                    shouldExtendSession: (0, p.VB)(r),
+                    shouldExtendSession: (0, h.VB)(r),
                     sourceQuestContent: d,
                 });
             });
@@ -283,13 +295,13 @@ function M() {
         [e],
     );
 }
-function k(e, t) {
+function B(e, t) {
     r.useEffect(() => {
-        U(t, e);
+        Z(t, e);
     }, [e, t]);
 }
-function U(e, t) {
-    s.ZP.trackWithMetadata(y.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+function Z(e, t) {
+    l.ZP.trackWithMetadata(v.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
         quest_id: e,
         reason: t,
     });
