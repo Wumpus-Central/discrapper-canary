@@ -57,56 +57,57 @@ let E = {
     },
 };
 function y(e) {
-    let { widgetType: t, onAddWidget: n, size: l = "default", loading: c = !1, trackUserProfileEditAction: u } = e,
-        { placeholder: _, getAriaLabel: y } = E[t],
-        v = "small" === l,
-        I = (0, d.SM)().data,
-        S = i.useMemo(() => {
-            switch (t) {
+    var t;
+    let { widgetType: n, onAddWidget: l, size: c = "default", loading: u = !1, trackUserProfileEditAction: _ } = e,
+        { placeholder: y, getAriaLabel: v } = E[n],
+        I = "small" === c,
+        S = null == (t = (0, d.uV)().data) ? void 0 : t.map((e) => e.application_id),
+        C = i.useMemo(() => {
+            switch (n) {
                 case o.l.CURRENT_GAMES:
                 case o.l.FAVORITE_GAMES:
                 case o.l.PLAYED_GAMES:
                 case o.l.WANT_TO_PLAY_GAMES:
                     return new f.zy({
-                        type: t,
+                        type: n,
                         games: [],
                     });
                 case o.l.APPLICATION:
-                    let e = null == I ? void 0 : I[0];
+                    let e = null == S ? void 0 : S[0];
                     if (null == e) return null;
                     return new p.q({
-                        type: t,
+                        type: n,
                         applicationId: e,
                     });
             }
-        }, [t, I]),
-        C = i.useCallback(() => {
-            c ||
-                null == S ||
-                ((0, h.qH)(t, S),
-                u({
+        }, [n, S]),
+        T = i.useCallback(() => {
+            u ||
+                null == C ||
+                ((0, h.qH)(n, C),
+                _({
                     action: "WIDGET_ADDED",
-                    widgetEdited: t,
+                    widgetEdited: n,
                 }),
                 (0, g.L$)(b.qb.WIDGET_ADDED),
-                null == n || n());
-        }, [c, t, S, u, n]);
-    return null == S
+                null == l || l());
+        }, [u, n, C, _, l]);
+    return null == C
         ? null
         : (0, r.jsxs)(s.P3F, {
-              className: a()(O.addButtonContainer, v && O.sizeSmall, c && O.loading),
-              onClick: C,
-              "aria-label": y(S),
-              "aria-busy": c,
+              className: a()(O.addButtonContainer, I && O.sizeSmall, u && O.loading),
+              onClick: T,
+              "aria-label": v(C),
+              "aria-busy": u,
               children: [
-                  "details" === _.variant
+                  "details" === y.variant
                       ? (0, r.jsx)(m.i, {
-                            applicationId: _.applicationId,
-                            size: l,
+                            applicationId: y.applicationId,
+                            size: c,
                         })
                       : (0, r.jsx)(m.c, {
-                            applicationIds: _.applicationIds,
-                            size: l,
+                            applicationIds: y.applicationIds,
+                            size: c,
                         }),
                   (0, r.jsxs)("div", {
                       className: O.overlay,
@@ -119,7 +120,7 @@ function y(e) {
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-primary",
-                              children: (0, h.mR)(S),
+                              children: (0, h.mR)(C),
                           }),
                       ],
                   }),

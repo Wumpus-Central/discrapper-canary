@@ -3,7 +3,6 @@ n.d(t, {
     Cf: () => T,
     ID: () => S,
     Ls: () => y,
-    SM: () => L,
     Xz: () => R,
     Z: () => b,
     c_: () => N,
@@ -12,6 +11,7 @@ n.d(t, {
     ho: () => v,
     pG: () => O,
     rf: () => w,
+    uV: () => L,
     x3: () => D,
     z5: () => C,
 });
@@ -198,20 +198,20 @@ function D(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(h.QP.PRESET);
 }
 async function x() {
-    if (null == _.Z.applicationWidgetApplicationIds || !(_.Z.applicationWidgetApplicationIds.length > 0)) {
-        a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS_FETCH_START" });
+    if (null == _.Z.applicationWidgetApplicationConfigs || !(_.Z.applicationWidgetApplicationConfigs.length > 0)) {
+        a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
         try {
             let e = await i.tn.get({
                 url: p.ANM.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS,
                 rejectWithError: !0,
             });
             a.Z.dispatch({
-                type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS_FETCH_SUCCESS",
-                applicationIds: e.body.application_ids,
+                type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_SUCCESS",
+                applicationConfigs: e.body.application_configs,
             });
         } catch (e) {
             throw (
-                (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS_FETCH_FAILURE" }),
+                (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_FAILURE" }),
                 f.Z.captureException(e),
                 e)
             );
@@ -219,8 +219,8 @@ async function x() {
     }
 }
 let L = (0, r.Kb)(_.Z, {
-    queryId: () => p.McO.APPLICATION_WIDGET_APPLICATION_IDS,
-    get: () => _.Z.applicationWidgetApplicationIds,
+    queryId: () => p.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
+    get: () => _.Z.applicationWidgetApplicationConfigs,
     load: () => x(),
     useStateHook: r.e7,
 });

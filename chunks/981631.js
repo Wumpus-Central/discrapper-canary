@@ -6276,7 +6276,7 @@ let rW = Object.freeze({
         SKU: (e) => (null == e ? null : ["SKU", e]),
         STORE_LISTING: (e) => (null == e ? null : ["store-listing", e]),
         SUBSCRIPTION_PLANS: (e) => (null == e ? null : ["subscription-plans", e]),
-        APPLICATION_WIDGET_APPLICATION_IDS: ["application-widget-application-ids"],
+        APPLICATION_WIDGET_APPLICATION_CONFIGS: ["application-widget-application-configs"],
         USER_APPLICATION_IDENTITIES: (e) => ["user-application-identities", e],
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null == e ? null : ["useParentSkuData", e]),
     }),

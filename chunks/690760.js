@@ -3,12 +3,13 @@ var r = n(647438),
     i = n(835473),
     l = n(350327);
 function a(e) {
-    let t = (0, l.SM)().data,
-        n = r.useMemo(() => {
-            let n = new Set();
-            for (let t of e) n.add(t.applicationId);
-            if (null != t) for (let e of t) n.add(e);
-            return [...n];
-        }, [t, e]);
-    return (0, i.Z)(n);
+    var t;
+    let n = null == (t = (0, l.uV)().data) ? void 0 : t.map((e) => e.application_id),
+        a = r.useMemo(() => {
+            let t = new Set();
+            for (let n of e) t.add(n.applicationId);
+            if (null != n) for (let e of n) t.add(e);
+            return [...t];
+        }, [n, e]);
+    return (0, i.Z)(a);
 }

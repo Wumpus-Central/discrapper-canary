@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eg }), n(953529), n(388685), n(997841), n(539854);
+n.d(t, { Z: () => eE }), n(953529), n(388685), n(997841), n(539854);
 var r = n(392711),
     i = n.n(r),
     a = n(296009),
@@ -84,8 +84,9 @@ let S = Symbol("NO GUILD ID"),
     k = new Map(),
     U = [],
     G = [],
-    B = null;
-function Z(e) {
+    B = null,
+    Z = new Map();
+function F(e) {
     let t = e.data.type;
     switch (t) {
         case a.l.CURRENT_GAMES:
@@ -110,22 +111,22 @@ function Z(e) {
             });
     }
 }
-let F = !1,
-    V = null;
-function H(e) {
+let V = !1,
+    H = null;
+function Y(e) {
     let t = w.get(e);
     if (null == t) return;
     let n = t.profileEffect;
     if ((null == n ? void 0 : n.expiresAt) == null) return;
     let r = 1000 * n.expiresAt + b.Cm - Date.now();
     if (r <= 0) {
-        (t.profileEffect = void 0), x.delete(e), em.emitChange();
+        (t.profileEffect = void 0), x.delete(e), eg.emitChange();
         return;
     }
     let i = x.get(e);
-    null != i && i.start(Math.min(P, r), () => H(e));
+    null != i && i.start(Math.min(P, r), () => Y(e));
 }
-function Y(e, t) {
+function W(e, t) {
     var n, r;
     let i = D.get(e);
     if (null == i) return;
@@ -135,24 +136,24 @@ function Y(e, t) {
     if ((null == o ? void 0 : o.expiresAt) == null) return;
     let s = 1000 * o.expiresAt + b.Cm - Date.now();
     if (s <= 0) {
-        i.set(t, T(v({}, a), { profileEffect: void 0 })), null == (r = L.get(e)) || r.delete(t), em.emitChange();
+        i.set(t, T(v({}, a), { profileEffect: void 0 })), null == (r = L.get(e)) || r.delete(t), eg.emitChange();
         return;
     }
     let l = null == (n = L.get(e)) ? void 0 : n.get(t);
-    null != l && l.start(Math.min(P, s), () => Y(e, t));
+    null != l && l.start(Math.min(P, s), () => W(e, t));
 }
-function W() {
-    A.clear(), C.clear(), w.clear(), D.clear(), j.clear(), M.clear(), k.clear(), (F = !1);
-}
-function K(e) {
-    let { userId: t } = e;
-    C.add(t);
+function K() {
+    A.clear(), C.clear(), w.clear(), D.clear(), j.clear(), M.clear(), k.clear(), (V = !1);
 }
 function z(e) {
     let { userId: t } = e;
-    C.delete(t);
+    C.add(t);
 }
 function q(e) {
+    let { userId: t } = e;
+    C.delete(t);
+}
+function X(e) {
     return i()(e)
         .map((e) => ({
             key: e.id,
@@ -165,12 +166,12 @@ function q(e) {
         })
         .value();
 }
-function X(e) {
-    C.delete(e.userId), j.set(e.userId, q(e.mutualFriends)), M.set(e.userId, e.mutualFriends.length);
-}
 function Q(e) {
-    var t, n, r, i, a, l, c, u, f, _, g, E, b, O, I, P, G, B, F, W, K;
-    let { userProfile: z, fetchStartedAt: X } = e,
+    C.delete(e.userId), j.set(e.userId, X(e.mutualFriends)), M.set(e.userId, e.mutualFriends.length);
+}
+function J(e) {
+    var t, n, r, i, a, l, c, u, f, _, g, E, b, O, I, P, G, B, Z, V, K;
+    let { userProfile: z, fetchStartedAt: q } = e,
         Q = null != (b = null == (t = z.guild_member_profile) ? void 0 : t.guild_id) ? b : S;
     if ((null == (n = A.get(z.user.id)) || n.delete(Q), C.delete(z.user.id), null != z.mutual_guilds)) {
         let e = {};
@@ -197,8 +198,8 @@ function Q(e) {
         let e = z.mutual_friends_count;
         M.set(z.user.id, e), 0 === e && j.set(z.user.id, U);
     }
-    null != z.mutual_friends && (j.set(z.user.id, q(z.mutual_friends)), M.set(z.user.id, z.mutual_friends.length));
-    let $ = null != z.premium_since ? new Date(z.premium_since) : null,
+    null != z.mutual_friends && (j.set(z.user.id, X(z.mutual_friends)), M.set(z.user.id, z.mutual_friends.length));
+    let J = null != z.premium_since ? new Date(z.premium_since) : null,
         ee = null != z.premium_guild_since ? new Date(z.premium_guild_since) : null,
         et = z.application,
         en = null == (r = z.user_profile) ? void 0 : r.profile_effect,
@@ -206,10 +207,10 @@ function Q(e) {
             null != z.badges
                 ? z.badges.map((e) => {
                       let t = (0, m.fv)(e.id);
-                      if ((e.id === N || null != t) && null != $) {
-                          let n = y.intl.formatToPlainString(y.t["8zbGNT"], { date: $ });
+                      if ((e.id === N || null != t) && null != J) {
+                          let n = y.intl.formatToPlainString(y.t["8zbGNT"], { date: J });
                           return (
-                              null != t && (n = y.intl.formatToPlainString(y.t.Hu4jfn, { date: $ })),
+                              null != t && (n = y.intl.formatToPlainString(y.t.Hu4jfn, { date: J })),
                               T(v({}, e), { description: n })
                           );
                       }
@@ -219,7 +220,7 @@ function Q(e) {
                   })
                 : [];
     if (
-        (null != V && V.userId === z.user.id && (Date.now() > V.expiresAtMs ? (V = null) : J(er, V)),
+        (null != H && H.userId === z.user.id && (Date.now() > H.expiresAtMs ? (H = null) : $(er, H)),
         w.set(z.user.id, {
             userId: z.user.id,
             banner: null == (i = z.user_profile) ? void 0 : i.banner,
@@ -238,10 +239,10 @@ function Q(e) {
             pronouns: null != (I = null == (f = z.user_profile) ? void 0 : f.pronouns) ? I : "",
             connectedAccounts: null != (P = z.connected_accounts.filter((e) => s.Z.isSupported(e.type))) ? P : [],
             applicationRoleConnections: null != (G = z.application_role_connections) ? G : [],
-            premiumSince: $,
+            premiumSince: J,
             premiumType: z.premium_type,
             premiumGuildSince: ee,
-            fetchStartedAt: X,
+            fetchStartedAt: q,
             fetchEndedAt: Date.now(),
             legacyUsername: z.legacy_username,
             application:
@@ -259,13 +260,13 @@ function Q(e) {
                       }
                     : null,
             badges: er,
-            widgets: null == (_ = z.widgets) ? void 0 : _.map(Z).filter(h.lm),
+            widgets: null == (_ = z.widgets) ? void 0 : _.map(F).filter(h.lm),
             wishlistSettings: z.wishlist_settings,
         }),
         (null == (E = z.user_profile) || null == (g = E.profile_effect) ? void 0 : g.expires_at) != null)
     ) {
         let e = new o.V7();
-        x.set(z.user.id, e), H(z.user.id);
+        x.set(z.user.id, e), Y(z.user.id);
     }
     if (null != z.guild_member_profile) {
         let e = z.guild_member_profile.profile_effect,
@@ -276,7 +277,7 @@ function Q(e) {
                 accentColor: z.guild_member_profile.accent_color,
                 themeColors: null == (B = z.guild_member_profile) ? void 0 : B.theme_colors,
                 popoutAnimationParticleType:
-                    null == (F = z.guild_member_profile) ? void 0 : F.popout_animation_particle_type,
+                    null == (Z = z.guild_member_profile) ? void 0 : Z.popout_animation_particle_type,
                 profileEffect:
                     null != e
                         ? {
@@ -295,7 +296,7 @@ function Q(e) {
             let e = new Map();
             e.set(z.guild_member_profile.guild_id, t), D.set(z.user.id, e);
         }
-        if ((null == (K = z.guild_member_profile) || null == (W = K.profile_effect) ? void 0 : W.expires_at) != null) {
+        if ((null == (K = z.guild_member_profile) || null == (V = K.profile_effect) ? void 0 : V.expires_at) != null) {
             let e = new o.V7(),
                 t = L.get(z.user.id);
             if (null != t) t.set(z.guild_member_profile.guild_id, e);
@@ -303,17 +304,17 @@ function Q(e) {
                 let t = new Map();
                 t.set(z.guild_member_profile.guild_id, e), L.set(z.user.id, t);
             }
-            Y(z.user.id, z.guild_member_profile.guild_id);
+            W(z.user.id, z.guild_member_profile.guild_id);
         }
     }
 }
-function J(e, t) {
+function $(e, t) {
     if (null == e) return;
     let n = new Set(e.map((e) => e.id)),
         r = null == t ? void 0 : t.badges.filter((e) => !n.has(e.id));
     return r.length > 0 && e.push(...r), e;
 }
-function $(e) {
+function ee(e) {
     let { userId: t, guildId: n, withMutualFriends: r } = e,
         i = null != n ? n : S,
         a = A.get(t);
@@ -324,7 +325,7 @@ function $(e) {
     }
     r && C.add(t);
 }
-function ee(e) {
+function et(e) {
     var t, n;
     let { userId: r, guildId: i, apiError: a, fetchStartedAt: o } = e;
     null == (t = A.get(r)) || t.delete(null != i ? i : S), C.delete(r);
@@ -354,7 +355,7 @@ function ee(e) {
         w.set(r, s),
         (null == a ? void 0 : a.status) === 404 && (M.set(r, 0), j.set(r, U), k.set(r, G));
 }
-function et(e) {
+function en(e) {
     let {
             userId: t,
             accent_color: n,
@@ -390,10 +391,10 @@ function et(e) {
         (null == c ? void 0 : c.expires_at) != null)
     ) {
         let e = new o.V7();
-        x.set(t, e), H(t);
+        x.set(t, e), Y(t);
     }
 }
-function en(e) {
+function er(e) {
     let {
             userId: t,
             guild_id: n,
@@ -438,27 +439,27 @@ function en(e) {
             let r = new Map();
             r.set(n, e), L.set(t, r);
         }
-        Y(t, n);
+        W(t, n);
     }
 }
-function er(e) {
-    F = !0;
-}
 function ei(e) {
-    (F = !1), null != e.guild_id ? en(e) : et(e);
+    V = !0;
 }
 function ea(e) {
-    F = !1;
+    (V = !1), null != e.guild_id ? er(e) : en(e);
 }
 function eo(e) {
+    V = !1;
+}
+function es(e) {
     let { userId: t, widgets: n } = e,
         r = w.get(t);
     if (null == r) return !1;
-    w.set(t, T(v({}, r), { widgets: n.map(Z).filter(h.lm) }));
+    w.set(t, T(v({}, r), { widgets: n.map(F).filter(h.lm) }));
 }
-function es(e) {
+function el(e) {
     let { badges: t, ttlInSeconds: n, userId: r } = e;
-    V = {
+    H = {
         userId: r,
         badges: t,
         expiresAtMs: Date.now() + 1000 * n,
@@ -467,38 +468,38 @@ function es(e) {
     if (null != i) {
         var a;
         let e = null != (a = i.badges) ? a : [];
-        J(e, V), w.set(r, T(v({}, i), { badges: e }));
+        $(e, H), w.set(r, T(v({}, i), { badges: e }));
     }
 }
-function el(e) {
+function ec(e) {
     var t, n;
     let r = e.user.id;
-    return !((null != (n = null == (t = A.get(r)) ? void 0 : t.size) ? n : 0) > 0) && e_(r);
-}
-function ec(e) {
-    return [...w.keys()].reduce((e, t) => e_(t) || e, !1);
+    return !((null != (n = null == (t = A.get(r)) ? void 0 : t.size) ? n : 0) > 0) && ep(r);
 }
 function eu(e) {
-    return e_(e.user.id);
+    return [...w.keys()].reduce((e, t) => ep(t) || e, !1);
 }
 function ed(e) {
-    return e_(e.relationship.id);
+    return ep(e.user.id);
 }
-function ef() {
+function ef(e) {
+    return ep(e.relationship.id);
+}
+function e_() {
     A.clear(), C.clear(), w.clear(), D.clear();
 }
-function e_(e) {
+function ep(e) {
     if (null == e) return !1;
     let t = w.get(e);
     if (null == t) return !1;
     (t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0);
 }
-function ep(e) {
-    B = e.applicationIds;
+function eh(e) {
+    for (let t of ((B = e.applicationConfigs), Z.clear(), e.applicationConfigs)) Z.set(t.application_id, t);
 }
-class eh extends f.Z {
+class em extends f.Z {
     initialize() {
-        this.waitFor(p.ZP), this.syncWith([l.default], ef);
+        this.waitFor(p.ZP), this.syncWith([l.default], e_);
     }
     isFetchingProfile(e, t) {
         let n = A.get(e);
@@ -508,7 +509,7 @@ class eh extends f.Z {
         return C.has(e);
     }
     get isSubmitting() {
-        return F;
+        return V;
     }
     getUserProfile(e) {
         return w.get(e);
@@ -543,7 +544,7 @@ class eh extends f.Z {
             t = w.get(e);
         return null != t
             ? {
-                  version: eh.LATEST_SNAPSHOT_VERSION,
+                  version: em.LATEST_SNAPSHOT_VERSION,
                   data: [
                       {
                           userId: e,
@@ -552,42 +553,45 @@ class eh extends f.Z {
                   ],
               }
             : {
-                  version: eh.LATEST_SNAPSHOT_VERSION,
+                  version: em.LATEST_SNAPSHOT_VERSION,
                   data: [],
               };
     }
-    get applicationWidgetApplicationIds() {
+    get applicationWidgetApplicationConfigs() {
         return B;
+    }
+    getApplicationWidgetApplicationConfig(e) {
+        return Z.get(e);
     }
     constructor() {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            USER_PROFILE_FETCH_START: $,
-            USER_PROFILE_FETCH_FAILURE: ee,
-            USER_PROFILE_FETCH_SUCCESS: Q,
-            USER_PROFILE_UPDATE_START: er,
-            USER_PROFILE_UPDATE_SUCCESS: ei,
-            USER_PROFILE_UPDATE_FAILURE: ea,
-            WIDGET_PENDING_SAVE_SUCCESS: eo,
-            USER_PROFILE_PIN_BADGES_ON_CLIENT: es,
-            MUTUAL_FRIENDS_FETCH_START: K,
-            MUTUAL_FRIENDS_FETCH_SUCCESS: X,
-            MUTUAL_FRIENDS_FETCH_FAILURE: z,
-            USER_UPDATE: el,
-            GUILD_MEMBER_UPDATE: el,
-            GUILD_JOIN: ec,
-            GUILD_DELETE: ec,
-            INVITE_ACCEPT_SUCCESS: ec,
-            GUILD_MEMBER_ADD: eu,
-            GUILD_MEMBER_REMOVE: eu,
-            RELATIONSHIP_ADD: ed,
-            RELATIONSHIP_REMOVE: ed,
-            RELATIONSHIP_UPDATE: ed,
-            USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS_FETCH_SUCCESS: ep,
-            LOGOUT: W,
+            USER_PROFILE_FETCH_START: ee,
+            USER_PROFILE_FETCH_FAILURE: et,
+            USER_PROFILE_FETCH_SUCCESS: J,
+            USER_PROFILE_UPDATE_START: ei,
+            USER_PROFILE_UPDATE_SUCCESS: ea,
+            USER_PROFILE_UPDATE_FAILURE: eo,
+            WIDGET_PENDING_SAVE_SUCCESS: es,
+            USER_PROFILE_PIN_BADGES_ON_CLIENT: el,
+            MUTUAL_FRIENDS_FETCH_START: z,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: Q,
+            MUTUAL_FRIENDS_FETCH_FAILURE: q,
+            USER_UPDATE: ec,
+            GUILD_MEMBER_UPDATE: ec,
+            GUILD_JOIN: eu,
+            GUILD_DELETE: eu,
+            INVITE_ACCEPT_SUCCESS: eu,
+            GUILD_MEMBER_ADD: ed,
+            GUILD_MEMBER_REMOVE: ed,
+            RELATIONSHIP_ADD: ef,
+            RELATIONSHIP_REMOVE: ef,
+            RELATIONSHIP_UPDATE: ef,
+            USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_SUCCESS: eh,
+            LOGOUT: K,
         }),
             O(this, "loadCache", () => {
-                let e = this.readSnapshot(eh.LATEST_SNAPSHOT_VERSION);
+                let e = this.readSnapshot(em.LATEST_SNAPSHOT_VERSION);
                 null != e &&
                     e.forEach((e) => {
                         let { userId: t, profile: n } = e;
@@ -596,6 +600,6 @@ class eh extends f.Z {
             });
     }
 }
-O(eh, "displayName", "UserProfileStore"), O(eh, "LATEST_SNAPSHOT_VERSION", 1);
-let em = new eh(),
-    eg = em;
+O(em, "displayName", "UserProfileStore"), O(em, "LATEST_SNAPSHOT_VERSION", 1);
+let eg = new em(),
+    eE = eg;
