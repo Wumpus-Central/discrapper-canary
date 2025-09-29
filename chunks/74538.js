@@ -28,7 +28,7 @@ n.d(t, {
     Wz: () => tI,
     XK: () => eQ,
     Z8: () => eg,
-    ZP: () => tk,
+    ZP: () => tU,
     Zx: () => eJ,
     _O: () => tT,
     a5: () => eF,
@@ -45,6 +45,7 @@ n.d(t, {
     if: () => eY,
     jP: () => en,
     jp: () => eI,
+    k: () => tk,
     k5: () => e3,
     lY: () => ey,
     m3: () => eT,
@@ -1498,7 +1499,7 @@ function e8(e) {
         if (null != t) return ee(t.planId);
     }
 }
-function e5(e) {
+function e6(e) {
     switch (e) {
         case R.p9.TIER_0:
             return N.Rj.PREMIUM_TIER_0;
@@ -1508,7 +1509,7 @@ function e5(e) {
             return N.Rj.PREMIUM_TIER_2;
     }
 }
-function e6(e) {
+function e5(e) {
     return (0, f.ks)(f.g_, e);
 }
 function e7(e) {
@@ -1651,7 +1652,10 @@ function tM(e) {
         a = V(e.id, !1, t, n);
     if (0 !== i.amount) return Math.floor(100 * (1 - a.amount / (12 * i.amount)));
 }
-let tk = Object.freeze({
+function tk(e) {
+    return null == e ? 0 : Math.max((0, y.wY)(new Date(), new Date(e)), 0);
+}
+let tU = Object.freeze({
     isNewUser: (e) => null != e && Date.now() - e.createdAt.getTime() < G,
     isPremiumAtLeast: S.yd,
     isPremium: S.I5,
@@ -1694,11 +1698,11 @@ let tk = Object.freeze({
     getPremiumSkuIdForSubscription: e3,
     getPremiumTypeFromSubscription: e4,
     getPremiumTypeFromSubscriptionRenewalMutations: e8,
-    getPremiumGradientColor: e5,
+    getPremiumGradientColor: e6,
     getUnactivatedFractionalPremiumHours: tL,
     castPremiumSubscriptionAsSkuId: tI,
     calculateDiscountPercentageForYearlyPlan: tM,
-    canUseAnimatedEmojis: e6,
+    canUseAnimatedEmojis: e5,
     canUseEmojisEverywhere: e7,
     canUseSoundboardEverywhere: e9,
     canUseCustomCallSounds: te,
