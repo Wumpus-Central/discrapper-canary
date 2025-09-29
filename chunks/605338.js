@@ -18,7 +18,7 @@ function s(e, t, n) {
 }
 class l extends r.Z {
     static createFromServer(e) {
-        var t, n, r, i, a, o, s, c;
+        var t, n, r, i, a, o, s, c, u;
         return new l({
             id: e.id,
             trialId: e.trial_id,
@@ -38,6 +38,7 @@ class l extends r.Z {
             inboundRestrictedCountries: e.inbound_restricted_countries,
             outboundRestrictedCountries: e.outbound_restricted_countries,
             promotionType: e.promotion_type,
+            partnerId: null != (u = e.partner_id) ? u : null,
         });
     }
     get isThirdPartyOutbound() {
@@ -85,6 +86,7 @@ class l extends r.Z {
             s(this, "inboundRestrictedCountries", void 0),
             s(this, "outboundRestrictedCountries", void 0),
             s(this, "promotionType", void 0),
+            s(this, "partnerId", void 0),
             (this.id = e.id),
             (this.trialId = e.trialId),
             (this.startDate = e.startDate),
@@ -101,6 +103,7 @@ class l extends r.Z {
             (this.flags = null != (t = e.flags) ? t : 0),
             (this.inboundRestrictedCountries = null != (n = e.inboundRestrictedCountries) ? n : []),
             (this.outboundRestrictedCountries = null != (r = e.outboundRestrictedCountries) ? r : []),
-            (this.promotionType = e.promotionType);
+            (this.promotionType = e.promotionType),
+            (this.partnerId = e.partnerId);
     }
 }
