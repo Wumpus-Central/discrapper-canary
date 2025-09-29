@@ -16,7 +16,7 @@ var r = n(722770),
     m = n(246133),
     p = n(981631),
     h = n(388032),
-    x = n(54482);
+    x = n(138005);
 let f = [
         {
             duration: 15 * d.Z.Millis.MINUTE,
@@ -43,8 +43,8 @@ let f = [
             label: () => h.intl.string(h.t["46dqJS"]),
         },
     ],
-    b = "forever";
-function g(e, t) {
+    g = "forever";
+function b(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function v(e) {
@@ -67,7 +67,7 @@ function v(e) {
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : b,
+                    null != r ? r : g,
                 );
             }),
         });
@@ -112,10 +112,10 @@ function v(e) {
 function j(e) {
     if (null == e || "0" === e) return;
     let t = new Date(Number(e)),
-        n = g(t, new Date()),
+        n = b(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = g(t, a);
+    let r = b(t, a);
     return n
         ? h.intl.formatToPlainString(h.t.ZxxHIC, { timeString: h.intl.data.formatTime(t, { format: "short" }) })
         : h.intl.formatToPlainString(h.t["9OFjSU"], {
@@ -131,7 +131,7 @@ function _(e) {
         d = (0, s.p)(),
         u = o.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || d,
         m = c.fv.useSetting(),
-        g = e === p.Skl.DND,
+        b = e === p.Skl.DND,
         _ = (a) => {
             let r = j(n);
             if (e === a && null != r) return r;
@@ -157,7 +157,7 @@ function _(e) {
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : b,
+                    null != n ? n : g,
                 );
             }),
         }),
@@ -214,10 +214,10 @@ function _(e) {
                                                       (0, a.jsx)(i.IGR, {
                                                           text: d
                                                               ? h.intl.string(h.t.ApAu9f)
-                                                              : g
+                                                              : b
                                                                 ? h.intl.string(h.t.gH3Fra)
                                                                 : h.intl.string(h.t["64pl8/"]),
-                                                          color: d ? r.Z.BRAND_500 : g ? r.Z.RED_400 : r.Z.PRIMARY_500,
+                                                          color: d ? r.Z.BRAND_500 : b ? r.Z.RED_400 : r.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),

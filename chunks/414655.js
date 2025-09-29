@@ -13,7 +13,7 @@ var r = n(951288),
     h = n(661462),
     g = n(319396),
     m = n(388032),
-    b = n(10094);
+    b = n(363725);
 function _(e) {
     let { profileOwner: t } = e,
         { defaultWishlistId: n, currentUser: _ } = (0, l.cj)([f.Z, p.default], () => ({

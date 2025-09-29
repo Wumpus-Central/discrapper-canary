@@ -14,12 +14,12 @@ var i = n(442837),
     p = n(145499),
     f = n(424218),
     h = n(267642),
-    b = n(63063),
-    x = n(999382),
+    x = n(63063),
+    b = n(999382),
     j = n(981631),
     v = n(611480),
     _ = n(388032),
-    O = n(96761);
+    O = n(881332);
 let y = {
         page: j.ZY5.GUILD_SETTINGS,
         section: j.jXE.GUILD_SETTINGS_STICKERS,
@@ -84,7 +84,7 @@ let y = {
                 }),
                 (0, r.jsx)(s.R94, {
                     type: s.geA.DESCRIPTION,
-                    children: _.intl.format(_.t.UBj0aW, { articleUrl: b.Z.getArticleURL(j.BhN.STICKERS_UPLOAD) }),
+                    children: _.intl.format(_.t.UBj0aW, { articleUrl: x.Z.getArticleURL(j.BhN.STICKERS_UPLOAD) }),
                 }),
             ],
         }),
@@ -123,7 +123,7 @@ let y = {
               }));
     },
     I = () => {
-        let e = (0, i.e7)([x.Z], () => x.Z.getGuild()),
+        let e = (0, i.e7)([b.Z], () => b.Z.getGuild()),
             t = (0, i.e7)([g.Z], () => {
                 var t;
                 return null != e && null != (t = g.Z.getStickersByGuildId(e.id)) ? t : [];

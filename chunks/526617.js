@@ -52,7 +52,7 @@ var r = n(951288),
     W = n(957825),
     K = n(474936),
     z = n(388032),
-    q = n(412553);
+    q = n(25220);
 function X(e, t, n) {
     return (
         t in e
@@ -427,8 +427,8 @@ function eu(e) {
             },
             [eZ, eF, eB.length],
         ),
-        e5 = i.useCallback((e) => ej((0, G.cK)(e, Array.from(eD.values()).flat(), eI, a, eg)), [a, eI, eD, eg]),
-        e6 = i.useCallback(
+        e6 = i.useCallback((e) => ej((0, G.cK)(e, Array.from(eD.values()).flat(), eI, a, eg)), [a, eI, eD, eg]),
+        e5 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await n.e("56049").then(n.bind(n, 338991));
@@ -454,7 +454,7 @@ function eu(e) {
                     : (0, r.jsx)(c.P3F, {
                           tabIndex: 0,
                           className: q.settingsClickArea,
-                          onClick: e6,
+                          onClick: e5,
                           "aria-label": z.intl.string(z.t.kbFsAA),
                           children: (0, r.jsx)(c.gj8, {
                               size: "md",
@@ -462,7 +462,7 @@ function eu(e) {
                               className: q.settingsIcon,
                           }),
                       }),
-            [ep, e6],
+            [ep, e5],
         ),
         e9 = i.useCallback(
             (e) =>
@@ -570,7 +570,7 @@ function eu(e) {
                     containerWidth: d,
                     store: E.Wq,
                     onSelectItem: eX,
-                    onSearchExpressions: e5,
+                    onSearchExpressions: e6,
                     hasSearchResults: eL.length > 0,
                     defaultSearchPlaceholder: z.intl.string(z.t.sKt3xc),
                     renderRow: eQ,

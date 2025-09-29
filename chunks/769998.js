@@ -11,11 +11,11 @@ var i = n(442837),
     u = n(981631),
     m = n(590433),
     g = n(388032),
-    p = n(464992);
+    p = n(75765);
 function f(e) {
     var t;
-    let { action: n, triggerType: f, guildId: h, toggled: b, onToggleAction: x } = e,
-        j = (e) => () => x(e),
+    let { action: n, triggerType: f, guildId: h, toggled: x, onToggleAction: b } = e,
+        j = (e) => () => b(e),
         v = (0, c.c)(n.type, n, f),
         _ = null == (t = n.metadata) ? void 0 : t.durationSeconds,
         O = null != _ ? (0, m.L9)(_) : null,
@@ -45,7 +45,7 @@ function f(e) {
                         variant: "text-xs/medium",
                         children: N,
                     }),
-                    b &&
+                    x &&
                         (0, r.jsxs)(s.Text, {
                             color: "interactive-normal",
                             variant: "text-xs/medium",
@@ -104,7 +104,7 @@ function f(e) {
                             {
                                 children: (0, r.jsx)(l.$q, {
                                     type: l.M0.INVERTED,
-                                    value: b,
+                                    value: x,
                                     onChange: j(!1),
                                     disabled: !y,
                                     className: p.__invalid_actionCheckbox,

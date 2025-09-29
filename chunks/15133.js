@@ -9,11 +9,11 @@ var a = t(951288),
     d = t(639777),
     u = t(744993),
     b = t(693587),
-    g = t(462923),
-    m = t(331500),
-    f = t(401561),
+    m = t(462923),
+    g = t(331500),
+    f = t(440589),
     p = t(388032),
-    x = t(828843);
+    x = t(50803);
 function j(e) {
     var n;
     let { guildId: t } = e;
@@ -52,7 +52,7 @@ function j(e) {
                                   className: x.gameContainer,
                                   children: _.map((e, n) =>
                                       (0, a.jsx)(
-                                          g.Z,
+                                          m.Z,
                                           {
                                               guildId: t,
                                               instance: e,
@@ -66,7 +66,7 @@ function j(e) {
                               className: x.spinnerContainer,
                               children: (0, a.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
                           }),
-                    j && (0, a.jsx)(m.Z, { guildId: t }),
+                    j && (0, a.jsx)(g.Z, { guildId: t }),
                 ],
             }),
         ],

@@ -77,7 +77,7 @@ var r = n(951288),
     eC = n(657218),
     eI = n(407908),
     eE = n(66556),
-    eS = n(131694),
+    eS = n(739830),
     eZ = n(377929),
     eT = n(900157),
     eP = n(108427),
@@ -108,12 +108,12 @@ var r = n(951288),
     e1 = n(981631),
     e8 = n(918559),
     e4 = n(354459),
-    e3 = n(921944),
-    e2 = n(408491),
+    e2 = n(921944),
+    e3 = n(408491),
     e7 = n(440493),
-    e6 = n(157925),
+    e5 = n(157925),
     e9 = n(388032),
-    e5 = n(97009);
+    e6 = n(161655);
 function te(e, t, n) {
     return (
         t in e
@@ -162,11 +162,11 @@ function tn(e, t) {
     );
 }
 let tr = (0, M.Un)({
-    createPromise: () => Promise.all([n.e("22173"), n.e("9456")]).then(n.bind(n, 346975)),
+    createPromise: () => Promise.all([n.e("22173"), n.e("76892")]).then(n.bind(n, 346975)),
     webpackId: 346975,
     renderLoader: () =>
         (0, r.jsx)("div", {
-            className: e5.loader,
+            className: e6.loader,
             children: (0, r.jsx)(g.$jN, {}),
         }),
     name: "ForumChannel",
@@ -188,7 +188,7 @@ class ti extends i.PureComponent {
         o()(null != t, "Missing channel in Channel.openChannelContextMenu"),
             o()(null != i, "Missing guild in Channel.openChannelContextMenu"),
             (0, b.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("24783"), n.e("41815")]).then(n.bind(n, 439635));
+                let { default: e } = await Promise.all([n.e("24783"), n.e("63384")]).then(n.bind(n, 439635));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -211,7 +211,7 @@ class ti extends i.PureComponent {
         let i = eV.default.getUser(t.getRecipientId());
         o()(null != i, "Missing user in Channel.openDMContextMenu"),
             (0, b.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("56826"), n.e("88855")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("56826"), n.e("85952")]).then(
                     n.bind(n, 131404),
                 );
                 return (n) =>
@@ -449,7 +449,7 @@ class ti extends i.PureComponent {
                 let { guildId: e, userId: t } = l.details;
                 return (0, r.jsx)("div", {
                     style: { width: e1.$Y6 },
-                    className: e5.guildSidebar,
+                    className: e6.guildSidebar,
                     children: (0, r.jsx)(Y.Z, {
                         guildId: e,
                         userId: t,
@@ -501,15 +501,15 @@ class ti extends i.PureComponent {
                 }),
                 (0, r.jsxs)("div", {
                     "data-has-border": e.type !== e1.d4z.GUILD_VOICE,
-                    className: a()(e5.chat, {
-                        [e5.threadSidebarOpen]: f || g,
-                        [e5.threadSidebarFloating]: f && p,
+                    className: a()(e6.chat, {
+                        [e6.threadSidebarOpen]: f || g,
+                        [e6.threadSidebarFloating]: f && p,
                     }),
                     children: [
                         m
                             ? (0, r.jsx)(j.Z, {
                                   style: { right: f ? u : void 0 },
-                                  className: e5.uploadArea,
+                                  className: e6.uploadArea,
                                   channel: e,
                                   draftType: ek.d.ChannelMessage,
                               })
@@ -518,7 +518,7 @@ class ti extends i.PureComponent {
                         this.renderCall(),
                         this.renderEmbeddedActivityPanel(),
                         (0, r.jsxs)("div", {
-                            className: a()(e5.content, { [e5.noChat]: l === e1.AEg.NO_CHAT }),
+                            className: a()(e6.content, { [e6.noChat]: l === e1.AEg.NO_CHAT }),
                             children: [this.renderChat(), this.renderSidebar()],
                         }),
                     ],
@@ -740,7 +740,7 @@ class ti extends i.PureComponent {
                 let { showFollowButton: e, channel: t } = this.props;
                 return e
                     ? (0, r.jsx)("div", {
-                          className: e5.followButton,
+                          className: e6.followButton,
                           children: (0, r.jsx)(g.zxk, {
                               variant: "secondary",
                               size: "sm",
@@ -778,7 +778,7 @@ class ti extends i.PureComponent {
                     b = c || d,
                     y = s || b;
                 return (0, r.jsxs)("div", {
-                    className: e5.subtitleContainer,
+                    className: e6.subtitleContainer,
                     children: [
                         (0, r.jsx)(g.f6W, {
                             theme: u && s ? e1.BRd.DARK : void 0,
@@ -793,7 +793,7 @@ class ti extends i.PureComponent {
                                         showDivider: h && !(0, ey.X$)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: a()(e5.title, s, { [e5.gdm]: e.type === e1.d4z.GROUP_DM }),
+                                        className: a()(e6.title, s, { [e6.gdm]: e.type === e1.d4z.GROUP_DM }),
                                         transparent: y,
                                         hidden: d,
                                         "aria-label": e9.intl.string(e9.t.BIYAqa),
@@ -818,7 +818,7 @@ class ti extends i.PureComponent {
                                             }),
                                             p
                                                 ? (0, r.jsx)("div", {
-                                                      className: e5.followButton,
+                                                      className: e6.followButton,
                                                       children: (0, r.jsx)(g.zxk, {
                                                           onClick: () => (0, em.XU)(e.guild_id, e.id),
                                                           variant: "secondary",
@@ -891,7 +891,7 @@ let tl = (0, x.Z)(ti),
             ),
             H = null != c && c.isPrivate() && !k && j,
             F = (null == c ? void 0 : c.isGuildVocal()) || H || U,
-            V = (0, p.e7)([B.Z], () => B.Z.getFrameLayoutMode() === e2.U.FOCUSED),
+            V = (0, p.e7)([B.Z], () => B.Z.getFrameLayoutMode() === e3.U.FOCUSED),
             { welcomeModalChannelId: W } = (0, u.TH)(),
             Y = (0, p.e7)([eh.Z], () => null != c && eh.Z.isLurking(c.guild_id), [c]),
             q = (0, p.e7)([eA.Z], () => eA.Z.hasSeen(null == c ? void 0 : c.guild_id, Y), [c, Y]),
@@ -931,7 +931,7 @@ let tl = (0, x.Z)(ti),
             i.useEffect(() => {
                 var e, t, n;
                 let r = (0, em.s1)();
-                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e6.Df) {
+                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e5.Df) {
                     let { channelId: e } =
                         null != (n = (0, ep.Qj)(null == r || null == (t = r.location) ? void 0 : t.pathname)) ? n : {};
                     null != e && a(e);
@@ -956,7 +956,7 @@ let tl = (0, x.Z)(ti),
         i.useEffect(() => {
             let e = eO && !e_,
                 t = eO && e_ && (null == c ? void 0 : c.id) !== ej;
-            (e || t) && (0, G.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e3.L.AUTO });
+            (e || t) && (0, G.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e2.L.AUTO });
         }, [null == c ? void 0 : c.id, ej, e_, eO]);
         let ex = (0, f.f9)();
         return (0, r.jsx)(

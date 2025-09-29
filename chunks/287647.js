@@ -11,10 +11,10 @@ var a = n(951288),
     m = n(829716),
     p = n(981631),
     h = n(921944),
-    x = n(693450),
+    x = n(62222),
     f = n(388032),
-    b = n(374104);
-let g = new o.Z("DisplayNameStylesCoachmark");
+    g = n(374104);
+let b = new o.Z("DisplayNameStylesCoachmark");
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.ZP)(),
@@ -35,7 +35,7 @@ function v(e) {
         (0, r.useEffect)(() => {
             var e, t, n;
             _ && (null == (e = j.current) ? void 0 : e.paused)
-                ? null == (t = j.current) || t.play().catch(g.error)
+                ? null == (t = j.current) || t.play().catch(b.error)
                 : _ || null == (n = j.current) || n.pause();
         }, [_]),
         (0, a.jsxs)(a.Fragment, {
@@ -52,7 +52,7 @@ function v(e) {
                     graphic: {
                         type: "video",
                         ref: j,
-                        src: b.Z,
+                        src: g.Z,
                         aspectRatio: "21/9",
                         loop: !0,
                     },

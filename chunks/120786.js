@@ -12,9 +12,9 @@ var a = n(951288),
     p = n(507808),
     h = n(981631),
     x = n(388032),
-    f = n(97127),
-    b = n(665923),
-    g = n(477154),
+    f = n(270469),
+    g = n(892260),
+    b = n(477154),
     v = n(387888);
 let j = () => {
         let e = (0, s.e7)([d.Z], () => d.Z.useReducedMotion);
@@ -22,7 +22,7 @@ let j = () => {
             className: f.assetContainer,
             children: e
                 ? (0, a.jsx)("img", {
-                      src: g.Z,
+                      src: b.Z,
                       className: f.orbAsset,
                       alt: "Orb",
                   })
@@ -36,7 +36,7 @@ let j = () => {
                               type: "video/webm",
                           }),
                           (0, a.jsx)("img", {
-                              src: g.Z,
+                              src: b.Z,
                               className: f.orbAsset,
                               alt: "Orb",
                           }),
@@ -61,7 +61,7 @@ let j = () => {
                     });
             }, [i]);
         return (0, a.jsxs)("div", {
-            className: l()(f.container, b.baseCardOutline),
+            className: l()(f.container, g.baseCardOutline),
             children: [
                 (0, a.jsx)(j, {}),
                 (0, a.jsx)(o.zxk, {

@@ -7,17 +7,17 @@ var a = n(951288),
     o = n(581883),
     c = n(428967),
     d = n(972118),
-    u = n(764668),
-    m = n(197571);
+    u = n(561735),
+    m = n(10198);
 let p = r.memo(function (e) {
     let { className: t, content: n, onChange: i } = e,
         o = l.z[n],
         { isDismissed: m, handleToggleDismissState: p } = (0, d.Z)(o),
         [x, f] = r.useState(!1),
-        b = r.useCallback(() => {
+        g = r.useCallback(() => {
             null == i || i(n), p();
         }, [i, p, n]),
-        g = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 e.preventDefault(), f(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
@@ -25,7 +25,7 @@ let p = r.memo(function (e) {
         );
     return (0, a.jsx)(s.j7V, {
         value: m,
-        onChange: b,
+        onChange: g,
         className: t,
         children: (0, a.jsxs)("div", {
             className: u.container,
@@ -45,7 +45,7 @@ let p = r.memo(function (e) {
                     size: "sm",
                     variant: "icon-only",
                     icon: x ? s.C2q : s.zTD,
-                    onClick: g,
+                    onClick: b,
                     "aria-label": x ? "Copied" : "Copy",
                 }),
             ],

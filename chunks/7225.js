@@ -18,8 +18,8 @@ var n = i(951288),
     m = i(981631),
     b = i(979007),
     j = i(388032),
-    v = i(465103),
-    C = i(525751);
+    v = i(58954),
+    C = i(456208);
 function w(t) {
     let { onClose: e, transitionState: i, appId: w, guildId: Z } = t,
         y = (0, c.e7)([u.Z], () => u.Z.getApplication(w), [w]),

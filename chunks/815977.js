@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(585483),
     f = n(999382),
     h = n(213956),
-    b = n(743475),
-    x = n(983135),
+    x = n(743475),
+    b = n(983135),
     j = n(8426),
     v = n(570961),
     _ = n(208665),
@@ -28,7 +28,7 @@ var r = n(951288),
     T = n(707076),
     P = n(981631),
     w = n(388032),
-    R = n(344037);
+    R = n(24773);
 function D() {
     let e = (0, a.e7)([f.Z], () => f.Z.getGuildId());
     return null == e ? null : (0, r.jsx)(Z, { guildId: e });
@@ -81,7 +81,7 @@ function Z(e) {
             !_ &&
                 l !== y.PG.LANDING &&
                 (0, r.jsx)(A, {
-                    setOnboardingStep: x.$K,
+                    setOnboardingStep: b.$K,
                     page: l,
                     homeSettingsEnabled: !0,
                 }),
@@ -101,7 +101,7 @@ function Z(e) {
                                     p.S.dispatch(P.CkL.EMPHASIZE_NOTICE);
                                 return;
                             }
-                            (0, v.NB)(), (0, b.BG)(), (0, j.bj)(), (0, x.$K)(y.PG.LANDING);
+                            (0, v.NB)(), (0, x.BG)(), (0, j.bj)(), (0, b.$K)(y.PG.LANDING);
                         },
                         children: [
                             (0, r.jsx)(g.Z, {

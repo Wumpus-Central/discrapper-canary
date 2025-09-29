@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(31829);
+    m = n(866234);
 let g = function (e) {
     let {
             channelId: t,
@@ -19,8 +19,8 @@ let g = function (e) {
             isDropHovered: p,
             onDrop: f,
             onEdit: h,
-            onRemove: b,
-            canRemove: x,
+            onRemove: x,
+            canRemove: b,
             title: j,
             actionsLocation: v,
             fieldStyle: _,
@@ -35,9 +35,9 @@ let g = function (e) {
         isDropHovered: p,
         onDrop: f,
         onEdit: h,
-        onRemove: b,
+        onRemove: x,
         title: j,
-        canRemove: x,
+        canRemove: b,
         actionsLocation: v,
         fieldStyle: _,
         children: [

@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(37234),
     f = n(410030),
     h = n(607070),
-    b = n(100527),
-    x = n(663993),
+    x = n(100527),
+    b = n(663993),
     j = n(243778),
     v = n(518738),
     _ = n(753206),
@@ -37,12 +37,12 @@ var r = n(951288),
     G = n(981631),
     M = n(141006),
     U = n(388032),
-    B = n(989308),
-    F = n(12574),
-    H = n(21321),
+    B = n(258640),
+    F = n(250302),
+    H = n(10083),
     z = n(179517),
     V = n(79829);
-let W = (0, x.Un)({
+let W = (0, b.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -72,7 +72,7 @@ function q(e) {
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, f.ZP)(),
         h = (0, v.oC)(n, t),
-        x = {
+        b = {
             dark: {
                 src: z,
                 name: t.name,
@@ -131,7 +131,7 @@ function q(e) {
                                             },
                                             message: o,
                                             preview: !0,
-                                            roleIcon: null != h ? h : (0, m.ap)(d) ? x.light : x.dark,
+                                            roleIcon: null != h ? h : (0, m.ap)(d) ? b.light : b.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n,
@@ -169,7 +169,7 @@ function q(e) {
                         }),
                         (0, r.jsx)(g.zxk, {
                             onClick: function () {
-                                (0, C.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+                                (0, C.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
                             variant: "expressive",
                             icon: g.$Eu,
@@ -365,8 +365,8 @@ function ee(e) {
         m = (0, E.fI)(n),
         p = i || m,
         f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
-        { scrolledToTop: x, handleScroll: j } = (0, D.V)();
+        { headerHeight: h, headerRef: x } = (0, w.Z)(0),
+        { scrolledToTop: b, handleScroll: j } = (0, D.V)();
     return (0, r.jsx)(g.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: h },
@@ -375,8 +375,8 @@ function ee(e) {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
-                    ref: b,
+                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
+                    ref: x,
                     children: (0, r.jsx)(D.Z, {
                         guild: t,
                         role: n,

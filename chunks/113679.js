@@ -9,16 +9,16 @@ var r = n(951288),
     d = n(140031),
     u = n(981631),
     m = n(388032),
-    g = n(49465);
+    g = n(555091);
 function p(e) {
     let { guild: t } = e,
         n = i.useId(),
         p = (0, l.e7)([c.Z], () => null != t && c.Z.can(u.Plq.MANAGE_GUILD, t), [t]),
         f = t.features.has(u.oNc.COMMUNITY),
-        [h, b] = i.useState(t.features.has(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        x = i.useCallback(
+        [h, x] = i.useState(t.features.has(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        b = i.useCallback(
             async (e) => {
-                b(e), await (0, o.fp)(t, e);
+                x(e), await (0, o.fp)(t, e);
             },
             [t],
         );
@@ -51,7 +51,7 @@ function p(e) {
                       children: (0, r.jsx)(s.T2, {
                           id: n,
                           checked: h,
-                          onChange: x,
+                          onChange: b,
                           disabled: !p,
                       }),
                   }),

@@ -13,12 +13,12 @@ var i = n(951288),
     f = n(371467),
     m = n(981631),
     g = n(388032),
-    y = n(63452);
-let O = [];
-function E(e) {
+    O = n(401176);
+let y = [];
+function v(e) {
     return e.notification.id;
 }
-function v(e, t, n, r) {
+function E(e, t, n, r) {
     let { index: l, notification: o, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         p.Z,
@@ -35,16 +35,16 @@ function v(e, t, n, r) {
 }
 function S(e) {
     return (0, i.jsx)("div", {
-        className: y.container,
+        className: O.container,
         children: e,
     });
 }
 let b = r.memo(function (e) {
     let { locked: t, pinned: n, showEmpty: p = !0 } = e,
-        y = (0, l.e7)(
+        O = (0, l.e7)(
             [f.Z, u.Z],
             () => {
-                if (u.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return O;
+                if (u.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return y;
                 let e = [],
                     i = 0;
                 for (let r of f.Z.getNotifications()) {
@@ -64,15 +64,15 @@ let b = r.memo(function (e) {
             c.E6,
         ),
         b = r.useState(() => new h.AS(t))[0];
-    return (r.useLayoutEffect(() => b.updateState(y, t)),
+    return (r.useLayoutEffect(() => b.updateState(O, t)),
     r.useLayoutEffect(() => (b.initialize((0, d.i)()), () => b.cleanUp()), [b]),
-    0 !== y.length || t)
+    0 !== O.length || t)
         ? (0, i.jsx)(h.S4.Provider, {
               value: b,
               children: (0, i.jsx)(o.W3x, {
-                  items: y,
-                  renderItem: v,
-                  getItemKey: E,
+                  items: O,
+                  renderItem: E,
+                  getItemKey: v,
                   wrapChildren: S,
               }),
           })

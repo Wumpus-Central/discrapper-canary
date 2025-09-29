@@ -13,10 +13,10 @@ var i = n(951288),
     f = n(473403),
     m = n(99214),
     g = n(46145),
-    y = n(886118),
-    O = n(301801),
-    E = n(752048),
-    v = n(592125),
+    O = n(886118),
+    y = n(301801),
+    v = n(752048),
+    E = n(592125),
     S = n(984933),
     b = n(430824),
     x = n(496675),
@@ -27,7 +27,7 @@ var i = n(951288),
     w = n(136015),
     N = n(981631),
     T = n(388032),
-    _ = n(89524);
+    _ = n(665005);
 let P = (e) => [
         e.userId,
         ...(function (e) {
@@ -39,8 +39,8 @@ let P = (e) => [
         })(e),
     ],
     D = {
-        searchType: y.S.FUZZY,
-        sortType: y.E.JARO_WINKLER,
+        searchType: O.S.FUZZY,
+        sortType: O.E.JARO_WINKLER,
         searchStringGenerator: (e) => {
             var t, n;
             let { channel: i, voiceStates: r } = e;
@@ -55,8 +55,8 @@ let P = (e) => [
         throttleMs: 100,
     },
     A = {
-        searchType: y.S.FUZZY,
-        sortType: y.E.JARO_WINKLER,
+        searchType: O.S.FUZZY,
+        sortType: O.E.JARO_WINKLER,
         searchStringGenerator: P,
         throttleMs: 100,
     },
@@ -64,9 +64,9 @@ let P = (e) => [
         let { channel: t, query: n } = e,
             [l] = (0, a.e7)([C.Z], () => [C.Z.getVoiceStatesForChannel(t.id), C.Z.getVoiceStateVersion()], [t.id], w.Q),
             [o, u] = r.useState([]);
-        (0, O.BO)(n, Object.values(l), u, A);
+        (0, y.BO)(n, Object.values(l), u, A);
         let c = (0, a.Wu)(
-                [C.Z, I.default, E.Z, j.Z],
+                [C.Z, I.default, v.Z, j.Z],
                 () =>
                     Object.values(C.Z.getVoiceStatesForChannel(t.id))
                         .map((e) => I.default.getUser(e.userId))
@@ -81,10 +81,10 @@ let P = (e) => [
                                 ? -1
                                 : !j.Z.isFriend(e.id) && j.Z.isFriend(t.id)
                                   ? 1
-                                  : (null != (l = null == (i = E.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability)
+                                  : (null != (l = null == (i = v.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability)
                                         ? l
                                         : 0) -
-                                    (null != (a = null == (r = E.Z.getUserAffinity(e.id)) ? void 0 : r.vcProbability)
+                                    (null != (a = null == (r = v.Z.getUserAffinity(e.id)) ? void 0 : r.vcProbability)
                                         ? a
                                         : 0);
                         }),
@@ -151,13 +151,13 @@ let P = (e) => [
                 onMouseLeave: h,
                 query: f,
             } = e,
-            m = (0, a.e7)([v.Z], () => v.Z.getChannel(n), [n]),
+            m = (0, a.e7)([E.Z], () => E.Z.getChannel(n), [n]),
             g = null == m ? void 0 : m.getGuildId(),
-            y = (0, a.e7)([b.Z], () => b.Z.getGuild(g), [g]),
-            O = (0, c.KS)(m, y),
-            E = (null == l ? void 0 : l.id) === n,
-            S = E ? "text-feedback-positive" : r ? "interactive-active" : "text-muted",
-            x = E ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : r ? s.TVs.colors.INTERACTIVE_ACTIVE : s.TVs.colors.ICON_MUTED;
+            O = (0, a.e7)([b.Z], () => b.Z.getGuild(g), [g]),
+            y = (0, c.KS)(m, O),
+            v = (null == l ? void 0 : l.id) === n,
+            S = v ? "text-feedback-positive" : r ? "interactive-active" : "text-muted",
+            x = v ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : r ? s.TVs.colors.INTERACTIVE_ACTIVE : s.TVs.colors.ICON_MUTED;
         return null == m
             ? null
             : (0, i.jsxs)(s.kL8, {
@@ -177,15 +177,15 @@ let P = (e) => [
                               (0, i.jsxs)("div", {
                                   className: _.channelItemName,
                                   children: [
-                                      null != O
-                                          ? (0, i.jsx)(O, {
+                                      null != y
+                                          ? (0, i.jsx)(y, {
                                                 color: x,
                                                 size: "xs",
                                                 className: _.channelIcon,
                                             })
                                           : void 0,
                                       (0, i.jsx)(s.Text, {
-                                          variant: E ? "text-sm/semibold" : "text-sm/medium",
+                                          variant: v ? "text-sm/semibold" : "text-sm/medium",
                                           color: S,
                                           className: _.channelItemNameText,
                                           children: (0, u.F6)(m, I.default, j.Z),
@@ -193,9 +193,9 @@ let P = (e) => [
                                   ],
                               }),
                               (0, i.jsx)(s.Text, {
-                                  variant: E ? "text-xs/semibold" : "text-xs/medium",
+                                  variant: v ? "text-xs/semibold" : "text-xs/medium",
                                   color: S,
-                                  children: null != (t = null == y ? void 0 : y.name) ? t : m.name,
+                                  children: null != (t = null == O ? void 0 : O.name) ? t : m.name,
                               }),
                           ],
                       }),
@@ -280,7 +280,7 @@ function z(e) {
         { recentVoiceChannelIds: l, friendVoiceChannelIds: u } = (function () {
             let e = (function () {
                     let e = (0, a.Wu)(
-                        [I.default, j.Z, E.Z],
+                        [I.default, j.Z, v.Z],
                         () =>
                             j.Z.getFriendIDs()
                                 .sort((e, t) => {
@@ -293,14 +293,14 @@ function z(e) {
                                             ? -1
                                             : (null !=
                                               (r =
-                                                  null == (n = E.Z.getUserAffinity(t))
+                                                  null == (n = v.Z.getUserAffinity(t))
                                                       ? void 0
                                                       : n.communicationProbability)
                                                   ? r
                                                   : 0) -
                                               (null !=
                                               (l =
-                                                  null == (i = E.Z.getUserAffinity(e))
+                                                  null == (i = v.Z.getUserAffinity(e))
                                                       ? void 0
                                                       : i.communicationProbability)
                                                   ? l
@@ -313,7 +313,7 @@ function z(e) {
                         [],
                     );
                     return (0, a.Wu)(
-                        [C.Z, v.Z, x.Z],
+                        [C.Z, E.Z, x.Z],
                         () =>
                             Array.from(
                                 e
@@ -321,20 +321,20 @@ function z(e) {
                                     .reduce((e, t) => {
                                         let n = null == t ? void 0 : t.channelId;
                                         if (null == n) return e;
-                                        let i = v.Z.getChannel(n);
+                                        let i = E.Z.getChannel(n);
                                         return null != i && x.Z.can(N.Plq.CONNECT, i) && e.add(n), e;
                                     }, new Set()),
                             ).filter(Z.lm),
                         [e],
                     );
                 })(),
-                t = (0, a.Wu)([g.Z, v.Z, x.Z], () => {
+                t = (0, a.Wu)([g.Z, E.Z, x.Z], () => {
                     let t = g.Z.getChannelHistory(),
                         n = new Set(e);
                     return Array.from(
                         new Set(
                             t.reduce((e, t) => {
-                                let i = v.Z.getChannel(t);
+                                let i = E.Z.getChannel(t);
                                 return null != i && x.Z.can(N.Plq.CONNECT, i) && !n.has(t) && e.push(t), e;
                             }, []),
                         ),
@@ -407,7 +407,7 @@ function W(e) {
         ),
         [d, p] = r.useState(""),
         [h, f] = r.useState([]);
-    (0, O.BO)(d, c, f, D);
+    (0, y.BO)(d, c, f, D);
     let m = r.useCallback(
             (e) => {
                 "Escape" === e.key && o();
@@ -429,9 +429,9 @@ function W(e) {
         ),
         [o, m],
     );
-    let y = "" !== d.trim(),
-        E = h.length > 20,
-        v = { count: E ? 20 : h.length },
+    let O = "" !== d.trim(),
+        v = h.length > 20,
+        E = { count: v ? 20 : h.length },
         I = r.useMemo(
             () => ({
                 onMouseDown: U,
@@ -488,16 +488,16 @@ function W(e) {
                             inputProps: { "aria-label": T.intl.string(T.t.UyA6SU) },
                         }),
                     }),
-                    y
+                    O
                         ? (0, i.jsx)(V, {
-                              sectionHeader: E ? T.intl.format(T.t.qdXiQ0, v) : T.intl.format(T.t["Aq+8wM"], v),
+                              sectionHeader: v ? T.intl.format(T.t.qdXiQ0, E) : T.intl.format(T.t["Aq+8wM"], E),
                               channelIds: h
                                   .map((e) => {
                                       let { channel: t } = e;
                                       return t.id;
                                   })
                                   .slice(0, 20),
-                              hasQuery: y,
+                              hasQuery: O,
                               query: d,
                               currentVoiceChannel: l,
                               onSelect: (e) => g(e, "search channel"),

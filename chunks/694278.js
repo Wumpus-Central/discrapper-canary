@@ -9,7 +9,7 @@ var n = r(951288),
     d = r(915509),
     u = r(981631),
     p = r(388032),
-    b = r(197571);
+    b = r(10198);
 function g(t) {
     var e, r;
     let { guild: g, onClose: y, hideColors: f } = t,
