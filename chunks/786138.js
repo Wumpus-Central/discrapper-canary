@@ -124,6 +124,7 @@ function y(e) {
                   }),
         W = (0, r.jsx)(o.sNh, {
             id: "stop-streaming",
+            color: "danger",
             label: b.intl.string(b.t.S5anIS),
             icon: o.g5r,
             action: () => (0, u.Z)(O),
