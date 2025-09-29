@@ -7,9 +7,9 @@ n.d(t, {
 });
 var r = n(647438),
     i = n(524437),
-    a = n(695346),
-    o = n(594174),
-    s = n(704454),
+    a = n(128064),
+    o = n(695346),
+    s = n(594174),
     l = n(981631);
 function c(e, t, n) {
     return (
@@ -43,23 +43,21 @@ function u(e) {
 let d = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let a = o.default.getCurrentUser();
-        return (0, s.bc)("resolveSettingWithDefaults")
+        let o = s.default.getCurrentUser();
+        return (0, a.c_)("resolveSettingWithDefaults")
             ? f({
                   isDm: n,
                   isFriend: r,
               })
-            : (0, s.g2)("resolveSettingWithDefaults")
-              ? i.Q4.BLUR
-              : (null == a ? void 0 : a.nsfwAllowed) === !1
-                ? p({
-                      isDm: n,
-                      isFriend: r,
-                  })
-                : _({
-                      isDm: n,
-                      isFriend: r,
-                  });
+            : (null == o ? void 0 : o.nsfwAllowed) === !1
+              ? p({
+                    isDm: n,
+                    isFriend: r,
+                })
+              : _({
+                    isDm: n,
+                    isFriend: r,
+                });
     },
     f = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
@@ -74,7 +72,7 @@ let d = (e) => {
         return t && n ? i.Q4.BLUR : t ? i.Q4.BLOCK : i.Q4.BLUR;
     },
     h = (e) => {
-        let t = null != e ? e : a.j7.getSetting();
+        let t = null != e ? e : o.j7.getSetting();
         return {
             goreContentGuilds: d({ setting: null == t ? void 0 : t.goreContentGuilds }),
             goreContentNonFriendDm: d({
@@ -90,6 +88,6 @@ let d = (e) => {
     },
     m = (e) => {
         let t = h();
-        a.j7.updateSetting(u({}, t, e));
+        o.j7.updateSetting(u({}, t, e));
     },
     g = () => r.useMemo(() => l.BhN.EXPLICIT_MEDIA_REDACTION, []);

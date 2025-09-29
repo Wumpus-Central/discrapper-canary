@@ -6,9 +6,9 @@ n.d(t, {
     zj: () => b,
 });
 var r = n(524437),
-    i = n(695346),
-    a = n(594174),
-    o = n(704454);
+    i = n(128064),
+    a = n(695346),
+    o = n(594174);
 n(721360);
 var s = n(973005);
 function l(e, t, n) {
@@ -61,44 +61,42 @@ let u = {
         [s.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.Q4.BLOCK,
     },
     p = (e) => {
-        let { setting: t, isDm: n = !1, isFriend: i = !1 } = e;
+        let { setting: t, isDm: n = !1, isFriend: a = !1 } = e;
         if (null != t && t !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let s = a.default.getCurrentUser();
-        return (0, o.bc)("resolveSettingWithDefaults")
+        let s = o.default.getCurrentUser();
+        return (0, i.c_)("resolveSettingWithDefaults")
             ? g({
                   isDm: n,
-                  isFriend: i,
+                  isFriend: a,
               })
-            : (0, o.g2)("resolveSettingWithDefaults")
-              ? r.Q4.BLUR
-              : (null == s ? void 0 : s.nsfwAllowed) === !1
-                ? m({
-                      isDm: n,
-                      isFriend: i,
-                  })
-                : h({
-                      isDm: n,
-                      isFriend: i,
-                  });
+            : (null == s ? void 0 : s.nsfwAllowed) === !1
+              ? m({
+                    isDm: n,
+                    isFriend: a,
+                })
+              : h({
+                    isDm: n,
+                    isFriend: a,
+                });
     },
     h = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.Q4.SHOW;
-        let a = i.UP.getSetting();
-        return n ? u[a] : d[a];
+        let i = a.UP.getSetting();
+        return n ? u[i] : d[i];
     },
     m = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.Q4.BLUR;
-        let a = i.UP.getSetting();
-        return n ? f[a] : _[a];
+        let i = a.UP.getSetting();
+        return n ? f[i] : _[i];
     },
     g = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && !n ? r.Q4.BLOCK : r.Q4.BLUR;
     },
     E = (e) => {
-        let t = null != e ? e : i.Sh.getSetting();
+        let t = null != e ? e : a.Sh.getSetting();
         return {
             explicitContentGuilds: p({ setting: null == t ? void 0 : t.explicitContentGuilds }),
             explicitContentNonFriendDm: p({
@@ -114,5 +112,5 @@ let u = {
     },
     b = (e) => {
         let t = E();
-        i.Sh.updateSetting(c({}, t, e));
+        a.Sh.updateSetting(c({}, t, e));
     };
