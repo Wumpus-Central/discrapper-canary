@@ -851,7 +851,7 @@ let i = {
     TAX_EXCLUSIVE: new Set(["CA", "KR", "US"]),
     TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
     QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: new Set(["CA", "MT", "NH", "OR"]),
-    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "NJ"]),
+    QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: new Set(["CO", "CT", "DE", "MD", "NJ"]),
     QUESTS_3P_DATA_OPT_OUT_COUNTRIES: new Set(["BR", "KR"]),
     NITRO_TAX_EXCLUSIVE_EXPERIMENT_STATES: new Set(["TN", "WI"]),
     NITRO_TAX_EXCLUSIVE_PHASE_1_STATES: new Set(["IL", "NC", "NY", "OH", "PA", "TX", "VA", "WA"]),
