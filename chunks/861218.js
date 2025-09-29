@@ -7,6 +7,7 @@ e.exports = {
     channelListHidden: "channelListHidden_c48ade",
     fullWidth: "fullWidth_c48ade",
     panels: "panels_c48ade",
+    disablePointersWhileSorting: "disablePointersWhileSorting_c48ade",
     content: "content_c48ade",
     activityPanel: "activityPanel_c48ade",
     loader: "loader_c48ade",

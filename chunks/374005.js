@@ -1,32 +1,35 @@
-n.d(t, { b: () => y });
+n.d(t, { b: () => S });
 var r = n(951288),
     i = n(647438),
-    l = n(793030),
-    a = n(393238),
-    o = n(100527),
-    s = n(906732),
-    c = n(720734),
-    u = n(840780),
-    d = n(235555),
-    p = n(746508),
-    f = n(210724),
-    h = n(905423),
-    g = n(316173),
-    m = n(410575),
-    b = n(981631),
-    _ = n(388032),
-    O = n(981028);
-function E(e) {
+    l = n(120356),
+    a = n.n(l),
+    o = n(793030),
+    s = n(393238),
+    c = n(100527),
+    u = n(906732),
+    d = n(316243),
+    p = n(720734),
+    f = n(840780),
+    h = n(235555),
+    g = n(746508),
+    m = n(210724),
+    b = n(905423),
+    _ = n(316173),
+    O = n(410575),
+    E = n(981631),
+    y = n(388032),
+    v = n(861218);
+function I(e) {
     var t, n;
-    let { analyticsLocations: i } = (0, s.ZP)(o.Z.ACTIVITY_PANEL),
-        l = (0, h.Z)((e) => {
+    let { analyticsLocations: i } = (0, u.ZP)(c.Z.ACTIVITY_PANEL),
+        l = (0, b.Z)((e) => {
             let { guildId: t } = e;
             return t;
         });
-    return (0, r.jsx)(s.Gt, {
+    return (0, r.jsx)(u.Gt, {
         value: i,
         children: (0, r.jsx)(
-            u.Z,
+            f.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -69,41 +72,40 @@ function E(e) {
         ),
     });
 }
-let y = i.memo(function () {
+let S = i.memo(function () {
     let e = i.useRef(null);
-    return (
-        (0, a.PM)(
-            e,
-            (e) => {
-                let { height: t } = e;
-                document.body.style.setProperty("--custom-app-panels-height", "".concat(t, "px"));
-            },
-            [],
-        ),
-        (0, r.jsx)("section", {
-            ref: e,
-            className: O.panels,
-            "aria-label": _.intl.string(_.t.StREWF),
-            children: (0, r.jsxs)(l.JcV, {
-                containerRef: e,
-                children: [
-                    (0, r.jsx)(g.Z, {}),
-                    (0, r.jsx)(f.Z, {}),
-                    (0, r.jsx)(d.Z, {}),
-                    (0, r.jsx)(m.Z, {
-                        section: b.jXE.ACTIVITY_PANEL,
-                        children: (0, r.jsx)(E, { className: O.activityPanel }),
-                    }),
-                    (0, r.jsx)(m.Z, {
-                        section: b.jXE.RTC_CONNECTION_PANEL,
-                        children: (0, r.jsx)(p.Z, {}),
-                    }),
-                    (0, r.jsx)(m.Z, {
-                        section: b.jXE.ACCOUNT_PANEL,
-                        children: (0, r.jsx)(c.Z, {}),
-                    }),
-                ],
-            }),
-        })
+    (0, s.PM)(
+        e,
+        (e) => {
+            let { height: t } = e;
+            document.body.style.setProperty("--custom-app-panels-height", "".concat(t, "px"));
+        },
+        [],
     );
+    let { isSorting: t } = (0, d.Z)();
+    return (0, r.jsx)("section", {
+        ref: e,
+        className: a()(v.panels, { [v.disablePointersWhileSorting]: t }),
+        "aria-label": y.intl.string(y.t.StREWF),
+        children: (0, r.jsxs)(o.JcV, {
+            containerRef: e,
+            children: [
+                (0, r.jsx)(_.Z, {}),
+                (0, r.jsx)(m.Z, {}),
+                (0, r.jsx)(h.Z, {}),
+                (0, r.jsx)(O.Z, {
+                    section: E.jXE.ACTIVITY_PANEL,
+                    children: (0, r.jsx)(I, { className: v.activityPanel }),
+                }),
+                (0, r.jsx)(O.Z, {
+                    section: E.jXE.RTC_CONNECTION_PANEL,
+                    children: (0, r.jsx)(g.Z, {}),
+                }),
+                (0, r.jsx)(O.Z, {
+                    section: E.jXE.ACCOUNT_PANEL,
+                    children: (0, r.jsx)(p.Z, {}),
+                }),
+            ],
+        }),
+    });
 });
