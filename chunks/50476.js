@@ -1,31 +1,29 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(951288),
-    i = n(755721),
-    a = n(481060),
-    o = n(388032),
-    s = n(437587);
-function l(e) {
-    let { onClick: t, children: n } = e;
-    return (0, r.jsx)(i.zx, {
-        onClick: t,
-        className: s.button,
-        innerClassName: s.buttonInner,
-        look: "blank",
-        children: n,
-    });
-}
-let c = function (e) {
+    i = n(481060),
+    a = n(388032),
+    o = n(634034);
+let s = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, r.jsxs)("div", {
-        className: s.buttons,
+    return (0, r.jsxs)(i.hE2, {
+        direction: "vertical",
+        fullWidth: !0,
+        className: o.buttonGroup,
+        size: "sm",
         children: [
-            (0, r.jsxs)(l, {
+            (0, r.jsx)(i.zxk, {
                 onClick: t,
-                children: [o.intl.string(o.t.QXc019), (0, r.jsx)(a.pzj, { size: "sm" })],
+                text: a.intl.string(a.t.QXc019),
+                variant: "secondary",
+                icon: i.pzj,
+                iconPosition: "end",
             }),
-            (0, r.jsxs)(l, {
+            (0, r.jsx)(i.zxk, {
                 onClick: n,
-                children: [o.intl.string(o.t["8lAfuL"]), (0, r.jsx)(a.iWm, { size: "sm" })],
+                text: a.intl.string(a.t["8lAfuL"]),
+                variant: "secondary",
+                icon: i.iWm,
+                iconPosition: "end",
             }),
         ],
     });
