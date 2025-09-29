@@ -5,6 +5,7 @@ e.exports = {
     separator: "separator__7116a",
     icon: "icon__7116a",
     input: "input__7116a",
+    inputRow: "inputRow__7116a",
     inputHint: "inputHint__7116a",
     subtitle: "subtitle__7116a",
 };

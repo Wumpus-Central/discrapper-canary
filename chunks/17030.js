@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -6,21 +6,47 @@ var r = n(951288),
     o = n(596454),
     s = n(318766),
     c = n(907040),
-    u = n(592125),
-    d = n(944486),
-    p = n(185923);
-function h(e) {
-    let { customStatusEmoji: t, setCustomStatusEmoji: n } = e,
-        h = i.useRef(null),
-        f = (0, l.e7)([d.Z, u.Z], () => u.Z.getChannel(d.Z.getVoiceChannelId()));
+    u = n(314897),
+    d = n(592125),
+    p = n(944486),
+    h = n(223135),
+    f = n(981631),
+    m = n(185923),
+    g = n(34101);
+function b(e) {
+    let { customStatusEmoji: t, setCustomStatusEmoji: n, selectedDefaultStatus: b, defaultStatusVariant: y } = e,
+        C = i.useRef(null),
+        _ = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        v = i.useCallback(
+            () =>
+                null != t
+                    ? (0, r.jsx)(o.Z, {
+                          emojiId: t.id,
+                          emojiName: t.name,
+                          animated: !!t.animated,
+                      })
+                    : null != b
+                      ? (0, r.jsx)(h.Z, {
+                            className: g.icon,
+                            userId: u.default.getId(),
+                            size: 20,
+                            hangStatusActivity: {
+                                type: f.IIU.HANG_STATUS,
+                                state: b,
+                            },
+                            fallbackVariant: y,
+                        })
+                      : null,
+            [t, y, b],
+        );
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: h,
+        targetElementRef: C,
         renderPopout: (e) => {
             var t;
             let { closePopout: i } = e;
             return (0, r.jsx)(c.Z, {
-                channel: f,
-                guildId: null != (t = null == f ? void 0 : f.guild_id) ? t : void 0,
+                channel: _,
+                guildId: null != (t = null == _ ? void 0 : _.guild_id) ? t : void 0,
                 closePopout: i,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: r } = e;
@@ -43,7 +69,7 @@ function h(e) {
                     })(t),
                         r && i();
                 },
-                pickerIntention: p.Hz.STATUS,
+                pickerIntention: m.Hz.STATUS,
             });
         },
         position: "left",
@@ -81,18 +107,10 @@ function h(e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: h,
+                        ref: C,
                         active: a,
                         tabIndex: 0,
-                        renderButtonContents:
-                            null == t
-                                ? null
-                                : () =>
-                                      (0, r.jsx)(o.Z, {
-                                          emojiId: t.id,
-                                          emojiName: t.name,
-                                          animated: !!t.animated,
-                                      }),
+                        renderButtonContents: null == t && null == b ? null : v,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

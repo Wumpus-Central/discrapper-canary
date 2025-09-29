@@ -1,6 +1,21 @@
-n.d(t, { Z: () => l });
-var r = n(442837),
-    i = n(106301);
-function l() {
-    return (0, r.e7)([i.Z], () => i.Z.getRecentStatuses()).filter((e) => !i.Z.isFavorited(e));
+n.d(t, { Z: () => s });
+var r = n(348327),
+    i = n.n(r),
+    l = n(442837),
+    a = n(106301),
+    o = n(54332);
+function s() {
+    let {
+        recentStatuses: e,
+        currentHangStatus: t,
+        customHangStatus: n,
+    } = (0, l.cj)([a.Z], () => ({
+        recentStatuses: a.Z.getRecentStatuses(),
+        currentHangStatus: a.Z.getCurrentHangStatus(),
+        customHangStatus: a.Z.getCustomHangStatus(),
+    }));
+    return e.filter((e) => {
+        let r = (0, o.Z)(e) ? e === t : i()(e, n);
+        return !a.Z.isFavorited(e) && !r;
+    });
 }
