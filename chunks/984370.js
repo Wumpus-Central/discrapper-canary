@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => R,
-    Z: () => x,
+    Z: () => L,
 }),
     n(35282);
 var r = n(951288);
@@ -23,7 +23,7 @@ var i = n(873546),
     b = n(665149),
     y = n(981631),
     O = n(176505),
-    v = n(979905);
+    v = n(477962);
 function I(e, t, n) {
     return (
         t in e
@@ -127,8 +127,8 @@ function P(e) {
             scrollable: P,
             role: w,
             hideSearch: D,
-            showDivider: x,
-            disableDoubleClick: L,
+            showDivider: L,
+            disableDoubleClick: x,
         } = e,
         j = null == s || (0, O.AB)(s) ? null : s,
         M = (0, a.e7)([m.Z], () => m.Z.isInChannel(j) || !1),
@@ -146,7 +146,7 @@ function P(e) {
                       S,
                       e && !(0, O.AB)(s)
                           ? (0, r.jsx)(
-                                p.Z,
+                                p.ZP,
                                 {
                                     guildId: g,
                                     channelId: s,
@@ -155,7 +155,7 @@ function P(e) {
                                 null != g ? g : s,
                             )
                           : null,
-                      x && (0, r.jsx)(b.ZP.Divider, {}),
+                      L && (0, r.jsx)(b.ZP.Divider, {}),
                       U && !G ? (0, r.jsx)(f.Z, {}) : null,
                       B &&
                           M &&
@@ -178,7 +178,7 @@ function P(e) {
         toolbar: F(),
         transparent: I,
         hidden: T,
-        onDoubleClick: () => R(L),
+        onDoubleClick: () => R(x),
         "aria-label": C,
         "aria-labelledby": N,
         role: w,
@@ -213,4 +213,4 @@ function D(e) {
     (D.ChannelIcon = b.ZP.ChannelIcon),
     (D.Divider = b.ZP.Divider),
     (D.Caret = b.ZP.Caret);
-let x = D;
+let L = D;

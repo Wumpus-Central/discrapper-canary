@@ -67258,7 +67258,7 @@ html .progress__61462 {
 .divider__1bb32 {
     background-color: var(--border-subtle);
     height: 1px;
-    margin: 8px -8px
+    margin: var(--space-8) calc(var(--space-16)*-1)
 }
 
 .autocompleteGroupHeader__1bb32 {

@@ -7,7 +7,7 @@ var r = n(951288),
     s = n(738018),
     c = n(607802),
     u = n(208450),
-    d = n(921667);
+    d = n(781835);
 let p = i.memo(function (e) {
     let { searchContext: t, focusSectionProps: n } = e,
         i = (0, o.e7)([s.Z], () => {
@@ -15,7 +15,7 @@ let p = i.memo(function (e) {
             return (0, c.Fz)(e.filter);
         });
     return (0, r.jsx)(
-        u.o,
+        u.ol,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
