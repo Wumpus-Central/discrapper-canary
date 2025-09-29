@@ -6,45 +6,45 @@ var n = s(951288),
     l = s(481060),
     c = s(572004),
     o = s(744993),
-    p = s(693587),
-    d = s(943970),
+    d = s(693587),
+    p = s(943970),
     u = s(998964),
     m = s(440589),
     x = s(388032),
     v = s(999852);
 function h(e) {
-    let { guildId: t, instance: s, onClose: h, transitionState: I } = e,
-        f = (0, a.e7)([p.Z], () => {
+    let { guildId: t, instance: s, onClose: h, transitionState: f } = e,
+        I = (0, a.e7)([d.Z], () => {
             var e;
-            return null == (e = p.Z.getStateForGuild(t)) ? void 0 : e.instructions[s.planId];
+            return null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.instructions[s.planId];
         });
     r.useEffect(() => {
-        null == f && (0, o.iX)(t, s.planId);
-    }, [t, s.planId, f]);
+        null == I && (0, o.iX)(t, s.planId);
+    }, [t, s.planId, I]);
     let j = (0, u.Z)(s),
         C = r.useCallback(() => {
             (0, c.JG)(j), (0, l.showToast)((0, l.createToast)(x.intl.string(x.t["+5kSoa"]), l.ToastType.SUCCESS));
         }, [j]),
-        N = (0, d.Z)(s.gameId, "cover");
+        N = (0, p.Z)(s.gameId, "cover");
     return (0, n.jsx)(i.I, {
         graphic: {
             src: N,
             type: "image",
         },
         title: s.name,
-        subtitle: s.planName,
+        subtitle: x.intl.string(m.default["8Fgoo6"]),
         size: "md",
-        transitionState: I,
+        transitionState: f,
         onClose: h,
         children:
-            null == f
+            null == I
                 ? (0, n.jsx)(l.$jN, {})
                 : (0, n.jsxs)("div", {
                       className: v.content,
                       children: [
                           (0, n.jsx)("div", {
                               className: v.stepsContainer,
-                              children: f.map((e, t) =>
+                              children: I.map((e, t) =>
                                   (0, n.jsxs)(
                                       "div",
                                       {

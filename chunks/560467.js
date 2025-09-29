@@ -232,12 +232,22 @@ function y() {
                                   (0, r.jsxs)("div", {
                                       className: C.sectionContainer,
                                       children: [
-                                          (0, r.jsx)("div", {
+                                          (0, r.jsxs)("div", {
                                               className: C.sectionHeader,
-                                              children: (0, r.jsx)(c.X6q, {
-                                                  variant: "heading-sm/semibold",
-                                                  children: v.intl.string(b.default["3QONen"]),
-                                              }),
+                                              children: [
+                                                  (0, r.jsx)(c.X6q, {
+                                                      variant: "heading-sm/semibold",
+                                                      children: v.intl.string(b.default["3QONen"]),
+                                                  }),
+                                                  (0, r.jsx)(s.u, {
+                                                      position: "top",
+                                                      text: v.intl.string(b.default.HbR6W1),
+                                                      children: (0, r.jsx)(c.idN, {
+                                                          className: C.sectionHeaderIcon,
+                                                          size: "xs",
+                                                      }),
+                                                  }),
+                                              ],
                                           }),
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
