@@ -42,6 +42,7 @@ let _ = ["1402418171662569542"],
                                     small_image: e.string().min(1).max(300),
                                     small_text: e.string().min(2).max(128),
                                     small_url: e.string().uri().min(1).max(256),
+                                    invite_cover_image: e.string().min(1).max(300),
                                 }),
                                 party: (0, g.Z)(e).keys({
                                     id: e.string().min(2).max(128),
@@ -104,12 +105,12 @@ let _ = ["1402418171662569542"],
                 O.application_id = v;
                 let I = a.transport === m.He.POST_MESSAGE;
                 O.platform = I ? b.M7m.EMBEDDED : b.M7m.DESKTOP;
-                let C = c.Z.getApplication(null != v ? v : void 0),
-                    S = null != (r = O.instance) && r,
-                    N = null == (t = O.party) ? void 0 : t.privacy;
+                let S = c.Z.getApplication(null != v ? v : void 0),
+                    C = null != (r = O.instance) && r,
+                    T = null == (t = O.party) ? void 0 : t.privacy;
                 delete O.instance, null == (n = O.party) || delete n.privacy;
-                let T = (0, s.S)(O, S, I, null != C && (0, u.g)(C) && I, N);
-                T > 0 && (O.flags = T);
+                let N = (0, s.S)(O, C, I, null != S && (0, u.g)(S) && I, T);
+                N > 0 && (O.flags = N);
                 let { assets: j, party: P, secrets: x, timestamps: A, buttons: Z, type: w } = O;
                 if ((null == w && (O.type = b.IIU.PLAYING), null != x)) {
                     let e = i()
@@ -139,15 +140,16 @@ let _ = ["1402418171662569542"],
                 if (null == j) l = Promise.resolve([]);
                 else {
                     if (null == a.application || null == a.application.id) throw Error();
-                    l = (0, p.hR)(a.application.id, [j.large_image, j.small_image]);
+                    l = (0, p.hR)(a.application.id, [j.large_image, j.small_image, j.invite_cover_image]);
                 }
                 return l.then((e) => {
                     var t, n, r, i;
-                    let [l, s] = e;
+                    let [l, s, c] = e;
                     if (
                         (null != j &&
                             (null != l ? (j.large_image = l) : delete j.large_image,
-                            null != s ? (j.small_image = s) : delete j.small_image),
+                            null != s ? (j.small_image = s) : delete j.small_image,
+                            null != c ? (j.invite_cover_image = c) : delete j.invite_cover_image),
                         !E())
                     )
                         return;
@@ -156,10 +158,10 @@ let _ = ["1402418171662569542"],
                         socketId: a.id,
                         pid: g,
                         activity: O,
-                        partyPrivacy: N,
+                        partyPrivacy: T,
                     });
-                    let { secrets: c, party: u } = O,
-                        p = {
+                    let { secrets: u, party: p } = O,
+                        f = {
                             application_id: a.application.id,
                             type: O.type,
                             name: O.name,
@@ -173,11 +175,11 @@ let _ = ["1402418171662569542"],
                                 (null == (n = O.assets) ? void 0 : n.small_url) != null,
                         };
                     return (
-                        null != c && ((p.has_match_secret = !!c.match), (p.has_join_secret = !!c.join)),
-                        null != j && (p.has_images = !!(j.large_image || j.small_image)),
-                        null != u &&
-                            ((p.party_max = null != u.size && u.size[1] > 0 ? u.size[1] : void 0), (p.party_id = u.id)),
-                        d.default.track(b.rMx.ACTIVITY_UPDATED, p),
+                        null != u && ((f.has_match_secret = !!u.match), (f.has_join_secret = !!u.join)),
+                        null != j && (f.has_images = !!(j.large_image || j.small_image || j.invite_cover_image)),
+                        null != p &&
+                            ((f.party_max = null != p.size && p.size[1] > 0 ? p.size[1] : void 0), (f.party_id = p.id)),
+                        d.default.track(b.rMx.ACTIVITY_UPDATED, f),
                         O
                     );
                 });
