@@ -10,8 +10,8 @@ var r = n(647438),
     a = n(879690),
     l = n(731965),
     i = n(692114),
-    u = n(626135),
-    o = n(532810),
+    o = n(626135),
+    u = n(532810),
     c = n(981631);
 let s = new i.Z("a11y_violations"),
     d = (0, a.U)(() => ({ check: null }));
@@ -23,16 +23,19 @@ function f(e) {
                 for (let e of n.instances.values())
                     for (let { trace: n, hash: r } of e) {
                         let e = JSON.stringify(r);
-                        s.has(e) ||
-                            (s.add(e),
-                            u.default.track(c.rMx.A11Y_RUNTIME_VIOLATION, {
+                        if (s.has(e));
+                        else {
+                            s.add(e);
+                            let a = {
                                 rule_id: t,
                                 trace: n.join("\n"),
                                 hash: r,
-                            }));
+                            };
+                            o.default.track(c.rMx.A11Y_RUNTIME_VIOLATION, a);
+                        }
                     }
     }, []);
-    (0, o.A$)(e, t);
+    (0, u.A$)(e, t);
 }
 function h() {
     var e = d((e) => {

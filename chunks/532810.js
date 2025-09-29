@@ -1,5 +1,5 @@
 n.d(t, {
-    A$: () => L,
+    A$: () => T,
     OF: () => p,
 }),
     n(388685),
@@ -8,15 +8,15 @@ var r,
     a,
     l = n(647438),
     i = n(622131),
-    u = n(247123),
-    o = n(350934),
+    o = n(247123),
+    u = n(350934),
     c = n(646785),
     s = n(585647),
     d = n(883349),
     f = n(993173),
     h = n(650021),
     b = n(807608);
-let m = [o.Z, c.Z, s.Z, f.Z, d.Z, b.Z, h.Z],
+let m = [u.Z, c.Z, s.Z, f.Z, d.Z, b.Z, h.Z],
     p = "data-accessibility-violation",
     g = "function" == typeof (null == (a = navigator) || null == (r = a.scheduling) ? void 0 : r.isInputPending),
     v = null,
@@ -57,10 +57,10 @@ function _() {
     for (; y < x.length && !(navigator.scheduling.isInputPending(n) || performance.now() >= t); ) {
         let t = x[y++],
             n = e.check(t);
-        if (n !== u.w) {
+        if (n !== o.w) {
             var r, a;
             let l = (0, i.P)(t),
-                u = S(
+                o = L(
                     ""
                         .concat(n, "_")
                         .concat(e.id, "_")
@@ -70,42 +70,42 @@ function _() {
                                       let t = "",
                                           n = e;
                                       for (; null != n; ) (t += n.className), (n = n.parentElement);
-                                      return S(t);
+                                      return L(t);
                                   })(t)
                                 : l.join("\n"),
                         ),
                 );
-            k.hash = S("".concat(k.hash).concat(u));
-            let o = "".concat(e.id, "_").concat(u),
-                c =
+            k.hash = L("".concat(k.hash).concat(o));
+            let u = o.toString(),
+                c = "".concat(e.id, "_").concat(o),
+                s =
                     null != (r = k.violations.get(e.id))
                         ? r
                         : {
                               rule: e,
                               instances: new Map(),
                           },
-                s = null != (a = c.instances.get(o)) ? a : [];
-            s.push({
-                element: t,
-                message: n,
-                trace: null != l ? l : [],
-                hash: u,
-            }),
-                c.instances.set(o, s),
-                k.violations.set(e.id, c);
+                d = null != (a = s.instances.get(c)) ? a : [],
+                f = {
+                    element: t,
+                    message: n,
+                    trace: null != l ? l : [],
+                    hash: u,
+                };
+            d.push(f), s.instances.set(c, d), k.violations.set(e.id, s);
         }
     }
     if (y < x.length - 1) return M();
     Z();
 }
-let T = (e) => {
+let S = (e) => {
     0 !== e.filter((e) => "attributes" !== e.type || e.attributeName !== p).length &&
         (N(),
         null != v && (clearTimeout(v), (v = null)),
         null != w && (clearTimeout(w), (w = null)),
         (v = setTimeout(M, 250)));
 };
-function L(e, t) {
+function T(e, t) {
     let n = (0, l.useRef)(t);
     (0, l.useLayoutEffect)(() => {
         n.current = t;
@@ -114,7 +114,7 @@ function L(e, t) {
             if (g && null != e) {
                 (I = n.current), (E = e);
                 let t = (function (e) {
-                    let t = new MutationObserver(T);
+                    let t = new MutationObserver(S);
                     return (
                         t.observe(e, {
                             attributes: !0,
@@ -130,7 +130,7 @@ function L(e, t) {
             }
         }, [e]);
 }
-function S(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = 3735928559 ^ t,
         r = 1103547991 ^ t;
