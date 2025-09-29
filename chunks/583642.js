@@ -146,7 +146,7 @@ let C = i.forwardRef(function (e, t) {
                 id: a,
                 tabIndex: -1,
                 "aria-activedescendant": "".concat(a, "-").concat(c),
-                className: T.container,
+                className: h.length > 0 ? T.container : void 0,
                 children: (0, r.jsx)(A, {
                     items: h,
                     navId: a,
