@@ -103,11 +103,11 @@ let O = function (e) {
                 (0, r.jsx)(l.X6q, {
                     className: m.heading,
                     variant: "heading-md/semibold",
-                    children: p.intl.string(p.t.U8vTzs),
+                    children: p.intl.string(p.t.jY7Zxs),
                 }),
                 (0, r.jsx)("div", {
                     className: m.previewDescription,
-                    children: p.intl.string(p.t["0TZ85+"]),
+                    children: p.intl.string(p.t.q3hbnZ),
                 }),
                 (0, r.jsx)("div", {
                     className: m.memberListContainer,

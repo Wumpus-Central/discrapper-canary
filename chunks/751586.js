@@ -15,32 +15,32 @@ var i = n(442837),
     f = n(70621),
     _ = n(429080),
     p = n(388032),
-    h = n(726927);
+    h = n(777338);
 function m() {
     return [
         {
             value: "quest_bar",
-            label: p.intl.string(p.t.dCHFNT),
+            label: p.intl.string(p.t.rjVPdH),
         },
         {
             value: "share_embed",
-            label: p.intl.string(p.t.LUZFws),
+            label: p.intl.string(p.t["D/gSWV"]),
         },
         {
             value: "home_card",
-            label: p.intl.string(p.t.Mko3j4),
+            label: p.intl.string(p.t["5wnpFx"]),
         },
         {
             value: "channel_call_header",
-            label: p.intl.string(p.t["Vfl/AQ"]),
+            label: p.intl.string(p.t.gWinpa),
         },
         {
             value: "members_list",
-            label: p.intl.string(p.t.QbGtHB),
+            label: p.intl.string(p.t.wpYimZ),
         },
         {
             value: "activity_panel",
-            label: p.intl.string(p.t.HWICen),
+            label: p.intl.string(p.t.L2mlUV),
         },
     ];
 }

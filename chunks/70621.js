@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(497505),
     o = n(415104),
     s = n(388032),
-    l = n(818923);
+    l = n(674455);
 let c = (e) => {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
@@ -15,7 +15,7 @@ let c = (e) => {
                 (0, r.jsx)(i.X6q, {
                     className: l.heading,
                     variant: "heading-md/semibold",
-                    children: s.intl.string(s.t.Mko3j4),
+                    children: s.intl.string(s.t["5wnpFx"]),
                 }),
                 (0, r.jsx)(o.Z, {
                     className: l.questTile,
