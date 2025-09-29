@@ -1,138 +1,143 @@
-t.d(n, { default: () => x }), t(388685);
-var a = t(951288),
-    r = t(647438),
-    i = t(481060),
-    l = t(100527),
-    s = t(335131),
-    c = t(70097),
-    o = t(507808),
-    d = t(43747),
-    u = t(960919),
-    _ = t(509212),
-    h = t(272008),
-    m = t(497505),
-    C = t(515108),
-    R = t(291967),
-    E = t(981631),
-    p = t(215023),
-    g = t(388032),
-    f = t(561549),
-    b = t(201284);
-function y(e) {
-    let { className: n } = e;
-    return (0, a.jsx)(c.Z, {
-        className: n,
+n.d(t, { default: () => v }), n(388685);
+var r = n(951288),
+    a = n(647438),
+    i = n(481060),
+    l = n(100527),
+    s = n(335131),
+    o = n(70097),
+    c = n(507808),
+    d = n(43747),
+    u = n(960919),
+    _ = n(509212),
+    h = n(272008),
+    m = n(497505),
+    C = n(515108),
+    p = n(291967),
+    f = n(46140),
+    g = n(981631),
+    E = n(215023),
+    R = n(388032),
+    b = n(651353),
+    y = n(201284);
+function A(e) {
+    let { className: t } = e;
+    return (0, r.jsx)(o.Z, {
+        className: t,
         playsInline: !0,
         controls: !1,
         autoPlay: !0,
         loop: !0,
-        children: (0, a.jsx)("source", {
-            src: b.Z,
+        children: (0, r.jsx)("source", {
+            src: y.Z,
             type: "video/webm",
         }),
     });
 }
-function A() {
-    return (0, a.jsxs)("div", {
-        className: f.orbsContainer,
+function N() {
+    return (0, r.jsxs)("div", {
+        className: b.orbsContainer,
         children: [
-            (0, a.jsx)(y, { className: f.centerOrb }),
-            (0, a.jsxs)("div", {
-                className: f.smallOrbContainer,
+            (0, r.jsx)(A, { className: b.centerOrb }),
+            (0, r.jsxs)("div", {
+                className: b.smallOrbContainer,
                 children: [
-                    (0, a.jsx)(y, { className: f.smallOrb }),
-                    (0, a.jsx)(y, { className: f.smallOrb }),
-                    (0, a.jsx)(y, { className: f.smallOrb }),
-                    (0, a.jsx)(y, { className: f.smallOrb }),
+                    (0, r.jsx)(A, { className: b.smallOrb }),
+                    (0, r.jsx)(A, { className: b.smallOrb }),
+                    (0, r.jsx)(A, { className: b.smallOrb }),
+                    (0, r.jsx)(A, { className: b.smallOrb }),
                 ],
-            }),
-        ],
-    });
-}
-function N(e) {
-    let { onClose: n, orbsEarned: t, orbsBalance: r } = e,
-        c = async () => {
-            (0, o.Y)({
-                pageType: E.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: E.jXE.ORBS_REWARD_MODAL,
-                ctaObject: E.qAy.CTA_TO_ORBS_SHOP,
-            }),
-                await n(),
-                (0, s.mK)({
-                    openInLayer: !1,
-                    tab: p.AW.ORBS,
-                    analyticsLocations: [],
-                    analyticsSource: l.Z.QUEST_REWARD_MODAL,
-                });
-        };
-    return (0, a.jsxs)("div", {
-        className: f.contentContainer,
-        children: [
-            (0, a.jsx)(A, {}),
-            (0, a.jsxs)("div", {
-                className: f.copyContainer,
-                children: [
-                    (0, a.jsxs)("div", {
-                        className: f.heading,
-                        children: [
-                            (0, a.jsx)(u.M, {
-                                shouldUseThemeColor: !0,
-                                className: f.orbsIcon,
-                            }),
-                            (0, a.jsx)(i.X6q, {
-                                variant: "heading-xl/bold",
-                                color: "header-primary",
-                                children: g.intl.format(g.t["/UTD6e"], { orbsEarned: t }),
-                            }),
-                        ],
-                    }),
-                    (0, a.jsx)(i.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-secondary",
-                        children: g.intl.format(g.t.g4t9a2, { orbsBalance: r }),
-                    }),
-                ],
-            }),
-            (0, a.jsx)(i.zxk, {
-                variant: "secondary",
-                size: "sm",
-                text: g.intl.string(g.t.WYchdX),
-                onClick: c,
-                fullWidth: !0,
             }),
         ],
     });
 }
 function x(e) {
-    var n;
-    let { quest: t, onClose: i, transitionState: l, sourceQuestContent: s, location: c } = e,
-        o = (null == (n = t.userStatus) ? void 0 : n.claimedAt) != null,
-        { balance: u, error: E } = (0, d.A)(),
-        p = (0, _.LM)(t.config),
-        [f, b] = r.useState(o ? "success" : "loading");
-    r.useEffect(() => {
-        o ||
-            "loading" !== f ||
-            (0, h.QB)(t.id, m.y$.CROSS_PLATFORM, c)
-                .then(() => b("success"))
-                .catch(() => b("error"));
-    }, [t.id, o, f, c]);
-    let y = "loading" === f || (null == u && null == E),
-        A = "error" === f || null == p || (null == u && null != E);
-    return y || A
-        ? null
-        : (0, a.jsx)(C.Z, {
-              onClose: i,
-              transitionState: l,
-              quest: t,
-              sourceQuestContent: s,
-              rewardContent: (0, a.jsx)(R.Z, {
-                  rewardName: g.intl.string(g.t.Lmysvb),
-                  children: (0, a.jsx)(N, {
+    let { onClose: t, orbsEarned: n, orbsBalance: a } = e,
+        o = async () => {
+            (0, c.Y)({
+                pageType: g.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: g.jXE.ORBS_REWARD_MODAL,
+                ctaObject: g.qAy.CTA_TO_ORBS_SHOP,
+            }),
+                await t(),
+                (0, s.mK)({
+                    openInLayer: !1,
+                    tab: E.AW.ORBS,
+                    analyticsLocations: [],
+                    analyticsSource: l.Z.QUEST_REWARD_MODAL,
+                });
+        };
+    return (0, r.jsxs)("div", {
+        className: b.contentContainer,
+        children: [
+            (0, r.jsx)(N, {}),
+            (0, r.jsxs)("div", {
+                className: b.copyContainer,
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: b.heading,
+                        children: [
+                            (0, r.jsx)(u.M, {
+                                shouldUseThemeColor: !0,
+                                className: b.orbsIcon,
+                            }),
+                            (0, r.jsx)(i.X6q, {
+                                variant: "heading-xl/bold",
+                                color: "header-primary",
+                                children: R.intl.format(R.t["/UTD6e"], { orbsEarned: n }),
+                            }),
+                        ],
+                    }),
+                    null != a
+                        ? (0, r.jsx)(i.Text, {
+                              variant: "text-sm/medium",
+                              color: "text-secondary",
+                              children: R.intl.format(R.t.g4t9a2, { orbsBalance: a }),
+                          })
+                        : null,
+                ],
+            }),
+            (0, r.jsx)(i.zxk, {
+                variant: "secondary",
+                size: "sm",
+                text: R.intl.string(R.t.WYchdX),
+                onClick: o,
+                fullWidth: !0,
+            }),
+        ],
+    });
+}
+function v(e) {
+    var t;
+    let { quest: n, onClose: i, transitionState: l, sourceQuestContent: s, location: o } = e,
+        c = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
+        { balance: u, error: g } = (0, d.A)(),
+        E = (0, _.LM)(n.config),
+        [b, y] = a.useState(c ? "success" : "loading");
+    a.useEffect(() => {
+        c ||
+            "loading" !== b ||
+            (0, h.QB)(n.id, m.y$.CROSS_PLATFORM, o)
+                .then(() => y("success"))
+                .catch(() => y("error"));
+    }, [n.id, c, b, o]);
+    let A = "error" === b || null == E || (null == u && null != g);
+    return (0, r.jsx)(C.Z, {
+        onClose: i,
+        transitionState: l,
+        quest: n,
+        sourceQuestContent: s,
+        location: f.dr.ORBS_REWARD_MODAL,
+        isRewardContentLoading: "loading" === b || (null == u && null == g),
+        rewardContentHasError: A,
+        rewardContent: A
+            ? null
+            : (0, r.jsx)(p.Z, {
+                  rewardName: R.intl.string(R.t.Lmysvb),
+                  children: (0, r.jsx)(x, {
                       onClose: i,
-                      orbsEarned: p,
+                      orbsEarned: E,
                       orbsBalance: u,
                   }),
               }),
-          });
+    });
 }

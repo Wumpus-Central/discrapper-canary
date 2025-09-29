@@ -1,28 +1,30 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
-var i = n(70097),
-    a = n(475595);
-let o = function (e) {
-    let { quest: t, dimensions: n, className: o } = e,
-        s = (0, a.fh)(t, a.eC.HERO_IMAGE),
-        l = null != n ? (0, a.nK)(n.width, n.height) : void 0,
-        c = (0, a.f0)(s.url, l);
-    return null != c
+var a = n(70097),
+    i = n(475595);
+let l = function (e) {
+    let { quest: t, dimensions: n, className: l, assetRef: s } = e,
+        o = (0, i.fh)(t, i.eC.HERO_IMAGE),
+        c = null != n ? (0, i.nK)(n.width, n.height) : void 0,
+        d = (0, i.f0)(o.url, c);
+    return null != d
         ? (0, r.jsx)("img", {
-              src: c,
+              ref: s,
+              src: d,
               alt: t.config.messages.questName,
-              className: o,
+              className: l,
           })
-        : s.isAnimated
-          ? (0, r.jsx)(i.Z, {
-                className: o,
+        : o.isAnimated
+          ? (0, r.jsx)(a.Z, {
+                ref: s,
+                className: l,
                 autoPlay: !1,
                 loop: !1,
                 muted: !0,
                 playsInline: !0,
                 controls: !1,
-                src: s.url,
+                src: o.url,
             })
           : null;
 };
