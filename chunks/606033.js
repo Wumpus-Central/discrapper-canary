@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(290780), n(781311);
+n.d(t, { Z: () => m }), n(388685), n(290780), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -6,22 +6,23 @@ var r = n(951288),
     s = n(484614),
     l = n(624138),
     c = n(272008),
-    u = n(569984),
-    d = n(253010),
-    f = n(231338),
-    _ = n(388032),
-    p = n(982538);
-let h = function (e) {
-    var t, n, h;
-    let { questId: m, setQuestId: g, quest: E, refreshQuest: b } = e,
-        [y, O] = i.useState(!1),
-        [v, I] = i.useState(!1),
-        T = i.useRef(null),
-        S = (0, a.Wu)([u.Z], () => [...u.Z.quests.values()]),
-        A = (0, a.e7)([u.Z], () => (null != m ? u.Z.getFetchQuestPreviewError(m) : null), [m]),
-        C = (0, a.e7)([u.Z], () => null != m && u.Z.isFetchingQuestPreview(m), [m]),
-        N = i.useMemo(() => {
-            let e = S.map((e) => {
+    u = n(113434),
+    d = n(569984),
+    f = n(253010),
+    _ = n(231338),
+    p = n(388032),
+    h = n(747277);
+let m = function (e) {
+    var t, n, m;
+    let { questId: g, setQuestId: E, quest: b, refreshQuest: y } = e,
+        [O, v] = i.useState(!1),
+        [I, T] = i.useState(!1),
+        S = i.useRef(null),
+        A = (0, u.MP)(),
+        C = (0, a.e7)([d.Z], () => (null != g ? d.Z.getFetchQuestPreviewError(g) : null), [g]),
+        N = (0, a.e7)([d.Z], () => null != g && d.Z.isFetchingQuestPreview(g), [g]),
+        R = i.useMemo(() => {
+            let e = A.map((e) => {
                 var t, n, r;
                 return {
                     label: ""
@@ -36,70 +37,70 @@ let h = function (e) {
                 };
             });
             return (
-                null == m ||
-                    e.some((e) => e.value === m) ||
+                null == g ||
+                    e.some((e) => e.value === g) ||
                     e.unshift({
-                        label: m,
-                        value: m,
+                        label: g,
+                        value: g,
                     }),
                 e
             );
-        }, [S, m]),
-        R = i.useCallback(async () => {
-            if (null != m) {
-                O(!0);
-                try {
-                    await (0, c.Wf)(m, 1);
-                } finally {
-                    O(!1);
-                }
-            }
-        }, [m, O]),
+        }, [A, g]),
         P = i.useCallback(async () => {
-            if (null != m) {
-                O(!0);
+            if (null != g) {
+                v(!0);
                 try {
-                    await (0, c.eT)(m);
+                    await (0, c.Wf)(g, 1);
                 } finally {
-                    O(!1);
+                    v(!1);
                 }
             }
-        }, [m, O]),
+        }, [g, v]),
         w = i.useCallback(async () => {
-            if (null != m) {
-                O(!0);
+            if (null != g) {
+                v(!0);
+                try {
+                    await (0, c.eT)(g);
+                } finally {
+                    v(!1);
+                }
+            }
+        }, [g, v]),
+        D = i.useCallback(async () => {
+            if (null != g) {
+                v(!0);
                 try {
                     let e = Math.random();
-                    await (0, c.Wf)(m, e);
+                    await (0, c.Wf)(g, e);
                 } finally {
-                    O(!1);
+                    v(!1);
                 }
             }
-        }, [m, O]),
-        D = i.useCallback(
+        }, [g, v]),
+        x = i.useCallback(
             (e) => {
-                (0, l.Ew)(e) || null == g || g(e);
+                (0, l.Ew)(e) || null == E || E(e);
             },
-            [g],
+            [E],
         );
     return (0, r.jsxs)("div", {
-        className: p.controlBar,
+        className: h.controlBar,
         children: [
             (0, r.jsx)("div", {
                 children: (0, r.jsx)("div", {
-                    className: p.questSelectorContainer,
+                    className: h.questSelectorContainer,
                     children: (0, r.jsx)("div", {
                         children: (0, r.jsxs)("div", {
-                            className: p.questInput,
+                            className: h.questInput,
                             children: [
                                 (0, r.jsx)(
                                     o.VcW,
                                     {
                                         "aria-label": "Quest ID",
-                                        options: N,
-                                        value: m,
-                                        onChange: D,
-                                        placeholder: _.intl.string(_.t.Zw8jxs),
+                                        options: R,
+                                        value: g,
+                                        onChange: x,
+                                        placeholder: p.intl.string(p.t.Zw8jxs),
                                         clearable: !0,
                                         filter: (e, t) => {
                                             if ((0, l.Ew)(null == t ? void 0 : t.trim())) return e;
@@ -119,78 +120,78 @@ let h = function (e) {
                                         },
                                     },
                                     ""
-                                        .concat(m, "-")
+                                        .concat(g, "-")
                                         .concat(
                                             null !=
-                                                (h =
-                                                    null == E || null == (n = E.config) || null == (t = n.messages)
+                                                (m =
+                                                    null == b || null == (n = b.config) || null == (t = n.messages)
                                                         ? void 0
                                                         : t.questName)
-                                                ? h
+                                                ? m
                                                 : "",
                                         ),
                                 ),
                                 (0, r.jsx)(o.hU, {
-                                    onClick: b,
-                                    "aria-label": _.intl.string(_.t.wzzjk5),
+                                    onClick: y,
+                                    "aria-label": p.intl.string(p.t.wzzjk5),
                                     icon: o.DuK,
-                                    loading: C,
+                                    loading: N,
                                 }),
                             ],
                         }),
                     }),
                 }),
             }),
-            null != m &&
-                null != E &&
+            null != g &&
+                null != b &&
                 (0, r.jsx)("div", {
-                    className: p.controlsSection,
+                    className: h.controlsSection,
                     children: (0, r.jsxs)(o.hE2, {
-                        className: p.controlButtons,
+                        className: h.controlButtons,
                         children: [
                             (0, r.jsx)(o.zxk, {
-                                onClick: R,
-                                disabled: y,
-                                loading: y,
-                                variant: "secondary",
-                                text: _.intl.string(_.t.jQEfRU),
-                            }),
-                            (0, r.jsx)(o.zxk, {
                                 onClick: P,
-                                disabled: y,
-                                loading: y,
+                                disabled: O,
+                                loading: O,
                                 variant: "secondary",
-                                text: _.intl.string(_.t.taqkwM),
+                                text: p.intl.string(p.t.jQEfRU),
                             }),
                             (0, r.jsx)(o.zxk, {
                                 onClick: w,
-                                disabled: y,
-                                loading: y,
+                                disabled: O,
+                                loading: O,
                                 variant: "secondary",
-                                text: _.intl.string(_.t.cKSLr6),
+                                text: p.intl.string(p.t.taqkwM),
+                            }),
+                            (0, r.jsx)(o.zxk, {
+                                onClick: D,
+                                disabled: O,
+                                loading: O,
+                                variant: "secondary",
+                                text: p.intl.string(p.t.cKSLr6),
                             }),
                             (0, r.jsx)(o.yRy, {
-                                targetElementRef: T,
-                                shouldShow: v,
-                                onRequestClose: () => I(!1),
+                                targetElementRef: S,
+                                shouldShow: I,
+                                onRequestClose: () => T(!1),
                                 position: "bottom",
                                 align: "center",
                                 renderPopout: () =>
                                     (0, r.jsx)("div", {
-                                        className: p.sharePopover,
+                                        className: h.sharePopover,
                                         children: (0, r.jsx)("div", {
-                                            className: p.copyInput,
+                                            className: h.copyInput,
                                             children: (0, r.jsx)(s.Z, {
-                                                value: f.$w.QUEST_PREVIEW_TOOL_2(m),
-                                                text: _.intl.string(_.t.WqhZsr),
+                                                value: _.$w.QUEST_PREVIEW_TOOL_2(g),
+                                                text: p.intl.string(p.t.WqhZsr),
                                             }),
                                         }),
                                     }),
                                 children: () =>
                                     (0, r.jsx)(o.hU, {
-                                        buttonRef: T,
-                                        onClick: () => I(!v),
-                                        "aria-label": _.intl.string(_.t.rNGQfH),
+                                        buttonRef: S,
+                                        onClick: () => T(!I),
+                                        "aria-label": p.intl.string(p.t.rNGQfH),
                                         icon: o.TIy,
                                         variant: "secondary",
                                     }),
@@ -198,8 +199,8 @@ let h = function (e) {
                         ],
                     }),
                 }),
-            null != A ? (0, r.jsx)(d.W, { error: A }) : null,
-            C ? (0, r.jsx)(o.$jN, {}) : null,
+            null != C ? (0, r.jsx)(f.W, { error: C }) : null,
+            N ? (0, r.jsx)(o.$jN, {}) : null,
         ],
     });
 };

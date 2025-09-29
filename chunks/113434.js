@@ -8,6 +8,7 @@ n.d(t, {
     J2: () => F,
     Jf: () => ey,
     KX: () => eR,
+    MP: () => eK,
     OH: () => eP,
     Qy: () => eF,
     Rf: () => eb,
@@ -943,4 +944,8 @@ let eH = () => (0, c.Wu)([N.Z], () => [...N.Z.quests.values()]).some((e) => e.pr
             i = (null == e || null == (t = e.userStatus) ? void 0 : t.claimedAt) != null,
             a = (0, c.e7)([N.Z], () => null != N.Z.questEnrollmentBlockedUntil, []);
         return !n && !r && !i && !a;
+    },
+    eK = () => {
+        let e = (0, c.Wu)([N.Z], () => [...N.Z.quests.values()]);
+        return r.useMemo(() => e.filter((e) => e.preview), [e]);
     };
