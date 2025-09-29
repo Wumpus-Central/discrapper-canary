@@ -103,8 +103,8 @@ let D = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    x = !1,
-    L = "lastImageSaveDirectory",
+    L = !1,
+    x = "lastImageSaveDirectory",
     j = /[<>:"/\\|?*@]/g,
     M = /(\.[a-zA-Z0-9]+):[^.]*$/,
     k = /(\.[a-zA-Z0-9]+)%3A.+$/,
@@ -310,16 +310,16 @@ let q = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                x ||
+                L ||
                     (0, d.Bl)((t, n, r) => {
                         e.consoleLog(n, "[".concat(t, "] ").concat(r));
                     }),
-                (x = !0),
+                (L = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!x)
+            if (!L)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -439,7 +439,7 @@ let q = {
             }
             let _ = await V(e),
                 p = E.from(_),
-                g = f.K.get(L);
+                g = f.K.get(x);
             if (("string" != typeof g && (g = void 0), "function" == typeof I.fileManager.saveWithDialog2)) {
                 if (null == (o = await I.fileManager.saveWithDialog2(p, u, null != g ? g : void 0))) return "errored";
                 if (o.canceledByUser) return "canceled";
@@ -450,7 +450,7 @@ let q = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == s || "" === s ? "errored" : (f.K.set(L, s), "saved");
+            return null == s || "" === s ? "errored" : (f.K.set(x, s), "saved");
         },
         async saveFile(e, t) {
             var n;
@@ -847,6 +847,10 @@ let q = {
         },
         UpdateSystemService() {
             let { updateSystemService: e } = this.getDiscordUtils();
+            return null != e ? e() : Promise.reject(Error("System service native not available"));
+        },
+        UninstallSystemService() {
+            let { uninstallSystemService: e } = this.getDiscordUtils();
             return null != e ? e() : Promise.reject(Error("System service native not available"));
         },
         InputEventServiceSetStatusCallback(e) {
