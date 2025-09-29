@@ -2875,6 +2875,8 @@ var tU = (function (e) {
             (e.SETTINGS_SESSIONS = "Sessions"),
             (e.SETTINGS_FAMILY_CENTER = "Family Center"),
             (e.SETTINGS_FAMILY_CENTER_PARENTAL_CONTROLS = "Family Center Parental Controls"),
+            (e.SETTINGS_FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS =
+                "Family Center Parental Controls Sensitive Content Filters"),
             (e.SETTINGS_CONTEXT_MENU = "Settings Context Menu"),
             (e.SETTINGS_CLIPS = "Settings Clips"),
             (e.SETTINGS_CUSTOM_STATUS = "Custom Status"),
@@ -3347,6 +3349,8 @@ let tZ = {
         SESSIONS: "Sessions",
         FAMILY_CENTER: "Family Center",
         FAMILY_CENTER_PARENTAL_CONTROLS: "Family Center Parental Controls",
+        FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS:
+            "Family Center Parental Controls Sensitive Content Filters",
         FRIEND_REQUESTS: "Friend Requests",
         CLIPS: "Settings Clips",
         COLLECTIBLES_SHOP: "Shop",
