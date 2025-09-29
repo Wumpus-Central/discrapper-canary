@@ -1,4 +1,4 @@
-n.d(t, { d: () => N });
+n.d(t, { d: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -20,15 +20,15 @@ var r = n(951288),
     y = n(981631),
     v = n(408491),
     I = n(388032),
-    C = n(345909),
-    S = n(832818);
-function N(e) {
+    S = n(412297),
+    C = n(447803);
+function T(e) {
     let t,
-        { selectedChannelId: n, withFastTravel: l, focusSectionProps: N } = e,
-        T = (0, o.TH)(),
-        j = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
-        P = (0, s.e7)([b.Z], () => b.Z.getChannel(n), [n]),
-        x = null != j ? j : null == P ? void 0 : P.guild_id,
+        { selectedChannelId: n, withFastTravel: l, focusSectionProps: T } = e,
+        N = (0, o.TH)(),
+        P = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
+        j = (0, s.e7)([b.Z], () => b.Z.getChannel(n), [n]),
+        x = null != P ? P : null == j ? void 0 : j.guild_id,
         A = (0, s.e7)([_.Z], () => _.Z.getGuild(x), [x]),
         Z = (0, p.Z)(),
         w = (0, g.D)(),
@@ -52,7 +52,7 @@ function N(e) {
     null != D && k
         ? ((t = D.name),
           (U = (0, r.jsx)("img", {
-              className: S.appIcon,
+              className: C.appIcon,
               alt: I.intl.string(I.t.X4IxWF),
               src: M,
               "aria-hidden": !0,
@@ -67,21 +67,23 @@ function N(e) {
                         guild: A,
                         size: R,
                         active: !0,
-                        className: S.guildIcon,
+                        className: C.guildIcon,
                     })),
               (t = A.name))
-            : null != P && (P.isDM() || P.isGroupDM())
+            : null != j && (j.isDM() || j.isGroupDM())
               ? ((t = I.intl.string(I.t.YUU0RE)), (U = (0, r.jsx)(c.gw7, { size: L })))
-              : T.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
+              : N.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
                 ? ((t = I.intl.string(I.t["4nEZLi"])), (U = (0, r.jsx)(c.Jmo, { size: L })))
-                : T.pathname.startsWith(y.Z5c.NITRO_HOME)
+                : N.pathname.startsWith(y.Z5c.NITRO_HOME)
                   ? ((t = I.intl.string(I.t.Ipxkoq)), (U = (0, r.jsx)(c.SrA, { size: L })))
-                  : T.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
+                  : N.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
                     ? ((t = I.intl.string(I.t.pWG4zc)), (U = (0, r.jsx)(c.EOn, { size: L })))
-                    : T.pathname.startsWith(y.Z5c.FRIENDS)
+                    : N.pathname.startsWith(y.Z5c.FRIENDS)
                       ? ((t = I.intl.string(I.t.TdEu5e)), (U = (0, r.jsx)(c.iFz, { size: L })))
-                      : T.pathname.startsWith(y.Z5c.FAMILY_CENTER) &&
-                        ((t = I.intl.string(C.default.RZqaJi)), (U = (0, r.jsx)(c.BFJ, { size: L })));
+                      : N.pathname.startsWith(y.Z5c.FAMILY_CENTER)
+                        ? ((t = I.intl.string(S.default.RZqaJi)), (U = (0, r.jsx)(c.BFJ, { size: L })))
+                        : N.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
+                          ((t = I.intl.string(I.t.JALI2N)), (U = (0, r.jsx)(c.qDn, { size: L })));
     let G = i.useCallback((e) => {
             (0, m.ZN)("fast-travel");
         }, []),
@@ -91,7 +93,7 @@ function N(e) {
         : (0, r.jsx)(c.ua7, {
               shouldShow: l,
               "aria-label": I.intl.string(I.t["7P/+q6"]),
-              tooltipContentClassName: S.navigationTooltip,
+              tooltipContentClassName: C.navigationTooltip,
               text: (0, r.jsxs)(r.Fragment, {
                   children: [
                       I.intl.string(I.t["7P/+q6"]),
@@ -128,7 +130,7 @@ function N(e) {
                                   });
                           }
                           return e;
-                      })({ className: a()(S.title, { [S.fastTravel]: l }) }, e, N)),
+                      })({ className: a()(C.title, { [C.fastTravel]: l }) }, e, T)),
                       (n = n =
                           {
                               onClick: l ? G : void 0,
@@ -141,7 +143,7 @@ function N(e) {
                                   }),
                                   l &&
                                       (0, r.jsx)(c.Fbu, {
-                                          className: S.fastTravelChevron,
+                                          className: C.fastTravelChevron,
                                           size: "xs",
                                       }),
                               ],
