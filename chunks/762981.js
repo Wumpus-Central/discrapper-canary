@@ -1,62 +1,33 @@
 n.d(t, {
-    O: () => p,
-    Z: () => m,
+    O: () => d,
+    Z: () => f,
 });
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(786920),
-    l = n(558452),
-    c = n(481060),
-    u = n(985316),
-    d = n(336088);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+var r = n(951288);
+n(647438);
+var i = n(120356),
+    a = n.n(i),
+    o = n(488290),
+    s = n(558452),
+    l = n(481060),
+    c = n(985316),
+    u = n(721457);
+function d(e) {
+    return e !== l.fCB.TOP_RADIAL && e !== l.fCB.SUBTLE && e !== l.fCB.BLUR;
 }
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function p(e) {
-    return e !== c.fCB.TOP_RADIAL && e !== c.fCB.SUBTLE && e !== c.fCB.BLUR;
-}
-function h(e) {
+function f(e) {
     let {
         variant: t = "default",
         animationVariant: n = "default",
         onClick: i,
-        isVisible: a,
-        disabled: c = !1,
+        isVisible: l,
+        disabled: d = !1,
         disablePointerEvents: f = !1,
     } = e;
-    return (0, l.Y)(
-        a,
+    return (0, s.Y)(
+        l,
         {
             keys: (e) => (e ? "scrim" : "empty"),
-            config: u.Px,
+            config: c.Px,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -64,18 +35,15 @@ function h(e) {
         "instant" === n ? "animate-never" : "animate-always",
     )((e, n) =>
         n
-            ? (0, r.jsx)(s.animated.div, {
+            ? (0, r.jsx)(o.animated.div, {
                   role: "none",
-                  className: o()(d.scrim, {
-                      [d.lightbox]: "lightbox" === t,
-                      [d.pointerEventsNone]: f,
+                  className: a()(u.scrim, {
+                      [u.lightbox]: "lightbox" === t,
+                      [u.pointerEventsNone]: f,
                   }),
                   style: e,
-                  onClick: c ? void 0 : i,
+                  onClick: d ? void 0 : i,
               })
             : null,
     );
 }
-let m = i.forwardRef(function (e) {
-    return (0, r.jsx)(h, _({}, e));
-});
