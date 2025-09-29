@@ -5354,6 +5354,7 @@ var nA = (function (e) {
             (e.RTC_DEBUG = "RTC_DEBUG"),
             (e.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
             (e.MANA_PLAYGROUND = "MANA_PLAYGROUND"),
+            (e.CHECKPOINT = "CHECKPOINT"),
             e
         );
     })({});
