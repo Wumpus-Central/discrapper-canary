@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(539854), n(781311);
+n.d(t, { Z: () => B }), n(539854), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,26 +7,27 @@ var r = n(951288),
     l = n(793030),
     c = n(442837),
     u = n(481060),
-    d = n(833664),
-    f = n(545957),
-    _ = n(933557),
-    p = n(482798),
-    h = n(687516),
-    m = n(106301),
-    g = n(314897),
-    E = n(699516),
-    b = n(802529),
-    y = n(11133),
-    O = n(303524),
-    v = n(329520),
-    I = n(233023),
-    T = n(868781),
-    S = n(122943),
-    A = n(556638),
-    C = n(981631),
-    N = n(388032),
-    R = n(666998);
-function P(e, t, n) {
+    d = n(835834),
+    f = n(833664),
+    _ = n(545957),
+    p = n(933557),
+    h = n(482798),
+    m = n(687516),
+    g = n(106301),
+    E = n(314897),
+    b = n(699516),
+    y = n(802529),
+    O = n(11133),
+    v = n(303524),
+    I = n(329520),
+    T = n(233023),
+    S = n(868781),
+    A = n(122943),
+    C = n(556638),
+    N = n(981631),
+    R = n(388032),
+    P = n(666998);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +40,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +51,12 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
 }
-function D(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,98 +68,99 @@ function D(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function L(e) {
-    let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
-    return null != t ? N.intl.formatToPlainString(N.t["0wJXSk"], { name: t }) : N.intl.string(N.t.eXan7O);
+function j(e) {
+    let t = (0, d.R)("formatActivityString"),
+        n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
+    return null != n ? (t ? n : R.intl.formatToPlainString(R.t["0wJXSk"], { name: n })) : R.intl.string(R.t.eXan7O);
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
-            ? N.intl.string(N.t["9FaEzs"])
+            ? R.intl.string(R.t["9FaEzs"])
             : e.isGuildStageVoice()
-              ? N.intl.string(N.t.QygGCA)
-              : N.intl.string(N.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
-    );
-}
-function M(e) {
-    let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
-        i = [],
-        { descriptiveTextEnabled: a } = (0, b.f)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: o } = (0, p.Cq)({ location: "StackedActivityStatus" }),
-        s = (0, _.ZP)(r),
-        l = a || o;
-    return (
-        null != t && i.push(L(t)),
-        n.forEach((e) => {
-            let { tooltip: t } = (0, y.Z)(e, l);
-            null != t && i.push(t);
-        }),
-        null == t && null != r && i.push(j(r, s)),
-        i.length > 0 ? i.join(", ") : ""
+              ? R.intl.string(R.t.QygGCA)
+              : R.intl.string(R.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
 function k(e) {
+    let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
+        i = [],
+        { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
+        { enableTopNavButton: o } = (0, h.Cq)({ location: "StackedActivityStatus" }),
+        s = (0, p.ZP)(r),
+        l = a || o;
+    return (
+        null != t && i.push(j(t)),
+        n.forEach((e) => {
+            let { tooltip: t } = (0, O.Z)(e, l);
+            null != t && i.push(t);
+        }),
+        null == t && null != r && i.push(M(r, s)),
+        i.length > 0 ? i.join(", ") : ""
+    );
+}
+function U(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
     return (0, r.jsxs)(l.xvT, {
         variant: t,
-        className: o()(n, R.activityCounter),
+        className: o()(n, P.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
 }
-function U(e) {
+function G(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xvT, {
         variant: t,
-        className: o()(R.dot, n),
-        children: A.l,
+        className: o()(P.dot, n),
+        children: C.l,
     });
 }
-function G(e) {
+function B(e) {
     let {
         user: t,
         activities: n,
         applicationStream: a,
         voiceChannel: l,
-        textClassName: _,
+        textClassName: d,
         iconClassName: p,
-        textSize: b = "xs",
+        textSize: h = "xs",
         animateEmoji: y = !0,
-        hasQuest: N = !1,
-        hideEmoji: P = !1,
-        hideTooltip: D = !1,
+        hasQuest: O = !1,
+        hideEmoji: R = !1,
+        hideTooltip: w = !1,
     } = e;
-    (0, f.Z)(null == t ? void 0 : t.id);
-    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        j = (0, h.Cf)(L),
-        G = i.useMemo(() => {
+    (0, _.Z)(null == t ? void 0 : t.id);
+    let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, m.Cf)(x),
+        M = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === C.IIU.CUSTOM_STATUS;
+                          return t === N.IIU.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        B = (0, c.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
-        Z = (0, c.e7)([m.Z], () =>
-            B ? m.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === C.IIU.HANG_STATUS) : null,
+        B = (0, c.e7)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)),
+        Z = (0, c.e7)([g.Z], () =>
+            B ? g.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === N.IIU.HANG_STATUS) : null,
         ),
         F = i.useMemo(() => {
             var e;
@@ -170,8 +172,8 @@ function G(e) {
                             : n.filter((e) => {
                                   let { type: t, name: n } = e;
                                   return (
-                                      t !== C.IIU.CUSTOM_STATUS &&
-                                      t !== C.IIU.HANG_STATUS &&
+                                      t !== N.IIU.CUSTOM_STATUS &&
+                                      t !== N.IIU.HANG_STATUS &&
                                       n !== (null == j ? void 0 : j.name)
                                   );
                               }))
@@ -184,14 +186,14 @@ function G(e) {
         }, [n, null == j ? void 0 : j.name]),
         V = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         H = (null == t ? void 0 : t.bot) === !0,
-        Y = (0, c.e7)([E.Z], () => E.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        W = (null == G ? void 0 : G.state) != null,
-        K = null != L,
+        Y = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
+        W = (null == M ? void 0 : M.state) != null,
+        K = null != x,
         z = !K && null != l,
         q = F.length + (K || z ? 1 : 0),
         X = q > 1,
-        Q = ((null == G ? void 0 : G.state) != null || null != Z) && "xs" === b,
-        J = M({
+        Q = ((null == M ? void 0 : M.state) != null || null != Z) && "xs" === h,
+        J = k({
             streamActivity: V,
             otherActivities: F,
             voiceActivityChannel: z ? l : null,
@@ -199,13 +201,13 @@ function G(e) {
     if (Y) return null;
     let $ = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || D;
-            if (null != L)
-                return (0, r.jsx)(v.Z, {
-                    stream: L,
+                t = !0 === e || w;
+            if (null != x)
+                return (0, r.jsx)(I.Z, {
+                    stream: x,
                     game: V,
-                    textVariant: "text-".concat(b, "/medium"),
-                    textClassName: _,
+                    textVariant: "text-".concat(h, "/medium"),
+                    textClassName: d,
                     iconClassName: p,
                     hideText: Q,
                     hideIcon: H,
@@ -213,20 +215,20 @@ function G(e) {
                 });
             let n = null == F ? void 0 : F[0];
             return null != n
-                ? (0, r.jsx)(T.Z, {
+                ? (0, r.jsx)(S.Z, {
                       activity: n,
-                      textVariant: "text-".concat(b, "/medium"),
-                      textClassName: _,
+                      textVariant: "text-".concat(h, "/medium"),
+                      textClassName: d,
                       iconClassName: p,
                       hideText: Q,
                       hideIcon: H,
                       hideTooltip: t,
                   })
                 : null != l
-                  ? (0, r.jsx)(S.Z, {
+                  ? (0, r.jsx)(A.Z, {
                         channel: l,
-                        textVariant: "text-".concat(b, "/medium"),
-                        textClassName: _,
+                        textVariant: "text-".concat(h, "/medium"),
+                        textClassName: d,
                         iconClassName: p,
                         hideText: Q,
                         hideTooltip: t,
@@ -243,15 +245,15 @@ function G(e) {
                     canTruncate: !1,
                 };
             return (
-                null != L &&
+                null != x &&
                     e.push(
                         (0, r.jsx)(
-                            v.Z,
-                            x(
-                                w(
+                            I.Z,
+                            L(
+                                D(
                                     {
-                                        stream: L,
-                                        game: null == n ? void 0 : n.find(d.Z),
+                                        stream: x,
+                                        game: null == n ? void 0 : n.find(f.Z),
                                     },
                                     t,
                                 ),
@@ -261,16 +263,16 @@ function G(e) {
                         ),
                     ),
                 F.forEach((n, i) => {
-                    e.push((0, r.jsx)(T.Z, w({ activity: n }, t), "activity-".concat(i)));
+                    e.push((0, r.jsx)(S.Z, D({ activity: n }, t), "activity-".concat(i)));
                 }),
-                z && e.push((0, r.jsx)(S.Z, x(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                z && e.push((0, r.jsx)(A.Z, L(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
         et = () =>
-            (0, r.jsx)(k, {
-                textVariant: "text-".concat(b, "/medium"),
-                className: _,
+            (0, r.jsx)(U, {
+                textVariant: "text-".concat(h, "/medium"),
+                className: d,
                 hasCustomStatusText: W,
                 totalActivityCount: q,
             }),
@@ -278,39 +280,39 @@ function G(e) {
             0 === q
                 ? null
                 : X && !H
-                  ? D
+                  ? w
                       ? (0, r.jsxs)("div", {
-                            className: o()(R.activityContainer, Q && R.iconOnly),
+                            className: o()(P.activityContainer, Q && P.iconOnly),
                             children: [$(), et()],
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
-                            delay: A.X,
+                            tooltipContentClassName: o()(P.container, P.activitiesTooltip, P.hasMultipleActivities),
+                            delay: C.X,
                             text: ee(),
                             "aria-label": J,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    x(w({ className: o()(R.activityContainer, Q && R.iconOnly) }, e), {
+                                    L(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
                                         children: [$(!0), et()],
                                     }),
                                 ),
                         })
                   : $(),
-        er = o()(R.container, {
-            [R.textXs]: "xs" === b,
-            [R.textSm]: "sm" === b,
+        er = o()(P.container, {
+            [P.textXs]: "xs" === h,
+            [P.textSm]: "sm" === h,
         }),
         ei = () =>
-            null == G && null == Z
+            null == M && null == Z
                 ? null
-                : (0, r.jsx)(I.Z, {
-                      customStatusActivity: G,
-                      textSize: b,
+                : (0, r.jsx)(T.Z, {
+                      customStatusActivity: M,
+                      textSize: h,
                       animateEmoji: y,
-                      hideEmoji: P,
-                      hideTooltip: D,
-                      textClassName: _,
+                      hideEmoji: R,
+                      hideTooltip: w,
+                      textClassName: d,
                       iconClassName: p,
                       tooltipClassName: er,
                       voiceChannel: l,
@@ -321,14 +323,14 @@ function G(e) {
         className: er,
         children: [
             en(),
-            (null != G || null != Z) &&
+            (null != M || null != Z) &&
                 q > 0 &&
-                (0, r.jsx)(U, {
-                    textVariant: "text-".concat(b, "/normal"),
-                    className: _,
+                (0, r.jsx)(G, {
+                    textVariant: "text-".concat(h, "/normal"),
+                    className: d,
                 }),
             ei(),
-            N && (0, r.jsx)(O.Z, {}),
+            O && (0, r.jsx)(v.Z, {}),
         ],
     });
 }
