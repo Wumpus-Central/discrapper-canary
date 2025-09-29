@@ -1,30 +1,17 @@
 n.d(t, {
-    B$: () => _,
+    B$: () => u,
     l7: () => p,
-    p: () => h,
+    p: () => m,
 }),
     n(388685),
     n(539854);
 var r = n(951288),
-    i = n(647438),
-    a = n(603113),
-    o = n(786920),
-    s = n(393238),
+    s = n(647438),
+    o = n(603113),
+    a = n(488290),
+    i = n(393238),
     l = n(743294);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,206 +22,210 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = i.createContext({
+let u = s.createContext({
         registerComponent: () => {},
         unregisterComponent: () => {},
         animatedComponents: {},
-        expandedContentRef: i.createRef(),
-        collapsedContentRef: i.createRef(),
+        expandedContentRef: s.createRef(),
+        collapsedContentRef: s.createRef(),
         recalculateAnimationPositions: () => {},
         animatedComponentProps: [],
         expansionSpring: null,
         mountPoints: new Map(),
     }),
-    p = i.forwardRef(function (e, t) {
+    p = s.forwardRef(function (e, t) {
         var n;
-        let { children: l, id: c, inState: u, isTextTransition: d = !1 } = e,
+        let { children: l, id: c, inState: d, isTextTransition: p = !1 } = e,
             {
-                recalculateAnimationPositions: f,
-                registerComponent: p,
-                unregisterComponent: h,
-                expansionSpring: m,
-                mountPoints: g,
-            } = i.useContext(_),
-            E = i.useRef(null),
-            b = i.useRef(null),
-            y = i.useRef(void 0);
-        i.useEffect(() => {
-            f();
-        }, [f]),
-            i.useLayoutEffect(() => {
-                let e = E.current;
+                recalculateAnimationPositions: m,
+                registerComponent: g,
+                unregisterComponent: f,
+                expansionSpring: h,
+                mountPoints: x,
+            } = s.useContext(u),
+            _ = s.useRef(null),
+            b = s.useRef(null),
+            j = s.useRef(void 0);
+        s.useEffect(() => {
+            m();
+        }, [m]),
+            s.useLayoutEffect(() => {
+                let e = _.current;
                 return (
-                    null != e && p(e, c, u),
+                    null != e && g(e, c, d),
                     () => {
-                        null != e && h(c, u);
+                        null != e && f(c, d);
                     }
                 );
-            }, [c, u, p, h]);
-        let O = i.useCallback(
+            }, [c, d, g, f]);
+        let v = s.useCallback(
             (e) => {
                 let { height: t } = e;
-                y.current !== t && (f(), (y.current = t));
+                j.current !== t && (m(), (j.current = t));
             },
-            [f],
+            [m],
         );
-        (0, s.PM)(E, O);
-        let v = null == (n = g.get(c)) ? void 0 : n.current,
-            I = null;
+        (0, i.PM)(_, v);
+        let C = null == (n = x.get(c)) ? void 0 : n.current,
+            y = null;
         return (
-            null == v
-                ? (I = null)
-                : d && null != m
-                  ? (I = (0, r.jsxs)(r.Fragment, {
+            null == C
+                ? (y = null)
+                : p && null != h
+                  ? (y = (0, r.jsxs)(r.Fragment, {
                         children: [
-                            "collapsed" === u &&
-                                (0, a.createPortal)(
-                                    (0, r.jsx)(o.animated.div, {
+                            "collapsed" === d &&
+                                (0, o.createPortal)(
+                                    (0, r.jsx)(a.animated.div, {
                                         style: {
                                             position: "absolute",
-                                            opacity: m.to({
+                                            opacity: h.to({
                                                 range: [0, 1],
                                                 output: [1, 0],
                                             }),
                                         },
                                         children: l(b),
                                     }),
-                                    v,
+                                    C,
                                 ),
-                            "expanded" === u &&
-                                (0, a.createPortal)(
-                                    (0, r.jsx)(o.animated.div, {
+                            "expanded" === d &&
+                                (0, o.createPortal)(
+                                    (0, r.jsx)(a.animated.div, {
                                         style: {
                                             position: "absolute",
-                                            opacity: m.to({
+                                            opacity: h.to({
                                                 range: [0, 1],
                                                 output: [0, 1],
                                             }),
                                         },
                                         children: l(b),
                                     }),
-                                    v,
+                                    C,
                                 ),
                         ],
                     }))
-                  : "collapsed" === u && (I = (0, a.createPortal)(l(b), v)),
+                  : "collapsed" === d && (y = (0, o.createPortal)(l(b), C)),
             (0, r.jsxs)("div", {
-                style: { opacity: +((null == I && "collapsed" === u) || null == v) },
+                style: { opacity: +((null == y && "collapsed" === d) || null == C) },
                 ref: t,
-                children: [l(E), I],
+                children: [l(_), y],
             })
         );
     }),
-    h = (e) => {
-        let { children: t, expandedContentRef: n, collapsedContentRef: a, expansionSpring: o } = e,
-            [s, c] = i.useState({}),
-            [d, p] = i.useState([]),
-            [h, m] = i.useState(() => new Map()),
-            g = i.useCallback((e, t, n) => {
-                c((r) => {
-                    var i;
-                    let a =
-                        null != (i = r[t])
-                            ? i
+    m = (e) => {
+        let { children: t, expandedContentRef: n, collapsedContentRef: o, expansionSpring: a } = e,
+            [i, p] = s.useState({}),
+            [m, g] = s.useState([]),
+            [f, h] = s.useState(() => new Map()),
+            x = s.useCallback((e, t, n) => {
+                p((r) => {
+                    var s;
+                    let o =
+                        null != (s = r[t])
+                            ? s
                             : {
                                   expanded: null,
                                   collapsed: null,
                               };
-                    return f(u({}, r), { [t]: f(u({}, a), { [n]: e }) });
+                    return d(c({}, r), { [t]: d(c({}, o), { [n]: e }) });
                 }),
-                    m((e) => {
+                    h((e) => {
                         let n = new Map(e);
-                        return n.set(t, i.createRef()), n;
+                        return n.set(t, s.createRef()), n;
                     });
             }, []),
-            E = i.useCallback((e, t) => {
+            _ = s.useCallback((e, t) => {
                 let n = !1;
-                c((r) => {
-                    var i;
-                    let a =
-                        null != (i = r[e])
-                            ? i
+                p((r) => {
+                    var s;
+                    let o =
+                        null != (s = r[e])
+                            ? s
                             : {
                                   expanded: null,
                                   collapsed: null,
                               };
-                    return (a[t] = null), (n = null == a.expanded && null == a.collapsed), f(u({}, r), { [e]: a });
+                    return (o[t] = null), (n = null == o.expanded && null == o.collapsed), d(c({}, r), { [e]: o });
                 }),
                     n &&
-                        m((t) => {
+                        h((t) => {
                             let n = new Map(t);
                             return n.delete(e), n;
                         });
             }, []),
-            b = i.useCallback(() => {
+            b = s.useCallback(() => {
                 let e = [];
-                for (let t in s) {
-                    if (null == s[t] || null == n.current || null == a.current) continue;
-                    let r = s[t].collapsed,
-                        i = s[t].expanded;
-                    if (null == r || null == i) continue;
-                    let o = i.getBoundingClientRect(),
+                for (let t in i) {
+                    if (null == i[t] || null == n.current || null == o.current) continue;
+                    let r = i[t].collapsed,
+                        s = i[t].expanded;
+                    if (null == r || null == s) continue;
+                    let a = s.getBoundingClientRect(),
                         c = n.current.getBoundingClientRect(),
-                        u = r.getBoundingClientRect(),
-                        d = a.current.getBoundingClientRect(),
-                        f = o.top - c.top + l.Li,
-                        _ = u.top - d.top,
-                        p = o.left - c.left + l.Li,
-                        h = u.left - d.left,
-                        m = -o.right + c.right + l.Li,
-                        g = -u.right + d.right;
+                        d = r.getBoundingClientRect(),
+                        u = o.current.getBoundingClientRect(),
+                        p = a.top - c.top + l.Li,
+                        m = d.top - u.top,
+                        g = a.left - c.left + l.Li,
+                        f = d.left - u.left,
+                        h = -a.right + c.right + l.Li,
+                        x = -d.right + u.right;
                     e.push({
                         id: t,
-                        collapsedLeft: h,
-                        expandedLeft: p,
-                        collapsedRight: g,
-                        expandedRight: m,
-                        collapsedTop: _,
-                        expandedTop: f,
-                        width: o.width,
+                        collapsedLeft: f,
+                        expandedLeft: g,
+                        collapsedRight: x,
+                        expandedRight: h,
+                        collapsedTop: m,
+                        expandedTop: p,
+                        width: a.width,
                     });
                 }
-                p(e);
-            }, [s, n, a, p]);
-        return (0, r.jsx)(_.Provider, {
+                g(e);
+            }, [i, n, o, g]);
+        return (0, r.jsx)(u.Provider, {
             value: {
-                registerComponent: g,
-                unregisterComponent: E,
-                animatedComponents: s,
+                registerComponent: x,
+                unregisterComponent: _,
+                animatedComponents: i,
                 expandedContentRef: n,
-                collapsedContentRef: a,
+                collapsedContentRef: o,
                 recalculateAnimationPositions: b,
-                animatedComponentProps: d,
-                expansionSpring: o,
-                mountPoints: h,
+                animatedComponentProps: m,
+                expansionSpring: a,
+                mountPoints: f,
             },
             children: t,
         });

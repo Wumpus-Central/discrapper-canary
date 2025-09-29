@@ -1,43 +1,42 @@
 n.d(t, { Z: () => c });
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(751586),
-    s = n(388032),
-    l = n(473846);
+    l = n(481060),
+    a = n(751586),
+    o = n(388032),
+    s = n(807231);
 function c(e) {
     let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
-        d = (0, o.Ui)(),
-        f = 0 === n.length || n.length === d.length,
-        _ = i.useMemo(() => (f ? "all" : 1 === n.length ? n[0] : "all"), [n, f]),
-        p = (e) => {
-            null == c || c(e);
-        };
+        d = (0, a.Ui)(),
+        p = 0 === n.length || n.length === d.length,
+        f = i.useMemo(() => (p ? "all" : 1 === n.length ? n[0] : "all"), [n, p]);
     return (0, r.jsxs)("div", {
-        className: l.container,
+        className: s.container,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: "heading-xl/semibold",
                 color: "header-primary",
-                children: s.intl.string(s.t.BDUDam),
+                children: o.intl.string(o.t.BDUDam),
             }),
             (0, r.jsx)("div", {
-                className: l.controlsBarContainer,
+                className: s.controlsBarContainer,
                 children: u,
             }),
-            (0, r.jsxs)(a.njP, {
+            (0, r.jsxs)(l.njP, {
                 type: "top",
                 look: "brand",
-                selectedItem: _,
-                onItemSelect: p,
+                selectedItem: f,
+                onItemSelect: (e) => {
+                    null == c || c(e);
+                },
                 children: [
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(l.njP.Item, {
                         id: "all",
-                        children: s.intl.string(s.t.Y9DnPT),
+                        children: o.intl.string(o.t.Y9DnPT),
                     }),
                     d.map((e) =>
                         (0, r.jsx)(
-                            a.njP.Item,
+                            l.njP.Item,
                             {
                                 id: e.value,
                                 children: e.label,
@@ -48,9 +47,9 @@ function c(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: l.contentArea,
+                className: s.contentArea,
                 children: (0, r.jsx)("div", {
-                    className: l.content,
+                    className: s.content,
                     children: t,
                 }),
             }),

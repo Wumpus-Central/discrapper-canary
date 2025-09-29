@@ -1,58 +1,29 @@
-n.d(t, { Q: () => m });
+n.d(t, { Q: () => g });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(313789),
-    o = n(518596),
-    s = n(617136),
+var s = n(481060),
+    o = n(313789),
+    a = n(518596),
+    i = n(617136),
     l = n(497505),
     c = n(981631),
-    u = n(388032),
-    d = n(39625);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                f(e, t, n[t]);
-            });
-    }
-    return e;
-}
+    d = n(388032),
+    u = n(63803);
 function p(e) {
-    let { text: t, quest: n, sourceQuestContent: u } = e,
-        f = (0, s.O5)();
-    return (0, r.jsx)(i.P3F, {
-        className: d.showConnectionsButton,
+    let { text: t, quest: n, sourceQuestContent: d } = e,
+        p = (0, i.O5)();
+    return (0, r.jsx)(s.P3F, {
+        className: u.showConnectionsButton,
         onClick: () => {
-            f({
+            p({
                 questId: n.id,
                 questContent: l.jn.QUEST_BAR_V2,
-                questContentCTA: s.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                sourceQuestContent: u,
+                questContentCTA: i.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                sourceQuestContent: d,
             }),
-                (0, o.openUserSettings)(a.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
+                (0, a.openUserSettings)(o.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
         },
-        children: (0, r.jsx)(i.Text, {
+        children: (0, r.jsx)(s.Text, {
             "aria-label": t,
             color: "none",
             variant: "text-xxs/normal",
@@ -60,25 +31,52 @@ function p(e) {
         }),
     });
 }
-function h(e) {
-    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: i } = e;
+function m(e) {
+    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
     return t.length > 0
         ? (0, r.jsx)(p, {
-              text: u.intl.string(u.t["qiS+xs"]),
+              text: d.intl.string(d.t["qiS+xs"]),
               quest: n,
-              sourceQuestContent: i,
+              sourceQuestContent: s,
           })
         : null;
 }
-function m(e) {
+function g(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(s.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                children: u.intl.string(u.t.EJFSvL),
+                children: d.intl.string(d.t.EJFSvL),
             }),
-            (0, r.jsx)(h, _({}, e)),
+            (0, r.jsx)(
+                m,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e),
+            ),
         ],
     });
 }

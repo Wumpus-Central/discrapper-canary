@@ -1,39 +1,36 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(488290),
-    s = n(481060),
+var s = n(120356),
+    o = n.n(s),
+    a = n(488290),
+    i = n(481060),
     l = n(497505),
     c = n(685138),
-    u = n(644646),
-    d = n(46140),
-    f = n(388032),
-    _ = n(96656);
-let p = 64,
-    h = 8,
-    m = (0, o.animated)(s.$i$),
-    g = (e) => {
-        let { quest: t, expansionSpring: n, isFullyExpanded: i, partnerBranding: g, useReducedMotion: E } = e,
-            { status: b } = (0, c.n)({
-                location: d.dr.QUESTS_BAR,
+    d = n(644646),
+    u = n(46140),
+    p = n(388032),
+    m = n(96656);
+let g = (0, a.animated)(i.$i$),
+    f = (e) => {
+        let { quest: t, expansionSpring: n, isFullyExpanded: s, partnerBranding: f, useReducedMotion: h } = e,
+            { status: x } = (0, c.n)({
+                location: u.dr.QUESTS_BAR,
                 questConfig: t.config,
             }),
-            y = null == b ? void 0 : b.progressBlur,
-            O = (null == b ? void 0 : b.label1) || (null == b ? void 0 : b.label2),
-            v = null == b ? void 0 : b.shineWipe,
-            I = y ? 70 : 48,
-            T = y ? 12 : 8,
-            S = y ? -74 : -48,
-            A = y ? 0 : O ? -4 : 6,
-            C = 12;
+            _ = null == x ? void 0 : x.progressBlur,
+            b = (null == x ? void 0 : x.label1) || (null == x ? void 0 : x.label2),
+            j = null == x ? void 0 : x.shineWipe,
+            v = _ ? 70 : 48,
+            C = _ ? 12 : 8,
+            y = _ ? -74 : -48,
+            O = _ ? 0 : b ? -4 : 6;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.animated.div, {
-                    className: _.rewardTileContainer,
+                (0, r.jsx)(a.animated.div, {
+                    className: m.rewardTileContainer,
                     style: {
-                        transform: (0, o.to)(
+                        transform: (0, a.to)(
                             [
                                 n.to({
                                     range: [0, 1],
@@ -45,45 +42,45 @@ let p = 64,
                                 }),
                                 n.to({
                                     range: [0, 1],
-                                    output: [1, p / I],
+                                    output: [1, 64 / v],
                                 }),
                             ],
                             (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
                         ),
                     },
-                    children: (0, r.jsx)(u.Z, {
+                    children: (0, r.jsx)(d.Z, {
                         learnMoreStyle: "text",
-                        learnMoreFontSize: i ? (I / p) * C : void 0,
+                        learnMoreFontSize: s ? (v / 64) * 12 : void 0,
                         quest: t,
                         questContent: l.jn.QUEST_BAR_V2,
-                        location: d.dr.QUESTS_BAR,
-                        autoplay: i && !E,
+                        location: u.dr.QUESTS_BAR,
+                        autoplay: s && !h,
                         sourceQuestContent: l.jn.QUEST_BAR_V2,
-                        showShine: !v,
+                        showShine: !j,
                         style: {
-                            width: I,
-                            height: I,
-                            marginRight: T,
-                            borderRadius: (I / p) * h,
+                            width: v,
+                            height: v,
+                            marginRight: C,
+                            borderRadius: (v / 64) * 8,
                         },
                     }),
                 }),
-                (0, r.jsxs)(o.animated.div, {
-                    className: a()(_.rewardHighlightLogoCTA, {
-                        [_.rewardHighlightLogoCTAHeightBoost]: y,
-                        [_.rewardHighlightLogoCTALabel]: O,
+                (0, r.jsxs)(a.animated.div, {
+                    className: o()(m.rewardHighlightLogoCTA, {
+                        [m.rewardHighlightLogoCTAHeightBoost]: _,
+                        [m.rewardHighlightLogoCTALabel]: b,
                     }),
                     style: {
-                        height: y ? I : void 0,
-                        transform: (0, o.to)(
+                        height: _ ? v : void 0,
+                        transform: (0, a.to)(
                             [
                                 n.to({
                                     range: [0, 1],
-                                    output: [0, S],
+                                    output: [0, y],
                                 }),
                                 n.to({
                                     range: [0, 1],
-                                    output: [0, A],
+                                    output: [0, O],
                                 }),
                             ],
                             (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
@@ -91,12 +88,12 @@ let p = 64,
                     },
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()({ [_.partnerBranding]: !y && !O }),
-                            children: g,
+                            className: o()({ [m.partnerBranding]: !_ && !b }),
+                            children: f,
                         }),
-                        y &&
-                            (0, r.jsx)(m, {
-                                className: _.rewardHighlightLogoCTADivider,
+                        _ &&
+                            (0, r.jsx)(g, {
+                                className: m.rewardHighlightLogoCTADivider,
                                 style: {
                                     opacity: n.to({
                                         range: [0, 1],
@@ -104,20 +101,20 @@ let p = 64,
                                     }),
                                 },
                             }),
-                        (0, r.jsx)(o.animated.div, {
-                            className: a()(_.rewardHighlightCTA, { [_.rewardHighlightCTALabel]: O }),
+                        (0, r.jsx)(a.animated.div, {
+                            className: o()(m.rewardHighlightCTA, { [m.rewardHighlightCTALabel]: b }),
                             style: {
                                 opacity: n.to({
                                     range: [0, 1],
-                                    output: [O ? 1 : 0.7, 0],
+                                    output: [b ? 1 : 0.7, 0],
                                 }),
                             },
-                            children: (0, r.jsx)(s.Text, {
+                            children: (0, r.jsx)(i.Text, {
                                 color: "always-white",
                                 lineClamp: 1,
                                 variant: "text-xs/medium",
-                                children: f.intl.string(
-                                    (null == b ? void 0 : b.label2) ? f.t["3mgEQU"] : f.t["1Wvve3"],
+                                children: p.intl.string(
+                                    (null == x ? void 0 : x.label2) ? p.t["3mgEQU"] : p.t["1Wvve3"],
                                 ),
                             }),
                         }),

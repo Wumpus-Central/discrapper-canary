@@ -46,8 +46,8 @@ var i = n(772848),
     P = n(61115),
     w = n(150560),
     D = n(46140),
-    x = n(981631),
-    L = n(49898),
+    L = n(981631),
+    x = n(49898),
     j = n(388032);
 function M(e, t, n) {
     return (
@@ -116,7 +116,9 @@ function F(e) {
         let e = (0, C.i)("openQuestsRewardCodeModal"),
             s = R.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("10150"), n.e("73268")]).then(n.bind(n, 188209));
+            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("3408"), n.e("96861")]).then(
+                n.bind(n, 188209),
+            );
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -128,7 +130,9 @@ function F(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("10150"), n.e("4519")]).then(n.bind(n, 985866));
+        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("3408"), n.e("61624")]).then(
+            n.bind(n, 985866),
+        );
         return (e) =>
             (0, r.jsx)(
                 u,
@@ -287,9 +291,9 @@ function q() {
     let r = null != t ? "#".concat(t) : "",
         { enabled: i } = v.m8.getConfig({ location: D.dr.NAVIGATE_TO_QUEST_HOME_UTIL }),
         a = i && !n;
-    a || c.Z.setState({ selectedTab: L.GlobalDiscoveryTab.QUESTS }),
+    a || c.Z.setState({ selectedTab: x.GlobalDiscoveryTab.QUESTS }),
         (0, f.default)(),
-        (0, d.uL)((a ? x.Z5c.QUEST_HOME_V2 : x.Z5c.QUEST_HOME) + r);
+        (0, d.uL)((a ? L.Z5c.QUEST_HOME_V2 : L.Z5c.QUEST_HOME) + r);
 }
 let X = 0.2;
 function Q(e) {
@@ -304,7 +308,7 @@ function Q(e) {
         });
 }
 function J() {
-    return Promise.all([n.e("11416"), n.e("32249")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("11416"), n.e("52407"), n.e("32249"), n.e("50584")]).then(n.bind(n, 536687));
 }
 function $(e) {
     var t;
@@ -338,7 +342,7 @@ function $(e) {
         null != e &&
             e.timestampSec > 1 &&
             ((0, E.lx)(n.id),
-            p.default.track(x.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            p.default.track(L.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
                 source_quest_content: (0, m._b)(o),
                 source_quest_content_cta: l,
@@ -392,7 +396,7 @@ function et(e) {
     let t = ee(e),
         n = (0, a.zS)(t);
     null != n &&
-        p.default.track(x.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(L.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -401,7 +405,7 @@ function et(e) {
             if (!t) {
                 let { enabled: t } = v.m8.getConfig({ location: D.dr.QUEST_DEEP_LINK_UTIL });
                 (0, d.dL)({
-                    pathname: t ? x.Z5c.QUEST_HOME_V2 : x.Z5c.QUEST_HOME,
+                    pathname: t ? L.Z5c.QUEST_HOME_V2 : L.Z5c.QUEST_HOME,
                     hash: e,
                 });
             }

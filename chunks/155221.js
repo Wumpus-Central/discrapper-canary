@@ -61,7 +61,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,12 +73,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -126,7 +126,7 @@ let j = (0, h.Un)({
         name: "LinkAuthorize",
     }),
     V = (0, h.Un)({
-        createPromise: () => Promise.all([n.e("17758"), n.e("69773")]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e("11522"), n.e("69773")]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: "ActivateDevice",
     }),
@@ -148,6 +148,7 @@ let j = (0, h.Un)({
                 n.e("33285"),
                 n.e("46154"),
                 n.e("62856"),
+                n.e("64838"),
                 n.e("38697"),
                 n.e("17938"),
                 n.e("66201"),
@@ -158,23 +159,24 @@ let j = (0, h.Un)({
                 n.e("30474"),
                 n.e("36084"),
                 n.e("38342"),
+                n.e("52407"),
                 n.e("91689"),
                 n.e("39206"),
-                n.e("91053"),
+                n.e("63962"),
+                n.e("3408"),
                 n.e("35755"),
                 n.e("22516"),
-                n.e("92592"),
+                n.e("56785"),
                 n.e("37220"),
-                n.e("10150"),
                 n.e("5007"),
                 n.e("22173"),
                 n.e("30634"),
                 n.e("95546"),
                 n.e("90550"),
-                n.e("88806"),
+                n.e("37384"),
                 n.e("3688"),
                 n.e("204"),
-                n.e("73696"),
+                n.e("99988"),
                 n.e("60831"),
                 n.e("24920"),
                 n.e("64170"),
@@ -182,9 +184,9 @@ let j = (0, h.Un)({
                 n.e("93964"),
                 n.e("77803"),
                 n.e("69432"),
-                n.e("51727"),
-                n.e("11222"),
-                n.e("73323"),
+                n.e("69310"),
+                n.e("89342"),
+                n.e("96631"),
                 n.e("31553"),
                 n.e("95468"),
                 n.e("29709"),
@@ -199,7 +201,7 @@ let j = (0, h.Un)({
     Y = (0, h.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("17758"),
+                n.e("11522"),
                 n.e("3688"),
                 n.e("52030"),
                 n.e("10778"),
@@ -239,6 +241,7 @@ let j = (0, h.Un)({
                 n.e("33285"),
                 n.e("46154"),
                 n.e("62856"),
+                n.e("64838"),
                 n.e("38697"),
                 n.e("66201"),
                 n.e("43342"),
@@ -249,19 +252,19 @@ let j = (0, h.Un)({
                 n.e("36084"),
                 n.e("38342"),
                 n.e("39206"),
-                n.e("91053"),
+                n.e("63962"),
                 n.e("35755"),
-                n.e("92592"),
+                n.e("56785"),
                 n.e("37220"),
                 n.e("5007"),
                 n.e("22173"),
                 n.e("95546"),
                 n.e("90550"),
-                n.e("88806"),
+                n.e("37384"),
                 n.e("60831"),
                 n.e("24920"),
                 n.e("64170"),
-                n.e("51727"),
+                n.e("69310"),
                 n.e("63141"),
             ]).then(n.bind(n, 290161)),
         webpackId: 290161,
@@ -538,7 +541,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.CONNECT_AUTHORIZE,
-                                      to: L(D({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
+                                      to: x(D({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: [
@@ -595,7 +598,7 @@ function eo(e) {
         n = (0, b.h)();
     return (0, r.jsx)(
         ei,
-        L(D({}, e), {
+        x(D({}, e), {
             skipsSettingDefaultPageTitle: t,
             shouldBlockBrowser: n,
         }),

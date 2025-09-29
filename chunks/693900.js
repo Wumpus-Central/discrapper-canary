@@ -1,61 +1,60 @@
 n.d(t, {
-    n: () => p,
-    t: () => f,
+    n: () => m,
+    t: () => p,
 }),
     n(388685);
 var r = n(951288),
-    i = n(647438),
-    a = n(786920),
-    o = n(442837),
-    s = n(481060),
+    s = n(647438),
+    o = n(488290),
+    a = n(442837),
+    i = n(481060),
     l = n(393238),
     c = n(110924),
-    u = n(607070);
-let d = i.createContext({
+    d = n(607070);
+let u = s.createContext({
     springConfig: {},
     isExpanded: !1,
 });
-function f(e) {
-    let t = i.useMemo(
+function p(e) {
+    let t = s.useMemo(
         () => ({
             springConfig: e.springConfig,
             isExpanded: e.isExpanded,
         }),
         [e.springConfig, e.isExpanded],
     );
-    return (0, r.jsx)(d.Provider, {
+    return (0, r.jsx)(u.Provider, {
         value: t,
         children: e.children,
     });
 }
-let _ = null;
-function p(e) {
+function m(e) {
     var t;
     let { children: n } = e,
-        { springConfig: f, isExpanded: p } = i.useContext(d),
-        h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        { ref: m, height: g = _ } = (0, l.ZP)(),
-        E = null != (t = (0, c.Z)(g)) ? t : _,
-        [{ height: b }, y] = (0, s.q_F)(() => ({
+        { springConfig: p, isExpanded: m } = s.useContext(u),
+        g = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        { ref: f, height: h = null } = (0, l.ZP)(),
+        x = null != (t = (0, c.Z)(h)) ? t : null,
+        [{ height: _ }, b] = (0, i.q_F)(() => ({
             from: { height: 0 },
-            config: f,
+            config: p,
         }));
     return (
-        i.useLayoutEffect(() => {
-            g !== _ &&
-                y({
-                    height: g,
-                    immediate: !p || h || E === _,
+        s.useLayoutEffect(() => {
+            null !== h &&
+                b({
+                    height: h,
+                    immediate: !m || g || null === x,
                 });
-        }, [g, y, p, h, E]),
-        (0, r.jsx)(a.animated.div, {
+        }, [h, b, m, g, x]),
+        (0, r.jsx)(o.animated.div, {
             style: {
-                height: E === _ ? "auto" : b,
+                height: null === x ? "auto" : _,
                 overflow: "hidden",
             },
             children: (0, r.jsx)("div", {
                 style: { overflow: "hidden" },
-                ref: m,
+                ref: f,
                 children: n,
             }),
         })

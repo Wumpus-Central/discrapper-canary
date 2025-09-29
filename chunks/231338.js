@@ -18,7 +18,7 @@ n.d(t, {
     Il: () => o.I,
     Jj: () => j,
     MA: () => ey,
-    NY: () => x,
+    NY: () => L,
     OL: () => g,
     OM: () => eh,
     Pl: () => G,
@@ -30,7 +30,7 @@ n.d(t, {
     S7: () => U,
     Sk: () => h,
     TC: () => H,
-    U6: () => L,
+    U6: () => x,
     Uk: () => C,
     V6: () => W,
     Vq: () => Z,
@@ -217,12 +217,12 @@ var w = (function (e) {
             e
         );
     })({}),
-    x = (function (e) {
+    L = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
@@ -586,7 +586,6 @@ let $ = 250,
         CHANNEL: (e, t) => "/channels/".concat(e, "/").concat(t),
         REPORT: "".concat(l, "/report"),
         QUEST_PREVIEW_TOOL_2: (e) => "".concat(l, "/quest-home?tab=preview_tool&quest_id=").concat(e),
-        SETTINGS_QUEST_PREVIEW_TOOL_2: (e) => "".concat(l, "/settings/quest-preview-tool-2?quest_id=").concat(e),
     });
 var es = (function (e) {
     return (

@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(4434),
     b = n(981631),
     y = n(388032),
-    O = n(252633);
+    O = n(396849);
 let v = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, transitionState: v, onClose: I } = e,
         T = (0, h.vx)(_.Z.boostSlots);
@@ -35,22 +35,24 @@ let v = (e) => {
         [A, C] = (0, s.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [N, R] = i.useState(S[0]),
         [P, w] = i.useState(!1),
-        [D, x] = i.useState(n),
-        [L, j] = i.useState(null != t ? t : T.slice(0, 1)),
+        [D, L] = i.useState(n),
+        [x, j] = i.useState(null != t ? t : T.slice(0, 1)),
         M = i.useMemo(
             () =>
-                null == L
+                null == x
                     ? []
-                    : L.map((e) => {
-                          let { premiumGuildSubscription: t } = e;
-                          return f.Z.getGuild(null == t ? void 0 : t.guildId);
-                      }).filter((e) => null != e),
-            [L],
+                    : x
+                          .map((e) => {
+                              let { premiumGuildSubscription: t } = e;
+                              return f.Z.getGuild(null == t ? void 0 : t.guildId);
+                          })
+                          .filter((e) => null != e),
+            [x],
         ),
         k = i.useMemo(() => {
             var e;
-            return (null == L || null == (e = L[0]) ? void 0 : e.premiumGuildSubscription) != null;
-        }, [L]),
+            return (null == x || null == (e = x[0]) ? void 0 : e.premiumGuildSubscription) != null;
+        }, [x]),
         U = () => (
             I("SUCCESS" === N),
             p.default.track(b.rMx.MODAL_DISMISSED, {
@@ -91,7 +93,7 @@ let v = (e) => {
                                 className: O.quantitySelectorWrapper,
                                 children: [
                                     (0, r.jsx)(c.FiK, {
-                                        value: L.length,
+                                        value: x.length,
                                         onChange: (e) => j(T.slice(0, e)),
                                         minValue: 1,
                                         maxValue: T.length,
@@ -111,7 +113,7 @@ let v = (e) => {
                 (0, r.jsx)(g.default, {
                     onClose: U,
                     onSelectGuild: (e) => {
-                        x(e), R("CONFIRM");
+                        L(e), R("CONFIRM");
                     },
                     transitionState: v,
                     isTransfer: k,
@@ -119,26 +121,26 @@ let v = (e) => {
                 }),
             CONFIRM() {
                 if (null == D) return null;
-                let e = L.filter((e) => (0, h.tl)(e)).length,
-                    t = L.length,
+                let e = x.filter((e) => (0, h.tl)(e)).length,
+                    t = x.length,
                     n = M.length,
                     i = "CONFIRM" === S[0] ? U : () => R(S[S.indexOf(N) - 1]),
                     a = async () => {
-                        if (null != D && (null == L ? void 0 : L.length) !== 0) {
+                        if (null != D && (null == x ? void 0 : x.length) !== 0) {
                             o()(
-                                !L.some((e) => e.isOnCooldown()),
+                                !x.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
                             );
                             try {
                                 await Promise.all(
-                                    L.map((e) => {
+                                    x.map((e) => {
                                         let { premiumGuildSubscription: t } = e;
                                         return null != t ? (0, u.dG)(t.guildId, t.id) : Promise.resolve();
                                     }),
                                 ),
                                     await (0, u.W3)(
                                         D.id,
-                                        L.map((e) => {
+                                        x.map((e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
@@ -211,7 +213,7 @@ let v = (e) => {
                     children: (0, r.jsx)(E.R7, {
                         guild: D,
                         isTransfer: k,
-                        guildBoostQuantity: L.length,
+                        guildBoostQuantity: x.length,
                         onClose: U,
                         didPurchaseOnFractionalPremium: !1,
                     }),

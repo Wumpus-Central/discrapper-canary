@@ -1,20 +1,7 @@
-n.d(t, { n: () => f }), n(388685);
+n.d(t, { n: () => c }), n(388685);
 var r = n(647438),
-    i = n(427164);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function o(e) {
+    l = n(427164);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,36 +12,40 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function l(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = new Date(Date.UTC(2025, 8, 6)),
-    u = (0, i.le)({
+let a = new Date(Date.UTC(2025, 8, 6)),
+    o = (0, l.le)({
         name: "2025-09-quest-brand-color-removal-phase-2",
         kind: "user",
         defaultConfig: {
@@ -104,21 +95,21 @@ let c = new Date(Date.UTC(2025, 8, 6)),
             },
         },
     }),
-    d = () => {
+    u = () => {
         let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
         return parseInt("" !== e ? e : "375");
     };
-function f(e) {
+function c(e) {
     var t;
-    let { questConfig: n, location: i } = e,
-        a = r.useMemo(() => new Date(n.startsAt), [n.startsAt]) >= c,
-        s = u.useConfig({ location: a ? i : "NONE" }),
-        f = (null == (t = s.status) ? void 0 : t.label1) ? 350 : 305,
-        [_, p] = r.useState(() => d() < f);
+    let { questConfig: n, location: l } = e,
+        c = r.useMemo(() => new Date(n.startsAt), [n.startsAt]) >= a,
+        d = o.useConfig({ location: c ? l : "NONE" }),
+        p = (null == (t = d.status) ? void 0 : t.label1) ? 300 : 270,
+        [f, m] = r.useState(() => u() < p);
     return (
         r.useEffect(() => {
             let e = new MutationObserver(() => {
-                p(d() < f);
+                m(u() < p);
             });
             return (
                 e.observe(document.body, {
@@ -127,21 +118,21 @@ function f(e) {
                 }),
                 () => e.disconnect()
             );
-        }, [f]),
+        }, [p]),
         r.useMemo(() => {
             var e, t, n;
-            return s.enabled && a
-                ? l(o({}, s), {
-                      status: l(o({}, s.status), {
-                          label1: (null == (e = s.status) ? void 0 : e.label1) && !_,
-                          label2: (null == (t = s.status) ? void 0 : t.label2) && !_,
-                          shineWipe: (null == (n = s.status) ? void 0 : n.shineWipe) || _,
+            return d.enabled && c
+                ? i(s({}, d), {
+                      status: i(s({}, d.status), {
+                          label1: (null == (e = d.status) ? void 0 : e.label1) && !f,
+                          label2: (null == (t = d.status) ? void 0 : t.label2) && !f,
+                          shineWipe: (null == (n = d.status) ? void 0 : n.shineWipe) || f,
                       }),
                   })
                 : {
                       enabled: !1,
                       status: void 0,
                   };
-        }, [s, a, _])
+        }, [d, c, f])
     );
 }
