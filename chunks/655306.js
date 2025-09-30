@@ -12,10 +12,10 @@ var r = n(392711),
     s = n(966146),
     l = n(902704),
     c = n(846519),
-    u = n(621012),
-    d = n(314897),
-    f = n(526167),
-    _ = n(70956),
+    u = n(314897),
+    d = n(526167),
+    f = n(70956),
+    _ = n(358085),
     p = n(709054),
     h = n(798681),
     m = n(981631),
@@ -38,9 +38,9 @@ let b = 100,
     O = { any: 100 },
     v = 100,
     I = 3,
-    T = 30 * _.Z.Millis.SECOND,
-    S = 120 * _.Z.Millis.SECOND,
-    A = -1 !== (0, f.hY)();
+    T = 30 * f.Z.Millis.SECOND,
+    S = 120 * f.Z.Millis.SECOND,
+    A = -1 !== (0, d.hY)();
 var C = (function (e) {
     return (e.UserSSRCUpdate = "user-ssrc-update"), (e.Update = "update"), e;
 })({});
@@ -57,7 +57,7 @@ class N extends a.Z {
         return 1 === this.otherUsers.size;
     }
     updateCallUserIds(e) {
-        (this.otherUsers = new Set(e)), this.otherUsers.delete(d.default.getId()), this.update();
+        (this.otherUsers = new Set(e)), this.otherUsers.delete(u.default.getId()), this.update();
     }
     shouldReceiveFromUser(e) {
         var t, n;
@@ -293,13 +293,9 @@ class N extends a.Z {
                     r = a.getWantsLevel(),
                     o = { any: r };
                 a.updateOffscreenUsers();
-                let { enabledSingle: s } = u.m.getCurrentConfig(
-                        { location: "RTCMediaSinkWantsManager.update" },
-                        { autoTrackExposure: !1 },
-                    ),
-                    c = s && a.isOneToOneCall() && !a.isStageChannel;
+                let s = (0, _.isDesktop)() && a.isOneToOneCall() && !a.isStageChannel;
                 for (let [t, i] of p.default.entries(a.videoSsrcs)) {
-                    let s = [],
+                    let c = [],
                         u = !1,
                         d = null != (e = a.streamPixelCounts[a.streamIds[t]]) ? e : 0,
                         f = a.getWantsLevel(d),
@@ -314,21 +310,21 @@ class N extends a.Z {
                                         : (o[t.ssrc] = y)
                                     : e
                                       ? (o[t.ssrc] = y)
-                                      : (c && (o[t.ssrc] = f), (_ = t.ssrc));
+                                      : (s && (o[t.ssrc] = f), (_ = t.ssrc));
                             if (a.supportsSeamless && !a.framesReceived[_])
-                                for (let e of ((u = !0), (s = [_]), i))
+                                for (let e of ((u = !0), (c = [_]), i))
                                     e.ssrc !== _ &&
                                         a.framesReceived[e.ssrc] &&
-                                        (e.quality === b ? (o[e.ssrc] = b) : (o[e.ssrc] = c ? f : r), s.push(e.ssrc));
-                        } else e ? (o[_] = b) : c && (o[_] = f);
+                                        (e.quality === b ? (o[e.ssrc] = b) : (o[e.ssrc] = s ? f : r), c.push(e.ssrc));
+                        } else e ? (o[_] = b) : s && (o[_] = f);
                     } else for (let e of i) o[e.ssrc] = y;
                     let p = a.getSimulcastOverrideQuality(t);
                     for (let e of (p === g.Z.HIGH ? (o[_] = b) : p === g.Z.LOW && (o[_] = 50),
-                    (a.supportsSeamless && u) || (s = [_]),
+                    (a.supportsSeamless && u) || (c = [_]),
                     i))
-                        s.includes(e.ssrc) || delete a.framesReceived[e.ssrc];
-                    (n.includes(t) || (void 0 !== a.remoteVideoSsrcs[t] && !(0, l.Z)(a.remoteVideoSsrcs[t], s))) &&
-                        ((a.remoteVideoSsrcs[t] = [...s]), a.emit("user-ssrc-update", t, a.audioSsrcs[t], s));
+                        c.includes(e.ssrc) || delete a.framesReceived[e.ssrc];
+                    (n.includes(t) || (void 0 !== a.remoteVideoSsrcs[t] && !(0, l.Z)(a.remoteVideoSsrcs[t], c))) &&
+                        ((a.remoteVideoSsrcs[t] = [...c]), a.emit("user-ssrc-update", t, a.audioSsrcs[t], c));
                 }
                 for (let [e, n] of Object.entries(a.audioSsrcs))
                     (null == (t = a.connection) ? void 0 : t.getLocalMute(e)) && (o[n] = 0);
