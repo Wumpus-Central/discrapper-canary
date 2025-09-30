@@ -104,24 +104,27 @@ let b = (e) => {
             onClick: d,
             ref: _,
         } = e,
-        p = h(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
-    let { trackUserProfileAction: m } = (0, c.KZ)(),
-        E = (e) => {
-            null != t && m({ action: t }), null == d || d(e);
+        m = h(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
+    let { trackUserProfileAction: E } = (0, c.KZ)(),
+        b = (e) => {
+            null != t && E({ action: t }), null == d || d(e);
         };
     return (0, r.jsx)(
         s.zx,
-        f(
-            {
-                buttonRef: _,
-                className: o()(u.button, a),
-                innerClassName: o()(u.buttonInner, l),
-                color: o()(n, g[i]),
-                look: s.zx.Looks.FILLED,
-                size: s.zx.Sizes.SMALL,
-                onClick: E,
-            },
-            p,
+        p(
+            f(
+                {
+                    buttonRef: _,
+                    className: o()(u.button, a),
+                    innerClassName: o()(u.buttonInner, l),
+                    color: o()(n, g[i]),
+                    look: s.zx.Looks.FILLED,
+                    size: s.zx.Sizes.SMALL,
+                    onClick: b,
+                },
+                m,
+            ),
+            { "data-migration-pending": !0 },
         ),
     );
 };
