@@ -1,34 +1,20 @@
-n.d(t, { default: () => c });
+n.d(t, { default: () => u });
 var r = n(951288);
 n(647438);
-var i = n(435935),
-    a = n(481060),
-    s = n(115849),
-    l = n(388032),
-    u = n(255597);
-function c(e) {
+var i = n(82659),
+    a = n(115849),
+    s = n(388032),
+    l = n(255597);
+function u(e) {
     let { transitionState: t, onClose: n } = e;
-    return (0, r.jsxs)(a.Y0X, {
-        size: a.CgR.SMALL,
+    return (0, r.jsx)(i.Modal, {
+        title: s.intl.string(s.t.w5uwoK),
         transitionState: t,
-        parentComponent: "AddFriendModal",
-        children: [
-            (0, r.jsxs)(a.xBx, {
-                justify: i.k.Justify.BETWEEN,
-                children: [
-                    (0, r.jsx)(a.X6q, {
-                        variant: "heading-lg/semibold",
-                        children: l.intl.string(l.t.w5uwoK),
-                    }),
-                    (0, r.jsx)(a.olH, { onClick: n }),
-                ],
-            }),
-            (0, r.jsx)(a.hzk, {
-                children: (0, r.jsx)("div", {
-                    className: u.content,
-                    children: (0, r.jsx)(s.Z, { placeholder: l.intl.string(l.t.IEpCBQ) }),
-                }),
-            }),
-        ],
+        onClose: n,
+        actions: void 0,
+        children: (0, r.jsx)("div", {
+            className: l.content,
+            children: (0, r.jsx)(a.Z, { placeholder: s.intl.string(s.t.IEpCBQ) }),
+        }),
     });
 }
