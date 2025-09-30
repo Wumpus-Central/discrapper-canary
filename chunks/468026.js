@@ -71,7 +71,7 @@ let h = (e) => {
                 checked: R,
                 onChange: (e) => P(e),
                 label: y,
-                labelSize: "small",
+                labelType: "secondary",
             })),
         (0, r.jsx)(c.Y0, {
             transitionState: A,

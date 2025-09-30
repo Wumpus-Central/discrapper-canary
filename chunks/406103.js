@@ -1,107 +1,122 @@
-n.d(t, { I: () => f }), n(388685);
+n.d(t, { I: () => c }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(30717),
-    o = n(895070),
-    s = n(632140),
-    l = n(966649),
-    c = n(793030),
-    u = n(159691),
-    d = n(709867);
-let f = {
+    a = n(657707),
+    o = n(793030),
+    s = n(159691),
+    l = n(709867);
+let c = {
     title: "CheckboxGroup",
     stories: [
         {
             id: "checkboxgroup",
             name: "CheckboxGroup",
             component: function (e) {
-                let { disabled: t, optionCount: n, label: f, withDescriptions: _, withIcons: p } = e,
-                    [h, m] = i.useState([]),
-                    g = i.useMemo(() => {
-                        let e = [s.x, o.A, a.d, l.U];
-                        return [
-                            {
-                                label: "Option 1",
-                                value: "option1",
-                                description: _ ? "This is the first option with some descriptive text" : null,
-                                icon: p ? e[0] : void 0,
-                            },
-                            {
-                                label: "Option 2",
-                                value: "option2",
-                                description: _ ? "This is the second option with different content" : null,
-                                icon: p ? e[1] : void 0,
-                            },
-                            {
-                                label: "Option 3",
-                                value: "option3",
-                                description: _ ? "This is the third option for comparison" : null,
-                                icon: p ? e[2] : void 0,
-                            },
-                            {
-                                label: "Option 4",
-                                value: "option4",
-                                description: _ ? "This is the fourth and final option" : null,
-                                icon: p ? e[3] : void 0,
-                            },
-                            {
-                                label: "Option 5",
-                                value: "option5",
-                                description: _ ? "This is the fifth option" : null,
-                                icon: p ? e[0] : void 0,
-                            },
-                        ].slice(0, Math.max(1, Math.min(5, n)));
-                    }, [n, _, p]),
-                    E = i.useCallback((e) => {
-                        m(e);
+                let {
+                        disabled: t,
+                        optionCount: n,
+                        label: c,
+                        description: u,
+                        iconPosition: d,
+                        withMixedDisabledOptions: f,
+                    } = e,
+                    [_, p] = i.useState([]),
+                    h = i.useMemo(
+                        () =>
+                            [
+                                {
+                                    label: "Option 1",
+                                    value: "option1",
+                                    description: null != u || "" === u ? u : void 0,
+                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
+                                    disabled: !f && void 0,
+                                },
+                                {
+                                    label: "Option 2",
+                                    value: "option2",
+                                    description: null != u || "" === u ? u : void 0,
+                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
+                                    disabled: !!f || void 0,
+                                },
+                                {
+                                    label: "Option 3",
+                                    value: "option3",
+                                    description: null != u || "" === u ? u : void 0,
+                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
+                                    disabled: !f && void 0,
+                                },
+                                {
+                                    label: "Option 4",
+                                    value: "option4",
+                                    description: null != u || "" === u ? u : void 0,
+                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
+                                    disabled: !!f || void 0,
+                                },
+                                {
+                                    label: "Option 5",
+                                    value: "option5",
+                                    description: null != u || "" === u ? u : void 0,
+                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
+                                    disabled: !f && void 0,
+                                },
+                            ].slice(0, Math.max(1, Math.min(5, n))),
+                        [n, u, d, f],
+                    ),
+                    m = i.useCallback((e) => {
+                        p(e);
+                    }, []),
+                    g = i.useCallback(() => {
+                        p(h.map((e) => e.value));
+                    }, [h]),
+                    E = i.useCallback(() => {
+                        p([]);
                     }, []),
                     b = i.useCallback(() => {
-                        m(g.map((e) => e.value));
-                    }, [g]),
-                    y = i.useCallback(() => {
-                        m([]);
-                    }, []),
-                    O = i.useCallback(() => {
-                        g.length > 0 && m([g[0].value]);
-                    }, [g]);
-                return (0, r.jsxs)(c.Kqy, {
+                        h.length > 0 && p([h[0].value]);
+                    }, [h]);
+                return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, r.jsx)(d.c, {
-                            value: h,
-                            label: f,
-                            onChange: E,
-                            options: g,
+                        (0, r.jsx)(l.c, {
+                            value: _,
+                            label: c,
+                            onChange: m,
+                            options: h,
                             disabled: t,
                         }),
-                        (0, r.jsxs)(c.xvT, {
+                        (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
-                            children: ["Current selection: ", h.length > 0 ? h.join(", ") : "None"],
+                            children: ["Current selection: ", _.length > 0 ? _.join(", ") : "None"],
                         }),
-                        (0, r.jsxs)(c.Kqy, {
+                        (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, r.jsx)(u.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select All",
-                                    onClick: b,
-                                    disabled: t || 0 === g.length,
+                                    onClick: g,
+                                    disabled: t || 0 === h.length,
                                 }),
-                                (0, r.jsx)(u.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select First",
-                                    onClick: O,
-                                    disabled: t || 0 === g.length,
+                                    onClick: b,
+                                    disabled: t || 0 === h.length,
                                 }),
-                                (0, r.jsx)(u.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear All",
-                                    onClick: y,
+                                    onClick: E,
                                     disabled: t,
                                 }),
                             ],
@@ -121,18 +136,59 @@ let f = {
                     defaultValue: !1,
                 },
                 optionCount: {
-                    type: "number",
-                    label: "Number of Options (max 5)",
+                    type: "select",
+                    label: "Number of Options",
+                    options: [
+                        {
+                            label: "1",
+                            value: 1,
+                        },
+                        {
+                            label: "2",
+                            value: 2,
+                        },
+                        {
+                            label: "3",
+                            value: 3,
+                        },
+                        {
+                            label: "4",
+                            value: 4,
+                        },
+                        {
+                            label: "5",
+                            value: 5,
+                        },
+                    ],
                     defaultValue: 3,
                 },
-                withDescriptions: {
-                    type: "boolean",
-                    label: "Show Descriptions",
-                    defaultValue: !0,
+                description: {
+                    type: "text",
+                    label: "Description",
+                    defaultValue: "",
                 },
-                withIcons: {
+                iconPosition: {
+                    type: "select",
+                    label: "Icon Position",
+                    options: [
+                        {
+                            label: "None",
+                            value: "none",
+                        },
+                        {
+                            label: "Leading",
+                            value: "leading",
+                        },
+                        {
+                            label: "Trailing",
+                            value: "trailing",
+                        },
+                    ],
+                    defaultValue: "none",
+                },
+                withMixedDisabledOptions: {
                     type: "boolean",
-                    label: "Show Icons",
+                    label: "Mixed Disabled Options",
                     defaultValue: !1,
                 },
             },

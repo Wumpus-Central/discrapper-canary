@@ -58,31 +58,22 @@ function d(e, t) {
     );
 }
 function f(e) {
-    let { disabled: t, displayOnly: n, label: l, checked: u, onChange: f, labelSize: _, value: p } = e;
-    if ((0, i.A)("Checkbox"))
-        return (0, r.jsx)(o.C, {
-            disabled: t,
-            displayOnly: n,
-            checked: u,
-            onChange: f,
-            label: l,
-            labelSize: _,
-            value: p,
-        });
-    let h =
-        null != l && "" !== l
-            ? (0, r.jsx)(a.x, {
-                  variant: "small" === _ ? "text-sm/normal" : "text-md/normal",
-                  color: "small" === _ ? "text-secondary" : "text-primary",
-                  children: l,
-              })
-            : null;
+    if ((0, i.A)("Checkbox")) return (0, r.jsx)(o.C, c({}, e));
+    let { label: t, checked: n, onChange: l, labelType: u = "primary" } = e,
+        f =
+            null != t && "" !== t
+                ? (0, r.jsx)(a.x, {
+                      variant: "text-md/medium",
+                      color: "primary" === u ? "text-primary" : "text-secondary",
+                      children: t,
+                  })
+                : null;
     return (0, r.jsx)(
         s.$q,
         d(c({}, e), {
-            value: u,
-            onChange: (e, t) => (null == f ? void 0 : f(t)),
-            children: h,
+            value: n,
+            onChange: (e, t) => (null == l ? void 0 : l(t)),
+            children: f,
         }),
     );
 }

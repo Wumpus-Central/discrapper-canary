@@ -1,15 +1,15 @@
-i.d(n, { default: () => o }), i(388685);
-var e = i(951288),
-    a = i(647438),
-    s = i(82659),
-    l = i(481060),
-    r = i(388032);
+e.d(n, { default: () => o }), e(388685);
+var i = e(951288),
+    a = e(647438),
+    s = e(82659),
+    l = e(481060),
+    r = e(388032);
 function o(t) {
-    let { transitionState: n, onConfirm: i, onClose: o, onDismiss: c } = t,
+    let { transitionState: n, onConfirm: e, onClose: o, onDismiss: c } = t,
         [d, u] = a.useState(!1),
-        [h, b] = a.useState(!0),
-        [g, p] = a.useState(!0);
-    return (0, e.jsx)(s.Modal, {
+        [h, p] = a.useState(!0),
+        [b, g] = a.useState(!0);
+    return (0, i.jsx)(s.Modal, {
         transitionState: n,
         onClose: o,
         title: r.intl.string(r.t["6rP+BQ"]),
@@ -26,24 +26,24 @@ function o(t) {
             {
                 text: r.intl.string(r.t["cY+Ooa"]),
                 onClick: () => {
-                    d || (u(!0), i(h, g), u(!1), o());
+                    d || (u(!0), e(h, b), u(!1), o());
                 },
                 disabled: d,
                 loading: d,
             },
         ],
-        actionBarInput: (0, e.jsx)(l.XZJ, {
-            checked: g,
+        actionBarInput: (0, i.jsx)(l.XZJ, {
+            checked: b,
             onChange: (t) => {
-                p(t);
+                g(t);
             },
             label: r.intl.string(r.t.KX8WJi),
-            labelSize: "small",
+            labelType: "secondary",
         }),
-        children: (0, e.jsx)(l.j7V, {
+        children: (0, i.jsx)(l.j7V, {
             hideBorder: !0,
             onChange: (t) => {
-                b(t);
+                p(t);
             },
             value: h,
             children: r.intl.string(r.t["zLb+u7"]),
