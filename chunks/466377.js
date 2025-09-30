@@ -3,8 +3,8 @@ n.d(t, {
     Y0: () => P,
     YA: () => M,
     fM: () => R,
-    hz: () => x,
-    mz: () => L,
+    hz: () => L,
+    mz: () => x,
     ol: () => j,
     xB: () => w,
 });
@@ -12,7 +12,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(990547),
     c = n(748780),
     u = n(197723),
@@ -159,8 +159,8 @@ function P(e) {
             },
             "animate-always",
         ),
-        x = i.useRef(null),
-        L = null != R["aria-label"],
+        L = i.useRef(null),
+        x = null != R["aria-label"],
         j = null != R["aria-labelledby"],
         M = i.useId(),
         k = null != (t = R["aria-labelledby"]) ? t : M,
@@ -182,7 +182,7 @@ function P(e) {
                         role: f,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        "aria-labelledby": L ? void 0 : U.headerId,
+                        "aria-labelledby": x ? void 0 : U.headerId,
                     },
                     R,
                 ),
@@ -192,10 +192,10 @@ function P(e) {
                             [y.fullscreenOnMobile]: m,
                             [y.rootWithShadow]: !b,
                         }),
-                        ref: x,
+                        ref: L,
                         style: D,
                         children: (0, r.jsx)(d.JcV, {
-                            containerRef: x,
+                            containerRef: L,
                             children: a,
                         }),
                     }),
@@ -229,7 +229,7 @@ function D(e) {
             return d.h21;
     }
 }
-function x(e) {
+function L(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = S(e, ["className", "children", "scrollerRef", "scrollbarType"]),
         l = D(a);
@@ -238,6 +238,7 @@ function x(e) {
         T(
             v(
                 {
+                    "data-migration-pending": !0,
                     className: o()(y.content, t),
                     ref: i,
                 },
@@ -247,7 +248,7 @@ function x(e) {
         ),
     );
 }
-function L(e) {
+function x(e) {
     var t, n, i, a, s;
     return (0, r.jsx)(m.Z, {
         grow: 0,
@@ -262,6 +263,7 @@ function L(e) {
 }
 function j(e) {
     return (0, r.jsx)(f.zx, {
+        "data-migration-pending": !0,
         focusProps: e.focusProps,
         "aria-label": b.intl.string(b.t.cpT0Cg),
         look: f.zx.Looks.BLANK,

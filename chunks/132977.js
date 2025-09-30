@@ -145,21 +145,31 @@ let I = (e) => {
         I = !r && !o && !0 !== l && (!E || O);
     return (0, i.jsxs)(
         c.zx,
-        m(p({ buttonRef: y }, b), {
-            className: s()(f.shinyButton, n),
-            disabled: r,
-            submitting: o,
-            children: [
-                t,
-                I
-                    ? (0, i.jsx)(v, {
-                          shinePaused: _,
-                          className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, h),
-                          shineSize: d,
-                      })
-                    : null,
-            ],
-        }),
+        m(
+            p(
+                {
+                    "data-migration-pending": !0,
+                    buttonRef: y,
+                },
+                b,
+            ),
+            {
+                className: s()(f.shinyButton, n),
+                disabled: r,
+                submitting: o,
+                children: [
+                    t,
+                    I
+                        ? (0, i.jsx)(v, {
+                              "data-migration-pending": !0,
+                              shinePaused: _,
+                              className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, h),
+                              shineSize: d,
+                          })
+                        : null,
+                ],
+            },
+        ),
     );
 };
 I.ShineSizes = b;

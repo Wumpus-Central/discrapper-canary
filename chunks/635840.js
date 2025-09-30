@@ -1,7 +1,7 @@
 e.d(i, { Z: () => I }), e(388685);
 var n = e(951288),
-    s = e(647438),
-    a = e(103866),
+    a = e(647438),
+    s = e(103866),
     l = e(37148),
     r = e(755721),
     c = e(481060),
@@ -34,10 +34,10 @@ let N = [
 ];
 function I(t) {
     let { application: i, subscriptionId: e, onClose: I } = t,
-        [S, E] = s.useState(!1),
-        [x, A] = s.useState(null),
-        [O, T] = s.useState(""),
-        h = s.useCallback(() => {
+        [S, E] = a.useState(!1),
+        [x, A] = a.useState(null),
+        [O, T] = a.useState(""),
+        p = a.useCallback(() => {
             null != x &&
                 (o.default.track(C.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: x,
@@ -48,7 +48,7 @@ function I(t) {
                 I());
         }, [i.id, e, x, I, O]);
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             d.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: S });
         }, [S]),
         (0, n.jsxs)(n.Fragment, {
@@ -57,7 +57,7 @@ function I(t) {
                     title: _.intl.string(_.t.zPxMdX),
                     subtitle: _.intl.string(_.t.QJGdBw),
                 }),
-                (0, n.jsxs)(a.f, {
+                (0, n.jsxs)(s.f, {
                     children: [
                         (0, n.jsx)("div", {
                             className: u.answerChoicesContainer,
@@ -87,6 +87,7 @@ function I(t) {
                     ],
                 }),
                 (0, n.jsx)(c.mzw, {
+                    "data-migration-pending": !0,
                     children: (0, n.jsxs)("div", {
                         className: u.footer,
                         children: [
@@ -104,7 +105,7 @@ function I(t) {
                             (0, n.jsx)(c.zxk, {
                                 variant: "primary",
                                 text: _.intl.string(_.t.geKm7u),
-                                onClick: h,
+                                onClick: p,
                                 disabled: null == x,
                             }),
                         ],

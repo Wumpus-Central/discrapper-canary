@@ -71,6 +71,7 @@ function _(e) {
         i.useLayoutEffect(() => () => (null == E ? void 0 : E())),
         null != _ &&
             (t = (0, r.jsx)(s.zx, {
+                "data-migration-pending": !0,
                 type: "button",
                 look: s.zx.Looks.FILLED,
                 color: s.zx.Colors.PRIMARY,
@@ -85,6 +86,7 @@ function _(e) {
             })),
         null != f &&
             (n = (0, r.jsx)(s.zx, {
+                "data-migration-pending": !0,
                 buttonRef: S,
                 type: "submit",
                 size: s.zx.Sizes.MEDIUM,
@@ -108,6 +110,7 @@ function _(e) {
             children: [
                 null != a
                     ? (0, r.jsx)(c.xB, {
+                          "data-migration-pending": !0,
                           separator: !1,
                           children: (0, r.jsx)(l.X6q, {
                               variant: "heading-lg/semibold",
@@ -116,10 +119,12 @@ function _(e) {
                       })
                     : null,
                 (0, r.jsx)(c.hz, {
+                    "data-migration-pending": !0,
                     className: o()(u.content, b),
                     children: d,
                 }),
                 (0, r.jsxs)(c.mz, {
+                    "data-migration-pending": !0,
                     children: [n, t],
                 }),
             ],

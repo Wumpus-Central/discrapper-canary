@@ -103,6 +103,7 @@ class m extends (r = a.PureComponent) {
                                   grow: 0,
                                   style: { margin: 0 },
                                   children: (0, i.jsx)(l.zx, {
+                                      "data-migration-pending": !0,
                                       className: _.button,
                                       onClick: this.handleButtonClick,
                                       size: l.Ph.MIN,
