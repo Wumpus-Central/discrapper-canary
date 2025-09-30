@@ -1,21 +1,20 @@
-t.d(n, { Z: () => w });
+t.d(n, { Z: () => x });
 var a = t(951288),
     l = t(647438),
     i = t(442837),
     r = t(74655),
-    o = t(886025),
-    s = t(481060),
-    u = t(596454),
-    c = t(225433),
-    d = t(727637),
-    f = t(318766),
-    m = t(907040),
-    g = t(984933),
-    h = t(903749),
-    p = t(185923),
-    y = t(388032),
-    b = t(239336);
-function v(e) {
+    o = t(481060),
+    s = t(596454),
+    u = t(225433),
+    c = t(727637),
+    d = t(318766),
+    f = t(907040),
+    m = t(984933),
+    g = t(903749),
+    h = t(185923),
+    p = t(388032),
+    y = t(239336);
+function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             a = Object.keys(t);
@@ -40,7 +39,7 @@ function v(e) {
     }
     return e;
 }
-function x(e, n) {
+function v(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -58,100 +57,100 @@ function x(e, n) {
         e
     );
 }
-function w(e) {
+function x(e) {
     let {
             className: n,
             guildId: t,
-            error: w,
+            error: x,
             emojiId: j,
-            emojiName: _,
-            isRequiredField: N = !0,
-            shouldUpdateBothEmojiFields: C = !1,
-            setEmojiId: S,
-            setEmojiName: O,
+            emojiName: w,
+            isRequiredField: _ = !0,
+            shouldUpdateBothEmojiFields: N = !1,
+            setEmojiId: C,
+            setEmojiName: S,
         } = e,
-        E = (0, h.Z)({
+        O = (0, g.Z)({
             emojiId: j,
-            emojiName: _,
+            emojiName: w,
         }),
-        P = (0, i.e7)([g.ZP], () => (null != t ? g.ZP.getDefaultChannel(t) : null)),
+        E = (0, i.e7)([m.ZP], () => (null != t ? m.ZP.getDefaultChannel(t) : null)),
         I = l.useRef(null),
-        k = (0, d.Z)(I),
-        M = () => {
-            O(void 0), S(void 0);
+        P = (0, c.Z)(I),
+        Z = () => {
+            S(void 0), C(void 0);
         },
-        Z = (e) => {
-            e.stopPropagation(), M();
+        k = (e) => {
+            e.stopPropagation(), Z();
         },
-        T = l.useMemo(() => {
+        M = l.useMemo(() => {
             let e = null != j && "" !== j,
-                n = null != _ && "" !== _,
-                t = null != E && "" !== E,
-                a = n && !Number.isNaN(parseInt(_)) && !t && !e;
+                n = null != w && "" !== w,
+                t = null != O && "" !== O,
+                a = n && !Number.isNaN(parseInt(w)) && !t && !e;
             return {
                 hasEmojiId: e,
                 hasEmojiName: n,
                 hasEmojiDisplayName: t,
                 isDeletedCustomEmoji: a,
             };
-        }, [j, _, E]),
-        F = !T.isDeletedCustomEmoji && T.hasEmojiDisplayName;
+        }, [j, w, O]),
+        T = !M.isDeletedCustomEmoji && M.hasEmojiDisplayName;
     return (0, a.jsx)("div", {
         className: n,
-        children: (0, a.jsx)(o.N, {
-            required: N,
-            label: y.intl.string(y.t["3BQmiI"]),
-            errorMessage: null != w ? w : void 0,
-            children: (0, a.jsx)(s.yRy, {
+        children: (0, a.jsx)(o.NIc, {
+            required: _,
+            label: p.intl.string(p.t["3BQmiI"]),
+            errorMessage: null != x ? x : void 0,
+            children: (0, a.jsx)(o.yRy, {
                 targetElementRef: I,
-                animation: s.yRy.Animation.NONE,
+                animation: o.yRy.Animation.NONE,
                 position: "top",
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, a.jsx)(m.Z, {
+                    return (0, a.jsx)(f.Z, {
                         closePopout: n,
-                        pickerIntention: p.Hz.SOUNDBOARD,
+                        pickerIntention: h.Hz.SOUNDBOARD,
                         onNavigateAway: n,
                         onSelectEmoji: (e) => {
                             let { emoji: t, willClose: a } = e,
                                 l = (null == t ? void 0 : t.id) == null;
-                            M(),
+                            Z(),
                                 l
-                                    ? O(null == t ? void 0 : t.optionallyDiverseSequence)
-                                    : (C && O(null == t ? void 0 : t.name), S(null == t ? void 0 : t.id)),
+                                    ? S(null == t ? void 0 : t.optionallyDiverseSequence)
+                                    : (N && S(null == t ? void 0 : t.name), C(null == t ? void 0 : t.id)),
                                 a && n();
                         },
                         guildId: t,
-                        channel: P,
+                        channel: E,
                     });
                 },
                 children: (e, n) => {
                     let { isShown: t } = n;
                     return (0, a.jsxs)(
                         r.U,
-                        x(v({}, e), {
-                            className: b.emojiInput,
+                        v(b({}, e), {
+                            className: y.emojiInput,
                             ref: I,
                             children: [
-                                (0, a.jsx)(f.Z, {
+                                (0, a.jsx)(d.Z, {
                                     active: t,
                                     tabIndex: 0,
                                     renderButtonContents:
-                                        !T.isDeletedCustomEmoji && (T.hasEmojiId || T.hasEmojiName)
+                                        !M.isDeletedCustomEmoji && (M.hasEmojiId || M.hasEmojiName)
                                             ? () =>
-                                                  (0, a.jsx)(u.Z, {
-                                                      emojiName: _,
+                                                  (0, a.jsx)(s.Z, {
+                                                      emojiName: w,
                                                       emojiId: j,
                                                   })
                                             : null,
                                 }),
-                                (0, a.jsx)(s.Text, {
+                                (0, a.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     lineClamp: 1,
-                                    color: F ? "text-default" : "text-muted",
-                                    children: F ? ":".concat(E, ":") : y.intl.string(y.t.QTK0TE),
+                                    color: T ? "text-default" : "text-muted",
+                                    children: T ? ":".concat(O, ":") : p.intl.string(p.t.QTK0TE),
                                 }),
-                                F && k && (0, a.jsx)(c.Z, x(v({}, e), { onClick: Z })),
+                                T && P && (0, a.jsx)(u.Z, v(b({}, e), { onClick: k })),
                             ],
                         }),
                     );

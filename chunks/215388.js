@@ -1,25 +1,24 @@
-A.d(t, { Z: () => j }), A(388685);
+A.d(t, { Z: () => C }), A(388685);
 var r = A(951288),
     n = A(647438),
     a = A(120356),
     l = A.n(a),
     i = A(772848),
-    o = A(886025),
-    s = A(481060),
-    d = A(752305),
-    c = A(893718),
-    u = A(131704),
-    g = A(703558),
-    f = A(981631),
-    p = A(388032),
-    m = A(231319),
-    h = A(8542);
-let v = (0, i.Z)(),
-    q = (0, u.kt)({
+    o = A(481060),
+    s = A(752305),
+    d = A(893718),
+    c = A(131704),
+    u = A(703558),
+    g = A(981631),
+    f = A(388032),
+    p = A(231319),
+    m = A(8542);
+let h = (0, i.Z)(),
+    v = (0, c.kt)({
         id: "1",
-        type: f.d4z.DM,
+        type: g.d4z.DM,
     });
-function b() {
+function q() {
     return new Promise((e) => {
         e({
             shouldClear: !1,
@@ -27,51 +26,51 @@ function b() {
         });
     });
 }
-function C(e) {
+function b(e) {
     var t;
     let { hasError: A, maxLength: n, text: a } = e;
     return (0, r.jsxs)("div", {
-        className: l()(h.maxLength, { [h.errorOverflow]: A }),
+        className: l()(m.maxLength, { [m.errorOverflow]: A }),
         "aria-hidden": "true",
         children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != n && "/ ".concat(n)],
     });
 }
-function j(e) {
+function C(e) {
     var t;
     let {
             "aria-labelledby": A,
             className: a,
             id: i,
-            autoFocus: u,
-            maxLength: f,
-            onChange: h,
-            onSubmit: j,
-            showCharacterCount: x = !1,
-            placeholder: U,
-            required: V,
-            value: O,
-            enableThemedBackground: P = !1,
-            parentModalKey: F,
-            label: y,
-            errorMessage: I,
+            autoFocus: c,
+            maxLength: g,
+            onChange: m,
+            onSubmit: C,
+            showCharacterCount: j = !1,
+            placeholder: x,
+            required: U,
+            value: V,
+            enableThemedBackground: O = !1,
+            parentModalKey: P,
+            label: F,
+            errorMessage: y,
         } = e,
-        N = (0, s.Gc0)(),
-        [T, K] = n.useState(() => (0, d.JM)(O)),
-        Z = n.useRef(!0 === u),
-        W = null != A ? A : null == N ? void 0 : N.titleId,
-        X = null != (t = null == N ? void 0 : N.errorId) ? t : v;
-    function Q(e, t, A) {
-        h(t), K(A);
+        I = (0, o.Gc0)(),
+        [N, T] = n.useState(() => (0, s.JM)(V)),
+        K = n.useRef(!0 === c),
+        Z = null != A ? A : null == I ? void 0 : I.titleId,
+        W = null != (t = null == I ? void 0 : I.errorId) ? t : h;
+    function X(e, t, A) {
+        m(t), T(A);
     }
-    let z = n.useMemo(
+    let Q = n.useMemo(
         () => ({
             analyticsName: "simple",
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
             },
-            disableAutoFocus: !0 !== u,
-            drafts: { type: g.d.ChannelMessage },
+            disableAutoFocus: !0 !== c,
+            drafts: { type: u.d.ChannelMessage },
             emojis: { button: !0 },
             permissions: { requireSendMessages: !1 },
             submit: {
@@ -79,53 +78,53 @@ function j(e) {
                 disableEnterToSubmit: !0,
             },
         }),
-        [u],
+        [c],
     );
-    return (0, r.jsx)(o.N, {
-        label: y,
-        errorMessage: I,
+    return (0, r.jsx)(o.NIc, {
+        label: F,
+        errorMessage: y,
         id: i,
-        required: V,
+        required: U,
         children: (e) => {
             var t, A;
-            return (0, r.jsxs)(c.ZP, {
+            return (0, r.jsxs)(d.ZP, {
                 id: null != (t = null == e ? void 0 : e.controlId) ? t : i,
-                "aria-describedby": null != (A = null == e ? void 0 : e.describedById) ? A : X,
-                "aria-labelledby": W,
+                "aria-describedby": null != (A = null == e ? void 0 : e.describedById) ? A : W,
+                "aria-labelledby": Z,
                 "aria-errormessage": null == e ? void 0 : e.errorMessageId,
                 "aria-invalid": (null == e ? void 0 : e.errorMessageId) != null,
-                className: m.textArea,
-                innerClassName: l()(a, m.textAreaInner),
-                maxCharacterCount: f,
-                onChange: Q,
-                placeholder: U,
-                required: V,
-                channel: q,
-                textValue: O,
-                richValue: T,
-                type: z,
+                className: p.textArea,
+                innerClassName: l()(a, p.textAreaInner),
+                maxCharacterCount: g,
+                onChange: X,
+                placeholder: x,
+                required: U,
+                channel: v,
+                textValue: V,
+                richValue: N,
+                type: Q,
                 onBlur: () => {
-                    Z.current = !1;
+                    K.current = !1;
                 },
                 onFocus: () => {
-                    Z.current = !0;
+                    K.current = !0;
                 },
-                focused: Z.current,
-                onSubmit: null != j ? j : b,
-                disableThemedBackground: !P,
-                parentModalKey: F,
+                focused: K.current,
+                onSubmit: null != C ? C : q,
+                disableThemedBackground: !O,
+                parentModalKey: P,
                 emojiPickerCloseOnModalOuterClick: !0,
                 children: [
-                    !0 === x &&
-                        (0, r.jsx)(C, {
-                            hasError: null != N.error || (null != f && O.length > f),
-                            text: O,
-                            maxLength: f,
+                    !0 === j &&
+                        (0, r.jsx)(b, {
+                            hasError: null != I.error || (null != g && V.length > g),
+                            text: V,
+                            maxLength: g,
                         }),
-                    null != f &&
-                        (0, r.jsx)(s.nn4, {
-                            id: v,
-                            children: p.intl.format(p.t["+DFxLS"], { maxLength: f }),
+                    null != g &&
+                        (0, r.jsx)(o.nn4, {
+                            id: h,
+                            children: f.intl.format(f.t["+DFxLS"], { maxLength: g }),
                         }),
                 ],
             });
