@@ -28,7 +28,7 @@ function m(e) {
             hideTooltip: I = !1,
         } = e,
         T = (0, d.E)("ActivityStatus", g),
-        { defaultStatusVariant: S } = l.n.useExperiment({
+        { defaultStatusVariant: S } = (0, l.bN)({
             guildId: null == g ? void 0 : g.guild_id,
             location: "CustomStatusActivityStatus",
         });
@@ -55,7 +55,7 @@ function m(e) {
               hideTooltip: I || P,
           }));
     let D = P && (null != w ? " ".concat(R) : R),
-        x = () => {
+        L = () => {
             let e = null != N && !v && !P;
             return I || e
                 ? (0, r.jsxs)(r.Fragment, {
@@ -71,6 +71,6 @@ function m(e) {
         variant: "text-".concat(y, "/medium"),
         color: "none",
         className: a()(p.truncated, n),
-        children: x(),
+        children: L(),
     });
 }

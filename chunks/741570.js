@@ -4,7 +4,7 @@ var r = n(442837),
     a = n(574176),
     o = n(231338);
 function s(e, t) {
-    let { enableHangStatus: n } = a.n.useExperiment({
+    let { enableHangStatus: n } = (0, a.bN)({
             guildId: null == t ? void 0 : t.guild_id,
             location: e,
         }),

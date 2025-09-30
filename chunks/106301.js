@@ -97,7 +97,7 @@ function P(e) {
             customHangStatus: i,
             gameActivityHangStatus: o,
         });
-    let { defaultStatusVariant: l } = g.n.getCurrentConfig({
+    let { defaultStatusVariant: l } = (0, g.gx)({
         guildId: n,
         location: "UpdateHangStatus",
     });
@@ -146,7 +146,7 @@ function D(e) {
                 gameActivityHangStatus: o,
             });
 }
-function x(e) {
+function L(e) {
     let { saveAsDefault: t } = e;
     (r = null),
         (i = null),
@@ -159,7 +159,7 @@ function x(e) {
             }),
         (a = null);
 }
-function L(e) {
+function x(e) {
     let { status: t, emoji: n } = e,
         r = !1,
         i = [...C.favoritedStatuses],
@@ -266,6 +266,6 @@ let U = new k(h.Z, {
     UPDATE_HANG_STATUS_CUSTOM: w,
     UPDATE_HANG_STATUS_GAME_ACTIVITY: D,
     DELETE_INVALID_HANG_STATUSES: M,
-    CLEAR_HANG_STATUS: x,
-    UPDATE_FAVORITE_HANG_STATUS: L,
+    CLEAR_HANG_STATUS: L,
+    UPDATE_FAVORITE_HANG_STATUS: x,
 });

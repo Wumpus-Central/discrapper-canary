@@ -38,13 +38,10 @@ class h extends r.Z {
             }),
             p(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t, guildId: n } = e,
-                    { enableHangStatus: r, setDefaultStatus: a } = c.n.getCurrentConfig(
-                        {
-                            guildId: null != n ? n : _.lds,
-                            location: "HangStatusManager",
-                        },
-                        { autoTrackExposure: !0 },
-                    );
+                    { enableHangStatus: r, setDefaultStatus: a } = (0, c.gx)({
+                        guildId: null != n ? n : _.lds,
+                        location: "HangStatusManager",
+                    });
                 if (null == n && null == t) {
                     this.handleDisconnectFromVoiceChannel(), (this.previousVoiceChannelId = t);
                     return;

@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(475179),
     d = n(239091),
     p = n(146773),
-    h = n(888651),
-    f = n(619915),
+    f = n(888651),
+    h = n(619915),
     g = n(117358),
     m = n(973285),
     b = n(168611),
-    O = n(201895),
-    y = n(718589),
-    _ = n(933557),
+    _ = n(201895),
+    O = n(718589),
+    y = n(933557),
     v = n(557135),
     j = n(873696),
     x = n(446226),
@@ -26,8 +26,8 @@ var r = n(951288),
     P = n(554747),
     I = n(378844),
     N = n(574176),
-    Z = n(340541),
-    w = n(763624),
+    w = n(340541),
+    Z = n(763624),
     T = n(359110),
     A = n(155409),
     R = n(695346),
@@ -48,7 +48,7 @@ var r = n(951288),
     q = n(981631),
     X = n(647086),
     Q = n(388032),
-    J = n(55940);
+    J = n(33082);
 function $(e, t, n) {
     return (
         t in e
@@ -165,12 +165,12 @@ class en extends V.ZP {
                 sorting: u,
                 isUserOver: d,
                 connectChannelDropTarget: p,
-                connectChannelDragSource: h,
-                connectUserDropTarget: f,
+                connectChannelDragSource: f,
+                connectUserDropTarget: h,
                 connectDragPreview: g,
                 canReorderChannel: m,
                 canMoveMembers: b,
-                showTutorial: _,
+                showTutorial: y,
                 hasActiveEvent: v,
                 embeddedApps: j,
                 isSubscriptionGated: x,
@@ -179,8 +179,8 @@ class en extends V.ZP {
                 hasStartTime: S,
             } = this.props,
             { shouldShowActivities: P, shouldShowGuildVerificationPopout: I } = this.state,
-            N = (0, Z.jW)({ location: "voice_channel" }).entrypoints,
-            w = this.getVoiceStatesCount(),
+            N = (0, w.jW)({ location: "voice_channel" }).entrypoints,
+            Z = this.getVoiceStatesCount(),
             T = (0, r.jsxs)("li", {
                 ref: this.ref,
                 className: o()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
@@ -250,15 +250,15 @@ class en extends V.ZP {
                                                         },
                                                         connectDragPreview: g,
                                                         isFavoriteSuggestion: C,
-                                                        "aria-label": (0, O.ZP)({
+                                                        "aria-label": (0, _.ZP)({
                                                             channel: e,
                                                             unread: i,
                                                             mentionCount: a,
-                                                            userCount: w,
+                                                            userCount: Z,
                                                             embeddedActivitiesCount: j.length,
                                                             isSubscriptionGated: x,
                                                         }),
-                                                        "aria-describedby": (0, y.Z)({
+                                                        "aria-describedby": (0, O.Z)({
                                                             channel: e,
                                                             embeddedApps: j,
                                                         }),
@@ -300,9 +300,9 @@ class en extends V.ZP {
                 ],
             });
         return (
-            b && (T = f(T)),
-            m && (T = p(h(T))),
-            _ &&
+            b && (T = h(T)),
+            m && (T = p(f(T))),
+            y &&
                 (T = (0, r.jsx)(A.Z, {
                     childRef: this.ref,
                     tutorialId: "voice-conversations",
@@ -449,7 +449,7 @@ class en extends V.ZP {
             });
     }
 }
-let er = (0, p.B)((0, h.Q)(en));
+let er = (0, p.B)((0, f.Q)(en));
 function ei(e) {
     let {
             guild: t,
@@ -480,10 +480,10 @@ function ei(e) {
                 unverifiedAccount: !r.canChat,
             };
         }),
-        h = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
-        g = (0, f.ZP)(n),
-        O = (0, _.ZP)(n),
-        y = (0, P.qY)(n.id),
+        f = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
+        g = (0, h.ZP)(n),
+        _ = (0, y.ZP)(n),
+        O = (0, P.qY)(n.id),
         { enabled: v } = m.W.useExperiment({
             guildId: t.id,
             location: "VoiceChannel",
@@ -491,16 +491,13 @@ function ei(e) {
         j = (0, a.e7)([b.Z], () => !!v && null != b.Z.getStartTime(n), [n, v]),
         { isSubscriptionGated: C, needSubscriptionToAccess: E } = (0, S.Z)(n.id),
         I = (0, x.Z)(),
-        Z = (0, a.e7)([G.ZP], () => G.ZP.isFavorite(t.id, n.id)),
+        w = (0, a.e7)([G.ZP], () => G.ZP.isFavorite(t.id, n.id)),
         T = e.connected || (null == I ? void 0 : I.channelId) === n.id,
-        { enableHangStatus: A, allowChannelTopic: R } = N.n.useExperiment(
-            {
-                guildId: n.guild_id,
-                location: "VoiceChannel",
-            },
-            { autoTrackExposure: !1 },
-        ),
-        { enableOpenTIVForPing: M } = w.A.useExperiment(
+        { enableHangStatus: A, allowChannelTopic: R } = (0, N.bN)({
+            guildId: n.guild_id,
+            location: "VoiceChannel",
+        }),
+        { enableOpenTIVForPing: M } = Z.A.useExperiment(
             {
                 guildId: n.guild_id,
                 location: "VoiceChannel",
@@ -523,11 +520,11 @@ function ei(e) {
         et(
             ee(
                 {
-                    channelName: O,
+                    channelName: _,
                     embeddedApps: g,
                     embeddedActivityType: q.IIU.PLAYING,
-                    video: h,
-                    hasActiveEvent: null != y,
+                    video: f,
+                    hasActiveEvent: null != O,
                     isSubscriptionGated: C,
                     needSubscriptionToAccess: E,
                 },
@@ -537,7 +534,7 @@ function ei(e) {
             ),
             {
                 connected: T,
-                isFavoriteSuggestion: l && !Z,
+                isFavoriteSuggestion: l && !w,
                 forceShowButtons: V,
                 channelInfo: F,
                 resolvedUnreadSetting: d,

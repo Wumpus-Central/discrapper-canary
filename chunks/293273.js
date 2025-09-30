@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -121,7 +121,7 @@ function k() {
     let w = m.Z.getCurrentHangStatus();
     if (null != w) {
         let e = m.Z.getCustomHangStatus(),
-            { defaultStatusVariant: r } = h.n.getCurrentConfig({
+            { defaultStatusVariant: r } = (0, h.gx)({
                 guildId: null == (t = S.Z.getChannel(N.Z.getVoiceChannelId())) ? void 0 : t.guild_id,
                 location: "LocalActivityStore",
             });
@@ -164,7 +164,7 @@ function F() {
                 (0, d.D)(o),
                 s,
             );
-        c !== l ? ((e[i] = [a, L(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
+        c !== l ? ((e[i] = [a, x(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
     }
     return t ? ((M = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }

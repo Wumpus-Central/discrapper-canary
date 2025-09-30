@@ -79,7 +79,7 @@ function R(e) {
         U = (0, u.e7)([b.Z], () => b.Z.getCustomHangStatus()),
         B = (0, x.Z)(),
         H = (0, u.e7)([b.Z], () => b.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: V, allowPermanentClear: F } = g.n.useExperiment({
+        { defaultStatusVariant: V, allowPermanentClear: F } = (0, g.bN)({
             guildId: R.guild_id,
             location: "HangStatusPicker",
         }),
