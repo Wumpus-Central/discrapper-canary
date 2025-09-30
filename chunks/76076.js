@@ -38,6 +38,23 @@ let j = {
             toast_id: "user_profile_widget_save_failure",
             type: c.ToastType.FAILURE,
         },
+        [m.qb.WISHLIST_ITEM_REMOVED]: {
+            message: p.intl.string(p.t.DSXOiI),
+            icon: (0, l.jsx)(c.dz2, {
+                size: "sm",
+                color: c.TVs.colors.STATUS_POSITIVE.css,
+            }),
+            toast_id: "user_profile_wishlist_item_removed",
+        },
+        [m.qb.SOMETHING_WENT_WRONG]: {
+            message: p.intl.string(p.t.F8FvU1),
+            icon: (0, l.jsx)(c.Uz9, {
+                size: "sm",
+                color: c.TVs.colors.STATUS_DANGER.css,
+            }),
+            toast_id: "user_profile_something_went_wrong",
+            type: c.ToastType.FAILURE,
+        },
     },
     x = (e) => {
         let { message: n, icon: t, type: i } = e;
