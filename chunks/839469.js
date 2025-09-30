@@ -16,7 +16,7 @@ let u = (0, a.H)(() => ({
     hasSearchResults: !1,
 }));
 function d() {
-    let e = (0, s.Z7)(),
+    let e = s.Z.useField("query"),
         t = (0, l.Pt)(),
         n = r.useRef(new o.Z((0, l.ji)(t))),
         a = r.useCallback(async (e) => {
@@ -30,7 +30,7 @@ function d() {
         "" === e || e.length < 2 ? u.resetState() : a(e);
     }, [e, a]),
         (0, i.ZP)(() => () => {
-            u.resetState(), (0, s.yN)("");
+            u.resetState(), s.Z.setState({ query: "" });
         });
     let c = u.useField("searchResults");
     return {

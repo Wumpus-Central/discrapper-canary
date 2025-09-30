@@ -1,137 +1,118 @@
-n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => x }), n(642613), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(772848),
-    l = n(481060),
-    s = n(991346),
-    o = n(259580),
-    c = n(547481);
-function d(e) {
-    let { setting: t, hasChildren: n } = e;
-    return (0, a.jsx)(l.Text, {
-        variant: n ? "text-md/bold" : "text-md/normal",
-        children: t,
-    });
-}
-function u(e) {
-    let { setting: t, children: n, depth: s } = e,
-        [m, h] = r.useState(1 === s),
-        p = r.useCallback(() => {
-            h(!m);
-        }, [m, h]);
-    if (0 === n.length)
-        return (0, a.jsx)(
-            "div",
-            {
-                style: { marginLeft: 8 * s },
-                className: c.settingNode,
-                children: (0, a.jsx)(d, {
-                    setting: t,
-                    hasChildren: !1,
-                }),
-            },
-            (0, i.Z)(),
-        );
-    let x = m
-        ? (0, a.jsx)("div", {
-              className: c.settingNodeChildren,
-              children: n
-                  .sort((e, t) => e.setting.localeCompare(t.setting))
-                  .sort((e, t) => e.children.length - t.children.length)
-                  .map((e) =>
-                      (0, a.jsx)(
-                          u,
-                          {
-                              setting: e.setting,
-                              children: e.children,
-                              depth: s + 1,
-                          },
-                          (0, i.Z)(),
-                      ),
-                  ),
-          })
-        : null;
-    return (0, a.jsxs)(
-        "div",
-        {
-            style: { marginLeft: 8 * s },
-            className: c.settingNode,
-            children: [
-                (0, a.jsxs)(l.P3F, {
-                    className: c.headerBar,
-                    onClick: p,
-                    children: [
-                        (0, a.jsx)(d, {
-                            setting: t,
-                            hasChildren: n.length > 0,
-                        }),
-                        (0, a.jsx)(o.Z, {
-                            direction: m ? o.Z.Directions.DOWN : o.Z.Directions.RIGHT,
-                            className: c.headerCaret,
-                        }),
-                    ],
-                }),
-                x,
-            ],
-        },
-        (0, i.Z)(),
+    i = n(481060),
+    l = n(131051),
+    s = n(28682),
+    o = n(920952),
+    c = n(544651),
+    d = n(546697),
+    u = n(547481);
+function m(e) {
+    var t;
+    let { setting: n, depth: i, highlight: l } = e,
+        s = null == (t = r.useContext(h)) ? void 0 : t.get(n),
+        o = null;
+    return (
+        null != s &&
+            s.length > 0 &&
+            (o = s
+                .sort((e, t) => e.localeCompare(t))
+                .map((e) =>
+                    (0, a.jsx)(
+                        m,
+                        {
+                            setting: e,
+                            depth: i + 1,
+                            highlight: l,
+                        },
+                        e,
+                    ),
+                )),
+        (0, a.jsx)(c.r, {
+            title: n,
+            initExpanded: i <= 2,
+            highlight: l,
+            children: o,
+        })
     );
 }
-function m() {
-    let e = (0, s.Pt)(),
-        t = [],
-        n = Object.keys(e)
-            .filter((t) => {
-                let n = e[t];
-                return null == n.predicate || (null != n.predicate && n.predicate());
-            })
-            .map((t) => {
-                var n;
-                return {
-                    setting: t,
-                    parent: null != (n = e[t].parent) ? n : null,
-                };
-            });
-    n.filter((e) => null === e.parent).forEach((e) => {
-        t.push({
-            setting: e.setting,
-            children: [],
-        });
-    });
-    let r = [...t];
-    for (; r.length > 0; ) {
-        let e = r.shift();
-        if (null == e) continue;
-        let t = n
-            .filter((t) => t.parent === e.setting)
-            .map((e) => ({
-                setting: e.setting,
-                children: [],
-            }));
-        (e.children = t), r.push(...t);
+function p(e) {
+    let { setting: t, depth: n } = e,
+        r =
+            (0, s.Lk)(t) &&
+            ((t.type === s.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
+                (t.type === s.Jq.PANE && null != t.render)),
+        i = null;
+    if ((0, s.Lk)(t)) {
+        var l;
+        i =
+            0 === t.layout.length && (null == (l = t.parent) ? void 0 : l.legacySearchKey) != null
+                ? (0, a.jsx)(m, {
+                      setting: t.parent.legacySearchKey,
+                      depth: n + 1,
+                      highlight: !0,
+                  })
+                : t.layout.map((e) =>
+                      (0, a.jsx)(
+                          p,
+                          {
+                              setting: e,
+                              depth: n + 1,
+                          },
+                          e.key,
+                      ),
+                  );
     }
-    return (0, a.jsxs)(l.zJl, {
-        className: c.root,
+    return (0, a.jsx)(c.r, {
+        title: t.key,
+        initExpanded: n <= 2,
+        highlight: r,
+        children: i,
+    });
+}
+let h = r.createContext(null);
+function x() {
+    let [e, t] = r.useState(!1),
+        { legacySettingDirectory: n } = (0, d.q)(),
+        { node: s } = (0, l.Z)(o.Z, "");
+    return (0, a.jsxs)(i.zJl, {
+        className: u.root,
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, a.jsx)(i.X6q, {
                 variant: "heading-lg/bold",
                 children: "Settings Tree",
             }),
-            (0, a.jsx)("div", {
-                className: c.tree,
-                children: t
-                    .sort((e, t) => e.setting.localeCompare(t.setting))
-                    .map((e) =>
-                        (0, a.jsx)(
-                            u,
-                            {
-                                setting: e.setting,
-                                children: e.children,
-                                depth: 1,
-                            },
-                            (0, i.Z)(),
-                        ),
-                    ),
+            (0, a.jsx)(i.j7V, {
+                value: e,
+                onChange: (e) => t(e),
+                children: "Show Legacy Settings Tree",
+            }),
+            (0, a.jsx)(h.Provider, {
+                value: n,
+                children: (0, a.jsxs)("div", {
+                    className: u.tree,
+                    children: [
+                        e &&
+                            (0, a.jsx)(
+                                m,
+                                {
+                                    setting: "root",
+                                    depth: 1,
+                                },
+                                "root",
+                            ),
+                        !e &&
+                            (0, a.jsx)(
+                                p,
+                                {
+                                    setting: s,
+                                    depth: 1,
+                                },
+                                s.key,
+                            ),
+                    ],
+                }),
             }),
         ],
     });

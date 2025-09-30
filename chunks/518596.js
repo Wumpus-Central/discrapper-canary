@@ -108,7 +108,7 @@ let E = "USER_SETTINGS_MODAL_MODAL_KEY",
             (0, u.yP)("openUserSettings")
                 ? (0, i.ZDy)(
                       async () => {
-                          let { default: t } = await n.e("47129").then(n.bind(n, 245286));
+                          let { default: t } = await Promise.all([n.e("9452"), n.e("59739")]).then(n.bind(n, 245286));
                           return (n) => (0, r.jsx)(t, h(_({}, n), { target: e }));
                       },
                       {
