@@ -7,7 +7,7 @@ var i = n(120356),
     o = n(143941),
     s = n(277511),
     c = n(388032),
-    u = n(747615);
+    u = n(624285);
 function d(e) {
     let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: d } = e,
         p = async () => {
@@ -61,7 +61,7 @@ function d(e) {
                         children: (0, r.jsx)(a.XHJ, {
                             size: i,
                             className: u.icon,
-                            color: a.TVs.colors.STATUS_DANGER,
+                            color: a.TVs.colors.ICON_FEEDBACK_CRITICAL,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
