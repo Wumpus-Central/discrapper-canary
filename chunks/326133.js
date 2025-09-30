@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    I = n(671982);
+    I = n(826191);
 function T(e, t, n) {
     return (
         t in e
@@ -96,12 +96,12 @@ function R(e, t) {
 let P = 490,
     w = 490,
     D = 245,
-    x = 200,
-    L = 120,
+    L = 200,
+    x = 120,
     j = i.forwardRef(function (e, t) {
         var n, a, T, A, R, j, M;
-        let { channel: k, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: V } = e,
-            F = (0, h.Dt)(),
+        let { channel: k, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: Z, barsHeight: F } = e,
+            V = (0, h.Dt)(),
             H = (0, l.e7)([E.Z], () => {
                 var e;
                 return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
@@ -110,7 +110,7 @@ let P = 490,
             [W, K, z] = (0, O.Z)(C(S({}, e), { guild: H }), t, Y),
             q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             X = (0, _.DJ)(W.selectedIndex);
-        (0, p.KR)(F, W.isVisible, X);
+        (0, p.KR)(V, W.isVisible, X);
         let Q = (0, y.Z)({
                 editorHeight: G,
                 type: U,
@@ -167,15 +167,15 @@ let P = 490,
             en = P;
         null != Q &&
             (en = (null == (A = U.autocomplete) ? void 0 : A.small)
-                ? x
+                ? L
                 : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS
                   ? w
                   : D);
         let er = Math.max(G, null != (j = null == Z || null == (a = Z.current) ? void 0 : a.clientHeight) ? j : 0),
             ei = Math.min(0.5 * window.innerHeight, er);
-        en = Math.min(window.innerHeight - L - ei - (null != V ? V : 0), en);
+        en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
         let ea = (0, r.jsx)(_.ZP, {
-            id: F,
+            id: V,
             className: o()(I.autocomplete, et),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
@@ -190,13 +190,15 @@ let P = 490,
                             C(
                                 S(
                                     {
-                                        id: F,
+                                        id: V,
                                         ref: (e) => {
                                             var n;
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null),
                                                 (Y.current = e);
                                         },
+                                        orientation: "vertical",
+                                        overflow: "auto",
                                     },
                                     n,
                                 ),
@@ -204,7 +206,7 @@ let P = 490,
                                     className: I.scroller,
                                     style: { maxHeight: en },
                                     role: "listbox",
-                                    "aria-labelledby": (0, _.rp)(F),
+                                    "aria-labelledby": (0, _.rp)(V),
                                     children: ee,
                                 },
                             ),
