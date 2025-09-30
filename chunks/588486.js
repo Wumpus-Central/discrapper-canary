@@ -90,7 +90,7 @@ class E extends o.C {
             rules: [],
             phase: 0,
             surfaces: [],
-            owningTeamName: "",
+            owningTeamId: "",
             cachedNotificationChannelId: "0",
             exposureTracking: 0,
             assignmentMode: 0,
@@ -172,7 +172,7 @@ class E extends o.C {
                     else a.surfaces.push(e.int32());
                     break;
                 case 20:
-                    a.owningTeamName = e.string();
+                    a.owningTeamId = e.string();
                     break;
                 case 21:
                     a.cachedNotificationChannelId = e.fixed64().toString();
@@ -238,7 +238,7 @@ class E extends o.C {
             t.join();
         }
         if (
-            ("" !== e.owningTeamName && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamName),
+            ("" !== e.owningTeamId && t.tag(20, r.TD.LengthDelimited).string(e.owningTeamId),
             "0" !== e.cachedNotificationChannelId && t.tag(21, r.TD.Bit64).fixed64(e.cachedNotificationChannelId),
             0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking),
             0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode),
@@ -370,7 +370,7 @@ class E extends o.C {
             },
             {
                 no: 20,
-                name: "owning_team_name",
+                name: "owning_team_id",
                 kind: "scalar",
                 T: 9,
             },
