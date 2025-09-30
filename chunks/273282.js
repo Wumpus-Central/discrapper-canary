@@ -1,7 +1,7 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => x });
 var r = n(951288),
     i = n(647438),
-    l = n(755721),
+    l = n(159691),
     s = n(906732),
     a = n(884858),
     o = n(813197),
@@ -11,46 +11,61 @@ var r = n(951288),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    f = n(388032);
-function h(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: h } = e,
-        { analyticsLocations: x } = (0, s.ZP)(),
-        b = t.features.has(m.oNc.INVITE_SPLASH),
-        j = n && b,
-        v = i.useCallback((e) => {
+    f = n(388032),
+    h = n(43628);
+function x(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: x } = e,
+        { analyticsLocations: b } = (0, s.ZP)(),
+        j = t.features.has(m.oNc.INVITE_SPLASH),
+        v = n && j,
+        _ = i.useRef(null),
+        O = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
-        _ = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, d.E6)({
                         guild: t,
-                        analyticsLocations: x,
+                        analyticsLocations: b,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)(),
                     });
             },
-            [x, t],
-        );
-    return b
-        ? (0, r.jsxs)(l.zx, {
-              disabled: !j,
-              color: l.Tt.BRAND,
-              className: h,
+            [b, t],
+        ),
+        C = i.useCallback(() => {
+            var e;
+            null == (e = _.current) || e.activateUploadDialogue();
+        }, []);
+    return j
+        ? (0, r.jsxs)("div", {
+              className: x,
               children: [
-                  f.intl.string(f.t.yG2pUl),
-                  (0, r.jsx)(o.ZP, {
-                      disabled: !j,
-                      onChange: v,
-                      maxFileSizeBytes: p.B,
-                      onFileSizeError: () => (0, a.Z)(p.B),
+                  (0, r.jsx)(l.zxk, {
+                      disabled: !v,
+                      variant: "primary",
+                      text: f.intl.string(f.t.yG2pUl),
+                      onClick: C,
+                  }),
+                  (0, r.jsx)("div", {
+                      className: h.hiddenInputContainer,
+                      children: (0, r.jsx)(o.ZP, {
+                          ref: _,
+                          disabled: !v,
+                          onChange: O,
+                          maxFileSizeBytes: p.B,
+                          onFileSizeError: () => (0, a.Z)(p.B),
+                          tabIndex: -1,
+                          "aria-hidden": !0,
+                      }),
                   }),
               ],
           })
         : (0, r.jsx)(u.P, {
-              className: h,
-              onClick: _,
+              className: x,
+              onClick: y,
           });
 }

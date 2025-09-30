@@ -1,7 +1,7 @@
 n.d(t, { F: () => p });
 var r = n(951288),
     i = n(647438),
-    l = n(755721),
+    l = n(159691),
     s = n(906732),
     a = n(821458),
     o = n(585961),
@@ -34,24 +34,28 @@ function p(e) {
                     });
             },
             [f, t],
-        );
+        ),
+        j = i.useCallback(() => {
+            (0, a.mw)({
+                uploadType: u.pC.GUILD_BANNER,
+                maxFileSizeBytes: m.B,
+                onComplete: x,
+                analyticsLocation: {
+                    page: c.ZY5.GUILD_SETTINGS,
+                    section: c.jXE.GUILD_BANNER,
+                },
+                analyticsLocations: f,
+            });
+        }, [f, x]);
     return h
-        ? (0, r.jsx)(l.zx, {
-              disabled: !(h && n),
-              color: l.zx.Colors.BRAND,
+        ? (0, r.jsx)("div", {
               className: p,
-              onClick: () =>
-                  (0, a.mw)({
-                      uploadType: u.pC.GUILD_BANNER,
-                      maxFileSizeBytes: m.B,
-                      onComplete: x,
-                      analyticsLocation: {
-                          page: c.ZY5.GUILD_SETTINGS,
-                          section: c.jXE.GUILD_BANNER,
-                      },
-                      analyticsLocations: f,
-                  }),
-              children: g.intl.string(g.t.yG2pUl),
+              children: (0, r.jsx)(l.zxk, {
+                  disabled: !(h && n),
+                  variant: "primary",
+                  text: g.intl.string(g.t.yG2pUl),
+                  onClick: j,
+              }),
           })
         : (0, r.jsx)(o.P, {
               className: p,
