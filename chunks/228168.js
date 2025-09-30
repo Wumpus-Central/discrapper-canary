@@ -1,12 +1,13 @@
 n.d(t, {
-    Ej: () => u,
-    P: () => f,
+    Ej: () => d,
+    NW: () => u,
+    P: () => _,
     Tb: () => s,
     Tg: () => a,
     cm: () => l,
-    n_: () => d,
+    n_: () => f,
     oh: () => o,
-    qb: () => _,
+    qb: () => p,
     vB: () => i,
     yM: () => c,
 });
@@ -161,20 +162,28 @@ var o = (function (e) {
             (e.EDIT_SAVED = "EDIT_SAVED"),
             e
         );
+    })({}),
+    u = (function (e) {
+        return (
+            (e.WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
+            (e.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
+            (e.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
+            e
+        );
     })({});
-function u(e) {
+function d(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n
         ? "https://".concat(n, "/badge-icons/").concat(e, ".png")
         : "".concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
-var d = (function (e) {
+var f = (function (e) {
         return (e.ACTIVITY = "ACTIVITY"), (e.AVATAR = "AVATAR"), (e.STATUS = "STATUS"), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (
             (e.WIDGET_ADDED = "WIDGET_ADDED"),
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),

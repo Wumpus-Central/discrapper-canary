@@ -1,11 +1,12 @@
 n.d(t, {
+    Er: () => j,
     NE: () => P,
-    Of: () => x,
+    Of: () => L,
     QN: () => A,
     Qf: () => w,
     RV: () => N,
     TY: () => D,
-    V1: () => L,
+    V1: () => x,
     pQ: () => C,
     te: () => T,
     z7: () => R,
@@ -306,7 +307,7 @@ let v = (e) => {
             profile_has_theme_animation: (null == i ? void 0 : i.popoutAnimationParticleType) != null,
         });
     },
-    x = (e) => {
+    L = (e) => {
         let {
             guildId: t,
             channelId: n,
@@ -330,7 +331,7 @@ let v = (e) => {
                 }),
             );
     },
-    L = (e) => {
+    x = (e) => {
         let {
             guildId: t,
             channelId: n,
@@ -351,6 +352,19 @@ let v = (e) => {
                     tags: s,
                     num_characters_commentary: l,
                     is_widget_removed: c,
+                }),
+            );
+    },
+    j = (e) => {
+        let { guildId: t, channelId: n, analyticsLocations: i, action: a, wishlistId: o, skuId: s } = e;
+        C(O(b({}, e), { action: a })),
+            u.default.track(
+                m.rMx.USER_PROFILE_WISHLIST_ACTION,
+                O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e)), {
+                    location_stack: i,
+                    action_type: a,
+                    wishlist_id: o,
+                    sku_id: s,
                 }),
             );
     };
