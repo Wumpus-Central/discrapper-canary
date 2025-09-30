@@ -6,7 +6,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(755721),
+    o = n(159691),
     a = n(10765),
     s = n(639777),
     c = n(973772),
@@ -54,75 +54,35 @@ function _(e) {
     return e;
 }
 function O(e) {
-    var t,
-        n,
-        { guildId: i, powerup: l, onClick: a } = e,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
-            return i;
-        })(e, ["guildId", "powerup", "onClick"]);
-    let c = (0, d.Z)(i, l),
-        { onShowMore: u } = (0, p.ZP)(i, l),
-        b = f.uc.has(l.skuId);
-    return (0, r.jsx)(
-        o.zx,
-        ((t = _(
-            {
-                className: m.primaryButton,
-                innerClassName: m.buttonInner,
-                wrapperClassName: m.buttonWrapper,
-                grow: !0,
-                onClick: (e) => {
-                    null == a || a(e), b ? null == c || c(e) : null == u || u();
-                },
+    let { className: t, guildId: n, powerup: i, onClick: a } = e,
+        s = (0, d.Z)(n, i),
+        { onShowMore: c } = (0, p.ZP)(n, i),
+        u = f.uc.has(i.skuId);
+    return (0, r.jsx)("div", {
+        className: l()(m.primaryButton, t),
+        children: (0, r.jsx)(o.zxk, {
+            variant: "primary",
+            fullWidth: !0,
+            text: u ? g.intl.string(h.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
+            onClick: (e) => {
+                null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
-            s,
-        )),
-        (n = n = { children: b ? g.intl.string(h.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]) }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t),
-    );
+        }),
+    });
 }
 function y(e) {
     let { className: t, guildId: n, powerup: i } = e,
         { onShowMore: a } = (0, p.ZP)(n, i);
     return (0, r.jsx)("div", {
         className: l()(m.container, t),
-        children: (0, r.jsx)(o.zx, {
+        children: (0, r.jsx)("div", {
             className: m.primaryButton,
-            innerClassName: m.buttonInner,
-            wrapperClassName: m.buttonWrapper,
-            grow: !0,
-            onClick: a,
-            children: i.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+            children: (0, r.jsx)(o.zxk, {
+                variant: "primary",
+                fullWidth: !0,
+                text: i.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+                onClick: a,
+            }),
         }),
     });
 }

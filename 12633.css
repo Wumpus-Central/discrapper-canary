@@ -2581,6 +2581,12 @@
     display: block
 }
 
+.divider__1de9c {
+    border-top: thin solid var(--border-subtle);
+    height: 1px;
+    width: 100%
+}
+
 .anchor_edefb8 {
     color: var(--text-link);
     -webkit-text-decoration: var(--link-decoration);
@@ -12606,12 +12612,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     --__card-accent-color: var(--card-primary-bg);
     background-color: var(--card-primary-bg);
     border: 1px solid var(--border-subtle)
-}
-
-.divider__46c3b {
-    border-top: thin solid var(--border-subtle);
-    height: 1px;
-    width: 100%
 }
 
 .error__4cd16 {
