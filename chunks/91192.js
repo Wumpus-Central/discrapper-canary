@@ -118,13 +118,14 @@ function y() {
     return i.useContext(h).ref;
 }
 function O() {
-    let { id: e, onKeyDown: t, ref: n, tabIndex: r } = i.useContext(h);
+    let { id: e, onKeyDown: t, ref: n, tabIndex: r, orientation: a } = i.useContext(h);
     return {
         role: "list",
         tabIndex: r,
         [s.kn]: e,
         onKeyDown: t,
         ref: n,
+        "aria-orientation": a,
     };
 }
 function v(e) {
@@ -139,6 +140,7 @@ function v(e) {
         ref: r,
         [s.kn]: t,
         tabIndex: i,
+        "aria-orientation": a,
     };
 }
 function I(e) {
