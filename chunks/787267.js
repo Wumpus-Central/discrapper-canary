@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__7116a",
+    inputGroup: "inputGroup__7116a",
     group: "group__7116a",
     scroller: "scroller__7116a",
     separator: "separator__7116a",

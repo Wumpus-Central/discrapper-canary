@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     u = n(106301),
     d = n(388032),
-    p = n(103198),
-    h = n(515527);
+    p = n(948790),
+    h = n(334405);
 function f(e) {
     let { label: t, icon: n, setStatus: l, isFavorited: f, onFavoriteClick: m } = e,
         [g, b] = i.useState(!1),
@@ -72,11 +72,11 @@ function f(e) {
                             })({}, e)),
                             (n = n =
                                 {
-                                    className: p.centerAlign,
+                                    className: a()(p.centerAlign, p.favoriteIcon),
                                     onClick: C,
                                     children: (0, r.jsx)(_, {
                                         className: p.closeIcon,
-                                        color: f ? s.Z.colors.ICON_FEEDBACK_WARNING : void 0,
+                                        color: f ? s.Z.colors.ICON_FEEDBACK_WARNING : "currentColor",
                                     }),
                                 }),
                             Object.getOwnPropertyDescriptors
