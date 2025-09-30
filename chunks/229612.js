@@ -1,103 +1,100 @@
-n.d(e, { default: () => f }), n(539854), n(388685);
+n.d(e, { default: () => O }), n(539854), n(388685);
 var l = n(951288),
     a = n(647438),
-    i = n(481060),
-    r = n(600164),
-    u = n(313201),
-    s = n(315322),
-    b = n(257126),
-    d = n(731220),
-    o = n(531578),
-    O = n(388032),
-    v = n(485525);
-function c(t) {
+    i = n(82659),
+    r = n(481060),
+    u = n(315322),
+    s = n(257126),
+    b = n(731220),
+    d = n(531578),
+    o = n(388032);
+function v(t) {
     let {
             title: e,
             options: n,
-            selectedOption: r,
+            selectedOption: i,
             freeformText: u,
-            isFreeformEnabled: s,
-            selectOption: d,
-            onFreeformTextChange: v,
+            isFreeformEnabled: b,
+            selectOption: v,
+            onFreeformTextChange: O,
         } = t,
-        c = a.useMemo(() => n.map(b.Wo), [n]),
+        E = a.useMemo(() => n.map(s.Wo), [n]),
         f = a.useCallback(
             (t) => {
-                let e = (0, b.xx)(t, n);
-                null != e && d(e);
+                let e = (0, s.xx)(t, n);
+                null != e && v(e);
             },
-            [d, n],
+            [v, n],
         );
-    return (0, l.jsxs)(i.Kqy, {
+    return (0, l.jsxs)(r.Kqy, {
         gap: 24,
         children: [
-            (0, l.jsxs)(i.Kqy, {
+            (0, l.jsxs)(r.Kqy, {
                 gap: 16,
                 children: [
-                    (0, l.jsx)(i.X6q, {
+                    (0, l.jsx)(r.X6q, {
                         variant: "heading-lg/semibold",
                         color: "text-primary",
                         children: e,
                     }),
-                    (0, l.jsx)(i.FXm, {
-                        options: c,
-                        value: null == r ? void 0 : r.value,
+                    (0, l.jsx)(r.FXm, {
+                        options: E,
+                        value: null == i ? void 0 : i.value,
                         onChange: f,
                     }),
                 ],
             }),
-            (0, l.jsxs)(i.Kqy, {
+            (0, l.jsxs)(r.Kqy, {
                 gap: 16,
                 children: [
-                    (0, l.jsx)(i.X6q, {
+                    (0, l.jsx)(r.X6q, {
                         variant: "heading-lg/semibold",
                         color: "text-primary",
-                        children: O.intl.string(O.t.oV10fn),
+                        children: o.intl.string(o.t.oV10fn),
                     }),
-                    (0, l.jsx)(i.Kx8, {
+                    (0, l.jsx)(r.Kx8, {
                         value: u,
-                        maxLength: o.iF,
-                        onChange: v,
-                        disabled: !s,
+                        maxLength: d.iF,
+                        onChange: O,
+                        disabled: !b,
                     }),
                 ],
             }),
         ],
     });
 }
-let f = function (t) {
-    let { searchContext: e, rating: n, transitionState: f, onClose: E } = t,
-        g = (0, u.Dt)(),
-        _ = (0, d.e)({ getOptions: b.bM }),
-        h = (0, d.e)({ getOptions: b.cc }),
-        p = n === o.aZ.BAD,
-        { questionItems: S, questionTitles: N } = a.useMemo(() => {
+let O = function (t) {
+    let { searchContext: e, rating: n, transitionState: r, onClose: O } = t,
+        E = (0, b.e)({ getOptions: s.bM }),
+        f = (0, b.e)({ getOptions: s.cc }),
+        c = n === d.aZ.BAD,
+        { questionItems: g, questionTitles: _ } = a.useMemo(() => {
             let t = [],
                 e = [];
             return (
-                p && (t.push(_), e.push(O.intl.string(O.t.UyBQFx))),
-                t.push(h),
-                e.push(O.intl.string(O.t.LhMLCg)),
+                c && (t.push(E), e.push(o.intl.string(o.t.UyBQFx))),
+                t.push(f),
+                e.push(o.intl.string(o.t.LhMLCg)),
                 {
                     questionItems: t,
                     questionTitles: e,
                 }
             );
-        }, [p, h, _]);
+        }, [c, f, E]);
     a.useEffect(() => {
-        (0, s.Yc)({
+        (0, u.Yc)({
             rating: n,
             searchContext: e,
         });
     }, [n, e]);
-    let [D, I] = a.useState(0),
-        C = 0 === D,
-        T = D === S.length - 1,
-        L = a.useMemo(() => {
-            let t = S[D],
-                e = N[D];
+    let [h, S] = a.useState(0),
+        p = 0 === h,
+        N = h === g.length - 1,
+        D = a.useMemo(() => {
+            let t = g[h],
+                e = _[h];
             return (0, l.jsx)(
-                c,
+                v,
                 (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
@@ -124,80 +121,66 @@ let f = function (t) {
                     return t;
                 })({ title: e }, t),
             );
-        }, [S, N, D]),
-        M = a.useMemo(() => S.every(b.cp), [S]),
-        y = a.useMemo(() => {
-            let t = S[D];
-            return (0, b.cp)(t);
-        }, [S, D]),
-        x = a.useCallback(() => {
-            M &&
-                ((0, s.z4)({
+        }, [g, _, h]),
+        C = a.useMemo(() => g.every(s.cp), [g]),
+        I = a.useMemo(() => {
+            let t = g[h];
+            return (0, s.cp)(t);
+        }, [g, h]),
+        T = a.useCallback(() => {
+            C &&
+                ((0, u.z4)({
                     rating: n,
                     searchContext: e,
-                    unsatisfiedQuestionOption: p ? (0, b.HO)(_) : null,
-                    unsatisfiedQuestionText: p ? (0, b.sG)(_) : null,
-                    describeSearchQuestionOption: (0, b.HO)(h),
-                    describeSearchQuestionText: (0, b.sG)(h),
+                    unsatisfiedQuestionOption: c ? (0, s.HO)(E) : null,
+                    unsatisfiedQuestionText: c ? (0, s.sG)(E) : null,
+                    describeSearchQuestionOption: (0, s.HO)(f),
+                    describeSearchQuestionText: (0, s.sG)(f),
                 }),
-                E());
-        }, [M, n, e, p, _, h, E]),
-        m = a.useCallback(() => {
-            if (C) return void E();
-            I(D - 1);
-        }, [C, D, E]),
-        R = a.useCallback(() => {
-            I(D + 1);
-        }, [D]);
-    return (0, l.jsxs)(i.Y0X, {
-        size: i.CgR.MEDIUM,
-        transitionState: f,
-        "aria-labelledby": g,
-        parentComponent: "SearchResultsFeedbackModal",
-        children: [
-            (0, l.jsxs)(i.xBx, {
-                separator: !1,
-                className: v.header,
-                children: [
-                    (0, l.jsx)(i.X6q, {
-                        id: g,
-                        variant: "heading-xl/semibold",
-                        color: "text-primary",
-                        children: O.intl.string(O.t.LRGdV1),
-                    }),
-                    (0, l.jsx)(i.olH, { onClick: E }),
-                ],
-            }),
-            (0, l.jsx)(i.hzk, {
-                className: v.content,
-                children: L,
-            }),
-            (0, l.jsxs)(i.mzw, {
-                separator: !0,
-                className: v.footer,
-                direction: r.Z.Direction.HORIZONTAL,
-                justify: r.Z.Justify.END,
-                children: [
-                    (0, l.jsx)(i.zxk, {
-                        variant: "secondary",
-                        text: C ? O.intl.string(O.t["ETE/oK"]) : O.intl.string(O.t["13/7kZ"]),
-                        onClick: m,
-                    }),
-                    T
-                        ? (0, l.jsx)(i.zxk, {
-                              variant: "primary",
-                              text: O.intl.string(O.t["4Zpxtr"]),
-                              onClick: x,
-                              disabled: !M,
-                          })
-                        : (0, l.jsx)(i.zxk, {
-                              variant: "primary",
-                              text: O.intl.string(O.t.PDTjLC),
-                              onClick: R,
-                              disabled: !y,
-                          }),
-                ],
-            }),
-        ],
+                O());
+        }, [C, n, e, c, E, f, O]),
+        L = a.useCallback(() => {
+            if (p) return void O();
+            S(h - 1);
+        }, [p, h, O]),
+        M = a.useCallback(() => {
+            S(h + 1);
+        }, [h]),
+        y = a.useMemo(() => {
+            let t = [];
+            return (
+                p
+                    ? t.push({
+                          variant: "secondary",
+                          text: o.intl.string(o.t["ETE/oK"]),
+                          onClick: O,
+                      })
+                    : t.push({
+                          variant: "secondary",
+                          text: o.intl.string(o.t["13/7kZ"]),
+                          onClick: L,
+                      }),
+                N
+                    ? t.push({
+                          variant: "primary",
+                          text: o.intl.string(o.t["4Zpxtr"]),
+                          onClick: T,
+                          disabled: !C,
+                      })
+                    : t.push({
+                          variant: "primary",
+                          text: o.intl.string(o.t.PDTjLC),
+                          onClick: M,
+                          disabled: !I,
+                      }),
+                t
+            );
+        }, [p, N, C, I, O, L, T, M]);
+    return (0, l.jsx)(i.Modal, {
+        title: o.intl.string(o.t.LRGdV1),
+        actions: y,
+        onClose: O,
+        transitionState: r,
+        children: D,
     });
 };
