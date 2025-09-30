@@ -906,7 +906,8 @@ let eZ = (e) => {
                                               children: [
                                                   y &&
                                                       (0, r.jsx)(eg.a, {
-                                                          product: E,
+                                                          product: l,
+                                                          selectedVariantIndex: T,
                                                           className: eR.wishlistButton,
                                                           iconSize: 16,
                                                           enableHoverEffect: !0,
