@@ -671,7 +671,7 @@ class v extends a.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, a, c, p, g;
+        var e, t, n, r, i, a, c, p, g, E;
         super(),
             (e = this),
             m(this, "Video", _.Z),
@@ -762,27 +762,28 @@ class v extends a.Z {
             m(this, "handleSystemMicrophoneModeChangeCallback", (e) => {
                 this.emit(s.aB.SystemMicrophoneModeChange, e);
             });
-        let E = (0, d.zS)();
-        E.setDeviceChangeCallback(this.handleDeviceChange),
-            E.setVolumeChangeCallback(this.handleVolumeChange),
-            E.setOnVoiceCallback(this.handleVoiceActivity),
-            null == (t = E.setVideoInputInitializationCallback) || t.call(E, this.handleVideoInputInitialization),
-            null == (n = E.setAudioInputInitializationCallback) || n.call(E, this.handleAudioInputInitialization),
-            null == (r = E.setAudioDeviceModuleErrorCallback) || r.call(E, this.handleAudioDeviceModuleErrorCallback),
-            E.setTransportOptions({
+        let b = (0, d.zS)();
+        null == (t = b.updateFieldTrial) || t.call(b, "WebRTC-CheckReceiveTime", "Enabled"),
+            b.setDeviceChangeCallback(this.handleDeviceChange),
+            b.setVolumeChangeCallback(this.handleVolumeChange),
+            b.setOnVoiceCallback(this.handleVoiceActivity),
+            null == (n = b.setVideoInputInitializationCallback) || n.call(b, this.handleVideoInputInitialization),
+            null == (r = b.setAudioInputInitializationCallback) || r.call(b, this.handleAudioInputInitialization),
+            null == (i = b.setAudioDeviceModuleErrorCallback) || i.call(b, this.handleAudioDeviceModuleErrorCallback),
+            b.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1,
             }),
-            null == (i = E.setNativeScreenSharePickerCallbacks) ||
-                i.call(
-                    E,
+            null == (a = b.setNativeScreenSharePickerCallbacks) ||
+                a.call(
+                    b,
                     this.handleNativeScreenSharePickerUpdate,
                     this.handleNativeScreenSharePickerCancel,
                     this.handleNativeScreenSharePickerError,
                 ),
-            null == (a = E.setVideoCodecErrorCallback) || a.call(E, this.handleVideoCodecErrorCallback),
-            null == (c = E.setSystemMicrophoneModeChangeCallback) ||
-                c.call(E, this.handleSystemMicrophoneModeChangeCallback),
+            null == (c = b.setVideoCodecErrorCallback) || c.call(b, this.handleVideoCodecErrorCallback),
+            null == (p = b.setSystemMicrophoneModeChangeCallback) ||
+                p.call(b, this.handleSystemMicrophoneModeChangeCallback),
             this.on("removeListener", this.handleRemoveListener),
             this.on("newListener", this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -791,13 +792,13 @@ class v extends a.Z {
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice &&
                   (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
-            null != E.pingVoiceThread &&
+            null != b.pingVoiceThread &&
                 "undefined" != typeof window &&
                 "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL &&
                 this.watchdogTick(),
-            null != E.setActiveSinksChangeCallback && E.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            null == (p = E.setLoopbackPlaybackGainMultiplier) || p.call(E, h.Jk),
-            null == (g = E.setVoiceFiltersFailedCallback) || g.call(E, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
+            null != b.setActiveSinksChangeCallback && b.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null == (g = b.setLoopbackPlaybackGainMultiplier) || g.call(b, h.Jk),
+            null == (E = b.setVoiceFiltersFailedCallback) || E.call(b, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
             (0, l.Z)(this),
             I(this);
     }
