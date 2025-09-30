@@ -1,11 +1,10 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(594174),
-    s = n(78839),
-    l = n(431);
-function c(e, t, n) {
+    o = n(78839),
+    s = n(431);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +28,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,97 +45,88 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class _ {}
-let p = {
-    userHasUnexpiredOffers: new _(),
-    userHasUnexpiredDiscount: new _(),
-    mostRecentSubscription: new _(),
-    prevSubscription: new _(),
-    premiumSource: new _(),
+class f {}
+let _ = {
+    userHasUnexpiredOffers: new f(),
+    userHasUnexpiredDiscount: new f(),
+    mostRecentSubscription: new f(),
+    prevSubscription: new f(),
     shouldRefetchCampaignEligibility: !0,
     isEligibleForCampaign: null,
     isFetchingCampaignEligibility: !1,
 };
-function h(e) {
+function p(e) {
     let { isEligible: t } = e;
-    p = f(u({}, p), {
+    _ = d(c({}, _), {
         shouldRefetchCampaignEligibility: !1,
         isEligibleForCampaign: t,
         isFetchingCampaignEligibility: !1,
     });
 }
-function m() {
-    p = f(u({}, p), {
+function h() {
+    _ = d(c({}, _), {
         shouldRefetchCampaignEligibility: !1,
         isEligibleForCampaign: null,
         isFetchingCampaignEligibility: !1,
     });
 }
-function g() {
-    p = f(u({}, p), { isFetchingCampaignEligibility: !0 });
+function m() {
+    _ = d(c({}, _), { isFetchingCampaignEligibility: !0 });
 }
-function E(e, t) {
+function g(e, t) {
     return (
-        !(e instanceof _) &&
+        !(e instanceof f) &&
         ((null === e && null === t) || (null !== e && null !== t && e.id === t.id && e.status === t.status))
     );
 }
-class b extends (r = i.ZP.Store) {
+class E extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, s.Z, o.default),
-            this.syncWith([l.Z], this.handleUserOfferUpdate),
-            this.syncWith([s.Z], this.handleSubscriptionUpdate),
-            this.syncWith([o.default], this.handleUserUpdate);
+        this.waitFor(s.Z, o.Z),
+            this.syncWith([s.Z], this.handleUserOfferUpdate),
+            this.syncWith([o.Z], this.handleSubscriptionUpdate);
     }
     get state() {
-        return p;
-    }
-    handleUserUpdate() {
-        var e, t;
-        let n = u({}, p),
-            r = null == (t = o.default.getCurrentUser()) || null == (e = t.premiumState) ? void 0 : e.premiumSource;
-        n.premiumSource !== r && ((n.premiumSource = null != r ? r : null), (n.shouldRefetchCampaignEligibility = !0)),
-            (p = n);
+        return _;
     }
     handleSubscriptionUpdate() {
-        let e = u({}, p);
-        if (!0 === s.Z.hasFetchedMostRecentPremiumTypeSubscription()) {
+        let e = c({}, _);
+        if (!0 === o.Z.hasFetchedMostRecentPremiumTypeSubscription()) {
             let t = e.mostRecentSubscription,
-                n = s.Z.getMostRecentPremiumTypeSubscription();
-            E(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.mostRecentSubscription = n);
+                n = o.Z.getMostRecentPremiumTypeSubscription();
+            g(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.mostRecentSubscription = n);
         }
-        if (!0 === s.Z.hasFetchedPreviousPremiumTypeSubscription()) {
+        if (!0 === o.Z.hasFetchedPreviousPremiumTypeSubscription()) {
             let t = e.prevSubscription,
-                n = s.Z.getPreviousPremiumTypeSubscription();
-            E(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.prevSubscription = n);
+                n = o.Z.getPreviousPremiumTypeSubscription();
+            g(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.prevSubscription = n);
         }
-        p = e;
+        _ = e;
     }
     handleUserOfferUpdate() {
-        !1 !== l.Z.lastFetchSuccessful() &&
-            (p.userHasUnexpiredDiscount !== l.Z.hasAnyUnexpiredDiscountOffer() ||
-                p.userHasUnexpiredOffers !== l.Z.hasAnyUnexpiredOffer()) &&
-            (p = f(u({}, p), {
-                userHasUnexpiredOffers: l.Z.hasAnyUnexpiredOffer(),
-                userHasUnexpiredDiscount: l.Z.hasAnyUnexpiredDiscountOffer(),
+        !1 !== s.Z.lastFetchSuccessful() &&
+            (_.userHasUnexpiredDiscount !== s.Z.hasAnyUnexpiredDiscountOffer() ||
+                _.userHasUnexpiredOffers !== s.Z.hasAnyUnexpiredOffer()) &&
+            (_ = d(c({}, _), {
+                userHasUnexpiredOffers: s.Z.hasAnyUnexpiredOffer(),
+                userHasUnexpiredDiscount: s.Z.hasAnyUnexpiredDiscountOffer(),
                 shouldRefetchCampaignEligibility: !0,
             }));
     }
 }
-c(b, "displayName", "MarketingCampaignEligibilityStore");
-let y = new b(a.Z, {
-    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_SUCCESS: h,
-    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED: m,
-    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED: g,
+l(E, "displayName", "MarketingCampaignEligibilityStore");
+let b = new E(a.Z, {
+    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_SUCCESS: p,
+    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED: h,
+    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED: m,
 });
