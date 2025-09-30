@@ -29,8 +29,8 @@ var r = n(654861),
     P = n(995896),
     w = n(311473),
     D = n(615830),
-    x = n(314897),
-    L = n(592125),
+    L = n(314897),
+    x = n(592125),
     j = n(131951),
     M = n(19780),
     k = n(226961),
@@ -449,7 +449,7 @@ class eC extends d.Z {
     }
     setNextChannelId(e) {
         this.recordEvent({ c: 9 });
-        let t = L.Z.getChannel(this.channelId),
+        let t = x.Z.getChannel(this.channelId),
             n = null == t ? void 0 : t.type;
         this.logger.info("Updating channel: ".concat(e, "(").concat(n, ")")),
             (this._nextChannelId = e),
@@ -504,7 +504,7 @@ class eC extends d.Z {
     }
     _handleConnecting(e) {
         if (null != this.endpoint) {
-            let e = L.Z.getChannel(this.channelId),
+            let e = x.Z.getChannel(this.channelId),
                 t = null == e ? void 0 : e.type;
             this.logger.info(
                 "Connecting to RTC server "
@@ -647,10 +647,13 @@ class eC extends d.Z {
                 .catch((e) => {
                     this.logger.warn(e);
                 }),
-                this._trackMLSFailures({ recovered: !1 });
+                this._trackMLSFailures({
+                    recovered: !1,
+                    downgraded: !1,
+                });
             let n = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null,
                 i = j.Z.getSettings(),
-                a = L.Z.getChannel(this.channelId),
+                a = x.Z.getChannel(this.channelId),
                 o =
                     null == (u = N.Z.getConnectionStats(this.getMediaEngineConnectionId())) ||
                     null == (c = u.stats.rtp.outbound.find((e) => "audio" === e.type))
@@ -810,7 +813,7 @@ class eC extends d.Z {
                 });
         let l = j.Z.getMediaEngine(),
             c = D.Z.getPersistentCodesEnabled(),
-            u = null != (s = x.default.getStaticAuthSessionId()) ? s : void 0,
+            u = null != (s = L.default.getStaticAuthSessionId()) ? s : void 0,
             d = (0, _.zO)(),
             h = l.connect(
                 this.context,
@@ -1254,7 +1257,7 @@ class eC extends d.Z {
         this._soundshareStats.traceEvent(void 0, e);
     }
     _getAnalyticsProperties() {
-        let e = L.Z.getChannel(this.channelId),
+        let e = x.Z.getChannel(this.channelId),
             t = null == e ? void 0 : e.type;
         return {
             guild_id: this.guildId,
@@ -1505,15 +1508,20 @@ class eC extends d.Z {
         this.logger.info("Preparing DAVE protocol transition: ".concat(e, ", protocol version: ").concat(t)),
             this._secureFramesTransitionPrepareCount++;
         let r = (0, _.zO)();
-        null == (n = this._connection) ||
-            n.prepareSecureFramesTransition(e, t, () => {
-                this._maybeSendSecureFramesTransitionReady(e),
-                    this._storeSecureFrameTransitionData(e, {
-                        protocolVersion: t,
-                        prepareReceivedTime: r,
-                        prepareFinishedTime: (0, _.zO)(),
-                    });
-            });
+        0 === t &&
+            this._trackMLSFailures({
+                recovered: !0,
+                downgraded: !0,
+            }),
+            null == (n = this._connection) ||
+                n.prepareSecureFramesTransition(e, t, () => {
+                    this._maybeSendSecureFramesTransitionReady(e),
+                        this._storeSecureFrameTransitionData(e, {
+                            protocolVersion: t,
+                            prepareReceivedTime: r,
+                            prepareFinishedTime: (0, _.zO)(),
+                        });
+                });
     }
     _handleSecureFramesPrepareEpoch(e, t) {
         var n;
@@ -1591,7 +1599,10 @@ class eC extends d.Z {
         null == (n = this._connection) ||
             n.prepareMLSCommitTransition(e, t, (n, i, a) => {
                 n
-                    ? (this._trackMLSFailures({ recovered: !0 }),
+                    ? (this._trackMLSFailures({
+                          recovered: !0,
+                          downgraded: !1,
+                      }),
                       (this._mlsSessionResetStartTime = void 0),
                       this._handleSecureFramesRosterChange(a, e),
                       this._maybeSendSecureFramesTransitionReady(e))
@@ -1615,7 +1626,10 @@ class eC extends d.Z {
         null == (n = this._connection) ||
             n.processMLSWelcome(e, t, (n, i, a) => {
                 n
-                    ? (this._trackMLSFailures({ recovered: !0 }),
+                    ? (this._trackMLSFailures({
+                          recovered: !0,
+                          downgraded: !1,
+                      }),
                       (this._mlsSessionResetStartTime = void 0),
                       this._handleSecureFramesRosterChange(a, e),
                       this._maybeSendSecureFramesTransitionReady(e))
@@ -1660,36 +1674,37 @@ class eC extends d.Z {
             this._alertMLSFailureDebouced(e, t);
     }
     _trackMLSFailures(e) {
-        let { recovered: t } = e,
-            n = (0, _.zO)(),
-            r = this.getMediaSessionId(),
-            i = null != this._mlsSessionResetStartTime ? n - this._mlsSessionResetStartTime : void 0;
+        let { recovered: t, downgraded: n } = e,
+            r = (0, _.zO)(),
+            i = this.getMediaSessionId(),
+            a = null != this._mlsSessionResetStartTime ? r - this._mlsSessionResetStartTime : void 0;
         for (let {
             id: e,
-            source: a,
-            reason: o,
-            count: s,
-            countDuringReset: l,
-            firstOccurrence: c,
-            timeSinceInit: u,
-            eventLog: d,
+            source: o,
+            reason: s,
+            count: l,
+            countDuringReset: c,
+            firstOccurrence: u,
+            timeSinceInit: d,
+            eventLog: f,
         } of this._mlsFailures)
             B.default.track(
                 es.rMx.MLS_FAILURES,
                 ef(eu({}, this._getAnalyticsProperties()), {
-                    media_session_id: r,
+                    media_session_id: i,
                     parent_media_session_id: this.parentMediaSessionId,
                     failure_id: e,
-                    failure_time: c - this._createdTime,
-                    failure_source: a,
-                    failure_reason: o,
-                    failure_count: s,
+                    failure_time: u - this._createdTime,
+                    failure_source: o,
+                    failure_reason: s,
+                    failure_count: l,
                     failure_was_recovered: t,
-                    time_since_first_occurrence: n - c,
-                    time_since_last_reset: i,
-                    failure_count_during_reset: l,
-                    time_since_init: u,
-                    event_history: d,
+                    failure_cleared_by_downgrade: n,
+                    time_since_first_occurrence: r - u,
+                    time_since_last_reset: a,
+                    failure_count_during_reset: c,
+                    time_since_init: d,
+                    event_history: f,
                     connection_serial: this._connectionSerial,
                 }),
             );
@@ -1901,7 +1916,7 @@ class eC extends d.Z {
                 camera_device_count: Object.keys(j.Z.getVideoDevices()).length,
             })),
             ec(this, "_trackVoiceConnectionConnecting", () => {
-                let e = L.Z.getChannel(this.channelId),
+                let e = x.Z.getChannel(this.channelId),
                     t = null == e ? void 0 : e.type;
                 B.default.track(
                     es.rMx.VOICE_CONNECTION_CONNECTING,
@@ -1992,7 +2007,7 @@ class eC extends d.Z {
         let f = j.Z.supports(el.AN.FIRST_FRAME_CALLBACK) && j.Z.supports(el.AN.REMOTE_USER_MULTI_STREAM);
         if (i === el.Yn.DEFAULT) {
             var p;
-            let t = (null == (p = L.Z.getChannel(this.channelId)) ? void 0 : p.type) === es.d4z.GUILD_STAGE_VOICE;
+            let t = (null == (p = x.Z.getChannel(this.channelId)) ? void 0 : p.type) === es.d4z.GUILD_STAGE_VOICE;
             (this._localMediaSinkWantsManager = new J.ZP(e, t, f)),
                 this._localMediaSinkWantsManager.on(J.ai.Update, (e) => {
                     if (this.state === es.hes.RTC_CONNECTED && null != this._socket) {
