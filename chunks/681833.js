@@ -1,57 +1,55 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => f }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(987997),
-    c = n(388032),
-    u = n(627782),
-    d = n(903163),
-    f = n(845904);
-function _(e) {
+    o = n(481060),
+    s = n(987997),
+    l = n(388032),
+    c = n(627782),
+    u = n(903163),
+    d = n(845904);
+function f(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: "heading-md/bold",
-                children: c.intl.string(c.t["48ywCg"]),
+                children: l.intl.string(l.t["48ywCg"]),
             }),
-            (0, r.jsx)(s.LZC, { size: 4 }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.LZC, { size: 4 }),
+            (0, r.jsx)(o.Text, {
                 variant: "text-md/normal",
-                className: u.sectionDescription,
-                children: c.intl.string(c.t.VWxmSk),
+                className: c.sectionDescription,
+                children: l.intl.string(l.t.VWxmSk),
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(o.LZC, { size: 24 }),
             (0, r.jsxs)("div", {
-                className: a()(d.guildBoostingSubscriptionRow, u.card),
+                className: a()(u.guildBoostingSubscriptionRow, c.card),
                 children: [
                     (0, r.jsx)("img", {
-                        src: f,
+                        src: d,
                         alt: "",
-                        className: u.bannerImage,
+                        className: c.bannerImage,
                     }),
                     (0, r.jsxs)("div", {
-                        className: u.textContainer,
+                        className: c.textContainer,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: "heading-xl/semibold",
-                                className: u.header,
-                                children: c.intl.string(c.t["48ywCg"]),
+                                className: c.header,
+                                children: l.intl.string(l.t["48ywCg"]),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-md/normal",
-                                className: u.description,
-                                children: c.intl.format(c.t["/esXLi"], { numSubscriptions: n }),
+                                className: c.description,
+                                children: l.intl.format(l.t["/esXLi"], { numSubscriptions: n }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(l.Z, {
-                        color: o.zx.Colors.BRAND,
+                    (0, r.jsx)(s.Z, {
                         onClick: t,
-                        children: c.intl.string(c.t.z5YcJy),
+                        text: l.intl.string(l.t.z5YcJy),
                     }),
                 ],
             }),

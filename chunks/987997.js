@@ -1,9 +1,11 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
-var i = n(755721),
-    a = n(573335);
-function o(e, t, n) {
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(573335);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +29,12 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,22 +46,22 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function u(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = d(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -67,7 +69,7 @@ function u(e, t) {
     }
     return i;
 }
-function d(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,16 +78,20 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function f(e) {
-    var { children: t } = e,
-        n = u(e, ["children"]);
-    return (0, r.jsx)(
-        i.zx,
-        c(s({}, n), {
-            size: i.zx.Sizes.SMALL,
-            color: i.zx.Colors.BRAND_INVERTED,
-            className: a.button,
-            children: t,
-        }),
-    );
+function p(e) {
+    var { text: t, className: n, loading: i } = e,
+        l = f(e, ["text", "className", "loading"]);
+    return (0, r.jsx)("div", {
+        "data-button-hoisted-classname-wrapper": !0,
+        className: a()(s.buttonWrapper, n),
+        children: (0, r.jsx)(
+            o.zxk,
+            d(c({}, l), {
+                variant: "overlay-primary",
+                size: "sm",
+                text: t,
+                loading: i,
+            }),
+        ),
+    });
 }
