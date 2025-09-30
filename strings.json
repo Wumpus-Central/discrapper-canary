@@ -10268,6 +10268,8 @@
   "JPF5IC": "Server Too Young",
   "T+DQYW": "You need to change $[one or more channel names]({{channelHook}})",
   "/W9Ken": "You need to change your $[description]({{descriptionHook}})",
+  "PKoNy8": "You need to change your $[discovery splash image]({{discoveryHook}})",
+  "4E4/Vl": "You need to change your $[server icon]({{iconHook}})",
   "KVD8Ex": "You need to change your $[server name]({{nameHook}})",
   "fWQTbm": "Increase number of weekly communicators",
   "Tl8MR0": "A communicator is someone who has talked (voice or text) in the server. Hosting community events and seeding discussion topics are great ways to encourage more people to talk.",

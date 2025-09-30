@@ -362,6 +362,40 @@ let I = (e) => {
                                   }),
                               })
                             : null,
+                        (null == S ? void 0 : S.icon) != null
+                            ? (0, r.jsx)(p.Text, {
+                                  color: "text-muted",
+                                  variant: "text-sm/normal",
+                                  children: _.intl.format(_.t["4E4/Vl"], {
+                                      iconHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              "span",
+                                              {
+                                                  className: O.doesNot,
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  }),
+                              })
+                            : null,
+                        (null == S ? void 0 : S.discovery_splash) != null
+                            ? (0, r.jsx)(p.Text, {
+                                  color: "text-muted",
+                                  variant: "text-sm/normal",
+                                  children: _.intl.format(_.t.PKoNy8, {
+                                      discoveryHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              "span",
+                                              {
+                                                  className: O.doesNot,
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  }),
+                              })
+                            : null,
                     ],
                 }),
                 checked: null == S || 0 === Object.keys(S).length,
