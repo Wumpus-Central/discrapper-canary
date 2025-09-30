@@ -1,28 +1,28 @@
 r.r(t), r.d(t, { default: () => D }), r(388685), r(314940);
 var a = r(951288),
-    i = r(647438),
-    n = r(512722),
-    l = r.n(n),
-    o = r(786920),
+    n = r(647438),
+    i = r(512722),
+    l = r.n(i),
+    o = r(137317),
     s = r(278074),
     c = r(979554),
     d = r(314794),
     u = r(399606),
-    v = r(481060),
-    f = r(47280),
-    p = r(876917),
+    f = r(481060),
+    p = r(47280),
+    v = r(876917),
     h = r(594174),
     m = r(508925),
-    P = r(616066),
-    g = r(216541),
+    g = r(616066),
+    P = r(216541),
     w = r(22267),
     y = r(302800),
     b = r(388032),
     _ = r(186175),
-    O = r(593639),
-    j = r(945182),
+    j = r(593639),
+    O = r(945182),
     E = r(234286);
-function x(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(r);
@@ -47,65 +47,40 @@ function x(e) {
     }
     return e;
 }
-let S = (e) => {
-        let { product: t, pairedProduct: r, itemConsumed: i, forCollectedModal: n } = e,
-            [o] = t.items,
-            y = null == r ? void 0 : r.items[0],
-            x = (0, u.e7)([h.default], () => {
+let x = (e) => {
+        let { product: t, itemConsumed: r, forCollectedModal: n } = e,
+            [i] = t.items,
+            o = (0, u.e7)([h.default], () => {
                 let e = h.default.getCurrentUser();
                 return l()(null != e, "User cannot be undefined"), e;
             }),
-            S = Object.values(d.a).includes(t.skuId),
-            C = (0, f.ZP)({ location: "CollectiblesProductPreview" });
+            y = Object.values(d.a).includes(t.skuId),
+            C = (0, p.ZP)({ location: "CollectiblesProductPreview" });
         return (0, s.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, a.jsx)("div", {
                     className: _.profileEffectShopPreview,
-                    children: (0, a.jsx)(p.Z, {
+                    children: (0, a.jsx)(v.Z, {
                         forCollectedModal: !0,
-                        profileEffectId: o.id,
+                        profileEffectId: i.id,
                     }),
                 }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (l()(o.type === c.Z.AVATAR_DECORATION, "ts-match already checked the type"),
-                null != y && y.type === c.Z.AVATAR_DECORATION)
-                    ? (0, a.jsxs)("div", {
-                          children: [
-                              (0, a.jsx)("div", {
-                                  className: _.avatarDecorationPairOne,
-                                  children: (0, a.jsx)(P.R, {
-                                      item: o,
-                                      user: x,
-                                      avatarSize: v.EFr.SIZE_120,
-                                      isPurchased: !1,
-                                      isHighlighted: !0,
-                                  }),
-                              }),
-                              (0, a.jsx)("div", {
-                                  className: _.avatarDecorationPairTwo,
-                                  children: (0, a.jsx)(P.R, {
-                                      item: y,
-                                      avatarSize: v.EFr.SIZE_120,
-                                      isPurchased: !1,
-                                  }),
-                              }),
-                          ],
-                      })
-                    : (0, a.jsx)(P.R, {
-                          item: o,
-                          user: x,
-                          avatarSize: v.EFr.SIZE_120,
-                          isPurchased: !1,
-                          isHighlighted: !0,
-                      }),
+                (0, a.jsx)(g.R, {
+                    item: i,
+                    user: o,
+                    avatarSize: f.EFr.SIZE_120,
+                    isPurchased: !1,
+                    isHighlighted: !0,
+                }),
             )
             .with(c.Z.NAMEPLATE, () =>
                 (0, a.jsx)("div", {
                     className: _.nameplate,
                     children: (0, a.jsx)(w.Z, {
-                        nameplate: o,
-                        user: x,
+                        nameplate: i,
+                        user: o,
                         nameplatePreviewSize: "large",
                         isHighlighted: !0,
                     }),
@@ -114,10 +89,10 @@ let S = (e) => {
             .with(c.Z.BUNDLE, () =>
                 (0, a.jsx)("div", {
                     className: _.bundlePreview,
-                    children: (0, a.jsx)(g.d, {
+                    children: (0, a.jsx)(P.d, {
                         containerClassName: _.bundlePreviewContainer,
                         product: t,
-                        user: x,
+                        user: o,
                         isPurchased: !1,
                         isHighlighted: !0,
                         forCollectedModal: n,
@@ -125,26 +100,26 @@ let S = (e) => {
                 }),
             )
             .with(c.Z.EXTERNAL_SKU, () => {
-                if (S)
-                    if (i)
+                if (y)
+                    if (r)
                         return (0, a.jsx)("img", {
-                            src: C ? E : j,
+                            src: C ? E : O,
                             alt: b.intl.string(b.t.t0xkSE),
                             style: { width: "100%" },
                         });
                     else
                         return (0, a.jsx)("img", {
-                            src: O,
+                            src: j,
                             alt: b.intl.string(b.t.g5W1g4),
                         });
                 return (0, a.jsx)(m.b, { product: t });
             })
             .otherwise(() => null);
     },
-    C = (e) => {
+    S = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
-            [n, l] = i.useState(!1),
-            s = (0, v.q_F)({
+            [i, l] = n.useState(!1),
+            s = (0, f.q_F)({
                 from: {
                     transform: "translateX(100%)",
                     right: "-100%",
@@ -156,7 +131,7 @@ let S = (e) => {
                 config: { duration: 1550 },
                 onRest: () => setTimeout(() => l(!0), 100),
             }),
-            c = (0, v.q_F)({
+            c = (0, f.q_F)({
                 from: {
                     transform: "translateX(100%)",
                     right: "-100%",
@@ -166,9 +141,9 @@ let S = (e) => {
                     right: "50%",
                 },
                 config: { duration: 1550 },
-                reverse: n,
+                reverse: i,
             }),
-            d = (0, v.q_F)(
+            d = (0, f.q_F)(
                 {
                     from: {
                         transform: "translateX(50%)",
@@ -190,7 +165,7 @@ let S = (e) => {
                 (0, a.jsx)(o.animated.div, {
                     className: _.easterEggContainer,
                     style: s,
-                    children: (0, a.jsx)(S, x({}, e)),
+                    children: (0, a.jsx)(x, C({}, e)),
                 }),
                 (0, a.jsx)(o.animated.div, {
                     className: _.easterEggContainer,
@@ -207,12 +182,12 @@ let S = (e) => {
     };
 function D(e) {
     var t, r;
-    let i = (0, y.v)(e.product.categorySkuId);
-    return null != i
+    let n = (0, y.v)(e.product.categorySkuId);
+    return null != n
         ? (0, a.jsx)(
-              C,
-              ((t = x({}, e)),
-              (r = r = { displayOptions: i }),
+              S,
+              ((t = C({}, e)),
+              (r = r = { displayOptions: n }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                   : (function (e, t) {
@@ -227,5 +202,5 @@ function D(e) {
                     }),
               t),
           )
-        : (0, a.jsx)(S, x({}, e));
+        : (0, a.jsx)(x, C({}, e));
 }
