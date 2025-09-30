@@ -1,15 +1,14 @@
-n.d(t, { Z: () => g }), n(415506);
+n.d(t, { Z: () => m }), n(415506);
 var r = n(544891),
     i = n(433517),
     a = n(570140),
     o = n(330055),
-    s = n(663389),
-    l = n(546796),
-    c = n(37234),
-    u = n(981631),
-    d = n(792101),
-    f = n(388032);
-function _(e, t, n) {
+    s = n(546796),
+    l = n(37234),
+    c = n(981631),
+    u = n(792101),
+    d = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +32,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,24 +49,24 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = {
+let m = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
         a.Z.dispatch(
-            p(
+            _(
                 {
                     type: "USER_SETTINGS_MODAL_OPEN",
                     section: e,
@@ -76,31 +75,16 @@ let g = {
                 n,
             ),
         ),
-            (0, c.jN)(u.S9g.USER_SETTINGS);
-    },
-    init: function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 ? arguments[2] : void 0;
-        a.Z.dispatch(
-            p(
-                {
-                    type: "USER_SETTINGS_MODAL_INIT",
-                    section: e,
-                    subsection: t,
-                },
-                n,
-            ),
-        );
+            (0, l.jN)(c.S9g.USER_SETTINGS);
     },
     close() {
-        let e = s.Z.onClose;
-        a.Z.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" }), null != e && e();
+        a.Z.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         a.Z.dispatch(
-            p(
+            _(
                 {
                     type: "USER_SETTINGS_MODAL_SET_SECTION",
                     section: e,
@@ -136,32 +120,32 @@ let g = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
-        let { username: n, email: s, emailToken: c, password: _, avatar: h, newPassword: g, discriminator: E } = e,
+        let { username: n, email: l, emailToken: f, password: p, avatar: m, newPassword: g, discriminator: E } = e,
             { close: b } = t;
-        return (0, l.Z)(
+        return (0, s.Z)(
             (e) => {
-                let t = m(
-                        p(
+                let t = h(
+                        _(
                             {
                                 username: n,
-                                email: s,
-                                email_token: c,
-                                password: _,
-                                avatar: h,
+                                email: l,
+                                email_token: f,
+                                password: p,
+                                avatar: m,
                                 new_password: g,
                             },
                             e,
                         ),
                         { discriminator: null != E && "" !== E ? E : void 0 },
                     ),
-                    a = i.K.get(u.JkL),
-                    o = (0, d.xJ)();
+                    a = i.K.get(c.JkL),
+                    o = (0, u.xJ)();
                 null != o && null != a && ((t.push_provider = o), (t.push_token = a));
-                let l = i.K.get(u.scU);
+                let s = i.K.get(c.scU);
                 return (
-                    null != d.mv && null != l && ((t.push_voip_provider = d.mv), (t.push_voip_token = l)),
+                    null != u.mv && null != s && ((t.push_voip_provider = u.mv), (t.push_voip_token = s)),
                     r.tn.patch({
-                        url: u.ANM.ME,
+                        url: c.ANM.ME,
                         oldFormErrors: !0,
                         body: t,
                         rejectWithError: !1,
@@ -170,7 +154,7 @@ let g = {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: f.intl.string(f.t.clQc1d) },
+                modalProps: { title: d.intl.string(d.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({
@@ -194,14 +178,14 @@ let g = {
                         type: "CURRENT_USER_UPDATE",
                         user: t,
                     }),
-                    void 0 !== h && (0, o.Z)({ avatarHash: t.avatar }),
+                    void 0 !== m && (0, o.Z)({ avatarHash: t.avatar }),
                     null != g &&
                         a.Z.dispatch({
                             type: "USER_PASSWORD_UPDATE",
                             user: t,
                             newPassword: g,
                         }),
-                    null != _ &&
+                    null != p &&
                         null != g &&
                         a.Z.dispatch({
                             type: "PASSWORD_UPDATED",

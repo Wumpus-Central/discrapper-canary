@@ -1,12 +1,10 @@
-n.d(t, { Z: () => G });
+n.d(t, { Z: () => L });
 var r,
-    i = n(392711),
-    a = n.n(i),
-    o = n(442837),
-    s = n(570140),
-    l = n(594174),
-    c = n(981631);
-function u(e, t, n) {
+    i = n(442837),
+    a = n(570140),
+    o = n(594174),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +17,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,108 +28,89 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-let f = c.QZA.CLOSED,
-    _ = null,
-    p = null,
-    h = {},
-    m = {},
-    g = {},
+let u = s.QZA.CLOSED,
+    d = null,
+    f = {},
+    _ = {},
+    p = {},
+    h = null,
+    m = null,
+    g = !1,
     E = null,
-    b = null,
-    y = !1,
-    O = !1,
-    v = null,
-    I = null,
-    T = [],
-    S = null,
-    A = null;
-function C(e) {
-    (y = !0), N(e);
+    b = [],
+    y = null;
+function O(e) {
+    v(e);
 }
-function N(e) {
-    var t, n, r, i, a, o;
-    let s = l.default.getCurrentUser();
-    if (null == s) return R();
-    (p = null != (t = e.section) ? t : p),
-        (S = null != (n = e.section) ? n : p),
-        null != e.subsection && null != p && (h[p] = e.subsection),
-        null != e.scrollPosition && null != p && (m[p] = e.scrollPosition),
-        (O = !!e.openWithoutBackstack),
-        (f = c.QZA.OPEN),
-        (g = {}),
-        (b = d(
+function v(e) {
+    var t, n, r, i;
+    let a = o.default.getCurrentUser();
+    if (null == a) return I();
+    (d = null != (t = e.section) ? t : d),
+        null != e.subsection && null != d && (f[d] = e.subsection),
+        null != e.scrollPosition && null != d && (_[d] = e.scrollPosition),
+        (g = !!e.openWithoutBackstack),
+        (u = s.QZA.OPEN),
+        (p = {}),
+        (m = c(
             {},
-            (E = {
-                [c.oAB.ACCOUNT]: {
-                    userId: s.id,
-                    username: s.username,
-                    discriminator: s.discriminator,
-                    email: s.email,
-                    avatar: s.avatar,
+            (h = {
+                [s.oAB.ACCOUNT]: {
+                    userId: a.id,
+                    username: a.username,
+                    discriminator: a.discriminator,
+                    email: a.email,
+                    avatar: a.avatar,
                     password: "",
                     newPassword: null,
-                    claimed: s.isClaimed(),
+                    claimed: a.isClaimed(),
                 },
             }),
         )),
-        (v = null != (r = e.onClose) ? r : null),
-        (I = null != (i = e.analyticsLocation) ? i : null),
-        (T = null != (a = e.analyticsLocations) ? a : []),
-        (A = null != (o = e.searchParams) ? o : null);
+        (E = null != (n = e.analyticsLocation) ? n : null),
+        (b = null != (r = e.analyticsLocations) ? r : []),
+        (y = null != (i = e.searchParams) ? i : null);
+}
+function I() {
+    (u = s.QZA.CLOSED), (h = null), (m = null), (d = null), (f = {}), (_ = {}), (E = null), (b = []), (y = null);
+}
+function T(e) {
+    var t;
+    (d = e.section),
+        (E = null),
+        (b = null != (t = e.analyticsLocations) ? t : []),
+        null != e.subsection && (f[d] = e.subsection);
+}
+function S(e) {
+    let { forSection: t } = e;
+    null != t ? delete f[t] : null != d && delete f[d];
+}
+function A(e) {
+    let { forSection: t } = e;
+    null != t ? delete _[t] : null != d && delete _[d];
+}
+function C(e) {
+    let { settings: t } = e;
+    null == m && (m = {});
+    let n = m[s.oAB.ACCOUNT];
+    m[s.oAB.ACCOUNT] = c({}, n, t);
+}
+function N() {
+    u = s.QZA.SUBMITTING;
 }
 function R() {
-    (f = c.QZA.CLOSED),
-        (y = !1),
-        (E = null),
-        (S = null),
-        (b = null),
-        (_ = null),
-        (p = null),
-        (h = {}),
-        (m = {}),
-        (v = null),
-        (I = null),
-        (T = []),
-        (A = null);
-}
-function P(e) {
-    var t;
-    (_ = p),
-        (p = e.section),
-        (I = null),
-        (T = null != (t = e.analyticsLocations) ? t : []),
-        null != e.subsection && (h[p] = e.subsection);
-}
-function w(e) {
-    let { forSection: t } = e;
-    null != t ? delete h[t] : null != p && delete h[p];
-}
-function D(e) {
-    let { forSection: t } = e;
-    null != t ? delete m[t] : null != p && delete m[p];
-}
-function x(e) {
-    let { settings: t } = e;
-    null == b && (b = {});
-    let n = b[c.oAB.ACCOUNT];
-    b[c.oAB.ACCOUNT] = d({}, n, t);
-}
-function L() {
-    f = c.QZA.SUBMITTING;
-}
-function j() {
-    let e = l.default.getCurrentUser();
-    M(),
+    let e = o.default.getCurrentUser();
+    P(),
         null != e &&
-            (b = d(
+            (m = c(
                 {},
-                (E = {
-                    [c.oAB.ACCOUNT]: {
+                (h = {
+                    [s.oAB.ACCOUNT]: {
                         userId: e.id,
                         username: e.username,
                         discriminator: e.discriminator,
@@ -144,77 +123,61 @@ function j() {
                 }),
             ));
 }
-function M() {
-    (f = c.QZA.OPEN), (g = {});
+function P() {
+    (u = s.QZA.OPEN), (p = {});
 }
-function k(e) {
+function w(e) {
     var t;
-    if (f !== c.QZA.SUBMITTING) return !1;
-    (f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {});
+    if (u !== s.QZA.SUBMITTING) return !1;
+    (u = s.QZA.OPEN), (d = s.oAB.ACCOUNT), (p = null != (t = e.errors) ? t : {});
 }
-class U extends (r = o.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.default);
-    }
-    hasChanges() {
-        return null != b && null != E && !!this.isOpen() && !a().isEqual(b, E);
-    }
-    isOpen() {
-        return y;
-    }
-    getPreviousSection() {
-        return _;
+        this.waitFor(o.default);
     }
     getSection() {
-        return p;
+        return d;
     }
     getSubsection() {
-        return null != p ? h[p] : null;
+        return null != d ? f[d] : null;
     }
     getScrollPosition() {
-        return null != p ? m[p] : null;
-    }
-    shouldOpenWithoutBackstack() {
-        return O;
+        return null != d ? _[d] : null;
     }
     getAnalyticsLocation() {
-        return I;
+        return E;
     }
     getAnalyticsLocations() {
-        return T;
+        return b;
     }
-    getProps() {
-        return {
-            submitting: f === c.QZA.SUBMITTING,
-            section: p,
-            subsection: null != p ? h[p] : null,
-            scrollPosition: null != p ? m[p] : null,
-            settings: b,
-            errors: g,
-            hasChanges: this.hasChanges(),
-            openWithoutBackstack: O,
-            analyticsLocation: I,
-            analyticsLocations: T,
-            initialSection: S,
-            searchParams: A,
-        };
+    getErrors() {
+        return p;
     }
-    get onClose() {
-        return v;
+    getSubmitting() {
+        return u === s.QZA.SUBMITTING;
+    }
+    getSettings() {
+        return m;
+    }
+    getOpenWithoutBackstack() {
+        return g;
+    }
+    getSearchParams() {
+        return y;
     }
 }
-u(U, "displayName", "UserSettingsModalStore");
-let G = new U(s.Z, {
-    USER_SETTINGS_MODAL_OPEN: C,
-    USER_SETTINGS_MODAL_INIT: N,
-    USER_SETTINGS_MODAL_CLOSE: R,
-    LOGOUT: R,
-    USER_SETTINGS_MODAL_SUBMIT: L,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: k,
-    USER_SETTINGS_MODAL_SET_SECTION: P,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
-    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
-    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: x,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
-    USER_SETTINGS_MODAL_RESET: j,
+l(D, "displayName", "UserSettingsModalStore");
+let L = new D(a.Z, {
+    USER_SETTINGS_MODAL_OPEN: O,
+    USER_SETTINGS_MODAL_INIT: v,
+    USER_SETTINGS_MODAL_CLOSE: I,
+    LOGOUT: I,
+    USER_SETTINGS_MODAL_SUBMIT: N,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: w,
+    USER_SETTINGS_MODAL_SET_SECTION: T,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: S,
+    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: A,
+    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: C,
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: P,
+    USER_SETTINGS_MODAL_RESET: R,
 });

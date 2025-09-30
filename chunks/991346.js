@@ -206,7 +206,7 @@ function H() {
     var e, t, n, o;
     let O = (0, h.YO)().length,
         R = (0, p.U)(),
-        x = (0, i.e7)([S.Z], () => S.Z.getProps().searchParams),
+        x = (0, i.e7)([S.Z], () => S.Z.getSearchParams()),
         j = (0, _.gU)(),
         k = (0, L.bC)(),
         U = (0, l.Go)(),
