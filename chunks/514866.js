@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var r = n(120356),
@@ -9,13 +9,14 @@ var r = n(120356),
     c = n(480916),
     d = n(963886),
     u = n(110478),
-    m = n(423932),
-    p = n(695346),
-    h = n(306052),
-    x = n(594174),
-    f = n(517269),
-    b = n(197571);
-let g = () => {
+    m = n(906605),
+    p = n(423932),
+    h = n(695346),
+    x = n(306052),
+    f = n(594174),
+    b = n(517269),
+    g = n(197571);
+let v = () => {
     Promise.all([n.e("52030"), n.e("1286")])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -41,37 +42,37 @@ let g = () => {
             );
         });
 };
-function v() {
-    let e = x.default.getCurrentUser(),
+function j() {
+    let e = f.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        n = p.Rt.useSetting();
+        n = h.Rt.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                className: i()(f.buttonsContainer, b.marginBottom20),
-                children: (0, a.jsx)(h.g, { isDevTools: !0 }),
+                className: i()(b.buttonsContainer, g.marginBottom20),
+                children: (0, a.jsx)(x.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(f.buttonsContainer, b.marginBottom20),
+                className: i()(b.buttonsContainer, g.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch MFA",
-                    onClick: g,
+                    onClick: v,
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(f.buttonsContainer, b.marginBottom20),
+                className: i()(b.buttonsContainer, g.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch Vibing Wumpus",
-                    onClick: () => (0, m.Z)(),
+                    onClick: () => (0, p.Z)(),
                 }),
             }),
             t &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: i()(f.buttonsContainer, b.marginBottom20),
+                            className: i()(b.buttonsContainer, g.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Captcha Test Tool",
@@ -79,7 +80,7 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(f.buttonsContainer, b.marginBottom20),
+                            className: i()(b.buttonsContainer, g.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Test Tool",
@@ -87,7 +88,7 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(f.buttonsContainer, b.marginBottom20),
+                            className: i()(b.buttonsContainer, g.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Modal",
@@ -98,7 +99,15 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(f.buttonsContainer, b.marginBottom20),
+                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            children: (0, a.jsx)(s.zxk, {
+                                variant: "primary",
+                                text: "Reset Hang Status State",
+                                onClick: m.YU,
+                            }),
+                        }),
+                        (0, a.jsx)("div", {
+                            className: i()(b.buttonsContainer, g.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Force libdiscore Crash",
@@ -106,10 +115,10 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(f.buttonsContainer, b.marginBottom20),
+                            className: i()(b.buttonsContainer, g.marginBottom20),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
-                                onChange: (e) => p.Rt.updateSetting(e),
+                                onChange: (e) => h.Rt.updateSetting(e),
                                 hideBorder: !0,
                                 children: "Ignore profile speedbump disabled",
                             }),

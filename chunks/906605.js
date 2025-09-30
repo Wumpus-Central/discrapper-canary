@@ -2,6 +2,7 @@ n.d(t, {
     Sc: () => b,
     UP: () => y,
     XE: () => E,
+    YU: () => v,
     Zx: () => m,
     _s: () => g,
     tg: () => O,
@@ -140,4 +141,7 @@ function O(e, t) {
         status: e,
         emoji: t,
     });
+}
+function v() {
+    r.Z.dispatch({ type: "RESET_HANG_STATUS_STATE" });
 }
