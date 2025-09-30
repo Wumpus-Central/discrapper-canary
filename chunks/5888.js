@@ -1,40 +1,51 @@
+n.d(t, {
+    Z: () => f,
+    p: () => s,
+});
 var r,
     i,
-    l = n(442837),
-    a = n(570140);
-let o = {},
-    s = 0;
-function c() {
-    (o = {}), (s = 0);
+    l,
+    a = n(442837),
+    o = n(570140),
+    s =
+        (((r = {})[(r.INIT = 0)] = "INIT"),
+        (r[(r.FETCHING = 1)] = "FETCHING"),
+        (r[(r.SUCCESS = 2)] = "SUCCESS"),
+        (r[(r.ERROR = 3)] = "ERROR"),
+        r);
+let c = {},
+    u = 0;
+function d() {
+    (c = {}), (u = 0);
 }
-class u extends (i = l.ZP.Store) {
+class p extends (l = a.ZP.Store) {
     initialize() {
-        c();
+        d();
     }
     getCheckpointData() {
-        return o;
+        return c;
     }
     getFetchState() {
-        return s;
+        return u;
     }
 }
-(r = "displayName") in u
-    ? Object.defineProperty(u, r, {
+(i = "displayName") in p
+    ? Object.defineProperty(p, i, {
           value: "CheckpointStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (u[r] = "CheckpointStore"),
-    new u(a.Z, {
-        CONNECTION_OPEN: c,
-        CHECKPOINT_FETCH_START: function () {
-            s = 1;
-        },
-        CHECKPOINT_FETCH_SUCCESS: function (e) {
-            (o = e.data), (s = 2);
-        },
-        CHECKPOINT_FETCH_FAILED: function () {
-            s = 3;
-        },
-    });
+    : (p[i] = "CheckpointStore");
+let f = new p(o.Z, {
+    CONNECTION_OPEN: d,
+    CHECKPOINT_FETCH_START: function () {
+        u = 1;
+    },
+    CHECKPOINT_FETCH_SUCCESS: function (e) {
+        (c = e.data), (u = 2);
+    },
+    CHECKPOINT_FETCH_FAILED: function () {
+        u = 3;
+    },
+});
