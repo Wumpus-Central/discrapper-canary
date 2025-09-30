@@ -280,7 +280,7 @@ class el extends i.Component {
                     disabled: e,
                 }),
                 (0, r.jsx)(h.zxk, {
-                    variant: "active",
+                    variant: "primary",
                     text: "Save Build Overrides",
                     disabled: eo(null != t ? t : {}),
                     onClick: this.handleSaveChanges,
