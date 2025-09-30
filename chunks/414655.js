@@ -75,20 +75,27 @@ function _(e) {
                                 color: "text-secondary",
                                 children: m.intl.format(m.t.r6Y1Li, { count: y.items.length }),
                             }),
-                            E &&
-                                (0, r.jsx)(o.zxk, {
-                                    variant: "secondary",
-                                    size: "sm",
-                                    icon: o.qJs,
-                                    text: m.intl.string(m.t.SDUwMz),
-                                    onClick: I,
-                                }),
+                            E
+                                ? (0, r.jsx)(o.zxk, {
+                                      variant: "secondary",
+                                      size: "sm",
+                                      icon: o.qJs,
+                                      text: m.intl.string(m.t.SDUwMz),
+                                      onClick: I,
+                                  })
+                                : (0, r.jsx)(o.zxk, {
+                                      variant: "secondary",
+                                      size: "sm",
+                                      icon: o.EOn,
+                                      text: m.intl.string(m.t["i/yzHh"]),
+                                      onClick: I,
+                                  }),
                         ],
                     }),
                     (0, r.jsx)(g.Z, {
                         items: y.items,
                         profileOwner: t,
-                        canEdit: E,
+                        isOwner: E,
                     }),
                 ],
             });
