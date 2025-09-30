@@ -322,7 +322,7 @@ class eM extends l.PureComponent {
                           (0, i.jsx)(p.N, {
                               label: A ? eh.intl.string(eh.t.yR6Hwc) : eh.intl.string(eh.t.X8jMDg),
                               children: (0, i.jsx)(w.ZP, {
-                                  className: eg.topicContainer,
+                                  className: s()(eg.topicContainer, { [eg.disabled]: !y }),
                                   innerClassName: s()(eg.topic, { [eg.disabled]: !y }),
                                   characterCountClassName: eg.topicCharacterCount,
                                   maxCharacterCount: A ? eo.Z7 : eo.$x,
