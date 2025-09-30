@@ -3,7 +3,7 @@ var l = t(951288),
     i = t(647438),
     r = t(120356),
     o = t.n(r),
-    s = t(488290),
+    s = t(137317),
     a = t(442837),
     c = t(481060),
     d = t(607070),
@@ -37,14 +37,6 @@ let j = {
             }),
             toast_id: "user_profile_widget_save_failure",
             type: c.ToastType.FAILURE,
-        },
-        [m.qb.WISHLIST_ITEM_REMOVED]: {
-            message: p.intl.string(p.t.DSXOiI),
-            icon: (0, l.jsx)(c.dz2, {
-                size: "sm",
-                color: c.TVs.colors.STATUS_POSITIVE.css,
-            }),
-            toast_id: "user_profile_wishlist_item_removed",
         },
         [m.qb.SOMETHING_WENT_WRONG]: {
             message: p.intl.string(p.t.F8FvU1),

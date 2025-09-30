@@ -13,7 +13,7 @@ function p(e) {
     let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: p } = e,
         f = async () => {
             try {
-                await o.Z.removeSkuFromWishlist(n, t.skuId), (0, s.L$)(c.qb.WISHLIST_ITEM_REMOVED);
+                await o.Z.removeSkuFromWishlist(n, t.skuId);
             } catch (e) {
                 (0, s.L$)(c.qb.SOMETHING_WENT_WRONG);
             }

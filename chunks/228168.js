@@ -189,7 +189,6 @@ var f = (function (e) {
             (e.WIDGET_REMOVED = "WIDGET_REMOVED"),
             (e.WIDGET_SAVE_FAILURE = "WIDGET_SAVE_FAILURE"),
             (e.SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG"),
-            (e.WISHLIST_ITEM_REMOVED = "WISHLIST_ITEM_REMOVED"),
             e
         );
     })({});
