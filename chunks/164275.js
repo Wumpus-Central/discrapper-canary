@@ -1,20 +1,26 @@
 n.d(t, {
-    M: () => s,
-    P: () => l,
+    M: () => c,
+    P: () => u,
 });
-var r = n(47280),
-    i = n(227862),
-    a = n(474936);
-function o(e, t, n) {
-    return !e && n === a.Si.TIER_2 && !t;
+var r = n(873546),
+    i = n(325100),
+    a = n(47280),
+    o = n(227862),
+    s = n(474936);
+function l(e, t, n) {
+    return !e && n === s.Si.TIER_2 && !t;
 }
-function s(e, t, n) {
+function c(e, t, n) {
     return (
-        o(e, t, n) && !((0, i.gJ)("wowMomentEligibilityUtils") || (0, r.YI)({ location: "wowMomentEligibilityUtils" }))
+        l(e, t, n) && !((0, o.gJ)("wowMomentEligibilityUtils") || (0, a.YI)({ location: "wowMomentEligibilityUtils" }))
     );
 }
-function l(e, t, n) {
+function u(e, t, n) {
     return (
-        o(e, t, n) && ((0, i.gJ)("wowMomentEligibilityUtils") || (0, r.YI)({ location: "wowMomentEligibilityUtils" }))
+        l(e, t, n) &&
+        ((0, o.gJ)("wowMomentEligibilityUtils") || (0, a.YI)({ location: "wowMomentEligibilityUtils" })) &&
+        !r.eL &&
+        !r.bO &&
+        !(0, i.Ak)({ location: "wowMomentEligibilityUtils" })
     );
 }

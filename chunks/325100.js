@@ -1,4 +1,8 @@
-n.d(t, { uH: () => f }), n(35282);
+n.d(t, {
+    Ak: () => _,
+    uH: () => f,
+}),
+    n(35282);
 var r = n(593473),
     i = n(843611);
 n(960048);
@@ -21,13 +25,13 @@ function l(e, t, n) {
 n(474936);
 let c = (e) => {
         let { location: t } = e,
-            { enabled: n } = TurtleExperiment.getCurrentConfig({ location: t });
+            { enabled: n } = o.n.getCurrentConfig({ location: t });
         return n
             ? {
                   enabled: !1,
                   discountEnabled: !1,
               }
-            : MobileApplePaymentLinkExperiment.getConfig({ location: t });
+            : a.E.getConfig({ location: t });
     },
     u = (e) => {
         let { location: t } = e,
@@ -47,4 +51,13 @@ let c = (e) => {
             { enabled: o } = u({ location: t }),
             { deep_link_type: s } = (0, r.parse)(n);
         return d(o, a, s);
+    },
+    _ = function (e) {
+        let { location: t } = e,
+            n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            i = window.location.pathname,
+            { deep_link_type: a } = (0, r.parse)(window.location.search);
+        if (i.startsWith(s.Z5c.BILLING_MANAGE_SUBSCRIPTION)) return !1;
+        let { enabled: o } = c({ location: t });
+        return d(n || o, i, a);
     };
