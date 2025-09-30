@@ -92,19 +92,24 @@ class v extends i.PureComponent {
         if (null == e)
             return {
                 word: null,
+                fullWord: null,
                 isAtStart: !1,
             };
         let { value: t } = this.props;
         if (0 === t.trim().length)
             return {
                 word: null,
+                fullWord: null,
                 isAtStart: !1,
             };
         let n = e.selectionStart,
             r = e.selectionEnd;
         for (; n > 0 && !O.test(t[n - 1]); ) n--;
+        let i = e.selectionEnd;
+        for (; i < t.length && !O.test(t[i]); ) i++;
         return {
             word: t.slice(n, r),
+            fullWord: t.slice(n, i),
             isAtStart: 0 === n,
         };
     }
@@ -116,15 +121,17 @@ class v extends i.PureComponent {
         return e.preventDefault(), this.props.onSubmit(this.props.value);
     }
     insertAutocomplete(e, t) {
-        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            { word: r } = this.getCurrentWord();
-        if (null == r) this.insertText(e, t, n);
+        let { addSpace: n = !0, replaceFullWord: r = !1 } =
+                arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { word: i, fullWord: a } = this.getCurrentWord();
+        if (null == i) this.insertText(e, t, n);
         else {
             let t = this._ref;
             if (null == t) return;
-            let i = t.value.slice(0, t.selectionStart - r.length),
-                a = t.value.slice(t.selectionEnd);
-            this._insertText(e, i, a, n);
+            let o = t.value.slice(0, t.selectionStart - i.length),
+                s = r && null != a ? a.length - i.length : 0,
+                l = t.value.slice(t.selectionEnd + s);
+            this._insertText(e, o, l, n);
         }
     }
     insertInlineAutocompleteInput(e) {}

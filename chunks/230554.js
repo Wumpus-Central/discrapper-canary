@@ -56,8 +56,17 @@ let m = (e, t, n) => ({
             if (h.i$.test(t)) break;
             s = t + s;
         }
+        let c = s,
+            u = t.anchor.offset,
+            [d] = f.bN.node(e, t.anchor.path);
+        for (; f.LC.isText(d) && !(u >= d.text.length); ) {
+            let e = d.text[u];
+            if (h.i$.test(e)) break;
+            (c += e), u++;
+        }
         return {
             word: s,
+            fullWord: c,
             isAtStart: l && f.C0.isFirstEditorBlock(r),
         };
     },
@@ -99,22 +108,31 @@ let m = (e, t, n) => ({
     },
     insertAutocomplete(n) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            { addSpace: i = !0, replaceFullWord: a = !1 } =
+                arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         u.T.withSingleEntry(e, () => {
-            let a = c.HZ(e),
-                o = null != a && g(t, a[0]);
-            if (o) d.Q.removeInlineChildren(e, a), (i = !1);
+            let o = c.HZ(e),
+                s = null != o && g(t, o[0]);
+            if (s) d.Q.removeInlineChildren(e, o), (i = !1);
             else {
-                let { word: t } = this.getCurrentWord();
+                let { word: t, fullWord: n } = this.getCurrentWord();
                 null != t &&
                     t.length > 0 &&
                     d.Q.delete(e, {
                         distance: t.length,
                         unit: "character",
                         reverse: !0,
-                    });
+                    }),
+                    a &&
+                        null != t &&
+                        null != n &&
+                        n.length - t.length > 0 &&
+                        d.Q.delete(e, {
+                            distance: n.length - t.length,
+                            unit: "character",
+                        });
             }
-            E(e, n, r, i), o && d.Q.selectNextCommandOption(e);
+            E(e, n, r, i), s && d.Q.selectNextCommandOption(e);
         });
     },
     insertInlineAutocompleteInput(t) {

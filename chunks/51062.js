@@ -67,98 +67,99 @@ function O(e, t) {
     );
 }
 function v(e, t, n) {
-    var E, y, v, I, T, S, A, C, N, R;
-    let { channel: P, type: w } = e,
-        [D, x] = r.useState(() => (0, p.PA)()),
-        L = (0, i.Z)(),
-        j = (0, a.e7)([u.ZP, _.default], () => {
+    var E, y, v, I, T, S, A, C, N, R, P;
+    let { channel: w, type: D } = e,
+        [L, x] = r.useState(() => (0, p.PA)()),
+        j = (0, i.Z)(),
+        M = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return (
                 null !=
                     (t =
-                        null != P.guild_id && null != n
-                            ? null == (e = u.ZP.getMember(P.guild_id, n.id))
+                        null != w.guild_id && null != n
+                            ? null == (e = u.ZP.getMember(w.guild_id, n.id))
                                 ? void 0
                                 : e.isPending
                             : null) && t
             );
         }),
-        { canMentionEveryone: M, hidePersonalInformation: k } = (0, a.cj)(
+        { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: P.isPrivate() || j || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
+                canMentionEveryone: w.isPrivate() || M || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [P, w, j],
+            [w, D, M],
         ),
-        { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
-            activeCommand: s.Z.getActiveCommand(P.id),
-            activeCommandOption: s.Z.getActiveOption(P.id),
+        { activeCommand: G, activeCommandOption: B } = (0, a.cj)([s.Z], () => ({
+            activeCommand: s.Z.getActiveCommand(w.id),
+            activeCommandOption: s.Z.getActiveOption(w.id),
         })),
-        B = (0, h.Z)({
+        Z = (0, h.Z)({
             navId: "channel-autocomplete",
             scrollerRef: n,
-            state: D,
-            onFocus: (e) => Y.setSelectedIndex(e),
+            state: L,
+            onFocus: (e) => W.setSelectedIndex(e),
         }),
-        Z = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
+        F = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
         V = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
-        F = null;
-    null != V && (F = null != (A = null == (S = c.bN.getSelectedParentOfType(V, p.un)) ? void 0 : S[0]) ? A : null);
-    let H = O(b({}, e), {
-            navigator: B,
-            activeCommand: U,
-            activeCommandOption: G,
-            activeInlineAutocompleteInput: F,
-            canMentionUsers: null != (C = null == (v = w.users) ? void 0 : v.allowMentioning) && C,
-            canMentionEveryone: M,
-            hidePersonalInformation: k,
-            hideMentionDescription: w === l.Ie.RULES_INPUT,
-            emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
-            currentWord: null != (N = null == Z ? void 0 : Z.word) ? N : "",
-            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
+        H = null;
+    null != V && (H = null != (A = null == (S = c.bN.getSelectedParentOfType(V, p.un)) ? void 0 : S[0]) ? A : null);
+    let Y = O(b({}, e), {
+            navigator: Z,
+            activeCommand: G,
+            activeCommandOption: B,
+            activeInlineAutocompleteInput: H,
+            canMentionUsers: null != (C = null == (v = D.users) ? void 0 : v.allowMentioning) && C,
+            canMentionEveryone: k,
+            hidePersonalInformation: U,
+            hideMentionDescription: D === l.Ie.RULES_INPUT,
+            emojiIntention: D === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
+            currentWord: null != (N = null == F ? void 0 : F.word) ? N : "",
+            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+            fullWord: null != (R = null == F ? void 0 : F.fullWord) ? R : "",
             optionText:
-                null != G
+                null != B
                     ? (0, o.KF)(
                           {
-                              [G.name]:
+                              [B.name]:
                                   null !=
-                                  (R = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue())
-                                      ? R
+                                  (P = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue())
+                                      ? P
                                       : [],
                           },
-                          G.name,
+                          B.name,
                       )
                     : "",
         }),
-        [Y] = r.useState(() => new p.ZP(H));
+        [W] = r.useState(() => new p.ZP(Y));
     return (
         r.useEffect(() => {
-            Y.updateProps(H);
+            W.updateProps(Y);
         }),
-        r.useImperativeHandle(t, () => Y, [Y]),
+        r.useImperativeHandle(t, () => W, [W]),
         r.useEffect(() => {
             let e = (e) => x(e);
             return (
-                Y.on("change", e),
-                Y.on("update", L),
+                W.on("change", e),
+                W.on("update", j),
                 () => {
-                    Y.off("change", e), Y.off("update", L);
+                    W.off("change", e), W.off("update", j);
                 }
             );
-        }, [L, Y]),
+        }, [j, W]),
         r.useEffect(() => {
             var e;
-            let t = null == (e = D.query) ? void 0 : e.typeInfo.stores;
+            let t = null == (e = L.query) ? void 0 : e.typeInfo.stores;
             if (null != t) {
-                let e = () => Y.queryResults();
+                let e = () => W.queryResults();
                 for (let n of t) n.addChangeListener(e);
                 return () => {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [Y, null == (T = D.query) ? void 0 : T.typeInfo]),
-        [D, Y, B]
+        }, [W, null == (T = L.query) ? void 0 : T.typeInfo]),
+        [L, W, Z]
     );
 }

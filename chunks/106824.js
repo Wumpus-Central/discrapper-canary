@@ -84,6 +84,7 @@ class g extends r.EventEmitter {
                 !this.state.didInitialQuery ||
                 this.props.currentWord !== e.currentWord ||
                 this.props.currentWordIsAtStart !== e.currentWordIsAtStart ||
+                this.props.fullWord !== e.fullWord ||
                 this.props.textValue !== e.textValue ||
                 this.props.optionText !== e.optionText;
         if (((this.props = e), n || r))
@@ -163,6 +164,7 @@ class g extends r.EventEmitter {
                 options: f,
                 currentWord: this.props.currentWord,
                 currentWordIsAtStart: this.props.currentWordIsAtStart,
+                fullWord: this.props.fullWord,
                 textValue: this.props.textValue,
                 optionText: this.props.optionText,
                 parentAutocompleteInputType: null == n ? void 0 : n[0].type,
