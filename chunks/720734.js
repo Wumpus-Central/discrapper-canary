@@ -233,82 +233,85 @@ function tm(e) {
             );
         })(),
         S = (0, er.A)(m);
-    return null == s
-        ? null
-        : (0, a.jsx)(g.Z, {
-              object: e7.qAy.AVATAR,
-              children: (0, a.jsx)(eh.Z, {
-                  user: s,
-                  targetElementRef: j,
-                  clickTrap: !0,
-                  preload: () =>
-                      (0, ep.Z)(s.id, s.getAvatarURL(h ? p : void 0, eh.I), {
-                          type: "account_popout",
-                          withMutualGuilds: !1,
-                          withMutualFriends: !1,
-                      }),
-                  renderPopout: (e, t) => {
-                      let { closePopout: n, setPopoutRef: r } = e;
-                      return (0, a.jsx)(en.Z, {
-                          currentUser: s,
-                          highlightBadge: E,
-                          openedAt: t,
-                          onClose: () => {
-                              null == n || n();
-                          },
-                          setPopoutRef: r,
-                      });
-                  },
-                  position: "top",
-                  align: "left",
-                  animation: f.yRy.Animation.FADE,
-                  spacing: 14,
-                  fixed: !0,
-                  ignoreModalClicks: !0,
-                  onRequestClose: () => {
-                      d(), N(void 0);
-                  },
-                  children: (e) => (
-                      C(e),
-                      (0, a.jsxs)(
-                          f.P3F,
-                          ts(
-                              tl(
-                                  {
-                                      innerRef: j,
-                                      style: S,
-                                  },
-                                  e,
-                              ),
-                              {
-                                  onClick: (t) => {
-                                      var n;
-                                      null == (n = e.onClick) || n.call(e, t), null == c || c(t);
-                                  },
-                                  "aria-label": ta.intl.string(ta.t["3Uj+2t"]),
-                                  "data-jump-section": b,
-                                  className: l()(tr.avatarWrapper, { [tr.plated]: null != m }),
-                                  children: [
-                                      (0, a.jsx)(to, {
-                                          size: f.EFr["SIZE_".concat(32)],
-                                          src: s.getAvatarURL(h ? p : void 0, 28, !1),
-                                          avatarDecoration: y,
-                                          "aria-label": s.username,
-                                          status: i ? e7.Skl.STREAMING : o,
-                                          isSpeaking: n,
-                                          className: tr.avatar,
-                                      }),
-                                      (0, a.jsx)("div", {
-                                          className: l()(tr.nameTag, { [tr.canCopy]: eK.wS }),
-                                          children: u(null == s ? void 0 : s.displayNameStyles),
-                                      }),
-                                  ],
-                              },
-                          ),
-                      )
-                  ),
-              }),
-          });
+    if (null == s) return null;
+    let T = h && p !== e7.I_8 && p !== e7.ME && null != p ? p : void 0;
+    return (0, a.jsx)(g.Z, {
+        object: e7.qAy.AVATAR,
+        children: (0, a.jsx)(eh.Z, {
+            user: s,
+            targetElementRef: j,
+            clickTrap: !0,
+            preload: () =>
+                (0, ep.Z)(s.id, s.getAvatarURL(T, eh.I), {
+                    type: "account_popout",
+                    withMutualGuilds: !1,
+                    withMutualFriends: !1,
+                    guildId: T,
+                }),
+            renderPopout: (e, t) => {
+                let { closePopout: n, setPopoutRef: r } = e;
+                return (0, a.jsx)(en.Z, {
+                    currentUser: s,
+                    highlightBadge: E,
+                    openedAt: t,
+                    onClose: () => {
+                        null == n || n();
+                    },
+                    setPopoutRef: r,
+                    guildId: T,
+                    guildProfileEnabled: h,
+                });
+            },
+            position: "top",
+            align: "left",
+            animation: f.yRy.Animation.FADE,
+            spacing: 14,
+            fixed: !0,
+            ignoreModalClicks: !0,
+            onRequestClose: () => {
+                d(), N(void 0);
+            },
+            children: (e) => (
+                C(e),
+                (0, a.jsxs)(
+                    f.P3F,
+                    ts(
+                        tl(
+                            {
+                                innerRef: j,
+                                style: S,
+                            },
+                            e,
+                        ),
+                        {
+                            onClick: (t) => {
+                                var n;
+                                null == (n = e.onClick) || n.call(e, t), null == c || c(t);
+                            },
+                            "aria-label": ta.intl.string(ta.t["3Uj+2t"]),
+                            "data-jump-section": b,
+                            className: l()(tr.avatarWrapper, { [tr.plated]: null != m }),
+                            children: [
+                                (0, a.jsx)(to, {
+                                    size: f.EFr["SIZE_".concat(32)],
+                                    src: s.getAvatarURL(h ? p : void 0, 28, !1),
+                                    avatarDecoration: y,
+                                    "aria-label": s.username,
+                                    status: i ? e7.Skl.STREAMING : o,
+                                    isSpeaking: n,
+                                    className: tr.avatar,
+                                }),
+                                (0, a.jsx)("div", {
+                                    className: l()(tr.nameTag, { [tr.canCopy]: eK.wS }),
+                                    children: u(null == s ? void 0 : s.displayNameStyles),
+                                }),
+                            ],
+                        },
+                    ),
+                )
+            ),
+        }),
+    });
 }
 class tp extends r.PureComponent {
     get isCopiedStreakGodlike() {
