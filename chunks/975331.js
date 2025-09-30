@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(313201),
     c = n(584825),
     d = n(723047),
@@ -11,14 +11,14 @@ var r = n(951288),
     m = n(290348),
     g = n(518470),
     p = n(22902),
-    h = n(783454),
-    f = n(388032),
-    b = n(605041);
-function x() {
+    f = n(783454),
+    h = n(388032),
+    x = n(851016);
+function b() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [x, j] = m.F2(t),
+        [b, j] = m.F2(t),
         v = (0, c.oC)(t),
         { options: _ } = (0, p.Z)(null != (e = null == v ? void 0 : v.active_trial) ? e : null),
         O = (0, g.Z)(),
@@ -26,40 +26,40 @@ function x() {
         C = i.useCallback(
             (e) => {
                 let t = _.find((e) => e.isDefault);
-                a()(null != t, "Missing default trial duartion option"), l(e ? t.value : null);
+                s()(null != t, "Missing default trial duartion option"), l(e ? t.value : null);
             },
             [l, _],
         ),
         N = (0, d.mY)(),
         E = (0, o.Dt)(),
         I = (0, o.Dt)();
-    return (0, r.jsxs)(h.Z, {
-        title: f.intl.string(f.t["6antoq"]),
-        description: f.intl.string(f.t.urVijY),
+    return (0, r.jsxs)(f.Z, {
+        title: h.intl.string(h.t["6antoq"]),
+        description: h.intl.string(h.t.urVijY),
         children: [
-            (0, r.jsx)(s.j7V, {
-                onChange: (e, t) => C(e),
+            (0, r.jsx)(a.j7V, {
+                onChange: (e) => C(e),
                 value: y,
                 disabled: N,
                 hideBorder: !0,
-                children: f.intl.string(f.t["+hTmdX"]),
+                children: h.intl.string(h.t["+hTmdX"]),
             }),
-            (0, r.jsxs)(s.hjN, {
-                title: f.intl.string(f.t.m1KuWV),
+            (0, r.jsxs)(a.hjN, {
+                title: h.intl.string(h.t.m1KuWV),
                 titleId: E,
                 disabled: !y || N,
                 children: [
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
-                        className: b.formDescription,
+                    (0, r.jsx)(a.R94, {
+                        type: a.R94.Types.DESCRIPTION,
+                        className: x.formDescription,
                         disabled: !y || N,
-                        children: f.intl.string(f.t.NB9NLC),
+                        children: h.intl.string(h.t.NB9NLC),
                     }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(s.q4e, {
+                    (0, r.jsx)(a.LZC, { size: 8 }),
+                    (0, r.jsx)(a.q4e, {
                         "aria-labelledby": E,
                         options: _,
-                        placeholder: f.intl.string(f.t.WZG1BQ),
+                        placeholder: h.intl.string(h.t.WZG1BQ),
                         value: n,
                         onChange: l,
                         maxVisibleItems: 5,
@@ -67,22 +67,22 @@ function x() {
                     }),
                 ],
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsxs)(s.hjN, {
-                title: f.intl.string(f.t["/JD9oa"]),
+            (0, r.jsx)(a.LZC, { size: 24 }),
+            (0, r.jsxs)(a.hjN, {
+                title: h.intl.string(h.t["/JD9oa"]),
                 titleId: I,
                 disabled: !y || N,
                 children: [
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
-                        className: b.formDescription,
+                    (0, r.jsx)(a.R94, {
+                        type: a.R94.Types.DESCRIPTION,
+                        className: x.formDescription,
                         disabled: !y || N,
-                        children: f.intl.string(f.t.Cg5eBg),
+                        children: h.intl.string(h.t.Cg5eBg),
                     }),
-                    (0, r.jsx)(s.q4e, {
+                    (0, r.jsx)(a.q4e, {
                         "aria-labelledby": I,
                         options: O,
-                        value: x,
+                        value: b,
                         onChange: j,
                         maxVisibleItems: 5,
                         isDisabled: !y || N,
