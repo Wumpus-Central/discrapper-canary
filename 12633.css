@@ -53026,20 +53026,12 @@ h3.improved__1689b:after {
     gap: 16px
 }
 
-.button_bf1984 {
+.buttonWrapper_bf1984 {
+    display: inline-flex;
     max-width: var(--custom-button-button-lg-width);
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content
-}
-
-.button_bf1984:active,
-.button_bf1984:hover {
-    background-color: var(--white-500) !important
-}
-
-.button_bf1984:active {
-    transform: translateY(1px)
 }
 
 .sectionDescription__9851a {
