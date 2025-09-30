@@ -515,7 +515,7 @@ let eZ = (e) => {
                                                                     ),
                                                             });
                                                         })(e, n);
-                                                    let i = !$ && !en && !u.tq && !eO && M && !(0, q.iP)(e.currency),
+                                                    let i = !$ && !en && !u.tq && !eO && M,
                                                         l = (0, q.x6)(N)
                                                             ? eA.intl.string(eA.t.V1AWw8)
                                                             : N.type === d.Z.PROFILE_EFFECT
