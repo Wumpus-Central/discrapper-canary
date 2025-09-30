@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(488290),
     l = n(692547),
     c = n(251052),
     u = n(673824),
@@ -115,7 +115,7 @@ function A(e) {
             "animate-always",
         );
     function R(e) {
-        I(!1), null == n || n(e.currentTarget.checked, e);
+        I(!1), e.stopPropagation(), null == n || n(e.currentTarget.checked, e);
     }
     function P(e) {
         p || e.repeat || ((" " === e.key || "Enter" === e.key) && I(!0));

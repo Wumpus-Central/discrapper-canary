@@ -2,8 +2,8 @@ n.d(t, { Z: () => P }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
-    a = n(755721),
-    s = n(481060),
+    s = n(755721),
+    a = n(481060),
     o = n(239091),
     c = n(132580),
     d = n(688465),
@@ -13,10 +13,10 @@ var r = n(951288),
     p = n(65912),
     f = n(457414),
     h = n(154502),
-    b = n(295708),
-    x = n(273504),
+    x = n(295708),
+    b = n(273504),
     j = n(388032),
-    v = n(365722);
+    v = n(260107);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,18 +77,18 @@ function y(e) {
                       )
                     : (0, g.V9)(n).reduce((e, i) => {
                           var l;
-                          let a = t.actions.find((e) => {
+                          let s = t.actions.find((e) => {
                               let { type: t } = e;
                               return i === t;
                           });
                           return (
-                              null == a ||
+                              null == s ||
                                   e.push(
                                       (0, r.jsx)(
                                           h.Z,
                                           {
                                               actionType: i,
-                                              action: a,
+                                              action: s,
                                               triggerType: null != (l = null == t ? void 0 : t.triggerType) ? l : n,
                                           },
                                           i,
@@ -133,7 +133,7 @@ let C = (e) => {
                 return i;
             })(e, ["className", "children"]);
         return (0, r.jsx)(
-            s.P3F,
+            a.P3F,
             O(
                 _(
                     {
@@ -159,7 +159,7 @@ function E(e) {
         children: [
             (0, r.jsx)("div", {
                 className: v.ruleTextContainer,
-                children: (0, r.jsx)(b.Z, {
+                children: (0, r.jsx)(x.Z, {
                     rule: n,
                     onChangeRule: i,
                 }),
@@ -167,21 +167,21 @@ function E(e) {
             (0, r.jsxs)(N, {
                 className: v.actionContainer,
                 children: [
-                    (0, r.jsx)(a.T2, {
+                    (0, r.jsx)(s.T2, {
                         onChange: o,
                         checked: null != (t = null == n ? void 0 : n.enabled) && t,
                     }),
-                    (0, r.jsx)(s.ua7, {
+                    (0, r.jsx)(a.ua7, {
                         text: j.intl.string(j.t.UKOtz8),
                         position: "top",
                         "aria-label": j.intl.string(j.t.PdRCRk),
                         children: (e) =>
                             (0, r.jsx)(
-                                s.P3F,
+                                a.P3F,
                                 O(_({}, e), {
                                     onClick: c,
                                     className: v.menuIconButton,
-                                    children: (0, r.jsx)(s.Huf, {
+                                    children: (0, r.jsx)(a.Huf, {
                                         size: "md",
                                         color: "currentColor",
                                         className: v.menuIcon,
@@ -206,13 +206,13 @@ function S(e) {
         c = (0, f.w)(t.triggerType, t),
         { isLoading: d, saveRule: g } = (0, p.w)(),
         { updateRule: h } = (0, m.pH)(t.guildId),
-        [b, x] = i.useState(t.enabled),
-        E = (0, l.throttle)(async (e, n) => {
-            if ((n.preventDefault(), n.stopPropagation(), !d)) {
-                let e = O(_({}, t), { enabled: !b });
-                x(!b);
+        [x, b] = i.useState(t.enabled),
+        E = (0, l.throttle)(async () => {
+            if (!d) {
+                let e = O(_({}, t), { enabled: !x });
+                b(!x);
                 let n = await g(e, []);
-                null != n && (h(n), x(n.enabled));
+                null != n && (h(n), b(n.enabled));
             }
         }, 300),
         S = (e) => {
@@ -220,7 +220,7 @@ function S(e) {
         };
     if (null == c) return null;
     let { headerText: T, headerSubtext: P, descriptionText: w, icon: R } = c,
-        Z = !(0, u.Vb)(t);
+        D = !(0, u.Vb)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -234,7 +234,7 @@ function S(e) {
             (0, r.jsxs)("div", {
                 className: v.ruleTextContainer,
                 children: [
-                    (0, r.jsxs)(s.X6q, {
+                    (0, r.jsxs)(a.X6q, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: v.ruleTextHeaderContainer,
@@ -243,15 +243,15 @@ function S(e) {
                                 className: v.ruleTextHeader,
                                 children: [T, I(t.triggerType)],
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 className: v.ruleSubtextHeader,
                                 variant: "text-sm/normal",
                                 children: P,
                             }),
                         ],
                     }),
-                    Z &&
-                        (0, r.jsx)(s.Text, {
+                    D &&
+                        (0, r.jsx)(a.Text, {
                             className: v.ruleTextDescription,
                             variant: "text-sm/normal",
                             children: w,
@@ -265,22 +265,22 @@ function S(e) {
             (0, r.jsxs)(N, {
                 className: v.actionContainer,
                 children: [
-                    (0, r.jsx)(a.T2, {
+                    (0, r.jsx)(s.T2, {
                         onChange: E,
-                        checked: null != b && b,
+                        checked: null != x && x,
                     }),
                     !n &&
-                        (0, r.jsx)(s.ua7, {
+                        (0, r.jsx)(a.ua7, {
                             text: j.intl.string(j.t.UKOtz8),
                             position: "top",
                             "aria-label": j.intl.string(j.t.PdRCRk),
                             children: (e) =>
                                 (0, r.jsx)(
-                                    s.P3F,
+                                    a.P3F,
                                     O(_({}, e), {
                                         onClick: S,
                                         className: v.menuIconButton,
-                                        children: (0, r.jsx)(s.Huf, {
+                                        children: (0, r.jsx)(a.Huf, {
                                             size: "md",
                                             color: "currentColor",
                                             className: v.menuIcon,
@@ -297,7 +297,7 @@ function T(e) {
     let { triggerType: t, onSetupRule: n } = e,
         l = i.useMemo(() => (0, f.w)(t), [t]);
     if (null == l) return null;
-    let { headerText: a, descriptionText: o, icon: c } = l;
+    let { headerText: s, descriptionText: o, icon: c } = l;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -311,16 +311,16 @@ function T(e) {
             (0, r.jsxs)("div", {
                 className: v.ruleTextContainer,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         className: v.ruleTextHeader,
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: (0, r.jsxs)("div", {
                             className: v.ruleTextHeader,
-                            children: [a, I(t)],
+                            children: [s, I(t)],
                         }),
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: v.ruleTextDescription,
                         variant: "text-sm/normal",
                         children: o,
@@ -330,10 +330,10 @@ function T(e) {
             }),
             (0, r.jsx)(N, {
                 className: v.actionContainer,
-                children: (0, r.jsx)(s.zxk, {
+                children: (0, r.jsx)(a.zxk, {
                     variant: "primary",
                     size: "sm",
-                    text: t === x.fX.KEYWORD ? j.intl.string(j.t.CumH4u) : j.intl.string(j.t.oRs6mJ),
+                    text: t === b.fX.KEYWORD ? j.intl.string(j.t.CumH4u) : j.intl.string(j.t.oRs6mJ),
                     onClick: n,
                 }),
             }),
@@ -345,7 +345,7 @@ function P(e) {
             rule: t,
             triggerType: i,
             isEditMode: l,
-            isDefaultRule: a,
+            isDefaultRule: s,
             forceSetup: c,
             onSetupRule: d,
             onChangeRule: u,
@@ -374,10 +374,10 @@ function P(e) {
                   })
                 : (0, r.jsx)(S, {
                       rule: t,
-                      isDefaultRule: a,
+                      isDefaultRule: s,
                       onContextMenu: m,
                   })),
-        (0, r.jsx)(s.P3F, {
+        (0, r.jsx)(a.P3F, {
             className: v.mainContainer,
             onContextMenu: m,
             children: g,
