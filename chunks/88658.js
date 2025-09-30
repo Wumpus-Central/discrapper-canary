@@ -48,15 +48,7 @@ function p(e, t) {
     return !!(!t.verified || t.isStaff()) || (null != e && l > Date.now() - new Date(e.created_at).getTime());
 }
 function h(e) {
-    let {
-        destinationPane: t,
-        originPane: n,
-        source: i,
-        subsection: a,
-        locationStack: o,
-        searchQuery: l,
-        applicationId: c,
-    } = e;
+    let { destinationPane: t, originPane: n, source: i, subsection: a, locationStack: o, applicationId: l } = e;
     r.ZP.trackWithMetadata(s.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: "user",
         origin_pane: n,
@@ -64,7 +56,6 @@ function h(e) {
         location_stack: o,
         source: i,
         subsection: a,
-        search_query: l,
-        application_id: c,
+        application_id: l,
     });
 }
