@@ -38,6 +38,7 @@ var r = (function (e) {
         (e.Stats = "stats"),
         (e.FirstFrame = "first-frame"),
         (e.FirstFrameStats = "first-frame-stats"),
+        (e.FirstFrameEncryptedStats = "first-frame-encrypted-stats"),
         (e.VideoEncoderFallback = "video-encoder-fallback"),
         (e.RemoteStreamsReady = "remote-streams-ready"),
         (e.MLSFailure = "mls-failure"),

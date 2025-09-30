@@ -34,7 +34,7 @@ var r = n(392711),
     P = n(297733),
     w = n(981631),
     D = n(65154);
-function x(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -124,17 +124,17 @@ class Z {
         goLiveModalDurationMs: a,
         analyticsLocations: o,
     }) {
-        x(this, "streamRegion", void 0),
-            x(this, "streamApplication", void 0),
-            x(this, "streamSourceType", void 0),
-            x(this, "actionContext", void 0),
-            x(this, "maxViewers", void 0),
-            x(this, "nativePickerStyleUsed", void 0),
-            x(this, "startTime", void 0),
-            x(this, "endTime", void 0),
-            x(this, "goLiveModalDurationMs", void 0),
-            x(this, "numViewers", void 0),
-            x(this, "analyticsLocations", void 0),
+        L(this, "streamRegion", void 0),
+            L(this, "streamApplication", void 0),
+            L(this, "streamSourceType", void 0),
+            L(this, "actionContext", void 0),
+            L(this, "maxViewers", void 0),
+            L(this, "nativePickerStyleUsed", void 0),
+            L(this, "startTime", void 0),
+            L(this, "endTime", void 0),
+            L(this, "goLiveModalDurationMs", void 0),
+            L(this, "numViewers", void 0),
+            L(this, "analyticsLocations", void 0),
             (this.streamRegion = e),
             (this.streamApplication = t),
             (this.streamSourceType = n),
@@ -258,7 +258,7 @@ class F extends c.Z {
             if (
                 (l.Z.dispatch(
                     M(
-                        L(
+                        x(
                             {
                                 type: "RTC_CONNECTION_STATE",
                                 state: e,
@@ -271,7 +271,7 @@ class F extends c.Z {
                 ),
                 e === w.hes.RTC_CONNECTED)
             ) {
-                var r, i, s, c, u, d, f;
+                var r, i, s, c, u, d, f, _;
                 null == (r = this._connection) ||
                     r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, o, s, l, c, u, d, f, _, m, g) => {
                         let E = this.getMediaSessionId(),
@@ -304,10 +304,10 @@ class F extends c.Z {
                                     (null == y || null == (v = y.desktopSource) ? void 0 : v.sourcePid) != null
                                         ? h.ZP.getGameForPID(y.desktopSource.sourcePid)
                                         : null,
-                                { gameName: R, gameId: P, exe: x, distributor: j } = (0, p.G8)(N);
+                                { gameName: R, gameId: P, exe: L, distributor: j } = (0, p.G8)(N);
                             T.default.track(
                                 w.rMx.SCREENSHARE_FINISHED,
-                                L(
+                                x(
                                     {
                                         screenshare_frames: e,
                                         videohook_frames: t,
@@ -339,7 +339,7 @@ class F extends c.Z {
                                                 : void 0,
                                         share_game_name: R,
                                         share_game_id: P,
-                                        share_game_exe: x,
+                                        share_game_exe: L,
                                         share_game_distributor: j,
                                         picker_type_used:
                                             null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
@@ -356,7 +356,7 @@ class F extends c.Z {
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 T.default.track(
                                     w.rMx.SOUNDSHARE_ATTACHED,
-                                    L(
+                                    x(
                                         {},
                                         (0, R.Z)(null == e ? void 0 : e.desktopSource),
                                         this.getSoundshareAnalyticsProperties(),
@@ -375,7 +375,7 @@ class F extends c.Z {
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 (T.default.track(
                                     w.rMx.SOUNDSHARE_TRANSMITTING,
-                                    L(
+                                    x(
                                         {},
                                         (0, R.Z)(null == e ? void 0 : e.desktopSource),
                                         this.getSoundshareAnalyticsProperties(),
@@ -471,7 +471,43 @@ class F extends c.Z {
                             });
                         }),
                     null == (f = this._connection) ||
-                        f.on(a.Sh.Destroy, () => {
+                        f.on(a.Sh.FirstFrameEncryptedStats, (e) => {
+                            let t = this.getStreamAnalyticsProperties();
+                            T.default.track(w.rMx.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                                guild_id: t.guild_id,
+                                channel_id: t.channel_id,
+                                rtc_connection_id: t.rtc_connection_id,
+                                media_session_id: t.media_session_id,
+                                parent_media_session_id: t.parent_media_session_id,
+                                time_local_user_to_video_receivers_set:
+                                    void 0 !== e.videoReceiversSetTimestamp && void 0 !== e.localUserCreatedTimestamp
+                                        ? Number(e.videoReceiversSetTimestamp - e.localUserCreatedTimestamp)
+                                        : null,
+                                time_local_user_to_mls_external_sender_updated:
+                                    void 0 !== e.updateMLSExternalSenderTimestamp &&
+                                    void 0 !== e.localUserCreatedTimestamp
+                                        ? Number(e.updateMLSExternalSenderTimestamp - e.localUserCreatedTimestamp)
+                                        : null,
+                                time_local_user_to_secure_frame_remote_key_ratchet_set:
+                                    void 0 !== e.setRemoteSecureFrameKeyRatchetTimestamp &&
+                                    void 0 !== e.localUserCreatedTimestamp
+                                        ? Number(
+                                              e.setRemoteSecureFrameKeyRatchetTimestamp - e.localUserCreatedTimestamp,
+                                          )
+                                        : null,
+                                time_local_user_to_secure_frame_local_key_ratchet_set:
+                                    void 0 !== e.setLocalSecureFrameKeyRatchetTimestamp &&
+                                    void 0 !== e.localUserCreatedTimestamp
+                                        ? Number(e.setLocalSecureFrameKeyRatchetTimestamp - e.localUserCreatedTimestamp)
+                                        : null,
+                                time_local_user_to_first_frame_encrypted:
+                                    void 0 !== e.firstFrameEncryptedTimestamp && void 0 !== e.localUserCreatedTimestamp
+                                        ? Number(e.firstFrameEncryptedTimestamp - e.localUserCreatedTimestamp)
+                                        : null,
+                            });
+                        }),
+                    null == (_ = this._connection) ||
+                        _.on(a.Sh.Destroy, () => {
                             this.errorTimer.stop();
                         });
             }
@@ -517,7 +553,7 @@ class F extends c.Z {
             (null == t || o) &&
                 T.default.track(
                     w.rMx.SOUNDSHARE_FAILED,
-                    L(
+                    x(
                         {
                             soundshare_failure_code: t,
                             soundshare_failure_reason: n,
@@ -567,7 +603,7 @@ class F extends c.Z {
         let e = this.isOwner ? (0, P.Z)() : null;
         T.default.track(
             w.rMx.VIDEO_STREAM_STARTED,
-            M(L({}, this.getStreamAnalyticsProperties(), e), {
+            M(x({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: y.Z.getType(),
                 effective_connection_speed: y.Z.getEffectiveConnectionSpeed(),
                 service_provider: y.Z.getServiceProvider(),
@@ -602,7 +638,7 @@ class F extends c.Z {
                 T.default.track(
                     w.rMx.VIDEO_STREAM_ENDED,
                     M(
-                        L(
+                        x(
                             {},
                             a,
                             i,
@@ -634,7 +670,7 @@ class F extends c.Z {
                     T.default.track(
                         w.rMx.VIDEO_STREAM_ENDED,
                         M(
-                            L(
+                            x(
                                 {},
                                 a,
                                 i,
@@ -685,17 +721,17 @@ class F extends c.Z {
             parentMediaSessionId: c,
             joinVoiceId: null,
         }),
-            x(this, "analyticsContext", void 0),
-            x(this, "videoStreamStats", void 0),
-            x(this, "streamContext", void 0),
-            x(this, "streamKey", void 0),
-            x(this, "isStreamer", void 0),
-            x(this, "updateVideoStreamId", void 0),
-            x(this, "bandwidthSamples", []),
-            x(this, "goliveCurrentMaxResolution", void 0),
-            x(this, "_firstFrameDelivered", !1),
-            x(this, "soundshareFailuresReported", {}),
-            x(this, "errorTimer", new s.V7()),
+            L(this, "analyticsContext", void 0),
+            L(this, "videoStreamStats", void 0),
+            L(this, "streamContext", void 0),
+            L(this, "streamKey", void 0),
+            L(this, "isStreamer", void 0),
+            L(this, "updateVideoStreamId", void 0),
+            L(this, "bandwidthSamples", []),
+            L(this, "goliveCurrentMaxResolution", void 0),
+            L(this, "_firstFrameDelivered", !1),
+            L(this, "soundshareFailuresReported", {}),
+            L(this, "errorTimer", new s.V7()),
             (this.streamContext = d),
             (this.streamKey = t),
             (this.isStreamer = o),

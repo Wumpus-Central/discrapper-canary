@@ -4142,6 +4142,7 @@ var nE = (function (e) {
             (e.VIDEO_STREAM_ENDED = "video_stream_ended"),
             (e.VIDEO_STREAM_STARTED = "video_stream_started"),
             (e.RECEIVER_FIRST_FRAME_DELIVERED = "receiver_first_frame_delivered"),
+            (e.STREAMER_FIRST_FRAME_ENCRYPTED = "streamer_first_frame_encrypted"),
             (e.STREAM_WARNING_TRIGGERED = "stream_warning_triggered"),
             (e.STREAM_REPORT_PROBLEM = "stream_report_problem"),
             (e.STREAM_SETTINGS_UPDATE = "stream_settings_update"),
