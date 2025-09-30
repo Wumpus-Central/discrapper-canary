@@ -11,14 +11,14 @@ var r = n(951288),
     g = n(110560),
     p = n(507808),
     f = n(594174),
-    h = n(626135),
-    _ = n(381585),
-    C = n(597688),
+    _ = n(626135),
+    C = n(381585),
+    h = n(597688),
     m = n(884697),
     b = n(128922),
     E = n(870289),
-    S = n(254690),
-    v = n(655283),
+    v = n(254690),
+    S = n(655283),
     x = n(370039),
     O = n(937510),
     T = n(38900),
@@ -33,7 +33,7 @@ var r = n(951288),
     A = n(215023),
     R = n(981631),
     Z = n(388032),
-    w = n(687983);
+    w = n(310582);
 let F = (0, m.IC)(90),
     H = {
         rankedSkuIds: [],
@@ -61,11 +61,10 @@ let F = (0, m.IC)(90),
             G = (0, N.G)("HeroBlock"),
             K = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
             q = (0, k.Z)(),
-            Y = (0, _.sp)(),
-            X = S.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && W !== A.AW.ORBS,
-            Q = (0, v.MG)("HeroBlock"),
-            J = (0, v.xh)("HeroBlock"),
-            $ = l.useMemo(() => {
+            Y = (0, C.sp)(),
+            X = v.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && W !== A.AW.ORBS,
+            Q = (0, S.x)("HeroBlock"),
+            J = l.useMemo(() => {
                 var e, t;
                 return null != D
                     ? D
@@ -90,43 +89,43 @@ let F = (0, m.IC)(90),
                         };
             }, [D, M]),
             {
-                bannerStyleOverrides: ee,
-                logoStyleOverrides: et,
-                heroLogo: en,
-                heroBannerStatic: er,
-                heroBannerAnimated: el,
-            } = (0, j.hr)($),
-            ei = null != (t = null == ee ? void 0 : ee.responsive) && t,
-            ea = null == ee ? void 0 : ee.backgroundStyle,
-            es = (0, P.Dp)(el),
-            eo = (0, c.e7)([C.Z], () => C.Z.products),
-            ec = l.useMemo(() => (n ? [] : eo.size > 0 ? q($.rankedSkuIds) : []), [n, q, $.rankedSkuIds, eo]),
-            eu = l.useMemo(
+                bannerStyleOverrides: $,
+                logoStyleOverrides: ee,
+                heroLogo: et,
+                heroBannerStatic: en,
+                heroBannerAnimated: er,
+            } = (0, j.hr)(J),
+            el = null != (t = null == $ ? void 0 : $.responsive) && t,
+            ei = null == $ ? void 0 : $.backgroundStyle,
+            ea = (0, P.Dp)(er),
+            es = (0, c.e7)([h.Z], () => h.Z.products),
+            eo = l.useMemo(() => (n ? [] : es.size > 0 ? q(J.rankedSkuIds) : []), [n, q, J.rankedSkuIds, es]),
+            ec = l.useMemo(
                 () =>
                     !n &&
-                    0 !== $.rankedSkuIds.length &&
-                    !(ec.length > 0) &&
-                    $.rankedSkuIds.every((e) => {
+                    0 !== J.rankedSkuIds.length &&
+                    !(eo.length > 0) &&
+                    J.rankedSkuIds.every((e) => {
                         var t;
-                        return (null == (t = C.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
+                        return (null == (t = h.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
                     }),
-                [n, $.rankedSkuIds, ec.length],
+                [n, J.rankedSkuIds, eo.length],
             ),
-            ed = (0, x.a)()(ec),
-            eg = (0, O.l)(ed).slice(0, 4),
-            ep = (0, I.St)(eg),
-            ef =
+            eu = (0, x.a)()(eo),
+            ed = (0, O.l)(eu).slice(0, 4),
+            eg = (0, I.St)(ed),
+            ep =
                 W === A.AW.ORBS
                     ? Z.intl.string(Z.t["1CdL8f"])
-                    : Q
-                      ? J
-                          ? Z.intl.string(Z.t["/QvRam"])
-                          : Z.intl.string(Z.t.xYKa1d)
-                      : Z.intl.formatToPlainString(Z.t.wvKYCg, { category_name: $.name }),
-            eh = (0, E.FF)("CollectiblesContent"),
-            e_ = (0, m.$2)($.categorySkuId),
+                    : G
+                      ? Z.intl.string(Z.t.guWAg4)
+                      : Q
+                        ? Z.intl.string(Z.t["/QvRam"])
+                        : Z.intl.string(Z.t.xYKa1d),
+            ef = (0, E.FF)("CollectiblesContent"),
+            e_ = (0, m.$2)(J.categorySkuId),
             eC = b.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
-            em = () => {
+            eh = () => {
                 W === A.AW.ORBS
                     ? ((0, p.Y)({
                           pageType: R.ZY5.SHOP_ORBS_TAB,
@@ -134,22 +133,22 @@ let F = (0, m.IC)(90),
                           ctaObject: R.qAy.CTA_TO_QUEST_HOME,
                       }),
                       (0, g.navigateToQuestHome)({ fromContent: s.j.ORBS_SHOP_HERO_CTA }))
-                    : (i("shop latest category hero", !eh || e_ ? $.categorySkuId : void 0),
-                      h.default.track(R.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    : (i("shop latest category hero", !ef || e_ ? J.categorySkuId : void 0),
+                      _.default.track(R.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == Y ? void 0 : Y.sessionId,
-                          sku_id: $.categorySkuId,
+                          sku_id: J.categorySkuId,
                           page_type: W,
                           page_section: null == Y ? void 0 : Y.pageSection,
                           page_category: null == Y ? void 0 : Y.pageCategory,
                           cta_name: "shop latest category hero button",
                       }));
             };
-        return null != K && (n || $ !== H)
+        return null != K && (n || J !== H)
             ? (0, r.jsxs)("div", {
                   ref: V,
                   className: w.heroBlock,
                   children: [
-                      es
+                      ea
                           ? (0, P.gT)({
                                 isCustomCursorEnabled: G,
                                 className: w.riveEventOverlay,
@@ -157,32 +156,32 @@ let F = (0, m.IC)(90),
                             })
                           : null,
                       (0, r.jsx)("div", {
-                          className: a()(w.banner, { [w.rivBanner]: es }),
-                          style: null != ea ? { background: ea } : void 0,
+                          className: a()(w.banner, { [w.rivBanner]: ea }),
+                          style: null != ei ? { background: ei } : void 0,
                           children: (0, r.jsx)(B.Z, {
-                              bannerStatic: er,
-                              bannerAnimated: el,
-                              isResponsive: ei,
+                              bannerStatic: en,
+                              bannerAnimated: er,
+                              isResponsive: el,
                               eventTargetRef: z,
                           }),
                       }),
                       (0, r.jsxs)("div", {
                           className: w.heroBlockContent,
                           children: [
-                              es
+                              ea
                                   ? (0, r.jsx)("div", {
                                         className: w.rivBannerButtonContainer,
                                         children:
                                             !n &&
                                             (0, r.jsx)(u.zxk, {
                                                 variant: "overlay-primary",
-                                                onClick: em,
-                                                text: ef,
+                                                onClick: eh,
+                                                text: ep,
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
                                         className: a()(X ? w.heroHeaderContainerStacked : w.heroHeaderContainer, {
-                                            [w.responsive]: ei,
+                                            [w.responsive]: el,
                                         }),
                                         children: [
                                             n
@@ -192,7 +191,7 @@ let F = (0, m.IC)(90),
                                                 : (0, r.jsxs)("div", {
                                                       className: w.heroHeaderBadgeLogoSummaryContainer,
                                                       children: [
-                                                          null != $.unpublishedAt &&
+                                                          null != J.unpublishedAt &&
                                                               (0, r.jsx)(u.IGR, {
                                                                   disableColor: !0,
                                                                   text: Z.intl.string(Z.t["h/uBCQ"]),
@@ -203,24 +202,24 @@ let F = (0, m.IC)(90),
                                                                   [w.heroLogoNameContainerStacked]: X,
                                                               }),
                                                               children: [
-                                                                  null != $.logoUrl &&
+                                                                  null != J.logoUrl &&
                                                                       (0, r.jsx)("img", {
                                                                           className: w.heroHeaderLogo,
-                                                                          src: en,
-                                                                          alt: $.name,
+                                                                          src: et,
+                                                                          alt: J.name,
                                                                           style:
-                                                                              null == et
+                                                                              null == ee
                                                                                   ? void 0
-                                                                                  : et.toDesktopStyles(),
+                                                                                  : ee.toDesktopStyles(),
                                                                       }),
-                                                                  null != $.title &&
+                                                                  null != J.title &&
                                                                       (0, r.jsx)(u.X6q, {
                                                                           variant: "heading-xxl/bold",
                                                                           className: w.title,
                                                                           color: "header-primary",
-                                                                          children: $.title,
+                                                                          children: J.title,
                                                                       }),
-                                                                  "" !== $.summary &&
+                                                                  "" !== J.summary &&
                                                                       (0, r.jsx)(u.Text, {
                                                                           variant: e_
                                                                               ? "text-lg/medium"
@@ -229,10 +228,10 @@ let F = (0, m.IC)(90),
                                                                               ? w.orbsSubHeaderText
                                                                               : w.subHeaderText,
                                                                           style:
-                                                                              null != $.bannerTextColor
-                                                                                  ? { color: $.bannerTextColor }
+                                                                              null != J.bannerTextColor
+                                                                                  ? { color: J.bannerTextColor }
                                                                                   : void 0,
-                                                                          children: $.summary,
+                                                                          children: J.summary,
                                                                       }),
                                                               ],
                                                           }),
@@ -245,8 +244,8 @@ let F = (0, m.IC)(90),
                                                         : w.heroHeaderButtonContainer,
                                                     children: (0, r.jsx)(u.zxk, {
                                                         variant: "overlay-primary",
-                                                        onClick: em,
-                                                        text: ef,
+                                                        onClick: eh,
+                                                        text: ep,
                                                     }),
                                                 }),
                                         ],
@@ -254,19 +253,19 @@ let F = (0, m.IC)(90),
                               (0, r.jsx)("div", {
                                   className: a()(w.row, w.feed, { [w.feedSingleRow]: W !== A.AW.ORBS }),
                                   children:
-                                      n || eu
+                                      n || ec
                                           ? (0, r.jsx)(r.Fragment, {
                                                 children: [void 0, void 0, void 0, void 0].map((e, t) =>
                                                     (0, r.jsx)(T.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(r.Fragment, {
-                                                children: ep.map((e, t) => {
-                                                    let n = C.Z.getCategoryForProduct(e.skuId);
+                                                children: eg.map((e, t) => {
+                                                    let n = h.Z.getCategoryForProduct(e.skuId);
                                                     return null == e || null == n
                                                         ? null
                                                         : (0, r.jsx)(
-                                                              _.k0,
+                                                              C.k0,
                                                               {
                                                                   newValue: {
                                                                       tilePosition: t,
