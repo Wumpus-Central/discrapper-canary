@@ -81427,6 +81427,20 @@ html .invoiceCancelRow__968a4 {
     display: none
 }
 
+.systemServiceContainer_b4186f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between
+}
+
+.systemServiceTextContainer_b4186f {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
 .container__138d8 {
     align-content: center
 }
