@@ -67317,7 +67317,7 @@ html .progress__61462 {
     display: flex;
     -webkit-mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
     mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
-    padding: 4px 8px
+    padding: var(--space-4) var(--space-8)
 }
 
 .itemIcon__1bb32 {
@@ -67356,14 +67356,19 @@ html .progress__61462 {
 .divider__1bb32 {
     background-color: var(--border-subtle);
     height: 1px;
-    margin: var(--space-8) calc(var(--space-16)*-1)
+    margin: var(--space-8) calc(var(--space-8)*-1)
 }
 
-.autocompleteGroupHeader__1bb32 {
+.groupWrapper__1bb32 {
+    display: grid;
+    gap: var(--space-4)
+}
+
+.groupHeader__1bb32 {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 4px 8px
+    padding: var(--space-4) var(--space-8)
 }
 
 .clearSearchHistory__1bb32:hover .clearSearchHistoryIcon__1bb32 {
@@ -67423,7 +67428,7 @@ html .progress__61462 {
     box-sizing: border-box;
     max-height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-channel-textarea-text-area-height) - var(--custom-channel-header-height));
     overflow: hidden;
-    padding: var(--space-16);
+    padding: var(--space-12) var(--space-8);
     width: 356px
 }
 

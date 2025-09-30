@@ -5,7 +5,7 @@ n.d(t, {
     Q0: () => N,
     V4: () => H,
     _B: () => C,
-    dI: () => L,
+    dI: () => x,
     do: () => w,
     f: () => P,
     mW: () => R,
@@ -205,6 +205,7 @@ function D(e) {
                 {
                     role: "group",
                     "aria-labelledby": "".concat(t, "-header"),
+                    className: v.groupWrapper,
                     children: i,
                 },
                 t,
@@ -212,11 +213,11 @@ function D(e) {
         ],
     });
 }
-function x(e) {
+function L(e) {
     let { headerId: t, titleText: n, trailingIcon: i } = e;
     return (0, r.jsxs)("div", {
         id: t,
-        className: v.autocompleteGroupHeader,
+        className: v.groupHeader,
         children: [
             (0, r.jsx)(s.Text, {
                 variant: "text-xs/semibold",
@@ -227,7 +228,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
         { rows: s, title: l, trailingIcon: c } = n.data;
@@ -235,7 +236,7 @@ function L(e) {
         title: l,
         showDivider: i > 0,
         children: [
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 headerId: l,
                 titleText: l,
                 trailingIcon: c,
