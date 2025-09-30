@@ -2,7 +2,7 @@ n.d(t, {
     AG: () => R,
     Z$: () => D,
     jH: () => P,
-    zH: () => x,
+    zH: () => L,
 }),
     n(388685);
 var r = n(951288),
@@ -19,7 +19,7 @@ var r = n(951288),
     p = n(44315),
     h = n(981631),
     m = n(388032),
-    g = n(68701);
+    g = n(701224);
 function E(e, t, n) {
     return (
         t in e
@@ -251,7 +251,7 @@ function w(e) {
         });
     }, [A, w]),
         i.useEffect(() => s, [s]);
-    let x = (e) => {
+    let L = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
             if (!(0, c.FX)(t)) return void D((e) => O(b({}, e), { input: t }));
             let n = (0, c._i)(t),
@@ -266,11 +266,11 @@ function w(e) {
             }),
                 a(n);
         },
-        L = async () => {
+        x = async () => {
             if (null != I)
                 try {
                     let { sRGBHex: e } = await I.open();
-                    x(e);
+                    L(e);
                 } catch (e) {}
         },
         j = i.useCallback(
@@ -304,14 +304,14 @@ function w(e) {
                 p,
                 (0, r.jsx)(f.oil, {
                     value: w.input.slice(1),
-                    onChange: x,
+                    onChange: L,
                     maxLength: S - 1,
                     leading: "#",
                     trailing:
                         E && null != I
                             ? {
                                   icon: f.ilE,
-                                  onClick: L,
+                                  onClick: x,
                                   "aria-label": m.intl.string(m.t["0dU9Nz"]),
                               }
                             : void 0,
@@ -327,7 +327,7 @@ function w(e) {
                                     "aria-label": "",
                                     style: { backgroundColor: e },
                                     className: g.suggestedColor,
-                                    onClick: () => x(e),
+                                    onClick: () => L(e),
                                 },
                                 "".concat(e, "-").concat(t),
                             ),
@@ -344,7 +344,7 @@ function w(e) {
     });
 }
 let D = i.memo(w);
-function x(e) {
+function L(e) {
     let {
             className: t,
             defaultColor: n,

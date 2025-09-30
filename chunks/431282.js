@@ -10,7 +10,7 @@ var a = n(951288),
     l = n(481060),
     s = n(732380),
     o = n(388032),
-    c = n(138005);
+    c = n(54482);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,15 +72,15 @@ function m(e) {
 }
 function p(e) {
     let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f } = e,
-        g = null != n,
-        b = (0, s.Q1)({
+        b = null != n,
+        g = (0, s.Q1)({
             action: t,
             onClick: n,
         }),
         [v, j] = r.useState(!1),
         _ = r.useRef(null),
         y = null != f,
-        C = y && g,
+        C = y && b,
         E = {
             offset: {
                 top: -8,
@@ -136,7 +136,7 @@ function p(e) {
                           children: [
                               (0, a.jsx)(l.P3F, {
                                   className: c.menuItemContent,
-                                  onClick: b,
+                                  onClick: g,
                                   focusProps: { offset: u(d({}, E.offset), { right: 0 }) },
                                   children: T(),
                               }),
@@ -182,7 +182,7 @@ function p(e) {
                         )
                       : (0, a.jsx)(l.P3F, {
                             className: c.menuItemContent,
-                            onClick: b,
+                            onClick: g,
                             focusProps: E,
                             children: T(),
                         })),

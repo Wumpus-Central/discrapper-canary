@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    T = n(136588);
+    T = n(28616);
 function S(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),
@@ -32,8 +32,8 @@ function S(e) {
         P = N.length > 0 || R.length > 0,
         w = S.length > 0,
         D = i.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
-        x = D.length > 0,
-        L = S.length > D.length,
+        L = D.length > 0,
+        x = S.length > D.length,
         j = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: M } = (0, o.Z)({ forceFetch: !0 }),
         k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === I.a$.NONE,
@@ -44,13 +44,13 @@ function S(e) {
             (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
             (0, r.jsx)(E.Z, {
                 hasGuildBoostSlots: w,
-                hasAppliedGuildBoosts: x,
+                hasAppliedGuildBoosts: L,
                 hasBoostPerk: G,
                 canAddBoosts: U,
             }),
             M === I.a$.NONE &&
                 (0, r.jsx)(O.Z, {
-                    hasAppliedGuildBoosts: x,
+                    hasAppliedGuildBoosts: L,
                     hasBoostPerk: G,
                     hasGuildAffinitiesOrInGuild: P,
                     subscriptionIsPausedOrPausePending: k,
@@ -70,8 +70,8 @@ function S(e) {
                 fractionalPremiumState: M,
             }),
             (0, r.jsx)(y.Z, {
-                canAddBoosts: x && U,
-                canApplyBoosts: L,
+                canAddBoosts: L && U,
+                canApplyBoosts: x,
             }),
             (0, r.jsx)(u.Z, {
                 className: T.tierComparisonTable,

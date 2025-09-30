@@ -35,11 +35,11 @@ var r = n(951288),
     P = n(485386),
     w = n(496675),
     D = n(594174),
-    x = n(700785),
-    L = n(944613),
+    L = n(700785),
+    x = n(944613),
     j = n(981631),
     M = n(388032),
-    k = n(250781);
+    k = n(85703);
 function U(e, t, n) {
     return (
         t in e
@@ -170,8 +170,8 @@ let z = i.forwardRef(function (e, t) {
             guildId: I,
         }),
         D = (0, _.e7)([b.Z], () => b.Z.roleStyle),
-        x = (0, A._f)(I, E, E.colorStrings),
-        L = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
+        L = (0, A._f)(I, E, E.colorStrings),
+        x = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
         j = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
@@ -194,7 +194,7 @@ let z = i.forwardRef(function (e, t) {
         H = p.Z.unsafe_rawColors.WHITE_500.css,
         Y = (0, f._i)(B);
     null != Y && 0.3 > (0, f.Bd)(Y) && (H = p.Z.unsafe_rawColors.PRIMARY_630.css),
-        (c = L
+        (c = x
             ? (0, r.jsx)(y.Z, {
                   className: k.roleFlowerStar,
                   iconClassName: d ? k.roleVerifiedIcon : void 0,
@@ -205,13 +205,13 @@ let z = i.forwardRef(function (e, t) {
               ? (0, r.jsx)(h.FhE, {
                     className: k.roleDot,
                     color: B,
-                    colors: x,
+                    colors: L,
                     background: !1,
                     tooltip: !1,
                 })
               : (0, r.jsx)(h.xko, {
                     color: B,
-                    colors: x,
+                    colors: L,
                 }));
     let W = i.useMemo(() => {
         var t;
@@ -304,7 +304,7 @@ function X(e) {
         targetElementRef: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(L.Z, {
+            return (0, r.jsx)(x.Z, {
                 guild: n,
                 roleStyle: p,
                 roleFilter: E,
@@ -377,7 +377,7 @@ function Q(e) {
         [T, A] = i.useState(null),
         N = (0, _.Wu)([P.Z], () => P.Z.getManyRoles(a.id, s).sort(C.Z)),
         R = i.useMemo(() => (null != T ? N.slice(0, T) : N), [N, T]),
-        L = s.length - R.length;
+        x = s.length - R.length;
     i.useLayoutEffect(() => {
         if (f) return;
         if ("number" != typeof p) throw Error("Unexpected null width");
@@ -397,7 +397,7 @@ function Q(e) {
     let U = D.default.getCurrentUser();
     l()(null != U, "MemberRolesList: currentUser cannot be undefined");
     let B = !m && w.Z.can(j.Plq.MANAGE_ROLES, a),
-        V = x.e9(a, U.id),
+        V = L.e9(a, U.id),
         K = i.useMemo(() => "roles-".concat((0, c.Z)()), []),
         Q = (0, d.ZP)({
             id: K,
@@ -416,7 +416,7 @@ function Q(e) {
                     canRemove:
                         (null == (t = e.tags) ? void 0 : t.guild_connections) === null
                             ? n.id === U.id
-                            : B && x.r6(a, U.id, V, e),
+                            : B && L.r6(a, U.id, V, e),
                     onRemove: () => v(e),
                     ref: (t) => O(e.id, t),
                     guildId: a.id,
@@ -426,8 +426,8 @@ function Q(e) {
             );
         });
     return (
-        null != T && 0 !== L
-            ? (t = (0, r.jsx)(q, Z(G({}, e), { numRolesHidden: L })))
+        null != T && 0 !== x
+            ? (t = (0, r.jsx)(q, Z(G({}, e), { numRolesHidden: x })))
             : B && (t = (0, r.jsx)(X, Z(G({}, e), { handleAddRole: I }))),
         (0, r.jsx)(u.bG, {
             navigator: Q,

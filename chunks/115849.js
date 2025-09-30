@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(981631),
     g = n(295907),
     m = n(388032),
-    b = n(118213),
-    _ = n(10198);
+    b = n(470840),
+    _ = n(197571);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,14 +91,14 @@ function N(e) {
         n = i.useRef(null),
         l = i.useRef(null),
         [o, p] = i.useReducer(T, v),
-        { canSend: O, hint: E, error: N, success: P } = o;
+        { canSend: O, hint: E, error: N, success: j } = o;
     return (
         i.useEffect(() => {
-            null != P &&
+            null != j &&
                 (s()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [P, n]),
+        }, [j, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
@@ -155,7 +155,7 @@ function N(e) {
                     children: (0, r.jsxs)("div", {
                         ref: l,
                         className: a()(b.addFriendInputWrapper, {
-                            [b.success]: P,
+                            [b.success]: j,
                             [b.error]: N,
                         }),
                         children: [
@@ -229,14 +229,14 @@ function N(e) {
                             children: N,
                         }),
                     }),
-                null != P &&
+                null != j &&
                     (0, r.jsx)("div", {
                         role: "status",
                         children: (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
                             className: _.marginTop8,
                             color: "text-feedback-positive",
-                            children: P,
+                            children: j,
                         }),
                     }),
             ],

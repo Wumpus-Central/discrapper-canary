@@ -26,7 +26,7 @@ var r = n(951288),
     C = n(556638),
     N = n(981631),
     R = n(388032),
-    P = n(666998);
+    P = n(80568);
 function w(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -143,8 +143,8 @@ function B(e) {
         hideTooltip: w = !1,
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
-    let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        j = (0, m.Cf)(x),
+    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, m.Cf)(L),
         M = i.useMemo(() => {
             var e, t;
             let r =
@@ -188,7 +188,7 @@ function B(e) {
         H = (null == t ? void 0 : t.bot) === !0,
         Y = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         W = (null == M ? void 0 : M.state) != null,
-        K = null != x,
+        K = null != L,
         z = !K && null != l,
         q = F.length + (K || z ? 1 : 0),
         X = q > 1,
@@ -202,9 +202,9 @@ function B(e) {
     let $ = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || w;
-            if (null != x)
+            if (null != L)
                 return (0, r.jsx)(I.Z, {
-                    stream: x,
+                    stream: L,
                     game: V,
                     textVariant: "text-".concat(h, "/medium"),
                     textClassName: d,
@@ -245,14 +245,14 @@ function B(e) {
                     canTruncate: !1,
                 };
             return (
-                null != x &&
+                null != L &&
                     e.push(
                         (0, r.jsx)(
                             I.Z,
-                            L(
+                            x(
                                 D(
                                     {
-                                        stream: x,
+                                        stream: L,
                                         game: null == n ? void 0 : n.find(f.Z),
                                     },
                                     t,
@@ -265,7 +265,7 @@ function B(e) {
                 F.forEach((n, i) => {
                     e.push((0, r.jsx)(S.Z, D({ activity: n }, t), "activity-".concat(i)));
                 }),
-                z && e.push((0, r.jsx)(A.Z, L(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                z && e.push((0, r.jsx)(A.Z, x(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -293,7 +293,7 @@ function B(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    L(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
+                                    x(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
                                         children: [$(!0), et()],
                                     }),
                                 ),

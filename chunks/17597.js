@@ -13,11 +13,11 @@ var a = n(951288),
     h = n(168107),
     x = n(480916),
     f = n(352138),
-    g = n(629235),
-    b = n(981631),
-    v = n(131022),
+    b = n(629235),
+    g = n(981631),
+    v = n(398158),
     j = n(388032),
-    _ = n(450192),
+    _ = n(70402),
     y = n(736056);
 let C = function (e) {
     let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: N } = e,
@@ -29,7 +29,7 @@ let C = function (e) {
     r.useEffect(() => {
         O.current = P;
     }, [P]);
-    let { loading: R, ageVerificationMethods: A } = (0, g.Z)(
+    let { loading: R, ageVerificationMethods: A } = (0, b.Z)(
         () => {
             null == E || E(), C();
         },
@@ -66,7 +66,7 @@ let C = function (e) {
             title: j.intl.string(j.t.JHNunp),
             subtitle: j.intl.format(v.default.RpMIT0, {
                 handleOnHelpUrlHook: () => {
-                    h.Z.openUrl(p.Z.getArticleURL(b.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                    h.Z.openUrl(p.Z.getArticleURL(g.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, x.x3)(k, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
                 },
             }),

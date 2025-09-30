@@ -24,8 +24,8 @@ var r,
     C = n(100527),
     T = n(906732),
     N = n(213609),
-    P = n(728345),
-    j = n(812206),
+    j = n(728345),
+    P = n(812206),
     x = n(933557),
     A = n(194082),
     Z = n(377171),
@@ -44,8 +44,8 @@ var r,
     z = n(601964),
     W = n(314897),
     Y = n(592125),
-    K = n(594174),
-    q = n(395361),
+    q = n(594174),
+    K = n(395361),
     Q = n(639351),
     X = n(81063),
     J = n(823379),
@@ -53,7 +53,7 @@ var r,
     ee = n(599706),
     et = n(981631),
     en = n(388032),
-    er = n(544284);
+    er = n(84822);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -202,7 +202,7 @@ let ea = [14, 14, 12, 12, 10, 8, 6],
     eg = (e) => {
         let { activity: t, analyticsLocations: n, hidden: r } = e,
             { application_id: l, name: a } = t,
-            { data: o } = (0, P.IX)(l),
+            { data: o } = (0, j.IX)(l),
             s = (0, S.Z)({
                 application: o,
                 analyticsLocations: n,
@@ -253,7 +253,7 @@ let eb = (e) => {
             });
             break;
         case "SPOTIFY":
-            t = (0, i.jsx)(q.Z, {
+            t = (0, i.jsx)(K.Z, {
                 className: er.headerIcon,
                 color: d.Z.unsafe_rawColors.SPOTIFY.css,
             });
@@ -605,7 +605,7 @@ let eO = (e) => {
                                   }),
                                   u
                                       ? null
-                                      : (0, i.jsx)(q.Z, {
+                                      : (0, i.jsx)(K.Z, {
                                             className: er.smallImage,
                                             color: d.Z.unsafe_rawColors.SPOTIFY.css,
                                         }),
@@ -736,15 +736,15 @@ let eO = (e) => {
                     return s(t);
                 });
         }, [u]);
-        let d = (0, c.Wu)([K.default, W.default], () =>
+        let d = (0, c.Wu)([q.default, W.default], () =>
                 Array.from(a)
-                    .map((e) => (W.default.getId() === e ? null : K.default.getUser(e)))
+                    .map((e) => (W.default.getId() === e ? null : q.default.getUser(e)))
                     .filter(J.lm),
             ),
             f = (0, g.O)(),
             { analyticsLocations: h } = (0, T.ZP)();
         if (null == u) return null;
-        let m = j.Z.getApplication(u);
+        let m = P.Z.getApplication(u);
         if (null == m) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             O = (0, X.xF)(m.id, o, 300);

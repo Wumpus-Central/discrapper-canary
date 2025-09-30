@@ -7,14 +7,14 @@ var i = n(120356),
     l = n(785717),
     c = n(86419),
     s = n(388032),
-    u = n(145624);
+    u = n(51708);
 function d(e) {
     let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: d } = e,
-        { trackUserProfileEditAction: f } = (0, l.KZ)(),
-        g = () => {
+        { trackUserProfileEditAction: g } = (0, l.KZ)(),
+        f = () => {
             (0, c.$b)(n, t.applicationId),
                 a.uvj.announce(s.intl.string(s.t["08HmMj"])),
-                f({
+                g({
                     action: "GAME_REMOVED",
                     gameId: t.applicationId,
                     widgetEdited: n,
@@ -53,7 +53,7 @@ function d(e) {
                 })({}, e)),
                 (n = n =
                     {
-                        onClick: g,
+                        onClick: f,
                         "aria-label": s.intl.string(s.t.HUvyDQ),
                         className: o()(d, u.clickable),
                         children: (0, r.jsx)(a.XHJ, {

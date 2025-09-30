@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(981631),
     S = n(474936),
     A = n(388032),
-    C = n(79665);
+    C = n(387473);
 function N(e, t, n) {
     return (
         t in e
@@ -171,7 +171,7 @@ function D(e) {
         t.id,
     );
 }
-function x(e) {
+function L(e) {
     (0, c.ZDy)(
         async () => (t) =>
             (0, r.jsx)(
@@ -183,7 +183,7 @@ function x(e) {
             ),
     );
 }
-function L(e) {
+function x(e) {
     (0, c.ZDy)(async () => (t) => (0, r.jsx)(p.default, w(R({}, t), { guildBoostSlot: e })));
 }
 function j(e) {
@@ -334,7 +334,7 @@ let M = function (e) {
                                                 ),
                                                 {
                                                     disabled: null == W || N,
-                                                    onClick: null != W ? () => x(W) : void 0,
+                                                    onClick: null != W ? () => L(W) : void 0,
                                                 },
                                             ),
                                         ),
@@ -351,7 +351,7 @@ let M = function (e) {
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: F,
-                                        onCancel: L,
+                                        onCancel: x,
                                         onUncancel: j,
                                         premiumSubscription: _,
                                         useReducedMotion: v,

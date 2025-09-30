@@ -17,7 +17,7 @@ var i = n(120356),
     g = n(504865),
     E = n(474936),
     b = n(388032),
-    y = n(40747);
+    y = n(560230);
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
@@ -49,8 +49,8 @@ function v(e) {
         P = (0, l.e7)([d.Z], () => d.Z.getPremiumTypeSubscription()),
         w = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, _.t7)(),
-        x = (0, _.lr)(),
-        L = n === E.p9.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
+        L = (0, _.lr)(),
+        x = n === E.p9.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
         j = (null == P ? void 0 : P.hasActiveTrial) ? (null == w ? void 0 : w.premiumType) : D ? E.p9.TIER_2 : null,
         M = (0, h.N)(),
         k = (0, p.Ng)(),
@@ -68,13 +68,13 @@ function v(e) {
                       })
                     : P.planIdFromItems === E.Xh.PREMIUM_YEAR_TIER_2
                       ? b.intl.format(b.t["+qqh6u"], {
-                            percent: null != (t = null == x ? void 0 : x.percentage) ? t : E.Bo,
+                            percent: null != (t = null == L ? void 0 : L.percentage) ? t : E.Bo,
                             regularPrice: n,
                         })
                       : b.intl.formatToPlainString(b.t["3Ziutb"], {
-                            percent: null != (r = null == x ? void 0 : x.percentage) ? r : E.M_,
+                            percent: null != (r = null == L ? void 0 : L.percentage) ? r : E.M_,
                             regularPrice: n,
-                            numMonths: null != (i = null == x ? void 0 : x.duration) ? i : E.rt,
+                            numMonths: null != (i = null == L ? void 0 : L.duration) ? i : E.rt,
                         });
             };
         return (0, r.jsx)(c.X6q, {
@@ -125,7 +125,7 @@ function v(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(g.Z, {
-                subscriptionTier: L,
+                subscriptionTier: x,
                 isGift: t,
                 className: null != T ? T : y.price,
                 priceOptions: v,
@@ -135,7 +135,7 @@ function v(e) {
             }),
             m &&
                 (0, r.jsx)(g.Z, {
-                    subscriptionTier: L,
+                    subscriptionTier: x,
                     interval: E.rV.YEAR,
                     className: null != T ? T : y.price,
                     isGift: t,

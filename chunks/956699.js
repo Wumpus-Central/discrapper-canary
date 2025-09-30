@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(375657),
     w = n(171393),
     D = n(837268),
-    x = n(32300),
-    L = n(371651),
+    L = n(32300),
+    x = n(371651),
     j = n(398269),
     M = n(921801),
     k = n(857192),
@@ -47,9 +47,9 @@ var r = n(951288),
     z = n(726985),
     q = n(981631),
     X = n(908442),
-    Q = n(670873),
-    J = n(504401),
-    $ = n(10198);
+    Q = n(674336),
+    J = n(620842),
+    $ = n(197571);
 function ee(e, t, n) {
     return (
         t in e
@@ -950,8 +950,8 @@ function ep(e) {
     F.ZP.triggerJSException(e);
 }
 function eh() {
-    let e = (0, x.XE)("developer_settings"),
-        t = (0, u.e7)([L.default], () => L.default.getForcedRenderMode()),
+    let e = (0, L.XE)("developer_settings"),
+        t = (0, u.e7)([x.default], () => x.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
         l = e || t === D.R5.OUT_OF_PROCESS_V3 || t === D.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;

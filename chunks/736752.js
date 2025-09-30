@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(594174),
     w = n(626135),
     D = n(706454),
-    x = n(210887),
-    L = n(418632),
+    L = n(210887),
+    x = n(418632),
     j = n(10298),
     M = n(526156),
     k = n(730820),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(981631),
     V = n(801461),
     H = n(388032),
-    Y = n(719766),
-    W = n(10198);
+    Y = n(343396),
+    W = n(197571);
 function K(e, t, n) {
     return (
         t in e
@@ -141,7 +141,7 @@ class Q extends i.PureComponent {
                         className: Y.accountWarningBodyText,
                         children: H.intl.string(H.t.NAzplJ),
                     }),
-                    (0, r.jsx)(L.Z, {
+                    (0, r.jsx)(x.Z, {
                         size: "sm",
                         variant: "secondary",
                     }),
@@ -443,7 +443,7 @@ let J = () => {
         }),
         t = (0, c.e7)([C.Z], () => C.Z.getBackupCodes()),
         n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        i = (0, c.e7)([x.Z], () => x.Z.theme),
+        i = (0, c.e7)([L.Z], () => L.Z.theme),
         a = (0, y.b)(),
         o = (0, c.e7)([D.default], () => D.default.locale),
         s = (0, c.e7)([R.Z], () => R.Z.getSubsection()),

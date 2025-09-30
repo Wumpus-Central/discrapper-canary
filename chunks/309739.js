@@ -27,9 +27,9 @@ var r = n(951288),
     N = n(726985),
     R = n(981631),
     P = n(388032),
-    w = n(174546),
-    D = n(10198);
-function x(e, t, n) {
+    w = n(85240),
+    D = n(197571);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ function k(e) {
         (0, r.jsx)(
             _.ConfirmModal,
             M(
-                L(
+                x(
                     {
                         header: P.intl.string(P.t["uUr+GR"]),
                         confirmText: P.intl.string(P.t.gm1Ven),

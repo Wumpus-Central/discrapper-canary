@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(445143);
+    b = n(78946);
 function y(e) {
     let {
             user: t,
@@ -49,8 +49,8 @@ function y(e) {
             });
     }, [C, N]);
     let D = null != n,
-        x = T || void 0 !== R ? null != R : null != A;
-    function L() {
+        L = T || void 0 !== R ? null != R : null != A;
+    function x() {
         (0, _.s6)(null, A, null == n ? void 0 : n.id);
     }
     let j = v ? l.gtL : s.zx;
@@ -71,7 +71,7 @@ function y(e) {
                     className: o()({ [b.buttonHighlighted]: v }),
                     children: E.intl.string(E.t["/dRfCQ"]),
                 }),
-                x &&
+                L &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: b.removeButton,
@@ -79,7 +79,7 @@ function y(e) {
                             variant: "secondary",
                             size: "sm",
                             text: D ? E.intl.string(E.t.CHf9iI) : E.intl.string(E.t.uMuafH),
-                            onClick: L,
+                            onClick: x,
                         }),
                     }),
             ],

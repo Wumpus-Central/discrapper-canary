@@ -27,9 +27,9 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(719766),
-    D = n(10198);
-function x(e, t, n) {
+    w = n(343396),
+    D = n(197571);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -344,18 +344,18 @@ class U extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, c.h7j)((t) => (0, r.jsx)(E.default, L({ reason: m.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
+        (0, c.h7j)((t) => (0, r.jsx)(E.default, x({ reason: m.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", {
+            L(this, "state", {
                 revealed: !1,
                 password: "",
             }),
-            x(this, "togglePhoneNumberVisibility", (e) => {
+            L(this, "togglePhoneNumberVisibility", (e) => {
                 e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            x(this, "handleDisableMFA", () => {
+            L(this, "handleDisableMFA", () => {
                 d.Z.show({
                     title: P.intl.string(P.t["D+aE7u"]),
                     body: P.intl.string(P.t.EA4ZEh),
@@ -363,15 +363,15 @@ class U extends i.PureComponent {
                     onConfirm: () => u.Z.disable(),
                 });
             }),
-            x(this, "generateBackupCodes", async () => {
+            L(this, "generateBackupCodes", async () => {
                 let e = O.Z.getVerificationKey();
                 await u.Z.confirmViewBackupCodes(e, !0);
             }),
-            x(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+            L(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         p.Z,
-                        M(L({}, e), {
+                        M(x({}, e), {
                             handleSubmit: (e) =>
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
@@ -382,11 +382,11 @@ class U extends i.PureComponent {
                     ),
                 );
             }),
-            x(this, "viewBackupCodes", (e) => {
+            L(this, "viewBackupCodes", (e) => {
                 (0, c.h7j)((t) =>
                     (0, r.jsx)(
                         _.Z,
-                        M(L({}, t), {
+                        M(x({}, t), {
                             handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                             maxLength: 8,
                             title: P.intl.string(P.t.mGppp6),
@@ -401,7 +401,7 @@ class U extends i.PureComponent {
                     ),
                 );
             }),
-            x(this, "getDownloadFileContents", () => {
+            L(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
@@ -414,18 +414,18 @@ class U extends i.PureComponent {
                     t = P.intl.formatToPlainString(P.t.uYWwh4, { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            x(this, "handleChangePhoneNumber", () => {
+            L(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            x(this, "handleEnableSMS", () => {
+            L(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: u.Z.enableSMS }) : u.Z.enableSMS();
             }),
-            x(this, "handleDisableSMS", () => {
+            L(this, "handleDisableSMS", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         p.Z,
-                        M(L({}, e), {
+                        M(x({}, e), {
                             handleSubmit: u.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnio),
                             children: P.intl.string(P.t["W0/Dub"]),
@@ -442,5 +442,5 @@ function G(e) {
         togglingSMS: O.Z.togglingSMS,
         hasTOTPEnabled: y.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(U, L({ currentUser: t }, n, e));
+    return (0, r.jsx)(U, x({ currentUser: t }, n, e));
 }

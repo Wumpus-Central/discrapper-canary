@@ -24,8 +24,8 @@ var i = n(442837),
     T = n(915014),
     S = n(671955),
     A = n(388032),
-    C = n(759253),
-    N = n(593540);
+    C = n(57842),
+    N = n(116649);
 function R(e) {
     let {
             user: t,
@@ -34,10 +34,10 @@ function R(e) {
             guild: P,
             isHovering: w,
             onOpenProfile: D,
-            channelId: x,
-            onClose: L,
+            channelId: L,
+            onClose: x,
         } = e,
-        j = c.ZP.getName(null == P ? void 0 : P.id, x, t),
+        j = c.ZP.getName(null == P ? void 0 : P.id, L, t),
         M = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
@@ -57,7 +57,7 @@ function R(e) {
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
                     themeType: S.l.POPOUT,
-                    onClose: L,
+                    onClose: x,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -80,7 +80,7 @@ function R(e) {
                 children: [
                     (0, r.jsx)(b.Z, {
                         user: t,
-                        closePopout: L,
+                        closePopout: x,
                         fullWidth: !0,
                     }),
                     (0, r.jsx)(y.Z, {
@@ -94,7 +94,7 @@ function R(e) {
                 user: t,
                 bio: null == R ? void 0 : R.bio,
                 hidePersonalInformation: U,
-                onClose: L,
+                onClose: x,
             }),
             G
                 ? (0, r.jsx)(g.Z, {
@@ -102,13 +102,13 @@ function R(e) {
                       currentUser: n,
                       guildId: null == P ? void 0 : P.id,
                       onOpenUserProfileModal: D,
-                      onClose: L,
+                      onClose: x,
                   })
                 : (0, r.jsx)(p.Z, {
                       user: t,
                       currentUser: n,
                       guildId: null == P ? void 0 : P.id,
-                      onClose: L,
+                      onClose: x,
                   }),
             (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
                 null != k &&
@@ -117,7 +117,7 @@ function R(e) {
                     commandIds: M.popularApplicationCommandIds,
                     channel: k,
                     guildId: null == P ? void 0 : P.id,
-                    onClick: L,
+                    onClick: x,
                 }),
             null != P &&
                 (0, r.jsx)(m.Z, {

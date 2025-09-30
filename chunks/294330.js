@@ -1,5 +1,5 @@
 n.d(t, {
-    Eo: () => j,
+    Eo: () => P,
     VD: () => N,
     ZP: () => x,
 }),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(826946),
     y = n(981631),
     v = n(388032),
-    I = n(8548),
+    I = n(972725),
     S = n(129512),
     C = n(330065),
     T = n(755386);
@@ -33,7 +33,7 @@ function N(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [h, g] = i.useState(!1),
         [O, N] = i.useState(!1),
-        [P, j] = i.useState(!1),
+        [j, P] = i.useState(!1),
         x = i.useRef(null),
         A = i.useCallback(async () => {
             N(!0);
@@ -156,12 +156,12 @@ function N(e) {
                             className: I.header,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: a()(I.banner, { [I.loaded]: P }),
+                                    className: a()(I.banner, { [I.loaded]: j }),
                                     children: (0, r.jsx)("img", {
                                         src: D,
                                         alt: "",
                                         className: I.bannerImage,
-                                        onLoad: () => j(!0),
+                                        onLoad: () => P(!0),
                                     }),
                                 }),
                                 (0, r.jsx)(E.Z, {
@@ -256,7 +256,7 @@ function N(e) {
         ],
     });
 }
-function P(e) {
+function j(e) {
     let { guildId: t, onClick: n, onView: i } = e,
         l = (0, o.e7)([O.Z], () => O.Z.getGuild(t));
     return null == l
@@ -267,7 +267,7 @@ function P(e) {
               onView: i,
           });
 }
-function j(e) {
+function P(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         o = i.useRef(null == t),
         s = i.useCallback(
@@ -288,7 +288,7 @@ function j(e) {
                               state: n,
                               cleanUp: i,
                               animate: o.current,
-                              children: (0, r.jsx)(P, {
+                              children: (0, r.jsx)(j, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a,
@@ -320,4 +320,4 @@ function j(e) {
         }),
     });
 }
-let x = i.memo(P);
+let x = i.memo(j);

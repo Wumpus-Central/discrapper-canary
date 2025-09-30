@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -28,15 +28,15 @@ var r = n(951288),
     R = n(612853),
     P = n(981631),
     w = n(388032),
-    D = n(590557),
-    x = n(133529);
-function L(e) {
+    D = n(62868),
+    L = n(133529);
+function x(e) {
     let {
             premiumSubscription: t,
             setPurchaseState: n,
             onBack: a,
             onNext: s,
-            legalTermsNodeRef: L,
+            legalTermsNodeRef: x,
             flashLegalTerms: j,
             invoiceError: M,
             planError: k,
@@ -101,8 +101,8 @@ function L(e) {
         { hasEntitlements: eP } = (0, E.H)(ev, ef),
         ew = (0, v.Ap)(J.paymentSourceId),
         eD = eP || eI,
-        ex = (0, m.U)(),
-        eL = (0, c.e7)([C.Z], () => C.Z.currentOrderId),
+        eL = (0, m.U)(),
+        ex = (0, c.e7)([C.Z], () => C.Z.currentOrderId),
         ej = null,
         eM = null;
     if (et === P.GZQ.ONE_TIME) {
@@ -134,7 +134,7 @@ function L(e) {
                 trialId: Z,
                 priceOptions: J,
                 paymentSource: eS,
-                isPrepaidPaymentPastDue: ex,
+                isPrepaidPaymentPastDue: eL,
                 openInvoiceId: Y,
                 premiumSubscription: t,
                 onNext: s,
@@ -146,7 +146,7 @@ function L(e) {
                 loadId: el.loadId,
                 giftInfoOptions: eO,
                 invoicePreview: ec,
-                orderId: eL,
+                orderId: ex,
             });
         },
         eZ = {
@@ -179,12 +179,12 @@ function L(e) {
               children: [
                   eG &&
                       (0, r.jsx)("img", {
-                          src: x.Z,
+                          src: L.Z,
                           alt: "",
                           className: D.discountFooterBackground,
                       }),
                   (0, r.jsx)(b.Z, {
-                      legalTermsNodeRef: L,
+                      legalTermsNodeRef: x,
                       invoiceError: M,
                       planError: k,
                       disablePurchase: z,

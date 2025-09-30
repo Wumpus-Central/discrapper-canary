@@ -10,20 +10,20 @@ var r = n(951288),
     d = n(215023),
     g = n(981631),
     p = n(388032),
-    f = n(55918);
+    f = n(535333);
 function h(e) {
     let { handleTransition: t, selectedTab: n } = e,
-        { searchQuery: h, onSetSearchQuery: C } = (0, u.S)(),
-        [_, m] = l.useState(""),
+        { searchQuery: h, onSetSearchQuery: _ } = (0, u.S)(),
+        [C, m] = l.useState(""),
         b = (0, c.sp)(),
         E = (0, i.e7)([s.default], () => s.default.locale);
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
-                C(_);
+                _(C);
             }, 250);
             return () => clearTimeout(e);
-        }, [_, C]),
+        }, [C, _]),
         l.useEffect(() => {
             m(h);
         }, [h]),
@@ -45,9 +45,9 @@ function h(e) {
             children: (0, r.jsx)(a.E1j, {
                 size: "sm",
                 onKeyDown: (e) => {
-                    "Enter" === e.key && C(_);
+                    "Enter" === e.key && _(C);
                 },
-                query: _,
+                query: C,
                 onChange: m,
                 onClear: () => {
                     m(""),

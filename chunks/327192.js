@@ -29,16 +29,16 @@ var r = n(951288),
     P = n(63063),
     w = n(706454),
     D = n(349728),
-    x = n(494620),
-    L = n(273313),
+    L = n(494620),
+    x = n(273313),
     j = n(205266),
     M = n(216153),
     k = n(981631),
     U = n(856651),
     G = n(921944),
     B = n(388032),
-    Z = n(465631),
-    F = n(10198);
+    Z = n(11049),
+    F = n(197571);
 function V(e, t, n) {
     return (
         t in e
@@ -175,7 +175,7 @@ function z(e) {
         [I, T] = i.useState(n.showActivity),
         [A, C] = i.useState(null),
         [N, R] = i.useState(null),
-        [w, L] = i.useState(!1),
+        [w, x] = i.useState(!1),
         [G, F] = i.useState([]),
         V = (0, b.rR)(n.type),
         Y = E.Z.get(V);
@@ -364,10 +364,10 @@ function z(e) {
                             onClick: s
                                 ? void 0
                                 : () => {
-                                      L(!0),
+                                      x(!0),
                                           p.Z.refresh(e.type, e.id).finally(() => {
                                               setTimeout(() => {
-                                                  G.push(e.id), F(G), L(!1);
+                                                  G.push(e.id), F(G), x(!1);
                                               }, 2000);
                                           });
                                   },
@@ -509,7 +509,7 @@ function z(e) {
                     {
                         children:
                             (0, D.Z)(n) &&
-                            (0, r.jsx)(x.Z, { children: B.intl.format(B.t.COW3Xl, { platformName: e.name }) }),
+                            (0, r.jsx)(L.Z, { children: B.intl.format(B.t.COW3Xl, { platformName: e.name }) }),
                     },
                 ),
             ),
@@ -701,7 +701,7 @@ let $ = () => {
     }, []),
     e)
         ? (0, r.jsx)(h.Z, {})
-        : (0, r.jsxs)(L.Z, {
+        : (0, r.jsxs)(x.Z, {
               title: B.intl.string(B.t["3fe7U1"]),
               children: [
                   (0, r.jsx)(q, {}),

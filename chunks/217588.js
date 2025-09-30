@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(981631),
     w = n(474936),
     D = n(388032),
-    x = n(24506),
-    L = n(702417);
+    L = n(564651),
+    x = n(975900);
 function j(e, t, n) {
     return (
         t in e
@@ -145,10 +145,10 @@ function X(e) {
             (0, r.jsxs)(_.Z, {
                 direction: _.Z.Direction.VERTICAL,
                 justify: _.Z.Justify.CENTER,
-                className: L.truncatingText,
+                className: x.truncatingText,
                 children: [
                     (0, r.jsx)(c.Text, {
-                        className: L.__invalid_emojiName,
+                        className: x.__invalid_emojiName,
                         variant: "text-md/semibold",
                         children: (0, r.jsx)(p.Z, { children: t.name }),
                     }),
@@ -204,7 +204,7 @@ let Q = (e) => {
             }, [n.pack_id]),
             u || null == l)
         )
-            return (0, r.jsx)(E.SE, { className: x.popoutLoader });
+            return (0, r.jsx)(E.SE, { className: L.popoutLoader });
         let g = d,
             b = () => {
                 g &&
@@ -215,7 +215,7 @@ let Q = (e) => {
                     t();
             };
         return (0, r.jsxs)(E.W_, {
-            className: x.popoutContent,
+            className: L.popoutContent,
             children: [
                 (0, r.jsx)(c.X6q, {
                     variant: "heading-md/semibold",
@@ -226,7 +226,7 @@ let Q = (e) => {
                     children: K(l, d),
                 }),
                 (0, r.jsx)("ul", {
-                    className: x.stickersList,
+                    className: L.stickersList,
                     children: _.map((e) =>
                         (0, r.jsx)(
                             N.Z,
@@ -241,7 +241,7 @@ let Q = (e) => {
                 }),
                 d &&
                     (0, r.jsx)("div", {
-                        className: x.packActions,
+                        className: L.packActions,
                         children: (0, r.jsx)(
                             c.zxk,
                             {
@@ -324,7 +324,7 @@ let Q = (e) => {
             }),
             !C)
         )
-            return (0, r.jsx)(E.SE, { className: x.popoutLoader });
+            return (0, r.jsx)(E.SE, { className: L.popoutLoader });
         {
             let e = () => {
                     let e = async () => {
@@ -336,7 +336,7 @@ let Q = (e) => {
                         } catch (e) {}
                     };
                     return (0, r.jsxs)("div", {
-                        className: L.emojiSection,
+                        className: x.emojiSection,
                         children: [
                             (0, r.jsx)(X, {
                                 description: t,
@@ -344,7 +344,7 @@ let Q = (e) => {
                             }),
                             er &&
                                 (0, r.jsx)(y.Z, {
-                                    className: L.ctaButton,
+                                    className: x.ctaButton,
                                     subscriptionTier: w.Si.TIER_2,
                                     size: l.zx.Sizes.SMALL,
                                     fullWidth: !0,
@@ -356,7 +356,7 @@ let Q = (e) => {
                             ea &&
                                 (0, r.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
-                                    className: L.ctaButton,
+                                    className: x.ctaButton,
                                     children: (0, r.jsx)(c.zxk, {
                                         variant: "primary",
                                         size: "sm",
@@ -380,10 +380,10 @@ let Q = (e) => {
                         },
                         a = null != S ? h.JO.createFromDiscoverableGuild(S) : h.JO.createFromGuildRecord(B);
                     return (0, r.jsxs)("div", {
-                        className: L.guildSection,
+                        className: x.guildSection,
                         children: [
                             (0, r.jsx)(c.vwX, {
-                                className: L.guildTitle,
+                                className: x.guildTitle,
                                 children: Z ? D.intl.string(D.t.kx6pEB) : D.intl.string(D.t.pDE7GR),
                             }),
                             (0, r.jsx)(g.Oe, {
@@ -396,11 +396,11 @@ let Q = (e) => {
                                     children: [
                                         (0, r.jsx)(c.P3F, {
                                             onClick: i,
-                                            className: L.showMoreEmojis,
+                                            className: x.showMoreEmojis,
                                             children: (0, r.jsxs)(_.Z, {
                                                 children: [
                                                     (0, r.jsx)(c.Text, {
-                                                        className: L.__invalid_showMoreEmojisLabel,
+                                                        className: x.__invalid_showMoreEmojisLabel,
                                                         variant: "text-xs/normal",
                                                         color: "none",
                                                         children: D.intl.string(D.t.vtH5ho),
@@ -408,8 +408,8 @@ let Q = (e) => {
                                                     (0, r.jsx)(c.CJ0, {
                                                         size: "md",
                                                         color: "currentColor",
-                                                        className: o()(L.showMoreEmojisArrow, {
-                                                            [L.showMoreEmojisArrowCollapsed]: !F,
+                                                        className: o()(x.showMoreEmojisArrow, {
+                                                            [x.showMoreEmojisArrowCollapsed]: !F,
                                                         }),
                                                     }),
                                                 ],
@@ -420,7 +420,7 @@ let Q = (e) => {
                                                 wrap: _.Z.Wrap.WRAP,
                                                 align: _.Z.Align.START,
                                                 justify: _.Z.Justify.START,
-                                                className: L.otherEmojisContainer,
+                                                className: x.otherEmojisContainer,
                                                 children: t.map((e) =>
                                                     (0, r.jsx)(
                                                         c.ua7,
@@ -433,8 +433,8 @@ let Q = (e) => {
                                                                     U(
                                                                         M(
                                                                             {
-                                                                                className: o()(L.otherEmoji, {
-                                                                                    [x.nonInteractingSticker]:
+                                                                                className: o()(x.otherEmoji, {
+                                                                                    [L.nonInteractingSticker]:
                                                                                         null != K && K !== e.id,
                                                                                 }),
                                                                                 onMouseEnter: () => {
@@ -471,7 +471,7 @@ let Q = (e) => {
                     });
                 };
             return (0, r.jsxs)(E.W_, {
-                className: L.popoutContent,
+                className: x.popoutContent,
                 children: [e(), (null != B || null != S) && i()],
             });
         }
@@ -479,7 +479,7 @@ let Q = (e) => {
 function $(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, r.jsx)(E.W_, {
-        className: x.popoutContent,
+        className: L.popoutContent,
         children: (0, r.jsx)(X, {
             sticker: i,
             description: D.intl.format(D.t.hGWuxc, {

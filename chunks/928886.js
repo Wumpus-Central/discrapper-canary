@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(474936),
     y = n(231338),
-    O = n(864976);
+    O = n(315);
 function v(e, t) {
     return e in t;
 }
@@ -34,12 +34,12 @@ function I(e) {
             enablePremiumBrandRefresh: P,
             isDisplayingWowMomentConfirmation: w,
         } = (0, m.JL)(),
-        { isGift: D, selectedGiftStyle: x, giftRecipient: L } = (0, h.wD)(),
+        { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, h.wD)(),
         j =
             D &&
-            (0, p.pO)(L) &&
+            (0, p.pO)(x) &&
             S === g.h8.CONFIRM &&
-            null != x &&
+            null != L &&
             (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
         M = null != n && null != S,
         k = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
@@ -59,7 +59,7 @@ function I(e) {
                       children: [
                           (0, r.jsx)(d.Z, {
                               defaultAnimationState: l.SR.LOOP,
-                              giftStyle: x,
+                              giftStyle: L,
                               className: O.seasonalGiftBoxHeaderIcon,
                           }),
                           (0, r.jsx)(s.olH, {
@@ -86,12 +86,12 @@ function I(e) {
                           showTrialBadge: B,
                           showDiscountBadge: V,
                           isGift: D,
-                          giftRecipient: L,
+                          giftRecipient: x,
                           isEligibleForTrial: B,
                           enablePremiumBrandRefresh: P,
                           isDisplayingWowMomentConfirmation: w,
                       }))),
             e
         );
-    }, [x, I, C, n, A, T, S, B, V, j, U, M, N, D, L, P, w]);
+    }, [L, I, C, n, A, T, S, B, V, j, U, M, N, D, x, P, w]);
 }

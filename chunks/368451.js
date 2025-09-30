@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(970184),
     p = n(280501),
     h = n(292419),
-    m = n(49739);
+    m = n(219879);
 function g(e, t, n) {
     return (
         t in e
@@ -184,8 +184,8 @@ function T(e) {
         ),
         w = null != S.modal,
         D = s > 1,
-        x = N === p.gH.LOADING,
-        [L, j] = i.useState(!1),
+        L = N === p.gH.LOADING,
+        [x, j] = i.useState(!1),
         [M, k] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
         [U, G] = i.useState(M),
         B = i.useMemo(() => n.some((e) => null != e.emoji), [n]);
@@ -207,8 +207,8 @@ function T(e) {
             G(M);
     }, [M, U, G, C]);
     i.useEffect(() => {
-        !L && ((M.size === U.size && Array.from(U).every((e) => M.has(e))) || Z());
-    }, [L, M, U, Z]);
+        !x && ((M.size === U.size && Array.from(U).every((e) => M.has(e))) || Z());
+    }, [x, M, U, Z]);
     let F = c.UNb;
     D ? (F = c.gzz) : 0 === u && (F = c.s6k);
     let V = (0, c.cYr)({
@@ -224,7 +224,7 @@ function T(e) {
                     c.PhF,
                     E(
                         {
-                            isProcessing: x,
+                            isProcessing: L,
                             isDisabled: g || N === p.gH.DISABLED || R,
                             className: o()(m.select, { [m.inModal]: w }),
                             options: n.map((e) => y(E({}, e), { disabled: D && !M.has(e.value) && M.size === s })),

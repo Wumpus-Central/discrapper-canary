@@ -1,52 +1,52 @@
 n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(685138),
-    l = n(373370),
-    c = n(644646),
-    u = n(353311);
+var l = n(120356),
+    s = n.n(l),
+    i = n(481060),
+    a = n(685138),
+    o = n(373370),
+    u = n(644646),
+    c = n(73231);
 let d = function (e) {
     let {
             className: t,
             autoplay: n,
-            quest: i,
+            quest: l,
             questContent: d,
-            taskDetails: f,
-            location: _,
-            sourceQuestContent: p,
+            taskDetails: p,
+            location: f,
+            sourceQuestContent: m,
         } = e,
-        h = (0, l.DD)({
-            quest: i,
-            taskDetails: f,
-            location: _,
+        b = (0, o.DD)({
+            quest: l,
+            taskDetails: p,
+            location: f,
             questContent: d,
-            sourceQuestContent: p,
+            sourceQuestContent: m,
         }),
-        m = (0, s.n)({
-            location: _,
-            questConfig: i.config,
+        E = (0, a.n)({
+            location: f,
+            questConfig: l.config,
         }).enabled;
     return (0, r.jsxs)("div", {
-        className: a()(u.wrapper, t),
-        style: m ? void 0 : { color: i.config.colors.primary },
+        className: s()(c.wrapper, t),
+        style: E ? void 0 : { color: l.config.colors.primary },
         children: [
-            (0, r.jsx)(c.Z, {
+            (0, r.jsx)(u.Z, {
                 autoplay: n,
-                className: u.rewardTile,
-                quest: i,
+                className: c.rewardTile,
+                quest: l,
                 questContent: d,
-                location: _,
-                sourceQuestContent: p,
+                location: f,
+                sourceQuestContent: m,
             }),
             (0, r.jsx)("div", {
-                className: u.copy,
-                children: (0, r.jsx)(o.Text, {
+                className: c.copy,
+                children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: h,
+                    children: b,
                 }),
             }),
         ],

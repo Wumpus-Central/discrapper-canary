@@ -8,18 +8,18 @@ var r = n(951288),
     s = n(481060),
     u = n(259580),
     d = n(785717),
-    f = n(86419),
-    g = n(978369),
+    g = n(86419),
+    f = n(978369),
     p = n(286957),
     b = n(388032),
-    m = n(200344);
+    m = n(44258);
 function O(e) {
     var t;
     let { tags: n, isCurrentUser: o, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
         P = l.qH,
-        w = o && !O && (0, f.M8)(c) && x.length < P,
+        w = o && !O && (0, g.M8)(c) && x.length < P,
         { trackUserProfileAction: I } = (0, d.KZ)(),
         E = (0, i.useRef)(new Map()),
         S = (0, i.useRef)(null),
@@ -86,7 +86,7 @@ function O(e) {
                     ],
                 }),
             w &&
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(f.Z, {
                     tags: n,
                     widgetType: c,
                     applicationId: s,
@@ -100,9 +100,9 @@ let y = (e) => {
             { trackUserProfileEditAction: c } = (0, d.KZ)(),
             u = (0, p.zK)(t);
         if (null == u) return null;
-        let { getText: g, icon: O } = u,
+        let { getText: f, icon: O } = u,
             y = () => {
-                (0, f.RZ)(o, i, t),
+                (0, g.RZ)(o, i, t),
                     c({
                         action: "TAG_REMOVED",
                         widgetEdited: o,
@@ -117,7 +117,7 @@ let y = (e) => {
                 (0, r.jsx)(s.Text, {
                     variant: "text-xxs/medium",
                     color: "text-secondary",
-                    children: g(),
+                    children: f(),
                 }),
                 n &&
                     !a &&
@@ -156,7 +156,7 @@ let y = (e) => {
                                     {
                                         onClick: y,
                                         className: m.removeButton,
-                                        "aria-label": b.intl.formatToPlainString(b.t.GCn1nZ, { tag: g() }),
+                                        "aria-label": b.intl.formatToPlainString(b.t.GCn1nZ, { tag: f() }),
                                         children: (0, r.jsx)(s.Dio, {
                                             size: "xxs",
                                             color: "currentColor",
@@ -233,23 +233,23 @@ let y = (e) => {
             let s = null != (l = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? l : 0,
                 u = null != (c = null == (a = t.current) ? void 0 : a.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
-                f = 0,
                 g = 0,
+                f = 0,
                 p = r.current;
             for (let e = 0; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((g += t.offsetWidth + 4) > 296) break;
-                    f++;
+                    if ((f += t.offsetWidth + 4) > 296) break;
+                    g++;
                 }
             }
-            g = 0;
-            for (let e = f; e < n.length; e++) {
+            f = 0;
+            for (let e = g; e < n.length; e++) {
                 let t = p.get(n[e]);
                 if (null != t) {
-                    if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
-                    f++;
+                    if ((f += t.offsetWidth + 4) > 296 - s - u - d) break;
+                    g++;
                 }
             }
-            o(n.length - f);
+            o(n.length - g);
         }, [e, t, null == n ? void 0 : n.join(""), r, o]);

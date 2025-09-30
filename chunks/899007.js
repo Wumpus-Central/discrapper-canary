@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(474936),
     I = n(671955),
-    T = n(111886);
+    T = n(66856);
 function S(e, t, n) {
     return (
         t in e
@@ -86,8 +86,8 @@ function P(e) {
             className: w,
             previewStatus: D,
         } = e,
-        { theme: x } = (0, b.z)(),
-        { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
+        { theme: L } = (0, b.z)(),
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: j } = (0, m.KZ)(),
         M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
         k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
@@ -117,7 +117,7 @@ function P(e) {
             "aria-label": t.username,
             imageClassName: null != P ? T.overlay : void 0,
             status: k ? O.Skl.UNKNOWN : F,
-            statusBackdropColor: M && !k ? (0, l.QFD)(x) : void 0,
+            statusBackdropColor: M && !k ? (0, l.QFD)(L) : void 0,
             isMobile: Z,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,
@@ -138,7 +138,7 @@ function P(e) {
                   onClick: () => {
                       j({
                           action: "PRESS_VIEW_PROFILE",
-                          analyticsLocations: L,
+                          analyticsLocations: x,
                       }),
                           null == P || P();
                   },

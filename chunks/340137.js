@@ -18,7 +18,7 @@ var r = n(951288),
     O = n(961040),
     E = n(981631),
     y = n(388032),
-    v = n(10663);
+    v = n(445202);
 let I = {
         cozy: 0,
         default: 0,
@@ -42,13 +42,13 @@ function T(e) {
         T = n || E,
         {
             backForwardButtons: N,
-            titlebarIconSize: P,
-            titlebarHoverHighlight: j,
+            titlebarIconSize: j,
+            titlebarHoverHighlight: P,
         } = (0, p.T)({ location: "NotificationsInboxTitleBarButton" }),
         x = (0, r.jsx)(u.Dkj, {
             className: v.icon,
             color: h || T ? u.TVs.colors.ICON_PRIMARY : u.TVs.colors.ICON_TERTIARY,
-            size: P,
+            size: j,
         }),
         { badge: A, badgeType: Z } = (0, _.h6)({ isSelected: E }),
         w = (0, g.isDesktop)() && N,
@@ -96,7 +96,7 @@ function T(e) {
                         })(
                             {
                                 innerRef: o,
-                                className: a()(v.clickableContainer, { [v.withHoverHighlight]: j }),
+                                className: a()(v.clickableContainer, { [v.withHoverHighlight]: P }),
                             },
                             s,
                             e,
@@ -126,12 +126,12 @@ function T(e) {
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(d.ZP, {
-                                                              width: c.Z[P],
-                                                              height: c.Z[P],
+                                                              width: c.Z[j],
+                                                              height: c.Z[j],
                                                               mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                               children: x,
                                                           }),
-                                                          (0, r.jsx)("div", { className: a()(v.unreadDot, v[P]) }),
+                                                          (0, r.jsx)("div", { className: a()(v.unreadDot, v[j]) }),
                                                       ],
                                                   })
                                                 : x,

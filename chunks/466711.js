@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(981631),
     T = n(921944),
     S = n(388032),
-    A = n(276088),
-    C = n(744114);
+    A = n(30989),
+    C = n(564355);
 function N(e, t, n) {
     return (
         t in e
@@ -94,7 +94,7 @@ function D(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         a = () => {
             var t;
@@ -140,7 +140,7 @@ function x(e) {
         ),
     );
 }
-let L = E.Z.Millis.DAYS_30;
+let x = E.Z.Millis.DAYS_30;
 function j(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
@@ -150,7 +150,7 @@ function j(e) {
         N = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        j = null != n.firstTimeNotice && !s && C && R >= L,
+        j = null != n.firstTimeNotice && !s && C && R >= x,
         [M, k] = (0, f.XR)(
             j ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -185,7 +185,7 @@ function j(e) {
                       onClick: V,
                   })
                 : void 0 !== w && Z
-                  ? (0, r.jsx)(x, {
+                  ? (0, r.jsx)(L, {
                         config: w,
                         hovered: G,
                         onClick: V,

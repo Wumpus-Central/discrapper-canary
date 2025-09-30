@@ -35,13 +35,13 @@ var r = n(951288),
     P = n(717953),
     w = n(583901),
     D = n(469115),
-    x = n(981631),
-    L = n(474936),
+    L = n(981631),
+    x = n(474936),
     j = n(874893),
     M = n(526761),
     k = n(231338),
     U = n(388032),
-    G = n(90290);
+    G = n(227674);
 function B(e, t, n) {
     return (
         t in e
@@ -125,8 +125,8 @@ let K = Object.freeze({
     z = i.createContext({}),
     q = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        A.default.track(x.rMx.CLIENT_THEME_UPDATED, {
-            feature_name: L.QP.CLIENT_THEME,
+        A.default.track(L.rMx.CLIENT_THEME_UPDATED, {
+            feature_name: x.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r,
@@ -171,7 +171,7 @@ let K = Object.freeze({
     Q = (e) => {
         var t, n;
         let { type: i, isPreview: a, isCoachmark: o } = e;
-        if ((null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === L.Si.TIER_2 && a)
+        if ((null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === x.Si.TIER_2 && a)
             return null;
         let l = (0, s.EQ)({
             type: i,
@@ -212,11 +212,11 @@ let K = Object.freeze({
         let { renderCTAButtons: a, isCoachmark: o } = e,
             { type: s } = i.useContext(z),
             [c] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
-            u = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === L.Si.TIER_2;
+            u = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === x.Si.TIER_2;
         return "EDITOR" === s && c && u
             ? (0, r.jsx)(y.ZP, {
-                  type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                  subscriptionTier: L.Si.TIER_2,
+                  type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                  subscriptionTier: x.Si.TIER_2,
                   children: U.intl.format(U.t.G8yQXl, { onPremiumClick: () => E.z }),
               })
             : (0, r.jsxs)("div", {
@@ -266,7 +266,7 @@ let K = Object.freeze({
                         themeName: c.Us[e.id],
                     }),
                     g && a.v2EditorEnabled && "SETTINGS" === o
-                        ? x(e)
+                        ? L(e)
                         : (0, f.ZI)(
                               {
                                   backgroundGradientPresetId: e.id,
@@ -281,7 +281,7 @@ let K = Object.freeze({
                     v((e) => e + 1);
                 }
             },
-            x = async (e) => {
+            L = async (e) => {
                 await (0, f.ZI)(
                     {
                         backgroundGradientPresetId: e.id,
@@ -293,7 +293,7 @@ let K = Object.freeze({
                     (0, m.XO)(m.wh.CLIENT_THEMES),
                     (0, S.default)();
             },
-            L = () => {
+            x = () => {
                 if (!b) return null;
                 let e = D.qt[c.Us.EASTER_EGG];
                 if (null == e) return null;
@@ -347,7 +347,7 @@ let K = Object.freeze({
                         e.id,
                     ),
                 ),
-                L(),
+                x(),
             ],
         });
     },

@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(252618),
     T = n(100159),
     N = n(646288),
-    P = n(984370),
-    j = n(706454),
+    j = n(984370),
+    P = n(706454),
     x = n(210887),
     A = n(430824),
     Z = n(496675),
@@ -43,9 +43,9 @@ var r = n(951288),
     F = n(73346),
     z = n(3570),
     W = n(689796),
-    Y = n(978436),
-    K = n(506648),
-    q = n(449275),
+    Y = n(15470),
+    q = n(506648),
+    K = n(449275),
     Q = n(445986),
     X = n(119520),
     J = n(450233),
@@ -58,7 +58,7 @@ var r = n(951288),
     el = n(981631),
     ea = n(186901),
     eo = n(388032),
-    es = n(868113);
+    es = n(561537);
 function ec(e, t, n) {
     return (
         t in e
@@ -196,24 +196,24 @@ class ep extends i.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, r.jsx)(P.Z, {
+        return (0, r.jsx)(j.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(P.Z.Icon, {
+                              (0, r.jsx)(j.Z.Icon, {
                                   icon: d.lO_,
                                   "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                               }),
-                              (0, r.jsx)(P.Z.Title, { children: n.name }),
+                              (0, r.jsx)(j.Z.Title, { children: n.name }),
                           ],
                       })
                     : null != t && t.premium
                       ? (0, r.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(P.Z.Icon, {
+                                (0, r.jsx)(j.Z.Icon, {
                                     icon: d.SrA,
                                     "aria-label": eo.intl.string(eo.t.Ipxkoq),
                                 }),
@@ -223,11 +223,11 @@ class ep extends i.PureComponent {
                       : null != t
                         ? (0, r.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(P.Z.Icon, {
+                                  (0, r.jsx)(j.Z.Icon, {
                                       icon: d.lO_,
                                       "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                                   }),
-                                  (0, r.jsx)(P.Z.Title, { children: t.name }),
+                                  (0, r.jsx)(j.Z.Title, { children: t.name }),
                               ],
                           })
                         : null,
@@ -306,7 +306,7 @@ class ep extends i.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, r.jsx)(K.Z, { sku: e });
+        return (0, r.jsx)(q.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -344,7 +344,7 @@ class ep extends i.PureComponent {
         });
     }
     renderApplicationLegalInfo(e) {
-        return (0, r.jsx)(q.Z, {
+        return (0, r.jsx)(K.Z, {
             sku: e,
             className: es.legalInfo,
         });
@@ -513,7 +513,7 @@ class ep extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("37100")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -655,7 +655,7 @@ class ep extends i.PureComponent {
 }
 let ef = (0, _.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([L.Z, x.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, A.Z, R.Z], (e) => {
+        o.ZP.connectStores([L.Z, x.Z, P.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, A.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
@@ -686,7 +686,7 @@ let ef = (0, _.Z)(
                 isInTestMode: null != l && c,
                 matureAgree: L.Z.didMatureAgree,
                 theme: x.Z.theme,
-                locale: j.default.locale,
+                locale: P.default.locale,
                 guild: null != s ? A.Z.getGuild(s.getGuildId()) : null,
             };
         })(ep),

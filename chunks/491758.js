@@ -24,9 +24,9 @@ var r = n(951288),
     S = n(37113),
     A = n(526761),
     C = n(388032),
-    N = n(298291),
-    R = n(622025),
-    P = n(10198);
+    N = n(556865),
+    R = n(749799),
+    P = n(197571);
 function w(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,7 +86,7 @@ function j() {
             remindersEnabled: n,
             decoupledClipsEnabled: a,
             clipsLength: w,
-            clipsQuality: x,
+            clipsQuality: L,
         } = (0, s.cj)([E.Z], () => E.Z.getSettings()),
         j = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
         M = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0)),
@@ -159,7 +159,7 @@ function j() {
         ),
         H = i.useCallback(
             (e) => {
-                c.Z.setKeybind(L(D({}, M), { shortcut: e }));
+                c.Z.setKeybind(x(D({}, M), { shortcut: e }));
             },
             [M],
         );
@@ -266,23 +266,23 @@ function j() {
                         select: (e) =>
                             O.yi({
                                 resolution: e,
-                                frameRate: x.frameRate,
+                                frameRate: L.frameRate,
                             }),
                         title: C.intl.string(C.t.aFudZG),
                         note: C.intl.string(C.t.nIrkW1),
-                        value: x.resolution,
+                        value: L.resolution,
                         options: F,
                     }),
                     (0, r.jsx)(v.Q, {
                         className: R.formItem,
                         select: (e) =>
                             O.yi({
-                                resolution: x.resolution,
+                                resolution: L.resolution,
                                 frameRate: e,
                             }),
                         title: C.intl.string(C.t["2wScLy"]),
                         note: C.intl.string(C.t["Rf9+f3"]),
-                        value: x.frameRate,
+                        value: L.frameRate,
                         options: V,
                     }),
                     (0, r.jsx)(v.O, {

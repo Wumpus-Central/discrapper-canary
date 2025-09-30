@@ -1,10 +1,10 @@
-r.d(e, { Z: () => s });
-var t = r(951288),
-    n = r(882455);
+t.d(e, { Z: () => s });
+var n = t(951288),
+    r = t(84773);
 function s(i) {
     let { children: e } = i;
-    return (0, t.jsx)("div", {
-        className: n.container,
+    return (0, n.jsx)("div", {
+        className: r.container,
         children: e,
     });
 }

@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(592125),
     _ = n(231338),
     p = n(388032),
-    h = n(885347);
+    h = n(15456);
 function m(e) {
     let { stream: t, width: n } = e,
         i = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId));

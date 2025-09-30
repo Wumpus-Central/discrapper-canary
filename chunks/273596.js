@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(415506);
+n.d(t, { Z: () => P }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -20,7 +20,7 @@ var r = n(951288),
     y = n(188493),
     v = n(294330),
     I = n(981631),
-    S = n(17923);
+    S = n(857847);
 let C = Object.freeze({
         top: 0,
         bottom: 0,
@@ -38,13 +38,13 @@ let C = Object.freeze({
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    P = s().throttle(f.c6, 1000, {
+    j = s().throttle(f.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
-function j(e) {
+function P(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: P, searchCategoryId: x } = (0, b.f)({ loadId: t }),
         A = 0 === s.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
@@ -55,9 +55,9 @@ function j(e) {
         B = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && P();
             },
-            [A, f, s.length, M, j],
+            [A, f, s.length, M, P],
         ),
         H = i.useCallback(
             (e) => {
@@ -76,7 +76,7 @@ function j(e) {
         L((0, m.PM)());
     }, [I]),
         i.useEffect(() => {
-            P({
+            j({
                 loadId: t,
                 searchId: w,
                 query: I,
@@ -116,7 +116,7 @@ function j(e) {
             },
             [A, R, t],
         ),
-        K = i.useCallback(
+        q = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -130,7 +130,7 @@ function j(e) {
             },
             [A, R],
         ),
-        q = i.useCallback(
+        K = i.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -214,12 +214,12 @@ function j(e) {
                         let t = null == (e = B.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 240 && j();
+                        t.scrollHeight - n < 240 && P();
                     },
                     100,
                     { leading: !0 },
                 ),
-            [j],
+            [P],
         ),
         ee = R ? C : T;
     return (0, r.jsx)("div", {
@@ -234,8 +234,8 @@ function j(e) {
             padding: ee,
             renderItem: J,
             renderSection: Y,
-            getSectionHeight: K,
-            getItemKey: q,
+            getSectionHeight: q,
+            getItemKey: K,
             getItemHeight: Q,
             chunkSize: 24,
             onScroll: $,

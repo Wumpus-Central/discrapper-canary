@@ -19,8 +19,8 @@ var r = n(951288),
     m = n(724994),
     b = n(921944),
     _ = n(388032),
-    O = n(820657),
-    E = n(74866);
+    O = n(890088),
+    E = n(583140);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,9 +85,9 @@ let I = (e) => {
     S = (e) => {
         let { product: t, iconSize: l = 20, className: E, enableHoverEffect: S = !1, isCardHovered: C = !0 } = e,
             [T, N] = (0, u.US)([o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-            P = T === o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-            j = h.default.getCurrentUser(),
-            x = null != j ? d.Z.getFirstWishlistId(j.id) : null,
+            j = T === o.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+            P = h.default.getCurrentUser(),
+            x = null != P ? d.Z.getFirstWishlistId(P.id) : null,
             A = (0, f.n)(x, t.skuId),
             Z = i.useRef(null),
             [w, L] = i.useState(null),
@@ -118,7 +118,7 @@ let I = (e) => {
                         try {
                             await p.Z.addSkuToWishlist(t.skuId),
                                 L(null),
-                                P &&
+                                j &&
                                     ((0, s.ZDy)(async () => {
                                         let { default: e } = await n.e("36340").then(n.bind(n, 874533));
                                         return (n) => (0, r.jsx)(e, v(y({}, n), { product: t }));
@@ -135,9 +135,9 @@ let I = (e) => {
                         }
                     }
                 },
-                [R, t, P, N, x, L],
+                [R, t, j, N, x, L],
             );
-        if ((!C && !R) || null == j) return null;
+        if ((!C && !R) || null == P) return null;
         if (G || U)
             return (0, r.jsx)(s.ua7, {
                 text: _.intl.string(_.t["02QYZG"]),
@@ -158,7 +158,7 @@ let I = (e) => {
                     ),
             });
         let V = R ? _.intl.string(_.t.yr9TTU) : _.intl.string(_.t["8DkMER"]),
-            H = P
+            H = j
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Text, {

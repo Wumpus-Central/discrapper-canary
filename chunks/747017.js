@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(122943),
     b = n(556638),
     y = n(981631),
-    O = n(666998);
+    O = n(80568);
 function v(e) {
     let {
         user: t,
@@ -38,7 +38,7 @@ function v(e) {
         D = (0, l.e7)([d.Z], () =>
             w ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null,
         ),
-        x = i.useMemo(() => {
+        L = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -52,8 +52,8 @@ function v(e) {
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let L = (null == t ? void 0 : t.bot) === !0,
-        j = ((null == x ? void 0 : x.state) != null || null != D) && "xs" === S,
+    let x = (null == t ? void 0 : t.bot) === !0,
+        j = ((null == L ? void 0 : L.state) != null || null != D) && "xs" === S,
         M = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
@@ -63,7 +63,7 @@ function v(e) {
                     textClassName: I,
                     iconClassName: T,
                     hideText: j,
-                    hideIcon: L,
+                    hideIcon: x,
                     hideTooltip: R,
                 });
             let e =
@@ -80,7 +80,7 @@ function v(e) {
                       textClassName: I,
                       iconClassName: T,
                       hideText: j,
-                      hideIcon: L,
+                      hideIcon: x,
                       hideTooltip: R,
                   })
                 : null != v
@@ -99,10 +99,10 @@ function v(e) {
             [O.textSm]: "sm" === S,
         }),
         U = () =>
-            null == x && null == D
+            null == L && null == D
                 ? null
                 : (0, r.jsx)(m.Z, {
-                      customStatusActivity: x,
+                      customStatusActivity: L,
                       textSize: S,
                       animateEmoji: A,
                       hideEmoji: N,

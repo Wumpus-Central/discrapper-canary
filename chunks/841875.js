@@ -12,11 +12,11 @@ var r = n(951288),
     p = n(626135),
     f = n(381585),
     h = n(501431),
-    C = n(215023),
-    _ = n(981631),
+    _ = n(215023),
+    C = n(981631),
     m = n(231338),
     b = n(388032),
-    E = n(92818);
+    E = n(587635);
 function S() {
     let { onToggleOrbEligible: e, orbEligible: t, reset: n, hasFilters: i } = (0, h.S)(),
         s = i(),
@@ -24,7 +24,7 @@ function S() {
         c = (0, f.sp)(),
         d = l.useCallback(
             (e) => {
-                p.default.track(_.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                p.default.track(C.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == c ? void 0 : c.sessionId,
                     page_section: null == c ? void 0 : c.pageSection,
                     page_category: null == c ? void 0 : c.pageCategory,
@@ -47,7 +47,7 @@ function S() {
                         className: E.filterTitle,
                         children: b.intl.string(b.t.Qk6r1d),
                     }),
-                    C.xg.map((e) =>
+                    _.xg.map((e) =>
                         (0, r.jsx)(
                             v,
                             {

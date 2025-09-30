@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(471253),
     w = n(565799),
     D = n(590415),
-    x = n(911560),
-    L = n(488131),
+    L = n(911560),
+    x = n(488131),
     j = n(814820),
     M = n(314897),
     k = n(523746),
@@ -121,7 +121,7 @@ function eD(e, t) {
     }
     return n;
 }
-function ex(e, t) {
+function eL(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -132,7 +132,7 @@ function ex(e, t) {
         e
     );
 }
-function eL(e) {
+function ex(e) {
     K.Z.captureException(e), new p.Z("SystemMessage").error("", e);
 }
 function ej(e) {
@@ -266,16 +266,16 @@ function eB(e) {
                 var n;
                 let r = null == (n = t.messageReference) ? void 0 : n.channel_id;
                 if (null != r) {
-                    await x.Z.loadThread(r);
+                    await L.Z.loadThread(r);
                     let t = U.Z.getChannel(r);
-                    null != t && (0, L.ok)(t, e.shiftKey);
+                    null != t && (0, x.ok)(t, e.shiftKey);
                 }
             },
             [t],
         ),
         d = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("91315"), n.e("91792")]).then(n.bind(n, 223901));
+                let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
                 return (t) => (0, r.jsx)(e, ew({ channel: a }, t));
             });
         }, [a]),
@@ -285,10 +285,10 @@ function eB(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("3297")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("46154"), n.e("89381")]).then(
                             n.bind(n, 422200),
                         );
-                        return (t) => (0, r.jsx)(e, ex(ew({}, t), { channel: a }));
+                        return (t) => (0, r.jsx)(e, eL(ew({}, t), { channel: a }));
                     });
             },
             [t],
@@ -657,14 +657,14 @@ function e8(e) {
         compact: i,
     });
 }
-function e6(e) {
+function e5(e) {
     let { message: t, channel: n } = e;
     return (0, r.jsx)($.Z, {
         message: t,
         channel: n,
     });
 }
-function e5(e) {
+function e6(e) {
     let { message: t, channel: n } = e,
         i = t.giftingPrompt,
         o = (0, a.e7)([V.default], () => V.default.getUser(null == i ? void 0 : i.recipientUserId));
@@ -765,9 +765,9 @@ let tn = Object.freeze({
     [eC.uaV.VOICE_HANGOUT_INVITE]: void 0,
     [eC.uaV.POLL_RESULT]: T.Z,
     [eC.uaV.CHANGELOG]: void 0,
-    [eC.uaV.NITRO_NOTIFICATION]: e6,
+    [eC.uaV.NITRO_NOTIFICATION]: e5,
     [eC.uaV.CHANNEL_LINKED_TO_LOBBY]: e7,
-    [eC.uaV.GIFTING_PROMPT]: e5,
+    [eC.uaV.GIFTING_PROMPT]: e6,
     [eC.uaV.IN_GAME_MESSAGE_NUX]: e9,
     [eC.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: E.Cn,
     [eC.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: E.Ue,
@@ -787,7 +787,7 @@ function tr(e) {
         { type: o } = t,
         s = tn[o];
     return null == s
-        ? (eL(Error("unknown message type ".concat(t.type))), null)
+        ? (ex(Error("unknown message type ".concat(t.type))), null)
         : (0, r.jsx)(J.ZP, {
               message: t,
               content: (0, q.ZP)(t).content,

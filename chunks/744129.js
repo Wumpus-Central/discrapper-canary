@@ -33,9 +33,9 @@ var i = n(120356),
     R = n(476442),
     P = n(474936),
     w = n(388032),
-    D = n(518520),
-    x = n(895601),
-    L = n(381126),
+    D = n(1721),
+    L = n(895601),
+    x = n(381126),
     j = n(234286);
 function M(e, t, n) {
     return (
@@ -169,12 +169,12 @@ function Z(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("img", {
-                        src: L,
+                        src: x,
                         alt: "",
                         className: a()(D.bigCloud, D[T]),
                     }),
                     (0, r.jsx)("img", {
-                        src: x,
+                        src: L,
                         alt: "",
                         className: a()(D.smallCloud, D[T]),
                     }),

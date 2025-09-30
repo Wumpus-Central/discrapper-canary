@@ -25,7 +25,7 @@ var r = n(951288),
     A = n(228168),
     C = n(231338),
     N = n(388032),
-    R = n(923805);
+    R = n(31948);
 function P(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function D(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,22 +78,22 @@ function x(e, t) {
         e
     );
 }
-let L = 250,
+let x = 250,
     j = 24;
 function M(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
-            return x(w({}, e), {
+            return L(w({}, e), {
                 animationPhase: "ready",
                 height: t.height,
             });
         case "START_EXPAND_ANIMATION":
-            return x(w({}, e), {
+            return L(w({}, e), {
                 animationPhase: "animating",
                 height: t.height,
             });
         case "ANIMATION_COMPLETE":
-            return x(w({}, e), {
+            return L(w({}, e), {
                 animationPhase: "done",
                 height: "auto",
             });
@@ -108,7 +108,7 @@ let k = {
 function U(e) {
     let { user: t, currentUser: n, guildId: a, onOpenUserProfileModal: g, onClose: P } = e,
         D = (0, _.Dt)(),
-        { analyticsLocations: x } = (0, f.ZP)(),
+        { analyticsLocations: L } = (0, f.ZP)(),
         { trackUserProfileAction: U } = (0, E.KZ)(),
         { live: G, stream: B } = (0, b.Z)(t.id),
         { voiceChannel: Z, voiceActivity: F } = (0, y.Z)({
@@ -155,7 +155,7 @@ function U(e) {
                           onClick: () => {
                               U({
                                   action: "PRESS_VIEW_PROFILE",
-                                  analyticsLocations: x,
+                                  analyticsLocations: L,
                               }),
                                   g({ section: A.oh.ACTIVITY });
                           },
@@ -169,7 +169,7 @@ function U(e) {
             if (null == q.current || null == Q.current) return;
             U({
                 action: "PRESS_SHOW_MORE_ACTIVITY",
-                analyticsLocations: x,
+                analyticsLocations: L,
             });
             let e = q.current.getBoundingClientRect().height,
                 t = Q.current.getBoundingClientRect().height;
@@ -189,9 +189,9 @@ function U(e) {
                                 height: "auto",
                             }),
                                 null == (e = X.current) || e.focus();
-                        }, L));
+                        }, x));
                 });
-        }, [x, U]);
+        }, [L, U]);
     if (
         ((0, c.zq)(() => {
             null != J.current && window.clearTimeout(J.current);

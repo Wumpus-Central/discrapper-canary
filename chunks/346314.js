@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(607070),
     f = n(865672),
     _ = n(109161),
-    p = n(10515);
+    p = n(836484);
 function h(e, t, n) {
     return (
         t in e
@@ -123,13 +123,13 @@ function O(e) {
             roleStyle: "username",
             animateGradient: E || v || (null == O ? void 0 : O.animate),
         }),
-        x = (0, f.EJ)(n),
-        L = {
+        L = (0, f.EJ)(n),
+        x = {
             className: o()(p.name, g, y, {
                 [p.username]: A,
                 [w]: R,
             }),
-            children: x,
+            children: L,
         },
         j = {
             className: o()(p.nameGlow, D, y),
@@ -163,10 +163,10 @@ function O(e) {
                                       color: "currentColor",
                                       variant: b,
                                   },
-                                  L,
+                                  x,
                               ),
                           )
-                        : (0, r.jsx)("span", m({}, L)),
+                        : (0, r.jsx)("span", m({}, x)),
                     R &&
                         (null != b
                             ? (0, r.jsx)(

@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(682947),
     I = n(981631),
     T = n(388032),
-    S = n(767991);
+    S = n(73704);
 function A(e, t, n) {
     return (
         t in e
@@ -146,7 +146,7 @@ let D = {
     },
     [y.Q.NONE]: {},
 };
-function x(e) {
+function L(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)("div", {
         className: S.tooltipPremiumFooterContainer,
@@ -177,7 +177,7 @@ function x(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let { badgeType: t, guildTraits: n } = e,
         { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, v.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
@@ -206,7 +206,7 @@ function L(e) {
                         : null,
                 ],
             }),
-            n.premium ? (0, r.jsx)(x, { guildTraits: n }) : null,
+            n.premium ? (0, r.jsx)(L, { guildTraits: n }) : null,
         ],
     });
 }
@@ -241,14 +241,14 @@ function j(e) {
             ]).size)
                 ? a
                 : 18,
-        x = (0, s.e7)([m.default, h.ZP], () => {
+        L = (0, s.e7)([m.default, h.ZP], () => {
             let e = m.default.getCurrentUser();
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
         j = (0, s.e7)([p.Z], () => p.Z.theme),
         M = (0, O.XX)(o),
         k = (0, y.i)(M),
-        U = i.useMemo(() => M.premium && x && !A, [A, M.premium, x]),
+        U = i.useMemo(() => M.premium && L && !A, [A, M.premium, L]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -285,7 +285,7 @@ function j(e) {
         color: l,
         position: d,
         "aria-label": N,
-        text: (0, r.jsx)(L, {
+        text: (0, r.jsx)(x, {
             badgeType: k,
             guildTraits: M,
         }),

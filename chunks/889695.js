@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(95457);
+    I = n(124650);
 function T(e) {
     var t;
     return (0, r.jsx)("span", {
@@ -40,10 +40,10 @@ function S(e) {
         R = C === y.z.SERVER_SHOP,
         P = (0, l.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
         [w, D] = (0, c.A7R)(null == N ? [] : g.default.keys(N)),
-        x = i.useRef(a);
+        L = i.useRef(a);
     i.useEffect(() => {
         let e = {},
-            t = x.current;
+            t = L.current;
         if (null != t && null != C) {
             for (let t of w) {
                 let n = S[t];
@@ -55,7 +55,7 @@ function S(e) {
             });
         }
     }, [w, C, S]);
-    let L = null != a && null != n && null != P ? A.find((e) => P.roles.includes(e.id)) : void 0,
+    let x = null != a && null != n && null != P ? A.find((e) => P.roles.includes(e.id)) : void 0,
         j = i.useMemo(
             () =>
                 null != a && null != n
@@ -64,9 +64,9 @@ function S(e) {
                               var t;
                               return !R || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == L ? void 0 : L.id) === e.id || m.r6(a, n.id, L, e))
+                          .filter((e) => (null == x ? void 0 : x.id) === e.id || m.r6(a, n.id, x, e))
                     : [],
-            [a, n, R, L, A],
+            [a, n, R, x, A],
         );
     if (null == n || null == a || null == P) return null;
     let M = {};

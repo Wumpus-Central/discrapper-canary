@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(981631),
     y = n(65154),
     O = n(388032),
-    v = n(918165),
-    I = n(10198);
+    v = n(118896),
+    I = n(197571);
 function T(e, t, n) {
     return (
         t in e
@@ -116,11 +116,11 @@ function P(e) {
             "onSelectDevice",
             "hideDeviceTypeIcon",
         ]);
-    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = R(t),
+    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = R(t),
         { analyticsLocations: j } = (0, d.ZP)(),
         M = (0, s.e7)([f.Z], () => f.Z.theme),
         [k, U] = i.useState(u),
-        G = L(a),
+        G = x(a),
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
         V = null != _ ? _ : F,
@@ -129,7 +129,7 @@ function P(e) {
         W = (0, r.jsx)(c.R94, {
             type: c.R94.Types.DESCRIPTION,
             className: I.marginTop8,
-            children: x(),
+            children: L(),
         }),
         K = i.useCallback(
             (e) => {

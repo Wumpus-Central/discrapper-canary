@@ -34,10 +34,10 @@ var r,
     P = n(283756),
     w = n(793148),
     D = n(981631),
-    x = n(217702),
-    L = n(388032),
-    j = n(174050),
-    M = n(465106);
+    L = n(217702),
+    x = n(388032),
+    j = n(55343),
+    M = n(149715);
 function k(e, t, n) {
     return (
         t in e
@@ -191,7 +191,7 @@ class X extends (r = o.Component) {
                   className: j.videoButton,
                   onClick: r,
                   tabIndex: o ? -1 : 0,
-                  "aria-label": L.intl.string(L.t.ZcgDJS),
+                  "aria-label": x.intl.string(x.t.ZcgDJS),
                   children: (0, a.jsx)(
                       p.fpf,
                       {
@@ -207,14 +207,14 @@ class X extends (r = o.Component) {
                     className: j.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
-                    "aria-label": L.intl.string(L.t.hsvh0t),
+                    "aria-label": x.intl.string(x.t.hsvh0t),
                     children: (0, a.jsx)(O.Z, { className: j.controlIcon }, "replay"),
                 })
               : (0, a.jsx)(p.P3F, {
                     className: j.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
-                    "aria-label": L.intl.string(L.t.RscU7O),
+                    "aria-label": x.intl.string(x.t.RscU7O),
                     children: (0, a.jsx)(
                         p.o1U,
                         {
@@ -726,7 +726,7 @@ class et extends (i = o.PureComponent) {
                   autoPlay: s,
                   height: u,
                   responsive: i && !l,
-                  mediaLayoutType: l ? x.hV.STATIC : o,
+                  mediaLayoutType: l ? L.hV.STATIC : o,
                   onClick: this.handleVideoClick,
                   onEnded: this.handleEnded,
                   onError: this.handleError,
@@ -812,7 +812,7 @@ class et extends (i = o.PureComponent) {
                   children:
                       t === Y.VIDEO
                           ? (0, a.jsx)(b.Z, {
-                                "aria-label": L.intl.string(L.t["2nM3Pj"]),
+                                "aria-label": x.intl.string(x.t["2nM3Pj"]),
                                 className: j.videoButton,
                                 iconClassName: j.controlIcon,
                                 guestWindow: window,
@@ -882,7 +882,7 @@ class et extends (i = o.PureComponent) {
         ) {
             let t = this.getWidth();
             return (0, a.jsxs)("div", {
-                className: l()(h, { [j.wrapperMediaMosaic]: c === x.hV.MOSAIC }),
+                className: l()(h, { [j.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
                 style: s
                     ? void 0
                     : {
@@ -906,7 +906,7 @@ class et extends (i = o.PureComponent) {
             });
         }
         return (0, a.jsxs)("div", {
-            className: l()(h, j.newMosaicStyle, i, { [j.wrapperMediaMosaic]: c === x.hV.MOSAIC }),
+            className: l()(h, j.newMosaicStyle, i, { [j.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
             "data-fullscreen": d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,

@@ -37,9 +37,9 @@ var r = n(951288),
     D = n(541716),
     U = n(752305),
     B = n(190210),
-    F = n(516887),
-    H = n(974251),
-    V = n(893718),
+    H = n(516887),
+    V = n(974251),
+    F = n(893718),
     G = n(436660),
     z = n(680835),
     W = n(28546),
@@ -91,9 +91,9 @@ var r = n(951288),
     eD = n(838440),
     eU = n(127654),
     eB = n(979956),
-    eF = n(413251),
-    eH = n(655687),
-    eV = n(775685),
+    eH = n(413251),
+    eV = n(655687),
+    eF = n(775685),
     eG = n(583027),
     ez = n(25007),
     eW = n(685006),
@@ -104,8 +104,8 @@ var r = n(951288),
     eJ = n(981631),
     eQ = n(959517),
     e$ = n(388032),
-    e0 = n(161655),
-    e1 = n(599610);
+    e0 = n(97009),
+    e1 = n(180376);
 function e2(e, t, n) {
     return (
         t in e
@@ -289,7 +289,7 @@ class e9 extends i.PureComponent {
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
-                    : (0, r.jsx)(V.ZP, {
+                    : (0, r.jsx)(F.ZP, {
                           ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
@@ -659,7 +659,7 @@ class e9 extends i.PureComponent {
                 null != r && (G.Q.select(r, []), r.insertText(e), null == (n = this.editorRef) || n.focus());
             }),
             e2(this, "renderAttachButton", (e, t) =>
-                (0, r.jsx)(H.Z, {
+                (0, r.jsx)(V.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: ej.d.ChannelMessage,
@@ -669,7 +669,7 @@ class e9 extends i.PureComponent {
                 }),
             ),
             e2(this, "renderApplicationCommandIcon", (e, t, n) =>
-                (0, r.jsx)(F.Z, {
+                (0, r.jsx)(H.Z, {
                     className: n,
                     command: e,
                     section: t,
@@ -785,11 +785,11 @@ class te extends i.PureComponent {
                 [e1.barWithAppLauncherButton]: O,
                 [e1.barWithAppsDMsUI]: j,
             }),
-            { enabled: F } = e_.Z.getCurrentConfig({
+            { enabled: H } = e_.Z.getCurrentConfig({
                 guildId: null == I ? void 0 : I.guild_id,
                 location: "ChannelChat",
             }),
-            H = F && null != P && null != I && null != I.guild_id;
+            V = H && null != P && null != I && null != I.guild_id;
         return (0, r.jsx)(
             y.Z,
             {
@@ -823,7 +823,7 @@ class te extends i.PureComponent {
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
                                     children: [
-                                        H &&
+                                        V &&
                                             (0, r.jsx)(eX.Z, {
                                                 recipientUser: P,
                                                 voiceChannel: I,
@@ -993,7 +993,7 @@ class te extends i.PureComponent {
             }),
             e2(this, "renderAppLauncherButton", () => {
                 let { channel: e, entryPointCommandButtonRef: t, chatInputType: n } = this.props;
-                return (0, r.jsx)(eV.Z, {
+                return (0, r.jsx)(eF.Z, {
                     channel: e,
                     type: n,
                     animateRef: this.appIconAnimateRef,
@@ -1026,7 +1026,7 @@ class te extends i.PureComponent {
 }
 let tt = i.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
-        { placeholder: o, accessibilityLabel: s } = (0, eH.Z)({ channel: t }),
+        { placeholder: o, accessibilityLabel: s } = (0, eV.Z)({ channel: t }),
         c = (0, ed.S)(eN.default.getCurrentUser(), t),
         [u] = (0, X.AB)(null == n ? void 0 : n.id),
         h = (0, q.Ux)(null == n ? void 0 : n.id),
@@ -1082,11 +1082,11 @@ let tt = i.memo(function (e) {
         D = (0, d.e7)([eZ.Z], () => eZ.Z.getVoiceChannelId()),
         U = (0, d.e7)([eO.Z], () => eO.Z.getChannel(D)),
         B = (0, d.e7)([eN.default], () => (t.type !== eJ.d4z.DM ? null : eN.default.getUser(t.getRecipientId()))),
-        F = (0, d.e7)([es.ZP, ev.default], () => es.ZP.getUserCombo(ev.default.getId(), t.id)),
-        H = (0, b.iD)(t),
-        V = (0, b.d7)(t),
-        G = H.length > 0 || t.rateLimitPerUser > 0 || null != F || null != V,
-        { showLinkedLobbyApplicationLoadingIndicator: W } = (0, eF.Z)(t.linkedLobby),
+        H = (0, d.e7)([es.ZP, ev.default], () => es.ZP.getUserCombo(ev.default.getId(), t.id)),
+        V = (0, b.iD)(t),
+        F = (0, b.d7)(t),
+        G = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
+        { showLinkedLobbyApplicationLoadingIndicator: W } = (0, eH.Z)(t.linkedLobby),
         Y = (0, z.Z)("ChannelChat");
     return (0, r.jsx)(te, {
         channel: t,

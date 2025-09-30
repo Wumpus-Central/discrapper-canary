@@ -25,11 +25,11 @@ var r = n(951288),
     A = n(273313),
     C = n(981631),
     N = n(388032),
-    R = n(313911),
-    P = n(285236),
-    w = n(465106),
-    D = n(10198);
-function x(e, t, n) {
+    R = n(740508),
+    P = n(315091),
+    w = n(149715),
+    D = n(197571);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -148,7 +148,7 @@ function F(e) {
         })),
         P = (0, p.P6)("UserSettingsGameActivity"),
         D = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
-        [x, j] = i.useState(!1),
+        [L, j] = i.useState(!1),
         k = i.useMemo(
             () =>
                 (0, b.le)(T)
@@ -189,7 +189,7 @@ function F(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          M(L({}, t), {
+                          M(x({}, t), {
                               title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: k }),
                               subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: k }),
                               actions: [
@@ -212,7 +212,7 @@ function F(e) {
             : d.Z.toggleDetection(T);
     }
     function q() {
-        if (x) return;
+        if (L) return;
         let e = null != T.id ? y.Z.getDetectableGame(T.id) : null;
         v.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
@@ -226,7 +226,7 @@ function F(e) {
                           var i, a, o;
                           return (0, r.jsx)(
                               t,
-                              M(L({}, n), {
+                              M(x({}, n), {
                                   detectedActivity: {
                                       name: null != (i = T.name) ? i : "",
                                       application_id:
@@ -261,7 +261,7 @@ function F(e) {
                               (0, r.jsx)(
                                   g.Z,
                                   M(
-                                      L(
+                                      x(
                                           {
                                               className: R.gameVerifiedIcon,
                                               size: G,
@@ -327,7 +327,7 @@ function F(e) {
             i = t
                 ? (0, r.jsx)(u.ua7, {
                       text: N.intl.string(N.t.Vfw2Ly),
-                      children: (e) => (0, r.jsx)("i", L({ className: R.overlayWarningIcon }, e)),
+                      children: (e) => (0, r.jsx)("i", x({ className: R.overlayWarningIcon }, e)),
                   })
                 : null;
         return (0, r.jsxs)("div", {
@@ -388,7 +388,7 @@ function F(e) {
         });
     }
     function ee() {
-        return x
+        return L
             ? null
             : (0, r.jsx)("div", {
                   className: o()(w.flexCenter, w.noWrap, w.justifyBetween, R.toggleContainer),
@@ -580,7 +580,7 @@ let Y = (0, I.oH)(function () {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         u.Avr,
-                                        M(L({}, e), {
+                                        M(x({}, e), {
                                             buttonRef: _,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854), n(388685);
+n.d(t, { Z: () => g }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     o = n(481060),
@@ -6,7 +6,7 @@ var r = n(951288),
     l = n(86419),
     c = n(286957),
     s = n(388032),
-    u = n(200344);
+    u = n(44258);
 let d = i.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: a } = e;
     return (0, r.jsx)(o.v2r, {
@@ -78,8 +78,8 @@ let d = i.memo(function (e) {
         }),
     });
 });
-function f(e) {
-    let { tags: t, widgetType: n, applicationId: f, ref: g } = e,
+function g(e) {
+    let { tags: t, widgetType: n, applicationId: g, ref: f } = e,
         p = (0, i.useRef)(null),
         { trackUserProfileEditAction: b } = (0, a.KZ)(),
         m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
@@ -97,7 +97,7 @@ function f(e) {
                         b({
                             action: "TAG_ADDED",
                             widgetEdited: n,
-                            gameId: f,
+                            gameId: g,
                         }));
                 } else
                     r.has(e)
@@ -105,17 +105,17 @@ function f(e) {
                           b({
                               action: "TAG_REMOVED",
                               widgetEdited: n,
-                              gameId: f,
+                              gameId: g,
                           }))
                         : (r.add(e),
                           b({
                               action: "TAG_ADDED",
                               widgetEdited: n,
-                              gameId: f,
+                              gameId: g,
                           }));
-                (0, l.n$)(n, f, Array.from(r));
+                (0, l.n$)(n, g, Array.from(r));
             },
-            [m, b, n, f],
+            [m, b, n, g],
         ),
         y = (0, i.useCallback)(
             (e) => {
@@ -126,11 +126,11 @@ function f(e) {
                     b({
                         action: "TAG_REMOVED",
                         widgetEdited: n,
-                        gameId: f,
+                        gameId: g,
                     }),
-                    (0, l.n$)(n, f, Array.from(t));
+                    (0, l.n$)(n, g, Array.from(t));
             },
-            [m, b, n, f],
+            [m, b, n, g],
         );
     return (0, r.jsx)(o.yRy, {
         targetElementRef: p,
@@ -155,9 +155,9 @@ function f(e) {
             var t, n;
             return (0, r.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((p.current = e), (g.current = e)),
+                    null != e && ((p.current = e), (f.current = e)),
                     () => {
-                        (p.current = null), (g.current = null);
+                        (p.current = null), (f.current = null);
                     }
                 ),
                 children: (0, r.jsx)(

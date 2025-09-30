@@ -1,5 +1,5 @@
 n.d(t, {
-    TS: () => H,
+    TS: () => V,
     ud: () => D,
     v0: () => B,
 }),
@@ -35,7 +35,7 @@ var r = n(951288),
     N = n(981631),
     A = n(921944),
     w = n(388032),
-    M = n(161655);
+    M = n(97009);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -252,7 +252,7 @@ function D(e) {
                 ? (0, r.jsxs)(L, {
                       channel: t,
                       children: [
-                          F(
+                          H(
                               b,
                               t.type === N.d4z.GUILD_ANNOUNCEMENT
                                   ? w.intl.string(w.t.l1dkSE)
@@ -268,7 +268,7 @@ function D(e) {
                   })
                 : (0, r.jsxs)(i.Fragment, {
                       children: [
-                          F(
+                          H(
                               b,
                               t.type === N.d4z.GUILD_ANNOUNCEMENT
                                   ? w.intl.string(w.t.l1dkSE)
@@ -286,7 +286,7 @@ function D(e) {
         case N.d4z.GUILD_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    F(b, w.intl.string(w.t.BVZqJi)),
+                    H(b, w.intl.string(w.t.BVZqJi)),
                     (0, r.jsx)(Z.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -298,7 +298,7 @@ function D(e) {
         case N.d4z.GUILD_STAGE_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    F(b, w.intl.string(w.t.EErMzM)),
+                    H(b, w.intl.string(w.t.EErMzM)),
                     (0, r.jsx)(Z.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -315,7 +315,7 @@ function D(e) {
                 let e = (0, h.KS)(l, o);
                 O = (0, r.jsxs)(i.Fragment, {
                     children: [
-                        F(e, w.intl.string(w.t.Pnajj4)),
+                        H(e, w.intl.string(w.t.Pnajj4)),
                         (0, r.jsx)(Z.Z.Title, {
                             level: C,
                             onContextMenu: m,
@@ -331,7 +331,7 @@ function D(e) {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     O,
-                    F(j ? null : b, w.intl.string(w.t["7Xm5QE"])),
+                    H(j ? null : b, w.intl.string(w.t["7Xm5QE"])),
                     (0, r.jsx)(Z.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -428,7 +428,7 @@ function B(e, t) {
             return null;
     }
 }
-function F(e, t) {
+function H(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null !== e &&
@@ -440,7 +440,7 @@ function F(e, t) {
         ],
     });
 }
-function H(e) {
+function V(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
         a = (0, o.e7)([v.Z], () => v.Z.getGuildId()),
         s = (0, g.D)(),

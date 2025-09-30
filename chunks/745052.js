@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(797614),
     T = n(359110),
     N = n(6025),
-    P = n(897473),
-    j = n(108427),
+    j = n(897473),
+    P = n(108427),
     x = n(210887),
     A = n(313789),
     Z = n(518596),
@@ -44,14 +44,14 @@ var r = n(951288),
     z = n(355350),
     W = n(307947),
     Y = n(96479),
-    K = n(480874),
-    q = n(687683),
+    q = n(480874),
+    K = n(687683),
     Q = n(981631),
     X = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(735516),
-    et = n(161655);
+    ee = n(803882),
+    et = n(97009);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -168,7 +168,7 @@ function ei() {
             [t, m, c],
         );
     return (n.length !== t && C.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, r.jsx)(W.Z, { section: q.pS.REQUESTS })
+        ? (0, r.jsx)(W.Z, { section: K.pS.REQUESTS })
         : (0, r.jsx)(o.bG, {
               navigator: f,
               children: (0, r.jsx)(o.SJ, {
@@ -212,8 +212,8 @@ function ei() {
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,
-                                  sectionHeight: q.oi,
-                                  rowHeight: q.WN,
+                                  sectionHeight: K.oi,
+                                  rowHeight: K.WN,
                                   renderSection: O,
                                   renderRow: _,
                                   sections: [n.length],
@@ -232,7 +232,7 @@ function el(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         i = (0, c.e7)([w.ZP], () => w.ZP.getSidebarState(w.uZ)),
         l = (0, c.e7)([L.Z], () => L.Z.getChannel(null == i ? void 0 : i.channelId));
-    if (null == i || i.type !== P.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
     return (0, r.jsx)(_.Z, {
         sidebarType: _.y.MessageRequestSidebar,
@@ -316,14 +316,14 @@ let ea = (e) => {
 };
 function eo(e) {
     let { section: t } = e;
-    return t === q.pS.SPAM ? (0, r.jsx)(K.Z, {}) : (0, r.jsx)(ei, {});
+    return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
 }
 let es = (0, h.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     (0, m.ZP)(() => {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
-            (0, j.e)("message-requests"),
+            (0, P.e)("message-requests"),
             D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             C.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
@@ -332,7 +332,7 @@ let es = (0, h.Z)(function (e) {
         [u, d] = i.useState(!1),
         h = (0, c.e7)([w.ZP], () => {
             let e = w.ZP.getSidebarState(w.uZ);
-            return null != e && e.type === P.tI.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == h ? void 0 : h.channelId,
         b = null != h,
@@ -342,7 +342,7 @@ let es = (0, h.Z)(function (e) {
     i.useEffect(() => {
         null != g && !_ && O && b && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
     }, [g, O, b, _]);
-    let [v, I] = i.useState(q.pS.REQUESTS),
+    let [v, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
         };
@@ -382,12 +382,12 @@ let es = (0, h.Z)(function (e) {
                                             onItemSelect: A,
                                             children: [
                                                 (0, r.jsx)(p.njP.Item, {
-                                                    id: q.pS.REQUESTS,
+                                                    id: K.pS.REQUESTS,
                                                     className: ee.item,
                                                     children: $.intl.string($.t["7RFcXV"]),
                                                 }),
                                                 (0, r.jsx)(p.njP.Item, {
-                                                    id: q.pS.SPAM,
+                                                    id: K.pS.SPAM,
                                                     className: ee.item,
                                                     children:
                                                         0 === o

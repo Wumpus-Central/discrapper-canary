@@ -16,8 +16,8 @@ var r = n(951288),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(62222),
-    O = n(714892);
+    y = n(693450),
+    O = n(147164);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,
         I = u.JH.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
@@ -28,8 +28,8 @@ function v(e) {
         P = [];
     I && P.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
     let [w, D] = (0, c.US)(P),
-        x = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
-        L = (0, i.useCallback)(() => {
+        L = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+        x = (0, i.useCallback)(() => {
             D(E.L.TAKE_ACTION),
                 _.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
                 (0, d.I)({
@@ -46,7 +46,7 @@ function v(e) {
     return I || R
         ? (0, r.jsx)(m.Z, {
               title: b.intl.string(y.default["86GtGB"]),
-              titleIcon: x
+              titleIcon: L
                   ? (0, r.jsx)(o.IGR, {
                         text: b.intl.string(b.t.y2b7CA),
                         className: O.newBadge,
@@ -63,7 +63,7 @@ function v(e) {
                               variant: "primary",
                               size: "sm",
                               text: b.intl.string(y.default.vJqrIi),
-                              onClick: L,
+                              onClick: x,
                           }),
                       null == n &&
                           R &&

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => eL,
+    Z: () => ex,
     c: () => ew,
 });
 var r = n(951288),
@@ -32,8 +32,8 @@ var r = n(951288),
     P = n(196068),
     w = n(132144),
     D = n(131130),
-    x = n(458725),
-    L = n(492435),
+    L = n(458725),
+    x = n(492435),
     j = n(353926),
     M = n(506357),
     k = n(36459),
@@ -74,7 +74,7 @@ var r = n(951288),
     eE = n(610674),
     eb = n(65154),
     ey = n(388032),
-    eO = n(522488);
+    eO = n(50953);
 function ev(e, t, n) {
     return (
         t in e
@@ -130,7 +130,7 @@ function eS(e, t) {
 let eA = (e) => {
         var t;
         let { error: n, allowClick: i = !1 } = e,
-            a = null == (t = (0, x.hp)(n)) ? void 0 : t.errorCode,
+            a = null == (t = (0, L.hp)(n)) ? void 0 : t.errorCode,
             o = ey.intl.formatToPlainString(ey.t["ejOT9/"], { errorCode: a }),
             s = (0, r.jsx)(c.Text, {
                 variant: "text-sm/bold",
@@ -159,7 +159,7 @@ let eA = (e) => {
                     },
                 }),
                 ey.intl.string(ey.t.o3zuY2),
-                (0, r.jsx)(eA, { error: x.u.NO_INPUT_DEVICES }),
+                (0, r.jsx)(eA, { error: L.u.NO_INPUT_DEVICES }),
                 (0, r.jsx)(c.u3T, {
                     href: ef.Z.getArticleURL(em.BhN.NO_INPUT_DETECTED),
                     children: ey.intl.string(ey.t.RYKKo6),
@@ -176,7 +176,7 @@ let eA = (e) => {
                     },
                 }),
                 ey.intl.string(ey.t.nCO9bG),
-                (0, r.jsx)(eA, { error: x.u.NO_AUDIO_INPUT_DETECTED }),
+                (0, r.jsx)(eA, { error: L.u.NO_AUDIO_INPUT_DETECTED }),
                 (0, r.jsx)(c.u3T, {
                     href: ef.Z.getArticleURL(em.BhN.NO_INPUT_DETECTED),
                     children: ey.intl.string(ey.t.RYKKo6),
@@ -195,7 +195,7 @@ let eA = (e) => {
                 ey.intl.string(ey.t.dNAJ19),
                 (0, r.jsx)(eA, {
                     allowClick: !0,
-                    error: x.u.NO_AUDIO_INPUT_DETECTED,
+                    error: L.u.NO_AUDIO_INPUT_DETECTED,
                 }),
                 (0, r.jsx)(c.EyT, {
                     onClick: () => {
@@ -215,12 +215,12 @@ function ew(e) {
 function eD(e) {
     return null != e ? eu.m9[e] : null;
 }
-let ex = i.memo(function () {
+let eL = i.memo(function () {
     var e, t;
     let a = (0, l.e7)([es.default], () => es.default.getCurrentUser()),
         p = (0, l.e7)([eo.Z], () => eo.Z.getGuildId()),
         I = (0, l.e7)([eu.ZP], () => eu.ZP.getNotice()),
-        { analyticsLocations: x } = (0, T.ZP)(),
+        { analyticsLocations: L } = (0, T.ZP)(),
         ed = null == I ? void 0 : I.type,
         eh = (0, B.J)(p);
     i.useEffect(() => {
@@ -230,7 +230,7 @@ let ex = i.memo(function () {
             if (null != I && I.type === em.kVF.SURVEY && null != I.metadata) {
                 let { metadata: e } = I,
                     t = j.Z.getUserExperimentDescriptor(e.id);
-                null != t && (0, L.W9)(e.id, t),
+                null != t && (0, x.W9)(e.id, t),
                     (async () => {
                         var e, t;
                         (null == (e = I.metadata) ? void 0 : e.id) != null &&
@@ -241,7 +241,7 @@ let ex = i.memo(function () {
     let ev = null != ed ? eu.zD[ed] : null,
         eT = null != ed ? eu.o[ed] : null,
         eA = null != ed ? eu.nA[ed] : null,
-        ex = eD(ed);
+        eL = eD(ed);
     if (null == I) return null;
     if (null != ev)
         return (0, r.jsx)(w.W, {
@@ -254,12 +254,12 @@ let ex = i.memo(function () {
             noticeType: I.type,
         });
     if (null != eA) return (0, r.jsx)(P.c, { dismissibleContent: eA });
-    if (null != ex)
+    if (null != eL)
         return (0, r.jsx)(R.A, {
-            dismissibleContent: ex,
+            dismissibleContent: eL,
             noticeType: I.type,
         });
-    let eL = null == (e = I.metadata) ? void 0 : e.premiumType;
+    let ex = null == (e = I.metadata) ? void 0 : e.premiumType;
     switch (I.type) {
         case em.kVF.LURKING_GUILD:
             return (0, r.jsx)(Y.Z, {});
@@ -555,11 +555,11 @@ let ex = i.memo(function () {
                                     (0, W.Z)({
                                         initialPlanId: null,
                                         subscriptionTier: eg.Si.TIER_2,
-                                        analyticsLocations: x,
+                                        analyticsLocations: L,
                                         analyticsObject: eW,
                                     });
                                 },
-                                analyticsLocations: x,
+                                analyticsLocations: L,
                                 analyticsLocationObject: eW,
                                 context: __OVERLAY__ ? em.IlC.OVERLAY : em.IlC.APP,
                             }).then(() => _.Z(eH.id)),
@@ -773,9 +773,9 @@ let ex = i.memo(function () {
         case em.kVF.PREMIUM_UNCANCEL:
             return (0, r.jsxs)(c.qXd, {
                 color:
-                    eL === eg.p9.TIER_1
+                    ex === eg.p9.TIER_1
                         ? c.DM8.PREMIUM_TIER_1
-                        : eL === eg.p9.TIER_0
+                        : ex === eg.p9.TIER_0
                           ? c.DM8.PREMIUM_TIER_0
                           : c.DM8.PREMIUM_TIER_2,
                 children: [
@@ -795,9 +795,9 @@ let ex = i.memo(function () {
                         color: "currentColor",
                         className: eO.premiumIcon,
                     }),
-                    eL === eg.p9.TIER_1
+                    ex === eg.p9.TIER_1
                         ? ey.intl.formatToPlainString(ey.t.fXv4ws, { daysLeft: I.metadata.daysLeft })
-                        : eL === eg.p9.TIER_0
+                        : ex === eg.p9.TIER_0
                           ? ey.intl.formatToPlainString(ey.t.ZOHZMj, { daysLeft: I.metadata.daysLeft })
                           : ey.intl.formatToPlainString(ey.t.outyHh, { daysLeft: I.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -813,14 +813,14 @@ let ex = i.memo(function () {
                                     let { default: e } = await Promise.all([
                                         n.e("17938"),
                                         n.e("84992"),
-                                        n.e("12222"),
+                                        n.e("11394"),
                                     ]).then(n.bind(n, 561623));
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
                                             eS(eI({}, t), {
                                                 daysLeft: I.metadata.daysLeft,
-                                                premiumType: eL,
+                                                premiumType: ex,
                                                 analyticsSource: "Nag Bar",
                                                 premiumSubscription: I.metadata.premiumSubscription,
                                             }),
@@ -828,9 +828,9 @@ let ex = i.memo(function () {
                                 });
                         },
                         children:
-                            eL === eg.p9.TIER_1
+                            ex === eg.p9.TIER_1
                                 ? ey.intl.string(ey.t.BkbUPD)
-                                : eL === eg.p9.TIER_0
+                                : ex === eg.p9.TIER_0
                                   ? ey.intl.string(ey.t.Px978f)
                                   : ey.intl.string(ey.t.LW5tCA),
                     }),
@@ -935,9 +935,9 @@ let ex = i.memo(function () {
                             );
                         },
                     }),
-                    eL === eg.p9.TIER_1
+                    ex === eg.p9.TIER_1
                         ? ey.intl.formatToPlainString(ey.t.b6QUvb, { daysLeft: I.metadata.daysLeft })
-                        : eL === eg.p9.TIER_0
+                        : ex === eg.p9.TIER_0
                           ? ey.intl.formatToPlainString(ey.t["tURZ/P"], { daysLeft: I.metadata.daysLeft })
                           : ey.intl.formatToPlainString(ey.t.AyC74O, { daysLeft: I.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -952,9 +952,9 @@ let ex = i.memo(function () {
                                 (0, en.openUserSettings)(et.n.SUBSCRIPTIONS_PANEL, { section: em.oAB.SUBSCRIPTIONS });
                         },
                         children:
-                            eL === eg.p9.TIER_1
+                            ex === eg.p9.TIER_1
                                 ? ey.intl.string(ey.t.lboF5O)
-                                : eL === eg.p9.TIER_0
+                                : ex === eg.p9.TIER_0
                                   ? ey.intl.string(ey.t["4UPwOj"])
                                   : ey.intl.string(ey.t["P/VvGR"]),
                     }),
@@ -970,7 +970,7 @@ let ex = i.memo(function () {
         case em.kVF.AUTOMOD_QUARANTINED_USER_PROFILE:
             return (0, r.jsx)(U.Z, {
                 guildId: p,
-                analyticsLocations: x,
+                analyticsLocations: L,
             });
         case em.kVF.QUARANTINED:
             return (0, r.jsxs)(c.qXd, {
@@ -1122,10 +1122,10 @@ let ex = i.memo(function () {
             return null;
     }
 });
-function eL() {
+function ex() {
     let { analyticsLocations: e } = (0, T.ZP)(I.Z.NOTICE);
     return (0, r.jsx)(T.Gt, {
         value: e,
-        children: (0, r.jsx)(ex, {}),
+        children: (0, r.jsx)(eL, {}),
     });
 }

@@ -12,21 +12,21 @@ var r = n(951288),
     p = n(888302),
     f = n(193227),
     h = n(426171),
-    C = n(845796),
-    _ = n(841875),
+    _ = n(845796),
+    C = n(841875),
     m = n(312030),
     b = n(795343),
     E = n(763891),
     S = n(215023),
     v = n(981631),
     x = n(388032),
-    O = n(25616);
+    O = n(452785);
 function T(e) {
     let { isFullScreen: t, tab: n, sortedCategories: i, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: C } = (0, o.z)(f, n),
+        { handleScroll: _ } = (0, o.z)(f, n),
         { setCategoryRef: m, handleScrollToCategory: b } = (0, h.xV)(f.current),
         [E, S] = l.useState(p),
         [v, x] = l.useState(!1);
@@ -57,7 +57,7 @@ function T(e) {
                     (0, r.jsx)(s.yWw, {
                         className: O.shopScroll,
                         ref: f,
-                        onScroll: C,
+                        onScroll: _,
                         children: (0, r.jsx)(y, {
                             isFullScreen: t,
                             isSmallScreen: v,
@@ -74,7 +74,7 @@ function T(e) {
                         !v &&
                         (0, r.jsx)(s.Ttm, {
                             className: O.filterBar,
-                            children: (0, r.jsx)(_.Z, {}),
+                            children: (0, r.jsx)(C.Z, {}),
                         }),
                 ],
             }),
@@ -96,11 +96,11 @@ let y = (e) => {
         k = l.useRef(null),
         I = (0, g.S)((e) => e.hasDefaultFilters()),
         P = (0, u.sp)(),
-        { handlePageChange: N, currentPage: A } = (0, m.h)({
+        { handlePageChange: N, currentPage: B } = (0, m.h)({
             scrollerRef: T,
             sortedCategories: y,
         }),
-        B = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 c.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
@@ -164,7 +164,7 @@ let y = (e) => {
                                                     variant: "text-md/semibold",
                                                     children: x.intl.string(x.t.uaX709),
                                                 }),
-                                                (0, r.jsx)(C.Z, {}),
+                                                (0, r.jsx)(_.Z, {}),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
@@ -198,7 +198,7 @@ let y = (e) => {
                                         ref: k,
                                         children: (0, r.jsx)(s.Den, {
                                             className: O.filterOverlayContent,
-                                            children: (0, r.jsx)(_.Z, {}),
+                                            children: (0, r.jsx)(C.Z, {}),
                                         }),
                                     }),
                             ],
@@ -224,13 +224,13 @@ let y = (e) => {
                                 h,
                             )
                           : (0, r.jsx)(u.k0, {
-                                newValue: { pageIndex: A },
+                                newValue: { pageIndex: B },
                                 children: (0, r.jsx)(f.Z, {
                                     isFullScreen: t,
                                     sortedCategories: y,
                                     setCategoryRef: L,
-                                    currentPage: A,
-                                    handlePageChange: B,
+                                    currentPage: B,
+                                    handlePageChange: A,
                                 }),
                             }),
                 ],

@@ -11,7 +11,7 @@ var i = n(120356),
     l = n(410030),
     c = n(696936),
     u = n(903773),
-    d = n(71025);
+    d = n(672628);
 let f = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock,

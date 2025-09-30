@@ -1,4 +1,4 @@
-n.d(t, { O: () => b }), n(388685);
+n.d(t, { O: () => g }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(159691),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(237012),
     x = n(981631),
     f = n(388032),
-    g = n(91600);
-function b() {
+    b = n(113648);
+function g() {
     let { enabled: e } = (0, o.WX)({ location: "revenue_storybook" });
     return (0, a.jsxs)("div", {
         children: [e && (0, a.jsx)(j, {}), (0, a.jsx)(v, {}), (0, a.jsx)(_, {})],
@@ -24,9 +24,9 @@ function v() {
     let [e, t] = r.useState(150),
         [n, s] = r.useState(150),
         [o, p] = r.useState(500),
-        [b, v] = r.useState(c.b.DEFAULT),
+        [g, v] = r.useState(c.b.DEFAULT),
         j = () => {
-            switch (b) {
+            switch (g) {
                 case c.b.DEFAULT:
                     v(c.b.HIGHLIGHTED);
                     break;
@@ -86,7 +86,7 @@ function v() {
                         children: "Enter a number and click Set Balance to see the balance widget pill update:",
                     }),
                     (0, a.jsx)(l.FiK, {
-                        className: g.numberInput,
+                        className: b.numberInput,
                         value: e,
                         onChange: (e) => t(e),
                     }),
@@ -95,10 +95,10 @@ function v() {
                         text: "Set Balance",
                     }),
                     (0, a.jsx)("div", {
-                        className: g.interactivePillContainer,
+                        className: b.interactivePillContainer,
                         children: (0, a.jsx)(m.A4, {
                             balance: n,
-                            balanceWidgetMode: b,
+                            balanceWidgetMode: g,
                             onClick: () => j(),
                         }),
                     }),
@@ -109,7 +109,7 @@ function v() {
                             "Enter a number (loading time in milliseconds) and click Simulate Loading State to see the balance widget pill update:",
                     }),
                     (0, a.jsx)(l.FiK, {
-                        className: g.numberInput,
+                        className: b.numberInput,
                         value: o,
                         onChange: (e) => p(e),
                     }),
@@ -123,10 +123,10 @@ function v() {
                         text: "Simulate Loading State",
                     }),
                     (0, a.jsx)("div", {
-                        className: g.interactivePillContainer,
+                        className: b.interactivePillContainer,
                         children: (0, a.jsx)(m.A4, {
                             balance: n,
-                            balanceWidgetMode: b,
+                            balanceWidgetMode: g,
                             onClick: () => j(),
                         }),
                     }),

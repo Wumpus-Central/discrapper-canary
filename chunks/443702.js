@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(726985),
     I = n(981631),
     T = n(388032),
-    S = n(275765);
+    S = n(61365);
 function A(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ let D = () =>
         className: S.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class x extends i.PureComponent {
+class L extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
@@ -160,7 +160,7 @@ class x extends i.PureComponent {
               });
     }
 }
-function L() {
+function x() {
     let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
             let e = E.Z.getPremiumTypeSubscription(),
                 t = h.default.getCurrentUser();
@@ -184,5 +184,5 @@ function L() {
     if (!e.shouldRenderBillingSettings) return (0, r.jsx)(D, {});
     let { shouldRenderBillingSettings: n } = e,
         i = P(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(x, R(C({}, i), { navigateTo: t }));
+    return (0, r.jsx)(L, R(C({}, i), { navigateTo: t }));
 }

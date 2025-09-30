@@ -11,9 +11,9 @@ var r = n(951288),
     f = n(966902),
     _ = n(562618),
     p = n(803866),
-    h = n(614177),
+    h = n(490340),
     m = n(388032),
-    g = n(869918);
+    g = n(37751);
 function E(e, t, n) {
     return (
         t in e
@@ -119,7 +119,7 @@ function T(e) {
         ]);
     let w = i.useRef(null),
         D = (0, o.j1)(y),
-        x = i.useCallback(
+        L = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: E,
@@ -131,7 +131,7 @@ function T(e) {
             }),
             [E, t],
         ),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             null !== w.current && w.current.pause(), null == N || N();
         }, [N]),
         j = i.useCallback(() => {
@@ -139,7 +139,7 @@ function T(e) {
         }, [N]),
         M = i.useCallback(() => {
             null !== w.current && w.current.pause();
-            let e = x();
+            let e = L();
             (0, c.K)({
                 items: [e],
                 startingIndex: 0,
@@ -148,7 +148,7 @@ function T(e) {
             }),
                 null == N || N(),
                 null == C || C();
-        }, [x, C, N]),
+        }, [L, C, N]),
         k = D
             ? (0, r.jsx)(a.z, {
                   type: "image",
@@ -182,7 +182,7 @@ function T(e) {
     return (0, r.jsx)(
         u.m,
         O(b({}, P), {
-            onRequestClose: L,
+            onRequestClose: x,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
                 ref: R,

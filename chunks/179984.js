@@ -28,9 +28,9 @@ var r = n(951288),
     R = n(21023),
     P = n(474936),
     w = n(388032),
-    D = n(213599),
-    x = n(102655),
-    L = n(768236),
+    D = n(17355),
+    L = n(102655),
+    x = n(768236),
     j = n(314907),
     M = n(826701);
 function k(e, t, n) {
@@ -106,7 +106,7 @@ let Z = () => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? x : L) : (0, l.wj)(i) ? j : M;
+        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? j : M;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -183,8 +183,8 @@ let Z = () => {
             {
                 className: a,
                 hideCTAs: C = !1,
-                headingOverride: x,
-                hidePill: L = !1,
+                headingOverride: L,
+                hidePill: x = !1,
                 selectedPlanColumnClassName: j,
                 selectedPlanTier: M = P.p9.TIER_2,
             } = e,
@@ -282,7 +282,7 @@ let Z = () => {
                   withBottomBorderRadius: !0,
                   buttonsRow: null == J,
               }),
-            (n = L
+            (n = x
                 ? null
                 : null != J || null != $
                   ? (0, r.jsx)(N.Cy, {
@@ -312,7 +312,7 @@ let Z = () => {
                     (0, r.jsx)(u.X6q, {
                         className: o()(D.titleText, D.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: null != x ? x : w.intl.string(w.t.FIbMh4),
+                        children: null != L ? L : w.intl.string(w.t.FIbMh4),
                     }),
                     (0, r.jsxs)("div", {
                         className: D.tableWrapper,

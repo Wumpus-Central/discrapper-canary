@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(768581),
     p = n(176354),
     h = n(675654),
-    m = n(255971);
+    m = n(42868);
 function g(e, t, n) {
     return (
         t in e
@@ -91,11 +91,11 @@ function T(e) {
             ],
             [n.name, n.id],
         ),
-        x = b.x - (b.width / 2) * v,
-        L = b.y - (b.height / 2) * v,
+        L = b.x - (b.width / 2) * v,
+        x = b.y - (b.height / 2) * v,
         j = (0, l.q_F)({
             from: { y: g.y },
-            to: { y: L },
+            to: { y: x },
             config: {
                 duration: O,
                 easing: s.Z.Easing.in(s.Z.Easing.exp),
@@ -112,7 +112,7 @@ function T(e) {
                 opacity: 1,
             },
             to: {
-                x: x,
+                x: L,
                 scale: v,
                 opacity: 0.4,
             },

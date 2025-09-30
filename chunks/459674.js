@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(569550),
     u = n(726985),
     d = n(388032),
-    f = n(10198);
+    f = n(197571);
 function _() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.disableVoiceChannelChangeAlert);
     return (0, r.jsx)(s.F, {

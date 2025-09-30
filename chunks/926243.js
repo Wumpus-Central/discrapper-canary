@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(39162);
+    v = n(999642);
 function I(e, t, n) {
     return (
         t in e
@@ -138,7 +138,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                     ? O.intl.formatToPlainString(O.t["9FI9Z2"], { names: e })
                     : e;
             },
-            x = d && !R;
+            L = d && !R;
         return (0, r.jsx)(l.tEY, {
             children: (0, r.jsx)(
                 "button",
@@ -164,7 +164,7 @@ let R = (e, t) => "".concat(e, ":").concat(t),
                         size: b,
                         surrogateCodePoint: I,
                         allowAnimatedEmoji: S,
-                        isLocked: x,
+                        isLocked: L,
                     }),
                 }),
             ),
@@ -186,8 +186,8 @@ function w(e) {
             selectedItemClassName: N,
             getEmojiItemProps: w,
             isMediumSize: D,
-            isLargeSize: x,
-            pulseItemKey: L,
+            isLargeSize: L,
+            pulseItemKey: x,
             allowAnimatedEmoji: j,
             setPulseItemKey: M,
             messageId: k,
@@ -237,11 +237,11 @@ function w(e) {
                         ref: l,
                         emoji: W,
                         isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(W),
-                        isLargeSize: x,
+                        isLargeSize: L,
                         isMediumSize: D,
                         isInspected: o,
                         isDisabled: z,
-                        showPulse: L === a,
+                        showPulse: x === a,
                         allowAnimatedEmoji: j,
                         onFocus: null != u ? u : Q,
                         onMouseMove: Q,

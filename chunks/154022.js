@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(440849),
     w = n(921801),
     D = n(196051),
-    x = n(441729),
-    L = n(626135),
+    L = n(441729),
+    x = n(626135),
     j = n(63063),
     M = n(695346),
     k = n(313789),
@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(611480),
     W = n(653477),
     K = n(388032),
-    z = n(62222),
-    q = n(133991),
-    X = n(10198),
+    z = n(693450),
+    q = n(953752),
+    X = n(197571),
     Q = n(328756);
 function J(e, t, n) {
     return (
@@ -400,7 +400,7 @@ function ep() {
     let e = (0, c.e7)([m.Z], () => m.Z.displayNameStylesEnabled),
         { analyticsLocations: t } = (0, b.ZP)();
     function n(e) {
-        (0, h.X2)(e), L.default.track(H.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
+        (0, h.X2)(e), x.default.track(H.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
     }
     return (0, r.jsx)("div", {
         className: X.marginTop20,
@@ -601,7 +601,7 @@ function eb() {
                         value: t,
                         note: K.intl.string(K.t.Q7wgHR),
                         onChange: (e) => {
-                            L.default.track(H.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            x.default.track(H.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
                                 location: { section: H.jXE.SETTINGS_ACCESSIBILITY },
                             }),
@@ -616,7 +616,7 @@ function eb() {
 }
 function ey() {
     let e = M.OW.useSetting(),
-        t = (0, c.e7)([x.Z], () => x.Z.speechRate),
+        t = (0, c.e7)([L.Z], () => L.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!p.Zh) return null;
     let o = () => {

@@ -6,7 +6,7 @@ var l = s(951288),
     t = s(925329),
     p = s(594174),
     d = s(768581),
-    n = s(801298);
+    n = s(77344);
 let u = r.memo(function (e) {
     let { application: a } = e,
         s = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
