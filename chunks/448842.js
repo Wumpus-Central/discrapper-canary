@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854), n(388685);
+n.d(t, { Z: () => A }), n(539854), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(349504),
     b = n(981631),
     y = n(388032),
-    O = n(465262);
+    O = n(493090);
 function v(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ function A(e) {
             let { searchEverywhere: t } = e;
             s.S.dispatch(b.CkL.PERFORM_SEARCH, { searchEverywhere: t });
         },
-        x = (e) => {
+        L = (e) => {
             var t;
             let {
                     autocompleteCount: n,
@@ -120,31 +120,12 @@ function A(e) {
                 searchAutocompleteSelectAction: i,
             });
         },
-        L = i.useMemo(() => {
-            let { label: e } = (0, d.HU)({ value: t.query });
-            return (0, _.fC)(f.i.ROW, {
-                icon: (0, r.jsx)(a._Ve, {
-                    size: "sm",
-                    color: "currentColor",
-                    className: O.itemIcon,
-                }),
-                label:
-                    v.type === b.aib.FAVORITES && (0, l.X$)()
-                        ? (0, r.jsx)(d.Q0, { label: y.intl.string(y.t["6RVtLC"]) })
-                        : (0, r.jsx)(d.Q0, {
-                              label: y.intl.format(y.t.rCnaoq, { value: e }),
-                              className: O.labelWithElements,
-                          }),
-                ariaLabel: y.intl.formatToPlainString(y.t.rCnaoq, { value: t.query }),
-                onSelect: () => D({ searchEverywhere: !1 }),
-            });
-        }, [t.query, v.type]),
-        j = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 let t = e ? y.intl.string(y.t.diOL4u) : y.intl.string(y.t["M1tf+/"]),
                     i = () => {
                         (0, a.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e("30474"), n.e("37979"), n.e("79942")]).then(
+                            let { default: e } = await Promise.all([n.e("30474"), n.e("37979"), n.e("49205")]).then(
                                 n.bind(n, 238088),
                             );
                             return (t) => (0, r.jsx)(e, S(I({}, t), { searchContext: v }));
@@ -164,7 +145,7 @@ function A(e) {
             },
             [v],
         ),
-        { items: M } = (0,
+        { items: j } = (0,
         {
             [b.Sap.EMPTY]: () => {
                 let e = [];
@@ -208,7 +189,7 @@ function A(e) {
                         });
                     e.push(i);
                 }
-                let t = j(C);
+                let t = x(C);
                 if (C) {
                     let n = [...w, t];
                     e.push(
@@ -269,26 +250,45 @@ function A(e) {
             },
             [b.Sap.FILTER_ALL]: () => {
                 let e = [];
-                if ((e.push(L), v.type === b.aib.FAVORITES && (0, l.X$)())) {
-                    let t = (0, _.fC)(f.i.ROW, {
-                        icon: (0, r.jsx)(a._Ve, {
-                            size: "sm",
-                            color: "currentColor",
-                            className: O.itemIcon,
-                        }),
-                        label: (0, r.jsx)(d.Q0, { label: y.intl.string(y.t.FtSUxc) }),
-                        onSelect: () => D({ searchEverywhere: !0 }),
-                    });
-                    e.push(t);
+                if ("" !== t.query.trim()) {
+                    let { label: n } = (0, d.HU)({ value: t.query }),
+                        i = (0, _.fC)(f.i.ROW, {
+                            icon: (0, r.jsx)(a._Ve, {
+                                size: "sm",
+                                color: "currentColor",
+                                className: O.itemIcon,
+                            }),
+                            label:
+                                v.type === b.aib.FAVORITES && (0, l.X$)()
+                                    ? (0, r.jsx)(d.Q0, { label: y.intl.string(y.t["6RVtLC"]) })
+                                    : (0, r.jsx)(d.Q0, {
+                                          label: y.intl.format(y.t.rCnaoq, { value: n }),
+                                          className: O.labelWithElements,
+                                      }),
+                            ariaLabel: y.intl.formatToPlainString(y.t.rCnaoq, { value: t.query }),
+                            onSelect: () => D({ searchEverywhere: !1 }),
+                        });
+                    if ((e.push(i), v.type === b.aib.FAVORITES && (0, l.X$)())) {
+                        let t = (0, _.fC)(f.i.ROW, {
+                            icon: (0, r.jsx)(a._Ve, {
+                                size: "sm",
+                                color: "currentColor",
+                                className: O.itemIcon,
+                            }),
+                            label: (0, r.jsx)(d.Q0, { label: y.intl.string(y.t.FtSUxc) }),
+                            onSelect: () => D({ searchEverywhere: !0 }),
+                        });
+                        e.push(t);
+                    }
                 }
-                let { autocompleteCount: t, autocompleteGroups: n } = P({
+                let { autocompleteCount: n, autocompleteGroups: i } = P({
                         filterFn: (e) =>
                             e.group !== b.rtL.DATES &&
                             e.group !== b.rtL.SEARCH_OPTIONS &&
                             e.group !== b.dCx.FILTER_HAS &&
                             e.results.length > 0,
                         getAutocompleteRowItem: (e) => {
-                            var n;
+                            var t;
                             let { result: i, modeType: a, group: o } = e,
                                 s = (0, _.lw)({
                                     modeType: a,
@@ -304,17 +304,17 @@ function A(e) {
                                     o === b.dCx.FILTER_FROM || o === b.dCx.FILTER_MENTIONS
                                         ? (0, r.jsx)(d.mW, {
                                               searchTokenType: o,
-                                              answer: null == (n = i.user) ? void 0 : n.username,
+                                              answer: null == (t = i.user) ? void 0 : t.username,
                                           })
                                         : void 0,
                                 h = (e) => {
-                                    let { selectedIndex: n, searchAutocompleteSelectAction: r } = e;
-                                    x({
-                                        selectedIndex: n,
+                                    let { selectedIndex: t, searchAutocompleteSelectAction: r } = e;
+                                    L({
+                                        selectedIndex: t,
                                         searchAutocompleteSelectAction: r,
                                         selectedAutocomplete: i,
                                         selectedAutocompleteGroup: o,
-                                        autocompleteCount: t,
+                                        autocompleteCount: n,
                                     }),
                                         A({
                                             query: s,
@@ -340,18 +340,18 @@ function A(e) {
                             });
                         },
                     }),
-                    i = C && 0 === t,
-                    o = j(i);
-                if (i) {
-                    let t = [...w, o];
+                    o = C && 0 === n,
+                    s = x(o);
+                if (o) {
+                    let t = [...w, s];
                     e.push(
                         (0, _.fC)(f.i.GROUP, {
                             rows: t,
                             title: y.intl.string(y.t.UdhTtr),
                         }),
                     );
-                } else e.push(o);
-                return t > 0 && e.push(...n), { items: e };
+                } else e.push(s);
+                return n > 0 && e.push(...i), { items: e };
             },
             [b.Sap.FILTER]: () => {
                 let { autocompleteCount: e, autocompleteGroups: t } = P({
@@ -367,7 +367,7 @@ function A(e) {
                             { label: s, ariaLabel: l } = (0, d.V4)(n),
                             c = (t) => {
                                 let { selectedIndex: r, searchAutocompleteSelectAction: o } = t;
-                                x({
+                                L({
                                     selectedIndex: r,
                                     searchAutocompleteSelectAction: o,
                                     selectedAutocomplete: n,
@@ -400,10 +400,10 @@ function A(e) {
                 return { items: [...t] };
             },
         }[R.type])(),
-        k = i.useMemo(() => {
+        M = i.useMemo(() => {
             let e = [];
             return (
-                M.forEach((t) => {
+                j.forEach((t) => {
                     switch (t.type) {
                         case f.i.ROW:
                             e.push(t);
@@ -414,9 +414,9 @@ function A(e) {
                 }),
                 e
             );
-        }, [M]);
+        }, [j]);
     return {
-        items: M,
-        itemsData: k,
+        items: j,
+        itemsData: M,
     };
 }
