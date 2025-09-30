@@ -27,15 +27,16 @@ function g(e) {
     );
 }
 function E(e, t) {
-    let { enabled: n } = f.t.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+    let { enabled: n } = f.tL.useExperiment({ location: t }, { autoTrackExposure: !1 }),
         { data: r } = (0, c.f)(),
         i = null != e ? (0, _.Z)(e) : null,
         a = null == i ? void 0 : i.id,
         { data: l } = (0, s.IX)(a),
-        { bot: u } = null != l ? l : { bot: null };
+        { bot: u } = null != l ? l : { bot: null },
+        d = (0, f.b0)(null == e ? void 0 : e.id);
     return (
-        !!n &&
         null != e &&
+        (!!n || !!d) &&
         ((null == e ? void 0 : e.embeddedActivityConfig) == null ||
             !!g({
                 countryCode: null == r ? void 0 : r.alpha2,
