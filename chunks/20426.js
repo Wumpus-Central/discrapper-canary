@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__07e9e",
+    imageBackground: "imageBackground__07e9e",
     headerContainer: "headerContainer__07e9e",
     image: "image__07e9e",
     content: "content__07e9e",

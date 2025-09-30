@@ -16890,7 +16890,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     }
 }
 
-@container outer-container (--max-width-desktop) {
+@container outer-container (max-width: 1080px) {
     .modal_e44912 {
         border: none;
         border-radius: 0;
