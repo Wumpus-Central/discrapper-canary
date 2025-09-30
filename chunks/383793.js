@@ -10,15 +10,15 @@ var r = n(951288),
     u = n(158638),
     m = n(441536),
     g = n(434404),
-    p = n(70086),
-    f = n(736617),
-    h = n(196961),
-    b = n(821458),
-    x = n(790359),
+    p = n(736617),
+    f = n(196961),
+    h = n(821458),
+    x = n(585961),
+    b = n(790359),
     j = n(981631),
     v = n(30513),
     _ = n(388032),
-    O = n(722811);
+    O = n(856521);
 function y(e) {
     let { originalVanityURLCode: t } = e;
     if (null != t && t.length > 0) {
@@ -39,13 +39,13 @@ function C(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, errorDetails: c } = e,
         d = (null == t ? void 0 : t.features.has(j.oNc.VANITY_URL)) === !0,
         u = i.useCallback(() => {
-            (0, f.Gy)("");
+            (0, p.Gy)("");
         }, []),
         m = i.useCallback((e) => {
-            (0, f.Gy)(e);
+            (0, p.Gy)(e);
         }, []);
     if (null == n) return (0, r.jsx)(a.$jN, {});
-    let g = null != c ? (0, h.i)(c.code) : null;
+    let g = null != c ? (0, f.i)(c.code) : null;
     return (0, r.jsxs)(a.Zbd, {
         editable: !0,
         className: O.editVanityUrlCard,
@@ -67,7 +67,7 @@ function C(e) {
                         : null,
                 ],
             }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(b.Z, {
                 value: n,
                 onChange: m,
                 error: g,
@@ -88,28 +88,28 @@ function C(e) {
 }
 function N(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: a, errorDetails: d } = e,
-        { analyticsLocations: f } = (0, c.ZP)(),
-        x = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
+        { analyticsLocations: p } = (0, c.ZP)(),
+        b = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
         _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    x
+                    b
                         ? (g.Z.close(), (0, m.Z)(t.id, o.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
-                        : (0, b.E6)({
+                        : (0, h.E6)({
                               guild: t,
-                              analyticsLocations: f,
+                              analyticsLocations: p,
                               analyticsSection: j.jXE.GUILD_SETTINGS_VANITY_URL,
                               analyticsObject: j.qAy.BUTTON_CTA,
                               perks: (0, v.WW)(),
                               targetPremiumGuildTier: j.Eu4.TIER_3,
                           });
             },
-            [f, t, x],
+            [p, t, b],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, h.p)(t)
+            (0, f.p)(t)
                 ? (0, r.jsx)(C, {
                       guild: t,
                       vanityURLCode: n,
@@ -117,7 +117,7 @@ function N(e) {
                       originalVanityURLCode: a,
                       errorDetails: d,
                   })
-                : (0, r.jsx)(p.P, {
+                : (0, r.jsx)(x.P, {
                       onClick: _,
                       className: O.upsellButton,
                   }),

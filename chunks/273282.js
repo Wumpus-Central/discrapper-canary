@@ -6,17 +6,17 @@ var r = n(951288),
     a = n(884858),
     o = n(813197),
     c = n(434404),
-    d = n(70086),
-    u = n(821458),
+    d = n(821458),
+    u = n(585961),
     m = n(981631),
     g = n(30513),
     p = n(200299),
     f = n(388032);
 function h(e) {
     let { guild: t, canManageGuild: n, buttonClassName: h } = e,
-        { analyticsLocations: b } = (0, s.ZP)(),
-        x = t.features.has(m.oNc.INVITE_SPLASH),
-        j = n && x,
+        { analyticsLocations: x } = (0, s.ZP)(),
+        b = t.features.has(m.oNc.INVITE_SPLASH),
+        j = n && b,
         v = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
@@ -24,17 +24,17 @@ function h(e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, u.E6)({
+                    (0, d.E6)({
                         guild: t,
-                        analyticsLocations: b,
+                        analyticsLocations: x,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)(),
                     });
             },
-            [b, t],
+            [x, t],
         );
-    return x
+    return b
         ? (0, r.jsxs)(l.zx, {
               disabled: !j,
               color: l.Tt.BRAND,
@@ -49,7 +49,7 @@ function h(e) {
                   }),
               ],
           })
-        : (0, r.jsx)(d.P, {
+        : (0, r.jsx)(u.P, {
               className: h,
               onClick: _,
           });

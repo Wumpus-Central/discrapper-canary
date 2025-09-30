@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(731722),
     f = n(441536),
     h = n(494620),
-    b = n(434404),
-    x = n(999382),
-    j = n(70086),
+    x = n(434404),
+    b = n(999382),
+    j = n(585961),
     v = n(910494),
     _ = n(196902),
     O = n(423087),
@@ -24,14 +24,14 @@ var r = n(951288),
     N = n(981631),
     E = n(921944),
     I = n(131085),
-    S = n(755032),
+    S = n(659854),
     T = n(388032),
-    P = n(565744);
+    P = n(764009);
 let w = function () {
     var e, t, n, w;
     (0, T.useSyncMessages)(S.messagesLoader);
-    let R = (0, s.e7)([x.Z], () => x.Z.getGuild()),
-        D = (0, s.e7)([x.Z], () => x.Z.getGuildProfile()),
+    let R = (0, s.e7)([b.Z], () => b.Z.getGuild()),
+        D = (0, s.e7)([b.Z], () => b.Z.getGuildProfile()),
         { fetchGuildProfile: Z, fetchStatus: A } = (0, g.u)(null == R ? void 0 : R.id);
     if (
         (i.useEffect(() => {
@@ -99,10 +99,10 @@ let w = function () {
                                         color: "text-secondary",
                                         children: T.intl.format(S.default["655Un5"], {
                                             onClickServerProfile: () => {
-                                                b.Z.setSection(N.pNK.PROFILE);
+                                                x.Z.setSection(N.pNK.PROFILE);
                                             },
                                             onClickApplyToJoin: () => {
-                                                b.Z.setSection(N.pNK.ACCESS);
+                                                x.Z.setSection(N.pNK.ACCESS);
                                             },
                                         }),
                                     }),
@@ -113,7 +113,7 @@ let w = function () {
                                                 variant: "text-xs/medium",
                                                 children: T.intl.format(S.default.CRbkIy, {
                                                     onClickEditSetting: () =>
-                                                        b.Z.setSection(N.pNK.PROFILE, N.KsC.PROFILE_VISIBILITY),
+                                                        x.Z.setSection(N.pNK.PROFILE, N.KsC.PROFILE_VISIBILITY),
                                                 }),
                                             }),
                                         }),
@@ -137,13 +137,13 @@ let w = function () {
                                               onChange: () => {
                                                   if (G) {
                                                       var e;
-                                                      b.Z.updateGuildProfile(R.id, {
+                                                      x.Z.updateGuildProfile(R.id, {
                                                           tag: null != (e = D.tag) ? e : "",
                                                           badge: M,
                                                           badgeColorPrimary: U,
                                                           badgeColorSecondary: B,
                                                       });
-                                                  } else b.Z.updateGuildProfile(R.id, { tag: null });
+                                                  } else x.Z.updateGuildProfile(R.id, { tag: null });
                                               },
                                           }),
                                       ],
@@ -152,7 +152,7 @@ let w = function () {
                                       className: P.boostingLinkContainer,
                                       children: (0, r.jsx)(j.P, {
                                           onClick: () => {
-                                              (0, f.Z)(R.id, d.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), b.Z.close();
+                                              (0, f.Z)(R.id, d.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), x.Z.close();
                                           },
                                       }),
                                   }),

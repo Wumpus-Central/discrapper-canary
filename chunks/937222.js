@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(755721),
     s = n(906732),
-    a = n(70086),
-    o = n(821458),
+    a = n(821458),
+    o = n(585961),
     c = n(981631),
     d = n(30513),
     u = n(486324),
@@ -14,18 +14,18 @@ function p(e) {
     let { guild: t, canManageGuild: n, buttonClassName: p } = e,
         { analyticsLocations: f } = (0, s.ZP)(),
         h = t.features.has(c.oNc.BANNER),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 let { imageUri: n, file: r } = e;
-                (0, o.f4)(t, f, n, r);
+                (0, a.f4)(t, f, n, r);
             },
             [f, t],
         ),
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, o.E6)({
+                    (0, a.E6)({
                         guild: t,
                         analyticsLocations: f,
                         analyticsSection: c.jXE.GUILD_BANNER,
@@ -41,10 +41,10 @@ function p(e) {
               color: l.zx.Colors.BRAND,
               className: p,
               onClick: () =>
-                  (0, o.mw)({
+                  (0, a.mw)({
                       uploadType: u.pC.GUILD_BANNER,
                       maxFileSizeBytes: m.B,
-                      onComplete: b,
+                      onComplete: x,
                       analyticsLocation: {
                           page: c.ZY5.GUILD_SETTINGS,
                           section: c.jXE.GUILD_BANNER,
@@ -53,8 +53,8 @@ function p(e) {
                   }),
               children: g.intl.string(g.t.yG2pUl),
           })
-        : (0, r.jsx)(a.P, {
+        : (0, r.jsx)(o.P, {
               className: p,
-              onClick: x,
+              onClick: b,
           });
 }
