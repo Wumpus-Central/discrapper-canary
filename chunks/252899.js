@@ -1,12 +1,20 @@
-n.d(t, { F: () => o }), n(388685), n(539854), n(781311), n(642613);
+n.d(t, { F: () => d }), n(388685), n(539854), n(781311), n(642613);
 var a = n(951288),
     r = n(647438),
     i = n(93582),
     l = n(481060),
-    s = n(621060);
-function o(e, t) {
+    s = n(621060),
+    o = n(716768);
+function c(e) {
+    let { label: t } = e;
+    return (0, a.jsx)("div", {
+        className: o.menuLabel,
+        children: t,
+    });
+}
+function d(e, t) {
     let [n, o] = r.useState(""),
-        c = r.useMemo(() => {
+        d = r.useMemo(() => {
             if ("" === n.trim()) return e;
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
@@ -81,7 +89,7 @@ function o(e, t) {
         ),
         ...r.useMemo(() => {
             let e = [];
-            if ("" !== n.trim() && 0 === c.length)
+            if ("" !== n.trim() && 0 === d.length)
                 e.push(
                     (0, a.jsx)(
                         l.sNh,
@@ -94,7 +102,7 @@ function o(e, t) {
                     ),
                 );
             else {
-                let r = c.filter((e) => e.group === s.v0.NONE),
+                let r = d.filter((e) => e.group === s.v0.NONE),
                     o = (function (e) {
                         let t = new Map();
                         for (let a of e) {
@@ -103,7 +111,7 @@ function o(e, t) {
                             e.push(a), t.set(a.group, e);
                         }
                         return t;
-                    })(c.filter((e) => e.group !== s.v0.NONE));
+                    })(d.filter((e) => e.group !== s.v0.NONE));
                 r.forEach((n) => {
                     let { id: r, name: i } = n;
                     return e.push(
@@ -111,7 +119,7 @@ function o(e, t) {
                             l.sNh,
                             {
                                 id: r,
-                                label: i,
+                                label: (0, a.jsx)(c, { label: i }),
                                 action: () => t(r),
                             },
                             r,
@@ -133,14 +141,14 @@ function o(e, t) {
                                           l.sNh,
                                           {
                                               id: "devtools-".concat(r),
-                                              label: r,
+                                              label: (0, a.jsx)(c, { label: r }),
                                               children: (0, a.jsx)(l.kSQ, {
                                                   children: o.map((e) =>
                                                       (0, a.jsx)(
                                                           l.sNh,
                                                           {
                                                               id: "devtools-".concat(e.id),
-                                                              label: e.name,
+                                                              label: (0, a.jsx)(c, { label: e.name }),
                                                               action: () => t(e.id),
                                                           },
                                                           e.id,
@@ -161,7 +169,7 @@ function o(e, t) {
                                                       l.sNh,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
-                                                          label: e.name,
+                                                          label: (0, a.jsx)(c, { label: e.name }),
                                                           action: () => t(e.id),
                                                       },
                                                       e.id,
@@ -175,6 +183,6 @@ function o(e, t) {
                     });
             }
             return e;
-        }, [c, n, t]),
+        }, [d, n, t]),
     ];
 }
