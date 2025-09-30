@@ -197,7 +197,7 @@ class _ extends o.C {
                 case 7:
                     a.filter = {
                         oneofKind: "clientLocale",
-                        clientLocale: S.internalBinaryRead(e, e.uint32(), n, a.filter.clientLocale),
+                        clientLocale: T.internalBinaryRead(e, e.uint32(), n, a.filter.clientLocale),
                     };
                     break;
                 case 8:
@@ -296,7 +296,7 @@ class _ extends o.C {
             "userIds" === e.filter.oneofKind &&
                 y.internalBinaryWrite(e.filter.userIds, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
             "clientLocale" === e.filter.oneofKind &&
-                S.internalBinaryWrite(e.filter.clientLocale, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
+                T.internalBinaryWrite(e.filter.clientLocale, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
             "clientLocation" === e.filter.oneofKind &&
                 N.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
@@ -366,7 +366,7 @@ class _ extends o.C {
                 name: "client_locale",
                 kind: "message",
                 oneof: "filter",
-                T: () => S,
+                T: () => T,
             },
             {
                 no: 8,
@@ -724,8 +724,8 @@ class I extends o.C {
         ]);
     }
 }
-let S = new I();
-class T extends o.C {
+let T = new I();
+class S extends o.C {
     create(e) {
         let t = { locales: [] };
         return (
@@ -772,7 +772,7 @@ class T extends o.C {
         ]);
     }
 }
-let A = new T();
+let A = new S();
 class C extends o.C {
     create(e) {
         let t = { locations: [] };
@@ -790,7 +790,7 @@ class C extends o.C {
             o = e.pos + t;
         for (; e.pos < o; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.locations.push(L.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) a.locations.push(x.internalBinaryRead(e, e.uint32(), n));
             else {
                 let o = n.readUnknownField;
                 if ("throw" === o)
@@ -805,7 +805,7 @@ class C extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            L.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+            x.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -816,7 +816,7 @@ class C extends o.C {
                 name: "locations",
                 kind: "message",
                 repeat: 1,
-                T: () => L,
+                T: () => x,
             },
         ]);
     }
@@ -959,7 +959,7 @@ class w extends o.C {
     }
 }
 let D = new w();
-class x extends o.C {
+class L extends o.C {
     create(e) {
         let t = { location: { oneofKind: void 0 } };
         return (
@@ -1042,7 +1042,7 @@ class x extends o.C {
         ]);
     }
 }
-let L = new x();
+let x = new L();
 class j extends o.C {
     create(e) {
         let t = { blocks: [] };
@@ -1438,7 +1438,7 @@ class Y extends o.C {
 let W = new Y();
 class K extends o.C {
     create(e) {
-        let t = {};
+        let t = { allowNonNativeWeb: !1 };
         return (
             globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
@@ -1466,6 +1466,9 @@ class K extends o.C {
                 case 4:
                     a.nativeVersion = X.internalBinaryRead(e, e.uint32(), n, a.nativeVersion);
                     break;
+                case 6:
+                    a.allowNonNativeWeb = e.bool();
+                    break;
                 case 5:
                     a.clientRequiredChanges = ei.internalBinaryRead(e, e.uint32(), n, a.clientRequiredChanges);
                     break;
@@ -1487,6 +1490,7 @@ class K extends o.C {
                 X.internalBinaryWrite(e.androidVersion, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.webVersion && X.internalBinaryWrite(e.webVersion, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             e.nativeVersion && X.internalBinaryWrite(e.nativeVersion, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
+            !1 !== e.allowNonNativeWeb && t.tag(6, r.TD.Varint).bool(e.allowNonNativeWeb),
             e.clientRequiredChanges &&
                 ei.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -1517,6 +1521,12 @@ class K extends o.C {
                 name: "native_version",
                 kind: "message",
                 T: () => X,
+            },
+            {
+                no: 6,
+                name: "allow_non_native_web",
+                kind: "scalar",
+                T: 8,
             },
             {
                 no: 5,
