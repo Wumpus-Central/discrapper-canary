@@ -1,14 +1,14 @@
 n.d(t, {
     $l: () => y,
-    CB: () => f,
-    Em: () => v,
-    J9: () => p,
+    CB: () => b,
+    Em: () => p,
+    J9: () => v,
     ON: () => T,
     Ql: () =>
         function e(t, n) {
-            if ("function" == typeof (null == t ? void 0 : t.getLayout)) {
-                let n = t.getLayout().map((t) => e(t)),
-                    { getLayout: r } = t,
+            if ("function" == typeof (null == t ? void 0 : t.buildLayout)) {
+                let n = t.buildLayout().map((t) => e(t)),
+                    { buildLayout: r } = t,
                     o = l(
                         i(
                             {},
@@ -34,7 +34,7 @@ n.d(t, {
                                                 (i[n] = e[n]);
                                 }
                                 return i;
-                            })(t, ["getLayout"]),
+                            })(t, ["buildLayout"]),
                         ),
                         { layout: n },
                     );
@@ -42,10 +42,10 @@ n.d(t, {
             }
             return t;
         },
-    ax: () => E,
-    k4: () => g,
+    ax: () => g,
+    k4: () => f,
     m7: () => u,
-    qs: () => b,
+    qs: () => E,
     so: () => s,
     vB: () => a,
     wf: () => c,
@@ -121,10 +121,10 @@ function c(e, t) {
 function d(e, t) {
     return o(e, r.Jq.PANE, t);
 }
-function g(e, t) {
+function f(e, t) {
     return o(e, r.Jq.CATEGORY, t);
 }
-function f(e, t) {
+function b(e, t) {
     return o(e, r.Jq.ACCORDION, t);
 }
 function y(e, t) {
@@ -136,16 +136,16 @@ function O(e, t, n) {
         type: t,
     });
 }
-function E(e, t) {
+function g(e, t) {
     return O(e, r.Jq.BUTTON, t);
 }
-function b(e, t) {
+function E(e, t) {
     return O(e, r.Jq.TOGGLE, t);
 }
-function v(e, t) {
+function p(e, t) {
     return O(e, r.Jq.SELECT, t);
 }
-function p(e, t) {
+function v(e, t) {
     return O(e, r.Jq.RADIO, t);
 }
 function T(e, t) {

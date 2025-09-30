@@ -1,18 +1,18 @@
 n.d(t, { Z: () => d });
-var i = n(951288),
-    l = n(657707),
-    r = n(509613),
+var r = n(951288),
+    i = n(657707),
+    l = n(509613),
+    o = n(313789),
     s = n(443702),
-    a = n(869235),
-    o = n(726985),
+    a = n(726985),
     u = n(388032);
-let c = (0, r.x1)(a.t.BILLING_PANE, {
-        getLayout: () => [],
-        render: () => (0, i.jsx)(s.Z, {}),
+let c = (0, l.x1)(o.n.BILLING_PANE, {
+        buildLayout: () => [],
+        render: () => (0, r.jsx)(s.Z, {}),
     }),
-    d = (0, r.wf)(a.t.BILLING_PANEL, {
+    d = (0, l.wf)(o.n.BILLING_PANEL, {
         useTitle: () => u.intl.string(u.t.oeUm2t),
-        icon: l.ciH,
-        getLayout: () => [c],
-        legacySearchKey: o.s6.BILLING,
+        icon: i.ciH,
+        buildLayout: () => [c],
+        legacySearchKey: a.s6.BILLING,
     });

@@ -7,12 +7,12 @@ var r = n(951288),
     a = n(726985),
     u = n(388032);
 let c = (0, l.x1)(o.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANE, {
-        getLayout: () => [],
+        buildLayout: () => [],
         render: () => (0, r.jsx)(s.Z, {}),
     }),
     d = (0, l.wf)(o.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
         useTitle: () => u.intl.string(u.t.Nn1lJy),
         icon: i.$Eu,
-        getLayout: () => [c],
+        buildLayout: () => [c],
         legacySearchKey: a.s6.GUILD_BOOSTING,
     });

@@ -8,13 +8,13 @@ var r = n(657707),
     u = n(726985),
     c = n(388032);
 let d = (0, l.x1)(s.n.GIFT_PANE, {
-        getLayout: () => [],
+        buildLayout: () => [],
         render: a.Z,
     }),
     f = (0, l.wf)(s.n.GIFT_PANEL, {
         icon: r.OgN,
         useTitle: () => c.intl.string(c.t["jcSP+v"]),
-        getLayout: () => [d],
+        buildLayout: () => [d],
         trailing: {
             type: o.PU.BADGE_COUNT,
             useCount: () => (0, i.YO)().length,

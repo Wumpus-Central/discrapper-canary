@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d });
-var i = n(509613),
-    r = n(869235),
+var r = n(509613),
+    i = n(313789),
     l = n(419386),
     o = n(291011),
-    a = n(392231),
-    s = n(271524),
+    s = n(392231),
+    a = n(271524),
     u = n(388032);
-let c = (0, i.CB)(r.t.NOTIFICATIONS_ADVANCED_ACCORDION, {
+let c = (0, r.CB)(i.n.NOTIFICATIONS_ADVANCED_ACCORDION, {
         useTitle: (e) => (e ? u.intl.string(u.t.RyimDg) : u.intl.string(u.t.CUICbG)),
         useSubtitle: () => u.intl.string(u.t.SwKADQ),
-        getLayout: () => [o.Z, l.Z, a.Z, s.Z],
+        buildLayout: () => [o.Z, l.Z, s.Z, a.Z],
     }),
-    d = (0, i.k4)(r.t.NOTIFICATIONS_ADVANCED_CATEGORY, { getLayout: () => [c] });
+    d = (0, r.k4)(i.n.NOTIFICATIONS_ADVANCED_CATEGORY, { buildLayout: () => [c] });

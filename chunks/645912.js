@@ -1,18 +1,18 @@
 n.d(t, { Z: () => d });
-var i = n(951288),
-    l = n(657707),
-    r = n(509613),
+var r = n(951288),
+    i = n(657707),
+    l = n(509613),
+    o = n(313789),
     s = n(389650),
-    a = n(869235),
-    o = n(726985),
+    a = n(726985),
     u = n(388032);
-let c = (0, r.x1)(a.t.KEYBINDS_PANE, {
-        getLayout: () => [],
-        render: () => (0, i.jsx)(s.Z, {}),
+let c = (0, l.x1)(o.n.KEYBINDS_PANE, {
+        buildLayout: () => [],
+        render: () => (0, r.jsx)(s.Z, {}),
     }),
-    d = (0, r.wf)(a.t.KEYBINDS_PANEL, {
+    d = (0, l.wf)(o.n.KEYBINDS_PANEL, {
         useTitle: () => u.intl.string(u.t.T9DA2N),
-        icon: l.YiA,
-        getLayout: () => [c],
-        legacySearchKey: o.s6.KEYBINDS,
+        icon: i.YiA,
+        buildLayout: () => [c],
+        legacySearchKey: a.s6.KEYBINDS,
     });

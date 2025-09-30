@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(657707),
     l = n(442837),
@@ -9,37 +9,37 @@ var r = n(951288),
     c = n(854014),
     d = n(509613),
     f = n(28682),
-    g = n(518950),
-    O = n(25990),
-    y = n(594174),
-    E = n(313789),
-    b = n(620163),
+    b = n(518950),
+    y = n(25990),
+    O = n(594174),
+    g = n(313789),
+    E = n(620163),
     p = n(726985),
-    T = n(388032),
-    v = n(88651);
-let N = (0, d.x1)(E.n.PROFILE_PANE, {
-        getLayout: () => [],
+    v = n(388032),
+    T = n(88651);
+let S = (0, d.x1)(g.n.PROFILE_PANE, {
+        buildLayout: () => [],
         render: u.Z,
     }),
-    S = (0, d.wf)(E.n.PROFILE_PANEL, {
+    j = (0, d.wf)(g.n.PROFILE_PANEL, {
         icon: i.tBG,
-        useTitle: () => T.intl.string(T.t["vi7f+v"]),
-        getLayout: () => [N],
+        useTitle: () => v.intl.string(v.t["vi7f+v"]),
+        buildLayout: () => [S],
         notice: {
-            stores: [s.Z, O.Z],
+            stores: [s.Z, y.Z],
             element: a.Z,
         },
         trailing: {
             type: f.PU.BADGE_NEW,
-            dismissibleContentTypes: (0, b.OF)(),
-            badgeComponent: b.W8,
+            dismissibleContentTypes: (0, E.OF)(),
+            badgeComponent: E.W8,
         },
         legacySearchKey: p.s6.PROFILE_CUSTOMIZATION,
         stronglyDiscouragedCustomTab: (e) => {
             var t;
             let { active: n, onClick: s } = e,
-                a = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-                { avatarSrc: u, avatarDecorationSrc: d } = (0, g.Z)({
+                a = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
+                { avatarSrc: u, avatarDecorationSrc: d } = (0, b.Z)({
                     userId: null == a ? void 0 : a.id,
                     size: o.EFr.SIZE_48,
                 });
@@ -49,16 +49,16 @@ let N = (0, d.x1)(E.n.PROFILE_PANE, {
                       onClick: s,
                       active: n,
                       children: (0, r.jsxs)("div", {
-                          className: v.profileCustomizationTab,
+                          className: T.profileCustomizationTab,
                           children: [
                               (0, r.jsx)(o.qEK, {
                                   src: u,
                                   avatarDecoration: d,
                                   size: o.EFr.SIZE_48,
-                                  "aria-label": T.intl.string(T.t.lqaIxM),
+                                  "aria-label": v.intl.string(v.t.lqaIxM),
                               }),
                               (0, r.jsxs)("div", {
-                                  className: v.textContainer,
+                                  className: T.textContainer,
                                   children: [
                                       (0, r.jsx)(o.Text, {
                                           color: "header-primary",
@@ -67,12 +67,12 @@ let N = (0, d.x1)(E.n.PROFILE_PANE, {
                                           children: null != (t = a.globalName) ? t : a.username,
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: v.editProfilesRow,
+                                          className: T.editProfilesRow,
                                           children: [
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "currentColor",
-                                                  children: T.intl.string(T.t.Ip9nBQ),
+                                                  children: v.intl.string(v.t.Ip9nBQ),
                                               }),
                                               (0, r.jsx)(i.vdY, {
                                                   size: "xxs",

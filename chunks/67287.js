@@ -8,6 +8,6 @@ var r = n(509613),
     u = n(388032);
 let c = (0, r.vB)(l.n.DEVELOPER_SECTION, {
     useLabel: () => u.intl.string(u.t.CbItOD),
-    getLayout: () => [s.Z, o.Z, a.Z],
+    buildLayout: () => [s.Z, o.Z, a.Z],
     usePredicate: () => i.Z.isDeveloper,
 });

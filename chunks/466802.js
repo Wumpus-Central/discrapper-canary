@@ -8,13 +8,13 @@ var r = n(73837),
     u = n(726985),
     c = n(388032);
 let d = (0, i.x1)(o.n.NITRO_PANE, {
-        getLayout: () => [],
+        buildLayout: () => [],
         render: s.Z,
     }),
     f = (0, i.wf)(o.n.NITRO_PANEL, {
         icon: r.Sr,
         useTitle: () => c.intl.string(c.t.Ipxkoq),
-        getLayout: () => [d],
+        buildLayout: () => [d],
         trailing: {
             type: l.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () => (0, a.x)(),

@@ -9,12 +9,12 @@ var r = n(657707),
     c = n(388032);
 let d = (0, i.x1)(o.n.APPEARANCE_PANE, {
         useTitle: () => c.intl.string(c.t["iHH+k5"]),
-        getLayout: () => [],
+        buildLayout: () => [],
         render: a.Z,
     }),
     f = (0, i.wf)(o.n.APPEARANCE_PANEL, {
         useTitle: () => c.intl.string(c.t["iHH+k5"]),
-        getLayout: () => [d],
+        buildLayout: () => [d],
         icon: r.V3v,
         trailing: {
             type: l.PU.BADGE_NEW,

@@ -8,12 +8,12 @@ var r = n(951288),
     u = n(388032);
 let c = (0, o.x1)(s.n.CLIPS_PANE, {
         useTitle: () => u.intl.string(u.t.z2jK6e),
-        getLayout: () => [],
+        buildLayout: () => [],
         render: () => (0, r.jsx)(l.Z, { showHeader: !1 }),
     }),
     d = (0, o.wf)(s.n.CLIPS_PANEL, {
         useTitle: () => u.intl.string(u.t.z2jK6e),
         icon: i.AlX,
-        getLayout: () => [c],
+        buildLayout: () => [c],
         legacySearchKey: a.s6.CLIPS,
     });

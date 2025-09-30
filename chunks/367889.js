@@ -9,15 +9,15 @@ var r = n(951288),
     c = n(28682),
     d = n(313789),
     f = n(726985),
-    g = n(388032);
+    b = n(388032);
 let y = (0, u.x1)(d.n.SUBSCRIPTIONS_PANE, {
-        getLayout: () => [],
+        buildLayout: () => [],
         render: a.Z,
     }),
     O = (0, u.wf)(d.n.SUBSCRIPTIONS_PANEL, {
         icon: o.Sr,
-        useTitle: () => g.intl.string(g.t.trSpHR),
-        getLayout: () => [y],
+        useTitle: () => b.intl.string(b.t.trSpHR),
+        buildLayout: () => [y],
         trailing: {
             type: c.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () =>

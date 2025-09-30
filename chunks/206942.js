@@ -1,201 +1,201 @@
 n.d(t, { ZP: () => T }), n(415506), n(539854), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(442837),
     o = n(481060),
-    a = n(292556),
-    s = n(734934),
+    s = n(292556),
+    a = n(734934),
     u = n(509613),
     c = n(460181),
     d = n(292959),
-    _ = n(869235),
-    E = n(388032),
-    N = n(649926);
-let g = r.createContext(void 0);
-function O(e) {
+    f = n(313789),
+    b = n(388032),
+    y = n(649926);
+let O = i.createContext(void 0);
+function g(e) {
     let { sound: t } = e,
         { handlePreviewSound: n } = (function () {
-            let e = r.useContext(g);
+            let e = i.useContext(O);
             if (null == e) throw Error("useSoundPlayback must be used within a SoundPlaybackProvider");
             return e;
         })();
-    return (0, i.jsx)(o.P3F, {
-        className: N.soundIcon,
+    return (0, r.jsx)(o.P3F, {
+        className: y.soundIcon,
         onClick: (e) => n(t, e),
-        "aria-label": E.intl.string(E.t.Kd4uxM),
-        children: (0, i.jsx)(o.gj8, {
+        "aria-label": b.intl.string(b.t.Kd4uxM),
+        children: (0, r.jsx)(o.gj8, {
             size: "xs",
             color: "currentColor",
-            className: N.icon,
+            className: y.icon,
             "aria-hidden": !0,
         }),
     });
 }
-let I = [
+let E = [
         {
-            useLabel: () => E.intl.string(E.t.jD1qzM),
+            useLabel: () => b.intl.string(b.t.jD1qzM),
             sound: "message1",
-            useDisabled: s.p,
-            useTooltip: () => ((0, s.p)() ? E.intl.string(E.t.cIRG0t) : void 0),
+            useDisabled: a.p,
+            useTooltip: () => ((0, a.p)() ? b.intl.string(b.t.cIRG0t) : void 0),
         },
         {
-            useLabel: () => E.intl.string(E.t.XBrJT0),
+            useLabel: () => b.intl.string(b.t.XBrJT0),
             sound: "call_ringing",
         },
         {
-            useLabel: () => E.intl.string(E.t.hK51Ym),
+            useLabel: () => b.intl.string(b.t.hK51Ym),
             sound: "deafen",
         },
         {
-            useLabel: () => E.intl.string(E.t.XiejaG),
+            useLabel: () => b.intl.string(b.t.XiejaG),
             sound: "undeafen",
         },
         {
-            useLabel: () => E.intl.string(E.t["w4m94+"]),
+            useLabel: () => b.intl.string(b.t["w4m94+"]),
             sound: "mute",
         },
         {
-            useLabel: () => E.intl.string(E.t.YqAjX1),
+            useLabel: () => b.intl.string(b.t.YqAjX1),
             sound: "unmute",
         },
         {
-            useLabel: () => E.intl.string(E.t.JoTq8v),
+            useLabel: () => b.intl.string(b.t.JoTq8v),
             sound: "camera_on",
         },
         {
-            useLabel: () => E.intl.string(E.t["8P6tQ0"]),
+            useLabel: () => b.intl.string(b.t["8P6tQ0"]),
             sound: "camera_off",
         },
         {
-            useLabel: () => E.intl.string(E.t["juL9/P"]),
+            useLabel: () => b.intl.string(b.t["juL9/P"]),
             sound: "disconnect",
         },
         {
-            useLabel: () => E.intl.string(E.t.x98vQk),
+            useLabel: () => b.intl.string(b.t.x98vQk),
             sound: "ptt_start",
         },
         {
-            useLabel: () => E.intl.string(E.t["1HjRqK"]),
+            useLabel: () => b.intl.string(b.t["1HjRqK"]),
             sound: "ptt_stop",
         },
         {
-            useLabel: () => E.intl.string(E.t["9JB1Cg"]),
+            useLabel: () => b.intl.string(b.t["9JB1Cg"]),
             sound: "user_join",
         },
         {
-            useLabel: () => E.intl.string(E.t.KUBBNj),
+            useLabel: () => b.intl.string(b.t.KUBBNj),
             sound: "user_leave",
         },
         {
-            useLabel: () => E.intl.string(E.t.EZjqUV),
+            useLabel: () => b.intl.string(b.t.EZjqUV),
             sound: "user_moved",
         },
         {
-            useLabel: () => E.intl.string(E.t.LnNlQk),
+            useLabel: () => b.intl.string(b.t.LnNlQk),
             sound: "call_calling",
         },
         {
-            useLabel: () => E.intl.string(E.t["Nd8P5+"]),
+            useLabel: () => b.intl.string(b.t["Nd8P5+"]),
             sound: "stream_started",
         },
         {
-            useLabel: () => E.intl.string(E.t["9bYj+P"]),
+            useLabel: () => b.intl.string(b.t["9bYj+P"]),
             sound: "stream_ended",
         },
         {
-            useLabel: () => E.intl.string(E.t.KccUIy),
+            useLabel: () => b.intl.string(b.t.KccUIy),
             sound: "stream_user_joined",
         },
         {
-            useLabel: () => E.intl.string(E.t.dsjkiI),
+            useLabel: () => b.intl.string(b.t.dsjkiI),
             sound: "stream_user_left",
         },
         {
-            useLabel: () => E.intl.string(E.t.nFOcf3),
+            useLabel: () => b.intl.string(b.t.nFOcf3),
             sound: "activity_launch",
         },
         {
-            useLabel: () => E.intl.string(E.t["a6lw/v"]),
+            useLabel: () => b.intl.string(b.t["a6lw/v"]),
             sound: "activity_end",
         },
         {
-            useLabel: () => E.intl.string(E.t.KaFxra),
+            useLabel: () => b.intl.string(b.t.KaFxra),
             sound: "activity_user_join",
         },
         {
-            useLabel: () => E.intl.string(E.t.S14z9v),
+            useLabel: () => b.intl.string(b.t.S14z9v),
             sound: "activity_user_left",
         },
         {
-            useLabel: () => E.intl.string(E.t.CP3DCw),
+            useLabel: () => b.intl.string(b.t.CP3DCw),
             sound: "reconnect",
         },
     ].map((e) => ({
-        node: (0, u.qs)("".concat(_.t.SOUNDS_LIST_ITEM_PREFIX).concat(e.sound), {
+        node: (0, u.qs)("".concat(f.n.SOUNDS_LIST_ITEM_PREFIX).concat(e.sound), {
             useTitle: () => {
                 let t = e.useLabel();
-                return (0, i.jsxs)("div", {
-                    className: N.soundRow,
-                    children: [(0, i.jsx)("span", { children: t }), (0, i.jsx)(O, { sound: e.sound })],
+                return (0, r.jsxs)("div", {
+                    className: y.soundRow,
+                    children: [(0, r.jsx)("span", { children: t }), (0, r.jsx)(g, { sound: e.sound })],
                 });
             },
             useValue: () => {
                 var t;
                 let n = (0, l.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
-                    i = null == (t = e.useDisabled) ? void 0 : t.call(e);
-                return !n && !i;
+                    r = null == (t = e.useDisabled) ? void 0 : t.call(e);
+                return !n && !r;
             },
             setValue: (t) => {
                 let n = d.Z.getDisabledSounds().filter((t) => t !== e.sound);
-                t || n.push(e.sound), a.default.setDisabledSounds(n);
+                t || n.push(e.sound), s.default.setDisabledSounds(n);
             },
             useDisabled: () => {
                 var t;
                 let n = null == (t = e.useDisabled) ? void 0 : t.call(e),
-                    i = (0, l.e7)([d.Z], () => d.Z.getDisableAllSounds());
-                return n || i;
+                    r = (0, l.e7)([d.Z], () => d.Z.getDisableAllSounds());
+                return n || r;
             },
             useTooltip: e.useTooltip,
         }),
     })),
-    f = (0, u.qs)(_.t.SELECTED_CHANNEL_NOTIFICATIONS, {
-        useTitle: () => E.intl.string(E.t.TzjwV1),
+    p = (0, u.qs)(f.n.SELECTED_CHANNEL_NOTIFICATIONS, {
+        useTitle: () => b.intl.string(b.t.TzjwV1),
         useValue: () => (0, l.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
-        setValue: (e) => a.default.setNotifyMessagesInSelectedChannel(e),
+        setValue: (e) => s.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    A = (0, u.qs)(_.t.DISABLE_ALL_NOTIFICATION_SOUNDS, {
-        useTitle: () => E.intl.string(E.t["2ZhCOT"]),
-        useSubtitle: () => E.intl.string(E.t["+B0XLC"]),
+    v = (0, u.qs)(f.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+        useTitle: () => b.intl.string(b.t["2ZhCOT"]),
+        useSubtitle: () => b.intl.string(b.t["+B0XLC"]),
         useValue: () => (0, l.e7)([d.Z], () => d.Z.getDisableAllSounds()),
-        setValue: (e) => a.default.toggleDisableAllSounds(e),
+        setValue: (e) => s.default.toggleDisableAllSounds(e),
     }),
-    T = (0, u.$l)(_.t.NOTIFICATION_SOUNDS_LIST, {
+    T = (0, u.$l)(f.n.NOTIFICATION_SOUNDS_LIST, {
         collapseAfter: 4,
         useCollapsibleTitle: (e, t) =>
             e
-                ? E.intl.formatToPlainString(E.t["0JYT9/"], { count: t })
-                : E.intl.formatToPlainString(E.t.ji1uNj, { count: t }),
+                ? b.intl.formatToPlainString(b.t["0JYT9/"], { count: t })
+                : b.intl.formatToPlainString(b.t.ji1uNj, { count: t }),
         ContextProvider: function (e) {
             let { children: t } = e,
-                n = r.useRef(null),
-                l = r.useCallback((e, t) => {
+                n = i.useRef(null),
+                l = i.useCallback((e, t) => {
                     t.stopPropagation(),
                         t.preventDefault(),
                         null != n.current && n.current.stop(),
                         (n.current = (0, c.GN)(e));
                 }, []);
-            r.useEffect(
+            i.useEffect(
                 () => () => {
                     var e;
                     null == (e = n.current) || e.stop();
                 },
                 [],
             );
-            let o = r.useMemo(() => ({ handlePreviewSound: l }), [l]);
-            return (0, i.jsx)(g.Provider, {
+            let o = i.useMemo(() => ({ handlePreviewSound: l }), [l]);
+            return (0, r.jsx)(O.Provider, {
                 value: o,
                 children: t,
             });
         },
-        getLayout: () => [I[0].node, f, I[1].node, A, ...I.slice(2).map((e) => e.node)],
+        buildLayout: () => [E[0].node, p, E[1].node, v, ...E.slice(2).map((e) => e.node)],
     });

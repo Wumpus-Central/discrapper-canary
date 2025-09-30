@@ -1,16 +1,16 @@
 n.d(t, { Z: () => u });
-var i = n(657707),
-    l = n(509613),
-    r = n(906467),
-    s = n(287490),
-    a = n(869235);
-let o = (0, l.x1)(a.t.EXPERIMENTS_PANE, {
-        getLayout: () => [],
+var r = n(657707),
+    i = n(509613),
+    l = n(906467),
+    o = n(313789),
+    s = n(287490);
+let a = (0, i.x1)(o.n.EXPERIMENTS_PANE, {
+        buildLayout: () => [],
         render: s.Z,
     }),
-    u = (0, l.wf)(a.t.EXPERIMENTS_PANEL, {
-        icon: i.uOV,
+    u = (0, i.wf)(o.n.EXPERIMENTS_PANEL, {
+        icon: r.uOV,
         useTitle: () => "Experiments",
-        usePredicate: () => r.Z.isDeveloper,
-        getLayout: () => [o],
+        usePredicate: () => l.Z.isDeveloper,
+        buildLayout: () => [a],
     });

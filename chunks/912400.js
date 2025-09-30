@@ -1,19 +1,19 @@
 n.d(t, { Z: () => d });
-var i = n(951288),
-    l = n(657707),
-    r = n(509613),
+var r = n(951288),
+    i = n(657707),
+    l = n(509613),
+    o = n(313789),
     s = n(795594),
-    a = n(869235),
-    o = n(726985),
+    a = n(726985),
     u = n(388032);
-let c = (0, r.x1)(a.t.AUTHORIZED_APPS_PANE, {
+let c = (0, l.x1)(o.n.AUTHORIZED_APPS_PANE, {
         useTitle: () => u.intl.string(u.t["f6kk+v"]),
-        getLayout: () => [],
-        render: () => (0, i.jsx)(s.Z, {}),
+        buildLayout: () => [],
+        render: () => (0, r.jsx)(s.Z, {}),
     }),
-    d = (0, r.wf)(a.t.AUTHORIZED_APPS_PANEL, {
+    d = (0, l.wf)(o.n.AUTHORIZED_APPS_PANEL, {
         useTitle: () => u.intl.string(u.t["f6kk+v"]),
-        icon: l.jje,
-        getLayout: () => [c],
-        legacySearchKey: o.s6.AUTHORIZED_APPS,
+        icon: i.jje,
+        buildLayout: () => [c],
+        legacySearchKey: a.s6.AUTHORIZED_APPS,
     });
