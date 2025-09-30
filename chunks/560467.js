@@ -14,11 +14,11 @@ var r = t(951288),
     x = t(183369),
     f = t(422663),
     _ = t(210682),
-    h = t(39793),
-    j = t(473682),
-    b = t(440589),
+    j = t(39793),
+    h = t(473682),
+    b = t(401561),
     v = t(388032),
-    C = t(557787);
+    C = t(149671);
 function N(e) {
     let { plan: n, selected: t, className: i } = e;
     return null == n
@@ -50,7 +50,7 @@ function N(e) {
 }
 function O(e) {
     let { region: n, selected: t, disabled: i, className: l } = e,
-        { pingText: o, pingCircleStyle: s } = (0, h.t)(n.pingUrl);
+        { pingText: o, pingCircleStyle: s } = (0, j.t)(n.pingUrl);
     return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -86,7 +86,7 @@ function y() {
         regionId: t,
         portkeyInstance: l,
         setRegionId: a,
-        name: h,
+        name: j,
         setName: y,
         planId: S,
         setPlanId: E,
@@ -108,7 +108,7 @@ function y() {
                 ? e
                 : [];
         }, [I]),
-        G = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -121,7 +121,7 @@ function y() {
                 ? e
                 : [];
         }, [n]),
-        Z = (0, _.Z)();
+        G = (0, _.Z)();
     return null == n
         ? (0, r.jsx)("div", {
               className: C.spinnerContainer,
@@ -157,11 +157,11 @@ function y() {
                                               ],
                                           }),
                                           (0, r.jsx)(c.oil, {
-                                              value: h,
+                                              value: j,
                                               onChange: y,
                                               placeholder: v.intl.string(b.default.Kg0Zio),
                                               showCharacterCount: !0,
-                                              maxLength: j.gM,
+                                              maxLength: h.gM,
                                               disabled: w,
                                           }),
                                       ],
@@ -178,7 +178,9 @@ function y() {
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: v.intl.string(b.default.wKyl39),
+                                                      text: v.intl.string(
+                                                          null != l ? b.default.sjwMnJ : b.default.wKyl39,
+                                                      ),
                                                       children: (0, r.jsx)(c.idN, {
                                                           className: C.sectionHeaderIcon,
                                                           size: "xs",
@@ -202,7 +204,7 @@ function y() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              isDisabled: w,
+                                              isDisabled: w || null != l,
                                               options: R,
                                               optionClassName: C.option,
                                               select: (e) => a(e.id),
@@ -253,7 +255,7 @@ function y() {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === S,
                                               isDisabled: w,
-                                              options: G,
+                                              options: k,
                                               optionClassName: C.option,
                                               select: (e) => E(e.id),
                                               placeholder: v.intl.string(b.default["4QOSPj"]),
@@ -311,9 +313,9 @@ function y() {
                           children: T,
                       }),
                   (0, r.jsxs)(f.ok, {
-                      step: j.Vb.SERVER_SETTINGS,
+                      step: h.Vb.SERVER_SETTINGS,
                       className: C.footerContainer,
-                      children: [(0, r.jsx)(f.VS, {}), (0, r.jsx)(f.oh, { disabled: !Z })],
+                      children: [(0, r.jsx)(f.VS, {}), (0, r.jsx)(f.oh, { disabled: !G })],
                   }),
               ],
           });
