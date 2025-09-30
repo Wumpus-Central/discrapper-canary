@@ -75513,28 +75513,12 @@ div.nagbar_d74ef8 {
     margin-right: var(--space-4)
 }
 
-.select_d81ffd {
+.select_b2fe93 {
     flex-grow: 0;
     min-width: 140px
 }
 
-.settingHeader_d81ffd {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4)
-}
-
-.subSettingContainer_d81ffd {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16)
-}
-
-.selectItemTitle_d81ffd {
-    margin-bottom: var(--space-4)
-}
-
-.selectItemRow_d81ffd {
+.selectItemRow_b2fe93 {
     align-items: center;
     border-bottom: 1px solid var(--border-subtle);
     display: flex;

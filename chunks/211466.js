@@ -16,7 +16,7 @@ function p() {
         t = [
             {
                 title: _.intl.string(_.t.GYpoAg),
-                component: () => (0, r.jsx)(s.P, { isNested: !0 }),
+                component: () => (0, r.jsx)(s.P, {}),
                 orientation: "vertical",
                 setting: d.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
