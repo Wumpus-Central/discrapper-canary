@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(979554),
@@ -14,21 +14,40 @@ var r = n(951288),
     g = n(876917),
     m = n(461631),
     b = n(474936),
-    _ = n(988388);
-function O(e) {
-    let { item: t, profileOwner: n, wishlistId: O, isOwner: E } = e,
-        y = i.useRef(null),
-        v = (0, s.Z)(y),
-        I = t.collectiblesItem,
-        { analyticsLocations: S } = (0, u.ZP)();
+    _ = n(388032),
+    O = n(988388);
+function E(e) {
+    let { item: t, profileOwner: n, wishlistId: E, isOwner: y } = e,
+        v = i.useRef(null),
+        I = (0, s.Z)(v),
+        S = t.collectiblesItem,
+        { analyticsLocations: C } = (0, u.ZP)(),
+        T = () => {
+            y
+                ? ((0, o.pTH)(),
+                  (0, d.mK)({
+                      analyticsLocations: C,
+                      analyticsSource: c.Z.USER_PROFILE_WISHLIST,
+                      openInLayer: !1,
+                      initialProductSkuId: t.skuId,
+                  }))
+                : (0, h.Z)({
+                      skuId: t.skuId,
+                      isGift: !0,
+                      giftingOrigin: b.Wt.USER_PROFILE_WISHLIST,
+                      analyticsLocations: C,
+                      giftRecipient: n,
+                      variantsReturnStyle: a.v.VARIANTS_GROUP,
+                  });
+        };
     return (0, r.jsxs)("div", {
-        className: _.container,
+        className: O.container,
         children: [
             (0, r.jsx)(o.ua7, {
                 text: t.skuName,
                 children: (e) => {
-                    var i, s;
-                    return (0, r.jsx)(
+                    var i, a;
+                    return (0, r.jsxs)(
                         o.P3F,
                         ((i = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -55,94 +74,93 @@ function O(e) {
                             }
                             return e;
                         })({}, e)),
-                        (s = s =
+                        (a = a =
                             {
-                                className: _.card,
-                                innerRef: y,
-                                onClick: () => {
-                                    E
-                                        ? ((0, o.pTH)(),
-                                          (0, d.mK)({
-                                              analyticsLocations: S,
-                                              analyticsSource: c.Z.USER_PROFILE_WISHLIST,
-                                              openInLayer: !1,
-                                              initialProductSkuId: t.skuId,
-                                          }))
-                                        : (0, h.Z)({
-                                              skuId: t.skuId,
-                                              isGift: !0,
-                                              giftingOrigin: b.Wt.USER_PROFILE_WISHLIST,
-                                              analyticsLocations: S,
-                                              giftRecipient: n,
-                                              variantsReturnStyle: a.v.VARIANTS_GROUP,
-                                          });
-                                },
+                                className: O.card,
+                                innerRef: v,
+                                onClick: T,
                                 "aria-label": t.skuName,
-                                children: (0, r.jsx)("div", {
-                                    className: _.cardPreview,
-                                    children: (() => {
-                                        switch (I.type) {
-                                            case l.Z.PROFILE_EFFECT:
-                                                return (0, r.jsx)("div", {
-                                                    className: _.profileEffectPreview,
-                                                    children: (0, r.jsx)(g.Z, {
-                                                        profileEffectId: I.id,
-                                                        isHovering: v,
-                                                        isPurchased: !1,
-                                                        removeSetHeight: !0,
-                                                    }),
-                                                });
-                                            case l.Z.AVATAR_DECORATION:
-                                                return (0, r.jsx)("div", {
-                                                    className: _.avatarDecorationPreview,
-                                                    children: (0, r.jsx)(p.R, {
-                                                        item: I,
-                                                        user: n,
-                                                        isHighlighted: v,
-                                                        isPurchased: !1,
-                                                        avatarSize: o.EFr.SIZE_80,
-                                                    }),
-                                                });
-                                            case l.Z.NAMEPLATE:
-                                                return (0, r.jsxs)("div", {
-                                                    className: _.nameplatePreview,
-                                                    children: [
-                                                        (0, r.jsx)("div", {
-                                                            className: _.nameplateTopLeft,
-                                                            children: (0, r.jsx)(f.Z, {
-                                                                user: n,
-                                                                nameplate: I,
-                                                                isHighlighted: v,
-                                                                showPlaceholderUser: !0,
-                                                                showStatus: !0,
-                                                                isPurchased: !1,
-                                                                nameplatePreviewSize: "default",
-                                                                width: 200,
-                                                            }),
+                                children: [
+                                    (0, r.jsx)("div", {
+                                        className: O.cardPreview,
+                                        children: (() => {
+                                            switch (S.type) {
+                                                case l.Z.PROFILE_EFFECT:
+                                                    return (0, r.jsx)("div", {
+                                                        className: O.profileEffectPreview,
+                                                        children: (0, r.jsx)(g.Z, {
+                                                            profileEffectId: S.id,
+                                                            isHovering: I,
+                                                            isPurchased: !1,
+                                                            removeSetHeight: !0,
                                                         }),
-                                                        (0, r.jsx)("div", {
-                                                            className: _.nameplateBottomRight,
-                                                            children: (0, r.jsx)(f.Z, {
-                                                                user: n,
-                                                                nameplate: I,
-                                                                isHighlighted: v,
-                                                                showPlaceholderUser: !0,
-                                                                showStatus: !0,
-                                                                isPurchased: !1,
-                                                                nameplatePreviewSize: "default",
-                                                                width: 200,
-                                                            }),
+                                                    });
+                                                case l.Z.AVATAR_DECORATION:
+                                                    return (0, r.jsx)("div", {
+                                                        className: O.avatarDecorationPreview,
+                                                        children: (0, r.jsx)(p.R, {
+                                                            item: S,
+                                                            user: n,
+                                                            isHighlighted: I,
+                                                            isPurchased: !1,
+                                                            avatarSize: o.EFr.SIZE_80,
                                                         }),
-                                                    ],
-                                                });
-                                            default:
-                                                return null;
-                                        }
-                                    })(),
-                                }),
+                                                    });
+                                                case l.Z.NAMEPLATE:
+                                                    return (0, r.jsxs)("div", {
+                                                        className: O.nameplatePreview,
+                                                        children: [
+                                                            (0, r.jsx)("div", {
+                                                                className: O.nameplateTopLeft,
+                                                                children: (0, r.jsx)(f.Z, {
+                                                                    user: n,
+                                                                    nameplate: S,
+                                                                    isHighlighted: I,
+                                                                    showPlaceholderUser: !0,
+                                                                    showStatus: !0,
+                                                                    isPurchased: !1,
+                                                                    nameplatePreviewSize: "default",
+                                                                    width: 200,
+                                                                }),
+                                                            }),
+                                                            (0, r.jsx)("div", {
+                                                                className: O.nameplateBottomRight,
+                                                                children: (0, r.jsx)(f.Z, {
+                                                                    user: n,
+                                                                    nameplate: S,
+                                                                    isHighlighted: I,
+                                                                    showPlaceholderUser: !0,
+                                                                    showStatus: !0,
+                                                                    isPurchased: !1,
+                                                                    nameplatePreviewSize: "default",
+                                                                    width: 200,
+                                                                }),
+                                                            }),
+                                                        ],
+                                                    });
+                                                default:
+                                                    return null;
+                                            }
+                                        })(),
+                                    }),
+                                    I &&
+                                        (0, r.jsx)("div", {
+                                            className: O.overlay,
+                                            children: (0, r.jsx)(o.zxk, {
+                                                variant: "primary",
+                                                size: "sm",
+                                                text: _.intl.string(y ? _.t.FdGl5O : _.t.ilhtIS),
+                                                icon: y ? void 0 : o.OgN,
+                                                onClick: (e) => {
+                                                    e.stopPropagation(), T();
+                                                },
+                                                fullWidth: !0,
+                                            }),
+                                        }),
+                                ],
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -150,19 +168,19 @@ function O(e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
                         i),
                     );
                 },
             }),
-            E &&
+            y &&
                 (0, r.jsx)(m.Z, {
                     iconSize: "sm",
                     item: t,
-                    wishlistId: O,
-                    className: _.removeItemButton,
+                    wishlistId: E,
+                    className: O.removeItemButton,
                 }),
         ],
     });
