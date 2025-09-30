@@ -47,7 +47,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,7 +80,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -257,7 +257,7 @@ function ed(e, t) {
     var n, r;
     let i = null == (n = V[e]) ? void 0 : n.error,
         a = null == (r = V[e]) ? void 0 : r.error_description;
-    (V[e] = x({}, V[e], t)), null != i && (V[e].error = i), null != a && (V[e].error_description = a);
+    (V[e] = L({}, V[e], t)), null != i && (V[e].error = i), null != a && (V[e].error_description = a);
 }
 function ef(e) {
     var t, n, r;
@@ -426,7 +426,7 @@ async function eT(e) {
             (X = null),
             B(e, "renderer_window_mounting_started", n),
             await (0, C.f)(et),
-            (ei = j(x({}, ei), { popoutOpened: !0 }));
+            (ei = j(L({}, ei), { popoutOpened: !0 }));
         let r = {
             renderer_started: !0,
             fullscreen_type: await (0, A.hj)(e, 0),
@@ -464,7 +464,7 @@ async function eT(e) {
         G.error("failed to create out of process overlay host window", t),
             eh(e, t),
             c.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED_DISABLED),
-            (ei = j(x({}, ei), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + t }));
+            (ei = j(L({}, ei), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + t }));
     } finally {
         e9.emitChange();
     }
@@ -590,10 +590,10 @@ function ew(e) {
 function eD() {
     eR(null, !0), e9.emitChange();
 }
-function ex(e) {
+function eL(e) {
     return (z = e.pid), !0;
 }
-function eL(e) {
+function ex(e) {
     if (!Y.has(e) || !ei.allDone) return;
     let t = eu(e).mounting_started_at;
     ed(e, {
@@ -604,23 +604,23 @@ function eL(e) {
 }
 function ej() {
     var e;
-    (ei = j(x({}, ei), { showInactiveCalled: !0 })), null == W || null == (e = W.onPopoutShowInactive) || e.call(W);
+    (ei = j(L({}, ei), { showInactiveCalled: !0 })), null == W || null == (e = W.onPopoutShowInactive) || e.call(W);
 }
 function eM() {
-    (ei = j(x({}, ei), { allDone: !0 })),
+    (ei = j(L({}, ei), { allDone: !0 })),
         Y.forEach((e) => {
-            eL(e);
+            ex(e);
         });
 }
 function ek(e) {
     let { update: t } = e;
-    ei = x({}, ei, t);
+    ei = L({}, ei, t);
 }
 function eU(e) {
-    B(e, "_successfullyShownCallback"), Y.add(e), eL(e);
+    B(e, "_successfullyShownCallback"), Y.add(e), ex(e);
 }
 function eG(e) {
-    (ei = j(x({}, ei), { windowHandleSentToNative: e })),
+    (ei = j(L({}, ei), { windowHandleSentToNative: e })),
         e && c.Z.updateOverlayState((0, b.getPID)(), I.mM.WAITING_FOR_REACT_INITIALIZATION),
         e9.emitChange();
 }
@@ -827,7 +827,7 @@ class e7 extends (i = s.ZP.Store) {
         return null == z ? null : null != (e = _.ZP.getGameOrTransformedSubgameForPID(z)) ? e : null;
     }
     isReady(e) {
-        return Z.has(e);
+        return !!Z.has(e) && J[e] === I.mM.OVERLAY_RENDERING;
     }
     isGPUBoosted() {
         return H.isGPUBoosted;
@@ -867,7 +867,7 @@ let e9 = new e7(
                   OVERLAY_UPDATE_OVERLAY_STATE: eX,
                   OVERLAY_SET_GPU_BOOST_REQUESTED: eW,
                   OVERLAY_CRASHED: eY,
-                  OVERLAY_FOCUSED: ex,
+                  OVERLAY_FOCUSED: eL,
                   OVERLAY_SET_MODULE_LOGGING: e5,
                   OVERLAY_SET_STATE_DEBUGGING: e6,
                   OVERLAY_OOP_UI_INITIALIZED: eM,
