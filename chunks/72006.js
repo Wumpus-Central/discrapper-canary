@@ -1,17 +1,18 @@
 n.d(t, {
     FZ: () => D,
-    Hl: () => G,
+    Hl: () => B,
     NJ: () => j,
     R8: () => k,
     Sq: () => N,
     Wg: () => U,
     Zn: () => C,
-    c2: () => x,
+    c2: () => L,
     eE: () => M,
-    iE: () => B,
-    iK: () => L,
+    iE: () => Z,
+    iK: () => x,
     l8: () => w,
     lv: () => R,
+    m1: () => G,
     nR: () => P,
     q0: () => a.a,
     x0: () => S,
@@ -166,19 +167,19 @@ function D(e) {
         n = e.getSelection();
     return null != n && n.hasFocus && (t = r.EditorState.moveFocusToEnd(t)), t;
 }
-function x(e, t) {
+function L(e, t) {
     let n = N(t);
     return S(e, t, 0, n.length);
 }
-function L(e, t) {
+function x(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set("focusOffset", e)).set("anchorOffset", e)), r.EditorState.forceSelection(t, n);
 }
 function j(e) {
-    return L(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return x(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function M(e) {
-    return L(0, e);
+    return x(0, e);
 }
 function k(e) {
     let t = e.getSelection();
@@ -190,6 +191,16 @@ function U(e) {
     return (n = (n = n.set("focusOffset", t.length)).set("isBackward", !1)), r.EditorState.forceSelection(e, n);
 }
 function G(e) {
+    let t = e.getCurrentContent().getFirstBlock(),
+        n = new r.SelectionState({
+            anchorKey: t.getKey(),
+            anchorOffset: 0,
+            focusKey: t.getKey(),
+            focusOffset: t.getLength(),
+        });
+    return r.EditorState.forceSelection(e, n);
+}
+function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = N(e);
     if (n.length > t) {
@@ -201,11 +212,11 @@ function G(e) {
     }
     return e;
 }
-function B(e) {
+function Z(e) {
     let t = window.getSelection();
     if (null == t || "Caret" !== t.type || null == e) return;
     let n = t.getRangeAt(0);
-    if (!Z(n.commonAncestorContainer, e)) return;
+    if (!F(n.commonAncestorContainer, e)) return;
     let r = n.getClientRects()[0],
         i = e.getClientRects()[0];
     if (null == r || null == i) return;
@@ -214,7 +225,7 @@ function B(e) {
         ? (e.scrollLeft = a - 10)
         : a > e.scrollLeft + e.offsetWidth && (e.scrollLeft = a - e.offsetWidth + 3);
 }
-function Z(e, t) {
+function F(e, t) {
     for (; null != e; ) {
         if (e === t) return !0;
         e = e.parentNode;

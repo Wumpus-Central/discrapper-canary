@@ -44,7 +44,7 @@ var r = n(951288),
     G = n(723642),
     B = n(981631),
     Z = n(388032),
-    F = n(339450);
+    F = n(557818);
 function V(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function V(e, t, n) {
         e
     );
 }
-n(614346);
+n(571654);
 let H = 512,
     Y = (0, h.hQ)(),
     W = c()(x.Z.fetchMessages, 500);
@@ -408,13 +408,18 @@ class K extends i.PureComponent {
                 return this.props.isSearchFiltersRedesignEnabled ? e : t;
             }),
             V(this, "handleKeyBind", (e) => {
-                let { key: t, metaKey: n, shiftKey: r } = e,
-                    { editorState: i, searchContext: a, keyboardModeEnabled: o } = this.props;
-                if ((e.stopPropagation(), "Escape" === t)) {
-                    if ((e.preventDefault(), O.xb(i))) this.blurEditor();
+                let { key: t, metaKey: n, shiftKey: r, ctrlKey: i } = e,
+                    { editorState: a, searchContext: o, keyboardModeEnabled: s } = this.props;
+                if ((e.stopPropagation(), (n || i) && "a" === t.toLowerCase())) {
+                    e.preventDefault();
+                    let t = O.m1(a);
+                    return this.setEditorState(t), this.setState({ focused: !0 }), !0;
+                }
+                if ("Escape" === t) {
+                    if ((e.preventDefault(), O.xb(a))) this.blurEditor();
                     else {
-                        let e = O.FZ(i);
-                        L.Z.updateSearchEditorState(a, e), this.setState({ focused: !0 });
+                        let e = O.FZ(a);
+                        L.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
                     }
                     return !0;
                 }
@@ -429,15 +434,15 @@ class K extends i.PureComponent {
                     return null != t && t.focusNextOption(), !0;
                 }
                 if ("Tab" === t) {
-                    if (o) return;
+                    if (s) return;
                     return (0, _.Qj)(), !0;
                 }
                 if ("Home" === t || ("ArrowLeft" === t && n))
-                    return e.preventDefault(), (i = r ? O.R8(i) : O.eE(i)), this.setEditorState(i), !0;
+                    return e.preventDefault(), (a = r ? O.R8(a) : O.eE(a)), this.setEditorState(a), !0;
                 if ("End" === t || ("ArrowRight" === t && n))
-                    return e.preventDefault(), (i = r ? O.Wg(i) : O.NJ(i)), this.setEditorState(i), !0;
+                    return e.preventDefault(), (a = r ? O.Wg(a) : O.NJ(a)), this.setEditorState(a), !0;
                 if (("Delete" === t || "Backspace" === t) && n) {
-                    let e = O.FZ(i);
+                    let e = O.FZ(a);
                     return this.setEditorState(e), !0;
                 }
                 return O.q0(e);
