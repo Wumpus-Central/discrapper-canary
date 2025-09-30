@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(682255),
     f = n(888429),
     h = n(217472),
-    b = n(202905),
-    x = n(44867),
+    x = n(202905),
+    b = n(44867),
     j = n(557359),
     v = n(658666),
     _ = n(307375),
@@ -43,9 +43,9 @@ function E(e) {
                 rules: t.termRules,
             });
         case O.A.APPLY:
-            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
         case O.A.DISCOVERABLE:
-            return (0, r.jsx)(x.c, {
+            return (0, r.jsx)(b.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -121,13 +121,13 @@ function T() {
                 variant: "heading-lg/semibold",
                 children: C.intl.string(C.t.YJlvBA),
             }),
-            null != e && (0, r.jsx)(S, { guildId: e.id }),
             (0, r.jsx)(_.h, {
                 onTypePicked: n,
                 activeType: a,
                 guild: e,
             }),
             (0, r.jsx)("div", { className: N.divider }),
+            null != e && (0, r.jsx)(S, { guildId: e.id }),
             (0, r.jsx)("div", { children: (0, r.jsx)(E, { pendingState: t }) }),
         ],
     });
