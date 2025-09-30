@@ -1,23 +1,22 @@
-n.d(t, { i: () => m }), n(781311), n(388685);
+n.d(t, { i: () => h }), n(781311), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(49800),
     o = n(481060),
-    s = n(770102),
-    l = n(434333),
-    c = n(540863),
-    u = n(383838),
-    d = n(789164),
-    f = n(471141),
-    _ = n(512983),
-    p = n(231338);
-let h = {
+    s = n(434333),
+    l = n(540863),
+    c = n(383838),
+    u = n(789164),
+    d = n(471141),
+    f = n(512983),
+    _ = n(231338);
+let p = {
         id: "formnotice",
         name: "FormNotice",
         component: function (e) {
             let { type: t, title: n, body: i, hasButton: a } = e,
                 s = a ? (0, r.jsx)(o.zxk, { text: "Action" }) : void 0;
-            return (0, r.jsx)(u.To, {
+            return (0, r.jsx)(c.To, {
                 type: t,
                 title: n,
                 body: i,
@@ -73,19 +72,19 @@ let h = {
             },
         },
     },
-    m = {
+    h = {
         title: "Form Components",
         stories: [
-            h,
+            p,
             {
                 id: "formitem",
                 name: "FormItem",
                 component: function (e) {
                     let { title: t, errorMessage: n, disabled: i, required: a, tag: s } = e,
-                        l = (null == n ? void 0 : n.trim()) === "" ? void 0 : n;
-                    return (0, r.jsx)(c.x, {
+                        c = (null == n ? void 0 : n.trim()) === "" ? void 0 : n;
+                    return (0, r.jsx)(l.x, {
                         title: t,
-                        error: l,
+                        error: c,
                         disabled: i,
                         required: a,
                         tag: s,
@@ -181,7 +180,7 @@ let h = {
                                             },
                                             children: [e, ":"],
                                         }),
-                                        (0, r.jsx)(_.v, {
+                                        (0, r.jsx)(f.v, {
                                             tag: e,
                                             disabled: n,
                                             required: i,
@@ -225,14 +224,14 @@ let h = {
                 component: function (e) {
                     let { children: t, disabled: n, hideBorder: a, note: o, disabledText: s, tooltipNote: l } = e,
                         [c, u] = i.useState(!1),
-                        d = (e) => {
+                        f = (e) => {
                             u(e);
                         };
-                    return (0, r.jsx)(f.j, {
+                    return (0, r.jsx)(d.j, {
                         value: c,
                         disabled: n,
                         hideBorder: a,
-                        onChange: d,
+                        onChange: f,
                         note: (null == o ? void 0 : o.trim()) === "" ? void 0 : o,
                         disabledText: "" === s.trim() ? void 0 : s,
                         tooltipNote: "" === l.trim() ? void 0 : l,
@@ -273,32 +272,11 @@ let h = {
                 },
             },
             {
-                id: "formdivider",
-                name: "FormDivider",
-                component: function (e) {
-                    let {} = e;
-                    return (0, r.jsxs)("div", {
-                        children: [
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-md/normal",
-                                children: "Content above divider",
-                            }),
-                            (0, r.jsx)(s.$, {}),
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-md/normal",
-                                children: "Content below divider",
-                            }),
-                        ],
-                    });
-                },
-                controls: {},
-            },
-            {
                 id: "formsection",
                 name: "FormSection",
                 component: function (e) {
                     let { title: t, disabled: n, tag: i } = e;
-                    return (0, r.jsxs)(d.h, {
+                    return (0, r.jsxs)(u.h, {
                         title: t,
                         disabled: n,
                         tag: i,
@@ -352,11 +330,11 @@ let h = {
                 name: "FormErrorBlock",
                 component: function (e) {
                     let { children: t, backgroundColor: n, hasDismiss: i, iconType: a } = e,
-                        s = "check" === a ? o.owK : o.Mgn;
-                    return (0, r.jsx)(l.k, {
+                        l = "check" === a ? o.owK : o.Mgn;
+                    return (0, r.jsx)(s.k, {
                         backgroundColor: n,
-                        onDismiss: i ? p.dG : void 0,
-                        icon: s,
+                        onDismiss: i ? _.dG : void 0,
+                        icon: l,
                         children: t,
                     });
                 },
@@ -369,19 +347,19 @@ let h = {
                     backgroundColor: {
                         type: "select",
                         label: "Background Color",
-                        defaultValue: l.m.RED,
+                        defaultValue: s.m.RED,
                         options: [
                             {
                                 label: "Red",
-                                value: l.m.RED,
+                                value: s.m.RED,
                             },
                             {
                                 label: "Background Tertiary",
-                                value: l.m.BACKGROUND_TERTIARY,
+                                value: s.m.BACKGROUND_TERTIARY,
                             },
                             {
                                 label: "Background Accent",
-                                value: l.m.BACKGROUND_ACCENT,
+                                value: s.m.BACKGROUND_ACCENT,
                             },
                         ],
                     },
