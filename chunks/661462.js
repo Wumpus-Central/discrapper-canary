@@ -15,7 +15,7 @@ var r = n(951288),
     p = n(778414),
     f = n(414655),
     h = n(228168),
-    g = n(883101);
+    g = n(323056);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -209,15 +209,18 @@ function E(e) {
                 id: E,
                 "aria-label": v,
                 className: g.tabBarPanel,
-                children: (0, r.jsx)(O, {
-                    user: n,
-                    currentUser: l,
-                    displayProfile: a,
-                    guildId: c,
-                    channelId: u,
-                    section: E,
-                    subsection: y,
-                    onClose: h,
+                children: (0, r.jsx)(o.y5t, {
+                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: v }) }),
+                    children: (0, r.jsx)(O, {
+                        user: n,
+                        currentUser: l,
+                        displayProfile: a,
+                        guildId: c,
+                        channelId: u,
+                        section: E,
+                        subsection: y,
+                        onClose: h,
+                    }),
                 }),
             }),
         ],
