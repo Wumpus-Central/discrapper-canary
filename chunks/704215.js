@@ -478,6 +478,7 @@ var r = (function (e) {
             (e[(e.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET = 619)] =
                 "APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET"),
             (e[(e.GAME_SERVER_HOSTING_NEW_BADGE = 620)] = "GAME_SERVER_HOSTING_NEW_BADGE"),
+            (e[(e.WISHLIST_SHOP_BUTTON_POPOVER = 621)] = "WISHLIST_SHOP_BUTTON_POPOVER"),
             e
         );
     })({}),
