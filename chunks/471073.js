@@ -34,18 +34,21 @@ function b() {
     return (r = null), (i = null), (a = null), (o = null), (s = null), !0;
 }
 function y(e) {
-    let { messageId: t, nonce: n, data: l } = e;
+    let { messageId: t, nonce: n, data: l, preflight: c } = e;
     switch (l.interactionType) {
         case p.B8.APPLICATION_COMMAND:
             return (a = t), (o = l.channelId), (s = n), !1;
         case p.B8.MODAL_SUBMIT:
-            return (
-                u()(null == r || 1 === i || 2 === i, "cannot submit multiple modals at once"),
-                (r = n),
-                (i = 0),
+            u()(null == r || 1 === i || 2 === i, "cannot submit multiple modals at once"), (r = n), (i = 0);
+            let d = (e) => {
                 setTimeout(() => {
                     r === n && 0 === i && (0, h.yr)(n);
-                }, 10 * m.Z.Millis.SECOND),
+                }, e);
+            };
+            return (
+                null != c
+                    ? (d(2 * m.Z.Millis.MINUTE), c.then(() => d(10 * m.Z.Millis.SECOND)).catch(() => (0, h.yr)(n)))
+                    : d(10 * m.Z.Millis.SECOND),
                 !0
             );
         default:

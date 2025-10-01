@@ -1,7 +1,7 @@
 n.d(t, {
     X9: () => j,
     b8: () => M,
-    hz: () => x,
+    hz: () => L,
 }),
     n(388685),
     n(190126),
@@ -48,13 +48,13 @@ let D = (e) => {
         t
     );
 };
-function x(e) {
+function L(e) {
     var t;
     let n = (0, A.CJ)(),
         r = null == n || null == (t = n.modal) ? void 0 : t.components[0];
     return (null == r ? void 0 : r.type) === u.re.ACTION_ROW && r.components[0].id === e;
 }
-function L(e) {
+function x(e) {
     return r.useMemo(() => {
         let t = y.Z.getGuildId(),
             n = null != t && null != e.bot ? b.ZP.getMember(t, e.bot.id) : void 0,
@@ -79,8 +79,11 @@ function j(e, t) {
         [m, g] = r.useState({}),
         b = (0, o.e7)([N.Z], () => N.Z.getModalState(p), [p]),
         y = (0, d.Z)(() => new Set()),
-        O = r.useCallback(() => {
-            _(null), h(null), D(y) && h(G(e, s));
+        O = r.useCallback(async () => {
+            if ((_(null), h(null), D(y))) {
+                let t = T.default.fromTimestamp(Date.now());
+                h(t), await G(e, s, t);
+            }
         }, [s, e, y]);
     r.useEffect(() => {
         b === N.i.SUCCEEDED &&
@@ -96,7 +99,7 @@ function j(e, t) {
             t()),
             b === N.i.ERRORED && _(w.intl.string(w.t.uJgdEh));
     }, [p, b, t, i, e.channelId]);
-    let { applicationIconURL: v, applicationName: I } = L(n);
+    let { applicationIconURL: v, applicationName: I } = x(n);
     return {
         components: a,
         applicationIconURL: v,
@@ -111,7 +114,7 @@ function j(e, t) {
 }
 function M(e) {
     let { application: t, customId: n } = e,
-        { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = L(t),
+        { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = x(t),
         s = g.Z.getChannel(e.channelId);
     a()(null != s, "channel should not be null");
     let l = {
@@ -197,47 +200,47 @@ function U(e, t) {
         return (null == (n = (0, C.yw)(e.id)) ? void 0 : n.containerId) === t;
     });
 }
-function G(e, t) {
-    let n = T.default.fromTimestamp(Date.now()),
-        r = e.channelId,
+async function G(e, t, n) {
+    let r = e.channelId,
         i = g.Z.getChannel(r);
     a()(null != i, "expected channel");
     let o = U(r, e.customId),
-        l = k(e.customId, e.components, { uploads: o });
+        l = o.length > 0 ? (0, _.Z)(o) : void 0;
     (0, h.kz)(n, {
         data: {
             interactionType: u.B8.MODAL_SUBMIT,
             applicationId: e.application.id,
         },
-    });
-    let c = async () => {
-        if (null == t ? void 0 : t.aborted) return;
-        o.length > 0 && (await (0, _.Z)(o));
-        let r = o.map((e, t) => (0, S.B)(e, t));
-        (null != t && t.aborted) ||
-            s.tn
-                .post({
-                    url: P.ANM.INTERACTIONS,
-                    body: {
-                        type: u.B8.MODAL_SUBMIT,
-                        application_id: e.application.id,
-                        channel_id: i.id,
-                        guild_id: i.guild_id,
-                        data: {
-                            id: e.id,
-                            custom_id: e.customId,
-                            components: l,
-                            attachments: r.length > 0 ? r : void 0,
+        preflight: l,
+    }),
+        await l;
+    let c = o.map((e, t) => (0, S.B)(e, t)),
+        d = k(e.customId, e.components, { uploads: o }),
+        f = () => {
+            (null != t && t.aborted) ||
+                s.tn
+                    .post({
+                        url: P.ANM.INTERACTIONS,
+                        body: {
+                            type: u.B8.MODAL_SUBMIT,
+                            application_id: e.application.id,
+                            channel_id: i.id,
+                            guild_id: i.guild_id,
+                            data: {
+                                id: e.id,
+                                custom_id: e.customId,
+                                components: d,
+                                attachments: c.length > 0 ? c : void 0,
+                            },
+                            session_id: m.default.getSessionId(),
+                            nonce: n,
                         },
-                        session_id: m.default.getSessionId(),
-                        nonce: n,
-                    },
-                    signal: t,
-                    rejectWithError: !1,
-                })
-                .catch((e) => {
-                    429 === e.status ? setTimeout(c, e.body.retry_after * I.Z.Millis.SECOND) : (0, h.yr)(n);
-                });
-    };
-    return c(), n;
+                        signal: t,
+                        rejectWithError: !1,
+                    })
+                    .catch((e) => {
+                        429 === e.status ? setTimeout(f, e.body.retry_after * I.Z.Millis.SECOND) : (0, h.yr)(n);
+                    });
+        };
+    f();
 }

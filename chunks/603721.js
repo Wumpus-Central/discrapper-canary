@@ -17,15 +17,16 @@ function o(e, t, n, r) {
     });
 }
 function s(e, t) {
-    let { data: n, messageId: r, onCreate: a, onSuccess: o, onFailure: s } = t;
+    let { data: n, messageId: r, preflight: a, onCreate: o, onSuccess: s, onFailure: l } = t;
     i.Z.dispatch({
         type: "INTERACTION_QUEUE",
         data: n,
         nonce: e,
         messageId: r,
-        onCreate: a,
-        onSuccess: o,
-        onFailure: s,
+        preflight: a,
+        onCreate: o,
+        onSuccess: s,
+        onFailure: l,
     });
 }
 function l(e, t, n, r) {

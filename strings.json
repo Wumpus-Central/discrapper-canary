@@ -5741,7 +5741,6 @@
   "HYg2Hh": "Remove some files to upload new ones.",
   "0PhgpK": "File upload limit reached",
   "pmAt6+": "You need to upload at least {minValues} files.",
-  "9ovjIC": "At least 1 file is required.",
   "tyxwW1": "Upload {maxValues, plural, one {a file} other {up to  files} } under !!{maxSize}!!.",
   "SAr319": "Upload {minValues} files under !!{maxSize}!!.",
   "ZG+3Cg": "Upload {minValues}–{maxValues} files under !!{maxSize}!!.",
