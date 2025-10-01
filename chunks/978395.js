@@ -82,7 +82,7 @@ function j(e) {
                         !Y &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: k,
+                                isVisible: k,
                                 onOpenProfile: U,
                             }),
                     ],

@@ -65,7 +65,7 @@ function R(e) {
                         !U &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
-                                isHovering: w,
+                                isVisible: w,
                                 onOpenProfile: D,
                             }),
                     ],
