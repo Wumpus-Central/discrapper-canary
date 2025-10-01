@@ -48446,9 +48446,15 @@ div.mobilePushContainer__3d3b0 {
     width: 100%
 }
 
-@media (max-width:485px) {
-    .animatedDivDynamicHeight__59d99 {
-        min-height: 100% !important
+@media screen and (max-height:550px),
+screen and (max-width:485px) {
+    .outerAnimatedDivDynamicSizing__59d99 {
+        min-height: 100% !important;
+        min-width: 100% !important
+    }
+
+    .innerAnimatedDivDynamicSizing__59d99 {
+        width: 100% !important
     }
 }
 

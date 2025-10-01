@@ -1,37 +1,16 @@
-n.d(t, {
-    D: () => c,
-    o: () => d,
-});
-var a = n(442837),
-    r = n(704215),
-    l = n(605236),
-    i = n(818083),
-    s = n(496675),
-    o = n(981631);
-let c = (0, i.B)({
-    kind: "guild",
-    id: "2025-06_guild_pin_permission",
-    label: "Guild Pin Permission",
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Allows use of the Pin Messages permission",
-            config: { enabled: !0 },
-        },
-    ],
-});
-function d(e) {
-    var t;
-    let n = (0, a.e7)([s.Z], () => s.Z.can(o.Plq.ADMINISTRATOR, e)),
-        i = c.useExperiment({
-            guildId: null == e ? void 0 : e.id,
-            location: "useIsPinPermissionMigrationNotificationAvailable",
-        }).enabled,
-        d = null == e ? void 0 : e.features.has(o.oNc.PIN_PERMISSION_MIGRATION_COMPLETE),
-        u = (0, l.OA)(
-            r.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
-            null != (t = null == e ? void 0 : e.id) ? t : o.lds,
+t.d(n, { D: () => s });
+var r = t(442837),
+    i = t(704215),
+    a = t(605236),
+    o = t(496675),
+    c = t(981631);
+function s(e) {
+    var n;
+    let t = (0, r.e7)([o.Z], () => o.Z.can(c.Plq.ADMINISTRATOR, e)),
+        s = null == e ? void 0 : e.features.has(c.oNc.PIN_PERMISSION_MIGRATION_COMPLETE),
+        l = (0, a.OA)(
+            i.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
+            null != (n = null == e ? void 0 : e.id) ? n : c.lds,
         );
-    return n && i && !d && !u;
+    return t && !s && !l;
 }

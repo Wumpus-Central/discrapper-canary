@@ -85,8 +85,8 @@ class h extends r.PureComponent {
             },
         });
     }
-    renderTitleAccessory(e, t) {
-        return e === m.Pl.MANAGE_MESSAGES && t
+    renderTitleAccessory(e) {
+        return e === m.Pl.MANAGE_MESSAGES
             ? (0, i.jsx)("div", {
                   className: g.accessory,
                   children: (0, i.jsx)(s.u, {
@@ -98,51 +98,49 @@ class h extends r.PureComponent {
             : null;
     }
     renderComponent(e) {
-        var t;
-        let { title: n, description: r, helpdeskArticleId: l, flag: o } = e,
-            { permissions: s, locked: u, permissionRender: m } = this.props,
-            b = null != (t = this.props.inPinPermissionExperiment) && t,
-            f = null == m ? void 0 : m(o),
-            h = !!(u || f),
-            x = "string" == typeof f ? this.renderDisabledIndicator(f) : null,
-            j = a()({ [g.title]: null != x });
-        return null == s
+        let { title: t, description: n, helpdeskArticleId: r, flag: l } = e,
+            { permissions: o, locked: s, permissionRender: u } = this.props,
+            m = null == u ? void 0 : u(l),
+            b = !!(s || m),
+            f = "string" == typeof m ? this.renderDisabledIndicator(m) : null,
+            h = a()({ [g.title]: null != f });
+        return null == o
             ? (0, i.jsxs)(
                   p.Z,
                   {
-                      disabled: h,
-                      value: this.getOverwriteValue(o),
-                      onChange: (e) => this.handleChange(o, e),
-                      note: (0, d._u)(r),
-                      helpdeskArticleId: l,
+                      disabled: b,
+                      value: this.getOverwriteValue(l),
+                      onChange: (e) => this.handleChange(l, e),
+                      note: (0, d._u)(n),
+                      helpdeskArticleId: r,
                       children: [
-                          x,
+                          f,
                           (0, i.jsx)("span", {
-                              className: j,
-                              children: n,
+                              className: h,
+                              children: t,
                           }),
-                          this.renderTitleAccessory(o, b),
+                          this.renderTitleAccessory(l),
                       ],
                   },
-                  String(o),
+                  String(l),
               )
             : (0, i.jsxs)(
                   c.j7V,
                   {
-                      disabled: h,
-                      value: this.getPermissionValue(o, s),
-                      onChange: (e) => this.handleChange(o, e),
-                      note: (0, d._u)(r),
+                      disabled: b,
+                      value: this.getPermissionValue(l, o),
+                      onChange: (e) => this.handleChange(l, e),
+                      note: (0, d._u)(n),
                       children: [
-                          x,
+                          f,
                           (0, i.jsx)("span", {
-                              className: j,
-                              children: n,
+                              className: h,
+                              children: t,
                           }),
-                          this.renderTitleAccessory(o, b),
+                          this.renderTitleAccessory(l),
                       ],
                   },
-                  String(o),
+                  String(l),
               );
     }
     render() {

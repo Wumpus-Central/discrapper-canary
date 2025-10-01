@@ -6,7 +6,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(990547),
     c = n(873546),
     u = n(793030),
@@ -16,7 +16,7 @@ var r = n(951288),
     p = n(793903),
     h = n(906732),
     m = n(237617),
-    g = n(430723);
+    g = n(827221);
 function E(e, t, n) {
     return (
         t in e
@@ -137,12 +137,12 @@ function N(e) {
         P = (0, _.Z)(I.activeSlide),
         w = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
         { reducedMotion: D } = i.useContext(u.Sfi),
-        x = i.useContext(p.Z),
-        L = C[R].impressionName,
+        L = i.useContext(p.Z),
+        x = C[R].impressionName,
         j = O(b({}, C[R].impressionProperties), { location_stack: N });
-    x({
+    L({
         type: l.ImpressionTypes.MODAL,
-        name: L,
+        name: x,
         properties: j,
         _stackContext: { isSlide: !0 },
     });
@@ -173,8 +173,11 @@ function N(e) {
         ),
         F = (0, m.Z)(w),
         { width: V, centered: H = !0 } = I,
-        Y = c.tq ? "100%" : B.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        W = c.tq && !I.shouldUseMediaQueryToSetHeight ? "100%" : B.height.to((e) => Math.round(e)),
+        Y =
+            c.tq && !I.shouldUseMediaQueriesForSizing
+                ? "100%"
+                : B.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
+        W = c.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : B.height.to((e) => Math.round(e)),
         K = c.tq
             ? {}
             : H
@@ -183,7 +186,11 @@ function N(e) {
                     top: "50%",
                 }
               : { transform: "scale(1.0, 1.0)" },
-        z = c.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" };
+        z = c.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" },
+        q = i.useMemo(
+            () => ({ width: c.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : V }),
+            [I.shouldUseMediaQueriesForSizing, V],
+        );
     return (0, r.jsx)(s.animated.div, {
         style: b(
             {
@@ -193,7 +200,7 @@ function N(e) {
             },
             z,
         ),
-        className: o()({ [g.animatedDivDynamicHeight]: I.shouldUseMediaQueryToSetHeight }),
+        className: o()({ [g.outerAnimatedDivDynamicSizing]: I.shouldUseMediaQueriesForSizing }),
         children: Z((e, t, n) => {
             let { key: i } = n,
                 a = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
@@ -207,8 +214,8 @@ function N(e) {
                             display: E,
                             flexDirection: "column",
                             backfaceVisibility: "hidden",
-                            width: c.tq ? "100%" : V,
                         },
+                        q,
                         K,
                         D.enabled
                             ? a
@@ -220,6 +227,7 @@ function N(e) {
                                   y && a,
                               ),
                     ),
+                    className: o()({ [g.innerAnimatedDivDynamicSizing]: I.shouldUseMediaQueriesForSizing }),
                     children: C[t].children,
                 },
                 i,

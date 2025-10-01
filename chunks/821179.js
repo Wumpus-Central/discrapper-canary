@@ -10,17 +10,17 @@ var i = n(780384),
     u = n(5192),
     d = n(652853),
     p = n(228168),
-    f = n(981631),
-    h = n(671955),
+    h = n(981631),
+    f = n(671955),
     g = n(163514);
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: _, onSelect: O } = e,
-        { theme: y, themeType: v } = (0, d.z)(),
-        j = t.hasAvatarForGuild(b.id);
+        { theme: y, themeType: j } = (0, d.z)(),
+        v = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            v === h.l.MODAL_V2
+            j === f.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -39,7 +39,7 @@ function b(e) {
                     n.e("36599"),
                     n.e("7654"),
                     n.e("58175"),
-                    n.e("55616"),
+                    n.e("48776"),
                     n.e("8271"),
                     n.e("15851"),
                     n.e("51453"),
@@ -50,15 +50,15 @@ function b(e) {
                     n.e("6850"),
                     n.e("58227"),
                     n.e("62856"),
-                    n.e("54408"),
+                    n.e("44686"),
                     n.e("38697"),
-                    n.e("90746"),
-                    n.e("71512"),
+                    n.e("30378"),
+                    n.e("29679"),
                     n.e("66201"),
                     n.e("93375"),
                     n.e("39206"),
                     n.e("22516"),
-                    n.e("5007"),
+                    n.e("89442"),
                     n.e("87154"),
                     n.e("33213"),
                     n.e("66697"),
@@ -116,7 +116,7 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
+                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
                 badgeTooltipColor: l.FGA.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,
@@ -129,7 +129,7 @@ function b(e) {
                         className: g.name,
                         children: b.name,
                     }),
-                    j &&
+                    v &&
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
@@ -148,7 +148,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                    !j &&
+                    !v &&
                         null != _ &&
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/medium",

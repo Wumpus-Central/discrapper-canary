@@ -111,7 +111,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("36599"),
                 n.e("7654"),
                 n.e("58175"),
-                n.e("55616"),
+                n.e("48776"),
                 n.e("8271"),
                 n.e("15851"),
                 n.e("51453"),
@@ -122,15 +122,15 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("62856"),
-                n.e("54408"),
+                n.e("44686"),
                 n.e("38697"),
-                n.e("90746"),
-                n.e("71512"),
+                n.e("30378"),
+                n.e("29679"),
                 n.e("66201"),
                 n.e("93375"),
                 n.e("39206"),
                 n.e("22516"),
-                n.e("5007"),
+                n.e("89442"),
                 n.e("81201"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) &&
@@ -291,8 +291,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     profile: w,
                     moderatorReportingEnabled: D,
                 } = t,
-                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                L = A(
+                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                x = A(
                     T(
                         {
                             name: n,
@@ -328,8 +328,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 i.tn
                     .patch({
                         url: O.ANM.GUILD(e),
-                        query: { for_discovery: x.isForDiscovery },
-                        body: L,
+                        query: { for_discovery: L.isForDiscovery },
+                        body: x,
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     })
@@ -348,7 +348,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                                     errors: e.body,
                                 }),
                                 R.error("Failed to save guild settings", { errors: e.body }),
-                                x.throwErr)
+                                L.throwErr)
                             )
                                 throw e.body;
                         },
