@@ -24,15 +24,15 @@ function E(e) {
             [h.ZP],
             () => (null == E ? void 0 : E.id) != null && h.ZP.getMentionCount(E.id, b.W.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: I, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
-        S = "sm" === I ? "refresh_sm" : "md",
+        { titlebarIconSize: I, titlebarHoverHighlight: S } = (0, p.T)({ location: "RecentsButton" }),
+        C = "sm" === I ? "refresh_sm" : "md",
         T = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
-                    size: S,
+                    size: C,
                     color: "currentColor",
                 }),
-            [S],
+            [C],
         );
     return (0, r.jsx)(m.k, {
         targetElementRef: y,
@@ -43,80 +43,84 @@ function E(e) {
         popoutAlign: "right",
         children: (e, t, n, i) => {
             var o, p;
-            return (0, r.jsx)(f.U, {
-                location: "inbox-button",
-                targetElementRef: y,
-                children: (0, r.jsx)(c.u, {
-                    targetElementRef: y,
-                    shouldShow: !t,
-                    text: _.intl.string(_.t.GSmTKC),
-                    children: (0, r.jsx)(
-                        u.P3F,
-                        ((o = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (p = p =
-                            {
-                                tag: "div",
-                                innerRef: y,
-                                onClick: e,
-                                "data-jump-section": l,
-                                "aria-label": _.intl.string(_.t.GSmTKC),
-                                className: a()(O.clickable, { [O.withHighlight]: C }),
-                                children:
-                                    v || i
-                                        ? (0, r.jsxs)(r.Fragment, {
-                                              children: [
-                                                  (0, r.jsx)(d.ZP, {
-                                                      mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                      height: s.Z[S],
-                                                      width: s.Z[S],
-                                                      children: T,
-                                                  }),
-                                                  (0, r.jsx)("span", {
-                                                      className: a()(O.badge, { [O.smol]: "refresh_sm" === S }),
-                                                  }),
-                                              ],
-                                          })
-                                        : T,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(p))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(p)).forEach(function (e) {
-                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(p, e));
-                              }),
-                        o),
-                    ),
-                }),
+            return (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)(c.u, {
+                        targetElementRef: y,
+                        shouldShow: !t,
+                        text: _.intl.string(_.t.GSmTKC),
+                        children: (0, r.jsx)(
+                            u.P3F,
+                            ((o = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (p = p =
+                                {
+                                    tag: "div",
+                                    innerRef: y,
+                                    onClick: e,
+                                    "data-jump-section": l,
+                                    "aria-label": _.intl.string(_.t.GSmTKC),
+                                    className: a()(O.clickable, { [O.withHighlight]: S }),
+                                    children:
+                                        v || i
+                                            ? (0, r.jsxs)(r.Fragment, {
+                                                  children: [
+                                                      (0, r.jsx)(d.ZP, {
+                                                          mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                                          height: s.Z[C],
+                                                          width: s.Z[C],
+                                                          children: T,
+                                                      }),
+                                                      (0, r.jsx)("span", {
+                                                          className: a()(O.badge, { [O.smol]: "refresh_sm" === C }),
+                                                      }),
+                                                  ],
+                                              })
+                                            : T,
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(p))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(p)).forEach(function (e) {
+                                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(p, e));
+                                  }),
+                            o),
+                        ),
+                    }),
+                    (0, r.jsx)(f.U, {
+                        location: "inbox-button",
+                        targetElementRef: y,
+                    }),
+                ],
             });
         },
     });

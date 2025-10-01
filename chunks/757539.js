@@ -1,58 +1,54 @@
-n.d(t, { Y: () => p });
+n.d(t, { Y: () => u });
 var i = n(951288),
     r = n(647438),
     l = n(392711),
     a = n(793030),
-    o = n(755721),
-    s = n(481060),
-    c = n(393903),
-    d = n(388032),
-    u = n(399553);
-function p(e) {
+    o = n(481060),
+    s = n(393903),
+    c = n(388032),
+    d = n(399553);
+function u(e) {
     let {
             hasInvites: t,
             setHeight: n,
-            onShowDisableInvites: p,
-            onShowInviteModal: m,
-            hasInviteDisabledPermission: b,
-            invitesDisabled: g,
-            canCreateInvites: f,
+            onShowDisableInvites: u,
+            onShowInviteModal: p,
+            hasInviteDisabledPermission: m,
+            invitesDisabled: b,
+            canCreateInvites: g,
         } = e,
-        h = r.useMemo(() => (0, l.debounce)(n, 100), [n]),
-        x = r.useCallback(
+        f = r.useMemo(() => (0, l.debounce)(n, 100), [n]),
+        h = r.useCallback(
             (e) => {
                 let t = e.contentRect;
-                null != t && h(t.height);
+                null != t && f(t.height);
             },
-            [h],
+            [f],
         ),
-        j = (0, c.y)(x);
+        x = (0, s.y)(h);
     return (0, i.jsxs)("div", {
-        ref: j,
-        className: u.actions,
+        ref: x,
+        className: d.actions,
         children: [
             (0, i.jsx)(a.X6q, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: u.eyebrow,
-                children: t ? d.intl.string(d.t.DjWsyc) : d.intl.string(d.t.AmwmLi),
+                className: d.eyebrow,
+                children: t ? c.intl.string(c.t.DjWsyc) : c.intl.string(c.t.AmwmLi),
             }),
-            (0, i.jsxs)("div", {
-                className: u.inviteButtons,
+            (0, i.jsxs)(a.hE2, {
                 children: [
-                    (0, i.jsx)(o.zx, {
-                        size: o.zx.Sizes.MEDIUM,
-                        color: g ? o.zx.Colors.BRAND : o.zx.Colors.RED,
-                        look: o.zx.Looks.OUTLINED,
-                        disabled: !b,
-                        onClick: p,
-                        children: g ? d.intl.string(d.t["/dbw3N"]) : d.intl.string(d.t.Uwsjn5),
+                    (0, i.jsx)(o.zxk, {
+                        variant: b ? "primary" : "critical-secondary",
+                        text: b ? c.intl.string(c.t["/dbw3N"]) : c.intl.string(c.t.Uwsjn5),
+                        onClick: u,
+                        disabled: !m,
                     }),
-                    !0 === f
-                        ? (0, i.jsx)(s.zxk, {
+                    !0 === g
+                        ? (0, i.jsx)(o.zxk, {
                               variant: "primary",
-                              text: d.intl.string(d.t.KmK3q6),
-                              onClick: m,
+                              text: c.intl.string(c.t.KmK3q6),
+                              onClick: p,
                           })
                         : null,
                 ],

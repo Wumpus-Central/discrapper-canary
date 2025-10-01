@@ -1,55 +1,40 @@
-n.d(t, { U: () => g }), n(388685);
+n.d(t, { U: () => f }), n(388685);
 var r = n(951288),
     i = n(704215),
-    a = n(755721),
-    o = n(481060),
-    s = n(243778),
-    l = n(970731),
-    c = n(2818),
-    u = n(921944),
-    d = n(388032),
-    f = n(684642),
-    _ = n(235810);
-let p = i.z.FOR_LATER_POPOUT_COACHMARK,
-    h = () =>
-        (0, r.jsx)("div", {
-            className: f.imageContainer,
-            children: (0, r.jsx)("img", {
-                className: f.image,
-                src: _,
-                alt: "",
-            }),
-        }),
-    m = (e) =>
-        (0, r.jsx)(l.ZP, {
-            className: f.container,
-            asset: (0, r.jsx)(h, {}),
-            header: d.intl.string(d.t.qPbFKy),
-            content: d.intl.string(d.t.URrJq6),
-            buttonCTA: d.intl.string(d.t["NX+WJC"]),
-            buttonProps: {
-                color: a.Tt.WHITE,
-                innerClassName: f.primaryButton,
-            },
-            onClick: () => e(u.L.USER_DISMISS),
-            markAsDismissed: e,
-            caretPosition: l.DF.TOP_RIGHT,
-        });
-function g(e) {
-    let { location: t, children: n, targetElementRef: i } = e,
-        { enabled: a, inInbox: l } = c.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
-        u = t === (l ? "inbox-button" : "bookmarks-button"),
-        d = a && u ? [p] : [],
-        [f, _] = (0, s.US)(d, void 0);
-    return f !== p
-        ? n
-        : (0, r.jsx)(o.yRy, {
-              targetElementRef: i,
-              renderPopout: () => m(_),
+    a = n(907862),
+    o = n(243778),
+    s = n(2818),
+    l = n(921944),
+    c = n(388032),
+    u = n(235810);
+let d = i.z.FOR_LATER_POPOUT_COACHMARK;
+function f(e) {
+    let { location: t, targetElementRef: n } = e,
+        { enabled: i, inInbox: f } = s.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
+        _ = t === (f ? "inbox-button" : "bookmarks-button"),
+        p = i && _ ? [d] : [],
+        [h, m] = (0, o.US)(p, void 0);
+    return h !== d
+        ? null
+        : (0, r.jsx)(a.J2, {
+              targetElementRef: n,
+              gradientColor: "purple",
               position: "bottom",
               align: "right",
-              animation: o.yRy.Animation.TRANSLATE,
               shouldShow: !0,
-              children: () => n,
+              caretConfig: { align: "end" },
+              onRequestClose: () => m(l.L.USER_DISMISS),
+              title: c.intl.string(c.t.qPbFKy),
+              body: c.intl.string(c.t.URrJq6),
+              actions: [
+                  {
+                      text: c.intl.string(c.t["NX+WJC"]),
+                      onClick: () => m(l.L.USER_DISMISS),
+                  },
+              ],
+              graphic: {
+                  type: "image",
+                  src: u,
+              },
           });
 }

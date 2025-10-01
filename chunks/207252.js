@@ -1,105 +1,57 @@
-n.d(t, { default: () => b });
-var c = n(951288),
-    i = n(647438),
-    r = n(442837),
-    l = n(780384),
-    o = n(755721),
-    s = n(481060),
-    a = n(313201),
-    d = n(210887),
-    u = n(450269),
-    h = n(388032),
-    x = n(119902),
-    m = n(112847),
-    _ = n(516954);
-function b(e) {
-    let { guildId: t, transitionState: n, onClose: b, onConfirm: k } = e,
-        g = (0, a.Dt)(),
-        C = (0, r.e7)([d.Z], () => d.Z.theme),
-        p = (0, l.wj)(C) ? m : _,
-        { rules: y, rulesAccepted: E } = (0, u.V)(t),
-        f = i.useCallback(() => {
-            b(), k();
-        }, [b, k]);
-    return (0, c.jsxs)(s.Y0X, {
+n.d(t, { default: () => d });
+var i = n(951288),
+    r = n(647438),
+    c = n(159691),
+    l = n(755721),
+    o = n(481060),
+    a = n(246295),
+    s = n(388032),
+    u = n(119902);
+function d(e) {
+    let { guildId: t, transitionState: n, onClose: d, onConfirm: h } = e,
+        { rules: _, rulesAccepted: b } = (0, a.V)(t),
+        k = r.useCallback(() => {
+            d(), h();
+        }, [d, h]);
+    return (0, i.jsx)(c.u_l, {
+        title: s.intl.string(s.t.Q8OFNz),
+        subtitle: s.intl.string(s.t["WT+829"]),
+        actions: [
+            {
+                disabled: !b,
+                text: s.intl.string(s.t["qjtt/v"]),
+                onClick: k,
+            },
+        ],
         transitionState: n,
-        "aria-labelledby": g,
-        className: x.modal,
-        parentComponent: "GuildSettingsJoinRulesDiscoveryModal",
-        children: [
-            (0, c.jsx)(s.olH, {
-                onClick: b,
-                className: x.close,
-            }),
-            (0, c.jsxs)(s.hzk, {
-                className: x.content,
-                children: [
-                    (0, c.jsxs)("div", {
-                        className: x.header,
+        onClose: d,
+        children: (0, i.jsx)("div", {
+            className: u.checkboxContainer,
+            children: _.map((e) =>
+                (0, i.jsxs)(
+                    l.$q,
+                    {
+                        className: u.checkbox,
+                        reverse: !0,
+                        value: e.checked,
+                        align: l.wb.CENTER,
+                        onChange: e.onCheck,
                         children: [
-                            (0, c.jsx)("img", {
-                                alt: "",
-                                src: p,
-                                width: 80,
-                            }),
-                            (0, c.jsx)(s.X6q, {
-                                variant: "heading-xxl/semibold",
+                            (0, i.jsx)(o.Text, {
+                                variant: "text-md/medium",
                                 color: "header-primary",
-                                id: g,
-                                children: h.intl.string(h.t.Q8OFNz),
+                                children: e.title,
+                            }),
+                            (0, i.jsx)(o.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-secondary",
+                                children: e.body,
                             }),
                         ],
-                    }),
-                    (0, c.jsx)(s.Text, {
-                        variant: "text-md/medium",
-                        color: "header-secondary",
-                        className: x.centeredText,
-                        children: h.intl.string(h.t["WT+829"]),
-                    }),
-                    (0, c.jsx)("div", {
-                        className: x.checkboxContainer,
-                        children: y.map((e) =>
-                            (0, c.jsxs)(
-                                o.$q,
-                                {
-                                    className: x.checkbox,
-                                    reverse: !0,
-                                    value: e.checked,
-                                    align: o.wb.CENTER,
-                                    onChange: e.onCheck,
-                                    children: [
-                                        (0, c.jsx)(s.Text, {
-                                            variant: "text-md/semibold",
-                                            color: "header-primary",
-                                            children: e.title,
-                                        }),
-                                        (0, c.jsx)(s.Text, {
-                                            variant: "text-sm/medium",
-                                            color: "text-secondary",
-                                            children: e.body,
-                                        }),
-                                    ],
-                                },
-                                e.key,
-                            ),
-                        ),
-                    }),
-                ],
-            }),
-            (0, c.jsx)(s.mzw, {
-                children: (0, c.jsx)(o.zx, {
-                    fullWidth: !0,
-                    disabled: !E,
-                    color: o.zx.Colors.BRAND,
-                    onClick: f,
-                    size: o.zx.Sizes.LARGE,
-                    children: (0, c.jsx)(s.Text, {
-                        variant: "text-sm/semibold",
-                        color: "currentColor",
-                        children: h.intl.string(h.t["qjtt/v"]),
-                    }),
-                }),
-            }),
-        ],
+                    },
+                    e.key,
+                ),
+            ),
+        }),
     });
 }

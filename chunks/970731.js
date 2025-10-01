@@ -1,30 +1,19 @@
 n.d(t, {
-    DF: () => h,
+    DF: () => g,
     ZP: () => y,
 });
-var r = n(951288);
+var r,
+    i,
+    l = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(493773),
-    c = n(921944),
-    u = n(706371);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
+var o = n(120356),
+    a = n.n(o),
+    s = n(755721),
+    c = n(481060),
+    u = n(493773),
+    d = n(921944),
+    p = n(164208);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,61 +24,60 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var h = (function (e) {
-        return (
-            (e.TOP_CENTER = "caretTopCenter"),
-            (e.TOP_RIGHT = "caretTopRight"),
-            (e.TOP_LEFT = "caretTopLeft"),
-            (e.BOTTOM_CENTER = "caretBottomCenter"),
-            (e.BOTTOM_LEFT = "caretBottomLeft"),
-            (e.BOTTOM_RIGHT = "caretBottomRight"),
-            (e.LEFT_CENTER = "caretLeftCenter"),
-            (e.LEFT_TOP = "caretLeftTop"),
-            (e.RIGHT_CENTER = "caretRightCenter"),
-            (e.RIGHT_TOP = "caretRightTop"),
-            e
-        );
-    })({}),
-    m = (function (e) {
-        return (e[(e.ADJACENT = 0)] = "ADJACENT"), (e[(e.STACKED = 1)] = "STACKED"), e;
-    })({});
-let g = Object.freeze({
-        brand: u.colorBrand,
-        primary: u.colorPrimary,
+var g =
+        (((r = {}).TOP_CENTER = "caretTopCenter"),
+        (r.TOP_RIGHT = "caretTopRight"),
+        (r.TOP_LEFT = "caretTopLeft"),
+        (r.BOTTOM_CENTER = "caretBottomCenter"),
+        (r.BOTTOM_LEFT = "caretBottomLeft"),
+        (r.BOTTOM_RIGHT = "caretBottomRight"),
+        (r.LEFT_CENTER = "caretLeftCenter"),
+        (r.LEFT_TOP = "caretLeftTop"),
+        (r.RIGHT_CENTER = "caretRightCenter"),
+        (r.RIGHT_TOP = "caretRightTop"),
+        r),
+    m = (((i = {})[(i.ADJACENT = 0)] = "ADJACENT"), (i[(i.STACKED = 1)] = "STACKED"), i);
+let b = Object.freeze({
+        brand: p.colorBrand,
+        primary: p.colorPrimary,
     }),
-    E = Object.freeze({
+    _ = Object.freeze({
         brand: "always-white",
         primary: "header-primary",
     }),
-    b = Object.freeze({
+    O = Object.freeze({
         brand: "always-white",
         primary: "text-default",
     });
@@ -97,77 +85,75 @@ function y(e) {
     let {
         color: t = "brand",
         className: n,
-        header: i,
-        headerClassName: d,
-        content: _,
-        contentClassName: h,
+        header: r,
+        headerClassName: i,
+        content: o,
+        contentClassName: g,
         buttonCTA: m,
         secondaryButtonCTA: y,
-        onClick: O,
+        onClick: j,
         onSecondaryClick: v,
-        buttonProps: I = {
-            color: o.zx.Colors.BRAND,
-            look: o.zx.Looks.FILLED,
+        buttonProps: x = {
+            color: s.zx.Colors.BRAND,
+            look: s.zx.Looks.FILLED,
         },
-        secondaryButtonProps: T = { color: o.zx.Colors.BRAND_INVERTED },
-        onComponentMount: S,
-        asset: A,
-        markAsDismissed: C,
-        caretPosition: N = "caretTopCenter",
-        buttonLayout: R = 0,
+        secondaryButtonProps: C = { color: s.zx.Colors.BRAND_INVERTED },
+        onComponentMount: E,
+        asset: S,
+        markAsDismissed: P,
+        caretPosition: I = "caretTopCenter",
+        buttonLayout: N = 0,
     } = e;
-    (0, l.ZP)(() => {
-        null == S || S();
+    (0, u.ZP)(() => {
+        null == E || E();
     });
-    let P = null != y,
-        w = (e) => {
-            O(e), null == C || C(c.L.PRIMARY);
-        },
-        D = () => {
-            null == v || v(), null == C || C(c.L.SECONDARY);
-        };
-    return (0, r.jsxs)("div", {
-        className: a()(n, g[t], u.upsellTooltipWrapper, u[N]),
+    let w = null != y;
+    return (0, l.jsxs)("div", {
+        className: a()(n, b[t], p.upsellTooltipWrapper, p[I]),
         children: [
-            A,
-            null == i
+            S,
+            null == r
                 ? null
-                : (0, r.jsx)(s.X6q, {
-                      color: E[t],
-                      className: a()(d, u.upsellTooltipHeader),
+                : (0, l.jsx)(c.X6q, {
+                      color: _[t],
+                      className: a()(i, p.upsellTooltipHeader),
                       variant: "heading-md/semibold",
-                      children: i,
+                      children: r,
                   }),
-            (0, r.jsx)(s.Text, {
-                color: b[t],
-                className: a()(h, u.content),
+            (0, l.jsx)(c.Text, {
+                color: O[t],
+                className: a()(g, p.content),
                 variant: "text-sm/normal",
-                children: _,
+                children: o,
             }),
-            null != m || P
-                ? (0, r.jsxs)("div", {
-                      className: a()(u.upsellButtonsContainer, {
-                          [u.upsellButtonsAdjacent]: 0 === R,
-                          [u.upsellButtonsStacked]: 1 === R,
+            null != m || w
+                ? (0, l.jsxs)("div", {
+                      className: a()(p.upsellButtonsContainer, {
+                          [p.upsellButtonsAdjacent]: 0 === N,
+                          [p.upsellButtonsStacked]: 1 === N,
                       }),
                       children: [
-                          P
-                              ? (0, r.jsx)(
-                                    o.zx,
-                                    p(f({}, T), {
-                                        fullWidth: 1 === R,
-                                        onClick: D,
+                          w
+                              ? (0, l.jsx)(
+                                    s.zx,
+                                    f(h({}, C), {
+                                        fullWidth: 1 === N,
+                                        onClick: () => {
+                                            null == v || v(), null == P || P(d.L.SECONDARY);
+                                        },
                                         children: y,
                                     }),
                                 )
                               : null,
                           null == m
                               ? null
-                              : (0, r.jsx)(
-                                    o.zx,
-                                    p(f({}, I), {
-                                        fullWidth: !P || 1 === R,
-                                        onClick: w,
+                              : (0, l.jsx)(
+                                    s.zx,
+                                    f(h({}, x), {
+                                        fullWidth: !w || 1 === N,
+                                        onClick: (e) => {
+                                            j(e), null == P || P(d.L.PRIMARY);
+                                        },
                                         children: m,
                                     }),
                                 ),
@@ -177,4 +163,4 @@ function y(e) {
         ],
     });
 }
-(y.CaretPosition = h), (y.ButtonLayout = m);
+(y.CaretPosition = g), (y.ButtonLayout = m);
