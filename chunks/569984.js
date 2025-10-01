@@ -7,8 +7,8 @@ var A,
     P = n(442837),
     w = n(570140),
     D = n(509212),
-    x = n(497505),
-    L = n(184299),
+    L = n(497505),
+    x = n(184299),
     j = n(5881),
     M = n(46140);
 function k(e, t, n) {
@@ -164,7 +164,7 @@ function et(e) {
     for (let e of t)
         o.set(e.id, e),
             a.set(e.id, (0, D.zi)(e)),
-            e.targetedContent.includes(x.jn.QUEST_BAR) &&
+            e.targetedContent.includes(L.jn.QUEST_BAR) &&
                 (0, j.T)({ location: M.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
@@ -305,7 +305,7 @@ function eR(e) {
     let { previewQuestUserStatus: t } = e;
     K(t.questId, { userStatus: t }),
         null == t.claimedAt && (g = new Map(g)).delete(t.questId),
-        null == t.enrolledAt && ((O = new Map(O)).delete(t.questId), L.ZP.getState().resetQuest(t.questId));
+        null == t.enrolledAt && ((O = new Map(O)).delete(t.questId), x.ZP.getState().resetQuest(t.questId));
     let n = o.get(t.questId);
     if (null != n) {
         let e = (0, D.zi)(n);
@@ -326,11 +326,11 @@ function eD(e) {
         a = null != (t = Z.get(n)) ? t : new Map();
     a.set(r, i), Z.set(n, a);
 }
-function ex(e) {
-    let { questId: t } = e;
-    Z.has(t) && Z.delete(t), L.ZP.getState().resetQuest(t);
-}
 function eL(e) {
+    let { questId: t } = e;
+    Z.has(t) && Z.delete(t), x.ZP.getState().resetQuest(t);
+}
+function ex(e) {
     let { quest: t, placement: n, adDecisionData: r, adContext: a, metadataRaw: o } = e;
     (u = Date.now()),
         (i = !1),
@@ -452,6 +452,9 @@ class eB extends (A = P.ZP.Store) {
         var t;
         return null != (t = I.get(e)) && t;
     }
+    getQuestLoadedViaPreview(e) {
+        return S.get(e);
+    }
 }
 k(eB, "displayName", "QuestsStore");
 let eZ = new eB(w.Z, {
@@ -463,7 +466,7 @@ let eZ = new eB(w.Z, {
         QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: el,
         QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: ec,
         QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: er,
-        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eL,
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: ex,
         QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: ej,
         QUESTS_FETCH_PREVIEW_BEGIN: ei,
         QUESTS_FETCH_PREVIEW_SUCCESS: ea,
@@ -489,7 +492,7 @@ let eZ = new eB(w.Z, {
         QUESTS_DELIVERY_OVERRIDE: eP,
         QUESTS_SELECT_TASK_PLATFORM: ew,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eD,
-        QUESTS_RESET_OPTIMISTIC_PROGRESS: ex,
+        QUESTS_RESET_OPTIMISTIC_PROGRESS: eL,
         QUESTS_USER_COMPLETION_UPDATE: eG,
     }),
     eF = eZ;

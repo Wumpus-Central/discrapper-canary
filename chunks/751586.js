@@ -1,87 +1,77 @@
 n.d(t, {
     UN: () => g,
-    Ui: () => m,
+    Ui: () => h,
 });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    a = n(705262),
-    o = n(569984),
-    s = n(564034),
-    l = n(649424),
-    c = n(176168),
-    u = n(234086),
-    d = n(17057),
-    f = n(70621),
-    _ = n(429080),
-    p = n(388032),
-    h = n(777338);
-function m() {
+var r = n(951288),
+    i = n(442837),
+    l = n(569984),
+    a = n(564034),
+    o = n(649424),
+    s = n(176168),
+    c = n(234086),
+    u = n(17057),
+    d = n(70621),
+    p = n(429080),
+    f = n(388032);
+function h() {
     return [
         {
             value: "quest_bar",
-            label: p.intl.string(p.t.rjVPdH),
+            label: f.intl.string(f.t.rjVPdH),
         },
         {
             value: "share_embed",
-            label: p.intl.string(p.t["D/gSWV"]),
+            label: f.intl.string(f.t["D/gSWV"]),
         },
         {
             value: "home_card",
-            label: p.intl.string(p.t["5wnpFx"]),
+            label: f.intl.string(f.t["5wnpFx"]),
         },
         {
             value: "channel_call_header",
-            label: p.intl.string(p.t.gWinpa),
+            label: f.intl.string(f.t.gWinpa),
         },
         {
             value: "members_list",
-            label: p.intl.string(p.t.wpYimZ),
+            label: f.intl.string(f.t.wpYimZ),
         },
         {
             value: "activity_panel",
-            label: p.intl.string(p.t.L2mlUV),
+            label: f.intl.string(f.t.L2mlUV),
         },
     ];
 }
 let g = (e) => {
     let { questId: t, selectedSections: n } = e,
-        p = (0, i.e7)([o.Z], () => o.Z.getQuest(t));
-    if (null != (0, i.e7)([o.Z], () => o.Z.getFetchQuestPreviewError(t)) || null == p) return null;
-    let m = (e) => null == n || 0 === n.length || n.includes(e);
+        f = (0, i.e7)([l.Z], () => l.Z.getQuest(t));
+    if (null != (0, i.e7)([l.Z], () => l.Z.getFetchQuestPreviewError(t)) || null == f) return null;
+    let h = (e) => null == n || 0 === n.length || n.includes(e);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            m("home_card") &&
+            h("quest_bar") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(f.w, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(s.Z, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
-            m("quest_bar") &&
+            h("home_card") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(c.Z, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(d.w, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
-            m("share_embed") &&
+            h("share_embed") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(d.Z, { questId: p.id }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(u.Z, { questId: f.id }), (0, r.jsx)(a.i, {})],
                 }),
-            m("channel_call_header") &&
+            h("channel_call_header") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(u.i, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(c.i, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
-            m("members_list") &&
+            h("members_list") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(_.Z, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(p.Z, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
-            m("activity_panel") &&
+            h("activity_panel") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(l.Z, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(o.Z, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
-            (0, r.jsx)("div", {
-                className: h.themes,
-                children: (0, r.jsx)(a.ZP, {
-                    type: a.yH.SETTINGS,
-                    children: (0, r.jsx)(a.ZP.Basic, { className: h.themeSelectionGroup }),
-                }),
-            }),
         ],
     });
 };
