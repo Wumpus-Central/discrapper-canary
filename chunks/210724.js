@@ -157,9 +157,12 @@ function L(e) {
                 ($.current = !1),
                 ej();
         }, [ej, o]);
-    s.useLayoutEffect(() => {
-        H && !F && $.current && ep();
-    }, [ep, H, F]),
+    s.useEffect(() => {
+        en && eC();
+    }, [en, eC]),
+        s.useLayoutEffect(() => {
+            H && !F && $.current && ep();
+        }, [ep, H, F]),
         s.useLayoutEffect(() => {
             X || !H || F || $.current || eu(!1);
         }, [H, X, F, eu]),
