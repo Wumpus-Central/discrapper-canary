@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(611480),
     W = n(653477),
     K = n(388032),
-    z = n(693450),
-    q = n(953752),
-    X = n(197571),
+    z = n(62222),
+    q = n(133991),
+    X = n(10198),
     Q = n(328756);
 function J(e, t, n) {
     return (
@@ -129,7 +129,7 @@ function es(e) {
                 : null,
             (0, r.jsxs)(w.F, {
                 setting: V.s6.ACCESSIBILITY_SATURATION,
-                children: [(0, r.jsx)(eu, {}), (0, r.jsx)(_.$i$, {})],
+                children: [(0, r.jsx)(eu, {}), (0, r.jsx)(_.izJ, {})],
             }),
             (0, r.jsx)(w.F, {
                 setting: V.s6.ACCESSIBILITY_LINK_DECORATIONS,
@@ -176,7 +176,7 @@ function es(e) {
             (0, r.jsxs)(w.F, {
                 setting: V.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
-                    (0, r.jsx)(_.$i$, { className: X.marginTop20 }),
+                    (0, r.jsx)(_.izJ, { className: X.marginTop20 }),
                     (0, r.jsx)(_.Text, {
                         className: X.marginTop20,
                         variant: "text-md/normal",
@@ -392,7 +392,7 @@ function e_() {
                 onChange: t,
                 value: e,
             }),
-            (0, r.jsx)(_.$i$, { className: X.marginTop20 }),
+            (0, r.jsx)(_.izJ, { className: X.marginTop20 }),
         ],
     });
 }

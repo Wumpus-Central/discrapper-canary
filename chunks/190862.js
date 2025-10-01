@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(296009),
-    o = n(442837),
-    a = n(314897),
+    a = n(442837),
+    o = n(314897),
     l = n(86419),
     c = n(747101),
     s = n(556045),
@@ -12,7 +12,7 @@ var r = n(951288),
     f = n(173951),
     p = n(455731),
     b = n(272289),
-    m = n(39642);
+    m = n(517143);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,14 +47,14 @@ function y(e, t) {
             var n,
                 r,
                 i = {},
-                o = Object.keys(e);
-            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,7 +79,7 @@ let j = (e) => {
             d = y(e, ["widget", "user", "disableInteraction"]);
         let g = (0, c.FX)(t),
             { shouldShowSuggestions: f, handleDismissSuggestions: p } = (0, s.h)(g),
-            h = (0, o.e7)([a.default], () => a.default.getId() === n.id),
+            h = (0, a.e7)([o.default], () => o.default.getId() === n.id),
             v = h && !i && f,
             x = (0, l.mR)(g),
             _ = (0, l.Hy)(g, { isCurrentUser: h }),

@@ -2,9 +2,9 @@ n.d(t, { Z: () => es }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(873546),
-    l = n(442837),
-    s = n(704215),
-    o = n(257465),
+    l = n(793030),
+    s = n(442837),
+    o = n(704215),
     c = n(481060),
     d = n(393238),
     u = n(727637),
@@ -54,8 +54,8 @@ var a = n(951288),
     et = n(228168),
     en = n(671955),
     ea = n(388032),
-    er = n(54482),
-    ei = n(116649);
+    er = n(138005),
+    ei = n(593540);
 function el(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,14 +105,14 @@ function es(e) {
         null == es || es(ef.current);
     }, [ef, es]),
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
-    let eg = (0, l.e7)([B.Z], () => B.Z.getStatus(t.id)),
+    let eg = (0, s.e7)([B.Z], () => B.Z.getStatus(t.id)),
         ev = F.Cr.useSetting(),
         ej = (0, J.F)(ev),
         { expiringStatusProfileFeedback: e_ } = b.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
-        ey = (0, l.e7)([G.Z], () => G.Z.hidePersonalInformation),
+        ey = (0, s.e7)([G.Z], () => G.Z.hidePersonalInformation),
         eC = (0, g.p)(),
         eE = F.Sb.useSetting(),
         eN = (0, J.I)(eg),
@@ -145,9 +145,9 @@ function es(e) {
         },
         eL = (0, E.Z)({ location: "UserProfileAccountPopout" }),
         eM = (null == ep ? void 0 : ep.widgets) != null && ep.widgets.length > 0,
-        eU = eM ? [] : [s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
+        eU = eM ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eF, eB] = (0, f.US)(eU),
-        eG = eF === s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
+        eG = eF === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         ez = r.useCallback(() => {
             eB(ee.L.USER_DISMISS), n();
         }, [eB, n]),
@@ -389,7 +389,7 @@ function es(e) {
                                                                                                   return r;
                                                                                               })(e, ["onClose"]);
                                                                                           return (0, a.jsx)(
-                                                                                              o.IX,
+                                                                                              l.IX,
                                                                                               ((t = el(
                                                                                                   { onClose: r },
                                                                                                   i,

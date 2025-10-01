@@ -21,7 +21,7 @@ var r = n(120356),
     N = n(84658),
     O = n(981631),
     S = n(388032),
-    E = n(473450);
+    E = n(72362);
 function x(e) {
     let { isTooltip: t = !1 } = e,
         n = [
@@ -240,9 +240,9 @@ function _() {
                           }),
                       ],
                   }),
-                  (0, l.jsx)(s.$i$, {}),
+                  (0, l.jsx)(s.izJ, {}),
                   (0, l.jsx)(T, {}),
-                  (0, l.jsx)(s.$i$, {}),
+                  (0, l.jsx)(s.izJ, {}),
                   (0, l.jsxs)("div", {
                       className: E.valuesContainer,
                       children: [

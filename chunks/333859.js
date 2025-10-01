@@ -17,7 +17,7 @@ var i = n(442837),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(980676);
+    y = n(77247);
 let O = () => {
         (0, f.XO)(f.wh.APP_ICON), (0, m.default)();
     },
@@ -70,7 +70,7 @@ let O = () => {
                     disabled: t,
                     renderCTAButtons: f,
                 }),
-                (0, r.jsx)(a.$i$, { className: y.divider }),
+                (0, r.jsx)(a.izJ, { className: y.divider }),
             ],
         });
     };

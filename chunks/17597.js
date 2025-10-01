@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685), n(953529);
 var a = n(951288),
     r = n(647438),
     i = n(772848),
-    l = n(704215),
-    s = n(667202),
+    l = n(793030),
+    s = n(704215),
     o = n(481060),
     c = n(243778),
     d = n(138201),
@@ -15,13 +15,13 @@ var a = n(951288),
     f = n(352138),
     b = n(629235),
     g = n(981631),
-    v = n(398158),
+    v = n(131022),
     j = n(388032),
-    _ = n(70402),
+    _ = n(450192),
     y = n(736056);
 let C = function (e) {
     let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: N } = e,
-        [S, T] = r.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        [S, T] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         O = r.useRef(S),
         [P, I] = (0, c.US)([S], void 0, !0),
         k = r.useMemo(() => (0, i.Z)(), []),
@@ -34,7 +34,7 @@ let C = function (e) {
             null == E || E(), C();
         },
         () => {
-            T(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            T(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
     );
     return (
@@ -54,7 +54,7 @@ let C = function (e) {
         r.useEffect(() => {
             (0, x.lA)(k, x.d_.EXPRESSIVE_PRIMARY, n);
         }, [k, n]),
-        (0, a.jsx)(s.ExpressiveModal, {
+        (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: C,
             gradientColor: "blue",

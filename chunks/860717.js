@@ -1,8 +1,8 @@
 n.d(t, { Z: () => X }), n(415506);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     l = n(442837),
     c = n(681715),
     s = n(481060),
@@ -23,7 +23,7 @@ var r = n(951288),
     P = n(750312),
     w = n(919498),
     I = n(388032),
-    E = n(18827);
+    E = n(895652);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,14 +85,14 @@ function N(e) {
                             var n,
                                 r,
                                 i = {},
-                                o = Object.keys(e);
-                            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                a = Object.keys(e);
+                            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var o = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < o.length; r++)
-                            (n = o[r]),
+                        var a = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < a.length; r++)
+                            (n = a[r]),
                                 !(t.indexOf(n) >= 0) &&
                                     Object.prototype.propertyIsEnumerable.call(e, n) &&
                                     (i[n] = e[n]);
@@ -124,7 +124,7 @@ function C(e) {
     return e.map((e, t) => A(e, t));
 }
 function k(e) {
-    let { title: t, body: n, image: i, imagePlaceholder: o } = e;
+    let { title: t, body: n, image: i, imagePlaceholder: a } = e;
     return (0, r.jsxs)("div", {
         className: E.heroSection,
         children: [
@@ -154,11 +154,11 @@ function k(e) {
                           className: E.heroImage,
                       }),
                   })
-                : null != o
+                : null != a
                   ? (0, r.jsx)("div", {
                         className: E.heroImageContainer,
                         children: (0, r.jsx)("img", {
-                            src: o,
+                            src: a,
                             alt: "",
                             className: E.heroImage,
                         }),
@@ -183,21 +183,21 @@ function Z(e) {
 function L(e) {
     let { content: t } = e,
         n = i.useId(),
-        o = (0, m._)();
+        a = (0, m._)();
     return null != t
         ? (0, r.jsx)(y.Z, {
               type: u.re.TEXT_DISPLAY,
               id: n,
               content: t,
           })
-        : (0, r.jsx)("div", { className: a()(E.textPlaceholder, o.className) });
+        : (0, r.jsx)("div", { className: o()(E.textPlaceholder, a.className) });
 }
 function G(e) {
     let { content: t, image: n, imagePosition: i } = e,
-        o = (0, m._)(),
+        a = (0, m._)(),
         l = D(n)
             ? (0, r.jsx)("div", {
-                  className: a()(E.image, o.className),
+                  className: o()(E.image, a.className),
                   children: (0, r.jsx)(h.ZP, {
                       src: n.proxyUrl,
                       alt: "",
@@ -206,7 +206,7 @@ function G(e) {
                       responsive: !0,
                   }),
               })
-            : (0, r.jsx)("div", { className: a()(E.imagePlaceholder, o.className) });
+            : (0, r.jsx)("div", { className: o()(E.imagePlaceholder, a.className) });
     return (0, r.jsxs)("div", {
         className: E.textWithImage,
         children: ["left" === i ? l : null, (0, r.jsx)(L, { content: t }), "right" === i ? l : null],
@@ -214,10 +214,10 @@ function G(e) {
 }
 function B(e) {
     let { size: t = "small", divider: n = !1 } = e,
-        o = i.useId();
+        a = i.useId();
     return (0, r.jsx)(O.Z, {
         type: u.re.SEPARATOR,
-        id: o,
+        id: a,
         divider: n,
         spacing: "large" === t ? u.US.LARGE : u.US.SMALL,
     });
@@ -268,17 +268,17 @@ function U(e) {
 }
 function X(e) {
     var t, n, i;
-    let { user: o, widget: l, containerClassName: u } = e,
+    let { user: a, widget: l, containerClassName: u } = e,
         { application: d, game: p, config: b } = M(l),
         m = null == d ? void 0 : d.getIconURL(16),
-        O = (0, v.O)(o.id).data,
+        O = (0, v.O)(a.id).data,
         y = null == O ? void 0 : O.find((e) => e.application_id === l.applicationId),
         h = null == y || null == (n = y.profile) || null == (t = n.data) ? void 0 : t.primary,
         x = (0, f.Z)({
             location: "UserProfileApplicationWidget",
             applicationId: null == p ? void 0 : p.id,
             source: g.m1.UserProfile,
-            sourceUserId: o.id,
+            sourceUserId: a.id,
             trackEntryPointImpression: !0,
         }),
         _ = (0, r.jsxs)(r.Fragment, {
@@ -311,7 +311,7 @@ function X(e) {
                       asContainer: !0,
                       text: I.intl.string(I.t.ajHoOj),
                       children: (0, r.jsx)(s.P3F, {
-                          className: a()(E.header, E.headerClickable),
+                          className: o()(E.header, E.headerClickable),
                           onClick: x,
                           "aria-label": I.intl.string(I.t.ajHoOj),
                           children: _,
@@ -466,9 +466,9 @@ function X(e) {
     return (0, r.jsxs)(
         P.Z,
         T(S({}, e), {
-            userId: o.id,
+            userId: a.id,
             widget: l,
-            className: a()(u, E.widgetContainer),
+            className: o()(u, E.widgetContainer),
             headerTitle: w,
             dragHandleAdditionalMenuItems:
                 null != p

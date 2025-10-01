@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(343396),
-    D = n(197571);
+    w = n(719766),
+    D = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -253,7 +253,7 @@ class U extends i.PureComponent {
                             text: P.intl.string(P.t.RIThUl),
                         }),
                     }),
-                    (0, r.jsx)(c.$i$, { className: D.marginTop20 }),
+                    (0, r.jsx)(c.izJ, { className: D.marginTop20 }),
                 ],
             });
         }

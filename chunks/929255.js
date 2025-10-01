@@ -11,25 +11,25 @@ var r = n(951288),
     g = n(501431),
     p = n(888302),
     f = n(193227),
-    h = n(426171),
-    _ = n(845796),
-    C = n(841875),
+    _ = n(426171),
+    C = n(845796),
+    h = n(841875),
     m = n(312030),
     b = n(795343),
     E = n(763891),
-    S = n(215023),
-    v = n(981631),
+    v = n(215023),
+    S = n(981631),
     x = n(388032),
-    O = n(452785);
+    O = n(25616);
 function T(e) {
     let { isFullScreen: t, tab: n, sortedCategories: i, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: _ } = (0, o.z)(f, n),
-        { setCategoryRef: m, handleScrollToCategory: b } = (0, h.xV)(f.current),
-        [E, S] = l.useState(p),
-        [v, x] = l.useState(!1);
+        { handleScroll: C } = (0, o.z)(f, n),
+        { setCategoryRef: m, handleScrollToCategory: b } = (0, _.xV)(f.current),
+        [E, v] = l.useState(p),
+        [S, x] = l.useState(!1);
     return (
         l.useEffect(() => {
             null != c && b(c);
@@ -47,8 +47,8 @@ function T(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            p || S(!1);
-        }, [p, S]),
+            p || v(!1);
+        }, [p, v]),
         (0, r.jsx)("div", {
             className: a()(O.pageWrapper, { [O.pageWrapperFilter]: p }),
             children: (0, r.jsxs)("main", {
@@ -57,24 +57,24 @@ function T(e) {
                     (0, r.jsx)(s.yWw, {
                         className: O.shopScroll,
                         ref: f,
-                        onScroll: _,
+                        onScroll: C,
                         children: (0, r.jsx)(y, {
                             isFullScreen: t,
-                            isSmallScreen: v,
+                            isSmallScreen: S,
                             filterBarOpen: E,
-                            setFilterBarOpen: S,
+                            setFilterBarOpen: v,
                             tab: n,
                             scrollerRef: f,
                             sortedCategories: i,
                             setCategoryRef: m,
                         }),
                     }),
-                    E && !v && (0, r.jsx)("div", { className: O.divider }),
+                    E && !S && (0, r.jsx)("div", { className: O.divider }),
                     E &&
-                        !v &&
+                        !S &&
                         (0, r.jsx)(s.Ttm, {
                             className: O.filterBar,
-                            children: (0, r.jsx)(C.Z, {}),
+                            children: (0, r.jsx)(h.Z, {}),
                         }),
                 ],
             }),
@@ -87,7 +87,7 @@ let y = (e) => {
             isSmallScreen: n,
             filterBarOpen: i,
             setFilterBarOpen: o,
-            tab: h,
+            tab: _,
             scrollerRef: T,
             sortedCategories: y,
             setCategoryRef: L,
@@ -102,7 +102,7 @@ let y = (e) => {
         }),
         A = l.useCallback(
             (e) => {
-                c.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                c.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
                     page_section: null == P ? void 0 : P.pageSection,
                     page_category: null == P ? void 0 : P.pageCategory,
@@ -125,7 +125,7 @@ let y = (e) => {
                     null === R.current ||
                     k.current.contains(t) ||
                     R.current.contains(t) ||
-                    (c.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    (c.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
                         page_section: null == P ? void 0 : P.pageSection,
                         page_category: null == P ? void 0 : P.pageCategory,
@@ -164,7 +164,7 @@ let y = (e) => {
                                                     variant: "text-md/semibold",
                                                     children: x.intl.string(x.t.uaX709),
                                                 }),
-                                                (0, r.jsx)(_.Z, {}),
+                                                (0, r.jsx)(C.Z, {}),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
@@ -172,7 +172,7 @@ let y = (e) => {
                                             children: (0, r.jsx)(s.zxk, {
                                                 onClick: () => {
                                                     let e = !i;
-                                                    c.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    c.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
                                                         page_section: null == P ? void 0 : P.pageSection,
                                                         page_category: null == P ? void 0 : P.pageCategory,
@@ -198,7 +198,7 @@ let y = (e) => {
                                         ref: k,
                                         children: (0, r.jsx)(s.Den, {
                                             className: O.filterOverlayContent,
-                                            children: (0, r.jsx)(C.Z, {}),
+                                            children: (0, r.jsx)(h.Z, {}),
                                         }),
                                     }),
                             ],
@@ -209,19 +209,19 @@ let y = (e) => {
                               {
                                   isFullScreen: t,
                                   scrollerRef: T,
-                                  tab: h,
+                                  tab: _,
                               },
-                              h,
+                              _,
                           )
-                        : (0, S.RE)(h)
+                        : (0, v.RE)(_)
                           ? (0, r.jsx)(
                                 E.Z,
                                 {
                                     isFullScreen: t,
                                     scrollerRef: T,
-                                    tab: h,
+                                    tab: _,
                                 },
-                                h,
+                                _,
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: B },

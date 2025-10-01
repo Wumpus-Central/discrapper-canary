@@ -10,8 +10,8 @@ var r,
     d = n(442837),
     h = n(846519),
     g = n(481060),
-    p = n(893776),
-    m = n(881052),
+    m = n(893776),
+    p = n(881052),
     f = n(899370),
     _ = n(224841),
     x = n(13430),
@@ -53,8 +53,8 @@ var r,
     ee = n(701476),
     et = n(801461),
     en = n(388032),
-    er = n(33724),
-    ei = n(197571);
+    er = n(67894),
+    ei = n(10198);
 function el(e, t, n) {
     return (
         t in e
@@ -142,7 +142,7 @@ class eu extends (r = l.PureComponent) {
             ),
             { flush: !0 },
         ),
-            null == this.props.consentRequired && p.Z.getLocationMetadata(),
+            null == this.props.consentRequired && m.Z.getLocationMetadata(),
             (0, G.e)("register");
     }
     componentWillUnmount() {
@@ -198,7 +198,7 @@ class eu extends (r = l.PureComponent) {
             d = null != s ? s.code : null,
             h = null != a ? a.skuId : null,
             g = v.MD.getState(),
-            p = (0, W.Ew)(u) ? null : t === u,
+            m = (0, W.Ew)(u) ? null : t === u,
             f = $.a ? await (0, C.K)(t) : t,
             _ = $.a ? await (0, C.K)(n) : n;
         K.S.dispatch(X.CkL.WAVE_EMPHASIZE),
@@ -212,7 +212,7 @@ class eu extends (r = l.PureComponent) {
                       consent: i,
                       invite: d,
                       giftCodeSKUId: h,
-                      usedUsernameSuggestion: p,
+                      usedUsernameSuggestion: m,
                       globalName: _,
                       birthday: l,
                   })
@@ -223,7 +223,7 @@ class eu extends (r = l.PureComponent) {
                       consent: i,
                       password: r,
                       invite: d,
-                      usedUsernameSuggestion: p,
+                      usedUsernameSuggestion: m,
                       guildTemplateCode: null == o ? void 0 : o.code,
                       giftCodeSKUId: h,
                       birthday: l,
@@ -231,7 +231,7 @@ class eu extends (r = l.PureComponent) {
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
+            if ((this.setState({ registering: !1 }), !(t instanceof p.Hx))) return;
             let e = (0, b.F)(t);
             this.setState({ apiErrors: e });
         }
@@ -486,8 +486,8 @@ class eu extends (r = l.PureComponent) {
                 parsedDateOfBirth: u,
                 globalNameFocused: d,
                 emailClientError: h,
-                usernameClientError: p,
-                passwordClientError: m,
+                usernameClientError: m,
+                passwordClientError: p,
                 dateOfBirthClientError: f,
                 registering: _,
                 apiErrors: { email: E, username: v, global_name: b, password: j, date_of_birth: N } = {},
@@ -589,7 +589,7 @@ class eu extends (r = l.PureComponent) {
                                 name: "username",
                                 value: r,
                                 onChange: P,
-                                error: null != p ? p : ec(v),
+                                error: null != m ? m : ec(v),
                                 autoComplete: "off",
                                 setRef: (e) => {
                                     this.usernameRef = e;
@@ -610,7 +610,7 @@ class eu extends (r = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? en.intl.string(en.t.EkokLy) : null,
                             }),
-                        error: null != m ? m : ec(j),
+                        error: null != p ? p : ec(j),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {
@@ -756,7 +756,7 @@ class eu extends (r = l.PureComponent) {
                         : null != c
                           ? ((t = X.Z5c.LOGIN), (d.redirect_to = c))
                           : ((t = X.Z5c.LOGIN), "" !== n && (d = { email: n })),
-                    p.Z.loginReset(),
+                    m.Z.loginReset(),
                     u(t, {
                         search: (0, a.stringify)(d),
                         source: "register",

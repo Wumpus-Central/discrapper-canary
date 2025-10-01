@@ -43,8 +43,8 @@ var r,
     F = n(849171),
     z = n(601964),
     W = n(314897),
-    Y = n(592125),
-    q = n(594174),
+    q = n(592125),
+    Y = n(594174),
     K = n(395361),
     Q = n(639351),
     X = n(81063),
@@ -53,7 +53,7 @@ var r,
     ee = n(599706),
     et = n(981631),
     en = n(388032),
-    er = n(84822);
+    er = n(544284);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -685,7 +685,7 @@ let eO = (e) => {
     (eO.ApplicationStreamingSection = (e) => {
         var t, n;
         let { activity: r, user: l, applicationStream: a, onPreviewClick: o, guildId: s } = e,
-            u = (0, c.e7)([Y.Z], () => Y.Z.getChannel(a.channelId)),
+            u = (0, c.e7)([q.Z], () => q.Z.getChannel(a.channelId)),
             [d, f] = (0, k.wq)(u),
             h = (0, i.jsxs)(p.P3F, {
                 onClick: d ? o : void 0,
@@ -736,9 +736,9 @@ let eO = (e) => {
                     return s(t);
                 });
         }, [u]);
-        let d = (0, c.Wu)([q.default, W.default], () =>
+        let d = (0, c.Wu)([Y.default, W.default], () =>
                 Array.from(a)
-                    .map((e) => (W.default.getId() === e ? null : q.default.getUser(e)))
+                    .map((e) => (W.default.getId() === e ? null : Y.default.getUser(e)))
                     .filter(J.lm),
             ),
             f = (0, g.O)(),

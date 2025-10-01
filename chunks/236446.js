@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(362762),
     h = n(409059),
     g = n(659900),
-    p = n(962220),
-    m = n(473855),
+    m = n(962220),
+    p = n(473855),
     f = n(306453),
     _ = n(929809),
     x = n(108427),
@@ -28,8 +28,8 @@ var r = n(951288),
     A = n(630724),
     T = n(436620),
     Z = n(388032),
-    P = n(160033),
-    R = n(197571);
+    P = n(858518),
+    R = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ class w extends i.PureComponent {
             T.KO || j.Z.launch("discord://" + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return T.KO
@@ -198,7 +198,7 @@ function k(e) {
     return (0, r.jsx)(N.Z, {
         className: P.authBox,
         children: () => [
-            (0, r.jsx)(m.Z, { guildTemplate: t }, "template"),
+            (0, r.jsx)(p.Z, { guildTemplate: t }, "template"),
             (0, r.jsx)(
                 "div",
                 {

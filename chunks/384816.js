@@ -20,7 +20,7 @@ var i = t(442837),
     b = t(179828),
     y = t(228168),
     O = t(388032),
-    I = t(54966);
+    I = t(438160);
 function Z(e) {
     let { user: n, currentUser: t, displayProfile: Z, subsection: P, onClose: N } = e,
         { trackUserProfileAction: T } = (0, m.KZ)(),
@@ -28,8 +28,8 @@ function Z(e) {
         A = (0, s.Y)({ userId: n.id }),
         S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = (0, i.e7)([c.default], () => c.default.locale),
-        w = (0, f.Z)(n.id),
-        _ = (0, p.Z)(n.id);
+        _ = (0, f.Z)(n.id),
+        w = (0, p.Z)(n.id);
     return (0, l.jsxs)(r.zJl, {
         fade: !0,
         className: I.scroller,
@@ -71,21 +71,21 @@ function Z(e) {
                     tooltipDelay: y.vB,
                 }),
             }),
-            w.length > 0 &&
+            _.length > 0 &&
                 (0, l.jsx)(g.Z, {
                     heading: O.intl.string(O.t["3fe7U1"]),
                     scrollIntoView: P === y.Tb.CONNECTIONS,
                     children: (0, l.jsx)(j.ZP, {
-                        connectedAccounts: w,
+                        connectedAccounts: _,
                         className: I.connections,
                         userId: n.id,
                         locale: C,
                     }),
                 }),
-            _.length > 0 &&
+            w.length > 0 &&
                 (0, l.jsx)(g.Z, {
                     heading: O.intl.string(O.t.PHjkRE),
-                    children: _.map((e) =>
+                    children: w.map((e) =>
                         (0, l.jsx)(
                             j.tH,
                             {

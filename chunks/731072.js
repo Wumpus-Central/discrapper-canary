@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(66544);
+    u = n(721257);
 function p(e) {
     let {
             integrations: t,
@@ -51,7 +51,7 @@ function p(e) {
                 description: g,
                 isHeader: !0,
             }),
-            (0, i.jsx)(l.$i$, { className: u.headerDivider }),
+            (0, i.jsx)(l.izJ, { className: u.headerDivider }),
             t.map((e) =>
                 (0, i.jsx)(
                     d.Z,

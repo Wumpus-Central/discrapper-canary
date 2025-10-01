@@ -12,9 +12,9 @@ var i = n(524437),
     f = n(940276),
     _ = n(981631),
     p = n(726985),
-    h = n(933554),
+    h = n(893867),
     m = n(388032),
-    g = n(764055);
+    g = n(61545);
 function E(e) {
     let { label: t, sublabel: n, id: i, checked: a, onChange: l } = e;
     return (0, r.jsxs)("div", {
@@ -209,11 +209,11 @@ let I = function (e) {
         title: m.intl.string(m.t.Cq98yM),
         children: [
             (0, r.jsx)(O, {}),
-            (0, r.jsx)(s.$i$, { className: g.divider }),
+            (0, r.jsx)(s.izJ, { className: g.divider }),
             (0, r.jsx)(b, {}),
-            (0, r.jsx)(s.$i$, { className: g.divider }),
+            (0, r.jsx)(s.izJ, { className: g.divider }),
             (0, r.jsx)(y, {}),
-            (0, r.jsx)(s.$i$, { className: g.divider }),
+            (0, r.jsx)(s.izJ, { className: g.divider }),
             (0, r.jsx)(v, {}),
         ],
     });

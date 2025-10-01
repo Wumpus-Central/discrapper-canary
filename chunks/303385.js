@@ -3,15 +3,15 @@ var r = n(951288);
 n(647438);
 var s = n(120356),
     o = n.n(s),
-    a = n(488290),
+    a = n(137317),
     i = n(481060),
     l = n(497505),
     c = n(685138),
     d = n(644646),
     u = n(46140),
     p = n(388032),
-    m = n(895758);
-let g = (0, a.animated)(i.$i$),
+    m = n(96656);
+let g = (0, a.animated)(i.izJ),
     f = (e) => {
         let { quest: t, expansionSpring: n, isFullyExpanded: s, partnerBranding: f, useReducedMotion: h } = e,
             { status: x } = (0, c.n)({

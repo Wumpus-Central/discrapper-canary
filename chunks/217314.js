@@ -10,8 +10,8 @@ var i = n(399606),
     u = n(594174),
     d = n(51144),
     p = n(984370),
-    f = n(388032),
-    h = n(97009);
+    h = n(388032),
+    f = n(161655);
 function g(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
@@ -21,17 +21,17 @@ function g(e) {
         _ = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
         O = d.ZP.useUserTag(g),
         y = (0, o.j)({ displayNameStyles: null == g ? void 0 : g.displayNameStyles }),
-        v = (0, a.m$)({ channelId: e.channel.id });
+        j = (0, a.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.nn4, { children: f.intl.string(f.t.EJRzg4) }),
+            (0, r.jsx)(l.nn4, { children: h.intl.string(h.t.EJRzg4) }),
             null != g &&
                 !n &&
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(l.qEK, {
                         status: m,
                         isMobile: b,
-                        className: h.avatar,
+                        className: f.avatar,
                         size: l.EFr.SIZE_20,
                         "aria-label": d.ZP.getName(g),
                         src: g.getAvatarURL(void 0, 20),
@@ -41,7 +41,7 @@ function g(e) {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
-                className: null != e.handleClick ? h.cursorPointer : null,
+                className: null != e.handleClick ? f.cursorPointer : null,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.DY3, {
@@ -50,9 +50,9 @@ function g(e) {
                             className: y,
                             children: null != _ ? _ : d.ZP.getName(g),
                         }),
-                        v &&
+                        j &&
                             (0, r.jsx)(l.ua7, {
-                                text: f.intl.string(f.t.QyZ4TU),
+                                text: h.intl.string(h.t.QyZ4TU),
                                 children: (e) => {
                                     var t, n;
                                     return (0, r.jsx)(
@@ -85,9 +85,9 @@ function g(e) {
                                         (n = n =
                                             {
                                                 size: "xs",
-                                                "aria-label": f.intl.string(f.t.VHXh8f),
+                                                "aria-label": h.intl.string(h.t.VHXh8f),
                                                 color: l.TVs.colors.INTERACTIVE_NORMAL,
-                                                className: h.secureFramesIcon,
+                                                className: f.secureFramesIcon,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

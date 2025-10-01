@@ -20,7 +20,7 @@ var r = n(951288),
     y = n(188493),
     v = n(294330),
     I = n(981631),
-    S = n(857847);
+    S = n(17923);
 let C = Object.freeze({
         top: 0,
         bottom: 0,
@@ -87,7 +87,7 @@ function P(e) {
         }, [Z, s, t, x, w, I]);
     let z = i.useCallback((e) => n(e, x), [n, x]),
         W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
-        Y = i.useCallback(
+        q = i.useCallback(
             (e, n, i) => {
                 switch (e) {
                     case 0:
@@ -116,7 +116,7 @@ function P(e) {
             },
             [A, R, t],
         ),
-        q = i.useCallback(
+        Y = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -233,8 +233,8 @@ function P(e) {
             itemGutter: 16,
             padding: ee,
             renderItem: J,
-            renderSection: Y,
-            getSectionHeight: q,
+            renderSection: q,
+            getSectionHeight: Y,
             getItemKey: K,
             getItemHeight: Q,
             chunkSize: 24,

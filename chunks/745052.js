@@ -43,15 +43,15 @@ var r = n(951288),
     F = n(177033),
     z = n(355350),
     W = n(307947),
-    Y = n(96479),
-    q = n(480874),
+    q = n(96479),
+    Y = n(480874),
     K = n(687683),
     Q = n(981631),
     X = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(803882),
-    et = n(97009);
+    ee = n(735516),
+    et = n(161655);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -118,7 +118,7 @@ function ei() {
                     c = null == (i = n[o + 1]) || null == (t = i.channel) ? void 0 : t.id,
                     u = s.channel.id;
                 return (0, r.jsx)(
-                    Y.Z,
+                    q.Z,
                     {
                         index: o,
                         className: a()({
@@ -316,7 +316,7 @@ let ea = (e) => {
 };
 function eo(e) {
     let { section: t } = e;
-    return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
+    return t === K.pS.SPAM ? (0, r.jsx)(Y.Z, {}) : (0, r.jsx)(ei, {});
 }
 let es = (0, h.Z)(function (e) {
     let { width: t } = e,

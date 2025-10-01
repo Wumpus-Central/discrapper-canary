@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(541692),
     h = n(952802),
     g = n(388905),
-    p = n(815660),
-    m = n(388032),
-    f = n(149715),
-    _ = n(197571);
+    m = n(815660),
+    p = n(388032),
+    f = n(465106),
+    _ = n(10198);
 let x = () => {
     let [e, t] = i.useState(""),
         [l, x] = i.useState(""),
@@ -47,7 +47,7 @@ let x = () => {
                 (0, r.jsxs)(g.Dx, {
                     className: s()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
-                        m.intl.string(m.t.WWzQtb),
+                        p.intl.string(p.t.WWzQtb),
                         (0, r.jsx)(a.owK, {
                             size: "md",
                             color: "currentColor",
@@ -61,16 +61,16 @@ let x = () => {
         ? Z
         : (0, r.jsxs)(g.ZP, {
               children: [
-                  (0, r.jsx)(g.Dx, { children: m.intl.string(m.t.o4JNrK) }),
+                  (0, r.jsx)(g.Dx, { children: p.intl.string(p.t.o4JNrK) }),
                   (0, r.jsx)(g.DK, {
                       className: _.marginTop8,
-                      children: m.intl.string(m.t.y0tVbm),
+                      children: p.intl.string(p.t.y0tVbm),
                   }),
                   (0, r.jsxs)(g.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(h.Z, {
-                              label: m.intl.string(m.t.eJnn09),
+                              label: p.intl.string(p.t.eJnn09),
                               alpha2: y.alpha2,
                               countryCode: C,
                               value: e,
@@ -82,23 +82,23 @@ let x = () => {
                           }),
                           (0, r.jsx)(g.II, {
                               className: _.marginTop20,
-                              label: m.intl.string(m.t.OdzNbm),
+                              label: p.intl.string(p.t.OdzNbm),
                               value: l,
                               onChange: x,
-                              maxLength: p.z,
+                              maxLength: m.z,
                               error: O,
                           }),
                           (0, r.jsx)(g.zx, {
                               size: g.zx.Sizes.SMALL,
                               look: g.zx.Looks.LINK,
                               onClick: A,
-                              children: m.intl.string(m.t["5b60go"]),
+                              children: p.intl.string(p.t["5b60go"]),
                           }),
                           (0, r.jsx)(g.zx, {
                               className: _.marginTop20,
                               onClick: T,
                               submitting: E,
-                              children: m.intl.string(m.t.i4jeWV),
+                              children: p.intl.string(p.t.i4jeWV),
                           }),
                       ],
                   }),

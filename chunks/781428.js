@@ -14,8 +14,8 @@ var r,
     d = n(481060),
     h = n(570140),
     g = n(893776),
-    p = n(899742),
-    m = n(743142),
+    m = n(899742),
+    p = n(743142),
     f = n(254942),
     _ = n(388905),
     x = n(379760),
@@ -46,8 +46,8 @@ var r,
     z = n(981631),
     V = n(260539),
     K = n(388032),
-    H = n(132825),
-    W = n(197571);
+    H = n(977150),
+    W = n(10198);
 function q(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ class Q extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { handoffAvailable: e, authenticated: t, giftCodeSKU: n, invite: r, location: i } = this.props;
-        e && !t ? (0, p.is)() : t && this.loginOrSSO(t, i, !0),
+        e && !t ? (0, m.is)() : t && this.loginOrSSO(t, i, !0),
             D.default.track(
                 z.rMx.LOGIN_VIEWED,
                 J(
@@ -159,7 +159,7 @@ class Q extends (r = l.PureComponent) {
             else if (null != n.channel) return "dm_invite";
             else if (null != n.inviter) return "friend_invite";
         }
-        return null != i ? (0, m.L)(i) : null;
+        return null != i ? (0, p.L)(i) : null;
     }
     get giftCodeSKUId() {
         let { giftCode: e } = this.props;

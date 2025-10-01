@@ -1,12 +1,12 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    i = n(647438),
+    o = n(647438),
     l = n(636298),
-    o = n(404975),
-    s = n(924052),
-    a = n(59662),
-    u = n(990757);
-function c(e) {
+    i = n(404975),
+    a = n(924052),
+    s = n(59662),
+    c = n(4640);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,64 +49,64 @@ function d(e, t) {
         e
     );
 }
-function g(e) {
-    var t, n, g;
-    let { root: f, directory: y, target: O, onClose: E, sidebarHeader: b, sidebarFooter: p, onPanelChange: v } = e,
-        [T, S] = i.useState(!0),
-        [j, N] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
-        [m, C] = i.useState(() => y.typedGet(j)),
-        _ = i.useCallback(() => x(void 0), []),
-        [P, x] = i.useState({
-            target: O,
-            targetAccordion: null == (n = y.entry(O)) ? void 0 : n.parentAccordion,
+function f(e) {
+    var t, n, f;
+    let { root: b, directory: m, target: p, onClose: j, sidebarHeader: x, sidebarFooter: v, onPanelChange: y } = e,
+        [g, h] = o.useState(!0),
+        [O, C] = o.useState(null == (t = m.entry(p)) ? void 0 : t.parentPanel),
+        [_, P] = o.useState(() => m.typedGet(O)),
+        S = o.useCallback(() => N(void 0), []),
+        [E, N] = o.useState({
+            target: p,
+            targetAccordion: null == (n = m.entry(p)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
-            complete: _,
+            complete: S,
         }),
-        { navigateWithValidation: I } = (0, s.Cu)(),
-        A = i.useMemo(
+        { navigateWithValidation: T } = (0, a.Cu)(),
+        k = o.useMemo(
             () => ({
-                currentPanel: y.typedGet(j),
+                currentPanel: m.typedGet(O),
                 navigateTo: (e) => {
-                    let t = y.entry(e);
+                    let t = m.entry(e);
                     if ((null == t ? void 0 : t.parentPanel) == null) return;
                     let n = {
                         target: e,
                         targetAccordion: t.parentAccordion,
-                        complete: _,
+                        complete: S,
                     };
-                    if (t.parentPanel.key !== (null == j ? void 0 : j.key)) {
+                    if (t.parentPanel.key !== (null == O ? void 0 : O.key)) {
                         let e = t.parentPanel;
-                        I(() => {
-                            x(d(c({}, n), { animateScroll: !1 })), C(e), N(e), null == v || v(e.key);
+                        T(() => {
+                            N(d(u({}, n), { animateScroll: !1 })), P(e), C(e), null == y || y(e.key);
                         });
-                    } else x(d(c({}, n), { animateScroll: !0 }));
+                    } else N(d(u({}, n), { animateScroll: !0 }));
                 },
-                navTransition: P,
-                showNavigationMobile: T,
-                setShowNavigationMobile: S,
+                navTransition: E,
+                showNavigationMobile: g,
+                setShowNavigationMobile: h,
             }),
-            [y, j, P, T, _, I, v],
+            [m, O, E, g, S, T, y],
         ),
-        h = () => I(E);
-    return (0, r.jsx)(a.j.Provider, {
-        value: A,
+        w = () => T(j);
+    return (0, r.jsx)(s.j.Provider, {
+        value: k,
         children: (0, r.jsxs)("div", {
-            className: u.container,
+            className: c.container,
             children: [
-                (0, r.jsx)(o.P, {
-                    root: f,
-                    header: b,
-                    footer: p,
-                    onClose: h,
+                (0, r.jsx)(i.P, {
+                    root: b,
+                    header: x,
+                    footer: v,
+                    onClose: w,
                 }),
                 (0, r.jsx)(l.Z, {
-                    onClose: h,
-                    setting: null != (g = A.currentPanel) ? g : m,
+                    onClose: w,
+                    setting: null != (f = k.currentPanel) ? f : _,
                 }),
             ],
         }),
     });
 }
-function f(e) {
-    return (0, r.jsx)(s.Ri, { children: (0, r.jsx)(g, c({}, e)) });
+function b(e) {
+    return (0, r.jsx)(a.Ri, { children: (0, r.jsx)(f, u({}, e)) });
 }

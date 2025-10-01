@@ -43,8 +43,8 @@ var r = n(951288),
     F = n(73346),
     z = n(3570),
     W = n(689796),
-    Y = n(15470),
-    q = n(506648),
+    q = n(978436),
+    Y = n(506648),
     K = n(449275),
     Q = n(445986),
     X = n(119520),
@@ -58,7 +58,7 @@ var r = n(951288),
     el = n(981631),
     ea = n(186901),
     eo = n(388032),
-    es = n(561537);
+    es = n(868113);
 function ec(e, t, n) {
     return (
         t in e
@@ -306,7 +306,7 @@ class ep extends i.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, r.jsx)(q.Z, { sku: e });
+        return (0, r.jsx)(Y.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -327,7 +327,7 @@ class ep extends i.PureComponent {
                     children: eo.intl.format(eo.t.tluX4O, { name: n.name }),
                 }),
                 (0, r.jsx)(b.Z, {}),
-                (0, r.jsx)(Y.Z, {
+                (0, r.jsx)(q.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: l,
@@ -513,7 +513,7 @@ class ep extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("37100")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,

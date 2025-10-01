@@ -42,8 +42,8 @@ var r = n(951288),
     V = n(981631),
     H = n(468788),
     Y = n(388032),
-    W = n(728495),
-    K = n(197571);
+    W = n(285746),
+    K = n(10198);
 function z(e, t, n) {
     return (
         t in e
@@ -357,7 +357,7 @@ function et() {
                                             hideBorder: !0,
                                             children: Y.intl.string(Y.t.u6dc5O),
                                         }),
-                                        (0, r.jsx)(f.$i$, { className: o()(K.marginTop20, K.marginBottom40) }),
+                                        (0, r.jsx)(f.izJ, { className: o()(K.marginTop20, K.marginBottom40) }),
                                     ],
                                 }),
                                 (0, r.jsxs)(R.F, {
@@ -379,13 +379,13 @@ function et() {
                                             hideBorder: !0,
                                             children: Y.intl.string(Y.t.P8MG6u),
                                         }),
-                                        (0, r.jsx)(f.$i$, { className: o()(K.marginTop20, K.marginBottom40) }),
+                                        (0, r.jsx)(f.izJ, { className: o()(K.marginTop20, K.marginBottom40) }),
                                     ],
                                 }),
                             ],
                         })
                       : null,
-                  null != t ? null : (0, r.jsx)(f.$i$, { className: o()(K.marginTop20, K.marginBottom40) }),
+                  null != t ? null : (0, r.jsx)(f.izJ, { className: o()(K.marginTop20, K.marginBottom40) }),
               ],
           });
 }
@@ -467,7 +467,7 @@ class en extends i.PureComponent {
                             onChange: U.CM.updateSetting,
                             options: p,
                         }),
-                        (0, r.jsx)(f.$i$, { className: o()(K.marginTop40, K.marginBottom40) }),
+                        (0, r.jsx)(f.izJ, { className: o()(K.marginTop40, K.marginBottom40) }),
                     ],
                 }),
                 this.renderTTS(),
@@ -515,7 +515,7 @@ class en extends i.PureComponent {
                             onChange: this.handleTTSChange,
                             value: this.props.ttsType,
                         }),
-                        (0, r.jsx)(f.$i$, { className: o()(K.marginTop40, K.marginBottom40) }),
+                        (0, r.jsx)(f.izJ, { className: o()(K.marginTop40, K.marginBottom40) }),
                     ],
                 });
             });
@@ -630,7 +630,7 @@ function ea() {
                                   ],
                               }),
                           }),
-                          (0, r.jsx)(f.$i$, { className: o()(K.marginTop40, K.marginBottom40) }),
+                          (0, r.jsx)(f.izJ, { className: o()(K.marginTop40, K.marginBottom40) }),
                       ],
                   }),
               ],
@@ -697,7 +697,7 @@ function ec() {
                       onChange: (e) => n({ value: e }),
                       value: e,
                   }),
-                  (0, r.jsx)(f.$i$, { className: o()(K.marginTop40, K.marginBottom40) }),
+                  (0, r.jsx)(f.izJ, { className: o()(K.marginTop40, K.marginBottom40) }),
               ],
           })
         : null;

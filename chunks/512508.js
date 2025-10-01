@@ -26,7 +26,7 @@ var r = n(951288),
     v = n(699516),
     y = n(594174),
     O = n(388032),
-    H = n(9226);
+    H = n(444573);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -436,7 +436,7 @@ function k(e) {
                                             ? null
                                             : (0, r.jsx)("div", {
                                                   className: H.sectionFooter,
-                                                  children: (0, r.jsx)(u.$i$, {}),
+                                                  children: (0, r.jsx)(u.izJ, {}),
                                               })
                                         : null;
                                 },

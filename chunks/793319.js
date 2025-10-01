@@ -10,7 +10,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(488290),
+    c = n(137317),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -43,8 +43,8 @@ var r = n(951288),
     U = n(853170),
     B = n(140465),
     H = n(800966),
-    V = n(641015),
-    F = n(618158),
+    F = n(641015),
+    V = n(618158),
     G = n(390322),
     z = n(791592),
     W = n(136995),
@@ -75,7 +75,7 @@ var r = n(951288),
     eb = n(981631),
     ey = n(354459),
     eC = n(921944),
-    e_ = n(32312);
+    e_ = n(817675);
 function ev() {
     return (ev =
         Object.assign ||
@@ -180,7 +180,7 @@ function eE(e) {
                         },
                     });
             })(),
-            (0, r.jsx)(F.Z, {
+            (0, r.jsx)(V.Z, {
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: y,
                     renderPopout: (e) => {
@@ -489,7 +489,7 @@ let eT = function (e) {
             var e;
             return (null != (e = null == k ? void 0 : k.channelId) ? e : ei.Z.getVoiceChannelId()) === n.id;
         }),
-        F = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
+        V = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
         { analyticsLocations: q } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
         Y = (0, $.Hu)({
@@ -497,7 +497,7 @@ let eT = function (e) {
             autoTrackExposure: !0,
         }),
         { showRefreshedAudioContextMenu: J } = (0, U.e)({ location: _.Z.VOICE_CONTROL_TRAY }),
-        et = (0, V.Z)(n),
+        et = (0, F.Z)(n),
         en = i.useRef(null),
         eu = i.useRef(null),
         ep = Y
@@ -670,7 +670,7 @@ let eT = function (e) {
                                   ],
                               }),
                               (0, r.jsx)(eP, {
-                                  connectedEmbeddedActivity: F,
+                                  connectedEmbeddedActivity: V,
                                   currentUser: C,
                                   channel: n,
                                   onDisconnectCall: o,

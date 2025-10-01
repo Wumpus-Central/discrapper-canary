@@ -43,8 +43,8 @@ var r = n(951288),
     F = n(142497),
     z = n(810788),
     W = n(160404),
-    Y = n(728285),
-    q = n(703656),
+    q = n(728285),
+    Y = n(703656),
     K = n(917405),
     Q = n(641015),
     X = n(848543),
@@ -89,8 +89,8 @@ var r = n(951288),
     eD = n(921944),
     ek = n(190378),
     eM = n(388032),
-    eU = n(890332),
-    eG = n(197571);
+    eU = n(239545),
+    eG = n(10198);
 function eB(e, t, n) {
     return (
         t in e
@@ -174,7 +174,7 @@ function eW(e) {
         location: { section: eL.jXE.NOISE_CANCELLATION_POPOUT },
     });
 }
-function eY() {
+function eq() {
     let e = i.useRef(null);
     (0, m.Tbt)(e),
         i.useEffect(() => {
@@ -226,7 +226,7 @@ function eY() {
         ],
     });
 }
-function eq() {
+function eY() {
     let { parentAnalyticsLocation: e } = (0, x.ZP)(),
         t = (0, u.e7)([er.Z], () => er.Z.isMuted()),
         n = t ? eM.intl.string(eM.t.ScHlfn) : eM.intl.string(eM.t.zqxfra);
@@ -254,14 +254,14 @@ function eK(e) {
         E = i.useCallback(() => {
             (0, eu.Z)();
         }, []),
-        y = (0, Y.bp)(),
+        y = (0, q.bp)(),
         v = i.useCallback(
             (e) => {
                 if (eE.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
                     b.Z.setVideoEnabled(e),
-                        e && (0, q.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
+                        e && (0, Y.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
                 };
                 (0, L.v)(s, L.d.CAMERA, e), e ? (0, ef.Z)(n, y) : n();
             },
@@ -375,7 +375,7 @@ function eK(e) {
 }
 function eQ(e) {
     let { channel: t, enableActivities: n } = e,
-        i = (0, Y.bp)(),
+        i = (0, q.bp)(),
         { parentAnalyticsLocation: l, newestAnalyticsLocation: o } = (0, x.ZP)(),
         s = i === eL.IlC.POPOUT,
         c = (0, T.KF)(t.id),
@@ -618,7 +618,7 @@ class eJ extends i.PureComponent {
                 null ==
                     a.find((e) => e.user.id === em.default.getId() && (0, ei.gf)(e.voiceState) === ei.xO.ON_STAGE) &&
                 (0, en.U5)(l.id)
-              ? (0, r.jsx)(eq, {})
+              ? (0, r.jsx)(eY, {})
               : !n && t
                 ? (0, r.jsx)(m.ua7, {
                       text: eM.intl.string(eM.t["i+SO/f"]),
@@ -640,7 +640,7 @@ class eJ extends i.PureComponent {
                           targetElementRef: this.krispButtonRef,
                           position: "top",
                           align: "center",
-                          renderPopout: () => (0, r.jsx)(eY, {}),
+                          renderPopout: () => (0, r.jsx)(eq, {}),
                           children: (t, n) => {
                               let { isShown: i } = n;
                               return (0, r.jsx)(e$, {

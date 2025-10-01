@@ -19,10 +19,10 @@ var i = n(951288),
     g = n(796638),
     O = n(592125),
     y = n(131951),
-    v = n(944486),
-    E = n(237997),
-    S = n(136015),
-    b = n(444295),
+    E = n(944486),
+    v = n(237997),
+    b = n(136015),
+    S = n(444295),
     x = n(906037),
     j = n(353038),
     I = n(804570),
@@ -32,7 +32,7 @@ var i = n(951288),
     N = n(981631),
     T = n(65154),
     _ = n(388032),
-    P = n(59122);
+    P = n(928578);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -102,9 +102,9 @@ let R = r.memo(function (e) {
             p = r.useCallback(
                 (e, r) => {
                     let l = e.user;
-                    (0, b.Ws)(N.Odu.VIDEO, {
-                        type: b.Qu.CAMERA,
-                        value: b.bk.SETTINGS_OPENED,
+                    (0, S.Ws)(N.Odu.VIDEO, {
+                        type: S.Qu.CAMERA,
+                        value: S.bk.SETTINGS_OPENED,
                         userId: null == l ? void 0 : l.id,
                     }),
                         (0, u.jW)(r, async () => {
@@ -116,9 +116,9 @@ let R = r.memo(function (e) {
                                         user: l,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
-                                            (0, b.Ws)(N.Odu.VIDEO, {
-                                                type: b.Qu.GO_LIVE,
-                                                value: b.bk.ENABLED,
+                                            (0, S.Ws)(N.Odu.VIDEO, {
+                                                type: S.Qu.GO_LIVE,
+                                                value: S.bk.ENABLED,
                                                 userId: null == l ? void 0 : l.id,
                                             });
                                         },
@@ -128,7 +128,7 @@ let R = r.memo(function (e) {
                 },
                 [t],
             ),
-            f = (0, b.ee)(
+            f = (0, S.ee)(
                 () =>
                     new Set(
                         l.map((e) => {
@@ -140,8 +140,8 @@ let R = r.memo(function (e) {
             );
         r.useEffect(() => {
             d &&
-                (0, b.zi)(N.Odu.VIDEO, {
-                    locked: E.default.isInstanceLocked(),
+                (0, S.zi)(N.Odu.VIDEO, {
+                    locked: v.default.isInstanceLocked(),
                     shownUserIds: Array.from(f),
                     liveUserIds: Array.from(f),
                     contentInventoryIds: [],
@@ -266,18 +266,18 @@ let R = r.memo(function (e) {
     };
 function V(e) {
     var t, n, l, o;
-    let s = (0, a.e7)([v.Z, O.Z], () => O.Z.getChannel(v.Z.getVoiceChannelId())),
+    let s = (0, a.e7)([E.Z, O.Z], () => O.Z.getChannel(E.Z.getVoiceChannelId())),
         u = 2 * e.padding + 2 * e.borderWidth,
         h = null == s ? void 0 : s.id,
         [m, y] = (0, a.e7)(
             [p.Z],
             () => (null == h ? [[], 0] : [p.Z.getVideoParticipants(h), p.Z.getParticipantsVersion(h)]),
             [h],
-            S.Q,
+            b.Q,
         ),
-        E = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: b = e.width - u, height: x = e.height - u, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
-        { participantTileWidth: C, visibleParticipants: Z } = (0, g.ZB)(E ? b : x, m, {
+        v = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
+        { width: S = e.width - u, height: x = e.height - u, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
+        { participantTileWidth: C, visibleParticipants: Z } = (0, g.ZB)(v ? S : x, m, {
             tileWidth: w.vZ,
             tileMinWidth: w.mo,
             tileMargin: w.F$,
@@ -290,7 +290,7 @@ function V(e) {
             id: e.widget.id,
             containerSize: {
                 containerHeight: x,
-                containerWidth: b,
+                containerWidth: S,
             },
             sizeOffset: u,
             padding: e.padding,
@@ -356,7 +356,7 @@ function V(e) {
                     });
                 }, [t]);
         })({
-            horizontal: E,
+            horizontal: v,
             widget: e.widget,
             widgetLayoutSpecs: T,
         }),
@@ -366,8 +366,8 @@ function V(e) {
                 channel: s,
                 participants: Z,
                 participantsVersion: y,
-                width: E ? C : null != b ? b : e.width,
-                height: E ? (null != x ? x : e.height) : C,
+                width: v ? C : null != S ? S : e.width,
+                height: v ? (null != x ? x : e.height) : C,
                 containerRef: I,
             }),
         )

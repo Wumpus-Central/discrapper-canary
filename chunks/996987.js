@@ -7,7 +7,7 @@ var r = n(481060),
     o = n(63063),
     s = n(453628),
     c = n(388032),
-    d = n(197571);
+    d = n(10198);
 function u(e) {
     let {
             value: t,
@@ -72,7 +72,7 @@ function u(e) {
             !f &&
                 (0, i.jsx)(l.Z.Child, {
                     className: d.marginTop20,
-                    children: (0, i.jsx)(r.$i$, {}),
+                    children: (0, i.jsx)(r.izJ, {}),
                 }),
         ],
     });

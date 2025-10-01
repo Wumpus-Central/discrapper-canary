@@ -4,21 +4,21 @@ var r,
     l = n(647438),
     o = n(120356),
     a = n.n(o),
-    s = n(442837),
-    c = n(257465),
+    s = n(793030),
+    c = n(442837),
     u = n(481060),
     d = n(239091),
     p = n(134616),
-    f = n(714338),
-    h = n(212819),
+    h = n(714338),
+    f = n(212819),
     g = n(815372),
     m = n(14429),
     b = n(576855),
     _ = n(313201),
     O = n(991346),
     y = n(592125),
-    v = n(888369),
-    j = n(430824),
+    j = n(888369),
+    v = n(430824),
     x = n(158776),
     C = n(306680),
     E = n(944486),
@@ -34,7 +34,7 @@ var r,
     D = n(558631),
     M = n(981631),
     L = n(388032),
-    k = n(712198);
+    k = n(227129);
 function U(e, t, n) {
     return (
         t in e
@@ -101,7 +101,7 @@ let F = () =>
     });
 class V extends (r = l.Component) {
     render() {
-        let e = j.Z.getGuild(this.props.channel.guild_id);
+        let e = v.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             A.$W,
             B(G({}, this.props), {
@@ -114,7 +114,7 @@ class V extends (r = l.Component) {
     }
 }
 U(V, "defaultProps", { unread: !1 });
-let H = s.ZP.connectStores([C.ZP, y.Z], (e) => {
+let H = c.ZP.connectStores([C.ZP, y.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: C.ZP.hasUnread(t.id),
@@ -123,17 +123,17 @@ let H = s.ZP.connectStores([C.ZP, y.Z], (e) => {
             category: y.Z.getChannel(t.parent_id),
         };
     })(V),
-    z = s.ZP.connectStores([S.ZP], (e) => {
+    z = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    W = s.ZP.connectStores([v.default], (e) => {
+    W = c.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(A.ic),
-    K = s.ZP.connectStores([C.ZP, x.Z], (e) => {
+    K = c.ZP.connectStores([C.ZP, x.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
@@ -146,7 +146,7 @@ let H = s.ZP.connectStores([C.ZP, y.Z], (e) => {
             }
         );
     })(A.PZ),
-    Y = s.ZP.connectStores([y.Z, C.ZP, x.Z], (e) => {
+    Y = c.ZP.connectStores([y.Z, C.ZP, x.Z], (e) => {
         let { user: t } = e,
             n = y.Z.getDMFromUserId(t.id);
         return {
@@ -174,10 +174,10 @@ function q(e, t, n) {
 }
 class X extends l.PureComponent {
     componentDidMount() {
-        f.Z.disable(), f.Z.enableTemp(p.u);
+        h.Z.disable(), h.Z.enableTemp(p.u);
     }
     componentWillUnmount() {
-        f.Z.disableTemp(), f.Z.enable();
+        h.Z.disableTemp(), h.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -273,10 +273,10 @@ class X extends l.PureComponent {
             className: a()(k.protip, { [k.hasContent]: this.state.query.length > 0 }),
             type: b.Z.Types.INLINE,
             children: L.intl.format(L.t.wukqXV, {
-                userSymbolHook: (e, t) => q(t, h.xQ.USER, L.intl.string(L.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => q(t, h.xQ.TEXT_CHANNEL, L.intl.string(L.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => q(t, h.xQ.VOICE_CHANNEL, L.intl.string(L.t["jz+hJi"])),
-                guildSymbolHook: (e, t) => q(t, h.xQ.GUILD, L.intl.string(L.t.WuwCWl)),
+                userSymbolHook: (e, t) => q(t, f.xQ.USER, L.intl.string(L.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => q(t, f.xQ.TEXT_CHANNEL, L.intl.string(L.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => q(t, f.xQ.VOICE_CHANNEL, L.intl.string(L.t["jz+hJi"])),
+                guildSymbolHook: (e, t) => q(t, f.xQ.GUILD, L.intl.string(L.t.WuwCWl)),
                 helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
@@ -287,7 +287,7 @@ class X extends l.PureComponent {
         return t ? null : (0, i.jsx)(R.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(c.IX, {
+        return (0, i.jsx)(s.IX, {
             "aria-label": L.intl.string(L.t.ZvKwYW),
             size: "lg",
             transitionState: this.props.transitionState,
@@ -320,32 +320,32 @@ class X extends l.PureComponent {
                 this.state.mouseFocusDisabled || (0, Z.tF)(this.props.results.indexOf(e));
             }),
             U(this, "selectResult", (e) => {
-                (0, Z.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
+                (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             U(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
-                    case h.h8.GUILD:
+                    case f.h8.GUILD:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("36599"),
                                 n.e("7654"),
                                 n.e("58175"),
-                                n.e("76692"),
+                                n.e("48776"),
                                 n.e("8271"),
                                 n.e("15851"),
                                 n.e("51453"),
                                 n.e("845"),
-                                n.e("58511"),
+                                n.e("98039"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),
                                 n.e("30378"),
-                                n.e("64982"),
+                                n.e("29679"),
                                 n.e("22516"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("73709"),
+                                n.e("8209"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -357,10 +357,10 @@ class X extends l.PureComponent {
                                     }),
                                 );
                         });
-                    case h.h8.TEXT_CHANNEL:
-                    case h.h8.VOICE_CHANNEL:
+                    case f.h8.TEXT_CHANNEL:
+                    case f.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = j.Z.getGuild(r.getGuildId());
+                            l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case M.d4z.GUILD_TEXT:
@@ -436,7 +436,7 @@ class X extends l.PureComponent {
                                 });
                         }
                         break;
-                    case h.h8.GROUP_DM:
+                    case f.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("25421")]).then(
                                 n.bind(n, 354741),
@@ -451,7 +451,7 @@ class X extends l.PureComponent {
                                     }),
                                 );
                         });
-                    case h.h8.USER:
+                    case f.h8.USER:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
@@ -489,18 +489,18 @@ class X extends l.PureComponent {
                         return;
                     }
                     case "arrowup":
-                        l = (0, h.gJ)(h.a8.UP, l, r);
+                        l = (0, f.gJ)(f.a8.UP, l, r);
                         break;
                     case "arrowdown":
-                        l = (0, h.gJ)(h.a8.DOWN, l, r);
+                        l = (0, f.gJ)(f.a8.DOWN, l, r);
                         break;
                     case "n":
                         if (!e.ctrlKey) return;
-                        l = (0, h.gJ)(h.a8.DOWN, l, r);
+                        l = (0, f.gJ)(f.a8.DOWN, l, r);
                         break;
                     case "p":
                         if (!e.ctrlKey) return;
-                        l = (0, h.gJ)(h.a8.UP, l, r);
+                        l = (0, f.gJ)(f.a8.UP, l, r);
                         break;
                     default:
                         return;
@@ -523,13 +523,13 @@ class X extends l.PureComponent {
                     { selectedIndex: r } = this.props,
                     { showScores: l } = m.Z.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
                 switch (n.type) {
-                    case h.h8.HEADER:
+                    case f.h8.HEADER:
                         return (0, i.jsx)(
                             A.h4,
                             { children: n.record.text },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.TEXT_CHANNEL:
+                    case f.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
                             H,
                             {
@@ -544,7 +544,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.VOICE_CHANNEL:
+                    case f.h8.VOICE_CHANNEL:
                         return (0, i.jsx)(
                             z,
                             {
@@ -559,7 +559,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.GUILD:
+                    case f.h8.GUILD:
                         return (0, i.jsx)(
                             W,
                             {
@@ -574,7 +574,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.USER:
+                    case f.h8.USER:
                         return (0, i.jsx)(
                             Y,
                             {
@@ -590,7 +590,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.GROUP_DM:
+                    case f.h8.GROUP_DM:
                         return (0, i.jsx)(
                             K,
                             {
@@ -605,7 +605,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.APPLICATION:
+                    case f.h8.APPLICATION:
                         return (0, i.jsx)(
                             A.Mx,
                             {
@@ -618,7 +618,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.LINK:
+                    case f.h8.LINK:
                         return (0, i.jsx)(
                             A.rU,
                             {
@@ -633,7 +633,7 @@ class X extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.IN_APP_NAVIGATION:
+                    case f.h8.IN_APP_NAVIGATION:
                         return (0, i.jsx)(
                             A.s8,
                             {
@@ -661,7 +661,7 @@ class X extends l.PureComponent {
     }
 }
 function Q(e) {
-    let t = (0, s.cj)([T.Z], () => T.Z.getProps()),
+    let t = (0, c.cj)([T.Z], () => T.Z.getProps()),
         n = (0, O.Pt)(),
         r = D.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     l = n(624238),
     c = n(28664),
     s = n(481060),
@@ -12,14 +12,14 @@ var r = n(951288),
     f = n(978369),
     p = n(286957),
     b = n(388032),
-    m = n(44258);
+    m = n(200344);
 function O(e) {
     var t;
-    let { tags: n, isCurrentUser: o, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
+    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: O = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
         P = l.qH,
-        w = o && !O && (0, g.M8)(c) && x.length < P,
+        w = a && !O && (0, g.M8)(c) && x.length < P,
         { trackUserProfileAction: I } = (0, d.KZ)(),
         E = (0, i.useRef)(new Map()),
         S = (0, i.useRef)(null),
@@ -43,7 +43,7 @@ function O(e) {
         return null;
     let R = A ? x : x.slice(0, x.length - D);
     return (0, r.jsxs)("div", {
-        className: a()(m.tagListContainer, u),
+        className: o()(m.tagListContainer, u),
         children: [
             _ &&
                 (0, r.jsxs)(r.Fragment, {
@@ -56,7 +56,7 @@ function O(e) {
                                     y,
                                     {
                                         tag: e,
-                                        isCurrentUser: o,
+                                        isCurrentUser: a,
                                         applicationId: s,
                                         widgetType: c,
                                         ref: (t) => {
@@ -96,16 +96,16 @@ function O(e) {
     });
 }
 let y = (e) => {
-        let { tag: t, isCurrentUser: n, applicationId: i, widgetType: o, disableInteraction: a, ref: l } = e,
+        let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: o, ref: l } = e,
             { trackUserProfileEditAction: c } = (0, d.KZ)(),
             u = (0, p.zK)(t);
         if (null == u) return null;
         let { getText: f, icon: O } = u,
             y = () => {
-                (0, g.RZ)(o, i, t),
+                (0, g.RZ)(a, i, t),
                     c({
                         action: "TAG_REMOVED",
-                        widgetEdited: o,
+                        widgetEdited: a,
                         gameId: i,
                     });
             };
@@ -120,7 +120,7 @@ let y = (e) => {
                     children: f(),
                 }),
                 n &&
-                    !a &&
+                    !o &&
                     (0, r.jsx)(s.ua7, {
                         text: b.intl.string(b.t.Otv9fH),
                         children: (e) => {
@@ -182,7 +182,7 @@ let y = (e) => {
         });
     },
     j = (e) => {
-        let { numHidden: t, onClick: n, disableInteraction: i, ref: o } = e;
+        let { numHidden: t, onClick: n, disableInteraction: i, ref: a } = e;
         return i
             ? (0, r.jsx)("div", {
                   className: m.expandButton,
@@ -198,7 +198,7 @@ let y = (e) => {
                   children: (0, r.jsx)(s.P3F, {
                       onClick: n,
                       className: m.expandButton,
-                      innerRef: o,
+                      innerRef: a,
                       "aria-label": b.intl.string(b.t.mriLXF),
                       children: (0, r.jsx)(s.Text, {
                           variant: "text-xxs/medium",
@@ -226,12 +226,12 @@ let y = (e) => {
             }),
         });
     },
-    v = (e, t, n, r, o) =>
+    v = (e, t, n, r, a) =>
         (0, i.useCallback)(() => {
-            var i, a, l, c;
-            if (null == n) return void o(0);
+            var i, o, l, c;
+            if (null == n) return void a(0);
             let s = null != (l = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? l : 0,
-                u = null != (c = null == (a = t.current) ? void 0 : a.getBoundingClientRect().width) ? c : 0,
+                u = null != (c = null == (o = t.current) ? void 0 : o.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
                 g = 0,
                 f = 0,
@@ -251,5 +251,5 @@ let y = (e) => {
                     g++;
                 }
             }
-            o(n.length - g);
-        }, [e, t, null == n ? void 0 : n.join(""), r, o]);
+            a(n.length - g);
+        }, [e, t, null == n ? void 0 : n.join(""), r, a]);

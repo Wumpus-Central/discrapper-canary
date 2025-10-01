@@ -42,15 +42,15 @@ var r = n(951288),
     U = n(438075),
     B = n(764893),
     H = n(481363),
-    V = n(900902),
-    F = n(252032),
+    F = n(900902),
+    V = n(252032),
     G = n(737243),
     z = n(614584),
     W = n(295790),
     q = n(959517),
     Y = n(981631),
     K = n(388032),
-    X = n(360514);
+    X = n(5898);
 function J() {
     return (J =
         Object.assign ||
@@ -170,7 +170,7 @@ function en(e) {
                       [X.systemMessage]: !0,
                       [X.groupStart]: !0,
                   }),
-                  childrenHeader: (0, V.Z)({
+                  childrenHeader: (0, F.Z)({
                       messageProps: e,
                       setPopout: m,
                       messagePopouts: f,
@@ -235,7 +235,7 @@ function er(e) {
         ef = (0, T.ZP)(o),
         em = (0, w.iG)(o, C),
         eg = (0, w.Gx)(o),
-        eb = (0, F.Z)(e, ed, !1),
+        eb = (0, V.Z)(e, ed, !1),
         ey = i.useCallback(() => (0, v.XU)(g, h, s), [g, h, s]),
         eC = (0, f.p9)({
             guildId: g,
@@ -280,7 +280,7 @@ function er(e) {
                                 isReplySpineClickable: !0,
                             }),
                         ),
-                    childrenHeader: (0, V.Z)({
+                    childrenHeader: (0, F.Z)({
                         messageProps: e,
                         setPopout: J,
                         messagePopouts: H,
@@ -385,8 +385,8 @@ let ei = i.memo(function (e) {
         }),
         eB = (0, R.Z)(I, et, eN),
         eH = (0, T.ZP)(v),
-        eV = (0, u.e7)([C.Z], () => C.Z.getPendingReply(et)),
-        eF = (function (e) {
+        eF = (0, u.e7)([C.Z], () => C.Z.getPendingReply(et)),
+        eV = (function (e) {
             let t = i.useRef(e);
             return (
                 i.useEffect(() => {
@@ -409,7 +409,7 @@ let ei = i.memo(function (e) {
         eK = i.useRef(window),
         eX = null != eq,
         eJ = i.useMemo(() => Object.values(em).some((e) => e), [em]);
-    l = v.type === Y.uaV.CUSTOM_GIFT ? "" : !eT && eX ? (0, B.Z)(e, eD) : (0, F.Z)(e, eD, eT);
+    l = v.type === Y.uaV.CUSTOM_GIFT ? "" : !eT && eX ? (0, B.Z)(e, eD) : (0, V.Z)(e, eD, eT);
     let eQ = v.id === el,
         e$ = (0, r.jsx)(d.tEY, {
             offset: {
@@ -450,7 +450,7 @@ let ei = i.memo(function (e) {
                                 [X.systemMessage]: (0, Z.Z)(v),
                                 [X.groupStart]: !ea && (eQ || v.type === Y.uaV.REPLY),
                                 [X.selected]: eA,
-                                [X.replying]: (null == eV ? void 0 : eV.message.id) === v.id,
+                                [X.replying]: (null == eF ? void 0 : eF.message.id) === v.id,
                                 [X.interactionSending]: v.isCommandType() && v.state === Y.yb.SENDING,
                                 [X.automodMessage]: eX,
                                 [X.editing]: eT,
@@ -474,7 +474,7 @@ let ei = i.memo(function (e) {
                             childrenExecutedCommand: (0, G.Z)(e, eb, em),
                             childrenHeader: ea
                                 ? void 0
-                                : (0, V.Z)({
+                                : (0, F.Z)({
                                       messageProps: e,
                                       setPopout: eb,
                                       messagePopouts: em,
@@ -523,11 +523,11 @@ let ei = i.memo(function (e) {
                 ],
             }),
         });
-    return null != eF
+    return null != eV
         ? (0, r.jsx)(
               N.Z,
               {
-                  flashKey: eF,
+                  flashKey: eV,
                   className: a()({
                       [X.backgroundFlash]: !0,
                       [X.groupStart]: !en && v.id === el,

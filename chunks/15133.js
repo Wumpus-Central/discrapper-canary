@@ -4,21 +4,21 @@ var a = t(951288),
     i = t(657707),
     s = t(442837),
     o = t(481060),
-    l = t(224706),
-    c = t(665149),
+    c = t(224706),
+    l = t(665149),
     d = t(639777),
     u = t(744993),
     b = t(693587),
     m = t(462923),
     g = t(331500),
-    f = t(401561),
+    f = t(440589),
     x = t(388032),
-    p = t(828843);
+    p = t(50803);
 function v(e) {
     var n;
     let { guildId: t } = e;
     r.useEffect(() => {
-        (0, u.EC)(t), l.Z.getDetectableGames();
+        (0, u.EC)(t), c.Z.getDetectableGames();
     }, [t]);
     let v = (0, d.Z)(t),
         j = (0, s.e7)([b.Z], () => b.Z.getStateForGuild(t)),
@@ -26,15 +26,15 @@ function v(e) {
     return (0, a.jsxs)("div", {
         className: p.container,
         children: [
-            (0, a.jsxs)(c.ZP, {
+            (0, a.jsxs)(l.ZP, {
                 className: p.toolbar,
                 toolbar: (0, a.jsx)("div", {}),
                 children: [
-                    (0, a.jsx)(c.ZP.Icon, {
+                    (0, a.jsx)(l.ZP.Icon, {
                         icon: i.$Eu,
                         "aria-label": "",
                     }),
-                    (0, a.jsx)(c.ZP.Title, { children: x.intl.string(f.default.lH9Dio) }),
+                    (0, a.jsx)(l.ZP.Title, { children: x.intl.string(f.default.lH9Dio) }),
                     (0, a.jsx)(o.IGR, {
                         disableColor: !0,
                         text: x.intl.string(x.t.oW0eUV),

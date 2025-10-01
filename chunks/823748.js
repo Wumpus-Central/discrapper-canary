@@ -77,7 +77,7 @@ var r = n(951288),
     eC = n(657218),
     eI = n(407908),
     eE = n(66556),
-    eS = n(131694),
+    eS = n(739830),
     eZ = n(377929),
     eT = n(900157),
     eP = n(108427),
@@ -112,8 +112,8 @@ var r = n(951288),
     e3 = n(408491),
     e7 = n(440493),
     e6 = n(157925),
-    e9 = n(388032),
-    e5 = n(97009);
+    e5 = n(388032),
+    e9 = n(161655);
 function te(e, t, n) {
     return (
         t in e
@@ -162,11 +162,11 @@ function tn(e, t) {
     );
 }
 let tr = (0, M.Un)({
-    createPromise: () => Promise.all([n.e("22173"), n.e("9456")]).then(n.bind(n, 346975)),
+    createPromise: () => Promise.all([n.e("22173"), n.e("76892")]).then(n.bind(n, 346975)),
     webpackId: 346975,
     renderLoader: () =>
         (0, r.jsx)("div", {
-            className: e5.loader,
+            className: e9.loader,
             children: (0, r.jsx)(g.$jN, {}),
         }),
     name: "ForumChannel",
@@ -188,7 +188,7 @@ class ti extends i.PureComponent {
         o()(null != t, "Missing channel in Channel.openChannelContextMenu"),
             o()(null != i, "Missing guild in Channel.openChannelContextMenu"),
             (0, b.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("24783"), n.e("41815")]).then(n.bind(n, 439635));
+                let { default: e } = await Promise.all([n.e("24783"), n.e("63384")]).then(n.bind(n, 439635));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -211,7 +211,7 @@ class ti extends i.PureComponent {
         let i = eV.default.getUser(t.getRecipientId());
         o()(null != i, "Missing user in Channel.openDMContextMenu"),
             (0, b.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("56826"), n.e("88855")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("56826"), n.e("85952")]).then(
                     n.bind(n, 131404),
                 );
                 return (n) =>
@@ -449,7 +449,7 @@ class ti extends i.PureComponent {
                 let { guildId: e, userId: t } = l.details;
                 return (0, r.jsx)("div", {
                     style: { width: e1.$Y6 },
-                    className: e5.guildSidebar,
+                    className: e9.guildSidebar,
                     children: (0, r.jsx)(Y.Z, {
                         guildId: e,
                         userId: t,
@@ -501,15 +501,15 @@ class ti extends i.PureComponent {
                 }),
                 (0, r.jsxs)("div", {
                     "data-has-border": e.type !== e1.d4z.GUILD_VOICE,
-                    className: a()(e5.chat, {
-                        [e5.threadSidebarOpen]: f || g,
-                        [e5.threadSidebarFloating]: f && p,
+                    className: a()(e9.chat, {
+                        [e9.threadSidebarOpen]: f || g,
+                        [e9.threadSidebarFloating]: f && p,
                     }),
                     children: [
                         m
                             ? (0, r.jsx)(j.Z, {
                                   style: { right: f ? u : void 0 },
-                                  className: e5.uploadArea,
+                                  className: e9.uploadArea,
                                   channel: e,
                                   draftType: ek.d.ChannelMessage,
                               })
@@ -518,7 +518,7 @@ class ti extends i.PureComponent {
                         this.renderCall(),
                         this.renderEmbeddedActivityPanel(),
                         (0, r.jsxs)("div", {
-                            className: a()(e5.content, { [e5.noChat]: l === e1.AEg.NO_CHAT }),
+                            className: a()(e9.content, { [e9.noChat]: l === e1.AEg.NO_CHAT }),
                             children: [this.renderChat(), this.renderSidebar()],
                         }),
                     ],
@@ -634,7 +634,7 @@ class ti extends i.PureComponent {
                                     es.Z,
                                     {
                                         channel: e,
-                                        tooltip: e9.intl.string(e9.t.Xjlbvr),
+                                        tooltip: e5.intl.string(e5.t.Xjlbvr),
                                         location: "ChannelHeaderToolbar-DM-AddFriendsButton",
                                     },
                                     "invite",
@@ -661,7 +661,7 @@ class ti extends i.PureComponent {
                             s.push((0, r.jsx)(et.Z, { channel: e }, "pins")),
                             !e.isManaged())
                         ) {
-                            let t = e9.intl.string(e9.t.Xjlbvr);
+                            let t = e5.intl.string(e5.t.Xjlbvr);
                             s.push(
                                 (0, r.jsx)(
                                     es.Z,
@@ -740,11 +740,11 @@ class ti extends i.PureComponent {
                 let { showFollowButton: e, channel: t } = this.props;
                 return e
                     ? (0, r.jsx)("div", {
-                          className: e5.followButton,
+                          className: e9.followButton,
                           children: (0, r.jsx)(g.zxk, {
                               variant: "secondary",
                               size: "sm",
-                              text: e9.intl.string(e9.t["3aOv+v"]),
+                              text: e5.intl.string(e5.t["3aOv+v"]),
                               onClick: () =>
                                   (0, g.ZDy)(async () => {
                                       let { default: e } = await n.e("54642").then(n.bind(n, 720589));
@@ -778,7 +778,7 @@ class ti extends i.PureComponent {
                     b = c || d,
                     y = s || b;
                 return (0, r.jsxs)("div", {
-                    className: e5.subtitleContainer,
+                    className: e9.subtitleContainer,
                     children: [
                         (0, r.jsx)(g.f6W, {
                             theme: u && s ? e1.BRd.DARK : void 0,
@@ -793,10 +793,10 @@ class ti extends i.PureComponent {
                                         showDivider: h && !(0, ey.X$)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: a()(e5.title, s, { [e5.gdm]: e.type === e1.d4z.GROUP_DM }),
+                                        className: a()(e9.title, s, { [e9.gdm]: e.type === e1.d4z.GROUP_DM }),
                                         transparent: y,
                                         hidden: d,
-                                        "aria-label": e9.intl.string(e9.t.BIYAqa),
+                                        "aria-label": e5.intl.string(e5.t.BIYAqa),
                                         children: [
                                             p &&
                                                 (0, r.jsx)(el.TS, {
@@ -818,12 +818,12 @@ class ti extends i.PureComponent {
                                             }),
                                             p
                                                 ? (0, r.jsx)("div", {
-                                                      className: e5.followButton,
+                                                      className: e9.followButton,
                                                       children: (0, r.jsx)(g.zxk, {
                                                           onClick: () => (0, em.XU)(e.guild_id, e.id),
                                                           variant: "secondary",
                                                           size: "sm",
-                                                          text: e9.intl.string(e9.t.k5WiPT),
+                                                          text: e5.intl.string(e5.t.k5WiPT),
                                                       }),
                                                   })
                                                 : (0, el.v0)(e, i),

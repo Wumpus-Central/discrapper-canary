@@ -17,7 +17,7 @@ var l = t(951288),
     v = t(981631),
     g = t(671955),
     b = t(388032),
-    y = t(220566);
+    y = t(65464);
 function O(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -57,8 +57,8 @@ function I(e) {
         } = e,
         S = t === v.ME ? void 0 : t,
         C = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
-        { analyticsLocations: w } = (0, s.ZP)([...A, C ? o.Z.BLOCKED_PROFILE_MODAL : o.Z.IGNORED_PROFILE_MODAL]),
-        _ = (0, u.ZB)({
+        { analyticsLocations: _ } = (0, s.ZP)([...A, C ? o.Z.BLOCKED_PROFILE_MODAL : o.Z.IGNORED_PROFILE_MODAL]),
+        w = (0, u.ZB)({
             layout: "MODAL_V2",
             userId: n.id,
             showGuildProfile: !0,
@@ -81,9 +81,9 @@ function I(e) {
         L = d.ZP.getName(null == R ? void 0 : R.guildId, I, n),
         M = b.intl.formatToPlainString(b.t.KRe1Fh, { name: L });
     return (0, l.jsx)(s.Gt, {
-        value: w,
+        value: _,
         children: (0, l.jsx)(u.Mt, {
-            value: _,
+            value: w,
             openedAt: T,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
@@ -152,9 +152,9 @@ function I(e) {
                                                                 action: C
                                                                     ? "VIEW_BLOCKED_PROFILE"
                                                                     : "VIEW_IGNORED_PROFILE",
-                                                                analyticsLocations: w,
+                                                                analyticsLocations: _,
                                                             },
-                                                            _,
+                                                            w,
                                                         ),
                                                     );
                                             },
@@ -167,9 +167,9 @@ function I(e) {
                                                         O(
                                                             {
                                                                 action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                                analyticsLocations: w,
+                                                                analyticsLocations: _,
                                                             },
-                                                            _,
+                                                            w,
                                                         ),
                                                     );
                                             },

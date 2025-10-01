@@ -1,6 +1,6 @@
 n.d(t, {
-    FT: () => J,
-    L3: () => Q,
+    FT: () => Q,
+    L3: () => J,
     ZP: () => et,
 }),
     n(388685),
@@ -13,7 +13,7 @@ var r = n(951288),
     o = n.n(a),
     c = n(392711),
     d = n.n(c),
-    u = n(488290),
+    u = n(137317),
     m = n(772848),
     g = n(442837),
     p = n(755721),
@@ -46,8 +46,8 @@ var r = n(951288),
     B = n(981631),
     F = n(185923),
     H = n(388032),
-    z = n(878341),
-    V = n(620842);
+    z = n(52116),
+    V = n(504401);
 function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -247,23 +247,23 @@ let Y = d().throttle(x.OQ, 1000),
                 })
               : (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(Q, {
+                        (0, r.jsx)(J, {
                             title: H.intl.string(H.t.sMOuub),
                             maxSlots: (0, A.y4)(a),
                             emojiCount: i.length,
                         }),
-                        (0, r.jsx)(J, {
+                        (0, r.jsx)(Q, {
                             emojis: i,
                             guild: a,
                             onEdit: o,
                             newlyAddedEmojiIds: c,
                         }),
-                        (0, r.jsx)(Q, {
+                        (0, r.jsx)(J, {
                             title: H.intl.string(H.t.wWjQyc),
                             maxSlots: (0, A.y4)(a),
                             emojiCount: l.length,
                         }),
-                        (0, r.jsx)(J, {
+                        (0, r.jsx)(Q, {
                             emojis: l,
                             guild: a,
                             onEdit: o,
@@ -272,7 +272,7 @@ let Y = d().throttle(x.OQ, 1000),
                     ],
                 });
     },
-    Q = (e) => {
+    J = (e) => {
         let { title: t, maxSlots: n, emojiCount: i } = e,
             l = Math.max(n - i, 0);
         return (0, r.jsxs)(f.vwX, {
@@ -286,7 +286,7 @@ let Y = d().throttle(x.OQ, 1000),
             ],
         });
     },
-    J = (e) => {
+    Q = (e) => {
         let { emojis: t, guild: n, onEdit: l, editingDisabled: s = !1, newlyAddedEmojiIds: a } = e,
             o = i.useMemo(() => [...t].reverse(), [t]),
             { canManageGuildExpression: c } = (0, P.Gw)(n);
@@ -431,9 +431,9 @@ let Y = d().throttle(x.OQ, 1000),
                 staticEmoji: V,
                 totalStaticEmoji: K,
                 animatedEmoji: q,
-                totalAnimatedEmoji: Q,
+                totalAnimatedEmoji: J,
             } = (0, E.t)({ guild: t }),
-            J = (0, C.qt)({
+            Q = (0, C.qt)({
                 location: "guild_settings",
                 autoTrackExposure: !0,
             }),
@@ -462,19 +462,19 @@ let Y = d().throttle(x.OQ, 1000),
             }, [h, et]);
         let ei = i.useMemo(
                 () =>
-                    J.isEmojiEditingExperimentEnabled && null != et
+                    Q.isEmojiEditingExperimentEnabled && null != et
                         ? new Set(
                               d()
                                   .differenceBy(h, et, "id")
                                   .map((e) => e.id),
                           )
                         : new Set(),
-                [J.isEmojiEditingExperimentEnabled, h, et],
+                [Q.isEmojiEditingExperimentEnabled, h, et],
             ),
             el = i.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (J.isEmojiEditingExperimentEnabled && null != e)
+                    if (Q.isEmojiEditingExperimentEnabled && null != e)
                         return void (0, N.i)({
                             guildId: t.id,
                             emoji: e,
@@ -488,7 +488,7 @@ let Y = d().throttle(x.OQ, 1000),
                         },
                     });
                 },
-                [J.isEmojiEditingExperimentEnabled, t],
+                [Q.isEmojiEditingExperimentEnabled, t],
             ),
             es = async (e, n, r) => {
                 let i = await (0, I.G)({
@@ -529,7 +529,7 @@ let Y = d().throttle(x.OQ, 1000),
                 });
             },
             ed = (0, y.l)(t),
-            eu = J.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
+            eu = Q.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
         return (0, r.jsxs)("div", {
             className: z.emojiSettings,
             children: [
@@ -546,7 +546,7 @@ let Y = d().throttle(x.OQ, 1000),
                         (0, r.jsx)($, {
                             guild: t,
                             staticEmojiCount: K,
-                            animatedEmojiCount: Q,
+                            animatedEmojiCount: J,
                         }),
                         (0, r.jsxs)(f.hjN, {
                             className: z.uploader,
@@ -568,7 +568,7 @@ let Y = d().throttle(x.OQ, 1000),
                                                 ),
                                         }),
                                     }),
-                                J.enabled
+                                Q.enabled
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(f.zxk, {

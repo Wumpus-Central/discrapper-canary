@@ -10,22 +10,22 @@ var i = n(442837),
     u = n(456269),
     d = n(921711),
     p = n(368442),
-    f = n(601070),
-    h = n(430824),
+    h = n(601070),
+    f = n(430824),
     g = n(496675),
     m = n(306680),
     b = n(979651),
     _ = n(968358),
     O = n(790901),
     y = n(714794),
-    v = n(355363),
-    j = n(687352),
+    j = n(355363),
+    v = n(687352),
     x = n(876548),
     C = n(25601),
     E = n(981631),
     S = n(490897),
     P = n(388032),
-    I = n(885525);
+    I = n(88448);
 function N(e) {
     var t;
     let {
@@ -48,17 +48,17 @@ function N(e) {
         V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
-        W = (0, v.ZP)({
+        W = (0, j.ZP)({
             channel: n,
             locked: F,
             video: (H || z) && null == V,
             selected: N,
         }),
-        K = (0, i.e7)([f.Z], () => f.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([h.Z], () => {
+        q = (0, i.e7)([f.Z], () => {
             var e, t;
-            return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
+            return null != (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
         });
     if ((0, y.Z)(U))
         return (0, r.jsx)(C.Z, {
@@ -102,7 +102,7 @@ function N(e) {
                   entry: { start: V },
               })
             : null != A && A && (0, O.u)(B)
-              ? (0, r.jsx)(j.Z, {
+              ? (0, r.jsx)(v.Z, {
                     embeddedApps: B,
                     muted: L,
                 })

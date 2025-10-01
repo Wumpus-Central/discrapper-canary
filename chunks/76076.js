@@ -10,8 +10,8 @@ var l = t(951288),
     u = t(872269),
     m = t(228168),
     p = t(388032),
-    f = t(361623),
-    h = t(583140);
+    f = t(214906),
+    h = t(74866);
 let j = {
         [m.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),

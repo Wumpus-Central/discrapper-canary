@@ -19,7 +19,7 @@ var r,
     y = n(211667),
     O = n(244526),
     v = n(388032),
-    I = n(719221);
+    I = n(65084);
 function T(e, t, n) {
     return (
         t in e
@@ -252,7 +252,7 @@ class P extends (r = a.PureComponent) {
                             children: v.intl.string(v.t.nag9Oj),
                         }),
                     }),
-                    (0, i.jsx)(f.$i$, {}),
+                    (0, i.jsx)(f.izJ, {}),
                     this.renderActions(),
                 ],
             }),

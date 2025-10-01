@@ -23,9 +23,9 @@ var i = n(951288),
     C = n(486199),
     N = n(981631),
     w = n(388032),
-    S = n(516941),
-    I = n(197571);
-function P(e) {
+    S = n(88270),
+    P = n(10198);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -73,7 +73,7 @@ function Z(e) {
                     let r = 0 === l.expire_behavior ? w.intl.string(w.t["6kpw4u"]) : w.intl.string(w.t.fQUQIC);
                     return (0, i.jsx)(
                         p.ConfirmModal,
-                        ((t = P({}, e)),
+                        ((t = I({}, e)),
                         (n = n =
                             {
                                 header: w.intl.string(w.t.emx3lJ),
@@ -114,8 +114,8 @@ function Z(e) {
             serviceName: W,
             channelURL: H,
             expireBehaviorLabel: G,
-            syncLabel: F,
-            subscribersText: z,
+            syncLabel: z,
+            subscribersText: F,
         } = r.useMemo(() => {
             var e, t, n, i, r;
             let a =
@@ -175,16 +175,16 @@ function Z(e) {
                         : w.intl.formatToPlainString(w.t.unl3AA, { datetime: s()(l.synced_at).calendar() }),
             };
         }, [q, U, l.revoked, l.synced_at, l.type, l.user]),
-        Y = (0, d.e7)([j.Z], () => j.Z.getSortedRoles(n.id)),
-        $ = r.useMemo(() => {
+        J = (0, d.e7)([j.Z], () => j.Z.getSortedRoles(n.id)),
+        Y = r.useMemo(() => {
             let e = f.ZP.getGuildEmoji(n.id),
-                t = Y.filter((e) => null != e.tags && e.tags.integration_id === l.id).map((e) => e.id);
+                t = J.filter((e) => null != e.tags && e.tags.integration_id === l.id).map((e) => e.id);
             return l.enable_emoticons
                 ? e
                       .filter((e) => null != l.role_id && (null == e ? void 0 : e.roles.some((e) => t.includes(e))))
                       .sort((e, t) => e.name.localeCompare(t.name))
                 : [];
-        }, [n.id, Y, l.enable_emoticons, l.id, l.role_id]);
+        }, [n.id, J, l.enable_emoticons, l.id, l.role_id]);
     if (
         (r.useEffect(() => {
             (null == o ? void 0 : o.id) === l.id && (null == o ? void 0 : o.enabled) === !0 && D(!1);
@@ -253,16 +253,16 @@ function Z(e) {
                       }),
             ],
         }),
-        J = null;
+        Q = null;
     return (
         Z &&
             !A &&
             null != o &&
-            (J = (0, i.jsxs)(g.Z, {
+            (Q = (0, i.jsxs)(g.Z, {
                 className: S.body,
                 direction: g.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(p.$i$, { className: S.topDivider }),
+                    (0, i.jsx)(p.izJ, { className: S.topDivider }),
                     (function (e) {
                         let {
                             integration: t,
@@ -278,7 +278,7 @@ function Z(e) {
                                     basis: "50%",
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: I.marginBottom8,
+                                            className: P.marginBottom8,
                                             children: w.intl.string(w.t.eBtNBQ),
                                         }),
                                         (0, i.jsx)(p.Text, {
@@ -293,7 +293,7 @@ function Z(e) {
                                     basis: "50%",
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: I.marginBottom8,
+                                            className: P.marginBottom8,
                                             children: n,
                                         }),
                                         (0, i.jsxs)(g.Z, {
@@ -337,13 +337,13 @@ function Z(e) {
                         });
                     })({
                         integration: o,
-                        labelText: F,
-                        subscribersText: z,
+                        labelText: z,
+                        subscribersText: F,
                         descriptionText: V,
                         roleLink: K,
                         onSync: B,
                     }),
-                    (0, i.jsx)(p.$i$, { className: S.midDivider }),
+                    (0, i.jsx)(p.izJ, { className: S.midDivider }),
                     (function (e) {
                         let { integration: t, labelText: n, onBehaviorChange: r, onGracePeriodChange: l } = e;
                         return (0, i.jsxs)(g.Z, {
@@ -352,7 +352,7 @@ function Z(e) {
                                     basis: "50%",
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: I.marginBottom8,
+                                            className: P.marginBottom8,
                                             children: n,
                                         }),
                                         (0, i.jsx)(p.q4e, {
@@ -377,7 +377,7 @@ function Z(e) {
                                     basis: "50%",
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: I.marginBottom8,
+                                            className: P.marginBottom8,
                                             children: w.intl.string(w.t.uiXMo6),
                                         }),
                                         (0, i.jsx)(p.q4e, {
@@ -413,7 +413,7 @@ function Z(e) {
                                   children: [
                                       (0, i.jsx)(u.$q, {
                                           type: u.M0.INVERTED,
-                                          className: a()(I.marginTop20, I.marginBottom8),
+                                          className: a()(P.marginTop20, P.marginBottom8),
                                           value: t.enable_emoticons,
                                           disabled: t.syncing,
                                           onChange: (e) => {
@@ -433,7 +433,7 @@ function Z(e) {
                                                       children: (t) =>
                                                           (0, i.jsx)(
                                                               "img",
-                                                              P(
+                                                              I(
                                                                   {
                                                                       alt: w.intl.formatToPlainString(w.t.n6ZZn5, {
                                                                           name: e.name,
@@ -459,13 +459,13 @@ function Z(e) {
                               });
                           })({
                               integration: o,
-                              emojis: $,
+                              emojis: Y,
                               onToggle: function (e) {
                                   m.Z.updateIntegration({ enableEmoticons: e });
                               },
                           })
                         : null,
-                    (0, i.jsx)(p.$i$, { className: S.bottomDivider }),
+                    (0, i.jsx)(p.izJ, { className: S.bottomDivider }),
                     (0, i.jsx)(g.Z, {
                         children: (0, i.jsx)(p.zxk, {
                             size: "sm",
@@ -490,7 +490,7 @@ function Z(e) {
                               children: X,
                           })
                         : X,
-                    J,
+                    Q,
                 ],
             }),
         })

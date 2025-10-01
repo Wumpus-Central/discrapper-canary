@@ -10,13 +10,13 @@ var r = n(951288),
     d = n(481060),
     h = n(570140),
     g = n(893776),
-    p = n(314897),
-    m = n(626135),
+    m = n(314897),
+    p = n(626135),
     f = n(70956),
     _ = n(970648),
     x = n(981631),
     E = n(388032),
-    v = n(78224);
+    v = n(976914);
 let b = "mweb_handoff_nonce",
     j = "mweb_handoff_nonce_expiration",
     I = +f.Z.Millis.MINUTE,
@@ -26,7 +26,7 @@ let b = "mweb_handoff_nonce",
         c.K.remove(b), c.K.remove(j);
     },
     y = () => {
-        let e = (0, o.e7)([p.default], () => p.default.getFingerprint()),
+        let e = (0, o.e7)([m.default], () => m.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
             f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
             y = null != f ? f : null !== e ? e : void 0;
@@ -42,7 +42,7 @@ let b = "mweb_handoff_nonce",
             T = i.useCallback(
                 (e) => {
                     A(e),
-                        m.default.track(
+                        p.default.track(
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
@@ -79,7 +79,7 @@ let b = "mweb_handoff_nonce",
                         })
                         .then((e) => g.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            m.default.track(x.rMx.LOGIN_SUCCESSFUL, {
+                            p.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                                 source: x.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, s.K)(y),
@@ -140,7 +140,7 @@ let b = "mweb_handoff_nonce",
                                   r.set("key", e),
                                   r.set("fingerprint", y),
                                   (t.search = r.toString()),
-                                  m.default.track(
+                                  p.default.track(
                                       x.rMx.DEEP_LINK_CLICKED,
                                       {
                                           fingerprint: (0, s.K)(y),

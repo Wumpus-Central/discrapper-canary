@@ -19,14 +19,14 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     y = t(388032),
-    O = t(7994),
-    I = t(878449);
+    O = t(847540),
+    I = t(883172);
 function Z(e) {
     let { user: n, currentUser: t, guildId: Z, subsection: P, onClose: N } = e,
         { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
         E = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: A, recent: S, stream: C } = (0, m.Z)(n.id),
-        { voiceChannel: w, voiceActivity: _ } = (0, p.Z)({
+        { voiceChannel: _, voiceActivity: w } = (0, p.Z)({
             userId: n.id,
             guildId: Z,
         }),
@@ -37,7 +37,7 @@ function Z(e) {
             return e === r.Skl.OFFLINE || e === r.Skl.INVISIBLE;
         }),
         M = A.length > 0 || null != C,
-        U = T && null == C && null == _ && null != w,
+        U = T && null == C && null == w && null != _,
         k = !L && (M || U),
         B = S.length > 0;
     return k || B || !D
@@ -57,7 +57,7 @@ function Z(e) {
                                             children: (0, l.jsx)(v.Z, {
                                                 user: n,
                                                 currentUser: t,
-                                                voiceChannel: w,
+                                                voiceChannel: _,
                                                 onClose: N,
                                             }),
                                         }),

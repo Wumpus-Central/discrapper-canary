@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(539854), n(388685);
+n.d(t, { Z: () => S }), n(539854), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(442837),
@@ -13,12 +13,12 @@ var i = n(951288),
     f = n(371467),
     m = n(981631),
     g = n(388032),
-    O = n(63452);
+    O = n(401176);
 let y = [];
-function v(e) {
+function E(e) {
     return e.notification.id;
 }
-function E(e, t, n, r) {
+function v(e, t, n, r) {
     let { index: l, notification: o, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         p.Z,
@@ -33,13 +33,13 @@ function E(e, t, n, r) {
         e,
     );
 }
-function S(e) {
+function b(e) {
     return (0, i.jsx)("div", {
         className: O.container,
         children: e,
     });
 }
-let b = r.memo(function (e) {
+let S = r.memo(function (e) {
     let { locked: t, pinned: n, showEmpty: p = !0 } = e,
         O = (0, l.e7)(
             [f.Z, u.Z],
@@ -63,17 +63,17 @@ let b = r.memo(function (e) {
             [t, n],
             c.E6,
         ),
-        b = r.useState(() => new h.AS(t))[0];
-    return (r.useLayoutEffect(() => b.updateState(O, t)),
-    r.useLayoutEffect(() => (b.initialize((0, d.i)()), () => b.cleanUp()), [b]),
+        S = r.useState(() => new h.AS(t))[0];
+    return (r.useLayoutEffect(() => S.updateState(O, t)),
+    r.useLayoutEffect(() => (S.initialize((0, d.i)()), () => S.cleanUp()), [S]),
     0 !== O.length || t)
         ? (0, i.jsx)(h.S4.Provider, {
-              value: b,
+              value: S,
               children: (0, i.jsx)(o.W3x, {
                   items: O,
-                  renderItem: E,
-                  getItemKey: v,
-                  wrapChildren: S,
+                  renderItem: v,
+                  getItemKey: E,
+                  wrapChildren: b,
               }),
           })
         : p

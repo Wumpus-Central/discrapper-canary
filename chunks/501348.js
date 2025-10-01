@@ -42,8 +42,8 @@ var r = n(951288),
     V = n(921944),
     H = n(959517),
     Y = n(388032),
-    W = n(226518),
-    K = n(197571);
+    W = n(5874),
+    K = n(10198);
 function z(e, t, n) {
     return (
         t in e
@@ -424,7 +424,7 @@ class eo extends i.Component {
                         onChange: (e) => this.handleUIDensityChange({ value: e }),
                         value: e,
                     }),
-                    (0, r.jsx)(d.$i$, { className: W.divider }),
+                    (0, r.jsx)(d.izJ, { className: W.divider }),
                 ],
             }),
             o = (0, r.jsxs)(R.F, {
@@ -474,7 +474,7 @@ class eo extends i.Component {
                             }),
                         }),
                     this.renderMessageGroupSpacingSlider(),
-                    (0, r.jsx)(d.$i$, { className: W.divider }),
+                    (0, r.jsx)(d.izJ, { className: W.divider }),
                 ],
             }),
             s = (0, r.jsxs)(R.F, {
@@ -487,7 +487,7 @@ class eo extends i.Component {
                     }),
                     this.renderFontScaleSlider(),
                     this.renderZoomSlider(),
-                    (0, r.jsx)(d.$i$, { className: W.divider }),
+                    (0, r.jsx)(d.izJ, { className: W.divider }),
                 ],
             }),
             l = (0, r.jsx)(R.F, {

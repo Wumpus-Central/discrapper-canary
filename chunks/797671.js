@@ -21,7 +21,7 @@ var i = n(951288),
     C = n(981631),
     E = n(231338),
     I = n(388032),
-    L = n(920454);
+    L = n(17478);
 function y(e) {
     var t, n;
     let { guildId: y, transitionState: T, onSubmit: N, onClose: B } = e,

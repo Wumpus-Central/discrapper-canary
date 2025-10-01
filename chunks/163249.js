@@ -10,7 +10,7 @@ var r = n(951288),
     u = n(714939),
     m = n(981631),
     g = n(388032),
-    p = n(203552);
+    p = n(22168);
 function f(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -257,7 +257,7 @@ function b(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(a.$i$, { className: p.divider }),
+                (0, r.jsx)(a.izJ, { className: p.divider }),
                 (0, r.jsx)(u.Z, {
                     role: n,
                     onClick: f,

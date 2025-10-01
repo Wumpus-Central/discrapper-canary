@@ -32,9 +32,9 @@ var r = n(951288),
     L = n(981631),
     x = n(295907),
     j = n(388032),
-    M = n(894462),
-    k = n(620842),
-    U = n(197571);
+    M = n(958047),
+    k = n(504401),
+    U = n(10198);
 function G(e, t, n) {
     return (
         t in e
@@ -361,7 +361,7 @@ class W extends i.PureComponent {
                             },
                             t.id,
                         ),
-                        n !== e.length - 1 ? (0, r.jsx)(f.$i$, {}) : null,
+                        n !== e.length - 1 ? (0, r.jsx)(f.izJ, {}) : null,
                     ],
                 },
                 t.id,
@@ -429,7 +429,7 @@ class W extends i.PureComponent {
                                       className: M.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
-                                  (0, r.jsx)(f.$i$, {}),
+                                  (0, r.jsx)(f.izJ, {}),
                                   this.renderKeybinds(t),
                                   this.renderEmpty(t),
                               ],
@@ -440,7 +440,7 @@ class W extends i.PureComponent {
                               children: j.intl.format(j.t.mPi3Fx, { downloadLink: L.EYA.DOWNLOAD }),
                           }),
                 }),
-                (0, r.jsx)(f.$i$, {}),
+                (0, r.jsx)(f.izJ, {}),
                 (0, r.jsxs)(f.hjN, {
                     tag: f.RB0.H1,
                     title: j.intl.string(j.t.Lz5KHB),
@@ -459,7 +459,7 @@ class W extends i.PureComponent {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(f.$i$, {}),
+                        (0, r.jsx)(f.izJ, {}),
                         (0, r.jsx)(V, {
                             children: (e) =>
                                 (0, r.jsx)(r.Fragment, {
@@ -486,7 +486,7 @@ class W extends i.PureComponent {
                                                             variant: "text-sm/normal",
                                                             children: a,
                                                         }),
-                                                    (0, r.jsx)(f.$i$, {}),
+                                                    (0, r.jsx)(f.izJ, {}),
                                                     s.map((e) =>
                                                         (0, r.jsxs)(
                                                             i.Fragment,
@@ -512,7 +512,7 @@ class W extends i.PureComponent {
                                                                             }),
                                                                         ],
                                                                     }),
-                                                                    (0, r.jsx)(f.$i$, {}),
+                                                                    (0, r.jsx)(f.izJ, {}),
                                                                 ],
                                                             },
                                                             e.description,

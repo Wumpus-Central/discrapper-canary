@@ -37,9 +37,9 @@ var r = n(951288),
     G = n(981631),
     M = n(141006),
     U = n(388032),
-    B = n(989308),
-    F = n(12574),
-    H = n(21321),
+    B = n(258640),
+    F = n(250302),
+    H = n(10083),
     z = n(179517),
     V = n(79829);
 let W = (0, b.Un)({
@@ -220,7 +220,7 @@ function X() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function Q(e) {
+function J(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: s, hasEnhancedRoleColors: a } = e;
     return (0, r.jsxs)(g.xJW, {
@@ -271,7 +271,7 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
+function Q(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         a = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -344,7 +344,7 @@ function $(e) {
                 hideBorder: !0,
                 children: U.intl.string(U.t.vceJPj),
             }),
-            (0, r.jsx)(g.$i$, { className: F.divider }),
+            (0, r.jsx)(g.izJ, { className: F.divider }),
             (0, r.jsx)(g.j7V, {
                 disabled: n,
                 value: t.mentionable,
@@ -392,7 +392,7 @@ function ee(e) {
                     className: F.noticeContainer,
                     children: (0, r.jsx)(A.Z, { role: n }),
                 }),
-                (0, r.jsx)(g.$i$, { className: F.divider }),
+                (0, r.jsx)(g.izJ, { className: F.divider }),
                 (a || c) &&
                     null != u &&
                     (0, r.jsx)(q, {
@@ -404,7 +404,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)(J, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -423,13 +423,13 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(J, {
+                (0, r.jsx)(Q, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,
                     disableInteraction: !a,
                 }),
-                (0, r.jsx)(g.$i$, { className: F.divider }),
+                (0, r.jsx)(g.izJ, { className: F.divider }),
                 (0, r.jsx)($, {
                     role: n,
                     disabled: p,
@@ -437,7 +437,7 @@ function ee(e) {
                 f
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(g.$i$, { className: F.divider }),
+                              (0, r.jsx)(g.izJ, { className: F.divider }),
                               (0, r.jsx)(Z.L, {
                                   guildId: t.id,
                                   role: n,
