@@ -117,11 +117,14 @@ function g(e) {
         ),
         R = i.useCallback(
             (e) =>
-                (0, r.jsx)(c.xvT, {
-                    variant: "text-md/medium",
-                    color: "currentColor",
-                    className: u.listBoxItemLabel,
-                    children: e.label,
+                (0, r.jsx)("div", {
+                    className: u.listBoxItemContent,
+                    children: (0, r.jsx)(c.xvT, {
+                        variant: "text-md/medium",
+                        color: "currentColor",
+                        className: u.listBoxItemLabel,
+                        children: e.label,
+                    }),
                 }),
             [],
         ),
@@ -157,12 +160,9 @@ function g(e) {
                         role: "listbox",
                         "aria-multiselectable": "multiple" === o,
                         className: u.listBox,
-                        children: (0, r.jsx)(c.w0Z, {
-                            className: u.scroller,
-                            children: (0, r.jsxs)("div", {
-                                className: u.listBoxInner,
-                                children: [P, 0 === P.length && (null == O ? void 0 : O())],
-                            }),
+                        children: (0, r.jsxs)("div", {
+                            className: u.listBoxInner,
+                            children: [P, 0 === P.length && (null == O ? void 0 : O())],
                         }),
                     }),
                 );
@@ -196,10 +196,7 @@ function E(e) {
             "aria-disabled": a,
             "aria-selected": i,
             children: [
-                (0, r.jsx)("div", {
-                    className: u.listBoxItemContent,
-                    children: t,
-                }),
+                t,
                 (0, r.jsx)("div", {
                     className: u.selectedIcon,
                     "aria-hidden": !0,

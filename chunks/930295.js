@@ -320,8 +320,9 @@ class N extends (r = a.Component) {
             v(this, "handlePopoutPositionChange", (e) => {
                 this.setState({ renderedPosition: e });
             }),
-            v(this, "handleScroll", () => {
-                this.close(void 0, "system:scroll");
+            v(this, "handleScroll", (e) => {
+                let t = e.target;
+                (null == t ? void 0 : t.contains(this.domElementRef.current)) && this.close(void 0, "system:scroll");
             }),
             v(this, "handleEscapeClose", (e) => {
                 this.close(e, "user:escape");
