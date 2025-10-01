@@ -1,1 +1,3 @@
-a.exports = JSON.parse('{"0vTx7u":"Lataa uudelleen","hDvmYG":"Lataa uudelleen"}');
+e.exports = JSON.parse(
+    '{"b7Oqdn":"Valitse jokin muu tapa","ar3a3t":"Antamiasi tietoja käytetään vain ikäryhmäsi vahvistamiseen; sen jälkeen ne poistetaan.","0vTx7u":"Lataa uudelleen","XYYm+/":"Valitse toinen tapa iän vahvistamiseen","rVLCwM":"Valitse jokin muu tapa","RpMIT0":["Määritämme pääsyn tiettyihin kokemuksiin ikäryhmän perusteella. ",[8,"$link",["Lisätietoja"],[[1,"handleOnHelpUrlHook"]]]],"eJmat7":"Yleensä nopein ja täysin automaattinen. Tarvitset vain kameran.","2yLvkZ":"Ota videoselfie","ZdmRwc":"Tarvitset ajokortin, passin tai muun henkilöllisyystodistuksen. Vahvista sitten selfiellä, että kyseessä olet sinä.","dwkwo6":"Skannaa henkilöllisyystodistus","cR6339":"Menetelmiä iän vahvistamiseen ei ole käytettävissä. Kyseessä voi olla virhe.","hDvmYG":"Lataa uudelleen"}',
+);

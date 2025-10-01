@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"0vTx7u":"Načíst znovu","hDvmYG":"Načíst znovu"}');
+o.exports = JSON.parse(
+    '{"b7Oqdn":"Zvolit jinou metodu","ar3a3t":"Tebou poskytnuté informace slouží pouze k\xA0potvrzení tvé věkové skupiny a\xA0následně budou odstraněny.","0vTx7u":"Načíst znovu","XYYm+/":"Vyber si jinou metodu k\xA0ověření svého věku","rVLCwM":"Zvolit jinou metodu","RpMIT0":["K\xA0rozlišení přístupu ke konkrétním zážitkům používáme věkové skupiny. ",[8,"$link",["Zjistit více"],[[1,"handleOnHelpUrlHook"]]]],"eJmat7":"Většinou nejrychlejší a\xA0zcela automatická. Vše, co potřebuješ, je kamera.","2yLvkZ":"Udělej si video selfie","ZdmRwc":"Budeš potřebovat řidičský průkaz, pas nebo jiný doklad totožnosti. Pak selfie fotku k\xA0potvrzení, že jsi to skutečně ty.","dwkwo6":"Naskenuj svůj doklad","cR6339":"Nejsou dostupné žádné metody ověření věku. Může se jednat o\xA0chybu.","hDvmYG":"Načíst znovu"}',
+);

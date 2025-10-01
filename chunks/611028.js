@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"0vTx7u":"Odśwież","hDvmYG":"Odśwież"}');
+e.exports = JSON.parse(
+    '{"b7Oqdn":"Wybierz inną metodę","ar3a3t":"Przekazywane przez Ciebie informacje są wykorzystywane wyłącznie do potwierdzenia grupy wiekowej, a następnie usuwane.","0vTx7u":"Odśwież","XYYm+/":"Wybierz inną metodę weryfikacji wieku","rVLCwM":"Wybierz inną metodę","RpMIT0":["Używamy grup wiekowych do określenia dostępu do wybranych treści. ",[8,"$link",["Więcej informacji"],[[1,"handleOnHelpUrlHook"]]]],"eJmat7":"Zazwyczaj najszybsza i całkowicie automatyczna metoda. Potrzebujesz tylko kamery.","2yLvkZ":"Zrób selfie wideo","ZdmRwc":"Potrzebujesz prawa jazdy, paszportu lub innego dowodu tożsamości. Następnie zdjęcie selfie, aby potwierdzić, że to Ty.","dwkwo6":"Zeskanuj swój dowód tożsamości","cR6339":"Brak dostępnych metod weryfikacji wieku. Może to być błąd.","hDvmYG":"Odśwież"}',
+);

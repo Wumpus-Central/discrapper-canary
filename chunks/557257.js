@@ -1,1 +1,3 @@
-o.exports = JSON.parse('{"0vTx7u":"Ponovno učitaj","hDvmYG":"Ponovno učitaj"}');
+i.exports = JSON.parse(
+    '{"b7Oqdn":"Odaberi neki drugi način","ar3a3t":"Podaci koje navedeš koriste se samo za potvrdu tvoje dobne skupine, a zatim se brišu.","0vTx7u":"Ponovno učitaj","XYYm+/":"Odaberi neki drugi način za provjeru tvoje dobi","rVLCwM":"Odaberi neki drugi način","RpMIT0":["Koristimo dobne skupine kako bismo odredili pristup određenim načinima upotrebe. ",[8,"$link",["Doznaj više"],[[1,"handleOnHelpUrlHook"]]]],"eJmat7":"Obično je to najbrži i potpuno automatizirani način. Sve što ti treba je kamera.","2yLvkZ":"Napravi video selfie","ZdmRwc":"Trebat će ti vozačka dozvola, putovnica ili neki drugi identifikacijski dokument. Nakon toga i selfie fotka kojom ćeš potvrditi svoj identitet.","dwkwo6":"Skeniraj svoju osobnu iskaznicu","cR6339":"Nema dostupnih načina provjere dobi. To je možda pogreška.","hDvmYG":"Ponovno učitaj"}',
+);
