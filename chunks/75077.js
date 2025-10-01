@@ -16,32 +16,25 @@ var r = n(442837),
 let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     f = 3,
     _ = (e) => {
-        let {
-                cards: t,
-                perksCards: n,
-                showVoiceFiltersCard: r,
-                showCustomThemesCard: i,
-                isSeptember2025MarketingMomentEligible: a,
-            } = e,
-            o = f,
-            s = (e) => {
+        let { cards: t, perksCards: n, showVoiceFiltersCard: r, showCustomThemesCard: i } = e,
+            a = f,
+            o = (e) => {
                 let { card: n } = e;
-                t.length < o && t.push(n);
+                t.length < a && t.push(n);
             },
-            l = () => {
-                s({ card: n.specialShopPerks });
+            s = () => {
+                o({ card: n.specialShopPerks });
             },
-            c = g();
+            l = g();
         return (
-            a && s({ card: n.september2025MarketingMoment }),
-            r ? s({ card: n.voiceFilters }) : i ? s({ card: n.customThemes }) : s({ card: n.nameplates }),
-            null != n.tenureBadge && s({ card: n.tenureBadge }),
-            s({ card: n.permadecos }),
-            c ? 0 === t.length && l() : s({ card: n.referralProgram }),
-            s({ card: n.newAppStylesUpdateJune2024 }),
-            s({ card: n.serverProfiles }),
-            s({ card: n.earlyAccess }),
-            s({ card: n.unlimitedSuperReactions }),
+            r ? o({ card: n.voiceFilters }) : i ? o({ card: n.customThemes }) : o({ card: n.nameplates }),
+            null != n.tenureBadge && o({ card: n.tenureBadge }),
+            o({ card: n.permadecos }),
+            l ? 0 === t.length && s() : o({ card: n.referralProgram }),
+            o({ card: n.newAppStylesUpdateJune2024 }),
+            o({ card: n.serverProfiles }),
+            o({ card: n.earlyAccess }),
+            o({ card: n.unlimitedSuperReactions }),
             t
         );
     },
@@ -55,12 +48,11 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 isInReverseTrial: o,
                 showVoiceFiltersCard: s,
                 showCustomThemesCard: u,
-                isSeptember2025MarketingMomentEligible: d,
             } = e,
-            f = [];
+            d = [];
         switch (n) {
             case l.gM.PERKS_DISCOVERABILITY:
-                f =
+                d =
                     !1 === i
                         ? [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
                         : a === c.a$.FP_ONLY
@@ -68,22 +60,21 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case l.gM.WHATS_NEW:
-                f = _({
-                    cards: f,
+                d = _({
+                    cards: d,
                     perksCards: t,
                     showVoiceFiltersCard: s,
                     showCustomThemesCard: u,
-                    isSeptember2025MarketingMomentEligible: d,
                 });
                 break;
             case l.gM.CARD_CAROUSEL_FIRST_ROW:
-                f =
+                d =
                     !1 === i
                         ? [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                         : [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess];
                 break;
             case l.gM.CARD_CAROUSEL_SECOND_ROW:
-                f =
+                d =
                     !1 === i
                         ? [t.customSoundsEverywhere, t.specialStickerAccess]
                         : a === c.a$.FP_ONLY
@@ -112,14 +103,14 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                             ];
                 break;
             case l.gM.CARD_CAROUSEL_THIRD_ROW:
-                f =
+                d =
                     a === c.a$.FP_ONLY
                         ? o
                             ? [t.entranceSoundsSeeAllVariation]
                             : [t.entranceSoundsSeeAllVariation, t.greyBadge]
                         : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return r && (f = f.filter((e) => !e.hideOnNarrowScreen)), f;
+        return r && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
     h = (e) => {
         let t = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),

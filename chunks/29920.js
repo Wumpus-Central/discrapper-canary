@@ -1,44 +1,23 @@
-n.d(t, {
-    He: () => s,
-    Ul: () => l,
-});
-var r = n(544891),
-    i = n(570140),
-    a = n(960048),
-    o = n(981631);
-async function s(e) {
-    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
+n.d(t, { He: () => a });
+var r = n(544891);
+n(570140);
+var i = n(960048),
+    l = n(981631);
+async function a(e) {
+    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: a } = e;
     try {
         let e = await r.tn.post({
-            url: o.ANM.PREMIUM_MARKETING,
+            url: l.ANM.PREMIUM_MARKETING,
             body: {
                 user_trial_offer: t,
                 user_discount: n,
-                user_discount_offer: i,
+                user_discount_offer: a,
             },
             rejectWithError: !0,
         });
         if (e.ok) return e.body;
-        return a.Z.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), [];
+        return i.Z.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), [];
     } catch (e) {
         return [];
-    }
-}
-async function l(e) {
-    let { subscriptionId: t } = e;
-    try {
-        let e = await r.tn.post({
-            url: o.ANM.BILLING_SUBSCRIPTION_PROMOTION_REWARD(t),
-            rejectWithError: !0,
-        });
-        return (
-            i.Z.dispatch({
-                type: "ENTITLEMENT_CREATE",
-                entitlement: e.body,
-            }),
-            e.body
-        );
-    } catch (e) {
-        return null;
     }
 }

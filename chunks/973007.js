@@ -1,87 +1,84 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(744129),
-    a = n(823188),
-    s = n(951570),
-    o = n(474936),
-    C = n(402450);
+    a = n(744129),
+    o = n(823188),
+    l = n(474936),
+    s = n(110449);
 function d(e) {
-    let { onClick: t, isGift: n, priceOptions: o, showPromotionalGiftBanner: d, enablePremiumBrandRefresh: c } = e,
-        { isEligible: u } = (0, s.Q1)();
-    return c
+    let { onClick: t, isGift: n, priceOptions: l, showPromotionalGiftBanner: d, enablePremiumBrandRefresh: C } = e;
+    return C
         ? (0, r.jsx)(i.P3F, {
               onClick: t,
               style: { cursor: "pointer" },
-              children: (0, r.jsx)(l.IL, {
+              children: (0, r.jsx)(a.IL, {
                   ctaButton: null,
                   showPromotionalGiftBanner: d,
-                  showSeptemberMarketingMomentBanner: u,
                   showYearlyPrice: !0,
                   isGift: n,
                   isModal: !0,
-                  priceOptions: o,
+                  priceOptions: l,
               }),
           })
         : (0, r.jsx)(i.P3F, {
               onClick: t,
               style: { cursor: "pointer" },
-              children: (0, r.jsx)(a.wp, {
-                  className: C.tier2MarketingCard,
+              children: (0, r.jsx)(o.wp, {
+                  className: s.tier2MarketingCard,
                   ctaButton: null,
                   showWumpus: !d,
                   showPromotionalGiftBanner: d,
                   showYearlyPrice: !0,
                   isGift: n,
                   isModal: !0,
-                  priceOptions: o,
+                  priceOptions: l,
               }),
           });
 }
-function c(e) {
-    let { onClick: t, isGift: n, priceOptions: s, enablePremiumBrandRefresh: o } = e;
-    return o
+function C(e) {
+    let { onClick: t, isGift: n, priceOptions: l, enablePremiumBrandRefresh: d } = e;
+    return d
         ? (0, r.jsx)(i.P3F, {
               onClick: t,
               style: { cursor: "pointer" },
-              children: (0, r.jsx)(l.UQ, {
-                  className: C.premiumBrandRefreshTier0Card,
+              children: (0, r.jsx)(a.UQ, {
+                  className: s.premiumBrandRefreshTier0Card,
                   ctaButton: null,
                   showYearlyPrice: !0,
                   isGift: n,
-                  priceOptions: s,
+                  priceOptions: l,
               }),
           })
         : (0, r.jsx)(i.P3F, {
               onClick: t,
               style: { cursor: "pointer" },
-              children: (0, r.jsx)(a.Gq, {
-                  className: C.tier0MarketingCard,
+              children: (0, r.jsx)(o.Gq, {
+                  className: s.tier0MarketingCard,
                   ctaButton: null,
                   showWumpus: !0,
                   showYearlyPrice: !0,
                   isGift: n,
-                  priceOptions: s,
+                  priceOptions: l,
               }),
           });
 }
-let u = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: l, enablePremiumBrandRefresh: a } = e;
+let c = function (e) {
+    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: a, enablePremiumBrandRefresh: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d, {
-                onClick: () => t(o.Si.TIER_2),
+                onClick: () => t(l.Si.TIER_2),
                 isGift: n,
                 priceOptions: i,
-                showPromotionalGiftBanner: l,
-                enablePremiumBrandRefresh: a,
+                showPromotionalGiftBanner: a,
+                enablePremiumBrandRefresh: o,
             }),
-            (0, r.jsx)(c, {
-                onClick: () => t(o.Si.TIER_0),
+            (0, r.jsx)(C, {
+                onClick: () => t(l.Si.TIER_0),
                 isGift: n,
                 priceOptions: i,
-                enablePremiumBrandRefresh: a,
+                enablePremiumBrandRefresh: o,
             }),
         ],
     });

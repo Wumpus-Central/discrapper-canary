@@ -4,7 +4,6 @@ e.exports = {
     noTopPaddingOverride: "noTopPaddingOverride__94da4",
     settingsHeroBogoHeight: "settingsHeroBogoHeight__94da4",
     premiumTierCardsContainerSettings: "premiumTierCardsContainerSettings__94da4",
-    promoBannerContainer: "promoBannerContainer__94da4",
     giftPromoCard: "giftPromoCard__94da4",
     perkCardsContainerSpacingSettings: "perkCardsContainerSpacingSettings__94da4",
     planComparisonTable: "planComparisonTable__94da4",
