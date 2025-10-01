@@ -1,21 +1,21 @@
-r.d(t, { default: () => y });
+r.d(t, { default: () => I });
 var n = r(951288),
     i = r(647438),
-    u = r(392711),
-    s = r.n(u),
+    s = r(392711),
+    u = r.n(s),
+    l = r(793030),
     o = r(442837),
-    l = r(82659),
     c = r(481060),
     d = r(239091),
     a = r(276264),
-    f = r(670188),
-    m = r(271383),
+    m = r(670188),
+    f = r(271383),
     b = r(699516),
-    g = r(594174),
-    p = r(432496),
+    p = r(594174),
+    g = r(432496),
     O = r(388032),
-    h = r(283602);
-function I(e) {
+    j = r(283602);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -40,15 +40,15 @@ function I(e) {
     }
     return e;
 }
-function j(e) {
-    let { guildId: t, guildOwnerId: u, member: s } = e,
-        o = g.default.getUser(s.userId),
-        l = i.useRef(null);
+function w(e) {
+    let { guildId: t, guildOwnerId: s, member: u } = e,
+        l = p.default.getUser(u.userId),
+        o = i.useRef(null);
     return (0, n.jsx)(
-        f.Z,
+        m.Z,
         {
-            targetElementRef: l,
-            userId: s.userId,
+            targetElementRef: o,
+            userId: u.userId,
             guildId: t,
             spacing: 14,
             clickTrap: !0,
@@ -56,17 +56,17 @@ function j(e) {
                 let { isShown: c } = i;
                 return (0, n.jsx)(
                     a.Z,
-                    I(
+                    y(
                         {
-                            ref: l,
-                            className: h.member,
+                            ref: o,
+                            className: j.member,
                             selected: c,
-                            colorString: s.colorString,
-                            colorStrings: s.colorStrings,
-                            user: o,
-                            isOwner: s.userId === u,
-                            nick: s.nick,
-                            premiumSince: null == s.premiumSince ? null : new Date(s.premiumSince),
+                            colorString: u.colorString,
+                            colorStrings: u.colorStrings,
+                            user: l,
+                            isOwner: u.userId === s,
+                            nick: u.nick,
+                            premiumSince: null == u.premiumSince ? null : new Date(u.premiumSince),
                             guildId: t,
                             onContextMenu: (e) => {
                                 (0, d.jW)(e, async () => {
@@ -76,18 +76,18 @@ function j(e) {
                                         r.e("52092"),
                                     ]).then(r.bind(r, 415118));
                                     return (r) => {
-                                        var i, u;
+                                        var i, s;
                                         return (0, n.jsx)(
                                             e,
-                                            ((i = I({}, r)),
-                                            (u = u =
+                                            ((i = y({}, r)),
+                                            (s = s =
                                                 {
-                                                    user: o,
+                                                    user: l,
                                                     guildId: t,
                                                     showMediaItems: !0,
                                                 }),
                                             Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(u))
+                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                                                 : (function (e, t) {
                                                       var r = Object.keys(e);
                                                       if (Object.getOwnPropertySymbols) {
@@ -95,11 +95,11 @@ function j(e) {
                                                           r.push.apply(r, n);
                                                       }
                                                       return r;
-                                                  })(Object(u)).forEach(function (e) {
+                                                  })(Object(s)).forEach(function (e) {
                                                       Object.defineProperty(
                                                           i,
                                                           e,
-                                                          Object.getOwnPropertyDescriptor(u, e),
+                                                          Object.getOwnPropertyDescriptor(s, e),
                                                       );
                                                   }),
                                             i),
@@ -110,32 +110,32 @@ function j(e) {
                         },
                         e,
                     ),
-                    s.userId,
+                    u.userId,
                 );
             },
         },
-        o.id,
+        l.id,
     );
 }
-function y(e) {
-    let { guild: t, transitionState: r, onClose: u } = e,
+function I(e) {
+    let { guild: t, transitionState: r, onClose: s } = e,
         d = i.useMemo(() => b.Z.getFriendIDs(), []);
     i.useEffect(() => {
-        p.Z.fetchFriendMembersIfNotFetched(t.id, d);
+        g.Z.fetchFriendMembersIfNotFetched(t.id, d);
     }, [t.id, d]);
-    let a = (0, o.e7)([m.ZP], () => m.ZP.getMembers(t.id)),
-        f = i.useMemo(
+    let a = (0, o.e7)([f.ZP], () => f.ZP.getMembers(t.id)),
+        m = i.useMemo(
             () =>
-                s()(a)
-                    .filter((e) => !!d.includes(e.userId) && null != g.default.getUser(e.userId))
+                u()(a)
+                    .filter((e) => !!d.includes(e.userId) && null != p.default.getUser(e.userId))
                     .sortBy((e) => {
                         var t;
-                        let r = g.default.getUser(e.userId);
+                        let r = p.default.getUser(e.userId);
                         return (null != r ? (null != (t = e.nick) ? t : r.username) : "").toLocaleLowerCase();
                     })
                     .map((e) =>
                         (0, n.jsx)(
-                            j,
+                            w,
                             {
                                 guildId: t.id,
                                 guildOwnerId: t.ownerId,
@@ -147,16 +147,16 @@ function y(e) {
                     .value(),
             [d, t.id, t.ownerId, a],
         ),
-        h = p.Z.isFetchingFriendsForGuild(t.id);
+        j = g.Z.isFetchingFriendsForGuild(t.id);
     return (0, n.jsxs)(l.Modal, {
         title: O.intl.string(O.t.kYxEcH),
-        subtitle: O.intl.format(h ? O.t.EtQnZm : O.t.OgMdNT, {
+        subtitle: O.intl.format(j ? O.t.EtQnZm : O.t.OgMdNT, {
             guildName: t.name,
-            numFriends: f.length,
+            numFriends: m.length,
         }),
         actions: void 0,
         transitionState: r,
-        onClose: u,
-        children: [h && (0, n.jsx)(c.$jN, {}), f],
+        onClose: s,
+        children: [j && (0, n.jsx)(c.$jN, {}), m],
     });
 }

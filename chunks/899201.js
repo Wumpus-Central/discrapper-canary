@@ -6,12 +6,12 @@ var i = n(951288),
     s = n(218887),
     o = n.n(s),
     c = n(990547),
-    d = n(442837),
-    u = n(82659),
+    d = n(793030),
+    u = n(442837),
     m = n(755721),
     p = n(481060),
-    g = n(493683),
-    f = n(247272),
+    f = n(493683),
+    g = n(247272),
     b = n(904245),
     I = n(166459),
     y = n(476326),
@@ -67,7 +67,7 @@ function B(e) {
             }
             return a;
         })(e, ["applicationId", "mediaUrl", "onClose", "transitionState"]);
-    let _ = (0, d.e7)([F.ZP], () => F.ZP.getCurrentEmbeddedActivity());
+    let _ = (0, u.e7)([F.ZP], () => F.ZP.getCurrentEmbeddedActivity());
     (0, h.Z)({
         type: c.ImpressionTypes.MODAL,
         name: c.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
@@ -77,7 +77,7 @@ function B(e) {
         },
     });
     let [N] = (0, w.Z)([r]),
-        x = (0, d.e7)([A.default], () => A.default.getCurrentUser()),
+        x = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         [D, M] = a.useState(""),
         [R, B] = a.useState([]),
         [Q, Y] = a.useState(null),
@@ -99,19 +99,19 @@ function B(e) {
                 a.readAsDataURL(i);
         })();
     }, [l, Y]);
-    let ee = (0, d.Wu)([C.Z, j.Z], () =>
+    let ee = (0, u.Wu)([C.Z, j.Z], () =>
         C.Z.getInviteSuggestionRows().filter(
             (e) => e.type === U.bm.FRIEND || e.type === U.bm.DM || j.Z.can(G.Plq.ATTACH_FILES, e.item),
         ),
     );
     a.useEffect(() => {
-        (0, f.x)({
+        (0, g.x)({
             omitUserIds: new Set(),
             applicationId: r,
             inviteTargetType: q.Iq.EMBEDDED_APPLICATION,
         });
     }, [r]),
-        a.useEffect(() => (0, f.C)(D), [D]),
+        a.useEffect(() => (0, g.C)(D), [D]),
         a.useEffect(() => {
             let e;
             return (
@@ -145,7 +145,7 @@ function B(e) {
                 switch (i.type) {
                     case U.bm.DM:
                     case U.bm.FRIEND:
-                        (a = await g.Z.ensurePrivateChannel(i.id)), e++;
+                        (a = await f.Z.ensurePrivateChannel(i.id)), e++;
                         break;
                     case U.bm.GROUP_DM:
                         (a = i.id), t++;
@@ -229,7 +229,7 @@ function B(e) {
     return null == W
         ? (0, i.jsx)(p.$jN, {})
         : (0, i.jsx)(
-              u.Modal,
+              d.Modal,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

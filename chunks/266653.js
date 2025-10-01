@@ -1,61 +1,61 @@
-s.d(t, { default: () => N }), s(388685);
-var n = s(951288),
-    i = s(647438),
-    a = s(990547),
-    r = s(442837),
-    l = s(82659),
-    c = s(481060),
-    o = s(213609),
-    d = s(594174),
-    u = s(726745),
-    m = s(760213),
-    x = s(383832),
-    h = s(71509),
-    _ = s(981631),
-    f = s(388032),
-    g = s(518474);
-function N(e) {
-    let { transitionState: t, onClose: s } = e,
-        { currentUser: N, multiAccountUsers: T } = (0, r.cj)([d.default, u.Z], () => ({
+n.d(t, { default: () => C }), n(388685);
+var s = n(951288),
+    a = n(647438),
+    i = n(990547),
+    r = n(793030),
+    l = n(442837),
+    c = n(481060),
+    o = n(213609),
+    d = n(594174),
+    u = n(726745),
+    m = n(760213),
+    x = n(383832),
+    h = n(71509),
+    _ = n(981631),
+    f = n(388032),
+    g = n(518474);
+function C(e) {
+    let { transitionState: t, onClose: n } = e,
+        { currentUser: C, multiAccountUsers: E } = (0, l.cj)([d.default, u.Z], () => ({
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: u.Z.getUsers(),
         })),
-        [C, p] = i.useState(!1),
-        [A, E] = i.useState(_.lds),
-        [v, j] = i.useState(null);
+        [N, T] = a.useState(!1),
+        [b, A] = a.useState(_.lds),
+        [p, v] = a.useState(null);
     return (
-        i.useEffect(() => {
-            if (C)
-                j(
-                    (0, n.jsx)(c.Wn, {
+        a.useEffect(() => {
+            if (N)
+                v(
+                    (0, s.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
                         children: f.intl.format(f.t.HAuRSE, { maxNumAccounts: h.$H }),
                     }),
                 ),
-                    E(_.lds);
-            else if (null != A) {
-                let e = d.default.getUser(A);
+                    A(_.lds);
+            else if (null != b) {
+                let e = d.default.getUser(b);
                 null != e &&
-                    j(
-                        (0, n.jsx)(c.Wn, {
+                    v(
+                        (0, s.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
                             children: f.intl.format(f.t["09qidX"], { username: e.username }),
                         }),
                     ),
-                    p(!1);
+                    T(!1);
             }
-        }, [A, C]),
-        i.useEffect(() => {
-            T.length < h.$H && p(!1);
-        }, [T]),
+        }, [b, N]),
+        a.useEffect(() => {
+            E.length < h.$H && T(!1);
+        }, [E]),
         (0, o.Z)({
-            type: a.ImpressionTypes.MODAL,
-            name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
-        (0, n.jsxs)(l.Modal, {
-            onClose: s,
+        (0, s.jsxs)(r.Modal, {
+            onClose: n,
             transitionState: t,
             size: "md",
             "aria-label": f.intl.string(f.t.WbFpq6),
@@ -66,25 +66,25 @@ function N(e) {
                     text: f.intl.string(f.t["9g2mqa"]),
                     variant: "secondary",
                     onClick: () => {
-                        if (T.length >= h.$H) return void p(!0);
-                        s(), (0, x.y)();
+                        if (E.length >= h.$H) return void T(!0);
+                        n(), (0, x.y)();
                     },
                 },
             ],
             children: [
-                v,
-                (0, n.jsx)(m.Z, {
+                p,
+                (0, s.jsx)(m.Z, {
                     actionText: f.intl.string(f.t.Wf421N),
                     onAction: (e, t) => {
                         switch (e) {
                             case m.W.LOGIN_REQUIRED:
-                                s(), (0, x.y)();
+                                n(), (0, x.y)();
                                 break;
                             case m.W.SWITCHED:
-                                s();
+                                n();
                                 break;
                             case m.W.REMOVED:
-                                t === (null == N ? void 0 : N.id) && s(), E(t);
+                                t === (null == C ? void 0 : C.id) && n(), A(t);
                         }
                     },
                 }),

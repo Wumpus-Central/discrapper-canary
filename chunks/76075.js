@@ -1,49 +1,49 @@
-e.d(t, { default: () => h });
-var i = e(951288),
-    o = e(647438),
-    a = e(442837),
-    l = e(82659),
-    r = e(481060),
-    s = e(271383),
-    c = e(430824),
-    u = e(594174),
-    d = e(693546),
-    m = e(305325),
-    p = e(937111),
-    f = e(702286),
-    g = e(388032),
-    _ = e(394121);
-let h = function (n) {
-    let { guildId: t, transitionState: e, onClose: h } = n,
-        v = (0, a.e7)([p.Z], () => p.Z.getRequest(t), [t]),
-        C = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+t.d(e, { default: () => v });
+var i = t(951288),
+    o = t(647438),
+    l = t(793030),
+    a = t(442837),
+    r = t(481060),
+    s = t(271383),
+    c = t(430824),
+    u = t(594174),
+    d = t(693546),
+    m = t(305325),
+    p = t(937111),
+    g = t(702286),
+    f = t(388032),
+    h = t(394121);
+let v = function (n) {
+    let { guildId: e, transitionState: t, onClose: v } = n,
+        _ = (0, a.e7)([p.Z], () => p.Z.getRequest(e), [e]),
+        C = (0, a.e7)([c.Z], () => c.Z.getGuild(e), [e]),
         R = (0, a.e7)([u.default], () => {
             var n;
             return null == (n = u.default.getCurrentUser()) ? void 0 : n.id;
         }),
-        x = (0, a.e7)([s.ZP], () => (null != R ? s.ZP.getMember(t, R) : null), [R, t]),
+        x = (0, a.e7)([s.ZP], () => (null != R ? s.ZP.getMember(e, R) : null), [R, e]),
         Z = o.useCallback(() => {
-            h(), null == x && (0, f.Z)();
-        }, [x, h]),
+            v(), null == x && (0, g.Z)();
+        }, [x, v]),
         j = o.useCallback(async () => {
             if (null == x ? void 0 : x.isPending) {
                 try {
-                    await d.Z.removeGuildJoinRequest(t);
+                    await d.Z.removeGuildJoinRequest(e);
                 } catch (n) {
                     throw n;
                 }
-                h(), (0, m.hk)(t);
-            } else d.Z.resetGuildJoinRequest(t);
-        }, [t, null == x ? void 0 : x.isPending, h]),
+                v(), (0, m.hk)(e);
+            } else d.Z.resetGuildJoinRequest(e);
+        }, [e, null == x ? void 0 : x.isPending, v]),
         k = o.useMemo(
             () => [
                 {
-                    text: g.intl.string(g.t.I1LYVl),
+                    text: f.intl.string(f.t.I1LYVl),
                     variant: "secondary",
                     onClick: j,
                 },
                 {
-                    text: g.intl.string(g.t.BddRzc),
+                    text: f.intl.string(f.t.BddRzc),
                     variant: "critical-primary",
                     onClick: Z,
                 },
@@ -51,24 +51,24 @@ let h = function (n) {
             [j, Z],
         );
     return (0, i.jsx)(l.Modal, {
-        transitionState: e,
-        onClose: h,
+        transitionState: t,
+        onClose: v,
         title:
             (null == C ? void 0 : C.name) != null
-                ? g.intl.formatToPlainString(g.t["P+/gzM"], { guildName: C.name })
-                : g.intl.string(g.t.gBPcuL),
+                ? f.intl.formatToPlainString(f.t["P+/gzM"], { guildName: C.name })
+                : f.intl.string(f.t.gBPcuL),
         actions: k,
         children:
-            (null == v ? void 0 : v.rejectionReason) != null && (null == v ? void 0 : v.rejectionReason) !== ""
+            (null == _ ? void 0 : _.rejectionReason) != null && (null == _ ? void 0 : _.rejectionReason) !== ""
                 ? (0, i.jsxs)(r.Text, {
                       variant: "text-md/medium",
                       color: "header-secondary",
                       children: [
                           (0, i.jsx)("span", {
-                              className: _.rejectionReasonLabel,
-                              children: g.intl.string(g.t.cf1psb),
+                              className: h.rejectionReasonLabel,
+                              children: f.intl.string(f.t.cf1psb),
                           }),
-                          (0, i.jsx)("span", { children: null == v ? void 0 : v.rejectionReason }),
+                          (0, i.jsx)("span", { children: null == _ ? void 0 : _.rejectionReason }),
                       ],
                   })
                 : null,

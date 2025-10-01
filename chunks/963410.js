@@ -1,8 +1,8 @@
 r.r(t), r.d(t, { default: () => C }), r(388685);
 var n = r(951288),
     l = r(647438),
-    u = r(442837),
-    i = r(82659),
+    u = r(793030),
+    i = r(442837),
     c = r(481060),
     a = r(377171),
     o = r(592125),
@@ -34,8 +34,8 @@ function T(e) {
 function C(e) {
     var t, r;
     let { transitionState: C, userId: R, channelId: Z, onClose: I } = e,
-        w = (0, u.e7)([s.default], () => s.default.getUser(R)),
-        A = (0, u.e7)([o.Z], () => {
+        w = (0, i.e7)([s.default], () => s.default.getUser(R)),
+        A = (0, i.e7)([o.Z], () => {
             var e;
             return null == (e = o.Z.getChannel(Z)) ? void 0 : e.getGuildId();
         }),
@@ -164,7 +164,7 @@ function C(e) {
             variant: "secondary",
         };
     return (0, n.jsx)(
-        i.Modal,
+        u.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

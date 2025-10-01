@@ -7,8 +7,8 @@ var r = n(951288),
     i = n(647438),
     a = n(512722),
     o = n.n(a),
-    s = n(442837),
-    l = n(82659),
+    s = n(793030),
+    l = n(442837),
     c = n(755721),
     u = n(481060),
     d = n(893776),
@@ -97,7 +97,7 @@ function E(e) {
             null != t && t.email && (n = t.email),
                 (0, u.h7j)((e) =>
                     (0, r.jsx)(
-                        l.Modal,
+                        s.Modal,
                         h(
                             {
                                 actions: [
@@ -118,9 +118,9 @@ function E(e) {
 }
 function b(e) {
     let { size: t, variant: n } = e,
-        a = (0, s.e7)([f.default], () => f.default.getCurrentUser());
+        a = (0, l.e7)([f.default], () => f.default.getCurrentUser());
     o()(null != a, "ResendEmailVerificationButton: currentUser cannot be undefined");
-    let [l, c] = i.useState(!1),
+    let [s, c] = i.useState(!1),
         d = i.useCallback(() => {
             c(!0), E(a).then(() => c(!1));
         }, [a]);
@@ -129,6 +129,6 @@ function b(e) {
         variant: n,
         onClick: d,
         text: _.intl.string(_.t.lm1UKi),
-        disabled: l,
+        disabled: s,
     });
 }

@@ -1,8 +1,8 @@
 r.d(t, { default: () => k }), r(388685);
 var s = r(951288),
     l = r(647438),
-    n = r(442837),
-    a = r(82659),
+    n = r(793030),
+    a = r(442837),
     i = r(481060),
     u = r(24124),
     c = r(700582),
@@ -21,8 +21,8 @@ var s = r(951288),
     S = r(446136);
 let P = (e) => {
         let { channel: t, guildName: r } = e,
-            l = (0, n.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
-            a = (0, o.ZP)(t);
+            l = (0, a.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
+            n = (0, o.ZP)(t);
         return (0, s.jsxs)("div", {
             className: S.result,
             children: [
@@ -36,7 +36,7 @@ let P = (e) => {
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
-                            children: a,
+                            children: n,
                         }),
                         (0, s.jsx)(i.Text, {
                             variant: "text-xs/normal",
@@ -78,8 +78,8 @@ let P = (e) => {
     },
     C = (e) => {
         let { user: t, status: r } = e,
-            l = (0, n.e7)([p.Z], () => p.Z.getNickname(t.id)),
-            a = j.ZP.useName(t),
+            l = (0, a.e7)([p.Z], () => p.Z.getNickname(t.id)),
+            n = j.ZP.useName(t),
             u = j.ZP.useUserTag(t);
         return (0, s.jsxs)("div", {
             className: S.result,
@@ -95,7 +95,7 @@ let P = (e) => {
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
-                            children: null != l ? l : a,
+                            children: null != l ? l : n,
                         }),
                         (0, s.jsx)(i.Text, {
                             variant: "text-xs/normal",
@@ -180,7 +180,7 @@ function k(e) {
             results: c,
             query: o,
             activity: h,
-        } = (0, n.cj)(
+        } = (0, a.cj)(
             [f.Z],
             () => ({
                 results: f.Z.getResults(),
@@ -251,7 +251,7 @@ function k(e) {
         };
     return null == h
         ? null
-        : (0, s.jsx)(a.Modal, {
+        : (0, s.jsx)(n.Modal, {
               transitionState: t,
               title: T.intl.formatToPlainString(T.t["2tN7io"], { name: h.name }),
               onClose: r,

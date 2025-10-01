@@ -1,8 +1,8 @@
 n.d(t, { default: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(82659),
+    a = n(793030),
+    o = n(442837),
     c = n(481060),
     s = n(660216),
     l = n(825209),
@@ -16,7 +16,7 @@ var r = n(951288),
 function g(e) {
     var t;
     let { transitionState: n, onClose: g } = e,
-        m = (0, a.e7)([b.ZP], () => b.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD)),
+        m = (0, o.e7)([b.ZP], () => b.ZP.getKeybindForAction(O.kg4.SOUNDBOARD_HOLD)),
         [h, j] = i.useState(null != (t = null == m ? void 0 : m.shortcut) ? t : []),
         v = i.useCallback(() => {
             if (0 === h.length) return null != m && s.Z.deleteKeybind(m.id), g();
@@ -97,7 +97,7 @@ function g(e) {
         ],
         [g, v],
     );
-    return (0, r.jsxs)(o.Modal, {
+    return (0, r.jsxs)(a.Modal, {
         transitionState: n,
         title: f.intl.string(f.t["0Osu39"]),
         actions: w,

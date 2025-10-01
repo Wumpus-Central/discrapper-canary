@@ -1,19 +1,19 @@
-n.d(t, { default: () => j }), n(388685);
+n.d(t, { default: () => m }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(442837),
-    o = n(82659),
+    i = n(793030),
+    o = n(442837),
     a = n(481060),
     c = n(749210),
-    s = n(910693),
-    u = n(501517),
-    p = n(592125),
-    d = n(51144),
-    f = n(981631),
+    u = n(910693),
+    s = n(501517),
+    d = n(592125),
+    f = n(51144),
+    _ = n(981631),
     g = n(388032),
     b = n(764295),
-    m = n(541770);
-function y(e) {
+    O = n(541770);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function O(e, t) {
         e
     );
 }
-function j(e) {
-    var { guildId: t, user: n, location: j, modReportId: h } = e,
-        v = (function (e, t) {
+function m(e) {
+    var { guildId: t, user: n, location: m, modReportId: y } = e,
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -79,14 +79,14 @@ function j(e) {
             }
             return l;
         })(e, ["guildId", "user", "location", "modReportId"]);
-    let [P, x] = l.useState(""),
-        [w, C] = l.useState(!1),
-        k = (0, s.sE)(t, {
-            location: j,
+    let [v, h] = l.useState(""),
+        [M, A] = l.useState(!1),
+        C = (0, u.sE)(t, {
+            location: m,
             targetUserId: n.id,
         }),
-        { isModReportClosed: S, isModReport: I } = (0, i.cj)([p.Z], () => {
-            let e = p.Z.getChannel(h);
+        { isModReportClosed: S, isModReport: P } = (0, o.cj)([d.Z], () => {
+            let e = d.Z.getChannel(y);
             return {
                 isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
                 isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
@@ -94,25 +94,25 @@ function j(e) {
         }),
         T = l.useCallback(() => {
             if (
-                (c.Z.kickUser(t, n.id, P, h).then(() => {
-                    w && null != h && u.Z.resolveFlag(h);
+                (c.Z.kickUser(t, n.id, v, y).then(() => {
+                    M && null != y && s.Z.resolveFlag(y);
                 }),
-                k(s.jQ.KICK),
-                null != h)
+                C(u.jQ.KICK),
+                null != y)
             ) {
                 var e;
-                null == (e = v.onClose) || e.call(v);
+                null == (e = j.onClose) || e.call(j);
             }
-        }, [t, n.id, P, k, h, w, v]),
-        Z = l.useCallback((e) => {
-            x(e);
+        }, [t, n.id, v, C, y, M, j]),
+        I = l.useCallback((e) => {
+            h(e);
         }, []);
-    return null != h && I
+    return null != y && P
         ? (0, r.jsx)(
-              o.Modal,
-              O(y({}, v), {
+              i.Modal,
+              E(p({}, j), {
                   title: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
-                  subtitle: g.intl.format(g.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
+                  subtitle: g.intl.format(g.t["/yH0UV"], { user: "@".concat(f.ZP.getName(n)) }),
                   actions: [
                       {
                           text: g.intl.string(g.t["3glT6e"]),
@@ -124,47 +124,47 @@ function j(e) {
                   actionBarInput: S
                       ? void 0
                       : (0, r.jsx)(a.XZJ, {
-                            checked: w,
+                            checked: M,
                             onChange: (e) => {
-                                C(e);
+                                A(e);
                             },
                             label: g.intl.string(b.default["8yIKen"]),
                         }),
                   children: (0, r.jsx)(a.Kx8, {
-                      label: g.intl.string(null != h ? g.t.hmKy8P : g.t["+2QEPj"]),
-                      maxLength: f.GNZ,
-                      onChange: Z,
-                      value: P,
+                      label: g.intl.string(null != y ? g.t.hmKy8P : g.t["+2QEPj"]),
+                      maxLength: _.GNZ,
+                      onChange: I,
+                      value: v,
                       rows: 2,
                   }),
               }),
           )
         : (0, r.jsxs)(
               a.ConfirmModal,
-              O(
-                  y(
+              E(
+                  p(
                       {
                           header: g.intl.formatToPlainString(g.t["1Ie87u"], { user: n.username }),
                           confirmText: g.intl.string(g.t["3glT6e"]),
                           cancelText: g.intl.string(g.t["ETE/oK"]),
                           onConfirm: T,
                       },
-                      v,
+                      j,
                   ),
                   {
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-md/normal",
-                              className: m.spacing,
-                              children: g.intl.format(g.t["/yH0UV"], { user: "@".concat(d.ZP.getName(n)) }),
+                              className: O.spacing,
+                              children: g.intl.format(g.t["/yH0UV"], { user: "@".concat(f.ZP.getName(n)) }),
                           }),
                           (0, r.jsx)("div", {
-                              className: m.spacing,
+                              className: O.spacing,
                               children: (0, r.jsx)(a.Kx8, {
                                   label: g.intl.string(g.t["+2QEPj"]),
-                                  maxLength: f.GNZ,
-                                  onChange: Z,
-                                  value: P,
+                                  maxLength: _.GNZ,
+                                  onChange: I,
+                                  value: v,
                                   rows: 2,
                               }),
                           }),

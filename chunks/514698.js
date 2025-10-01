@@ -1,8 +1,8 @@
 r.d(e, { default: () => u });
 var n = r(951288);
 r(647438);
-var o = r(442837),
-    i = r(82659),
+var o = r(793030),
+    i = r(442837),
     c = r(481060),
     l = r(933557),
     a = r(592125),
@@ -32,10 +32,10 @@ function u(t) {
             }
             return o;
         })(t, ["onConfirm", "channelId"]);
-    let O = (0, o.e7)([a.Z], () => (null != p ? a.Z.getChannel(p) : null)),
+    let O = (0, i.e7)([a.Z], () => (null != p ? a.Z.getChannel(p) : null)),
         f = (0, l.ZP)(O, !0);
     return (0, n.jsx)(
-        i.Modal,
+        o.Modal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},

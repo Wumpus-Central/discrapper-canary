@@ -1,18 +1,16 @@
-t.d(n, { default: () => j });
+t.d(n, { default: () => _ });
 var r = t(951288),
-    i = t(257465),
-    l = t(213734),
-    a = t(37148),
-    o = t(481060),
-    s = t(906732),
-    c = t(678328),
-    d = t(560467),
-    u = t(183369),
-    m = t(473682),
-    p = t(401561),
-    g = t(388032),
-    x = t(831119);
-function f(e) {
+    i = t(793030),
+    l = t(481060),
+    a = t(906732),
+    o = t(678328),
+    s = t(560467),
+    c = t(183369),
+    d = t(473682),
+    u = t(401561),
+    m = t(388032),
+    p = t(831119);
+function g(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -37,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, n) {
+function x(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -55,66 +53,66 @@ function _(e, n) {
         e
     );
 }
-function h(e) {
-    let { step: n, setFooterNode: t } = (0, u.aj)(),
-        { title: s, subtitle: h } = (function (e) {
+function f(e) {
+    let { step: n, setFooterNode: t } = (0, c.aj)(),
+        { title: a, subtitle: f } = (function (e) {
             switch (e) {
-                case m.Vb.SELECT_GAME:
+                case d.Vb.SELECT_GAME:
                     return {
-                        title: g.intl.string(p.default.DG1SHB),
-                        subtitle: g.intl.string(p.default.hkWuWF),
+                        title: m.intl.string(u.default.DG1SHB),
+                        subtitle: m.intl.string(u.default.hkWuWF),
                     };
-                case m.Vb.SERVER_SETTINGS:
-                    return { title: g.intl.string(p.default.Eonh9P) };
+                case d.Vb.SERVER_SETTINGS:
+                    return { title: m.intl.string(u.default.Eonh9P) };
             }
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        _(f({}, e), {
+        x(g({}, e), {
             size: "lg",
             children: [
-                (0, r.jsx)(a.x, {
-                    title: s,
-                    subtitle: h,
+                (0, r.jsx)(i.xBx, {
+                    title: a,
+                    subtitle: f,
                 }),
-                (0, r.jsx)(o.zJl, {
-                    className: x.modalContent,
-                    style: { width: m.M4 },
+                (0, r.jsx)(l.zJl, {
+                    className: p.modalContent,
+                    style: { width: d.M4 },
                     children: (0, r.jsx)("div", {
-                        style: { padding: m.hK },
-                        children: (0, r.jsxs)(o.MyZ, {
-                            width: m.Ne,
+                        style: { padding: d.hK },
+                        children: (0, r.jsxs)(l.MyZ, {
+                            width: d.Ne,
                             activeSlide: n,
                             children: [
                                 (0, r.jsx)(
-                                    o.Mi4,
+                                    l.Mi4,
                                     {
-                                        id: m.Vb.SELECT_GAME,
-                                        children: (0, r.jsx)(c.Z, {}),
+                                        id: d.Vb.SELECT_GAME,
+                                        children: (0, r.jsx)(o.Z, {}),
                                     },
-                                    m.Vb.SELECT_GAME,
+                                    d.Vb.SELECT_GAME,
                                 ),
                                 (0, r.jsx)(
-                                    o.Mi4,
+                                    l.Mi4,
                                     {
-                                        id: m.Vb.SERVER_SETTINGS,
-                                        children: (0, r.jsx)(d.Z, {}),
+                                        id: d.Vb.SERVER_SETTINGS,
+                                        children: (0, r.jsx)(s.Z, {}),
                                     },
-                                    m.Vb.SERVER_SETTINGS,
+                                    d.Vb.SERVER_SETTINGS,
                                 ),
                             ],
                         }),
                     }),
                 }),
-                (0, r.jsx)(l.m, { children: (0, r.jsx)("div", { ref: (e) => t(e) }) }),
+                (0, r.jsx)(i.mzw, { children: (0, r.jsx)("div", { ref: (e) => t(e) }) }),
             ],
         }),
     );
 }
-function j(e) {
-    let { analyticsLocations: n } = (0, s.ZP)();
-    return (0, r.jsx)(s.Gt, {
+function _(e) {
+    let { analyticsLocations: n } = (0, a.ZP)();
+    return (0, r.jsx)(a.Gt, {
         value: n,
-        children: (0, r.jsx)(u.KO, _(f({}, e), { children: (0, r.jsx)(h, f({}, e)) })),
+        children: (0, r.jsx)(c.KO, x(g({}, e), { children: (0, r.jsx)(f, g({}, e)) })),
     });
 }

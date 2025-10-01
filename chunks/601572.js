@@ -1,7 +1,7 @@
 a.d(t, { default: () => P }), a(388685);
 var r = a(951288),
     n = a(647438),
-    i = a(82659),
+    i = a(793030),
     c = a(481060),
     l = a(846027),
     o = a(410575),
@@ -18,7 +18,7 @@ var r = a(951288),
     v = a(747545),
     C = a(981631),
     E = a(388032),
-    O = a(146371);
+    O = a(142768);
 function P(e) {
     let { transitionState: t, videoEnabled: a, onEnable: P, onClose: _ } = e,
         k = w.Z.getCameraComponent(),

@@ -2,8 +2,8 @@ n.d(t, { default: () => b }), n(388685), n(781311);
 var l = n(951288),
     i = n(647438),
     a = n(990547),
-    r = n(442837),
-    o = n(82659),
+    r = n(793030),
+    o = n(442837),
     c = n(481060),
     s = n(812206),
     d = n(810568),
@@ -23,9 +23,9 @@ function b(e) {
         [G, N] = i.useState(null),
         [T, D] = i.useState(""),
         S = i.useMemo(() => (0, d.fP)(), []),
-        C = (0, r.e7)([u.Z], () => u.Z.games),
+        C = (0, o.e7)([u.Z], () => u.Z.games),
         E = null != j,
-        A = (0, r.e7)([s.Z], () =>
+        A = (0, o.e7)([s.Z], () =>
             (null == j ? void 0 : j.application_id) != null ? s.Z.getApplication(j.application_id) : null,
         ),
         Z = i.useMemo(
@@ -93,7 +93,7 @@ function b(e) {
             }
         })();
     return (0, l.jsx)(
-        o.Modal,
+        r.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

@@ -10,8 +10,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(82659),
+    o = n(793030),
+    s = n(442837),
     c = n(780384),
     u = n(481060),
     d = n(239091),
@@ -27,10 +27,10 @@ var r = n(951288),
     y = n(626135),
     v = n(63063),
     I = n(225104),
-    C = n(981631),
-    S = n(388032),
-    T = n(479306),
-    N = n(562721);
+    S = n(981631),
+    C = n(388032),
+    T = n(375563),
+    N = n(245141);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,16 +74,16 @@ function P(e, t) {
 }
 let x = function (e) {
     let { guildId: t, transitionState: l, onClose: x } = e,
-        A = (0, o.e7)([E.Z], () => E.Z.getSortedRoles(t)),
-        Z = (0, o.e7)([_.default], () => _.default.getId()),
-        w = (0, o.e7)([O.ZP], () => O.ZP.getMember(t, Z)),
+        A = (0, s.e7)([E.Z], () => E.Z.getSortedRoles(t)),
+        Z = (0, s.e7)([_.default], () => _.default.getId()),
+        w = (0, s.e7)([O.ZP], () => O.ZP.getMember(t, Z)),
         [L, R] = i.useState([]),
         D = (0, f.ZP)();
     if (
         (i.useEffect(() => {
             0 !== L.length &&
                 y.default.track(
-                    C.rMx.PASSPORT_ENTRY_VIEWED,
+                    S.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
                             role_ids: L.map((e) => {
@@ -102,11 +102,11 @@ let x = function (e) {
     )
         return null;
     let k = A.filter((e) => null === e.tags.guild_connections);
-    return (0, r.jsx)(s.Modal, {
+    return (0, r.jsx)(o.Modal, {
         transitionState: l,
-        title: S.intl.string(S.t.ghtnsr),
+        title: C.intl.string(C.t.ghtnsr),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsER"], { helpdeskArticleUrl: v.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        subtitle: C.intl.format(C.t["Y+TsER"], { helpdeskArticleUrl: v.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: k.map((e) => {

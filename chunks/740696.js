@@ -1,54 +1,51 @@
-n.d(e, { default: () => b }), n(388685), n(539854);
+n.d(e, { default: () => f }), n(388685), n(539854);
 var a = n(951288),
     r = n(647438),
-    i = n(442837),
-    s = n(257465),
-    o = n(369585),
-    l = n(103866),
-    c = n(37148),
-    g = n(481060),
-    d = n(430824),
-    m = n(496675),
-    u = n(228392),
-    p = n(941848),
-    x = n(710352),
-    h = n(981631),
-    f = n(921944),
-    j = n(388032),
-    v = n(87612);
-function b(t) {
-    let { guildId: e, shouldUpsellCreation: b, transitionState: y, onClose: P } = t,
-        N = (0, i.e7)([d.Z], () => d.Z.getGuild(e), [e]),
-        S = (0, i.e7)([m.Z], () => m.Z.can(h.Plq.MANAGE_CHANNELS, N)),
-        O = [
+    i = n(793030),
+    s = n(442837),
+    o = n(481060),
+    l = n(430824),
+    c = n(496675),
+    g = n(228392),
+    d = n(941848),
+    m = n(710352),
+    u = n(981631),
+    p = n(921944),
+    x = n(388032),
+    h = n(87612);
+function f(t) {
+    let { guildId: e, shouldUpsellCreation: f, transitionState: j, onClose: v } = t,
+        b = (0, s.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+        y = (0, s.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_CHANNELS, b)),
+        P = [
             {
                 id: 0,
-                name: j.intl.string(j.t.HTA519),
+                name: x.intl.string(x.t.HTA519),
             },
             {
                 id: 1,
-                name: j.intl.string(j.t.IHjjY2),
+                name: x.intl.string(x.t.IHjjY2),
             },
             {
                 id: 2,
-                name: j.intl.string(j.t.x3drh4),
+                name: x.intl.string(x.t.x3drh4),
             },
         ],
-        [C, w] = r.useState(0),
-        k = [
+        [N, S] = r.useState(0),
+        O = [
             {
-                variant: b ? "secondary" : "primary",
-                text: b ? j.intl.string(j.t.TulDPj) : j.intl.string(j.t["NX+WJC"]),
-                onClick: () => P(f.L.SECONDARY),
+                variant: f ? "secondary" : "primary",
+                text: f ? x.intl.string(x.t.TulDPj) : x.intl.string(x.t["NX+WJC"]),
+                onClick: () => v(p.L.SECONDARY),
             },
         ];
     return (
-        b &&
-            k.push({
+        f &&
+            O.push({
                 variant: "primary",
-                text: j.intl.string(j.t["1X8SKy"]),
+                text: x.intl.string(x.t["1X8SKy"]),
                 onClick: () => {
-                    (0, g.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: t } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
                         return (n) => {
                             var r, i;
@@ -81,9 +78,9 @@ function b(t) {
                                 })({}, n)),
                                 (i = i =
                                     {
-                                        channelType: h.d4z.GUILD_FORUM,
+                                        channelType: u.d4z.GUILD_FORUM,
                                         guildId: e,
-                                        prefillChannelName: b ? j.intl.string(j.t["5z1Xam"]) : void 0,
+                                        prefillChannelName: f ? x.intl.string(x.t["5z1Xam"]) : void 0,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -101,30 +98,30 @@ function b(t) {
                             );
                         };
                     }),
-                        P(f.L.PRIMARY);
+                        v(p.L.PRIMARY);
                 },
             }),
-        (0, a.jsxs)(s.IX, {
-            transitionState: y,
+        (0, a.jsxs)(i.IX, {
+            transitionState: j,
             size: "xl",
-            onClose: async () => await P(),
+            onClose: async () => await v(),
             children: [
-                (0, a.jsx)(c.x, {
-                    title: j.intl.string(j.t["6S6WCQ"]),
-                    subtitle: j.intl.string(j.t.I2BA8P),
+                (0, a.jsx)(i.xBx, {
+                    title: x.intl.string(x.t["6S6WCQ"]),
+                    subtitle: x.intl.string(x.t.I2BA8P),
                 }),
-                (0, a.jsxs)(l.f, {
+                (0, a.jsxs)(i.fef, {
                     children: [
-                        (0, a.jsx)(g.njP, {
-                            selectedItem: C,
+                        (0, a.jsx)(o.njP, {
+                            selectedItem: N,
                             type: "top",
                             onItemSelect: (t) => {
-                                w(t), (0, u.ws)({ forumDemoId: t });
+                                S(t), (0, g.ws)({ forumDemoId: t });
                             },
-                            className: v.tags,
-                            children: O.map((t, e) =>
+                            className: h.tags,
+                            children: P.map((t, e) =>
                                 (0, a.jsx)(
-                                    g.njP.Item,
+                                    o.njP.Item,
                                     {
                                         id: e,
                                         children: t.name,
@@ -133,22 +130,22 @@ function b(t) {
                                 ),
                             ),
                         }),
-                        (0, a.jsx)(p.Z, { id: C }),
+                        (0, a.jsx)(d.Z, { id: N }),
                     ],
                 }),
-                S &&
-                    (0, a.jsx)(o.G, {
-                        leading: (0, a.jsx)(g.zxk, {
+                y &&
+                    (0, a.jsx)(i.Go$, {
+                        leading: (0, a.jsx)(o.zxk, {
                             variant: "secondary",
-                            text: j.intl.string(j.t.hvVgAQ),
-                            icon: g.Gr1,
+                            text: x.intl.string(x.t.hvVgAQ),
+                            icon: o.Gr1,
                             iconPosition: "end",
                             role: "link",
                             onClick: () => {
-                                open(x.V8);
+                                open(m.V8);
                             },
                         }),
-                        actions: k,
+                        actions: O,
                     }),
             ],
         })

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(512722),
     o = n.n(a),
-    s = n(442837),
-    l = n(82659),
+    s = n(793030),
+    l = n(442837),
     c = n(481060),
     u = n(179360),
     d = n(899667),
@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(4434),
     b = n(981631),
     y = n(388032),
-    O = n(396849);
+    O = n(252633);
 let v = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, transitionState: v, onClose: I } = e,
         T = (0, h.vx)(_.Z.boostSlots);
@@ -32,7 +32,7 @@ let v = (e) => {
             "CONFIRM",
             "SUCCESS",
         ].filter((e) => null != e),
-        [A, C] = (0, s.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
+        [A, C] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [N, R] = i.useState(S[0]),
         [P, w] = i.useState(!1),
         [D, L] = i.useState(n),
@@ -64,7 +64,7 @@ let v = (e) => {
         G = {
             UNUSED_QUANTITY_SELECT: () => (
                 o()(null != t || 0 !== T.length, "Cannot provide no slots if there are no other available slots"),
-                (0, r.jsx)(l.Modal, {
+                (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
                     size: "md",
@@ -151,12 +151,12 @@ let v = (e) => {
                             }
                         }
                     },
-                    s = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fH"]);
-                return (0, r.jsx)(l.Modal, {
+                    l = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fH"]);
+                return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
                     size: "md",
-                    title: s,
+                    title: l,
                     actions: [
                         {
                             variant: "secondary",
@@ -204,7 +204,7 @@ let v = (e) => {
             },
             SUCCESS() {
                 let e = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fH"]);
-                return (0, r.jsx)(l.Modal, {
+                return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
                     size: "md",

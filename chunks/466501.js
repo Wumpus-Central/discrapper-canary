@@ -1,7 +1,7 @@
 i.d(t, { default: () => f }), i(953529);
 var n = i(951288),
     r = i(647438),
-    c = i(82659),
+    c = i(793030),
     l = i(481060),
     o = i(651711),
     s = i(434404),
@@ -44,7 +44,7 @@ function j(e) {
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler,
                                 }),
-                                t < g.length - 1 ? (0, n.jsx)(l.$i$, {}) : null,
+                                t < g.length - 1 ? (0, n.jsx)(l.izJ, {}) : null,
                             ],
                         },
                         e.checkedLabel,

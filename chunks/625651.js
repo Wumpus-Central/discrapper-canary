@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288),
     o = n(647438),
     a = n(494497),
-    i = n(442837),
-    c = n(82659),
+    i = n(793030),
+    c = n(442837),
     l = n(481060),
     s = n(14263),
     u = n(650774),
@@ -17,8 +17,8 @@ var r = n(951288),
     b = n(158638),
     p = n(795338),
     g = n(17622),
-    x = n(279604),
-    v = n(535396),
+    v = n(279604),
+    x = n(535396),
     k = n(989308),
     O = n(388032),
     j = n(514186);
@@ -72,7 +72,7 @@ function h(e) {
         n,
         {
             size: a,
-            title: i,
+            title: c,
             body: s,
             warningText: u,
             acknowledgementText: d,
@@ -81,15 +81,15 @@ function h(e) {
             onDeactivate: b,
         } = e,
         p = I(e, ["size", "title", "body", "warningText", "acknowledgementText", "error", "isLoading", "onDeactivate"]);
-    let [g, x] = o.useState(!1);
+    let [g, v] = o.useState(!1);
     return (0, r.jsxs)(
-        c.Modal,
+        i.Modal,
         ((t = y({}, p)),
         (n = n =
             {
                 size: a,
-                title: O.intl.formatToPlainString(k.default.iEBw1N, { perk: i }),
-                subtitle: O.intl.formatToPlainString(k.default["7o0K+/"], { perk: i }),
+                title: O.intl.formatToPlainString(k.default.iEBw1N, { perk: c }),
+                subtitle: O.intl.formatToPlainString(k.default["7o0K+/"], { perk: c }),
                 actions: [
                     {
                         variant: "secondary",
@@ -109,12 +109,12 @@ function h(e) {
                     (0, r.jsxs)("div", {
                         className: j.warningContainer,
                         children: [
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(i.xvT, {
                                 color: "text-danger",
                                 variant: "eyebrow",
                                 children: O.intl.string(k.default.OVt5CA),
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(i.xvT, {
                                 className: j.warningText,
                                 tag: "span",
                                 variant: "text-sm/medium",
@@ -123,7 +123,7 @@ function h(e) {
                         ],
                     }),
                     null != f &&
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(i.xvT, {
                             className: j.errorText,
                             color: "text-danger",
                             variant: "text-sm/semibold",
@@ -135,9 +135,9 @@ function h(e) {
                             children: [
                                 (0, r.jsx)(l.XZJ, {
                                     checked: g,
-                                    onChange: x,
+                                    onChange: v,
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(i.xvT, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
                                     children: d,
@@ -163,9 +163,9 @@ function h(e) {
 }
 function _(e) {
     var { guildId: t, powerup: n } = e,
-        c = I(e, ["guildId", "powerup"]);
-    let { onDeactivate: _, error: w, isLoading: T } = (0, x.ZP)(t, n),
-        { onClose: S } = c,
+        l = I(e, ["guildId", "powerup"]);
+    let { onDeactivate: _, error: w, isLoading: T } = (0, v.ZP)(t, n),
+        { onClose: S } = l,
         E = o.useCallback(
             (e) => {
                 _(e).then(() => {
@@ -175,25 +175,25 @@ function _(e) {
             [S, _],
         ),
         C = (function (e, t) {
-            let n = (0, i.e7)([u.Z], () => u.Z.getMemberCount(e)),
-                c = (0, s.Z)(e),
-                m = (0, i.e7)([f.Z], () => {
+            let n = (0, c.e7)([u.Z], () => u.Z.getMemberCount(e)),
+                l = (0, s.Z)(e),
+                m = (0, c.e7)([f.Z], () => {
                     var t;
                     return (null == (t = f.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
                 }),
                 p = (0, b.g1)(e, "Powerup Deactivate Modal"),
-                g = (0, i.e7)(
+                g = (0, c.e7)(
                     [d.Z],
                     () =>
-                        t.skuId !== a.If || null == c
+                        t.skuId !== a.If || null == l
                             ? 0
                             : d.Z.getSortedRoles(e).reduce((e, t) => {
                                   var n, r;
                                   return (null == (n = t.colorStrings) ? void 0 : n.secondaryColor) == null
                                       ? e
-                                      : e + (null != (r = c[t.id]) ? r : 0);
+                                      : e + (null != (r = l[t.id]) ? r : 0);
                               }, 0),
-                    [e, t.skuId, c],
+                    [e, t.skuId, l],
                 );
             return o.useMemo(() => {
                 let e;
@@ -209,12 +209,12 @@ function _(e) {
                         break;
                     case a.A$:
                         e = m
-                            ? (0, r.jsx)(l.Text, {
+                            ? (0, r.jsx)(i.xvT, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
                                   children: O.intl.string(k.default.hN75yc),
                               })
-                            : (0, r.jsx)(l.Text, {
+                            : (0, r.jsx)(i.xvT, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
                                   children: O.intl.string(k.default.Du91RU),
@@ -236,7 +236,7 @@ function _(e) {
                         (e = (0, r.jsxs)(r.Fragment, {
                             children: [
                                 e,
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(i.xvT, {
                                     color: "text-danger",
                                     variant: "text-sm/semibold",
                                     children: p ? O.intl.string(k.default.TkNA7e) : O.intl.string(k.default.M4XL5u),
@@ -253,13 +253,13 @@ function _(e) {
             h,
             y(
                 {
-                    size: n.type === v.Us.LEVEL ? "md" : "sm",
+                    size: n.type === x.Us.LEVEL ? "md" : "sm",
                     title: n.title,
                     body: (() => {
                         switch (n.type) {
-                            case v.Us.LEVEL:
+                            case x.Us.LEVEL:
                                 return (0, r.jsx)(g.Z, { powerup: n });
-                            case v.Us.PERK:
+                            case x.Us.PERK:
                                 return (0, r.jsx)(p.m, {
                                     className: j.image,
                                     powerup: n,
@@ -271,7 +271,7 @@ function _(e) {
                     isLoading: T,
                     onDeactivate: E,
                 },
-                c,
+                l,
             ),
         )
     );

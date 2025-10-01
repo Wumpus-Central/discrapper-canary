@@ -2,8 +2,8 @@ n.d(e, { default: () => y }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(990547),
-    a = n(442837),
-    i = n(82659),
+    a = n(793030),
+    i = n(442837),
     u = n(390885),
     c = n(594174),
     s = n(626135),
@@ -20,7 +20,7 @@ function y(t) {
         [g, T] = l.useState(null),
         [O, S] = l.useState(!1),
         N = l.useRef(null),
-        v = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        v = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         h = l.useRef(null);
     l.useEffect(() => {
         u.Z.flowStep(m.MK.ANY, m.FF.AGE_GATE), s.default.track(E.rMx.OPEN_MODAL, { type: "Claim Age Gate" });
@@ -55,7 +55,7 @@ function y(t) {
         }, [h]);
     return (0, r.jsx)("form", {
         onSubmit: G,
-        children: (0, r.jsx)(i.Modal, {
+        children: (0, r.jsx)(a.Modal, {
             transitionState: e,
             onClose: n,
             title: A.intl.string(A.t.QpSKo6),

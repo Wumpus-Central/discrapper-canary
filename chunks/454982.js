@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(82659),
+    a = n(793030),
     o = n(755721),
     s = n(481060),
     l = n(484614),
@@ -103,7 +103,7 @@ let p = function (e) {
         "aria-label": b,
         children: (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(s.$i$, { className: f.formDivider }),
+                (0, r.jsx)(s.izJ, { className: f.formDivider }),
                 (0, r.jsxs)(s.hjN, {
                     title: d.intl.string(d.t.s9LFQk),
                     className: f.formSection,

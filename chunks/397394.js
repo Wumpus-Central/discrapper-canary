@@ -17,9 +17,9 @@ var r = n(951288),
     o = n.n(a),
     s = n(593473),
     l = n(843611),
-    c = n(442837),
-    u = n(993365),
-    d = n(257465),
+    c = n(793030),
+    u = n(442837),
+    d = n(993365),
     f = n(481060),
     _ = n(686546),
     p = n(252618),
@@ -89,11 +89,11 @@ function D(e, t) {
         e
     );
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function x(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -126,7 +126,7 @@ function j(e) {
                 }),
                 null != n ? n : null,
                 a
-                    ? (0, r.jsx)(u.x, {
+                    ? (0, r.jsx)(d.x, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           className: N.cta,
@@ -142,7 +142,7 @@ function M(e) {
 }
 function k(e) {
     var { guild: t, application: n } = e,
-        a = x(e, ["guild", "application"]);
+        a = L(e, ["guild", "application"]);
     let { onClose: o } = a,
         s = i.useCallback(() => {
             (null == t ? void 0 : t.id) != null &&
@@ -154,7 +154,7 @@ function k(e) {
                 }));
         }, [o, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
         l = h.z8.getField("entrypoint"),
-        u = i.useCallback(() => {
+        c = i.useCallback(() => {
             null == o || o(),
                 O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
                     application_id: null == n ? void 0 : n.id,
@@ -170,8 +170,8 @@ function k(e) {
                         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
         }, [null == n ? void 0 : n.id, o, l]),
-        _ = (0, c.e7)([y.Z, E.Z], () => E.Z.getChannel(y.Z.getChannelId())),
-        p = (0, c.e7)([b.Z], () => b.Z.can(A.Plq.SEND_MESSAGES, _)),
+        _ = (0, u.e7)([y.Z, E.Z], () => E.Z.getChannel(y.Z.getChannelId())),
+        p = (0, u.e7)([b.Z], () => b.Z.can(A.Plq.SEND_MESSAGES, _)),
         v = null != t,
         T = null == t && p && (!d || null != l),
         N = [];
@@ -181,7 +181,7 @@ function k(e) {
                 N.push({
                     variant: "secondary",
                     text: C.intl.string(C.t.cpT0Cg),
-                    onClick: u,
+                    onClick: c,
                 }),
             v &&
                 N.push({
@@ -218,7 +218,7 @@ function k(e) {
 }
 function U(e) {
     var { guild: t, application: n } = e,
-        a = x(e, ["guild", "application"]);
+        a = L(e, ["guild", "application"]);
     let o = C.intl.string(C.t.se5gLi);
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
@@ -235,7 +235,7 @@ function U(e) {
                     : C.intl.string(C.t["Dp+rgI"]),
             [n, t],
         ),
-        l = (0, r.jsx)(u.x, {
+        l = (0, r.jsx)(d.x, {
             variant: "text-md/normal",
             className: N.authorizedSuccessSubtext,
             children: s,
@@ -253,7 +253,7 @@ function U(e) {
 }
 function G(e) {
     var { application: t } = e,
-        n = x(e, ["application"]);
+        n = L(e, ["application"]);
     let { onClose: a } = n;
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });
@@ -293,7 +293,7 @@ function G(e) {
                                 color: "header-primary",
                                 children: C.intl.format(C.t["1Q+p1t"], { appName: t.name }),
                             }),
-                            (0, r.jsx)(u.x, {
+                            (0, r.jsx)(d.x, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
                                 children: C.intl.format(C.t.Mr7x5e, { appName: t.name }),
@@ -329,7 +329,7 @@ function F() {
     return (0, r.jsx)(S.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(S.j, {
-            transitionState: d.Dv.ENTERED,
+            transitionState: c.Dvm.ENTERED,
             hideHeader: !0,
             children: (0, r.jsx)(U, {
                 guild: null == (e = n.state) ? void 0 : e.guild,
@@ -353,7 +353,7 @@ function V(e) {
     return (0, r.jsx)(S.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(S.j, {
-            transitionState: d.Dv.ENTERED,
+            transitionState: c.Dvm.ENTERED,
             hideHeader: !0,
             children: (0, r.jsx)(Z, {
                 message: l,

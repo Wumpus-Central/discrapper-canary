@@ -1,8 +1,8 @@
 n.d(i, { default: () => Z }), n(388685);
 var l = n(951288),
     e = n(647438),
-    r = n(399606),
-    a = n(82659),
+    r = n(793030),
+    a = n(399606),
     u = n(493773),
     o = n(100527),
     s = n(906732),
@@ -19,9 +19,9 @@ var l = n(951288),
 function Z(t) {
     var i;
     let { onClose: n, transitionState: Z, guildId: h } = t,
-        k = (0, r.e7)([d.default], () => d.default.getId()),
-        p = (0, r.e7)([_.ZP], () => _.ZP.getMember(h, k), [h, k]),
-        N = (0, r.e7)([c.Z], () => c.Z.getGuild(h), [h]),
+        k = (0, a.e7)([d.default], () => d.default.getId()),
+        p = (0, a.e7)([_.ZP], () => _.ZP.getMember(h, k), [h, k]),
+        N = (0, a.e7)([c.Z], () => c.Z.getGuild(h), [h]),
         T = null != (i = null == N ? void 0 : N.name) ? i : "",
         D = (0, g.no)(p),
         { analyticsLocations: I } = (0, s.ZP)(o.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
@@ -46,7 +46,7 @@ function Z(t) {
     }, [N, n]),
     null == N)
         ? null
-        : (0, l.jsx)(a.Modal, {
+        : (0, l.jsx)(r.Modal, {
               transitionState: Z,
               onClose: n,
               title: O.intl.string(O.t["P+6K9P"]),

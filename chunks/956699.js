@@ -5,11 +5,11 @@ var r = n(951288),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(268146),
-    u = n(442837),
-    d = n(433517),
-    f = n(692547),
-    _ = n(82659),
+    c = n(793030),
+    u = n(268146),
+    d = n(442837),
+    f = n(433517),
+    _ = n(692547),
     p = n(681715),
     h = n(481060),
     m = n(570140),
@@ -160,7 +160,7 @@ class es extends i.Component {
                             "" !== a &&
                             (0, r.jsx)(h.R94, {
                                 className: Q.item,
-                                style: { color: f.Z.unsafe_rawColors.RED_400.css },
+                                style: { color: _.Z.unsafe_rawColors.RED_400.css },
                                 type: h.R94.Types.DESCRIPTION,
                                 children: a,
                             }),
@@ -523,7 +523,7 @@ class ec extends i.Component {
     render() {
         let { onClose: e, transitionState: t } = this.props,
             { publicLink: n } = this.state;
-        return (0, r.jsx)(_.Modal, {
+        return (0, r.jsx)(c.Modal, {
             title: "Generate Public Build Override Link",
             input: this.renderHelpMessage(),
             actionBarInput: (0, r.jsx)(O.Z, { value: n }),
@@ -665,11 +665,11 @@ function eu() {
     let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, A.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
-        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, u.cj)([k.default], () => ({
+        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([k.default], () => ({
             cssDebuggingEnabled: k.default.cssDebuggingEnabled,
             layoutDebuggingEnabled: k.default.layoutDebuggingEnabled,
         })),
-        d = (0, N.Z)("highlight_void_toggleables");
+        u = (0, N.Z)("highlight_void_toggleables");
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(M.F, {
@@ -746,7 +746,7 @@ function eu() {
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
                 children: (0, r.jsx)(h.j7V, {
-                    value: d,
+                    value: u,
                     note: "Highlights toggleable components: Checkbox (green), RadioGroup (yellow), Switch (blue)",
                     onChange: (e) => (0, C.Z)("highlight_void_toggleables", e),
                     children: "Highlight Toggleable Components",
@@ -766,7 +766,7 @@ function ed() {
             disableAppCollectionsCache: s,
             preventPopoutClose: l,
             logKeyboardMismatches: c,
-        } = (0, u.cj)([k.default], () => ({
+        } = (0, d.cj)([k.default], () => ({
             isTracingRequests: k.default.isTracingRequests,
             isForcedCanary: k.default.isForcedCanary,
             isAxeEnabled: k.default.isAxeEnabled,
@@ -777,7 +777,7 @@ function ed() {
             preventPopoutClose: k.default.preventPopoutClose,
             logKeyboardMismatches: k.default.logKeyboardMismatches,
         })),
-        d = (0, w.Z)("go_back_to_regular_input"),
+        u = (0, w.Z)("go_back_to_regular_input"),
         f = H.zY.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -874,7 +874,7 @@ function ed() {
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
                 children: (0, r.jsx)(h.j7V, {
-                    value: d,
+                    value: u,
                     note: "Disable aligning chat input to the bottom of the screen",
                     onChange: (e) => {
                         B.default.track(q.rMx.GUILD_JOIN_FEEDBACK, {
@@ -895,7 +895,7 @@ function ef() {
         isLoggingOverlayEvents: t,
         isLoggingAnalyticsEvents: n,
         isAnalyticsDebuggerEnabled: i,
-    } = (0, u.cj)([k.default], () => ({
+    } = (0, d.cj)([k.default], () => ({
         isLoggingGatewayEvents: k.default.isLoggingGatewayEvents,
         isLoggingOverlayEvents: k.default.isLoggingOverlayEvents,
         isLoggingAnalyticsEvents: k.default.isLoggingAnalyticsEvents,
@@ -951,7 +951,7 @@ function ep(e) {
 }
 function eh() {
     let e = (0, L.XE)("developer_settings"),
-        t = (0, u.e7)([x.default], () => x.default.getForcedRenderMode()),
+        t = (0, d.e7)([x.default], () => x.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
         l = e || t === D.R5.OUT_OF_PROCESS_V3 || t === D.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
@@ -1055,15 +1055,15 @@ function eh() {
                                               label: "Native JS crash",
                                           },
                                           {
-                                              value: c.Xo.RendererProcessDelayed,
+                                              value: u.Xo.RendererProcessDelayed,
                                               label: "Delayed exception in renderer process",
                                           },
                                           {
-                                              value: c.Xo.RendererProcess,
+                                              value: u.Xo.RendererProcess,
                                               label: "Exception in renderer process",
                                           },
                                           {
-                                              value: c.Xo.MainProcess,
+                                              value: u.Xo.MainProcess,
                                               label: "Exception in main process",
                                           },
                                       ],
@@ -1087,7 +1087,7 @@ function eh() {
           });
 }
 function em() {
-    let e = (0, u.e7)([U.Z], () => U.Z.getSurveyOverride()),
+    let e = (0, d.e7)([U.Z], () => U.Z.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
         a = (e) => {
             e.preventDefault(), t.length > 0 ? b.Xq(t) : b.Xq(null);
@@ -1126,14 +1126,14 @@ function em() {
 }
 function eg() {
     var e;
-    let t = (0, u.e7)([T.Z], () => T.Z.overrideId()),
+    let t = (0, d.e7)([T.Z], () => T.Z.overrideId()),
         [n, a] = i.useState(null != (e = T.Z.overrideId()) ? e : ""),
         o = () => {
             "" === n ? g.Z.setChangelogOverride(null) : g.Z.setChangelogOverride(n);
         },
         s = () => {
             let e = new Date("2018-01-01");
-            H.l4.updateSetting(Z.default.fromTimestamp(e.getTime())), d.K.set("lastChangeLogDate", e);
+            H.l4.updateSetting(Z.default.fromTimestamp(e.getTime())), f.K.set("lastChangeLogDate", e);
         };
     return (0, r.jsx)(M.F, {
         setting: z.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,

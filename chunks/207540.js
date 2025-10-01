@@ -1,8 +1,8 @@
 n.d(t, { default: () => v }), n(388685);
 var l = n(951288),
     i = n(647438),
-    r = n(442837),
-    u = n(82659),
+    r = n(793030),
+    u = n(442837),
     a = n(481060),
     o = n(933557),
     s = n(156699),
@@ -23,14 +23,14 @@ let v = (e) => {
         P = (0, o.ZP)(t, !0),
         S = t.id,
         I = t.isForumPost(),
-        T = (0, r.e7)([Z.Z], () => Z.Z.getGuild(t.getGuildId())),
+        T = (0, u.e7)([Z.Z], () => Z.Z.getGuild(t.getGuildId())),
         D = (0, N.u1)(S),
         { isSubscriptionGated: y } = (0, E.Z)(t.id),
         b = (0, f.Z)(T, t),
         [w, G] = i.useState(),
-        A = (0, r.e7)([m.default], () => t.isOwner(m.default.getId()), [t]),
-        U = (0, r.e7)([O.Z], () => O.Z.can(t.isThread() ? p.Plq.MANAGE_THREADS : p.Plq.MANAGE_CHANNELS, t), [t]),
-        j = (0, r.e7)([_.Z], () => {
+        A = (0, u.e7)([m.default], () => t.isOwner(m.default.getId()), [t]),
+        U = (0, u.e7)([O.Z], () => O.Z.can(t.isThread() ? p.Plq.MANAGE_THREADS : p.Plq.MANAGE_CHANNELS, t), [t]),
+        j = (0, u.e7)([_.Z], () => {
             var e;
             return null != (e = _.Z.getCount(t.id)) ? e : 0;
         }, [t.id]),
@@ -82,7 +82,7 @@ let v = (e) => {
                     onClick: i,
                 });
         }
-        return (0, l.jsx)(u.Modal, {
+        return (0, l.jsx)(r.Modal, {
             title: h.intl.string(h.t["TY/V+P"]),
             onClose: n,
             subtitle: e,
@@ -129,7 +129,7 @@ let v = (e) => {
                         deleteText: h.intl.string(h.t["8D8Rsb"]),
                         deleteBody: h.intl.format(h.t.a6Gz9P, { channelName: P }),
                     };
-    return (0, l.jsx)(u.Modal, {
+    return (0, l.jsx)(r.Modal, {
         size: "sm",
         onClose: n,
         transitionState: C,

@@ -7,8 +7,8 @@ var r = n(951288),
     s = n(647438),
     o = n(120356),
     a = n.n(o),
-    i = n(442837),
-    l = n(82659),
+    i = n(793030),
+    l = n(442837),
     c = n(780384),
     d = n(481060),
     u = n(607070),
@@ -23,7 +23,7 @@ var r = n(951288),
     j = n(667105),
     v = n(981631),
     C = n(388032),
-    y = n(638640);
+    y = n(301889);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,14 +56,14 @@ function E(e) {
         N = (0, h.KX)(),
         A = (0, m.O5)(),
         R = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
-        B = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
+        B = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         k = (0, j.g2)({
             useReducedMotion: B,
             className: y.colorTransition,
         }),
         I = w.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
         q = (0, f.Bz)(n),
-        D = (0, i.e7)([p.Z], () => p.Z.getState().theme),
+        D = (0, l.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, c.wj)(D) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: V, startingConsoleQuest: Q } = (0, h.GI)({
             questId: n.id,
@@ -80,7 +80,7 @@ function E(e) {
                 k.stopAnimation(), P(e);
             },
         });
-    return (0, r.jsx)(l.Modal, {
+    return (0, r.jsx)(i.Modal, {
         transitionState: b,
         onClose: E,
         title: C.intl.string(C.t.W5lmKi),

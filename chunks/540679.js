@@ -1,9 +1,9 @@
 n.d(e, { default: () => _ });
 var i = n(951288),
     l = n(647438),
-    a = n(442837),
-    d = n(538534),
-    r = n(82659),
+    a = n(793030),
+    d = n(442837),
+    r = n(538534),
     u = n(481060),
     s = n(87051),
     o = n(776568),
@@ -13,7 +13,7 @@ var i = n(951288),
 let _ = (t) => {
     var e;
     let { onClose: n, channelId: _, applicationId: m, transitionState: p } = t,
-        O = (0, a.e7)([c.ZP], () => c.ZP.getChannelMuteConfig(null, _)),
+        O = (0, d.e7)([c.ZP], () => c.ZP.getChannelMuteConfig(null, _)),
         v = l.useMemo(
             () =>
                 (0, o.k)().map((t) => {
@@ -25,7 +25,7 @@ let _ = (t) => {
                 }),
             [],
         );
-    return (0, i.jsx)(r.Modal, {
+    return (0, i.jsx)(a.Modal, {
         transitionState: p,
         onClose: n,
         title: h.intl.string(h.t.NkwaBg),
@@ -37,7 +37,7 @@ let _ = (t) => {
             },
         ],
         children: (0, i.jsx)(u.xJW, {
-            children: (0, i.jsx)(d.E, {
+            children: (0, i.jsx)(r.E, {
                 options: v,
                 onChange: (t) => {
                     s.Z.updateAppDMOverrideSettings(null, _, m, (0, o.u9)(t), g.ZB.Muted);

@@ -1,40 +1,37 @@
-e.d(i, { default: () => h }), e(388685);
+e.d(i, { default: () => A }), e(388685);
 var n = e(951288),
-    s = e(647438),
-    a = e(257465),
-    l = e(369585),
-    r = e(103866),
-    c = e(213734),
-    d = e(481060),
-    o = e(355467),
-    C = e(100527),
-    _ = e(906732),
-    u = e(313201),
-    N = e(740492),
-    I = e(626135),
-    S = e(171246),
-    E = e(225715),
-    x = e(635840),
-    A = e(981631),
-    O = e(388032),
-    T = e(304495);
-function h(t) {
-    let { transitionState: i, application: e, storeListing: h, subscription: p, guild: m, onClose: P } = t,
-        g = (0, u.Dt)(),
-        { analyticsLocations: j } = (0, _.ZP)(C.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+    a = e(647438),
+    s = e(793030),
+    l = e(481060),
+    r = e(355467),
+    c = e(100527),
+    d = e(906732),
+    o = e(313201),
+    C = e(740492),
+    _ = e(626135),
+    u = e(171246),
+    N = e(225715),
+    I = e(635840),
+    S = e(981631),
+    x = e(388032),
+    E = e(304495);
+function A(t) {
+    let { transitionState: i, application: e, storeListing: A, subscription: O, guild: T, onClose: p } = t,
+        h = (0, o.Dt)(),
+        { analyticsLocations: m } = (0, d.ZP)(c.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
-            cancelSubscription: L,
-            error: f,
-            submitting: v,
+            cancelSubscription: P,
+            error: g,
+            submitting: j,
         } = ((t) => {
-            let [i, e] = s.useState(!1),
-                [n, a] = s.useState(null);
+            let [i, e] = a.useState(!1),
+                [n, s] = a.useState(null);
             return {
                 cancelSubscription: async (i) => {
                     try {
-                        return e(!0), await o.EO(i, t), !0;
+                        return e(!0), await r.EO(i, t), !0;
                     } catch (t) {
-                        a(t);
+                        s(t);
                     } finally {
                         e(!1);
                     }
@@ -42,71 +39,71 @@ function h(t) {
                 error: n,
                 submitting: i,
             };
-        })(j),
-        [R, U] = s.useState(0),
-        b = async () => {
-            (await L(p.id)) && (N.ZP.disableApplicationSubscriptionCancellationSurvey ? P() : U(1));
+        })(m),
+        [L, f] = a.useState(0),
+        v = async () => {
+            (await P(O.id)) && (C.ZP.disableApplicationSubscriptionCancellationSurvey ? p() : f(1));
         };
-    s.useEffect(() => {
-        I.default.track(A.rMx.CANCELLATION_FLOW_STARTED, { location_stack: j });
-    }, [j]);
-    let k = (0, S.KW)(h.skuFlags);
-    return (0, n.jsx)(a.IX, {
-        onClose: P,
+    a.useEffect(() => {
+        _.default.track(S.rMx.CANCELLATION_FLOW_STARTED, { location_stack: m });
+    }, [m]);
+    let R = (0, u.KW)(A.skuFlags);
+    return (0, n.jsx)(s.IX, {
+        onClose: p,
         transitionState: i,
-        "aria-labelledby": g,
-        children: (0, n.jsxs)(d.MyZ, {
-            activeSlide: R,
+        "aria-labelledby": h,
+        children: (0, n.jsxs)(l.MyZ, {
+            activeSlide: L,
             width: 480,
             children: [
-                (0, n.jsx)(d.Mi4, {
+                (0, n.jsx)(l.Mi4, {
                     id: 0,
                     children: (0, n.jsxs)("div", {
-                        className: T.slideContainer,
+                        className: E.slideContainer,
                         children: [
-                            null != f ? (0, n.jsx)(d.kzN, { children: f.message }) : null,
-                            (0, n.jsxs)(r.f, {
+                            null != g ? (0, n.jsx)(l.kzN, { children: g.message }) : null,
+                            (0, n.jsxs)(s.fef, {
                                 children: [
-                                    (0, n.jsx)(d.LZC, { size: 16 }),
-                                    (0, n.jsxs)(E.q$, {
+                                    (0, n.jsx)(l.LZC, { size: 16 }),
+                                    (0, n.jsxs)(N.q$, {
                                         children: [
-                                            (0, n.jsx)(E.CW, { application: e }),
-                                            (0, n.jsx)(E.r0, {
-                                                id: g,
-                                                children: O.intl.format(O.t.irka9v, { tier: h.summary }),
+                                            (0, n.jsx)(N.CW, { application: e }),
+                                            (0, n.jsx)(N.r0, {
+                                                id: h,
+                                                children: x.intl.format(x.t.irka9v, { tier: A.summary }),
                                             }),
-                                            (0, n.jsx)(E.s$, {}),
-                                            (0, n.jsx)(E.K9, {
-                                                title: O.intl.string(O.t.LZunzc),
-                                                description: k
-                                                    ? O.intl.formatToPlainString(O.t["+HdfBw"], {
-                                                          timestamp: p.currentPeriodEnd.getTime(),
+                                            (0, n.jsx)(N.s$, {}),
+                                            (0, n.jsx)(N.K9, {
+                                                title: x.intl.string(x.t.LZunzc),
+                                                description: R
+                                                    ? x.intl.formatToPlainString(x.t["+HdfBw"], {
+                                                          timestamp: O.currentPeriodEnd.getTime(),
                                                       })
-                                                    : O.intl.formatToPlainString(O.t.qxiBnZ, {
-                                                          timestamp: p.currentPeriodEnd.getTime(),
-                                                          guildName: null == m ? void 0 : m.name,
+                                                    : x.intl.formatToPlainString(x.t.qxiBnZ, {
+                                                          timestamp: O.currentPeriodEnd.getTime(),
+                                                          guildName: null == T ? void 0 : T.name,
                                                       }),
                                             }),
-                                            (0, n.jsx)(E.G9, {
-                                                applicationId: h.applicationId,
-                                                storeListingBenefits: h.benefits,
+                                            (0, n.jsx)(N.G9, {
+                                                applicationId: A.applicationId,
+                                                storeListingBenefits: A.benefits,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, n.jsx)(c.m, {
-                                children: (0, n.jsx)(l.G, {
+                            (0, n.jsx)(s.mzw, {
+                                children: (0, n.jsx)(s.Go$, {
                                     actions: [
                                         {
-                                            loading: v,
-                                            onClick: b,
-                                            text: O.intl.string(O.t.KSqyfX),
+                                            loading: j,
+                                            onClick: v,
+                                            text: x.intl.string(x.t.KSqyfX),
                                             variant: "critical-primary",
                                         },
                                         {
-                                            onClick: P,
-                                            text: O.intl.string(O.t["05jDxs"]),
+                                            onClick: p,
+                                            text: x.intl.string(x.t["05jDxs"]),
                                             variant: "icon-only",
                                         },
                                     ],
@@ -116,14 +113,14 @@ function h(t) {
                         ],
                     }),
                 }),
-                (0, n.jsx)(d.Mi4, {
+                (0, n.jsx)(l.Mi4, {
                     id: 1,
                     children: (0, n.jsx)("div", {
-                        className: T.slideContainer,
-                        children: (0, n.jsx)(x.Z, {
+                        className: E.slideContainer,
+                        children: (0, n.jsx)(I.Z, {
                             application: e,
-                            subscriptionId: p.id,
-                            onClose: P,
+                            subscriptionId: O.id,
+                            onClose: p,
                         }),
                     }),
                 }),

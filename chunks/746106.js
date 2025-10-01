@@ -1,4 +1,4 @@
-n.d(t, { w: () => D }), n(388685), n(539854);
+n.d(t, { w: () => L }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(631562),
@@ -26,22 +26,24 @@ var r = n(951288),
     C = n(998502),
     N = n(264783),
     R = n(892071),
-    P = n(388032);
-function w(e, t, n, r) {
+    P = n(490340),
+    w = n(388032);
+function D(e, t, n, r) {
     let o = i.useContext(_.Z),
         s = i.useCallback(
             () => ({
                 i18n: {
-                    SPINNER_LOADING_LABEL: P.intl.string(P.t.ZTNur6),
-                    BUTTON_LOADING_STARTED_LABEL: P.intl.string(P.t.pfChQk),
-                    BUTTON_LOADING_FINISHED_LABEL: P.intl.string(P.t.SVPara),
-                    CLOSE_BUTTON_LABEL: P.intl.string(P.t.cpT0Cg),
-                    PLAY_BUTTON_LABEL: P.intl.string(P.t.RscU7O),
-                    PAUSE_BUTTON_LABEL: P.intl.string(P.t.ZcgDJS),
-                    NEW: P.intl.string(P.t.y2b7CA),
-                    BETA: P.intl.string(P.t.oW0eUV),
-                    EARLY_ACCESS: P.intl.string(P.t.EYxi0t),
-                    BILLING_TRIAL_FREE_TRIAL_TEXT: P.intl.string(P.t.IBYG5e),
+                    SPINNER_LOADING_LABEL: w.intl.string(w.t.ZTNur6),
+                    BUTTON_LOADING_STARTED_LABEL: w.intl.string(w.t.pfChQk),
+                    BUTTON_LOADING_FINISHED_LABEL: w.intl.string(w.t.SVPara),
+                    CLOSE_BUTTON_LABEL: w.intl.string(w.t.cpT0Cg),
+                    PLAY_BUTTON_LABEL: w.intl.string(w.t.RscU7O),
+                    PAUSE_BUTTON_LABEL: w.intl.string(w.t.ZcgDJS),
+                    NEW: w.intl.string(w.t.y2b7CA),
+                    BETA: w.intl.string(w.t.oW0eUV),
+                    EARLY_ACCESS: w.intl.string(w.t.EYxi0t),
+                    BILLING_TRIAL_FREE_TRIAL_TEXT: w.intl.string(w.t.IBYG5e),
+                    MODAL_DONT_SHOW_AGAIN: w.intl.string(P.default.m3Vfcn),
                 },
                 theme: e,
                 saturation: t,
@@ -59,12 +61,12 @@ function w(e, t, n, r) {
             function e() {
                 u(s);
             }
-            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
+            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), w.intl.onLocaleChange(e);
         }, [s]),
         l
     );
 }
-function D(e) {
+function L(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
         [c] = i.useState(() => C.ZP.getEnableHardwareAcceleration()),
@@ -72,7 +74,7 @@ function D(e) {
             locale: _,
             theme: y,
             focused: P,
-            currentWindow: D,
+            currentWindow: w,
             fontScale: L,
             fontScaleClass: x,
             keyboardModeEnabled: j,
@@ -105,7 +107,7 @@ function D(e) {
             };
         }),
         H = f.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
-        Y = (0, m.Z)(D, __OVERLAY__ || P),
+        Y = (0, m.Z)(w, __OVERLAY__ || P),
         W = 0;
     1 !== M && (W = (0, u.OdO)(W, u.bgu.REDUCE_SATURATION_ENABLED));
     let K = (0, N.A)(),
@@ -120,7 +122,7 @@ function D(e) {
             isPopoutWindow: o,
             isSearchDesktopTopLevelEnabled: ee,
         }),
-        en = w(
+        en = D(
             y,
             M,
             i.useMemo(() => {

@@ -5,8 +5,8 @@ var t = r(951288),
     o = r.n(n),
     c = r(392711),
     l = r.n(c),
-    g = r(442837),
-    s = r(82659),
+    g = r(793030),
+    s = r(442837),
     _ = r(481060),
     m = r(224706),
     p = r(812206),
@@ -45,7 +45,7 @@ function v(e) {
 }
 let y = (e) => {
     let { game: a } = e,
-        r = (0, g.e7)([p.Z], () => p.Z.getApplication(a.applicationId));
+        r = (0, s.e7)([p.Z], () => p.Z.getApplication(a.applicationId));
     return (0, t.jsx)(_.ua7, {
         text: a.name,
         children: (e) => {
@@ -102,9 +102,9 @@ function j(e) {
         i.useEffect(() => {
             a.length > 1 && m.Z.getDetectableGamesSupplemental(a);
         }, [a]);
-    let c = (0, g.e7)([f.Z], () => a.some((e) => f.Z.isFetching(e))),
-        _ = (0, g.e7)([f.Z], () => a.some((e) => f.Z.didFetchingFail(e))),
-        p = (0, g.Wu)([f.Z], () =>
+    let c = (0, s.e7)([f.Z], () => a.some((e) => f.Z.isFetching(e))),
+        _ = (0, s.e7)([f.Z], () => a.some((e) => f.Z.didFetchingFail(e))),
+        p = (0, s.Wu)([f.Z], () =>
             a
                 .map((e) => f.Z.getGame(e))
                 .filter((e) => null != e)
@@ -125,7 +125,7 @@ function j(e) {
           })
         : (!c && 0 === p.length) || _
           ? null
-          : (0, t.jsx)(s.Modal, {
+          : (0, t.jsx)(g.Modal, {
                 title: I.intl.string(I.t["D+DkEB"]),
                 transitionState: n,
                 onClose: r,

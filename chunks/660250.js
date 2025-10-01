@@ -1,8 +1,8 @@
 r.r(t), r.d(t, { default: () => j });
 var n = r(951288),
     o = r(647438),
-    c = r(442837),
-    l = r(82659),
+    c = r(793030),
+    l = r(442837),
     i = r(481060),
     s = r(959457),
     a = r(571826),
@@ -16,7 +16,7 @@ var n = r(951288),
 let j = function (e) {
     var t, r;
     let { transitionState: j, streamKey: h, channelId: m, onClose: g } = e,
-        v = (0, c.e7)([s.Z], () => {
+        v = (0, l.e7)([s.Z], () => {
             var e;
             return null == (e = s.Z.getSecureFramesState(h)) ? void 0 : e.epochAuthenticator;
         }),
@@ -71,7 +71,7 @@ let j = function (e) {
             ],
         });
     return (0, n.jsx)(
-        l.Modal,
+        c.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

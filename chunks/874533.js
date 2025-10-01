@@ -1,35 +1,34 @@
-i.d(e, { default: () => u });
+i.d(e, { default: () => d });
 var n = i(951288),
     s = i(979554),
-    a = i(257465),
-    r = i(667202),
-    o = i(481060),
-    c = i(892001),
-    l = i(594174),
-    p = i(228168),
-    d = i(388032);
-function u(t) {
+    a = i(793030),
+    r = i(481060),
+    o = i(892001),
+    c = i(594174),
+    l = i(228168),
+    p = i(388032);
+function d(t) {
     let { onClose: e, product: i } = t,
-        u = l.default.getCurrentUser(),
-        E = "6/4";
+        d = c.default.getCurrentUser(),
+        u = "6/4";
     switch (i.type) {
         case s.Z.NAMEPLATE:
         case s.Z.AVATAR_DECORATION:
-            E = "16/9";
+            u = "16/9";
             break;
         case s.Z.BUNDLE:
         case s.Z.PROFILE_EFFECT:
         default:
-            E = "6/4";
+            u = "6/4";
     }
-    return (0, n.jsx)(r.ExpressiveModal, {
-        transitionState: a.Dv.ENTERED,
-        title: d.intl.string(d.t.L4Wg3N),
-        subtitle: d.intl.string(d.t.SXb73N),
+    return (0, n.jsx)(a.ExpressiveModal, {
+        transitionState: a.Dvm.ENTERED,
+        title: p.intl.string(p.t.L4Wg3N),
+        subtitle: p.intl.string(p.t.SXb73N),
         graphic: {
             type: "dynamic",
-            component: o.AX$.COLLECTIBLES_PREVIEW,
-            aspectRatio: E,
+            component: r.AX$.COLLECTIBLES_PREVIEW,
+            aspectRatio: u,
             props: {
                 product: i,
                 forCollectedModal: !0,
@@ -38,12 +37,12 @@ function u(t) {
         onClose: e,
         actions: [
             {
-                text: d.intl.string(d.t.TxBQzM),
+                text: p.intl.string(p.t.TxBQzM),
                 onClick: () => {
-                    null != u &&
-                        (0, c.openUserProfileModal)({
-                            userId: u.id,
-                            section: p.oh.WISHLIST,
+                    null != d &&
+                        (0, o.openUserProfileModal)({
+                            userId: d.id,
+                            section: l.oh.WISHLIST,
                         }),
                         e();
                 },
@@ -51,7 +50,7 @@ function u(t) {
             },
             {
                 variant: "primary",
-                text: d.intl.string(d.t.tM4PUl),
+                text: p.intl.string(p.t.tM4PUl),
                 onClick: e,
             },
         ],

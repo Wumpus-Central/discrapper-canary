@@ -1,9 +1,9 @@
 n.d(t, { Z: () => O });
 var r = n(951288);
 n(647438);
-var i = n(704215),
-    a = n(952265),
-    o = n(82659),
+var i = n(793030),
+    a = n(704215),
+    o = n(952265),
     s = n(231757),
     l = n(266454),
     c = n(131951),
@@ -68,7 +68,7 @@ let b = "game_console_alert_modal",
     y = "game_console_ptt_alert_modal",
     O = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT))
+            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(a.z.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
                 [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
@@ -79,11 +79,11 @@ let b = "game_console_alert_modal",
                 ? Promise.resolve()
                 : new Promise((e) => {
                       let n = () => {
-                              (0, l.Q3)(i.z.CONSOLE_PTT_DISABLE_ALERT), e();
+                              (0, l.Q3)(a.z.CONSOLE_PTT_DISABLE_ALERT), e();
                           },
                           s = (e) =>
                               (0, r.jsx)(
-                                  o.Modal,
+                                  i.Modal,
                                   E(m({}, e), {
                                       title: t,
                                       subtitle: p.intl.string(p.t.bL21zs),
@@ -95,15 +95,15 @@ let b = "game_console_alert_modal",
                                       ],
                                   }),
                               );
-                      (0, a.nf)(y) ? (0, a.o)(y, (e) => s(e)) : (0, a.ZD)(async () => (e) => s(e), { modalKey: y });
+                      (0, o.nf)(y) ? (0, o.o)(y, (e) => s(e)) : (0, o.ZD)(async () => (e) => s(e), { modalKey: y });
                   });
         },
         showSelfDismissableAlert(e) {
-            let { title: t, body: n, errorCodeMessage: i, reconnectPlatformType: l } = e,
+            let { title: t, body: n, errorCodeMessage: a, reconnectPlatformType: l } = e,
                 c = (0, r.jsx)(d.t, {
                     body: n,
-                    errorCodeMessage: i,
-                    dismissCallback: () => (0, a.Mr)(b),
+                    errorCodeMessage: a,
+                    dismissCallback: () => (0, o.Mr)(b),
                 });
             function h() {
                 null != l &&
@@ -116,7 +116,7 @@ let b = "game_console_alert_modal",
             }
             let g = (e) =>
                 (0, r.jsx)(
-                    o.Modal,
+                    i.Modal,
                     E(m({}, e), {
                         title: t,
                         actions: [
@@ -128,6 +128,6 @@ let b = "game_console_alert_modal",
                         children: c,
                     }),
                 );
-            (0, a.nf)(b) ? (0, a.o)(b, (e) => g(e)) : (0, a.ZD)(async () => (e) => g(e), { modalKey: b });
+            (0, o.nf)(b) ? (0, o.o)(b, (e) => g(e)) : (0, o.ZD)(async () => (e) => g(e), { modalKey: b });
         },
     };

@@ -1,8 +1,8 @@
 e.d(n, { default: () => g }), e(388685);
 var l = e(951288),
     i = e(647438),
-    a = e(442837),
-    s = e(82659),
+    a = e(793030),
+    s = e(442837),
     r = e(481060),
     o = e(91176),
     u = e(493773),
@@ -20,7 +20,7 @@ function g(t) {
     let { guildId: g, userId: w, anaylticsLocations: x, transitionState: C, onClose: D } = t,
         { analyticsLocations: k } = (0, c.ZP)(),
         T = null != (e = null != (n = null == x ? void 0 : x[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
-        _ = (0, a.e7)([p.default], () => p.default.getUser(w), [w]),
+        _ = (0, s.e7)([p.default], () => p.default.getUser(w), [w]),
         [S, Z] = (0, f.ZP)(w, g),
         [E, P] = i.useState(!1),
         U = i.useCallback(async () => {
@@ -53,7 +53,7 @@ function g(t) {
     }),
     null == _ || null == g)
         ? null
-        : (0, l.jsx)(s.Modal, {
+        : (0, l.jsx)(a.Modal, {
               transitionState: C,
               onClose: D,
               title: b.intl.string(b.t["+ZD3oq"]),

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    a = n(442837),
-    o = n(82659),
+    a = n(793030),
+    o = n(442837),
     c = n(481060),
     d = n(239091),
     u = n(479531),
@@ -77,7 +77,7 @@ async function R(e, t, n) {
         let e = new u.Z(t);
         (0, c.h7j)((t) =>
             (0, r.jsx)(
-                o.Modal,
+                a.Modal,
                 w(P({}, t), {
                     title: I.intl.string(I.t.R0RpRU),
                     actions: [
@@ -98,16 +98,16 @@ async function R(e, t, n) {
     }
 }
 function D(e) {
-    let { member: t, guildId: l, roleId: a, locked: u } = e,
+    let { member: t, guildId: l, roleId: o, locked: u } = e,
         g = i.useRef(null),
         p = i.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function x(e) {
         if ((e.stopPropagation(), !u)) {
-            if (e.shiftKey) return void R(t, l, a);
-            let n = v.Z.getRole(a);
+            if (e.shiftKey) return void R(t, l, o);
+            let n = v.Z.getRole(o);
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
-                    o.Modal,
+                    a.Modal,
                     w(P({}, e), {
                         title: I.intl.string(I.t["7sFNfX"]),
                         subtitle: I.intl.format(I.t.scORUl, {
@@ -124,7 +124,7 @@ function D(e) {
                                 text: I.intl.string(I.t.N86XcH),
                                 variant: "critical-primary",
                                 onClick: () => {
-                                    R(t, l, a), e.onClose();
+                                    R(t, l, o), e.onClose();
                                 },
                             },
                         ],
@@ -165,7 +165,7 @@ function D(e) {
                 targetElementRef: g,
                 userId: t.id,
                 guildId: l,
-                roleId: a,
+                roleId: o,
                 position: "left",
                 children: (e) =>
                     (0, r.jsxs)(
@@ -318,14 +318,14 @@ function L(e) {
     });
 }
 function k(e) {
-    let { guild: t, role: l, locked: o, setSelectedSection: d } = e,
+    let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
         [u, m] = i.useState(""),
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
         { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
-        j = l.managed || o,
+        j = l.managed || a,
         v = (0, _.e)(t.id, l.id),
         C =
-            (0, a.e7)([b.Z], () => {
+            (0, o.e7)([b.Z], () => {
                 var e, n;
                 return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
             }) > v.length,

@@ -1,8 +1,8 @@
 e.d(n, { default: () => _ }), e(388685);
 var l = e(951288),
     r = e(647438),
-    i = e(442837),
-    a = e(82659),
+    i = e(793030),
+    a = e(442837),
     u = e(481060),
     s = e(933557),
     c = e(592125),
@@ -13,7 +13,7 @@ var l = e(951288),
     E = e(388032);
 let N = (t) => {
     let { guildId: n, channel: e, onSelectChannel: r } = t,
-        a = (0, i.Wu)(
+        i = (0, a.Wu)(
             [d.ZP],
             () =>
                 d.ZP.getChannels(n)
@@ -30,12 +30,12 @@ let N = (t) => {
     return (0, l.jsx)(u.VcW, {
         required: !0,
         value: null == e ? void 0 : e.id,
-        options: a.map((t) => ({
+        options: i.map((t) => ({
             value: t.id,
             label: (0, s.F6)(t, o.default, j.Z, !0),
         })),
         onChange: (t) => {
-            let n = a.find((n) => n.id === t);
+            let n = i.find((n) => n.id === t);
             r(null != n ? n : void 0);
         },
         placeholder: E.intl.string(E.t["N+T69/"]),
@@ -45,11 +45,11 @@ function _(t) {
     let { action: n, triggerType: e, guildId: s, isEdit: d, onEditChannel: j, onClose: o, transitionState: _ } = t,
         [S, C] = r.useState(n.metadata.channelId),
         [h, I] = r.useState(null),
-        L = (0, i.e7)([c.Z], () => c.Z.getChannel(S), [S]),
+        L = (0, a.e7)([c.Z], () => c.Z.getChannel(S), [S]),
         g = (0, A.c)(n.type, n, e);
     if (null == g) return null;
     let { headerText: T } = g;
-    return (0, l.jsx)(a.Modal, {
+    return (0, l.jsx)(i.Modal, {
         onClose: o,
         transitionState: _,
         title: T,

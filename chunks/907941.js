@@ -5,10 +5,10 @@ var i = n(951288),
     r = n.n(l),
     a = n(913527),
     o = n.n(a),
-    d = n(442837),
-    c = n(692547),
-    u = n(538534),
-    h = n(82659),
+    d = n(793030),
+    c = n(442837),
+    u = n(692547),
+    h = n(538534),
     g = n(481060),
     m = n(87051),
     x = n(798140),
@@ -72,7 +72,7 @@ function U(e) {
 }
 function k(e) {
     let { label: t, channelId: n } = e,
-        [s, l] = (0, d.Wu)([N.Z], () => {
+        [s, l] = (0, c.Wu)([N.Z], () => {
             let e = N.Z.getChannel(n);
             return [e, (null == e ? void 0 : e.parent_id) != null ? N.Z.getChannel(e.parent_id) : null];
         });
@@ -139,7 +139,7 @@ function V(e) {
                             ],
                         })
                       : null,
-                  (0, i.jsx)(g.$i$, {}),
+                  (0, i.jsx)(g.izJ, {}),
               ],
           });
 }
@@ -151,7 +151,7 @@ function W(e) {
             (0, i.jsx)(g.xJW, {
                 title: D.intl.string(D.t.lprV7e),
                 className: I.largeSpacing,
-                children: (0, i.jsx)(u.E, {
+                children: (0, i.jsx)(h.E, {
                     disabled: t,
                     value: n,
                     onChange: (e) => l("message_notifications", e, w.UE.notifications(e)),
@@ -172,7 +172,7 @@ function W(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(g.$i$, {}),
+            (0, i.jsx)(g.izJ, {}),
         ],
     });
 }
@@ -292,10 +292,10 @@ function H(e) {
             muted: a,
             setNewChannelOverrides: o,
             latestOverrideId: d,
-            messageNotifications: u,
+            messageNotifications: c,
         } = e,
         h = s.useMemo(() => new Set([...t, ...(0, P.OD)(n)]), [n, t]),
-        m = (0, g.dQu)(c.Z.unsafe_rawColors.GREEN_360).hex(),
+        m = (0, g.dQu)(u.Z.unsafe_rawColors.GREEN_360).hex(),
         p = (e) => {
             let n = new Set(t);
             n.delete(e), o(n);
@@ -312,7 +312,7 @@ function H(e) {
                         guildMuted: a,
                         muted: null != s && (0, x.m$)(s),
                         messageNotifications: null != s ? s.message_notifications : null,
-                        guildMessageNotifications: u,
+                        guildMessageNotifications: c,
                         onDelete: p,
                         checkboxColor: m,
                         autoFocus: t.id === d,
@@ -400,12 +400,12 @@ function H(e) {
 }
 function q(e) {
     let { guildId: t, onClose: n, transitionState: l } = e,
-        r = (0, d.e7)([S.Z], () => S.Z.getCategories(t)),
-        a = (0, d.e7)([E.Z], () => E.Z.getGuild(t)),
-        o = (0, d.e7)([O.Z], () => O.Z.getMemberCount(t)),
+        r = (0, c.e7)([S.Z], () => S.Z.getCategories(t)),
+        a = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
+        o = (0, c.e7)([O.Z], () => O.Z.getMemberCount(t)),
         {
-            suppressEveryone: c,
-            suppressRoles: u,
+            suppressEveryone: u,
+            suppressRoles: h,
             muteEvents: g,
             mobilePush: x,
             muted: v,
@@ -413,7 +413,7 @@ function q(e) {
             messageNotifications: f,
             channelOverrides: N,
             notifyHighlights: C,
-        } = (0, d.cj)([y.ZP], () => ({
+        } = (0, c.cj)([y.ZP], () => ({
             suppressEveryone: y.ZP.isSuppressEveryoneEnabled(t),
             suppressRoles: y.ZP.isSuppressRolesEnabled(t),
             muteEvents: y.ZP.isMuteScheduledEventsEnabled(t),
@@ -439,7 +439,7 @@ function q(e) {
         M = (e, n, i) => {
             m.Z.updateGuildNotificationSettings(t, { [e]: n }, i);
         };
-    return (0, i.jsxs)(h.Modal, {
+    return (0, i.jsxs)(d.Modal, {
         title: D.intl.string(D.t.h850Sk),
         actions: [
             {
@@ -465,8 +465,8 @@ function q(e) {
                 },
             }),
             (0, i.jsx)(Y, {
-                suppressEveryone: c,
-                suppressRoles: u,
+                suppressEveryone: u,
+                suppressRoles: h,
                 handleCheckboxChange: M,
                 notifyHighlights: C,
                 muteEvents: g,

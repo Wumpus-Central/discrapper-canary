@@ -2,8 +2,8 @@ n.d(t, { default: () => x }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(525769),
-    i = n(693789),
-    o = n(82659),
+    i = n(793030),
+    o = n(693789),
     c = n(755721),
     s = n(481060),
     u = n(240872),
@@ -123,7 +123,7 @@ function x(e) {
                 return void u.Z.show({
                     title: h.intl.string(h.t.HMrgcn),
                     body: h.intl.string(h.t["Wxa/j4"]),
-                    confirmColor: i.Tt.RED,
+                    confirmColor: o.Tt.RED,
                     confirmText: h.intl.string(h.t.TzJA4u),
                     confirmVariant: "critical-primary",
                     cancelText: h.intl.string(h.t["2BR5R0"]),
@@ -220,7 +220,7 @@ function x(e) {
             ],
             [en, V],
         );
-    return (0, r.jsx)(o.Modal, {
+    return (0, r.jsx)(i.Modal, {
         transitionState: n,
         onClose: b,
         title: h.intl.string(h.t["GD/8X1"]),

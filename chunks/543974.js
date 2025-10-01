@@ -4,8 +4,8 @@ var i = n(951288),
     l = n(512722),
     s = n.n(l),
     o = n(990547),
-    a = n(442837),
-    c = n(82659),
+    a = n(793030),
+    c = n(442837),
     d = n(755721),
     u = n(481060),
     f = n(668781),
@@ -81,11 +81,11 @@ function x(e) {
         l,
         d,
         { channel: p, platform: v, transitionState: b, onClose: j } = e,
-        x = (0, a.e7)([h.Z], () => h.Z.getDevicesForPlatform(v), [v]),
-        I = (0, a.e7)([h.Z], () => h.Z.getLastSelectedDeviceByPlatform(v)),
+        x = (0, c.e7)([h.Z], () => h.Z.getDevicesForPlatform(v), [v]),
+        I = (0, c.e7)([h.Z], () => h.Z.getLastSelectedDeviceByPlatform(v)),
         w = r.useMemo(() => Object.values(x), [x]),
-        N = (0, a.e7)([h.Z], () => h.Z.getFetchingDevices(v)),
-        P = (0, a.e7)([h.Z], () => {
+        N = (0, c.e7)([h.Z], () => h.Z.getFetchingDevices(v)),
+        P = (0, c.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getAwaitingRemoteSessionInfo()) ? void 0 : e.deviceId;
         }),
@@ -139,7 +139,7 @@ function x(e) {
                         D(e), (0, m.bp)(v, e);
                     },
                 }))),
-        (0, i.jsx)(c.Modal, {
+        (0, i.jsx)(a.Modal, {
             title: n,
             subtitle: l,
             actions: d,

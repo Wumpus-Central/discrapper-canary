@@ -1,8 +1,8 @@
 i.d(n, { default: () => w }), i(953529), i(539854);
 var a = i(951288),
     l = i(647438),
-    o = i(442837),
-    t = i(82659),
+    o = i(793030),
+    t = i(442837),
     s = i(481060),
     r = i(596454),
     c = i(471445),
@@ -27,10 +27,10 @@ var a = i(951288),
     S = i(557401);
 let k = (e) => {
         var n;
-        let { channelData: i, onClose: l, trackOptionClick: t } = e,
-            d = (0, o.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
-            u = (0, o.e7)([g.Z], () => null != d && g.Z.can(I.Pl.VIEW_CHANNEL, d)),
-            _ = (0, o.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
+        let { channelData: i, onClose: l, trackOptionClick: o } = e,
+            d = (0, t.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
+            u = (0, t.e7)([g.Z], () => null != d && g.Z.can(I.Pl.VIEW_CHANNEL, d)),
+            _ = (0, t.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
                 i.emoji_id,
             ]),
             p = null != i.emoji_name ? h.ZP.getByName(h.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
@@ -39,7 +39,7 @@ let k = (e) => {
             ? (0, a.jsxs)(s.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      t(), l(), (0, j.XU)(d.guild_id, d.id);
+                      o(), l(), (0, j.XU)(d.guild_id, d.id);
                   },
                   children: [
                       null != _ || null != p
@@ -84,12 +84,12 @@ let k = (e) => {
     w = (e) => {
         var n;
         let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
-            h = (0, o.e7)([N.Z], () => N.Z.getGuild(c)),
+            h = (0, t.e7)([N.Z], () => N.Z.getGuild(c)),
             {
                 welcomeScreen: j,
                 fetching: x,
                 hasError: g,
-            } = (0, o.cj)([Z.Z], () => ({
+            } = (0, t.cj)([Z.Z], () => ({
                 welcomeScreen: Z.Z.get(c),
                 fetching: Z.Z.isFetching(),
                 hasError: Z.Z.hasError(),
@@ -136,7 +136,7 @@ let k = (e) => {
         return null == h
             ? null
             : null == j
-              ? (0, a.jsx)(t.Modal, {
+              ? (0, a.jsx)(o.Modal, {
                     transitionState: r,
                     "aria-label": T.intl.string(T.t.ZTNur6),
                     title: T.intl.string(T.t.ZTNur6),
@@ -144,7 +144,7 @@ let k = (e) => {
                     actions: [],
                     children: (0, a.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
                 })
-              : (0, a.jsx)(t.Modal, {
+              : (0, a.jsx)(o.Modal, {
                     transitionState: r,
                     "aria-labelledby": C,
                     actions: [

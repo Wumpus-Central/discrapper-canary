@@ -3,8 +3,8 @@ var n = l(951288),
     r = l(647438),
     a = l(913527),
     i = l.n(a),
-    s = l(442837),
-    o = l(82659),
+    s = l(793030),
+    o = l(442837),
     u = l(481060),
     c = l(471445),
     d = l(313201),
@@ -233,11 +233,11 @@ function v(e) {
     let { transitionState: t, onClose: l, searchContext: a } = e,
         i = (0, d.Dt)(),
         y = r.useMemo(() => (0, F.s5)(a), [a]),
-        S = (0, s.e7)([h.Z, x.Z], () => {
+        S = (0, o.e7)([h.Z, x.Z], () => {
             let e = h.Z.getChannel(x.Z.getChannelId());
             return null != e ? (0, F.nl)(e) : "general";
         }),
-        v = (0, s.e7)([g.default], () => {
+        v = (0, o.e7)([g.default], () => {
             let e = g.default.getCurrentUser();
             return null != e ? e.username : E.intl.string(E.t.cqpybG);
         }),
@@ -399,7 +399,7 @@ function v(e) {
         eH = r.useCallback(() => {
             P && w(), k && X(), A && eu(), M && eI(), el(), eE(), eO();
         }, [P, k, el, A, eE, w, X, eu, M, eI, eO]);
-    return (0, n.jsxs)(o.Modal, {
+    return (0, n.jsxs)(s.Modal, {
         transitionState: t,
         onClose: l,
         "aria-labelledby": i,

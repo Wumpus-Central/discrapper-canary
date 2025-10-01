@@ -1,8 +1,8 @@
 r.d(t, { default: () => h }), r(388685), r(781311);
 var a = r(951288),
     n = r(647438),
-    i = r(442837),
-    l = r(82659),
+    i = r(793030),
+    l = r(442837),
     o = r(481060),
     s = r(794433),
     c = r(881052),
@@ -19,7 +19,7 @@ var a = r(951288),
     R = r(98678);
 function h(e) {
     let { transitionState: t, onClose: r, roleId: h, guildId: y } = e,
-        k = (0, i.e7)([w.Z], () => w.Z.getRole(h), [h]),
+        k = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
         [T, C] = n.useState(""),
         [M, v] = n.useState({}),
         [E, Z] = n.useState(!1),
@@ -83,7 +83,7 @@ function h(e) {
         members: A,
         getRichTag: U,
         maxPendingRows: _.ey,
-        children: (0, a.jsx)(l.Modal, {
+        children: (0, a.jsx)(i.Modal, {
             onClose: r,
             transitionState: t,
             title: p.intl.string(p.t["ZYOK4+"]),

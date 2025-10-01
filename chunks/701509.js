@@ -1,4 +1,4 @@
-n.d(e, { default: () => S }), n(388685);
+n.d(e, { default: () => C }), n(388685);
 var l = n(951288),
     r = n(647438),
     a = n(512722),
@@ -6,26 +6,25 @@ var l = n(951288),
     o = n(913527),
     s = n.n(o),
     c = n(990547),
-    u = n(442837),
-    d = n(667202),
-    f = n(82659),
-    E = n(749210),
-    p = n(168107),
-    A = n(480916),
-    _ = n(592125),
-    y = n(944486),
-    h = n(594174),
-    m = n(626135),
-    b = n(63063),
-    g = n(771308),
-    v = n(758119),
-    T = n(622822),
-    G = n(13430),
-    O = n(723359),
-    R = n(981631),
-    x = n(388032),
-    N = n(736056);
-function C(t) {
+    u = n(793030),
+    d = n(442837),
+    f = n(749210),
+    E = n(168107),
+    p = n(480916),
+    A = n(592125),
+    _ = n(944486),
+    y = n(594174),
+    h = n(626135),
+    m = n(63063),
+    b = n(771308),
+    g = n(758119),
+    v = n(622822),
+    T = n(13430),
+    G = n(723359),
+    O = n(981631),
+    R = n(388032),
+    x = n(736056);
+function N(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             l = Object.keys(n);
@@ -50,99 +49,99 @@ function C(t) {
     }
     return t;
 }
-function S(t) {
+function C(t) {
     let { transitionState: e, source: n } = t,
-        a = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        o = (0, u.e7)([y.Z, _.Z], () => _.Z.getChannel(y.Z.getChannelId())),
-        [S, k] = r.useState(null),
-        [j, w] = r.useState(null),
-        [I, D] = r.useState(!1),
-        [M, P] = r.useState(0),
+        a = (0, d.e7)([y.default], () => y.default.getCurrentUser()),
+        o = (0, d.e7)([_.Z, A.Z], () => A.Z.getChannel(_.Z.getChannelId())),
+        [C, S] = r.useState(null),
+        [k, j] = r.useState(null),
+        [w, I] = r.useState(!1),
+        [D, M] = r.useState(0),
+        P = r.useRef(null),
         L = r.useRef(null),
-        U = r.useRef(null),
-        F = n === O.L0.FAMILY_CENTER,
-        Z = (0, T.Kt)() && !F,
-        { verifyAgreementButtonText: V, verifyGateDescription: Y, verifyTitle: W } = (0, T.a1)(n),
-        B = (0, T.$5)(o),
-        q = T.Lj.has(n),
-        K = null != S ? s()().diff(S, "years") : null;
-    function Q() {
-        if (n === O.L0.NSFW_SERVER_INVITE_EMBED) return (0, v.qV)(n), Promise.resolve();
+        U = n === G.L0.FAMILY_CENTER,
+        F = (0, v.Kt)() && !U,
+        { verifyAgreementButtonText: Z, verifyGateDescription: V, verifyTitle: Y } = (0, v.a1)(n),
+        W = (0, v.$5)(o),
+        B = v.Lj.has(n),
+        q = null != C ? s()().diff(C, "years") : null;
+    function K() {
+        if (n === G.L0.NSFW_SERVER_INVITE_EMBED) return (0, g.qV)(n), Promise.resolve();
         let t = null == o ? void 0 : o.getGuildId();
-        return E.Z.nsfwReturnToSafety(t), (0, v.qV)(n), Promise.resolve();
+        return f.Z.nsfwReturnToSafety(t), (0, g.qV)(n), Promise.resolve();
     }
-    async function H() {
-        i()(null != S, "Cannot submit null birthday.");
+    async function Q() {
+        i()(null != C, "Cannot submit null birthday.");
         try {
-            return w(null), D(!0), await (0, g.Av)(S, n);
+            return j(null), I(!0), await (0, b.Av)(C, n);
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) (0, v.C8)(n, e.body.date_of_birth);
+            if (null != e.body && null != e.body.date_of_birth) (0, g.C8)(n, e.body.date_of_birth);
             else {
                 var t;
                 (null == e || null == (t = e.body) ? void 0 : t.username) != null
-                    ? w(x.intl.string(x.t["TGg/2t"]))
-                    : w(null == e ? void 0 : e.body.message),
-                    D(!1);
+                    ? j(R.intl.string(R.t["TGg/2t"]))
+                    : j(null == e ? void 0 : e.body.message),
+                    I(!1);
             }
         }
     }
-    async function J() {
-        if ((i()(null != K, "Cannot submit if we haven't been able to calculate age."), K < 18)) return void P(1);
-        await H();
+    async function H() {
+        if ((i()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18)) return void M(1);
+        await Q();
     }
-    async function X(t) {
-        t.preventDefault(), I || null == S || (await J());
+    async function J(t) {
+        t.preventDefault(), w || null == C || (await H());
     }
-    async function z() {
-        null == (await H()) && P(0);
+    async function X() {
+        null == (await Q()) && M(0);
     }
     r.useEffect(() => {
-        (null == a ? void 0 : a.nsfwAllowed) !== !0 || Z || (0, v.qq)(n);
+        (null == a ? void 0 : a.nsfwAllowed) !== !0 || F || (0, g.qq)(n);
     }),
         r.useEffect(() => {
-            m.default.track(R.rMx.AGE_GATE_ACTION, {
+            h.default.track(O.rMx.AGE_GATE_ACTION, {
                 source: n,
-                action: O.Al.AGE_GATE_OPEN,
+                action: G.Al.AGE_GATE_OPEN,
             });
         }, [n]);
-    let $ = r.useCallback(
+    let z = r.useCallback(
             (t) => {
-                k(t);
+                S(t);
             },
-            [k],
+            [S],
         ),
-        tt = r.useCallback(() => {
+        $ = r.useCallback(() => {
             var t;
-            null == (t = U.current) || t.focus();
-        }, [U]),
-        te = r.useCallback(() => {
-            p.Z.showAgeVerificationGetStartedModal({ entryPoint: A.cU.NSFW_AGE_GATE });
+            null == (t = L.current) || t.focus();
+        }, [L]),
+        tt = r.useCallback(() => {
+            E.Z.showAgeVerificationGetStartedModal({ entryPoint: p.cU.NSFW_AGE_GATE });
         }, []),
-        tn = {
+        te = {
             transitionState: e,
-            onClose: Q,
+            onClose: K,
             graphic: {
                 type: "image",
-                src: N.Z,
+                src: x.Z,
             },
             gradientColor: "blue",
         };
-    return Z
+    return F
         ? (0, l.jsx)(
-              d.ExpressiveModal,
-              C(
+              u.ExpressiveModal,
+              N(
                   {
-                      title: W,
-                      subtitle: Y,
+                      title: Y,
+                      subtitle: V,
                       actions: [
                           {
-                              text: x.intl.string(x.t.f3Pet7),
-                              onClick: Q,
+                              text: R.intl.string(R.t.f3Pet7),
+                              onClick: K,
                               variant: "secondary",
                           },
                           {
-                              text: null != V ? V : x.intl.string(x.t["5B+npK"]),
-                              onClick: te,
+                              text: null != Z ? Z : R.intl.string(R.t["5B+npK"]),
+                              onClick: tt,
                           },
                       ],
                       trackingProps: {
@@ -150,22 +149,22 @@ function S(t) {
                           impressionType: c.ImpressionTypes.MODAL,
                       },
                   },
-                  tn,
+                  te,
               ),
           )
-        : (null == a ? void 0 : a.nsfwAllowed) === !1 && (B || q) && !F
+        : (null == a ? void 0 : a.nsfwAllowed) === !1 && (W || B) && !U
           ? (0, l.jsx)(
-                d.ExpressiveModal,
-                C(
+                u.ExpressiveModal,
+                N(
                     {
-                        title: x.intl.string(q ? x.t["H0SG/v"] : x.t.NEabBQ),
-                        subtitle: x.intl.format(q ? x.t["6++3cX"] : x.t["2kHZen"], {
-                            helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE),
+                        title: R.intl.string(B ? R.t["H0SG/v"] : R.t.NEabBQ),
+                        subtitle: R.intl.format(B ? R.t["6++3cX"] : R.t["2kHZen"], {
+                            helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE),
                         }),
                         actions: [
                             {
-                                text: x.intl.string(x.t["/g10LC"]),
-                                onClick: Q,
+                                text: R.intl.string(R.t["/g10LC"]),
+                                onClick: K,
                                 variant: "secondary",
                             },
                         ],
@@ -174,68 +173,68 @@ function S(t) {
                             impressionType: c.ImpressionTypes.MODAL,
                         },
                     },
-                    tn,
+                    te,
                 ),
             )
-          : 0 === M
+          : 0 === D
             ? (function () {
                   var t, e;
                   let r = (() => {
                           switch (n) {
-                              case O.L0.NSFW_SERVER:
-                              case O.L0.NSFW_SERVER_INVITE:
-                              case O.L0.NSFW_SERVER_INVITE_EMBED:
-                                  return x.intl.string(x.t.vAymlJ);
-                              case O.L0.FAMILY_CENTER:
-                                  return x.intl.string(x.t.M7mt7u);
+                              case G.L0.NSFW_SERVER:
+                              case G.L0.NSFW_SERVER_INVITE:
+                              case G.L0.NSFW_SERVER_INVITE_EMBED:
+                                  return R.intl.string(R.t.vAymlJ);
+                              case G.L0.FAMILY_CENTER:
+                                  return R.intl.string(R.t.M7mt7u);
                               default:
-                                  return x.intl.string(x.t.F8otRk);
+                                  return R.intl.string(R.t.F8otRk);
                           }
                       })(),
                       a = (() => {
                           switch (n) {
-                              case O.L0.FAMILY_CENTER:
-                                  return x.intl.string(x.t.mhUrKS);
-                              case O.L0.DEEP_LINK_PROMPT:
-                                  return x.intl.format(x.t.iyhg2t, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) });
+                              case G.L0.FAMILY_CENTER:
+                                  return R.intl.string(R.t.mhUrKS);
+                              case G.L0.DEEP_LINK_PROMPT:
+                                  return R.intl.format(R.t.iyhg2t, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) });
                               default:
-                                  return x.intl.format(x.t.n3QjDA, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) });
+                                  return R.intl.format(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) });
                           }
                       })();
                   return (0, l.jsx)("form", {
-                      onSubmit: X,
+                      onSubmit: J,
                       children: (0, l.jsx)(
-                          d.ExpressiveModal,
-                          ((t = C(
+                          u.ExpressiveModal,
+                          ((t = N(
                               {
                                   title: r,
                                   subtitle: a,
                                   actions: [
                                       {
-                                          text: x.intl.string(x.t["1MrpWF"]),
-                                          onClick: Q,
+                                          text: R.intl.string(R.t["1MrpWF"]),
+                                          onClick: K,
                                           variant: "secondary",
                                       },
                                       {
-                                          text: x.intl.string(x.t.uBFuoq),
-                                          onClick: J,
-                                          loading: I,
-                                          disabled: null == S,
+                                          text: R.intl.string(R.t.uBFuoq),
+                                          onClick: H,
+                                          loading: w,
+                                          disabled: null == C,
                                       },
                                   ],
                               },
-                              tn,
+                              te,
                           )),
                           (e = e =
                               {
-                                  children: (0, l.jsx)(G.Z, {
-                                      label: x.intl.string(x.t.rhBeKS),
+                                  children: (0, l.jsx)(T.Z, {
+                                      label: R.intl.string(R.t.rhBeKS),
                                       name: "date_of_birth",
-                                      onChange: $,
-                                      onPopulated: tt,
-                                      error: j,
-                                      value: S,
-                                      ref: L,
+                                      onChange: z,
+                                      onPopulated: $,
+                                      error: k,
+                                      value: C,
+                                      ref: P,
                                       autoFocus: !0,
                                   }),
                               }),
@@ -255,20 +254,20 @@ function S(t) {
                       ),
                   });
               })()
-            : (0, l.jsx)(f.Modal, {
+            : (0, l.jsx)(u.Modal, {
                   transitionState: e,
-                  onClose: Q,
-                  title: x.intl.formatToPlainString(x.t.wumolZ, { age: K }),
-                  subtitle: x.intl.formatToPlainString(x.t.n3QjDA, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) }),
+                  onClose: K,
+                  title: R.intl.formatToPlainString(R.t.wumolZ, { age: q }),
+                  subtitle: R.intl.formatToPlainString(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) }),
                   actions: [
                       {
-                          text: x.intl.string(x.t.cfYCra),
-                          onClick: () => P(0),
+                          text: R.intl.string(R.t.cfYCra),
+                          onClick: () => M(0),
                           variant: "secondary",
                       },
                       {
-                          text: x.intl.string(x.t["6tahio"]),
-                          onClick: z,
+                          text: R.intl.string(R.t["6tahio"]),
+                          onClick: X,
                       },
                   ],
               });

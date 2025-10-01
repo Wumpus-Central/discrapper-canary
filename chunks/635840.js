@@ -1,111 +1,110 @@
-e.d(i, { Z: () => I }), e(388685);
+e.d(i, { Z: () => N }), e(388685);
 var n = e(951288),
     a = e(647438),
-    s = e(103866),
-    l = e(37148),
-    r = e(755721),
-    c = e(481060),
-    d = e(153867),
-    o = e(626135),
-    C = e(981631),
-    _ = e(388032),
-    u = e(167739);
-let N = [
+    s = e(793030),
+    l = e(755721),
+    r = e(481060),
+    c = e(153867),
+    d = e(626135),
+    o = e(981631),
+    C = e(388032),
+    _ = e(167739);
+let u = [
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH",
-        nameGetter: () => _.intl.string(_.t["+RZgNT"]),
+        nameGetter: () => C.intl.string(C.t["+RZgNT"]),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE",
-        nameGetter: () => _.intl.string(_.t.kgPXgo),
+        nameGetter: () => C.intl.string(C.t.kgPXgo),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH",
-        nameGetter: () => _.intl.string(_.t.vujsUF),
+        nameGetter: () => C.intl.string(C.t.vujsUF),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE",
-        nameGetter: () => _.intl.string(_.t.AYAOLC),
+        nameGetter: () => C.intl.string(C.t.AYAOLC),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER",
-        nameGetter: () => _.intl.string(_.t.wZLu3d),
+        nameGetter: () => C.intl.string(C.t.wZLu3d),
     },
 ];
-function I(t) {
-    let { application: i, subscriptionId: e, onClose: I } = t,
-        [S, E] = a.useState(!1),
-        [x, A] = a.useState(null),
-        [O, T] = a.useState(""),
-        p = a.useCallback(() => {
+function N(t) {
+    let { application: i, subscriptionId: e, onClose: N } = t,
+        [I, S] = a.useState(!1),
+        [x, E] = a.useState(null),
+        [A, O] = a.useState(""),
+        T = a.useCallback(() => {
             null != x &&
-                (o.default.track(C.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                (d.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: x,
                     application_id: i.id,
-                    reason: O,
+                    reason: A,
                     subscription_id: e,
                 }),
-                I());
-        }, [i.id, e, x, I, O]);
+                N());
+        }, [i.id, e, x, N, A]);
     return (
         a.useEffect(() => {
-            d.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: S });
-        }, [S]),
+            c.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: I });
+        }, [I]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(l.x, {
-                    title: _.intl.string(_.t.zPxMdX),
-                    subtitle: _.intl.string(_.t.QJGdBw),
+                (0, n.jsx)(s.xBx, {
+                    title: C.intl.string(C.t.zPxMdX),
+                    subtitle: C.intl.string(C.t.QJGdBw),
                 }),
-                (0, n.jsxs)(s.f, {
+                (0, n.jsxs)(s.fef, {
                     children: [
                         (0, n.jsx)("div", {
-                            className: u.answerChoicesContainer,
-                            children: (0, n.jsx)(r.Gu, {
+                            className: _.answerChoicesContainer,
+                            children: (0, n.jsx)(l.Gu, {
                                 value: x,
-                                options: N.map((t) => {
+                                options: u.map((t) => {
                                     let { nameGetter: i, value: e } = t;
                                     return {
                                         name: i(),
                                         value: e,
                                     };
                                 }),
-                                onChange: (t) => A(t.value),
+                                onChange: (t) => E(t.value),
                                 withTransparentBackground: !0,
                             }),
                         }),
                         "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER" === x &&
                             (0, n.jsx)("div", {
-                                className: u.otherField,
-                                children: (0, n.jsx)(c.oil, {
+                                className: _.otherField,
+                                children: (0, n.jsx)(r.oil, {
                                     autoFocus: !0,
-                                    placeholder: _.intl.string(_.t.s6tM8f),
-                                    value: O,
-                                    onChange: T,
+                                    placeholder: C.intl.string(C.t.s6tM8f),
+                                    value: A,
+                                    onChange: O,
                                 }),
                             }),
                     ],
                 }),
-                (0, n.jsx)(c.mzw, {
+                (0, n.jsx)(r.mzw, {
                     "data-migration-pending": !0,
                     children: (0, n.jsxs)("div", {
-                        className: u.footer,
+                        className: _.footer,
                         children: [
-                            (0, n.jsx)(r.$q, {
-                                type: r.M0.INVERTED,
-                                value: S,
-                                onChange: (t, i) => E(i),
+                            (0, n.jsx)(l.$q, {
+                                type: l.M0.INVERTED,
+                                value: I,
+                                onChange: (t, i) => S(i),
                                 size: 20,
-                                className: u.__invalid_checkbox,
-                                children: (0, n.jsx)(c.Text, {
+                                className: _.__invalid_checkbox,
+                                children: (0, n.jsx)(r.Text, {
                                     variant: "text-sm/medium",
-                                    children: _.intl.string(_.t["3vPFQk"]),
+                                    children: C.intl.string(C.t["3vPFQk"]),
                                 }),
                             }),
-                            (0, n.jsx)(c.zxk, {
+                            (0, n.jsx)(r.zxk, {
                                 variant: "primary",
-                                text: _.intl.string(_.t.geKm7u),
-                                onClick: p,
+                                text: C.intl.string(C.t.geKm7u),
+                                onClick: T,
                                 disabled: null == x,
                             }),
                         ],

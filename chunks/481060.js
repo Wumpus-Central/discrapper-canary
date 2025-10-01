@@ -103,6 +103,7 @@ n.d(t, {
     Icv: () => eJ.Ic,
     IeX: () => i.IeX,
     IkH: () => i.IkH,
+    Ioy: () => i.Ioy,
     Ixi: () => ev.I,
     Iy5: () => i.Iy5,
     J2R: () => i.J2R,

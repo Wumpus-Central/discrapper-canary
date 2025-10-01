@@ -25,8 +25,8 @@ n.d(e, { default: () => O }),
     n(388685);
 var r = n(951288),
     o = n(647438),
-    a = n(544891),
-    i = n(82659),
+    a = n(793030),
+    i = n(544891),
     l = n(481060),
     c = n(464179),
     u = n(479531),
@@ -89,7 +89,7 @@ async function b(t, e, n) {
                   country: n.country,
               }
             : null,
-        i = await a.tn.post({
+        a = await i.tn.post({
             url: r,
             body: {
                 payment_id: t,
@@ -112,13 +112,13 @@ async function b(t, e, n) {
                 i.click(),
                 document.body.removeChild(i),
                 URL.revokeObjectURL(a);
-        })(t, i.text),
+        })(t, a.text),
         !0
     );
 }
 function O(t) {
     var { payment: e, paymentSource: n } = t,
-        a = (function (t, e) {
+        i = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -192,9 +192,9 @@ function O(t) {
                   }),
               )
             : null;
-    return (0, r.jsxs)(i.Modal, {
-        transitionState: a.transitionState,
-        onClose: a.onClose,
+    return (0, r.jsxs)(a.Modal, {
+        transitionState: i.transitionState,
+        onClose: i.onClose,
         title: y.intl.formatToPlainString(y.t.onRIxc, {}),
         actions: [
             {

@@ -1,8 +1,8 @@
 r.d(t, { default: () => O }), r(388685);
 var n = r(951288),
     o = r(647438),
-    i = r(442837),
-    c = r(82659),
+    i = r(793030),
+    c = r(442837),
     l = r(481060),
     s = r(594174),
     a = r(810473),
@@ -35,7 +35,7 @@ function O(e) {
             }
             return o;
         })(e, ["onClose", "trackUserProfileEditAction"]);
-    let g = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+    let g = (0, c.e7)([s.default], () => s.default.getCurrentUser()),
         j = (0, a.Z)(),
         h = o.useRef(new Set(j)),
         m = p.rR.filter((e) => h.current.has(e)),
@@ -51,7 +51,7 @@ function O(e) {
     return null == g
         ? null
         : (0, n.jsx)(
-              c.Modal,
+              i.Modal,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var r = null != arguments[t] ? arguments[t] : {},

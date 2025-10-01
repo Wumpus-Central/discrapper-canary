@@ -1,8 +1,8 @@
 n.d(t, { u: () => O }), n(415506);
 var r = n(951288),
     i = n(647438),
-    a = n(793030),
-    o = n(747127),
+    a = n(61247),
+    o = n(793030),
     s = n(550656),
     l = n(464281),
     c = n(102725),
@@ -144,12 +144,12 @@ function b(e) {
 }
 function y(e) {
     var t;
-    let { strategy: n = "clone", tag: r = "div", children: a } = e,
+    let { strategy: n = "clone", tag: r = "div", children: o } = e,
         s = i.useContext(E);
     if (null == s) throw Error("TooltipTrigger must be used within TooltipRoot");
     let { triggerHandlers: c, triggerRef: u, tooltipId: d } = s,
-        f = i.isValidElement(a) ? a : null,
-        p = (0, o.Z)(null == f || null == (t = f.props) ? void 0 : t.ref, u);
+        f = i.isValidElement(o) ? o : null,
+        p = (0, a.Z)(null == f || null == (t = f.props) ? void 0 : t.ref, u);
     if ("clone" === n) return null == f ? null : (0, l.C9)(f, c, d, p);
     let m = h(_({}, c), {
         onFocus: (0, l.tS)(c.onFocus, (e) => {
@@ -163,7 +163,7 @@ function y(e) {
     });
     return (0, l.FX)({
         tag: r,
-        children: a,
+        children: o,
         triggerHandlers: m,
         triggerRef: u,
     });
@@ -202,7 +202,7 @@ function v() {
     if (null == t) throw Error("TooltipContent must be used within TooltipRoot");
     let {
             isVisible: n,
-            isRendered: o,
+            isRendered: a,
             handleExitComplete: c,
             onAnimationRest: d,
             tooltipId: f,
@@ -221,12 +221,12 @@ function v() {
             onExitComplete: c,
             onAnimationRest: d,
         }),
-        { defaultLayerContext: I } = (0, a.ZFG)();
+        { defaultLayerContext: I } = (0, o.ZFG)();
     return v((e, i) =>
         i
             ? (0, r.jsx)(s.N, {
                   isVisible: n,
-                  isRendered: o,
+                  isRendered: a,
                   targetElementRef: _,
                   id: f,
                   content: p,

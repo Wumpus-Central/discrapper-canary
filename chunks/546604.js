@@ -4,8 +4,8 @@ n(647438);
 var a = n(512722),
     i = n.n(a),
     s = n(990547),
-    l = n(442837),
-    o = n(82659),
+    l = n(793030),
+    o = n(442837),
     c = n(481060),
     d = n(100527),
     u = n(213609),
@@ -21,7 +21,7 @@ var a = n(512722),
 function v(e) {
     var t, n;
     let { transitionState: a, guildProductListingId: v, analyticsLocation: Z, guildId: N, onClose: O } = e,
-        y = (0, l.e7)([h.Z], () => h.Z.getGuildProduct(v));
+        y = (0, o.e7)([h.Z], () => h.Z.getGuildProduct(v));
     i()(null != y, "guildProductListing cannot be null"),
         (0, u.Z)({
             type: s.ImpressionTypes.MODAL,
@@ -34,13 +34,13 @@ function v(e) {
         });
     let C = null != (t = (0, p.C)(y)) ? t : "",
         I = (0, p.k)(y),
-        L = (0, l.e7)([f.Z], () => f.Z.getGuild(N)),
+        L = (0, o.e7)([f.Z], () => f.Z.getGuild(N)),
         D = (0, _.Z)({
             guildId: N,
             guildProductListingId: v,
             sourceAnalyticsLocations: d.Z.GUILD_PRODUCT_INFO_MODAL,
         });
-    return (0, r.jsxs)(o.Modal, {
+    return (0, r.jsxs)(l.Modal, {
         title: y.name,
         subtitle: b.intl.format(b.t.xImSen, {
             productType: C,

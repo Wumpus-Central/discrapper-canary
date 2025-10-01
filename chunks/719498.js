@@ -1,13 +1,13 @@
 r.d(t, { default: () => u });
 var n = r(951288),
     a = r(647438),
-    i = r(82659),
+    i = r(793030),
     c = r(481060),
     o = r(933557),
     s = r(925329),
     l = r(296023),
     d = r(388032),
-    p = r(865706);
+    p = r(463488);
 let u = (e) => {
     let { channel: t, application: u, onClose: m, transitionState: b } = e,
         j = (0, l.w)(t),

@@ -3,10 +3,10 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(704215),
-    c = n(692547),
-    u = n(82659),
+    s = n(793030),
+    l = n(442837),
+    c = n(704215),
+    u = n(692547),
     d = n(780384),
     f = n(481060),
     _ = n(570140),
@@ -97,9 +97,9 @@ let K = (e) => {
         { integration: a } = e,
         {
             isJoining: o,
-            joinErrorMessage: l,
+            joinErrorMessage: s,
             showJoinErrorMessage: c,
-        } = (0, s.cj)(
+        } = (0, l.cj)(
             [A.Z],
             () => ({
                 isJoining: A.Z.isJoining(a.id),
@@ -113,7 +113,7 @@ let K = (e) => {
         p.Z.joinServer(a.id, () => {});
     }
     return (
-        null == (0, s.e7)([C.Z], () => C.Z.getGuild(a.guild.id), [a.guild.id]) &&
+        null == (0, l.e7)([C.Z], () => C.Z.getGuild(a.guild.id), [a.guild.id]) &&
             (i = (0, r.jsx)(f.zxk, {
                 size: "sm",
                 onClick: u,
@@ -161,7 +161,7 @@ let K = (e) => {
                         variant: "text-xs/normal",
                         color: "text-danger",
                         className: Z.integrationError,
-                        children: l,
+                        children: s,
                     }),
             ],
         })
@@ -169,7 +169,7 @@ let K = (e) => {
 };
 function z(e) {
     let { onDisconnect: t, account: n, theme: a, locale: o } = e,
-        [s, l] = i.useState(n.friendSync),
+        [l, c] = i.useState(n.friendSync),
         [_, h] = i.useState(n.visibility),
         [m, g] = i.useState(n.metadataVisibility),
         [I, T] = i.useState(n.showActivity),
@@ -180,7 +180,7 @@ function z(e) {
         V = (0, b.rR)(n.type),
         Y = E.Z.get(V);
     i.useEffect(() => {
-        l(n.friendSync), h(n.visibility), g(n.metadataVisibility), T(n.showActivity);
+        c(n.friendSync), h(n.visibility), g(n.metadataVisibility), T(n.showActivity);
     }, [n]);
     let z = {
             inProgressVisibility: A,
@@ -202,10 +202,10 @@ function z(e) {
                         (0, r.jsx)(
                             S.Z,
                             W(H({}, e), {
-                                color: c.Z.unsafe_rawColors.TWITTER.css,
+                                color: u.Z.unsafe_rawColors.TWITTER.css,
                                 children: (0, r.jsx)(f.kmB, {
                                     size: "xs",
-                                    color: c.Z.unsafe_rawColors.WHITE_500.css,
+                                    color: u.Z.unsafe_rawColors.WHITE_500.css,
                                 }),
                             }),
                         ),
@@ -390,7 +390,7 @@ function z(e) {
                 (i = (0, r.jsx)(f.j7V, {
                     className: Z.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: s,
+                    value: l,
                     onChange: eo,
                     children: (0, r.jsx)(f.Text, {
                         variant: "text-sm/semibold",
@@ -471,7 +471,7 @@ function z(e) {
     }
     function et() {
         if (n.revoked || n.integrations.length > 0)
-            return (0, r.jsx)(f.$i$, { className: Z.connectedAccountSeparator });
+            return (0, r.jsx)(f.izJ, { className: Z.connectedAccountSeparator });
     }
     function en() {
         (0, O.Z)({
@@ -483,7 +483,7 @@ function z(e) {
         let e = E.Z.get(n.type);
         (0, f.h7j)((i) =>
             (0, r.jsx)(
-                u.Modal,
+                s.Modal,
                 W(
                     H(
                         {
@@ -542,7 +542,7 @@ function z(e) {
         g(r), p.Z.setMetadataVisibility(n.type, n.id, r);
     }
     function eo(e) {
-        l(e), p.Z.setFriendSync(n.type, n.id, e);
+        c(e), p.Z.setFriendSync(n.type, n.id, e);
     }
     function es(e) {
         T(e), p.Z.setShowActivity(n.type, n.id, e);
@@ -567,7 +567,7 @@ function q() {
     return (
         i.useEffect(
             () => () => {
-                (0, I.Q3)(l.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: G.L.AUTO });
+                (0, I.Q3)(c.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: G.L.AUTO });
             },
             [],
         ),
@@ -691,11 +691,11 @@ function J(e) {
     );
 }
 let $ = () => {
-    let e = (0, s.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        t = (0, s.e7)([A.Z], () => A.Z.isFetching()),
-        n = (0, s.e7)([A.Z], () => A.Z.getAccounts()),
+    let e = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        t = (0, l.e7)([A.Z], () => A.Z.isFetching()),
+        n = (0, l.e7)([A.Z], () => A.Z.getAccounts()),
         a = (0, g.ZP)(),
-        o = (0, s.e7)([w.default], () => w.default.locale);
+        o = (0, l.e7)([w.default], () => w.default.locale);
     return (i.useEffect(() => {
         p.Z.fetch();
     }, []),

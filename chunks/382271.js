@@ -1,26 +1,25 @@
-n.d(t, { m: () => N });
+n.d(t, { m: () => C });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(257465),
-    c = n(667202),
-    u = n(780384),
-    d = n(481060),
-    f = n(493683),
-    _ = n(518950),
-    p = n(342386),
-    h = n(626135),
-    m = n(63063),
-    g = n(51144),
-    E = n(281494),
-    b = n(276444),
-    y = n(981631),
-    O = n(388032),
-    v = n(734501),
-    I = n(690813);
-function T(e, t, n) {
+    s = n(793030),
+    l = n(442837),
+    c = n(780384),
+    u = n(481060),
+    d = n(493683),
+    f = n(518950),
+    _ = n(342386),
+    p = n(626135),
+    h = n(63063),
+    m = n(51144),
+    g = n(281494),
+    E = n(276444),
+    b = n(981631),
+    y = n(388032),
+    O = n(734501),
+    v = n(690813);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,33 +43,33 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-let A = (e, t) => {
-        (0, p.default)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
+let S = (e, t) => {
+        (0, _.default)(), d.Z.openPrivateChannel({ recipientIds: e }), t();
     },
-    C = (e) => {
+    A = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
-            { avatarSrc: a, eventHandlers: s } = (0, _.Z)({
+            { avatarSrc: a, eventHandlers: s } = (0, f.Z)({
                 userId: null == t ? void 0 : t.id,
-                size: d.EFr.SIZE_56,
+                size: u.EFr.SIZE_56,
             }),
-            l = g.ZP.getName(t),
-            c = n === E.Fz.FAIL;
+            l = m.ZP.getName(t),
+            c = n === g.Fz.FAIL;
         return (0, r.jsxs)("div", {
-            className: v.trialRecipientRow,
+            className: O.trialRecipientRow,
             children: [
                 (0, r.jsx)(
-                    d.qEK,
-                    S(
+                    u.qEK,
+                    T(
                         {
-                            imageClassName: o()({ [v.erroredAvatar]: c }),
+                            imageClassName: o()({ [O.erroredAvatar]: c }),
                             src: a,
                             "aria-label": l,
-                            size: d.EFr.SIZE_32,
+                            size: u.EFr.SIZE_32,
                         },
                         s,
                     ),
@@ -78,68 +77,68 @@ let A = (e, t) => {
                 c
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(d.Text, {
-                                  className: v.errorDisplayName,
+                              (0, r.jsx)(u.Text, {
+                                  className: O.errorDisplayName,
                                   variant: "text-md/medium",
                                   color: "text-primary",
                                   children: l,
                               }),
-                              (0, r.jsx)(d.Text, {
+                              (0, r.jsx)(u.Text, {
                                   variant: "text-md/medium",
-                                  className: v.userName,
+                                  className: O.userName,
                                   color: "text-primary",
-                                  children: O.intl.format(O.t.RO3T4O, { userName: l }),
+                                  children: y.intl.format(y.t.RO3T4O, { userName: l }),
                               }),
                           ],
                       })
-                    : (0, r.jsx)(d.Text, {
+                    : (0, r.jsx)(u.Text, {
                           variant: "text-md/medium",
-                          className: v.trialRecipientRowDisplayName,
+                          className: O.trialRecipientRowDisplayName,
                           color: "text-primary",
                           children: l,
                       }),
-                (0, r.jsx)(d.zxk, {
+                (0, r.jsx)(u.zxk, {
                     variant: "secondary",
                     size: "sm",
-                    text: O.intl.string(O.t["g33r/P"]),
-                    icon: d.kBi,
-                    onClick: () => A(t.id, i),
+                    text: y.intl.string(y.t["g33r/P"]),
+                    icon: u.kBi,
+                    onClick: () => S(t.id, i),
                 }),
             ],
         });
     },
-    N = (e) => {
+    C = (e) => {
         let { results: t, onClose: n, isReminderConfirmation: a } = e,
-            o = (0, s.e7)([b.Z], () => b.Z.getReferralsRemaining());
-        h.default.track(y.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-        let { reducedMotion: f } = i.useContext(u.Sf);
-        if (null === o) return (0, r.jsx)(d.$jN, {});
-        let _ = () =>
-                f.enabled
+            o = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining());
+        p.default.track(b.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        let { reducedMotion: d } = i.useContext(c.Sf);
+        if (null === o) return (0, r.jsx)(u.$jN, {});
+        let f = () =>
+                d.enabled
                     ? {
-                          src: I.Z,
+                          src: v.Z,
                           type: "image",
                       }
                     : {
-                          rive: d.p8m,
+                          rive: u.p8m,
                           type: "rive",
                       },
-            p = () =>
-                0 === t.filter((e) => e.status === E.Fz.SUCCESS).length
-                    ? O.intl.string(O.t["7VBEub"])
+            _ = () =>
+                0 === t.filter((e) => e.status === g.Fz.SUCCESS).length
+                    ? y.intl.string(y.t["7VBEub"])
                     : !0 === a
-                      ? O.intl.string(O.t.GP5lbm)
-                      : O.intl.string(O.t.tKCltb),
-            g = () =>
+                      ? y.intl.string(y.t.GP5lbm)
+                      : y.intl.string(y.t.tKCltb),
+            m = () =>
                 !0 === a
-                    ? O.intl.format(O.t["4gJJfH"], { helpdeskArticle: m.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) })
-                    : O.intl.format(O.t.AwGSWl, { helpdeskArticle: m.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
-            T = () =>
+                    ? y.intl.format(y.t["4gJJfH"], { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) })
+                    : y.intl.format(y.t.AwGSWl, { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) }),
+            I = () =>
                 (0, r.jsx)("div", {
-                    className: v.trialRecipientContainer,
+                    className: O.trialRecipientContainer,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            C,
+                            A,
                             {
                                 recipient: e.recipient,
                                 status: e.status,
@@ -149,13 +148,13 @@ let A = (e, t) => {
                         ),
                     ),
                 });
-        return (0, r.jsx)(c.ExpressiveModal, {
-            graphic: _(),
+        return (0, r.jsx)(s.ExpressiveModal, {
+            graphic: f(),
             gradientColor: "nitro-pink",
-            title: p(),
-            subtitle: g(),
+            title: _(),
+            subtitle: m(),
             onClose: n,
-            transitionState: l.Dv.ENTERED,
-            children: T(),
+            transitionState: s.Dvm.ENTERED,
+            children: I(),
         });
     };

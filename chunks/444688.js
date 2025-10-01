@@ -3,8 +3,8 @@ var i = n(951288),
     r = n(647438),
     a = n(512722),
     l = n.n(a),
-    s = n(442837),
-    o = n(82659),
+    s = n(793030),
+    o = n(442837),
     u = n(481060),
     c = n(418632),
     d = n(594174),
@@ -12,7 +12,7 @@ var i = n(951288),
     m = n(97411);
 let g = function (e) {
     let { onClose: t, transitionState: a } = e,
-        g = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        g = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         [b, p] = r.useState(!1),
         v = r.useCallback(() => (null == t || t(), Promise.resolve()), [t]),
         y = r.useCallback(() => {
@@ -81,7 +81,7 @@ let g = function (e) {
                       ],
             [g, y, k, b],
         );
-    return (0, i.jsxs)(o.Modal, {
+    return (0, i.jsxs)(s.Modal, {
         title: f.intl.string(f.t.UZLrY2),
         transitionState: a,
         onClose: v,

@@ -1,30 +1,28 @@
-i.d(t, { FortniteUpsellModal: () => h });
+i.d(t, { FortniteUpsellModal: () => d });
 var e = i(951288);
 i(647438);
-var o = i(257465),
-    s = i(103866),
-    a = i(37148),
-    c = i(481060),
-    r = i(728345),
-    l = i(768581),
-    d = i(388032),
-    x = i(463431);
-function h(n) {
+var o = i(793030),
+    s = i(481060),
+    a = i(728345),
+    c = i(768581),
+    r = i(388032),
+    l = i(625771);
+function d(n) {
     let { onClose: t, transitionState: i } = n,
-        { data: h } = (0, r.IX)("1402418703554842694"),
-        { data: m } = (0, r.IX)("1417968406048673952"),
-        j =
-            null != h
-                ? l.ZP.getApplicationIconURL({
-                      id: h.id,
-                      icon: h.icon,
+        { data: d } = (0, a.IX)("1402418703554842694"),
+        { data: x } = (0, a.IX)("1417968406048673952"),
+        h =
+            null != d
+                ? c.ZP.getApplicationIconURL({
+                      id: d.id,
+                      icon: d.icon,
                   })
                 : null,
-        b =
-            null != m
-                ? l.ZP.getApplicationIconURL({
-                      id: m.id,
-                      icon: m.icon,
+        m =
+            null != x
+                ? c.ZP.getApplicationIconURL({
+                      id: x.id,
+                      icon: x.icon,
                   })
                 : null;
     return (0, e.jsxs)(o.IX, {
@@ -32,95 +30,95 @@ function h(n) {
         transitionState: i,
         onClose: t,
         children: [
-            (0, e.jsx)(a.x, {
+            (0, e.jsx)(o.xBx, {
                 graphic: void 0,
                 gradientColor: "purple",
-                title: d.intl.string(d.t.xREzoa),
+                title: r.intl.string(r.t.xREzoa),
                 titleTextVariant: "heading-xl/semibold",
-                subtitle: d.intl.string(d.t.va4ap6),
+                subtitle: r.intl.string(r.t.va4ap6),
                 alignCenter: !0,
             }),
-            (0, e.jsx)(s.f, {
+            (0, e.jsx)(o.fef, {
                 children: (0, e.jsxs)("div", {
-                    className: x.body,
+                    className: l.body,
                     children: [
                         (0, e.jsxs)("div", {
-                            className: x.container,
+                            className: l.container,
                             children: [
                                 (0, e.jsxs)("div", {
-                                    className: x.text,
+                                    className: l.text,
                                     children: [
                                         (0, e.jsx)("div", {
-                                            className: x.iconContainer,
+                                            className: l.iconContainer,
                                             children:
-                                                null != j &&
+                                                null != h &&
                                                 (0, e.jsx)("div", {
-                                                    className: x.icon,
-                                                    style: { backgroundImage: "url(".concat(j, ")") },
+                                                    className: l.icon,
+                                                    style: { backgroundImage: "url(".concat(h, ")") },
                                                 }),
                                         }),
                                         (0, e.jsxs)("div", {
                                             children: [
-                                                (0, e.jsx)(c.Text, {
+                                                (0, e.jsx)(s.Text, {
                                                     color: "text-primary",
                                                     variant: "text-md/semibold",
-                                                    children: d.intl.string(d.t["9g594e"]),
+                                                    children: r.intl.string(r.t["9g594e"]),
                                                 }),
-                                                (0, e.jsx)(c.Text, {
+                                                (0, e.jsx)(s.Text, {
                                                     color: "text-secondary",
                                                     variant: "text-md/normal",
-                                                    children: d.intl.string(d.t.Vye3DQ),
+                                                    children: r.intl.string(r.t.Vye3DQ),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, e.jsx)(c.zxk, {
-                                    icon: () => (0, e.jsx)(c.Gr1, {}),
+                                (0, e.jsx)(s.zxk, {
+                                    icon: () => (0, e.jsx)(s.Gr1, {}),
                                     iconPosition: "end",
                                     onClick: () => (location.href = "https://www.fortnite.com/download"),
-                                    text: d.intl.string(d.t.ZDtJ19),
+                                    text: r.intl.string(r.t.ZDtJ19),
                                     variant: "secondary",
                                 }),
                             ],
                         }),
                         (0, e.jsxs)("div", {
-                            className: x.container,
+                            className: l.container,
                             children: [
                                 (0, e.jsxs)("div", {
-                                    className: x.text,
+                                    className: l.text,
                                     children: [
                                         (0, e.jsx)("div", {
-                                            className: x.iconContainer,
+                                            className: l.iconContainer,
                                             children:
-                                                null != b &&
+                                                null != m &&
                                                 (0, e.jsx)("div", {
-                                                    className: x.icon,
-                                                    style: { backgroundImage: "url(".concat(b, ")") },
+                                                    className: l.icon,
+                                                    style: { backgroundImage: "url(".concat(m, ")") },
                                                 }),
                                         }),
                                         (0, e.jsxs)("div", {
                                             children: [
-                                                (0, e.jsx)(c.Text, {
+                                                (0, e.jsx)(s.Text, {
                                                     color: "text-primary",
                                                     variant: "text-md/semibold",
-                                                    children: d.intl.string(d.t.kOjtOD),
+                                                    children: r.intl.string(r.t.kOjtOD),
                                                 }),
-                                                (0, e.jsx)(c.Text, {
+                                                (0, e.jsx)(s.Text, {
                                                     color: "text-secondary",
                                                     variant: "text-md/normal",
-                                                    children: d.intl.string(d.t.X3zPLy),
+                                                    children: r.intl.string(r.t.X3zPLy),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, e.jsx)(c.zxk, {
-                                    icon: () => (0, e.jsx)(c.Gr1, {}),
+                                (0, e.jsx)(s.zxk, {
+                                    icon: () => (0, e.jsx)(s.Gr1, {}),
                                     iconPosition: "end",
                                     onClick: () =>
                                         (location.href = "https://www.nvidia.com/en-us/geforce-now/#product-matrix"),
-                                    text: d.intl.string(d.t.ycbXPz),
+                                    text: r.intl.string(r.t.ycbXPz),
                                     variant: "secondary",
                                 }),
                             ],

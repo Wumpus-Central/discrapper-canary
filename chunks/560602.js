@@ -2,8 +2,8 @@ l.d(t, { default: () => x }), l(388685), l(539854);
 var r = l(951288),
     n = l(647438),
     i = l(149765),
-    a = l(442837),
-    o = l(82659),
+    a = l(793030),
+    o = l(442837),
     s = l(481060),
     u = l(741361),
     c = l(911969),
@@ -36,7 +36,7 @@ let g = (e) => {
                 };
             })(0, l, x),
             C = (function (e) {
-                let t = (0, a.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
+                let t = (0, o.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
                 return n.useMemo(() => (0, m.K)(t).filter((t) => y(e.id)(t.id)), [e, t]);
             })(t),
             N = C.reduce((e, t) => (e.set(t.id, t), e), new Map()),
@@ -50,7 +50,7 @@ let g = (e) => {
             [Z, G] = n.useState(!1),
             K = E.length > 0 || S,
             M = (function (e, t) {
-                let l = (0, a.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
+                let l = (0, o.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
                 return n.useCallback(
                     (r, n) => {
                         let a = (0, m.K)(l),
@@ -135,7 +135,7 @@ let g = (e) => {
             };
         return _
             ? (0, r.jsx)(s.$jN, {})
-            : (0, r.jsxs)(o.Modal, {
+            : (0, r.jsxs)(a.Modal, {
                   title: w.intl.string(w.t.TFGnmp),
                   actions: [
                       {

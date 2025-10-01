@@ -1,8 +1,8 @@
 n.d(t, { default: () => O }), n(388685), n(953529), n(539854);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(82659),
+    l = n(793030),
+    a = n(442837),
     o = n(481060),
     s = n(741361),
     c = n(881052),
@@ -15,8 +15,8 @@ var r = n(951288),
     g = n(215157),
     b = n(71080),
     y = n(981631),
-    _ = n(388032),
-    C = n(257803);
+    C = n(388032),
+    _ = n(257803);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,19 +65,19 @@ function x(e, t) {
 function O(e) {
     var { channelId: t } = e,
         n = x(e, ["channelId"]);
-    let a = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        o = (0, l.e7)([p.Z], () => p.Z.getGuild(null == a ? void 0 : a.getGuildId()));
+    let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
     return (i.useEffect(() => {
         h.default.track(y.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
-    null == a || null == o)
+    null == l || null == o)
         ? null
         : (0, r.jsx)(
               j,
               v(
                   {
                       guild: o,
-                      channel: a,
+                      channel: l,
                   },
                   n,
               ),
@@ -86,20 +86,20 @@ function O(e) {
 function j(e) {
     var t,
         n,
-        { guild: l, channel: d, onClose: p, newChannel: h, inSettings: y } = e,
+        { guild: a, channel: d, onClose: p, newChannel: h, inSettings: y } = e,
         O = x(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
     let [j, E] = i.useState(""),
-        [S, I] = i.useState({}),
-        [P, Z] = i.useState(!1),
+        [S, P] = i.useState({}),
+        [I, Z] = i.useState(!1),
         [T, N] = i.useState(null),
         A = i.useRef(null),
-        { roles: w, members: R, getRichTag: M } = (0, g.Q)(l, d, d.accessPermissions, j),
-        D = m.Z.useSections({
+        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
+        k = m.Z.useSections({
             roles: w,
-            members: R,
+            members: M,
         }),
         L = h && 0 === Object.keys(S).length;
-    async function k() {
+    async function D() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -130,26 +130,26 @@ function j(e) {
         query: j,
         setQuery: E,
         pendingAdditions: S,
-        setPendingAdditions: I,
+        setPendingAdditions: P,
         roles: w,
-        members: R,
-        getRichTag: M,
+        members: M,
+        getRichTag: R,
         children: (0, r.jsx)(
-            a.Modal,
+            l.Modal,
             ((t = v({}, O)),
             (n = n =
                 {
-                    title: _.intl.string(_.t.dMJ3Y2),
+                    title: C.intl.string(C.t.dMJ3Y2),
                     onClose: p,
                     input: (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(o.Text, {
-                                className: C.channelName,
+                                className: _.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(U, {
-                                        className: C.channelIcon,
+                                        className: _.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -159,19 +159,19 @@ function j(e) {
                             d.isGuildStageVoice() &&
                                 (0, r.jsx)(o.Text, {
                                     color: "header-secondary",
-                                    className: C.description,
+                                    className: _.description,
                                     variant: "text-sm/normal",
-                                    children: _.intl.string(_.t.f7VbhI),
+                                    children: C.intl.string(C.t.f7VbhI),
                                 }),
-                            (0, r.jsx)(m.Z.SearchBox, { placeholderText: _.intl.string(_.t.iezLLi) }),
+                            (0, r.jsx)(m.Z.SearchBox, { placeholderText: C.intl.string(C.t.iezLLi) }),
                             (0, r.jsx)(o.Text, {
-                                className: C.subtext,
+                                className: _.subtext,
                                 variant: "text-xs/normal",
-                                children: _.intl.string(_.t["rwFx8/"]),
+                                children: C.intl.string(C.t["rwFx8/"]),
                             }),
                             null != T
                                 ? (0, r.jsx)(o.Text, {
-                                      className: C.subtext,
+                                      className: _.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
                                       children: T.getAnyErrorMessage(),
@@ -185,27 +185,27 @@ function j(e) {
                         renderSection: m.Z.renderSection,
                         rowHeight: m.Z.ROW_HEIGHT,
                         renderRow: m.Z.renderRow,
-                        sections: D,
+                        sections: k,
                     },
                     actions: L
                         ? [
                               {
                                   variant: "secondary",
-                                  text: _.intl.string(_.t.u46sxc),
+                                  text: C.intl.string(C.t.u46sxc),
                                   onClick: p,
                               },
                           ]
                         : [
                               {
                                   variant: "secondary",
-                                  text: _.intl.string(_.t["ETE/oK"]),
+                                  text: C.intl.string(C.t["ETE/oK"]),
                                   onClick: p,
                               },
                               {
                                   variant: "primary",
-                                  text: _.intl.string(_.t.i4jeWV),
-                                  onClick: k,
-                                  loading: P,
+                                  text: C.intl.string(C.t.i4jeWV),
+                                  onClick: D,
+                                  loading: I,
                               },
                           ],
                 }),

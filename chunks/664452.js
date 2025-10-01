@@ -1,8 +1,8 @@
 n.d(e, { default: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(82659),
+    l = n(793030),
+    a = n(442837),
     s = n(755721),
     o = n(481060),
     c = n(430824),
@@ -15,7 +15,7 @@ var r = n(951288),
     f = n(676770),
     h = n(981631),
     _ = n(388032),
-    j = n(655330);
+    j = n(796668);
 function x(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -61,11 +61,11 @@ function y(t, e) {
 }
 function v(t) {
     let { guildId: e, transitionState: n, onClose: v, analyticsData: N } = t,
-        m = (0, l.e7)([c.Z], () => c.Z.getGuild(e), [e]),
+        m = (0, a.e7)([c.Z], () => c.Z.getGuild(e), [e]),
         E = !!(null == m ? void 0 : m.features.has(h.oNc.INVITES_DISABLED)),
         [S] = i.useState(!1),
         [C, T] = i.useState(f.Fl),
-        I = (0, l.e7)([O.Z], () => O.Z.getGuildIncident(e)),
+        I = (0, a.e7)([O.Z], () => O.Z.getGuildIncident(e)),
         D = (0, p.BT)(m),
         A = (0, b.SG)(I) || E,
         P = (0, b.sN)(I),
@@ -78,7 +78,7 @@ function v(t) {
     function K() {
         R((t) => !t);
     }
-    return (0, r.jsx)(a.Modal, {
+    return (0, r.jsx)(l.Modal, {
         transitionState: n,
         title: _.intl.string(_.t.oCYAc3),
         actions: [

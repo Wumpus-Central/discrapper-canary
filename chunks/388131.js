@@ -1,204 +1,204 @@
-r.d(t, {
-    A: () => w,
-    default: () => j,
+n.d(t, {
+    A: () => f,
+    default: () => E,
 }),
-    r(388685),
-    r(953529);
-var n = r(951288),
-    l = r(647438),
-    o = r(442837),
-    i = r(82659),
-    s = r(481060),
-    a = r(741361),
-    c = r(881052),
-    u = r(911969),
-    d = r(974339),
-    m = r(215157),
-    x = r(592125),
-    b = r(430824),
-    h = r(700785),
-    f = r(146085),
-    y = r(71080),
-    g = r(388032),
-    p = r(878713);
-function w(e, t) {
+    n(388685),
+    n(953529);
+var r = n(951288),
+    i = n(647438),
+    s = n(793030),
+    l = n(442837),
+    a = n(481060),
+    o = n(741361),
+    c = n(881052),
+    d = n(911969),
+    h = n(974339),
+    u = n(215157),
+    p = n(592125),
+    g = n(430824),
+    m = n(700785),
+    C = n(146085),
+    x = n(71080),
+    N = n(388032),
+    b = n(878713);
+function f(e, t) {
     return {
         id: e,
         type: t,
-        deny: h.Hn,
-        allow: f.yP,
+        deny: m.Hn,
+        allow: C.yP,
     };
 }
-function j(e) {
+function E(e) {
     var t,
-        r,
-        { channelId: h, onClose: j } = e,
+        n,
+        { channelId: m, onClose: E } = e,
         O = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
-                l = (function (e, t) {
+            var n,
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-                    return l;
+                    var n,
+                        r,
+                        i = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++)
-                    (r = o[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["channelId", "onClose"]);
-    let v = (0, o.e7)([x.Z], () => x.Z.getChannel(h)),
-        S = (0, o.e7)([b.Z], () => b.Z.getGuild(null == v ? void 0 : v.getGuildId())),
-        [E, R] = l.useState(""),
-        [T, P] = l.useState({}),
-        [C, k] = l.useState(!1),
-        [I, L] = l.useState(null),
-        M = l.useRef(null),
-        { roles: Z, members: N, getRichTag: B } = (0, m.Q)(S, v, f.yP, E),
-        A = d.Z.useSections({
-            roles: Z,
-            members: N,
+    let j = (0, l.e7)([p.Z], () => p.Z.getChannel(m)),
+        I = (0, l.e7)([g.Z], () => g.Z.getGuild(null == j ? void 0 : j.getGuildId())),
+        [v, y] = i.useState(""),
+        [S, T] = i.useState({}),
+        [A, _] = i.useState(!1),
+        [D, P] = i.useState(null),
+        L = i.useRef(null),
+        { roles: w, members: G, getRichTag: U } = (0, u.Q)(I, j, C.yP, v),
+        R = h.Z.useSections({
+            roles: w,
+            members: G,
         });
-    if (null == v || null == S) return null;
-    let D = async () => {
-        k(!0);
+    if (null == j || null == I) return null;
+    let Z = async () => {
+        _(!0);
         try {
             await (function (e, t) {
-                let r = Object.values(t)
+                let n = Object.values(t)
                     .filter((e) => {
                         let { row: t } = e;
                         return null != t.id;
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === y.aC.ROLE ? w(t.id, u.BN.ROLE) : w(t.id, u.BN.MEMBER);
+                        return t.rowType === x.aC.ROLE ? f(t.id, d.BN.ROLE) : f(t.id, d.BN.MEMBER);
                     });
-                return (0, a.hw)(e.id, r, !0);
-            })(v, T),
-                j();
+                return (0, o.hw)(e.id, n, !0);
+            })(j, S),
+                E();
         } catch (t) {
             let e = new c.Hx(t);
-            k(!1), L(e);
+            _(!1), P(e);
         }
     };
-    return (0, n.jsx)(d.Z.Provider, {
-        listRef: M,
-        query: E,
-        setQuery: R,
-        pendingAdditions: T,
-        setPendingAdditions: P,
-        roles: Z,
-        members: N,
-        getRichTag: B,
-        children: (0, n.jsx)(
-            i.Modal,
+    return (0, r.jsx)(h.Z.Provider, {
+        listRef: L,
+        query: v,
+        setQuery: y,
+        pendingAdditions: S,
+        setPendingAdditions: T,
+        roles: w,
+        members: G,
+        getRichTag: U,
+        children: (0, r.jsx)(
+            s.Modal,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        n.forEach(function (t) {
-                            var n;
-                            (n = r[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: n,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = n);
+                                    : (e[t] = r);
                         });
                 }
                 return e;
             })({}, O)),
-            (r = r =
+            (n = n =
                 {
-                    title: g.intl.string(g.t.dMJ3Y2),
-                    onClose: j,
-                    input: (0, n.jsxs)("div", {
+                    title: N.intl.string(N.t.dMJ3Y2),
+                    onClose: E,
+                    input: (0, r.jsxs)("div", {
                         children: [
-                            (0, n.jsxs)(s.Text, {
-                                className: p.channelName,
+                            (0, r.jsxs)(a.Text, {
+                                className: b.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
-                                    (0, n.jsx)(s.ewx, {
-                                        className: p.channelIcon,
+                                    (0, r.jsx)(a.ewx, {
+                                        className: b.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
-                                    v.name,
+                                    j.name,
                                 ],
                             }),
-                            v.isGuildStageVoice() &&
-                                (0, n.jsx)(s.Text, {
+                            j.isGuildStageVoice() &&
+                                (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
-                                    className: p.description,
+                                    className: b.description,
                                     variant: "text-sm/normal",
-                                    children: g.intl.string(g.t.f7VbhI),
+                                    children: N.intl.string(N.t.f7VbhI),
                                 }),
-                            (0, n.jsx)(d.Z.SearchBox, { placeholderText: g.intl.string(g.t.iezLLi) }),
-                            (0, n.jsx)(s.Text, {
-                                className: p.subtext,
+                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLi) }),
+                            (0, r.jsx)(a.Text, {
+                                className: b.subtext,
                                 variant: "text-xs/normal",
-                                children: g.intl.string(g.t["rwFx8/"]),
+                                children: N.intl.string(N.t["rwFx8/"]),
                             }),
-                            null != I
-                                ? (0, n.jsx)(s.Text, {
-                                      className: p.subtext,
+                            null != D
+                                ? (0, r.jsx)(a.Text, {
+                                      className: b.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
-                                      children: I.getAnyErrorMessage(),
+                                      children: D.getAnyErrorMessage(),
                                   })
                                 : null,
                         ],
                     }),
                     listProps: {
-                        ref: M,
-                        sectionHeight: d.Z.SECTION_HEIGHT,
-                        renderSection: d.Z.renderSection,
-                        rowHeight: d.Z.ROW_HEIGHT,
-                        renderRow: d.Z.renderRow,
-                        sections: A,
+                        ref: L,
+                        sectionHeight: h.Z.SECTION_HEIGHT,
+                        renderSection: h.Z.renderSection,
+                        rowHeight: h.Z.ROW_HEIGHT,
+                        renderRow: h.Z.renderRow,
+                        sections: R,
                     },
                     actions: [
                         {
                             variant: "secondary",
-                            text: g.intl.string(g.t["ETE/oK"]),
-                            onClick: j,
+                            text: N.intl.string(N.t["ETE/oK"]),
+                            onClick: E,
                         },
                         {
                             variant: "primary",
-                            text: g.intl.string(g.t.OYkgVl),
-                            onClick: D,
-                            loading: C,
+                            text: N.intl.string(N.t.OYkgVl),
+                            onClick: Z,
+                            loading: A,
                         },
                     ],
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
-                      var r = Object.keys(e);
+                      var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
-                      return r;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
         ),

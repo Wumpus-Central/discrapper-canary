@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(658722),
     o = n.n(a),
-    s = n(442837),
-    l = n(82659),
+    s = n(793030),
+    l = n(442837),
     c = n(481060),
     u = n(37234),
     d = n(565138),
@@ -26,15 +26,15 @@ function b(e) {
     });
 }
 function y(e) {
-    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: i, onSelectGuild: a, query: l } = e,
-        b = (0, s.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
-        y = (0, s.Wu)([_.Z], () =>
+    let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: i, onSelectGuild: a, query: s } = e,
+        b = (0, l.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
+        y = (0, l.Wu)([_.Z], () =>
             b.reduce((e, t) => {
                 let r = _.Z.getGuild(t);
                 return (
                     null == r ||
                         (null != n && n.some((e) => e.id === t)) ||
-                        ((l.length <= 0 || o()(l.toLowerCase(), null == r ? void 0 : r.name.toLowerCase())) &&
+                        ((s.length <= 0 || o()(s.toLowerCase(), null == r ? void 0 : r.name.toLowerCase())) &&
                             e.push(r)),
                     e
                 );
@@ -112,13 +112,13 @@ function y(e) {
     });
 }
 function O(e) {
-    let { onClose: t, onSelectGuild: n, transitionState: a, isTransfer: o = !1, selectedSlotGuilds: s } = e,
+    let { onClose: t, onSelectGuild: n, transitionState: a, isTransfer: o = !1, selectedSlotGuilds: l } = e,
         [c, u] = i.useState(""),
         d = async () => {
             await t();
         },
         f = o ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX);
-    return (0, r.jsx)(l.Modal, {
+    return (0, r.jsx)(s.Modal, {
         transitionState: a,
         onClose: d,
         size: "md",
@@ -133,7 +133,7 @@ function O(e) {
             onSelectGuild: n,
             query: c,
             isTransfer: o,
-            selectedSlotGuilds: s,
+            selectedSlotGuilds: l,
         }),
     });
 }

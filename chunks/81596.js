@@ -1,8 +1,8 @@
 i.d(n, { default: () => h }), i(388685);
 var e = i(951288),
     r = i(647438),
-    s = i(442837),
-    l = i(82659),
+    s = i(793030),
+    l = i(442837),
     a = i(481060),
     d = i(485267),
     c = i(564990),
@@ -17,10 +17,10 @@ var e = i(951288),
     O = i(569162);
 function h(t) {
     let { user: n, entry: i, transitionState: h, onAction: p, onClose: I, onOpenGameSettings: S } = t,
-        [f, x] = (0, s.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
+        [f, x] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => d.Bt, []),
-        (0, e.jsxs)(l.Modal, {
+        (0, e.jsxs)(s.Modal, {
             title: (0, T.y)(i),
             subtitle: C.intl.format(C.t.KV72oa, {
                 settingsHook: (t, n) => {

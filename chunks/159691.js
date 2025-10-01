@@ -59,6 +59,7 @@ n.d(t, {
     IMN: () => r.IMN,
     IeX: () => r.IeX,
     IkH: () => r.IkH,
+    Ioy: () => r.ExpressiveModal,
     Iy5: () => r.Iy5,
     J2R: () => r.J2R,
     JGI: () => r.JGI,

@@ -1,7 +1,7 @@
 n.d(t, { X: () => a });
 var r = n(647438),
-    i = n(667137);
+    i = n(793030);
 function a() {
-    let { headingId: e } = r.useContext(i.t);
+    let { headingId: e } = r.useContext(i.tCf);
     return "modal-heading-id" === e ? void 0 : e;
 }

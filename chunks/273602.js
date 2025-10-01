@@ -1,143 +1,143 @@
-n.d(t, { default: () => S }), n(388685), n(953529);
-var a = n(951288),
-    o = n(647438),
-    i = n(442837),
-    l = n(544891),
-    r = n(82659),
-    s = n(159691),
-    c = n(904245),
-    u = n(166459),
-    d = n(680287),
-    b = n(247206),
-    f = n(813197),
-    g = n(592125),
-    p = n(703558),
-    _ = n(430824),
-    h = n(375954),
-    m = n(403182),
-    y = n(709054),
-    x = n(861990),
-    v = n(127654),
-    w = n(979956),
-    C = n(228392),
-    j = n(404616),
-    T = n(470623),
-    I = n(981631),
-    O = n(231338),
-    M = n(388032),
-    E = n(646632);
-async function P(e) {
-    var t, n, a;
-    let o,
-        { thread: i, attachments: r, setIsUploading: s, guild: f, onClose: g } = e,
-        _ = y.default.castChannelIdAsMessageId(i.id),
-        C = new d.Z();
-    C.on("progress", (e) => {
-        let t = (0, m.dg)(f.id);
-        e.currentSize > t && (C.cancel(), s(!1), g(), (0, v.G)(i, (0, w.KZ)(r)));
+i.d(t, { default: () => P }), i(388685), i(953529);
+var n = i(951288),
+    s = i(647438),
+    a = i(793030),
+    o = i(442837),
+    l = i(544891),
+    r = i(159691),
+    d = i(904245),
+    h = i(166459),
+    c = i(680287),
+    u = i(247206),
+    g = i(813197),
+    p = i(592125),
+    b = i(703558),
+    f = i(430824),
+    m = i(375954),
+    v = i(403182),
+    _ = i(709054),
+    y = i(861990),
+    C = i(127654),
+    S = i(979956),
+    x = i(228392),
+    T = i(404616),
+    w = i(470623),
+    O = i(981631),
+    F = i(231338),
+    I = i(388032),
+    j = i(646632);
+async function E(e) {
+    var t, i, n;
+    let s,
+        { thread: a, attachments: o, setIsUploading: r, guild: g, onClose: p } = e,
+        f = _.default.castChannelIdAsMessageId(a.id),
+        x = new c.Z();
+    x.on("progress", (e) => {
+        let t = (0, v.dg)(g.id);
+        e.currentSize > t && (x.cancel(), r(!1), p(), (0, C.G)(a, (0, S.KZ)(o)));
     });
-    let j = h.Z.getMessage(i.id, _),
-        T = null != j ? j.attachments : [];
-    s(!0);
+    let T = m.Z.getMessage(a.id, f),
+        w = null != T ? T.attachments : [];
+    r(!0);
     try {
-        o = await C.uploadFiles(r);
+        s = await x.uploadFiles(o);
     } catch (e) {
-        s(!1);
+        r(!1);
         return;
     }
-    let O = [...T, ...(null != (t = o.map((e, t) => (0, x.B)(e, t))) ? t : [])];
+    let F = [...w, ...(null != (t = s.map((e, t) => (0, y.B)(e, t))) ? t : [])];
     try {
         await l.tn.patch({
-            url: I.ANM.MESSAGE(i.id, _),
-            body: { attachments: O },
+            url: O.ANM.MESSAGE(a.id, f),
+            body: { attachments: F },
             rejectWithError: !1,
         }),
-            g(),
-            u.Z.clearAll(i.id, p.d.ChannelMessage);
+            p(),
+            h.Z.clearAll(a.id, b.d.ChannelMessage);
     } catch (e) {
-        s(!1),
-            (null == (n = e.body) ? void 0 : n.code) === I.evJ.EXPLICIT_CONTENT &&
-                (g(),
-                c.Z.sendExplicitMediaClydeError(
-                    i.id,
-                    null == (a = e.body) ? void 0 : a.attachments,
-                    b.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+        r(!1),
+            (null == (i = e.body) ? void 0 : i.code) === O.evJ.EXPLICIT_CONTENT &&
+                (p(),
+                d.Z.sendExplicitMediaClydeError(
+                    a.id,
+                    null == (n = e.body) ? void 0 : n.attachments,
+                    u.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
                 ),
-                u.Z.clearAll(i.id, p.d.ChannelMessage));
+                h.Z.clearAll(a.id, b.d.ChannelMessage));
     }
 }
-function S(e) {
+function P(e) {
     var t;
-    let { threadId: n, attachments: l, sendMessage: c, transitionState: u, onClose: d } = e,
-        b = (0, i.e7)([g.Z], () => g.Z.getChannel(n), [n]),
-        p = (0, i.e7)([_.Z], () => _.Z.getGuild(null == b ? void 0 : b.getGuildId()), [b]),
-        h = (0, i.e7)([g.Z], () => g.Z.getChannel(null == b ? void 0 : b.parent_id), [b]),
-        m = null == (t = l[0]) ? void 0 : t.item,
-        [y, x] = o.useState(null);
-    o.useEffect(() => {
-        null != m && (0, f.Fq)(m.file, (e, t) => x(e), O.dG);
-    }, [m]);
-    let v =
-            null != m && null != y
+    let { threadId: i, attachments: l, sendMessage: d, transitionState: h, onClose: c } = e,
+        u = (0, o.e7)([p.Z], () => p.Z.getChannel(i), [i]),
+        b = (0, o.e7)([f.Z], () => f.Z.getGuild(null == u ? void 0 : u.getGuildId()), [u]),
+        m = (0, o.e7)([p.Z], () => p.Z.getChannel(null == u ? void 0 : u.parent_id), [u]),
+        v = null == (t = l[0]) ? void 0 : t.item,
+        [_, y] = s.useState(null);
+    s.useEffect(() => {
+        null != v && (0, g.Fq)(v.file, (e, t) => y(e), F.dG);
+    }, [v]);
+    let C =
+            null != v && null != _
                 ? {
-                      src: y,
-                      width: j.TJ,
-                      height: j.Lp,
+                      src: _,
+                      width: T.TJ,
+                      height: T.Lp,
                       spoiler: l[0].spoiler,
                       alt: l[0].description,
                   }
                 : null,
-        [w, I] = o.useState(!1),
-        S = o.useCallback(() => {
-            (0, C.xI)({ added: !1 }), c(), d();
-        }, [c, d]),
-        k = o.useCallback(() => {
-            null != b &&
-                null != p &&
-                ((0, C.xI)({ added: !0 }),
-                P({
-                    thread: b,
+        [S, O] = s.useState(!1),
+        P = s.useCallback(() => {
+            (0, x.xI)({ added: !1 }), d(), c();
+        }, [d, c]),
+        M = s.useCallback(() => {
+            null != u &&
+                null != b &&
+                ((0, x.xI)({ added: !0 }),
+                E({
+                    thread: u,
                     attachments: l,
-                    setIsUploading: I,
-                    guild: p,
-                    onClose: d,
+                    setIsUploading: O,
+                    guild: b,
+                    onClose: c,
                 }));
-        }, [b, l, I, p, d]);
-    return null == h
+        }, [u, l, O, b, c]);
+    return null == m
         ? null
-        : (0, a.jsx)(r.Modal, {
-              title: M.intl.string(M.t["+SZF6e"]),
-              subtitle: M.intl.string(M.t["0Ycgw8"]),
-              transitionState: u,
-              onClose: d,
-              actionBarInput: (0, a.jsx)(s.Avr, {
+        : (0, n.jsx)(a.Modal, {
+              title: I.intl.string(I.t["+SZF6e"]),
+              subtitle: I.intl.string(I.t["0Ycgw8"]),
+              transitionState: h,
+              onClose: c,
+              actionBarInput: (0, n.jsx)(r.Avr, {
                   variant: "secondary",
-                  disabled: w,
-                  onClick: d,
-                  text: M.intl.string(M.t["ETE/oK"]),
+                  disabled: S,
+                  onClick: c,
+                  text: I.intl.string(I.t["ETE/oK"]),
               }),
               actions: [
                   {
                       variant: "secondary",
-                      text: M.intl.string(M.t["8rKVHB"]),
-                      disabled: w,
-                      onClick: S,
+                      text: I.intl.string(I.t["8rKVHB"]),
+                      disabled: S,
+                      onClick: P,
                   },
                   {
                       variant: "primary",
-                      text: M.intl.string(M.t.d611xM),
-                      loading: w,
-                      onClick: k,
+                      text: I.intl.string(I.t.d611xM),
+                      loading: S,
+                      onClick: M,
                       autoFocus: !0,
                   },
               ],
-              children: (0, a.jsx)(T.oL, {
-                  channel: h,
-                  children: (0, a.jsx)(j.ZP, {
-                      threadId: n,
-                      goToThread: O.dG,
-                      overrideMedia: v,
-                      className: E.forumPost,
+              children: (0, n.jsx)(w.oL, {
+                  channel: m,
+                  children: (0, n.jsx)(T.ZP, {
+                      threadId: i,
+                      goToThread: F.dG,
+                      overrideMedia: C,
+                      className: j.forumPost,
                   }),
               }),
           });

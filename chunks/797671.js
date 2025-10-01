@@ -2,9 +2,9 @@ n.d(t, { default: () => y }), n(539854), n(953529), n(388685), n(457542);
 var i = n(951288),
     a = n(647438),
     r = n(990547),
-    l = n(442837),
-    o = n(283693),
-    c = n(82659),
+    l = n(793030),
+    o = n(442837),
+    c = n(283693),
     s = n(755721),
     d = n(481060),
     u = n(218613),
@@ -29,7 +29,7 @@ function y(e) {
         [j, D] = a.useState(C.d4z.GUILD_TEXT),
         [S, k] = a.useState(""),
         [Z, G] = a.useState(!1),
-        A = (0, l.e7)([f.Z], () => f.Z.getGuild(y), [y]),
+        A = (0, o.e7)([f.Z], () => f.Z.getGuild(y), [y]),
         H = (0, m.m)(y),
         O = (0, h.Ui)(A),
         U = a.useMemo(
@@ -106,7 +106,7 @@ function y(e) {
                 }),
             [H, O],
         ),
-        V = (0, l.e7)([g.Z], () => g.Z.getCategories(y)._categories, [y]),
+        V = (0, o.e7)([g.Z], () => g.Z.getCategories(y)._categories, [y]),
         W = a.useMemo(
             () =>
                 V.map((e) => {
@@ -145,7 +145,7 @@ function y(e) {
                     event: r.NetworkActionNames.CHANNEL_CREATE,
                     properties: (e) => {
                         var t, n;
-                        return (0, o.iG)({
+                        return (0, c.iG)({
                             is_private: !0,
                             channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
                             channel_type: null == e || null == (n = e.body) ? void 0 : n.type,
@@ -164,7 +164,7 @@ function y(e) {
                     G(!1);
                 });
         },
-        children: (0, i.jsx)(c.Modal, {
+        children: (0, i.jsx)(l.Modal, {
             transitionState: T,
             title: I.intl.string(I.t["fUYU+v"]),
             onClose: B,

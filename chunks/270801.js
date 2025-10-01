@@ -1,14 +1,12 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(257465),
-    l = n(369585),
-    a = n(103866),
-    o = n(481060),
-    s = n(313201),
-    c = n(388032),
-    u = n(881053);
-let d = () =>
+var i = n(793030),
+    l = n(481060),
+    a = n(313201),
+    o = n(388032),
+    s = n(881053);
+let c = () =>
         n
             .e("49812")
             .then(n.t.bind(n, 48603, 19))
@@ -16,9 +14,9 @@ let d = () =>
                 let { default: t } = e;
                 return t;
             }),
-    p = (e) => {
+    u = (e) => {
         var t, n;
-        let p = (0, s.Dt)();
+        let u = (0, a.Dt)();
         return (0, r.jsxs)(
             i.IX,
             ((t = (function (e) {
@@ -51,38 +49,38 @@ let d = () =>
                     size: "sm",
                     children: [
                         (0, r.jsx)("div", {
-                            className: u.animationContainer,
-                            children: (0, r.jsx)(o.Fmz, {
-                                importData: d,
-                                className: u.animationMiddle,
+                            className: s.animationContainer,
+                            children: (0, r.jsx)(l.Fmz, {
+                                importData: c,
+                                className: s.animationMiddle,
                             }),
                         }),
-                        (0, r.jsx)(a.f, {
+                        (0, r.jsx)(i.fef, {
                             children: (0, r.jsxs)("div", {
-                                className: u.manaContainer,
+                                className: s.manaContainer,
                                 children: [
-                                    (0, r.jsx)(o.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: "heading-lg/semibold",
-                                        className: u.header,
-                                        id: p,
-                                        children: c.intl.format(c.t.z9qozM, { guildName: e.guildName }),
+                                        className: s.header,
+                                        id: u,
+                                        children: o.intl.format(o.t.z9qozM, { guildName: e.guildName }),
                                     }),
-                                    (0, r.jsx)(o.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: "text-sm/medium",
                                         color: "header-secondary",
-                                        children: c.intl.string(c.t.nwpqyc),
+                                        children: o.intl.string(o.t.nwpqyc),
                                     }),
                                 ],
                             }),
                         }),
-                        (0, r.jsx)(l.G, {
+                        (0, r.jsx)(i.Go$, {
                             actions: [
                                 {
                                     variant: "primary",
                                     onClick: () => {
                                         e.onAccept(), e.onClose();
                                     },
-                                    text: c.intl.string(c.t.NuzmOD),
+                                    text: o.intl.string(o.t.NuzmOD),
                                 },
                             ],
                             actionsFullWidth: !0,

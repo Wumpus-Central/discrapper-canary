@@ -18,10 +18,10 @@ var r = n(951288),
     u = n.n(c),
     d = n(879690),
     f = n(243814),
-    _ = n(442837),
-    p = n(921072),
-    h = n(524437),
-    m = n(82659),
+    _ = n(793030),
+    p = n(442837),
+    h = n(921072),
+    m = n(524437),
     g = n(481060),
     E = n(384275),
     b = n(493683),
@@ -116,7 +116,7 @@ function el(e, t) {
         e
     );
 }
-let ec = _.ZP.connectStores([H.Z], () => ({ theme: H.Z.theme }))(g.ubH);
+let ec = p.ZP.connectStores([H.Z], () => ({ theme: H.Z.theme }))(g.ubH);
 function eu(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)("div", {
@@ -139,13 +139,13 @@ let ed = (e) => {
         let { disclosure: t } = e;
         return i.useMemo(() => {
             switch (t) {
-                case p.u$.IP_LOCATION:
+                case h.u$.IP_LOCATION:
                     return (0, r.jsx)(g.enf, {
                         size: "md",
                         color: "currentColor",
                         className: en.disclosureIcon,
                     });
-                case p.u$.DISPLAYS_ADVERTISEMENTS:
+                case h.u$.DISPLAYS_ADVERTISEMENTS:
                     return (0, r.jsx)(g.FLu, { className: en.disclosureIcon });
                 default:
                     return (0, r.jsx)(g.d3s, { className: en.disclosureIcon });
@@ -173,7 +173,7 @@ let ed = (e) => {
                 })),
             (0, g.h7j)((e) =>
                 (0, r.jsx)(
-                    m.Modal,
+                    _.Modal,
                     el(
                         eo(
                             {
@@ -283,13 +283,13 @@ let ed = (e) => {
                 selectedGuildId: l,
                 onDelete: c,
                 disclosures: d,
-                locale: p,
-                id: m,
+                locale: _,
+                id: h,
             } = e,
             E = a.id,
             O = i.useMemo(() => D.ZP.createFromServer(a), [a]),
             v = (0, G.yE)(O.flags, $.udG.EMBEDDED),
-            I = (0, _.e7)([K.Z], () => {
+            I = (0, p.e7)([K.Z], () => {
                 var e, t, n, r;
                 return null == (r = K.Z.settings.applications) ||
                     null == (n = r.appSettings) ||
@@ -300,8 +300,8 @@ let ed = (e) => {
             }, [E]),
             C = S.w.useExperiment({ location: "oauth2_authorize" }),
             L = a.bot,
-            j = (0, _.e7)([x.Z], () => x.Z.getDMFromUserId(null == L ? void 0 : L.id)),
-            { appDMChannelMuteConfig: M, dmChannelMuted: B } = (0, _.cj)([k.ZP], () =>
+            j = (0, p.e7)([x.Z], () => x.Z.getDMFromUserId(null == L ? void 0 : L.id)),
+            { appDMChannelMuteConfig: M, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
                 null == j
                     ? {
                           appDMChannelMuteConfig: null,
@@ -467,7 +467,7 @@ let ed = (e) => {
                                   }),
                               })
                             : null,
-                    n = new Date(F.default.extractTimestamp(m)).toLocaleDateString(p);
+                    n = new Date(F.default.extractTimestamp(h)).toLocaleDateString(_);
                 return (0, r.jsxs)("div", {
                     className: en.headerV2,
                     children: [
@@ -501,9 +501,9 @@ let ed = (e) => {
                     (t) => {
                         E in t.appSettings
                             ? null == t.appSettings[E].appDmSettings
-                                ? (t.appSettings[E].appDmSettings = h.c$.create({ allowMobilePush: e }))
+                                ? (t.appSettings[E].appDmSettings = m.c$.create({ allowMobilePush: e }))
                                 : (t.appSettings[E].appDmSettings.allowMobilePush = e)
-                            : (t.appSettings[E] = h.dp.create({ appDmSettings: h.c$.create({ allowMobilePush: e }) }));
+                            : (t.appSettings[E] = m.dp.create({ appDmSettings: m.c$.create({ allowMobilePush: e }) }));
                     },
                     W.fy.INFREQUENT_USER_ACTION,
                 ),
@@ -634,14 +634,14 @@ let ed = (e) => {
     },
     eh = (0, d.U)(() => ({ searchQuery: "" })),
     em = () => {
-        let e = (0, _.e7)([M.Z], () => M.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, _.cj)([L.Z], () => ({
+        let e = (0, p.e7)([M.Z], () => M.Z.hidePersonalInformation),
+            { fetchState: t, appAuthTokens: n } = (0, p.cj)([L.Z], () => ({
                 fetchState: L.Z.getFetchState(),
                 appAuthTokens: L.Z.getNewestTokensForNonChildrenApplications(),
             })),
-            a = (0, _.e7)([V.default], () => V.default.locale),
-            o = (0, _.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivities()),
-            s = (0, _.e7)([x.Z, j.Z], () => x.Z.getChannel(j.Z.getChannelId())),
+            a = (0, p.e7)([V.default], () => V.default.locale),
+            o = (0, p.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivities()),
+            s = (0, p.e7)([x.Z, j.Z], () => x.Z.getChannel(j.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         i.useEffect(() => {
             E.Z.fetch();
@@ -665,7 +665,7 @@ let ed = (e) => {
             },
             d = eh((e) => e.searchQuery),
             f = (e) => eh.setState({ searchQuery: e }),
-            p = (e) => {
+            _ = (e) => {
                 f(e);
             },
             h = () => {
@@ -676,7 +676,7 @@ let ed = (e) => {
                     className: en.searchContainer,
                     children: (0, r.jsx)(g.E1j, {
                         query: d,
-                        onChange: p,
+                        onChange: _,
                         onClear: h,
                         placeholder: et.intl.string(et.t["5prvKS"]),
                         "aria-label": et.intl.string(et.t["5prvKS"]),

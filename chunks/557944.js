@@ -3,8 +3,8 @@ var i = n(951288),
     r = n(647438),
     l = n(512722),
     s = n.n(l),
-    a = n(442837),
-    o = n(82659),
+    a = n(793030),
+    o = n(442837),
     u = n(755721),
     c = n(481060),
     d = n(749210),
@@ -27,7 +27,7 @@ function m(e) {
             selectedPermissionCount: E,
             transitionState: w,
         } = e,
-        O = (0, a.e7)([b.Z], () => b.Z.getGuild(n), [n]);
+        O = (0, o.e7)([b.Z], () => b.Z.getGuild(n), [n]);
     s()(null != O, "");
     let [x, M] = r.useState(null),
         { query: T, results: P, setQuery: S } = C(n),
@@ -136,7 +136,7 @@ function m(e) {
         r.useEffect(() => {
             d.Z.requestMembers(n, void 0, 200, !1);
         }, [n]),
-        (0, i.jsx)(o.Modal, {
+        (0, i.jsx)(a.Modal, {
             "aria-label": h.intl.string(h.t["N+InBQ"]),
             transitionState: w,
             title: m,

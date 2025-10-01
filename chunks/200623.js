@@ -1,8 +1,8 @@
 r.d(t, { default: () => C });
 var n = r(951288),
     s = r(647438),
-    i = r(442837),
-    a = r(82659),
+    i = r(793030),
+    a = r(442837),
     c = r(481060),
     o = r(198993),
     l = r(639351),
@@ -38,7 +38,7 @@ function h(e) {
 }
 function C(e) {
     let { channel: t, transitionState: r, onClose: C } = e,
-        _ = (0, i.e7)([u.Z], () => null != u.Z.getRemoteSessionId()),
+        _ = (0, a.e7)([u.Z], () => null != u.Z.getRemoteSessionId()),
         j = (0, f.Z)(t, { forQRCode: !0 });
     return (
         s.useEffect(() => {
@@ -47,7 +47,7 @@ function C(e) {
         s.useEffect(() => {
             (0, m.Z)(t.id, p.YE.XBOX);
         }, [t.id]),
-        (0, n.jsx)(a.Modal, {
+        (0, n.jsx)(i.Modal, {
             title: b.intl.string(b.t["f+Aijo"]),
             subtitle: b.intl.string(b.t.mYFmDQ),
             actions: [],

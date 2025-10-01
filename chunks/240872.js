@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(539854);
 var r = n(951288);
 n(647438);
-var i = n(952265),
-    a = n(82659),
+var i = n(793030),
+    a = n(952265),
     o = n(755721),
     s = n(468026),
     l = n(388032);
@@ -76,21 +76,21 @@ let _ = {
             titleClassName: O,
             contextKey: v,
         } = e;
-        (0, i.h7)(
+        (0, a.h7)(
             (e) => {
                 if (null == E) {
-                    let i = [];
+                    let a = [];
                     return (
                         null != p &&
                             "" !== p &&
-                            i.push({
+                            a.push({
                                 text: p,
                                 onClick: () => {
                                     null == m || m(), e.onClose();
                                 },
                                 variant: "secondary",
                             }),
-                        i.push({
+                        a.push({
                             text: null != d ? d : l.intl.string(l.t.BddRzc),
                             onClick: () => {
                                 null == h || h(), e.onClose();
@@ -98,12 +98,12 @@ let _ = {
                             variant: _,
                         }),
                         (0, r.jsx)(
-                            a.Modal,
+                            i.Modal,
                             f(u({}, e), {
                                 size: "sm",
                                 title: t,
                                 subtitle: n,
-                                actions: i,
+                                actions: a,
                             }),
                         )
                     );

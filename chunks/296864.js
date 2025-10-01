@@ -1,8 +1,8 @@
 t.d(n, { default: () => f }), t(388685), t(953529);
 var i = t(951288),
     l = t(647438),
-    r = t(442837),
-    a = t(82659),
+    r = t(793030),
+    a = t(442837),
     s = t(755721),
     c = t(481060),
     o = t(41776),
@@ -20,11 +20,11 @@ function f(e) {
     var n;
     let { transitionState: t, event: f, onSuccess: N, onClose: y } = e,
         { guild_id: k, privacy_level: E } = f,
-        w = (0, r.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
-        b = (0, r.e7)([v.Z], () => v.Z.getGuild(k), [k]),
+        w = (0, a.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
+        b = (0, a.e7)([v.Z], () => v.Z.getGuild(k), [k]),
         { canManageGuildEvent: I } = (0, u.XJ)(null != w ? w : b),
         S = I(f),
-        O = (0, r.e7)([o.Z], () => o.Z.isLurking(k), [k]),
+        O = (0, a.e7)([o.Z], () => o.Z.isLurking(k), [k]),
         Z = f.entity_type === C.WX.STAGE_INSTANCE,
         [_, T] = l.useState(Z),
         [P, { loading: A, error: G }] = (0, m.Z)();
@@ -36,7 +36,7 @@ function f(e) {
         R = async () => {
             await P(f, _, { onSuccess: X });
         };
-    return (0, i.jsxs)(a.Modal, {
+    return (0, i.jsxs)(r.Modal, {
         transitionState: t,
         onClose: y,
         title: f.name,

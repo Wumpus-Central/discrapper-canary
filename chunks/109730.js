@@ -1,160 +1,160 @@
-l.d(e, { default: () => f }), l(388685);
-var n = l(951288),
-    s = l(647438),
-    a = l(442837),
-    r = l(82659),
-    i = l(755721),
-    o = l(481060),
-    c = l(91176),
-    u = l(493773),
-    d = l(906732),
-    _ = l(910693),
-    T = l(501517),
-    h = l(592125),
-    g = l(594174),
-    x = l(626135),
-    p = l(5192),
-    O = l(590433),
-    m = l(981631),
-    E = l(388032),
-    C = l(764295),
-    S = l(678437);
-function U(t) {
+n.d(e, { default: () => D }), n(388685);
+var l = n(951288),
+    r = n(647438),
+    a = n(793030),
+    i = n(442837),
+    o = n(755721),
+    u = n(481060),
+    s = n(91176),
+    c = n(493773),
+    _ = n(906732),
+    d = n(910693),
+    E = n(501517),
+    T = n(592125),
+    O = n(594174),
+    g = n(626135),
+    A = n(5192),
+    M = n(590433),
+    S = n(981631),
+    f = n(388032),
+    C = n(764295),
+    h = n(678437);
+function m(t) {
     return {
         value: t,
         get label() {
-            return (0, O.L9)(t);
+            return (0, M.L9)(t);
         },
     };
 }
-let N = [
-    U(O.UK.DURATION_60_SEC),
-    U(O.UK.DURATION_5_MIN),
-    U(O.UK.DURATION_10_MIN),
-    U(O.UK.DURATION_1_HOUR),
-    U(O.UK.DURATION_1_DAY),
-    U(O.UK.DURATION_1_WEEK),
+let I = [
+    m(M.UK.DURATION_60_SEC),
+    m(M.UK.DURATION_5_MIN),
+    m(M.UK.DURATION_10_MIN),
+    m(M.UK.DURATION_1_HOUR),
+    m(M.UK.DURATION_1_DAY),
+    m(M.UK.DURATION_1_WEEK),
 ];
-function f(t) {
-    var e, l;
-    let { guildId: U, userId: f, anaylticsLocations: v, transitionState: R, onClose: I, modReportId: y } = t,
-        { analyticsLocations: D } = (0, d.ZP)(),
-        A = null != (l = null != (e = null == v ? void 0 : v[0]) ? e : null == D ? void 0 : D[0]) ? l : null,
-        j = (0, a.e7)([g.default], () => g.default.getUser(f), [f]),
-        [K, b] = s.useState(O.UK.DURATION_60_SEC),
-        [M, k] = s.useState(""),
-        [P, Z] = s.useState(!1),
-        [w, B] = s.useState(!1),
-        q = (0, a.e7)([h.Z], () => {
+function D(t) {
+    var e, n;
+    let { guildId: m, userId: D, anaylticsLocations: N, transitionState: R, onClose: p, modReportId: U } = t,
+        { analyticsLocations: v } = (0, _.ZP)(),
+        x = null != (n = null != (e = null == N ? void 0 : N[0]) ? e : null == v ? void 0 : v[0]) ? n : null,
+        b = (0, i.e7)([O.default], () => O.default.getUser(D), [D]),
+        [y, j] = r.useState(M.UK.DURATION_60_SEC),
+        [k, P] = r.useState(""),
+        [B, K] = r.useState(!1),
+        [L, Z] = r.useState(!1),
+        w = (0, i.e7)([T.Z], () => {
             var t;
-            return null == (t = h.Z.getChannel(y)) ? void 0 : t.isArchivedThread();
+            return null == (t = T.Z.getChannel(U)) ? void 0 : t.isArchivedThread();
         }),
-        L = (0, _.sE)(U, {
-            location: A,
-            targetUserId: f,
+        F = (0, d.sE)(m, {
+            location: x,
+            targetUserId: D,
         }),
-        W = s.useCallback(async () => {
-            if (null != j) {
-                Z(!0);
+        H = r.useCallback(async () => {
+            if (null != b) {
+                K(!0);
                 try {
-                    await c.Z.setCommunicationDisabledDuration(U, f, K, M, A, y),
-                        w && null != y && T.Z.resolveFlag(y),
-                        L(_.jQ.TIMEOUT),
-                        (0, o.showToast)(
-                            (0, o.createToast)(
-                                E.intl.formatToPlainString(E.t.O9C3Nj, { user: p.ZP.getName(U, null, j) }),
-                                o.ToastType.SUCCESS,
+                    await s.Z.setCommunicationDisabledDuration(m, D, y, k, x, U),
+                        L && null != U && E.Z.resolveFlag(U),
+                        F(d.jQ.TIMEOUT),
+                        (0, u.showToast)(
+                            (0, u.createToast)(
+                                f.intl.formatToPlainString(f.t.O9C3Nj, { user: A.ZP.getName(m, null, b) }),
+                                u.ToastType.SUCCESS,
                             ),
                         ),
-                        I();
+                        p();
                 } catch (t) {
-                    (0, o.showToast)((0, o.createToast)(E.intl.string(E.t.epyCur), o.ToastType.FAILURE));
+                    (0, u.showToast)((0, u.createToast)(f.intl.string(f.t.epyCur), u.ToastType.FAILURE));
                 } finally {
-                    Z(!1);
+                    K(!1);
                 }
             }
-        }, [U, j, f, I, K, M, A, L, y, w]);
-    return ((0, u.ZP)(() => {
-        null != j &&
-            x.default.track(m.rMx.OPEN_MODAL, {
-                type: O.Cl,
-                guild_id: U,
-                other_user_id: j.id,
+        }, [m, b, D, p, y, k, x, F, U, L]);
+    return ((0, c.ZP)(() => {
+        null != b &&
+            g.default.track(S.rMx.OPEN_MODAL, {
+                type: M.Cl,
+                guild_id: m,
+                other_user_id: b.id,
             });
     }),
-    s.useEffect(() => {
-        (null == j || null == U) && I();
-    }, [U, j, I]),
-    null == j || null == U)
+    r.useEffect(() => {
+        (null == b || null == m) && p();
+    }, [m, b, p]),
+    null == b || null == m)
         ? null
-        : (0, n.jsx)(r.Modal, {
+        : (0, l.jsx)(a.Modal, {
               transitionState: R,
-              title: E.intl.formatToPlainString(E.t.OhsOy8, { user: p.ZP.getName(U, null, j) }),
-              subtitle: E.intl.format(E.t.Ns83GR, { helpdeskArticle: O.cu }),
+              title: f.intl.formatToPlainString(f.t.OhsOy8, { user: A.ZP.getName(m, null, b) }),
+              subtitle: f.intl.format(f.t.Ns83GR, { helpdeskArticle: M.cu }),
               actions: [
                   {
-                      text: E.intl.string(E.t["ETE/oK"]),
-                      onClick: I,
+                      text: f.intl.string(f.t["ETE/oK"]),
+                      onClick: p,
                       variant: "secondary",
                   },
                   {
-                      text: E.intl.string(E.t.MlPTIi),
-                      onClick: W,
-                      loading: P,
+                      text: f.intl.string(f.t.MlPTIi),
+                      onClick: H,
+                      loading: B,
                   },
               ],
               actionBarInput:
-                  null == y || q
+                  null == U || w
                       ? void 0
-                      : (0, n.jsx)(i.$q, {
-                            value: w,
+                      : (0, l.jsx)(o.$q, {
+                            value: L,
                             onChange: (t, e) => {
-                                B(e);
+                                Z(e);
                             },
-                            children: E.intl.string(C.default["8yIKen"]),
+                            children: f.intl.string(C.default["8yIKen"]),
                         }),
-              onClose: I,
-              children: (0, n.jsxs)(o.Kqy, {
+              onClose: p,
+              children: (0, l.jsxs)(u.Kqy, {
                   gap: 16,
                   children: [
-                      (0, n.jsxs)(o.Kqy, {
+                      (0, l.jsxs)(u.Kqy, {
                           gap: 8,
                           children: [
-                              (0, n.jsx)(o.X6q, {
+                              (0, l.jsx)(u.X6q, {
                                   variant: "heading-sm/semibold",
-                                  children: E.intl.string(E.t["9XsExs"]),
+                                  children: f.intl.string(f.t["9XsExs"]),
                               }),
-                              (0, n.jsx)(i.hE, {
-                                  buttons: N.map((t) =>
-                                      (function (t, e, l) {
-                                          let { value: s, label: a } = t;
+                              (0, l.jsx)(o.hE, {
+                                  buttons: I.map((t) =>
+                                      (function (t, e, n) {
+                                          let { value: r, label: a } = t;
                                           return {
-                                              content: (0, n.jsx)(o.Text, {
+                                              content: (0, l.jsx)(u.Text, {
                                                   variant: "text-sm/semibold",
-                                                  className: e ? S.selectorTextSelected : S.selectorText,
+                                                  className: e ? h.selectorTextSelected : h.selectorText,
                                                   children: a,
                                               }),
-                                              className: e ? S.selectorButtonSelected : S.selectorButton,
-                                              onClick: () => l(s),
+                                              className: e ? h.selectorButtonSelected : h.selectorButton,
+                                              onClick: () => n(r),
                                           };
-                                      })(t, t.value === K, b),
+                                      })(t, t.value === y, j),
                                   ),
                               }),
                           ],
                       }),
-                      (0, n.jsxs)(o.Kqy, {
+                      (0, l.jsxs)(u.Kqy, {
                           gap: 8,
                           children: [
-                              (0, n.jsx)(o.X6q, {
+                              (0, l.jsx)(u.X6q, {
                                   variant: "heading-sm/semibold",
-                                  children: E.intl.string(E.t.ewHW19),
+                                  children: f.intl.string(f.t.ewHW19),
                               }),
-                              (0, n.jsx)(o.Kx8, {
-                                  value: M,
-                                  onChange: (t) => k(t),
-                                  placeholder: E.intl.string(E.t.GakiHx),
+                              (0, l.jsx)(u.Kx8, {
+                                  value: k,
+                                  onChange: (t) => P(t),
+                                  placeholder: f.intl.string(f.t.GakiHx),
                                   rows: 4,
-                                  maxLength: O.GN,
+                                  maxLength: M.GN,
                               }),
                           ],
                       }),

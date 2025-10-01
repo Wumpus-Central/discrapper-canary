@@ -1,8 +1,8 @@
 n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(442837),
-    i = n(82659),
+    a = n(793030),
+    i = n(442837),
     s = n(481060),
     u = n(904245),
     o = n(311819),
@@ -32,7 +32,7 @@ function Z(e) {
             transitionState: L,
         } = e,
         [T] = (0, c.Z)([t]),
-        N = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
         [w, D] = l.useState(!1),
         [R, M] = l.useState(""),
         [k, A] = l.useState("");
@@ -135,7 +135,7 @@ function Z(e) {
                           }),
                       ],
                   });
-    return (0, r.jsx)(i.Modal, {
+    return (0, r.jsx)(a.Modal, {
         transitionState: L,
         onClose: P,
         title: S.intl.string(S.t.r9qKo6),

@@ -1,29 +1,29 @@
-n.d(t, { Q: () => s });
-var r = n(951288);
+n.d(t, { Q: () => c });
+var a = n(951288);
 n(647438);
-var i = n(103866),
-    a = n(481060),
+var r = n(793030),
+    i = n(481060),
     l = n(697674),
-    c = n(345262),
+    s = n(345262),
     o = n(393201);
-let s = (e) => {
-    let { children: t, actions: n, footerInput: s, title: u } = e;
-    return (0, r.jsxs)(a.Kqy, {
+let c = (e) => {
+    let { children: t, actions: n, footerInput: c, title: d } = e;
+    return (0, a.jsxs)(i.Kqy, {
         direction: "vertical",
         justify: "start",
-        padding: c.h,
+        padding: s.h,
         className: o.container,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, a.jsx)(i.X6q, {
                 variant: "heading-lg/semibold",
                 className: o.heading,
-                children: u,
+                children: d,
             }),
-            (0, r.jsx)(i.f, { children: t }),
-            (0, r.jsx)("div", { className: o.footerSpacer }),
-            (0, r.jsx)(l.A, {
+            (0, a.jsx)(r.fef, { children: t }),
+            (0, a.jsx)("div", { className: o.footerSpacer }),
+            (0, a.jsx)(l.A, {
                 actions: n,
-                footerInput: s,
+                footerInput: c,
             }),
         ],
     });

@@ -1,8 +1,8 @@
 i.d(e, { default: () => b });
 var n = i(951288),
     r = i(647438),
-    s = i(442837),
-    l = i(82659),
+    s = i(793030),
+    l = i(442837),
     a = i(481060),
     d = i(594174),
     c = i(63063),
@@ -31,10 +31,10 @@ function b(t) {
                 b(),
                 (0, x.L$)(h.qb.WIDGET_REMOVED);
         }, [i.type, b, v]),
-        f = (0, s.e7)([d.default], () => d.default.getUser(u));
+        f = (0, l.e7)([d.default], () => d.default.getUser(u));
     return null == f
         ? null
-        : (0, n.jsxs)(l.Modal, {
+        : (0, n.jsxs)(s.Modal, {
               transitionState: e,
               onClose: b,
               title: p.intl.string(p.t.Mm07YW),

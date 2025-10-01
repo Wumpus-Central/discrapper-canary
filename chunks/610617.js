@@ -2,8 +2,8 @@ t.d(n, { default: () => p }), t(388685);
 var a = t(951288),
     i = t(647438),
     l = t(106351),
-    r = t(442837),
-    d = t(82659),
+    r = t(793030),
+    d = t(442837),
     c = t(481060),
     o = t(471445),
     s = t(856768),
@@ -17,10 +17,10 @@ var a = t(951288),
     C = t(345986);
 function p(e) {
     let { transitionState: n, onClose: t, parentId: l } = e,
-        o = (0, r.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
+        o = (0, d.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
         [u, f] = i.useState(o),
         [v, x] = i.useState(!1);
-    return (0, a.jsx)(d.Modal, {
+    return (0, a.jsx)(r.Modal, {
         title: g.intl.string(g.t["4wcdEx"]),
         actions: [],
         transitionState: n,
@@ -44,8 +44,8 @@ function p(e) {
     });
 }
 function j(e) {
-    let { guildId: n, hideMutedChannels: t, parentId: d } = e,
-        c = (0, r.e7)([u.Z], () => u.Z.getCategories(n)),
+    let { guildId: n, hideMutedChannels: t, parentId: r } = e,
+        c = (0, d.e7)([u.Z], () => u.Z.getCategories(n)),
         o = (0, m.Z)(c),
         s = i.useRef(null);
     return (
@@ -63,7 +63,7 @@ function j(e) {
                           {
                               channel: e,
                               hideMutedChannels: t,
-                              parentId: d,
+                              parentId: r,
                           },
                           e.id,
                       ),
@@ -83,8 +83,8 @@ function I(e) {
 function _(e) {
     let { channel: n, hideMutedChannels: t, parentId: i } = e,
         l = (0, x.s4)(n.id);
-    if ((0, r.e7)([f.ZP], () => f.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
-    let d = (0, o.KS)(n);
+    if ((0, d.e7)([f.ZP], () => f.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
+    let r = (0, o.KS)(n);
     return (0, a.jsxs)(
         "div",
         {
@@ -93,10 +93,10 @@ function _(e) {
                 (0, a.jsxs)("div", {
                     className: C.channelName,
                     children: [
-                        null != d &&
+                        null != r &&
                             (0, a.jsx)("div", {
                                 className: C.channelIconContainer,
-                                children: (0, a.jsx)(d, {
+                                children: (0, a.jsx)(r, {
                                     className: C.channelIcon,
                                     size: "custom",
                                     color: "currentColor",
