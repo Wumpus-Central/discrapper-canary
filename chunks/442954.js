@@ -149,6 +149,35 @@ let v = {
                 }),
             );
     },
+    DynamicGraphicDemo: async () => {
+        let { ExpressiveModal: e } = await Promise.resolve().then(n.bind(n, 667202)),
+            { DynamicGraphicComponent: t } = await Promise.resolve().then(n.bind(n, 198168));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                g(b({}, n), {
+                    title: "Dynamic Graphics Demo",
+                    subtitle: "This modal demonstrates the dynamic graphics system",
+                    graphic: {
+                        type: "dynamic",
+                        component: t.DEMO,
+                        aspectRatio: "6/4",
+                        props: { text: "Dynamic Content Loaded!" },
+                    },
+                    actions: [
+                        {
+                            variant: "primary",
+                            text: "Close",
+                            onClick: n.onClose,
+                        },
+                    ],
+                    children: (0, a.jsx)("div", {
+                        children:
+                            "This modal showcases the new dynamic graphics system where components can be loaded dynamically based on enum values, providing type safety while maintaining runtime flexibility.",
+                    }),
+                }),
+            );
+    },
 };
 function j() {
     let e = r.useMemo(

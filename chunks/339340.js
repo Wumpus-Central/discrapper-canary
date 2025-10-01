@@ -33,7 +33,7 @@ function S(e) {
         N = (0, a.e7)([m.Z], () => m.Z.getMediaSessionId()),
         [R, P] = i.useState(null != C ? C : ""),
         [w, D] = i.useState(!1),
-        [x, L] = i.useState(null),
+        [L, x] = i.useState(null),
         j = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         M = R.length > T;
     i.useEffect(() => {
@@ -44,18 +44,18 @@ function S(e) {
         });
     }, [t.guild_id, S]);
     let k = (e) => {
-            L(new o.Hx(e, e.status).getAnyErrorMessage());
+            x(new o.Hx(e, e.status).getAnyErrorMessage());
         },
         U = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = u.Z.validateMessage(n, j, t.id);
-                return L(e), D(!1), { hasErrors: !0 };
+                return x(e), D(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         G = async (e) => {
-            R === C && A(), null == e || e.preventDefault(), L(null), D(!0);
+            R === C && A(), null == e || e.preventDefault(), x(null), D(!0);
             let n = R.length,
                 r = R.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = h.ZP.parse(t, R),
@@ -81,10 +81,10 @@ function S(e) {
             }
         },
         [B, Z] = i.useState((0, _.JM)(R)),
-        V = (e, t, n) => {
+        F = (e, t, n) => {
             P(t), Z(n);
         },
-        F = async () => (
+        V = async () => (
             M || w || (await G()),
             Promise.resolve({
                 shouldClear: !1,
@@ -101,8 +101,8 @@ function S(e) {
                     placeholder: y.intl.formatToPlainString(y.t.DUXxBg, { channelName: t.name }),
                     focused: !0,
                     channel: t,
-                    onChange: V,
-                    onSubmit: F,
+                    onChange: F,
+                    onSubmit: V,
                     type: f.Ie.VOICE_CHANNEL_STATUS,
                     canMentionRoles: !1,
                     canMentionChannels: !1,
@@ -112,15 +112,15 @@ function S(e) {
                     showRemainingCharsAfterCount: T / 2,
                     emojiPickerCloseOnModalOuterClick: !0,
                 }),
-                null != x
+                null != L
                     ? (0, r.jsx)(l.kzN, {
                           className: O.error,
-                          children: x,
+                          children: L,
                       })
                     : null,
             ],
         });
-    return (0, r.jsx)(s.I, {
+    return (0, r.jsx)(s.ExpressiveModal, {
         transitionState: n,
         onClose: A,
         graphic: {

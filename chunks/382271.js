@@ -149,7 +149,7 @@ let A = (e, t) => {
                         ),
                     ),
                 });
-        return (0, r.jsx)(c.I, {
+        return (0, r.jsx)(c.ExpressiveModal, {
             graphic: _(),
             gradientColor: "nitro-pink",
             title: p(),

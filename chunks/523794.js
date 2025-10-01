@@ -1,4 +1,4 @@
-e.d(i, { default: () => p }), e(539854);
+e.d(i, { default: () => g }), e(539854);
 var n = e(951288);
 e(647438);
 var r = e(667202),
@@ -7,89 +7,89 @@ var r = e(667202),
     d = e(496675),
     s = e(626135),
     u = e(565799),
-    c = e(501655),
-    o = e(146085),
+    o = e(501655),
+    c = e(146085),
     _ = e(981631),
-    I = e(474936),
-    E = e(388032),
-    g = e(259442);
-function p(t) {
+    E = e(474936),
+    p = e(388032),
+    I = e(259442);
+function g(t) {
     var i;
     let e,
-        { channel: p, transitionState: T, onClose: S } = t,
-        C = l.Z.getGuild(p.guild_id),
+        { channel: g, transitionState: T, onClose: S } = t,
+        C = l.Z.getGuild(g.guild_id),
         O = null != (i = null == C ? void 0 : C.maxStageVideoChannelUsers) ? i : 0,
         f = null != C && C.features.has(_.oNc.COMMUNITY),
-        L = E.intl.string(E.t.pqPQLy),
+        L = p.intl.string(p.t.pqPQLy),
         m = f ? O < _.TU7 : (null == C ? void 0 : C.premiumTier) !== _.Eu4.TIER_3 && O <= _.eez,
-        D = d.Z.can(o.yP, p);
+        v = d.Z.can(c.yP, g);
     e =
         f && (null == C ? void 0 : C.premiumTier) === _.Eu4.TIER_3
             ? O <= _.TU7
-                ? E.intl.string(E.t.tJmOu7)
-                : E.intl.string(E.t["7FHbPD"])
+                ? p.intl.string(p.t.tJmOu7)
+                : p.intl.string(p.t["7FHbPD"])
             : m
-              ? E.intl.string(E.t["8/uDSE"])
-              : E.intl.string(E.t["7FHbPD"]);
-    let h = () => {
+              ? p.intl.string(p.t["8/uDSE"])
+              : p.intl.string(p.t["7FHbPD"]);
+    let D = () => {
             S(),
                 s.default.track(_.rMx.BOOSTING_UPSELL_CLICKED, {
-                    guild_id: p.guild_id,
-                    type: I.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: D,
-                    action: I.T7.DISMISS,
+                    guild_id: g.guild_id,
+                    type: E.cd.VIDEO_STAGE_LIMIT,
+                    is_moderator: v,
+                    action: E.T7.DISMISS,
                 });
         },
-        v = u.Z.getMutableParticipants(p.id, c.pV.SPEAKER).filter((t) => t.type === c.Ui.VOICE).length,
-        M = u.Z.getParticipantCount(p.id, c.pV.AUDIENCE);
+        M = u.Z.getMutableParticipants(g.id, o.pV.SPEAKER).filter((t) => t.type === o.Ui.VOICE).length,
+        h = u.Z.getParticipantCount(g.id, o.pV.AUDIENCE);
     s.default.track(_.rMx.BOOSTING_UPSELL_VIEWED, {
-        guild_id: p.guild_id,
-        type: I.cd.VIDEO_STAGE_LIMIT,
-        is_moderator: D,
-        listener_count: v + M,
+        guild_id: g.guild_id,
+        type: E.cd.VIDEO_STAGE_LIMIT,
+        is_moderator: v,
+        listener_count: M + h,
     });
-    let P = [];
+    let x = [];
     return (
         m
-            ? P.push(
+            ? x.push(
                   {
-                      text: E.intl.string(E.t.f3Pet7),
+                      text: p.intl.string(p.t.f3Pet7),
                       variant: "secondary",
-                      onClick: h,
+                      onClick: D,
                   },
                   {
-                      text: E.intl.string(E.t.Uj0md3),
+                      text: p.intl.string(p.t.Uj0md3),
                       variant: "expressive",
                       onClick: () => {
                           S(),
                               (0, a.f)({
-                                  guildId: p.guild_id,
+                                  guildId: g.guild_id,
                                   location: { section: _.jXE.STAGE_VIDEO_LIMIT },
                               }),
                               s.default.track(_.rMx.BOOSTING_UPSELL_CLICKED, {
-                                  guild_id: p.guild_id,
-                                  type: I.cd.VIDEO_STAGE_LIMIT,
-                                  is_moderator: D,
-                                  action: I.T7.BOOST,
+                                  guild_id: g.guild_id,
+                                  type: E.cd.VIDEO_STAGE_LIMIT,
+                                  is_moderator: v,
+                                  action: E.T7.BOOST,
                               });
                       },
                   },
               )
-            : P.push({
-                  text: E.intl.string(E.t["NX+WJC"]),
+            : x.push({
+                  text: p.intl.string(p.t["NX+WJC"]),
                   variant: "primary",
-                  onClick: h,
+                  onClick: D,
               }),
-        (0, n.jsx)(r.I, {
+        (0, n.jsx)(r.ExpressiveModal, {
             transitionState: T,
             onClose: S,
             title: L,
             subtitle: e,
             graphic: {
                 type: "image",
-                src: g,
+                src: I,
             },
-            actions: P,
+            actions: x,
         })
     );
 }

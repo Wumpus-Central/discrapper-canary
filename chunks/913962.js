@@ -20,7 +20,7 @@ function g(t) {
                 scrollPosition: d.rP.LEGACY_CHAT_INPUT,
             });
     }
-    return (0, e.jsx)(a.I, {
+    return (0, e.jsx)(a.ExpressiveModal, {
         transitionState: i,
         title: u.intl.string(u.t.G9HG5O),
         subtitle: u.intl.format(u.t.ZtUieH, {

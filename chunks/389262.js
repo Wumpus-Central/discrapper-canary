@@ -1,32 +1,32 @@
-e.d(i, { default: () => d });
-var a = e(951288);
-e(647438);
-var n = e(667202),
-    r = e(481060),
-    s = e(313201),
-    l = e(388032),
-    o = e(758590),
-    c = e(365627);
+i.d(e, { default: () => d });
+var a = i(951288);
+i(647438);
+var r = i(667202),
+    n = i(481060),
+    s = i(313201),
+    l = i(388032),
+    o = i(758590),
+    c = i(365627);
 function d(t) {
-    let { transitionState: i, onClose: e, storeListing: d, subscription: u } = t,
-        m = (0, s.Dt)();
-    return (0, a.jsx)(n.I, {
+    let { transitionState: e, onClose: i, storeListing: d, subscription: u } = t,
+        p = (0, s.Dt)();
+    return (0, a.jsx)(r.ExpressiveModal, {
         actions: [
             {
                 variant: "secondary",
-                onClick: e,
+                onClick: i,
                 text: l.intl.string(l.t["JtWl+f"]),
             },
         ],
-        "aria-labelledby": m,
+        "aria-labelledby": p,
         graphic: {
             type: "image",
             src: c,
         },
-        onClose: e,
-        transitionState: i,
+        onClose: i,
+        transitionState: e,
         title: l.intl.formatToPlainString(l.t["wLFT6+"], { tier: d.summary }),
-        children: (0, a.jsx)(r.Text, {
+        children: (0, a.jsx)(n.Text, {
             className: o.subtitle,
             variant: "text-md/medium",
             color: "header-secondary",

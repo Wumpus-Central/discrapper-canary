@@ -68,7 +68,7 @@ function m(e) {
                     emailAddressLink: "mailto:".concat(p),
                 })
               : void 0;
-    return (0, r.jsxs)(o.I, {
+    return (0, r.jsxs)(o.ExpressiveModal, {
         transitionState: t,
         onClose: n,
         graphic:

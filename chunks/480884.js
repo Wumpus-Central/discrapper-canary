@@ -1,8 +1,8 @@
-e.d(n, { default: () => x }), e(953529);
+e.d(t, { default: () => k }), e(953529);
 var a = e(951288),
     s = e(647438),
-    c = e(286379),
-    i = e(399606),
+    i = e(286379),
+    c = e(399606),
     o = e(667202),
     r = e(481060),
     l = e(797614),
@@ -11,41 +11,41 @@ var a = e(951288),
     b = e(359119),
     _ = e(473092),
     g = e(636749),
-    f = e(981631),
-    p = e(388032),
-    v = e(308064);
-function x(t) {
+    x = e(981631),
+    v = e(388032),
+    h = e(697766);
+function k(n) {
     let {
-            transitionState: n,
+            transitionState: t,
             onClose: e,
-            channelId: x,
-            warningId: h,
-            senderId: k,
+            channelId: k,
+            warningId: p,
+            senderId: y,
             description: m,
-            safetyTipRows: y,
-            actionRows: T,
-            learnMore: j,
-        } = t,
-        N = (0, i.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(x, h));
+            safetyTipRows: T,
+            actionRows: j,
+            learnMore: N,
+        } = n,
+        f = (0, c.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(k, p));
     return (
         s.useEffect(() => {
-            (0, _.MC)(f.rMx.SAFETY_WARNING_MODAL_VIEWED, {
-                channelId: x,
-                warningId: h,
-                senderId: k,
-                warningType: null == N ? void 0 : N.type,
+            (0, _.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+                channelId: k,
+                warningId: p,
+                senderId: y,
+                warningType: null == f ? void 0 : f.type,
             }),
-                l.Z.increment({ name: c.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [x, h, k, N]),
-        (0, a.jsx)(o.I, {
+                l.Z.increment({ name: i.V.SAFETY_WARNING_MODAL_VIEW });
+        }, [k, p, y, f]),
+        (0, a.jsx)(o.ExpressiveModal, {
             onClose: e,
-            transitionState: n,
+            transitionState: t,
             graphic: {
                 type: "image",
-                src: v.Z,
+                src: h.Z,
             },
             gradientColor: "blue",
-            title: p.intl.string(p.t.lyt43N),
+            title: v.intl.string(v.t.lyt43N),
             subtitle: m,
             actions: [],
             children: (0, a.jsxs)(r.Kqy, {
@@ -53,7 +53,7 @@ function x(t) {
                 children: [
                     (0, a.jsxs)(r.Kqy, {
                         gap: 8,
-                        children: [(0, a.jsx)(d.z, { children: y }), null != j ? j : null],
+                        children: [(0, a.jsx)(d.z, { children: T }), null != N ? N : null],
                     }),
                     (0, a.jsxs)(r.Kqy, {
                         gap: 4,
@@ -61,16 +61,16 @@ function x(t) {
                             (0, a.jsx)(r.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: p.intl.string(p.t.K5FKtb),
+                                children: v.intl.string(v.t.K5FKtb),
                             }),
-                            (0, a.jsx)(u.rT, { children: T }),
+                            (0, a.jsx)(u.rT, { children: j }),
                         ],
                     }),
                     (0, a.jsx)(g.Z, {
-                        channelId: x,
-                        warningId: h,
-                        senderId: k,
-                        safetyWarning: N,
+                        channelId: k,
+                        warningId: p,
+                        senderId: y,
+                        safetyWarning: f,
                     }),
                 ],
             }),

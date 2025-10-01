@@ -1,4 +1,4 @@
-e.d(i, { default: () => p });
+e.d(i, { default: () => C });
 var s = e(951288),
     n = e(647438),
     o = e(704215),
@@ -10,12 +10,12 @@ var s = e(951288),
     d = e(626135),
     m = e(258971),
     x = e(981631),
-    I = e(921944),
-    u = e(49898),
+    u = e(921944),
+    I = e(49898),
     _ = e(388032),
-    C = e(817238);
-function p(t) {
-    let { guildId: i, transitionState: p, onClose: h, analyticsType: v = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+    p = e(817238);
+function C(t) {
+    let { guildId: i, transitionState: C, onClose: h, analyticsType: v = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
         n.useEffect(() => {
             d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
@@ -23,10 +23,10 @@ function p(t) {
                 guild_id: i,
             });
         }, [i, v]),
-        (0, s.jsx)(r.I, {
+        (0, s.jsx)(r.ExpressiveModal, {
             title: _.intl.string(_.t["2tv5YG"]),
             subtitle: _.intl.string(_.t.pgwlDw),
-            transitionState: p,
+            transitionState: C,
             size: "sm",
             graphic: {
                 type: "lottie",
@@ -42,7 +42,7 @@ function p(t) {
                         h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
-                                dismissAction: I.L.SECONDARY,
+                                dismissAction: u.L.SECONDARY,
                                 guildId: i,
                             });
                     },
@@ -54,11 +54,11 @@ function p(t) {
                         h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
-                                dismissAction: I.L.PRIMARY,
+                                dismissAction: u.L.PRIMARY,
                                 guildId: i,
                             }),
                             (0, a.transitionToGlobalDiscovery)({
-                                tab: u.GlobalDiscoveryTab.APPS,
+                                tab: I.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: i,
                                     entrypoint: { name: m.xF.APPLICATION_DIRECTORY_UPSELL_MODAL },
@@ -68,14 +68,14 @@ function p(t) {
                 },
             ],
             children: (0, s.jsxs)("ul", {
-                className: C.listContainer,
+                className: p.listContainer,
                 children: [
                     (0, s.jsxs)("li", {
-                        className: C.listItem,
+                        className: p.listItem,
                         children: [
                             (0, s.jsx)(l.$2U, {
                                 color: "currentColor",
-                                className: C.wandIcon,
+                                className: p.wandIcon,
                             }),
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",
@@ -84,13 +84,13 @@ function p(t) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(b.Z, { className: C.divider }),
+                    (0, s.jsx)(b.Z, { className: p.divider }),
                     (0, s.jsxs)("li", {
-                        className: C.listItem,
+                        className: p.listItem,
                         children: [
                             (0, s.jsx)(l.wGt, {
                                 color: "currentColor",
-                                className: C.robotIcon,
+                                className: p.robotIcon,
                             }),
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",
@@ -99,13 +99,13 @@ function p(t) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(b.Z, { className: C.divider }),
+                    (0, s.jsx)(b.Z, { className: p.divider }),
                     (0, s.jsxs)("li", {
-                        className: C.listItem,
+                        className: p.listItem,
                         children: [
                             (0, s.jsx)(l.EO4, {
                                 color: "currentColor",
-                                className: C.smileIcon,
+                                className: p.smileIcon,
                             }),
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",

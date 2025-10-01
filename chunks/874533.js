@@ -1,7 +1,7 @@
 i.d(e, { default: () => u });
 var n = i(951288),
-    a = i(979554),
-    s = i(257465),
+    s = i(979554),
+    a = i(257465),
     r = i(667202),
     o = i(481060),
     c = i(892001),
@@ -13,17 +13,17 @@ function u(t) {
         u = l.default.getCurrentUser(),
         E = "6/4";
     switch (i.type) {
-        case a.Z.NAMEPLATE:
-        case a.Z.AVATAR_DECORATION:
+        case s.Z.NAMEPLATE:
+        case s.Z.AVATAR_DECORATION:
             E = "16/9";
             break;
-        case a.Z.BUNDLE:
-        case a.Z.PROFILE_EFFECT:
+        case s.Z.BUNDLE:
+        case s.Z.PROFILE_EFFECT:
         default:
             E = "6/4";
     }
-    return (0, n.jsx)(r.I, {
-        transitionState: s.Dv.ENTERED,
+    return (0, n.jsx)(r.ExpressiveModal, {
+        transitionState: a.Dv.ENTERED,
         title: d.intl.string(d.t.L4Wg3N),
         subtitle: d.intl.string(d.t.SXb73N),
         graphic: {

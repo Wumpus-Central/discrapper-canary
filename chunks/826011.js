@@ -1,6 +1,6 @@
 s.d(t, { default: () => h });
-var n = s(951288),
-    r = s(647438),
+var r = s(951288),
+    n = s(647438),
     a = s(442837),
     i = s(667202),
     l = s(481060),
@@ -9,24 +9,24 @@ var n = s(951288),
     d = s(693587),
     p = s(943970),
     u = s(998964),
-    m = s(440589),
+    m = s(401561),
     x = s(388032),
-    v = s(999852);
+    v = s(927607);
 function h(e) {
     let { guildId: t, instance: s, onClose: h, transitionState: f } = e,
         I = (0, a.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.instructions[s.planId];
         });
-    r.useEffect(() => {
+    n.useEffect(() => {
         null == I && (0, o.iX)(t, s.planId);
     }, [t, s.planId, I]);
     let j = (0, u.Z)(s),
-        C = r.useCallback(() => {
+        C = n.useCallback(() => {
             (0, c.JG)(j), (0, l.showToast)((0, l.createToast)(x.intl.string(x.t["+5kSoa"]), l.ToastType.SUCCESS));
         }, [j]),
         N = (0, p.Z)(s.gameId, "cover");
-    return (0, n.jsx)(i.I, {
+    return (0, r.jsx)(i.ExpressiveModal, {
         graphic: {
             src: N,
             type: "image",
@@ -38,21 +38,21 @@ function h(e) {
         onClose: h,
         children:
             null == I
-                ? (0, n.jsx)(l.$jN, {})
-                : (0, n.jsxs)("div", {
+                ? (0, r.jsx)(l.$jN, {})
+                : (0, r.jsxs)("div", {
                       className: v.content,
                       children: [
-                          (0, n.jsx)("div", {
+                          (0, r.jsx)("div", {
                               className: v.stepsContainer,
                               children: I.map((e, t) =>
-                                  (0, n.jsxs)(
+                                  (0, r.jsxs)(
                                       "div",
                                       {
                                           className: v.step,
                                           children: [
-                                              (0, n.jsx)("div", {
+                                              (0, r.jsx)("div", {
                                                   className: v.stepNumber,
-                                                  children: (0, n.jsx)(l.Text, {
+                                                  children: (0, r.jsx)(l.Text, {
                                                       variant: "text-sm/semibold",
                                                       color: "text-secondary",
                                                       children: x.intl.formatToPlainString(m.default.e0RxEB, {
@@ -60,7 +60,7 @@ function h(e) {
                                                       }),
                                                   }),
                                               }),
-                                              (0, n.jsx)(l.Text, {
+                                              (0, r.jsx)(l.Text, {
                                                   variant: "text-md/normal",
                                                   color: "header-primary",
                                                   children: e,
@@ -71,18 +71,18 @@ function h(e) {
                                   ),
                               ),
                           }),
-                          (0, n.jsxs)("div", {
+                          (0, r.jsxs)("div", {
                               className: v.serverIpContainer,
                               children: [
-                                  (0, n.jsx)("div", {
+                                  (0, r.jsx)("div", {
                                       className: v.serverIpInput,
-                                      children: (0, n.jsx)(l.Text, {
+                                      children: (0, r.jsx)(l.Text, {
                                           variant: "text-md/medium",
                                           color: "header-primary",
                                           children: j,
                                       }),
                                   }),
-                                  (0, n.jsx)(l.zxk, {
+                                  (0, r.jsx)(l.zxk, {
                                       variant: "primary",
                                       text: x.intl.string(x.t.OpuAlJ),
                                       onClick: C,

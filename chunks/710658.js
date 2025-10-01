@@ -1,52 +1,52 @@
-a.d(e, { default: () => k });
-var n = a(951288),
-    i = a(647438),
-    c = a(667202),
-    o = a(635552),
-    r = a(300284),
-    s = a(342386),
-    d = a(626135),
-    l = a(526167),
-    p = a(981631),
-    u = a(388032),
-    b = a(461999),
-    f = a(793167);
-let k = (t) => {
-    let { transitionState: e, onClose: a, product: k } = t;
-    i.useEffect(() => {
-        d.default.track(p.rMx.OPEN_MODAL, { type: "September Marketing Moment 2025 Claim Modal" });
+n.d(e, { default: () => g });
+var i = n(951288),
+    r = n(647438),
+    l = n(667202),
+    s = n(635552),
+    a = n(300284),
+    o = n(342386),
+    u = n(626135),
+    d = n(526167),
+    c = n(981631),
+    p = n(388032),
+    f = n(483187),
+    y = n(811086);
+let g = (t) => {
+    let { transitionState: e, onClose: n, product: g } = t;
+    r.useEffect(() => {
+        u.default.track(c.rMx.OPEN_MODAL, { type: "September Marketing Moment 2025 Claim Modal" });
     }, []);
-    let g = (0, r.Z)(),
-        { handleUseNow: h, isApplying: m } = (0, o.W)({
-            product: k,
-            onSuccess: a,
-            onError: a,
+    let b = (0, a.Z)(),
+        { handleUseNow: m, isApplying: h } = (0, s.W)({
+            product: g,
+            onSuccess: n,
+            onError: n,
         });
-    return (0, n.jsx)(c.I, {
+    return (0, i.jsx)(l.ExpressiveModal, {
         gradientColor: "nitro-pink",
-        title: u.intl.string(u.t.qYWlf3),
-        subtitle: u.intl.string(u.t.x01cl5),
+        title: p.intl.string(p.t.qYWlf3),
+        subtitle: p.intl.string(p.t.x01cl5),
         actions: [
             {
-                text: u.intl.string(u.t["2p2aY2"]),
+                text: p.intl.string(p.t["2p2aY2"]),
                 variant: "secondary",
                 onClick: () => {
-                    a(), (0, s.default)(), null == g || g();
+                    n(), (0, o.default)(), null == b || b();
                 },
             },
             {
-                text: u.intl.string(u.t.MAS7uL),
+                text: p.intl.string(p.t.MAS7uL),
                 variant: "primary",
-                onClick: h,
-                loading: m,
+                onClick: m,
+                loading: h,
             },
         ],
         graphic: {
             type: "video",
-            src: (0, l.rO)() ? b.Z : f.Z,
+            src: (0, d.rO)() ? f.Z : y.Z,
             loop: !0,
         },
         transitionState: e,
-        onClose: a,
+        onClose: n,
     });
 };

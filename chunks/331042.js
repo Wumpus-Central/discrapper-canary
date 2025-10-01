@@ -4,19 +4,19 @@ n(647438);
 var l = n(238651),
     a = n(979554),
     o = n(399606),
-    i = n(667202),
-    s = n(481060),
+    s = n(667202),
+    i = n(481060),
     c = n(100527),
     u = n(906732),
     f = n(347896),
     d = n(300284),
     p = n(1870),
-    C = n(429368),
-    E = n(884697),
+    E = n(429368),
+    C = n(884697),
     v = n(635552),
     L = n(328456),
-    h = n(624377),
-    x = n(330349),
+    x = n(624377),
+    h = n(330349),
     Z = n(530618),
     m = n(372654),
     A = n(197831),
@@ -37,18 +37,18 @@ let P = (t) => {
             purchaseType: y = N.o8.FIAT,
         } = t,
         b = (0, o.e7)([p.Z], () => p.Z.purchases),
-        D = (0, C.o)(n, b),
+        D = (0, E.o)(n, b),
         S = (0, T.W)(n, D),
         { analyticsLocations: g } = (0, u.ZP)([...R, c.Z.COLLECTIBLES_COLLECTED_MODAL]),
         { hasRequiredProductItems: B } = ((t) => {
             let { firstProfileEffect: e, firstAvatarDecoration: n, firstNameplate: r } = (0, L.Rj)(t),
-                l = (0, E.x6)(t);
+                l = (0, C.x6)(t);
             return {
                 firstAvatarDecoration: n,
                 firstProfileEffect: e,
                 firstNameplate: r,
                 isBundle: l,
-                hasRequiredProductItems: l ? (0, x.N)(t) : null != n || null != e || null != r,
+                hasRequiredProductItems: l ? (0, h.N)(t) : null != n || null != e || null != r,
             };
         })(S),
         { promotionalRewardCollectedText: F, openProfileSettings: M } = ((t) => {
@@ -110,7 +110,7 @@ let P = (t) => {
         default:
             Q = "6/4";
     }
-    let { confettiColors: Y } = (0, h.Z)(S.styles);
+    let { confettiColors: Y } = (0, x.Z)(S.styles);
     return (0, r.jsx)(u.Gt, {
         value: g,
         children: (0, r.jsxs)("div", {
@@ -121,10 +121,10 @@ let P = (t) => {
                     className: O.confettiCanvas,
                     environment: V,
                 }),
-                (0, r.jsx)(i.I, {
+                (0, r.jsx)(s.ExpressiveModal, {
                     graphic: {
                         type: "dynamic",
-                        component: s.AX$.COLLECTIBLES_PREVIEW,
+                        component: i.AX$.COLLECTIBLES_PREVIEW,
                         aspectRatio: Q,
                         props: {
                             product: S,

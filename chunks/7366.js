@@ -93,7 +93,7 @@ let m = (e) => {
         children: (e) => {
             let { onClick: a } = e;
             return (0, r.jsx)(
-                i.I,
+                i.ExpressiveModal,
                 d(
                     {
                         size: "md",

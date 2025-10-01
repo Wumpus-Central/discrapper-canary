@@ -1,108 +1,108 @@
-n.d(t, { default: () => h });
-var r = n(951288),
-    o = n(647438),
-    i = n(772848),
+n.d(e, { default: () => b });
+var i = n(951288),
+    r = n(647438),
+    o = n(772848),
     l = n(667202),
-    c = n(481060),
+    s = n(481060),
     a = n(138201),
-    s = n(63063),
-    d = n(168107),
-    u = n(480916),
-    b = n(81643),
-    x = n(981631),
-    m = n(800530),
-    f = n(388032),
-    p = n(740076),
-    j = n(736056);
-let h = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: h } = e,
-        { loading: g, initiateAgeVerification: v } = (0, b.WD)(h, !0),
-        y = o.useMemo(() => (0, i.Z)(), []);
-    o.useEffect(() => {
-        (0, u.lA)(y, u.d_.RETRY, n);
-    }, [y, n]);
-    let _ = o.useMemo(
+    c = n(63063),
+    u = n(168107),
+    d = n(480916),
+    p = n(81643),
+    f = n(981631),
+    x = n(800530),
+    R = n(388032),
+    g = n(740076),
+    E = n(736056);
+let b = function (t) {
+    let { transitionState: e, entryPoint: n, onClose: b } = t,
+        { loading: m, initiateAgeVerification: O } = (0, p.WD)(b, !0),
+        _ = r.useMemo(() => (0, o.Z)(), []);
+    r.useEffect(() => {
+        (0, d.lA)(_, d.d_.RETRY, n);
+    }, [_, n]);
+    let T = r.useMemo(
         () => [
             {
-                title: f.intl.string(f.t.FYkioq),
-                description: f.intl.string(f.t.xMfbR0),
-                buttonText: f.intl.string(f.t.RtOE1t),
-                buttonLoading: g,
+                title: R.intl.string(R.t.FYkioq),
+                description: R.intl.string(R.t.xMfbR0),
+                buttonText: R.intl.string(R.t.RtOE1t),
+                buttonLoading: m,
                 onButtonPress: () => {
-                    v(u.cU.RETRY_MODAL), (0, u.x3)(y, u.d_.RETRY, u.sU.GET_STARTED);
+                    O(d.cU.RETRY_MODAL), (0, d.x3)(_, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {
-                title: f.intl.string(f.t["LZO+HR"]),
-                description: f.intl.string(f.t.N2mHaG),
-                buttonText: f.intl.string(f.t["LZO+HR"]),
-                buttonLoading: g,
+                title: R.intl.string(R.t["LZO+HR"]),
+                description: R.intl.string(R.t.N2mHaG),
+                buttonText: R.intl.string(R.t["LZO+HR"]),
+                buttonLoading: m,
                 onButtonPress: () => {
-                    d.Z.openUrl(m.sQ.APPEALS_LINK), (0, u.x3)(y, u.d_.RETRY, u.sU.MANUAL_REVIEW_REQUEST);
+                    u.Z.openUrl(x.sQ.APPEALS_LINK), (0, d.x3)(_, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
                 },
             },
         ],
-        [v, y, g],
+        [O, _, m],
     );
-    return (0, r.jsx)(l.I, {
-        transitionState: t,
-        onClose: h,
+    return (0, i.jsx)(l.ExpressiveModal, {
+        transitionState: e,
+        onClose: b,
         gradientColor: "blue",
         graphic: {
-            src: j.Z,
+            src: E.Z,
             type: "image",
         },
-        title: f.intl.string(f.t["5l3R/v"]),
-        subtitle: f.intl.string(f.t.O7SO0N),
-        children: (0, r.jsxs)(c.Kqy, {
+        title: R.intl.string(R.t["5l3R/v"]),
+        subtitle: R.intl.string(R.t.O7SO0N),
+        children: (0, i.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 16,
             children: [
-                (0, r.jsx)(c.Wn, {
-                    messageType: c.QYI.INFO,
-                    className: p.infoBox,
+                (0, i.jsx)(s.Wn, {
+                    messageType: s.QYI.INFO,
+                    className: g.infoBox,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: f.intl.string(f.t.El4aXl),
+                    children: R.intl.string(R.t.El4aXl),
                 }),
-                _.map((e, t) =>
-                    (0, r.jsx)(
+                T.map((t, e) =>
+                    (0, i.jsx)(
                         a.JZ,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                        (function (t) {
+                            for (var e = 1; e < arguments.length; e++) {
+                                var n = null != arguments[e] ? arguments[e] : {},
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                    i.forEach(function (e) {
+                                        var i;
+                                        (i = n[e]),
+                                            e in t
+                                                ? Object.defineProperty(t, e, {
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (t[e] = i);
                                     });
                             }
-                            return e;
-                        })({ variant: "clickable" }, e),
-                        t,
+                            return t;
+                        })({ variant: "clickable" }, t),
+                        e,
                     ),
                 ),
-                (0, r.jsx)(c.Text, {
+                (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: f.intl.format(f.t["L+FgkZ"], {
+                    children: R.intl.format(R.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            d.Z.openUrl(s.Z.getArticleURL(x.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, u.x3)(y, u.d_.RETRY, u.sU.LEARN_MORE);
+                            u.Z.openUrl(c.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                                (0, d.x3)(_, d.d_.RETRY, d.sU.LEARN_MORE);
                         },
                     }),
                 }),

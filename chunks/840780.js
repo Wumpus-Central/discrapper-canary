@@ -231,7 +231,7 @@ class eN extends i.PureComponent {
                               ? (0, r.jsx)(p.J2, {
                                     graphic: {
                                         type: "dynamic",
-                                        component: d.P3.ACCOUNT_LINK_DISPLAY,
+                                        component: d.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
                                         props: { application: i },
                                     },
                                     title: ex.intl.formatToPlainString(ex.t["lo6H6+"], { gameName: i.name }),

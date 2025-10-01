@@ -1,20 +1,19 @@
-n.d(t, { M: () => T });
+n.d(t, { M: () => I });
 var r = n(951288),
     i = n(647438),
-    a = n(751334),
-    o = n(587272),
-    s = n(159691),
-    l = n(70097),
-    c = n(312097),
-    u = n(920155),
-    d = n(744399),
-    f = n(966902),
-    _ = n(562618),
-    p = n(803866),
-    h = n(490340),
-    m = n(388032),
-    g = n(37751);
-function E(e, t, n) {
+    a = n(793030),
+    o = n(159691),
+    s = n(70097),
+    l = n(312097),
+    c = n(920155),
+    u = n(744399),
+    d = n(966902),
+    f = n(562618),
+    _ = n(803866),
+    p = n(490340),
+    h = n(388032),
+    m = n(37751);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +37,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +54,22 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +77,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,24 +86,24 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e) {
+function I(e) {
     var {
             title: t,
             body: n,
-            assetUrl: E,
-            previewUrl: y = E,
-            action: I,
-            caretConfig: T = {
+            assetUrl: g,
+            previewUrl: b = g,
+            action: v,
+            caretConfig: I = {
                 position: "bottom",
                 align: "center",
             },
-            badge: S,
-            textLink: A,
-            onWatchVideo: C,
-            onRequestClose: N,
-            popoverRef: R,
+            badge: T,
+            textLink: S,
+            onWatchVideo: A,
+            onRequestClose: C,
+            popoverRef: N,
         } = e,
-        P = v(e, [
+        R = O(e, [
             "title",
             "body",
             "assetUrl",
@@ -117,48 +116,48 @@ function T(e) {
             "onRequestClose",
             "popoverRef",
         ]);
-    let w = i.useRef(null),
-        D = (0, o.j1)(y),
-        L = i.useCallback(
+    let P = i.useRef(null),
+        w = (0, a.j1L)(b),
+        D = i.useCallback(
             () => ({
                 type: "VIDEO",
-                url: E,
-                proxyUrl: E,
+                url: g,
+                proxyUrl: g,
                 alt: t,
                 width: 1280,
                 height: 720,
-                className: g.media,
+                className: m.media,
             }),
-            [E, t],
+            [g, t],
         ),
+        L = i.useCallback(() => {
+            null !== P.current && P.current.pause(), null == C || C();
+        }, [C]),
         x = i.useCallback(() => {
-            null !== w.current && w.current.pause(), null == N || N();
-        }, [N]),
+            null !== P.current && P.current.pause(), null == C || C();
+        }, [C]),
         j = i.useCallback(() => {
-            null !== w.current && w.current.pause(), null == N || N();
-        }, [N]),
-        M = i.useCallback(() => {
-            null !== w.current && w.current.pause();
-            let e = L();
-            (0, c.K)({
+            null !== P.current && P.current.pause();
+            let e = D();
+            (0, l.K)({
                 items: [e],
                 startingIndex: 0,
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == N || N(),
-                null == C || C();
-        }, [L, C, N]),
-        k = D
-            ? (0, r.jsx)(a.z, {
+                null == C || C(),
+                null == A || A();
+        }, [D, A, C]),
+        M = w
+            ? (0, r.jsx)(a.zsu, {
                   type: "image",
-                  src: y,
+                  src: b,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(l.Z, {
-                          ref: w,
-                          src: y,
+                      (0, r.jsx)(s.Z, {
+                          ref: P,
+                          src: b,
                           width: 232,
                           height: 131,
                           autoPlay: !0,
@@ -169,38 +168,38 @@ function T(e) {
                           preload: "metadata",
                       }),
                       (0, r.jsx)("div", {
-                          className: g.playButton,
-                          children: (0, r.jsx)(s.JM1, {
+                          className: m.playButton,
+                          children: (0, r.jsx)(o.JM1, {
                               playing: !1,
                               size: "sm",
-                              "aria-label": m.intl.string(h.default.YpT3kp),
-                              onClick: M,
+                              "aria-label": h.intl.string(p.default.YpT3kp),
+                              onClick: j,
                           }),
                       }),
                   ],
               });
     return (0, r.jsx)(
-        u.m,
-        O(b({}, P), {
-            onRequestClose: x,
+        c.m,
+        y(E({}, R), {
+            onRequestClose: L,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
-                ref: R,
+                ref: N,
                 children: [
-                    (0, r.jsx)(p.N, { onClick: j }),
-                    (0, r.jsx)(f.$, { caretConfig: T }),
+                    (0, r.jsx)(_.N, { onClick: x }),
+                    (0, r.jsx)(d.$, { caretConfig: I }),
                     (0, r.jsx)("div", {
-                        className: g.assetContainer,
-                        children: k,
+                        className: m.assetContainer,
+                        children: M,
                     }),
-                    (0, r.jsx)(_.Y, {
+                    (0, r.jsx)(f.Y, {
                         title: t,
                         body: n,
-                        badge: S,
-                        textLink: A,
-                        hasBottomMargin: null != I,
+                        badge: T,
+                        textLink: S,
+                        hasBottomMargin: null != v,
                     }),
-                    null != I ? (0, r.jsx)(d.k, { actions: [I] }) : null,
+                    null != v ? (0, r.jsx)(u.k, { actions: [v] }) : null,
                 ],
             }),
         }),

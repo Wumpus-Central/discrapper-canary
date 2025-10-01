@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(751334),
+    s = n(793030),
     l = n(920155),
     c = n(744399),
     u = n(966902),
@@ -122,7 +122,7 @@ function O(e) {
             "scrollBehavior",
         ]);
     let [w, D] = i.useState(null != C ? C : "top"),
-        [x, L] = i.useState({
+        [L, x] = i.useState({
             position: (0, _.z)(w),
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
@@ -137,7 +137,7 @@ function O(e) {
             null == S || S("user:explicit");
         }, [S]),
         k = i.useCallback((e) => {
-            D(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
+            D(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
         l.m,
@@ -158,7 +158,7 @@ function O(e) {
                         (0, r.jsx)("div", {
                             className: o()(p.graphic, { [p["graphic--".concat(O)]]: null != O }),
                             children: (0, r.jsx)(
-                                s.z,
+                                s.zsu,
                                 E(m({}, y), {
                                     aspectRatio: null != (n = y.aspectRatio) ? n : "sm" === O ? "2/1" : "16/9",
                                 }),
@@ -172,7 +172,7 @@ function O(e) {
                         hasBottomMargin: null != v,
                     }),
                     null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: x }),
+                    (0, r.jsx)(u.$, { caretConfig: L }),
                 ],
             }),
         }),

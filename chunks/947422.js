@@ -56,7 +56,7 @@ function u(t) {
             return o;
         })(t, ["transitionState", "onClose"]);
     return (0, n.jsxs)(
-        o.I,
+        o.ExpressiveModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},

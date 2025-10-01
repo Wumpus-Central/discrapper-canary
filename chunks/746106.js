@@ -1,78 +1,80 @@
-n.d(t, { w: () => w }), n(388685), n(539854);
+n.d(t, { w: () => D }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(631562),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
-    c = n(481060),
-    u = n(607070),
-    d = n(299363),
-    f = n(793903),
-    _ = n(803038),
-    p = n(950796),
-    h = n(392358),
-    m = n(591146),
-    g = n(377089),
-    E = n(877371),
-    b = n(314910),
-    y = n(928518),
-    O = n(823961),
-    v = n(819439),
-    I = n(706454),
-    T = n(210887),
-    S = n(451478),
-    A = n(998502),
-    C = n(264783),
-    N = n(892071),
-    R = n(388032);
-function P(e, t, n, r) {
-    let o = i.useContext(f.Z),
+    c = n(198168),
+    u = n(481060),
+    d = n(607070),
+    f = n(299363),
+    _ = n(793903),
+    p = n(803038),
+    h = n(950796),
+    m = n(392358),
+    g = n(591146),
+    E = n(377089),
+    b = n(877371),
+    y = n(314910),
+    O = n(928518),
+    v = n(823961),
+    I = n(819439),
+    T = n(706454),
+    S = n(210887),
+    A = n(451478),
+    C = n(998502),
+    N = n(264783),
+    R = n(892071),
+    P = n(388032);
+function w(e, t, n, r) {
+    let o = i.useContext(_.Z),
         s = i.useCallback(
             () => ({
                 i18n: {
-                    SPINNER_LOADING_LABEL: R.intl.string(R.t.ZTNur6),
-                    BUTTON_LOADING_STARTED_LABEL: R.intl.string(R.t.pfChQk),
-                    BUTTON_LOADING_FINISHED_LABEL: R.intl.string(R.t.SVPara),
-                    CLOSE_BUTTON_LABEL: R.intl.string(R.t.cpT0Cg),
-                    PLAY_BUTTON_LABEL: R.intl.string(R.t.RscU7O),
-                    PAUSE_BUTTON_LABEL: R.intl.string(R.t.ZcgDJS),
-                    NEW: R.intl.string(R.t.y2b7CA),
-                    BETA: R.intl.string(R.t.oW0eUV),
-                    EARLY_ACCESS: R.intl.string(R.t.EYxi0t),
-                    BILLING_TRIAL_FREE_TRIAL_TEXT: R.intl.string(R.t.IBYG5e),
+                    SPINNER_LOADING_LABEL: P.intl.string(P.t.ZTNur6),
+                    BUTTON_LOADING_STARTED_LABEL: P.intl.string(P.t.pfChQk),
+                    BUTTON_LOADING_FINISHED_LABEL: P.intl.string(P.t.SVPara),
+                    CLOSE_BUTTON_LABEL: P.intl.string(P.t.cpT0Cg),
+                    PLAY_BUTTON_LABEL: P.intl.string(P.t.RscU7O),
+                    PAUSE_BUTTON_LABEL: P.intl.string(P.t.ZcgDJS),
+                    NEW: P.intl.string(P.t.y2b7CA),
+                    BETA: P.intl.string(P.t.oW0eUV),
+                    EARLY_ACCESS: P.intl.string(P.t.EYxi0t),
+                    BILLING_TRIAL_FREE_TRIAL_TEXT: P.intl.string(P.t.IBYG5e),
                 },
                 theme: e,
                 saturation: t,
-                defaultLayerContext: b.nz,
+                defaultLayerContext: y.nz,
                 experiments: { enabledExperiments: n },
                 trackImpression: o,
                 isWindowFocused: () => r,
+                dynamicGraphicComponents: c._,
             }),
             [e, t, n, o, r],
         ),
-        [l, c] = i.useState(s);
+        [l, u] = i.useState(s);
     return (
         i.useLayoutEffect(() => {
             function e() {
-                c(s);
+                u(s);
             }
-            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), R.intl.onLocaleChange(e);
+            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
         }, [s]),
         l
     );
 }
-function w(e) {
+function D(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
-        [f] = i.useState(() => A.ZP.getEnableHardwareAcceleration()),
+        [c] = i.useState(() => C.ZP.getEnableHardwareAcceleration()),
         {
-            locale: b,
-            theme: R,
-            focused: w,
+            locale: _,
+            theme: y,
+            focused: P,
             currentWindow: D,
-            fontScale: x,
-            fontScaleClass: L,
+            fontScale: L,
+            fontScaleClass: x,
             keyboardModeEnabled: j,
             saturation: M,
             desaturateUserColors: k,
@@ -82,44 +84,44 @@ function w(e) {
             alwaysShowLinkDecorations: Z,
             confettiMode: F,
             highContrastMode: V,
-        } = (0, l.cj)([I.default, u.Z, T.Z, S.Z, y.Z, O.Z], () => {
+        } = (0, l.cj)([T.default, d.Z, S.Z, A.Z, O.Z, v.Z], () => {
             var e;
             return {
-                locale: I.default.locale,
-                theme: null != n ? n : T.Z.theme,
-                focused: o ? y.Z.getWindowFocused(t) : S.Z.isFocused(),
-                currentWindow: o && null != (e = y.Z.getWindow(t)) ? e : window,
-                fontScale: u.Z.fontScale,
-                fontScaleClass: u.Z.fontScaleClass,
-                keyboardModeEnabled: u.Z.keyboardModeEnabled,
-                saturation: u.Z.saturation,
-                desaturateUserColors: u.Z.desaturateUserColors,
-                useForcedColors: u.Z.useForcedColors,
-                systemForcedColors: u.Z.systemForcedColors,
-                useReducedMotion: u.Z.useReducedMotion,
-                alwaysShowLinkDecorations: u.Z.alwaysShowLinkDecorations,
-                highContrastMode: u.Z.isHighContrastModeEnabled,
-                confettiMode: O.Z.confettiMode,
+                locale: T.default.locale,
+                theme: null != n ? n : S.Z.theme,
+                focused: o ? O.Z.getWindowFocused(t) : A.Z.isFocused(),
+                currentWindow: o && null != (e = O.Z.getWindow(t)) ? e : window,
+                fontScale: d.Z.fontScale,
+                fontScaleClass: d.Z.fontScaleClass,
+                keyboardModeEnabled: d.Z.keyboardModeEnabled,
+                saturation: d.Z.saturation,
+                desaturateUserColors: d.Z.desaturateUserColors,
+                useForcedColors: d.Z.useForcedColors,
+                systemForcedColors: d.Z.systemForcedColors,
+                useReducedMotion: d.Z.useReducedMotion,
+                alwaysShowLinkDecorations: d.Z.alwaysShowLinkDecorations,
+                highContrastMode: d.Z.isHighContrastModeEnabled,
+                confettiMode: v.Z.confettiMode,
             };
         }),
-        H = d.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
-        Y = (0, h.Z)(D, __OVERLAY__ || w),
+        H = f.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
+        Y = (0, m.Z)(D, __OVERLAY__ || P),
         W = 0;
-    1 !== M && (W = (0, c.OdO)(W, c.bgu.REDUCE_SATURATION_ENABLED));
-    let K = (0, C.A)(),
-        z = (0, m.Ml)("RootThemeContextProvider"),
-        q = (0, m.CL)("RootThemeContextProvider"),
-        X = (0, m.VM)("RootThemeContextProvider"),
-        Q = (0, g.U)("RootThemeContextProvider"),
-        J = (0, E.A)("RootThemeContextProvider"),
-        $ = _.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
-        ee = (0, v.$)({ location: "RootThemeContextProvider" }),
-        et = (0, p.On)({
+    1 !== M && (W = (0, u.OdO)(W, u.bgu.REDUCE_SATURATION_ENABLED));
+    let K = (0, N.A)(),
+        z = (0, g.Ml)("RootThemeContextProvider"),
+        q = (0, g.CL)("RootThemeContextProvider"),
+        X = (0, g.VM)("RootThemeContextProvider"),
+        Q = (0, E.U)("RootThemeContextProvider"),
+        J = (0, b.A)("RootThemeContextProvider"),
+        $ = p.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+        ee = (0, I.$)({ location: "RootThemeContextProvider" }),
+        et = (0, h.On)({
             isPopoutWindow: o,
             isSearchDesktopTopLevelEnabled: ee,
         }),
-        en = P(
-            R,
+        en = w(
+            y,
             M,
             i.useMemo(() => {
                 let e = [];
@@ -132,22 +134,22 @@ function w(e) {
                     e
                 );
             }, [z, q, X, Q, J]),
-            w,
+            P,
         );
-    return (0, r.jsx)(c.kb5, {
+    return (0, r.jsx)(u.kb5, {
         value: en,
-        children: (0, r.jsx)(c.wMY, {
-            theme: R,
+        children: (0, r.jsx)(u.wMY, {
+            theme: y,
             flags: W,
             saturation: M,
             density: K,
-            children: (0, r.jsx)(N.cE, {
-                lang: b,
-                theme: R,
+            children: (0, r.jsx)(R.cE, {
+                lang: _,
+                theme: y,
                 density: K,
-                focused: w,
-                fontScale: x,
-                fontScaleClass: L,
+                focused: P,
+                fontScale: L,
+                fontScaleClass: x,
                 keyboardModeEnabled: j,
                 mouseMode: Y,
                 saturation: M,
@@ -156,7 +158,7 @@ function w(e) {
                 systemForcedColors: G,
                 useReducedMotion: B,
                 alwaysShowLinkDecorations: Z,
-                hardwareAccelerationEnabled: f,
+                hardwareAccelerationEnabled: c,
                 highContrastMode: H && V,
                 isPopoutWindow: o,
                 rootClassName: s()(et, {
