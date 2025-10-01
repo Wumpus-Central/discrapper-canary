@@ -1,5 +1,6 @@
 n.d(t, {
     KV: () => s,
+    NT: () => l,
     gj: () => o,
     wy: () => a,
     yP: () => i,
@@ -11,6 +12,7 @@ let r = (0, n(818083).B)({
         defaultConfig: {
             enabled: !1,
             showRedesignedNotifications: !1,
+            showLegacyOpen: !1,
         },
         treatments: [
             {
@@ -19,6 +21,7 @@ let r = (0, n(818083).B)({
                 config: {
                     enabled: !0,
                     showRedesignedNotifications: !1,
+                    showLegacyOpen: !1,
                 },
             },
             {
@@ -27,6 +30,16 @@ let r = (0, n(818083).B)({
                 config: {
                     enabled: !0,
                     showRedesignedNotifications: !0,
+                    showLegacyOpen: !1,
+                },
+            },
+            {
+                id: 3,
+                label: "Enable user settings redesign with legacy open",
+                config: {
+                    enabled: !0,
+                    showRedesignedNotifications: !1,
+                    showLegacyOpen: !0,
                 },
             },
         ],
@@ -34,4 +47,5 @@ let r = (0, n(818083).B)({
     i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
     a = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
     o = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showRedesignedNotifications,
-    s = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).showRedesignedNotifications;
+    s = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).showRedesignedNotifications,
+    l = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showLegacyOpen;

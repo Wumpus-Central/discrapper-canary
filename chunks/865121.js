@@ -1,13 +1,16 @@
-n.d(t, { Z: () => s });
-var r = n(657707),
-    i = n(230711),
+n.d(t, { Z: () => c });
+var i = n(657707),
+    r = n(230711),
     l = n(509613),
-    o = n(313789),
-    a = n(342386);
-let s = (0, l.m7)(o.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
+    u = n(906467),
+    s = n(313789),
+    a = n(526665),
+    o = n(342386);
+let c = (0, l.m7)(s.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
     useTitle: () => "Open Legacy Settings",
-    icon: r.ewm,
+    icon: i.ewm,
     onClick: () => {
-        (0, a.default)(), i.Z.open();
+        (0, o.default)(), r.Z.open();
     },
+    usePredicate: () => (0, a.NT)() || u.Z.isDeveloper,
 });
