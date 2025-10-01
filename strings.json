@@ -22261,7 +22261,7 @@
   "hcBOZW": "Game server created!",
   "ShxV5e": "Enable Game Server",
   "dXQR1t": "I understand that I will permanently lose this game instance and it cannot be restored.",
-  "oHNuWl": "This will remove the game instance from the guild.",
+  "oHNuWl": "Disabling this game server will permanently delete the game instance and all data hosted in the server. This action can’t be undone. If needed, you can download the server’s files from the game panel before proceeding.",
   "Vf4vwM": "{boostCount, plural, =1 {+ Boost} other {+ Boosts} }",
   "ZzpD5u": "{boostCount, plural, =1 { Boost} other { Boosts} }",
   "hkWuWF": "What are we playing? Choose a game to get started.",
