@@ -66,6 +66,7 @@ function _(e) {
                 }),
             })
           : (0, r.jsxs)(h.F, {
+                className: b.scroller,
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
