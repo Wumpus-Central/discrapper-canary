@@ -22218,6 +22218,7 @@
   "KCgZMj": "Your game server is ready! Manage it anytime from the ‘Game Servers’ tab in the channel list.",
   "hcBOZW": "Game server created!",
   "ShxV5e": "Enable Game Server",
+  "dXQR1t": "I understand that I will permanently lose this game instance and it cannot be restored.",
   "oHNuWl": "This will remove the game instance from the guild.",
   "Vf4vwM": "{boostCount, plural, =1 {+ Boost} other {+ Boosts} }",
   "ZzpD5u": "{boostCount, plural, =1 { Boost} other { Boosts} }",
