@@ -1,18 +1,18 @@
-n.d(t, { j: () => _ });
+n.d(t, { j: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(239091),
-    o = n(100527),
+    o = n(239091),
+    a = n(100527),
     s = n(933557),
     c = n(266076),
     u = n(769409),
     d = n(210975),
     p = n(626135),
-    h = n(981631),
-    f = n(388032),
-    m = n(782196);
-function g(e) {
+    f = n(981631),
+    h = n(388032),
+    g = n(782196);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,35 +55,35 @@ function b(e, t) {
         e
     );
 }
-let y = (e) => {
+let _ = (e) => {
         let { channel: t } = e;
         return (0, d.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.ua7, {
-                  text: f.intl.string(f.t.QyZ4TU),
+                  text: h.intl.string(h.t.QyZ4TU),
                   children: (e) =>
                       (0, r.jsx)(
                           l.tQf,
-                          b(g({}, e), {
+                          b(m({}, e), {
                               size: "xs",
-                              "aria-label": f.intl.string(f.t.VHXh8f),
+                              "aria-label": h.intl.string(h.t.VHXh8f),
                               color: l.TVs.colors.INTERACTIVE_NORMAL,
                           }),
                       ),
               })
             : null;
     },
-    _ = i.memo(function (e) {
+    O = i.memo(function (e) {
         let { channel: t } = e,
             i = t.id,
             d = (0, s.ZP)(t);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.ua7, {
-                    text: f.intl.string(f.t["5Q9+/P"]),
+                    text: h.intl.string(h.t["5Q9+/P"]),
                     position: "bottom",
                     children: (e) => {
-                        var { onMouseEnter: s, onClick: y } = e,
-                            _ = (function (e, t) {
+                        var { onMouseEnter: s, onClick: _ } = e,
+                            O = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
@@ -108,23 +108,23 @@ let y = (e) => {
                             })(e, ["onMouseEnter", "onClick"]);
                         return (0, r.jsxs)(
                             l.P3F,
-                            b(g({}, _), {
-                                className: m.hoverableContainer,
+                            b(m({}, O), {
+                                className: g.hoverableContainer,
                                 onClick: () => {
-                                    null == y || y(), (0, u.B)(i, o.Z.HEADER_BAR);
+                                    null == _ || _(), (0, u.B)(i, a.Z.HEADER_BAR);
                                 },
                                 onContextMenu: (e) =>
-                                    (0, a.jW)(
+                                    (0, o.jW)(
                                         e,
                                         () =>
-                                            Promise.all([n.e("79695"), n.e("22981")])
+                                            Promise.all([n.e("79695"), n.e("25421"), n.e("38357")])
                                                 .then(n.bind(n, 354741))
                                                 .then((e) => {
                                                     let { default: n } = e;
                                                     return (e) =>
                                                         (0, r.jsx)(
                                                             n,
-                                                            b(g({}, e), {
+                                                            b(m({}, e), {
                                                                 channel: t,
                                                                 selected: !0,
                                                             }),
@@ -135,16 +135,16 @@ let y = (e) => {
                                 onDoubleClick: (e) => e.stopPropagation(),
                                 onMouseEnter: () => {
                                     null == s || s(),
-                                        p.default.track(h.rMx.GDM_EDIT_INTERACTED, {
+                                        p.default.track(f.rMx.GDM_EDIT_INTERACTED, {
                                             channel_id: t.id,
                                             action: "entry_point_hovered",
-                                            location: o.Z.HEADER_BAR,
+                                            location: a.Z.HEADER_BAR,
                                         });
                                 },
-                                "aria-label": f.intl.string(f.t["5Q9+/P"]),
+                                "aria-label": h.intl.string(h.t["5Q9+/P"]),
                                 children: [
                                     (0, r.jsx)(c.Z, {
-                                        className: m.gdmIcon,
+                                        className: g.gdmIcon,
                                         "aria-hidden": !0,
                                         channel: t,
                                         size: l.EFr.SIZE_20,
@@ -157,7 +157,7 @@ let y = (e) => {
                                         children: null != d ? d : "",
                                     }),
                                     (0, r.jsx)(l.vdY, {
-                                        className: m.editIcon,
+                                        className: g.editIcon,
                                         size: "xs",
                                         color: "currentColor",
                                     }),
@@ -166,7 +166,7 @@ let y = (e) => {
                         );
                     },
                 }),
-                (0, r.jsx)(y, { channel: t }),
+                (0, r.jsx)(_, { channel: t }),
             ],
         });
     });

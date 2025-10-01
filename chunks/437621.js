@@ -243,7 +243,7 @@ class k extends I.ZP {
                 let { channel: t } = this.props;
                 if (t.type === T.d4z.GROUP_DM)
                     return void (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("79695"), n.e("2950")]).then(n.bind(n, 354741));
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("25421")]).then(n.bind(n, 354741));
                         return (n) =>
                             (0, r.jsx)(
                                 e,

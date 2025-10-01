@@ -341,7 +341,7 @@ class X extends l.PureComponent {
                                 n.e("58227"),
                                 n.e("44686"),
                                 n.e("30378"),
-                                n.e("49236"),
+                                n.e("64982"),
                                 n.e("22516"),
                                 n.e("87154"),
                                 n.e("33213"),
@@ -438,7 +438,9 @@ class X extends l.PureComponent {
                         break;
                     case h.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("2950")]).then(n.bind(n, 354741));
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("25421")]).then(
+                                n.bind(n, 354741),
+                            );
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
