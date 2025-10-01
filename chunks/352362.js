@@ -1,66 +1,44 @@
-n.d(e, { default: () => l }), n(388685);
-var i = n(951288),
-    a = n(647438),
-    r = n(481060),
-    o = n(313201),
-    s = n(388032),
-    c = n(732742);
-function l(t) {
-    let { transitionState: e, onConfirm: n, onClose: l } = t,
-        [d, x] = a.useState(!1),
-        h = (0, o.Dt)();
-    return (0, i.jsxs)(r.Y0X, {
-        transitionState: e,
-        "aria-labelledby": h,
-        size: r.CgR.DYNAMIC,
-        className: c.root,
-        parentComponent: "AcceptRequestConfirmationModal",
-        children: [
-            (0, i.jsx)(r.xBx, {
-                children: (0, i.jsx)(r.X6q, {
-                    id: h,
-                    variant: "heading-xl/bold",
-                    color: "header-primary",
-                    children: s.intl.string(s.t.eJzSDQ),
-                }),
-            }),
-            (0, i.jsx)(r.hzk, {
-                className: c.content,
-                children: (0, i.jsx)(r.Text, {
-                    variant: "text-md/medium",
-                    color: "header-secondary",
-                    children: s.intl.string(s.t.GB4jU1),
-                }),
-            }),
-            (0, i.jsxs)(r.mzw, {
-                className: c.footer,
-                children: [
-                    (0, i.jsx)(r.zxk, {
-                        variant: "primary",
-                        text: s.intl.string(s.t.MMlhsr),
-                        type: "submit",
-                        onClick: () => {
-                            if (!d) {
-                                x(!0);
-                                try {
-                                    n();
-                                } catch (t) {
-                                } finally {
-                                    x(!1);
-                                }
-                                l();
-                            }
-                        },
-                        loading: d,
-                    }),
-                    (0, i.jsx)(r.zxk, {
-                        variant: "secondary",
-                        text: s.intl.string(s.t["ETE/oK"]),
-                        onClick: l,
-                        disabled: d,
-                    }),
-                ],
-            }),
-        ],
+n.d(i, { default: () => r }), n(388685);
+var s = n(951288),
+    e = n(647438),
+    a = n(159691),
+    l = n(388032);
+function r(t) {
+    let { transitionState: i, onConfirm: n, onClose: r } = t,
+        [c, o] = e.useState(!1),
+        u = e.useCallback(() => {
+            if (!c) {
+                o(!0);
+                try {
+                    n();
+                } catch (t) {
+                } finally {
+                    o(!1);
+                }
+                r();
+            }
+        }, [c, n, r]),
+        d = e.useMemo(
+            () => [
+                {
+                    text: l.intl.string(l.t["ETE/oK"]),
+                    onClick: r,
+                    variant: "secondary",
+                    disabled: c,
+                },
+                {
+                    text: l.intl.string(l.t.MMlhsr),
+                    onClick: u,
+                    loading: c,
+                },
+            ],
+            [u, c, r],
+        );
+    return (0, s.jsx)(a.u_l, {
+        title: l.intl.string(l.t.eJzSDQ),
+        subtitle: l.intl.string(l.t.GB4jU1),
+        actions: d,
+        onClose: r,
+        transitionState: i,
     });
 }
