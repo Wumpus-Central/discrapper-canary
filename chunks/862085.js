@@ -54,9 +54,8 @@ function c(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(i.$q, {
-                    type: i.M0.INVERTED,
-                    value: c,
+                children: (0, r.jsx)(i.VL, {
+                    checked: c,
                     onChange: u(!1),
                     className: o.__invalid_actionCheckbox,
                 }),

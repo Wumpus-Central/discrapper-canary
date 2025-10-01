@@ -1,4 +1,7 @@
-n.d(t, { X: () => f });
+n.d(t, {
+    X: () => f,
+    h: () => _,
+});
 var r = n(951288);
 n(647438);
 var i = n(402453),
@@ -58,13 +61,15 @@ function d(e, t) {
     );
 }
 function f(e) {
-    if ((0, i.A)("Checkbox")) return (0, r.jsx)(o.C, c({}, e));
-    let { label: t, checked: n, onChange: l, labelType: u = "primary" } = e,
-        f =
+    return (0, i.A)("Checkbox") ? (0, r.jsx)(o.C, c({}, e)) : (0, r.jsx)(_, c({}, e));
+}
+function _(e) {
+    let { label: t, checked: n, onChange: i, labelType: o = "primary" } = e,
+        l =
             null != t && "" !== t
                 ? (0, r.jsx)(a.x, {
                       variant: "text-md/medium",
-                      color: "primary" === u ? "text-primary" : "text-secondary",
+                      color: "primary" === o ? "text-primary" : "text-secondary",
                       children: t,
                   })
                 : null;
@@ -72,8 +77,8 @@ function f(e) {
         s.$q,
         d(c({}, e), {
             value: n,
-            onChange: (e, t) => (null == l ? void 0 : l(t)),
-            children: f,
+            onChange: (e, t) => (null == i ? void 0 : i(t)),
+            children: l,
         }),
     );
 }

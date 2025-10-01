@@ -486,8 +486,8 @@ function eg() {
         p = i.useRef(null);
     (0, G.Z)(p, F.rP.REDUCED_MOTION);
     let g = i.useCallback(
-            (e, t) => {
-                (0, h.Zt)(t ? "auto" : s);
+            (e) => {
+                (0, h.Zt)(e ? "auto" : s);
             },
             [s],
         ),
@@ -504,16 +504,11 @@ function eg() {
                 className: X.marginBottom8,
                 children: K.intl.format(K.t["2l9U2t"], { helpdeskArticle: j.Z.getArticleURL(H.BhN.REDUCED_MOTION) }),
             }),
-            (0, r.jsx)(f.$q, {
+            (0, r.jsx)(f.VL, {
                 className: o()(X.marginTop8, X.marginBottom20),
-                value: d,
-                shape: f.zV.BOX,
-                type: f.M0.INVERTED,
+                checked: d,
                 onChange: g,
-                children: (0, r.jsx)(_.Text, {
-                    variant: "text-sm/normal",
-                    children: K.intl.string(K.t["+Dx+HB"]),
-                }),
+                label: K.intl.string(K.t["+Dx+HB"]),
             }),
             (0, r.jsx)(w.F, {
                 setting: V.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,

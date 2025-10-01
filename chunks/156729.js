@@ -240,17 +240,13 @@ class P extends (r = a.PureComponent) {
                     }),
                     this.renderCardExpirationSection(),
                     this.renderBillingAddressSection(),
-                    (0, i.jsx)(d.$q, {
-                        name: R,
-                        value: o,
-                        onChange: (e, t) => this.handleFieldChange(t, R),
-                        type: d.M0.INVERTED,
+                    (0, i.jsx)(d.VL, {
+                        value: R,
+                        checked: o,
+                        onChange: (e) => this.handleFieldChange(e, R),
                         className: I.defaultSection,
-                        children: (0, i.jsx)(f.Text, {
-                            className: I.defaultCheckboxLabel,
-                            variant: "text-sm/normal",
-                            children: v.intl.string(v.t.nag9Oj),
-                        }),
+                        label: v.intl.string(v.t.nag9Oj),
+                        labelType: "secondary",
                     }),
                     (0, i.jsx)(f.izJ, {}),
                     this.renderActions(),

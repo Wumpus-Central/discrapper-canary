@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(998502),
     E = n(981631),
     b = n(388032),
-    y = n(995751);
+    y = n(311795);
 function O(e, t, n) {
     return (
         t in e
@@ -225,13 +225,10 @@ class R extends i.Component {
                                         ],
                                     }),
                                     !0 !== i &&
-                                        (0, r.jsx)(s.$q, {
-                                            value: a,
-                                            onChange: (e, t) => this.setState({ hasSpoiler: t }),
-                                            children: (0, r.jsx)(l.Text, {
-                                                variant: "text-sm/normal",
-                                                children: b.intl.string(b.t["gsI+xM"]),
-                                            }),
+                                        (0, r.jsx)(l.XZJ, {
+                                            checked: a,
+                                            onChange: (e) => this.setState({ hasSpoiler: e }),
+                                            label: b.intl.string(b.t["gsI+xM"]),
                                         }),
                                 ],
                             }),

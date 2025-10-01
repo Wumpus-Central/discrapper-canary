@@ -19,16 +19,16 @@ var l,
     b = n(724757),
     p = n(212819),
     y = n(933557),
-    E = n(266076),
-    S = n(810123),
+    S = n(266076),
+    E = n(810123),
     x = n(448486),
     v = n(987509),
     O = n(592125),
     Z = n(430824),
     j = n(158776),
-    P = n(306680),
-    _ = n(699516),
-    L = n(594174),
+    L = n(306680),
+    P = n(699516),
+    _ = n(594174),
     N = n(626135),
     C = n(55935),
     A = n(823379),
@@ -36,9 +36,9 @@ var l,
     D = n(784384),
     T = n(981631),
     w = n(490897),
-    R = n(388032),
-    I = n(773921);
-function k(e) {
+    k = n(388032),
+    I = n(132358);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -63,7 +63,7 @@ function k(e) {
     }
     return e;
 }
-function z(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function z(e, t) {
         e
     );
 }
-function U(e, t) {
+function z(e, t) {
     if (null == e) return {};
     var n,
         l,
@@ -115,9 +115,9 @@ function G(e) {
             onPressDestination: b,
             "aria-setsize": p,
             "aria-posinset": y,
-            className: E,
+            className: S,
         } = e,
-        S = (0, c.JA)(n.id),
+        E = (0, c.JA)(n.id),
         [x, v] = i.useState(!1),
         O = i.useRef(!1),
         Z = i.useCallback(() => {
@@ -139,7 +139,7 @@ function G(e) {
                         closeAfterSend: !0,
                     });
         }, [t.channel_id, t.id, b, n]),
-        P = i.useCallback(() => {
+        L = i.useCallback(() => {
             v(!1),
                 (O.current = !1),
                 N.default.track(T.rMx.FORWARD_ONE_TAP_UNDO, {
@@ -159,16 +159,16 @@ function G(e) {
         }),
         (0, r.jsxs)(
             h.P3F,
-            z(
-                k(
+            U(
+                R(
                     {
-                        className: a()(I.destinationRow, E, { [I.disabled]: m }),
+                        className: a()(I.destinationRow, S, { [I.disabled]: m }),
                         onClick: m || x ? void 0 : Z,
                         "aria-selected": d,
                         "aria-setsize": p,
                         "aria-posinset": y,
                     },
-                    S,
+                    E,
                 ),
                 {
                     children: [
@@ -200,13 +200,11 @@ function G(e) {
                             ],
                         }),
                         "toggle" === l &&
-                            (0, r.jsx)(f.$q, {
-                                type: f.M0.INVERTED,
-                                displayOnly: !0,
-                                size: 24,
-                                value: d,
+                            (0, r.jsx)(f.VL, {
+                                checked: !!d,
                                 disabled: m,
                                 className: I.checkbox,
+                                isIndicator: !0,
                             }),
                         "send" === l &&
                             !m &&
@@ -217,7 +215,7 @@ function G(e) {
                                         ? (0, r.jsx)(h.zxk, {
                                               variant: "secondary",
                                               size: "sm",
-                                              text: R.intl.string(R.t["HO/oXl"]),
+                                              text: k.intl.string(k.t["HO/oXl"]),
                                               onClick: j,
                                           })
                                         : (0, r.jsx)("div", {
@@ -228,15 +226,15 @@ function G(e) {
                                                   }),
                                                   I.fauxButton,
                                               ),
-                                              children: R.intl.string(R.t.TXNS7e),
+                                              children: k.intl.string(k.t.TXNS7e),
                                           }),
                                     x &&
                                         (0, r.jsx)(f.zx, {
                                             size: f.zx.Sizes.SMALL,
                                             color: f.zx.Colors.BRAND,
                                             look: f.zx.Looks.OUTLINED,
-                                            onClick: P,
-                                            children: R.intl.string(R.t.KyUKhY),
+                                            onClick: L,
+                                            children: k.intl.string(k.t.KyUKhY),
                                         }),
                                 ],
                             }),
@@ -248,14 +246,14 @@ function G(e) {
 }
 function H(e) {
     var { user: t, subLabel: n } = e,
-        l = U(e, ["user", "subLabel"]);
+        l = z(e, ["user", "subLabel"]);
     let i = M.ZP.useName(t),
         s = M.ZP.useUserTag(t, { decoration: "never" }),
-        a = (0, d.e7)([_.Z], () => _.Z.getNickname(t.id)),
+        a = (0, d.e7)([P.Z], () => P.Z.getNickname(t.id)),
         u = (0, d.e7)([j.Z], () => j.Z.getStatus(t.id));
     return (0, r.jsx)(
         G,
-        z(k({}, l), {
+        U(R({}, l), {
             icon: (0, r.jsx)(m.Z, {
                 "aria-hidden": !0,
                 size: h.EFr.SIZE_32,
@@ -267,15 +265,15 @@ function H(e) {
         }),
     );
 }
-function q(e) {
+function W(e) {
     var { channel: t, subLabel: n } = e,
-        l = U(e, ["channel", "subLabel"]);
+        l = z(e, ["channel", "subLabel"]);
     let i = (0, y.ZP)(t),
         s = (0, x._)(t);
     return (0, r.jsx)(
         G,
-        z(k({}, l), {
-            icon: (0, r.jsx)(E.Z, {
+        U(R({}, l), {
+            icon: (0, r.jsx)(S.Z, {
                 "aria-hidden": !0,
                 size: h.EFr.SIZE_32,
                 channel: t,
@@ -286,16 +284,16 @@ function q(e) {
         }),
     );
 }
-function W(e) {
+function q(e) {
     var { channel: t, subLabel: n } = e,
-        l = U(e, ["channel", "subLabel"]);
+        l = z(e, ["channel", "subLabel"]);
     let i = (0, d.e7)([Z.Z], () => Z.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, y.ZP)(t),
-        a = (0, d.e7)([O.Z, L.default, _.Z], () => {
+        a = (0, d.e7)([O.Z, _.default, P.Z], () => {
             let e = O.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, y.F6)(e, L.default, _.Z, !1);
+            return null == e ? null : (0, y.F6)(e, _.default, P.Z, !1);
         }),
-        u = (0, d.e7)([P.ZP], () => P.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
+        u = (0, d.e7)([L.ZP], () => L.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
         c = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? h.Mmi : h.VL1;
@@ -334,9 +332,9 @@ function W(e) {
     }
     return (0, r.jsx)(
         G,
-        z(k({}, l), {
-            icon: (0, r.jsx)(S.Z, {
-                size: S.E.SMALL_32,
+        U(R({}, l), {
+            icon: (0, r.jsx)(E.Z, {
+                size: E.E.SMALL_32,
                 guild: i,
                 channel: t,
             }),
@@ -356,7 +354,7 @@ function V(e) {
             disableSelection: o,
             rowClassName: d,
         } = e,
-        f = U(e, [
+        f = z(e, [
             "rowData",
             "rowMode",
             "message",
@@ -372,7 +370,7 @@ function V(e) {
             var e;
             return null != (e = null == a ? void 0 : a.map(v.hC)) ? e : [];
         }, [a]),
-        E = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 let { section: i, row: a } = e;
                 if (i > 0) return;
@@ -391,7 +389,7 @@ function V(e) {
                     m = (0, v.hC)(h),
                     g = (0, D.HY)(l, s, f),
                     b = y.includes(m),
-                    E = {
+                    S = {
                         key: m,
                         message: l,
                         destination: h,
@@ -405,31 +403,31 @@ function V(e) {
                         className: d,
                     };
                 return c === p.h8.USER
-                    ? (0, r.jsx)(H, k({ user: f }, E))
+                    ? (0, r.jsx)(H, R({ user: f }, S))
                     : c === p.h8.GROUP_DM
-                      ? (0, r.jsx)(q, k({ channel: f }, E))
+                      ? (0, r.jsx)(W, R({ channel: f }, S))
                       : c === p.h8.TEXT_CHANNEL || c === p.h8.VOICE_CHANNEL
-                        ? (0, r.jsx)(W, k({ channel: f }, E))
+                        ? (0, r.jsx)(q, R({ channel: f }, S))
                         : void (0, A.vE)(c);
             },
             [o, u, l, s, t, n, y, d],
         ),
-        S = i.useRef(null),
-        x = (0, b.Z)("forward-modal", S);
+        E = i.useRef(null),
+        x = (0, b.Z)("forward-modal", E);
     return (0, r.jsx)(c.bG, {
         navigator: x,
         children: (0, r.jsx)(c.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = U(e, ["ref"]);
+                    n = z(e, ["ref"]);
                 return (0, r.jsx)(
                     h.YAO,
-                    z(
-                        k(
+                    U(
+                        R(
                             {
                                 scrollerRef: (e) => {
                                     var n;
-                                    (S.current = e),
+                                    (E.current = e),
                                         (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                 },
                             },
@@ -439,7 +437,7 @@ function V(e) {
                         {
                             sections: m,
                             sectionHeight: 0,
-                            renderRow: E,
+                            renderRow: S,
                             rowHeight: g,
                         },
                     ),

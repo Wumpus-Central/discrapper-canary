@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(699516),
     O = n(594174),
     y = n(630388),
-    v = n(970257),
-    j = n(981631),
+    j = n(970257),
+    v = n(981631),
     x = n(388032),
-    C = n(764295),
-    E = n(477425);
+    C = n(304726),
+    E = n(498004);
 function S(e, t, n) {
     return (
         t in e
@@ -75,8 +75,8 @@ class N extends i.PureComponent {
             t,
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
-            { channel: o, message: u, showContextMenuHint: d, moderatorReportData: p } = l,
-            g = (function (e, t) {
+            { channel: o, message: s, showContextMenuHint: u, moderatorReportData: d } = l,
+            p = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -97,13 +97,13 @@ class N extends i.PureComponent {
                 }
                 return i;
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            b = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(u.flags, j.iLy.CROSSPOSTED);
-        d &&
+            g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(s.flags, v.iLy.CROSSPOSTED);
+        u &&
             (e = (0, r.jsx)(h.Z, {
                 className: E.spacingTop,
                 children: x.intl.format(x.t.IxY7Ex, {}),
             })),
-            (0, v.vc)(u) &&
+            (0, j.vc)(s) &&
                 (t = (0, r.jsx)(c.j7V, {
                     value: n,
                     onChange: this.handleToggleReport,
@@ -111,14 +111,14 @@ class N extends i.PureComponent {
                     className: E.spacingTop,
                     children: x.intl.string(x.t.x0jzo6),
                 }));
-        let _ = b ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
-            O = (0, r.jsxs)(r.Fragment, {
+        let b = g ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
+            _ = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
                         className: E.message,
                         children: (0, r.jsx)(m.Z, {
                             channel: o,
-                            message: u,
+                            message: s,
                             disableInteraction: !0,
                         }),
                     }),
@@ -126,13 +126,13 @@ class N extends i.PureComponent {
                     e,
                 ],
             });
-        if ((null == p ? void 0 : p.moderatorReportChannelId) != null) {
-            let { isFlagResolved: e } = p;
+        if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
+            let { isFlagResolved: e } = d;
             return (0, r.jsx)(f.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
-                    I(P({ parentComponent: "DeleteModal" }, g), {
+                    I(P({ parentComponent: "DeleteModal" }, p), {
                         children: [
                             (0, r.jsx)(c.xBx, {
                                 separator: !1,
@@ -142,7 +142,7 @@ class N extends i.PureComponent {
                                     children: [
                                         (0, r.jsx)(c.olH, {
                                             className: E.closeButton,
-                                            onClick: g.onClose,
+                                            onClick: p.onClose,
                                         }),
                                         (0, r.jsx)(c.X6q, {
                                             variant: "heading-xl/bold",
@@ -156,9 +156,9 @@ class N extends i.PureComponent {
                                     (0, r.jsx)(c.X6q, {
                                         variant: "heading-md/medium",
                                         className: E.spacing,
-                                        children: _,
+                                        children: b,
                                     }),
-                                    O,
+                                    _,
                                 ],
                             }),
                             (0, r.jsxs)(c.mzw, {
@@ -171,10 +171,10 @@ class N extends i.PureComponent {
                                         onClick: this.handleDelete,
                                     }),
                                     !e &&
-                                        (0, r.jsx)(s.$q, {
-                                            value: i,
-                                            onChange: (e, t) => this.handleToggleResolveFlag(t),
-                                            children: x.intl.string(C.default["8yIKen"]),
+                                        (0, r.jsx)(c.XZJ, {
+                                            checked: i,
+                                            label: x.intl.string(C.default["8yIKen"]),
+                                            onChange: (e) => this.handleToggleResolveFlag(e),
                                         }),
                                 ],
                             }),
@@ -186,12 +186,12 @@ class N extends i.PureComponent {
         return (0, r.jsx)(f.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
-                title: b ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
-                subtitle: _,
+                title: g ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
+                subtitle: b,
                 actions: [
                     {
                         text: x.intl.string(x.t["ETE/oK"]),
-                        onClick: g.onClose,
+                        onClick: p.onClose,
                         variant: "secondary",
                     },
                     {
@@ -200,9 +200,9 @@ class N extends i.PureComponent {
                         variant: "critical-primary",
                     },
                 ],
-                onClose: g.onClose,
-                transitionState: g.transitionState,
-                children: O,
+                onClose: p.onClose,
+                transitionState: p.transitionState,
+                children: _,
             }),
         });
     }

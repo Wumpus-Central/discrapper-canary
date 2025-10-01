@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(489887),
     y = n(20281),
     h = n(388032),
-    v = n(520317);
+    v = n(931975);
 function P(e) {
     let { question: t, onChange: n, error: l, inputRef: a } = e;
     return (0, r.jsx)(s.Kx8, {
@@ -91,9 +91,9 @@ function x(e) {
             answers: A,
             question: I,
             allowMultiSelect: N,
-            setAllowMultiSelect: T,
+            setAllowMultiSelect: L,
             duration: U,
-            setDuration: L,
+            setDuration: T,
             handleQuestionChange: Z,
             handleAnswerTextChange: B,
             handleEmojiSelect: Y,
@@ -225,16 +225,11 @@ function x(e) {
         onClose: b,
         title: h.intl.string(h.t["GD/8X1"]),
         actions: el,
-        actionBarInput: (0, r.jsx)(c.$q, {
+        actionBarInput: (0, r.jsx)(c.VL, {
             className: v.checkbox,
-            size: 24,
-            value: N,
-            onChange: (e, t) => T(t),
-            children: (0, r.jsx)(s.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: h.intl.string(h.t["Ux+iQU"]),
-            }),
+            checked: N,
+            onChange: (e) => L(e),
+            label: h.intl.string(h.t["Ux+iQU"]),
         }),
         children: (0, r.jsxs)("div", {
             className: v.content,
@@ -297,7 +292,7 @@ function x(e) {
                 (0, r.jsx)(s.LZC, { size: 18 }),
                 (0, r.jsx)(w, {
                     selectedDuration: U,
-                    onSelect: L,
+                    onSelect: T,
                 }),
             ],
         }),

@@ -3,24 +3,24 @@ var n = r(951288),
     o = r(647438),
     i = r(755721),
     s = r(481060),
-    a = r(985002),
-    c = r(880257),
+    c = r(985002),
+    a = r(880257),
     l = r(957656),
-    d = r(345909),
+    d = r(412297),
     u = r(388032),
-    b = r(601582);
+    b = r(640754);
 let f = (e) => {
     let { currentUser: t, otherUser: r, transitionState: f, onClose: h } = e,
         p = o.useCallback(() => {
             h();
         }, [h]),
-        j = (0, c.Z)(),
-        [x, m] = o.useState(!1),
-        [g, y] = o.useState(!1),
+        j = (0, a.Z)(),
+        [m, g] = o.useState(!1),
+        [x, y] = o.useState(!1),
         O = o.useCallback(() => {
-            y(!0), m(!1);
+            y(!0), g(!1);
         }, []),
-        { disconnectLinkRequest: v, isDisconnectLoading: k } = (0, a.G)({
+        { disconnectLinkRequest: v, isDisconnectLoading: k } = (0, c.G)({
             onSuccess: p,
             onError: O,
         });
@@ -31,7 +31,7 @@ let f = (e) => {
                 e.preventDefault(), v(r);
             },
             children: [
-                (0, n.jsx)(l.Z.Error, { error: g ? u.intl.string(d.default.krIDd3) : void 0 }),
+                (0, n.jsx)(l.Z.Error, { error: x ? u.intl.string(d.default.krIDd3) : void 0 }),
                 (0, n.jsxs)(s.hzk, {
                     "data-migration-pending": !0,
                     children: [
@@ -48,17 +48,13 @@ let f = (e) => {
                         (0, n.jsx)(l.Z.Notice, {
                             notice: j ? u.intl.string(d.default.EvMGLS) : u.intl.string(d.default.f1SUeX),
                         }),
-                        (0, n.jsx)(i.$q, {
+                        (0, n.jsx)(i.VL, {
                             className: b.acknowledgementCheckbox,
-                            type: i.M0.INVERTED,
-                            value: x,
-                            onChange: (e, t) => {
-                                m(t), y(!1);
+                            checked: m,
+                            onChange: (e) => {
+                                g(e), y(!1);
                             },
-                            children: (0, n.jsx)(s.Text, {
-                                variant: "text-xs/semibold",
-                                children: j ? u.intl.string(d.default["/MYCeX"]) : u.intl.string(d.default.VJaHUV),
-                            }),
+                            label: j ? u.intl.string(d.default["/MYCeX"]) : u.intl.string(d.default.VJaHUV),
                         }),
                     ],
                 }),
@@ -81,7 +77,7 @@ let f = (e) => {
                                     size: "sm",
                                     text: u.intl.string(d.default["c5L+sr"]),
                                     type: "submit",
-                                    disabled: !x || k,
+                                    disabled: !m || k,
                                     loading: k,
                                 }),
                             ],

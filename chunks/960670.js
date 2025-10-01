@@ -4,7 +4,7 @@ var n = r(951288),
     c = r(755721),
     i = r(481060),
     l = r(388032),
-    a = r(905935);
+    a = r(621521);
 function b(e) {
     var t,
         r,
@@ -75,15 +75,12 @@ function b(e) {
                         variant: "text-md/normal",
                         children: s,
                     }),
-                    (0, n.jsx)(c.$q, {
-                        type: c.M0.INVERTED,
-                        value: f,
+                    (0, n.jsx)(c.VL, {
+                        checked: f,
                         onChange: () => O((e) => !e),
                         className: a.checkbox,
-                        children: (0, n.jsx)(i.Text, {
-                            variant: "text-md/normal",
-                            children: l.intl.string(l.t.bq3JXl),
-                        }),
+                        label: l.intl.string(l.t.bq3JXl),
+                        labelType: "secondary",
                     }),
                 ],
             }),

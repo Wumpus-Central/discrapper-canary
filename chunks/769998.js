@@ -102,9 +102,8 @@ function f(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                children: (0, r.jsx)(l.$q, {
-                                    type: l.M0.INVERTED,
-                                    value: x,
+                                children: (0, r.jsx)(l.VL, {
+                                    checked: x,
                                     onChange: j(!1),
                                     disabled: !y,
                                     className: p.__invalid_actionCheckbox,

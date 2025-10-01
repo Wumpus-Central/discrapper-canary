@@ -11,37 +11,37 @@ var i = t(951288),
     h = t(592125),
     v = t(430824),
     m = t(305298),
-    x = t(405613),
-    g = t(460838),
+    g = t(405613),
+    x = t(460838),
     C = t(765305),
     p = t(388032),
-    j = t(602872);
+    j = t(663283);
 function f(e) {
     var n;
-    let { transitionState: t, event: f, onSuccess: N, onClose: y } = e,
+    let { transitionState: t, event: f, onSuccess: y, onClose: N } = e,
         { guild_id: k, privacy_level: E } = f,
-        w = (0, a.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
-        b = (0, a.e7)([v.Z], () => v.Z.getGuild(k), [k]),
-        { canManageGuildEvent: I } = (0, u.XJ)(null != w ? w : b),
+        b = (0, a.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
+        w = (0, a.e7)([v.Z], () => v.Z.getGuild(k), [k]),
+        { canManageGuildEvent: I } = (0, u.XJ)(null != b ? b : w),
         S = I(f),
         O = (0, a.e7)([o.Z], () => o.Z.isLurking(k), [k]),
         Z = f.entity_type === C.WX.STAGE_INSTANCE,
         [_, T] = l.useState(Z),
-        [P, { loading: A, error: G }] = (0, m.Z)();
+        [P, { loading: L, error: A }] = (0, m.Z)();
     if (!S) return null;
-    let L = E === C.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
+    let G = E === C.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
         X = () => {
-            null == N || N(), y(), (0, d.Ku)(!1);
+            null == y || y(), N(), (0, d.Ku)(!1);
         },
         R = async () => {
             await P(f, _, { onSuccess: X });
         };
     return (0, i.jsxs)(r.Modal, {
         transitionState: t,
-        onClose: y,
+        onClose: N,
         title: f.name,
         subtitle: p.intl.format(p.t.UMajoq, {
-            privacyLevel: L,
+            privacyLevel: G,
             privacyLevelHook: (e, n) =>
                 E !== C.j8.PUBLIC
                     ? null
@@ -69,23 +69,23 @@ function f(e) {
                 variant: "secondary",
                 text: p.intl.string(p.t.CZGqeX),
                 onClick: () => {
-                    y();
+                    N();
                 },
             },
             {
                 variant: "active",
                 text: p.intl.string(p.t.cK1GGR),
                 onClick: R,
-                loading: A,
+                loading: L,
             },
         ],
         children: [
-            (0, i.jsx)(g.Z, {
-                guild: b,
-                channel: w,
+            (0, i.jsx)(x.Z, {
+                guild: w,
+                channel: b,
                 name: f.name,
                 description: null != (n = f.description) ? n : void 0,
-                imageSource: (0, x.Z)(f),
+                imageSource: (0, g.Z)(f),
                 isActive: !1,
                 isUserLurking: O,
                 speakers: [],
@@ -94,25 +94,19 @@ function f(e) {
                 guildEvent: f,
             }),
             Z &&
-                (0, i.jsx)(s.$q, {
+                (0, i.jsx)(s.VL, {
                     className: j.verticalSpacing,
-                    type: s.M0.INVERTED,
-                    value: _,
-                    onChange: (e) => {
-                        let { currentTarget: n } = e;
-                        return T(n.checked);
-                    },
-                    children: (0, i.jsx)(c.Text, {
-                        variant: "text-sm/normal",
-                        children: p.intl.string(p.t.dGNtgI),
-                    }),
+                    checked: _,
+                    onChange: (e) => T(e),
+                    label: p.intl.string(p.t.dGNtgI),
+                    labelType: "secondary",
                 }),
-            null != G && null != G.getAnyErrorMessage()
+            null != A && null != A.getAnyErrorMessage()
                 ? (0, i.jsx)(c.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
                       className: j.errorMessage,
-                      children: G.getAnyErrorMessage(),
+                      children: A.getAnyErrorMessage(),
                   })
                 : null,
         ],

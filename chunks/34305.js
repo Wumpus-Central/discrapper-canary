@@ -123,13 +123,12 @@ class E extends i.PureComponent {
                                     value: e,
                                 }),
                             }),
-                            (0, r.jsx)(a.$q, {
-                                type: a.M0.INVERTED,
-                                value: null != i ? i : this.props.isDefault,
+                            (0, r.jsx)(a.VL, {
+                                checked: null != i ? i : this.props.isDefault,
                                 disabled: this.props.isDefault,
                                 className: b.defaultLocationCheckbox,
                                 onChange: this.handleToggleDefault,
-                                children: m.intl.string(m.t.Z2MWuL),
+                                label: m.intl.string(m.t.Z2MWuL),
                             }),
                             (0, r.jsx)(o.izJ, { className: b.separator }),
                             (0, r.jsxs)(u.Z, {

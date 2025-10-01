@@ -1,132 +1,131 @@
-t.d(n, { default: () => h }), t(388685);
+t.d(n, { default: () => f }), t(388685);
 var i = t(951288),
     l = t(647438),
     o = t(793030),
-    r = t(442837),
-    a = t(755721),
-    u = t(481060),
-    d = t(596454),
+    a = t(442837),
+    r = t(481060),
+    u = t(596454),
     c = t(493773),
-    s = t(318766),
-    m = t(907040),
-    j = t(339085),
-    p = t(984933),
-    v = t(883429),
-    g = t(981631),
-    b = t(185923),
-    y = t(388032),
-    f = t(851458);
-function h(e) {
+    d = t(318766),
+    s = t(907040),
+    m = t(339085),
+    j = t(984933),
+    p = t(883429),
+    v = t(981631),
+    g = t(185923),
+    b = t(388032),
+    y = t(984915);
+function f(e) {
     var n;
-    let { transitionState: t, onClose: h, channelId: C, guildId: O, tag: x } = e,
+    let { transitionState: t, onClose: f, channelId: h, guildId: C, tag: O } = e,
         k = l.useRef(null),
-        P = null != x,
-        [N, w] = l.useState(null != (n = null == x ? void 0 : x.name) ? n : ""),
-        [E, I] = l.useState(
-            null != x
+        x = null != O,
+        [P, N] = l.useState(null != (n = null == O ? void 0 : O.name) ? n : ""),
+        [w, Z] = l.useState(
+            null != O
                 ? {
-                      id: x.emojiId,
-                      name: x.emojiName,
+                      id: O.emojiId,
+                      name: O.emojiName,
                   }
                 : null,
         ),
-        [Z, S] = l.useState(null == x ? void 0 : x.moderated),
-        _ = (0, r.e7)([j.ZP], () => ((null == E ? void 0 : E.id) != null ? j.ZP.getUsableCustomEmojiById(E.id) : null)),
-        B =
-            (null == x ? void 0 : x.name) !== N ||
-            (null == x ? void 0 : x.emojiId) !== (null == E ? void 0 : E.id) ||
-            (null == x ? void 0 : x.emojiName) !== (null == E ? void 0 : E.name) ||
-            Z !== (null == x ? void 0 : x.moderated),
-        R = () => {
-            if (null != N && B) {
-                if (P) {
-                    v.Z.updateForumTag(
+        [E, I] = l.useState(null == O ? void 0 : O.moderated),
+        S = (0, a.e7)([m.ZP], () => ((null == w ? void 0 : w.id) != null ? m.ZP.getUsableCustomEmojiById(w.id) : null)),
+        _ =
+            (null == O ? void 0 : O.name) !== P ||
+            (null == O ? void 0 : O.emojiId) !== (null == w ? void 0 : w.id) ||
+            (null == O ? void 0 : O.emojiName) !== (null == w ? void 0 : w.name) ||
+            E !== (null == O ? void 0 : O.moderated),
+        B = () => {
+            if (null != P && _) {
+                if (x) {
+                    p.Z.updateForumTag(
                         {
-                            id: x.id,
-                            name: N,
-                            emojiId: null == E ? void 0 : E.id,
-                            emojiName: null == E ? void 0 : E.name,
-                            moderated: Z,
+                            id: O.id,
+                            name: P,
+                            emojiId: null == w ? void 0 : w.id,
+                            emojiName: null == w ? void 0 : w.name,
+                            moderated: E,
                         },
-                        C,
+                        h,
                     ),
-                        h();
+                        f();
                     return;
                 }
-                v.Z.createForumTag(
+                p.Z.createForumTag(
                     {
-                        name: N,
-                        emojiId: null == E ? void 0 : E.id,
-                        emojiName: null == E ? void 0 : E.name,
-                        moderated: Z,
+                        name: P,
+                        emojiId: null == w ? void 0 : w.id,
+                        emojiName: null == w ? void 0 : w.name,
+                        moderated: E,
                     },
-                    C,
+                    h,
                 ),
-                    h();
+                    f();
             }
         },
-        T = l.useCallback((e) => w(e), []),
-        D = l.useRef(null);
+        R = l.useCallback((e) => N(e), []),
+        T = l.useRef(null);
     return (
         (0, c.ZP)(() => {
-            null != D.current && D.current.focus();
+            null != T.current && T.current.focus();
         }),
         (0, i.jsxs)(o.Modal, {
-            title: P ? y.intl.string(y.t.zeVg5e) : y.intl.string(y.t["/jubeH"]),
-            subtitle: y.intl.string(y.t["3v8kZG"]),
+            title: x ? b.intl.string(b.t.zeVg5e) : b.intl.string(b.t["/jubeH"]),
+            subtitle: b.intl.string(b.t["3v8kZG"]),
             transitionState: t,
-            onClose: h,
+            onClose: f,
             actions: [
                 {
                     variant: "secondary",
-                    text: y.intl.string(y.t["ETE/oK"]),
+                    text: b.intl.string(b.t["ETE/oK"]),
                     onClick: () => {
-                        h();
+                        f();
                     },
                 },
                 {
                     variant: "primary",
-                    text: y.intl.string(y.t.R3BPHx),
-                    onClick: R,
-                    disabled: 0 === N.length || !B,
+                    text: b.intl.string(b.t.R3BPHx),
+                    onClick: B,
+                    disabled: 0 === P.length || !_,
                     autoFocus: !0,
                 },
             ],
-            actionBarInput: P
-                ? (0, i.jsx)(u.zxk, {
+            actionBarInput: x
+                ? (0, i.jsx)(r.zxk, {
                       variant: "critical-secondary",
-                      text: y.intl.string(y.t.huYSMj),
+                      text: b.intl.string(b.t.huYSMj),
                       onClick: () => {
-                          P && (v.Z.deleteForumTag(C, x.id), h());
+                          x && (p.Z.deleteForumTag(h, O.id), f());
                       },
                   })
                 : void 0,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.inputContainer,
-                    children: (0, i.jsx)(u.oil, {
-                        inputRef: D,
+                    className: y.inputContainer,
+                    children: (0, i.jsx)(r.oil, {
+                        inputRef: T,
                         maxLength: 20,
-                        value: N,
-                        placeholder: y.intl.string(y.t["5vpeb2"]),
-                        onChange: T,
+                        value: P,
+                        placeholder: b.intl.string(b.t["5vpeb2"]),
+                        onChange: R,
                         autoFocus: !0,
                         leading: {
                             type: "emoji",
                             button: (0, i.jsx)("div", {
-                                className: f.emojiButtonContainer,
-                                children: (0, i.jsx)(u.yRy, {
+                                className: y.emojiButtonContainer,
+                                children: (0, i.jsx)(r.yRy, {
                                     targetElementRef: k,
                                     renderPopout: (e) => {
                                         let { closePopout: n } = e,
-                                            t = p.ZP.getDefaultChannel(O);
-                                        return (0, i.jsx)(m.Z, {
-                                            guildId: O,
+                                            t = j.ZP.getDefaultChannel(C);
+                                        return (0, i.jsx)(s.Z, {
+                                            guildId: C,
                                             closePopout: n,
                                             onSelectEmoji: (e) => {
                                                 let { emoji: t, willClose: i } = e;
                                                 null != t &&
-                                                    I(
+                                                    Z(
                                                         null != t.id
                                                             ? {
                                                                   id: t.id,
@@ -139,19 +138,19 @@ function h(e) {
                                                     ),
                                                     i && n();
                                             },
-                                            pickerIntention: b.Hz.COMMUNITY_CONTENT,
-                                            onNavigateAway: h,
+                                            pickerIntention: g.Hz.COMMUNITY_CONTENT,
+                                            onNavigateAway: f,
                                             channel: t,
                                         });
                                     },
                                     position: "left",
-                                    animation: u.yRy.Animation.NONE,
+                                    animation: r.yRy.Animation.NONE,
                                     align: "bottom",
                                     children: (e, n) => {
                                         var t, l;
                                         let { isShown: o } = n;
                                         return (0, i.jsx)(
-                                            s.Z,
+                                            d.Z,
                                             ((t = (function (e) {
                                                 for (var n = 1; n < arguments.length; n++) {
                                                     var t = null != arguments[n] ? arguments[n] : {},
@@ -185,16 +184,16 @@ function h(e) {
                                                         null == (t = e.onClick) || t.call(e, n);
                                                     },
                                                     active: o,
-                                                    className: f.emojiButton,
+                                                    className: y.emojiButton,
                                                     tabIndex: 0,
                                                     renderButtonContents:
-                                                        null != E && (null != E.id || null != E.name)
+                                                        null != w && (null != w.id || null != w.name)
                                                             ? () =>
-                                                                  (0, i.jsx)(d.Z, {
-                                                                      className: f.emoji,
-                                                                      emojiId: E.id,
-                                                                      emojiName: E.name,
-                                                                      animated: !!(null == _ ? void 0 : _.animated),
+                                                                  (0, i.jsx)(u.Z, {
+                                                                      className: y.emoji,
+                                                                      emojiId: w.id,
+                                                                      emojiName: w.name,
+                                                                      animated: !!(null == S ? void 0 : S.animated),
                                                                   })
                                                             : null,
                                                 }),
@@ -221,30 +220,26 @@ function h(e) {
                             }),
                         },
                         onKeyDown: (e) => {
-                            e.keyCode === g.yXg.ENTER && N.length > 0 && (N.length > 0 && R(), e.preventDefault());
+                            e.keyCode === v.yXg.ENTER && P.length > 0 && (P.length > 0 && B(), e.preventDefault());
                         },
                         trailing:
-                            N.length > 0 || null != E
+                            P.length > 0 || null != w
                                 ? {
-                                      icon: u.k$p,
+                                      icon: r.k$p,
                                       onClick: () => {
-                                          w(""), I(null);
+                                          N(""), Z(null);
                                       },
-                                      "aria-label": y.intl.string(y.t.o8lsHR),
+                                      "aria-label": b.intl.string(b.t.o8lsHR),
                                   }
                                 : void 0,
                     }),
                 }),
-                (0, i.jsx)(u.LZC, { size: 16 }),
-                (0, i.jsx)(a.$q, {
-                    type: a.M0.INVERTED,
-                    size: 18,
-                    value: null != Z && Z,
-                    onChange: (e, n) => S(n || ((null == x ? void 0 : x.moderated) == null && void 0)),
-                    children: (0, i.jsx)(u.Text, {
-                        variant: "text-sm/normal",
-                        children: y.intl.string(y.t["rMH+rq"]),
-                    }),
+                (0, i.jsx)(r.LZC, { size: 16 }),
+                (0, i.jsx)(r.XZJ, {
+                    checked: null != E && E,
+                    onChange: (e) => I(e || ((null == O ? void 0 : O.moderated) == null && void 0)),
+                    label: b.intl.string(b.t["rMH+rq"]),
+                    labelType: "secondary",
                 }),
             ],
         })

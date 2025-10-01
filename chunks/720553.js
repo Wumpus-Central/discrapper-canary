@@ -1,63 +1,62 @@
-n.d(e, { default: () => h }), n(704826), n(35282);
-var a = n(951288);
-n(647438);
-var l = n(990547),
-    r = n(793030),
-    i = n(755721),
-    s = n(481060),
-    o = n(213609),
-    c = n(626135),
-    d = n(988158),
-    u = n(981631),
-    m = n(388032),
-    x = n(140080);
-function h(t) {
-    let { url: e, trustUrl: n, isProtocol: h, onConfirm: p, onCancel: C, onClose: _, transitionState: f } = t,
+a.d(e, { default: () => x }), a(704826), a(35282);
+var n = a(951288);
+a(647438);
+var l = a(990547),
+    r = a(793030),
+    o = a(481060),
+    s = a(213609),
+    c = a(626135),
+    i = a(988158),
+    d = a(981631),
+    u = a(388032),
+    m = a(421108);
+function x(t) {
+    let { url: e, trustUrl: a, isProtocol: x, onConfirm: p, onCancel: h, onClose: C, transitionState: _ } = t,
         {
             protocol: k,
-            authorityPrefix: M,
-            hostname: g,
+            authorityPrefix: f,
+            hostname: M,
             theRestOfTheUrl: b,
-            shouldTrustUrl: v,
-            setShouldTrustUrl: D,
-            handleConfirm: L,
-            handleCancel: A,
-        } = (0, d.X)({
+            shouldTrustUrl: L,
+            setShouldTrustUrl: g,
+            handleConfirm: D,
+            handleCancel: v,
+        } = (0, i.X)({
             url: e,
-            trustUrl: n,
+            trustUrl: a,
             onConfirm: p,
-            onCancel: C,
-            onClose: _,
+            onCancel: h,
+            onClose: C,
         });
     return (
-        (0, o.Z)({
+        (0, s.Z)({
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.MASKED_LINK_MODAL,
         }),
-        (0, a.jsxs)(r.Modal, {
+        (0, n.jsxs)(r.Modal, {
             size: "md",
-            transitionState: f,
-            onClose: _,
-            title: m.intl.string(m.t["3w1QGh"]),
-            subtitle: h ? m.intl.format(m.t.aCYv19, {}) : m.intl.string(m.t.soRxRU),
+            transitionState: _,
+            onClose: C,
+            title: u.intl.string(u.t["3w1QGh"]),
+            subtitle: x ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU),
             actions: [
                 {
-                    text: m.intl.string(m.t["/g10LC"]),
+                    text: u.intl.string(u.t["/g10LC"]),
                     onClick: () => {
-                        A(),
-                            c.default.track(u.rMx.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: v,
+                        v(),
+                            c.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: L,
                                 action_type: "cancel",
                             });
                     },
                     variant: "secondary",
                 },
                 {
-                    text: h ? m.intl.string(m.t.COq6kp) : m.intl.string(m.t.NcJfJC),
+                    text: x ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
                     onClick: () => {
-                        L(),
-                            c.default.track(u.rMx.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: v,
+                        D(),
+                            c.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: L,
                                 action_type: "confirm",
                             });
                     },
@@ -65,22 +64,22 @@ function h(t) {
                 },
             ],
             children: [
-                (0, a.jsxs)(s.Ttm, {
-                    className: x.linkCalloutContainer,
+                (0, n.jsxs)(o.Ttm, {
+                    className: m.linkCalloutContainer,
                     children: [
-                        (0, a.jsxs)(s.Text, {
+                        (0, n.jsxs)(o.Text, {
                             tag: "span",
-                            variant: h ? "text-md/semibold" : "text-md/normal",
-                            color: h ? "text-default" : "text-muted",
-                            children: [k, M],
+                            variant: x ? "text-md/semibold" : "text-md/normal",
+                            color: x ? "text-default" : "text-muted",
+                            children: [k, f],
                         }),
-                        (0, a.jsx)(s.Text, {
+                        (0, n.jsx)(o.Text, {
                             tag: "span",
-                            variant: h ? "text-md/normal" : "text-md/semibold",
-                            color: h ? "text-muted" : "text-default",
-                            children: g,
+                            variant: x ? "text-md/normal" : "text-md/semibold",
+                            color: x ? "text-muted" : "text-default",
+                            children: M,
                         }),
-                        (0, a.jsx)(s.Text, {
+                        (0, n.jsx)(o.Text, {
                             tag: "span",
                             variant: "text-md/normal",
                             color: "text-muted",
@@ -88,17 +87,14 @@ function h(t) {
                         }),
                     ],
                 }),
-                (0, a.jsx)(i.$q, {
-                    className: x.checkboxMana,
-                    type: i.M0.INVERTED,
-                    value: v,
-                    onChange: (t, e) => D(e),
-                    children: (0, a.jsx)(s.Text, {
-                        variant: "text-sm/normal",
-                        children: h
-                            ? m.intl.format(m.t["haA+X1"], { protocol: k.replace(":", "") })
-                            : m.intl.format(m.t.ZgXDsL, { domain: g }),
-                    }),
+                (0, n.jsx)(o.VLL, {
+                    className: m.checkboxMana,
+                    checked: L,
+                    onChange: (t) => g(t),
+                    label: x
+                        ? u.intl.format(u.t["haA+X1"], { protocol: k.replace(":", "") })
+                        : u.intl.format(u.t.ZgXDsL, { domain: M }),
+                    labelType: "secondary",
                 }),
             ],
         })

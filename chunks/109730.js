@@ -5,8 +5,8 @@ var l = n(951288),
     i = n(442837),
     o = n(755721),
     u = n(481060),
-    s = n(91176),
-    c = n(493773),
+    c = n(91176),
+    s = n(493773),
     _ = n(906732),
     d = n(910693),
     E = n(501517),
@@ -17,8 +17,8 @@ var l = n(951288),
     M = n(590433),
     S = n(981631),
     f = n(388032),
-    C = n(764295),
-    h = n(678437);
+    C = n(304726),
+    h = n(383764);
 function m(t) {
     return {
         value: t,
@@ -38,11 +38,11 @@ let I = [
 function D(t) {
     var e, n;
     let { guildId: m, userId: D, anaylticsLocations: N, transitionState: R, onClose: p, modReportId: U } = t,
-        { analyticsLocations: v } = (0, _.ZP)(),
-        x = null != (n = null != (e = null == N ? void 0 : N[0]) ? e : null == v ? void 0 : v[0]) ? n : null,
-        b = (0, i.e7)([O.default], () => O.default.getUser(D), [D]),
-        [y, j] = r.useState(M.UK.DURATION_60_SEC),
-        [k, P] = r.useState(""),
+        { analyticsLocations: b } = (0, _.ZP)(),
+        v = null != (n = null != (e = null == N ? void 0 : N[0]) ? e : null == b ? void 0 : b[0]) ? n : null,
+        x = (0, i.e7)([O.default], () => O.default.getUser(D), [D]),
+        [y, k] = r.useState(M.UK.DURATION_60_SEC),
+        [j, P] = r.useState(""),
         [B, K] = r.useState(!1),
         [L, Z] = r.useState(!1),
         w = (0, i.e7)([T.Z], () => {
@@ -50,19 +50,19 @@ function D(t) {
             return null == (t = T.Z.getChannel(U)) ? void 0 : t.isArchivedThread();
         }),
         F = (0, d.sE)(m, {
-            location: x,
+            location: v,
             targetUserId: D,
         }),
         H = r.useCallback(async () => {
-            if (null != b) {
+            if (null != x) {
                 K(!0);
                 try {
-                    await s.Z.setCommunicationDisabledDuration(m, D, y, k, x, U),
+                    await c.Z.setCommunicationDisabledDuration(m, D, y, j, v, U),
                         L && null != U && E.Z.resolveFlag(U),
                         F(d.jQ.TIMEOUT),
                         (0, u.showToast)(
                             (0, u.createToast)(
-                                f.intl.formatToPlainString(f.t.O9C3Nj, { user: A.ZP.getName(m, null, b) }),
+                                f.intl.formatToPlainString(f.t.O9C3Nj, { user: A.ZP.getName(m, null, x) }),
                                 u.ToastType.SUCCESS,
                             ),
                         ),
@@ -73,23 +73,23 @@ function D(t) {
                     K(!1);
                 }
             }
-        }, [m, b, D, p, y, k, x, F, U, L]);
-    return ((0, c.ZP)(() => {
-        null != b &&
+        }, [m, x, D, p, y, j, v, F, U, L]);
+    return ((0, s.ZP)(() => {
+        null != x &&
             g.default.track(S.rMx.OPEN_MODAL, {
                 type: M.Cl,
                 guild_id: m,
-                other_user_id: b.id,
+                other_user_id: x.id,
             });
     }),
     r.useEffect(() => {
-        (null == b || null == m) && p();
-    }, [m, b, p]),
-    null == b || null == m)
+        (null == x || null == m) && p();
+    }, [m, x, p]),
+    null == x || null == m)
         ? null
         : (0, l.jsx)(a.Modal, {
               transitionState: R,
-              title: f.intl.formatToPlainString(f.t.OhsOy8, { user: A.ZP.getName(m, null, b) }),
+              title: f.intl.formatToPlainString(f.t.OhsOy8, { user: A.ZP.getName(m, null, x) }),
               subtitle: f.intl.format(f.t.Ns83GR, { helpdeskArticle: M.cu }),
               actions: [
                   {
@@ -106,12 +106,10 @@ function D(t) {
               actionBarInput:
                   null == U || w
                       ? void 0
-                      : (0, l.jsx)(o.$q, {
-                            value: L,
-                            onChange: (t, e) => {
-                                Z(e);
-                            },
-                            children: f.intl.string(C.default["8yIKen"]),
+                      : (0, l.jsx)(u.XZJ, {
+                            checked: L,
+                            onChange: (t) => Z(t),
+                            label: f.intl.string(C.default["8yIKen"]),
                         }),
               onClose: p,
               children: (0, l.jsxs)(u.Kqy, {
@@ -137,7 +135,7 @@ function D(t) {
                                               className: e ? h.selectorButtonSelected : h.selectorButton,
                                               onClick: () => n(r),
                                           };
-                                      })(t, t.value === y, j),
+                                      })(t, t.value === y, k),
                                   ),
                               }),
                           ],
@@ -150,7 +148,7 @@ function D(t) {
                                   children: f.intl.string(f.t.ewHW19),
                               }),
                               (0, l.jsx)(u.Kx8, {
-                                  value: k,
+                                  value: j,
                                   onChange: (t) => P(t),
                                   placeholder: f.intl.string(f.t.GakiHx),
                                   rows: 4,
