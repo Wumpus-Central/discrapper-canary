@@ -7,11 +7,11 @@ var r = n(951288),
     l = n(906732),
     c = n(279332),
     u = n(14491),
-    d = n(299206),
-    f = n(276022),
-    _ = n(389052),
-    p = n(158508),
-    h = n(622724),
+    d = n(423086),
+    f = n(299206),
+    _ = n(276022),
+    p = n(389052),
+    h = n(158508),
     m = n(785717),
     g = n(621853),
     E = n(475413),
@@ -53,7 +53,7 @@ function v(e) {
         C = c.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
         N = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
         R = null == N ? void 0 : N.application,
-        P = (0, f.Z)({
+        P = (0, _.Z)({
             user: t,
             application: null != R ? R : void 0,
             guildId: n,
@@ -65,7 +65,7 @@ function v(e) {
                     null == v || v();
             },
         }),
-        w = (0, _.Z)({
+        w = (0, p.Z)({
             user: t,
             guildId: n,
             location: A,
@@ -81,7 +81,7 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        D = (0, p.Z)({
+        D = (0, h.Z)({
             user: t,
             guildId: n,
             location: A,
@@ -96,18 +96,18 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        x = (0, h.Z)({
+        L = (0, d.Z)({
+            applicationId: null == R ? void 0 : R.id,
             user: t,
             guildId: n,
-            location: A,
-            color: "danger",
-            onAction: () =>
+            onSubmit: () =>
                 T({
                     action: "REPORT",
                     analyticsLocations: S,
                 }),
+            color: "danger",
         }),
-        L = (0, d.Z)({
+        x = (0, f.Z)({
             id: null == R ? void 0 : R.id,
             label: b.intl.string(b.t["+NP/b2"]),
             onSuccess: () =>
@@ -119,7 +119,7 @@ function v(e) {
         j = [
             [y],
             C ? [P] : [],
-            [D, w, x],
+            [D, w, L],
             [
                 (0, u.Z)({
                     application: R,
@@ -130,7 +130,7 @@ function v(e) {
                             analyticsLocations: S,
                         }),
                 }),
-                L,
+                x,
             ],
         ];
     return j.every((e) => e.every((e) => null == e))
