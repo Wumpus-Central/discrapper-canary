@@ -1,31 +1,34 @@
-n.d(t, { default: () => g });
+n.d(t, { default: () => C }), n(388685);
 var r = n(951288),
     o = n(647438),
-    l = n(481060),
-    i = n(493773),
-    a = n(82084),
-    s = n(131051),
-    c = n(663389),
-    u = n(88658),
-    d = n(996733),
-    f = n(313789),
-    b = n(914578),
-    p = n(920952),
-    m = n(839469),
-    j = n(518596),
-    y = n(388032),
-    x = n(942408);
-function v(e) {
+    l = n(704215),
+    i = n(481060),
+    a = n(493773),
+    s = n(243778),
+    c = n(82084),
+    u = n(218353),
+    d = n(131051),
+    f = n(663389),
+    b = n(88658),
+    m = n(996733),
+    p = n(313789),
+    j = n(914578),
+    x = n(920952),
+    v = n(839469),
+    y = n(518596),
+    g = n(388032),
+    h = n(942408);
+function O(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, u.QB)({
+    (0, b.QB)({
         destinationPane: t,
         originPane: n,
-        subsection: c.Z.getSubsection(),
-        source: c.Z.getAnalyticsLocation(),
-        locationStack: c.Z.getAnalyticsLocations(),
+        subsection: f.Z.getSubsection(),
+        source: f.Z.getAnalyticsLocation(),
+        locationStack: f.Z.getAnalyticsLocations(),
     });
 }
-function g(e) {
+function C(e) {
     var t,
         { target: n } = e,
         l = (function (e, t) {
@@ -49,22 +52,22 @@ function g(e) {
             }
             return o;
         })(e, ["target"]);
-    let u = d.Z.useField("query"),
-        { node: m, directory: y } = (0, s.Z)(p.Z, u),
-        x = ((t = f.n.ACCOUNT_PANEL), null == y.entry(n) ? t : n),
-        g = o.useRef(null);
+    let i = m.Z.useField("query"),
+        { node: s, directory: u } = (0, d.Z)(x.Z, i),
+        b = ((t = p.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
+        v = o.useRef(null);
     return (
-        (0, i.ZP)(() => {
-            let e = c.Z.getSection();
+        (0, a.ZP)(() => {
+            let e = f.Z.getSection();
             null != e &&
-                (v({
+                (O({
                     destinationPanel: e,
                     originPanel: null,
                 }),
-                (g.current = e));
+                (v.current = e));
         }),
         (0, r.jsx)(
-            a.Z,
+            c.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -91,58 +94,87 @@ function g(e) {
                 return e;
             })(
                 {
-                    root: m,
-                    directory: y,
-                    sidebarHeader: h,
-                    sidebarFooter: b.Z,
+                    root: s,
+                    directory: u,
+                    sidebarHeader: _,
+                    sidebarFooter: j.Z,
                     onPanelChange: (e) => {
-                        let t = (0, j.getUserSettingsSectionsByWebUserSettings)().get(e);
+                        let t = (0, y.getUserSettingsSectionsByWebUserSettings)().get(e);
                         null != t &&
-                            (v({
+                            (O({
                                 destinationPanel: t,
-                                originPanel: g.current,
+                                originPanel: v.current,
                             }),
-                            (g.current = t));
+                            (v.current = t));
                     },
-                    target: x,
+                    target: b,
                 },
                 l,
             ),
         )
     );
 }
-function h() {
-    let e = d.Z.useField("query"),
-        t = m.R.useField("hasSearchResults"),
-        n = m.R.useField("searchResults"),
-        i = o.useCallback((e) => {
-            d.Z.setState({ query: e });
+function _() {
+    let e = m.Z.useField("query"),
+        t = v.R.useField("hasSearchResults"),
+        n = v.R.useField("searchResults"),
+        a = o.useRef(null),
+        [c, d] = (0, s.US)([l.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        f = o.useMemo(
+            () => ({
+                title: g.intl.string(g.t.Kv519f),
+                body: g.intl.string(g.t.cTGJBQ),
+                badge: "new",
+                position: "right",
+                align: "center",
+                scrollBehavior: "sticky",
+            }),
+            [],
+        ),
+        b = o.useCallback((e) => {
+            m.Z.setState({ query: e });
         }, []),
-        a = o.useCallback(() => {
-            d.Z.setState({ query: "" });
+        p = o.useCallback(() => {
+            m.Z.setState({ query: "" });
         }, []);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(l.E1j, {
-                size: "md",
-                query: e,
-                onChange: i,
-                onClear: a,
+            (0, r.jsxs)("div", {
+                className: h.searchBarContainer,
+                children: [
+                    (0, r.jsx)(i.E1j, {
+                        size: "md",
+                        query: e,
+                        onChange: b,
+                        onClear: p,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: h.popoverAnchor,
+                        ref: a,
+                    }),
+                    (0, r.jsx)(u.Z, {
+                        dismissibleContentType: l.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                        targetElementRef: a,
+                        visibleContent: c,
+                        markAsDismissed: d,
+                        props: f,
+                    }),
+                ],
             }),
             t &&
                 0 === n.length &&
                 (0, r.jsxs)("div", {
-                    className: x.emptySearchResultsContainer,
+                    className: h.emptySearchResultsContainer,
                     children: [
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: "text-sm/semibold",
                             color: "text-primary",
-                            children: y.intl.string(y.t.zihbmp),
+                            children: g.intl.string(g.t.zihbmp),
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
-                            children: y.intl.string(y.t.XclvsL),
+                            children: g.intl.string(g.t.XclvsL),
                         }),
                     ],
                 }),

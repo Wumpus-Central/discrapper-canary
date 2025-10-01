@@ -1,30 +1,17 @@
-n.d(t, { Z: () => E });
-var r = n(704215),
-    i = n(509613),
-    l = n(28682),
-    o = n(313789),
-    s = n(837061),
-    a = n(912400),
-    u = n(212473),
-    c = n(51435),
-    d = n(217123),
-    f = n(202841),
-    b = n(603569),
-    y = n(674574),
+n.d(t, { Z: () => y });
+var i = n(509613),
+    r = n(313789),
+    l = n(837061),
+    u = n(912400),
+    s = n(212473),
+    a = n(51435),
+    o = n(217123),
+    c = n(202841),
+    d = n(603569),
+    E = n(674574),
     O = n(798922),
-    g = n(388032);
-let E = (0, i.vB)(o.n.USER_SECTION, {
-    useLabel: () => g.intl.string(g.t.cduTBA),
-    trailing: {
-        type: l.PU.POPOVER,
-        dismissibleContentType: r.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
-        props: {
-            title: g.intl.string(g.t.Kv519f),
-            body: g.intl.string(g.t.cTGJBQ),
-            badge: "new",
-            position: "right",
-            align: "center",
-        },
-    },
-    buildLayout: () => [s.Z, d.Z, f.Z, b.Z, O.Z, a.Z, c.Z, y.Z, u.Z],
+    T = n(388032);
+let y = (0, i.vB)(r.n.USER_SECTION, {
+    useLabel: () => T.intl.string(T.t.cduTBA),
+    buildLayout: () => [l.Z, o.Z, c.Z, d.Z, O.Z, u.Z, a.Z, E.Z, s.Z],
 });
