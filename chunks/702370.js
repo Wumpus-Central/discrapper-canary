@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(979554),
     m = n(314794),
     p = n(311570),
-    v = n(399606),
-    f = n(780384),
+    f = n(399606),
+    v = n(780384),
     h = n(481060),
     g = n(809206),
     P = n(727637),
@@ -64,8 +64,8 @@ var r = n(951288),
     ed = n(38914),
     em = n(259673),
     ep = n(508925),
-    ev = n(953405),
-    ef = n(453713),
+    ef = n(953405),
+    ev = n(453713),
     eh = n(325834),
     eg = n(143941),
     eP = n(616066),
@@ -83,7 +83,7 @@ var r = n(951288),
     ey = n(474936),
     eN = n(231338),
     eA = n(388032),
-    eR = n(188336);
+    eR = n(653193);
 function ek(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -265,9 +265,9 @@ let eZ = (e) => {
                 isPartiallyOwnedBundle: k,
                 isPurchased: R,
             }),
-            U = (0, v.e7)([V.Z], () => V.Z.isClaiming === (null == N ? void 0 : N.skuId)),
+            U = (0, f.e7)([V.Z], () => V.Z.isClaiming === (null == N ? void 0 : N.skuId)),
             F = (0, x.ZP)(),
-            W = (0, f.wj)(F),
+            W = (0, v.wj)(F),
             $ = (0, q.G1)(N),
             ee = (0, q.ql)(N, eS.tuJ.DEFAULT),
             en = (null == ee ? void 0 : ee.amount) === 0,
@@ -352,7 +352,7 @@ let eZ = (e) => {
                                             children: eA.intl.string(eA.t.rt69oq),
                                         })
                                       : eg
-                                        ? (0, r.jsx)(ev.a, {
+                                        ? (0, r.jsx)(ef.a, {
                                               prices: e_,
                                               product: N,
                                               isPremiumUser: w,
@@ -381,7 +381,7 @@ let eZ = (e) => {
                         (0, r.jsx)(h.Rny, {
                             children:
                                 O === eI.Ch.DEFAULT
-                                    ? (0, r.jsx)(ef.P, {
+                                    ? (0, r.jsx)(ev.P, {
                                           selectedVariantIndex: b,
                                           variantGroupProduct: t,
                                           previewingVariantIndexProps: P,
@@ -639,9 +639,9 @@ let eZ = (e) => {
     },
     eH = (e) => {
         let { product: t, user: n, activeBundleSlide: i, isTransitioning: l } = e,
-            o = (0, v.e7)([b.Z], () => b.Z.useReducedMotion),
+            o = (0, f.e7)([b.Z], () => b.Z.useReducedMotion),
             s = G.ZP.canUsePremiumProfileCustomization(n),
-            c = (0, v.cj)([D.Z], () => D.Z.getAllPending()),
+            c = (0, f.cj)([D.Z], () => D.Z.getAllPending()),
             { pendingAvatar: u } = c,
             m = (function (e, t) {
                 if (null == e) return {};
@@ -668,7 +668,7 @@ let eZ = (e) => {
                 userId: n.id,
                 image: u,
             }),
-            f = t.type === d.Z.AVATAR_DECORATION,
+            v = t.type === d.Z.AVATAR_DECORATION,
             [h] = t.items,
             { firstAvatarDecoration: g, firstProfileEffect: P, firstNameplate: x } = (0, Q.Rj)(t),
             j = null != P,
@@ -682,16 +682,16 @@ let eZ = (e) => {
                                 user: n,
                                 canUsePremiumCustomization: s,
                                 pendingAvatarDecoration: g,
-                                pendingProfileEffectId: null == P ? void 0 : P.id,
+                                pendingProfileEffect: P,
                                 disabledInputs: !0,
                                 hideMessageInput: !j,
                                 hideCustomStatus: !0,
-                                hideBioSection: f,
+                                hideBioSection: v,
                                 hideExampleButton: !0,
                                 interactive: !1,
                             }),
                         ),
-                        f && (0, r.jsx)(ez, { user: n }),
+                        v && (0, r.jsx)(ez, { user: n }),
                     ],
                 }),
             _ = (e) =>
@@ -805,14 +805,14 @@ let eZ = (e) => {
                 returnRef: c,
                 analyticsSource: u,
                 analyticsLocations: p,
-                shouldCheckoutWithOrbs: f,
+                shouldCheckoutWithOrbs: v,
                 tab: g,
                 variantType: P = eI.Ch.DEFAULT,
             } = e,
-            x = (0, v.e7)([M.default], () => M.default.getCurrentUser()),
+            x = (0, f.e7)([M.default], () => M.default.getCurrentUser()),
             b = (0, eO.f)(l),
             { previewingVariantIndex: _ } = b,
-            O = (0, v.e7)([V.Z], () => V.Z.purchases),
+            O = (0, f.e7)([V.Z], () => V.Z.purchases),
             T = (0, W.o)(l, O),
             w = (0, eb.N)(l, _),
             E = (0, ej.W)(l, T);
@@ -868,7 +868,7 @@ let eZ = (e) => {
                                       onClose: n,
                                       previewingVariantIndexProps: b,
                                       selectedVariantIndex: T,
-                                      shouldCheckoutWithOrbs: f,
+                                      shouldCheckoutWithOrbs: v,
                                       tab: g,
                                       activeBundleSlide: G,
                                       variantType: P,

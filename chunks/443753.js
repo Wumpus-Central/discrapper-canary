@@ -13,13 +13,11 @@ let s = (e) => {
         r.useMemo(() => {
             if (null != e) return e;
             if (null == t) return;
-            let n = (0, a.XS)(t)
-                .filter((e) => {
-                    let { skuId: t } = e,
-                        n = i.Z.getProduct(t);
-                    return (0, a.G1)(n);
-                })
-                .map((e) => e.id);
+            let n = (0, a.XS)(t).filter((e) => {
+                let { skuId: t } = e,
+                    n = i.Z.getProduct(t);
+                return (0, a.G1)(n);
+            });
             return n[Math.floor(Math.random() * n.length)];
         }, [t, e])
     );

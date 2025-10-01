@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(314940);
+n.d(t, { Z: () => v }), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -95,8 +95,8 @@ let y = () => 80,
             y = i.useRef(null),
             {
                 accessibilityLabel: j,
-                thumbnailPreviewSrc: O,
-                title: _,
+                thumbnailPreviewSrc: v,
+                title: O,
             } = null != (t = null == p ? void 0 : p.config) ? t : {};
         return (0, r.jsxs)(
             P,
@@ -117,8 +117,8 @@ let y = () => 80,
                         }),
                         (0, r.jsx)("img", {
                             className: m.presetEffectImg,
-                            src: O,
-                            alt: _,
+                            src: v,
+                            alt: O,
                         }),
                         (0, r.jsx)(a.Z, {
                             isPurchaseSection: o === f.$0.PURCHASE,
@@ -131,7 +131,7 @@ let y = () => 80,
             ),
         );
     },
-    O = (e) => {
+    v = (e) => {
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
             d = (0, f.ZP)(),
             g = null != i,
@@ -151,8 +151,8 @@ let y = () => 80,
                     return t.length;
                 }),
                 renderItem: (e, t, u, x) => {
-                    let { section: y, items: O } = d[e];
-                    return (0, s.EQ)(O[t])
+                    let { section: y, items: v } = d[e];
+                    return (0, s.EQ)(v[t])
                         .with(f.Tm, () =>
                             (0, r.jsxs)(
                                 P,
@@ -201,7 +201,7 @@ let y = () => 80,
                             ),
                         )
                         .otherwise((e) => {
-                            let t = i === e.id;
+                            let t = (null == i ? void 0 : i.skuId) === e.skuId;
                             return (0, r.jsx)(
                                 j,
                                 {
@@ -210,7 +210,7 @@ let y = () => 80,
                                     profileEffect: e,
                                     innerRef: t ? l : void 0,
                                     isSelected: t,
-                                    onSelect: () => o(e.id),
+                                    onSelect: () => o(e),
                                     canUsePremiumCollectibles: b,
                                 },
                                 x,

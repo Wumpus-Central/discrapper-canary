@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(643879),
     c = n(25990),
     u = n(678135),
-    d = n(575169);
+    d = n(725412);
 function f(e, t, n) {
     return (
         t in e
@@ -51,7 +51,7 @@ function p(e) {
             tryItOutAvatar: I,
             tryItOutBanner: T,
             tryItOutAvatarDecoration: S,
-            tryItOutProfileEffectId: A,
+            tryItOutProfileEffect: A,
         } = (0, a.cj)([c.Z], () => _({}, c.Z.getAllPending(), c.Z.getAllTryItOut())),
         C = (0, l.SD)({
             userId: f.id,
@@ -67,7 +67,7 @@ function p(e) {
         pendingAvatar: C,
         pendingThemeColors: null != v ? v : b,
         pendingAvatarDecoration: N,
-        pendingProfileEffectId: A,
+        pendingProfileEffect: A,
         avatarClassName: null != I || null != g || m.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,

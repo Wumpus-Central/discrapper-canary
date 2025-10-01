@@ -1,9 +1,10 @@
 n.d(t, {
     FD: () => h,
+    Fu: () => A,
     I5: () => O,
     Mn: () => b,
     NI: () => N,
-    OU: () => L,
+    OU: () => x,
     P6: () => D,
     Rx: () => S,
     S2: () => E,
@@ -14,11 +15,10 @@ n.d(t, {
     b9: () => R,
     cV: () => T,
     e1: () => I,
-    iR: () => x,
+    iR: () => L,
     s4: () => C,
     si: () => P,
     ss: () => g,
-    xn: () => A,
 });
 var r = n(544891),
     i = n(433517),
@@ -238,8 +238,8 @@ function S(e) {
 }
 function A(e) {
     o.Z.dispatch({
-        type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
-        profileEffectId: e,
+        type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT",
+        profileEffect: e,
     });
 }
 function C(e) {
@@ -266,9 +266,9 @@ function w() {
 function D() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
-function x() {
+function L() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function L() {
+function x() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

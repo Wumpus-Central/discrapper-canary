@@ -1,17 +1,17 @@
 n.d(t, {
     $U: () => h,
+    IG: () => A,
     Jw: () => O,
     Kg: () => E,
     PO: () => I,
+    UK: () => T,
     Wx: () => S,
-    ZT: () => A,
     Zx: () => m,
     bd: () => b,
     f$: () => N,
     gc: () => p,
     gd: () => C,
     mD: () => g,
-    s6: () => T,
     xQ: () => y,
 }),
     n(539854);
@@ -102,15 +102,15 @@ function g(e, t) {
 }
 function E(e, t) {
     return (0, i.e7)([d.Z], () => {
-        var n, r, i, a;
+        var n, r;
         return null == t
-            ? null == (r = d.Z.getUserProfile(e.id)) || null == (n = r.profileEffect)
+            ? null == (n = d.Z.getUserProfile(e.id))
                 ? void 0
-                : n.id
-            : null == (a = d.Z.getGuildMemberProfile(e.id, t.id)) || null == (i = a.profileEffect)
+                : n.profileEffect
+            : null == (r = d.Z.getGuildMemberProfile(e.id, t.id))
               ? void 0
-              : i.id;
-    }, [e, t]);
+              : r.profileEffect;
+    });
 }
 function b(e) {
     return (0, i.cj)(
@@ -118,11 +118,11 @@ function b(e) {
         () =>
             null == e
                 ? {
-                      pendingProfileEffectId: _.Z.getPendingProfileEffectId(),
+                      pendingProfileEffect: _.Z.getPendingProfileEffect(),
                       errors: _.Z.getErrors().profileEffect,
                   }
                 : {
-                      pendingProfileEffectId: c.Z.getPendingProfileEffectId(),
+                      pendingProfileEffect: c.Z.getPendingProfileEffect(),
                       errors: c.Z.getErrors().profileEffect,
                   },
         [e],
@@ -141,8 +141,9 @@ function I(e, t) {
     v(null != e)(t);
 }
 function T(e, t, n) {
-    if (e === t) return void (null == n ? (0, a.xn)(void 0) : (0, l.xn)(void 0));
-    null == n ? (0, a.xn)(e) : (0, l.xn)(e);
+    if ((null == e ? void 0 : e.skuId) === (null == t ? void 0 : t.skuId))
+        return void (null == n ? (0, a.Fu)(void 0) : (0, l.Fu)(void 0));
+    null == n ? (0, a.Fu)(e) : (0, l.Fu)(e);
 }
 function S(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -167,12 +168,12 @@ function S(e, t, n) {
             };
 }
 function A(e) {
-    var t, n, r, i, a;
-    let { pendingProfileEffectId: o, displayProfile: s } = e,
-        l = null == s || null == (n = s._userProfile) || null == (t = n.profileEffect) ? void 0 : t.id,
-        c = null == s || null == (i = s._guildMemberProfile) || null == (r = i.profileEffect) ? void 0 : r.id,
-        u = null === o;
-    return u && null != c ? l : u ? null : null != o ? o : null == s || null == (a = s.profileEffect) ? void 0 : a.id;
+    var t, n;
+    let { pendingProfileEffect: r, displayProfile: i } = e,
+        a = null == i || null == (t = i._userProfile) ? void 0 : t.profileEffect,
+        o = null == i || null == (n = i._guildMemberProfile) ? void 0 : n.profileEffect,
+        s = null === r;
+    return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffect;
 }
 function C(e, t) {
     return void 0 === e ? null != t : null != e;

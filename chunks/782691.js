@@ -81,8 +81,8 @@ let C = {
         let { effect: t } = e,
             { upsertConfig: n } = (0, x.n6)(),
             i = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-            [N, T] = r.useState(!0),
-            S = r.useRef(null),
+            [N, S] = r.useState(!0),
+            T = r.useRef(null),
             [O, P] = r.useState(!1),
             [I, k] = r.useState(!1),
             [w, R] = r.useState([]),
@@ -104,12 +104,12 @@ let C = {
                 }),
                 [w],
             ),
-            B = (e) => {
+            G = (e) => {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            G = (e, t) => {
-                let n = B(t);
+            B = (e, t) => {
+                let n = G(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
                         Z((a) => y(_({}, a), { [e]: (0, f.z)(t, n) }));
@@ -253,9 +253,9 @@ let C = {
                                               children: [
                                                   "Upload Animated Layer",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: S,
+                                                      ref: T,
                                                       onChange: (e) => {
-                                                          let t = B(e);
+                                                          let t = G(e);
                                                           null != t &&
                                                               (0, f.i0)(t, async (e) => {
                                                                   let n = await (0, f.Xv)(e, t, w.length);
@@ -280,8 +280,8 @@ let C = {
                                               children: [
                                                   "Upload thumbnail.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: S,
-                                                      onChange: (e) => G(f.cq.THUMBNAIL, e),
+                                                      ref: T,
+                                                      onChange: (e) => B(f.cq.THUMBNAIL, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -291,8 +291,8 @@ let C = {
                                               children: [
                                                   "Upload static.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: S,
-                                                      onChange: (e) => G(f.cq.STATIC, e),
+                                                      ref: T,
+                                                      onChange: (e) => B(f.cq.STATIC, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -302,8 +302,8 @@ let C = {
                                               children: [
                                                   "Upload reduced_motion.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: S,
-                                                      onChange: (e) => G(f.cq.REDUCED_MOTION, e),
+                                                      ref: T,
+                                                      onChange: (e) => B(f.cq.REDUCED_MOTION, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -318,7 +318,7 @@ let C = {
                                               variant: "primary",
                                               text: "Replay Animation",
                                               onClick: () => {
-                                                  T(!1), setTimeout(() => T(!0), 100);
+                                                  S(!1), setTimeout(() => S(!0), 100);
                                               },
                                           }),
                                       }),
@@ -456,7 +456,7 @@ let C = {
                                                   (0, a.jsx)(p.Z, {
                                                       user: i,
                                                       pendingAvatar: void 0,
-                                                      pendingProfileEffectId: null,
+                                                      pendingProfileEffect: null,
                                                       canUsePremiumCustomization: !0,
                                                       isTryItOutFlow: !0,
                                                   }),
@@ -662,10 +662,10 @@ let C = {
                                                                       children: "Add Alternative",
                                                                   }),
                                                                   (0, a.jsx)(m.Z, {
-                                                                      ref: S,
+                                                                      ref: T,
                                                                       onChange: (e) =>
                                                                           ((e, t) => {
-                                                                              let n = B(e);
+                                                                              let n = G(e);
                                                                               null != n &&
                                                                                   (0, f.i0)(n, (e) => {
                                                                                       R((a) => {

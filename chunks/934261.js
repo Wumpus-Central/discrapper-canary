@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => w });
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -19,9 +19,9 @@ var i = n(392711),
     y = n(265159),
     P = n(25990),
     j = n(594174),
-    O = n(55935),
-    _ = n(74538),
-    v = n(388032),
+    v = n(55935),
+    O = n(74538),
+    _ = n(388032),
     E = n(219299);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -53,15 +53,15 @@ let S = (e) => {
             p = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
             m = (0, l.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId)),
             g = (0, l.e7)([x.default], () => x.default.locale),
-            h = _.ZP.canUseCollectibles(p),
+            h = O.ZP.canUseCollectibles(p),
             b = (0, c.qS)(d),
             y = (0, c.G1)(u),
             P = !h && b,
-            C = (null == d ? void 0 : d.expiresAt) != null ? (0, O.TD)(Date.now(), d.expiresAt) : null,
+            C = (null == d ? void 0 : d.expiresAt) != null ? (0, v.TD)(Date.now(), d.expiresAt) : null,
             S = (0, a.ag)(d),
-            A = (0, a.kd)(m),
-            I = (0, f.M)(!y || h),
-            Z = w(P, y, h, I);
+            w = (0, a.kd)(m),
+            A = (0, f.M)(!y || h),
+            Z = I(P, y, h, A);
         return null != n
             ? (0, r.jsx)("div", {
                   className: t ? E.effectDescriptionNoGradient : E.effectDescriptionBorderWithGradient,
@@ -72,7 +72,7 @@ let S = (e) => {
                               color: "header-primary",
                               variant: "text-sm/semibold",
                               className: E.effectName,
-                              children: (0, i.isEmpty)(S) ? A : S,
+                              children: (0, i.isEmpty)(S) ? w : S,
                           }),
                           null != d
                               ? null
@@ -87,7 +87,7 @@ let S = (e) => {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
-                                  children: v.intl.format(v.t.Io7ozs, { days: C.days.toString() }),
+                                  children: _.intl.format(_.t.Io7ozs, { days: C.days.toString() }),
                               }),
                           null != d &&
                               (0, r.jsxs)(o.Text, {
@@ -95,7 +95,7 @@ let S = (e) => {
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
                                   children: [
-                                      v.intl.format(v.t.gW9R4O, {
+                                      _.intl.format(_.t.gW9R4O, {
                                           date: d.purchasedAt.toLocaleDateString(g, {
                                               month: "long",
                                               year: "numeric",
@@ -105,7 +105,7 @@ let S = (e) => {
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)("br", {}),
-                                                  v.intl.format(v.t.eZSTa2, {
+                                                  _.intl.format(_.t.eZSTa2, {
                                                       date: d.expiresAt.toLocaleDateString(g, {
                                                           minute: "numeric",
                                                           hour: "numeric",
@@ -123,43 +123,43 @@ let S = (e) => {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
-                                  children: v.intl.string(v.t.nKdAlJ),
+                                  children: _.intl.string(_.t.nKdAlJ),
                               }),
                       ],
                   }),
               })
             : null;
     },
-    w = (e, t, n, r) =>
+    I = (e, t, n, r) =>
         e
-            ? v.intl.string(v.t["1UPza2"])
+            ? _.intl.string(_.t["1UPza2"])
             : t && n
-              ? v.intl.string(v.t.hmyYKy)
+              ? _.intl.string(_.t.hmyYKy)
               : t && !n
                 ? r
-                    ? v.intl.string(v.t.meldu7)
-                    : v.intl.string(v.t.JtAKws)
-                : v.intl.string(v.t.fEGjVV),
-    A = (e) => {
-        var t, n, i;
+                    ? _.intl.string(_.t.meldu7)
+                    : _.intl.string(_.t.JtAKws)
+                : _.intl.string(_.t.fEGjVV),
+    w = (e) => {
+        var t, n;
         let {
-                user: o,
-                pendingProfileEffectRecord: s,
-                canApplySelectedChange: c,
-                product: a,
-                purchase: f,
-                guild: x,
+                user: i,
+                pendingProfileEffectRecord: o,
+                canApplySelectedChange: s,
+                product: c,
+                purchase: a,
+                guild: f,
             } = e,
             {
-                pendingGlobalName: j,
-                pendingNickname: O,
+                pendingGlobalName: x,
+                pendingNickname: j,
                 pendingPronouns: v,
-                pendingBio: w,
-                pendingBanner: A,
-                pendingAvatar: I,
-                pendingAvatarDecoration: Z,
-                pendingThemeColors: N,
-                pendingAccentColor: D,
+                pendingBio: _,
+                pendingBanner: I,
+                pendingAvatar: w,
+                pendingAvatarDecoration: A,
+                pendingThemeColors: Z,
+                pendingAccentColor: N,
             } = (0, l.cj)([u.Z, P.Z], () =>
                 C(
                     {
@@ -167,30 +167,30 @@ let S = (e) => {
                         pendingGlobalName: void 0,
                         pendingAccentColor: void 0,
                     },
-                    null != x ? u.Z.getAllPending() : P.Z.getAllPending(),
+                    null != f ? u.Z.getAllPending() : P.Z.getAllPending(),
                 ),
             ),
-            T = _.ZP.isPremium(o),
-            k = _.ZP.canUsePremiumProfileCustomization(o),
-            L = (0, h.ZP)(o.id),
-            U = !!(null == L ? void 0 : L.getPreviewBio(w).value),
-            B = {
-                user: o,
-                guild: x,
-                pendingGlobalName: j,
-                pendingNickname: O,
+            D = O.ZP.isPremium(i),
+            k = O.ZP.canUsePremiumProfileCustomization(i),
+            T = (0, h.ZP)(i.id),
+            U = !!(null == T ? void 0 : T.getPreviewBio(_).value),
+            L = {
+                user: i,
+                guild: f,
+                pendingGlobalName: x,
+                pendingNickname: j,
                 pendingPronouns: v,
-                pendingBio: b.dN.useSetting() && null != w ? d.ZP.parse(void 0, w).content : w,
-                pendingBanner: A,
+                pendingBio: b.dN.useSetting() && null != _ ? d.ZP.parse(void 0, _).content : _,
+                pendingBanner: I,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.SD)({
-                    userId: o.id,
-                    image: I,
+                    userId: i.id,
+                    image: w,
                 }),
-                pendingAvatarDecoration: Z,
-                pendingThemeColors: N,
-                pendingAccentColor: D,
-                pendingProfileEffectId: null != (t = null == s ? void 0 : s.id) ? t : null,
+                pendingAvatarDecoration: A,
+                pendingThemeColors: Z,
+                pendingAccentColor: N,
+                pendingProfileEffect: null != o ? o : null,
                 hideFakeActivity: U,
                 canUsePremiumCustomization: k,
                 onUpsellClick: y.Z,
@@ -201,14 +201,14 @@ let S = (e) => {
             children: [
                 (0, r.jsx)(
                     p.Z,
-                    ((n = C({}, B)),
-                    (i = i =
+                    ((t = C({}, L)),
+                    (n = n =
                         {
                             disabledInputs: !0,
                             hideCustomStatus: !0,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -216,18 +216,18 @@ let S = (e) => {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    n),
+                    t),
                 ),
                 !1,
                 (0, r.jsx)(S, {
-                    effectIsOwned: c,
-                    pendingProfileEffectRecord: s,
-                    product: a,
-                    purchase: f,
-                    userIsPremium: T,
+                    effectIsOwned: s,
+                    pendingProfileEffectRecord: o,
+                    product: c,
+                    purchase: a,
+                    userIsPremium: D,
                 }),
             ],
         });

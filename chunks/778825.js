@@ -48,7 +48,7 @@ function R(e) {
     i = t;
 }
 function P(e) {
-    let { profileEffectId: t } = e;
+    let { profileEffect: t } = e;
     o = t;
 }
 function w(e) {
@@ -59,11 +59,11 @@ function D(e) {
     let { bio: t } = e;
     l = t;
 }
-function x(e) {
+function L(e) {
     let { pronouns: t } = e;
     c = t;
 }
-function L(e) {
+function x(e) {
     let { nickname: t } = e;
     u = t;
 }
@@ -124,7 +124,7 @@ class V extends (h = m.ZP.Store) {
     getPendingAvatarDecoration() {
         return i;
     }
-    getPendingProfileEffectId() {
+    getPendingProfileEffect() {
         return o;
     }
     getPendingBanner() {
@@ -155,7 +155,7 @@ class V extends (h = m.ZP.Store) {
         return {
             pendingAvatar: r,
             pendingAvatarDecoration: i,
-            pendingProfileEffectId: o,
+            pendingProfileEffect: o,
             pendingBanner: s,
             pendingBio: l,
             pendingPronouns: c,
@@ -184,11 +184,11 @@ let H = new V(g.Z, {
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: R,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: k,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: M,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: P,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT: P,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: w,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: x,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: j,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: G,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: B,

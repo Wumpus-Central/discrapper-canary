@@ -14,8 +14,8 @@ function i(e) {
         null != e.pendingPronouns && (t.pronouns = e.pendingPronouns),
         void 0 !== e.pendingAccentColor && (t.accent_color = e.pendingAccentColor),
         void 0 !== e.pendingThemeColors && (t.theme_colors = e.pendingThemeColors),
-        void 0 !== e.pendingProfileEffectId &&
-            (t.profile_effect_id = null != e.pendingProfileEffectId ? e.pendingProfileEffectId : null),
+        void 0 !== e.pendingProfileEffect &&
+            (t.profile_effect_id = null != e.pendingProfileEffect ? e.pendingProfileEffect.id : null),
         t
     );
 }

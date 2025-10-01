@@ -1,6 +1,7 @@
 n.d(t, {
     Cf: () => p,
     Fq: () => l,
+    Fu: () => f,
     HP: () => s,
     I5: () => u,
     ID: () => h,
@@ -15,7 +16,6 @@ n.d(t, {
     iq: () => o,
     pG: () => O,
     sr: () => m,
-    xn: () => f,
     z5: () => g,
 }),
     n(415506);
@@ -116,8 +116,8 @@ function d(e) {
 }
 function f(e) {
     i.Z.dispatch({
-        type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID",
-        profileEffectId: e,
+        type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT",
+        profileEffect: e,
     });
 }
 function _(e) {

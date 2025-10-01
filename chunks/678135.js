@@ -18,7 +18,7 @@ var i = n(120356),
     E = n(981631),
     b = n(671955),
     y = n(388032),
-    O = n(448239);
+    O = n(670563);
 function v(e) {
     let {
             user: t,
@@ -34,9 +34,9 @@ function v(e) {
             pendingNickname: R,
             pendingGlobalName: P,
             pendingThemeColors: w,
-            pendingProfileEffectId: D,
-            pendingLegacyUsernameDisabled: x,
-            pendingDisplayNameStyles: L,
+            pendingProfileEffect: D,
+            pendingLegacyUsernameDisabled: L,
+            pendingDisplayNameStyles: x,
             avatarClassName: j,
             containerClassName: M,
             isTryItOutFlow: k = !1,
@@ -58,8 +58,8 @@ function v(e) {
             size: o.EFr.SIZE_80,
             showPending: !0,
         }),
-        q = (0, _.ZT)({
-            pendingProfileEffectId: D,
+        q = (0, _.IG)({
+            pendingProfileEffect: D,
             displayProfile: W,
         }),
         { theme: X, primaryColor: Q } = (0, c.Z)({
@@ -121,8 +121,8 @@ function v(e) {
                     pendingGlobalName: P,
                     pendingBio: S,
                     pendingPronouns: A,
-                    pendingLegacyUsernameDisabled: x,
-                    pendingDisplayNameStyles: L,
+                    pendingLegacyUsernameDisabled: L,
+                    pendingDisplayNameStyles: x,
                     isTryItOutFlow: k,
                     hideBioSection: B,
                     pendingBadges: F,
@@ -133,7 +133,7 @@ function v(e) {
                     hideMessageInput: Z,
                     hideExampleButton: H,
                 }),
-                null != q && (0, r.jsx)(s.Z, { profileEffectId: q }),
+                null != q && (0, r.jsx)(s.Z, { profileEffectId: q.id }),
             ],
         });
     return Y

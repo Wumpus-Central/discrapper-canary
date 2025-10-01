@@ -31,7 +31,7 @@ var i = n(647438),
     m = n(302800),
     P = n(215023),
     R = n(981631),
-    v = n(456003),
+    v = n(505855),
     _ = n(388032);
 let S = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null),
     C = (t) => {
@@ -173,7 +173,7 @@ let S = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                     if (e.type === u.Z.PROFILE_EFFECT) {
                         s()(t.type === u.Z.PROFILE_EFFECT, "product type and item type are the same"),
                             (0, f.H)({
-                                initialSelectedEffectId: t.id,
+                                initialSelectedEffect: t,
                                 analyticsLocations: i,
                             });
                         return;

@@ -20,26 +20,26 @@ function y(e) {
     let {
             user: t,
             guild: n,
-            className: a,
-            sectionTitle: y,
-            forcedDivider: O = !1,
-            withTutorial: v = !1,
-            showBorder: I = !1,
-            isTryItOutFlow: T = !1,
-            initialSelectedEffectId: S,
+            initialSelectedEffect: a,
+            className: y,
+            sectionTitle: O,
+            forcedDivider: v = !1,
+            withTutorial: I = !1,
+            showBorder: T = !1,
+            isTryItOutFlow: S = !1,
         } = e,
         A = (0, _.Kg)(t, n),
         C = f.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: N } = (0, c.ZP)(),
-        { pendingProfileEffectId: R, errors: P } = (0, _.bd)(n),
+        { pendingProfileEffect: R, errors: P } = (0, _.bd)(n),
         w = i.useCallback(
             () =>
                 (0, u.H)({
                     analyticsLocations: N,
-                    initialSelectedEffectId: S,
+                    initialSelectedEffect: a,
                     guild: n,
                 }),
-            [N, S, n],
+            [N, a, n],
         );
     i.useEffect(() => {
         C &&
@@ -49,26 +49,26 @@ function y(e) {
             });
     }, [C, N]);
     let D = null != n,
-        L = T || void 0 !== R ? null != R : null != A;
+        L = S || void 0 !== R ? null != R : null != A;
     function x() {
-        (0, _.s6)(null, A, null == n ? void 0 : n.id);
+        (0, _.UK)(null, A, null == n ? void 0 : n.id);
     }
-    let j = v ? l.gtL : s.zx;
+    let j = I ? l.gtL : s.zx;
     return (0, r.jsx)(p.Z, {
-        forcedDivider: O,
+        forcedDivider: v,
         borderType: h.Y.PREMIUM,
         hasBackground: !0,
-        title: y,
-        showBorder: I,
+        title: O,
+        showBorder: T,
         errors: P,
-        className: a,
+        className: y,
         children: (0, r.jsxs)("div", {
             className: b.buttonsContainer,
             children: [
                 (0, r.jsx)(j, {
                     size: s.zx.Sizes.SMALL,
                     onClick: w,
-                    className: o()({ [b.buttonHighlighted]: v }),
+                    className: o()({ [b.buttonHighlighted]: I }),
                     children: E.intl.string(E.t["/dRfCQ"]),
                 }),
                 L &&

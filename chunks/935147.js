@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(597688),
     f = n(1870),
     _ = n(884697),
-    p = n(175756),
+    p = n(443753),
     h = n(104494),
     m = n(639119),
     g = n(402567),
@@ -29,14 +29,14 @@ var r = n(951288),
     P = n(532432),
     w = n(504983),
     D = n(134795),
-    x = n(513901),
-    L = n(451392),
+    L = n(513901),
+    x = n(451392),
     j = n(490220),
     M = n(981631),
     k = n(474936),
     U = n(526761),
     G = n(388032),
-    B = n(553330);
+    B = n(805201);
 function Z(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function Z(e, t, n) {
         e
     );
 }
-function V(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function V(e) {
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +83,7 @@ function H(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,7 +91,7 @@ function H(e, t) {
 }
 function Y(e) {
     var t, n;
-    let { user: Z, isVisible: F, shouldShow: Y } = e,
+    let { user: Z, isVisible: V, shouldShow: Y } = e,
         W = C.ZP.isPremium(Z),
         {
             pendingAvatar: K,
@@ -99,12 +99,12 @@ function Y(e) {
             tryItOutThemeColors: q,
             tryItOutAvatar: X,
             tryItOutBanner: Q,
-            tryItOutProfileEffectId: J,
+            tryItOutProfileEffect: J,
             tryItOutAvatarDecoration: $,
         } = (0, a.cj)([S.Z], () => {
             let e = S.Z.getAllPending(),
                 t = S.Z.getErrors();
-            return H(V({}, e, S.Z.getAllTryItOut()), { errors: t });
+            return H(F({}, e, S.Z.getAllTryItOut()), { errors: t });
         }),
         ee = (0, p.Z)(J),
         { preset: et, onShuffle: en } = (0, g.Z)(),
@@ -127,13 +127,13 @@ function Y(e) {
             }
         };
     i.useEffect(() => {
-        F &&
+        V &&
             A.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: k.cd.PREMIUM_PROFILE_TRY_IT_OUT,
                 location: { page: M.ZY5.USER_SETTINGS },
                 location_stack: eo,
             });
-    }, [eo, Z, F]);
+    }, [eo, Z, V]);
     let el = (null == (n = (0, m.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === k.Si.TIER_2,
         ec = (0, h.Ng)(),
         eu = (0, h.Wp)(ec, k.Si.TIER_2),
@@ -190,7 +190,7 @@ function Y(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(L.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       className: B.customizationSection,
                                       user: Z,
                                       pendingAvatarSrc: (0, v.SD)({
@@ -228,11 +228,11 @@ function Y(e) {
                                       "decoration",
                                   ),
                                   (0, r.jsx)(
-                                      x.Z,
+                                      L.Z,
                                       {
                                           className: B.customizationSection,
                                           isTryItOutFlow: !0,
-                                          initialSelectedEffectId: ee,
+                                          initialSelectedEffect: ee,
                                           user: Z,
                                           sectionTitle: G.intl.string(G.t.wR5wOj),
                                       },
