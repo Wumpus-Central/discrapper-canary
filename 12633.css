@@ -1087,6 +1087,8 @@
 
 .scrollerBase_d125d2 {
     box-sizing: border-box;
+    container-name: scroller;
+    container-type: scroll-state;
     flex: 1 1 auto;
     min-height: 0;
     position: relative
@@ -17000,79 +17002,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     padding: var(--space-8) var(--space-12)
 }
 
-.listBox__8906b {
-    padding-right: var(--space-4)
-}
-
-.listBox__8906b,
-.scroller__8906b {
-    box-sizing: border-box
-}
-
-.scroller__8906b {
-    margin-right: calc(var(--space-4)*-1);
-    max-height: 100%;
-    overflow: auto !important
-}
-
-.listBoxInner__8906b {
-    box-sizing: border-box;
-    padding: var(--space-4);
-    padding-right: 0
-}
-
-.listBoxItem__8906b {
-    align-items: stretch;
-    background-color: transparent;
-    border-radius: var(--radius-xs);
-    box-sizing: border-box;
-    color: var(--text-primary);
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    min-height: 40px;
-    padding: var(--space-4);
-    transition: background-color .2s ease-out
-}
-
-.mouse-mode .listBoxItem__8906b:hover:not([aria-disabled]) {
-    background-color: var(--background-mod-normal)
-}
-
-.keyboard-mode .listBoxItem__8906b:focus,
-.keyboard-mode .listBoxItem__8906b[data-focus-visible] {
-    background-color: var(--background-mod-normal);
-    outline: 2px solid var(--focus-primary);
-    outline-offset: -2px
-}
-
-.listBoxItem__8906b[aria-disabled] {
-    background-color: transparent;
-    opacity: .5
-}
-
-.listBoxItemContent__8906b {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start
-}
-
-.listBoxItemLabel__8906b {
-    flex-grow: 1;
-    flex-shrink: 1
-}
-
-.selectedIcon__8906b {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.hiddenCheckIcon__8906b {
-    opacity: 0
-}
-
 .outerContainer_e44912 {
     align-items: center;
     container: outer-container/inline-size;
@@ -17610,6 +17539,200 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .enable-forced-colors .item__5a85a[data-disabled] .outerRadioFill__5a85a {
     fill: Canvas
+}
+
+.listBox__8906b {
+    box-sizing: border-box;
+    padding: var(--space-4)
+}
+
+@container scroller scroll-state(scrollable: y) {
+    .listBox__8906b {
+        padding-right: 0
+    }
+}
+
+.listBoxInner__8906b,
+.listBoxItem__8906b {
+    box-sizing: border-box
+}
+
+.listBoxItem__8906b {
+    align-items: stretch;
+    background-color: transparent;
+    border-radius: var(--radius-xs);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    transition: background-color .2s ease-out
+}
+
+.mouse-mode .listBoxItem__8906b:hover:not([aria-disabled]) {
+    background-color: var(--background-mod-normal)
+}
+
+.keyboard-mode .listBoxItem__8906b:focus,
+.keyboard-mode .listBoxItem__8906b[data-focus-visible] {
+    background-color: var(--background-mod-normal);
+    outline: 2px solid var(--focus-primary);
+    outline-offset: -2px
+}
+
+.listBoxItem__8906b[aria-disabled] {
+    background-color: transparent;
+    opacity: .5
+}
+
+.listBoxItemContent__8906b {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-primary);
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    min-height: 40px;
+    padding: var(--space-xxs) var(--space-4) var(--space-xxs) var(--space-8)
+}
+
+.listBoxItemLabel__8906b {
+    flex-grow: 1;
+    flex-shrink: 1
+}
+
+.selectedIcon__8906b {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: var(--space-xxs) var(--space-4) var(--space-xxs) 0
+}
+
+.hiddenCheckIcon__8906b {
+    opacity: 0
+}
+
+.dropdownContainer__9bcc7 {
+    padding-bottom: var(--space-8);
+    padding-top: var(--space-4)
+}
+
+.dropdown__9bcc7 {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px 0 var(--opacity-black-16);
+    height: 100%
+}
+
+.scroller__9bcc7 {
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto !important
+}
+
+.selectFieldContainer__5fa2f {
+    align-self: flex-start;
+    max-width: 100%
+}
+
+.selectFieldContainer__5fa2f.fullWidth__5fa2f {
+    align-self: unset
+}
+
+.selectField__5fa2f {
+    align-items: stretch;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr auto 36px;
+    grid-template-rows: 1fr;
+    width: 100%
+}
+
+.selectField__5fa2f:not(.isInert__5fa2f).isFocused__5fa2f,
+.selectField__5fa2f:not(.isInert__5fa2f):focus-within {
+    outline: 1px solid var(--custom-input-focus-border-color);
+    outline-offset: -2px
+}
+
+.selectButton__5fa2f {
+    background-color: transparent;
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 var(--space-4) 0 calc(var(--space-4) + 1px);
+    text-align: left
+}
+
+.isInert__5fa2f .selectButton__5fa2f {
+    cursor: not-allowed
+}
+
+.multipleValues__5fa2f,
+.placeholder__5fa2f {
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-height: 40px;
+    padding: var(--space-xxs) var(--space-4) var(--space-xxs) var(--space-8)
+}
+
+.placeholder__5fa2f {
+    color: var(--input-placeholder-text)
+}
+
+.multipleValues__5fa2f {
+    color: var(--text-primary)
+}
+
+.chevronButton__5fa2f {
+    align-items: center;
+    background-color: transparent;
+    color: var(--icon-primary);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    line-height: 0;
+    padding: 0 var(--space-4) 0 0;
+    width: 36px
+}
+
+.isInert__5fa2f .chevronButton__5fa2f {
+    cursor: not-allowed
+}
+
+.chevronIcon__5fa2f {
+    display: block;
+    height: 20px;
+    transform: rotate(0deg);
+    width: 20px
+}
+
+.chevronIcon__5fa2f.isOpen__5fa2f {
+    transform: rotate(180deg)
+}
+
+.full-motion .chevronIcon__5fa2f {
+    transition: transform .2s ease-out
+}
+
+.clearButton__5fa2f {
+    background-color: transparent;
+    color: var(--icon-secondary);
+    line-height: 0;
+    padding: 0 var(--space-4);
+    transition: color .2s ease-out
+}
+
+.clearButton__5fa2f:focus,
+.clearButton__5fa2f:hover {
+    color: var(--icon-primary)
+}
+
+.isInert__5fa2f .clearButton__5fa2f {
+    cursor: not-allowed
 }
 
 .variants_f72374 {
