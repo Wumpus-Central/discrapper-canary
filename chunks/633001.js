@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(13245),
     x = n(593472),
     f = n(393238),
-    g = n(600164),
-    b = n(594190),
+    b = n(600164),
+    g = n(594190),
     v = n(984370),
     j = n(427860),
     _ = n(837268),
@@ -43,7 +43,7 @@ var a = n(951288),
     V = n(388032),
     H = n(454741),
     W = n(451429);
-function q(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -68,7 +68,7 @@ function q(e) {
     }
     return e;
 }
-function K(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,8 +88,8 @@ function K(e, t) {
 }
 let Y = {
         [G.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            K(
-                q(
+            q(
+                K(
                     {
                         type: G.Odu.CLICK_ZONE_DEBUG,
                         id: (0, c.Z)(),
@@ -108,8 +108,8 @@ let Y = {
                 { pinned: !0 },
             ),
         [G.Odu.PERFORMANCE_DEBUG]: (e) =>
-            K(
-                q(
+            q(
+                K(
                     {
                         type: G.Odu.PERFORMANCE_DEBUG,
                         id: (0, c.Z)(),
@@ -160,9 +160,9 @@ function J(e) {
 }
 let $ = r.memo(function (e) {
         let { trackedGame: t } = e,
-            n = (0, d.e7)([b.ZP], () => b.ZP.getGameOrTransformedSubgameForPID(t.pid)),
+            n = (0, d.e7)([g.ZP], () => g.ZP.getGameOrTransformedSubgameForPID(t.pid)),
             r = (0, d.e7)([I.Z], () => I.Z.getGameForPID(t.pid)),
-            i = (0, d.e7)([b.ZP], () => (null == n ? null : b.ZP.getGameOverlayStatus(n)));
+            i = (0, d.e7)([g.ZP], () => (null == n ? null : g.ZP.getGameOverlayStatus(n)));
         return (0, a.jsxs)("div", {
             className: H.panelGroup,
             children: [
@@ -402,7 +402,7 @@ function ee(e) {
 }
 function et(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t ? "".concat(e.toFixed(2), "ms") : new Date(e).toLocaleTimeString();
+    return t ? "".concat(e.toFixed(2), "ms") : (0, R.vc)(o()(e), "h:mm:ss.SSS");
 }
 let en = r.memo(function (e) {
     var { pid: t } = e,
@@ -435,7 +435,7 @@ let en = r.memo(function (e) {
     }, [t]);
     return (0, a.jsx)(
         m.Text,
-        K(q({}, n), {
+        q(K({}, n), {
             variant: "text-md/semibold",
             color: "text-primary",
             children: r,
@@ -444,7 +444,7 @@ let en = r.memo(function (e) {
 });
 function ea() {
     let e = (0, d.e7)([E.ZP], () => E.ZP.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
-        t = (0, d.Wu)([y.default], () => y.default.getDevToolsFocusedPidsWithTimestamp(), []);
+        t = (0, d.Wu)([y.default], () => y.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: H.panelGroup,
         children: [
@@ -499,7 +499,7 @@ function ea() {
                                         var r;
                                         return (0, a.jsx)(
                                             "div",
-                                            K(q({}, e), {
+                                            q(K({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
                                                     color: i === _.d5.TRACK_FOCUS ? "text-default" : "text-danger",
@@ -511,7 +511,7 @@ function ea() {
                                                         " - ",
                                                         null != (r = null == n ? void 0 : n.toString()) ? r : "null",
                                                         " @ ",
-                                                        et(t, !0),
+                                                        et(t),
                                                     ],
                                                 }),
                                             }),
@@ -529,12 +529,12 @@ function ea() {
 }
 let er = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.e7)([y.default, b.ZP], () => {
+            n = (0, d.e7)([y.default, g.ZP], () => {
                 var e, n;
                 if (null == t) return null;
                 let a = null == (e = y.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
                 if (null != a) return a;
-                let r = b.ZP.getGameOrTransformedSubgameForPID(t);
+                let r = g.ZP.getGameOrTransformedSubgameForPID(t);
                 return null != (n = null == r ? void 0 : r.fullscreenType) ? n : x.Jx.UNKNOWN;
             }, [t]);
         return (0, a.jsxs)(m.Text, {
@@ -552,7 +552,7 @@ let er = r.memo(function (e) {
             r.useEffect(
                 () => (
                     (i.current = setInterval(async () => {
-                        let e = b.ZP.getRunningGames(),
+                        let e = g.ZP.getRunningGames(),
                             t = [],
                             a = Date.now();
                         for (let n of e) t.push((0, C.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
@@ -578,7 +578,7 @@ let er = r.memo(function (e) {
                                         e
                                     );
                                 },
-                                q({}, e),
+                                K({}, e),
                             ),
                         );
                     }, +A.Z.Millis.SECOND)),
@@ -592,7 +592,7 @@ let er = r.memo(function (e) {
                 children: (n) =>
                     (0, a.jsx)(
                         "div",
-                        K(q({}, n), {
+                        q(K({}, n), {
                             children: (0, a.jsxs)(m.zJl, {
                                 className: l()(H.panelGroup, H.scroller),
                                 children: [
@@ -707,11 +707,11 @@ let er = r.memo(function (e) {
             f = (e) => {
                 h.Z.setRenderDebugMode(!E.ZP.hasRenderDebugMode(e), e);
             },
-            [g, b] = r.useState({});
+            [b, g] = r.useState({});
         return (
             r.useEffect(() => {
                 let e = setInterval(() => {
-                    b({});
+                    g({});
                 }, 200);
                 return () => clearInterval(e);
             }, []),
@@ -724,7 +724,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: l,
                                         onChange: () => void f(_.GO.ClickZones),
@@ -747,7 +747,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: s,
                                         onChange: () => void f(_.GO.WidgetAreas),
@@ -770,7 +770,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: o,
                                         onChange: () => void f(_.GO.WindowContainer),
@@ -793,7 +793,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: c,
                                         onChange: () => void f(_.GO.DisabledGPUBoost),
@@ -816,7 +816,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: p,
                                         onChange: () => void f(_.GO.ForceGPUBoost),
@@ -840,7 +840,7 @@ let er = r.memo(function (e) {
                         children: (n) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, n), {
+                                q(K({}, n), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: null != e,
                                         onChange: () => t(),
@@ -863,7 +863,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: null != n,
                                         onChange: () => i(),
@@ -899,7 +899,7 @@ let er = r.memo(function (e) {
     }),
     eo = r.memo(function () {
         let e = (0, d.cj)([y.default], () => y.default.getTrackedGames()),
-            t = (0, d.e7)([b.ZP], () => b.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
+            t = (0, d.e7)([g.ZP], () => g.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 t.length > 0 &&
@@ -909,7 +909,7 @@ let er = r.memo(function (e) {
                         children: (e) =>
                             (0, a.jsx)(
                                 "div",
-                                K(q({}, e), {
+                                q(K({}, e), {
                                     children: (0, a.jsxs)("div", {
                                         className: H.panelGroup,
                                         children: [
@@ -948,7 +948,7 @@ let er = r.memo(function (e) {
                     children: (t) =>
                         (0, a.jsx)(
                             "div",
-                            K(q({}, t), {
+                            q(K({}, t), {
                                 children: (0, a.jsxs)("div", {
                                     className: H.panelGroup,
                                     children: [
@@ -990,14 +990,14 @@ let er = r.memo(function (e) {
                     label: _.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                     value: _.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
-            ].map((t) => K(q({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
+            ].map((t) => q(K({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.ua7, {
             position: "left",
             text: "Override the overlay render mode",
             children: (e) =>
                 (0, a.jsx)(
                     "div",
-                    K(q({}, e), {
+                    q(K({}, e), {
                         className: H.panelGroup,
                         children: (0, a.jsx)(m.PhF, {
                             serialize: (e) => e,
@@ -1018,8 +1018,8 @@ function ed(e) {
     }
     return (0, a.jsxs)(
         m.Y0X,
-        K(
-            q(
+        q(
+            K(
                 {
                     size: m.CgR.LARGE,
                     "aria-label": "Breadcrumb Import",
@@ -1031,8 +1031,8 @@ function ed(e) {
                 parentComponent: "BreadcrumbImportPanel",
                 children: [
                     (0, a.jsxs)(m.xBx, {
-                        align: g.Z.Align.CENTER,
-                        justify: g.Z.Justify.BETWEEN,
+                        align: b.Z.Align.CENTER,
+                        justify: b.Z.Justify.BETWEEN,
                         children: [
                             (0, a.jsx)(m.Text, {
                                 variant: "text-md/bold",
@@ -1086,6 +1086,10 @@ let eu = {
         label: "Render",
         filter: (e) => e.type === j.C7.Renderer,
     },
+    flux: {
+        label: "Flux",
+        filter: (e) => e.type === j.C7.Flux,
+    },
     client: {
         label: "Client",
         filter: (e) => e.type === j.C7.OOPModule || e.type === j.C7.LegacyModule,
@@ -1099,6 +1103,8 @@ function em(e) {
             return "var(--yellow-500)";
         case j.C7.NativeOOP:
             return "var(--green-500)";
+        case j.C7.Flux:
+            return "var(--brand-400)";
         case j.C7.Renderer:
             return "var(--brand-500)";
         case j.C7.LegacyModule:
@@ -1175,6 +1181,7 @@ function eh(e) {
         case j.C7.NativeOOP:
             return m.ljO;
         case j.C7.Renderer:
+        case j.C7.Flux:
             return m.n6r;
         case j.C7.LegacyModule:
             return m.pzj;
@@ -1188,18 +1195,18 @@ function ex(e) {
     return JSON.stringify(e, (e, t) => (void 0 === t ? null : t), 2);
 }
 let ef = ["__webpack_require__", "fn"],
-    eg = ["web.js", "web.js.map"],
-    eb = [
+    eb = ["web.js", "web.js.map"],
+    eg = [
         {
             id: "details",
             name: "Details",
             group: B.v0.NONE,
             render: (e) => {
-                var t, n;
-                let { breadcrumb: r, onClose: i } = e,
-                    { name: s, type: c, logType: d, nativeId: u, stack: p, data: h, timestamp: x } = r,
-                    f = o()(x),
-                    g = eh(c);
+                var t, n, r, i;
+                let { breadcrumb: s, onClose: c } = e,
+                    { name: d, type: u, logType: p, nativeId: h, stack: x, data: f, timestamp: b, pid: g } = s,
+                    j = o()(b),
+                    _ = eh(u);
                 return (0, a.jsxs)(m.w0Z, {
                     className: H.subPanelScroller,
                     children: [
@@ -1207,9 +1214,9 @@ let ef = ["__webpack_require__", "fn"],
                             className: l()(W.headerBar, H.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)("div", {
-                                    style: { color: em(c, d) },
+                                    style: { color: em(u, p) },
                                     className: H.headerIcon,
-                                    children: (0, a.jsx)(g, {
+                                    children: (0, a.jsx)(_, {
                                         color: "currentColor",
                                         size: "sm",
                                     }),
@@ -1217,14 +1224,14 @@ let ef = ["__webpack_require__", "fn"],
                                 (0, a.jsxs)(v.Z.Title, {
                                     wrapperClassName: H.headerTitle,
                                     children: [
-                                        s,
+                                        d,
                                         " (",
-                                        c,
+                                        u,
                                         ")",
                                         (0, a.jsx)(m.P3F, {
                                             tag: "span",
                                             className: H.copyEventButton,
-                                            onClick: () => (0, w.JG)(s),
+                                            onClick: () => (0, w.JG)(d),
                                             children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -1236,13 +1243,13 @@ let ef = ["__webpack_require__", "fn"],
                                     icon: m.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, w.JG)(ex(r));
+                                        (0, w.JG)(ex(s));
                                     },
                                 }),
                                 (0, a.jsx)(v.Z.Icon, {
                                     icon: m.k$p,
                                     tooltip: "Close",
-                                    onClick: i,
+                                    onClick: c,
                                 }),
                             ],
                         }),
@@ -1251,70 +1258,78 @@ let ef = ["__webpack_require__", "fn"],
                             children: [
                                 (0, a.jsx)(M.Z9, {
                                     name: "Timestamp",
-                                    copyValue: f.toISOString(),
+                                    copyValue: j.toISOString(),
                                     children: (0, a.jsx)("time", {
-                                        dateTime: f.toISOString(),
-                                        title: (0, R.vc)(f, "LLLL"),
-                                        children: (0, R.vc)(f, "L h:mm:ss.SSS"),
+                                        dateTime: j.toISOString(),
+                                        title: (0, R.vc)(j, "LLLL"),
+                                        children: (0, R.vc)(j, "L h:mm:ss.SSS"),
                                     }),
                                 }),
                                 (0, a.jsx)(M.Z9, {
                                     name: "Log Type",
-                                    copyValue: d,
-                                    children: (0, a.jsx)("code", { children: d }),
+                                    copyValue: p,
+                                    children: (0, a.jsx)("code", { children: p }),
+                                }),
+                                (0, a.jsx)(M.Z9, {
+                                    name: "PID",
+                                    copyValue: null != (t = null == g ? void 0 : g.toString()) ? t : "null",
+                                    children: (0, a.jsx)("code", {
+                                        children: null != (n = null == g ? void 0 : g.toString()) ? n : "null",
+                                    }),
                                 }),
                                 (0, a.jsx)(M.Z9, {
                                     name: "Native ID",
-                                    copyValue: null != (t = null == u ? void 0 : u.toString()) ? t : "null",
+                                    copyValue: null != (r = null == h ? void 0 : h.toString()) ? r : "null",
                                     children: (0, a.jsx)("code", {
-                                        children: null != (n = null == u ? void 0 : u.toString()) ? n : "null",
+                                        children: null != (i = null == h ? void 0 : h.toString()) ? i : "null",
                                     }),
                                 }),
                                 (0, a.jsx)(M.Z9, {
                                     name: "Data",
-                                    copyValue: ex(h),
-                                    children: (0, a.jsx)("code", { children: ex(h) }),
+                                    copyValue: ex(f),
+                                    children: (0, a.jsx)("code", { children: ex(f) }),
                                 }),
-                                (0, a.jsx)(M.Z9, {
-                                    name: "Stack Trace",
-                                    copyValue: p,
-                                    children: (0, a.jsx)("code", {
-                                        children: p.split("\n").map((e, t) => {
-                                            let n = e.match(/at (.*) \((.*):(\d+):(\d+)\)/);
-                                            if (null != n) {
-                                                let [, e, r, i, l] = n,
-                                                    s = r.split(/[\\/]/).pop();
-                                                return ef.includes(e.trim())
-                                                    ? null
-                                                    : (0, a.jsxs)(
-                                                          "div",
-                                                          {
-                                                              children: [
-                                                                  (0, a.jsx)("span", {
-                                                                      className: H.stackTraceFunction,
-                                                                      children: e.trim(),
-                                                                  }),
-                                                                  !eg.includes(null != s ? s : "") &&
-                                                                      (0, a.jsxs)(a.Fragment, {
-                                                                          children: [
-                                                                              " (",
-                                                                              (0, a.jsxs)("span", {
-                                                                                  className: H.stackTraceLocation,
-                                                                                  title: r,
-                                                                                  children: [s, ":", i, ":", l],
-                                                                              }),
-                                                                              ")",
-                                                                          ],
+                                null != x &&
+                                    (0, a.jsx)(M.Z9, {
+                                        name: "Stack Trace",
+                                        copyValue: x,
+                                        children: (0, a.jsx)("code", {
+                                            children: x.split("\n").map((e, t) => {
+                                                let n = e.match(/at (.*) \((.*):(\d+):(\d+)\)/);
+                                                if (null != n) {
+                                                    let [, e, r, i, l] = n,
+                                                        s = r.split(/[\\/]/).pop();
+                                                    return ef.includes(e.trim())
+                                                        ? null
+                                                        : (0, a.jsxs)(
+                                                              "div",
+                                                              {
+                                                                  children: [
+                                                                      (0, a.jsx)("span", {
+                                                                          className: H.stackTraceFunction,
+                                                                          children: e.trim(),
                                                                       }),
-                                                              ],
-                                                          },
-                                                          t,
-                                                      );
-                                            }
-                                            return (0, a.jsx)("div", { children: e }, t);
+                                                                      !eb.includes(null != s ? s : "") &&
+                                                                          (0, a.jsxs)(a.Fragment, {
+                                                                              children: [
+                                                                                  " (",
+                                                                                  (0, a.jsxs)("span", {
+                                                                                      className: H.stackTraceLocation,
+                                                                                      title: r,
+                                                                                      children: [s, ":", i, ":", l],
+                                                                                  }),
+                                                                                  ")",
+                                                                              ],
+                                                                          }),
+                                                                  ],
+                                                              },
+                                                              t,
+                                                          );
+                                                }
+                                                return (0, a.jsx)("div", { children: e }, t);
+                                            }),
                                         }),
                                     }),
-                                }),
                             ],
                         }),
                     ],
@@ -1325,8 +1340,9 @@ let ef = ["__webpack_require__", "fn"],
     ev = {
         searchType: S.S.REGEX,
         searchStringGenerator: (e) => {
-            let { name: t, type: n, stack: a, data: r } = e;
-            return [t, n, a, JSON.stringify(r)];
+            let { name: t, type: n, stack: a, data: r } = e,
+                i = [t, n, JSON.stringify(r)];
+            return null != a && i.push(a), i;
         },
         throttleMs: 100,
     };
@@ -1336,7 +1352,7 @@ function ej() {
         [i, s] = r.useState(n),
         [o, c] = r.useState(!1),
         [p, x] = r.useState(null),
-        [g, b] = r.useState(Object.keys(eu)),
+        [b, g] = r.useState(Object.keys(eu)),
         [v, j] = (0, d.e7)([E.ZP], () => E.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], Z.Q),
         [_, y] = r.useState(null),
         C = null != _ ? _ : v,
@@ -1354,13 +1370,13 @@ function ej() {
                     ? []
                     : C.filter((e) => {
                           if (o && null != p && e.timestamp < p) return !1;
-                          for (let t of g) {
+                          for (let t of b) {
                               let { filter: n } = eu[t];
                               if (n(e)) return !0;
                           }
                           return !1;
                       }),
-            [C, g, p, o, N],
+            [C, b, p, o, N],
         ),
         [I, k] = r.useState(P),
         [R, A] = r.useState(null),
@@ -1368,16 +1384,16 @@ function ej() {
         L = r.useCallback((e) => {
             k(e);
         }, []),
-        { renderSelectedTab: M } = (0, B.ZP)({ tabs: eb }, []);
+        { renderSelectedTab: M } = (0, B.ZP)({ tabs: eg }, []);
     (0, T.BO)(S, P, L, ev, [C]);
     let G = r.useCallback((e) => {
             s(e), h.Z.setModuleLogging(e);
         }, []),
         [z, V] = r.useState(!1),
         W = r.useRef(null),
-        q = r.useCallback(() => {
-            (0, w.JG)(JSON.stringify(C)), V(!0);
-        }, [C]);
+        K = r.useCallback(() => {
+            (0, w.JG)(JSON.stringify(P)), V(!0);
+        }, [P]);
     r.useEffect(() => {
         if (z)
             return (
@@ -1389,7 +1405,7 @@ function ej() {
                 }
             );
     }, [z]);
-    let K = r.useCallback((e) => {
+    let q = r.useCallback((e) => {
             y(null != e ? JSON.parse(e) : null);
         }, []),
         Y = r.useCallback(
@@ -1400,14 +1416,14 @@ function ej() {
                         (0, a.jsx)(ed, {
                             modalProps: e,
                             onClose: (t) => {
-                                K(t), e.onClose();
+                                q(t), e.onClose();
                             },
                         }),
                     { modalKey: "breadcrumb-import-panel" },
                     m.z1l,
                 );
             },
-            [K],
+            [q],
         );
     return (0, a.jsxs)("div", {
         ref: e,
@@ -1451,7 +1467,7 @@ function ej() {
                             }),
                             (0, a.jsxs)(m.P3F, {
                                 className: H.copyAll,
-                                onClick: q,
+                                onClick: K,
                                 children: [
                                     (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
@@ -1487,9 +1503,9 @@ function ej() {
                             return (0, a.jsx)(
                                 m.P3F,
                                 {
-                                    className: l()(H.filter, g.includes(t) && H.activeFilter),
+                                    className: l()(H.filter, b.includes(t) && H.activeFilter),
                                     onClick: () => {
-                                        b((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                        g((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",

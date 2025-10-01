@@ -27,6 +27,7 @@ var o = (function (e) {
             (e.NativeLegacy = "native_legacy"),
             (e.OOPModule = "oop_module"),
             (e.LegacyModule = "legacy_module"),
+            (e.Flux = "flux"),
             (e.Renderer = "renderer"),
             e
         );
@@ -95,23 +96,22 @@ class m {
         return this.addBreadcrumb(i);
     }
     addModuleBreadcrumb(e, t, n, r) {
-        var i;
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
-            o = h(),
-            s = _(o),
-            l = {
-                id: s,
-                key: s,
+        let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "info",
+            a = h(),
+            o = _(a),
+            s = {
+                id: o,
+                key: o,
                 nativeId: null,
-                timestamp: o,
+                timestamp: a,
                 name: e,
                 data: t,
                 type: n,
                 pid: r,
-                logType: a,
-                stack: null != (i = Error().stack) ? i : "",
+                logType: i,
+                stack: void 0,
             };
-        return this.addBreadcrumb(l);
+        return this.addBreadcrumb(s);
     }
     getBreadcrumbs(e) {
         return [this.breadcrumbs.values(e, !0), this.breadcrumbs.version];
