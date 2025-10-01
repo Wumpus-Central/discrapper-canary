@@ -18,7 +18,7 @@ var r = n(951288),
     O = n(981631),
     E = n(474936),
     y = n(388032),
-    v = n(232644);
+    v = n(988388);
 function I(e) {
     let { item: t, profileOwner: n, wishlistId: I, isOwner: S } = e,
         C = i.useRef(null),
@@ -61,7 +61,7 @@ function I(e) {
                                     return (0, r.jsx)("div", {
                                         className: v.profileEffectPreview,
                                         children: (0, r.jsx)(f.Z, {
-                                            profileEffectId: N.id,
+                                            skuId: N.skuId,
                                             isHovering: T,
                                             isPurchased: !1,
                                             removeSetHeight: !0,

@@ -30,6 +30,6 @@ let s = (e) => {
         }, [t.effects, n, s]);
     return (0, a.jsx)(l.n, {
         profileEffectConfig: o,
-        profileEffectId: "debug",
+        skuId: "debug",
     });
 };

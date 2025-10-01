@@ -119,7 +119,7 @@ let y = (0, a.U)((e) => ({
         previewEnabled: !1,
         collectionAssets: {},
         avatarDecorationAssets: {},
-        previewProfileEffectId: null,
+        previewProfileEffectSkuId: null,
         previewAvatarDecorationId: null,
         setPreviewEnabled: (t) => e({ previewEnabled: t }),
         upsertCollectionAsset: (t, n) =>
@@ -204,16 +204,16 @@ let y = (0, a.U)((e) => ({
                             collectionAssets: {},
                             avatarDecorationAssets: {},
                             previewEnabled: !1,
-                            previewProfileEffectId: null,
+                            previewProfileEffectSkuId: null,
                             previewAvatarDecorationId: null,
                         }
                     ),
                 );
             }),
-        setPreviewProfileEffectId: (t) =>
+        setPreviewProfileEffectSkuId: (t) =>
             (0, s.j)(() =>
                 e({
-                    previewProfileEffectId: t,
+                    previewProfileEffectSkuId: t,
                     previewEnabled: null != t,
                 }),
             ),
@@ -242,7 +242,7 @@ let y = (0, a.U)((e) => ({
             return t.previewEnabled ? (null == (n = t.collectionAssets[e]) ? void 0 : n.src) : null;
         }),
     I = (e) => {
-        let { previewEnabled: t, previewProfileEffectId: n } = y(),
+        let { previewEnabled: t, previewProfileEffectSkuId: n } = y(),
             a = t ? n : null,
             o = (0, l.mr)(a);
         return r.useMemo(() => {

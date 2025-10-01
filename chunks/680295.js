@@ -20,7 +20,7 @@ var r = n(951288),
     g = n(142145),
     E = n(710867),
     b = n(312904),
-    y = n(107225);
+    y = n(341225);
 function O(e, t, n) {
     return (
         t in e
@@ -72,8 +72,8 @@ let I = (e) => {
             { accessibilityLabel: P } = E,
             [w, D] = i.useState(-v),
             {
-                stop: x,
-                reset: L,
+                stop: L,
+                reset: x,
                 ticking: j,
             } = (0, p.Z)((e) => {
                 D((t) => t + e);
@@ -98,14 +98,14 @@ let I = (e) => {
         let [k, U] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === u || l || (x(), D(0)),
-                    !l && k && j.current && (x(), D(0)),
+                !0 === u || l || (L(), D(0)),
+                    !l && k && j.current && (L(), D(0)),
                     a &&
                         l &&
                         !j.current &&
-                        (L(),
+                        (x(),
                         E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? D(d === _.Q.FromStart ? 0 : A) : D(0));
-            }, [l, k, A, a, x, L, j, E.animationType, u, d]),
+            }, [l, k, A, a, L, x, j, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),
@@ -189,7 +189,7 @@ let I = (e) => {
         let t = (0, d.n)(),
             n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             [a, o] = i.useState(!1),
-            f = (0, h.V)(e.profileEffectId),
+            f = (0, h.V)(e.skuId),
             _ = (0, u.ex)(null == f ? void 0 : f.config),
             p = (0, m.C)(null == f ? void 0 : f.config),
             g = null != _ ? _ : p;

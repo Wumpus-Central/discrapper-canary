@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => D }), r(388685), r(314940);
+r.r(t), r.d(t, { default: () => I }), r(388685), r(314940);
 var a = r(951288),
     n = r(647438),
     i = r(512722),
@@ -18,7 +18,7 @@ var a = r(951288),
     w = r(22267),
     y = r(302800),
     b = r(388032),
-    _ = r(186175),
+    _ = r(793000),
     j = r(593639),
     O = r(945182),
     E = r(234286);
@@ -62,7 +62,7 @@ let x = (e) => {
                     className: _.profileEffectShopPreview,
                     children: (0, a.jsx)(v.Z, {
                         forCollectedModal: !0,
-                        profileEffectId: i.id,
+                        skuId: i.skuId,
                     }),
                 }),
             )
@@ -180,7 +180,7 @@ let x = (e) => {
             ],
         });
     };
-function D(e) {
+function I(e) {
     var t, r;
     let n = (0, y.v)(e.product.categorySkuId);
     return null != n

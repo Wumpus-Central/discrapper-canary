@@ -25,18 +25,18 @@ let u = {},
     p = 0,
     h = 0,
     m = (e) => Math.min(d * 2 ** e, f),
-    g = (e) => !(0, i.isEqual)(u[e.id], e) && ((u[e.id] = e), !0),
+    g = (e, t) => !(0, i.isEqual)(u[e], t) && ((u[e] = t), !0),
     E = (e) => {
         let t = !1;
         return (
             e.items.forEach((n) => {
-                (0, s.H)(n) &&
-                    g({
-                        id: n.id,
-                        skuId: e.skuId,
-                        config: n,
-                    }) &&
-                    (t = !0);
+                if (!(0, s.H)(n)) return;
+                let r = {
+                    id: n.id,
+                    skuId: e.skuId,
+                    config: n,
+                };
+                g(e.skuId, r) && (t = !0);
             }),
             t
         );
@@ -67,7 +67,7 @@ let u = {},
     v = (e) => {
         let { configs: t } = e;
         t.forEach((e) => {
-            g({
+            g(e.skuId, {
                 id: e.id,
                 skuId: e.skuId,
                 config: e,
@@ -111,7 +111,7 @@ class w extends (r = a.ZP.Store) {
     getAllProfileEffects() {
         return Object.values(u);
     }
-    getProfileEffectById(e) {
+    getProfileEffect(e) {
         return null != e ? u[e] : void 0;
     }
     get isFetchingAll() {

@@ -1,24 +1,24 @@
-i.d(e, { Z: () => v });
-var n = i(951288);
-i(647438);
-var r = i(979554),
-    l = i(442837),
-    s = i(481060),
-    a = i(1585),
-    o = i(125988),
-    u = i(479446),
-    c = i(981632),
-    d = i(876917),
-    f = i(594174),
-    p = i(597688),
-    m = i(22267),
-    h = i(948067);
+n.d(e, { Z: () => v });
+var i = n(951288);
+n(647438);
+var r = n(979554),
+    l = n(442837),
+    s = n(481060),
+    a = n(1585),
+    o = n(125988),
+    u = n(479446),
+    c = n(981632),
+    d = n(876917),
+    p = n(594174),
+    f = n(597688),
+    m = n(22267),
+    h = n(799940);
 let g = s.EFr.SIZE_152,
     y = (0, a.y9)(g),
-    b = (t) => {
-        var e, i;
+    O = (t) => {
+        var e, n;
         let { item: r } = t,
-            a = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+            a = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
             {
                 avatarDecorationSrc: u,
                 avatarPlaceholderSrc: c,
@@ -28,36 +28,36 @@ let g = s.EFr.SIZE_152,
                 avatarDecorationOverride: r,
                 size: y,
             });
-        return (0, n.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: h.avatarDecorationPreview,
-            children: (0, n.jsx)(
+            children: (0, i.jsx)(
                 s.qEK,
                 ((e = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
-                        var i = null != arguments[e] ? arguments[e] : {},
-                            n = Object.keys(i);
+                        var n = null != arguments[e] ? arguments[e] : {},
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(i).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                            (i = i.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                 }),
                             )),
-                            n.forEach(function (e) {
-                                var n;
-                                (n = i[e]),
+                            i.forEach(function (e) {
+                                var i;
+                                (i = n[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
-                                              value: n,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (t[e] = n);
+                                        : (t[e] = i);
                             });
                     }
                     return t;
                 })({}, d)),
-                (i = i =
+                (n = n =
                     {
                         "aria-label": r.label,
                         src: c,
@@ -65,36 +65,36 @@ let g = s.EFr.SIZE_152,
                         size: g,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                     : (function (t, e) {
-                          var i = Object.keys(t);
+                          var n = Object.keys(t);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(t);
-                              i.push.apply(i, n);
+                              var i = Object.getOwnPropertySymbols(t);
+                              n.push.apply(n, i);
                           }
-                          return i;
-                      })(Object(i)).forEach(function (t) {
-                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
+                          return n;
+                      })(Object(n)).forEach(function (t) {
+                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                       }),
                 e),
             ),
         });
     },
-    O = (t) => {
+    b = (t) => {
         let { item: e } = t;
-        return (0, n.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: h.profileEffectPreview,
-            children: (0, n.jsx)(d.Z, {
+            children: (0, i.jsx)(d.Z, {
                 isHovering: !0,
-                profileEffectId: null == e ? void 0 : e.id,
+                skuId: null == e ? void 0 : e.skuId,
             }),
         });
     },
-    P = (t) => {
+    j = (t) => {
         let { item: e } = t;
-        return (0, n.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: h.nameplatePreview,
-            children: (0, n.jsx)(m.Z, {
+            children: (0, i.jsx)(m.Z, {
                 nameplate: e,
                 className: h.nameplate,
                 nameplatePreviewSize: "xlarge",
@@ -105,18 +105,18 @@ let g = s.EFr.SIZE_152,
     },
     v = (t) => {
         let { giftCode: e } = t,
-            i = (0, l.e7)([p.Z], () => p.Z.getProduct(e.skuId)),
-            s = null == i ? void 0 : i.items[0];
+            n = (0, l.e7)([f.Z], () => f.Z.getProduct(e.skuId)),
+            s = null == n ? void 0 : n.items[0];
         switch (null == s ? void 0 : s.type) {
             case r.Z.AVATAR_DECORATION:
-                return (0, n.jsx)(b, { item: s });
+                return (0, i.jsx)(O, { item: s });
             case r.Z.PROFILE_EFFECT:
-                return (0, n.jsx)(O, { item: s });
+                return (0, i.jsx)(b, { item: s });
             case r.Z.NAMEPLATE:
-                return (0, n.jsx)(P, { item: s });
+                return (0, i.jsx)(j, { item: s });
             default:
                 return null != e.giftStyle
-                    ? (0, n.jsx)(c.Z, {
+                    ? (0, i.jsx)(c.Z, {
                           defaultAnimationState: u.SR.ACTION,
                           idleAnimationState: u.SR.LOOP,
                           className: h.giftAnimation,

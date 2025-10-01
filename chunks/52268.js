@@ -91,7 +91,7 @@ let y = () => 80,
         var t,
             { profileEffect: n, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
             u = b(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
-        let p = (0, d.V)(n.id),
+        let p = (0, d.V)(n.skuId),
             y = i.useRef(null),
             {
                 accessibilityLabel: j,

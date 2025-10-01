@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
+n.d(t, { Z: () => g }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -8,24 +8,23 @@ var a = n(951288),
     c = n(481060),
     d = n(53281),
     u = n(281598),
-    m = n(365943),
-    p = n(25251),
-    h = n(373071),
-    x = n(782691),
-    f = n(664046);
-let b = "Make sure you're only uploading text files!",
-    g = (e) => {
+    m = n(25251),
+    p = n(373071),
+    h = n(782691),
+    x = n(664046);
+let f = "Make sure you're only uploading text files!",
+    b = (e) => {
         var t, n, r;
         let { effect: i, onClick: l } = e,
-            { deleteConfig: s } = (0, h.n6)();
+            { deleteConfig: s } = (0, p.n6)();
         return (0, a.jsxs)(c.P3F, {
-            className: f.previewCard,
+            className: x.previewCard,
             onClick: () => {
                 l(i);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: f.previewCardImage,
+                    className: x.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
                             null == (r = i.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64,
@@ -34,7 +33,7 @@ let b = "Make sure you're only uploading text files!",
                     },
                 }),
                 (0, a.jsxs)("div", {
-                    className: f.previewCardFooter,
+                    className: x.previewCardFooter,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
@@ -44,7 +43,7 @@ let b = "Make sure you're only uploading text files!",
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), s(i.id);
+                                e.preventDefault(), e.stopPropagation(), s(i.skuId);
                             },
                         }),
                     ],
@@ -52,84 +51,81 @@ let b = "Make sure you're only uploading text files!",
             ],
         });
     };
-function v() {
-    let { profileEffects: e, upsertConfig: t } = (0, h.n6)(),
+function g() {
+    let { profileEffects: e, upsertConfig: t } = (0, p.n6)(),
         [n, i] = r.useState(),
-        v = r.useRef(null),
-        j = (0, o.Wu)([p.Z], () => p.Z.getAllProfileEffects()),
-        [_, y] = r.useState("");
-    r.useEffect(() => {
-        (0, m.t)();
-    }, []);
-    let C = r.useMemo(
+        g = r.useRef(null),
+        v = (0, o.Wu)([m.Z], () => m.Z.getAllProfileEffects()),
+        [j, _] = r.useState(""),
+        y = r.useMemo(
             () =>
-                "" === _
-                    ? j
-                    : j.filter((e) => {
-                          let t = _.toLowerCase();
+                "" === j
+                    ? v
+                    : v.filter((e) => {
+                          let t = j.toLowerCase();
                           return (
                               e.config.title.toLowerCase().includes(t) || e.config.description.toLowerCase().includes(t)
                           );
                       }),
-            [_, j],
+            [j, v],
         ),
-        E = r.useCallback(
+        C = r.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, u.Eo)(b);
+                if (null == n || !e.type.startsWith("text/")) return (0, u.Eo)(f);
                 let [a, r] = n.split(",");
-                if (!a.includes("text/plain")) return (0, u.Eo)(b);
+                if (!a.includes("text/plain")) return (0, u.Eo)(f);
                 let i = JSON.parse(atob(r));
-                (i.id = (0, s.Z)()), t(i), (0, u.XA)("Profile Effect (maybe??) imported!");
+                (i.skuId = (0, s.Z)()), t(i), (0, u.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        N = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, u.Eo)("Error uploading file. Try again!");
-                (0, u.Kr)(e.currentTarget.files, E, u.Eo);
+                (0, u.Kr)(e.currentTarget.files, C, u.Eo);
             },
-            [E],
+            [C],
         );
     return (0, a.jsxs)("div", {
-        className: f.root,
+        className: x.root,
         children: [
             null == n &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: f.col,
+                            className: x.col,
                             children: [
                                 (0, a.jsx)("div", {
-                                    className: f.section,
+                                    className: x.section,
                                     children: (0, a.jsx)(c.X6q, {
                                         variant: "heading-xl/bold",
                                         children: "Custom Profile Effects",
                                     }),
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.customEffectsGrid,
+                                    className: x.customEffectsGrid,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
-                                            g,
+                                            b,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
                                                     i(e);
                                                 },
                                             },
-                                            e.id,
+                                            e.skuId,
                                         ),
                                     ),
                                 }),
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(f.row, f.end, f.section),
+                            className: l()(x.row, x.end, x.section),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: f.uploadButton,
+                                    className: x.uploadButton,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: "text-md/normal",
@@ -137,8 +133,8 @@ function v() {
                                             children: "Import Shared Config",
                                         }),
                                         (0, a.jsx)(d.Z, {
-                                            ref: v,
-                                            onChange: N,
+                                            ref: g,
+                                            onChange: E,
                                             multiple: !1,
                                         }),
                                     ],
@@ -148,7 +144,7 @@ function v() {
                                     text: "Create New Effect",
                                     onClick: () => {
                                         t({
-                                            id: (0, s.Z)(),
+                                            skuId: (0, s.Z)(),
                                             name: "New Profile Effect",
                                             config: { effects: [] },
                                         });
@@ -158,38 +154,38 @@ function v() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: f.section,
+                            className: x.section,
                             children: [
                                 (0, a.jsx)(c.X6q, {
                                     variant: "heading-xl/bold",
                                     children: "All Effects",
                                 }),
                                 (0, a.jsx)(c.oil, {
-                                    value: _,
+                                    value: j,
                                     onChange: (e) => {
-                                        y(e);
+                                        _(e);
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.pfxGrid,
-                                    children: C.map((e) =>
+                                    className: x.pfxGrid,
+                                    children: y.map((e) =>
                                         (0, a.jsx)(
                                             c.P3F,
                                             {
-                                                className: f.pfxListItem,
+                                                className: x.pfxListItem,
                                                 style: {
                                                     backgroundImage: "url(".concat(e.config.thumbnailPreviewSrc, ")"),
                                                 },
                                                 onClick: () => {
                                                     i({
-                                                        id: e.id,
+                                                        skuId: e.skuId,
                                                         name: e.config.title,
                                                         readonly: !0,
                                                         config: { effects: e.config.effects },
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: f.pfxListItemFooter,
+                                                    className: x.pfxListItemFooter,
                                                     children: (0, a.jsx)(c.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
@@ -197,7 +193,7 @@ function v() {
                                                     }),
                                                 }),
                                             },
-                                            e.id,
+                                            e.skuId,
                                         ),
                                     ),
                                 }),
@@ -205,7 +201,7 @@ function v() {
                         }),
                     ],
                 }),
-            null != n && (0, a.jsx)(x.Z, { effect: n }),
+            null != n && (0, a.jsx)(h.Z, { effect: n }),
         ],
     });
 }

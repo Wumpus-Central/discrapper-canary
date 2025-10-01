@@ -25,9 +25,9 @@ var r = n(951288),
     E = n(679332),
     S = n(544989),
     Z = n(671955),
-    T = n(388032),
-    P = n(231688),
-    N = n(892273);
+    P = n(388032),
+    T = n(910455),
+    N = n(892068);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -99,7 +99,7 @@ function w(e) {
                         children: [
                             (0, r.jsx)(S.Z, { children: (0, r.jsx)(E.Z, { user: n }) }),
                             (0, r.jsxs)("div", {
-                                className: P.header,
+                                className: T.header,
                                 children: [
                                     (0, r.jsx)(O.Z, {
                                         user: n,
@@ -133,7 +133,7 @@ function w(e) {
                                         className: N.overlay,
                                         children: [
                                             (0, r.jsx)(x.Z, {
-                                                heading: T.intl.string(T.t["61W33d"]),
+                                                heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(j.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
@@ -143,7 +143,7 @@ function w(e) {
                                                 }),
                                             }),
                                             (0, r.jsx)(x.Z, {
-                                                heading: T.intl.string(T.t["A//N4u"]),
+                                                heading: P.intl.string(P.t["A//N4u"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(v.Z, { userId: n.id }),
                                             }),
@@ -155,7 +155,7 @@ function w(e) {
                     }),
                     !A &&
                         (0, r.jsx)("div", {
-                            className: P.footer,
+                            className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
                                     F(),
@@ -169,13 +169,13 @@ function w(e) {
                                             ),
                                         );
                                 },
-                                className: P.footerButton,
-                                children: T.intl.string(T.t["+Xp3ho"]),
+                                className: T.footerButton,
+                                children: P.intl.string(P.t["+Xp3ho"]),
                             }),
                         }),
                     (null == D ? void 0 : D.profileEffect) != null &&
                         (0, r.jsx)(p.Z, {
-                            profileEffectId: null == D || null == (t = D.profileEffect) ? void 0 : t.id,
+                            skuId: null == D || null == (t = D.profileEffect) ? void 0 : t.skuId,
                             isHovering: H,
                         }),
                 ],

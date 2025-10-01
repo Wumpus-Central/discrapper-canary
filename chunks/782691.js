@@ -151,7 +151,7 @@ let C = {
             let { effect: e, upsertConfig: t } = V.current;
             e.readonly ||
                 t({
-                    id: e.id,
+                    skuId: e.skuId,
                     name: L,
                     config: {
                         effects: w,

@@ -15,7 +15,7 @@ var i = n(278074),
     h = n(998502),
     m = n(987209),
     g = n(388032),
-    E = n(610868),
+    E = n(552044),
     b = n(241822);
 function y(e, t, n) {
     return (
@@ -96,7 +96,7 @@ function S(e) {
 }
 function A(e) {
     var t;
-    let { id: n } = e,
+    let { skuId: n } = e,
         i = null == (t = (0, _.V)(n)) ? void 0 : t.config;
     return (0, r.jsxs)("div", {
         className: E.profileEffectContainer,
@@ -106,7 +106,7 @@ function A(e) {
                 alt: null == i ? void 0 : i.accessibilityLabel,
                 className: E.profileEffectBackground,
             }),
-            (0, r.jsx)(p.Z, { profileEffectId: n }),
+            (0, r.jsx)(p.Z, { skuId: n }),
         ],
     });
 }
@@ -130,7 +130,7 @@ function N(e) {
         s = null == o ? void 0 : o.items[0],
         l = (0, i.EQ)(s)
             .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
-            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(A, { id: e.id }))
+            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(A, { skuId: e.skuId }))
             .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(C, { nameplate: e }))
             .otherwise(() => null);
     return null != n && null == l

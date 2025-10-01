@@ -1,67 +1,70 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var r = n(570140),
     i = n(232567),
     a = n(220082),
-    o = n(275759),
-    s = n(365943),
-    l = n(592125),
-    c = n(271383),
-    u = n(621853),
-    d = n(120569);
-let f = 60000;
-function _(e, t) {
-    var n, _, p, h;
+    o = n(335131),
+    s = n(873626),
+    l = n(275759),
+    c = n(365943),
+    u = n(592125),
+    d = n(271383),
+    f = n(621853),
+    _ = n(120569);
+let p = 60000;
+function h(e, t) {
+    var n, h, m, g;
     let {
-        type: m,
-        withMutualGuilds: g = !1,
-        withMutualFriendsCount: E = !1,
-        withMutualFriends: b = !1,
-        dispatchWait: y = !1,
-        waitForRefetch: O = !0,
-        guildId: v,
-        channelId: I,
-        joinRequestId: T,
-        abortSignal: S,
+        type: E,
+        withMutualGuilds: b = !1,
+        withMutualFriendsCount: y = !1,
+        withMutualFriends: O = !1,
+        dispatchWait: v = !1,
+        waitForRefetch: I = !0,
+        guildId: T,
+        channelId: S,
+        joinRequestId: A,
+        abortSignal: C,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if ("" === e || u.Z.isFetchingProfile(e, v)) return Promise.resolve();
-    let A = u.Z.getUserProfile(e),
-        C = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
+    if ("" === e || f.Z.isFetchingProfile(e, T)) return Promise.resolve();
+    let N = f.Z.getUserProfile(e),
+        R = Date.now() - (null != (g = null == N ? void 0 : N.fetchEndedAt) ? g : 0) >= p;
     if (
-        ((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 ||
-            (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) &&
-        !C
+        ((null == N || null == (n = N.fetchError) ? void 0 : n.status) === 404 ||
+            (null == N || null == (h = N.fetchError) ? void 0 : h.status) === 429) &&
+        !R
     )
         return Promise.resolve();
-    let N = u.Z.getGuildMemberProfile(e, v),
-        R = u.Z.getMutualGuilds(e),
-        P = u.Z.getMutualFriends(e),
-        w = u.Z.getMutualFriendsCount(e),
-        D = null == P && b,
-        x = null == w && E,
-        L = (null == R && g) || D || x,
-        j = null == v ? null == A : null == N,
-        M = !j && (C || L);
-    if (!j && !M) return Promise.resolve();
-    (0, s.t)(), null != t && (0, a.vM)(t);
-    let k = {
-        type: m,
-        withMutualGuilds: g,
-        withMutualFriends: b,
-        withMutualFriendsCount: E,
-        guildId: v,
-        joinRequestId: T,
-        abortSignal: S,
+    let P = f.Z.getGuildMemberProfile(e, T),
+        w = f.Z.getMutualGuilds(e),
+        D = f.Z.getMutualFriends(e),
+        L = f.Z.getMutualFriendsCount(e),
+        x = null == D && O,
+        j = null == L && y,
+        M = (null == w && b) || x || j,
+        k = null == T ? null == N : null == P,
+        U = !k && (R || M);
+    if (!k && !U) return Promise.resolve();
+    let G = null != T ? (null == P ? void 0 : P.profileEffect) : null == N ? void 0 : N.profileEffect;
+    null != G && ((0, s.c)("maybeFetchUserProfile") ? (0, o.lW)(G.skuId) : (0, c.t)()), null != t && (0, a.vM)(t);
+    let B = {
+        type: E,
+        withMutualGuilds: b,
+        withMutualFriends: O,
+        withMutualFriendsCount: y,
+        guildId: T,
+        joinRequestId: A,
+        abortSignal: C,
         connectionsRoleId:
-            null == v ||
+            null == T ||
             null ==
-                (p = (0, o.Ur)({
-                    guildMember: c.ZP.getMember(v, e),
-                    channel: l.Z.getChannel(I),
+                (m = (0, l.Ur)({
+                    guildMember: d.ZP.getMember(T, e),
+                    channel: u.Z.getChannel(S),
                 }))
                 ? void 0
-                : p.id,
+                : m.id,
     };
-    if (y) return r.Z.wait(() => (0, i.In)(e, k, d.Z)), Promise.resolve();
-    let U = (0, i.In)(e, k, d.Z);
-    return M && !O ? Promise.resolve() : U;
+    if (v) return r.Z.wait(() => (0, i.In)(e, B, _.Z)), Promise.resolve();
+    let Z = (0, i.In)(e, B, _.Z);
+    return U && !I ? Promise.resolve() : Z;
 }

@@ -24,12 +24,12 @@ var l = t(951288),
     P = t(111361),
     N = t(785717),
     T = t(221292),
-    E = t(621853),
-    A = t(687158),
+    A = t(621853),
+    E = t(687158),
     S = t(250822),
     C = t(771362),
-    _ = t(510659),
-    w = t(899007),
+    w = t(510659),
+    _ = t(899007),
     D = t(648052),
     R = t(867176),
     L = t(280885),
@@ -91,27 +91,27 @@ function ea(e) {
         }),
         eP = i.useRef(null),
         eN = (0, c.Z)(eP),
-        [eT, eE] = i.useState(!1),
-        { defaultWishlistId: eA } = (0, o.cj)([E.Z], () => ({ defaultWishlistId: E.Z.getFirstWishlistId(t.id) }));
-    (0, b.k)(eA);
-    let eS = (0, _.$m)(),
+        [eT, eA] = i.useState(!1),
+        { defaultWishlistId: eE } = (0, o.cj)([A.Z], () => ({ defaultWishlistId: A.Z.getFirstWishlistId(t.id) }));
+    (0, b.k)(eE);
+    let eS = (0, w.$m)(),
         eC = (0, s.q_F)({
             opacity: +(null != eS.interactionType),
             config: { duration: 150 },
         }),
-        e_ = i.useMemo(() => (null != ec ? { [ec]: [t.id] } : {}), [ec, t.id]);
-    (0, d.$)(e_, "UserProfileModalV2");
-    let ew = (0, A.ZP)(t.id, eb ? ec : void 0),
-        eD = Z.ZP.useName(null == ew ? void 0 : ew.guildId, ed, t),
+        ew = i.useMemo(() => (null != ec ? { [ec]: [t.id] } : {}), [ec, t.id]);
+    (0, d.$)(ew, "UserProfileModalV2");
+    let e_ = (0, E.ZP)(t.id, eb ? ec : void 0),
+        eD = Z.ZP.useName(null == e_ ? void 0 : e_.guildId, ed, t),
         { relationshipType: eR, originApplicationId: eL } = (0, o.cj)([y.Z], () => ({
             relationshipType: y.Z.getRelationshipType(t.id),
             originApplicationId: y.Z.getOriginApplicationId(t.id),
         })),
         eM = (0, o.e7)([O.Z], () => O.Z.hidePersonalInformation),
         eU =
-            null == ew
+            null == e_
                 ? void 0
-                : ew.getBannerURL({
+                : e_.getBannerURL({
                       canAnimate: !1,
                       size: 1024,
                   }),
@@ -130,9 +130,9 @@ function ea(e) {
     return (
         i.useEffect(() => {
             let e = () => {
-                eE(!0),
+                eA(!0),
                     setTimeout(() => {
-                        eE(!1);
+                        eA(!1);
                     }, 1000);
             };
             return (
@@ -147,10 +147,10 @@ function ea(e) {
             children: (0, l.jsx)(N.Mt, {
                 value: eZ,
                 openedAt: ev,
-                fetchStartedAt: null == ew ? void 0 : ew.fetchStartedAt,
-                fetchEndedAt: null == ew ? void 0 : ew.fetchEndedAt,
-                isLoaded: null == ew ? void 0 : ew.isLoaded,
-                children: (0, l.jsx)(_.NJ, {
+                fetchStartedAt: null == e_ ? void 0 : e_.fetchStartedAt,
+                fetchEndedAt: null == e_ ? void 0 : e_.fetchEndedAt,
+                isLoaded: null == e_ ? void 0 : e_.isLoaded,
+                children: (0, l.jsx)(w.NJ, {
                     value: eS,
                     children: (0, l.jsxs)(s.Y0X, {
                         "data-migration-pending": !0,
@@ -203,7 +203,7 @@ function ea(e) {
                                         children: (0, l.jsxs)(z.Z, {
                                             className: eO ? es.disabled : void 0,
                                             user: t,
-                                            displayProfile: ew,
+                                            displayProfile: e_,
                                             themeType: er.l.MODAL_V2,
                                             children: [
                                                 null != eU &&
@@ -222,14 +222,14 @@ function ea(e) {
                                                 }),
                                                 (0, l.jsxs)("div", {
                                                     className: es.profile,
-                                                    ref: (null == ew ? void 0 : ew.profileEffect) != null ? eP : void 0,
+                                                    ref: (null == e_ ? void 0 : e_.profileEffect) != null ? eP : void 0,
                                                     children: [
                                                         (0, l.jsxs)("div", {
                                                             className: es.profileHeader,
                                                             children: [
                                                                 (0, l.jsx)(R.Z, {
                                                                     user: t,
-                                                                    displayProfile: ew,
+                                                                    displayProfile: e_,
                                                                     themeType: er.l.MODAL_V2,
                                                                 }),
                                                                 (0, l.jsx)(F.Z, {
@@ -237,9 +237,9 @@ function ea(e) {
                                                                     onClose: eg,
                                                                     className: es.interactionToast,
                                                                 }),
-                                                                (0, l.jsx)(w.Z, {
+                                                                (0, l.jsx)(_.Z, {
                                                                     user: t,
-                                                                    displayProfile: ew,
+                                                                    displayProfile: e_,
                                                                     guildId: ec,
                                                                     channelId: ed,
                                                                     themeType: er.l.MODAL_V2,
@@ -263,7 +263,7 @@ function ea(e) {
                                                                     user: t,
                                                                     onClose: eg,
                                                                     nickname: Z.ZP.useName(
-                                                                        null == ew ? void 0 : ew.guildId,
+                                                                        null == e_ ? void 0 : e_.guildId,
                                                                         ed,
                                                                         t,
                                                                     ),
@@ -272,9 +272,9 @@ function ea(e) {
                                                                         userId: t.id,
                                                                     }),
                                                                     nicknameVariant: "heading-xl/semibold",
-                                                                    pronouns: null == ew ? void 0 : ew.pronouns,
+                                                                    pronouns: null == e_ ? void 0 : e_.pronouns,
                                                                     tags: (0, l.jsx)(D.Z, {
-                                                                        displayProfile: ew,
+                                                                        displayProfile: e_,
                                                                         themeType: er.l.MODAL_V2,
                                                                         onClose: eg,
                                                                     }),
@@ -287,7 +287,7 @@ function ea(e) {
                                                                             applicationId: eL,
                                                                             guildId:
                                                                                 null !=
-                                                                                (n = null == ew ? void 0 : ew.guildId)
+                                                                                (n = null == e_ ? void 0 : e_.guildId)
                                                                                     ? n
                                                                                     : void 0,
                                                                             channelId: ed,
@@ -306,9 +306,9 @@ function ea(e) {
                                                                                 guildId:
                                                                                     null !=
                                                                                     (n =
-                                                                                        null == ew
+                                                                                        null == e_
                                                                                             ? void 0
-                                                                                            : ew.guildId)
+                                                                                            : e_.guildId)
                                                                                         ? n
                                                                                         : void 0,
                                                                                 channelId: ed,
@@ -353,16 +353,16 @@ function ea(e) {
                                                                         currentUser: ea,
                                                                         guildId: ec,
                                                                         channelId: ed,
-                                                                        displayProfile: ew,
+                                                                        displayProfile: e_,
                                                                         relationshipType: eR,
                                                                         onClose: eg,
                                                                     }),
                                                                 }),
-                                                                (null == ew ? void 0 : ew.bio) != null &&
-                                                                    (null == ew ? void 0 : ew.bio) !== "" &&
+                                                                (null == e_ ? void 0 : e_.bio) != null &&
+                                                                    (null == e_ ? void 0 : e_.bio) !== "" &&
                                                                     !eM &&
                                                                     (0, l.jsx)(L.Z, {
-                                                                        userBio: ew.bio,
+                                                                        userBio: e_.bio,
                                                                         setLineClamp: !1,
                                                                     }),
                                                                 eV.length > 0 &&
@@ -376,15 +376,15 @@ function ea(e) {
                                                                     heading: eo.intl.string(eo.t.a6XYDw),
                                                                     children: (0, l.jsx)(V.Z, {
                                                                         userId: t.id,
-                                                                        guildId: null == ew ? void 0 : ew.guildId,
+                                                                        guildId: null == e_ ? void 0 : e_.guildId,
                                                                         tooltipDelay: el.vB,
                                                                     }),
                                                                 }),
-                                                                (null == ew ? void 0 : ew.guildId) != null &&
+                                                                (null == e_ ? void 0 : e_.guildId) != null &&
                                                                     (0, l.jsx)(Y.Z, {
                                                                         user: t,
                                                                         currentUser: ea,
-                                                                        guildId: ew.guildId,
+                                                                        guildId: e_.guildId,
                                                                         className: es.profileRolesSection,
                                                                         headingVariant: "text-xs/medium",
                                                                         headingColor: "currentColor",
@@ -469,10 +469,9 @@ function ea(e) {
                                                                 }),
                                                             ],
                                                         }),
-                                                        (null == ew ? void 0 : ew.profileEffect) != null &&
+                                                        (null == e_ ? void 0 : e_.profileEffect) != null &&
                                                             (0, l.jsx)(v.Z, {
-                                                                profileEffectId:
-                                                                    null == ew ? void 0 : ew.profileEffect.id,
+                                                                skuId: null == e_ ? void 0 : e_.profileEffect.skuId,
                                                                 isHovering: eN,
                                                             }),
                                                     ],
@@ -480,7 +479,7 @@ function ea(e) {
                                                 (0, l.jsx)($.Z, {
                                                     user: t,
                                                     currentUser: ea,
-                                                    displayProfile: ew,
+                                                    displayProfile: e_,
                                                     guildId: ec,
                                                     channelId: ed,
                                                     items: eF,

@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(597688),
     E = n(579407),
     b = n(755419),
-    y = n(187951),
+    y = n(666765),
     O = n(223223);
 function v(e, t, n) {
     return (
@@ -73,7 +73,7 @@ let T = (e) => {
     S = (e) => {
         var t;
         let { profileEffect: n, fallbackLabel: i } = e,
-            a = (0, h.V)(null == n ? void 0 : n.id);
+            a = (0, h.V)(null == n ? void 0 : n.skuId);
         if (null == a) return i;
         let {
             accessibilityLabel: o,

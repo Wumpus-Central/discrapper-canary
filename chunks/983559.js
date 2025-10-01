@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(488290),
+    l = n(137317),
     a = n(793030),
     s = n(481060),
     o = n(727637),
@@ -25,12 +25,12 @@ var r = n(951288),
     E = n(664794),
     S = n(4517),
     Z = n(350207),
-    T = n(277117),
-    P = n(52639),
+    P = n(277117),
+    T = n(52639),
     N = n(228168),
     R = n(671955),
     w = n(388032),
-    A = n(231688);
+    A = n(910455);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -158,7 +158,7 @@ function L(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(T.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: n,
                                     currentUser: f,
                                     displayProfile: k,
@@ -177,7 +177,7 @@ function L(e) {
                                             },
                                         }),
                                     }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(T.Z, {
                                     user: n,
                                     channelId: w.id,
                                 }),
@@ -191,7 +191,7 @@ function L(e) {
                             }),
                         (null == k ? void 0 : k.profileEffect) != null &&
                             (0, r.jsx)(p.Z, {
-                                profileEffectId: null == k || null == (t = k.profileEffect) ? void 0 : t.id,
+                                skuId: null == k || null == (t = k.profileEffect) ? void 0 : t.skuId,
                                 isHovering: z,
                                 urlQueryString: "dmView",
                             }),

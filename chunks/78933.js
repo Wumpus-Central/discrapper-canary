@@ -37,8 +37,8 @@ var a = n(951288),
     M = n(420654),
     U = n(785184),
     F = n(695346),
-    B = n(158776),
-    G = n(246946),
+    G = n(158776),
+    B = n(246946),
     z = n(572004),
     V = n(5192),
     H = n(74538),
@@ -48,8 +48,8 @@ var a = n(951288),
     Y = n(431282),
     X = n(213928),
     J = n(587243),
-    $ = n(383832),
-    Q = n(981631),
+    Q = n(383832),
+    $ = n(981631),
     ee = n(921944),
     et = n(228168),
     en = n(671955),
@@ -105,14 +105,14 @@ function es(e) {
         null == es || es(ef.current);
     }, [ef, es]),
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
-    let eg = (0, s.e7)([B.Z], () => B.Z.getStatus(t.id)),
+    let eg = (0, s.e7)([G.Z], () => G.Z.getStatus(t.id)),
         ev = F.Cr.useSetting(),
         ej = (0, J.F)(ev),
         { expiringStatusProfileFeedback: e_ } = b.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
-        ey = (0, s.e7)([G.Z], () => G.Z.hidePersonalInformation),
+        ey = (0, s.e7)([B.Z], () => B.Z.hidePersonalInformation),
         eC = (0, g.p)(),
         eE = F.Sb.useSetting(),
         eN = (0, J.I)(eg),
@@ -146,16 +146,16 @@ function es(e) {
         eL = (0, E.Z)({ location: "UserProfileAccountPopout" }),
         eM = (null == ep ? void 0 : ep.widgets) != null && ep.widgets.length > 0,
         eU = eM ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
-        [eF, eB] = (0, f.US)(eU),
-        eG = eF === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
+        [eF, eG] = (0, f.US)(eU),
+        eB = eF === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         ez = r.useCallback(() => {
-            eB(ee.L.USER_DISMISS), n();
-        }, [eB, n]),
+            eG(ee.L.USER_DISMISS), n();
+        }, [eG, n]),
         eV = r.useCallback(() => {
             (eu && null != ed) || (eT(), ez());
         }, [eT, ez, eu, ed]),
         eH = eu && null != ed,
-        eW = (0, K.K)(ed, eh, eG, n, ez);
+        eW = (0, K.K)(ed, eh, eB, n, ez);
     return (0, a.jsx)(p.Gt, {
         value: eh,
         children: (0, a.jsx)(_.Mt, {
@@ -279,7 +279,7 @@ function es(e) {
                                                                       });
                                                                   }
                                                                 : void 0,
-                                                            trailing: eG
+                                                            trailing: eB
                                                                 ? (0, a.jsx)(c.IGR, {
                                                                       text: ea.intl.string(ea.t.y2b7CA),
                                                                   })
@@ -295,7 +295,7 @@ function es(e) {
                                                                     size: 12,
                                                                 }),
                                                             trailing:
-                                                                (eC || eg === Q.Skl.DND) &&
+                                                                (eC || eg === $.Skl.DND) &&
                                                                 (0, a.jsx)(c.owu, { size: "xxs" }),
                                                             renderSubmenu: i.tq
                                                                 ? void 0
@@ -482,7 +482,7 @@ function es(e) {
                                                             icon: c.lMe,
                                                             label: ea.intl.string(ea.t.oMNyYG),
                                                             onClick: () => {
-                                                                n(), (0, $.Z)();
+                                                                n(), (0, Q.Z)();
                                                             },
                                                             renderSubmenu: (e) => {
                                                                 let { closePopout: t } = e;
@@ -515,7 +515,7 @@ function es(e) {
                             (null == ep ? void 0 : ep.profileEffect) != null &&
                                 !ew.current &&
                                 (0, a.jsx)(j.Z, {
-                                    profileEffectId: ep.profileEffect.id,
+                                    skuId: ep.profileEffect.skuId,
                                     isHovering: eb,
                                 }),
                         ],

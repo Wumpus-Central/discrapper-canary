@@ -24,16 +24,16 @@ var l = t(951288),
     P = t(981631),
     N = t(671955),
     T = t(388032),
-    E = t(526594),
-    A = t(438160),
+    A = t(526594),
+    E = t(438160),
     S = t(909735);
 function C(e) {
     var n;
     let {
             user: t,
             guildId: C,
-            channelId: _,
-            messageId: w,
+            channelId: w,
+            messageId: _,
             roleId: D,
             sessionId: R,
             transitionState: L,
@@ -43,7 +43,7 @@ function C(e) {
         } = e,
         B = C === P.ME ? void 0 : C,
         F = (0, p.ZP)(t.id, B),
-        V = u.ZP.getName(B, _, t),
+        V = u.ZP.getName(B, w, t),
         G = (0, c.Dt)(),
         { analyticsLocations: z } = (0, a.ZP)([...k, s.Z.USER_PROFILE_MODAL]),
         K = (0, m.ZB)({
@@ -51,8 +51,8 @@ function C(e) {
             userId: t.id,
             sourceSessionId: R,
             guildId: B,
-            channelId: _,
-            messageId: w,
+            channelId: w,
+            messageId: _,
             roleId: D,
         }),
         W = i.useRef(null),
@@ -68,7 +68,7 @@ function C(e) {
             children: (0, l.jsxs)(r.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: L,
-                className: E.root,
+                className: A.root,
                 hideShadow: !0,
                 "aria-labelledby": G,
                 parentComponent: "NonUserBotProfileModal",
@@ -95,22 +95,22 @@ function C(e) {
                                             themeType: N.l.MODAL,
                                         }),
                                         (0, l.jsx)("div", {
-                                            className: E.headerInner,
+                                            className: A.headerInner,
                                             children: (0, l.jsx)(f.Z, {
                                                 user: t,
                                                 displayProfile: F,
                                                 guildId: B,
-                                                channelId: _,
+                                                channelId: w,
                                                 themeType: N.l.MODAL,
                                             }),
                                         }),
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: E.body,
+                                    className: A.body,
                                     children: [
                                         (0, l.jsx)(y.Z, {
-                                            className: E.username,
+                                            className: A.username,
                                             user: t,
                                             nickname: V,
                                             pronouns: null == F ? void 0 : F.pronouns,
@@ -145,7 +145,7 @@ function C(e) {
                                                 }),
                                                 (0, l.jsxs)(r.zJl, {
                                                     fade: !0,
-                                                    className: A.scroller,
+                                                    className: E.scroller,
                                                     children: [
                                                         (0, l.jsx)(x.Z, {
                                                             userId: t.id,
@@ -171,7 +171,7 @@ function C(e) {
                     }),
                     (null == F ? void 0 : F.profileEffect) != null &&
                         (0, l.jsx)(d.Z, {
-                            profileEffectId: null == F || null == (n = F.profileEffect) ? void 0 : n.id,
+                            skuId: null == F || null == (n = F.profileEffect) ? void 0 : n.skuId,
                             isHovering: Y,
                         }),
                 ],

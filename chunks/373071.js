@@ -92,7 +92,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                 (0, s.j)(() => {
                     e((e) => {
                         let n = f({}, e);
-                        return (n.profileEffects[t.id] = t), g(n), n;
+                        return (n.profileEffects[t.skuId] = t), g(n), n;
                     });
                 }),
             deleteConfig: (t) =>

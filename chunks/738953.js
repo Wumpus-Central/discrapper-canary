@@ -1,7 +1,7 @@
 n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(786920),
+    a = n(137317),
     o = n(442837),
     s = n(481060),
     l = n(727637),
@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(664794),
     w = n(4517),
     D = n(978395),
-    x = n(161572),
-    L = n(671955),
+    L = n(161572),
+    x = n(671955),
     j = n(388032),
-    M = n(116649);
+    M = n(593540);
 function k(e, t, n) {
     return (
         t in e
@@ -191,7 +191,7 @@ function Z(e) {
                         (0, r.jsxs)(A.Z, {
                             user: n,
                             displayProfile: en,
-                            themeType: L.l.POPOUT,
+                            themeType: x.l.POPOUT,
                             children: [
                                 null != ei.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
@@ -210,7 +210,7 @@ function Z(e) {
                                         }),
                                         (0, r.jsx)(N.Z, {
                                             shouldShowTooltip: null === ei.interactionType,
-                                            themeType: L.l.POPOUT,
+                                            themeType: x.l.POPOUT,
                                             user: n,
                                         }),
                                         !es &&
@@ -230,7 +230,7 @@ function Z(e) {
                                             user: n,
                                             displayProfile: en,
                                             guildId: G,
-                                            themeType: L.l.POPOUT,
+                                            themeType: x.l.POPOUT,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             userId: n.id,
@@ -242,7 +242,7 @@ function Z(e) {
                                             displayProfile: en,
                                             guildId: G,
                                             channelId: Z,
-                                            themeType: L.l.POPOUT,
+                                            themeType: x.l.POPOUT,
                                             onOpenProfile: K ? void 0 : eu,
                                         }),
                                         (0, r.jsx)(w.Z, {
@@ -250,7 +250,7 @@ function Z(e) {
                                             user: n,
                                             guildId: G,
                                             channelId: Z,
-                                            themeType: L.l.POPOUT,
+                                            themeType: x.l.POPOUT,
                                             onCloseProfile: Y,
                                             prompt: el ? ec : null,
                                         }),
@@ -266,7 +266,7 @@ function Z(e) {
                                     channelId: Z,
                                     onClose: Y,
                                 }),
-                                (0, r.jsx)(x.Z, {
+                                (0, r.jsx)(L.Z, {
                                     user: n,
                                     guildId: G,
                                     channelId: Z,
@@ -276,7 +276,7 @@ function Z(e) {
                                 }),
                                 (null == en ? void 0 : en.profileEffect) != null &&
                                     (0, r.jsx)(h.Z, {
-                                        profileEffectId: null == en || null == (t = en.profileEffect) ? void 0 : t.id,
+                                        skuId: null == en || null == (t = en.profileEffect) ? void 0 : t.skuId,
                                         isHovering: er,
                                     }),
                             ],

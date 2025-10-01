@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(544989),
     S = n(671955),
     A = n(388032),
-    C = n(116649);
+    C = n(593540);
 function N(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function P(e) {
             channelId: P,
             messageId: w,
             roleId: D,
-            openedAt: x,
-            setPopoutRef: L,
+            openedAt: L,
+            setPopoutRef: x,
             closePopout: j,
             disableUserProfileLink: M = __OVERLAY__,
             newAnalyticsLocations: k = [],
@@ -78,11 +78,11 @@ function P(e) {
             messageId: w,
             roleId: D,
         }),
-        V = i.useRef(null),
-        F = (0, o.Z)(V);
+        F = i.useRef(null),
+        V = (0, o.Z)(F);
     i.useEffect(() => {
-        null == L || L(null == V ? void 0 : V.current);
-    }, [V, L]);
+        null == x || x(null == F ? void 0 : F.current);
+    }, [F, x]);
     let H = () => {
             null == j || j(),
                 (0, m.openUserProfileModal)(
@@ -122,12 +122,12 @@ function P(e) {
         value: B,
         children: (0, r.jsx)(_.Mt, {
             value: Z,
-            openedAt: x,
+            openedAt: L,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, r.jsxs)(K, {
-                ref: V,
+                ref: F,
                 "aria-labelledby": z,
                 children: [
                     (0, r.jsx)(a.nn4, {
@@ -193,8 +193,8 @@ function P(e) {
                     }),
                     (null == G ? void 0 : G.profileEffect) != null &&
                         (0, r.jsx)(d.Z, {
-                            profileEffectId: null == G || null == (t = G.profileEffect) ? void 0 : t.id,
-                            isHovering: F,
+                            skuId: null == G || null == (t = G.profileEffect) ? void 0 : t.skuId,
+                            isHovering: V,
                         }),
                 ],
             }),

@@ -1,56 +1,56 @@
-r.d(t, { Z: () => d }), r(388685);
-var n = r(951288),
-    l = r(647438),
-    i = r(120356),
-    a = r.n(i),
-    o = r(802433),
-    s = r(680295),
-    c = r(165216),
-    u = r(241822);
+n.d(t, { Z: () => d }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    o = n(802433),
+    s = n(680295),
+    c = n(165216),
+    u = n(241822);
 let d = (e) => {
-    let { profileEffectId: t, isHovering: r, forCollectedModal: i = !1, isPurchased: d, removeSetHeight: p = !1 } = e,
-        f = i ? 250 : 0.1,
-        [b, h] = l.useState(!0);
-    return (l.useEffect(() => {
-        if (!0 !== i) h(!1);
+    let { skuId: t, isHovering: n, forCollectedModal: l = !1, isPurchased: d, removeSetHeight: p = !1 } = e,
+        f = l ? 250 : 0.1,
+        [h, g] = i.useState(!0);
+    return (i.useEffect(() => {
+        if (!0 !== l) g(!1);
         else {
             let e = setTimeout(() => {
-                h(!1);
+                g(!1);
             }, f);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [f, i]),
-    null != t)
-        ? (0, n.jsxs)("div", {
+    }, [f, l]),
+    null == t)
+        ? null
+        : (0, r.jsxs)("div", {
               className: a()(c.previewContainer, {
-                  [c.previewContainerAnimation]: i,
+                  [c.previewContainerAnimation]: l,
                   [c.previewContainerSetHeight]: !p,
               }),
               children: [
-                  (0, n.jsx)("img", {
+                  (0, r.jsx)("img", {
                       src: u,
                       alt: " ",
-                      className: i ? c.previewForCollected : c.preview,
+                      className: l ? c.previewForCollected : c.preview,
                       "aria-hidden": !0,
                   }),
-                  !b &&
-                      (0, n.jsx)("div", {
+                  !h &&
+                      (0, r.jsx)("div", {
                           className: d ? c.purchasedEffect : void 0,
-                          children: (0, n.jsx)(s.Z, {
-                              profileEffectId: t,
+                          children: (0, r.jsx)(s.Z, {
+                              skuId: t,
                               useThumbnail: !0,
-                              autoPlay: i,
+                              autoPlay: l,
                               restartMethod: o.Q.FromStart,
                               resetOnHover: !0,
-                              isHovering: r,
+                              isHovering: n,
                               introDelay: f,
                               useOpacityOnHover: !1,
                               shopPreview: !0,
                           }),
                       }),
               ],
-          })
-        : null;
+          });
 };
