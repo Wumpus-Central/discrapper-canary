@@ -29,14 +29,14 @@ var r = n(951288),
     P = n(990924),
     w = n(771934),
     D = n(857658),
-    x = n(174278),
-    L = n(714097),
+    L = n(174278),
+    x = n(714097),
     j = n(981631),
     M = n(921944),
     k = n(474936),
-    U = n(119475),
+    U = n(684555),
     G = n(388032),
-    B = n(882741);
+    B = n(330749);
 function Z(e, t, n) {
     return (
         t in e
@@ -371,7 +371,7 @@ function et(e) {
             });
     return n
         ? b()
-        : (0, r.jsx)(c.i_, {
+        : (0, r.jsx)(c.i, {
               title: G.intl.string(U.default.NJ9m8f),
               body: G.intl.string(U.default["6pabtb"]),
               position: "left",
@@ -447,7 +447,7 @@ function ei(e) {
         children: s
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(x.q, {}),
+                      (0, r.jsx)(L.q, {}),
                       (0, r.jsx)(u.zxk, {
                           variant: "secondary",
                           onClick: d,
@@ -492,7 +492,7 @@ function ea(e) {
         T = i.useRef(!1),
         {
             colors: A,
-            chassisMixAmount: x,
+            chassisMixAmount: L,
             gradientAngle: j,
             setColors: k,
             setChassisMixAmount: Z,
@@ -511,10 +511,10 @@ function ea(e) {
                         colors: A,
                         gradientColorStops: [],
                         gradientAngle: j,
-                        baseMix: x,
+                        baseMix: L,
                     },
                 }),
-                (0, w.u7)(A, x, j, Y, K),
+                (0, w.u7)(A, L, j, Y, K),
                 null == a || a(M.L.TAKE_ACTION),
                 W || (0, g.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, m.Ll)(),
@@ -566,7 +566,7 @@ function ea(e) {
                                           color: "text-secondary",
                                           children: G.intl.string(U.default.o2NfLC),
                                       }),
-                                      (0, r.jsx)(L.o, {}),
+                                      (0, r.jsx)(x.o, {}),
                                   ],
                               }),
                               (0, r.jsxs)("div", {
@@ -601,7 +601,7 @@ function ea(e) {
                                               setGradientAngle: F,
                                           }),
                                       (0, r.jsx)(ee, {
-                                          chassisMixAmount: x,
+                                          chassisMixAmount: L,
                                           setChassisMixAmount: (e) => {
                                               Z(e), 0 === A.length && (0, C.lT)(A, V, k);
                                           },

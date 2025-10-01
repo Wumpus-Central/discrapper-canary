@@ -3,13 +3,13 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(793030),
     c = n(481060),
     u = n(337363),
     d = n(725027),
     f = n(464281),
-    _ = n(495511);
+    _ = n(220104);
 let p = 11,
     h = ["left", "center", "right"],
     m = ["top", "center", "bottom"];
@@ -27,17 +27,15 @@ function g(e) {
             layerContext: I,
             animationStyle: T,
             positionKey: S,
-            onMouseEnter: A,
-            onMouseLeave: C,
         } = e,
-        N = i.useRef(null),
-        { isRichTooltip: R } = (0, d.nr)(),
-        P = i.useMemo(() => (("left" === b || "right" === b ? m : h).includes(y) ? y : "center"), [b, y]);
+        A = i.useRef(null),
+        { isRichTooltip: C } = (0, d.nr)(),
+        N = i.useMemo(() => (("left" === b || "right" === b ? m : h).includes(y) ? y : "center"), [b, y]);
     if (!n) return null;
-    let w = (0, r.jsx)(c.jRF, {
+    let R = (0, r.jsx)(c.jRF, {
         targetRef: a,
         position: b,
-        align: P,
+        align: N,
         spacing: O,
         positionKey: S,
         autoInvert: !0,
@@ -54,12 +52,10 @@ function g(e) {
                     customOffset: "custom" === h ? m : void 0,
                 },
                 O = (0, r.jsxs)("div", {
-                    ref: N,
+                    ref: A,
                     id: g,
-                    className: o()(_.tooltip, { [_.richTooltip]: R }),
+                    className: o()(_.tooltip, { [_.richTooltip]: C }),
                     role: "tooltip",
-                    onMouseEnter: A,
-                    onMouseLeave: C,
                     "data-position": p,
                     children: [
                         (0, r.jsx)(u._, { caretConfig: y }),
@@ -86,7 +82,7 @@ function g(e) {
     return null != I
         ? (0, r.jsx)(l.mh4, {
               layerContext: I,
-              children: w,
+              children: R,
           })
-        : w;
+        : R;
 }

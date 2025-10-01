@@ -214,6 +214,11 @@ let h = {
                     type: "number",
                     defaultValue: 11,
                 },
+                keyboardShortcut: {
+                    label: "Keyboard Shortcut",
+                    type: "text",
+                    defaultValue: "mod+k",
+                },
             },
         },
         {
@@ -263,7 +268,7 @@ let h = {
                         [s],
                     );
                 return (0, r.jsx)(
-                    o.i_,
+                    o.i,
                     f(
                         u(
                             {

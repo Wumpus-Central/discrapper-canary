@@ -3,12 +3,14 @@ n.d(t, {
     C9: () => c,
     FX: () => u,
     QV: () => o,
+    Sw: () => d,
     tS: () => s,
 }),
     n(781311),
     n(35282),
     n(539854),
-    n(388685);
+    n(388685),
+    n(49124);
 var r = n(647438);
 function i(e, t, n) {
     return (
@@ -80,7 +82,7 @@ function c(e, t, n, i) {
         },
         c = e.ref,
         u = (e) => {
-            l(c, e), i(e);
+            l(c, e), null != e && "function" == typeof e.getBoundingClientRect && i(e);
         },
         d = {
             onMouseEnter: s(a.onMouseEnter, t.onMouseEnter),
@@ -88,15 +90,23 @@ function c(e, t, n, i) {
             onFocus: s(a.onFocus, t.onFocus),
             onBlur: s(a.onBlur, t.onBlur),
             onContextMenu: s(a.onContextMenu, t.onContextMenu),
+            onClick: s(a.onClick, t.onClick),
             "aria-describedby": o(a["aria-describedby"], n),
         };
     if ("string" == typeof e.type) d.ref = u;
-    else if ("innerRef" in e.props) {
+    else if ("buttonRef" in e.props) {
+        let t = e.props.buttonRef;
+        (d.buttonRef = (e) => {
+            l(t, e), u(e);
+        }),
+            (d.ref = u);
+    } else if ("innerRef" in e.props) {
         let t = e.props.innerRef;
-        d.innerRef = (e) => {
-            l(t, e), l(c, e), i(e);
-        };
-    } else d.ref = u;
+        (d.innerRef = (e) => {
+            l(t, e), u(e);
+        }),
+            (d.ref = u);
+    } else (d.ref = u), (d.innerRef = u);
     return r.cloneElement(e, d);
 }
 function u(e) {
@@ -113,9 +123,19 @@ function u(e) {
                 onFocus: s.onFocus,
                 onBlur: s.onBlur,
                 onContextMenu: s.onContextMenu,
+                onClick: s.onClick,
             },
             null != l && "" !== l ? { "aria-describedby": l } : {},
         ),
         o,
     );
+}
+function d(e) {
+    if (null == e) return "";
+    if ("string" == typeof e) return e;
+    try {
+        return JSON.stringify(e);
+    } catch (t) {
+        return String(e);
+    }
 }

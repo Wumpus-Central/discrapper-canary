@@ -5,4 +5,5 @@ e.exports = {
     caretIcon: "caretIcon__4e35b",
     caretFill: "caretFill__4e35b",
     caretStroke: "caretStroke__4e35b",
+    tooltipWithShortcut: "tooltipWithShortcut__4e35b",
 };
