@@ -1,6 +1,6 @@
 n.d(t, {
-    r: () => p,
-    x: () => c,
+    r: () => h,
+    x: () => u,
 }),
     n(413496),
     n(433524),
@@ -10,51 +10,53 @@ var r = n(392711),
     i = n(212819),
     a = n(375954),
     o = n(483360),
-    s = n(657871);
-let l = {
+    s = n(657871),
+    l = n(389458);
+let c = {
         results: {
             suggestions: [],
             trailingPunctuation: "",
         },
     },
-    c = "-,.?!:;",
-    u = new RegExp("([".concat((0, r.escapeRegExp)(c), "]*)$"));
-function d(e, t, n) {
-    let { isIdle: r, isVisible: c } = n,
-        { onlyExactMatch: d } = (0, s.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
-        f = "",
-        _ = t.replace(u, (e) => ((f = e), "")),
-        p = (0, o.Cq)(i.h8.USER),
-        h = a.Z.getMessages(e.id).toArray();
-    for (let e = 0; e < h.length; e++) {
-        var m;
-        let t = h[e];
-        p[t.author.id] = (null != (m = p[t.author.id]) ? m : 1) + (h.length - e) / h.length;
+    u = "-,.?!:;",
+    d = new RegExp("([".concat((0, r.escapeRegExp)(u), "]*)$"));
+function f(e, t, n) {
+    let { isIdle: r, isVisible: u } = n,
+        { onlyExactMatch: f } = (0, s.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
+        _ = "",
+        p = t.replace(d, (e) => ((_ = e), ""));
+    if (l.Z.isFrequentlyUsedWord(p)) return c;
+    let h = (0, o.Cq)(i.h8.USER),
+        m = a.Z.getMessages(e.id).toArray();
+    for (let e = 0; e < m.length; e++) {
+        var g;
+        let t = m[e];
+        h[t.author.id] = (null != (g = h[t.author.id]) ? g : 1) + (m.length - e) / m.length;
     }
-    let g = o.ZP.queryMentionSuggestionResults({
-        query: _,
+    let E = o.ZP.queryMentionSuggestionResults({
+        query: p,
         channel: e,
-        boosters: p,
-        onlyExactMatch: d,
+        boosters: h,
+        onlyExactMatch: f,
     });
-    return r || c || !(_.length < 5) || g.some((e) => "exact" === e.matchType)
+    return r || u || !(p.length < 5) || E.some((e) => "exact" === e.matchType)
         ? {
               results: {
-                  suggestions: g,
-                  trailingPunctuation: f,
+                  suggestions: E,
+                  trailingPunctuation: _,
               },
           }
-        : l;
+        : c;
 }
-let f = (0, r.memoize)(d, (e, t, n) => "".concat(e.id, "-").concat(n.isIdle, "-").concat(n.isVisible, "-").concat(t)),
-    _ = null;
-function p(e, t, n) {
+let _ = (0, r.memoize)(f, (e, t, n) => "".concat(e.id, "-").concat(n.isIdle, "-").concat(n.isVisible, "-").concat(t)),
+    p = null;
+function h(e, t, n) {
     return (
-        null == _ &&
-            (_ = setTimeout(() => {
+        null == p &&
+            (p = setTimeout(() => {
                 var e, t;
-                null == (e = (t = f.cache).clear) || e.call(t), (_ = null);
+                null == (e = (t = _.cache).clear) || e.call(t), (p = null);
             }, 0)),
-        f(e, t, n)
+        _(e, t, n)
     );
 }
