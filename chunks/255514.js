@@ -25,15 +25,15 @@ var r = n(951288),
     Z = n(763431),
     S = n(234937),
     T = n(473121),
-    N = n(497954),
-    P = n(449413),
+    P = n(497954),
+    N = n(449413),
     E = n(266080),
     k = n(316617),
     w = n(15682),
-    D = n(189472),
-    R = n(749534),
-    A = n(157759),
-    M = n(521332),
+    R = n(189472),
+    D = n(749534),
+    M = n(157759),
+    A = n(521332),
     B = n(680050),
     L = n(905434),
     U = n(196627),
@@ -129,7 +129,7 @@ let et = (e) => {
             [t, e_, em, ec, ey, eC],
         ),
         eT = i.useMemo(() => (0, _.VP)(e_, em, ec, eC, ey), [e_, em, ec, eC, ey]),
-        eN = function (e, t) {
+        eP = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = J({}, eC);
             (r[e] = {
@@ -138,7 +138,7 @@ let et = (e) => {
             }),
                 eI(r);
         },
-        eP = (e) => {
+        eN = (e) => {
             er(eS(e));
         };
     i.useEffect(() => {
@@ -178,9 +178,9 @@ let et = (e) => {
     let eE = (0, u.fW)(et),
         ek = null != $(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name),
         ew = (0, d.U)(),
-        eD = (0, s.PO)("share_with_parent_element"),
-        eR = (0, c.mq)(X.ne.ACTIVE),
-        eA = ew && eR.length > 0 && eD && null != $(t, "share_with_parents");
+        eR = (0, s.PO)("share_with_parent_element"),
+        eD = (0, c.mq)(X.ne.ACTIVE),
+        eM = ew && eD.length > 0 && eR && null != $(t, "share_with_parents");
     return (0, r.jsxs)("div", {
         className: K.container,
         children: [
@@ -195,7 +195,7 @@ let et = (e) => {
                         node: t,
                         isModeratorReport: eg,
                     }),
-                    (0, r.jsx)(P.Z, { node: t }),
+                    (0, r.jsx)(N.Z, { node: t }),
                 ],
             }),
             (0, r.jsxs)(a.hzk, {
@@ -227,15 +227,15 @@ let et = (e) => {
                             return q.O.includes(t);
                         });
                     })(t) &&
-                        (0, r.jsxs)(R.Z, {
+                        (0, r.jsxs)(D.Z, {
                             children: [
                                 ek &&
-                                    (0, r.jsx)(N.Z, {
+                                    (0, r.jsx)(P.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
                                         channelId: eZ,
                                         reportId: eo,
                                     }),
-                                eA && (0, r.jsx)(B.Z, { parents: eR }),
+                                eM && (0, r.jsx)(B.Z, { parents: eD }),
                                 null != $(t, "block_users") &&
                                     ("message" === n.name ||
                                         "first_dm" === n.name ||
@@ -259,7 +259,7 @@ let et = (e) => {
                                         "first_dm" === n.name ||
                                         "user" === n.name ||
                                         "report_to_mod_message" === n.name) &&
-                                    (0, r.jsx)(D.Z, {
+                                    (0, r.jsx)(R.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
                                         channelId: eZ,
                                         reportId: eo,
@@ -284,7 +284,7 @@ let et = (e) => {
                                     }),
                                 null != $(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, r.jsx)(A.Z, {
+                                    (0, r.jsx)(M.Z, {
                                         application: n.record,
                                         reportId: eo,
                                     }),
@@ -293,7 +293,7 @@ let et = (e) => {
                     null != $(t, "settings_upsells") &&
                         ("message" === n.name || "report_to_mod_message" === n.name) &&
                         null != eE &&
-                        (0, r.jsx)(M.Z, {
+                        (0, r.jsx)(A.Z, {
                             settingsUpsells: eE,
                             channelId: n.record.channel_id,
                             onModalClose: ei,
@@ -328,7 +328,7 @@ let et = (e) => {
                         em.length > 0 &&
                         (0, r.jsx)(v.Z, {
                             elements: em,
-                            onChange: eN,
+                            onChange: eP,
                             state: eC,
                         }),
                     Y.includes(n.name) &&
@@ -336,7 +336,7 @@ let et = (e) => {
                         e_.length > 0 &&
                         (0, r.jsx)(O.Z, {
                             elements: e_,
-                            onChange: eN,
+                            onChange: eP,
                             state: eC,
                         }),
                     (0, r.jsxs)("div", {
@@ -344,7 +344,8 @@ let et = (e) => {
                         children: [
                             (0, r.jsx)(b.Z, {
                                 node: t,
-                                onSelectChild: eP,
+                                onSelectChild: eN,
+                                nodeMap: e.nodeMap,
                             }),
                             null != eu && eu.length > 0 ? (0, r.jsx)(y.Z, { elements: eu }) : null,
                         ],
@@ -369,14 +370,14 @@ let et = (e) => {
                             ei();
                             break;
                         case "next":
-                            eP(["", t.target]);
+                            eN(["", t.target]);
                             break;
                         case "submit":
                             eb(!0);
                             let n = ["", e.successNodeId];
                             el(eS(n))
                                 .then(() => {
-                                    ej(""), eP(n);
+                                    ej(""), eN(n);
                                 })
                                 .catch((e) => {
                                     var t;

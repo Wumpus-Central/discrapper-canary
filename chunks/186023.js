@@ -26,11 +26,11 @@ let h = (e) => {
         } = e,
         O = (0, c.Dt)(),
         { nodes: C, root_node_id: I, success_node_id: Z, fail_node_id: S } = n,
-        [T, N] = i.useState(I),
-        [P, E] = i.useState(void 0),
+        [T, P] = i.useState(I),
+        [N, E] = i.useState(void 0),
         [k, w] = i.useState(void 0),
-        [D, R] = i.useState([]),
-        [A, M] = i.useState(void 0),
+        [R, D] = i.useState([]),
+        [M, A] = i.useState(void 0),
         [B, L] = i.useState(void 0),
         U = (0, _.PO)("in_app_report_modal");
     (0, o.ZP)(() => {
@@ -88,7 +88,7 @@ let h = (e) => {
                     r),
                 );
             if (
-                (R([...D, e]),
+                (D([...R, e]),
                 null != c.key && (null == v || v(c.key)),
                 E(void 0),
                 w(void 0),
@@ -103,18 +103,18 @@ let h = (e) => {
                     next_node: c.id,
                 });
             }
-            N(o);
+            P(o);
         },
         W = async (e) => {
             var r;
-            let i = y ? await (0, p.ZD)(n, t, [...D, e]) : await (0, p.fw)(n, t, [...D, e], j),
+            let i = y ? await (0, p.ZD)(n, t, [...R, e]) : await (0, p.fw)(n, t, [...R, e], j),
                 l = null == i || null == (r = i.body) ? void 0 : r.report_id;
-            null != l && M(l), L(C[e.nodeRef].report_type), null == x || x(l);
+            null != l && A(l), L(C[e.nodeRef].report_type), null == x || x(l);
         },
         z = () => {
             var e, n;
-            if (D.length < 1) return;
-            let r = [...D],
+            if (R.length < 1) return;
+            let r = [...R],
                 i = r.pop(),
                 l = null != (n = null == i ? void 0 : i.nodeRef) ? n : I;
             if (t.name === m.b.MESSAGE || t.name === m.b.FIRST_DM) {
@@ -129,8 +129,8 @@ let h = (e) => {
             }
             E(null == i || null == (e = i.multiSelect) ? void 0 : e.state),
                 w(null == i ? void 0 : i.textInput),
-                N(l),
-                R(r),
+                P(l),
+                D(r),
                 null == v || v("..");
         },
         F = i.useMemo(() => {
@@ -173,16 +173,17 @@ let h = (e) => {
                                 node: e,
                                 reportType: t,
                                 reportSubType: B,
-                                history: D,
+                                history: R,
                                 onModalClose: h.onClose,
                                 onSelectChild: G,
                                 onNavigateBack: z,
-                                multiSelect: P,
+                                multiSelect: N,
                                 textInput: k,
                                 successNodeId: Z,
                                 failNodeId: S,
                                 onSubmit: W,
-                                reportId: A,
+                                reportId: M,
+                                nodeMap: C,
                             }),
                         }),
                     },

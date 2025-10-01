@@ -68,6 +68,10 @@ let l = {
             label: "Enable to skip calling the API to skip submitting actual IAR reports",
             category: 3,
         },
+        iar_show_report_sub_type_labels: {
+            label: "Show IAR report sub type labels",
+            category: 3,
+        },
         only_show_preview_app_collections: {
             label: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
             category: 4,
