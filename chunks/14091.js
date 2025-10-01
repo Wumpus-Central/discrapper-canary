@@ -257,6 +257,7 @@ let z = [],
                     {
                         let e = k.intl.formatToPlainString(k.t["E+2azc"], { maxPages: n });
                         return (0, r.jsx)(c.u, {
+                            asContainer: !0,
                             text: e,
                             children: t,
                         });

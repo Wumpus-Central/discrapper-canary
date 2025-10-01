@@ -189,6 +189,7 @@ function O() {
 function j(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(s.u, {
+        asContainer: !0,
         text: m.intl.formatToPlainString(m.t["4Y3O+P"], { count: t }),
         children: (0, r.jsxs)("div", {
             className: b.totalResultsWrapper,

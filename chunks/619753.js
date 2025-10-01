@@ -129,6 +129,7 @@ function G(e) {
                                 color: "currentColor",
                             }),
                             (0, r.jsx)(o.u, {
+                                asContainer: !0,
                                 text: z,
                                 shouldShow: Y,
                                 children: (0, r.jsxs)("span", {

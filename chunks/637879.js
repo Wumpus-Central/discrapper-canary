@@ -176,6 +176,7 @@ function w(e) {
 function D(e) {
     let { searchContext: t } = e;
     return (0, r.jsx)(s.u, {
+        asContainer: !0,
         text: v.intl.string(v.t.dwAvX1),
         position: "left",
         children: (0, r.jsx)(l.P3F, {
