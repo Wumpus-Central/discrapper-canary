@@ -62,7 +62,7 @@ function w(e) {
                         !H &&
                             (0, r.jsx)(Z.Z, {
                                 userId: t.id,
-                                isVisible: D,
+                                isHovering: D,
                                 onOpenProfile: L,
                             }),
                     ],

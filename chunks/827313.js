@@ -1,37 +1,22 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(681715),
-    s = n(481060),
-    l = n(785717),
-    c = n(531301),
-    u = n(228168),
-    d = n(388032),
-    f = n(205853);
-function _(e) {
-    let { userId: t, isVisible: n, onOpenProfile: i } = e,
-        { note: _ } = (0, c.Z)(t),
-        p = null != _ && "" !== _,
-        h = p ? s.hH0 : s.Wos,
-        m = p ? d.intl.string(d.t["gs+qcH"]) : d.intl.string(d.t["1ZZttr"]),
-        g = p ? _ : d.intl.string(d.t["1ZZttr"]),
-        { trackUserProfileAction: E } = (0, l.KZ)(),
-        b = () => {
-            E({ action: "PRESS_ADD_NOTE" }), null == i || i({ subsection: u.Tb.NOTE });
-        };
-    return (0, r.jsx)(o.u, {
-        asContainer: !0,
-        text: g,
-        children: (0, r.jsx)(s.P3F, {
-            "aria-label": m,
-            onClick: b,
-            className: a()(f.button, n && f.visible),
-            children: (0, r.jsx)(h, {
-                size: "xs",
-                color: "currentColor",
-            }),
-        }),
+var i = n(481060),
+    a = n(531301),
+    o = n(475413),
+    s = n(228168),
+    l = n(388032),
+    c = n(205853);
+function u(e) {
+    let { userId: t, isHovering: n, onOpenProfile: u } = e,
+        { note: d } = (0, a.Z)(t),
+        f = null != d && "" !== d;
+    return (0, r.jsx)(o.y, {
+        action: "PRESS_ADD_NOTE",
+        icon: f ? i.hH0 : i.Wos,
+        tooltipText: f ? d : l.intl.string(l.t["1ZZttr"]),
+        tooltipClassName: f ? c.tooltip : void 0,
+        isHovering: n,
+        onClick: () => (null == u ? void 0 : u({ subsection: s.Tb.NOTE })),
     });
 }
