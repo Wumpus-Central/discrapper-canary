@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => es,
+    Z: () => el,
     a: () => q,
 }),
     n(388685),
@@ -275,37 +275,42 @@ let j = (0, h.Un)({
         name: "SuspendedUserSafetyHubPage",
     }),
     Q = (0, h.Un)({
-        createPromise: () => n.e("10125").then(n.bind(n, 630107)),
+        createPromise: () => Promise.all([n.e("72868"), n.e("10125")]).then(n.bind(n, 630107)),
         webpackId: 630107,
         name: "QuestsLandingPage",
     }),
     J = (0, h.Un)({
+        createPromise: () => Promise.all([n.e("72868"), n.e("41734")]).then(n.bind(n, 792459)),
+        webpackId: 792459,
+        name: "QuestPreviewLandingPage",
+    }),
+    $ = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("58131")]).then(n.bind(n, 531338)),
         webpackId: 531338,
         name: "ConnectionsAuthorizeContinue",
     }),
-    $ = (0, h.Un)({
+    ee = (0, h.Un)({
         createPromise: () => n.e("78449").then(n.bind(n, 684572)),
         webpackId: 684572,
         name: "ApplicationDirectoryRoutes",
     }),
-    ee = (0, h.Un)({
+    et = (0, h.Un)({
         createPromise: () => n.e("20501").then(n.bind(n, 332116)),
         webpackId: 332116,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
     }),
-    et = () => (0, r.jsx)(H, {}),
-    en = new Set([
+    en = () => (0, r.jsx)(H, {}),
+    er = new Set([
         N.Z5c.LOGIN,
         N.Z5c.LOGIN_HANDOFF,
         N.Z5c.INVITE_LOGIN(":inviteCode"),
         N.Z5c.GIFT_CODE_LOGIN(":giftCode"),
         N.Z5c.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
     ]);
-function er(e, t) {
-    return t ? e.filter((e) => !en.has(e)) : e;
+function ei(e, t) {
+    return t ? e.filter((e) => !er.has(e)) : e;
 }
-class ei extends i.Component {
+class ea extends i.Component {
     componentDidMount() {
         C.ZP.cleanupDisplaySleep(), y.Z.initialize();
     }
@@ -346,7 +351,7 @@ class ei extends i.Component {
                                       component: M,
                                   }),
                                   (0, r.jsx)(o.AW, {
-                                      path: er(
+                                      path: ei(
                                           [
                                               N.Z5c.LOGIN,
                                               N.Z5c.REGISTER,
@@ -372,7 +377,7 @@ class ei extends i.Component {
                                       from: N.Z5c.GIFT_CODE(""),
                                       to: N.Z5c.LOGIN,
                                   }),
-                                  (0, r.jsx)(o.AW, { render: et }),
+                                  (0, r.jsx)(o.AW, { render: en }),
                               ],
                           })
                         : (0, r.jsxs)(o.rs, {
@@ -383,7 +388,7 @@ class ei extends i.Component {
                                       render: () => (0, r.jsx)(_.Z, {}),
                                   }),
                                   (0, r.jsx)(o.AW, {
-                                      path: er(
+                                      path: ei(
                                           [
                                               N.Z5c.LOGIN,
                                               N.Z5c.LOGIN_HANDOFF,
@@ -445,6 +450,10 @@ class ei extends i.Component {
                                       },
                                   }),
                                   (0, r.jsx)(p.Z, {
+                                      path: N.Z5c.QUEST_PREVIEW(":questId"),
+                                      component: J,
+                                  }),
+                                  (0, r.jsx)(p.Z, {
                                       path: N.Z5c.HANDOFF,
                                       component: K,
                                   }),
@@ -470,7 +479,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
-                                      component: J,
+                                      component: $,
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.CONNECTIONS_SUCCESS(":type"),
@@ -561,15 +570,15 @@ class ei extends i.Component {
                                       ? null
                                       : (0, r.jsx)(o.AW, {
                                             path: [N.Z5c.APPLICATION_DIRECTORY],
-                                            component: $,
+                                            component: ee,
                                         }),
                                   t
                                       ? null
                                       : (0, r.jsx)(o.AW, {
                                             path: [N.Z5c.GLOBAL_DISCOVERY_APPS],
-                                            component: ee,
+                                            component: et,
                                         }),
-                                  (0, r.jsx)(o.AW, { render: et }),
+                                  (0, r.jsx)(o.AW, { render: en }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.ACCOUNT_REVERT(""),
                                       to: N.Z5c.LOGIN,
@@ -588,26 +597,26 @@ class ei extends i.Component {
         );
     }
 }
-function ea() {
+function eo() {
     let { pathname: e } = (0, o.TH)();
     return null != (0, o.LX)(e, { path: N.Z5c.APPLICATION_DIRECTORY });
 }
-function eo(e) {
-    let t = ea(),
+function es(e) {
+    let t = eo(),
         n = (0, b.h)();
     return (0, r.jsx)(
-        ei,
+        ea,
         x(D({}, e), {
             skipsSettingDefaultPageTitle: t,
             shouldBlockBrowser: n,
         }),
     );
 }
-let es = d.ZP.connectStores(
+let el = d.ZP.connectStores(
     [v.default, g.Z],
     () => ({
         isAuthenticated: v.default.isAuthenticated(),
         migrationStatus: g.Z.getMigrationStatus(),
     }),
     { forwardRef: !0 },
-)(eo);
+)(es);

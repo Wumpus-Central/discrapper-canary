@@ -1,12 +1,13 @@
 n.r(t),
     n.d(t, {
-        enrollAndStartVideoQuestWithErrorHandling: () => er,
+        enrollAndStartVideoQuestWithErrorHandling: () => ea,
         loadVideoQuestModal: () => J,
         maybeShowSurveyForQuest: () => Q,
         navigateToQuestHome: () => q,
         openAppWithQuest: () => et,
+        openAppWithQuestPreview: () => er,
         openDisclosureModal: () => z,
-        openPushToPhoneModal: () => en,
+        openPushToPhoneModal: () => ei,
         openQuestCollectibleRewardModal: () => W,
         openQuestInGameRewardModal: () => H,
         openQuestMinorEnrollmentBlockModal: () => K,
@@ -323,7 +324,7 @@ function $(e) {
     if ((0, g.HJ)(n)) {
         let e = n.config.features.includes(D.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE),
             { enabled: t } = I.S.getCurrentConfig({ location: D.dr.VIDEO_MODAL }, { autoTrackExposure: e });
-        if (t && e) return void en(n);
+        if (t && e) return void ei(n);
     }
     let d = (0, i.Z)();
     if (
@@ -412,6 +413,44 @@ function et(e) {
         });
 }
 function en(e) {
+    var t;
+    let n = null == (t = platform.os) ? void 0 : t.family,
+        r = "quest-preview";
+    if ("Android" === n || "iOS" === n) {
+        let t = _.default.getFingerprint(),
+            n = (0, a.WS)(),
+            i = ""
+                .concat(location.protocol, "//")
+                .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/quest-preview/")
+                .concat(e);
+        return (0, a.ZP)(i, {
+            utmSource: r,
+            fingerprint: t,
+            attemptId: n,
+        });
+    }
+    return "discord://";
+}
+function er(e) {
+    let t = en(e),
+        n = (0, a.zS)(t);
+    null != n &&
+        p.default.track(L.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, o.K)(n.fingerprint),
+            attempt_id: n.attemptId,
+            source: n.utmSource,
+        }),
+        h.Z.launch(t, (t) => {
+            if (!t) {
+                let { enabled: t } = v.m8.getConfig({ location: D.dr.QUEST_DEEP_LINK_UTIL });
+                (0, d.dL)({
+                    pathname: t ? L.Z5c.QUEST_HOME_V2 : L.Z5c.QUEST_HOME,
+                    hash: e,
+                });
+            }
+        });
+}
+function ei(e) {
     (0, s.ZDy)(async () => {
         let { default: t } = await Promise.all([n.e("20680"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
@@ -424,7 +463,7 @@ function en(e) {
             );
     });
 }
-async function er(e, t) {
+async function ea(e, t) {
     let { type: n } = await (0, E.AH)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
