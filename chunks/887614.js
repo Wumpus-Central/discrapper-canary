@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-let u = {};
+let u = Object.create(null);
 function d(e) {
     let { experimentName: t, config: n } = e;
     if (t === s.G) {
@@ -28,7 +28,7 @@ function d(e) {
     (0, o.vE)(t);
 }
 function f() {
-    u = {};
+    u = Object.create(null);
 }
 class _ extends (r = i.ZP.Store) {
     getOne(e) {
