@@ -1,11 +1,14 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => p });
 var r = n(544891),
     i = n(570140),
-    l = n(881052),
-    a = n(960048),
-    o = n(22494),
-    s = n(981631);
-let c = {
+    l = n(232567),
+    a = n(881052),
+    o = n(621853),
+    s = n(594174),
+    c = n(960048),
+    u = n(22494),
+    d = n(981631);
+let p = {
     async fetchWishlist(e) {
         i.Z.dispatch({
             type: "WISHLIST_FETCH_START",
@@ -14,12 +17,12 @@ let c = {
         try {
             var t;
             let n = await r.tn.get({
-                url: s.ANM.USER_WISHLIST(e),
+                url: d.ANM.USER_WISHLIST(e),
                 rejectWithError: !0,
             });
             (null == (t = n.body) ? void 0 : t.wishlist_items) == null &&
-                a.Z.captureMessage("Wishlist items not found in response");
-            let l = o.Z.fromServer(n.body);
+                c.Z.captureMessage("Wishlist items not found in response");
+            let l = u.Z.fromServer(n.body);
             i.Z.dispatch({
                 type: "WISHLIST_FETCH_SUCCESS",
                 wishlistId: e,
@@ -29,19 +32,20 @@ let c = {
             i.Z.dispatch({
                 type: "WISHLIST_FETCH_FAILURE",
                 wishlistId: e,
-                error: new l.Hx(t),
+                error: new a.Hx(t),
             }),
-                a.Z.captureException(t);
+                c.Z.captureException(t);
         }
     },
     async addSkuToWishlist(e) {
+        let t = null;
         try {
-            let t = await r.tn.post({
-                    url: s.ANM.USER_WISHLIST_ITEMS,
-                    body: { sku_id: e },
-                    rejectWithError: !0,
-                }),
-                n = o.Z.fromServer(t.body);
+            t = await r.tn.post({
+                url: d.ANM.USER_WISHLIST_ITEMS,
+                body: { sku_id: e },
+                rejectWithError: !0,
+            });
+            let n = u.Z.fromServer(t.body);
             i.Z.dispatch({
                 type: "WISHLIST_ADD_SKU_SUCCESS",
                 wishlistId: n.id,
@@ -53,19 +57,25 @@ let c = {
                 (i.Z.dispatch({
                     type: "WISHLIST_ADD_SKU_FAILURE",
                     skuId: e,
-                    error: new l.Hx(t),
+                    error: new a.Hx(t),
                 }),
                 t)
             );
         }
+        if (null == t) return;
+        let n = s.default.getCurrentUser();
+        if (null != n && null == o.Z.getFirstWishlistId(n.id))
+            try {
+                await (0, l.In)(n.id);
+            } catch (e) {}
     },
     async removeSkuFromWishlist(e, t) {
         try {
             let n = await r.tn.del({
-                    url: s.ANM.USER_WISHLIST_ITEM(e, t),
+                    url: d.ANM.USER_WISHLIST_ITEM(e, t),
                     rejectWithError: !0,
                 }),
-                l = o.Z.fromServer(n.body);
+                l = u.Z.fromServer(n.body);
             i.Z.dispatch({
                 type: "WISHLIST_REMOVE_SKU_SUCCESS",
                 wishlistId: e,
@@ -78,7 +88,7 @@ let c = {
                     type: "WISHLIST_REMOVE_SKU_FAILURE",
                     wishlistId: e,
                     skuId: t,
-                    error: new l.Hx(n),
+                    error: new a.Hx(n),
                 }),
                 n)
             );
