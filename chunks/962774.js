@@ -1,7 +1,7 @@
 n.d(t, {
     Y9: () => i,
     kd: () => s,
-    qE: () => c,
+    qE: () => o,
 }),
     n(388685);
 var a = n(660815);
@@ -117,12 +117,6 @@ let s = [
         l("12", "Portkey Test #12"),
     ],
     o = [
-        "Launch Minecraft.",
-        'Click "Multiplayer".',
-        'Click "Add Server".',
-        "Paste the server's IP address, found below.",
-    ],
-    c = [
         {
             id: "1",
             gameId: "1",
@@ -136,7 +130,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "1",
         },
@@ -153,7 +146,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "2",
         },
@@ -170,7 +162,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "3",
         },
@@ -187,7 +178,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "4",
         },
@@ -204,7 +194,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "5",
         },
@@ -221,7 +210,6 @@ let s = [
             maxConnectionsCount: 10,
             status: a.V.ONLINE,
             serverIP: "127.0.0.1",
-            instructions: o,
             gameServerPanelUrl: "https://google.com",
             entitlementId: "6",
         },

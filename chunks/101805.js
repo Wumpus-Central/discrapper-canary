@@ -1,4 +1,5 @@
 function r(e) {
+    var t;
     return {
         id: e.id,
         name: e.name,
@@ -6,6 +7,7 @@ function r(e) {
         regionName: e.region_name,
         planId: e.sku_id,
         planName: e.plan_name,
+        onlineConnectionsCount: null != (t = e.players_count) ? t : 0,
         maxConnectionsCount: e.max_players_count,
         serverIP: e.ip,
         port: e.port,
@@ -13,8 +15,6 @@ function r(e) {
         gameServerPanelUrl: e.provider_url,
         status: e.status,
         gameId: e.game_id,
-        onlineConnectionsCount: 0,
-        instructions: [],
     };
 }
 n.d(t, { Z: () => r });

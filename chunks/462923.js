@@ -20,9 +20,9 @@ var a = t(951288),
     h = t(340887),
     O = t(408629),
     y = t(921944),
-    C = t(401561),
+    C = t(440589),
     N = t(388032),
-    I = t(842788);
+    I = t(799427);
 function P(e) {
     let { guildId: n, instance: t } = e,
         i = (0, _.Z)(t),
@@ -92,12 +92,18 @@ function P(e) {
                                                 }),
                                                 (0, a.jsx)(d.Text, {
                                                     variant: "text-sm/medium",
-                                                    children:
-                                                        0 === t.maxConnectionsCount
-                                                            ? "\u2014\u2014\u2014"
-                                                            : ""
-                                                                  .concat(t.onlineConnectionsCount, " / ")
-                                                                  .concat(t.maxConnectionsCount),
+                                                    children: ""
+                                                        .concat(
+                                                            null != t.onlineConnectionsCount
+                                                                ? t.onlineConnectionsCount
+                                                                : "\u2014\u2014\u2014",
+                                                            " / ",
+                                                        )
+                                                        .concat(
+                                                            null != t.maxConnectionsCount
+                                                                ? t.maxConnectionsCount
+                                                                : "\u2014\u2014\u2014",
+                                                        ),
                                                 }),
                                             ],
                                         }),
