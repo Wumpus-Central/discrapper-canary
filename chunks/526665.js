@@ -1,51 +1,57 @@
 n.d(t, {
-    KV: () => s,
-    NT: () => l,
-    gj: () => o,
-    wy: () => a,
-    yP: () => i,
+    KV: () => c,
+    NT: () => u,
+    gj: () => l,
+    wy: () => s,
+    yP: () => o,
 });
-let r = (0, n(818083).B)({
+var r = n(427164);
+let i = (0, r.le)({
+        name: "2025-09-user-settings-redesign-1",
         kind: "user",
-        id: "2025-06_user_settings_redesign",
-        label: "User Settings Redesign",
         defaultConfig: {
             enabled: !1,
-            showRedesignedNotifications: !1,
             showLegacyOpen: !1,
         },
-        treatments: [
-            {
-                id: 1,
-                label: "Enable user settings redesign with legacy notifications",
-                config: {
-                    enabled: !0,
-                    showRedesignedNotifications: !1,
-                    showLegacyOpen: !1,
-                },
+        variations: {
+            0: {
+                enabled: !1,
+                showLegacyOpen: !1,
             },
-            {
-                id: 2,
-                label: "Enable user settings redesign with new notifications page",
-                config: {
-                    enabled: !0,
-                    showRedesignedNotifications: !0,
-                    showLegacyOpen: !1,
-                },
+            1: {
+                enabled: !0,
+                showLegacyOpen: !1,
             },
-            {
-                id: 3,
-                label: "Enable user settings redesign with legacy open",
-                config: {
-                    enabled: !0,
-                    showRedesignedNotifications: !1,
-                    showLegacyOpen: !0,
-                },
+            2: {
+                enabled: !0,
+                showLegacyOpen: !0,
             },
-        ],
+        },
     }),
-    i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
-    a = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-    o = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showRedesignedNotifications,
-    s = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).showRedesignedNotifications,
-    l = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showLegacyOpen;
+    a = (0, r.le)({
+        name: "2025-09-user-settings-redesign-2a",
+        kind: "user",
+        defaultConfig: {
+            showRedesignedNotifications: !1,
+            showRedesignedVoiceAndVideo: !1,
+        },
+        variations: {
+            0: {
+                showRedesignedNotifications: !1,
+                showRedesignedVoiceAndVideo: !1,
+            },
+            1: {
+                showRedesignedNotifications: !0,
+                showRedesignedVoiceAndVideo: !0,
+            },
+        },
+    }),
+    o = (e) => i.getConfig({ location: e }).enabled,
+    s = (e) => i.useConfig({ location: e }).enabled,
+    l = (e) => {
+        let t = s(e),
+            n = a.useConfig({ location: e }).showRedesignedNotifications;
+        return t && n;
+    },
+    c = (e) => !!o(e) && a.getConfig({ location: e }).showRedesignedNotifications,
+    u = (e) => i.useConfig({ location: e }).showLegacyOpen;

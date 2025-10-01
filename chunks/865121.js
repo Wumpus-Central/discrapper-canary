@@ -12,5 +12,5 @@ let c = (0, l.m7)(s.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
     onClick: () => {
         (0, o.default)(), r.Z.open();
     },
-    usePredicate: () => (0, a.NT)() || u.Z.isDeveloper,
+    usePredicate: () => (0, a.NT)("LegacySettingsSidebarItem") || u.Z.isDeveloper,
 });

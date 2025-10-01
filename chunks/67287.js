@@ -10,5 +10,5 @@ var i = n(509613),
 let d = (0, i.vB)(l.n.DEVELOPER_SECTION, {
     useLabel: () => c.intl.string(c.t.CbItOD),
     buildLayout: () => [a.Z, s.Z, o.Z],
-    usePredicate: () => (0, u.NT)() || r.Z.isDeveloper,
+    usePredicate: () => (0, u.NT)("DeveloperSection") || r.Z.isDeveloper,
 });
