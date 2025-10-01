@@ -13066,6 +13066,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border-radius: var(--radius-sm);
     box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
     box-sizing: border-box;
+    color: var(--text-default);
     display: flex;
     gap: var(--space-8);
     max-width: 200px;
@@ -13111,6 +13112,15 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .caretIcon__4e35b .caretStroke__4e35b {
     stroke: var(--border-subtle);
     stroke-opacity: 1
+}
+
+.tooltipWithShortcut__4e35b {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    text-align: center
 }
 
 .caret__5bc6a {
