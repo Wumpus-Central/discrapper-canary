@@ -57,6 +57,7 @@ function _(e) {
                         E &&
                             (0, r.jsx)(o.zxk, {
                                 variant: "primary",
+                                size: "sm",
                                 icon: o.EOn,
                                 text: m.intl.string(m.t.ZbS4QE),
                                 onClick: I,
