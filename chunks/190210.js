@@ -16,7 +16,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(786920),
+    c = n(137317),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -48,8 +48,8 @@ var r = n(951288),
     D = n(127654),
     U = n(746877),
     B = n(541716),
-    F = n(667829),
-    H = n(258696),
+    H = n(667829),
+    F = n(258696),
     V = n(893718),
     G = n(273031),
     z = n(303628),
@@ -58,8 +58,8 @@ var r = n(951288),
     Y = n(224837),
     K = n(200299),
     X = n(388032),
-    J = n(593514),
-    Q = n(564355);
+    J = n(310069),
+    Q = n(744114);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -185,10 +185,10 @@ let er = i.memo(
                 isPendingMember: eD,
                 disabled: eU,
                 canAttachFiles: eB,
-                canEveryoneSendMessages: eF,
+                canEveryoneSendMessages: eH,
             } = (0, V.TE)(k, D, ek, I),
-            eH = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
-            eV = !eH || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+            eF = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
+            eV = !eF || !(null == (n = D.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
             eG = (0, T.Z)(),
             { fontSize: ez } = (0, d.cj)([y.Z], () => ({
                 fontSize: y.Z.fontSize,
@@ -316,15 +316,12 @@ let er = i.memo(
                     ),
                 };
             })(e$, eA, eV),
-            {
-                expressionPickerView: e5,
-                shouldHideExpressionPicker: e9,
-                handleAutocompleteVisibilityChange: te,
-                handleOuterClick: tt,
-            } = (0, V.iV)(D, eY, ew),
-            tn = (0, V.ae)(ew),
-            tr = (0, V.Sg)(eJ, D, ew),
-            ti = (0, V.O1)({
+            { expressionPickerView: e5, shouldHideExpressionPicker: e9, handleOuterClick: te } = (0, V.iV)(D, ew),
+            tt = (0, V.aT)(p),
+            { isAutocompleteVisible: tn, handleAutocompleteVisibilityChange: tr } = (0, V.vB)(),
+            ti = (0, V.ae)(ew),
+            tl = (0, V.Sg)(eJ, D, ew),
+            ta = (0, V.O1)({
                 editorRef: ew,
                 disabled: eU,
                 textValue: p,
@@ -333,35 +330,35 @@ let er = i.memo(
                 submit: eX,
             });
         (0, U.S)(eY, k.guild_id, k.id);
-        let [tl, ta] = i.useState(!1),
-            to = G || tl || p.length > 0 || null != eP || eS.length > 0,
-            { editorHeaderHeight: ts, paddingTop: tc } = (0, f.q_F)({
-                editorHeaderHeight: 122 * !!to,
-                paddingTop: 16 * !!to,
+        let [to, ts] = i.useState(!1),
+            tc = G || to || p.length > 0 || null != eP || eS.length > 0,
+            { editorHeaderHeight: tu, paddingTop: td } = (0, f.q_F)({
+                editorHeaderHeight: 122 * !!tc,
+                paddingTop: 16 * !!tc,
                 config: {
                     tension: 120,
                     friction: 15,
                     clamp: !0,
                 },
             }),
-            tu = i.useRef(null),
-            [td, tp] = i.useState(!1),
-            th = i.useRef(!1),
-            tf = i.useCallback(() => {
-                th.current = !0;
-                let e = setTimeout(() => {
-                    th.current && tp(!0);
-                }, 100);
-                return () => clearTimeout(e);
-            }, []),
-            tm = i.useCallback(() => {
-                th.current = !1;
-                let e = setTimeout(() => {
-                    th.current || tp(!1);
-                }, 100);
-                return () => clearTimeout(e);
-            }, []),
+            tp = i.useRef(null),
+            [th, tf] = i.useState(!1),
+            tm = i.useRef(!1),
             tg = i.useCallback(() => {
+                tm.current = !0;
+                let e = setTimeout(() => {
+                    tm.current && tf(!0);
+                }, 100);
+                return () => clearTimeout(e);
+            }, []),
+            tb = i.useCallback(() => {
+                tm.current = !1;
+                let e = setTimeout(() => {
+                    tm.current || tf(!1);
+                }, 100);
+                return () => clearTimeout(e);
+            }, []),
+            ty = i.useCallback(() => {
                 var e;
                 if (null == eP) return;
                 let t =
@@ -378,7 +375,7 @@ let er = i.memo(
                     (0, r.jsxs)("div", {
                         ref: eN,
                         className: a()(b, Q.channelTextArea),
-                        onMouseDown: tt,
+                        onMouseDown: te,
                         children: [
                             (0, r.jsx)("div", {
                                 ref: eM,
@@ -393,14 +390,14 @@ let er = i.memo(
                                                 (0, r.jsxs)(c.animated.div, {
                                                     className: J.headerInput,
                                                     style: {
-                                                        height: ts,
-                                                        paddingTop: tc,
+                                                        height: tu,
+                                                        paddingTop: td,
                                                     },
                                                     children: [
                                                         null != eP
                                                             ? (0, r.jsx)(el, {
                                                                   file: eP,
-                                                                  onRemoveHeroImage: tg,
+                                                                  onRemoveHeroImage: ty,
                                                               })
                                                             : null,
                                                         null != eP
@@ -409,11 +406,11 @@ let er = i.memo(
                                                                   channel: k,
                                                                   onImageUploaded: (e) =>
                                                                       (0, O.c)(k.id, { heroFile: e }),
-                                                                  onFocus: () => ta(!0),
+                                                                  onFocus: () => ts(!0),
                                                               }),
                                                         (0, r.jsx)("input", {
-                                                            onFocus: () => ta(!0),
-                                                            onBlur: () => ta(!1),
+                                                            onFocus: () => ts(!0),
+                                                            onBlur: () => ts(!1),
                                                             maxLength: 140,
                                                             className: J.titleInput,
                                                             placeholder: X.intl.string(X.t.Z8fYjI),
@@ -427,18 +424,18 @@ let er = i.memo(
                                                     children: (0, r.jsx)(f.tEY, {
                                                         ringTarget: eN,
                                                         ringClassName: Q.focusRing,
-                                                        children: (0, r.jsx)(F.Z, {
+                                                        children: (0, r.jsx)(H.Z, {
                                                             ref: ew,
                                                             id: E,
                                                             focused: G,
-                                                            useSlate: eH,
+                                                            useSlate: eF,
                                                             textValue: p,
                                                             richValue: h,
                                                             disabled: eU,
                                                             placeholder: eg,
                                                             required: P,
                                                             accessibilityLabel: Z,
-                                                            isPreviewing: (eL || eD) && eF,
+                                                            isPreviewing: (eL || eD) && eH,
                                                             channel: k,
                                                             type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eB,
@@ -462,6 +459,8 @@ let er = i.memo(
                                                             fontSize: ez,
                                                             spellcheckEnabled: eW,
                                                             canOnlyUseTextCommands: !1,
+                                                            isEditorIdle: tt,
+                                                            isAutocompleteVisible: tn,
                                                             "aria-labelledby": ey,
                                                         }),
                                                     }),
@@ -489,7 +488,7 @@ let er = i.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, r.jsx)(ea, { channel: k }),
-                                            (0, r.jsx)(H.Z, {
+                                            (0, r.jsx)(F.Z, {
                                                 type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eU,
                                                 channel: k,
@@ -502,18 +501,18 @@ let er = i.memo(
                                     (0, r.jsx)("div", {
                                         className: J.footerPart,
                                         children: (0, r.jsx)("div", {
-                                            ref: tu,
+                                            ref: tp,
                                             className: J.sendButtonContainer,
-                                            onMouseEnter: tf,
-                                            onMouseLeave: tm,
+                                            onMouseEnter: tg,
+                                            onMouseLeave: tb,
                                             children: (0, r.jsx)(f.yRy, {
-                                                targetElementRef: tu,
+                                                targetElementRef: tp,
                                                 renderPopout: () =>
                                                     (0, r.jsx)(ei, {
                                                         channelId: k.id,
                                                         canCreateThread: eq,
                                                     }),
-                                                shouldShow: td,
+                                                shouldShow: th,
                                                 autoInvert: !0,
                                                 nudgeAlignIntoViewport: !0,
                                                 position: "top",
@@ -574,17 +573,18 @@ let er = i.memo(
                                 channel: k,
                                 canMentionRoles: eh,
                                 canMentionChannels: ef,
-                                useNewSlashCommands: eH,
+                                useNewSlashCommands: eF,
                                 canOnlyUseTextCommands: !1,
                                 canSendStickers: !0,
                                 textValue: p,
                                 focused: G,
+                                isEditorIdle: tt,
                                 expressionPickerView: e5,
                                 type: D,
                                 editorRef: ew,
                                 onSendMessage: eJ,
                                 onSendSticker: () => {},
-                                onVisibilityChange: te,
+                                onVisibilityChange: tr,
                                 editorHeight: e3,
                                 setValue: (e, t) => (null == K ? void 0 : K(null, e, t)),
                                 position: e_,
@@ -597,9 +597,9 @@ let er = i.memo(
                         : (0, r.jsx)(S.Z, {
                               positionTargetRef: eN,
                               type: D,
-                              onSelectGIF: tr,
-                              onSelectEmoji: tn,
-                              onSelectSticker: ti,
+                              onSelectGIF: tl,
+                              onSelectEmoji: ti,
+                              onSelectSticker: ta,
                               channel: k,
                               closeOnModalOuterClick: eO,
                               parentModalKey: ej,

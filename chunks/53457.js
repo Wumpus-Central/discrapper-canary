@@ -13,4 +13,6 @@ e.exports = {
     erroredPill: "erroredPill__1464f",
     newLine: "newLine__1464f",
     gameMention: "gameMention__1464f",
+    mentionSuggestion: "mentionSuggestion__1464f",
+    mentionSuggestionSimpleColorVariant: "mentionSuggestionSimpleColorVariant__1464f",
 };

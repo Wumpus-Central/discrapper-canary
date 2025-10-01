@@ -10,6 +10,7 @@ n.d(t, {
     Fg: () => J,
     G6: () => e_,
     H1: () => L,
+    HV: () => e1,
     I0: () => M,
     JG: () => eZ,
     JN: () => er,
@@ -1013,4 +1014,13 @@ let eQ = (0, f.Zc)(
                 (0, r.mapValues)(e, (e) => o.wA.create({ value: null != e ? String(e) : void 0 })),
             ),
         { delay: h.fy.AUTOMATED },
+    ),
+    e1 = (0, f.Zc)(
+        "textAndImages",
+        "showMentionSuggestions",
+        (e) => {
+            var t;
+            return null == (t = null == e ? void 0 : e.value) || t;
+        },
+        (e) => o.D5.create({ value: e }),
     );

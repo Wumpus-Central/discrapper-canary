@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(873546),
     i = n(703558);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -70,6 +70,7 @@ let d = {
             addReactionShortcut: !0,
             forceChatLayer: !0,
             reactions: !0,
+            mentionSuggestions: !0,
         },
         commands: { enabled: !0 },
         confetti: { button: !0 },
@@ -112,6 +113,7 @@ let d = {
         autocomplete: {
             addReactionShortcut: !0,
             forceChatLayer: !0,
+            mentionSuggestions: !0,
         },
         confetti: { button: !0 },
         drafts: {
@@ -146,7 +148,10 @@ let d = {
     _ = {
         analyticsName: "sidebar",
         attachments: !0,
-        autocomplete: { addReactionShortcut: !0 },
+        autocomplete: {
+            addReactionShortcut: !0,
+            mentionSuggestions: !0,
+        },
         commands: { enabled: !0 },
         confetti: { button: !0 },
         disableAutoFocus: !0,
@@ -178,6 +183,7 @@ let d = {
     },
     p = {
         analyticsName: "edit",
+        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
         soundmoji: { allowSending: !0 },
@@ -229,6 +235,7 @@ let d = {
     g = {
         analyticsName: "thread_creation",
         attachments: !0,
+        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.d.FirstThreadMessage },
         emojis: { button: !0 },
         gifs: { allowSending: !0 },
@@ -245,7 +252,7 @@ let d = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 },
     },
-    E = l(a({}, d), {
+    E = l(o({}, d), {
         analyticsName: "create_announcement_post",
         stickers: { allowSending: !1 },
         gifts: {},
@@ -257,6 +264,7 @@ let d = {
     b = {
         analyticsName: "create_forum_post",
         attachments: !0,
+        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.d.FirstThreadMessage },
         gifs: { allowSending: !0 },
         stickers: { allowSending: !0 },
@@ -450,6 +458,7 @@ let d = {
             autocomplete: {
                 alwaysUseLayer: !0,
                 small: !0,
+                mentionSuggestions: !0,
             },
             disableAutoFocus: !0,
             showCharacterCount: !0,

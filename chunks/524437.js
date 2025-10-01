@@ -21,7 +21,7 @@ n.d(t, {
     bE: () => ep,
     c$: () => tn,
     dp: () => te,
-    f9: () => L,
+    f9: () => x,
     hg: () => T,
     l1: () => S,
     n9: () => A,
@@ -287,7 +287,7 @@ class w extends o.C {
                     a.versions = c.L.internalBinaryRead(e, e.uint32(), n, a.versions);
                     break;
                 case 2:
-                    a.inbox = L.internalBinaryRead(e, e.uint32(), n, a.inbox);
+                    a.inbox = x.internalBinaryRead(e, e.uint32(), n, a.inbox);
                     break;
                 case 3:
                     a.guilds = M.internalBinaryRead(e, e.uint32(), n, a.guilds);
@@ -323,7 +323,7 @@ class w extends o.C {
                     a.appearance = eN.internalBinaryRead(e, e.uint32(), n, a.appearance);
                     break;
                 case 14:
-                    a.guildFolders = eL.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
+                    a.guildFolders = ex.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
                     break;
                 case 15:
                     a.favorites = eU.internalBinaryRead(e, e.uint32(), n, a.favorites);
@@ -347,7 +347,7 @@ class w extends o.C {
                     a.safetySettings = e2.internalBinaryRead(e, e.uint32(), n, a.safetySettings);
                     break;
                 case 22:
-                    a.icymiSettings = e6.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
+                    a.icymiSettings = e5.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
                     break;
                 case 23:
                     a.applications = e7.internalBinaryRead(e, e.uint32(), n, a.applications);
@@ -372,7 +372,7 @@ class w extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
-            e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.inbox && x.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.guilds && M.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             e.userContent && X.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && en.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
@@ -384,7 +384,7 @@ class w extends o.C {
             e.status && ey.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eN.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
-            e.guildFolders && eL.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
+            e.guildFolders && ex.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eU.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
                 eH.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
@@ -395,7 +395,7 @@ class w extends o.C {
             e.safetySettings &&
                 e2.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
             e.icymiSettings &&
-                e6.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
+                e5.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
             e.applications && e7.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(),
             e.ads && to.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
@@ -415,7 +415,7 @@ class w extends o.C {
                 no: 2,
                 name: "inbox",
                 kind: "message",
-                T: () => L,
+                T: () => x,
             },
             {
                 no: 3,
@@ -487,7 +487,7 @@ class w extends o.C {
                 no: 14,
                 name: "guild_folders",
                 kind: "message",
-                T: () => eL,
+                T: () => ex,
             },
             {
                 no: 15,
@@ -535,7 +535,7 @@ class w extends o.C {
                 no: 22,
                 name: "icymi_settings",
                 kind: "message",
-                T: () => e6,
+                T: () => e5,
             },
             {
                 no: 23,
@@ -559,7 +559,7 @@ class w extends o.C {
     }
 }
 let D = new w();
-class x extends o.C {
+class L extends o.C {
     create(e) {
         let t = {
             currentTab: 0,
@@ -621,7 +621,7 @@ class x extends o.C {
         ]);
     }
 }
-let L = new x();
+let x = new L();
 class j extends o.C {
     create(e) {
         let t = { guilds: {} };
@@ -2143,6 +2143,9 @@ class ec extends o.C {
                 case 33:
                     a.defaultReactionEmoji = tu.internalBinaryRead(e, e.uint32(), n, a.defaultReactionEmoji);
                     break;
+                case 34:
+                    a.showMentionSuggestions = s.D5.internalBinaryRead(e, e.uint32(), n, a.showMentionSuggestions);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2228,7 +2231,9 @@ class ec extends o.C {
             e.goreContentSettings &&
                 eo.internalBinaryWrite(e.goreContentSettings, t.tag(32, r.TD.LengthDelimited).fork(), n).join(),
             e.defaultReactionEmoji &&
-                tu.internalBinaryWrite(e.defaultReactionEmoji, t.tag(33, r.TD.LengthDelimited).fork(), n).join();
+                tu.internalBinaryWrite(e.defaultReactionEmoji, t.tag(33, r.TD.LengthDelimited).fork(), n).join(),
+            e.showMentionSuggestions &&
+                s.D5.internalBinaryWrite(e.showMentionSuggestions, t.tag(34, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2428,6 +2433,12 @@ class ec extends o.C {
                 name: "default_reaction_emoji",
                 kind: "message",
                 T: () => tu,
+            },
+            {
+                no: 34,
+                name: "show_mention_suggestions",
+                kind: "message",
+                T: () => s.D5,
             },
         ]);
     }
@@ -3850,7 +3861,7 @@ class ew extends o.C {
     }
 }
 let eD = new ew();
-class ex extends o.C {
+class eL extends o.C {
     create(e) {
         let t = {
             folders: [],
@@ -3921,7 +3932,7 @@ class ex extends o.C {
         ]);
     }
 }
-let eL = new ex();
+let ex = new eL();
 class ej extends o.C {
     create(e) {
         let t = { guildIds: [] };
@@ -4857,8 +4868,8 @@ class e8 extends o.C {
         ]);
     }
 }
-let e6 = new e8();
-class e5 extends o.C {
+let e5 = new e8();
+class e6 extends o.C {
     create(e) {
         let t = { appSettings: {} };
         return (
@@ -4934,7 +4945,7 @@ class e5 extends o.C {
         ]);
     }
 }
-let e7 = new e5();
+let e7 = new e6();
 class e9 extends o.C {
     create(e) {
         let t = {};

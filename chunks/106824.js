@@ -86,8 +86,9 @@ class g extends r.EventEmitter {
                 this.props.currentWordIsAtStart !== e.currentWordIsAtStart ||
                 this.props.fullWord !== e.fullWord ||
                 this.props.textValue !== e.textValue ||
-                this.props.optionText !== e.optionText;
-        if (((this.props = e), n || r))
+                this.props.optionText !== e.optionText,
+            i = this.props.isEditorIdle !== e.isEditorIdle;
+        if (((this.props = e), n || r || i))
             this.updateResults(r, n),
                 this.state.didInitialQuery || (this.state = p(f({}, this.state), { didInitialQuery: !0 }));
         else if (t) {
@@ -99,11 +100,15 @@ class g extends r.EventEmitter {
         this.setState({ selectedIndex: e });
     }
     onTabOrEnter(e) {
-        if (!this.state.isVisible) return !1;
+        var t, n;
+        if (
+            !this.state.isVisible ||
+            ((null == (t = this.state.query) ? void 0 : t.typeInfo.selectMode) === c.W7.TAB_ONLY && e)
+        )
+            return !1;
         if (null == this.state.selectedIndex) {
-            var t;
-            let n = null == (t = this.state.query) ? void 0 : t.typeInfo.focusMode;
-            return !e && (n === c.QZ.MANUAL || n === c.QZ.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
+            let t = null == (n = this.state.query) ? void 0 : n.typeInfo.focusMode;
+            return !e && (t === c.QZ.MANUAL || t === c.QZ.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
         }
         return this.selectResult(this.state.selectedIndex, e, !0);
     }
@@ -151,7 +156,7 @@ class g extends r.EventEmitter {
             i = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             d = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == this.props.editorRef.current) return;
-        let f = (0, u.FW)(this.props),
+        let f = (0, u.FW)(this.props, this.state),
             _ = this.props.editorRef.current.getSlateEditor();
         null != _ &&
             (r =

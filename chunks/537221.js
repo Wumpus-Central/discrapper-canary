@@ -23,4 +23,8 @@ e.exports = {
     autocompleteRowVerticalSmall: "autocompleteRowVerticalSmall__13533",
     roleDot: "roleDot__13533",
     autocompletePlaceholder: "autocompletePlaceholder__13533",
+    autocompleteContentWrapper: "autocompleteContentWrapper__13533",
+    autoCompleteRowSuggestion: "autoCompleteRowSuggestion__13533 autocompleteRowVertical__13533 autocompleteRow__13533",
+    keyComboContainer: "keyComboContainer__13533",
+    verticalLayout: "verticalLayout__13533",
 };

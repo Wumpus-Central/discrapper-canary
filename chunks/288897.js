@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -13,14 +13,12 @@ var r = n(951288),
     p = n(789952),
     h = n(436660),
     m = n(887490),
-    g = n(77224),
-    E = n(135223),
-    b = n(704875),
-    y = n(653309),
-    O = n(981631),
-    v = n(115488),
-    I = n(430864);
-function T(e, t, n) {
+    g = n(704875),
+    E = n(653309),
+    b = n(981631),
+    y = n(155857),
+    O = n(602009);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +42,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,22 +59,22 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +82,7 @@ function N(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,7 +91,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class P extends i.PureComponent {
+class N extends i.PureComponent {
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
     }
@@ -108,25 +106,20 @@ class P extends i.PureComponent {
     componentDidCatch(e, t) {
         d.Z.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
     }
-    decorate(e) {
-        var t;
-        let { editor: n, guildId: r, decorateExtra: i } = this.props;
-        return [...(0, E.Z)(n, e, r), ...(0, g.Z)(n, e), ...(null != (t = null == i ? void 0 : i(n, e)) ? t : [])];
-    }
     renderElement(e) {
         var t;
         let { guildId: n, channelId: i, renderExtraElement: a } = this.props,
             { attributes: o, children: s } = e;
-        "rtl" === o.dir && (o.style = C(S({}, o.style), { textAlign: "right" }));
-        let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, b.Z)(e, n, i);
-        return null != l ? l : (0, r.jsx)("div", C(S({}, o), { children: s }));
+        "rtl" === o.dir && (o.style = S(I({}, o.style), { textAlign: "right" }));
+        let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, g.Z)(e, n, i);
+        return null != l ? l : (0, r.jsx)("div", S(I({}, o), { children: s }));
     }
     renderLeaf(e) {
         var t;
         let { editor: n, renderExtraLeaf: i } = this.props,
             { attributes: a, children: o } = e,
-            s = null != (t = null == i ? void 0 : i(e)) ? t : (0, y.Z)(n, e);
-        return null != s ? s : (0, r.jsx)("span", C(S({}, a), { children: o }));
+            s = null != (t = null == i ? void 0 : i(e)) ? t : (0, E.Z)(n, e);
+        return null != s ? s : (0, r.jsx)("span", S(I({}, a), { children: o }));
     }
     handleOnChange() {
         var e, t;
@@ -338,7 +331,7 @@ class P extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            C(S({}, n), {
+                            S(I({}, n), {
                                 editor: t,
                                 text: m.bN.getSelectedText(t, !0),
                             }),
@@ -346,7 +339,7 @@ class P extends i.PureComponent {
                 },
                 {
                     align: o,
-                    enableSpellCheck: i === O.IlC.APP,
+                    enableSpellCheck: i === b.IlC.APP,
                 },
             );
         } else blur();
@@ -368,24 +361,25 @@ class P extends i.PureComponent {
                 canFocus: a,
                 autoFocus: l,
                 placeholder: c,
-                channelId: u,
-                guildId: d,
-                onChange: f,
-                onFocus: _,
-                onBlur: p,
-                onKeyDown: h,
-                onKeyUp: m,
-                decorateExtra: g,
+                decorate: u,
+                channelId: d,
+                guildId: f,
+                onChange: _,
+                onFocus: p,
+                onBlur: h,
+                onKeyDown: m,
+                onKeyUp: g,
                 renderExtraElement: E,
                 renderExtraLeaf: b,
             } = e,
-            y = N(e, [
+            v = A(e, [
                 "editor",
                 "className",
                 "containerClassName",
                 "canFocus",
                 "autoFocus",
                 "placeholder",
+                "decorate",
                 "channelId",
                 "guildId",
                 "onChange",
@@ -393,7 +387,6 @@ class P extends i.PureComponent {
                 "onBlur",
                 "onKeyDown",
                 "onKeyUp",
-                "decorateExtra",
                 "renderExtraElement",
                 "renderExtraLeaf",
             ]);
@@ -403,7 +396,7 @@ class P extends i.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, r.jsx)("div", {
-                          className: o()(v.placeholder, n),
+                          className: o()(y.placeholder, n),
                           "aria-hidden": !0,
                           children: c,
                       })
@@ -413,9 +406,9 @@ class P extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(
                         s.CX,
-                        C(S({}, y), {
-                            className: o()(I.markup, v.editor, n),
-                            decorate: this.decorate,
+                        S(I({}, v), {
+                            className: o()(O.markup, y.editor, n),
+                            decorate: u,
                             renderElement: this.renderElement,
                             renderLeaf: this.renderLeaf,
                             onFocusCapture: this.handleFocusCapture,
@@ -440,9 +433,8 @@ class P extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            T(this, "containerRef", i.createRef()),
-            T(this, "state", void 0),
-            (this.decorate = this.decorate.bind(this)),
+            v(this, "containerRef", i.createRef()),
+            v(this, "state", void 0),
             (this.renderElement = this.renderElement.bind(this)),
             (this.renderLeaf = this.renderLeaf.bind(this)),
             (this.handleOnChange = this.handleOnChange.bind(this)),
@@ -466,4 +458,4 @@ class P extends i.PureComponent {
                   });
     }
 }
-let w = P;
+let R = N;

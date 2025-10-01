@@ -5,6 +5,7 @@ n.d(t, {
     QB: () => u,
     QZ: () => _,
     VV: () => a,
+    W7: () => p,
     YP: () => r,
     eq: () => d,
     h3: () => o,
@@ -55,6 +56,7 @@ var a = (function (e) {
     d = (function (e) {
         return (
             (e.MENTIONS = "MENTIONS"),
+            (e.MENTION_SUGGESTIONS = "MENTION_SUGGESTIONS"),
             (e.CHANNELS = "CHANNELS"),
             (e.EMOJIS_AND_STICKERS = "EMOJIS_AND_STICKERS"),
             (e.REACTIONS = "REACTIONS"),
@@ -93,4 +95,7 @@ var a = (function (e) {
             (e[(e.MANUAL = 2)] = "MANUAL"),
             e
         );
+    })({}),
+    p = (function (e) {
+        return (e[(e.NORMAL = 0)] = "NORMAL"), (e[(e.TAB_ONLY = 1)] = "TAB_ONLY"), e;
     })({});

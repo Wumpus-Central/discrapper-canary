@@ -84,6 +84,8 @@ let p = {
     codeBlockSyntax: s.codeBlockSyntax,
     codeBlockLang: s.codeBlockLang,
     subtext: s.subtext,
+    mentionSuggestion: l.mentionSuggestion,
+    mentionSuggestionSimpleColorVariant: l.mentionSuggestionSimpleColorVariant,
 };
 function h(e, t) {
     let n,

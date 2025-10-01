@@ -1399,6 +1399,11 @@ let eB = () => {
                 searchableTitles: [eD.intl.string(eD.t.QgwmV1)],
                 parent: eN.s6.CHAT,
             },
+            [eN.s6.CHAT_MENTION_SUGGESTIONS]: {
+                section: eP.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.uXQ2xc)],
+                parent: eN.s6.CHAT,
+            },
             [eN.s6.NOTIFICATIONS]: {
                 section: eP.oAB.NOTIFICATIONS,
                 searchableTitles: [eD.intl.string(eD.t.HcoRu7)],

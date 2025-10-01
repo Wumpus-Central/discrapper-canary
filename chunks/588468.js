@@ -1,7 +1,7 @@
 n.d(t, {
     DJ: () => Z,
-    ZP: () => es,
-    rp: () => V,
+    ZP: () => el,
+    rp: () => F,
 }),
     n(415506),
     n(953529),
@@ -14,7 +14,7 @@ var r,
     l = n(392711),
     c = n.n(l),
     u = n(91192),
-    d = n(446673),
+    d = n(313666),
     f = n(481060),
     _ = n(607070),
     p = n(895924),
@@ -36,8 +36,8 @@ var r,
     P = n(965386),
     w = n(981631),
     D = n(185923),
-    x = n(388032),
-    L = n(512746);
+    L = n(388032),
+    x = n(537221);
 function j(e, t, n) {
     return (
         t in e
@@ -114,10 +114,10 @@ function B(e, t) {
 function Z(e) {
     return null != e ? "autocomplete-".concat(e) : null;
 }
-function V(e) {
+function F(e) {
     return "autocomplete-".concat(e, "-title");
 }
-let F = a.createContext(null);
+let V = a.createContext(null);
 class H extends a.PureComponent {
     isSelectable() {
         return this.selectable;
@@ -135,7 +135,7 @@ class H extends a.PureComponent {
         return (0, i.jsx)(
             f.P3F,
             U(M({}, e), {
-                className: s()(L.clickable, r, n),
+                className: s()(x.clickable, r, n),
                 id: null != (t = Z(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l
@@ -148,7 +148,7 @@ class H extends a.PureComponent {
                 "aria-disabled": !l,
                 "aria-selected": l && o,
                 children: (0, i.jsx)("div", {
-                    className: L.base,
+                    className: x.base,
                     children: this.renderContent(),
                 }),
             }),
@@ -166,7 +166,7 @@ class H extends a.PureComponent {
     constructor(e) {
         super(e),
             j(this, "selectable", !0),
-            j(this, "layoutClass", L.autocompleteRowVertical),
+            j(this, "layoutClass", x.autocompleteRowVertical),
             j(this, "handleMouseEnter", () => {
                 let { onHover: e, index: t, selected: n } = this.props;
                 null == e || n || "number" != typeof t || e(t);
@@ -196,13 +196,13 @@ class Y extends H {
 function W(e) {
     let t = a.useMemo(() => c().random(60, 120), []);
     return (0, i.jsx)("div", {
-        className: L.base,
+        className: x.base,
         "aria-busy": !0,
         children: (0, i.jsx)(P.RX, {
             children: (0, i.jsx)(P.z5, {
                 children: (0, i.jsx)(P.BR, {
                     children: (0, i.jsx)("div", {
-                        className: L.autocompletePlaceholder,
+                        className: x.autocompletePlaceholder,
                         style: { width: t },
                     }),
                 }),
@@ -212,12 +212,12 @@ function W(e) {
 }
 function K(e) {
     let { title: t, className: n, children: r } = e,
-        o = a.useContext(F);
+        o = a.useContext(V);
     return (0, i.jsx)("div", {
-        className: L.base,
+        className: x.base,
         children: (0, i.jsxs)(f.X6q, {
-            id: V(o.id),
-            className: s()(L.contentTitle, n),
+            id: F(o.id),
+            className: s()(x.contentTitle, n),
             variant: "heading-deprecated-12/semibold",
             children: [t, r],
         }),
@@ -226,10 +226,10 @@ function K(e) {
 class z extends H {
     renderContent() {
         let { className: e } = this.props;
-        return (0, i.jsx)("div", { className: s()(e, L.divider) });
+        return (0, i.jsx)("div", { className: s()(e, x.divider) });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", L.dividerContainer), j(this, "selectable", !1);
+        super(...e), j(this, "layoutClass", x.dividerContainer), j(this, "selectable", !1);
     }
 }
 class q extends H {
@@ -259,7 +259,7 @@ class q extends H {
                         a || t.hasUniqueUsername()
                             ? null
                             : (0, i.jsxs)("span", {
-                                  className: L.descriptionDiscriminator,
+                                  className: x.descriptionDiscriminator,
                                   children: ["#", t.discriminator],
                               }),
                     ],
@@ -269,6 +269,73 @@ class q extends H {
     }
 }
 class X extends H {
+    renderContent() {
+        var e;
+        let {
+                user: t,
+                nick: n,
+                comparator: r,
+                status: a,
+                hidePersonalInformation: o,
+                guildId: l,
+                selected: c,
+                layout: u = "horizontal",
+            } = this.props,
+            d = null == l ? A.Z.getNickname(t.id) : null,
+            _ = null != (e = null != n ? n : d) ? e : R.ZP.getName(t);
+        return (0, i.jsxs)(P.RX, {
+            className: s()({ [x.verticalLayout]: "vertical-suggestion" === u }),
+            children: [
+                (0, i.jsx)(P.Tw, {
+                    children: (0, i.jsx)(f.qEK, {
+                        size: f.EFr.SIZE_32,
+                        src: t.getAvatarURL(l, 32),
+                        "aria-hidden": !0,
+                        status: a,
+                    }),
+                }),
+                (0, i.jsxs)("div", {
+                    className: x.autocompleteContentWrapper,
+                    children: [
+                        (0, i.jsx)(P.z5, { children: (0, i.jsx)(P.BR, { children: _ }) }),
+                        (0, i.jsx)(P.dY, {
+                            children:
+                                null == r || r === _.toLocaleLowerCase() || r === t.username.toLocaleLowerCase()
+                                    ? (0, i.jsxs)(i.Fragment, {
+                                          children: [
+                                              R.ZP.getUserTag(t, {
+                                                  mode: "username",
+                                                  identifiable: o ? "never" : "always",
+                                              }),
+                                              o || t.hasUniqueUsername()
+                                                  ? null
+                                                  : (0, i.jsxs)("span", {
+                                                        className: x.descriptionDiscriminator,
+                                                        children: ["#", t.discriminator],
+                                                    }),
+                                          ],
+                                      })
+                                    : r,
+                        }),
+                    ],
+                }),
+                (0, i.jsx)("div", {
+                    className: x.keyComboContainer,
+                    children: c
+                        ? (0, i.jsx)(f.M2$, {
+                              shortcut: "tab",
+                              dim: !0,
+                          })
+                        : null,
+                }),
+            ],
+        });
+    }
+    constructor(...e) {
+        super(...e), j(this, "layoutClass", x.autoCompleteRowSuggestion);
+    }
+}
+class Q extends H {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: r, colorStrings: a } = e,
@@ -290,7 +357,7 @@ class X extends H {
                         children: [
                             o &&
                                 (0, i.jsx)(f.FhE, {
-                                    className: L.roleDot,
+                                    className: x.roleDot,
                                     color: r,
                                     colors: c,
                                     tooltip: !1,
@@ -304,25 +371,25 @@ class X extends H {
                         ],
                     }),
                 }),
-                t ? null : (0, i.jsx)(P.dY, { children: x.intl.string(x.t["/91tbm"]) }),
+                t ? null : (0, i.jsx)(P.dY, { children: L.intl.string(L.t["/91tbm"]) }),
             ],
         });
     }
 }
-class Q extends H {
+class J extends H {
     renderContent() {
         let { channel: e, category: t } = this.props,
             n = e.type === w.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
         return (0, i.jsxs)(P.RX, {
             children: [
-                null != n && (0, i.jsx)(P.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }),
+                null != n && (0, i.jsx)(P.Tw, { children: (0, i.jsx)(n, { className: x.icon }) }),
                 (0, i.jsx)(P.z5, { children: (0, i.jsx)(P.BR, { children: (0, g.F6)(e, C.default, A.Z) }) }),
                 null != t ? (0, i.jsx)(P.dY, { children: t.name }) : null,
             ],
         });
     }
 }
-class J extends H {
+class $ extends H {
     renderContent() {
         let { command: e } = this.props;
         return (0, i.jsxs)(P.RX, {
@@ -331,8 +398,8 @@ class J extends H {
                     children: (0, i.jsx)(f.XZC, {
                         size: "xs",
                         color: "currentColor",
-                        className: L.icon,
-                        colorClass: L.iconForeground,
+                        className: x.icon,
+                        colorClass: x.iconForeground,
                     }),
                 }),
                 (0, i.jsx)(P.z5, { children: (0, i.jsx)(P.BR, { children: e.displayName }) }),
@@ -341,7 +408,7 @@ class J extends H {
         });
     }
 }
-class $ extends H {
+class ee extends H {
     isSelectable() {
         return this.props.command.inputType !== p.iw.PLACEHOLDER;
     }
@@ -361,7 +428,7 @@ class $ extends H {
               });
     }
 }
-class ee extends H {
+class et extends H {
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
             r = T.Yk.getSetting(),
@@ -369,7 +436,7 @@ class ee extends H {
                 null != e.id || "" !== e.url
                     ? (0, i.jsx)("img", {
                           alt: "",
-                          className: L.emojiImage,
+                          className: x.emojiImage,
                           src:
                               null != e.id
                                   ? N.ZP.getEmojiURL({
@@ -380,7 +447,7 @@ class ee extends H {
                                   : e.url,
                       })
                     : (0, i.jsx)("span", {
-                          className: L.emojiRaw,
+                          className: x.emojiRaw,
                           children: e.surrogates,
                       }),
             o = null != n ? (0, i.jsx)(P.dY, { children: n.name }) : null;
@@ -397,10 +464,10 @@ class ee extends H {
         });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+        super(...e), j(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
     }
 }
-class et extends H {
+class en extends H {
     renderContent() {
         var e, t;
         let n,
@@ -416,7 +483,7 @@ class et extends H {
                     (0, i.jsxs)(P.z5, {
                         children: [
                             (0, i.jsx)(P.BR, { children: s.name }),
-                            null != r && (0, i.jsx)(P.wL, { children: x.intl.format(x.t.PAutaW, { queryMatch: r }) }),
+                            null != r && (0, i.jsx)(P.wL, { children: L.intl.format(L.t.PAutaW, { queryMatch: r }) }),
                         ],
                     }),
                     null != n && (0, i.jsx)(P.dY, { children: n }),
@@ -425,10 +492,10 @@ class et extends H {
         );
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", s()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
+        super(...e), j(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
     }
 }
-class en extends H {
+class er extends H {
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, i.jsx)("img", {
@@ -439,25 +506,25 @@ class en extends H {
         });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", L.autocompleteRowHorizontal);
-    }
-}
-class er extends H {
-    renderContent() {
-        return (0, i.jsx)(b.Z, { emojis: this.props.emojis });
+        super(...e), j(this, "layoutClass", x.autocompleteRowHorizontal);
     }
 }
 class ei extends H {
     renderContent() {
-        return (0, i.jsx)(O.Z, M({}, this.props));
+        return (0, i.jsx)(b.Z, { emojis: this.props.emojis });
     }
 }
 class ea extends H {
     renderContent() {
+        return (0, i.jsx)(O.Z, M({}, this.props));
+    }
+}
+class eo extends H {
+    renderContent() {
         let { game: e } = this.props,
             t = (0, i.jsx)("img", {
                 alt: "",
-                className: L.icon,
+                className: x.icon,
                 src: N.ZP.getApplicationIconURL({
                     id: e.id,
                     icon: e.icon,
@@ -472,35 +539,36 @@ class ea extends H {
         });
     }
 }
-class eo extends (r = a.PureComponent) {
+class es extends (r = a.PureComponent) {
     render() {
         let e = this.props,
             { children: t, className: n, innerClassName: r, id: o } = e,
             l = G(e, ["children", "className", "innerClassName", "id"]);
         return a.Children.count(t) > 0
-            ? (0, i.jsx)(F.Provider, {
+            ? (0, i.jsx)(V.Provider, {
                   value: { id: null != o ? o : "" },
                   children: (0, i.jsx)("div", {
-                      className: s()(L.autocomplete, n),
-                      children: (0, i.jsx)("div", U(M({ className: s()(L.autocompleteInner, r) }, l), { children: t })),
+                      className: s()(x.autocomplete, n),
+                      children: (0, i.jsx)("div", U(M({ className: s()(x.autocompleteInner, r) }, l), { children: t })),
                   }),
               })
             : null;
     }
 }
-j(eo, "Generic", Y),
-    j(eo, "Loading", W),
-    j(eo, "Title", K),
-    j(eo, "Divider", z),
-    j(eo, "User", q),
-    j(eo, "Role", X),
-    j(eo, "Channel", Q),
-    j(eo, "Command", J),
-    j(eo, "NewCommand", $),
-    j(eo, "Emoji", ee),
-    j(eo, "GIFIntegration", en),
-    j(eo, "Sticker", et),
-    j(eo, "EmojiUpsell", er),
-    j(eo, "Soundmoji", ei),
-    j(eo, "Game", ea);
-let es = eo;
+j(es, "Generic", Y),
+    j(es, "Loading", W),
+    j(es, "Title", K),
+    j(es, "Divider", z),
+    j(es, "User", q),
+    j(es, "UserSuggestion", X),
+    j(es, "Role", Q),
+    j(es, "Channel", J),
+    j(es, "Command", $),
+    j(es, "NewCommand", ee),
+    j(es, "Emoji", et),
+    j(es, "GIFIntegration", er),
+    j(es, "Sticker", en),
+    j(es, "EmojiUpsell", ei),
+    j(es, "Soundmoji", ea),
+    j(es, "Game", eo);
+let el = es;
