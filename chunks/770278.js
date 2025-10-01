@@ -1,15 +1,12 @@
-n.d(t, {
-    Z: () => m,
-    f: () => p,
-});
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(481060),
     c = n(110924),
-    u = n(372840);
+    u = n(718135);
 function d(e, t, n) {
     return (
         t in e
@@ -40,41 +37,32 @@ function f(e) {
     return e;
 }
 let _ = 8;
-var p = (function (e) {
-    return (
-        (e.DARK = "DARK"),
-        (e.LIGHTBOX = "LIGHTBOX"),
-        (e.IMMERSIVE = "IMMERSIVE"),
-        (e.SUBTLE = "SUBTLE"),
-        (e.BLUR = "BLUR"),
-        (e.TOP_RADIAL = "TOP_RADIAL"),
-        e
-    );
-})({});
-function h() {
+function p() {
     let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
-        t = (0, l.dQu)(l.TVs.colors.BG_BACKDROP).spring();
+        t = (0, l.dQu)(l.TVs.colors.BG_BACKDROP).spring(),
+        n = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
+        r = (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring();
     return {
-        SUBTLE: e,
-        DARK: t,
-        BLUR: t,
-        IMMERSIVE: (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
-        LIGHTBOX: (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring(),
-        TOP_RADIAL: t,
+        [l.fCB.SUBTLE]: e,
+        [l.fCB.DARK]: t,
+        [l.fCB.BLUR]: t,
+        [l.fCB.IMMERSIVE]: n,
+        [l.fCB.LIGHTBOX]: r,
+        [l.fCB.TOP_RADIAL]: t,
     };
 }
-let m = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
     let {
-            backdropStyle: n = "SUBTLE",
+            backdropStyle: n = l.fCB.SUBTLE,
             backdropInstant: i = !1,
             zIndexBoost: a = 0,
             LayerComponent: d,
-            isVisible: p,
+            isVisible: h,
             onClose: m,
         } = e,
-        g = h()[n],
+        g = p()[n],
         E = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        b = "BLUR" === n ? _ : 0,
+        b = n === l.fCB.BLUR ? _ : 0,
         y = {
             background: E,
             backdropFilter: "blur(0px)",
@@ -85,7 +73,7 @@ let m = i.forwardRef(function (e, t) {
         },
         v = (0, c.Z)(i),
         I = (0, l.Yzy)(
-            p,
+            h,
             {
                 keys: (e) => (e ? "backdrop" : "empty"),
                 config: { duration: i || v ? 0 : 200 },
@@ -113,7 +101,7 @@ let m = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(s.animated.div, {
                       className: o()(u.backdrop, u.withLayer),
                       style:
-                          "TOP_RADIAL" === n
+                          n === l.fCB.TOP_RADIAL
                               ? {
                                     background:
                                         "radial-gradient(96.68% 96.68% at 50.04% 3.32%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%)",
