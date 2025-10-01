@@ -3,7 +3,6 @@ n.d(t, {
     j8: () => E,
     oY: () => v,
     tG: () => y,
-    y: () => I,
 });
 var r = n(951288),
     i = n(647438),
@@ -12,7 +11,7 @@ var r = n(951288),
     s = n(693789),
     l = n(481060),
     c = n(785717),
-    u = n(471561);
+    u = n(107389);
 function d(e, t, n) {
     return (
         t in e
@@ -224,20 +223,3 @@ let O = i.forwardRef(function (e, t) {
             ),
         );
     });
-function I(e) {
-    var { isHovering: t, className: n, innerClassName: i } = e,
-        a = h(e, ["isHovering", "className", "innerClassName"]);
-    return (0, r.jsx)(
-        O,
-        f(
-            {
-                className: o()(u.hover, { [u.visible]: t }, n),
-                innerClassName: o()(u.hover, i),
-                color: u.hoverColor,
-                themeColor: "none",
-                look: s.zx.Looks.BLANK,
-            },
-            a,
-        ),
-    );
-}

@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(228168),
     w = n(981631),
     D = n(671955),
-    x = n(388032),
-    L = n(116649);
+    L = n(388032),
+    x = n(593540);
 function j(e) {
     let {
             user: t,
@@ -57,7 +57,7 @@ function j(e) {
         Q = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
-        className: L.body,
+        className: x.body,
         children: [
             (0, r.jsx)(I.Z, {
                 user: t,
@@ -82,7 +82,7 @@ function j(e) {
                         !Y &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: k,
+                                isVisible: k,
                                 onOpenProfile: U,
                             }),
                     ],
@@ -119,9 +119,9 @@ function j(e) {
                 }),
             t.isProvisional
                 ? (0, r.jsx)(v.Z.Overlay, {
-                      className: L.card,
+                      className: x.card,
                       children: (0, r.jsx)(y.Z, {
-                          heading: x.intl.string(x.t.Iyka0d),
+                          heading: L.intl.string(L.t.Iyka0d),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
                               color: a.TVs.colors.HEADER_PRIMARY,
