@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => E });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,10 +6,11 @@ var r = n(951288),
     s = n(137317),
     l = n(990547),
     c = n(793030),
-    u = n(507274),
-    d = n(163838),
-    f = n(325380);
-function _(e, t, n) {
+    u = n(481060),
+    d = n(984802),
+    f = n(823531),
+    _ = n(815847);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,68 +51,81 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function E(e) {
     var t;
     let {
             transitionState: n,
             animationVariant: a = "default",
-            returnRef: _,
-            "aria-label": h,
-            onClose: g,
-            trackingProps: E,
-            children: b,
+            returnRef: p,
+            "aria-label": m,
+            onClose: E,
+            trackingProps: b,
+            children: y,
         } = e,
-        y = i.useId(),
-        O = i.useMemo(
+        O = i.useId(),
+        v = i.useMemo(
             () => ({
-                id: y,
-                headingId: "heading-".concat(y),
-                onClose: g,
+                id: O,
+                headingId: "heading-".concat(O),
+                onClose: E,
                 dismissable: !0,
             }),
-            [y, g],
+            [O, E],
         ),
-        v = (0, c.hvB)(n, a);
+        I = (0, d.Ll)(),
+        { theme: T } = (0, u.TCT)(),
+        S = (0, c.hvB)(n, a);
     return (0, r.jsx)(c.tCf.Provider, {
-        value: O,
+        value: v,
         children: (0, r.jsx)(
-            u.V,
-            m(
-                p(
+            u.VqE,
+            g(
+                h(
                     {
-                        id: y,
+                        id: O,
                         role: "dialog",
-                        "aria-label": h,
-                        "aria-labelledby": null != h ? void 0 : O.headingId,
-                        returnRef: _,
+                        "aria-label": m,
+                        "aria-labelledby": null != m ? void 0 : v.headingId,
+                        returnRef: p,
                     },
-                    E,
+                    b,
                 ),
                 {
-                    impressionType: null != (t = null == E ? void 0 : E.impressionType) ? t : l.ImpressionTypes.MODAL,
+                    impressionType: null != (t = null == b ? void 0 : b.impressionType) ? t : l.ImpressionTypes.MODAL,
                     children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsx)("div", {
-                            className: d.outerContainer,
-                            children: (0, r.jsx)(s.animated.div, {
-                                "data-mana-component": "layer-modal",
-                                className: o()(f.container, d.modal),
-                                style: v,
-                                children: (0, r.jsx)("div", {
-                                    className: d.modalContent,
-                                    children: b,
-                                }),
+                            className: f.outerContainer,
+                            children: (0, r.jsx)(u.f6W, {
+                                theme: I,
+                                children: (e) =>
+                                    (0, r.jsx)(s.animated.div, {
+                                        "data-mana-component": "layer-modal",
+                                        className: o()(_.container, f.modal, e),
+                                        style: S,
+                                        children: (0, r.jsx)("div", {
+                                            className: f.modalContent,
+                                            children: (0, r.jsx)(u.f6W, {
+                                                theme: T,
+                                                children: (e) =>
+                                                    (0, r.jsx)("div", {
+                                                        className: o()(e, f.modalContentInner),
+                                                        children: y,
+                                                    }),
+                                            }),
+                                        }),
+                                    }),
                             }),
                         }),
                     }),
