@@ -272,6 +272,12 @@ class _ extends o.C {
                         unitIdInExperiment: ev.internalBinaryRead(e, e.uint32(), n, a.filter.unitIdInExperiment),
                     };
                     break;
+                case 20:
+                    a.filter = {
+                        oneofKind: "userPremiumType",
+                        userPremiumType: eT.internalBinaryRead(e, e.uint32(), n, a.filter.userPremiumType),
+                    };
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -320,7 +326,9 @@ class _ extends o.C {
             "clientSystemLocale" === e.filter.oneofKind &&
                 A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
-                ev.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, r.TD.LengthDelimited).fork(), n).join();
+                ev.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
+            "userPremiumType" === e.filter.oneofKind &&
+                eT.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -451,6 +459,13 @@ class _ extends o.C {
                 kind: "message",
                 oneof: "filter",
                 T: () => ev,
+            },
+            {
+                no: 20,
+                name: "user_premium_type",
+                kind: "message",
+                oneof: "filter",
+                T: () => eT,
             },
         ]);
     }
@@ -2352,3 +2367,58 @@ class eO extends o.C {
     }
 }
 let ev = new eO();
+class eI extends o.C {
+    create(e) {
+        let t = { premiumTypes: [] };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            if (1 === t)
+                if (i === r.TD.LengthDelimited)
+                    for (let t = e.int32() + e.pos; e.pos < t; ) a.premiumTypes.push(e.int32());
+                else a.premiumTypes.push(e.int32());
+            else {
+                let o = n.readUnknownField;
+                if ("throw" === o)
+                    throw new globalThis.Error(
+                        "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                    );
+                let s = e.skip(i);
+                !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (e.premiumTypes.length) {
+            t.tag(1, r.TD.LengthDelimited).fork();
+            for (let n = 0; n < e.premiumTypes.length; n++) t.int32(e.premiumTypes[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.UserPremiumType", [
+            {
+                no: 1,
+                name: "premium_types",
+                kind: "scalar",
+                repeat: 1,
+                T: 5,
+            },
+        ]);
+    }
+}
+let eT = new eI();
