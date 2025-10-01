@@ -1,4 +1,4 @@
-n.d(t, { J: () => y });
+n.d(t, { J: () => O });
 var r = n(512722),
     i = n.n(r),
     a = n(548680),
@@ -64,7 +64,10 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
+function y(e, t, n) {
+    return (0, c.isDesktop)() && null != e && [h.Si.TIER_0, h.Si.TIER_2].includes(e) && !t && null == n;
+}
+function O(e) {
     let {
             analyticsData: t,
             initialPlanId: n,
@@ -72,7 +75,7 @@ function y(e) {
             handleStepChange: c,
             referralTrialOfferId: m,
             onReturn: E,
-            continueSessionToInitialStep: y,
+            continueSessionToInitialStep: O,
         } = e,
         {
             contextMetadata: v,
@@ -86,8 +89,8 @@ function y(e) {
             paymentAuthenticationState: P,
             selectedSkuId: w,
             activeSubscription: D,
-            previousStepRef: x,
-            setPurchaseState: L,
+            previousStepRef: L,
+            setPurchaseState: x,
             paymentElementsEnabled: j,
         } = (0, d.JL)(),
         { isGift: M } = (0, u.wD)(),
@@ -111,19 +114,19 @@ function y(e) {
         },
         Z = null != E ? E : B;
     i()(I, "Step should be set here");
-    let V = (0, a.Z)(() => Date.now(), [I]),
-        F = (0, a.Z)(
+    let F = (0, a.Z)(() => Date.now(), [I]),
+        V = (0, a.Z)(
             () =>
-                null != y && null == x.current
-                    ? j && y === f.h8.CREDIT_CARD_INFORMATION
+                null != O && null == L.current
+                    ? j && O === f.h8.CREDIT_CARD_INFORMATION
                         ? f.h8.PAYMENT_ELEMENT
-                        : y
+                        : O
                     : f.h8.PAYMENT_TYPE,
-            [y, x.current, j],
+            [O, L.current, j],
         );
     return (0, s.vP)({
         paymentModalArgs: k,
-        initialStep: F,
+        initialStep: V,
         prependSteps: [f.h8.PROMOTION_INFO],
         appendSteps: [f.h8.REVIEW, f.h8.CONFIRM],
         breadcrumpSteps: r,
@@ -133,7 +136,7 @@ function y(e) {
         onReturn: Z,
         onComplete: (e) => {
             f.Nj.has(e)
-                ? (L(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
+                ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e }))
                 : c(f.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -144,16 +147,13 @@ function y(e) {
                 b(g({}, t), {
                     from_step: n,
                     to_step: r,
-                    step_duration_ms: i - V,
+                    step_duration_ms: i - F,
                     flow_duration_ms: i - v.startTime,
                 }),
             );
         },
         isEligibleForTrial: G,
-        allowDesktopRedirectPurchase: O(w, M, D),
-        continueSessionToInitialStep: y,
+        allowDesktopRedirectPurchase: y(w, M, D),
+        continueSessionToInitialStep: O,
     });
-}
-function O(e, t, n) {
-    return (0, c.isDesktop)() && null != e && [h.Si.TIER_0, h.Si.TIER_2].includes(e) && !t && null == n;
 }
