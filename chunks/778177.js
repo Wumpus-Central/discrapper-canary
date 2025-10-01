@@ -320,17 +320,18 @@ let er = {
         groupTip(e) {
             let { searchContext: t } = e;
             return (0, r.jsx)(p.u, {
-                asContainer: !0,
                 text: G.intl.string(G.t.dwAvX1),
                 position: "left",
-                children: (0, r.jsx)(h.P3F, {
-                    onClick: () => D.Z.clearSearchHistory(t),
+                children: (0, r.jsx)("div", {
                     className: B.searchClearHistory,
-                    title: G.intl.string(G.t.dwAvX1),
-                    "aria-label": G.intl.string(G.t.dwAvX1),
-                    children: (0, r.jsx)(h.XHJ, {
-                        size: "md",
-                        color: "currentColor",
+                    children: (0, r.jsx)(h.P3F, {
+                        onClick: () => D.Z.clearSearchHistory(t),
+                        title: G.intl.string(G.t.dwAvX1),
+                        "aria-label": G.intl.string(G.t.dwAvX1),
+                        children: (0, r.jsx)(h.XHJ, {
+                            size: "md",
+                            color: "currentColor",
+                        }),
                     }),
                 }),
             });
@@ -341,7 +342,6 @@ let er = {
         titleText: () => G.intl.string(G.t["8Zkyw8"]),
         groupTip: () =>
             (0, r.jsx)(p.u, {
-                asContainer: !0,
                 text: G.intl.string(G.t.hvVgAQ),
                 position: "left",
                 children: (0, r.jsx)("div", {
