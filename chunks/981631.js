@@ -6275,16 +6275,19 @@ var rV = (function (e) {
         return (e.LOADING = "LOADING"), (e.ERROR = "ERROR"), (e.READY = "READY"), e;
     })({});
 let rY = Object.freeze({
-        APPLICATIONS: (e) => (null == e ? null : ["applications", e]),
-        APP_PREMIUM_BUTTON: (e) => (null == e ? null : ["premium-button", e]),
-        CUSTOM_ACTIVITY_LINK: (e, t) => (null == e || null == t ? null : ["custom-activity-links", e, t]),
-        SKU: (e) => (null == e ? null : ["SKU", e]),
-        STORE_LISTING: (e) => (null == e ? null : ["store-listing", e]),
-        SUBSCRIPTION_PLANS: (e) => (null == e ? null : ["subscription-plans", e]),
-        APPLICATION_WIDGET_APPLICATION_CONFIGS: ["application-widget-application-configs"],
-        USER_APPLICATION_IDENTITIES: (e) => ["user-application-identities", e],
-        ACTIVITIES_DISCORD_CONFIG: (e) => ["activities-discord-config", e],
-        __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null == e ? null : ["useParentSkuData", e]),
+        APPLICATIONS: (e) => (null != e ? "applications/".concat(e) : null),
+        APP_PREMIUM_BUTTON: (e) => (null != e ? "premium-button/".concat(e) : null),
+        CUSTOM_ACTIVITY_LINK: (e, t) =>
+            null != e && null != t ? "custom-activity-links/".concat(e, "/").concat(t) : null,
+        SKU: (e) => (null != e ? "sku/".concat(e) : null),
+        STORE_LISTING: (e) => (null != e ? "store-listing/".concat(e) : null),
+        SUBSCRIPTION_PLANS: (e) => (null != e ? "subscription-plans/".concat(e) : null),
+        SUBSCRIPTION_PLAN: (e) => (null != e ? "subscription-plan/".concat(e) : null),
+        USER_COUNTRY_CODE: () => "location-metadata",
+        APPLICATION_WIDGET_APPLICATION_CONFIGS: () => "application-widget-application-configs",
+        USER_APPLICATION_IDENTITIES: (e) => "user-application-identities/".concat(e),
+        ACTIVITIES_DISCORD_CONFIG: (e) => "activities-discord-config/".concat(e),
+        __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? "useParentSkuData/".concat(e) : null),
     }),
     rW = 4096,
     rK = 1768248000000;

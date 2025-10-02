@@ -5,11 +5,14 @@ var r = n(442837),
     o = n(960048),
     s = n(981631);
 let l = (0, r.Kb)(a.Z, {
-    queryId: (e) => s.McO.SUBSCRIPTION_PLANS(e),
-    get: (e) => (null != e ? a.Z.getForSKU(e) : []),
-    load: (e, t) => (
-        null == t && o.Z.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
-        null != t ? (0, i.GZ)(t) : Promise.reject()
+    getQueryId: s.McO.SUBSCRIPTION_PLANS,
+    get: (e) => {
+        if (null == e) return null;
+        let t = a.Z.getForSKU(e);
+        return 0 === t.length ? null : t;
+    },
+    load: (e) => (
+        null == e && o.Z.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
+        null != e ? (0, i.GZ)(e) : Promise.reject()
     ),
-    useStateHook: r.Wu,
 });

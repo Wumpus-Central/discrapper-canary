@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(981631),
     E = n(388032);
 let b = (0, a.Kb)([d.Z, u.Z, f.Z], {
-    queryId: (e) => g.McO.APP_PREMIUM_BUTTON(e),
+    getQueryId: g.McO.APP_PREMIUM_BUTTON,
     get: (e) => {
         var t;
         if (null == e) return;
@@ -24,40 +24,40 @@ let b = (0, a.Kb)([d.Z, u.Z, f.Z], {
             r = null != (t = u.Z.getForSKU(e)) ? t : [],
             i = f.Z.getForSKU(e),
             a = d.Z.getParentSKU(e);
-        if (null != n && null != i && (null == n || n.type !== g.epS.SUBSCRIPTION || null != a))
-            return {
-                parentSku: a,
-                sku: n,
-                storeListing: i,
-                subscriptionPlans: r,
-            };
+        return null == n || null == i || (null != n && n.type === g.epS.SUBSCRIPTION && null == a)
+            ? null
+            : {
+                  parentSku: a,
+                  sku: n,
+                  storeListing: i,
+                  subscriptionPlans: r,
+              };
     },
-    load: async (e, t) => {
-        if (null == t) return;
-        let n = {
-                url: g.ANM.STOREFRONT_PREMIUM_BUTTON(t),
+    load: async (e) => {
+        if (null == e) return;
+        let t = {
+                url: g.ANM.STOREFRONT_PREMIUM_BUTTON(e),
                 rejectWithError: !1,
             },
-            { body: r } = await o.tn.get(n);
+            { body: n } = await o.tn.get(t);
         l.Z.dispatch({
             type: "STORE_LISTINGS_FETCH_SUCCESS",
-            storeListings: r.store_listings,
+            storeListings: n.store_listings,
         }),
-            null != r.subscription_plans &&
+            null != n.subscription_plans &&
                 l.Z.dispatch({
                     type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS",
-                    skuId: t,
-                    subscriptionPlans: r.subscription_plans,
+                    skuId: e,
+                    subscriptionPlans: n.subscription_plans,
                 }),
-            null != r.skus &&
-                r.skus.forEach((e) => {
+            null != n.skus &&
+                n.skus.forEach((e) => {
                     l.Z.dispatch({
                         type: "SKU_FETCH_SUCCESS",
                         sku: e,
                     });
                 });
     },
-    useStateHook: a.cj,
 });
 function y(e) {
     let { data: t } = b(e),

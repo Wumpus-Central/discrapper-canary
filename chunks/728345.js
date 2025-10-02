@@ -240,10 +240,13 @@ let E = {
         fetchApplication: g,
     },
     b = (0, r.Kb)(c.Z, {
-        queryId: (e) => u.McO.APPLICATIONS(e),
-        get: (e) => (null != e ? c.Z.getApplication(e) : null),
-        load: (e, t) => (null != t ? g(t, !1, e).then(u.dG4) : Promise.resolve()),
-        useStateHook: r.e7,
+        getQueryId: u.McO.APPLICATIONS,
+        get: (e) => {
+            var t;
+            return null != e && null != (t = c.Z.getApplication(e)) ? t : null;
+        },
+        load: (e) => (null != e ? g(e, !1).then(u.dG4) : Promise.resolve()),
+        getIsLoading: (e) => null != e && c.Z.isFetchingApplication(e),
     });
 function y(e) {
     let { data: t, isLoading: n, error: i } = b(e);
@@ -256,6 +259,6 @@ function y(e) {
             return t;
         }, [e, t]),
         isLoading: n,
-        error: i,
+        error: null != i ? i : void 0,
     };
 }

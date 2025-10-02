@@ -1,8 +1,7 @@
-n.d(t, { Z: () => c }), n(388685);
-var r = n(442837),
-    i = n(147913),
-    a = n(981631);
-function o(e, t, n) {
+n.d(t, { Z: () => l }), n(388685);
+var r = n(147913),
+    i = n(929677);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,16 +14,16 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
-    (0, r.Xf)(a.McO.USER_APPLICATION_IDENTITIES(e.user_id));
+function o(e) {
+    i.O.refetch(e.user_id);
 }
-class l extends i.Z {
+class s extends r.Z {
     constructor(...e) {
         super(...e),
-            o(this, "actions", {
-                USER_APPLICATION_IDENTITY_UPDATE: s,
-                USER_APPLICATION_IDENTITY_REMOVE: s,
+            a(this, "actions", {
+                USER_APPLICATION_IDENTITY_UPDATE: o,
+                USER_APPLICATION_IDENTITY_REMOVE: o,
             });
     }
 }
-let c = new l();
+let l = new s();

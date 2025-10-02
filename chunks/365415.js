@@ -4,8 +4,7 @@ var r = n(442837),
     a = n(649256),
     o = n(981631);
 let s = (0, r.Kb)(i.Z, {
-    queryId: (e, t) => o.McO.CUSTOM_ACTIVITY_LINK(e, t),
+    getQueryId: o.McO.CUSTOM_ACTIVITY_LINK,
     get: (e, t) => (null == e || null == t ? null : i.Z.getOne(e, t)),
-    load: (e, t, n) => (0, a.UD)(t, n),
-    useStateHook: r.e7,
+    load: (e, t) => (0, a.UD)(e, t),
 });
