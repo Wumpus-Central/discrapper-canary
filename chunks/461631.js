@@ -1,25 +1,27 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(277511),
-    s = n(872269),
-    c = n(228168),
-    u = n(388032),
-    d = n(747615);
-function p(e) {
-    let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: p } = e,
-        f = async () => {
+    o = n(906732),
+    s = n(277511),
+    c = n(872269),
+    u = n(228168),
+    d = n(388032),
+    p = n(624285);
+function f(e) {
+    let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: f } = e,
+        { analyticsLocations: h } = (0, o.ZP)(),
+        g = async () => {
             try {
-                await o.Z.removeSkuFromWishlist(n, t.skuId);
+                await s.Z.removeSkuFromWishlist(n, t.skuId, h);
             } catch (e) {
-                (0, s.L$)(c.qb.SOMETHING_WENT_WRONG);
+                (0, c.L$)(u.qb.SOMETHING_WENT_WRONG);
             }
         };
     return (0, r.jsx)(a.ua7, {
-        text: u.intl.string(u.t.jTW019),
+        text: d.intl.string(d.t.jTW019),
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
@@ -51,12 +53,12 @@ function p(e) {
                 })({}, e)),
                 (n = n =
                     {
-                        onClick: f,
-                        "aria-label": u.intl.string(u.t.jTW019),
-                        className: l()(p, d.clickable),
+                        onClick: g,
+                        "aria-label": d.intl.string(d.t.jTW019),
+                        className: l()(f, p.clickable),
                         children: (0, r.jsx)(a.XHJ, {
                             size: i,
-                            className: d.icon,
+                            className: p.icon,
                             color: a.TVs.colors.ICON_FEEDBACK_CRITICAL,
                         }),
                     }),
