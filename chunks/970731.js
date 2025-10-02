@@ -12,8 +12,8 @@ var o = n(120356),
     c = n(481060),
     u = n(493773),
     d = n(921944),
-    p = n(12614);
-function h(e) {
+    p = n(164208);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,8 +91,8 @@ function y(e) {
         contentClassName: g,
         buttonCTA: m,
         secondaryButtonCTA: y,
-        onClick: j,
-        onSecondaryClick: v,
+        onClick: v,
+        onSecondaryClick: j,
         buttonProps: x = {
             color: s.zx.Colors.BRAND,
             look: s.zx.Looks.FILLED,
@@ -136,10 +136,10 @@ function y(e) {
                           w
                               ? (0, l.jsx)(
                                     s.zx,
-                                    f(h({}, C), {
+                                    h(f({}, C), {
                                         fullWidth: 1 === N,
                                         onClick: () => {
-                                            null == v || v(), null == P || P(d.L.SECONDARY);
+                                            null == j || j(), null == P || P(d.L.SECONDARY);
                                         },
                                         children: y,
                                     }),
@@ -149,10 +149,10 @@ function y(e) {
                               ? null
                               : (0, l.jsx)(
                                     s.zx,
-                                    f(h({}, x), {
+                                    h(f({}, x), {
                                         fullWidth: !w || 1 === N,
                                         onClick: (e) => {
-                                            j(e), null == P || P(d.L.PRIMARY);
+                                            v(e), null == P || P(d.L.PRIMARY);
                                         },
                                         children: m,
                                     }),

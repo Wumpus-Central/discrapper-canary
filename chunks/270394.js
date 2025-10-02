@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(997841), n(388685);
+n.d(t, { Z: () => q }), n(997841), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -27,17 +27,17 @@ var i = n(951288),
     P = n(664452),
     I = n(560114),
     Z = n(685929),
-    T = n(592125),
-    E = n(699516),
+    E = n(592125),
+    T = n(699516),
     k = n(594174),
     A = n(630388),
     D = n(634755),
     R = n(757539),
     L = n(981631),
     M = n(388032),
-    B = n(427580),
-    U = n(504401),
-    W = n(10198);
+    B = n(809165),
+    U = n(620842),
+    W = n(197571);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -120,7 +120,7 @@ function z(e) {
                                 (0, i.jsx)(b.Text, {
                                     variant: "text-xs/normal",
                                     color: "header-secondary",
-                                    children: (0, _.F6)(l, k.default, E.Z, !0),
+                                    children: (0, _.F6)(l, k.default, T.Z, !0),
                                 }),
                         ],
                     }),
@@ -221,7 +221,7 @@ function F(e) {
         })
     );
 }
-function q(e) {
+function K(e) {
     let { applicationId: t, channel: r, showChannel: l = !1, inviteDisabled: a = !1 } = e,
         o = (0, O.q)(t),
         s = (0, p.e7)([k.default], () => {
@@ -270,7 +270,7 @@ function q(e) {
         },
     });
 }
-function K(e) {
+function q(e) {
     let {
         invites: t,
         guild: l,
@@ -299,7 +299,7 @@ function K(e) {
                           .value(),
             [t, f],
         ),
-        _ = (0, p.Wu)([T.Z], () => T.Z.getSortedLinkedChannelsForGuild(l.id).filter((e) => null == u || e.id === u.id)),
+        _ = (0, p.Wu)([E.Z], () => E.Z.getSortedLinkedChannelsForGuild(l.id).filter((e) => null == u || e.id === u.id)),
         C = r.useMemo(
             () =>
                 f
@@ -329,7 +329,7 @@ function K(e) {
                     ),
             );
         },
-        [Z, E] = r.useState(62),
+        [Z, T] = r.useState(62),
         k = () => {
             let e = { source: S.Zu.GUILD_SETTINGS };
             (0, b.ZDy)(
@@ -466,7 +466,7 @@ function K(e) {
                     R.Y,
                     {
                         hasInvites: O.length > 0,
-                        setHeight: E,
+                        setHeight: T,
                         onShowDisableInvites: k,
                         onShowInviteModal: w,
                         hasInviteDisabledPermission: x,
@@ -501,7 +501,7 @@ function K(e) {
                     case "channel":
                         var r;
                         return (0, i.jsx)(
-                            q,
+                            K,
                             {
                                 applicationId: null == (r = e.data.linkedLobby) ? void 0 : r.application_id,
                                 channel: e.data,

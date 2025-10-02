@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => Z });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(585483),
     f = n(999382),
     h = n(213956),
-    x = n(743475),
-    b = n(983135),
+    b = n(743475),
+    x = n(983135),
     j = n(8426),
     v = n(570961),
     _ = n(208665),
@@ -28,12 +28,12 @@ var r = n(951288),
     T = n(707076),
     P = n(981631),
     w = n(388032),
-    R = n(24773);
-function D() {
+    R = n(344037);
+function Z() {
     let e = (0, a.e7)([f.Z], () => f.Z.getGuildId());
-    return null == e ? null : (0, r.jsx)(Z, { guildId: e });
+    return null == e ? null : (0, r.jsx)(D, { guildId: e });
 }
-function Z(e) {
+function D(e) {
     let t,
         { guildId: n } = e,
         l = (0, a.e7)([O.Z], () => O.Z.getCurrentPage()),
@@ -42,7 +42,7 @@ function Z(e) {
             return null != e && !O.Z.isEducationUpsellDismissed(e);
         }),
         _ = (0, C.Z)(n),
-        D = !_ && f;
+        Z = !_ && f;
     switch (
         (i.useEffect(() => {
             (0, m.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
@@ -76,12 +76,12 @@ function Z(e) {
             });
     }
     return (0, r.jsxs)("div", {
-        className: s()(R.onboardingContainer, { [R.upsellOnTop]: D }),
+        className: s()(R.onboardingContainer, { [R.upsellOnTop]: Z }),
         children: [
             !_ &&
                 l !== y.PG.LANDING &&
                 (0, r.jsx)(A, {
-                    setOnboardingStep: b.$K,
+                    setOnboardingStep: x.$K,
                     page: l,
                     homeSettingsEnabled: !0,
                 }),
@@ -101,7 +101,7 @@ function Z(e) {
                                     p.S.dispatch(P.CkL.EMPHASIZE_NOTICE);
                                 return;
                             }
-                            (0, v.NB)(), (0, x.BG)(), (0, j.bj)(), (0, b.$K)(y.PG.LANDING);
+                            (0, v.NB)(), (0, b.BG)(), (0, j.bj)(), (0, x.$K)(y.PG.LANDING);
                         },
                         children: [
                             (0, r.jsx)(g.Z, {

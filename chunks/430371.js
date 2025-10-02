@@ -18,8 +18,8 @@ var r = n(951288),
     C = n(796638),
     _ = n(981631),
     v = n(354459),
-    x = n(450906),
-    O = n(74246);
+    x = n(394024),
+    O = n(597843);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,21 +72,21 @@ function I(e) {
             onSelectParticipant: l,
             onContextMenuParticipant: I,
             onFullscreenParticipant: Z,
-            participants: T,
-            filteredParticipants: N,
+            participants: N,
+            filteredParticipants: T,
             popoutWindow: A,
             inCall: w,
             channel: M,
             selectedParticipant: R,
             showParticipants: k = !0,
-            className: L,
-            width: D,
+            className: D,
+            width: L,
             height: U,
             layout: B,
             idle: H,
         } = e,
-        F = null != A,
-        V = h.Z.getVideoComponent(),
+        V = null != A,
+        F = h.Z.getVideoComponent(),
         G = p.default.getId(),
         [z, W] = i.useState(null),
         q = (0, c.Z)(z),
@@ -105,13 +105,13 @@ function I(e) {
         es = 0;
     (Q || en) && (es += 72), Q && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * P + 8);
     let ec = i.useMemo(
-            () => (Q && $ ? D / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : S),
-            [ee, z, Q, D, U, es, $],
+            () => (Q && $ ? L / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : S),
+            [ee, z, Q, L, U, es, $],
         ),
         eu = U - 2 * es,
-        ed = Q && $ ? D : eu * ec,
-        ep = Math.floor(Math.min(D, ed) / ec),
-        eh = U > D / ec + 72 + P + 8;
+        ed = Q && $ ? L : eu * ec,
+        ep = Math.floor(Math.min(L, ed) / ec),
+        eh = U > L / ec + 72 + P + 8;
     (n = en || Q ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
@@ -172,10 +172,10 @@ function I(e) {
         ev = i.useCallback((e) => {
             W(e), K(!1);
         }, []),
-        ex = en ? [] : (0, y.n3)(T, R, G),
-        { visibleParticipants: eO, participantTileWidth: ej } = (0, C.ZB)(D, N);
+        ex = en ? [] : (0, y.n3)(N, R, G),
+        { visibleParticipants: eO, participantTileWidth: ej } = (0, C.ZB)(L, T);
     return (0, r.jsxs)("div", {
-        className: a()(O.root, x.flexCenter, L),
+        className: a()(O.root, x.flexCenter, D),
         children: [
             (0, r.jsxs)("div", {
                 className: O.tileWrapper,
@@ -201,18 +201,18 @@ function I(e) {
                                                       style: e,
                                                       children: (0, r.jsx)(g.ZP, {
                                                           focused: !0,
-                                                          noBorder: ed >= D || eu >= U,
+                                                          noBorder: ed >= L || eu >= U,
                                                           channel: M,
                                                           className: x.focusedVideo,
-                                                          videoComponent: V,
-                                                          width: D,
+                                                          videoComponent: F,
+                                                          width: L,
                                                           participant: t,
                                                           onClick: l,
                                                           onDoubleClick: Z,
                                                           onContextMenu: I,
                                                           onVideoResize: ev,
                                                           inCall: w,
-                                                          inPopout: F,
+                                                          inPopout: V,
                                                       }),
                                                   },
                                                   i,
@@ -259,7 +259,7 @@ function I(e) {
             ex.length > 0
                 ? (0, r.jsx)(b.Z, {
                       onContextMenuParticipant: I,
-                      width: D,
+                      width: L,
                       height: U,
                       channel: M,
                       participants: ex,

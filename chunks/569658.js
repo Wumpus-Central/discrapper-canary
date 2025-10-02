@@ -14,8 +14,8 @@ var s = n(392711),
     m = n(699516),
     x = n(594174),
     p = n(981631),
-    v = n(388032),
-    j = n(31021);
+    j = n(388032),
+    v = n(821209);
 let f = (e) => {
     let {
         channel: { type: t },
@@ -48,10 +48,10 @@ function b(e) {
         children: [
             (0, i.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
-                children: v.intl.string(v.t["2Y9ZfH"]),
+                children: j.intl.string(j.t["2Y9ZfH"]),
             }),
             (0, i.jsx)("div", {
-                className: j.input,
+                className: v.input,
                 children: (0, i.jsx)(a.VcW, {
                     value: p.lds,
                     onChange: n,
@@ -67,7 +67,7 @@ function b(e) {
                             subtitle: s,
                         });
                     },
-                    placeholder: v.intl.string(v.t["Z+oF8v"]),
+                    placeholder: j.intl.string(j.t["Z+oF8v"]),
                 }),
             }),
         ],

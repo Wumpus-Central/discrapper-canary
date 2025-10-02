@@ -22,7 +22,7 @@ var i = n(392711),
     v = n(55935),
     O = n(74538),
     _ = n(388032),
-    E = n(219299);
+    E = n(71627);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -170,8 +170,8 @@ let S = (e) => {
                     null != f ? u.Z.getAllPending() : P.Z.getAllPending(),
                 ),
             ),
-            D = O.ZP.isPremium(i),
-            k = O.ZP.canUsePremiumProfileCustomization(i),
+            k = O.ZP.isPremium(i),
+            D = O.ZP.canUsePremiumProfileCustomization(i),
             T = (0, h.ZP)(i.id),
             U = !!(null == T ? void 0 : T.getPreviewBio(_).value),
             L = {
@@ -192,7 +192,7 @@ let S = (e) => {
                 pendingAccentColor: N,
                 pendingProfileEffect: null != o ? o : null,
                 hideFakeActivity: U,
-                canUsePremiumCustomization: k,
+                canUsePremiumCustomization: D,
                 onUpsellClick: y.Z,
                 onBannerChange: g.g_,
             };
@@ -227,7 +227,7 @@ let S = (e) => {
                     pendingProfileEffectRecord: o,
                     product: c,
                     purchase: a,
-                    userIsPremium: D,
+                    userIsPremium: k,
                 }),
             ],
         });

@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(628238),
     d = n(976853),
     p = n(977683),
-    h = n(869765),
-    f = n(695346),
+    f = n(869765),
+    h = n(695346),
     g = n(592125),
     m = n(699516),
     b = n(709054),
     _ = n(594173),
     O = n(786761),
     y = n(493892),
-    j = n(901461),
-    v = n(739566),
+    v = n(901461),
+    j = n(739566),
     x = n(443877),
     C = n(492593),
     E = n(453687),
@@ -32,9 +32,9 @@ var r = n(951288),
     A = n(56744),
     R = n(834129),
     D = n(981631),
-    M = n(388032),
-    L = n(77162),
-    k = n(5898);
+    L = n(388032),
+    M = n(378661),
+    k = n(360514);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +85,7 @@ let B = i.memo(function e(t) {
             channel: l,
             message: s,
             compact: R = !1,
-            className: L,
+            className: M,
             onContextMenu: B,
             onClick: V,
             disableInteraction: H = !1,
@@ -93,16 +93,16 @@ let B = i.memo(function e(t) {
             treatSpam: W,
         } = t,
         K = D.OBS.has(s.type) ? s.messageReference : void 0,
-        Y = (0, a.e7)([h.Z], () => h.Z.getMessageByReference(K)),
+        Y = (0, a.e7)([f.Z], () => f.Z.getMessageByReference(K)),
         q = (0, a.e7)([g.Z], () =>
-            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED
+            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED
                 ? g.Z.getChannel(Y.message.channel_id)
                 : null,
         ),
-        X = f.x4.useSetting(),
-        Q = f.RS.useSetting(),
-        J = f.NA.useSetting(),
-        $ = f.QK.useSetting(),
+        X = h.x4.useSetting(),
+        Q = h.RS.useSetting(),
+        J = h.NA.useSetting(),
+        $ = h.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: en } = (0, x.Z)(l),
@@ -113,12 +113,12 @@ let B = i.memo(function e(t) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        el = (0, v.ZP)(s),
+        el = (0, j.ZP)(s),
         eo = (0, a.e7)(
             [g.Z],
             () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
         ),
-        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED && null != q,
+        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
         es = !ea && void 0 === i,
         ec = (0, I.Z)({
             message: s,
@@ -128,7 +128,7 @@ let B = i.memo(function e(t) {
         eu = (0, c.v)(s),
         ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
-        eh = (0, E.iG)(s);
+        ef = (0, E.iG)(s);
     return ea
         ? (0, r.jsx)(
               e,
@@ -139,20 +139,20 @@ let B = i.memo(function e(t) {
               }),
           )
         : (m.Z.isBlockedForMessage(s)
-                ? (i = M.t["+FcYMz"])
+                ? (i = L.t["+FcYMz"])
                 : m.Z.isIgnoredForMessage(s)
-                  ? (i = M.t.VFWjc3)
-                  : (0, y.DQ)(s) && W && (i = M.t.xfkfTE),
+                  ? (i = L.t.VFWjc3)
+                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTE),
             void 0 !== i)
           ? (0, r.jsx)(F, {
-                className: L,
+                className: M,
                 compact: R,
                 count: 1,
                 collapsedReason: i,
             })
           : (0, r.jsx)(C.Z, {
                 compact: R,
-                className: o()(L, {
+                className: o()(M, {
                     [k.ephemeral]: (0, O.Pv)(s),
                     [k.disableInteraction]: H,
                     [k.groupStart]: t.isGroupStart,
@@ -194,11 +194,11 @@ let B = i.memo(function e(t) {
                 onClick: V,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: s.type === D.uaV.REPLY,
-                isSystemMessage: (0, j.Z)(s),
+                isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
-                "aria-labelledby": eh,
-                "aria-roledescription": M.intl.string(M.t.BAB0yM),
+                "aria-labelledby": ef,
+                "aria-roledescription": L.intl.string(L.t.BAB0yM),
             });
 });
 function F(e) {
@@ -209,15 +209,15 @@ function F(e) {
         role: "group",
         childrenMessageContent: (0, r.jsx)(R.Z, {
             compact: i,
-            className: L.blockedSystemMessage,
+            className: M.blockedSystemMessage,
             iconNode: (0, r.jsx)(s.Dio, {
                 size: "md",
                 color: "currentColor",
-                className: L.blockedIcon,
+                className: M.blockedIcon,
             }),
             children: (0, r.jsx)("div", {
-                className: L.blockedMessageText,
-                children: M.intl.format(l, { count: n }),
+                className: M.blockedMessageText,
+                children: L.intl.format(l, { count: n }),
             }),
         }),
     });

@@ -23,8 +23,8 @@ var i = n(951288),
     C = n(486199),
     N = n(981631),
     w = n(388032),
-    S = n(88270),
-    P = n(10198);
+    S = n(516941),
+    P = n(197571);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,8 +57,8 @@ function Z(e) {
             integration: l,
             editedIntegration: o,
             isExpanded: Z,
-            onToggleExpand: T,
-            onDisable: E,
+            onToggleExpand: E,
+            onDisable: T,
             onEnable: k,
         } = e,
         [A, D] = r.useState(!1),
@@ -79,7 +79,7 @@ function Z(e) {
                                 header: w.intl.string(w.t.emx3lJ),
                                 confirmText: r,
                                 cancelText: w.intl.string(w.t["ETE/oK"]),
-                                onConfirm: () => E(l),
+                                onConfirm: () => T(l),
                                 children: (0, i.jsx)(p.Text, {
                                     variant: "text-md/normal",
                                     children:
@@ -103,7 +103,7 @@ function Z(e) {
                         t),
                     );
                 });
-        }, [l, E]),
+        }, [l, T]),
         B = r.useCallback(() => {
             h.Z.syncIntegration(n.id, l.id);
         }, [n.id, l.id]),
@@ -482,7 +482,7 @@ function Z(e) {
                         ? (0, i.jsx)(p.P3F, {
                               className: S.expandableHeader,
                               "aria-expanded": Z && !A,
-                              onClick: T,
+                              onClick: E,
                               children: X,
                           })
                         : X,

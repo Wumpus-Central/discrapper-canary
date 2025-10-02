@@ -18,14 +18,14 @@ var r = n(951288),
     _ = n(359110),
     O = n(592125),
     j = n(703558),
-    v = n(430824),
-    x = n(979651),
+    x = n(430824),
+    v = n(979651),
     C = n(664342),
     I = n(124368),
     E = n(981631),
     S = n(388032),
-    Z = n(229);
-function T(e) {
+    Z = n(952899);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function T(e) {
     }
     return e;
 }
-function P(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,10 +71,10 @@ function P(e, t) {
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
         R = (0, s.e7)([O.Z], () => O.Z.getChannel(t)),
-        w = (0, s.e7)([v.Z], () => v.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        w = (0, s.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
-    let L = (0, s.e7)([x.Z], () => null != D && !a().isEmpty(x.Z.getVoiceStatesForChannel(D.id)));
+    let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
     i.useEffect(() => {
         L &&
             null != D &&
@@ -90,7 +90,7 @@ function N(e) {
             if (null == R || M.current) return;
             M.current = !0;
             let e = (0, p.K)(O.Z.getChannel(R.id), !0);
-            (0, u.yw)(E.rMx.CHANNEL_OPENED, P(T({}, e, (0, u.$H)(R.id)), { channel_view: N })),
+            (0, u.yw)(E.rMx.CHANNEL_OPENED, T(P({}, e, (0, u.$H)(R.id)), { channel_view: N })),
                 (0, h.a)(E.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
         null == R || null == w)
@@ -117,7 +117,7 @@ function N(e) {
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e("40157").then(n.bind(n, 422200));
-                            return (t) => (0, r.jsx)(e, P(T({}, t), { channel: R }));
+                            return (t) => (0, r.jsx)(e, T(P({}, t), { channel: R }));
                         });
                     },
                     handleClick: function () {

@@ -25,8 +25,8 @@ var r = n(951288),
     S = n(981631),
     P = n(228168),
     I = n(388032),
-    Z = n(90985);
-let T = (e) => {
+    Z = n(291738);
+let N = (e) => {
         let { userId: t, channelId: n } = e,
             l = (0, s.e7)([C.Z], () => C.Z.getMutualGuilds(t), [t]),
             a = i.useMemo(
@@ -103,7 +103,7 @@ let T = (e) => {
                   ],
               });
     },
-    N = (e) => {
+    T = (e) => {
         var t;
         let { relationshipType: n, userId: i, showingBanner: l } = e,
             a = null == (t = O.default.getUser(i)) ? void 0 : t.bot,
@@ -265,7 +265,7 @@ let T = (e) => {
                     : (0, r.jsxs)("div", {
                           className: Z.inline,
                           children: [
-                              (0, r.jsx)(N, {
+                              (0, r.jsx)(T, {
                                   relationshipType: d,
                                   userId: t,
                                   showingBanner: i,
@@ -291,7 +291,7 @@ let T = (e) => {
             children: [
                 (0, r.jsx)("div", {
                     className: Z.inline,
-                    children: (0, r.jsx)(T, {
+                    children: (0, r.jsx)(N, {
                         userId: t,
                         channelId: n.id,
                     }),

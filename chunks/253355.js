@@ -2,16 +2,16 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var l = n(399606),
-    i = n(607070),
-    a = n(70097),
+    a = n(607070),
+    i = n(70097),
     s = n(451478),
     o = n(884697),
     c = n(813083),
     u = n(794324),
-    d = n(55783);
+    d = n(638758);
 function g(e) {
     let { category: t } = e,
-        n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
+        n = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
         o = (0, l.e7)([s.Z], () => s.Z.isFocused()),
         { catalogBannerStatic: g, catalogBannerAnimated: p } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
@@ -25,7 +25,7 @@ function g(e) {
             null != p &&
                 !n &&
                 o &&
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(i.Z, {
                     src: p,
                     className: d.animationAsset,
                     autoPlay: !0,

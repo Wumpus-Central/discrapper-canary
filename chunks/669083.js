@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(442837),
@@ -17,8 +17,8 @@ var i = n(951288),
     O = n(624864),
     b = n(981631),
     v = n(388032),
-    _ = n(968175),
-    E = n(10198);
+    _ = n(476828),
+    E = n(197571);
 function x(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ function S() {
         text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
     });
 }
-class C extends r.PureComponent {
+class Z extends r.PureComponent {
     componentDidMount() {
         a.Z.track(b.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
@@ -310,7 +310,7 @@ class C extends r.PureComponent {
             });
     }
 }
-function Z(e) {
+function C(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -332,7 +332,7 @@ function Z(e) {
             ),
         })),
         u = (0, y.Z)({ location: "Overlay Settings" });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(Z, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: r,

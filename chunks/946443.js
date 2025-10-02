@@ -14,27 +14,27 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    h = n(493773),
-    f = n(607070),
+    f = n(493773),
+    h = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
     _ = n(358085),
     O = n(143316),
     y = n(240126),
-    j = n(147522),
-    v = n(809780),
+    v = n(147522),
+    j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(77902);
+    E = n(915087);
 function S(e) {
     var t, n, l, a, O, S, I;
     let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, v.ZP)(A),
-        { loadState: M, channels: L } = R,
+        [R, D] = (0, j.ZP)(A),
+        { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        U = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
+        U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -93,7 +93,7 @@ function S(e) {
             ),
             [T],
         ),
-        (0, h.ZP)(
+        (0, f.ZP)(
             () => (
                 b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
@@ -102,7 +102,7 @@ function S(e) {
             ),
         );
     let G = (0, g.Z)("unreads", A);
-    if (0 === L.length) {
+    if (0 === M.length) {
         return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === v.jd.Done ? void 0 : k,
+                            onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
                                 w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
-                                (0, j.Z)(L, D, N),
-                                M === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                (0, v.Z)(M, D, N),
+                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors

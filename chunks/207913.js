@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(481060),
     d = n(239091),
     p = n(884338),
-    h = n(933557),
-    f = n(471445),
+    f = n(933557),
+    h = n(471445),
     g = n(111028),
     m = n(978003),
     b = n(245216),
     _ = n(739566),
     O = n(930282),
     y = n(318713),
-    j = n(47930),
-    v = n(123145),
+    v = n(47930),
+    j = n(123145),
     x = n(25015),
     C = n(178480),
     E = n(518950),
@@ -32,11 +32,11 @@ var r = n(951288),
     A = n(804932),
     R = n(993609),
     D = n(987889),
-    M = n(586694),
-    L = n(981631),
-    k = n(997998),
+    L = n(586694),
+    M = n(981631),
+    k = n(677642),
     U = n(388032),
-    G = n(66449);
+    G = n(361584);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,8 +82,8 @@ function F(e, t) {
 }
 function V(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
-        p = n.type === L.d4z.UNKNOWN ? u.VL1 : (0, f.KS)(n, null),
-        m = (0, h.ZP)(n, !1),
+        p = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
+        m = (0, f.ZP)(n, !1),
         b = (0, c.e7)([w.Z], () => w.Z.getGuild(n.getGuildId())),
         { nick: O, colorString: y } = (0, _.ZP)(t),
         { avatarSrc: x, eventHandlers: C } = (0, E.Z)({
@@ -92,8 +92,8 @@ function V(e) {
             guildId: null == b ? void 0 : b.id,
             animateOnHover: !0,
         }),
-        S = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == b,
-        I = (0, j.x)({
+        S = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == b,
+        I = (0, v.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -103,7 +103,7 @@ function V(e) {
         Z = (0, r.jsx)("div", {
             className: G.usernameTagContainer,
             inert: !0,
-            children: (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(j.Z, {
                 channel: n,
                 message: t,
                 hideGuildTag: !0,
@@ -131,7 +131,7 @@ function V(e) {
                                 marginTop: "4px",
                             },
                             children: S
-                                ? (0, r.jsx)(M.q, {
+                                ? (0, r.jsx)(L.q, {
                                       "aria-label": "User Avatar",
                                       src: x,
                                       size: u.EFr.SIZE_32,
@@ -139,7 +139,7 @@ function V(e) {
                                       cornerIconOffsetX: 4,
                                       cornerIconOffsetY: 3,
                                   })
-                                : (0, r.jsx)(M.E, {
+                                : (0, r.jsx)(L.E, {
                                       "aria-label": "Guild Icon",
                                       src: (0, P.EB)(b, 32),
                                       size: u.EFr.SIZE_32,
@@ -302,17 +302,17 @@ function W(e) {
                 });
             return (0, i.useMemo)(() => {
                 let e = "" === t.content,
-                    i = t.embeds.some((e) => e.type === L.hBH.GIFV),
+                    i = t.embeds.some((e) => e.type === M.hBH.GIFV),
                     s = (function (e) {
-                        let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
+                        let t = e.embeds.some((e) => e.type === M.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
                     c = (0, m.Z)(t),
                     d = t.stickerItems.length > 0,
                     p = t.isPoll(),
-                    h = t.type === L.uaV.POLL_RESULT,
-                    f = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
-                    g = t.type === L.uaV.USER_JOIN,
+                    f = t.type === M.uaV.POLL_RESULT,
+                    h = t.hasFlag(M.iLy.IS_VOICE_MESSAGE),
+                    g = t.type === M.uaV.USER_JOIN,
                     _ = null;
                 1 === s
                     ? (_ = u.XBm)
@@ -320,20 +320,20 @@ function W(e) {
                       ? (_ = u.Ka2)
                       : c
                         ? (_ = b.Z)
-                        : p || h
+                        : p || f
                           ? (_ = u.QDj)
                           : d
                             ? (_ = u.SlE)
-                            : f && (_ = u.gj8);
+                            : h && (_ = u.gj8);
                 let y = !0,
-                    j = null;
+                    v = null;
                 if (e)
-                    if (c) j = U.intl.string(U.t["9ddYKi"]);
+                    if (c) v = U.intl.string(U.t["9ddYKi"]);
                     else if (p) {
-                        var v;
-                        (y = !1), (j = null == (v = t.poll) ? void 0 : v.question.text);
+                        var j;
+                        (y = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
                     } else
-                        j = h
+                        v = f
                             ? U.intl.string(U.t.sad2PD)
                             : i
                               ? U.intl.string(U.t.p0oZm5)
@@ -343,14 +343,14 @@ function W(e) {
                                   ? U.intl.string(U.t.tCcq5u)
                                   : d
                                     ? U.intl.format(U.t.zY4v1N, { stickerName: t.stickerItems[0].name })
-                                    : f
+                                    : h
                                       ? U.intl.string(U.t.slFYgo)
                                       : g
                                         ? U.intl.string(U.t.Yvvfw8)
                                         : U.intl.string(U.t.sDqZHB);
                 else
                     (y = !1),
-                        (j = (0, r.jsx)(O.ZP, {
+                        (v = (0, r.jsx)(O.ZP, {
                             content: a,
                             message: t,
                             compact: !1,
@@ -361,16 +361,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (j = (0, r.jsx)("div", {
+                        (v = (0, r.jsx)("div", {
                             className: o()(G.message, {
                                 [G.unread]: n,
                                 [G.selected]: l,
                                 [G.descriptionMessage]: y,
                             }),
-                            children: j,
+                            children: v,
                         })),
                     {
-                        previewContent: j,
+                        previewContent: v,
                         Icon: _,
                     }
                 );
@@ -405,54 +405,54 @@ let K = (0, i.memo)(
     function (e) {
         var t;
         let { message: l, groupedMessages: a, isUnread: p } = e,
-            h = l.message,
-            f = (0, A.fJ)(),
+            f = l.message,
+            h = (0, A.fJ)(),
             { params: g } = (0, s.$B)(),
             m = (0, c.e7)([I.Z], () => {
-                if (null == h) return null;
+                if (null == f) return null;
                 let e = I.Z.getChannel(l.channelId);
                 return null != e
                     ? e
                     : new S.nl({
                           id: l.channelId,
                           guild_id: l.guildId,
-                          type: L.d4z.UNKNOWN,
+                          type: M.d4z.UNKNOWN,
                           name: U.intl.string(U.t.J90oLS),
                       });
             }),
             b = (0, R.z)((e) => {
                 var t;
-                return e.isMenuOpenForMessage(null != (t = null == h ? void 0 : h.id) ? t : null);
+                return e.isMenuOpenForMessage(null != (t = null == f ? void 0 : f.id) ? t : null);
             }),
             { notificationCenterVariant: _ } = (0, Z.pN)({ location: "NotificationsInboxMessageUnit" }),
             O = i.useMemo(
-                () => "".concat(null == h ? void 0 : h.author.username, ": ").concat(null == m ? void 0 : m.name),
-                [null == h ? void 0 : h.author.username, null == m ? void 0 : m.name],
+                () => "".concat(null == f ? void 0 : f.author.username, ": ").concat(null == m ? void 0 : m.name),
+                [null == f ? void 0 : f.author.username, null == m ? void 0 : m.name],
             ),
             y = null != (t = null == a ? void 0 : a.map((e) => e.message).filter((e) => null != e)) ? t : [];
-        return null == h || null == m
+        return null == f || null == m
             ? null
             : (0, r.jsx)(u.kL8, {
                   "aria-label": O,
                   className: o()(G.messageClickableContainer, {
-                      [G.selected]: h.id === g.messageId,
+                      [G.selected]: f.id === g.messageId,
                       [G.actionMenuOpen]: b,
                   }),
                   onClick: () => {
                       T.Z.inboxItemClick({
-                          message: h,
+                          message: f,
                           channel: m,
                           isUnread: p,
                           isSidebar: _ === Z.jP.SIDEBAR,
-                          viewId: f,
+                          viewId: h,
                       });
                   },
                   onContextMenu: (e) => {
                       e.preventDefault(),
                           (0, A.Qz)({
                               interactionType: A.s_.CONTEXT_MENU,
-                              message: h,
-                              viewId: f,
+                              message: f,
+                              viewId: h,
                           }),
                           (0, d.jW)(
                               e,
@@ -464,9 +464,9 @@ let K = (0, i.memo)(
                           );
                   },
                   children: (0, r.jsx)(V, {
-                      message: h,
+                      message: f,
                       channel: m,
-                      isSelected: h.id === g.messageId,
+                      isSelected: f.id === g.messageId,
                       groupedMessages: y,
                       isUnread: p,
                   }),

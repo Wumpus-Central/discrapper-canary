@@ -1,0 +1,77 @@
+n.d(t, { Z: () => _ });
+var r = n(951288);
+n(647438);
+var i = n(755721),
+    l = n(481060),
+    s = n(100527),
+    o = n(906732),
+    a = n(436774),
+    c = n(104494),
+    d = n(639119),
+    u = n(767714),
+    f = n(74538),
+    m = n(156582),
+    h = n(474936),
+    p = n(637824),
+    g = n(388032),
+    x = n(312518);
+function _(e) {
+    var t, n, _;
+    let { onClose: v } = e,
+        { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
+        b = (0, d.N)(),
+        S = (0, c.Ng)(),
+        C =
+            (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
+            (0, c.Wp)(S, h.Si.TIER_2),
+        y = g.intl.string(p.default["+f+cqq"]);
+    return (
+        C &&
+            (null != b
+                ? (y = (0, f.Rt)({
+                      intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
+                      intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count,
+                  }))
+                : null != S && (y = g.intl.formatToPlainString(g.t.bkQ4bG, { percent: S.discount.amount }))),
+        (0, r.jsxs)("div", {
+            className: x.root,
+            children: [
+                (0, r.jsxs)(l.Text, {
+                    className: x.infoText,
+                    variant: "text-xs/normal",
+                    color: "always-white",
+                    children: [
+                        (0, r.jsx)(l.mBM, {
+                            size: "xxs",
+                            color: "currentColor",
+                        }),
+                        g.intl.format(g.t.sLJ3ER, {
+                            onNitroClick: function () {
+                                (0, m.E)({
+                                    analyticsLocation: j[0],
+                                    onClose: v,
+                                });
+                            },
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(u.Z, {
+                    className: x.ctaButton,
+                    iconClassName: x.premiumIcon,
+                    size: i.zx.Sizes.TINY,
+                    color: i.zx.Colors.BRAND_INVERTED,
+                    subscriptionTier: h.Si.TIER_2,
+                    buttonShineClassName: x.premiumShine,
+                    iconColor: a.JX.PREMIUM_TIER_2,
+                    onClick: () => {
+                        v();
+                    },
+                    textOptions: {
+                        subscribeText: y,
+                        textClassName: x.ctaButtonText,
+                    },
+                }),
+            ],
+        })
+    );
+}

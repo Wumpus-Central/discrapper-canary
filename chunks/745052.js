@@ -38,8 +38,8 @@ var r = n(951288),
     U = n(610697),
     G = n(26373),
     B = n(486622),
-    V = n(488634),
-    H = n(899740),
+    H = n(488634),
+    V = n(899740),
     F = n(177033),
     z = n(355350),
     W = n(307947),
@@ -50,8 +50,8 @@ var r = n(951288),
     X = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(735516),
-    et = n(161655);
+    ee = n(803882),
+    et = n(97009);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -97,7 +97,7 @@ function er(e, t) {
 }
 function ei() {
     let e = i.useRef(null),
-        t = (0, H.q)(),
+        t = (0, V.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
@@ -106,7 +106,7 @@ function ei() {
         }, []),
         { rejectAll: d } = (0, B.m)({ onError: u }),
         f = (0, b.Z)("message-requests-list"),
-        { channelId: h } = (0, V._)(),
+        { channelId: h } = (0, H._)(),
         m = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
@@ -320,7 +320,7 @@ function eo(e) {
 }
 let es = (0, h.Z)(function (e) {
     let { width: t } = e,
-        n = (0, H.q)();
+        n = (0, V.q)();
     (0, m.ZP)(() => {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
             (0, P.e)("message-requests"),

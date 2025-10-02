@@ -1,118 +1,118 @@
-n.d(t, { Z: () => h });
-var r = n(951288),
-    i = n(296009),
-    a = n(442837),
-    o = n(314897),
-    l = n(86419),
-    c = n(747101),
-    s = n(556045),
-    u = n(881410),
-    d = n(985748),
-    g = n(566007),
-    f = n(173951),
-    p = n(455731),
-    b = n(272289),
-    m = n(517143);
-function O(e) {
+r.d(t, { Z: () => v });
+var n = r(951288),
+    i = r(296009),
+    o = r(442837),
+    a = r(314897),
+    l = r(86419),
+    c = r(747101),
+    s = r(556045),
+    u = r(881410),
+    d = r(985748),
+    f = r(566007),
+    g = r(173951),
+    p = r(455731),
+    b = r(272289),
+    O = r(39642);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
 function y(e, t) {
     if (null == e) return {};
-    var n,
-        r,
+    var r,
+        n,
         i = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                o = Object.keys(e);
+            for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < o.length; n++)
+            (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
 let j = (e) => {
         var { widget: t } = e,
-            n = y(e, ["widget"]);
+            r = y(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
-                return (0, r.jsx)(g.Z, O({ widget: t }, n));
+                return (0, n.jsx)(f.Z, m({ widget: t }, r));
             case i.l.CURRENT_GAMES:
-                return (0, r.jsx)(d.Z, O({ widget: t }, n));
+                return (0, n.jsx)(d.Z, m({ widget: t }, r));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(p.Z, O({ widget: t }, n));
+                return (0, n.jsx)(p.Z, m({ widget: t }, r));
             case i.l.PLAYED_GAMES:
-                return (0, r.jsx)(f.Z, O({ widget: t }, n));
+                return (0, n.jsx)(g.Z, m({ widget: t }, r));
             default:
                 return null;
         }
     },
-    h = (e) => {
-        var { widget: t, user: n, disableInteraction: i } = e,
+    v = (e) => {
+        var { widget: t, user: r, disableInteraction: i } = e,
             d = y(e, ["widget", "user", "disableInteraction"]);
-        let g = (0, c.FX)(t),
-            { shouldShowSuggestions: f, handleDismissSuggestions: p } = (0, s.h)(g),
-            h = (0, a.e7)([o.default], () => o.default.getId() === n.id),
-            v = h && !i && f,
-            x = (0, l.mR)(g),
-            _ = (0, l.Hy)(g, { isCurrentUser: h }),
-            P = (0, l.kQ)(g);
-        return (0, r.jsx)(
+        let f = (0, c.FX)(t),
+            { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
+            v = (0, o.e7)([a.default], () => a.default.getId() === r.id),
+            h = v && !i && g,
+            x = (0, l.mR)(f),
+            _ = (0, l.Hy)(f, { isCurrentUser: v }),
+            w = (0, l.kQ)(f);
+        return (0, n.jsx)(
             j,
-            O(
+            m(
                 {
-                    widget: g,
-                    user: n,
+                    widget: f,
+                    user: r,
                     disableInteraction: i,
                     headerTitle: x,
                     headerSubtitle: _,
-                    headerActionButtons: h
+                    headerActionButtons: v
                         ? [
-                              (0, r.jsx)(
+                              (0, n.jsx)(
                                   u.Z,
                                   {
-                                      disabled: P,
-                                      widgetType: g.type,
-                                      widget: g,
+                                      disabled: w,
+                                      widgetType: f.type,
+                                      widget: f,
                                   },
-                                  "".concat(g.type, "-browse-games-popout"),
+                                  "".concat(f.type, "-browse-games-popout"),
                               ),
                           ]
                         : void 0,
                     trailingContent:
-                        v &&
-                        (0, r.jsx)(b.Z, {
-                            userId: n.id,
-                            widgetType: g.type,
+                        h &&
+                        (0, n.jsx)(b.Z, {
+                            userId: r.id,
+                            widgetType: f.type,
                             onDismiss: p,
-                            className: m.suggestedGames,
+                            className: O.suggestedGames,
                         }),
                 },
                 d,

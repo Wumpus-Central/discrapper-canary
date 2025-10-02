@@ -9,7 +9,7 @@ var r = n(951288),
     d = n(65912),
     u = n(564488),
     m = n(388032),
-    g = n(593631);
+    g = n(32490);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,12 +56,12 @@ function f(e, t) {
 function h(e) {
     let { guildId: t, triggerType: n } = e,
         h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [x] = i.useState(h),
-        [b, j] = i.useState(!1),
+        [b] = i.useState(h),
+        [x, j] = i.useState(!1),
         { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: O } = c.I6[n],
         y = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [C, N] = i.useState(y ? v : x),
+        [C, N] = i.useState(y ? v : b),
         E = (0, a.q_F)({
             opacity: +!y,
             pointerEvents: y ? "none" : "all",
@@ -72,10 +72,10 @@ function h(e) {
             pointerEvents: y ? "all" : "none",
             config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(y ? v : x);
+                N(y ? v : b);
             },
             onRest: () => {
-                N(y ? v : x), j(y);
+                N(y ? v : b), j(y);
             },
         });
     return null == v || y
@@ -88,7 +88,7 @@ function h(e) {
                       style: I,
                       children: (0, r.jsx)(u.Z, {
                           rule: C,
-                          persistEdit: b,
+                          persistEdit: x,
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {

@@ -38,8 +38,8 @@ var r,
     U = n(707409),
     G = n(171516),
     B = n(103450),
-    V = n(359110),
-    H = n(769654),
+    H = n(359110),
+    V = n(769654),
     F = n(849171),
     z = n(601964),
     W = n(314897),
@@ -53,7 +53,7 @@ var r,
     ee = n(599706),
     et = n(981631),
     en = n(388032),
-    er = n(544284);
+    er = n(84822);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -405,7 +405,7 @@ let eO = (e) => {
                 onContextMenu: (e) => c(e, r),
                 children: [
                     (0, i.jsx)(p.P3F, {
-                        onClick: () => (0, H.X)(n.id),
+                        onClick: () => (0, V.X)(n.id),
                         "aria-hidden": !0,
                         tabIndex: -1,
                         children: (0, i.jsxs)("div", {
@@ -438,7 +438,7 @@ let eO = (e) => {
                     }),
                     (0, i.jsx)(p.P3F, {
                         onClick: () => {
-                            f.default.selectVoiceChannel(r.id), (0, V.Kh)(r.id);
+                            f.default.selectVoiceChannel(r.id), (0, H.Kh)(r.id);
                         },
                         focusProps: { ringTarget: u },
                         children: (0, i.jsxs)("div", {

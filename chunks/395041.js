@@ -8,7 +8,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(819439),
-    l = n(67759);
+    l = n(624595);
 function c(e, t) {
     let { children: n } = e;
     return (0, r.jsx)(o.Text, {

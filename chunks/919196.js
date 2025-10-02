@@ -19,7 +19,7 @@ var i = n(951288),
     v = n(725875),
     y = n(981631),
     O = n(388032),
-    _ = n(156065);
+    _ = n(85541);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -116,8 +116,8 @@ function w(e) {
             errors: S,
             canNavigate: P,
         } = e,
-        { application: I, integration: Z, webhooks: T } = s,
-        [E, k] = (0, a.Wu)(
+        { application: I, integration: Z, webhooks: E } = s,
+        [T, k] = (0, a.Wu)(
             [m.Z],
             () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, I.bot.id, n)],
             [I.bot, n],
@@ -186,7 +186,7 @@ function w(e) {
                       className: _.headerDescription,
                   })
                 : null,
-            E
+            T
                 ? (0, i.jsx)(u.Z, {
                       application: I,
                       canNavigate: P,
@@ -219,9 +219,9 @@ function w(e) {
                         }),
                         title: O.intl.string(O.t["t9ZX/P"]),
                     }),
-                    T.length > 0
+                    E.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: T,
+                              webhooks: E,
                               editedWebhook: w,
                               selectableWebhookChannels: d,
                               errors: S,

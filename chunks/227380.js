@@ -13,12 +13,12 @@ var r = n(951288),
     p = n(481060),
     f = n(984933),
     h = n(63063),
-    x = n(709054),
-    b = n(434404),
+    b = n(709054),
+    x = n(434404),
     j = n(733895),
     v = n(981631),
     _ = n(388032),
-    O = n(81190);
+    O = n(213798);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -186,7 +186,7 @@ let I = (e) => {
             ],
         });
     let R = T ? _.t["WH+1Y2"] : _.t.a4MYDA,
-        D = [
+        Z = [
             {
                 name: _.intl.string(_.t.yvk9p6),
                 failingName: _.intl.string(_.t["IY/UT0"]),
@@ -214,7 +214,7 @@ let I = (e) => {
                 }),
                 failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: d()(x.default.extractTimestamp(l)).add(m.minimumGuildAge, "days").format("LL"),
+                    passDate: d()(b.default.extractTimestamp(l)).add(m.minimumGuildAge, "days").format("LL"),
                 }),
                 checked: null == m ? void 0 : m.age,
             },
@@ -405,7 +405,7 @@ let I = (e) => {
                 failingName: _.intl.string(_.t.awA3PT),
                 description: _.intl.string(_.t.QbBJ7e),
                 failingDescription: _.intl.format(_.t.kBXInZ, {
-                    onClick: () => b.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS),
+                    onClick: () => x.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS),
                 }),
                 checked: null == m ? void 0 : m.protected,
             },
@@ -430,13 +430,13 @@ let I = (e) => {
                           ],
                       });
             })(),
-            D.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
+            Z.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
                 (0, r.jsxs)(
                     i.Fragment,
                     {
                         children: [
                             (0, r.jsx)(N, y({}, e)),
-                            t < D.length - 1 ? (0, r.jsx)("hr", { className: O.separator }) : null,
+                            t < Z.length - 1 ? (0, r.jsx)("hr", { className: O.separator }) : null,
                         ],
                     },
                     "".concat(e.name),

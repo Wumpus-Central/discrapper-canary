@@ -9,15 +9,15 @@ var r = n(951288),
     u = n(268623),
     d = n(324701),
     p = n(768943),
-    h = n(64247),
-    f = n(804932),
+    f = n(64247),
+    h = n(804932),
     g = n(370774),
     m = n(993609),
     b = n(982183),
     _ = n(981631),
     O = n(388032),
-    y = n(66449);
-function j(e) {
+    y = n(361584);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function v(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ let x = {
 function C(e) {
     let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
         [c, u] = (0, i.useState)(!1),
-        d = (0, f.fJ)();
+        d = (0, h.fJ)();
     return (0, r.jsx)(o.ua7, {
         text: t,
         position: "top",
@@ -80,10 +80,10 @@ function C(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                v(j({}, e), {
+                j(v({}, e), {
                     className: y.action,
                     onClick: (e) => {
-                        (0, f.Qz)({
+                        (0, h.Qz)({
                             message: l,
                             interactionType: s,
                             viewId: d,
@@ -101,8 +101,8 @@ function C(e) {
 }
 function E(e) {
     let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c, actionType: u } = e,
-        d = (0, f.fJ)(),
-        [p, h] = (0, i.useState)(!1),
+        d = (0, h.fJ)(),
+        [p, f] = (0, i.useState)(!1),
         [g, b] = (0, i.useState)(!1),
         _ = (0, i.useRef)(null),
         { openMenu: O, closeMenu: x } = (0, m.z)();
@@ -131,16 +131,16 @@ function E(e) {
                 text: l,
                 position: "top",
                 spacing: 4,
-                onTooltipShow: () => h(!0),
-                onTooltipHide: () => h(!1),
+                onTooltipShow: () => f(!0),
+                onTooltipHide: () => f(!1),
                 children: (t) =>
                     (0, r.jsx)(
                         o.P3F,
-                        v(j({}, t), {
+                        j(v({}, t), {
                             innerRef: _,
                             className: y.action,
                             onClick: (e) => {
-                                (0, f.Qz)({
+                                (0, h.Qz)({
                                     message: n,
                                     interactionType: c,
                                     viewId: d,
@@ -151,7 +151,7 @@ function E(e) {
                             },
                             children: (0, r.jsx)(
                                 a,
-                                v(j({}, e), {
+                                j(v({}, e), {
                                     message: n,
                                     "aria-label": l,
                                     className: y.actionIcon,
@@ -185,16 +185,16 @@ let S = {
                     e.id,
                 );
         },
-        interactionType: f.s_.ACK,
+        interactionType: h.s_.ACK,
     },
     [b.r0.BOOKMARK]: {
         type: "menu",
         label: O.intl.string(O.t["9p3D9v"]),
         Icon: (e) =>
             null != p.Z.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(o.plf, j({}, e))
-                : (0, r.jsx)(o.gt9, j({}, e)),
-        interactionType: f.s_.BOOKMARK,
+                ? (0, r.jsx)(o.plf, v({}, e))
+                : (0, r.jsx)(o.gt9, v({}, e)),
+        interactionType: h.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
                 i = (0, l.e7)([p.Z], () => p.Z.getSavedMessage(t.channel_id, t.id)),
@@ -204,7 +204,7 @@ let S = {
                 });
             return (0, r.jsxs)(
                 o.v2r,
-                v(j({}, n), {
+                j(v({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": O.intl.string(O.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -245,13 +245,13 @@ let S = {
         type: "menu",
         Icon: o.Dkj,
         label: O.intl.string(O.t.h850Sk),
-        interactionType: f.s_.SETTINGS,
+        interactionType: h.s_.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, r.jsx)(
-                      h.Z,
-                      v(j({}, n), {
+                      f.Z,
+                      j(v({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: O.intl.string(O.t["1NBjqa"]),
@@ -259,7 +259,7 @@ let S = {
                   )
                 : (0, r.jsx)(
                       c.Z,
-                      v(j({}, n), {
+                      j(v({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: O.intl.string(O.t.Xm41aW),
@@ -290,7 +290,7 @@ function P(e) {
                 case "standard":
                     return (0, r.jsx)(
                         C,
-                        v(j({}, i), {
+                        j(v({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -299,7 +299,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         E,
-                        v(j({}, i), {
+                        j(v({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

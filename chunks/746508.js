@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(239091),
     O = n(925549),
     E = n(284056),
-    v = n(730749),
-    y = n(911969),
+    y = n(730749),
+    v = n(911969),
     I = n(317381),
-    C = n(596040),
-    S = n(314490),
+    S = n(596040),
+    C = n(314490),
     T = n(374065),
     N = n(451576),
     j = n(119315),
@@ -38,8 +38,8 @@ var r = n(951288),
     U = n(258609),
     G = n(446226),
     B = n(935261),
-    V = n(74299),
-    H = n(803647),
+    H = n(74299),
+    V = n(803647),
     F = n(142497),
     z = n(810788),
     W = n(160404),
@@ -71,11 +71,11 @@ var r = n(951288),
     e_ = n(430824),
     eO = n(819640),
     eE = n(131951),
-    ev = n(496675),
-    ey = n(19780),
+    ey = n(496675),
+    ev = n(19780),
     eI = n(699516),
-    eC = n(594174),
-    eS = n(979651),
+    eS = n(594174),
+    eC = n(979651),
     eT = n(938475),
     eN = n(626135),
     ej = n(63063),
@@ -89,8 +89,8 @@ var r = n(951288),
     eD = n(921944),
     ek = n(190378),
     eM = n(388032),
-    eU = n(239545),
-    eG = n(10198);
+    eU = n(890332),
+    eG = n(197571);
 function eB(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ function eB(e, t, n) {
         e
     );
 }
-function eV(e) {
+function eH(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -120,7 +120,7 @@ function eV(e) {
     }
     return e;
 }
-function eH(e, t) {
+function eV(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -255,8 +255,8 @@ function eK(e) {
         E = i.useCallback(() => {
             (0, eu.Z)();
         }, []),
-        v = (0, q.bp)(),
-        y = i.useCallback(
+        y = (0, q.bp)(),
+        v = i.useCallback(
             (e) => {
                 if (eE.Z.isVideoEnabled() === e) return;
                 let n = () => {
@@ -264,20 +264,20 @@ function eK(e) {
                     b.Z.setVideoEnabled(e),
                         e && (0, Y.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
                 };
-                (0, L.v)(s, L.d.CAMERA, e), e ? (0, ef.Z)(n, v) : n();
+                (0, L.v)(s, L.d.CAMERA, e), e ? (0, ef.Z)(n, y) : n();
             },
-            [t, v, s],
+            [t, y, s],
         ),
-        C = p || n || h,
-        { Component: S, play: T, events: N } = (0, f.o)(c.enabled ? "disable" : "enable");
+        S = p || n || h,
+        { Component: C, play: T, events: N } = (0, f.o)(c.enabled ? "disable" : "enable");
     return (
         i.useEffect(() => () => T(), [c.enabled, T]),
         (0, r.jsx)(
             eh.Z,
-            eH(
-                eV(
+            eV(
+                eH(
                     {
-                        onChange: y,
+                        onChange: v,
                         onCameraUnavailable: E,
                         hasPermission: d,
                         channelLimit: O,
@@ -290,9 +290,9 @@ function eK(e) {
                     children: (e) => {
                         var { unavailable: t, isActive: n, label: i, iconComponent: l, iconColor: c } = e,
                             u = eF(e, ["unavailable", "isActive", "label", "iconComponent", "iconColor"]);
-                        let d = (0, r.jsx)(S, {
+                        let d = (0, r.jsx)(C, {
                             size: "md",
-                            className: a()(eU.buttonIcon, { [eU.withText]: !C }),
+                            className: a()(eU.buttonIcon, { [eU.withText]: !S }),
                             color: "currentColor",
                         });
                         return (0, r.jsx)(m.yRy, {
@@ -317,8 +317,8 @@ function eK(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             g.zx,
-                                            eH(
-                                                eV(
+                                            eV(
+                                                eH(
                                                     {
                                                         "data-migration-pending": !0,
                                                         buttonRef: o,
@@ -356,7 +356,7 @@ function eK(e) {
                                                     wrapperClassName: eU.button,
                                                     fullWidth: !0,
                                                     focusProps: ez,
-                                                    children: C
+                                                    children: S
                                                         ? d
                                                         : (0, r.jsxs)(k.Z, {
                                                               align: k.Z.Align.CENTER,
@@ -384,8 +384,8 @@ function eQ(e) {
         { userInActivity: f } = (0, u.cj)([I.ZP], () => ({
             userInActivity: null != I.ZP.getSelfEmbeddedActivityForChannel(t.id),
         })),
-        h = (0, S.p)({
-            surface: y.eR.VOICE_LAUNCHER,
+        h = (0, C.p)({
+            surface: v.eR.VOICE_LAUNCHER,
             skipFetchingShelf: !0,
         }),
         b = c !== T.jy.CAN_LAUNCH,
@@ -401,9 +401,9 @@ function eQ(e) {
                           let { visibleContent: i, markAsDismissed: c } = n;
                           return (0, r.jsxs)(
                               g.zx,
-                              eH(
-                                  eV(
-                                      eH(eV({ "data-migration-pending": !0 }, e), {
+                              eV(
+                                  eH(
+                                      eV(eH({ "data-migration-pending": !0 }, e), {
                                           fullWidth: !0,
                                           size: g.zx.Sizes.MEDIUM,
                                       }),
@@ -469,22 +469,22 @@ function eX(e) {
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = i.useRef(null),
         { parentAnalyticsLocation: d, analyticsLocations: f } = (0, x.ZP)(),
-        h = (0, u.e7)([eC.default], () => eC.default.getCurrentUser()),
+        h = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
         b = (0, u.Wu)([eg.Z], () => eg.Z.getAllActiveStreams()),
         _ = (0, es.Z)(n),
         O = n.getGuildId(),
         E = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        v = (0, Q.Z)(n),
-        y = i.useCallback(() => {
+        y = (0, Q.Z)(n),
+        v = i.useCallback(() => {
             (0, ep.Z)(O, n.id, f);
         }, [O, n.id, f]),
-        C = b.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
-        S = (0, ec.E)(n, h, b);
-    t = null == C ? (l ? y : ed.Z) : () => (0, H.Z)(C);
-    let T = null != C || S.length > 0,
+        S = b.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
+        C = (0, ec.E)(n, h, b);
+    t = null == S ? (l ? v : ed.Z) : () => (0, V.Z)(S);
+    let T = null != S || C.length > 0,
         N = _ ? eM.intl.string(eM.t.fjBNo6) : eM.intl.string(eM.t.uQn9Bw),
-        j = E || o || v,
-        P = null != C,
+        j = E || o || y,
+        P = null != S,
         { Component: A, events: Z, play: w } = (0, p.P)(P ? "disable" : "enable");
     i.useEffect(() => () => w(), [w, P]);
     let D = (0, r.jsx)(A, {
@@ -501,7 +501,7 @@ function eX(e) {
                 currentUser: h,
                 activeStreams: b,
                 onClose: t,
-                handleGoLive: l ? y : ed.Z,
+                handleGoLive: l ? v : ed.Z,
                 onInteraction: (0, R.u)("ManageStreamsMenu", d, { entrypoint: eR.A5.OTHER_BUTTON }),
             });
         },
@@ -516,20 +516,20 @@ function eX(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         g.zx,
-                        eH(
-                            eV(
-                                eH(eV({ "data-migration-pending": !0 }, e), {
+                        eV(
+                            eH(
+                                eV(eH({ "data-migration-pending": !0 }, e), {
                                     buttonRef: c,
                                     size: g.zx.Sizes.MEDIUM,
                                     onClick: (r) => {
                                         var i;
-                                        (0, L.v)(d, L.d.STREAM, null == C),
+                                        (0, L.v)(d, L.d.STREAM, null == S),
                                             T ? n(r) : t(),
                                             null == (i = e.onClick) || i.call(e);
                                     },
                                     disabled: !_ || s,
                                     className: a()(eU.button, eU.buttonColor, {
-                                        [eU.buttonActive]: null != C,
+                                        [eU.buttonActive]: null != S,
                                         [eU.disabled]: !_ || s,
                                     }),
                                 }),
@@ -572,7 +572,7 @@ class eJ extends i.PureComponent {
                 hasVideo: o,
             } = this.props;
         if (null == t) return null;
-        let s = (0, D.F6)(t, eC.default, eI.Z);
+        let s = (0, D.F6)(t, eS.default, eI.Z);
         return (
             null != n
                 ? ((e = eL.Z5c.CHANNEL(n.id, t.id)), (s = "".concat(s, " / ").concat(n.name)))
@@ -776,7 +776,7 @@ class eJ extends i.PureComponent {
                             value: i,
                             children: (0, r.jsx)(
                                 e,
-                                eH(eV({}, n), {
+                                eV(eH({}, n), {
                                     channel: t,
                                     onInteraction: (0, R.u)("RTCConnectionMenu", P.Z.RTC_PANEL),
                                 }),
@@ -821,7 +821,7 @@ function e$(e) {
         i.useEffect(() => () => s(), [l, s]),
         (0, r.jsx)(
             ex.Z,
-            eH(eV({}, t), {
+            eV(eH({}, t), {
                 ref: a,
                 onClick: (e) => {
                     (0, L.v)(o, L.d.KRISP, !l), t.onClick(e);
@@ -840,11 +840,11 @@ function e$(e) {
         )
     );
 }
-let e0 = (0, v.Z)(function (e) {
+let e0 = (0, y.Z)(function (e) {
     let t = (0, G.Z)(),
         n = (0, u.e7)([U.Z], () => U.Z.getAwaitingRemoteSessionInfo()),
-        l = (0, u.e7)([eC.default], () => eC.default.getCurrentUser()),
-        a = (0, u.cj)([ey.Z], () =>
+        l = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
+        a = (0, u.cj)([ev.Z], () =>
             null != t
                 ? {
                       channelId: t.channelId,
@@ -853,10 +853,10 @@ let e0 = (0, v.Z)(function (e) {
                       rtcConnectionLastPing: 0,
                   }
                 : {
-                      channelId: ey.Z.getChannelId(),
-                      rtcConnectionQuality: ey.Z.getQuality(),
-                      rtcConnectionState: ey.Z.getState(),
-                      rtcConnectionLastPing: ey.Z.getLastPing(),
+                      channelId: ev.Z.getChannelId(),
+                      rtcConnectionQuality: ev.Z.getQuality(),
+                      rtcConnectionState: ev.Z.getState(),
+                      rtcConnectionLastPing: ev.Z.getLastPing(),
                   },
         ),
         { channelId: o } = a,
@@ -868,7 +868,7 @@ let e0 = (0, v.Z)(function (e) {
             noiseCancellationSupported: eE.Z.isNoiseCancellationSupported(),
             noiseCancellationActive: eE.Z.getNoiseCancellation(),
             noiseCancellationError: eE.Z.isNoiseCancellationError(),
-            canGoLive: (0, V.Z)(eE.Z),
+            canGoLive: (0, H.Z)(eE.Z),
         })),
         h = (0, u.e7)(
             [eE.Z, z.Z],
@@ -878,13 +878,13 @@ let e0 = (0, v.Z)(function (e) {
                 !eE.Z.isInteractionRequired() &&
                 !(null == c ? void 0 : c.isGuildStageVoice()),
         ),
-        b = (0, u.e7)([eS.Z], () => null != o && eS.Z.hasVideo(o), [o]),
+        b = (0, u.e7)([eC.Z], () => null != o && eC.Z.hasVideo(o), [o]),
         _ = (0, u.e7)([eg.Z], () => eg.Z.getCurrentUserActiveStream()),
         O = (0, u.e7)([eO.Z], () => eO.Z.hasLayers()),
         E = (0, u.e7)([W.Z], () => W.Z.isViewingRoles(d)),
-        v = (0, u.e7)([ev.Z], () => E && !ev.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
-        y = el.Fg.useSetting(),
-        [I, S, T] = (0, u.Wu)(
+        y = (0, u.e7)([ey.Z], () => E && !ey.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
+        v = el.Fg.useSetting(),
+        [I, C, T] = (0, u.Wu)(
             [eT.ZP, J.Z],
             () =>
                 (null == c ? void 0 : c.isGuildStageVoice())
@@ -912,13 +912,13 @@ let e0 = (0, v.Z)(function (e) {
                         : T)
                 ? t
                 : [];
-        }, [I, S, T]),
+        }, [I, C, T]),
         [A, Z] = i.useState(!1);
     i.useEffect(() => {
-        (E || v) && Z(!1);
-    }, [E, v, Z]);
+        (E || y) && Z(!1);
+    }, [E, y, Z]);
     let { analyticsLocations: w } = (0, x.ZP)(P.Z.RTC_PANEL),
-        L = (0, C.Z)(null != d ? d : eL.lds, null == c ? void 0 : c.id),
+        L = (0, S.Z)(null != d ? d : eL.lds, null == c ? void 0 : c.id),
         R = (0, N.Z)(null == c ? void 0 : c.id);
     return (0, r.jsx)(x.Gt, {
         value: w,
@@ -933,7 +933,7 @@ let e0 = (0, v.Z)(function (e) {
                     : null,
                 (0, r.jsx)(
                     eJ,
-                    eH(eV({}, e, f, s), {
+                    eV(eH({}, e, f, s), {
                         enableActivities: L,
                         remoteVoiceState: t,
                         guild: p,
@@ -942,7 +942,7 @@ let e0 = (0, v.Z)(function (e) {
                         selfStream: _,
                         hasLayers: O,
                         voiceStates: j,
-                        showVoiceStates: y,
+                        showVoiceStates: v,
                         shouldShowVoicePanelIntroduction: h,
                         isPrivateChannelWithEnabledActivities: R,
                         analyticsLocations: w,
@@ -955,7 +955,7 @@ let e0 = (0, v.Z)(function (e) {
                               (0, r.jsx)(m.Text, {
                                   variant: "text-sm/normal",
                                   className: eU.viewAsRolesWarningText,
-                                  children: v ? eM.intl.string(eM.t.efjuQE) : eM.intl.string(eM.t.br8H2N),
+                                  children: y ? eM.intl.string(eM.t.efjuQE) : eM.intl.string(eM.t.br8H2N),
                               }),
                               (0, r.jsx)(g.zx, {
                                   className: eU.viewAsRolesWarningButton,

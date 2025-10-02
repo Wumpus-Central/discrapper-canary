@@ -20,16 +20,16 @@ var i = t(442837),
     b = t(179828),
     y = t(228168),
     O = t(388032),
-    I = t(438160);
+    I = t(54966);
 function Z(e) {
     let { user: n, currentUser: t, displayProfile: Z, subsection: P, onClose: N } = e,
         { trackUserProfileAction: T } = (0, m.KZ)(),
-        E = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
-        A = (0, s.Y)({ userId: n.id }),
+        A = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
+        E = (0, s.Y)({ userId: n.id }),
         S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = (0, i.e7)([c.default], () => c.default.locale),
-        _ = (0, f.Z)(n.id),
-        w = (0, p.Z)(n.id);
+        w = (0, f.Z)(n.id),
+        _ = (0, p.Z)(n.id);
     return (0, l.jsxs)(r.zJl, {
         fade: !0,
         className: I.scroller,
@@ -58,10 +58,10 @@ function Z(e) {
                     headingColor: "header-secondary",
                     children: (0, l.jsx)(a.n, { userId: n.id }),
                 }),
-            A.length > 0 &&
+            E.length > 0 &&
                 (0, l.jsx)(g.Z, {
                     heading: O.intl.string(O.t["Uv/eT0"]),
-                    children: (0, l.jsx)(x.Z, { applicationIds: A }),
+                    children: (0, l.jsx)(x.Z, { applicationIds: E }),
                 }),
             (0, l.jsx)(g.Z, {
                 heading: O.intl.string(O.t.a6XYDw),
@@ -71,21 +71,21 @@ function Z(e) {
                     tooltipDelay: y.vB,
                 }),
             }),
-            _.length > 0 &&
+            w.length > 0 &&
                 (0, l.jsx)(g.Z, {
                     heading: O.intl.string(O.t["3fe7U1"]),
                     scrollIntoView: P === y.Tb.CONNECTIONS,
                     children: (0, l.jsx)(j.ZP, {
-                        connectedAccounts: _,
+                        connectedAccounts: w,
                         className: I.connections,
                         userId: n.id,
                         locale: C,
                     }),
                 }),
-            w.length > 0 &&
+            _.length > 0 &&
                 (0, l.jsx)(g.Z, {
                     heading: O.intl.string(O.t.PHjkRE),
-                    children: w.map((e) =>
+                    children: _.map((e) =>
                         (0, l.jsx)(
                             j.tH,
                             {
@@ -95,7 +95,7 @@ function Z(e) {
                                 onApplicationClicked: () => {
                                     T({ action: "PRESS_APP_CONNECTION" }), N();
                                 },
-                                selectedGuildId: null != E ? E : void 0,
+                                selectedGuildId: null != A ? A : void 0,
                             },
                             e.application.id,
                         ),

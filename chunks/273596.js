@@ -20,7 +20,7 @@ var r = n(951288),
     y = n(188493),
     v = n(294330),
     I = n(981631),
-    S = n(17923);
+    S = n(857847);
 let C = Object.freeze({
         top: 0,
         bottom: 0,
@@ -53,13 +53,13 @@ function P(e) {
         [M, U] = i.useState(3),
         G = i.useRef(M),
         B = i.useRef(null),
-        V = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 if (null != e && !A && !f) 336 * (s.length / M) <= e.height && P();
             },
             [A, f, s.length, M, P],
         ),
-        H = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 let t = e.contentRect;
                 if (null == t) return;
@@ -67,11 +67,11 @@ function P(e) {
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), V(t);
+                r !== G.current && ((G.current = r), U(r)), H(t);
             },
-            [R, V],
+            [R, H],
         ),
-        F = (0, u.y)(H, [R, V]);
+        F = (0, u.y)(V, [R, H]);
     i.useEffect(() => {
         L((0, m.PM)());
     }, [I]),

@@ -33,8 +33,8 @@ var a = n(951288),
     h = n(131951),
     x = n(246992),
     f = n(65154),
-    b = n(25016),
-    g = n(866403);
+    b = n(653301),
+    g = n(451429);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -116,7 +116,7 @@ function _() {
         [_, y] = r.useState(null),
         C = r.useRef(null),
         E = r.useRef(null),
-        [N, S] = r.useState(0.5),
+        [S, N] = r.useState(0.5),
         {
             krispModels: T,
             krispModelOverride: O,
@@ -158,7 +158,7 @@ function _() {
         let n = F.createBufferSource();
         (n.buffer = e.audioBuffer),
             (E.current = F.createGain()),
-            (E.current.gain.value = N),
+            (E.current.gain.value = S),
             n.connect(E.current),
             E.current.connect(F.destination),
             (n.loop = !0),
@@ -352,9 +352,9 @@ function _() {
                         title: "Volume",
                         tag: c.RB0.H3,
                         children: (0, a.jsx)(c.iRW, {
-                            initialValue: N,
+                            initialValue: S,
                             asValueChanges: function (e) {
-                                null != E.current && ((E.current.gain.value = e), S(e));
+                                null != E.current && ((E.current.gain.value = e), N(e));
                             },
                             minValue: 0,
                             maxValue: 1,

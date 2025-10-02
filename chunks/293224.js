@@ -49,22 +49,22 @@ var i = n(951288),
     U = n(875527),
     W = n(306609),
     G = n(8404),
-    H = n(199902),
-    F = n(314897),
+    F = n(199902),
+    H = n(314897),
     Y = n(430824),
     B = n(131951),
     Q = n(19780),
-    K = n(944486),
-    X = n(594174),
-    q = n(979651),
-    J = n(145597),
+    X = n(944486),
+    K = n(594174),
+    J = n(979651),
+    q = n(145597),
     $ = n(444295),
     ee = n(371053),
     et = n(624864),
     en = n(388627),
     ei = n(981631),
     er = n(388032),
-    el = n(41143);
+    el = n(131714);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -261,7 +261,7 @@ function eu(e) {
                         (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                             type: $.Qu.MICROPHONE,
                             value: p ? $.bk.ENABLED : $.bk.DISABLED,
-                            userId: F.default.getId(),
+                            userId: H.default.getId(),
                         });
                 },
                 onPopoutClick: S(n),
@@ -295,7 +295,7 @@ function ec(e) {
                 (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                     type: $.Qu.AUDIO,
                     value: s ? $.bk.ENABLED : $.bk.DISABLED,
-                    userId: F.default.getId(),
+                    userId: H.default.getId(),
                 });
         },
         y = (e) => (t) => {
@@ -374,7 +374,7 @@ function ed(e) {
                 (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                     type: $.Qu.CAMERA,
                     value: s ? $.bk.DISABLED : $.bk.ENABLED,
-                    userId: F.default.getId(),
+                    userId: H.default.getId(),
                 });
         },
         {
@@ -432,12 +432,12 @@ function ep(e) {
     let t,
         { voiceChannel: n, locked: o } = e,
         a = r.useRef(null),
-        u = (0, l.e7)([X.default], () => X.default.getCurrentUser()),
+        u = (0, l.e7)([K.default], () => K.default.getCurrentUser()),
         c = (0, A.Z)(n),
         p = (0, l.cj)([B.Z], () => (0, C.Z)(B.Z)),
-        h = (0, l.e7)([H.Z], () => H.Z.getCurrentUserActiveStream()),
+        h = (0, l.e7)([F.Z], () => F.Z.getCurrentUserActiveStream()),
         f = (0, ee.P)({
-            pid: (0, J.getPID)(),
+            pid: (0, q.getPID)(),
             allowOneClickGoLive: !0,
             analyticsLocation: ei.Sbl.UNLOCKED_OVERLAY,
         }),
@@ -446,7 +446,7 @@ function ep(e) {
                 (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                     type: $.Qu.GO_LIVE,
                     value: $.bk.ENABLED,
-                    userId: F.default.getId(),
+                    userId: H.default.getId(),
                 });
         },
         g = null != h;
@@ -465,7 +465,7 @@ function ep(e) {
                     (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                         type: $.Qu.GO_LIVE,
                         value: $.bk.DISABLED,
-                        userId: F.default.getId(),
+                        userId: H.default.getId(),
                     }),
                     (0, Z.Z)(h, !1)
                 );
@@ -561,7 +561,7 @@ function eh(e) {
             events: { onClick: b, onMouseEnter: S, onMouseLeave: x },
         } = (0, u.j)(),
         j = ea(a),
-        I = (0, l.e7)([_.Z, F.default], () => _.Z.isUserPlayingSounds(F.default.getId()), []) ? "green" : void 0;
+        I = (0, l.e7)([_.Z, H.default], () => _.Z.isUserPlayingSounds(H.default.getId()), []) ? "green" : void 0;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: s,
         clickTrap: !0,
@@ -597,7 +597,7 @@ function eh(e) {
                         (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                             type: $.Qu.SOUNDBOARD,
                             value: $.bk.PANEL_OPENED,
-                            userId: F.default.getId(),
+                            userId: H.default.getId(),
                         }),
                         n(e);
                 },
@@ -617,12 +617,12 @@ function eh(e) {
 function ef(e) {
     let { voiceChannel: t, locked: n } = e,
         a = r.useRef(null),
-        s = (0, l.e7)([K.Z], () => K.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
+        s = (0, l.e7)([X.Z], () => X.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
         u = () => {
             (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                 type: $.Qu.CALL_BUTTON,
                 value: $.bk.DISABLED,
-                userId: F.default.getId(),
+                userId: H.default.getId(),
             }),
                 s && f.default.disconnect();
         },
@@ -631,7 +631,7 @@ function ef(e) {
                 (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                     type: $.Qu.CALL_BUTTON,
                     value: $.bk.ENABLED,
-                    userId: F.default.getId(),
+                    userId: H.default.getId(),
                     secondaryValue: t,
                 });
         },
@@ -756,7 +756,7 @@ function eO(e) {
             state: Q.Z.getState(),
             lastPing: Q.Z.getLastPing(),
         })),
-        s = (0, l.e7)([q.Z], () => null != o && q.Z.hasVideo(o), [o]);
+        s = (0, l.e7)([J.Z], () => null != o && J.Z.hasVideo(o), [o]);
     return (
         null != o &&
         null != r &&

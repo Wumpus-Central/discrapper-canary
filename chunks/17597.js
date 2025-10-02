@@ -15,16 +15,16 @@ var a = n(951288),
     f = n(352138),
     b = n(629235),
     g = n(981631),
-    v = n(131022),
+    v = n(398158),
     j = n(388032),
-    _ = n(450192),
+    _ = n(70402),
     y = n(736056);
 let C = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: N } = e,
-        [S, T] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        O = r.useRef(S),
-        [P, I] = (0, c.US)([S], void 0, !0),
-        k = r.useMemo(() => (0, i.Z)(), []),
+    let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: S } = e,
+        [N, T] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        O = r.useRef(N),
+        [P, k] = (0, c.US)([N], void 0, !0),
+        I = r.useMemo(() => (0, i.Z)(), []),
         w = r.useRef(!1);
     r.useEffect(() => {
         O.current = P;
@@ -52,13 +52,13 @@ let C = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, x.lA)(k, x.d_.EXPRESSIVE_PRIMARY, n);
-        }, [k, n]),
+            (0, x.lA)(I, x.d_.EXPRESSIVE_PRIMARY, n);
+        }, [I, n]),
         (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: C,
             gradientColor: "blue",
-            dismissable: N,
+            dismissable: S,
             graphic: {
                 type: "image",
                 src: y.Z,
@@ -67,7 +67,7 @@ let C = function (e) {
             subtitle: j.intl.format(v.default.RpMIT0, {
                 handleOnHelpUrlHook: () => {
                     h.Z.openUrl(p.Z.getArticleURL(g.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, x.x3)(k, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
+                        (0, x.x3)(I, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
                 },
             }),
             actionBarInput: (0, a.jsx)(o.Avr, {
@@ -75,7 +75,7 @@ let C = function (e) {
                 textVariant: "text-sm/medium",
                 text: j.intl.string(j.t["2jxGen"]),
                 onClick: () => {
-                    (0, x.x3)(k, x.d_.EXPRESSIVE_PRIMARY, x.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
+                    (0, x.x3)(I, x.d_.EXPRESSIVE_PRIMARY, x.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
                 },
             }),
             children: (0, a.jsxs)(o.Kqy, {
@@ -139,7 +139,7 @@ let C = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: R,
-                                          onButtonPress: () => r(k),
+                                          onButtonPress: () => r(I),
                                       },
                                       t,
                                   );

@@ -1,11 +1,11 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(636298),
+    l = n(647438),
+    o = n(636298),
     i = n(404975),
     a = n(924052),
     s = n(59662),
-    c = n(4640);
+    c = n(990757);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,18 +52,18 @@ function d(e, t) {
 function f(e) {
     var t, n, f;
     let { root: b, directory: m, target: p, onClose: j, sidebarHeader: x, sidebarFooter: v, onPanelChange: y } = e,
-        [g, h] = o.useState(!0),
-        [O, C] = o.useState(null == (t = m.entry(p)) ? void 0 : t.parentPanel),
-        [_, P] = o.useState(() => m.typedGet(O)),
-        S = o.useCallback(() => N(void 0), []),
-        [E, N] = o.useState({
+        [h, g] = l.useState(!0),
+        [O, C] = l.useState(null == (t = m.entry(p)) ? void 0 : t.parentPanel),
+        [_, P] = l.useState(() => m.typedGet(O)),
+        S = l.useCallback(() => N(void 0), []),
+        [E, N] = l.useState({
             target: p,
             targetAccordion: null == (n = m.entry(p)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
             complete: S,
         }),
         { navigateWithValidation: T } = (0, a.Cu)(),
-        k = o.useMemo(
+        k = l.useMemo(
             () => ({
                 currentPanel: m.typedGet(O),
                 navigateTo: (e) => {
@@ -82,10 +82,10 @@ function f(e) {
                     } else N(d(u({}, n), { animateScroll: !0 }));
                 },
                 navTransition: E,
-                showNavigationMobile: g,
-                setShowNavigationMobile: h,
+                showNavigationMobile: h,
+                setShowNavigationMobile: g,
             }),
-            [m, O, E, g, S, T, y],
+            [m, O, E, h, S, T, y],
         ),
         w = () => T(j);
     return (0, r.jsx)(s.j.Provider, {
@@ -99,7 +99,7 @@ function f(e) {
                     footer: v,
                     onClose: w,
                 }),
-                (0, r.jsx)(l.Z, {
+                (0, r.jsx)(o.Z, {
                     onClose: w,
                     setting: null != (f = k.currentPanel) ? f : _,
                 }),

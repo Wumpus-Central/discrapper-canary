@@ -9,7 +9,7 @@ var a = t(951288),
     c = t(174727),
     d = t(882126),
     f = t(943351),
-    m = t(513726);
+    m = t(21243);
 let g = l.memo(function (e) {
     let { playing: n, onPausePlayback: t, onPlaybackChange: i, onChangePosition: g, disabled: h = !1 } = e,
         p = (function (e) {
@@ -72,7 +72,7 @@ let g = l.memo(function (e) {
             },
             [t],
         ),
-        U = l.useCallback((e) => {
+        A = l.useCallback((e) => {
             switch (e) {
                 case 0:
                     I(!1);
@@ -85,7 +85,7 @@ let g = l.memo(function (e) {
             }
             R(-1);
         }, []),
-        A = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 if (null == y || !E) return;
                 let n = parseInt(e.target.value),
@@ -161,9 +161,9 @@ let g = l.memo(function (e) {
                                     min: (0, c.ao)(D, B, T),
                                     max: (0, c.MN)(D, B, T),
                                     value: w,
-                                    onChange: A,
+                                    onChange: U,
                                     onMouseDown: (e) => H(e, 0),
-                                    onMouseUp: () => U(0),
+                                    onMouseUp: () => A(0),
                                     disabled: !b || h,
                                 }),
                                 (0, a.jsx)("input", {
@@ -175,7 +175,7 @@ let g = l.memo(function (e) {
                                     value: S,
                                     onChange: L,
                                     onMouseDown: (e) => H(e, 2),
-                                    onMouseUp: () => U(2),
+                                    onMouseUp: () => A(2),
                                     disabled: !b || h,
                                 }),
                             ],
@@ -191,7 +191,7 @@ let g = l.memo(function (e) {
                                 value: N,
                                 onChange: z,
                                 onMouseDown: (e) => H(e, 1),
-                                onMouseUp: () => U(1),
+                                onMouseUp: () => A(1),
                                 disabled: !b || h,
                             }),
                         }),

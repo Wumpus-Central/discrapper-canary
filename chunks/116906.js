@@ -19,14 +19,14 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     y = t(388032),
-    O = t(847540),
-    I = t(883172);
+    O = t(7994),
+    I = t(878449);
 function Z(e) {
     let { user: n, currentUser: t, guildId: Z, subsection: P, onClose: N } = e,
         { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
-        E = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: A, recent: S, stream: C } = (0, m.Z)(n.id),
-        { voiceChannel: _, voiceActivity: w } = (0, p.Z)({
+        A = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { live: E, recent: S, stream: C } = (0, m.Z)(n.id),
+        { voiceChannel: w, voiceActivity: _ } = (0, p.Z)({
             userId: n.id,
             guildId: Z,
         }),
@@ -36,8 +36,8 @@ function Z(e) {
             let e = R ? c.Z.getStatus() : a.Z.getStatus(n.id);
             return e === r.Skl.OFFLINE || e === r.Skl.INVISIBLE;
         }),
-        M = A.length > 0 || null != C,
-        U = T && null == C && null == w && null != _,
+        M = E.length > 0 || null != C,
+        U = T && null == C && null == _ && null != w,
         k = !L && (M || U),
         B = S.length > 0;
     return k || B || !D
@@ -51,13 +51,13 @@ function Z(e) {
                             children: (0, l.jsxs)("ul", {
                                 className: O.activityList,
                                 children: [
-                                    !E &&
+                                    !A &&
                                         U &&
                                         (0, l.jsx)("li", {
                                             children: (0, l.jsx)(v.Z, {
                                                 user: n,
                                                 currentUser: t,
-                                                voiceChannel: _,
+                                                voiceChannel: w,
                                                 onClose: N,
                                             }),
                                         }),
@@ -70,7 +70,7 @@ function Z(e) {
                                                 onClose: N,
                                             }),
                                         }),
-                                    A.map((e, i) =>
+                                    E.map((e, i) =>
                                         (0, l.jsx)(
                                             "li",
                                             {

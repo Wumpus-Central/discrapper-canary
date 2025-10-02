@@ -1,5 +1,5 @@
 n.d(t, {
-    XX: () => D,
+    XX: () => L,
     ZP: () => B,
     ul: () => U,
 }),
@@ -31,12 +31,12 @@ var r = n(951288),
     P = n(314897),
     I = n(430824),
     Z = n(496675),
-    T = n(594174),
-    N = n(979651),
+    N = n(594174),
+    T = n(979651),
     A = n(927923),
     w = n(70722),
     M = n(388032),
-    R = n(2628);
+    R = n(92024);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function k(e) {
     }
     return e;
 }
-function L(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function L(e, t) {
         e
     );
 }
-function D(e) {
+function L(e) {
     let { numUsers: t } = e;
     return (0, r.jsx)("div", {
         className: R.moreContainer,
@@ -118,12 +118,12 @@ let B = (0, p.$)(function (e) {
     let {
             collapsed: l,
             user: p,
-            channel: D,
+            channel: L,
             mute: U,
             localMute: B,
             localVideoDisabled: H,
-            deaf: F,
-            video: V,
+            deaf: V,
+            video: F,
             embeddedApplication: G,
             serverMute: z,
             serverDeaf: W,
@@ -163,11 +163,11 @@ let B = (0, p.$)(function (e) {
         eZ = () => {
             eC(!ey);
         },
-        eT = (e, t) => {
+        eN = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
-            ej && null != t && n.has(t) && eE(!1), eN();
+            ej && null != t && n.has(t) && eE(!1), eT();
         },
-        eN = () => {
+        eT = () => {
             ($ || eg || eI) && (null == ei || ei(p.id));
         },
         eA = (e) => {
@@ -177,14 +177,14 @@ let B = (0, p.$)(function (e) {
             e && ev(!1);
         },
         eM = () => {
-            if (!($ && (0, C.p9)(D, N.Z, I.Z, Z.Z, g.Z)[0])) return;
+            if (!($ && (0, C.p9)(L, T.Z, I.Z, Z.Z, g.Z)[0])) return;
             let e = {
                 streamType: w.lo.GUILD,
                 ownerId: p.id,
-                channelId: D.id,
-                guildId: D.guild_id,
+                channelId: L.id,
+                guildId: L.guild_id,
             };
-            P.default.getId() !== p.id && u.default.selectVoiceChannel(D.id),
+            P.default.getId() !== p.id && u.default.selectVoiceChannel(L.id),
                 ee ? ((0, _.Z)(e), s.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, d.iV)(e),
                 null == ei || ei(p.id);
         },
@@ -195,17 +195,17 @@ let B = (0, p.$)(function (e) {
                     n.e("98783"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("87157"),
+                    n.e("96306"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        L(k({}, t), {
+                        D(k({}, t), {
                             user: p,
-                            guildId: D.guild_id,
-                            channel: D,
+                            guildId: L.guild_id,
+                            channel: L,
                             showMediaItems: !0,
-                            showStageChannelItems: D.isGuildStageVoice(),
+                            showStageChannelItems: L.isGuildStageVoice(),
                             onInteraction: (0, m.u)("GuildChannelUserContextMenu", f.Z.VOICE_USER, {
                                 targetUserId: p.id,
                             }),
@@ -217,52 +217,52 @@ let B = (0, p.$)(function (e) {
             ep
                 ? (0, r.jsx)(
                       x.$,
-                      L(k({}, e), {
-                          channel: D,
+                      D(k({}, e), {
+                          channel: L,
                           setIsHangStatusInputFocused: eO,
                       }),
                   )
                 : null != ef
                   ? (0, r.jsx)(
                         O.I,
-                        L(k({}, e), {
+                        D(k({}, e), {
                             hangStatusActivity: ef,
-                            channel: D,
+                            channel: L,
                             userId: p.id,
                         }),
                     )
                   : null,
-        eL = () =>
+        eD = () =>
             (0, r.jsx)(j.Z, {
                 userId: p.id,
-                channel: D,
+                channel: L,
             }),
-        eD = () =>
-            (0, h.dl)() && (0, h.zd)(D.id)
+        eL = () =>
+            (0, h.dl)() && (0, h.zd)(L.id)
                 ? null
                 : (0, r.jsx)(v.Z, {
                       user: p,
-                      channel: D,
+                      channel: L,
                       onWatch: eM,
                       previewIsOpen: ea,
                       location: ed,
                   }),
         eU = (0, r.jsx)("div", {
             className: R.draggable,
-            "data-dnd-name": D.name,
+            "data-dnd-name": L.name,
             onMouseEnter: ec
                 ? void 0
                 : () => {
                       ($ || eg || eI) && !ey && (null == er || er(p.id));
                   },
-            onMouseLeave: ec ? void 0 : eN,
+            onMouseLeave: ec ? void 0 : eT,
             children: (0, r.jsx)(E.Z, {
                 clickTrap:
-                    (null == p ? void 0 : p.id) === (null == (t = T.default.getCurrentUser()) ? void 0 : t.id) && ey,
+                    (null == p ? void 0 : p.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ey,
                 targetElementRef: eb,
                 user: p,
-                guildId: D.guild_id,
-                channelId: D.id,
+                guildId: L.guild_id,
+                channelId: L.id,
                 newAnalyticsLocations: [f.Z.VOICE_USER],
                 shouldShow: ey,
                 onRequestClose: () => eC(!1),
@@ -278,10 +278,10 @@ let B = (0, p.$)(function (e) {
                                 localVideoDisabled: H,
                                 isStreaming: $,
                                 isGuest: et,
-                                video: V,
+                                video: F,
                                 priority: en,
                                 ringing: Y,
-                                deaf: F,
+                                deaf: V,
                                 nick: q,
                                 collapsed: l,
                                 overlap: l,
@@ -297,10 +297,10 @@ let B = (0, p.$)(function (e) {
                                 onClick: t ? void 0 : eZ,
                                 onDoubleClick: eM,
                                 onContextMenu: eR,
-                                guildId: D.guild_id,
+                                guildId: L.guild_id,
                                 isSelf: ep,
                                 application: eh,
-                                channelId: D.id,
+                                channelId: L.id,
                                 hangStatusActivity: ef,
                                 showHangStatus: eg,
                             };
@@ -340,19 +340,19 @@ let B = (0, p.$)(function (e) {
                         }
                         let s = () => null;
                         return (
-                            eg && eP ? (s = ek) : $ ? (s = eD) : eI && p.id !== P.default.getId() && (s = eL),
+                            eg && eP ? (s = ek) : $ ? (s = eL) : eI && p.id !== P.default.getId() && (s = eD),
                             (0, r.jsx)(o.yRy, {
                                 targetElementRef: eb,
                                 position: "right",
                                 renderPopout: s,
                                 shouldShow: (el || (eg && eS)) && !ey,
-                                onRequestClose: eT,
+                                onRequestClose: eN,
                                 align: eg && eP && !ep ? "center" : void 0,
                                 spacing: eg && eP ? 8 : 0,
                                 children: () =>
                                     (0, r.jsx)(
                                         S.ZP,
-                                        L(k({}, n), {
+                                        D(k({}, n), {
                                             ref: eb,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,

@@ -13,9 +13,9 @@ var i = n(120356),
     g = n(594174),
     p = n(5192),
     f = n(978088),
-    h = n(755032),
-    x = n(388032),
-    b = n(820309);
+    h = n(659854),
+    b = n(388032),
+    x = n(65992);
 function j(e) {
     var t, n;
     let { guildId: i } = e,
@@ -27,17 +27,17 @@ function j(e) {
             (null == v || null == (n = v.primaryGuild) ? void 0 : n.identityEnabled) === !0;
     if (null != v && null != j && (0, c.jq)(j))
         return (0, r.jsxs)("div", {
-            className: b.container,
+            className: x.container,
             children: [
                 (0, r.jsx)(a.Text, {
-                    className: b.section,
+                    className: x.section,
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: y ? x.intl.string(h.default["6xBCpK"]) : x.intl.string(h.default.eSRKe3),
+                    children: y ? b.intl.string(h.default["6xBCpK"]) : b.intl.string(h.default.eSRKe3),
                 }),
-                (0, r.jsx)("div", { className: b.divider }),
+                (0, r.jsx)("div", { className: x.divider }),
                 (0, r.jsxs)("div", {
-                    className: l()(b.section, b.body),
+                    className: l()(x.section, x.body),
                     children: [
                         (0, r.jsx)(f.l, {
                             avatar: (0, r.jsx)(o.Z, {
@@ -53,11 +53,11 @@ function j(e) {
                                 inline: !1,
                             }),
                             username: p.ZP.getName(i, null, v),
-                            message: x.intl.string(x.t["6OSasb"]),
+                            message: b.intl.string(b.t["6OSasb"]),
                         }),
                         (0, r.jsx)(a.zxk, {
                             variant: "primary",
-                            text: x.intl.string(x.t.cQDYRk),
+                            text: b.intl.string(b.t.cQDYRk),
                             onClick: _,
                             loading: O,
                             disabled: y,

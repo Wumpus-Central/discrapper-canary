@@ -10,19 +10,19 @@ var i = n(120356),
     u = n(456100),
     d = n(317381),
     p = n(884338),
-    h = n(565799),
-    f = n(501655),
+    f = n(565799),
+    h = n(501655),
     g = n(199902),
     m = n(592125),
     b = n(594174),
     _ = n(938475),
     O = n(823379),
     y = n(709054),
-    j = n(853856),
-    v = n(981631),
+    v = n(853856),
+    j = n(981631),
     x = n(388032),
-    C = n(102647),
-    E = n(395530);
+    C = n(132789),
+    E = n(78480);
 function S(e, t) {
     return 0 === t.length
         ? null
@@ -42,15 +42,15 @@ function S(e, t) {
           });
 }
 function P() {
-    let e = (0, s.Wu)([j.Z, m.Z], () =>
+    let e = (0, s.Wu)([v.Z, m.Z], () =>
             y.default
-                .keys(j.Z.getFavoriteChannels())
+                .keys(v.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
                 .filter(O.lm),
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === v.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === v.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
             [_.ZP],
             () =>
@@ -62,19 +62,19 @@ function P() {
                 ),
             [n],
         ),
-        o = (0, s.Wu)([h.Z], () =>
+        o = (0, s.Wu)([f.Z], () =>
             a().flatMap(i, (e) =>
-                h.Z.getMutableParticipants(e, f.pV.SPEAKER)
-                    .filter((e) => e.type === f.Ui.VOICE)
+                f.Z.getMutableParticipants(e, h.pV.SPEAKER)
+                    .filter((e) => e.type === h.Ui.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
                     }),
             ),
         ),
-        x = (0, s.e7)([h.Z], () => {
+        x = (0, s.e7)([f.Z], () => {
             let e = 0;
-            for (let t of i) e += h.Z.getParticipantCount(t, f.pV.AUDIENCE);
+            for (let t of i) e += f.Z.getParticipantCount(t, h.pV.AUDIENCE);
             return e;
         }),
         E = (0, s.Wu)(

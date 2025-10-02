@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(367907),
     f = n(906732),
     h = n(218867),
-    x = n(733026),
-    b = n(246946),
+    b = n(733026),
+    x = n(246946),
     j = n(594174),
     v = n(626135),
     _ = n(136015),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(298814);
+    T = n(40175);
 function P(e, t, n) {
     return (
         t in e
@@ -73,16 +73,16 @@ function R(e, t) {
         e
     );
 }
-function D(e) {
+function Z(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: m } = e,
         [g, h] = i.useState(!1),
-        [x, b] = i.useState(null),
+        [b, x] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
         _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function y() {
         if (null != l) {
-            b(null), h(!0);
+            x(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, s.id),
                     m(),
@@ -95,7 +95,7 @@ function D(e) {
                         }),
                     );
             } catch (e) {
-                b(new u.Z(e)), h(!1);
+                x(new u.Z(e)), h(!1);
             }
         }
     }
@@ -137,12 +137,12 @@ function D(e) {
                         color: "text-secondary",
                         children: null != a.reason && "" !== a.reason ? a.reason : S.intl.string(S.t["t+2Zcn"]),
                     }),
-                    null != x
+                    null != b
                         ? (0, r.jsx)(o.Text, {
                               className: T.error,
                               color: "text-danger",
                               variant: "text-sm/normal",
-                              children: x.getAnyErrorMessage(),
+                              children: b.getAnyErrorMessage(),
                           })
                         : null,
                 ],
@@ -169,7 +169,7 @@ function D(e) {
         ],
     });
 }
-class Z extends i.PureComponent {
+class D extends i.PureComponent {
     render() {
         var e;
         let { user: t, guild: n } = this.props;
@@ -208,7 +208,7 @@ class Z extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, o.h7j)((l) =>
                     (0, r.jsx)(
-                        D,
+                        Z,
                         R(w({}, l), {
                             guild: e,
                             user: t,
@@ -228,7 +228,7 @@ class Z extends i.PureComponent {
 }
 let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: s } = e,
-        c = (0, a.e7)([b.Z], () => b.Z.hidePersonalInformation, []),
+        c = (0, a.e7)([x.Z], () => x.Z.hidePersonalInformation, []),
         d = i.useCallback(
             (e) => {
                 var t;
@@ -255,7 +255,7 @@ let A = i.forwardRef(function (e, t) {
                     a = null == s ? void 0 : s.get(null != (t = null == i ? void 0 : i.id) ? t : "");
                 if (null != i && null != a)
                     return (0, r.jsx)(
-                        Z,
+                        D,
                         {
                             user: i,
                             ban: a,
@@ -297,7 +297,7 @@ function L(e) {
             if (!a)
                 try {
                     c(!0);
-                    let [e, n] = (0, x.C)(l),
+                    let [e, n] = (0, b.C)(l),
                         r = e[0];
                     y.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
@@ -359,8 +359,8 @@ function k() {
         p = null != u && u.trim().length > 0,
         f = (0, m.Z)(p),
         h = p !== f,
-        [b] = (0, a.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
-        v = null != (e = null == b ? void 0 : b.size) ? e : 0,
+        [x] = (0, a.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
+        v = null != (e = null == x ? void 0 : x.size) ? e : 0,
         O = (0, g.ZP)(),
         y = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
@@ -370,7 +370,7 @@ function k() {
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], r] = (0, x.C)(e);
+                          let [[n], r] = (0, b.C)(e);
                           return (
                               !!r.includes(t.id) ||
                               (null != n &&
@@ -394,10 +394,10 @@ function k() {
             },
             [E],
         ),
-        D = i.useMemo(() => P(b, u, v), [b, P, u, v]),
-        Z = null != b,
-        k = D.length % 1000 == 0 && D.length > 0 && Z,
-        G = 0 === D.length,
+        Z = i.useMemo(() => P(x, u, v), [x, P, u, v]),
+        D = null != x,
+        k = Z.length % 1000 == 0 && Z.length > 0 && D,
+        G = 0 === Z.length,
         [M, U] = i.useState({
             currentPage: 1,
             pageSize: 100,
@@ -411,25 +411,25 @@ function k() {
             },
             [y],
         ),
-        F = i.useMemo(() => s().chunk(D, M.pageSize), [M.pageSize, D]),
+        F = i.useMemo(() => s().chunk(Z, M.pageSize), [M.pageSize, Z]),
         H = i.useCallback(
             (e) => {
                 var t, n, r;
                 null == (t = N.current) || t.scrollToSectionTop(0),
-                    (e + 1) * M.pageSize > D.length &&
+                    (e + 1) * M.pageSize > Z.length &&
                         k &&
                         !p &&
-                        ((z.current = null != (r = null == (n = D[D.length - 1]) ? void 0 : n.id) ? r : null),
+                        ((z.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null),
                         B(z.current)),
                     (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e }));
             },
-            [M.pageSize, D, k, F, B, p],
+            [M.pageSize, Z, k, F, B, p],
         ),
         z = i.useRef(null);
     i.useEffect(() => {
         B(z.current);
     }, [B]);
-    let V = i.useMemo(() => {
+    let W = i.useMemo(() => {
         var e;
         return null != (e = F[M.currentPage - 1]) ? e : [];
     }, [F, M.currentPage]);
@@ -448,8 +448,8 @@ function k() {
                           !G &&
                               (0, r.jsx)(A, {
                                   guild: c,
-                                  bans: b,
-                                  sortedBans: V,
+                                  bans: x,
+                                  sortedBans: W,
                                   ref: N,
                               }),
                           !k &&
@@ -476,7 +476,7 @@ function k() {
                   (0, r.jsx)("div", {
                       children: (0, r.jsx)(o.DsT, {
                           className: T.paginationInput,
-                          totalCount: D.length + (k ? M.pageSize : 0),
+                          totalCount: Z.length + (k ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: H,

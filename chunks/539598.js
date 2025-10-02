@@ -1,13 +1,13 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(937615),
-    a = n(884697),
+    a = n(937615),
+    l = n(884697),
     o = n(200615),
     s = n(981631),
     c = n(388032),
-    u = n(242081);
+    u = n(58174);
 function d() {
     return (d =
         Object.assign ||
@@ -19,11 +19,11 @@ function d() {
             return e;
         }).apply(this, arguments);
 }
-function m(e) {
+function p(e) {
     let { product: t } = e,
-        n = (0, a.ql)(t, s.tuJ.PREMIUM_TIER_2);
+        n = (0, l.ql)(t, s.tuJ.PREMIUM_TIER_2);
     if (null == n) return null;
-    let m = (0, l.qr)(n.amount, n.currency);
+    let p = (0, a.qr)(n.amount, n.currency);
     return (0, r.jsxs)("div", {
         className: u.container,
         children: [
@@ -33,7 +33,7 @@ function m(e) {
                 children: (e) => {
                     var t,
                         n,
-                        l = d(
+                        a = d(
                             {},
                             (function (e) {
                                 if (null == e) throw TypeError("Cannot destructure " + e);
@@ -71,7 +71,7 @@ function m(e) {
                                 size: "md",
                                 color: "currentColor",
                             },
-                            l,
+                            a,
                         )),
                         (n = n = { className: u.nitroIcon }),
                         Object.getOwnPropertyDescriptors
@@ -93,7 +93,7 @@ function m(e) {
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/medium",
                 children: c.intl.format(c.t.Sv8iiY, {
-                    price: m,
+                    price: p,
                     subscribeNowHook: (e) => (0, r.jsx)(o.F, { text: e }),
                 }),
             }),

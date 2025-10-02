@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(481060),
     a = n(438976),
-    o = n(11257);
+    o = n(135013);
 function s(e) {
     let { title: t, className: n, children: s } = e,
         l = (0, a.Z)() ? void 0 : t;

@@ -35,20 +35,20 @@ var r,
     P = n(906732),
     I = n(43267),
     Z = n(933557),
-    T = n(600164),
-    N = n(313201),
+    N = n(600164),
+    T = n(313201),
     A = n(429090),
     w = n(912114),
     M = n(366980),
     R = n(728285),
     k = n(703656),
-    L = n(93127),
-    D = n(752048),
+    D = n(93127),
+    L = n(752048),
     U = n(131704),
     B = n(592125),
     H = n(341165),
-    F = n(544610),
-    V = n(19780),
+    V = n(544610),
+    F = n(19780),
     G = n(306680),
     z = n(699516),
     W = n(246946),
@@ -64,8 +64,8 @@ var r,
     en = n(575464),
     er = n(981631),
     ei = n(388032),
-    el = n(497072),
-    ea = n(10198);
+    el = n(918324),
+    ea = n(197571);
 function eo(e, t, n) {
     return (
         t in e
@@ -133,14 +133,14 @@ function eu(e, t) {
     }
     return i;
 }
-let ed = (0, N.hQ)(),
-    ep = (0, N.hQ)();
+let ed = (0, T.hQ)(),
+    ep = (0, T.hQ)();
 function eh(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsxs)(T.Z, {
-        align: T.Z.Align.CENTER,
-        justify: T.Z.Justify.CENTER,
-        direction: T.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(N.Z, {
+        align: N.Z.Align.CENTER,
+        justify: N.Z.Justify.CENTER,
+        direction: N.Z.Direction.VERTICAL,
         className: o()(el.errorState, t),
         children: [(0, i.jsx)("div", { className: o()(el.errorStateIcon, ea.marginBottom20) }), n],
     });
@@ -390,8 +390,8 @@ class eg extends (r = l.PureComponent) {
         let e = null != this.scrollerRef.current && this.state.separator,
             t = this.isNotFriends() ? ei.intl.string(ei.t.Xjlbvr) : ei.intl.string(ei.t.CdNhGR);
         return (0, i.jsxs)(f.xBx, {
-            direction: T.Z.Direction.VERTICAL,
-            align: T.Z.Align.STRETCH,
+            direction: N.Z.Direction.VERTICAL,
+            align: N.Z.Align.STRETCH,
             className: el.header,
             separator: e,
             children: [
@@ -595,7 +595,7 @@ class eg extends (r = l.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = D.Z.getUserAffinity(e);
+                let n = L.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
             }),
         };
@@ -777,7 +777,7 @@ class eg extends (r = l.PureComponent) {
             eo(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
                     r = (0, S.v_)(e),
-                    i = V.Z.getChannelId() === e.id;
+                    i = F.Z.getChannelId() === e.id;
                 b.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void g.Z.call(n, !1, !0);
@@ -895,11 +895,11 @@ function eb(e) {
 function ey(e) {
     var { channel: t } = e,
         n = eu(e, ["channel"]);
-    let r = (0, p.cj)([F.Z, H.Z, W.Z], () => {
+    let r = (0, p.cj)([V.Z, H.Z, W.Z], () => {
         let e;
         return (
             null != t && null != (e = H.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            ec(es({}, F.Z.getState()), {
+            ec(es({}, V.Z.getState()), {
                 invite: e,
                 hideDiscriminator: W.Z.hidePersonalInformation,
                 hideInstantInvites: W.Z.hideInstantInvites,
@@ -943,7 +943,7 @@ function eC(e) {
             [r, h, c],
         ),
         (0, j.ZP)(() => {
-            (0, L._)();
+            (0, D._)();
         }),
         {
             showModal: p,

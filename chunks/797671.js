@@ -10,9 +10,9 @@ var i = n(951288),
     u = n(218613),
     p = n(911969),
     _ = n(408987),
-    h = n(312146),
-    m = n(60222),
-    b = n(131704),
+    m = n(312146),
+    b = n(60222),
+    h = n(131704),
     g = n(324067),
     f = n(430824),
     x = n(934415),
@@ -20,8 +20,8 @@ var i = n(951288),
     w = n(573261),
     C = n(981631),
     E = n(231338),
-    I = n(388032),
-    L = n(17478);
+    L = n(388032),
+    I = n(920454);
 function y(e) {
     var t, n;
     let { guildId: y, transitionState: T, onSubmit: N, onClose: B } = e,
@@ -30,8 +30,8 @@ function y(e) {
         [S, k] = a.useState(""),
         [Z, G] = a.useState(!1),
         A = (0, o.e7)([f.Z], () => f.Z.getGuild(y), [y]),
-        H = (0, m.m)(y),
-        O = (0, h.Ui)(A),
+        H = (0, b.m)(y),
+        O = (0, m.Ui)(A),
         U = a.useMemo(
             () =>
                 (function (e) {
@@ -39,46 +39,46 @@ function y(e) {
                         a = [
                             {
                                 icon: d.VL1,
-                                label: I.intl.string(I.t.pnuRXF),
+                                label: L.intl.string(L.t.pnuRXF),
                                 value: C.d4z.GUILD_TEXT,
-                                description: I.intl.string(I.t.Hf5Lb2),
+                                description: L.intl.string(L.t.Hf5Lb2),
                             },
                             {
                                 icon: d.gj8,
-                                label: I.intl.string(I.t.Sx55Oj),
+                                label: L.intl.string(L.t.Sx55Oj),
                                 value: C.d4z.GUILD_VOICE,
-                                description: I.intl.string(I.t.pqfkoK),
+                                description: L.intl.string(L.t.pqfkoK),
                             },
                         ];
                     return (
                         t &&
                             a.push({
                                 icon: d.ewx,
-                                label: I.intl.string(I.t.pNWst7),
+                                label: L.intl.string(L.t.pNWst7),
                                 value: C.d4z.GUILD_STAGE_VOICE,
-                                description: I.intl.string(I.t.VPAwgo),
+                                description: L.intl.string(L.t.VPAwgo),
                             }),
                         a.push({
                             icon: d.Mmi,
-                            label: I.intl.string(I.t.eAVIDw),
+                            label: L.intl.string(L.t.eAVIDw),
                             value: C.d4z.GUILD_FORUM,
-                            description: I.intl.string(I.t.iZ5pgo),
+                            description: L.intl.string(L.t.iZ5pgo),
                         }),
                         n &&
                             a.push({
                                 icon: d.XBm,
-                                label: I.intl.string(I.t["6x6fVl"]),
+                                label: L.intl.string(L.t["6x6fVl"]),
                                 value: C.d4z.GUILD_MEDIA,
-                                description: I.intl.string(I.t.JyCrwc),
+                                description: L.intl.string(L.t.JyCrwc),
                                 isBeta: !0,
                             }),
                         a.map((e) => {
                             let { icon: t, label: n, value: a, description: r, isBeta: l } = e;
                             return {
                                 name: (0, i.jsxs)("div", {
-                                    className: L.channelOptionWrapper,
+                                    className: I.channelOptionWrapper,
                                     children: [
-                                        (0, i.jsx)(t, { className: L.icon }),
+                                        (0, i.jsx)(t, { className: I.icon }),
                                         (0, i.jsxs)("div", {
                                             children: [
                                                 (0, i.jsxs)(d.Text, {
@@ -166,16 +166,16 @@ function y(e) {
         },
         children: (0, i.jsx)(l.Modal, {
             transitionState: T,
-            title: I.intl.string(I.t["fUYU+v"]),
+            title: L.intl.string(L.t["fUYU+v"]),
             onClose: B,
             actionBarInput: (0, i.jsx)(d.Avr, {
-                text: I.intl.string(I.t["13/7kZ"]),
+                text: L.intl.string(L.t["13/7kZ"]),
                 onClick: B,
             }),
             actions: [
                 {
                     variant: "primary",
-                    text: I.intl.string(I.t.R3BPHx),
+                    text: L.intl.string(L.t.R3BPHx),
                     loading: Z,
                     disabled: !q,
                     type: "submit",
@@ -185,14 +185,14 @@ function y(e) {
                 gap: 16,
                 children: [
                     (0, i.jsx)(d.q4e, {
-                        label: I.intl.string(I.t.vHCZws),
-                        placeholder: I.intl.string(I.t["g/Rr2d"]),
+                        label: L.intl.string(L.t.vHCZws),
+                        placeholder: L.intl.string(L.t["g/Rr2d"]),
                         value: R,
                         options: W,
                         onChange: (e) => M(e),
                     }),
                     (0, i.jsx)(s.Gu, {
-                        label: I.intl.string(I.t["7ZcXGx"]),
+                        label: L.intl.string(L.t["7ZcXGx"]),
                         options: U,
                         value: j,
                         onChange: (e) => {
@@ -201,13 +201,13 @@ function y(e) {
                         },
                     }),
                     (0, i.jsx)(d.oil, {
-                        label: I.intl.string(I.t.PVbHDg),
+                        label: L.intl.string(L.t.PVbHDg),
                         value: S,
                         onChange: function (e) {
-                            (0, b.zi)(j) && (e = (0, x.Nj)(e)), k(e);
+                            (0, h.zi)(j) && (e = (0, x.Nj)(e)), k(e);
                         },
                         maxLength: C.HN8,
-                        placeholder: I.intl.string(I.t["bw/b8P"]),
+                        placeholder: L.intl.string(L.t["bw/b8P"]),
                         leading: F,
                         autoFocus: !0,
                     }),

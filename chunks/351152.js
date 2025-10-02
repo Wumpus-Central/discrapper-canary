@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(361932), n(187205);
+n.d(t, { Z: () => S }), n(361932), n(187205);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -13,18 +13,18 @@ var i = n(120356),
     m = n(496675),
     h = n(771845),
     p = n(259580),
-    x = n(102172),
-    g = n(148381),
+    g = n(102172),
+    x = n(148381),
     _ = n(388032),
-    v = n(79985),
-    j = n(324680);
+    v = n(542257),
+    j = n(949678);
 function b(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
         l = (0, a.e7)([u.ZP, f.Z, m.Z], () =>
             u.ZP.getChannels(t)[u.Zb].some((e) => {
                 let { channel: t } = e;
-                return (0, x.JL)(t, f.Z, m.Z);
+                return (0, g.JL)(t, f.Z, m.Z);
             }),
         );
     return null != i && l
@@ -50,10 +50,10 @@ function b(e) {
           })
         : null;
 }
-function y(e) {
+function S(e) {
     let { onSelectGuild: t } = e,
         n = (0, a.e7)([h.ZP], () => h.ZP.getGuildFolders());
-    return (0, r.jsx)(g.Z, {
+    return (0, r.jsx)(x.Z, {
         title: _.intl.string(_.t.JsqeEh),
         scrollerClassName: l()(j.guildScroller, v.marginBottom),
         children: o().flatMap(n, (e) => {

@@ -18,15 +18,15 @@ var r = n(951288),
     _ = n(100527),
     O = n(367907),
     j = n(906732),
-    v = n(493324),
-    x = n(611064),
+    x = n(493324),
+    v = n(611064),
     C = n(677432),
     I = n(178762),
     E = n(868671),
     S = n(82295),
     Z = n(91218),
-    T = n(313201),
-    P = n(623624),
+    P = n(313201),
+    T = n(623624),
     N = n(518738),
     R = n(850020),
     w = n(155409),
@@ -44,7 +44,7 @@ var r = n(951288),
     V = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(854641);
+    q = n(32482);
 function K(e, t, n) {
     return (
         t in e
@@ -141,8 +141,8 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                 channel: _,
                 guildId: O,
                 isTyping: j,
-                isMobileOnline: v,
-                premiumSince: x,
+                isMobileOnline: x,
+                premiumSince: v,
                 nameplate: C,
             } = e,
             I = J(e, [
@@ -166,7 +166,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
             ]),
             E = i.useRef(null),
             [S, Z] = i.useState(!1),
-            T = null != x ? new Date(x) : null,
+            P = null != v ? new Date(v) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -175,7 +175,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("19848"),
+                                n.e("52021"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -206,7 +206,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != O &&
                         (e.stopPropagation(),
-                        (0, P.f)({
+                        (0, T.f)({
                             guildId: O,
                             location: {
                                 section: W.jXE.MEMBER_LIST,
@@ -247,14 +247,14 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                             activities: h,
                             applicationStream: g,
                             isOwner: o,
-                            premiumSince: T,
+                            premiumSince: P,
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
                             isTyping: j,
                             channel: _,
                             guildId: O,
-                            isMobile: v,
+                            isMobile: x,
                             onClickPremiumGuildIcon: w,
                             selected: S,
                             itemProps: I,
@@ -348,7 +348,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, v.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -389,7 +389,7 @@ class el extends i.Component {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
         return (0, r.jsx)(h.Wdt, {
             children: (l) =>
-                (0, r.jsx)(T.FG, {
+                (0, r.jsx)(P.FG, {
                     children: (s) =>
                         (0, r.jsx)("aside", {
                             className: a()(q.membersWrap, q.hiddenMembers),
@@ -456,7 +456,7 @@ class el extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, x.R)(a)) return (0, i.createElement)(x.Z, X(Q({}, a), { key: "section-".concat(t) }));
+                if ((0, v.R)(a)) return (0, i.createElement)(v.Z, X(Q({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -582,7 +582,7 @@ class el extends i.Component {
             ),
             K(this, "getContentFeedGroup", () => {
                 let e = this.props.groups[E.T];
-                if ((0, x.R)(e)) return e;
+                if ((0, v.R)(e)) return e;
             }),
             K(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
             K(this, "getRowHeightComputer", () => {
@@ -682,7 +682,7 @@ function ea(e) {
         }),
         b = i.useRef(null),
         O = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        v = i.useCallback(
+        x = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -702,7 +702,7 @@ function ea(e) {
             },
             [42],
         ),
-        x = i.useCallback(
+        v = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -726,9 +726,9 @@ function ea(e) {
         ),
         I = (0, d.ZP)({
             id: "members-".concat(t.id),
-            setFocus: v,
+            setFocus: x,
             isEnabled: s,
-            scrollToStart: x,
+            scrollToStart: v,
             scrollToEnd: C,
         });
     return (0, r.jsx)(j.Gt, {

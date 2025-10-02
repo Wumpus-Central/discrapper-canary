@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        default: () => V,
+        default: () => H,
         useAppSidebarState: () => U,
     });
 var r = n(951288),
@@ -38,7 +38,7 @@ var r = n(951288),
     R = n(950796),
     D = n(176505),
     k = n(741764),
-    M = n(851352);
+    M = n(82504);
 let U = (0, o.U)(() => ({ isOpen: !0 }));
 function G(e) {
     let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
@@ -84,7 +84,7 @@ function B(e) {
                 focusSectionProps: i,
             });
 }
-let V = i.memo(function () {
+let H = i.memo(function () {
     i.useLayoutEffect(() => {
         Z.ZP.setMinimumSize(k.J, k.N);
     }, []);

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => T,
     z: () => Z,
 }),
     n(388685);
@@ -28,9 +28,9 @@ var r = n(951288),
     E = n(823379),
     S = n(981631),
     P = n(217702),
-    I = n(832063);
+    I = n(89019);
 let Z = 10 * j.Z.Millis.SECOND;
-function T(e) {
+function N(e) {
     var t;
     let { message: n } = e,
         { isBlocked: l, isIgnored: o } = (0, c.cj)(
@@ -65,8 +65,8 @@ function T(e) {
                   }).content
                 : null,
         {
-            contentPlaceholder: T,
-            renderedContent: N,
+            contentPlaceholder: N,
+            renderedContent: T,
             trailingIcon: A,
             leadingIcon: w,
         } = (0, y.f)(n, Z, l, o, I.messageContent, {
@@ -104,7 +104,7 @@ function T(e) {
                 className: a()(I.messageContentWrapper, { [I.mentioned]: n.mentioned }),
                 children: [
                     null != R ? null : w,
-                    null != (t = null != N ? N : R) ? t : (0, r.jsx)("span", { children: T }),
+                    null != (t = null != T ? T : R) ? t : (0, r.jsx)("span", { children: N }),
                     null != R ? null : A,
                 ],
             }),
@@ -123,7 +123,7 @@ function T(e) {
         ],
     });
 }
-function N(e) {
+function T(e) {
     let { channelId: t, className: n } = e,
         [l, p] = i.useState(!1),
         { toastsHidden: h, toastMessages: f } = (function (e) {
@@ -243,7 +243,7 @@ function N(e) {
                         ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
                         className: I.toastWrapper,
                         style: e,
-                        children: (0, r.jsx)(T, { message: t.message }),
+                        children: (0, r.jsx)(N, { message: t.message }),
                     }),
                 ),
             }),

@@ -13,11 +13,11 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    h = n(594174),
-    f = n(981631),
+    f = n(594174),
+    h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(434652);
+    b = n(36973);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,8 +48,8 @@ let y = (e) => {
     let { type: t, guildId: r, closePopout: O } = e,
         y = (0, u.Dt)(),
         {
-            notClaimed: j,
-            notEmailVerified: v,
+            notClaimed: v,
+            notEmailVerified: j,
             notPhoneVerified: x,
             newAccount: C,
             newMember: E,
@@ -58,17 +58,17 @@ let y = (e) => {
         P = null,
         I = null;
     return (0 === t &&
-        (j
+        (v
             ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
             : x
               ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
-              : v
+              : j
                 ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
                 : E
-                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })),
+                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
                     (I = m.intl.string(m.t.BddRzc)))
                   : C &&
-                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: f.YeM.ACCOUNT_AGE })),
+                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
                     (I = m.intl.string(m.t.BddRzc)))),
     null == S || null == P)
         ? null
@@ -105,7 +105,7 @@ let y = (e) => {
                                                 variant: "primary",
                                                 text: I,
                                                 onClick: () => {
-                                                    j
+                                                    v
                                                         ? c.j()
                                                         : x
                                                           ? (0, a.ZDy)(
@@ -121,7 +121,7 @@ let y = (e) => {
                                                                 },
                                                                 { modalKey: g.M },
                                                             )
-                                                          : v &&
+                                                          : j &&
                                                             (s.Z.verifyResend(),
                                                             (0, a.h7j)((e) => {
                                                                 var t, n, r;
@@ -142,7 +142,7 @@ let y = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPz, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = h.default.getCurrentUser())
+                                                                                        (t = f.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),
@@ -176,7 +176,7 @@ let y = (e) => {
                                             }),
                                         })
                                       : null,
-                                  j || x || v
+                                  v || x || j
                                       ? (0, i.jsx)(o.zx, {
                                             onClick: O,
                                             look: o.zx.Looks.BLANK,

@@ -13,11 +13,11 @@ var r = n(951288),
     p = n(473403),
     f = n(216306),
     h = n(743475),
-    x = n(827907),
-    b = n(868814),
+    b = n(827907),
+    x = n(868814),
     j = n(981631),
     v = n(388032),
-    _ = n(333999);
+    _ = n(813878);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function y(e, t) {
 }
 function C(e) {
     let { guild: t, channel: i } = e,
-        l = (0, x.Mf)(i.id);
+        l = (0, b.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
               className: s()(_.categoryRow, _.uncategorized),
@@ -154,13 +154,13 @@ let N = i.memo(function () {
                 isLastChannel: C,
                 tooltipDirection: I = "right",
             } = e,
-            S = (0, x.Mf)(t.id, i.id),
-            T = (0, x.t4)(t.id, i.id),
-            P = (0, x.EH)(t.id, i.id),
-            w = (0, x.lL)(l.id, i.id),
-            R = null != (0, b.Z)(l).find((e) => e.id === t.id),
-            D = (0, g.mn)(t.id),
-            Z = (e) => {
+            S = (0, b.Mf)(t.id, i.id),
+            T = (0, b.t4)(t.id, i.id),
+            P = (0, b.EH)(t.id, i.id),
+            w = (0, b.lL)(l.id, i.id),
+            R = null != (0, x.Z)(l).find((e) => e.id === t.id),
+            Z = (0, g.mn)(t.id),
+            D = (e) => {
                 if (!T)
                     return (
                         e.stopPropagation(),
@@ -214,16 +214,16 @@ let N = i.memo(function () {
                               n.e("24358"),
                               n.e("36084"),
                               n.e("38342"),
-                              n.e("63962"),
+                              n.e("91053"),
                               n.e("35755"),
-                              n.e("56785"),
+                              n.e("92592"),
                               n.e("37220"),
                               n.e("18320"),
                               n.e("95546"),
-                              n.e("49613"),
+                              n.e("9665"),
                               n.e("93077"),
                               n.e("63373"),
-                              n.e("57955"),
+                              n.e("93338"),
                           ]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, r.jsx)(
@@ -256,7 +256,7 @@ let N = i.memo(function () {
                                     e,
                                 ),
                                 {
-                                    onClick: Z,
+                                    onClick: D,
                                     onContextMenu: A,
                                     children: [
                                         (0, r.jsx)("div", {
@@ -302,7 +302,7 @@ let N = i.memo(function () {
                                                       value: S,
                                                       type: o.M0.INVERTED,
                                                       disabled: T,
-                                                      color: D
+                                                      color: Z
                                                           ? a.Z.colors.BG_BRAND.css
                                                           : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                                       innerClassName: _.checkboxInner,

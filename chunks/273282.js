@@ -1,4 +1,4 @@
-n.d(t, { c: () => x });
+n.d(t, { c: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(159691),
@@ -12,10 +12,10 @@ var r = n(951288),
     g = n(30513),
     p = n(200299),
     f = n(388032),
-    h = n(289059);
-function x(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: x } = e,
-        { analyticsLocations: b } = (0, s.ZP)(),
+    h = n(43628);
+function b(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: b } = e,
+        { analyticsLocations: x } = (0, s.ZP)(),
         j = t.features.has(m.oNc.INVITE_SPLASH),
         v = n && j,
         _ = i.useRef(null),
@@ -28,13 +28,13 @@ function x(e) {
                     e.stopPropagation(),
                     (0, d.E6)({
                         guild: t,
-                        analyticsLocations: b,
+                        analyticsLocations: x,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)(),
                     });
             },
-            [b, t],
+            [x, t],
         ),
         C = i.useCallback(() => {
             var e;
@@ -42,7 +42,7 @@ function x(e) {
         }, []);
     return j
         ? (0, r.jsxs)("div", {
-              className: x,
+              className: b,
               children: [
                   (0, r.jsx)(l.zxk, {
                       disabled: !v,
@@ -65,7 +65,7 @@ function x(e) {
               ],
           })
         : (0, r.jsx)(u.P, {
-              className: x,
+              className: b,
               onClick: y,
           });
 }

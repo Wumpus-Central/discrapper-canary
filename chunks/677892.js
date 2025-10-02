@@ -18,7 +18,7 @@ var r = n(951288),
     m = n(974513),
     g = n(290511),
     p = n(388032),
-    f = n(376933);
+    f = n(54028);
 function h(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: a, status: o, onEdit: c, extra: d } = e;

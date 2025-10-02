@@ -5,14 +5,14 @@ var r = n(951288),
     a = n(454585),
     o = n(273744),
     s = n(388032),
-    c = n(132875),
-    d = n(10198);
+    c = n(124252),
+    d = n(197571);
 let u = (e) => {
         var t, n;
         let {
                 data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
-                onChange: b,
-                initialText: h,
+                onChange: h,
+                initialText: b,
                 isRequired: x,
             } = e,
             v = i.useRef(
@@ -62,8 +62,8 @@ let u = (e) => {
             [O, C] = i.useState(null);
         i.useEffect(() => {
             var e;
-            y(null != (e = null == h ? void 0 : h.value) ? e : "");
-        }, [h]);
+            y(null != (e = null == b ? void 0 : b.value) ? e : "");
+        }, [b]);
         let I = i.useCallback(
             (e) => {
                 let t = null != f ? new RegExp(f) : null;
@@ -71,17 +71,17 @@ let u = (e) => {
                     ? null != e &&
                       (C(null),
                       y(e),
-                      b({
+                      h({
                           value: e,
                           isValid: !0,
                       }))
                     : (C(s.intl.string(s.t["24xrGR"])),
-                      b({
+                      h({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [b, f],
+            [h, f],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
