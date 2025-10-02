@@ -1,19 +1,19 @@
 n.d(t, { T: () => f }), n(415506);
-var l = n(951288),
-    i = n(647438),
-    r = n(442837),
-    s = n(215569),
-    u = n(481060),
-    o = n(924052),
-    a = n(670304),
-    c = n(764516);
+var r = n(951288),
+    o = n(647438),
+    l = n(442837),
+    i = n(215569),
+    a = n(481060),
+    s = n(924052),
+    c = n(670304),
+    u = n(880745);
 function d(e) {
     let { notice: t, children: n } = e,
-        { showNotice: a, handleStoreUpdate: d } = (0, o.Cu)(),
+        { showNotice: c, handleStoreUpdate: d } = (0, s.Cu)(),
         f = null == t ? void 0 : t.stores;
-    i.useEffect(() => {
+    o.useEffect(() => {
         if (null != f) {
-            let e = new r.Fh(f, () => {
+            let e = new l.Fh(f, () => {
                 d(f);
             });
             return (
@@ -25,39 +25,44 @@ function d(e) {
             );
         }
     }, [f, d]);
-    let g = i.useMemo(() => {
-        if (null == t || !a) return null;
+    let b = o.useMemo(() => {
+        if (null == t || !c) return null;
         let { element: e } = t;
-        return (0, l.jsx)(u.oXn, {
-            className: c.notice,
-            children: (0, l.jsx)(e, {}),
+        return (0, r.jsx)(a.oXn, {
+            className: u.notice,
+            children: (0, r.jsx)(e, {}),
         });
-    }, [t, a]);
-    return (0, l.jsxs)(l.Fragment, {
+    }, [t, c]);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
             n,
-            (0, l.jsx)(s.W, {
+            (0, r.jsx)(i.W, {
                 component: "div",
-                children: g,
+                children: b,
             }),
         ],
     });
 }
 function f(e) {
     let { node: t } = e,
-        n = t.render;
-    if (null != n) return (0, l.jsx)(n, {});
+        n = t.render,
+        l = o.useRef(null);
+    if (null != n) return (0, r.jsx)(n, {});
     if (1 !== t.layout.length)
         throw Error("Panels with multiple panes must define a render prop to handle the multiple panes");
-    return (0, l.jsx)(d, {
+    return (0, r.jsx)(d, {
         notice: t.notice,
-        children: (0, l.jsx)(
-            u.w0Z,
+        children: (0, r.jsx)(
+            a.w0Z,
             {
-                className: c.scroller,
-                children: (0, l.jsx)("div", {
-                    className: c.panel,
-                    children: (0, l.jsx)(a.Z, { node: t.layout[0] }),
+                className: u.scroller,
+                children: (0, r.jsx)("div", {
+                    className: u.panel,
+                    ref: l,
+                    children: (0, r.jsx)(a.JcV, {
+                        containerRef: l,
+                        children: (0, r.jsx)(c.Z, { node: t.layout[0] }),
+                    }),
                 }),
             },
             t.key,
