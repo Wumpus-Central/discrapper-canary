@@ -41,6 +41,7 @@ var r = (function (e) {
         (e[(e.QUEST_HOME_MOVE_CALLOUT_DISCOVER = 37)] = "QUEST_HOME_MOVE_CALLOUT_DISCOVER"),
         (e[(e.SPONSORED_QUEST_SHEET = 38)] = "SPONSORED_QUEST_SHEET"),
         (e[(e.MOBILE_ORBS_ONBOARDING_DC = 39)] = "MOBILE_ORBS_ONBOARDING_DC"),
+        (e[(e.RUNNING_ACTIVITY = 40)] = "RUNNING_ACTIVITY"),
         e
     );
 })({});
