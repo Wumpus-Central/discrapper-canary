@@ -36,37 +36,15 @@ function g() {
         ];
     return (0, r.jsx)(o.hjN, {
         className: m.formSection,
-        children: (0, r.jsxs)(o.y5t, {
-            component: (0, r.jsxs)("div", {
-                children: [
-                    (0, r.jsx)(o.X6q, {
-                        className: m.formTitle,
-                        variant: "heading-lg/semibold",
-                        color: "header-primary",
-                        children: h.intl.string(p.default.TG0Qsb),
-                    }),
-                    (0, r.jsx)(o.R94, {
-                        className: m.formDescription,
-                        type: o.R94.Types.DESCRIPTION,
-                        children: h.intl.string(p.default.OO17Li),
-                    }),
-                ],
-            }),
+        children: (0, r.jsxs)(o.C3N, {
+            label: h.intl.string(p.default.TG0Qsb),
+            description: h.intl.string(p.default.OO17Li),
             children: [
-                (0, r.jsxs)("div", {
-                    children: [
-                        (0, r.jsx)(o.X6q, {
-                            className: m.defaultSetting,
-                            variant: "heading-md/medium",
-                            color: "header-primary",
-                            children: h.intl.string(p.default["/LHVbm"]),
-                        }),
-                        (0, r.jsx)(a.E, {
-                            options: s,
-                            value: t,
-                            onChange: (e) => n(e),
-                        }),
-                    ],
+                (0, r.jsx)(a.E, {
+                    label: h.intl.string(p.default["/LHVbm"]),
+                    options: s,
+                    value: t,
+                    onChange: (e) => n(e),
                 }),
                 (0, r.jsxs)("div", {
                     className: m.myServersContainer,
@@ -101,17 +79,9 @@ function E() {
         t = l.Ou.useSetting();
     return (0, r.jsx)(s.F, {
         setting: _.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, r.jsxs)(o.hjN, {
-            className: m.formSection,
+        children: (0, r.jsxs)(o.C3N, {
+            label: h.intl.string(p.default["5rYBAQ"]),
             children: [
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(o.X6q, {
-                        className: m.formTitle,
-                        variant: "heading-lg/semibold",
-                        color: "header-primary",
-                        children: h.intl.string(p.default["5rYBAQ"]),
-                    }),
-                }),
                 (0, r.jsx)(o.rsf, {
                     label: h.intl.string(p.default.khuuzs),
                     description: h.intl.string(p.default["8EWsJy"]),

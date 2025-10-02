@@ -1027,10 +1027,9 @@ function eH() {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(h.j7V, {
-                                value: !s.has(e.disabledSetting),
+                            (0, r.jsx)(h.rsf, {
+                                checked: !s.has(e.disabledSetting),
                                 onChange: o(e.disabledSetting),
-                                hideBorder: !0,
                             }),
                         ],
                     },
@@ -1334,11 +1333,10 @@ function eX(e) {
             (0, r.jsx)(eF, {}),
             l &&
                 (0, r.jsx)(eD, {
-                    children: (0, r.jsx)(h.j7V, {
-                        value: u,
+                    children: (0, r.jsx)(h.rsf, {
+                        label: e_.intl.string(e_.t.XZTl9v),
+                        checked: u,
                         onChange: (e) => b.Z.setShowKeybindIndicators(e),
-                        hideBorder: !0,
-                        children: e_.intl.string(e_.t.XZTl9v),
                     }),
                 }),
             null != a &&
@@ -1359,11 +1357,10 @@ function eX(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(h.j7V, {
-                            value: o || s,
+                        (0, r.jsx)(h.rsf, {
+                            checked: o || s,
                             disabled: s,
                             onChange: (e) => f(e),
-                            hideBorder: !0,
                         }),
                     ],
                 }),
@@ -1384,10 +1381,9 @@ function eX(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(h.j7V, {
-                        value: !c,
+                    (0, r.jsx)(h.rsf, {
+                        checked: !c,
                         onChange: d,
-                        hideBorder: !0,
                     }),
                 ],
             }),

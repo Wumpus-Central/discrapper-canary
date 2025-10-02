@@ -12,12 +12,11 @@ function d() {
     let e = (0, i.e7)([l.Z], () => l.Z.getQoS());
     return (0, r.jsx)(s.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
-        children: (0, r.jsx)(a.j7V, {
-            value: e,
+        children: (0, r.jsx)(a.rsf, {
+            label: u.intl.string(u.t["3CqDxs"]),
+            description: u.intl.string(u.t.I1Eoqq),
+            checked: e,
             onChange: (e) => o.Z.setQoS(e),
-            note: u.intl.string(u.t.I1Eoqq),
-            hideBorder: !0,
-            children: u.intl.string(u.t["3CqDxs"]),
         }),
     });
 }

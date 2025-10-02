@@ -1,15 +1,15 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var a = n(951288),
     r = n(647438),
-    l = n(481060),
-    i = n(881052),
+    i = n(481060),
+    l = n(881052),
     s = n(972959),
     o = n(729345),
     c = n(620481),
     d = n(608934),
     u = n(981631),
-    m = n(530146);
-let h = (0, s.H)(() => ({
+    m = n(575043);
+let p = (0, s.H)(() => ({
     includeFrecency: !0,
     includeFriends: !0,
     includeGDMs: !0,
@@ -20,16 +20,16 @@ let h = (0, s.H)(() => ({
     isSuccess: !1,
     errorMessage: null,
 }));
-function p() {
-    let e = h.useField("includeFrecency"),
-        t = h.useField("includeFriends"),
-        n = h.useField("includeDMs"),
-        s = h.useField("includeGDMs"),
-        p = h.useField("includeQuickSwitcherState"),
-        x = h.useField("includeUserSearchWorkerState"),
-        b = h.useField("isUploading"),
-        f = h.useField("isSuccess"),
-        g = h.useField("errorMessage"),
+function h() {
+    let e = p.useField("includeFrecency"),
+        t = p.useField("includeFriends"),
+        n = p.useField("includeDMs"),
+        s = p.useField("includeGDMs"),
+        h = p.useField("includeQuickSwitcherState"),
+        x = p.useField("includeUserSearchWorkerState"),
+        f = p.useField("isUploading"),
+        b = p.useField("isSuccess"),
+        g = p.useField("errorMessage"),
         v = r.useCallback(async () => {
             let {
                 includeFrecency: e,
@@ -37,12 +37,12 @@ function p() {
                 includeGDMs: n,
                 includeDMs: a,
                 includeQuickSwitcherState: r,
-                includeUserSearchWorkerState: l,
+                includeUserSearchWorkerState: i,
                 isUploading: s,
-            } = h.getState();
+            } = p.getState();
             if (!s)
                 try {
-                    h.setState({
+                    p.setState({
                         isUploading: !0,
                         errorMessage: null,
                         isSuccess: !1,
@@ -52,70 +52,74 @@ function p() {
                         a && (0, c.FB)(),
                         e && (0, c.Sr)(),
                         r && (0, c.OC)(),
-                        l && (0, c.Jt)(),
+                        i && (0, c.Jt)(),
                         await (0, o.E)(u.GU0.WEB_APP),
-                        h.setState({
+                        p.setState({
                             isSuccess: !0,
                             errorMessage: null,
                         });
                 } catch (t) {
-                    let e = new i.Hx(t);
-                    h.setState({ errorMessage: e.getAnyErrorMessage() });
+                    let e = new l.Hx(t);
+                    p.setState({ errorMessage: e.getAnyErrorMessage() });
                 } finally {
-                    h.setState({ isUploading: !1 });
+                    p.setState({ isUploading: !1 });
                 }
         }, []);
-    return (0, a.jsxs)(l.hjN, {
+    return (0, a.jsxs)(i.hjN, {
         title: "Debug Logs Snapshot",
-        tag: l.RB0.H3,
+        tag: i.RB0.H3,
         className: m.panelGroup,
         children: [
-            (0, a.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
+            (0, a.jsx)(i.R94, {
+                type: i.geA.DESCRIPTION,
                 className: m.subtitle,
                 children:
                     "Uploading a snapshot of the client state can help us figure out what exactly is wrong with your search. You can opt out of uploading certain logs, but it may make it more difficult to debug your issue.",
             }),
-            (0, a.jsx)(l.j7V, {
-                value: e,
-                onChange: () => h.setState({ includeFrecency: !e }),
-                note: "Frecency is a measure of how often you visit a guild or channel. Includes frecency scores for guilds and channels along with the guild or channel IDs.",
-                children: "Frecency",
+            (0, a.jsx)(i.rsf, {
+                label: "Frecency",
+                description:
+                    "Frecency is a measure of how often you visit a guild or channel. Includes frecency scores for guilds and channels along with the guild or channel IDs.",
+                checked: e,
+                onChange: () => p.setState({ includeFrecency: !e }),
             }),
-            (0, a.jsx)(l.j7V, {
-                value: t,
-                onChange: () => h.setState({ includeFriends: !t }),
-                note: "Includes all Discord Friend usernames, global names, and nicknames.",
-                children: "Friends",
+            (0, a.jsx)(i.rsf, {
+                label: "Friends",
+                description: "Includes all Discord Friend usernames, global names, and nicknames.",
+                checked: t,
+                onChange: () => p.setState({ includeFriends: !t }),
             }),
-            (0, a.jsx)(l.j7V, {
-                value: n,
-                onChange: () => h.setState({ includeDMs: !n }),
-                note: "Includes recipient user ids, usernames, global names, nicknames for all DMs. Does NOT include any message data.",
-                children: "DMs",
+            (0, a.jsx)(i.rsf, {
+                label: "DMs",
+                description:
+                    "Includes recipient user ids, usernames, global names, nicknames for all DMs. Does NOT include any message data.",
+                checked: n,
+                onChange: () => p.setState({ includeDMs: !n }),
             }),
-            (0, a.jsx)(l.j7V, {
-                value: s,
-                onChange: () => h.setState({ includeGDMs: !s }),
-                note: "Includes recipient user ids, usernames, global names, nicknames, and custom channel names for all Group DMs. Does NOT include any message data.",
-                children: "Group DMs",
+            (0, a.jsx)(i.rsf, {
+                label: "Group DMs",
+                description:
+                    "Includes recipient user ids, usernames, global names, nicknames, and custom channel names for all Group DMs. Does NOT include any message data.",
+                checked: s,
+                onChange: () => p.setState({ includeGDMs: !s }),
             }),
-            (0, a.jsx)(l.j7V, {
-                value: p,
-                onChange: () => h.setState({ includeQuickSwitcherState: !p }),
-                note: "Includes the current QuickSwitcher query and results. If you include this, please ensure the QuickSwitcher is open when you click to Upload Snapshot Logs.",
-                children: "Quick Switcher Results",
+            (0, a.jsx)(i.rsf, {
+                label: "Quick Switcher Results",
+                description:
+                    "Includes the current QuickSwitcher query and results. If you include this, please ensure the QuickSwitcher is open when you click to Upload Snapshot Logs.",
+                checked: h,
+                onChange: () => p.setState({ includeQuickSwitcherState: !h }),
             }),
-            (0, a.jsx)(l.j7V, {
-                value: x,
-                onChange: () => h.setState({ includeUserSearchWorkerState: !x }),
-                note: "Includes all users that your client knows about. For each user, includes the user id, username, nickname, and any guild nicknames.",
-                hideBorder: !0,
-                children: "User Search Worker",
+            (0, a.jsx)(i.rsf, {
+                label: "User Search Worker",
+                description:
+                    "Includes all users that your client knows about. For each user, includes the user id, username, nickname, and any guild nicknames.",
+                checked: x,
+                onChange: () => p.setState({ includeUserSearchWorkerState: !x }),
             }),
             (0, a.jsx)(d.a, {
-                isUploading: b,
-                isSuccess: f,
+                isUploading: f,
+                isSuccess: b,
                 errorMessage: g,
                 onClick: v,
                 title: "Upload Snapshot Logs",

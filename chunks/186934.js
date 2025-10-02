@@ -18,12 +18,11 @@ function f() {
     return (0, r.jsxs)(l.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
         children: [
-            (0, r.jsx)(a.j7V, {
-                value: e,
+            (0, r.jsx)(a.rsf, {
+                label: d.intl.string(d.t["/jwMtr"]),
+                description: d.intl.string(d.t.zlA23N),
+                checked: e,
                 onChange: (e) => o.Z.setSidechainCompression(e, { analyticsLocations: n }),
-                note: d.intl.string(d.t.zlA23N),
-                hideBorder: !0,
-                children: d.intl.string(d.t["/jwMtr"]),
             }),
             (0, r.jsx)(a.iRW, {
                 label: d.intl.string(d.t.fhEzfn),

@@ -795,13 +795,12 @@ function Z() {
                     (0, r.jsx)("div", {
                         className: R.toggleSwitch,
                         children: (0, r.jsx)(p.xJW, {
-                            children: (0, r.jsx)(p.j7V, {
-                                value: z,
+                            children: (0, r.jsx)(p.rsf, {
+                                label: "Is Participating:",
+                                checked: z,
                                 onChange: function (e) {
                                     G(e);
                                 },
-                                hideBorder: !0,
-                                children: "Is Participating:",
                             }),
                         }),
                     }),
@@ -825,11 +824,10 @@ function Z() {
                     (0, r.jsx)("div", {
                         className: R.toggleSwitch,
                         children: (0, r.jsx)(p.xJW, {
-                            children: (0, r.jsx)(p.j7V, {
-                                value: K,
+                            children: (0, r.jsx)(p.rsf, {
+                                label: "Invalid Quests Embed:",
+                                checked: K,
                                 onChange: Y,
-                                hideBorder: !0,
-                                children: "Invalid Quests Embed:",
                             }),
                         }),
                     }),

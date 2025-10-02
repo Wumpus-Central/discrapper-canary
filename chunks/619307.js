@@ -22,7 +22,7 @@ var r = n(951288),
     p = n(434650),
     h = n(98650),
     m = n(388032),
-    g = n(361421);
+    g = n(786614);
 function E(e, t, n) {
     return (
         t in e
@@ -192,58 +192,59 @@ function w(e) {
             helperText: K,
             errorMessage: z,
             successMessage: q,
+            layout: X = "vertical",
         } = e,
-        [X, Q] = i.useState(!1),
-        { ref: J, width: $, height: ee } = (0, _.ZP)();
+        [Q, J] = i.useState(!1),
+        { ref: $, width: ee, height: et } = (0, _.ZP)();
     i.useLayoutEffect(() => {
-        s && Q(!1);
+        s && J(!1);
     }, [s]);
-    let et = i.useCallback(
+    let en = i.useCallback(
             (e) => {
-                X === e || s || (Q(e), e ? null == A || A() : null == S || S());
+                Q === e || s || (J(e), e ? null == A || A() : null == S || S());
             },
-            [s, S, A, X],
+            [s, S, A, Q],
         ),
-        en = i.useCallback(
+        er = i.useCallback(
             (e) => {
-                X && !e && et(!1);
+                Q && !e && en(!1);
             },
-            [et, X],
+            [en, Q],
         ),
-        er = (0, p.O)(en),
-        ei = i.useCallback(
+        ei = (0, p.O)(er),
+        ea = i.useCallback(
             (e) => {
                 if ((k(e), M)) {
                     var t;
-                    null == (t = J.current) || t.focus();
+                    null == (t = $.current) || t.focus();
                 }
             },
-            [k, M, J],
+            [k, M, $],
         ),
-        ea = i.useCallback(
+        eo = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == B || B();
             },
             [B],
         ),
-        eo = t.filter((e) => U(e.value));
+        es = t.filter((e) => U(e.value));
     return (
         i.useLayoutEffect(() => {
             if (h) {
                 var e;
-                null == (e = J.current) || e.focus();
+                null == (e = $.current) || e.focus();
             }
-        }, [h, J]),
+        }, [h, $]),
         (0, r.jsx)(u.y, {
-            targetElementRef: J,
+            targetElementRef: $,
             spacing: 0,
             animation: u.y.Animation.NONE,
-            shouldShow: X,
+            shouldShow: Q,
             onRequestOpen: () => {
-                et(!0);
+                en(!0);
             },
             onRequestClose: () => {
-                et(!1);
+                en(!1);
             },
             renderPopout: (e) => {
                 let { closePopout: n, position: i, updatePosition: a } = e;
@@ -251,11 +252,11 @@ function w(e) {
                     className: w,
                     closeOnSelect: M,
                     maxVisibleItems: l,
-                    width: "auto" === E ? void 0 : null != E ? E : $,
+                    width: "auto" === E ? void 0 : null != E ? E : ee,
                     isSelected: U,
                     closePopout: n,
-                    buttonHeight: null != ee ? ee : 0,
-                    onSelect: ei,
+                    buttonHeight: null != et ? et : 0,
+                    onSelect: ea,
                     options: t,
                     serialize: G,
                     renderOptionLabel: C,
@@ -277,6 +278,7 @@ function w(e) {
                     helperText: K,
                     errorMessage: z,
                     successMessage: q,
+                    layout: X,
                     children: (e) =>
                         (0, r.jsxs)(
                             d.U,
@@ -293,18 +295,19 @@ function w(e) {
                                         disabled: s,
                                         "aria-busy": F,
                                         "aria-disabled": s,
+                                        fullWidth: "horizontal" === X,
                                         innerRef: (e) => {
-                                            (J.current = e), (er.current = e);
+                                            ($.current = e), (ei.current = e);
                                         },
                                         onClick: s
                                             ? void 0
                                             : (e) => {
-                                                  i(e), et(!X);
+                                                  i(e), en(!Q);
                                               },
                                         onKeyDown: (e) => {
                                             "ArrowDown" === e.key
-                                                ? et(!0)
-                                                : "Escape" === e.key && _ && (e.stopPropagation(), et(!1)),
+                                                ? en(!0)
+                                                : "Escape" === e.key && _ && (e.stopPropagation(), en(!1)),
                                                 l(e);
                                         },
                                     },
@@ -320,11 +323,11 @@ function w(e) {
                                     "aria-label": V,
                                     "aria-labelledby": H,
                                     children: [
-                                        eo.length > 0
+                                        es.length > 0
                                             ? (0, r.jsx)(f.Text, {
                                                   className: g.value,
                                                   variant: "text-md/medium",
-                                                  children: N(eo),
+                                                  children: N(es),
                                               })
                                             : (0, r.jsx)("span", {
                                                   className: g.placeholder,
@@ -343,7 +346,7 @@ function w(e) {
                                                               ? (0, r.jsx)(f.P3F, {
                                                                     role: "button",
                                                                     "aria-disabled": s,
-                                                                    onClick: ea,
+                                                                    onClick: eo,
                                                                     "aria-label": m.intl.string(m.t.VkKicX),
                                                                     children: (0, r.jsx)(f.Dio, {
                                                                         size: "xs",

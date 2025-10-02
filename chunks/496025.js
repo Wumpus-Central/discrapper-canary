@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(35282);
+n.d(t, { Z: () => T }), n(388685), n(35282);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -9,29 +9,29 @@ var a = n(951288),
     d = n(493683),
     u = n(43267),
     m = n(933557),
-    h = n(258732),
-    p = n(592125),
+    p = n(258732),
+    h = n(592125),
     x = n(699516),
-    b = n(594174),
-    f = n(55589),
+    f = n(594174),
+    b = n(55589),
     g = n(630388),
     v = n(98357),
     j = n(432877),
     _ = n(246992),
     y = n(37812),
-    C = n(165432),
-    N = n(451429);
-function E() {
+    C = n(462689),
+    E = n(866403);
+function N() {
     var e;
-    let t = (0, o.Wu)([f.Z], () => f.Z.getSortedChannels()[1]),
+    let t = (0, o.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
         [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: l, options: d } = (0, o.cj)([p.Z, b.default, x.Z], () => ({
-            selectedChannel: p.Z.getChannel(n),
+        { selectedChannel: l, options: d } = (0, o.cj)([h.Z, f.default, x.Z], () => ({
+            selectedChannel: h.Z.getChannel(n),
             options: t.map((e) => {
-                let t = p.Z.getChannel(e.channelId);
+                let t = h.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, m.F6)(t, b.default, x.Z) : e.channelId,
+                    label: null != t ? (0, m.F6)(t, f.default, x.Z) : e.channelId,
                 };
             }),
         })),
@@ -39,7 +39,7 @@ function E() {
             var e;
             if (null == l || !l.isPrivate()) return;
             let t = (0, g.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            h.Z.updatePrivateChannelRecipientFlags(l.id, t);
+            p.Z.updatePrivateChannelRecipientFlags(l.id, t);
         }, [l]),
         j =
             null != l &&
@@ -62,7 +62,7 @@ function E() {
                         onChange: i,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
-                            let t = p.Z.getChannel(e.value);
+                            let t = h.Z.getChannel(e.value);
                             return null == t
                                 ? null
                                 : (0, a.jsx)(c.qEK, {
@@ -96,27 +96,26 @@ function S() {
         onClick: e,
     });
 }
-function O() {
+function T() {
     let e = (0, o.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], o.pF).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
-            c.j7V,
+            c.rsf,
             {
-                value: n,
+                label: r,
+                description: t,
+                checked: n,
                 onChange: (e) => (0, v.Z)(t, e),
-                hideBorder: !0,
-                className: C.switch,
-                children: r,
             },
             t,
         );
     });
     return (0, a.jsxs)("div", {
-        className: l()(N.panel, C.panel),
+        className: l()(E.panel, C.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: C.divider }),
-            (0, a.jsx)(E, {}),
+            (0, a.jsx)(N, {}),
             (0, a.jsx)("div", { className: C.divider }),
             (0, a.jsx)(S, {}),
         ],

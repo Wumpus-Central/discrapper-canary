@@ -27,13 +27,11 @@ function d(e) {
                 className: c.description,
                 children: o.intl.string(o.t.fZ0qZW),
             }),
-            (0, r.jsx)(l.j7V, {
-                value: t,
-                className: c.switch,
-                hideBorder: !0,
-                disabled: !n,
+            (0, r.jsx)(l.rsf, {
+                label: o.intl.string(o.t.WompT0),
+                checked: t,
                 onChange: u,
-                children: o.intl.string(o.t.WompT0),
+                disabled: !n,
             }),
         ],
     });

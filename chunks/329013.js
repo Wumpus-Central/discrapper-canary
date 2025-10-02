@@ -32,8 +32,8 @@ var r = n(951288),
     P = n(981631),
     w = n(921944),
     D = n(474936),
-    x = n(388032),
-    L = n(352334);
+    L = n(388032),
+    x = n(352334);
 let j = () => {
         (0, E.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: w.L.PRIMARY,
@@ -53,15 +53,15 @@ let j = () => {
             E = () => {
                 if (!o || s) return null;
                 let e = u
-                    ? x.intl.formatToPlainString(x.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount })
-                    : x.intl.string(x.t.mr4K7O);
+                    ? L.intl.formatToPlainString(L.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount })
+                    : L.intl.string(L.t.mr4K7O);
                 return g
                     ? (0, r.jsxs)("div", {
-                          className: L.tryItOutButtonsV2,
+                          className: x.tryItOutButtonsV2,
                           children: [
                               (0, r.jsx)(l.zxk, {
                                   variant: "secondary",
-                                  text: x.intl.string(x.t["E+COuL"]),
+                                  text: L.intl.string(L.t["E+COuL"]),
                                   onClick: () => j(),
                               }),
                               (0, r.jsx)(O.Z, {
@@ -76,18 +76,18 @@ let j = () => {
                           ],
                       })
                     : (0, r.jsxs)("div", {
-                          className: L.tryItOutButtons,
+                          className: x.tryItOutButtons,
                           children: [
                               (0, r.jsx)(l.zxk, {
                                   variant: "secondary",
-                                  text: x.intl.string(x.t["E+COuL"]),
+                                  text: L.intl.string(L.t["E+COuL"]),
                                   onClick: () => j(),
                               }),
                               (0, r.jsx)(v.Z, {
                                   showGradient: !1,
                                   subscriptionTier: D.Si.TIER_2,
                                   textOptions: { textOverride: e },
-                                  className: L.premiumCta,
+                                  className: x.premiumCta,
                               }),
                           ],
                       });
@@ -105,15 +105,15 @@ let j = () => {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
-                            className: L.previewThemeButton,
+                            className: x.previewThemeButton,
                             children: (0, r.jsx)(l.zxk, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: x.intl.string(x.t["E+COuL"]),
+                                text: L.intl.string(L.t["E+COuL"]),
                                 onClick: () => j(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: L.premiumTier2Divider }),
+                        (0, r.jsx)("div", { className: x.premiumTier2Divider }),
                         (0, r.jsx)(I.ZP, {
                             type: D.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                             subscriptionTier: D.Si.TIER_2,
@@ -134,11 +134,11 @@ let j = () => {
                     g
                         ? o &&
                           (e = (0, r.jsx)("div", {
-                              className: L.colorThemesBackground,
+                              className: x.colorThemesBackground,
                               children: e,
                           }))
                         : (e = (0, r.jsx)(T.Z, {
-                              className: L.featureBorder,
+                              className: x.featureBorder,
                               isShown: o,
                               type: T.Y.PREMIUM,
                               children: e,
@@ -151,13 +151,13 @@ let j = () => {
                 (0, r.jsxs)(m.ZP, {
                     type: m.yH.SETTINGS,
                     children: [
-                        (0, r.jsx)(m.ZP.Basic, { className: L.basicThemeSelectors }),
+                        (0, r.jsx)(m.ZP.Basic, { className: x.basicThemeSelectors }),
                         (0, r.jsx)(k, {}),
                         g && (0, r.jsx)(h.Z, {}),
                         C,
                     ],
                 }),
-                (0, r.jsx)(l.$i$, { className: L.divider }),
+                (0, r.jsx)(l.izJ, { className: x.divider }),
             ],
         });
     };
@@ -175,16 +175,17 @@ function k() {
         o = null != N.L1.useSetting().customUserThemeSettings;
     return t !== P.BRd.LIGHT
         ? null
-        : (0, r.jsx)(l.j7V, {
-              hideBorder: !0,
-              value: e && (0, s.ap)(t) && !n,
-              disabled: t !== P.BRd.LIGHT || n || null != i || o,
-              onChange: c.lq,
-              className: L.darkSidebarToggle,
-              children: (0, r.jsx)("span", {
-                  className: L.title,
-                  children: x.intl.string(x.t.yF54Ki),
-              }),
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(l.izJ, { gap: 24 }),
+                  (0, r.jsx)(l.rsf, {
+                      label: L.intl.string(L.t.yF54Ki),
+                      checked: e && (0, s.ap)(t) && !n,
+                      disabled: t !== P.BRd.LIGHT || n || null != i || o,
+                      onChange: c.lq,
+                  }),
+                  (0, r.jsx)(l.izJ, { gap: 24 }),
+              ],
           });
 }
 let U = () =>
@@ -192,6 +193,6 @@ let U = () =>
         ? null
         : (0, r.jsx)(l.zxk, {
               variant: "primary",
-              text: x.intl.string(x.t.qYXrkZ),
+              text: L.intl.string(L.t.qYXrkZ),
               onClick: j,
           });

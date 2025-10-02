@@ -22,7 +22,7 @@ var a = n(951288),
     w = n(356659),
     C = n(710111),
     k = n(388032),
-    O = n(612683),
+    O = n(791385),
     P = n(413135).Buffer;
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -77,15 +77,15 @@ function E(e) {
             applicationAudioEnabled: I,
             setApplicationAudioEnabled: Z,
         } = (0, _.S)(),
-        [B, M] = r.useState(null),
+        [M, B] = r.useState(null),
         { onShareClick: z } = (0, b.Z)({
             channelId: l,
-            setExporting: (e) => M(null != e ? "share" : null),
+            setExporting: (e) => B(null != e ? "share" : null),
         });
     async function H() {
         var e;
         let r = p.Z.getChannel(l);
-        M("export"), null == (e = T.current) || e.pause();
+        B("export"), null == (e = T.current) || e.pause();
         try {
             let e = await (0, x.rO)(
                 t,
@@ -115,12 +115,12 @@ function E(e) {
             });
         } catch (e) {
         } finally {
-            M(null);
+            B(null);
         }
     }
     async function W() {
         var e;
-        M("export"), null == (e = T.current) || e.pause();
+        B("export"), null == (e = T.current) || e.pause();
         try {
             let e = await (0, x.rO)(
                     t,
@@ -133,7 +133,7 @@ function E(e) {
             await d.Z.fileManager.saveWithDialog(P.from(n), (0, w.EF)(t.id));
         } catch (e) {
         } finally {
-            M(null);
+            B(null);
         }
     }
     function U() {
@@ -174,17 +174,15 @@ function E(e) {
                     (0, a.jsxs)("div", {
                         className: O.clipFormSwitches,
                         children: [
-                            (0, a.jsx)(u.j7V, {
+                            (0, a.jsx)(u.rsf, {
+                                label: k.intl.string(k.t.GnQui4),
+                                checked: I,
                                 onChange: Z,
-                                value: I,
-                                hideBorder: !0,
-                                children: k.intl.string(k.t.GnQui4),
                             }),
-                            (0, a.jsx)(u.j7V, {
+                            (0, a.jsx)(u.rsf, {
+                                label: k.intl.string(k.t["5mVOCQ"]),
+                                checked: F,
                                 onChange: A,
-                                value: F,
-                                hideBorder: !0,
-                                children: k.intl.string(k.t["5mVOCQ"]),
                             }),
                         ],
                     }),
@@ -204,8 +202,8 @@ function E(e) {
                 className: O.clipFormFooter,
                 children: [
                     (0, a.jsx)(s.zx, {
-                        submitting: "share" === B,
-                        disabled: null != B && "share" !== B,
+                        submitting: "share" === M,
+                        disabled: null != M && "share" !== M,
                         color: s.zx.Colors.BRAND,
                         wrapperClassName: O.clipFormFooterButton,
                         onClick: () =>
@@ -223,8 +221,8 @@ function E(e) {
                     (0, a.jsx)(s.zx, {
                         size: s.zx.Sizes.ICON,
                         className: O.clipFormFooterButton,
-                        disabled: null != B,
-                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != B }),
+                        disabled: null != M,
+                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != M }),
                         color: s.zx.Colors.PRIMARY,
                         onClick: L,
                         children: k.intl.string(k.t.K344S0),
@@ -232,9 +230,9 @@ function E(e) {
                     (0, a.jsx)(s.zx, {
                         "aria-label": k.intl.string(k.t.PdRCRk),
                         size: s.zx.Sizes.ICON,
-                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != B }),
-                        submitting: "export" === B,
-                        disabled: null != B && "export" !== B,
+                        wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != M }),
+                        submitting: "export" === M,
+                        disabled: null != M && "export" !== M,
                         color: s.zx.Colors.PRIMARY,
                         onClick: function (e) {
                             (0, c.jW)(e, async () => {

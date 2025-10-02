@@ -5,24 +5,28 @@ var a = n(951288),
     l = n(481060),
     s = n(581612),
     o = n(91311),
-    c = n(685960);
+    c = n(535548);
 function d() {
     let e = (0, i.e7)([o.Z], () => o.Z.allWithDescriptions(), [], i.pF),
         t = r.useMemo(
             () =>
                 e.map((e) => {
                     let [t, n, r] = e;
-                    return (0, a.jsx)(
-                        l.j7V,
-                        {
-                            value: n,
-                            note: t,
-                            onChange: (e) => (0, s.Z)(t, e),
-                            hideBorder: !0,
-                            children: r,
-                        },
-                        t,
-                    );
+                    return (0, a.jsxs)(a.Fragment, {
+                        children: [
+                            (0, a.jsx)(
+                                l.rsf,
+                                {
+                                    label: r,
+                                    description: t,
+                                    checked: n,
+                                    onChange: (e) => (0, s.Z)(t, e),
+                                },
+                                t,
+                            ),
+                            (0, a.jsx)(l.izJ, { gap: 16 }),
+                        ],
+                    });
                 }),
             [e],
         );

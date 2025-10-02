@@ -28,7 +28,7 @@ n(63063);
 var C = n(13140),
     N = n(981631),
     R = n(388032),
-    P = n(703943);
+    P = n(421098);
 function w(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -122,7 +122,7 @@ function G(e) {
             displayUserMode: A,
             textChatDisabled: C,
             notificationPositionMode: w,
-            shouldShowKeybindIndicators: x,
+            shouldShowKeybindIndicators: L,
         } = (0, l.cj)([S.default, O.Z], () => ({
             avatarSizeMode: S.default.getAvatarSizeMode(),
             displayNameMode: S.default.getDisplayNameMode(),
@@ -145,7 +145,7 @@ function G(e) {
         f.Z.setNotificationDisabledSetting(E.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
     }
     function F(e) {
-        a()(null != j, "Keybind should never be undefined"), d.Z.setKeybind(L(D({}, j), { shortcut: e }));
+        a()(null != j, "Keybind should never be undefined"), d.Z.setKeybind(x(D({}, j), { shortcut: e }));
     }
     return (
         M(),
@@ -163,14 +163,12 @@ function G(e) {
                                 (0, r.jsx)(u.xJW, {
                                     title: R.intl.string(R.t.XkaTrq),
                                     className: P.enableOverlayItem,
-                                    children: (0, r.jsx)(u.j7V, {
-                                        className: P.enableSwitch,
-                                        value: o,
+                                    children: (0, r.jsx)(u.rsf, {
+                                        label: R.intl.string(R.t.vSP6c3),
+                                        description: G ? R.intl.string(R.t.Eb0lnJ) : void 0,
+                                        checked: o,
                                         disabled: G,
-                                        note: G ? R.intl.string(R.t.Eb0lnJ) : null,
-                                        hideBorder: !0,
                                         onChange: B,
-                                        children: R.intl.string(R.t.vSP6c3),
                                     }),
                                 }),
                                 (0, r.jsx)(u.xJW, {
@@ -241,11 +239,10 @@ function G(e) {
                         }),
                         k &&
                             (0, r.jsx)(U, {
-                                children: (0, r.jsx)(u.j7V, {
-                                    value: x,
+                                children: (0, r.jsx)(u.rsf, {
+                                    label: R.intl.string(R.t.XZTl9v),
+                                    checked: L,
                                     onChange: (e) => f.Z.setShowKeybindIndicators(e),
-                                    hideBorder: !0,
-                                    children: R.intl.string(R.t.XZTl9v),
                                 }),
                             }),
                     ],
@@ -266,12 +263,11 @@ function G(e) {
                             }),
                         }),
                         (0, r.jsx)(U, {
-                            children: (0, r.jsx)(u.j7V, {
-                                value: w !== N._vf.DISABLED && !C,
-                                disabled: w === N._vf.DISABLED,
+                            children: (0, r.jsx)(u.rsf, {
+                                label: R.intl.string(R.t.Fy5kPj),
+                                checked: w !== N._vf.DISABLED && !C,
                                 onChange: Z,
-                                hideBorder: !0,
-                                children: R.intl.string(R.t.Fy5kPj),
+                                disabled: w === N._vf.DISABLED,
                             }),
                         }),
                     ],

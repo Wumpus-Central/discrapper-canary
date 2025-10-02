@@ -121,8 +121,8 @@ function _() {
             krispModels: T,
             krispModelOverride: O,
             inputMode: P,
-            echoCancellation: I,
-            autoThreshold: k,
+            echoCancellation: k,
+            autoThreshold: I,
             vadUseKrisp: w,
             vadKrispActivationThreshold: R,
             noiseCancellation: A,
@@ -146,15 +146,15 @@ function _() {
         })),
         U = A ? "KRISP" : Z ? "STANDARD" : "NONE",
         F = (0, u.N)(),
-        B = r.useCallback(() => {
+        G = r.useCallback(() => {
             var e;
             null == (e = C.current) || e.stop(), (C.current = null), y(null);
         }, []);
-    function G() {
+    function B() {
         h.Z.getMediaEngine().stopRecordingRawSamples();
     }
     function z(e) {
-        if ((t && G(), B(), null == F)) return;
+        if ((t && B(), G(), null == F)) return;
         let n = F.createBufferSource();
         (n.buffer = e.audioBuffer),
             (E.current = F.createGain()),
@@ -167,8 +167,8 @@ function _() {
             y(e);
     }
     r.useEffect(() => {
-        B();
-    }, [B]);
+        G();
+    }, [G]);
     let V = [];
     return (
         L &&
@@ -250,10 +250,10 @@ function _() {
                                 (0, a.jsx)(c.hjN, {
                                     title: "Noise Cancellation Stats",
                                     tag: c.RB0.H3,
-                                    children: (0, a.jsx)(c.j7V, {
-                                        value: M,
+                                    children: (0, a.jsx)(c.rsf, {
+                                        label: "Enable Stats",
+                                        checked: M,
                                         onChange: (e) => d.Z.setNoiseCancellationEnableStats(e),
-                                        children: "Enable Stats",
                                     }),
                                 }),
                             ],
@@ -264,25 +264,23 @@ function _() {
                                 (0, a.jsx)(c.hjN, {
                                     title: "VAD Auto Threshold",
                                     tag: c.RB0.H3,
-                                    children: (0, a.jsx)(c.j7V, {
-                                        hideBorder: !0,
-                                        value: k,
+                                    children: (0, a.jsx)(c.rsf, {
+                                        label: "Auto Threshold",
+                                        checked: I,
                                         onChange: (e) => d.Z.setMode(f.pM.VOICE_ACTIVITY, { autoThreshold: e }),
-                                        children: "Auto Threshold",
                                     }),
                                 }),
-                                k &&
+                                I &&
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
                                             (0, a.jsx)(c.hjN, {
                                                 title: "VAD Krisp Auto Threshold",
                                                 tag: c.RB0.H3,
-                                                children: (0, a.jsx)(c.j7V, {
-                                                    hideBorder: !0,
-                                                    value: w,
+                                                children: (0, a.jsx)(c.rsf, {
+                                                    label: "Use Krisp VAD",
+                                                    checked: w,
                                                     onChange: (e) =>
                                                         d.Z.setMode(f.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
-                                                    children: "Use Krisp VAD",
                                                 }),
                                             }),
                                             w &&
@@ -305,11 +303,10 @@ function _() {
                         }),
                     (0, a.jsx)(c.hjN, {
                         tag: c.RB0.H3,
-                        children: (0, a.jsx)(c.j7V, {
-                            hideBorder: !0,
-                            value: I,
+                        children: (0, a.jsx)(c.rsf, {
+                            label: "Echo Cancellation",
+                            checked: k,
                             onChange: (e) => d.Z.setEchoCancellation(e),
-                            children: "Echo Cancellation",
                         }),
                     }),
                     (0, a.jsx)(c.hjN, {
@@ -318,9 +315,9 @@ function _() {
                         children: (0, a.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? G
+                                ? B
                                 : function () {
-                                      B(),
+                                      G(),
                                           n(!0),
                                           d.Z.setLoopback("krisp_test", !0),
                                           h.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
@@ -342,7 +339,7 @@ function _() {
                                                       audioBuffer: i,
                                                       createdAt: Date.now(),
                                                       suppression: U,
-                                                      echoCancellation: I,
+                                                      echoCancellation: k,
                                                       krispSuppressionLevel: v,
                                                   },
                                               ]);
@@ -373,7 +370,7 @@ function _() {
                                     recording: e,
                                     playing: e === _,
                                     onPlay: z,
-                                    onStop: B,
+                                    onStop: G,
                                 },
                                 t,
                             ),

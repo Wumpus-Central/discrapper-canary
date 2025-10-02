@@ -166,26 +166,23 @@ class C extends r.PureComponent {
                         onChange: this.handleChangeNotificationPositionMode,
                     }),
                 }),
-                (0, i.jsx)(l.j7V, {
-                    value: o && c,
+                (0, i.jsx)(l.rsf, {
+                    label: v.intl.string(v.t.Fy5kPj),
+                    checked: o && c,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !c,
-                    hideBorder: !0,
-                    children: v.intl.string(v.t.Fy5kPj),
                 }),
-                (0, i.jsx)(l.j7V, {
-                    value: s,
+                (0, i.jsx)(l.rsf, {
+                    label: v.intl.string(v.t["f+c48/"]),
+                    description: v.intl.string(v.t.W9DVVV),
+                    checked: s,
                     onChange: this.handleToggleInviteNotification,
-                    hideBorder: !0,
-                    note: v.intl.string(v.t.W9DVVV),
-                    children: v.intl.string(v.t["f+c48/"]),
                 }),
                 n &&
-                    (0, i.jsx)(l.j7V, {
-                        value: t,
+                    (0, i.jsx)(l.rsf, {
+                        label: v.intl.string(v.t.XZTl9v),
+                        checked: t,
                         onChange: (e) => a.Z.setShowKeybindIndicators(e),
-                        hideBorder: !0,
-                        children: v.intl.string(v.t.XZTl9v),
                     }),
             ],
         });

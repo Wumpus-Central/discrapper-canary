@@ -263,21 +263,18 @@ class eo extends i.Component {
     }
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: t } = this.props;
-        return (0, r.jsx)("div", {
-            className: W.messageGroupingSpacing,
-            children: (0, r.jsx)(d.iRW, {
-                label: Y.intl.string(Y.t.Q6lKkp),
-                description: Y.intl.string(Y.t.p7eUra),
-                initialValue: t,
-                defaultValue: e ? H.c8 : H.pq,
-                markers: H.fP,
-                stickToMarkers: !0,
-                onValueChange: this.handleMessageSpacingChange,
-                onValueRender: this.handleSliderRenderPX,
-                onMarkerRender: this.handleSliderRenderPX,
-                getAriaValueText: this.handleSliderValueText,
-                "aria-labelledby": et,
-            }),
+        return (0, r.jsx)(d.iRW, {
+            label: Y.intl.string(Y.t.Q6lKkp),
+            description: Y.intl.string(Y.t.p7eUra),
+            initialValue: t,
+            defaultValue: e ? H.c8 : H.pq,
+            markers: H.fP,
+            stickToMarkers: !0,
+            onValueChange: this.handleMessageSpacingChange,
+            onValueRender: this.handleSliderRenderPX,
+            onMarkerRender: this.handleSliderRenderPX,
+            getAriaValueText: this.handleSliderValueText,
+            "aria-labelledby": et,
         });
     }
     renderPreview() {
@@ -430,50 +427,35 @@ class eo extends i.Component {
             o = (0, r.jsxs)(R.F, {
                 setting: Z.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
-                    (0, r.jsxs)(d.Kqy, {
-                        gap: 8,
-                        padding: { bottom: 8 },
+                    (0, r.jsxs)(d.C3N, {
+                        label: Y.intl.string(Y.t["2ed/sL"]),
+                        description: Y.intl.string(Y.t.u9N6Qk),
                         children: [
-                            (0, r.jsx)(d.Text, {
-                                variant: "text-lg/medium",
-                                className: W.title,
-                                children: Y.intl.string(Y.t["2ed/sL"]),
+                            (0, r.jsx)(d.FXm, {
+                                label: Y.intl.string(Y.t.nKRoPj),
+                                description: Y.intl.string(Y.t.QntEEB),
+                                options: [
+                                    {
+                                        name: Y.intl.string(Y.t.Jqj4cX),
+                                        value: J,
+                                    },
+                                    {
+                                        name: Y.intl.string(Y.t["1JNcPT"]),
+                                        value: $,
+                                    },
+                                ],
+                                onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
+                                value: this.props.messageDisplayCompact ? $ : J,
                             }),
-                            (0, r.jsx)(d.Text, {
-                                variant: "text-sm/normal",
-                                className: W.subtext,
-                                children: Y.intl.string(Y.t.u9N6Qk),
-                            }),
+                            this.props.messageDisplayCompact &&
+                                (0, r.jsx)(d.rsf, {
+                                    label: Y.intl.string(Y.t["//vhWl"]),
+                                    checked: !this.props.displayCompactAvatars,
+                                    onChange: (e) => this.handleDisplayCompactAvatarsChanged(!e),
+                                }),
+                            this.renderMessageGroupSpacingSlider(),
                         ],
                     }),
-                    (0, r.jsx)(d.FXm, {
-                        label: Y.intl.string(Y.t.nKRoPj),
-                        description: Y.intl.string(Y.t.QntEEB),
-                        options: [
-                            {
-                                name: Y.intl.string(Y.t.Jqj4cX),
-                                value: J,
-                            },
-                            {
-                                name: Y.intl.string(Y.t["1JNcPT"]),
-                                value: $,
-                            },
-                        ],
-                        onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
-                        value: this.props.messageDisplayCompact ? $ : J,
-                    }),
-                    this.props.messageDisplayCompact &&
-                        (0, r.jsx)(d.j7V, {
-                            className: W.compactModeToggle,
-                            hideBorder: !0,
-                            value: !this.props.displayCompactAvatars,
-                            onChange: (e) => this.handleDisplayCompactAvatarsChanged(!e),
-                            children: (0, r.jsx)(d.Text, {
-                                variant: "text-md/medium",
-                                children: Y.intl.string(Y.t["//vhWl"]),
-                            }),
-                        }),
-                    this.renderMessageGroupSpacingSlider(),
                     (0, r.jsx)(d.izJ, { className: W.divider }),
                 ],
             }),

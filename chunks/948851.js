@@ -6,7 +6,7 @@ var i = n(533800),
     a = n(630388),
     s = n(971130),
     o = n(388032),
-    u = n(337709);
+    u = n(633297);
 let d = s.ZP.getMaxUsesOptions;
 function c(e) {
     var t;
@@ -18,14 +18,14 @@ function c(e) {
             temporary: m,
             onGenerateNewLink: p,
             onToggleTemporary: v,
-            onSelectMaxAge: I,
-            onSelectMaxUses: x,
+            onSelectMaxAge: x,
+            onSelectMaxUses: I,
             isGuestInviteCreationToggleEnabled: f,
-            inviteFlags: N,
-            onSetInviteFlags: j,
+            inviteFlags: j,
+            onSetInviteFlags: N,
         } = e,
         _ = s.ZP.getMaxAgeOptionByValue(g),
-        E = d.find((e) => e.value === h);
+        b = d.find((e) => e.value === h);
     return (0, l.jsx)("div", {
         className: u.settingsContent,
         children: (0, l.jsxs)("form", {
@@ -36,31 +36,27 @@ function c(e) {
                     label: o.intl.string(o.t["60qw29"]),
                     options: c,
                     value: null != (t = null == _ ? void 0 : _.value) ? t : c[0].value,
-                    onChange: I,
+                    onChange: x,
                 }),
                 (0, l.jsx)(r.VcW, {
                     label: o.intl.string(o.t.jDqWHR),
                     options: d,
-                    value: null == E ? void 0 : E.value,
-                    onChange: x,
+                    value: null == b ? void 0 : b.value,
+                    onChange: I,
                 }),
                 !n &&
-                    (0, l.jsx)(r.j7V, {
-                        className: u.switch,
-                        value: m,
+                    (0, l.jsx)(r.rsf, {
+                        checked: m,
                         onChange: (e) => v(e),
-                        note: o.intl.string(o.t.UN5IRU),
-                        hideBorder: !0,
-                        children: o.intl.string(o.t["wE+9dn"]),
+                        description: o.intl.string(o.t.UN5IRU),
+                        label: o.intl.string(o.t["wE+9dn"]),
                     }),
                 f &&
-                    (0, l.jsx)(r.j7V, {
-                        className: u.switch,
-                        value: (0, a.yE)(N, i.$.IS_GUEST_INVITE),
-                        onChange: (e) => j((0, a.mB)(N, i.$.IS_GUEST_INVITE, e)),
-                        note: o.intl.string(o.t["/FeTKy"]),
-                        hideBorder: !0,
-                        children: o.intl.string(o.t.siexRU),
+                    (0, l.jsx)(r.rsf, {
+                        checked: (0, a.yE)(j, i.$.IS_GUEST_INVITE),
+                        onChange: (e) => N((0, a.mB)(j, i.$.IS_GUEST_INVITE, e)),
+                        description: o.intl.string(o.t["/FeTKy"]),
+                        label: o.intl.string(o.t.siexRU),
                     }),
             ],
         }),

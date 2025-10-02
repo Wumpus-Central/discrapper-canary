@@ -1,16 +1,13 @@
-n.d(t, { Z: () => _ });
-var r = n(951288);
-n(647438);
-var i = n(442837),
+n.d(t, { Z: () => d });
+var r = n(951288),
+    i = n(442837),
     a = n(481060),
     o = n(579806),
     s = n(435064),
     l = n(39604),
-    c = n(442334),
-    u = n(388032),
-    d = n(622025),
-    f = n(54182);
-function _() {
+    c = n(388032),
+    u = n(54182);
+function d() {
     let e = (0, i.e7)([s.Z], () => s.Z.getSettings().storageLocation),
         t = async () => {
             let e = await o.Z.fileManager.showOpenDialog({
@@ -18,21 +15,19 @@ function _() {
             });
             e.length > 0 && l.T1(e[0]);
         };
-    return (0, r.jsx)(a.hjN, {
-        children: (0, r.jsx)(c.O, {
-            title: u.intl.string(u.t.s4773N),
-            note: u.intl.string(u.t.svjwGh),
-            className: d.formItem,
-            children: (0, r.jsx)(a.P3F, {
-                className: f.selectControl,
-                "aria-label": u.intl.formatToPlainString(u.t.iMONTk, { storageLocation: e }),
-                onClick: t,
-                children: (0, r.jsx)(a.oil, {
-                    tabIndex: -1,
-                    value: e,
-                    editable: !1,
-                    "aria-hidden": !0,
-                }),
+    return (0, r.jsx)(a.NIc, {
+        label: c.intl.string(c.t.s4773N),
+        description: c.intl.string(c.t.svjwGh),
+        layout: "horizontal",
+        children: (0, r.jsx)(a.P3F, {
+            className: u.selectControl,
+            "aria-label": c.intl.formatToPlainString(c.t.iMONTk, { storageLocation: e }),
+            onClick: t,
+            children: (0, r.jsx)(a.oil, {
+                tabIndex: -1,
+                value: e,
+                editable: !1,
+                "aria-hidden": !0,
             }),
         }),
     });

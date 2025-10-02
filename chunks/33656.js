@@ -17,11 +17,11 @@ var r = n(951288),
     E = n(10198);
 function b(e) {
     let { label: t, onChange: n, enabled: i, subLabel: a } = e;
-    return (0, r.jsx)(c.j7V, {
-        value: !!i,
+    return (0, r.jsx)(c.rsf, {
+        label: t,
+        checked: !!i,
         onChange: n,
-        note: a,
-        children: t,
+        description: a,
     });
 }
 function y() {
@@ -51,10 +51,8 @@ function y() {
               setting: h.s6.NOTIFICATIONS_EMAILS,
               children: [
                   (0, r.jsx)("div", { ref: t }),
-                  (0, r.jsxs)(c.hjN, {
-                      className: E.marginTop40,
-                      tag: c.RB0.H1,
-                      title: m.intl.string(m.t.TPchzM),
+                  (0, r.jsxs)(c.C3N, {
+                      label: m.intl.string(m.t.TPchzM),
                       children: [
                           p.Od.map((e) => {
                               let { category: t, label: i, subLabel: a } = e,

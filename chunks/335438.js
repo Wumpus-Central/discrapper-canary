@@ -1,51 +1,27 @@
-n.d(t, { l: () => d }), n(953529);
+n.d(t, { l: () => o });
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    l = n(481060),
-    a = n(578053),
+    l = n(578053),
     s = n(715224),
-    o = n(388032),
-    c = n(409616);
-function d(e) {
+    a = n(388032);
+function o(e) {
     let { canManageGuild: t, guild: n } = e;
-    return (0, r.jsxs)(l.hjN, {
-        title: o.intl.string(o.t.Cv6ANz),
+    return (0, r.jsxs)(i.C3N, {
+        label: a.intl.string(a.t.Cv6ANz),
+        description: a.intl.string(a.t.qxIcra),
         children: [
-            (0, r.jsx)(i.xvT, {
-                variant: "text-sm/medium",
-                color: "text-secondary",
-                className: c.description,
-                children: o.intl.string(o.t.qxIcra),
-            }),
             (0, r.jsx)(s.W, {
                 canManageGuild: t,
                 guild: n,
-                switchClassName: c.switch,
             }),
-            (0, r.jsxs)("div", {
-                className: c.systemChannel,
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: c.halfWidth,
-                        children: [
-                            (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.NASFnp) }),
-                            (0, r.jsx)(i.xvT, {
-                                variant: "text-sm/medium",
-                                color: "text-secondary",
-                                children: o.intl.string(o.t.ZhOdpa),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)("div", {
-                        className: c.halfWidth,
-                        children: (0, r.jsx)(a.u, {
-                            canManageGuild: t,
-                            guildId: n.id,
-                            systemChannelId: n.systemChannelId,
-                        }),
-                    }),
-                ],
+            (0, r.jsx)(l.u, {
+                layout: "horizontal",
+                label: a.intl.string(a.t.NASFnp),
+                description: a.intl.string(a.t.ZhOdpa),
+                canManageGuild: t,
+                guildId: n.id,
+                systemChannelId: n.systemChannelId,
             }),
         ],
     });

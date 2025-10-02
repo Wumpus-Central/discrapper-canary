@@ -13,15 +13,15 @@ var r = n(951288),
     p = n(682255),
     f = n(888429),
     h = n(217472),
-    x = n(202905),
-    b = n(44867),
+    b = n(202905),
+    x = n(44867),
     j = n(557359),
     v = n(658666),
     _ = n(307375),
     O = n(384632),
     y = n(981631),
     C = n(388032),
-    N = n(912231);
+    N = n(332177);
 function E(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
@@ -43,9 +43,9 @@ function E(e) {
                 rules: t.termRules,
             });
         case O.A.APPLY:
-            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
         case O.A.DISCOVERABLE:
-            return (0, r.jsx)(b.c, {
+            return (0, r.jsx)(x.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -74,16 +74,14 @@ function I(e) {
         ),
         m = n === y.V_K.AGE_RESTRICTED && a !== y.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(s.hjN, {
-        children: (0, r.jsx)(s.j7V, {
-            hideBorder: !0,
-            className: N.contentLevelSetting,
-            onChange: c,
-            value: o,
-            disabled: m,
-            note: C.intl.format(C.t["iyQQ6+"], {
+        children: (0, r.jsx)(s.rsf, {
+            label: C.intl.string(C.t.N9xEJC),
+            description: C.intl.format(C.t["iyQQ6+"], {
                 helpArticleLink: u.Z.getArticleURL(y.BhN.NSFW_SERVER_AGE_RESTRICTION),
             }),
-            children: C.intl.string(C.t.N9xEJC),
+            checked: o,
+            onChange: c,
+            disabled: m,
         }),
     });
 }

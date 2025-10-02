@@ -24,7 +24,6 @@ e.exports = {
     accountConnectedHeader: "accountConnectedHeader_a470b4",
     accountConnectedPreviewConnectedUserAccount: "accountConnectedPreviewConnectedUserAccount_a470b4",
     accountConnectedPrivacyOptionsContainer: "accountConnectedPrivacyOptionsContainer_a470b4",
-    accountConnectedPrivacyOptionsSwitchItem: "accountConnectedPrivacyOptionsSwitchItem_a470b4",
     roleGranted: "roleGranted_a470b4",
     roleGrantedName: "roleGrantedName_a470b4",
     verifiedIcon: "verifiedIcon_a470b4",

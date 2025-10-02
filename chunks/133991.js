@@ -4,6 +4,5 @@ e.exports = {
     previewHeader: "previewHeader__5d148",
     previewAvatars: "previewAvatars__5d148",
     ttsPreviewWrapper: "ttsPreviewWrapper__5d148",
-    ttsSliderMarker: "ttsSliderMarker__5d148",
     reducedMotion: "reducedMotion__5d148",
 };

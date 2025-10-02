@@ -106,32 +106,29 @@ function b() {
         children: [
             (0, r.jsx)(c.F, {
                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK,
-                children: (0, r.jsx)(o.j7V, {
-                    value: e,
+                children: (0, r.jsx)(o.rsf, {
+                    label: _.intl.string(_.t.GmWk2N),
+                    description: _.intl.string(_.t["Fj/xn5"]),
+                    checked: e,
                     onChange: (e) => s.Z.setVideoHook(e),
-                    note: _.intl.string(_.t["Fj/xn5"]),
-                    hideBorder: !0,
-                    children: _.intl.string(_.t.GmWk2N),
                 }),
             }),
             n &&
                 a &&
                 (0, r.jsx)(c.F, {
                     setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE,
-                    children: (0, r.jsx)(o.j7V, {
-                        value: t,
+                    children: (0, r.jsx)(o.rsf, {
+                        label: _.intl.string(_.t["4I0qzc"]),
+                        checked: t,
                         onChange: (e) => s.Z.setExperimentalSoundshare(e),
-                        hideBorder: !0,
-                        children: _.intl.string(_.t["4I0qzc"]),
                     }),
                 }),
             (0, r.jsx)(c.F, {
                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
-                children: (0, r.jsx)(o.j7V, {
-                    value: l,
+                children: (0, r.jsx)(o.rsf, {
+                    label: _.intl.string(_.t.ie1mgY),
+                    checked: l,
                     onChange: E,
-                    hideBorder: !0,
-                    children: _.intl.string(_.t.ie1mgY),
                 }),
             }),
         ],

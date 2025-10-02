@@ -2,12 +2,13 @@ n.d(t, {
     g: () => v,
     u: () => _,
 }),
-    n(290780);
+    n(290780),
+    n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(106351),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(740504),
     c = n(933557),
     d = n(471445),
@@ -15,8 +16,8 @@ var r = n(951288),
     m = n(324067),
     g = n(699516),
     p = n(594174),
-    h = n(434404),
-    f = n(388032);
+    f = n(434404),
+    h = n(388032);
 let b = "NO_CHANNEL";
 function x(e) {
     return {
@@ -28,18 +29,18 @@ function x(e) {
 }
 function j(e) {
     let { option: t } = e,
-        { label: n, channel: l, category: a } = t,
+        { label: n, channel: l, category: s } = t,
         o = i.useMemo(() => (0, d.KS)(l), [l]),
         u = (0, c.ZP)(l);
-    return (0, r.jsx)(s.ZZ$, {
+    return (0, r.jsx)(a.ZZ$, {
         title: n,
         icon: o,
-        subtitle: null != a ? u : null,
+        subtitle: null != s ? u : null,
     });
 }
 function v(e) {
-    let { canManageGuild: t, guildId: n, afkChannelId: s } = e,
-        c = (0, a.e7)([m.Z], () => m.Z.getCategories(n)),
+    let { canManageGuild: t, guildId: n, afkChannelId: a } = e,
+        c = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {
             let e = (0, o.Z)(c._categories, c)
                 .filter((e) => {
@@ -53,27 +54,27 @@ function v(e) {
             return (
                 e.unshift({
                     value: b,
-                    label: f.intl.string(f.t.wGiHkJ),
+                    label: h.intl.string(h.t.wGiHkJ),
                 }),
                 e
             );
         }, [c]),
         u = i.useCallback((e) => {
             let t = e === b ? null : e;
-            h.Z.updateGuild({ afkChannelId: t });
+            f.Z.updateGuild({ afkChannelId: t });
         }, []);
     return (0, r.jsx)(O, {
-        value: null != s ? s : b,
+        value: null != a ? a : b,
         options: d,
         canManageGuild: t,
         onChange: u,
     });
 }
 function _(e) {
-    let { canManageGuild: t, guildId: n, systemChannelId: s } = e,
-        c = (0, a.e7)([m.Z], () => m.Z.getCategories(n)),
-        d = i.useMemo(() => {
-            let e = (0, o.Z)(c._categories, c)
+    let { canManageGuild: t, guildId: n, systemChannelId: a, label: c, description: d, layout: u } = e,
+        g = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
+        p = i.useMemo(() => {
+            let e = (0, o.Z)(g._categories, g)
                 .filter((e) => {
                     let { channel: t } = e;
                     return t.type === l.d.GUILD_TEXT;
@@ -85,34 +86,40 @@ function _(e) {
             return (
                 e.unshift({
                     value: b,
-                    label: f.intl.string(f.t.ibUhoa),
+                    label: h.intl.string(h.t.ibUhoa),
                 }),
                 e
             );
-        }, [c]),
-        u = i.useCallback((e) => {
+        }, [g]),
+        j = i.useCallback((e) => {
             let t = e === b ? null : e;
-            h.Z.updateGuild({ systemChannelId: t });
+            f.Z.updateGuild({ systemChannelId: t });
         }, []);
     return (0, r.jsx)(O, {
-        value: null != s ? s : b,
-        options: d,
+        label: c,
+        description: d,
+        layout: u,
+        value: null != a ? a : b,
+        options: p,
         canManageGuild: t,
-        onChange: u,
+        onChange: j,
     });
 }
 function O(e) {
-    let { value: t, options: n, canManageGuild: l, onChange: a } = e,
-        o = i.useCallback((e) => {
+    let { value: t, options: n, canManageGuild: l, onChange: s, label: o, description: c, layout: d } = e,
+        u = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(j, { option: e });
         }, []),
-        c = i.useCallback((e) => o(e[0]), [o]);
-    return (0, r.jsx)(s.q4e, {
+        m = i.useCallback((e) => u(e[0]), [u]);
+    return (0, r.jsx)(a.q4e, {
+        label: o,
+        description: c,
         value: t,
         options: n,
         isDisabled: !l,
-        onChange: a,
-        renderOptionLabel: o,
-        renderOptionValue: c,
+        onChange: s,
+        renderOptionLabel: u,
+        renderOptionValue: m,
+        layout: d,
     });
 }

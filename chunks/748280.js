@@ -13,7 +13,6 @@ e.exports = {
     subtitleIcon: "subtitleIcon_ac72c6",
     closeButton: "closeButton_ac72c6",
     foreground: "foreground_ac72c6",
-    switchIcon: "switchIcon_ac72c6",
     channelTypeDescription: "channelTypeDescription_ac72c6",
     storeChannelOptionSelector: "storeChannelOptionSelector_ac72c6",
     addMembersContainer: "addMembersContainer_ac72c6",

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(583741);
+n.d(t, { Z: () => h }), n(388685), n(583741);
 var a = n(951288),
     r = n(647438),
     i = n(442837),
@@ -9,8 +9,8 @@ var a = n(951288),
     d = n(699867),
     u = n(227157),
     m = n(775195),
-    h = n(455698);
-function p() {
+    p = n(752519);
+function h() {
     let {
             dailyCapReached: e,
             dailyCapOverridden: t,
@@ -20,13 +20,13 @@ function p() {
             dailyCapOverridden: c.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: c.Z.newUserMinAgeRequiredOverridden,
         })),
-        [p, x] = r.useState(""),
+        [h, x] = r.useState(""),
         f = Object.keys(l.z)
-            .filter((e) => e.toLowerCase().includes(p.toLowerCase()))
+            .filter((e) => e.toLowerCase().includes(h.toLowerCase()))
             .reverse();
     return (0, a.jsx)(s.zJl, {
         children: (0, a.jsxs)("div", {
-            className: h.panelContainer,
+            className: p.panelContainer,
             children: [
                 (0, a.jsxs)(s.hjN, {
                     title: "Dismissible Content Overrides",
@@ -47,16 +47,16 @@ function p() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(s.$i$, { className: h.divider }),
-                        (0, a.jsx)(s.j7V, {
-                            value: t,
+                        (0, a.jsx)(s.izJ, { className: p.divider }),
+                        (0, a.jsx)(s.rsf, {
+                            label: "Override Dismissible Content Daily Cap",
+                            checked: t,
                             onChange: o.Nj,
-                            children: "Override Dismissible Content Daily Cap",
                         }),
-                        (0, a.jsx)(s.j7V, {
-                            value: n,
+                        (0, a.jsx)(s.rsf, {
+                            label: "Override Minimum User Account Age Requirement",
+                            checked: n,
                             onChange: o.KC,
-                            children: "Override Minimum User Account Age Requirement",
                         }),
                     ],
                 }),
@@ -67,9 +67,9 @@ function p() {
                     tag: "h1",
                     children: [
                         (0, a.jsx)("div", {
-                            className: h.searchBarContainer,
+                            className: p.searchBarContainer,
                             children: (0, a.jsx)(s.E1j, {
-                                query: p,
+                                query: h,
                                 onChange: x,
                                 onClear: () => x(""),
                             }),

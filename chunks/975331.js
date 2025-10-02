@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -13,12 +13,12 @@ var r = n(951288),
     p = n(22902),
     f = n(783454),
     h = n(388032),
-    x = n(851016);
-function b() {
+    b = n(851016);
+function x() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [b, j] = m.F2(t),
+        [x, j] = m.F2(t),
         v = (0, c.oC)(t),
         { options: _ } = (0, p.Z)(null != (e = null == v ? void 0 : v.active_trial) ? e : null),
         O = (0, g.Z)(),
@@ -37,12 +37,11 @@ function b() {
         title: h.intl.string(h.t["6antoq"]),
         description: h.intl.string(h.t.urVijY),
         children: [
-            (0, r.jsx)(a.j7V, {
+            (0, r.jsx)(a.rsf, {
+                label: h.intl.string(h.t["+hTmdX"]),
+                checked: y,
                 onChange: (e) => C(e),
-                value: y,
                 disabled: N,
-                hideBorder: !0,
-                children: h.intl.string(h.t["+hTmdX"]),
             }),
             (0, r.jsxs)(a.hjN, {
                 title: h.intl.string(h.t.m1KuWV),
@@ -51,7 +50,7 @@ function b() {
                 children: [
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
-                        className: x.formDescription,
+                        className: b.formDescription,
                         disabled: !y || N,
                         children: h.intl.string(h.t.NB9NLC),
                     }),
@@ -75,14 +74,14 @@ function b() {
                 children: [
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
-                        className: x.formDescription,
+                        className: b.formDescription,
                         disabled: !y || N,
                         children: h.intl.string(h.t.Cg5eBg),
                     }),
                     (0, r.jsx)(a.q4e, {
                         "aria-labelledby": I,
                         options: O,
-                        value: b,
+                        value: x,
                         onChange: j,
                         maxVisibleItems: 5,
                         isDisabled: !y || N,

@@ -132,12 +132,11 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(g.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(s.j7V, {
-                                value: n,
+                            className: i()(g.buttonsContainer, v.marginBottom20),
+                            children: (0, a.jsx)(s.rsf, {
+                                label: "Ignore profile speedbump disabled",
+                                checked: n,
                                 onChange: (e) => x.Rt.updateSetting(e),
-                                hideBorder: !0,
-                                children: "Ignore profile speedbump disabled",
                             }),
                         }),
                     ],

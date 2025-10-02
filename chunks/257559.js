@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(332148),
     d = n(904245),
     p = n(933557),
-    h = n(576855),
-    f = n(372900),
+    f = n(576855),
+    h = n(372900),
     g = n(726521),
     m = n(294218),
     b = n(501517),
@@ -99,17 +99,18 @@ class N extends i.PureComponent {
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
             g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(s.flags, v.iLy.CROSSPOSTED);
         u &&
-            (e = (0, r.jsx)(h.Z, {
+            (e = (0, r.jsx)(f.Z, {
                 className: E.spacingTop,
                 children: x.intl.format(x.t.IxY7Ex, {}),
             })),
             (0, j.vc)(s) &&
-                (t = (0, r.jsx)(c.j7V, {
-                    value: n,
-                    onChange: this.handleToggleReport,
-                    hideBorder: !0,
+                (t = (0, r.jsx)("div", {
                     className: E.spacingTop,
-                    children: x.intl.string(x.t.x0jzo6),
+                    children: (0, r.jsx)(c.rsf, {
+                        label: x.intl.string(x.t.x0jzo6),
+                        checked: n,
+                        onChange: this.handleToggleReport,
+                    }),
                 }));
         let b = g ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
             _ = (0, r.jsxs)(r.Fragment, {
@@ -128,7 +129,7 @@ class N extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(f.Z.Provider, {
+            return (0, r.jsx)(h.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
@@ -183,7 +184,7 @@ class N extends i.PureComponent {
                 ),
             });
         }
-        return (0, r.jsx)(f.Z.Provider, {
+        return (0, r.jsx)(h.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
                 title: g ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
@@ -253,7 +254,7 @@ let w = {
                 (i = e.isPrivate()
                     ? x.intl.string(x.t.hMRngI)
                     : x.intl.formatToPlainString(x.t["3IRluL"], { channelName: l })),
-                (0, r.jsx)(f.Z.Provider, {
+                (0, r.jsx)(h.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
                         c.ConfirmModal,
@@ -294,7 +295,7 @@ let w = {
     },
     confirmUnpin: function (e, t) {
         (0, c.h7j)((n) =>
-            (0, r.jsx)(f.Z.Provider, {
+            (0, r.jsx)(h.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     c.ConfirmModal,
@@ -323,7 +324,7 @@ let w = {
                                         disableInteraction: !0,
                                     }),
                                 }),
-                                (0, r.jsx)(h.Z, { children: x.intl.format(x.t.oCVB3d, {}) }),
+                                (0, r.jsx)(f.Z, { children: x.intl.format(x.t.oCVB3d, {}) }),
                             ],
                         },
                     ),

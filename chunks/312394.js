@@ -1,12 +1,12 @@
-n.d(t, { C: () => h });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(821541),
-    s = n(777207),
-    l = n(712542);
-function c(e, t, n) {
+n.d(t, { C: () => m }), n(953529);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(821541),
+    l = n(777207),
+    c = n(468137);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +30,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +47,22 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,21 +79,33 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
-    var { children: t, label: n } = e,
-        i = _(e, ["children", "label"]);
+function m(e) {
+    var { children: t, label: n, description: a } = e,
+        u = p(e, ["children", "label", "description"]);
+    let f = i.useId(),
+        h = null != a && "" !== a;
     return (0, r.jsxs)(
         "fieldset",
-        f(u({}, i), {
-            className: a()(l.fieldset, i.className),
+        _(d({}, u), {
+            className: o()(c.fieldset, u.className),
+            "aria-describedby": h ? f : void 0,
             children: [
-                (0, r.jsx)(s.x, {
+                (0, r.jsx)(l.x, {
                     tag: "legend",
                     variant: "text-lg/medium",
-                    className: l.legend,
+                    className: c.legend,
                     children: n,
                 }),
-                (0, r.jsx)(o.K, {
+                h
+                    ? (0, r.jsx)(l.x, {
+                          variant: "text-sm/normal",
+                          color: "text-secondary",
+                          className: c.description,
+                          id: f,
+                          children: a,
+                      })
+                    : null,
+                (0, r.jsx)(s.K, {
                     direction: "vertical",
                     gap: 16,
                     children: t,

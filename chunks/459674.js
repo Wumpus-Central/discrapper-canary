@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -8,27 +8,19 @@ var i = n(442837),
     l = n(740492),
     c = n(569550),
     u = n(726985),
-    d = n(388032),
-    f = n(10198);
-function _() {
+    d = n(388032);
+function f() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.disableVoiceChannelChangeAlert);
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT,
-        children: (0, r.jsx)(a.j7V, {
-            className: f.marginBottom20,
-            note: d.intl.string(d.t.YCCMkJ),
+        children: (0, r.jsx)(a.rsf, {
+            label: d.intl.string(d.t.e7LIiY),
+            description: d.intl.string(d.t.YCCMkJ),
+            checked: !e,
             onChange: (t) => {
                 (0, c.Z)("switch_channel_warning_enabled", t, !e),
                     o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !t });
             },
-            value: !e,
-            hideBorder: !0,
-            children: (0, r.jsx)(a.X6q, {
-                variant: "text-md/medium",
-                color: "header-primary",
-                className: f.marginBottom8,
-                children: d.intl.string(d.t.e7LIiY),
-            }),
         }),
     });
 }

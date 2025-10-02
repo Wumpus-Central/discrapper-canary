@@ -149,14 +149,14 @@ function O(t) {
             country: n.country,
         },
         [O, g] = o.useState(p),
-        [j, m] = o.useState(!1),
+        [m, j] = o.useState(!1),
         [h, w] = o.useState(!1),
         [P, S] = o.useState(!1),
         [v, C] = o.useState("");
     async function k() {
         S(!0);
         try {
-            await b(_, j, O);
+            await b(x, m, O);
         } catch (n) {
             var t;
             let e = JSON.parse(await n.body.text());
@@ -169,22 +169,20 @@ function O(t) {
             S(!1);
         }
     }
-    let x = s.C,
-        _ = e.id,
-        E = (0, r.jsx)("div", {
-            children: (0, r.jsx)(l.j7V, {
-                value: j,
-                note: y.intl.formatToPlainString(y.t["2p1XJS"], {}),
-                onChange: m,
-                children: y.intl.formatToPlainString(y.t["aJg+oa"], {}),
-            }),
+    let _ = s.C,
+        x = e.id,
+        E = (0, r.jsx)(l.rsf, {
+            label: y.intl.formatToPlainString(y.t["aJg+oa"], {}),
+            description: y.intl.formatToPlainString(y.t["2p1XJS"], {}),
+            checked: m,
+            onChange: j,
         }),
-        A = j
+        A = m
             ? (0, r.jsx)(
                   c.ZP,
                   f(d({}, O), {
                       mode: c.ZP.Modes.CREATE,
-                      layout: x,
+                      layout: _,
                       onBillingAddressChange: function (t, e) {
                           g(t), w(e);
                       },
@@ -201,7 +199,7 @@ function O(t) {
                 variant: "primary",
                 text: y.intl.formatToPlainString(y.t.uqZjLi, {}),
                 onClick: k,
-                disabled: j && !h,
+                disabled: m && !h,
                 loading: P,
                 autoFocus: !0,
             },

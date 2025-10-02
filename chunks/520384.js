@@ -19,12 +19,11 @@ function f() {
         );
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS,
-        children: (0, r.jsx)(a.j7V, {
-            value: e,
+        children: (0, r.jsx)(a.rsf, {
+            label: d.intl.string(d.t["1CzWUF"]),
+            description: d.intl.string(d.t.jTNPHB),
+            checked: e,
             onChange: n,
-            note: d.intl.string(d.t.jTNPHB),
-            hideBorder: !0,
-            children: d.intl.string(d.t["1CzWUF"]),
         }),
     });
 }

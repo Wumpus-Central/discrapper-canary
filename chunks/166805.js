@@ -2,8 +2,8 @@ n.d(t, { P: () => O }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(580685),
-    a = n(793030),
-    s = n(442837),
+    s = n(793030),
+    a = n(442837),
     o = n(481060),
     c = n(497321),
     d = n(484614),
@@ -16,7 +16,7 @@ var r = n(951288),
     b = n(24318),
     x = n(822693),
     j = n(388032),
-    v = n(356086);
+    v = n(189501);
 function _(e) {
     let { guildId: t } = e,
         { guildProfile: c, fetchGuildProfile: g, fetchStatus: _ } = (0, m.u)(t),
@@ -25,7 +25,7 @@ function _(e) {
             fetchedEmbed: y,
             embedEnabled: C,
             embedChannelId: N,
-        } = (0, s.cj)([f.Z], () => {
+        } = (0, a.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
             return {
                 fetchedEmbed: e,
@@ -53,15 +53,14 @@ function _(e) {
     return y
         ? (0, r.jsxs)("div", {
               children: [
-                  (0, r.jsx)(o.j7V, {
-                      disabled: S,
-                      value: C,
-                      hideBorder: !0,
+                  (0, r.jsx)(o.rsf, {
+                      label: j.intl.string(j.t.NR6hub),
+                      checked: C,
                       onChange: R,
-                      children: j.intl.string(j.t.NR6hub),
+                      disabled: S,
                   }),
                   w
-                      ? (0, r.jsx)(a.xvT, {
+                      ? (0, r.jsx)(s.xvT, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             className: v.subtext,
@@ -79,7 +78,7 @@ function _(e) {
                                     widgetChannelId: N,
                                     enableLocalUpdate: !0,
                                 }),
-                                (0, r.jsx)(a.xvT, {
+                                (0, r.jsx)(s.xvT, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
                                     className: v.subtext,
@@ -113,7 +112,7 @@ function _(e) {
                                             children: [
                                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.XVGbn5) }),
                                                 (0, r.jsx)(d.Z, { value: I }),
-                                                (0, r.jsx)(a.xvT, {
+                                                (0, r.jsx)(s.xvT, {
                                                     variant: "text-sm/medium",
                                                     color: "text-secondary",
                                                     className: v.subtext,
@@ -138,11 +137,11 @@ function _(e) {
 }
 function O(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([g.Z], () => g.Z.enabled);
+        n = (0, a.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {
         title: j.intl.string(j.t.qlhNb2),
         children: [
-            (0, r.jsx)(a.xvT, {
+            (0, r.jsx)(s.xvT, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 className: v.description,

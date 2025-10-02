@@ -12,11 +12,10 @@ function d() {
     let e = (0, i.e7)([l.Z], () => l.Z.getEnableSilenceWarning());
     return (0, r.jsx)(s.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
-        children: (0, r.jsx)(a.j7V, {
-            value: e,
+        children: (0, r.jsx)(a.rsf, {
+            label: u.intl.string(u.t.jtiiCw),
+            checked: e,
             onChange: (e) => o.Z.setSilenceWarning(e),
-            hideBorder: !0,
-            children: u.intl.string(u.t.jtiiCw),
         }),
     });
 }

@@ -496,10 +496,10 @@ class ec extends i.Component {
                     onChange: this.handleExperiments,
                     placeholder: '{"2022-01_threads":1}',
                 }),
-                (0, r.jsx)(h.j7V, {
+                (0, r.jsx)(h.rsf, {
+                    label: "Allow logged out users",
+                    checked: l,
                     onChange: this.handleAllowLoggedOut,
-                    value: l,
-                    children: "Allow logged out users",
                 }),
             ],
         });
@@ -670,28 +670,29 @@ function eu() {
             layoutDebuggingEnabled: k.default.layoutDebuggingEnabled,
         })),
         u = (0, N.Z)("highlight_void_toggleables");
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, r.jsxs)(h.C3N, {
+        label: "Design Tools",
         children: [
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
-                children: (0, r.jsx)(h.j7V, {
-                    value: l,
-                    note: "Display raw colors as pink. Toggling this will refresh the browser.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable CSS Debugging",
+                    description: "Display raw colors as pink. Toggling this will refresh the browser.",
+                    checked: l,
                     onChange: (e) => {
                         (0, E.y)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
                     },
-                    children: "Enable CSS Debugging",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
-                children: (0, r.jsx)(h.j7V, {
-                    value: c,
-                    note: "Renders a grid on top of the app to help debug layout alignment issues.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable Layout Debugging",
+                    description: "Renders a grid on top of the app to help debug layout alignment issues.",
+                    checked: c,
                     onChange: (e) => {
                         (0, E.y)({ layoutDebuggingEnabled: e });
                     },
-                    children: "Enable Layout Debugging",
                 }),
             }),
             (0, r.jsxs)(M.F, {
@@ -745,11 +746,12 @@ function eu() {
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
-                children: (0, r.jsx)(h.j7V, {
-                    value: u,
-                    note: "Highlights toggleable components: Checkbox (green), RadioGroup (yellow), Switch (blue)",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Highlight Toggleable Components",
+                    description:
+                        "Highlights toggleable components: Checkbox (green), RadioGroup (yellow), Switch (blue)",
+                    checked: u,
                     onChange: (e) => (0, C.Z)("highlight_void_toggleables", e),
-                    children: "Highlight Toggleable Components",
                 }),
             }),
         ],
@@ -779,103 +781,109 @@ function ed() {
         })),
         u = (0, w.Z)("go_back_to_regular_input"),
         f = H.zY.useSetting();
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, r.jsxs)(h.C3N, {
+        label: "Developer Flags",
         children: [
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
-                children: (0, r.jsx)(h.j7V, {
-                    value: e,
-                    note: "Force trace all client requests with APM",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable Tracing Requests",
+                    description: "Force trace all client requests with APM",
+                    checked: e,
                     onChange: (e) => (0, E.y)({ trace: e }),
-                    children: "Enable Tracing Requests",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
-                children: (0, r.jsx)(h.j7V, {
-                    value: t,
-                    note: "Force all API requests to canary instances",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable Forced Canary",
+                    description: "Force all API requests to canary instances",
+                    checked: t,
                     onChange: (e) => (0, E.y)({ canary: e }),
-                    children: "Enable Forced Canary",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
-                children: (0, r.jsx)(h.j7V, {
-                    value: f,
-                    note: "Make user targetable for all active ads",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Ads auto-targeting",
+                    description: "Make user targetable for all active ads",
+                    checked: f,
                     onChange: (e) => H.zY.updateSetting(e),
-                    children: "Ads auto-targeting",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
-                children: (0, r.jsx)(h.j7V, {
-                    value: i,
-                    note: "Only enable on devices you trust.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable source maps to be loaded on this client",
+                    description: "Only enable on devices you trust.",
+                    checked: i,
                     onChange: (e) => (0, E.y)({ sourceMapsEnabled: e }),
-                    children: "Enable source maps to be loaded on this client",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
-                children: (0, r.jsx)(h.j7V, {
-                    value: a,
-                    note: "Displays a floating idle status indicator",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable idle status indicator",
+                    description: "Displays a floating idle status indicator",
+                    checked: a,
                     onChange: (e) => (0, E.y)({ idleStatusIndicatorEnabled: e }),
-                    children: "Enable idle status indicator",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
-                children: (0, r.jsx)(h.j7V, {
-                    value: n,
-                    note: "Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable Accessibility Auditing",
+                    description:
+                        "Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development",
+                    checked: n,
                     onChange: (e) => (0, E.y)({ axeEnabled: e }),
-                    children: "Enable Accessibility Auditing",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
-                children: (0, r.jsx)(h.j7V, {
-                    value: l,
-                    note: "This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Prevent Popouts From Closing Automatically",
+                    description:
+                        "This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.",
+                    checked: l,
                     onChange: (e) => (0, E.y)({ preventPopoutClose: e }),
-                    children: "Prevent Popouts From Closing Automatically",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
-                children: (0, r.jsx)(h.j7V, {
-                    value: c,
-                    note: "Logs mismatches in detected keyboard codes to the console",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Enable Logging of Keyboard Mismatches",
+                    description: "Logs mismatches in detected keyboard codes to the console",
+                    checked: c,
                     onChange: (e) => (0, E.y)({ logKeyboardMismatches: e }),
-                    children: "Enable Logging of Keyboard Mismatches",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
-                children: (0, r.jsx)(h.j7V, {
-                    value: o,
-                    note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Preview unpublished application collections",
+                    description:
+                        "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
+                    checked: o,
                     onChange: (e) => (0, E.y)({ onlyShowPreviewAppCollections: e }),
-                    children: "Preview unpublished application collections",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
-                children: (0, r.jsx)(h.j7V, {
-                    value: s,
-                    note: "Disable application collections cache so that you can see updates to collections immediately.",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Disable application collections cache",
+                    description:
+                        "Disable application collections cache so that you can see updates to collections immediately.",
+                    checked: s,
                     onChange: (e) => (0, E.y)({ disableAppCollectionsCache: e }),
-                    children: "Disable application collections cache",
                 }),
             }),
             (0, r.jsx)(M.F, {
                 setting: z.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
-                children: (0, r.jsx)(h.j7V, {
-                    value: u,
-                    note: "Disable aligning chat input to the bottom of the screen",
+                children: (0, r.jsx)(h.rsf, {
+                    label: "Disable aligning chat input to the bottom of the screen",
+                    description: "Disable aligning chat input to the bottom of the screen",
+                    checked: u,
                     onChange: (e) => {
                         B.default.track(q.rMx.GUILD_JOIN_FEEDBACK, {
                             reason: "disable-align-chat-input",
@@ -883,7 +891,6 @@ function ed() {
                         }),
                             (0, P.s)("go_back_to_regular_input", { enabled: e });
                     },
-                    children: "Disable aligning chat input to the bottom of the screen",
                 }),
             }),
         ],
@@ -901,46 +908,50 @@ function ef() {
         isLoggingAnalyticsEvents: k.default.isLoggingAnalyticsEvents,
         isAnalyticsDebuggerEnabled: k.default.isAnalyticsDebuggerEnabled,
     }));
-    return (0, r.jsxs)(M.F, {
+    return (0, r.jsx)(M.F, {
         setting: z.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-        children: [
-            (0, r.jsx)(M.F, {
-                setting: z.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
-                children: (0, r.jsx)(h.j7V, {
-                    value: e,
-                    note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-                    onChange: (e) => (0, E.y)({ logGatewayEvents: e }),
-                    children: "Enable Logging of Gateway Events to Console",
+        children: (0, r.jsxs)(h.C3N, {
+            label: "Logging",
+            children: [
+                (0, r.jsx)(M.F, {
+                    setting: z.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+                    children: (0, r.jsx)(h.rsf, {
+                        label: "Enable Logging of Gateway Events to Console",
+                        description:
+                            "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
+                        checked: e,
+                        onChange: (e) => (0, E.y)({ logGatewayEvents: e }),
+                    }),
                 }),
-            }),
-            (0, r.jsx)(M.F, {
-                setting: z.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
-                children: (0, r.jsx)(h.j7V, {
-                    value: t,
-                    note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-                    onChange: (e) => (0, E.y)({ logOverlayEvents: e }),
-                    children: "Enable Logging of Overlay RPC Events & Commands",
+                (0, r.jsx)(M.F, {
+                    setting: z.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+                    children: (0, r.jsx)(h.rsf, {
+                        label: "Enable Logging of Overlay RPC Events & Commands",
+                        description: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
+                        checked: t,
+                        onChange: (e) => (0, E.y)({ logOverlayEvents: e }),
+                    }),
                 }),
-            }),
-            (0, r.jsx)(M.F, {
-                setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
-                children: (0, r.jsx)(h.j7V, {
-                    value: n,
-                    note: "Logs all analytics events to the developer console",
-                    onChange: (e) => (0, E.y)({ logAnalyticsEvents: e }),
-                    children: "Enable Logging of Analytics Events",
+                (0, r.jsx)(M.F, {
+                    setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+                    children: (0, r.jsx)(h.rsf, {
+                        label: "Enable Logging of Analytics Events",
+                        description: "Logs all analytics events to the developer console",
+                        checked: n,
+                        onChange: (e) => (0, E.y)({ logAnalyticsEvents: e }),
+                    }),
                 }),
-            }),
-            (0, r.jsx)(M.F, {
-                setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
-                children: (0, r.jsx)(h.j7V, {
-                    value: i,
-                    note: "Displays a floating debugger with viewed impressions",
-                    onChange: (e) => (0, E.y)({ analyticsDebuggerEnabled: e }),
-                    children: "Enable standard analytics debugger view",
+                (0, r.jsx)(M.F, {
+                    setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+                    children: (0, r.jsx)(h.rsf, {
+                        label: "Enable standard analytics debugger view",
+                        description: "Displays a floating debugger with viewed impressions",
+                        checked: i,
+                        onChange: (e) => (0, E.y)({ analyticsDebuggerEnabled: e }),
+                    }),
                 }),
-            }),
-        ],
+            ],
+        }),
     });
 }
 function e_() {

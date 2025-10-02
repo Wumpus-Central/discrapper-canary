@@ -10,7 +10,7 @@ var a = n(951288),
     u = n(789654),
     m = n(246992),
     p = n(500949),
-    h = n(416825);
+    h = n(151085);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -238,18 +238,20 @@ function j(e) {
                 onValueChange: (e) => (0, p.rd)(c, e, n),
                 onMarkerRender: (e) => "".concat(e.toFixed(2)),
             }),
-            (0, a.jsx)(d.j7V, {
-                note: "Renders the palette preview in a single column, useful for comparing the luminance of each step.",
-                value: g,
+            (0, a.jsx)(d.rsf, {
+                label: "Show columnar palette preview",
+                description:
+                    "Renders the palette preview in a single column, useful for comparing the luminance of each step.",
+                checked: g,
                 onChange: (e) => (0, p.KB)(c, e, n),
-                children: "Show columnar palette preview",
             }),
-            (0, a.jsx)(d.j7V, {
-                note: "Renders the palette preview in a single column, useful for comparing the luminance of each step.",
-                value: _,
+            (0, a.jsx)(d.rsf, {
+                label: "Use P3 Color Space",
+                description:
+                    "Renders the palette preview in a single column, useful for comparing the luminance of each step.",
+                checked: _,
                 disabled: !p.S2,
                 onChange: (e) => (0, p.uF)(c, e, n),
-                children: "Use P3 Color Space",
             }),
             (0, a.jsx)(d.iRW, {
                 label: "Steps",

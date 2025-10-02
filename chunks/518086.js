@@ -12,6 +12,5 @@ e.exports = {
     fromToWrapper: "fromToWrapper__5149c spacing__5149c",
     from: "from__5149c",
     to: "to__5149c",
-    protectedText: "protectedText__5149c",
     roleSubscriptionText: "roleSubscriptionText__5149c",
 };

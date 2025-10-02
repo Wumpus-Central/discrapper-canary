@@ -12,14 +12,13 @@ function d() {
     let e = s.qF.useSetting();
     return (0, r.jsx)(a.F, {
         setting: l.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
-        children: (0, r.jsx)(i.j7V, {
-            note: u.intl.string(u.t.WNbX4O),
+        children: (0, r.jsx)(i.rsf, {
+            label: u.intl.string(u.t["3Ppr1t"]),
+            description: u.intl.string(u.t.WNbX4O),
+            checked: e,
             onChange: (e) => {
                 s.qF.updateSetting(e), o.default.track(c.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
             },
-            value: e,
-            hideBorder: !0,
-            children: u.intl.string(u.t["3Ppr1t"]),
         }),
     });
 }

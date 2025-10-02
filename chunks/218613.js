@@ -22,8 +22,8 @@ var r = n(951288),
     m = n(481060),
     C = n(333848),
     x = n(749210),
-    N = n(332063),
-    b = n(620123),
+    b = n(332063),
+    N = n(620123),
     f = n(911969),
     E = n(367907),
     O = n(812206),
@@ -127,8 +127,8 @@ function es(e) {
         h = i.useRef(null),
         u = (0, p.e7)([B.Z], () => B.Z.getGuild(n)),
         g = s === q.d4z.GUILD_STAGE_VOICE,
-        { roles: C, members: x, getRichTag: N } = (0, S.Q)(u, null, g ? G.yP : (0, Z.CG)(s), a, g),
-        b = y.Z.useSections({
+        { roles: C, members: x, getRichTag: b } = (0, S.Q)(u, null, g ? G.yP : (0, Z.CG)(s), a, g),
+        N = y.Z.useSections({
             roles: C,
             members: x,
         });
@@ -145,7 +145,7 @@ function es(e) {
               setPendingAdditions: d,
               roles: C,
               members: x,
-              getRichTag: N,
+              getRichTag: b,
               children: (0, r.jsxs)(m.hzk, {
                   className: ee.addMembersContainer,
                   children: [
@@ -170,7 +170,7 @@ function es(e) {
                           renderSection: y.Z.renderSection,
                           rowHeight: y.Z.ROW_HEIGHT,
                           renderRow: y.Z.renderRow,
-                          sections: b,
+                          sections: N,
                           innerAriaOrientation: "vertical",
                           innerRole: "listbox",
                       }),
@@ -596,7 +596,7 @@ class ea extends i.PureComponent {
                                   children: $.intl.string($.t.XNIWFh),
                               }),
                               (0, r.jsx)(
-                                  b.Z,
+                                  N.Z,
                                   {
                                       applicationId: t,
                                       onChange: this.handleSKUChange,
@@ -609,19 +609,14 @@ class ea extends i.PureComponent {
                       })
                     : null,
                 null != t && a
-                    ? (0, r.jsxs)(m.j7V, {
-                          hideBorder: !0,
+                    ? (0, r.jsx)(m.rsf, {
+                          label: $.intl.string($.t["3e9mHx"]),
+                          description: $.intl.format($.t.UVXL1d, {
+                              devPortalUrl: q.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT,
+                          }),
+                          icon: m._m8,
                           onChange: this.handleShowBranchesToggle,
-                          value: l,
-                          note: $.intl.format($.t.UVXL1d, { devPortalUrl: q.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
-                          children: [
-                              (0, r.jsx)(m._m8, {
-                                  size: "md",
-                                  color: "currentColor",
-                                  className: ee.switchIcon,
-                              }),
-                              $.intl.string($.t["3e9mHx"]),
-                          ],
+                          checked: l,
                       })
                     : null,
                 null != t
@@ -634,7 +629,7 @@ class ea extends i.PureComponent {
                                     })
                                   : null,
                               (0, r.jsx)(
-                                  N.Z,
+                                  b.Z,
                                   {
                                       applicationId: t,
                                       onChange: this.handleBranchChange,
@@ -657,19 +652,12 @@ class ea extends i.PureComponent {
         if (null != e || t === q.d4z.GUILD_ANNOUNCEMENT) return null;
         let i = t === q.d4z.GUILD_CATEGORY ? $.intl.string($.t.lEPAZ2) : $.intl.string($.t.aUI70t),
             s = t === q.d4z.GUILD_CATEGORY ? $.intl.string($.t["RQUk6+"]) : $.intl.string($.t.YguuKi);
-        return (0, r.jsxs)(m.j7V, {
-            hideBorder: !0,
+        return (0, r.jsx)(m.rsf, {
+            label: i,
+            description: s,
+            icon: m.mBM,
             onChange: this.handlePrivacyChange,
-            value: n,
-            note: s,
-            children: [
-                (0, r.jsx)(m.mBM, {
-                    size: "md",
-                    color: "currentColor",
-                    className: ee.switchIcon,
-                }),
-                i,
-            ],
+            checked: n,
         });
     }
     renderError(e) {
@@ -964,15 +952,15 @@ class ea extends i.PureComponent {
                         channelType: g,
                         skuId: m,
                         branchId: x,
-                        isPrivate: N,
+                        isPrivate: b,
                     } = this.state,
-                    b = this.getGuildId();
-                if (null != b) {
+                    N = this.getGuildId();
+                if (null != N) {
                     if (null != i) (t = d().values(i.permissionOverwrites)), (n = i.bitrate), (r = i.userLimit);
-                    else if (g === q.d4z.GUILD_ANNOUNCEMENT) t = (0, F.rt)(b);
+                    else if (g === q.d4z.GUILD_ANNOUNCEMENT) t = (0, F.rt)(N);
                     else {
-                        if (N) {
-                            t = (0, F.oQ)(b, g, [], !0);
+                        if (b) {
+                            t = (0, F.oQ)(N, g, [], !0);
                             let e = (0, v.Tj)(p, g);
                             e.length > 0 && (t = t.concat(e));
                             let n = null != h && l.id === h.id;
@@ -995,7 +983,7 @@ class ea extends i.PureComponent {
                     });
                     try {
                         let e = await C.Z.createChannel({
-                            guildId: b,
+                            guildId: N,
                             type: g,
                             name: u,
                             permissionOverwrites: t,

@@ -155,16 +155,15 @@ function N() {
                 }),
             (0, r.jsx)(d.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
-                children: (0, r.jsx)(s.j7V, {
-                    value: n,
+                children: (0, r.jsx)(s.rsf, {
+                    label: y.intl.string(y.t.iWTwu7),
+                    checked: n,
                     onChange: (e) =>
                         l.Z.setEchoCancellation(e, {
                             page: b.ZY5.USER_SETTINGS,
                             section: b.jXE.SETTINGS_VOICE_AND_VIDEO,
                         }),
                     disabled: p,
-                    hideBorder: !0,
-                    children: y.intl.string(y.t.iWTwu7),
                 }),
             }),
             (0, r.jsx)(d.F, {
@@ -173,40 +172,37 @@ function N() {
             }),
             (0, r.jsx)(d.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
-                children: (0, r.jsx)(s.j7V, {
-                    value: c,
+                children: (0, r.jsx)(s.rsf, {
+                    label: y.intl.string(y.t.BbESsr),
+                    description: y.intl.string(y.t.LoOB1N),
+                    checked: c,
                     onChange: (t) => l.Z.setMode(e, { vadUseKrisp: t }),
-                    note: y.intl.string(y.t.LoOB1N),
                     disabled: !v,
-                    hideBorder: !0,
-                    children: y.intl.string(y.t.BbESsr),
                 }),
             }),
             (0, r.jsx)(d.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
-                children: (0, r.jsx)(s.j7V, {
-                    value: a,
+                children: (0, r.jsx)(s.rsf, {
+                    label: y.intl.string(y.t.cUMdHx),
+                    description: y.intl.string(y.t["6EjbvL"]),
+                    checked: a,
                     onChange: (e) =>
                         l.Z.setAutomaticGainControl(e, {
                             page: b.ZY5.USER_SETTINGS,
                             section: b.jXE.SETTINGS_VOICE_AND_VIDEO,
                         }),
-                    note: y.intl.string(y.t["6EjbvL"]),
                     disabled: m,
-                    hideBorder: !0,
-                    children: y.intl.string(y.t.cUMdHx),
                 }),
             }),
             (0, r.jsx)(d.F, {
                 setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING,
-                children: (0, r.jsx)(s.j7V, {
-                    value: u,
+                children: (0, r.jsx)(s.rsf, {
+                    label: y.intl.string(y.t.DFPXIC),
+                    description: y.intl.string(y.t["UyRX+P"]),
+                    checked: u,
                     onChange: (e) => {
                         l.Z.setBypassSystemInputProcessing(e);
                     },
-                    note: y.intl.string(y.t["UyRX+P"]),
-                    hideBorder: !0,
-                    children: y.intl.string(y.t.DFPXIC),
                 }),
             }),
         ],

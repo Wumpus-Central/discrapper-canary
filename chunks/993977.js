@@ -115,20 +115,23 @@ class v extends i.PureComponent {
             className: _.body,
             children: [
                 (0, f.Q)()
-                    ? (0, r.jsxs)(i.Fragment, {
+                    ? (0, r.jsxs)(a.Kqy, {
+                          gap: 16,
                           children: [
-                              (0, r.jsx)(a.j7V, {
-                                  value: t,
+                              (0, r.jsx)(a.rsf, {
+                                  label: b.intl.string(b.t["9ID+Ki"]),
+                                  description: b.intl.string(b.t.vT61Nz),
+                                  checked: t,
                                   onChange: this.handleToggleShortcutDesktop,
-                                  note: b.intl.string(b.t.vT61Nz),
-                                  children: b.intl.string(b.t["9ID+Ki"]),
                               }),
-                              (0, r.jsx)(a.j7V, {
-                                  value: n,
+                              (0, r.jsx)(a.izJ, {}),
+                              (0, r.jsx)(a.rsf, {
+                                  label: b.intl.string(b.t.vNpUMz),
+                                  description: b.intl.string(b.t.cpYp0N),
+                                  checked: n,
                                   onChange: this.handleToggleShortcutStartMenu,
-                                  note: b.intl.string(b.t.cpYp0N),
-                                  children: b.intl.string(b.t.vNpUMz),
                               }),
+                              (0, r.jsx)(a.izJ, {}),
                               (0, r.jsx)(g.Z, {}),
                           ],
                       })

@@ -545,46 +545,41 @@ let ed = (e) => {
                                   className: en.dmSettingsHeader,
                                   children: et.intl.string(et.t.NaZyYG),
                               }),
-                              null != L
-                                  ? (0, r.jsx)(g.j7V, {
-                                        hideBorder: !0,
-                                        onChange: eh,
-                                        className: en.dmSettingsSwitch,
-                                        note:
-                                            (null == M ? void 0 : M.end_time) != null
-                                                ? et.intl.format(et.t.j7h4AA, {
-                                                      endTime: new Date(M.end_time).toLocaleString(
-                                                          et.intl.currentLocale,
-                                                          {
-                                                              month: "numeric",
-                                                              day: "numeric",
-                                                              hour: "numeric",
-                                                              minute: "2-digit",
-                                                          },
-                                                      ),
-                                                  })
-                                                : void 0,
-                                        value: B,
-                                        children: (0, r.jsx)(g.Text, {
-                                            variant: "text-sm/medium",
-                                            children: et.intl.string(et.t.NkwaBg),
-                                        }),
-                                    })
-                                  : null,
-                              v && C.enabled
-                                  ? (0, r.jsx)(g.j7V, {
-                                        hideBorder: !0,
-                                        onChange: ep,
-                                        className: en.dmSettingsSwitch,
-                                        note: et.intl.string(et.t.hw1nKS),
-                                        value: I,
-                                        disabled: B,
-                                        children: (0, r.jsx)(g.Text, {
-                                            variant: "text-sm/medium",
-                                            children: et.intl.string(et.t["Pkw//v"]),
-                                        }),
-                                    })
-                                  : null,
+                              (0, r.jsxs)(g.Kqy, {
+                                  gap: 20,
+                                  children: [
+                                      null != L
+                                          ? (0, r.jsx)(g.rsf, {
+                                                label: et.intl.string(et.t.NkwaBg),
+                                                description:
+                                                    (null == M ? void 0 : M.end_time) != null
+                                                        ? et.intl.format(et.t.j7h4AA, {
+                                                              endTime: new Date(M.end_time).toLocaleString(
+                                                                  et.intl.currentLocale,
+                                                                  {
+                                                                      month: "numeric",
+                                                                      day: "numeric",
+                                                                      hour: "numeric",
+                                                                      minute: "2-digit",
+                                                                  },
+                                                              ),
+                                                          })
+                                                        : void 0,
+                                                checked: B,
+                                                onChange: eh,
+                                            })
+                                          : null,
+                                      v && C.enabled
+                                          ? (0, r.jsx)(g.rsf, {
+                                                label: et.intl.string(et.t["Pkw//v"]),
+                                                description: et.intl.string(et.t.hw1nKS),
+                                                checked: I,
+                                                disabled: B,
+                                                onChange: ep,
+                                            })
+                                          : null,
+                                  ],
+                              }),
                           ],
                       })
                     : null,

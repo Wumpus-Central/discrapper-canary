@@ -196,35 +196,32 @@ function x() {
         children: [
             (0, r.jsx)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
-                children: (0, r.jsx)(s.j7V, {
-                    value: d,
+                children: (0, r.jsx)(s.rsf, {
+                    label: T.intl.string(T.t["0CEP6e"]),
+                    description: T.intl.string(T.t.kBXuW1),
+                    checked: d,
                     onChange: (e) => {
                         (0, y.Z)("stream_info_overlay_enabled", e, d), (0, c.y)({ isStreamInfoOverlayEnabled: e });
                     },
-                    note: T.intl.string(T.t.kBXuW1),
-                    hideBorder: !0,
-                    children: T.intl.string(T.t["0CEP6e"]),
                 }),
             }),
             (0, r.jsx)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
-                children: (0, r.jsx)(s.j7V, {
-                    value: o,
+                children: (0, r.jsx)(s.rsf, {
+                    label: T.intl.string(T.t["r6K+TE"]),
+                    description: T.intl.string(T.t["xl9+Iy"]),
+                    checked: o,
                     onChange: (e) => l.Z.setAecDump(e),
-                    note: T.intl.string(T.t["xl9+Iy"]),
-                    hideBorder: !0,
-                    children: T.intl.string(T.t["r6K+TE"]),
                 }),
             }),
             (0, r.jsxs)(h.F, {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
-                    (0, r.jsx)(s.j7V, {
-                        hideBorder: !0,
-                        value: p,
+                    (0, r.jsx)(s.rsf, {
+                        label: T.intl.string(T.t.U4FgFB),
+                        description: T.intl.string(T.t.Lm72RU),
+                        checked: p,
                         onChange: (e) => u.TC(e),
-                        note: T.intl.string(T.t.Lm72RU),
-                        children: T.intl.string(T.t.U4FgFB),
                     }),
                     (0, r.jsx)(s.xJW, {
                         children: (0, r.jsx)(f.Z, {
@@ -247,12 +244,11 @@ function x() {
                 setting: O.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(s.j7V, {
-                            hideBorder: !0,
-                            value: n,
+                        (0, r.jsx)(s.rsf, {
+                            label: T.intl.string(T.t["726JHB"]),
+                            description: T.intl.string(T.t["/7ak9f"]),
+                            checked: n,
                             onChange: L,
-                            note: T.intl.string(T.t["/7ak9f"]),
-                            children: T.intl.string(T.t["726JHB"]),
                         }),
                         (0, r.jsx)(s.xJW, {
                             children: (0, r.jsxs)(s.hE2, {

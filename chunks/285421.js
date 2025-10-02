@@ -13,5 +13,4 @@ e.exports = {
     emptyStateContainer: "emptyStateContainer__664ff",
     emptyStateTitle: "emptyStateTitle__664ff",
     emptyStateBody: "emptyStateBody__664ff",
-    toggle: "toggle__664ff",
 };

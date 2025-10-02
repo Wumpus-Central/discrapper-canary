@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(524484),
     O = n(981631),
     v = n(388032),
-    I = n(749714);
+    I = n(892879);
 function T(e, t, n) {
     return (
         t in e
@@ -82,7 +82,7 @@ let N = {
     P = (0, a.range)(0, 2.25, 0.25),
     w = (0, a.range)(1, 11),
     D = (0, a.range)(1, 26),
-    x = () => [
+    L = () => [
         {
             location: y.Hn.CHAT_INPUT,
             title: v.intl.string(v.t.elTty8),
@@ -104,7 +104,7 @@ let N = {
             description: v.intl.string(v.t.fiHV7u),
         },
     ],
-    L = () => [
+    x = () => [
         {
             location: y.oZ.CHAT_INPUT,
             title: v.intl.string(v.t.vUcvPD),
@@ -125,13 +125,13 @@ function j(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         o = n.map((e) =>
             (0, r.jsx)(
-                l.j7V,
+                l.rsf,
                 {
+                    label: e.title,
+                    description: e.description,
+                    checked: i[e.location],
                     disabled: t,
-                    value: i[e.location],
-                    note: e.description,
                     onChange: (t) => a(C(S({}, i), { [e.location]: t })),
-                    children: e.title,
                 },
                 e.location,
             ),
@@ -190,11 +190,11 @@ function k(e) {
                       )
                     : i({ enabled: e });
         };
-    return (0, r.jsx)(l.j7V, {
-        value: t,
-        note: v.intl.string(v.t.KuYbWF),
+    return (0, r.jsx)(l.rsf, {
+        label: v.intl.string(v.t.vuiXm5),
+        description: v.intl.string(v.t.KuYbWF),
+        checked: t,
         onChange: s,
-        children: v.intl.string(v.t.vuiXm5),
     });
 }
 function U(e) {
@@ -213,12 +213,12 @@ function U(e) {
         tag: l.RB0.H1,
         title: v.intl.string(v.t.mqxwJC),
         children: [
-            (0, r.jsx)(l.j7V, {
+            (0, r.jsx)(l.rsf, {
+                label: v.intl.string(v.t.s0KCgI),
+                description: v.intl.string(v.t.O1Vflp),
+                checked: n,
                 disabled: !t,
-                value: n,
-                note: v.intl.string(v.t.O1Vflp),
                 onChange: (e) => s({ confettiEnabled: e }, 0),
-                children: v.intl.string(v.t.s0KCgI),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: c,
@@ -258,7 +258,7 @@ function U(e) {
             }),
             (0, r.jsx)(j, {
                 disabled: c,
-                locations: x(),
+                locations: L(),
                 settingsLocations: o,
                 onChange: (e) => s({ confettiEnabledLocations: e }, 0),
             }),
@@ -275,19 +275,19 @@ function G(e) {
         tag: l.RB0.H1,
         title: v.intl.string(v.t.Xz0olZ),
         children: [
-            (0, r.jsx)(l.j7V, {
+            (0, r.jsx)(l.rsf, {
+                label: v.intl.string(v.t.o3iV7O),
+                description: v.intl.string(v.t["31Z8ER"]),
+                checked: n,
                 disabled: !t,
-                value: n,
-                note: v.intl.string(v.t["31Z8ER"]),
                 onChange: (e) => o({ combosEnabled: e }),
-                children: v.intl.string(v.t.o3iV7O),
             }),
-            (0, r.jsx)(l.j7V, {
+            (0, r.jsx)(l.rsf, {
+                label: v.intl.string(v.t["Ax+Ioa"]),
+                description: v.intl.string(v.t["9rgQEh"]),
+                checked: i,
                 disabled: !t,
-                value: i,
-                note: v.intl.string(v.t["9rgQEh"]),
                 onChange: (e) => o({ comboSoundsEnabled: e }),
-                children: v.intl.string(v.t["Ax+Ioa"]),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: s,
@@ -307,7 +307,7 @@ function G(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(l.$i$, { className: I.divider }),
+            (0, r.jsx)(l.izJ, { className: I.divider }),
         ],
     });
 }
@@ -325,13 +325,13 @@ function B(e) {
         tag: l.RB0.H1,
         title: v.intl.string(v.t.wVS5SU),
         children: [
-            (0, r.jsx)(l.j7V, {
+            (0, r.jsx)(l.rsf, {
+                label: v.intl.string(v.t.N004zM),
+                description: v.intl.string(v.t.Qq5W3t),
+                helperText: u ? v.intl.string(v.t.GckHGx) : void 0,
+                checked: n && !u,
                 disabled: !t || u,
-                tooltipNote: u ? v.intl.string(v.t.GckHGx) : null,
-                value: n && !u,
-                note: v.intl.string(v.t.Qq5W3t),
                 onChange: (e) => s({ screenshakeEnabled: e }, 1),
-                children: v.intl.string(v.t.N004zM),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: d,
@@ -355,7 +355,7 @@ function B(e) {
             }),
             (0, r.jsx)(j, {
                 disabled: d,
-                locations: L(),
+                locations: x(),
                 settingsLocations: a,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1),
             }),
@@ -434,7 +434,7 @@ function F(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(l.$i$, { className: I.divider }),
+            (0, r.jsx)(l.izJ, { className: I.divider }),
         ],
     });
 }

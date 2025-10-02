@@ -6,6 +6,4 @@ e.exports = {
     subtitle: "subtitle_b917ac",
     createGuild: "createGuild_b917ac",
     uploadIcon: "uploadIcon_b917ac",
-    guidelines: "guidelines_b917ac",
-    formItemSpaced: "formItemSpaced_b917ac",
 };

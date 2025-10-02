@@ -1,20 +1,17 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(846027),
-    u = n(921801),
-    d = n(131951),
-    f = n(996073),
-    _ = n(494620),
-    p = n(526761),
-    h = n(726985),
-    m = n(388032),
-    g = n(10198);
-function E(e, t, n) {
+    a = n(442837),
+    o = n(481060),
+    s = n(846027),
+    l = n(921801),
+    c = n(131951),
+    u = n(996073),
+    d = n(494620),
+    f = n(526761),
+    _ = n(726985),
+    p = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +24,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +35,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,97 +52,96 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v() {
-    let e = (0, s.e7)([d.Z], () => d.Z.getExperimentalEncoders());
-    return (0, r.jsx)(u.F, {
-        setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
-        children: (0, r.jsx)(l.j7V, {
-            className: o()(g.marginTop8, g.marginBottom20),
-            value: e,
-            onChange: c.Z.setExperimentalEncoders,
-            hideBorder: !0,
-            children: m.intl.string(m.t.AxnPm5),
+function b() {
+    let e = (0, a.e7)([c.Z], () => c.Z.getExperimentalEncoders());
+    return (0, r.jsx)(l.F, {
+        setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
+        children: (0, r.jsx)(o.rsf, {
+            label: p.intl.string(p.t.AxnPm5),
+            checked: e,
+            onChange: s.Z.setExperimentalEncoders,
         }),
     });
 }
-function I() {
-    let { openH264: e, hardwareEncoding: t } = (0, s.cj)([d.Z], () => ({
-            openH264: d.Z.getOpenH264(),
-            hardwareEncoding: d.Z.getHardwareEncodingSetting(),
+function y() {
+    let { openH264: e, hardwareEncoding: t } = (0, a.cj)([c.Z], () => ({
+            openH264: c.Z.getOpenH264(),
+            hardwareEncoding: c.Z.getHardwareEncodingSetting(),
         })),
         n = i.useRef(null);
-    (0, f.Z)(n, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
-    let a = i.useCallback((e) => {
+    (0, u.Z)(n, f.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    let h = i.useCallback((e) => {
         e
-            ? c.Z.setHardwareEncoding(!0)
-            : (0, l.h7j)((e) =>
+            ? s.Z.setHardwareEncoding(!0)
+            : (0, o.h7j)((e) =>
                   (0, r.jsx)(
-                      l.ConfirmModal,
-                      O(
-                          b(
+                      o.ConfirmModal,
+                      E(
+                          m(
                               {
-                                  header: m.intl.string(m.t.mly1DA),
-                                  confirmText: m.intl.string(m.t.BddRzc),
-                                  cancelText: m.intl.string(m.t["ETE/oK"]),
-                                  onConfirm: () => c.Z.setHardwareEncoding(!1),
+                                  header: p.intl.string(p.t.mly1DA),
+                                  confirmText: p.intl.string(p.t.BddRzc),
+                                  cancelText: p.intl.string(p.t["ETE/oK"]),
+                                  onConfirm: () => s.Z.setHardwareEncoding(!1),
                               },
                               e,
                           ),
                           {
-                              children: (0, r.jsx)(l.Text, {
+                              children: (0, r.jsx)(o.Text, {
                                   variant: "text-sm/normal",
-                                  children: m.intl.format(m.t.aPStAQ, {}),
+                                  children: p.intl.format(p.t.aPStAQ, {}),
                               }),
                           },
                       ),
                   ),
               );
     }, []);
-    return (0, r.jsxs)(u.F, {
-        setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-        children: [
-            (0, r.jsx)(u.F, {
-                setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
-                children: (0, r.jsx)(l.j7V, {
-                    value: e,
-                    onChange: c.Z.setOpenH264,
-                    hideBorder: !0,
-                    children: m.intl.string(m.t["71Ve19"]),
+    return (0, r.jsx)(l.F, {
+        setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
+        children: (0, r.jsxs)(o.Kqy, {
+            gap: 24,
+            children: [
+                (0, r.jsx)(l.F, {
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
+                    children: (0, r.jsx)(o.rsf, {
+                        label: p.intl.string(p.t["71Ve19"]),
+                        checked: e,
+                        onChange: s.Z.setOpenH264,
+                    }),
                 }),
-            }),
-            (0, r.jsx)(u.F, {
-                setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
-                children: (0, r.jsxs)("div", {
+                (0, r.jsxs)(l.F, {
+                    setting: _.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                     children: [
-                        (0, r.jsx)(l.j7V, {
+                        (0, r.jsx)("div", {
+                            ref: n,
                             style: { scrollMarginTop: "48px" },
-                            containerRef: n,
-                            value: t,
-                            onChange: a,
-                            note: m.intl.string(m.t.P1UKqq),
-                            hideBorder: !0,
-                            children: m.intl.string(m.t.Sln58f),
+                            children: (0, r.jsx)(o.rsf, {
+                                label: p.intl.string(p.t.Sln58f),
+                                description: p.intl.string(p.t.P1UKqq),
+                                checked: t,
+                                onChange: h,
+                            }),
                         }),
                         !t &&
-                            (0, r.jsx)(_.Z, {
-                                look: _.z.WARNING,
-                                children: m.intl.string(m.t["Uz6L6+"]),
+                            (0, r.jsx)(d.Z, {
+                                look: d.z.WARNING,
+                                children: p.intl.string(p.t["Uz6L6+"]),
                             }),
                     ],
                 }),
-            }),
-            (0, r.jsx)(v, {}),
-        ],
+                (0, r.jsx)(b, {}),
+            ],
+        }),
     });
 }

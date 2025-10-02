@@ -1,7 +1,7 @@
 n.d(t, { i: () => f }), n(953529);
 var r = n(951288),
     i = n(481060),
-    a = n(337132);
+    a = n(781194);
 function o(e, t, n) {
     return (
         t in e
@@ -105,6 +105,7 @@ let f = {
                         i.NIc,
                         c(s({}, n), {
                             description: "" === t ? void 0 : t,
+                            icon: n.showIcon ? i.mBM : void 0,
                             children: (0, r.jsx)("div", {
                                 className: a.placeholder,
                                 children: (0, r.jsx)(i.Text, {
@@ -157,6 +158,38 @@ let f = {
                             value: "horizontal",
                         },
                     ],
+                },
+                badge: {
+                    type: "select",
+                    label: "Badge",
+                    defaultValue: void 0,
+                    options: [
+                        {
+                            label: "None",
+                            value: void 0,
+                        },
+                        {
+                            label: "New",
+                            value: "new",
+                        },
+                        {
+                            label: "Beta",
+                            value: "beta",
+                        },
+                        {
+                            label: "Early Access",
+                            value: "early_access",
+                        },
+                        {
+                            label: "Free Trial",
+                            value: "free_trial",
+                        },
+                    ],
+                },
+                showIcon: {
+                    type: "boolean",
+                    label: "Show Icon",
+                    defaultValue: !1,
                 },
             },
         },

@@ -13,27 +13,27 @@ var i = n(951288),
     m = n(87051),
     x = n(798140),
     p = n(740504),
-    v = n(933557),
-    j = n(471445),
+    j = n(933557),
+    v = n(471445),
     f = n(777861),
     b = n(131704),
     N = n(592125),
     S = n(324067),
     O = n(650774),
     E = n(430824),
-    C = n(699516),
-    y = n(9156),
-    Z = n(594174),
+    y = n(699516),
+    Z = n(9156),
+    C = n(594174),
     L = n(823379),
     _ = n(63063),
-    w = n(621600),
-    P = n(423589),
+    P = n(621600),
+    w = n(423589),
     M = n(444899),
     T = n(74888),
     A = n(981631),
     G = n(969943),
     D = n(388032),
-    I = n(385888);
+    I = n(681296);
 function R() {
     return (R =
         Object.assign ||
@@ -45,7 +45,7 @@ function R() {
             return e;
         }).apply(this, arguments);
 }
-function U(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -70,7 +70,7 @@ function U(e) {
     }
     return e;
 }
-function k(e) {
+function U(e) {
     let { label: t, channelId: n } = e,
         [s, l] = (0, c.Wu)([N.Z], () => {
             let e = N.Z.getChannel(n);
@@ -79,12 +79,12 @@ function k(e) {
     return null == s
         ? t
         : (0, i.jsx)(g.ZZ$, {
-              icon: (0, j.KS)(s),
+              icon: (0, v.KS)(s),
               title: t,
               subtitle: null == l ? void 0 : l.name,
           });
 }
-function V(e) {
+function W(e) {
     var t;
     let { muteConfig: n, muted: s, guild: l, handleCheckboxChange: r } = e,
         a = null != (t = null == n ? void 0 : n.selected_time_window) ? t : G.Oe.ALWAYS;
@@ -93,12 +93,11 @@ function V(e) {
         : (0, i.jsxs)("div", {
               className: I.largeSpacing,
               children: [
-                  (0, i.jsx)(g.j7V, {
-                      hideBorder: !0,
-                      value: s,
-                      onChange: (e) => r("muted", e, w.UE.muted(e)),
-                      note: D.intl.string(D.t["8wbTQ0"]),
-                      children: D.intl.format(D.t["J+7D9P"], { name: l.name }),
+                  (0, i.jsx)(g.rsf, {
+                      label: D.intl.formatToPlainString(D.t["J+7D9P"], { name: l.name }),
+                      description: D.intl.string(D.t["8wbTQ0"]),
+                      checked: s,
+                      onChange: (e) => r("muted", e, P.UE.muted(e)),
                   }),
                   s
                       ? (0, i.jsxs)("div", {
@@ -119,7 +118,7 @@ function V(e) {
                                 }),
                                 (0, i.jsx)(g.q4e, {
                                     className: I.muteTimeSelector,
-                                    options: (0, P.W9)(),
+                                    options: (0, w.W9)(),
                                     value: a,
                                     onChange: (e) => {
                                         let t = e > 0 ? o()().add(e, "second").toISOString() : null;
@@ -132,7 +131,7 @@ function V(e) {
                                                     end_time: t,
                                                 },
                                             },
-                                            w.ZB.Muted,
+                                            P.ZB.Muted,
                                         );
                                     },
                                 }),
@@ -143,7 +142,7 @@ function V(e) {
               ],
           });
 }
-function W(e) {
+function z(e) {
     let { muted: t, messageNotifications: n, memberCount: s, handleRadioChange: l } = e;
     return (0, i.jsxs)("div", {
         className: I.spacing,
@@ -154,7 +153,7 @@ function W(e) {
                 children: (0, i.jsx)(h.E, {
                     disabled: t,
                     value: n,
-                    onChange: (e) => l("message_notifications", e, w.UE.notifications(e)),
+                    onChange: (e) => l("message_notifications", e, P.UE.notifications(e)),
                     options: [
                         {
                             name: D.intl.string(D.t["n/bTaW"]),
@@ -176,7 +175,7 @@ function W(e) {
         ],
     });
 }
-function Y(e) {
+function V(e) {
     let {
         suppressEveryone: t,
         suppressRoles: n,
@@ -187,61 +186,65 @@ function Y(e) {
         muted: o,
         guildId: d,
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, i.jsxs)(g.Kqy, {
         className: I.largeSpacing,
+        gap: 16,
         children: [
-            (0, i.jsx)(g.j7V, {
-                onChange: (e) => s("suppress_everyone", e, w.UE.suppressEveryone(e)),
-                value: t,
-                children: D.intl.format(D.t.OWiWAg, {}),
+            (0, i.jsx)(g.rsf, {
+                label: D.intl.format(D.t.OWiWAg, {}),
+                onChange: (e) => s("suppress_everyone", e, P.UE.suppressEveryone(e)),
+                checked: t,
             }),
-            (0, i.jsx)(g.j7V, {
-                onChange: (e) => s("suppress_roles", e, w.UE.suppressRoles(e)),
-                value: n,
-                children: D.intl.string(D.t["O/QdoK"]),
+            (0, i.jsx)(g.izJ, {}),
+            (0, i.jsx)(g.rsf, {
+                label: D.intl.string(D.t["O/QdoK"]),
+                onChange: (e) => s("suppress_roles", e, P.UE.suppressRoles(e)),
+                checked: n,
             }),
-            (0, i.jsx)(g.j7V, {
-                onChange: (e) => {
-                    m.Z.updateGuildNotificationSettings(
-                        d,
-                        { notify_highlights: e ? A.gLR.DISABLED : A.gLR.ENABLED },
-                        w.UE.highlights(!e),
-                    );
-                },
-                value: o || l === A.gLR.DISABLED,
-                disabled: o,
-                note: (0, i.jsxs)(i.Fragment, {
-                    children: [
-                        (0, i.jsx)(g.Text, {
+            (0, i.jsx)(g.izJ, {}),
+            (0, i.jsxs)(g.Kqy, {
+                gap: 4,
+                children: [
+                    (0, i.jsx)(g.rsf, {
+                        label: D.intl.string(D.t.gPuteH),
+                        onChange: (e) => {
+                            m.Z.updateGuildNotificationSettings(
+                                d,
+                                { notify_highlights: e ? A.gLR.DISABLED : A.gLR.ENABLED },
+                                P.UE.highlights(!e),
+                            );
+                        },
+                        checked: o || l === A.gLR.DISABLED,
+                        disabled: o,
+                        description: D.intl.string(D.t["Vw/Xn5"]),
+                    }),
+                    (0, i.jsx)(g.eee, {
+                        href: _.Z.getArticleURL(A.BhN.HIGHLIGHTS),
+                        children: (0, i.jsx)(g.Text, {
                             variant: "text-sm/normal",
-                            children: D.intl.string(D.t["Vw/Xn5"]),
+                            color: "text-link",
+                            children: D.intl.string(D.t.PRBn9P),
                         }),
-                        (0, i.jsx)("div", {
-                            className: I.highlightsLink,
-                            children: (0, i.jsx)(g.eee, {
-                                href: _.Z.getArticleURL(A.BhN.HIGHLIGHTS),
-                                children: D.intl.string(D.t.PRBn9P),
-                            }),
-                        }),
-                    ],
-                }),
-                children: (0, i.jsx)(i.Fragment, { children: D.intl.string(D.t.gPuteH) }),
+                    }),
+                ],
             }),
-            (0, i.jsx)(g.j7V, {
-                value: r,
-                onChange: (e) => s("mute_scheduled_events", e, w.UE.mutedEvents(e)),
-                children: D.intl.string(D.t.ONG3Y2),
+            (0, i.jsx)(g.izJ, {}),
+            (0, i.jsx)(g.rsf, {
+                label: D.intl.string(D.t.ONG3Y2),
+                checked: r,
+                onChange: (e) => s("mute_scheduled_events", e, P.UE.mutedEvents(e)),
             }),
-            (0, i.jsx)(g.j7V, {
-                value: !o && a,
+            (0, i.jsx)(g.izJ, {}),
+            (0, i.jsx)(g.rsf, {
+                label: D.intl.string(D.t["h1DL6+"]),
+                checked: !o && a,
                 disabled: o,
-                onChange: (e) => s("mobile_push", e, w.UE.mobilePush(e)),
-                children: D.intl.string(D.t["h1DL6+"]),
+                onChange: (e) => s("mobile_push", e, P.UE.mobilePush(e)),
             }),
         ],
     });
 }
-function z(e) {
+function Y(e) {
     let { setNewChannelOverrides: t, newChannelOverrides: n, setLatestOverrideId: s, channels: l, categories: a } = e,
         o = r()(l)
             .filter((e) => {
@@ -252,7 +255,7 @@ function z(e) {
                 let { channel: t } = e;
                 return {
                     value: t.id,
-                    label: (0, v.F6)(t, Z.default, C.Z),
+                    label: (0, j.F6)(t, C.default, y.Z),
                 };
             })
             .value();
@@ -269,7 +272,7 @@ function z(e) {
                 value: A.lds,
                 placeholder: D.intl.string(D.t["Z+oF8v"]),
                 renderOptionLabel: (e) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(U, {
                         label: e.label,
                         channelId: e.value,
                     }),
@@ -283,7 +286,7 @@ function z(e) {
         ],
     });
 }
-function H(e) {
+function q(e) {
     let {
             newChannelOverrides: t,
             channelOverrides: n,
@@ -294,13 +297,13 @@ function H(e) {
             latestOverrideId: d,
             messageNotifications: c,
         } = e,
-        h = s.useMemo(() => new Set([...t, ...(0, P.OD)(n)]), [n, t]),
+        h = s.useMemo(() => new Set([...t, ...(0, w.OD)(n)]), [n, t]),
         m = (0, g.dQu)(u.Z.unsafe_rawColors.GREEN_360).hex(),
         p = (e) => {
             let n = new Set(t);
             n.delete(e), o(n);
         },
-        v = l
+        j = l
             .map((e) => {
                 let { channel: t } = e;
                 if (!h.has(t.id) || (null != r[t.id] && 0 === r[t.id].length)) return null;
@@ -322,8 +325,8 @@ function H(e) {
             })
             .filter(L.lm);
     return (
-        (0 === h.size || 0 === v.length) &&
-            v.push(
+        (0 === h.size || 0 === j.length) &&
+            j.push(
                 (0, i.jsx)(
                     "div",
                     {
@@ -372,7 +375,7 @@ function H(e) {
                                     var t, n;
                                     return (0, i.jsx)(
                                         "span",
-                                        ((t = U({}, e)),
+                                        ((t = k({}, e)),
                                         (n = n = { children: D.intl.string(D.t.sWmtIy) }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -393,12 +396,12 @@ function H(e) {
                         }),
                     ],
                 }),
-                v,
+                j,
             ],
         })
     );
 }
-function q(e) {
+function H(e) {
     let { guildId: t, onClose: n, transitionState: l } = e,
         r = (0, c.e7)([S.Z], () => S.Z.getCategories(t)),
         a = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
@@ -408,25 +411,25 @@ function q(e) {
             suppressRoles: h,
             muteEvents: g,
             mobilePush: x,
-            muted: v,
-            muteConfig: j,
+            muted: j,
+            muteConfig: v,
             messageNotifications: f,
             channelOverrides: N,
-            notifyHighlights: C,
-        } = (0, c.cj)([y.ZP], () => ({
-            suppressEveryone: y.ZP.isSuppressEveryoneEnabled(t),
-            suppressRoles: y.ZP.isSuppressRolesEnabled(t),
-            muteEvents: y.ZP.isMuteScheduledEventsEnabled(t),
-            mobilePush: y.ZP.isMobilePushEnabled(t),
-            muted: y.ZP.isMuted(t),
-            muteConfig: y.ZP.getMuteConfig(t),
-            messageNotifications: y.ZP.getMessageNotifications(t),
-            channelOverrides: y.ZP.getChannelOverrides(t),
-            notifyHighlights: y.ZP.getNotifyHighlights(t),
+            notifyHighlights: y,
+        } = (0, c.cj)([Z.ZP], () => ({
+            suppressEveryone: Z.ZP.isSuppressEveryoneEnabled(t),
+            suppressRoles: Z.ZP.isSuppressRolesEnabled(t),
+            muteEvents: Z.ZP.isMuteScheduledEventsEnabled(t),
+            mobilePush: Z.ZP.isMobilePushEnabled(t),
+            muted: Z.ZP.isMuted(t),
+            muteConfig: Z.ZP.getMuteConfig(t),
+            messageNotifications: Z.ZP.getMessageNotifications(t),
+            channelOverrides: Z.ZP.getChannelOverrides(t),
+            notifyHighlights: Z.ZP.getNotifyHighlights(t),
         })),
-        [Z, L] = s.useState(new Set()),
-        [_, w] = s.useState(null),
-        P = s.useMemo(
+        [C, L] = s.useState(new Set()),
+        [_, P] = s.useState(null),
+        w = s.useMemo(
             () =>
                 (0, p.Z)(r._categories, r, (e) => {
                     let {
@@ -450,43 +453,43 @@ function q(e) {
         onClose: n,
         transitionState: l,
         children: [
-            (0, i.jsx)(V, {
-                muteConfig: j,
-                muted: v,
+            (0, i.jsx)(W, {
+                muteConfig: v,
+                muted: j,
                 guild: a,
                 handleCheckboxChange: M,
             }),
-            (0, i.jsx)(W, {
-                muted: v,
+            (0, i.jsx)(z, {
+                muted: j,
                 messageNotifications: f,
                 memberCount: o,
                 handleRadioChange: (e, n, i) => {
                     m.Z.updateGuildNotificationSettings(t, { [e]: n }, i);
                 },
             }),
-            (0, i.jsx)(Y, {
+            (0, i.jsx)(V, {
                 suppressEveryone: u,
                 suppressRoles: h,
                 handleCheckboxChange: M,
-                notifyHighlights: C,
+                notifyHighlights: y,
                 muteEvents: g,
                 mobilePush: x,
-                muted: v,
+                muted: j,
                 guildId: t,
             }),
-            (0, i.jsx)(z, {
+            (0, i.jsx)(Y, {
                 setNewChannelOverrides: L,
-                newChannelOverrides: Z,
-                setLatestOverrideId: w,
-                channels: P,
+                newChannelOverrides: C,
+                setLatestOverrideId: P,
+                channels: w,
                 categories: r,
             }),
-            (0, i.jsx)(H, {
-                newChannelOverrides: Z,
+            (0, i.jsx)(q, {
+                newChannelOverrides: C,
                 channelOverrides: N,
-                channels: P,
+                channels: w,
                 categories: r,
-                muted: v,
+                muted: j,
                 setNewChannelOverrides: L,
                 latestOverrideId: _,
                 messageNotifications: f,
@@ -502,5 +505,5 @@ function F(e) {
             return e;
         })(e),
     );
-    return (0, P.Mn)("NotificationSettingsModal") ? (0, i.jsx)(T.Z, U({}, t)) : (0, i.jsx)(q, U({}, t));
+    return (0, w.Mn)("NotificationSettingsModal") ? (0, i.jsx)(T.Z, k({}, t)) : (0, i.jsx)(H, k({}, t));
 }

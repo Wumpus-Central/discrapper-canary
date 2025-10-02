@@ -1,6 +1,4 @@
 e.exports = {
-    connectContainer: "connectContainer_c7f964",
-    connectHeader: "connectHeader_c7f964",
     connectionsContainer: "connectionsContainer_c7f964",
     accountButtonInner: "accountButtonInner_c7f964",
     accountAddWrapper: "accountAddWrapper_c7f964",
@@ -13,8 +11,6 @@ e.exports = {
     connectionAccountLabelVerified: "connectionAccountLabelVerified_c7f964",
     connectionAccountLabel: "connectionAccountLabel_c7f964",
     connectionIcon: "connectionIcon_c7f964",
-    connectionOptionsWrapper: "connectionOptionsWrapper_c7f964",
-    connectionOptionSwitch: "connectionOptionSwitch_c7f964",
     connectionOptions: "connectionOptions_c7f964",
     integrationsWrapper: "integrationsWrapper_c7f964",
     integrationWrapper: "integrationWrapper_c7f964",

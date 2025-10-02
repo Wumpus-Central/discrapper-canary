@@ -25,5 +25,4 @@ e.exports = {
     channelNameContainer: "channelNameContainer__856b5",
     channelName: "channelName__856b5",
     channelNameByline: "channelNameByline__856b5 lighten__856b5",
-    highlightsLink: "highlightsLink__856b5",
 };

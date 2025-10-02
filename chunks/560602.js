@@ -1,6 +1,6 @@
-l.d(t, { default: () => x }), l(388685), l(539854);
-var r = l(951288),
-    n = l(647438),
+l.d(t, { default: () => b }), l(388685), l(539854);
+var n = l(951288),
+    r = l(647438),
     i = l(149765),
     a = l(793030),
     o = l(442837),
@@ -13,69 +13,69 @@ var r = l(951288),
     h = l(700785),
     m = l(993259),
     w = l(388032),
-    v = l(628903);
+    v = l(356322);
 function y(e) {
     return (t) => null != t && !(0, d.pM)(e, t);
 }
 let g = (e) => {
         let { rolesRow: t } = e;
-        return (0, r.jsx)("div", {
+        return (0, n.jsx)("div", {
             "aria-hidden": !0,
             className: v.roleCircle,
             style: { backgroundColor: null == t ? void 0 : t.colorString },
         });
     },
-    x = (e) => {
-        let { guild: t, channel: l, permission: x, onClose: b, transitionState: j, currentSelectedRoles: O = [] } = e,
-            { shouldEveryonePost: S, setShouldEveryonePost: k } = ((e, t, l) => {
-                let r = h.Uu(l, t),
-                    [i, a] = n.useState(r);
+    b = (e) => {
+        let { guild: t, channel: l, permission: b, onClose: x, transitionState: O, currentSelectedRoles: j = [] } = e,
+            { shouldEveryonePost: k, setShouldEveryonePost: S } = ((e, t, l) => {
+                let n = h.Uu(l, t),
+                    [i, a] = r.useState(n);
                 return {
                     shouldEveryonePost: i,
                     setShouldEveryonePost: a,
                 };
-            })(0, l, x),
+            })(0, l, b),
             C = (function (e) {
                 let t = (0, o.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
-                return n.useMemo(() => (0, m.K)(t).filter((t) => y(e.id)(t.id)), [e, t]);
+                return r.useMemo(() => (0, m.K)(t).filter((t) => y(e.id)(t.id)), [e, t]);
             })(t),
-            N = C.reduce((e, t) => (e.set(t.id, t), e), new Map()),
-            H = C.map((e) => ({
+            H = C.reduce((e, t) => (e.set(t.id, t), e), new Map()),
+            N = C.map((e) => ({
                 key: e.key,
                 label: e.name,
                 value: e.id,
             })),
-            [E, P] = n.useState(O.map((e) => e.id).filter(y(t.id))),
-            [_, R] = n.useState(!1),
-            [Z, G] = n.useState(!1),
-            K = E.length > 0 || S,
-            M = (function (e, t) {
+            [E, P] = r.useState(j.map((e) => e.id).filter(y(t.id))),
+            [R, Z] = r.useState(!1),
+            [_, K] = r.useState(!1),
+            M = E.length > 0 || k,
+            B = (function (e, t) {
                 let l = (0, o.e7)([f.Z], () => f.Z.getSortedRoles(e.id));
-                return n.useCallback(
-                    (r, n) => {
+                return r.useCallback(
+                    (n, r) => {
                         let a = (0, m.K)(l),
-                            o = new Set(n),
+                            o = new Set(r),
                             s = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var l = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(l);
+                                        n = Object.keys(l);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (n = n.concat(
                                             Object.getOwnPropertySymbols(l).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(l, e).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = l[t]),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = l[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = n);
                                         });
                                 }
                                 return e;
@@ -84,32 +84,32 @@ let g = (e) => {
                             f = [];
                         return (
                             a.forEach((t) => {
-                                var l, n, a, u, m, w, v, y, g, x;
-                                let b = t.id,
-                                    j = o.has(b);
-                                j
+                                var l, r, a, u, m, w, v, y, g, b;
+                                let x = t.id,
+                                    O = o.has(x);
+                                O
                                     ? p.push({
-                                          id: b,
+                                          id: x,
                                           type: c.BN.ROLE,
-                                          allow: j
-                                              ? i.IH(null != (u = null == (l = s[b]) ? void 0 : l.allow) ? u : h.Hn, r)
-                                              : i.Od(null != (m = null == (n = s[b]) ? void 0 : n.allow) ? m : h.Hn, r),
-                                          deny: i.Od(null != (w = null == (a = s[b]) ? void 0 : a.deny) ? w : h.Hn, r),
+                                          allow: O
+                                              ? i.IH(null != (u = null == (l = s[x]) ? void 0 : l.allow) ? u : h.Hn, n)
+                                              : i.Od(null != (m = null == (r = s[x]) ? void 0 : r.allow) ? m : h.Hn, n),
+                                          deny: i.Od(null != (w = null == (a = s[x]) ? void 0 : a.deny) ? w : h.Hn, n),
                                       })
-                                    : (0, d.pM)(e.id, b)
+                                    : (0, d.pM)(e.id, x)
                                       ? p.push({
-                                            id: b,
+                                            id: x,
                                             type: c.BN.ROLE,
                                             allow: i.Od(
-                                                null != (g = null == (v = s[b]) ? void 0 : v.allow) ? g : h.Hn,
-                                                r,
+                                                null != (g = null == (v = s[x]) ? void 0 : v.allow) ? g : h.Hn,
+                                                n,
                                             ),
                                             deny: i.IH(
-                                                null != (x = null == (y = s[b]) ? void 0 : y.deny) ? x : h.Hn,
-                                                r,
+                                                null != (b = null == (y = s[x]) ? void 0 : y.deny) ? b : h.Hn,
+                                                n,
                                             ),
                                         })
-                                      : b in s && f.push(b);
+                                      : x in s && f.push(x);
                             }, []),
                             (0, u.kU)(t.id, p, f)
                         );
@@ -117,75 +117,68 @@ let g = (e) => {
                     [e, l, t],
                 );
             })(t, l),
-            B = async () => {
-                if (!K) return;
-                R(!0), G(!1);
+            I = async () => {
+                if (!M) return;
+                Z(!0), K(!1);
                 let e = [...E];
-                if (S) {
+                if (k) {
                     let l = (0, p.lV)(t);
                     e.push(l);
                 }
                 try {
-                    await M(x, e), b();
+                    await B(b, e), x();
                 } catch (e) {
-                    G(!0);
+                    K(!0);
                 } finally {
-                    R(!1);
+                    Z(!1);
                 }
             };
-        return _
-            ? (0, r.jsx)(s.$jN, {})
-            : (0, r.jsxs)(a.Modal, {
+        return R
+            ? (0, n.jsx)(s.$jN, {})
+            : (0, n.jsxs)(a.Modal, {
                   title: w.intl.string(w.t.TFGnmp),
                   actions: [
                       {
                           variant: "secondary",
                           text: w.intl.string(w.t["ETE/oK"]),
-                          onClick: b,
+                          onClick: x,
                       },
                       {
                           variant: "primary",
                           text: w.intl.string(w.t.R3BPHx),
-                          onClick: B,
-                          disabled: !K,
+                          onClick: I,
+                          disabled: !M,
                       },
                   ],
-                  onClose: b,
-                  transitionState: j,
+                  onClose: x,
+                  transitionState: O,
                   children: [
-                      (0, r.jsx)(s.VcW, {
+                      (0, n.jsx)(s.VcW, {
                           closeOnSelect: !1,
                           className: v.roleSelector,
                           maxVisibleItems: 5,
                           placeholder: w.intl.string(w.t["8kKqCQ"]),
                           multi: !0,
                           value: E,
-                          options: H,
+                          options: N,
                           onChange: (e) => {
                               P(e);
                           },
-                          renderOptionPrefix: (e) => (null != e ? (0, r.jsx)(g, { rolesRow: N.get(e.value) }) : null),
+                          renderOptionPrefix: (e) => (null != e ? (0, n.jsx)(g, { rolesRow: H.get(e.value) }) : null),
                       }),
-                      (0, r.jsxs)("div", {
+                      (0, n.jsx)("div", {
                           className: v.row,
-                          children: [
-                              (0, r.jsx)(s.j7V, {
-                                  value: S,
-                                  hideBorder: !0,
-                                  onChange: k,
-                                  className: v.switchGroup,
-                                  children: w.intl.string(w.t.kPwwAw),
-                              }),
-                              (0, r.jsx)(s.Text, {
-                                  variant: "text-sm/normal",
-                                  children: w.intl.format(w.t.l7Ercn, {}),
-                              }),
-                          ],
+                          children: (0, n.jsx)(s.rsf, {
+                              label: w.intl.string(w.t.kPwwAw),
+                              description: w.intl.format(w.t.l7Ercn, {}),
+                              checked: k,
+                              onChange: S,
+                          }),
                       }),
-                      Z
-                          ? (0, r.jsx)("div", {
+                      _
+                          ? (0, n.jsx)("div", {
                                 className: v.row,
-                                children: (0, r.jsx)(s.Text, {
+                                children: (0, n.jsx)(s.Text, {
                                     className: v.error,
                                     variant: "text-sm/normal",
                                     children: w.intl.string(w.t.mgZKZG),

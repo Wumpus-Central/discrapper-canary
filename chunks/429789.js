@@ -40,17 +40,15 @@ function p() {
                 type: a.R94.Types.DESCRIPTION,
                 children: d.intl.string(d.t["0A/8Rk"]),
             }),
-            (0, r.jsx)(a.j7V, {
-                value: t,
+            (0, r.jsx)(a.rsf, {
+                label: d.intl.string(d.t["9dHxRU"]),
+                checked: t,
                 onChange: (t) => o.Z.setAttenuation(e, t, n),
-                hideBorder: !0,
-                children: d.intl.string(d.t["9dHxRU"]),
             }),
-            (0, r.jsx)(a.j7V, {
-                value: n,
+            (0, r.jsx)(a.rsf, {
+                label: d.intl.string(d.t.SMt0Gh),
+                checked: n,
                 onChange: (n) => o.Z.setAttenuation(e, t, n),
-                hideBorder: !0,
-                children: d.intl.string(d.t.SMt0Gh),
             }),
         ],
     });
