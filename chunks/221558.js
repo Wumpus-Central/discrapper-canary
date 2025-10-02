@@ -1,80 +1,80 @@
-t.d(e, { Z: () => m });
-var n = t(951288),
-    r = t(647438),
-    s = t(793030),
-    l = t(442837),
-    a = t(565138),
-    d = t(430824),
-    c = t(5888),
-    o = t(198358),
-    x = t(509950),
-    u = t(388032);
-function m() {
+r.d(i, { Z: () => p });
+var e = r(951288),
+    n = r(647438),
+    a = r(793030),
+    s = r(442837),
+    l = r(565138),
+    d = r(430824),
+    c = r(5888),
+    o = r(198358),
+    x = r(509950),
+    u = r(388032);
+function p() {
     let {
-            guilds: { guilds: i, numGuildsJoined: e },
-        } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
-        t = (0, r.useMemo)(
+            guilds: { guilds: t, numGuildsJoined: i },
+        } = (0, s.e7)([c.Z], () => c.Z.getCheckpointData()),
+        r = (0, n.useMemo)(
             () =>
-                i
-                    .map((i) => {
-                        let { guildId: e } = i;
-                        return d.Z.getGuild(e);
+                t
+                    .map((t) => {
+                        let { guildId: i } = t;
+                        return d.Z.getGuild(i);
                     })
-                    .filter((i) => null != i),
-            [i],
+                    .filter((t) => null != t),
+            [t],
         );
-    return (0, n.jsxs)(o.Z, {
+    return (0, e.jsxs)(o.Z, {
         children: [
-            (0, n.jsx)(s.xvT, {
+            (0, e.jsx)(a.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
                 children: u.intl.format(x.default.mAroeH, {
-                    joinedCount: e,
-                    guildCount: t.length,
+                    joinedCount: i,
+                    guildCount: r.length,
                 }),
             }),
-            t.map((e, t) =>
-                (0, n.jsxs)(
+            r.map((i, r) =>
+                (0, e.jsxs)(
                     "div",
                     {
                         children: [
-                            (0, n.jsx)(a.Z, {
-                                guild: e,
-                                size: a.Z.Sizes.XLARGE,
+                            (0, e.jsx)(l.Z, {
+                                guild: i,
+                                size: l.Z.Sizes.XLARGE,
                             }),
-                            (0, n.jsx)(s.xvT, {
+                            (0, e.jsx)(a.xvT, {
                                 variant: "display-md",
                                 color: "text-primary",
-                                children: e.name,
+                                children: i.name,
                             }),
-                            0 === t &&
-                                (0, n.jsxs)("div", {
+                            0 === r &&
+                                (0, e.jsxs)("div", {
                                     children: [
-                                        (0, n.jsx)(s.xvT, {
+                                        (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
-                                            children: i[0].numMessagesSent,
+                                            children: t[0].numMessagesSent,
                                         }),
-                                        (0, n.jsx)(s.xvT, {
+                                        (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: u.intl.string(x.default.nPTMHh),
+                                            children: u.intl.string(x.default.wWKySE),
                                         }),
-                                        (0, n.jsx)(s.xvT, {
+                                        (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
-                                            children: i[0].numMinutesListening + i[0].numMinutesSpeaking,
+                                            children: t[0].numMinutesListening + t[0].numMinutesSpeaking,
                                         }),
-                                        (0, n.jsx)(s.xvT, {
+                                        (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: u.intl.string(x.default["3NjdFR"]),
+                                            children: u.intl.string(x.default.lXT6np),
                                         }),
                                     ],
                                 }),
                         ],
                     },
-                    e.id,
+                    i.id,
                 ),
             ),
         ],

@@ -1,152 +1,131 @@
-t.r(e), t.d(e, { default: () => T }), t(388685);
-var n = t(951288),
-    r = t(647438),
-    s = t(120356),
-    l = t.n(s),
-    a = t(481060),
-    d = t(37234),
-    c = t(198358),
-    o = t(363157),
-    x = t(860277),
-    u = t(221558),
-    m = t(360469),
-    p = t(271268),
-    h = t(626698),
-    j = t(612776),
-    v = t(231338),
-    g = t(509950),
-    y = t(388032),
-    f = t(356379);
-let E = {
-    0: j.W.WELCOME,
-    1: j.W.MESSAGES,
-    2: j.W.EMOJIS,
-    3: j.W.VOICE,
-    4: j.W.GUILDS,
-    5: j.W.FRIENDS,
-    6: j.W.BEST_FRIEND,
-    7: j.W.GAMING,
-    8: j.W.QUESTS,
-    9: j.W.END,
+r.r(i), r.d(i, { default: () => M }), r(388685);
+var e = r(951288),
+    n = r(647438),
+    a = r(120356),
+    s = r.n(a),
+    l = r(481060),
+    d = r(37234),
+    c = r(363157),
+    o = r(410853),
+    x = r(425196),
+    u = r(860277),
+    p = r(118045),
+    h = r(221558),
+    m = r(360469),
+    v = r(741549),
+    j = r(271268),
+    f = r(626698),
+    y = r(612776),
+    T = r(231338),
+    E = r(509950),
+    Z = r(388032),
+    g = r(356379);
+let S = {
+    0: y.W.WELCOME,
+    1: y.W.MESSAGES,
+    2: y.W.EMOJIS,
+    3: y.W.VOICE,
+    4: y.W.GUILDS,
+    5: y.W.FRIENDS,
+    6: y.W.BEST_FRIEND,
+    7: y.W.GAMING,
+    8: y.W.QUESTS,
+    9: y.W.END,
 };
-function T(i) {
-    let {} = i,
-        [e, t] = r.useState(0),
-        s = E[e],
-        T = r.useCallback(() => {
-            if (e >= j.t.length - 1) return void (0, d.xf)();
-            t(e + 1);
-        }, [e]);
-    return (0, n.jsx)(a.f6W, {
-        theme: v.BR.DARKER,
-        children: (i) =>
-            (0, n.jsxs)("div", {
-                className: l()(f.container, i),
-                "aria-label": y.intl.string(g.default["CdU/PD"]),
+function M(t) {
+    let {} = t,
+        [i, r] = n.useState(0),
+        a = S[i],
+        M = n.useCallback(() => {
+            if (i >= y.t.length - 1) return void (0, d.xf)();
+            r(i + 1);
+        }, [i]);
+    return (0, e.jsx)(l.f6W, {
+        theme: T.BR.DARKER,
+        children: (t) =>
+            (0, e.jsxs)("div", {
+                className: s()(g.container, t),
+                "aria-label": Z.intl.string(E.default["CdU/PD"]),
                 children: [
-                    (0, n.jsxs)(a.MyZ, {
-                        activeSlide: s,
+                    (0, e.jsxs)(l.MyZ, {
+                        activeSlide: a,
                         children: [
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.WELCOME,
-                                children: (0, n.jsx)(h.Z, {}),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.WELCOME,
+                                children: (0, e.jsx)(f.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.MESSAGES,
-                                children: (0, n.jsx)(m.Z, {}),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.MESSAGES,
+                                children: (0, e.jsx)(m.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.EMOJIS,
-                                children: (0, n.jsx)(c.Z, {
-                                    children: (0, n.jsx)(a.Text, {
-                                        variant: "display-lg",
-                                        color: "text-primary",
-                                        children: "TBD",
-                                    }),
-                                }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.EMOJIS,
+                                children: (0, e.jsx)(o.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.VOICE,
-                                children: (0, n.jsx)(p.Z, {}),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.VOICE,
+                                children: (0, e.jsx)(j.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.GUILDS,
-                                children: (0, n.jsx)(u.Z, {}),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.GUILDS,
+                                children: (0, e.jsx)(h.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.FRIENDS,
-                                children: (0, n.jsx)(x.Z, { slide: j.W.FRIENDS }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.FRIENDS,
+                                children: (0, e.jsx)(u.Z, { slide: y.W.FRIENDS }),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.BEST_FRIEND,
-                                children: (0, n.jsx)(x.Z, { slide: j.W.BEST_FRIEND }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.BEST_FRIEND,
+                                children: (0, e.jsx)(u.Z, { slide: y.W.BEST_FRIEND }),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.GAMING,
-                                children: (0, n.jsx)(c.Z, {
-                                    children: (0, n.jsx)(a.Text, {
-                                        variant: "display-lg",
-                                        color: "text-primary",
-                                        children: "TBD",
-                                    }),
-                                }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.GAMING,
+                                children: (0, e.jsx)(p.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.QUESTS,
-                                children: (0, n.jsx)(c.Z, {
-                                    children: (0, n.jsx)(a.Text, {
-                                        variant: "display-lg",
-                                        color: "text-primary",
-                                        children: "TBD",
-                                    }),
-                                }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.QUESTS,
+                                children: (0, e.jsx)(v.Z, {}),
                             }),
-                            (0, n.jsx)(a.Mi4, {
-                                id: j.W.END,
-                                children: (0, n.jsx)(c.Z, {
-                                    children: (0, n.jsx)(a.Text, {
-                                        variant: "display-lg",
-                                        color: "text-primary",
-                                        children: "Thanks for being a gamer.",
-                                    }),
-                                }),
+                            (0, e.jsx)(l.Mi4, {
+                                id: y.W.END,
+                                children: (0, e.jsx)(x.Z, {}),
                             }),
                         ],
                     }),
-                    (0, n.jsxs)("div", {
-                        className: l()(f.header, i),
+                    (0, e.jsxs)("div", {
+                        className: s()(g.header, t),
                         children: [
-                            (0, n.jsxs)("div", {
-                                className: f.logo,
+                            (0, e.jsxs)("div", {
+                                className: g.logo,
                                 children: [
-                                    (0, n.jsx)(a.gw7, { color: a.TVs.colors.BG_BRAND }),
-                                    (0, n.jsx)(a.Text, {
+                                    (0, e.jsx)(l.gw7, { color: l.TVs.colors.BG_BRAND }),
+                                    (0, e.jsx)(l.Text, {
                                         variant: "display-sm",
                                         color: "text-primary",
-                                        className: f.logoText,
-                                        children: y.intl.string(g.default["CdU/PD"]),
+                                        className: g.logoText,
+                                        children: Z.intl.string(E.default["CdU/PD"]),
                                     }),
                                 ],
                             }),
-                            (0, n.jsx)(o.Z, {
-                                currentStep: e,
-                                totalSteps: j.t.length,
-                                className: f.stepIndicator,
+                            (0, e.jsx)(c.Z, {
+                                currentStep: i,
+                                totalSteps: y.t.length,
+                                className: g.stepIndicator,
                             }),
-                            (0, n.jsx)(a.P3F, {
+                            (0, e.jsx)(l.P3F, {
                                 onClick: d.xf,
-                                className: f.closeButton,
-                                children: (0, n.jsx)(a.Uz9, {}),
+                                className: g.closeButton,
+                                children: (0, e.jsx)(l.Uz9, {}),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(a.P3F, {
-                        onClick: T,
-                        className: f.nextButton,
-                        children: (0, n.jsx)(a.Text, {
+                    (0, e.jsx)(l.P3F, {
+                        onClick: M,
+                        className: g.nextButton,
+                        children: (0, e.jsx)(l.Text, {
                             variant: "display-sm",
                             color: "text-primary",
-                            children: y.intl.string(y.t.PDTjLC),
+                            children: Z.intl.string(Z.t.PDTjLC),
                         }),
                     }),
                 ],
