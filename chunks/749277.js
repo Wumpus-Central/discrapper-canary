@@ -277,27 +277,27 @@ let w = (e) => {
                             }),
                         ],
                     });
-                case a.z.REPORT_TO_MOD_SURVEY_NOTICE:
+                case a.z.REPORT_TO_MOD_EXIT_SURVEY_NOTICE:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.BRAND,
                         children: [
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => i(I.L.USER_DISMISS),
-                                noticeType: T.kVF.REPORT_TO_MOD_SURVEY,
+                                noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
                             }),
-                            C.intl.string(C.t["Aa+l7e"]),
+                            C.intl.string(C.t.sw22sr),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     window.open(
-                                        "https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id="
+                                        "https://discord.sjc1.qualtrics.com/jfe/form/SV_9zz09xNJ3Qvyb78?user_id="
                                             .concat(null == w ? void 0 : w.id, "&guild_id=")
                                             .concat(D),
                                         "_blank",
                                     ),
                                         i(I.L.TAKE_ACTION);
                                 },
-                                noticeType: T.kVF.REPORT_TO_MOD_SURVEY,
-                                children: C.intl.string(C.t["iT+wQ0"]),
+                                noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
+                                children: C.intl.string(C.t.rulMOT),
                             }),
                         ],
                     });

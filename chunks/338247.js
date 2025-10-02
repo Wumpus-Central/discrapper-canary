@@ -1,10 +1,10 @@
-n.d(t, { s: () => o });
+n.d(t, { k: () => s });
 var r = n(430824),
     i = n(863214),
-    a = n(981631);
-function o(e, t) {
-    if (null == t) return !1;
-    let n = (0, i.p)(t, "should_show_report_to_mod_survey"),
-        o = r.Z.getGuild(t);
-    return n && null != o && o.ownerId === e.id && o.features.has(a.oNc.REPORT_TO_MOD_SURVEY);
+    a = n(982168),
+    o = n(953252);
+function s(e, t) {
+    if (!(0, i.L)("shouldShowReportToModExitSurvey")) return !1;
+    let n = r.Z.getGuild(t);
+    return null != n && (0, o.Z)(n) && (0, a._5)(t);
 }

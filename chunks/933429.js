@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => tn,
-    m9: () => eL,
+    m9: () => ex,
     nA: () => ek,
     o: () => ej,
     zD: () => eM,
@@ -37,8 +37,8 @@ var r,
     P = n(332473),
     w = n(30684),
     D = n(616106),
-    x = n(107756),
-    L = n(518638),
+    L = n(107756),
+    x = n(518638),
     j = n(1844),
     M = n(621615),
     k = n(417626),
@@ -129,7 +129,7 @@ function eD(e, t) {
     }
     return n;
 }
-function ex(e, t) {
+function eL(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -140,7 +140,7 @@ function ex(e, t) {
         e
     );
 }
-let eL = {
+let ex = {
         [eT.kVF.DOWNLOAD_NAG]: l.z.NAGBAR_NOTICE_DOWNLOAD,
         [eT.kVF.CONNECT_SPOTIFY]: l.z.NAGBAR_NOTICE_CONNECT_SPOTIFY,
         [eT.kVF.CONNECT_PLAYSTATION]: l.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
@@ -151,7 +151,7 @@ let eL = {
         [eT.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: l.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING,
         [eT.kVF.POMELO_ELIGIBLE]: l.z.NAGBAR_NOTICE_POMELO,
         [eT.kVF.CHECKOUT_RECOVERY_NAGBAR]: l.z.CHECKOUT_RECOVERY_NAGBAR,
-        [eT.kVF.REPORT_TO_MOD_SURVEY]: l.z.REPORT_TO_MOD_SURVEY_NOTICE,
+        [eT.kVF.REPORT_TO_MOD_EXIT_SURVEY]: l.z.REPORT_TO_MOD_EXIT_SURVEY_NOTICE,
     },
     ej = { [eT.kVF.GIFTING_PROMOTION_REMINDER]: l.z.GIFTING_PROMOTION_REMINDER },
     eM = {
@@ -219,7 +219,7 @@ function eq(e) {
     if (null == e || null != eM[e]) return !1;
     let t = ej[e];
     if (null != t) return (0, g.H4)(t).isDismissed;
-    let n = eL[e];
+    let n = ex[e];
     if (null != n) return (0, m.zu)(n);
     let r = eU[e];
     if (null != r) {
@@ -284,7 +284,7 @@ let eX = [
         eT.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
         eT.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
         eT.kVF.IGNORE_USER_FEEDBACK_NAGBAR,
-        eT.kVF.REPORT_TO_MOD_SURVEY,
+        eT.kVF.REPORT_TO_MOD_EXIT_SURVEY,
     ],
     eQ = [
         eT.kVF.QUARANTINED,
@@ -308,8 +308,8 @@ let eX = [
     eJ = {
         [eT.kVF.GIFTING_PROMOTION_REMINDER]: {
             predicate: () => {
-                let { enabled: e } = x.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
-                    { enabled: t } = x.ZP.getConfig({ location: "NoticeStore" });
+                let { enabled: e } = L.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
+                    { enabled: t } = L.ZP.getConfig({ location: "NoticeStore" });
                 return (
                     e &&
                     t &&
@@ -413,7 +413,7 @@ let eX = [
                 );
             },
         },
-        [eT.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, L.tq)() },
+        [eT.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, x.tq)() },
         [eT.kVF.CORRUPT_INSTALLATION]: {
             predicate: () => eb.isPlatformEmbedded && (!s.Z.supported() || eI.Z.isCorruptInstallation()),
         },
@@ -750,10 +750,10 @@ let eX = [
             predicate: () => Z.Rr(),
             metadata: () => ({ sampleRate: 0.1 }),
         },
-        [eT.kVF.REPORT_TO_MOD_SURVEY]: {
+        [eT.kVF.REPORT_TO_MOD_EXIT_SURVEY]: {
             predicate: (e) => {
                 let { currentUser: t, selectedGuildId: n } = e;
-                return null != n && (0, G.s)(t, n);
+                return null != n && (0, G.k)(t, n);
             },
         },
         [eT.kVF.SYSTEM_SERVICE_WARNING]: {
@@ -800,7 +800,7 @@ function e$() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eV = ex(ew({}, eF), {
+            eV = eL(ew({}, eF), {
                 type: n,
                 metadata: o,
             });
