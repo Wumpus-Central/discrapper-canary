@@ -1,4 +1,4 @@
-n.d(t, { f: () => B }), n(388685), n(997841);
+n.d(t, { f: () => F }), n(388685), n(997841);
 var l = n(951288),
     i = n(647438),
     r = n(120356),
@@ -13,21 +13,21 @@ var l = n(951288),
     m = n(239091),
     p = n(657305),
     v = n(835473),
-    I = n(471445),
-    x = n(313201),
+    x = n(471445),
+    I = n(313201),
     f = n(925329),
     j = n(65361),
     N = n(305347),
     _ = n(246946),
-    E = n(626135),
-    S = n(934415),
-    b = n(572004),
+    S = n(626135),
+    b = n(934415),
+    E = n(572004),
     O = n(971130),
-    y = n(366980),
-    T = n(281123),
+    T = n(366980),
+    y = n(281123),
     C = n(981631),
     P = n(388032),
-    Z = n(202722);
+    Z = n(350250);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,7 +53,7 @@ function A(e) {
     }
     return e;
 }
-function w(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function w(e, t) {
         e
     );
 }
-let M = (e) => {
+let w = (e) => {
         let { inviteIcon: t, channelIcon: n, heading: i, subheading: r } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
@@ -104,21 +104,21 @@ let M = (e) => {
     },
     R = (e) => {
         let { guild: t, channel: n } = e,
-            i = (0, S.a5)({ type: n.type }),
+            i = (0, b.a5)({ type: n.type }),
             r = (0, l.jsx)(h.Text, {
                 variant: "text-xs/medium",
                 color: "header-muted",
                 lineClamp: 1,
                 children: [i, t.name].join("\xA0\xA0\u2022\xA0\xA0"),
             }),
-            a = (0, I.KS)(n, t),
+            a = (0, x.KS)(n, t),
             s = (0, l.jsx)(N.Ft, {
                 guildId: t.id,
                 guildName: t.name,
                 guildIcon: t.icon,
                 iconSize: 40,
             });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(w, {
             inviteIcon: s,
             channelIcon:
                 null == a
@@ -131,7 +131,7 @@ let M = (e) => {
             subheading: r,
         });
     },
-    D = (e) => {
+    k = (e) => {
         let t,
             { guild: n } = e,
             { guildProfile: r, fetchGuildProfile: a } = (0, j.u)(n.id);
@@ -174,13 +174,13 @@ let M = (e) => {
             guildIcon: n.icon,
             iconSize: 40,
         });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(w, {
             inviteIcon: s,
             heading: n.name,
             subheading: t,
         });
     },
-    k = (e) => {
+    D = (e) => {
         let { applicationId: t } = e,
             [n] = (0, v.Z)([t]);
         if (null == n) return null;
@@ -196,7 +196,7 @@ let M = (e) => {
                 size: f.A.MEDIUM,
                 className: Z.inviteIcon,
             });
-        return (0, l.jsx)(M, {
+        return (0, l.jsx)(w, {
             inviteIcon: a,
             heading: i,
             subheading: r,
@@ -205,22 +205,22 @@ let M = (e) => {
 function L(e) {
     let { guild: t, channel: n, applicationId: i } = e;
     return null != i
-        ? (0, l.jsx)(k, { applicationId: i })
+        ? (0, l.jsx)(D, { applicationId: i })
         : null != n
           ? (0, l.jsx)(R, {
                 guild: t,
                 channel: n,
             })
-          : (0, l.jsx)(D, { guild: t });
+          : (0, l.jsx)(k, { guild: t });
 }
-function U(e) {
+function V(e) {
     let { className: t, children: n } = e;
     return (0, l.jsx)("div", {
         className: a()(t, Z.advancedOptions),
         children: n,
     });
 }
-function V(e) {
+function U(e) {
     let t,
         n,
         { className: i, children: r, htmlFor: s, onClick: o } = e;
@@ -232,7 +232,7 @@ function V(e) {
               : ((t = "div"), (n = {})),
         (0, l.jsx)(
             t,
-            w(A({ className: Z.advancedOption }, n), {
+            M(A({ className: Z.advancedOption }, n), {
                 children: (0, l.jsx)("div", {
                     className: a()(i, Z.advancedOptionInner),
                     children: r,
@@ -241,89 +241,89 @@ function V(e) {
         )
     );
 }
-function B(e) {
+function F(e) {
     let {
             className: t,
             guild: r,
             channel: s,
             applicationId: p,
             getInviteKey: v,
-            sendInvite: I,
+            sendInvite: x,
             canUseVanityURL: f,
             disabled: j,
             hasSelection: N,
-            options: S,
-            setOptions: M,
+            options: b,
+            setOptions: w,
             isApplicationBypassAllowed: R,
-            isGuestInviteAllowed: D,
-            isTemporaryInviteAllowed: k,
-            setError: B,
-            analyticsLocation: F,
+            isGuestInviteAllowed: k,
+            isTemporaryInviteAllowed: D,
+            setError: F,
+            analyticsLocation: B,
         } = e,
-        [z, G] = i.useState(!1),
-        [q, H] = i.useState(!1),
-        W = i.useRef(null),
-        [K] = (0, d.Wu)([_.Z], () => [_.Z.hideInstantInvites]),
-        Y = (0, x.Dt)(),
-        X = (0, x.Dt)(),
-        Q = (0, x.Dt)(),
-        J = i.useMemo(() => (f && null != r.vanityURLCode ? (0, y.Z)(r.vanityURLCode, !1) : null), [r, f]),
-        $ = i.useCallback(async () => {
+        [G, z] = i.useState(!1),
+        [H, q] = i.useState(!1),
+        Y = i.useRef(null),
+        [W] = (0, d.Wu)([_.Z], () => [_.Z.hideInstantInvites]),
+        K = (0, I.Dt)(),
+        X = (0, I.Dt)(),
+        Q = (0, I.Dt)(),
+        $ = i.useMemo(() => (f && null != r.vanityURLCode ? (0, T.Z)(r.vanityURLCode, !1) : null), [r, f]),
+        J = i.useCallback(async () => {
             var e, t;
             if (j) return;
-            null !== W.current && clearTimeout(W.current);
+            null !== Y.current && clearTimeout(Y.current);
             let n = await v();
             o()(null != n, "Invite key could not be determined.");
-            let l = (0, y.Z)(n);
+            let l = (0, T.Z)(n);
             return (
-                (0, b.JG)(
+                (0, E.JG)(
                     l,
                     () => {
-                        G(!0),
-                            (W.current = setTimeout(() => {
-                                G(!1), (W.current = null);
+                        z(!0),
+                            (Y.current = setTimeout(() => {
+                                z(!1), (Y.current = null);
                             }, 1000));
                     },
                     (e) => {
-                        B(e);
+                        F(e);
                     },
                 ),
-                E.default.track(C.rMx.COPY_INSTANT_INVITE, {
+                S.default.track(C.rMx.COPY_INSTANT_INVITE, {
                     server: r.id,
                     channel: null != (e = null == s ? void 0 : s.id) ? e : null,
                     channel_type: null != (t = null == s ? void 0 : s.type) ? t : null,
-                    location: F,
+                    location: B,
                     code: n,
                     application_id: p,
                 }),
                 () => {
-                    null !== W.current && clearTimeout(W.current);
+                    null !== Y.current && clearTimeout(Y.current);
                 }
             );
-        }, [j, v, r, s, F, p, B]),
+        }, [j, v, r, s, B, p, F]),
         ee = i.useCallback(
             (e) => {
-                M({ max_age: e });
+                w({ max_age: e });
             },
-            [M],
+            [w],
         ),
         et = i.useCallback(
             (e) => {
-                M({ max_uses: e });
+                w({ max_uses: e });
             },
-            [M],
+            [w],
         ),
         en = i.useCallback(
             (e) => {
-                S.flags === e ? M({ flags: void 0 }) : M({ flags: e });
+                b.flags === e ? w({ flags: void 0 }) : w({ flags: e });
             },
-            [S, M],
+            [b, w],
         ),
         el = i.useCallback(
             (e) => {
-                M({ temporary: e });
+                w({ temporary: e });
             },
-            [M],
+            [w],
         ),
         ei = i.useCallback(
             (e) => {
@@ -336,22 +336,22 @@ function B(e) {
                         return (t) =>
                             (0, l.jsx)(
                                 e,
-                                w(A({}, t), {
-                                    initialOptions: S,
+                                M(A({}, t), {
+                                    initialOptions: b,
                                     onChangeMaxAge: ee,
                                     onChangeMaxUses: et,
                                 }),
                             );
                     });
             },
-            [S, ee, et],
+            [b, ee, et],
         ),
         er = (function (e) {
-            let t = T.H.find((t) => {
+            let t = y.H.find((t) => {
                     let { value: n } = t;
                     return n === e.max_age;
                 }),
-                n = T.p.find((t) => {
+                n = y.p.find((t) => {
                     let { value: n } = t;
                     return n === e.max_uses;
                 });
@@ -369,7 +369,7 @@ function B(e) {
                       : n.value !== O.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value === O.ZP.INVITE_OPTIONS_FOREVER.value
                         ? n.label
                         : null;
-        })(S);
+        })(b);
     return (0, l.jsxs)("div", {
         className: a()(t, Z.footer),
         children: [
@@ -387,10 +387,10 @@ function B(e) {
                         children: (e) =>
                             (0, l.jsx)(
                                 h.P3F,
-                                w(A({ className: a()(Z.settingsButton, { [Z.settingsOpen]: q }) }, e), {
+                                M(A({ className: a()(Z.settingsButton, { [Z.settingsOpen]: H }) }, e), {
                                     onClick: () => {
                                         var t;
-                                        null == e || null == (t = e.onClick) || t.call(e), H((e) => !e);
+                                        null == e || null == (t = e.onClick) || t.call(e), q((e) => !e);
                                     },
                                     children: (0, l.jsx)(h.ewm, {
                                         size: "refresh_sm",
@@ -401,10 +401,10 @@ function B(e) {
                     }),
                 ],
             }),
-            q &&
-                (0, l.jsxs)(U, {
+            H &&
+                (0, l.jsxs)(V, {
                     children: [
-                        (0, l.jsxs)(V, {
+                        (0, l.jsxs)(U, {
                             onClick: ei,
                             children: [
                                 (0, l.jsxs)("div", {
@@ -420,7 +420,7 @@ function B(e) {
                                             children: (e) =>
                                                 (0, l.jsx)(
                                                     h.idN,
-                                                    w(A({}, e), {
+                                                    M(A({}, e), {
                                                         size: "xs",
                                                         color: c.Z.colors.INTERACTIVE_NORMAL,
                                                     }),
@@ -446,8 +446,8 @@ function B(e) {
                             ],
                         }),
                         R &&
-                            (0, l.jsxs)(V, {
-                                htmlFor: Y,
+                            (0, l.jsxs)(U, {
+                                htmlFor: K,
                                 children: [
                                     (0, l.jsxs)("div", {
                                         className: Z.advancedOptionContent,
@@ -462,7 +462,7 @@ function B(e) {
                                                 children: (e) =>
                                                     (0, l.jsx)(
                                                         h.idN,
-                                                        w(A({}, e), {
+                                                        M(A({}, e), {
                                                             size: "xs",
                                                             color: c.Z.colors.INTERACTIVE_NORMAL,
                                                         }),
@@ -470,15 +470,15 @@ function B(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(g.T2, {
-                                        id: Y,
-                                        checked: S.flags === u.$.IS_APPLICATION_BYPASS,
+                                    (0, l.jsx)(h.rsf, {
+                                        id: K,
+                                        checked: b.flags === u.$.IS_APPLICATION_BYPASS,
                                         onChange: () => en(u.$.IS_APPLICATION_BYPASS),
                                     }),
                                 ],
                             }),
-                        D &&
-                            (0, l.jsxs)(V, {
+                        k &&
+                            (0, l.jsxs)(U, {
                                 htmlFor: X,
                                 children: [
                                     (0, l.jsxs)("div", {
@@ -494,7 +494,7 @@ function B(e) {
                                                 children: (e) =>
                                                     (0, l.jsx)(
                                                         h.idN,
-                                                        w(A({}, e), {
+                                                        M(A({}, e), {
                                                             size: "xs",
                                                             color: c.Z.colors.INTERACTIVE_NORMAL,
                                                         }),
@@ -502,15 +502,15 @@ function B(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(g.T2, {
+                                    (0, l.jsx)(h.rsf, {
                                         id: X,
-                                        checked: S.flags === u.$.IS_GUEST_INVITE,
+                                        checked: b.flags === u.$.IS_GUEST_INVITE,
                                         onChange: () => en(u.$.IS_GUEST_INVITE),
                                     }),
                                 ],
                             }),
-                        k &&
-                            (0, l.jsxs)(V, {
+                        D &&
+                            (0, l.jsxs)(U, {
                                 htmlFor: Q,
                                 children: [
                                     (0, l.jsxs)("div", {
@@ -526,7 +526,7 @@ function B(e) {
                                                 children: (e) =>
                                                     (0, l.jsx)(
                                                         h.idN,
-                                                        w(A({}, e), {
+                                                        M(A({}, e), {
                                                             size: "xs",
                                                             color: c.Z.colors.INTERACTIVE_NORMAL,
                                                         }),
@@ -534,9 +534,9 @@ function B(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(g.T2, {
+                                    (0, l.jsx)(h.rsf, {
                                         id: Q,
-                                        checked: !!S.temporary,
+                                        checked: !!b.temporary,
                                         onChange: (e) => el(e),
                                     }),
                                 ],
@@ -548,12 +548,12 @@ function B(e) {
                 children: [
                     (0, l.jsx)(h.ua7, {
                         position: "top",
-                        text: J,
-                        shouldShow: null !== J && !K,
+                        text: $,
+                        shouldShow: null !== $ && !W,
                         children: (e) =>
                             (0, l.jsx)(
                                 g.zx,
-                                w(
+                                M(
                                     A(
                                         {
                                             className: Z.button,
@@ -565,10 +565,10 @@ function B(e) {
                                     {
                                         onClick: () => {
                                             var t;
-                                            null == e || null == (t = e.onClick) || t.call(e), $();
+                                            null == e || null == (t = e.onClick) || t.call(e), J();
                                         },
                                         disabled: j,
-                                        children: z
+                                        children: G
                                             ? (0, l.jsxs)(l.Fragment, {
                                                   children: [
                                                       (0, l.jsx)(h.dz2, {
@@ -594,7 +594,7 @@ function B(e) {
                     (0, l.jsxs)(g.zx, {
                         className: Z.button,
                         innerClassName: Z.buttonInner,
-                        onClick: () => I(),
+                        onClick: () => x(),
                         disabled: !N || j,
                         children: [
                             (0, l.jsx)("span", { children: P.intl.string(P.t.BcAABg) }),

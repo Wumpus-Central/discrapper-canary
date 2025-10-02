@@ -1,22 +1,21 @@
-n.d(e, { default: () => v }), n(388685);
+n.d(e, { default: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(793030),
     a = n(442837),
-    s = n(755721),
-    o = n(481060),
-    c = n(430824),
-    d = n(626135),
-    u = n(369994),
-    p = n(162157),
-    b = n(533244),
-    O = n(487419),
-    g = n(821312),
-    f = n(676770),
-    h = n(981631),
-    _ = n(388032),
-    j = n(796668);
-function x(t) {
+    s = n(481060),
+    o = n(430824),
+    c = n(626135),
+    d = n(369994),
+    u = n(162157),
+    p = n(533244),
+    b = n(487419),
+    f = n(821312),
+    O = n(676770),
+    g = n(981631),
+    h = n(388032),
+    _ = n(655330);
+function j(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
@@ -41,7 +40,7 @@ function x(t) {
     }
     return t;
 }
-function y(t, e) {
+function x(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -59,101 +58,101 @@ function y(t, e) {
         t
     );
 }
-function v(t) {
-    let { guildId: e, transitionState: n, onClose: v, analyticsData: N } = t,
-        m = (0, a.e7)([c.Z], () => c.Z.getGuild(e), [e]),
-        E = !!(null == m ? void 0 : m.features.has(h.oNc.INVITES_DISABLED)),
-        [S] = i.useState(!1),
-        [C, T] = i.useState(f.Fl),
-        I = (0, a.e7)([O.Z], () => O.Z.getGuildIncident(e)),
-        D = (0, p.BT)(m),
-        A = (0, b.SG)(I) || E,
-        P = (0, b.sN)(I),
-        [w, R] = i.useState(A),
-        [M, k] = i.useState(P),
-        [G, L] = i.useState(!1),
-        Z = w !== A || M !== P || G,
-        U = E && !D;
-    if (null == m) return v(), null;
-    function K() {
-        R((t) => !t);
+function y(t) {
+    let { guildId: e, transitionState: n, onClose: y, analyticsData: v } = t,
+        N = (0, a.e7)([o.Z], () => o.Z.getGuild(e), [e]),
+        m = !!(null == N ? void 0 : N.features.has(g.oNc.INVITES_DISABLED)),
+        [E] = i.useState(!1),
+        [S, C] = i.useState(O.Fl),
+        I = (0, a.e7)([b.Z], () => b.Z.getGuildIncident(e)),
+        T = (0, u.BT)(N),
+        D = (0, p.SG)(I) || m,
+        A = (0, p.sN)(I),
+        [P, w] = i.useState(D),
+        [R, M] = i.useState(A),
+        [k, G] = i.useState(!1),
+        L = P !== D || R !== A || k,
+        Z = m && !T;
+    if (null == N) return y(), null;
+    function U() {
+        w((t) => !t);
     }
     return (0, r.jsx)(l.Modal, {
         transitionState: n,
-        title: _.intl.string(_.t.oCYAc3),
+        title: h.intl.string(h.t.oCYAc3),
         actions: [
             {
-                text: _.intl.string(_.t["ETE/oK"]),
-                onClick: v,
+                text: h.intl.string(h.t["ETE/oK"]),
+                onClick: y,
                 variant: "secondary",
-                disabled: S,
+                disabled: E,
             },
             {
-                text: _.intl.string(_.t["pwm/z8"]),
+                text: h.intl.string(h.t["pwm/z8"]),
                 onClick: () => {
-                    (A || P) && !w && !M
-                        ? ((0, u.n)(m.id, !1, !1),
-                          (0, o.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(g.Z, y(x({}, t), { guildId: e })))))
-                        : (0, u.n)(m.id, w, M, C);
-                    let { source: t, alertType: n, messageId: i } = N;
-                    d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                    (D || A) && !P && !R
+                        ? ((0, d.n)(N.id, !1, !1),
+                          (0, s.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(f.Z, x(j({}, t), { guildId: e })))))
+                        : (0, d.n)(N.id, P, R, S);
+                    let { source: t, alertType: n, messageId: i } = v;
+                    c.default.track(g.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: e,
                         source: t,
                         raid_alert_id: i,
                         raid_alert_type: n,
-                        intervention_type_enabled: (0, b.sO)(w, M),
-                        intervention_type_disabled: (0, b.lk)(w, M),
-                        duration: 60 * C,
+                        intervention_type_enabled: (0, p.sO)(P, R),
+                        intervention_type_disabled: (0, p.lk)(P, R),
+                        duration: 60 * S,
                     }),
-                        v();
+                        y();
                 },
-                loading: S,
-                disabled: !Z,
+                loading: E,
+                disabled: !L,
             },
         ],
-        onClose: v,
+        onClose: y,
         children: (0, r.jsxs)("div", {
-            className: j.mainContainer,
+            className: _.mainContainer,
             children: [
-                (0, r.jsx)(o.PhF, {
-                    placeholder: _.intl.string(_.t.vKYZzc),
-                    options: (0, f.c1)(),
+                (0, r.jsx)(s.PhF, {
+                    placeholder: h.intl.string(h.t.vKYZzc),
+                    options: (0, O.c1)(),
                     select: (t) => {
-                        T(t), L(!0);
+                        C(t), G(!0);
                     },
-                    isSelected: (t) => t === C,
+                    isSelected: (t) => t === S,
                     serialize: (t) => String(t),
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.pauseContainer,
+                    className: _.pauseContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.pauseText,
+                            className: _.pauseText,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: _.intl.string(_.t.Uwsjn5),
+                                    children: h.intl.string(h.t.Uwsjn5),
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: _.intl.string(_.t.qPJkZm),
+                                    children: h.intl.string(h.t.qPJkZm),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(o.ua7, {
-                            text: _.intl.string(_.t["9GPbsb"]),
-                            shouldShow: E,
+                        (0, r.jsx)(s.ua7, {
+                            text: h.intl.string(h.t["9GPbsb"]),
+                            shouldShow: m,
                             children: (t) =>
                                 (0, r.jsx)(
                                     "div",
-                                    y(x({}, t), {
-                                        className: j.toggle,
-                                        children: (0, r.jsx)(s.T2, {
-                                            onChange: K,
-                                            checked: w,
-                                            disabled: U,
+                                    x(j({}, t), {
+                                        className: _.toggle,
+                                        children: (0, r.jsx)(s.rsf, {
+                                            onChange: U,
+                                            checked: P,
+                                            disabled: Z,
                                         }),
                                     }),
                                 ),
@@ -161,30 +160,30 @@ function v(t) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.pauseContainer,
+                    className: _.pauseContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.pauseText,
+                            className: _.pauseText,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: _.intl.string(_.t.wrDmAw),
+                                    children: h.intl.string(h.t.wrDmAw),
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: _.intl.string(_.t.UQbJW1),
+                                    children: h.intl.string(h.t.UQbJW1),
                                 }),
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: j.toggle,
-                            children: (0, r.jsx)(s.T2, {
+                            className: _.toggle,
+                            children: (0, r.jsx)(s.rsf, {
                                 onChange: function () {
-                                    k((t) => !t);
+                                    M((t) => !t);
                                 },
-                                checked: M,
+                                checked: R,
                             }),
                         }),
                     ],

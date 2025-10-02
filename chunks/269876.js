@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,39 +7,38 @@ var r = n(951288),
     l = n(46973),
     c = n(846519),
     u = n(692547),
-    d = n(755721),
-    f = n(481060),
-    _ = n(846027),
-    p = n(313201),
-    h = n(131951),
-    m = n(65154),
-    g = n(388032),
-    E = n(558254),
-    b = n(43404),
-    y = n(465106),
-    O = n(10198);
-let v = (0, p.hQ)();
-function I() {
+    d = n(481060),
+    f = n(846027),
+    _ = n(313201),
+    p = n(131951),
+    h = n(65154),
+    m = n(388032),
+    g = n(558254),
+    E = n(43404),
+    b = n(465106),
+    y = n(10198);
+let O = (0, _.hQ)();
+function v() {
     let [e, t] = i.useState(-100),
         [n, a] = i.useState(!1),
-        { threshold: I, autoThreshold: T } = (0, s.cj)([h.Z], () => ({
-            threshold: h.Z.getModeOptions().threshold,
-            autoThreshold: h.Z.getModeOptions().autoThreshold,
+        { threshold: v, autoThreshold: I } = (0, s.cj)([p.Z], () => ({
+            threshold: p.Z.getModeOptions().threshold,
+            autoThreshold: p.Z.getModeOptions().autoThreshold,
         })),
         {
-            inputMode: S,
-            automaticVADSupported: A,
-            isEnabled: C,
-        } = (0, s.cj)([h.Z], () => ({
-            inputMode: h.Z.getMode(),
-            automaticVADSupported: h.Z.supports(m.AN.AUTOMATIC_VAD),
-            isEnabled: h.Z.isEnabled(),
+            inputMode: T,
+            automaticVADSupported: S,
+            isEnabled: A,
+        } = (0, s.cj)([p.Z], () => ({
+            inputMode: p.Z.getMode(),
+            automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
+            isEnabled: p.Z.isEnabled(),
         }));
-    function N(e, n) {
-        t(e), a((n & m.Dg.VOICE) === m.Dg.VOICE);
+    function C(e, n) {
+        t(e), a((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
-    function R(e, t) {
-        _.Z.setMode(S, {
+    function N(e, t) {
+        f.Z.setMode(T, {
             threshold: e,
             autoThreshold: t,
         });
@@ -48,27 +47,27 @@ function I() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                h.Z.getMediaEngine().on(l.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().on(l.aB.VoiceActivity, C), e.stop();
             }),
             () => {
-                h.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, C), e.stop();
             }
         );
     }, []);
-    let P = (0, r.jsx)("section", {
-        className: o()(E.inputSensitivityToggle, E.manual),
-        children: (0, r.jsx)(f.iRW, {
-            initialValue: I + 100,
+    let R = (0, r.jsx)("section", {
+        className: o()(g.inputSensitivityToggle, g.manual),
+        children: (0, r.jsx)(d.iRW, {
+            initialValue: v + 100,
             onValueRender: (e) => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-            onValueChange: (e) => R(-((100 - e) * 1), T),
+            onValueChange: (e) => N(-((100 - e) * 1), I),
             barStyles: { background: u.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: u.Z.unsafe_rawColors.YELLOW_300.css },
-            "aria-labelledby": v,
+            "aria-labelledby": O,
             children: (0, r.jsxs)("div", {
-                className: o()(E.sliderBar, E.microphone, E.inputSensitivityBar, b.bar),
+                className: o()(g.sliderBar, g.microphone, g.inputSensitivityBar, E.bar),
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(E.fill, E.inputSensitivityBarFill),
+                        className: o()(g.fill, g.inputSensitivityBarFill),
                         style: { width: e + 100 + "%" },
                     }),
                     (0, r.jsx)("div", { className: "grow" }),
@@ -77,56 +76,56 @@ function I() {
         }),
     });
     return (
-        T &&
-            (P = (0, r.jsxs)("section", {
-                className: E.inputSensitivityToggle,
+        I &&
+            (R = (0, r.jsxs)("section", {
+                className: g.inputSensitivityToggle,
                 children: [
                     (0, r.jsx)("div", {
-                        className: E.inputSensitivitySlider,
+                        className: g.inputSensitivitySlider,
                         children: (0, r.jsx)("div", {
-                            className: o()(E.inputSensitivityBar, E.sliderBar, { [E.speaking]: n }),
+                            className: o()(g.inputSensitivityBar, g.sliderBar, { [g.speaking]: n }),
                         }),
                     }),
-                    (0, r.jsx)(f.R94, {
-                        type: f.R94.Types.DESCRIPTION,
-                        className: O.marginBottom8,
-                        children: g.intl.string(g.t.W3K5Ii),
+                    (0, r.jsx)(d.R94, {
+                        type: d.R94.Types.DESCRIPTION,
+                        className: y.marginBottom8,
+                        children: m.intl.string(m.t.W3K5Ii),
                     }),
                 ],
             })),
-        (0, r.jsxs)(f.xJW, {
-            title: g.intl.string(g.t["sqUm+v"]),
-            titleId: v,
-            className: E.sensitivity,
+        (0, r.jsxs)(d.xJW, {
+            title: m.intl.string(m.t["sqUm+v"]),
+            titleId: O,
+            className: g.sensitivity,
             children: [
-                A &&
-                    (0, r.jsx)(p.FG, {
+                S &&
+                    (0, r.jsx)(_.FG, {
                         children: (e) =>
                             (0, r.jsxs)("div", {
-                                className: o()(y.horizontal, O.marginBottom4),
+                                className: o()(b.horizontal, y.marginBottom4),
                                 children: [
-                                    (0, r.jsx)(f.vwX, {
-                                        tag: f.RB0.H3,
-                                        className: O.marginReset,
+                                    (0, r.jsx)(d.vwX, {
+                                        tag: d.RB0.H3,
+                                        className: y.marginReset,
                                         children: (0, r.jsx)("label", {
                                             htmlFor: e,
-                                            children: g.intl.string(g.t.I1Zuq6),
+                                            children: m.intl.string(m.t.I1Zuq6),
                                         }),
                                     }),
-                                    (0, r.jsx)(d.T2, {
+                                    (0, r.jsx)(d.rsf, {
                                         id: e,
-                                        checked: T,
-                                        onChange: (e) => R(I, e),
+                                        checked: I,
+                                        onChange: (e) => N(v, e),
                                     }),
                                 ],
                             }),
                     }),
-                P,
-                !C &&
-                    (0, r.jsx)(f.R94, {
-                        type: f.R94.Types.DESCRIPTION,
-                        className: o()(E.inputDisabledWarning, O.marginBottom8),
-                        children: g.intl.format(g.t["O13I+P"], { onEnableClick: () => _.Z.enable(!0) }),
+                R,
+                !A &&
+                    (0, r.jsx)(d.R94, {
+                        type: d.R94.Types.DESCRIPTION,
+                        className: o()(g.inputDisabledWarning, y.marginBottom8),
+                        children: m.intl.format(m.t["O13I+P"], { onEnableClick: () => f.Z.enable(!0) }),
                     }),
             ],
         })
