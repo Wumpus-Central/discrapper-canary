@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__955a3",
+    withoutTopBorder: "withoutTopBorder__955a3",
     dragRegion: "dragRegion__955a3",
     bannerAsset: "bannerAsset__955a3",
     orbsBannerAsset: "orbsBannerAsset__955a3",

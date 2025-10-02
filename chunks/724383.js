@@ -13,7 +13,7 @@ var r = n(951288),
     h = n(836768),
     g = n(766219),
     m = n(49898),
-    b = n(775491);
+    b = n(791000);
 let _ = function () {
     let e = (0, a.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         t = h.Z.useField("selectedTab"),
@@ -24,7 +24,7 @@ let _ = function () {
                 case m.GlobalDiscoveryTab.APPS:
                     return (0, r.jsx)(c.default, {});
                 case m.GlobalDiscoveryTab.QUESTS:
-                    return (0, r.jsx)(d.Z, {});
+                    return (0, r.jsx)(d.Z, { withTopBorder: !1 });
                 default:
                     (0, p.vE)(e);
             }
