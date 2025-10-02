@@ -117,8 +117,8 @@ let A = { location: {} },
     P = 60000,
     w = 120000,
     D = 300000,
-    x = 900000,
-    L = 3600000,
+    L = 900000,
+    x = 3600000,
     j = 86400000,
     M = 0.001,
     k = performance.now(),
@@ -141,31 +141,31 @@ let Z = {
         e.location_object_type === m.Qqv.ACK_MANUAL
             ? void 0
             : {
-                  throttlePeriod: x,
+                  throttlePeriod: L,
                   throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section],
               },
     [m.rMx.GUILD_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id, e.is_pending],
     },
     [m.rMx.FRIENDS_LIST_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [m.rMx.FRIENDS_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [m.rMx.NOW_PLAYING_CARD_HOVERED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [m.rMx.START_SPEAKING]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.server],
     },
     [m.rMx.START_LISTENING]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.server],
     },
     [m.rMx.ACTIVITY_UPDATED]: {
@@ -174,7 +174,7 @@ let Z = {
         deduplicate: !0,
     },
     [m.rMx.CHANNEL_OPENED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) =>
             null != e.channel_static_route
                 ? [e.guild_id, e.channel_static_route, e.channel_view]
@@ -185,19 +185,19 @@ let Z = {
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.NOTIFICATION_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.notif_type],
     },
     [m.rMx.MEMBER_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.DM_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.NAV_DRAWER_OPENED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [m.rMx.KEYBOARD_SHORTCUT_USED]: {
@@ -212,7 +212,7 @@ let Z = {
         throttleKeys: () => [],
     },
     [m.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.type],
     },
     [m.rMx.ROLE_PAGE_VIEWED]: {
@@ -228,11 +228,11 @@ let Z = {
         throttleKeys: () => [],
     },
     [m.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [m.rMx.HUB_STUDENT_PROMPT_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [m.rMx.RPC_SERVER_ERROR_CAUGHT]: {
@@ -266,7 +266,7 @@ let Z = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [m.rMx.FORUM_CHANNEL_SCROLLED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [m.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
@@ -282,23 +282,23 @@ let Z = {
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.ACTIVITY_CARDS_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.context, e.guild_id],
     },
     [m.rMx.GUILD_TOOLTIP_SHOWN]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id],
     },
     [m.rMx.ACK_COMMUNITY_MESSAGES]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.REDESIGN_NAV_BAR_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab],
     },
     [m.rMx.CHANNEL_LIST_END_REACHED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id],
     },
     [m.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
@@ -306,11 +306,11 @@ let Z = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [m.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: () => [],
     },
     [m.rMx.KEYWORD_FILTER_MATCH]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.message_id],
     },
     [m.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
@@ -322,7 +322,7 @@ let Z = {
         throttleKeys: (e) => [e.location_stack],
     },
     [m.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
@@ -340,7 +340,7 @@ let Z = {
         throttleKeys: (e) => [e.channel_id],
     },
     [m.rMx.REDACTABLE_MESSAGE_LOADED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id, e.message_id],
     },
     [m.rMx.OPEN_MODAL]: (e) =>
@@ -355,7 +355,7 @@ let Z = {
         throttleKeys: (e) => [e.guild_id],
     },
     [m.rMx.NOTIFICATION_PERMISSION_STATUS]: {
-        throttlePeriod: 12 * L,
+        throttlePeriod: 12 * x,
         throttleKeys: (e) => [
             e.os_enabled,
             e.notification_authorization_status,
@@ -364,7 +364,7 @@ let Z = {
         ],
     },
     [m.rMx.SEARCH_BAR_VIEWED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.search_type],
     },
     [m.rMx.AD_IDENTIFIER_FETCHED]: {
@@ -376,7 +376,11 @@ let Z = {
         throttleKeys: (e) => [e.application_id],
     },
     [m.rMx.LIBDISCORE_SLOW_TIMERS]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
+        throttleKeys: () => [],
+    },
+    [m.rMx.DEBUG_MISSING_STRING]: {
+        throttlePeriod: x,
         throttleKeys: () => [],
     },
 };
