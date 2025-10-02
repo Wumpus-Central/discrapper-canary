@@ -1,141 +1,105 @@
-n.d(e, { default: () => p }), n(388685);
-var l = n(951288),
-    r = n(647438),
-    i = n(755721),
-    a = n(481060),
-    s = n(600164),
-    o = n(538211),
-    c = n(698066),
-    u = n(648159),
-    d = n(388032),
-    b = n(357062),
-    m = n(47718);
-function f(t, e, n) {
+e.d(n, { default: () => g }), e(388685);
+var l = e(951288),
+    r = e(647438),
+    i = e(159691),
+    a = e(481060),
+    s = e(538211),
+    u = e(698066),
+    o = e(648159),
+    c = e(388032);
+function b(t, n, e) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: n,
+        n in t
+            ? Object.defineProperty(t, n, {
+                  value: e,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
+            : (t[n] = e),
         t
     );
 }
-class g extends r.PureComponent {
+class d extends r.PureComponent {
     render() {
-        let { isStreamer: t, transitionState: e, onClose: n } = this.props,
+        let { isStreamer: t, transitionState: n, onClose: e } = this.props,
             { problem: r } = this.state;
-        return (0, l.jsxs)(a.Y0X, {
-            transitionState: e,
-            size: a.CgR.SMALL,
-            "aria-label": d.intl.string(d.t.qnJ9W1),
-            parentComponent: "ReportProblem",
+        return (0, l.jsxs)(i.u_l, {
+            title: c.intl.string(c.t.qnJ9W1),
+            subtitle: c.intl.string(c.t["7vw0h4"]),
+            actions: [
+                {
+                    text: c.intl.string(c.t["ETE/oK"]),
+                    variant: "secondary",
+                    onClick: e,
+                },
+                {
+                    text: c.intl.string(c.t.E48BIS),
+                    variant: "primary",
+                    onClick: this.handleSubmit,
+                    disabled: null == r,
+                },
+            ],
+            onClose: e,
+            transitionState: n,
             children: [
-                (0, l.jsx)(u.Z, {}),
-                (0, l.jsxs)(a.xBx, {
-                    separator: !1,
-                    className: b.modalHeader,
-                    children: [
-                        (0, l.jsx)(a.X6q, {
-                            variant: "text-md/semibold",
-                            className: m.title,
-                            children: d.intl.string(d.t.qnJ9W1),
-                        }),
-                        (0, l.jsx)(a.olH, {
-                            className: m.closeButton,
-                            innerClassName: b.modalInnerCloseButton,
-                            onClick: n,
-                        }),
-                    ],
-                }),
-                (0, l.jsxs)(a.hzk, {
-                    className: m.content,
-                    children: [
-                        (0, l.jsx)(a.Text, {
-                            variant: "text-sm/normal",
-                            children: d.intl.string(d.t["7vw0h4"]),
-                        }),
-                        (0, l.jsx)(a.q4e, {
-                            label: d.intl.string(d.t["6Y1t5O"]),
-                            placeholder: d.intl.string(d.t.U0kGk5),
-                            options: (0, o.Z)({
-                                isStreamer: t,
-                                isEndStream: !1,
-                            }),
-                            onChange: this.handleChanged,
-                            value: r,
-                            maxVisibleItems: 4,
-                        }),
-                        (0, l.jsx)("div", { className: b.art }),
-                    ],
-                }),
-                (0, l.jsxs)(a.mzw, {
-                    className: m.__invalid_footer,
-                    children: [
-                        (0, l.jsx)(a.zxk, {
-                            variant: "primary",
-                            text: d.intl.string(d.t.E48BIS),
-                            disabled: null == r,
-                            onClick: this.handleSubmit,
-                        }),
-                        (0, l.jsx)(s.Z, {
-                            children: (0, l.jsx)(i.zx, {
-                                look: i.zx.Looks.LINK,
-                                color: i.zx.Colors.PRIMARY,
-                                size: i.zx.Sizes.NONE,
-                                onClick: n,
-                                children: d.intl.string(d.t["ETE/oK"]),
-                            }),
-                        }),
-                    ],
+                (0, l.jsx)(o.Z, {}),
+                (0, l.jsx)(a.q4e, {
+                    label: c.intl.string(c.t["6Y1t5O"]),
+                    placeholder: c.intl.string(c.t.U0kGk5),
+                    options: (0, s.Z)({
+                        isStreamer: t,
+                        isEndStream: !1,
+                    }),
+                    onChange: this.handleChanged,
+                    value: r,
+                    maxVisibleItems: 4,
                 }),
             ],
         });
     }
     constructor(...t) {
         super(...t),
-            f(this, "state", { problem: null }),
-            f(this, "handleChanged", (t) => {
+            b(this, "state", { problem: null }),
+            b(this, "handleChanged", (t) => {
                 this.setState({ problem: null != t ? t : null });
             }),
-            f(this, "handleSubmit", () => {
-                let { stream: t, streamApplication: e, analyticsData: r, onClose: i } = this.props,
+            b(this, "handleSubmit", () => {
+                let { stream: t, streamApplication: n, analyticsData: r, onClose: i } = this.props,
                     { problem: s } = this.state;
-                (0, c.Z)({
+                (0, u.Z)({
                     problem: s,
                     stream: t,
                     feedback: "",
-                    streamApplication: e,
+                    streamApplication: n,
                     analyticsData: r,
                     location: "Stream",
                 }),
                     i(),
                     (0, a.ZDy)(async () => {
-                        let { default: t } = await n.e("14466").then(n.bind(n, 729328));
-                        return (e) =>
+                        let { default: t } = await e.e("14466").then(e.bind(e, 729328));
+                        return (n) =>
                             (0, l.jsx)(
                                 t,
                                 (function (t) {
-                                    for (var e = 1; e < arguments.length; e++) {
-                                        var n = null != arguments[e] ? arguments[e] : {},
-                                            l = Object.keys(n);
+                                    for (var n = 1; n < arguments.length; n++) {
+                                        var e = null != arguments[n] ? arguments[n] : {},
+                                            l = Object.keys(e);
                                         "function" == typeof Object.getOwnPropertySymbols &&
                                             (l = l.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                                Object.getOwnPropertySymbols(e).filter(function (t) {
+                                                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
                                                 }),
                                             )),
-                                            l.forEach(function (e) {
-                                                f(t, e, n[e]);
+                                            l.forEach(function (n) {
+                                                b(t, n, e[n]);
                                             });
                                     }
                                     return t;
-                                })({ body: d.intl.string(d.t.mMTVnp) }, e),
+                                })({ body: c.intl.string(c.t.mMTVnp) }, n),
                             );
                     });
             });
     }
 }
-let p = g;
+let g = d;
