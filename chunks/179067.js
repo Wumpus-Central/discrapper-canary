@@ -1,7 +1,7 @@
 n.d(t, { V: () => g });
 var r = n(951288),
-    i = n(784021),
-    a = n(484437),
+    i = n(375316),
+    a = n(267603),
     o = n(692547),
     s = n(197723),
     l = n(777207),
@@ -81,13 +81,14 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    var { label: t, layout: n, isDisabled: d, icon: _ } = e,
-        m = h(e, ["label", "layout", "isDisabled", "icon"]);
+    var { label: t, layout: n, isDisabled: d, icon: _, accessibilityHint: m } = e,
+        g = h(e, ["label", "layout", "isDisabled", "icon", "accessibilityHint"]);
+    let E = [t, m].filter(Boolean).join(", ");
     return (0, r.jsx)(
         i.Vp,
-        p(f({}, m), {
+        p(f({}, g), {
             className: u.tag,
-            textValue: t,
+            textValue: E,
             isDisabled: d,
             children: (e) => {
                 let { allowsRemoving: i } = e;

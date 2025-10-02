@@ -9,12 +9,12 @@ var r = n(951288),
     u = n(816529),
     d = n(35916),
     f = n(199823),
-    _ = n(626921),
-    p = n(483753),
-    h = n(614177),
-    m = n(388032),
-    g = n(484050),
-    E = n(261076);
+    _ = n(713072),
+    p = n(626921),
+    h = n(483753),
+    m = n(490340),
+    g = n(388032),
+    E = n(680765);
 function b(e, t, n) {
     return (
         t in e
@@ -109,15 +109,15 @@ function A(e) {
             selectionMode: t,
             id: n,
             required: o,
-            disabled: E,
-            readOnly: b,
-            loading: O,
-            autoFocus: I,
-            clearable: T,
-            fullWidth: S,
-            closeOnSelect: A = !0,
+            disabled: b,
+            readOnly: O,
+            loading: I,
+            autoFocus: T,
+            clearable: S,
+            fullWidth: A,
+            closeOnSelect: N = !0,
             shouldFocusWrap: R,
-            placeholder: P = m.intl.string(h.default["A+pfVV"]),
+            placeholder: P = g.intl.string(m.default["A+pfVV"]),
             label: w,
             name: D,
             form: L,
@@ -145,10 +145,10 @@ function A(e) {
         Y = i.useContext(s.U),
         W = i.useRef(null),
         K = i.useRef(null),
-        z = null != A ? A : "multiple" !== t,
+        z = null != N ? N : "multiple" !== t,
         q = V.selectedItems.size > 0,
         X = V.listItems.length > j,
-        Q = !V.isInitialized || E || b || O,
+        Q = !V.isInitialized || b || O || I,
         J = i.useCallback(() => {
             Q || H((e) => v(y({}, e), { isOpen: !e.isOpen }));
         }, [Q]),
@@ -167,10 +167,10 @@ function A(e) {
                         e.preventDefault(), H((e) => v(y({}, e), { isOpen: !0 }));
                         break;
                     case "Escape":
-                        q && T && (e.preventDefault(), e.stopPropagation(), ee());
+                        q && S && (e.preventDefault(), e.stopPropagation(), ee());
                 }
             },
-            [ee, q, T],
+            [ee, q, S],
         ),
         en = i.useCallback((e) => (null != k ? k(e) : e), [k]);
     i.useLayoutEffect(() => {
@@ -180,7 +180,7 @@ function A(e) {
                 let r = en(n);
                 return (
                     (t = Math.max(t, r.label.length)),
-                    !V.isInitialized && (null != G || null != B) && (0, p.tw)(r.value, null != G ? G : B) && e.add(r),
+                    !V.isInitialized && (null != G || null != B) && (0, h.tw)(r.value, null != G ? G : B) && e.add(r),
                     r
                 );
             });
@@ -199,7 +199,7 @@ function A(e) {
                 (null == G
                     ? H((e) => v(y({}, e), { selectedItems: new Set() }))
                     : H((e) =>
-                          v(y({}, e), { selectedItems: new Set(e.listItems.filter((e) => (0, p.tw)(e.value, G))) }),
+                          v(y({}, e), { selectedItems: new Set(e.listItems.filter((e) => (0, h.tw)(e.value, G))) }),
                       ));
         }, [G, Q, Z]),
         i.useLayoutEffect(() => {
@@ -209,7 +209,7 @@ function A(e) {
                     var e, n, r, i;
                     let a = "",
                         o = "auto";
-                    if (S)
+                    if (A)
                         a = "".concat(
                             null != (n = null == (e = K.current) ? void 0 : e.getBoundingClientRect().width) ? n : 0,
                             "px",
@@ -232,7 +232,7 @@ function A(e) {
                 }, 500),
             );
             return e.observe(K.current), () => e.disconnect();
-        }, [S, t, j, X, V.longestLabelCharCount]);
+        }, [A, t, j, X, V.longestLabelCharCount]);
     let er = i.useCallback(
         (e) => {
             if (Q) return;
@@ -249,13 +249,13 @@ function A(e) {
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(_.q, {
+            (0, r.jsx)(p.q, {
                 ref: K,
-                disabled: E,
-                readOnly: b,
-                loading: O,
-                clearable: T,
-                fullWidth: S,
+                disabled: b,
+                readOnly: O,
+                loading: I,
+                clearable: S,
+                fullWidth: A,
                 isOpen: V.isOpen,
                 isInert: Q,
                 hasValue: q,
@@ -267,13 +267,13 @@ function A(e) {
                     children: (0, r.jsxs)("button", {
                         id: n,
                         ref: W,
-                        autoFocus: I,
-                        className: g.selectButton,
+                        autoFocus: T,
+                        className: E.selectButton,
                         onClick: J,
                         onKeyDown: et,
-                        disabled: E || b,
+                        disabled: b || O,
                         "aria-expanded": V.isOpen,
-                        "aria-busy": O,
+                        "aria-busy": I,
                         "aria-haspopup": "listbox",
                         "aria-controls": F,
                         "aria-describedby": "".concat(null == Y ? void 0 : Y.describedById),
@@ -316,7 +316,7 @@ function A(e) {
                         selectedItems: V.selectedItems,
                         onSelectionChange: er,
                         shouldFocusWrap: R,
-                        renderListItem: (e) => (0, r.jsx)(N, { item: e }),
+                        renderListItem: (e) => (0, r.jsx)(_.W, y({}, e)),
                     }),
                 }),
         ],
@@ -326,7 +326,7 @@ function C(e) {
     let { placeholder: t, selectedItems: n } = e;
     if (null == n || 0 === n.size)
         return (0, r.jsx)("div", {
-            className: g.placeholder,
+            className: E.placeholder,
             children: (0, r.jsx)(c.xvT, {
                 variant: "text-md/normal",
                 color: "currentColor",
@@ -337,7 +337,7 @@ function C(e) {
     let i = Array.from(n);
     return i.length > 1
         ? (0, r.jsx)("div", {
-              className: g.multipleValues,
+              className: E.multipleValues,
               children: (0, r.jsx)(c.xvT, {
                   variant: "text-md/normal",
                   color: "currentColor",
@@ -345,16 +345,5 @@ function C(e) {
                   children: i.map((e) => e.label).join(", "),
               }),
           })
-        : (0, r.jsx)(N, { item: i[0] });
-}
-function N(e) {
-    let { item: t } = e;
-    return (0, r.jsx)("div", {
-        className: E.listBoxItemContent,
-        children: (0, r.jsx)(c.xvT, {
-            variant: "text-md/medium",
-            color: "currentColor",
-            children: t.label,
-        }),
-    });
+        : (0, r.jsx)(_.W, y({}, i[0]));
 }

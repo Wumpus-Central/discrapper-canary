@@ -1,11 +1,12 @@
-n.d(t, { W: () => h }), n(953529);
+n.d(t, { W: () => m }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(35916),
     a = n(496600),
-    o = n(673221),
-    s = n(231338);
-function l(e, t, n) {
+    o = n(333200),
+    s = n(673221),
+    l = n(231338);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,22 +47,22 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +70,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +79,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = [
+let h = [
         {
             label: "Aardvark",
             value: "aardvark",
@@ -111,7 +112,7 @@ let p = [
             disabled: !0,
         },
     ],
-    h = {
+    m = {
         title: "Select",
         stories: [
             {
@@ -119,13 +120,13 @@ let p = [
                 name: "Select",
                 component: function (e) {
                     var { selectionMode: t } = e,
-                        n = f(e, ["selectionMode"]);
+                        n = _(e, ["selectionMode"]);
                     return (0, r.jsx)(
-                        o.P,
-                        d(c({}, n), {
+                        s.P,
+                        f(u({}, n), {
                             selectionMode: t,
-                            options: p,
-                            onSelectionChange: s.dG,
+                            options: h,
+                            onSelectionChange: l.dG,
                         }),
                     );
                 },
@@ -224,6 +225,110 @@ let p = [
                 },
             },
             {
+                id: "searchable-select",
+                name: "SearchableSelect",
+                component: function (e) {
+                    var { selectionMode: t } = e,
+                        n = _(e, ["selectionMode"]);
+                    return (0, r.jsx)(
+                        o.V,
+                        f(u({}, n), {
+                            selectionMode: t,
+                            onSelectionChange: l.dG,
+                            options: h,
+                        }),
+                    );
+                },
+                controls: {
+                    selectionMode: {
+                        label: "Selection Mode",
+                        type: "select",
+                        options: [
+                            {
+                                label: "Single",
+                                value: "single",
+                            },
+                            {
+                                label: "Multiple",
+                                value: "multiple",
+                            },
+                        ],
+                        defaultValue: "single",
+                    },
+                    required: {
+                        label: "Required",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                    disabled: {
+                        type: "boolean",
+                        label: "Disabled",
+                        defaultValue: !1,
+                    },
+                    clearable: {
+                        type: "boolean",
+                        label: "Clearable",
+                        defaultValue: !1,
+                    },
+                    loading: {
+                        type: "boolean",
+                        label: "Loading",
+                        defaultValue: !1,
+                    },
+                    closeOnSelect: {
+                        type: "boolean",
+                        label: "Close on select",
+                        defaultValue: !1,
+                    },
+                    shouldFocusWrap: {
+                        type: "boolean",
+                        label: "Should listbox focus wrap",
+                        defaultValue: !1,
+                    },
+                    wrapTags: {
+                        type: "boolean",
+                        label: "Wrap tags",
+                        defaultValue: !1,
+                    },
+                    maxOptionsVisible: {
+                        type: "number",
+                        label: "Max options visible",
+                        defaultValue: 5,
+                    },
+                    label: {
+                        type: "text",
+                        label: "Label",
+                        defaultValue: "Sort by",
+                    },
+                    hideLabel: {
+                        type: "boolean",
+                        label: "Hide Label",
+                        defaultValue: !1,
+                    },
+                    description: {
+                        type: "text",
+                        label: "Description",
+                        defaultValue: "This is an example description",
+                    },
+                    helperText: {
+                        type: "text",
+                        label: "Helper Text",
+                        defaultValue:
+                            "This is an example of helper text, which can be used to provide additional information about the field.",
+                    },
+                    errorMessage: {
+                        type: "text",
+                        label: "Error Message",
+                        defaultValue: "",
+                    },
+                    successMessage: {
+                        type: "text",
+                        label: "Success Message",
+                        defaultValue: "",
+                    },
+                },
+            },
+            {
                 id: "combobox",
                 name: "ComboBox",
                 component: function (e) {
@@ -232,11 +337,12 @@ let p = [
                             label: n,
                             hideLabel: i,
                             description: o,
-                            helperText: l,
-                            errorMessage: u,
-                            successMessage: _,
+                            helperText: s,
+                            errorMessage: c,
+                            successMessage: d,
+                            wrapTags: p,
                         } = e,
-                        h = f(e, [
+                        m = _(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -244,30 +350,32 @@ let p = [
                             "helperText",
                             "errorMessage",
                             "successMessage",
+                            "wrapTags",
                         ]);
-                    let { required: m, disabled: g } = h;
+                    let { required: g, disabled: E } = m;
                     return (0, r.jsxs)(
                         a.uz,
-                        d(
-                            c(
+                        f(
+                            u(
                                 {
                                     selectionMode: t,
-                                    onSelectionChange: s.dG,
-                                    options: p,
+                                    onSelectionChange: l.dG,
+                                    options: h,
                                 },
-                                h,
+                                m,
                             ),
                             {
                                 children: [
                                     (0, r.jsx)(a.Ct, {
                                         label: n,
                                         hideLabel: i,
-                                        required: m,
-                                        disabled: g,
+                                        required: g,
+                                        disabled: E,
                                         description: o,
-                                        helperText: l,
-                                        errorMessage: u,
-                                        successMessage: _,
+                                        helperText: s,
+                                        errorMessage: c,
+                                        successMessage: d,
+                                        wrapTags: p,
                                     }),
                                     (0, r.jsx)(a.px, {}),
                                 ],
@@ -321,6 +429,11 @@ let p = [
                         label: "Should listbox focus wrap",
                         defaultValue: !1,
                     },
+                    wrapTags: {
+                        type: "boolean",
+                        label: "Wrap tags",
+                        defaultValue: !1,
+                    },
                     label: {
                         type: "text",
                         label: "Label",
@@ -363,8 +476,8 @@ let p = [
                         selectionMode: t,
                         required: n,
                         shouldFocusWrap: a,
-                        items: p,
-                        onSelectionChange: s.dG,
+                        items: h,
+                        onSelectionChange: l.dG,
                     });
                 },
                 controls: {

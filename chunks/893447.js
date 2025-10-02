@@ -1,7 +1,7 @@
 n.d(t, { Q: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(784021),
+    a = n(375316),
     o = n(179067),
     s = n(571527);
 function l(e, t, n) {
@@ -58,38 +58,41 @@ function d(e, t) {
 }
 function f(e) {
     let {
-            label: t,
-            disabledKeys: n,
-            selectionMode: l = "none",
-            layout: u = "default",
-            items: f,
-            onRemove: _,
-            children: p,
+            listRef: t,
+            label: n,
+            disabledKeys: l,
+            selectionMode: u = "none",
+            layout: f = "default",
+            items: _,
+            onRemove: p,
+            children: h,
         } = e,
-        [h, m] = i.useState(() => new Set());
+        [m, g] = i.useState(() => new Set());
     return (0, r.jsxs)(a.QS, {
-        "aria-label": t,
-        "data-layout": u,
+        "aria-label": n,
+        "data-layout": f,
         className: s.tagGroup,
-        selectionMode: l,
-        selectedKeys: h,
-        onSelectionChange: m,
-        disabledKeys: n,
-        onRemove: _,
+        selectionMode: u,
+        selectedKeys: m,
+        onSelectionChange: g,
+        disabledKeys: l,
+        onRemove: p,
         children: [
             (0, r.jsx)(a.PS, {
+                ref: t,
                 className: s.tagList,
-                children: f.map((e) =>
+                children: _.map((e) =>
                     (0, i.createElement)(
                         o.V,
                         d(c({}, e), {
                             key: e.id,
-                            layout: u,
+                            layout: f,
+                            accessibilityHint: e.accessibilityHint,
                         }),
                     ),
                 ),
             }),
-            p,
+            h,
         ],
     });
 }

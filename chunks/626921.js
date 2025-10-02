@@ -5,9 +5,9 @@ var i = n(120356),
     a = n.n(i),
     o = n(793030),
     s = n(74655),
-    l = n(614177),
+    l = n(490340),
     c = n(388032),
-    u = n(484050);
+    u = n(680765);
 function d(e) {
     let {
         ref: t,
@@ -21,10 +21,9 @@ function d(e) {
         hasValue: m,
         showChevronButton: g = !0,
         width: E,
-        leadingAccessory: b,
-        children: y,
-        handleToggle: O,
-        handleClear: v,
+        children: b,
+        handleToggle: y,
+        handleClear: O,
     } = e;
     return (0, r.jsxs)(s.U, {
         ref: t,
@@ -38,17 +37,19 @@ function d(e) {
         readOnly: i,
         fullWidth: c,
         children: [
-            b,
-            y,
+            (0, r.jsx)("div", {
+                className: u.selectFieldContent,
+                children: b,
+            }),
             (0, r.jsx)(f, {
                 show: !0 === l && !h && !0 === m,
                 iconSize: g ? "xs" : "sm",
-                onClick: v,
+                onClick: O,
             }),
             (0, r.jsx)(_, {
                 show: !0 === g && !o,
                 isOpen: d,
-                onClick: O,
+                onClick: y,
             }),
             (0, r.jsx)(p, { show: !0 === o }),
         ],
