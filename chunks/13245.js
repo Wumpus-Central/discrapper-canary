@@ -179,8 +179,10 @@ let O = new o.Z("OverlayActionCreators"),
             });
         },
         setNotificationDisabledSetting(e, t) {
+            let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             return (
                 e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY &&
+                    n &&
                     this.track(m.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
                 i.Z.dispatch({
                     type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",

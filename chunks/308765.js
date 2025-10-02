@@ -333,7 +333,16 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     OverlayNegativeWidgetExperimentManager: {
-        actions: ["OVERLAY_READY", "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING", "LAYOUT_SET_PINNED"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "APEX_EXPERIMENTS_FETCH_SUCCESS",
+            "APEX_EXPERIMENT_OVERRIDE_CLEAR",
+            "APEX_EXPERIMENT_OVERRIDE_DELETE",
+            "APEX_EXPERIMENT_OVERRIDE_CREATE",
+            "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
+            "EXPERIMENT_OVERRIDE_BUCKET",
+            "LAYOUT_SET_PINNED",
+        ],
         inlineRequire: () => n(266173).Z,
         neverLoadBeforeConnectionOpen: !0,
     },

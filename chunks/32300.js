@@ -12,7 +12,6 @@ n.d(t, {
     aq: () => I,
     dj: () => f,
     eV: () => C,
-    fn: () => R,
     hS: () => h,
     lj: () => v,
     mB: () => m,
@@ -277,7 +276,7 @@ let N = (0, i.le)({
         videoWidgetDefaultUnpinned: !1,
         disableWelcomeNotification: !1,
         notificationsDefaultOff: !1,
-        renderInvisibleOverlay: !1,
+        unlockedOnlyDefaultOverlay: !1,
     },
     variations: {
         1: {
@@ -285,38 +284,35 @@ let N = (0, i.le)({
             videoWidgetDefaultUnpinned: !1,
             disableWelcomeNotification: !1,
             notificationsDefaultOff: !1,
-            renderInvisibleOverlay: !1,
+            unlockedOnlyDefaultOverlay: !1,
         },
         2: {
             voiceWidgetDefaultUnpinned: !1,
             videoWidgetDefaultUnpinned: !0,
             disableWelcomeNotification: !1,
             notificationsDefaultOff: !1,
-            renderInvisibleOverlay: !1,
+            unlockedOnlyDefaultOverlay: !1,
         },
         3: {
             voiceWidgetDefaultUnpinned: !1,
             videoWidgetDefaultUnpinned: !1,
             disableWelcomeNotification: !0,
             notificationsDefaultOff: !1,
-            renderInvisibleOverlay: !1,
+            unlockedOnlyDefaultOverlay: !1,
         },
         4: {
             voiceWidgetDefaultUnpinned: !1,
             videoWidgetDefaultUnpinned: !1,
             disableWelcomeNotification: !1,
             notificationsDefaultOff: !0,
-            renderInvisibleOverlay: !1,
+            unlockedOnlyDefaultOverlay: !1,
         },
         5: {
             voiceWidgetDefaultUnpinned: !1,
             videoWidgetDefaultUnpinned: !1,
             disableWelcomeNotification: !1,
             notificationsDefaultOff: !1,
-            renderInvisibleOverlay: !0,
+            unlockedOnlyDefaultOverlay: !0,
         },
     },
 });
-function R(e) {
-    return N.getConfig({ location: e });
-}

@@ -1,6 +1,7 @@
 n.d(t, {
     A4: () => p,
     E9: () => f,
+    K4: () => g,
     Os: () => c,
     jx: () => h,
     n6: () => d,
@@ -42,14 +43,17 @@ function c(e) {
         widgetId: e,
     });
 }
-function u(e, t) {
-    r.Z.dispatch({
-        type: "LAYOUT_SET_PINNED",
-        widgetId: e,
-        pinned: t,
-    });
-    let n = a.Z.getWidget(e);
-    null != n && (0, i.JS)(n.type, { pinned: null != t ? t : !n.pinned });
+function u(e) {
+    let { forcedPinnedState: t, shouldTrack: n = !0 } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        o = r.Z.dispatch({
+            type: "LAYOUT_SET_PINNED",
+            widgetId: e,
+            pinned: t,
+        });
+    if (!n) return o;
+    let s = a.Z.getWidget(e);
+    return null == s || (0, i.JS)(s.type, { pinned: null != t ? t : !s.pinned }), o;
 }
 function d(e) {
     r.Z.dispatch({
@@ -83,5 +87,12 @@ function m(e, t) {
         type: "LAYOUT_SET_WIDGET_META",
         widgetId: e,
         meta: t,
+    });
+}
+function g(e, t) {
+    return r.Z.dispatch({
+        type: "LAYOUT_SET_DEFAULT_CONFIG",
+        widgetType: e,
+        defaultConfig: t,
     });
 }

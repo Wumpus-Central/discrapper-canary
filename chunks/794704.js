@@ -65,7 +65,7 @@ var r = n(951288),
     ef = n(987650),
     e_ = n(501787),
     ep = n(388032),
-    eh = n(607547),
+    eh = n(289726),
     em = n(131970),
     eg = n(730462);
 function eE(e, t, n) {
@@ -955,12 +955,17 @@ function eV() {
         }),
     });
 }
-let eH = (e, t, n) =>
+let eH = (e, t, n, r) =>
     [
         {
             title: ep.t.eVE4LS,
             description: ep.t["72WNqq"],
             disabledSetting: L.OverlayNotificationDisabledSetting.TEXT_CHAT,
+        },
+        r && {
+            title: ep.t.oifnSk,
+            description: ep.t.bgU5r6,
+            disabledSetting: L.OverlayNotificationDisabledSetting.WELCOME_GENERAL,
         },
         {
             title: ep.t.hqsZJS,
@@ -988,11 +993,12 @@ let eH = (e, t, n) =>
 function eY() {
     let { allowActivityWidget: e, allowNowPlaying: t } = (0, j.o4)("user_settings"),
         { enabled: n } = (0, j.aq)("OverlayV3StreamWatchNudge"),
-        i = eH(e, t, n),
-        a = (e) => (t) => {
+        { disableWelcomeNotification: i } = j.aZ.useConfig({ location: "OverlayNotificationSettings" }),
+        a = eH(e, t, n, i),
+        o = (e) => (t) => {
             y.Z.setNotificationDisabledSetting(e, !t);
         },
-        o = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
+        s = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
     return (0, r.jsxs)("div", {
         className: eh.notificationSettingsContainer,
         children: [
@@ -1001,7 +1007,7 @@ function eY() {
                 color: "header-primary",
                 children: ep.intl.string(ep.t.xOE5bG),
             }),
-            i.map((e) =>
+            a.map((e) =>
                 (0, r.jsxs)(
                     eL,
                     {
@@ -1023,8 +1029,8 @@ function eY() {
                                 ],
                             }),
                             (0, r.jsx)(m.j7V, {
-                                value: !o.has(e.disabledSetting),
-                                onChange: a(e.disabledSetting),
+                                value: !s.has(e.disabledSetting),
+                                onChange: o(e.disabledSetting),
                                 hideBorder: !0,
                             }),
                         ],
