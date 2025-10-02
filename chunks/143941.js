@@ -71,8 +71,8 @@ let E = (e) => {
             selectedVariantIndex: C,
         } = e,
         [S, A] = (0, p.US)([s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        I = S === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        { analyticsLocations: N } = (0, d.ZP)(),
+        N = S === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+        { analyticsLocations: I } = (0, d.ZP)(),
         T = O.default.getCurrentUser(),
         L = null != T ? f.Z.getFirstWishlistId(T.id) : null,
         k = l.useMemo(() => {
@@ -84,69 +84,77 @@ let E = (e) => {
         D = k.skuId,
         R = (0, y.n)(L, D),
         M = l.useRef(null),
-        [F, Z] = l.useState(null);
+        [F, U] = l.useState(null);
     l.useEffect(() => {
-        Z(null);
+        U(null);
     }, [D]);
-    let U = null !== F ? F : R,
-        V = (0, u.Z)(M),
-        B = U ? c.h_8 : c.Pzh,
-        Y = U || V ? h.wishlistedOrHoveredIconColor : h.normalIconColor,
+    let Z = null !== F ? F : R,
+        B = (0, u.Z)(M),
+        V = Z ? c.h_8 : c.Pzh,
+        Y = Z || B ? h.wishlistedOrHoveredIconColor : h.normalIconColor,
         { isPurchased: W } = (0, g.L)(k),
-        G = (0, v.fp)(k) || (0, v.x6)(k) || (0, v.G1)(k),
-        z = l.useCallback(
+        G = (0, v.fp)(k),
+        z = (0, v.x6)(k),
+        H = (0, v.G1)(k),
+        K = l.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), e.currentTarget.blur(), U && null != L)) {
-                    Z(!1);
+                if ((e.stopPropagation(), e.currentTarget.blur(), Z && null != L)) {
+                    U(!1);
                     try {
-                        await b.Z.removeSkuFromWishlist(L, D, N), Z(null);
+                        await b.Z.removeSkuFromWishlist(L, D, I), U(null);
                     } catch (e) {
-                        Z(null),
+                        U(null),
                             (0, c.showToast)((0, c.createToast)(j.intl.string(j.t.F8FvU1), c.ToastType.FAILURE)),
                             c.uvj.announce(j.intl.string(j.t.F8FvU1));
                     }
                 } else {
-                    Z(!0);
+                    U(!0);
                     try {
-                        await b.Z.addSkuToWishlist(D, N),
-                            Z(null),
-                            I &&
+                        await b.Z.addSkuToWishlist(D, I),
+                            U(null),
+                            N &&
                                 ((0, c.ZDy)(async () => {
                                     let { default: e } = await r.e("36340").then(r.bind(r, 874533));
                                     return (r) => (0, n.jsx)(e, x(P({}, r), { product: t }));
                                 }),
                                 A(m.L.USER_DISMISS));
                     } catch (e) {
-                        Z(null),
+                        U(null),
                             (0, c.showToast)((0, c.createToast)(j.intl.string(j.t.F8FvU1), c.ToastType.FAILURE)),
                             c.uvj.announce(j.intl.string(j.t.F8FvU1));
                     }
                 }
             },
-            [N, U, D, t, I, A, L, Z],
+            [I, Z, D, t, N, A, L, U],
         );
-    if ((!w && !U) || null == T) return null;
-    if (G || W)
-        return (0, n.jsx)(c.ua7, {
-            text: j.intl.string(j.t["02QYZG"]),
-            children: (e) =>
-                (0, n.jsx)(
-                    c.P3F,
-                    x(P({}, e), {
-                        className: a()(h.wishlistButton, h.disabledButton, E),
-                        innerRef: M,
-                        onClick: (e) => e.stopPropagation(),
-                        children: (0, n.jsx)(B, {
-                            colorClass: h.disabledIconColor,
-                            size: "custom",
-                            height: i,
-                            width: i,
+    if ((!w && !Z) || null == T) return null;
+    if (G || z || H || W) {
+        let e = j.intl.string(j.t["50TX9v"]);
+        return (
+            z ? (e = j.intl.string(j.t.UfDp3N)) : G && (e = j.intl.string(j.t.KsFBMj)),
+            (0, n.jsx)(c.ua7, {
+                text: e,
+                children: (e) =>
+                    (0, n.jsx)(
+                        c.P3F,
+                        x(P({}, e), {
+                            className: a()(h.wishlistButton, h.disabledButton, E),
+                            innerRef: M,
+                            "aria-disabled": !0,
+                            onClick: (e) => e.stopPropagation(),
+                            children: (0, n.jsx)(V, {
+                                colorClass: h.disabledIconColor,
+                                size: "custom",
+                                height: i,
+                                width: i,
+                            }),
                         }),
-                    }),
-                ),
-        });
-    let H = U ? j.intl.string(j.t.yr9TTU) : j.intl.string(j.t["8DkMER"]),
-        K = I
+                    ),
+            })
+        );
+    }
+    let X = Z ? j.intl.string(j.t.yr9TTU) : j.intl.string(j.t["8DkMER"]),
+        J = N
             ? (0, n.jsxs)(n.Fragment, {
                   children: [
                       (0, n.jsx)(c.Text, {
@@ -159,19 +167,19 @@ let E = (e) => {
                       }),
                   ],
               })
-            : H;
+            : X;
     return (0, n.jsx)(c.ua7, {
-        text: K,
-        "aria-label": H,
+        text: J,
+        "aria-label": X,
         children: (e) =>
             (0, n.jsx)(
                 c.P3F,
                 x(P({}, e), {
                     className: a()(h.wishlistButton, _ && h.withHover, E),
                     innerRef: M,
-                    onClick: z,
-                    "aria-label": H,
-                    children: (0, n.jsx)(B, {
+                    onClick: K,
+                    "aria-label": X,
+                    children: (0, n.jsx)(V, {
                         colorClass: Y,
                         size: "custom",
                         height: i,
