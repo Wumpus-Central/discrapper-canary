@@ -2,11 +2,11 @@ function r(e, t) {
     return "object" == typeof e ? JSON.stringify(e) === JSON.stringify(t) : e === t;
 }
 function i(e, t) {
-    return null != t && (t instanceof Set ? t.has(e) : r(e, t));
+    return null != t && (Array.isArray(t) ? t.includes(e) : r(e, t));
 }
 function a(e, t, n) {
-    let r = new Set(t);
-    return t.has(n) ? r.delete(n) : "multiple" === e ? r.add(n) : (r = new Set([n])), r;
+    let r = [...t];
+    return t.includes(n) ? (r = t.filter((e) => e.id !== n.id)) : "multiple" === e ? r.push(n) : (r = [n]), r;
 }
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
@@ -14,9 +14,10 @@ function o() {
     return "".concat(e, "-option-").concat(t);
 }
 n.d(t, {
+    _s: () => i,
     cA: () => o,
-    tw: () => i,
-    xj: () => a,
+    cq: () => a,
 }),
     n(49124),
-    n(388685);
+    n(388685),
+    n(539854);

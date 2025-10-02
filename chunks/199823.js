@@ -1,4 +1,4 @@
-n.d(t, { M: () => a }), n(388685), n(49124);
+n.d(t, { M: () => a }), n(49124);
 var r = n(951288);
 n(647438);
 var i = n(635041);
@@ -16,7 +16,7 @@ function a(e) {
     if (null == t && (null == o || "off" === o)) return null;
     function d(e) {
         let t = Array.from(e.target.selectedOptions).map((e) => e.dataset.id);
-        c(new Set(u.filter((e) => t.includes(e.id))));
+        c(u.filter((e) => t.includes(e.id)));
     }
     return (0, r.jsx)(i.n, {
         children: (0, r.jsx)("select", {
@@ -38,7 +38,7 @@ function a(e) {
                               {
                                   "data-id": e.id,
                                   value: t,
-                                  selected: l.has(e),
+                                  selected: l.includes(e),
                                   children: e.label,
                               },
                               e.id,

@@ -1,8 +1,7 @@
 n.d(t, {
     T: () => a,
     Z: () => o,
-}),
-    n(388685);
+});
 var r = n(647438),
     i = n(981631);
 function a() {
@@ -15,7 +14,7 @@ let o = r.createContext({
         activeDescendantIndex: null,
         listItems: [],
         filteredItems: [],
-        selectedItems: new Set(),
+        selectedItems: [],
         longestLabelCharCount: 5,
         width: "0px",
         dropDownHeight: "auto",

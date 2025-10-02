@@ -1,4 +1,4 @@
-n.d(t, { P: () => S }), n(953529), n(388685);
+n.d(t, { P: () => S }), n(953529), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -137,7 +137,7 @@ function A(e) {
             activeDescendantIndex: null,
             listItems: [],
             filteredItems: [],
-            selectedItems: new Set(),
+            selectedItems: [],
             longestLabelCharCount: 5,
             width: "200px",
             dropDownHeight: "auto",
@@ -146,7 +146,7 @@ function A(e) {
         W = i.useRef(null),
         K = i.useRef(null),
         z = null != N ? N : "multiple" !== t,
-        q = V.selectedItems.size > 0,
+        q = V.selectedItems.length > 0,
         X = V.listItems.length > j,
         Q = !V.isInitialized || b || O || I,
         J = i.useCallback(() => {
@@ -158,7 +158,7 @@ function A(e) {
         }, []),
         ee = i.useCallback(() => {
             var e;
-            H((e) => v(y({}, e), { selectedItems: new Set() })), U(null), null == (e = W.current) || e.focus();
+            H((e) => v(y({}, e), { selectedItems: [] })), U(null), null == (e = W.current) || e.focus();
         }, [U]),
         et = i.useCallback(
             (e) => {
@@ -174,13 +174,13 @@ function A(e) {
         ),
         en = i.useCallback((e) => (null != k ? k(e) : e), [k]);
     i.useLayoutEffect(() => {
-        let e = new Set(),
+        let e = [],
             t = 6,
             n = M.map((n) => {
                 let r = en(n);
                 return (
                     (t = Math.max(t, r.label.length)),
-                    !V.isInitialized && (null != G || null != B) && (0, h.tw)(r.value, null != G ? G : B) && e.add(r),
+                    !V.isInitialized && (null != G || null != B) && (0, h._s)(r.value, null != G ? G : B) && e.push(r),
                     r
                 );
             });
@@ -197,10 +197,8 @@ function A(e) {
             !Q &&
                 Z &&
                 (null == G
-                    ? H((e) => v(y({}, e), { selectedItems: new Set() }))
-                    : H((e) =>
-                          v(y({}, e), { selectedItems: new Set(e.listItems.filter((e) => (0, h.tw)(e.value, G))) }),
-                      ));
+                    ? H((e) => v(y({}, e), { selectedItems: [] }))
+                    : H((e) => v(y({}, e), { selectedItems: e.listItems.filter((e) => (0, h._s)(e.value, G)) })));
         }, [G, Q, Z]),
         i.useLayoutEffect(() => {
             if (null == K.current) return;
@@ -238,7 +236,7 @@ function A(e) {
             if (Q) return;
             let n = Array.from(e);
             if ("multiple" === t && n.length < 1) U(null);
-            else if ("multiple" === t) U(new Set(n.map((e) => e.value)));
+            else if ("multiple" === t) U(n.map((e) => e.value));
             else {
                 var r, i;
                 U(null != (i = null == (r = n[0]) ? void 0 : r.value) ? i : null);
@@ -324,26 +322,25 @@ function A(e) {
 }
 function C(e) {
     let { placeholder: t, selectedItems: n } = e;
-    if (null == n || 0 === n.size)
-        return (0, r.jsx)("div", {
-            className: E.placeholder,
-            children: (0, r.jsx)(c.xvT, {
-                variant: "text-md/normal",
-                color: "currentColor",
-                lineClamp: 1,
-                children: t,
-            }),
-        });
-    let i = Array.from(n);
-    return i.length > 1
+    return null == n || 0 === n.length
         ? (0, r.jsx)("div", {
-              className: E.multipleValues,
+              className: E.placeholder,
               children: (0, r.jsx)(c.xvT, {
                   variant: "text-md/normal",
                   color: "currentColor",
                   lineClamp: 1,
-                  children: i.map((e) => e.label).join(", "),
+                  children: t,
               }),
           })
-        : (0, r.jsx)(_.W, y({}, i[0]));
+        : n.length > 1
+          ? (0, r.jsx)("div", {
+                className: E.multipleValues,
+                children: (0, r.jsx)(c.xvT, {
+                    variant: "text-md/normal",
+                    color: "currentColor",
+                    lineClamp: 1,
+                    children: n.map((e) => e.label).join(", "),
+                }),
+            })
+          : (0, r.jsx)(_.W, y({}, n[0]));
 }

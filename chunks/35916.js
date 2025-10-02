@@ -96,7 +96,7 @@ function m(e) {
         } = e,
         T = i.useId(),
         S = null != t ? t : T,
-        [A, C] = i.useState(null != m ? m : new Set()),
+        [A, C] = i.useState(null != m ? m : []),
         N = null != E,
         R = N ? E : A,
         P = (0, a.ZP)({
@@ -109,8 +109,8 @@ function m(e) {
         }),
         w = i.useCallback(
             (e) => {
-                if (!0 === n && 1 === R.size && R.has(e)) return;
-                let t = (0, l.xj)(f, R, e);
+                if (!0 === n && 1 === R.length && R.includes(e)) return;
+                let t = (0, l.cq)(f, R, e);
                 N || C(t), null == b || b(t);
             },
             [n, R, b, N, f],
@@ -138,7 +138,7 @@ function m(e) {
                         _(d({}, e), {
                             id: a,
                             selectionMode: f,
-                            selected: null != (n = null == R ? void 0 : R.has(e)) && n,
+                            selected: null != (n = null == R ? void 0 : R.includes(e)) && n,
                             disabled: u || e.disabled,
                             focused: t === y,
                             onClick: () => {
