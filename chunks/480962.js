@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(793030),
     l = n(743236),
     c = n(481060),
-    u = n(334405);
+    u = n(515527);
 function d(e, t, n) {
     return (
         t in e
@@ -87,21 +87,37 @@ function g(e) {
         b = i.useRef(null),
         y = i.useRef(null),
         O = i.useRef(null),
-        [v, I] = i.useState(!1);
+        v = i.useRef(null),
+        [I, T] = i.useState(!1);
     return (
         i.useLayoutEffect(() => {
-            I(!0);
+            T(!0);
         }, []),
         i.useLayoutEffect(() => {
             var e;
             a && ((0, l.F)(b), null == (e = O.current) || e.focus());
         }, [a]),
+        i.useLayoutEffect(() => {
+            if (null == O.current || !a || !I) return;
+            let e = new ResizeObserver(() => {
+                requestAnimationFrame(() => {
+                    var e;
+                    null == (e = v.current) || e.call(v);
+                });
+            });
+            return (
+                e.observe(O.current),
+                () => {
+                    e.disconnect(), (v.current = null);
+                }
+            );
+        }, [a, I]),
         (0, r.jsxs)("div", {
             ref: b,
             children: [
                 (0, r.jsx)("div", { ref: y }),
                 n,
-                a && v
+                a && I
                     ? (0, r.jsx)(c.jRF, {
                           targetRef: y,
                           autoInvert: !0,
@@ -110,7 +126,8 @@ function g(e) {
                           spacing: 4,
                           position: "right",
                           align: "top",
-                          children: () =>
+                          children: (e, n) => (
+                              (v.current = n),
                               (0, r.jsx)("div", {
                                   className: u.submenuPaddingContainer,
                                   children: (0, r.jsx)(
@@ -123,7 +140,8 @@ function g(e) {
                                           }),
                                       }),
                                   ),
-                              }),
+                              })
+                          ),
                       })
                     : null,
             ],
