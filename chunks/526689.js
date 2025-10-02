@@ -1,27 +1,27 @@
-n.d(t, { d: () => u }), n(388685);
+n.d(t, { d: () => c }), n(388685);
 var a = n(951288),
-    o = n(647438),
-    r = n(757853),
-    s = n(72214),
-    l = n(135102),
-    i = n(475495);
-let u = () => {
+    l = n(647438),
+    s = n(757853),
+    r = n(72214),
+    o = n(135102),
+    i = n(924585);
+let c = () => {
     let {
             selectedDestinations: e,
             maxDestinations: t,
             searchText: n,
-            message: u,
-            channel: c,
+            message: c,
+            channel: u,
             updateSelectShareDestinations: d,
-        } = (0, l.C$)(),
-        { results: _, updateSearchText: f } = (0, s.s)({
+        } = (0, o.C$)(),
+        { results: _, updateSearchText: f } = (0, r.s)({
             selectedDestinations: e,
             includeMissingDMs: !0,
         });
-    (0, o.useEffect)(() => {
+    (0, l.useEffect)(() => {
         f(n);
     }, [f, n]);
-    let p = (0, o.useCallback)(
+    let b = (0, l.useCallback)(
             (t) => {
                 let n = e.findIndex((e) => {
                     let { type: n, id: a } = e;
@@ -36,17 +36,16 @@ let u = () => {
             },
             [e, d],
         ),
-        b = e.length >= t;
-    return (0, a.jsx)(r.F, {
+        p = e.length >= t;
+    return (0, a.jsx)(s.F, {
         paddingBottom: 16,
         paddingTop: 16,
         rowData: _,
-        rowMode: r.G.TOGGLE,
-        message: u,
-        originChannel: c,
-        handleToggleDestination: p,
+        message: c,
+        originChannel: u,
+        handleToggleDestination: b,
         selectedDestinations: e,
-        disableSelection: b,
+        disableSelection: p,
         rowClassName: i.rowContainer,
     });
 };
