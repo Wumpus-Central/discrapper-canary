@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -12,78 +12,79 @@ var r = n(951288),
     f = n(621853),
     h = n(661462),
     g = n(319396),
-    m = n(388032),
-    b = n(363725);
-function _(e) {
+    m = n(778567),
+    b = n(388032),
+    _ = n(363725);
+function O(e) {
     let { profileOwner: t } = e,
-        { defaultWishlistId: n, currentUser: _ } = (0, l.cj)([f.Z, p.default], () => ({
+        { defaultWishlistId: n, currentUser: O } = (0, l.cj)([f.Z, p.default], () => ({
             defaultWishlistId: f.Z.getFirstWishlistId(t.id),
             currentUser: p.default.getCurrentUser(),
         })),
-        { analyticsLocations: O } = (0, c.ZP)(),
-        E = (null == _ ? void 0 : _.id) === t.id,
-        y = !1 === t.nsfwAllowed,
-        { wishlist: v, error: I } = (0, d.k)(n),
+        { analyticsLocations: E } = (0, c.ZP)(),
+        y = (null == O ? void 0 : O.id) === t.id,
+        v = !1 === t.nsfwAllowed,
+        { wishlist: I, error: S } = (0, d.k)(n),
         C = i.useCallback(() => {
             (0, a.pT)(),
                 (0, u.mK)({
-                    analyticsLocations: O,
+                    analyticsLocations: E,
                     analyticsSource: s.Z.USER_PROFILE_WISHLIST,
                     openInLayer: !1,
                 });
-        }, [O]);
-    return null != I
+        }, [E]);
+    return null != S
         ? null
-        : null == v || 0 === v.items.length
+        : null == I || 0 === I.items.length
           ? (0, r.jsx)(h.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
-                    className: b.emptyStateContainer,
+                    className: _.emptyStateContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: b.emptyStateText,
+                            className: _.emptyStateText,
                             children: [
                                 (0, r.jsx)(o.X6q, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: m.intl.string(m.t.HGnLLS),
+                                    children: b.intl.string(b.t.HGnLLS),
                                 }),
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: m.intl.string(m.t["/X1ny8"]),
+                                    children: b.intl.string(b.t["/X1ny8"]),
                                 }),
                             ],
                         }),
-                        E &&
+                        y &&
                             (0, r.jsx)(o.zxk, {
                                 variant: "primary",
                                 size: "sm",
                                 icon: o.EOn,
-                                text: m.intl.string(m.t.ZbS4QE),
+                                text: b.intl.string(b.t.ZbS4QE),
                                 onClick: C,
                             }),
                     ],
                 }),
             })
           : (0, r.jsxs)(h.F, {
-                className: b.scroller,
+                className: _.scroller,
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.headerRow,
+                        className: _.headerRow,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: b.teenDisclaimer,
+                                className: _.teenDisclaimer,
                                 children: [
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: m.intl.format(m.t.r6Y1Li, { count: v.items.length }),
+                                        children: b.intl.format(b.t.r6Y1Li, { count: I.items.length }),
                                     }),
-                                    y &&
+                                    v &&
                                         (0, r.jsx)(o.ua7, {
-                                            text: m.intl.string(m.t.d78ChY),
+                                            text: b.intl.string(b.t.d78ChY),
                                             children: (e) => {
                                                 var t, n;
                                                 return (0, r.jsx)(
@@ -147,27 +148,33 @@ function _(e) {
                                         }),
                                 ],
                             }),
-                            E
-                                ? (0, r.jsx)(o.zxk, {
-                                      variant: "secondary",
-                                      size: "sm",
-                                      icon: o.qJs,
-                                      text: m.intl.string(m.t.SDUwMz),
-                                      onClick: C,
+                            y
+                                ? (0, r.jsxs)("div", {
+                                      className: _.headerActions,
+                                      children: [
+                                          (0, r.jsx)(o.zxk, {
+                                              variant: "secondary",
+                                              size: "sm",
+                                              icon: o.qJs,
+                                              text: b.intl.string(b.t.SDUwMz),
+                                              onClick: C,
+                                          }),
+                                          (0, r.jsx)(m.Z, { isOwner: y }),
+                                      ],
                                   })
                                 : (0, r.jsx)(o.zxk, {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: o.EOn,
-                                      text: m.intl.string(m.t["i/yzHh"]),
+                                      text: b.intl.string(b.t["i/yzHh"]),
                                       onClick: C,
                                   }),
                         ],
                     }),
                     (0, r.jsx)(g.Z, {
-                        items: v.items,
+                        items: I.items,
                         profileOwner: t,
-                        isOwner: E,
+                        isOwner: y,
                     }),
                 ],
             });

@@ -11,6 +11,7 @@ var r = n(647438),
             (e.SLIDER = "slider"),
             (e.SEARCH = "search"),
             (e.IMAGE_UPLOAD = "image upload"),
+            (e.SWITCH = "switch"),
             e
         );
     })({});

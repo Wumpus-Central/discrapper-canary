@@ -18082,9 +18082,27 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     white-space: nowrap
 }
 
-.subtext_c1e9c4 {
-    margin-top: 2px;
+.switchItem_c1e9c4 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between;
+    min-height: var(--space-32);
+    padding: var(--space-8)
+}
+
+.switchItem_c1e9c4 .labelContainer_c1e9c4 {
+    min-height: 0;
+    padding: 0
+}
+
+.subtext_c1e9c4,
+.switchItem_c1e9c4 .label_c1e9c4 {
     white-space: normal
+}
+
+.subtext_c1e9c4 {
+    margin-top: 2px
 }
 
 .subtextLineClamp_c1e9c4 {
@@ -18106,6 +18124,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 .iconContainerLarge_c1e9c4 {
     height: 32px;
     width: 32px
+}
+
+.switchContainer_c1e9c4 {
+    flex-shrink: 0
 }
 
 .icon_c1e9c4 {

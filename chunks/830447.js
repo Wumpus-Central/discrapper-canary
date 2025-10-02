@@ -20,7 +20,7 @@ var r = n(951288),
     _ = n(828214),
     p = n(670596),
     h = n(788314),
-    m = n(334405);
+    m = n(515527);
 function g(e, t, n) {
     return (
         t in e
@@ -160,6 +160,16 @@ function v(e) {
             return (
                 e.push({
                     type: "radio",
+                    key: t.props.id,
+                    navigable: !0,
+                    props: t.props,
+                }),
+                e
+            );
+        else if (t.type === _.m7)
+            return (
+                e.push({
+                    type: "switch",
                     key: t.props.id,
                     navigable: !0,
                     props: t.props,
@@ -335,6 +345,24 @@ function T(e, t, n, i) {
                     a++;
                 break;
             }
+            case "switch": {
+                let e = [...n, s.key];
+                c.push(
+                    (0, r.jsx)(
+                        h.TO,
+                        y(E({}, s.props), {
+                            isFocused: t.isFocused(e),
+                            menuItemProps: t.getItemProps({
+                                path: e,
+                                role: "menuitemcheckbox",
+                            }),
+                        }),
+                        s.key,
+                    ),
+                ),
+                    a++;
+                break;
+            }
             case "control": {
                 let e = [...n, s.key];
                 c.push(
@@ -400,8 +428,8 @@ function S(e) {
     }, [w.isUsingKeyboardNavigation]);
     let D = i.useRef(null);
     (0, u.Tbt)(D);
-    let x = s ? u.u2D : u.zJl,
-        L = i.useMemo(
+    let L = s ? u.u2D : u.zJl,
+        x = i.useMemo(
             () => ({
                 onSelect: O,
                 onInteraction: S,
@@ -409,13 +437,13 @@ function S(e) {
             [O, S],
         );
     return (0, r.jsx)(p.p.Provider, {
-        value: L,
+        value: x,
         children: (0, r.jsx)(
             "div",
             y(E({ className: o()(m.menu, m[a], _) }, w.getContainerProps()), {
                 ref: D,
                 "aria-label": e["aria-label"],
-                children: (0, r.jsxs)(x, {
+                children: (0, r.jsxs)(L, {
                     className: m.scroller,
                     children: [
                         0 === A.length &&

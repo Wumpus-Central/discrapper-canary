@@ -85,24 +85,33 @@ function f(e) {
     );
 }
 function _(e) {
-    var { action: t, onClick: n, variant: o = "secondary", size: s = "sm", tooltipText: u, "aria-label": f } = e,
-        _ = c(e, ["action", "onClick", "variant", "size", "tooltipText", "aria-label"]);
-    let p = d({
+    var {
+            action: t,
+            onClick: n,
+            variant: o = "secondary",
+            size: s = "sm",
+            tooltipText: u,
+            "aria-label": f,
+            buttonRef: _,
+        } = e,
+        p = c(e, ["action", "onClick", "variant", "size", "tooltipText", "aria-label", "buttonRef"]);
+    let h = d({
         action: t,
         onClick: n,
     });
     return (0, r.jsx)(i.u, {
+        targetElementRef: _,
         text: u,
         children: (0, r.jsx)(
             a.hU,
             l(
                 {
-                    onClick: p,
+                    onClick: h,
                     variant: o,
                     size: s,
                     "aria-label": null != f ? f : u,
                 },
-                _,
+                p,
             ),
         ),
     });
