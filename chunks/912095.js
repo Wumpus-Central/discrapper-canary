@@ -261,6 +261,7 @@ class E extends s.Z {
     setHardwareH264(e) {}
     setSoftwareH264(e) {}
     setQoS(e) {}
+    setSoundshareDiscardRearChannels(e) {}
     isAttenuating() {
         return !1;
     }

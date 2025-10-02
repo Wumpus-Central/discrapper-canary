@@ -610,6 +610,9 @@ class L extends _.Z {
     setQoS(e) {
         (this.qos = e), this.conn.setTransportOptions({ qos: this.qos });
     }
+    setSoundshareDiscardRearChannels(e) {
+        this.conn.setTransportOptions({ soundshareDiscardRearChannels: e });
+    }
     setInputMode(e, t) {
         switch (((this.inputMode = e), e)) {
             case v.pM.PUSH_TO_TALK:
