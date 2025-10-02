@@ -1,40 +1,39 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
-var i = n(755721),
-    l = n(481060),
-    a = n(388032),
-    o = n(808709);
-let s = (e) => {
+var i = n(481060),
+    l = n(388032),
+    a = n(231690);
+let o = (e) => {
     let { hasHub: t } = e;
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: a.container,
         children: [
             (0, r.jsx)("div", {
-                className: o.iconContainer,
-                children: (0, r.jsx)(l.aVH, {
+                className: a.iconContainer,
+                children: (0, r.jsx)(i.aVH, {
                     size: "md",
-                    color: l.TVs.colors.WHITE.css,
+                    color: i.TVs.colors.WHITE.css,
                 }),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 color: "header-primary",
                 variant: "text-lg/semibold",
-                className: o.header,
-                children: t ? a.intl.string(a.t.hsSHh4) : a.intl.string(a.t.Wf6iio),
+                className: a.header,
+                children: t ? l.intl.string(l.t.hsSHh4) : l.intl.string(l.t.Wf6iio),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: o.__invalid_description,
-                children: t ? a.intl.string(a.t.FZ2J3d) : a.intl.string(a.t.TvHcv7),
+                className: a.__invalid_description,
+                children: t ? l.intl.string(l.t.FZ2J3d) : l.intl.string(l.t.TvHcv7),
             }),
-            (0, r.jsx)("div", { className: o.gap }),
-            (0, r.jsx)(i.zx, {
-                size: i.zx.Sizes.LARGE,
-                color: t ? i.zx.Colors.PRIMARY : i.zx.Colors.GREEN,
+            (0, r.jsx)("div", { className: a.gap }),
+            (0, r.jsx)(i.zxk, {
+                fullWidth: !0,
+                variant: t ? "secondary" : "active",
                 onClick: () =>
-                    (0, l.ZDy)(async () => {
+                    (0, i.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
                         return (t) =>
                             (0, r.jsx)(
@@ -66,12 +65,7 @@ let s = (e) => {
                                 })({}, t),
                             );
                     }),
-                children: (0, r.jsx)(l.Text, {
-                    variant: "text-sm/semibold",
-                    className: o.addButton,
-                    color: "none",
-                    children: t ? a.intl.string(a.t.IyjHDw) : a.intl.string(a.t["KU/aNz"]),
-                }),
+                text: t ? l.intl.string(l.t.IyjHDw) : l.intl.string(l.t["KU/aNz"]),
             }),
         ],
     });

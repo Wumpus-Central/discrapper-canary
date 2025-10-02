@@ -7,6 +7,5 @@ e.exports = {
     formContent: "formContent__30f2d",
     formDescription: "formDescription__30f2d",
     termsPhrase: "termsPhrase__30f2d",
-    submitButton: "submitButton__30f2d",
     cancelButton: "cancelButton__30f2d",
 };
