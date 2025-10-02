@@ -10,17 +10,17 @@ var l = n(951288),
     r = n(906732),
     s = n(879892),
     o = n(343649),
-    c = n(430824),
-    u = n(975104),
+    u = n(430824),
+    c = n(975104),
     d = n(713081),
     m = n(279604),
     v = n(744993),
     f = n(693587),
     g = n(741252),
     b = n(473682);
-let [p, j] = (0, u.Z)();
+let [p, j] = (0, c.Z)();
 function x(e) {
-    var t, n, u, j, x, y, O;
+    var t, n, c, j, x, y, O;
     let {
         guildId: h,
         initialPortkeyInstance: P,
@@ -34,7 +34,7 @@ function x(e) {
         (0, v.po)(h), (0, d.BN)(h, !0), null == P && (0, v.EC)(h);
     }, [h, P]);
     let Z = (0, a.e7)([f.Z], () => f.Z.getStateForGuild(h)),
-        N = (0, a.e7)([c.Z], () => c.Z.getGuild(h)),
+        N = (0, a.e7)([u.Z], () => u.Z.getGuild(h)),
         { analyticsLocations: T } = (0, r.ZP)(I),
         [_, E] = i.useState(null != (n = S.initialStep) ? n : Object.keys(S.steps)[0]),
         D = (0, m.Td)(h, void 0),
@@ -57,10 +57,10 @@ function x(e) {
         }, [null == Z ? void 0 : Z.catalog, G]),
         [R, K] = i.useState(P),
         [A, V] = i.useState(
-            null != (u = null == k || null == (t = k.plans[0]) ? void 0 : t.id) ? u : null == P ? void 0 : P.planId,
+            null != (c = null == k || null == (t = k.plans[0]) ? void 0 : t.id) ? c : null == P ? void 0 : P.planId,
         ),
         Y = (function (e, t, n, l) {
-            var i, r, s, o, c, u, d, m;
+            var i, r, s, o, u, c, d, m;
             let v = (0, a.e7)([f.Z], () => {
                     var t;
                     return null == (t = f.Z.getStateForGuild(e)) ? void 0 : t.entitlements;
@@ -72,9 +72,9 @@ function x(e) {
                       (null !=
                       (m =
                           null == v ||
-                          null == (u = v[l.entitlementId]) ||
-                          null == (c = u.sku) ||
-                          null == (o = c.tenant_metadata) ||
+                          null == (c = v[l.entitlementId]) ||
+                          null == (u = c.sku) ||
+                          null == (o = u.tenant_metadata) ||
                           null == (s = o.guild_monetization) ||
                           null == (r = s.game_server)
                               ? void 0
@@ -103,7 +103,7 @@ function x(e) {
         [Q, W] = i.useState(null != (x = null == P ? void 0 : P.regionId) ? x : ""),
         [ee, et] = i.useState(!1),
         en = i.useCallback(() => {
-            if ((L(void 0), 0 === Y || null == N || null == M || null == A)) return;
+            if ((L(void 0), null == N || null == M || "" === $ || "" === Q || null == A)) return;
             let e = () => {
                 et(!0);
                 let e = new Promise((e) => {
@@ -111,7 +111,9 @@ function x(e) {
                 });
                 Promise.all([null != R ? (0, v.EY)(N.id, R.entitlementId, A, $) : (0, v.NE)(N.id, A, $, Q), e])
                     .then(() => {
-                        C(), (0, g.Z)(N.id, M, null == R ? "created" : "updated");
+                        C(),
+                            (null == R ? void 0 : R.planId) !== A &&
+                                (0, g.Z)(N.id, M, null == R ? "created" : "updated");
                     })
                     .catch((e) => {
                         var t, n;
