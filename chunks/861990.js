@@ -101,8 +101,9 @@ function c(e) {
         "item" in e &&
             null != e.item &&
             e.item.platform === r.ow.WEB &&
-            null != e.item.compressionMetadata &&
-            (o.original_content_type = e.item.compressionMetadata.originalContentType),
+            "mimeType" in e &&
+            null != e.mimeType &&
+            (o.original_content_type = e.mimeType),
         o
     );
 }

@@ -22305,7 +22305,7 @@
   "4QOSPj": "Select a plan",
   "H8rHQU": "Your selected plan costs less than your previous plan. You will get {boostCount, plural, =1 { Boost} other { Boosts} } back.",
   "3QONen": "Plan",
-  "JWpue3": "Powered by !!{developer}!!",
+  "JWpue3": "Powered by !!{provider}!!",
   "qW1xR0": "By clicking \"Enable Game Server\", you’ll create a private game server hosted by !!{provider}!!. The servers and all activity within them are powered by !!{provider}!! and subject to [’s Terms of Service](!!{provider}!!). Discord doesn’t monitor these servers. Visit our [Help Center](Help Center) for practical tips on engaging positively when using game servers.",
   "Eonh9P": "Game server setup",
   "TciV8/": "Get Support",
