@@ -1,119 +1,127 @@
-let l, i, r, a, s, o;
-n.d(t, { Z: () => C }), n(388685), n(642613);
+let l, i, s, r, a, o;
+n.d(t, { Z: () => P }), n(388685), n(642613);
 var u,
     d,
     c = n(442837),
     g = n(570140),
-    h = n(823385),
-    m = n(752048),
-    p = n(823379),
-    v = n(971130),
-    I = n(592125),
-    x = n(496675),
-    f = n(699516),
-    j = n(981631),
-    N = n(245335);
-let _ = new Set(),
-    E = [],
-    S = new Map(),
-    b = {
+    h = n(559310),
+    m = n(823385),
+    p = n(752048),
+    v = n(823379),
+    I = n(971130),
+    x = n(592125),
+    f = n(496675),
+    N = n(699516),
+    _ = n(981631),
+    j = n(245335);
+let S = new Set(),
+    b = [],
+    E = new Map(),
+    y = {
         numFriends: 0,
         numDms: 0,
         numGroupDms: 0,
         numChannels: 0,
     };
-function O(e) {
-    let t = new Set(),
-        n = null == r || o === N.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
-        l = (0, v.rh)(_, n);
-    for (let e of (null == l || f.Z.isBlockedOrIgnored(l.id) || t.add(l.id), m.Z.getUserAffinities()))
-        t.add(e.otherUserId);
-    let i = new Set();
+function T(e) {
+    let { isFriendsInVCInvitesEnabled: t } = (0, h.s6)({
+            guildId: null == s ? void 0 : s.id,
+            location: "InviteSuggestionsStore",
+            autoTrackExposure: !1,
+        }),
+        n = new Set(),
+        l = (null == r ? void 0 : r.type) === _.d4z.GUILD_VOICE,
+        i = null;
+    null == s || o === j.Iq.EMBEDDED_APPLICATION || (t && l) || (i = s.id);
+    let a = (0, I.rh)(S, i);
+    for (let e of (null == a || N.Z.isBlockedOrIgnored(a.id) || n.add(a.id), p.Z.getUserAffinities()))
+        n.add(e.otherUserId);
+    let u = new Set();
     return (
-        o === N.Iq.EMBEDDED_APPLICATION &&
-            h.Z.getChannelHistory()
-                .map((e) => I.Z.getChannel(e))
-                .filter(p.lm)
-                .filter((e) => e.type === j.d4z.GUILD_TEXT)
-                .filter((e) => x.Z.can(j.Plq.SEND_MESSAGES, e))
+        o === j.Iq.EMBEDDED_APPLICATION &&
+            m.Z.getChannelHistory()
+                .map((e) => x.Z.getChannel(e))
+                .filter(v.lm)
+                .filter((e) => e.type === _.d4z.GUILD_TEXT)
+                .filter((e) => f.Z.can(_.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
-                .forEach((e) => i.add(e.id)),
-        (0, v.an)({
+                .forEach((e) => u.add(e.id)),
+        (0, I.an)({
             query: e,
-            omitUserIds: _,
-            suggestedUserIds: t,
+            omitUserIds: S,
+            suggestedUserIds: n,
             maxRowsWithoutQuery: 100,
-            omitGuildId: n,
-            suggestedChannelIds: i,
+            omitGuildId: i,
+            suggestedChannelIds: u,
             inviteTargetType: o,
         })
     );
 }
-function y(e) {
-    (E = e),
-        (S = new Map()),
+function O(e) {
+    (b = e),
+        (E = new Map()),
         e.forEach((e, t) => {
-            S.set(e, { index: t });
+            E.set(e, { index: t });
         });
 }
-class T extends (u = c.ZP.Store) {
+class C extends (u = c.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, m.Z);
+        this.waitFor(N.Z, p.Z);
     }
     getInviteSuggestionRows() {
-        return E;
+        return b;
     }
     getTotalSuggestionsCount() {
         return l;
     }
     getInitialCounts() {
-        return b;
+        return y;
     }
     getSelectedInviteMetadata(e) {
-        let t = S.get(e),
-            n = m.Z.getUserAffinities().map((e) => e.otherUserId);
+        let t = E.get(e),
+            n = p.Z.getUserAffinities().map((e) => e.otherUserId);
         if (null != t)
             return {
                 rowNum: t.index,
                 isAffinitySuggestion: e.isSuggested,
-                numTotal: E.length,
+                numTotal: b.length,
                 numAffinityConnections: n.length,
                 isFiltered: i,
             };
     }
 }
-(d = "displayName") in T
-    ? Object.defineProperty(T, d, {
+(d = "displayName") in C
+    ? Object.defineProperty(C, d, {
           value: "InviteSuggestionsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (T[d] = "InviteSuggestionsStore");
-let C = new T(g.Z, {
+    : (C[d] = "InviteSuggestionsStore");
+let P = new C(g.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
-        (r = null != u ? n : null),
-            (a = u),
-            (s = d),
+        (s = null != u ? n : null),
+            (r = u),
+            (a = d),
             (o = c),
-            (_ = new Set([
+            (S = new Set([
                 ...t,
-                ...f.Z.getBlockedOrIgnoredIDs(),
-                ...(0, v.Sz)({
-                    channel: a,
-                    applicationId: s,
+                ...N.Z.getBlockedOrIgnoredIDs(),
+                ...(0, I.Sz)({
+                    channel: r,
+                    applicationId: a,
                     inviteTargetType: c,
                 }),
             ])),
             (i = !1);
-        let { rows: g, counts: h } = O("");
-        y(g), (b = h), (l = E.length);
+        let { rows: g, counts: h } = T("");
+        O(g), (y = h), (l = b.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;
         i = "" !== t;
-        let { rows: n } = O(t);
-        n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), y(n);
+        let { rows: n } = T(t);
+        n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), O(n);
     },
 });
