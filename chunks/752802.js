@@ -1,4 +1,8 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, {
+    Z: () => W,
+    q: () => U,
+}),
+    n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -13,12 +17,12 @@ var i = n(951288),
     f = n(414910),
     m = n(194082),
     g = n(569545),
-    y = n(871118),
-    O = n(172751),
+    O = n(871118),
+    y = n(172751),
     E = n(728285),
     v = n(352978),
-    S = n(833519),
-    b = n(839662),
+    b = n(833519),
+    S = n(839662),
     x = n(199902),
     j = n(314897),
     I = n(131951),
@@ -29,7 +33,7 @@ var i = n(951288),
     T = n(1226),
     _ = n(981631),
     P = n(388032),
-    D = n(379746);
+    D = n(838773);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -131,7 +135,7 @@ function M(e) {
             return I.Z.isLocalMute(t.user.id, e);
         }, [t]),
         o = (0, a.e7)([j.default], () => j.default.getId()),
-        { hasVideo: d } = (0, b.Z)(t, o),
+        { hasVideo: d } = (0, S.Z)(t, o),
         p = l && d,
         h = r.useCallback(() => {
             c.Z.toggleLocalMute(n, s.Yn.STREAM);
@@ -258,7 +262,7 @@ function z(e) {
                                     className: D.controlUserName,
                                     children: Z.ZP.getName(n.stream.guildId, n.stream.channelId, s),
                                 }),
-                                (0, i.jsx)(O.ZP, {
+                                (0, i.jsx)(y.ZP, {
                                     primaryGuild: c.primaryGuild,
                                     userId: c.id,
                                     containerClassName: D.guildTag,
@@ -342,7 +346,7 @@ let U = new Set([_.jm8.ENDED, _.jm8.FAILED, _.jm8.PAUSED]),
                                     onContextMenu: V(t, c),
                                     className: D.streamTile,
                                     style: { transform: "scale(".concat(f, ")") },
-                                    children: (0, i.jsx)(S.Z, {
+                                    children: (0, i.jsx)(b.Z, {
                                         participant: t,
                                         width: n,
                                         fit: null != g ? g : v.L.CONTAIN,
@@ -356,7 +360,7 @@ let U = new Set([_.jm8.ENDED, _.jm8.FAILED, _.jm8.PAUSED]),
                             })
                           : (0, i.jsx)("div", {
                                 className: D.streamPreview,
-                                children: (0, i.jsx)(y.Z, {
+                                children: (0, i.jsx)(O.Z, {
                                     noText: !0,
                                     className: D.absoluteFill,
                                     stream: t.stream,
