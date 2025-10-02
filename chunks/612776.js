@@ -1,29 +1,18 @@
-t.d(i, {
+r.d(i, {
     W: () => n,
-    t: () => s,
+    t: () => a,
 });
-var r,
+var e,
     n =
-        (((r = {}).WELCOME = "Welcome"),
-        (r.MESSAGES = "CharacterSelect"),
-        (r.EMOJIS = "CursorSelect"),
-        (r.VOICE = "ClickerGame"),
-        (r.GUILDS = "SnekGame"),
-        (r.FRIENDS = "Multiplayer"),
-        (r.BEST_FRIEND = "VS"),
-        (r.GAMING = "RedeemPrize"),
-        (r.QUESTS = "EasterEgg"),
-        (r.END = "GG"),
-        r);
-let s = [
-    "Welcome",
-    "CharacterSelect",
-    "CursorSelect",
-    "ClickerGame",
-    "SnekGame",
-    "Multiplayer",
-    "VS",
-    "RedeemPrize",
-    "EasterEgg",
-    "GG",
-];
+        (((e = {}).WELCOME = "Lets"),
+        (e.MESSAGES = "Play"),
+        (e.EMOJIS = "Touch"),
+        (e.VOICE = "Grass"),
+        (e.GUILDS = "Again"),
+        (e.FRIENDS = "That"),
+        (e.BEST_FRIEND = "Would"),
+        (e.GAMING = "Be"),
+        (e.QUESTS = "Fun"),
+        (e.END = "GG"),
+        e);
+let a = ["Lets", "Play", "Touch", "Grass", "Again", "That", "Would", "Be", "Fun", "GG"];
