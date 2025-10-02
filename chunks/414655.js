@@ -77,7 +77,7 @@ function _(e) {
                                 className: b.teenDisclaimer,
                                 children: [
                                     (0, r.jsx)(o.Text, {
-                                        variant: "text-sm/normal",
+                                        variant: "text-xs/semibold",
                                         color: "text-secondary",
                                         children: m.intl.format(m.t.r6Y1Li, { count: v.items.length }),
                                     }),
