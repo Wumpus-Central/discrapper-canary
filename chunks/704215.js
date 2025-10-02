@@ -479,6 +479,7 @@ var r = (function (e) {
                 "APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET"),
             (e[(e.GAME_SERVER_HOSTING_NEW_BADGE = 620)] = "GAME_SERVER_HOSTING_NEW_BADGE"),
             (e[(e.WISHLIST_SHOP_BUTTON_POPOVER = 621)] = "WISHLIST_SHOP_BUTTON_POPOVER"),
+            (e[(e.HANG_STATUS_POPOVER_NUX = 622)] = "HANG_STATUS_POPOVER_NUX"),
             e
         );
     })({}),
