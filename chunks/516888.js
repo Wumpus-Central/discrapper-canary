@@ -86,7 +86,7 @@ class h extends a.yh {
     }
     constructor(e, t = "typescript") {
         let n = {};
-        if ("typescript" === t || "typescript-libdiscore-dual-read" === t) {
+        if ("typescript" == (t = "typescript") || "typescript-libdiscore-dual-read" === t) {
             let t = !1,
                 r = {
                     reset: (e) => {
@@ -128,20 +128,17 @@ class h extends a.yh {
             }
         }
         super(s.Z, n),
+            d(this, "shadowState", null),
             d(this, "mode", void 0),
-            d(this, "shadowState", void 0),
-            d(this, "state", void 0),
-            d(this, "nextVersion", void 0),
-            (this.mode = t),
-            (this.shadowState = null),
-            (this.state = {
+            d(this, "state", {
                 derived: {
                     length: 0,
                     memoized: {},
                 },
                 root: {},
             }),
-            (this.nextVersion = 0),
+            d(this, "nextVersion", 0),
+            (this.mode = t),
             f.info("".concat(this.getName(), " initialized in mode: ").concat(this.mode));
     }
 }

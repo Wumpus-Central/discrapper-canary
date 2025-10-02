@@ -1,8 +1,7 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var r = n(311929),
-    i = n(894276),
-    a = n(516888);
-function o(e, t, n) {
+    i = n(516888);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,21 +14,21 @@ function o(e, t, n) {
         e
     );
 }
-let s = "Note";
-class l extends a.f {
+let o = "Note";
+class s extends i.f {
     getNote(e) {
         return this.get(e);
     }
 }
-o(l, "displayName", "NoteStore");
-let c = new l(
+a(s, "displayName", "NoteStore");
+let l = new s(
     {
         CONNECTION_OPEN: (e, t) => t.reset(),
         OVERLAY_INITIALIZE: (e, t) => t.reset(),
         USER_NOTE_UPDATE: (e, t) => {
             t.set(
                 e.id,
-                (0, r.bk)(s, {
+                (0, r.bk)(o, {
                     loading: !1,
                     note: e.note,
                 }),
@@ -38,12 +37,12 @@ let c = new l(
         USER_NOTE_LOAD_START: (e, t) => {
             t.set(
                 e.userId,
-                (0, r.bk)(s, {
+                (0, r.bk)(o, {
                     loading: !0,
                     note: null,
                 }),
             );
         },
     },
-    i.IZ.getCachedBridgedStoreMode(),
+    "libdiscore",
 );
