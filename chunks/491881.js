@@ -11,8 +11,8 @@ e.exports = {
     textContainer: "textContainer_d5200e",
     headerTextWrapper: "headerTextWrapper_d5200e",
     oneStepCheckoutTextWrapper: "oneStepCheckoutTextWrapper_d5200e",
-    wordmark: "wordmark_d5200e",
     bodyGradientPadding: "bodyGradientPadding_d5200e",
     bodyGradientContainer: "bodyGradientContainer_d5200e",
     bodyGradient: "bodyGradient_d5200e",
+    nitroText: "nitroText_d5200e",
 };

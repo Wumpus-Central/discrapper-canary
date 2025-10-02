@@ -34055,7 +34055,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .textContainer_d5200e {
-    gap: var(--space-16)
+    gap: var(--space-16);
+    max-width: 50%
 }
 
 .headerTextWrapper_d5200e,
@@ -34112,6 +34113,14 @@ screen and (max-width:485px) {
     .headerContainer_d5200e {
         border-radius: 0
     }
+}
+
+.nitroText_d5200e {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 27px;
+    text-transform: uppercase
 }
 
 .headerBackground_b66356 {
