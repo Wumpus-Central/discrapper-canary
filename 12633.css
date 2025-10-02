@@ -68718,7 +68718,15 @@ html .progress__61462 {
 
 .search__97492 .DraftEditor-root .public-DraftEditorPlaceholder-root {
     color: var(--input-placeholder-text);
-    padding-left: 4px
+    padding-left: 4px;
+    width: 100%
+}
+
+.search__97492 .DraftEditor-root .public-DraftEditorPlaceholder-inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    width: 94%
 }
 
 .search__97492 .DraftEditor-root .public-DraftEditor-content {
@@ -68737,7 +68745,7 @@ html .progress__61462 {
 }
 
 .searchBar__97492 {
-    align-items: stretch;
+    align-items: center;
     background: var(--background-gradient-low, var(--input-background));
     border: 1px solid var(--input-border);
     border-radius: var(--radius-sm);
