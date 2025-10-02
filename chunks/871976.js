@@ -1,5 +1,4 @@
 e.exports = {
-    presets: "presets_a00e6e",
     header: "header_a00e6e",
     headings: "headings_a00e6e",
     title: "title_a00e6e",

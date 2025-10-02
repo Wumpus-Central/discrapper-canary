@@ -146,8 +146,11 @@ function A(e) {
                                 null == v ? void 0 : v(),
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: E.presets,
+                        (0, r.jsx)(s.Kqy, {
+                            direction: "horizontal",
+                            wrap: !0,
+                            gap: 8,
+                            style: { marginTop: 16 },
                             children: (0, h.wu)(A)
                                 .filter((e) => {
                                     let { isHidden: t } = e;

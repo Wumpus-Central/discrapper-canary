@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(119475),
+    b = n(684555),
     y = n(388032),
-    O = n(279457);
+    O = n(617385);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,
@@ -27,10 +27,12 @@ function v() {
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, r.jsx)("circle", {
-                cx: "33.875",
-                cy: "33.875",
-                r: "32.875",
+            (0, r.jsx)("rect", {
+                x: "4",
+                y: "4",
+                width: "60",
+                height: "60",
+                rx: "8",
                 stroke: "url(#paint0_linear_1368_16544)",
                 "stroke-width": "2",
             }),
@@ -83,9 +85,9 @@ function I(e) {
                 { background: "var(--background-gradient), ".concat(n) }
             );
         }, [N, a, R]),
-        x = (0, f.Sl)(E.Il.WHITE).hex,
-        L = (0, f.Sl)(E.Il.RED_430).hex,
-        j = w ? x : void 0,
+        L = (0, f.Sl)(E.Il.WHITE).hex,
+        x = (0, f.Sl)(E.Il.RED_430).hex,
+        j = w ? L : void 0,
         M = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
@@ -114,7 +116,7 @@ function I(e) {
                 (0, r.jsx)(u.IGR, {
                     className: O.newBadge,
                     text: y.intl.string(y.t.y2b7CA),
-                    color: L,
+                    color: x,
                 }),
         ],
     });

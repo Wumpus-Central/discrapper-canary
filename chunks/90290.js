@@ -1,6 +1,4 @@
 e.exports = {
-    presets: "presets__67a11",
-    presetsJustify: "presetsJustify__67a11",
     header: "header__67a11",
     headings: "headings__67a11",
     upsellText: "upsellText__67a11",
