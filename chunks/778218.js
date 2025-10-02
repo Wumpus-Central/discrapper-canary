@@ -50,7 +50,6 @@ let c = {
                             groupVariant: f,
                             labelType: _,
                             leadingIcon: "leading" === p ? a.d3s : void 0,
-                            trailingIcon: "trailing" === p ? a.d3s : void 0,
                         }),
                         (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
@@ -153,10 +152,6 @@ let c = {
                         {
                             label: "Leading",
                             value: "leading",
-                        },
-                        {
-                            label: "Trailing",
-                            value: "trailing",
                         },
                     ],
                     defaultValue: "none",

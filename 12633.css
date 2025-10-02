@@ -2849,6 +2849,115 @@
     width: 0
 }
 
+@keyframes bgFill__714a9 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes bgEmpty__714a9 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes dotGrow__714a9 {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(3)
+    }
+
+    26% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes dotShrink__714a9 {
+    0% {
+        opacity: 0;
+        transform: scale(3)
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(3)
+    }
+
+    26% {
+        opacity: 1;
+        transform: scale(3)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes checkDraw__714a9 {
+    0% {
+        opacity: 0;
+        transform: scale(.85)
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(.85)
+    }
+
+    26% {
+        opacity: 1;
+        transform: scale(.85)
+    }
+
+    83% {
+        transform: scale(1.2)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes checkUndraw__714a9 {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(.85)
+    }
+
+    26% {
+        opacity: 0;
+        transform: scale(.85)
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
 .checkboxItem__714a9 {
     align-items: start;
     border-radius: var(--radius-sm);
@@ -2867,22 +2976,43 @@
     box-sizing: border-box;
     display: flex;
     flex: 0 0 auto;
-    justify-content: center
+    height: 20px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 20px
 }
 
-.checkboxIndicator__714a9 svg {
+.backgroundFill__714a9 {
+    inset: 0;
+    position: absolute
+}
+
+.checkmark__714a9 {
     color: var(--checkbox-foreground-active);
-    opacity: 0
+    position: relative
+}
+
+.checkStroke__714a9,
+.dot__714a9 {
+    opacity: 0;
+    transform-origin: 10px 10px
+}
+
+.animateOut__714a9 .backgroundFill__714a9 {
+    animation: bgEmpty__714a9 64ms cubic-bezier(.33, 0, .67, 1) both
+}
+
+.animateOut__714a9 .dot__714a9 {
+    animation: dotShrink__714a9 .12s cubic-bezier(.65, 0, .83, .84) backwards
+}
+
+.animateOut__714a9 .checkStroke__714a9 {
+    animation: checkUndraw__714a9 .12s cubic-bezier(.65, 0, .83, .84) backwards
 }
 
 .leadingIcon__714a9 {
     color: var(--icon-primary);
-    height: 20px;
-    width: 20px
-}
-
-.trailingIcon__714a9 {
-    color: var(--icon-secondary);
     height: 20px;
     width: 20px
 }
@@ -2909,12 +3039,20 @@
 }
 
 .checkboxItem__714a9[data-selected] .checkboxIndicator__714a9 {
-    background-color: var(--checkbox-background-default-selected);
     border-color: var(--checkbox-border-default-selected)
 }
 
-.checkboxItem__714a9[data-selected] .checkboxIndicator__714a9 svg {
-    opacity: 1
+.checkboxItem__714a9[data-selected] .backgroundFill__714a9 {
+    animation: bgFill__714a9 80ms cubic-bezier(.33, 0, .67, 1) 80ms backwards;
+    background-color: var(--checkbox-background-default-selected)
+}
+
+.checkboxItem__714a9[data-selected] .dot__714a9 {
+    animation: dotGrow__714a9 .3s cubic-bezier(.65, 0, .83, .83) forwards
+}
+
+.checkboxItem__714a9[data-selected] .checkStroke__714a9 {
+    animation: checkDraw__714a9 .3s cubic-bezier(.65, 0, .83, .83) both
 }
 
 .checkboxItem__714a9:not([data-selected]):hover {
@@ -2931,8 +3069,11 @@
 }
 
 .checkboxItem__714a9[data-selected]:hover .checkboxIndicator__714a9 {
-    background-color: var(--checkbox-background-hover-selected);
     border-color: var(--checkbox-border-hover-selected)
+}
+
+.checkboxItem__714a9[data-selected]:hover .backgroundFill__714a9 {
+    background-color: var(--checkbox-background-hover-selected)
 }
 
 .checkboxItem__714a9[data-disabled] {

@@ -29,7 +29,6 @@ let c = {
                                     value: "option1",
                                     description: null != u || "" === u ? u : void 0,
                                     leadingIcon: "leading" === d ? a.d3s : void 0,
-                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                                 {
@@ -37,7 +36,6 @@ let c = {
                                     value: "option2",
                                     description: null != u || "" === u ? u : void 0,
                                     leadingIcon: "leading" === d ? a.d3s : void 0,
-                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
                                     disabled: !!f || void 0,
                                 },
                                 {
@@ -45,7 +43,6 @@ let c = {
                                     value: "option3",
                                     description: null != u || "" === u ? u : void 0,
                                     leadingIcon: "leading" === d ? a.d3s : void 0,
-                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                                 {
@@ -53,7 +50,6 @@ let c = {
                                     value: "option4",
                                     description: null != u || "" === u ? u : void 0,
                                     leadingIcon: "leading" === d ? a.d3s : void 0,
-                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
                                     disabled: !!f || void 0,
                                 },
                                 {
@@ -61,7 +57,6 @@ let c = {
                                     value: "option5",
                                     description: null != u || "" === u ? u : void 0,
                                     leadingIcon: "leading" === d ? a.d3s : void 0,
-                                    trailingIcon: "trailing" === d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                             ].slice(0, Math.max(1, Math.min(5, n))),
@@ -178,10 +173,6 @@ let c = {
                         {
                             label: "Leading",
                             value: "leading",
-                        },
-                        {
-                            label: "Trailing",
-                            value: "trailing",
                         },
                     ],
                     defaultValue: "none",
