@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => _ });
 var a = n(951288);
 n(647438);
 var r = n(120356),
@@ -9,14 +9,15 @@ var r = n(120356),
     c = n(480916),
     d = n(963886),
     u = n(110478),
-    m = n(906605),
-    p = n(423932),
-    h = n(695346),
-    x = n(306052),
-    f = n(594174),
-    b = n(103088),
-    g = n(10198);
-let v = () => {
+    m = n(677106),
+    p = n(906605),
+    h = n(423932),
+    x = n(695346),
+    f = n(306052),
+    b = n(594174),
+    g = n(103088),
+    v = n(10198);
+let j = () => {
     Promise.all([n.e("52030"), n.e("91403")])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -42,55 +43,69 @@ let v = () => {
             );
         });
 };
-function j() {
-    let e = f.default.getCurrentUser(),
+function _() {
+    let e = b.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        n = h.Rt.useSetting();
-    return (0, a.jsxs)(a.Fragment, {
+        n = x.Rt.useSetting();
+    return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, g.marginBottom20),
-                children: (0, a.jsx)(x.g, { isDevTools: !0 }),
+                className: i()(g.buttonsContainer, v.marginBottom20),
+                children: (0, a.jsx)(f.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, g.marginBottom20),
+                className: i()(g.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
+                    size: "sm",
                     text: "Launch MFA",
-                    onClick: v,
+                    onClick: j,
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(b.buttonsContainer, g.marginBottom20),
+                className: i()(g.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
+                    size: "sm",
                     text: "Launch Vibing Wumpus",
-                    onClick: () => (0, p.Z)(),
+                    onClick: () => (0, h.Z)(),
                 }),
             }),
             t &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
+                                size: "sm",
+                                text: "Launch Clicker Game",
+                                onClick: () => (0, m.Z)(),
+                            }),
+                        }),
+                        (0, a.jsx)("div", {
+                            className: i()(g.buttonsContainer, v.marginBottom8),
+                            children: (0, a.jsx)(s.zxk, {
+                                variant: "primary",
+                                size: "sm",
                                 text: "Launch Captcha Test Tool",
                                 onClick: () => (0, u.N)(),
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
+                                size: "sm",
                                 text: "Launch Age Verification Test Tool",
                                 onClick: () => (0, d.E)(),
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
+                                size: "sm",
                                 text: "Launch Age Verification Modal",
                                 onClick: () =>
                                     o.Z.showAgeVerificationGetStartedModal({
@@ -99,26 +114,28 @@ function j() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
+                                size: "sm",
                                 text: "Reset Hang Status State",
-                                onClick: m.YU,
+                                onClick: p.YU,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
+                                size: "sm",
                                 text: "Force libdiscore Crash",
                                 onClick: l.$R,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(b.buttonsContainer, g.marginBottom20),
+                            className: i()(g.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
-                                onChange: (e) => h.Rt.updateSetting(e),
+                                onChange: (e) => x.Rt.updateSetting(e),
                                 hideBorder: !0,
                                 children: "Ignore profile speedbump disabled",
                             }),
