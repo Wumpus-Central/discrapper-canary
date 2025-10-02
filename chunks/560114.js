@@ -548,10 +548,11 @@ class ev extends (l = s.PureComponent) {
             guild: n,
             showFriends: l,
             isFriendsInVCInvitesEnabled: s,
+            sections: r,
         } = this.props;
         return (0, i.jsx)("div", {
             className: a()({
-                [er.isFriendsInVCInvitesExperiment]: s,
+                [er.isFriendsInVCInvitesExperiment]: s && null != r,
                 [er.wrapper]: l,
             }),
             children: (0, i.jsx)(I.Y0X, {
