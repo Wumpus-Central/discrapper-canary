@@ -20,5 +20,4 @@ e.exports = {
     isOpen: "isOpen__5fa2f",
     clearButton: "clearButton__5fa2f",
     hiddenVisually: "hiddenVisually__5fa2f",
-    option: "option__5fa2f",
 };

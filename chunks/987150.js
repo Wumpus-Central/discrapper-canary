@@ -5,5 +5,4 @@ e.exports = {
     listBoxItemContent: "listBoxItemContent__8906b",
     listBoxItemLabel: "listBoxItemLabel__8906b",
     selectedIcon: "selectedIcon__8906b",
-    hiddenCheckIcon: "hiddenCheckIcon__8906b",
 };

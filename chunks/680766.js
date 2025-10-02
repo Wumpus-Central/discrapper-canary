@@ -1,12 +1,14 @@
-n.d(t, { W: () => m }), n(953529);
+n.d(t, { W: () => b }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(35916),
-    a = n(496600),
-    o = n(333200),
-    s = n(673221),
-    l = n(231338);
-function c(e, t, n) {
+var i = n(793030),
+    a = n(35916),
+    o = n(496600),
+    s = n(333200),
+    l = n(673221),
+    c = n(231338),
+    u = n(740353);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +21,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +32,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +49,22 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +72,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +81,7 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = [
+let g = [
         {
             label: "Aardvark",
             value: "aardvark",
@@ -112,21 +114,71 @@ let h = [
             disabled: !0,
         },
     ],
-    m = {
+    E = [
+        {
+            label: "Aardvark",
+            value: "aardvark",
+            id: "aardvark",
+            leading: i.VL1,
+            trailing: {
+                type: "badge",
+                badgeType: "new",
+            },
+        },
+        {
+            label: "Cat",
+            value: "cat",
+            id: "cat",
+            leading: i.VL1,
+            trailing: "20m",
+        },
+        {
+            label: "Dog",
+            value: "dog",
+            id: "dog",
+            leading: i.VL1,
+        },
+        {
+            label: "Kangaroo",
+            value: "kangaroo",
+            id: "kangaroo",
+            leading: {
+                type: "image",
+                src: u,
+            },
+        },
+        {
+            label: "Panda",
+            value: "panda",
+            id: "panda",
+            leading: {
+                type: "avatar",
+                src: u,
+            },
+        },
+        {
+            label: "Snake",
+            value: "snake",
+            id: "snake",
+            leading: i.VL1,
+            disabled: !0,
+        },
+    ],
+    b = {
         title: "Select",
         stories: [
             {
                 id: "select",
                 name: "Select",
                 component: function (e) {
-                    var { selectionMode: t } = e,
-                        n = _(e, ["selectionMode"]);
+                    var { selectionMode: t, withLeadingAndTrailing: n } = e,
+                        i = h(e, ["selectionMode", "withLeadingAndTrailing"]);
                     return (0, r.jsx)(
-                        s.P,
-                        f(u({}, n), {
+                        l.P,
+                        p(f({}, i), {
                             selectionMode: t,
-                            options: h,
-                            onSelectionChange: l.dG,
+                            options: n ? E : g,
+                            onSelectionChange: c.dG,
                         }),
                     );
                 },
@@ -145,6 +197,11 @@ let h = [
                             },
                         ],
                         defaultValue: "single",
+                    },
+                    withLeadingAndTrailing: {
+                        label: "Show leading and trailing content",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     required: {
                         label: "Required",
@@ -228,14 +285,14 @@ let h = [
                 id: "searchable-select",
                 name: "SearchableSelect",
                 component: function (e) {
-                    var { selectionMode: t } = e,
-                        n = _(e, ["selectionMode"]);
+                    var { selectionMode: t, withLeadingAndTrailing: n } = e,
+                        i = h(e, ["selectionMode", "withLeadingAndTrailing"]);
                     return (0, r.jsx)(
-                        o.V,
-                        f(u({}, n), {
+                        s.V,
+                        p(f({}, i), {
                             selectionMode: t,
-                            onSelectionChange: l.dG,
-                            options: h,
+                            onSelectionChange: c.dG,
+                            options: n ? E : g,
                         }),
                     );
                 },
@@ -254,6 +311,11 @@ let h = [
                             },
                         ],
                         defaultValue: "single",
+                    },
+                    withLeadingAndTrailing: {
+                        label: "Show leading and trailing content",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     required: {
                         label: "Required",
@@ -336,13 +398,14 @@ let h = [
                             selectionMode: t,
                             label: n,
                             hideLabel: i,
-                            description: o,
+                            description: a,
                             helperText: s,
-                            errorMessage: c,
-                            successMessage: d,
-                            wrapTags: p,
+                            errorMessage: l,
+                            successMessage: u,
+                            wrapTags: d,
+                            withLeadingAndTrailing: _,
                         } = e,
-                        m = _(e, [
+                        m = h(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -351,33 +414,34 @@ let h = [
                             "errorMessage",
                             "successMessage",
                             "wrapTags",
+                            "withLeadingAndTrailing",
                         ]);
-                    let { required: g, disabled: E } = m;
+                    let { required: b, disabled: y } = m;
                     return (0, r.jsxs)(
-                        a.uz,
-                        f(
-                            u(
+                        o.uz,
+                        p(
+                            f(
                                 {
                                     selectionMode: t,
-                                    onSelectionChange: l.dG,
-                                    options: h,
+                                    onSelectionChange: c.dG,
+                                    options: _ ? E : g,
                                 },
                                 m,
                             ),
                             {
                                 children: [
-                                    (0, r.jsx)(a.Ct, {
+                                    (0, r.jsx)(o.Ct, {
                                         label: n,
                                         hideLabel: i,
-                                        required: g,
-                                        disabled: E,
-                                        description: o,
+                                        required: b,
+                                        disabled: y,
+                                        description: a,
                                         helperText: s,
-                                        errorMessage: c,
-                                        successMessage: d,
-                                        wrapTags: p,
+                                        errorMessage: l,
+                                        successMessage: u,
+                                        wrapTags: d,
                                     }),
-                                    (0, r.jsx)(a.px, {}),
+                                    (0, r.jsx)(o.px, {}),
                                 ],
                             },
                         ),
@@ -398,6 +462,11 @@ let h = [
                             },
                         ],
                         defaultValue: "single",
+                    },
+                    withLeadingAndTrailing: {
+                        label: "Show leading and trailing content",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     required: {
                         label: "Required",
@@ -471,13 +540,13 @@ let h = [
                 id: "listbox",
                 name: "ListBox",
                 component: function (e) {
-                    let { selectionMode: t, required: n, shouldFocusWrap: a } = e;
-                    return (0, r.jsx)(i.w, {
+                    let { selectionMode: t, required: n, shouldFocusWrap: i, withLeadingAndTrailing: o } = e;
+                    return (0, r.jsx)(a.w, {
                         selectionMode: t,
                         required: n,
-                        shouldFocusWrap: a,
-                        items: h,
-                        onSelectionChange: l.dG,
+                        shouldFocusWrap: i,
+                        items: o ? E : g,
+                        onSelectionChange: c.dG,
                     });
                 },
                 controls: {
@@ -495,6 +564,11 @@ let h = [
                             },
                         ],
                         defaultValue: "single",
+                    },
+                    withLeadingAndTrailing: {
+                        label: "Show leading and trailing content",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     required: {
                         label: "Required",

@@ -18,10 +18,17 @@ function a(e) {
                     src: o,
                     alt: "",
                 });
+            case "image":
+                let { src: s } = t;
+                return (0, r.jsx)("img", {
+                    className: i.image,
+                    src: s,
+                    alt: "",
+                });
             default:
                 return null;
         }
-    let s = "inline" === n ? "xs" : "sm",
-        l = t;
-    return (0, r.jsx)(l, { size: s });
+    let l = "inline" === n ? "xs" : "sm",
+        c = t;
+    return (0, r.jsx)(c, { size: l });
 }
