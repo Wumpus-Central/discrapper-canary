@@ -160,16 +160,12 @@ function v(e) {
                     (0, r.jsxs)("div", {
                         className: y.activitySettings,
                         children: [
-                            (0, r.jsxs)(s.j7V, {
-                                className: y.visibilitySwitch,
-                                hideBorder: !0,
-                                value: 1 === d,
-                                onChange: g,
+                            (0, r.jsxs)("div", {
                                 children: [
-                                    (0, r.jsx)(s.Text, {
-                                        variant: "text-md/semibold",
-                                        color: "header-primary",
-                                        children: v.name,
+                                    (0, r.jsx)(s.rsf, {
+                                        checked: 1 === d,
+                                        onChange: g,
+                                        label: v.name,
                                     }),
                                     I &&
                                         (0, r.jsx)(O, {
@@ -180,23 +176,17 @@ function v(e) {
                                 ],
                             }),
                             I &&
-                                (0, r.jsx)(s.j7V, {
-                                    className: y.additionalDetailsSwitch,
-                                    hideBorder: !0,
+                                (0, r.jsx)(s.rsf, {
                                     disabled: 1 !== d || null == t.metadata,
-                                    value: 1 === p,
+                                    checked: 1 === p,
                                     onChange: E,
-                                    children: (0, r.jsx)(s.Text, {
-                                        variant: "text-md/normal",
-                                        color: "header-secondary",
-                                        children: b.intl.string(b.t["3l78ws"]),
-                                    }),
+                                    label: b.intl.string(b.t["3l78ws"]),
                                 }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: y.divider }),
+            (0, r.jsx)(s.izJ, {}),
         ],
     });
 }
@@ -213,24 +203,19 @@ function I() {
         );
     return 0 === t.length
         ? null
-        : (0, r.jsxs)(s.hjN, {
+        : (0, r.jsx)(s.C3N, {
               className: y.container,
-              children: [
-                  (0, r.jsx)(s.vwX, {
-                      className: y.title,
-                      children: b.intl.string(b.t.aw0GVV),
-                  }),
-                  t.map((e) =>
-                      (0, r.jsx)(
-                          v,
-                          {
-                              account: e,
-                              handleRefresh: c,
-                              refreshedAccountIds: n,
-                          },
-                          e.id,
-                      ),
+              label: b.intl.string(b.t.aw0GVV),
+              children: t.map((e) =>
+                  (0, r.jsx)(
+                      v,
+                      {
+                          account: e,
+                          handleRefresh: c,
+                          refreshedAccountIds: n,
+                      },
+                      e.id,
                   ),
-              ],
+              ),
           });
 }

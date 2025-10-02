@@ -19,8 +19,6 @@ e.exports = {
     noPadding: "noPadding__67dba",
     content: "content__67dba",
     subText: "subText__67dba",
-    formText: "formText__67dba",
-    toggle: "toggle__67dba",
     noScroll: "noScroll__67dba",
     settingsFooter: "settingsFooter__67dba",
     footer: "footer__67dba",
@@ -32,5 +30,4 @@ e.exports = {
     errorMessage: "errorMessage__67dba",
     errorLink: "errorLink__67dba",
     acronym: "acronym__67dba",
-    divider: "divider__67dba",
 };

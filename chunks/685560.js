@@ -33,8 +33,8 @@ let C = [
         o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    N = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    S = [
+    S = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    N = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
@@ -80,7 +80,7 @@ function k() {
             var t;
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.Wu)([b.Z], () => [...E, ...N].filter((t) => null != e && (0, p.OY)(t, e))),
+        n = (0, l.Wu)([b.Z], () => [...E, ...S].filter((t) => null != e && (0, p.OY)(t, e))),
         r = (0, l.Wu)([g.Z], () => {
             var t;
             return null != e && null != (t = g.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
@@ -163,16 +163,19 @@ function k() {
                             className: y.header,
                             children: "Reset User Level DCs",
                         }),
-                        C.map((e) =>
-                            (0, a.jsx)(
-                                u.Z,
-                                {
-                                    className: y.formSwitch,
-                                    content: o.z[e],
-                                },
-                                o.z[e],
+                        (0, a.jsx)(c.Kqy, {
+                            gap: 16,
+                            children: C.map((e) =>
+                                (0, a.jsx)(
+                                    u.Z,
+                                    {
+                                        className: y.formSwitch,
+                                        content: o.z[e],
+                                    },
+                                    o.z[e],
+                                ),
                             ),
-                        ),
+                        }),
                     ],
                 }),
                 (0, a.jsx)("div", {
@@ -200,7 +203,7 @@ function k() {
                     className: y.section,
                     children: (0, a.jsx)(c.C3N, {
                         label: "Reset Server Tag Guild Level DCs",
-                        children: N.map((t) =>
+                        children: S.map((t) =>
                             (0, a.jsx)(
                                 c.rsf,
                                 {
@@ -225,7 +228,7 @@ function k() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        S.map((e) =>
+                        N.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

@@ -57,14 +57,14 @@ function p(e, t) {
 var m = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
 let b = Object.keys(m);
 function g(e) {
-    let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: l = !1 } = e,
-        s = (0, o.Jb)({
+    let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: l = !1, id: s } = e,
+        c = (0, o.Jb)({
             orientation: "horizontal",
             isDisabled: l,
             labelledBy: i,
         }),
-        { ref: c } = s,
-        m = (function (e, t) {
+        { ref: m } = c,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -84,16 +84,17 @@ function g(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(s, ["ref"]);
+        })(c, ["ref"]);
     return (0, r.jsx)(
         "div",
         p(
             u(
                 {
                     className: a()(d.group, { [d.disabled]: l }),
-                    ref: c,
+                    ref: m,
+                    id: s,
                 },
-                m,
+                g,
             ),
             {
                 children: b.map((e) =>

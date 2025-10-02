@@ -7,7 +7,7 @@ var a = n(951288),
     o = n(920952),
     c = n(544651),
     d = n(546697),
-    u = n(547481);
+    u = n(808396);
 function m(e) {
     var t;
     let { setting: n, depth: i, highlight: l } = e,
@@ -83,10 +83,10 @@ function x() {
                 variant: "heading-lg/bold",
                 children: "Settings Tree",
             }),
-            (0, a.jsx)(i.j7V, {
-                value: e,
+            (0, a.jsx)(i.rsf, {
+                checked: e,
                 onChange: (e) => t(e),
-                children: "Show Legacy Settings Tree",
+                label: "Show Legacy Settings Tree",
             }),
             (0, a.jsx)(h.Provider, {
                 value: n,

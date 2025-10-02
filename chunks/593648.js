@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ei }), n(539854), n(388685);
+n.d(t, { Z: () => er }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -38,9 +38,8 @@ var r = n(951288),
     G = n(981631),
     B = n(468788),
     Z = n(388032),
-    F = n(285746),
-    V = n(10198);
-function H(e, t, n) {
+    F = n(10198);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +52,7 @@ function H(e, t, n) {
         e
     );
 }
-function Y(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,12 +63,12 @@ function Y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                H(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
 }
-function W(e, t) {
+function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,54 +80,34 @@ function W(e, t) {
     }
     return n;
 }
-function K(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : W(Object(t)).forEach(function (n) {
+            : Y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function z(e) {
+function K(e) {
     w.Z.requestPermission((t) => {
         let n = t ? G.$Ab.ENABLED : G.$Ab.BLOCKED;
         f.default.setPermissionsState(n, e);
     });
 }
-function q(e) {
-    let { label: t, enabled: n, disabled: i, onPreview: a, onChange: o, tooltip: s } = e;
-    return (0, r.jsx)(u.j7V, {
-        className: F.soundRow,
-        value: n,
+function z(e) {
+    let { label: t, enabled: n, disabled: i, onPreview: a, onChange: o } = e;
+    return (0, r.jsx)(u.rsf, {
+        label: t,
+        checked: n,
         onChange: o,
         disabled: i,
-        tooltipNote: s,
-        children: (0, r.jsxs)("div", {
-            className: F.notificationSound,
-            children: [
-                (0, r.jsx)("div", {
-                    className: F.soundName,
-                    children: t,
-                }),
-                (0, r.jsx)(u.P3F, {
-                    className: F.soundIcon,
-                    onClick: a,
-                    "aria-label": Z.intl.string(Z.t.Kd4uxM),
-                    children: (0, r.jsx)(u.gj8, {
-                        size: "xs",
-                        color: "currentColor",
-                        className: F.icon,
-                        "aria-hidden": !0,
-                    }),
-                }),
-            ],
-        }),
+        description: Z.intl.format(Z.t.OOiGCA, { onClick: a }),
     });
 }
-function X(e) {
+function q(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: a } = e,
         o = i.useRef(null),
         s = (0, b.p)(),
@@ -254,7 +233,7 @@ function X(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.vwX, {
-                                  className: V.marginBottom20,
+                                  className: F.marginBottom20,
                                   children: Z.intl.string(Z.t.fgSHf3),
                               }),
                               (0, r.jsx)(E.Z, {}),
@@ -276,19 +255,33 @@ function X(e) {
                             checked: n,
                             onChange: f.default.toggleDisableAllSounds,
                         }),
-                        d.map((e) => {
-                            let { label: i, sound: a, focusModeDisabled: o } = e;
-                            return (0, r.jsx)(
-                                q,
+                        d.map((e, i) => {
+                            let { label: a, sound: o, focusModeDisabled: s } = e;
+                            return (0, r.jsxs)(
+                                u.Kqy,
                                 {
-                                    label: i,
-                                    disabled: n || !0 === o,
-                                    tooltip: o ? Z.intl.string(Z.t.cIRG0t) : void 0,
-                                    onChange: (e) => c(a, e),
-                                    onPreview: (e) => l(a, e),
-                                    enabled: !n && !t.includes(a) && !0 !== o,
+                                    children: [
+                                        i > 0 && (0, r.jsx)(u.izJ, { gap: 8 }),
+                                        (0, r.jsx)(
+                                            z,
+                                            {
+                                                label: a,
+                                                disabled: n || !0 === s,
+                                                onChange: (e) => c(o, e),
+                                                onPreview: (e) => l(o, e),
+                                                enabled: !n && !t.includes(o) && !0 !== s,
+                                            },
+                                            o,
+                                        ),
+                                        s
+                                            ? (0, r.jsx)(u.Wn, {
+                                                  messageType: u.QYI.WARNING,
+                                                  children: Z.intl.string(Z.t.cIRG0t),
+                                              })
+                                            : null,
+                                    ],
                                 },
-                                a,
+                                o,
                             );
                         }),
                     ],
@@ -297,7 +290,7 @@ function X(e) {
         }),
     });
 }
-function Q() {
+function X() {
     let e = (0, s.e7)([m.Z], () => m.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
         a = D.default.keys(e).map((t) => {
@@ -367,10 +360,10 @@ function Q() {
               }),
           });
 }
-class J extends i.PureComponent {
+class Q extends i.PureComponent {
     handleDesktopChange(e) {
         let t = e ? G.qrD.ALL : G.qrD.NEVER;
-        t !== G.qrD.NEVER ? z("UserSettingsModal") : f.default.setDesktopType(t);
+        t !== G.qrD.NEVER ? K("UserSettingsModal") : f.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e;
@@ -411,7 +404,7 @@ class J extends i.PureComponent {
                             disabled: c,
                         }),
                     }),
-                    (0, r.jsx)(ee, {}),
+                    (0, r.jsx)($, {}),
                     (0, r.jsx)(A.F, {
                         setting: U.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                         children: (0, r.jsx)(u.rsf, {
@@ -430,9 +423,9 @@ class J extends i.PureComponent {
                             onChange: this.handleToggleShowFlash,
                         }),
                     }),
-                    (0, r.jsx)(et, {}),
-                    (0, r.jsx)(eo, {}),
+                    (0, r.jsx)(ee, {}),
                     (0, r.jsx)(ea, {}),
+                    (0, r.jsx)(ei, {}),
                     (0, r.jsxs)(A.F, {
                         setting: U.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                         children: [
@@ -447,9 +440,9 @@ class J extends i.PureComponent {
                         ],
                     }),
                     this.renderTTS(),
-                    (0, r.jsx)(Q, {}),
+                    (0, r.jsx)(X, {}),
                     (0, r.jsx)(u.izJ, { gap: 24 }),
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(q, {
                         disabledSounds: a,
                         disableAllSounds: s,
                         notifyMessagesInSelectedChannel: l,
@@ -461,13 +454,13 @@ class J extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            H(this, "handleToggleShowUnreadBadge", () => {
+            V(this, "handleToggleShowUnreadBadge", () => {
                 f.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
-            H(this, "handleToggleShowFlash", () => {
+            V(this, "handleToggleShowFlash", () => {
                 f.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
-            H(this, "renderTTS", () => {
+            V(this, "renderTTS", () => {
                 if (!p.Zh) return null;
                 let e = [
                     {
@@ -499,7 +492,7 @@ class J extends i.PureComponent {
             });
     }
 }
-let $ = (0, h.B)({
+let J = (0, h.B)({
     kind: "user",
     id: "2024-01_mention_on_all_messages",
     label: "Mention on all messages",
@@ -512,8 +505,8 @@ let $ = (0, h.B)({
         },
     ],
 });
-function ee() {
-    let e = $.useExperiment({ location: "settings" }, { autoTrackExposure: !1 }).enabled,
+function $() {
+    let e = J.useExperiment({ location: "settings" }, { autoTrackExposure: !1 }).enabled,
         t = (0, s.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, r.jsx)(A.F, {
@@ -530,7 +523,7 @@ function ee() {
           })
         : null;
 }
-function et() {
+function ee() {
     let e = O.xT.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = O.fs.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }),
         n = (0, s.e7)([P.ZP], () => P.ZP.useNewNotifications),
@@ -546,7 +539,7 @@ function et() {
                                 description: Z.intl.string(Z.t.frbLrK),
                                 checked: n,
                                 disabled: a || !n,
-                                onChange: () => en(o),
+                                onChange: () => et(o),
                             }),
                         })
                       : t
@@ -612,7 +605,7 @@ function et() {
           })
         : null;
 }
-async function en(e) {
+async function et(e) {
     e(!0);
     let t = await (0, y.Tn)();
     0 === t.length
@@ -626,11 +619,11 @@ async function en(e) {
           }),
         e(!1);
 }
-function er(e) {
+function en(e) {
     let t = (0, b.p)();
-    return (0, r.jsx)(J, K(Y({}, e), { focusMode: t }));
+    return (0, r.jsx)(Q, W(H({}, e), { focusMode: t }));
 }
-function ei() {
+function er() {
     let e = (0, s.cj)([R.Z], () => ({
         disableUnreadBadge: R.Z.getDisableUnreadBadge(),
         taskbarFlash: R.Z.taskbarFlash,
@@ -640,9 +633,9 @@ function ei() {
         ttsType: R.Z.getTTSType(),
         notifyMessagesInSelectedChannel: R.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(er, K(Y({}, e), { afkTimeout: x.CM.useSetting() }));
+    return (0, r.jsx)(en, W(H({}, e), { afkTimeout: x.CM.useSetting() }));
 }
-function ea() {
+function ei() {
     let e = x.fz.useSetting(),
         t = [
             {
@@ -677,7 +670,7 @@ function ea() {
           })
         : null;
 }
-function eo() {
+function ea() {
     let e = x.d8.useSetting(),
         t = x.JN.useSetting();
     return (0, r.jsxs)(r.Fragment, {

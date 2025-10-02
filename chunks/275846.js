@@ -1,22 +1,21 @@
-n.d(t, { i: () => h }), n(781311), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(49800),
-    o = n(481060),
-    s = n(434333),
-    l = n(540863),
-    c = n(383838),
-    u = n(789164),
-    d = n(471141),
-    f = n(512983),
-    _ = n(231338);
-let p = {
+n.d(t, { i: () => _ }), n(781311);
+var r = n(951288);
+n(647438);
+var i = n(49800),
+    a = n(481060),
+    o = n(434333),
+    s = n(540863),
+    l = n(383838),
+    c = n(789164),
+    u = n(512983),
+    d = n(231338);
+let f = {
         id: "formnotice",
         name: "FormNotice",
         component: function (e) {
-            let { type: t, title: n, body: i, hasButton: a } = e,
-                s = a ? (0, r.jsx)(o.zxk, { text: "Action" }) : void 0;
-            return (0, r.jsx)(c.To, {
+            let { type: t, title: n, body: i, hasButton: o } = e,
+                s = o ? (0, r.jsx)(a.zxk, { text: "Action" }) : void 0;
+            return (0, r.jsx)(l.To, {
                 type: t,
                 title: n,
                 body: i,
@@ -27,31 +26,31 @@ let p = {
             type: {
                 type: "select",
                 label: "Type",
-                defaultValue: a.Z.Types.DANGER,
+                defaultValue: i.Z.Types.DANGER,
                 options: [
                     {
                         label: "Primary",
-                        value: a.Z.Types.PRIMARY,
+                        value: i.Z.Types.PRIMARY,
                     },
                     {
                         label: "Danger",
-                        value: a.Z.Types.DANGER,
+                        value: i.Z.Types.DANGER,
                     },
                     {
                         label: "Warning",
-                        value: a.Z.Types.WARNING,
+                        value: i.Z.Types.WARNING,
                     },
                     {
                         label: "Success",
-                        value: a.Z.Types.SUCCESS,
+                        value: i.Z.Types.SUCCESS,
                     },
                     {
                         label: "Brand",
-                        value: a.Z.Types.BRAND,
+                        value: i.Z.Types.BRAND,
                     },
                     {
                         label: "Custom",
-                        value: a.Z.Types.CUSTOM,
+                        value: i.Z.Types.CUSTOM,
                     },
                 ],
             },
@@ -72,23 +71,23 @@ let p = {
             },
         },
     },
-    h = {
+    _ = {
         title: "Form Components",
         stories: [
-            p,
+            f,
             {
                 id: "formitem",
                 name: "FormItem",
                 component: function (e) {
-                    let { title: t, errorMessage: n, disabled: i, required: a, tag: s } = e,
+                    let { title: t, errorMessage: n, disabled: i, required: o, tag: l } = e,
                         c = (null == n ? void 0 : n.trim()) === "" ? void 0 : n;
-                    return (0, r.jsx)(l.x, {
+                    return (0, r.jsx)(s.x, {
                         title: t,
                         error: c,
                         disabled: i,
-                        required: a,
-                        tag: s,
-                        children: (0, r.jsx)(o.oil, { placeholder: "Enter text here..." }),
+                        required: o,
+                        tag: l,
+                        children: (0, r.jsx)(a.oil, { placeholder: "Enter text here..." }),
                     });
                 },
                 controls: {
@@ -180,7 +179,7 @@ let p = {
                                             },
                                             children: [e, ":"],
                                         }),
-                                        (0, r.jsx)(f.v, {
+                                        (0, r.jsx)(u.v, {
                                             tag: e,
                                             disabled: n,
                                             required: i,
@@ -219,73 +218,20 @@ let p = {
                 },
             },
             {
-                id: "formswitch",
-                name: "FormSwitch",
-                component: function (e) {
-                    let { children: t, disabled: n, hideBorder: a, note: o, disabledText: s, tooltipNote: l } = e,
-                        [c, u] = i.useState(!1),
-                        f = (e) => {
-                            u(e);
-                        };
-                    return (0, r.jsx)(d.j, {
-                        value: c,
-                        disabled: n,
-                        hideBorder: a,
-                        onChange: f,
-                        note: (null == o ? void 0 : o.trim()) === "" ? void 0 : o,
-                        disabledText: "" === s.trim() ? void 0 : s,
-                        tooltipNote: "" === l.trim() ? void 0 : l,
-                        children: t,
-                    });
-                },
-                controls: {
-                    children: {
-                        type: "text",
-                        label: "Label Text",
-                        defaultValue: "Enable this feature",
-                    },
-                    disabled: {
-                        type: "boolean",
-                        label: "Disabled",
-                        defaultValue: !1,
-                    },
-                    hideBorder: {
-                        type: "boolean",
-                        label: "Hide Border",
-                        defaultValue: !1,
-                    },
-                    note: {
-                        type: "text",
-                        label: "Note",
-                        defaultValue: "",
-                    },
-                    disabledText: {
-                        type: "text",
-                        label: "Disabled Text",
-                        defaultValue: "",
-                    },
-                    tooltipNote: {
-                        type: "text",
-                        label: "Tooltip Note",
-                        defaultValue: "",
-                    },
-                },
-            },
-            {
                 id: "formsection",
                 name: "FormSection",
                 component: function (e) {
                     let { title: t, disabled: n, tag: i } = e;
-                    return (0, r.jsxs)(u.h, {
+                    return (0, r.jsxs)(c.h, {
                         title: t,
                         disabled: n,
                         tag: i,
                         children: [
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/normal",
                                 children: "This is content within the form section.",
                             }),
-                            (0, r.jsx)(o.oil, { placeholder: "Enter text here..." }),
+                            (0, r.jsx)(a.oil, { placeholder: "Enter text here..." }),
                         ],
                     });
                 },
@@ -329,11 +275,11 @@ let p = {
                 id: "formerrorblock",
                 name: "FormErrorBlock",
                 component: function (e) {
-                    let { children: t, backgroundColor: n, hasDismiss: i, iconType: a } = e,
-                        l = "check" === a ? o.owK : o.Mgn;
-                    return (0, r.jsx)(s.k, {
+                    let { children: t, backgroundColor: n, hasDismiss: i, iconType: s } = e,
+                        l = "check" === s ? a.owK : a.Mgn;
+                    return (0, r.jsx)(o.k, {
                         backgroundColor: n,
-                        onDismiss: i ? _.dG : void 0,
+                        onDismiss: i ? d.dG : void 0,
                         icon: l,
                         children: t,
                     });
@@ -347,19 +293,19 @@ let p = {
                     backgroundColor: {
                         type: "select",
                         label: "Background Color",
-                        defaultValue: s.m.RED,
+                        defaultValue: o.m.RED,
                         options: [
                             {
                                 label: "Red",
-                                value: s.m.RED,
+                                value: o.m.RED,
                             },
                             {
                                 label: "Background Tertiary",
-                                value: s.m.BACKGROUND_TERTIARY,
+                                value: o.m.BACKGROUND_TERTIARY,
                             },
                             {
                                 label: "Background Accent",
-                                value: s.m.BACKGROUND_ACCENT,
+                                value: o.m.BACKGROUND_ACCENT,
                             },
                         ],
                     },

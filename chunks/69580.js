@@ -71,7 +71,7 @@ var r = n(951288),
     J = n(981631),
     $ = n(186901),
     ee = n(388032),
-    et = n(565870);
+    et = n(847446);
 function en(e, t, n) {
     return (
         t in e
@@ -695,15 +695,13 @@ function ec(e) {
                         noDivider: !tv && !tO && !ty && e4.enabled,
                     }),
                     tv
-                        ? (0, r.jsx)(m.j7V, {
-                              hideBorder: !0,
-                              onChange: ez,
+                        ? (0, r.jsx)("div", {
                               className: et.mobilePushContainer,
-                              note: ee.intl.string(ee.t.hw1nKS),
-                              value: eK,
-                              children: (0, r.jsx)(m.Text, {
-                                  variant: "text-sm/medium",
-                                  children: ee.intl.string(ee.t["Pkw//v"]),
+                              children: (0, r.jsx)(m.rsf, {
+                                  label: ee.intl.string(ee.t["Pkw//v"]),
+                                  onChange: ez,
+                                  description: ee.intl.string(ee.t.hw1nKS),
+                                  checked: eK,
                               }),
                           })
                         : null,
