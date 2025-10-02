@@ -8,17 +8,17 @@ var r = n(951288),
     c = n(812206),
     u = n(823379),
     d = n(804919),
-    p = n(350327),
-    f = n(931847),
-    h = n(836197),
-    g = n(86419),
+    p = n(931847),
+    f = n(836197),
+    h = n(86419),
+    g = n(50130),
     m = n(872269),
     b = n(248554),
     _ = n(70399),
     O = n(228168),
     E = n(388032),
-    v = n(73686);
-let y = {
+    y = n(73686);
+let v = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
@@ -66,101 +66,100 @@ let y = {
     },
 };
 function I(e) {
-    var t;
-    let n,
-        { widgetType: l, onAddWidget: c, size: d = "default", loading: E = !1, trackUserProfileEditAction: I } = e,
-        { placeholder: C, getAriaLabel: S, icon: T } = y[l],
-        N = "small" === d,
-        j = null == (t = (0, p.uV)().data) ? void 0 : t.map((e) => e.application_id),
-        P = i.useMemo(() => {
-            switch (l) {
+    let t,
+        { widgetType: n, onAddWidget: l, size: c = "default", loading: d = !1, trackUserProfileEditAction: E } = e,
+        { placeholder: I, getAriaLabel: S, icon: C } = v[n],
+        T = "small" === c,
+        { config: N } = (0, g.G)(),
+        j = i.useMemo(() => {
+            switch (n) {
                 case o.l.CURRENT_GAMES:
                 case o.l.FAVORITE_GAMES:
                 case o.l.PLAYED_GAMES:
                 case o.l.WANT_TO_PLAY_GAMES:
-                    return new h.zy({
-                        type: l,
+                    return new f.zy({
+                        type: n,
                         games: [],
                     });
                 case o.l.APPLICATION:
-                    let e = null == j ? void 0 : j[0];
+                    let e = null == N ? void 0 : N.application_id;
                     if (null == e) return null;
-                    return new f.q({
-                        type: l,
+                    return new p.q({
+                        type: n,
                         applicationId: e,
                     });
             }
-        }, [l, j]),
-        x = i.useCallback(() => {
-            E ||
-                null == P ||
-                ((0, g.qH)(l, P),
-                I({
+        }, [n, null == N ? void 0 : N.application_id]),
+        P = i.useCallback(() => {
+            d ||
+                null == j ||
+                ((0, h.qH)(n, j),
+                E({
                     action: "WIDGET_ADDED",
-                    widgetEdited: l,
+                    widgetEdited: n,
                 }),
                 (0, m.L$)(O.qb.WIDGET_ADDED),
-                null == c || c());
-        }, [E, l, P, I, c]);
-    return (null != P && null != T && (n = T(P)), null == P)
+                null == l || l());
+        }, [d, n, j, E, l]);
+    return (null != j && null != C && (t = C(j)), null == j)
         ? null
         : (0, r.jsxs)("div", {
-              className: v.addButtonContainer,
+              className: y.addButtonContainer,
               children: [
                   (0, r.jsxs)(s.P3F, {
-                      className: a()(v.addButtonContent, N && v.sizeSmall, E && v.loading),
-                      onClick: x,
-                      "aria-label": S(P),
-                      "aria-busy": E,
+                      className: a()(y.addButtonContent, T && y.sizeSmall, d && y.loading),
+                      onClick: P,
+                      "aria-label": S(j),
+                      "aria-busy": d,
                       children: [
                           (() => {
-                              if (null == P) return null;
-                              let e = C(P);
+                              if (null == j) return null;
+                              let e = I(j);
                               switch (e.variant) {
                                   case "details":
                                       return (0, r.jsx)(b.i, {
-                                          className: v.placeholderPadding,
+                                          className: y.placeholderPadding,
                                           applicationId: e.applicationId,
-                                          size: d,
+                                          size: c,
                                       });
                                   case "grid":
                                       return (0, r.jsx)(b.c, {
-                                          className: v.placeholderPadding,
+                                          className: y.placeholderPadding,
                                           applicationIds: e.applicationIds,
-                                          size: d,
+                                          size: c,
                                       });
                                   case "application-widget":
                                       return (0, r.jsx)(_.Z, {
                                           applicationId: e.applicationId,
-                                          size: d,
+                                          size: c,
                                       });
                                   default:
                                       return (0, u.vE)(e);
                               }
                           })(),
                           (0, r.jsxs)("div", {
-                              className: v.overlay,
+                              className: y.overlay,
                               children: [
                                   (0, r.jsx)(s.oFk, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: v.addButton,
+                                      className: y.addButton,
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: v.title,
+                                      className: y.title,
                                       children: [
                                           (0, r.jsx)(s.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: (0, g.mR)(P),
+                                              children: (0, h.mR)(j),
                                           }),
-                                          null != n
+                                          null != t
                                               ? (0, r.jsx)("img", {
-                                                    src: n,
+                                                    src: t,
                                                     alt: "",
                                                     width: 16,
                                                     height: 16,
-                                                    className: v.icon,
+                                                    className: y.icon,
                                                 })
                                               : null,
                                       ],
@@ -170,12 +169,12 @@ function I(e) {
                       ],
                   }),
                   (() => {
-                      if (null == P) return null;
-                      let e = C(P);
+                      if (null == j) return null;
+                      let e = I(j);
                       return "application-widget" === e.variant
                           ? (0, r.jsx)(_.T, {
                                 applicationId: e.applicationId,
-                                size: d,
+                                size: c,
                             })
                           : null;
                   })(),
