@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var l = n(951288),
     i = n(481060);
-function a(e, t) {
+function a(e, t, a) {
     (0, i.ZDy)(async () => {
         let { default: i } = await n.e("61268").then(n.bind(n, 37208));
         return (n) =>
@@ -35,6 +35,7 @@ function a(e, t) {
                     {
                         portkeyGame: t,
                         guildId: e,
+                        status: a,
                     },
                     n,
                 ),
