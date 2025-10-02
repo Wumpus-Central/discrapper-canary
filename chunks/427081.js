@@ -256,6 +256,7 @@ class P extends a.Z {
                     this.syncHeartbeats(
                         [r.X.PLAY_ON_DESKTOP, r.X.STREAM_ON_DESKTOP, r.X.PLAY_ACTIVITY],
                         "QUESTS_ENROLL_SUCCESS",
+                        (e) => !R(e),
                     ),
                 QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
                 QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
