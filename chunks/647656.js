@@ -27,6 +27,7 @@ let _ = ["1402418171662569542"],
                         pid: e.number().min(0),
                         activity: (0, g.Z)(e)
                             .keys({
+                                name: e.string().min(1).max(128),
                                 state: e.string().min(2).max(128),
                                 state_url: e.string().uri().min(1).max(256),
                                 details: e.string().min(2).max(128),
@@ -100,7 +101,7 @@ let _ = ["1402418171662569542"],
                         Promise.resolve(O)
                     );
                 let y = {};
-                O.name = a.application.name;
+                O.name || (O.name = a.application.name);
                 let v = a.application.id;
                 O.application_id = v;
                 let I = a.transport === m.He.POST_MESSAGE;
