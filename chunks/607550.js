@@ -74,4 +74,13 @@ let u = new c(i.Z, {
         let { error: t } = e;
         l.Z.captureException(t);
     },
+    WISHLIST_UPDATE_VISIBILITY_SUCCESS: function (e) {
+        let { wishlistId: t } = e,
+            n = s(t);
+        (n.status = "success"), (n.error = void 0);
+    },
+    WISHLIST_UPDATE_VISIBILITY_FAILURE: function (e) {
+        let { error: t } = e;
+        l.Z.captureException(t);
+    },
 });

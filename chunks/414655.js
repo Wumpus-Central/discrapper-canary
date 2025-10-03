@@ -159,7 +159,11 @@ function O(e) {
                                               text: b.intl.string(b.t.SDUwMz),
                                               onClick: C,
                                           }),
-                                          (0, r.jsx)(m.Z, { isOwner: y }),
+                                          (0, r.jsx)(m.Z, {
+                                              isOwner: y,
+                                              userId: t.id,
+                                              wishlistId: I.id,
+                                          }),
                                       ],
                                   })
                                 : (0, r.jsx)(o.zxk, {

@@ -121,4 +121,32 @@ let f = {
             );
         }
     },
+    async updateWishlistVisibility(e, t) {
+        let n = s.default.getCurrentUser();
+        if (null != n)
+            try {
+                await r.tn.patch({
+                    url: p.ANM.USER_WISHLIST_PATCH(e),
+                    body: { visibility: t },
+                    rejectWithError: !0,
+                }),
+                    i.Z.dispatch({
+                        type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS",
+                        wishlistId: e,
+                        visibility: t,
+                    });
+                try {
+                    await (0, l.In)(n.id);
+                } catch (e) {}
+            } catch (t) {
+                throw (
+                    (i.Z.dispatch({
+                        type: "WISHLIST_UPDATE_VISIBILITY_FAILURE",
+                        wishlistId: e,
+                        error: new a.Hx(t),
+                    }),
+                    t)
+                );
+            }
+    },
 };

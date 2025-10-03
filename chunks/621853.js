@@ -77,8 +77,8 @@ let S = Symbol("NO GUILD ID"),
     P = 2147483647,
     w = new Map(),
     D = new Map(),
-    x = new Map(),
     L = new Map(),
+    x = new Map(),
     j = new Map(),
     M = new Map(),
     k = new Map(),
@@ -120,10 +120,10 @@ function Y(e) {
     if ((null == n ? void 0 : n.expiresAt) == null) return;
     let r = 1000 * n.expiresAt + b.Cm - Date.now();
     if (r <= 0) {
-        (t.profileEffect = void 0), x.delete(e), eg.emitChange();
+        (t.profileEffect = void 0), L.delete(e), eg.emitChange();
         return;
     }
-    let i = x.get(e);
+    let i = L.get(e);
     null != i && i.start(Math.min(P, r), () => Y(e));
 }
 function W(e, t) {
@@ -136,10 +136,10 @@ function W(e, t) {
     if ((null == o ? void 0 : o.expiresAt) == null) return;
     let s = 1000 * o.expiresAt + b.Cm - Date.now();
     if (s <= 0) {
-        i.set(t, T(v({}, a), { profileEffect: void 0 })), null == (r = L.get(e)) || r.delete(t), eg.emitChange();
+        i.set(t, T(v({}, a), { profileEffect: void 0 })), null == (r = x.get(e)) || r.delete(t), eg.emitChange();
         return;
     }
-    let l = null == (n = L.get(e)) ? void 0 : n.get(t);
+    let l = null == (n = x.get(e)) ? void 0 : n.get(t);
     null != l && l.start(Math.min(P, s), () => W(e, t));
 }
 function K() {
@@ -266,7 +266,7 @@ function J(e) {
         (null == (E = z.user_profile) || null == (g = E.profile_effect) ? void 0 : g.expires_at) != null)
     ) {
         let e = new o.V7();
-        x.set(z.user.id, e), Y(z.user.id);
+        L.set(z.user.id, e), Y(z.user.id);
     }
     if (null != z.guild_member_profile) {
         let e = z.guild_member_profile.profile_effect,
@@ -298,11 +298,11 @@ function J(e) {
         }
         if ((null == (K = z.guild_member_profile) || null == (V = K.profile_effect) ? void 0 : V.expires_at) != null) {
             let e = new o.V7(),
-                t = L.get(z.user.id);
+                t = x.get(z.user.id);
             if (null != t) t.set(z.guild_member_profile.guild_id, e);
             else {
                 let t = new Map();
-                t.set(z.guild_member_profile.guild_id, e), L.set(z.user.id, t);
+                t.set(z.guild_member_profile.guild_id, e), x.set(z.user.id, t);
             }
             W(z.user.id, z.guild_member_profile.guild_id);
         }
@@ -391,7 +391,7 @@ function en(e) {
         (null == c ? void 0 : c.expires_at) != null)
     ) {
         let e = new o.V7();
-        x.set(t, e), Y(t);
+        L.set(t, e), Y(t);
     }
 }
 function er(e) {
@@ -433,11 +433,11 @@ function er(e) {
         (null == u ? void 0 : u.expires_at) != null)
     ) {
         let e = new o.V7(),
-            r = L.get(t);
+            r = x.get(t);
         if (null != r) r.set(n, e);
         else {
             let r = new Map();
-            r.set(n, e), L.set(t, r);
+            r.set(n, e), x.set(t, r);
         }
         W(t, n);
     }
@@ -538,6 +538,11 @@ class em extends f.Z {
     getFirstWishlistId(e) {
         let t = this.getWishlistIds(e);
         return t.length > 0 ? t[0] : null;
+    }
+    getWishlistSettings(e, t) {
+        var n, r;
+        let i = w.get(e);
+        return null != (r = null == i || null == (n = i.wishlistSettings) ? void 0 : n[t]) ? r : null;
     }
     takeSnapshot() {
         let e = u.default.getId(),
