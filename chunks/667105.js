@@ -10,7 +10,7 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(786920),
+    a = n(137317),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -66,7 +66,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -78,12 +78,12 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -224,7 +224,7 @@ function G(e) {
         }),
         A = (0, E._s)({ quest: n }),
         w = (0, E.Rf)(n),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             (0, u.$)();
         }, []),
         M = i.useCallback(() => {
@@ -284,6 +284,7 @@ function G(e) {
                                 return;
                             }
                             b ||
+                                B ||
                                 (0, g.AH)(n.id, {
                                     questContent: o,
                                     questContentCTA: t,
@@ -314,7 +315,23 @@ function G(e) {
                                               sourceQuestContent: v,
                                               sourceQuestContentCTA: p.jZ.ACCEPT_QUEST,
                                           }))
-                                    : B && G();
+                                    : B &&
+                                      ((0, T.R)(C.dr.QUEST_HOME_DESKTOP)
+                                          ? await (0, g.AH)(n.id, {
+                                                questContent: o,
+                                                questContentCTA: t,
+                                                questContentPosition: s,
+                                                questContentRowIndex: f,
+                                                sourceQuestContent: v,
+                                            })
+                                          : (0, g.AH)(n.id, {
+                                                questContent: o,
+                                                questContentCTA: t,
+                                                questContentPosition: s,
+                                                questContentRowIndex: f,
+                                                sourceQuestContent: v,
+                                            }),
+                                      G());
                         },
                     }
                 );
@@ -383,12 +400,12 @@ function G(e) {
                     tooltipText: null,
                     onClick: I,
                 };
-                if (a) return L(D({}, i), { text: P.intl.string(P.t.MAS7uL) });
-                if ((0, m.vQ)(n.config)) return L(D({}, i), { text: P.intl.string(P.t.vTgCW1) });
+                if (a) return x(D({}, i), { text: P.intl.string(P.t.MAS7uL) });
+                if ((0, m.vQ)(n.config)) return x(D({}, i), { text: P.intl.string(P.t.vTgCW1) });
                 if ((0, m.Bg)(n.config))
                     return {
                         tooltipText: null,
-                        onClick: x,
+                        onClick: L,
                         text: P.intl.string(P.t["eQX+go"]),
                     };
                 else if ((0, m.xN)(n.config))
@@ -397,9 +414,9 @@ function G(e) {
                         text: P.intl.string(P.t.WYchdX),
                         onClick: M,
                     };
-                return L(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
+                return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
-    }, [r, b, A, _, I, a, n, o, s, f, k, w, x, M, y, G, v, Z, B]);
+    }, [r, b, A, _, I, a, n, o, s, f, k, w, L, M, y, G, v, Z, B]);
 }
 function B() {
     return (0, o.e7)([b.Z], () => {
