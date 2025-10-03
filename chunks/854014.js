@@ -1,75 +1,76 @@
-n.d(t, {
-    C: () => a,
-    Z: () => u,
-});
+n.d(t, { y: () => m }), n(361932), n(187205);
 var r = n(951288),
-    i = n(120356),
-    l = n.n(i),
-    o = n(481060),
-    s = n(873395);
-function a(e) {
-    let { onClick: t, active: n, children: i } = e;
-    return (0, r.jsx)(o.P3F, {
-        className: l()(s.item, { [s.active]: n }),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
+    a = n(481060),
+    s = n(59662),
+    c = n(950941),
+    u = n(721611),
+    d = n(873395);
+function f(e) {
+    let { onClick: t, active: n, children: l } = e;
+    return (0, r.jsx)(a.P3F, {
+        className: i()(d.item, { [d.active]: n }),
         onClick: t,
-        children: i,
+        children: l,
     });
 }
-function u(e) {
-    var { onClick: t, active: n } = e,
-        i = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
-            return i;
-        })(e, ["onClick", "active"]);
-    if ("render" in i) {
-        let { render: e } = i;
-        return (0, r.jsx)(a, {
-            onClick: t,
-            active: n,
-            children: (0, r.jsx)(e, {}),
-        });
-    }
-    let { icon: l, title: u, trailing: c } = i;
-    return (0, r.jsxs)(a, {
-        onClick: t,
-        active: n,
-        children: [
-            (0, r.jsxs)("div", {
-                className: s.itemContent,
-                children: [
-                    (0, r.jsx)(l, {
-                        color: "currentColor",
-                        size: "refresh_sm",
-                        className: s.icon,
-                    }),
-                    (0, r.jsx)(o.Text, {
-                        variant: "text-md/medium",
-                        color: "currentColor",
-                        children: u,
-                    }),
-                ],
-            }),
-            (0, r.jsx)("div", {
-                className: s.itemContent,
-                children: c,
-            }),
-        ],
-    });
+function m(e) {
+    let { node: t, visibleContent: n } = e,
+        { currentPanel: o, navigateTo: i, setShowNavigationMobile: m } = (0, s.t)(),
+        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: p, trailing: x } = t,
+        v = l.useMemo(() => t.layout[0], [t]),
+        y = null != o && o.key === (null == v ? void 0 : v.key),
+        h = b(),
+        g =
+            null != v
+                ? () => {
+                      i(v.key), m(!1);
+                  }
+                : t.onClick,
+        O = l.useMemo(() => {
+            var e;
+            return null != (e = null == v ? void 0 : v.layout.flatMap((e) => e.layout)) ? e : [];
+        }, [v]);
+    return null != j
+        ? (0, r.jsx)(f, {
+              onClick: g,
+              active: y,
+              children: (0, r.jsx)(j, {}),
+          })
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsxs)(f, {
+                      onClick: g,
+                      active: y,
+                      children: [
+                          (0, r.jsxs)("div", {
+                              className: d.itemContent,
+                              children: [
+                                  (0, r.jsx)(p, {
+                                      color: "currentColor",
+                                      size: "refresh_sm",
+                                      className: d.icon,
+                                  }),
+                                  (0, r.jsx)(a.Text, {
+                                      variant: "text-md/medium",
+                                      color: "currentColor",
+                                      children: h,
+                                  }),
+                              ],
+                          }),
+                          null != x &&
+                              (0, r.jsx)("div", {
+                                  className: d.itemContent,
+                                  children: (0, r.jsx)(c.W, {
+                                      trailing: x,
+                                      visibleContent: n,
+                                  }),
+                              }),
+                      ],
+                  }),
+                  y && O.length > 1 && (0, r.jsx)(u.Z, { categories: O }),
+              ],
+          });
 }

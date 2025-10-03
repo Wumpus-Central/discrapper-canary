@@ -1,20 +1,24 @@
-n.d(t, { Z: () => T });
+n.d(e, { e_: () => O });
 var i = n(657707),
-    r = n(509613),
-    l = n(313789),
-    u = n(526665),
+    l = n(509613),
+    u = n(313789),
+    r = n(526665),
     s = n(61512),
     a = n(441302),
     o = n(736608),
     c = n(802),
-    d = n(348911),
-    E = n(388032);
-let O = (0, r.x1)(l.n.NOTIFICATIONS_PANE, {
-        buildLayout: () => [c.Z, d.Z, a.Z, o.Z, s.Z],
+    E = n(348911),
+    d = n(388032);
+let T = (0, l.x1)(u.n.NOTIFICATIONS_PANE, {
+        buildLayout: () => [c.Z, E.Z, a.Z, o.Z, s.Z],
     }),
-    T = (0, r.wf)(l.n.NOTIFICATIONS_PANEL, {
+    I = (0, l.wf)(u.n.NOTIFICATIONS_PANEL, {
+        useTitle: () => d.intl.string(d.t.HcoRu7),
+        buildLayout: () => [T],
+    }),
+    O = (0, l.m7)(u.n.NOTIFICATIONS_SIDEBAR_ITEM, {
         icon: i.Dkj,
-        useTitle: () => E.intl.string(E.t.HcoRu7),
-        buildLayout: () => [O],
-        usePredicate: () => (0, u.gj)("NotificationsPanel"),
+        useTitle: () => d.intl.string(d.t.HcoRu7),
+        usePredicate: () => (0, r.gj)("NotificationsPanel"),
+        buildLayout: () => [I],
     });

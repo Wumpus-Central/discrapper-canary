@@ -1,28 +1,27 @@
-n.d(t, { P: () => x }), n(539854), n(388685);
+n.d(t, { P: () => p }), n(539854), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
     a = n(873546),
     s = n(481060),
     c = n(243778),
     u = n(984802),
     d = n(59662),
     f = n(28682),
-    b = n(829210),
     m = n(854014),
-    p = n(388032),
-    j = n(565184);
-function x(e) {
-    let { root: t, header: n, footer: l, onClose: b } = e,
-        { showNavigationMobile: m } = (0, d.t)(),
-        x = o.useMemo(() => {
+    b = n(388032),
+    j = n(845435);
+function p(e) {
+    let { root: t, header: n, footer: o, onClose: m } = e,
+        { showNavigationMobile: p } = (0, d.t)(),
+        v = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
                     let { layout: n } = t;
                     n.forEach((t) => {
-                        if (t.type === f.Jq.PANEL && null != t.trailing)
+                        if (null != t.trailing)
                             switch (t.trailing.type) {
                                 case f.PU.BADGE_NEW:
                                 case f.PU.STRONGLY_DISCOURAGED_CUSTOM:
@@ -37,7 +36,7 @@ function x(e) {
                 e
             );
         }, [t.layout]),
-        [y, g] = o.useMemo(() => {
+        [y, h] = l.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -47,18 +46,18 @@ function x(e) {
                 [e, n]
             );
         }, [t.layout]),
-        h = (0, u.Ll)();
+        g = (0, u.Ll)();
     return (0, r.jsx)(s.f6W, {
-        theme: h,
+        theme: g,
         children: (e) =>
             (0, r.jsx)(c.ZP, {
-                contentTypes: x,
+                contentTypes: v,
                 children: (t) => {
-                    let { visibleContent: o } = t;
+                    let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
                         className: i()(j.sidebar, e, {
                             [j.mobile]: a.tq,
-                            [j.mobileNavigationOpen]: m,
+                            [j.mobileNavigationOpen]: p,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -69,19 +68,19 @@ function x(e) {
                                             className: j.mobileCloseButton,
                                             children: (0, r.jsx)(s.hU, {
                                                 icon: s.Uz9,
-                                                onClick: b,
+                                                onClick: m,
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                "aria-label": p.intl.string(p.t.cpT0Cg),
+                                                "aria-label": b.intl.string(b.t.cpT0Cg),
                                             }),
                                         }),
                                     (0, r.jsx)("div", {
                                         children: y.map((e) =>
                                             (0, r.jsx)(
-                                                v,
+                                                x,
                                                 {
                                                     section: e,
-                                                    visibleContent: o,
+                                                    visibleContent: l,
                                                 },
                                                 e.key,
                                             ),
@@ -96,18 +95,18 @@ function x(e) {
                                 children: [
                                     (0, r.jsx)("nav", {
                                         className: j.nav,
-                                        children: g.map((e) =>
+                                        children: h.map((e) =>
                                             (0, r.jsx)(
-                                                v,
+                                                x,
                                                 {
                                                     section: e,
-                                                    visibleContent: o,
+                                                    visibleContent: l,
                                                 },
                                                 e.key,
                                             ),
                                         ),
                                     }),
-                                    null != l && (0, r.jsx)(l, {}),
+                                    null != o && (0, r.jsx)(o, {}),
                                 ],
                             }),
                         ],
@@ -116,42 +115,31 @@ function x(e) {
             }),
     });
 }
-function v(e) {
+function x(e) {
     var t;
-    let { section: n, visibleContent: o } = e,
-        l = null == (t = n.useLabel) ? void 0 : t.call(n);
+    let { section: n, visibleContent: l } = e,
+        o = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
         className: j.section,
         children: [
-            null != l &&
+            null != o &&
                 (0, r.jsx)("div", {
                     className: j.sectionLabel,
                     children: (0, r.jsx)(s.X6q, {
                         className: j.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",
-                        children: l,
+                        children: o,
                     }),
                 }),
             n.layout.map((e) =>
-                (0, r.jsxs)(
+                (0, r.jsx)(
                     "li",
                     {
-                        children: [
-                            e.type === f.Jq.PANEL &&
-                                (0, r.jsx)(b.Z, {
-                                    node: e,
-                                    visibleContent: o,
-                                }),
-                            e.type === f.Jq.SIDEBAR_ITEM &&
-                                ("render" in e
-                                    ? (0, r.jsx)(m.Z, { render: e.render })
-                                    : (0, r.jsx)(m.Z, {
-                                          icon: e.icon,
-                                          title: e.useTitle(),
-                                          onClick: e.onClick,
-                                      })),
-                        ],
+                        children: (0, r.jsx)(m.y, {
+                            node: e,
+                            visibleContent: l,
+                        }),
                     },
                     e.key,
                 ),

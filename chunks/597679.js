@@ -1,18 +1,22 @@
-n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(657707),
-    l = n(509613),
-    o = n(313789),
+n.d(e, { w: () => d });
+var i = n(951288),
+    l = n(657707),
+    u = n(509613),
+    r = n(313789),
     s = n(595242),
     a = n(726985),
-    u = n(388032);
-let c = (0, l.x1)(o.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANE, {
+    o = n(388032);
+let c = (0, u.x1)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
-        render: () => (0, r.jsx)(s.Z, {}),
+        render: () => (0, i.jsx)(s.Z, {}),
     }),
-    d = (0, l.wf)(o.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
-        useTitle: () => u.intl.string(u.t.Nn1lJy),
-        icon: i.$Eu,
+    E = (0, u.wf)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
+        useTitle: () => o.intl.string(o.t.Nn1lJy),
         buildLayout: () => [c],
+    }),
+    d = (0, u.m7)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_SIDEBAR_ITEM, {
+        icon: l.$Eu,
+        useTitle: () => o.intl.string(o.t.Nn1lJy),
         legacySearchKey: a.s6.GUILD_BOOSTING,
+        buildLayout: () => [E],
     });

@@ -1,32 +1,36 @@
-n.d(t, { Z: () => y });
+n.d(e, { F: () => A });
 var i = n(951288),
-    r = n(657707),
-    l = n(793030),
-    u = n(692547),
+    l = n(657707),
+    u = n(793030),
+    r = n(692547),
     s = n(160913),
     a = n(813732),
     o = n(509613),
     c = n(28682),
-    d = n(313789),
-    E = n(726985),
-    O = n(388032);
-let T = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
+    E = n(313789),
+    d = n(726985),
+    T = n(388032);
+let I = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
         render: a.Z,
     }),
-    y = (0, o.wf)(d.n.SUBSCRIPTIONS_PANEL, {
-        icon: r.SrA,
-        useTitle: () => O.intl.string(O.t.trSpHR),
-        buildLayout: () => [T],
+    O = (0, o.wf)(E.n.SUBSCRIPTIONS_PANEL, {
+        useTitle: () => T.intl.string(T.t.trSpHR),
+        buildLayout: () => [I],
+    }),
+    A = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
+        icon: l.SrA,
+        useTitle: () => T.intl.string(T.t.trSpHR),
+        legacySearchKey: d.s6.SUBSCRIPTIONS,
+        buildLayout: () => [O],
         trailing: {
             type: c.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () =>
                 (0, s.U)()
-                    ? (0, i.jsx)(l.Mgn, {
+                    ? (0, i.jsx)(u.Mgn, {
                           size: "xs",
-                          color: u.Z.unsafe_rawColors.YELLOW_300,
+                          color: r.Z.unsafe_rawColors.YELLOW_300,
                       })
                     : null,
         },
-        legacySearchKey: E.s6.SUBSCRIPTIONS,
     });

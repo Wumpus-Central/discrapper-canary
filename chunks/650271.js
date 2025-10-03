@@ -1,25 +1,29 @@
-n.d(t, { Z: () => f });
-var r = n(657707),
-    i = n(509613),
-    l = n(28682),
-    o = n(313789),
+n.d(e, { z: () => T });
+var i = n(657707),
+    l = n(509613),
+    u = n(28682),
+    r = n(313789),
     s = n(620163),
     a = n(501348),
-    u = n(726985),
+    o = n(726985),
     c = n(388032);
-let d = (0, i.x1)(o.n.APPEARANCE_PANE, {
+let E = (0, l.x1)(r.n.APPEARANCE_PANE, {
         useTitle: () => c.intl.string(c.t["iHH+k5"]),
         buildLayout: () => [],
         render: a.Z,
     }),
-    f = (0, i.wf)(o.n.APPEARANCE_PANEL, {
+    d = (0, l.wf)(r.n.APPEARANCE_PANEL, {
         useTitle: () => c.intl.string(c.t["iHH+k5"]),
+        buildLayout: () => [E],
+    }),
+    T = (0, l.m7)(r.n.APPEARANCE_SIDEBAR_ITEM, {
+        icon: i.V3v,
+        useTitle: () => c.intl.string(c.t["iHH+k5"]),
+        legacySearchKey: o.s6.APPEARANCE,
         buildLayout: () => [d],
-        icon: r.V3v,
         trailing: {
-            type: l.PU.BADGE_NEW,
+            type: u.PU.BADGE_NEW,
             dismissibleContentTypes: (0, s.$Z)(),
             badgeComponent: s.c$,
         },
-        legacySearchKey: u.s6.APPEARANCE,
     });

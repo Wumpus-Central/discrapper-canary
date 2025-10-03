@@ -1,60 +1,61 @@
-n.d(t, {
+n.d(e, {
     Z: () =>
-        function e(t, n, u) {
+        function t(e, n, r) {
             let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-            if (!n.has(t.key)) return null;
-            if (!(0, i.Lk)(t)) return u.register(t, s.panel, s.category, s.accordion), t;
+            if (!n.has(e.key)) return null;
+            if (!(0, i.Lk)(e)) return r.register(e, s.panel, s.category, s.accordion), e;
             let a = s;
-            t.type === i.Jq.PANEL && (a = l(r({}, s), { panel: t })),
-                t.type === i.Jq.CATEGORY && (a = l(r({}, s), { category: t })),
-                t.type === i.Jq.ACCORDION && (a = l(r({}, s), { accordion: t }));
-            let o = t.layout.map((t) => e(t, n, u, a)).filter((e) => null != e);
-            return 0 !== o.length || "render" in t
-                ? (u.register(t, a.panel, a.category, a.accordion), l(r({}, t), { layout: o }))
+            e.type === i.Jq.SIDEBAR_ITEM && (a = u(l({}, s), { panel: e.layout[0] })),
+                e.type === i.Jq.PANEL && (a = u(l({}, s), { panel: e })),
+                e.type === i.Jq.CATEGORY && (a = u(l({}, s), { category: e })),
+                e.type === i.Jq.ACCORDION && (a = u(l({}, s), { accordion: e }));
+            let o = e.layout.map((e) => t(e, n, r, a)).filter((t) => null != t);
+            return 0 !== o.length || "render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e)
+                ? (r.register(e, a.panel, a.category, a.accordion), u(l({}, e), { layout: o }))
                 : null;
         },
 });
 var i = n(28682);
-function r(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
+function l(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            i.forEach(function (e) {
                 var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (i = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (t[e] = i);
             });
     }
-    return e;
+    return t;
 }
-function l(e, t) {
+function u(t, e) {
     return (
-        (t = null != t ? t : {}),
+        (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
+                      var i = Object.getOwnPropertySymbols(t);
                       n.push.apply(n, i);
                   }
                   return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
               }),
-        e
+        t
     );
 }

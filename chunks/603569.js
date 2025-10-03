@@ -1,35 +1,39 @@
-n.d(t, { Z: () => g });
-var r = n(951288),
-    i = n(657707),
-    l = n(704215),
-    o = n(481060),
+n.d(e, { a: () => S });
+var i = n(951288),
+    l = n(657707),
+    u = n(704215),
+    r = n(481060),
     s = n(631885),
     a = n(509613),
-    u = n(28682),
+    o = n(28682),
     c = n(313789),
-    d = n(54942),
-    f = n(726985),
-    b = n(388032),
-    y = n(345909);
+    E = n(54942),
+    d = n(726985),
+    T = n(388032),
+    I = n(345909);
 let O = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
-        useTitle: () => b.intl.string(y.default.RZqaJi),
+        useTitle: () => T.intl.string(I.default.RZqaJi),
         buildLayout: () => [],
-        render: () => (0, r.jsx)(d.Z, {}),
+        render: () => (0, i.jsx)(E.Z, {}),
     }),
-    g = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
-        useTitle: () => b.intl.string(y.default.RZqaJi),
-        icon: i.BFJ,
+    A = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
+        useTitle: () => T.intl.string(I.default.RZqaJi),
         buildLayout: () => [O],
-        legacySearchKey: f.s6.PRIVACY_FAMILY_CENTER,
+    }),
+    S = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
+        icon: l.BFJ,
+        useTitle: () => T.intl.string(I.default.RZqaJi),
+        legacySearchKey: d.s6.PRIVACY_FAMILY_CENTER,
+        buildLayout: () => [A],
         trailing: {
-            type: u.PU.STRONGLY_DISCOURAGED_CUSTOM,
-            dismissibleContentTypes: [l.z.FAMILY_CENTER_NEW_BADGE],
-            useDecoration: function (e) {
-                let t = (0, s.gU)();
-                return e === l.z.FAMILY_CENTER_NEW_BADGE
-                    ? (0, r.jsx)(o.IGR, { text: b.intl.string(b.t.y2b7CA) })
-                    : t > 0
-                      ? (0, r.jsx)(o.mAB, { count: t })
+            type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
+            dismissibleContentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
+            useDecoration: function (t) {
+                let e = (0, s.gU)();
+                return t === u.z.FAMILY_CENTER_NEW_BADGE
+                    ? (0, i.jsx)(r.IGR, { text: T.intl.string(T.t.y2b7CA) })
+                    : e > 0
+                      ? (0, i.jsx)(r.mAB, { count: e })
                       : null;
             },
         },

@@ -1,89 +1,87 @@
-n.d(t, { Z: () => j });
-var r = n(951288),
-    i = n(657707),
-    l = n(442837),
-    o = n(481060),
+n.d(e, { z: () => L });
+var i = n(951288),
+    l = n(657707),
+    u = n(442837),
+    r = n(481060),
     s = n(778825),
     a = n(398140),
-    u = n(564344),
-    c = n(854014),
-    d = n(509613),
-    f = n(28682),
-    b = n(518950),
-    y = n(25990),
-    O = n(594174),
-    g = n(313789),
-    E = n(620163),
-    p = n(726985),
-    v = n(388032),
-    T = n(88651);
-let S = (0, d.x1)(g.n.PROFILE_PANE, {
+    o = n(564344),
+    c = n(509613),
+    E = n(28682),
+    d = n(518950),
+    T = n(25990),
+    I = n(594174),
+    O = n(313789),
+    A = n(620163),
+    S = n(726985),
+    y = n(388032),
+    _ = n(88651);
+let g = (0, c.x1)(O.n.PROFILE_PANE, {
         buildLayout: () => [],
-        render: u.Z,
+        render: o.Z,
     }),
-    j = (0, d.wf)(g.n.PROFILE_PANEL, {
-        icon: i.tBG,
-        useTitle: () => v.intl.string(v.t["vi7f+v"]),
-        buildLayout: () => [S],
+    b = (0, c.wf)(O.n.PROFILE_PANEL, {
+        useTitle: () => y.intl.string(y.t["vi7f+v"]),
+        buildLayout: () => [g],
         notice: {
-            stores: [s.Z, y.Z],
+            stores: [s.Z, T.Z],
             element: a.Z,
         },
-        trailing: {
-            type: f.PU.BADGE_NEW,
-            dismissibleContentTypes: (0, E.OF)(),
-            badgeComponent: E.W8,
-        },
-        legacySearchKey: p.s6.PROFILE_CUSTOMIZATION,
-        stronglyDiscouragedCustomTab: (e) => {
+    }),
+    L = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
+        icon: l.tBG,
+        useTitle: () => y.intl.string(y.t["vi7f+v"]),
+        legacySearchKey: S.s6.PROFILE_CUSTOMIZATION,
+        buildLayout: () => [b],
+        stronglyDiscouragedCustomComponent: () => {
             var t;
-            let { active: n, onClick: s } = e,
-                a = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
-                { avatarSrc: u, avatarDecorationSrc: d } = (0, b.Z)({
-                    userId: null == a ? void 0 : a.id,
-                    size: o.EFr.SIZE_48,
+            let e = (0, u.e7)([I.default], () => I.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: s } = (0, d.Z)({
+                    userId: null == e ? void 0 : e.id,
+                    size: r.EFr.SIZE_48,
                 });
-            return null == a
+            return null == e
                 ? null
-                : (0, r.jsx)(c.C, {
-                      onClick: s,
-                      active: n,
-                      children: (0, r.jsxs)("div", {
-                          className: T.profileCustomizationTab,
-                          children: [
-                              (0, r.jsx)(o.qEK, {
-                                  src: u,
-                                  avatarDecoration: d,
-                                  size: o.EFr.SIZE_48,
-                                  "aria-label": v.intl.string(v.t.lqaIxM),
-                              }),
-                              (0, r.jsxs)("div", {
-                                  className: T.textContainer,
-                                  children: [
-                                      (0, r.jsx)(o.Text, {
-                                          color: "header-primary",
-                                          variant: "text-md/medium",
-                                          lineClamp: 1,
-                                          children: null != (t = a.globalName) ? t : a.username,
-                                      }),
-                                      (0, r.jsxs)("div", {
-                                          className: T.editProfilesRow,
-                                          children: [
-                                              (0, r.jsx)(o.Text, {
-                                                  variant: "text-sm/normal",
-                                                  color: "currentColor",
-                                                  children: v.intl.string(v.t.Ip9nBQ),
-                                              }),
-                                              (0, r.jsx)(i.vdY, {
-                                                  size: "xxs",
-                                                  color: "currentColor",
-                                              }),
-                                          ],
-                                      }),
-                                  ],
-                              }),
-                          ],
-                      }),
+                : (0, i.jsxs)("div", {
+                      className: _.profileCustomizationTab,
+                      children: [
+                          (0, i.jsx)(r.qEK, {
+                              src: n,
+                              avatarDecoration: s,
+                              size: r.EFr.SIZE_48,
+                              "aria-label": y.intl.string(y.t.lqaIxM),
+                          }),
+                          (0, i.jsxs)("div", {
+                              className: _.textContainer,
+                              children: [
+                                  (0, i.jsx)(r.Text, {
+                                      color: "header-primary",
+                                      variant: "text-md/medium",
+                                      lineClamp: 1,
+                                      children: null != (t = e.globalName) ? t : e.username,
+                                  }),
+                                  (0, i.jsxs)("div", {
+                                      className: _.editProfilesRow,
+                                      children: [
+                                          (0, i.jsx)(r.Text, {
+                                              variant: "text-sm/normal",
+                                              color: "currentColor",
+                                              children: y.intl.string(y.t.Ip9nBQ),
+                                          }),
+                                          (0, i.jsx)(l.vdY, {
+                                              size: "xxs",
+                                              color: "currentColor",
+                                          }),
+                                      ],
+                                  }),
+                              ],
+                          }),
+                      ],
                   });
+        },
+        trailing: {
+            type: E.PU.BADGE_NEW,
+            dismissibleContentTypes: (0, A.OF)(),
+            badgeComponent: A.W8,
         },
     });

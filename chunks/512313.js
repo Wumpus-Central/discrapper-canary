@@ -7,7 +7,7 @@ var a = n(951288),
     o = n(920952),
     c = n(544651),
     d = n(546697),
-    u = n(808396);
+    u = n(547481);
 function m(e) {
     var t;
     let { setting: n, depth: i, highlight: l } = e,
@@ -41,28 +41,30 @@ function p(e) {
     let { setting: t, depth: n } = e,
         r =
             (0, s.Lk)(t) &&
-            ((t.type === s.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
+            ((t.type === s.Jq.SIDEBAR_ITEM &&
+                t.layout.some((e) => (null == e ? void 0 : e.layout.some((e) => null != e.render)))) ||
+                (t.type === s.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
                 (t.type === s.Jq.PANE && null != t.render)),
         i = null;
     if ((0, s.Lk)(t)) {
-        var l;
-        i =
-            0 === t.layout.length && (null == (l = t.parent) ? void 0 : l.legacySearchKey) != null
-                ? (0, a.jsx)(m, {
-                      setting: t.parent.legacySearchKey,
-                      depth: n + 1,
-                      highlight: !0,
-                  })
-                : t.layout.map((e) =>
-                      (0, a.jsx)(
-                          p,
-                          {
-                              setting: e,
-                              depth: n + 1,
-                          },
-                          e.key,
-                      ),
-                  );
+        var l, o;
+        0 === t.layout.length && (null == (o = t.parent) || null == (l = o.parent) ? void 0 : l.legacySearchKey) != null
+            ? (i = (0, a.jsx)(m, {
+                  setting: t.parent.parent.legacySearchKey,
+                  depth: n + 1,
+                  highlight: !0,
+              }))
+            : t.layout.length > 0 &&
+              (i = t.layout.map((e) =>
+                  (0, a.jsx)(
+                      p,
+                      {
+                          setting: e,
+                          depth: n + 1,
+                      },
+                      e.key,
+                  ),
+              ));
     }
     return (0, a.jsx)(c.r, {
         title: t.key,

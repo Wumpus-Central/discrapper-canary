@@ -1,19 +1,23 @@
-n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(657707),
-    l = n(509613),
-    o = n(313789),
+n.d(e, { r: () => d });
+var i = n(951288),
+    l = n(657707),
+    u = n(509613),
+    r = n(313789),
     s = n(949493),
     a = n(726985),
-    u = n(388032);
-let c = (0, l.x1)(o.n.CONTENT_AND_SOCIAL_PANE, {
-        useTitle: () => u.intl.string(u.t["+o1pDQ"]),
+    o = n(388032);
+let c = (0, u.x1)(r.n.CONTENT_AND_SOCIAL_PANE, {
+        useTitle: () => o.intl.string(o.t["+o1pDQ"]),
         buildLayout: () => [],
-        render: () => (0, r.jsx)(s.Z, {}),
+        render: () => (0, i.jsx)(s.Z, {}),
     }),
-    d = (0, l.wf)(o.n.CONTENT_AND_SOCIAL_PANEL, {
-        useTitle: () => u.intl.string(u.t["+o1pDQ"]),
-        icon: i.lZ8,
+    E = (0, u.wf)(r.n.CONTENT_AND_SOCIAL_PANEL, {
+        useTitle: () => o.intl.string(o.t["+o1pDQ"]),
         buildLayout: () => [c],
+    }),
+    d = (0, u.m7)(r.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
+        icon: l.lZ8,
+        useTitle: () => o.intl.string(o.t["+o1pDQ"]),
         legacySearchKey: a.s6.CONTENT_SOCIAL,
+        buildLayout: () => [E],
     });

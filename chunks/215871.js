@@ -1,19 +1,23 @@
-n.d(t, { Z: () => d });
-var r = n(657707),
-    i = n(509613),
-    l = n(313789),
-    o = n(327885),
+n.d(e, { b: () => d });
+var i = n(657707),
+    l = n(509613),
+    u = n(313789),
+    r = n(327885),
     s = n(168308),
     a = n(726985),
-    u = n(388032);
-let c = (0, i.x1)(l.n.OVERLAY_PANE, {
+    o = n(388032);
+let c = (0, l.x1)(u.n.OVERLAY_PANE, {
         buildLayout: () => [],
-        render: o.Z,
+        render: r.Z,
     }),
-    d = (0, i.wf)(l.n.OVERLAY_PANEL, {
-        useTitle: () => u.intl.string(u.t["9cb1U1"]),
-        icon: r.epB,
+    E = (0, l.wf)(u.n.OVERLAY_PANEL, {
+        useTitle: () => o.intl.string(o.t["9cb1U1"]),
         buildLayout: () => [c],
+    }),
+    d = (0, l.m7)(u.n.OVERLAY_SIDEBAR_ITEM, {
+        icon: i.epB,
+        useTitle: () => o.intl.string(o.t["9cb1U1"]),
         legacySearchKey: a.s6.OVERLAY,
         usePredicate: s.bC,
+        buildLayout: () => [E],
     });

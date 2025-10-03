@@ -1,20 +1,24 @@
-n.d(t, { Z: () => f });
-var r = n(951288),
-    i = n(657707),
-    l = n(509613),
-    o = n(313789),
+n.d(e, { q: () => T });
+var i = n(951288),
+    l = n(657707),
+    u = n(509613),
+    r = n(313789),
     s = n(293389),
     a = n(168308),
-    u = n(726985),
+    o = n(726985),
     c = n(388032);
-let d = (0, l.x1)(o.n.REGISTERED_GAMES_PANE, {
+let E = (0, u.x1)(r.n.REGISTERED_GAMES_PANE, {
         buildLayout: () => [],
-        render: () => (0, r.jsx)(s.Z, {}),
+        render: () => (0, i.jsx)(s.Z, {}),
     }),
-    f = (0, l.wf)(o.n.REGISTERED_GAMES_PANEL, {
+    d = (0, u.wf)(r.n.REGISTERED_GAMES_PANEL, {
         useTitle: () => c.intl.string(c.t.AVDyEh),
-        icon: i.iWm,
-        buildLayout: () => [d],
-        legacySearchKey: u.s6.REGISTERED_GAMES,
+        buildLayout: () => [E],
+    }),
+    T = (0, u.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
+        icon: l.iWm,
+        useTitle: () => c.intl.string(c.t.AVDyEh),
+        legacySearchKey: o.s6.REGISTERED_GAMES,
         usePredicate: a.Jw,
+        buildLayout: () => [d],
     });

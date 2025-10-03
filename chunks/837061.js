@@ -1,18 +1,22 @@
-n.d(t, { Z: () => c });
-var r = n(657707),
-    i = n(509613),
-    l = n(313789),
-    o = n(736752),
+n.d(e, { x: () => E });
+var i = n(657707),
+    l = n(509613),
+    u = n(313789),
+    r = n(736752),
     s = n(726985),
     a = n(388032);
-let u = (0, i.x1)(l.n.ACCOUNT_PANE, {
+let o = (0, l.x1)(u.n.ACCOUNT_PANE, {
         useTitle: () => a.intl.string(a.t["JAIM/v"]),
         buildLayout: () => [],
-        render: o.Z,
+        render: r.Z,
     }),
-    c = (0, i.wf)(l.n.ACCOUNT_PANEL, {
+    c = (0, l.wf)(u.n.ACCOUNT_PANEL, {
         useTitle: () => a.intl.string(a.t["JAIM/v"]),
-        icon: r.tBG,
+        buildLayout: () => [o],
+    }),
+    E = (0, l.m7)(u.n.ACCOUNT_SIDEBAR_ITEM, {
+        icon: i.tBG,
+        useTitle: () => a.intl.string(a.t["JAIM/v"]),
         legacySearchKey: s.s6.ACCOUNT,
-        buildLayout: () => [u],
+        buildLayout: () => [c],
     });

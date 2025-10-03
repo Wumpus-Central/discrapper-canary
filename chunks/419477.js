@@ -1,23 +1,27 @@
-n.d(t, { Z: () => f });
-var r = n(657707),
-    i = n(725727),
-    l = n(509613),
-    o = n(28682),
+n.d(e, { z: () => T });
+var i = n(657707),
+    l = n(725727),
+    u = n(509613),
+    r = n(28682),
     s = n(313789),
     a = n(387747),
-    u = n(726985),
+    o = n(726985),
     c = n(388032);
-let d = (0, l.x1)(s.n.GIFT_PANE, {
+let E = (0, u.x1)(s.n.GIFT_PANE, {
         buildLayout: () => [],
         render: a.Z,
     }),
-    f = (0, l.wf)(s.n.GIFT_PANEL, {
-        icon: r.OgN,
+    d = (0, u.wf)(s.n.GIFT_PANEL, {
         useTitle: () => c.intl.string(c.t["jcSP+v"]),
+        buildLayout: () => [E],
+    }),
+    T = (0, u.m7)(s.n.GIFT_SIDEBAR_ITEM, {
+        icon: i.OgN,
+        useTitle: () => c.intl.string(c.t["jcSP+v"]),
+        legacySearchKey: o.s6.GIFT_INVENTORY,
         buildLayout: () => [d],
         trailing: {
-            type: o.PU.BADGE_COUNT,
-            useCount: () => (0, i.YO)().length,
+            type: r.PU.BADGE_COUNT,
+            useCount: () => (0, l.YO)().length,
         },
-        legacySearchKey: u.s6.GIFT_INVENTORY,
     });
