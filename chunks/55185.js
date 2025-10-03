@@ -1,34 +1,32 @@
 n.d(t, {
-    I: () => w,
-    N: () => N,
+    I: () => E,
+    NK: () => C,
 }),
     n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(793030),
-    a = n(442837),
+    o = n(442837),
+    a = n(907862),
     s = n(481060),
     c = n(246133),
     u = n(695346),
     d = n(885110),
-    p = n(63063),
-    f = n(316496),
-    h = n(223730),
-    g = n(981631),
-    m = n(933554),
-    b = n(388032),
-    _ = n(87587),
-    O = n(354810);
-function y(e) {
+    p = n(316496),
+    f = n(223730),
+    h = n(933554),
+    g = n(388032),
+    m = n(87587),
+    b = n(354810);
+function _(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
-        className: _.goOnlineButton,
+        className: m.goOnlineButton,
         children: (0, i.jsx)(s.zxk, {
             variant: "primary",
             size: "sm",
-            text: b.intl.string(m.default.Poezn5),
+            text: g.intl.string(h.default.Poezn5),
             onClick: () => {
                 t(), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
             },
@@ -36,24 +34,23 @@ function y(e) {
         }),
     });
 }
-function v(e) {
-    let { showCurrentGame: t, shouldShowStatus: n = !1, shouldShowCustomizeLink: r = !1, closePopout: l } = e,
-        o = (0, a.e7)([d.Z], () => d.Z.getStatus()),
-        { showLinkToSettings: p } = (0, f.D)("popout");
+function O(e) {
+    let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
+        r = (0, o.e7)([d.Z], () => d.Z.getStatus());
     return (0, i.jsxs)("div", {
-        className: _.toggleContainer,
+        className: m.toggleContainer,
         children: [
             (0, i.jsxs)("div", {
-                className: _.toggleContainerText,
+                className: m.toggleContainerText,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: b.intl.string(b.t.KY0ilp),
+                        children: g.intl.string(h.default.WhdCGB),
                     }),
                     n &&
                         (0, i.jsxs)("div", {
-                            className: _.toggleContainerOnlineRow,
+                            className: m.toggleContainerOnlineRow,
                             children: [
                                 (0, i.jsx)(s.qbd, {
                                     status: s.Skl.ONLINE,
@@ -63,13 +60,12 @@ function v(e) {
                                     variant: "text-xs/normal",
                                     color: "text-secondary",
                                     children:
-                                        o === s.Skl.INVISIBLE
-                                            ? b.intl.string(m.default.a3AofX)
-                                            : b.intl.string(b.t.WbGtnJ),
+                                        r === s.Skl.INVISIBLE
+                                            ? g.intl.string(h.default.a3AofX)
+                                            : g.intl.string(g.t.WbGtnJ),
                                 }),
                             ],
                         }),
-                    r && p && (0, i.jsx)(h.K, { onClosePopout: l }),
                 ],
             }),
             (0, i.jsx)(s.rsf, {
@@ -81,187 +77,103 @@ function v(e) {
         ],
     });
 }
-function j(e) {
-    let { children: t, closePopout: n } = e,
-        r = (0, l.useRef)(null);
-    (0, s.Tbt)(r);
-    let c = u.G6.useSetting(),
-        p = (0, a.e7)([d.Z], () => d.Z.getStatus()) === s.Skl.INVISIBLE && c;
-    return (0, i.jsxs)("div", {
-        className: _.wrapper,
-        ref: r,
+function y(e) {
+    let { children: t } = e,
+        n = (0, l.useRef)(null);
+    return (
+        (0, s.Tbt)(n),
+        (0, i.jsx)("div", {
+            className: m.wrapper,
+            ref: n,
+            children: (0, i.jsx)("div", {
+                className: m.content,
+                children: t,
+            }),
+        })
+    );
+}
+function v(e) {
+    let { closePopout: t } = e,
+        n = u.G6.useSetting(),
+        { showLinkToSettings: r } = (0, p.D)("popout");
+    return (0, i.jsxs)(y, {
         children: [
-            null != n && (0, i.jsx)("div", { className: _.gradient }),
-            (0, i.jsxs)("div", {
-                className: _.content,
+            (0, i.jsx)(O, { showCurrentGame: n }),
+            (0, i.jsx)(s.Text, {
+                variant: "text-sm/normal",
+                color: "text-secondary",
+                children: g.intl.string(h.default["7cfFoa"]),
+            }),
+            r &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(f.yj, { onClosePopout: t })],
+                }),
+        ],
+    });
+}
+function j(e) {
+    let { closePopout: t } = e;
+    return (0, i.jsxs)(y, {
+        children: [
+            (0, i.jsxs)(s.Kqy, {
+                align: "start",
+                gap: 0,
+                style: { marginBottom: 8 },
                 children: [
-                    null != n &&
-                        (0, i.jsxs)(i.Fragment, {
-                            children: [
-                                (0, i.jsx)("img", {
-                                    alt: "",
-                                    src: O.Z,
-                                    className: _.controllerImage,
-                                }),
-                                (0, i.jsx)(o.X6q, {
-                                    variant: "heading-md/bold",
-                                    color: "header-primary",
-                                    className: _.nuxTitle,
-                                    children: b.intl.string(p ? m.default.MkgMBw : b.t.PRjSRk),
-                                }),
-                            ],
-                        }),
-                    t,
+                    (0, i.jsx)(s.X6q, {
+                        variant: "heading-sm/semibold",
+                        color: "header-primary",
+                        className: m.controlTitle,
+                        children: g.intl.string(h.default["5YsmGB"]),
+                    }),
+                    (0, i.jsxs)("div", {
+                        className: m.toggleContainerOnlineRow,
+                        children: [
+                            (0, i.jsx)(s.qbd, {
+                                status: s.Skl.ONLINE,
+                                size: 8,
+                            }),
+                            (0, i.jsx)(s.Text, {
+                                variant: "text-xs/normal",
+                                color: "text-secondary",
+                                children: g.intl.string(h.default.U8MFdX),
+                            }),
+                        ],
+                    }),
                 ],
             }),
-            null != n &&
-                (0, i.jsx)("div", {
-                    className: _.closeButton,
-                    children: (0, i.jsx)(s.hU, {
-                        icon: s.Dio,
-                        onClick: n,
-                        "aria-label": b.intl.string(b.t.cpT0Cg),
-                        variant: "icon-only",
-                        size: "sm",
-                    }),
-                }),
+            (0, i.jsx)(s.Text, {
+                variant: "text-sm/normal",
+                color: "text-secondary",
+                children: g.intl.string(h.default.Yl0mh4),
+            }),
+            (0, i.jsx)(_, { closePopout: t }),
         ],
     });
 }
 function x(e) {
     let { closePopout: t } = e,
-        n = u.G6.useSetting();
-    return (0, i.jsxs)(j, {
-        closePopout: t,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-secondary",
-                className: _.nuxContent,
-                children: b.intl.format(m.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
-            }),
-            (0, i.jsx)("div", {
-                className: _.toggleContainerWrapper,
-                children: (0, i.jsx)(v, {
-                    showCurrentGame: n,
-                    shouldShowCustomizeLink: !0,
-                    closePopout: t,
-                }),
-            }),
-        ],
-    });
-}
-function C(e) {
-    let { closePopout: t } = e;
-    return (0, i.jsxs)(j, {
-        closePopout: t,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-secondary",
-                className: _.nuxContent,
-                children: b.intl.format(m.default["vtp/IS"], {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
-            }),
-            (0, i.jsx)(y, { closePopout: t }),
-        ],
-    });
-}
-function E(e) {
-    let { closePopout: t } = e,
-        n = u.G6.useSetting();
-    return (0, i.jsxs)(j, {
-        closePopout: t,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-secondary",
-                className: _.nuxContent,
-                children: b.intl.format(m.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
-            }),
-            (0, i.jsx)("div", {
-                className: _.toggleContainerWrapper,
-                children: (0, i.jsx)(v, {
-                    showCurrentGame: n,
-                    shouldShowStatus: !0,
-                    closePopout: t,
-                }),
-            }),
-        ],
-    });
-}
-function S(e) {
-    let { closePopout: t } = e,
         n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
-    return (0, i.jsxs)(j, {
+        { showLinkToSettings: r } = (0, p.D)("popout");
+    return (0, i.jsxs)(y, {
         children: [
-            (0, i.jsx)(v, {
-                showCurrentGame: n,
-                closePopout: t,
-            }),
-            (0, i.jsx)(s.izJ, { className: _.divider }),
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-secondary",
-                children: b.intl.format(m.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
-            }),
-            r && (0, i.jsx)(h.y, { onClosePopout: t }),
-        ],
-    });
-}
-function P(e) {
-    let { closePopout: t } = e;
-    return (0, i.jsxs)(j, {
-        children: [
-            (0, i.jsx)(o.X6q, {
-                variant: "heading-sm/semibold",
-                color: "header-primary",
-                className: _.controlTitle,
-                children: b.intl.string(m.default.MkgMBw),
-            }),
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-secondary",
-                children: b.intl.format(m.default["vtp/IS"], {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
-            }),
-            (0, i.jsx)(y, { closePopout: t }),
-        ],
-    });
-}
-function I(e) {
-    let { closePopout: t } = e,
-        n = u.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
-    return (0, i.jsxs)(j, {
-        children: [
-            (0, i.jsx)(v, {
+            (0, i.jsx)(O, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
-                closePopout: t,
             }),
-            (0, i.jsx)(s.izJ, { className: _.divider }),
             (0, i.jsx)(s.Text, {
-                variant: "text-xs/normal",
+                variant: "text-sm/normal",
                 color: "text-secondary",
-                children: b.intl.format(m.default.nHDuwM, {
-                    learnMoreLink: p.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
-                }),
+                children: g.intl.string(h.default["7cfFoa"]),
             }),
-            r && (0, i.jsx)(h.y, { onClosePopout: t }),
+            r &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(f.yj, { onClosePopout: t })],
+                }),
         ],
     });
 }
-var N =
+var C =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -269,28 +181,172 @@ var N =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function w(e) {
-    let { popoutState: t, closePopout: n, onOpen: r } = e,
-        [o] = (0, l.useState)(t);
-    switch (
+function E(e) {
+    let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
+        [p, m] = (0, l.useState)(n),
+        _ = (0, l.useRef)(null),
+        O = (function (e) {
+            if (null === e) return null;
+            switch (e) {
+                case 0:
+                    return {
+                        type: "popover",
+                        title: g.intl.string(h.default.vxVbGB),
+                        body: [g.intl.string(h.default["7cfFoa"])],
+                        action: {
+                            text: g.intl.string(h.default.k4tCg4),
+                            onClick: () => {
+                                u.G6.updateSetting(!0);
+                            },
+                        },
+                        textLink: {
+                            text: g.intl.string(g.t["ZrN+DQ"]),
+                            onClick: f.S$,
+                        },
+                    };
+                case 1:
+                    return {
+                        type: "popover",
+                        title: g.intl.string(h.default.qKDqen),
+                        body: [g.intl.string(h.default.Yl0mh4)],
+                        action: {
+                            text: g.intl.string(h.default.Poezn5),
+                            onClick: () => {
+                                (0, c.Z)({ nextStatus: s.Skl.ONLINE });
+                            },
+                        },
+                    };
+                case 2:
+                    return {
+                        type: "popover",
+                        title: g.intl.string(h.default["6cA8HR"]),
+                        body: [g.intl.string(h.default["7cfFoa"])],
+                        action: {
+                            text: g.intl.string(h.default.k4tCg4),
+                            onClick: () => {
+                                u.G6.updateSetting(!0), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
+                            },
+                        },
+                        textLink: {
+                            text: g.intl.string(g.t["ZrN+DQ"]),
+                            onClick: f.S$,
+                        },
+                    };
+                case 3:
+                    return {
+                        type: "popout",
+                        children: v,
+                    };
+                case 4:
+                    return {
+                        type: "popout",
+                        children: j,
+                    };
+                case 5:
+                    return {
+                        type: "popout",
+                        children: x,
+                    };
+                default:
+                    return null;
+            }
+        })(p),
+        y = (0, l.useRef)(t);
+    if (
         ((0, l.useEffect)(() => {
-            r();
-        }, [r]),
-        o)
-    ) {
-        case 0:
-            return (0, i.jsx)(x, { closePopout: n });
-        case 1:
-            return (0, i.jsx)(C, { closePopout: n });
-        case 2:
-            return (0, i.jsx)(E, { closePopout: n });
-        case 3:
-            return (0, i.jsx)(S, { closePopout: n });
-        case 4:
-            return (0, i.jsx)(P, { closePopout: n });
-        case 5:
-            return (0, i.jsx)(I, { closePopout: n });
-        default:
-            return null;
+            t && !y.current && m(n), t !== y.current && (y.current = t);
+        }, [n, t]),
+        null == O || !t)
+    )
+        return d;
+    if ("popover" === O.type) {
+        var C, E;
+        let { action: e, title: t, body: n, textLink: l } = O;
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)(a.J2, {
+                    targetElementRef: o,
+                    shouldShow: !0,
+                    position: "top",
+                    align: "center",
+                    onRequestClose: r,
+                    title: t,
+                    body: n,
+                    textLink: l,
+                    gradientColor: "purple",
+                    graphic: {
+                        type: "image",
+                        src: b.Z,
+                    },
+                    actions: [
+                        ((C = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, e)),
+                        (E = E =
+                            {
+                                onClick: (t) => {
+                                    var n;
+                                    null == (n = e.onClick) || n.call(e, t), r();
+                                },
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(C, Object.getOwnPropertyDescriptors(E))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(E)).forEach(function (e) {
+                                  Object.defineProperty(C, e, Object.getOwnPropertyDescriptor(E, e));
+                              }),
+                        C),
+                    ],
+                }),
+                d,
+            ],
+        });
     }
+    let { children: S } = O;
+    return (0, i.jsx)(s.yRy, {
+        targetElementRef: _,
+        shouldShow: !0,
+        spacing: 10,
+        position: "top",
+        align: "left",
+        renderPopout: (e) => {
+            let { closePopout: t } = e;
+            return (0, i.jsx)(S, { closePopout: t });
+        },
+        onRequestClose: r,
+        children: () =>
+            (0, i.jsx)(s.P3F, {
+                innerRef: _,
+                onClick: r,
+                children: d,
+            }),
+    });
 }

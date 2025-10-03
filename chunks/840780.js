@@ -32,8 +32,8 @@ var r = n(951288),
     A = n(194082),
     R = n(550532),
     D = n(436774),
-    M = n(243778),
-    L = n(48131),
+    L = n(243778),
+    M = n(48131),
     k = n(591472),
     U = n(594190),
     G = n(925329),
@@ -169,7 +169,7 @@ class eN extends i.PureComponent {
                       ? O.push(u.z.ACCOUNT_LINK_INVITE_FRIENDS)
                       : O.push(u.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
                   : h && null != i && O.push(u.z.ACCOUNT_LINK_PROMPT),
-              (0, r.jsx)(M.ZP, {
+              (0, r.jsx)(L.ZP, {
                   contentTypes: O,
                   groupName: ey.R.ACCOUNT_NAME_ZONE,
                   bypassAutoDismiss: !0,
@@ -271,6 +271,7 @@ class eN extends i.PureComponent {
             isForceShowSharingPopout: i,
             setIsForceShowSharingPopout: l,
             ref: this.accountLinkUpsellTargetRef,
+            popoutTargetRef: this.activityPopoutTargetRef,
         });
     }
     renderScreenshare() {
@@ -356,6 +357,7 @@ class eN extends i.PureComponent {
                         ref: this.accountLinkUpsellTargetRef,
                     }),
                     (0, r.jsx)(S.j, {
+                        popoutTargetRef: this.activityPopoutTargetRef,
                         isForceShowSharingPopout: a,
                         setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
@@ -440,6 +442,7 @@ class eN extends i.PureComponent {
                 : this.renderGame();
         return (0, r.jsx)("div", {
             className: o()(eC.panel, u),
+            ref: this.activityPopoutTargetRef,
             children: (0, r.jsxs)("div", {
                 className: eC.body,
                 children: [d(), this.renderActions(), this.renderAccountLinkPopover()],
@@ -475,7 +478,7 @@ class eN extends i.PureComponent {
             eE(this, "handleFrameLinkClick", () => {
                 let { frame: e } = this.props;
                 s()(null != e, "Frame cannot be null during navigation click"),
-                    L.Z.updateFrameLayoutMode({
+                    M.Z.updateFrameLayoutMode({
                         applicationId: e.applicationId,
                         layoutMode: ev.U.FOCUSED,
                     });
@@ -540,8 +543,8 @@ let ew = (0, O.Z)(function (e) {
         Z = (0, c.e7)([er.Z], () => (0, F.Z)(er.Z) && (0, ep.isWindows)()),
         A = (0, c.e7)([el.Z], () => (null != o ? el.Z.findActivity(o, (e) => e.type === e_.IIU.PLAYING) : null)),
         D = null != f && f.ownerId === o && f.state !== e_.jm8.ENDED,
-        M = (0, c.e7)([es.default, eo.Z], () => (null != d ? (0, T.F6)(d, es.default, eo.Z) : void 0)),
-        L = (0, Y.Z)(),
+        L = (0, c.e7)([es.default, eo.Z], () => (null != d ? (0, T.F6)(d, es.default, eo.Z) : void 0)),
+        M = (0, Y.Z)(),
         [G, V] = i.useState(!1),
         H = (0, c.e7)([K.Z], () => K.Z.getWindowOpen(e_.KJ3.ACTIVITY_POPOUT)),
         {
@@ -579,9 +582,9 @@ let ew = (0, O.Z)(function (e) {
             canStream: _,
             stream: f,
             streamMetadata: h,
-            channelName: M,
+            channelName: L,
             guildForConnectedChannel: p,
-            streamQualityIndicator: L,
+            streamQualityIndicator: M,
             isForceShowSharingPopout: G,
             setIsForceShowSharingPopout: V,
             isActivityPopoutOpen: H,

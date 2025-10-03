@@ -39,8 +39,9 @@ function b(e) {
             isForceShowSharingPopout: d,
             setIsForceShowSharingPopout: p,
             ref: f,
+            popoutTargetRef: b,
         } = e,
-        b = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
+        _ = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -65,14 +66,15 @@ function b(e) {
                     ],
                 }),
                 (0, r.jsx)(s.j, {
+                    popoutTargetRef: b,
                     isForceShowSharingPopout: d,
                     setIsForceShowSharingPopout: p,
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [
-                            null != b
+                            null != _
                                 ? (0, r.jsx)(m, {
-                                      name: b,
+                                      name: _,
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,

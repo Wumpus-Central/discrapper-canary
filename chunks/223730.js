@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => O,
-    y: () => _,
+    S$: () => m,
+    yj: () => _,
 });
 var r = n(951288),
     i = n(442837),
@@ -55,18 +55,4 @@ function _(e) {
                   (0, r.jsx)(d.c, { guildIds: p }),
               ],
           });
-}
-function O(e) {
-    let { onClosePopout: t } = e;
-    return (0, r.jsx)(l.P3F, {
-        className: g.customizeLink,
-        onClick: () => {
-            t(), m();
-        },
-        children: (0, r.jsx)(l.Text, {
-            variant: "text-xs/medium",
-            color: "text-link",
-            children: h.intl.string(h.t["ZrN+DQ"]),
-        }),
-    });
 }
