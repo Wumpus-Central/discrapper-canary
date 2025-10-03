@@ -1,92 +1,19 @@
 n.d(t, {
-    AJ: () => y,
-    Ep: () => v,
-    te: () => b,
-    zP: () => E,
+    AJ: () => p,
+    Ep: () => m,
+    te: () => _,
+    zP: () => f,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
+    s = n(28664),
     l = n(393238),
     c = n(388032),
     u = n(384934);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = m(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function g(e) {
+function d(e) {
     let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: o } = e,
         s = 0,
         l = 0,
@@ -104,22 +31,22 @@ function g(e) {
     }
     return c;
 }
-function E(e) {
+function f(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
         [o, s] = i.useState(0),
         l = i.useRef([]),
         c = i.useRef(0),
         u = i.useRef(0),
-        d = i.useRef(null),
-        f = i.useCallback((e, t) => {
+        f = i.useRef(null),
+        _ = i.useCallback((e, t) => {
             l.current[e] = t;
         }, []);
     return (
         i.useLayoutEffect(() => {
             var e;
-            if (null == d.current) return;
-            (l.current.length = n.length), (c.current = null != (e = d.current.getBoundingClientRect().width) ? e : 0);
-            let i = g({
+            if (null == f.current) return;
+            (l.current.length = n.length), (c.current = null != (e = f.current.getBoundingClientRect().width) ? e : 0);
+            let i = d({
                 items: n,
                 maxLines: r,
                 itemGapPx: t,
@@ -132,35 +59,27 @@ function E(e) {
         i.useMemo(
             () => ({
                 lastVisibleIndex: u.current,
-                onItemLayout: f,
-                overflowItemsRef: d,
+                onItemLayout: _,
+                overflowItemsRef: f,
                 itemWidthsRef: l,
                 version: o,
             }),
-            [f, o],
+            [_, o],
         )
     );
 }
-function b(e) {
-    var { items: t, renderItem: n } = e,
-        i = h(e, ["items", "renderItem"]);
-    return (0, r.jsx)(
-        s.ua7,
-        p(f({}, i), {
-            text: (0, r.jsx)("div", {
-                className: u.tooltip,
-                children: t.map(n),
-            }),
-            "aria-label": "overflow",
-            children: (e) =>
-                (0, r.jsx)(
-                    "div",
-                    p(f({}, e), { children: n(c.intl.formatToPlainString(c.t.vGclWl, { count: t.length })) }),
-                ),
+function _(e) {
+    let { items: t, renderItem: n } = e;
+    return (0, r.jsx)(s.u, {
+        __unsupportedReactNodeAsText: (0, r.jsx)("div", {
+            className: u.tooltip,
+            children: t.map(n),
         }),
-    );
+        "aria-label": "overflow",
+        children: (0, r.jsx)("div", { children: n(c.intl.formatToPlainString(c.t.vGclWl, { count: t.length })) }),
+    });
 }
-function y(e) {
+function p(e) {
     let { onItemLayout: t, index: n, children: a } = e,
         o = i.useRef(null);
     return (
@@ -173,36 +92,36 @@ function y(e) {
         })
     );
 }
-function O(e) {
+function h(e) {
     return "string" == typeof e ? e : e.key;
 }
-function v(e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: f } = e,
-        { ref: _, width: p = 0 } = (0, l.ZP)(),
+function m(e) {
+    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: m } = e,
+        { ref: g, width: E = 0 } = (0, l.ZP)(),
         {
-            lastVisibleIndex: h,
-            onItemLayout: m,
-            overflowItemsRef: g,
-        } = E({
+            lastVisibleIndex: b,
+            onItemLayout: y,
+            overflowItemsRef: O,
+        } = f({
             items: n,
             itemGapPx: s,
             maxLines: d,
-            containerWidth: p,
+            containerWidth: E,
         }),
         v = i.useCallback(
             (e) =>
-                (0, r.jsx)(b, {
+                (0, r.jsx)(_, {
                     items: e,
                     renderItem: a,
                 }),
             [a],
         ),
-        I = null != f ? f : v,
-        T = i.useMemo(() => n.slice(0, h + 1), [n, h]),
-        S = i.useMemo(() => n.slice(h + 1), [n, h]);
+        I = null != m ? m : v,
+        T = i.useMemo(() => n.slice(0, b + 1), [n, b]),
+        S = i.useMemo(() => n.slice(b + 1), [n, b]);
     return (0, r.jsxs)("div", {
         className: o()(t, u.items),
-        ref: _,
+        ref: g,
         children: [
             (0, r.jsxs)("div", {
                 "aria-hidden": !0,
@@ -212,19 +131,19 @@ function v(e) {
                         className: u.itemMeasurements,
                         children: n.map((e, t) =>
                             (0, r.jsx)(
-                                y,
+                                p,
                                 {
                                     index: t,
-                                    onItemLayout: m,
+                                    onItemLayout: y,
                                     children: a(e),
                                 },
-                                O(e),
+                                h(e),
                             ),
                         ),
                     }),
                     (0, r.jsx)("div", {
                         className: u.overflowMeasurement,
-                        ref: g,
+                        ref: O,
                         children: a(c.intl.formatToPlainString(c.t.vGclWl, { count: Number("1".concat(n.length)) })),
                     }),
                 ],

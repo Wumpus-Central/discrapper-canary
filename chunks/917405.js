@@ -1,112 +1,113 @@
-n.d(t, { Z: () => N });
-var r = n(951288),
-    l = n(647438),
-    s = n(120356),
-    i = n.n(s),
-    a = n(481060),
-    o = n(100527),
+n.d(t, { Z: () => _ });
+var l = n(951288),
+    i = n(647438),
+    r = n(120356),
+    a = n.n(r),
+    o = n(28664),
+    s = n(481060),
+    u = n(100527),
     c = n(522651),
-    u = n(476221),
-    d = n(873596),
-    h = n(423516),
-    f = n(981631),
-    g = n(445233);
-function p(e) {
+    d = n(476221),
+    f = n(873596),
+    g = n(423516),
+    h = n(981631),
+    p = n(445233);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = l);
             });
     }
     return e;
 }
-let O = {
-        [f.QKv.CONNECTED]: g.rtcConnectionStatusConnected,
-        [f.QKv.CONNECTING]: g.rtcConnectionStatusConnecting,
-        [f.QKv.ERROR]: g.rtcConnectionStatusError,
+let N = {
+        [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
+        [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
+        [h.QKv.ERROR]: p.rtcConnectionStatusError,
+    },
+    O = {
+        [h.IE4.FINE]: p.rtcConnectionQualityFine,
+        [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
+        [h.IE4.BAD]: p.rtcConnectionQualityBad,
+        [h.IE4.UNKNOWN]: null,
     },
     y = {
-        [f.IE4.FINE]: g.rtcConnectionQualityFine,
-        [f.IE4.AVERAGE]: g.rtcConnectionQualityAverage,
-        [f.IE4.BAD]: g.rtcConnectionQualityBad,
-        [f.IE4.UNKNOWN]: null,
-    },
-    x = {
-        [f.IE4.FINE]: a.B_b,
-        [f.IE4.AVERAGE]: a.hLg,
-        [f.IE4.BAD]: a.mbS,
-        [f.IE4.UNKNOWN]: a._3e,
+        [h.IE4.FINE]: s.B_b,
+        [h.IE4.AVERAGE]: s.hLg,
+        [h.IE4.BAD]: s.mbS,
+        [h.IE4.UNKNOWN]: s._3e,
     };
-function b(e) {
+function C(e) {
     var { quality: t, largePing: n } = e,
-        l = (function (e, t) {
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                l = (function (e, t) {
+                l,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        l = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        l,
+                        i = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++)
-                    (n = s[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["quality", "largePing"]);
-    let s = x[t];
-    return (0, r.jsx)(s, p({ className: i()(g.ping, { [g.largePing]: n }) }, l));
+    let r = y[t];
+    return (0, l.jsx)(r, E({ className: a()(p.ping, { [p.largePing]: n }) }, i));
 }
-function N(e) {
+function _(e) {
     let {
             quality: t,
             lastPing: n,
-            state: s,
-            className: x,
-            children: N,
-            channelId: m,
-            childrenAsSubtitle: E,
-            connectionStatusTextVariant: C,
-            hasVideo: j,
+            state: r,
+            className: y,
+            children: _,
+            channelId: T,
+            childrenAsSubtitle: m,
+            connectionStatusTextVariant: I,
+            hasVideo: S,
         } = e,
-        v = l.useRef(null),
-        T = s === f.hes.RTC_CONNECTED,
-        I = l.useCallback(
+        b = i.useRef(null),
+        v = r === h.hes.RTC_CONNECTED,
+        x = i.useCallback(
             (e) => {
                 var t, n;
-                return (0, r.jsx)(
-                    d.Z,
-                    ((t = p({}, e)),
-                    (n = n = { channelId: m }),
+                return (0, l.jsx)(
+                    f.Z,
+                    ((t = E({}, e)),
+                    (n = n = { channelId: T }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var l = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, l);
                               }
                               return n;
                           })(Object(n)).forEach(function (e) {
@@ -115,60 +116,53 @@ function N(e) {
                     t),
                 );
             },
-            [m],
+            [T],
         ),
-        { connectionStatus: P, connectionStatusText: S } = u.Z.getStatus(s, j);
-    return (0, r.jsxs)("div", {
-        className: g.rtcConnectionStatusWrapper,
+        { connectionStatus: P, connectionStatusText: Z } = d.Z.getStatus(r, S);
+    return (0, l.jsxs)("div", {
+        className: p.rtcConnectionStatusWrapper,
         children: [
-            (0, r.jsxs)("div", {
-                className: i()(g.rtcConnectionStatus, y[t], x),
+            (0, l.jsxs)("div", {
+                className: a()(p.rtcConnectionStatus, O[t], y),
                 children: [
-                    T &&
-                        (0, r.jsx)(a.ua7, {
-                            text: t !== f.IE4.UNKNOWN && null != n ? "".concat(n.toFixed(0), " ms") : null,
-                            children: (e) =>
-                                (0, r.jsx)(
-                                    b,
-                                    p(
-                                        {
-                                            quality: t,
-                                            largePing: E,
-                                        },
-                                        e,
-                                    ),
-                                ),
+                    v &&
+                        (0, l.jsx)(o.u, {
+                            text: t !== h.IE4.UNKNOWN && null != n ? "".concat(n.toFixed(0), " ms") : null,
+                            children: (0, l.jsx)(C, {
+                                quality: t,
+                                largePing: m,
+                            }),
                         }),
-                    (0, r.jsxs)("div", {
-                        className: g.labelWrapper,
+                    (0, l.jsxs)("div", {
+                        className: p.labelWrapper,
                         children: [
-                            (0, r.jsx)(a.yRy, {
-                                targetElementRef: v,
-                                renderPopout: I,
+                            (0, l.jsx)(s.yRy, {
+                                targetElementRef: b,
+                                renderPopout: x,
                                 position: "top",
                                 children: (e) => {
                                     let { onClick: t } = e;
-                                    return (0, r.jsx)(a.P3F, {
-                                        innerRef: v,
+                                    return (0, l.jsx)(s.P3F, {
+                                        innerRef: b,
                                         onClick: (e) => {
-                                            (0, c.v)(o.Z.RTC_PANEL, c.d.CONNECTION_STATUS), t(e);
+                                            (0, c.v)(u.Z.RTC_PANEL, c.d.CONNECTION_STATUS), t(e);
                                         },
-                                        children: (0, r.jsx)(h.Z, {
-                                            text: S,
-                                            textVariant: C,
-                                            hasVideo: j,
-                                            className: O[P],
-                                            hasConnectedChannel: null != m,
+                                        children: (0, l.jsx)(g.Z, {
+                                            text: Z,
+                                            textVariant: I,
+                                            hasVideo: S,
+                                            className: N[P],
+                                            hasConnectedChannel: null != T,
                                         }),
                                     });
                                 },
                             }),
-                            E ? N : null,
+                            m ? _ : null,
                         ],
                     }),
                 ],
             }),
-            E ? null : N,
+            m ? null : _,
         ],
     });
 }

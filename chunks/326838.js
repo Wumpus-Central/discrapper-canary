@@ -1,89 +1,90 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(913527),
     o = n.n(l),
     a = n(442837),
-    s = n(755721),
-    c = n(481060),
-    u = n(727637),
-    d = n(782568),
-    p = n(317632),
-    h = n(174767),
-    f = n(594174),
-    g = n(55935),
-    m = n(388032),
-    b = n(313227);
-function O(e) {
+    s = n(28664),
+    c = n(755721),
+    u = n(481060),
+    d = n(727637),
+    p = n(782568),
+    h = n(317632),
+    f = n(174767),
+    g = n(594174),
+    m = n(55935),
+    b = n(388032),
+    _ = n(313227);
+function y(e) {
     let { invite: t, expired: n } = e,
-        l = (0, a.e7)([f.default], () => {
+        l = (0, a.e7)([g.default], () => {
             var e, n;
-            return null != (n = null == (e = f.default.getUser(t.inviter_id)) ? void 0 : e.username) ? n : "";
+            return null != (n = null == (e = g.default.getUser(t.inviter_id)) ? void 0 : e.username) ? n : "";
         }),
-        s = (0, g.vc)(o()(t.created_at), "LT"),
-        d = i.useRef(null),
-        p = (0, u.Z)(d);
+        s = (0, m.vc)(o()(t.created_at), "LT"),
+        c = i.useRef(null),
+        p = (0, d.Z)(c);
     return (
         i.useEffect(() => {
-            n || (0, h.Br)(t);
+            n || (0, f.Br)(t);
         }, [t, n]),
         (0, r.jsxs)("div", {
-            className: b.container,
-            ref: d,
+            className: _.container,
+            ref: c,
             children: [
                 (0, r.jsxs)("div", {
-                    className: b.primaryRow,
+                    className: _.primaryRow,
                     children: [
                         (0, r.jsx)("img", {
-                            className: b.inviteImage,
+                            className: _.inviteImage,
                             src: t.application_asset,
                             alt: "Game Invite",
                         }),
-                        (0, r.jsx)(c.Text, {
-                            className: b.title,
+                        (0, r.jsx)(u.Text, {
+                            className: _.title,
                             variant: "text-md/semibold",
                             color: "interactive-active",
-                            children: m.intl.format(m.t.vtUO3d, { username: l }),
+                            children: b.intl.format(b.t.vtUO3d, { username: l }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: b.buttonContainer,
+                            className: _.buttonContainer,
                             children: [
-                                (0, r.jsx)(y, {
+                                (0, r.jsx)(O, {
                                     expired: n,
                                     invite: t,
                                     isHoveringInvite: p,
                                 }),
-                                (0, r.jsx)(c.M0o, {
-                                    className: b.deleteButton,
-                                    tooltip: m.intl.string(m.t.oyYWHB),
-                                    color: c.YX$.SECONDARY,
-                                    icon: (0, r.jsx)(c.XHJ, { size: "xs" }),
+                                (0, r.jsx)(u.M0o, {
+                                    className: _.deleteButton,
+                                    tooltip: b.intl.string(b.t.oyYWHB),
+                                    color: u.YX$.SECONDARY,
+                                    icon: (0, r.jsx)(u.XHJ, { size: "xs" }),
                                     onClick: () => {
-                                        (0, h.UF)(t);
+                                        (0, f.UF)(t);
                                     },
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsx)("div", { className: b.divider }),
+                (0, r.jsx)("div", { className: _.divider }),
                 (0, r.jsxs)("div", {
-                    className: b.secondaryRow,
+                    className: _.secondaryRow,
                     children: [
-                        (0, r.jsxs)(c.Text, {
+                        (0, r.jsxs)(u.Text, {
                             variant: "text-xs/medium",
-                            className: b.subtitle,
+                            className: _.subtitle,
                             color: "text-muted",
                             children: [t.application_name, " \xB7 ", s],
                         }),
                         n &&
                             (0, r.jsx)("div", {
-                                className: b.metaContainer,
-                                children: (0, r.jsx)(c.Text, {
+                                className: _.metaContainer,
+                                children: (0, r.jsx)(u.Text, {
                                     variant: "text-xxs/semibold",
-                                    className: b.__invalid_metaText,
+                                    className: _.__invalid_metaText,
                                     color: "text-muted",
-                                    children: m.intl.string(m.t["//8Uqa"]),
+                                    children: b.intl.string(b.t["//8Uqa"]),
                                 }),
                             }),
                     ],
@@ -92,122 +93,77 @@ function O(e) {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
-        o = (0, a.e7)([p.Z], () => p.Z.isInviteGameInstalled(n)),
-        u = (0, a.e7)([p.Z], () => p.Z.isInviteJoinable(n)),
-        [f, g] = i.useState(!1),
-        O = i.useCallback(async () => {
-            g(!0);
-            try {
-                await (0, h.MH)(n);
-            } catch (e) {}
-            g(!1);
-        }, [n]),
+        o = (0, a.e7)([h.Z], () => h.Z.isInviteGameInstalled(n)),
+        d = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
+        [g, m] = i.useState(!1),
         y = i.useCallback(async () => {
-            g(!0);
+            m(!0);
             try {
-                await (0, h.Ol)(n);
+                await (0, f.MH)(n);
             } catch (e) {}
-            g(!1);
+            m(!1);
+        }, [n]),
+        O = i.useCallback(async () => {
+            m(!0);
+            try {
+                await (0, f.Ol)(n);
+            } catch (e) {}
+            m(!1);
         }, [n]);
     if (t)
         if (o && l)
-            return (0, r.jsx)(s.zx, {
-                className: b.primaryButton,
-                color: s.Tt.TRANSPARENT,
-                disabled: f,
-                size: s.Ph.SMALL,
-                onClick: O,
-                children: m.intl.string(m.t["s+J8Dg"]),
+            return (0, r.jsx)(c.zx, {
+                className: _.primaryButton,
+                color: c.Tt.TRANSPARENT,
+                disabled: g,
+                size: c.Ph.SMALL,
+                onClick: y,
+                children: b.intl.string(b.t["s+J8Dg"]),
             });
         else return null;
-    return o && u
-        ? (0, r.jsx)(s.zx, {
-              className: b.primaryButton,
-              color: s.Tt.GREEN,
-              disabled: f,
-              size: s.Ph.SMALL,
-              onClick: y,
-              children: m.intl.string(m.t["/loN9/"]),
+    return o && d
+        ? (0, r.jsx)(c.zx, {
+              className: _.primaryButton,
+              color: c.Tt.GREEN,
+              disabled: g,
+              size: c.Ph.SMALL,
+              onClick: O,
+              children: b.intl.string(b.t["/loN9/"]),
           })
         : null != n.fallback_url
-          ? (0, r.jsx)(s.zx, {
-                className: b.primaryButton,
-                disabled: f,
-                size: s.Ph.SMALL,
-                color: s.Tt.TRANSPARENT,
-                onClick: () => (0, d.Z)(n.fallback_url),
-                children: m.intl.string(m.t["27y8KC"]),
+          ? (0, r.jsx)(c.zx, {
+                className: _.primaryButton,
+                disabled: g,
+                size: c.Ph.SMALL,
+                color: c.Tt.TRANSPARENT,
+                onClick: () => (0, p.Z)(n.fallback_url),
+                children: b.intl.string(b.t["27y8KC"]),
             })
-          : (0, r.jsx)(c.ua7, {
-                text: m.intl.formatToPlainString(m.t.issFLC, { gameTitle: n.application_name }),
-                children: (e) => {
-                    var t, i;
-                    return (0, r.jsx)(
-                        s.zx,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = r);
-                                    });
-                            }
-                            return e;
-                        })({}, e)),
-                        (i = i =
-                            {
-                                className: b.primaryButton,
-                                disabled: !0,
-                                size: s.Ph.SMALL,
-                                color: s.Tt.TRANSPARENT,
-                                onClick: () => (0, d.Z)(n.fallback_url),
-                                children: (0, r.jsxs)("div", {
-                                    className: b.launchToJoinContainer,
-                                    children: [
-                                        (0, r.jsx)(c.Text, {
-                                            variant: "text-xxs/medium",
-                                            className: b.launchToJoinText,
-                                            color: "text-muted",
-                                            children: m.intl.string(m.t.dai1Oz),
-                                        }),
-                                        (0, r.jsx)(c.d3s, {
-                                            size: "xxs",
-                                            color: c.TVs.colors.TEXT_MUTED.css,
-                                        }),
-                                    ],
-                                }),
+          : (0, r.jsx)(s.u, {
+                text: b.intl.formatToPlainString(b.t.issFLC, { gameTitle: n.application_name }),
+                children: (0, r.jsx)(c.zx, {
+                    className: _.primaryButton,
+                    disabled: !0,
+                    size: c.Ph.SMALL,
+                    color: c.Tt.TRANSPARENT,
+                    onClick: () => (0, p.Z)(n.fallback_url),
+                    children: (0, r.jsxs)("div", {
+                        className: _.launchToJoinContainer,
+                        children: [
+                            (0, r.jsx)(u.Text, {
+                                variant: "text-xxs/medium",
+                                className: _.launchToJoinText,
+                                color: "text-muted",
+                                children: b.intl.string(b.t.dai1Oz),
                             }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                              }),
-                        t),
-                    );
-                },
+                            (0, r.jsx)(u.d3s, {
+                                size: "xxs",
+                                color: u.TVs.colors.TEXT_MUTED.css,
+                            }),
+                        ],
+                    }),
+                }),
             });
 }

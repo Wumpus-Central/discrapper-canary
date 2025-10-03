@@ -11,5 +11,4 @@ e.exports = {
     roleHeader: "roleHeader__75297",
     roleScroller: "roleScroller__75297",
     timestamp: "timestamp__75297",
-    timestampTooltip: "timestampTooltip__75297",
 };

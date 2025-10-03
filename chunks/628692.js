@@ -1,194 +1,137 @@
 n.d(t, {
-    ZP: () => R,
-    ku: () => C,
+    ZP: () => A,
+    ku: () => T,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(399606),
-    l = n(481060),
-    c = n(596454),
-    u = n(722932),
-    d = n(125900),
-    f = n(801606),
-    _ = n(409700),
-    p = n(321889),
-    h = n(763296),
-    m = n(697426),
-    g = n(294206),
-    E = n(695346),
-    b = n(592125),
-    y = n(388032),
-    O = n(766106);
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    l = n(28664),
+    c = n(481060),
+    u = n(596454),
+    d = n(722932),
+    f = n(125900),
+    _ = n(801606),
+    p = n(409700),
+    h = n(321889),
+    m = n(763296),
+    g = n(697426),
+    E = n(294206),
+    b = n(695346),
+    y = n(592125),
+    O = n(388032),
+    v = n(766106);
 function I(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function T(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function S(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function A(e) {
     let { playSound: t } = e;
-    return (0, r.jsxs)(l.P3F, {
+    return (0, r.jsxs)(c.P3F, {
         title: "Risky Click",
         tag: "span",
         onClick: t,
-        className: O.inlineContainer,
+        className: v.inlineContainer,
         children: [
-            (0, r.jsx)(l.gj8, {
+            (0, r.jsx)(c.gj8, {
                 size: "md",
                 color: "currentColor",
-                className: O.unknownSound,
+                className: v.unknownSound,
             }),
             (0, r.jsx)("span", { children: "Unknown" }),
         ],
     });
 }
-function C(e) {
+function T(e) {
     let { soundId: t } = e,
-        n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
-        i = (0, d.V2)({ location: "SoundboardMentionInline" }),
-        { isPlaying: a, playSound: o } = (0, p.Z)(n);
+        n = (0, s.e7)([m.Z], () => m.Z.getSoundById(t)),
+        i = (0, f.V2)({ location: "SoundboardMentionInline" }),
+        { isPlaying: a, playSound: o } = (0, h.Z)(n);
     return i
         ? null == n
-            ? (0, r.jsx)(A, {})
-            : (0, r.jsx)(N, {
-                  className: O.inlineTextArea,
+            ? (0, r.jsx)(I, {})
+            : (0, r.jsx)(S, {
+                  className: v.inlineTextArea,
                   isPlaying: a,
                   playSound: o,
                   sound: n,
               })
         : null;
 }
-function N(e) {
+function S(e) {
     let { className: t, sound: n, playSound: i, isPlaying: a } = e,
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        d = y.intl.formatToPlainString(y.t.tuMUJy, {
+        l = O.intl.formatToPlainString(O.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name,
         });
-    return (0, u.X0)({ location: "SoundboardMentionInline" })
-        ? (0, r.jsxs)(l.P3F, {
-              "aria-label": d,
+    return (0, d.X0)({ location: "SoundboardMentionInline" })
+        ? (0, r.jsxs)(c.P3F, {
+              "aria-label": l,
               tag: "span",
               onClick: i,
-              className: o()(O.inlineContainer, O.inlineButton, { [O.playing]: !0 === a }, t),
+              className: o()(v.inlineContainer, v.inlineButton, { [v.playing]: !0 === a }, t),
               children: [
                   s &&
-                      (0, r.jsx)(c.Z, {
+                      (0, r.jsx)(u.Z, {
                           emojiId: null == n ? void 0 : n.emojiId,
                           emojiName: null == n ? void 0 : n.emojiName,
-                          className: O.soundmojiEmoji,
+                          className: v.soundmojiEmoji,
                       }),
                   (0, r.jsx)("span", { children: " ".concat(null == n ? void 0 : n.name, " ") }),
               ],
           })
         : null;
 }
-let R = function (e) {
+let A = function (e) {
     let { channelId: t, messageId: n, soundId: a, messageSounds: o, jumbo: c = !1 } = e,
-        d = E.jU.useSetting(),
-        y = (0, s.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
-        v = i.useMemo(() => {
+        u = b.jU.useSetting(),
+        f = (0, s.e7)([m.Z], () => m.Z.getSoundById(a), [a]),
+        O = i.useMemo(() => {
             var e;
-            return null != (e = (0, f.Z)(t, n, a, o)) ? e : y;
-        }, [t, n, a, o, y]),
-        T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
-        C = (0, u.X0)({ location: "SoundboardMention" }),
-        R = i.useRef(null),
-        { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
-        D = i.useCallback(async () => {
-            if (await w()) {
+            return null != (e = (0, _.Z)(t, n, a, o)) ? e : f;
+        }, [t, n, a, o, f]),
+        T = (0, s.e7)([y.Z], () => y.Z.getChannel(t)),
+        A = (0, d.X0)({ location: "SoundboardMention" }),
+        C = i.useRef(null),
+        { isPlaying: N, playSound: R } = (0, h.Z)(O, T),
+        P = i.useCallback(async () => {
+            if (await R()) {
                 var e;
-                null == (e = R.current) || e.addAnimation();
+                null == (e = C.current) || e.addAnimation();
             }
-        }, [w]);
-    return C
-        ? null == v
-            ? (0, r.jsx)(A, { playSound: D })
-            : c && !d
+        }, [R]);
+    return A
+        ? null == O
+            ? (0, r.jsx)(I, { playSound: P })
+            : c && !u
               ? (0, r.jsx)(
-                    g.ZP,
+                    E.ZP,
                     {
-                        containerClassName: O.jumboContainer,
-                        className: O.jumboButton,
-                        sound: v,
+                        containerClassName: v.jumboContainer,
+                        className: v.jumboButton,
+                        sound: O,
                         channel: T,
-                        onSelectItem: D,
-                        isPlayingSoundOverride: P,
+                        onSelectItem: P,
+                        isPlayingSoundOverride: N,
                         isSoundmoji: !0,
-                        buttonOverlay: m.Pb.SOUNDMOJI,
-                        tooltipClassName: O.tooltip,
-                        tooltipContentClassName: O.tooltipContainer,
-                        tooltipOverride: (0, r.jsx)(_.Dp, { sound: v }),
-                        soundmojiVisualEffectRef: R,
+                        buttonOverlay: g.Pb.SOUNDMOJI,
+                        tooltipClassName: v.tooltip,
+                        tooltipContentClassName: v.tooltipContainer,
+                        tooltipOverride: (0, r.jsx)(p.Dp, { sound: O }),
+                        soundmojiVisualEffectRef: C,
                     },
-                    "".concat(v.soundId),
+                    "".concat(O.soundId),
                 )
-              : (0, r.jsx)(l.ua7, {
-                    "aria-label": v.name,
-                    text: (0, r.jsx)(_.Dp, { sound: v }),
-                    tooltipClassName: O.tooltip,
-                    tooltipContentClassName: O.tooltipContainer,
+              : (0, r.jsx)(l.u, {
+                    "aria-label": O.name,
+                    __unsupportedReactNodeAsText: (0, r.jsx)(p.Dp, { sound: O }),
                     position: "top",
                     delay: 500,
-                    children: (e) =>
-                        (0, r.jsx)(
-                            "span",
-                            S(I({}, e), {
-                                children: (0, r.jsx)(N, {
-                                    sound: v,
-                                    playSound: D,
-                                    isPlaying: P,
-                                }),
-                            }),
-                        ),
+                    children: (0, r.jsx)("span", {
+                        children: (0, r.jsx)(S, {
+                            sound: O,
+                            playSound: P,
+                            isPlaying: N,
+                        }),
+                    }),
                 })
         : null;
 };

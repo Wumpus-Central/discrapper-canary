@@ -1,118 +1,113 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(399606),
-    o = n(481060),
-    c = n(734893),
-    d = n(150512),
-    u = n(314897),
-    m = n(8426),
-    g = n(969632),
-    p = n(535907),
+    s = n.n(l),
+    a = n(399606),
+    o = n(28664),
+    c = n(481060),
+    d = n(734893),
+    u = n(150512),
+    m = n(314897),
+    g = n(8426),
+    p = n(969632),
+    f = n(535907),
     h = n(388032),
-    f = n(197530);
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function x(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let j = function (e) {
+    x = n(197530);
+let b = function (e) {
     let { guildId: t } = e,
-        l = (0, s.cj)([g.Z], () => {
+        l = (0, a.cj)([p.Z], () => {
             var e;
-            return null != (e = g.Z.getSettings().welcomeMessage) ? e : p.z;
+            return null != (e = p.Z.getSettings().welcomeMessage) ? e : f.z;
         }),
-        j = i.useCallback(
+        b = i.useCallback(
             () =>
-                (0, o.ZDy)(async () => {
+                (0, c.ZDy)(async () => {
                     let { default: e } = await n.e("36371").then(n.bind(n, 893626));
-                    return (n) =>
-                        (0, r.jsx)(
+                    return (n) => {
+                        var i, s;
+                        return (0, r.jsx)(
                             e,
-                            x(b({}, n), {
-                                guildId: t,
-                                welcomeMessage: l,
-                                onSave: (e) => (0, m._N)(e),
-                            }),
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (s = s =
+                                {
+                                    guildId: t,
+                                    welcomeMessage: l,
+                                    onSave: (e) => (0, g._N)(e),
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(s)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                  }),
+                            i),
                         );
+                    };
                 }),
             [t, l],
         ),
-        v = (0, s.e7)([u.default], () => u.default.getId());
-    return (0, c.pw)(l)
-        ? (0, r.jsx)(o.zxk, {
+        j = (0, a.e7)([m.default], () => m.default.getId());
+    return (0, d.pw)(l)
+        ? (0, r.jsx)(c.zxk, {
               variant: "primary",
               size: "sm",
               text: h.intl.string(h.t["9Z+aEB"]),
-              onClick: j,
+              onClick: b,
           })
-        : (0, r.jsxs)(o.P3F, {
-              className: f.editWelcomeSection,
-              onClick: j,
+        : (0, r.jsxs)(c.P3F, {
+              className: x.editWelcomeSection,
+              onClick: b,
               children: [
-                  (0, r.jsx)(d.Z, {
+                  (0, r.jsx)(u.Z, {
                       guildId: t,
                       welcomeMessage: {
-                          authorIds: l.authorIds.length > 0 ? l.authorIds : [v],
+                          authorIds: l.authorIds.length > 0 ? l.authorIds : [j],
                           message: l.message,
                       },
                   }),
-                  (0, r.jsx)(o.ua7, {
+                  (0, r.jsx)(o.u, {
                       text: h.intl.string(h.t.bt75u7),
-                      children: (e) =>
-                          (0, r.jsxs)(
-                              "div",
-                              x(b({}, e), {
-                                  className: a()(f.actionItemEditButton, f.editWelcomeButton),
-                                  children: [
-                                      (0, r.jsx)(o.vdY, {
-                                          size: "md",
-                                          color: "currentColor",
-                                      }),
-                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) }),
-                                  ],
+                      children: (0, r.jsxs)("div", {
+                          className: s()(x.actionItemEditButton, x.editWelcomeButton),
+                          children: [
+                              (0, r.jsx)(c.vdY, {
+                                  size: "md",
+                                  color: "currentColor",
                               }),
-                          ),
+                              (0, r.jsx)(c.nn4, { children: h.intl.string(h.t.bt75u7) }),
+                          ],
+                      }),
                   }),
               ],
           });

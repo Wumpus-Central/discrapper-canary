@@ -1,84 +1,40 @@
-r.d(t, { U: () => c });
-var n = r(951288);
-r(647438);
-var l = r(120356),
-    i = r.n(l),
-    a = r(481060),
-    o = r(388032),
-    s = r(105876);
-let c = (e) => {
-    let { className: t, isPartiallyPurchased: r } = e;
-    return r
-        ? (0, n.jsx)(a.ua7, {
-              tooltipClassName: s.partiallyOwnedDisclaimer,
+n.d(t, { U: () => u });
+var r = n(951288);
+n(647438);
+var l = n(120356),
+    i = n.n(l),
+    a = n(28664),
+    o = n(481060),
+    s = n(388032),
+    c = n(863577);
+let u = (e) => {
+    let { className: t, isPartiallyPurchased: n } = e;
+    return n
+        ? (0, r.jsx)(a.u, {
               position: "top",
               align: "left",
-              text: o.intl.string(o.t.y1VWkZ),
-              children: (e) => {
-                  var r, l;
-                  return (0, n.jsxs)(
-                      "div",
-                      ((r = (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      }),
-                                  )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = r[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: n,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = n);
-                                  });
-                          }
-                          return e;
-                      })({ className: i()(s.partialOwnStateContainer, t) }, e)),
-                      (l = l =
-                          {
-                              children: [
-                                  (0, n.jsx)("span", {
-                                      className: s.iconWrapper,
-                                      children: (0, n.jsx)(a.d3s, {
-                                          size: "md",
-                                          color: "currentColor",
-                                          className: s.infoIcon,
-                                      }),
-                                  }),
-                                  (0, n.jsx)(a.Text, {
-                                      variant: "text-md/semibold",
-                                      children: o.intl.string(o.t.BEjTio),
-                                  }),
-                              ],
+              text: s.intl.string(s.t.y1VWkZ),
+              children: (0, r.jsxs)("div", {
+                  className: i()(c.partialOwnStateContainer, t),
+                  children: [
+                      (0, r.jsx)("span", {
+                          className: c.iconWrapper,
+                          children: (0, r.jsx)(o.d3s, {
+                              size: "md",
+                              color: "currentColor",
+                              className: c.infoIcon,
                           }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                          : (function (e, t) {
-                                var r = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var n = Object.getOwnPropertySymbols(e);
-                                    r.push.apply(r, n);
-                                }
-                                return r;
-                            })(Object(l)).forEach(function (e) {
-                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
-                            }),
-                      r),
-                  );
-              },
+                      }),
+                      (0, r.jsx)(o.Text, {
+                          variant: "text-md/semibold",
+                          children: s.intl.string(s.t.BEjTio),
+                      }),
+                  ],
+              }),
           })
-        : (0, n.jsx)(a.Text, {
+        : (0, r.jsx)(o.Text, {
               variant: "text-md/semibold",
               className: t,
-              children: o.intl.string(o.t["6cfuDg"]),
+              children: s.intl.string(s.t["6cfuDg"]),
           });
 };

@@ -32,10 +32,10 @@ function b(e, t, n) {
         P,
         w,
         D,
-        x,
         L,
-        j,
-        M = String(t),
+        x,
+        M,
+        j = String(t),
         k = (0, f.j)(),
         U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : k.locale) ? m : _.Z,
         G = (0, u.Z)(
@@ -69,15 +69,15 @@ function b(e, t, n) {
                     (P =
                         null != (w = null == n ? void 0 : n.weekStartsOn)
                             ? w
-                            : null == n || null == (D = n.locale) || null == (x = D.options)
+                            : null == n || null == (D = n.locale) || null == (L = D.options)
                               ? void 0
-                              : x.weekStartsOn)
+                              : L.weekStartsOn)
                         ? P
                         : k.weekStartsOn)
                     ? R
-                    : null == (L = k.locale) || null == (j = L.options)
+                    : null == (x = k.locale) || null == (M = x.options)
                       ? void 0
-                      : j.weekStartsOn)
+                      : M.weekStartsOn)
             ? N
             : 0,
     );
@@ -94,7 +94,8 @@ function b(e, t, n) {
             locale: U,
             _originalDate: Z,
         };
-    return M.match(h)
+    return j
+        .match(h)
         .map(function (e) {
             var t = e[0];
             return "p" === t || "P" === t ? (0, s.Z[t])(e, U.formatLong) : e;

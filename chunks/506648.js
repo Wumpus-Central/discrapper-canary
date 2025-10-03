@@ -1,148 +1,121 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(770146),
-    o = n(863969),
-    s = n(38761),
-    c = n(6074),
-    u = n(39377),
-    d = n(981631),
-    p = n(388032),
-    f = n(126373);
-let h = [
+    l = n(28664),
+    a = n(481060),
+    o = n(770146),
+    s = n(863969),
+    c = n(38761),
+    u = n(6074),
+    d = n(39377),
+    p = n(981631),
+    f = n(388032),
+    h = n(126373);
+let g = [
         {
-            feature: d.Qa3.SINGLE_PLAYER,
-            getText: () => p.intl.string(p.t["V+/FjI"]),
-            getTooltip: () => p.intl.string(p.t["w+X9sb"]),
-            IconComponent: l.tBG,
+            feature: p.Qa3.SINGLE_PLAYER,
+            getText: () => f.intl.string(f.t["V+/FjI"]),
+            getTooltip: () => f.intl.string(f.t["w+X9sb"]),
+            IconComponent: a.tBG,
         },
         {
-            feature: d.Qa3.LOCAL_MULTIPLAYER,
-            getText: () => p.intl.string(p.t.srnWrq),
-            getTooltip: () => p.intl.string(p.t.sDdLWF),
-            IconComponent: l.BFJ,
+            feature: p.Qa3.LOCAL_MULTIPLAYER,
+            getText: () => f.intl.string(f.t.srnWrq),
+            getTooltip: () => f.intl.string(f.t.sDdLWF),
+            IconComponent: a.BFJ,
         },
         {
-            feature: d.Qa3.ONLINE_MULTIPLAYER,
-            getText: () => p.intl.string(p.t.xPHbgI),
-            getTooltip: () => p.intl.string(p.t.g6kR4O),
-            IconComponent: l.BFJ,
+            feature: p.Qa3.ONLINE_MULTIPLAYER,
+            getText: () => f.intl.string(f.t.xPHbgI),
+            getTooltip: () => f.intl.string(f.t.g6kR4O),
+            IconComponent: a.BFJ,
         },
         {
-            feature: d.Qa3.PVP,
-            getText: () => p.intl.string(p.t.qhgwx8),
-            getTooltip: () => p.intl.string(p.t["5jGrhI"]),
-            IconComponent: l.HI3,
+            feature: p.Qa3.PVP,
+            getText: () => f.intl.string(f.t.qhgwx8),
+            getTooltip: () => f.intl.string(f.t["5jGrhI"]),
+            IconComponent: a.HI3,
         },
         {
-            feature: d.Qa3.LOCAL_COOP,
-            getText: () => p.intl.string(p.t.FqbalJ),
-            getTooltip: () => p.intl.string(p.t.vIgDgY),
-            IconComponent: l.BFJ,
+            feature: p.Qa3.LOCAL_COOP,
+            getText: () => f.intl.string(f.t.FqbalJ),
+            getTooltip: () => f.intl.string(f.t.vIgDgY),
+            IconComponent: a.BFJ,
         },
         {
-            feature: d.Qa3.ONLINE_COOP,
-            getText: () => p.intl.string(p.t.lDHO4e),
-            getTooltip: () => p.intl.string(p.t.VXDpho),
-            IconComponent: l.BFJ,
+            feature: p.Qa3.ONLINE_COOP,
+            getText: () => f.intl.string(f.t.lDHO4e),
+            getTooltip: () => f.intl.string(f.t.VXDpho),
+            IconComponent: a.BFJ,
         },
         {
-            feature: d.Qa3.CROSS_PLATFORM,
-            getText: () => p.intl.string(p.t.SWo2HR),
-            getTooltip: () => p.intl.string(p.t.ll2wzc),
-            IconComponent: l.DuK,
+            feature: p.Qa3.CROSS_PLATFORM,
+            getText: () => f.intl.string(f.t.SWo2HR),
+            getTooltip: () => f.intl.string(f.t.ll2wzc),
+            IconComponent: a.DuK,
         },
         {
-            feature: d.Qa3.RICH_PRESENCE,
-            getText: () => p.intl.string(p.t.PVSVtL),
-            getTooltip: () => p.intl.string(p.t.O6Yp4e),
+            feature: p.Qa3.RICH_PRESENCE,
+            getText: () => f.intl.string(f.t.PVSVtL),
+            getTooltip: () => f.intl.string(f.t.O6Yp4e),
+            IconComponent: u.Z,
+        },
+        {
+            feature: p.Qa3.DISCORD_GAME_INVITES,
+            getText: () => f.intl.string(f.t.agm68P),
+            getTooltip: () => f.intl.string(f.t.kS2vFB),
             IconComponent: c.Z,
         },
         {
-            feature: d.Qa3.DISCORD_GAME_INVITES,
-            getText: () => p.intl.string(p.t.agm68P),
-            getTooltip: () => p.intl.string(p.t.kS2vFB),
+            feature: p.Qa3.SPECTATOR_MODE,
+            getText: () => f.intl.string(f.t["ZtiU7+"]),
+            getTooltip: () => f.intl.string(f.t.kUtiKS),
+            IconComponent: a.Odl,
+        },
+        {
+            feature: p.Qa3.CONTROLLER_SUPPORT,
+            getText: () => f.intl.string(f.t.UlBQ8P),
+            getTooltip: () => f.intl.string(f.t.iG00jI),
+            IconComponent: a.xoD,
+        },
+        {
+            feature: p.Qa3.CLOUD_SAVES,
+            getText: () => f.intl.string(f.t.rOcNrK),
+            getTooltip: () => f.intl.string(f.t.kvw18P),
             IconComponent: s.Z,
         },
         {
-            feature: d.Qa3.SPECTATOR_MODE,
-            getText: () => p.intl.string(p.t["ZtiU7+"]),
-            getTooltip: () => p.intl.string(p.t.kUtiKS),
-            IconComponent: l.Odl,
-        },
-        {
-            feature: d.Qa3.CONTROLLER_SUPPORT,
-            getText: () => p.intl.string(p.t.UlBQ8P),
-            getTooltip: () => p.intl.string(p.t.iG00jI),
-            IconComponent: l.xoD,
-        },
-        {
-            feature: d.Qa3.CLOUD_SAVES,
-            getText: () => p.intl.string(p.t.rOcNrK),
-            getTooltip: () => p.intl.string(p.t.kvw18P),
-            IconComponent: o.Z,
-        },
-        {
-            feature: d.Qa3.SECURE_NETWORKING,
-            getText: () => p.intl.string(p.t.GKFWLy),
-            getTooltip: () => p.intl.string(p.t.VudViI),
-            IconComponent: u.Z,
+            feature: p.Qa3.SECURE_NETWORKING,
+            getText: () => f.intl.string(f.t.GKFWLy),
+            getTooltip: () => f.intl.string(f.t.VudViI),
+            IconComponent: d.Z,
         },
     ],
-    g = (e) => {
+    m = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)("div", {
-            className: f.row,
+            className: h.row,
             children: [
-                (0, r.jsx)(l.ua7, {
+                (0, r.jsx)(l.u, {
                     text: i,
-                    children: (e) =>
-                        (0, r.jsx)(
-                            t,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
-                                        });
-                                }
-                                return e;
-                            })({ className: f.featureIcon }, e),
-                        ),
+                    children: (0, r.jsx)(t, { className: h.featureIcon }),
                 }),
                 (0, r.jsx)("span", {
-                    className: f.featureText,
+                    className: h.featureText,
                     children: n,
                 }),
-                (0, r.jsx)(l.dz2, {
+                (0, r.jsx)(a.dz2, {
                     size: "md",
                     color: "currentColor",
-                    className: f.checkmarkIcon,
+                    className: h.checkmarkIcon,
                 }),
             ],
         });
     };
-class m extends i.PureComponent {
+class b extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = h
+            t = g
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
@@ -150,7 +123,7 @@ class m extends i.PureComponent {
                 .map((e) => {
                     let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
                     return (0, r.jsx)(
-                        g,
+                        m,
                         {
                             IconComponent: n,
                             text: i(),
@@ -162,9 +135,9 @@ class m extends i.PureComponent {
         return 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: f.features,
-                  children: [(0, r.jsx)(a.Z, { children: p.intl.string(p.t.XXENra) }), t],
+                  className: h.features,
+                  children: [(0, r.jsx)(o.Z, { children: f.intl.string(f.t.XXENra) }), t],
               });
     }
 }
-let b = m;
+let _ = b;

@@ -2,71 +2,47 @@ n.d(t, { Z: () => D }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
-    o = n(755721),
-    c = n(481060),
-    d = n(274136),
-    u = n(2052),
-    m = n(906732),
-    g = n(678558),
-    p = n(852679),
+    s = n.n(l),
+    a = n(442837),
+    o = n(28664),
+    c = n(755721),
+    d = n(481060),
+    u = n(274136),
+    m = n(2052),
+    g = n(906732),
+    p = n(678558),
+    f = n(852679),
     h = n(357156),
-    f = n(713081),
+    x = n(713081),
     b = n(151494),
-    x = n(639777),
-    j = n(626135),
+    j = n(639777),
+    _ = n(626135),
     v = n(267642),
-    _ = n(926491),
+    C = n(926491),
     O = n(909707),
     y = n(863562),
-    C = n(399829),
-    N = n(428862),
-    E = n(981631),
-    I = n(535396),
-    S = n(388032),
-    T = n(486217);
-function P(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
+    N = n(399829),
+    E = n(428862),
+    I = n(981631),
+    S = n(535396),
+    T = n(388032),
+    P = n(486217);
 let w = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: i, tier: l } = e,
-            a = n < l,
-            s = (0, v.ig)(l);
+            s = n < l,
+            a = (0, v.ig)(l);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(c.X6q, {
+                (0, r.jsx)(d.X6q, {
                     color: "header-primary",
                     variant: "heading-md/semibold",
                     children: t,
                 }),
-                !a &&
-                    (0, r.jsx)(c.Text, {
+                !s &&
+                    (0, r.jsx)(d.Text, {
                         variant: "text-xs/normal",
-                        children: S.intl.format(S.t.ZLoNtr, {
-                            numTotal: s,
+                        children: T.intl.format(T.t.ZLoNtr, {
+                            numTotal: a,
                             numAvailable: (0, v.Qi)(i, l),
                         }),
                     }),
@@ -75,33 +51,61 @@ let w = (e) => {
     },
     R = () =>
         (0, r.jsx)("div", {
-            className: T.placeholderCard,
+            className: P.placeholderCard,
             children: (0, r.jsx)("img", {
-                className: T.placeholderImg,
-                alt: S.intl.string(S.t.wl4ntL),
+                className: P.placeholderImg,
+                alt: T.intl.string(T.t.wl4ntL),
                 src: n(872732),
             }),
         }),
     Z = (e) => {
         let { guild: t } = e,
-            { location: i } = (0, u.O)(),
+            { location: i } = (0, m.O)(),
             { canCreateExpressions: l } = (0, h.XJ)(t);
-        return (0, r.jsx)(c.zxk, {
+        return (0, r.jsx)(d.zxk, {
             variant: "primary",
             size: "sm",
-            text: S.intl.string(S.t.O1REe3),
+            text: T.intl.string(T.t.O1REe3),
             onClick: () => {
-                j.default.track(E.rMx.OPEN_MODAL, {
-                    type: E.jXE.CREATE_STICKER_MODAL,
+                _.default.track(I.rMx.OPEN_MODAL, {
+                    type: I.jXE.CREATE_STICKER_MODAL,
                     location: i,
                 }),
                     ((e) => {
                         let { guildId: t } = e;
-                        (0, c.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e("93626"), n.e("74395")]).then(
+                        (0, d.ZDy)(async () => {
+                            let { default: e } = await Promise.all([n.e("93626"), n.e("34765")]).then(
                                 n.bind(n, 136735),
                             );
-                            return (n) => (0, r.jsx)(e, P({ guildId: t }, n));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            "function" == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    }),
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0,
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({ guildId: t }, n),
+                                );
                         });
                     })({ guildId: t.id });
             },
@@ -111,115 +115,115 @@ let w = (e) => {
     D = (e) => {
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
-            u = (0, s.e7)([_.Z], () => {
+            m = (0, a.e7)([C.Z], () => {
                 var e;
-                return null != (e = _.Z.getStickersByGuildId(t.id)) ? e : [];
+                return null != (e = C.Z.getStickersByGuildId(t.id)) ? e : [];
             }, [t]),
-            { analyticsLocations: j } = (0, m.ZP)(),
+            { analyticsLocations: _ } = (0, g.ZP)(),
             D = (0, b.Z)(t.id),
-            A = t.features.has(E.oNc.MORE_STICKERS) ? E.Eu4.TIER_3 : t.premiumTier,
-            L = t.features.has(E.oNc.MORE_STICKERS) ? E.oCV[E.Eu4.TIER_3] : D,
-            k = (0, x.Z)(t.id);
+            A = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
+            L = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : D,
+            k = (0, j.Z)(t.id);
         if (
             (i.useEffect(() => {
                 window.dispatchEvent(new Event("resize"));
-            }, [u]),
+            }, [m]),
             l)
         )
-            return (0, r.jsx)(c.$jN, {});
-        let M = [
+            return (0, r.jsx)(d.$jN, {});
+        let G = [
             {
-                tier: E.Eu4.NONE,
+                tier: I.Eu4.NONE,
                 title: (0, r.jsx)(w, {
-                    guildStickers: u,
+                    guildStickers: m,
                     currentGuildTier: A,
-                    tier: E.Eu4.NONE,
-                    children: S.intl.string(S.t.tfVXhI),
+                    tier: I.Eu4.NONE,
+                    children: T.intl.string(T.t.tfVXhI),
                 }),
             },
             {
-                tier: E.Eu4.TIER_1,
+                tier: I.Eu4.TIER_1,
                 title: (0, r.jsx)(w, {
-                    guildStickers: u,
+                    guildStickers: m,
                     currentGuildTier: A,
-                    tier: E.Eu4.TIER_1,
-                    children: S.intl.string(S.t.nzXtaW),
+                    tier: I.Eu4.TIER_1,
+                    children: T.intl.string(T.t.nzXtaW),
                 }),
             },
             {
-                tier: E.Eu4.TIER_2,
+                tier: I.Eu4.TIER_2,
                 title: (0, r.jsx)(w, {
-                    guildStickers: u,
+                    guildStickers: m,
                     currentGuildTier: A,
-                    tier: E.Eu4.TIER_2,
-                    children: S.intl.string(S.t["h33/ub"]),
+                    tier: I.Eu4.TIER_2,
+                    children: T.intl.string(T.t["h33/ub"]),
                 }),
             },
             {
-                tier: E.Eu4.TIER_3,
+                tier: I.Eu4.TIER_3,
                 title: (0, r.jsx)(w, {
-                    guildStickers: u,
+                    guildStickers: m,
                     currentGuildTier: A,
-                    tier: E.Eu4.TIER_3,
-                    children: S.intl.string(S.t.BfF6EB),
+                    tier: I.Eu4.TIER_3,
+                    children: T.intl.string(T.t.BfF6EB),
                 }),
             },
         ];
-        return (0, r.jsx)(C.Z, {
-            tiers: M,
+        return (0, r.jsx)(N.Z, {
+            tiers: G,
             renderTier: (e) => {
                 var i;
                 let l,
-                    s,
-                    { isAnimatedTo: m, onSetRef: b, tier: x, tiers: _, tierIndex: O } = e,
-                    { canCreateExpressions: C, canManageGuildExpression: w } = (0, h.Gw)(t),
-                    M = _[O - 1],
-                    G = null != M ? (0, v.A3)(M.tier) : 0,
-                    U = (0, v.A3)(x.tier, t),
-                    B = (0, v.ig)(x.tier),
-                    F = u.slice(G, U),
+                    a,
+                    { isAnimatedTo: g, onSetRef: b, tier: j, tiers: C, tierIndex: O } = e,
+                    { canCreateExpressions: N, canManageGuildExpression: w } = (0, h.Gw)(t),
+                    G = C[O - 1],
+                    M = null != G ? (0, v.A3)(G.tier) : 0,
+                    U = (0, v.A3)(j.tier, t),
+                    B = (0, v.ig)(j.tier),
+                    F = m.slice(M, U),
                     H = F.length > 0,
-                    z = A < x.tier,
+                    z = A < j.tier,
                     W =
-                        ((i = u.length),
-                        i < (0, v.A3)(E.Eu4.NONE)
-                            ? E.Eu4.NONE
-                            : i < (0, v.A3)(E.Eu4.TIER_1)
-                              ? E.Eu4.TIER_1
-                              : i < (0, v.A3)(E.Eu4.TIER_2)
-                                ? E.Eu4.TIER_2
-                                : i < (0, v.A3)(E.Eu4.TIER_3) ||
-                                    (null != t && t.features.has(E.oNc.MORE_STICKERS) && i < d.D.MAX_STICKER_SLOTS)
-                                  ? E.Eu4.TIER_3
-                                  : E.Eu4.NONE),
-                    V = C && !z && W === x.tier && U !== F.length,
-                    Y = V || F.length > 0,
-                    K = U - G,
-                    X = n(872732),
-                    q = B - F.length,
-                    J = V ? Math.min(5 - ((F.length + 0) % 5), q) : 0,
+                        ((i = m.length),
+                        i < (0, v.A3)(I.Eu4.NONE)
+                            ? I.Eu4.NONE
+                            : i < (0, v.A3)(I.Eu4.TIER_1)
+                              ? I.Eu4.TIER_1
+                              : i < (0, v.A3)(I.Eu4.TIER_2)
+                                ? I.Eu4.TIER_2
+                                : i < (0, v.A3)(I.Eu4.TIER_3) ||
+                                    (null != t && t.features.has(I.oNc.MORE_STICKERS) && i < u.D.MAX_STICKER_SLOTS)
+                                  ? I.Eu4.TIER_3
+                                  : I.Eu4.NONE),
+                    V = N && !z && W === j.tier && U !== F.length,
+                    K = V || F.length > 0,
+                    Y = U - M,
+                    q = n(872732),
+                    X = B - F.length,
+                    J = V ? Math.min(5 - ((F.length + 0) % 5), X) : 0,
                     Q = [];
                 for (let e = 0; e < J; e++) Q.push((0, r.jsx)(R, {}, "placeholder-".concat(e)));
-                let $ = t.premiumTier < x.tier && D >= E.oCV[x.tier],
-                    ee = S.intl.string(S.t.dtFw5e),
+                let $ = t.premiumTier < j.tier && D >= I.oCV[j.tier],
+                    ee = T.intl.string(T.t.dtFw5e),
                     et = () => {
                         var e, n;
                         let r;
                         return (
-                            (e = Math.max(1, E.oCV[x.tier] - D)),
-                            (n = x.tier),
+                            (e = Math.max(1, I.oCV[j.tier] - D)),
+                            (n = j.tier),
                             (r = null),
-                            void (n === E.Eu4.TIER_1
-                                ? (r = E.Qqv.TIER_1)
-                                : n === E.Eu4.TIER_2
-                                  ? (r = E.Qqv.TIER_2)
-                                  : n === E.Eu4.TIER_3 && (r = E.Qqv.TIER_3),
-                            (0, p.Z)({
-                                analyticsLocations: j,
+                            void (n === I.Eu4.TIER_1
+                                ? (r = I.Qqv.TIER_1)
+                                : n === I.Eu4.TIER_2
+                                  ? (r = I.Qqv.TIER_2)
+                                  : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
+                            (0, f.Z)({
+                                analyticsLocations: _,
                                 analyticsLocation: {
-                                    page: E.ZY5.GUILD_SETTINGS,
-                                    section: E.jXE.GUILD_SETTINGS_STICKERS,
-                                    object: E.qAy.BOOST_LEVEL_UPSELL_BUTTON,
+                                    page: I.ZY5.GUILD_SETTINGS,
+                                    section: I.jXE.GUILD_SETTINGS_STICKERS,
+                                    object: I.qAy.BOOST_LEVEL_UPSELL_BUTTON,
                                     objectType: r,
                                 },
                                 guildId: t.id,
@@ -231,46 +235,46 @@ let w = (e) => {
                 $ &&
                     (k
                         ? ((et = () => {
-                              let e = I.Cp[x.tier];
-                              null != e && (0, f.H6)(t.id, e);
+                              let e = S.Cp[j.tier];
+                              null != e && (0, x.H6)(t.id, e);
                           }),
-                          (ee = S.intl.string(S.t.g7lkra)),
-                          t.premiumTier + 1 !== x.tier && ((en = !0), (l = S.intl.string(S.t.mTMkY2))))
-                        : ((en = !0), (l = S.intl.string(S.t.hwPEJS))));
+                          (ee = T.intl.string(T.t.g7lkra)),
+                          t.premiumTier + 1 !== j.tier && ((en = !0), (l = T.intl.string(T.t.mTMkY2))))
+                        : ((en = !0), (l = T.intl.string(T.t.hwPEJS))));
                 let er = W === O + 1 && W > A,
                     ei = V || er || O > A;
                 return (
                     er
-                        ? (s = (0, r.jsx)(g.Z, {
+                        ? (a = (0, r.jsx)(p.Z, {
                               guild: t,
-                              size: o.zx.Sizes.SMALL,
-                              color: o.zx.Colors.GREEN,
-                              buttonText: S.intl.string(S.t.Vbkh2t),
+                              size: c.zx.Sizes.SMALL,
+                              color: c.zx.Colors.GREEN,
+                              buttonText: T.intl.string(T.t.Vbkh2t),
                               targetBoostedGuildTier: A + 1,
                               analyticsLocation: {
-                                  page: E.ZY5.GUILD_SETTINGS,
-                                  section: E.jXE.GUILD_SETTINGS_STICKERS,
-                                  object: E.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-                                  objectType: (0, v.ge)(x.tier),
+                                  page: I.ZY5.GUILD_SETTINGS,
+                                  section: I.jXE.GUILD_SETTINGS_STICKERS,
+                                  object: I.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
+                                  objectType: (0, v.ge)(j.tier),
                               },
                           }))
-                        : V && (s = (0, r.jsx)(Z, { guild: t })),
+                        : V && (a = (0, r.jsx)(Z, { guild: t })),
                     (0, r.jsxs)(
-                        N.Z,
+                        E.Z,
                         {
                             subscriptionCount: L,
-                            tier: x,
+                            tier: j,
                             onSetRef: b,
-                            isAnimatedTo: m,
-                            hasBottomMargin: O !== _.length - 1,
-                            withCardBody: !Y,
-                            headerButton: s,
+                            isAnimatedTo: g,
+                            hasBottomMargin: O !== C.length - 1,
+                            withCardBody: !K,
+                            headerButton: a,
                             showHeaderLockStatus: ei,
                             guildId: t.id,
                             children: [
-                                Y &&
+                                K &&
                                     (0, r.jsxs)("div", {
-                                        className: T.grid,
+                                        className: P.grid,
                                         children: [
                                             F.map((e) =>
                                                 (0, r.jsx)(
@@ -290,83 +294,50 @@ let w = (e) => {
                                     !V &&
                                     0 === F.length &&
                                     (0, r.jsx)("div", {
-                                        className: a()(T.emptyTierWrapper, T.unusedTierWrapper),
-                                        children: (0, r.jsx)(c.Text, {
+                                        className: s()(P.emptyTierWrapper, P.unusedTierWrapper),
+                                        children: (0, r.jsx)(d.Text, {
                                             variant: "text-md/normal",
                                             color: "header-secondary",
-                                            children: S.intl.string(S.t.lqwv0N),
+                                            children: T.intl.string(T.t.lqwv0N),
                                         }),
                                     }),
                                 z &&
                                     !H &&
                                     (0, r.jsxs)("div", {
-                                        className: T.emptyTierWrapper,
+                                        className: P.emptyTierWrapper,
                                         children: [
                                             (0, r.jsx)("img", {
-                                                alt: S.intl.string(S.t.BAhsws),
-                                                className: T.emptyTierImage,
-                                                src: X,
+                                                alt: T.intl.string(T.t.BAhsws),
+                                                className: P.emptyTierImage,
+                                                src: q,
                                             }),
-                                            (0, r.jsx)(c.Text, {
-                                                className: T.unlockTierCtaHeading,
+                                            (0, r.jsx)(d.Text, {
+                                                className: P.unlockTierCtaHeading,
                                                 variant: "text-md/normal",
                                                 color: "header-secondary",
                                                 children:
-                                                    x.tier === E.Eu4.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: K })
-                                                        : S.intl.formatToPlainString(S.t.bLykER, {
-                                                              numAdditional: K,
+                                                    j.tier === I.Eu4.TIER_1
+                                                        ? T.intl.formatToPlainString(T.t.psMYu7, { numAdditional: Y })
+                                                        : T.intl.formatToPlainString(T.t.bLykER, {
+                                                              numAdditional: Y,
                                                               numTotal: U,
                                                           }),
                                             }),
-                                            (0, r.jsx)(c.ua7, {
-                                                tooltipClassName: T.tooltip,
+                                            (0, r.jsx)(o.u, {
                                                 text: l,
                                                 shouldShow: en,
-                                                children: (e) => {
-                                                    var t, n;
-                                                    return (0, r.jsx)(
-                                                        c.zxk,
-                                                        ((t = P(
-                                                            {
-                                                                variant: "active",
-                                                                text: ee,
-                                                            },
-                                                            e,
-                                                        )),
-                                                        (n = n =
-                                                            {
-                                                                disabled: en,
-                                                                onClick: et,
-                                                            }),
-                                                        Object.getOwnPropertyDescriptors
-                                                            ? Object.defineProperties(
-                                                                  t,
-                                                                  Object.getOwnPropertyDescriptors(n),
-                                                              )
-                                                            : (function (e, t) {
-                                                                  var n = Object.keys(e);
-                                                                  if (Object.getOwnPropertySymbols) {
-                                                                      var r = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, r);
-                                                                  }
-                                                                  return n;
-                                                              })(Object(n)).forEach(function (e) {
-                                                                  Object.defineProperty(
-                                                                      t,
-                                                                      e,
-                                                                      Object.getOwnPropertyDescriptor(n, e),
-                                                                  );
-                                                              }),
-                                                        t),
-                                                    );
-                                                },
+                                                children: (0, r.jsx)(d.zxk, {
+                                                    variant: "active",
+                                                    text: ee,
+                                                    disabled: en,
+                                                    onClick: et,
+                                                }),
                                             }),
                                         ],
                                     }),
                             ],
                         },
-                        x.tier,
+                        j.tier,
                     )
                 );
             },

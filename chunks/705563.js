@@ -1,134 +1,86 @@
-n.d(t, { Z: () => _ });
-var r = n(951288);
+n.d(t, { Z: () => y });
+var i = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(481060),
-    a = n(665149),
-    o = n(892001),
-    s = n(650774),
-    c = n(430824),
-    u = n(496675),
-    d = n(709054),
-    p = n(826581),
-    h = n(246364),
-    f = n(360328),
-    m = n(981631),
-    g = n(388032),
-    b = n(482722);
-function _(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
-        y = d.default.cast(t),
+var r = n(442837),
+    l = n(28664),
+    a = n(481060),
+    o = n(665149),
+    s = n(892001),
+    c = n(650774),
+    u = n(430824),
+    d = n(496675),
+    p = n(709054),
+    h = n(826581),
+    f = n(246364),
+    m = n(360328),
+    g = n(981631),
+    b = n(388032),
+    C = n(482722);
+function y(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
+        _ = p.default.cast(t),
         {
-            joinRequest: C,
+            joinRequest: v,
             isModmin: x,
-            guildId: v,
-            maxMembers: O,
-        } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(y),
-                t = c.Z.getGuild(null == e ? void 0 : e.guildId);
+            guildId: O,
+            maxMembers: j,
+        } = (0, r.cj)([h.Z, u.Z, d.Z], () => {
+            let e = h.Z.getRequest(_),
+                t = u.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
-                isModmin: null != t && u.Z.can(m.Plq.KICK_MEMBERS, t),
+                isModmin: null != t && d.Z.can(g.Plq.KICK_MEMBERS, t),
                 guildId: null == t ? void 0 : t.id,
                 maxMembers: null == t ? void 0 : t.maxMembers,
             };
         }),
-        j = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
-        E = null != O && (null != j ? j : 0) >= O,
+        E = (0, r.e7)([c.Z], () => (null != O ? c.Z.getMemberCount(O) : 0)),
+        S = null != j && (null != E ? E : 0) >= j,
         {
-            approveRequest: S,
+            approveRequest: P,
             rejectRequest: I,
-            submitting: P,
-        } = (0, f.s)(
-            null == C ? void 0 : C.guildId,
-            null == C ? void 0 : C.userId,
-            null == C ? void 0 : C.joinRequestId,
+            submitting: Z,
+        } = (0, m.s)(
+            null == v ? void 0 : v.guildId,
+            null == v ? void 0 : v.userId,
+            null == v ? void 0 : v.joinRequestId,
         );
-    return null != C && C.applicationStatus === h.wB.SUBMITTED && x
-        ? (0, r.jsxs)("div", {
-              className: b.buttons,
+    return null != v && v.applicationStatus === f.wB.SUBMITTED && x
+        ? (0, i.jsxs)("div", {
+              className: C.buttons,
               children: [
-                  (0, r.jsx)(l.ua7, {
-                      text: g.intl.string(g.t.cdPGbG),
-                      shouldShow: E,
-                      children: (e) => {
-                          var t, n;
-                          return (0, r.jsx)(
-                              l.zxk,
-                              ((t = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })(
-                                  {
-                                      variant: "active",
-                                      size: "sm",
-                                      text: g.intl.string(g.t.BzjDQE),
-                                  },
-                                  e,
-                              )),
-                              (n = n =
-                                  {
-                                      loading: P,
-                                      onClick: S,
-                                      disabled: E,
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(n)).forEach(function (e) {
-                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                    }),
-                              t),
-                          );
-                      },
+                  (0, i.jsx)(l.u, {
+                      text: b.intl.string(b.t.cdPGbG),
+                      shouldShow: S,
+                      children: (0, i.jsx)(a.zxk, {
+                          variant: "active",
+                          size: "sm",
+                          text: b.intl.string(b.t.BzjDQE),
+                          loading: Z,
+                          onClick: P,
+                          disabled: S,
+                      }),
                   }),
-                  (0, r.jsx)(l.zxk, {
+                  (0, i.jsx)(a.zxk, {
                       variant: "critical-primary",
                       size: "sm",
-                      text: g.intl.string(g.t.hDtbs7),
+                      text: b.intl.string(b.t.hDtbs7),
                       onClick: I,
-                      disabled: P || C.applicationStatus !== h.wB.SUBMITTED,
+                      disabled: Z || v.applicationStatus !== f.wB.SUBMITTED,
                   }),
                   n &&
-                      (0, r.jsx)(l.zxk, {
+                      (0, i.jsx)(a.zxk, {
                           onClick: () => {
-                              (0, o.openUserProfileModal)({
-                                  userId: C.userId,
-                                  guildId: C.guildId,
+                              (0, s.openUserProfileModal)({
+                                  userId: v.userId,
+                                  guildId: v.guildId,
                               });
                           },
                           variant: "secondary",
                           size: "sm",
-                          text: g.intl.string(g.t.iXAna2),
+                          text: b.intl.string(b.t.iXAna2),
                       }),
-                  _ && (0, r.jsx)(a.ZP.Divider, {}),
+                  y && (0, i.jsx)(o.ZP.Divider, {}),
               ],
           })
         : null;

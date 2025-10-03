@@ -1,97 +1,97 @@
-n.d(t, { H: () => d }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    s = n(120356),
-    i = n.n(s),
-    a = n(481060),
-    o = n(572004),
+n.d(t, { H: () => f }), n(388685);
+var l = n(951288),
+    i = n(647438),
+    r = n(120356),
+    a = n.n(r),
+    o = n(28664),
+    s = n(481060),
+    u = n(572004),
     c = n(388032),
-    u = n(198473);
-function d(e) {
-    var { chunks: t, className: n, onCopy: s } = e,
-        d = (function (e, t) {
+    d = n(198473);
+function f(e) {
+    var t,
+        n,
+        { chunks: r, className: f, onCopy: g } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                l = (function (e, t) {
+                l,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        l = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        l,
+                        i = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++)
-                    (n = s[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["chunks", "className", "onCopy"]);
-    let h = l.useMemo(() => (null == t ? void 0 : t.join(" ")), [t]),
-        [f, g] = l.useState(!1),
-        p = l.useCallback(() => {
-            (0, o.JG)(h, () => {
-                g(!0), null == s || s();
+    let p = i.useMemo(() => (null == r ? void 0 : r.join(" ")), [r]),
+        [E, N] = i.useState(!1),
+        O = i.useCallback(() => {
+            (0, u.JG)(p, () => {
+                N(!0), null == g || g();
             });
-        }, [s, h]),
-        O = f ? a.owK : a.TIy;
-    return (0, r.jsx)(a.P3F, {
-        className: i()(u.container, n),
-        onClick: p,
-        children: (0, r.jsx)(a.ua7, {
-            text: f ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
-            children: (e) => {
-                var t, n;
-                return (0, r.jsx)(
-                    O,
-                    ((t = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, d, e)),
-                    (n = n =
-                        {
-                            size: "xxs",
-                            color: f ? a.TVs.colors.TEXT_FEEDBACK_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL,
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                          }),
-                    t),
-                );
-            },
+        }, [g, p]),
+        y = E ? s.owK : s.TIy;
+    return (0, l.jsx)(s.P3F, {
+        className: a()(d.container, f),
+        onClick: O,
+        children: (0, l.jsx)(o.u, {
+            text: E ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
+            children: (0, l.jsx)(
+                y,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            l = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (l = l.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            l.forEach(function (t) {
+                                var l;
+                                (l = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: l,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = l);
+                            });
+                    }
+                    return e;
+                })({}, h)),
+                (n = n =
+                    {
+                        size: "xxs",
+                        color: E ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL,
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var l = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, l);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t),
+            ),
         }),
     });
 }

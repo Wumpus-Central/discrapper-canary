@@ -1,25 +1,26 @@
 n.d(t, {
-    A7: () => T,
-    dE: () => A,
+    A7: () => S,
+    dE: () => C,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(410030),
-    c = n(541716),
-    u = n(752305),
-    d = n(893718),
-    f = n(318766),
-    _ = n(931651),
-    p = n(131704),
-    h = n(142550),
-    m = n(981631),
-    g = n(388032),
-    E = n(608476);
-function b(e, t, n) {
+    s = n(28664),
+    l = n(481060),
+    c = n(410030),
+    u = n(541716),
+    d = n(752305),
+    f = n(893718),
+    _ = n(318766),
+    p = n(931651),
+    h = n(131704),
+    m = n(142550),
+    g = n(981631),
+    E = n(388032),
+    b = n(608476);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,39 +61,39 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = (0, p.kt)({
+let T = (0, h.kt)({
     id: "1",
-    type: m.d4z.DM,
+    type: g.d4z.DM,
 });
-function T(e) {
+function S(e) {
     let {
             placeholder: t,
             onEnter: n,
             setEditorRef: a,
             showEmojiButton: s = !1,
             renderAttachButton: l,
-            autoFocus: f = !0,
+            autoFocus: c = !0,
             onFocus: _,
             channel: p,
-            className: m,
+            className: h,
         } = e,
-        [g, b] = i.useState(""),
-        [O, T] = i.useState((0, u.JM)("")),
+        [g, E] = i.useState(""),
+        [y, v] = i.useState((0, d.JM)("")),
         S = () => {
-            b(""), T((0, u.JM)(""));
+            E(""), v((0, d.JM)(""));
         },
-        A = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        A = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
         C = i.useRef(null),
         N = () => {
             if (null == C.current) return "top";
@@ -100,24 +101,24 @@ function T(e) {
                 t = window.innerHeight;
             return e.top < t / 2 ? "bottom" : "top";
         };
-    return (0, r.jsx)(d.ZP, {
+    return (0, r.jsx)(f.ZP, {
         ref: C,
         placeholder: t,
-        editorClassName: m,
-        className: o()(E.replyInput, m),
+        editorClassName: h,
+        className: o()(b.replyInput, h),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: h.z,
-        channel: null != p ? p : I,
+        maxCharacterCount: m.z,
+        channel: null != p ? p : T,
         onChange: (e, t, n) => {
-            b(t), T(n);
+            E(t), v(n);
         },
-        type: s ? v(y({}, A), { emojis: { button: !0 } }) : A,
+        type: s ? I(O({}, A), { emojis: { button: !0 } }) : A,
         textValue: g,
-        richValue: O,
+        richValue: y,
         onSubmit: (e) => {
             let { value: t } = e;
-            return t.length > h.z
+            return t.length > m.z
                 ? Promise.resolve({
                       shouldClear: !1,
                       shouldRefocus: !0,
@@ -130,7 +131,7 @@ function T(e) {
                   }));
         },
         setEditorRef: a,
-        focused: f,
+        focused: c,
         onFocus: _,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
@@ -139,7 +140,7 @@ function T(e) {
         renderAttachButton: l,
     });
 }
-let S = (e, t) => {
+let A = (e, t) => {
         i.useEffect(() => {
             let n = (t) => {
                     "Escape" === t.key && e();
@@ -159,32 +160,32 @@ let S = (e, t) => {
             );
         }, [e, t]);
     },
-    A = (e) => {
+    C = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            a = (0, l.ZP)(),
-            [o, c] = i.useState(!1),
-            u = i.useRef(null),
-            d = i.useRef(null);
+            a = (0, c.ZP)(),
+            [o, u] = i.useState(!1),
+            d = i.useRef(null),
+            f = i.useRef(null);
         return (
-            S(() => c(!1), u),
-            (0, r.jsx)(s.yRy, {
-                targetElementRef: d,
+            A(() => u(!1), d),
+            (0, r.jsx)(l.yRy, {
+                targetElementRef: f,
                 align: "right",
                 position: "top",
                 shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () =>
-                    (0, r.jsx)(s.f6W, {
+                    (0, r.jsx)(l.f6W, {
                         theme: a,
                         children: (e) =>
                             (0, r.jsx)("div", {
                                 className: e,
-                                ref: u,
-                                children: (0, r.jsx)(_.$, {
-                                    messageId: m.lds,
-                                    channel: I,
+                                ref: d,
+                                children: (0, r.jsx)(p.$, {
+                                    messageId: g.lds,
+                                    channel: T,
                                     closePopout: () => {
-                                        c(!1);
+                                        u(!1);
                                     },
                                     onSelectEmoji: (e) => {
                                         let { emoji: n, willClose: r, isBurst: i } = e;
@@ -194,28 +195,25 @@ let S = (e, t) => {
                                                 willClose: r,
                                                 isBurst: i,
                                             }),
-                                            c(!1));
+                                            u(!1));
                                     },
                                 }),
                             }),
                     }),
                 children: () =>
-                    (0, r.jsx)(s.ua7, {
-                        text: g.intl.string(g.t.lfIHs7),
-                        children: (e) =>
-                            (0, r.jsx)(
-                                "div",
-                                v(y({ ref: d }, e), {
-                                    className: E.reaction,
-                                    children: (0, r.jsx)(f.Z, {
-                                        active: !1,
-                                        tabIndex: 0,
-                                        onClick: () => {
-                                            null == n || n(), c(!0);
-                                        },
-                                    }),
-                                }),
-                            ),
+                    (0, r.jsx)(s.u, {
+                        text: E.intl.string(E.t.lfIHs7),
+                        children: (0, r.jsx)("div", {
+                            ref: f,
+                            className: b.reaction,
+                            children: (0, r.jsx)(_.Z, {
+                                active: !1,
+                                tabIndex: 0,
+                                onClick: () => {
+                                    null == n || n(), u(!0);
+                                },
+                            }),
+                        }),
                     }),
             })
         );

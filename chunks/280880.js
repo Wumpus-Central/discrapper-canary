@@ -1,15 +1,16 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(357156),
-    l = n(343747),
-    c = n(388032),
-    u = n(463063),
-    d = n(799641);
-function f(e, t, n) {
+    o = n(28664),
+    s = n(481060),
+    l = n(357156),
+    c = n(343747),
+    u = n(388032),
+    d = n(463063),
+    f = n(799641);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,22 +51,22 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +74,7 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,40 +83,37 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
+function b(e) {
     var { guild: t, focused: n, onSelectItem: i } = e,
-        f = m(e, ["guild", "focused", "onSelectItem"]);
-    let { canCreateExpressions: p } = (0, s.XJ)(t);
-    return (0, r.jsx)(o.ua7, {
-        text: c.intl.string(c.t["fHo+z8"]),
-        shouldShow: !p,
-        children: (e) =>
-            (0, r.jsx)(
-                "li",
-                h(_({ className: u.soundButtonWrapper }, e), {
-                    children: (0, r.jsxs)(
-                        o.kL8,
-                        h(_({}, f), {
-                            "aria-label": c.intl.formatToPlainString(c.t.c1qVYm, { guildName: t.name }),
-                            className: a()(d.soundAddButton, {
-                                [d.focused]: n,
-                                [d.disabled]: !p,
-                            }),
-                            onClick: () => (null != i ? i() : (0, l.Z)(t.id)),
-                            children: [
-                                (0, r.jsx)(o.qJs, {
-                                    size: "sm",
-                                    color: "currentColor",
-                                }),
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-xs/semibold",
-                                    color: p ? "currentColor" : "text-muted",
-                                    children: c.intl.string(c.t["8Fu/S0"]),
-                                }),
-                            ],
+        _ = g(e, ["guild", "focused", "onSelectItem"]);
+    let { canCreateExpressions: h } = (0, l.XJ)(t);
+    return (0, r.jsx)(o.u, {
+        text: u.intl.string(u.t["fHo+z8"]),
+        shouldShow: !h,
+        children: (0, r.jsx)("li", {
+            className: d.soundButtonWrapper,
+            children: (0, r.jsxs)(
+                s.kL8,
+                m(p({}, _), {
+                    "aria-label": u.intl.formatToPlainString(u.t.c1qVYm, { guildName: t.name }),
+                    className: a()(f.soundAddButton, {
+                        [f.focused]: n,
+                        [f.disabled]: !h,
+                    }),
+                    onClick: () => (null != i ? i() : (0, c.Z)(t.id)),
+                    children: [
+                        (0, r.jsx)(s.qJs, {
+                            size: "sm",
+                            color: "currentColor",
                         }),
-                    ),
+                        (0, r.jsx)(s.Text, {
+                            variant: "text-xs/semibold",
+                            color: h ? "currentColor" : "text-muted",
+                            children: u.intl.string(u.t["8Fu/S0"]),
+                        }),
+                    ],
                 }),
             ),
+        }),
     });
 }

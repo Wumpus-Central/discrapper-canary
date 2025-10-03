@@ -3,46 +3,22 @@ var i = n(951288),
     l = n(647438),
     r = n(120356),
     s = n.n(r),
-    a = n(780384),
-    o = n(481060),
-    c = n(239091),
-    d = n(741247),
-    u = n(75464),
-    h = n(884902),
-    g = n(332448);
+    a = n(28664),
+    o = n(780384),
+    c = n(481060),
+    d = n(239091),
+    u = n(741247),
+    h = n(75464),
+    g = n(884902),
+    p = n(332448);
 function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-function p(e) {
     let { role: t, guild: r } = e,
-        [a, u] = l.useState(!1);
-    return (0, d.e)(r, t)
-        ? (0, i.jsx)(o.P3F, {
+        [a, o] = l.useState(!1);
+    return (0, u.e)(r, t)
+        ? (0, i.jsx)(c.P3F, {
               onClick: (e) => {
-                  u(!0),
-                      (0, c.jW)(
+                  o(!0),
+                      (0, d.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
@@ -50,7 +26,31 @@ function p(e) {
                                   var l, s;
                                   return (0, i.jsx)(
                                       e,
-                                      ((l = m({}, n)),
+                                      ((l = (function (e) {
+                                          for (var t = 1; t < arguments.length; t++) {
+                                              var n = null != arguments[t] ? arguments[t] : {},
+                                                  i = Object.keys(n);
+                                              "function" == typeof Object.getOwnPropertySymbols &&
+                                                  (i = i.concat(
+                                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                      }),
+                                                  )),
+                                                  i.forEach(function (t) {
+                                                      var i;
+                                                      (i = n[t]),
+                                                          t in e
+                                                              ? Object.defineProperty(e, t, {
+                                                                    value: i,
+                                                                    enumerable: !0,
+                                                                    configurable: !0,
+                                                                    writable: !0,
+                                                                })
+                                                              : (e[t] = i);
+                                                  });
+                                          }
+                                          return e;
+                                      })({}, n)),
                                       (s = s =
                                           {
                                               role: t,
@@ -72,11 +72,11 @@ function p(e) {
                                   );
                               };
                           },
-                          { onClose: () => u(!1) },
+                          { onClose: () => o(!1) },
                       );
               },
-              className: s()(g.roleOverflow, { [g.open]: a }),
-              children: (0, i.jsx)(o.xhG, {
+              className: s()(p.roleOverflow, { [p.open]: a }),
+              children: (0, i.jsx)(c.xhG, {
                   size: "custom",
                   color: "currentColor",
                   width: 20,
@@ -91,71 +91,63 @@ function f(e) {
             id: l,
             role: r,
             guild: s,
-            children: c,
-            isDragging: d,
+            children: d,
+            isDragging: u,
             selectedItem: f,
-            onItemSelect: x,
-            itemType: j,
-            locked: b,
+            onItemSelect: b,
+            itemType: x,
+            locked: j,
             lockTooltip: v,
             showContextMenu: y,
             theme: C,
             roleStyle: N,
             onContextMenu: S,
-            "aria-label": O,
+            "aria-label": E,
         } = e,
-        E = (0, h._f)(s.id, r, null == r ? void 0 : r.colorStrings);
-    return d
-        ? (0, i.jsx)("div", { className: g.dragged })
-        : (0, i.jsx)(o.njP.Item, {
-              className: g.role,
+        O = (0, g._f)(s.id, r, null == r ? void 0 : r.colorStrings);
+    return u
+        ? (0, i.jsx)("div", { className: p.dragged })
+        : (0, i.jsx)(c.njP.Item, {
+              className: p.role,
               id: l,
               selectedItem: f,
-              onItemSelect: x,
-              itemType: j,
-              "aria-label": null != v ? "".concat(O, ", ").concat(v) : O,
+              onItemSelect: b,
+              itemType: x,
+              "aria-label": null != v ? "".concat(E, ", ").concat(v) : E,
               onContextMenu: S,
               children: (0, i.jsxs)("div", {
-                  className: g.roleContent,
+                  className: p.roleContent,
                   children: [
                       "dot" === N
-                          ? (0, i.jsx)(o.FhE, {
+                          ? (0, i.jsx)(c.FhE, {
                                 color: null != t ? t : void 0,
-                                colors: E,
-                                className: g.roleDot,
+                                colors: O,
+                                className: p.roleDot,
                                 background: !1,
                                 tooltip: !1,
                             })
-                          : (0, i.jsx)(o.xko, {
+                          : (0, i.jsx)(c.xko, {
                                 color: null != t ? t : null,
-                                colors: E,
-                                className: g.roleCircle,
+                                colors: O,
+                                className: p.roleCircle,
                             }),
                       (function () {
-                          if (!b) return null;
-                          let e = (0, a.wj)(C) ? n(27377) : n(514811);
-                          return (0, i.jsx)(o.ua7, {
+                          if (!j) return null;
+                          let e = (0, o.wj)(C) ? n(27377) : n(514811);
+                          return (0, i.jsx)(a.u, {
                               text: v,
-                              color: o.ua7.Colors.RED,
-                              children: (t) =>
-                                  (0, i.jsx)(
-                                      u.Z,
-                                      m(
-                                          {
-                                              className: g.lock,
-                                              src: e,
-                                          },
-                                          t,
-                                      ),
-                                  ),
+                              children: (0, i.jsx)(h.Z, {
+                                  className: p.lock,
+                                  src: e,
+                              }),
                           });
                       })(),
                       (0, i.jsx)("div", {
-                          className: g.roleInner,
-                          children: c,
+                          className: p.roleInner,
+                          children: d,
                       }),
                       y && null != r
-                          ? (0, i.jsx)(p, {
+                          ? (0, i.jsx)(m, {
                                 guild: s,
                                 role: r,
                             })

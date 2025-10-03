@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => U,
-    eJ: () => j,
-    nm: () => M,
+    eJ: () => M,
+    nm: () => j,
 }),
     n(539854),
     n(997841),
@@ -103,8 +103,8 @@ function D(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = 16,
-    L = (e) => {
+let L = 16,
+    x = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: a, userId: s } = e,
             c = (e) => {
                 e.stopPropagation(), null == a || a();
@@ -120,13 +120,13 @@ let x = 16,
                   className: A.icons,
                   children: (0, r.jsx)(g.Z, {
                       userId: s,
-                      size: x,
+                      size: L,
                       hangStatusActivity: t,
                       className: o()(A.icon, n),
                   }),
               });
     },
-    j = (e) => {
+    M = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, r.jsx)("div", {
             className: o()(i, A.list, n ? A.listCollapse : A.listDefault),
@@ -134,7 +134,7 @@ let x = 16,
             children: t,
         });
     };
-function M(e) {
+function j(e) {
     let {
             className: t,
             mute: n,
@@ -153,9 +153,9 @@ function M(e) {
             otherClientSessionType: P,
             voicePlatform: w,
             application: D,
-            guildId: x,
-            channelId: j,
-            user: M,
+            guildId: L,
+            channelId: M,
+            user: j,
             disconnected: k,
             hangStatusActivity: U,
             showHangStatus: Z,
@@ -279,14 +279,14 @@ function M(e) {
                                       {
                                           application: D,
                                           iconClassName: N,
-                                          guildId: x,
-                                          channelId: j,
-                                          userId: M.id,
+                                          guildId: L,
+                                          channelId: M,
+                                          userId: j.id,
                                       },
-                                      "".concat(M.id, "-game"),
+                                      "".concat(j.id, "-game"),
                                   )
-                                : (0, r.jsx)(L, {
-                                      userId: M.id,
+                                : (0, r.jsx)(x, {
+                                      userId: j.id,
                                       hangStatusActivity: U,
                                       iconClassName: N,
                                       isSelf: F,
@@ -303,85 +303,76 @@ function k(e, t) {
         {
             avatarContainerClass: i = A.avatarContainer,
             userNameClassName: a = A.usernameFont,
-            size: s = v.ipw.SMALL,
-            selected: c = !1,
-            disabled: u = !1,
-            isOverlay: d = !1,
+            size: c = v.ipw.SMALL,
+            selected: u = !1,
+            disabled: d = !1,
+            isOverlay: f = !1,
         } = e,
-        f = w(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay"]);
+        _ = w(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay"]);
     let {
-            onClick: _,
-            onKeyDown: h,
-            onDoubleClick: g,
-            onContextMenu: E,
-            onMouseLeave: b,
-            onMouseDown: y,
-            priority: I,
-            speaking: T,
-            collapsed: C,
-            mute: R,
-            serverMute: D,
+            onClick: h,
+            onKeyDown: g,
+            onDoubleClick: E,
+            onContextMenu: b,
+            onMouseLeave: y,
+            onMouseDown: I,
+            priority: T,
+            speaking: C,
+            collapsed: R,
+            mute: D,
+            serverMute: L,
             guildId: x,
-            nick: L,
-            isGuest: j,
-            flipped: k,
-            className: U,
-            overlap: G,
-            "aria-label": B,
-            ringing: Z,
-            user: F,
-        } = f,
-        V = (0, p.j)({ displayNameStyles: F.displayNameStyles }),
-        H = (e) => {
-            null == _ || _(e, F);
-        },
+            nick: M,
+            isGuest: k,
+            flipped: U,
+            className: G,
+            overlap: B,
+            "aria-label": Z,
+            ringing: F,
+            user: V,
+        } = _,
+        H = (0, p.j)({ displayNameStyles: V.displayNameStyles }),
         Y = (e) => {
-            null == g || g(e, F);
+            null == h || h(e, V);
         },
         W = (e) => {
-            null == E || E(e, F);
+            null == E || E(e, V);
         },
         K = (e) => {
-            null == b || b(e, F);
+            null == b || b(e, V);
         },
         z = (e) => {
-            null == y || y(e, F);
+            null == y || y(e, V);
+        },
+        q = (e) => {
+            null == I || I(e, V);
         };
-    function q() {
-        return I && !C
-            ? (0, r.jsx)(l.ua7, {
+    function X() {
+        return T && !R
+            ? (0, r.jsx)(s.u, {
                   text: S.intl.string(S.t.BVK71t),
-                  children: (e) =>
-                      (0, r.jsx)(
-                          "div",
-                          N(
-                              {
-                                  className: o()(A.iconPriortySpeaker, {
-                                      [A.iconPriortySpeakerSpeaking]: !R && !D && T,
-                                  }),
-                              },
-                              e,
-                          ),
-                      ),
+                  children: (0, r.jsx)("div", {
+                      className: o()(A.iconPriortySpeaker, { [A.iconPriortySpeakerSpeaking]: !D && !L && C }),
+                  }),
               })
             : null;
     }
-    function X() {
+    function Q() {
         return (0, r.jsx)("div", {
             className: o()(i, A.avatar, {
-                [A.avatarLarge]: s === v.ipw.LARGE,
-                [A.avatarSmall]: s === v.ipw.SMALL,
-                [A.avatarSpeaking]: T,
+                [A.avatarLarge]: c === v.ipw.LARGE,
+                [A.avatarSmall]: c === v.ipw.SMALL,
+                [A.avatarSpeaking]: C,
             }),
-            style: { backgroundImage: "url(".concat(F.getAvatarURL(x, s === v.ipw.LARGE ? 38 : 24), ")") },
+            style: { backgroundImage: "url(".concat(V.getAvatarURL(x, c === v.ipw.LARGE ? 38 : 24), ")") },
         });
     }
-    function Q() {
+    function J() {
         let e = (0, r.jsxs)("div", {
-                className: o()(a, A.username, V, { [A.usernameSpeaking]: !R && !D && T }),
+                className: o()(a, A.username, H, { [A.usernameSpeaking]: !D && !L && C }),
                 children: [
-                    null != L ? L : O.ZP.getName(F),
-                    j
+                    null != M ? M : O.ZP.getName(V),
+                    k
                         ? (0, r.jsxs)("span", {
                               className: A.guestSuffix,
                               children: ["\xA0", S.intl.string(S.t["pFO/Pj"])],
@@ -390,42 +381,42 @@ function k(e, t) {
                 ],
             }),
             t = {
-                primaryGuild: F.primaryGuild,
-                userId: F.id,
+                primaryGuild: V.primaryGuild,
+                userId: V.id,
                 contextGuildId: x,
-                isOverlay: d,
+                isOverlay: f,
                 disableTooltip: !0,
-                className: o()(A.clanTag, d && A.isOverlay),
-                profileViewedAnalytics: { source: d ? v.jXE.OVERLAY : v.Sbl.VOICE_PANEL },
+                className: o()(A.clanTag, f && A.isOverlay),
+                profileViewedAnalytics: { source: f ? v.jXE.OVERLAY : v.Sbl.VOICE_PANEL },
             };
-        return !C || d ? (0, r.jsx)(m.Z, P(N({}, t), { children: e })) : null;
+        return !R || f ? (0, r.jsx)(m.Z, P(N({}, t), { children: e })) : null;
     }
-    function J() {
-        return (0, r.jsx)(M, N({ disabled: u }, f));
+    function $() {
+        return (0, r.jsx)(j, N({ disabled: d }, _));
     }
     return (0, r.jsx)(l.kL8, {
         ref: t,
-        className: o()(U, {
+        className: o()(G, {
             [A.voiceUser]: !0,
-            [A.overlap]: G,
-            [A.selected]: c,
-            [A.clickable]: null != _,
-            [A.userSmall]: s === v.ipw.SMALL,
-            [A.userLarge]: s === v.ipw.LARGE,
-            [A.disabled]: !c && u,
-            [A.ringing]: Z,
+            [A.overlap]: B,
+            [A.selected]: u,
+            [A.clickable]: null != h,
+            [A.userSmall]: c === v.ipw.SMALL,
+            [A.userLarge]: c === v.ipw.LARGE,
+            [A.disabled]: !u && d,
+            [A.ringing]: F,
         }),
-        onClick: H,
-        onDoubleClick: Y,
-        onContextMenu: W,
-        onMouseLeave: K,
-        onMouseDown: z,
-        onKeyDown: h,
-        "aria-label": null != (n = null != B ? B : L) ? n : F.username,
+        onClick: Y,
+        onDoubleClick: W,
+        onContextMenu: K,
+        onMouseLeave: z,
+        onMouseDown: q,
+        onKeyDown: g,
+        "aria-label": null != (n = null != Z ? Z : M) ? n : V.username,
         focusProps: { offset: { right: 4 } },
         children: (0, r.jsxs)("div", {
-            className: o()(A.content, { [A.flipped]: k }),
-            children: [q(), X(), Q(), J()],
+            className: o()(A.content, { [A.flipped]: U }),
+            children: [X(), Q(), J(), $()],
         }),
     });
 }

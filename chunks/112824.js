@@ -1,22 +1,23 @@
 n.d(t, {
-    R: () => x,
+    R: () => b,
     Z: () => j,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(149765),
-    s = n(442837),
-    o = n(481060),
-    c = n(485386),
-    d = n(496675),
-    u = n(700785),
-    m = n(647086),
-    g = n(135899),
-    p = n(388032),
+    s = n(149765),
+    a = n(442837),
+    o = n(28664),
+    c = n(481060),
+    d = n(485386),
+    u = n(496675),
+    m = n(700785),
+    g = n(647086),
+    p = n(135899),
+    f = n(388032),
     h = n(824804);
-function f(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,88 +42,92 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function x(e) {
-    return g.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && u.oz(t, e));
+function b(e) {
+    return p.$X.filter((t) => (null == e ? void 0 : e.id) !== g._ && m.oz(t, e));
 }
 function j(e) {
     let { guild: t } = e,
-        i = (0, s.e7)([c.Z], () => c.Z.getEveryoneRole(t)),
-        u = x(t),
-        m = u.length > 0,
-        j = g.$X.some((e) => !d.Z.can(e, t, null, { [i.id]: b(f({}, i), { permissions: a.Od(i.permissions, e) }) })),
-        v = (0, r.jsxs)(r.Fragment, {
+        i = (0, a.e7)([d.Z], () => d.Z.getEveryoneRole(t)),
+        m = b(t),
+        g = m.length > 0,
+        j = p.$X.some((e) => {
+            var n, r;
+            return !u.Z.can(e, t, null, {
+                [i.id]:
+                    ((n = x({}, i)),
+                    (r = r = { permissions: s.Od(i.permissions, e) }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    n),
+            });
+        }),
+        _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: h.itemContent,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(c.X6q, {
                             variant: "text-md/semibold",
                             color: "header-primary",
-                            children: p.intl.string(p.t["+vaUlJ"]),
+                            children: f.intl.string(f.t["+vaUlJ"]),
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
-                            children: p.intl.format(p.t.RXAtdH, { numPerms: u.length }),
+                            children: f.intl.format(f.t.RXAtdH, { numPerms: m.length }),
                         }),
                     ],
                 }),
-                m
-                    ? (0, r.jsx)(o.Mgn, {
+                g
+                    ? (0, r.jsx)(c.Mgn, {
                           size: "custom",
                           color: "currentColor",
                           height: 24,
                           width: 24,
                           className: h.warning,
-                          "aria-label": p.intl.string(p.t.bG7Gu7),
+                          "aria-label": f.intl.string(f.t.bG7Gu7),
                       })
-                    : (0, r.jsx)(o.owK, {
+                    : (0, r.jsx)(c.owK, {
                           size: "custom",
                           color: "currentColor",
                           height: 24,
                           width: 24,
                           className: h.check,
-                          "aria-label": p.intl.string(p.t["YQix8/"]),
+                          "aria-label": f.intl.string(f.t["YQix8/"]),
                       }),
             ],
         });
-    return m
+    return g
         ? j
-            ? (0, r.jsx)(o.ua7, {
-                  text: p.intl.string(p.t["E5v/a2"]),
-                  children: (e) =>
-                      (0, r.jsx)("div", b(f({ className: l()(h.simpleItemWrapper, h.disabled) }, e), { children: v })),
+            ? (0, r.jsx)(o.u, {
+                  text: f.intl.string(f.t["E5v/a2"]),
+                  children: (0, r.jsx)("div", {
+                      className: l()(h.simpleItemWrapper, h.disabled),
+                      children: _,
+                  }),
               })
-            : (0, r.jsx)(o.P3F, {
+            : (0, r.jsx)(c.P3F, {
                   onClick: () => {
-                      (0, o.ZDy)(async () => {
+                      (0, c.ZDy)(async () => {
                           let { default: e } = await n.e("39627").then(n.bind(n, 193845));
-                          return (n) => (0, r.jsx)(e, f({ guild: t }, n));
+                          return (n) => (0, r.jsx)(e, x({ guild: t }, n));
                       });
                   },
                   className: l()(h.simpleItemWrapper, h.clickable),
-                  children: v,
+                  children: _,
               })
         : (0, r.jsx)("div", {
               className: h.simpleItemWrapper,
-              children: v,
+              children: _,
           });
 }

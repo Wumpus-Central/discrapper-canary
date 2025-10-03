@@ -1,76 +1,32 @@
-n.d(t, { Z: () => c });
-var l = n(951288);
+n.d(t, { Z: () => o });
+var r = n(951288);
 n(647438);
-var r = n(755721),
-    i = n(481060),
-    a = n(388032),
-    o = n(788931);
-function c(e) {
+var l = n(28664),
+    i = n(755721),
+    a = n(481060),
+    s = n(388032),
+    c = n(788931);
+function o(e) {
     let { sendStartNotification: t, setSendStartNotification: n } = e,
-        c = t ? a.intl.string(a.t.xAT8lJ) : a.intl.string(a.t["Y+18hY"]);
-    return (0, l.jsx)("div", {
-        className: o.notificationToggle,
-        children: (0, l.jsx)(r.$q, {
-            type: r.M0.INVERTED,
+        o = t ? s.intl.string(s.t.xAT8lJ) : s.intl.string(s.t["Y+18hY"]);
+    return (0, r.jsx)("div", {
+        className: c.notificationToggle,
+        children: (0, r.jsx)(i.$q, {
+            type: i.M0.INVERTED,
             size: 14,
-            className: o.__invalid_checkbox,
+            className: c.__invalid_checkbox,
             value: t,
             onChange: function () {
                 n(!t);
             },
-            children: (0, l.jsx)(i.Text, {
+            children: (0, r.jsx)(a.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: (0, l.jsx)(i.ua7, {
+                children: (0, r.jsx)(l.u, {
                     position: "bottom",
-                    tooltipClassName: o.tooltip,
-                    text: a.intl.string(a.t["4A/xnZ"]),
-                    "aria-label": a.intl.string(a.t["4A/xnZ"]),
-                    children: (e) => {
-                        var t, n;
-                        return (0, l.jsx)(
-                            "span",
-                            ((t = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        l = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (l = l.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        l.forEach(function (t) {
-                                            var l;
-                                            (l = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: l,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = l);
-                                        });
-                                }
-                                return e;
-                            })({}, e)),
-                            (n = n = { children: c }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var l = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, l);
-                                      }
-                                      return n;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                  }),
-                            t),
-                        );
-                    },
+                    text: s.intl.string(s.t["4A/xnZ"]),
+                    "aria-label": s.intl.string(s.t["4A/xnZ"]),
+                    children: (0, r.jsx)("span", { children: o }),
                 }),
             }),
         }),

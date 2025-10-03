@@ -12,7 +12,6 @@ e.exports = {
     itemBodyContainer: "itemBodyContainer__5dac8",
     itemBodyInner: "itemBodyInner__5dac8",
     bringToFront: "bringToFront__5dac8",
-    tooltip: "tooltip__5dac8",
     warning: "warning__5dac8",
     check: "check__5dac8",
     caret: "caret__5dac8",

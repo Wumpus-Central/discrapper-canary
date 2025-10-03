@@ -1,154 +1,90 @@
-r.d(t, { F: () => p });
-var n = r(951288);
-r(647438);
-var l = r(120356),
-    i = r.n(l),
-    a = r(481060),
-    o = r(937615),
-    s = r(884697),
-    c = r(388032),
-    u = r(601160);
-function d() {
-    return (d =
-        Object.assign ||
-        function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = arguments[t];
-                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
-            }
-            return e;
-        }).apply(this, arguments);
-}
+n.d(t, { F: () => p });
+var r = n(951288);
+n(647438);
+var l = n(120356),
+    i = n.n(l),
+    a = n(28664),
+    o = n(481060),
+    s = n(937615),
+    c = n(884697),
+    u = n(388032),
+    d = n(239051);
 let p = (e) => {
     let {
-            price: { amount: t, currency: r },
+            price: { amount: t, currency: n },
             nitroIconType: l,
             nitroIconSize: p = "md",
             className: f,
             discountOfferAmount: b,
-            discount: h = s.f_,
-            variant: g = "heading-md/semibold",
+            discount: y = c.f_,
+            variant: m = "heading-md/semibold",
         } = e,
         O = null != b,
-        v = (0, o.qr)(t, r),
-        y =
-            h !== s.f_ && h.discountPercentage >= 5 && !O
-                ? (0, n.jsxs)(n.Fragment, {
+        g = (0, s.qr)(t, n),
+        j =
+            y !== c.f_ && y.discountPercentage >= 5 && !O
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, n.jsx)(a.nn4, {
-                              children: c.intl.format(c.t.niC6DA, {
-                                  price: v,
-                                  discountPercentage: h.discountPercentage,
+                          (0, r.jsx)(o.nn4, {
+                              children: u.intl.format(u.t.niC6DA, {
+                                  price: g,
+                                  discountPercentage: y.discountPercentage,
                               }),
                           }),
-                          (0, n.jsx)("span", {
+                          (0, r.jsx)("span", {
                               "aria-hidden": !0,
-                              children: v,
+                              children: g,
                           }),
-                          (0, n.jsxs)(a.Text, {
-                              variant: g,
+                          (0, r.jsxs)(o.Text, {
+                              variant: m,
                               color: "text-feedback-positive",
-                              className: u.discount,
+                              className: d.discount,
                               "aria-hidden": !0,
-                              children: ["(-", h.discountPercentage, "%)"],
+                              children: ["(-", y.discountPercentage, "%)"],
                           }),
                       ],
                   })
-                : (0, n.jsxs)(n.Fragment, {
+                : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t["6C36MD"], { price: v }) }),
-                          (0, n.jsx)("span", {
+                          (0, r.jsx)(o.nn4, { children: u.intl.format(u.t["6C36MD"], { price: g }) }),
+                          (0, r.jsx)("span", {
                               "aria-hidden": !0,
-                              className: i()({ [u.priceStrikethrough]: O }, f),
-                              children: v,
+                              className: i()({ [d.priceStrikethrough]: O }, f),
+                              children: g,
                           }),
                       ],
                   });
-    return (0, n.jsxs)(a.Text, {
-        variant: g,
-        className: i()({ [u.discountBackgroundColor]: O }, u.container, f),
+    return (0, r.jsxs)(o.Text, {
+        variant: m,
+        className: i()({ [d.discountBackgroundColor]: O }, d.container, f),
         children: [
             "tooltip" === l
-                ? (0, n.jsx)(a.ua7, {
-                      text: c.intl.string(c.t.MPFyJy),
-                      "aria-label": c.intl.string(c.t.X3Ekj4),
-                      children: (e) => {
-                          var t,
-                              r,
-                              l = d(
-                                  {},
-                                  (function (e) {
-                                      if (null == e) throw TypeError("Cannot destructure " + e);
-                                      return e;
-                                  })(e),
-                              );
-                          return (0, n.jsx)(
-                              a.SrA,
-                              ((t = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var r = null != arguments[t] ? arguments[t] : {},
-                                          n = Object.keys(r);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (n = n.concat(
-                                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                              }),
-                                          )),
-                                          n.forEach(function (t) {
-                                              var n;
-                                              (n = r[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: n,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = n);
-                                          });
-                                  }
-                                  return e;
-                              })(
-                                  {
-                                      size: p,
-                                      color: "currentColor",
-                                  },
-                                  l,
-                              )),
-                              (r = r = { className: u.nitroIcon }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                                  : (function (e, t) {
-                                        var r = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var n = Object.getOwnPropertySymbols(e);
-                                            r.push.apply(r, n);
-                                        }
-                                        return r;
-                                    })(Object(r)).forEach(function (e) {
-                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                                    }),
-                              t),
-                          );
-                      },
+                ? (0, r.jsx)(a.u, {
+                      text: u.intl.string(u.t.MPFyJy),
+                      "aria-label": u.intl.string(u.t.X3Ekj4),
+                      children: (0, r.jsx)(o.SrA, {
+                          size: p,
+                          color: "currentColor",
+                          className: d.nitroIcon,
+                      }),
                   })
                 : "default" === l
-                  ? (0, n.jsx)(a.SrA, {
+                  ? (0, r.jsx)(o.SrA, {
                         size: p,
                         color: "currentColor",
-                        className: u.nitroIcon,
+                        className: d.nitroIcon,
                     })
                   : null,
-            y,
+            j,
             O &&
-                (0, n.jsxs)(a.X6q, {
+                (0, r.jsxs)(o.X6q, {
                     variant: "heading-md/semibold",
-                    className: u.discountPill,
+                    className: d.discountPill,
                     children: [
-                        (0, n.jsx)(a.nn4, { children: c.intl.format(c.t.rItDb2, { discountOfferAmount: b }) }),
-                        (0, n.jsx)("span", {
+                        (0, r.jsx)(o.nn4, { children: u.intl.format(u.t.rItDb2, { discountOfferAmount: b }) }),
+                        (0, r.jsx)("span", {
                             "aria-hidden": !0,
-                            children: c.intl.formatToPlainString(c.t.AYcXGR, { discountOfferAmount: b }),
+                            children: u.intl.formatToPlainString(u.t.AYcXGR, { discountOfferAmount: b }),
                         }),
                     ],
                 }),

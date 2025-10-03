@@ -1,69 +1,18 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(392711),
-    a = n(481060),
-    o = n(111028),
-    s = n(5192),
-    l = n(652853),
-    c = n(671955),
-    u = n(16535);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = 4,
-    m = 1,
-    g = 3,
-    E = [
+    a = n(28664),
+    o = n(481060),
+    s = n(111028),
+    l = n(5192),
+    c = n(652853),
+    u = n(671955),
+    d = n(16535);
+let f = 4,
+    _ = 1,
+    p = 3,
+    h = [
         [
             {
                 top: 15,
@@ -133,7 +82,7 @@ let h = 4,
             },
         ],
     ],
-    b = [
+    m = [
         [
             {
                 top: 23,
@@ -203,48 +152,44 @@ let h = 4,
             },
         ],
     ];
-function y(e) {
+function g(e) {
     let { users: t, channel: n } = e,
-        { themeType: d } = (0, l.z)(),
-        _ = d === c.l.MODAL_V2 ? b : E,
-        y = t.length > h,
-        O = t.length - h + 1,
-        v = O >= 10 ? g : m;
+        { themeType: g } = (0, c.z)(),
+        E = g === u.l.MODAL_V2 ? m : h,
+        b = t.length > f,
+        y = t.length - f + 1,
+        O = y >= 10 ? p : _;
     return (0, r.jsx)("div", {
-        className: u.container,
-        children: _[(0, i.clamp)(t.length - 1, 0, _.length - 1)].map((e, i) => {
-            let l = t[i];
-            return null == l
+        className: d.container,
+        children: E[(0, i.clamp)(t.length - 1, 0, E.length - 1)].map((e, i) => {
+            let c = t[i];
+            return null == c
                 ? null
                 : (0, r.jsx)(
                       "div",
                       {
-                          className: u.circle,
+                          className: d.circle,
                           style: e,
                           children:
-                              y && i === v
+                              b && i === O
                                   ? (0, r.jsx)("div", {
-                                        className: u.overflowCount,
-                                        children: (0, r.jsx)(a.Text, {
+                                        className: d.overflowCount,
+                                        children: (0, r.jsx)(o.Text, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(o.Z, { children: O > 99 ? ">99" : "+".concat(O) }),
+                                            children: (0, r.jsx)(s.Z, { children: y > 99 ? ">99" : "+".concat(y) }),
                                         }),
                                     })
-                                  : (0, r.jsx)(a.ua7, {
-                                        text: s.ZP.getName(n.guild_id, n.id, l),
-                                        children: (e) =>
-                                            (0, r.jsx)(
-                                                "img",
-                                                p(f({}, e), {
-                                                    className: u.avatar,
-                                                    src: l.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
-                                                    alt: "",
-                                                }),
-                                            ),
+                                  : (0, r.jsx)(a.u, {
+                                        text: l.ZP.getName(n.guild_id, n.id, c),
+                                        children: (0, r.jsx)("img", {
+                                            className: d.avatar,
+                                            src: c.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
+                                            alt: "",
+                                        }),
                                     }),
                       },
-                      l.id,
+                      c.id,
                   );
         }),
     });

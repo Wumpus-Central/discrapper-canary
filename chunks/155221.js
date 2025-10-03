@@ -85,12 +85,12 @@ function x(e, t) {
     );
 }
 n(928518), n(972830), n(704806);
-let j = (0, h.Un)({
+let M = (0, h.Un)({
         createPromise: () => n.e("47620").then(n.bind(n, 576184)),
         webpackId: 576184,
         name: "UnsupportedBrowser",
     }),
-    M = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583)),
         webpackId: 431583,
         name: "DownloadApps",
@@ -173,7 +173,7 @@ let j = (0, h.Un)({
                 n.e("22173"),
                 n.e("30634"),
                 n.e("95546"),
-                n.e("9665"),
+                n.e("50118"),
                 n.e("3688"),
                 n.e("60831"),
                 n.e("75962"),
@@ -260,7 +260,7 @@ let j = (0, h.Un)({
                 n.e("89442"),
                 n.e("22173"),
                 n.e("95546"),
-                n.e("9665"),
+                n.e("50118"),
                 n.e("60831"),
                 n.e("24920"),
                 n.e("51333"),
@@ -331,7 +331,7 @@ class ea extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : !P.KO || d
-                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: j }) })
+                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: M }) })
                       : A.isPlatformEmbedded
                         ? (0, r.jsxs)(o.rs, {
                               children: [
@@ -349,7 +349,7 @@ class ea extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: N.Z5c.APPS,
-                                      component: M,
+                                      component: j,
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: ei(

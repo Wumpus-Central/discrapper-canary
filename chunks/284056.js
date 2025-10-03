@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => N,
-    _: () => m._,
+    Z: () => R,
+    _: () => g._,
 }),
     n(953529),
     n(388685);
@@ -13,18 +13,19 @@ var r = n(951288),
     c = n(442837),
     u = n(46973),
     d = n(846519),
-    f = n(755721),
-    _ = n(481060),
-    p = n(846027),
-    h = n(393238),
-    m = n(794347),
-    g = n(131951),
-    E = n(19780),
-    b = n(626135),
-    y = n(981631),
-    O = n(388032),
-    v = n(81272);
-function I(e, t, n) {
+    f = n(28664),
+    _ = n(755721),
+    p = n(481060),
+    h = n(846027),
+    m = n(393238),
+    g = n(794347),
+    E = n(131951),
+    b = n(19780),
+    y = n(626135),
+    O = n(981631),
+    v = n(388032),
+    I = n(81272);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +38,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,14 +49,14 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-let S = 2000,
-    A = -100;
-class C extends i.PureComponent {
+let A = 2000,
+    C = -100;
+class N extends i.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -63,7 +64,7 @@ class C extends i.PureComponent {
         this._initTimeout.stop(),
             this._silenceTimeout.stop(),
             this._micTestStop(),
-            g.Z.getMediaEngine().removeListener(u.aB.VoiceActivity, this.handleVoiceActivity);
+            E.Z.getMediaEngine().removeListener(u.aB.VoiceActivity, this.handleVoiceActivity);
     }
     _micTestStart() {
         let {
@@ -79,15 +80,15 @@ class C extends i.PureComponent {
                 isDeafened: c,
             } = this.props,
             u = !1;
-        e && !c && (p.Z.toggleSelfDeaf(), (u = !0)),
-            p.Z.setLoopback("mic_test", !0),
+        e && !c && (h.Z.toggleSelfDeaf(), (u = !0)),
+            h.Z.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
             this.setState({
                 isMicTesting: !0,
                 isDetectingInput: !0,
                 didDeafenUser: u,
             }),
-            b.default.track(y.rMx.MIC_TESTING_STARTED, {
+            y.default.track(O.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: r,
@@ -102,23 +103,23 @@ class C extends i.PureComponent {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
             { isVoiceConnected: n, isDeafened: r } = this.props;
         t &&
-            (n && r && e && p.Z.toggleSelfDeaf(),
-            p.Z.setLoopback("mic_test", !1),
+            (n && r && e && h.Z.toggleSelfDeaf(),
+            h.Z.setLoopback("mic_test", !1),
             this.setState({
                 isMicTesting: !1,
                 didDeafenUser: !1,
             }),
             null != this._micTestStartTime &&
-                b.default.track(y.rMx.MIC_TESTING_STOPPED, {
+                y.default.track(O.rMx.MIC_TESTING_STOPPED, {
                     testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000),
                 }));
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: i } = this.state;
-        return (0, r.jsx)(_.R94, {
-            className: v.micTestCaption,
-            type: _.R94.Types.DESCRIPTION,
+        return (0, r.jsx)(p.R94, {
+            className: I.micTestCaption,
+            type: p.R94.Types.DESCRIPTION,
             children: n ? (i ? e : t) : null,
         });
     }
@@ -131,77 +132,72 @@ class C extends i.PureComponent {
                 buttonTest: a = "",
                 buttonStop: s = "",
                 buttonClassName: l,
-                buttonColor: c = f.zx.Colors.BRAND,
+                buttonColor: c = _.zx.Colors.BRAND,
                 isDeafened: u,
                 buttonMinWidth: d,
-                measureButtonRef: p,
-                meterOnly: h = !1,
-                containerClassName: g,
+                measureButtonRef: h,
+                meterOnly: m = !1,
+                containerClassName: E,
             } = this.props,
-            { isMicTesting: E, volume: b } = this.state,
-            y = e && !E ? O.intl.string(O.t["9viE2N"]) : null;
-        E && e && !u && this._micTestStop();
-        let I = s.length >= a.length ? s : a;
+            { isMicTesting: b, volume: y } = this.state,
+            O = e && !b ? v.intl.string(v.t["9viE2N"]) : null;
+        b && e && !u && this._micTestStop();
+        let T = s.length >= a.length ? s : a;
         return (0, r.jsxs)("div", {
-            className: o()(v.container, g),
+            className: o()(I.container, E),
             children: [
-                !h &&
+                !m &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(_.vwX, {
-                                className: v.title,
+                            (0, r.jsx)(p.vwX, {
+                                className: I.title,
                                 children: t,
                             }),
                             null != n &&
-                                (0, r.jsx)(_.R94, {
-                                    type: _.R94.Types.DESCRIPTION,
-                                    className: v.description,
+                                (0, r.jsx)(p.R94, {
+                                    type: p.R94.Types.DESCRIPTION,
+                                    className: I.description,
                                     children: n,
                                 }),
                         ],
                     }),
                 (0, r.jsxs)("div", {
-                    className: v.micTest,
+                    className: I.micTest,
                     children: [
-                        !h &&
+                        !m &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: v.buttonSizer,
+                                        className: I.buttonSizer,
                                         "aria-hidden": !0,
                                         children: [
-                                            (0, r.jsx)(f.zx, {
-                                                buttonRef: p,
+                                            (0, r.jsx)(_.zx, {
+                                                buttonRef: h,
                                                 grow: !0,
-                                                size: f.zx.Sizes.SMALL,
+                                                size: _.zx.Sizes.SMALL,
                                                 className: l,
                                                 color: c,
-                                                children: I,
+                                                children: T,
                                             }),
-                                            (0, r.jsx)("div", { className: v.buttonSizerSpacer }),
+                                            (0, r.jsx)("div", { className: I.buttonSizerSpacer }),
                                         ],
                                     }),
-                                    (0, r.jsx)(_.ua7, {
-                                        text: y,
-                                        children: (e) => {
-                                            let { onMouseEnter: t, onMouseLeave: n } = e;
-                                            return (0, r.jsx)(f.zx, {
-                                                grow: !0,
-                                                onClick: this.handleToggleMicTest,
-                                                onMouseEnter: t,
-                                                onMouseLeave: n,
-                                                size: f.zx.Sizes.SMALL,
-                                                className: l,
-                                                color: c,
-                                                style: null != d ? { minWidth: d } : { visibility: "hidden" },
-                                                children: E ? s : a,
-                                            });
-                                        },
+                                    (0, r.jsx)(f.u, {
+                                        text: O,
+                                        children: (0, r.jsx)(_.zx, {
+                                            grow: !0,
+                                            onClick: this.handleToggleMicTest,
+                                            size: _.zx.Sizes.SMALL,
+                                            className: l,
+                                            color: c,
+                                            style: null != d ? { minWidth: d } : { visibility: "hidden" },
+                                            children: b ? s : a,
+                                        }),
                                     }),
                                 ],
                             }),
-                        (0, r.jsx)(m.Z, {
-                            progress: E || h ? b + 100 : 0,
+                        (0, r.jsx)(g.Z, {
+                            progress: b || m ? y + 100 : 0,
                             notchBackground: i,
                             notchClassName: this.props.notchClassName,
                             children: this.renderCaption(),
@@ -213,27 +209,27 @@ class C extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, "_initTimeout", new d.V7()),
-            I(this, "_silenceTimeout", new d.V7()),
-            I(this, "_messageTimeout", new d.V7()),
-            I(this, "_micTestStartTime", void 0),
-            I(this, "state", {
-                volume: A,
+            T(this, "_initTimeout", new d.V7()),
+            T(this, "_silenceTimeout", new d.V7()),
+            T(this, "_messageTimeout", new d.V7()),
+            T(this, "_micTestStartTime", void 0),
+            T(this, "state", {
+                volume: C,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1,
             }),
-            I(this, "setupVoiceActivity", () => {
-                g.Z.getMediaEngine().on(u.aB.VoiceActivity, this.handleVoiceActivity);
+            T(this, "setupVoiceActivity", () => {
+                E.Z.getMediaEngine().on(u.aB.VoiceActivity, this.handleVoiceActivity);
             }),
-            I(this, "handleVoiceActivity", (e) => {
+            T(this, "handleVoiceActivity", (e) => {
                 let { isMicTesting: t } = this.state;
-                if (t && e <= A) {
+                if (t && e <= C) {
                     this._silenceTimeout.isStarted() ||
-                        this._silenceTimeout.start(S, () => {
+                        this._silenceTimeout.start(A, () => {
                             this.setState({ isDetectingInput: !1 });
                         }),
-                        this.setState({ volume: A });
+                        this.setState({ volume: C });
                     return;
                 }
                 this._silenceTimeout.stop(),
@@ -242,12 +238,12 @@ class C extends i.PureComponent {
                         isDetectingInput: !0,
                     });
             }),
-            I(this, "handleToggleMicTest", () => {
+            T(this, "handleToggleMicTest", () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
             });
     }
 }
-function N(e) {
+function R(e) {
     var t, n;
     let {
             inputDevice: i,
@@ -258,22 +254,22 @@ function N(e) {
             outputVolume: d,
             inputMode: f,
             isDeafened: _,
-        } = (0, c.cj)([g.Z], () => {
-            let e = g.Z.getInputDeviceId(),
-                t = g.Z.getInputDevices(),
+        } = (0, c.cj)([E.Z], () => {
+            let e = E.Z.getInputDeviceId(),
+                t = E.Z.getInputDevices(),
                 n = l().find(t, (t) => {
                     let { id: n } = t;
                     return n === e;
                 }),
-                r = g.Z.getOutputDeviceId(),
-                i = g.Z.getOutputDevices(),
+                r = E.Z.getOutputDeviceId(),
+                i = E.Z.getOutputDevices(),
                 a = l().find(i, (e) => {
                     let { id: t } = e;
                     return t === r;
                 }),
-                { threshold: o, autoThreshold: s } = g.Z.getModeOptions(),
-                c = g.Z.getInputVolume(),
-                u = g.Z.getOutputVolume();
+                { threshold: o, autoThreshold: s } = E.Z.getModeOptions(),
+                c = E.Z.getInputVolume(),
+                u = E.Z.getOutputVolume();
             return {
                 inputDevice: n,
                 outputDevice: a,
@@ -281,15 +277,15 @@ function N(e) {
                 autoThreshold: s,
                 inputVolume: c,
                 outputVolume: u,
-                inputMode: g.Z.getMode(),
-                isDeafened: g.Z.isSelfDeaf(),
+                inputMode: E.Z.getMode(),
+                isDeafened: E.Z.isSelfDeaf(),
             };
         }),
-        p = (0, c.e7)([E.Z], () => E.Z.isConnected()),
-        { ref: m, width: b } = (0, h.ZP)();
+        p = (0, c.e7)([b.Z], () => b.Z.isConnected()),
+        { ref: h, width: g } = (0, m.ZP)();
     return (0, r.jsx)(
-        C,
-        T(
+        N,
+        S(
             {
                 isVoiceConnected: p,
                 inputVolume: u,
@@ -300,8 +296,8 @@ function N(e) {
                 vadAutoThreshold: s,
                 inputDeviceName: null != (t = null == i ? void 0 : i.name) ? t : "",
                 outputDeviceName: null != (n = null == a ? void 0 : a.name) ? n : "",
-                measureButtonRef: m,
-                buttonMinWidth: b,
+                measureButtonRef: h,
+                buttonMinWidth: g,
             },
             e,
         ),

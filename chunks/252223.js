@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(392711),
     l = n(793030),
     c = n(442837),
-    u = n(481060),
+    u = n(28664),
     d = n(835834),
     f = n(833664),
     _ = n(545957),
@@ -79,12 +79,12 @@ function x(e, t) {
         e
     );
 }
-function j(e) {
+function M(e) {
     let t = (0, d.R)("formatActivityString"),
         n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != n ? (t ? n : R.intl.formatToPlainString(R.t["0wJXSk"], { name: n })) : R.intl.string(R.t.eXan7O);
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? R.intl.string(R.t["9FaEzs"])
@@ -101,12 +101,12 @@ function k(e) {
         s = (0, p.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(j(t)),
+        null != t && i.push(M(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, O.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(M(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
@@ -144,8 +144,8 @@ function B(e) {
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
     let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        j = (0, m.Cf)(L),
-        M = i.useMemo(() => {
+        M = (0, m.Cf)(L),
+        j = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -174,7 +174,7 @@ function B(e) {
                                   return (
                                       t !== N.IIU.CUSTOM_STATUS &&
                                       t !== N.IIU.HANG_STATUS &&
-                                      n !== (null == j ? void 0 : j.name)
+                                      n !== (null == M ? void 0 : M.name)
                                   );
                               }))
                     ? e
@@ -183,16 +183,16 @@ function B(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == j ? void 0 : j.name]),
-        V = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
+        }, [n, null == M ? void 0 : M.name]),
+        V = null == n ? void 0 : n.find((e) => e.name === (null == M ? void 0 : M.name)),
         H = (null == t ? void 0 : t.bot) === !0,
         Y = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        W = (null == M ? void 0 : M.state) != null,
+        W = (null == j ? void 0 : j.state) != null,
         K = null != L,
         z = !K && null != l,
         q = F.length + (K || z ? 1 : 0),
         X = q > 1,
-        Q = ((null == M ? void 0 : M.state) != null || null != Z) && "xs" === h,
+        Q = ((null == j ? void 0 : j.state) != null || null != Z) && "xs" === h,
         J = k({
             streamActivity: V,
             otherActivities: F,
@@ -285,18 +285,14 @@ function B(e) {
                             className: o()(P.activityContainer, Q && P.iconOnly),
                             children: [$(), et()],
                         })
-                      : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(P.container, P.activitiesTooltip, P.hasMultipleActivities),
+                      : (0, r.jsx)(u.u, {
                             delay: C.X,
-                            text: ee(),
+                            __unsupportedReactNodeAsText: ee(),
                             "aria-label": J,
-                            children: (e) =>
-                                (0, r.jsxs)(
-                                    "div",
-                                    x(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
-                                        children: [$(!0), et()],
-                                    }),
-                                ),
+                            children: (0, r.jsxs)("div", {
+                                className: o()(P.activityContainer, Q && P.iconOnly),
+                                children: [$(!0), et()],
+                            }),
                         })
                   : $(),
         er = o()(P.container, {
@@ -304,10 +300,10 @@ function B(e) {
             [P.textSm]: "sm" === h,
         }),
         ei = () =>
-            null == M && null == Z
+            null == j && null == Z
                 ? null
                 : (0, r.jsx)(T.Z, {
-                      customStatusActivity: M,
+                      customStatusActivity: j,
                       textSize: h,
                       animateEmoji: y,
                       hideEmoji: R,
@@ -323,7 +319,7 @@ function B(e) {
         className: er,
         children: [
             en(),
-            (null != M || null != Z) &&
+            (null != j || null != Z) &&
                 q > 0 &&
                 (0, r.jsx)(G, {
                     textVariant: "text-".concat(h, "/normal"),

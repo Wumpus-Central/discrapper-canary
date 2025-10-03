@@ -1,142 +1,82 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
-    o = n(481060),
-    s = n(585483),
-    l = n(981631),
-    c = n(388032),
-    u = n(435613);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = function (e) {
+    a = n(28664),
+    o = n(755721),
+    s = n(481060),
+    l = n(585483),
+    c = n(981631),
+    u = n(388032),
+    d = n(435613);
+let f = function (e) {
     var t;
     let {
             message: n,
-            errorMessage: d,
+            errorMessage: f,
             submitting: _,
-            onReset: h,
-            onSave: m,
-            onSaveText: g,
-            onResetText: E,
-            onSaveButtonColor: b,
-            disabled: y,
-            saveButtonTooltip: O,
+            onReset: p,
+            onSave: h,
+            onSaveText: m,
+            onResetText: g,
+            onSaveButtonColor: E,
+            disabled: b,
+            saveButtonTooltip: y,
         } = e,
-        v = i.useRef(null),
-        [I, T] = i.useState(!1);
+        O = i.useRef(null),
+        [v, I] = i.useState(!1);
     return (
         i.useEffect(() => {
             function e() {
-                T(!0), setTimeout(() => T(!1), 1000);
+                I(!0), setTimeout(() => I(!1), 1000);
             }
             return (
-                s.S.subscribe(l.CkL.EMPHASIZE_NOTICE, e),
+                l.S.subscribe(c.CkL.EMPHASIZE_NOTICE, e),
                 () => {
-                    s.S.unsubscribe(l.CkL.EMPHASIZE_NOTICE, e);
+                    l.S.unsubscribe(c.CkL.EMPHASIZE_NOTICE, e);
                 }
             );
         }, []),
         (0, r.jsx)("div", {
-            className: u.container,
-            "data-emphasized": I,
+            className: d.container,
+            "data-emphasized": v,
             children: (0, r.jsx)("div", {
-                className: u.flexContainer,
-                ref: v,
-                children: (0, r.jsxs)(o.JcV, {
-                    containerRef: v,
+                className: d.flexContainer,
+                ref: O,
+                children: (0, r.jsxs)(s.JcV, {
+                    containerRef: O,
                     children: [
                         (0, r.jsx)("div", {
-                            className: u.shrinkingContainer,
+                            className: d.shrinkingContainer,
                             children: (0, r.jsx)("div", {
-                                className: u.message,
-                                children: null != (t = null != d ? d : n) ? t : c.intl.string(c.t.GP7JLC),
+                                className: d.message,
+                                children: null != (t = null != f ? f : n) ? t : u.intl.string(u.t.GP7JLC),
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: u.actions,
+                            className: d.actions,
                             children: [
-                                null != h &&
-                                    (0, r.jsx)(a.zx, {
-                                        className: u.resetButton,
-                                        size: a.zx.Sizes.SMALL,
-                                        color: a.zx.Colors.PRIMARY,
-                                        look: a.zx.Looks.LINK,
-                                        onClick: h,
+                                null != p &&
+                                    (0, r.jsx)(o.zx, {
+                                        className: d.resetButton,
+                                        size: o.zx.Sizes.SMALL,
+                                        color: o.zx.Colors.PRIMARY,
+                                        look: o.zx.Looks.LINK,
+                                        onClick: p,
                                         children: (0, r.jsx)("span", {
-                                            children: null != E ? E : c.intl.string(c.t.yBZMsb),
+                                            children: null != g ? g : u.intl.string(u.t.yBZMsb),
                                         }),
                                     }),
-                                null != m
-                                    ? (0, r.jsx)(o.ua7, {
-                                          text: O,
-                                          children: (e) =>
-                                              (0, r.jsx)(
-                                                  a.zx,
-                                                  p(
-                                                      f(
-                                                          {
-                                                              size: a.zx.Sizes.SMALL,
-                                                              color: null != b ? b : a.zx.Colors.GREEN,
-                                                              submitting: _,
-                                                              disabled: y,
-                                                              onClick: m,
-                                                          },
-                                                          e,
-                                                      ),
-                                                      { children: null != g ? g : c.intl.string(c.t.K344S0) },
-                                                  ),
-                                              ),
+                                null != h
+                                    ? (0, r.jsx)(a.u, {
+                                          text: y,
+                                          children: (0, r.jsx)(o.zx, {
+                                              size: o.zx.Sizes.SMALL,
+                                              color: null != E ? E : o.zx.Colors.GREEN,
+                                              submitting: _,
+                                              disabled: b,
+                                              onClick: h,
+                                              children: null != m ? m : u.intl.string(u.t.K344S0),
+                                          }),
                                       })
                                     : null,
                             ],

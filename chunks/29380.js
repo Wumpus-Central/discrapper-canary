@@ -1,156 +1,84 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var l = n(951288),
     i = n(647438),
-    r = n(481060),
-    a = n(542094),
-    o = n(895924),
-    s = n(813370),
-    c = n(626135),
-    u = n(499254),
-    d = n(541099),
-    p = n(827498),
-    m = n(160973),
-    f = n(783097),
-    h = n(890280),
-    v = n(176412),
+    r = n(28664),
+    a = n(481060),
+    o = n(542094),
+    s = n(895924),
+    c = n(813370),
+    u = n(626135),
+    d = n(499254),
+    p = n(541099),
+    m = n(827498),
+    f = n(160973),
+    h = n(783097),
+    v = n(890280),
+    x = n(176412),
     y = n(981631),
-    x = n(388032),
-    b = n(682964);
-function g(e) {
-    let { context: t, application: n, sectionName: g, primaryEntryPointCommand: j } = e,
-        N = i.useId(),
+    g = n(388032);
+function b(e) {
+    let { context: t, application: n, sectionName: b, primaryEntryPointCommand: N } = e,
+        j = i.useId(),
         C = i.useCallback(() => {
-            u.yT(p.ti.ACTIVITY);
+            d.yT(m.ti.ACTIVITY);
         }, []),
         E = i.useCallback(() => {
-            d.Z.shouldShowModal() && C();
+            p.Z.shouldShowModal() && C();
         }, [C]),
-        { submitting: P, wasSubmitting: O } = (0, h.Z)({
+        { submitting: P, wasSubmitting: A } = (0, v.Z)({
             applicationId: n.id,
             context: t,
-            launchingComponentId: N,
+            launchingComponentId: j,
             onSubmissionComplete: C,
         }),
-        [A, _] = i.useState(!1),
-        I = (0, a.Qv)({
+        [_, O] = i.useState(!1),
+        I = (0, o.Qv)({
             applicationId: n.id,
             context: t,
         }),
-        S = i.useMemo(() => (0, f.XZ)(j.displayName), [j.displayName]),
+        S = i.useMemo(() => (0, h.XZ)(N.displayName), [N.displayName]),
         {
             onActivityItemSelected: T,
             buttonVariant: L,
             buttonText: R,
-        } = (0, v.P7)({
+        } = (0, x.P7)({
             context: t,
             application: n,
-            location: o.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: g,
+            location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+            sectionName: b,
             commandName: S,
-            autoDismissOnClick: I === a.JS.LEAVE || (0, s.g)(n),
-            launchingComponentId: N,
-            submitting: null != O ? O : P,
+            autoDismissOnClick: I === o.JS.LEAVE || (0, c.g)(n),
+            launchingComponentId: j,
+            submitting: null != A ? A : P,
             onConfirmActivityLaunchChecksAlertOpen: E,
         }),
-        { disabled: Z, reason: w } = (0, m.Z)({
+        { disabled: Z, reason: w } = (0, f.Z)({
             context: t,
             application: n,
             activityAction: I,
         });
-    return (0, l.jsx)(r.ua7, {
+    return (0, l.jsx)(r.u, {
         shouldShow: null != w,
-        tooltipContentClassName: b.tooltipContent,
-        text: w,
-        children: (e) => {
-            var t,
-                i,
-                { onClick: a } = e,
-                o = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        l,
-                        i = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                l,
-                                i = {},
-                                r = Object.keys(e);
-                            for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                            return i;
-                        })(e, t);
-                    if (Object.getOwnPropertySymbols) {
-                        var r = Object.getOwnPropertySymbols(e);
-                        for (l = 0; l < r.length; l++)
-                            (n = r[l]),
-                                !(t.indexOf(n) >= 0) &&
-                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                    (i[n] = e[n]);
-                    }
-                    return i;
-                })(e, ["onClick"]);
-            return (0, l.jsx)(
-                r.zxk,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (l = l.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            l.forEach(function (t) {
-                                var l;
-                                (l = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: l,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = l);
-                            });
-                    }
-                    return e;
-                })({}, o)),
-                (i = i =
-                    {
-                        type: "submit",
-                        size: "md",
-                        variant: L,
-                        disabled: Z,
-                        loading: A,
-                        onClick: () => {
-                            _(!0),
-                                T(),
-                                null == a || a(),
-                                c.default.track(y.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
-                                    application_id: n.id,
-                                    button_action: p._y.USE_APP_COMMAND,
-                                });
-                        },
-                        "aria-label": x.intl.formatToPlainString(x.t["XjP/R0"], {
-                            buttonText: R,
-                            applicationName: n.name,
-                        }),
-                        text: R,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
-                          }
-                          return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
-                      }),
-                t),
-            );
-        },
+        __unsupportedReactNodeAsText: w,
+        children: (0, l.jsx)(a.zxk, {
+            type: "submit",
+            size: "md",
+            variant: L,
+            disabled: Z,
+            loading: _,
+            onClick: () => {
+                O(!0),
+                    T(),
+                    u.default.track(y.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                        application_id: n.id,
+                        button_action: m._y.USE_APP_COMMAND,
+                    });
+            },
+            "aria-label": g.intl.formatToPlainString(g.t["XjP/R0"], {
+                buttonText: R,
+                applicationName: n.name,
+            }),
+            text: R,
+        }),
     });
 }

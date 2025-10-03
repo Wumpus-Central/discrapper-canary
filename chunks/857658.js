@@ -1,4 +1,4 @@
-n.d(t, { U: () => x }), n(388685), n(781311);
+n.d(t, { U: () => P }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(688619),
@@ -8,93 +8,42 @@ var r = n(951288),
     c = n(608787),
     u = n(866442),
     d = n(19602),
-    f = n(159691),
-    _ = n(481060),
-    p = n(408886),
-    h = n(233398),
-    m = n(866419),
-    g = n(507962),
-    E = n(119475),
-    b = n(388032),
-    y = n(209289);
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                O(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function I(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function T(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function S() {
+    f = n(28664),
+    _ = n(159691),
+    p = n(481060),
+    h = n(408886),
+    m = n(233398),
+    g = n(866419),
+    E = n(771934),
+    b = n(119475),
+    y = n(388032),
+    O = n(209289);
+function v() {
     return (0, r.jsx)("div", {
-        className: y.loader,
-        children: (0, r.jsx)(_.$jN, {}),
+        className: O.loader,
+        children: (0, r.jsx)(p.$jN, {}),
     });
 }
-let A = (0, c.Un)({
+let I = (0, c.Un)({
         createPromise: () => Promise.all([n.e("3115"), n.e("35855")]).then(n.bind(n, 164267)),
         webpackId: 164267,
         name: "CustomThemeColorPickerControlV2",
-        renderLoader: S,
+        renderLoader: v,
     }),
-    C = 5,
-    N = "#000000";
-function R(e, t) {
+    T = 5,
+    S = "#000000";
+function A(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function P(e) {
+function C(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [o, s] = i.useMemo(() => {
-            let e = t.map((e, n) => R(t, n)),
+            let e = t.map((e, n) => A(t, n)),
                 n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
             return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
         }, [t]);
     return (0, r.jsx)("div", {
-        className: y.gradientBar,
+        className: O.gradientBar,
         style: s,
         children: t.map((e, t) => {
             let s = o[t],
@@ -103,18 +52,18 @@ function P(e) {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(_.P3F, {
-                            className: l()(y.colorSquare, { [y.selected]: c }),
+                        (0, r.jsx)(p.P3F, {
+                            className: l()(O.colorSquare, { [O.selected]: c }),
                             style: {
                                 left: "".concat(s, "%"),
                                 backgroundColor: e,
                             },
                             onClick: () => a(t),
-                            children: (0, r.jsx)("div", { className: y.colorSquareInner }),
+                            children: (0, r.jsx)("div", { className: O.colorSquareInner }),
                         }),
                         c &&
                             (0, r.jsx)("div", {
-                                className: y.colorSquareSelectedTriangle,
+                                className: O.colorSquareSelectedTriangle,
                                 style: { left: "".concat(s, "%") },
                             }),
                     ],
@@ -124,156 +73,140 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function N(e) {
     let { color: t } = e,
-        n = i.useMemo(() => ({ backgroundColor: (0, u.FX)(t) ? t : N }), [t]);
+        n = i.useMemo(() => ({ backgroundColor: (0, u.FX)(t) ? t : S }), [t]);
     return (0, r.jsx)("div", {
-        className: y.hexColorPreview,
+        className: O.hexColorPreview,
         style: n,
         "aria-label": "Color preview",
     });
 }
-function D(e) {
+function R(e) {
     if (!(0, u.FX)(e)) return e;
     let t = o()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
-function x(e) {
+function P(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
-        c = (0, p.Z)(),
-        [O, I] = i.useState(0),
-        [S, N] = i.useState(t);
+        c = (0, h.Z)(),
+        [v, S] = i.useState(0),
+        [A, P] = i.useState(t);
     i.useEffect(() => {
-        if (o.length > 0 && O < o.length) {
-            let e = o[O];
-            (0, u.FX)(e) && (N(e), n(e));
+        if (o.length > 0 && v < o.length) {
+            let e = o[v];
+            (0, u.FX)(e) && (P(e), n(e));
         }
-        O >= o.length && I(0);
-    }, [O, o, n]);
-    let R = (e) => {
+        v >= o.length && S(0);
+    }, [v, o, n]);
+    let w = (e) => {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
-        x = (e) => {
-            let t = R(e);
-            if ((N(t), (0, u.FX)(t) && ((0, g.zW)(), n(t), o.length > 0))) {
+        D = (e) => {
+            let t = w(e);
+            if ((P(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
                 let e = [...o];
-                (e[O] = t), s(e);
+                (e[v] = t), s(e);
             }
         },
         L = i.useCallback((e) => {
-            N(e.hex);
+            P(e.hex);
         }, []),
-        j = (e) => {
-            if (((0, g.P0)(), n(e.hex), o.length > 0)) {
+        x = (e) => {
+            if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
-                (t[O] = e.hex), s(t);
+                (t[v] = e.hex), s(t);
             }
         },
-        k = async () => {
+        M = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    (0, g.J4)(), x(e);
+                    (0, E.J4)(), D(e);
                 } catch (e) {}
         },
-        M = () => {
-            if (o.length === C) return;
-            0 === o.length && (0, m.ft)(), (0, g.gG)();
-            let e = o.length > 0 ? o[o.length - 1] : S,
-                t = o.length > 0 ? D(e) : e,
+        j = () => {
+            if (o.length === T) return;
+            0 === o.length && (0, g.ft)(), (0, E.gG)();
+            let e = o.length > 0 ? o[o.length - 1] : A,
+                t = o.length > 0 ? R(e) : e,
                 n = [...o, t];
-            s(n), I(n.length - 1);
+            s(n), S(n.length - 1);
         },
-        U = (e) => {
+        k = (e) => {
             if (o.length > 1) {
-                (0, g.JL)();
+                (0, E.JL)();
                 let t = o.filter((t, n) => n !== e);
-                s(t), O >= t.length ? I(t.length - 1) : O > e && I(O - 1);
+                s(t), v >= t.length ? S(t.length - 1) : v > e && S(v - 1);
             }
         },
-        G = (e) => {
-            I(e), (0, g.w8)();
+        U = (e) => {
+            S(e), (0, E.w8)();
         },
-        B = o.length > 1;
+        G = o.length > 1;
     return (0, r.jsxs)("div", {
-        className: l()(y.container, a),
+        className: l()(O.container, a),
         children: [
-            B &&
-                (0, r.jsx)(P, {
+            G &&
+                (0, r.jsx)(C, {
                     colors: o,
-                    selectedIndex: O,
-                    onColorSelect: G,
+                    selectedIndex: v,
+                    onColorSelect: U,
                 }),
-            (0, r.jsx)(A, {
+            (0, r.jsx)(I, {
                 onChange: L,
-                onChangeComplete: j,
-                color: S,
+                onChangeComplete: x,
+                color: A,
             }),
             (0, r.jsxs)("div", {
-                className: y.hexInputContainer,
+                className: O.hexInputContainer,
                 children: [
-                    (0, r.jsx)(w, { color: S }),
+                    (0, r.jsx)(N, { color: A }),
                     (0, r.jsx)("input", {
-                        className: y.hexInput,
-                        value: S.toUpperCase(),
-                        onChange: (e) => x(e.target.value),
+                        className: O.hexInput,
+                        value: A.toUpperCase(),
+                        onChange: (e) => D(e.target.value),
                         maxLength: 7,
-                        placeholder: h.Dp,
+                        placeholder: m.Dp,
                         type: "text",
                     }),
                     (0, r.jsxs)("div", {
-                        className: y.trailingIcons,
+                        className: O.trailingIcons,
                         children: [
                             null != c &&
-                                (0, r.jsx)(_.ua7, {
-                                    text: b.intl.string(E.default["NCFz+P"]),
-                                    tooltipClassName: y.eyeDropperTooltip,
-                                    children: (e) =>
-                                        (0, r.jsx)(
-                                            f.hU,
-                                            T(
-                                                v(
-                                                    {
-                                                        variant: "icon-only",
-                                                        size: "sm",
-                                                    },
-                                                    e,
-                                                ),
-                                                {
-                                                    onClick: k,
-                                                    icon: d.i,
-                                                    "aria-label": b.intl.string(E.default["NCFz+P"]),
-                                                },
-                                            ),
-                                        ),
+                                (0, r.jsx)(f.u, {
+                                    text: y.intl.string(b.default["NCFz+P"]),
+                                    children: (0, r.jsx)(_.hU, {
+                                        variant: "icon-only",
+                                        size: "sm",
+                                        onClick: M,
+                                        icon: d.i,
+                                        "aria-label": y.intl.string(b.default["NCFz+P"]),
+                                    }),
                                 }),
-                            B &&
-                                (0, r.jsx)(_.ua7, {
-                                    text: b.intl.string(b.t.N86XcH),
-                                    children: (e) =>
-                                        (0, r.jsx)(
-                                            f.hU,
-                                            T(v({}, e), {
-                                                variant: "icon-only",
-                                                size: "sm",
-                                                onClick: () => U(O),
-                                                icon: _.V_R,
-                                                "aria-label": b.intl.string(b.t.N86XcH),
-                                            }),
-                                        ),
+                            G &&
+                                (0, r.jsx)(f.u, {
+                                    text: y.intl.string(y.t.N86XcH),
+                                    children: (0, r.jsx)(_.hU, {
+                                        variant: "icon-only",
+                                        size: "sm",
+                                        onClick: () => k(v),
+                                        icon: p.V_R,
+                                        "aria-label": y.intl.string(y.t.N86XcH),
+                                    }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            o.length < C &&
-                (0, r.jsx)(f.zxk, {
+            o.length < T &&
+                (0, r.jsx)(_.zxk, {
                     variant: "secondary",
                     size: "md",
-                    onClick: M,
-                    icon: _.BRu,
-                    text: b.intl.string(E.default.JUQcdX),
+                    onClick: j,
+                    icon: p.BRu,
+                    text: y.intl.string(b.default.JUQcdX),
                     fullWidth: !0,
                 }),
         ],

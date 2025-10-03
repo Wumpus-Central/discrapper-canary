@@ -1,23 +1,23 @@
 n.d(t, {
-    Af: () => k,
-    An: () => W,
-    E6: () => Y,
-    EE: () => G,
-    Gk: () => Q,
-    Gt: () => D,
-    OV: () => U,
-    PZ: () => $,
-    Rg: () => X,
-    U9: () => z,
-    XF: () => B,
-    Yl: () => q,
-    ej: () => M,
-    f: () => H,
+    Af: () => U,
+    An: () => K,
+    E6: () => W,
+    EE: () => B,
+    Gk: () => J,
+    Gt: () => L,
+    OV: () => G,
+    PZ: () => ee,
+    Rg: () => Q,
+    U9: () => q,
+    XF: () => Z,
+    Yl: () => X,
+    ej: () => k,
+    f: () => Y,
     m7: () => j,
-    n8: () => K,
+    n8: () => z,
     pQ: () => V,
-    v1: () => F,
-    wO: () => Z,
+    v1: () => H,
+    wO: () => F,
 });
 var r = n(951288),
     i = n(647438),
@@ -28,20 +28,21 @@ var r = n(951288),
     c = n(876215),
     u = n(884439),
     d = n(705512),
-    f = n(481060),
-    _ = n(456100),
-    p = n(70956),
-    h = n(823379),
-    m = n(709054),
-    g = n(26033),
-    E = n(22211),
-    b = n(561308),
-    y = n(797342),
-    O = n(371991),
-    v = n(206583),
-    I = n(388032),
-    T = n(136011);
-function S(e, t, n) {
+    f = n(28664),
+    _ = n(481060),
+    p = n(456100),
+    h = n(70956),
+    m = n(823379),
+    g = n(709054),
+    E = n(26033),
+    b = n(22211),
+    y = n(561308),
+    O = n(797342),
+    v = n(371991),
+    I = n(206583),
+    T = n(388032),
+    S = n(136011);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +55,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,12 +66,12 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,22 +83,22 @@ function C(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -105,7 +106,7 @@ function R(e, t) {
     }
     return i;
 }
-function P(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -114,14 +115,14 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = {
-    [c.s.TOP_ARTIST]: [W],
-    [c.s.PLAYED_GAME]: [U, G, k, z, Z, H, K, F, V],
-    [c.s.TOP_GAME]: [Y],
-    [c.s.WATCHED_MEDIA]: [q, X],
-    [c.s.LAUNCHED_ACTIVITY]: [U, G, k, z, K, V],
+let D = {
+    [c.s.TOP_ARTIST]: [K],
+    [c.s.PLAYED_GAME]: [G, B, U, q, F, Y, z, H, V],
+    [c.s.TOP_GAME]: [W],
+    [c.s.WATCHED_MEDIA]: [X, Q],
+    [c.s.LAUNCHED_ACTIVITY]: [G, B, U, q, z, V],
 };
-var D = (function (e) {
+var L = (function (e) {
     return (
         (e[(e.CARD = 0)] = "CARD"),
         (e[(e.POPOUT = 1)] = "POPOUT"),
@@ -137,68 +138,64 @@ var D = (function (e) {
     );
 })({});
 let x = i.createContext({});
-function L() {
+function M() {
     return i.useContext(x);
 }
 function j(e) {
     var { children: t } = e,
-        n = R(e, ["children"]);
-    return (0, r.jsx)("div", N(A({ className: T.badgeContainer }, n), { children: t }));
-}
-function M(e) {
-    let { Icon: t, text: n, iconColor: i, tooltipText: a, showTooltip: o } = e,
-        { defaultTextColor: s, defaultIconColor: l, location: c } = L();
-    return (0, r.jsx)(f.ua7, {
-        text: a,
-        shouldShow: o,
-        children: (e) =>
-            (0, r.jsxs)(
-                j,
-                N(A({}, e), {
-                    children: [
-                        (0, r.jsx)(t, {
-                            size: "xxs",
-                            color: null != i ? i : l,
-                        }),
-                        (0, r.jsx)(f.Text, {
-                            variant: "text-xs/normal",
-                            color: s,
-                            className: T.badgeLabel,
-                            scaleFontToUserSetting: 5 === c,
-                            children: n,
-                        }),
-                    ],
-                }),
-            ),
-    });
+        n = P(e, ["children"]);
+    return (0, r.jsx)("div", R(C({ className: S.badgeContainer }, n), { children: t }));
 }
 function k(e) {
+    let { Icon: t, text: n, iconColor: i, tooltipText: a, showTooltip: o } = e,
+        { defaultTextColor: s, defaultIconColor: l, location: c } = M();
+    return (0, r.jsx)(f.u, {
+        text: a,
+        shouldShow: o,
+        children: (0, r.jsxs)(j, {
+            children: [
+                (0, r.jsx)(t, {
+                    size: "xxs",
+                    color: null != i ? i : l,
+                }),
+                (0, r.jsx)(_.Text, {
+                    variant: "text-xs/normal",
+                    color: s,
+                    className: S.badgeLabel,
+                    scaleFontToUserSetting: 5 === c,
+                    children: n,
+                }),
+            ],
+        }),
+    });
+}
+function U(e) {
     let { entry: t } = e,
-        { channel: n } = (0, E.Z)(t),
-        { location: i } = L();
-    return null == n || (0, h.Hi)(i, [1, 2, 3, 4])
+        { channel: n } = (0, b.Z)(t),
+        { location: i } = M();
+    return null == n || (0, m.Hi)(i, [1, 2, 3, 4])
         ? null
-        : (0, r.jsx)(M, {
-              Icon: f.gj8,
+        : (0, r.jsx)(k, {
+              Icon: _.gj8,
               text: n.name,
           });
 }
-function U(e) {
+function G(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
-        s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7, 9]),
-        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
+        { defaultTextColor: i, defaultIconColor: a, location: o } = M(),
+        s = (0, y.Jg)(t) && (0, m.Hi)(o, [0, 4, 7, 9]),
+        l = s ? _.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i,
-        { streamPreviewUrl: u } = (0, E.Z)(t),
-        { enabled: d } = _.c.useExperiment({ location: "GameTimestampBadge" }, { autoTrackExposure: !0 }),
-        p = null != u ? f.hGI : (0, g.Mq)(t) && !d ? f.jje : f.iWm;
+        { streamPreviewUrl: u } = (0, b.Z)(t),
+        { enabled: d } = p.c.useExperiment({ location: "GameTimestampBadge" }, { autoTrackExposure: !0 }),
+        f = null != u ? _.hGI : (0, E.Mq)(t) && !d ? _.jje : _.iWm;
     return (0, r.jsxs)(j, {
         children: [
-            (0, r.jsx)(p, {
+            (0, r.jsx)(f, {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -208,20 +205,20 @@ function U(e) {
         ],
     });
 }
-function G(e) {
+function B(e) {
     let { entry: t } = e,
-        { defaultTextColor: n, defaultIconColor: i } = L(),
-        { state: a, party: o } = (0, y.n)(t),
-        s = (0, b.bT)(a, o);
+        { defaultTextColor: n, defaultIconColor: i } = M(),
+        { state: a, party: o } = (0, O.n)(t),
+        s = (0, y.bT)(a, o);
     return null == s
         ? null
         : (0, r.jsxs)(j, {
               children: [
-                  (0, r.jsx)(f.BFJ, {
+                  (0, r.jsx)(_.BFJ, {
                       size: "xxs",
                       color: i,
                   }),
-                  (0, r.jsx)(f.Text, {
+                  (0, r.jsx)(_.Text, {
                       variant: "text-xs/normal",
                       color: n,
                       lineClamp: 1,
@@ -230,20 +227,20 @@ function G(e) {
               ],
           });
 }
-function B(e) {
+function Z(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
-        s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4]),
-        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
+        { defaultTextColor: i, defaultIconColor: a, location: o } = M(),
+        s = (0, y.Jg)(t) && (0, m.Hi)(o, [0, 4]),
+        l = s ? _.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i;
     return (0, r.jsxs)("div", {
-        className: T.badgeContainer,
+        className: S.badgeContainer,
         children: [
-            (0, r.jsx)(f.RZG, {
+            (0, r.jsx)(_.RZG, {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -252,128 +249,128 @@ function B(e) {
         ],
     });
 }
-function Z(e) {
+function F(e) {
     let { entry: t } = e,
-        { location: n } = L(),
-        i = (0, h.Hi)(n, [0, 3]) ? f.TVs.colors.STATUS_POSITIVE : void 0;
-    return (0, b.Ol)(t)
-        ? (0, r.jsx)(M, {
-              Icon: f._IE,
-              text: I.intl.string(I.t.keY6mZ),
+        { location: n } = M(),
+        i = (0, m.Hi)(n, [0, 3]) ? _.TVs.colors.STATUS_POSITIVE : void 0;
+    return (0, y.Ol)(t)
+        ? (0, r.jsx)(k, {
+              Icon: _._IE,
+              text: T.intl.string(T.t.keY6mZ),
               iconColor: i,
           })
         : null;
 }
 function V(e) {
     let { entry: t } = e,
-        { location: n } = L();
-    if (!(0, b.V5)(t)) return null;
-    let i = (0, b.kr)(t),
+        { location: n } = M();
+    if (!(0, y.V5)(t)) return null;
+    let i = (0, y.kr)(t),
         a = 0 === n && !i,
-        { text: o, tooltipText: s } = (0, b.zo)(t);
+        { text: o, tooltipText: s } = (0, y.zo)(t);
     return null == o
         ? null
-        : (0, r.jsx)(M, {
-              Icon: f.ANZ,
+        : (0, r.jsx)(k, {
+              Icon: _.ANZ,
               text: o,
               tooltipText: s,
               showTooltip: a,
           });
 }
-function F(e) {
-    let { entry: t } = e,
-        { location: n } = L(),
-        i = 0 !== n,
-        a = (0, b.dw)(t);
-    if (null == a) return null;
-    let o = (0, b.GE)(a);
-    return (0, r.jsx)(M, {
-        Icon: f.Oe7,
-        showTooltip: !i,
-        tooltipText: o,
-        text: i ? o : I.intl.string(I.t.adnLsL),
-    });
-}
 function H(e) {
     let { entry: t } = e,
-        { location: n } = L(),
-        i = (0, b.vU)(t);
-    return (0, b.q_)(t)
-        ? (0, r.jsx)(M, {
-              Icon: f.qOE,
-              showTooltip: 0 === n,
-              text: I.intl.formatToPlainString(I.t["Klie/P"], { days: i }),
-              tooltipText: I.intl.formatToPlainString(I.t.PwMe0t, { days: i }),
-          })
-        : null;
+        { location: n } = M(),
+        i = 0 !== n,
+        a = (0, y.dw)(t);
+    if (null == a) return null;
+    let o = (0, y.GE)(a);
+    return (0, r.jsx)(k, {
+        Icon: _.Oe7,
+        showTooltip: !i,
+        tooltipText: o,
+        text: i ? o : T.intl.string(T.t.adnLsL),
+    });
 }
 function Y(e) {
     let { entry: t } = e,
-        { location: n } = L(),
+        { location: n } = M(),
+        i = (0, y.vU)(t);
+    return (0, y.q_)(t)
+        ? (0, r.jsx)(k, {
+              Icon: _.qOE,
+              showTooltip: 0 === n,
+              text: T.intl.formatToPlainString(T.t["Klie/P"], { days: i }),
+              tooltipText: T.intl.formatToPlainString(T.t.PwMe0t, { days: i }),
+          })
+        : null;
+}
+function W(e) {
+    let { entry: t } = e,
+        { location: n } = M(),
         i = 0 !== n,
-        a = (0, b.yA)(t);
+        a = (0, y.yA)(t);
     if (null == a) return null;
     let o = i ? " \u2014 " : ": ",
-        s = i ? I.t.C0Axoa : I.t.SDRHgo;
-    return (0, r.jsx)(M, {
-        Icon: f.rm8,
+        s = i ? T.t.C0Axoa : T.t.SDRHgo;
+    return (0, r.jsx)(k, {
+        Icon: _.rm8,
         text: (0, r.jsxs)(r.Fragment, {
-            children: [I.intl.string(I.t["/50eHh"]), o, I.intl.format(s, { hours: Math.round(a / p.Z.Seconds.HOUR) })],
+            children: [T.intl.string(T.t["/50eHh"]), o, T.intl.format(s, { hours: Math.round(a / h.Z.Seconds.HOUR) })],
         }),
     });
 }
-function W(e) {
+function K(e) {
     var t;
     let { entry: n } = e,
-        { location: i } = L(),
-        a = null == (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
+        { location: i } = M(),
+        a = null == (t = (0, y.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == a) return null;
-    let o = (0, h.Hi)(i, [1, 2, 5])
-        ? I.intl.formatToPlainString(I.t.HtifnJ, { count: a })
-        : I.intl.formatToPlainString(I.t["jq/Bmp"], { count: a });
-    return (0, r.jsx)(M, {
-        Icon: f.rm8,
+    let o = (0, m.Hi)(i, [1, 2, 5])
+        ? T.intl.formatToPlainString(T.t.HtifnJ, { count: a })
+        : T.intl.formatToPlainString(T.t["jq/Bmp"], { count: a });
+    return (0, r.jsx)(k, {
+        Icon: _.rm8,
         text: o,
     });
 }
-function K(e) {
-    let { entry: t } = e,
-        { location: n } = L();
-    if (3 === n) return null;
-    let i = (0, b.ig)(t);
-    return null == i || i === d.o.TRENDING_TYPE_UNSPECIFIED
-        ? null
-        : (0, r.jsx)(M, {
-              Icon: f.YqE,
-              text: I.intl.string(I.t.kAlUs7),
-          });
-}
 function z(e) {
     let { entry: t } = e,
-        { location: n } = L();
+        { location: n } = M();
     if (3 === n) return null;
-    let i = m.default.extractTimestamp(t.extra.application_id);
-    return l()().diff(l()(i), "days") > v.G
+    let i = (0, y.ig)(t);
+    return null == i || i === d.o.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, r.jsx)(M, {
-              Icon: f.rIT,
-              text: I.intl.string(I.t.vYuyWV),
+        : (0, r.jsx)(k, {
+              Icon: _.YqE,
+              text: T.intl.string(T.t.kAlUs7),
           });
 }
 function q(e) {
+    let { entry: t } = e,
+        { location: n } = M();
+    if (3 === n) return null;
+    let i = g.default.extractTimestamp(t.extra.application_id);
+    return l()().diff(l()(i), "days") > I.G
+        ? null
+        : (0, r.jsx)(k, {
+              Icon: _.rIT,
+              text: T.intl.string(T.t.vYuyWV),
+          });
+}
+function X(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: a, location: o } = L(),
-        s = (0, b.Jg)(t) && 4 === o,
-        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
+        { defaultTextColor: i, defaultIconColor: a, location: o } = M(),
+        s = (0, y.Jg)(t) && 4 === o,
+        l = s ? _.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? "text-feedback-positive" : i;
     return (0, r.jsxs)("div", {
-        className: T.badgeContainer,
+        className: S.badgeContainer,
         children: [
-            (0, r.jsx)(f.ARS, {
+            (0, r.jsx)(_.ARS, {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -382,24 +379,24 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function Q(e) {
     let { entry: t } = e,
-        n = (0, b.ap)(t.extra.media_assets_large_text);
+        n = (0, y.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
-        : (0, r.jsx)(M, {
-              Icon: f.sVe,
+        : (0, r.jsx)(k, {
+              Icon: _.sVe,
               text: n,
           });
 }
-function Q(e) {
+function J(e) {
     let t,
         { location: n, children: i, className: a } = e;
     return (
-        (t = (0, h.Hi)(n, [1, 5, 6])
+        (t = (0, m.Hi)(n, [1, 5, 6])
             ? {
                   defaultTextColor: "content-inventory-overlay-text-secondary",
-                  defaultIconColor: f.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+                  defaultIconColor: _.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
               }
             : 2 === n
               ? { defaultTextColor: "interactive-normal" }
@@ -408,18 +405,18 @@ function Q(e) {
                 : 4 === n
                   ? {
                         defaultTextColor: "text-secondary",
-                        defaultIconColor: f.TVs.colors.TEXT_SECONDARY,
+                        defaultIconColor: _.TVs.colors.TEXT_SECONDARY,
                     }
                   : { defaultTextColor: "text-secondary" }),
         (0, r.jsx)(x.Provider, {
-            value: A({ location: n }, t),
+            value: C({ location: n }, t),
             children: (0, r.jsx)("div", {
                 className: o()(
-                    T.badgesContainer,
+                    S.badgesContainer,
                     {
-                        [T.badgesContainerCard]: 0 === n,
-                        [T.badgesContainerPopout]: (0, h.Hi)(n, [1, 2]),
-                        [T.badgesContainerGameProfile]: 3 === n,
+                        [S.badgesContainerCard]: 0 === n,
+                        [S.badgesContainerPopout]: (0, m.Hi)(n, [1, 2]),
+                        [S.badgesContainerGameProfile]: 3 === n,
                     },
                     a,
                 ),
@@ -428,28 +425,28 @@ function Q(e) {
         })
     );
 }
-function J(e) {
+function $(e) {
     switch (e.content_type) {
         case c.s.TOP_ARTIST:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.PLAYED_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.TOP_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.WATCHED_MEDIA:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.LAUNCHED_ACTIVITY:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         default:
             return null;
     }
 }
-function $(e) {
+function ee(e) {
     let { entry: t, location: n, className: i } = e,
-        a = J(t);
+        a = $(t);
     return null == a
         ? null
-        : (0, r.jsx)(Q, {
+        : (0, r.jsx)(J, {
               location: n,
               className: i,
               children: a,

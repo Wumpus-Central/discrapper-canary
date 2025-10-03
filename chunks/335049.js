@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => I });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -6,23 +6,24 @@ var i = n(951288),
     o = n(512722),
     s = n.n(o),
     c = n(442837),
-    d = n(481060),
-    u = n(239091),
-    p = n(895924),
-    m = n(581364),
-    b = n(471445),
-    g = n(91218),
-    f = n(518738),
-    h = n(592125),
-    x = n(271383),
-    j = n(485386),
-    v = n(246946),
-    y = n(594174),
-    O = n(51144),
-    _ = n(981631),
-    C = n(388032),
-    N = n(243226);
-function Z(e) {
+    d = n(28664),
+    u = n(481060),
+    p = n(239091),
+    m = n(895924),
+    b = n(581364),
+    g = n(471445),
+    f = n(91218),
+    h = n(518738),
+    x = n(592125),
+    j = n(271383),
+    v = n(485386),
+    y = n(246946),
+    O = n(594174),
+    _ = n(51144),
+    C = n(981631),
+    N = n(388032),
+    w = n(243226);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +48,7 @@ function Z(e) {
     }
     return e;
 }
-function S(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,20 +66,20 @@ function S(e, t) {
         e
     );
 }
-function w(e) {
+function I(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
-    let m = r.useCallback(
+    let u = r.useCallback(
         (e) => {
-            (0, u.jW)(e, async () => {
+            (0, p.jW)(e, async () => {
                 let { default: e } = await n.e("5396").then(n.bind(n, 731646));
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        S(Z({}, t), {
+                        P(S({}, t), {
                             id: l,
-                            label: C.intl.string(C.t.oJ1Mu7),
+                            label: N.intl.string(N.t.oJ1Mu7),
                         }),
                     );
             });
@@ -86,108 +87,108 @@ function w(e) {
         [l],
     );
     switch (a) {
-        case p.Kw.CHANNEL:
-            return (0, i.jsx)(I, {
+        case m.Kw.CHANNEL:
+            return (0, i.jsx)(Z, {
                 guild: t,
                 id: l,
                 isLocked: o,
                 lockTooltipText: c,
-                openEntryContextMenu: m,
+                openEntryContextMenu: u,
             });
-        case p.Kw.ROLE:
+        case m.Kw.ROLE:
+            return (0, i.jsx)(E, {
+                guild: t,
+                id: l,
+                isLocked: o,
+                lockTooltipText: c,
+                openEntryContextMenu: u,
+            });
+        case m.Kw.USER:
             return (0, i.jsx)(T, {
                 guild: t,
                 id: l,
                 isLocked: o,
                 lockTooltipText: c,
-                openEntryContextMenu: m,
-            });
-        case p.Kw.USER:
-            return (0, i.jsx)(P, {
-                guild: t,
-                id: l,
-                isLocked: o,
-                lockTooltipText: c,
-                openEntryContextMenu: m,
+                openEntryContextMenu: u,
             });
     }
 }
-function I(e) {
+function Z(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
-        u = (0, m.bD)(t.id),
+        d = (0, b.bD)(t.id),
         {
             icon: p,
-            name: g,
+            name: m,
             categoryName: f,
-        } = (0, c.cj)([h.Z], () => {
-            if (u === n)
+        } = (0, c.cj)([x.Z], () => {
+            if (d === n)
                 return {
-                    name: C.intl.string(C.t["7YqSGx"]),
-                    icon: d.VL1,
+                    name: N.intl.string(N.t["7YqSGx"]),
+                    icon: u.VL1,
                 };
-            let e = h.Z.getChannel(n),
-                i = (null == e ? void 0 : e.parent_id) != null ? h.Z.getChannel(e.parent_id) : null;
+            let e = x.Z.getChannel(n),
+                i = (null == e ? void 0 : e.parent_id) != null ? x.Z.getChannel(e.parent_id) : null;
             return {
-                icon: null != e ? (0, b.KS)(e, t) : null,
+                icon: null != e ? (0, g.KS)(e, t) : null,
                 name: null == e ? void 0 : e.name,
                 categoryName: null == i ? void 0 : i.name,
             };
-        }, [u, t, n]),
-        x = r.useCallback(
+        }, [d, t, n]),
+        h = r.useCallback(
             (e) => {
-                n !== u && s(e);
+                n !== d && s(e);
             },
-            [u, n, s],
+            [d, n, s],
         );
-    return null == p || null == g
+    return null == p || null == m
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: x,
-              className: N.identifier,
+              onContextMenu: h,
+              className: w.identifier,
               children: [
                   (0, i.jsx)(p, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: a()(N.channelIcon, N.image),
+                      className: a()(w.channelIcon, w.image),
                   }),
-                  (0, i.jsx)(d.Text, {
-                      className: N.roleName,
+                  (0, i.jsx)(u.Text, {
+                      className: w.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
-                      children: g,
+                      children: m,
                   }),
                   null != f
-                      ? (0, i.jsxs)(d.Text, {
-                            className: N.tag,
+                      ? (0, i.jsxs)(u.Text, {
+                            className: w.tag,
                             variant: "text-sm/normal",
                             children: ["(", f, ")"],
                         })
                       : null,
-                  l ? (0, i.jsx)(E, { tooltipText: o }) : null,
+                  l ? (0, i.jsx)(k, { tooltipText: o }) : null,
               ],
           });
 }
-function T(e) {
+function E(e) {
     var t;
-    let { guild: l, id: o, isLocked: s, lockTooltipText: p } = e,
-        m = (0, c.e7)([j.Z], () => j.Z.getRole(l.id, o)),
-        b = (0, f.p9)({
+    let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
+        m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
+        b = (0, h.p9)({
             guildId: l.id,
             roleId: o,
             size: 24,
         }),
-        h = r.useCallback(
+        g = r.useCallback(
             (e) => {
                 null != l &&
                     null != m &&
-                    (0, u.jW)(e, async () => {
+                    (0, p.jW)(e, async () => {
                         let { default: e } = await n.e("14486").then(n.bind(n, 786746));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                S(Z({}, t), {
+                                P(S({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -199,78 +200,75 @@ function T(e) {
     return (null == m ? void 0 : m.name) == null
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: h,
-              className: N.identifier,
+              onContextMenu: g,
+              className: w.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(g.Z, Z({ className: a()(N.__invalid_icon, N.image) }, b))
-                      : (0, i.jsx)(d.lZ8, {
+                      ? (0, i.jsx)(f.Z, S({ className: a()(w.__invalid_icon, w.image) }, b))
+                      : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
                             height: 23,
-                            className: a()(N.shield, N.image),
-                            color: null != (t = m.colorString) ? t : _.Pbq,
+                            className: a()(w.shield, w.image),
+                            color: null != (t = m.colorString) ? t : C.Pbq,
                         }),
-                  (0, i.jsx)(d.Text, {
-                      className: N.roleName,
+                  (0, i.jsx)(u.Text, {
+                      className: w.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
                       children: m.name,
                   }),
-                  s ? (0, i.jsx)(E, { tooltipText: p }) : null,
+                  s ? (0, i.jsx)(k, { tooltipText: d }) : null,
               ],
           });
 }
-function P(e) {
+function T(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
-        o = (0, c.e7)([y.default], () => y.default.getUser(n)),
-        s = (0, c.e7)([x.ZP], () => {
+        o = (0, c.e7)([O.default], () => O.default.getUser(n)),
+        s = (0, c.e7)([j.ZP], () => {
             var e;
-            return null == (e = x.ZP.getMember(t.id, n)) ? void 0 : e.nick;
+            return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        u = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation);
+        d = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {
               onContextMenu: a,
-              className: N.identifier,
+              className: w.identifier,
               children: [
-                  (0, i.jsx)(d.qEK, {
-                      className: N.image,
+                  (0, i.jsx)(u.qEK, {
+                      className: w.image,
                       src: o.getAvatarURL(t.id, 24),
                       "aria-label": o.username,
-                      size: d.EFr.SIZE_24,
+                      size: u.EFr.SIZE_24,
                   }),
-                  (0, i.jsx)(d.Text, {
-                      className: N.roleName,
+                  (0, i.jsx)(u.Text, {
+                      className: w.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
                       children: null != s ? s : o.username,
                   }),
-                  u
+                  d
                       ? null
-                      : (0, i.jsx)(d.Text, {
-                            className: N.tag,
+                      : (0, i.jsx)(u.Text, {
+                            className: w.tag,
                             variant: "text-sm/normal",
-                            children: O.ZP.getUserTag(o),
+                            children: _.ZP.getUserTag(o),
                         }),
-                  r ? (0, i.jsx)(E, { tooltipText: l }) : null,
+                  r ? (0, i.jsx)(k, { tooltipText: l }) : null,
               ],
           });
 }
-function E(e) {
+function k(e) {
     let { tooltipText: t } = e;
-    return (0, i.jsx)(d.ua7, {
+    return (0, i.jsx)(d.u, {
         text: t,
-        children: (e) =>
-            (0, i.jsx)(
-                "div",
-                S(Z({ className: N.lockIcon }, e), {
-                    children: (0, i.jsx)(d.mBM, {
-                        size: "xs",
-                        color: "currentColor",
-                    }),
-                }),
-            ),
+        children: (0, i.jsx)("div", {
+            className: w.lockIcon,
+            children: (0, i.jsx)(u.mBM, {
+                size: "xs",
+                color: "currentColor",
+            }),
+        }),
     });
 }

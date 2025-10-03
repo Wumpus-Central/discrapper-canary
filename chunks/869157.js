@@ -1,132 +1,90 @@
-n.d(t, { Z: () => k }), n(975844), n(388685), n(642613);
+n.d(t, { Z: () => T }), n(975844), n(388685), n(642613);
 var i = n(951288),
     r = n(647438),
     l = n(512722),
     a = n.n(l),
     o = n(442837),
     s = n(907862),
-    c = n(481060),
-    d = n(749210),
-    u = n(367907),
-    p = n(895924),
-    m = n(581364),
-    b = n(929507),
-    g = n(997787),
-    f = n(314897),
-    h = n(485386),
-    x = n(430824),
-    j = n(594174),
-    v = n(626135),
-    y = n(5192),
-    O = n(709054),
-    _ = n(360606),
-    C = n(905753),
-    N = n(399860),
+    c = n(28664),
+    d = n(481060),
+    u = n(749210),
+    p = n(367907),
+    m = n(895924),
+    b = n(581364),
+    g = n(929507),
+    f = n(997787),
+    h = n(314897),
+    x = n(485386),
+    j = n(430824),
+    v = n(594174),
+    y = n(626135),
+    O = n(5192),
+    _ = n(709054),
+    C = n(145260),
+    N = n(905753),
+    w = n(399860),
     S = n(335049),
-    Z = n(617012),
-    w = n(981631),
-    I = n(388032),
-    P = n(547063);
+    P = n(617012),
+    I = n(981631),
+    Z = n(388032),
+    E = n(547063);
 function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function k(e) {
     let {
             commandId: t,
             editPermissions: n,
             guildId: l,
             noneSelectedText: s,
-            overwrites: u,
-            hasAccessToMutatePermissions: b,
+            overwrites: c,
+            hasAccessToMutatePermissions: p,
         } = e,
-        f = (0, o.e7)([x.Z], () => x.Z.getGuild(l));
-    a()(null != f, "");
-    let v = (0, o.e7)([h.Z], () => h.Z.getSortedRoles(l)),
-        [S, Z] = r.useState(new Set()),
-        w = r.useMemo(() => {
-            let e = (0, m.bD)(l),
-                t = v.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
-            return Object.values(u)
+        g = (0, o.e7)([j.Z], () => j.Z.getGuild(l));
+    a()(null != g, "");
+    let h = (0, o.e7)([x.Z], () => x.Z.getSortedRoles(l)),
+        [y, S] = r.useState(new Set()),
+        P = r.useMemo(() => {
+            let e = (0, b.bD)(l),
+                t = h.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
+            return Object.values(c)
                 .filter((e) => e.canRead)
                 .sort((n, i) => {
                     let r = n.type - i.type;
                     if (0 !== r) return r;
                     switch (n.type) {
-                        case p.Kw.USER:
+                        case m.Kw.USER:
                             return (function (e, t, n) {
                                 let i = Number(e.canWrite) - Number(t.canWrite);
                                 if (0 !== i) return i;
-                                let r = j.default.getUser(e.id),
-                                    l = j.default.getUser(t.id);
+                                let r = v.default.getUser(e.id),
+                                    l = v.default.getUser(t.id);
                                 if (null != r && null != l) {
-                                    let e = y.ZP.getName(n, void 0, r),
-                                        t = y.ZP.getName(n, void 0, l);
+                                    let e = O.ZP.getName(n, void 0, r),
+                                        t = O.ZP.getName(n, void 0, l);
                                     return null == e ? void 0 : e.localeCompare(t);
                                 }
-                                return O.default.compare(e.id, t.id);
+                                return _.default.compare(e.id, t.id);
                             })(n, i, l);
-                        case p.Kw.ROLE:
+                        case m.Kw.ROLE:
                             if (n.id === l) return -1;
                             if (i.id === l) return 1;
                             return t[n.id] > t[i.id] ? -1 : 1;
-                        case p.Kw.CHANNEL:
+                        case m.Kw.CHANNEL:
                             if (n.id === e) return -1;
                             if (i.id === e) return 1;
                             let a = Number(n.canWrite) - Number(i.canWrite);
-                            return 0 !== a ? a : O.default.compare(n.id, i.id);
+                            return 0 !== a ? a : _.default.compare(n.id, i.id);
                     }
                 });
-        }, [l, u, v]),
+        }, [l, c, h]),
         I = r.useCallback(
             (e, t) => {
-                n({}, [(0, N.rE)(e, t)]);
+                n({}, [(0, w.rE)(e, t)]);
             },
             [n],
         ),
-        T = r.useCallback(
+        Z = r.useCallback(
             (e, t, i) => {
-                let r = (0, N.rE)(e, t);
-                null != u[r] &&
+                let r = (0, w.rE)(e, t);
+                null != c[r] &&
                     n(
                         {
                             [r]: {
@@ -138,130 +96,163 @@ function k(e) {
                         [],
                     );
             },
-            [n, u],
+            [n, c],
         );
     r.useEffect(() => {
-        let e = Object.values(u)
-            .filter((e) => e.type === p.Kw.USER && !e.canRead && !S.has(e.id))
+        let e = Object.values(c)
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (d.Z.requestMembersById(l, e, !1), Z((t) => new Set([...t, ...e])));
-    }, [l, u, S, Z]);
-    let E = (0, o.e7)([C.Z], () => C.Z.getApplicationId()),
-        k = (0, o.e7)([_.default], () =>
-            null == E
+        0 !== e.length && (u.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
+    }, [l, c, y, S]);
+    let T = (0, o.e7)([N.Z], () => N.Z.getApplicationId()),
+        A = (0, o.e7)([C.default], () =>
+            null == T
                 ? void 0
-                : _.default.integrations.find((e) => {
+                : C.default.integrations.find((e) => {
                       var t;
-                      return (null == (t = e.application) ? void 0 : t.id) === E;
+                      return (null == (t = e.application) ? void 0 : t.id) === T;
                   }),
         ),
-        D = (0, o.e7)([g.Z], () => void 0 !== k && g.Z.canShowToggleTooltip(k.id));
-    return w.length > 0
-        ? w.map((e) =>
+        D = (0, o.e7)([f.Z], () => void 0 !== A && f.Z.canShowToggleTooltip(A.id));
+    return P.length > 0
+        ? P.map((e) =>
               (0, i.jsx)(
-                  A,
+                  k,
                   {
-                      guild: f,
+                      guild: g,
                       commandId: t,
-                      onChange: (t) => T(e.id, e.type, t),
+                      onChange: (t) => Z(e.id, e.type, t),
                       onRemove: () => I(e.id, e.type),
                       overwrite: e,
-                      integration: k,
+                      integration: A,
                       canShowMigrationTooltip: D,
-                      hasAccessToMutatePermissions: b,
+                      hasAccessToMutatePermissions: p,
                   },
                   e.id,
               ),
           )
         : (0, i.jsx)("div", {
-              className: P.noItemsSelected,
-              children: (0, i.jsx)(c.Text, {
+              className: E.noItemsSelected,
+              children: (0, i.jsx)(d.Text, {
                   color: "text-muted",
                   variant: "text-sm/normal",
                   children: s,
               }),
           });
 }
-function A(e) {
+function k(e) {
     var t, n, l;
     let a,
         {
             guild: o,
             commandId: d,
-            onChange: g,
-            onRemove: h,
+            onChange: u,
+            onRemove: f,
             overwrite: x,
             integration: j,
-            canShowMigrationTooltip: y,
+            canShowMigrationTooltip: v,
             hasAccessToMutatePermissions: O,
         } = e,
-        _ = x.id === o.id || x.id === (0, m.bD)(o.id),
+        _ = x.id === o.id || x.id === (0, b.bD)(o.id),
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
         N = !x.canWrite || !O,
-        k = f.default.getId();
+        w = h.default.getId();
     O
         ? x.canWrite ||
-          (x.type === p.Kw.USER
-              ? (a = x.id === k ? I.intl.string(I.t["1VF/09"]) : I.intl.string(I.t.P1GnER))
-              : x.type === p.Kw.ROLE && (a = I.intl.string(I.t.mcAijY)))
-        : (a = null != d ? I.intl.string(I.t.tybdam) : I.intl.string(I.t.z2hjk5));
-    let A = y && null != j && x.id === o.id && void 0 !== C && !x.permission;
+          (x.type === m.Kw.USER
+              ? (a = x.id === w ? Z.intl.string(Z.t["1VF/09"]) : Z.intl.string(Z.t.P1GnER))
+              : x.type === m.Kw.ROLE && (a = Z.intl.string(Z.t.mcAijY)))
+        : (a = null != d ? Z.intl.string(Z.t.tybdam) : Z.intl.string(Z.t.z2hjk5));
+    let T = v && null != j && x.id === o.id && void 0 !== C && !x.permission;
     r.useEffect(() => {
-        if (A) {
-            var e;
-            v.default.track(
-                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
-                E(T({}, (0, u.hH)(o.id)), {
-                    application_id: null == j || null == (e = j.application) ? void 0 : e.id,
-                    location: "toggle",
-                }),
+        if (T) {
+            var e, t, n;
+            y.default.track(
+                I.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            i = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (i = i.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: i,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = i);
+                            });
+                    }
+                    return e;
+                })({}, (0, p.hH)(o.id))),
+                (n = n =
+                    {
+                        application_id: null == j || null == (e = j.application) ? void 0 : e.id,
+                        location: "toggle",
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t),
             );
         }
-    }, [o.id, null == j || null == (l = j.application) ? void 0 : l.id, A]);
-    let R = r.useRef(null),
-        L = (0, i.jsx)(c.ua7, {
-            tooltipClassName: P.tooltip,
+    }, [o.id, null == j || null == (l = j.application) ? void 0 : l.id, T]);
+    let k = r.useRef(null),
+        D = (0, i.jsx)(c.u, {
             text: a,
             shouldShow: N,
             position: "left",
-            hideOnClick: !1,
-            children: (e) =>
-                (0, i.jsx)(
-                    "div",
-                    E(T({}, e), {
-                        ref: R,
-                        children: (0, i.jsx)(Z.Z, {
-                            isDisabled: N,
-                            currentValue: x.permission,
-                            onChange: A
-                                ? (e) => {
-                                      b.Z.dismissToggleTooltip(o.id, j), g(e);
-                                  }
-                                : g,
-                        }),
-                    }),
-                ),
+            children: (0, i.jsx)("div", {
+                ref: k,
+                children: (0, i.jsx)(P.Z, {
+                    isDisabled: N,
+                    currentValue: x.permission,
+                    onChange: T
+                        ? (e) => {
+                              g.Z.dismissToggleTooltip(o.id, j), u(e);
+                          }
+                        : u,
+                }),
+            }),
         }),
-        M = (0, i.jsx)(s.J2, {
-            targetElementRef: R,
-            title: I.intl.string(I.t.ufFDiI),
-            body: I.intl.format(I.t.pW4Cr6, {
+        R = (0, i.jsx)(s.J2, {
+            targetElementRef: k,
+            title: Z.intl.string(Z.t.ufFDiI),
+            body: Z.intl.format(Z.t.pW4Cr6, {
                 botName: C,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
             position: "bottom",
             caretConfig: { align: "center" },
             onRequestClose: () => {
-                b.Z.dismissToggleTooltip(o.id, j);
+                g.Z.dismissToggleTooltip(o.id, j);
             },
         });
     return (0, i.jsxs)(
         "div",
         {
-            className: P.entryItem,
+            className: E.entryItem,
             children: [
                 (0, i.jsx)("div", {
-                    className: P.entryName,
+                    className: E.entryName,
                     children: (0, i.jsx)(S.Z, {
                         guild: o,
                         id: x.id,
@@ -271,16 +262,16 @@ function A(e) {
                     }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: P.entryActions,
+                    className: E.entryActions,
                     children: [
-                        (0, i.jsx)(D, {
+                        (0, i.jsx)(A, {
                             commandId: d,
                             isSentinel: _,
                             isDisabled: !O,
-                            onRemove: h,
+                            onRemove: f,
                         }),
-                        L,
-                        A && M,
+                        D,
+                        T && R,
                     ],
                 }),
             ],
@@ -288,22 +279,22 @@ function A(e) {
         x.id,
     );
 }
-function D(e) {
+function A(e) {
     let { commandId: t, isSentinel: n, isDisabled: r, onRemove: l } = e;
     return r
         ? null
         : null == t && n
           ? null
           : (0, i.jsx)("div", {
-                className: P.removeActions,
-                children: (0, i.jsx)(c.P3F, {
-                    className: P.removeContainer,
-                    "aria-label": I.intl.string(I.t.mT0CQE),
+                className: E.removeActions,
+                children: (0, i.jsx)(d.P3F, {
+                    className: E.removeContainer,
+                    "aria-label": Z.intl.string(Z.t.mT0CQE),
                     onClick: l,
-                    children: (0, i.jsx)(c.XHJ, {
+                    children: (0, i.jsx)(d.XHJ, {
                         size: "md",
                         color: "currentColor",
-                        className: P.removeIcon,
+                        className: E.removeIcon,
                     }),
                 }),
             });

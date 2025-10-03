@@ -2,148 +2,147 @@ n.d(t, { Z: () => x }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
-    o = n(603211),
-    c = n(734893),
-    d = n(592125),
-    u = n(768581),
-    m = n(8426),
-    g = n(969632),
-    p = n(388032),
+    s = n.n(l),
+    a = n(28664),
+    o = n(481060),
+    c = n(603211),
+    d = n(734893),
+    u = n(592125),
+    m = n(768581),
+    g = n(8426),
+    p = n(969632),
+    f = n(388032),
     h = n(197530);
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 let x = function (e) {
-    let { guildId: t, resourceChannel: l, index: x, onDragComplete: j, onDragStart: v, onDragReset: _ } = e,
-        { title: O, channelId: y, description: C } = l,
-        N = d.Z.getChannel(y),
-        E = null;
-    (null != N && (0, c.k3)(N)) || (E = p.intl.string(p.t.kTdL8f));
-    let I = null == C || 0 === C.length,
-        S = u.ZP.getResourceChannelIconURL({
+    let { guildId: t, resourceChannel: l, index: x, onDragComplete: b, onDragStart: j, onDragReset: _ } = e,
+        { title: v, channelId: C, description: O } = l,
+        y = u.Z.getChannel(C),
+        N = null;
+    (null != y && (0, d.k3)(y)) || (N = f.intl.string(f.t.kTdL8f));
+    let E = null == O || 0 === O.length,
+        I = m.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon,
         }),
         {
-            drag: T,
-            dragSourcePosition: P,
-            drop: w,
-            setIsDraggable: R,
-        } = (0, o.Z)({
+            drag: S,
+            dragSourcePosition: T,
+            drop: P,
+            setIsDraggable: w,
+        } = (0, c.Z)({
             type: "RESOURCE_CHANNEL",
             optionId: l.channelId,
             index: x,
-            onDragStart: v,
-            onDragComplete: j,
+            onDragStart: j,
+            onDragComplete: b,
             onDragReset: _,
         }),
-        Z = i.useCallback(
+        R = i.useCallback(
             (e) => {
-                (0, m.XG)(l.channelId, e);
+                (0, g.XG)(l.channelId, e);
             },
             [l.channelId],
         ),
-        D = i.useCallback(
+        Z = i.useCallback(
             (e, n) => {
-                let r = g.Z.getSettings();
+                let r = p.Z.getSettings();
                 null != r &&
-                    ((0, m.XG)(l.channelId, e),
-                    (0, m.oo)(t, r).then(() => {
-                        (0, m.mM)(t, e.channelId, n);
+                    ((0, g.XG)(l.channelId, e),
+                    (0, g.oo)(t, r).then(() => {
+                        (0, g.mM)(t, e.channelId, n);
                     }));
             },
             [t, l],
         ),
-        A = i.useCallback(
+        D = i.useCallback(
             () =>
-                (0, s.ZDy)(async () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("84725").then(n.bind(n, 462499));
-                    return (n) =>
-                        (0, r.jsx)(
+                    return (n) => {
+                        var i, s;
+                        return (0, r.jsx)(
                             e,
-                            b(f({}, n), {
-                                guildId: t,
-                                resourceChannel: l,
-                                onSave: Z,
-                                onDelete: () => (0, m.Hz)(l.channelId),
-                                onIconUpload: D,
-                            }),
+                            ((i = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, n)),
+                            (s = s =
+                                {
+                                    guildId: t,
+                                    resourceChannel: l,
+                                    onSave: R,
+                                    onDelete: () => (0, g.Hz)(l.channelId),
+                                    onIconUpload: Z,
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(s)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                  }),
+                            i),
                         );
+                    };
                 }),
-            [t, l, Z, D],
+            [t, l, R, Z],
         );
-    return null == N
+    return null == y
         ? null
         : (0, r.jsxs)("div", {
               className: h.resourceChannelContainer,
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(h.resourceChannel, {
-                          [h.dropIndicatorBefore]: null != P && x < P,
-                          [h.dropIndicatorAfter]: null != P && x > P,
-                          [h.resourceChannelError]: null != E,
+                      className: s()(h.resourceChannel, {
+                          [h.dropIndicatorBefore]: null != T && x < T,
+                          [h.dropIndicatorAfter]: null != T && x > T,
+                          [h.resourceChannelError]: null != N,
                       }),
                       ref: (e) => {
-                          T(w(e));
+                          S(P(e));
                       },
                       children: [
                           (0, r.jsx)("div", {
                               className: h.dragContainer,
-                              onMouseEnter: () => R(!0),
-                              onMouseLeave: () => R(!1),
-                              children: (0, r.jsx)(s.Vni, {
+                              onMouseEnter: () => w(!0),
+                              onMouseLeave: () => w(!1),
+                              children: (0, r.jsx)(o.Vni, {
                                   size: "xs",
                                   color: "currentColor",
                                   className: h.dragIcon,
                               }),
                           }),
-                          null != S &&
+                          null != I &&
                               (0, r.jsx)("div", {
                                   className: h.iconWrapper,
                                   children: (0, r.jsx)("img", {
-                                      src: S,
+                                      src: I,
                                       className: h.icon,
                                       width: 32,
                                       height: 32,
@@ -154,43 +153,39 @@ let x = function (e) {
                           (0, r.jsxs)("div", {
                               className: h.resourceChannelContent,
                               children: [
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       className: h.resourceChannelTitle,
                                       variant: "text-md/semibold",
                                       color: "header-primary",
-                                      children: O,
+                                      children: v,
                                   }),
-                                  !I &&
-                                      (0, r.jsx)(s.Text, {
+                                  !E &&
+                                      (0, r.jsx)(o.Text, {
                                           className: h.resourceChannelDescription,
                                           variant: "text-xs/medium",
                                           color: "text-muted",
                                           lineClamp: 1,
-                                          children: C,
+                                          children: O,
                                       }),
                               ],
                           }),
-                          (0, r.jsx)(s.ua7, {
-                              text: p.intl.string(p.t.bt75u7),
-                              children: (e) =>
-                                  (0, r.jsx)(
-                                      s.hU,
-                                      b(f({}, e), {
-                                          icon: s.vdY,
-                                          size: "sm",
-                                          variant: "primary",
-                                          onClick: A,
-                                          "aria-label": p.intl.string(p.t.bt75u7),
-                                      }),
-                                  ),
+                          (0, r.jsx)(a.u, {
+                              text: f.intl.string(f.t.bt75u7),
+                              children: (0, r.jsx)(o.hU, {
+                                  icon: o.vdY,
+                                  size: "sm",
+                                  variant: "primary",
+                                  onClick: D,
+                                  "aria-label": f.intl.string(f.t.bt75u7),
+                              }),
                           }),
                       ],
                   }),
-                  null != E &&
-                      (0, r.jsx)(s.Text, {
+                  null != N &&
+                      (0, r.jsx)(o.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: E,
+                          children: N,
                       }),
               ],
           });

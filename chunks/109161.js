@@ -1,13 +1,13 @@
 n.d(t, {
-    F: () => h,
-    x: () => m,
+    F: () => _,
+    x: () => p,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(981729),
+    s = n(28664),
     l = n(865672),
     c = n(218634);
 function u(e, t, n) {
@@ -39,30 +39,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function p(e) {
+function f(e) {
     var t;
     let { color: n, colors: a, className: s, background: u = !0, hoverOverride: d } = e,
         [f, _] = i.useState(!1),
@@ -153,25 +130,21 @@ function p(e) {
               ],
           });
 }
-function h(e) {
+function _(e) {
     let { color: t, colors: n, name: i, tooltip: a = !0 } = e;
     return null == t && null == n
         ? null
         : a
           ? (0, r.jsx)(s.u, {
-                text: i,
-                children: (t) =>
-                    (0, r.jsx)(
-                        "span",
-                        _(d({}, t), {
-                            "aria-hidden": !0,
-                            children: (0, r.jsx)(p, d({}, e)),
-                        }),
-                    ),
+                __unsupportedReactNodeAsText: i,
+                children: (0, r.jsx)("span", {
+                    "aria-hidden": !0,
+                    children: (0, r.jsx)(f, d({}, e)),
+                }),
             })
-          : (0, r.jsx)(p, d({}, e));
+          : (0, r.jsx)(f, d({}, e));
 }
-function m(e) {
+function p(e) {
     let { color: t, colors: n, className: i } = e,
         { gradientStyle: a, gradientClassname: s } = (0, l.Ic)({
             colorStrings: n,

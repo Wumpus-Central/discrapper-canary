@@ -1,174 +1,123 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => N });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(481060),
-    l = n(100527),
-    c = n(906732),
-    u = n(933557),
-    d = n(430824),
-    f = n(957575),
-    _ = n(323038),
-    p = n(960870),
-    h = n(139793),
-    m = n(652853),
-    g = n(336383),
-    E = n(194811),
-    b = n(265386),
-    y = n(340266),
-    O = n(849755),
-    v = n(384298),
-    I = n(670451),
-    T = n(671955),
-    S = n(388032),
-    A = n(704543);
-function C(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    s = n(28664),
+    l = n(481060),
+    c = n(100527),
+    u = n(906732),
+    d = n(933557),
+    f = n(430824),
+    _ = n(957575),
+    p = n(323038),
+    h = n(960870),
+    m = n(139793),
+    g = n(652853),
+    E = n(336383),
+    b = n(194811),
+    y = n(265386),
+    O = n(340266),
+    v = n(849755),
+    I = n(384298),
+    T = n(670451),
+    S = n(671955),
+    A = n(388032),
+    C = n(704543);
 function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                C(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function R(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function P(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function w(e) {
-    let { user: t, currentUser: n, voiceChannel: i, className: C, onClose: R } = e,
-        { themeType: w } = (0, m.z)(),
-        { analyticsLocations: D } = (0, c.ZP)(l.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        x = (0, p.Z)({
+    let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
+        { themeType: P } = (0, g.z)(),
+        { analyticsLocations: w } = (0, u.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        D = (0, h.Z)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: i.id,
             user: t,
-            analyticsLocations: D,
+            analyticsLocations: w,
         }),
-        L = (0, h.Z)({
+        L = (0, m.Z)({
             userId: t.id,
-            onAction: x,
+            onAction: D,
         }),
-        j = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        M = (0, _.Z)(i),
-        k = (0, u.ZP)(i),
-        { channelStatusEnabled: U } = (0, f.D)({ location: "UserProfileVoiceActivityCard" }),
-        G = () => {
+        x = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
+        M = (0, p.Z)(i),
+        j = (0, d.ZP)(i),
+        { channelStatusEnabled: k } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
+        U = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t["+DsWbW"]) : S.intl.string(S.t.xOVEjY);
-            return (0, r.jsx)(s.ua7, {
+            let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbW"]) : A.intl.string(A.t.xOVEjY);
+            return (0, r.jsx)(s.u, {
                 text: e,
-                children: (e) => (0, r.jsx)(s.d3s, P(N({}, e), { size: "xxs" })),
+                children: (0, r.jsx)(l.d3s, { size: "xxs" }),
             });
         },
-        B = () =>
+        G = () =>
             (0, r.jsx)("div", {
-                className: A.actions,
-                children: (0, r.jsx)(v.Z, {
+                className: C.actions,
+                children: (0, r.jsx)(I.Z, {
                     channel: i,
-                    onAction: x,
+                    onAction: D,
                     onClose: R,
                 }),
             }),
-        Z =
+        B =
             i.isDM() || i.isGroupDM()
-                ? S.intl.string(S.t["9FaEzs"])
+                ? A.intl.string(A.t["9FaEzs"])
                 : i.isGuildStageVoice()
-                  ? S.intl.string(S.t.QygGCA)
-                  : S.intl.string(S.t.msxteH);
-    return (0, r.jsx)(c.Gt, {
-        value: D,
-        children: (0, r.jsxs)(g.Z, {
+                  ? A.intl.string(A.t.QygGCA)
+                  : A.intl.string(A.t.msxteH);
+    return (0, r.jsx)(u.Gt, {
+        value: w,
+        children: (0, r.jsxs)(E.Z, {
             ref: L,
-            className: a()(A.card, C),
-            onAction: x,
+            className: a()(C.card, N),
+            onAction: D,
             onClose: R,
-            "aria-label": "".concat(Z, ", ").concat(k),
+            "aria-label": "".concat(B, ", ").concat(j),
             children: [
-                (0, r.jsx)(E.Z, {
-                    text: Z,
-                    tags: G(),
-                    contextMenu: (0, r.jsx)(I.Z, {
+                (0, r.jsx)(b.Z, {
+                    text: B,
+                    tags: U(),
+                    contextMenu: (0, r.jsx)(T.Z, {
                         display: "voice",
                         user: t,
                         onClose: R,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: A.body,
+                    className: C.body,
                     children: (0, r.jsxs)("div", {
-                        className: A.content,
+                        className: C.content,
                         children: [
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(O.Z, {
                                 users: M,
                                 channel: i,
                             }),
                             (0, r.jsxs)("div", {
-                                className: A.details,
+                                className: C.details,
                                 children: [
-                                    (0, r.jsx)(b.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         channel: i,
-                                        guild: j,
-                                        onAction: x,
+                                        guild: x,
+                                        onAction: D,
                                         onClose: R,
                                     }),
-                                    U &&
+                                    k &&
                                         i.isGuildVoice() &&
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             voiceChannel: i,
-                                            onAction: x,
+                                            onAction: D,
                                             onClose: R,
                                         }),
-                                    w === T.l.MODAL_V2 && B(),
+                                    P === S.l.MODAL_V2 && G(),
                                 ],
                             }),
-                            w === T.l.MODAL && B(),
+                            P === S.l.MODAL && G(),
                         ],
                     }),
                 }),
-                w !== T.l.MODAL && w !== T.l.MODAL_V2 && B(),
+                P !== S.l.MODAL && P !== S.l.MODAL_V2 && G(),
             ],
         }),
     });

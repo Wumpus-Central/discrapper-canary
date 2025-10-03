@@ -1,6 +1,5 @@
 e.exports = {
     container: "container_d7a3d0",
-    autoWidth: "autoWidth_d7a3d0",
     headerActions: "headerActions_d7a3d0",
     formDescription: "formDescription_d7a3d0",
     header: "header_d7a3d0",

@@ -1,14 +1,15 @@
-n.d(t, { q: () => m });
+n.d(t, { q: () => h });
 var r = n(951288);
 n(647438);
 var i = n(952265),
-    a = n(159691),
-    o = n(481060),
-    s = n(479661),
-    l = n(135102),
-    c = n(119475),
-    u = n(388032);
-function d(e, t, n) {
+    a = n(28664),
+    o = n(159691),
+    s = n(481060),
+    l = n(479661),
+    c = n(135102),
+    u = n(119475),
+    d = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,60 +33,33 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = () => {
+let p = () => {
         (0, i.ZD)(
             async () => {
-                let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("47051"), n.e("26196")]).then(
+                let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("36653"), n.e("26196")]).then(
                     n.bind(n, 433359),
                 );
-                return (t) => (0, r.jsx)(e, f({}, t));
+                return (t) => (0, r.jsx)(e, _({}, t));
             },
-            { modalKey: l.tj },
+            { modalKey: c.tj },
         );
     },
-    m = () =>
-        (0, s.e)("client_themes_editor")
-            ? (0, r.jsx)(o.ua7, {
-                  text: u.intl.string(u.t.RDE0SU),
-                  children: (e) =>
-                      (0, r.jsx)(
-                          a.hU,
-                          p(f({}, e), {
-                              "aria-label": u.intl.string(c.default.zgFs8P),
-                              icon: o.aAc,
-                              variant: "icon-only",
-                              onClick: () => {
-                                  h();
-                              },
-                          }),
-                      ),
+    h = () =>
+        (0, l.e)("client_themes_editor")
+            ? (0, r.jsx)(a.u, {
+                  text: d.intl.string(d.t.RDE0SU),
+                  children: (0, r.jsx)(o.hU, {
+                      "aria-label": d.intl.string(u.default.zgFs8P),
+                      icon: s.aAc,
+                      variant: "icon-only",
+                      onClick: () => {
+                          p();
+                      },
+                  }),
               })
             : null;

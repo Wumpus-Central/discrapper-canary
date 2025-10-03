@@ -1,139 +1,119 @@
-r.d(t, { Z: () => j }), r(388685), r(539854);
-var n = r(951288),
-    i = r(647438),
-    l = r(120356),
-    a = r.n(l),
-    s = r(758713),
-    o = r(657707),
-    c = r(481060),
-    u = r(388032),
-    d = r(226788);
+n.d(t, { Z: () => g }), n(388685), n(539854);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    s = n(758713),
+    o = n(657707),
+    c = n(28664),
+    d = n(388032),
+    u = n(226788);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-let p = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
-function f(e) {
+let f = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
+function p(e) {
     var { platform: t } = e,
-        r = (function (e, t) {
+        n = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["platform"]);
     switch (t) {
         case s.z.DESKTOP:
-            return (0, n.jsx)(o.pzj, m({ size: "xs" }, r));
+            return (0, r.jsx)(o.pzj, m({ size: "xs" }, n));
         case s.z.XBOX:
-            return (0, n.jsx)(o.Mko, m({ size: "xs" }, r));
+            return (0, r.jsx)(o.Mko, m({ size: "xs" }, n));
         case s.z.PLAYSTATION:
-            return (0, n.jsx)(o.Tsp, m({ size: "xs" }, r));
+            return (0, r.jsx)(o.Tsp, m({ size: "xs" }, n));
         case s.z.NINTENDO:
-            return (0, n.jsx)(o.aPH, m({ size: "xs" }, r));
+            return (0, r.jsx)(o.aPH, m({ size: "xs" }, n));
         default:
             return null;
     }
 }
-function g(e) {
+function x(e) {
     let { platforms: t } = e;
-    return (0, n.jsx)("div", {
-        className: a()(d.row, d.gapSm),
+    return (0, r.jsx)("div", {
+        className: a()(u.row, u.gapSm),
         style: { alignItems: "center" },
         children: t.map((e) =>
-            (0, n.jsx)(
-                c.ua7,
+            (0, r.jsx)(
+                c.u,
                 {
                     text: (function (e) {
                         switch (e) {
                             case s.z.DESKTOP:
-                                return u.intl.string(u.t.KT6uCA);
+                                return d.intl.string(d.t.KT6uCA);
                             case s.z.XBOX:
-                                return u.intl.string(u.t.DDWUJi);
+                                return d.intl.string(d.t.DDWUJi);
                             case s.z.PLAYSTATION:
-                                return u.intl.string(u.t.fzMz2t);
+                                return d.intl.string(d.t.fzMz2t);
                             case s.z.NINTENDO:
-                                return u.intl.string(u.t.AMW8jY);
+                                return d.intl.string(d.t.AMW8jY);
                             default:
                                 return null;
                         }
                     })(e),
-                    children: (t) => {
-                        var r, i;
-                        return (0, n.jsx)(
-                            f,
-                            ((r = m({}, t)),
-                            (i = i = { platform: e }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                                : (function (e, t) {
-                                      var r = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var n = Object.getOwnPropertySymbols(e);
-                                          r.push.apply(r, n);
-                                      }
-                                      return r;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                                  }),
-                            r),
-                        );
-                    },
+                    children: (0, r.jsx)(p, { platform: e }),
                 },
                 e,
             ),
         ),
     });
 }
-function j(e) {
-    let { detectedGame: t, className: r } = e,
+function g(e) {
+    let { detectedGame: t, className: n } = e,
         l = i.useMemo(() => {
             let e = new Set(t.platforms),
-                r = [...e];
+                n = [...e];
             return (
-                !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && r.push(s.z.DESKTOP),
-                r.filter((e) => p.includes(e))
+                !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && n.push(s.z.DESKTOP),
+                n.filter((e) => f.includes(e))
             );
         }, [t.platforms]);
     return 0 === l.length
         ? null
-        : (0, n.jsx)("div", {
-              className: a()(d.column, d.gapLg, r),
-              children: l.length > 0 && (0, n.jsx)(g, { platforms: l }),
+        : (0, r.jsx)("div", {
+              className: a()(u.column, u.gapLg, n),
+              children: l.length > 0 && (0, r.jsx)(x, { platforms: l }),
           });
 }

@@ -1,347 +1,293 @@
 n.r(t), n.d(t, { default: () => V }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    a = n(120356),
-    l = n.n(a),
-    i = n(512722),
-    s = n.n(i),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
+    a = n(512722),
+    s = n.n(a),
     c = n(754700),
     u = n(442837),
-    d = n(780384),
-    f = n(755721),
-    p = n(481060),
-    m = n(607070),
-    v = n(210887),
-    C = n(617136),
-    g = n(915750),
-    _ = n(509212),
-    E = n(113434),
+    d = n(28664),
+    m = n(780384),
+    p = n(755721),
+    f = n(481060),
+    v = n(607070),
+    E = n(210887),
+    g = n(617136),
+    O = n(915750),
+    b = n(509212),
+    h = n(113434),
     S = n(569984),
-    O = n(497505),
-    b = n(475595),
-    h = n(566078),
-    y = n(164495),
-    j = n(472144),
-    x = n(602667),
-    T = n(644646),
-    P = n(604162),
-    D = n(747717),
-    R = n(963123),
-    I = n(281055),
+    C = n(497505),
+    _ = n(475595),
+    y = n(566078),
+    j = n(164495),
+    x = n(472144),
+    T = n(602667),
+    D = n(644646),
+    R = n(604162),
+    P = n(747717),
+    I = n(963123),
+    N = n(281055),
     k = n(46140),
-    N = n(981631),
-    w = n(388032),
-    A = n(430799);
-function L(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function M(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function B(e) {
-    var t, n, a, i, S, x, I;
+    w = n(981631),
+    A = n(388032),
+    L = n(430799);
+function M(e) {
+    var t, n, o, a, S, T, N;
     let {
-            transitionState: B,
+            transitionState: M,
             onClose: V,
-            quest: F,
-            autoplay: Z,
-            videoSessionId: U,
+            quest: Z,
+            autoplay: B,
+            videoSessionId: F,
             impressionRef: q,
-            parentModalOpenStartClockTime: H,
-            sourceQuestContent: G,
+            parentModalOpenStartClockTime: U,
+            sourceQuestContent: H,
         } = e,
-        Q = (0, _.il)(F),
-        Y = (0, E.tP)(F),
-        W = (0, u.e7)([v.Z], () => v.Z.getState().theme),
-        z = (0, d.wj)(W) ? N.BRd.DARK : N.BRd.LIGHT,
-        K = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
-        X = (0, g.aM)(),
-        [$, J] = o.useState(Q.progressSeconds),
-        [ee, et] = o.useState(!1),
-        { completedRatio: en, completedRatioDisplay: er } = (0, E.I)(F),
-        [eo, ea] = (0, P.G6)(w.intl.string(w.t.RDE0SU), w.intl.string(w.t["+5kSoa"]), 1700),
-        el = null != (0, _.LM)(F.config),
-        [ei, es] = o.useState(!1),
-        ec = o.useRef(null),
-        eu = (0, _.vB)(F.config),
-        ed =
-            (null == (t = F.userStatus) ? void 0 : t.claimedAt) != null
-                ? el
-                    ? w.intl.string(w.t.WYchdX)
-                    : w.intl.string(w.t.vTgCW1)
-                : w.intl.string(w.t.cfY4PD),
-        ef = o.useCallback(() => {
-            eu &&
-                ((0, _.f2)(F.id, {
-                    content: O.jn.VIDEO_MODAL,
-                    ctaContent: C.jZ.COPY_QUEST_URL,
-                    impressionId: X,
-                    sourceQuestContent: G,
+        Q = (0, b.il)(Z),
+        Y = (0, h.tP)(Z),
+        G = (0, u.e7)([E.Z], () => E.Z.getState().theme),
+        z = (0, m.wj)(G) ? w.BRd.DARK : w.BRd.LIGHT,
+        W = (0, u.e7)([v.Z], () => v.Z.useReducedMotion),
+        K = (0, O.aM)(),
+        [X, $] = l.useState(Q.progressSeconds),
+        [J, ee] = l.useState(!1),
+        { completedRatio: et, completedRatioDisplay: en } = (0, h.I)(Z),
+        [er, el] = (0, R.G6)(A.intl.string(A.t.RDE0SU), A.intl.string(A.t["+5kSoa"]), 1700),
+        eo = null != (0, b.LM)(Z.config),
+        [ei, ea] = l.useState(!1),
+        es = l.useRef(null),
+        ec = (0, b.vB)(Z.config),
+        eu =
+            (null == (t = Z.userStatus) ? void 0 : t.claimedAt) != null
+                ? eo
+                    ? A.intl.string(A.t.WYchdX)
+                    : A.intl.string(A.t.vTgCW1)
+                : A.intl.string(A.t.cfY4PD),
+        ed = l.useCallback(() => {
+            ec &&
+                ((0, b.f2)(Z.id, {
+                    content: C.jn.VIDEO_MODAL,
+                    ctaContent: g.jZ.COPY_QUEST_URL,
+                    impressionId: K,
+                    sourceQuestContent: H,
                 }),
-                ea());
-        }, [X, eu, F.id, ea, G]),
-        ep = o.useCallback(() => {
-            eu &&
-                ((0, _.f2)(F.id, {
-                    content: O.jn.VIDEO_MODAL,
-                    ctaContent: C.jZ.COPY_QUEST_URL,
-                    impressionId: X,
-                    sourceQuestContent: G,
+                el());
+        }, [K, ec, Z.id, el, H]),
+        em = l.useCallback(() => {
+            ec &&
+                ((0, b.f2)(Z.id, {
+                    content: C.jn.VIDEO_MODAL,
+                    ctaContent: g.jZ.COPY_QUEST_URL,
+                    impressionId: K,
+                    sourceQuestContent: H,
                 }),
-                (0, p.showToast)((0, p.createToast)(w.intl.string(w.t["+5kSoa"]), p.ToastType.SUCCESS)),
-                es(!0),
-                null != ec.current && clearTimeout(ec.current),
-                (ec.current = setTimeout(() => {
-                    es(!1);
+                (0, f.showToast)((0, f.createToast)(A.intl.string(A.t["+5kSoa"]), f.ToastType.SUCCESS)),
+                ea(!0),
+                null != es.current && clearTimeout(es.current),
+                (es.current = setTimeout(() => {
+                    ea(!1);
                 }, 1700)));
-        }, [X, eu, F.id, G]);
-    o.useEffect(
+        }, [K, ec, Z.id, H]);
+    l.useEffect(
         () => () => {
-            null != ec.current && clearTimeout(ec.current);
+            null != es.current && clearTimeout(es.current);
         },
         [],
     );
-    let em = async () => {
+    let ep = async () => {
             if (null != V) {
-                let e = h.r.build(F.config).application.link;
-                (await (0, P.qP)(e)) && V();
+                let e = y.r.build(Z.config).application.link;
+                (await (0, R.qP)(e)) && V();
             }
-            (0, _.nc)(F, {
-                content: O.jn.VIDEO_MODAL,
-                ctaContent: C.jZ.OPEN_GAME_LINK,
-                impressionId: X,
-                sourceQuestContent: G,
+            (0, b.nc)(Z, {
+                content: C.jn.VIDEO_MODAL,
+                ctaContent: g.jZ.OPEN_GAME_LINK,
+                impressionId: K,
+                sourceQuestContent: H,
             });
         },
-        ev = () => {
-            ((0, _.xN)(F.config) || (0, _.Bg)(F.config)) && V();
+        ef = () => {
+            ((0, b.xN)(Z.config) || (0, b.Bg)(Z.config)) && V();
         },
-        eC = o.useMemo(() => h.r.build(F.config).defaultRewardName, [F]),
-        eg = w.intl.formatToPlainString(w.t["12IWPz"], { rewardName: eC }),
-        e_ = null == (a = F.config.taskConfigV2) || null == (n = a.tasks) ? void 0 : n[c.X.WATCH_VIDEO];
-    s()(null != e_, "VideoQuestModal: videoTask must not be null");
-    let eE = (0, _.ZS)(e_),
-        eS = "portrait" === eE;
-    return (0, r.jsx)(p.Y0X, {
+        ev = l.useMemo(() => y.r.build(Z.config).defaultRewardName, [Z]),
+        eE = A.intl.formatToPlainString(A.t["12IWPz"], { rewardName: ev }),
+        eg = null == (o = Z.config.taskConfigV2) || null == (n = o.tasks) ? void 0 : n[c.X.WATCH_VIDEO];
+    s()(null != eg, "VideoQuestModal: videoTask must not be null");
+    let eO = (0, b.ZS)(eg),
+        eb = "portrait" === eO;
+    return (0, r.jsx)(f.Y0X, {
         "data-migration-pending": !0,
-        transitionState: B,
-        size: p.CgR.DYNAMIC,
-        className: l()(A.modalRoot, {
-            [A.modalRootLandscape]: "landscape" === eE,
-            [A.modalRootPortrait]: "portrait" === eE,
+        transitionState: M,
+        size: f.CgR.DYNAMIC,
+        className: i()(L.modalRoot, {
+            [L.modalRootLandscape]: "landscape" === eO,
+            [L.modalRootPortrait]: "portrait" === eO,
         }),
         parentComponent: "Modal",
         children: (0, r.jsx)("div", {
             ref: (e) => {
                 q.current = e;
             },
-            className: A.modalBg,
+            className: L.modalBg,
             children: (0, r.jsx)("div", {
-                className: A.modalBody,
+                className: L.modalBody,
                 children: (0, r.jsxs)("div", {
-                    className: A.modalContent,
+                    className: L.modalContent,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: A.contentHeader,
+                            className: L.contentHeader,
                             children: [
-                                (0, r.jsxs)(p.P3F, {
-                                    className: A.contentHeaderGameInfo,
-                                    onClick: em,
+                                (0, r.jsxs)(f.P3F, {
+                                    className: L.contentHeaderGameInfo,
+                                    onClick: ep,
                                     children: [
                                         (0, r.jsx)("img", {
-                                            alt: F.config.messages.gameTitle,
-                                            className: l()(A.contentHeaderLogotype, A.accentOnHover),
-                                            src: (0, b.fh)(F, b.eC.LOGO_TYPE, z).url,
+                                            alt: Z.config.messages.gameTitle,
+                                            className: i()(L.contentHeaderLogotype, L.accentOnHover),
+                                            src: (0, _.fh)(Z, _.eC.LOGO_TYPE, z).url,
                                         }),
-                                        (0, r.jsx)(D.Z, {}),
+                                        (0, r.jsx)(P.Z, {}),
                                         (0, r.jsxs)("div", {
-                                            className: A.questHeading,
+                                            className: L.questHeading,
                                             children: [
-                                                (0, r.jsx)(p.X6q, {
+                                                (0, r.jsx)(f.X6q, {
                                                     variant: "heading-md/semibold",
                                                     color: "header-primary",
-                                                    children: w.intl.format(w.t.EQa7oq, {
-                                                        questName: F.config.messages.questName,
+                                                    children: A.intl.format(A.t.EQa7oq, {
+                                                        questName: Z.config.messages.questName,
                                                     }),
                                                 }),
-                                                (0, r.jsx)(p.Text, {
+                                                (0, r.jsx)(f.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "header-secondary",
-                                                    children: F.config.messages.gameTitle,
+                                                    children: Z.config.messages.gameTitle,
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
                                 !Y &&
-                                    (0, r.jsx)(p.ua7, {
+                                    (0, r.jsx)(d.u, {
                                         position: "left",
-                                        text: eg,
+                                        text: eE,
                                         onTooltipShow: () => {
-                                            et(!0);
+                                            ee(!0);
                                         },
                                         onTooltipHide: () => {
-                                            et(!1);
+                                            ee(!1);
                                         },
-                                        children: (e) =>
-                                            (0, r.jsx)(
-                                                p.P3F,
-                                                M(L({ className: A.progressCont }, e), {
-                                                    children: (0, r.jsx)(j.Z, {
-                                                        quest: F,
-                                                        size: 48,
-                                                        percentComplete: en,
-                                                        percentCompleteText: ee ? er : void 0,
-                                                        percentCompleteTextVariant: "text-sm/medium",
-                                                        children: (0, r.jsx)(T.Z, {
-                                                            className: A.questProgressRewardTile,
-                                                            quest: F,
-                                                            questContent: O.jn.VIDEO_MODAL,
-                                                            autoplay: !1,
-                                                            location: k.dr.VIDEO_MODAL,
-                                                            sourceQuestContent: G,
-                                                        }),
-                                                    }),
+                                        children: (0, r.jsx)(f.P3F, {
+                                            className: L.progressCont,
+                                            children: (0, r.jsx)(x.Z, {
+                                                quest: Z,
+                                                size: 48,
+                                                percentComplete: et,
+                                                percentCompleteText: J ? en : void 0,
+                                                percentCompleteTextVariant: "text-sm/medium",
+                                                children: (0, r.jsx)(D.Z, {
+                                                    className: L.questProgressRewardTile,
+                                                    quest: Z,
+                                                    questContent: C.jn.VIDEO_MODAL,
+                                                    autoplay: !1,
+                                                    location: k.dr.VIDEO_MODAL,
+                                                    sourceQuestContent: H,
                                                 }),
-                                            ),
+                                            }),
+                                        }),
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(R.Z, {
-                            quest: F,
-                            videoTask: e_,
-                            videoSessionId: U,
-                            parentTransitionState: B,
-                            onOptimisticProgressUpdate: J,
-                            autoplay: Z,
-                            performanceClockStartTime: H,
+                        (0, r.jsx)(I.Z, {
+                            quest: Z,
+                            videoTask: eg,
+                            videoSessionId: F,
+                            parentTransitionState: M,
+                            onOptimisticProgressUpdate: $,
+                            autoplay: B,
+                            performanceClockStartTime: U,
                             onClose: V,
-                            sourceQuestContent: G,
-                            orientation: eE,
+                            sourceQuestContent: H,
+                            orientation: eO,
                         }),
-                        eS
+                        eb
                             ? (0, r.jsxs)("div", {
-                                  className: l()(A.contentFooterPortrait, A.contentFooterButtonCont),
+                                  className: i()(L.contentFooterPortrait, L.contentFooterButtonCont),
                                   children: [
                                       (0, r.jsx)("div", {
-                                          className: A.portraitCtaBtnWrapper,
-                                          children: (0, r.jsx)(p.zxk, {
+                                          className: L.portraitCtaBtnWrapper,
+                                          children: (0, r.jsx)(f.zxk, {
                                               variant: "secondary",
-                                              text: w.intl.string(w.t.nL0WvL),
-                                              onClick: em,
+                                              text: A.intl.string(A.t.nL0WvL),
+                                              onClick: ep,
                                               fullWidth: !0,
                                           }),
                                       }),
                                       (0, r.jsx)("div", {
-                                          className: A.portraitCtaBtnWrapper,
-                                          children: (0, r.jsx)(y.i, {
-                                              className: A.portraitCtaBtn,
-                                              size: f.zx.Sizes.MEDIUM,
-                                              quest: F,
-                                              useReducedMotion: K,
-                                              isExpanded: (null == (i = F.userStatus) ? void 0 : i.completedAt) != null,
-                                              disabled: (null == (S = F.userStatus) ? void 0 : S.completedAt) == null,
-                                              ctaLabel: ed,
-                                              onClick: ev,
-                                              questContent: O.jn.VIDEO_MODAL,
-                                              sourceQuestContent: G,
+                                          className: L.portraitCtaBtnWrapper,
+                                          children: (0, r.jsx)(j.i, {
+                                              className: L.portraitCtaBtn,
+                                              size: p.zx.Sizes.MEDIUM,
+                                              quest: Z,
+                                              useReducedMotion: W,
+                                              isExpanded: (null == (a = Z.userStatus) ? void 0 : a.completedAt) != null,
+                                              disabled: (null == (S = Z.userStatus) ? void 0 : S.completedAt) == null,
+                                              ctaLabel: eu,
+                                              onClick: ef,
+                                              questContent: C.jn.VIDEO_MODAL,
+                                              sourceQuestContent: H,
                                           }),
                                       }),
-                                      eu &&
+                                      ec &&
                                           (ei
-                                              ? (0, r.jsx)(p.hU, {
+                                              ? (0, r.jsx)(f.hU, {
                                                     variant: "active",
-                                                    icon: p.owK,
-                                                    onClick: ep,
-                                                    "aria-label": w.intl.string(w.t.RDE0SU),
+                                                    icon: f.owK,
+                                                    onClick: em,
+                                                    "aria-label": A.intl.string(A.t.RDE0SU),
                                                 })
-                                              : (0, r.jsx)(p.ua7, {
-                                                    text: w.intl.string(w.t.WqhZsr),
-                                                    children: (e) =>
-                                                        (0, r.jsx)(
-                                                            p.hU,
-                                                            M(
-                                                                L(
-                                                                    {
-                                                                        variant: "secondary",
-                                                                        icon: p.TIy,
-                                                                        "aria-label": w.intl.string(w.t.RDE0SU),
-                                                                    },
-                                                                    e,
-                                                                ),
-                                                                { onClick: ep },
-                                                            ),
-                                                        ),
+                                              : (0, r.jsx)(d.u, {
+                                                    text: A.intl.string(A.t.WqhZsr),
+                                                    children: (0, r.jsx)(f.hU, {
+                                                        variant: "secondary",
+                                                        icon: f.TIy,
+                                                        "aria-label": A.intl.string(A.t.RDE0SU),
+                                                        onClick: em,
+                                                    }),
                                                 })),
                                   ],
                               })
                             : (0, r.jsxs)("div", {
-                                  className: A.contentFooter,
+                                  className: L.contentFooter,
                                   children: [
-                                      (0, r.jsx)(p.zxk, {
+                                      (0, r.jsx)(f.zxk, {
                                           variant: "secondary",
-                                          text: w.intl.string(w.t.cpT0Cg),
+                                          text: A.intl.string(A.t.cpT0Cg),
                                           onClick: V,
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: A.contentFooterButtonCont,
+                                          className: L.contentFooterButtonCont,
                                           children: [
-                                              eu &&
-                                                  (0, r.jsx)(p.zxk, {
+                                              ec &&
+                                                  (0, r.jsx)(f.zxk, {
                                                       variant: "secondary",
-                                                      text: eo,
-                                                      onClick: ef,
+                                                      text: er,
+                                                      onClick: ed,
                                                   }),
-                                              (0, r.jsx)(y.i, {
-                                                  className: A.claimBtn,
-                                                  size: f.zx.Sizes.MEDIUM,
-                                                  quest: F,
-                                                  useReducedMotion: K,
+                                              (0, r.jsx)(j.i, {
+                                                  className: L.claimBtn,
+                                                  size: p.zx.Sizes.MEDIUM,
+                                                  quest: Z,
+                                                  useReducedMotion: W,
                                                   isExpanded:
-                                                      (null == (x = F.userStatus) ? void 0 : x.completedAt) != null,
+                                                      (null == (T = Z.userStatus) ? void 0 : T.completedAt) != null,
                                                   disabled:
-                                                      (null == (I = F.userStatus) ? void 0 : I.completedAt) == null,
-                                                  ctaLabel: ed,
-                                                  onClick: ev,
-                                                  questContent: O.jn.VIDEO_MODAL,
-                                                  sourceQuestContent: G,
+                                                      (null == (N = Z.userStatus) ? void 0 : N.completedAt) == null,
+                                                  ctaLabel: eu,
+                                                  onClick: ef,
+                                                  questContent: C.jn.VIDEO_MODAL,
+                                                  sourceQuestContent: H,
                                               }),
                                           ],
                                       }),
@@ -354,47 +300,88 @@ function B(e) {
     });
 }
 function V(e) {
-    var { questId: t, overrideQuest: n, autoplay: o, openStartClockTime: a } = e,
-        l = (function (e, t) {
+    var { questId: t, overrideQuest: n, autoplay: l, openStartClockTime: o } = e,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, ["questId", "overrideQuest", "autoplay", "openStartClockTime"]);
-    let i = (0, u.e7)([S.Z], () => S.Z.getQuest(t)),
-        s = null != n ? n : i;
+    let a = (0, u.e7)([S.Z], () => S.Z.getQuest(t)),
+        s = null != n ? n : a;
     return null != s
-        ? (0, r.jsx)(x.A, {
+        ? (0, r.jsx)(T.A, {
               questOrQuests: s,
-              questContent: O.jn.VIDEO_MODAL,
-              minViewTimeSeconds: I.zw,
+              questContent: C.jn.VIDEO_MODAL,
+              minViewTimeSeconds: N.zw,
               trackGuildAndChannelMetadata: !0,
-              sourceQuestContent: l.sourceQuestContent,
-              children: (e) =>
-                  (0, r.jsx)(
-                      B,
-                      M(L({}, l), {
-                          parentModalOpenStartClockTime: a,
-                          impressionRef: e,
-                          quest: s,
-                          autoplay: o,
-                      }),
-                  ),
+              sourceQuestContent: i.sourceQuestContent,
+              children: (e) => {
+                  var t, n;
+                  return (0, r.jsx)(
+                      M,
+                      ((t = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              "function" == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      }),
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0,
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })({}, i)),
+                      (n = n =
+                          {
+                              parentModalOpenStartClockTime: o,
+                              impressionRef: e,
+                              quest: s,
+                              autoplay: l,
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(n)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            }),
+                      t),
+                  );
+              },
           })
         : null;
 }

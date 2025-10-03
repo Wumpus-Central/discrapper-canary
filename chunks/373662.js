@@ -1,18 +1,19 @@
 n.d(t, {
-    ZP: () => y,
-    fO: () => b,
-    sF: () => E,
+    ZP: () => O,
+    fO: () => y,
+    sF: () => b,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(377171),
-    c = n(951394),
-    u = n(388032),
-    d = n(946866);
-function f(e, t, n) {
+    s = n(28664),
+    l = n(481060),
+    c = n(377171),
+    u = n(951394),
+    d = n(388032),
+    f = n(261334);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +54,22 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +77,7 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,14 +86,13 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let E = i.forwardRef(function (e, t) {
+let b = i.forwardRef(function (e, t) {
     var {
             label: n,
             ariaLabel: i,
             tooltipText: a,
-            tooltipColor: f,
-            icon: p,
-            iconProps: g,
+            icon: _,
+            iconProps: h,
             onClick: E,
             onTooltipShow: b,
             onTooltipHide: y,
@@ -103,11 +103,10 @@ let E = i.forwardRef(function (e, t) {
             buttonClassName: S,
             children: A,
         } = e,
-        C = m(e, [
+        C = g(e, [
             "label",
             "ariaLabel",
             "tooltipText",
-            "tooltipColor",
             "icon",
             "iconProps",
             "onClick",
@@ -120,83 +119,74 @@ let E = i.forwardRef(function (e, t) {
             "buttonClassName",
             "children",
         ]);
-    return (0, r.jsx)(s.ua7, {
-        text: null != a ? a : n,
-        color: null != f ? f : s.FGA.PRIMARY,
+    return (0, r.jsx)(s.u, {
+        asContainer: !0,
+        __unsupportedReactNodeAsText: null != a ? a : n,
         "aria-label": n,
         onTooltipShow: b,
         onTooltipHide: y,
-        hideOnClick: !0,
-        tooltipClassName: d.tooltip,
-        children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: f, onFocus: m, onBlur: b, onClick: y } = e;
-            return (0, r.jsxs)(r.Fragment, {
-                children: [
-                    (0, r.jsxs)(
-                        c.zx,
-                        h(
-                            _(
-                                {
-                                    ref: t,
-                                    className: o()(d.hoverBarButton, S),
-                                    onMouseEnter: a,
-                                    onMouseLeave: f,
-                                    onFocus: m,
-                                    onBlur: b,
-                                    onClick: (e) => {
-                                        null == y || y(), E(e);
-                                    },
-                                    "aria-label": null != i ? i : n,
-                                    disabled: O,
-                                    dangerous: v,
-                                },
-                                C,
-                            ),
+        children: (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsxs)(
+                    u.zx,
+                    m(
+                        p(
                             {
-                                children: [
-                                    null != p
-                                        ? (0, r.jsx)(
-                                              p,
-                                              _(
-                                                  {
-                                                      className: d.icon,
-                                                      color: "currentColor",
-                                                  },
-                                                  g,
-                                              ),
-                                          )
-                                        : null,
-                                    null != A
-                                        ? (0, r.jsx)("div", {
-                                              className: o()(d.icon, d.buttonContent),
-                                              children: A,
-                                          })
-                                        : null,
-                                    T &&
-                                        (0, r.jsx)(s.IGR, {
-                                            text: u.intl.string(u.t.y2b7CA),
-                                            color: l.Z.BG_BRAND,
-                                            className: d.newBadge,
-                                        }),
-                                ],
+                                ref: t,
+                                className: o()(f.hoverBarButton, S),
+                                onClick: (e) => {
+                                    E(e);
+                                },
+                                "aria-label": null != i ? i : n,
+                                disabled: O,
+                                dangerous: v,
                             },
+                            C,
                         ),
+                        {
+                            children: [
+                                null != _
+                                    ? (0, r.jsx)(
+                                          _,
+                                          p(
+                                              {
+                                                  className: f.icon,
+                                                  color: "currentColor",
+                                              },
+                                              h,
+                                          ),
+                                      )
+                                    : null,
+                                null != A
+                                    ? (0, r.jsx)("div", {
+                                          className: o()(f.icon, f.buttonContent),
+                                          children: A,
+                                      })
+                                    : null,
+                                T &&
+                                    (0, r.jsx)(l.IGR, {
+                                        text: d.intl.string(d.t.y2b7CA),
+                                        color: c.Z.BG_BRAND,
+                                        className: f.newBadge,
+                                    }),
+                            ],
+                        },
                     ),
-                    I && (0, r.jsx)(c.Z0, {}),
-                ],
-            });
-        },
+                ),
+                I && (0, r.jsx)(u.Z0, {}),
+            ],
+        }),
     });
 });
-function b(e) {
-    let { className: t } = e;
-    return (0, r.jsx)("div", { className: o()(d.separator, t) });
-}
 function y(e) {
+    let { className: t } = e;
+    return (0, r.jsx)("div", { className: o()(f.separator, t) });
+}
+function O(e) {
     var { children: t } = e,
-        n = m(e, ["children"]);
-    return (0, r.jsx)(c.ZP, {
-        className: o()(n.className, d.popover),
+        n = g(e, ["children"]);
+    return (0, r.jsx)(u.ZP, {
+        className: o()(n.className, f.popover),
         children: t,
     });
 }

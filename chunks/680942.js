@@ -1,111 +1,67 @@
-r.d(t, { Z: () => v });
-var n = r(951288),
-    l = r(647438),
-    i = r(979554),
-    a = r(311570),
-    o = r(481060),
-    s = r(906732),
-    c = r(333867),
-    u = r(626135),
-    d = r(381585),
-    p = r(884697),
-    f = r(410127),
-    b = r(67409),
-    h = r(981631),
-    g = r(474936),
-    O = r(388032);
-let v = (e) => {
-    let { product: t, primary: r, selectedVariantIndex: v, returnRef: y, onSuccess: m, tooltipDelay: j } = e,
-        { analyticsLocations: P } = (0, s.ZP)(),
-        _ = l.useRef(null),
-        E = (0, d.sp)(),
-        x = (0, f.Z)();
-    return (0, p.x6)(t)
+n.d(t, { Z: () => j });
+var r = n(951288),
+    l = n(647438),
+    i = n(979554),
+    a = n(311570),
+    o = n(28664),
+    s = n(481060),
+    c = n(906732),
+    u = n(333867),
+    d = n(626135),
+    p = n(381585),
+    f = n(884697),
+    b = n(410127),
+    y = n(67409),
+    m = n(981631),
+    O = n(474936),
+    g = n(388032);
+let j = (e) => {
+    let { product: t, primary: n, selectedVariantIndex: j, returnRef: v, onSuccess: h, tooltipDelay: x } = e,
+        { analyticsLocations: E } = (0, c.ZP)(),
+        P = l.useRef(null),
+        _ = (0, p.sp)(),
+        C = (0, b.Z)();
+    return (0, f.x6)(t)
         ? null
-        : (0, n.jsx)(o.ua7, {
-              text: O.intl.string(O.t["JCFN//"]),
-              delay: j,
-              children: (e) => {
-                  var l, s;
-                  return (0, n.jsx)(
-                      o.hU,
-                      ((l = (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                      }),
-                                  )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = r[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: n,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[t] = n);
-                                  });
-                          }
-                          return e;
-                      })({}, e)),
-                      (s = s =
-                          {
-                              "aria-label": O.intl.string(O.t["JCFN//"]),
-                              buttonRef: _,
-                              variant: r ? "primary" : "secondary",
-                              icon: o.OgN,
-                              size: "md",
-                              onClick: (e) => {
-                                  e.stopPropagation(),
-                                      u.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: null == E ? void 0 : E.sessionId,
-                                          sku_id: t.skuId,
-                                          page_section: null == E ? void 0 : E.pageSection,
-                                          page_category: null == E ? void 0 : E.pageCategory,
-                                          tile_type: i.Z[t.type],
-                                          tile_position: String(null == E ? void 0 : E.tilePosition),
-                                          cta_name: "gift button",
-                                          page_type: x || "home",
-                                      }),
-                                      (0, c.Z)({
-                                          skuId: (0, b.S)({
-                                              product: t,
-                                              selectedVariantIndex: v,
-                                          }),
-                                          isGift: !0,
-                                          giftingOrigin: g.Wt.SHOP_PAGE,
-                                          analyticsLocations: P,
-                                          returnRef: y,
-                                          variantsReturnStyle: a.v.VARIANTS_GROUP,
-                                          onClose:
-                                              null != m
-                                                  ? (e) => {
-                                                        e && m();
-                                                    }
-                                                  : void 0,
-                                      });
-                              },
+        : (0, r.jsx)(o.u, {
+              text: g.intl.string(g.t["JCFN//"]),
+              delay: x,
+              children: (0, r.jsx)(s.hU, {
+                  "aria-label": g.intl.string(g.t["JCFN//"]),
+                  buttonRef: P,
+                  variant: n ? "primary" : "secondary",
+                  icon: s.OgN,
+                  size: "md",
+                  onClick: (e) => {
+                      e.stopPropagation(),
+                          d.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                              collectibles_shop_session_id: null == _ ? void 0 : _.sessionId,
+                              sku_id: t.skuId,
+                              page_section: null == _ ? void 0 : _.pageSection,
+                              page_category: null == _ ? void 0 : _.pageCategory,
+                              tile_type: i.Z[t.type],
+                              tile_position: String(null == _ ? void 0 : _.tilePosition),
+                              cta_name: "gift button",
+                              page_type: C || "home",
                           }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
-                          : (function (e, t) {
-                                var r = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var n = Object.getOwnPropertySymbols(e);
-                                    r.push.apply(r, n);
-                                }
-                                return r;
-                            })(Object(s)).forEach(function (e) {
-                                Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
-                            }),
-                      l),
-                  );
-              },
+                          (0, u.Z)({
+                              skuId: (0, y.S)({
+                                  product: t,
+                                  selectedVariantIndex: j,
+                              }),
+                              isGift: !0,
+                              giftingOrigin: O.Wt.SHOP_PAGE,
+                              analyticsLocations: E,
+                              returnRef: v,
+                              variantsReturnStyle: a.v.VARIANTS_GROUP,
+                              onClose:
+                                  null != h
+                                      ? (e) => {
+                                            e && h();
+                                        }
+                                      : void 0,
+                          });
+                  },
+              }),
           });
 };

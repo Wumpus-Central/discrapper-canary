@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
+    s = n(28664),
     l = n(55935),
     c = n(543388),
     u = n(223021),
@@ -93,21 +93,18 @@ let E = i.memo(function (e) {
             }),
             children:
                 null == v
-                    ? (0, r.jsx)(s.ua7, {
-                          text: () => (0, l.vc)(T, "LLLL"),
+                    ? (0, r.jsx)(s.u, {
+                          __unsupportedReactNodeAsText: (0, l.vc)(T, "LLLL"),
                           "aria-label": N,
-                          tooltipClassName: f.timestampTooltip,
                           position: I,
                           delay: 750,
-                          children: (e) =>
-                              (0, r.jsx)(b, {
-                                  tooltipProps: e,
-                                  timeFormatted: A,
-                                  timestamp: T,
-                                  id: y,
-                                  compact: a,
-                                  children: t,
-                              }),
+                          children: (0, r.jsx)(b, {
+                              timeFormatted: A,
+                              timestamp: T,
+                              id: y,
+                              compact: a,
+                              children: t,
+                          }),
                       })
                     : (0, r.jsx)(c.Z, {
                           application: v,

@@ -1,102 +1,51 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(600164),
-    o = n(245315),
-    s = n(388032),
-    l = n(5146);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = () =>
-    (0, r.jsxs)(a.Z, {
-        align: a.Z.Align.CENTER,
-        justify: a.Z.Justify.CENTER,
-        direction: a.Z.Direction.VERTICAL,
-        className: l.popout,
+var i = n(28664),
+    a = n(481060),
+    o = n(600164),
+    s = n(245315),
+    l = n(388032),
+    c = n(5146);
+let u = () =>
+    (0, r.jsxs)(o.Z, {
+        align: o.Z.Align.CENTER,
+        justify: o.Z.Justify.CENTER,
+        direction: o.Z.Direction.VERTICAL,
+        className: c.popout,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: (0, o.QA)(),
-                className: l.avatar,
+                src: (0, s.QA)(),
+                className: c.avatar,
             }),
-            (0, r.jsxs)(a.Z, {
-                align: a.Z.Align.CENTER,
-                justify: a.Z.Justify.CENTER,
-                className: l.nameWrapper,
+            (0, r.jsxs)(o.Z, {
+                align: o.Z.Align.CENTER,
+                justify: o.Z.Justify.CENTER,
+                className: c.nameWrapper,
                 children: [
-                    (0, r.jsx)(i.ua7, {
-                        text: s.intl.string(s.t.oMx98P),
-                        children: (e) => (0, r.jsx)("div", f(u({}, e), { className: l.staffBadge })),
+                    (0, r.jsx)(i.u, {
+                        text: l.intl.string(l.t.oMx98P),
+                        children: (0, r.jsx)("div", { className: c.staffBadge }),
                     }),
-                    (0, r.jsx)(i.X6q, {
-                        className: l.header,
+                    (0, r.jsx)(a.X6q, {
+                        className: c.header,
                         variant: "heading-md/semibold",
-                        children: s.intl.string(s.t.xfAlNz),
+                        children: l.intl.string(l.t.xfAlNz),
                     }),
                 ],
             }),
-            (0, r.jsx)(i.Text, {
-                className: l.description,
+            (0, r.jsx)(a.Text, {
+                className: c.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: s.intl.string(s.t.BUZ0sr),
+                children: l.intl.string(l.t.BUZ0sr),
             }),
-            (0, r.jsx)(i.Text, {
-                className: l.description,
+            (0, r.jsx)(a.Text, {
+                className: c.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: s.intl.string(s.t.w5beJC),
+                children: l.intl.string(l.t.w5beJC),
             }),
         ],
     });

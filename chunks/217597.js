@@ -1,66 +1,36 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(49792);
-function s(e) {
-    let { label: t, sublabel: n, value: s, additionalContent: a, tooltip: o } = e;
+var i = n(28664),
+    l = n(481060),
+    s = n(49792);
+function a(e) {
+    let { label: t, sublabel: n, value: a, additionalContent: o, tooltip: c } = e;
     return (0, r.jsxs)("div", {
-        className: l.metricCard,
+        className: s.metricCard,
         "aria-label": t,
         children: [
             (0, r.jsxs)("div", {
-                className: l.metricCardLabelContainer,
+                className: s.metricCardLabelContainer,
                 children: [
-                    (0, r.jsx)(i.Text, {
-                        className: l.metricCardLabel,
+                    (0, r.jsx)(l.Text, {
+                        className: s.metricCardLabel,
                         variant: "text-xs/medium",
                         color: "interactive-normal",
                         "aria-hidden": !0,
                         children: t,
                     }),
-                    null != o &&
-                        (0, r.jsx)(i.ua7, {
-                            text: o,
-                            children: (e) =>
-                                (0, r.jsx)(
-                                    i.d3s,
-                                    (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })(
-                                        {
-                                            size: "xs",
-                                            color: "currentColor",
-                                            className: l.__invalid_labelTooltipIcon,
-                                        },
-                                        e,
-                                    ),
-                                ),
+                    null != c &&
+                        (0, r.jsx)(i.u, {
+                            text: c,
+                            children: (0, r.jsx)(l.d3s, {
+                                size: "xs",
+                                color: "currentColor",
+                                className: s.__invalid_labelTooltipIcon,
+                            }),
                         }),
                     null != n
-                        ? (0, r.jsx)(i.Text, {
+                        ? (0, r.jsx)(l.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               children: n,
@@ -68,13 +38,13 @@ function s(e) {
                         : null,
                 ],
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 tag: "span",
                 variant: "heading-xl/medium",
                 color: "header-primary",
-                children: s,
+                children: a,
             }),
-            a,
+            o,
         ],
     });
 }

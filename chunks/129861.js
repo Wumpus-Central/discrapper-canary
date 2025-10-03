@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(481060),
+    s = n(28664),
     l = n(385499),
     c = n(181430),
     u = n(821795),
@@ -44,33 +44,10 @@ function E(e) {
     return e;
 }
 function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +55,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,10 +64,10 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function O(e) {
     return e.isSystemUser() ? f.J.SYSTEM_DM : e.bot ? f.J.BOT : null;
 }
-let T = (e) => {
+let v = (e) => {
         let {
                 primary: t,
                 secondary: n,
@@ -101,32 +78,28 @@ let T = (e) => {
                 usernameClass: _,
                 botClass: p,
                 showStreamerModeTooltip: g,
-                displayNameStyles: b,
-                displayNameStylesType: O,
+                displayNameStyles: E,
+                displayNameStylesType: b,
             } = e,
-            v = (0, c.Y)({ location: "DiscordTag" });
+            y = (0, c.Y)({ location: "DiscordTag" });
         return (0, r.jsxs)("div", {
-            className: a()(m.info, { [m.withDisplayNameStyles]: v && null != b }, f),
+            className: a()(m.info, { [m.withDisplayNameStyles]: y && null != E }, f),
             children: [
-                (0, r.jsx)(s.ua7, {
+                (0, r.jsx)(s.u, {
                     text: h.intl.string(h.t.Br1ls7),
                     shouldShow: g,
                     "aria-label": !!g && void 0,
-                    children: (e) =>
-                        (0, r.jsx)(
-                            "span",
-                            y(E({}, e), {
-                                className: a()(m.__invalid_username, _),
-                                children:
-                                    null != b
-                                        ? (0, r.jsx)(d.Z, {
-                                              userName: t,
-                                              displayNameStyles: b,
-                                              effectDisplayType: O,
-                                          })
-                                        : t,
-                            }),
-                        ),
+                    children: (0, r.jsx)("span", {
+                        className: a()(m.__invalid_username, _),
+                        children:
+                            null != E
+                                ? (0, r.jsx)(d.Z, {
+                                      userName: t,
+                                      displayNameStyles: E,
+                                      effectDisplayType: b,
+                                  })
+                                : t,
+                    }),
                 }),
                 null != n
                     ? (0, r.jsx)("span", {
@@ -143,7 +116,7 @@ let T = (e) => {
             ],
         });
     },
-    S = (e) => {
+    I = (e) => {
         var {
                 user: t,
                 nick: n,
@@ -155,7 +128,7 @@ let T = (e) => {
                 hideDiscriminator: d = !1,
                 displayNameStylesType: h = u.F.PLAIN,
             } = e,
-            m = O(e, [
+            m = b(e, [
                 "user",
                 "nick",
                 "forceUsername",
@@ -167,26 +140,26 @@ let T = (e) => {
                 "displayNameStylesType",
             ]);
         let g = (0, o.e7)([_.Z], () => _.Z.hidePersonalInformation),
-            b = g || d || t.isNonUserBot(),
-            y = t.toString(),
-            v = c ? null : I(t),
+            y = g || d || t.isNonUserBot(),
+            I = t.toString(),
+            T = c ? null : O(t),
             S = t.isVerifiedBot(),
             A = p.ZP.getName(t),
-            C = i ? y : null != n ? n : A,
+            C = i ? I : null != n ? n : A,
             N = t.hasUniqueUsername() || l;
-        if (N || C !== y) {
-            let e = C === y && N && i ? p.ZP.getUserTag(t, { forcePomelo: l }) : C,
-                n = a && e !== "@".concat(y) ? p.ZP.getUserTag(t) : void 0;
+        if (N || C !== I) {
+            let e = C === I && N && i ? p.ZP.getUserTag(t, { forcePomelo: l }) : C,
+                n = a && e !== "@".concat(I) ? p.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
-                T,
+                v,
                 E(
                     {
                         primary: e,
                         secondary: n,
-                        botType: v,
+                        botType: T,
                         botVerified: S,
                         showStreamerModeTooltip: g && p.ZP.isNameConcealed(e),
-                        displayNameStyles: C !== y ? t.displayNameStyles : null,
+                        displayNameStyles: C !== I ? t.displayNameStyles : null,
                         displayNameStylesType: h,
                     },
                     m,
@@ -198,9 +171,9 @@ let T = (e) => {
             E(
                 {
                     name: C,
-                    botType: v,
+                    botType: T,
                     botVerified: S,
-                    discriminator: b || C !== y ? null : null != s ? s : t.discriminator,
+                    discriminator: y || C !== I ? null : null != s ? s : t.discriminator,
                 },
                 m,
             ),

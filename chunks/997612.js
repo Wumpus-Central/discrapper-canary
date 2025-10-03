@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => D,
-    X: () => j,
+    X: () => M,
 });
 var r = n(951288),
     i = n(647438),
@@ -13,7 +13,7 @@ var r = n(951288),
     d = n(327496),
     f = n(235874),
     _ = n(417153),
-    p = n(981729),
+    p = n(28664),
     h = n(159691),
     m = n(972959),
     g = n(665149),
@@ -83,7 +83,7 @@ let D = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
-function x() {
+function L() {
     let e = (0, b.Z)(),
         t = (0, E.Z)(),
         n = (0, y.Z)();
@@ -111,11 +111,11 @@ function x() {
         ],
     });
 }
-function L() {
+function x() {
     let e = i.useRef(null);
     return (0, r.jsx)(f.y, {
         targetElementRef: e,
-        renderPopout: () => (0, r.jsx)(x, {}),
+        renderPopout: () => (0, r.jsx)(L, {}),
         position: "bottom",
         align: "center",
         animation: f.y.Animation.SCALE,
@@ -138,7 +138,7 @@ function L() {
             ),
     });
 }
-function j(e) {
+function M(e) {
     var t;
     let { config: n } = e,
         c = D.useField("selectedCollection"),
@@ -190,31 +190,24 @@ function j(e) {
         children: [
             (0, r.jsx)("div", {
                 className: C.group,
-                children: n.collections.map((e) =>
-                    (0, r.jsx)(
+                children: n.collections.map((e) => {
+                    var t;
+                    return (0, r.jsx)(
                         l.a,
                         {
                             children: (0, r.jsx)(p.u, {
                                 position: "right",
                                 text: "".concat(e.name, " Design System"),
-                                children: (t) => {
-                                    var i;
-                                    return (0, r.jsx)(
-                                        d.L,
-                                        w(R({}, t), {
-                                            name: e.name,
-                                            selected:
-                                                (null != c ? c : null == (i = n.collections[0]) ? void 0 : i.id) ===
-                                                e.id,
-                                            onClick: () => b(e.id),
-                                        }),
-                                    );
-                                },
+                                children: (0, r.jsx)(d.L, {
+                                    name: e.name,
+                                    selected: (null != c ? c : null == (t = n.collections[0]) ? void 0 : t.id) === e.id,
+                                    onClick: () => b(e.id),
+                                }),
                             }),
                         },
                         e.id,
-                    ),
-                ),
+                    );
+                }),
             }),
             (0, r.jsxs)("div", {
                 className: C.content,
@@ -255,7 +248,7 @@ function j(e) {
                                 : null,
                             (0, r.jsx)("div", {
                                 className: C.headerRight,
-                                children: (0, r.jsx)(L, {}),
+                                children: (0, r.jsx)(x, {}),
                             }),
                         ],
                     }),

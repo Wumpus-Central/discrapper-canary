@@ -1,11 +1,12 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(386019),
-    s = n(388032),
-    l = n(704543);
-function c(e, t, n) {
+    a = n(28664),
+    o = n(481060),
+    s = n(386019),
+    l = n(388032),
+    c = n(704543);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,49 +47,46 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
+function p(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        o.Z,
-        f(u({}, e), {
+        s.Z,
+        _(d({}, e), {
             targetElementRef: t,
             children: (e) =>
-                (0, r.jsx)(a.ua7, {
+                (0, r.jsx)(a.u, {
                     targetElementRef: t,
-                    text: s.intl.string(s.t.UKOtz8),
+                    text: l.intl.string(l.t.UKOtz8),
                     "aria-label": !1,
-                    children: (n) =>
-                        (0, r.jsx)(
-                            a.P3F,
-                            f(u({}, n, e), {
-                                innerRef: t,
-                                "aria-label": s.intl.string(s.t.UKOtz8),
-                                onClick: (t) => {
-                                    var r;
-                                    t.stopPropagation(), null == (r = n.onClick) || r.call(n), e.onClick(t);
-                                },
-                                onContextMenu: (t) => {
-                                    var r;
-                                    t.preventDefault(), null == (r = n.onClick) || r.call(n), e.onClick(t);
-                                },
-                                className: l.contextMenu,
-                                children: (0, r.jsx)(a.xhG, {
-                                    color: a.TVs.colors.INTERACTIVE_NORMAL,
-                                    size: "xs",
-                                }),
+                    children: (0, r.jsx)(
+                        o.P3F,
+                        _(d({}, e), {
+                            innerRef: t,
+                            "aria-label": l.intl.string(l.t.UKOtz8),
+                            onClick: (t) => {
+                                t.stopPropagation(), e.onClick(t);
+                            },
+                            onContextMenu: (t) => {
+                                t.preventDefault(), e.onClick(t);
+                            },
+                            className: c.contextMenu,
+                            children: (0, r.jsx)(o.xhG, {
+                                color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                size: "xs",
                             }),
-                        ),
+                        }),
+                    ),
                 }),
         }),
     );

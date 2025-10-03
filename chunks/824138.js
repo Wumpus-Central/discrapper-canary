@@ -1,21 +1,22 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(100527),
-    c = n(600164),
-    u = n(670188),
-    d = n(237583),
-    p = n(63063),
-    f = n(870569),
-    h = n(345243),
-    g = n(115530),
-    m = n(981631),
-    b = n(388032),
-    _ = n(79822);
-function O(e, t, n) {
+    o = n(28664),
+    s = n(481060),
+    c = n(100527),
+    u = n(600164),
+    d = n(670188),
+    p = n(237583),
+    f = n(63063),
+    h = n(870569),
+    g = n(345243),
+    m = n(115530),
+    b = n(981631),
+    _ = n(388032),
+    O = n(79822);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function O(e, t, n) {
         e
     );
 }
-function E(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +40,7 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
@@ -62,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-class v extends i.PureComponent {
+class I extends i.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -70,12 +71,12 @@ class v extends i.PureComponent {
     renderTitle() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(m.Z, {
                     children: this.isHost()
-                        ? b.intl.formatToPlainString(b.t["6UJ7mp"], { count: this.props.party.length })
-                        : b.intl.string(b.t.RZufbG),
+                        ? _.intl.formatToPlainString(_.t["6UJ7mp"], { count: this.props.party.length })
+                        : _.intl.string(_.t.RZufbG),
                 }),
-                (0, r.jsx)(h.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
+                (0, r.jsx)(g.Z, { children: _.intl.string(_.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -83,32 +84,32 @@ class v extends i.PureComponent {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, r.jsx)(f.Z, {
-                  tooltipText: b.intl.string(b.t.LeZSp6),
+            : (0, r.jsx)(h.Z, {
+                  tooltipText: _.intl.string(_.t.LeZSp6),
                   onClick: e,
-                  icon: o.Dio,
+                  icon: s.Dio,
               });
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, r.jsx)(f.Z, {
-                  tooltipText: b.intl.string(b.t.U7N2Hh),
+            ? (0, r.jsx)(h.Z, {
+                  tooltipText: _.intl.string(_.t.U7N2Hh),
                   onClick: () => {
-                      window.open(p.Z.getArticleURL(m.BhN.SPOTIFY_CONNECTION), "_blank");
+                      window.open(f.Z.getArticleURL(b.BhN.SPOTIFY_CONNECTION), "_blank");
                   },
-                  icon: o.d3s,
+                  icon: s.d3s,
               })
             : null;
     }
     render() {
         return (0, r.jsxs)("div", {
-            className: _.listeningAlong,
+            className: O.listeningAlong,
             children: [
                 this.renderTitle(),
-                (0, r.jsx)(c.Z, {
-                    justify: c.Z.Justify.END,
-                    className: _.party,
-                    children: (0, r.jsx)(d.Z, {
+                (0, r.jsx)(u.Z, {
+                    justify: u.Z.Justify.END,
+                    className: O.party,
+                    children: (0, r.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
                         renderUser: this.renderPartyMember,
@@ -116,7 +117,7 @@ class v extends i.PureComponent {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: _.icons,
+                    className: O.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
@@ -124,74 +125,62 @@ class v extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, "partyMemberAvatarRef", i.createRef()),
-            O(this, "partyMemberOverflowRef", i.createRef()),
-            O(this, "renderPartyMember", (e, t) => {
+            E(this, "partyMemberAvatarRef", i.createRef()),
+            E(this, "partyMemberOverflowRef", i.createRef()),
+            E(this, "renderPartyMember", (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: l, onUserContextMenu: c } = this.props;
+                let { host: l, onUserContextMenu: u } = this.props;
                 return (
-                    (n = (null == l ? void 0 : l.id) === e.id ? b.intl.string(b.t.N9bqDw) : b.intl.string(b.t.Z2Y4c3)),
+                    (n = (null == l ? void 0 : l.id) === e.id ? _.intl.string(_.t.N9bqDw) : _.intl.string(_.t.Z2Y4c3)),
                     (0, r.jsx)(
-                        u.Z,
+                        d.Z,
                         {
                             targetElementRef: this.partyMemberAvatarRef,
                             user: e,
-                            newAnalyticsLocations: [s.Z.AVATAR],
+                            newAnalyticsLocations: [c.Z.AVATAR],
                             position: "top",
                             align: "center",
                             clickTrap: !0,
                             children: (l) =>
-                                (0, r.jsx)(o.ua7, {
+                                (0, r.jsx)(o.u, {
                                     text: n,
-                                    children: (n) => {
-                                        let { onMouseEnter: r, onMouseLeave: s } = n;
-                                        return (0, i.createElement)(
-                                            o.qEK,
-                                            y(E({}, l), {
-                                                key: e.id,
-                                                src: e.getAvatarURL(void 0, 24),
-                                                size: o.EFr.SIZE_24,
-                                                className: a()(_.avatar, t),
-                                                "aria-label": e.username,
-                                                onMouseEnter: r,
-                                                onMouseLeave: s,
-                                                onContextMenu: (t) => void (null != e && (null == c || c(t, e))),
-                                                avatarContentRef: this.partyMemberAvatarRef,
-                                            }),
-                                        );
-                                    },
+                                    children: (0, i.createElement)(
+                                        s.qEK,
+                                        y(v({}, l), {
+                                            key: e.id,
+                                            src: e.getAvatarURL(void 0, 24),
+                                            size: s.EFr.SIZE_24,
+                                            className: a()(O.avatar, t),
+                                            "aria-label": e.username,
+                                            onContextMenu: (t) => void (null != e && (null == u || u(t, e))),
+                                            avatarContentRef: this.partyMemberAvatarRef,
+                                        }),
+                                    ),
                                 }),
                         },
                         e.id,
                     )
                 );
             }),
-            O(this, "renderPartyMemberOverflow", (e, t, n) => {
+            E(this, "renderPartyMemberOverflow", (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
-                    o.yRy,
+                    s.yRy,
                     {
                         renderPopout: i,
                         targetElementRef: this.partyMemberOverflowRef,
                         children: (n) =>
-                            (0, r.jsx)(o.ua7, {
-                                text: b.intl.string(b.t.Zf4NPT),
-                                children: (i) =>
-                                    (0, r.jsx)(
-                                        "div",
-                                        y(
-                                            E(
-                                                {
-                                                    ref: this.partyMemberOverflowRef,
-                                                    className: a()(_.overflow, t),
-                                                },
-                                                i,
-                                                n,
-                                            ),
-                                            { children: e },
-                                        ),
-                                    ),
+                            (0, r.jsx)(o.u, {
+                                text: _.intl.string(_.t.Zf4NPT),
+                                children: (0, r.jsx)(
+                                    "div",
+                                    y(v({}, n), {
+                                        ref: this.partyMemberOverflowRef,
+                                        className: a()(O.overflow, t),
+                                        children: e,
+                                    }),
+                                ),
                             }),
                     },
                     n,
@@ -199,4 +188,4 @@ class v extends i.PureComponent {
             });
     }
 }
-let I = v;
+let S = I;

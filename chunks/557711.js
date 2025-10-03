@@ -1,10 +1,11 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(5192),
-    o = n(829820);
-function s(e, t, n) {
+var i = n(28664),
+    a = n(481060),
+    o = n(5192),
+    s = n(829820);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,16 +29,16 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = u(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -45,7 +46,7 @@ function c(e, t) {
     }
     return i;
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -54,43 +55,38 @@ function u(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function d(e) {
+function f(e) {
     var {
             activity: t,
             user: n,
-            channelId: s,
-            guildId: u,
-            source: d,
-            size: f = "sm",
-            variant: _ = "secondary",
-            onAction: p,
+            channelId: l,
+            guildId: d,
+            source: f,
+            size: _ = "sm",
+            variant: p = "secondary",
+            onAction: h,
         } = e,
-        h = c(e, ["activity", "user", "channelId", "guildId", "source", "size", "variant", "onAction"]);
-    let { tooltip: m, loading: g, disabled: E, onClick: b } = (0, o.Fe)(t, n, d, a.ZP.getNickname(u, s, n)),
-        y = () => {
-            null == p || p(), b();
+        m = u(e, ["activity", "user", "channelId", "guildId", "source", "size", "variant", "onAction"]);
+    let { tooltip: g, loading: E, disabled: b, onClick: y } = (0, s.Fe)(t, n, f, o.ZP.getNickname(d, l, n)),
+        O = () => {
+            null == h || h(), y();
         };
-    return (0, r.jsx)(i.ua7, {
-        text: m,
-        children: (e) => {
-            let { onMouseEnter: n, onMouseLeave: a } = e;
-            return (0, r.jsx)(
-                i.hU,
-                l(
-                    {
-                        icon: i.iOO,
-                        size: f,
-                        variant: _,
-                        onClick: y,
-                        onMouseEnter: n,
-                        onMouseLeave: a,
-                        disabled: E,
-                        loading: g,
-                        "aria-label": null != m ? m : t.name,
-                    },
-                    h,
-                ),
-            );
-        },
+    return (0, r.jsx)(i.u, {
+        text: g,
+        children: (0, r.jsx)(
+            a.hU,
+            c(
+                {
+                    icon: a.iOO,
+                    size: _,
+                    variant: p,
+                    onClick: O,
+                    disabled: b,
+                    loading: E,
+                    "aria-label": null != g ? g : t.name,
+                },
+                m,
+            ),
+        ),
     });
 }

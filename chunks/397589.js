@@ -1,93 +1,42 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(782568),
-    s = n(592125),
-    l = n(594174),
-    c = n(63063),
-    u = n(5192),
-    d = n(992970),
-    f = n(111810),
-    _ = n(287941),
-    p = n(477931),
-    h = n(235894),
-    m = n(981631),
-    g = n(388032),
-    E = n(975405);
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function O(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function v(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let I = (e) => {
+    a = n(28664),
+    o = n(481060),
+    s = n(782568),
+    l = n(592125),
+    c = n(594174),
+    u = n(63063),
+    d = n(5192),
+    f = n(992970),
+    _ = n(111810),
+    p = n(287941),
+    h = n(477931),
+    m = n(235894),
+    g = n(981631),
+    E = n(388032),
+    b = n(975405);
+let y = (e) => {
     var t;
     let { message: n } = e,
-        b = i.useRef(null),
-        O = (0, f.p7)("Message Header") && n.hasPotions(),
-        I = s.Z.getChannel(n.getChannelId()),
-        T = null == (t = n.potions) ? void 0 : t[0],
-        S = i.useMemo(() => {
+        y = i.useRef(null),
+        O = (0, _.p7)("Message Header") && n.hasPotions(),
+        v = l.Z.getChannel(n.getChannelId()),
+        I = null == (t = n.potions) ? void 0 : t[0],
+        T = i.useMemo(() => {
             var e;
-            if (null == T) return null;
-            let t = l.default.getUser(T.used_by);
-            return null != (e = (0, u.y)(null == I ? void 0 : I.getGuildId(), null == I ? void 0 : I.id, t))
+            if (null == I) return null;
+            let t = c.default.getUser(I.used_by);
+            return null != (e = (0, d.y)(null == v ? void 0 : v.getGuildId(), null == v ? void 0 : v.id, t))
                 ? e
                 : null == t
                   ? void 0
                   : t.globalName;
-        }, [T, I]),
-        A = i.useCallback(() => {
-            if (null != b.current && (0, h.Uw)(n)) {
-                let { x: e, y: t, width: r, height: i } = b.current.getBoundingClientRect();
-                (0, _.Z)(
+        }, [I, v]),
+        S = i.useCallback(() => {
+            if (null != y.current && (0, m.Uw)(n)) {
+                let { x: e, y: t, width: r, height: i } = y.current.getBoundingClientRect();
+                (0, p.Z)(
                     n,
                     {
                         x: e,
@@ -96,48 +45,37 @@ let I = (e) => {
                         h: i,
                     },
                     !0,
-                    d.LL.UserTriggered,
+                    f.LL.UserTriggered,
                 );
             }
         }, [n]),
-        C = i.useCallback(() => {
-            (0, o.Z)(c.Z.getArticleURL(m.BhN.CONFETTI_POTION));
+        A = i.useCallback(() => {
+            (0, s.Z)(u.Z.getArticleURL(g.BhN.CONFETTI_POTION));
         }, []);
-    return O && null != S && (null == T ? void 0 : T.type) === p.B.CONFETTI
-        ? (0, r.jsx)(a.P3F, {
-              onFocus: A,
-              onClick: C,
-              "aria-label": g.intl.string(g.t.Mp5k6O),
-              children: (0, r.jsx)(a.ua7, {
-                  text: g.intl.formatToPlainString(g.t["FE++aG"], { user: S }),
-                  children: (e) =>
-                      (0, r.jsxs)(
-                          "div",
-                          v(
-                              y(
-                                  {
-                                      ref: b,
-                                      className: E.potionBadge,
-                                  },
-                                  e,
-                              ),
-                              {
-                                  children: [
-                                      (0, r.jsx)(a.l22, {
-                                          size: "custom",
-                                          color: "currentColor",
-                                          width: 12,
-                                          height: 12,
-                                      }),
-                                      (0, r.jsx)(a.Text, {
-                                          variant: "text-xs/bold",
-                                          color: "currentColor",
-                                          children: g.intl.string(g.t["8Rrro6"]),
-                                      }),
-                                  ],
-                              },
-                          ),
-                      ),
+    return O && null != T && (null == I ? void 0 : I.type) === h.B.CONFETTI
+        ? (0, r.jsx)(o.P3F, {
+              onFocus: S,
+              onClick: A,
+              "aria-label": E.intl.string(E.t.Mp5k6O),
+              children: (0, r.jsx)(a.u, {
+                  text: E.intl.formatToPlainString(E.t["FE++aG"], { user: T }),
+                  children: (0, r.jsxs)("div", {
+                      ref: y,
+                      className: b.potionBadge,
+                      children: [
+                          (0, r.jsx)(o.l22, {
+                              size: "custom",
+                              color: "currentColor",
+                              width: 12,
+                              height: 12,
+                          }),
+                          (0, r.jsx)(o.Text, {
+                              variant: "text-xs/bold",
+                              color: "currentColor",
+                              children: E.intl.string(E.t["8Rrro6"]),
+                          }),
+                      ],
+                  }),
               }),
           })
         : null;

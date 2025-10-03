@@ -1,116 +1,62 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(68405),
-    c = n(985375),
-    u = n(585483),
-    d = n(981631),
-    f = n(388032),
-    _ = n(796016);
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let E = i.memo(function (e) {
-    let { width: t, height: n, src: a, url: p, format: m, className: E } = e,
-        [b, y] = i.useState(!1),
-        O = (0, c.hb)((0, l.iy)(p)),
-        v = O ? f.intl.string(f.t["5/NS7+"]) : f.intl.string(f.t.nIH0v7),
-        I = O ? s.r7p : s.vxU;
+    s = n(28664),
+    l = n(481060),
+    c = n(68405),
+    u = n(985375),
+    d = n(585483),
+    f = n(981631),
+    _ = n(388032),
+    p = n(796016);
+let h = i.memo(function (e) {
+    let { width: t, height: n, src: a, url: h, format: m, className: g } = e,
+        [E, b] = i.useState(!1),
+        y = (0, u.hb)((0, c.iy)(h)),
+        O = y ? _.intl.string(_.t["5/NS7+"]) : _.intl.string(_.t.nIH0v7),
+        v = y ? l.r7p : l.vxU;
     i.useEffect(() => {
-        if (!b) return;
+        if (!E) return;
         let e = setTimeout(() => {
-            y(!1);
+            b(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [b]);
-    let T = (e) => {
+    }, [E]);
+    let I = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            y(!0),
-            O
-                ? (0, l.PF)(p)
-                : ((0, l.uL)({
-                      url: p,
+            b(!0),
+            y
+                ? (0, c.PF)(h)
+                : ((0, c.uL)({
+                      url: h,
                       src: a,
                       width: t,
                       height: n,
                       format: m,
                   }),
-                  u.S.dispatch(d.CkL.FAVORITE_GIF));
+                  d.S.dispatch(f.CkL.FAVORITE_GIF));
     };
-    return (0, r.jsx)(s.ua7, {
-        text: v,
-        children: (e) =>
-            (0, r.jsx)(
-                s.P3F,
-                g(h({}, e), {
-                    className: o()(E, _.gifFavoriteButton, {
-                        [_.selected]: O,
-                        [_.showPulse]: b,
-                    }),
-                    onMouseDown: (e) => e.preventDefault(),
-                    onClick: T,
-                    onDoubleClick: (e) => e.preventDefault(),
-                    children: (0, r.jsx)(I, {
-                        color: "currentColor",
-                        className: _.icon,
-                        size: "custom",
-                        width: 20,
-                        height: 20,
-                    }),
-                }),
-            ),
+    return (0, r.jsx)(s.u, {
+        text: O,
+        children: (0, r.jsx)(l.kL8, {
+            "aria-label": O,
+            className: o()(g, p.gifFavoriteButton, {
+                [p.selected]: y,
+                [p.showPulse]: E,
+            }),
+            onMouseDown: (e) => e.preventDefault(),
+            onClick: I,
+            onDoubleClick: (e) => e.preventDefault(),
+            children: (0, r.jsx)(v, {
+                color: "currentColor",
+                className: p.icon,
+                size: "custom",
+                width: 20,
+                height: 20,
+            }),
+        }),
     });
 });

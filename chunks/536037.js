@@ -1,6 +1,4 @@
 e.exports = {
-    roleTooltipContainer: "roleTooltipContainer__1ef77",
-    roleTooltipContentContainer: "roleTooltipContentContainer__1ef77",
     roleTooltipItem: "roleTooltipItem__1ef77",
     permissionsContainer: "permissionsContainer__1ef77",
     permissionChiplet: "permissionChiplet__1ef77",

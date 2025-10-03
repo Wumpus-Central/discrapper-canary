@@ -1,18 +1,19 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(481060),
-    u = n(239091),
-    d = n(751688),
-    f = n(5192),
-    _ = n(51144),
-    p = n(388032),
-    h = n(581143);
-function m(e, t, n) {
+    c = n(28664),
+    u = n(481060),
+    d = n(239091),
+    f = n(751688),
+    _ = n(5192),
+    p = n(51144),
+    h = n(388032),
+    m = n(581143);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,90 +54,90 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.EFr.SIZE_24;
+function O() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.EFr.SIZE_24;
     switch (e) {
-        case c.EFr.SIZE_16:
-            return h.size16;
-        case c.EFr.SIZE_20:
-            return h.size20;
-        case c.EFr.SIZE_24:
+        case u.EFr.SIZE_16:
+            return m.size16;
+        case u.EFr.SIZE_20:
+            return m.size20;
+        case u.EFr.SIZE_24:
         default:
-            return h.size24;
+            return m.size24;
     }
 }
-function O() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.EFr.SIZE_24;
+function v() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.EFr.SIZE_24;
     switch (e) {
-        case c.EFr.SIZE_16:
-        case c.EFr.SIZE_20:
+        case u.EFr.SIZE_16:
+        case u.EFr.SIZE_20:
             return "text-xxs/semibold";
-        case c.EFr.SIZE_24:
+        case u.EFr.SIZE_24:
         default:
             return "text-xs/medium";
     }
 }
-function v(e) {
+function I(e) {
     let {
             users: t,
             maxUsers: a,
             guildId: s,
-            channelId: m,
-            className: E,
-            size: v = c.EFr.SIZE_24,
-            overflowCountVariant: I,
-            overflowCountColor: T = "interactive-normal",
-            overflowCountClassName: S,
-            hideOverflowCount: A = !1,
-            disableUsernameTooltip: C = !1,
-            disableUserPopout: N = !1,
-            onClickOverflow: R,
-            onFocusOverflow: P,
-            onUserClick: w,
-            onUserPopoutRequestClose: D,
+            channelId: g,
+            className: b,
+            size: I = u.EFr.SIZE_24,
+            overflowCountVariant: T,
+            overflowCountColor: S = "interactive-normal",
+            overflowCountClassName: A,
+            hideOverflowCount: C = !1,
+            disableUsernameTooltip: N = !1,
+            disableUserPopout: R = !1,
+            onClickOverflow: P,
+            onFocusOverflow: w,
+            onUserClick: D,
+            onUserPopoutRequestClose: L,
             "aria-label": x,
-            "aria-labelledby": L,
+            "aria-labelledby": M,
             "aria-hidden": j,
         } = e,
-        [M, k] = i.useState(!1),
-        U = y(v),
-        G = i.useRef(null),
-        B = t.length - a,
-        Z = B + 1,
-        V = B > 0 && !A && !j,
-        F = () =>
-            (0, r.jsx)(c.VqE, {
-                className: h.popoutWrapper,
+        [k, U] = i.useState(!1),
+        G = O(I),
+        B = i.useRef(null),
+        Z = t.length - a,
+        F = Z + 1,
+        V = Z > 0 && !C && !j,
+        H = () =>
+            (0, r.jsx)(u.VqE, {
+                className: m.popoutWrapper,
                 "aria-label": x,
-                "aria-labelledby": L,
-                children: (0, r.jsx)(c.Ttm, {
-                    className: h.scroller,
+                "aria-labelledby": M,
+                children: (0, r.jsx)(u.Ttm, {
+                    className: m.scroller,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            d.Z,
+                            f.Z,
                             {
                                 user: e,
                                 guildId: s,
-                                channelId: m,
-                                nick: f.ZP.getNickname(s, m, e),
-                                disablePopout: "function" == typeof N ? N(e.id) : N,
-                                onClick: w,
+                                channelId: g,
+                                nick: _.ZP.getNickname(s, g, e),
+                                disablePopout: "function" == typeof R ? R(e.id) : R,
+                                onClick: D,
                                 onPopoutRequestClose: () => {
-                                    k(!1), null == D || D();
+                                    U(!1), null == L || L();
                                 },
                                 onContextMenu: (t) =>
-                                    (0, u.jW)(
+                                    (0, d.jW)(
                                         t,
                                         async () => {
                                             let { default: t } = await Promise.all([n.e("79695"), n.e("69220")]).then(
@@ -145,14 +146,14 @@ function v(e) {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
-                                                    b(g({}, n), {
+                                                    y(E({}, n), {
                                                         user: e,
                                                         guildId: s,
-                                                        channelId: m,
+                                                        channelId: g,
                                                     }),
                                                 );
                                         },
-                                        { onClose: () => k(!1) },
+                                        { onClose: () => U(!1) },
                                     ),
                             },
                             e.id,
@@ -160,43 +161,39 @@ function v(e) {
                     ),
                 }),
             }),
-        H = () => {
+        Y = () => {
             let e = V ? a - 1 : Math.min(t.length, a),
                 n = e - 1,
                 i = l()(t)
                     .take(e)
                     .map((e, t) => {
-                        let i = f.ZP.getNickname(s, m, e),
-                            a = null != i ? i : _.ZP.getName(e),
+                        let i = _.ZP.getNickname(s, g, e),
+                            a = null != i ? i : p.ZP.getName(e),
                             l = t === n && !V,
-                            u = o()(h.avatar, U, l && h.isLast),
-                            d = (0, r.jsx)(c.qEK, {
+                            d = o()(m.avatar, G, l && m.isLast),
+                            f = (0, r.jsx)(u.qEK, {
                                 src: e.getAvatarURL(s, 24),
-                                size: v,
+                                size: I,
                                 "aria-hidden": !0,
                             });
                         return (0, r.jsx)(
                             "li",
                             {
-                                className: u,
-                                children: C
+                                className: d,
+                                children: N
                                     ? (0, r.jsx)("span", {
                                           role: "img",
                                           "aria-label": a,
-                                          children: d,
+                                          children: f,
                                       })
-                                    : (0, r.jsx)(c.ua7, {
-                                          text: a,
+                                    : (0, r.jsx)(c.u, {
+                                          __unsupportedReactNodeAsText: a,
                                           "aria-label": !1,
-                                          children: (e) =>
-                                              (0, r.jsx)(
-                                                  "span",
-                                                  b(g({}, e), {
-                                                      role: "img",
-                                                      "aria-label": a,
-                                                      children: d,
-                                                  }),
-                                              ),
+                                          children: (0, r.jsx)("span", {
+                                              role: "img",
+                                              "aria-label": a,
+                                              children: f,
+                                          }),
                                       }),
                             },
                             e.id,
@@ -204,36 +201,36 @@ function v(e) {
                     })
                     .value();
             return (0, r.jsx)("ul", {
-                className: h.avatars,
+                className: m.avatars,
                 children: i,
             });
         },
-        Y = () => {
+        W = () => {
             if (!V) return null;
-            let e = null != I ? I : O(v);
+            let e = null != T ? T : v(I);
             return (0, r.jsx)(
-                c.yRy,
+                u.yRy,
                 {
-                    targetElementRef: G,
-                    renderPopout: F,
-                    shouldShow: M,
+                    targetElementRef: B,
+                    renderPopout: H,
+                    shouldShow: k,
                     position: "bottom",
-                    onRequestClose: () => k(!1),
+                    onRequestClose: () => U(!1),
                     children: (t) =>
                         (0, r.jsx)(
-                            c.P3F,
-                            b(g({}, t), {
-                                innerRef: G,
-                                className: o()(h.overflow, U, S),
-                                onFocus: P,
+                            u.P3F,
+                            y(E({}, t), {
+                                innerRef: B,
+                                className: o()(m.overflow, G, A),
+                                onFocus: w,
                                 onClick: (e) => {
-                                    null == R || R(e), k(!0);
+                                    null == P || P(e), U(!0);
                                 },
-                                "aria-label": p.intl.formatToPlainString(p.t.R8Z8Qk, { count: Z }),
-                                children: (0, r.jsx)(c.Text, {
+                                "aria-label": h.intl.formatToPlainString(h.t.R8Z8Qk, { count: F }),
+                                children: (0, r.jsx)(u.Text, {
                                     variant: e,
-                                    color: T,
-                                    children: Z > 99 ? ">99" : "+".concat(Z),
+                                    color: S,
+                                    children: F > 99 ? ">99" : "+".concat(F),
                                 }),
                             }),
                         ),
@@ -246,9 +243,9 @@ function v(e) {
         : (0, r.jsxs)("div", {
               role: "group",
               "aria-label": x,
-              "aria-labelledby": L,
-              className: o()(E, h.avatars),
+              "aria-labelledby": M,
+              className: o()(b, m.avatars),
               "aria-hidden": j,
-              children: [H(), Y()],
+              children: [Y(), W()],
           });
 }

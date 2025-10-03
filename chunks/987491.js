@@ -1,153 +1,154 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => B });
 var l = n(951288),
     r = n(647438),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     s = n(913527),
     o = n.n(s),
     c = n(442837),
-    d = n(481060),
-    u = n(239091),
-    m = n(700582),
-    x = n(906732),
-    j = n(693546),
-    h = n(826581),
-    b = n(246364),
-    f = n(98493),
-    v = n(328977),
-    g = n(412222),
-    p = n(223312),
-    C = n(172751),
-    _ = n(768762),
-    T = n(892001),
-    E = n(598077),
-    N = n(430824),
-    S = n(51144),
-    P = n(388032),
-    R = n(106682),
-    I = n(243194),
-    Z = n(494409),
+    d = n(28664),
+    u = n(481060),
+    m = n(239091),
+    x = n(700582),
+    j = n(906732),
+    h = n(693546),
+    b = n(826581),
+    f = n(246364),
+    v = n(98493),
+    g = n(328977),
+    p = n(412222),
+    C = n(223312),
+    _ = n(172751),
+    T = n(768762),
+    E = n(892001),
+    N = n(598077),
+    S = n(430824),
+    P = n(51144),
+    R = n(388032),
+    I = n(106682),
+    Z = n(243194),
+    O = n(494409),
     w = n(266631);
 function M(e) {
     let t,
         n,
         { status: r } = e;
     switch (r) {
-        case b.wB.REJECTED:
-            (t = P.t["7YSJ6e"]), (n = P.t.i05OUV);
+        case f.wB.REJECTED:
+            (t = R.t["7YSJ6e"]), (n = R.t.i05OUV);
             break;
-        case b.wB.APPROVED:
-            (t = P.t.bv82GR), (n = P.t.D4OUHR);
+        case f.wB.APPROVED:
+            (t = R.t.bv82GR), (n = R.t.D4OUHR);
             break;
         default:
-            (t = P.t["/wqiSk"]), (n = P.t.o47YZm);
+            (t = R.t["/wqiSk"]), (n = R.t.o47YZm);
     }
     return (0, l.jsxs)("div", {
-        className: R.emptyContainer,
+        className: I.emptyContainer,
         children: [
-            (0, l.jsx)(d.dz2, {
+            (0, l.jsx)(u.dz2, {
                 size: "md",
                 color: "currentColor",
-                className: R.checkmark,
+                className: I.checkmark,
             }),
-            (0, l.jsx)(d.X6q, {
+            (0, l.jsx)(u.X6q, {
                 variant: "heading-md/medium",
-                children: P.intl.string(t),
+                children: R.intl.string(t),
             }),
-            (0, l.jsx)(d.Text, {
+            (0, l.jsx)(u.Text, {
                 color: "text-muted",
                 variant: "text-sm/medium",
-                children: P.intl.string(n),
+                children: R.intl.string(n),
             }),
         ],
     });
 }
-function O(e) {
+function y(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, l.jsx)("thead", {
         children: (0, l.jsxs)("tr", {
-            className: Z.tableHeaderRow,
+            className: O.tableHeaderRow,
             children: [
                 (0, l.jsx)("th", {
-                    className: R.headerCell,
-                    children: (0, l.jsx)(d.Text, {
+                    className: I.headerCell,
+                    children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: P.intl.string(P.t.Es7n9f),
+                        children: R.intl.string(R.t.Es7n9f),
                     }),
                 }),
                 (0, l.jsx)("th", {
-                    className: i()(R.headerCell, w.mediumCol),
-                    children: (0, l.jsxs)(d.P3F, {
-                        className: R.sortItem,
+                    className: a()(I.headerCell, w.mediumCol),
+                    children: (0, l.jsxs)(u.P3F, {
+                        className: I.sortItem,
                         onClick: n,
                         children: [
-                            (0, l.jsx)(d.Text, {
+                            (0, l.jsx)(u.Text, {
                                 variant: "eyebrow",
                                 color: "interactive-normal",
-                                children: P.intl.string(P.t.EZ5QWF),
+                                children: R.intl.string(R.t.EZ5QWF),
                             }),
-                            t === b.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(_.Z, {
-                                      className: R.sortIcon,
-                                      direction: _.Z.Directions.UP,
+                            t === f.Nw.TIMESTAMP_ASC
+                                ? (0, l.jsx)(T.Z, {
+                                      className: I.sortIcon,
+                                      direction: T.Z.Directions.UP,
                                   })
-                                : (0, l.jsx)(_.Z, {
-                                      className: R.sortIcon,
-                                      direction: _.Z.Directions.DOWN,
+                                : (0, l.jsx)(T.Z, {
+                                      className: I.sortIcon,
+                                      direction: T.Z.Directions.DOWN,
                                   }),
                         ],
                     }),
                 }),
                 (0, l.jsx)("th", {
-                    className: i()(R.headerCell, R.moreOptionsCol),
-                    children: (0, l.jsx)(d.Text, {
+                    className: a()(I.headerCell, I.moreOptionsCol),
+                    children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: P.intl.string(P.t["5Q9xGh"]),
+                        children: R.intl.string(R.t["5Q9xGh"]),
                     }),
                 }),
             ],
         }),
     });
 }
-let y = r.memo(function (e) {
+let A = r.memo(function (e) {
         let { joinRequest: t, user: n } = e,
-            { joinRequestId: a, guildId: i } = t,
-            { analyticsLocations: s } = (0, x.ZP)(),
+            { joinRequestId: i, guildId: a } = t,
+            { analyticsLocations: s } = (0, j.ZP)(),
             o = r.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, T.openUserProfileModal)({
+                        (0, E.openUserProfileModal)({
                             userId: n.id,
-                            joinRequestId: a,
+                            joinRequestId: i,
                             sourceAnalyticsLocations: s,
                         });
                 },
-                [n, a, s],
+                [n, i, s],
             );
         return (0, l.jsxs)("div", {
             className: w.memberNameContainer,
             children: [
-                (0, l.jsx)(d.P3F, {
+                (0, l.jsx)(u.P3F, {
                     className: w.memberAvatar,
                     onClick: o,
-                    children: (0, l.jsx)(m.Z, { user: n }),
+                    children: (0, l.jsx)(x.Z, { user: n }),
                 }),
                 (0, l.jsx)("div", {
                     className: w.memberName,
-                    children: (0, l.jsx)(d.Text, {
+                    children: (0, l.jsx)(u.Text, {
                         variant: "text-sm/medium",
-                        children: (0, l.jsxs)(d.P3F, {
+                        children: (0, l.jsxs)(u.P3F, {
                             onClick: o,
                             className: w.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, l.jsx)(C.ZP, {
+                                (0, l.jsx)(_.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
-                                    contextGuildId: i,
+                                    contextGuildId: a,
                                     containerClassName: w.memberClanTag,
                                 }),
                             ],
@@ -156,131 +157,137 @@ let y = r.memo(function (e) {
                 }),
                 (0, l.jsx)("div", {
                     className: w.memberGlobalName,
-                    children: (0, l.jsx)(d.Text, {
+                    children: (0, l.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         tag: "span",
-                        children: (0, l.jsx)(d.P3F, {
+                        children: (0, l.jsx)(u.P3F, {
                             onClick: o,
                             tag: "span",
-                            children: S.ZP.getUserTag(n),
+                            children: P.ZP.getUserTag(n),
                         }),
                     }),
                 }),
             ],
         });
     }),
-    A = r.memo(function (e) {
-        let { joinRequest: t, onSelect: a } = e,
-            { guildId: s, createdAt: m, applicationStatus: x } = t,
-            j = r.useMemo(() => new E.Z(t.user), [t.user]),
-            h = (0, v.L)({ guildId: s }),
-            f = (0, c.e7)([N.Z], () => N.Z.getGuild(s)),
-            g = x === b.wB.SUBMITTED,
-            p = (e) => {
-                (0, u.jW)(
-                    e,
-                    async () => {
-                        let { default: e } = await n.e("84259").then(n.bind(n, 597409));
-                        return (t) => {
-                            var n, r;
-                            return (0, l.jsx)(
-                                e,
-                                ((n = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            l = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (l = l.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            l.forEach(function (t) {
-                                                var l;
-                                                (l = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: l,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = l);
-                                            });
-                                    }
-                                    return e;
-                                })({}, t)),
-                                (r = r =
-                                    {
-                                        guild: f,
-                                        user: j,
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var l = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, l);
-                                          }
-                                          return n;
-                                      })(Object(r)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                                      }),
-                                n),
-                            );
-                        };
-                    },
-                    {
-                        position: "bottom",
-                        align: "right",
-                    },
-                );
-            };
-        return null == j
+    D = r.memo(function (e) {
+        let { joinRequest: t, onSelect: i } = e,
+            { guildId: s, createdAt: x, applicationStatus: j } = t,
+            h = r.useMemo(() => new N.Z(t.user), [t.user]),
+            b = (0, g.L)({ guildId: s }),
+            v = (0, c.e7)([S.Z], () => S.Z.getGuild(s)),
+            p = j === f.wB.SUBMITTED;
+        return null == h
             ? null
             : (0, l.jsxs)("tr", {
-                  onClick: a,
-                  className: i()(w.roundedRow, w.memberRowContainer, {
-                      [w.selected]: (null == h ? void 0 : h.joinRequestId) === t.joinRequestId,
+                  onClick: i,
+                  className: a()(w.roundedRow, w.memberRowContainer, {
+                      [w.selected]: (null == b ? void 0 : b.joinRequestId) === t.joinRequestId,
                   }),
                   children: [
                       (0, l.jsx)("td", {
-                          children: (0, l.jsx)(y, {
+                          children: (0, l.jsx)(A, {
                               joinRequest: t,
-                              user: j,
+                              user: h,
                           }),
                       }),
                       (0, l.jsx)("td", {
                           className: w.mediumCol,
-                          children: (0, l.jsx)(d.Text, {
+                          children: (0, l.jsx)(u.Text, {
                               variant: "text-sm/normal",
                               color: "header-secondary",
-                              children: o()(m).format("lll"),
+                              children: o()(x).format("lll"),
                           }),
                       }),
                       (0, l.jsx)("td", {
-                          className: R.moreOptionsCol,
+                          className: I.moreOptionsCol,
                           children:
-                              g &&
-                              (0, l.jsx)(d.ua7, {
-                                  text: P.intl.string(P.t.x8Nn4O),
-                                  children: (e) => {
-                                      let { onMouseEnter: t, onMouseLeave: n } = e;
-                                      return (0, l.jsx)(d.P3F, {
-                                          onMouseEnter: t,
-                                          onMouseLeave: n,
-                                          onClick: p,
-                                          className: w.button,
-                                          children: (0, l.jsx)(d.Huf, {
-                                              size: "custom",
-                                              color: "currentColor",
-                                              width: 18,
-                                              height: 18,
-                                          }),
-                                      });
-                                  },
+                              p &&
+                              (0, l.jsx)(d.u, {
+                                  text: R.intl.string(R.t.x8Nn4O),
+                                  children: (0, l.jsx)(u.P3F, {
+                                      onClick: (e) => {
+                                          (0, m.jW)(
+                                              e,
+                                              async () => {
+                                                  let { default: e } = await n.e("84259").then(n.bind(n, 597409));
+                                                  return (t) => {
+                                                      var n, r;
+                                                      return (0, l.jsx)(
+                                                          e,
+                                                          ((n = (function (e) {
+                                                              for (var t = 1; t < arguments.length; t++) {
+                                                                  var n = null != arguments[t] ? arguments[t] : {},
+                                                                      l = Object.keys(n);
+                                                                  "function" == typeof Object.getOwnPropertySymbols &&
+                                                                      (l = l.concat(
+                                                                          Object.getOwnPropertySymbols(n).filter(
+                                                                              function (e) {
+                                                                                  return Object.getOwnPropertyDescriptor(
+                                                                                      n,
+                                                                                      e,
+                                                                                  ).enumerable;
+                                                                              },
+                                                                          ),
+                                                                      )),
+                                                                      l.forEach(function (t) {
+                                                                          var l;
+                                                                          (l = n[t]),
+                                                                              t in e
+                                                                                  ? Object.defineProperty(e, t, {
+                                                                                        value: l,
+                                                                                        enumerable: !0,
+                                                                                        configurable: !0,
+                                                                                        writable: !0,
+                                                                                    })
+                                                                                  : (e[t] = l);
+                                                                      });
+                                                              }
+                                                              return e;
+                                                          })({}, t)),
+                                                          (r = r =
+                                                              {
+                                                                  guild: v,
+                                                                  user: h,
+                                                              }),
+                                                          Object.getOwnPropertyDescriptors
+                                                              ? Object.defineProperties(
+                                                                    n,
+                                                                    Object.getOwnPropertyDescriptors(r),
+                                                                )
+                                                              : (function (e, t) {
+                                                                    var n = Object.keys(e);
+                                                                    if (Object.getOwnPropertySymbols) {
+                                                                        var l = Object.getOwnPropertySymbols(e);
+                                                                        n.push.apply(n, l);
+                                                                    }
+                                                                    return n;
+                                                                })(Object(r)).forEach(function (e) {
+                                                                    Object.defineProperty(
+                                                                        n,
+                                                                        e,
+                                                                        Object.getOwnPropertyDescriptor(r, e),
+                                                                    );
+                                                                }),
+                                                          n),
+                                                      );
+                                                  };
+                                              },
+                                              {
+                                                  position: "bottom",
+                                                  align: "right",
+                                              },
+                                          );
+                                      },
+                                      className: w.button,
+                                      children: (0, l.jsx)(u.Huf, {
+                                          size: "custom",
+                                          color: "currentColor",
+                                          width: 18,
+                                          height: 18,
+                                      }),
+                                  }),
                               }),
                       }),
                   ],
@@ -291,24 +298,24 @@ let y = r.memo(function (e) {
             t = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             n = "".concat(Math.floor(25 * Math.random()) + 50, "px");
         return (0, l.jsxs)("tr", {
-            className: i()(w.roundedRow, w.memberRowContainer),
+            className: a()(w.roundedRow, w.memberRowContainer),
             children: [
                 (0, l.jsx)("td", {
                     children: (0, l.jsxs)("div", {
                         className: w.memberNameContainer,
                         children: [
-                            (0, l.jsx)("div", { className: i()(R.placeholderAvatar, w.memberAvatar) }),
+                            (0, l.jsx)("div", { className: a()(I.placeholderAvatar, w.memberAvatar) }),
                             (0, l.jsx)("div", {
                                 className: w.memberName,
                                 children: (0, l.jsx)("div", {
-                                    className: R.placeholderText,
+                                    className: I.placeholderText,
                                     style: { width: e },
                                 }),
                             }),
                             (0, l.jsx)("div", {
                                 className: w.memberGlobalName,
                                 children: (0, l.jsx)("div", {
-                                    className: R.placeholderTextSmall,
+                                    className: I.placeholderTextSmall,
                                     style: { width: t },
                                 }),
                             }),
@@ -318,62 +325,62 @@ let y = r.memo(function (e) {
                 (0, l.jsx)("td", {
                     className: w.mediumCol,
                     children: (0, l.jsx)("div", {
-                        className: R.placeholderText,
+                        className: I.placeholderText,
                         style: { width: n },
                     }),
                 }),
-                (0, l.jsx)("td", { className: R.moreOptionsCol }),
+                (0, l.jsx)("td", { className: I.moreOptionsCol }),
             ],
         });
     };
-function D(e) {
+function B(e) {
     let { guildId: t, currentTab: n } = e,
-        a = r.useRef(null),
-        i = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
-        s = (0, g.C)({ guildId: t }),
-        o = (0, c.e7)([h.Z], () => h.Z.isFetching()),
-        { guildJoinRequests: u } = (0, p.j)({
+        i = r.useRef(null),
+        a = (0, c.e7)([S.Z], () => S.Z.getGuild(t)),
+        s = (0, p.C)({ guildId: t }),
+        o = (0, c.e7)([b.Z], () => b.Z.isFetching()),
+        { guildJoinRequests: d } = (0, C.j)({
             guildId: t,
             applicationStatus: n,
             sortOrder: s,
         }),
-        { fetchNextPage: m } = (0, f.m)({
+        { fetchNextPage: m } = (0, v.m)({
             guildId: t,
-            guildJoinRequests: u,
+            guildJoinRequests: d,
         }),
         x = r.useCallback(async () => {
-            let e = s === b.Nw.TIMESTAMP_ASC ? b.Nw.TIMESTAMP_DESC : b.Nw.TIMESTAMP_ASC;
-            j.Z.setSelectedSortOrder(t, e), await m(e, n);
+            let e = s === f.Nw.TIMESTAMP_ASC ? f.Nw.TIMESTAMP_DESC : f.Nw.TIMESTAMP_ASC;
+            h.Z.setSelectedSortOrder(t, e), await m(e, n);
         }, [s, t, m, n]);
-    return null == i
+    return null == a
         ? null
         : (0, l.jsx)("div", {
-              className: I.mainTableContainer,
-              children: (0, l.jsx)(d.Den, {
-                  className: I.horizatonalScroller,
-                  ref: a,
+              className: Z.mainTableContainer,
+              children: (0, l.jsx)(u.Den, {
+                  className: Z.horizatonalScroller,
+                  ref: i,
                   orientation: "horizontal",
                   children: (0, l.jsxs)("table", {
-                      className: R.table,
+                      className: I.table,
                       children: [
-                          (0, l.jsx)(O, {
+                          (0, l.jsx)(y, {
                               sortOrder: s,
                               onSortChange: x,
                           }),
                           (0, l.jsx)("tbody", {
                               children: o
                                   ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(k, {}, "placeholder-".concat(t)))
-                                  : 0 === u.length
+                                  : 0 === d.length
                                     ? (0, l.jsx)("td", {
                                           colSpan: 3,
                                           children: (0, l.jsx)(M, { status: n }),
                                       })
-                                    : u.map((e) =>
+                                    : d.map((e) =>
                                           (0, l.jsx)(
-                                              A,
+                                              D,
                                               {
                                                   joinRequest: e,
-                                                  onSelect: () => j.Z.setSelectedGuildJoinRequest(t, e),
+                                                  onSelect: () => h.Z.setSelectedGuildJoinRequest(t, e),
                                               },
                                               e.joinRequestId,
                                           ),

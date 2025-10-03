@@ -1,7 +1,7 @@
 n.d(t, {
-    Zh: () => A,
-    e: () => C,
-    iq: () => N,
+    Zh: () => O,
+    e: () => v,
+    iq: () => I,
 }),
     n(388685);
 var r = n(951288),
@@ -9,181 +9,103 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(657707),
-    l = n(481060),
-    c = n(596454),
-    u = n(739566),
-    d = n(590956),
-    f = n(834129),
-    _ = n(222677),
-    p = n(768581),
-    h = n(585483),
-    m = n(139688),
-    g = n(981631),
-    E = n(388032),
-    b = n(871320);
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    l = n(28664),
+    c = n(481060),
+    u = n(596454),
+    d = n(739566),
+    f = n(590956),
+    _ = n(834129),
+    p = n(222677),
+    h = n(768581),
+    m = n(585483),
+    g = n(139688),
+    E = n(981631),
+    b = n(388032),
+    y = n(871320);
 function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function I(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function T(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = S(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function S(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function A(e) {
     let { message: t, rendered: n } = e;
-    return null == (0, m.xE)(t.content)
-        ? E.intl.format(E.t.k6Jc9f, {
+    return null == (0, g.xE)(t.content)
+        ? b.intl.format(b.t.k6Jc9f, {
               username: null,
               usernameHook: () => null,
           })
-        : E.intl.format(E.t.IihHBw, {
+        : b.intl.format(b.t.IihHBw, {
               emojiPreview: n,
               emojiName: null,
               username: null,
               usernameHook: () => null,
           });
 }
-function C(e) {
+function v(e) {
     let { message: t, className: n } = e,
         [a, s] = i.useState(!1),
-        u = t.getChannelId(),
-        d = (0, m.xE)(t.content),
-        f = i.useCallback(() => {
-            null != d &&
-                (0, _.rU)(
-                    u,
+        d = t.getChannelId(),
+        f = (0, g.xE)(t.content),
+        _ = i.useCallback(() => {
+            null != f &&
+                (0, p.rU)(
+                    d,
                     t.id,
                     {
-                        id: d.id,
-                        name: d.name,
+                        id: f.id,
+                        name: f.name,
                     },
-                    _.TW.MESSAGE,
+                    p.TW.MESSAGE,
                 );
-        }, [u, d, t.id]);
-    return null == d
+        }, [d, f, t.id]);
+    return null == f
         ? null
-        : (0, r.jsx)(l.ua7, {
+        : (0, r.jsx)(l.u, {
+              asContainer: !0,
               "aria-label": !1,
-              text: (0, r.jsx)(c.Z, {
-                  emojiName: d.name,
+              __unsupportedReactNodeAsText: (0, r.jsx)(u.Z, {
+                  emojiName: f.name,
                   size: "jumbo",
-                  emojiId: d.id,
-                  animated: d.animated,
+                  emojiId: f.id,
+                  animated: f.animated,
                   isInteracting: !0,
-                  channelId: u,
+                  channelId: d,
                   messageId: t.id,
               }),
-              children: (e) => {
-                  var { onMouseEnter: i, onMouseLeave: _ } = e,
-                      p = T(e, ["onMouseEnter", "onMouseLeave"]);
-                  return (0, r.jsx)(
-                      l.P3F,
-                      I(O({}, p), {
-                          className: o()(n, b.ctaReactionButton),
-                          onClick: f,
-                          onMouseEnter: () => {
-                              s(!0), null == i || i();
-                          },
-                          onMouseLeave: () => {
-                              s(!1), null == _ || _();
-                          },
-                          children: (0, r.jsx)(l.Text, {
-                              variant: "text-sm/semibold",
-                              color: "text-secondary",
-                              className: b.ctaText,
-                              children: E.intl.format(E.t.z5Rnl5, {
-                                  renderedEmoji: (0, r.jsx)(c.Z, {
-                                      emojiName: d.name,
-                                      size: "default",
-                                      emojiId: d.id,
-                                      animated: d.animated,
-                                      isInteracting: a,
-                                      channelId: u,
-                                      messageId: t.id,
-                                      className: b.ctaEmoji,
-                                  }),
-                              }),
+              children: (0, r.jsx)(c.P3F, {
+                  className: o()(n, y.ctaReactionButton),
+                  onClick: _,
+                  onMouseEnter: () => {
+                      s(!0);
+                  },
+                  onMouseLeave: () => {
+                      s(!1);
+                  },
+                  children: (0, r.jsx)(c.Text, {
+                      variant: "text-sm/semibold",
+                      color: "text-secondary",
+                      className: y.ctaText,
+                      children: b.intl.format(b.t.z5Rnl5, {
+                          renderedEmoji: (0, r.jsx)(u.Z, {
+                              emojiName: f.name,
+                              size: "default",
+                              emojiId: f.id,
+                              animated: f.animated,
+                              isInteracting: a,
+                              channelId: d,
+                              messageId: t.id,
+                              className: y.ctaEmoji,
                           }),
                       }),
-                  );
-              },
+                  }),
+              }),
           });
 }
-function N(e) {
+function I(e) {
     let { message: t, compact: n, usernameHook: a } = e,
         o = t.content,
-        [c, _] = i.useState(!1),
-        y = (0, u.ZP)(t),
-        O = a(y),
-        v = (0, m.xE)(o),
+        [l, u] = i.useState(!1),
+        p = (0, d.ZP)(t),
+        O = a(p),
+        v = (0, g.xE)(o),
         I = i.useCallback(() => {
             null != v &&
-                h.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
+                m.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
                     plainText: ":".concat(v.name, ":"),
                     rawText: o,
                     addSpace: !0,
@@ -194,7 +116,7 @@ function N(e) {
                 null == v
                     ? null
                     : {
-                          src: p.ZP.getEmojiURL({
+                          src: h.ZP.getEmojiURL({
                               id: v.id,
                               animated: v.animated,
                               size: 48,
@@ -205,36 +127,36 @@ function N(e) {
                       },
             [v],
         );
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(_.Z, {
         iconNode: (0, r.jsx)(s.EO4, {
             size: "refresh_sm",
             color: "currentColor",
         }),
-        iconContainerClassName: b.iconContainer,
+        iconContainerClassName: y.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: b.content,
+        contentClassName: y.content,
         children: (0, r.jsx)("span", {
             children:
                 null == v || null == T
-                    ? E.intl.format(E.t.k6Jc9f, {
-                          username: y.nick,
+                    ? b.intl.format(b.t.k6Jc9f, {
+                          username: p.nick,
                           usernameHook: O,
                       })
-                    : E.intl.format(E.t.IihHBw, {
-                          username: y.nick,
+                    : b.intl.format(b.t.IihHBw, {
+                          username: p.nick,
                           usernameHook: O,
-                          emojiPreview: (0, r.jsx)(d.Y, {
+                          emojiPreview: (0, r.jsx)(f.Y, {
                               node: T,
-                              isInteracting: c,
+                              isInteracting: l,
                           }),
-                          emojiName: (0, r.jsx)(l.P3F, {
-                              className: b.clickableEmoji,
+                          emojiName: (0, r.jsx)(c.P3F, {
+                              className: y.clickableEmoji,
                               tag: "span",
                               onClick: I,
-                              onMouseEnter: () => _(!0),
-                              onMouseLeave: () => _(!1),
-                              children: (0, r.jsx)(l.Text, {
+                              onMouseEnter: () => u(!0),
+                              onMouseLeave: () => u(!1),
+                              children: (0, r.jsx)(c.Text, {
                                   tag: "span",
                                   variant: "text-md/medium",
                                   color: "text-primary",

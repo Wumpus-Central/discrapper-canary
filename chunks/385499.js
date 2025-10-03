@@ -1,14 +1,15 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(981729),
-    s = n(481060),
-    l = n(674563),
-    c = n(388032),
-    u = n(182171);
-function d(e, t, n) {
+    s = n(28664),
+    l = n(481060),
+    c = n(674563),
+    u = n(388032),
+    d = n(182171);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,105 +50,101 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = (e) => {
+let m = (e) => {
     let {
             invertColor: t = !1,
-            type: n = l.Hb.BOT,
+            type: n = c.Hb.BOT,
             className: i,
-            verified: d,
-            hideIcon: _ = !1,
-            useRemSizes: h = !1,
-            children: m = [],
+            verified: f,
+            hideIcon: p = !1,
+            useRemSizes: m = !1,
+            children: g = [],
         } = e,
-        g = null,
-        E = c.intl.string(c.t.g76OcH),
-        b = t ? u.botTagInvert : u.botTagRegular;
+        E = null,
+        b = u.intl.string(u.t.g76OcH),
+        y = t ? d.botTagInvert : d.botTagRegular;
     switch (n) {
-        case l.Hb.SYSTEM_DM:
-        case l.Hb.OFFICIAL:
-            (d = !0), (E = c.intl.string(c.t["7s687u"])), (g = c.intl.string(c.t.lKQ7Wl));
+        case c.Hb.SYSTEM_DM:
+        case c.Hb.OFFICIAL:
+            (f = !0), (b = u.intl.string(u.t["7s687u"])), (E = u.intl.string(u.t.lKQ7Wl));
             break;
-        case l.Hb.SERVER:
-            g = c.intl.string(c.t.PuJGuL);
+        case c.Hb.SERVER:
+            E = u.intl.string(u.t.PuJGuL);
             break;
-        case l.Hb.ORIGINAL_POSTER:
-            g = c.intl.string(c.t.fyE8sL);
+        case c.Hb.ORIGINAL_POSTER:
+            E = u.intl.string(u.t.fyE8sL);
             break;
-        case l.Hb.STAFF_ONLY_DM:
-            g = c.intl.string(c.t.oMx98P);
+        case c.Hb.STAFF_ONLY_DM:
+            E = u.intl.string(u.t.oMx98P);
             break;
-        case l.Hb.NOT_STAFF_WARNING:
-            (g = c.intl.string(c.t.UWhXbG)), (b = u.botTagNotStaffWarning);
+        case c.Hb.NOT_STAFF_WARNING:
+            (E = u.intl.string(u.t.UWhXbG)), (y = d.botTagNotStaffWarning);
             break;
-        case l.Hb.REMIX:
-            (d = !1), (g = c.intl.string(c.t.uXDG39));
+        case c.Hb.REMIX:
+            (f = !1), (E = u.intl.string(u.t.uXDG39));
             break;
-        case l.Hb.BOT:
+        case c.Hb.BOT:
         default:
-            g = c.intl.string(c.t["9RNkeH"]);
+            E = u.intl.string(u.t["9RNkeH"]);
     }
-    let y = n === l.Hb.ORIGINAL_POSTER,
-        O = n === l.Hb.REMIX,
-        v = null;
-    d &&
-        (v = (0, r.jsx)(o.u, {
-            text: E,
+    let O = n === c.Hb.ORIGINAL_POSTER,
+        v = n === c.Hb.REMIX,
+        I = null;
+    f &&
+        (I = (0, r.jsx)(s.u, {
+            text: b,
             align: "center",
             position: "top",
-            children: (e) =>
-                (0, r.jsx)(
-                    s.kSu,
-                    p(f({}, e), {
-                        className: u.botTagVerified,
-                        color: s.TVs.colors.WHITE,
-                    }),
-                ),
+            children: (0, r.jsx)(l.kSu, {
+                className: d.botTagVerified,
+                color: l.TVs.colors.WHITE,
+            }),
         }));
-    let I = (e) =>
+    let T = (e) =>
         (0, r.jsxs)(
             "span",
-            p(f({}, e), {
-                className: a()(i, b, h ? u.rem : u.px, {
-                    [u.botTagOP]: y,
-                    [u.botTagRemix]: O,
+            h(_({}, e), {
+                className: a()(i, y, m ? d.rem : d.px, {
+                    [d.botTagOP]: O,
+                    [d.botTagRemix]: v,
                 }),
                 children: [
-                    _ ? null : v,
-                    m,
+                    p ? null : I,
+                    g,
                     (0, r.jsx)("span", {
-                        className: u.botText,
-                        children: g,
+                        className: d.botText,
+                        children: E,
                     }),
                 ],
             }),
         );
     switch (n) {
-        case l.Hb.REMIX:
+        case c.Hb.REMIX:
             return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.xb0str),
+                text: u.intl.string(u.t.xb0str),
                 position: "top",
-                children: (e) => I(e),
+                children: (e) => T(e),
             });
-        case l.Hb.ORIGINAL_POSTER:
+        case c.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.uN6Emp),
+                text: u.intl.string(u.t.uN6Emp),
                 position: "top",
-                children: (e) => I(e),
+                children: (e) => T(e),
             });
         default:
-            return I();
+            return T();
     }
 };
-h.Types = l.Hb;
-let m = h;
+m.Types = c.Hb;
+let g = m;

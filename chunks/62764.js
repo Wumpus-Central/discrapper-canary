@@ -1,68 +1,69 @@
-n.d(t, { Z: () => V }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => z }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
     s = n(433517),
-    c = n(481060),
-    u = n(904245),
-    d = n(593472),
-    p = n(393238),
-    h = n(330726),
-    f = n(48929),
-    m = n(333535),
-    g = n(566006),
-    b = n(443877),
-    _ = n(60174),
-    y = n(216337),
-    C = n(920888),
+    c = n(28664),
+    u = n(481060),
+    d = n(904245),
+    p = n(593472),
+    h = n(393238),
+    f = n(330726),
+    m = n(48929),
+    g = n(333535),
+    b = n(566006),
+    C = n(443877),
+    y = n(60174),
+    _ = n(216337),
+    v = n(920888),
     x = n(287151),
-    v = n(501517),
-    O = n(982168),
-    j = n(216572),
-    E = n(5101),
-    S = n(817608),
+    O = n(501517),
+    j = n(982168),
+    E = n(216572),
+    S = n(5101),
+    P = n(817608),
     I = n(569471),
-    P = n(346479),
-    Z = n(592125),
+    Z = n(346479),
+    N = n(592125),
     T = n(934415),
-    N = n(572004),
-    A = n(456269),
-    w = n(109590),
+    A = n(572004),
+    w = n(456269),
+    M = n(109590),
     R = n(228392),
-    M = n(981631),
-    D = n(388032),
-    L = n(764295),
-    k = n(319720),
-    U = n(214785),
-    B = n(127947);
-function F(e) {
+    k = n(981631),
+    L = n(388032),
+    D = n(764295),
+    U = n(319720),
+    B = n(127947),
+    H = n(577650);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function G(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,8 +71,8 @@ function G(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -80,78 +81,78 @@ function G(e, t) {
         e
     );
 }
-function H(e) {
+function G(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        a = (0, O.P0)(t),
-        [o, u] = i.useState(!1),
+        a = (0, j.P0)(t),
+        [o, c] = r.useState(!1),
         d = () => {
-            u(!0),
-                v.Z.resolveFlag(t.id).then(() => {
-                    u(!1);
+            c(!0),
+                O.Z.resolveFlag(t.id).then(() => {
+                    c(!1);
                 });
         };
     return a
-        ? (0, r.jsx)(c.zxk, {
+        ? (0, i.jsx)(u.zxk, {
               size: "sm",
               variant: "secondary",
-              text: l ? D.intl.string(L.default["2Y4vkp"]) : D.intl.string(L.default.YIbR4u),
+              text: l ? L.intl.string(D.default["2Y4vkp"]) : L.intl.string(D.default.YIbR4u),
               onClick: () => {
-                  !0 === s.K.get(E.F)
+                  !0 === s.K.get(S.F)
                       ? d()
-                      : (0, c.ZDy)(async () => {
+                      : (0, u.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 5101));
                             return (t) => {
-                                let { transitionState: n, onClose: i } = t;
-                                return (0, r.jsx)(e, {
+                                let { transitionState: n, onClose: r } = t;
+                                return (0, i.jsx)(e, {
                                     transitionState: n,
-                                    onClose: i,
+                                    onClose: r,
                                     handleResolveFlag: d,
                                 });
                             };
                         });
               },
               loading: o,
-              icon: c.dz2,
+              icon: u.dz2,
               disabled: l,
           })
         : null;
 }
-function V(e) {
+function z(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
-        { ref: v, width: O } = (0, p.ZP)(),
-        [E, L] = i.useState(3),
-        [V, z] = i.useState(!n),
-        [W, q] = (0, h.Z)(!1, 2000),
-        Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
-        { firstMessage: K } = (0, w.cl)(Y),
-        X = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
+        { ref: O, width: j } = (0, h.ZP)(),
+        [S, D] = r.useState(3),
+        [z, W] = r.useState(!n),
+        [q, K] = (0, f.Z)(!1, 2000),
+        Y = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
+        { firstMessage: X } = (0, M.cl)(Y),
+        J = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
         {
             disableReactionUpdates: Q,
-            disableReactionCreates: J,
-            isLurking: $,
-            isGuest: ee,
-            isPendingMember: et,
-        } = (0, b.Z)(Y),
-        en = (0, j.nw)(Y),
-        er = (0, o.e7)([Z.Z], () => Z.Z.getChannel(s)),
-        ei = (0, A.Bs)(er),
-        el = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
-        ea = i.useCallback(
+            disableReactionCreates: $,
+            isLurking: ee,
+            isGuest: et,
+            isPendingMember: en,
+        } = (0, C.Z)(Y),
+        ei = (0, E.nw)(Y),
+        er = (0, o.e7)([N.Z], () => N.Z.getChannel(s)),
+        el = (0, w.Bs)(er),
+        ea = (0, o.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        eo = r.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    z((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    W((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n],
         );
-    i.useLayoutEffect(() => {
-        let e = v.current;
+    r.useLayoutEffect(() => {
+        let e = O.current;
         if (null == e || !n) return;
-        let t = new IntersectionObserver(ea, { threshold: 1 });
+        let t = new IntersectionObserver(eo, { threshold: 1 });
         return (
             t.observe(e),
             () => {
@@ -159,65 +160,54 @@ function V(e) {
             }
         );
     });
-    let [eo, es] = i.useState(!0);
+    let [es, ec] = r.useState(!0);
     if (
-        (i.useEffect(() => {
-            null != O && (L(Math.floor((O - 280) / 58)), es(!1));
-        }, [O]),
-        null == Y || null == K)
+        (r.useEffect(() => {
+            null != j && (D(Math.floor((j - 280) / 58)), ec(!1));
+        }, [j]),
+        null == Y || null == X)
     )
         return null;
-    let ec = K.reactions.length > 0,
-        eu = () => {
-            X ? P.Z.leaveThread(Y, "Forum Toolbar") : P.Z.joinThread(Y, "Forum Toolbar");
-        },
+    let eu = X.reactions.length > 0,
         ed = () => {
             (0, R.B)({
                 postId: Y.id,
-                location: { section: M.jXE.CHANNEL_HEADER },
+                location: { section: k.jXE.CHANNEL_HEADER },
             }),
-                (0, N.JG)((0, T.EO)(Y, er), () => q(!0));
+                (0, A.JG)((0, T.EO)(Y, er), () => K(!0));
         },
-        ep = () => {
-            u.Z.jumpToMessage({
-                channelId: Y.id,
-                messageId: Y.id,
-                flash: !0,
-                jumpType: d.SR.INSTANT,
-            });
-        },
-        eh = X ? c.dz2 : c.Dkj;
-    return (0, r.jsxs)(r.Fragment, {
+        ep = J ? u.dz2 : u.Dkj;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)("div", {
-                className: a()(k.container, { [k.header]: V }),
-                ref: v,
+            (0, i.jsxs)("div", {
+                className: a()(U.container, { [U.header]: z }),
+                ref: O,
                 children: [
-                    en
-                        ? (0, r.jsx)("div", {
-                              className: k.reportedMessageActions,
-                              children: (0, r.jsx)(S.Z, {
-                                  message: K,
+                    ei
+                        ? (0, i.jsx)("div", {
+                              className: U.reportedMessageActions,
+                              children: (0, i.jsx)(P.Z, {
+                                  message: X,
                                   channel: Y,
                               }),
                           })
-                        : (0, r.jsxs)("div", {
-                              className: a()(k.reactButtons, { [k.loading]: eo }),
+                        : (0, i.jsxs)("div", {
+                              className: a()(U.reactButtons, { [U.loading]: es }),
                               children: [
-                                  !ec &&
-                                      !J &&
-                                      null != ei &&
-                                      (0, r.jsx)("div", {
+                                  !eu &&
+                                      !$ &&
+                                      null != el &&
+                                      (0, i.jsx)("div", {
                                           className: B.reactions,
-                                          children: (0, r.jsx)(x.le, {
-                                              message: K,
+                                          children: (0, i.jsx)(x.le, {
+                                              message: X,
                                               readOnly: !1,
                                               useChatFontScaling: !1,
-                                              isLurking: $,
-                                              isGuest: ee,
-                                              isPendingMember: et,
-                                              emoji: ei,
-                                              type: g.O.NORMAL,
+                                              isLurking: ee,
+                                              isGuest: et,
+                                              isPendingMember: en,
+                                              emoji: el,
+                                              type: b.O.NORMAL,
                                               hideCount: !0,
                                               count: 0,
                                               me: !1,
@@ -226,97 +216,100 @@ function V(e) {
                                               emojiSize: "reaction",
                                           }),
                                       }),
-                                  (0, r.jsx)(C.Z, {
-                                      message: K,
+                                  (0, i.jsx)(v.Z, {
+                                      message: X,
                                       channel: Y,
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: Q,
-                                      isLurking: $,
-                                      isGuest: ee,
-                                      isPendingMember: et,
-                                      maxReactions: E,
-                                      className: k.reactions,
+                                      isLurking: ee,
+                                      isGuest: et,
+                                      isPendingMember: en,
+                                      maxReactions: S,
+                                      className: U.reactions,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
                                       forceHideReactionCreates: !0,
                                   }),
-                                  !J &&
-                                      (0, r.jsx)(_.X, {
-                                          type: g.O.NORMAL,
-                                          message: K,
+                                  !$ &&
+                                      (0, i.jsx)(y.X, {
+                                          type: b.O.NORMAL,
+                                          message: X,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: a()(U.secondary, k.addReactButton, { [k.hasNoReactions]: !ec }),
+                                          className: a()(H.secondary, U.addReactButton, { [U.hasNoReactions]: !eu }),
                                           isForumToolbar: !0,
-                                          children: !ec && D.intl.string(D.t.xpOyTE),
+                                          children: !eu && L.intl.string(L.t.xpOyTE),
                                       }),
                               ],
                           }),
-                    (0, r.jsxs)("div", {
-                        className: k.buttons,
+                    (0, i.jsxs)("div", {
+                        className: U.buttons,
                         children: [
-                            en
-                                ? (0, r.jsx)(H, { channel: Y })
-                                : (0, r.jsx)(c.ua7, {
-                                      text: D.intl.string(D.t.F7oeDg),
-                                      children: (e) =>
-                                          (0, r.jsx)(
-                                              c.zxk,
-                                              G(F({}, e), {
-                                                  icon: eh,
-                                                  size: "sm",
-                                                  variant: "secondary",
-                                                  text: X ? D.intl.string(D.t["7OkUzs"]) : D.intl.string(D.t["3aOv+v"]),
-                                                  onClick: eu,
-                                              }),
-                                          ),
+                            ei
+                                ? (0, i.jsx)(G, { channel: Y })
+                                : (0, i.jsx)(c.u, {
+                                      text: L.intl.string(L.t.F7oeDg),
+                                      children: (0, i.jsx)(u.zxk, {
+                                          icon: ep,
+                                          size: "sm",
+                                          variant: "secondary",
+                                          text: J ? L.intl.string(L.t["7OkUzs"]) : L.intl.string(L.t["3aOv+v"]),
+                                          onClick: () => {
+                                              J
+                                                  ? Z.Z.leaveThread(Y, "Forum Toolbar")
+                                                  : Z.Z.joinThread(Y, "Forum Toolbar");
+                                          },
+                                      }),
                                   }),
-                            (0, r.jsx)(c.ua7, {
-                                text: D.intl.string(D.t.WqhZsr),
+                            (0, i.jsx)(u.ua7, {
+                                text: L.intl.string(L.t.WqhZsr),
                                 children: (e) =>
-                                    W
-                                        ? (0, r.jsx)(
-                                              c.zxk,
-                                              G(F({}, e), {
-                                                  icon: c.dz2,
+                                    q
+                                        ? (0, i.jsx)(
+                                              u.zxk,
+                                              F(V({}, e), {
+                                                  icon: u.dz2,
                                                   size: "sm",
                                                   variant: "secondary",
                                                   onClick: ed,
-                                                  text: D.intl.string(D.t["t5VZ8/"]),
+                                                  text: L.intl.string(L.t["t5VZ8/"]),
                                               }),
                                           )
-                                        : (0, r.jsx)(
-                                              c.hU,
-                                              G(F({}, e), {
-                                                  icon: c.xPt,
+                                        : (0, i.jsx)(
+                                              u.hU,
+                                              F(V({}, e), {
+                                                  icon: u.xPt,
                                                   size: "sm",
                                                   variant: "secondary",
                                                   onClick: ed,
-                                                  "aria-label": D.intl.string(D.t.WqhZsr),
+                                                  "aria-label": L.intl.string(L.t.WqhZsr),
                                               }),
                                           ),
                             }),
                             !n &&
-                                (0, r.jsx)(c.ua7, {
-                                    text: D.intl.string(D.t.nFP4oa),
-                                    children: (e) =>
-                                        (0, r.jsx)(
-                                            c.hU,
-                                            G(F({}, e), {
-                                                icon: c.Za2,
-                                                size: "sm",
-                                                variant: "secondary",
-                                                onClick: ep,
-                                                "aria-label": D.intl.string(D.t.nFP4oa),
-                                            }),
-                                        ),
+                                (0, i.jsx)(c.u, {
+                                    text: L.intl.string(L.t.nFP4oa),
+                                    children: (0, i.jsx)(u.hU, {
+                                        icon: u.Za2,
+                                        size: "sm",
+                                        variant: "secondary",
+                                        onClick: () => {
+                                            d.Z.jumpToMessage({
+                                                channelId: Y.id,
+                                                messageId: Y.id,
+                                                flash: !0,
+                                                jumpType: p.SR.INSTANT,
+                                            });
+                                        },
+                                        "aria-label": L.intl.string(L.t.nFP4oa),
+                                    }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            el && (0, r.jsx)(m.Z, { threadId: t }),
-            (0, r.jsx)(y.Z, {
+            ea && (0, i.jsx)(g.Z, { threadId: t }),
+            (0, i.jsx)(_.Z, {
                 channel: Y,
                 isLastItem: l,
             }),

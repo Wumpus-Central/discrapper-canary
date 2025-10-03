@@ -6,5 +6,4 @@ e.exports = {
     removeActions: "removeActions__3f339",
     removeIcon: "removeIcon__3f339",
     removeContainer: "removeContainer__3f339",
-    tooltip: "tooltip__3f339",
 };

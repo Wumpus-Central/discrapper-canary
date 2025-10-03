@@ -1,110 +1,55 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(704215),
-    o = n(481060),
-    s = n(243778),
-    l = n(388032),
-    c = n(170337),
-    u = n(442937);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function p(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let h = () =>
+    o = n(28664),
+    s = n(481060),
+    l = n(243778),
+    c = n(388032),
+    u = n(170337),
+    d = n(442937);
+let f = () =>
         (0, r.jsxs)("div", {
-            className: c.coachtipInner,
+            className: u.coachtipInner,
             children: [
                 (0, r.jsx)("img", {
-                    src: u,
-                    alt: l.intl.string(l.t["9wkT19"]),
-                    className: c.coachtipAsset,
+                    src: d,
+                    alt: c.intl.string(c.t["9wkT19"]),
+                    className: u.coachtipAsset,
                 }),
                 (0, r.jsxs)("div", {
-                    className: c.coachtipTextContainer,
+                    className: u.coachtipTextContainer,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "heading-lg/semibold",
-                            children: l.intl.string(l.t.V5y3qa),
+                            children: c.intl.string(c.t.V5y3qa),
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-secondary",
-                            children: l.intl.string(l.t.eSDHDg),
+                            children: c.intl.string(c.t.eSDHDg),
                         }),
                     ],
                 }),
             ],
         }),
-    m = (e) => {
+    _ = (e) => {
         let { children: t } = e,
-            [n] = (0, s.US)([a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
-            [l, u] = i.useState(!1);
+            [n] = (0, l.US)([a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
+            [s, c] = i.useState(!1);
         return (i.useEffect(() => {
             setTimeout(() => {
-                u(!0);
+                c(!0);
             }, 300);
         }),
         n !== a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
             ? t
-            : (0, r.jsx)(o.ua7, {
-                  text: (0, r.jsx)(h, {}),
-                  tooltipClassName: c.coachtip,
-                  tooltipContentClassName: c.coachtipContent,
+            : (0, r.jsx)(o.u, {
+                  __unsupportedReactNodeAsText: (0, r.jsx)(f, {}),
                   position: "left",
-                  allowOverflow: !0,
-                  forceOpen: l,
-                  shouldShow: l,
-                  hideOnClick: !1,
+                  forceOpen: s,
+                  shouldShow: s,
                   "aria-label": "test",
-                  children: (e) => (0, r.jsx)("div", p(f({}, e), { children: t })),
+                  children: (0, r.jsx)("div", { children: t }),
               });
     };

@@ -1,9 +1,10 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(103450);
-function o(e, t, n) {
+var i = n(28664),
+    a = n(481060),
+    o = n(103450);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,16 +28,16 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = u(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -44,7 +45,7 @@ function l(e, t) {
     }
     return i;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -53,50 +54,45 @@ function c(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
+function d(e) {
     var {
             activity: t,
             embeddedActivity: n,
-            user: o,
-            onAction: c,
-            location: u,
-            variant: d = "secondary",
-            size: f = "sm",
+            user: s,
+            onAction: u,
+            location: d,
+            variant: f = "secondary",
+            size: _ = "sm",
         } = e,
-        _ = l(e, ["activity", "embeddedActivity", "user", "onAction", "location", "variant", "size"]);
-    let p = (0, a.e)({
+        p = c(e, ["activity", "embeddedActivity", "user", "onAction", "location", "variant", "size"]);
+    let h = (0, o.e)({
         activity: null != t ? t : void 0,
         embeddedActivity: n,
-        user: o,
-        onGameJoin: c,
-        location: u,
+        user: s,
+        onGameJoin: u,
+        location: d,
     });
-    if (null == p) return null;
-    let { isJoining: h, handleJoinRequest: m, buttonCTA: g, tooltip: E, isEnabled: b } = p;
+    if (null == h) return null;
+    let { isJoining: m, handleJoinRequest: g, buttonCTA: E, tooltip: b, isEnabled: y } = h;
     return (0, r.jsx)(
-        i.ua7,
+        i.u,
         {
-            text: E,
-            children: (e) => {
-                let { onMouseEnter: t, onMouseLeave: n } = e;
-                return (0, r.jsx)(
-                    i.zxk,
-                    s(
-                        {
-                            variant: d,
-                            size: f,
-                            text: g,
-                            onClick: m,
-                            onMouseEnter: t,
-                            onMouseLeave: n,
-                            disabled: !b,
-                            loading: h,
-                            fullWidth: !0,
-                        },
-                        _,
-                    ),
-                );
-            },
+            text: b,
+            children: (0, r.jsx)(
+                a.zxk,
+                l(
+                    {
+                        variant: f,
+                        size: _,
+                        text: E,
+                        onClick: g,
+                        disabled: !y,
+                        loading: m,
+                        fullWidth: !0,
+                    },
+                    p,
+                ),
+            ),
         },
         "join",
     );

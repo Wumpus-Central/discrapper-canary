@@ -1,77 +1,23 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(388032),
-    l = n(68531);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    o = n(28664),
+    s = n(481060),
+    l = n(388032),
+    c = n(68531);
 function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function _(e) {
-    let { text: t = s.intl.string(s.t["5AFxuL"]), className: n } = e;
-    return (0, r.jsx)(o.ua7, {
+    let { text: t = l.intl.string(l.t["5AFxuL"]), className: n } = e;
+    return (0, r.jsx)(o.u, {
         text: t,
-        children: (e) =>
-            (0, r.jsx)(
-                o.P3F,
-                f(u({}, e), {
-                    children: (0, r.jsx)(o.SrA, {
-                        size: "md",
-                        color: "currentColor",
-                        className: a()(l.nitroWheel, n),
-                    }),
-                }),
-            ),
+        asContainer: !0,
+        children: (0, r.jsx)(s.P3F, {
+            children: (0, r.jsx)(s.SrA, {
+                size: "md",
+                color: "currentColor",
+                className: a()(c.nitroWheel, n),
+            }),
+        }),
     });
 }

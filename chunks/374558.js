@@ -1,131 +1,52 @@
 n.d(t, {
-    M0: () => E,
-    YX: () => m,
-    tT: () => g,
+    M0: () => f,
+    YX: () => u,
+    tT: () => d,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
-    l = n(981729),
+    l = n(28664),
     c = n(94321);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function d(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = h(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let m = {
+let u = {
         TERTIARY: c.tertiary,
         SECONDARY: c.secondary,
         PRIMARY: c.primary,
     },
-    g = {
+    d = {
         SIZE_24: c.size24,
         SIZE_32: c.size32,
         SIZE_36: c.size36,
     },
-    E = i.forwardRef(function (e, t) {
+    f = i.forwardRef(function (e, t) {
         let {
             className: n,
             tooltip: i,
             color: a,
-            size: u = g.SIZE_32,
+            size: u = d.SIZE_32,
             icon: f,
-            onMouseDown: h,
-            onClick: m,
-            disabled: E,
-            focusProps: b,
+            onMouseDown: _,
+            onClick: p,
+            disabled: h,
+            focusProps: m,
         } = e;
         return (0, r.jsx)(l.u, {
+            asContainer: !0,
             text: i,
-            shouldShow: !E,
-            children: (e) => {
-                var { onClick: l } = e,
-                    g = p(e, ["onClick"]);
-                return (0, r.jsx)(
-                    s.P3F,
-                    _(d({}, g), {
-                        innerRef: t,
-                        "aria-label": i,
-                        "aria-disabled": E,
-                        className: o()(n, c.button, a, u, { [c.disabled]: E }),
-                        onMouseDown: h,
-                        onClick: (e) => {
-                            null == l || l(), m(e);
-                        },
-                        focusProps: b,
-                        children: f,
-                    }),
-                );
-            },
+            shouldShow: !h,
+            children: (0, r.jsx)(s.P3F, {
+                innerRef: t,
+                "aria-label": i,
+                "aria-disabled": h,
+                className: o()(n, c.button, a, u, { [c.disabled]: h }),
+                onMouseDown: _,
+                onClick: (e) => {
+                    p(e);
+                },
+                focusProps: m,
+                children: f,
+            }),
         });
     });

@@ -24,7 +24,6 @@ e.exports = {
     otherRoles: "otherRoles__71c22",
     addRoleIcon: "addRoleIcon__71c22",
     roleTooltipItem: "roleTooltipItem__71c22",
-    disabledActionTooltip: "disabledActionTooltip__71c22",
     nameContainer: "nameContainer__71c22",
     memberClanTag: "memberClanTag__71c22",
 };

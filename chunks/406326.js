@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(681715),
+    s = n(28664),
     o = n(481060),
     c = n(63063),
     d = n(607802),
@@ -57,22 +57,22 @@ function _(e, t) {
         e
     );
 }
-function O(e) {
+function j(e) {
     let {
             searchContext: t,
             searchMode: l,
             onSearchModeChange: s,
             totalResults: c,
-            isIndexing: O,
-            isSearching: x,
+            isIndexing: j,
+            isSearching: O,
             documentsIndexed: v,
         } = e,
         C = (0, u.UX)({ location: "SearchHeader" }),
         I = (0, p.nP)({ location: "SearchHeader" }),
         S = (0, p.KS)({ location: "SearchHeader" }),
         Z = (0, f.I)(t),
-        { totalFilters: P } = (0, h.p4)(Z, t),
-        T = i.useMemo(() => {
+        { totalFilters: T } = (0, h.p4)(Z, t),
+        P = i.useMemo(() => {
             if (t.type === g.aib.DMS && C) {
                 var e, n;
                 let t = null != (n = null == (e = (0, d.$G)(Z).channel_id) ? void 0 : e.length) ? n : 0;
@@ -86,18 +86,18 @@ function O(e) {
                 return (n) => (0, r.jsx)(e, _(y({}, n), { searchContext: t }));
             });
         }, [t]),
-        R = i.useMemo(() => (P > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: P }) : m.intl.string(m.t.UdhTtr)), [P]);
+        R = i.useMemo(() => (T > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: T }) : m.intl.string(m.t.UdhTtr)), [T]);
     return (0, r.jsxs)("header", {
-        className: a()(b.searchHeader, { [b.searchHeaderWithSubtitle]: null != T }),
+        className: a()(b.searchHeader, { [b.searchHeaderWithSubtitle]: null != P }),
         children: [
             (0, r.jsx)("div", {
                 className: b.totalResults,
                 role: "status",
-                children: (0, r.jsx)(j, {
+                children: (0, r.jsx)(x, {
                     totalResults: c,
-                    subtitle: T,
-                    isIndexing: O,
-                    isSearching: x,
+                    subtitle: P,
+                    isIndexing: j,
+                    isSearching: O,
                     documentsIndexed: v,
                 }),
             }),
@@ -144,7 +144,7 @@ function O(e) {
         ],
     });
 }
-function j(e) {
+function x(e) {
     let { totalResults: t, subtitle: n, isSearching: i, isIndexing: l, documentsIndexed: a } = e;
     return l
         ? (0, r.jsx)(v, { documentsIndexed: a })
@@ -155,7 +155,7 @@ function j(e) {
                 subtitle: n,
             });
 }
-function x() {
+function O() {
     return (0, r.jsx)("div", {
         className: b.spinnerWrapper,
         children: (0, r.jsx)(o.$jN, {
@@ -182,7 +182,7 @@ function v(e) {
                         children: m.intl.string(m.t["G3EA+/"]),
                     }),
                 }),
-                (0, r.jsx)(x, {}),
+                (0, r.jsx)(O, {}),
             ],
         }),
     });
@@ -195,7 +195,7 @@ function C() {
                 color: "header-secondary",
                 children: m.intl.string(m.t.uixzLS),
             }),
-            (0, r.jsx)(x, {}),
+            (0, r.jsx)(O, {}),
         ],
     });
 }

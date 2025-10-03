@@ -3,36 +3,24 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(846519),
-    o = n(481060),
-    s = n(293245),
-    c = n(863969),
-    u = n(563593),
-    d = n(981631),
-    p = n(388032);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let h = (0, o.GSL)(c.Z),
-    g = (0, o.GSL)(u.Z),
-    m = new Set([d.TzF.PUSHING, d.TzF.PULLING]),
+    o = n(28664),
+    s = n(481060),
+    c = n(293245),
+    u = n(863969),
+    d = n(563593),
+    p = n(981631),
+    f = n(388032);
+let h = (0, s.GSL)(u.Z),
+    g = (0, s.GSL)(d.Z),
+    m = new Set([p.TzF.PUSHING, p.TzF.PULLING]),
     b = Object.freeze({
-        [d.TzF.DONE]: h,
-        [d.TzF.PLANNING]: h,
-        [d.TzF.PREPARING]: h,
-        [d.TzF.PUSHING]: o.rG2,
-        [d.TzF.PULLING]: o._8t,
-        [d.TzF.CONFLICT]: h,
-        [d.TzF.ERROR]: h,
+        [p.TzF.DONE]: h,
+        [p.TzF.PLANNING]: h,
+        [p.TzF.PREPARING]: h,
+        [p.TzF.PUSHING]: s.rG2,
+        [p.TzF.PULLING]: s._8t,
+        [p.TzF.CONFLICT]: h,
+        [p.TzF.ERROR]: h,
     });
 class _ extends i.PureComponent {
     componentDidMount() {
@@ -40,7 +28,7 @@ class _ extends i.PureComponent {
     }
     componentDidUpdate(e) {
         null != this.props.cloudSyncState &&
-            this.props.cloudSyncState.type === d.TzF.DONE &&
+            this.props.cloudSyncState.type === p.TzF.DONE &&
             null != this.props.cloudSyncState.timestamp &&
             (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) &&
             this.setRecentlySyncedTimeout();
@@ -53,7 +41,7 @@ class _ extends i.PureComponent {
     }
     getIsRecentlySynced() {
         let { cloudSyncState: e } = this.props;
-        if (null != e && e.type === d.TzF.DONE) {
+        if (null != e && e.type === p.TzF.DONE) {
             let t = e.timestamp;
             return null != t && Date.now() - t <= 2000;
         }
@@ -61,7 +49,7 @@ class _ extends i.PureComponent {
     }
     getStop(e, t) {
         if (t) return 1;
-        if (e.type === d.TzF.PUSHING || e.type === d.TzF.PULLING) {
+        if (e.type === p.TzF.PUSHING || e.type === p.TzF.PULLING) {
             let { progress: t, total: n } = e;
             return t / n;
         }
@@ -69,66 +57,50 @@ class _ extends i.PureComponent {
     }
     getTooltip(e, t) {
         switch (e.type) {
-            case d.TzF.DONE:
-                if (t) return p.intl.string(p.t.atpo0d);
-                return p.intl.string(p.t.ZCw6zs);
-            case d.TzF.CONFLICT:
-            case d.TzF.ERROR:
-                return p.intl.string(p.t.ZCw6zs);
-            case d.TzF.PLANNING:
-                return p.intl.string(p.t.ERQ0VF);
-            case d.TzF.PREPARING:
-                return p.intl.string(p.t.n5feu7);
-            case d.TzF.PUSHING:
-                return p.intl.string(p.t.oCBh0N);
-            case d.TzF.PULLING:
-                return p.intl.string(p.t.RTLNqK);
+            case p.TzF.DONE:
+                if (t) return f.intl.string(f.t.atpo0d);
+                return f.intl.string(f.t.ZCw6zs);
+            case p.TzF.CONFLICT:
+            case p.TzF.ERROR:
+                return f.intl.string(f.t.ZCw6zs);
+            case p.TzF.PLANNING:
+                return f.intl.string(f.t.ERQ0VF);
+            case p.TzF.PREPARING:
+                return f.intl.string(f.t.n5feu7);
+            case p.TzF.PUSHING:
+                return f.intl.string(f.t.oCBh0N);
+            case p.TzF.PULLING:
+                return f.intl.string(f.t.RTLNqK);
             default:
                 return null;
         }
     }
     render() {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
-            i = null == e ? { type: d.TzF.DONE } : e,
-            l = this.getIsRecentlySynced(),
-            a = {};
-        (m.has(i.type) || l) &&
-            (a.gradientConfig = {
-                id: t.id,
-                startColor: "rgba(199, 208, 240, 1)",
-                stopColor: "rgba(114, 137, 218, 1)",
-                stop: this.getStop(i, l),
-            });
-        let s = l ? g : b[i.type];
-        return (0, r.jsx)(o.ua7, {
+            i = null == e ? { type: p.TzF.DONE } : e,
+            l = this.getIsRecentlySynced();
+        (m.has(i.type) || l) && (t.id, this.getStop(i, l));
+        let a = l ? g : b[i.type];
+        return (0, r.jsx)(o.u, {
             text: this.getTooltip(i, l),
-            children: (e) =>
-                (0, r.jsx)(
-                    s,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    f(e, t, n[t]);
-                                });
-                        }
-                        return e;
-                    })({ className: n }, a, e),
-                ),
+            children: (0, r.jsx)(a, { className: n }),
         });
     }
     constructor(...e) {
-        super(...e), f(this, "_doneTimer", new a.V7());
+        super(...e),
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "_doneTimer", new a.V7());
     }
 }
-let O = l.ZP.connectStores([s.Z], (e) => {
+let O = l.ZP.connectStores([c.Z], (e) => {
     let { libraryApplication: t } = e;
-    return { cloudSyncState: s.Z.getState(t.id, t.branchId) };
+    return { cloudSyncState: c.Z.getState(t.id, t.branchId) };
 })(_);

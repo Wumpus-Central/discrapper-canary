@@ -28,7 +28,6 @@ e.exports = {
     activityVideo: "activityVideo_cb32c7",
     videoFadeOut: "videoFadeOut_cb32c7",
     fadeOut: "fadeOut_cb32c7",
-    tooltipContent: "tooltipContent_cb32c7",
     spinner: "spinner_cb32c7",
     devShelfBadge: "devShelfBadge_cb32c7",
     devShelfIcon: "devShelfIcon_cb32c7",

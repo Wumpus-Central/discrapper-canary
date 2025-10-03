@@ -1,27 +1,28 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+n.d(t, { Z: () => A }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    s = n(481060),
-    c = n(239091),
-    u = n(586902),
-    d = n(393903),
-    p = n(448986),
-    f = n(100527),
-    h = n(906732),
-    g = n(522651),
-    m = n(795318),
-    b = n(512384),
-    _ = n(670188),
-    O = n(314897),
-    E = n(131951),
+    s = n(28664),
+    c = n(481060),
+    u = n(239091),
+    d = n(586902),
+    p = n(393903),
+    f = n(448986),
+    h = n(100527),
+    g = n(906732),
+    m = n(522651),
+    b = n(795318),
+    _ = n(512384),
+    O = n(670188),
+    E = n(314897),
+    v = n(131951),
     y = n(51144),
-    v = n(524484),
-    I = n(388032),
+    I = n(524484),
+    S = n(388032),
     C = n(720711);
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,50 +65,50 @@ function N(e, t) {
         e
     );
 }
-let T = { offset: 2 },
+let j = { offset: 2 },
     P = {
         serverDeaf: {
-            icon: s.Vm4,
+            icon: c.Vm4,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.btxSdH),
+            getStatus: () => S.intl.string(S.t.btxSdH),
         },
         serverMute: {
-            icon: s.v0G,
+            icon: c.v0G,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.uLddbW),
+            getStatus: () => S.intl.string(S.t.uLddbW),
         },
         deaf: {
-            icon: s.wE8,
+            icon: c.wE8,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.NjmiOD),
+            getStatus: () => S.intl.string(S.t.NjmiOD),
         },
         mute: {
-            icon: s.nRN,
+            icon: c.nRN,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.tjtv3N),
+            getStatus: () => S.intl.string(S.t.tjtv3N),
         },
         localMute: {
-            icon: s.v0G,
+            icon: c.v0G,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t["9F+xJS"]),
+            getStatus: () => S.intl.string(S.t["9F+xJS"]),
         },
     };
-function j(e) {
+function x(e) {
     var t, l;
-    let d = i.useRef(null),
-        { parentAnalyticsLocation: p } = (0, h.ZP)(),
-        { channel: O, user: j, nick: x, mute: A, deaf: Z, serverMute: w, serverDeaf: L } = e,
-        R = (0, o.e7)([E.Z], () => E.Z.isLocalMute(j.id)),
-        D = (0, u.Z)({
-            userId: j.id,
+    let p = i.useRef(null),
+        { parentAnalyticsLocation: f } = (0, g.ZP)(),
+        { channel: E, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
+        D = (0, o.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
+        k = (0, d.Z)({
+            userId: x.id,
             checkSoundSharing: !0,
         }),
-        k = null != (t = O.getGuildId()) ? t : void 0,
-        M = j.getAvatarURL(O.guild_id, 24),
-        U = null != x ? x : y.ZP.getName(j),
+        M = null != (t = E.getGuildId()) ? t : void 0,
+        U = x.getAvatarURL(E.guild_id, 24),
+        G = null != A ? A : y.ZP.getName(x),
         {
-            icon: G,
-            colorize: B,
+            icon: B,
+            colorize: H,
             getStatus: V,
         } = null !=
         (l = (function (e) {
@@ -118,24 +119,24 @@ function j(e) {
             if (l) return P.localMute;
             if (i) return P.mute;
         })({
-            serverDeaf: L,
-            deaf: Z,
-            serverMute: w,
-            mute: A,
-            localMute: R,
+            serverDeaf: R,
+            deaf: w,
+            serverMute: L,
+            mute: Z,
+            localMute: D,
         }))
             ? l
             : {},
-        H =
+        F =
             null != V
-                ? I.intl.formatToPlainString(I.t["1+MVBA"], {
-                      userName: U,
+                ? S.intl.formatToPlainString(S.t["1+MVBA"], {
+                      userName: G,
                       status: V(),
                   })
-                : U;
-    function F(e) {
-        null != k
-            ? (0, c.jW)(e, async () => {
+                : G;
+    function z(e) {
+        null != M
+            ? (0, u.jW)(e, async () => {
                   let { default: e } = await Promise.all([
                       n.e("79695"),
                       n.e("98783"),
@@ -146,85 +147,81 @@ function j(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          N(S({}, t), {
-                              user: j,
-                              guildId: k,
-                              channel: O,
+                          N(T({}, t), {
+                              user: x,
+                              guildId: M,
+                              channel: E,
                               showMediaItems: !0,
-                              onInteraction: (0, m.u)("GuildChannelUserContextMenu", f.Z.RTC_PANEL, {
-                                  targetUserId: j.id,
+                              onInteraction: (0, b.u)("GuildChannelUserContextMenu", h.Z.RTC_PANEL, {
+                                  targetUserId: x.id,
                               }),
                           }),
                       );
               })
-            : (0, c.jW)(e, async () => {
+            : (0, u.jW)(e, async () => {
                   let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          N(S({}, t), {
-                              user: j,
+                          N(T({}, t), {
+                              user: x,
                               showMediaItems: !0,
-                              onInteraction: (0, m.u)("UserGenericContextMenu", f.Z.RTC_PANEL, { targetUserId: j.id }),
+                              onInteraction: (0, b.u)("UserGenericContextMenu", h.Z.RTC_PANEL, { targetUserId: x.id }),
                           }),
                       );
               });
     }
-    return (0, r.jsx)(_.Z, {
-        targetElementRef: d,
-        user: j,
-        guildId: k,
-        channelId: O.id,
+    return (0, r.jsx)(O.Z, {
+        targetElementRef: p,
+        user: x,
+        guildId: M,
+        channelId: E.id,
         position: "top",
         clickTrap: !0,
         children: (e) =>
-            (0, r.jsx)(s.ua7, {
-                text: H,
-                children: (t) =>
-                    (0, r.jsx)(
-                        s.P3F,
-                        N(S({}, t, e), {
-                            innerRef: d,
-                            onClick: (t) => {
-                                e.onClick(t), (0, g.v)(p, g.d.VOICE_USER);
-                            },
-                            className: C.avatarContainer,
-                            onContextMenu: F,
-                            focusProps: T,
-                            children: (0, r.jsx)(b.Z, {
-                                shakeLocation: v.oZ.VOICE_USER,
-                                isShaking: D,
-                                children: (0, r.jsx)("div", {
-                                    className: a()(C.avatar, { [C.speaking]: D }),
-                                    style: { backgroundImage: "url(".concat(M, ")") },
-                                    children:
-                                        null != G
-                                            ? (0, r.jsx)(G, {
-                                                  className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: B }),
-                                                  color: "currentColor",
-                                                  size: "xs",
-                                              })
-                                            : null,
-                                }),
-                            }),
+            (0, r.jsx)(s.u, {
+                text: F,
+                children: (0, r.jsx)(c.P3F, {
+                    innerRef: p,
+                    onClick: (t) => {
+                        e.onClick(t), (0, m.v)(f, m.d.VOICE_USER);
+                    },
+                    className: C.avatarContainer,
+                    onContextMenu: z,
+                    focusProps: j,
+                    children: (0, r.jsx)(_.Z, {
+                        shakeLocation: I.oZ.VOICE_USER,
+                        isShaking: k,
+                        children: (0, r.jsx)("div", {
+                            className: a()(C.avatar, { [C.speaking]: k }),
+                            style: { backgroundImage: "url(".concat(U, ")") },
+                            children:
+                                null != B
+                                    ? (0, r.jsx)(B, {
+                                          className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: H }),
+                                          color: "currentColor",
+                                          size: "xs",
+                                      })
+                                    : null,
                         }),
-                    ),
+                    }),
+                }),
             }),
     });
 }
-function x(e) {
+function A(e) {
     let { voiceStates: t, channel: n, className: l } = e,
-        [c, u] = i.useState(!1),
-        f = (0, o.e7)([O.default], () => O.default.getId()),
+        [s, u] = i.useState(!1),
+        d = (0, o.e7)([E.default], () => E.default.getId()),
         { containerRef: h, maxVisibleAvatars: g } = (function (e) {
             let [t, n] = i.useState(7),
-                r = (0, p.Z)(() => {
+                r = (0, f.Z)(() => {
                     let t = null == l ? void 0 : l.current;
                     if (null == t) return;
                     let r = Math.floor((t.offsetWidth + 4) / 28);
                     n(Math.max(1, e > r ? r - 1 : r));
                 }),
-                l = (0, d.y)(r, [e], {
+                l = (0, p.y)(r, [e], {
                     fireOnMount: !0,
                     fireOnDepsChange: !0,
                 });
@@ -241,36 +238,36 @@ function x(e) {
                     r.push(i);
                 }
             return [r, !1];
-        })(t, f, g),
-        _ = c ? s.V_R : s.qJs,
-        E = (0, r.jsx)(s.M0o, {
-            onClick: () => u(!c),
-            color: s.YX$.PRIMARY,
-            size: s.tT7.SIZE_24,
-            tooltip: c ? I.intl.string(I.t["Z/Tya2"]) : I.intl.string(I.t.XR5BAQ),
+        })(t, d, g),
+        _ = s ? c.V_R : c.qJs,
+        O = (0, r.jsx)(c.M0o, {
+            onClick: () => u(!s),
+            color: c.YX$.PRIMARY,
+            size: c.tT7.SIZE_24,
+            tooltip: s ? S.intl.string(S.t["Z/Tya2"]) : S.intl.string(S.t.XR5BAQ),
             icon: (0, r.jsx)(_, {
                 size: "xs",
                 color: "currentColor",
             }),
-            focusProps: T,
+            focusProps: j,
         }),
-        y = b && c ? t : m;
-    return y.length <= 0
+        v = b && s ? t : m;
+    return v.length <= 0
         ? null
-        : (0, r.jsx)(s.zJl, {
+        : (0, r.jsx)(c.zJl, {
               className: a()(C.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
                   ref: h,
-                  className: a()(C.voiceUsers, !c && C.collapsed),
+                  className: a()(C.voiceUsers, !s && C.collapsed),
                   role: "group",
-                  "aria-label": I.intl.string(I.t["/ZgaVV"]),
+                  "aria-label": S.intl.string(S.t["/ZgaVV"]),
                   children: [
-                      y.map((e) => {
+                      v.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
-                          return t.id !== f
+                          return t.id !== d
                               ? (0, r.jsx)(
-                                    j,
+                                    x,
                                     {
                                         channel: n,
                                         user: t,
@@ -285,7 +282,7 @@ function x(e) {
                                 )
                               : null;
                       }),
-                      b ? E : null,
+                      b ? O : null,
                   ],
               }),
           });
