@@ -56096,6 +56096,15 @@ h3.improved__1689b:after {
     margin-left: 4px
 }
 
+.buttonsContainer__4962e {
+    display: flex;
+    gap: 4px
+}
+
+.newBadge__4962e {
+    margin-left: 4px
+}
+
 .section__25879 {
     display: flex;
     gap: 4px
@@ -56210,15 +56219,6 @@ h3.improved__1689b:after {
 
 .sparkleContainer__04485:first-child {
     margin-right: 16px
-}
-
-.buttonsContainer__4962e {
-    display: flex;
-    gap: 4px
-}
-
-.newBadge__4962e {
-    margin-left: 4px
 }
 
 .nicknameDisabled__17e9b {
