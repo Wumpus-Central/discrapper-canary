@@ -1,19 +1,23 @@
-r.d(t, { default: () => y }), r(388685);
+r.d(t, { default: () => k }), r(388685);
 var n = r(951288),
     s = r(647438),
-    o = r(512722),
-    i = r.n(o),
+    i = r(512722),
+    o = r.n(i),
     a = r(442837),
     l = r(481060),
     c = r(570140),
     d = r(23645),
     h = r(600164),
     p = r(454585),
-    u = r(325067),
-    m = r(594174),
-    f = r(388032),
-    b = r(255063);
-function x(e, t, r) {
+    u = r(365007),
+    m = r(15980),
+    f = r(325067),
+    x = r(594174),
+    b = r(63063),
+    j = r(981631),
+    C = r(388032),
+    g = r(505198);
+function y(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,10 +30,10 @@ function x(e, t, r) {
         e
     );
 }
-let j = (e) => {
+let O = (e) => {
     var t,
         r,
-        { label: s, text: o, children: i } = e,
+        { label: s, text: i, children: o } = e,
         a = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -39,14 +43,14 @@ let j = (e) => {
                     var r,
                         n,
                         s = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
                     return s;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++)
-                    (r = o[n]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
             }
             return s;
@@ -64,7 +68,7 @@ let j = (e) => {
                         }),
                     )),
                     n.forEach(function (t) {
-                        x(e, t, r[t]);
+                        y(e, t, r[t]);
                     });
             }
             return e;
@@ -76,16 +80,16 @@ let j = (e) => {
                         tag: "h2",
                         children: s,
                     }),
-                    null != o
+                    null != i
                         ? (0, n.jsx)(l.Text, {
                               variant: "text-md/normal",
-                              className: b.sectionBody,
-                              children: o,
+                              className: g.sectionBody,
+                              children: i,
                           })
                         : null,
                     (0, n.jsx)(h.Z.Child, {
                         wrap: !0,
-                        children: i,
+                        children: o,
                     }),
                 ],
             }),
@@ -104,10 +108,10 @@ let j = (e) => {
         t),
     );
 };
-class g extends s.PureComponent {
+class P extends s.PureComponent {
     renderBackupCodesSection(e) {
-        return (0, n.jsx)(j, {
-            label: f.intl.string(f.t.qZZUy8),
+        return (0, n.jsx)(O, {
+            label: C.intl.string(C.t.qZZUy8),
             text: e,
             children: (0, n.jsx)(d.Z, {
                 fileContents: this.getDownloadFileContents,
@@ -117,10 +121,33 @@ class g extends s.PureComponent {
                 children: (0, n.jsx)(l.zxk, {
                     variant: "active",
                     size: "sm",
-                    text: f.intl.string(f.t.qZZUy8),
+                    text: C.intl.string(C.t.qZZUy8),
                 }),
             }),
         });
+    }
+    renderPasskeyCTASection() {
+        return m.Z.hasCredentials
+            ? null
+            : (0, n.jsxs)(O, {
+                  label: C.intl.string(C.t.xMDCHR),
+                  text: C.intl.string(C.t.okgGTk),
+                  children: [
+                      (0, n.jsx)(l.Text, {
+                          variant: "text-md/normal",
+                          className: g.sectionBody,
+                          children: C.intl.format(C.t.OeGXVl, {
+                              learnMoreLink: b.Z.getArticleURL(j.BhN.SETTING_UP_TWO_FACTOR),
+                          }),
+                      }),
+                      (0, n.jsx)(l.zxk, {
+                          variant: "active",
+                          size: "sm",
+                          text: C.intl.string(C.t.NIFmCA),
+                          onClick: this.handleAddPasskey,
+                      }),
+                  ],
+              });
     }
     renderHeader(e, t) {
         return (0, n.jsxs)(l.xBx, {
@@ -132,12 +159,12 @@ class g extends s.PureComponent {
                     children: [
                         (0, n.jsx)(l.X6q, {
                             variant: "heading-lg/semibold",
-                            className: b.header,
+                            className: g.header,
                             children: p.Z.parse(e),
                         }),
                         (0, n.jsx)(l.Text, {
                             variant: "text-xs/normal",
-                            className: b.subHeader,
+                            className: g.subHeader,
                             children: t,
                         }),
                     ],
@@ -153,9 +180,9 @@ class g extends s.PureComponent {
         let { onClose: t } = this.props;
         return (0, n.jsx)(l.sYh, {
             dismissable: !0,
-            header: f.intl.string(f.t.mwVXnJ),
-            confirmText: f.intl.string(f.t.MwSEo6),
-            cancelText: f.intl.string(f.t["ETE/oK"]),
+            header: C.intl.string(C.t.mwVXnJ),
+            confirmText: C.intl.string(C.t.MwSEo6),
+            cancelText: C.intl.string(C.t["ETE/oK"]),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
                 c.Z.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), t();
@@ -176,15 +203,19 @@ class g extends s.PureComponent {
             { showConfirmModal: t } = this.state;
         return (0, n.jsxs)(l.Y0X, {
             transitionState: e,
-            className: b.modal,
+            className: g.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(f.intl.string(f.t["681MPT"]), f.intl.format(f.t["/Nhi8f"], {})),
-                (0, n.jsx)(l.hzk, {
-                    className: b.modalInner,
-                    children: this.renderBackupCodesSection(f.intl.format(f.t.M0Dogo, {})),
+                this.renderHeader(C.intl.string(C.t["681MPT"]), C.intl.format(C.t["/Nhi8f"], {})),
+                (0, n.jsxs)(l.hzk, {
+                    className: g.modalInner,
+                    children: [
+                        this.renderPasskeyCTASection(),
+                        (0, n.jsx)(l.izJ, { className: g.divider }),
+                        this.renderBackupCodesSection(C.intl.format(C.t.M0Dogo, {})),
+                    ],
                 }),
-                t && this.renderConfirmModal(f.intl.string(f.t.WJFPHB)),
+                t && this.renderConfirmModal(C.intl.string(C.t.WJFPHB)),
             ],
         });
     }
@@ -193,48 +224,51 @@ class g extends s.PureComponent {
             { showConfirmModal: t } = this.state;
         return (0, n.jsxs)(l.Y0X, {
             transitionState: e,
-            className: b.modal,
+            className: g.modal,
             parentComponent: "MFAEnableSuccess",
             children: [
-                this.renderHeader(f.intl.string(f.t.x6ielJ), f.intl.format(f.t["/Nhi8f"], {})),
+                this.renderHeader(C.intl.string(C.t.x6ielJ), C.intl.format(C.t["/Nhi8f"], {})),
                 (0, n.jsx)(l.hzk, {
-                    className: b.modalInner,
-                    children: this.renderBackupCodesSection(f.intl.format(f.t.p59QLS, {})),
+                    className: g.modalInner,
+                    children: this.renderBackupCodesSection(C.intl.format(C.t.p59QLS, {})),
                 }),
-                t && this.renderConfirmModal(f.intl.string(f.t.aoNIXF)),
+                t && this.renderConfirmModal(C.intl.string(C.t.aoNIXF)),
             ],
         });
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", { showConfirmModal: !1 }),
-            x(this, "handleCloseModal", () => {
+            y(this, "state", { showConfirmModal: !1 }),
+            y(this, "handleCloseModal", () => {
                 let { onClose: e, hasSeenBackupPrompt: t } = this.props;
-                t ? null == e || e() : this.setState({ showConfirmModal: !0 });
+                t ? e() : this.setState({ showConfirmModal: !0 });
             }),
-            x(this, "getDownloadFileContents", () => {
+            y(this, "handleAddPasskey", () => {
+                this.props.onClose(), u.ef();
+            }),
+            y(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: r } = e;
                             return "* "
                                 .concat(r.substr(0, 4), "-")
                                 .concat(r.substr(4), " ")
-                                .concat(t ? "(".concat(f.intl.string(f.t["ycME+/"]), ")") : "");
+                                .concat(t ? "(".concat(C.intl.string(C.t["ycME+/"]), ")") : "");
                         })
                         .join("\r\n"),
-                    t = f.intl.formatToPlainString(f.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = C.intl.formatToPlainString(C.t.uYWwh4, { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             });
     }
 }
-let y = a.ZP.connectStores([m.default, u.Z], () => {
-    let e = m.default.getCurrentUser();
+let k = a.ZP.connectStores([x.default, f.Z], () => {
+    let e = x.default.getCurrentUser();
     return (
-        i()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
+        o()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
         {
             currentUser: e,
-            backupCodes: u.Z.getBackupCodes(),
-            hasSeenBackupPrompt: u.Z.hasSeenBackupPrompt,
+            backupCodes: f.Z.getBackupCodes(),
+            hasSeenBackupPrompt: f.Z.hasSeenBackupPrompt,
         }
     );
-})(g);
+})(P);

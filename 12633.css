@@ -8632,6 +8632,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .root,
+[data-popout-root],
 :root {
     --__spoiler-background-color--hidden: var(--spoiler-hidden-background);
     --__spoiler-background-color--hidden--hover: var(--spoiler-hidden-background-hover);
@@ -26421,9 +26422,9 @@ span.clanTag__5d473 {
     border-radius: 3px;
     color: var(--white-500);
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: var(--font-weight-bold);
-    line-height: 1.8125rem;
+    line-height: 29px;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(49124), n(953529), n(457542);
+n.d(t, { Z: () => N }), n(388685), n(49124), n(457542), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(849055),
@@ -195,7 +195,8 @@ function A(e) {
                         children: (0, r.jsxs)("form", {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, m.Sr)(g, s, C)
+                                    m
+                                        .Sr(g, s, C)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })
@@ -286,96 +287,114 @@ function C(e) {
                 label: y.intl.string(y.t["+xgS+P"]),
                 color: "danger",
                 action: () => {
-                    (0, m.cT)(i);
+                    m.cT(i);
                 },
             }),
         ],
     });
 }
 function N() {
-    let { credentials: e, hasFetchedCredentials: t } = (0, o.cj)([g.Z], () => ({
+    let {
+        credentials: e,
+        hasFetchedCredentials: t,
+        hasPendingRegisterTrigger: n,
+    } = (0, o.cj)([g.Z], () => ({
         hasFetchedCredentials: g.Z.hasFetchedCredentials(),
         credentials: g.Z.getCredentials(),
+        hasPendingRegisterTrigger: g.Z.hasPendingRegisterTrigger(),
     }));
     i.useEffect(() => {
-        t || (0, m.hL)();
-    }, [t]);
-    let [n, a] = i.useState(!1);
-    return (0, r.jsxs)(l.hjN, {
-        title: y.intl.string(y.t.y7SXYW),
-        className: O.settings,
-        children: [
-            (0, r.jsx)(l.R94, {
-                type: l.R94.Types.DESCRIPTION,
-                className: O.description,
-                children: y.intl.string(y.t.TMukAA),
-            }),
-            e.length > 0 &&
-                (0, r.jsx)("div", {
-                    className: O.credentialList,
-                    children: e.map((e) =>
-                        (0, r.jsxs)(
-                            "div",
-                            {
-                                className: O.credentialItem,
-                                children: [
-                                    (0, r.jsx)(l.Text, {
-                                        variant: "text-md/semibold",
-                                        children: e.name,
-                                    }),
-                                    (0, r.jsx)(s.zx, {
-                                        look: s.zx.Looks.BLANK,
-                                        color: s.zx.Colors.TRANSPARENT,
-                                        size: s.zx.Sizes.ICON,
-                                        onClick: (t) => {
-                                            (0, c.vq)(t, (t) => (0, r.jsx)(C, S(I({}, t), { credential: e })));
-                                        },
-                                        "aria-label": y.intl.string(y.t["+nrTbG"]),
-                                        innerClassName: O.credentialOptions,
-                                        children: (0, r.jsx)(l.Huf, {
-                                            size: "md",
-                                            className: O.__invalid_overflowIcon,
-                                            colorClass: O.__invalid_overflowIconFg,
-                                            "aria-hidden": !0,
+        t || m.hL();
+    }, [t]),
+        i.useEffect(
+            () => () => {
+                g.Z.hasPendingRegisterTrigger() && m.vg();
+            },
+            [],
+        );
+    let [a, u] = i.useState(!1),
+        d = i.useCallback(() => {
+            u(!0),
+                m
+                    .L$()
+                    .then((e) => {
+                        let { ticket: t, challenge: n } = e;
+                        (0, l.h7j)((e) =>
+                            (0, r.jsx)(
+                                A,
+                                S(I({}, e), {
+                                    ticket: t,
+                                    challenge: n,
+                                }),
+                            ),
+                        );
+                    })
+                    .catch((e) => {
+                        e.message !== y.intl.string(y.t.N2yb9f) && p.Z.captureException(e);
+                    })
+                    .finally(() => {
+                        u(!1);
+                    });
+        }, []);
+    return (
+        i.useEffect(() => {
+            n && !a && (m.vg(), d());
+        }, [n, a, d]),
+        (0, r.jsxs)(l.hjN, {
+            title: y.intl.string(y.t.y7SXYW),
+            className: O.settings,
+            children: [
+                (0, r.jsx)(l.R94, {
+                    type: l.R94.Types.DESCRIPTION,
+                    className: O.description,
+                    children: y.intl.string(y.t.TMukAA),
+                }),
+                e.length > 0 &&
+                    (0, r.jsx)("div", {
+                        className: O.credentialList,
+                        children: e.map((e) =>
+                            (0, r.jsxs)(
+                                "div",
+                                {
+                                    className: O.credentialItem,
+                                    children: [
+                                        (0, r.jsx)(l.Text, {
+                                            variant: "text-md/semibold",
+                                            children: e.name,
                                         }),
-                                    }),
-                                ],
-                            },
-                            e.id,
-                        ),
-                    ),
-                }),
-            (0, r.jsx)("div", {
-                children: (0, r.jsx)(l.zxk, {
-                    variant: "primary",
-                    size: "sm",
-                    text: y.intl.string(y.t.vrOCCg),
-                    onClick: () => {
-                        a(!0),
-                            (0, m.L$)()
-                                .then((e) => {
-                                    let { ticket: t, challenge: n } = e;
-                                    (0, l.h7j)((e) =>
-                                        (0, r.jsx)(
-                                            A,
-                                            S(I({}, e), {
-                                                ticket: t,
-                                                challenge: n,
+                                        (0, r.jsx)(s.zx, {
+                                            look: s.zx.Looks.BLANK,
+                                            color: s.zx.Colors.TRANSPARENT,
+                                            size: s.zx.Sizes.ICON,
+                                            onClick: (t) => {
+                                                (0, c.vq)(t, (t) => (0, r.jsx)(C, S(I({}, t), { credential: e })));
+                                            },
+                                            "aria-label": y.intl.string(y.t["+nrTbG"]),
+                                            innerClassName: O.credentialOptions,
+                                            children: (0, r.jsx)(l.Huf, {
+                                                size: "md",
+                                                className: O.__invalid_overflowIcon,
+                                                colorClass: O.__invalid_overflowIconFg,
+                                                "aria-hidden": !0,
                                             }),
-                                        ),
-                                    );
-                                })
-                                .catch((e) => {
-                                    e.message !== y.intl.string(y.t.N2yb9f) && p.Z.captureException(e);
-                                })
-                                .finally(() => {
-                                    a(!1);
-                                });
-                    },
-                    loading: n,
-                    disabled: !f.Ae,
+                                        }),
+                                    ],
+                                },
+                                e.id,
+                            ),
+                        ),
+                    }),
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(l.zxk, {
+                        variant: "primary",
+                        size: "sm",
+                        text: y.intl.string(y.t.vrOCCg),
+                        onClick: d,
+                        loading: a,
+                        disabled: !f.Ae,
+                    }),
                 }),
-            }),
-        ],
-    });
+            ],
+        })
+    );
 }

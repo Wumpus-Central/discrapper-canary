@@ -1925,6 +1925,12 @@ let eB = () => {
                 parent: eN.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
                 predicate: () => m.q && M.Z.isDeveloper,
             },
+            [eN.s6.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS]: {
+                section: eP.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ["Show TOTP Success"],
+                parent: eN.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => M.Z.isDeveloper,
+            },
             [eN.s6.DEVELOPER_OPTIONS_CRASHES]: {
                 section: eP.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Crashes"],

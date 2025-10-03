@@ -4,8 +4,10 @@ n.d(t, {
     WQ: () => f,
     cT: () => d,
     d$: () => c,
+    ef: () => h,
     hL: () => u,
     us: () => l,
+    vg: () => m,
 });
 var r = n(525769),
     i = n(544891),
@@ -102,4 +104,10 @@ async function p(e, t, n) {
             type: "MFA_ENABLE_SUCCESS",
             codes: i.body.backup_codes,
         });
+}
+function h() {
+    a.Z.dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
+}
+function m() {
+    a.Z.dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
 }

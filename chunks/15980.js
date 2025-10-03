@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -17,11 +17,18 @@ function s(e, t, n) {
     );
 }
 let l = !1,
-    c = [];
-function u() {
-    (c = []), (l = !1);
+    c = [],
+    u = !1;
+function d() {
+    (c = []), (l = !1), (u = !1);
 }
-class d extends (r = i.ZP.Store) {
+function f() {
+    u = !0;
+}
+function _() {
+    u = !1;
+}
+class p extends (r = i.ZP.Store) {
     hasFetchedCredentials() {
         return l;
     }
@@ -31,10 +38,13 @@ class d extends (r = i.ZP.Store) {
     getCredentials() {
         return c;
     }
+    hasPendingRegisterTrigger() {
+        return u;
+    }
 }
-s(d, "displayName", "WebAuthnStore");
-let f = new d(a.Z, {
-    LOGOUT: u,
+s(p, "displayName", "WebAuthnStore");
+let h = new p(a.Z, {
+    LOGOUT: d,
     MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
         (c = e.credentials), (l = !0);
     },
@@ -50,4 +60,6 @@ let f = new d(a.Z, {
         let { credential: t } = e;
         t.type === o.Pi.WEBAUTHN && (c = c.filter((e) => e.id !== t.id));
     },
+    WEBAUTHN_TRIGGER_REGISTER: f,
+    WEBAUTHN_CLEAR_REGISTER_TRIGGER: _,
 });
