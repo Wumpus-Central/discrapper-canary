@@ -33,10 +33,10 @@ var r = n(951288),
     P = n(342386),
     w = n(947889),
     D = n(246946),
-    x = n(78839),
-    L = n(483444),
-    j = n(626135),
-    M = n(63063),
+    L = n(78839),
+    x = n(483444),
+    M = n(626135),
+    j = n(63063),
     k = n(74538),
     U = n(140465),
     G = n(695349),
@@ -126,7 +126,7 @@ function ef() {
     let e = (0, U.t7)(),
         t = (0, U.lr)(),
         n = (0, b.ZP)(),
-        i = (0, c.e7)([x.Z], () => x.Z.getPremiumTypeSubscription()),
+        i = (0, c.e7)([L.Z], () => L.Z.getPremiumTypeSubscription()),
         a = (0, T.Z)(),
         s = (0, G.W)(),
         l = null !== i && null !== i.planIdFromItems,
@@ -149,7 +149,7 @@ function ef() {
                               color: "always-white",
                               className: en.fractionalPremiumSubheader,
                               children: et.intl.format(et.t.sK7fGh, {
-                                  helpCenterLink: M.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: j.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -191,7 +191,7 @@ function ef() {
                           }),
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
-                                  j.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: es,
                                       target: el,
                                   }),
@@ -213,7 +213,7 @@ function ef() {
                               variant: "overlay-primary",
                               fullWidth: !0,
                               onClick: () => {
-                                  j.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: es,
                                       target: el,
                                   }),
@@ -226,7 +226,7 @@ function ef() {
                           (0, r.jsx)(d.zxk, {
                               variant: "overlay-secondary",
                               onClick: () => {
-                                  j.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: ea,
                                       target: eo,
                                   }),
@@ -244,7 +244,7 @@ function ef() {
             (0, r.jsxs)("div", {
                 className: en.tierInfo,
                 children: [
-                    (0, r.jsx)(L.Z, { className: en.tierTitle }),
+                    (0, r.jsx)(x.Z, { className: en.tierTitle }),
                     g(),
                     (0, r.jsx)(q.nT, { featureSet: _ ? q.uZ.FRACTIONAL_PREMIUM : q.uZ.DEFAULT }),
                     E(),
@@ -302,11 +302,11 @@ function e_(e) {
                             children: s.additionalTerm(),
                         }),
                     (0, r.jsx)(W.Z, {
-                        variant: "overlay-secondary",
+                        variant: "primary",
                         size: "md",
                         fullWidth: !0,
                         onClick: () => {
-                            j.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: ec,
                                 target: eu,
                             });
@@ -347,7 +347,7 @@ function ep() {
                         },
                         color: _.zx.Colors.CUSTOM,
                         onClick: () => {
-                            j.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            M.default.track(ee.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: ec,
                                 target: eu,
                             });
@@ -362,8 +362,8 @@ let eh = function () {
     var e;
     let t = (0, I.Q)(),
         { analyticsLocations: n } = (0, v.ZP)(O.Z.PREMIUM_SETTINGS),
-        a = (0, c.e7)([x.Z], () => x.Z.getPremiumTypeSubscription()),
-        o = (0, c.e7)([x.Z], () => x.Z.hasFetchedSubscriptions()),
+        a = (0, c.e7)([L.Z], () => L.Z.getPremiumTypeSubscription()),
+        o = (0, c.e7)([L.Z], () => L.Z.hasFetchedSubscriptions()),
         s = (0, S.V)($.nS),
         [l, d] = i.useState(!0),
         f = (0, T.Z)({ forceFetch: !0 }),
@@ -381,14 +381,14 @@ let eh = function () {
     if (b) return (0, r.jsx)(E.Z, {});
     if (t) return (0, r.jsx)(A.c8, {});
     let w = o && null !== a && s,
-        L = f.fetched && f.isFractionalPremiumActive;
-    if (!w && !L && !l)
+        x = f.fetched && f.isFractionalPremiumActive;
+    if (!w && !x && !l)
         return (0, r.jsx)(C.Z, {
             title: et.intl.string(et.t.dyq9TU),
             note: null,
         });
-    if ((!w && !L) || l) return (0, r.jsx)(p.$jN, {});
-    let M = !!(null == a ? void 0 : a.hasActiveTrial);
+    if ((!w && !x) || l) return (0, r.jsx)(p.$jN, {});
+    let j = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(v.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {
@@ -402,7 +402,7 @@ let eh = function () {
                         (0, r.jsx)(Q.Z, {
                             hideCTAs: !0,
                             headingOverride: et.intl.string(et.t.dnVvQU),
-                            hidePill: !M,
+                            hidePill: !j,
                             selectedPlanColumnClassName: en.tier2PlanComparisonTableBackground,
                             selectedPlanTier: $.p9.TIER_2,
                         }),
@@ -413,7 +413,7 @@ let eh = function () {
                     onChange: (e) => {
                         e &&
                             !R &&
-                            (j.default.track(ee.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: n }),
+                            (M.default.track(ee.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: n }),
                             P(!0));
                     },
                     children: (0, r.jsx)("div", {
