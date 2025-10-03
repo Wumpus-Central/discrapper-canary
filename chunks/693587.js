@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A });
 var r,
     i = n(442837),
     a = n(570140),
@@ -93,7 +93,12 @@ function m(e) {
     let { guildId: t, skuId: n, instructions: r } = e;
     d = u(l({}, d), { [t]: u(l({}, _(t)), { instructions: u(l({}, _(t).instructions), { [n]: r }) }) });
 }
-function g(e, t) {
+function g(e) {
+    let { guildId: t, instance: n } = e,
+        r = _(t);
+    d = u(l({}, d), { [t]: u(l({}, r), { instances: u(l({}, r.instances), { [n.id]: n }) }) });
+}
+function E(e, t) {
     return Object.values(t).reduce((e, t) => {
         var n, r, i, a, o;
         return (
@@ -111,9 +116,9 @@ function g(e, t) {
         );
     }, 0);
 }
-function E(e) {
+function b(e) {
     let { guildId: t, unlockedGameServers: n } = e,
-        r = g(t, n);
+        r = E(t, n);
     d = u(l({}, d), {
         [t]: u(l({}, _(t)), {
             entitlements: n,
@@ -121,37 +126,37 @@ function E(e) {
         }),
     });
 }
-function b(e) {
+function y(e) {
     let { guildId: t, gameServer: n } = e,
         r = _(t);
     (r.instances[n.id] = (0, o.Z)(n)), (d = u(l({}, d), { [t]: l({}, r) }));
 }
-function y(e) {
+function O(e) {
     let { guildId: t, gameServerId: n } = e,
         r = _(t);
     delete r.instances[n], (d = u(l({}, d), { [t]: l({}, r) }));
-}
-function O(e) {
-    let { guildId: t, entitlements: n } = e,
-        r = _(t);
-    n.forEach((e) => {
-        r.entitlements[e.id] = e;
-    }),
-        I(t, r);
 }
 function v(e) {
     let { guildId: t, entitlements: n } = e,
         r = _(t);
     n.forEach((e) => {
+        r.entitlements[e.id] = e;
+    }),
+        T(t, r);
+}
+function I(e) {
+    let { guildId: t, entitlements: n } = e,
+        r = _(t);
+    n.forEach((e) => {
         delete r.entitlements[e.id];
     }),
-        I(t, r);
+        T(t, r);
 }
-function I(e, t) {
-    let n = g(e, t.entitlements);
+function T(e, t) {
+    let n = E(e, t.entitlements);
     d = u(l({}, d), { [e]: u(l({}, t), { appliedBoosts: n }) });
 }
-class T extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     getState() {
         return d;
     }
@@ -167,16 +172,17 @@ class T extends (r = i.ZP.Store) {
         return null != e && (null == (t = d[e]) ? void 0 : t.hasFetchedInstances) === !0;
     }
 }
-s(T, "displayName", "PortkeyStore");
-let S = new T(a.Z, {
+s(S, "displayName", "PortkeyStore");
+let A = new S(a.Z, {
     LOGOUT: f,
     PORTKEY_FETCH_CATALOG_SUCCESS: p,
     PORTKEY_FETCH_INSTANCES_SUCCESS: h,
     PORTKEY_FETCH_GAME_INSTRUCTIONS_SUCCESS: m,
-    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: E,
-    GAME_SERVER_CREATE: b,
-    GAME_SERVER_UPDATE: b,
-    GAME_SERVER_DELETE: y,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: O,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: v,
+    PORTKEY_UPDATE_INSTANCE_SUCCESS: g,
+    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: b,
+    GAME_SERVER_CREATE: y,
+    GAME_SERVER_UPDATE: y,
+    GAME_SERVER_DELETE: O,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: v,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: I,
 });

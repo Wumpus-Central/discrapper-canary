@@ -14,8 +14,8 @@ var a,
     d = n(393238),
     u = n(424625),
     m = n(823379),
-    h = n(246992),
-    p = n(252899),
+    p = n(246992),
+    h = n(252899),
     x = n(451429),
     f =
         (((a = {}).NONE = ""),
@@ -31,6 +31,7 @@ var a,
         (a.GAMES = "Games"),
         (a.AUDIO_VIDEO = "Audio / Video"),
         (a.DEVELOPMENT = "Development"),
+        (a.BOOSTING = "Boosting"),
         a);
 let b = [
         "Experiments",
@@ -43,6 +44,7 @@ let b = [
         "Guilds",
         "UI",
         "Games",
+        "Boosting",
         "Audio / Video",
         "Development",
     ],
@@ -62,7 +64,7 @@ function v(e) {
         [s, f] = i.useState(() => new Set()),
         { ref: b, width: v } = (0, d.ZP)(),
         j = i.useRef(null),
-        _ = (0, p.F)(t, a);
+        _ = (0, h.F)(t, a);
     i.useEffect(() => {
         var e, a, r, i;
         if (null == v) return;
@@ -143,7 +145,7 @@ function v(e) {
                     s.size > 0 &&
                     (0, r.jsx)(c.yRy, {
                         targetElementRef: j,
-                        layerContext: h.O$,
+                        layerContext: p.O$,
                         renderPopout: y,
                         position: "bottom",
                         align: "right",
