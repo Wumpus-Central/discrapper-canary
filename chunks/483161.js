@@ -66,6 +66,7 @@ let g = (0, c.x1)(O.n.PROFILE_PANE, {
                                           (0, i.jsx)(r.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
+                                              lineClamp: 1,
                                               children: y.intl.string(y.t.Ip9nBQ),
                                           }),
                                           (0, i.jsx)(l.vdY, {

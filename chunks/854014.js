@@ -19,7 +19,7 @@ function f(e) {
 function m(e) {
     let { node: t, visibleContent: n } = e,
         { currentPanel: o, navigateTo: i, setShowNavigationMobile: m } = (0, s.t)(),
-        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: p, trailing: x } = t,
+        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: x, trailing: p } = t,
         v = l.useMemo(() => t.layout[0], [t]),
         y = null != o && o.key === (null == v ? void 0 : v.key),
         h = b(),
@@ -34,10 +34,20 @@ function m(e) {
             return null != (e = null == v ? void 0 : v.layout.flatMap((e) => e.layout)) ? e : [];
         }, [v]);
     return null != j
-        ? (0, r.jsx)(f, {
+        ? (0, r.jsxs)(f, {
               onClick: g,
               active: y,
-              children: (0, r.jsx)(j, {}),
+              children: [
+                  (0, r.jsx)(j, {}),
+                  null != p &&
+                      (0, r.jsx)("div", {
+                          className: d.itemContent,
+                          children: (0, r.jsx)(c.W, {
+                              trailing: p,
+                              visibleContent: n,
+                          }),
+                      }),
+              ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -48,7 +58,7 @@ function m(e) {
                           (0, r.jsxs)("div", {
                               className: d.itemContent,
                               children: [
-                                  (0, r.jsx)(p, {
+                                  (0, r.jsx)(x, {
                                       color: "currentColor",
                                       size: "refresh_sm",
                                       className: d.icon,
@@ -60,11 +70,11 @@ function m(e) {
                                   }),
                               ],
                           }),
-                          null != x &&
+                          null != p &&
                               (0, r.jsx)("div", {
                                   className: d.itemContent,
                                   children: (0, r.jsx)(c.W, {
-                                      trailing: x,
+                                      trailing: p,
                                       visibleContent: n,
                                   }),
                               }),
