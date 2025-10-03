@@ -456,5 +456,11 @@ let O = new o.Z("OverlayActionCreators"),
                 newState: n,
             });
         },
+        overlayUIFocusedPid(e) {
+            i.Z.dispatch({
+                type: "OVERLAY_UI_FOCUSED_PID",
+                pid: e,
+            });
+        },
     },
     I = v;
