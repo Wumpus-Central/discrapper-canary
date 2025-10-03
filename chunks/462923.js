@@ -2,14 +2,14 @@ t.d(n, { ZP: () => Z }), t(388685);
 var r = t(951288),
     a = t(647438),
     i = t(120356),
-    s = t.n(i),
-    o = t(660815),
+    o = t.n(i),
+    s = t(660815),
     l = t(442837),
     c = t(704215),
     d = t(481060),
     u = t(243778),
-    b = t(690221),
-    m = t(77498),
+    m = t(690221),
+    b = t(77498),
     g = t(572004),
     f = t(49012),
     x = t(639777),
@@ -111,7 +111,7 @@ function Z(e) {
         S = null != t.serverIP && null != t.port,
         [Z, D] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
         G = Z !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        R = (0, l.e7)([m.Z], () => m.Z.getDetectableGame(t.gameId)),
+        R = (0, l.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
         A = a.useCallback(() => {
             G || null == t.providerType
                 ? (0, O.Z)(n, t)
@@ -136,7 +136,7 @@ function Z(e) {
         }, [n, t.id]),
         U = a.useMemo(() => {
             switch (t.status) {
-                case o.V.SLEEPING:
+                case s.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(T, { onClick: M }),
@@ -147,9 +147,9 @@ function Z(e) {
                                 }),
                         ],
                     });
-                case o.V.OFFLINE:
-                case o.V.ONLINE:
-                case o.V.STARTING:
+                case s.V.OFFLINE:
+                case s.V.ONLINE:
+                case s.V.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(k, {
@@ -163,15 +163,15 @@ function Z(e) {
                                 }),
                         ],
                     });
-                case o.V.MISSING_STOCK:
+                case s.V.MISSING_STOCK:
                     return B
                         ? (0, r.jsx)(E, { onClick: L })
                         : (0, r.jsx)(k, {
                               onClick: A,
                               disabled: !0,
                           });
-                case o.V.DELETED:
-                case o.V.STARTUP_FAILED:
+                case s.V.DELETED:
+                case s.V.STARTUP_FAILED:
                     return B
                         ? (0, r.jsx)(w, {
                               onClick: L,
@@ -227,6 +227,7 @@ function Z(e) {
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
+                                                    color: "text-muted",
                                                     children: N.intl.string(I.default.X0IaiI),
                                                 }),
                                                 (0, r.jsx)(d.Text, {
@@ -251,6 +252,7 @@ function Z(e) {
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
+                                                    color: "text-muted",
                                                     children: N.intl.string(I.default["9pw/yM"]),
                                                 }),
                                                 (0, r.jsx)("div", {
@@ -272,7 +274,7 @@ function Z(e) {
                                                                   ],
                                                               })
                                                             : null != t.providerType &&
-                                                              (0, r.jsx)(b.Z, {
+                                                              (0, r.jsx)(m.Z, {
                                                                   onClick: () => {
                                                                       (0, h.Z)({
                                                                           provider: t.providerType,
@@ -295,13 +297,14 @@ function Z(e) {
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
+                                                    color: "text-muted",
                                                     children: N.intl.string(I.default.MQQIu7),
                                                 }),
                                                 (0, r.jsxs)("div", {
                                                     className: P.statusContainer,
                                                     children: [
                                                         (0, r.jsx)("span", {
-                                                            className: s()(
+                                                            className: o()(
                                                                 P.statusIndicator,
                                                                 null != t.status && P[t.status],
                                                             ),
@@ -310,19 +313,19 @@ function Z(e) {
                                                             variant: "text-sm/medium",
                                                             children: (function (e) {
                                                                 switch (e) {
-                                                                    case o.V.STARTING:
+                                                                    case s.V.STARTING:
                                                                         return N.intl.string(I.default["7XF8pK"]);
-                                                                    case o.V.STARTUP_FAILED:
+                                                                    case s.V.STARTUP_FAILED:
                                                                         return N.intl.string(I.default["C/096+"]);
-                                                                    case o.V.OFFLINE:
+                                                                    case s.V.OFFLINE:
                                                                         return N.intl.string(I.default.Bz9gcH);
-                                                                    case o.V.ONLINE:
+                                                                    case s.V.ONLINE:
                                                                         return N.intl.string(I.default["7q4iGR"]);
-                                                                    case o.V.DELETED:
+                                                                    case s.V.DELETED:
                                                                         return N.intl.string(I.default["UvP/1N"]);
-                                                                    case o.V.MISSING_STOCK:
+                                                                    case s.V.MISSING_STOCK:
                                                                         return N.intl.string(I.default.ssC3cX);
-                                                                    case o.V.SLEEPING:
+                                                                    case s.V.SLEEPING:
                                                                         return N.intl.string(I.default.PS8AMT);
                                                                     default:
                                                                         return "\u2014";
@@ -338,6 +341,7 @@ function Z(e) {
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
+                                                    color: "text-muted",
                                                     children: N.intl.string(I.default.fqrxlJ),
                                                 }),
                                                 (0, r.jsx)(d.Text, {
