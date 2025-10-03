@@ -47,7 +47,6 @@ e.exports = {
     shuffleIntro: "shuffleIntro__08415",
     shuffleOutro: "shuffleOutro__08415",
     placeholderCard: "placeholderCard__08415",
-    feedSingleRow: "feedSingleRow__08415",
     endOfFeed: "endOfFeed__08415",
     skeleton: "skeleton__08415",
     skeletonBody: "skeletonBody__08415",
