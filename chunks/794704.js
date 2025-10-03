@@ -64,7 +64,7 @@ var r = n(951288),
     ed = n(987650),
     ef = n(501787),
     e_ = n(388032),
-    ep = n(289726),
+    ep = n(607547),
     eh = n(131970),
     em = n(730462);
 function eg(e, t, n) {
@@ -992,7 +992,7 @@ let eV = (e, t, n, r) =>
 function eH() {
     let { allowActivityWidget: e, allowNowPlaying: t } = (0, x.o4)("user_settings"),
         { enabled: n } = (0, x.aq)("OverlayV3StreamWatchNudge"),
-        { disableWelcomeNotification: i } = x.aZ.useConfig({ location: "OverlayNotificationSettings" }),
+        { disableWelcomeNotification: i } = (0, x.pN)("OverlayNotificationSettings"),
         a = eV(e, t, n, i),
         o = (e) => (t) => {
             b.Z.setNotificationDisabledSetting(e, !t);

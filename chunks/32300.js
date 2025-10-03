@@ -1,14 +1,15 @@
 n.d(t, {
+    F3: () => w,
     J0: () => b,
     NW: () => c,
     OV: () => o,
     RD: () => y,
     Rb: () => l,
     Se: () => p,
+    Sy: () => R,
     XE: () => u,
     YB: () => g,
     Yo: () => d,
-    aZ: () => N,
     aq: () => I,
     dj: () => f,
     eV: () => C,
@@ -16,6 +17,7 @@ n.d(t, {
     lj: () => v,
     mB: () => m,
     o4: () => s,
+    pN: () => P,
     qA: () => E,
     tU: () => S,
     td: () => _,
@@ -238,26 +240,36 @@ function v(e) {
 function I(e) {
     return O.useConfig({ location: e });
 }
-let T = (0, i.le)({
-    name: "2025-08-overlay-v3-one-click-go-live",
+let T = (0, r.B)({
     kind: "user",
+    id: "2025-10_overlay_v3_one_click_go_live",
+    label: "Overlay V3 One Click Go Live",
     defaultConfig: {
         oneClickGoLiveEnabled: !1,
         useStreamCtaCopy: !1,
     },
-    variations: {
-        1: {
-            oneClickGoLiveEnabled: !1,
-            useStreamCtaCopy: !0,
+    treatments: [
+        {
+            id: 1,
+            label: "Use Stream CTA Copy",
+            config: {
+                oneClickGoLiveEnabled: !1,
+                useStreamCtaCopy: !0,
+            },
         },
-        2: {
-            oneClickGoLiveEnabled: !0,
-            useStreamCtaCopy: !0,
+        {
+            id: 2,
+            label: "Enable One Click Go Live with Stream CTA Copy",
+            config: {
+                oneClickGoLiveEnabled: !0,
+                useStreamCtaCopy: !0,
+            },
         },
-    },
+    ],
 });
 function S(e) {
-    return T.getConfig({ location: e });
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 let A = (0, i.le)({
     name: "2025-09-overlay-default-keybind",
@@ -268,9 +280,10 @@ let A = (0, i.le)({
 function C(e) {
     return A.getConfig({ location: e });
 }
-let N = (0, i.le)({
-    name: "2025-09-overlay-negative-widget-testing",
+let N = (0, r.B)({
     kind: "user",
+    id: "2025-10_overlay_negative_widget_testing",
+    label: "Overlay Negative Widget Testing",
     defaultConfig: {
         voiceWidgetDefaultUnpinned: !1,
         videoWidgetDefaultUnpinned: !1,
@@ -278,41 +291,71 @@ let N = (0, i.le)({
         notificationsDefaultOff: !1,
         unlockedOnlyDefaultOverlay: !1,
     },
-    variations: {
-        1: {
-            voiceWidgetDefaultUnpinned: !0,
-            videoWidgetDefaultUnpinned: !1,
-            disableWelcomeNotification: !1,
-            notificationsDefaultOff: !1,
-            unlockedOnlyDefaultOverlay: !1,
+    treatments: [
+        {
+            id: 1,
+            label: "Voice Widget Default Unpinned",
+            config: {
+                voiceWidgetDefaultUnpinned: !0,
+                videoWidgetDefaultUnpinned: !1,
+                disableWelcomeNotification: !1,
+                notificationsDefaultOff: !1,
+                unlockedOnlyDefaultOverlay: !1,
+            },
         },
-        2: {
-            voiceWidgetDefaultUnpinned: !1,
-            videoWidgetDefaultUnpinned: !0,
-            disableWelcomeNotification: !1,
-            notificationsDefaultOff: !1,
-            unlockedOnlyDefaultOverlay: !1,
+        {
+            id: 2,
+            label: "Video Widget Default Unpinned",
+            config: {
+                voiceWidgetDefaultUnpinned: !1,
+                videoWidgetDefaultUnpinned: !0,
+                disableWelcomeNotification: !1,
+                notificationsDefaultOff: !1,
+                unlockedOnlyDefaultOverlay: !1,
+            },
         },
-        3: {
-            voiceWidgetDefaultUnpinned: !1,
-            videoWidgetDefaultUnpinned: !1,
-            disableWelcomeNotification: !0,
-            notificationsDefaultOff: !1,
-            unlockedOnlyDefaultOverlay: !1,
+        {
+            id: 3,
+            label: "Disable Welcome Notification",
+            config: {
+                voiceWidgetDefaultUnpinned: !1,
+                videoWidgetDefaultUnpinned: !1,
+                disableWelcomeNotification: !0,
+                notificationsDefaultOff: !1,
+                unlockedOnlyDefaultOverlay: !1,
+            },
         },
-        4: {
-            voiceWidgetDefaultUnpinned: !1,
-            videoWidgetDefaultUnpinned: !1,
-            disableWelcomeNotification: !1,
-            notificationsDefaultOff: !0,
-            unlockedOnlyDefaultOverlay: !1,
+        {
+            id: 4,
+            label: "Notifications Default Off",
+            config: {
+                voiceWidgetDefaultUnpinned: !1,
+                videoWidgetDefaultUnpinned: !1,
+                disableWelcomeNotification: !1,
+                notificationsDefaultOff: !0,
+                unlockedOnlyDefaultOverlay: !1,
+            },
         },
-        5: {
-            voiceWidgetDefaultUnpinned: !1,
-            videoWidgetDefaultUnpinned: !1,
-            disableWelcomeNotification: !1,
-            notificationsDefaultOff: !1,
-            unlockedOnlyDefaultOverlay: !0,
+        {
+            id: 5,
+            label: "Unlocked Only Default Overlay",
+            config: {
+                voiceWidgetDefaultUnpinned: !1,
+                videoWidgetDefaultUnpinned: !1,
+                disableWelcomeNotification: !1,
+                notificationsDefaultOff: !1,
+                unlockedOnlyDefaultOverlay: !0,
+            },
         },
-    },
+    ],
 });
+function R(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+}
+function P(e) {
+    return N.useExperiment({ location: e });
+}
+function w() {
+    v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), R("OVERLAY_INITIALIZED");
+}

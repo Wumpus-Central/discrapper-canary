@@ -224,7 +224,7 @@ class x extends s.Z {
                         voiceWidgetDefaultUnpinned: e,
                         videoWidgetDefaultUnpinned: t,
                         unlockedOnlyDefaultOverlay: n,
-                    } = _.aZ.getConfig({ location: "OverlayNegativeWidgetExperimentManager" }),
+                    } = (0, _.Sy)("OverlayNegativeWidgetExperimentManager"),
                     r = new Set(),
                     i = new Set(),
                     a = e || n,
@@ -258,7 +258,7 @@ class x extends s.Z {
                         notificationsDefaultOff: e,
                         disableWelcomeNotification: t,
                         unlockedOnlyDefaultOverlay: n,
-                    } = _.aZ.getConfig({ location: "OverlayNegativeWidgetExperimentManager" }),
+                    } = (0, _.Sy)("OverlayNegativeWidgetExperimentManager"),
                     r = new Set(),
                     i = new Set();
                 for (let a of D())
