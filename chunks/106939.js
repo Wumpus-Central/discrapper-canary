@@ -1,6 +1,6 @@
 n.d(t, {
-    M: () => q,
-    Z: () => X,
+    M: () => X,
+    Z: () => Q,
 });
 var r = n(951288),
     i = n(647438),
@@ -32,8 +32,8 @@ var r = n(951288),
     P = n(652262),
     w = n(880257),
     D = n(631885),
-    x = n(615160),
-    L = n(273879),
+    L = n(615160),
+    x = n(273879),
     j = n(830746),
     M = n(731934),
     k = n(521450),
@@ -41,23 +41,31 @@ var r = n(951288),
     G = n(981631),
     B = n(723359),
     Z = n(921944),
-    V = n(345909),
-    F = n(388032),
+    F = n(345909),
+    V = n(388032),
     H = n(166387);
 let Y = {
         [U.dG.REQUESTS]: () => (0, r.jsx)(M.Z, {}),
         [U.dG.ACTIVITY]: () => (0, r.jsx)(j.Z, {}),
         [U.dG.SETTINGS]: () => (0, r.jsx)(k.Z, {}),
-        [U.dG.CONTENT_AND_SOCIAL]: () => (0, r.jsx)(x.Z, {}),
-        [U.dG.DATA_AND_PRIVACY]: () => (0, r.jsx)(L.Z, {}),
+        [U.dG.CONTENT_AND_SOCIAL]: () => (0, r.jsx)(L.Z, {}),
+        [U.dG.DATA_AND_PRIVACY]: () => (0, r.jsx)(x.Z, {}),
     },
     W = {
         [U.dG.REQUESTS]: () => (0, r.jsx)(M.Z, {}),
         [U.dG.ACTIVITY]: () => (0, r.jsx)(j.Z, {}),
-        [U.dG.CONTENT_AND_SOCIAL]: () => (0, r.jsx)(x.Z, {}),
-        [U.dG.DATA_AND_PRIVACY]: () => (0, r.jsx)(L.Z, {}),
+        [U.dG.CONTENT_AND_SOCIAL]: () => (0, r.jsx)(L.Z, {}),
+        [U.dG.DATA_AND_PRIVACY]: () => (0, r.jsx)(x.Z, {}),
     };
-function K(e) {
+function K() {
+    return (0, r.jsx)(d.Kqy, {
+        justify: "center",
+        align: "center",
+        className: H.loadingContainer,
+        children: (0, r.jsx)(d.$jN, {}),
+    });
+}
+function z(e) {
     let { section: t, handleItemSelect: n } = e,
         i = (0, D.gU)(),
         a = (0, w.Z)();
@@ -65,7 +73,7 @@ function K(e) {
         ? null
         : (0, r.jsxs)(d.njP, {
               className: H.settingsTabBar,
-              "aria-label": F.intl.string(V.default.RZqaJi),
+              "aria-label": V.intl.string(F.default.RZqaJi),
               selectedItem: t,
               type: "top",
               look: "brand",
@@ -74,14 +82,14 @@ function K(e) {
                   (0, r.jsx)(d.njP.Item, {
                       className: H.settingsTabBarItem,
                       id: U.dG.ACTIVITY,
-                      children: F.intl.string(V.default.bdBmq6),
+                      children: V.intl.string(F.default.bdBmq6),
                   }),
                   (0, r.jsxs)(d.njP.Item, {
                       className: H.settingsTabBarItem,
                       id: U.dG.REQUESTS,
-                      "aria-label": F.intl.string(V.default["gVWG+/"]),
+                      "aria-label": V.intl.string(F.default["gVWG+/"]),
                       children: [
-                          F.intl.string(V.default["gVWG+/"]),
+                          V.intl.string(F.default["gVWG+/"]),
                           i > 0
                               ? (0, r.jsx)(d.mAB, {
                                     className: H.badge,
@@ -94,13 +102,13 @@ function K(e) {
                       ? (0, r.jsx)(d.njP.Item, {
                             className: H.settingsTabBarItem,
                             id: U.dG.SETTINGS,
-                            children: F.intl.string(F.t["3D5yo6"]),
+                            children: V.intl.string(V.t["3D5yo6"]),
                         })
                       : null,
               ],
           });
 }
-function z(e) {
+function q(e) {
     let { theme: t, section: n, handleItemSelect: i } = e,
         a = (0, E.Dt)(),
         l = (0, D.gU)();
@@ -120,11 +128,11 @@ function z(e) {
                     }),
                     (0, r.jsx)(y.Z.Title, {
                         id: a,
-                        children: F.intl.string(V.default.RZqaJi),
+                        children: V.intl.string(F.default.RZqaJi),
                     }),
                     (0, r.jsx)(y.Z.Divider, {}),
                     (0, r.jsxs)(d.njP, {
-                        "aria-label": F.intl.string(V.default.RZqaJi),
+                        "aria-label": V.intl.string(F.default.RZqaJi),
                         selectedItem: n,
                         type: "top-pill",
                         onItemSelect: i,
@@ -133,14 +141,14 @@ function z(e) {
                             (0, r.jsx)(d.njP.Item, {
                                 id: U.dG.ACTIVITY,
                                 className: H.item,
-                                children: F.intl.string(V.default.bdBmq6),
+                                children: V.intl.string(F.default.bdBmq6),
                             }),
                             (0, r.jsxs)(d.njP.Item, {
                                 id: U.dG.REQUESTS,
                                 className: H.item,
-                                "aria-label": F.intl.string(V.default["gVWG+/"]),
+                                "aria-label": V.intl.string(F.default["gVWG+/"]),
                                 children: [
-                                    F.intl.string(V.default["gVWG+/"]),
+                                    V.intl.string(F.default["gVWG+/"]),
                                     l > 0
                                         ? (0, r.jsx)(d.mAB, {
                                               className: H.badge,
@@ -155,17 +163,20 @@ function z(e) {
             }),
     });
 }
-function q() {
+function X() {
     let e = (0, w.Z)(),
         t = (0, D.M8)(),
         n = (0, b.Nj)(u.z.FAMILY_CENTER_NEW_BADGE),
-        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
-        o = (0, P.M)(),
-        { selectedTab: s, handleTabChange: f } = (0, R.Z)(),
-        h = (0, E.Dt)(),
-        m = S.default.getCurrentUser(),
-        y = null != e,
-        I = a && null != m && !y;
+        { familyCenterInitialized: a, isLoading: o } = (0, c.cj)([N.Z], () => ({
+            familyCenterInitialized: N.Z.getIsInitialized(),
+            isLoading: N.Z.isLoading(),
+        })),
+        s = (0, P.M)(),
+        { selectedTab: f, handleTabChange: h } = (0, R.Z)(),
+        m = (0, E.Dt)(),
+        y = S.default.getCurrentUser(),
+        I = null != e,
+        T = a && null != y && !I;
     (0, _.ZP)(() => {
         (0, v.e)("family-center"),
             C.ZP.initialPageLoad(),
@@ -175,18 +186,18 @@ function q() {
                     forceTrack: !0,
                 });
     });
-    let T = {
+    let L = {
             isConsideredAdult: e,
             numOfAcceptedRequests: t,
-            selectedTab: s,
-            selectedTeenId: o,
+            selectedTab: f,
+            selectedTeenId: s,
         },
-        x = i.useRef(T);
+        x = i.useRef(L);
     i.useEffect(() => {
-        x.current = T;
+        x.current = L;
     }),
         i.useEffect(() => {
-            if (a && y) {
+            if (a && I) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = x.current;
                 A.default.track(G.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
@@ -197,69 +208,72 @@ function q() {
                 }),
                     O.Z.increment({ name: l.V.FAMILY_CENTER_VIEW });
             }
-        }, [a, y]),
+        }, [a, I]),
         i.useEffect(() => {
-            I && (0, p.mN)(B.L0.FAMILY_CENTER);
-        }, [I]);
-    let L = (e) => {
-        f(e);
+            T && (0, p.mN)(B.L0.FAMILY_CENTER);
+        }, [T]);
+    let j = (e) => {
+        h(e);
     };
-    return I
+    return T
         ? null
         : (0, r.jsxs)("main", {
               className: H.container,
-              "aria-label": F.intl.string(V.default.RZqaJi),
+              "aria-label": V.intl.string(F.default.RZqaJi),
               children: [
-                  (0, r.jsx)(g.yY, { location: F.intl.string(V.default.RZqaJi) }),
-                  (0, r.jsx)(K, {
-                      section: s,
-                      handleItemSelect: L,
+                  (0, r.jsx)(g.yY, { location: V.intl.string(F.default.RZqaJi) }),
+                  (0, r.jsx)(z, {
+                      section: f,
+                      handleItemSelect: j,
                   }),
                   (0, r.jsx)(d.njP.Panel, {
-                      id: s,
-                      "aria-labelledby": h,
+                      id: f,
+                      "aria-labelledby": m,
                       className: H.contentPanel,
-                      children: (0, r.jsx)("div", { children: Y[s]() }),
+                      children: (0, r.jsx)("div", { children: o ? (0, r.jsx)(K, {}) : Y[f]() }),
                   }),
               ],
           });
 }
-function X() {
+function Q() {
     let { analyticsLocations: e } = (0, m.ZP)(h.Z.FAMILY_CENTER),
         t = (0, w.Z)(),
         n = (0, D.M8)(),
         a = (0, b.Nj)(u.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
-        y = (0, P.M)(),
+        { familyCenterInitialized: s, isLoading: y } = (0, c.cj)([N.Z], () => ({
+            familyCenterInitialized: N.Z.getIsInitialized(),
+            isLoading: N.Z.isLoading(),
+        })),
+        L = (0, P.M)(),
         x = (0, c.e7)([I.Z], () => I.Z.theme),
-        { selectedTab: L, handleTabChange: j } = (0, R.Z)(),
-        M = (0, E.Dt)(),
-        k = S.default.getCurrentUser(),
-        Y = null != t,
-        K = s && null != k && !Y;
+        { selectedTab: j, handleTabChange: M } = (0, R.Z)(),
+        k = (0, E.Dt)(),
+        Y = S.default.getCurrentUser(),
+        z = null != t,
+        X = s && null != Y && !z;
     (0, _.ZP)(() => {
         f.Y(G.Z5c.FAMILY_CENTER),
             (0, v.e)("family-center"),
-            !N.Z.isLoading() && N.Z.canRefetch() && C.ZP.initialPageLoad(),
+            !y && N.Z.canRefetch() && C.ZP.initialPageLoad(),
             a ||
                 (0, b.Q3)(u.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: Z.L.AUTO,
                     forceTrack: !0,
                 });
     });
-    let q = {
+    let Q = {
             isConsideredAdult: t,
             numOfAcceptedRequests: n,
-            selectedTab: L,
-            selectedTeenId: y,
+            selectedTab: j,
+            selectedTeenId: L,
         },
-        X = i.useRef(q);
+        J = i.useRef(Q);
     i.useEffect(() => {
-        X.current = q;
+        J.current = Q;
     }),
         i.useEffect(() => {
-            if (s && Y) {
-                let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = X.current;
+            if (s && z) {
+                let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = J.current;
                 A.default.track(G.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: t,
@@ -269,40 +283,40 @@ function X() {
                 }),
                     O.Z.increment({ name: l.V.FAMILY_CENTER_VIEW });
             }
-        }, [s, Y]),
+        }, [s, z]),
         i.useEffect(() => {
             let e = T.Ex.getSetting();
             s && t && void 0 === e && T.Ex.updateSetting(!0);
         }, [s, t]),
         i.useEffect(() => {
-            K && (0, p.mN)(B.L0.FAMILY_CENTER);
-        }, [K]);
-    let Q = (e) => {
-        j(e);
+            X && (0, p.mN)(B.L0.FAMILY_CENTER);
+        }, [X]);
+    let $ = (e) => {
+        M(e);
     };
-    if (K) return null;
-    let J = L !== U.dG.SETTINGS ? L : U.dG.ACTIVITY,
-        $ = W[J];
+    if (X) return null;
+    let ee = j !== U.dG.SETTINGS ? j : U.dG.ACTIVITY,
+        et = W[ee];
     return (0, r.jsx)(m.Gt, {
         value: e,
         children: (0, r.jsxs)("main", {
             className: o()(H.container, H.containerSidenav),
-            "aria-label": F.intl.string(V.default.RZqaJi),
+            "aria-label": V.intl.string(F.default.RZqaJi),
             children: [
-                (0, r.jsx)(g.yY, { location: F.intl.string(V.default.RZqaJi) }),
-                (0, r.jsx)(z, {
+                (0, r.jsx)(g.yY, { location: V.intl.string(F.default.RZqaJi) }),
+                (0, r.jsx)(q, {
                     theme: x,
-                    section: J,
-                    handleItemSelect: Q,
+                    section: ee,
+                    handleItemSelect: $,
                 }),
                 (0, r.jsx)(d.njP.Panel, {
-                    id: J,
-                    "aria-labelledby": M,
+                    id: ee,
+                    "aria-labelledby": k,
                     className: H.contentPanel,
                     children: (0, r.jsx)(d.Ttm, {
                         children: (0, r.jsx)("div", {
                             className: H.sideNavContent,
-                            children: $(),
+                            children: y ? (0, r.jsx)(K, {}) : et(),
                         }),
                     }),
                 }),
