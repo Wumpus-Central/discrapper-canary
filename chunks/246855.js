@@ -15,8 +15,8 @@ var a = n(951288),
     _ = n(960919),
     b = n(509212),
     h = n(272008),
-    y = n(497505),
-    x = n(515108),
+    x = n(497505),
+    y = n(515108),
     g = n(291967),
     j = n(46140),
     E = n(981631),
@@ -52,13 +52,13 @@ function w(e) {
         _ = C ? S.Z : A.Z,
         b = C ? L.Z : T.Z,
         h = r.useRef(null),
-        y = r.useRef(null),
-        [x, g] = r.useState(!1),
+        x = r.useRef(null),
+        [y, g] = r.useState(!1),
         [j, E] = r.useState(!1),
         [v, R] = r.useState(!1);
     r.useEffect(() => {
-        x && j && v && t();
-    }, [x, j, v, t]),
+        y && j && v && t();
+    }, [y, j, v, t]),
         r.useEffect(() => {
             n ||
                 i ||
@@ -70,14 +70,14 @@ function w(e) {
     let O = r.useCallback(() => {
         if (!i) {
             var e;
-            m(!1), null == (e = y.current) || e.play();
+            m(!1), null == (e = x.current) || e.play();
         }
     }, [i]);
     return (0, a.jsxs)("div", {
         className: N.orbsContainer,
         children: [
             (0, a.jsx)(p.Z, {
-                ref: y,
+                ref: x,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
@@ -150,7 +150,7 @@ function I(e) {
                                 className: N.orbsIcon,
                             }),
                             (0, a.jsx)(l.X6q, {
-                                variant: "heading-xl/bold",
+                                variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: R.intl.format(R.t["/UTD6e"], { orbsEarned: r }),
                             }),
@@ -160,7 +160,20 @@ function I(e) {
                         ? (0, a.jsx)(l.Text, {
                               variant: "text-sm/medium",
                               color: "text-secondary",
-                              children: R.intl.format(R.t.g4t9a2, { orbsBalance: i }),
+                              children: R.intl.format(R.t.g4t9a2, {
+                                  orbsBalance: i,
+                                  orbsBalanceHook: (e, t) =>
+                                      (0, a.jsx)(
+                                          l.Text,
+                                          {
+                                              variant: "text-sm/medium",
+                                              color: "text-primary",
+                                              tag: "span",
+                                              children: e,
+                                          },
+                                          t,
+                                      ),
+                              }),
                           })
                         : null,
                 ],
@@ -189,13 +202,13 @@ function P(e) {
     r.useEffect(() => {
         c ||
             "loading" !== p ||
-            (0, h.QB)(n.id, y.y$.CROSS_PLATFORM, l)
+            (0, h.QB)(n.id, x.y$.CROSS_PLATFORM, l)
                 .then(() => f("success"))
                 .catch(() => f("error"));
     }, [n.id, c, p, l]);
     let N = !_ || "loading" === p || (null == d && null == u),
         A = "error" === p || null == m || (null == d && null != u);
-    return (0, a.jsx)(x.Z, {
+    return (0, a.jsx)(y.Z, {
         onClose: i,
         transitionState: s,
         quest: n,

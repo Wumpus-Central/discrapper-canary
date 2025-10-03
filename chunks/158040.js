@@ -1,16 +1,16 @@
-a.d(n, { T: () => l });
-var t = a(951288),
-    i = a(481060),
-    r = a(388032),
-    s = a(675853);
-function l(e) {
-    let { rewardName: n } = e;
-    return (0, t.jsx)(i.Text, {
+n.d(t, { T: () => s });
+var r = n(951288),
+    a = n(481060),
+    i = n(388032),
+    o = n(675853);
+function s(e) {
+    let { rewardName: t } = e;
+    return (0, r.jsx)(a.Text, {
         variant: "text-xs/medium",
-        className: s.rewardPill,
-        children: r.intl.format(r.t.loyTio, {
-            rewardName: n,
-            verticalDivider: () => (0, t.jsx)("div", { className: s.divider }),
+        className: o.rewardPill,
+        children: i.intl.format(i.t.loyTio, {
+            rewardName: t,
+            verticalDivider: (e, t) => (0, r.jsx)("div", { className: o.divider }, t),
         }),
     });
 }

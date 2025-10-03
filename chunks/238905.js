@@ -7,4 +7,5 @@ e.exports = {
     mainCodeInput: "mainCodeInput__42a46",
     claimInstructionsCodeInputTitle: "claimInstructionsCodeInputTitle__42a46",
     claimInstructionsText: "claimInstructionsText__42a46",
+    codeClaimInputSmallFont: "codeClaimInputSmallFont__42a46",
 };

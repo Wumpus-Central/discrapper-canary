@@ -1,4 +1,4 @@
-n.d(t, { default: () => q }), n(704826), n(35282);
+n.d(t, { default: () => R }), n(704826), n(35282);
 var r = n(951288),
     a = n(647438),
     i = n(793030),
@@ -10,104 +10,106 @@ var r = n(951288),
     d = n(448986),
     m = n(475271),
     p = n(63954),
-    C = n(246946),
-    f = n(572004),
-    h = n(624138),
-    j = n(617136),
-    y = n(509212),
+    C = n(454585),
+    f = n(246946),
+    h = n(572004),
+    j = n(624138),
+    y = n(617136),
+    x = n(509212),
     v = n(569984),
-    x = n(497505),
-    g = n(804127),
-    b = n(566078),
-    _ = n(602667),
-    w = n(644646),
-    O = n(515108),
-    P = n(291967),
-    N = n(46140),
+    g = n(497505),
+    b = n(804127),
+    _ = n(566078),
+    w = n(602667),
+    O = n(644646),
+    P = n(515108),
+    N = n(291967),
+    T = n(46140),
     E = n(388032),
-    T = n(238905);
-function A(e) {
-    let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: i, buttonColor: s, className: l } = e,
-        u = (0, o.e7)([C.Z], () => C.Z.hidePersonalInformation),
-        d = (0, j.O5)();
+    I = n(238905);
+function D(e) {
+    let { rewardCode: t, questContent: n, questId: a, sourceQuestContent: i, className: l, inputClassName: u } = e,
+        d = (0, o.e7)([f.Z], () => f.Z.hidePersonalInformation),
+        m = (0, y.O5)();
     return null == t
         ? null
         : (0, r.jsx)(c.Z, {
               className: l,
-              value: u ? E.intl.string(E.t["0n2u0t"]) : t.code,
-              buttonColor: s,
+              inputClassName: u,
+              value: d ? E.intl.string(E.t["0n2u0t"]) : t.code,
+              buttonColor: s.Tt.PRIMARY,
               onCopy: () => {
-                  u && (0, f.JG)(t.code),
-                      d({
+                  d && (0, h.JG)(t.code),
+                      m({
                           questId: a,
                           questContent: n,
-                          questContentCTA: j.jZ.COPY_REWARD_CODE,
+                          questContentCTA: y.jZ.COPY_REWARD_CODE,
                           sourceQuestContent: i,
                       });
               },
           });
 }
-function D(e) {
+function A(e) {
     var t;
     let {
             quest: n,
             questContent: o,
-            questContentPosition: c,
-            sourceQuestContent: u,
-            rewardCode: d,
-            rewardPlatform: m,
-            sharedQuestFields: p,
-            onClose: C,
+            questContentPosition: s,
+            sourceQuestContent: c,
+            rewardCode: u,
+            rewardPlatform: d,
+            sharedQuestFields: m,
+            onClose: p,
             transitionState: f,
-            impressionRef: j,
+            impressionRef: h,
         } = e,
-        v =
+        y =
             null !=
-            (t = (0, y.C1)({
+            (t = (0, x.C1)({
                 quest: n,
-                rewardCode: d,
-                selectedPlatformType: m,
-                sharedQuestFields: p,
+                rewardCode: u,
+                selectedPlatformType: d,
+                sharedQuestFields: m,
             }))
                 ? t
                 : "",
-        x = a.useMemo(() => {
+        v = a.useMemo(() => {
             var e;
             let t =
                 null ==
-                (e = (0, y.o9)({
+                (e = (0, x.o9)({
                     quest: n,
                     idx: 0,
                 }))
                     ? void 0
                     : e.redemptionLink;
-            if ((0, h.Ew)(t)) return null;
-            let r = null == d ? void 0 : d.code;
-            return (0, h.Ew)(r) ? t : t.replace(N.Dp, encodeURIComponent(r));
-        }, [n, null == d ? void 0 : d.code]),
-        b = (0, g.In)({
+            if ((0, j.Ew)(t)) return null;
+            let r = null == u ? void 0 : u.code;
+            return (0, j.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
+        }, [n, null == u ? void 0 : u.code]),
+        g = (0, b.In)({
             quest: n,
             questContent: o,
-            questContentPosition: c,
-            redemptionLink: x,
-            sourceQuestContent: u,
+            questContentPosition: s,
+            redemptionLink: v,
+            sourceQuestContent: c,
         });
     return (0, r.jsx)("div", {
-        ref: j,
+        ref: h,
         children: (0, r.jsx)(i.Modal, {
             size: "md",
             title: E.intl.string(E.t.NkZ7OT),
             actions: [
-                null != x
+                null != v
                     ? {
                           variant: "primary",
                           text: E.intl.string(E.t["+zx47e"]),
-                          onClick: b,
+                          onClick: g,
                       }
                     : {
                           variant: "primary",
                           text: E.intl.string(E.t.i4jeWV),
-                          onClick: C,
+                          onClick: p,
                       },
             ],
             preview: (0, r.jsxs)(r.Fragment, {
@@ -115,51 +117,50 @@ function D(e) {
                     (0, r.jsx)(l.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        className: T.claimInstructionsCodeInputTitle,
+                        className: I.claimInstructionsCodeInputTitle,
                         children: E.intl.string(E.t.srzsU1),
                     }),
-                    (0, r.jsx)(A, {
-                        rewardCode: d,
+                    (0, r.jsx)(D, {
+                        rewardCode: u,
                         questContent: o,
                         questId: n.id,
-                        sourceQuestContent: u,
-                        buttonColor: s.Tt.BRAND,
+                        sourceQuestContent: c,
                     }),
                 ],
             }),
-            onClose: C,
+            onClose: p,
             transitionState: f,
             children: (0, r.jsx)(l.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                className: T.claimInstructionsText,
-                children: v,
+                className: I.claimInstructionsText,
+                children: C.Z.parse(y, !1, { allowLinks: !0 }),
             }),
         }),
     });
 }
-function I(e) {
+function q(e) {
     let { quest: t, questContent: n, rewardCode: a, sourceQuestContent: i, onClaimInstructions: o } = e;
     return (0, r.jsxs)("div", {
-        className: T.contentContainer,
+        className: I.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: T.rewardTileContainer,
-                children: (0, r.jsx)(w.Z, {
-                    className: T.rewardTileAsset,
+                className: I.rewardTileContainer,
+                children: (0, r.jsx)(O.Z, {
+                    className: I.rewardTileAsset,
                     quest: t,
                     questContent: n,
-                    location: N.dr.REWARD_CODE_MODAL,
+                    location: T.dr.REWARD_CODE_MODAL,
                     sourceQuestContent: i,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: T.copyContainer,
+                className: I.copyContainer,
                 children: [
                     (0, r.jsx)(l.X6q, {
-                        variant: "heading-xl/bold",
+                        variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: T.heading,
+                        className: I.heading,
                         children: E.intl.string(E.t["5j/Zys"]),
                     }),
                     (0, r.jsx)(l.Text, {
@@ -169,39 +170,39 @@ function I(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(A, {
-                className: T.mainCodeInput,
+            (0, r.jsx)(D, {
+                className: I.mainCodeInput,
                 rewardCode: a,
                 questContent: n,
                 questId: t.id,
                 sourceQuestContent: i,
-                buttonColor: s.Tt.PRIMARY,
+                inputClassName: I.codeClaimInputSmallFont,
             }),
         ],
     });
 }
-function q(e) {
+function R(e) {
     let { quest: t, onClose: n, transitionState: i, preview: s, sourceQuestContent: c, questContentPosition: C } = e,
-        f = b.r.build(t.config),
+        f = _.r.build(t.config),
         h = f.rewardPlatforms[0],
-        j = x.jn.REWARD_MODAL,
+        j = g.jn.REWARD_MODAL,
         {
             questStoreRewardCode: y,
-            isFetchingRewardCode: w,
-            isClaimingReward: E,
+            isFetchingRewardCode: x,
+            isClaimingReward: O,
         } = (0, o.cj)([v.Z], () => ({
             questStoreRewardCode: v.Z.getRewardCode(t.id),
             isFetchingRewardCode: v.Z.isFetchingRewardCode(t.id),
             isClaimingReward: v.Z.isClaimingReward(t.id),
         })),
-        T = !0 === s ? (0, p.b)(t) : y,
-        { hasError: A, setHasError: q } = (0, g.uL)({
-            isClaimingReward: E,
-            isFetchingRewardCode: w,
+        E = !0 === s ? (0, p.b)(t) : y,
+        { hasError: I, setHasError: D } = (0, b.uL)({
+            isClaimingReward: O,
+            isFetchingRewardCode: x,
             quest: t,
             questContent: j,
             requiresPlatformSelection: !1,
-            rewardCode: T,
+            rewardCode: E,
             selectedPlatformType: h,
             preview: s,
         });
@@ -214,39 +215,39 @@ function q(e) {
             i && t();
         }, [i, t]);
     })(() => {
-        q(!0);
+        D(!0);
     });
-    let R = null == T && (w || E),
-        S = A && !E && !w;
-    return (0, r.jsx)(O.Z, {
+    let R = null == E && (x || O),
+        S = I && !O && !x;
+    return (0, r.jsx)(P.Z, {
         onClose: n,
         transitionState: i,
         quest: t,
         sourceQuestContent: c,
-        location: N.dr.REWARD_CODE_MODAL,
+        location: T.dr.REWARD_CODE_MODAL,
         isRewardContentLoading: R,
         rewardContentHasError: S,
         rewardContent: S
             ? null
-            : (0, r.jsx)(P.Z, {
+            : (0, r.jsx)(N.Z, {
                   rewardName: f.defaultRewardName,
-                  children: (0, r.jsx)(I, {
+                  children: (0, r.jsx)(q, {
                       quest: t,
                       questContent: j,
-                      rewardCode: T,
+                      rewardCode: E,
                       sourceQuestContent: c,
                       onClaimInstructions: () => {
                           (0, l.ZDy)(
                               () =>
                                   Promise.resolve((e) =>
-                                      (0, r.jsx)(_.A, {
+                                      (0, r.jsx)(w.A, {
                                           questOrQuests: t,
                                           questContent: j,
                                           sourceQuestContent: c,
                                           children: (n) => {
                                               var a, i;
                                               return (0, r.jsx)(
-                                                  D,
+                                                  A,
                                                   ((a = (function (e) {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -279,7 +280,7 @@ function q(e) {
                                                           quest: t,
                                                           questContent: j,
                                                           sourceQuestContent: c,
-                                                          rewardCode: T,
+                                                          rewardCode: E,
                                                           rewardPlatform: h,
                                                           sharedQuestFields: f,
                                                           questContentPosition: C,

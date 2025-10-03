@@ -1,120 +1,121 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     a = n(647438),
     i = n(319245),
-    l = n(793030),
+    o = n(793030),
     s = n(410030),
-    o = n(624138),
+    l = n(624138),
     c = n(617136),
-    d = n(915750),
-    u = n(509212),
-    _ = n(113434),
-    h = n(497505),
-    m = n(475595),
-    C = n(566078),
-    p = n(968435),
-    f = n(78826),
-    g = n(46140),
-    E = n(231338),
-    R = n(388032),
-    b = n(834586);
-function y(e) {
-    let { quest: t, sourceQuestContent: n, onLoadComplete: y } = e,
-        A = (0, s.ZP)(),
-        N = (0, l.wjy)(A) ? E.BR.DARK : E.BR.LIGHT,
-        x = (0, _.ly)(t),
-        v = (0, d.aM)(),
-        S = a.useMemo(() => {
-            let e = C.r.build(t.config),
+    u = n(915750),
+    d = n(509212),
+    m = n(113434),
+    p = n(497505),
+    C = n(475595),
+    f = n(566078),
+    h = n(477005),
+    j = n(78826),
+    y = n(46140),
+    x = n(231338),
+    v = n(388032),
+    g = n(985952);
+function b(e) {
+    let { quest: t, sourceQuestContent: n, onLoadComplete: b } = e,
+        _ = (0, s.ZP)(),
+        w = (0, o.wjy)(_) ? x.BR.DARK : x.BR.LIGHT,
+        O = (0, m.ly)(t),
+        P = (0, u.aM)(),
+        N = a.useMemo(() => {
+            let e = f.r.build(t.config),
                 n = e.defaultWatchVideoTask,
                 r = null == n ? void 0 : n.messages.videoEndCtaSubtitle;
-            return (0, o.Ew)(r)
-                ? e.questType !== i.W.GAMEPLAY || t.config.features.includes(g.S7.NON_GAMING_PLAY_QUEST) || (0, u.Pb)(t)
-                    ? R.intl.string(R.t.y8Xf3t)
-                    : R.intl.string(R.t.wirwNz)
+            return (0, l.Ew)(r)
+                ? e.questType !== i.W.GAMEPLAY || t.config.features.includes(y.S7.NON_GAMING_PLAY_QUEST) || (0, d.Pb)(t)
+                    ? v.intl.string(v.t.y8Xf3t)
+                    : v.intl.string(v.t.wirwNz)
                 : r;
         }, [t]),
-        { isLoading: j } = (0, f.d7)();
+        { isLoading: T } = (0, j.d7)();
     return (
         a.useEffect(() => {
-            j || y();
-        }, [j, y]),
+            T || b();
+        }, [T, b]),
         (0, r.jsxs)("div", {
-            className: b.container,
+            className: g.container,
             children: [
-                (0, r.jsx)(f.Fl, {
+                (0, r.jsx)(j.Fl, {
                     id: "hero-display",
                     children: (e) =>
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(h.Z, {
                             quest: t,
-                            dimensions: {
+                            imageSize: {
                                 width: 908,
                                 height: 380,
                             },
-                            className: b.heroDisplayContainer,
+                            containerClassName: g.heroDisplayContainer,
+                            isInteracting: !0,
                             assetRef: e,
                         }),
                 }),
                 (0, r.jsx)("div", {
-                    className: b.partnerLogotypeContainer,
-                    children: (0, r.jsx)(f.Fl, {
+                    className: g.partnerLogotypeContainer,
+                    children: (0, r.jsx)(j.Fl, {
                         id: "partner-logotype",
                         children: (e) =>
                             (0, r.jsx)("img", {
                                 ref: e,
-                                className: b.partnerLogotype,
-                                alt: R.intl.formatToPlainString(R.t.rtm15O, { name: t.config.messages.gameTitle }),
-                                src: (0, m.fh)(t, m.eC.LOGO_TYPE, N).url,
+                                className: g.partnerLogotype,
+                                alt: v.intl.formatToPlainString(v.t.rtm15O, { name: t.config.messages.gameTitle }),
+                                src: (0, C.fh)(t, C.eC.LOGO_TYPE, w).url,
                             }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: b.partnerContentContainer,
+                    className: g.partnerContentContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: b.partnerCopyContainer,
+                            className: g.partnerCopyContainer,
                             children: [
-                                (0, r.jsx)(l.X6q, {
-                                    variant: "heading-lg/bold",
+                                (0, r.jsx)(o.X6q, {
+                                    variant: "heading-md/semibold",
                                     color: "header-primary",
-                                    className: b.partnerTitle,
+                                    className: g.partnerTitle,
                                     children: t.config.messages.questName,
                                 }),
-                                (0, r.jsx)(l.xvT, {
+                                (0, r.jsx)(o.xvT, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: S,
+                                    children: N,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(f.Fl, {
+                        (0, r.jsx)(j.Fl, {
                             id: "partner-game-tile",
                             children: (e) =>
                                 (0, r.jsx)("img", {
                                     ref: e,
-                                    className: b.partnerGameTile,
-                                    alt: R.intl.formatToPlainString(R.t.rtm15O, { name: t.config.messages.gameTitle }),
-                                    src: (0, m.fh)(t, m.eC.GAME_TILE, N).url,
+                                    className: g.partnerGameTile,
+                                    alt: v.intl.formatToPlainString(v.t.rtm15O, { name: t.config.messages.gameTitle }),
+                                    src: (0, C.fh)(t, C.eC.GAME_TILE, w).url,
                                 }),
                         }),
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: b.partnerCtaContainer,
-                    children: (0, r.jsx)(l.zxk, {
+                    className: g.partnerCtaContainer,
+                    children: (0, r.jsx)(o.zxk, {
                         variant: "primary",
                         size: "sm",
-                        text: x,
+                        text: O,
                         onClick: () => {
-                            (0, u.nc)(t, {
-                                content: h.jn.REWARD_MODAL,
+                            (0, d.nc)(t, {
+                                content: p.jn.REWARD_MODAL,
                                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                                impressionId: v,
+                                impressionId: P,
                                 sourceQuestContent: n,
                             });
                         },
                         fullWidth: !0,
-                        icon: l.zFc,
+                        icon: o.zFc,
                         iconPosition: "end",
                     }),
                 }),
@@ -122,14 +123,14 @@ function y(e) {
         })
     );
 }
-function A(e) {
+function _(e) {
     let { quest: t, location: n } = e;
-    return (0, r.jsx)(f.p, {
+    return (0, r.jsx)(j.p, {
         source: n,
         questId: t.id,
         isPreview: t.preview,
         children: (0, r.jsx)(
-            y,
+            b,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

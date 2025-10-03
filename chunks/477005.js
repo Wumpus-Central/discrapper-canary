@@ -11,37 +11,46 @@ var r = n(951288),
     f = n(388032),
     _ = n(178833);
 function p(e) {
-    let { quest: t, isInteracting: n, hideAssets: a, imageSize: p, containerClassName: h, imageClassName: m } = e,
-        g = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_IMAGE), [t]),
-        E = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_VIDEO), [t]),
-        b = (0, s.h)(t, d.dr.QUEST_HOME_DESKTOP),
-        { onAssetLoadComplete: y } = i.useContext(u.k),
-        O = !b && n;
+    let {
+            quest: t,
+            isInteracting: n,
+            hideAssets: a,
+            imageSize: p,
+            containerClassName: h,
+            imageClassName: m,
+            assetRef: g,
+        } = e,
+        E = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_IMAGE), [t]),
+        b = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_VIDEO), [t]),
+        y = (0, s.h)(t, d.dr.QUEST_HOME_DESKTOP),
+        { onAssetLoadComplete: O } = i.useContext(u.k),
+        v = !y && n;
     return (0, r.jsx)("div", {
         className: o()(_.heroAssetCont, h),
         children:
             !a &&
             (0, r.jsx)(c.K, {
                 imageAsset:
-                    null != g
+                    null != E
                         ? {
-                              asset: g,
+                              asset: E,
                               assetId: "QuestTileBanner",
                               alt: f.intl.string(f.t.jnijW1),
                               className: o()(_.heroAsset, m),
                           }
                         : void 0,
                 videoAsset:
-                    null != E
+                    null != b
                         ? {
-                              asset: E,
+                              asset: b,
                               assetId: "QuestTileBanner_heroAnimated",
                               className: _.heroAssetVideo,
                           }
                         : void 0,
-                showVideo: O,
+                showVideo: v,
                 imageSize: p,
-                onLoadComplete: y,
+                onLoadComplete: O,
+                assetRef: g,
             }),
     });
 }

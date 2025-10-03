@@ -1,4 +1,4 @@
-t.d(n, { default: () => E }), t(388685);
+t.d(n, { default: () => T }), t(388685);
 var r = t(951288),
     a = t(647438),
     i = t(979554),
@@ -13,27 +13,27 @@ var r = t(951288),
     f = t(960048),
     g = t(509212),
     C = t(272008),
-    v = t(113434),
-    x = t(497505),
+    x = t(113434),
+    v = t(497505),
     h = t(475595),
     j = t(515108),
-    y = t(291967),
-    _ = t(46140),
-    N = t(388032),
-    b = t(691864);
+    _ = t(291967),
+    y = t(46140),
+    b = t(388032),
+    N = t(129034);
 function w(e) {
     var n;
     let { quest: t, avatarDeco: a, onUseNow: i, user: l, mode: o } = e,
         d = (0, h.fh)(t, h.eC.REWARD).url,
-        u = (0, v.Qy)(t.config),
+        u = (0, x.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
             l.avatarDecoration.skuId === (null == a ? void 0 : a.skuId);
     return (0, r.jsxs)("div", {
-        className: b.contentContainer,
+        className: N.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: b.previewContainer,
+                className: N.previewContainer,
                 children: (0, r.jsx)(c.Z, {
                     user: l,
                     guildId: null,
@@ -43,13 +43,13 @@ function w(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: b.copyContainer,
+                className: N.copyContainer,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        variant: "heading-xl/bold",
+                        variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: b.heading,
-                        children: N.intl.string(N.t["0/Yz+f"]),
+                        className: N.heading,
+                        children: b.intl.string(b.t["0/Yz+f"]),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -61,7 +61,7 @@ function w(e) {
             (0, r.jsx)(s.zxk, {
                 variant: "secondary",
                 size: "sm",
-                text: m ? N.intl.string(N.t.hjaYYm) : N.intl.string(N.t.MAS7uL),
+                text: m ? b.intl.string(b.t.hjaYYm) : b.intl.string(b.t.MAS7uL),
                 loading: "applying" === o,
                 disabled: "claimed" !== o || m,
                 onClick: i,
@@ -70,11 +70,11 @@ function w(e) {
         ],
     });
 }
-function E(e) {
+function T(e) {
     var n, t;
-    let { quest: s, onClose: c, transitionState: v, preview: h, location: N, sourceQuestContent: b } = e,
-        E = a.useMemo(() => (0, g.xn)(s.config), [s]),
-        T = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+    let { quest: s, onClose: c, transitionState: x, preview: h, location: b, sourceQuestContent: N } = e,
+        T = a.useMemo(() => (0, g.xn)(s.config), [s]),
+        E = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         [A, P] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
                 r = a.useMemo(() => {
@@ -92,40 +92,40 @@ function E(e) {
                     return (0, o.si)(), !!(null == t ? void 0 : t.ok);
                 };
             return [r, l];
-        })(null != (t = null == E ? void 0 : E.skuId) ? t : null),
+        })(null != (t = null == T ? void 0 : T.skuId) ? t : null),
         D = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
         O = !h && !D,
-        [L, R] = a.useState(O ? "loading" : "claimed");
+        [L, S] = a.useState(O ? "loading" : "claimed");
     a.useEffect(() => {
         O &&
-            (0, C.QB)(s.id, x.y$.CROSS_PLATFORM, N)
-                .then(() => R("claimed"))
-                .catch(() => R("error"));
-    }, [s.id, N, O]);
-    let S = !0 === h && null === A && (null == E ? void 0 : E.skuId) !== "",
-        I = null == T,
-        k = I || (null == A && !0 !== h) || S || "loading" === L,
-        M = "error" === L || null == E,
+            (0, C.QB)(s.id, v.y$.CROSS_PLATFORM, b)
+                .then(() => S("claimed"))
+                .catch(() => S("error"));
+    }, [s.id, b, O]);
+    let R = !0 === h && null === A && (null == T ? void 0 : T.skuId) !== "",
+        k = null == E,
+        I = k || (null == A && !0 !== h) || R || "loading" === L,
+        M = "error" === L || null == T,
         Z = async () => {
-            R("applying"), R((await P()) ? "applied" : "claimed");
+            S("applying"), S((await P()) ? "applied" : "claimed");
         };
     return (0, r.jsx)(j.Z, {
         onClose: c,
-        transitionState: v,
+        transitionState: x,
         quest: s,
-        sourceQuestContent: b,
-        location: _.dr.COLLECTIBLE_REWARD_MODAL,
-        isRewardContentLoading: k,
+        sourceQuestContent: N,
+        location: y.dr.COLLECTIBLE_REWARD_MODAL,
+        isRewardContentLoading: I,
         rewardContentHasError: M,
         rewardContent:
-            M || I
+            M || k
                 ? null
-                : (0, r.jsx)(y.Z, {
-                      rewardName: E.messages.name,
+                : (0, r.jsx)(_.Z, {
+                      rewardName: T.messages.name,
                       children: (0, r.jsx)(w, {
                           quest: s,
                           avatarDeco: A,
-                          user: T,
+                          user: E,
                           mode: L,
                           onUseNow: Z,
                       }),
