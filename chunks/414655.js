@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(370523),
@@ -11,13 +11,15 @@ var r = n(951288),
     p = n(277511),
     f = n(602733),
     h = n(594174),
-    g = n(621853),
-    m = n(661462),
-    b = n(319396),
-    _ = n(778567),
-    O = n(388032),
-    E = n(10094);
-function y(e) {
+    g = n(221292),
+    m = n(621853),
+    b = n(661462),
+    _ = n(319396),
+    O = n(778567),
+    E = n(228168),
+    y = n(388032),
+    v = n(10094);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +44,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,99 +62,105 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function C(e) {
     let { profileOwner: t } = e,
         {
             wishlistId: n,
-            currentUser: I,
-            wishlistSettings: S,
-        } = (0, a.cj)([g.Z, h.default], () => {
-            let e = g.Z.getFirstWishlistId(t.id);
+            currentUser: C,
+            wishlistSettings: T,
+        } = (0, a.cj)([m.Z, h.default], () => {
+            let e = m.Z.getFirstWishlistId(t.id);
             return {
                 wishlistId: e,
                 currentUser: h.default.getCurrentUser(),
-                wishlistSettings: null != e ? g.Z.getWishlistSettings(t.id, e) : null,
+                wishlistSettings: null != e ? m.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
-        { analyticsLocations: C } = (0, u.ZP)(),
-        T = (null == I ? void 0 : I.id) === t.id,
-        N = !1 === t.nsfwAllowed,
-        [j, P] = i.useState(!0);
+        { analyticsLocations: N } = (0, u.ZP)(),
+        j = (null == C ? void 0 : C.id) === t.id,
+        P = !1 === t.nsfwAllowed,
+        [x, A] = i.useState(!0);
     i.useEffect(() => {
-        (null == S ? void 0 : S.visibility) != null && P(S.visibility === l.f.PUBLIC);
-    }, [null == S ? void 0 : S.visibility]);
-    let { wishlist: x, error: A } = (0, f.k)(n),
-        Z = i.useCallback(() => {
+        (null == T ? void 0 : T.visibility) != null && A(T.visibility === l.f.PUBLIC);
+    }, [null == T ? void 0 : T.visibility]);
+    let { wishlist: Z, error: w } = (0, f.k)(n),
+        L = i.useCallback(() => {
             if (null == n) return;
-            let e = j ? l.f.PRIVATE : l.f.PUBLIC;
-            P(!j), p.Z.updateWishlistVisibility(n, e);
-        }, [n, j]),
-        w = i.useCallback(() => {
+            let e = x ? l.f.PRIVATE : l.f.PUBLIC;
+            A(!x),
+                p.Z.updateWishlistVisibility(n, e),
+                (0, g.Er)({
+                    wishlistId: n,
+                    action: x ? E.NW.WISHLIST_TOGGLE_PRIVATE : E.NW.WISHLIST_TOGGLE_PUBLIC,
+                    analyticsLocations: N,
+                });
+        }, [n, x, N]),
+        R = i.useCallback(() => {
             (0, o.pT)(),
                 (0, d.mK)({
-                    analyticsLocations: C,
+                    analyticsLocations: N,
                     analyticsSource: c.Z.USER_PROFILE_WISHLIST,
                     openInLayer: !1,
                 });
-        }, [C]);
-    return null != A
+        }, [N]);
+    return null != w
         ? null
-        : null == x || 0 === x.items.length
-          ? (0, r.jsx)(m.F, {
+        : null == Z || 0 === Z.items.length
+          ? (0, r.jsx)(b.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
-                    className: E.emptyStateContainer,
+                    className: v.emptyStateContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: E.emptyStateText,
+                            className: v.emptyStateText,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: O.intl.string(O.t.HGnLLS),
+                                    children: y.intl.string(y.t.HGnLLS),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: O.intl.string(O.t["/X1ny8"]),
+                                    children: y.intl.string(y.t["/X1ny8"]),
                                 }),
                             ],
                         }),
-                        T &&
+                        j &&
                             (0, r.jsx)(s.zxk, {
                                 variant: "primary",
                                 size: "sm",
                                 icon: s.EOn,
-                                text: O.intl.string(O.t.ZbS4QE),
-                                onClick: w,
+                                text: y.intl.string(y.t.ZbS4QE),
+                                onClick: R,
                             }),
                     ],
                 }),
             })
-          : (0, r.jsxs)(m.F, {
-                className: E.scroller,
+          : (0, r.jsxs)(b.F, {
+                className: v.scroller,
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: E.headerRow,
+                        className: v.headerRow,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: E.teenDisclaimer,
+                                className: v.teenDisclaimer,
                                 children: [
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: O.intl.format(O.t.r6Y1Li, { count: x.items.length }),
+                                        children: y.intl.format(y.t.r6Y1Li, { count: Z.items.length }),
                                     }),
-                                    !j &&
+                                    !x &&
                                         (0, r.jsx)(s.ua7, {
-                                            text: O.intl.string(O.t.RX7D9v),
+                                            text: y.intl.string(y.t.RX7D9v),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {
                                                     children: (0, r.jsx)(
                                                         "div",
-                                                        v(
-                                                            y(
+                                                        S(
+                                                            I(
                                                                 {
                                                                     role: "tooltip",
                                                                     tabIndex: 0,
@@ -170,16 +178,16 @@ function I(e) {
                                                     ),
                                                 }),
                                         }),
-                                    j &&
-                                        N &&
+                                    x &&
+                                        P &&
                                         (0, r.jsx)(s.ua7, {
-                                            text: O.intl.string(O.t.d78ChY),
+                                            text: y.intl.string(y.t.d78ChY),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {
                                                     children: (0, r.jsx)(
                                                         "div",
-                                                        v(
-                                                            y(
+                                                        S(
+                                                            I(
                                                                 {
                                                                     role: "tooltip",
                                                                     tabIndex: 0,
@@ -199,21 +207,21 @@ function I(e) {
                                         }),
                                 ],
                             }),
-                            T
+                            j
                                 ? (0, r.jsxs)("div", {
-                                      className: E.headerActions,
+                                      className: v.headerActions,
                                       children: [
                                           (0, r.jsx)(s.zxk, {
                                               variant: "secondary",
                                               size: "sm",
                                               icon: s.qJs,
-                                              text: O.intl.string(O.t.SDUwMz),
-                                              onClick: w,
+                                              text: y.intl.string(y.t.SDUwMz),
+                                              onClick: R,
                                           }),
-                                          (0, r.jsx)(_.Z, {
-                                              isOwner: T,
-                                              isWishlistPublic: j,
-                                              onToggleVisibility: Z,
+                                          (0, r.jsx)(O.Z, {
+                                              isOwner: j,
+                                              isWishlistPublic: x,
+                                              onToggleVisibility: L,
                                           }),
                                       ],
                                   })
@@ -221,15 +229,15 @@ function I(e) {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: s.EOn,
-                                      text: O.intl.string(O.t["i/yzHh"]),
-                                      onClick: w,
+                                      text: y.intl.string(y.t["i/yzHh"]),
+                                      onClick: R,
                                   }),
                         ],
                     }),
-                    (0, r.jsx)(b.Z, {
-                        items: x.items,
+                    (0, r.jsx)(_.Z, {
+                        items: Z.items,
                         profileOwner: t,
-                        isOwner: T,
+                        isOwner: j,
                     }),
                 ],
             });
