@@ -164,7 +164,6 @@ function O(e) {
                         body: P.body,
                         badge: P.badge,
                         textLink: P.textLink,
-                        hasBottomMargin: !0,
                     }),
                     (0, r.jsx)("div", {
                         className: p.actionBar,

@@ -3,9 +3,9 @@ var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(907862),
-    s = n(618583),
-    l = n(811616),
-    c = n(184214);
+    s = n(453707),
+    l = n(315416),
+    c = n(715720);
 function u(e, t, n) {
     return (
         t in e
@@ -246,37 +246,47 @@ let m = {
             id: "video-popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                let [t, n] = i.useState(!1),
-                    s = i.useRef(null);
+                var { showActions: t } = e,
+                    n = p(e, ["showActions"]);
+                let [s, l] = i.useState(!1),
+                    c = i.useRef(null);
                 return (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(
                             o.Mb,
-                            _(d({}, e), {
-                                targetElementRef: s,
-                                shouldShow: t,
-                                onRequestClose: () => n(!1),
+                            _(d({}, n), {
+                                targetElementRef: c,
+                                shouldShow: s,
+                                onRequestClose: () => l(!1),
                                 title: "Video Popover Demo",
                                 body: "Click the video to view it in the media viewer!",
                                 assetUrl:
                                     "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
                                 badge: "new",
-                                action: {
-                                    text: "Learn More",
-                                    onClick: () => n(!1),
-                                },
+                                action: t
+                                    ? {
+                                          text: "Learn More",
+                                          onClick: () => l(!1),
+                                      }
+                                    : void 0,
                             }),
                         ),
                         (0, r.jsx)(a.zxk, {
                             variant: "primary",
                             text: "Show Video Popover",
-                            buttonRef: s,
-                            onClick: () => n(!t),
+                            buttonRef: c,
+                            onClick: () => l(!s),
                         }),
                     ],
                 });
             },
-            controls: {},
+            controls: {
+                showActions: {
+                    label: "Show Actions",
+                    type: "boolean",
+                    defaultValue: !0,
+                },
+            },
         },
         {
             name: "MultiStepPopover",

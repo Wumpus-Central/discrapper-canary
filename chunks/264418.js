@@ -169,7 +169,6 @@ function O(e) {
                         body: h,
                         badge: g,
                         textLink: I,
-                        hasBottomMargin: null != v,
                     }),
                     null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
                     (0, r.jsx)(u.$, { caretConfig: L }),

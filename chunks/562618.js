@@ -37,10 +37,10 @@ function d(e) {
 }
 function f(e) {
     var t;
-    let { title: n, body: i, badge: o, className: u, textLink: d, hasBottomMargin: f = !1 } = e,
-        h = null == (t = null == d ? void 0 : d.external) || t;
+    let { title: n, body: i, badge: o, className: u, textLink: d } = e,
+        f = null == (t = null == d ? void 0 : d.external) || t;
     return (0, r.jsxs)("div", {
-        className: a()(c.header, u, { [c.hasActions]: f }),
+        className: a()(c.header, u),
         children: [
             (0, r.jsxs)("div", {
                 children: [
@@ -57,8 +57,8 @@ function f(e) {
                 (0, r.jsx)(s.Anchor, {
                     onClick: d.onClick,
                     href: d.link,
-                    target: h && null != d.link ? "_blank" : void 0,
-                    rel: h && null != d.link ? "noopener noreferrer" : void 0,
+                    target: f && null != d.link ? "_blank" : void 0,
+                    rel: f && null != d.link ? "noopener noreferrer" : void 0,
                     children: (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         className: c.footerLink,

@@ -7,7 +7,6 @@ var r = {
     header: "header_d6f39b",
     actionBar: "actionBar_d6f39b",
     closeButton: "closeButton_d6f39b",
-    hasActions: "hasActions_d6f39b",
     headerWithBadge: "headerWithBadge_d6f39b header_d6f39b",
     title: "title_d6f39b",
     headerBody: "headerBody_d6f39b",
