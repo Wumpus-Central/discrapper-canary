@@ -9,7 +9,16 @@ function s(e) {
         variant: "text-xs/medium",
         className: o.rewardPill,
         children: i.intl.format(i.t.loyTio, {
-            rewardName: t,
+            rewardName: (e, n) =>
+                (0, r.jsx)(
+                    a.Text,
+                    {
+                        variant: "text-xs/medium",
+                        className: o.rewardName,
+                        children: t,
+                    },
+                    n,
+                ),
             verticalDivider: (e, t) => (0, r.jsx)("div", { className: o.divider }, t),
         }),
     });
