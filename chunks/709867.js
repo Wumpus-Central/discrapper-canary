@@ -57,14 +57,14 @@ function d(e, t) {
     );
 }
 function f(e) {
-    let { onChange: t, options: n, label: l, disabled: u, value: f, defaultValue: _ } = e,
-        p = i.useMemo(() => new Set(n.map((e) => e.value)), [n]),
-        h = i.useCallback(
+    let { onChange: t, options: n, label: l, disabled: u, value: f } = e,
+        _ = i.useMemo(() => new Set(n.map((e) => e.value)), [n]),
+        p = i.useCallback(
             (e) => {
-                let n = e.filter((e) => p.has(e));
+                let n = e.filter((e) => _.has(e));
                 null == t || t(n);
             },
-            [p, t],
+            [_, t],
         );
     return (0, r.jsx)(o.NIc, {
         label: l,
@@ -72,8 +72,7 @@ function f(e) {
         children: (0, r.jsx)(a.cO, {
             className: s.group,
             value: f,
-            defaultValue: _,
-            onChange: h,
+            onChange: p,
             isDisabled: u,
             children: n.map((e) =>
                 (0, r.jsx)(o.Cnq, d(c({ disabled: u || e.disabled }, e), { labelType: "primary" }), String(e.value)),

@@ -1,4 +1,4 @@
-n.d(t, { S: () => E });
+n.d(t, { S: () => g });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,10 +7,9 @@ var r = n(951288),
     l = n(761224),
     c = n(670596),
     u = n(743236),
-    d = n(755721),
-    f = n(939350),
-    _ = n(334405);
-function p(e, t, n) {
+    d = n(939350),
+    f = n(334405);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +33,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,78 +50,77 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e) {
+function g(e) {
     let {
             color: t = "default",
             label: n,
             checked: a,
-            subtext: p,
-            disabled: m,
-            isFocused: E,
-            menuItemProps: b,
-            action: y,
-            className: O,
-            focusedClassName: v,
+            subtext: _,
+            disabled: h,
+            isFocused: g,
+            menuItemProps: E,
+            action: b,
+            className: y,
+            focusedClassName: O,
         } = e,
-        { onInteraction: I } = i.useContext(c.p),
-        T = i.useRef(null);
+        { onInteraction: v } = i.useContext(c.p),
+        I = i.useRef(null);
     i.useEffect(() => {
-        E && (0, u.F)(T);
-    }, [E]);
-    let S = i.useCallback(
+        g && (0, u.F)(I);
+    }, [g]);
+    let T = i.useCallback(
         (e) => {
-            y(e), null == I || I({ type: c.U.CHECKBOX });
+            b(e), null == v || v({ type: c.U.CHECKBOX });
         },
-        [y, I],
+        [b, v],
     );
     return (0, r.jsxs)(
         s.P3F,
-        g(
-            h(
+        m(
+            p(
                 {
-                    innerRef: T,
-                    className: o()(_.item, _.checkboxContainer, _.labelContainer, f._[t], O, {
-                        [_.disabled]: m,
-                        [_.focused]: E,
-                        [null != v ? v : ""]: E,
+                    innerRef: I,
+                    className: o()(f.item, f.checkboxContainer, f.labelContainer, d._[t], y, {
+                        [f.disabled]: h,
+                        [f.focused]: g,
+                        [null != O ? O : ""]: g,
                     }),
-                    onClick: m ? void 0 : S,
+                    onClick: h ? void 0 : T,
                 },
-                b,
+                E,
             ),
             {
                 "aria-checked": a,
-                "aria-disabled": m,
+                "aria-disabled": h,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: _.label,
+                        className: f.label,
                         children: [
                             (0, l.I)(n, e),
-                            null != p &&
+                            null != _ &&
                                 (0, r.jsx)("div", {
-                                    className: _.subtext,
-                                    children: p,
+                                    className: f.subtext,
+                                    children: _,
                                 }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: _.iconContainer,
-                        children: (0, r.jsx)(d.Ik, {
-                            shape: d.zV.BOX,
+                        className: f.iconContainer,
+                        children: (0, r.jsx)(s.FZ5, {
+                            checked: a,
+                            disabled: h,
                             size: 20,
-                            value: a,
-                            disabled: m,
                         }),
                     }),
                 ],

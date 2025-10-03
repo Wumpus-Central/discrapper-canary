@@ -13,43 +13,50 @@ var r = n(951288),
 function p(e) {
     let {
             checked: t,
-            defaultChecked: n,
-            description: a,
-            onChange: p,
-            disabled: h = !1,
-            displayOnly: m,
-            label: g,
-            labeledBy: E,
-            leadingIcon: b,
-            value: y,
-            labelType: O = "primary",
+            description: n,
+            onChange: a,
+            disabled: p = !1,
+            displayOnly: h,
+            label: m,
+            labeledBy: g,
+            leadingIcon: E,
+            value: b,
+            labelType: y = "primary",
+            usageVariant: O = "single",
         } = e,
-        v = i.useRef(null),
-        I = i.useRef(null),
-        T = i.useRef(null),
-        S = null != g && "" !== g,
-        A = null != a && "" !== a,
-        C = null != b ? b : null,
-        [N, R] = i.useState(!1),
-        P = (e) => {
-            e || R(!0), null != p && p(e);
-        };
+        v = (0, i.useRef)(null),
+        I = (0, i.useRef)(null),
+        T = (0, i.useRef)(null),
+        [S, A] = (0, i.useState)(void 0),
+        C = (0, i.useRef)(!1),
+        N = null != m && "" !== m,
+        R = null != n && "" !== n,
+        P = null != E ? E : null;
+    (0, i.useEffect)(() => {
+        if (!C.current) {
+            C.current = !0;
+            return;
+        }
+        A(t ? "animateIn" : "animateOut");
+    }, [t]);
+    let w = (e) => {
+        null != a && a(e);
+    };
     return (0, r.jsx)(c.tE, {
         focusTarget: I,
         ringTarget: T,
         children: (0, r.jsx)(s.XZ, {
             ref: T,
             inputRef: I,
-            "aria-hidden": m || void 0,
-            "aria-labelledby": E,
+            "aria-hidden": h || void 0,
+            "aria-labelledby": g,
             isSelected: t,
-            defaultSelected: n,
-            onChange: P,
-            isDisabled: h,
-            isReadOnly: m,
+            onChange: w,
+            isDisabled: p,
+            isReadOnly: h,
             "data-mana-component": "checkbox",
-            className: o()(_.checkboxItem, N && _.animateOut),
-            value: String(y),
+            className: o()(_.checkboxItem, "string" == typeof S && _[S], "indicator" !== O && _.padding),
+            value: String(b),
             children: (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
@@ -83,7 +90,7 @@ function p(e) {
                             }),
                         ],
                     }),
-                    S &&
+                    N &&
                         (0, r.jsxs)(d.K, {
                             gap: 8,
                             children: [
@@ -92,8 +99,8 @@ function p(e) {
                                     children: (0, r.jsxs)("div", {
                                         className: _.labelContent,
                                         children: [
-                                            null != C &&
-                                                (0, r.jsx)(C, {
+                                            null != P &&
+                                                (0, r.jsx)(P, {
                                                     className: _.leadingIcon,
                                                     size: "sm",
                                                     color: "currentColor",
@@ -102,17 +109,17 @@ function p(e) {
                                                 }),
                                             (0, r.jsx)(f.x, {
                                                 variant: "text-md/normal",
-                                                color: "primary" === O ? "text-primary" : "text-secondary",
-                                                children: g,
+                                                color: "primary" === y ? "text-primary" : "text-secondary",
+                                                children: m,
                                             }),
                                         ],
                                     }),
                                 }),
-                                A &&
+                                R &&
                                     (0, r.jsx)(f.x, {
                                         variant: "text-sm/normal",
                                         color: "text-secondary",
-                                        children: a,
+                                        children: n,
                                     }),
                             ],
                         }),

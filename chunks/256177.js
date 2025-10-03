@@ -10,37 +10,27 @@ let s = {
             id: "void-checkbox",
             name: "Checkbox",
             component: function (e) {
-                let {
-                        disabled: t,
-                        readOnly: n,
-                        displayOnly: s,
-                        type: l,
-                        size: c,
-                        align: u,
-                        shape: d,
-                        label: f,
-                        defaultChecked: _,
-                    } = e,
-                    [p, h] = i.useState(_),
-                    m = i.useCallback((e, t) => {
-                        h(t);
+                let { disabled: t, readOnly: n, displayOnly: s, type: l, size: c, align: u, shape: d, label: f } = e,
+                    [_, p] = i.useState(!1),
+                    h = i.useCallback((e, t) => {
+                        p(t);
+                    }, []),
+                    m = i.useCallback(() => {
+                        p(!0);
                     }, []),
                     g = i.useCallback(() => {
-                        h(!0);
+                        p(!1);
                     }, []),
                     E = i.useCallback(() => {
-                        h(!1);
-                    }, []),
-                    b = i.useCallback(() => {
-                        h((e) => !e);
+                        p((e) => !e);
                     }, []);
                 return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
                         (0, r.jsx)(a.$q, {
-                            value: p,
-                            onChange: m,
+                            value: _,
+                            onChange: h,
                             disabled: t,
                             readOnly: n,
                             displayOnly: s,
@@ -55,7 +45,7 @@ let s = {
                         }),
                         (0, r.jsxs)(o.Text, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", p ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", _ ? "Checked" : "Unchecked"],
                         }),
                         (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
@@ -65,21 +55,21 @@ let s = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: g,
+                                    onClick: m,
                                     disabled: t || n,
                                 }),
                                 (0, r.jsx)(o.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
-                                    onClick: E,
+                                    onClick: g,
                                     disabled: t || n,
                                 }),
                                 (0, r.jsx)(o.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: b,
+                                    onClick: E,
                                     disabled: t || n,
                                 }),
                             ],
@@ -169,11 +159,6 @@ let s = {
                             value: a.zV.ROUND,
                         },
                     ],
-                },
-                defaultChecked: {
-                    type: "boolean",
-                    label: "Default Checked",
-                    defaultValue: !1,
                 },
             },
         },

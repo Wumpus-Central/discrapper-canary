@@ -2964,7 +2964,10 @@
     display: flex;
     flex: 1 1 auto;
     gap: var(--space-8);
-    max-width: 100%;
+    max-width: 100%
+}
+
+.padding__714a9 {
     padding: var(--space-8)
 }
 
@@ -3053,15 +3056,18 @@
 }
 
 .checkboxItem__714a9[data-selected] .backgroundFill__714a9 {
-    animation: bgFill__714a9 80ms cubic-bezier(.33, 0, .67, 1) 80ms backwards;
     background-color: var(--checkbox-background-default-selected)
 }
 
-.checkboxItem__714a9[data-selected] .dot__714a9 {
+.animateIn__714a9 .backgroundFill__714a9 {
+    animation: bgFill__714a9 80ms cubic-bezier(.33, 0, .67, 1) 80ms backwards
+}
+
+.animateIn__714a9 .dot__714a9 {
     animation: dotGrow__714a9 .3s cubic-bezier(.65, 0, .83, .83) forwards
 }
 
-.checkboxItem__714a9[data-selected] .checkStroke__714a9 {
+.animateIn__714a9 .checkStroke__714a9 {
     animation: checkDraw__714a9 .3s cubic-bezier(.65, 0, .83, .83) both
 }
 
