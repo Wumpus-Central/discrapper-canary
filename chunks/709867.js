@@ -76,14 +76,7 @@ function f(e) {
             onChange: h,
             isDisabled: u,
             children: n.map((e) =>
-                (0, r.jsx)(
-                    o.Cnq,
-                    d(c({ disabled: u || e.disabled }, e), {
-                        groupVariant: "group",
-                        labelType: "primary",
-                    }),
-                    String(e.value),
-                ),
+                (0, r.jsx)(o.Cnq, d(c({ disabled: u || e.disabled }, e), { labelType: "primary" }), String(e.value)),
             ),
         }),
     });

@@ -18,42 +18,40 @@ let c = {
                         disabled: c,
                         displayOnly: u,
                         defaultChecked: d,
-                        groupVariant: f,
-                        labelType: _,
-                        iconPosition: p,
+                        labelType: f,
+                        iconPosition: _,
                     } = e,
-                    [h, m] = i.useState(d);
+                    [p, h] = i.useState(d);
                 i.useEffect(() => {
-                    m(d);
+                    h(d);
                 }, [d]);
-                let g = i.useCallback(() => {
-                        m(!0);
+                let m = i.useCallback(() => {
+                        h(!0);
+                    }, []),
+                    g = i.useCallback(() => {
+                        h(!1);
                     }, []),
                     E = i.useCallback(() => {
-                        m(!1);
-                    }, []),
-                    b = i.useCallback(() => {
-                        m((e) => !e);
+                        h((e) => !e);
                     }, []);
                 return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
                         (0, r.jsx)(l.XZJ, {
-                            checked: h,
-                            onChange: (e) => m(e),
+                            checked: p,
+                            onChange: (e) => h(e),
                             disabled: c,
                             displayOnly: u,
                             label: t,
                             description: null != n || "" === n ? n : void 0,
                             value: "checkbox-value",
-                            groupVariant: f,
-                            labelType: _,
-                            leadingIcon: "leading" === p ? a.d3s : void 0,
+                            labelType: f,
+                            leadingIcon: "leading" === _ ? a.d3s : void 0,
                         }),
                         (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", h ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", p ? "Checked" : "Unchecked"],
                         }),
                         (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
@@ -63,21 +61,21 @@ let c = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: g,
+                                    onClick: m,
                                     disabled: c,
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
-                                    onClick: E,
+                                    onClick: g,
                                     disabled: c,
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: b,
+                                    onClick: E,
                                     disabled: c,
                                 }),
                             ],
@@ -105,21 +103,6 @@ let c = {
                     type: "boolean",
                     label: "Default Checked",
                     defaultValue: !1,
-                },
-                groupVariant: {
-                    type: "select",
-                    label: "Group Variant",
-                    options: [
-                        {
-                            label: "Single",
-                            value: "single",
-                        },
-                        {
-                            label: "Group",
-                            value: "group",
-                        },
-                    ],
-                    defaultValue: "single",
                 },
                 labelType: {
                     type: "select",
