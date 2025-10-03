@@ -624,7 +624,8 @@ class L extends _.Z {
                     (this.vadUseKrisp = t.vadUseKrisp),
                     (this.vadLeading = t.vadLeading),
                     (this.vadTrailing = t.vadTrailing),
-                    (this.vadKrispActivationThreshold = t.vadKrispActivationThreshold);
+                    (this.vadKrispActivationThreshold = t.vadKrispActivationThreshold),
+                    (this.vadDuringPreProcess = t.vadDuringPreProcess);
                 break;
             default:
                 throw Error("Unknown Input Mode: ".concat(e));
@@ -921,6 +922,7 @@ class L extends _.Z {
                     vadLeading: this.vadLeading,
                     vadTrailing: this.vadTrailing,
                     vadKrispActivationThreshold: this.vadKrispActivationThreshold,
+                    vadDuringPreProcess: this.vadDuringPreProcess,
                 };
             case v.pM.PUSH_TO_TALK:
                 return { pttReleaseDelay: this.pttReleaseDelay };
@@ -1145,6 +1147,7 @@ class L extends _.Z {
             I(this, "vadUseKrisp", !0),
             I(this, "vadLeading", 5),
             I(this, "vadTrailing", 25),
+            I(this, "vadDuringPreProcess", !1),
             I(this, "pttReleaseDelay", 20),
             I(this, "soundshareActive", !1),
             I(this, "soundshareId", null),
