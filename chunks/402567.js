@@ -19,15 +19,17 @@ function _() {
             banner: d,
             themeColors: _,
             avatarDecorationSkuId: p,
+            displayNameStyles: h,
         } = (0, r.useMemo)(() => {
             let n = (0, c.Ib)(t);
             return {
                 banner: n.getBannerSrc(e),
                 themeColors: n.themeColors,
                 avatarDecorationSkuId: n.avatarDecorationSkuId,
+                displayNameStyles: n.displayNameStyles,
             };
         }, [t, e]),
-        h = (0, i.e7)([o.Z], () => {
+        m = (0, i.e7)([o.Z], () => {
             if (null == p) return;
             let e = o.Z.getProduct(p);
             if (null != e && 0 !== e.items.length) return e.items[0];
@@ -36,15 +38,16 @@ function _() {
         (0, s.x3)({
             banner: d,
             themeColors: _,
-            avatarDecoration: h,
+            avatarDecoration: m,
+            displayNameStyles: h,
         });
-    }, [d, _, h]);
-    let m = (0, r.useCallback)(() => {
+    }, [d, _, m, h]);
+    let g = (0, r.useCallback)(() => {
         let e = f(t);
         n(e), l.default.track(u.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
     }, [t]);
     return {
         preset: t,
-        onShuffle: m,
+        onShuffle: g,
     };
 }

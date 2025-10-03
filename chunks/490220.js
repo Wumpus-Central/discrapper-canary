@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(643879),
     c = n(25990),
     u = n(678135),
-    d = n(725412);
+    d = n(575169);
 function f(e, t, n) {
     return (
         t in e
@@ -44,31 +44,32 @@ function p(e) {
         {
             pendingAvatar: g,
             pendingBanner: E,
-            pendingThemeColors: b,
-            pendingPronouns: y,
-            pendingBio: O,
-            tryItOutThemeColors: v,
-            tryItOutAvatar: I,
-            tryItOutBanner: T,
-            tryItOutAvatarDecoration: S,
-            tryItOutProfileEffect: A,
+            pendingDisplayNameStyles: b,
+            pendingThemeColors: y,
+            pendingPronouns: O,
+            pendingBio: v,
+            tryItOutThemeColors: I,
+            tryItOutAvatar: T,
+            tryItOutBanner: S,
+            tryItOutAvatarDecoration: A,
+            tryItOutDisplayNameStyles: C,
         } = (0, a.cj)([c.Z], () => _({}, c.Z.getAllPending(), c.Z.getAllTryItOut())),
-        C = (0, l.SD)({
+        N = (0, l.SD)({
             userId: f.id,
-            image: null != I ? I : g,
+            image: null != T ? T : g,
         }),
-        N = (0, s.Z)(S, !1);
+        R = (0, s.Z)(A, !1);
     return (0, r.jsx)(u.Z, {
         containerClassName: h,
         user: f,
-        pendingPronouns: y,
-        pendingBio: O,
-        pendingBanner: null != (t = null != T ? T : E) ? t : n(466045),
-        pendingAvatar: C,
-        pendingThemeColors: null != v ? v : b,
-        pendingAvatarDecoration: N,
-        pendingProfileEffect: A,
-        avatarClassName: null != I || null != g || m.enabled ? void 0 : d.spinningAvatar,
+        pendingPronouns: O,
+        pendingBio: v,
+        pendingBanner: null != (t = null != S ? S : E) ? t : n(466045),
+        pendingDisplayNameStyles: null != C ? C : b,
+        pendingAvatar: N,
+        pendingThemeColors: null != I ? I : y,
+        pendingAvatarDecoration: R,
+        avatarClassName: null != T || null != g || m.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         disabledInputs: p,
