@@ -366,13 +366,14 @@ function Z(e) {
                                 }),
                             ],
                         }),
-                    (0, r.jsx)("div", {
-                        className: P.overflowMenu,
-                        children: (0, r.jsx)(j.Z, {
-                            guildId: n,
-                            instance: t,
+                    B &&
+                        (0, r.jsx)("div", {
+                            className: P.overflowMenu,
+                            children: (0, r.jsx)(j.Z, {
+                                guildId: n,
+                                instance: t,
+                            }),
                         }),
-                    }),
                 ],
             }),
             (0, r.jsx)("div", {
