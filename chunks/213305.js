@@ -12,4 +12,5 @@ let r = n(647438).createContext({
     alwaysShowLinkDecorations: !1,
     highContrastModeEnabled: !1,
     keyboardModeEnabled: !0,
+    switchIconsEnabled: !1,
 });

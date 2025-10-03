@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(290780);
+n.d(t, { Z: () => E }), n(290780), n(539854);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -6,11 +6,12 @@ var i = n(442837),
     o = n(857595),
     s = n(607070),
     l = n(299363),
-    c = n(626135),
-    u = n(981631),
-    d = n(388032),
-    f = n(693450);
-function _(e, t, n) {
+    c = n(877371),
+    u = n(626135),
+    d = n(981631),
+    f = n(388032),
+    _ = n(693450);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +35,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,55 +52,58 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g() {
+function E() {
     let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n,
-            highContrastMode: _,
+            highContrastMode: p,
+            switchIconsEnabled: m,
         } = (0, i.cj)([s.Z], () => ({
             saturation: s.Z.saturation,
             useReducedMotion: s.Z.useReducedMotion,
             roleStyle: s.Z.roleStyle,
             highContrastMode: s.Z.isHighContrastModeEnabled,
+            switchIconsEnabled: s.Z.isSwitchIconsEnabled,
         })),
-        h = (0, i.e7)([s.Z], () => s.Z.displayNameStylesEnabled),
-        g = l.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
-        E = [
+        E = (0, i.e7)([s.Z], () => s.Z.displayNameStylesEnabled),
+        b = l.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
+        y = (0, c.A)("useAccessibilityItems"),
+        O = [
             {
-                name: d.intl.string(d.t.YEOEi4),
+                name: f.intl.string(f.t.YEOEi4),
                 value: "username",
             },
             {
-                name: d.intl.string(d.t.mQaro6),
+                name: f.intl.string(f.t.mQaro6),
                 value: "dot",
             },
             {
-                name: d.intl.string(d.t.Ji2EVF),
+                name: f.intl.string(f.t.Ji2EVF),
                 value: "hidden",
             },
         ];
-    function b() {
-        c.default.track(u.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !h }), (0, o.X2)(!h);
+    function v() {
+        u.default.track(d.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !E }), (0, o.X2)(!E);
     }
-    let y = [
+    let I = [
         (0, r.jsx)(
             a.kSQ,
             {
                 children: (0, r.jsx)(a.S89, {
                     id: "reduced-motion",
-                    label: d.intl.string(d.t.b3XBzs),
+                    label: f.intl.string(f.t.b3XBzs),
                     checked: t,
                     action: () => (0, o.Zt)(t ? "no-preference" : "reduce"),
                 }),
@@ -111,15 +115,15 @@ function g() {
             {
                 children: (0, r.jsx)(a.II_, {
                     id: "input",
-                    label: d.intl.string(d.t["5PWWCQ"]),
+                    label: f.intl.string(f.t["5PWWCQ"]),
                     control: (t, n) =>
                         (0, r.jsx)(
                             a._wy,
-                            m(p({}, t), {
+                            g(h({}, t), {
                                 ref: n,
                                 value: 100 * e,
                                 onChange: (e) => (0, o.o2)(e / 100),
-                                "aria-label": d.intl.string(d.t["5PWWCQ"]),
+                                "aria-label": f.intl.string(f.t["5PWWCQ"]),
                             }),
                         ),
                 }),
@@ -131,8 +135,8 @@ function g() {
             {
                 children: (0, r.jsx)(a.sNh, {
                     id: "role-colors",
-                    label: d.intl.string(d.t.uSOPWl),
-                    children: E.map((e) => {
+                    label: f.intl.string(f.t.uSOPWl),
+                    children: O.map((e) => {
                         let { name: t, value: i } = e;
                         return (0, r.jsx)(
                             a.k5B,
@@ -155,30 +159,45 @@ function g() {
             {
                 children: (0, r.jsx)(a.S89, {
                     id: "display-name-styles",
-                    label: d.intl.string(f.default["2gFUEx"]),
-                    checked: h,
-                    action: b,
+                    label: f.intl.string(_.default["2gFUEx"]),
+                    checked: E,
+                    action: v,
                 }),
             },
             "display-name-styles",
         ),
     ];
     return (
-        g &&
-            y.unshift(
+        b &&
+            I.unshift(
                 (0, r.jsx)(
                     a.kSQ,
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "high-contrast",
-                            label: d.intl.string(d.t.aZlePj),
-                            checked: _,
-                            action: () => (0, o.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
+                            label: f.intl.string(f.t.aZlePj),
+                            checked: p,
+                            action: () => (0, o.vW)(p ? s.X.DEFAULT : s.X.HIGH),
                         }),
                     },
                     "high-contrast",
                 ),
             ),
-        y
+        y &&
+            I.push(
+                (0, r.jsx)(
+                    a.kSQ,
+                    {
+                        children: (0, r.jsx)(a.S89, {
+                            id: "switch-icons",
+                            label: f.intl.string(f.t["S3z+pa"]),
+                            checked: m,
+                            action: () => (0, o.ky)(!m),
+                        }),
+                    },
+                    "switch-icons",
+                ),
+            ),
+        I
     );
 }

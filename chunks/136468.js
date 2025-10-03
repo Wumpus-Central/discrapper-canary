@@ -1,10 +1,11 @@
-n.d(t, { r: () => c });
-var r = n(951288);
-n(647438);
-var i = n(402453),
-    a = n(325780),
-    o = n(305945);
-function s(e, t, n) {
+n.d(t, { r: () => _ });
+var r = n(951288),
+    i = n(647438),
+    a = n(213305),
+    o = n(402453),
+    s = n(325780),
+    l = n(305945);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,11 +29,40 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e) {
-    return (0, i.A)("Switch") ? (0, r.jsx)(a.k, l({}, e)) : (0, r.jsx)(o.T, l({}, e));
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e) {
+    let t = (0, o.A)("Switch"),
+        { switchIconsEnabled: n } = i.useContext(a.S);
+    if (t) {
+        let t = void 0 !== e.hasIcon ? e.hasIcon : n;
+        return (0, r.jsx)(s.k, f(u({}, e), { hasIcon: t }));
+    }
+    return (0, r.jsx)(l.T, u({}, e));
 }

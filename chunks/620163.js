@@ -867,6 +867,11 @@ let eB = () => {
                 searchableTitles: [eD.intl.string(eD.t.aZlePj)],
                 parent: eN.s6.ACCESSIBILITY,
             },
+            [eN.s6.ACCESSIBILITY_SWITCH_ICON]: {
+                section: eP.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["S3z+pa"])],
+                parent: eN.s6.ACCESSIBILITY,
+            },
             [eN.s6.ACCESSIBILITY_SATURATION]: {
                 section: eP.oAB.ACCESSIBILITY,
                 searchableTitles: [eD.intl.string(eD.t["5PWWCQ"])],
