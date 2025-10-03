@@ -1,5 +1,7 @@
 n.d(t, {
     IU: () => f,
+    J7: () => g,
+    O8: () => m,
     Ov: () => _,
     eD: () => u,
     sx: () => c,
@@ -50,4 +52,22 @@ let c = (0, a.c)("textAndImages", "explicitContentSettings", o.lk, o.nh, { compa
             return null != (t = null == e ? void 0 : e.value) ? t : l.HGf;
         },
         (e) => r.yC.create({ value: e }),
+    ),
+    m = (0, a.c)(
+        "privacy",
+        "dropsOptedOut",
+        (e) => {
+            var t;
+            return null != (t = null == e ? void 0 : e.value) && t;
+        },
+        (e) => r.D5.create({ value: e }),
+    ),
+    g = (0, a.c)(
+        "privacy",
+        "quests3PDataOptedOut",
+        (e) => {
+            var t;
+            return null != (t = null == e ? void 0 : e.value) && t;
+        },
+        (e) => r.D5.create({ value: e }),
     );

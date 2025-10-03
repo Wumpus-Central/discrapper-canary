@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(442837),
-    o = n(524437),
-    a = n(570140),
+    a = n(524437),
+    o = n(570140),
     s = n(48481);
 function l(e, t, n) {
     return (
@@ -34,7 +34,7 @@ function p(e) {
 function h(e) {
     let { userId: t, settings: n } = e,
         r = (0, s.ac)(n);
-    u[t] = (0, s.re)(o.o8, u[t], r);
+    u[t] = (0, s.re)(a.o8, u[t], r);
 }
 function m() {
     (u = {}), (d = {}), (c = !1);
@@ -52,12 +52,17 @@ class g extends (r = i.ZP.Store) {
     getConsents(e) {
         return d[e];
     }
+    hasConsented(e, t) {
+        if (null == e) return !1;
+        let n = d[e];
+        return null != n && null != n[t] && n[t].consented;
+    }
     get isLoading() {
         return c;
     }
 }
 l(g, "displayName", "FamilyCenterControlledSettingsStore");
-let E = new g(a.Z, {
+let E = new g(o.Z, {
     FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: f,
     FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: _,
     FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: p,
