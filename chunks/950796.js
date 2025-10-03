@@ -20,12 +20,12 @@ var r = n(951288),
     m = n(107009);
 let g = 1000;
 function E(e) {
-    let { isPopoutWindow: t, isSearchDesktopTopLevelEnabled: n } = e;
-    return t ? "refresh-title-bar-small" : n ? "refresh-title-bar-large" : void 0;
+    let { isPopoutWindow: t } = e;
+    return t ? "refresh-title-bar-small" : void 0;
 }
 function b(e) {
-    let { isPopoutWindow: t, isSearchDesktopTopLevelEnabled: n } = e;
-    return t ? 16 : n ? 32 : 24;
+    let { isPopoutWindow: t } = e;
+    return t ? 16 : 24;
 }
 let y = (e) => p.ZP.close(e),
     O = (e) => p.ZP.minimize(e),

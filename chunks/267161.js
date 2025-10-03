@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        default: () => H,
-        useAppSidebarState: () => U,
+        default: () => L,
+        useAppSidebarState: () => Z,
     });
 var r = n(951288),
     i = n(647438),
@@ -24,82 +24,40 @@ var r = n(951288),
     y = n(340137),
     v = n(522474),
     I = n(141321),
-    S = n(819439),
-    C = n(296241),
-    T = n(165017),
-    N = n(984802),
-    j = n(592125),
-    P = n(944486),
-    x = n(914010),
-    A = n(451478),
-    Z = n(998502),
-    w = n(228488),
-    L = n(403497),
-    R = n(950796),
-    D = n(176505),
-    k = n(741764),
-    M = n(82504);
-let U = (0, o.U)(() => ({ isOpen: !0 }));
-function G(e) {
-    let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
-        l = (0, s.e7)([x.Z, j.Z], () => {
-            let e = x.Z.getGuildId(),
-                n = j.Z.getChannel(t);
-            return null != e ? e : null == n ? void 0 : n.guild_id;
-        }),
-        a = (0, T.H)({
-            guildId: l,
-            channelId: t,
-        });
-    return null == a
-        ? (0, r.jsx)(L.d, {
-              selectedChannelId: t,
-              withFastTravel: n,
-              focusSectionProps: i,
-          })
-        : (0, r.jsx)(C.Z, {
-              searchContext: a,
+    S = n(984802),
+    C = n(451478),
+    T = n(998502),
+    N = n(228488),
+    j = n(403497),
+    P = n(950796),
+    x = n(741764),
+    A = n(82504);
+let Z = (0, o.U)(() => ({ isOpen: !0 }));
+function w(e) {
+    let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
+    return n
+        ? (0, r.jsx)(g.R, { focusSectionProps: i })
+        : (0, r.jsx)(j.d, {
+              withFastTravel: t,
               focusSectionProps: i,
           });
 }
-function B(e) {
-    let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e,
-        l = (0, s.e7)([P.Z], () => P.Z.getChannelId()),
-        a = (0, S.$)({ location: "TitleText" }),
-        o = (0, s.e7)([j.Z], () => {
-            let e = j.Z.getChannel(l);
-            return null != e && !e.isDirectory() && !e.isGuildVocal();
-        });
-    return a && null != l && !(0, D.AB)(l) && o
-        ? (0, r.jsx)(G, {
-              selectedChannelId: l,
-              withFastTravel: t,
-              focusSectionProps: i,
-          })
-        : n
-          ? (0, r.jsx)(g.R, { focusSectionProps: i })
-          : (0, r.jsx)(L.d, {
-                selectedChannelId: l,
-                withFastTravel: t,
-                focusSectionProps: i,
-            });
-}
-let H = i.memo(function () {
+let L = i.memo(function () {
     i.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(k.J, k.N);
+        T.ZP.setMinimumSize(x.J, x.N);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, E.pN)({ location: "AppTitleBar" }),
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, f.t)({ location: "AppTitleBar" }),
         { backForwardButtons: o, titlebarIconSize: g } = (0, p.T)({ location: "AppTitleBar" }),
-        { hasBugReporterAccess: S } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
-        C = null !== e && t === E.u3.TITLE_BAR_LEFT,
-        T = null === e;
+        { hasBugReporterAccess: j } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
+        Z = null !== e && t === E.u3.TITLE_BAR_LEFT,
+        L = null === e;
     i.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(k.J, k.N);
+        T.ZP.setMinimumSize(x.J, x.N);
     }, []);
-    let j = (0, N.Ll)(),
-        P = (0, s.e7)([A.Z, v.Z], () => (0, w.rB)()),
-        x = (function (e) {
+    let R = (0, S.Ll)(),
+        D = (0, s.e7)([C.Z, v.Z], () => (0, N.rB)()),
+        k = (function (e) {
             let {
                 showBackForwardButtons: t,
                 showNotificationsInbox: n,
@@ -121,42 +79,42 @@ let H = i.memo(function () {
             );
         })({
             showBackForwardButtons: o,
-            showNotificationsInbox: C,
+            showNotificationsInbox: Z,
             titlebarFastTravel: n,
-            showRecentsButton: T,
+            showRecentsButton: L,
         });
-    if (P) return null;
-    let L = a()(M.button, { [M.smallButton]: "sm" === g });
+    if (D) return null;
+    let M = a()(A.button, { [A.smallButton]: "sm" === g });
     return (0, r.jsx)(c.Wdt, {
         children: (e) =>
             (0, r.jsx)(c.f6W, {
-                theme: j,
+                theme: R,
                 children: (t) => {
                     var i, a;
-                    return (0, r.jsx)(R.TF, {
+                    return (0, r.jsx)(P.TF, {
                         className: t,
                         leading: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 o &&
                                     (0, r.jsx)(h.Z, {
-                                        firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === x ? e : void 0,
+                                        firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === k ? e : void 0,
                                     }),
-                                C && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0 }),
+                                Z && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === k ? e : void 0 }),
                             ],
                         }),
-                        title: (0, r.jsx)(B, {
+                        title: (0, r.jsx)(w, {
                             withFastTravel: n,
                             quickSwitcherInsteadOfTitle: l,
-                            focusSectionProps: "TITLEBAR_FAST_TRAVEL" === x ? e : void 0,
+                            focusSectionProps: "TITLEBAR_FAST_TRAVEL" === k ? e : void 0,
                         }),
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(m.Z, { className: L }),
+                                (0, r.jsx)(m.Z, { className: M }),
                                 (0, r.jsx)(d.Z, {
                                     canShowReminder: !0,
-                                    className: L,
+                                    className: M,
                                 }),
-                                T &&
+                                L &&
                                     (0, r.jsx)(
                                         I.Z,
                                         ((i = (function (e) {
@@ -183,8 +141,8 @@ let H = i.memo(function () {
                                                     });
                                             }
                                             return e;
-                                        })({}, "RECENTS" === x ? e : {})),
-                                        (a = a = { className: L }),
+                                        })({}, "RECENTS" === k ? e : {})),
+                                        (a = a = { className: M }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                             : (function (e, t) {
@@ -199,16 +157,16 @@ let H = i.memo(function () {
                                               }),
                                         i),
                                     ),
-                                S
+                                j
                                     ? (0, r.jsx)(_.Z, {
-                                          focusSectionProps: "HELP" === x ? e : void 0,
-                                          className: L,
+                                          focusSectionProps: "HELP" === k ? e : void 0,
+                                          className: M,
                                       })
                                     : (0, r.jsx)(b.Z, {
-                                          focusSectionProps: "HELP" === x ? e : void 0,
-                                          className: L,
+                                          focusSectionProps: "HELP" === k ? e : void 0,
+                                          className: M,
                                       }),
-                                (0, r.jsx)(O.Z, { className: L }),
+                                (0, r.jsx)(O.Z, { className: M }),
                             ],
                         }),
                     });

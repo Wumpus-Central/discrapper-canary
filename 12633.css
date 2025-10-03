@@ -68310,13 +68310,6 @@ html .progress__61462 {
     font-weight: var(--font-weight-semibold)
 }
 
-.searchTokenTopLevel_bd8186 {
-    font-size: 14px;
-    height: 20px;
-    line-height: 20px;
-    padding: 0 var(--space-4)
-}
-
 .searchFilter_bd8186+.searchFilter_bd8186 {
     padding-left: 2px
 }

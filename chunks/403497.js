@@ -1,4 +1,4 @@
-n.d(t, { d: () => T });
+n.d(t, { d: () => N });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,95 +15,97 @@ var r = n(951288),
     m = n(51596),
     b = n(592125),
     _ = n(430824),
-    O = n(914010),
-    E = n(768581),
-    y = n(981631),
-    v = n(408491),
-    I = n(388032),
-    S = n(412297),
-    C = n(447803);
-function T(e) {
+    O = n(944486),
+    E = n(914010),
+    y = n(768581),
+    v = n(981631),
+    I = n(408491),
+    S = n(388032),
+    C = n(345909),
+    T = n(832818);
+function N(e) {
     let t,
-        { selectedChannelId: n, withFastTravel: l, focusSectionProps: T } = e,
+        { withFastTravel: n, focusSectionProps: l } = e,
         N = (0, o.TH)(),
-        P = (0, s.e7)([O.Z], () => O.Z.getGuildId()),
-        j = (0, s.e7)([b.Z], () => b.Z.getChannel(n), [n]),
-        x = null != P ? P : null == j ? void 0 : j.guild_id,
-        A = (0, s.e7)([_.Z], () => _.Z.getGuild(x), [x]),
-        Z = (0, p.Z)(),
-        w = (0, g.D)(),
-        { guildTitleIconSize: L, guildIconSize: R } = (0, d.T)({ location: "GuildTitle" }),
-        { application: D, isFrameInFocusedMode: k } = (0, s.cj)([u.Z, f.Z], () => {
+        j = (0, s.e7)([E.Z], () => E.Z.getGuildId()),
+        P = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
+        x = (0, s.e7)([b.Z], () => b.Z.getChannel(P), [P]),
+        A = null != j ? j : null == x ? void 0 : x.guild_id,
+        Z = (0, s.e7)([_.Z], () => _.Z.getGuild(A), [A]),
+        w = (0, p.Z)(),
+        L = (0, g.D)(),
+        { guildTitleIconSize: R, guildIconSize: D } = (0, d.T)({ location: "GuildTitle" }),
+        { application: k, isFrameInFocusedMode: M } = (0, s.cj)([u.Z, f.Z], () => {
             let e = f.Z.getConnectedFrame();
             return {
                 application: u.Z.getApplication(null == e ? void 0 : e.applicationId),
-                isFrameInFocusedMode: f.Z.getFrameLayoutMode() === v.U.FOCUSED,
+                isFrameInFocusedMode: f.Z.getFrameLayoutMode() === I.U.FOCUSED,
             };
         }),
-        M =
-            null != D
-                ? E.ZP.getApplicationIconURL({
-                      id: D.id,
-                      icon: D.icon,
-                      bot: D.bot,
+        U =
+            null != k
+                ? y.ZP.getApplicationIconURL({
+                      id: k.id,
+                      icon: k.icon,
+                      bot: k.bot,
                   })
                 : void 0,
-        U = null;
-    null != D && k
-        ? ((t = D.name),
-          (U = (0, r.jsx)("img", {
-              className: C.appIcon,
-              alt: I.intl.string(I.t.X4IxWF),
-              src: M,
+        G = null;
+    null != k && M
+        ? ((t = k.name),
+          (G = (0, r.jsx)("img", {
+              className: T.appIcon,
+              alt: S.intl.string(S.t.X4IxWF),
+              src: U,
               "aria-hidden": !0,
               draggable: !1,
           })))
-        : w
-          ? ((t = I.intl.string(I.t.HcoRu7)), (U = (0, r.jsx)(c.Dkj, { size: L })))
-          : null != A
-            ? ((U = Z
-                  ? (0, r.jsx)(c.r7p, { size: L })
+        : L
+          ? ((t = S.intl.string(S.t.HcoRu7)), (G = (0, r.jsx)(c.Dkj, { size: R })))
+          : null != Z
+            ? ((G = w
+                  ? (0, r.jsx)(c.r7p, { size: R })
                   : (0, r.jsx)(h.Z, {
-                        guild: A,
-                        size: R,
+                        guild: Z,
+                        size: D,
                         active: !0,
-                        className: C.guildIcon,
+                        className: T.guildIcon,
                     })),
-              (t = A.name))
-            : null != j && (j.isDM() || j.isGroupDM())
-              ? ((t = I.intl.string(I.t.YUU0RE)), (U = (0, r.jsx)(c.gw7, { size: L })))
-              : N.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
-                ? ((t = I.intl.string(I.t["4nEZLi"])), (U = (0, r.jsx)(c.Jmo, { size: L })))
-                : N.pathname.startsWith(y.Z5c.NITRO_HOME)
-                  ? ((t = I.intl.string(I.t.Ipxkoq)), (U = (0, r.jsx)(c.SrA, { size: L })))
-                  : N.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
-                    ? ((t = I.intl.string(I.t.pWG4zc)), (U = (0, r.jsx)(c.EOn, { size: L })))
-                    : N.pathname.startsWith(y.Z5c.FRIENDS)
-                      ? ((t = I.intl.string(I.t.TdEu5e)), (U = (0, r.jsx)(c.iFz, { size: L })))
-                      : N.pathname.startsWith(y.Z5c.FAMILY_CENTER)
-                        ? ((t = I.intl.string(S.default.RZqaJi)), (U = (0, r.jsx)(c.BFJ, { size: L })))
-                        : N.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
-                          ((t = I.intl.string(I.t.JALI2N)), (U = (0, r.jsx)(c.qDn, { size: L })));
-    let G = i.useCallback((e) => {
+              (t = Z.name))
+            : null != x && (x.isDM() || x.isGroupDM())
+              ? ((t = S.intl.string(S.t.YUU0RE)), (G = (0, r.jsx)(c.gw7, { size: R })))
+              : N.pathname.startsWith(v.Z5c.GLOBAL_DISCOVERY)
+                ? ((t = S.intl.string(S.t["4nEZLi"])), (G = (0, r.jsx)(c.Jmo, { size: R })))
+                : N.pathname.startsWith(v.Z5c.NITRO_HOME)
+                  ? ((t = S.intl.string(S.t.Ipxkoq)), (G = (0, r.jsx)(c.SrA, { size: R })))
+                  : N.pathname.startsWith(v.Z5c.COLLECTIBLES_SHOP)
+                    ? ((t = S.intl.string(S.t.pWG4zc)), (G = (0, r.jsx)(c.EOn, { size: R })))
+                    : N.pathname.startsWith(v.Z5c.FRIENDS)
+                      ? ((t = S.intl.string(S.t.TdEu5e)), (G = (0, r.jsx)(c.iFz, { size: R })))
+                      : N.pathname.startsWith(v.Z5c.FAMILY_CENTER)
+                        ? ((t = S.intl.string(C.default.RZqaJi)), (G = (0, r.jsx)(c.BFJ, { size: R })))
+                        : N.pathname.startsWith(v.Z5c.QUEST_HOME_V2) &&
+                          ((t = S.intl.string(S.t.JALI2N)), (G = (0, r.jsx)(c.qDn, { size: R })));
+    let B = i.useCallback((e) => {
             (0, m.ZN)("fast-travel");
         }, []),
-        B = (null == t || "" === t) && l ? I.intl.string(I.t.ZvKwYW) : t;
-    return null == B || "" === B
+        H = (null == t || "" === t) && n ? S.intl.string(S.t.ZvKwYW) : t;
+    return null == H || "" === H
         ? null
         : (0, r.jsx)(c.ua7, {
-              shouldShow: l,
-              "aria-label": I.intl.string(I.t["7P/+q6"]),
-              tooltipContentClassName: C.navigationTooltip,
+              shouldShow: n,
+              "aria-label": S.intl.string(S.t["7P/+q6"]),
+              tooltipContentClassName: T.navigationTooltip,
               text: (0, r.jsxs)(r.Fragment, {
                   children: [
-                      I.intl.string(I.t["7P/+q6"]),
+                      S.intl.string(S.t["7P/+q6"]),
                       (0, r.jsx)(c.M2$, {
                           shortcut: ["mod", "k"],
                       }),
                   ],
               }),
               children: (e) => {
-                  var t, n;
+                  var t, i;
                   return (0, r.jsxs)(
                       c.P3F,
                       ((t = (function (e) {
@@ -130,26 +132,26 @@ function T(e) {
                                   });
                           }
                           return e;
-                      })({ className: a()(C.title, { [C.fastTravel]: l }) }, e, T)),
-                      (n = n =
+                      })({ className: a()(T.title, { [T.fastTravel]: n }) }, e, l)),
+                      (i = i =
                           {
-                              onClick: l ? G : void 0,
+                              onClick: n ? B : void 0,
                               children: [
-                                  U,
+                                  G,
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-sm/medium",
                                       lineClamp: 1,
-                                      children: B,
+                                      children: H,
                                   }),
-                                  l &&
+                                  n &&
                                       (0, r.jsx)(c.Fbu, {
-                                          className: C.fastTravelChevron,
+                                          className: T.fastTravelChevron,
                                           size: "xs",
                                       }),
                               ],
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -157,8 +159,8 @@ function T(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(n)).forEach(function (e) {
-                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
                       t),
                   );

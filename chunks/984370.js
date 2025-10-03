@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => R,
-    Z: () => L,
+    O: () => N,
+    Z: () => D,
 }),
     n(35282);
 var r = n(951288);
@@ -14,17 +14,16 @@ var i = n(873546),
     u = n(185935),
     d = n(2818),
     f = n(954551),
-    _ = n(819439),
-    p = n(208450),
-    h = n(975146),
-    m = n(979651),
-    g = n(358085),
-    E = n(998502),
-    b = n(665149),
-    y = n(981631),
-    O = n(176505),
-    v = n(477962);
-function I(e, t, n) {
+    _ = n(208450),
+    p = n(975146),
+    h = n(979651),
+    m = n(358085),
+    g = n(998502),
+    E = n(665149),
+    b = n(981631),
+    y = n(176505),
+    O = n(979905);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +36,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +47,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,22 +64,22 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +87,7 @@ function C(e, t) {
     }
     return i;
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,8 +96,8 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-async function R(e) {
-    if (!e && (0, g.isMac)() && g.isPlatformEmbedded) {
+async function N(e) {
+    if (!e && (0, m.isMac)() && m.isPlatformEmbedded) {
         var t, n, r;
         let e =
             null !=
@@ -107,110 +106,109 @@ async function R(e) {
                 : t.call(n)))
                 ? r
                 : "Maximize";
-        "Minimize" === e ? E.ZP.minimize() : "Maximize" === e && E.ZP.maximize();
+        "Minimize" === e ? g.ZP.minimize() : "Maximize" === e && g.ZP.maximize();
     }
 }
-function P(e) {
+function R(e) {
     let {
             children: t,
             className: n,
             channelId: s,
             channelType: l,
-            guildId: g,
-            innerClassname: E,
-            transparent: I = !1,
-            hidden: T = !1,
-            toolbar: S,
-            mobileToolbar: A,
-            "aria-label": C,
-            "aria-labelledby": N,
-            scrollable: P,
-            role: w,
-            hideSearch: D,
-            showDivider: L,
-            disableDoubleClick: x,
+            guildId: m,
+            innerClassname: g,
+            transparent: v = !1,
+            hidden: I = !1,
+            toolbar: T,
+            mobileToolbar: S,
+            "aria-label": A,
+            "aria-labelledby": C,
+            scrollable: R,
+            role: P,
+            hideSearch: w,
+            showDivider: D,
+            disableDoubleClick: L,
         } = e,
-        j = null == s || (0, O.AB)(s) ? null : s,
-        M = (0, a.e7)([m.Z], () => m.Z.isInChannel(j) || !1),
-        k = (0, a.e7)([c.Z], () => null != j && c.Z.getParticipantsListOpen(j)),
-        { enabled: U, inInbox: G } = d.Z.useExperiment({ location: "HeaderBar" }),
-        { hasParticipantsPanel: B } = (0, u.Z)({ location: "HeaderBar" }),
-        Z = (0, _.$)({ location: "HeaderBar" });
-    function F() {
-        if (null == S) return null;
-        let e = null != s && !D && !Z;
+        x = null == s || (0, y.AB)(s) ? null : s,
+        j = (0, a.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
+        M = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
+        { enabled: k, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
+        { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
+    function B() {
+        if (null == T) return null;
+        let e = null != s && !w;
         return i.tq
-            ? A
+            ? S
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      S,
-                      e && !(0, O.AB)(s)
+                      T,
+                      e && !(0, y.AB)(s)
                           ? (0, r.jsx)(
-                                p.ZP,
+                                _.ZP,
                                 {
-                                    guildId: g,
+                                    guildId: m,
                                     channelId: s,
-                                    className: v.search,
+                                    className: O.search,
                                 },
-                                null != g ? g : s,
+                                null != m ? m : s,
                             )
                           : null,
-                      L && (0, r.jsx)(b.ZP.Divider, {}),
-                      U && !G ? (0, r.jsx)(f.Z, {}) : null,
-                      B &&
-                          M &&
-                          null != j &&
-                          !k &&
-                          l === y.d4z.GROUP_DM &&
+                      D && (0, r.jsx)(E.ZP.Divider, {}),
+                      k && !U ? (0, r.jsx)(f.Z, {}) : null,
+                      G &&
+                          j &&
+                          null != x &&
+                          !M &&
+                          l === b.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
-                              className: v.controlButtonWrapper,
+                              className: O.controlButtonWrapper,
                               children: [
-                                  (0, r.jsx)(b.ZP.Divider, {}),
-                                  (0, r.jsx)(h.Z, { onClick: () => o.Z.toggleParticipantsList(j, !k) }),
+                                  (0, r.jsx)(E.ZP.Divider, {}),
+                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !M) }),
                               ],
                           }),
                   ],
               });
     }
-    return (0, r.jsx)(b.ZP, {
+    return (0, r.jsx)(E.ZP, {
         className: n,
-        innerClassName: E,
-        toolbar: F(),
-        transparent: I,
-        hidden: T,
-        onDoubleClick: () => R(x),
-        "aria-label": C,
-        "aria-labelledby": N,
-        role: w,
-        scrollable: P,
+        innerClassName: g,
+        toolbar: B(),
+        transparent: v,
+        hidden: I,
+        onDoubleClick: () => N(L),
+        "aria-label": A,
+        "aria-labelledby": C,
+        role: P,
+        scrollable: R,
         children: t,
     });
 }
-function w(e) {
+function P(e) {
     let { children: t, className: n, "aria-label": i, "aria-labelledby": a, role: o, disableDoubleClick: s } = e;
-    return (0, r.jsx)(b.ZP, {
+    return (0, r.jsx)(E.ZP, {
         className: n,
-        onDoubleClick: () => R(s),
+        onDoubleClick: () => N(s),
         "aria-label": i,
         "aria-labelledby": a,
         role: o,
         children: t,
     });
 }
-function D(e) {
+function w(e) {
     var { isAuthenticated: t = !0 } = e,
-        n = C(e, ["isAuthenticated"]);
+        n = A(e, ["isAuthenticated"]);
     let { analyticsLocations: i } = (0, l.ZP)(s.Z.HEADER_BAR);
     return (0, r.jsx)(l.Gt, {
         value: i,
         children: t
-            ? (0, r.jsx)(P, A(T({}, n), { className: n.className }))
-            : (0, r.jsx)(w, A(T({}, n), { className: n.className })),
+            ? (0, r.jsx)(R, S(I({}, n), { className: n.className }))
+            : (0, r.jsx)(P, S(I({}, n), { className: n.className })),
     });
 }
-(D.Title = b.ZP.Title),
-    (D.Icon = b.ZP.Icon),
-    (D.ChannelIcon = b.ZP.ChannelIcon),
-    (D.Divider = b.ZP.Divider),
-    (D.Caret = b.ZP.Caret);
-let L = D;
+(w.Title = E.ZP.Title),
+    (w.Icon = E.ZP.Icon),
+    (w.ChannelIcon = E.ZP.ChannelIcon),
+    (w.Divider = E.ZP.Divider),
+    (w.Caret = E.ZP.Caret);
+let D = w;
