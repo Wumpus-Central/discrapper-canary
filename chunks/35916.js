@@ -163,6 +163,7 @@ function m(e) {
                         role: "listbox",
                         "aria-multiselectable": "multiple" === f,
                         className: c.listBox,
+                        "data-mana-component": "listbox",
                         children: (0, r.jsxs)("div", {
                             className: c.listBoxInner,
                             children: [L, 0 === L.length && (null == I ? void 0 : I())],

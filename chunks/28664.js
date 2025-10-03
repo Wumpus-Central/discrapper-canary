@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(102725),
     d = n(342134),
     f = n(966327),
-    _ = n(220104);
+    _ = n(495511);
 function p(e, t, n) {
     return (
         t in e
@@ -119,8 +119,8 @@ function y(e) {
         w = i.useId(),
         { isVisible: D, triggerProps: L } = (0, u.l)(h({ targetElementRef: P.targetElementRef }, R)),
         x = (0, d.Q)({ shouldShow: D }),
-        { defaultLayerContext: j } = (0, o.ZFG)(),
-        M = i.useMemo(
+        { defaultLayerContext: M } = (0, o.ZFG)(),
+        j = i.useMemo(
             () =>
                 null != b
                     ? b
@@ -140,7 +140,7 @@ function y(e) {
                         : p,
             [p, m, b],
         );
-    if (null == M || ("string" == typeof M && "" === M)) return n;
+    if (null == j || ("string" == typeof j && "" === j)) return n;
     let k = null != N ? N : (0, c.Sw)(p);
     if (y) {
         let e = g(h({}, L), {
@@ -182,25 +182,24 @@ function y(e) {
                   isRendered: !0,
                   targetElementRef: P.targetElementRef,
                   id: w,
-                  content: M,
+                  content: j,
                   position: v,
                   align: I,
                   spacing: T,
                   caretConfig: C,
-                  layerContext: null != S ? S : j,
+                  layerContext: null != S ? S : M,
                   animationStyle: e,
                   positionKey: k,
-                  "data-mana-component": "tooltip",
               })
             : null,
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != M && "" !== M
+            null != j && "" !== j
                 ? (0, r.jsx)(a.n, {
                       id: w,
-                      children: M,
+                      children: j,
                   })
                 : null,
             U,

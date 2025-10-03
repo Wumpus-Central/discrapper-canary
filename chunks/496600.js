@@ -233,6 +233,7 @@ function w(e) {
         helperText: i,
         errorMessage: a,
         successMessage: o,
+        "data-mana-component": "combobox",
         children: (0, r.jsx)(D, T({}, s)),
     });
 }
@@ -254,8 +255,8 @@ function D(e) {
         D = i.useRef(null),
         L = i.useRef(null),
         x = i.useRef(null),
-        j = i.useRef(null),
-        M = i.useContext(u.U),
+        M = i.useRef(null),
+        j = i.useContext(u.U),
         {
             state: k,
             setState: U,
@@ -331,10 +332,10 @@ function D(e) {
         );
     i.useEffect(() => {
         clearTimeout(x.current),
-            clearTimeout(j.current),
+            clearTimeout(M.current),
             et &&
                 !w &&
-                (j.current = setTimeout(() => {
+                (M.current = setTimeout(() => {
                     var e;
                     null == (e = L.current) ||
                         e.scrollIntoView({
@@ -522,10 +523,10 @@ function D(e) {
                                     "aria-controls": Y,
                                     "aria-expanded": !Q || k.isOpen,
                                     "aria-activedescendant": en,
-                                    "aria-labelledby": "".concat(null == M ? void 0 : M.labelId),
-                                    "aria-describedby": "".concat(null == M ? void 0 : M.describedById),
-                                    "aria-errormessage": null == M ? void 0 : M.errorMessageId,
-                                    "aria-invalid": (null == M ? void 0 : M.errorMessageId) != null,
+                                    "aria-labelledby": "".concat(null == j ? void 0 : j.labelId),
+                                    "aria-describedby": "".concat(null == j ? void 0 : j.describedById),
+                                    "aria-errormessage": null == j ? void 0 : j.errorMessageId,
+                                    "aria-invalid": (null == j ? void 0 : j.errorMessageId) != null,
                                     value: null != (t = k.query) ? t : "",
                                     onChange: ed,
                                     onFocus: ea,

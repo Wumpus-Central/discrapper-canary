@@ -33,6 +33,7 @@ function d(e) {
             [u.isInert]: h,
         }),
         style: c ? void 0 : { width: "min(".concat(E, ", 100%)") },
+        "data-mana-component": "select-input-field",
         disabled: n,
         readOnly: i,
         fullWidth: c,

@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(337363),
     d = n(725027),
     f = n(464281),
-    _ = n(220104);
+    _ = n(495511);
 let p = 11,
     h = ["left", "center", "right"],
     m = ["top", "center", "bottom"];
@@ -57,6 +57,7 @@ function g(e) {
                     className: o()(_.tooltip, { [_.richTooltip]: C }),
                     role: "tooltip",
                     "data-position": p,
+                    "data-mana-component": "tooltip",
                     children: [
                         (0, r.jsx)(u._, { caretConfig: y }),
                         (0, r.jsx)("div", {

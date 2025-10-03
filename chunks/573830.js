@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(673824),
     u = n(213305),
     d = n(155127),
-    f = n(148374);
+    f = n(571755);
 function _(e, t, n) {
     return (
         t in e
@@ -125,8 +125,8 @@ function A(e) {
         D = (0, c.d)(s.Z.colors.SWITCH_BACKGROUND_HOVER_SELECTED).spring(),
         L = (0, c.d)(s.Z.colors.SWITCH_BORDER_HOVER).spring(),
         x = (0, c.d)(s.Z.colors.SWITCH_BORDER_HOVER_SELECTED).spring(),
-        j = (0, c.d)(s.Z.colors.SWITCH_THUMB_FOREGROUND_DEFAULT).spring(),
-        M = (0, c.d)(s.Z.colors.SWITCH_THUMB_FOREGROUND_ACTIVE).spring(),
+        M = (0, c.d)(s.Z.colors.SWITCH_THUMB_FOREGROUND_DEFAULT).spring(),
+        j = (0, c.d)(s.Z.colors.SWITCH_THUMB_FOREGROUND_ACTIVE).spring(),
         k = (0, c.d)(s.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
         U = (0, c.d)(s.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT_SELECTED).spring(),
         [G, B] = i.useState(!1),
@@ -137,7 +137,7 @@ function A(e) {
             {
                 config: {
                     mass: 1,
-                    tension: 400,
+                    tension: 600,
                     friction: 26,
                 },
                 opacity: n ? 0.5 : 1,
@@ -170,7 +170,7 @@ function A(e) {
                     ref: V,
                     className: f.switchIndicator,
                     "data-size": "md",
-                    "data-toggleable-component": "switch",
+                    "data-mana-component": "switch",
                     style: {
                         opacity: W,
                         backgroundColor: Y.to({
@@ -192,7 +192,7 @@ function A(e) {
                         style: {
                             left: Y.to({
                                 range: I,
-                                output: [0, 0, 0, 24, 24, 24],
+                                output: [1, 1, 1, 24, 24, 24],
                             }),
                         },
                         "aria-hidden": !0,
@@ -223,7 +223,7 @@ function A(e) {
                                     output: [8, 5, 5, 5, 5, 8],
                                 }),
                             }),
-                            E && S(Y, j, M, O.enabled),
+                            E && S(Y, M, j, O.enabled),
                         ],
                     }),
                 }),

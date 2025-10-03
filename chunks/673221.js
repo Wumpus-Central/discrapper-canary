@@ -101,6 +101,7 @@ function S(e) {
         helperText: i,
         errorMessage: a,
         successMessage: s,
+        "data-mana-component": "select",
         children: (0, r.jsx)(A, y({}, l)),
     });
 }
@@ -122,8 +123,8 @@ function A(e) {
             name: D,
             form: L,
             autoComplete: x,
-            maxOptionsVisible: j = 5,
-            options: M,
+            maxOptionsVisible: M = 5,
+            options: j,
             renderOption: k,
             onSelectionChange: U,
             value: G,
@@ -147,7 +148,7 @@ function A(e) {
         K = i.useRef(null),
         z = null != N ? N : "multiple" !== t,
         q = V.selectedItems.length > 0,
-        X = V.listItems.length > j,
+        X = V.listItems.length > M,
         Q = !V.isInitialized || b || O || I,
         J = i.useCallback(() => {
             Q || H((e) => v(y({}, e), { isOpen: !e.isOpen }));
@@ -176,7 +177,7 @@ function A(e) {
     i.useLayoutEffect(() => {
         let e = [],
             t = 6,
-            n = M.map((n) => {
+            n = j.map((n) => {
                 let r = en(n);
                 return (
                     (t = Math.max(t, r.label.length)),
@@ -192,7 +193,7 @@ function A(e) {
                 selectedItems: r.isInitialized ? r.selectedItems : e,
             }),
         );
-    }, [M, en]),
+    }, [j, en]),
         i.useEffect(() => {
             !Q &&
                 Z &&
@@ -220,7 +221,7 @@ function A(e) {
                         (o =
                             (null != (i = null == (r = K.current) ? void 0 : r.getBoundingClientRect().height)
                                 ? i
-                                : 40) * j),
+                                : 40) * M),
                         H((e) =>
                             v(y({}, e), {
                                 width: a,
@@ -230,7 +231,7 @@ function A(e) {
                 }, 500),
             );
             return e.observe(K.current), () => e.disconnect();
-        }, [A, t, j, X, V.longestLabelCharCount]);
+        }, [A, t, M, X, V.longestLabelCharCount]);
     let er = i.useCallback(
         (e) => {
             if (Q) return;

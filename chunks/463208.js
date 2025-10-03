@@ -16,7 +16,7 @@ var r = n(951288),
     _ = n(74655),
     p = n(897037),
     h = n(388032),
-    m = n(693697);
+    m = n(430490);
 function g(e, t, n) {
     return (
         t in e
@@ -197,8 +197,8 @@ function A(e) {
             validateOn: D = "change",
             size: L = "md",
             fullWidth: x = !1,
-            clearable: j = !1,
-            helperText: M,
+            clearable: M = !1,
+            helperText: j,
             showCharacterCount: k = !1,
             successMessage: U,
             label: G,
@@ -271,7 +271,7 @@ function A(e) {
         ee = H.readOnly;
     null == ee && !1 === a && (ee = !0);
     let et = null;
-    ("boolean" == typeof j ? j && null != b && "" !== b && !ee : j.show)
+    ("boolean" == typeof M ? M && null != b && "" !== b && !ee : M.show)
         ? (et = (0, r.jsx)(S, {
               inputSize: L,
               onClick: J,
@@ -299,7 +299,7 @@ function A(e) {
         required: F,
         description: B,
         hideLabel: Z,
-        helperText: M,
+        helperText: j,
         errorMessage: Y.hasError && null != (t = Y.errorMessage) ? t : void 0,
         successMessage: U,
         trailingContent: er,
@@ -335,6 +335,7 @@ function A(e) {
                                         minLength: A,
                                         value: b,
                                         defaultValue: v,
+                                        "data-mana-component": "text-input",
                                     },
                                     H,
                                 ),

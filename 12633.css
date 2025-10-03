@@ -97110,7 +97110,3 @@ html:has(.enable-forced-colors:not(.platform-web)).theme-light.app-focused body:
 .high-contrast-mode.theme-midnight {
     --shadow-border: 0 0 0 1px var(--border-strong) !important
 }
-
-.highlight-mana-components [data-mana-component] {
-    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
-}

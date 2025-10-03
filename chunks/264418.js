@@ -127,13 +127,13 @@ function O(e) {
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
         }),
-        j = i.useCallback(
+        M = i.useCallback(
             (e, t) => {
                 null == S || S(t);
             },
             [S],
         ),
-        M = i.useCallback(() => {
+        j = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
         k = i.useCallback((e) => {
@@ -143,15 +143,16 @@ function O(e) {
         l.m,
         E(m({}, P), {
             position: w,
-            onRequestClose: j,
+            onRequestClose: M,
             gradientColor: T,
             onPositionChange: k,
             scrollBehavior: R,
             children: (0, r.jsxs)("div", {
                 ref: A,
+                "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: M,
+                        onClick: j,
                         variant: null != T ? "color-mix" : void 0,
                     }),
                     null != y &&

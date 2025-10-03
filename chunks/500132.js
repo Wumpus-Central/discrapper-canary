@@ -191,6 +191,7 @@ function b(e) {
                     "aria-labelledby": null != l ? l : e.labelId,
                     "aria-describedby": e.describedById,
                     "aria-errormessage": e.errorMessageId,
+                    "data-mana-component": "BaseRadioGroup",
                     value: a,
                     children: n.map((e, t) =>
                         (0, r.jsx)(E, p(f({ index: t }, e), { shouldAnimateOut: m === e.value }), e.value),
