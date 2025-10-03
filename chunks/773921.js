@@ -11,7 +11,6 @@ e.exports = {
     subLabel: "subLabel__62280",
     checkbox: "checkbox__62280",
     noResults: "noResults__62280",
-    noResultsImg: "noResultsImg__62280",
     messageInput: "messageInput__62280",
     slowmodeWarning: "slowmodeWarning__62280",
 };
