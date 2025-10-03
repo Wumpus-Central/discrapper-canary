@@ -26,12 +26,12 @@ function c(e) {
     return (
         (t.src = e),
         (t.crossOrigin = "anonymous"),
-        new Promise((e, n) => {
+        new Promise((e) => {
             (t.onload = () => {
                 "" !== t.src && e(l(t));
             }),
-                (t.onerror = (e) => {
-                    r.Z.captureMessage("Failed to load notification avatar to circle crop: ".concat(e)), n(t.src);
+                (t.onerror = (n) => {
+                    r.Z.captureMessage("Failed to load notification avatar to circle crop: ".concat(n)), e(t.src);
                 });
         })
     );
