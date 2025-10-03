@@ -34,6 +34,12 @@ class o extends r.Z {
         var t;
         return null != (t = this.invoiceItems.find((t) => t.subscriptionPlanId === e)) ? t : null;
     }
+    getDiscountIdIfExists() {
+        let e = this.invoiceItems.find((e) => e.discounts.length > 0);
+        if (null == e || 0 === e.discounts.length) return;
+        let t = e.discounts[0];
+        if (null != t) return t.discount_id;
+    }
     constructor(e) {
         super(),
             a(this, "id", void 0),

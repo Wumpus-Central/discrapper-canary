@@ -222,29 +222,29 @@ function H() {
 }
 let Y = function (e) {
     var t;
-    let { subscription: i, renewalInvoicePreview: a, paymentSource: o, busy: _, analyticsLocation: C } = e,
-        x = "subscription_header",
-        { analyticsLocations: M } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
-        { fractionalState: H } = (0, f.Z)({ forceFetch: !1 }),
-        Y = H === P.a$.FP_SUB_PAUSED,
-        { enabled: W } = (0, S.ZP)({ location: x });
-    (P.pj.has(i.planId) && w.JwP.ALL_PAUSEABLE.has(i.status) && !Y) || (W = !1);
-    let K = (0, A.Ng)(),
-        z = null == K || null == (t = K.discount) ? void 0 : t.amount,
-        q = (0, I.t7)(),
-        X = (0, I.lr)(),
-        Q = (0, T.W)(),
-        J = () => {
-            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSED) &&
-                et(R.R.PAUSE_SELECT);
-        },
+    let { subscription: i, renewalInvoicePreview: o, paymentSource: _, busy: C, analyticsLocation: x } = e,
+        M = "subscription_header",
+        { analyticsLocations: H } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
+        { fractionalState: Y } = (0, f.Z)({ forceFetch: !1 }),
+        W = Y === P.a$.FP_SUB_PAUSED,
+        { enabled: K } = (0, S.ZP)({ location: M });
+    (P.pj.has(i.planId) && w.JwP.ALL_PAUSEABLE.has(i.status) && !W) || (K = !1);
+    let z = (0, A.Ng)(),
+        q = null == z || null == (t = z.discount) ? void 0 : t.amount,
+        X = (0, I.t7)(),
+        Q = (0, I.lr)(),
+        J = (0, T.W)(),
         $ = () => {
-            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSE_PENDING || Y) && et();
+            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSED) &&
+                en(R.R.PAUSE_SELECT);
         },
         ee = () => {
-            i.status === w.O0b.BILLING_RETRY && et(R.R.CONFIRM);
+            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSE_PENDING || W) && en();
         },
-        et = (e) => {
+        et = () => {
+            i.status === w.O0b.BILLING_RETRY && en(R.R.CONFIRM);
+        },
+        en = (e) => {
             (0, l.ZDy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: t } = await Promise.all([
                     n.e("17938"),
@@ -257,36 +257,36 @@ let Y = function (e) {
                         t,
                         k(j({}, n), {
                             premiumSubscription: i,
-                            analyticsLocation: C,
-                            analyticsLocations: M,
+                            analyticsLocation: x,
+                            analyticsLocations: H,
                             initialStep: e,
                         }),
                     );
             });
         },
-        en = () => {
+        er = () => {
             if (null != i && null != i.premiumPlanIdFromItems) {
                 let e = m.Z.get(i.premiumPlanIdFromItems);
                 if (null == e) return void U.info("Plan not fetched for plan id: ".concat(i.premiumPlanIdFromItems));
-                let t = (0, O.DE)(e, null == o ? void 0 : o.id, !1),
+                let t = (0, O.DE)(e, null == _ ? void 0 : _.id, !1),
                     n = t.length > 0 ? t[0] : i.currency,
                     r = !1;
                 1 === t.length &&
-                    (null == o ? void 0 : o.id) === i.paymentSourceId &&
-                    (0, O.tD)(e.id, n, null == o ? void 0 : o.id) &&
+                    (null == _ ? void 0 : _.id) === i.paymentSourceId &&
+                    (0, O.tD)(e.id, n, null == _ ? void 0 : _.id) &&
                     (r = !0),
                     r
-                        ? c.O5(i, M)
+                        ? c.O5(i, H)
                         : (0, p.Z)({
                               initialPlanId: i.premiumPlanIdFromItems,
-                              analyticsLocations: M,
-                              analyticsLocation: C,
+                              analyticsLocations: H,
+                              analyticsLocation: x,
                               analyticsObject: G,
                               subscription: i,
                           });
             }
         },
-        er = () => {
+        ei = () => {
             if (!B.includes(i.status) || null == i.pauseEndsAt)
                 return void (0, b.q2)(Error("Invalid subscription to resume"), {
                     extra: {
@@ -298,37 +298,37 @@ let Y = function (e) {
             i.status === w.O0b.PAUSED
                 ? (0, p.Z)({
                       initialPlanId: i.premiumPlanIdFromItems,
-                      analyticsLocations: M,
-                      analyticsLocation: C,
+                      analyticsLocations: H,
+                      analyticsLocation: x,
                       analyticsObject: G,
                       subscription: i,
                       skipConfirm: !0,
                   })
-                : c.v4(i, M);
-        },
-        ei = () => {
-            i.status === w.O0b.PAUSED && et(R.R.PAUSE_SELECT);
+                : c.v4(i, H);
         },
         ea = () => {
-            et(R.R.WHAT_YOU_LOSE);
+            i.status === w.O0b.PAUSED && en(R.R.PAUSE_SELECT);
         },
-        eo = (e) => (
-            s()(null != a, "Expected renewalInvoicePreview"),
+        eo = () => {
+            en(R.R.WHAT_YOU_LOSE);
+        },
+        es = (e) => (
+            s()(null != o, "Expected renewalInvoicePreview"),
             (0, r.jsx)("div", {
                 className: L.planInfo,
-                children: Q
+                children: J
                     ? D.intl.format(D.t["/SfHws"], { weeks: 1 })
                     : (0, y.qV)({
                           planId: e,
                           subscription: i,
-                          renewalInvoicePreview: a,
-                          hasDiscountApplied: q,
-                          activeDiscountInfo: X,
-                          hasFractionalPremiumWithSub: Y,
+                          renewalInvoicePreview: o,
+                          hasDiscountApplied: X,
+                          activeDiscountInfo: Q,
+                          hasFractionalPremiumWithSub: W,
                       }),
             })
         ),
-        es = () => {
+        el = () => {
             let { status: e } = i;
             if (i.isPurchasedExternally) {
                 let e = (0, y.JE)(i.paymentGateway, "SUBSCRIPTION_MANAGEMENT");
@@ -338,7 +338,7 @@ let Y = function (e) {
                     children: (0, r.jsx)(l.zxk, {
                         variant: "overlay-primary",
                         size: "sm",
-                        loading: _,
+                        loading: C,
                         text: D.intl.string(D.t.obRG6e).toLocaleUpperCase(),
                     }),
                 });
@@ -349,13 +349,13 @@ let Y = function (e) {
                 return (0, r.jsxs)("div", {
                     className: L.toolsButtons,
                     children: [
-                        W
+                        K
                             ? (0, r.jsx)("div", {
                                   className: L.secondaryBannerTextButtonContainerWithPause,
                                   children: (0, r.jsx)(l.Avr, {
                                       variant: "always-white",
-                                      disabled: _,
-                                      onClick: J,
+                                      disabled: C,
+                                      onClick: $,
                                       size: "sm",
                                       text: D.intl.string(D.t.eFlYVF),
                                   }),
@@ -364,8 +364,8 @@ let Y = function (e) {
                                   className: L.secondaryBannerTextButtonContainer,
                                   children: (0, r.jsx)(l.Avr, {
                                       variant: "always-white",
-                                      onClick: $,
-                                      disabled: _,
+                                      onClick: ee,
+                                      disabled: C,
                                       size: "sm",
                                       text: D.intl.string(D.t["ETE/oK"]),
                                   }),
@@ -376,12 +376,12 @@ let Y = function (e) {
                                 (0, r.jsx)(
                                     N.Z,
                                     k(j({}, t), {
-                                        className: L.toolsButton,
+                                        className: a()(L.toolsButton, L.premiumSettingsPushButton),
                                         disabled: e,
                                         onClick: () => {
                                             (0, p.Z)({
-                                                analyticsLocations: M,
-                                                analyticsLocation: C,
+                                                analyticsLocations: H,
+                                                analyticsLocation: x,
                                                 analyticsObject: G,
                                                 subscription: i,
                                             });
@@ -401,8 +401,8 @@ let Y = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         text: D.intl.string(D.t.iIvF29),
-                        loading: _,
-                        onClick: en,
+                        loading: C,
+                        onClick: er,
                     }),
                 });
             switch (e) {
@@ -410,8 +410,8 @@ let Y = function (e) {
                     return (0, r.jsx)(l.zxk, {
                         variant: "overlay-primary",
                         size: "sm",
-                        onClick: ee,
-                        loading: _,
+                        onClick: et,
+                        loading: C,
                         text: D.intl.string(D.t["ETE/oK"]),
                     });
                 case w.O0b.PAUSE_PENDING:
@@ -422,8 +422,8 @@ let Y = function (e) {
                                 className: L.secondaryBannerTextButtonContainer,
                                 children: (0, r.jsx)(l.Avr, {
                                     variant: "always-white",
-                                    disabled: _,
-                                    onClick: $,
+                                    disabled: C,
+                                    onClick: ee,
                                     size: "sm",
                                     text: D.intl.string(D.t.cM1H0N),
                                 }),
@@ -435,14 +435,14 @@ let Y = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: D.intl.string(D.t.TgV5QU),
-                                    loading: _,
-                                    onClick: er,
+                                    loading: C,
+                                    onClick: ei,
                                 }),
                             }),
                         ],
                     });
                 case w.O0b.PAUSED:
-                    if (Y) return t();
+                    if (W) return t();
                     let { durations: n } = (0, v.AT)(i);
                     return (0, r.jsxs)("div", {
                         className: L.toolsButtons,
@@ -453,15 +453,15 @@ let Y = function (e) {
                                     n.length > 0
                                         ? (0, r.jsx)(l.Avr, {
                                               variant: "always-white",
-                                              onClick: ei,
-                                              disabled: _,
+                                              onClick: ea,
+                                              disabled: C,
                                               size: "sm",
                                               text: D.intl.string(D.t.jNHWt7),
                                           })
                                         : (0, r.jsx)(l.Avr, {
                                               variant: "always-white",
-                                              onClick: ea,
-                                              disabled: _,
+                                              onClick: eo,
+                                              disabled: C,
                                               size: "sm",
                                               text: D.intl.string(D.t.cM1H0N),
                                           }),
@@ -473,8 +473,8 @@ let Y = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: D.intl.string(D.t.zpi5pq),
-                                    loading: _,
-                                    onClick: er,
+                                    loading: C,
+                                    onClick: ei,
                                 }),
                             }),
                         ],
@@ -484,23 +484,23 @@ let Y = function (e) {
                     return t();
             }
         },
-        el = y.ZP.getPlanIdFromInvoice(i, a);
-    if ((0, h.Q0)(el)) return null;
-    let ec = y.ZP.getStatusFromInvoice(i, a),
-        eu = y.ZP.getPremiumType(el),
-        ed = {
-            [L.tier0]: eu === P.p9.TIER_0,
-            [L.tier1]: eu === P.p9.TIER_1,
-            [L.tier2]: eu === P.p9.TIER_2,
-            [L.canceled]: ec === w.O0b.CANCELED,
-            [L.pausePending]: ec === w.O0b.PAUSE_PENDING,
-            [L.paused]: ec === w.O0b.PAUSED && !Y,
-            [L.failedPayment]: (0, y.zV)(ec),
+        ec = y.ZP.getPlanIdFromInvoice(i, o);
+    if ((0, h.Q0)(ec)) return null;
+    let eu = y.ZP.getStatusFromInvoice(i, o),
+        ed = y.ZP.getPremiumType(ec),
+        ef = {
+            [L.tier0]: ed === P.p9.TIER_0,
+            [L.tier1]: ed === P.p9.TIER_1,
+            [L.tier2]: ed === P.p9.TIER_2,
+            [L.canceled]: eu === w.O0b.CANCELED,
+            [L.pausePending]: eu === w.O0b.PAUSE_PENDING,
+            [L.paused]: eu === w.O0b.PAUSED && !W,
+            [L.failedPayment]: (0, y.zV)(eu),
         },
-        ef = null;
-    switch (eu) {
+        e_ = null;
+    switch (ed) {
         case P.p9.TIER_0:
-            ef = (0, r.jsxs)("div", {
+            e_ = (0, r.jsxs)("div", {
                 className: L.wordMark,
                 children: [
                     (0, r.jsx)(E.Z, {
@@ -512,21 +512,21 @@ let Y = function (e) {
             });
             break;
         case P.p9.TIER_1:
-            ef = (0, r.jsx)(V, {});
+            e_ = (0, r.jsx)(V, {});
             break;
         case P.p9.TIER_2:
-            ef = (0, r.jsx)(g.Z, {
+            e_ = (0, r.jsx)(g.Z, {
                 className: L.planName,
                 "aria-label": D.intl.string(D.t.lpNrPj),
             });
     }
-    let e_ = B.includes(i.status) && !Y ? F : Z;
-    return (0, r.jsx)(e_, {
-        wordMark: ef,
-        subscriptionInfo: eo(el),
-        buttons: es(),
-        statusClasses: ed,
-        shouldUseDiscountMarketing: q,
-        discountAmount: z,
+    let ep = B.includes(i.status) && !W ? F : Z;
+    return (0, r.jsx)(ep, {
+        wordMark: e_,
+        subscriptionInfo: es(ec),
+        buttons: el(),
+        statusClasses: ef,
+        shouldUseDiscountMarketing: X,
+        discountAmount: q,
     });
 };

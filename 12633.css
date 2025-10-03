@@ -55327,6 +55327,12 @@ h3.improved__1689b:after {
     position: relative
 }
 
+@media (max-width:390px) {
+    .premiumSettingsPushButton__84995 {
+        margin-left: 8px
+    }
+}
+
 .secondaryBannerTextButtonContainerWithPause__84995 {
     margin-right: 15px;
     margin-top: 5px
@@ -55346,6 +55352,12 @@ h3.improved__1689b:after {
         white-space: normal;
         width: 130px;
         word-break: keep-all
+    }
+}
+
+@media (max-width:390px) {
+    .secondaryBannerTextButtonContainerWithPause__84995 button>span {
+        width: 120px
     }
 }
 
