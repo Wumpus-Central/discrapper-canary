@@ -36,7 +36,7 @@ function f(e) {
         };
     if ((0, l.Z)(e) && t && null != _) {
         var m;
-        let e = null == (m = _.split(";")) ? void 0 : m.join(", ");
+        let e = null == (m = _.split("; ")) ? void 0 : m.join(", ");
         return {
             text: p ? e : d.intl.format(d.t.Vnuxub, { name: e }),
             tooltip: d.intl.formatToPlainString(d.t.Vnuxub, { name: e }),

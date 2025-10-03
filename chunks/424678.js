@@ -39,7 +39,7 @@ class s extends i.PureComponent {
 }
 class l extends i.PureComponent {
     render() {
-        let e = this.props.artists.split(";");
+        let e = this.props.artists.split("; ");
         if (!this.props.canOpen) return e.join(", ");
         let t = e.length - 1;
         return e.map((e, n) =>

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(35282);
+n.d(t, { Z: () => L }), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -77,10 +77,10 @@ function D(e, t) {
         e
     );
 }
-function x(e) {
+function L(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: w } = e,
-        x = (0, p.Dt)(),
         L = (0, p.Dt)(),
+        x = (0, p.Dt)(),
         { themeType: j } = (0, b.z)(),
         M = (0, _.Z)({
             activity: a,
@@ -97,14 +97,14 @@ function x(e) {
             entry: M,
             analyticsLocations: B,
         }),
-        V = (0, g.Z)({
+        F = (0, g.Z)({
             userId: t.id,
             onAction: Z,
         });
     if (!(0, l.Z)(a)) return null;
-    let F = () => {
+    let V = () => {
             var e, n;
-            let l = null != (n = null == (e = a.state) ? void 0 : e.split(";")) ? n : [];
+            let l = null != (n = null == (e = a.state) ? void 0 : e.split("; ")) ? n : [];
             return 0 === l.length
                 ? null
                 : null == a.sync_id
@@ -161,15 +161,15 @@ function x(e) {
     return (0, r.jsx)(u.Gt, {
         value: B,
         children: (0, r.jsxs)(O.Z, {
-            ref: V,
+            ref: F,
             className: o()(N.card, R),
             onAction: Z,
             onClose: w,
-            "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
+            "aria-labelledby": U ? "".concat(x, " ").concat(L) : L,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(P({ textId: L }, k), {
+                    D(P({ textId: x }, k), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: "live",
                             user: t,
@@ -203,9 +203,9 @@ function x(e) {
                                                 onClick: () => {
                                                     Z({ action: "OPEN_SPOTIFY_TRACK" }), (0, h.aG)(a);
                                                 },
-                                                id: x,
+                                                id: L,
                                             }),
-                                            F(),
+                                            V(),
                                         ],
                                     }),
                                     (0, r.jsx)(y.Z, {
