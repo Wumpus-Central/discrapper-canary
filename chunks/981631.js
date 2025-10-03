@@ -31,7 +31,7 @@ n.d(t, {
     CoT: () => N,
     Cyb: () => E.Cy,
     DJE: () => re,
-    DJj: () => ej,
+    DJj: () => eM,
     DZw: () => ew,
     E07: () => tS,
     EKQ: () => E.EK,
@@ -104,7 +104,7 @@ n.d(t, {
     OcF: () => e9,
     Odu: () => ee,
     PEY: () => e3,
-    PNu: () => eM,
+    PNu: () => ej,
     POd: () => rf,
     PRK: () => e0,
     PUi: () => nU,
@@ -128,7 +128,7 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t1,
     RcX: () => tp,
-    Rg9: () => nj,
+    Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nN,
     SOq: () => n8,
@@ -178,11 +178,11 @@ n.d(t, {
     Z8P: () => ex,
     Z9p: () => nm,
     ZUi: () => H,
-    ZY5: () => tM,
+    ZY5: () => tj,
     ZfP: () => R,
     Zuq: () => E.Zu,
     _1z: () => er,
-    _8R: () => rM,
+    _8R: () => rj,
     _s_: () => S,
     _vf: () => ei,
     a5g: () => tz,
@@ -197,7 +197,7 @@ n.d(t, {
     b4C: () => rL,
     b8q: () => tk,
     bL: () => eP,
-    c2C: () => nM,
+    c2C: () => nj,
     d4z: () => o.d,
     dAT: () => tK,
     dCx: () => nn,
@@ -245,7 +245,7 @@ n.d(t, {
     kEZ: () => U,
     kGb: () => rd,
     kNB: () => rl,
-    kVF: () => M,
+    kVF: () => j,
     kg4: () => I,
     kod: () => eO,
     l$U: () => eW,
@@ -269,12 +269,12 @@ n.d(t, {
     pAY: () => th,
     pJs: () => w,
     pKx: () => E.pK,
-    pM4: () => j,
+    pM4: () => M,
     pNK: () => A,
     pTL: () => rG,
     pjP: () => n4,
     pmI: () => t7,
-    q5t: () => tj,
+    q5t: () => tM,
     q9n: () => nH,
     qAy: () => tG,
     qWG: () => rx,
@@ -318,7 +318,7 @@ n.d(t, {
     wli: () => rP,
     x0X: () => nX,
     x8Z: () => rg,
-    xAR: () => rj,
+    xAR: () => rM,
     xGv: () => tu,
     xPJ: () => Q,
     xW$: () => nO,
@@ -634,10 +634,10 @@ var o = n(106351),
     x = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    j = (function (e) {
+    M = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
-    M = (function (e) {
+    j = (function (e) {
         return (
             (e.GENERIC = "GENERIC"),
             (e.LAUNCH_GAME_FAILURE = "LAUNCH_GAME_FAILURE"),
@@ -2121,8 +2121,8 @@ let ew = 100,
     eD = 200,
     eL = 50,
     ex = 50,
-    ej = 25,
-    eM = 200,
+    eM = 25,
+    ej = 200,
     ek = 100,
     eU = 250,
     eG = 2000,
@@ -2591,10 +2591,10 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tj = (function (e) {
+    tM = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
-    tM = (function (e) {
+    tj = (function (e) {
         return (
             (e.AUTH = "Auth"),
             (e.STORE_LISTING = "Store Listing"),
@@ -4051,6 +4051,7 @@ var nE = (function (e) {
             (e.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN = "overlay_game_invite_notification_shown"),
             (e.OVERLAY_GAME_INVITE_SETTINGS_UPDATED = "overlay_game_invite_settings_updated"),
             (e.OVERLAY_STATE_CHANGED = "overlay_state_changed"),
+            (e.OVERLAY_NOTIFICATION_SETTING_UPDATED = "overlay_notification_setting_updated"),
             (e.WIDGET_CONTENT_SHOWN = "widget_content_shown"),
             (e.WIDGET_SETTING_UPDATED = "widget_setting_updated"),
             (e.WIDGET_INTERACTED = "widget_interacted"),
@@ -5627,8 +5628,8 @@ var nP = (function (e) {
             e
         );
     })({});
-let nj = 50;
-var nM = (function (e) {
+let nM = 50;
+var nj = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -6253,8 +6254,8 @@ var rw = (function (e) {
         );
     })({});
 let rx = 2500,
-    rj = 0,
-    rM = 2592000000;
+    rM = 0,
+    rj = 2592000000;
 var rk = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(49124);
+n.d(t, { Z: () => M }), n(388685), n(49124);
 var r = n(579092),
     i = n(433517),
     a = n(765250),
@@ -190,7 +190,7 @@ class w {
             g(this, "hasNotificationSetting", (e) => this._storage.hasNotificationSetting(e)),
             g(this, "initializeNotification", (e) => {
                 if (this.hasNotificationSetting(e)) return;
-                let t = p.Z.isNotificationDisabled(e);
+                let t = p.Z.isNotificationDisabledBySetting(e);
                 this.updateNotificationSetting(e, t);
             }),
             g(this, "disableNotification", async (e) => {
@@ -206,13 +206,9 @@ class w {
     }
 }
 function D() {
-    return Object.values(f.OverlayNotificationDisabledSetting);
+    return Object.values(f.i);
 }
-let L = new Set([
-    f.OverlayNotificationDisabledSetting.WELCOME_GENERAL,
-    f.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE,
-    f.OverlayNotificationDisabledSetting.GAME_ACTIVITY,
-]);
+let L = new Set([f.i.WELCOME_GENERAL, f.i.GO_LIVE_NUDGE, f.i.GAME_ACTIVITY]);
 class x extends s.Z {
     constructor(...e) {
         super(...e),
@@ -268,7 +264,7 @@ class x extends s.Z {
                           ? L.has(a)
                               ? r.add(a)
                               : i.add(a)
-                          : e && a !== f.OverlayNotificationDisabledSetting.WELCOME_GENERAL
+                          : e && a !== f.i.WELCOME_GENERAL
                             ? r.add(a)
                             : i.add(a);
                 return {
@@ -354,4 +350,4 @@ class x extends s.Z {
             });
     }
 }
-let j = new x();
+let M = new x();

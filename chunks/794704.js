@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(486016),
     L = n(837268),
     x = n(32300),
-    j = n(809357),
-    M = n(371651),
+    M = n(809357),
+    j = n(371651),
     k = n(829907),
     U = n(624864),
     G = n(610394),
@@ -161,9 +161,7 @@ function ew(e) {
         enabled: et.default.enabled,
         notifications_enabled: r,
         notifications_position: r ? n : null,
-        text_notifications_mode: U.Z.isNotificationDisabled(D.OverlayNotificationDisabledSetting.TEXT_CHAT)
-            ? "DISABLED"
-            : "ENABLED",
+        text_notifications_mode: U.Z.isNotificationDisabled(ed.n0.TextChat) ? "DISABLED" : "ENABLED",
         hotkey: null != i ? (0, eo.BB)(i.shortcut) : null,
         text_activation_hotkey: null != a ? (0, eo.BB)(a.shortcut) : null,
         text_opacity_slider: en.default.getTextWidgetOpacity(),
@@ -306,7 +304,7 @@ function ex(e) {
         },
     });
 }
-let ej = new Set([
+let eM = new Set([
         L.mM.INITIALIZING,
         L.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION,
         L.mM.WAITING_FOR_MODULE_TRACKING,
@@ -316,7 +314,7 @@ let ej = new Set([
         L.mM.WAITING_FOR_REACT_INITIALIZATION,
         L.mM.WAITING_FOR_PID_FOCUS,
     ]),
-    eM = (e) => {
+    ej = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
 function ek(e) {
@@ -324,8 +322,8 @@ function ek(e) {
     let { runningGame: o, runningGameApplication: s } = e,
         c = null == o ? void 0 : o.pid,
         u = (0, _.e7)(
-            [M.default],
-            () => (null == o || null == c ? null : M.default.getTrackedGameByPid(c)),
+            [j.default],
+            () => (null == o || null == c ? null : j.default.getTrackedGameByPid(c)),
             [o, c],
             l(),
         ),
@@ -353,8 +351,8 @@ function ek(e) {
     }, [f, d]);
     let C = !(0, es.supportsLegacy)(),
         N = !(0, es.supportsOutOfProcess)(),
-        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([M.default], () => M.default.getGlobalEnabledStatus()),
-        j = (e, t) => {
+        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
+        M = (e, t) => {
             var n, r, i;
             if (null == o) return;
             let a = !1,
@@ -425,7 +423,7 @@ function ek(e) {
         V = !y && !x && g && !N,
         H = (null == u ? void 0 : u.overlayMethod) === L.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === L.mM.OVERLAY_RENDERING && !H,
-        K = (null == u ? void 0 : u.state) != null && ej.has(u.state) && !H,
+        K = (null == u ? void 0 : u.state) != null && eM.has(u.state) && !H,
         z = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcess,
         q = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcessLimitedInteraction,
         Q = (null == u ? void 0 : u.overlayMethod) === L.gl.Hook,
@@ -618,7 +616,7 @@ function ek(e) {
               }),
               "aria-label": e_.intl.string(e_.t["87O5GB"]),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => eM(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: (g && x) || (y && D),
                       disabled: G,
@@ -643,7 +641,7 @@ function ek(e) {
                                   checked: g && x,
                                   disabled: N,
                                   onChange: (e) => {
-                                      e && !x ? j(e, w.AE.OOP) : j(e, w.AE.OOP_GAME);
+                                      e && !x ? M(e, w.AE.OOP) : M(e, w.AE.OOP_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: ep.emptySpacer }),
@@ -661,7 +659,7 @@ function ek(e) {
                                   checked: y && D,
                                   disabled: C,
                                   onChange: (e) => {
-                                      e && !D ? j(e, w.AE.LEGACY) : j(e, w.AE.LEGACY_GAME);
+                                      e && !D ? M(e, w.AE.LEGACY) : M(e, w.AE.LEGACY_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: ep.emptySpacer }),
@@ -726,7 +724,7 @@ function eG(e) {
 }
 function eB() {
     let [e, t] = i.useState(!1),
-        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([M.default], () => M.default.getGlobalEnabledStatus()),
+        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, H.le)(e)),
         s = (0, T.Z)(o.map((e) => e.id)),
         l = !(0, es.supportsLegacy)(),
@@ -773,7 +771,7 @@ function eB() {
               description: d,
               "aria-label": e_.intl.string(e_.t.BfFpW1),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => eM(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: n,
                       disabled: l,
@@ -815,7 +813,7 @@ function eB() {
 }
 function eZ() {
     let [e, t] = i.useState(!1),
-        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([M.default], () => M.default.getGlobalEnabledStatus()),
+        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = !(0, es.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, H.le)(e)),
         l = (0, T.Z)(s.map((e) => e.id)),
@@ -859,7 +857,7 @@ function eZ() {
               description: d,
               "aria-label": e_.intl.string(e_.t["7BlVIi"]),
               action: (0, r.jsx)(h.P3F, {
-                  onClick: (e) => eM(e),
+                  onClick: (e) => ej(e),
                   children: (0, r.jsx)(h.rsf, {
                       checked: n,
                       disabled: o,
@@ -959,32 +957,32 @@ let eV = (e, t, n, r) =>
         {
             title: e_.t.eVE4LS,
             description: e_.t["72WNqq"],
-            disabledSetting: D.OverlayNotificationDisabledSetting.TEXT_CHAT,
+            disabledSetting: D.i.TEXT_CHAT,
         },
         r && {
             title: e_.t.oifnSk,
             description: e_.t.bgU5r6,
-            disabledSetting: D.OverlayNotificationDisabledSetting.WELCOME_GENERAL,
+            disabledSetting: D.i.WELCOME_GENERAL,
         },
         {
             title: e_.t.hqsZJS,
             description: e_.t.kHjdqa,
-            disabledSetting: D.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE,
+            disabledSetting: D.i.GO_LIVE_NUDGE,
         },
         e && {
             title: e_.t.sop3rq,
             description: e_.t.pjgffX,
-            disabledSetting: D.OverlayNotificationDisabledSetting.GAME_ACTIVITY,
+            disabledSetting: D.i.GAME_ACTIVITY,
         },
         t && {
             title: e_.t["2QVhbW"],
             description: e_.t.wQ4ilJ,
-            disabledSetting: D.OverlayNotificationDisabledSetting.NOW_PLAYING,
+            disabledSetting: D.i.NOW_PLAYING,
         },
         n && {
             title: e_.t["5/21FR"],
             description: e_.t.EIzwfH,
-            disabledSetting: D.OverlayNotificationDisabledSetting.FRIEND_STREAM_WATCH_NUDGE,
+            disabledSetting: D.i.FRIEND_STREAM_WATCH_NUDGE,
         },
     ]
         .filter((e) => !1 !== e)
@@ -1316,7 +1314,7 @@ function eX(e) {
         a = null == n ? void 0 : n.id,
         o = (0, _.e7)([U.Z], () => U.Z.isLimitedInteractionOverrideEnabled(a), [a]),
         s = i.useMemo(() => null != t && (0, k.H8)(t.pid), [t]),
-        l = (0, j.Z)({ location: "overlay_user_settings" }),
+        l = (0, M.Z)({ location: "overlay_user_settings" }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, _.cj)([en.default], () => ({
             disableClickableRegions: en.default.disableClickableRegions,
             shouldShowKeybindIndicators: en.default.showKeybindIndicators,

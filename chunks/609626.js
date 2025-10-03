@@ -1,27 +1,29 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var i = n(768581),
-    r = n(620954),
+    r = n(624864),
+    l = n(620954),
     o = n(987650),
-    l = n(981631),
-    a = n(388032);
-function s(e, t) {
+    a = n(981631),
+    s = n(388032);
+function u(e, t) {
+    if (r.Z.isNotificationDisabled(o.n0.ActivityUserJoin)) return null;
     let n = e.username,
-        s = a.intl.format(a.t["Yk+uYG"], { username: "" }),
+        u = s.intl.format(s.t["Yk+uYG"], { username: "" }),
         c = (0, i.ov)(e),
-        u = a.intl.string(a.t.WRj1Wl),
-        { trackView: d, trackClick: p } = (0, r.R)(o.n0.ActivityUserJoin, {
+        d = s.intl.string(s.t.WRj1Wl),
+        { trackView: h, trackClick: p } = (0, l.R)(o.n0.ActivityUserJoin, {
             notif_type: o.n0.ActivityUserJoin,
             notif_user_id: e.id,
-            activity_type: l.mFx.JOIN,
+            activity_type: a.mFx.JOIN,
             activity_name: t.name,
         });
     return {
         icon: c,
         title: n,
-        body: s,
-        hint: u,
+        body: u,
+        hint: d,
         onNotificationShow: () => {
-            d();
+            h();
         },
         onDismissClick: () => {
             p("dismiss");

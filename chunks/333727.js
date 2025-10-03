@@ -1,61 +1,63 @@
 n.d(t, { Z: () => p });
 var i = n(278323),
     r = n(13245),
-    o = n(45114),
-    l = n(237997),
+    l = n(45114),
+    o = n(237997),
     a = n(145597),
-    s = n(620954),
+    s = n(624864),
+    u = n(620954),
     c = n(987650),
-    u = n(981631),
-    d = n(388032);
+    d = n(981631),
+    h = n(388032);
 function p(e, t, n, p) {
+    if (s.Z.isNotificationDisabled(c.n0.ActivityInvite)) return null;
     let f = t.username,
-        h = d.intl.format(d.t.VDODnp, {
+        m = h.intl.format(h.t.VDODnp, {
             username: "",
             game: n.name,
         }),
-        m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: g, trackClick: y } = (0, s.R)(c.n0.ActivityInvite, {
+        g = t.getAvatarURL(e.guild_id, 80),
+        { trackView: y, trackClick: O } = (0, u.R)(c.n0.ActivityInvite, {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
-            activity_type: u.mFx.JOIN_REQUEST,
+            activity_type: d.mFx.JOIN_REQUEST,
             activity_name: p.name,
         });
     return {
-        icon: m,
+        icon: g,
         title: f,
-        body: h,
-        confirmText: d.intl.string(d.t["fgP/wc"]),
-        cancelText: d.intl.string(d.t.tpXzJy),
+        body: m,
+        confirmText: h.intl.string(h.t["fgP/wc"]),
+        cancelText: h.intl.string(h.t.tpXzJy),
         onNotificationShow: () => {
-            g();
+            y();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
                 channelId: e.id,
-                type: u.mFx.JOIN,
+                type: d.mFx.JOIN,
                 activity: p,
-                location: l.default.isLocked((0, a.getPID)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY,
+                location: o.default.isLocked((0, a.getPID)()) ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY,
             }),
-                y("join"),
+                O("join"),
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, o.In)(
+            (0, l.In)(
                 e.id,
                 {
-                    section: u.jXE.OVERLAY,
-                    object: u.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
-                    objectType: u.Qqv.ACK_SEMI_AUTOMATIC,
+                    section: d.jXE.OVERLAY,
+                    object: d.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
+                    objectType: d.Qqv.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,
             ),
                 r.Z.updateNotificationStatus(n),
-                y("decline");
+                O("decline");
         },
         onDismissClick: () => {
-            y("dismiss");
+            O("dismiss");
         },
     };
 }
