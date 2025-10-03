@@ -50,11 +50,11 @@ function A(e) {
         });
     }
     function x(e, t) {
-        if ((0, _.S)())
+        if (!e && (0, _.S)())
             return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
-        t ? D(e) : j(!e);
+        t ? D(e) : M(!e);
     }
-    function j(e) {
+    function M(e) {
         let t = () => {
                 h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), L(e, !0);
             },
