@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(290297),
     v = n(244317),
     I = n(765717),
-    C = n(358221),
-    S = n(823748),
+    S = n(358221),
+    C = n(823748),
     T = n(626421),
     N = n(118379),
     j = n(267161),
@@ -74,15 +74,15 @@ var r = n(951288),
     ey = n(409292),
     ev = n(256638),
     eI = n(663701),
-    eC = n(697309),
-    eS = n(425369),
+    eS = n(697309),
+    eC = n(425369),
     eT = n(715702),
     eN = n(981631),
     ej = n(176505),
     eP = n(215023),
     ex = n(290511),
     eA = n(186901),
-    eZ = n(861218);
+    eZ = n(981028);
 function ew(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -124,9 +124,9 @@ let eL = (0, u.Un)({
         renderLoader: eR,
     }),
     ek = (0, u.Un)({
-        createPromise: () => n.e("1434").then(n.bind(n, 967564)),
-        webpackId: 967564,
-        name: "SocialLayerStorefrontPage",
+        createPromise: () => n.e("77033").then(n.bind(n, 636409)),
+        webpackId: 636409,
+        name: "SocialLayerStorefront",
         renderLoader: eR,
     }),
     eM = (0, u.Un)({
@@ -164,7 +164,7 @@ let eL = (0, u.Un)({
         renderLoader: eR,
     }),
     eV = (0, u.Un)({
-        createPromise: () => Promise.all([n.e("48776"), n.e("44799")]).then(n.bind(n, 393357)),
+        createPromise: () => Promise.all([n.e("76692"), n.e("44799")]).then(n.bind(n, 393357)),
         webpackId: 393357,
         name: "GuildPowerupsPage",
         renderLoader: eR,
@@ -212,8 +212,8 @@ let eL = (0, u.Un)({
                 case ej.oC.SERVER_MONETIZATION_ONBOARDING:
                     return (0, r.jsx)(eM, { guildId: l });
                 case ej.oC.GUILD_SHOP:
-                    return (0, eu.w)(u)
-                        ? (0, r.jsx)(ek, {})
+                    return (0, eu.wK)(u)
+                        ? (0, r.jsx)(ek, { guildId: l })
                         : (0, r.jsx)(eD, {
                               guildId: l,
                               productId: o,
@@ -246,7 +246,7 @@ let eL = (0, u.Un)({
                 case ej.oC.PORTKEY:
                     return (0, r.jsx)(eF, { guildId: l });
                 case ej.oC.REPORT_TO_MOD:
-                    return (0, r.jsx)(S.Z, {});
+                    return (0, r.jsx)(C.Z, {});
                 default:
                     (0, e_.vE)(a);
             }
@@ -266,7 +266,7 @@ let eL = (0, u.Un)({
                 i.id,
             );
         }
-        return (0, r.jsx)(S.Z, {});
+        return (0, r.jsx)(C.Z, {});
     },
     eW = i.memo(function () {
         let { guildId: e, channelId: t } = (0, el.Z)(),
@@ -321,7 +321,7 @@ let eL = (0, u.Un)({
               })
             : null;
     },
-    e$ = () => (0, r.jsx)(eS.Z, {}),
+    e$ = () => (0, r.jsx)(eC.Z, {}),
     e0 = () => (0, r.jsx)(eT.Z, {}),
     e1 = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -412,16 +412,16 @@ function e9(e) {
     (0, _.t)(!0);
     let u = "app view user trigger debugging";
     b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
-    let g = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
+    let g = (0, p.e7)([S.Z], () => S.Z.isFullscreenInContext()),
         m = (0, A.T)("ChannelSidebar"),
         E = (0, j.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
             var e;
-            let t = parseInt(null != (e = f.K.get(eC.nT)) ? e : "");
-            Number.isNaN(t) && (t = eC.qO),
-                (t = Math.min(Math.max(t, eC.li), eC.zx)),
-                !m && t <= eC.p8 && (t = eC.qO),
+            let t = parseInt(null != (e = f.K.get(eS.nT)) ? e : "");
+            Number.isNaN(t) && (t = eS.qO),
+                (t = Math.min(Math.max(t, eS.li), eS.zx)),
+                !m && t <= eS.p8 && (t = eS.qO),
                 e7(t);
             let n = (e) => {
                 e.metaKey && "b" === e.key && j.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
@@ -435,11 +435,11 @@ function e9(e) {
         }
     }, [m]),
         i.useLayoutEffect(() => {
-            if (E) e7(eC.p8);
+            if (E) e7(eS.p8);
             else {
                 var e;
-                let t = parseInt(null != (e = f.K.get(eC.nT)) ? e : "");
-                Number.isNaN(t) && (t = eC.qO), e7(t);
+                let t = parseInt(null != (e = f.K.get(eS.nT)) ? e : "");
+                Number.isNaN(t) && (t = eS.qO), e7(t);
             }
         }, [E]);
     let y = i.useRef(null),
@@ -447,40 +447,40 @@ function e9(e) {
             (e, t) => {
                 var n;
                 e7(e);
-                let r = t < eC.li / 3;
-                t <= eC.li
+                let r = t < eS.li / 3;
+                t <= eS.li
                     ? document.body.classList.add(eZ.draggingMin)
                     : document.body.classList.remove(eZ.draggingMin),
-                    t >= eC.zx
+                    t >= eS.zx
                         ? document.body.classList.add(eZ.draggingMax)
                         : document.body.classList.remove(eZ.draggingMax);
                 let i = t - e;
                 null == (n = y.current) ||
-                    n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / eC.p8), 0.25))),
-                    m && (j.useAppSidebarState.setState({ isOpen: !r }), r && e7(eC.p8));
+                    n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / eS.p8), 0.25))),
+                    m && (j.useAppSidebarState.setState({ isOpen: !r }), r && e7(eS.p8));
             },
             [m],
         ),
         I = i.useCallback(() => {
             document.body.classList.add(eZ.dragging);
         }, []),
-        S = i.useCallback((e) => {
+        C = i.useCallback((e) => {
             var t;
             document.body.classList.remove(eZ.dragging),
                 document.body.classList.remove(eZ.draggingMin),
                 document.body.classList.remove(eZ.draggingMax),
                 document.body.classList.remove(eZ.collapsing),
                 null == (t = y.current) || t.style.setProperty("--custom-overdrag", "0px"),
-                f.K.set(eC.nT, e),
+                f.K.set(eS.nT, e),
                 eb.default.track(eN.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
         T = (0, O.Z)({
-            minDimension: eC.li,
-            maxDimension: eC.zx,
+            minDimension: eS.li,
+            maxDimension: eS.zx,
             resizableDomNodeRef: y,
             onElementResize: v,
             onElementResizeStart: I,
-            onElementResizeEnd: S,
+            onElementResizeEnd: C,
             orientation: O.y.HORIZONTAL_RIGHT,
             throttleDuration: 0,
         }),
@@ -489,7 +489,7 @@ function e9(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            E && e7(eC.p8);
+            E && e7(eS.p8);
         }, [E]),
         l)
     )
@@ -608,8 +608,8 @@ function te() {
         _ = i.useCallback(() => Y.Z.openSidebar(), []),
         O = (0, A.T)("AppView"),
         E = (0, j.useAppSidebarState)((e) => !e.isOpen),
-        v = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        S = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
+        v = (0, p.e7)([S.Z], () => S.Z.isFullscreenInContext()),
+        C = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
     return (0, r.jsx)("div", {
         className: eZ.container,
         children: (0, r.jsx)(D.Z.Provider, {
@@ -801,7 +801,7 @@ function te() {
                                                 }),
                                             ],
                                         }),
-                                        S && (0, r.jsx)(w.Z, {}),
+                                        C && (0, r.jsx)(w.Z, {}),
                                     ],
                                 }),
                             }),

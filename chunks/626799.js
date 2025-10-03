@@ -94,7 +94,7 @@ class w extends (r = a.Component) {
     componentDidMount() {
         let { sku: e, skuId: t, storeListing: n } = this.props;
         (null == e || null == n) && (0, c.km)(t),
-            (0, E.K)(e) && null != n && null == n.headerBackground && (0, c.rV)(n.id);
+            (0, E.K$)(e) && null != n && null == n.headerBackground && (0, c.rV)(n.id);
     }
     renderViewInStoreButton() {
         return (0, i.jsx)(l.zx.Link, {
@@ -225,7 +225,7 @@ class w extends (r = a.Component) {
 }
 C(w, "defaultProps", { renderFallback: T.dG4 });
 let D = [O.Z, y.Z, b.Z, v.Z];
-function x(e) {
+function L(e) {
     let { skuId: t } = e,
         n = O.Z.get(t),
         r = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -238,6 +238,6 @@ function x(e) {
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let L = (0, m.Z)((0, h.Z)(w)),
-    j = s.ZP.connectStores(D, x)(L),
-    M = (0, h.Z)(s.ZP.connectStores(D, x)(w));
+let x = (0, m.Z)((0, h.Z)(w)),
+    j = s.ZP.connectStores(D, L)(x),
+    M = (0, h.Z)(s.ZP.connectStores(D, L)(w));

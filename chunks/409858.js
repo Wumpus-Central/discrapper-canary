@@ -27,8 +27,8 @@ var i = n(951288),
     A = n(146779),
     C = n(763296),
     T = n(82142),
-    E = n(283595),
-    R = n(594174),
+    R = n(283595),
+    E = n(594174),
     N = n(509545),
     k = n(55563),
     D = n(626135),
@@ -43,7 +43,7 @@ var i = n(951288),
     B = n(981631),
     V = n(215023),
     K = n(388032),
-    W = n(114644),
+    W = n(269142),
     q = n(167969),
     X = n(557256);
 function Y(t, e, n) {
@@ -123,12 +123,12 @@ class $ extends r.Component {
         if (i)
             if (!e)
                 return K.intl.formatToPlainString(K.t.xHzRub, {
-                    recipientDisplayName: M.ZP.getName(R.default.getCurrentUser()),
+                    recipientDisplayName: M.ZP.getName(E.default.getCurrentUser()),
                 });
             else {
                 var c, d;
                 if (n) return K.intl.string(K.t["+BNMcH"]);
-                let t = R.default.getUser(r.userId);
+                let t = E.default.getUser(r.userId);
                 return K.intl.formatToPlainString(K.t["2tBYtL"], {
                     sender: M.ZP.getName(t),
                     skuName: null != (c = null == o ? void 0 : o.name) ? c : "item",
@@ -138,10 +138,10 @@ class $ extends r.Component {
         if (t && !n)
             if (!e)
                 return K.intl.formatToPlainString(K.t.xHzRub, {
-                    recipientDisplayName: M.ZP.getName(R.default.getCurrentUser()),
+                    recipientDisplayName: M.ZP.getName(E.default.getCurrentUser()),
                 });
             else {
-                let t = R.default.getUser(r.userId),
+                let t = E.default.getUser(r.userId),
                     e = M.ZP.getName(t);
                 if (null != s)
                     switch (s) {
@@ -166,7 +166,7 @@ class $ extends r.Component {
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = R.default.getUser(this.props.giftCode.userId);
+        let t = E.default.getUser(this.props.giftCode.userId);
         return K.intl.formatToPlainString(K.t.DDO4W1, { sender: M.ZP.getName(t) });
     }
     get bodyText() {
@@ -174,7 +174,7 @@ class $ extends r.Component {
         if (null == t) return null;
         let { error: l, accepted: s, isCustomGift: a, opened: o, isPremiumAppGift: u } = this.state;
         if (u) {
-            let t = R.default.getUser(r.userId);
+            let t = E.default.getUser(r.userId);
             return o
                 ? s
                     ? K.intl.string(K.t.fLHIp6)
@@ -245,7 +245,7 @@ class $ extends r.Component {
                 soundId: m,
                 isThemeDark: h,
             } = this.props,
-            g = R.default.getUser(l.userId),
+            g = E.default.getUser(l.userId),
             {
                 isCustomGift: y,
                 isCollectiblesGift: O,
@@ -254,7 +254,7 @@ class $ extends r.Component {
                 emojiURL: P,
                 isPremiumAppGift: S,
             } = this.state,
-            Z = R.default.getCurrentUser(),
+            Z = E.default.getCurrentUser(),
             A = this.step === B.wZ8.ERROR,
             C =
                 (null == l ? void 0 : l.userId) != null &&
@@ -268,7 +268,7 @@ class $ extends r.Component {
             case B.wZ8.SUCCESS:
                 null == d || d(l, !0);
         }
-        let T = (0, w.K)(t);
+        let T = (0, w.K$)(t);
         return (0, i.jsxs)("div", {
             ref: this.modalRef,
             children: [
@@ -457,7 +457,7 @@ class $ extends r.Component {
             });
     }
 }
-let tt = o.ZP.connectStores([E.Z, k.Z, y.Z, T.Z, N.Z, f.Z], (t) => {
+let tt = o.ZP.connectStores([R.Z, k.Z, y.Z, T.Z, N.Z, f.Z], (t) => {
         let { giftCode: e } = t,
             n = k.Z.get(e.skuId),
             i = null != n ? y.Z.getApplication(n.applicationId) : null,
@@ -466,7 +466,7 @@ let tt = o.ZP.connectStores([E.Z, k.Z, y.Z, T.Z, N.Z, f.Z], (t) => {
             sku: n,
             libraryApplication:
                 null != n && (null == e ? void 0 : e.entitlementBranches) != null
-                    ? (0, L.z2)(e.entitlementBranches, n, E.Z)
+                    ? (0, L.z2)(e.entitlementBranches, n, R.Z)
                     : null,
             application: i,
             subscriptionPlan: null != e.subscriptionPlanId ? (0, _.oE)(e.subscriptionPlanId) : null,

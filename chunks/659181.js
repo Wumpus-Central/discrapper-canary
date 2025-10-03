@@ -1,11 +1,12 @@
-n.d(t, { Z: () => d }), n(388685), n(997841);
+n.d(t, { Z: () => _ }), n(388685), n(997841);
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
-    o = n(630388),
-    s = n(973616),
-    l = n(981631);
-function c(e, t, n) {
+    o = n(164670),
+    s = n(630388),
+    l = n(973616),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,16 +19,19 @@ function c(e, t, n) {
         e
     );
 }
-let u = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
-class d extends a.Z {
+let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+function f(e) {
+    if (null != e && null != e.social_layer) return { socialLayer: (0, o.x6)(e.social_layer) };
+}
+class _ extends a.Z {
     static createFromServer(e) {
-        var t, n, r, a, o, l, c;
+        var t, n, r, a, o, s, c;
         let { price: u } = e;
-        return new d({
+        return new _({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
-            application: null != e.application ? s.ZP.createFromServer(e.application) : null,
+            application: null != e.application ? l.ZP.createFromServer(e.application) : null,
             eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,
             productLine: e.product_line,
             name: null != (n = e.name) ? n : "",
@@ -63,13 +67,14 @@ class d extends a.Z {
             locales: null != (o = e.locales) ? o : ["en-US"],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
-            deleted: null != (l = e.deleted) && l,
+            deleted: null != (s = e.deleted) && s,
             bundledSkuIds: null != (c = e.bundled_sku_ids) ? c : [],
+            tenantMetadata: f(e.tenant_metadata),
         });
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [l.TaA.WINDOWS];
+        return e.length > 0 ? e : [c.TaA.WINDOWS];
     }
     get isOnSale() {
         return null != this.price && null != this.price.saleAmount;
@@ -77,11 +82,11 @@ class d extends a.Z {
     isGiftable() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
         return (
-            this.type === l.epS.DURABLE_PRIMARY &&
+            this.type === c.epS.DURABLE_PRIMARY &&
             this.available &&
             this.requiresPayment &&
             null != e &&
-            l.w2V.has(e.currency) &&
+            c.w2V.has(e.currency) &&
             null == this.externalPurchaseUrl
         );
     }
@@ -119,26 +124,26 @@ class d extends a.Z {
         return !this.premium && null != e && e.amount > 0;
     }
     get isTheGameAwardsWinner() {
-        return u.includes(this.id);
+        return d.includes(this.id);
     }
     get available() {
-        return (0, o.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, s.yE)(this.flags, c.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, s.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, o.yE)(this.flags, l.l4R.AVAILABLE);
+        return (0, s.yE)(this.flags, c.l4R.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, o.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION))
+            ((0, s.yE)(this.flags, c.l4R.PREMIUM_PURCHASE) || (0, s.yE)(this.flags, c.l4R.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {
@@ -149,38 +154,39 @@ class d extends a.Z {
     }
     constructor(e) {
         super(),
-            c(this, "id", void 0),
-            c(this, "type", void 0),
-            c(this, "applicationId", void 0),
-            c(this, "application", void 0),
-            c(this, "eligiblePaymentGateways", void 0),
-            c(this, "productLine", void 0),
-            c(this, "name", void 0),
-            c(this, "releaseDate", void 0),
-            c(this, "preorderReleaseAt", void 0),
-            c(this, "preorderApproximateReleaseDate", void 0),
-            c(this, "summary", void 0),
-            c(this, "features", void 0),
-            c(this, "genres", void 0),
-            c(this, "dependentSkuId", void 0),
-            c(this, "manifests", void 0),
-            c(this, "availableRegions", void 0),
-            c(this, "accessType", void 0),
-            c(this, "systemRequirements", void 0),
-            c(this, "contentRating", void 0),
-            c(this, "contentRatingAgency", void 0),
-            c(this, "legalNotice", void 0),
-            c(this, "price", void 0),
-            c(this, "premium", void 0),
-            c(this, "showAgeGate", void 0),
-            c(this, "restricted", void 0),
-            c(this, "slug", void 0),
-            c(this, "exclusive", void 0),
-            c(this, "locales", void 0),
-            c(this, "flags", void 0),
-            c(this, "externalPurchaseUrl", void 0),
-            c(this, "deleted", void 0),
-            c(this, "bundledSkuIds", void 0),
+            u(this, "id", void 0),
+            u(this, "type", void 0),
+            u(this, "applicationId", void 0),
+            u(this, "application", void 0),
+            u(this, "eligiblePaymentGateways", void 0),
+            u(this, "productLine", void 0),
+            u(this, "name", void 0),
+            u(this, "releaseDate", void 0),
+            u(this, "preorderReleaseAt", void 0),
+            u(this, "preorderApproximateReleaseDate", void 0),
+            u(this, "summary", void 0),
+            u(this, "features", void 0),
+            u(this, "genres", void 0),
+            u(this, "dependentSkuId", void 0),
+            u(this, "manifests", void 0),
+            u(this, "availableRegions", void 0),
+            u(this, "accessType", void 0),
+            u(this, "systemRequirements", void 0),
+            u(this, "contentRating", void 0),
+            u(this, "contentRatingAgency", void 0),
+            u(this, "legalNotice", void 0),
+            u(this, "price", void 0),
+            u(this, "premium", void 0),
+            u(this, "showAgeGate", void 0),
+            u(this, "restricted", void 0),
+            u(this, "slug", void 0),
+            u(this, "exclusive", void 0),
+            u(this, "locales", void 0),
+            u(this, "flags", void 0),
+            u(this, "externalPurchaseUrl", void 0),
+            u(this, "deleted", void 0),
+            u(this, "bundledSkuIds", void 0),
+            u(this, "tenantMetadata", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.applicationId = e.applicationId),
@@ -212,6 +218,7 @@ class d extends a.Z {
             (this.flags = e.flags),
             (this.externalPurchaseUrl = e.externalPurchaseUrl || null),
             (this.deleted = e.deleted),
-            (this.bundledSkuIds = e.bundledSkuIds);
+            (this.bundledSkuIds = e.bundledSkuIds),
+            (this.tenantMetadata = e.tenantMetadata);
     }
 }

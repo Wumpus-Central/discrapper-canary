@@ -364,7 +364,7 @@ function q(e) {
                     sku: g,
                 }),
             ),
-        GiftButton: (0, O.K)(g)
+        GiftButton: (0, O.K$)(g)
             ? () =>
                   (0, r.jsx)(D.Z, {
                       onGift: _,

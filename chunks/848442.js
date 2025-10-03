@@ -136,7 +136,7 @@ function Z(e) {
 function T(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, "guild_shop_channel_row"),
-        o = (0, O.w)(t),
+        o = (0, O.wK)(t),
         a = () => {
             s.K.set(S.tM, "true"), (0, _.uL)(C.Z5c.CHANNEL(t.id, E.oC.GUILD_SHOP));
         };
