@@ -38,10 +38,10 @@ let C = {
                 innerClassName: P,
                 isHighlighted: w,
                 showStatus: D,
-                showPlaceholderUser: x,
-                pendingGlobalName: L,
-                pendingDisplayNameStyles: j,
-                avatarDecorationOverride: M,
+                showPlaceholderUser: L,
+                pendingGlobalName: x,
+                pendingDisplayNameStyles: M,
+                avatarDecorationOverride: j,
                 nameplatePreviewSize: k = "default",
                 isPurchased: U = !1,
                 skipEffectDisplayName: G = !1,
@@ -57,17 +57,18 @@ let C = {
                 null != t
                     ? (0, E.Ly)({
                           pendingNickname: void 0,
-                          pendingGlobalName: L,
+                          pendingGlobalName: x,
                           user: t,
                           guildMember: W,
                       })
                     : void 0,
             z = C[k],
             q = (0, f.Y)({ location: "NameplatePreview" }),
-            X = void 0 !== j ? j : null == t ? void 0 : t.displayNameStyles;
+            X = void 0 !== M ? M : null == t ? void 0 : t.displayNameStyles,
+            Q = null != a ? I.intl.formatToPlainString(I.t.YJig7O, { a11y_text: a.label }) : I.intl.string(I.t.SZeUdX);
         return (0, r.jsx)("div", {
             role: "img",
-            "aria-label": I.intl.string(I.t.SZeUdX),
+            "aria-label": Q,
             style: {
                 color: Z ? "white" : "black",
                 width: null != B ? "".concat(B, "px") : "100%",
@@ -87,7 +88,7 @@ let C = {
                                 nameplate: F,
                                 hovered: w,
                                 placement: m.i.PREVIEW,
-                                content: x ? void 0 : Y,
+                                content: L ? void 0 : Y,
                             },
                             null == a ? void 0 : a.id,
                         ),
@@ -96,7 +97,7 @@ let C = {
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(T.avatarContainer, !x && T.avatarVisible),
+                                      className: o()(T.avatarContainer, !L && T.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
                                           ref: Y,
                                           avatar: (0, r.jsx)(d.Z, {
@@ -105,7 +106,7 @@ let C = {
                                               avatarSize: z,
                                               status: D ? V : void 0,
                                               "aria-hidden": !0,
-                                              avatarDecorationOverride: null != M ? { asset: M.asset } : void 0,
+                                              avatarDecorationOverride: null != j ? { asset: j.asset } : void 0,
                                           }),
                                           decorators: (0, r.jsx)(h.ZP, {
                                               userId: t.id,
@@ -124,7 +125,7 @@ let C = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(T.avatarContainer, x && T.avatarVisible),
+                                className: o()(T.avatarContainer, L && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: Z ? S : A,
