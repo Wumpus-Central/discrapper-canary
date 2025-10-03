@@ -2914,17 +2914,17 @@
 @keyframes checkDraw__714a9 {
     0% {
         opacity: 0;
-        transform: scale(.85)
+        transform: scale(.7)
     }
 
     25% {
         opacity: 0;
-        transform: scale(.85)
+        transform: scale(.7)
     }
 
     26% {
         opacity: 1;
-        transform: scale(.85)
+        transform: scale(.7)
     }
 
     83% {
@@ -2945,12 +2945,12 @@
 
     25% {
         opacity: 1;
-        transform: scale(.85)
+        transform: scale(.7)
     }
 
     26% {
         opacity: 0;
-        transform: scale(.85)
+        transform: scale(.7)
     }
 
     to {
@@ -2988,12 +2988,22 @@
     position: absolute
 }
 
-.checkmark__714a9 {
-    color: var(--checkbox-foreground-active);
-    position: relative
+.checkStroke__714a9 {
+    opacity: 0
 }
 
 .checkStroke__714a9,
+.checkmark__714a9 {
+    color: var(--checkbox-foreground-active);
+    display: block;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    width: 100%
+}
+
 .dot__714a9 {
     opacity: 0;
     transform-origin: 10px 10px
