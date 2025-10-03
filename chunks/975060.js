@@ -81,10 +81,10 @@ function D(e) {
     let { email: t, nonce: n, billingAddress: r } = e;
     (c = t), (u = n), R(r), (I = h.length > 0);
 }
-function x() {
+function L() {
     (d = ""), (u = null);
 }
-function L(e) {
+function x(e) {
     let { username: t, nonce: n } = e;
     (d = t), (u = n);
 }
@@ -126,10 +126,10 @@ function Z(e) {
         ? ((A = !0), (S = t.payment_id))
         : (null == t ? void 0 : t.payment_source_id) != null && ((A = !0), (C = t.payment_source_id));
 }
-function V() {
+function F() {
     (A = !1), (S = null);
 }
-class F extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     get stripePaymentMethod() {
         return f;
     }
@@ -153,6 +153,9 @@ class F extends (r = i.ZP.Store) {
     }
     get redirectedPaymentSourceId() {
         return C;
+    }
+    clearRedirectedPaymentSourceId() {
+        C = null;
     }
     getCreditCardInfo() {
         return { name: m };
@@ -179,15 +182,15 @@ class F extends (r = i.ZP.Store) {
         return T;
     }
 }
-l(F, "displayName", "NewPaymentSourceStore");
-let H = new F(a.Z, {
+l(V, "displayName", "NewPaymentSourceStore");
+let H = new V(a.Z, {
     NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: P,
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: j,
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: M,
     BRAINTREE_TOKENIZE_PAYPAL_START: w,
     BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: D,
-    BRAINTREE_TOKENIZE_VENMO_START: x,
-    BRAINTREE_TOKENIZE_VENMO_SUCCESS: L,
+    BRAINTREE_TOKENIZE_VENMO_START: L,
+    BRAINTREE_TOKENIZE_VENMO_SUCCESS: x,
     BRAINTREE_TOKENIZE_PAYPAL_FAIL: B,
     BRAINTREE_TOKENIZE_VENMO_FAIL: B,
     ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS: k,
@@ -199,5 +202,5 @@ let H = new F(a.Z, {
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: N,
     LOGOUT: N,
     BILLING_POPUP_BRIDGE_CALLBACK: Z,
-    RESET_PAYMENT_ID: V,
+    RESET_PAYMENT_ID: F,
 });
