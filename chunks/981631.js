@@ -5924,6 +5924,7 @@ var nW = (function (e) {
             (e.SYSTEM_SERVICE = "34853435033367"),
             (e.IN_GAME_FEATURES = "27893392334359"),
             (e.SLOWMODE = "360016150952"),
+            (e.CUSTOM_PROFILES_WISHLIST = "4403147417623#h_01K6DY1CJBBQHBFPETCDTJHE9B"),
             e
         );
     })({}),
