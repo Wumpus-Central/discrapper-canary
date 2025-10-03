@@ -79481,13 +79481,8 @@ div.nagbar_d74ef8 {
     outline-offset: -2px
 }
 
-.voiceModalContainer__25eff {
+.container__25eff {
     height: 400px
-}
-
-.voiceModalRootContainer__25eff {
-    max-height: 400px;
-    min-height: 0
 }
 
 .channelIdSection__25eff {
@@ -79499,7 +79494,7 @@ div.nagbar_d74ef8 {
 }
 
 .voiceChannelList__25eff {
-    min-height: 16px;
+    height: 340px;
     padding: 0 16px
 }
 
