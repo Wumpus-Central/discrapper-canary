@@ -1,25 +1,32 @@
 n.d(t, { Z: () => d });
 var l = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    i = n.n(a),
     r = n(481060),
     s = n(943970),
-    o = n(440589),
+    o = n(401561),
     c = n(388032),
-    u = n(114162);
+    u = n(720534);
 function d(e) {
-    let { className: t, game: n, onClick: i, imageClassName: d, disabled: m = !1 } = e,
+    let { className: t, game: n, onClick: a, imageClassName: d, disabled: m = !1 } = e,
         v = (0, s.Z)(n.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
         "aria-disabled": m,
-        className: a()(u.game, { [u.disabled]: m }, t),
-        onClick: m ? void 0 : () => i(n),
+        className: i()(u.game, { [u.disabled]: m }, t),
+        onClick: m ? void 0 : () => a(n),
         children: [
-            (0, l.jsx)("img", {
-                className: a()(u.image, d),
-                alt: "",
-                src: null != v ? v : "",
+            (0, l.jsxs)("div", {
+                className: i()(u.gameImageContainer, d),
+                children: [
+                    (0, l.jsx)("img", {
+                        className: u.image,
+                        alt: "",
+                        src: null != v ? v : "",
+                    }),
+                    (0, l.jsx)("div", { className: u.gameImageBorder }),
+                    (0, l.jsx)("div", { className: u.gameImageOverlay }),
+                ],
             }),
             (0, l.jsxs)("div", {
                 className: u.textContainer,
