@@ -35,9 +35,10 @@ function m(e) {
             text: h.intl.string(h.t.RscU7O),
             fullWidth: E !== p.l.MODAL_V2,
             onClick: (e) => {
-                null != v
-                    ? o.Z.launch({ applicationId: v })
-                    : (e.stopPropagation(), null == m || m({ action: "PRESS_PLAY_BUTTON" }), b());
+                e.stopPropagation(),
+                    null != v
+                        ? o.Z.launch({ applicationId: v })
+                        : (null == m || m({ action: "PRESS_PLAY_BUTTON" }), b());
             },
         });
     if (null == y) return null;

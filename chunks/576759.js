@@ -14,19 +14,20 @@ var r = n(951288),
     h = n(994102),
     m = n(671955),
     g = n(388032),
-    E = n(230759);
+    E = n(114004);
 function b(e) {
-    let { applicationId: t, onAction: n, onClose: b, activity: y } = e,
-        { analyticsLocations: O } = (0, l.ZP)(s.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { data: v } = (0, c.IX)(t),
-        I = (0, o.q)(v, s.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { themeType: T } = (0, p.z)(),
-        S = T === m.l.MODAL || T === m.l.MODAL_V2,
-        A = (0, f.L)(y),
-        C = I && S && null != v && !A,
-        N = C ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
-        [R] = (0, d.US)(N);
-    return C
+    var t;
+    let { applicationId: n, onAction: b, onClose: y, activity: O } = e,
+        { analyticsLocations: v } = (0, l.ZP)(s.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { data: I } = (0, c.IX)(n),
+        T = (0, o.q)(I, s.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { themeType: S } = (0, p.z)(),
+        A = S === m.l.MODAL || S === m.l.MODAL_V2,
+        C = (0, f.L)(null != (t = null == O ? void 0 : O.application_id) ? t : n),
+        N = T && A && null != I && !C,
+        R = N ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
+        [P] = (0, d.US)(R);
+    return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(_.Z, { className: E.cloudPlayDivider }),
@@ -36,7 +37,7 @@ function b(e) {
                           (0, r.jsxs)("div", {
                               className: E.cloudPlaySectionTextContainer,
                               children: [
-                                  R === i.z.CLOUD_PLAY_NEW_BADGE &&
+                                  P === i.z.CLOUD_PLAY_NEW_BADGE &&
                                       (0, r.jsx)(a.IGR, {
                                           text: g.intl.string(g.t.y2b7CA),
                                           color: u.Z.BG_BRAND,
@@ -48,10 +49,10 @@ function b(e) {
                               ],
                           }),
                           (0, r.jsx)(h.Z, {
-                              application: v,
-                              onAction: n,
-                              onClose: b,
-                              analyticsLocations: O,
+                              application: I,
+                              onAction: b,
+                              onClose: y,
+                              analyticsLocations: v,
                           }),
                       ],
                   }),
