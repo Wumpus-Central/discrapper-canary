@@ -1,6 +1,5 @@
 e.exports = {
-    voiceModalContainer: "voiceModalContainer__25eff",
-    voiceModalRootContainer: "voiceModalRootContainer__25eff",
+    container: "container__25eff",
     channelIdSection: "channelIdSection__25eff",
     inputWrapper: "inputWrapper__25eff",
     voiceChannelList: "voiceChannelList__25eff",

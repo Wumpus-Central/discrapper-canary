@@ -237,7 +237,7 @@ function L(e) {
             i.id,
         );
     }
-    function j(e) {
+    function M(e) {
         E();
         let t = e.key.toLowerCase();
         if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t)
@@ -261,7 +261,7 @@ function L(e) {
                     S >= L - 1 ? P(0) : P(S + 1);
             }
     }
-    let M = (() => {
+    let j = (() => {
         if (null != v) {
             var e;
             return null == (e = v[S]) ? void 0 : e.id;
@@ -269,26 +269,25 @@ function L(e) {
         let t = O[S];
         if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
     })();
-    return (0, r.jsx)("div", {
-        className: g.voiceModalContainer,
-        onMouseMove: p,
-        children: (0, r.jsxs)(o.Y0X, {
-            transitionState: t,
-            size: o.CgR.MEDIUM,
-            className: g.voiceModalRootContainer,
-            parentComponent: "SwitchChannelKeybindSettings",
+    return (0, r.jsx)(o.IX, {
+        transitionState: t,
+        size: "lg",
+        onClose: n,
+        children: (0, r.jsxs)("div", {
+            className: g.container,
+            onMouseMove: p,
             children: [
                 (0, r.jsx)("div", {
                     className: g.inputWrapper,
                     children: (0, r.jsx)(o.oil, {
                         value: b,
                         onChange: y,
-                        onKeyDown: j,
+                        onKeyDown: M,
                         placeholder: m.intl.string(m.t.tG0r7u),
                         role: "combobox",
                         "aria-controls": s,
                         "aria-expanded": L > 0,
-                        "aria-activedescendant": L > 0 && null != M ? M : void 0,
+                        "aria-activedescendant": L > 0 && null != j ? j : void 0,
                         "aria-autocomplete": "list",
                         spellCheck: !1,
                     }),
