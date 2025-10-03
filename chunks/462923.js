@@ -1,4 +1,4 @@
-t.d(n, { ZP: () => k }), t(388685);
+t.d(n, { ZP: () => Z }), t(388685);
 var r = t(951288),
     a = t(647438),
     i = t(120356),
@@ -13,17 +13,18 @@ var r = t(951288),
     g = t(572004),
     f = t(49012),
     x = t(639777),
-    p = t(310978),
+    p = t(744993),
+    v = t(310978),
     j = t(444083),
-    v = t(943970),
-    _ = t(998964),
-    h = t(340887),
-    y = t(408629),
-    O = t(921944),
-    C = t(401561),
+    _ = t(943970),
+    y = t(998964),
+    O = t(340887),
+    h = t(408629),
+    C = t(921944),
+    I = t(401561),
     N = t(388032),
-    I = t(842788);
-function P(e) {
+    P = t(842788);
+function S(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -48,29 +49,14 @@ function P(e) {
     }
     return e;
 }
-function S(e) {
-    return (0, r.jsx)(
-        d.zxk,
-        P(
-            {
-                fullWidth: !0,
-                text: N.intl.string(C.default.NHwQ0N),
-                variant: "secondary",
-            },
-            e,
-        ),
-    );
-}
 function T(e) {
     return (0, r.jsx)(
         d.zxk,
-        P(
+        S(
             {
                 fullWidth: !0,
-                text: N.intl.string(C.default["jO3u+/"]),
+                text: N.intl.string(I.default.NHwQ0N),
                 variant: "secondary",
-                icon: d.Gr1,
-                iconPosition: "end",
             },
             e,
         ),
@@ -79,10 +65,25 @@ function T(e) {
 function w(e) {
     return (0, r.jsx)(
         d.zxk,
-        P(
+        S(
             {
                 fullWidth: !0,
-                text: N.intl.string(C.default["0TMXHh"]),
+                text: N.intl.string(I.default["jO3u+/"]),
+                variant: "secondary",
+                icon: d.Gr1,
+                iconPosition: "end",
+            },
+            e,
+        ),
+    );
+}
+function k(e) {
+    return (0, r.jsx)(
+        d.zxk,
+        S(
+            {
+                fullWidth: !0,
+                text: N.intl.string(I.default["0TMXHh"]),
                 variant: "primary",
             },
             e,
@@ -92,10 +93,10 @@ function w(e) {
 function E(e) {
     return (0, r.jsx)(
         d.zxk,
-        P(
+        S(
             {
                 fullWidth: !0,
-                text: N.intl.string(C.default.irvMjo),
+                text: N.intl.string(I.default.irvMjo),
                 variant: "primary",
                 icon: d.Gr1,
                 iconPosition: "end",
@@ -104,41 +105,44 @@ function E(e) {
         ),
     );
 }
-function k(e) {
+function Z(e) {
     let { guildId: n, instance: t } = e,
-        i = (0, _.Z)(t),
-        P = null != t.serverIP && null != t.port,
-        [k, Z] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        D = k !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        G = (0, l.e7)([m.Z], () => m.Z.getDetectableGame(t.gameId)),
-        R = a.useCallback(() => {
-            D || null == t.providerType
-                ? (0, h.Z)(n, t)
-                : (0, y.Z)({
+        i = (0, y.Z)(t),
+        S = null != t.serverIP && null != t.port,
+        [Z, D] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        G = Z !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        R = (0, l.e7)([m.Z], () => m.Z.getDetectableGame(t.gameId)),
+        A = a.useCallback(() => {
+            G || null == t.providerType
+                ? (0, O.Z)(n, t)
+                : (0, h.Z)({
                       provider: t.providerType,
                       onAccept: () => {
-                          Z(O.L.TAKE_ACTION), (0, h.Z)(n, t);
+                          D(C.L.TAKE_ACTION), (0, O.Z)(n, t);
                       },
                   });
-        }, [t, D, Z, n]),
-        A = a.useCallback(() => {
+        }, [t, G, D, n]),
+        V = a.useCallback(() => {
             (0, g.JG)(i), (0, d.showToast)((0, d.createToast)(N.intl.string(N.t["+5kSoa"]), d.ToastType.SUCCESS));
         }, [i]),
-        V = (0, v.Z)(t.gameId, "cover"),
-        W = (0, x.Z)(n),
-        B = a.useCallback(() => {
+        W = (0, _.Z)(t.gameId, "cover"),
+        B = (0, x.Z)(n),
+        L = a.useCallback(() => {
             var e;
             (0, f.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
-        L = a.useMemo(() => {
+        M = a.useCallback(() => {
+            (0, p.WX)(n, t.id);
+        }, [n, t.id]),
+        U = a.useMemo(() => {
             switch (t.status) {
                 case o.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(S, {}),
-                            W &&
-                                (0, r.jsx)(T, {
-                                    onClick: B,
+                            (0, r.jsx)(T, { onClick: M }),
+                            B &&
+                                (0, r.jsx)(w, {
+                                    onClick: L,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -148,58 +152,58 @@ function k(e) {
                 case o.V.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(w, {
-                                onClick: R,
-                                disabled: !P,
+                            (0, r.jsx)(k, {
+                                onClick: A,
+                                disabled: !S,
                             }),
-                            W &&
-                                (0, r.jsx)(T, {
-                                    onClick: B,
+                            B &&
+                                (0, r.jsx)(w, {
+                                    onClick: L,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
                 case o.V.MISSING_STOCK:
-                    return W
-                        ? (0, r.jsx)(E, { onClick: B })
-                        : (0, r.jsx)(w, {
-                              onClick: R,
+                    return B
+                        ? (0, r.jsx)(E, { onClick: L })
+                        : (0, r.jsx)(k, {
+                              onClick: A,
                               disabled: !0,
                           });
                 case o.V.DELETED:
                 case o.V.STARTUP_FAILED:
-                    return W
-                        ? (0, r.jsx)(T, {
-                              onClick: B,
+                    return B
+                        ? (0, r.jsx)(w, {
+                              onClick: L,
                               disabled: null == t.gameServerPanelUrl,
                           })
-                        : (0, r.jsx)(w, {
-                              onClick: R,
+                        : (0, r.jsx)(k, {
+                              onClick: A,
                               disabled: !0,
                           });
                 default:
                     return null;
             }
-        }, [t, R, W, B, P]);
+        }, [t, A, B, L, S, M]);
     return (0, r.jsxs)("div", {
-        className: I.card,
+        className: P.card,
         children: [
             (0, r.jsxs)("div", {
-                className: I.contentWrapper,
+                className: P.contentWrapper,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: I.serverDetailsContainer,
+                        className: P.serverDetailsContainer,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: I.serverHeader,
+                                className: P.serverHeader,
                                 children: [
                                     (0, r.jsx)("img", {
-                                        src: null != V ? V : "",
+                                        src: null != W ? W : "",
                                         alt: "",
-                                        className: I.gameImage,
+                                        className: P.gameImage,
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: I.serverInfo,
+                                        className: P.serverInfo,
                                         children: [
                                             (0, r.jsx)(d.X6q, {
                                                 variant: "heading-sm/medium",
@@ -208,7 +212,7 @@ function k(e) {
                                             (0, r.jsxs)(d.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-tertiary",
-                                                children: [null != G ? "".concat(G.name, " \u2022 ") : "", t.planName],
+                                                children: [null != R ? "".concat(R.name, " \u2022 ") : "", t.planName],
                                             }),
                                         ],
                                     }),
@@ -216,14 +220,14 @@ function k(e) {
                             }),
                             (0, r.jsx)("div", {
                                 children: (0, r.jsxs)("div", {
-                                    className: I.detailsGrid,
+                                    className: P.detailsGrid,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: I.detailItem,
+                                            className: P.detailItem,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
-                                                    children: N.intl.string(C.default.X0IaiI),
+                                                    children: N.intl.string(I.default.X0IaiI),
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/medium",
@@ -243,16 +247,16 @@ function k(e) {
                                             ],
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: I.detailItem,
+                                            className: P.detailItem,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
-                                                    children: N.intl.string(C.default["9pw/yM"]),
+                                                    children: N.intl.string(I.default["9pw/yM"]),
                                                 }),
                                                 (0, r.jsx)("div", {
-                                                    className: I.serverIpContainer,
-                                                    children: P
-                                                        ? D
+                                                    className: P.serverIpContainer,
+                                                    children: S
+                                                        ? G
                                                             ? (0, r.jsxs)(r.Fragment, {
                                                                   children: [
                                                                       (0, r.jsx)(d.Text, {
@@ -260,9 +264,9 @@ function k(e) {
                                                                           children: i,
                                                                       }),
                                                                       (0, r.jsx)(d.P3F, {
-                                                                          className: I.copyButton,
+                                                                          className: P.copyButton,
                                                                           "aria-label": N.intl.string(N.t.OpuAlJ),
-                                                                          onClick: A,
+                                                                          onClick: V,
                                                                           children: (0, r.jsx)(d.TIy, { size: "sm" }),
                                                                       }),
                                                                   ],
@@ -270,14 +274,14 @@ function k(e) {
                                                             : null != t.providerType &&
                                                               (0, r.jsx)(b.Z, {
                                                                   onClick: () => {
-                                                                      (0, y.Z)({
+                                                                      (0, h.Z)({
                                                                           provider: t.providerType,
                                                                           onAccept: () => {
-                                                                              Z(O.L.TAKE_ACTION), (0, h.Z)(n, t);
+                                                                              D(C.L.TAKE_ACTION), (0, O.Z)(n, t);
                                                                           },
                                                                       });
                                                                   },
-                                                                  children: N.intl.string(C.default.UwXK29),
+                                                                  children: N.intl.string(I.default.UwXK29),
                                                               })
                                                         : (0, r.jsx)(d.Text, {
                                                               variant: "text-sm/medium",
@@ -287,19 +291,19 @@ function k(e) {
                                             ],
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: I.detailItem,
+                                            className: P.detailItem,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
-                                                    children: N.intl.string(C.default.MQQIu7),
+                                                    children: N.intl.string(I.default.MQQIu7),
                                                 }),
                                                 (0, r.jsxs)("div", {
-                                                    className: I.statusContainer,
+                                                    className: P.statusContainer,
                                                     children: [
                                                         (0, r.jsx)("span", {
                                                             className: s()(
-                                                                I.statusIndicator,
-                                                                null != t.status && I[t.status],
+                                                                P.statusIndicator,
+                                                                null != t.status && P[t.status],
                                                             ),
                                                         }),
                                                         (0, r.jsx)(d.Text, {
@@ -307,19 +311,19 @@ function k(e) {
                                                             children: (function (e) {
                                                                 switch (e) {
                                                                     case o.V.STARTING:
-                                                                        return N.intl.string(C.default["7XF8pK"]);
+                                                                        return N.intl.string(I.default["7XF8pK"]);
                                                                     case o.V.STARTUP_FAILED:
-                                                                        return N.intl.string(C.default["C/096+"]);
+                                                                        return N.intl.string(I.default["C/096+"]);
                                                                     case o.V.OFFLINE:
-                                                                        return N.intl.string(C.default.Bz9gcH);
+                                                                        return N.intl.string(I.default.Bz9gcH);
                                                                     case o.V.ONLINE:
-                                                                        return N.intl.string(C.default["7q4iGR"]);
+                                                                        return N.intl.string(I.default["7q4iGR"]);
                                                                     case o.V.DELETED:
-                                                                        return N.intl.string(C.default["UvP/1N"]);
+                                                                        return N.intl.string(I.default["UvP/1N"]);
                                                                     case o.V.MISSING_STOCK:
-                                                                        return N.intl.string(C.default.ssC3cX);
+                                                                        return N.intl.string(I.default.ssC3cX);
                                                                     case o.V.SLEEPING:
-                                                                        return N.intl.string(C.default.PS8AMT);
+                                                                        return N.intl.string(I.default.PS8AMT);
                                                                     default:
                                                                         return "\u2014";
                                                                 }
@@ -330,11 +334,11 @@ function k(e) {
                                             ],
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: I.detailItem,
+                                            className: P.detailItem,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/semibold",
-                                                    children: N.intl.string(C.default.fqrxlJ),
+                                                    children: N.intl.string(I.default.fqrxlJ),
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/medium",
@@ -348,18 +352,18 @@ function k(e) {
                             }),
                         ],
                     }),
-                    null != L &&
+                    null != U &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)("div", { className: I.divider }),
+                                (0, r.jsx)("div", { className: P.divider }),
                                 (0, r.jsx)("div", {
-                                    className: I.serverActions,
-                                    children: L,
+                                    className: P.serverActions,
+                                    children: U,
                                 }),
                             ],
                         }),
                     (0, r.jsx)("div", {
-                        className: I.overflowMenu,
+                        className: P.overflowMenu,
                         children: (0, r.jsx)(j.Z, {
                             guildId: n,
                             instance: t,
@@ -368,8 +372,8 @@ function k(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: I.imageBackground,
-                children: (0, r.jsx)(p.M, { imageUrl: null != V ? V : "" }),
+                className: P.imageBackground,
+                children: (0, r.jsx)(v.M, { imageUrl: null != W ? W : "" }),
             }),
         ],
     });

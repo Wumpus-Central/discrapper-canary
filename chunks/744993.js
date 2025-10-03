@@ -3,6 +3,7 @@ n.d(t, {
     EY: () => _,
     NE: () => j,
     TN: () => g,
+    WX: () => E,
     _k: () => C,
     g$: () => b,
     iX: () => f,
@@ -169,6 +170,20 @@ function C(e) {
             r.Z.dispatch({
                 type: "PORTKEY_FETCH_REGIONS_SUCCESS",
                 regions: e.body.map(u.Z).sort((e, t) => e.name.localeCompare(t.name)),
+            });
+        });
+}
+function E(e, t) {
+    return a.tn
+        .post({
+            url: p.ANM.GAME_SERVER_WAKE(e, t),
+            rejectWithError: !0,
+        })
+        .then((t) => {
+            r.Z.dispatch({
+                type: "PORTKEY_UPDATE_INSTANCE_SUCCESS",
+                guildId: e,
+                instance: (0, c.Z)(t.body),
             });
         });
 }
