@@ -78,12 +78,26 @@ function f(e, t) {
     return i;
 }
 function _(e) {
-    if ((0, i.A)("RadioGroup")) return (0, r.jsx)(a.C, l({}, e));
+    if ((0, i.A)("RadioGroup")) {
+        let t = u(l({}, e), {
+            value: null != e.value ? String(e.value) : void 0,
+            options: e.options.map((e) => u(l({}, e), { value: String(e.value) })),
+            onChange:
+                null != e.onChange
+                    ? (t) => {
+                          let n = e.options.find((e) => String(e.value) === t);
+                          null != n && e.onChange(n.value);
+                      }
+                    : void 0,
+        });
+        return (0, r.jsx)(a.C, l({}, t));
+    }
     let { size: t } = e,
         n = d(e, ["size"]),
         s = e.options.map((e) => {
             var t, n;
             return u(l({}, e), {
+                icon: e.leadingIcon,
                 desc:
                     "string" == typeof e.desc
                         ? e.desc

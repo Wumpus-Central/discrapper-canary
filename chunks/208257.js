@@ -1,8 +1,13 @@
-n.d(t, { t: () => o }), n(388685);
+n.d(t, { t: () => d }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(695046);
-let o = {
+    a = n(30717),
+    o = n(895070),
+    s = n(632140),
+    l = n(125455),
+    c = n(966649),
+    u = n(695046);
+let d = {
     title: "VoidRadioGroup",
     stories: [
         {
@@ -12,35 +17,76 @@ let o = {
                 let {
                         optionCount: t,
                         size: n,
-                        disabled: o,
-                        orientation: s,
-                        radioPosition: l,
-                        withTransparentBackground: c,
+                        disabled: d,
+                        orientation: f,
+                        radioPosition: _,
+                        withTransparentBackground: p,
+                        label: h,
+                        description: m,
+                        withDescriptions: g,
+                        withIcons: E,
                     } = e,
-                    [u, d] = i.useState("option1"),
-                    f = Array.from({ length: t }, (e, t) => ({
+                    [b, y] = i.useState("option1"),
+                    O = [a.d, o.A, s.x, l.e, c.U],
+                    v = Array.from({ length: t }, (e, t) => ({
                         value: "option".concat(t + 1),
                         name: "Option ".concat(t + 1),
+                        description: g ? "This is a description for option ".concat(t + 1) : void 0,
+                        icon: E ? O[t % O.length] : void 0,
                     }));
-                return (0, r.jsx)(a.Gu, {
-                    value: u,
+                return (0, r.jsx)(u.Gu, {
+                    value: b,
                     onChange: (e) => {
                         let { value: t } = e;
-                        return d(t);
+                        return y(t);
                     },
-                    options: f,
+                    options: v,
                     size: n,
-                    disabled: o,
-                    orientation: s,
-                    radioPosition: l,
-                    withTransparentBackground: c,
+                    disabled: d,
+                    orientation: f,
+                    radioPosition: _,
+                    withTransparentBackground: p,
+                    label: h,
+                    description: m,
                 });
             },
             controls: {
                 optionCount: {
-                    type: "number",
-                    label: "Option Count",
+                    type: "select",
+                    label: "Number of Options",
                     defaultValue: 3,
+                    options: [
+                        {
+                            label: "2 Options",
+                            value: 2,
+                        },
+                        {
+                            label: "3 Options",
+                            value: 3,
+                        },
+                        {
+                            label: "4 Options",
+                            value: 4,
+                        },
+                        {
+                            label: "5 Options",
+                            value: 5,
+                        },
+                        {
+                            label: "6 Options",
+                            value: 6,
+                        },
+                    ],
+                },
+                withDescriptions: {
+                    type: "boolean",
+                    label: "Show Descriptions",
+                    defaultValue: !0,
+                },
+                withIcons: {
+                    type: "boolean",
+                    label: "Show Icons",
+                    defaultValue: !0,
                 },
                 size: {
                     type: "select",
@@ -69,7 +115,7 @@ let o = {
                 orientation: {
                     type: "select",
                     label: "Orientation",
-                    defaultValue: "horizontal",
+                    defaultValue: "vertical",
                     options: [
                         {
                             label: "Horizontal",
