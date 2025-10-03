@@ -37,8 +37,8 @@ var c = n(442837),
     P = n(871118),
     w = n(565138),
     D = n(66999),
-    x = n(359110),
-    L = n(12168),
+    L = n(359110),
+    x = n(12168),
     j = n(237583),
     M = n(131704),
     k = n(592125),
@@ -177,30 +177,31 @@ function ey(e) {
     let { channel: t, user: n, onReaction: a, entry: o, buttons: s = [], header: f, onVoiceChannelPreview: h } = e,
         [m, g] = i.useState(!1),
         [E, b] = i.useState(null),
-        O = (0, c.e7)(
+        O = i.useRef(null),
+        v = (0, c.e7)(
             [G.Z],
             () => null != t && es.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && G.Z.can(es.Plq.SEND_MESSAGES, t),
         ),
-        [v, T] = i.useState(!1),
-        [S, A] = i.useState(!1),
-        { voiceBar: C, joinVoiceButton: N } = eC({
+        [T, S] = i.useState(!1),
+        [A, C] = i.useState(!1),
+        { voiceBar: N, joinVoiceButton: R } = eC({
             channel: t,
             entry: o,
             onVoiceChannelPreview: h,
         }),
-        { embeddedActivity: R } = (0, $.Z)(o),
-        P = eA(R),
-        w = null != N && 0 === s.length ? [N] : s,
-        D = w.length > 0,
-        x = w.length >= 2,
-        [L, j] = i.useState(!D),
-        M = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-        U =
+        { embeddedActivity: P } = (0, $.Z)(o),
+        w = eA(P),
+        D = null != R && 0 === s.length ? [R] : s,
+        L = D.length > 0,
+        x = D.length >= 2,
+        [j, M] = i.useState(!L),
+        U = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+        B =
             null != t && m
                 ? ec.intl.formatToPlainString(ec.t["8lzR/f"], { channel: "#".concat(t.name) })
-                : ec.intl.formatToPlainString(ec.t["4c+CAw"], { channel: "@".concat(M) }),
-        B = m ? ec.intl.string(ec.t.Z2CUgo) : ec.intl.string(ec.t.XLGiTE),
-        Z = async (e) => {
+                : ec.intl.formatToPlainString(ec.t["4c+CAw"], { channel: "@".concat(U) }),
+        Z = m ? ec.intl.string(ec.t.Z2CUgo) : ec.intl.string(ec.t.XLGiTE),
+        F = async (e) => {
             let r,
                 { emoji: i } = e;
             if (null != i) {
@@ -211,8 +212,8 @@ function ey(e) {
                         guild_id: null == t ? void 0 : t.guild_id,
                     }),
                     (0, I.Q3)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
-                    T(!0),
-                    A(!1),
+                    S(!0),
+                    C(!1),
                     m)
                 )
                     l()(null != t, "shareToChannelMode should only be true if a valid channel is passed"), (r = t);
@@ -223,13 +224,13 @@ function ey(e) {
                 }
                 return (
                     l()(null != r, "Send channel must be defined"),
-                    V({
+                    H({
                         reply: ":".concat(i.name, ":"),
                         sendToChannel: r,
                         onComplete: (e, t) => {
-                            A(!0),
+                            C(!0),
                                 setTimeout(() => {
-                                    T(!1), a(e, t);
+                                    S(!1), a(e, t);
                                 }, 600);
                         },
                         interactionType: eo.xP.REACTION_EMOJI_REACT_SENT,
@@ -238,7 +239,7 @@ function ey(e) {
                 );
             }
         },
-        F = async (e) => {
+        V = async (e) => {
             let r;
             if (((0, I.Q3)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), m))
                 l()(null != t, "shareToChannelMode should only be true if a valid channel is passed"), (r = t);
@@ -248,7 +249,7 @@ function ey(e) {
                 l()(null != t, "DM channel must be defined"), (r = t);
             }
             let i = r.type === es.d4z.DM ? eo.xP.DM_REACTION_MESSAGE_SENT : eo.xP.CHANNEL_REACTION_MESSAGE_SENT;
-            return V({
+            return H({
                 reply: e,
                 sendToChannel: r,
                 interactionType: i,
@@ -256,7 +257,7 @@ function ey(e) {
                 requiresChannelReadiness: !0,
             });
         },
-        V = async (e) => {
+        H = async (e) => {
             let { reply: t, sendToChannel: n, onComplete: r, interactionType: i, requiresChannelReadiness: a } = e;
             null == E || E.focus(),
                 await (0, J.p)({
@@ -269,105 +270,111 @@ function ey(e) {
                 }),
                 null == r || r(i, n);
         },
-        H = null != f ? f : null != C ? C : null != P ? P : void 0,
-        W = () => {
-            g((e) => !e), L && (null == E || E.focus());
+        W = null != f ? f : null != N ? N : null != w ? w : void 0,
+        z = () => {
+            g((e) => !e), j && (null == E || E.focus());
         },
-        z = (e) => {
-            j(e), e && (null == E || E.focus());
+        q = (e) => {
+            M(e), e && (null == E || E.focus());
         };
-    return (0, r.jsxs)("div", {
-        style: { pointerEvents: v ? "none" : "all" },
-        children: [
-            (0, r.jsx)(ea.Z, {
-                sent: S,
-                shown: v,
-                className: eu.toastContainer,
-            }),
-            null != H
-                ? H
-                : (0, r.jsx)(er.Z, {
-                      children: (0, r.jsxs)("div", {
-                          className: eu.emojiHotrailShareToChannel,
-                          children: [
-                              (0, r.jsx)(eO, {
-                                  channel: t,
-                                  onClickSuggestion: Z,
-                              }),
-                              (0, r.jsx)(y.dE, { onSelectEmoji: Z }),
-                          ],
-                      }),
-                  }),
-            (0, r.jsxs)("div", {
-                className: L ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
+    return (0, r.jsx)("div", {
+        ref: O,
+        style: { pointerEvents: T ? "none" : "all" },
+        children: (0, r.jsx)(_.EqS, {
+            containerRef: O,
+            children: (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(y.A7, {
-                        placeholder: U,
-                        onEnter: F,
-                        setEditorRef: (e) => b(e),
-                        channel: m ? t : void 0,
-                        showEmojiButton: null != H,
-                        className: eu.replyInput,
-                        autoFocus: !1,
-                        renderAttachButton: O
-                            ? () =>
-                                  (0, r.jsx)(_.ua7, {
-                                      text: B,
-                                      children: (e) =>
-                                          (0, r.jsx)(
-                                              _.P3F,
-                                              ep(ef({}, e), {
-                                                  className: eu.shareToChannelButton,
-                                                  onClick: W,
-                                                  children: m
-                                                      ? (0, r.jsx)(_.VL1, {
-                                                            size: "custom",
-                                                            width: 20,
-                                                            height: 20,
-                                                        })
-                                                      : (0, r.jsx)(_.lOy, {
-                                                            size: "custom",
-                                                            width: 20,
-                                                            height: 20,
-                                                        }),
-                                              }),
-                                          ),
-                                  })
-                            : void 0,
+                    (0, r.jsx)(ea.Z, {
+                        sent: A,
+                        shown: T,
+                        className: eu.toastContainer,
                     }),
-                    D &&
-                        (0, r.jsx)(_.P3F, {
-                            onClick: () => z(!1),
-                            className: eu.primaryActionPopoutMessageCloseIcon,
-                            children: (0, r.jsx)(_.Dio, {
-                                size: "custom",
-                                width: 20,
-                                height: 20,
-                                color: d.Z.colors.ICON_PRIMARY,
+                    null != W
+                        ? W
+                        : (0, r.jsx)(er.Z, {
+                              children: (0, r.jsxs)("div", {
+                                  className: eu.emojiHotrailShareToChannel,
+                                  children: [
+                                      (0, r.jsx)(eO, {
+                                          channel: t,
+                                          onClickSuggestion: F,
+                                      }),
+                                      (0, r.jsx)(y.dE, { onSelectEmoji: F }),
+                                  ],
+                              }),
+                          }),
+                    (0, r.jsxs)("div", {
+                        className: j ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
+                        children: [
+                            (0, r.jsx)(y.A7, {
+                                placeholder: B,
+                                onEnter: V,
+                                setEditorRef: (e) => b(e),
+                                channel: m ? t : void 0,
+                                showEmojiButton: null != W,
+                                className: eu.replyInput,
+                                autoFocus: !1,
+                                renderAttachButton: v
+                                    ? () =>
+                                          (0, r.jsx)(_.ua7, {
+                                              text: Z,
+                                              children: (e) =>
+                                                  (0, r.jsx)(
+                                                      _.P3F,
+                                                      ep(ef({}, e), {
+                                                          className: eu.shareToChannelButton,
+                                                          onClick: z,
+                                                          children: m
+                                                              ? (0, r.jsx)(_.VL1, {
+                                                                    size: "custom",
+                                                                    width: 20,
+                                                                    height: 20,
+                                                                })
+                                                              : (0, r.jsx)(_.lOy, {
+                                                                    size: "custom",
+                                                                    width: 20,
+                                                                    height: 20,
+                                                                }),
+                                                      }),
+                                                  ),
+                                          })
+                                    : void 0,
                             }),
+                            L &&
+                                (0, r.jsx)(_.P3F, {
+                                    onClick: () => q(!1),
+                                    className: eu.primaryActionPopoutMessageCloseIcon,
+                                    children: (0, r.jsx)(_.Dio, {
+                                        size: "custom",
+                                        width: 20,
+                                        height: 20,
+                                        color: d.Z.colors.ICON_PRIMARY,
+                                    }),
+                                }),
+                        ],
+                    }),
+                    !1 === j &&
+                        (0, r.jsxs)("div", {
+                            className: eu.primaryActionPopoutActionButtons,
+                            children: [
+                                !x &&
+                                    (0, r.jsx)(
+                                        _.zxk,
+                                        {
+                                            fullWidth: !0,
+                                            variant: "secondary",
+                                            onClick: () => q(!0),
+                                            size: x ? "sm" : "md",
+                                            text: ec.intl.string(ec.t.OAJQlJ),
+                                        },
+                                        "toggleMessageMode",
+                                    ),
+                                D,
+                            ],
                         }),
                 ],
             }),
-            !1 === L &&
-                (0, r.jsxs)("div", {
-                    className: eu.primaryActionPopoutActionButtons,
-                    children: [
-                        !x &&
-                            (0, r.jsx)(
-                                _.zxk,
-                                {
-                                    fullWidth: !0,
-                                    variant: "secondary",
-                                    onClick: () => z(!0),
-                                    size: x ? "sm" : "md",
-                                    text: ec.intl.string(ec.t.OAJQlJ),
-                                },
-                                "toggleMessageMode",
-                            ),
-                        w,
-                    ],
-                }),
-        ],
+        }),
     });
 }
 let eO = (e) => {
@@ -407,7 +414,7 @@ let eO = (e) => {
                               position: "top",
                               "aria-label": ec.intl.formatToPlainString(ec.t.kilW3t, { emojiName: t.name }),
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(L.u, {
+                              children: (0, r.jsx)(x.u, {
                                   emoji: t,
                                   isDisabled: !a,
                                   onClick: () => n({ emoji: t }),
@@ -665,7 +672,7 @@ function eS(e) {
         ),
         T = O ? I : void 0,
         { activity: S, activityApplication: w, fallbackApplication: D } = (0, $.Z)(y),
-        { largeImage: x, smallImage: L } = (0, z.YC)(S, null != w ? w : D),
+        { largeImage: L, smallImage: x } = (0, z.YC)(S, null != w ? w : D),
         { largeImage: j } = (0, z.rv)({ entry: y });
     return (0, r.jsxs)("div", {
         className: eu.popoutContentWrapper,
@@ -703,12 +710,12 @@ function eS(e) {
                     (0, r.jsxs)("div", {
                         className: eu.streamingPopoutHeader,
                         children: [
-                            null != x &&
+                            null != L &&
                                 (0, r.jsx)("div", {
                                     className: eu.popoutThumbnailContainer,
                                     children: (0, r.jsx)(Q.E, {
-                                        image: x,
-                                        smallImage: L,
+                                        image: L,
+                                        smallImage: x,
                                         onClick: null != l ? l : T,
                                         size: Q.J.SIZE_72,
                                     }),
@@ -764,7 +771,7 @@ function eA(e) {
                       children: [
                           (0, r.jsxs)(_.P3F, {
                               "aria-label": ec.intl.string(ec.t["W/A4Qk"]),
-                              onClick: () => (0, x.Kh)(n.id),
+                              onClick: () => (0, L.Kh)(n.id),
                               className: eu.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(w.Z, {
@@ -840,7 +847,7 @@ function eC(e) {
         };
     let g = null != o,
         E = () => {
-            h.Z.updateChatOpen(s.id, !0), (0, x.Kh)(s.id), null == a || a(s);
+            h.Z.updateChatOpen(s.id, !0), (0, L.Kh)(s.id), null == a || a(s);
         },
         b = () => {
             O.Z.handleVoiceConnect({
