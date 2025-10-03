@@ -283,6 +283,9 @@ class v extends a.Z {
             this.connections.forEach((e) => e.setVideoBroadcast(this.shouldConnectionBroadcastVideo(e)));
         }
     }
+    getVideoInputDeviceId() {
+        return this.videoInputDeviceId;
+    }
     getSupportedVideoCodecs(e) {
         (0, d.zS)().getSupportedVideoCodecs(e);
     }

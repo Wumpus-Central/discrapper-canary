@@ -202,7 +202,10 @@ class N extends s.Z {
         return (0, E.l0)();
     }
     setVideoInputDevice(e) {
-        this.eachConnection((t) => t.setVideoSource(e), T.Yn.DEFAULT);
+        (this.videoInputDeviceId = e), this.eachConnection((t) => t.setVideoSource(e), T.Yn.DEFAULT);
+    }
+    getVideoInputDeviceId() {
+        return this.videoInputDeviceId;
     }
     getSupportedVideoCodecs(e) {
         e([]);
@@ -365,6 +368,7 @@ class N extends s.Z {
             A(this, "outputVolume", T.Qx),
             A(this, "sourceId", T.w5),
             A(this, "sinkId", T.w5),
+            A(this, "videoInputDeviceId", T.Av),
             A(this, "enabled", !1),
             A(this, "connections", new Set()),
             A(this, "interacted", !1),

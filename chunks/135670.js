@@ -53,6 +53,9 @@ class c extends r.Z {
         return Promise.resolve([]);
     }
     setVideoInputDevice(e) {}
+    getVideoInputDeviceId() {
+        return a.Av;
+    }
     getSupportedVideoCodecs(e) {
         e([]);
     }
