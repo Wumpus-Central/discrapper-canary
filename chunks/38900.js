@@ -6,42 +6,46 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     a = n.n(l),
-    i = n(638758),
-    s = n(887353),
-    o = n(198501),
-    c = n(300179);
-let u = () => 4 * Math.random() + 8,
-    d = [u(), u(), u()],
-    g = () =>
+    s = n(128922),
+    i = n(401975),
+    o = n(638758),
+    c = n(887353),
+    u = n(198501),
+    d = n(300179);
+let g = () =>
         (0, r.jsx)("div", {
-            className: a()(o.skeleton, c.shopCard),
+            className: a()(u.skeleton, d.shopCard),
             children: (0, r.jsxs)("div", {
-                className: o.cardBody,
+                className: u.cardBody,
                 children: [
-                    (0, r.jsx)("div", { className: o.cardAvatar }),
-                    (0, r.jsx)("div", { className: o.cardTitle }),
-                    (0, r.jsx)("div", { className: o.cardDescription }),
-                    (0, r.jsx)("div", { className: o.cardSummary }),
+                    (0, r.jsx)("div", { className: u.cardAvatar }),
+                    (0, r.jsx)("div", { className: u.cardTitle }),
+                    (0, r.jsx)("div", { className: u.cardDescription }),
+                    (0, r.jsx)("div", { className: u.cardSummary }),
                 ],
             }),
         }),
-    p = () =>
-        (0, r.jsx)("div", {
-            className: o.skeletonsContainer,
-            children: d.map((e) =>
+    p = () => {
+        let e = s.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
+        return (0, r.jsx)("div", {
+            className: u.skeletonsContainer,
+            children: Array.from({ length: 3 }).map((t, n) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: s.cardsContainer,
+                        className: c.cardsContainer,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: a()(o.skeleton, o.bannerSkeleton, i.catalogBanner),
-                                children: (0, r.jsx)("div", { className: o.bannerBody }),
-                            }),
-                            Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(g, {}, e)),
+                            e
+                                ? (0, r.jsx)("div", { className: a()(o.catalogBanner, u.bannerSkeletonV2) })
+                                : (0, r.jsx)("div", {
+                                      className: a()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
+                                      children: (0, r.jsx)("div", { className: u.bannerBody }),
+                                  }),
+                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(i.Z, {}, n) : (0, r.jsx)(g, {}, n))),
                         ],
                     },
-                    e,
+                    n,
                 ),
             ),
         });
+    };

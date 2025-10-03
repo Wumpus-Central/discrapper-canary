@@ -3,6 +3,7 @@ e.exports = {
     skeletonsContainer: "skeletonsContainer__72fa0",
     skeleton: "skeleton__72fa0",
     bannerSkeleton: "bannerSkeleton__72fa0",
+    bannerSkeletonV2: "bannerSkeletonV2__72fa0",
     bannerBody: "bannerBody__72fa0",
     cardBody: "cardBody__72fa0",
     cardAvatar: "cardAvatar__72fa0",
