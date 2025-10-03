@@ -1,103 +1,101 @@
 n.d(t, {
-    J7: () => L,
-    NT: () => I,
-    SS: () => j,
-    oc: () => y,
-    rC: () => k,
+    J7: () => A,
+    SS: () => C,
+    oc: () => S,
+    rC: () => N,
 }),
     n(388685);
 var r = n(951288),
-    l = n(647438),
+    i = n(647438),
     a = n(979554),
-    i = n(685816),
+    o = n(685816),
     s = n(399606),
-    o = n(100527),
+    l = n(100527),
     c = n(906732),
     u = n(626135),
     d = n(381585),
-    g = n(597688),
-    p = n(1870),
-    f = n(501678),
-    C = n(994587),
-    _ = n(429368),
-    h = n(237031),
-    m = n(453713),
+    f = n(597688),
+    _ = n(1870),
+    p = n(501678),
+    h = n(994587),
+    m = n(429368),
+    g = n(237031),
+    E = n(453713),
     b = n(201964),
-    E = n(361110),
-    v = n(956472),
-    S = n(642909),
-    x = n(215023),
-    O = n(981631),
-    T = n(388032);
-let y = (e, t, n, r) => {
-        u.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+    y = n(361110),
+    O = n(956472),
+    v = n(642909),
+    I = n(215023),
+    T = n(981631);
+let S = (e, t, n, r) => {
+        u.default.track(T.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
             collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
             sku_id: e.skuId,
             page_type: t,
             page_section: null == n ? void 0 : n.pageSection,
-            page_category: t === x.AW.HOME || null == n ? void 0 : n.pageCategory,
-            page_index: t === x.AW.CATALOG ? (null == n ? void 0 : n.pageIndex) : void 0,
-            page_size: t === x.AW.CATALOG ? (null == n ? void 0 : n.pageSize) : void 0,
+            page_category: t === I.AW.HOME || null == n ? void 0 : n.pageCategory,
+            page_index: t === I.AW.CATALOG ? (null == n ? void 0 : n.pageIndex) : void 0,
+            page_size: t === I.AW.CATALOG ? (null == n ? void 0 : n.pageSize) : void 0,
             tile_type: a.Z[e.type],
             tile_position: String(null == n ? void 0 : n.tilePosition),
             cta_name: r,
         });
     },
-    L = (e, t) => {
-        let n = (0, C.Nd)(),
+    A = (e, t) => {
+        let n = (0, h.Nd)(),
             r = null == n ? void 0 : n.tab,
-            a = (0, f.Vc)(),
+            a = (0, p.Vc)(),
             u = null == a ? void 0 : a.blockType,
-            p = (0, d.sp)(),
-            { analyticsLocations: _ } = (0, c.ZP)(o.Z.COLLECTIBLES_SHOP_CARD),
-            m = (0, s.e7)([g.Z], () => g.Z.getCategoryForProduct(e.skuId)),
-            b = l.useRef(null),
-            E = (0, S.G)("useHandlePreviewClick"),
-            O = null != u && u === i.z.HERO && E ? x.Ch.THUMBNAIL : x.Ch.DEFAULT;
-        return l.useCallback(
+            _ = (0, d.sp)(),
+            { analyticsLocations: m } = (0, c.ZP)(l.Z.COLLECTIBLES_SHOP_CARD),
+            E = (0, s.e7)([f.Z], () => f.Z.getCategoryForProduct(e.skuId)),
+            b = i.useRef(null),
+            y = (0, v.G)("useHandlePreviewClick"),
+            T = null != u && u === o.z.HERO && y ? I.Ch.THUMBNAIL : I.Ch.DEFAULT;
+        return i.useCallback(
             (t) => (n) => {
-                if (null == m) return;
-                let l = (0, v.oQ)({ product: e });
+                if (null == E) return;
+                let i = (0, O.oQ)({ product: e });
                 (b.current = n.currentTarget),
-                    y(e, r, p, null),
-                    (0, h.T)({
+                    S(e, r, _, null),
+                    (0, g.T)({
                         product: e,
-                        category: m,
-                        shouldCheckoutWithOrbs: l,
-                        analyticsLocations: _,
+                        category: E,
+                        shouldCheckoutWithOrbs: i,
+                        analyticsLocations: m,
                         analyticsSource: t,
                         returnRef: b,
                         tab: r,
-                        variantType: O,
+                        variantType: T,
                     });
             },
-            [e, r, m, _, p, O],
+            [e, r, E, m, _, T],
         )(t);
     },
-    j = (e) => {
-        let { previewingVariantIndex: t, handleEntering: n, handleLeaving: i } = (0, E.f)(e),
-            o = (0, s.e7)([p.Z], () => p.Z.purchases),
-            c = (0, _.o)(e, o),
-            u = (0, b.o)(e, o, t),
-            [d, g] = l.useState(!1);
+    C = (e) => {
+        let { previewingVariantIndex: t, handleEntering: n, handleLeaving: o } = (0, y.f)(e),
+            l = (0, s.e7)([_.Z], () => _.Z.purchases),
+            c = (0, m.o)(e, l),
+            u = (0, b.o)(e, l, t),
+            [d, f] = i.useState(!1);
         if (e.type === a.Z.VARIANTS_GROUP) {
-            let l = (0, r.jsx)(m.P, {
+            let i = (0, r.jsx)(E.P, {
                 variantGroupProduct: e,
                 previewingVariantIndexProps: {
                     previewingVariantIndex: t,
                     handleEntering: n,
-                    handleLeaving: i,
+                    handleLeaving: o,
                 },
                 selectedVariantIndex: c,
-                setIsHoveringOnSwitch: g,
+                setIsHoveringOnSwitch: f,
                 minimal: !0,
                 alternativeBackgroundColor: (null == u ? void 0 : u.type) === a.Z.PROFILE_EFFECT,
             });
-            return [c, l];
+            return [c, i];
         }
         return [c, null];
     },
-    k = (e) => {
+    N = (e) => {
         if (null == e) return null;
         if (e.type === a.Z.VARIANTS_GROUP) {
             if (null == e.variants || 0 === e.variants.length) return null;
@@ -107,16 +105,4 @@ let y = (e, t, n, r) => {
             return n.type;
         }
         return e.type;
-    },
-    I = (e) => {
-        switch (k(e)) {
-            case a.Z.AVATAR_DECORATION:
-                return T.intl.formatToPlainString(T.t.lvBzLi, { product: e.name });
-            case a.Z.PROFILE_EFFECT:
-                return T.intl.formatToPlainString(T.t.eR7moK, { product: e.name });
-            case a.Z.NAMEPLATE:
-                return T.intl.formatToPlainString(T.t.YFOwHh, { product: e.name });
-            default:
-                return e.name;
-        }
     };
