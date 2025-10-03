@@ -16,11 +16,11 @@ let r = (0, n(427164).le)({
             },
             1: {
                 useDetectionV2: !1,
-                hasIssueReporting: !0,
+                hasIssueReporting: !1,
             },
             2: {
                 useDetectionV2: !0,
-                hasIssueReporting: !0,
+                hasIssueReporting: !1,
             },
         },
     }),
