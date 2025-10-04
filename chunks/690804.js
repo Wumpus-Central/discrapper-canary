@@ -1,132 +1,149 @@
-i.d(t, { FortniteUpsellModal: () => d });
+i.d(n, { FortniteUpsellModal: () => j });
 var e = i(951288);
 i(647438);
-var o = i(793030),
-    s = i(481060),
-    a = i(728345),
-    c = i(768581),
-    r = i(388032),
-    l = i(625771);
-function d(n) {
-    let { onClose: t, transitionState: i } = n,
-        { data: d } = (0, a.IX)("1402418703554842694"),
-        { data: x } = (0, a.IX)("1417968406048673952"),
-        h =
-            null != d
-                ? c.ZP.getApplicationIconURL({
-                      id: d.id,
-                      icon: d.icon,
+var s = i(990547),
+    a = i(793030),
+    r = i(481060),
+    o = i(782568),
+    c = i(213609),
+    l = i(728345),
+    d = i(626135),
+    x = i(768581),
+    m = i(981631),
+    p = i(388032),
+    h = i(625771);
+function j(t) {
+    let { onClose: n, transitionState: i } = t,
+        { data: j } = (0, l.IX)("1402418703554842694"),
+        { data: u } = (0, l.IX)("1417968406048673952"),
+        b =
+            null != j
+                ? x.ZP.getApplicationIconURL({
+                      id: j.id,
+                      icon: j.icon,
                   })
                 : null,
-        m =
-            null != x
-                ? c.ZP.getApplicationIconURL({
-                      id: x.id,
-                      icon: x.icon,
+        v =
+            null != u
+                ? x.ZP.getApplicationIconURL({
+                      id: u.id,
+                      icon: u.icon,
                   })
                 : null;
-    return (0, e.jsxs)(o.IX, {
-        size: "lg",
-        transitionState: i,
-        onClose: t,
-        children: [
-            (0, e.jsx)(o.xBx, {
-                graphic: void 0,
-                gradientColor: "purple",
-                title: r.intl.string(r.t.xREzoa),
-                titleTextVariant: "heading-xl/semibold",
-                subtitle: r.intl.string(r.t.va4ap6),
-                alignCenter: !0,
-            }),
-            (0, e.jsx)(o.fef, {
-                children: (0, e.jsxs)("div", {
-                    className: l.body,
-                    children: [
-                        (0, e.jsxs)("div", {
-                            className: l.container,
-                            children: [
-                                (0, e.jsxs)("div", {
-                                    className: l.text,
-                                    children: [
-                                        (0, e.jsx)("div", {
-                                            className: l.iconContainer,
-                                            children:
-                                                null != h &&
-                                                (0, e.jsx)("div", {
-                                                    className: l.icon,
-                                                    style: { backgroundImage: "url(".concat(h, ")") },
-                                                }),
-                                        }),
-                                        (0, e.jsxs)("div", {
-                                            children: [
-                                                (0, e.jsx)(s.Text, {
-                                                    color: "text-primary",
-                                                    variant: "text-md/semibold",
-                                                    children: r.intl.string(r.t["9g594e"]),
-                                                }),
-                                                (0, e.jsx)(s.Text, {
-                                                    color: "text-secondary",
-                                                    variant: "text-md/normal",
-                                                    children: r.intl.string(r.t.Vye3DQ),
-                                                }),
-                                            ],
-                                        }),
-                                    ],
-                                }),
-                                (0, e.jsx)(s.zxk, {
-                                    icon: () => (0, e.jsx)(s.Gr1, {}),
-                                    iconPosition: "end",
-                                    onClick: () => (location.href = "https://fortnitetrial.fortnite.com/"),
-                                    text: r.intl.string(r.t.ZDtJ19),
-                                    variant: "secondary",
-                                }),
-                            ],
-                        }),
-                        (0, e.jsxs)("div", {
-                            className: l.container,
-                            children: [
-                                (0, e.jsxs)("div", {
-                                    className: l.text,
-                                    children: [
-                                        (0, e.jsx)("div", {
-                                            className: l.iconContainer,
-                                            children:
-                                                null != m &&
-                                                (0, e.jsx)("div", {
-                                                    className: l.icon,
-                                                    style: { backgroundImage: "url(".concat(m, ")") },
-                                                }),
-                                        }),
-                                        (0, e.jsxs)("div", {
-                                            children: [
-                                                (0, e.jsx)(s.Text, {
-                                                    color: "text-primary",
-                                                    variant: "text-md/semibold",
-                                                    children: r.intl.string(r.t.kOjtOD),
-                                                }),
-                                                (0, e.jsx)(s.Text, {
-                                                    color: "text-secondary",
-                                                    variant: "text-md/normal",
-                                                    children: r.intl.string(r.t.X3zPLy),
-                                                }),
-                                            ],
-                                        }),
-                                    ],
-                                }),
-                                (0, e.jsx)(s.zxk, {
-                                    icon: () => (0, e.jsx)(s.Gr1, {}),
-                                    iconPosition: "end",
-                                    onClick: () =>
-                                        (location.href =
-                                            "https://www.nvidia.com/en-us/geforce-now/discord?ncid=partn-874834"),
-                                    text: r.intl.string(r.t.ycbXPz),
-                                    variant: "secondary",
-                                }),
-                            ],
-                        }),
-                    ],
+    return (
+        (0, c.Z)({
+            name: s.ImpressionNames.FORTNITE_GET_GAME_MODAL,
+            type: s.ImpressionTypes.MODAL,
+        }),
+        (0, e.jsxs)(a.IX, {
+            size: "lg",
+            transitionState: i,
+            onClose: n,
+            children: [
+                (0, e.jsx)(a.xBx, {
+                    graphic: void 0,
+                    gradientColor: "purple",
+                    title: p.intl.string(p.t.xREzoa),
+                    titleTextVariant: "heading-xl/semibold",
+                    subtitle: p.intl.string(p.t.va4ap6),
+                    alignCenter: !0,
                 }),
-            }),
-        ],
-    });
+                (0, e.jsx)(a.fef, {
+                    children: (0, e.jsxs)("div", {
+                        className: h.body,
+                        children: [
+                            (0, e.jsxs)("div", {
+                                className: h.container,
+                                children: [
+                                    (0, e.jsxs)("div", {
+                                        className: h.text,
+                                        children: [
+                                            (0, e.jsx)("div", {
+                                                className: h.iconContainer,
+                                                children:
+                                                    null != b &&
+                                                    (0, e.jsx)("div", {
+                                                        className: h.icon,
+                                                        style: { backgroundImage: "url(".concat(b, ")") },
+                                                    }),
+                                            }),
+                                            (0, e.jsxs)("div", {
+                                                children: [
+                                                    (0, e.jsx)(r.Text, {
+                                                        color: "text-primary",
+                                                        variant: "text-md/semibold",
+                                                        children: p.intl.string(p.t["9g594e"]),
+                                                    }),
+                                                    (0, e.jsx)(r.Text, {
+                                                        color: "text-secondary",
+                                                        variant: "text-md/normal",
+                                                        children: p.intl.string(p.t.Vye3DQ),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                    (0, e.jsx)(r.zxk, {
+                                        icon: () => (0, e.jsx)(r.Gr1, {}),
+                                        iconPosition: "end",
+                                        onClick: () => {
+                                            d.default.track(m.rMx.FORTNITE_DOWNLOAD_CLICKED),
+                                                (0, o.Z)("https://fortnitetrial.fortnite.com/");
+                                        },
+                                        text: p.intl.string(p.t.ZDtJ19),
+                                        variant: "secondary",
+                                    }),
+                                ],
+                            }),
+                            (0, e.jsxs)("div", {
+                                className: h.container,
+                                children: [
+                                    (0, e.jsxs)("div", {
+                                        className: h.text,
+                                        children: [
+                                            (0, e.jsx)("div", {
+                                                className: h.iconContainer,
+                                                children:
+                                                    null != v &&
+                                                    (0, e.jsx)("div", {
+                                                        className: h.icon,
+                                                        style: { backgroundImage: "url(".concat(v, ")") },
+                                                    }),
+                                            }),
+                                            (0, e.jsxs)("div", {
+                                                children: [
+                                                    (0, e.jsx)(r.Text, {
+                                                        color: "text-primary",
+                                                        variant: "text-md/semibold",
+                                                        children: p.intl.string(p.t.kOjtOD),
+                                                    }),
+                                                    (0, e.jsx)(r.Text, {
+                                                        color: "text-secondary",
+                                                        variant: "text-md/normal",
+                                                        children: p.intl.string(p.t.X3zPLy),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                    (0, e.jsx)(r.zxk, {
+                                        icon: () => (0, e.jsx)(r.Gr1, {}),
+                                        iconPosition: "end",
+                                        onClick: () => {
+                                            d.default.track(m.rMx.FORTNITE_GFNJOIN_CLICKED),
+                                                (0, o.Z)(
+                                                    "https://www.nvidia.com/en-us/geforce-now/discord?ncid=partn-874834",
+                                                );
+                                        },
+                                        text: p.intl.string(p.t.ycbXPz),
+                                        variant: "secondary",
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        })
+    );
 }

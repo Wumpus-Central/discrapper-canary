@@ -78,6 +78,7 @@ var r = (function (e) {
             (e.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING =
                 "impression_enable_creator_monetization_waitlist_landing"),
             (e.FOR_LATER_LIST_VIEWED = "impression_for_later_list_viewed"),
+            (e.FORTNITE_GET_GAME_MODAL = "impression_fortnite_get_game_modal"),
             (e.FRIEND_REQUESTS_SPAM_INBOX = "impression_friend_requests_spam_inbox"),
             (e.FRIENDS = "impression_friends"),
             (e.GAME_CONSOLE_DEVICE_LIST = "impression_game_console_device_list"),
