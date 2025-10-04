@@ -604,6 +604,7 @@ let i = {
             "STREAM_CLOSE",
             "PASSIVE_UPDATE_V2",
             "VOICE_STATE_UPDATES",
+            "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
             "EMBEDDED_ACTIVITY_UPDATE_V2",
             "QUESTS_PREVIEW_UPDATE_SUCCESS",
             "QUEST_APPLICATION_START_TIMER",
