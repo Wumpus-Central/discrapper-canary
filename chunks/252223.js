@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(392711),
     l = n(793030),
     c = n(442837),
-    u = n(28664),
+    u = n(481060),
     d = n(835834),
     f = n(833664),
     _ = n(545957),
@@ -285,14 +285,18 @@ function B(e) {
                             className: o()(P.activityContainer, Q && P.iconOnly),
                             children: [$(), et()],
                         })
-                      : (0, r.jsx)(u.u, {
+                      : (0, r.jsx)(u.ua7, {
+                            tooltipContentClassName: o()(P.container, P.activitiesTooltip, P.hasMultipleActivities),
                             delay: C.X,
-                            __unsupportedReactNodeAsText: ee(),
+                            text: ee(),
                             "aria-label": J,
-                            children: (0, r.jsxs)("div", {
-                                className: o()(P.activityContainer, Q && P.iconOnly),
-                                children: [$(!0), et()],
-                            }),
+                            children: (e) =>
+                                (0, r.jsxs)(
+                                    "div",
+                                    x(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
+                                        children: [$(!0), et()],
+                                    }),
+                                ),
                         })
                   : $(),
         er = o()(P.container, {

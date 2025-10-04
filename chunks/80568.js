@@ -7,6 +7,7 @@ e.exports = {
     activitiesTooltip: "activitiesTooltip_c9d15c",
     tooltipText: "tooltipText_c9d15c",
     icon: "icon_c9d15c",
+    hasMultipleActivities: "hasMultipleActivities_c9d15c",
     truncated: "truncated_c9d15c",
     textWithIconContainer: "textWithIconContainer_c9d15c",
     activityCounter: "activityCounter_c9d15c",
