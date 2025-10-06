@@ -80515,6 +80515,10 @@ div.clanTagBadgeContainer__07f91 {
     width: 16px
 }
 
+.hoverableIcon__07f91:hover {
+    color: var(--icon-secondary)
+}
+
 .iconTooltipContainer__07f91 {
     line-height: 0
 }

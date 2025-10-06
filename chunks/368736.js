@@ -20,6 +20,7 @@ e.exports = {
     icons: "icons__07f91",
     iconGroup: "iconGroup__07f91",
     icon: "icon__07f91",
+    hoverableIcon: "hoverableIcon__07f91",
     iconPriortySpeaker: "iconPriortySpeaker__07f91",
     iconServer: "iconServer__07f91",
     strikethrough: "strikethrough__07f91",
