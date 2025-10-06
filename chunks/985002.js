@@ -20,7 +20,7 @@ function l(e) {
                 if (!T) {
                     c(!0);
                     try {
-                        await (0, a.Yw)(e.id, s.ne.ACTIVE), null == n || n();
+                        await (0, a.Yw)(e, s.ne.ACTIVE), null == n || n();
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);
@@ -36,7 +36,7 @@ function l(e) {
                 if (!T) {
                     d(!0);
                     try {
-                        await (0, a.Yw)(e.id, s.ne.DECLINED), null == n || n();
+                        await (0, a.Yw)(e, s.ne.DECLINED), null == n || n();
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);
@@ -52,7 +52,7 @@ function l(e) {
                 if (!T) {
                     _(!0);
                     try {
-                        await (0, a.Yw)(e.id, s.ne.INACTIVE), null == n || n();
+                        await (0, a.Yw)(e, s.ne.INACTIVE), null == n || n();
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);
@@ -68,7 +68,7 @@ function l(e) {
                 if (!T) {
                     h(!0);
                     try {
-                        await (0, a.fc)(e.id), null == n || n();
+                        await (0, a.fc)(e), null == n || n();
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);

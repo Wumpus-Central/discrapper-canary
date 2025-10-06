@@ -6,9 +6,9 @@ var n = r(951288),
     c = r(985002),
     a = r(880257),
     l = r(957656),
-    d = r(412297),
+    d = r(345909),
     u = r(388032),
-    b = r(640754);
+    b = r(601582);
 let f = (e) => {
     let { currentUser: t, otherUser: r, transitionState: f, onClose: h } = e,
         p = o.useCallback(() => {
@@ -28,7 +28,7 @@ let f = (e) => {
         transitionState: f,
         children: (0, n.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(), v(r);
+                e.preventDefault(), v(r.id);
             },
             children: [
                 (0, n.jsx)(l.Z.Error, { error: x ? u.intl.string(d.default.krIDd3) : void 0 }),
