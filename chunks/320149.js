@@ -1,91 +1,91 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(755721),
-    o = n(481060),
-    s = n(541716),
-    c = n(665149),
-    u = n(910611),
-    d = n(355298),
-    p = n(333984),
-    f = n(26373),
-    h = n(486622),
-    g = n(718538),
-    m = n(359110),
-    b = n(6025),
-    _ = n(433355),
-    O = n(933557),
-    E = n(287746),
-    v = n(388032),
-    y = n(10832),
-    I = n(419246);
-function S(e) {
+    a = n(481060),
+    o = n(541716),
+    s = n(665149),
+    c = n(910611),
+    u = n(355298),
+    d = n(333984),
+    p = n(26373),
+    f = n(486622),
+    h = n(718538),
+    g = n(359110),
+    m = n(6025),
+    b = n(433355),
+    _ = n(933557),
+    O = n(287746),
+    E = n(388032),
+    v = n(10832),
+    y = n(419246);
+function I(e) {
     let { channel: t, baseChannelId: n } = e,
-        S = (0, O.ZP)(t),
-        C = (0, f.K)(),
-        T = (0, f.V)(),
-        N = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        j = (0, l.e7)([p.Z], () => p.Z.isSpam(t.id)),
-        P = (0, g.V)(t.id, t.getRecipientId()),
+        I = (0, _.ZP)(t),
+        S = (0, p.K)(),
+        C = (0, p.V)(),
+        T = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
+        N = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
+        j = (0, h.V)(t.id, t.getRecipientId()),
+        P = i.useCallback(() => {
+            m.Z.closeChannelSidebar(b.uZ), T && S && (0, g.Kh)(t.id), N && C && (0, g.Kh)(t.id);
+        }, [t.id, N, C, T, S]),
         x = i.useCallback(() => {
-            b.Z.closeChannelSidebar(_.uZ), N && C && (0, m.Kh)(t.id), j && T && (0, m.Kh)(t.id);
-        }, [t.id, j, T, N, C]),
-        A = i.useCallback(() => {
-            (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.pIQ3h4), o.ToastType.FAILURE));
+            (0, a.showToast)((0, a.createToast)(E.intl.string(E.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: Z } = (0, h.m)({
-            onAcceptSuccess: x,
-            onError: A,
+        { markAsNotSpam: A } = (0, f.m)({
+            onAcceptSuccess: P,
+            onError: x,
         });
     if (null == t || !t.isDM()) return null;
-    let w = [
+    let Z = [
         (0, r.jsx)(
-            c.ZP.Icon,
+            s.ZP.Icon,
             {
-                icon: o.Dio,
-                tooltip: v.intl.string(v.t.cpT0Cg),
-                onClick: () => b.Z.closeChannelSidebar(n),
+                icon: a.Dio,
+                tooltip: E.intl.string(E.t.cpT0Cg),
+                onClick: () => m.Z.closeChannelSidebar(n),
             },
             "close",
         ),
     ];
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.ZP, {
-                toolbar: w,
-                "aria-label": v.intl.string(v.t.BIYAqa),
-                children: (0, u.ud)({
+            (0, r.jsx)(s.ZP, {
+                toolbar: Z,
+                "aria-label": E.intl.string(E.t.BIYAqa),
+                children: (0, c.ud)({
                     channel: t,
-                    channelName: S,
+                    channelName: I,
                     inSidebar: !0,
                 }),
             }),
-            j &&
+            N &&
                 (0, r.jsxs)("div", {
-                    className: I.hamBanner,
+                    className: y.hamBanner,
                     children: [
-                        (0, r.jsx)(o.Text, {
-                            className: I.__invalid_hamBannerText,
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
-                            children: v.intl.string(v.t.XVOKgo),
+                            children: E.intl.string(E.t.XVOKgo),
                         }),
-                        (0, r.jsx)(a.zx, {
-                            className: I.hamBannerButton,
-                            size: a.Ph.SMALL,
-                            onClick: () => Z(t, P),
-                            children: v.intl.string(v.t.koqL3d),
+                        (0, r.jsx)("div", {
+                            className: y.hamBannerButton,
+                            children: (0, r.jsx)(a.zxk, {
+                                size: "sm",
+                                onClick: () => A(t, j),
+                                text: E.intl.string(E.t.koqL3d),
+                            }),
                         }),
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: y.chat,
+                className: v.chat,
                 children: (0, r.jsx)(
-                    E.Z,
+                    O.Z,
                     {
                         channel: t,
                         guild: null,
-                        chatInputType: s.Ie.SIDEBAR,
+                        chatInputType: o.Ie.SIDEBAR,
                     },
                     t.id,
                 ),

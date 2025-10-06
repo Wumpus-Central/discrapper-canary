@@ -1,18 +1,17 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var i = n(951288);
 n(647438);
-var r = n(755721),
-    o = n(481060),
-    l = n(13245),
-    s = n(371651),
-    a = n(594174),
-    c = n(145597),
-    d = n(312839),
-    u = n(981631),
-    h = n(987650),
+var r = n(481060),
+    s = n(13245),
+    o = n(371651),
+    l = n(594174),
+    a = n(145597),
+    c = n(312839),
+    d = n(981631),
+    u = n(987650),
     p = n(388032),
-    f = n(653773);
-function g(e) {
+    h = n(653773);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,97 +54,97 @@ function m(e, t) {
         e
     );
 }
-function y() {
+function m() {
     return (0, i.jsx)("div", {
-        className: f.footer,
-        children: (0, i.jsx)(r.zx, {
-            color: r.zx.Colors.GREEN,
-            size: r.zx.Sizes.SMALL,
-            className: f.ctaButton,
-            children: p.intl.string(p.t.U76Ft7),
+        className: h.footer,
+        children: (0, i.jsx)(r.zxk, {
+            variant: "active",
+            size: "sm",
+            text: p.intl.string(p.t.U76Ft7),
+            fullWidth: !0,
         }),
     });
 }
-function O(e) {
+function y(e) {
     switch (e.type) {
-        case h.nc.GO_LIVE_VOICE: {
-            let { game: t, voiceGuild: r } = e,
-                { trackView: f, trackClick: O } = (0, d.R)(h.n0.GoLiveNudge, { notif_type: h.n0.GoLiveNudge });
+        case u.nc.GO_LIVE_VOICE: {
+            let { game: t, voiceGuild: h } = e,
+                { trackView: y, trackClick: _ } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
                 body: p.intl.formatToPlainString(p.t.z9znpa, {
                     game: t.name,
-                    server: r.name,
+                    server: h.name,
                 }),
-                hint: () => (0, i.jsx)(y, {}),
-                renderFooter: () => (0, i.jsx)(y, {}),
+                hint: () => (0, i.jsx)(m, {}),
+                renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {
-                    f();
+                    y();
                 },
                 onNotificationClick: (e, t) => {
-                    O("unlock"), l.Z.updateNotificationStatus(t);
-                    let d = s.default.isOverlayOOPEnabledForPid((0, c.getPID)());
+                    _("unlock"), s.Z.updateNotificationStatus(t);
+                    let c = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
                     if (
-                        (d ? l.Z.setInputLocked(!1, (0, c.getPID)()) : l.Z.setInstanceLocked(!1),
-                        null == a.default.getCurrentUser())
+                        (c ? s.Z.setInputLocked(!1, (0, a.getPID)()) : s.Z.setInstanceLocked(!1),
+                        null == l.default.getCurrentUser())
                     )
                         return;
-                    let h = d ? { contextKey: o.u1M } : void 0;
-                    (0, o.ZDy)(async () => {
+                    let u = c ? { contextKey: r.u1M } : void 0;
+                    (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                m(g({}, t), {
-                                    sourcePID: (0, c.getPID)(),
+                                g(f({}, t), {
+                                    sourcePID: (0, a.getPID)(),
                                     selectSource: !1,
-                                    guildId: r.id,
-                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE,
+                                    guildId: h.id,
+                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE,
                                 }),
                             );
-                    }, h);
+                    }, u);
                 },
                 onDismissClick: () => {
-                    O("dismiss");
+                    _("dismiss");
                 },
             };
         }
-        case h.nc.GO_LIVE_NON_VOICE: {
+        case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: r, trackClick: a } = (0, d.R)(h.n0.GoLiveNonVoiceNudge, {
-                    notif_type: h.n0.GoLiveNonVoiceNudge,
+                { trackView: l, trackClick: h } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, {
+                    notif_type: u.n0.GoLiveNonVoiceNudge,
                 });
             return {
                 icon: n(847881),
                 title: null,
                 body: p.intl.formatToPlainString(p.t["0SVWgI"], { game: t.name }),
-                hint: () => (0, i.jsx)(y, {}),
-                renderFooter: () => (0, i.jsx)(y, {}),
+                hint: () => (0, i.jsx)(m, {}),
+                renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {
-                    r();
+                    l();
                 },
                 onNotificationClick: (e, t) => {
-                    a("unlock"), l.Z.updateNotificationStatus(t);
-                    let r = s.default.isOverlayOOPEnabledForPid((0, c.getPID)());
-                    r ? l.Z.setInputLocked(!1, (0, c.getPID)()) : l.Z.setInstanceLocked(!1);
-                    let d = r ? { contextKey: o.u1M } : void 0;
-                    (0, o.ZDy)(async () => {
+                    h("unlock"), s.Z.updateNotificationStatus(t);
+                    let l = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
+                    l ? s.Z.setInputLocked(!1, (0, a.getPID)()) : s.Z.setInstanceLocked(!1);
+                    let c = l ? { contextKey: r.u1M } : void 0;
+                    (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("46746"), n.e("33641")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                m(g({}, t), {
-                                    sourcePID: (0, c.getPID)(),
+                                g(f({}, t), {
+                                    sourcePID: (0, a.getPID)(),
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: u.Sbl.OVERLAY_NUDGE,
+                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE,
                                 }),
                             );
-                    }, d);
+                    }, c);
                 },
                 onDismissClick: () => {
-                    a("dismiss");
+                    h("dismiss");
                 },
             };
         }

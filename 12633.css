@@ -31128,22 +31128,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .searchSuggestions__2dc39 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-bottom: 32px
-}
-
-.searchSuggestion__2dc39 {
-    border-radius: 3px;
-    margin-right: 4px;
-    margin-top: 4px
-}
-
-.searchSuggestion__2dc39.searchSuggestion__2dc39:hover {
-    background-color: var(--brand-500);
-    border-color: var(--brand-500);
-    color: var(--white-500)
 }
 
 .noResults__2dc39 {

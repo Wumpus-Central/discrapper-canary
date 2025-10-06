@@ -1,64 +1,64 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var i = n(951288);
 n(647438);
 var a = n(442837),
-    o = n(755721),
-    r = n(481060),
-    l = n(906732),
-    c = n(48217),
-    s = n(26323),
-    d = n(430824),
-    u = n(914010),
-    f = n(981631),
-    _ = n(30513),
-    g = n(388032),
-    p = n(413955);
-function m(e) {
-    let { analyticsSection: t, analyticsPage: n, isGIF: m, banner: N } = e,
-        x = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
-        h = (0, a.e7)([d.Z], () => d.Z.getGuild(x)),
-        { analyticsLocations: A } = (0, l.ZP)();
-    return null == h || h.features.has(f.oNc.ANIMATED_BANNER) || (!m && h.features.has(f.oNc.BANNER))
+    o = n(481060),
+    r = n(906732),
+    l = n(48217),
+    c = n(26323),
+    s = n(430824),
+    d = n(914010),
+    u = n(981631),
+    f = n(30513),
+    _ = n(388032),
+    g = n(413955);
+function p(e) {
+    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: m } = e,
+        N = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        x = (0, a.e7)([s.Z], () => s.Z.getGuild(N)),
+        { analyticsLocations: h } = (0, r.ZP)();
+    return null == x || x.features.has(u.oNc.ANIMATED_BANNER) || (!p && x.features.has(u.oNc.BANNER))
         ? null
         : (0, i.jsxs)("div", {
-              className: p.container,
+              className: g.container,
               children: [
-                  (0, i.jsx)(r.$Eu, {
-                      color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: p.guildBoostingIcon,
+                  (0, i.jsx)(o.$Eu, {
+                      color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                      className: g.guildBoostingIcon,
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(o.Text, {
                       color: "header-primary",
                       variant: "text-sm/semibold",
-                      children: g.intl.string(g.t["56M7xc"]),
+                      children: _.intl.string(_.t["56M7xc"]),
                   }),
-                  (0, i.jsx)(o.zx, {
-                      look: o.zx.Looks.LINK,
-                      color: o.zx.Colors.LINK,
-                      className: p.subscribeButton,
-                      onClick: () => {
-                          if (null == h) return;
-                          let e = {
-                              section: t,
-                              page: n,
-                              object: f.qAy.UPSELL_HEADER,
-                          };
-                          null != N
-                              ? (0, c.c)({
-                                    analyticsLocations: A,
-                                    analyticsLocation: e,
-                                    guild: h,
-                                    isGIF: m,
-                                    banner: N,
-                                })
-                              : (0, s.Z)({
-                                    analyticsLocations: A,
-                                    analyticsSourceLocation: e,
-                                    guild: h,
-                                    perks: m ? (0, _.zC)() : (0, _.XO)(),
-                                });
-                      },
-                      children: g.intl.string(g.t.WUHdZW),
+                  (0, i.jsx)("div", {
+                      className: g.subscribeButton,
+                      children: (0, i.jsx)(o.Avr, {
+                          text: _.intl.string(_.t.WUHdZW),
+                          onClick: () => {
+                              if (null == x) return;
+                              let e = {
+                                  section: t,
+                                  page: n,
+                                  object: u.qAy.UPSELL_HEADER,
+                              };
+                              null != m
+                                  ? (0, l.c)({
+                                        analyticsLocations: h,
+                                        analyticsLocation: e,
+                                        guild: x,
+                                        isGIF: p,
+                                        banner: m,
+                                    })
+                                  : (0, c.Z)({
+                                        analyticsLocations: h,
+                                        analyticsSourceLocation: e,
+                                        guild: x,
+                                        perks: p ? (0, f.zC)() : (0, f.XO)(),
+                                    });
+                          },
+                          textVariant: "text-sm/semibold",
+                      }),
                   }),
               ],
           });

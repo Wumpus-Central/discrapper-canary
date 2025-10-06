@@ -6,7 +6,6 @@ e.exports = {
     endContainer: "endContainer__2dc39",
     endText: "endText__2dc39",
     searchSuggestions: "searchSuggestions__2dc39",
-    searchSuggestion: "searchSuggestion__2dc39",
     noResults: "noResults__2dc39",
     emptyHints: "emptyHints__2dc39",
     emptyHint: "emptyHint__2dc39",
