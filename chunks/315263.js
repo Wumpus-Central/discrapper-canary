@@ -12,30 +12,30 @@ n.r(t),
     n(973216);
 var r = n(873546),
     i = n(636977),
-    a = n(948789),
-    o = n(570140),
-    s = n(493683),
-    l = n(447543),
-    c = n(566620),
-    u = n(122613),
-    d = n(649256),
-    f = n(574952),
-    _ = n(367907),
-    p = n(421474),
-    h = n(812206),
-    m = n(506895),
-    g = n(960904),
-    E = n(830121),
-    b = n(836768),
-    y = n(15274),
-    O = n(924301),
-    v = n(543842),
-    I = n(754688),
-    T = n(336197),
-    S = n(937797),
-    A = n(36243),
-    C = n(977156),
-    N = n(110560),
+    a = n(570140),
+    o = n(493683),
+    s = n(447543),
+    l = n(566620),
+    c = n(122613),
+    u = n(649256),
+    d = n(574952),
+    f = n(367907),
+    _ = n(421474),
+    p = n(812206),
+    h = n(506895),
+    m = n(960904),
+    g = n(830121),
+    E = n(836768),
+    b = n(15274),
+    y = n(924301),
+    O = n(543842),
+    v = n(754688),
+    I = n(336197),
+    T = n(937797),
+    S = n(36243),
+    A = n(977156),
+    C = n(110560),
+    N = n(703656),
     R = n(540709),
     P = n(881706),
     w = n(701190),
@@ -50,7 +50,7 @@ n(215023);
 var G = n(49898),
     B = n(46140);
 async function Z(e, t) {
-    await o.Z.dispatch({
+    await a.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: e,
         code: t,
@@ -61,7 +61,7 @@ async function F(e) {
     var t;
     let n = w.Z.getInvite(e.code);
     if (null == n) {
-        let { invite: t } = await l.ZP.resolveInvite(e.code, "Markdown Link");
+        let { invite: t } = await s.ZP.resolveInvite(e.code, "Markdown Link");
         n = t;
     }
     if (null == n) return;
@@ -69,7 +69,7 @@ async function F(e) {
         return void (await Z(n, e.code));
     let r = x.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
-    null != i && r.includes(i) ? l.ZP.transitionToInviteSync(n) : await Z(n, e.code);
+    null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await Z(n, e.code);
 }
 let V = {
     skipExtensionCheck: void 0,
@@ -77,28 +77,28 @@ let V = {
 };
 function H(e) {
     var t;
-    let { skipExtensionCheck: o, analyticsLocations: l } =
+    let { skipExtensionCheck: a, analyticsLocations: s } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V,
-        w = (0, E.zO)(e);
-    if (null != w && (w.type === g.g.INVITE || w.type === g.g.EMBEDDED_ACTIVITY_INVITE))
+        w = (0, g.zO)(e);
+    if (null != w && (w.type === m.g.INVITE || w.type === m.g.EMBEDDED_ACTIVITY_INVITE))
         return (e) => (null == e || e.preventDefault(), F(w), !0);
     if (
         null != w &&
-        (w.type === g.g.APP_DIRECTORY_PROFILE ||
-            w.type === g.g.APP_DIRECTORY_STOREFRONT ||
-            w.type === g.g.APP_DIRECTORY_STOREFRONT_SKU)
+        (w.type === m.g.APP_DIRECTORY_PROFILE ||
+            w.type === m.g.APP_DIRECTORY_STOREFRONT ||
+            w.type === m.g.APP_DIRECTORY_STOREFRONT_SKU)
     )
         return (t) => {
             var i, a;
             null == t || t.preventDefault();
             let { code: o } = w,
                 { applicationId: s, skuId: l } =
-                    w.type === g.g.APP_DIRECTORY_PROFILE || w.type === g.g.APP_DIRECTORY_STOREFRONT
+                    w.type === m.g.APP_DIRECTORY_PROFILE || w.type === m.g.APP_DIRECTORY_STOREFRONT
                         ? {
                               applicationId: o,
                               skuId: void 0,
                           }
-                        : null != (i = (0, p.Q)(o))
+                        : null != (i = (0, _.Q)(o))
                           ? i
                           : {
                                 applicationId: void 0,
@@ -123,38 +123,38 @@ function H(e) {
                               t({
                                   tab: r.APPS,
                                   applicationId: s,
-                                  section: (0, v.Z)(i, w.type === g.g.APP_DIRECTORY_PROFILE ? i.ABOUT : i.STORE),
+                                  section: (0, O.Z)(i, w.type === m.g.APP_DIRECTORY_PROFILE ? i.ABOUT : i.STORE),
                                   skuId: l,
                               });
                           })),
                 !0
             );
         };
-    if (null != w && w.type === g.g.ACTIVITY_BOOKMARK)
+    if (null != w && w.type === m.g.ACTIVITY_BOOKMARK)
         return (e) => {
             var t, n;
             null == e || e.preventDefault();
             let { code: r, url: i } = w,
-                a = h.Z.getApplication(r),
-                o = new URL(i),
-                _ = null != (t = o.searchParams.get("referrer_id")) ? t : void 0,
-                p = (0, f.Z)(),
-                { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, m.v)(r);
+                a = p.Z.getApplication(r),
+                f = new URL(i),
+                _ = null != (t = f.searchParams.get("referrer_id")) ? t : void 0,
+                m = (0, d.Z)(),
+                { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, h.v)(r);
             if (y)
                 return (
                     !b &&
                     null != g &&
-                    ((0, d.ur)(r, o.searchParams.get("link_id"), o.searchParams.get("custom_id"))
+                    ((0, u.ur)(r, f.searchParams.get("link_id"), f.searchParams.get("custom_id"))
                         .then(async (e) => {
                             let { customId: t } = e;
-                            await (0, c.G6)({
+                            await (0, l.G6)({
                                 channelId: g,
                                 applicationId: r,
                                 isStart: null == E,
-                                embeddedActivitiesManager: p,
+                                embeddedActivitiesManager: m,
                                 customId: t,
                                 referrerId: _,
-                                analyticsLocations: l,
+                                analyticsLocations: s,
                             });
                         })
                         .catch(() => {}),
@@ -164,17 +164,17 @@ function H(e) {
                 let e = null == a || null == (n = a.bot) ? void 0 : n.id;
                 return (
                     null != e &&
-                    (s.Z.openPrivateChannel({ recipientIds: e })
+                    (o.Z.openPrivateChannel({ recipientIds: e })
                         .then(async (e) => {
-                            let { customId: t } = await (0, d.ur)(
+                            let { customId: t } = await (0, u.ur)(
                                 r,
-                                o.searchParams.get("link_id"),
-                                o.searchParams.get("custom_id"),
+                                f.searchParams.get("link_id"),
+                                f.searchParams.get("custom_id"),
                             );
-                            (0, u.Z)({
+                            (0, c.Z)({
                                 targetApplicationId: r,
                                 channelId: e,
-                                analyticsLocations: l,
+                                analyticsLocations: s,
                                 customId: t,
                                 referrerId: _,
                             });
@@ -184,7 +184,7 @@ function H(e) {
                 );
             }
         };
-    if (null != w && w.type === g.g.GUILD_PRODUCT)
+    if (null != w && w.type === m.g.GUILD_PRODUCT)
         return (e) => {
             null == e || e.preventDefault();
             let [t, r] = w.code.split("-");
@@ -199,7 +199,7 @@ function H(e) {
                 !0
             );
         };
-    if (null != w && w.type === g.g.QUESTS_EMBED && (0, C.c)({ location: B.dr.EMBED_MOBILE }))
+    if (null != w && w.type === m.g.QUESTS_EMBED && (0, A.c)({ location: B.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -261,7 +261,7 @@ function H(e) {
         return (
             null != Y && (e.search = Y),
             null != W && (e.hash = W),
-            (t) => (null == t || t.preventDefault(), (0, T.Z)(H, e), !0)
+            (t) => (null == t || t.preventDefault(), (0, I.Z)(H, e), !0)
         );
     }
     if (null != H && K) {
@@ -271,20 +271,20 @@ function H(e) {
             return (e) => (
                 null == e || e.preventDefault(),
                 null != w &&
-                    w.type === g.g.APP_OAUTH2_LINK &&
-                    _.ZP.trackWithMetadata(U.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
+                    w.type === m.g.APP_OAUTH2_LINK &&
+                    f.ZP.trackWithMetadata(U.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }),
                 r(i),
                 !0
             );
     }
-    let z = (0, I.Ao)(H);
+    let z = (0, v.Ao)(H);
     if (null != H && K && null != z)
         return (e) => {
             null == e || e.preventDefault();
             let t = L.Z.getGuildId();
-            null != z.guildId && "" !== z.guildId && z.guildId !== t && (0, T.Z)(U.Z5c.CHANNEL(z.guildId));
-            let n = O.ZP.getGuildScheduledEvent(z.guildEventId);
-            return null != n && (0, y.bO)({ eventId: n.id }), !0;
+            null != z.guildId && "" !== z.guildId && z.guildId !== t && (0, I.Z)(U.Z5c.CHANNEL(z.guildId));
+            let n = y.ZP.getGuildScheduledEvent(z.guildEventId);
+            return null != n && (0, b.bO)({ eventId: n.id }), !0;
         };
     if (K && (null == H ? void 0 : H.startsWith("/settings/"))) {
         let { default: e } = n(722589),
@@ -295,32 +295,32 @@ function H(e) {
                 null == e || e.preventDefault(),
                 t({
                     match: r,
-                    analyticsLocations: l,
+                    analyticsLocations: s,
                     urlOrigin: "link_click",
                 }),
                 !0
             );
     }
     return K && (null == H ? void 0 : H.startsWith("/discovery/quests"))
-        ? (e) => (null == e || e.preventDefault(), (0, N.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
+        ? (e) => (null == e || e.preventDefault(), (0, C.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
         : K && (null == H ? void 0 : H.startsWith("/quest-home"))
           ? (e) => {
                 null == e || e.preventDefault();
-                let { enabled: t } = S.m8.getConfig({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL });
+                let { enabled: t } = T.m8.getConfig({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL });
                 return (
-                    t || b.Z.setState({ selectedTab: G.GlobalDiscoveryTab.QUESTS }),
-                    (0, a.uL)((t ? U.Z5c.QUEST_HOME_V2 : U.Z5c.QUEST_HOME) + (null != Y ? Y : "")),
+                    t || E.Z.setState({ selectedTab: G.GlobalDiscoveryTab.QUESTS }),
+                    (0, N.uL)((t ? U.Z5c.QUEST_HOME_V2 : U.Z5c.QUEST_HOME) + (null != Y ? Y : "")),
                     !0
                 );
             }
           : K && (null == H ? void 0 : H.startsWith("/quest-preview"))
             ? (e) => {
                   null == e || e.preventDefault();
-                  let { enabled: t } = S.m8.getConfig({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL }),
-                      n = (0, A.T)({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL });
-                  if ((t || b.Z.setState({ selectedTab: G.GlobalDiscoveryTab.QUESTS }), n))
+                  let { enabled: t } = T.m8.getConfig({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL }),
+                      n = (0, S.T)({ location: B.dr.NAVIGATE_TO_QUEST_HOME_UTIL });
+                  if ((t || E.Z.setState({ selectedTab: G.GlobalDiscoveryTab.QUESTS }), n))
                       return (
-                          (0, a.uL)(
+                          (0, N.uL)(
                               (t ? U.Z5c.QUEST_HOME_V2 : U.Z5c.QUEST_HOME) +
                                   "?tab=preview_tool&quest_id=".concat(H.split("/").at(-1)),
                           ),
@@ -339,7 +339,7 @@ function H(e) {
                         }),
                     !0
                 )
-              : o || null == (0, P.v)(e)
+              : a || null == (0, P.v)(e)
                 ? void 0
                 : (t) => (null == t || t.preventDefault(), R.Z.show(e), !0);
 }
