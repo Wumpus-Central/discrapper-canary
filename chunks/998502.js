@@ -105,8 +105,8 @@ let D = new Set([
     ]),
     L = !1,
     x = "lastImageSaveDirectory",
-    j = /[<>:"/\\|?*@]/g,
-    M = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    M = /[<>:"/\\|?*@]/g,
+    j = /(\.[a-zA-Z0-9]+):[^.]*$/,
     k = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
@@ -116,12 +116,12 @@ var B = (function (e) {
 function Z(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(j, "_");
+        return (t = (t = t.replace(j, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
     } catch (t) {
         return e
             .replace(k, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(j, "_");
+            .replace(M, "_");
     }
 }
 async function F(e) {
@@ -479,14 +479,13 @@ let q = {
         checkVoiceFilterFilesExist: async (e) => await I.fileManager.checkVoiceFilterFilesExist(e),
         cleanupUnusedVoiceFilterFiles: async (e) => await I.fileManager.cleanupUnusedVoiceFilterFiles(e),
         canCopyImage() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
-                t = arguments.length > 1 ? arguments[1] : void 0;
-            if (!h.isPlatformEmbedded) return !1;
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
+            if (!h.isPlatformEmbedded || "function" != typeof I.clipboard.copyImage) return !1;
             if (null != e) {
-                let n = K(e, t);
-                if (null != n && !T.has(n)) return !1;
+                let t = K(e, void 0);
+                if (null != t && !T.has(t)) return !1;
             }
-            return "function" == typeof I.clipboard.copyImage;
+            return !0;
         },
         cut() {
             h.isPlatformEmbedded && I.clipboard.cut();

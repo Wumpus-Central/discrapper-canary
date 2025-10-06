@@ -47899,6 +47899,13 @@ div.mobilePushContainer__3d3b0 {
     top: var(--custom-avatar-avatar-decoration-border-position)
 }
 
+.cutoutIcon__44b0c {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
 .button__06eda {
     align-items: center;
     border-radius: 50%;
