@@ -17,10 +17,10 @@ var i = n(120356),
     g = n(633488),
     E = n(361848);
 let b = () => {
-        let e = (0, u.AZ)(),
+        let e = (0, u.mq)(f.ne.ACTIVE),
             t = (0, c.Z)(),
             { handleTabChange: n } = (0, l.Z)();
-        return (0, u.VM)() || (t && e)
+        return (0, u.VM)() || (t && e.length > 0)
             ? null
             : (0, r.jsx)("div", {
                   className: h.button,

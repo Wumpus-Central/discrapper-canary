@@ -66,10 +66,10 @@ let y = (e) => {
     },
     v = () => {
         let e = (0, c.U)(),
-            t = (0, h.ZM)();
+            t = (0, h.mq)(m.ne.ACTIVE);
         if (!(0, f.PO)("settings-controls") || 0 === t.length) return null;
         let n = () => {
-            (0, u.default)(), s.Z.openPrivateChannel({ recipientIds: t });
+            (0, u.default)(), s.Z.openPrivateChannel({ recipientIds: t.map((e) => e.id) });
         };
         return (0, r.jsxs)(a.Kqy, {
             padding: { top: 24 },

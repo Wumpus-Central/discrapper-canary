@@ -266,7 +266,7 @@ function j(e) {
 }
 let k = () => {
         let e = (0, p.Z)(),
-            t = (0, h.zu)(),
+            t = (0, h.mq)(O.ne.ACTIVE),
             n = e ? O.AG : O.i0,
             i = {
                 count: t.length,
@@ -349,7 +349,7 @@ let k = () => {
               });
     },
     B = () => {
-        let e = (0, h.ov)(O.ne.PENDING),
+        let e = (0, h.mq)(O.ne.PENDING),
             t = (0, f.o)(
                 T.intl.formatToPlainString(I.default.IkAgkJ, { count: e.length }),
                 T.intl.formatToPlainString(I.default.Q8XnAQ, { count: e.length }),
