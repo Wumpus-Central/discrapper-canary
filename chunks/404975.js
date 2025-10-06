@@ -13,9 +13,9 @@ var r = n(951288),
     b = n(388032),
     j = n(845435);
 function p(e) {
-    let { root: t, header: n, footer: o, onClose: m } = e,
-        { showNavigationMobile: p } = (0, d.t)(),
-        v = l.useMemo(() => {
+    let { root: t, header: n, footer: o, onClose: m, emptyState: p } = e,
+        { showNavigationMobile: v } = (0, d.t)(),
+        y = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -36,7 +36,7 @@ function p(e) {
                 e
             );
         }, [t.layout]),
-        [y, h] = l.useMemo(() => {
+        [h, g] = l.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -46,18 +46,18 @@ function p(e) {
                 [e, n]
             );
         }, [t.layout]),
-        g = (0, u.Ll)();
+        O = (0, u.Ll)();
     return (0, r.jsx)(s.f6W, {
-        theme: g,
+        theme: O,
         children: (e) =>
             (0, r.jsx)(c.ZP, {
-                contentTypes: v,
+                contentTypes: y,
                 children: (t) => {
                     let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
                         className: i()(j.sidebar, e, {
                             [j.mobile]: a.tq,
-                            [j.mobileNavigationOpen]: p,
+                            [j.mobileNavigationOpen]: v,
                         }),
                         children: [
                             (0, r.jsxs)("div", {
@@ -75,7 +75,7 @@ function p(e) {
                                             }),
                                         }),
                                     (0, r.jsx)("div", {
-                                        children: y.map((e) =>
+                                        children: h.map((e) =>
                                             (0, r.jsx)(
                                                 x,
                                                 {
@@ -87,6 +87,7 @@ function p(e) {
                                         ),
                                     }),
                                     null != n && (0, r.jsx)(n, {}),
+                                    null != p && 0 === g.length && (0, r.jsx)(p, {}),
                                 ],
                             }),
                             (0, r.jsxs)(s.zJl, {
@@ -95,7 +96,7 @@ function p(e) {
                                 children: [
                                     (0, r.jsx)("nav", {
                                         className: j.nav,
-                                        children: h.map((e) =>
+                                        children: g.map((e) =>
                                             (0, r.jsx)(
                                                 x,
                                                 {

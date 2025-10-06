@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(636298),
@@ -51,62 +51,72 @@ function d(e, t) {
 }
 function f(e) {
     var t, n, f;
-    let { root: b, directory: m, target: p, onClose: j, sidebarHeader: x, sidebarFooter: v, onPanelChange: y } = e,
-        [h, g] = l.useState(!0),
-        [O, C] = l.useState(null == (t = m.entry(p)) ? void 0 : t.parentPanel),
-        [_, P] = l.useState(() => m.typedGet(O)),
-        S = l.useCallback(() => N(void 0), []),
-        [E, N] = l.useState({
-            target: p,
-            targetAccordion: null == (n = m.entry(p)) ? void 0 : n.parentAccordion,
+    let {
+            root: m,
+            directory: b,
+            target: j,
+            onClose: p,
+            sidebarHeader: x,
+            sidebarFooter: v,
+            onPanelChange: y,
+            emptyState: h,
+        } = e,
+        [g, O] = l.useState(!0),
+        [C, _] = l.useState(null == (t = b.entry(j)) ? void 0 : t.targetPanel),
+        [P, S] = l.useState(() => b.typedGet(C)),
+        N = l.useCallback(() => k(void 0), []),
+        [E, k] = l.useState({
+            target: j,
+            targetAccordion: null == (n = b.entry(j)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
-            complete: S,
+            complete: N,
         }),
         { navigateWithValidation: T } = (0, a.Cu)(),
-        k = l.useMemo(
+        w = l.useMemo(
             () => ({
-                currentPanel: m.typedGet(O),
+                currentPanel: b.typedGet(C),
                 navigateTo: (e) => {
-                    let t = m.entry(e);
-                    if ((null == t ? void 0 : t.parentPanel) == null) return;
+                    let t = b.entry(e);
+                    if ((null == t ? void 0 : t.targetPanel) == null) return;
                     let n = {
                         target: e,
                         targetAccordion: t.parentAccordion,
-                        complete: S,
+                        complete: N,
                     };
-                    if (t.parentPanel.key !== (null == O ? void 0 : O.key)) {
-                        let e = t.parentPanel;
+                    if (t.targetPanel.key !== (null == C ? void 0 : C.key)) {
+                        let e = t.targetPanel;
                         T(() => {
-                            N(d(u({}, n), { animateScroll: !1 })), P(e), C(e), null == y || y(e.key);
+                            k(d(u({}, n), { animateScroll: !1 })), S(e), _(e), null == y || y(e.key);
                         });
-                    } else N(d(u({}, n), { animateScroll: !0 }));
+                    } else k(d(u({}, n), { animateScroll: !0 }));
                 },
                 navTransition: E,
-                showNavigationMobile: h,
-                setShowNavigationMobile: g,
+                showNavigationMobile: g,
+                setShowNavigationMobile: O,
             }),
-            [m, O, E, h, S, T, y],
+            [b, C, E, g, N, T, y],
         ),
-        w = () => T(j);
+        I = () => T(p);
     return (0, r.jsx)(s.j.Provider, {
-        value: k,
+        value: w,
         children: (0, r.jsxs)("div", {
             className: c.container,
             children: [
                 (0, r.jsx)(i.P, {
-                    root: b,
+                    root: m,
                     header: x,
                     footer: v,
-                    onClose: w,
+                    onClose: I,
+                    emptyState: h,
                 }),
                 (0, r.jsx)(o.Z, {
-                    onClose: w,
-                    setting: null != (f = k.currentPanel) ? f : _,
+                    onClose: I,
+                    setting: null != (f = w.currentPanel) ? f : P,
                 }),
             ],
         }),
     });
 }
-function b(e) {
+function m(e) {
     return (0, r.jsx)(a.Ri, { children: (0, r.jsx)(f, u({}, e)) });
 }

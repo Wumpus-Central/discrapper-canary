@@ -1,34 +1,34 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(951288),
-    i = n(352065),
-    l = n(79808);
-function o(e) {
+    l = n(352065),
+    o = n(79808);
+function i(e) {
     var t,
         n,
-        { root: o, directory: s, target: a, onPanelChange: u, sidebarHeader: c, sidebarFooter: d } = e,
-        g = (function (e, t) {
+        { root: i, directory: a, target: s, onPanelChange: c, sidebarHeader: u, sidebarFooter: d, emptyState: f } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
-        })(e, ["root", "directory", "target", "onPanelChange", "sidebarHeader", "sidebarFooter"]);
+            return l;
+        })(e, ["root", "directory", "target", "onPanelChange", "sidebarHeader", "sidebarFooter", "emptyState"]);
     return (0, r.jsx)(
-        i.A,
+        l.A,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -53,16 +53,17 @@ function o(e) {
                     });
             }
             return e;
-        })({}, g)),
+        })({}, m)),
         (n = n =
             {
-                children: (0, r.jsx)(l.Z, {
-                    onClose: g.onClose,
-                    root: o,
-                    directory: s,
-                    target: a,
-                    onPanelChange: u,
-                    sidebarHeader: c,
+                children: (0, r.jsx)(o.Z, {
+                    onClose: m.onClose,
+                    root: i,
+                    directory: a,
+                    target: s,
+                    onPanelChange: c,
+                    sidebarHeader: u,
+                    emptyState: f,
                     sidebarFooter: d,
                 }),
             }),
