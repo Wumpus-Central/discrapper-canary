@@ -1,116 +1,117 @@
-t.d(n, { Z: () => y });
-var a,
-    r,
+t.d(n, { Z: () => h });
+var r,
+    a,
     i = t(951288),
-    s = t(647438),
-    o = t(120356),
-    c = t.n(o),
-    l = t(793030),
+    o = t(647438),
+    s = t(120356),
+    l = t.n(s),
+    c = t(793030),
     d = t(442837),
     u = t(481060),
-    b = t(100527),
-    m = t(744993),
+    m = t(100527),
+    b = t(744993),
     g = t(693587),
     f = t(567225),
-    p = t(678328),
-    x = t(809741),
-    j = t(473682),
-    v = t(440589),
+    x = t(678328),
+    p = t(809741),
+    v = t(473682),
+    j = t(440589),
     _ = t(388032),
-    h = t(197530);
+    y = t(197530);
 let O =
-    ((a = (function (e) {
+    ((r = (function (e) {
         for (var n = 1; n < arguments.length; n++) {
             var t = null != arguments[n] ? arguments[n] : {},
-                a = Object.keys(t);
+                r = Object.keys(t);
             "function" == typeof Object.getOwnPropertySymbols &&
-                (a = a.concat(
+                (r = r.concat(
                     Object.getOwnPropertySymbols(t).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(t, e).enumerable;
                     }),
                 )),
-                a.forEach(function (n) {
-                    var a;
-                    (a = t[n]),
+                r.forEach(function (n) {
+                    var r;
+                    (r = t[n]),
                         n in e
                             ? Object.defineProperty(e, n, {
-                                  value: a,
+                                  value: r,
                                   enumerable: !0,
                                   configurable: !0,
                                   writable: !0,
                               })
-                            : (e[n] = a);
+                            : (e[n] = r);
                 });
         }
         return e;
-    })({}, j.T9)),
-    (r = r = { initialStep: j.Vb.SERVER_SETTINGS }),
+    })({}, v.T9)),
+    (a = a = { initialStep: v.Vb.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
         : (function (e, n) {
               var t = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
-                  var a = Object.getOwnPropertySymbols(e);
-                  t.push.apply(t, a);
+                  var r = Object.getOwnPropertySymbols(e);
+                  t.push.apply(t, r);
               }
               return t;
-          })(Object(r)).forEach(function (e) {
-              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
+          })(Object(a)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
           }),
-    a);
-function y(e) {
+    r);
+function h(e) {
     let { guildId: n } = e;
-    s.useEffect(() => {
-        (0, m.po)(n);
+    o.useEffect(() => {
+        (0, b.po)(n);
     }, [n]);
     let t = (0, d.e7)([g.Z], () => g.Z.getStateForGuild(n)),
-        { catalog: a, instances: r } = s.useMemo(() => {
+        { catalog: r, instances: a } = o.useMemo(() => {
             var e, n;
             return {
                 catalog: Object.values(null != (e = null == t ? void 0 : t.catalog) ? e : {}),
                 instances: Object.values(null != (n = null == t ? void 0 : t.instances) ? n : {}),
             };
         }, [null == t ? void 0 : t.catalog, null == t ? void 0 : t.instances]),
-        o = r.length >= j.zI;
-    return 0 === a.length
+        s = a.length >= v.zI;
+    return 0 === r.length
         ? (0, i.jsx)("div", {
-              className: h.container,
+              className: y.container,
               children: (0, i.jsx)(u.$jN, {
                   type: u.RAz.SPINNING_CIRCLE,
-                  className: h.spinner,
+                  className: y.spinner,
               }),
           })
         : (0, i.jsxs)("div", {
-              className: h.container,
+              className: y.container,
               children: [
-                  (0, i.jsx)(l.X6q, {
-                      className: h.heading,
+                  (0, i.jsx)(c.X6q, {
+                      className: y.heading,
                       variant: "heading-md/semibold",
-                      children: _.intl.string(v.default.jeYp1t),
+                      children: _.intl.string(j.default.DG1SHB),
                   }),
-                  o &&
+                  s &&
                       (0, i.jsx)("div", {
-                          className: h.maxInstancesWarning,
-                          children: (0, i.jsx)(p.Y, {}),
+                          className: y.maxInstancesWarning,
+                          children: (0, i.jsx)(x.Y, {}),
                       }),
-                  (0, i.jsx)(l.zJl, {
-                      className: c()(h.gameContainerWrapper, { [h.disabled]: o }),
+                  (0, i.jsx)(c.zJl, {
+                      className: l()(y.gameContainerWrapper, { [y.disabled]: s }),
                       children: (0, i.jsx)("div", {
-                          className: h.gameContainer,
-                          children: a.map((e, t) =>
+                          className: y.gameContainer,
+                          children: r.map((e, t) =>
                               (0, i.jsx)(
                                   f.Z,
                                   {
                                       game: e,
                                       onClick: () =>
-                                          (0, x.Z)({
+                                          (0, p.Z)({
                                               guildId: n,
                                               stepConfig: O,
                                               initialPortkeyGame: e,
-                                              analyticsLocation: b.Z.PORTKEY_OVERVIEW,
+                                              analyticsLocation: m.Z.PORTKEY_OVERVIEW,
                                           }),
-                                      imageClassName: h.image,
-                                      disabled: o,
+                                      imageClassName: y.image,
+                                      titleClassName: y.title,
+                                      disabled: s,
                                   },
                                   "sidebar-game-".concat(t, "-").concat(e.id),
                               ),

@@ -5,16 +5,16 @@ var a = n(120356),
     i = n.n(a),
     r = n(481060),
     s = n(943970),
-    o = n(401561),
+    o = n(440589),
     c = n(388032),
-    u = n(720534);
+    u = n(114162);
 function d(e) {
-    let { className: t, game: n, onClick: a, imageClassName: d, disabled: m = !1 } = e,
-        v = (0, s.Z)(n.gameId, "cover");
+    let { className: t, game: n, onClick: a, imageClassName: d, titleClassName: m, disabled: v = !1 } = e,
+        g = (0, s.Z)(n.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
-        "aria-disabled": m,
-        className: i()(u.game, { [u.disabled]: m }, t),
-        onClick: m ? void 0 : () => a(n),
+        "aria-disabled": v,
+        className: i()(u.game, { [u.disabled]: v }, t),
+        onClick: v ? void 0 : () => a(n),
         children: [
             (0, l.jsxs)("div", {
                 className: i()(u.gameImageContainer, d),
@@ -22,17 +22,19 @@ function d(e) {
                     (0, l.jsx)("img", {
                         className: u.image,
                         alt: "",
-                        src: null != v ? v : "",
+                        src: null != g ? g : "",
                     }),
                     (0, l.jsx)("div", { className: u.gameImageBorder }),
                     (0, l.jsx)("div", { className: u.gameImageOverlay }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: u.textContainer,
+                className: i()(u.textContainer, m),
                 children: [
                     (0, l.jsx)(r.X6q, {
                         variant: "heading-sm/semibold",
+                        lineClamp: 1,
+                        title: n.name,
                         children: n.name,
                     }),
                     (0, l.jsxs)("div", {
