@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(893966),
     C = n(527379),
     m = n(388032),
-    b = n(266631),
-    p = n(51237);
+    b = n(399291),
+    p = n(508708);
 function f(e) {
     let { guild: t, onSubmit: i } = e,
         f = (0, a.e7)([d.Z], () => d.Z.getMembersCountByGuildId(t.id, c.R_.NEW_GUILD_MEMBER), [t.id]),
@@ -19,13 +19,13 @@ function f(e) {
             let e = d.Z.getNewMemberTimestamp(t.id);
             return o()(e).format("h:mm A");
         }, [t.id]),
-        j = (0, a.e7)([d.Z], () => d.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        g = l.useCallback(() => {
+        g = (0, a.e7)([d.Z], () => d.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
+        j = l.useCallback(() => {
             (0, C.YO)(t.id), null == i || i();
         }, [t.id, i]),
         x = l.useCallback(() => {
-            j
-                ? g()
+            g
+                ? j()
                 : (0, s.ZDy)(async () => {
                       let { default: e } = await n.e("24478").then(n.bind(n, 319481));
                       return (t) => {
@@ -57,7 +57,7 @@ function f(e) {
                                   }
                                   return e;
                               })({}, t)),
-                              (l = l = { onConfirm: g }),
+                              (l = l = { onConfirm: j }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
@@ -74,7 +74,7 @@ function f(e) {
                           );
                       };
                   });
-        }, [g, j]),
+        }, [j, g]),
         v = new Intl.NumberFormat(m.intl.currentLocale).format(f),
         y = (0, u.nX)(t.id),
         O = (0, u.xC)(t.id),

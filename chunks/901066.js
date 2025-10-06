@@ -23,8 +23,8 @@ var l = n(951288),
     E = n(981631),
     N = n(131085),
     S = n(388032),
-    P = n(59678),
-    R = n(428331);
+    P = n(473262),
+    R = n(598256);
 function I(e) {
     let { icon: t, label: n, onClick: r, disabled: i } = e;
     return (0, l.jsxs)(d.P3F, {
@@ -120,7 +120,7 @@ function Z(e) {
         ],
     });
 }
-function M(e) {
+function O(e) {
     let { user: t, guildId: n, joinRequest: r } = e,
         {
             approveRequest: i,
@@ -152,7 +152,7 @@ function M(e) {
         ],
     });
 }
-function O(e) {
+function w(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: r, actionedByUser: i, rejectionReason: a } = n;
@@ -202,7 +202,7 @@ function O(e) {
         ],
     });
 }
-function w(e) {
+function M(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: r, actionedByUser: i } = n;
@@ -325,13 +325,13 @@ function A(e) {
                                       joinRequest: n,
                                   }),
                                   n.applicationStatus === j.wB.SUBMITTED &&
-                                      (0, l.jsx)(M, {
+                                      (0, l.jsx)(O, {
                                           user: o,
                                           guildId: t,
                                           joinRequest: n,
                                       }),
-                                  n.applicationStatus === j.wB.REJECTED && (0, l.jsx)(O, { joinRequest: n }),
-                                  n.applicationStatus === j.wB.APPROVED && (0, l.jsx)(w, { joinRequest: n }),
+                                  n.applicationStatus === j.wB.REJECTED && (0, l.jsx)(w, { joinRequest: n }),
+                                  n.applicationStatus === j.wB.APPROVED && (0, l.jsx)(M, { joinRequest: n }),
                               ],
                           }),
                           (0, l.jsxs)("div", {

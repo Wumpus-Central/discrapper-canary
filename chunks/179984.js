@@ -28,11 +28,11 @@ var r = n(951288),
     R = n(21023),
     P = n(474936),
     w = n(388032),
-    D = n(17355),
+    D = n(213599),
     L = n(102655),
     x = n(768236),
-    j = n(314907),
-    M = n(826701);
+    M = n(314907),
+    j = n(826701);
 function k(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ let Z = () => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? j : M;
+        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? M : j;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -185,8 +185,8 @@ let Z = () => {
                 hideCTAs: C = !1,
                 headingOverride: L,
                 hidePill: x = !1,
-                selectedPlanColumnClassName: j,
-                selectedPlanTier: M = P.p9.TIER_2,
+                selectedPlanColumnClassName: M,
+                selectedPlanTier: j = P.p9.TIER_2,
             } = e,
             { analyticsLocations: k } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, s.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
@@ -302,7 +302,7 @@ let Z = () => {
                   : el
                     ? (0, r.jsx)(Z, {})
                     : (0, r.jsx)(F, {}));
-        let ef = J === P.Si.TIER_0 || $ === P.p9.TIER_0 || M === P.p9.TIER_0;
+        let ef = J === P.Si.TIER_0 || $ === P.p9.TIER_0 || j === P.p9.TIER_0;
         return (0, r.jsx)(_.Gt, {
             value: k,
             children: (0, r.jsxs)("div", {
@@ -318,7 +318,7 @@ let Z = () => {
                         className: D.tableWrapper,
                         children: [
                             (0, r.jsx)("div", {
-                                className: o()(j, {
+                                className: o()(M, {
                                     [D.tier0ColumnOuter]: ef,
                                     [D.tier2ColumnOuter]: !ef,
                                 }),

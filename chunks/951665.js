@@ -5,7 +5,7 @@ var r = n(951288),
     s = n(457414),
     a = n(311173),
     o = n(388032),
-    c = n(97247);
+    c = n(332310);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +56,7 @@ function m(e) {
         h = i.useCallback(() => {
             f(!p);
         }, [p, f]),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
@@ -67,7 +67,7 @@ function m(e) {
               isExpanded: p,
               collapsibleContent: (0, r.jsx)(a.Z, {
                   rule: n,
-                  onChangeText: b,
+                  onChangeText: x,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),

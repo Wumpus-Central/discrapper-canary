@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(951288),
     r = n(647438),
     s = n(120356),
@@ -7,10 +7,10 @@ var i = n(951288),
     a = n(518084),
     c = n(981631),
     d = n(388032),
-    u = n(71264);
-let h = function (e) {
+    u = n(924957);
+let p = function (e) {
     let t,
-        { title: n, header: s, children: h, renderSettings: p, onDragStart: f } = e,
+        { title: n, header: s, children: p, renderSettings: h, onDragStart: f } = e,
         g = r.useRef(null);
     return (
         (t =
@@ -28,7 +28,7 @@ let h = function (e) {
                               children: (0, i.jsx)(l.yRy, {
                                   targetElementRef: g,
                                   position: "right",
-                                  renderPopout: null != p ? p : c.dG4,
+                                  renderPopout: null != h ? h : c.dG4,
                                   autoInvert: !1,
                                   children: (e) => {
                                       var t, n;
@@ -91,7 +91,7 @@ let h = function (e) {
                 t,
                 (0, i.jsx)("div", {
                     className: u.children,
-                    children: h,
+                    children: p,
                 }),
             ],
         })

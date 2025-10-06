@@ -26,13 +26,13 @@ var r = n(951288),
     C = n(689079),
     N = n(981631),
     R = n(388032),
-    P = n(57507),
+    P = n(587222),
     w = n(239840);
 let D = 512,
     L = 7,
     x = 56,
-    j = 16,
-    M = 32,
+    M = 16,
+    j = 32,
     k = 20,
     U = 420,
     G = [8, 8, 0, 8],
@@ -91,7 +91,7 @@ let D = 512,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (M + j) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (j + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -101,7 +101,7 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? j : 0), [q.length, Q]),
+        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
             eo = X.map((e) => e.data.length);
         i.useEffect(() => {
             null != H.current && Y && null != Z && H.current.scrollRowIntoView(Z);
@@ -278,7 +278,7 @@ let D = 512,
                         rowCount: q.length,
                         rowCountBySection: eo,
                         rowHeight: x,
-                        sectionHeaderHeight: M,
+                        sectionHeaderHeight: j,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,

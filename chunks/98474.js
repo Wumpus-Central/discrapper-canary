@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(768581),
     p = n(176354),
     h = n(675654),
-    m = n(42868);
+    m = n(255971);
 function g(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ function T(e) {
         ),
         L = b.x - (b.width / 2) * v,
         x = b.y - (b.height / 2) * v,
-        j = (0, l.q_F)({
+        M = (0, l.q_F)({
             from: { y: g.y },
             to: { y: x },
             config: {
@@ -105,7 +105,7 @@ function T(e) {
                 C(t);
             },
         }),
-        M = (0, l.q_F)({
+        j = (0, l.q_F)({
             from: {
                 x: g.x,
                 scale: 1,
@@ -155,10 +155,10 @@ function T(e) {
                 }),
                 (0, r.jsx)(d.ZP, {
                     children: (0, r.jsx)(o.animated.div, {
-                        style: E({}, j),
+                        style: E({}, M),
                         className: m.emojiContainer,
                         children: (0, r.jsx)(o.animated.div, {
-                            style: y(E({}, M), { opacity: M.opacity }),
+                            style: y(E({}, j), { opacity: j.opacity }),
                             children: (0, r.jsx)(c.Z, {
                                 className: m.emoji,
                                 emojiId: n.id,

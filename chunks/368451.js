@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(970184),
     p = n(280501),
     h = n(292419),
-    m = n(219879);
+    m = n(49739);
 function g(e, t, n) {
     return (
         t in e
@@ -185,9 +185,9 @@ function T(e) {
         w = null != S.modal,
         D = s > 1,
         L = N === p.gH.LOADING,
-        [x, j] = i.useState(!1),
-        [M, k] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
-        [U, G] = i.useState(M),
+        [x, M] = i.useState(!1),
+        [j, k] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
+        [U, G] = i.useState(j),
         B = i.useMemo(() => n.some((e) => null != e.emoji), [n]);
     i.useEffect(() => {
         if ((null == A ? void 0 : A.type) === d.re.STRING_SELECT) {
@@ -199,20 +199,20 @@ function T(e) {
         }
     }, [a, T, A]);
     let Z = i.useCallback(() => {
-        U !== M &&
+        U !== j &&
             C({
                 type: d.re.STRING_SELECT,
-                values: Array.from(M),
+                values: Array.from(j),
             }) &&
-            G(M);
-    }, [M, U, G, C]);
+            G(j);
+    }, [j, U, G, C]);
     i.useEffect(() => {
-        !x && ((M.size === U.size && Array.from(U).every((e) => M.has(e))) || Z());
-    }, [x, M, U, Z]);
+        !x && ((j.size === U.size && Array.from(U).every((e) => j.has(e))) || Z());
+    }, [x, j, U, Z]);
     let F = c.UNb;
     D ? (F = c.gzz) : 0 === u && (F = c.s6k);
     let V = (0, c.cYr)({
-        value: M,
+        value: j,
         onChange: (e) => k(e),
         onSelectInteraction: F,
     });
@@ -227,10 +227,10 @@ function T(e) {
                             isProcessing: L,
                             isDisabled: g || N === p.gH.DISABLED || R,
                             className: o()(m.select, { [m.inModal]: w }),
-                            options: n.map((e) => y(E({}, e), { disabled: D && !M.has(e.value) && M.size === s })),
+                            options: n.map((e) => y(E({}, e), { disabled: D && !j.has(e.value) && j.size === s })),
                             placeholder: b,
-                            onClose: () => j(!1),
-                            onOpen: () => j(!0),
+                            onClose: () => M(!1),
+                            onOpen: () => M(!0),
                             maxVisibleItems: 5,
                             closeOnSelect: !D,
                             optionClassName: m.selectOption,
@@ -238,7 +238,7 @@ function T(e) {
                                 (0, r.jsx)(
                                     O,
                                     y(E({}, e), {
-                                        isDisabled: D && !M.has(e.value) && M.size === s,
+                                        isDisabled: D && !j.has(e.value) && j.size === s,
                                         isOffset: B,
                                     }),
                                 ),

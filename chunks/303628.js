@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(444282),
     y = n(898463),
     O = n(981631),
-    v = n(83120),
-    I = n(154257);
+    v = n(300981),
+    I = n(525685);
 function T(e, t, n) {
     return (
         t in e
@@ -118,7 +118,7 @@ function w(e) {
                 commandOptionStates: n,
             };
         }),
-        j = i.useMemo(() => {
+        M = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -134,7 +134,7 @@ function w(e) {
                 ? e
                 : [];
         }, [L, x]),
-        [M, k] = i.useState([]);
+        [j, k] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -153,8 +153,8 @@ function w(e) {
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: M,
-            uploadOptions: j,
+            previousUploadOptions: j,
+            uploadOptions: M,
         },
         B = i.useRef(G);
     i.useEffect(() => {
@@ -172,9 +172,9 @@ function w(e) {
                     }),
                     k(i);
             }
-        }, [t, j.length, n]);
+        }, [t, M.length, n]);
     let Z = w.filter((e) => e.filename !== a);
-    return (!D && 0 === Z.length) || (D && 0 === j.length)
+    return (!D && 0 === Z.length) || (D && 0 === M.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
@@ -187,7 +187,7 @@ function w(e) {
                           C(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
-                                  ? j.map((e) =>
+                                  ? M.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
                                             {

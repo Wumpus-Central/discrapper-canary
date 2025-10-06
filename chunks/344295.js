@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(533800),
-    a = n(756647),
+    a = n(533800),
+    o = n(756647),
     c = n(442837),
     u = n(298444),
     d = n(447543),
@@ -21,8 +21,8 @@ var r = n(951288),
     j = n(703656),
     I = n(108427),
     N = n(314897),
-    O = n(896797),
-    S = n(701190),
+    S = n(896797),
+    O = n(701190),
     y = n(626135),
     C = n(630388),
     A = n(63063),
@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(701476),
     M = n(436620),
     U = n(388032),
-    G = n(197571);
+    G = n(10198);
 function B(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ class H extends i.PureComponent {
         else if (this.getMode() === V && r !== e.authenticated && r) {
             let e = N.default.getFingerprint();
             if (null != e) {
-                let t = (0, a.s)(e);
+                let t = (0, o.s)(e);
                 this.track(w.rMx.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
             }
             d.ZP.acceptInvite({
@@ -97,7 +97,7 @@ class H extends i.PureComponent {
             if (null != e)
                 if (((0, b.c)(k.M5.INVITE_UNCLAIMED), null != t.guild)) {
                     var s, c, u;
-                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, o.$.IS_APPLICATION_BYPASS),
+                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, a.$.IS_APPLICATION_BYPASS),
                         n =
                             (null == (s = t.guild.features)
                                 ? void 0
@@ -273,7 +273,7 @@ class H extends i.PureComponent {
                 return this.renderSpinner(U.intl.string(U.t["Z+hCVV"]));
             case w.r2o.RESOLVED:
                 var s;
-                if (n && (0, C.yE)(null != (s = e.flags) ? s : 0, o.$.IS_GUEST_INVITE))
+                if (n && (0, C.yE)(null != (s = e.flags) ? s : 0, a.$.IS_GUEST_INVITE))
                     return d.ZP.openApp(e.code), u.x.set(E.J, e.code), this.renderAppOpened(() => i(w.Z5c.APP));
                 if (n || !M.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === V)
@@ -364,14 +364,14 @@ class H extends i.PureComponent {
             });
     }
 }
-let W = c.ZP.connectStores([S.Z, O.Z, N.default, x.Z, g.Z], (e) => {
+let W = c.ZP.connectStores([O.Z, S.Z, N.default, x.Z, g.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = S.Z.getInvite(n)) ? t : {},
+        invite: null != (t = O.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
         authenticated: N.default.isAuthenticated(),
-        defaultRoute: O.Z.defaultRoute,
+        defaultRoute: S.Z.defaultRoute,
         isUnderage: g.Z.isUnderageAnonymous(),
     };
 })(H);

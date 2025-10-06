@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     c = n(442837),
     u = n(388905),
     d = n(362762),
@@ -21,15 +21,15 @@ var r = n(951288),
     j = n(954824),
     I = n(781428),
     N = n(163671),
-    O = n(423527),
-    S = n(981631),
+    S = n(423527),
+    O = n(981631),
     y = n(260539),
     C = n(701476),
     A = n(630724),
     T = n(436620),
     Z = n(388032),
-    P = n(160033),
-    R = n(197571);
+    P = n(858518),
+    R = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ c.ZP.initialize();
 class w extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            T.KO || j.Z.launch("discord://" + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            T.KO || j.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
@@ -96,7 +96,7 @@ class w extends i.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (a()(null != e, "guild template must not be null"), e.state === y.Rj.RESOLVING)
+        return (o()(null != e, "guild template must not be null"), e.state === y.Rj.RESOLVING)
             ? (0, r.jsx)(u.ZP, {
                   className: P.authBox,
                   children: (0, r.jsx)(f.Z, { guildTemplate: e }),
@@ -114,8 +114,8 @@ class w extends i.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
         if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur6));
-        if (t === S.kEZ.OPEN) return this.renderAppOpened();
-        if (t === S.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
+        if (t === O.kEZ.OPEN) return this.renderAppOpened();
+        if (t === O.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
         switch (e.state) {
             case y.Rj.RESOLVING:
                 return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
@@ -127,7 +127,7 @@ class w extends i.PureComponent {
                         transitionTo: i,
                         location: l,
                     });
-                return (0, r.jsx)(O.Z, {
+                return (0, r.jsx)(S.Z, {
                     guildTemplate: e,
                     transitionTo: i,
                     location: l,

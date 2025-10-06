@@ -13,10 +13,10 @@ var r,
     u = n(695346),
     d = n(885110),
     p = n(316496),
-    f = n(223730),
-    h = n(933554),
+    h = n(223730),
+    f = n(893867),
     g = n(388032),
-    m = n(87587),
+    m = n(515438),
     b = n(354810);
 function _(e) {
     let { closePopout: t } = e;
@@ -26,7 +26,7 @@ function _(e) {
         children: (0, i.jsx)(s.zxk, {
             variant: "primary",
             size: "sm",
-            text: g.intl.string(h.default.Poezn5),
+            text: g.intl.string(f.default.Poezn5),
             onClick: () => {
                 t(), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
             },
@@ -34,7 +34,7 @@ function _(e) {
         }),
     });
 }
-function O(e) {
+function y(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
         r = (0, o.e7)([d.Z], () => d.Z.getStatus());
     return (0, i.jsxs)("div", {
@@ -46,7 +46,7 @@ function O(e) {
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: g.intl.string(h.default.WhdCGB),
+                        children: g.intl.string(f.default.WhdCGB),
                     }),
                     n &&
                         (0, i.jsxs)("div", {
@@ -61,7 +61,7 @@ function O(e) {
                                     color: "text-secondary",
                                     children:
                                         r === s.Skl.INVISIBLE
-                                            ? g.intl.string(h.default.a3AofX)
+                                            ? g.intl.string(f.default.a3AofX)
                                             : g.intl.string(g.t.WbGtnJ),
                                 }),
                             ],
@@ -77,7 +77,7 @@ function O(e) {
         ],
     });
 }
-function y(e) {
+function O(e) {
     let { children: t } = e,
         n = (0, l.useRef)(null);
     return (
@@ -96,24 +96,24 @@ function v(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, p.D)("popout");
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
-            (0, i.jsx)(O, { showCurrentGame: n }),
+            (0, i.jsx)(y, { showCurrentGame: n }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(h.default["7cfFoa"]),
+                children: g.intl.string(f.default["7cfFoa"]),
             }),
             r &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(f.yj, { onClosePopout: t })],
+                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(h.yj, { onClosePopout: t })],
                 }),
         ],
     });
 }
 function j(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
             (0, i.jsxs)(s.Kqy, {
                 align: "start",
@@ -124,7 +124,7 @@ function j(e) {
                         variant: "heading-sm/semibold",
                         color: "header-primary",
                         className: m.controlTitle,
-                        children: g.intl.string(h.default["5YsmGB"]),
+                        children: g.intl.string(f.default["5YsmGB"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: m.toggleContainerOnlineRow,
@@ -136,7 +136,7 @@ function j(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-secondary",
-                                children: g.intl.string(h.default.U8MFdX),
+                                children: g.intl.string(f.default.U8MFdX),
                             }),
                         ],
                     }),
@@ -145,7 +145,7 @@ function j(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(h.default.Yl0mh4),
+                children: g.intl.string(f.default.Yl0mh4),
             }),
             (0, i.jsx)(_, { closePopout: t }),
         ],
@@ -155,20 +155,20 @@ function x(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, p.D)("popout");
-    return (0, i.jsxs)(y, {
+    return (0, i.jsxs)(O, {
         children: [
-            (0, i.jsx)(O, {
+            (0, i.jsx)(y, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
             }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(h.default["7cfFoa"]),
+                children: g.intl.string(f.default["7cfFoa"]),
             }),
             r &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(f.yj, { onClosePopout: t })],
+                    children: [(0, i.jsx)(s.izJ, { className: m.divider }), (0, i.jsx)(h.yj, { onClosePopout: t })],
                 }),
         ],
     });
@@ -185,32 +185,32 @@ function E(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
         [p, m] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
-        O = (function (e) {
+        y = (function (e) {
             if (null === e) return null;
             switch (e) {
                 case 0:
                     return {
                         type: "popover",
-                        title: g.intl.string(h.default.vxVbGB),
-                        body: [g.intl.string(h.default["7cfFoa"])],
+                        title: g.intl.string(f.default.vxVbGB),
+                        body: [g.intl.string(f.default["7cfFoa"])],
                         action: {
-                            text: g.intl.string(h.default.k4tCg4),
+                            text: g.intl.string(f.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0);
                             },
                         },
                         textLink: {
                             text: g.intl.string(g.t["ZrN+DQ"]),
-                            onClick: f.S$,
+                            onClick: h.S$,
                         },
                     };
                 case 1:
                     return {
                         type: "popover",
-                        title: g.intl.string(h.default.qKDqen),
-                        body: [g.intl.string(h.default.Yl0mh4)],
+                        title: g.intl.string(f.default.qKDqen),
+                        body: [g.intl.string(f.default.Yl0mh4)],
                         action: {
-                            text: g.intl.string(h.default.Poezn5),
+                            text: g.intl.string(f.default.Poezn5),
                             onClick: () => {
                                 (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
@@ -219,17 +219,17 @@ function E(e) {
                 case 2:
                     return {
                         type: "popover",
-                        title: g.intl.string(h.default["6cA8HR"]),
-                        body: [g.intl.string(h.default["7cfFoa"])],
+                        title: g.intl.string(f.default["6cA8HR"]),
+                        body: [g.intl.string(f.default["7cfFoa"])],
                         action: {
-                            text: g.intl.string(h.default.k4tCg4),
+                            text: g.intl.string(f.default.k4tCg4),
                             onClick: () => {
                                 u.G6.updateSetting(!0), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
                         },
                         textLink: {
                             text: g.intl.string(g.t["ZrN+DQ"]),
-                            onClick: f.S$,
+                            onClick: h.S$,
                         },
                     };
                 case 3:
@@ -251,17 +251,17 @@ function E(e) {
                     return null;
             }
         })(p),
-        y = (0, l.useRef)(t);
+        O = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !y.current && m(n), t !== y.current && (y.current = t);
+            t && !O.current && m(n), t !== O.current && (O.current = t);
         }, [n, t]),
-        null == O || !t)
+        null == y || !t)
     )
         return d;
-    if ("popover" === O.type) {
+    if ("popover" === y.type) {
         var C, E;
-        let { action: e, title: t, body: n, textLink: l } = O;
+        let { action: e, title: t, body: n, textLink: l } = y;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.J2, {
@@ -330,7 +330,7 @@ function E(e) {
             ],
         });
     }
-    let { children: S } = O;
+    let { children: S } = y;
     return (0, i.jsx)(s.yRy, {
         targetElementRef: _,
         shouldShow: !0,

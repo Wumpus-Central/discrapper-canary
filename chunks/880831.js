@@ -3,8 +3,8 @@ n.d(t, {
     z: () => Z,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -18,8 +18,8 @@ var r = n(951288),
     m = n(905405),
     g = n(937889),
     b = n(739566),
-    y = n(267128),
-    C = n(378233),
+    C = n(267128),
+    y = n(378233),
     _ = n(419922),
     v = n(375954),
     x = n(699516),
@@ -28,7 +28,7 @@ var r = n(951288),
     E = n(823379),
     S = n(981631),
     P = n(217702),
-    I = n(89019);
+    I = n(832063);
 let Z = 10 * j.Z.Millis.SECOND;
 function N(e) {
     var t;
@@ -42,10 +42,10 @@ function N(e) {
             [n],
         ),
         s = (0, b.Uj)(n),
-        d = i.useContext(f.Z),
-        [v, j] = i.useState(!1),
+        d = r.useContext(f.Z),
+        [v, j] = r.useState(!1),
         E = (0, m.p)(),
-        S = i.useCallback(
+        S = r.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
                     (p.Z.updateChatOpen(n.channel_id, !0),
@@ -69,16 +69,16 @@ function N(e) {
             renderedContent: T,
             trailingIcon: A,
             leadingIcon: w,
-        } = (0, y.f)(n, Z, l, o, I.messageContent, {
+        } = (0, C.f)(n, Z, l, o, I.messageContent, {
             trailingIconClass: I.messageContentTrailingIcon,
             leadingIconClass: I.messageContentLeadingIcon,
             iconSize: P.WW,
         }),
-        M = (0, C.cv)(n),
+        M = (0, y.cv)(n),
         R =
             M.length > 0
                 ? M.map((e) =>
-                      (0, r.jsx)(
+                      (0, i.jsx)(
                           _.Z,
                           {
                               className: I.sticker,
@@ -90,7 +90,7 @@ function N(e) {
                       ),
                   )
                 : null;
-    return (0, r.jsxs)(u.P3F, {
+    return (0, i.jsxs)(u.P3F, {
         className: I.toast,
         onMouseEnter: () => {
             j(!0);
@@ -100,15 +100,15 @@ function N(e) {
         },
         onClick: S,
         children: [
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: a()(I.messageContentWrapper, { [I.mentioned]: n.mentioned }),
                 children: [
                     null != R ? null : w,
-                    null != (t = null != T ? T : R) ? t : (0, r.jsx)("span", { children: N }),
+                    null != (t = null != T ? T : R) ? t : (0, i.jsx)("span", { children: N }),
                     null != R ? null : A,
                 ],
             }),
-            (0, r.jsx)("img", {
+            (0, i.jsx)("img", {
                 alt: "",
                 src:
                     (null == s ? void 0 : s.guildMemberAvatar) != null && null != d
@@ -125,28 +125,28 @@ function N(e) {
 }
 function T(e) {
     let { channelId: t, className: n } = e,
-        [l, p] = i.useState(!1),
+        [l, p] = r.useState(!1),
         { toastsHidden: h, toastMessages: f } = (function (e) {
             var t;
-            let { channelId: n, isFrozen: r, count: l, lingerMs: a } = e,
-                [o, s] = i.useState([]),
-                [u, p] = i.useState(!1),
-                h = i.useRef(null),
-                f = i.useRef(void 0),
-                m = i.useCallback(() => {
+            let { channelId: n, isFrozen: i, count: l, lingerMs: a } = e,
+                [o, s] = r.useState([]),
+                [u, p] = r.useState(!1),
+                h = r.useRef(null),
+                f = r.useRef(void 0),
+                m = r.useCallback(() => {
                     s([]), p(!0);
                 }, []);
-            i.useEffect(() => {
+            r.useEffect(() => {
                 function e(e) {
-                    let { channelId: t, message: r, optimistic: i } = e;
+                    let { channelId: t, message: i, optimistic: r } = e;
                     t !== n ||
-                        r.type === S.uaV.STAGE_START ||
-                        r.type === S.uaV.STAGE_END ||
-                        r.type === S.uaV.STAGE_TOPIC ||
-                        r.type === S.uaV.STAGE_SPEAKER ||
-                        r.type === S.uaV.STAGE_RAISE_HAND ||
-                        i ||
-                        (clearTimeout(f.current), (f.current = setTimeout(m, a)), s((e) => [...e, r.id]));
+                        i.type === S.uaV.STAGE_START ||
+                        i.type === S.uaV.STAGE_END ||
+                        i.type === S.uaV.STAGE_TOPIC ||
+                        i.type === S.uaV.STAGE_SPEAKER ||
+                        i.type === S.uaV.STAGE_RAISE_HAND ||
+                        r ||
+                        (clearTimeout(f.current), (f.current = setTimeout(m, a)), s((e) => [...e, i.id]));
                 }
                 return (
                     d.Z.subscribe("MESSAGE_CREATE", e),
@@ -155,20 +155,20 @@ function T(e) {
                     }
                 );
             }, [n, m, l, a]),
-                i.useEffect(
+                r.useEffect(
                     () => () => {
                         clearTimeout(f.current);
                     },
                     [],
                 ),
-                i.useEffect(() => {
+                r.useEffect(() => {
                     o.length > 3 &&
                         s((e) => {
                             let t = e.length - 3;
                             return [...e.slice(t)];
                         });
                 }, [o]),
-                r && null == h.current ? (h.current = o) : r || null == h.current || (h.current = null);
+                i && null == h.current ? (h.current = o) : i || null == h.current || (h.current = null);
             let g = null != (t = h.current) ? t : o;
             return {
                 toastsHidden: u,
@@ -180,24 +180,24 @@ function T(e) {
             count: 3,
             lingerMs: Z,
         }),
-        m = i.useRef({}),
-        [g, b] = i.useState({}),
-        y = i.useCallback((e, t) => {
+        m = r.useRef({}),
+        [g, b] = r.useState({}),
+        C = r.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        C = i.useRef(g);
-    i.useLayoutEffect(() => {
-        C.current = g;
+        y = r.useRef(g);
+    r.useLayoutEffect(() => {
+        y.current = g;
     }),
-        i.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             let e = {},
                 t = 0;
-            for (let r of f) {
+            for (let i of f) {
                 var n;
-                let i = null != (n = m.current[r.id]) ? n : 0;
-                (e[r.id] = t), (t += i + 8);
+                let r = null != (n = m.current[i.id]) ? n : 0;
+                (e[i.id] = t), (t += r + 8);
             }
-            (0, o.isEqual)(e, C.current) || b(e);
+            (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
     let _ = f.map((e) => ({
             message: e,
@@ -227,10 +227,10 @@ function T(e) {
                 };
             },
         });
-    return (0, r.jsx)(u.f6W, {
+    return (0, i.jsx)(u.f6W, {
         theme: S.BRd.DARK,
         children: (e) =>
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: a()(n, e),
                 onMouseEnter: () => {
                     p(!0);
@@ -239,11 +239,11 @@ function T(e) {
                     p(!1);
                 },
                 children: x((e, t) =>
-                    (0, r.jsx)(s.animated.div, {
-                        ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
+                    (0, i.jsx)(s.animated.div, {
+                        ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
                         className: I.toastWrapper,
                         style: e,
-                        children: (0, r.jsx)(N, { message: t.message }),
+                        children: (0, i.jsx)(N, { message: t.message }),
                     }),
                 ),
             }),

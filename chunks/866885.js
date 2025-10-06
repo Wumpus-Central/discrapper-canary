@@ -31,10 +31,10 @@ var r = n(951288),
     D = n(701488),
     L = n(918559),
     x = n(981631),
-    j = n(354459),
-    M = n(505386),
-    k = n(186880),
-    U = n(315091);
+    M = n(354459),
+    j = n(51434),
+    k = n(533362),
+    U = n(285236);
 function G(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ function V(e) {
         })),
         $ = W || null != q,
         ee = (0, R.Z)(null == _ ? void 0 : _.id),
-        et = ee && (null == Q ? void 0 : Q.type) !== j.fO.ACTIVITY,
+        et = ee && (null == Q ? void 0 : Q.type) !== M.fO.ACTIVITY,
         en = !ee && V === L.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
@@ -151,7 +151,7 @@ function V(e) {
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
-        return ei && null != B && ((null == X ? void 0 : X.type) === j.fO.ACTIVITY || o)
+        return ei && null != B && ((null == X ? void 0 : X.type) === M.fO.ACTIVITY || o)
             ? (null == (t = B.config) ? void 0 : t.useInteractivePIP)
                 ? (0, r.jsx)(w.of, {
                       onJumpToChannel: eo,
@@ -188,7 +188,7 @@ function V(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: M.clickShield,
+                                  className: j.clickShield,
                                   onDoubleClick: eo,
                               }),
                               (0, r.jsx)(w.YB, {
@@ -242,14 +242,14 @@ function V(e) {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(M.root, {
-                        [M.pipMode]: ei,
+                    className: o()(j.root, {
+                        [j.pipMode]: ei,
                         [U.elevationHigh]: ei,
                         [k.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [M.pipModeShort]: ei && !C,
-                        [M.pipModeTall]: ei && C,
-                        [M.hidden]: z,
-                        [M.multiPIPMode]: ea,
+                        [j.pipModeShort]: ei && !C,
+                        [j.pipModeTall]: ei && C,
+                        [j.hidden]: z,
+                        [j.multiPIPMode]: ea,
                     }),
                     noBorder: !ei,
                     children: [
@@ -265,9 +265,9 @@ function V(e) {
                         }),
                         p || F
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(M.iframe, {
-                                      [M.pipModeShort]: ei && !C,
-                                      [M.pipModeTall]: ei && C,
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
                                   }),
                               })
                             : (0, r.jsx)(P.J, {
@@ -275,10 +275,10 @@ function V(e) {
                                   referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: eu,
-                                  className: o()(M.iframe, {
-                                      [M.pipModeShort]: ei && !C,
-                                      [M.pipModeTall]: ei && C,
-                                      [M.pipNonInteractive]:
+                                  className: o()(j.iframe, {
+                                      [j.pipModeShort]: ei && !C,
+                                      [j.pipModeTall]: ei && C,
+                                      [j.pipNonInteractive]:
                                           ei && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !ei && W,

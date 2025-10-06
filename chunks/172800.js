@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    C = n(999642);
+    C = n(39162);
 function N(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ let x = (e) => {
             onSelectSoundmoji: P,
             onInspect: L,
             surrogateCodePoint: x,
-            getEmojiItemProps: j,
-            getEmojiRowProps: M,
+            getEmojiItemProps: M,
+            getEmojiRowProps: j,
             isScrolling: k,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
@@ -165,7 +165,7 @@ let x = (e) => {
                             shouldShowRoundHighlight: f,
                         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: p } = e,
-                        h = null != (n = j(p, G)) ? n : {},
+                        h = null != (n = M(p, G)) ? n : {},
                         { ref: m, tabIndex: g, onFocus: E } = h,
                         b = D(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
@@ -286,7 +286,7 @@ let x = (e) => {
                             onSelect: N,
                             onInspect: L,
                             channelGuildId: F,
-                            getEmojiItemProps: j,
+                            getEmojiItemProps: M,
                             isMediumSize: ep,
                             isLargeSize: e_,
                             pulseItemKey: eu,
@@ -307,7 +307,7 @@ let x = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                w(R({}, M(G)), {
+                w(R({}, j(G)), {
                     className: o()(C.emojiListRow, {
                         [C.emojiListRowLargeSize]: e_,
                         [C.emojiListRowMediumSize]: ep,

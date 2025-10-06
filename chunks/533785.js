@@ -1,7 +1,7 @@
 t.d(n, { t: () => i }), t(953529);
 var a = t(951288),
     l = t(481060),
-    r = t(661009);
+    r = t(64208);
 function i(e) {
     let { leaderboard: n } = e;
     return null == n

@@ -16,8 +16,8 @@ var r = n(951288),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(693450),
-    O = n(147164);
+    y = n(62222),
+    O = n(714892);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,
         I = u.JH.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
@@ -37,10 +37,10 @@ function v(e) {
                     guildId: n,
                 });
         }, [S, D, n]),
-        j = (0, i.useCallback)(() => {
+        M = (0, i.useCallback)(() => {
             (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),
-        M = (0, i.useCallback)(() => {
+        j = (0, i.useCallback)(() => {
             (0, f.N_)(null);
         }, []);
     return I || R
@@ -71,7 +71,7 @@ function v(e) {
                               variant: "secondary",
                               size: "sm",
                               text: b.intl.string(y.default.ymq8WV),
-                              onClick: j,
+                              onClick: M,
                           }),
                       null != n &&
                           R &&
@@ -79,7 +79,7 @@ function v(e) {
                               variant: "secondary",
                               size: "sm",
                               text: b.intl.string(y.default["j/KRxc"]),
-                              onClick: M,
+                              onClick: j,
                           }),
                   ],
               }),

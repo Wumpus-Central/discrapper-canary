@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(224706),
     f = n(225433),
     _ = n(570928),
-    p = n(220410),
+    p = n(272304),
     h = n(594190),
     m = n(320724),
     g = n(297700),
@@ -25,10 +25,10 @@ var r = n(951288),
     A = n(273313),
     C = n(981631),
     N = n(388032),
-    R = n(740508),
-    P = n(315091),
-    w = n(149715),
-    D = n(197571);
+    R = n(313911),
+    P = n(285236),
+    w = n(465106),
+    D = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -148,7 +148,7 @@ function F(e) {
         })),
         P = (0, p.P6)("UserSettingsGameActivity"),
         D = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
-        [L, j] = i.useState(!1),
+        [L, M] = i.useState(!1),
         k = i.useMemo(
             () =>
                 (0, b.le)(T)
@@ -189,7 +189,7 @@ function F(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          M(x({}, t), {
+                          j(x({}, t), {
                               title: N.intl.formatToPlainString(N.t.PZ4fKS, { platform: k }),
                               subtitle: N.intl.formatToPlainString(N.t.ZIQbfX, { platform: k }),
                               actions: [
@@ -219,14 +219,14 @@ function F(e) {
             game_name: (0, b.le)(T) ? T.gameName : T.name,
         }),
             P
-                ? (j(!0),
+                ? (M(!0),
                   (0, u.ZDy)(async () => {
                       let { default: t } = await n.e("82077").then(n.bind(n, 953848));
                       return (n) => {
                           var i, a, o;
                           return (0, r.jsx)(
                               t,
-                              M(x({}, n), {
+                              j(x({}, n), {
                                   detectedActivity: {
                                       name: null != (i = T.name) ? i : "",
                                       application_id:
@@ -244,7 +244,7 @@ function F(e) {
                           u.ToastType.SUCCESS,
                       ),
                   ),
-                  j(!0));
+                  M(!0));
     }
     function X() {
         return T.verified && !c
@@ -260,7 +260,7 @@ function F(e) {
                           children: (e) =>
                               (0, r.jsx)(
                                   g.Z,
-                                  M(
+                                  j(
                                       x(
                                           {
                                               className: R.gameVerifiedIcon,
@@ -580,7 +580,7 @@ let Y = (0, I.oH)(function () {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         u.Avr,
-                                        M(x({}, e), {
+                                        j(x({}, e), {
                                             buttonRef: _,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",

@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(879690),
+    o = n(191336),
     s = n(442837),
     c = n(481060),
     u = n(174556),
@@ -21,8 +21,8 @@ var r = n(951288),
     _ = n(314451),
     O = n(35583),
     E = n(821020),
-    y = n(340137),
-    v = n(522474),
+    v = n(340137),
+    y = n(522474),
     I = n(141321),
     S = n(984802),
     C = n(451478),
@@ -31,7 +31,7 @@ var r = n(951288),
     j = n(403497),
     P = n(950796),
     x = n(741764),
-    A = n(82504);
+    A = n(851352);
 let Z = (0, o.U)(() => ({ isOpen: !0 }));
 function w(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
@@ -56,7 +56,7 @@ let L = i.memo(function () {
         T.ZP.setMinimumSize(x.J, x.N);
     }, []);
     let R = (0, S.Ll)(),
-        D = (0, s.e7)([C.Z, v.Z], () => (0, N.rB)()),
+        D = (0, s.e7)([C.Z, y.Z], () => (0, N.rB)()),
         k = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -99,7 +99,7 @@ let L = i.memo(function () {
                                     (0, r.jsx)(h.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === k ? e : void 0,
                                     }),
-                                Z && (0, r.jsx)(y.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === k ? e : void 0 }),
+                                Z && (0, r.jsx)(v.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === k ? e : void 0 }),
                             ],
                         }),
                         title: (0, r.jsx)(w, {

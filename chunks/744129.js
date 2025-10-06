@@ -32,11 +32,11 @@ var i = n(120356),
     N = n(52741),
     R = n(474936),
     P = n(388032),
-    w = n(1721),
+    w = n(518520),
     D = n(895601),
     L = n(381126),
     x = n(234286);
-function j(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function j(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -153,11 +153,11 @@ function B(e) {
             wumpusPosition: I = "inCard",
             isApplicationHome: T = !1,
         } = e,
-        j = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-        M = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        M = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
+        j = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         k = (0, v.N)(),
         U = null == k || null == (t = k.subscription_trial) ? void 0 : t.sku_id,
-        G = (null == j ? void 0 : j.hasActiveTrial) ? (null == M ? void 0 : M.premiumType) : null,
+        G = (null == M ? void 0 : M.hasActiveTrial) ? (null == j ? void 0 : j.premiumType) : null,
         B = (0, O.Ng)(),
         Z = (0, b.t7)(),
         F = null != U || null != G ? R.C.PREMIUM_TRIAL : null != B || Z ? R.C.PREMIUM_DISCOUNT : null,
@@ -236,7 +236,7 @@ let Z = (e) => {
             children: (0, r.jsx)(
                 l.zxk,
                 U(
-                    M(
+                    j(
                         {
                             size: "md",
                             fullWidth: !0,
@@ -251,7 +251,7 @@ let Z = (e) => {
             className: a()({ [w.premiumCardHover]: !n }),
             children: (0, r.jsx)(
                 c,
-                M(
+                j(
                     {
                         className: w.applicationHomeCard,
                         ctaButton: p,

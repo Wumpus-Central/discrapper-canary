@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(358085),
     g = n(998502),
     m = n(388032),
-    b = n(499126),
-    _ = n(197571);
+    b = n(167103),
+    _ = n(10198);
 function O(e, t, n) {
     return (
         t in e
@@ -265,7 +265,7 @@ class E extends i.PureComponent {
             });
     }
 }
-class y extends i.PureComponent {
+class v extends i.PureComponent {
     componentDidMount() {
         (0, s.ec)(
             this.props.installationPaths.map((e) => {
@@ -323,8 +323,8 @@ class y extends i.PureComponent {
             });
     }
 }
-let v = l.ZP.connectStores([p.Z], () => ({
+let y = l.ZP.connectStores([p.Z], () => ({
     installationPaths: p.Z.installationPaths,
     installationPathsMetadata: p.Z.installationPathsMetadata,
     defaultInstallationPath: p.Z.defaultInstallationPath,
-}))(y);
+}))(v);

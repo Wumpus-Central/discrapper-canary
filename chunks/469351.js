@@ -13,26 +13,26 @@ var r = n(951288),
     p = n(434404),
     f = n(962086),
     h = n(225675),
-    b = n(703656),
-    x = n(601964),
+    x = n(703656),
+    b = n(601964),
     j = n(485386),
-    v = n(430824),
-    _ = n(594174),
-    O = n(63063),
-    y = n(267101),
-    C = n(294294),
+    _ = n(430824),
+    v = n(594174),
+    C = n(63063),
+    O = n(267101),
+    y = n(294294),
     N = n(310800),
     E = n(833695),
     I = n(981631),
     S = n(176505),
     T = n(388032),
-    P = n(68920);
+    P = n(514709);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: w } = (0, y.eD)(t),
-        R = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
-        Z = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        D = null != R && (0, x.eM)(R, Z),
+        { listingsLoaded: w } = (0, O.eD)(t),
+        R = (0, s.e7)([_.Z], () => _.Z.getGuild(t)),
+        Z = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        D = null != R && (0, b.eM)(R, Z),
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
     (0, m.P)(R);
@@ -47,7 +47,7 @@ function w(e) {
             initialTab: "guild_products",
             returnToSection: I.pNK.GUILD_PRODUCTS,
         }),
-            (0, b.uL)(I.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP));
+            (0, x.uL)(I.Z5c.CHANNEL(R.id, S.oC.GUILD_SHOP));
     }, [R]);
     if (!w || A) return (0, r.jsx)(o.$jN, {});
     if (null == R) return null;
@@ -60,8 +60,8 @@ function w(e) {
                 (0, r.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
                     children: T.intl.format(T.t.xiYuDg, {
-                        monetizationPolicyLink: O.Z.getArticleURL(I.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: O.Z.getCreatorSupportArticleURL(I.BhN.SERVER_PRODUCTS),
+                        monetizationPolicyLink: C.Z.getArticleURL(I.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(I.BhN.SERVER_PRODUCTS),
                     }),
                 }),
             ],
@@ -107,7 +107,7 @@ function w(e) {
             ],
         }),
         B = (0, l.EQ)(L)
-            .with("basic_info", () => (0, r.jsx)(C.Z, { guildId: t }))
+            .with("basic_info", () => (0, r.jsx)(y.Z, { guildId: t }))
             .with("manage_listings", () => (0, r.jsx)(N.Z, { guildId: t }))
             .with("payment", () => (0, r.jsx)(E.Z, { guildId: t }))
             .exhaustive(),

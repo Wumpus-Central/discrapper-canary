@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(966902),
     f = n(562618),
     _ = n(803866),
-    p = n(490340),
+    p = n(614177),
     h = n(388032),
-    m = n(37751);
+    m = n(869918);
 function g(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ function I(e) {
         x = i.useCallback(() => {
             null !== P.current && P.current.pause(), null == C || C();
         }, [C]),
-        j = i.useCallback(() => {
+        M = i.useCallback(() => {
             null !== P.current && P.current.pause();
             let e = D();
             (0, l.K)({
@@ -148,7 +148,7 @@ function I(e) {
                 null == C || C(),
                 null == A || A();
         }, [D, A, C]),
-        M = w
+        j = w
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
                   src: b,
@@ -173,7 +173,7 @@ function I(e) {
                               playing: !1,
                               size: "sm",
                               "aria-label": h.intl.string(p.default.YpT3kp),
-                              onClick: j,
+                              onClick: M,
                           }),
                       }),
                   ],
@@ -190,7 +190,7 @@ function I(e) {
                     (0, r.jsx)(d.$, { caretConfig: I }),
                     (0, r.jsx)("div", {
                         className: m.assetContainer,
-                        children: M,
+                        children: j,
                     }),
                     (0, r.jsx)(f.Y, {
                         title: t,

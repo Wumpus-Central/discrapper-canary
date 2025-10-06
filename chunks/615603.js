@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854);
+n.d(t, { Z: () => j }), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(981631),
     S = n(474936),
     A = n(388032),
-    C = n(387473);
+    C = n(79665);
 function N(e, t, n) {
     return (
         t in e
@@ -186,10 +186,10 @@ function L(e) {
 function x(e) {
     (0, c.ZDy)(async () => (t) => (0, r.jsx)(p.default, w(R({}, t), { guildBoostSlot: e })));
 }
-function j(e) {
+function M(e) {
     (0, c.ZDy)(async () => (t) => (0, r.jsx)(h.default, w(R({}, t), { guildBoostSlotId: e.id })));
 }
-let M = function (e) {
+let j = function (e) {
     let t,
         n,
         a,
@@ -203,7 +203,7 @@ let M = function (e) {
         N = p && !T,
         {
             appliedGuildBoostSlots: P,
-            unappliedGuildBoostSlots: M,
+            unappliedGuildBoostSlots: j,
             numActiveGuildBoostSlots: k,
             hasCooldownBoosts: U,
             allGuildBoostsAreOnCooldown: G,
@@ -248,9 +248,9 @@ let M = function (e) {
                 );
             return e;
         }, [H, v]),
-        W = i.useMemo(() => M.find((e) => e.isAvailable()), [M]);
-    if (0 === M.length) return null;
-    let K = M.length;
+        W = i.useMemo(() => j.find((e) => e.isAvailable()), [j]);
+    if (0 === j.length) return null;
+    let K = j.length;
     if (
         ((t = V
             ? A.intl.formatToPlainString(G ? A.t["3DW6DQ"] : A.t["/u15QU"], { numUnappliedGuildBoostSlots: K })
@@ -345,14 +345,14 @@ let M = function (e) {
                     (!V || U) &&
                         (0, r.jsx)("ul", {
                             className: C.unappliedBoostSlots,
-                            children: M.map((e) =>
+                            children: j.map((e) =>
                                 (0, r.jsx)(
                                     D,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: F,
                                         onCancel: x,
-                                        onUncancel: j,
+                                        onUncancel: M,
                                         premiumSubscription: _,
                                         useReducedMotion: v,
                                         fractionalState: h,

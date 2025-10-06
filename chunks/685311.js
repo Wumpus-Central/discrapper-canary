@@ -3,27 +3,27 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(536285),
-    a = n(857458),
+    a = n(536285),
+    o = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
-    h = n(197571);
+    h = n(10198);
 let g = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
         [g, m] = i.useState(0);
     i.useEffect(() => {
-        o.default.once("connected", () => {
+        a.default.once("connected", () => {
             m(1);
         }),
-            o.default.once("disconnected", () => {
-                (0, u.uL)((0, a.M)());
+            a.default.once("disconnected", () => {
+                (0, u.uL)((0, o.M)());
             }),
-            o.default.connect();
+            a.default.connect();
     }, []),
         i.useEffect(() => {
             if (0 !== g) return;
-            let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
+            let e = setTimeout(() => (0, u.uL)((0, o.M)()), 3000);
             return () => clearTimeout(e);
         }, [g]);
     let p = i.useCallback(
@@ -55,7 +55,7 @@ let g = function (e) {
                         className: s()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, u.uL)((0, a.M)()),
+                        onClick: () => (0, u.uL)((0, o.M)()),
                         children: d.intl.string(d.t["2ixEBg"]),
                     }),
                 ],

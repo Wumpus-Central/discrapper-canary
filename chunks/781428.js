@@ -7,8 +7,8 @@ var r,
     i = n(951288),
     l = n(647438),
     s = n(120356),
-    o = n.n(s),
-    a = n(593473),
+    a = n.n(s),
+    o = n(593473),
     c = n(873546),
     u = n(442837),
     d = n(481060),
@@ -25,8 +25,8 @@ var r,
     j = n(124860),
     I = n(86779),
     N = n(726745),
-    O = n(913583),
-    S = n(144114),
+    S = n(913583),
+    O = n(144114),
     y = n(541692),
     C = n(952802),
     A = n(703656),
@@ -46,8 +46,8 @@ var r,
     z = n(981631),
     V = n(260539),
     K = n(388032),
-    H = n(132825),
-    W = n(197571);
+    H = n(977150),
+    W = n(10198);
 function q(e, t, n) {
     return (
         t in e
@@ -141,11 +141,11 @@ class Q extends (r = l.PureComponent) {
                 this.loginOrSSO(n, r)),
             t.errors !== this.state.errors)
         ) {
-            var o, a, c;
+            var a, o, c;
             this.hasError("password")
-                ? null == (o = this.passwordRef) || o.focus()
+                ? null == (a = this.passwordRef) || a.focus()
                 : this.hasError("email") || this.hasError("login")
-                  ? null == (a = this.loginRef) || a.focus()
+                  ? null == (o = this.loginRef) || o.focus()
                   : this.hasError("code") && (null == (c = this.codeRef) || c.focus());
         }
     }
@@ -177,13 +177,13 @@ class Q extends (r = l.PureComponent) {
     }
     transitionSSO(e) {
         let { transitionTo: t, redirectTo: n, replaceWith: r } = this.props,
-            i = null != e ? (0, a.parse)(e.search) : {};
+            i = null != e ? (0, o.parse)(e.search) : {};
         if ((delete i.redirect_to, null != n)) null != r ? r(n) : t(n);
         else if (null == i.service) t(z.Z5c.APP);
         else {
             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + z.ANM.SSO,
                 t = J(Y({}, i), { token: R.default.getToken() });
-            window.location = "".concat(e, "?").concat((0, a.stringify)(t));
+            window.location = "".concat(e, "?").concat((0, o.stringify)(t));
         }
     }
     hasError(e) {
@@ -268,7 +268,7 @@ class Q extends (r = l.PureComponent) {
                                 children: K.intl.string(K.t.JhDw5u),
                             }),
                             (0, i.jsx)("div", {
-                                className: o()(W.marginTop8, H.needAccount),
+                                className: a()(W.marginTop8, H.needAccount),
                                 children: K.intl.format(K.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
                             }),
                         ],
@@ -347,7 +347,7 @@ class Q extends (r = l.PureComponent) {
                 invite: r,
                 giftCode: l,
                 loginStatus: s,
-                country: a,
+                country: o,
                 showMobileWebHandoff: c,
                 disableAutofocusOnDefaultForm: u,
             } = this.props,
@@ -413,8 +413,8 @@ class Q extends (r = l.PureComponent) {
                                         className: W.marginTop20,
                                         children: [
                                             (0, i.jsx)(C.Z, {
-                                                alpha2: a.alpha2,
-                                                countryCode: a.code.split(" ")[0],
+                                                alpha2: o.alpha2,
+                                                countryCode: o.code.split(" ")[0],
                                                 className: W.marginBottom20,
                                                 label: K.intl.string(K.t.tUjnxs),
                                                 error:
@@ -452,7 +452,7 @@ class Q extends (r = l.PureComponent) {
                                                 onClick: this.handleForgotPassword,
                                                 look: _.zx.Looks.LINK,
                                                 color: _.zx.Colors.LINK,
-                                                className: o()(W.marginBottom20, W.marginTop4),
+                                                className: a()(W.marginBottom20, W.marginTop4),
                                                 children: K.intl.string(K.t.wWIufn),
                                             }),
                                             (0, i.jsx)(_.zx, {
@@ -518,7 +518,7 @@ class Q extends (r = l.PureComponent) {
         return (0, i.jsx)(F.Z, {
             onSubmit: this.handleLogin,
             tag: "form",
-            className: o()(this.props.authBoxClassName, H.horizontalAuthBox),
+            className: a()(this.props.authBoxClassName, H.horizontalAuthBox),
             children: () => [(0, i.jsx)(b.Z, { guildTemplate: e }, "template"), this.renderDefaultForm(!1)],
         });
     }
@@ -573,12 +573,12 @@ class Q extends (r = l.PureComponent) {
         let e = () => {
             this.setState((e) => J(Y({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(O.Z, { onDismiss: e });
+        return (0, i.jsx)(S.Z, { onDismiss: e });
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
-            { checkingHandoff: s, redirecting: o } = this.state;
-        if (o || s) return (0, i.jsx)(X, {});
+            { checkingHandoff: s, redirecting: a } = this.state;
+        if (a || s) return (0, i.jsx)(X, {});
         if (l) return this.renderHandOffAvailable();
         if (e && s) return this.renderHandOffContinue();
         switch (r) {
@@ -673,7 +673,7 @@ class Q extends (r = l.PureComponent) {
                 let t = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(t, e, !1);
+                    let { token: n } = await O.Z.verifyPhone(t, e, !1);
                     await g.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -683,9 +683,9 @@ class Q extends (r = l.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await O.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(z.Z5c.RESET, {
-                        search: (0, a.stringify)({
+                        search: (0, o.stringify)({
                             token: n,
                             from_login: "true",
                         }),
@@ -741,7 +741,7 @@ class Q extends (r = l.PureComponent) {
                 }
             }),
             q(this, "handleResendCode", () => {
-                S.Z.resendCode(this.getFullLogin());
+                O.Z.resendCode(this.getFullLogin());
             }),
             q(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),
@@ -770,9 +770,9 @@ class Q extends (r = l.PureComponent) {
                         guildTemplate: i,
                         location: l,
                         transitionTo: s,
-                        redirectTo: o,
+                        redirectTo: a,
                     } = this.props,
-                    c = null != l ? (0, a.parse)(l.search) : {};
+                    c = null != l ? (0, o.parse)(l.search) : {};
                 "" !== t && (c.email = t),
                     null != n
                         ? ((c.mode = "register"), (e = z.Z5c.INVITE(n.code)))
@@ -780,14 +780,14 @@ class Q extends (r = l.PureComponent) {
                           ? ((c.mode = "register"), (e = z.Z5c.GIFT_CODE(r.code)))
                           : null != i
                             ? (e = z.Z5c.GUILD_TEMPLATE(i.code))
-                            : null != o
-                              ? ((e = z.Z5c.REGISTER), (c.redirect_to = o))
+                            : null != a
+                              ? ((e = z.Z5c.REGISTER), (c.redirect_to = a))
                               : (e = z.Z5c.REGISTER),
                     this.loginReset(),
-                    s(e, { search: (0, a.stringify)(c) }),
+                    s(e, { search: (0, o.stringify)(c) }),
                     k.S.dispatch(z.CkL.WAVE_EMPHASIZE);
             });
-        let r = null != e.location ? (0, a.parse)(e.location.search) : {};
+        let r = null != e.location ? (0, o.parse)(e.location.search) : {};
         this.state = {
             redirecting: e.authenticated,
             checkingHandoff: e.handoffAvailable,

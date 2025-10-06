@@ -34,8 +34,8 @@ var r = n(951288),
     D = n(131130),
     L = n(458725),
     x = n(492435),
-    j = n(353926),
-    M = n(506357),
+    M = n(353926),
+    j = n(506357),
     k = n(36459),
     U = n(236069),
     G = n(305325),
@@ -74,7 +74,7 @@ var r = n(951288),
     eE = n(610674),
     eb = n(65154),
     ey = n(388032),
-    eO = n(50953);
+    eO = n(522488);
 function ev(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ let eL = i.memo(function () {
         i.useEffect(() => {
             if (null != I && I.type === em.kVF.SURVEY && null != I.metadata) {
                 let { metadata: e } = I,
-                    t = j.Z.getUserExperimentDescriptor(e.id);
+                    t = M.Z.getUserExperimentDescriptor(e.id);
                 null != t && (0, x.W9)(e.id, t),
                     (async () => {
                         var e, t;
@@ -268,15 +268,15 @@ let eL = i.memo(function () {
         case em.kVF.INVITED_TO_SPEAK:
             return (0, r.jsx)($.Z, {});
         case em.kVF.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: ej } = I.metadata;
-            return (0, r.jsx)(M.Z, { onDismiss: () => ew(ej) });
-        case em.kVF.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: eM } = I.metadata;
+            return (0, r.jsx)(j.Z, { onDismiss: () => ew(eM) });
+        case em.kVF.WIN32_DEPRECATED_MESSAGE:
+            let { dismissUntil: ej } = I.metadata;
             return (0, r.jsxs)(c.qXd, {
                 color: c.DM8.WARNING,
                 children: [
                     (0, r.jsx)(c.RyX, {
-                        onClick: () => ew(eM),
+                        onClick: () => ew(ej),
                         noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE,
                     }),
                     ey.intl.format(ey.t["08KQ1N"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) }),
@@ -813,7 +813,7 @@ let eL = i.memo(function () {
                                     let { default: e } = await Promise.all([
                                         n.e("17938"),
                                         n.e("84992"),
-                                        n.e("11394"),
+                                        n.e("12222"),
                                     ]).then(n.bind(n, 561623));
                                     return (t) =>
                                         (0, r.jsx)(

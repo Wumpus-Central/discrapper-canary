@@ -1,6 +1,6 @@
 n.d(t, {
     DF: () => g,
-    ZP: () => y,
+    ZP: () => O,
 });
 var r,
     i,
@@ -12,8 +12,8 @@ var o = n(120356),
     c = n(481060),
     u = n(493773),
     d = n(921944),
-    p = n(164208);
-function f(e) {
+    p = n(12614);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,11 +77,11 @@ let b = Object.freeze({
         brand: "always-white",
         primary: "header-primary",
     }),
-    O = Object.freeze({
+    y = Object.freeze({
         brand: "always-white",
         primary: "text-default",
     });
-function y(e) {
+function O(e) {
     let {
         color: t = "brand",
         className: n,
@@ -90,7 +90,7 @@ function y(e) {
         content: o,
         contentClassName: g,
         buttonCTA: m,
-        secondaryButtonCTA: y,
+        secondaryButtonCTA: O,
         onClick: v,
         onSecondaryClick: j,
         buttonProps: x = {
@@ -100,16 +100,16 @@ function y(e) {
         secondaryButtonProps: C = { color: s.zx.Colors.BRAND_INVERTED },
         onComponentMount: E,
         asset: S,
-        markAsDismissed: P,
-        caretPosition: I = "caretTopCenter",
+        markAsDismissed: I,
+        caretPosition: P = "caretTopCenter",
         buttonLayout: N = 0,
     } = e;
     (0, u.ZP)(() => {
         null == E || E();
     });
-    let w = null != y;
+    let Z = null != O;
     return (0, l.jsxs)("div", {
-        className: a()(n, b[t], p.upsellTooltipWrapper, p[I]),
+        className: a()(n, b[t], p.upsellTooltipWrapper, p[P]),
         children: [
             S,
             null == r
@@ -121,27 +121,27 @@ function y(e) {
                       children: r,
                   }),
             (0, l.jsx)(c.Text, {
-                color: O[t],
+                color: y[t],
                 className: a()(g, p.content),
                 variant: "text-sm/normal",
                 children: o,
             }),
-            null != m || w
+            null != m || Z
                 ? (0, l.jsxs)("div", {
                       className: a()(p.upsellButtonsContainer, {
                           [p.upsellButtonsAdjacent]: 0 === N,
                           [p.upsellButtonsStacked]: 1 === N,
                       }),
                       children: [
-                          w
+                          Z
                               ? (0, l.jsx)(
                                     s.zx,
-                                    h(f({}, C), {
+                                    f(h({}, C), {
                                         fullWidth: 1 === N,
                                         onClick: () => {
-                                            null == j || j(), null == P || P(d.L.SECONDARY);
+                                            null == j || j(), null == I || I(d.L.SECONDARY);
                                         },
-                                        children: y,
+                                        children: O,
                                     }),
                                 )
                               : null,
@@ -149,10 +149,10 @@ function y(e) {
                               ? null
                               : (0, l.jsx)(
                                     s.zx,
-                                    h(f({}, x), {
-                                        fullWidth: !w || 1 === N,
+                                    f(h({}, x), {
+                                        fullWidth: !Z || 1 === N,
                                         onClick: (e) => {
-                                            v(e), null == P || P(d.L.PRIMARY);
+                                            v(e), null == I || I(d.L.PRIMARY);
                                         },
                                         children: m,
                                     }),
@@ -163,4 +163,4 @@ function y(e) {
         ],
     });
 }
-(y.CaretPosition = g), (y.ButtonLayout = m);
+(O.CaretPosition = g), (O.ButtonLayout = m);

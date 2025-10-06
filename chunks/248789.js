@@ -1,6 +1,6 @@
-n.d(t, { Y: () => y }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Y: () => C }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(286379),
     a = n(442837),
     o = n(481060),
@@ -15,24 +15,24 @@ var r = n(951288),
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -45,8 +45,8 @@ function b(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -55,45 +55,45 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
-    let { channelId: t, warningId: y, senderId: C } = e,
-        _ = i.useCallback(() => {
-            (0, u.T)(t, [y]);
-        }, [t, y]),
-        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
-        x = i.useMemo(
+function C(e) {
+    let { channelId: t, warningId: C, senderId: y } = e,
+        _ = r.useCallback(() => {
+            (0, u.T)(t, [C]);
+        }, [t, C]),
+        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+        x = r.useMemo(
             () => ({
                 channelId: t,
-                warningId: y,
-                senderId: C,
+                warningId: C,
+                senderId: y,
                 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
             }),
-            [t, y, C],
+            [t, C, y],
         );
-    i.useEffect(() => {
+    r.useEffect(() => {
         (0, p.KQ)(b(g({}, x), { viewName: p.pb.SAFETY_WARNING_BANNER })),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [x]);
-    let O = i.useCallback(
+    let O = r.useCallback(
             (e) => {
                 (0, p.qc)(b(g({}, x), { cta: e }));
             },
             [x],
         ),
-        j = i.useCallback(() => {
+        j = r.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
+                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("41837")]).then(
                         n.bind(n, 611446),
                     );
                     return (n) => {
-                        let { transitionState: i, onClose: l } = n;
-                        return (0, r.jsx)(e, {
-                            otherUserId: C,
+                        let { transitionState: r, onClose: l } = n;
+                        return (0, i.jsx)(e, {
+                            otherUserId: y,
                             channelId: t,
-                            warningId: y,
+                            warningId: C,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-                            transitionState: i,
+                            transitionState: r,
                             onClose: l,
                         });
                     };
@@ -101,36 +101,36 @@ function y(e) {
                 { modalKey: f.X_ },
             ),
                 O(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, C, y, O]),
-        E = i.useCallback(() => {
+        }, [t, y, C, O]),
+        E = r.useCallback(() => {
             _(), O(p.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [_, O]),
-        S = i.useCallback(() => {
+        S = r.useCallback(() => {
             _(), O(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [_, O]),
-        P = i.useCallback(() => {
+        P = r.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("19538").then(n.bind(n, 699783));
+                let { default: e } = await n.e("63498").then(n.bind(n, 699783));
                 return (n) => {
-                    let { transitionState: i, onClose: l } = n;
-                    return (0, r.jsx)(e, {
-                        transitionState: i,
+                    let { transitionState: r, onClose: l } = n;
+                    return (0, i.jsx)(e, {
+                        transitionState: r,
                         onBlock: E,
                         onBlockAndReport: S,
                         onCancel: () => {
                             null == l || l(), O(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: l,
-                        userId: C,
+                        userId: y,
                         channelId: t,
                     });
                 };
             });
-        }, [E, S, C, t, O]);
-    return (0, r.jsx)(h.Q, {
+        }, [E, S, y, t, O]);
+    return (0, i.jsx)(h.Q, {
         channelId: t,
-        warningId: y,
-        senderId: C,
+        warningId: C,
+        senderId: y,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: m.intl.string(m.t.ZzlB5u),
         description: m.intl.string(m.t["D1aU+v"]),

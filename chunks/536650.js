@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var l = n(951288),
     i = n(647438),
     r = n(688619),
@@ -12,8 +12,8 @@ var l = n(951288),
     m = n(783097),
     f = n(772606),
     h = n(488977),
-    v = n(42659);
-function y(e) {
+    v = n(236050);
+function x(e) {
     let [t, n] = i.useState(void 0);
     return (
         i.useEffect(() => {
@@ -22,37 +22,37 @@ function y(e) {
         t
     );
 }
-function x(e) {
-    let { application: t, context: n, name: r, iconURL: x, scrollerRef: b, sectionName: g } = e,
-        j = (0, s.ap)((0, u.ZP)()),
-        N = i.useRef(null),
+function y(e) {
+    let { application: t, context: n, name: r, iconURL: y, scrollerRef: g, sectionName: b } = e,
+        N = (0, s.ap)((0, u.ZP)()),
+        j = i.useRef(null),
         C = i.useRef(null),
         E = i.useRef(null),
         P = i.useRef(null),
-        O = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-        A = (0, d.ZP)("number" == typeof x ? "" : x, null != O ? O : ""),
-        _ = i.useMemo(() => {
+        A = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+        _ = (0, d.ZP)("number" == typeof y ? "" : y, null != A ? A : ""),
+        O = i.useMemo(() => {
             var e, t;
             return null !=
                 (t =
                     null ==
                     (e = (0, p.wh)({
-                        foreground: a()(A),
-                        background: a()(j ? "#000000" : "#ffffff"),
+                        foreground: a()(_),
+                        background: a()(N ? "#000000" : "#ffffff"),
                         ratio: 5,
                         saturationFactor: 0.6,
                     }))
                         ? void 0
                         : e.hex())
                 ? t
-                : A;
-        }, [A, j]),
-        I = y(N),
-        S = y(C),
+                : _;
+        }, [_, N]),
+        I = x(j),
+        S = x(C),
         T = i.useCallback(() => {
             var e, t, n, l;
-            let i = b.current,
-                r = N.current,
+            let i = g.current,
+                r = j.current,
                 a = E.current,
                 s = null == P ? void 0 : P.current,
                 c = parseInt(null != (e = null == I ? void 0 : I.height) ? e : ""),
@@ -64,22 +64,22 @@ function x(e) {
                     p = u - c,
                     m = (0, o.clamp)(t - d, p + 1, u + 20),
                     f = p === m ? 1 : (0, o.clamp)((e - p) / (m - p), 0, 1);
-                (r.style.filter = "brightness(".concat(1 + ((j ? 1.4 : 0.6) - 1) * f, ")")),
+                (r.style.filter = "brightness(".concat(1 + ((N ? 1.4 : 0.6) - 1) * f, ")")),
                     (r.style.backgroundColor = "color-mix(in oklab,"
-                        .concat(A, " ")
+                        .concat(_, " ")
                         .concat((1 - f) * 100, "%, ")
-                        .concat(_, ")")),
+                        .concat(O, ")")),
                     (a.style.opacity = "".concat(0 + +f)),
                     (a.style.transform = "translateY(".concat((l = c / 4) + (0 - l) * f, "px)")),
                     null != s && (s.style.opacity = "".concat(1 + -1 * f));
             }
-        }, [_, A, null == S ? void 0 : S.height, j, b, null == I ? void 0 : I.height]);
+        }, [O, _, null == S ? void 0 : S.height, N, g, null == I ? void 0 : I.height]);
     return (
         i.useEffect(() => {
             T();
-        }, [T, j]),
+        }, [T, N]),
         i.useEffect(() => {
-            let e = b.current,
+            let e = g.current,
                 t = () => {
                     T();
                 };
@@ -89,7 +89,7 @@ function x(e) {
                     null == e || e.removeEventListener("scroll", t);
                 }
             );
-        }, [b, T]),
+        }, [g, T]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)("div", {
@@ -99,7 +99,7 @@ function x(e) {
                             className: v.stickyBannerContainer,
                             children: (0, l.jsx)("div", {
                                 className: v.stickyBanner,
-                                ref: N,
+                                ref: j,
                             }),
                         }),
                         (0, l.jsx)("div", {
@@ -125,14 +125,14 @@ function x(e) {
                               application: t,
                               context: n,
                               className: v.headerButton,
-                              sectionName: g,
+                              sectionName: b,
                           }),
                       })
                     : null,
                 (0, l.jsx)("div", {
                     ref: C,
                     className: v.bannerBackground,
-                    style: { backgroundColor: A },
+                    style: { backgroundColor: _ },
                 }),
             ],
         })

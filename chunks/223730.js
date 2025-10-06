@@ -12,9 +12,9 @@ var r = n(951288),
     u = n(88658),
     d = n(782896),
     p = n(981631),
-    f = n(933554),
-    h = n(388032),
-    g = n(95049);
+    h = n(893867),
+    f = n(388032),
+    g = n(905618);
 let m = () => {
     (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: p.oAB.ACTIVITY_PRIVACY });
 };
@@ -50,7 +50,7 @@ function _(e) {
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/semibold",
-                      children: h.intl.string(n ? f.default["3GrhnJ"] : f.default["54ycKC"]),
+                      children: f.intl.string(n ? h.default["3GrhnJ"] : h.default["54ycKC"]),
                   }),
                   (0, r.jsx)(d.c, { guildIds: p }),
               ],

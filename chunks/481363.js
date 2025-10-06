@@ -1,11 +1,11 @@
 n.d(t, { Z: () => c }), n(997841);
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(630388),
+var r = n(630388),
     l = n(901461),
     a = n(773176),
     o = n(981631),
-    s = n(360514);
+    s = n(5898);
 function c(e) {
     let {
             setPopout: t,
@@ -15,15 +15,15 @@ function c(e) {
             messageWindow: g,
         } = e,
         b = p.state === o.yb.SENDING,
-        y = p.id === f,
-        C = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        C = p.id === f,
+        y = (0, r.yE)(p.flags, o.iLy.EPHEMERAL),
         _ = p.state === o.yb.SEND_FAILED;
-    return b || (C && !_)
+    return b || (y && !_)
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, i.jsx)(a.Z, {
               className: s.buttons,
               innerClassName: s.buttonsInner,
-              isHeader: !m && y && !(0, l.Z)(p),
+              isHeader: !m && C && !(0, l.Z)(p),
               isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
               channel: h,
               message: p,

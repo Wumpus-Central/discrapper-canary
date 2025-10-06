@@ -1,42 +1,42 @@
 n.d(t, { Z: () => h });
-var r = n(951288);
+var o = n(951288);
 n(647438);
-var o = n(120356),
-    l = n.n(o),
+var l = n(120356),
+    r = n.n(l),
     a = n(793030),
     i = n(481060),
     s = n(821795),
     c = n(892567),
     d = n(203872),
     u = n(660662),
-    p = n(693450),
+    p = n(62222),
     m = n(388032),
-    f = n(959389),
-    g = n(771880);
+    f = n(77426),
+    g = n(6073);
 function h(e) {
-    let { selectedEffectId: t, setSelectedEffectId: n, className: o } = e;
-    return (0, r.jsxs)("div", {
-        className: o,
+    let { selectedEffectId: t, setSelectedEffectId: n, className: l } = e;
+    return (0, o.jsxs)("div", {
+        className: l,
         children: [
-            (0, r.jsxs)(a.X6q, {
+            (0, o.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
                 className: f.selectorHeading,
                 children: [
                     m.intl.string(p.default["1wilMz"]),
-                    (0, r.jsx)(i.SrA, {
+                    (0, o.jsx)(i.SrA, {
                         size: "xs",
                         color: i.TVs.colors.TEXT_DEFAULT,
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Kqy, {
+            (0, o.jsx)(a.Kqy, {
                 direction: "horizontal",
                 align: "center",
                 wrap: !0,
                 gap: 8,
                 children: u.mH.map((e) =>
-                    (0, r.jsx)(
-                        b,
+                    (0, o.jsx)(
+                        x,
                         {
                             effectId: e,
                             selected: e === t,
@@ -49,15 +49,15 @@ function h(e) {
         ],
     });
 }
-function b(e) {
-    let { effectId: t, selected: n, onClick: o } = e,
+function x(e) {
+    let { effectId: t, selected: n, onClick: l } = e,
         a = (0, d.R)(t);
-    return (0, r.jsx)(
+    return (0, o.jsx)(
         i.P3F,
         {
-            className: l()(g.effectContainer, { [g.selected]: n }),
-            onClick: o,
-            children: (0, r.jsx)(c.Z, {
+            className: r()(g.effectContainer, { [g.selected]: n }),
+            onClick: l,
+            children: (0, o.jsx)(c.Z, {
                 userName: a.name,
                 effectDisplayType: s.F.STATIC,
                 displayNameStyles: a.previewStyles,

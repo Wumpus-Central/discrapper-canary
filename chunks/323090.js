@@ -13,17 +13,17 @@ var i = t(442837),
     p = t(900927),
     f = t(678738),
     h = t(179828),
-    j = t(228168),
-    x = t(388032),
-    v = t(54966);
+    x = t(228168),
+    j = t(388032),
+    v = t(438160);
 function g(e) {
-    let { user: n, currentUser: t, displayProfile: g, guildId: b, subsection: y, onClose: O } = e,
-        { trackUserProfileAction: I } = (0, c.KZ)(),
-        Z = (0, i.e7)([d.Z], () => {
+    let { user: n, currentUser: t, displayProfile: g, guildId: b, subsection: y, onClose: I } = e,
+        { trackUserProfileAction: Z } = (0, c.KZ)(),
+        O = (0, i.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        P = (0, i.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
+        N = (0, i.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, l.jsxs)(r.zJl, {
         fade: !0,
         className: v.scroller,
@@ -34,38 +34,38 @@ function g(e) {
                     userBio: g.bio,
                     setLineClamp: !1,
                 }),
-            (null == Z ? void 0 : Z.popularApplicationCommandIds) != null &&
-                null != P &&
+            (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
+                null != N &&
                 (0, l.jsx)(u.Z, {
-                    applicationId: Z.id,
-                    commandIds: Z.popularApplicationCommandIds,
-                    channel: P,
+                    applicationId: O.id,
+                    commandIds: O.popularApplicationCommandIds,
+                    channel: N,
                     guildId: b,
-                    onClick: O,
+                    onClick: I,
                 }),
             (null == g ? void 0 : g.guildId) != null &&
                 (0, l.jsx)(h.Z, {
                     user: n,
                     currentUser: t,
                     guildId: g.guildId,
-                    scrollIntoView: y === j.Tb.ROLES,
+                    scrollIntoView: y === x.Tb.ROLES,
                 }),
             (0, l.jsx)(f.Z, {
-                heading: x.intl.string(x.t["A//N4u"]),
+                heading: j.intl.string(j.t["A//N4u"]),
                 children: (0, l.jsx)(p.Z, {
                     userId: n.id,
                     guildId: b,
-                    tooltipDelay: j.vB,
+                    tooltipDelay: x.vB,
                 }),
             }),
             (0, l.jsx)(f.Z, {
-                heading: x.intl.string(x.t["mQKv+v"]),
-                scrollIntoView: y === j.Tb.NOTE,
+                heading: j.intl.string(j.t["mQKv+v"]),
+                scrollIntoView: y === x.Tb.NOTE,
                 children: (0, l.jsx)(o.Z, {
                     userId: n.id,
                     className: v.note,
-                    autoFocus: y === j.Tb.NOTE,
-                    onUpdate: () => I({ action: "SET_NOTE" }),
+                    autoFocus: y === x.Tb.NOTE,
+                    onUpdate: () => Z({ action: "SET_NOTE" }),
                 }),
             }),
         ],

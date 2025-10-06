@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(990547),
-    a = n(481060),
+    a = n(990547),
+    o = n(481060),
     c = n(479531),
     u = n(388905),
     d = n(585483),
@@ -12,14 +12,14 @@ var r = n(951288),
     g = n(720196),
     m = n(981631),
     p = n(388032),
-    f = n(710509),
-    _ = n(197571);
+    f = n(926609),
+    _ = n(10198);
 function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
         [v, b] = i.useState(!1),
         [j, I] = i.useState(null),
-        [N, O] = i.useState(null),
-        [S, y] = i.useState(""),
+        [N, S] = i.useState(null),
+        [O, y] = i.useState(""),
         C = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -36,7 +36,7 @@ function x(e) {
                 }),
                 (0, r.jsx)(u.Dx, { children: p.intl.string(p.t["IfBQ5+"]) }),
                 null != N && "" !== N
-                    ? (0, r.jsx)(a.Text, {
+                    ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
                           color: "text-danger",
                           children: N,
@@ -51,7 +51,7 @@ function x(e) {
                             label: p.intl.string(p.t["8dM4FB"]),
                             setRef: C,
                             className: _.marginBottom20,
-                            value: S,
+                            value: O,
                             onChange: y,
                             error: j,
                             autoComplete: "new-password",
@@ -62,12 +62,12 @@ function x(e) {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!v) {
-                                    if (0 === S.length) {
+                                    if (0 === O.length) {
                                         I(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
-                                        null != N && O(null),
+                                        null != N && S(null),
                                         null != j && I(null),
                                         t(""),
                                         b(!0),
@@ -75,9 +75,9 @@ function x(e) {
                                             url: m.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: E,
-                                                password: S,
+                                                password: O,
                                             },
-                                            trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
+                                            trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1,
                                         })
                                             .then((e) => {
@@ -88,7 +88,7 @@ function x(e) {
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error)
-                                                    O(
+                                                    S(
                                                         p.intl.formatToPlainString(p.t.aTVNen, {
                                                             statusPageURL: m.yXt.STATUS,
                                                         }),
@@ -97,7 +97,7 @@ function x(e) {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
                                                         ? I(t.getAnyErrorMessage())
-                                                        : O(
+                                                        : S(
                                                               (function (e) {
                                                                   switch (e) {
                                                                       case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:

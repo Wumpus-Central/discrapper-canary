@@ -1,4 +1,4 @@
-n.d(t, { c: () => b });
+n.d(t, { c: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(159691),
@@ -12,50 +12,50 @@ var r = n(951288),
     g = n(30513),
     p = n(200299),
     f = n(388032),
-    h = n(43628);
-function b(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: b } = e,
-        { analyticsLocations: x } = (0, s.ZP)(),
+    h = n(289059);
+function x(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: x } = e,
+        { analyticsLocations: b } = (0, s.ZP)(),
         j = t.features.has(m.oNc.INVITE_SPLASH),
-        v = n && j,
-        _ = i.useRef(null),
-        O = i.useCallback((e) => {
+        _ = n && j,
+        v = i.useRef(null),
+        C = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
-        y = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, d.E6)({
                         guild: t,
-                        analyticsLocations: x,
+                        analyticsLocations: b,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.qAy.BUTTON_CTA,
                         perks: (0, g.o9)(),
                     });
             },
-            [x, t],
+            [b, t],
         ),
-        C = i.useCallback(() => {
+        y = i.useCallback(() => {
             var e;
-            null == (e = _.current) || e.activateUploadDialogue();
+            null == (e = v.current) || e.activateUploadDialogue();
         }, []);
     return j
         ? (0, r.jsxs)("div", {
-              className: b,
+              className: x,
               children: [
                   (0, r.jsx)(l.zxk, {
-                      disabled: !v,
+                      disabled: !_,
                       variant: "primary",
                       text: f.intl.string(f.t.yG2pUl),
-                      onClick: C,
+                      onClick: y,
                   }),
                   (0, r.jsx)("div", {
                       className: h.hiddenInputContainer,
                       children: (0, r.jsx)(o.ZP, {
-                          ref: _,
-                          disabled: !v,
-                          onChange: O,
+                          ref: v,
+                          disabled: !_,
+                          onChange: C,
                           maxFileSizeBytes: p.B,
                           onFileSizeError: () => (0, a.Z)(p.B),
                           tabIndex: -1,
@@ -65,7 +65,7 @@ function b(e) {
               ],
           })
         : (0, r.jsx)(u.P, {
-              className: b,
-              onClick: y,
+              className: x,
+              onClick: O,
           });
 }

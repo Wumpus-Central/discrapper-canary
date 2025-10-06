@@ -14,7 +14,7 @@ var r = n(951288),
     f = n(439826),
     h = n(43779),
     x = n(981631),
-    _ = n(88036);
+    _ = n(974326);
 function b(e) {
     var t, n;
     let {
@@ -26,13 +26,13 @@ function b(e) {
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
-        [y, O] = s.useState(!1),
-        [E, S] = s.useState([]),
+        [y, E] = s.useState(!1),
+        [O, S] = s.useState([]),
         T = (0, c.qb)(o),
         w = s.useMemo(() => (0, l.q8)(o), [o]),
         P = (0, i._F)(),
         N = s.useCallback(() => {
-            O(!0),
+            E(!0),
                 P({
                     questId: o.id,
                     event: x.rMx.QUEST_HOVER,
@@ -45,8 +45,8 @@ function b(e) {
                 }),
                 w && (0, p.loadVideoQuestModal)();
         }, [P, o.id, u, w, C, b]),
-        A = s.useCallback(() => {
-            O(!1),
+        R = s.useCallback(() => {
+            E(!1),
                 P({
                     questId: o.id,
                     event: x.rMx.QUEST_HOVER_OFF,
@@ -58,7 +58,7 @@ function b(e) {
                     sourceQuestContent: C,
                 });
         }, [P, o.id, u, C, b]),
-        R = s.useContext(g.t),
+        A = s.useContext(g.t),
         { visibilityElementRef: B, almostVisibleInViewport: k } = (function (e) {
             let [t, n] = s.useState(!1),
                 r = s.useCallback((e) => {
@@ -76,7 +76,7 @@ function b(e) {
                 ),
                 almostVisibleInViewport: t,
             };
-        })(null != (n = null == R || null == (t = R.current) ? void 0 : t.getScrollerNode()) ? n : null);
+        })(null != (n = null == A || null == (t = A.current) ? void 0 : t.getScrollerNode()) ? n : null);
     return (0, r.jsxs)("div", {
         id: "quest-tile-".concat(o.id),
         ref: (e) => {
@@ -84,14 +84,14 @@ function b(e) {
         },
         className: a()(_.container, d),
         onMouseEnter: N,
-        onMouseLeave: A,
+        onMouseLeave: R,
         onFocus: N,
-        onBlur: A,
+        onBlur: R,
         children: [
             (0, r.jsx)(f.Z, {
                 quest: o,
                 isHovering: y,
-                errorHints: E,
+                errorHints: O,
                 warningHints: T,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,

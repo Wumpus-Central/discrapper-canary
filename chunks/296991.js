@@ -13,14 +13,14 @@ var r = n(951288),
     p = n(752305),
     f = n(893718),
     h = n(592125),
-    b = n(984933),
-    x = n(540457),
+    x = n(984933),
+    b = n(540457),
     j = n(681460),
-    v = n(592286),
-    _ = n(981631),
-    O = n(388032),
-    y = n(94228);
-function C(e) {
+    _ = n(592286),
+    v = n(981631),
+    C = n(388032),
+    O = n(761560);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -73,11 +73,11 @@ function I(e) {
             onKeyDown: o,
             onClear: u,
             onRuleReorder: h,
-            isDropHovered: b,
-            focused: x,
+            isDropHovered: x,
+            focused: b,
             onFocus: j,
-            previewEnabled: _,
-            isDragEnabled: C,
+            previewEnabled: v,
+            isDragEnabled: y,
             disabled: N,
         } = e,
         I = i.useRef(null),
@@ -129,24 +129,24 @@ function I(e) {
     let A = "" !== t.value ? t.value : t.id;
     return (0, r.jsx)("div", {
         ref: I,
-        className: s()(y.draggableInputContainer, { [y.dragging]: b }),
+        className: s()(O.draggableInputContainer, { [O.dragging]: x }),
         "data-dnd-name": A,
         children: (0, r.jsxs)("div", {
-            className: y.inputWrapper,
+            className: O.inputWrapper,
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(l),
                     children: (0, r.jsx)(f.ZP, {
-                        innerClassName: y.rulesTextAreaInput,
+                        innerClassName: O.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: T,
                         richValue: P,
                         channel: n,
-                        placeholder: O.intl.string(O.t["BRkD4+"]),
-                        focused: x,
+                        placeholder: C.intl.string(C.t["BRkD4+"]),
+                        focused: b,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
-                            i.length > v.fn && (i = i.slice(0, v.fn)),
+                            i.length > _.fn && (i = i.slice(0, _.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 a(n),
                                 w({
@@ -155,9 +155,9 @@ function I(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: _,
-                        canMentionRoles: _,
-                        maxCharacterCount: v.fn,
+                        canMentionChannels: v,
+                        canMentionRoles: v,
+                        maxCharacterCount: _.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -166,25 +166,25 @@ function I(e) {
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: y.clearButton,
+                    className: O.clearButton,
                     children: (0, r.jsx)(m.hU, {
                         size: "sm",
                         variant: "icon-only",
                         icon: m.k$p,
-                        "aria-label": O.intl.string(O.t.VkKicX),
+                        "aria-label": C.intl.string(C.t.VkKicX),
                         onClick: u,
                     }),
                 }),
                 (0, r.jsx)("div", {
                     ref: S,
-                    className: y.dragContainer,
+                    className: O.dragContainer,
                     "data-dnd-name": A,
                     children:
-                        C &&
+                        y &&
                         (0, r.jsx)(m.Vni, {
                             size: "xs",
                             color: "currentColor",
-                            className: y.dragIcon,
+                            className: O.dragIcon,
                         }),
                 }),
             ],
@@ -194,17 +194,17 @@ function I(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: s } = e,
         a = l.rulesChannelId,
-        c = l.features.has(_.oNc.PREVIEW_ENABLED),
+        c = l.features.has(v.oNc.PREVIEW_ENABLED),
         d = (0, u.e7)([h.Z], () => (null != a ? h.Z.getChannel(a) : null)),
-        g = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(l.id)),
+        g = (0, u.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
         [p, f] = i.useState(null),
         [E, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
-                if (!s && t.length !== v.X2)
+                if (!s && t.length !== _.X2)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = N(C({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
+                        (r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -224,7 +224,7 @@ function S(e) {
             (e, r) => {
                 if (s) return;
                 let i = [...t];
-                (i[r] = N(C({}, i[r]), { value: e })), n(i);
+                (i[r] = N(y({}, i[r]), { value: e })), n(i);
             },
             [s, t, n],
         ),
@@ -240,31 +240,31 @@ function S(e) {
             },
             [s, p, t, n],
         ),
-        Z = t.length === v.X2,
+        Z = t.length === _.X2,
         D = i.useMemo(() => {
-            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
+            let e = Z ? C.intl.formatToPlainString(C.t.tU718P, { number: _.X2 }) : void 0;
             return [
                 {
-                    text: O.intl.string(O.t.DXq2oa),
-                    onClick: () => T(O.intl.string(O.t.XudkSk)),
+                    text: C.intl.string(C.t.DXq2oa),
+                    onClick: () => T(C.intl.string(C.t.XudkSk)),
                     disabled: Z || s,
                     tooltipText: e,
                 },
                 {
-                    text: O.intl.string(O.t.nSqTjI),
-                    onClick: () => T(O.intl.string(O.t.np91jI)),
+                    text: C.intl.string(C.t.nSqTjI),
+                    onClick: () => T(C.intl.string(C.t.np91jI)),
                     disabled: Z || s,
                     tooltipText: e,
                 },
                 {
-                    text: O.intl.string(O.t.AtRxsL),
-                    onClick: () => T(O.intl.string(O.t.PNIDDA)),
+                    text: C.intl.string(C.t.AtRxsL),
+                    onClick: () => T(C.intl.string(C.t.PNIDDA)),
                     disabled: Z || s,
                     tooltipText: e,
                 },
                 {
-                    text: O.intl.string(O.t["0K5NJi"]),
-                    onClick: () => T(O.intl.string(O.t.HolIDw)),
+                    text: C.intl.string(C.t["0K5NJi"]),
+                    onClick: () => T(C.intl.string(C.t.HolIDw)),
                     disabled: Z || s,
                     tooltipText: e,
                 },
@@ -273,7 +273,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: y.rulesContainer,
+                className: O.rulesContainer,
                 children: t.map((e, i) =>
                     (0, r.jsx)(
                         I,
@@ -310,20 +310,20 @@ function S(e) {
                 ),
             }),
             !Z &&
-                (0, r.jsx)(x.A, {
-                    text: O.intl.string(O.t.Cq5Jub),
+                (0, r.jsx)(b.A, {
+                    text: C.intl.string(C.t.Cq5Jub),
                     onClick: P,
                     disabled: s,
                 }),
             (0, r.jsx)(m.X6q, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: y.exampleRulesTitle,
-                children: O.intl.string(O.t.XHWj8f),
+                className: O.exampleRulesTitle,
+                children: C.intl.string(C.t.XHWj8f),
             }),
             (0, r.jsx)(j.j, {
                 pills: D,
-                pillClassName: y.pill,
+                pillClassName: O.pill,
             }),
         ],
     });

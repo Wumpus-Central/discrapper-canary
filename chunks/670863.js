@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(981631),
     y = n(65154),
     O = n(388032),
-    v = n(118896),
-    I = n(197571);
+    v = n(918165),
+    I = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -117,8 +117,8 @@ function P(e) {
             "hideDeviceTypeIcon",
         ]);
     let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = R(t),
-        { analyticsLocations: j } = (0, d.ZP)(),
-        M = (0, s.e7)([f.Z], () => f.Z.theme),
+        { analyticsLocations: M } = (0, d.ZP)(),
+        j = (0, s.e7)([f.Z], () => f.Z.theme),
         [k, U] = i.useState(u),
         G = x(a),
         [B, Z] = (0, E.Ls)(t, { location: G }),
@@ -138,7 +138,7 @@ function P(e) {
                         m.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: t,
                             location: G,
-                            location_stack: j,
+                            location_stack: M,
                             shown_device_count: B.length,
                             hidden_device_count: Z.length,
                         });
@@ -147,11 +147,11 @@ function P(e) {
                     (null == (n = null == y ? void 0 : y(e)) || n) &&
                         P(e, {
                             location: G,
-                            analyticsLocations: j,
+                            analyticsLocations: M,
                         });
                 }
             },
-            [t, G, B.length, Z.length, j, y, P],
+            [t, G, B.length, Z.length, M, y, P],
         );
     function z(e) {
         let t,
@@ -166,7 +166,7 @@ function P(e) {
             (t = f.subName));
         let _ = p.Z.getCertifiedDeviceName(s, d);
         if (p.Z.isCertified(s)) {
-            let e = (0, l.ap)(M) ? n(561259) : n(887695);
+            let e = (0, l.ap)(j) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
                 alt: O.intl.string(O.t.smSKsr),

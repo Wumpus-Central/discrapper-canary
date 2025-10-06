@@ -18,19 +18,19 @@ var i = n(442837),
     _ = n(332712),
     O = n(81471),
     E = n(388032),
-    y = n(79072);
-let v = (e) => {
+    v = n(418337);
+let y = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
         return null == n || 0 === n.length
             ? (0, r.jsx)(l.Text, {
-                  className: y.mutualGuilds,
+                  className: v.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: E.intl.string(E.t.jpY0X1),
               })
             : (0, r.jsxs)("div", {
-                  className: y.mutualGuildsContainer,
+                  className: v.mutualGuildsContainer,
                   children: [
                       (0, r.jsx)(f.Z, {
                           guilds: n,
@@ -39,7 +39,7 @@ let v = (e) => {
                           hideOverflowCount: !0,
                       }),
                       (0, r.jsx)(l.Text, {
-                          className: y.mutualGuilds,
+                          className: v.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: E.intl.format(E.t.eE3oen, { count: n.length }),
@@ -63,28 +63,28 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(I, {
-                className: y.avatar,
+                className: v.avatar,
                 src: (0, p.x)(n, 40, S),
                 avatarDecoration: T,
                 size: l.EFr.SIZE_40,
                 "aria-label": null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t["30mdIy"]),
             }),
             (0, r.jsxs)("div", {
-                className: y.userPreview,
+                className: v.userPreview,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: y.userContainerWithPreview,
+                        className: v.userContainerWithPreview,
                         children: [
                             (0, r.jsx)(a.Z, {
                                 nick: _,
                                 user: c,
                                 showAccountIdentifier: !0,
-                                className: y.tagContainer,
-                                usernameClass: y.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(c) ? y.globalName : y.discriminator,
+                                className: v.tagContainer,
+                                usernameClass: v.username,
+                                discriminatorClass: null != g.ZP.getGlobalName(c) ? v.globalName : v.discriminator,
                             }),
                             (0, r.jsx)(l.Text, {
-                                className: y.timestampWithPreview,
+                                className: v.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: C,
@@ -94,7 +94,7 @@ function S(e) {
                     (0, r.jsx)(s.Z, {
                         hoverText: (0, r.jsx)(O.Z, { channel: n }),
                         forceHover: f,
-                        children: (0, r.jsx)(v, { userId: c.id }),
+                        children: (0, r.jsx)(y, { userId: c.id }),
                     }),
                 ],
             }),

@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    I = n(36190);
+    I = n(336821);
 let T = (0, f.kt)({
         id: "1",
         type: s.d.DM,
@@ -74,7 +74,7 @@ function C(e) {
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(""),
-        [j, M] = i.useState((0, u.JM)(L)),
+        [M, j] = i.useState((0, u.JM)(L)),
         k = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
@@ -132,9 +132,9 @@ function C(e) {
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: T,
                 textValue: L,
-                richValue: j,
+                richValue: M,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), M(n));
+                    t !== L && (x(t), j(n));
                 },
                 focused: k.current,
                 onFocus: () => {

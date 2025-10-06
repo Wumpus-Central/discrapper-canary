@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(433355),
     O = n(933557),
     E = n(287746),
-    y = n(388032),
-    v = n(10832),
-    I = n(419246);
+    v = n(388032),
+    y = n(952713),
+    I = n(998603);
 function S(e) {
     let { channel: t, baseChannelId: n } = e,
         S = (0, O.ZP)(t),
@@ -32,7 +32,7 @@ function S(e) {
             b.Z.closeChannelSidebar(_.uZ), N && C && (0, m.Kh)(t.id), j && T && (0, m.Kh)(t.id);
         }, [t.id, j, T, N, C]),
         A = i.useCallback(() => {
-            (0, o.showToast)((0, o.createToast)(y.intl.string(y.t.pIQ3h4), o.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.pIQ3h4), o.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: Z } = (0, h.m)({
             onAcceptSuccess: x,
@@ -44,7 +44,7 @@ function S(e) {
             c.ZP.Icon,
             {
                 icon: o.Dio,
-                tooltip: y.intl.string(y.t.cpT0Cg),
+                tooltip: v.intl.string(v.t.cpT0Cg),
                 onClick: () => b.Z.closeChannelSidebar(n),
             },
             "close",
@@ -54,7 +54,7 @@ function S(e) {
         children: [
             (0, r.jsx)(c.ZP, {
                 toolbar: w,
-                "aria-label": y.intl.string(y.t.BIYAqa),
+                "aria-label": v.intl.string(v.t.BIYAqa),
                 children: (0, u.ud)({
                     channel: t,
                     channelName: S,
@@ -68,18 +68,18 @@ function S(e) {
                         (0, r.jsx)(o.Text, {
                             className: I.__invalid_hamBannerText,
                             variant: "text-sm/normal",
-                            children: y.intl.string(y.t.XVOKgo),
+                            children: v.intl.string(v.t.XVOKgo),
                         }),
                         (0, r.jsx)(a.zx, {
                             className: I.hamBannerButton,
                             size: a.Ph.SMALL,
                             onClick: () => Z(t, P),
-                            children: y.intl.string(y.t.koqL3d),
+                            children: v.intl.string(v.t.koqL3d),
                         }),
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: v.chat,
+                className: y.chat,
                 children: (0, r.jsx)(
                     E.Z,
                     {

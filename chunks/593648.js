@@ -31,14 +31,14 @@ var r = n(951288),
     D = n(709054),
     L = n(45640),
     x = n(695346),
-    j = n(675478),
-    M = n(273313),
+    M = n(675478),
+    j = n(273313),
     k = n(33656),
     U = n(726985),
     G = n(981631),
     B = n(468788),
     Z = n(388032),
-    F = n(197571);
+    F = n(10198);
 function V(e, t, n) {
     return (
         t in e
@@ -326,12 +326,12 @@ function X() {
                                             description: Z.intl.string(Z.t["z8Td4+"]),
                                             checked: !e[t].disableRaidAlertNag,
                                             onChange: () => {
-                                                (0, j.PS)(
+                                                (0, M.PS)(
                                                     t,
                                                     (e) => {
                                                         e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                     },
-                                                    j.fy.INFREQUENT_USER_ACTION,
+                                                    M.fy.INFREQUENT_USER_ACTION,
                                                 );
                                             },
                                         }),
@@ -343,12 +343,12 @@ function X() {
                                             description: Z.intl.string(Z.t.PyxXs7),
                                             checked: !e[t].disableRaidAlertPush,
                                             onChange: () => {
-                                                (0, j.PS)(
+                                                (0, M.PS)(
                                                     t,
                                                     (e) => {
                                                         e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                     },
-                                                    j.fy.INFREQUENT_USER_ACTION,
+                                                    M.fy.INFREQUENT_USER_ACTION,
                                                 );
                                             },
                                         }),
@@ -388,7 +388,7 @@ class Q extends i.PureComponent {
                     label:
                         0 === e ? Z.intl.string(Z.t["0QN7cX"]) : Z.intl.formatToPlainString(Z.t.iXLF9f, { minutes: e }),
                 }));
-        return (0, r.jsx)(M.Z, {
+        return (0, r.jsx)(j.Z, {
             title: Z.intl.string(Z.t.HcoRu7),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,

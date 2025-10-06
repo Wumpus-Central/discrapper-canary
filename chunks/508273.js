@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(358595),
     O = n(981631),
     v = n(388032),
-    I = n(492681);
+    I = n(69643);
 let T = 292,
     S = 36,
     A = 48;
@@ -41,7 +41,7 @@ function C(e) {
         x = i.useCallback(() => {
             C && (p || m(!0));
         }, [p, C]),
-        j = i.useMemo(() => {
+        M = i.useMemo(() => {
             var e;
             return C && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
@@ -55,7 +55,7 @@ function C(e) {
         : (0, r.jsxs)(l.P3F, {
               className: o()(I.guildInviteContainer, { [I.clickable]: C && p }),
               onClick: L,
-              style: j,
+              style: M,
               children: [
                   (0, r.jsxs)("div", {
                       className: I.cardHeightMeasure,

@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(34305),
     m = n(981631),
     b = n(388032),
-    _ = n(77839);
+    _ = n(936390);
 function O(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function E(e) {
     }
     return e;
 }
-function y(e) {
+function v(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
     let i = t.map((e) => {
@@ -95,7 +95,7 @@ function y(e) {
         ],
     });
 }
-class v extends i.PureComponent {
+class y extends i.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -136,7 +136,7 @@ class v extends i.PureComponent {
                           ],
                       })
                     : null,
-                (0, r.jsx)(y, {
+                (0, r.jsx)(v, {
                     restoreApplication: this.handleRestoreHiddenLibraryApplication,
                     applicationViewItems: e,
                 }),
@@ -168,5 +168,5 @@ function I() {
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems),
     };
-    return (0, r.jsx)(v, E({}, e));
+    return (0, r.jsx)(y, E({}, e));
 }

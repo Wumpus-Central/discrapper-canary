@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(124650);
+    I = n(95457);
 function T(e) {
     var t;
     return (0, r.jsx)("span", {
@@ -56,7 +56,7 @@ function S(e) {
         }
     }, [w, C, S]);
     let x = null != a && null != n && null != P ? A.find((e) => P.roles.includes(e.id)) : void 0,
-        j = i.useMemo(
+        M = i.useMemo(
             () =>
                 null != a && null != n
                     ? A.filter((e) => !(0, d.fI)(e))
@@ -69,14 +69,14 @@ function S(e) {
             [a, n, R, x, A],
         );
     if (null == n || null == a || null == P) return null;
-    let M = {};
+    let j = {};
     return (P.roles.forEach((e) => {
         let t = S[e];
-        null != t && (M[t.id] = t);
+        null != t && (j[t.id] = t);
     }),
     s.e$(
         m.I0({
-            forceRoles: M,
+            forceRoles: j,
             context: a,
         }),
         s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),
@@ -89,7 +89,7 @@ function S(e) {
                   onChange: D,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = j.reduce(
+                      let t = M.reduce(
                               (t, n) => (
                                   o()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(

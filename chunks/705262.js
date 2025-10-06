@@ -37,9 +37,9 @@ var r = n(951288),
     D = n(474936),
     L = n(874893),
     x = n(526761),
-    j = n(231338),
-    M = n(388032),
-    k = n(227674);
+    M = n(231338),
+    j = n(388032),
+    k = n(90290);
 function U(e, t, n) {
     return (
         t in e
@@ -143,16 +143,16 @@ let Y = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0,
                     },
-                    () => M.intl.string(M.t.D29k19),
+                    () => j.intl.string(j.t.D29k19),
                 )
                 .with(
                     {
                         type: "EDITOR",
                         isCoachmark: !0,
                     },
-                    () => M.intl.string(M.t["8+vbqa"]),
+                    () => j.intl.string(j.t["8+vbqa"]),
                 )
-                .otherwise(() => M.intl.string(M.t.hjV0fX));
+                .otherwise(() => j.intl.string(j.t.hjV0fX));
         return (0, r.jsxs)("div", {
             className: k.title,
             children: [
@@ -181,24 +181,24 @@ let Y = Object.freeze({
                     type: "EDITOR",
                     isPreview: !0,
                 },
-                () => M.intl.format(M.t.G8yQXl, { onPremiumClick: () => m.z }),
+                () => j.intl.format(j.t.G8yQXl, { onPremiumClick: () => m.z }),
             )
             .with(
                 {
                     type: "EDITOR",
                     isCoachmark: !0,
                 },
-                () => M.intl.string(M.t.jmZiNj),
+                () => j.intl.string(j.t.jmZiNj),
             )
             .with(
                 {
                     type: "EDITOR",
                     isPreview: !1,
                 },
-                () => M.intl.string(M.t.dqDFwc),
+                () => j.intl.string(j.t.dqDFwc),
             )
-            .with({ isPreview: !0 }, () => M.intl.format(M.t.DWIjJy, { onPremiumClick: () => m.z }))
-            .otherwise(() => M.intl.string(M.t["np0X/v"]));
+            .with({ isPreview: !0 }, () => j.intl.format(j.t.DWIjJy, { onPremiumClick: () => m.z }))
+            .otherwise(() => j.intl.string(j.t["np0X/v"]));
         return (0, r.jsx)(c.X6q, {
             variant: "text-sm/normal",
             className: k.subtext,
@@ -215,7 +215,7 @@ let Y = Object.freeze({
             ? (0, r.jsx)(E.ZP, {
                   type: D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: D.Si.TIER_2,
-                  children: M.intl.format(M.t.G8yQXl, { onPremiumClick: () => m.z }),
+                  children: j.intl.format(j.t.G8yQXl, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
                   className: k.header,
@@ -264,7 +264,7 @@ let Y = Object.freeze({
                         themeName: s.Us[e.id],
                     }),
                     g && a.v2EditorEnabled && "SETTINGS" === l
-                        ? j(e)
+                        ? M(e)
                         : (0, u.ZI)(
                               {
                                   backgroundGradientPresetId: e.id,
@@ -279,7 +279,7 @@ let Y = Object.freeze({
                     v((e) => e + 1);
                 }
             },
-            j = async (e) => {
+            M = async (e) => {
                 await (0, u.ZI)(
                     {
                         backgroundGradientPresetId: e.id,
@@ -291,7 +291,7 @@ let Y = Object.freeze({
                     (0, p.XO)(p.wh.CLIENT_THEMES),
                     (0, I.default)();
             },
-            M = () => {
+            j = () => {
                 if (!b) return null;
                 let e = P.qt[s.Us.EASTER_EGG];
                 if (null == e) return null;
@@ -345,7 +345,7 @@ let Y = Object.freeze({
                         e.id,
                     ),
                 ),
-                M(),
+                j(),
             ],
         });
     },
@@ -396,24 +396,24 @@ let Y = Object.freeze({
                         onSelect: () => p("system"),
                     }),
                 (0, r.jsx)(R.bD, {
-                    theme: j.BR.LIGHT,
-                    isSelected: c && !d && l === j.BR.LIGHT,
-                    onSelect: () => p(j.BR.LIGHT),
+                    theme: M.BR.LIGHT,
+                    isSelected: c && !d && l === M.BR.LIGHT,
+                    onSelect: () => p(M.BR.LIGHT),
                 }),
                 (0, r.jsx)(R.bD, {
-                    theme: j.BR.DARK,
-                    isSelected: c && !d && l === j.BR.DARK,
-                    onSelect: () => p(j.BR.DARK),
+                    theme: M.BR.DARK,
+                    isSelected: c && !d && l === M.BR.DARK,
+                    onSelect: () => p(M.BR.DARK),
                 }),
                 (0, r.jsx)(R.bD, {
-                    theme: j.BR.DARKER,
-                    isSelected: c && !d && l === j.BR.DARKER,
-                    onSelect: () => p(j.BR.DARKER),
+                    theme: M.BR.DARKER,
+                    isSelected: c && !d && l === M.BR.DARKER,
+                    onSelect: () => p(M.BR.DARKER),
                 }),
                 (0, r.jsx)(R.bD, {
-                    theme: j.BR.MIDNIGHT,
-                    isSelected: c && !d && l === j.BR.MIDNIGHT,
-                    onSelect: () => p(j.BR.MIDNIGHT),
+                    theme: M.BR.MIDNIGHT,
+                    isSelected: c && !d && l === M.BR.MIDNIGHT,
+                    onSelect: () => p(M.BR.MIDNIGHT),
                 }),
                 !n &&
                     !t &&
@@ -440,7 +440,7 @@ let Y = Object.freeze({
                     (0, r.jsx)(c.X6q, {
                         className: k.upsellText,
                         variant: "heading-sm/semibold",
-                        children: M.intl.string(M.t.POSLGR),
+                        children: j.intl.string(j.t.POSLGR),
                     }),
                 (0, r.jsxs)(c.Kqy, {
                     direction: "horizontal",

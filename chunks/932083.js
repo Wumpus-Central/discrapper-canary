@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => i });
 var r = n(951288);
 n(647438);
 var l = n(481060),
     a = n(29121),
-    i = n(59690);
-let s = (e) => {
+    s = n(351702);
+let i = (e) => {
     let { product: t } = e,
         n = (0, a.To)(t);
     return (0, r.jsx)(l.Text, {
         variant: "text-lg/bold",
-        className: i.productName,
+        className: s.productName,
         children: n,
     });
 };

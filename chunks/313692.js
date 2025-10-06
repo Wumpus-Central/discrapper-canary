@@ -16,21 +16,21 @@ var r = n(951288),
     m = n(433355),
     g = n(271383),
     N = n(594174),
-    O = n(189432),
-    h = n(356778),
+    h = n(189432),
+    O = n(356778),
     f = n(370595),
     R = n(50493),
     S = n(981631),
-    p = n(87819),
-    C = n(125134);
+    C = n(152540),
+    p = n(447334);
 function D(e) {
     var t, n;
     let { userId: i, guildId: D, location: L, className: U, onNavigate: M } = e,
-        b = l.useRef(null),
+        x = l.useRef(null),
         v = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(D), [D]),
-        x = l.useRef(0),
+        b = l.useRef(0),
         [P, j] = l.useState(null != (t = null == v ? void 0 : v.details.additionalSearchQuery) ? t : {}),
-        y = (0, h.z0)(i, D, {
+        y = (0, O.z0)(i, D, {
             addtionalQuery: P,
             shouldDispatch: !0,
         }),
@@ -40,7 +40,7 @@ function D(e) {
         let e = null == v ? void 0 : v.details.scrollOffset;
         if (null != e) {
             var t;
-            null == (t = b.current) ||
+            null == (t = x.current) ||
                 t.scrollTo({
                     to: e,
                     animate: !1,
@@ -50,11 +50,11 @@ function D(e) {
     let F = l.useCallback(
             (e) => {
                 null != v &&
-                    ((x.current = e.target.scrollTop),
-                    (0, O.r)(D, i, v.baseChannelId, {
+                    ((b.current = e.target.scrollTop),
+                    (0, h.r)(D, i, v.baseChannelId, {
                         modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: P,
-                        scrollOffset: x.current,
+                        scrollOffset: b.current,
                     }));
             },
             [D, i, v, P],
@@ -105,10 +105,10 @@ function D(e) {
                           }),
                     t);
                 j(r),
-                    (0, O.r)(D, i, v.baseChannelId, {
+                    (0, h.r)(D, i, v.baseChannelId, {
                         modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
-                        scrollOffset: x.current,
+                        scrollOffset: b.current,
                     });
             },
             [D, i, v, P],
@@ -171,7 +171,7 @@ function D(e) {
     return null == G || null == k || null == B
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(p.container, U),
+              className: s()(C.container, U),
               children: [
                   (0, r.jsx)(f.Z, {
                       guildId: D,
@@ -179,8 +179,8 @@ function D(e) {
                       onNavigate: M,
                   }),
                   (0, r.jsx)(u.Den, {
-                      className: C.innerContainer,
-                      ref: b,
+                      className: p.innerContainer,
+                      ref: x,
                       onScroll: w,
                       children: (0, r.jsx)(T.Z, {
                           messages: Z,

@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(78946);
+    b = n(445143);
 function y(e) {
     let {
             user: t,
@@ -53,7 +53,7 @@ function y(e) {
     function x() {
         (0, _.UK)(null, A, null == n ? void 0 : n.id);
     }
-    let j = I ? l.gtL : s.zx;
+    let M = I ? l.gtL : s.zx;
     return (0, r.jsx)(p.Z, {
         forcedDivider: v,
         borderType: h.Y.PREMIUM,
@@ -65,7 +65,7 @@ function y(e) {
         children: (0, r.jsxs)("div", {
             className: b.buttonsContainer,
             children: [
-                (0, r.jsx)(j, {
+                (0, r.jsx)(M, {
                     size: s.zx.Sizes.SMALL,
                     onClick: w,
                     className: o()({ [b.buttonHighlighted]: I }),

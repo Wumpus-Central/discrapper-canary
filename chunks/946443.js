@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => I,
+    h6: () => P,
 }),
     n(388685);
 var r = n(951288),
@@ -14,27 +14,27 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    f = n(493773),
-    h = n(607070),
+    h = n(493773),
+    f = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
     _ = n(358085),
-    O = n(143316),
-    y = n(240126),
+    y = n(143316),
+    O = n(240126),
     v = n(147522),
     j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(915087);
+    E = n(77902);
 function S(e) {
-    var t, n, l, a, O, S, I;
-    let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
+    var t, n, l, a, y, S, P;
+    let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
+        U = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -52,11 +52,11 @@ function S(e) {
             (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
         (a = R),
-        (O = D),
+        (y = D),
         i.useEffect(() => {
             let e = () => {
                 let e = a.channels.find((e) => !e.collapsed);
-                null != e && O.markChannelRead(e);
+                null != e && y.markChannelRead(e);
             };
             return (
                 b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
@@ -64,7 +64,7 @@ function S(e) {
                     b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [O, a.channels]),
+        }, [y, a.channels]),
         (S = D),
         i.useEffect(() => {
             let e = (e) => {
@@ -93,7 +93,7 @@ function S(e) {
             ),
             [T],
         ),
-        (0, f.ZP)(
+        (0, h.ZP)(
             () => (
                 b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
@@ -103,11 +103,11 @@ function S(e) {
         );
     let G = (0, g.Z)("unreads", A);
     if (0 === M.length) {
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(O.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
             tip:
-                (null == (I = s().os) ? void 0 : I.family) === "OS X"
+                (null == (P = s().os) ? void 0 : P.family) === "OS X"
                     ? C.intl.string(C.t.w9uDOT)
                     : C.intl.string(C.t.BiUJCw),
         });
@@ -183,7 +183,7 @@ function S(e) {
                             onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
-                                w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
+                                Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
                                 (0, v.Z)(M, D, N),
                                 L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
@@ -206,7 +206,7 @@ function S(e) {
         }),
     });
 }
-function P(e) {
+function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
         className: E.tutorial,
@@ -245,8 +245,8 @@ function P(e) {
         ],
     });
 }
-function I() {
-    return (0, r.jsx)(y.Z, {
+function P() {
+    return (0, r.jsx)(O.Z, {
         Icon: d.xx7,
         disableStars: !0,
         header: C.intl.string(C.t["KG/ynZ"]),
@@ -254,7 +254,7 @@ function I() {
     });
 }
 let N = () =>
-    (0, r.jsx)(O.Z, {
+    (0, r.jsx)(y.Z, {
         onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

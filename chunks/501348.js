@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(358085),
     L = n(210887),
     x = n(740492),
-    j = n(695346),
-    M = n(313789),
+    M = n(695346),
+    j = n(313789),
     k = n(329013),
     U = n(333859),
     G = n(273313),
@@ -42,8 +42,8 @@ var r = n(951288),
     V = n(921944),
     H = n(959517),
     Y = n(388032),
-    W = n(226518),
-    K = n(197571);
+    W = n(5874),
+    K = n(10198);
 function z(e, t, n) {
     return (
         t in e
@@ -206,7 +206,7 @@ let J = "cozy",
         let e = (0, B.Z)();
         return Y.intl.format(Y.t.Jae48P, {
             onClick: () => {
-                e(M.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
+                e(j.n.ACCESSIBILITY_PANEL, { section: F.oAB.ACCESSIBILITY });
             },
         });
     };
@@ -358,7 +358,7 @@ class eo extends i.Component {
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => j.hg.updateSetting(e),
+            onChange: (e) => M.hg.updateSetting(e),
             value: e,
         });
     }
@@ -498,11 +498,11 @@ class eo extends i.Component {
             }),
             z(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                j.jU.updateSetting(t === $), (0, h.ZZ)();
+                M.jU.updateSetting(t === $), (0, h.ZZ)();
             }),
             z(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && j.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && M.YC.updateSetting(t);
             });
     }
 }
@@ -514,12 +514,12 @@ let es = (e) => {
         });
 };
 function el() {
-    let e = j.jU.useSetting(),
-        t = j.RS.useSetting(),
-        n = j.NA.useSetting(),
-        a = j.L1.useSetting(),
-        o = j.hg.useSetting(),
-        c = j.YC.useSetting(),
+    let e = M.jU.useSetting(),
+        t = M.RS.useSetting(),
+        n = M.NA.useSetting(),
+        a = M.L1.useSetting(),
+        o = M.hg.useSetting(),
+        c = M.YC.useSetting(),
         u = O.Mc.useExperiment({ location: "UserSettingsAppearance" }).enabled,
         d = v.y.useConfig({ location: "UserSettingsAppearance" }).enabled,
         f = (0, E.T)("UserSettingsAppearance");

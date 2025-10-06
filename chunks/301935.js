@@ -32,7 +32,7 @@ var r = n(951288),
     N = n(547283),
     R = n(981631),
     P = n(388032),
-    w = n(608848);
+    w = n(96096);
 function D(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ function x(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,7 +85,7 @@ function j(e, t) {
         e
     );
 }
-let M = "https://support.discord.com/hc/en-us";
+let j = "https://support.discord.com/hc/en-us";
 var k = (function (e) {
     return (e[(e.LOADING = 0)] = "LOADING"), (e[(e.DONE = 1)] = "DONE"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
@@ -97,8 +97,8 @@ function U(e) {
         {
             appId: L,
             plan: x,
-            storeListing: j,
-            price: M,
+            storeListing: M,
+            price: j,
             isGuildSubscription: k,
             subscriptionForGuild: U,
             sku: Y,
@@ -187,14 +187,14 @@ function U(e) {
                               className: w.headerButtons,
                               children:
                                   null != z &&
-                                  null != j &&
+                                  null != M &&
                                   null != Y &&
                                   !1 === en &&
                                   (0, r.jsx)(F, {
                                       subscription: p,
                                       app: z,
                                       sku: Y,
-                                      storeListing: j,
+                                      storeListing: M,
                                       isCancelled: W,
                                       navigateToSwitchPlan: E,
                                       renewalSkuId: null == K ? void 0 : K.skuId,
@@ -255,10 +255,10 @@ function U(e) {
                                   children: [(0, r.jsx)(l.tBG, { size: "xs" }), P.intl.string(P.t["6anEVl"])],
                               }),
                     }),
-                    null != M &&
+                    null != j &&
                         (0, r.jsx)(B, {
                             title: P.intl.string(P.t.KI7ER0),
-                            content: M,
+                            content: j,
                         }),
                     (0, r.jsx)(B, {
                         title: P.intl.string(P.t.dnUzb2),
@@ -279,11 +279,11 @@ function U(e) {
                 isCancelled: W,
             }),
             null != z &&
-                (null == j ? void 0 : j.benefits) != null &&
-                j.benefits.length > 0 &&
+                (null == M ? void 0 : M.benefits) != null &&
+                M.benefits.length > 0 &&
                 (0, r.jsx)(V, {
                     appId: z.id,
-                    listingBenefits: j.benefits,
+                    listingBenefits: M.benefits,
                 }),
         ],
     });
@@ -369,7 +369,7 @@ function F(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        j(L({}, n), {
+                        M(L({}, n), {
                             application: t,
                             storeListing: o,
                             subscription: u,
@@ -388,7 +388,7 @@ function F(e) {
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            j(L({}, n), {
+                            M(L({}, n), {
                                 storeListing: o,
                                 subscription: b.Z.createFromServer(e),
                             }),
@@ -498,7 +498,7 @@ function H(e) {
                       children: [
                           P.intl.format(P.t.IIHUUF, { subscriptionId: t.id }),
                           (0, r.jsx)("br", {}),
-                          P.intl.format(P.t.fh65ER, { helpLink: M }),
+                          P.intl.format(P.t.fh65ER, { helpLink: j }),
                       ],
                   }),
               })

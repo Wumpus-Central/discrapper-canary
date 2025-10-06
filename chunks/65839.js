@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(75666),
     u = n(231338),
     p = n(388032),
-    h = n(806328),
-    f = n(152013),
+    h = n(535140),
+    f = n(31171),
     g = n(584354),
     m = n(725060);
 let b = (e) => {
@@ -74,8 +74,8 @@ let b = (e) => {
             currentCategoryId: m,
             handleSelectCategory: y,
             categoryCounts: _,
-            allEntriesCount: O,
-            isLoading: j,
+            allEntriesCount: j,
+            isLoading: x,
         } = e;
         return (0, r.jsx)("div", {
             className: h.pageContainer,
@@ -104,7 +104,7 @@ let b = (e) => {
                                     {
                                         className: f.tabBarItem,
                                         id: d.AR.ALL,
-                                        children: "".concat(p.intl.string(p.t.hEAa2d), " (").concat(O, ")"),
+                                        children: "".concat(p.intl.string(p.t.hEAa2d), " (").concat(j, ")"),
                                     },
                                     d.AR.ALL,
                                 ),
@@ -125,7 +125,7 @@ let b = (e) => {
                             ],
                         }),
                     }),
-                    j && null == n
+                    x && null == n
                         ? (0, r.jsx)(s.$jN, { className: h.spinner })
                         : null == n
                           ? void 0

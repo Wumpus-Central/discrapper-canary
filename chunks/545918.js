@@ -13,7 +13,7 @@ var l = n(951288),
     j = n(246364),
     h = n(697379),
     b = n(98493),
-    f = n(412222),
+    f = n(665625),
     v = n(223312),
     g = n(571728),
     p = n(984370),
@@ -27,16 +27,16 @@ var l = n(951288),
     R = n(901066),
     I = n(987491),
     Z = n(305473),
-    M = n(995596),
-    O = n(937283),
-    w = n(440857),
+    O = n(995596),
+    w = n(937283),
+    M = n(440857),
     y = n(707113),
     A = n(981631),
     D = n(176505),
     k = n(388032),
-    B = n(350013),
-    L = n(97009);
-function G(e) {
+    B = n(401853),
+    G = n(161655);
+function L(e) {
     let { guild: t, currentTab: n, onTabSelect: r } = e,
         i = (0, h.W)(t.id),
         a = k.intl.string(k.t.oclz3d),
@@ -59,7 +59,7 @@ function G(e) {
                 }),
                 (0, l.jsx)(p.Z.Title, { children: s }),
                 i &&
-                    (0, l.jsx)(M.Z, {
+                    (0, l.jsx)(O.Z, {
                         guildId: t.id,
                         currentTab: n,
                         onTabSelect: r,
@@ -74,7 +74,7 @@ function q(e) {
         i = null != (t = (0, g.A)({ guildId: n })) ? t : 0,
         [u, h] = r.useState(i > 0 ? N.e.PENDING : N.e.ALL_MEMBERS),
         p = (0, s.e7)([E.Z], () => E.Z.getGuild(n)),
-        { analyticsLocations: M } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
+        { analyticsLocations: O } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
         D = (0, f.C)({ guildId: n }),
         { guildJoinRequests: k } = (0, v.j)({
             guildId: n,
@@ -114,12 +114,12 @@ function q(e) {
     let K = (0, s.e7)([_.ZP], () => null != _.ZP.getGuildSidebarState(n), [n]);
     return null != p && q
         ? (0, l.jsxs)(d.Gt, {
-              value: M,
+              value: O,
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(L.chat, B.page, { [L.threadSidebarOpen]: K }),
+                      className: a()(G.chat, B.page, { [G.threadSidebarOpen]: K }),
                       children: [
-                          (0, l.jsx)(G, {
+                          (0, l.jsx)(L, {
                               guild: p,
                               currentTab: u,
                               onTabSelect: J,
@@ -129,7 +129,7 @@ function q(e) {
                               ref: U,
                               orientation: "vertical",
                               children: (0, l.jsx)("div", {
-                                  className: a()(L.content, B.container),
+                                  className: a()(G.content, B.container),
                                   children:
                                       u === N.e.ALL_MEMBERS
                                           ? (0, l.jsxs)(l.Fragment, {
@@ -144,11 +144,11 @@ function q(e) {
                                             }),
                               }),
                           }),
-                          (0, l.jsx)(w.Z, { guildId: p.id }),
+                          (0, l.jsx)(M.Z, { guildId: p.id }),
                       ],
                   }),
                   F &&
-                      (u === N.e.ALL_MEMBERS ? (0, l.jsx)(O.Z, { guildId: p.id }) : (0, l.jsx)(R.Z, { guildId: p.id })),
+                      (u === N.e.ALL_MEMBERS ? (0, l.jsx)(w.Z, { guildId: p.id }) : (0, l.jsx)(R.Z, { guildId: p.id })),
               ],
           })
         : null;

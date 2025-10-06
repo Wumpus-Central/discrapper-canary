@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(31829);
+    m = n(866234);
 let g = function (e) {
     let {
             channelId: t,
@@ -19,15 +19,15 @@ let g = function (e) {
             isDropHovered: p,
             onDrop: f,
             onEdit: h,
-            onRemove: b,
-            canRemove: x,
+            onRemove: x,
+            canRemove: b,
             title: j,
-            actionsLocation: v,
-            fieldStyle: _,
+            actionsLocation: _,
+            fieldStyle: v,
         } = e,
-        O = n.values,
-        y = O.slice(0, 1),
-        C = O.length - y.length;
+        C = n.values,
+        O = C.slice(0, 1),
+        y = C.length - O.length;
     return (0, r.jsxs)(d.Z, {
         field: n,
         index: i,
@@ -35,24 +35,24 @@ let g = function (e) {
         isDropHovered: p,
         onDrop: f,
         onEdit: h,
-        onRemove: b,
+        onRemove: x,
         title: j,
-        canRemove: x,
-        actionsLocation: v,
-        fieldStyle: _,
+        canRemove: b,
+        actionsLocation: _,
+        fieldStyle: v,
         children: [
             (0, r.jsx)(c.EK, {
-                terms: y,
+                terms: O,
                 channelId: t,
             }),
-            0 !== C &&
+            0 !== y &&
                 (0, r.jsxs)(a.P3F, {
                     className: l()(m.fieldFooterContainer, m.clickable),
                     onClick: h,
                     children: [
                         (0, r.jsx)(a.R94, {
                             className: m.clickable,
-                            children: u.intl.format(u.t.jnhD0d, { count: C }),
+                            children: u.intl.format(u.t.jnhD0d, { count: y }),
                         }),
                         (0, r.jsx)(o.Z, {
                             className: m.termsFieldCaretIcon,

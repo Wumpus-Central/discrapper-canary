@@ -12,15 +12,15 @@ var r = n(951288),
     m = n(906732),
     f = n(659580),
     b = n(795318),
-    y = n(728285),
-    g = n(670863),
-    v = n(53691),
-    O = n(457165),
-    j = n(131951),
+    g = n(728285),
+    v = n(670863),
+    y = n(53691),
+    j = n(457165),
+    O = n(131951),
     h = n(594174),
     x = n(626135),
-    P = n(111361),
-    _ = n(74538),
+    _ = n(111361),
+    P = n(74538),
     w = n(743498),
     C = n(967021),
     E = n(709706),
@@ -35,9 +35,9 @@ var r = n(951288),
     A = n(354459),
     R = n(474936),
     V = n(65154),
-    F = n(696162),
+    F = n(2482),
     L = n(388032),
-    U = n(640292);
+    U = n(998193);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ function z(e) {
             orientation: d.y.VERTICAL_TOP,
         });
     (0, L.useSyncMessages)(F.messagesLoader);
-    let Q = (0, s.e7)([h.default], () => (0, P.I5)(h.default.getCurrentUser())),
+    let Q = (0, s.e7)([h.default], () => (0, _.I5)(h.default.getCurrentUser())),
         J = (0, s.e7)([E.Z], () => E.Z.getCatalogUpdateTime()),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -141,7 +141,7 @@ function z(e) {
     });
     let ec = i.useCallback(() => B(""), [B]),
         eu = i.useRef(null),
-        ed = (0, y.bp)() !== M.IlC.OVERLAY;
+        ed = (0, g.bp)() !== M.IlC.OVERLAY;
     return (0, r.jsx)(m.Gt, {
         value: W,
         children: (0, r.jsxs)("div", {
@@ -197,11 +197,11 @@ function z(e) {
                                         y: el.y,
                                         opacity: el.y.to((e) => +(50 !== e)),
                                     },
-                                    children: (0, r.jsx)(v.p, {
+                                    children: (0, r.jsx)(y.p, {
                                         showUpsell: !0,
                                         text: L.intl.format(L.t["XMDm8/"], {
-                                            nitroTierName: (0, _.Px)(R.p9.TIER_2),
-                                            onClick: () => (0, O.i)(),
+                                            nitroTierName: (0, P.Px)(R.p9.TIER_2),
+                                            onClick: () => (0, j.i)(),
                                         }),
                                         button: L.intl.string(L.t.cRCCJy),
                                         buttonAnalyticsObject: { section: M.jXE.VOICE_FILTERS_FLOATING_UPSELL },
@@ -222,19 +222,19 @@ function z(e) {
                 (0, r.jsxs)("div", {
                     className: l()(U.voiceFiltersFooter, { [U.hasActiveVoice]: null != er }),
                     children: [
-                        (0, r.jsx)(g.j, {
+                        (0, r.jsx)(v.j, {
                             deviceType: V.h7.AUDIO_INPUT,
                             location: "VoiceFiltersPopout",
                             onOpen: () => {
                                 var e;
                                 x.default.track(M.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, {
-                                    active_voice_filter_id: null != (e = j.Z.getActiveVoiceFilter()) ? e : null,
+                                    active_voice_filter_id: null != (e = O.Z.getActiveVoiceFilter()) ? e : null,
                                 });
                             },
                             popoutPosition: "top",
                         }),
                         o &&
-                            (0, r.jsx)(g.j, {
+                            (0, r.jsx)(v.j, {
                                 deviceType: V.h7.AUDIO_OUTPUT,
                                 location: "VoiceFiltersPopout",
                                 popoutPosition: "top",

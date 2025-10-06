@@ -1,4 +1,4 @@
-n.d(t, { q: () => O });
+n.d(t, { q: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -17,9 +17,9 @@ var r = n(951288),
     b = n(981631),
     j = n(675654),
     v = n(710111),
-    _ = n(764295),
+    _ = n(304726),
     C = n(388032),
-    y = n(65766);
+    y = n(911873);
 function T(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
@@ -104,7 +104,7 @@ function w(e) {
               text: n,
           });
 }
-function O() {
+function S() {
     let e = i.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,

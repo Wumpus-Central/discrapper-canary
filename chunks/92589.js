@@ -3,10 +3,10 @@ var r = n(951288);
 n(647438);
 var l = n(481060),
     a = n(434650),
-    i = n(168020),
-    s = n(859788),
+    s = n(168020),
+    i = n(859788),
     o = n(388032),
-    c = n(449177);
+    c = n(80931);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,7 +50,7 @@ let d = (e) => {
         children: [
             (0, r.jsx)("div", {
                 className: c.banner,
-                children: (0, r.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     bannerStatic: t.bannerAsset.static,
                     bannerAnimated: t.bannerAsset.animated,
                 }),
@@ -61,7 +61,7 @@ let d = (e) => {
                     className: c.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(i.R, {
+                            ? (0, r.jsx)(s.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })

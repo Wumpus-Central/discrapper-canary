@@ -13,9 +13,9 @@ var i = t(120356),
     p = t(598077),
     f = t(914010),
     h = t(785717),
-    j = t(49898),
-    x = t(388032),
-    v = t(20163);
+    x = t(49898),
+    j = t(388032),
+    v = t(638999);
 function g(e) {
     let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
         o = (0, c.rm)(n, t);
@@ -42,7 +42,7 @@ function g(e) {
                         onClick: () => {
                             null == i || i(),
                                 (0, d.transitionToGlobalDiscovery)({
-                                    tab: j.GlobalDiscoveryTab.APPS,
+                                    tab: x.GlobalDiscoveryTab.APPS,
                                     applicationId: n.application.id,
                                     newSessionState: {
                                         entrypoint: { name: u.xF.APPLICATION_DIRECTORY_URL },
@@ -69,7 +69,7 @@ function g(e) {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
                                 className: v.connectedAppRoleAccountPoweredBy,
-                                children: x.intl.format(x.t.zIT9YG, { applicationHook: () => n.application.name }),
+                                children: j.intl.format(j.t.zIT9YG, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),

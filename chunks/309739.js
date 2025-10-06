@@ -25,8 +25,8 @@ var r = n(951288),
     A = n(726985),
     C = n(981631),
     N = n(388032),
-    R = n(85240),
-    P = n(197571);
+    R = n(174546),
+    P = n(10198);
 function w(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ function x(e, t) {
         e
     );
 }
-function j(e) {
+function M(e) {
     let t = () => {
         T.SE.updateSetting(e ? b.Z.getGuildIds() : []);
     };
@@ -107,16 +107,16 @@ function j(e) {
         ),
     );
 }
-function M() {
+function j() {
     let e = T.G6.useSetting(),
         t = T.no.useSetting(),
         n = (0, v.Yd)("activity privacy tab"),
         i = O.isPlatformEmbedded ? N.intl.string(N.t.MznbeH) : N.intl.string(N.t.oKqC4u),
         a = (e) => {
-            T.no.updateSetting(e ? l.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : l.GI.ACTIVITY_STATUS_OFF), j(e);
+            T.no.updateSetting(e ? l.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : l.GI.ACTIVITY_STATUS_OFF), M(e);
         },
         o = (e) => {
-            T.no.updateSetting(e), j(e !== l.GI.ACTIVITY_STATUS_OFF);
+            T.no.updateSetting(e), M(e !== l.GI.ACTIVITY_STATUS_OFF);
         },
         s = [
             {
@@ -284,7 +284,7 @@ function F(e) {
               children: (0, r.jsxs)(d.Kqy, {
                   gap: 24,
                   children: [
-                      (0, r.jsx)(M, {}),
+                      (0, r.jsx)(j, {}),
                       (0, r.jsx)(d.izJ, {}),
                       (0, r.jsx)(k, {}),
                       (0, r.jsx)(U, {}),

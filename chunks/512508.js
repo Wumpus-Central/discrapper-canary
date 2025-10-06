@@ -1,6 +1,6 @@
 n.d(t, {
-    PM: () => M,
-    WG: () => I,
+    PM: () => V,
+    WG: () => P,
     ZP: () => k,
 }),
     n(388685),
@@ -20,13 +20,13 @@ var r = n(951288),
     p = n(313201),
     f = n(518738),
     h = n(884902),
-    j = n(439170),
-    g = n(592125),
+    g = n(439170),
+    j = n(592125),
     x = n(485386),
     v = n(699516),
     y = n(594174),
     O = n(388032),
-    H = n(9226);
+    H = n(444573);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,15 +88,15 @@ function N(e) {
 }
 let Z = (0, p.hQ)(),
     D = (0, p.hQ)(),
-    L = "text-sm/medium";
-function R(e) {
+    R = "text-sm/medium";
+function L(e) {
     return 1 === e.type;
 }
-function P(e) {
+function I(e) {
     return 0 === e.type;
 }
-function I(e) {
-    let t = "".concat(!e.name.includes(j.CR) ? "@" : "").concat(e.name);
+function P(e) {
+    let t = "".concat(!e.name.includes(g.CR) ? "@" : "").concat(e.name);
     return {
         tag: {
             type: d.F.ROLE,
@@ -110,7 +110,7 @@ function I(e) {
         },
     };
 }
-function M(e) {
+function V(e) {
     let t = (0, C.F6)(e, y.default, v.Z);
     return {
         tag: {
@@ -125,7 +125,7 @@ function M(e) {
         },
     };
 }
-let V = l.memo(function (e) {
+let M = l.memo(function (e) {
     var t;
     let { row: n, guildId: l, className: i } = e,
         { id: a, name: s } = n.record,
@@ -135,23 +135,23 @@ let V = l.memo(function (e) {
             size: 16,
         }),
         C = (0, c.e7)([x.Z], () => x.Z.getRole(l, a)),
-        m = s.includes(j.CR) ? "" : "@",
+        m = s.includes(g.CR) ? "" : "@",
         p = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
-        g = null != (t = null == C ? void 0 : C.colorString) ? t : p,
+        j = null != (t = null == C ? void 0 : C.colorString) ? t : p,
         v = (0, h._f)(l, C, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)("div", {
         className: o()(H.rowLabel, H.roleTagContainer, i),
         children: [
             (0, r.jsx)(u.FhE, {
                 className: H.__invalid_roleDot,
-                color: g,
+                color: j,
                 colors: v,
                 background: !1,
                 tooltip: !1,
             }),
             null != d ? (0, r.jsx)(b.Z, w(_({ className: H.roleTagIcon }, d), { enableTooltip: !1 })) : m,
             (0, r.jsx)(u.Text, {
-                variant: L,
+                variant: R,
                 className: H.roleTagLabel,
                 children: s,
             }),
@@ -172,16 +172,16 @@ function E(e) {
                     className: H.channelIcon,
                 }),
             (0, r.jsx)(u.Text, {
-                variant: t.isCategory() ? "eyebrow" : L,
+                variant: t.isCategory() ? "eyebrow" : R,
                 children: n.display,
             }),
         ],
     });
 }
 function T(e, t, n) {
-    return R(e)
+    return L(e)
         ? (0, r.jsx)(
-              V,
+              M,
               {
                   row: e,
                   guildId: t,
@@ -189,7 +189,7 @@ function T(e, t, n) {
               },
               e.record.id,
           )
-        : P(e)
+        : I(e)
           ? (0, r.jsx)(
                 E,
                 {
@@ -214,27 +214,27 @@ function k(e) {
             className: f,
         } = e,
         h = (0, c.e7)([x.Z], () => x.Z.getRolesSnapshot(t)),
-        j = l.useMemo(
+        g = l.useMemo(
             () =>
                 (function (e, t, n) {
                     if (null == e) return {};
                     let r = {};
                     return (
                         e.forEach((e) => {
-                            let t = g.Z.getChannel(e);
-                            null != t && (r[e] = M(t));
+                            let t = j.Z.getChannel(e);
+                            null != t && (r[e] = V(t));
                         }),
                         t.forEach((e) => {
-                            e in n && (r[e] = I(n[e]));
+                            e in n && (r[e] = P(n[e]));
                         }),
                         r
                     );
                 })(a, C, h),
             [a, C, h],
         ),
-        v = l.useMemo(() => Object.keys(j), [j]),
+        v = l.useMemo(() => Object.keys(g), [g]),
         [y, N] = l.useState(""),
-        [L, V] = l.useState(!1),
+        [R, M] = l.useState(!1),
         [E, k] = l.useState(!1),
         [A, U] = l.useState(!1),
         F = l.useRef(null),
@@ -260,13 +260,13 @@ function k(e) {
                     n = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return P(t);
+                            return I(t);
                         })
                         .map((e) => e.row.record.id),
                     r = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return R(t);
+                            return L(t);
                         })
                         .map((e) => e.row.record.id);
                 m(new Set(n), new Set(r));
@@ -274,23 +274,23 @@ function k(e) {
             [m],
         ),
         G = () => {
-            V(!1), k(!1);
+            M(!1), k(!1);
         };
     l.useEffect(() => {
         let e = setTimeout(() => {
-            U(L || E);
+            U(R || E);
         }, 32);
         return () => {
             clearTimeout(e);
         };
-    }, [L, E]);
+    }, [R, E]);
     let Y = (e, t, n) => {
-            n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), k(e));
+            n.stopPropagation(), n.preventDefault(), 2 === t ? M(e) : (1 === t || M(e), k(e));
         },
         W = l.useCallback(
             (e) => {
-                let t = _({}, j);
-                P(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = I(e.record)),
+                let t = _({}, g);
+                I(e) ? (t[e.id] = V(e.record)) : L(e) && (t[e.id] = P(e.record)),
                     z(t),
                     N(""),
                     G(),
@@ -305,7 +305,7 @@ function k(e) {
                             });
                     }, 16);
             },
-            [z, j],
+            [z, g],
         ),
         K = l.useCallback(
             (e) => {
@@ -332,9 +332,9 @@ function k(e) {
             () =>
                 v.map((e) => {
                     var n;
-                    return (n = j[e]), w(_({}, n.tag), { label: T(n.row, t, H.noIndent) });
+                    return (n = g[e]), w(_({}, n.tag), { label: T(n.row, t, H.noIndent) });
                 }),
-            [j, v, t],
+            [g, v, t],
         );
     return (0, r.jsxs)("div", {
         className: o()(H.searchContainer, f),
@@ -350,7 +350,7 @@ function k(e) {
                         ref: F,
                         onRemoveTag: (e) => {
                             let t = v[e],
-                                { [t]: n } = j;
+                                { [t]: n } = g;
                             z(
                                 (function (e, t) {
                                     if (null == e) return {};
@@ -375,7 +375,7 @@ function k(e) {
                                                     (l[n] = e[n]);
                                     }
                                     return l;
-                                })(j, [t].map(S)),
+                                })(g, [t].map(S)),
                             ),
                                 N(""),
                                 G();

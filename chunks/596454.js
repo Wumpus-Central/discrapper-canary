@@ -88,7 +88,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
+n(521510);
 let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function A(e) {
     var t,
@@ -113,7 +113,7 @@ function A(e) {
             registerAnimatedElementRef: L,
             surrogate: x,
         } = e,
-        j = I(e, [
+        M = I(e, [
             "src",
             "alt",
             "className",
@@ -133,7 +133,7 @@ function A(e) {
             "registerAnimatedElementRef",
             "surrogate",
         ]);
-    let [M, k] = i.useState(!1),
+    let [j, k] = i.useState(!1),
         [U, G] = i.useState(void 0),
         B = i.useRef(void 0),
         { triggerAnimation: Z, untriggerAnimation: F } = i.useContext(u.Rm),
@@ -148,13 +148,13 @@ function A(e) {
                 let e = !0 === C && Y;
                 return h.ZP.getEmojiURL({
                     id: f,
-                    animated: H && !0 === O && (e || M || !0 === A),
+                    animated: H && !0 === O && (e || j || !0 === A),
                     size: W,
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, p, W, H, M, A, C, a]),
+        }, [O, Y, f, p, W, H, j, A, C, a]),
         q = i.useCallback(() => {
             null != z &&
                 (B.current = (0, d.po)(z, (e) => {
@@ -176,7 +176,7 @@ function A(e) {
         J = i.useMemo(() => {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": p };
             return y(
-                v(y({}, j), {
+                v(y({}, M), {
                     className: o()("emoji", c, { jumboable: "jumbo" === T }),
                     onError: q,
                     onMouseEnter: X,
@@ -185,7 +185,7 @@ function A(e) {
                 }),
                 e,
             );
-        }, [c, f, p, X, Q, q, j, T]);
+        }, [c, f, p, X, Q, q, M, T]);
     i.useEffect(
         () => () => {
             var e;

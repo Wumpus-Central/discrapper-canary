@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(393903),
     d = n(79707),
     u = n(388032),
-    p = n(16617);
+    p = n(892665);
 function m(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = a.useMemo(
@@ -159,7 +159,7 @@ function h(e) {
             [v, u],
         );
     (0, c.s)(y, I);
-    let O = 0 !== h;
+    let S = 0 !== h;
     return (0, r.jsxs)("div", {
         className: l()(p.container, t),
         ref: y,
@@ -196,7 +196,7 @@ function h(e) {
                     }),
                 ],
             }),
-            O &&
+            S &&
                 (0, r.jsxs)(o.njP, {
                     type: "top",
                     look: "brand",

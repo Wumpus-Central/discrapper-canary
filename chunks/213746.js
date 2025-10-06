@@ -16,7 +16,7 @@ var r = n(951288),
     f = n(979007),
     b = n(981631),
     x = n(388032),
-    v = n(154494);
+    v = n(51324);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,7 +46,7 @@ function j(e) {
     let { application: t } = e;
     return (0, r.jsxs)("div", {
         className: v.storeContainer,
-        children: [(0, r.jsx)(y, { application: t }), (0, r.jsx)(O, { application: t })],
+        children: [(0, r.jsx)(y, { application: t }), (0, r.jsx)(S, { application: t })],
     });
 }
 function y(e) {
@@ -153,7 +153,7 @@ function I(e) {
                         {
                             modalKey: d,
                             onCloseCallback: () => {
-                                S() ||
+                                P() ||
                                     (0, _.Gp)(
                                         b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                             t,
@@ -187,7 +187,7 @@ function I(e) {
                             {
                                 modalKey: d,
                                 onCloseCallback: () => {
-                                    S() ||
+                                    P() ||
                                         (0, _.Gp)(
                                             b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                                 t,
@@ -209,7 +209,7 @@ function I(e) {
         null
     );
 }
-function O(e) {
+function S(e) {
     let { application: t } = e,
         n = (0, g.nu)(),
         a = t.terms_of_service_url,
@@ -240,6 +240,6 @@ function O(e) {
         }),
     });
 }
-function S() {
+function P() {
     return window.location.pathname.startsWith("/login");
 }

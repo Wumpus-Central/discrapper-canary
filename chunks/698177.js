@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     c = n(144114),
     u = n(742458),
     d = n(541692),
@@ -12,31 +12,31 @@ var r = n(951288),
     g = n(388905),
     m = n(815660),
     p = n(388032),
-    f = n(149715),
-    _ = n(197571);
+    f = n(465106),
+    _ = n(10198);
 let x = () => {
     let [e, t] = i.useState(""),
         [l, x] = i.useState(""),
         [E, v] = i.useState(!1),
         [b, j] = i.useState(!1),
         [I, N] = i.useState(null),
-        [O, S] = i.useState(null),
-        y = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
+        [S, O] = i.useState(null),
+        y = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
         C = y.code.split(" ")[0],
         A = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                S(e.body.message);
+                O(e.body.message);
             }
         },
         T = async () => {
             v(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, l);
-                N(null), S(null), j(!0), c.Z.validatePhoneForSupport(t);
+                N(null), O(null), j(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (N(null), S(e.body.message)) : (N(e.body.phone), S(e.body.code));
+                e.body.message ? (N(null), O(e.body.message)) : (N(e.body.phone), O(e.body.code));
             } finally {
                 v(!1);
             }
@@ -48,7 +48,7 @@ let x = () => {
                     className: s()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
                         p.intl.string(p.t.WWzQtb),
-                        (0, r.jsx)(a.owK, {
+                        (0, r.jsx)(o.owK, {
                             size: "md",
                             color: "currentColor",
                             className: _.marginLeft8,
@@ -86,7 +86,7 @@ let x = () => {
                               value: l,
                               onChange: x,
                               maxLength: m.z,
-                              error: O,
+                              error: S,
                           }),
                           (0, r.jsx)(g.zx, {
                               size: g.zx.Sizes.SMALL,

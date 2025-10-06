@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(780985),
     h = n(631885),
     m = n(292352),
-    g = n(345909),
+    g = n(412297),
     E = n(388032),
-    b = n(271650);
+    b = n(671683);
 let y = (e) => {
         let { title: t, buttonText: n, onButtonPress: i } = e;
         return (0, r.jsxs)(a.Kqy, {
@@ -66,10 +66,10 @@ let y = (e) => {
     },
     v = () => {
         let e = (0, c.U)(),
-            t = (0, h.mq)(m.ne.ACTIVE);
+            t = (0, h.ZM)();
         if (!(0, f.PO)("settings-controls") || 0 === t.length) return null;
         let n = () => {
-            (0, u.default)(), s.Z.openPrivateChannel({ recipientIds: t.map((e) => e.id) });
+            (0, u.default)(), s.Z.openPrivateChannel({ recipientIds: t });
         };
         return (0, r.jsxs)(a.Kqy, {
             padding: { top: 24 },

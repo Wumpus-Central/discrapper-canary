@@ -34,8 +34,8 @@ var r = n(951288),
     D = n(706454),
     L = n(210887),
     x = n(418632),
-    j = n(10298),
-    M = n(526156),
+    M = n(10298),
+    j = n(526156),
     k = n(730820),
     U = n(888256),
     G = n(2719),
@@ -44,8 +44,8 @@ var r = n(951288),
     F = n(981631),
     V = n(801461),
     H = n(388032),
-    Y = n(343396),
-    W = n(197571);
+    Y = n(719766),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -368,9 +368,9 @@ class J extends i.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, r.jsx)(j.N, {
+        return (0, r.jsx)(M.N, {
             header: H.intl.string(H.t["JAIM/v"]),
-            children: (0, r.jsx)(M.Z, {
+            children: (0, r.jsx)(j.Z, {
                 parentSetting: Z.s6.ACCOUNT,
                 settingsSection: F.oAB.ACCOUNT,
                 panelClassName: Y.tabPanel,

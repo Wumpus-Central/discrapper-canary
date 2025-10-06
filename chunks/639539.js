@@ -1,4 +1,4 @@
-n.d(t, { J: () => v }), n(388685);
+n.d(t, { J: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(70956),
     d = n(388032),
-    p = n(636433);
+    p = n(20887);
 function m(e) {
     if (null != e) {
         let t = new Date(),
@@ -142,7 +142,7 @@ let f = (e) => {
             children: [(0, r.jsx)("div", { className: p.tinyDot }), (0, r.jsx)("div", { className: p.tinyDot })],
         });
     },
-    y = (e) => {
+    g = (e) => {
         let { digits: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,20 +157,20 @@ let f = (e) => {
             ],
         });
     },
-    g = (e) => {
+    v = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)("div", {
             className: p.digitsContainer,
             children: [
-                (0, r.jsx)(y, { digits: t.hours }),
+                (0, r.jsx)(g, { digits: t.hours }),
                 (0, r.jsx)(b, {}),
-                (0, r.jsx)(y, { digits: t.minutes }),
+                (0, r.jsx)(g, { digits: t.minutes }),
                 (0, r.jsx)(b, {}),
-                (0, r.jsx)(y, { digits: t.seconds }),
+                (0, r.jsx)(g, { digits: t.seconds }),
             ],
         });
     };
-function v(e) {
+function y(e) {
     let { textVariant: t, className: n, catalogUpdateTime: o, isScrolled: a } = e,
         [s, u] = i.useState(() => m(o));
     return (
@@ -206,7 +206,7 @@ function v(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: p.digitsContainer,
-                    children: (0, r.jsx)(g, { countdown: s }),
+                    children: (0, r.jsx)(v, { countdown: s }),
                 }),
             ],
         })

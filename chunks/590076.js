@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(822183),
     d = n(364125),
     f = n(90753),
-    p = n(806777);
+    p = n(9589);
 function m(e) {
     let { focused: t, channelId: n, streamerId: l, stream: u } = e,
         m = i.useRef(null),
@@ -18,8 +18,8 @@ function m(e) {
     let {
         handleClick: g,
         handleMouseDown: b,
-        handleMouseEnter: v,
-        handleMouseMove: E,
+        handleMouseEnter: E,
+        handleMouseMove: v,
         handleMouseUp: h,
     } = (0, d.Z)({
         user: _,
@@ -34,8 +34,8 @@ function m(e) {
             ref: m,
             onClick: g,
             onMouseDown: b,
-            onMouseEnter: v,
-            onMouseMove: E,
+            onMouseEnter: E,
+            onMouseMove: v,
             onMouseUp: h,
             className: p.sharedCanvas,
         }),

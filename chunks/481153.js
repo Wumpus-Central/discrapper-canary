@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
@@ -17,10 +17,10 @@ var r = n(951288),
     x = n(981631),
     E = n(474936),
     v = n(388032),
-    b = n(569964),
-    j = n(149715),
-    I = n(197571);
-let N = o.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
+    b = n(124896),
+    j = n(465106),
+    I = n(10198);
+let N = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
@@ -31,13 +31,13 @@ let N = o.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
         gifter: m.default.getUser(t.userId),
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: m } = e,
+    let { error: t, giftCode: n, gifter: l, sku: a, application: c, subscriptionPlan: m } = e,
         p = null == l ? v.intl.string(v.t.lTGZAg) : v.intl.formatToPlainString(v.t.TjWdPT, { username: l.username }),
-        f = o.name;
+        f = a.name;
     return (
         null != m &&
             (f = v.intl.formatToPlainString(m.interval === E.rV.MONTH ? v.t.CTpcCQ : v.t.rgPWGx, {
-                skuName: o.name,
+                skuName: a.name,
                 intervalCount: m.intervalCount,
             })),
         (0, r.jsxs)(i.Fragment, {
@@ -50,7 +50,7 @@ let N = o.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
                       })
                     : (0, r.jsx)(u.qE, {
                           src: null != l ? l.getAvatarURL(void 0, 100) : null,
-                          size: a.EFr.DEPRECATED_SIZE_100,
+                          size: o.EFr.DEPRECATED_SIZE_100,
                           className: I.marginBottom20,
                       }),
                 null != t
@@ -66,12 +66,12 @@ let N = o.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
                               (0, r.jsxs)(u.Dx, {
                                   className: s()(I.marginTop8, j.flexCenter),
                                   children: [
-                                      o.productLine !== x.POd.COLLECTIBLES &&
+                                      a.productLine !== x.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
                                               size: d.A.MEDIUM,
                                               className: b.applicationIcon,
                                               game: c,
-                                              skuId: o.id,
+                                              skuId: a.id,
                                           }),
                                       f,
                                   ],

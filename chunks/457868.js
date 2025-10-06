@@ -16,17 +16,17 @@ var r = n(951288),
     b = n(100527),
     y = n(906732),
     _ = n(82295),
-    O = n(91218),
-    j = n(623624),
-    x = n(518738),
+    j = n(91218),
+    x = n(623624),
+    O = n(518738),
     v = n(850020),
     C = n(965376),
     I = n(159299),
     E = n(670188),
     S = n(199902),
     Z = n(271383),
-    P = n(485386),
-    T = n(158776),
+    T = n(485386),
+    P = n(158776),
     N = n(885110),
     R = n(111583),
     w = n(594174),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(61722),
-    z = n(32482);
+    B = n(101265),
+    z = n(854641);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,10 +73,10 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             o = i.useRef(null),
             d = (0, p.e7)([R.Z], () => R.Z.isTyping(t.id, a)),
             h = (0, p.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, a)),
-            m = (0, p.e7)([P.Z], () => {
+            m = (0, p.e7)([T.Z], () => {
                 var e;
                 return (null == h ? void 0 : h.colorRoleId) != null
-                    ? null == (e = P.Z.getRole(t.guild_id, h.colorRoleId))
+                    ? null == (e = T.Z.getRole(t.guild_id, h.colorRoleId))
                         ? void 0
                         : e.name
                     : void 0;
@@ -84,9 +84,9 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
-            O = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
-            x = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
-            C = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
+            j = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getStatus() : P.Z.getStatus(a, t.guild_id))),
+            O = (0, p.e7)([P.Z], () => P.Z.isMobileOnline(a)),
+            C = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getActivities() : P.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
             M = (0, p.e7)([I.Z], () => I.Z.canUserViewChannel(t.id, l, a)),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {
@@ -142,7 +142,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, j.f)({
+                        (0, x.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -205,7 +205,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: y,
                             nick: null == h ? void 0 : h.nick,
-                            status: O,
+                            status: j,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -213,7 +213,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: x,
+                            isMobile: O,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -237,7 +237,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, x.p9)({
+            a = (0, O.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -254,7 +254,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(O.Z, V({ className: z.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(j.Z, V({ className: z.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -356,7 +356,7 @@ function X(e) {
                 listRef: r,
             };
         })(l, Y),
-        O = 0 === u.length || u.every((e) => 0 === e.userIds.length);
+        j = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             D.default.track(H.rMx.MEMBER_LIST_VIEWED, {
@@ -365,11 +365,11 @@ function X(e) {
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id, t.type]),
-        O)
+        j)
     )
         return (0, r.jsx)(J, { channel: t });
-    let j = o().omit(g.containerProps, ["ref"]),
-        x = M.iJ(n);
+    let x = o().omit(g.containerProps, ["ref"]),
+        O = M.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
@@ -410,7 +410,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: x,
+                                                guildOwnerId: O,
                                             },
                                             l[i],
                                         );
@@ -423,7 +423,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                j,
+                                x,
                                 e,
                             ),
                             l,

@@ -1,6 +1,6 @@
 n.d(t, {
     Ds: () => U,
-    YB: () => M,
+    YB: () => j,
     of: () => G,
     q5: () => k,
 });
@@ -35,9 +35,9 @@ var i = n(120356),
     P = n(981631),
     w = n(231338),
     D = n(388032),
-    L = n(702952),
-    x = n(186880);
-function j(e) {
+    L = n(44149),
+    x = n(533362);
+function M(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
         iconClassName: a()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
@@ -46,7 +46,7 @@ function j(e) {
         label: n ? D.intl.string(D.t["2TiKgY"]) : D.intl.string(D.t.oN8bqa),
     });
 }
-function M(e) {
+function j(e) {
     var t, n, i;
     let {
             channel: a,
@@ -55,8 +55,8 @@ function M(e) {
             onMouseMove: I,
             onMouseLeave: N,
             onJumpToChannel: D,
-            idle: j,
-            selectedParticipant: M,
+            idle: M,
+            selectedParticipant: j,
             embeddedActivity: k,
         } = e,
         U = (0, p.bp)() === P.IlC.POPOUT,
@@ -90,7 +90,7 @@ function M(e) {
             (0, r.jsx)("div", {
                 className: x.topControls,
                 children: (0, r.jsx)(b.r, {
-                    idle: j,
+                    idle: M,
                     title:
                         null != (i = null != (n = null == F ? void 0 : F.name) ? n : null == a ? void 0 : a.name)
                             ? i
@@ -122,7 +122,7 @@ function M(e) {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: x.__invalid_leftTrayIcon,
-                                        participant: M,
+                                        participant: j,
                                         compact: !0,
                                     }),
                                 }),
@@ -267,7 +267,7 @@ function G(e) {
                                 children: [
                                     m
                                         ? null
-                                        : (0, r.jsx)(j, {
+                                        : (0, r.jsx)(M, {
                                               isExpanded: h,
                                               onClick: p,
                                           }),

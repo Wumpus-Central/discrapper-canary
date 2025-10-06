@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(694338),
     E = n(474936),
     b = n(388032),
-    y = n(727486),
+    y = n(97269),
     O = n(298632),
     v = n(219242);
 function I(e, t, n) {
@@ -220,8 +220,8 @@ let C = (e) => {
             D = (0, h.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
             L = "".concat(D, "/").concat((0, d.eP)(E.rV.MONTH)),
             x = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_0),
-            j = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_2),
-            M = (0, g.e)();
+            M = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_2),
+            j = (0, g.e)();
         if (s) n = null;
         else {
             let e = null != S ? b.intl.string(b.t.IBYG5e) : b.intl.string(b.t.TR2B4e);
@@ -275,11 +275,11 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(w, {
                                         tier0Price: x,
-                                        tier2Price: j,
+                                        tier2Price: M,
                                         shouldUseDiscountPrice: P,
                                         tier2DiscountedPriceString: L,
                                     }),
-                                    M.map((e) => (0, i.createElement)(R, A(T({}, e), { key: e.id }))),
+                                    j.map((e) => (0, i.createElement)(R, A(T({}, e), { key: e.id }))),
                                 ],
                             }),
                         ],

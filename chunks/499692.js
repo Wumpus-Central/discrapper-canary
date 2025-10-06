@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     a = n(647438),
     i = n(120356),
@@ -18,7 +18,7 @@ var r = n(951288),
     x = n(797908),
     v = n(292191),
     C = n(981631),
-    j = n(74021);
+    j = n(402384);
 let y = o.Y.APPLICATION_DIRECTORY;
 function I(e) {
     let { collection: t, index: n, onSelectApplication: i } = e,
@@ -82,7 +82,7 @@ function I(e) {
         ],
     });
 }
-let O = function (e) {
+let S = function (e) {
     let { onSelectApplication: t } = e,
         n = (0, u.e7)([h.default], () => h.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE,
         i = (0, u.e7)([_.Z], () =>

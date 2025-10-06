@@ -16,7 +16,7 @@ var r = n(951288),
     l = n.n(s),
     c = n(512722),
     u = n.n(c),
-    d = n(879690),
+    d = n(191336),
     f = n(243814),
     _ = n(793030),
     p = n(442837),
@@ -40,8 +40,8 @@ var r = n(951288),
     D = n(973616),
     L = n(881998),
     x = n(592125),
-    j = n(944486),
-    M = n(246946),
+    M = n(944486),
+    j = n(246946),
     k = n(9156),
     U = n(768581),
     G = n(630388),
@@ -61,9 +61,9 @@ var r = n(951288),
     $ = n(981631),
     ee = n(468788),
     et = n(388032),
-    en = n(392082),
-    er = n(430864),
-    ei = n(197571);
+    en = n(609157),
+    er = n(602009),
+    ei = n(10198);
 function ea(e, t, n) {
     return (
         t in e
@@ -300,16 +300,16 @@ let ed = (e) => {
             }, [E]),
             C = S.w.useExperiment({ location: "oauth2_authorize" }),
             L = a.bot,
-            j = (0, p.e7)([x.Z], () => x.Z.getDMFromUserId(null == L ? void 0 : L.id)),
-            { appDMChannelMuteConfig: M, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
-                null == j
+            M = (0, p.e7)([x.Z], () => x.Z.getDMFromUserId(null == L ? void 0 : L.id)),
+            { appDMChannelMuteConfig: j, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
+                null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1,
                       }
                     : {
-                          appDMChannelMuteConfig: k.ZP.getChannelMuteConfig(null, j),
-                          dmChannelMuted: k.ZP.isChannelMuted(null, j),
+                          appDMChannelMuteConfig: k.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: k.ZP.isChannelMuted(null, M),
                       },
             ),
             [V, H] = i.useState(!1),
@@ -515,7 +515,7 @@ let ed = (e) => {
             },
             eh = i.useCallback(async () => {
                 u()(null != L, "dm channel mute setting requires having a bot user");
-                let e = j;
+                let e = M;
                 null == e && (e = await b.Z.ensurePrivateChannel(L.id)),
                     B
                         ? y.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, Z.ZB.Unmuted)
@@ -533,7 +533,7 @@ let ed = (e) => {
                                       ),
                                   );
                           });
-            }, [j, L, B, a.id]),
+            }, [M, L, B, a.id]),
             em = () =>
                 C.enabled
                     ? (0, r.jsxs)("div", {
@@ -552,9 +552,9 @@ let ed = (e) => {
                                           ? (0, r.jsx)(g.rsf, {
                                                 label: et.intl.string(et.t.NkwaBg),
                                                 description:
-                                                    (null == M ? void 0 : M.end_time) != null
+                                                    (null == j ? void 0 : j.end_time) != null
                                                         ? et.intl.format(et.t.j7h4AA, {
-                                                              endTime: new Date(M.end_time).toLocaleString(
+                                                              endTime: new Date(j.end_time).toLocaleString(
                                                                   et.intl.currentLocale,
                                                                   {
                                                                       month: "numeric",
@@ -629,14 +629,14 @@ let ed = (e) => {
     },
     eh = (0, d.U)(() => ({ searchQuery: "" })),
     em = () => {
-        let e = (0, p.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        let e = (0, p.e7)([j.Z], () => j.Z.hidePersonalInformation),
             { fetchState: t, appAuthTokens: n } = (0, p.cj)([L.Z], () => ({
                 fetchState: L.Z.getFetchState(),
                 appAuthTokens: L.Z.getNewestTokensForNonChildrenApplications(),
             })),
             a = (0, p.e7)([V.default], () => V.default.locale),
             o = (0, p.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivities()),
-            s = (0, p.e7)([x.Z, j.Z], () => x.Z.getChannel(j.Z.getChannelId())),
+            s = (0, p.e7)([x.Z, M.Z], () => x.Z.getChannel(M.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         i.useEffect(() => {
             E.Z.fetch();

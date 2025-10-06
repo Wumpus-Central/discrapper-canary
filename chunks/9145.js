@@ -16,17 +16,17 @@ var r = n(951288),
     b = n(871499),
     y = n(402113),
     _ = n(800965),
-    O = n(592125),
-    j = n(271383),
-    x = n(944486),
+    j = n(592125),
+    x = n(271383),
+    O = n(944486),
     v = n(594174),
     C = n(585483),
     I = n(51144),
     E = n(566620),
     S = n(317381),
     Z = n(389147),
-    P = n(619915),
-    T = n(988980),
+    T = n(619915),
+    P = n(988980),
     N = n(16609),
     R = n(60902),
     w = n(952561),
@@ -39,7 +39,7 @@ var r = n(951288),
     G = n(918559),
     H = n(981631),
     F = n(388032),
-    B = n(33985);
+    B = n(322678);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,9 +76,9 @@ function Y(e) {
         X = (0, w.Z)(),
         J = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(K), [K]),
         $ = (0, N.p)(K),
-        ee = (0, s.e7)([O.Z], () => O.Z.getChannel($)),
-        et = (0, P.gb)(J),
-        en = (0, P.uF)(et),
+        ee = (0, s.e7)([j.Z], () => j.Z.getChannel($)),
+        et = (0, T.gb)(J),
+        en = (0, T.uF)(et),
         er = i.useCallback(() => {
             (0, E.tg)(G.Ez.PIP);
         }, []),
@@ -108,7 +108,7 @@ function Y(e) {
     let eh = eu.width / Math.max(eu.height, 1) < G.I0,
         ef = 0,
         eg = 0,
-        em = (0, T.Z)(null == X ? void 0 : X.id);
+        em = (0, P.Z)(null == X ? void 0 : X.id);
     if (!em) {
         let e = eu.width,
             t = eu.height;
@@ -117,16 +117,16 @@ function Y(e) {
             : ((e = Math.min(eu.height * G.I0)) > eu.width && (t = (e = eu.width) / G.I0), (ef = (eu.width - e) / 2));
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
-        ey = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
-        e_ = (0, s.Wu)([j.ZP], () => {
+        ey = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
+        e_ = (0, s.Wu)([x.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      j.ZP.getMember(ee.guild_id, e),
+                      x.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
-        eO = i.useMemo(() => {
+        ej = i.useMemo(() => {
             let e = new Map();
             return (
                 e_.forEach((t) => {
@@ -135,7 +135,7 @@ function Y(e) {
                 e
             );
         }, [e_]),
-        ej = (function (e, t, n) {
+        ex = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
@@ -178,7 +178,7 @@ function Y(e) {
                     : l;
             }, [o, e, n, t]);
         })(ea, es, q),
-        ex = (0, k.y)(),
+        eO = (0, k.y)(),
         { data: ev } = (0, R.K)(Z.B);
     if (null == X) return null;
     let eC = null == ev ? void 0 : ev.isFortniteActivity(X.id),
@@ -190,7 +190,7 @@ function Y(e) {
     let eE = (e) => {
         var t;
         if (null == e || void 0 === e || e === D.ag) return null;
-        let n = eO.get(e.id),
+        let n = ej.get(e.id),
             i = null != (t = null == n ? void 0 : n.nick) ? t : I.ZP.getName(e);
         return (0, r.jsx)(
             c.u,
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: ej,
+                style: ex,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {
@@ -305,7 +305,7 @@ function Y(e) {
                                                       variant: "color-mix",
                                                   }),
                                               }),
-                                          ex
+                                          eO
                                               ? (0, r.jsx)(_.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {

@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(795990),
     O = n(872269),
     E = n(228168),
-    y = n(921944),
-    v = n(388032),
-    I = n(66582);
+    v = n(921944),
+    y = n(388032),
+    I = n(267233);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,12 +110,12 @@ function T() {
             (0, r.jsx)(s.X6q, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: v.intl.string(v.t.oqalCw),
+                children: y.intl.string(y.t.oqalCw),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: v.intl.format(v.t.YnNFWV, { applicationName: T.name }),
+                children: y.intl.format(y.t.YnNFWV, { applicationName: T.name }),
             }),
         ],
     });
@@ -136,12 +136,12 @@ function T() {
                                 user: e,
                                 widget: A,
                                 cta: (0, r.jsx)(N, {
-                                    heading: v.intl.format(v.t.OIzLCw, { applicationName: T.name }),
-                                    content: v.intl.format(v.t.BQySrq, { applicationName: T.name }),
+                                    heading: y.intl.format(y.t.OIzLCw, { applicationName: T.name }),
+                                    content: y.intl.format(y.t.BQySrq, { applicationName: T.name }),
                                     buttons: (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(s.ua7, {
-                                                text: v.intl.string(v.t.WAI6xs),
+                                                text: y.intl.string(y.t.WAI6xs),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         s.Yd2,
@@ -149,15 +149,15 @@ function T() {
                                                             variant: "secondary",
                                                             size: "sm",
                                                             icon: s.Dio,
-                                                            "aria-label": v.intl.string(v.t.WAI6xs),
+                                                            "aria-label": y.intl.string(y.t.WAI6xs),
                                                             onClick: () => {
-                                                                i(y.L.USER_DISMISS);
+                                                                i(v.L.USER_DISMISS);
                                                             },
                                                         }),
                                                     ),
                                             }),
                                             (0, r.jsx)(s.ua7, {
-                                                text: v.intl.string(v.t.lBG2s7),
+                                                text: y.intl.string(y.t.lBG2s7),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         s.Yd2,
@@ -165,11 +165,11 @@ function T() {
                                                             variant: "primary",
                                                             size: "sm",
                                                             icon: s.kmB,
-                                                            "aria-label": v.intl.formatToPlainString(v.t.KfGahI, {
+                                                            "aria-label": y.intl.formatToPlainString(y.t.KfGahI, {
                                                                 applicationName: T.name,
                                                             }),
                                                             onClick: () => {
-                                                                i(y.L.TAKE_ACTION), Z();
+                                                                i(v.L.TAKE_ACTION), Z();
                                                             },
                                                         }),
                                                     ),
@@ -190,7 +190,7 @@ function T() {
                             L,
                             (0, r.jsx)(s.zxk, {
                                 icon: s.qJs,
-                                text: v.intl.string(v.t.lBG2s7),
+                                text: y.intl.string(y.t.lBG2s7),
                                 size: "md",
                                 color: "secondary",
                                 onClick: w,

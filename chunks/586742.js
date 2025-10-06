@@ -12,27 +12,27 @@ var i = n(951288),
     u = n(239091),
     c = n(765250),
     d = n(393238),
-    p = n(358221),
-    h = n(352978),
+    h = n(358221),
+    p = n(352978),
     f = n(522474),
     m = n(27457),
     g = n(796638),
-    O = n(592125),
-    y = n(131951),
-    E = n(944486),
-    v = n(237997),
-    b = n(136015),
-    S = n(444295),
+    y = n(592125),
+    O = n(131951),
+    v = n(944486),
+    E = n(237997),
+    S = n(136015),
+    b = n(444295),
     x = n(906037),
     j = n(353038),
     I = n(804570),
     C = n(461393),
     Z = n(340101),
-    w = n(501787),
-    N = n(981631),
+    N = n(501787),
+    w = n(981631),
     T = n(65154),
     _ = n(388032),
-    P = n(59122);
+    P = n(928578);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,7 +80,7 @@ let R = r.memo(function (e) {
         var t;
         let { participant: n, channel: r, context: l } = e,
             o = null == (t = n.user) ? void 0 : t.id;
-        return (0, a.e7)([y.Z], () => null != n.user && null != l && null != r && y.Z.isLocalVideoDisabled(o, l), [
+        return (0, a.e7)([O.Z], () => null != n.user && null != l && null != r && O.Z.isLocalVideoDisabled(o, l), [
             o,
             n.user,
             l,
@@ -99,12 +99,12 @@ let R = r.memo(function (e) {
                 height: c,
                 shouldDisplay: d,
             } = e,
-            p = r.useCallback(
+            h = r.useCallback(
                 (e, r) => {
                     let l = e.user;
-                    (0, S.Ws)(N.Odu.VIDEO, {
-                        type: S.Qu.CAMERA,
-                        value: S.bk.SETTINGS_OPENED,
+                    (0, b.Ws)(w.Odu.VIDEO, {
+                        type: b.Qu.CAMERA,
+                        value: b.bk.SETTINGS_OPENED,
                         userId: null == l ? void 0 : l.id,
                     }),
                         (0, u.jW)(r, async () => {
@@ -116,9 +116,9 @@ let R = r.memo(function (e) {
                                         user: l,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
-                                            (0, S.Ws)(N.Odu.VIDEO, {
-                                                type: S.Qu.GO_LIVE,
-                                                value: S.bk.ENABLED,
+                                            (0, b.Ws)(w.Odu.VIDEO, {
+                                                type: b.Qu.GO_LIVE,
+                                                value: b.bk.ENABLED,
                                                 userId: null == l ? void 0 : l.id,
                                             });
                                         },
@@ -128,7 +128,7 @@ let R = r.memo(function (e) {
                 },
                 [t],
             ),
-            f = (0, S.ee)(
+            f = (0, b.ee)(
                 () =>
                     new Set(
                         l.map((e) => {
@@ -140,8 +140,8 @@ let R = r.memo(function (e) {
             );
         r.useEffect(() => {
             d &&
-                (0, S.zi)(N.Odu.VIDEO, {
-                    locked: v.default.isInstanceLocked(),
+                (0, b.zi)(w.Odu.VIDEO, {
+                    locked: E.default.isInstanceLocked(),
                     shownUserIds: Array.from(f),
                     liveUserIds: Array.from(f),
                     contentInventoryIds: [],
@@ -163,12 +163,12 @@ let R = r.memo(function (e) {
                         width: s,
                         className: P.tile,
                         containerStyle: m,
-                        fit: h.L.COVER,
+                        fit: p.L.COVER,
                         channel: a,
                         inPopout: !0,
                         inCall: !0,
                         noBorder: !0,
-                        onContextMenu: o ? void 0 : p,
+                        onContextMenu: o ? void 0 : h,
                         forceIdle: o,
                         paused: !d,
                         inOverlayPopout: !0,
@@ -188,8 +188,8 @@ let R = r.memo(function (e) {
                 widget: u,
                 channel: c,
                 width: d,
-                height: p,
-                showEmpty: h = !0,
+                height: h,
+                showEmpty: p = !0,
                 containerRef: f,
             } = e,
             m = "boolean" != typeof u.meta.horizontal || u.meta.horizontal,
@@ -205,8 +205,8 @@ let R = r.memo(function (e) {
                 g,
             );
         }, [a, u, g]);
-        let O = r.useMemo(() => ({ opacity: u.opacity }), [u.opacity]),
-            y = r.useMemo(
+        let y = r.useMemo(() => ({ opacity: u.opacity }), [u.opacity]),
+            O = r.useMemo(
                 () =>
                     o()({
                         [P.videoList]: !0,
@@ -220,20 +220,20 @@ let R = r.memo(function (e) {
                 ? null
                 : (0, i.jsx)("div", {
                       ref: f,
-                      className: y,
-                      style: O,
+                      className: O,
+                      style: y,
                       children: (0, i.jsx)(k, {
                           context: t,
                           participants: n,
                           locked: a,
                           channel: c,
                           width: d,
-                          height: p,
+                          height: h,
                           shouldDisplay: g,
                           participantsVersion: l,
                       }),
                   })
-            : h
+            : p
               ? (0, i.jsx)("div", {
                     ref: f,
                     children: (0, i.jsx)(I.E, {
@@ -251,12 +251,12 @@ let R = r.memo(function (e) {
             a = 2 * i + 2 * r,
             s = o
                 ? {
-                      width: Math.max(n.width, w.vZ),
-                      height: Math.min(n.height, 2 * w.mo + a),
+                      width: Math.max(n.width, N.vZ),
+                      height: Math.min(n.height, 2 * N.mo + a),
                   }
                 : {
-                      height: Math.max(n.height, w.vZ),
-                      width: Math.min(n.width, 2 * w.mo + a),
+                      height: Math.max(n.height, N.vZ),
+                      width: Math.min(n.width, 2 * N.mo + a),
                   },
             u = {
                 maxWidth: 0.75 * l.maxX,
@@ -266,38 +266,38 @@ let R = r.memo(function (e) {
     };
 function V(e) {
     var t, n, l, o;
-    let s = (0, a.e7)([E.Z, O.Z], () => O.Z.getChannel(E.Z.getVoiceChannelId())),
+    let s = (0, a.e7)([v.Z, y.Z], () => y.Z.getChannel(v.Z.getVoiceChannelId())),
         u = 2 * e.padding + 2 * e.borderWidth,
-        h = null == s ? void 0 : s.id,
-        [m, y] = (0, a.e7)(
-            [p.Z],
-            () => (null == h ? [[], 0] : [p.Z.getVideoParticipants(h), p.Z.getParticipantsVersion(h)]),
-            [h],
-            b.Q,
+        p = null == s ? void 0 : s.id,
+        [m, O] = (0, a.e7)(
+            [h.Z],
+            () => (null == p ? [[], 0] : [h.Z.getVideoParticipants(p), h.Z.getParticipantsVersion(p)]),
+            [p],
+            S.Q,
         ),
-        v = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: S = e.width - u, height: x = e.height - u, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
-        { participantTileWidth: C, visibleParticipants: Z } = (0, g.ZB)(v ? S : x, m, {
-            tileWidth: w.vZ,
-            tileMinWidth: w.mo,
-            tileMargin: w.F$,
+        E = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
+        { width: b = e.width - u, height: x = e.height - u, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
+        { participantTileWidth: C, visibleParticipants: Z } = (0, g.ZB)(E ? b : x, m, {
+            tileWidth: N.vZ,
+            tileMinWidth: N.mo,
+            tileMargin: N.F$,
             limit: 8,
             cropSelfVideo: !0,
-            version: y,
+            version: O,
         }),
-        N = (0, a.e7)([f.Z], () => f.Z.getWindowState(w.$J)),
+        w = (0, a.e7)([f.Z], () => f.Z.getWindowState(N.$J)),
         T = {
             id: e.widget.id,
             containerSize: {
                 containerHeight: x,
-                containerWidth: S,
+                containerWidth: b,
             },
             sizeOffset: u,
             padding: e.padding,
             borderWidth: e.borderWidth,
             containerSpecs: {
-                maxX: null != (t = null == N ? void 0 : N.width) ? t : e.width - u,
-                maxY: null != (n = null == N ? void 0 : N.height) ? n : e.height - u,
+                maxX: null != (t = null == w ? void 0 : w.width) ? t : e.width - u,
+                maxY: null != (n = null == w ? void 0 : w.height) ? n : e.height - u,
                 minX: 0,
                 minY: 0,
             },
@@ -305,8 +305,8 @@ function V(e) {
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (l = null == N ? void 0 : N.height) ? l : e.height,
-                right: null != (o = null == N ? void 0 : N.width) ? o : e.width,
+                bottom: null != (l = null == w ? void 0 : w.height) ? l : e.height,
+                right: null != (o = null == w ? void 0 : w.width) ? o : e.width,
             },
         };
     return (
@@ -356,7 +356,7 @@ function V(e) {
                     });
                 }, [t]);
         })({
-            horizontal: v,
+            horizontal: E,
             widget: e.widget,
             widgetLayoutSpecs: T,
         }),
@@ -365,9 +365,9 @@ function V(e) {
             A(D({}, e), {
                 channel: s,
                 participants: Z,
-                participantsVersion: y,
-                width: v ? C : null != S ? S : e.width,
-                height: v ? (null != x ? x : e.height) : C,
+                participantsVersion: O,
+                width: E ? C : null != b ? b : e.width,
+                height: E ? (null != x ? x : e.height) : C,
                 containerRef: I,
             }),
         )

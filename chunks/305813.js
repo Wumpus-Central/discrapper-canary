@@ -1,8 +1,8 @@
-n.d(t, { Z: () => T }), n(388685);
-var r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    a = n.n(l),
+n.d(t, { Z: () => E }), n(388685);
+var o = n(951288),
+    l = n(647438),
+    r = n(120356),
+    a = n.n(r),
     i = n(442837),
     s = n(481060),
     c = n(410030),
@@ -13,43 +13,43 @@ var r = n(951288),
     f = n(753206),
     g = n(678135),
     h = n(643879),
-    b = n(687158),
-    x = n(28660),
-    j = n(502762),
-    _ = n(25990),
-    S = n(626135),
+    x = n(687158),
+    _ = n(28660),
+    b = n(502762),
+    S = n(25990),
+    j = n(626135),
     C = n(63063),
-    O = n(981631),
-    v = n(671955),
-    y = n(693450),
-    P = n(388032),
-    k = n(270816);
-function N(e) {
+    v = n(981631),
+    P = n(671955),
+    N = n(62222),
+    k = n(388032),
+    y = n(43659);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            o = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            o.forEach(function (t) {
+                var o;
+                (o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = o);
             });
     }
     return e;
 }
-function E(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,8 +57,8 @@ function E(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var o = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, o);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -67,77 +67,77 @@ function E(e, t) {
         e
     );
 }
-function T(e) {
-    let { user: t, displayName: n, selectedFontId: l, selectedEffectId: T, selectedColors: R, onClose: L } = e,
-        w = (0, c.ZP)(),
-        A = (0, s.wjy)(w),
-        [I, B] = (0, o.useState)(A),
-        M = (0, b.ZP)(t.id, null),
-        { bannerSrc: Z } = (0, x.Z)({
+function E(e) {
+    let { user: t, displayName: n, selectedFontId: r, selectedEffectId: E, selectedColors: R, onClose: L } = e,
+        A = (0, c.ZP)(),
+        I = (0, s.wjy)(A),
+        [w, B] = (0, l.useState)(I),
+        M = (0, x.ZP)(t.id, null),
+        { bannerSrc: Z } = (0, _.Z)({
             displayProfile: M,
             size: 413,
             canAnimate: !1,
         }),
-        G = (0, i.cj)([_.Z], () => _.Z.getAllPending()),
+        G = (0, i.cj)([S.Z], () => S.Z.getAllPending()),
         Y = (0, h.SD)({
             userId: t.id,
             image: G.pendingAvatar,
         }),
-        H = I ? O.BRd.DARK : O.BRd.LIGHT;
-    ((A && I) || (!A && !I)) && (H = w);
-    let z = (0, o.useCallback)(() => {
-            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), L();
+        H = w ? v.BRd.DARK : v.BRd.LIGHT;
+    ((I && w) || (!I && !w)) && (H = A);
+    let z = (0, l.useCallback)(() => {
+            j.default.track(v.rMx.DISPLAY_NAME_STYLES_CLOSED), L();
         }, [L]),
-        F = (0, o.useCallback)((e) => {
-            B(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
+        F = (0, l.useCallback)((e) => {
+            B(e === v.BRd.DARK), j.default.track(v.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === v.BRd.DARK });
         }, []),
-        U = (0, o.useMemo)(
+        U = (0, l.useMemo)(
             () =>
-                E(N({}, (0, m.ij)(t, null)), {
+                T(O({}, (0, m.ij)(t, null)), {
                     nick: n,
                     displayNameStyles: {
-                        fontId: l,
-                        effectId: T,
+                        fontId: r,
+                        effectId: E,
                         colors: R,
                     },
                 }),
-            [t, l, T, R, n],
+            [t, r, E, R, n],
         );
-    return (0, r.jsxs)("div", {
-        className: k.previewSection,
+    return (0, o.jsxs)("div", {
+        className: y.previewSection,
         children: [
-            (0, r.jsx)(s.xBx, {
+            (0, o.jsx)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: k.sectionHeader,
-                children: (0, r.jsx)(s.olH, {
+                className: y.sectionHeader,
+                children: (0, o.jsx)(s.olH, {
                     "data-migration-pending": !0,
                     onClick: z,
-                    innerClassName: k.closeButton,
+                    innerClassName: y.closeButton,
                 }),
             }),
             null != Z &&
-                (0, r.jsx)(j.Z, {
+                (0, o.jsx)(b.Z, {
                     user: t,
                     displayProfile: M,
-                    themeType: v.l.MODAL_V2,
-                    className: k.backgroundThemeContainer,
+                    themeType: P.l.MODAL_V2,
+                    className: y.backgroundThemeContainer,
                     forceUserTheme: !0,
-                    children: (0, r.jsx)("div", {
-                        className: k.bannerBackground,
+                    children: (0, o.jsx)("div", {
+                        className: y.bannerBackground,
                         style: { backgroundImage: "url(".concat(Z, ")") },
                     }),
                 }),
-            (0, r.jsx)(s.f6W, {
+            (0, o.jsx)(s.f6W, {
                 theme: H,
                 children: (e) =>
-                    (0, r.jsxs)("div", {
-                        className: a()(k.previewCards, e),
+                    (0, o.jsxs)("div", {
+                        className: a()(y.previewCards, e),
                         inert: !0,
                         children: [
-                            (0, r.jsx)(
+                            (0, o.jsx)(
                                 g.Z,
-                                E(N({ user: t }, G), {
+                                T(O({ user: t }, G), {
                                     pendingAvatar: Y,
                                     pendingGlobalName: n,
                                     pendingDisplayNameStyles: U.displayNameStyles,
@@ -145,24 +145,24 @@ function T(e) {
                                     disabledInputs: !0,
                                     hideCustomStatus: !0,
                                     hideBioSection: !0,
-                                    containerClassName: k.profile,
+                                    containerClassName: y.profile,
                                     interactive: !1,
                                     hideExampleButton: !0,
                                 }),
                             ),
-                            (0, r.jsx)(f.Z, {
+                            (0, o.jsx)(f.Z, {
                                 author: U,
                                 message: (0, u.e5)(
-                                    E(
-                                        N(
+                                    T(
+                                        O(
                                             {},
                                             (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: P.intl.string(y.default.h5Cuen),
+                                                content: k.intl.string(N.default.h5Cuen),
                                             }),
                                         ),
                                         {
-                                            state: O.yb.SENT,
+                                            state: v.yb.SENT,
                                             id: "0",
                                         },
                                     ),
@@ -170,32 +170,32 @@ function T(e) {
                                 isGroupStart: !0,
                                 hideSimpleEmbedContent: !0,
                                 hideGuildTag: !0,
-                                className: k.chatMessage,
+                                className: y.chatMessage,
                             }),
-                            (0, r.jsx)(d.Z, {
+                            (0, o.jsx)(d.Z, {
                                 user: t,
                                 nameplate: G.pendingNameplate,
                                 nameplateData: void 0 === G.pendingNameplate ? t.nameplate : void 0,
                                 pendingGlobalName: n,
                                 pendingDisplayNameStyles: U.displayNameStyles,
                                 isHighlighted: !0,
-                                className: k.nameplate,
+                                className: y.nameplate,
                             }),
                         ],
                     }),
             }),
-            (0, r.jsxs)("div", {
-                className: k.themeToggleSection,
+            (0, o.jsxs)("div", {
+                className: y.themeToggleSection,
                 children: [
-                    (0, r.jsx)(s.Text, {
+                    (0, o.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: P.intl.format(y.default.prQba2, {
-                            helpArticleLink: C.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES),
+                        children: k.intl.format(N.default.prQba2, {
+                            helpArticleLink: C.Z.getArticleURL(v.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, r.jsx)(D, {
-                        darkPreview: I,
+                    (0, o.jsx)(D, {
+                        darkPreview: w,
                         onToggleTheme: F,
                     }),
                 ],
@@ -205,27 +205,27 @@ function T(e) {
 }
 function D(e) {
     let { darkPreview: t, onToggleTheme: n } = e,
-        o = t ? O.BRd.DARK : O.BRd.LIGHT;
-    return (0, r.jsx)(s.sY7, {
-        className: k.themeToggleControl,
-        optionClassName: k.themeToggleOption,
+        l = t ? v.BRd.DARK : v.BRd.LIGHT;
+    return (0, o.jsx)(s.sY7, {
+        className: y.themeToggleControl,
+        optionClassName: y.themeToggleOption,
         options: [
             {
                 name: "",
-                tooltip: P.intl.string(P.t.b8Cei4),
-                value: O.BRd.DARK,
+                tooltip: k.intl.string(k.t.b8Cei4),
+                value: v.BRd.DARK,
                 icon: s.Z6G,
-                className: o === O.BRd.DARK ? k.themeToggleOptionSelected : void 0,
+                className: l === v.BRd.DARK ? y.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: P.intl.string(P.t.K2sFfn),
-                value: O.BRd.LIGHT,
+                tooltip: k.intl.string(k.t.K2sFfn),
+                value: v.BRd.LIGHT,
                 icon: s.chG,
-                className: o === O.BRd.LIGHT ? k.themeToggleOptionSelected : void 0,
+                className: l === v.BRd.LIGHT ? y.themeToggleOptionSelected : void 0,
             },
         ],
-        value: o,
+        value: l,
         onChange: (e) => {
             let { value: t } = e;
             return n(t);

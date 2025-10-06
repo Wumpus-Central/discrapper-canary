@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(63063),
     L = n(695346),
     x = n(313789),
-    j = n(263937),
-    M = n(996073),
+    M = n(263937),
+    j = n(996073),
     k = n(273313),
     U = n(947889),
     G = n(526761),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(611480),
     V = n(653477),
     H = n(388032),
-    Y = n(693450),
-    W = n(953752),
+    Y = n(62222),
+    W = n(133991),
     K = n(328756);
 function z(e, t, n) {
     return (
@@ -384,7 +384,7 @@ function ed() {
 function ef() {
     let e = (0, s.e7)([_.Z], () => _.Z.syncProfileThemeWithUserTheme),
         t = i.useRef(null);
-    (0, M.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
+    (0, j.Z)(t, G.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
     let n = (0, U.Z)();
     return (0, r.jsx)(u.hjN, {
         ref: t,
@@ -446,16 +446,16 @@ function ep() {
             systemPrefersReducedMotion: o,
             gifAutoPlayOverrideReason: l,
             animateEmojiOverrideReason: c,
-        } = (0, s.cj)([_.Z, j.Z], () => ({
+        } = (0, s.cj)([_.Z, M.Z], () => ({
             systemPrefersReducedMotion: _.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: _.Z.rawPrefersReducedMotion,
             useReducedMotion: _.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: j.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
-            animateEmojiOverrideReason: j.Z.getAppliedOverrideReasonKey("animateEmoji"),
+            gifAutoPlayOverrideReason: M.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
+            animateEmojiOverrideReason: M.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
         d = "auto" === a,
         p = i.useRef(null);
-    (0, M.Z)(p, G.rP.REDUCED_MOTION);
+    (0, j.Z)(p, G.rP.REDUCED_MOTION);
     let h = i.useCallback(
             (e) => {
                 (0, f.Zt)(e ? "auto" : o);
@@ -510,7 +510,7 @@ function ep() {
 }
 function eh() {
     let e = L.Wp.useSetting(),
-        t = (0, s.e7)([j.Z], () => j.Z.getAppliedOverrideReasonKey("animateStickers")),
+        t = (0, s.e7)([M.Z], () => M.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
             L.Wp.updateSetting(e);
         }, []);
@@ -541,7 +541,7 @@ function em() {
         t = L.dN.useSetting(),
         n = i.useRef(null);
     return (
-        (0, M.Z)(n, G.rP.LEGACY_CHAT_INPUT),
+        (0, j.Z)(n, G.rP.LEGACY_CHAT_INPUT),
         (0, r.jsx)("div", {
             ref: n,
             children: (0, r.jsxs)(u.C3N, {

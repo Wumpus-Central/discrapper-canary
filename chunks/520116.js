@@ -9,24 +9,24 @@ var r = n(951288),
     u = n(135938),
     d = n(554838),
     p = n(493892),
-    f = n(661824),
-    h = n(37772),
+    h = n(661824),
+    f = n(37772),
     g = n(695346),
     m = n(314897),
     b = n(594174),
     _ = n(55935),
-    O = n(655354),
-    y = n(809780),
+    y = n(655354),
+    O = n(809780),
     v = n(981631),
     j = n(388032),
-    x = n(557047);
+    x = n(39620);
 let C = {
     left: 4,
     right: -12,
 };
 function E(e) {
     var t, n, l;
-    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: f } = e,
+    let { channel: o, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: h } = e,
         g = (0, a.JA)(null != (t = s.id) ? t : ""),
         m = i.useCallback(
             (e) => {
@@ -75,11 +75,11 @@ function E(e) {
             (l = l =
                 {
                     children: [
-                        (0, r.jsx)(O.Z, {
+                        (0, r.jsx)(y.Z, {
                             className: x.jumpButton,
-                            onJump: (e) => f(e, s.id),
+                            onJump: (e) => h(e, s.id),
                         }),
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(f.Z, {
                             id: s.id,
                             message: s,
                             channel: o,
@@ -112,23 +112,23 @@ function E(e) {
 function S(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: a } = e,
-        { enabled: h } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
-        O = g.jU.useSetting(),
+        { enabled: f } = u.Z.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        y = g.jU.useSetting(),
         C = (0, p.P1)(l),
         S = !1,
-        P = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
-        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
+        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
+        P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
             t = null,
-            n = i.messages.slice(0, y.hC);
+            n = i.messages.slice(0, O.hC);
         n.forEach((n) => {
-            if (!P && (null == e || !e.isSame(n.timestamp, "day"))) {
+            if (!I && (null == e || !e.isSame(n.timestamp, "day"))) {
                 let t = (0, _.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
-                        f.Z,
+                        h.Z,
                         {
                             className: x.divider,
                             children: t,
@@ -147,16 +147,16 @@ function S(e) {
                         {
                             channel: l,
                             message: n,
-                            compact: O,
+                            compact: y,
                             isGroupStart: i,
-                            treatSpam: !I && h && (0, p.DQ)(n) && C,
+                            treatSpam: !P && f && (0, p.DQ)(n) && C,
                             gotoChannel: a,
                         },
                         n.id,
                     ),
                 );
         }),
-            i.messages.length >= y.hC &&
+            i.messages.length >= O.hC &&
                 N.push(
                     (0, r.jsxs)(
                         s.zx,

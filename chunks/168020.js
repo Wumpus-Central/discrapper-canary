@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var l = n(481060),
     a = n(774078),
-    i = n(388032),
-    s = n(64092);
+    s = n(388032),
+    i = n(321824);
 let o = (e) => {
     let { endDate: t, size: n = "md" } = e,
         { days: o, hours: c, minutes: u } = (0, a.Z)(t),
@@ -13,7 +13,7 @@ let o = (e) => {
             return [r(e), r(t), r(n)].join(":");
         })(o, c, u);
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: i.container,
         role: "timer",
         children: [
             d.split("").map((e, t) =>
@@ -23,7 +23,7 @@ let o = (e) => {
                           {
                               color: "none",
                               variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
-                              className: s.delineator,
+                              className: i.delineator,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -35,7 +35,7 @@ let o = (e) => {
                           {
                               color: "always-white",
                               variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
-                              className: s.number,
+                              className: i.number,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -44,7 +44,7 @@ let o = (e) => {
                       ),
             ),
             (0, r.jsx)(l.nn4, {
-                children: i.intl.format(i.t.j6IyVV, {
+                children: s.intl.format(s.t.j6IyVV, {
                     days: o,
                     hours: c,
                     minutes: u,

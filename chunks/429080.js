@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(553393),
     f = n(981631),
     h = n(388032),
-    g = n(818923),
-    m = n(746882);
+    g = n(674455),
+    m = n(6723);
 let b = function (e) {
     let { quest: t } = e,
         [n, l] = i.useState(!1),
@@ -20,7 +20,7 @@ let b = function (e) {
         _ = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         O = d.ZP.useName(_),
         E = (0, c.Z)(null == _ ? void 0 : _.id),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -99,7 +99,7 @@ let b = function (e) {
                     className: m.memberListContainer,
                     children: (0, r.jsx)(s.yRy, {
                         targetElementRef: b,
-                        renderPopout: y,
+                        renderPopout: v,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => l(!1),

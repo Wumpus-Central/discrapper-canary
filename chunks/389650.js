@@ -31,9 +31,9 @@ var r = n(951288),
     D = n(981631),
     L = n(295907),
     x = n(388032),
-    j = n(894462),
-    M = n(620842),
-    k = n(197571);
+    M = n(958047),
+    j = n(504401),
+    k = n(10198);
 function U(e, t, n) {
     return (
         t in e
@@ -100,14 +100,14 @@ class H extends i.PureComponent {
             t = R.BB(e.shortcut);
         return g.Z.hasBind(t)
             ? (0, r.jsx)(d.R94, {
-                  className: j.keybindMessage,
+                  className: M.keybindMessage,
                   type: d.geA.DESCRIPTION,
                   style: { color: u.Z.unsafe_rawColors.RED_400.css },
                   children: x.intl.string(x.t["7lQlw8"]),
               })
             : L.Sp.has(t)
               ? (0, r.jsx)(d.R94, {
-                    className: j.keybindMessage,
+                    className: M.keybindMessage,
                     type: d.geA.DESCRIPTION,
                     style: { color: u.Z.unsafe_rawColors.RED_400.css },
                     children: x.intl.format(x.t.MOIaNT, {
@@ -115,7 +115,7 @@ class H extends i.PureComponent {
                     }),
                 })
               : (0, r.jsx)(d.R94, {
-                    className: j.keybindMessage,
+                    className: M.keybindMessage,
                     type: d.geA.DESCRIPTION,
                     children: this.props.keybindDescriptions[e.action],
                 });
@@ -124,12 +124,12 @@ class H extends i.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)(b.Z, {
             direction: b.Z.Direction.VERTICAL,
-            className: o()(j.keybindGroup, M.card),
+            className: o()(M.keybindGroup, j.card),
             children: [
                 !e &&
                     (0, r.jsx)(_.Z, {
                         "aria-label": x.intl.string(x.t.qEHmmJ),
-                        className: j.removeKeybind,
+                        className: M.removeKeybind,
                         onClick: this.handleDeleteKeybind,
                     }),
                 (0, r.jsxs)(b.Z, {
@@ -139,7 +139,7 @@ class H extends i.PureComponent {
                             basis: "45%",
                             children: (0, r.jsx)(d.xJW, {
                                 title: x.intl.string(x.t.UUpADw),
-                                className: j.item,
+                                className: M.item,
                                 children: (0, r.jsx)(d.q4e, {
                                     value: this.props.keybind.action,
                                     options: this.props.keybindActionTypes,
@@ -152,7 +152,7 @@ class H extends i.PureComponent {
                             basis: "45%",
                             children: (0, r.jsx)(d.xJW, {
                                 title: x.intl.string(x.t["1La4tL"]),
-                                className: j.item,
+                                className: M.item,
                                 children: (0, r.jsx)(p.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange,
@@ -163,7 +163,7 @@ class H extends i.PureComponent {
                             grow: 0,
                             shrink: 0,
                             children: (0, r.jsx)("div", {
-                                className: j.switch,
+                                className: M.switch,
                                 children: (0, r.jsx)(d.ua7, {
                                     text: x.intl.string(x.t.uCD7qK),
                                     children: (e) =>
@@ -372,7 +372,7 @@ class Y extends i.PureComponent {
     }
     renderKeybindWarning() {
         return (0, r.jsxs)("div", {
-            className: j.warning,
+            className: M.warning,
             children: [
                 (0, r.jsx)(d.d3s, {
                     size: "xs",
@@ -410,11 +410,11 @@ class Y extends i.PureComponent {
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: j.ctaContainer,
+                                      className: M.ctaContainer,
                                       children: [
                                           this.renderKeybindWarning(),
                                           (0, r.jsx)("div", {
-                                              className: j.addButton,
+                                              className: M.addButton,
                                               children: (0, r.jsx)(d.zxk, {
                                                   size: "md",
                                                   onClick: this.handleAddKeybind,
@@ -425,7 +425,7 @@ class Y extends i.PureComponent {
                                       ],
                                   }),
                                   (0, r.jsx)(T.Z, {
-                                      className: j.systemServiceUpsell,
+                                      className: M.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
                                   (0, r.jsx)(d.izJ, {}),
@@ -435,7 +435,7 @@ class Y extends i.PureComponent {
                           })
                         : (0, r.jsx)(d.Wn, {
                               messageType: d.QYI.INFO,
-                              className: j.browserNotice,
+                              className: M.browserNotice,
                               children: x.intl.format(x.t.mPi3Fx, { downloadLink: D.EYA.DOWNLOAD }),
                           }),
                 }),
@@ -446,14 +446,14 @@ class Y extends i.PureComponent {
                     className: k.marginTop60,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.defaultKeybind,
+                            className: M.defaultKeybind,
                             children: [
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     children: x.intl.string(x.t.sMWLBg),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: j.defaultKeybindShortcutGroup,
+                                    className: M.defaultKeybindShortcutGroup,
                                     children: (0, r.jsx)(d.M2$, { shortcut: h._.binds["0"] }),
                                 }),
                             ],
@@ -469,19 +469,19 @@ class Y extends i.PureComponent {
                                         return (0, r.jsxs)(
                                             "div",
                                             {
-                                                className: j.defaultKeybindGroup,
+                                                className: M.defaultKeybindGroup,
                                                 children: [
                                                     (0, r.jsx)(d.X6q, {
                                                         variant: "heading-deprecated-12/semibold",
-                                                        className: o()(j.defaultKeybindGroupHeader, {
-                                                            [j.defaultKeybindGroupWithDescription]: null != a,
+                                                        className: o()(M.defaultKeybindGroupHeader, {
+                                                            [M.defaultKeybindGroupWithDescription]: null != a,
                                                         }),
                                                         children: n,
                                                     }),
                                                     null != a &&
                                                         (0, r.jsx)(d.Text, {
                                                             color: "header-secondary",
-                                                            className: j.defaultKeybindGroupDescription,
+                                                            className: M.defaultKeybindGroupDescription,
                                                             variant: "text-sm/normal",
                                                             children: a,
                                                         }),
@@ -492,7 +492,7 @@ class Y extends i.PureComponent {
                                                             {
                                                                 children: [
                                                                     (0, r.jsxs)("div", {
-                                                                        className: j.defaultKeybind,
+                                                                        className: M.defaultKeybind,
                                                                         children: [
                                                                             (0, r.jsx)(d.Text, {
                                                                                 variant: "text-md/normal",
@@ -500,7 +500,7 @@ class Y extends i.PureComponent {
                                                                             }),
                                                                             (0, r.jsx)("div", {
                                                                                 className:
-                                                                                    j.defaultKeybindShortcutGroup,
+                                                                                    M.defaultKeybindShortcutGroup,
                                                                                 children: e.binds.map((e) =>
                                                                                     (0, r.jsx)(
                                                                                         d.M2$,

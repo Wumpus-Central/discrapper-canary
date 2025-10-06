@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(981631),
     R = n(231338),
     P = n(388032),
-    w = n(85468);
+    w = n(419953);
 function D(e, t, n) {
     return (
         t in e
@@ -58,8 +58,8 @@ function L(e) {
     return e;
 }
 let x = "8px",
-    j = "11px",
-    M = 222;
+    M = "11px",
+    j = 222;
 function k(e) {
     var t, I, D, k, U;
     let {
@@ -244,7 +244,7 @@ function k(e) {
         "aria-expanded": er,
         className: w.wrapper,
         style: {
-            width: null != (U = null == (k = B.current) ? void 0 : k.clientWidth) ? U : M,
+            width: null != (U = null == (k = B.current) ? void 0 : k.clientWidth) ? U : j,
             height: es.height,
             overflow: er ? "visible" : "hidden",
             borderRadius: eu,
@@ -283,8 +283,8 @@ function k(e) {
                                         (0, r.jsx)(u.idN, {
                                             size: "custom",
                                             className: w.helpIcon,
-                                            width: j,
-                                            height: j,
+                                            width: M,
+                                            height: M,
                                             color: u.TVs.colors.INTERACTIVE_NORMAL,
                                         }),
                                     ],

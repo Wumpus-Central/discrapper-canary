@@ -13,14 +13,14 @@ var r = n(951288),
     p = n(37234),
     f = n(410030),
     h = n(607070),
-    b = n(100527),
-    x = n(663993),
+    x = n(100527),
+    b = n(663993),
     j = n(243778),
-    v = n(518738),
-    _ = n(753206),
-    O = n(606318),
-    y = n(402235),
-    C = n(441536),
+    _ = n(518738),
+    v = n(753206),
+    C = n(606318),
+    O = n(402235),
+    y = n(441536),
     N = n(494620),
     E = n(345162),
     I = n(496675),
@@ -37,12 +37,12 @@ var r = n(951288),
     G = n(981631),
     M = n(141006),
     U = n(388032),
-    B = n(989308),
-    F = n(12574),
-    H = n(21321),
+    B = n(258640),
+    F = n(250302),
+    H = n(10083),
     z = n(179517),
     W = n(79829);
-let V = (0, x.Un)({
+let V = (0, b.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -71,8 +71,8 @@ function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, f.ZP)(),
-        h = (0, v.oC)(n, t),
-        x = {
+        h = (0, _.oC)(n, t),
+        b = {
             dark: {
                 src: z,
                 name: t.name,
@@ -120,18 +120,18 @@ function q(e) {
                                 (0, r.jsx)(g.Rny, {
                                     children: (0, r.jsx)("div", {
                                         className: F.roleStyleMessageContainer,
-                                        children: (0, r.jsx)(_.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             author: {
                                                 nick: o.author.username,
                                                 guildId: n,
                                                 authorId: o.author.id,
                                                 colorRoleId: t.id,
-                                                colorStrings: (0, O.DX)(p),
+                                                colorStrings: (0, C.DX)(p),
                                                 colorString: (0, c.Rf)(p.primary_color),
                                             },
                                             message: o,
                                             preview: !0,
-                                            roleIcon: null != h ? h : (0, m.ap)(d) ? x.light : x.dark,
+                                            roleIcon: null != h ? h : (0, m.ap)(d) ? b.light : b.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n,
@@ -169,7 +169,7 @@ function q(e) {
                         }),
                         (0, r.jsx)(g.zxk, {
                             onClick: function () {
-                                (0, C.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+                                (0, y.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
                             variant: "expressive",
                             icon: g.$Eu,
@@ -183,7 +183,7 @@ function q(e) {
 function X() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
-            colorStrings: (0, O.DX)(M.SK),
+            colorStrings: (0, C.DX)(M.SK),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -290,7 +290,7 @@ function Q(e) {
             src: W,
             name: t.name,
         },
-        u = (0, v.oC)(n, t),
+        u = (0, _.oC)(n, t),
         p = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
     return (0, r.jsx)(g.Rny, {
         children: (0, r.jsx)("div", {
@@ -308,7 +308,7 @@ function Q(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: F.messageContainer,
-                                        children: (0, r.jsx)(_.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             author: o,
                                             message: a,
                                             roleIcon: null != u ? u : (0, m.ap)(e) ? d : c,
@@ -356,15 +356,15 @@ function $(e) {
 }
 function ee(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
-        a = (0, y.yH)(t.id, n),
+        a = (0, O.yH)(t.id, n),
         o = (0, d.e7)([T.Z], () => T.Z.getRoleStyleData(n.id)),
         c = !a,
         u = null != o && a ? o.currentStyle : T.g.SOLID,
         m = (0, E.fI)(n),
         p = i || m,
         f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
-        { scrolledToTop: x, handleScroll: j } = (0, Z.V)();
+        { headerHeight: h, headerRef: x } = (0, w.Z)(0),
+        { scrolledToTop: b, handleScroll: j } = (0, Z.V)();
     return (0, r.jsx)(g.yWw, {
         className: F.scroller,
         style: { scrollPaddingTop: h },
@@ -373,8 +373,8 @@ function ee(e) {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
-                    ref: b,
+                    className: s()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !b }),
+                    ref: x,
                     children: (0, r.jsx)(Z.Z, {
                         guild: t,
                         role: n,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(981631),
     T = n(921944),
     S = n(388032),
-    A = n(30989),
-    C = n(564355);
+    A = n(276088),
+    C = n(744114);
 function N(e, t, n) {
     return (
         t in e
@@ -141,7 +141,7 @@ function L(e) {
     );
 }
 let x = E.Z.Millis.DAYS_30;
-function j(e) {
+function M(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: l } = e,
         { analyticsLocations: E } = (0, u.ZP)(c.Z.GIFT_BUTTON),
@@ -150,12 +150,12 @@ function j(e) {
         N = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        j = null != n.firstTimeNotice && !s && C && R >= x,
-        [M, k] = (0, f.XR)(
-            j ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
+        M = null != n.firstTimeNotice && !s && C && R >= x,
+        [j, k] = (0, f.XR)(
+            M ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != M,
+        U = null != j,
         G = v || U,
         B = (0, y.Ft)(l),
         Z = (0, p.IH)();
@@ -214,4 +214,4 @@ function j(e) {
                 : H,
     });
 }
-let M = i.memo(j);
+let j = i.memo(M);

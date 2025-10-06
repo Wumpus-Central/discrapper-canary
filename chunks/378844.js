@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => O,
-    Z: () => y,
+    R: () => y,
+    Z: () => O,
 });
 var r,
     i = n(951288);
@@ -13,11 +13,11 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    f = n(594174),
-    h = n(981631),
+    h = n(594174),
+    f = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,10 +43,10 @@ function _(e) {
     }
     return e;
 }
-var O = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
-let y = (e) => {
-    let { type: t, guildId: r, closePopout: O } = e,
-        y = (0, u.Dt)(),
+var y = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
+let O = (e) => {
+    let { type: t, guildId: r, closePopout: y } = e,
+        O = (0, u.Dt)(),
         {
             notClaimed: v,
             notEmailVerified: j,
@@ -55,26 +55,26 @@ let y = (e) => {
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
-        P = null,
-        I = null;
+        I = null,
+        P = null;
     return (0 === t &&
         (v
-            ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
+            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
             : x
-              ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
               : j
-                ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
+                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
                 : E
-                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: f.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))
                   : C &&
-                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))),
-    null == S || null == P)
+                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: f.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))),
+    null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
-              "aria-labelledby": y,
+              "aria-labelledby": O,
               children: [
                   (0, i.jsx)("img", {
                       alt: "",
@@ -86,24 +86,24 @@ let y = (e) => {
                       children: [
                           (0, i.jsx)(a.X6q, {
                               variant: "heading-md/semibold",
-                              id: y,
+                              id: O,
                               children: S,
                           }),
                           (0, i.jsx)(a.Text, {
                               color: "header-secondary",
                               variant: "text-sm/normal",
-                              children: P,
+                              children: I,
                           }),
                           (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
-                                  null != I
+                                  null != P
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(a.zxk, {
                                                 variant: "primary",
-                                                text: I,
+                                                text: P,
                                                 onClick: () => {
                                                     v
                                                         ? c.j()
@@ -142,7 +142,7 @@ let y = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPz, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = f.default.getCurrentUser())
+                                                                                        (t = h.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),
@@ -171,14 +171,14 @@ let y = (e) => {
                                                                     n),
                                                                 );
                                                             })),
-                                                        O();
+                                                        y();
                                                 },
                                             }),
                                         })
                                       : null,
                                   v || x || j
                                       ? (0, i.jsx)(o.zx, {
-                                            onClick: O,
+                                            onClick: y,
                                             look: o.zx.Looks.BLANK,
                                             className: b.cancel,
                                             children: m.intl.string(m.t.oEAioK),

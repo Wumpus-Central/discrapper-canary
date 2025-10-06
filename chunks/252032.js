@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(997841), n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(904245),
     o = n(257559),
@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(585483),
     g = n(630388),
     b = n(838440),
-    y = n(930282),
-    C = n(955384),
+    C = n(930282),
+    y = n(955384),
     _ = n(981631),
     v = n(224837),
-    x = n(360514);
+    x = n(5898);
 function O(e) {
     let { value: t, channel: n } = e;
     return (0, b.v)({
@@ -35,9 +35,9 @@ function j(e) {
         { id: u } = n,
         m = t.getGuildId(),
         b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        y = t.type === _.d4z.GUILD_ANNOUNCEMENT,
+        C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
         j = null != b && b.features.has(_.oNc.NEWS),
-        S = y && j,
+        S = C && j,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -52,9 +52,9 @@ function j(e) {
             [c],
         ),
         N = (0, l.e7)([d.default], () => d.default.getId()),
-        T = i.useCallback(
-            (e, r, i) => {
-                let { content: l } = i,
+        T = r.useCallback(
+            (e, i, r) => {
+                let { content: l } = r,
                     c = f.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     u = null != P && null != P.author ? P.author.id : null,
                     d = S && (u === N || c),
@@ -76,39 +76,39 @@ function j(e) {
                 }
                 return (
                     d && null != P && (0, g.yE)(P.flags, _.iLy.CROSSPOSTED)
-                        ? o.Z.confirmEdit(e, r, p)
-                        : a.Z.editMessage(e, r, p),
+                        ? o.Z.confirmEdit(e, i, p)
+                        : a.Z.editMessage(e, i, p),
                     Promise.resolve()
                 );
             },
             [P, S, N, t, n],
         ),
-        A = i.useCallback(
+        A = r.useCallback(
             (e) => {
                 var t, n;
-                return (0, i.createElement)(
+                return (0, r.createElement)(
                     E,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -123,8 +123,8 @@ function j(e) {
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(n)).forEach(function (e) {
@@ -136,7 +136,7 @@ function j(e) {
             [u],
         );
     return null != I && null != Z
-        ? (0, r.jsx)(C.Z, {
+        ? (0, i.jsx)(y.Z, {
               ref: void 0,
               channel: t,
               message: n,
@@ -162,11 +162,11 @@ function E(e) {
             onKeyDown: d,
             renderLeftAccessories: p,
         } = e,
-        [h, f] = i.useState(!0),
-        g = i.useCallback(() => f(!0), []),
-        b = i.useCallback(() => f(!1), []);
+        [h, f] = r.useState(!0),
+        g = r.useCallback(() => f(!0), []),
+        b = r.useCallback(() => f(!1), []);
     return (
-        i.useEffect(
+        r.useEffect(
             () => (
                 m.S.subscribe(_.CkL.TEXTAREA_FOCUS, g),
                 m.S.subscribe(_.CkL.TEXTAREA_BLUR, b),
@@ -176,7 +176,7 @@ function E(e) {
             ),
             [g, b],
         ),
-        (0, r.jsx)(
+        (0, i.jsx)(
             u.ZP,
             {
                 className: x.channelTextArea,
@@ -200,14 +200,14 @@ function E(e) {
     );
 }
 function S(e, t, n) {
-    let { message: i, channel: l, compact: a } = e;
+    let { message: r, channel: l, compact: a } = e;
     return n
-        ? (0, r.jsx)(j, {
+        ? (0, i.jsx)(j, {
               channel: l,
-              message: i,
+              message: r,
           })
-        : (0, r.jsx)(y.ZP, {
-              message: i,
+        : (0, i.jsx)(C.ZP, {
+              message: r,
               content: t,
               compact: null != a && a,
           });

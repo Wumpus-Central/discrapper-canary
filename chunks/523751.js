@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(682947),
     I = n(981631),
     T = n(388032),
-    S = n(73704);
+    S = n(767991);
 function A(e, t, n) {
     return (
         t in e
@@ -210,7 +210,7 @@ function x(e) {
         ],
     });
 }
-function j(e) {
+function M(e) {
     let t, n;
     var a,
         {
@@ -245,10 +245,10 @@ function j(e) {
             let e = m.default.getCurrentUser();
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
-        j = (0, s.e7)([p.Z], () => p.Z.theme),
-        M = (0, O.XX)(o),
-        k = (0, y.i)(M),
-        U = i.useMemo(() => M.premium && L && !A, [A, M.premium, L]),
+        M = (0, s.e7)([p.Z], () => p.Z.theme),
+        j = (0, O.XX)(o),
+        k = (0, y.i)(j),
+        U = i.useMemo(() => j.premium && L && !A, [A, j.premium, L]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -276,9 +276,9 @@ function j(e) {
         sizeAdjustment: K,
     } = D[k];
     if (null == B) return null;
-    M.premium && ((t = W), (n = Y));
-    let z = (0, c.wj)(j) ? V : H,
-        q = (0, c.wj)(j) ? Z : F;
+    j.premium && ((t = W), (n = Y));
+    let z = (0, c.wj)(M) ? V : H,
+        q = (0, c.wj)(M) ? Z : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
     let X = Math.floor(0.75 * w) - (null != K ? K : 0);
     return (0, r.jsx)(u.ua7, {
@@ -287,7 +287,7 @@ function j(e) {
         "aria-label": N,
         text: (0, r.jsx)(x, {
             badgeType: k,
-            guildTraits: M,
+            guildTraits: j,
         }),
         tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>

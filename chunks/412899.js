@@ -37,9 +37,9 @@ var r = n(951288),
     D = n(594174),
     L = n(700785),
     x = n(944613),
-    j = n(981631),
-    M = n(388032),
-    k = n(85703);
+    M = n(981631),
+    j = n(388032),
+    k = n(250781);
 function U(e, t, n) {
     return (
         t in e
@@ -143,7 +143,7 @@ function K(e) {
                     (0, r.jsx)("div", {
                         className: k.overflowRolesPopoutHeaderText,
                         id: a,
-                        children: M.intl.format(M.t.PCs0oq, { numRoles: t.length }),
+                        children: j.intl.format(j.t.PCs0oq, { numRoles: t.length }),
                     }),
                 ],
             }),
@@ -172,7 +172,7 @@ let z = i.forwardRef(function (e, t) {
         D = (0, _.e7)([b.Z], () => b.Z.roleStyle),
         L = (0, A._f)(I, E, E.colorStrings),
         x = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
-        j = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
                     let { default: e } = await n.e("5396").then(n.bind(n, 731646));
@@ -181,7 +181,7 @@ let z = i.forwardRef(function (e, t) {
                             e,
                             Z(G({}, t), {
                                 id: E.id,
-                                label: M.intl.string(M.t.sMsaLi),
+                                label: j.intl.string(j.t.sMsaLi),
                             }),
                         );
                 });
@@ -226,7 +226,7 @@ let z = i.forwardRef(function (e, t) {
                         ref: t,
                         className: o()(k.role, g),
                         style: W,
-                        onContextMenu: j,
+                        onContextMenu: M,
                         onMouseDown: C,
                         "aria-label": E.name,
                         tabIndex: R,
@@ -241,7 +241,7 @@ let z = i.forwardRef(function (e, t) {
                             tabIndex: d ? R : -1,
                             focusProps: { focusClassName: k.roleRemoveIconFocused },
                             "aria-hidden": !d,
-                            "aria-label": M.intl.formatToPlainString(M.t.QrxwhY, { roleName: E.name }),
+                            "aria-label": j.intl.formatToPlainString(j.t.QrxwhY, { roleName: E.name }),
                             children: [
                                 c,
                                 d
@@ -322,7 +322,7 @@ function X(e) {
                         G(
                             Z(G({ ref: t }, e), {
                                 className: o()(k.addButton, l, c),
-                                "aria-label": M.intl.string(M.t.e3Wly8),
+                                "aria-label": j.intl.string(j.t.e3Wly8),
                                 type: "button",
                             }),
                             f,
@@ -396,7 +396,7 @@ function Q(e) {
     }, [f, p, R]);
     let U = D.default.getCurrentUser();
     l()(null != U, "MemberRolesList: currentUser cannot be undefined");
-    let B = !m && w.Z.can(j.Plq.MANAGE_ROLES, a),
+    let B = !m && w.Z.can(M.Plq.MANAGE_ROLES, a),
         V = L.e9(a, U.id),
         K = i.useMemo(() => "roles-".concat((0, c.Z)()), []),
         Q = (0, d.ZP)({
@@ -441,7 +441,7 @@ function Q(e) {
                             G(
                                 {
                                     className: o()(k.root, h),
-                                    "aria-label": M.intl.formatToPlainString(M.t.PCs0oq, { numRoles: s.length }),
+                                    "aria-label": j.intl.formatToPlainString(j.t.PCs0oq, { numRoles: s.length }),
                                     ref: n,
                                 },
                                 i,

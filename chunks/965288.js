@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    y: () => T,
+    y: () => P,
 });
 var r = n(951288),
     i = n(647438),
@@ -19,12 +19,12 @@ var r = n(951288),
     b = n(795318),
     y = n(728285),
     _ = n(670188),
-    O = n(314897),
-    j = n(271383),
-    x = n(5192),
+    j = n(314897),
+    x = n(271383),
+    O = n(5192),
     v = n(590415),
     C = n(354459),
-    I = n(383519);
+    I = n(28594);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ let Z = i.memo(function (e) {
                     className: I.text,
                     variant: "text-sm/normal",
                     color: "header-primary",
-                    children: x.ZP.getName(t, n, i),
+                    children: O.ZP.getName(t, n, i),
                 }),
                 l
                     ? (0, r.jsx)(p.$Eu, {
@@ -101,7 +101,7 @@ let Z = i.memo(function (e) {
             ],
         });
     }),
-    P = i.memo(function (e) {
+    T = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
@@ -137,20 +137,20 @@ let Z = i.memo(function (e) {
             ],
         });
     }),
-    T = () => (0, r.jsx)("div", { className: I.tileBaseContainer }),
+    P = () => (0, r.jsx)("div", { className: I.tileBaseContainer }),
     N = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
-            x = l.getGuildId(),
-            v = O.default.getId(),
+            O = l.getGuildId(),
+            v = j.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
-            T = (0, y.bp)(),
-            N = (0, d.e7)([j.ZP], () => {
+            P = (0, y.bp)(),
+            N = (0, d.e7)([x.ZP], () => {
                 var e;
-                return null != x && (null == (e = j.ZP.getMember(x, s.id)) ? void 0 : e.premiumSince) != null;
-            }, [x, s.id]),
+                return null != O && (null == (e = x.ZP.getMember(O, s.id)) ? void 0 : e.premiumSince) != null;
+            }, [O, s.id]),
             R = i.useRef(null);
-        o()(null != x, "Channel cannot be guildless");
+        o()(null != O, "Channel cannot be guildless");
         let w = i.useCallback(
             (e) => {
                 (0, m.h)({
@@ -170,14 +170,14 @@ let Z = i.memo(function (e) {
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
                                     S(E({}, t), {
                                         user: s,
-                                        guildId: x,
+                                        guildId: O,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
@@ -189,10 +189,10 @@ let Z = i.memo(function (e) {
                                     }),
                                 );
                         },
-                        { context: T },
+                        { context: P },
                     );
             },
-            [s, v, T, x, l, Z],
+            [s, v, P, O, l, Z],
         );
         return (0, r.jsx)(_.Z, {
             targetElementRef: R,
@@ -216,9 +216,9 @@ let Z = i.memo(function (e) {
                             e,
                         ),
                         {
-                            children: (0, r.jsx)(P, {
+                            children: (0, r.jsx)(T, {
                                 participant: t,
-                                guildId: x,
+                                guildId: O,
                                 channel: l,
                                 isPremium: N,
                             }),

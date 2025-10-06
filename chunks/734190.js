@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(99690),
-    f = n(471445),
-    h = n(111028),
+    h = n(471445),
+    f = n(111028),
     g = n(569471),
     m = n(488131),
     b = n(592125),
     _ = n(306680),
-    O = n(594174),
-    y = n(979651),
+    y = n(594174),
+    O = n(979651),
     v = n(938475),
     j = n(990734),
     x = n(714794),
     C = n(876548),
     E = n(25601),
     S = n(207055),
-    P = n(981631),
-    I = n(124368),
+    I = n(981631),
+    P = n(124368),
     N = n(388032),
-    w = n(55940),
-    Z = n(509612),
-    T = n(113914);
+    Z = n(33082),
+    w = n(516966),
+    T = n(95701);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -149,9 +149,9 @@ function L(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
-            return null != (e = (0, f.KS)(t)) ? e : c.or_;
+            return null != (e = (0, h.KS)(t)) ? e : c.or_;
         }, [t]),
-        l = (0, f.bT)(t);
+        l = (0, h.bT)(t);
     return (0, r.jsx)(c.ua7, {
         text: l,
         delay: 500,
@@ -161,9 +161,9 @@ function L(e) {
                 R(A({}, e), {
                     role: "img",
                     "aria-label": "".concat(l, " icon"),
-                    className: Z.iconContainer,
+                    className: w.iconContainer,
                     children: (0, r.jsx)(n, {
-                        className: Z.icon,
+                        className: w.icon,
                         color: "currentColor",
                     }),
                 }),
@@ -171,9 +171,9 @@ function L(e) {
     });
 }
 let M = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: f, isLast: T, withGuildIcon: M } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: h, isLast: T, withGuildIcon: M } = e,
         k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
-        U = (0, s.e7)([y.Z], () => y.Z.hasVideo(t.id)),
+        U = (0, s.e7)([O.Z], () => O.Z.hasVideo(t.id)),
         {
             unread: G,
             mentionCount: B,
@@ -185,10 +185,10 @@ let M = i.memo(function (e) {
         })),
         V = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
         H = (0, j.p)({ location: "GuildSidebarThreadListEntry" }),
-        z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
+        z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, I.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, P.on.CHANNEL_LIST);
             },
             [t],
         ),
@@ -242,7 +242,7 @@ let M = i.memo(function (e) {
                   : N.intl.formatToPlainString(N.t["0nZpiI"], { channelName: t.name });
     return (0, r.jsxs)("li", {
         role: Q,
-        className: o()(w.containerDefault, { [w.selected]: l }),
+        className: o()(Z.containerDefault, { [Z.selected]: l }),
         children: [
             (0, r.jsx)(D, { withGuildIcon: M }),
             T
@@ -261,33 +261,33 @@ let M = i.memo(function (e) {
                     right: 4,
                 },
                 children: (0, r.jsxs)("div", {
-                    className: o()(w.iconVisibility, Z.wrapper, Z.typeThread, {
-                        [Z.modeSelected]: l,
-                        [Z.modeMuted]: !l && V,
-                        [Z.modeUnreadImportant]: !V && !l && G,
-                        [Z.withGuildIcon]: M,
-                        [Z.threadsInChannelListQoLExperiment]: H.enabled,
-                        [Z.withThreadAvatar]: "icon-with-avatar" === H.variant,
-                        [Z.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
+                    className: o()(Z.iconVisibility, w.wrapper, w.typeThread, {
+                        [w.modeSelected]: l,
+                        [w.modeMuted]: !l && V,
+                        [w.modeUnreadImportant]: !V && !l && G,
+                        [w.withGuildIcon]: M,
+                        [w.threadsInChannelListQoLExperiment]: H.enabled,
+                        [w.withThreadAvatar]: "icon-with-avatar" === H.variant,
+                        [w.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
                     }),
                     onMouseDown: K,
                     onContextMenu: Y,
                     children: [
-                        !G || V || l ? null : (0, r.jsx)("div", { className: o()(Z.unread, Z.unreadImportant) }),
+                        !G || V || l ? null : (0, r.jsx)("div", { className: o()(w.unread, w.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
                             R(A({}, J), {
                                 innerRef: $,
-                                className: Z.link,
+                                className: w.link,
                                 onClick: W,
                                 "aria-label": ee,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)("div", {
-                                    className: o()(Z.linkTop, Z.__invalid_threadMainContent),
+                                    className: o()(w.linkTop, w.__invalid_threadMainContent),
                                     children: [
                                         "icon-with-avatar" === H.variant
                                             ? (0, r.jsxs)("div", {
-                                                  className: Z.threadIconWithAvatar,
+                                                  className: w.threadIconWithAvatar,
                                                   children: [
                                                       (0, r.jsx)(L, { thread: t }),
                                                       null == z
@@ -300,13 +300,13 @@ let M = i.memo(function (e) {
                                               })
                                             : null,
                                         "icon-in-bubble" === H.variant ? (0, r.jsx)(L, { thread: t }) : null,
-                                        (0, r.jsx)(h.Z, {
-                                            className: Z.name,
+                                        (0, r.jsx)(f.Z, {
+                                            className: w.name,
                                             "aria-hidden": !0,
                                             children: t.name,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: Z.children,
+                                            className: w.children,
                                             children: [
                                                 q > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(C.Z, {
@@ -332,10 +332,10 @@ let M = i.memo(function (e) {
             }),
             (0, r.jsx)(S.Z, {
                 channel: t,
-                collapsed: !f,
+                collapsed: !h,
                 collapsedMax: 6,
                 voiceStates: k,
-                location: P.Sbl.GUILD_CHANNEL_LIST,
+                location: I.Sbl.GUILD_CHANNEL_LIST,
             }),
         ],
     });

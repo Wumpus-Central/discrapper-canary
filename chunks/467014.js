@@ -9,15 +9,15 @@ var r = n(951288),
     c = n(776767),
     E = n(50493),
     d = n(388032),
-    _ = n(87819);
+    _ = n(152540);
 function A(e) {
     let { userId: t, guildId: n } = e,
         A = (0, i.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: T, linksCount: I, mediaCount: m } = (0, u.P2)(t, n),
         g = new Intl.NumberFormat(d.intl.currentLocale).format(T),
         N = new Intl.NumberFormat(d.intl.currentLocale).format(I),
-        O = new Intl.NumberFormat(d.intl.currentLocale).format(m),
-        h = l.useCallback(
+        h = new Intl.NumberFormat(d.intl.currentLocale).format(m),
+        O = l.useCallback(
             async (e) => {
                 if (null == A) return;
                 let r = (0, u.Ow)(t, e, { include_nsfw: !0 });
@@ -56,7 +56,7 @@ function A(e) {
                                   color: "interactive-normal",
                                   children: g,
                               }),
-                    onNavigate: T > 0 ? () => h(u.mw.MESSAGES) : void 0,
+                    onNavigate: T > 0 ? () => O(u.mw.MESSAGES) : void 0,
                 }),
                 (0, r.jsx)(c._2, {
                     icon: (0, r.jsx)(s.xPt, {
@@ -80,7 +80,7 @@ function A(e) {
                                   color: "interactive-normal",
                                   children: N,
                               }),
-                    onNavigate: I > 0 ? () => h(u.mw.LINKS) : void 0,
+                    onNavigate: I > 0 ? () => O(u.mw.LINKS) : void 0,
                 }),
                 (0, r.jsx)(c._2, {
                     icon: (0, r.jsx)(s.Ka2, {
@@ -102,9 +102,9 @@ function A(e) {
                             : (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
                                   color: "interactive-normal",
-                                  children: O,
+                                  children: h,
                               }),
-                    onNavigate: m > 0 ? () => h(u.mw.MEDIA) : void 0,
+                    onNavigate: m > 0 ? () => O(u.mw.MEDIA) : void 0,
                 }),
             ],
         }),

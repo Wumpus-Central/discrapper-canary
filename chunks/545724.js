@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(239091),
     d = n(687683),
-    p = n(978070);
+    p = n(24665);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,9 +62,9 @@ let g = function (e) {
             isFocused: _,
             isActive: O,
             onOtherHover: E,
-            className: y,
+            className: v,
         } = e,
-        [v, I] = i.useState(!1),
+        [y, I] = i.useState(!1),
         [S, C] = i.useState(!1),
         T = () => {
             I(!0), !_ || O || S || null == E || E();
@@ -85,7 +85,7 @@ let g = function (e) {
                     h(
                         f(
                             {
-                                className: a()(p.messageRequestItem, y, {
+                                className: a()(p.messageRequestItem, v, {
                                     [p.active]: O || S,
                                     [p.firstItem]: 0 === t,
                                 }),
@@ -118,7 +118,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(v || O || S) },
+                        { children: l(y || O || S) },
                     ),
                 ),
             }),

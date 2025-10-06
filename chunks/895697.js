@@ -24,8 +24,8 @@ var i = n(442837),
     T = n(915014),
     S = n(671955),
     A = n(388032),
-    C = n(57842),
-    N = n(116649);
+    C = n(759253),
+    N = n(593540);
 function R(e) {
     let {
             user: t,
@@ -37,8 +37,8 @@ function R(e) {
             channelId: L,
             onClose: x,
         } = e,
-        j = c.ZP.getName(null == P ? void 0 : P.id, L, t),
-        M = (0, i.e7)([u.Z], () => {
+        M = c.ZP.getName(null == P ? void 0 : P.id, L, t),
+        j = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
@@ -52,7 +52,7 @@ function R(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 onOpenProfile: D,
-                nickname: j,
+                nickname: M,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
@@ -110,11 +110,11 @@ function R(e) {
                       guildId: null == P ? void 0 : P.id,
                       onClose: x,
                   }),
-            (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
+            (null == j ? void 0 : j.popularApplicationCommandIds) != null &&
                 null != k &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: M.id,
-                    commandIds: M.popularApplicationCommandIds,
+                    applicationId: j.id,
+                    commandIds: j.popularApplicationCommandIds,
                     channel: k,
                     guildId: null == P ? void 0 : P.id,
                     onClick: x,

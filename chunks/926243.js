@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(999642);
+    v = n(39162);
 function I(e, t, n) {
     return (
         t in e
@@ -188,8 +188,8 @@ function w(e) {
             isMediumSize: D,
             isLargeSize: L,
             pulseItemKey: x,
-            allowAnimatedEmoji: j,
-            setPulseItemKey: M,
+            allowAnimatedEmoji: M,
+            setPulseItemKey: j,
             messageId: k,
             isBurstReaction: U,
             rowPosition: G,
@@ -203,7 +203,7 @@ function w(e) {
         X = (e) => {
             if ((e.stopPropagation(), y.current || v.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && j(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 E(t, {
                     isFinalSelection: !e.shiftKey,
@@ -242,7 +242,7 @@ function w(e) {
                         isInspected: o,
                         isDisabled: z,
                         showPulse: x === a,
-                        allowAnimatedEmoji: j,
+                        allowAnimatedEmoji: M,
                         onFocus: null != u ? u : Q,
                         onMouseMove: Q,
                         onMouseEnter: t,
@@ -256,7 +256,7 @@ function w(e) {
                                 null != W.name &&
                                 U &&
                                 !V &&
-                                j
+                                M
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();

@@ -1,28 +1,28 @@
-t.r(n), t.d(n, { default: () => j });
+t.r(n), t.d(n, { default: () => v });
 var r = t(951288),
     a = t(647438),
     i = t(657707),
-    s = t(442837),
-    o = t(481060),
+    o = t(442837),
+    s = t(481060),
     l = t(224706),
     c = t(665149),
     d = t(639777),
     u = t(744993),
-    b = t(693587),
-    m = t(462923),
+    m = t(693587),
+    b = t(462923),
     g = t(331500),
-    f = t(401561),
+    f = t(440589),
     x = t(388032),
-    p = t(828843);
-function j(e) {
+    p = t(50803);
+function v(e) {
     var n;
     let { guildId: t } = e;
     a.useEffect(() => {
         (0, u.EC)(t), l.Z.getDetectableGames();
     }, [t]);
-    let j = (0, d.Z)(t),
-        v = (0, s.e7)([b.Z], () => b.Z.getStateForGuild(t)),
-        _ = Object.values(null != (n = null == v ? void 0 : v.instances) ? n : {});
+    let v = (0, d.Z)(t),
+        j = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(t)),
+        _ = Object.values(null != (n = null == j ? void 0 : j.instances) ? n : {});
     return (0, r.jsxs)("div", {
         className: p.container,
         children: [
@@ -35,7 +35,7 @@ function j(e) {
                         "aria-label": "",
                     }),
                     (0, r.jsx)(c.ZP.Title, { children: x.intl.string(f.default.lH9Dio) }),
-                    (0, r.jsx)(o.IGR, {
+                    (0, r.jsx)(s.IGR, {
                         disableColor: !0,
                         text: x.intl.string(x.t.oW0eUV),
                         className: p.badge,
@@ -45,14 +45,14 @@ function j(e) {
             (0, r.jsxs)("div", {
                 className: p.contentContainer,
                 children: [
-                    (null == v ? void 0 : v.instances) != null
-                        ? (0, r.jsx)(o.zJl, {
+                    (null == j ? void 0 : j.instances) != null
+                        ? (0, r.jsx)(s.zJl, {
                               className: p.gameContainerWrapper,
                               children: (0, r.jsx)("div", {
                                   className: p.gameContainer,
                                   children: _.map((e, n) =>
                                       (0, r.jsx)(
-                                          m.ZP,
+                                          b.ZP,
                                           {
                                               guildId: t,
                                               instance: e,
@@ -64,9 +64,9 @@ function j(e) {
                           })
                         : (0, r.jsx)("div", {
                               className: p.spinnerContainer,
-                              children: (0, r.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
+                              children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
                           }),
-                    j && (0, r.jsx)(g.Z, { guildId: t }),
+                    v && (0, r.jsx)(g.Z, { guildId: t }),
                 ],
             }),
         ],

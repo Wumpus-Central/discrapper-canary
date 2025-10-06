@@ -17,13 +17,13 @@ var r = n(951288),
     _ = n(861529),
     O = n(768494),
     E = n(124347),
-    y = n(929677),
-    v = n(77498),
+    v = n(929677),
+    y = n(77498),
     I = n(621853),
     S = n(750312),
     C = n(919498),
     T = n(388032),
-    N = n(18827);
+    N = n(895652);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -240,11 +240,11 @@ function G() {
 }
 let B = i.createContext(null);
 function H(e) {
-    return (0, o.cj)([d.Z, I.Z, v.Z], () => {
+    return (0, o.cj)([d.Z, I.Z, y.Z], () => {
         let t = d.Z.getApplication(e.applicationId);
         return {
             application: t,
-            game: null != t ? v.Z.getGameByApplication(t) : null,
+            game: null != t ? y.Z.getGameByApplication(t) : null,
             config: I.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
@@ -271,9 +271,9 @@ function F(e) {
     let { user: l, widget: o, containerClassName: u, cta: d } = e,
         { application: h, game: g, config: m } = H(o),
         b = null == h ? void 0 : h.getIconURL(16),
-        _ = (0, y.O)(l.id).data,
+        _ = (0, v.O)(l.id).data,
         E = null == _ ? void 0 : _.find((e) => e.application_id === o.applicationId),
-        v = null == E || null == (n = E.profile) || null == (t = n.data) ? void 0 : t.primary,
+        y = null == E || null == (n = E.profile) || null == (t = n.data) ? void 0 : t.primary,
         I = (0, f.Z)({
             location: "UserProfileApplicationWidget",
             applicationId: null == g ? void 0 : g.id,
@@ -322,30 +322,30 @@ function F(e) {
                 type: "HERO",
                 title: null == E || null == (i = E.profile) ? void 0 : i.username,
                 image:
-                    (null == v ? void 0 : v.featured_played_character_image) != null
-                        ? (0, O.ym)(v.featured_played_character_image)
+                    (null == y ? void 0 : y.featured_played_character_image) != null
+                        ? (0, O.ym)(y.featured_played_character_image)
                         : null,
                 imagePlaceholder: null == m ? void 0 : m.hero_placeholder_image,
                 body: [
                     {
                         type: "TEXT_WITH_IMAGE",
                         content:
-                            (null == v ? void 0 : v.highest_rank) != null
-                                ? null == v
+                            (null == y ? void 0 : y.highest_rank) != null
+                                ? null == y
                                     ? void 0
-                                    : v.highest_rank
+                                    : y.highest_rank
                                 : void 0,
                         image:
-                            (null == v ? void 0 : v.highest_rank_image) != null
-                                ? (0, O.ym)(v.highest_rank_image)
+                            (null == y ? void 0 : y.highest_rank_image) != null
+                                ? (0, O.ym)(y.highest_rank_image)
                                 : void 0,
                         imagePosition: "right",
                     },
                     {
                         type: "TEXT",
                         content:
-                            (null == v ? void 0 : v.featured_played_character) != null
-                                ? "Top Hero: ".concat(null == v ? void 0 : v.featured_played_character)
+                            (null == y ? void 0 : y.featured_played_character) != null
+                                ? "Top Hero: ".concat(null == y ? void 0 : y.featured_played_character)
                                 : void 0,
                     },
                 ],
@@ -366,10 +366,10 @@ function F(e) {
                         value: {
                             type: "TEXT_WITH_IMAGE",
                             content:
-                                (null == v ? void 0 : v.rank_name) != null
-                                    ? "**".concat(null == v ? void 0 : v.rank_name, "**")
+                                (null == y ? void 0 : y.rank_name) != null
+                                    ? "**".concat(null == y ? void 0 : y.rank_name, "**")
                                     : void 0,
-                            image: (null == v ? void 0 : v.rank_image) != null ? (0, O.ym)(v.rank_image) : void 0,
+                            image: (null == y ? void 0 : y.rank_image) != null ? (0, O.ym)(y.rank_image) : void 0,
                             imagePosition: "right",
                         },
                         name: {
@@ -382,8 +382,8 @@ function F(e) {
                         value: {
                             type: "TEXT",
                             content:
-                                (null == v ? void 0 : v.playtime_hours) != null
-                                    ? "**".concat(v.playtime_hours.toLocaleString(), " Hours**")
+                                (null == y ? void 0 : y.playtime_hours) != null
+                                    ? "**".concat(y.playtime_hours.toLocaleString(), " Hours**")
                                     : void 0,
                         },
                         name: {
@@ -396,8 +396,8 @@ function F(e) {
                         value: {
                             type: "TEXT",
                             content:
-                                (null == v ? void 0 : v.total_games) != null
-                                    ? "**".concat(v.total_games.toLocaleString(), "**")
+                                (null == y ? void 0 : y.total_games) != null
+                                    ? "**".concat(y.total_games.toLocaleString(), "**")
                                     : void 0,
                         },
                         name: {
@@ -423,8 +423,8 @@ function F(e) {
                         value: {
                             type: "TEXT",
                             content:
-                                (null == v ? void 0 : v.total_wins) != null
-                                    ? "**".concat(v.total_wins.toLocaleString(), "**")
+                                (null == y ? void 0 : y.total_wins) != null
+                                    ? "**".concat(y.total_wins.toLocaleString(), "**")
                                     : void 0,
                         },
                         name: {
@@ -437,8 +437,8 @@ function F(e) {
                         value: {
                             type: "TEXT",
                             content:
-                                (null == v ? void 0 : v.total_kills) != null
-                                    ? "**".concat(v.total_kills.toLocaleString(), "**")
+                                (null == y ? void 0 : y.total_kills) != null
+                                    ? "**".concat(y.total_kills.toLocaleString(), "**")
                                     : void 0,
                         },
                         name: {
@@ -451,8 +451,8 @@ function F(e) {
                         value: {
                             type: "TEXT",
                             content:
-                                (null == v ? void 0 : v.total_assists) != null
-                                    ? "**".concat(v.total_assists.toLocaleString(), "**")
+                                (null == y ? void 0 : y.total_assists) != null
+                                    ? "**".concat(y.total_assists.toLocaleString(), "**")
                                     : void 0,
                         },
                         name: {

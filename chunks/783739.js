@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(912152),
     v = n(615603),
     I = n(474936),
-    T = n(28616);
+    T = n(136588);
 function S(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.boostSlots),
@@ -34,11 +34,11 @@ function S(e) {
         D = i.useMemo(() => S.filter((e) => null != e.premiumGuildSubscription), [S]),
         L = D.length > 0,
         x = S.length > D.length,
-        j = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: M } = (0, o.Z)({ forceFetch: !0 }),
-        k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === I.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === I.a$.NONE,
-        G = C && M === I.a$.FP_SUB_PAUSED;
+        M = (0, a.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
+        { fractionalState: j } = (0, o.Z)({ forceFetch: !0 }),
+        k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && j === I.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && j === I.a$.NONE,
+        G = C && j === I.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.oQ, { className: T.blockedPaymentsWarning }),
@@ -48,7 +48,7 @@ function S(e) {
                 hasBoostPerk: G,
                 canAddBoosts: U,
             }),
-            M === I.a$.NONE &&
+            j === I.a$.NONE &&
                 (0, r.jsx)(O.Z, {
                     hasAppliedGuildBoosts: L,
                     hasBoostPerk: G,
@@ -56,9 +56,9 @@ function S(e) {
                     subscriptionIsPausedOrPausePending: k,
                 }),
             !P && (0, r.jsx)(b.Z, {}),
-            (null == t ? void 0 : t.isPaused) && M !== I.a$.FP_SUB_PAUSED
+            (null == t ? void 0 : t.isPaused) && j !== I.a$.FP_SUB_PAUSED
                 ? (0, r.jsx)(g.r, {
-                      appliedGuildBoosts: j,
+                      appliedGuildBoosts: M,
                       premiumSubscription: t,
                   })
                 : (0, r.jsx)(g.Z, {
@@ -67,7 +67,7 @@ function S(e) {
                   }),
             (0, r.jsx)(v.Z, {
                 guildBoostSlots: S,
-                fractionalPremiumState: M,
+                fractionalPremiumState: j,
             }),
             (0, r.jsx)(y.Z, {
                 canAddBoosts: L && U,

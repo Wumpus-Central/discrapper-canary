@@ -1,24 +1,24 @@
-n.d(t, { I: () => c }), n(953529);
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    l = n.n(i),
-    o = n(67136),
-    s = n(793030),
-    u = n(979138),
-    a = n(635549);
+t.d(n, { I: () => c }), t(953529);
+var r = t(951288);
+t(647438);
+var i = t(120356),
+    l = t.n(i),
+    s = t(67136),
+    o = t(793030),
+    u = t(578823),
+    a = t(38812);
 function c(e) {
     let {
-        title: t,
-        description: n,
+        title: n,
+        description: t,
         headerImage: i,
         onDetails: c,
         onPurchase: d,
         PurchaseButton: p,
-        GiftButton: b,
-        availabilityLabel: m,
+        GiftButton: m,
+        availabilityLabel: b,
     } = e;
-    return (0, r.jsx)(o.tE, {
+    return (0, r.jsx)(s.tE, {
         children: (0, r.jsxs)("div", {
             className: l()(u.wrapper, a.hoverCard),
             tabIndex: 0,
@@ -35,7 +35,7 @@ function c(e) {
                         null != i ? { backgroundImage: null != i ? "url(".concat(i.toString(), ")") : void 0 } : void 0,
                     children:
                         null == i &&
-                        (0, r.jsx)(s.Prq, {
+                        (0, r.jsx)(o.Prq, {
                             color: "white",
                             size: "custom",
                             height: 80,
@@ -45,29 +45,29 @@ function c(e) {
                 (0, r.jsxs)("div", {
                     className: u.details,
                     children: [
-                        (0, r.jsx)(s.xvT, {
+                        (0, r.jsx)(o.xvT, {
                             color: "header-primary",
                             variant: "text-md/semibold",
-                            children: t,
+                            children: n,
                         }),
-                        null != n &&
-                            (0, r.jsx)(s.xvT, {
+                        null != t &&
+                            (0, r.jsx)(o.xvT, {
                                 className: u.description,
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                children: n,
+                                children: t,
                             }),
                     ],
                 }),
-                (null != p || null != b) &&
+                (null != p || null != m) &&
                     (0, r.jsxs)("div", {
                         className: u.footer,
                         children: [
                             null != p &&
-                                (0, r.jsx)(s.xvT, {
+                                (0, r.jsx)(o.xvT, {
                                     color: "interactive-normal",
                                     variant: "text-sm/normal",
-                                    children: m,
+                                    children: b,
                                 }),
                             (0, r.jsxs)("div", {
                                 className: u.buttonGroup,
@@ -78,7 +78,7 @@ function c(e) {
                                                 e.stopPropagation(), null == d || d();
                                             },
                                         }),
-                                    null != b && (0, r.jsx)(b, {}),
+                                    null != m && (0, r.jsx)(m, {}),
                                 ],
                             }),
                         ],

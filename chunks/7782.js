@@ -1,6 +1,6 @@
 n.d(t, { Z: () => w });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(873546),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(486622),
     g = n(488634),
     b = n(86203),
-    y = n(6025),
-    C = n(621853),
+    C = n(6025),
+    y = n(621853),
     _ = n(892001),
     v = n(433355),
     x = n(699516),
@@ -25,18 +25,18 @@ var r = n(951288),
     S = n(981631),
     P = n(228168),
     I = n(388032),
-    Z = n(291738);
+    Z = n(90985);
 let N = (e) => {
         let { userId: t, channelId: n } = e,
-            l = (0, s.e7)([C.Z], () => C.Z.getMutualGuilds(t), [t]),
-            a = i.useMemo(
+            l = (0, s.e7)([y.Z], () => y.Z.getMutualGuilds(t), [t]),
+            a = r.useMemo(
                 () =>
                     null != l
                         ? l
                               .slice(0, 3)
                               .map((e, t) => {
                                   let { guild: n } = e,
-                                      i =
+                                      r =
                                           null != n
                                               ? j.ZP.getGuildIconURL({
                                                     id: n.id,
@@ -44,12 +44,12 @@ let N = (e) => {
                                                     size: 24,
                                                 })
                                               : null;
-                                  if (null == i) return null;
+                                  if (null == r) return null;
                                   let a = t === (l.length > 3 ? 3 : l.length) - 1,
-                                      o = (0, r.jsx)(
+                                      o = (0, i.jsx)(
                                           "img",
                                           {
-                                              src: i,
+                                              src: r,
                                               alt: "",
                                               className: Z.avatar,
                                           },
@@ -57,7 +57,7 @@ let N = (e) => {
                                       );
                                   return a
                                       ? o
-                                      : (0, r.jsx)(
+                                      : (0, i.jsx)(
                                             p.ZP,
                                             {
                                                 className: Z.avatarMask,
@@ -74,18 +74,18 @@ let N = (e) => {
                 [l],
             );
         return null == l || 0 === l.length
-            ? (0, r.jsx)(c.Text, {
+            ? (0, i.jsx)(c.Text, {
                   color: "header-secondary",
                   variant: "text-sm/normal",
                   children: I.intl.string(I.t.zjVh8v),
               })
-            : (0, r.jsxs)(r.Fragment, {
+            : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, r.jsx)("div", {
+                      (0, i.jsx)("div", {
                           className: Z.avatarContainer,
                           children: a,
                       }),
-                      (0, r.jsx)(c.P3F, {
+                      (0, i.jsx)(c.P3F, {
                           onClick: () => {
                               (0, _.openUserProfileModal)({
                                   userId: t,
@@ -94,7 +94,7 @@ let N = (e) => {
                                   sourceAnalyticsLocations: [d.Z.DM_CHANNEL],
                               });
                           },
-                          children: (0, r.jsx)(c.Text, {
+                          children: (0, i.jsx)(c.Text, {
                               className: Z.mutualGuilds,
                               variant: "text-sm/normal",
                               children: I.intl.format(I.t.eE3oen, { count: l.length }),
@@ -105,30 +105,30 @@ let N = (e) => {
     },
     T = (e) => {
         var t;
-        let { relationshipType: n, userId: i, showingBanner: l } = e,
-            a = null == (t = O.default.getUser(i)) ? void 0 : t.bot,
+        let { relationshipType: n, userId: r, showingBanner: l } = e,
+            a = null == (t = O.default.getUser(r)) ? void 0 : t.bot,
             o = () => {
                 u.Z.addRelationship({
-                    userId: i,
+                    userId: r,
                     context: { location: S.ZY5.DM_CHANNEL },
                 });
             },
-            s = (0, r.jsx)(c.zxk, {
+            s = (0, i.jsx)(c.zxk, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    u.Z.blockUser(i, { location: S.ZY5.DM_CHANNEL });
+                    u.Z.blockUser(r, { location: S.ZY5.DM_CHANNEL });
                 },
                 text: I.intl.string(I.t.l4EmaW),
             }),
-            d = (0, h.n)({ userId: i });
+            d = (0, h.n)({ userId: r });
         switch (n) {
             case S.OGo.NONE:
-                return (0, r.jsxs)(r.Fragment, {
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
                         !a &&
                             !l &&
-                            (0, r.jsx)(c.zxk, {
+                            (0, i.jsx)(c.zxk, {
                                 size: "sm",
                                 variant: "primary",
                                 onClick: o,
@@ -138,13 +138,13 @@ let N = (e) => {
                     ],
                 });
             case S.OGo.FRIEND:
-                return (0, r.jsxs)(r.Fragment, {
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(c.zxk, {
+                        (0, i.jsx)(c.zxk, {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                u.Z.removeFriend(i, { location: S.ZY5.DM_CHANNEL });
+                                u.Z.removeFriend(r, { location: S.ZY5.DM_CHANNEL });
                             },
                             text: I.intl.string(I.t.cvSt1N),
                         }),
@@ -152,28 +152,28 @@ let N = (e) => {
                     ],
                 });
             case S.OGo.BLOCKED:
-                return (0, r.jsx)(c.zxk, {
+                return (0, i.jsx)(c.zxk, {
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        u.Z.unblockUser(i, { location: S.ZY5.DM_CHANNEL });
+                        u.Z.unblockUser(r, { location: S.ZY5.DM_CHANNEL });
                     },
                     text: I.intl.string(I.t.XyHpKC),
                 });
             case S.OGo.PENDING_INCOMING:
-                return (0, r.jsxs)(r.Fragment, {
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(c.zxk, {
+                        (0, i.jsx)(c.zxk, {
                             size: "sm",
                             variant: "primary",
                             onClick: o,
                             text: I.intl.string(I.t["+WbSn5"]),
                         }),
-                        (0, r.jsx)(c.zxk, {
+                        (0, i.jsx)(c.zxk, {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                u.Z.cancelFriendRequest(i, { location: S.ZY5.DM_CHANNEL });
+                                u.Z.cancelFriendRequest(r, { location: S.ZY5.DM_CHANNEL });
                             },
                             text: I.intl.string(I.t.rQSndn),
                         }),
@@ -181,9 +181,9 @@ let N = (e) => {
                     ],
                 });
             case S.OGo.PENDING_OUTGOING:
-                return (0, r.jsxs)(r.Fragment, {
+                return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(c.zxk, {
+                        (0, i.jsx)(c.zxk, {
                             size: "sm",
                             variant: "primary",
                             disabled: !0,
@@ -198,14 +198,14 @@ let N = (e) => {
     },
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
-            l = i.useCallback(() => {
+            l = r.useCallback(() => {
                 (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0ho), c.ToastType.FAILURE));
             }, []),
-            a = i.useCallback(() => {
-                y.Z.closeChannelSidebar(v.uZ);
+            a = r.useCallback(() => {
+                C.Z.closeChannelSidebar(v.uZ);
             }, []),
-            o = i.useCallback(() => {
-                y.Z.closeChannelSidebar(v.uZ);
+            o = r.useCallback(() => {
+                C.Z.closeChannelSidebar(v.uZ);
             }, []),
             {
                 acceptMessageRequest: s,
@@ -221,9 +221,9 @@ let N = (e) => {
                 onRejectSuccess: a,
             }),
             g = d || p || h || f;
-        return (0, r.jsxs)(r.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(c.zxk, {
+                (0, i.jsx)(c.zxk, {
                     variant: "primary",
                     size: "sm",
                     disabled: g,
@@ -231,7 +231,7 @@ let N = (e) => {
                     loading: d,
                     text: I.intl.string(I.t.Kz8Pws),
                 }),
-                (0, r.jsx)(c.zxk, {
+                (0, i.jsx)(c.zxk, {
                     variant: "secondary",
                     size: "sm",
                     disabled: g,
@@ -243,63 +243,63 @@ let N = (e) => {
         });
     },
     w = (e) => {
-        let { userId: t, channel: n, showingBanner: i } = e,
+        let { userId: t, channel: n, showingBanner: r } = e,
             { channelId: l } = (0, g._)(),
             u = (0, s.e7)([f.Z], () => null != l && f.Z.isSpam(l), [l]),
             d = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
             p = n.id === l,
             h = !o.tq && !p,
             m = !!o.tq || p || u,
-            y =
+            C =
                 u || p
-                    ? (0, r.jsxs)("div", {
+                    ? (0, i.jsxs)("div", {
                           className: Z.inline,
                           children: [
-                              (0, r.jsx)(A, {
+                              (0, i.jsx)(A, {
                                   channelId: n.id,
                                   otherUserId: t,
                               }),
-                              (0, r.jsx)(b.Z, { channel: n }),
+                              (0, i.jsx)(b.Z, { channel: n }),
                           ],
                       })
-                    : (0, r.jsxs)("div", {
+                    : (0, i.jsxs)("div", {
                           className: Z.inline,
                           children: [
-                              (0, r.jsx)(T, {
+                              (0, i.jsx)(T, {
                                   relationshipType: d,
                                   userId: t,
-                                  showingBanner: i,
+                                  showingBanner: r,
                               }),
-                              !i &&
-                                  (0, r.jsx)(E.Z, {
+                              !r &&
+                                  (0, i.jsx)(E.Z, {
                                       otherUserId: t,
                                       channel: n,
                                       navigateAwayOnReportSuccess: h,
                                   }),
                           ],
                       }),
-            C =
+            y =
                 d !== S.OGo.PENDING_INCOMING || u || p
                     ? null
-                    : (0, r.jsx)(c.Text, {
+                    : (0, i.jsx)(c.Text, {
                           color: "header-secondary",
                           variant: "text-sm/normal",
                           children: I.intl.string(I.t.c2v5nJ),
                       });
-        return (0, r.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: m ? Z.mobileContainer : Z.container,
             children: [
-                (0, r.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: Z.inline,
-                    children: (0, r.jsx)(N, {
+                    children: (0, i.jsx)(N, {
                         userId: t,
                         channelId: n.id,
                     }),
                 }),
-                !m && (0, r.jsx)("div", { className: Z.divider }),
-                (0, r.jsxs)("div", {
+                !m && (0, i.jsx)("div", { className: Z.divider }),
+                (0, i.jsxs)("div", {
                     className: a()(Z.inline, Z.wrap),
-                    children: [C, y],
+                    children: [y, C],
                 }),
             ],
         });

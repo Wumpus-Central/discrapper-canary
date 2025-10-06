@@ -16,17 +16,17 @@ var r = n(951288),
     b = n(158776),
     y = n(699516),
     _ = n(111583),
-    O = n(594174),
-    j = n(626135),
-    x = n(585483),
+    j = n(594174),
+    x = n(626135),
+    O = n(585483),
     v = n(233870),
     C = n(51144),
     I = n(998502),
     E = n(276264),
     S = n(981631),
     Z = n(388032),
-    P = n(32482);
-function T(e) {
+    T = n(854641);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,21 +56,21 @@ let N = [],
 function w(e) {
     let { user: t, channel: s, status: d, activities: u } = e,
         p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
-        f = (0, a.e7)([O.default], () => O.default.getCurrentUser()),
-        j = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
+        x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
-        P = i.useRef(null),
+        T = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("92775")]).then(
                     n.bind(n, 354589),
                 );
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
                         e,
-                        ((i = T({}, n)),
+                        ((i = P({}, n)),
                         (l = l =
                             {
                                 user: t,
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            x.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                x.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            O.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                O.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -106,7 +106,7 @@ function w(e) {
         A = (0, g.K)({ user: t }),
         [D, L] = i.useState(!1);
     return (0, r.jsx)(m.Z, {
-        targetElementRef: P,
+        targetElementRef: T,
         user: t,
         channelId: s.id,
         position: l.tq ? "window_center" : "left",
@@ -141,9 +141,9 @@ function w(e) {
                 })(e, ["onClick", "onMouseDown"]);
             return (0, r.jsx)(
                 E.Z,
-                T(
+                P(
                     {
-                        ref: P,
+                        ref: T,
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
@@ -156,7 +156,7 @@ function w(e) {
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: j,
+                        isMobile: x,
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
@@ -184,17 +184,17 @@ function A(e, t) {
 }
 function D(e) {
     let { channel: t } = e,
-        n = O.default.getCurrentUser(),
+        n = j.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: o } = (0, u.ZP)(d.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [y.Z, O.default, b.Z],
+            [y.Z, j.default, b.Z],
             () => {
-                let e = (0, v.T)(t.recipients, O.default),
+                let e = (0, v.T)(t.recipients, j.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    y.Z.isFriend(t.id) || t.id === (null == (r = O.default.getCurrentUser()) ? void 0 : r.id)
+                    y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : S.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : N,
@@ -219,7 +219,7 @@ function D(e) {
             A,
         );
     i.useEffect(() => {
-        j.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        x.default.track(S.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,
@@ -229,15 +229,15 @@ function D(e) {
     return (0, r.jsx)(u.Gt, {
         value: o,
         children: (0, r.jsx)("div", {
-            className: P.container,
+            className: T.container,
             children: (0, r.jsx)("aside", {
-                className: P.membersWrap,
+                className: T.membersWrap,
                 children: (0, r.jsxs)(s.Ttm, {
-                    className: P.members,
+                    className: T.members,
                     fade: !0,
                     children: [
                         (0, r.jsxs)(f.Z, {
-                            className: P.membersGroup,
+                            className: T.membersGroup,
                             children: [
                                 "".concat(Z.intl.string(Z.t["9Oq93t"]), "\u2014").concat(c.length, " "),
                                 h && (0, r.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM }),

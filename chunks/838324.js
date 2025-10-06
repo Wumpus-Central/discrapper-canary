@@ -10,18 +10,18 @@ var i = n(442837),
     d = n(974513),
     u = n(290511),
     m = n(388032),
-    g = n(636942);
+    g = n(36040);
 function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         p = (0, i.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
         f = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [h, b] = (0, o.VF)(t, f),
-        [x, j] = (0, d.OA)(t, [...f]),
-        v = p ? j.length : b.length,
-        _ = p ? x.length : h.length,
-        O = v < u.md,
-        y = _ >= u.X,
-        C = j.length - b.length,
+        [h, x] = (0, o.VF)(t, f),
+        [b, j] = (0, d.OA)(t, [...f]),
+        _ = p ? j.length : x.length,
+        v = p ? b.length : h.length,
+        C = _ < u.md,
+        O = v >= u.X,
+        y = j.length - x.length,
         N = (0, r.jsx)(s.owK, {
             size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
@@ -34,9 +34,9 @@ function p(e) {
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
         }),
-        I = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
+        I = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
         S =
-            !O && y
+            !C && O
                 ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css]
                 : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, r.jsxs)("div", {
@@ -48,12 +48,12 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: m.intl.format(m.t.kvroKC, { count: _ }),
+                        children: m.intl.format(m.t.kvroKC, { count: v }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: m.intl.format(m.t["0MjxJy"], { count: v }),
+                        children: m.intl.format(m.t["0MjxJy"], { count: _ }),
                     }),
                 ],
             }),
@@ -65,7 +65,7 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: g.requiredItem,
                 children: [
-                    O ? E : N,
+                    C ? E : N,
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -76,7 +76,7 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: g.requiredItem,
                 children: [
-                    y ? N : E,
+                    O ? N : E,
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -116,7 +116,7 @@ function p(e) {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: m.intl.format(m.t["8Geut7"], {
-                                        count: C,
+                                        count: y,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(s.eee, {
                                                 onClick: n,

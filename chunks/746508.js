@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(239091),
     O = n(925549),
     E = n(284056),
-    y = n(730749),
-    v = n(911969),
+    v = n(730749),
+    y = n(911969),
     I = n(317381),
     S = n(596040),
     C = n(314490),
@@ -71,8 +71,8 @@ var r = n(951288),
     e_ = n(430824),
     eO = n(819640),
     eE = n(131951),
-    ey = n(496675),
-    ev = n(19780),
+    ev = n(496675),
+    ey = n(19780),
     eI = n(699516),
     eS = n(594174),
     eC = n(979651),
@@ -89,8 +89,8 @@ var r = n(951288),
     eD = n(921944),
     ek = n(190378),
     eM = n(388032),
-    eU = n(890332),
-    eG = n(197571);
+    eU = n(239545),
+    eG = n(10198);
 function eB(e, t, n) {
     return (
         t in e
@@ -255,8 +255,8 @@ function eK(e) {
         E = i.useCallback(() => {
             (0, eu.Z)();
         }, []),
-        y = (0, q.bp)(),
-        v = i.useCallback(
+        v = (0, q.bp)(),
+        y = i.useCallback(
             (e) => {
                 if (eE.Z.isVideoEnabled() === e) return;
                 let n = () => {
@@ -264,9 +264,9 @@ function eK(e) {
                     b.Z.setVideoEnabled(e),
                         e && (0, Y.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
                 };
-                (0, L.v)(s, L.d.CAMERA, e), e ? (0, ef.Z)(n, y) : n();
+                (0, L.v)(s, L.d.CAMERA, e), e ? (0, ef.Z)(n, v) : n();
             },
-            [t, y, s],
+            [t, v, s],
         ),
         S = p || n || h,
         { Component: C, play: T, events: N } = (0, f.o)(c.enabled ? "disable" : "enable");
@@ -277,7 +277,7 @@ function eK(e) {
             eV(
                 eH(
                     {
-                        onChange: v,
+                        onChange: y,
                         onCameraUnavailable: E,
                         hasPermission: d,
                         channelLimit: O,
@@ -385,7 +385,7 @@ function eQ(e) {
             userInActivity: null != I.ZP.getSelfEmbeddedActivityForChannel(t.id),
         })),
         h = (0, C.p)({
-            surface: v.eR.VOICE_LAUNCHER,
+            surface: y.eR.VOICE_LAUNCHER,
             skipFetchingShelf: !0,
         }),
         b = c !== T.jy.CAN_LAUNCH,
@@ -474,16 +474,16 @@ function eX(e) {
         _ = (0, es.Z)(n),
         O = n.getGuildId(),
         E = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        y = (0, Q.Z)(n),
-        v = i.useCallback(() => {
+        v = (0, Q.Z)(n),
+        y = i.useCallback(() => {
             (0, ep.Z)(O, n.id, f);
         }, [O, n.id, f]),
         S = b.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
         C = (0, ec.E)(n, h, b);
-    t = null == S ? (l ? v : ed.Z) : () => (0, V.Z)(S);
+    t = null == S ? (l ? y : ed.Z) : () => (0, V.Z)(S);
     let T = null != S || C.length > 0,
         N = _ ? eM.intl.string(eM.t.fjBNo6) : eM.intl.string(eM.t.uQn9Bw),
-        j = E || o || y,
+        j = E || o || v,
         P = null != S,
         { Component: A, events: Z, play: w } = (0, p.P)(P ? "disable" : "enable");
     i.useEffect(() => () => w(), [w, P]);
@@ -501,7 +501,7 @@ function eX(e) {
                 currentUser: h,
                 activeStreams: b,
                 onClose: t,
-                handleGoLive: l ? v : ed.Z,
+                handleGoLive: l ? y : ed.Z,
                 onInteraction: (0, R.u)("ManageStreamsMenu", d, { entrypoint: eR.A5.OTHER_BUTTON }),
             });
         },
@@ -840,11 +840,11 @@ function e$(e) {
         )
     );
 }
-let e0 = (0, y.Z)(function (e) {
+let e0 = (0, v.Z)(function (e) {
     let t = (0, G.Z)(),
         n = (0, u.e7)([U.Z], () => U.Z.getAwaitingRemoteSessionInfo()),
         l = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
-        a = (0, u.cj)([ev.Z], () =>
+        a = (0, u.cj)([ey.Z], () =>
             null != t
                 ? {
                       channelId: t.channelId,
@@ -853,10 +853,10 @@ let e0 = (0, y.Z)(function (e) {
                       rtcConnectionLastPing: 0,
                   }
                 : {
-                      channelId: ev.Z.getChannelId(),
-                      rtcConnectionQuality: ev.Z.getQuality(),
-                      rtcConnectionState: ev.Z.getState(),
-                      rtcConnectionLastPing: ev.Z.getLastPing(),
+                      channelId: ey.Z.getChannelId(),
+                      rtcConnectionQuality: ey.Z.getQuality(),
+                      rtcConnectionState: ey.Z.getState(),
+                      rtcConnectionLastPing: ey.Z.getLastPing(),
                   },
         ),
         { channelId: o } = a,
@@ -882,8 +882,8 @@ let e0 = (0, y.Z)(function (e) {
         _ = (0, u.e7)([eg.Z], () => eg.Z.getCurrentUserActiveStream()),
         O = (0, u.e7)([eO.Z], () => eO.Z.hasLayers()),
         E = (0, u.e7)([W.Z], () => W.Z.isViewingRoles(d)),
-        y = (0, u.e7)([ey.Z], () => E && !ey.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
-        v = el.Fg.useSetting(),
+        v = (0, u.e7)([ev.Z], () => E && !ev.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
+        y = el.Fg.useSetting(),
         [I, C, T] = (0, u.Wu)(
             [eT.ZP, J.Z],
             () =>
@@ -915,8 +915,8 @@ let e0 = (0, y.Z)(function (e) {
         }, [I, C, T]),
         [A, Z] = i.useState(!1);
     i.useEffect(() => {
-        (E || y) && Z(!1);
-    }, [E, y, Z]);
+        (E || v) && Z(!1);
+    }, [E, v, Z]);
     let { analyticsLocations: w } = (0, x.ZP)(P.Z.RTC_PANEL),
         L = (0, S.Z)(null != d ? d : eL.lds, null == c ? void 0 : c.id),
         R = (0, N.Z)(null == c ? void 0 : c.id);
@@ -942,7 +942,7 @@ let e0 = (0, y.Z)(function (e) {
                         selfStream: _,
                         hasLayers: O,
                         voiceStates: j,
-                        showVoiceStates: v,
+                        showVoiceStates: y,
                         shouldShowVoicePanelIntroduction: h,
                         isPrivateChannelWithEnabledActivities: R,
                         analyticsLocations: w,
@@ -955,7 +955,7 @@ let e0 = (0, y.Z)(function (e) {
                               (0, r.jsx)(m.Text, {
                                   variant: "text-sm/normal",
                                   className: eU.viewAsRolesWarningText,
-                                  children: y ? eM.intl.string(eM.t.efjuQE) : eM.intl.string(eM.t.br8H2N),
+                                  children: v ? eM.intl.string(eM.t.efjuQE) : eM.intl.string(eM.t.br8H2N),
                               }),
                               (0, r.jsx)(g.zx, {
                                   className: eU.viewAsRolesWarningButton,

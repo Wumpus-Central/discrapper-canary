@@ -10,9 +10,9 @@ var l = t(951288),
     u = t(872269),
     m = t(228168),
     p = t(388032),
-    f = t(361623),
-    h = t(583140);
-let j = {
+    f = t(214906),
+    h = t(74866);
+let x = {
         [m.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
             icon: (0, l.jsx)(c.dz2, {
@@ -48,7 +48,7 @@ let j = {
             type: c.ToastType.FAILURE,
         },
     },
-    x = (e) => {
+    j = (e) => {
         let { message: n, icon: t, type: i } = e;
         return (0, l.jsxs)("div", {
             className: o()(h.toast, f.toast),
@@ -73,7 +73,7 @@ let j = {
             [p, h] = i.useState(!1),
             [v, g] = i.useState(null);
         i.useEffect(() => {
-            null !== r ? (h(!0), g(j[r]), c.uvj.announce(j[r].message)) : h(!1);
+            null !== r ? (h(!0), g(x[r]), c.uvj.announce(x[r].message)) : h(!1);
         }, [r]);
         let b = (0, c.Yzy)(
             p,
@@ -117,7 +117,7 @@ let j = {
                             className: o()(n, f.toastContainer),
                             style: e,
                             children: (0, l.jsx)(
-                                x,
+                                j,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},

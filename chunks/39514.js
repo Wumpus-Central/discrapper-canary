@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     c = n(893776),
     u = n(533307),
     d = n(978085),
@@ -21,11 +21,11 @@ var r = n(951288),
     j = n(63063),
     I = n(51144),
     N = n(481153),
-    O = n(781428),
-    S = n(423527),
+    S = n(781428),
+    O = n(423527),
     y = n(981631),
     C = n(388032),
-    A = n(197571);
+    A = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function T(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
+a.ZP.initialize();
 class Z extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
@@ -48,7 +48,7 @@ class Z extends i.PureComponent {
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            a.Z.wait(() => {
+            o.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -197,8 +197,8 @@ class Z extends i.PureComponent {
                 giftCode: i,
                 isResolved: l,
                 isAccepting: s,
-                transitionTo: o,
-                location: a,
+                transitionTo: a,
+                location: o,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
         if (e === y.kEZ.OPEN && !u) return this.renderAppOpened();
@@ -215,17 +215,17 @@ class Z extends i.PureComponent {
                       : this.renderAuthenticated(i, e);
             }
             return "login" === this.getMode()
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: o,
-                      location: a,
+                      transitionTo: a,
+                      location: o,
                   })
-                : (0, r.jsx)(S.Z, {
+                : (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: o,
-                      location: a,
+                      transitionTo: a,
+                      location: o,
                   });
         }
         return null;
@@ -277,7 +277,7 @@ class Z extends i.PureComponent {
             });
     }
 }
-let P = o.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, m.Z], (e) => {
+let P = a.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, m.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
         r = null != n ? v.Z.get(n.skuId) : null;

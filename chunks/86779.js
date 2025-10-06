@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(593473),
     s = n(756647),
-    o = n(442837),
-    a = n(544891),
+    a = n(442837),
+    o = n(544891),
     c = n(433517),
     u = n(755721),
     d = n(481060),
@@ -16,17 +16,17 @@ var r = n(951288),
     _ = n(970648),
     x = n(981631),
     E = n(388032),
-    v = n(78224);
+    v = n(976914);
 let b = "mweb_handoff_nonce",
     j = "mweb_handoff_nonce_expiration",
     I = +f.Z.Millis.MINUTE,
     N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-    O = new Set(["deep_link_failed"]),
-    S = () => {
+    S = new Set(["deep_link_failed"]),
+    O = () => {
         c.K.remove(b), c.K.remove(j);
     },
     y = () => {
-        let e = (0, o.e7)([m.default], () => m.default.getFingerprint()),
+        let e = (0, a.e7)([m.default], () => m.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
             f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
             y = null != f ? f : null !== e ? e : void 0;
@@ -60,7 +60,7 @@ let b = "mweb_handoff_nonce",
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(j);
-                    (null == e || Date.now() >= e) && (T("nonce_expired"), S());
+                    (null == e || Date.now() >= e) && (T("nonce_expired"), O());
                 }
             }, [Z, T]),
             i.useEffect(() => {
@@ -68,7 +68,7 @@ let b = "mweb_handoff_nonce",
                     "null" !== n &&
                     null != Z &&
                     null == C &&
-                    a.tn
+                    o.tn
                         .post({
                             url: x.ANM.HANDOFF_EXCHANGE,
                             body: {
@@ -95,7 +95,7 @@ let b = "mweb_handoff_nonce",
                             T("handoff_exchange");
                         })
                         .finally(() => {
-                            S();
+                            O();
                         });
             }, [n, Z, C, y, T]),
             null == y)
@@ -106,12 +106,12 @@ let b = "mweb_handoff_nonce",
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [E.intl.string(E.t.uJ1Jsb), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAg)],
                   })
-                : O.has(C)
+                : S.has(C)
                   ? E.intl.string(E.t.EPt55u)
                   : N.has(C)
                     ? E.intl.string(E.t.g87kTk)
                     : void 0;
-        return null != C && O.has(C)
+        return null != C && S.has(C)
             ? (0, r.jsx)("div", {
                   className: v.errorContainer,
                   children: (0, r.jsx)(d.Text, {

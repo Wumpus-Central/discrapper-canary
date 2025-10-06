@@ -24,23 +24,23 @@ var r = n(951288),
     v = n(497505),
     C = n(685138),
     y = n(977156),
-    O = n(5881),
-    E = n(602667),
+    E = n(5881),
+    O = n(602667),
     S = n(110560),
     T = n(78826),
     w = n(667105),
     P = n(693900),
     N = n(130653),
-    A = n(941348),
-    R = n(46140),
+    R = n(941348),
+    A = n(46140),
     B = n(743294),
     k = n(981631),
-    I = n(89855);
+    I = n(747961);
 function q(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, b.qI)({
-            mode: t ? R.NH.EXPANDED : R.NH.COLLAPSED,
+            mode: t ? A.NH.EXPANDED : A.NH.COLLAPSED,
             questContent: v.jn.QUEST_BAR_V2,
             questId: n,
             sourceQuestContent: v.jn.QUEST_BAR_V2,
@@ -59,15 +59,15 @@ function D() {
 function L(e) {
     var t, n;
     let { quest: o } = e,
-        m = (0, O.T)({
+        m = (0, E.T)({
             quest: o,
-            location: R.dr.QUESTS_BAR,
+            location: A.dr.QUESTS_BAR,
         }),
-        b = (0, y.Z)({ location: R.dr.QUESTS_BAR }),
+        b = (0, y.Z)({ location: A.dr.QUESTS_BAR }),
         L = (0, c.e7)([j.Z], () => null != j.Z.questEnrollmentBlockedUntil),
         { isQuestBarVisible: V, reason: Q } = (0, w.qN)({
             quest: o,
-            location: R.dr.QUESTS_BAR,
+            location: A.dr.QUESTS_BAR,
         }),
         M = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         W = (0, c.e7)([f.Z], () => f.Z.hasLayers()),
@@ -169,8 +169,8 @@ function L(e) {
         s.useLayoutEffect(() => {
             K !== Y.current && ec(!1), (Y.current = K);
         }, [K]);
-    let ey = H ? R.XZ : R.R4,
-        [{ expansionSpring: eO }, eE] = (0, d.q_F)(() => ({
+    let ey = H ? A.XZ : A.R4,
+        [{ expansionSpring: eE }, eO] = (0, d.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: ey,
             onRest: () => {
@@ -181,11 +181,11 @@ function L(e) {
             },
         }));
     s.useEffect(() => {
-        eE({
+        eO({
             expansionSpring: +!!es,
             immediate: M,
         });
-    }, [es, eE, M]);
+    }, [es, eO, M]);
     let { visibilitySpring: eS } = (0, d.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!K },
@@ -260,14 +260,14 @@ function L(e) {
             (!V || L) && x.Z.clearTracking(), K && el && !G && !z && b && x.Z.stopTracking(o.id);
         }, [V, L, K, el, G, z, b, o.id]);
     let { enabled: eT, status: ew } = (0, C.n)({
-            location: R.dr.QUESTS_BAR,
+            location: A.dr.QUESTS_BAR,
             questConfig: o.config,
         }),
         eP = (null == ew ? void 0 : ew.progressBlur) && !H ? 88 : 70;
     if (!b || (!K && el && !G) || z)
         return z ? m.log("Not rendered due to asset error") : b || m.log("Not rendered due to ineligibility"), null;
     let eN = eP + 78 * !!X;
-    return (0, r.jsx)(E.A, {
+    return (0, r.jsx)(O.A, {
         questOrQuests: o,
         questContent: v.jn.QUEST_BAR_V2,
         overrideVisibility: !W && K,
@@ -318,9 +318,9 @@ function L(e) {
                             children: (0, r.jsx)(P.t, {
                                 springConfig: ey,
                                 isExpanded: es,
-                                children: (0, r.jsx)(A.Z, {
+                                children: (0, r.jsx)(R.Z, {
                                     expandedContentRef: ed,
-                                    expansionSpring: eO,
+                                    expansionSpring: eE,
                                     isExpanded: es,
                                     isExpansionAnimationComplete: ea,
                                     onCtxMenuClosed: eg,
@@ -349,7 +349,7 @@ let V =
                   : (0, r.jsx)(
                         T.p,
                         {
-                            source: R.dr.QUESTS_BAR,
+                            source: A.dr.QUESTS_BAR,
                             questId: e.id,
                             children: (0, r.jsx)(L, { quest: e }),
                         },

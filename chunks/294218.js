@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(145807),
     S = n(56744),
     A = n(981631),
-    C = n(360514);
+    C = n(5898);
 function N(e, t, n) {
     return (
         t in e
@@ -106,8 +106,8 @@ function x(e) {
             onContextMenu: P,
             onClick: L,
             hideSimpleEmbedContent: x = !0,
-            channel: j,
-            isGroupStart: M,
+            channel: M,
+            isGroupStart: j,
             animateAvatar: k,
             subscribeToComponentDispatch: U,
             renderThreadAccessory: G,
@@ -128,7 +128,7 @@ function x(e) {
             "trackAnnouncementViews",
         ]),
         F = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        V = i.isFirstMessageInForumPost(j),
+        V = i.isFirstMessageInForumPost(M),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
             hideSimpleEmbedContent: x,
@@ -146,12 +146,12 @@ function x(e) {
             () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(_.default.castMessageIdAsChannelId(i.id)),
         ),
         J = (0, c.p9)({
-            guildId: j.guild_id,
+            guildId: M.guild_id,
             roleId: X.iconRoleId,
         }),
         $ = (0, b.Z)({
             message: i,
-            channel: j,
+            channel: M,
             enabled: B,
         }),
         ee = (0, g.iG)(i),
@@ -166,11 +166,11 @@ function x(e) {
                     [C.disableInteraction]: F,
                 }),
                 disableInteraction: F,
-                childrenRepliedMessage: (0, S.Z)(i, j, K, z, a),
-                childrenExecutedCommand: (0, T.Z)(i, j, a),
+                childrenRepliedMessage: (0, S.Z)(i, M, K, z, a),
+                childrenExecutedCommand: (0, T.Z)(i, M, a),
                 childrenHeader: (0, v.Z)(
                     w(R({}, e), {
-                        guildId: j.guild_id,
+                        guildId: M.guild_id,
                         author: X,
                         roleIcon: J,
                     }),
@@ -192,4 +192,4 @@ function x(e) {
         ),
     );
 }
-let j = i.memo(x);
+let M = i.memo(x);

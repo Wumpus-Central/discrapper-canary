@@ -37,10 +37,10 @@ var r = n(951288),
     D = n(9156),
     L = n(594174),
     x = n(938475),
-    j = n(981631),
-    M = n(388032),
-    k = n(132789),
-    U = n(78480);
+    M = n(981631),
+    j = n(388032),
+    k = n(102647),
+    U = n(395530);
 function G(e, t, n) {
     return (
         t in e
@@ -99,7 +99,7 @@ function V(e) {
                 ...P.ZP.getChannels(t)
                     [P.Zb].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === j.d4z.GUILD_VOICE;
+                        return t.type === M.d4z.GUILD_VOICE;
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -159,11 +159,11 @@ function V(e) {
         O = E.filter((e) => null != e && !m.includes(e.id)),
         v = (0, c.e7)([C.Z], () => C.Z.getUserAffinitiesMap(), []),
         D = i.useMemo(() => (0, N.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
-        M = i.useMemo(() => (0, N.C)(d, v, "GuildTooltip - stageSpeakers"), [d, v]),
+        j = i.useMemo(() => (0, N.C)(d, v, "GuildTooltip - stageSpeakers"), [d, v]),
         k = i.useMemo(() => (0, N.C)(O, v, "GuildTooltip - streamUsers"), [O, v]);
     return {
         voiceUsersToShow: D,
-        stageSpeakers: M,
+        stageSpeakers: j,
         numStageListeners: _,
         streamUsersToShow: k,
         embeddedActivitiesUsers: i.useMemo(() => (0, N.C)(g, v, "GuildTooltip - embeddedActivitiesUsers"), [g, v]),
@@ -229,7 +229,7 @@ function W(e) {
               variant: "text-xs/normal",
               color: "text-muted",
               className: n,
-              children: M.intl.string(M.t.fpKdS0),
+              children: j.intl.string(j.t.fpKdS0),
           })
         : (0, r.jsx)(v.Z, {
               muteConfig: t,
@@ -278,13 +278,13 @@ function K(e) {
 function z(e) {
     switch (e) {
         case E.wB.SUBMITTED:
-            return M.intl.string(M.t["9KFC9/"]);
+            return j.intl.string(j.t["9KFC9/"]);
         case E.wB.REJECTED:
-            return M.intl.string(M.t["TQY/RU"]);
+            return j.intl.string(j.t["TQY/RU"]);
         case E.wB.APPROVED:
-            return M.intl.string(M.t.WXHcq6);
+            return j.intl.string(j.t.WXHcq6);
         default:
-            return M.intl.string(M.t.fjHFCw);
+            return j.intl.string(j.t.fjHFCw);
     }
 }
 function q(e) {
@@ -331,7 +331,7 @@ function X(e) {
                       className: k.invitesDisabledTooltip,
                       color: "header-secondary",
                       variant: "text-sm/medium",
-                      children: M.intl.string(M.t["2n0/Fh"]),
+                      children: j.intl.string(j.t["2n0/Fh"]),
                   })
                 : null,
             d
@@ -339,7 +339,7 @@ function X(e) {
                       className: k.viewAsRolesWarning,
                       color: "text-default",
                       variant: "text-xs/normal",
-                      children: M.intl.string(M.t["5LwN8/"]),
+                      children: j.intl.string(j.t["5LwN8/"]),
                   })
                 : f,
         ],
