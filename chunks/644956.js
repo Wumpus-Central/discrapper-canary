@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => F });
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -29,9 +29,9 @@ var r = n(951288),
     P = n(594174),
     w = n(51144),
     D = n(388032),
-    x = n(430864),
-    L = n(329072);
-function j(e, t, n) {
+    L = n(602009),
+    x = n(443937);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function j(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -121,7 +121,7 @@ function B(e) {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
                           f.Z,
-                          M(
+                          j(
                               {
                                   ref: c,
                                   selected: o,
@@ -139,14 +139,15 @@ function B(e) {
                                           let { default: e } = await Promise.all([
                                               n.e("79695"),
                                               n.e("98783"),
+                                              n.e("6915"),
                                               n.e("8982"),
                                               n.e("7717"),
-                                              n.e("68646"),
+                                              n.e("46964"),
                                           ]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  U(M({}, t), {
+                                                  U(j({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -228,19 +229,19 @@ function Z(e) {
         children: (0, r.jsx)(
             "div",
             U(
-                M(
+                j(
                     {
-                        className: x.rolePopout,
+                        className: L.rolePopout,
                         ref: d,
                     },
                     t,
                 ),
                 {
                     children: (0, r.jsxs)(u.Ttm, {
-                        className: x.roleScroller,
+                        className: L.roleScroller,
                         children: [
                             (0, r.jsx)(g.Z, {
-                                className: x.roleHeader,
+                                className: L.roleHeader,
                                 "aria-label": D.intl.formatToPlainString(D.t.UaqbkZ, {
                                     title: m.name,
                                     count: y.length,
@@ -254,7 +255,7 @@ function Z(e) {
                             null == E || E <= y.length
                                 ? null
                                 : (0, r.jsx)(g.Z, {
-                                      className: x.roleHeader,
+                                      className: L.roleHeader,
                                       children: D.intl.formatToPlainString(D.t["9oMmZG"], { count: E - y.length }),
                                   }),
                         ],
@@ -264,7 +265,7 @@ function Z(e) {
         ),
     });
 }
-function V(e) {
+function F(e) {
     let { roleId: t, channelId: n, roleName: a, guildId: o, children: c, inlinePreview: d = !1 } = e,
         { analyticsLocations: f } = (0, m.ZP)(h.Z.ROLE_MENTION),
         _ = (0, l.e7)([p.Z], () => p.Z.roleStyle),
@@ -279,10 +280,10 @@ function V(e) {
             (0, r.jsxs)(
                 O.Z,
                 U(
-                    M(
+                    j(
                         {
                             ref: C,
-                            className: x.roleMention,
+                            className: L.roleMention,
                             color: S ? g.color : null,
                             roleColors: S ? A : null,
                         },
@@ -295,7 +296,7 @@ function V(e) {
                                 (0, r.jsx)(u.FhE, {
                                     color: (0, s.Rf)(g.color),
                                     colors: A,
-                                    className: L.roleDot,
+                                    className: x.roleDot,
                                     background: !1,
                                     tooltip: !1,
                                 }),

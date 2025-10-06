@@ -113,9 +113,10 @@ function T(e) {
                               let { default: e } = await Promise.all([
                                   n.e("79695"),
                                   n.e("98783"),
+                                  n.e("6915"),
                                   n.e("8982"),
                                   n.e("7717"),
-                                  n.e("68646"),
+                                  n.e("46964"),
                               ]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
@@ -129,15 +130,15 @@ function T(e) {
                                   );
                           });
                   },
-        x = E.ZP.useName(R),
-        L = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(w, b, R));
+        L = E.ZP.useName(R),
+        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(w, b, R));
     if (null == R)
         return (0, r.jsx)(I, {
             userId: O,
             className: t,
             children: T,
         });
-    let j = (e) =>
+    let M = (e) =>
         (0, r.jsx)(
             d.Z,
             v(
@@ -149,13 +150,13 @@ function T(e) {
                     },
                     e,
                 ),
-                { children: "@".concat(null != L ? L : x) },
+                { children: "@".concat(null != x ? x : L) },
             ),
         );
     return S
         ? (0, r.jsx)(c.Gt, {
               value: N,
-              children: j(),
+              children: M(),
           })
         : (0, r.jsx)(c.Gt, {
               value: N,
@@ -166,7 +167,7 @@ function T(e) {
                   channelId: b,
                   position: a.tq ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => j(e),
+                  children: (e) => M(e),
               }),
           });
 }
