@@ -23829,6 +23829,7 @@ svg.radioIcon_c1e9c4 {
 .gameClickable_e0f8ae {
     cursor: pointer;
     opacity: 1;
+    perspective: 600px;
     transition: opacity .2s ease
 }
 
@@ -23845,6 +23846,10 @@ svg.radioIcon_c1e9c4 {
     box-shadow: 0 0 25px 0 rgba(145, 101, 255, .25)
 }
 
+.full-motion .gameGrid_e0f8ae:hover .gameClickable_e0f8ae:hover .coverArt_e0f8ae {
+    transform: rotateY(-30deg)
+}
+
 .coverArt_e0f8ae {
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
@@ -23853,6 +23858,10 @@ svg.radioIcon_c1e9c4 {
     object-fit: cover;
     transition: box-shadow .2s ease;
     width: 73px
+}
+
+.full-motion .coverArt_e0f8ae {
+    transition: box-shadow .2s ease, transform .6s ease
 }
 
 .closeButton_e0f8ae {
