@@ -10,16 +10,17 @@ var i = n(722687),
     u = n(345909),
     d = n(388032);
 function f() {
-    let e = (0, l.F)(),
-        t = i.O8.useControlledSetting(null == e ? void 0 : e.id);
+    var e;
+    let t = null != (e = (0, l.M)()) ? e : void 0,
+        n = i.O8.useControlledSetting(t);
     return (0, r.jsx)(a.U, {
         children: (0, r.jsx)(o.Z, {
             title: d.intl.string(u.default.ZhaNu7),
             note: d.intl.format(u.default.cnCK6e, {
                 helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS),
             }),
-            value: !t,
-            onChange: (t) => i.O8.updateControlledSetting(null == e ? void 0 : e.id, !t),
+            value: !n,
+            onChange: (e) => i.O8.updateControlledSetting(t, !e),
         }),
     });
 }

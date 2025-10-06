@@ -10,18 +10,21 @@ var i = n(722687),
     u = n(345909),
     d = n(388032);
 function f() {
-    let e = (0, l.F)(),
-        t = i.J7.useControlledSetting(null == e ? void 0 : e.id),
-        n = i.O8.useControlledSetting(null == e ? void 0 : e.id);
-    return (0, r.jsx)(a.U, {
-        children: (0, r.jsx)(o.Z, {
-            title: d.intl.string(d.t.CyLYKS),
-            note: d.intl.format(u.default["6mK5Pz"], {
-                helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS),
-            }),
-            value: !t,
-            onChange: (t) => i.J7.updateControlledSetting(null == e ? void 0 : e.id, !t),
-            disabled: n,
-        }),
-    });
+    var e;
+    let t = null != (e = (0, l.M)()) ? e : void 0,
+        n = i.J7.useControlledSetting(t),
+        f = i.O8.useControlledSetting(t);
+    return null == t
+        ? null
+        : (0, r.jsx)(a.U, {
+              children: (0, r.jsx)(o.Z, {
+                  title: d.intl.string(d.t.CyLYKS),
+                  note: d.intl.format(u.default["6mK5Pz"], {
+                      helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS),
+                  }),
+                  value: !n,
+                  onChange: (e) => i.J7.updateControlledSetting(t, !e),
+                  disabled: f,
+              }),
+          });
 }

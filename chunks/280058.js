@@ -10,18 +10,19 @@ var i = n(722687),
     u = n(981631),
     d = n(388032);
 function f() {
-    let e = (0, c.F)(),
-        t = (0, l.q1)(),
-        n = i.IU.useControlledSetting(null == e ? void 0 : e.id);
-    function f(t) {
-        i.IU.updateControlledSetting(null == e ? void 0 : e.id, !t);
+    var e;
+    let t = null != (e = (0, c.M)()) ? e : void 0,
+        n = (0, l.q1)(),
+        f = i.IU.useControlledSetting(t);
+    function _(e) {
+        i.IU.updateControlledSetting(t, !e);
     }
     return (0, r.jsx)(a.U, {
         children: (0, r.jsx)(o.Z, {
             title: d.intl.string(d.t["3o2ojo"]),
-            value: !t && !n,
-            onChange: (e) => f(e),
-            disabled: t,
+            value: !n && !f,
+            onChange: (e) => _(e),
+            disabled: n,
             note: d.intl.format(d.t.IoztJy, { helpdeskArticle: s.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }),
         }),
     });

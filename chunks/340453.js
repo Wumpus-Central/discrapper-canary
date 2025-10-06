@@ -94,7 +94,6 @@ function h(e) {
                         children: (0, r.jsx)(l.Z, { user: t }),
                     }),
                     (0, r.jsx)(i.Text, {
-                        className: c.__invalid_timestamp,
                         color: "text-muted",
                         variant: "text-xs/normal",
                         children: o,

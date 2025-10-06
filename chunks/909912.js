@@ -8,18 +8,19 @@ var i = n(722687),
     l = n(652262),
     c = n(388032);
 function u() {
-    let e = (0, s.q1)(),
-        t = (0, l.F)(),
-        n = (0, s.rD)(),
-        u = (e) => {
-            i.vV.updateControlledSetting(null == t ? void 0 : t.id, !e);
+    var e;
+    let t = (0, s.q1)(),
+        n = null != (e = (0, l.M)()) ? e : void 0,
+        u = (0, s.rD)(),
+        d = (e) => {
+            i.vV.updateControlledSetting(n, !e);
         };
     return (0, r.jsx)(a.U, {
         children: (0, r.jsx)(o.Z, {
-            title: n ? c.intl.string(c.t.PMsfcH) : c.intl.string(c.t.RAQUSE),
-            note: n ? c.intl.string(c.t.XXGmuL) : c.intl.string(c.t.wbYDfX),
-            value: !e,
-            onChange: u,
+            title: u ? c.intl.string(c.t.PMsfcH) : c.intl.string(c.t.RAQUSE),
+            note: u ? c.intl.string(c.t.XXGmuL) : c.intl.string(c.t.wbYDfX),
+            value: !t,
+            onChange: d,
         }),
     });
 }

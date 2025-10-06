@@ -333,7 +333,7 @@ let k = () => {
         return null == n
             ? null
             : (0, r.jsxs)("div", {
-                  className: o()(A.__invalid_helpLineInfo, C.marginTop20),
+                  className: C.marginTop20,
                   children: [
                       (0, r.jsx)(c.X6q, {
                           className: A.supportHeader,

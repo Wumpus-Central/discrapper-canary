@@ -29,9 +29,9 @@ var r = n(951288),
     C = n(539086),
     N = n(292352),
     R = n(981631),
-    P = n(412297),
+    P = n(345909),
     w = n(388032),
-    D = n(799114);
+    D = n(166387);
 let L = {
         [N.dG.REQUESTS]: S.Z,
         [N.dG.ACTIVITY]: T.Z,
@@ -124,7 +124,6 @@ function k(e) {
                         selectedItem: n,
                         type: "top-pill",
                         onItemSelect: i,
-                        className: D.__invalid_tabBar,
                         children: [
                             (0, r.jsx)(c.njP.Item, {
                                 id: N.dG.ACTIVITY,
