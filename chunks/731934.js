@@ -156,7 +156,7 @@ function x() {
         ],
     });
 }
-function j() {
+function M() {
     let e = (0, h.VM)();
     return (0, r.jsxs)("div", {
         className: o()(A.box, S.box, A.linkingBanner),
@@ -187,7 +187,7 @@ function j() {
         ],
     });
 }
-function M(e) {
+function j(e) {
     let { sectionType: t, sectionTitle: n, requests: a } = e,
         o = i.useRef(null),
         s = "".concat(t, "-list"),
@@ -266,7 +266,7 @@ function M(e) {
 }
 let k = () => {
         let e = (0, p.Z)(),
-            t = (0, h.mq)(O.ne.ACTIVE),
+            t = (0, h.zu)(),
             n = e ? O.AG : O.i0,
             i = {
                 count: t.length,
@@ -277,7 +277,7 @@ let k = () => {
                 T.intl.formatToPlainString(I.default["pu6/U1"], i),
             );
         return t.length > 0
-            ? (0, r.jsx)(M, {
+            ? (0, r.jsx)(j, {
                   sectionType: O.ne.ACTIVE,
                   sectionTitle: a,
                   requests: t,
@@ -349,14 +349,14 @@ let k = () => {
               });
     },
     B = () => {
-        let e = (0, h.mq)(O.ne.PENDING),
+        let e = (0, h.ov)(O.ne.PENDING),
             t = (0, f.o)(
                 T.intl.formatToPlainString(I.default.IkAgkJ, { count: e.length }),
                 T.intl.formatToPlainString(I.default.Q8XnAQ, { count: e.length }),
             );
         return 0 === e.length
             ? null
-            : (0, r.jsx)(M, {
+            : (0, r.jsx)(j, {
                   sectionType: O.ne.PENDING,
                   sectionTitle: t,
                   requests: e,
@@ -367,7 +367,7 @@ let k = () => {
         return (0, r.jsxs)("div", {
             className: A.container,
             children: [
-                e ? (0, r.jsx)(x, {}) : (0, r.jsx)(j, {}),
+                e ? (0, r.jsx)(x, {}) : (0, r.jsx)(M, {}),
                 (0, r.jsx)(k, {}),
                 (0, r.jsx)(B, {}),
                 (0, r.jsx)(U, {}),

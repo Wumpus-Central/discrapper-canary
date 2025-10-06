@@ -12,17 +12,17 @@ var r = n(951288),
     _ = n(388032),
     p = n(84989);
 let h = () => {
-        let e = (0, c.mq)(d.ne.ACTIVE),
+        let e = (0, c.ZM)(),
             t = (0, l.cz)(),
             { selectTeenUser: n } = (0, o.G)({}),
             s = (e) => {
                 n(e);
             },
-            f = e.map((e) => ({
-                label: e.id,
-                value: e.id,
+            d = e.map((e) => ({
+                label: e,
+                value: e,
             })),
-            _ = i.useCallback(
+            f = i.useCallback(
                 (e) =>
                     (0, r.jsx)(u.I, {
                         userId: e.value,
@@ -35,20 +35,20 @@ let h = () => {
             ? null
             : 1 === e.length
               ? (0, r.jsx)(u.I, {
-                    userId: e[0].id,
+                    userId: e[0],
                     avatarSize: a.EFr.SIZE_24,
                     hideUserTag: !0,
                 })
               : (0, r.jsx)(a.PhF, {
-                    renderOptionLabel: _,
+                    renderOptionLabel: f,
                     renderOptionValue: (e) => {
                         let [t] = e;
-                        return _(t);
+                        return f(t);
                     },
                     serialize: (e) => e,
                     select: s,
                     isSelected: (e) => e === (null == t ? void 0 : t.id),
-                    options: f,
+                    options: d,
                 });
     },
     m = () => {
