@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => P }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => L }), n(804061), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -6,145 +6,165 @@ var r = n(951288),
     s = n(456100),
     l = n(620662),
     c = n(841784),
-    u = n(429589),
-    d = n(499254),
-    f = n(827498),
-    _ = n(541716),
-    p = n(706454),
-    h = n(823379),
-    m = n(5192),
-    g = n(379357),
-    E = n(192918),
-    b = n(561308),
-    y = n(907152),
-    O = n(206295),
-    v = n(297781),
-    I = n(591853),
-    T = n(797342),
-    S = n(981631),
-    A = n(388032);
-let C = (e, t) =>
-        A.intl.formatToPlainString(A.t.tAwI1t, {
+    u = n(206074),
+    d = n(429589),
+    f = n(100527),
+    _ = n(499254),
+    p = n(827498),
+    h = n(728345),
+    m = n(541716),
+    g = n(706454),
+    E = n(823379),
+    b = n(5192),
+    y = n(379357),
+    O = n(192918),
+    v = n(561308),
+    I = n(907152),
+    T = n(206295),
+    S = n(297781),
+    A = n(591853),
+    C = n(797342),
+    N = n(981631),
+    R = n(388032);
+let P = (e, t) =>
+        R.intl.formatToPlainString(R.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name,
         }),
-    N = (e, t, n) => {
-        let r = A.t["bES+y8"],
-            i = m.ZP.getName(t.guild_id, t.id, n),
+    w = (e, t, n) => {
+        let r = R.t["bES+y8"],
+            i = b.ZP.getName(t.guild_id, t.id, n),
             a = e.extra.activity_name;
-        return A.intl
+        return R.intl
             .formatToMarkdownString(r, {
                 gameName: a,
                 userName: i,
             })
             .replaceAll("*", "");
     },
-    R = (e) => {
+    D = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
-            a = A.t["7j/5mp"];
-        return A.intl
+            a = R.t["7j/5mp"];
+        return R.intl
             .formatToMarkdownString(a, {
                 gameName: t.extra.activity_name,
-                user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
-                user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
+                user1: b.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
+                user2: b.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
                 countOthers: i,
             })
             .replaceAll("*", "");
     },
-    P = (e) => {
-        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: P, disableActivityProfileLinks: w } = e,
-            { largeImage: D } = (0, g.rv)({
+    L = (e) => {
+        let { channel: t, entry: n, onReaction: b, onVoiceChannelPreview: L, disableActivityProfileLinks: x } = e,
+            { largeImage: M } = (0, y.rv)({
                 entry: n,
                 showCoverImage: !1,
             }),
-            { user: x, details: L, activity: j, embeddedActivity: M } = (0, T.n)(n),
-            { primaryColor: k, secondaryColor: U } = (0, O.Z)(null == D ? void 0 : D.src),
-            G = (0, a.e7)([p.default], () => p.default.locale),
-            { displayParticipants: B, participant1: Z, participant2: V, numOtherParticipants: F } = (0, E.Z)(n, 3),
-            H = () => {
-                d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
+            { user: j, details: k, activity: U, embeddedActivity: G } = (0, C.n)(n),
+            { primaryColor: B, secondaryColor: Z } = (0, T.Z)(null == M ? void 0 : M.src),
+            F = (0, a.e7)([g.default], () => g.default.locale),
+            { displayParticipants: V, participant1: H, participant2: Y, numOtherParticipants: W } = (0, O.Z)(n, 3),
+            K = () => {
+                _.__(p._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
-            Y = i.useCallback(
+            z = i.useCallback(
                 (e) => {
-                    if ((null == D ? void 0 : D.src) == null || null == t || null == x) return;
+                    if ((null == M ? void 0 : M.src) == null || null == t || null == j) return;
                     let r =
-                        F > 0
-                            ? R({
+                        W > 0
+                            ? D({
                                   entry: n,
                                   channel: t,
-                                  users: [Z, V],
-                                  countOthers: F,
+                                  users: [H, Y],
+                                  countOthers: W,
                               })
-                            : N(n, t, x);
-                    return (0, y.C4)({
+                            : w(n, t, j);
+                    return (0, I.C4)({
                         entry: n,
-                        applicationImageSrc: null == D ? void 0 : D.src,
-                        avatarSrcs: B.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        applicationImageSrc: null == M ? void 0 : M.src,
+                        avatarSrcs: V.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
-                        timestamp: (0, b.yh)(n, G),
-                        colors: [k, U],
+                        timestamp: (0, v.yh)(n, F),
+                        colors: [B, Z],
                         channelId: e,
                     });
                 },
-                [null == D ? void 0 : D.src, t, B, n, G, F, Z, V, k, U, x],
+                [null == M ? void 0 : M.src, t, V, n, F, W, H, Y, B, Z, j],
             ),
-            { enabled: W } = s.c.useExperiment(
+            { data: q } = (0, h.IX)(n.extra.application_id),
+            X = (0, u.Z)({
+                application: q,
+                analyticsLocations: [f.Z.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT],
+            }),
+            { enabled: Q } = s.c.useExperiment(
                 { location: "MemberListAcitivtyContentPopout" },
                 { autoTrackExposure: !0 },
             );
-        if (null == x) return null;
-        let K = (0, r.jsx)(v.PZ, {
-                location: v.Gt.POPOUT,
+        if (null == j) return null;
+        let J = (0, r.jsx)(S.PZ, {
+                location: S.Gt.POPOUT,
                 entry: n,
             }),
-            z = (0, r.jsx)(I.wG, {
+            $ = (0, r.jsx)(A.wG, {
                 channel: t,
-                userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
+                userDescription: (0, v.kr)(n) ? R.t.vPg1JS : R.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: L,
-                badges: K,
+                subtitle: k,
+                badges: J,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: w ? void 0 : H,
-                onClickSubtitle: w ? void 0 : H,
-                onClickThumbnail: w ? void 0 : H,
+                onClickTitle: x ? void 0 : K,
+                onClickSubtitle: x ? void 0 : K,
+                onClickThumbnail: x ? void 0 : K,
             }),
-            q = (0, l.Z)(j, S.xjy.JOIN) || (0, c.Z)(j),
-            X = q
-                ? (0, r.jsx)(u.Z, {
-                      embeddedActivity: M,
-                      activity: j,
-                      user: x,
+            ee = (0, l.Z)(U, N.xjy.JOIN) || (0, c.Z)(U),
+            et = ee
+                ? (0, r.jsx)(d.Z, {
+                      embeddedActivity: G,
+                      activity: U,
+                      user: j,
                       variant: "primary",
                       size: "md",
                       icon: o.YVR,
                   })
                 : null,
-            Q = W ? o.iWm : o.jje,
-            J = w
-                ? null
-                : (0, r.jsx)(o.zxk, {
-                      variant: "primary",
-                      size: "md",
-                      fullWidth: !0,
-                      onClick: H,
-                      text: A.intl.string(A.t.GDWYR0),
-                      icon: Q,
-                  }),
-            $ = [q && !w ? X : J].filter(h.lm);
-        return (0, r.jsxs)(I.yR, {
+            en =
+                null == X
+                    ? null
+                    : (0, r.jsx)(o.zxk, {
+                          variant: "primary",
+                          size: "md",
+                          fullWidth: !0,
+                          onClick: X,
+                          text: R.intl.string(R.t["jaYS/v"]),
+                          icon: o.v3n,
+                      }),
+            er = Q ? o.iWm : o.jje,
+            ei =
+                null != en || x
+                    ? null
+                    : (0, r.jsx)(o.zxk, {
+                          variant: "primary",
+                          size: "md",
+                          fullWidth: !0,
+                          onClick: K,
+                          text: R.intl.string(R.t.GDWYR0),
+                          icon: er,
+                      }),
+            ea = [en, ee && !x ? et : ei].filter(E.lm);
+        return (0, r.jsxs)(A.yR, {
             children: [
-                z,
-                (0, r.jsx)(I.St, {
-                    children: (0, r.jsx)(I.WT, {
-                        onReaction: m,
-                        onVoiceChannelPreview: P,
-                        user: x,
+                $,
+                (0, r.jsx)(A.St, {
+                    children: (0, r.jsx)(A.WT, {
+                        onReaction: b,
+                        onVoiceChannelPreview: L,
+                        user: j,
                         channel: t,
-                        generateReactionImage: Y,
-                        reactionImageAltText: C(n, x),
+                        generateReactionImage: z,
+                        reactionImageAltText: P(n, j),
                         entry: n,
-                        buttons: $,
+                        buttons: ea,
                     }),
                 }),
             ],

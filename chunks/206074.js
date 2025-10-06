@@ -1,7 +1,8 @@
 n.d(t, {
-    Z: () => b,
-    q: () => E,
+    Z: () => O,
+    q: () => y,
 }),
+    n(388685),
     n(997841);
 var r = n(647438),
     i = n(704215),
@@ -16,59 +17,66 @@ var r = n(647438),
     _ = n(131734),
     p = n(981631),
     h = n(921944);
-function m(e) {
+let m = new Set();
+function g(e) {
     return (0, d.yE)(e.flags, p.udG.CLOUD_GAMING_DEMO) && (0, d.yE)(e.flags, p.udG.EMBEDDED);
 }
-function g(e) {
+function E(e) {
     let { countryCode: t, activity: n } = e;
     return (
         null == t ||
         (!n.blocked_locales.includes(t) && (!(n.supported_locales.length > 0) || !!n.supported_locales.includes(t)))
     );
 }
-function E(e, t) {
+function b(e) {
+    let t = null != e ? (0, _.Z)(e) : null,
+        n = null == t ? void 0 : t.id,
+        { data: i, refetch: a } = (0, s.IX)(n);
+    return (
+        r.useEffect(() => {
+            null == n || null == i || null != i.bot || m.has(n) || (a(), m.add(n));
+        }, [n, i, a]),
+        i
+    );
+}
+function y(e, t) {
     let { enabled: n } = f.tL.useExperiment({ location: t }, { autoTrackExposure: !1 }),
         { data: r } = (0, c.f)(),
-        i = null != e ? (0, _.Z)(e) : null,
-        a = null == i ? void 0 : i.id,
-        { data: l } = (0, s.IX)(a),
-        { bot: u } = null != l ? l : { bot: null },
-        d = (0, f.b0)(null == e ? void 0 : e.id);
+        i = b(e),
+        { bot: a } = null != i ? i : { bot: null },
+        s = (0, f.b0)(null == e ? void 0 : e.id);
     return (
         null != e &&
-        (!!n || !!d) &&
+        (!!n || !!s) &&
         ((null == e ? void 0 : e.embeddedActivityConfig) == null ||
-            !!g({
+            !!E({
                 countryCode: null == r ? void 0 : r.alpha2,
                 activity: e.embeddedActivityConfig,
             })) &&
-        (!!m(e) ||
+        (!!g(e) ||
             (null != a &&
-                null != u &&
-                null != l &&
-                !!(0, o.ye)(l) &&
-                ((null == l ? void 0 : l.embeddedActivityConfig) == null ||
-                    !!g({
+                null != i &&
+                !!(0, o.ye)(i) &&
+                ((null == i ? void 0 : i.embeddedActivityConfig) == null ||
+                    !!E({
                         countryCode: null == r ? void 0 : r.alpha2,
-                        activity: l.embeddedActivityConfig,
+                        activity: i.embeddedActivityConfig,
                     }))))
     );
 }
-function b(e) {
+function O(e) {
     let { application: t, analyticsLocations: n } = e,
-        o = E(t, n.length > 0 ? n[n.length - 1] : ""),
-        { bot: c } = null != t ? t : { bot: null },
-        d = (0, _.Z)(t),
-        f = null == d ? void 0 : d.id,
-        { data: g } = (0, s.IX)(f),
-        { bot: b } = null != g ? g : { bot: null };
+        o = y(t, n.length > 0 ? n[n.length - 1] : ""),
+        { bot: s } = null != t ? t : { bot: null },
+        c = b(t),
+        { bot: d } = null != c ? c : { bot: null };
     return r.useMemo(() => {
         if (!o || null == t) return null;
         let e = () => {
             (0, l.Q3)(i.z.CLOUD_PLAY_NEW_BADGE, { dismissAction: h.L.TAKE_ACTION }),
                 (0, l.Q3)(i.z.CLOUD_PLAY_POPOVER, { dismissAction: h.L.TAKE_ACTION });
         };
-        return m(t) && null != c
+        return g(t) && null != s
             ? () => {
                   e(),
                       u.default.track(p.rMx.CLOUD_PLAY_CTA_CLICKED, {
@@ -78,24 +86,24 @@ function b(e) {
                       }),
                       (0, a.W)({
                           appId: t.id,
-                          botId: c.id,
+                          botId: s.id,
                           analyticsLocations: null != n ? n : [],
                       });
               }
-            : null != f && null != b
+            : (null == c ? void 0 : c.id) != null && (null == d ? void 0 : d.id) != null
               ? () => {
                     e(),
                         u.default.track(p.rMx.CLOUD_PLAY_CTA_CLICKED, {
                             source_application_id: t.id,
-                            launching_application_id: f,
+                            launching_application_id: c.id,
                             location_stack: n,
                         }),
                         (0, a.W)({
-                            appId: f,
-                            botId: b.id,
+                            appId: c.id,
+                            botId: d.id,
                             analyticsLocations: null != n ? n : [],
                         });
                 }
               : void 0;
-    }, [o, t, c, f, b, n]);
+    }, [o, t, s, null == c ? void 0 : c.id, null == d ? void 0 : d.id, n]);
 }

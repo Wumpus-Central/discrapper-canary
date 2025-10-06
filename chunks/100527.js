@@ -491,6 +491,7 @@ var r = (function (e) {
         (e.GO_LIVE_KEYBIND = "go live keybind"),
         (e.OVERLAY_VOICE_WIDGET = "overlay voice widget"),
         (e.REQUEST_TO_STREAM_INVITE_EMBED = "request to stream invite embed"),
+        (e.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT = "member list activity content popout"),
         (e.MEMBER_LIST_GAMING_CONTENT_POPOUT = "member list gaming content popout"),
         (e.CLOUD_PLAY_POPOVER = "cloud play popover"),
         (e.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION = "now playing item rich presence section"),
