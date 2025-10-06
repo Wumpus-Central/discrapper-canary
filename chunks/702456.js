@@ -15,30 +15,39 @@ var i = n(442837),
     g = n(388032),
     m = n(944658);
 function b(e) {
-    let { user: t } = e,
-        n = (0, i.e7)([u.Z], () => u.Z.getStatus(t.id)),
-        { avatarSrc: o, eventHandlers: s } = (0, c.Z)({
-            userId: t.id,
+    var t, n;
+    let { user: o, isLast: s, isFirst: d } = e,
+        p = (0, i.e7)([u.Z], () => u.Z.getStatus(o.id)),
+        { avatarSrc: f, eventHandlers: h } = (0, c.Z)({
+            userId: o.id,
             size: l.EFr.SIZE_32,
             animateOnHover: !0,
         }),
-        d = async () => {
+        b = async () => {
             await a.Z.openPrivateChannel({
-                recipientIds: [t.id],
+                recipientIds: [o.id],
                 location: "frequent_friends_row",
             });
-        };
+        },
+        _ = d ? l.YqE : s ? l.ANZ : void 0,
+        O = d ? g.intl.string(g.t.aI4VOD) : s ? g.intl.string(g.t.kABl29) : void 0;
     return (0, r.jsx)(l.P3F, {
         className: m.frequentFriendAvatarButton,
-        onClick: d,
-        onMouseEnter: s.onMouseEnter,
-        onMouseLeave: s.onMouseLeave,
-        "aria-label": g.intl.formatToPlainString(g.t.M5FjCg, { username: t.username }),
+        onClick: b,
+        onMouseEnter: h.onMouseEnter,
+        onMouseLeave: h.onMouseLeave,
+        "aria-label": g.intl.formatToPlainString(g.t.M5FjCg, { username: o.username }),
         children: (0, r.jsx)(l.qEK, {
-            src: o,
+            src: f,
+            "aria-label": null != (t = o.globalName) ? t : o.username,
+            status: p,
             size: l.EFr.SIZE_32,
-            "aria-label": t.username,
-            status: n,
+            CutoutIcon: _,
+            cutoutIconName: d ? "FireIcon" : s ? "TimerIcon" : void 0,
+            avatarTooltipText: O,
+            statusTooltip: !0,
+            statusTooltipDelay: 50,
+            avatarTooltipTitle: null != (n = o.globalName) ? n : o.username,
         }),
     });
 }
@@ -131,7 +140,17 @@ function _() {
                           (0, r.jsx)(l.u2D, {
                               className: m.frequentFriendsAvatars,
                               orientation: "horizontal",
-                              children: t.map((e) => (0, r.jsx)(b, { user: e }, e.id)),
+                              children: t.map((e, n) =>
+                                  (0, r.jsx)(
+                                      b,
+                                      {
+                                          user: e,
+                                          isLast: n === t.length - 1,
+                                          isFirst: 0 === n,
+                                      },
+                                      e.id,
+                                  ),
+                              ),
                           }),
                       ],
                   }),
