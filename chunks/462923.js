@@ -236,13 +236,13 @@ function Z(e) {
                                                         .concat(
                                                             null != t.onlineConnectionsCount
                                                                 ? t.onlineConnectionsCount
-                                                                : "\u2014\u2014\u2014",
+                                                                : "\u2014",
                                                             " / ",
                                                         )
                                                         .concat(
                                                             null != t.maxConnectionsCount
                                                                 ? t.maxConnectionsCount
-                                                                : "\u2014\u2014\u2014",
+                                                                : "\u2014",
                                                         ),
                                                 }),
                                             ],
@@ -287,7 +287,7 @@ function Z(e) {
                                                               })
                                                         : (0, r.jsx)(d.Text, {
                                                               variant: "text-sm/medium",
-                                                              children: "\u2014\u2014\u2014",
+                                                              children: "\u2014",
                                                           }),
                                                 }),
                                             ],
@@ -346,8 +346,7 @@ function Z(e) {
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/medium",
-                                                    children:
-                                                        null != t.regionName ? t.regionName : "\u2014\u2014\u2014",
+                                                    children: null != t.regionName ? t.regionName : "\u2014",
                                                 }),
                                             ],
                                         }),
