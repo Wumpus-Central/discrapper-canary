@@ -211,6 +211,7 @@ let eB = () => {
             activeInputProfile: e5,
             isInputProfileCustom: e6,
             isDataUsage3PToggleEnabled: e7,
+            isChatMentionSuggestionsSettingEnabled: e9,
         } = e;
         return Object.freeze({
             [eN.s6.SEARCH_NO_RESULTS]: {
@@ -1407,7 +1408,8 @@ let eB = () => {
             [eN.s6.CHAT_MENTION_SUGGESTIONS]: {
                 section: eP.oAB.TEXT,
                 searchableTitles: [eD.intl.string(eD.t.uXQ2xc)],
-                parent: eN.s6.CHAT,
+                parent: eN.s6.CHAT_TEXT_BOX,
+                predicate: () => e9,
             },
             [eN.s6.NOTIFICATIONS]: {
                 section: eP.oAB.NOTIFICATIONS,

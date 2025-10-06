@@ -1,9 +1,9 @@
 n.d(t, {
-    Gj: () => Y,
-    Pt: () => H,
-    VO: () => q,
-    ji: () => J,
-    q8: () => X,
+    Gj: () => W,
+    Pt: () => Y,
+    VO: () => X,
+    ji: () => $,
+    q8: () => Q,
 }),
     n(836215),
     n(472816),
@@ -19,34 +19,35 @@ var r = n(647438),
     l = n(924557),
     c = n(706140),
     u = n(592204),
-    d = n(610697),
-    f = n(880257),
-    _ = n(631885),
-    p = n(160913),
-    h = n(725727),
-    m = n(977156),
-    g = n(921157),
-    E = n(667172),
-    b = n(237292),
-    y = n(314897),
-    O = n(906467),
-    v = n(283595),
-    I = n(131951),
-    T = n(699516),
-    S = n(663389),
-    A = n(594174),
-    C = n(128064),
-    N = n(202527),
-    R = n(413182),
-    P = n(695346),
-    w = n(695463),
-    D = n(620163),
-    L = n(168308),
-    x = n(839469),
+    d = n(657871),
+    f = n(610697),
+    _ = n(880257),
+    p = n(631885),
+    h = n(160913),
+    m = n(725727),
+    g = n(977156),
+    E = n(921157),
+    b = n(667172),
+    y = n(237292),
+    O = n(314897),
+    v = n(906467),
+    I = n(283595),
+    T = n(131951),
+    S = n(699516),
+    A = n(663389),
+    C = n(594174),
+    N = n(128064),
+    R = n(202527),
+    P = n(413182),
+    w = n(695346),
+    D = n(695463),
+    L = n(620163),
+    x = n(168308),
+    M = n(839469),
     j = n(726985),
-    M = n(46140),
-    k = n(388032);
-function U(e, t, n) {
+    k = n(46140),
+    U = n(388032);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +60,7 @@ function U(e, t, n) {
         e
     );
 }
-function G(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,12 +71,12 @@ function G(e) {
                 }),
             )),
             r.forEach(function (t) {
-                U(e, t, n[t]);
+                G(e, t, n[t]);
             });
     }
     return e;
 }
-function B(e, t) {
+function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,23 +88,23 @@ function B(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : Z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function F(e) {
+function V(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
-        r = O.Z.isDeveloper,
+        r = v.Z.isDeveloper,
         i = [
             {
-                header: k.intl.string(k.t.cduTBA),
+                header: U.intl.string(U.t.cduTBA),
                 settings: n
                     ? [
                           j.s6.ACCOUNT,
@@ -130,12 +131,12 @@ function F(e) {
                       ],
             },
             {
-                header: k.intl.string(k.t["4uOdGh"]),
+                header: U.intl.string(U.t["4uOdGh"]),
                 divider: !0,
                 settings: [j.s6.PREMIUM, j.s6.GUILD_BOOSTING, j.s6.SUBSCRIPTIONS, j.s6.GIFT_INVENTORY, j.s6.BILLING],
             },
             {
-                header: k.intl.string(k.t.f2n1TE),
+                header: U.intl.string(U.t.f2n1TE),
                 divider: !0,
                 settings: [
                     j.s6.APPEARANCE,
@@ -171,23 +172,23 @@ function F(e) {
             },
         ],
         a = {
-            header: k.intl.string(k.t.SmHCFR),
+            header: U.intl.string(U.t.SmHCFR),
             divider: !0,
             settings: [j.s6.ACTIVITY_PRIVACY, j.s6.REGISTERED_GAMES, j.s6.OVERLAY],
         };
     return t ? i : i.toSpliced(3, 0, a);
 }
-function V() {
-    let { shouldMergeGameSettings: e } = N.b.useExperiment({ location: "settings" }),
-        { showRedesign: t } = R.b.useExperiment({ location: "settings" }),
-        n = F({
+function H() {
+    let { shouldMergeGameSettings: e } = R.b.useExperiment({ location: "settings" }),
+        { showRedesign: t } = P.b.useExperiment({ location: "settings" }),
+        n = V({
             shouldMergeGameSettings: e,
             showRedesignedThirdPartyAccessSettings: t,
         });
     return r.useMemo(
         () => [
             {
-                header: k.intl.string(k.t.zkoeq6),
+                header: U.intl.string(U.t.zkoeq6),
                 settings: [
                     ...n
                         .map((e) => {
@@ -202,79 +203,81 @@ function V() {
         [n],
     );
 }
-function H() {
+function Y() {
     var e, t, n, o;
-    let O = (0, h.YO)().length,
-        R = (0, p.U)(),
-        x = (0, i.e7)([S.Z], () => S.Z.getSearchParams()),
-        j = (0, _.gU)(),
-        k = (0, L.bC)(),
-        U = (0, l.Go)(),
-        [G] = (0, c.cv)(U ? [a.z.CLIPS_SETTINGS_BETA_TAG] : []),
-        { shouldMergeGameSettings: B } = N.b.useExperiment({ location: "settings" }),
-        Z = (0, u.Xo)({ location: "settings" }),
-        F = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        V = (0, b.y0)({ location: "settings" }),
-        H = (0, E.v4)({ location: "settings" }),
-        Y = (0, s.Q)(),
-        W = (0, m.Z)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        K = (0, i.e7)([v.Z], () => v.Z.hasLibraryApplication()),
-        z = (0, i.e7)([y.default], () => y.default.hasTOTPEnabled()),
-        q = P.Sb.useSetting(),
-        X = (0, d.Z)(),
-        Q = null == (o = (0, f.Z)()) || o,
-        J = (null == (t = (0, g.s)()) ? void 0 : t.length) > 0,
-        { hasBlockedUsers: $, hasIgnoredUsers: ee } = (0, i.cj)([T.Z], () => ({
-            hasBlockedUsers: T.Z.getBlockedIDs().length > 0,
-            hasIgnoredUsers: T.Z.getIgnoredIDs().length > 0,
+    let v = (0, m.YO)().length,
+        P = (0, h.U)(),
+        M = (0, i.e7)([A.Z], () => A.Z.getSearchParams()),
+        j = (0, p.gU)(),
+        U = (0, x.bC)(),
+        G = (0, l.Go)(),
+        [B] = (0, c.cv)(G ? [a.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        { shouldMergeGameSettings: Z } = R.b.useExperiment({ location: "settings" }),
+        F = (0, u.Xo)({ location: "settings" }),
+        V = null != (n = null == (e = C.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
+        H = (0, y.y0)({ location: "settings" }),
+        Y = (0, b.v4)({ location: "settings" }),
+        W = (0, s.Q)(),
+        K = (0, g.Z)({ location: k.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        z = (0, i.e7)([I.Z], () => I.Z.hasLibraryApplication()),
+        q = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
+        X = w.Sb.useSetting(),
+        Q = (0, f.Z)(),
+        J = null == (o = (0, _.Z)()) || o,
+        $ = (null == (t = (0, E.s)()) ? void 0 : t.length) > 0,
+        { hasBlockedUsers: ee, hasIgnoredUsers: et } = (0, i.cj)([S.Z], () => ({
+            hasBlockedUsers: S.Z.getBlockedIDs().length > 0,
+            hasIgnoredUsers: S.Z.getIgnoredIDs().length > 0,
         })),
-        et = (0, C.pY)("SettingRendererUtils"),
+        en = (0, N.pY)("SettingRendererUtils"),
         {
-            inputMode: en,
-            activeInputProfile: er,
-            isInputProfileCustom: ei,
-        } = (0, i.cj)([I.Z], () => ({
-            activeInputProfile: I.Z.getActiveInputProfile(),
-            inputMode: I.Z.getMode(),
-            isInputProfileCustom: I.Z.isInputProfileCustom(),
+            inputMode: er,
+            activeInputProfile: ei,
+            isInputProfileCustom: ea,
+        } = (0, i.cj)([T.Z], () => ({
+            activeInputProfile: T.Z.getActiveInputProfile(),
+            inputMode: T.Z.getMode(),
+            isInputProfileCustom: T.Z.isInputProfileCustom(),
         })),
-        ea = (0, w.W)("useGenerateUserSettingsSections");
+        eo = (0, D.W)("useGenerateUserSettingsSections"),
+        { enabled: es } = (0, d.zM)("useGenerateUserSettingsSections", { autoTrackExposure: !1 });
     return r.useMemo(
         () =>
-            (0, D.iE)({
-                unseenGiftCount: O,
-                showPrepaidPaymentPastDueWarning: R,
-                searchParams: x,
+            (0, L.iE)({
+                unseenGiftCount: v,
+                showPrepaidPaymentPastDueWarning: P,
+                searchParams: M,
                 numOfPendingFamilyRequests: j,
-                isOverlaySupported: k,
-                isClipsBetaTagShowing: G === a.z.CLIPS_SETTINGS_BETA_TAG,
-                shouldMergeGameSettings: B,
-                isKeywordFilteringEnabled: Z,
-                isStaff: F,
-                isInappropriateConversationWarningEnabled: V,
-                isInapproprateConversationsDefaultOn: H,
-                paymentsBlocked: Y,
-                isEligibleForQuests: W,
-                isStricterMessageRequestsEnabled: X,
-                hasLibraryApplication: K,
-                hasTOTPEnabled: z,
-                developerMode: q,
-                isAdultUser: Q,
-                hasSecureFramesVerifiedUserIds: J,
-                hasIgnoredUsers: ee,
-                hasBlockedUsers: $,
-                isEligibleForSensitiveContentDefaults: et,
-                inputMode: en,
-                activeInputProfile: er,
-                isInputProfileCustom: ei,
-                isDataUsage3PToggleEnabled: ea,
+                isOverlaySupported: U,
+                isClipsBetaTagShowing: B === a.z.CLIPS_SETTINGS_BETA_TAG,
+                shouldMergeGameSettings: Z,
+                isKeywordFilteringEnabled: F,
+                isStaff: V,
+                isInappropriateConversationWarningEnabled: H,
+                isInapproprateConversationsDefaultOn: Y,
+                paymentsBlocked: W,
+                isEligibleForQuests: K,
+                isStricterMessageRequestsEnabled: Q,
+                hasLibraryApplication: z,
+                hasTOTPEnabled: q,
+                developerMode: X,
+                isAdultUser: J,
+                hasSecureFramesVerifiedUserIds: $,
+                hasIgnoredUsers: et,
+                hasBlockedUsers: ee,
+                isEligibleForSensitiveContentDefaults: en,
+                inputMode: er,
+                activeInputProfile: ei,
+                isInputProfileCustom: ea,
+                isDataUsage3PToggleEnabled: eo,
+                isChatMentionSuggestionsSettingEnabled: es,
             }),
-        [q, G, $, ee, K, J, z, x, Q, W, H, V, Z, k, F, X, j, Y, B, R, O, et, en, er, ei, ea],
+        [X, B, ee, et, z, $, q, M, J, K, Y, H, F, U, V, Q, j, W, Z, P, v, en, er, ei, ea, eo, es],
     );
 }
-function Y(e) {
-    let t = x.R.useField("searchResults"),
-        n = H(),
+function W(e) {
+    let t = M.R.useField("searchResults"),
+        n = Y(),
         r = n[e],
         i = Object.fromEntries(
             Object.entries(n).filter((e) => {
@@ -324,13 +327,13 @@ function Y(e) {
         }
     return o;
 }
-function W(e, t, n) {
+function K(e, t, n) {
     return (e === j.s6.SEARCH_NO_RESULTS && 0 === t.size) || n.has(e) || t.has(e);
 }
-function K(e, t, n) {
+function z(e, t, n) {
     let r = [],
-        i = Q(t),
-        a = z(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
+        i = J(t),
+        a = q(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
     return (
         e.forEach((e) => {
             0 !== e.settings.length &&
@@ -341,13 +344,13 @@ function K(e, t, n) {
                         label: e.header,
                     }),
                 e.settings.forEach((e) => {
-                    r.push(Z(G({}, t[e]), { tabPredicate: () => null == n || W(e, n, a) }));
+                    r.push(F(B({}, t[e]), { tabPredicate: () => null == n || K(e, n, a) }));
                 }));
         }),
         r
     );
 }
-function z(e, t) {
+function q(e, t) {
     let n = new Map();
     return (
         null != t &&
@@ -363,26 +366,26 @@ function z(e, t) {
         n
     );
 }
-function q() {
-    let e = H(),
-        { shouldMergeGameSettings: t } = N.b.useExperiment({ location: "settings" }),
-        { showRedesign: n } = R.b.useExperiment({ location: "settings" }),
+function X() {
+    let e = Y(),
+        { shouldMergeGameSettings: t } = R.b.useExperiment({ location: "settings" }),
+        { showRedesign: n } = P.b.useExperiment({ location: "settings" }),
         i = r.useMemo(
             () =>
-                F({
+                V({
                     shouldMergeGameSettings: t,
                     showRedesignedThirdPartyAccessSettings: n,
                 }),
             [t, n],
         );
-    return r.useMemo(() => K(i, e), [i, e]);
-}
-function X(e) {
-    let t = H(),
-        n = V();
-    return r.useMemo(() => K(n, t, new Set(e)), [n, t, e]);
+    return r.useMemo(() => z(i, e), [i, e]);
 }
 function Q(e) {
+    let t = Y(),
+        n = H();
+    return r.useMemo(() => z(n, t, new Set(e)), [n, t, e]);
+}
+function J(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
@@ -394,8 +397,8 @@ function Q(e) {
         }),
     );
 }
-function J(e) {
-    return Array.from(Q(e).entries()).map((e) => {
+function $(e) {
+    return Array.from(J(e).entries()).map((e) => {
         let [t, n] = e;
         return [t, n.searchableTitles];
     });
