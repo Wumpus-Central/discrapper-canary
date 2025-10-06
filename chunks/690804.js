@@ -1,44 +1,44 @@
-i.d(n, { FortniteUpsellModal: () => j });
+i.d(t, { FortniteUpsellModal: () => g });
 var e = i(951288);
 i(647438);
 var s = i(990547),
     a = i(793030),
     r = i(481060),
-    o = i(782568),
-    c = i(213609),
+    c = i(782568),
+    o = i(213609),
     l = i(728345),
     d = i(626135),
     x = i(768581),
     m = i(981631),
     p = i(388032),
     h = i(625771);
-function j(t) {
-    let { onClose: n, transitionState: i } = t,
-        { data: j } = (0, l.IX)("1402418703554842694"),
-        { data: u } = (0, l.IX)("1417968406048673952"),
+function g(n) {
+    let { onClose: t, transitionState: i } = n,
+        { data: g } = (0, l.IX)("1402418703554842694"),
+        { data: j } = (0, l.IX)("1417968406048673952"),
+        u =
+            null != g
+                ? x.ZP.getApplicationIconURL({
+                      id: g.id,
+                      icon: g.icon,
+                  })
+                : null,
         b =
             null != j
                 ? x.ZP.getApplicationIconURL({
                       id: j.id,
                       icon: j.icon,
                   })
-                : null,
-        v =
-            null != u
-                ? x.ZP.getApplicationIconURL({
-                      id: u.id,
-                      icon: u.icon,
-                  })
                 : null;
     return (
-        (0, c.Z)({
+        (0, o.Z)({
             name: s.ImpressionNames.FORTNITE_GET_GAME_MODAL,
             type: s.ImpressionTypes.MODAL,
         }),
         (0, e.jsxs)(a.IX, {
             size: "lg",
             transitionState: i,
-            onClose: n,
+            onClose: t,
             children: [
                 (0, e.jsx)(a.xBx, {
                     graphic: void 0,
@@ -61,10 +61,10 @@ function j(t) {
                                             (0, e.jsx)("div", {
                                                 className: h.iconContainer,
                                                 children:
-                                                    null != b &&
+                                                    null != u &&
                                                     (0, e.jsx)("div", {
                                                         className: h.icon,
-                                                        style: { backgroundImage: "url(".concat(b, ")") },
+                                                        style: { backgroundImage: "url(".concat(u, ")") },
                                                     }),
                                             }),
                                             (0, e.jsxs)("div", {
@@ -88,7 +88,7 @@ function j(t) {
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_DOWNLOAD_CLICKED),
-                                                (0, o.Z)("https://fortnitetrial.fortnite.com/");
+                                                (0, c.Z)("https://fn.gg/GetGame");
                                         },
                                         text: p.intl.string(p.t.ZDtJ19),
                                         variant: "secondary",
@@ -104,10 +104,10 @@ function j(t) {
                                             (0, e.jsx)("div", {
                                                 className: h.iconContainer,
                                                 children:
-                                                    null != v &&
+                                                    null != b &&
                                                     (0, e.jsx)("div", {
                                                         className: h.icon,
-                                                        style: { backgroundImage: "url(".concat(v, ")") },
+                                                        style: { backgroundImage: "url(".concat(b, ")") },
                                                     }),
                                             }),
                                             (0, e.jsxs)("div", {
@@ -131,7 +131,7 @@ function j(t) {
                                         iconPosition: "end",
                                         onClick: () => {
                                             d.default.track(m.rMx.FORTNITE_GFNJOIN_CLICKED),
-                                                (0, o.Z)(
+                                                (0, c.Z)(
                                                     "https://www.nvidia.com/en-us/geforce-now/discord?ncid=partn-874834",
                                                 );
                                         },
