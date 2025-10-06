@@ -22,7 +22,7 @@ var r = n(45792),
     I = n(674563);
 let S = new Set([y.Fu, y.JT]),
     C = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
-    T = new Set(["p-ty8do4dje6.exmggames.com", "fortnitetrial.fortnite.com", "www.nvidia.com"]),
+    T = new Set(["p-ty8do4dje6.exmggames.com", "fortnitetrial.fortnite.com", "www.fortnite.com", "www.nvidia.com"]),
     N = new Map([
         [
             I.Vt,
