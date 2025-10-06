@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(997841);
+n.d(t, { Z: () => _ }), n(388685), n(997841), n(953529);
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
@@ -70,6 +70,8 @@ class _ extends a.Z {
             deleted: null != (s = e.deleted) && s,
             bundledSkuIds: null != (c = e.bundled_sku_ids) ? c : [],
             tenantMetadata: f(e.tenant_metadata),
+            thumbnailAssetId: e.thumbnail_asset_id,
+            description: e.description,
         });
     }
     get supportedOperatingSystems() {
@@ -187,6 +189,8 @@ class _ extends a.Z {
             u(this, "deleted", void 0),
             u(this, "bundledSkuIds", void 0),
             u(this, "tenantMetadata", void 0),
+            u(this, "thumbnailAssetId", void 0),
+            u(this, "description", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.applicationId = e.applicationId),
@@ -219,6 +223,8 @@ class _ extends a.Z {
             (this.externalPurchaseUrl = e.externalPurchaseUrl || null),
             (this.deleted = e.deleted),
             (this.bundledSkuIds = e.bundledSkuIds),
-            (this.tenantMetadata = e.tenantMetadata);
+            (this.tenantMetadata = e.tenantMetadata),
+            (this.thumbnailAssetId = e.thumbnailAssetId),
+            (this.description = e.description);
     }
 }

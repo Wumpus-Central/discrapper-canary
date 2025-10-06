@@ -1,60 +1,61 @@
-t.r(n), t.d(n, { default: () => p });
-var a = t(951288),
-    l = t(647438),
-    r = t(120356),
-    i = t.n(r),
-    d = t(442837),
-    o = t(481060),
-    c = t(411935),
-    s = t(210218),
-    u = t(720983),
-    g = t(323540),
-    f = t(171524),
-    m = t(140594);
-function p(e) {
-    var n, t, r;
-    let { guildId: p, initialPageIndex: _ = 0 } = e,
-        v = (0, d.e7)([s.Z], () => s.Z.getStorefrontData(p)),
-        I = (0, d.e7)([s.Z], () => s.Z.getStorefrontState(p)),
-        x =
-            ((null == v ? void 0 : v.storefront) != null || (null == v ? void 0 : v.error)) &&
-            !(null == v ? void 0 : v.loading);
+n.r(t), n.d(t, { default: () => m });
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    d = n(442837),
+    o = n(481060),
+    c = n(411935),
+    s = n(210218),
+    u = n(720983),
+    g = n(323540),
+    f = n(171524),
+    p = n(596446);
+function m(e) {
+    var t, n, l;
+    let { guildId: m, initialPageIndex: I = 0 } = e,
+        b = (0, d.e7)([s.Z], () => s.Z.getStorefrontData(m)),
+        v = (0, d.e7)([s.Z], () => s.Z.getStorefrontState(m)),
+        _ =
+            ((null == b ? void 0 : b.storefront) != null || (null == b ? void 0 : b.error)) &&
+            !(null == b ? void 0 : b.loading);
     if (
-        (l.useEffect(() => {
-            null == v && (0, c.Y)(p);
-        }, [p, v]),
-        l.useEffect(() => {
-            (0, c.K)(p, _);
-        }, [p, _]),
-        !x || (null == v ? void 0 : v.storefront) == null)
+        (r.useEffect(() => {
+            null == b && (0, c.Y)(m);
+        }, [m, b]),
+        r.useEffect(() => {
+            (0, c.K)(m, I);
+        }, [m, I]),
+        !_ || (null == b ? void 0 : b.storefront) == null)
     )
         return (0, a.jsx)("div", {
-            className: i()(m.spinner, m.container),
+            className: i()(p.spinner, p.container),
             children: (0, a.jsx)(o.$jN, {}),
         });
-    let h = null != (r = null == I ? void 0 : I.activePage) ? r : _;
+    let h = null != (l = null == v ? void 0 : v.activePage) ? l : I;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: m.container,
+                className: p.container,
                 children: [
                     (0, a.jsx)(u.Z, {
-                        guildId: p,
-                        storefront: v.storefront,
+                        guildId: m,
+                        storefront: b.storefront,
                         selectedPageIndex: h,
                     }),
                     (0, a.jsx)(g.$, {
-                        applicationId: v.storefront.applicationId,
-                        page: v.storefront.pages[h],
+                        applicationId: b.storefront.applicationId,
+                        guildId: m,
+                        page: b.storefront.pages[h],
                     }),
                 ],
             }),
             (0, a.jsx)(f.n, {
-                applicationId: v.storefront.applicationId,
+                applicationId: b.storefront.applicationId,
                 backgroundImageAssetId:
-                    null == (t = v.storefront.pages[h]) || null == (n = t.leaderboard)
+                    null == (n = b.storefront.pages[h]) || null == (t = n.leaderboard)
                         ? void 0
-                        : n.backgroundImageAssetId,
+                        : t.backgroundImageAssetId,
             }),
         ],
     });
