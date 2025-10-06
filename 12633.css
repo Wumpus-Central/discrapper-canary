@@ -26520,6 +26520,10 @@ span.clanTag__5d473 {
     overflow: hidden
 }
 
+.authedAppV2UserSettingsRedesign__50a54 {
+    background-color: var(--background-mod-subtle)
+}
+
 .header__50a54,
 .headerV2__50a54 {
     align-items: center;
@@ -76461,6 +76465,10 @@ div.nagbar_d74ef8 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     width: 100%
+}
+
+.connectionUserSettingsRedesign_c7f964 {
+    background-color: var(--background-mod-subtle)
 }
 
 .connectionHeader_c7f964 {

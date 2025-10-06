@@ -5,6 +5,7 @@ e.exports = {
     accountAddInner: "accountAddInner_c7f964",
     connectionList: "connectionList_c7f964",
     connection: "connection_c7f964",
+    connectionUserSettingsRedesign: "connectionUserSettingsRedesign_c7f964",
     connectionHeader: "connectionHeader_c7f964",
     connectionAccountValue: "connectionAccountValue_c7f964",
     connectionAccountLabelContainer: "connectionAccountLabelContainer_c7f964",
