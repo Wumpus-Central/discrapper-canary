@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(524825),
-    l = n(131193),
-    o = n(731965);
-function i(e) {
+var r = n(574583),
+    l = n(51835),
+    i = n(731965);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,8 +51,8 @@ let s = (0, l.F)((e, t) => ({
             var l;
             let { selectedUserIds: s } = t(),
                 c = new Set([...(null != (l = s[n]) ? l : new Set()), ...r]);
-            (0, o.j)(() => {
-                e({ selectedUserIds: a(i({}, s), { [n]: c }) });
+            (0, i.j)(() => {
+                e({ selectedUserIds: a(o({}, s), { [n]: c }) });
             });
         },
         removeUser: (n, r) => {
@@ -60,15 +60,15 @@ let s = (0, l.F)((e, t) => ({
                 s = l[n];
             if (null == s) return;
             let c = [...s].filter((e) => e !== r);
-            (0, o.j)(() => {
-                e({ selectedUserIds: a(i({}, l), { [n]: new Set(c) }) });
+            (0, i.j)(() => {
+                e({ selectedUserIds: a(o({}, l), { [n]: new Set(c) }) });
             });
         },
         clearSelection: (n) => {
             let { selectedUserIds: r } = t();
             null != r &&
-                (0, o.j)(() => {
-                    e({ selectedUserIds: a(i({}, r), { [n]: new Set() }) });
+                (0, i.j)(() => {
+                    e({ selectedUserIds: a(o({}, r), { [n]: new Set() }) });
                 });
         },
     })),

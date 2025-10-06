@@ -5,7 +5,7 @@ let r = (e) => Symbol.iterator in e,
         let n = e instanceof Map ? e : new Map(e.entries()),
             r = t instanceof Map ? t : new Map(t.entries());
         if (n.size !== r.size) return !1;
-        for (let [e, t] of n) if (!Object.is(t, r.get(e))) return !1;
+        for (let [e, t] of n) if (!r.has(e) || !Object.is(t, r.get(e))) return !1;
         return !0;
     },
     o = (e, t) => {
@@ -26,6 +26,7 @@ function s(e, t) {
             null !== e &&
             "object" == typeof t &&
             null !== t &&
+            Object.getPrototypeOf(e) === Object.getPrototypeOf(t) &&
             (r(e) && r(t)
                 ? i(e) && i(t)
                     ? a(e, t)

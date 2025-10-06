@@ -98,16 +98,8 @@ let o = (e) => (t) => {
                 });
             },
             p = i.setState;
-        i.setState = (e, t) => {
-            p(e, t), _();
-        };
-        let h = e(
-            (...e) => {
-                n(...e), _();
-            },
-            r,
-            i,
-        );
+        i.setState = (e, t) => (p(e, t), _());
+        let h = e((...e) => (n(...e), _()), r, i);
         i.getInitialState = () => h;
         let m = () => {
             var e, t;
@@ -123,7 +115,10 @@ let o = (e) => (t) => {
                     if (e)
                         if ("number" != typeof e.version || e.version === l.version) return [!1, e.state];
                         else {
-                            if (l.migrate) return [!0, l.migrate(e.state, e.version)];
+                            if (l.migrate) {
+                                let t = l.migrate(e.state, e.version);
+                                return t instanceof Promise ? t.then((e) => [!0, e]) : [!0, t];
+                            }
                             console.error(
                                 "State loaded from storage couldn't be migrated since no migrate function was provided",
                             );

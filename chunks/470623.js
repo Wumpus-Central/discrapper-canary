@@ -1,82 +1,82 @@
-i.d(t, {
-    AF: () => y,
-    oL: () => O,
-    xH: () => b,
+n.d(t, {
+    AF: () => j,
+    oL: () => y,
+    xH: () => _,
 }),
-    i(388685),
-    i(781311);
-var n = i(951288),
-    r = i(647438),
-    s = i(512722),
-    o = i.n(s),
-    l = i(131193),
-    a = i(731965),
-    d = i(430742),
-    c = i(752305),
-    u = i(592125),
-    h = i(703558),
-    p = i(883429),
-    g = i(228392);
-function m(e, t, i) {
+    n(388685),
+    n(781311);
+var r = n(951288),
+    i = n(647438),
+    l = n(512722),
+    a = n.n(l),
+    s = n(51835),
+    o = n(731965),
+    c = n(430742),
+    d = n(752305),
+    u = n(592125),
+    p = n(703558),
+    h = n(883429),
+    f = n(228392);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = i),
+            : (e[t] = n),
         e
     );
 }
-class f {
-    constructor(e, t, i) {
-        var n, r, s;
-        m(this, "channelId", void 0),
-            m(this, "_set", void 0),
-            m(this, "get", void 0),
-            m(this, "editorHeight", void 0),
-            m(this, "editorAdditionRowHeight", void 0),
-            m(this, "listViewCardHeights", void 0),
-            m(this, "cardHeightVersion", void 0),
-            m(this, "nameError", void 0),
-            m(this, "messageError", void 0),
-            m(this, "appliedTags", void 0),
-            m(this, "popoutOpen", void 0),
-            m(this, "guidelinesOpen", void 0),
-            m(this, "previewing", void 0),
-            m(this, "onboardingExpanded", void 0),
-            m(this, "submitting", void 0),
-            m(this, "formOpen", void 0),
-            m(this, "name", void 0),
-            m(this, "textAreaState", void 0),
-            m(this, "hasClickedForm", void 0),
-            m(this, "titleFocused", void 0),
-            m(this, "bodyFocused", void 0),
-            m(this, "set", void 0),
-            m(this, "setEditorHeight", void 0),
-            m(this, "setEditorAdditionRowHeight", void 0),
-            m(this, "setCardHeight", void 0),
-            m(this, "setNameError", void 0),
-            m(this, "setMessageError", void 0),
-            m(this, "toggleAppliedTag", void 0),
-            m(this, "setPopoutOpen", void 0),
-            m(this, "setGuidelinesOpen", void 0),
-            m(this, "setPreviewing", void 0),
-            m(this, "setSubmitting", void 0),
-            m(this, "setFormOpen", void 0),
-            m(this, "setOnboardingExpanded", void 0),
-            m(this, "setTitleFocused", void 0),
-            m(this, "setBodyFocused", void 0),
-            m(this, "setName", void 0),
-            m(this, "setTextAreaState", void 0),
-            m(this, "setHasClickedForm", void 0),
-            m(this, "resetFormState", void 0),
-            m(this, "setFormOpenFromUserAction", void 0),
+class m {
+    constructor(e, t, n) {
+        var r, i, l;
+        g(this, "channelId", void 0),
+            g(this, "_set", void 0),
+            g(this, "get", void 0),
+            g(this, "editorHeight", void 0),
+            g(this, "editorAdditionRowHeight", void 0),
+            g(this, "listViewCardHeights", void 0),
+            g(this, "cardHeightVersion", void 0),
+            g(this, "nameError", void 0),
+            g(this, "messageError", void 0),
+            g(this, "appliedTags", void 0),
+            g(this, "popoutOpen", void 0),
+            g(this, "guidelinesOpen", void 0),
+            g(this, "previewing", void 0),
+            g(this, "onboardingExpanded", void 0),
+            g(this, "submitting", void 0),
+            g(this, "formOpen", void 0),
+            g(this, "name", void 0),
+            g(this, "textAreaState", void 0),
+            g(this, "hasClickedForm", void 0),
+            g(this, "titleFocused", void 0),
+            g(this, "bodyFocused", void 0),
+            g(this, "set", void 0),
+            g(this, "setEditorHeight", void 0),
+            g(this, "setEditorAdditionRowHeight", void 0),
+            g(this, "setCardHeight", void 0),
+            g(this, "setNameError", void 0),
+            g(this, "setMessageError", void 0),
+            g(this, "toggleAppliedTag", void 0),
+            g(this, "setPopoutOpen", void 0),
+            g(this, "setGuidelinesOpen", void 0),
+            g(this, "setPreviewing", void 0),
+            g(this, "setSubmitting", void 0),
+            g(this, "setFormOpen", void 0),
+            g(this, "setOnboardingExpanded", void 0),
+            g(this, "setTitleFocused", void 0),
+            g(this, "setBodyFocused", void 0),
+            g(this, "setName", void 0),
+            g(this, "setTextAreaState", void 0),
+            g(this, "setHasClickedForm", void 0),
+            g(this, "resetFormState", void 0),
+            g(this, "setFormOpenFromUserAction", void 0),
             (this.channelId = e),
             (this._set = t),
-            (this.get = i),
+            (this.get = n),
             (this.editorHeight = 64),
             (this.editorAdditionRowHeight = 0),
             (this.listViewCardHeights = {}),
@@ -91,12 +91,12 @@ class f {
             (this.submitting = !1),
             (this.formOpen = !1),
             (this.name = ""),
-            (this.textAreaState = (0, c.eK)("")),
+            (this.textAreaState = (0, d.eK)("")),
             (this.hasClickedForm = !1),
             (this.titleFocused = !1),
             (this.bodyFocused = !1),
             (this.set = (e) => {
-                (0, a.j)(() => this._set(e));
+                (0, o.j)(() => this._set(e));
             }),
             (this.setEditorHeight = (e) => {
                 this.set({ editorHeight: e });
@@ -105,8 +105,8 @@ class f {
                 this.set({ editorAdditionRowHeight: e });
             }),
             (this.setCardHeight = (e, t) => {
-                let { listViewCardHeights: i, cardHeightVersion: n } = this.get();
-                i[e] !== t && ((i[e] = t), this.set({ cardHeightVersion: n + 1 }));
+                let { listViewCardHeights: n, cardHeightVersion: r } = this.get();
+                n[e] !== t && ((n[e] = t), this.set({ cardHeightVersion: r + 1 }));
             }),
             (this.setNameError = (e) => {
                 this.set({ nameError: e });
@@ -118,7 +118,7 @@ class f {
                 let { appliedTags: t } = this.get();
                 (t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
                     this.set({ appliedTags: t }),
-                    d.Z.changeThreadSettings(this.channelId, { appliedTags: t });
+                    c.Z.changeThreadSettings(this.channelId, { appliedTags: t });
             }),
             (this.setPopoutOpen = (e) => {
                 this.set({ popoutOpen: e });
@@ -133,7 +133,7 @@ class f {
                 this.set({ submitting: e });
             }),
             (this.setFormOpen = (e) => {
-                this.set({ formOpen: e }), p.Z.clearForumSearch(this.channelId);
+                this.set({ formOpen: e }), h.Z.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = (e) => {
                 this.set({ onboardingExpanded: e });
@@ -145,10 +145,10 @@ class f {
                 this.set({ bodyFocused: e });
             }),
             (this.setName = (e) => {
-                this.set({ name: e }), d.Z.changeThreadSettings(this.channelId, { name: e });
+                this.set({ name: e }), c.Z.changeThreadSettings(this.channelId, { name: e });
             }),
             (this.setTextAreaState = (e) => {
-                this.set({ textAreaState: e }), d.Z.saveDraft(this.channelId, e.textValue, h.d.FirstThreadMessage);
+                this.set({ textAreaState: e }), c.Z.saveDraft(this.channelId, e.textValue, p.d.FirstThreadMessage);
             }),
             (this.setHasClickedForm = (e) => {
                 this.set({ hasClickedForm: e });
@@ -158,17 +158,17 @@ class f {
                     t = null == e || null == e.template ? "" : e.template.trim();
                 this.set({
                     name: "",
-                    textAreaState: (0, c.eK)(t),
+                    textAreaState: (0, d.eK)(t),
                     appliedTags: new Set(),
                     hasClickedForm: !1,
                 }),
-                    p.Z.clearForumSearch(this.channelId);
+                    h.Z.clearForumSearch(this.channelId);
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
                 let e = u.Z.getChannel(this.channelId);
                 null != e &&
-                    (0, g.HR)({
+                    (0, f.HR)({
                         guildId: e.guild_id,
                         channelId: this.channelId,
                     }),
@@ -176,35 +176,35 @@ class f {
                         hasClickedForm: !0,
                         formOpen: !0,
                     }),
-                    p.Z.clearForumSearch(this.channelId);
+                    h.Z.clearForumSearch(this.channelId);
             });
-        let o = u.Z.getChannel(e);
-        if (null == o) return;
-        let l = null != (n = h.Z.getThreadSettings(o.id)) ? n : {},
-            f = null == o.template ? "" : o.template.trim(),
-            v = h.Z.getDraft(o.id, h.d.FirstThreadMessage),
-            O = (0, c.eK)(null != v && "" !== v.trim() ? v : f);
-        (this.name = null != (r = l.name) ? r : ""),
-            (s = new Set(l.appliedTags)),
-            (this.appliedTags = void 0 !== s ? s : new Set()),
-            (this.formOpen = this.name.length > 0 && O.textValue.length > 0),
-            (this.textAreaState = O);
+        let a = u.Z.getChannel(e);
+        if (null == a) return;
+        let s = null != (r = p.Z.getThreadSettings(a.id)) ? r : {},
+            m = null == a.template ? "" : a.template.trim(),
+            b = p.Z.getDraft(a.id, p.d.FirstThreadMessage),
+            y = (0, d.eK)(null != b && "" !== b.trim() ? b : m);
+        (this.name = null != (i = s.name) ? i : ""),
+            (l = new Set(s.appliedTags)),
+            (this.appliedTags = void 0 !== l ? l : new Set()),
+            (this.formOpen = this.name.length > 0 && y.textValue.length > 0),
+            (this.textAreaState = y);
     }
 }
-let v = r.createContext(null);
-function O(e) {
-    let { children: t, channel: i } = e,
-        s = r.useMemo(() => (0, l.F)((e, t) => new f(i.id, e, t)), [i]);
-    return (0, n.jsx)(v.Provider, {
-        value: s,
+let b = i.createContext(null);
+function y(e) {
+    let { children: t, channel: n } = e,
+        l = i.useMemo(() => (0, s.F)((e, t) => new m(n.id, e, t)), [n]);
+    return (0, r.jsx)(b.Provider, {
+        value: l,
         children: t,
     });
 }
-function b(e, t) {
-    let i = r.useContext(v);
-    return o()(null != i, "[useForumPostComposerStore] Context should not be null"), i(e, t);
+function _(e, t) {
+    let n = i.useContext(b);
+    return a()(null != n, "[useForumPostComposerStore] Context should not be null"), n(e, t);
 }
-function y() {
-    let e = r.useContext(v);
-    return o()(null != e, "[useForumPostComposerStore] Context should not be null"), e;
+function j() {
+    let e = i.useContext(b);
+    return a()(null != e, "[useForumPostComposerStore] Context should not be null"), e;
 }
