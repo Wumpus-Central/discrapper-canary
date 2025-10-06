@@ -185,10 +185,10 @@ let T = new Map([
             7,
             {
                 priority: 150,
-                tooltipHeader: () => o.intl.string(a.default.aOLJDw),
+                tooltipHeader: () => o.intl.string(a.default.NMYKsr),
                 tooltipDescription: (e) => (e ? o.intl.string(a.default.c9BHsr) : o.intl.string(a.default["85PtWl"])),
-                sectionHeader: (e) => o.intl.formatToPlainString(a.default.SIgpS0, { count: e }),
-                sectionDescription: (e) => (e ? o.intl.string(a.default.c9BHsr) : o.intl.string(a.default["85PtWl"])),
+                sectionHeader: (e) => o.intl.formatToPlainString(a.default.FPViWF, { amount: e }),
+                sectionDescription: (e) => (e ? o.intl.string(a.default.cqIdqa) : o.intl.string(a.default["85PtWl"])),
             },
         ],
     ]);

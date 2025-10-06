@@ -93,22 +93,23 @@ function G(e) {
         s = (0, y.Z)(),
         c = (0, g.ws)(t),
         d = (0, g.C7)(t),
-        { loadMore: h, isMoreLoading: E } = (0, m.G)({ onError: a }),
-        b = (0, f.E2)(n).get(t),
-        [O, v] = i.useState(R.iB),
-        S = (0, p.Xi)({ location: "family_center_activity_section_web" }),
-        A = i.useCallback(() => {
-            v((e) => e + R.iB), h(t);
-        }, [t, h]);
-    o()(b, "No text for action type: ".concat(t));
-    let C = b.sectionHeader(d),
-        N = i.useCallback(
+        h = (0, g.A)(t),
+        { loadMore: E, isMoreLoading: b } = (0, m.G)({ onError: a }),
+        O = (0, f.E2)(n).get(t),
+        [v, S] = i.useState(R.iB),
+        A = (0, p.Xi)({ location: "family_center_activity_section_web" }),
+        C = i.useCallback(() => {
+            S((e) => e + R.iB), E(t);
+        }, [t, E]);
+    o()(O, "No text for action type: ".concat(t));
+    let N = t === R.MY.PURCHASES && null != h ? O.sectionHeader(h) : O.sectionHeader(d),
+        P = i.useCallback(
             (e) => {
                 let { row: t } = e,
                     n = c[t];
                 if ((0, f.iB)(n)) {
                     let e = u.default.extractTimestamp(n.event_id),
-                        t = (0, f.LI)(e, b.timestampFormatter);
+                        t = (0, f.LI)(e, O.timestampFormatter);
                     return (0, r.jsx)(
                         T.Z,
                         {
@@ -120,9 +121,9 @@ function G(e) {
                 }
                 if ((0, f.f0)(n)) return (0, r.jsx)(I.Z, { guildId: n.entity_id }, n.event_id);
             },
-            [c, b.timestampFormatter],
+            [c, O.timestampFormatter],
         ),
-        P = i.useCallback(
+        x = i.useCallback(
             () =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -130,37 +131,37 @@ function G(e) {
                             className: L.sectionHeader,
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: C,
+                            children: N,
                         }),
-                        void 0 !== b.sectionDescription
+                        void 0 !== O.sectionDescription
                             ? (0, r.jsx)(l.Text, {
                                   className: L.sectionDescription,
                                   variant: "text-md/medium",
                                   color: "text-muted",
-                                  children: b.sectionDescription(null != s && s, S),
+                                  children: O.sectionDescription(null != s && s, A),
                               })
                             : null,
                     ],
                 }),
-            [C, b, s, S],
+            [N, O, s, A],
         );
     if (0 === c.length) return null;
-    let x = c.slice(0, O);
+    let M = c.slice(0, v);
     return (0, r.jsxs)("div", {
         className: L.actionSection,
         children: [
-            P(),
+            x(),
             (0, r.jsx)("div", {
                 className: L.actions,
-                style: { maxHeight: x.length * k },
-                children: x.map((e, t) => N({ row: t })),
+                style: { maxHeight: M.length * k },
+                children: M.map((e, t) => P({ row: t })),
             }),
-            x.length !== d
+            M.length !== d
                 ? (0, r.jsx)(l.P3F, {
                       className: L.loadMoreBar,
-                      onClick: A,
+                      onClick: C,
                       role: "button",
-                      children: E
+                      children: b
                           ? (0, r.jsx)(l.$jN, {
                                 type: l.$jN.Type.PULSING_ELLIPSIS,
                                 className: L.spinner,
@@ -169,7 +170,7 @@ function G(e) {
                                 className: L.loadMore,
                                 variant: "text-sm/bold",
                                 children: D.intl.format(w.default["7dMmJS"], {
-                                    pageSize: Math.min(d - x.length, R.iB),
+                                    pageSize: Math.min(d - M.length, R.iB),
                                 }),
                             }),
                   })

@@ -109,31 +109,34 @@ async function g() {
 }
 let E = {
     async initialPageLoad() {
-        var e, t, n, i, o, s;
+        var e, t, n, i, o, s, l, c, u, f;
         a.Z.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let { body: l } = await r.tn.get({
+        let { body: _ } = await r.tn.get({
                 url: d.ANM.FAMILY_CENTER_TEEN_ACTIVITY_ME,
                 rejectWithError: !1,
             }),
-            { teen_audit_log: c, linked_users: u, users: f } = l,
-            _ = {
-                teenId: null == c ? void 0 : c.teen_user_id,
-                rangeStartId: null == c ? void 0 : c.range_start_id,
-                totals: null != (e = null == c ? void 0 : c.totals) ? e : {},
-                actions: null != (t = null == c ? void 0 : c.actions) ? t : [],
-                users: null != (n = null == c ? void 0 : c.users) ? n : [],
-                guilds: null != (i = null == c ? void 0 : c.guilds) ? i : [],
-                topUserActivities: null != (o = null == c ? void 0 : c.top_user_activities) ? o : [],
-                topGuildActivities: null != (s = null == c ? void 0 : c.top_guild_activities) ? s : [],
+            { teen_audit_log: p, linked_users: h, users: m } = _,
+            g = {
+                teenId: null == p ? void 0 : p.teen_user_id,
+                rangeStartId: null == p ? void 0 : p.range_start_id,
+                totals: null != (n = null == p ? void 0 : p.totals) ? n : {},
+                actions: null != (i = null == p ? void 0 : p.actions) ? i : [],
+                users: null != (o = null == p ? void 0 : p.users) ? o : [],
+                guilds: null != (s = null == p ? void 0 : p.guilds) ? s : [],
+                topUserActivities: null != (l = null == p ? void 0 : p.top_user_activities) ? l : [],
+                topGuildActivities: null != (c = null == p ? void 0 : p.top_guild_activities) ? c : [],
+                totalSpendAmount: null != (u = null == p || null == (e = p.total_spend) ? void 0 : e.amount) ? u : null,
+                totalSpendCurrency:
+                    null != (f = null == p || null == (t = p.total_spend) ? void 0 : t.currency) ? f : null,
             };
         return (
             a.Z.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
-                familyCenterTeenActivity: _,
-                linkedUsers: u,
-                users: f,
+                familyCenterTeenActivity: g,
+                linkedUsers: h,
+                users: m,
             }),
-            _
+            g
         );
     },
     async fetchLinkedUsers() {
@@ -163,47 +166,53 @@ let E = {
         return a.Z.dispatch(_({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" }, i)), i;
     },
     async fetchTeenActivity(e) {
-        var t, n;
+        var t, n, i, o, s, l;
         a.Z.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let i = d.ANM.FAMILY_CENTER_TEEN_ACTIVITY(e),
-            { body: o } = await r.tn.get({
-                url: i,
+        let c = d.ANM.FAMILY_CENTER_TEEN_ACTIVITY(e),
+            { body: u } = await r.tn.get({
+                url: c,
                 rejectWithError: !1,
             }),
-            s = o.teen_audit_log,
-            l = {
-                teenId: s.teen_user_id,
-                rangeStartId: s.range_start_id,
-                totals: s.totals,
-                actions: s.actions,
-                users: s.users,
-                guilds: s.guilds,
-                topUserActivities: null != (t = s.top_user_activities) ? t : [],
-                topGuildActivities: null != (n = s.top_guild_activities) ? n : [],
+            f = u.teen_audit_log,
+            _ = {
+                teenId: f.teen_user_id,
+                rangeStartId: f.range_start_id,
+                totals: f.totals,
+                actions: f.actions,
+                users: f.users,
+                guilds: f.guilds,
+                topUserActivities: null != (i = f.top_user_activities) ? i : [],
+                topGuildActivities: null != (o = f.top_guild_activities) ? o : [],
+                totalSpendAmount: null != (s = null == f || null == (t = f.total_spend) ? void 0 : t.amount) ? s : null,
+                totalSpendCurrency:
+                    null != (l = null == f || null == (n = f.total_spend) ? void 0 : n.currency) ? l : null,
             };
         return (
             a.Z.dispatch({
                 type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS",
-                familyCenterTeenActivity: l,
+                familyCenterTeenActivity: _,
             }),
-            l
+            _
         );
     },
     async fetchMoreTeenActivity(e, t, n, i) {
-        var o, s;
-        let { body: c } = await r.tn.get({
+        var o, s, c, f, _, p;
+        let { body: h } = await r.tn.get({
                 url: d.ANM.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, i),
                 rejectWithError: !1,
             }),
-            { teen_audit_log: f } = c,
-            _ = {
-                teenId: f.teen_user_id,
-                rangeStartId: f.range_start_id,
-                actions: f.actions,
-                users: f.users,
-                guilds: f.guilds,
-                topUserActivities: null != (o = f.top_user_activities) ? o : [],
-                topGuildActivities: null != (s = f.top_guild_activities) ? s : [],
+            { teen_audit_log: m } = h,
+            g = {
+                teenId: m.teen_user_id,
+                rangeStartId: m.range_start_id,
+                actions: m.actions,
+                users: m.users,
+                guilds: m.guilds,
+                topUserActivities: null != (c = m.top_user_activities) ? c : [],
+                topGuildActivities: null != (f = m.top_guild_activities) ? f : [],
+                totalSpendAmount: null != (_ = null == m || null == (o = m.total_spend) ? void 0 : o.amount) ? _ : null,
+                totalSpendCurrency:
+                    null != (p = null == m || null == (s = m.total_spend) ? void 0 : s.currency) ? p : null,
             };
         return (
             l.default.track(d.rMx.FAMILY_CENTER_ACTION, {
@@ -213,9 +222,9 @@ let E = {
             }),
             a.Z.dispatch({
                 type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS",
-                familyCenterTeenActivity: _,
+                familyCenterTeenActivity: g,
             }),
-            f
+            m
         );
     },
     selectTab(e) {
