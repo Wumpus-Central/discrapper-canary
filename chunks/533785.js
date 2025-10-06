@@ -1,23 +1,23 @@
-t.d(n, { t: () => i }), t(953529);
-var a = t(951288),
-    l = t(481060),
-    r = t(64208);
+n.d(t, { t: () => i }), n(953529);
+var a = n(951288),
+    r = n(481060),
+    l = n(661009);
 function i(e) {
-    let { leaderboard: n } = e;
-    return null == n
+    let { leaderboard: t } = e;
+    return null == t
         ? null
         : (0, a.jsxs)("div", {
-              className: r.textContainer,
+              className: l.textContainer,
               children: [
-                  (0, a.jsx)(l.Text, {
+                  (0, a.jsx)(r.Text, {
                       variant: "display-lg",
                       color: "text-primary",
-                      children: n.title,
+                      children: t.title,
                   }),
-                  (0, a.jsx)(l.X6q, {
+                  (0, a.jsx)(r.X6q, {
                       variant: "heading-lg/semibold",
                       color: "text-secondary",
-                      children: n.description,
+                      children: t.description,
                   }),
               ],
           });

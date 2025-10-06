@@ -18,8 +18,8 @@ var r = n(951288),
     O = n(933557),
     E = n(287746),
     v = n(388032),
-    y = n(952713),
-    I = n(998603);
+    y = n(10832),
+    I = n(419246);
 function S(e) {
     let { channel: t, baseChannelId: n } = e,
         S = (0, O.ZP)(t),

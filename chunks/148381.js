@@ -6,8 +6,8 @@ var r = n(951288),
     o = n(481060),
     a = n(493773),
     c = n(958707),
-    d = n(79985),
-    u = n(378671);
+    d = n(542257),
+    u = n(308300);
 function f(e) {
     let { title: t, scrollerClassName: n, scrollerInnerClassName: l, children: f } = e,
         m = i.useRef(null),

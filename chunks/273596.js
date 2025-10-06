@@ -20,7 +20,7 @@ var r = n(951288),
     v = n(188493),
     y = n(294330),
     I = n(981631),
-    S = n(17923);
+    S = n(857847);
 let C = Object.freeze({
         top: 0,
         bottom: 0,

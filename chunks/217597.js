@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(28664),
     l = n(481060),
-    s = n(704210);
+    s = n(49792);
 function a(e) {
     let { label: t, sublabel: n, value: a, additionalContent: o, tooltip: c } = e;
     return (0, r.jsxs)("div", {
