@@ -1,29 +1,30 @@
-t.d(n, { Z: () => f });
+t.d(n, { Z: () => x });
 var r = t(951288),
     a = t(647438),
     i = t(481060),
     o = t(239091),
     s = t(100527),
-    l = t(639777),
-    c = t(809741),
-    d = t(473682),
-    u = t(401561),
-    m = t(388032),
-    b = t(587983);
-let g = {
+    l = t(49012),
+    c = t(639777),
+    d = t(809741),
+    u = t(473682),
+    m = t(440589),
+    b = t(388032),
+    g = t(412247);
+let f = {
     steps: {
-        [d.Vb.SERVER_SETTINGS]: {
+        [u.Vb.SERVER_SETTINGS]: {
             onBack: { type: "close" },
             onNext: { type: "save" },
         },
     },
 };
-function f(e) {
+function x(e) {
     let { guildId: n, instance: t } = e,
-        d = a.useRef(null);
-    return (0, l.Z)(n)
+        x = a.useRef(null);
+    return (0, c.Z)(n)
         ? (0, r.jsx)(i.yRy, {
-              targetElementRef: d,
+              targetElementRef: x,
               align: "top",
               position: "right",
               animationPosition: "bottom",
@@ -35,24 +36,27 @@ function f(e) {
                       onClose: () => {
                           (0, o.Zy)(), a();
                       },
-                      "aria-label": m.intl.string(u.default.xCq1DA),
+                      "aria-label": b.intl.string(m.default.xCq1DA),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
-                              (0, r.jsx)(i.sNh, {
-                                  id: "get-support",
-                                  icon: i.kBi,
-                                  label: m.intl.string(u.default["TciV8/"]),
-                                  action: () => {},
-                              }),
+                              null != t.providerType &&
+                                  (0, r.jsx)(i.sNh, {
+                                      id: "get-support",
+                                      icon: i.kBi,
+                                      label: b.intl.string(m.default["TciV8/"]),
+                                      action: () => {
+                                          (0, l.q)({ href: u.BH[t.providerType] });
+                                      },
+                                  }),
                               (0, r.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
-                                  label: m.intl.string(u.default.NUTl4u),
+                                  label: b.intl.string(m.default.NUTl4u),
                                   action: () => {
-                                      (0, c.Z)({
+                                      (0, d.Z)({
                                           guildId: n,
-                                          stepConfig: g,
+                                          stepConfig: f,
                                           initialPortkeyInstance: t,
                                           analyticsLocation: s.Z.PORTKEY_OVERVIEW,
                                       });
@@ -92,14 +96,14 @@ function f(e) {
                           return e;
                       })(
                           {
-                              "aria-label": m.intl.string(m.t.UKOtz8),
-                              className: b.clickable,
+                              "aria-label": b.intl.string(b.t.UKOtz8),
+                              className: g.clickable,
                           },
                           e,
                       )),
                       (t = t =
                           {
-                              innerRef: d,
+                              innerRef: x,
                               children: (0, r.jsx)(i.xhG, {
                                   color: "currentColor",
                                   size: "sm",
