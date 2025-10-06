@@ -23,24 +23,23 @@ let c = o.tI.PRESET_VIDEO,
     f = !0;
 function _(e) {
     let { settings: t } = e;
-    if ((null == t ? void 0 : t.context) === s.Yn.STREAM) {
-        if (
-            (null == t ? void 0 : t.qualityOptions) == null ||
-            (null == t ? void 0 : t.qualityOptions.resolution) == null ||
-            (null == t ? void 0 : t.qualityOptions.frameRate) == null
-        )
-            return !1;
-        (u = t.qualityOptions.resolution), (d = t.qualityOptions.frameRate);
-    }
+    if ((null == t ? void 0 : t.context) !== s.Yn.STREAM || (null == t ? void 0 : t.qualityOptions) == null) return !1;
+    let n = !1;
+    return (
+        c !== t.qualityOptions.preset && ((c = t.qualityOptions.preset), (n = !0)),
+        u !== t.qualityOptions.resolution && ((u = t.qualityOptions.resolution), (n = !0)),
+        d !== t.qualityOptions.frameRate && ((d = t.qualityOptions.frameRate), (n = !0)),
+        n
+    );
 }
 function p(e) {
     let { preset: t, resolution: n, frameRate: r, soundshareEnabled: i } = e,
         a = !1;
     return (
-        null != t && ((c = t), (a = !0)),
-        null != n && ((u = n), (a = !0)),
-        null != r && ((d = r), (a = !0)),
-        null != i && ((f = i), (a = !0)),
+        null != t && t !== c && ((c = t), (a = !0)),
+        null != n && n !== u && ((u = n), (a = !0)),
+        null != r && r !== d && ((d = r), (a = !0)),
+        null != i && i !== f && ((f = i), (a = !0)),
         a
     );
 }
