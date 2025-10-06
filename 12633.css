@@ -72989,12 +72989,13 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .container__99d5f {
     background-color: var(--background-secondary-alt);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-lg);
     display: flex;
     filter: saturate(var(--saturation-factor, 1));
     justify-content: space-between;
     max-width: 1066px;
     overflow: hidden;
+    padding: var(--space-12);
     position: relative;
     width: 100%
 }
@@ -73019,6 +73020,10 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .giftButtonContainer__99d5f {
     margin-top: var(--space-24)
+}
+
+.gradientBackground__99d5f:before {
+    opacity: .3
 }
 
 .container_ce5f0d {

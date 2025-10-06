@@ -17,35 +17,62 @@ var i = n(120356),
 let g = (e) => {
     let { className: t, location: n, analyticsLocation: i } = e,
         g = (0, c.ZP)({ location: "GiftNitro" }),
-        { analyticsLocations: E } = (0, l.ZP)(n),
-        b = g ? p : _;
-    return (0, r.jsx)(l.Gt, {
-        value: E,
-        children: (0, r.jsxs)("div", {
-            className: a()(b.container, t),
-            children: [
-                (0, r.jsxs)("div", {
-                    className: b.textContainer,
-                    children: [
-                        (0, r.jsx)(s.X6q, {
-                            variant: "heading-lg/extrabold",
-                            className: b.heading,
-                            children: f.intl.string(f.t.Ve9Ge3),
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-sm/medium",
-                            children: f.intl.string(f.t.yQ06u7),
-                        }),
-                        g
-                            ? (0, r.jsx)("div", {
+        { analyticsLocations: E } = (0, l.ZP)(n);
+    return g
+        ? (0, r.jsx)(l.Gt, {
+              value: E,
+              children: (0, r.jsxs)(s.$1m, {
+                  className: a()(p.container, p.gradientBackground, t),
+                  color: "purple",
+                  children: [
+                      (0, r.jsxs)("div", {
+                          className: p.textContainer,
+                          children: [
+                              (0, r.jsx)(s.X6q, {
+                                  variant: "heading-xxl/bold",
+                                  className: p.heading,
+                                  children: f.intl.string(f.t.Ve9Ge3),
+                              }),
+                              (0, r.jsx)(s.Text, {
+                                  variant: "text-md/medium",
+                                  children: f.intl.string(f.t.yQ06u7),
+                              }),
+                              (0, r.jsx)("div", {
                                   className: p.giftButtonContainer,
                                   children: (0, r.jsx)(d.Z, {
                                       buttonTextOverride: f.intl.string(f.t.Ve9Ge3),
                                       premiumModalAnalyticsLocation: i,
                                       variant: "secondary",
                                   }),
-                              })
-                            : (0, r.jsx)(u.Z, {
+                              }),
+                          ],
+                      }),
+                      (0, r.jsx)("img", {
+                          src: m.Z,
+                          className: p.bannerImage,
+                          alt: "gift nitro banner",
+                      }),
+                  ],
+              }),
+          })
+        : (0, r.jsx)(l.Gt, {
+              value: E,
+              children: (0, r.jsxs)("div", {
+                  className: a()(_.container, t),
+                  children: [
+                      (0, r.jsxs)("div", {
+                          className: _.textContainer,
+                          children: [
+                              (0, r.jsx)(s.X6q, {
+                                  variant: "heading-lg/extrabold",
+                                  className: _.heading,
+                                  children: f.intl.string(f.t.Ve9Ge3),
+                              }),
+                              (0, r.jsx)(s.Text, {
+                                  variant: "text-sm/medium",
+                                  children: f.intl.string(f.t.yQ06u7),
+                              }),
+                              (0, r.jsx)(u.Z, {
                                   className: _.giftCardButton,
                                   textOptions: {
                                       textOverride: f.intl.string(f.t.Ve9Ge3),
@@ -54,14 +81,14 @@ let g = (e) => {
                                   color: o.zx.Colors.CUSTOM,
                                   premiumModalAnalyticsLocation: i,
                               }),
-                    ],
-                }),
-                (0, r.jsx)("img", {
-                    src: g ? m.Z : h,
-                    className: b.bannerImage,
-                    alt: "gift nitro banner",
-                }),
-            ],
-        }),
-    });
+                          ],
+                      }),
+                      (0, r.jsx)("img", {
+                          src: h,
+                          className: _.bannerImage,
+                          alt: "gift nitro banner",
+                      }),
+                  ],
+              }),
+          });
 };
