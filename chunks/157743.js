@@ -1,55 +1,55 @@
-n.d(a, { default: () => d });
-var s = n(951288);
-n(647438);
-var r = n(481060),
-    o = n(918125),
-    t = n(488131),
-    c = n(124368),
-    i = n(388032),
-    l = n(997285);
-function d(e) {
-    let { guildId: a, onClose: n, transitionState: d } = e;
-    return (0, s.jsx)(r.Y0X, {
-        className: l.modal,
-        transitionState: d,
-        "aria-label": i.intl.string(i.t.B2panJ),
-        size: r.CgR.DYNAMIC,
-        parentComponent: "GuildActiveThreadsModal",
-        children: (0, s.jsxs)("div", {
-            className: l.container,
-            children: [
-                (0, s.jsxs)("div", {
-                    className: l.header,
-                    children: [
-                        (0, s.jsx)(r.or_, {
-                            size: "md",
-                            color: "currentColor",
-                            className: l.threadIcon,
-                        }),
-                        (0, s.jsx)(r.X6q, {
-                            variant: "heading-md/semibold",
-                            className: l.__invalid_title,
-                            children: i.intl.string(i.t["dOWb+f"]),
-                        }),
-                        (0, s.jsx)("div", { className: l.spacer }),
-                        (0, s.jsx)(r.P3F, {
-                            className: l.closeIcon,
-                            onClick: n,
-                            "aria-label": i.intl.string(i.t.cpT0Cg),
-                            children: (0, s.jsx)(r.Dio, {
-                                size: "md",
-                                color: "currentColor",
-                            }),
-                        }),
-                    ],
-                }),
-                (0, s.jsx)(o.Z, {
-                    guildId: a,
-                    goToThread: (e, a) => {
-                        n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL);
+e.d(n, { default: () => d });
+var i = e(951288),
+    o = e(647438),
+    r = e(159691),
+    a = e(235449),
+    s = e(300234),
+    c = e(488131),
+    l = e(124368),
+    u = e(388032);
+function d(t) {
+    let { guildId: n, onClose: e, transitionState: d } = t,
+        h = (0, a.nA)(n),
+        p = o.useCallback(
+            (t, n) => {
+                e(), (0, c.ok)(t, !n, l.on.GUILD_ACTIVE_THREADS_MODAL);
+            },
+            [e],
+        ),
+        k = o.useCallback(
+            (t) => {
+                let n = h[t.row];
+                return (0, i.jsx)(
+                    s.Z,
+                    {
+                        threadId: n,
+                        goToThread: p,
+                        showChannelName: !0,
                     },
-                }),
-            ],
-        }),
+                    "".concat(t.section, "-").concat(t.row),
+                );
+            },
+            [h, p],
+        );
+    return (0, i.jsx)(r.u_l, {
+        title: u.intl.string(u.t["dOWb+f"]),
+        actions: [
+            {
+                text: u.intl.string(u.t.cpT0Cg),
+                onClick: e,
+                variant: "primary",
+            },
+        ],
+        onClose: e,
+        transitionState: d,
+        listProps: {
+            fade: !0,
+            sections: [h.length],
+            renderSection: () => null,
+            sectionHeight: 0,
+            rowHeight: 80,
+            renderRow: k,
+            chunkSize: 20,
+        },
     });
 }
