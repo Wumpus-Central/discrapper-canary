@@ -1,69 +1,65 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(399606),
-    o = n(481060),
-    a = n(594174),
+    a = n(481060),
+    o = n(594174),
     s = n(277537),
     l = n(785681),
-    c = n(780985),
-    u = n(631885),
-    d = n(552045),
-    f = n(87792),
-    _ = n(302289),
-    p = n(946690),
-    h = n(369954),
-    m = n(292352),
-    g = n(345909),
-    E = n(388032),
-    b = n(862964);
-let y = () => {
-    let e = (0, u.mq)(m.ne.ACTIVE),
-        t = e.length > 0,
-        n = (0, s.PO)("family_center_activity_page"),
-        y = (0, c.cz)(),
-        O = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        v = (0, l.o)(E.intl.string(g.default["5RZ8Tk"]), E.intl.string(g.default.bmhCnJ)),
-        I = (0, l.o)(E.intl.string(g.default.XKnFFh), E.intl.string(g.default["68zfxM"])),
-        T = (0, l.o)(E.intl.string(g.default["Rm/6a2"]), E.intl.string(g.default["1xPTwM"]));
-    return void 0 === O
+    c = n(631885),
+    u = n(552045),
+    d = n(87792),
+    f = n(302289),
+    _ = n(946690),
+    p = n(369954),
+    h = n(292352),
+    m = n(345909),
+    g = n(388032),
+    E = n(862964);
+let b = () => {
+    let e = (0, c.mq)(h.ne.ACTIVE).length > 0,
+        t = (0, s.PO)("family_center_activity_page"),
+        n = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        b = (0, l.o)(g.intl.string(m.default["5RZ8Tk"]), g.intl.string(m.default.bmhCnJ)),
+        y = (0, l.o)(g.intl.string(m.default.XKnFFh), g.intl.string(m.default["68zfxM"])),
+        O = (0, l.o)(g.intl.string(m.default["Rm/6a2"]), g.intl.string(m.default["1xPTwM"]));
+    return void 0 === n
         ? null
         : (0, r.jsxs)("div", {
-              className: b.container,
+              className: E.container,
               children: [
-                  n && t
+                  t && e
                       ? null
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: b.banner,
-                                    children: (0, r.jsx)(d.Z, {}),
+                                    className: E.banner,
+                                    children: (0, r.jsx)(u.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: b.featureCards,
+                                    className: E.featureCards,
                                     children: [
-                                        (0, r.jsx)(p.Z, {
-                                            icon: o.eQA,
-                                            header: E.intl.string(g.default["001l3t"]),
-                                            description: v,
+                                        (0, r.jsx)(_.Z, {
+                                            icon: a.eQA,
+                                            header: g.intl.string(m.default["001l3t"]),
+                                            description: b,
                                         }),
-                                        (0, r.jsx)(p.Z, {
-                                            icon: o.tEF,
-                                            header: E.intl.string(g.default.yipAeH),
-                                            description: I,
+                                        (0, r.jsx)(_.Z, {
+                                            icon: a.tEF,
+                                            header: g.intl.string(m.default.yipAeH),
+                                            description: y,
                                         }),
-                                        (0, r.jsx)(p.Z, {
-                                            icon: o.IkH,
-                                            header: E.intl.string(g.default.hhOuMT),
-                                            description: T,
+                                        (0, r.jsx)(_.Z, {
+                                            icon: a.IkH,
+                                            header: g.intl.string(m.default.hhOuMT),
+                                            description: O,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                  t ? null : (0, r.jsx)(_.Z, {}),
-                  void 0 !== y && e.length > 0 ? (0, r.jsx)(f.Z, { user: y }) : null,
-                  (0, r.jsx)(h.J, {}),
+                  e ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(f.Z, {}),
+                  (0, r.jsx)(p.J, {}),
               ],
           });
 };
