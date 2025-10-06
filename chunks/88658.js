@@ -1,38 +1,44 @@
 n.d(t, {
-    $6: () => p,
-    QB: () => h,
-    YK: () => c,
-    _o: () => d,
-    bL: () => _,
-    gl: () => u,
-    rr: () => f,
+    $6: () => g,
+    Aj: () => b,
+    QB: () => E,
+    YK: () => f,
+    _o: () => p,
+    bL: () => m,
+    gl: () => _,
+    rr: () => h,
 }),
-    n(388685);
+    n(388685),
+    n(784620),
+    n(973216);
 var r = n(367907),
     i = n(695346),
-    a = n(486472),
-    o = n(430824),
-    s = n(981631);
+    a = n(526665),
+    o = n(486472),
+    s = n(430824),
+    l = n(819640),
+    c = n(585483),
+    u = n(981631);
 n(388032);
-let l = 86400000 * s.eBq;
-function c() {
-    let e = i.h2.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
-}
-function u() {
-    let e = i.zA.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
-}
-function d() {
-    let e = i.SE.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
-}
+let d = 86400000 * u.eBq;
 function f() {
-    let e = i.iH.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
+    let e = i.h2.getSetting();
+    return 0 === o.Z.totalUnavailableGuilds && (e = e.filter((e) => null != s.Z.getGuild(e))), new Set(e);
 }
-function _(e) {
-    return (e & s.HGf) === s.HGf
+function _() {
+    let e = i.zA.getSetting();
+    return 0 === o.Z.totalUnavailableGuilds && (e = e.filter((e) => null != s.Z.getGuild(e))), new Set(e);
+}
+function p() {
+    let e = i.SE.getSetting();
+    return 0 === o.Z.totalUnavailableGuilds && (e = e.filter((e) => null != s.Z.getGuild(e))), new Set(e);
+}
+function h() {
+    let e = i.iH.getSetting();
+    return 0 === o.Z.totalUnavailableGuilds && (e = e.filter((e) => null != s.Z.getGuild(e))), new Set(e);
+}
+function m(e) {
+    return (e & u.HGf) === u.HGf
         ? {
               all: !0,
               mutualFriends: !0,
@@ -40,22 +46,28 @@ function _(e) {
           }
         : {
               all: !1,
-              mutualFriends: (e & s.SOq.MUTUAL_FRIENDS) === s.SOq.MUTUAL_FRIENDS,
-              mutualGuilds: (e & s.SOq.MUTUAL_GUILDS) === s.SOq.MUTUAL_GUILDS,
+              mutualFriends: (e & u.SOq.MUTUAL_FRIENDS) === u.SOq.MUTUAL_FRIENDS,
+              mutualGuilds: (e & u.SOq.MUTUAL_GUILDS) === u.SOq.MUTUAL_GUILDS,
           };
 }
-function p(e, t) {
-    return !!(!t.verified || t.isStaff()) || (null != e && l > Date.now() - new Date(e.created_at).getTime());
+function g(e, t) {
+    return !!(!t.verified || t.isStaff()) || (null != e && d > Date.now() - new Date(e.created_at).getTime());
 }
-function h(e) {
-    let { destinationPane: t, originPane: n, source: i, subsection: a, locationStack: o, applicationId: l } = e;
-    r.ZP.trackWithMetadata(s.rMx.SETTINGS_PANE_VIEWED, {
+function E(e) {
+    let { destinationPane: t, originPane: n, source: i, subsection: a, locationStack: o, applicationId: s } = e;
+    r.ZP.trackWithMetadata(u.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: "user",
         origin_pane: n,
         destination_pane: t,
         location_stack: o,
         source: i,
         subsection: a,
-        application_id: l,
+        application_id: s,
     });
+}
+function b(e) {
+    let t = (0, a.yP)("shakeUserSettings"),
+        n = l.Z.getLayers().at(-1) === u.S9g.USER_SETTINGS,
+        r = t && !n ? u.CkL.SHAKE_SETTINGS_MODAL : u.CkL.SHAKE_APP;
+    c.S.dispatch(r, e);
 }

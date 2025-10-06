@@ -55821,9 +55821,9 @@ h3.improved__1689b:after {
 }
 
 .container_fcf29c[data-emphasized=true] {
-    background-color: var(--background-feedback-critical);
+    background-color: var(--notice-background-critical);
     border-color: var(--border-feedback-critical);
-    color: var(--text-feedback-critical)
+    color: var(--notice-text-critical)
 }
 
 .flexContainer_fcf29c {
@@ -55851,9 +55851,9 @@ h3.improved__1689b:after {
 
 .message_fcf29c {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

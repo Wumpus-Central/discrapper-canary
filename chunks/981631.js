@@ -3570,6 +3570,7 @@ var tV = (function (e) {
             (e.QUEST_GAME_LINK_OPENED = "QUEST_GAME_LINK_OPENED"),
             (e.OPEN_VOICE_FILTER_POPOUT = "OPEN_VOICE_FILTER_POPOUT"),
             (e.SHAKE_PROFILE_MODAL = "SHAKE_PROFILE_MODAL"),
+            (e.SHAKE_SETTINGS_MODAL = "SHAKE_SETTINGS_MODAL"),
             e
         );
     })({}),

@@ -137,6 +137,7 @@ let T = (e) => {
                 src: b.Z,
                 height: 93,
                 width: 93,
+                zoomable: !1,
             }),
         });
     },

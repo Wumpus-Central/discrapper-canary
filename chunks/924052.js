@@ -1,22 +1,23 @@
 n.d(t, {
-    Cu: () => c,
+    Cu: () => d,
     Ri: () => u,
 }),
     n(388685),
     n(415506);
-var i = n(951288),
+var r = n(951288),
     l = n(647438),
-    r = n(503089),
-    o = n(585483),
+    o = n(503089),
+    i = n(585483),
+    a = n(88658),
     s = n(981631);
-let a = l.createContext(void 0);
+let c = l.createContext(void 0);
 function u(e) {
     let { children: t } = e,
-        n = l.useRef(r.$x),
-        [u, c] = l.useState(!1),
-        d = l.useCallback((e) => {
+        n = l.useRef(o.$x),
+        [u, d] = l.useState(!1),
+        f = l.useCallback((e) => {
             var t;
-            c(
+            d(
                 null !=
                     (t =
                         null == e
@@ -26,38 +27,38 @@ function u(e) {
                                   return e.showNotice() && !(null == (t = e.canCloseEarly) ? void 0 : t.call(e));
                               })) && t,
             ),
-                (n.current = r.$x);
+                (n.current = o.$x);
         }, []),
-        f = l.useCallback(
+        m = l.useCallback(
             (e) => {
                 if (u) {
-                    o.S.dispatch(s.CkL.SHAKE_APP, {
+                    (0, a.Aj)({
                         duration: 300,
                         intensity: n.current,
                     }),
-                        (n.current = Math.min(n.current + r.d7, r.w6)),
-                        o.S.dispatch(s.CkL.EMPHASIZE_NOTICE);
+                        (n.current = Math.min(n.current + o.d7, o.w6)),
+                        i.S.dispatch(s.CkL.EMPHASIZE_NOTICE);
                     return;
                 }
                 e();
             },
             [u],
         ),
-        g = l.useMemo(
+        b = l.useMemo(
             () => ({
-                navigateWithValidation: f,
+                navigateWithValidation: m,
                 showNotice: u,
-                handleStoreUpdate: d,
+                handleStoreUpdate: f,
             }),
-            [f, u, d],
+            [m, u, f],
         );
-    return (0, i.jsx)(a.Provider, {
-        value: g,
+    return (0, r.jsx)(c.Provider, {
+        value: b,
         children: t,
     });
 }
-function c() {
-    let e = l.useContext(a);
+function d() {
+    let e = l.useContext(c);
     if (null == e) throw Error("useNoticeContext must be used within a NoticeProvider");
     return e;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(953529), n(388685);
+n.d(t, { Z: () => K }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(578361),
     d = n(460181),
     f = n(342386),
-    _ = n(585483),
+    _ = n(88658),
     p = n(57562),
     h = n(955204),
     m = n(64078),
@@ -17,10 +17,9 @@ var r = n(951288),
     E = n(954794),
     b = n(112843),
     y = n(524484),
-    O = n(981631),
-    v = n(388032),
-    I = n(892879);
-function T(e, t, n) {
+    O = n(388032),
+    v = n(749714);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +43,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,67 +60,67 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let N = {
+let C = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
         confettiEnabled: !1,
     },
-    R = (0, a.range)(0, 11),
-    P = (0, a.range)(0, 2.25, 0.25),
-    w = (0, a.range)(1, 11),
-    D = (0, a.range)(1, 26),
-    L = () => [
+    N = (0, a.range)(0, 11),
+    R = (0, a.range)(0, 2.25, 0.25),
+    P = (0, a.range)(1, 11),
+    w = (0, a.range)(1, 26),
+    D = () => [
         {
             location: y.Hn.CHAT_INPUT,
-            title: v.intl.string(v.t.elTty8),
-            description: v.intl.string(v.t.HtKfMj),
+            title: O.intl.string(O.t.elTty8),
+            description: O.intl.string(O.t.HtKfMj),
         },
         {
             location: y.Hn.REACTION,
-            title: v.intl.string(v.t.Ik4VIS),
-            description: v.intl.string(v.t.y4rqKy),
+            title: O.intl.string(O.t.Ik4VIS),
+            description: O.intl.string(O.t.y4rqKy),
         },
         {
             location: y.Hn.MEMBER_USER,
-            title: v.intl.string(v.t.ZXBlAg),
-            description: v.intl.string(v.t["m9RD+f"]),
+            title: O.intl.string(O.t.ZXBlAg),
+            description: O.intl.string(O.t["m9RD+f"]),
         },
         {
             location: y.Hn.CALL_TILE,
-            title: v.intl.string(v.t.V66giY),
-            description: v.intl.string(v.t.fiHV7u),
+            title: O.intl.string(O.t.V66giY),
+            description: O.intl.string(O.t.fiHV7u),
         },
     ],
-    x = () => [
+    L = () => [
         {
             location: y.oZ.CHAT_INPUT,
-            title: v.intl.string(v.t.vUcvPD),
-            description: v.intl.string(v.t.y00OrK),
+            title: O.intl.string(O.t.vUcvPD),
+            description: O.intl.string(O.t.y00OrK),
         },
         {
             location: y.oZ.VOICE_USER,
-            title: v.intl.string(v.t["TcRO5+"]),
-            description: v.intl.string(v.t.YJCxVV),
+            title: O.intl.string(O.t["TcRO5+"]),
+            description: O.intl.string(O.t.YJCxVV),
         },
         {
             location: y.oZ.MENTION,
-            title: v.intl.string(v.t.oW4shI),
-            description: v.intl.string(v.t["mqfw/P"]),
+            title: O.intl.string(O.t.oW4shI),
+            description: O.intl.string(O.t["mqfw/P"]),
         },
     ];
-function j(e) {
+function x(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         o = n.map((e) =>
             (0, r.jsx)(
@@ -131,25 +130,25 @@ function j(e) {
                     description: e.description,
                     checked: i[e.location],
                     disabled: t,
-                    onChange: (t) => a(C(S({}, i), { [e.location]: t })),
+                    onChange: (t) => a(A(T({}, i), { [e.location]: t })),
                 },
                 e.location,
             ),
         );
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(l.vwX, { children: v.intl.string(v.t.bWVN1N) }), o],
+        children: [(0, r.jsx)(l.vwX, { children: O.intl.string(O.t.bWVN1N) }), o],
     });
 }
 function M(e) {
     let { children: t } = e;
     return (0, r.jsx)(l.Text, {
-        className: I.sliderDescription,
+        className: v.sliderDescription,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: t,
     });
 }
-function k(e) {
+function j(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
@@ -161,16 +160,16 @@ function k(e) {
                     ? (0, l.h7j)((e) =>
                           (0, r.jsx)(
                               l.ConfirmModal,
-                              C(
-                                  S(
+                              A(
+                                  T(
                                       {
-                                          header: a ? v.intl.string(v.t["FxT+p6"]) : v.intl.string(v.t.TAZ4Fx),
-                                          confirmText: v.intl.string(v.t.JFfinp),
-                                          cancelText: v.intl.string(v.t["ETE/oK"]),
+                                          header: a ? O.intl.string(O.t["FxT+p6"]) : O.intl.string(O.t.TAZ4Fx),
+                                          confirmText: O.intl.string(O.t.JFfinp),
+                                          cancelText: O.intl.string(O.t["ETE/oK"]),
                                           onConfirm: () =>
                                               i(
                                                   a
-                                                      ? N
+                                                      ? C
                                                       : {
                                                             enabled: !0,
                                                             warningSeen: !0,
@@ -182,7 +181,7 @@ function k(e) {
                                   {
                                       children: (0, r.jsx)(l.Text, {
                                           variant: "text-md/normal",
-                                          children: a ? v.intl.string(v.t.gmixr6) : v.intl.string(v.t.jN3t3N),
+                                          children: a ? O.intl.string(O.t.gmixr6) : O.intl.string(O.t.jN3t3N),
                                       }),
                                   },
                               ),
@@ -191,13 +190,13 @@ function k(e) {
                     : i({ enabled: e });
         };
     return (0, r.jsx)(l.rsf, {
-        label: v.intl.string(v.t.vuiXm5),
-        description: v.intl.string(v.t.KuYbWF),
+        label: O.intl.string(O.t.vuiXm5),
+        description: O.intl.string(O.t.KuYbWF),
         checked: t,
         onChange: s,
     });
 }
-function U(e) {
+function k(e) {
     let {
             settings: {
                 enabled: t,
@@ -211,27 +210,27 @@ function U(e) {
         c = !t || !n;
     return (0, r.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: v.intl.string(v.t.mqxwJC),
+        title: O.intl.string(O.t.mqxwJC),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: v.intl.string(v.t.s0KCgI),
-                description: v.intl.string(v.t.O1Vflp),
+                label: O.intl.string(O.t.s0KCgI),
+                description: O.intl.string(O.t.O1Vflp),
                 checked: n,
                 disabled: !t,
                 onChange: (e) => s({ confettiEnabled: e }, 0),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: c,
-                title: v.intl.string(v.t["vd0D8/"]),
-                className: I.formItem,
+                title: O.intl.string(O.t["vd0D8/"]),
+                className: v.formItem,
                 children: [
-                    (0, r.jsx)(M, { children: v.intl.string(v.t.a18Sur) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.a18Sur) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
-                        markers: w,
+                        markers: P,
                         stickToMarkers: !0,
-                        minValue: w[0],
-                        maxValue: w[w.length - 1],
+                        minValue: P[0],
+                        maxValue: P[P.length - 1],
                         initialValue: i,
                         onValueChange: (e) => s({ confettiCount: e }, 0),
                         onValueRender: (e) => "".concat(e),
@@ -240,32 +239,32 @@ function U(e) {
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: c,
-                title: v.intl.string(v.t.sPO3io),
-                className: I.formItem,
+                title: O.intl.string(O.t.sPO3io),
+                className: v.formItem,
                 children: [
-                    (0, r.jsx)(M, { children: v.intl.string(v.t.xoldVl) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.xoldVl) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
-                        markers: D,
+                        markers: w,
                         stickToMarkers: !0,
-                        minValue: D[0],
-                        maxValue: D[D.length - 1],
+                        minValue: w[0],
+                        maxValue: w[w.length - 1],
                         initialValue: a,
                         onValueChange: (e) => s({ confettiSize: e }, 0),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
             }),
-            (0, r.jsx)(j, {
+            (0, r.jsx)(x, {
                 disabled: c,
-                locations: L(),
+                locations: D(),
                 settingsLocations: o,
                 onChange: (e) => s({ confettiEnabledLocations: e }, 0),
             }),
         ],
     });
 }
-function G(e) {
+function U(e) {
     let {
             settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: i, combosRequiredCount: a },
             updateSettings: o,
@@ -273,45 +272,45 @@ function G(e) {
         s = !t || !n;
     return (0, r.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: v.intl.string(v.t.Xz0olZ),
+        title: O.intl.string(O.t.Xz0olZ),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: v.intl.string(v.t.o3iV7O),
-                description: v.intl.string(v.t["31Z8ER"]),
+                label: O.intl.string(O.t.o3iV7O),
+                description: O.intl.string(O.t["31Z8ER"]),
                 checked: n,
                 disabled: !t,
                 onChange: (e) => o({ combosEnabled: e }),
             }),
             (0, r.jsx)(l.rsf, {
-                label: v.intl.string(v.t["Ax+Ioa"]),
-                description: v.intl.string(v.t["9rgQEh"]),
+                label: O.intl.string(O.t["Ax+Ioa"]),
+                description: O.intl.string(O.t["9rgQEh"]),
                 checked: i,
                 disabled: !t,
                 onChange: (e) => o({ comboSoundsEnabled: e }),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: s,
-                title: v.intl.string(v.t.L0oQur),
-                className: I.formItem,
+                title: O.intl.string(O.t.L0oQur),
+                className: v.formItem,
                 children: [
-                    (0, r.jsx)(M, { children: v.intl.string(v.t["/OOFpK"]) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t["/OOFpK"]) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: s,
-                        markers: R,
+                        markers: N,
                         stickToMarkers: !0,
-                        minValue: R[0],
-                        maxValue: R[R.length - 1],
+                        minValue: N[0],
+                        maxValue: N[N.length - 1],
                         initialValue: a,
                         onValueChange: (e) => o({ combosRequiredCount: e }),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
             }),
-            (0, r.jsx)(l.izJ, { className: I.divider }),
+            (0, r.jsx)(l.izJ, { className: v.divider }),
         ],
     });
 }
-function B(e) {
+function G(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: a },
             updateSettings: s,
@@ -323,46 +322,46 @@ function B(e) {
         };
     return (0, r.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: v.intl.string(v.t.wVS5SU),
+        title: O.intl.string(O.t.wVS5SU),
         children: [
             (0, r.jsx)(l.rsf, {
-                label: v.intl.string(v.t.N004zM),
-                description: v.intl.string(v.t.Qq5W3t),
-                helperText: u ? v.intl.string(v.t.GckHGx) : void 0,
+                label: O.intl.string(O.t.N004zM),
+                description: O.intl.string(O.t.Qq5W3t),
+                helperText: u ? O.intl.string(O.t.GckHGx) : void 0,
                 checked: n && !u,
                 disabled: !t || u,
                 onChange: (e) => s({ screenshakeEnabled: e }, 1),
             }),
             (0, r.jsxs)(l.xJW, {
                 disabled: d,
-                title: v.intl.string(v.t.UxnnCw),
-                className: I.formItem,
+                title: O.intl.string(O.t.UxnnCw),
+                className: v.formItem,
                 children: [
-                    (0, r.jsx)(M, { children: v.intl.string(v.t.CEOEOT) }),
+                    (0, r.jsx)(M, { children: O.intl.string(O.t.CEOEOT) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: d,
-                        markers: P,
+                        markers: R,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        minValue: P[0],
-                        maxValue: P[P.length - 1],
+                        minValue: R[0],
+                        maxValue: R[R.length - 1],
                         initialValue: i,
                         onValueChange: (e) => f({ shakeIntensity: e }, 1),
                         onMarkerRender: (e) =>
-                            e === P[P.length - 1] ? v.intl.string(v.t["4rbMWV"]) : "".concat(100 * e, "%"),
+                            e === R[R.length - 1] ? O.intl.string(O.t["4rbMWV"]) : "".concat(100 * e, "%"),
                     }),
                 ],
             }),
-            (0, r.jsx)(j, {
+            (0, r.jsx)(x, {
                 disabled: d,
-                locations: x(),
+                locations: L(),
                 settingsLocations: a,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1),
             }),
         ],
     });
 }
-function Z(e) {
+function B(e) {
     let { updateSettings: t } = e,
         n = () => {
             t({
@@ -373,21 +372,21 @@ function Z(e) {
         };
     return (0, r.jsx)(l.hjN, {
         tag: l.RB0.H1,
-        title: v.intl.string(v.t.EuXv2t),
+        title: O.intl.string(O.t.EuXv2t),
         children: (0, r.jsxs)("div", {
-            className: I.formItem,
+            className: v.formItem,
             children: [
                 (0, r.jsx)(l.R94, {
-                    className: I.formItem,
-                    children: v.intl.string(v.t["1SLnkp"]),
+                    className: v.formItem,
+                    children: O.intl.string(O.t["1SLnkp"]),
                 }),
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: I.hideButton,
+                    className: v.hideButton,
                     children: (0, r.jsx)(l.zxk, {
                         variant: "primary",
                         size: "sm",
-                        text: v.intl.string(v.t.qz65yc),
+                        text: O.intl.string(O.t.qz65yc),
                         onClick: n,
                     }),
                 }),
@@ -395,34 +394,34 @@ function Z(e) {
         }),
     });
 }
-function F(e) {
+function Z(e) {
     let { onChangePage: t } = e,
         n = () => t(1);
     return (0, r.jsxs)(l.hjN, {
         children: [
             (0, r.jsxs)(l.P3F, {
                 onClick: n,
-                className: I.achievementContainer,
+                className: v.achievementContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: I.achievementIconContainer,
+                        className: v.achievementIconContainer,
                         children: (0, r.jsx)(l.rm8, {
                             size: "md",
                             color: s.Z.unsafe_rawColors.ORANGE_345.css,
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: I.achievementTextContainer,
+                        className: v.achievementTextContainer,
                         children: [
                             (0, r.jsx)(l.X6q, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: v.intl.string(v.t["6jI0hY"]),
+                                children: O.intl.string(O.t["6jI0hY"]),
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
-                                children: v.intl.string(v.t.GuUItb),
+                                children: O.intl.string(O.t.GuUItb),
                             }),
                         ],
                     }),
@@ -430,15 +429,15 @@ function F(e) {
                         size: "custom",
                         color: "currentColor",
                         width: 16,
-                        className: I.rightCaretIcon,
+                        className: v.rightCaretIcon,
                     }),
                 ],
             }),
-            (0, r.jsx)(l.izJ, { className: I.divider }),
+            (0, r.jsx)(l.izJ, { className: v.divider }),
         ],
     });
 }
-let V = () =>
+let F = () =>
     n
         .e("68170")
         .then(n.t.bind(n, 205663, 19))
@@ -446,7 +445,7 @@ let V = () =>
             let { default: t } = e;
             return t;
         });
-function H(e) {
+function V(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
         a = (0, o.cj)([g.Z], () => g.Z.getState()),
         [s, c] = i.useState({
@@ -463,7 +462,7 @@ function H(e) {
                 var t;
                 n(!0),
                     (0, d.GN)("poggermode_enabled"),
-                    _.S.dispatch(O.CkL.SHAKE_APP, {
+                    (0, _.Aj)({
                         duration: 2000,
                         intensity: null != (t = e.shakeIntensity) ? t : a.shakeIntensity,
                     });
@@ -478,7 +477,7 @@ function H(e) {
                 o = f(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
             if (i && o) {
                 var l;
-                _.S.dispatch(O.CkL.SHAKE_APP, {
+                (0, _.Aj)({
                     duration: 1000,
                     intensity: null != (l = e.shakeIntensity) ? l : a.shakeIntensity,
                 });
@@ -499,38 +498,38 @@ function H(e) {
             children: [
                 (0, r.jsx)(l.X6q, {
                     variant: "heading-lg/semibold",
-                    className: I.title,
-                    children: v.intl.string(v.t.AtCukJ),
+                    className: v.title,
+                    children: O.intl.string(O.t.AtCukJ),
+                }),
+                (0, r.jsx)(j, {
+                    settings: a,
+                    updateSettings: h,
+                }),
+                (0, r.jsx)(Z, { onChangePage: t }),
+                (0, r.jsx)(U, {
+                    settings: a,
+                    updateSettings: h,
+                }),
+                (0, r.jsx)(G, {
+                    settings: a,
+                    updateSettings: h,
                 }),
                 (0, r.jsx)(k, {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(F, { onChangePage: t }),
-                (0, r.jsx)(G, {
-                    settings: a,
-                    updateSettings: h,
-                }),
-                (0, r.jsx)(B, {
-                    settings: a,
-                    updateSettings: h,
-                }),
-                (0, r.jsx)(U, {
-                    settings: a,
-                    updateSettings: h,
-                }),
-                (0, r.jsx)(Z, { updateSettings: h }),
+                (0, r.jsx)(B, { updateSettings: h }),
             ],
         })
     );
 }
-let Y = (e, t, n) => {
+let H = (e, t, n) => {
         let i = (e) => () => {
             t(e);
         };
         switch (e) {
             case 0:
-                return (0, r.jsx)(H, {
+                return (0, r.jsx)(V, {
                     onChangePage: i(1),
                     setShowEnableAnimation: n,
                 });
@@ -540,19 +539,19 @@ let Y = (e, t, n) => {
                 return null;
         }
     },
-    W = 500,
-    K = (e) => (0 === e ? u.n.LEFT : u.n.RIGHT);
-function z() {
+    Y = 500,
+    W = (e) => (0 === e ? u.n.LEFT : u.n.RIGHT);
+function K() {
     let [e, t] = i.useState(0),
-        [n, a] = i.useState(K(e)),
+        [n, a] = i.useState(W(e)),
         [s, d] = i.useState(!1),
         f = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         _ = s && !f;
     return (
         i.useEffect(() => {
             let t = setTimeout(() => {
-                a(K(e));
-            }, W);
+                a(W(e));
+            }, Y);
             return () => clearTimeout(t);
         }, [e]),
         i.useEffect(() => {
@@ -561,16 +560,16 @@ function z() {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
-                    className: I.slideAnimator,
+                    className: v.slideAnimator,
                     step: e,
                     direction: n,
-                    children: Y(e, t, d),
+                    children: H(e, t, d),
                 }),
                 (0, r.jsx)("div", {
-                    className: _ ? I.enableAnimationOverlayVisible : I.enableAnimationOverlayHidden,
+                    className: _ ? v.enableAnimationOverlayVisible : v.enableAnimationOverlayHidden,
                     children: (0, r.jsx)(l.Fmz, {
-                        className: I.enableAnimation,
-                        importData: V,
+                        className: v.enableAnimation,
+                        importData: F,
                         shouldAnimate: _,
                         autoplay: !1,
                         resetOnPlay: !0,
