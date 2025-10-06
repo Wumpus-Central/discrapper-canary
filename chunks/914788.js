@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685), n(539854), n(35282);
+n.d(t, { Z: () => er }), n(388685), n(539854), n(35282);
 var r = n(133080),
     i = n(750041),
     a = n(594174),
@@ -232,11 +232,16 @@ function q(e) {
         : M(t.linked_users);
 }
 function X(e) {
+    let { linkedUsers: t } = e;
+    if (null == t) return !1;
+    M(t);
+}
+function Q(e) {
     var t;
     let { countryCode: n } = e;
     null != n && (A = null != (t = (0, r.Zz)(n)) ? t : null);
 }
-function Q() {
+function J() {
     let e = [];
     return (
         Object.entries(b).forEach((t) => {
@@ -246,20 +251,20 @@ function Q() {
         e
     );
 }
-function J() {
+function $() {
     return Object.entries(y).map((e) => {
         let [t, n] = e;
         return "".concat(t, ":").concat(n);
     });
 }
-function $(e) {
+function ee(e) {
     y = e.reduce((e, t) => {
         let [n, r] = t.split(":"),
             i = (0, c.jV)(n);
         return void 0 === i ? e : p(f({}, e), { [i]: parseInt(r, 10) });
     }, x());
 }
-function ee() {
+function et() {
     (h = null),
         (m = null),
         (g = {}),
@@ -275,21 +280,21 @@ function ee() {
         (R = null),
         (P = null);
 }
-class et extends i.Z {
+class en extends i.Z {
     initialize() {
         this.waitFor(a.default);
     }
     loadCache() {
-        let e = this.readSnapshot(et.LATEST_SNAPSHOT_VERSION);
-        null != e && (M(e.linkedUsers), U(e.guilds), k(e.teenActivity), $(e.teenActivityTotals));
+        let e = this.readSnapshot(en.LATEST_SNAPSHOT_VERSION);
+        null != e && (M(e.linkedUsers), U(e.guilds), k(e.teenActivity), ee(e.teenActivityTotals));
     }
     takeSnapshot() {
         return {
-            version: et.LATEST_SNAPSHOT_VERSION,
+            version: en.LATEST_SNAPSHOT_VERSION,
             data: {
                 linkedUsers: Object.values(g),
-                teenActivityTotals: J(),
-                teenActivity: Q(),
+                teenActivityTotals: $(),
+                teenActivity: J(),
                 guilds: Object.values(w),
             },
         };
@@ -355,6 +360,7 @@ class et extends i.Z {
     }
     constructor() {
         super({
+            CONNECTION_OPEN: X,
             CURRENT_USER_UPDATE: q,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             FAMILY_CENTER_INITIAL_LOAD: B,
@@ -367,10 +373,10 @@ class et extends i.Z {
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: W,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: K,
             FAMILY_CENTER_HANDLE_TAB_SELECT: z,
-            SET_LOCATION_METADATA: X,
-            LOGOUT: ee,
+            SET_LOCATION_METADATA: Q,
+            LOGOUT: et,
         });
     }
 }
-d(et, "displayName", "FamilyCenterStore"), d(et, "LATEST_SNAPSHOT_VERSION", 3);
-let en = new et();
+d(en, "displayName", "FamilyCenterStore"), d(en, "LATEST_SNAPSHOT_VERSION", 3);
+let er = new en();

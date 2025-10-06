@@ -30,7 +30,7 @@ var a = n(442837),
     P = n(868158),
     w = n(483012),
     D = n(955132);
-function x(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -121,7 +121,7 @@ let G = new d.Z("ConnectionStore"),
                     null == i
                         ? void 0
                         : i.merge(
-                              M(L({}, r), {
+                              j(x({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate,
                               }),
@@ -469,7 +469,7 @@ W(
                     });
                     let o = null == e.user_settings_proto ? void 0 : (0, E.ac)(e.user_settings_proto);
                     g.Z.dispatchReady.measure(() => {
-                        var n, s;
+                        var n, s, l;
                         q({
                             type: "CONNECTION_OPEN",
                             sessionId: e.session_id,
@@ -505,6 +505,7 @@ W(
                             geoRestrictedGuilds: a,
                             explicitContentScanVersion: e.explicit_content_scan_version,
                             failedStates: e.failed_states,
+                            linkedUsers: null != (l = e.linked_users) ? l : void 0,
                         });
                     }),
                         null != e.auth_token &&
@@ -1074,7 +1075,7 @@ W(
         });
     }),
     Y(["USER_NOTE_UPDATE"], (e) => {
-        q(L({ type: "USER_NOTE_UPDATE" }, e));
+        q(x({ type: "USER_NOTE_UPDATE" }, e));
     }),
     Y(["RELATIONSHIP_ADD"], (e) => {
         q({
@@ -1310,7 +1311,7 @@ W(
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) =>
-                M(L({}, e), {
+                j(x({}, e), {
                     emoji: {
                         id: e.answer_id,
                         name: "",
@@ -1872,7 +1873,7 @@ W(
         });
     }),
     Y(["DELETED_ENTITY_IDS"], (e) => {
-        q(L({ type: "DELETED_ENTITY_IDS" }, e));
+        q(x({ type: "DELETED_ENTITY_IDS" }, e));
     }),
     W(
         ["CHANNEL_SYNC"],
@@ -1995,7 +1996,7 @@ W(
         });
     }),
     Y(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        q(L({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
+        q(x({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
     }),
     Y(["PREMIUM_MARKETING_PREVIEW"], (e) => {
         q({
