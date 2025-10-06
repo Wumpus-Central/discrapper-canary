@@ -1,22 +1,27 @@
 n.d(t, {
-    Aq: () => L,
-    Do: () => P,
-    Kl: () => M,
-    ZP: () => j,
-    bn: () => D,
-    cI: () => w,
-    cv: () => S,
-    f0: () => C,
-    gE: () => N,
-    mc: () => x,
-    og: () => R,
+    Aq: () => B,
+    Do: () => k,
+    Kl: () => F,
+    ZP: () => H,
+    bn: () => G,
+    cI: () => U,
+    cv: () => D,
+    f0: () => x,
+    gE: () => M,
+    og: () => j,
 }),
     n(388685),
     n(290780);
-var r = n(51835),
-    i = n(731965),
-    a = n(261376);
-function o(e, t, n) {
+var r,
+    i = n(51835),
+    a = n(731965),
+    o = n(442837),
+    s = n(570140),
+    l = n(344532),
+    c = n(951716),
+    u = n(23434),
+    d = n(261376);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +34,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +45,12 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,21 +62,21 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = new (n(499303).I)(),
-    d = 300000,
-    f = 3600000,
-    _ = () => ({
+let m = new (n(499303).I)(),
+    g = 300000,
+    E = 3600000,
+    b = () => ({
         candidates: new Map(),
         shownFatigableCandidate: null,
         prevFatigableCandidate: null,
@@ -81,14 +86,15 @@ let u = new (n(499303).I)(),
         lastWinnerTime: 0,
         postConnectionOpen: !1,
     }),
-    p = (0, r.F)(_),
-    h = (e) =>
-        c(s({}, e), {
+    y = (0, i.F)(b),
+    O = !1,
+    v = (e) =>
+        h(_({}, e), {
             candidates: new Map(e.candidates),
             currentlyShown: new Set(e.currentlyShown),
             currentlyShownGroup: new Set(e.currentlyShownGroup),
         }),
-    m = (e, t) => {
+    I = (e, t) => {
         var n;
         return (
             null == t ||
@@ -99,7 +105,7 @@ let u = new (n(499303).I)(),
             e
         );
     },
-    g = (e, t) => {
+    T = (e, t) => {
         var n, r;
         if (null == t) return e;
         e.currentlyShown.add(t.content);
@@ -109,7 +115,7 @@ let u = new (n(499303).I)(),
             i.splice(5),
             (e.recentlyShown = i),
             null != t.groupName && e.currentlyShownGroup.add(t.groupName),
-            a.O.has(t.content) ||
+            d.O.has(t.content) ||
                 ((e.shownFatigableCandidate = t),
                 (null == (r = e.prevFatigableCandidate) ? void 0 : r.content) !== t.content &&
                     ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
@@ -117,11 +123,11 @@ let u = new (n(499303).I)(),
             e
         );
     },
-    E = (e, t) => (e.candidates.set(t.content, t), e),
-    b = (e, t) => (e.candidates.delete(t.content), e),
-    y = (e, t) => g(m(e, e.shownFatigableCandidate), t),
-    O = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
-    v = (e) => {
+    S = (e, t) => (e.candidates.set(t.content, t), e),
+    A = (e, t) => (e.candidates.delete(t.content), e),
+    C = (e, t) => T(I(e, e.shownFatigableCandidate), t),
+    N = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
+    R = (e) => {
         let t = [...e.candidates.keys()];
         return (
             null !== e.prevFatigableCandidate &&
@@ -134,74 +140,87 @@ let u = new (n(499303).I)(),
             e.candidates.get(t[Math.floor(Math.random() * t.length)])
         );
     },
-    I = (e) =>
+    P = (e) =>
         null != e.prevFatigableCandidate &&
         e.candidates.has(e.prevFatigableCandidate.content) &&
         null == e.shownFatigableCandidate,
-    T = (e) => {
+    w = (e) => {
         if (0 === e.candidates.size) return e;
-        let t = new Date().getTime() - e.lastWinnerTime > d;
-        return I(e) && !t
-            ? (u.unschedule(), y(e, O(e)))
+        let t = new Date().getTime() - e.lastWinnerTime > g;
+        return P(e) && !t
+            ? (m.unschedule(), C(e, N(e)))
             : ((null != e.shownFatigableCandidate && !t) ||
-                  u.scheduled() ||
-                  A(e) ||
-                  u.schedule(() => {
-                      (0, i.j)(() => {
-                          p.setState((e) => {
-                              let t = h(e);
-                              return y(t, v(t));
+                  m.scheduled() ||
+                  L(e) ||
+                  m.schedule(() => {
+                      (0, a.j)(() => {
+                          y.setState((e) => {
+                              let t = v(e);
+                              return C(t, R(t));
                           });
                       });
                   }, 250),
               e);
     },
-    S = () => A(p.getState()),
-    A = (e) => {
+    D = () => L(y.getState()),
+    L = (e) => {
         let t = new Date().getTime();
-        return null == e.shownFatigableCandidate && t - e.lastWinnerTime < f;
+        return null == e.shownFatigableCandidate && t - e.lastWinnerTime < E;
     },
-    C = (e) => {
-        let t = a.O.has(e.content);
-        (0, i.j)(() => {
-            p.setState((n) => {
-                let r = h(n);
-                return t ? g(r, e) : T(E(r, e));
+    x = (e) => {
+        let t = d.O.has(e.content);
+        (0, a.j)(() => {
+            y.setState((n) => {
+                let r = v(n);
+                return O ? r : t ? T(r, e) : w(S(r, e));
             });
         });
     },
-    N = (e, t) => {
-        (0, i.j)(() => {
-            p.setState((n) => {
-                let r = h(n);
-                return t ? T(m(b(r, e), e)) : m(b(r, e), e);
+    M = (e, t) => {
+        (0, a.j)(() => {
+            y.setState((n) => {
+                let r = v(n);
+                return t ? w(I(A(r, e), e)) : I(A(r, e), e);
             });
         });
     },
-    R = () => {
+    j = () => {
         var e;
-        return null != (e = p.getState().recentlyShown[0]) ? e : null;
+        return null != (e = y.getState().recentlyShown[0]) ? e : null;
     },
-    P = () => {
+    k = () => {
         var e, t;
-        return null != (t = null == (e = p.getState().shownFatigableCandidate) ? void 0 : e.content) ? t : null;
+        return null != (t = null == (e = y.getState().shownFatigableCandidate) ? void 0 : e.content) ? t : null;
     },
-    w = (e) => p.getState().currentlyShown.has(e),
-    D = (e) => p((t) => t.currentlyShown.has(e)),
-    L = () => {
-        let e = [...p.getState().currentlyShown].filter((e) => !a.O.has(e)).length;
-        return [p.getState().currentlyShown.size, e];
+    U = (e) => y.getState().currentlyShown.has(e),
+    G = (e) => y((t) => t.currentlyShown.has(e)),
+    B = () => {
+        let e = [...y.getState().currentlyShown].filter((e) => !d.O.has(e)).length;
+        return [y.getState().currentlyShown.size, e];
     },
-    x = () => {
-        (0, i.j)(() => {
-            p.setState(() => {
-                let e = _();
+    Z = () => {
+        (0, a.j)(() => {
+            y.setState(() => {
+                let e = b();
                 return (e.postConnectionOpen = !0), e;
             });
         }),
-            u.unschedule();
+            m.unschedule();
     },
-    M = () => p.getState().postConnectionOpen;
-function j(e, t) {
-    return p(e, t);
+    F = () => y.getState().postConnectionOpen;
+class V extends (r = o.ZP.Store) {
+    initialize() {
+        this.waitFor(l.Z, u.Z), this.syncWith([l.Z, u.Z], () => this.setHasRequiredAction());
+    }
+    setHasRequiredAction() {
+        O = (0, c.Z)(l.Z, u.Z);
+    }
 }
+function H(e, t) {
+    return y(e, t);
+}
+f(V, "displayName", "DismissibleContentShownStateStore"),
+    new V(s.Z, {
+        CONNECTION_OPEN: () => Z(),
+        LOGOUT: () => Z(),
+    });
