@@ -1,15 +1,16 @@
 n.d(t, {
-    E2: () => I,
+    E2: () => T,
     LI: () => g,
     Qr: () => m,
-    _p: () => v,
+    _p: () => I,
     f0: () => y,
     iB: () => b,
-    jV: () => O,
-    k0: () => S,
+    jV: () => v,
+    k0: () => A,
     lx: () => E,
+    m4: () => O,
     t3: () => h,
-    yH: () => T,
+    yH: () => S,
 }),
     n(388685),
     n(642613);
@@ -73,23 +74,24 @@ let u = 60,
         e.display_type === s.MY.USER_INTERACTION ||
         e.display_type === s.MY.USER_CALLED,
     y = (e) => e.display_type === s.MY.GUILD_ADD || e.display_type === s.MY.GUILD_INTERACTION,
-    O = (e) => {
+    O = (e) => e.display_type === s.MY.PURCHASES,
+    v = (e) => {
         for (let t of Object.values(s.MY)) if (t.toString() === e) return t;
     },
-    v = (e) => {
-        let t = I(e);
+    I = (e) => {
+        let t = T(e);
         return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
     },
-    I = (e) => {
+    T = (e) => {
         let t = new Map(s.tx);
         return e && (t = new Map([...t, ...s.U])), t;
     },
-    T = (e) => {
+    S = (e) => {
         let t = Math.floor(e / 60),
             n = e % 60;
         return t > 0 ? "".concat(t, "h ").concat(n, "m") : "".concat(n, "m");
     },
-    S = () => {
+    A = () => {
         if (o.Z.getAreLinkedUsersProcessed()) return o.Z.getLinkedUsers();
         a.ZP.fetchLinkedUsers();
     };

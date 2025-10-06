@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => Z,
-    Z: () => H,
+    I: () => F,
+    Z: () => Y,
 }),
     n(388685);
 var r = n(951288),
@@ -24,18 +24,19 @@ var r = n(951288),
     O = n(631885),
     v = n(240351),
     I = n(792258),
-    T = n(657825),
-    S = n(198952),
-    A = n(329242),
-    C = n(895328),
-    N = n(448524),
-    R = n(292352),
-    P = n(981631),
-    w = n(345909),
-    D = n(388032),
-    L = n(37742),
-    x = n(519279);
-function M(e, t, n) {
+    T = n(381190),
+    S = n(657825),
+    A = n(198952),
+    C = n(329242),
+    N = n(895328),
+    R = n(448524),
+    P = n(292352),
+    w = n(981631),
+    D = n(345909),
+    L = n(388032),
+    x = n(37742),
+    M = n(519279);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +49,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,59 +60,59 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
 }
-let k = 65;
-function U() {
+let U = 65;
+function G() {
     let e = i.useCallback(() => {
         (0, l.ZDy)(async () => {
             let { default: e } = await n.e("66462").then(n.bind(n, 756226));
-            return (t) => (0, r.jsx)(e, j({}, t));
+            return (t) => (0, r.jsx)(e, k({}, t));
         });
     }, []);
     return (0, r.jsx)(l.P3F, {
-        className: L.tooltip,
+        className: x.tooltip,
         onClick: e,
         children: (0, r.jsx)(l.d3s, {
             size: "custom",
             color: "currentColor",
-            className: L.icon,
+            className: x.icon,
             width: 15,
             height: 15,
         }),
     });
 }
-function G(e) {
+function B(e) {
     let { displayType: t } = e,
         n = (0, _.PO)("family_center_activity_card"),
         a = i.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(D.intl.string(w.default.Wu8BKy), l.ToastType.FAILURE));
+            (0, l.showToast)((0, l.createToast)(L.intl.string(D.default.Wu8BKy), l.ToastType.FAILURE));
         }, []),
         s = (0, y.Z)(),
         c = (0, g.ws)(t),
-        d = (0, g.C7)(t),
-        h = (0, g.A)(t),
-        { loadMore: E, isMoreLoading: b } = (0, m.G)({ onError: a }),
-        O = (0, f.E2)(n).get(t),
-        [v, S] = i.useState(R.iB),
-        A = (0, p.Xi)({ location: "family_center_activity_section_web" }),
-        C = i.useCallback(() => {
-            S((e) => e + R.iB), E(t);
-        }, [t, E]);
-    o()(O, "No text for action type: ".concat(t));
-    let N = t === R.MY.PURCHASES && null != h ? O.sectionHeader(h) : O.sectionHeader(d),
-        P = i.useCallback(
+        h = (0, g.C7)(t),
+        E = (0, g.A)(t),
+        { loadMore: b, isMoreLoading: O } = (0, m.G)({ onError: a }),
+        v = (0, f.E2)(n).get(t),
+        [A, C] = i.useState(P.iB),
+        N = (0, p.Xi)({ location: "family_center_activity_section_web" }),
+        R = i.useCallback(() => {
+            C((e) => e + P.iB), b(t);
+        }, [t, b]);
+    o()(v, "No text for action type: ".concat(t));
+    let w = t === P.MY.PURCHASES && null != E ? v.sectionHeader(E) : v.sectionHeader(h),
+        M = i.useCallback(
             (e) => {
                 let { row: t } = e,
                     n = c[t];
                 if ((0, f.iB)(n)) {
                     let e = u.default.extractTimestamp(n.event_id),
-                        t = (0, f.LI)(e, O.timestampFormatter);
+                        t = (0, f.LI)(e, v.timestampFormatter);
                     return (0, r.jsx)(
-                        T.Z,
+                        S.Z,
                         {
                             userId: n.entity_id,
                             subText: t,
@@ -120,57 +121,73 @@ function G(e) {
                     );
                 }
                 if ((0, f.f0)(n)) return (0, r.jsx)(I.Z, { guildId: n.entity_id }, n.event_id);
+                if ((0, f.m4)(n)) {
+                    let e = d.Z.getPurchaseInfo(n.entity_id);
+                    return null == e
+                        ? null
+                        : (0, r.jsx)(
+                              T.Z,
+                              {
+                                  skuId: e.sku_id,
+                                  subscriptionPlanId: e.subscription_plan_id,
+                                  total: e.total,
+                                  currency: e.currency,
+                              },
+                              n.event_id,
+                          );
+                }
+                return null;
             },
-            [c, O.timestampFormatter],
+            [c, v.timestampFormatter],
         ),
-        x = i.useCallback(
+        j = i.useCallback(
             () =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.Text, {
-                            className: L.sectionHeader,
+                            className: x.sectionHeader,
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: N,
+                            children: w,
                         }),
-                        void 0 !== O.sectionDescription
+                        void 0 !== v.sectionDescription
                             ? (0, r.jsx)(l.Text, {
-                                  className: L.sectionDescription,
+                                  className: x.sectionDescription,
                                   variant: "text-md/medium",
                                   color: "text-muted",
-                                  children: O.sectionDescription(null != s && s, A),
+                                  children: v.sectionDescription(null != s && s, N),
                               })
                             : null,
                     ],
                 }),
-            [N, O, s, A],
+            [w, v, s, N],
         );
     if (0 === c.length) return null;
-    let M = c.slice(0, v);
+    let k = c.slice(0, A);
     return (0, r.jsxs)("div", {
-        className: L.actionSection,
+        className: x.actionSection,
         children: [
-            x(),
+            j(),
             (0, r.jsx)("div", {
-                className: L.actions,
-                style: { maxHeight: M.length * k },
-                children: M.map((e, t) => P({ row: t })),
+                className: x.actions,
+                style: { maxHeight: k.length * U },
+                children: k.map((e, t) => M({ row: t })),
             }),
-            M.length !== d
+            k.length !== h
                 ? (0, r.jsx)(l.P3F, {
-                      className: L.loadMoreBar,
-                      onClick: C,
+                      className: x.loadMoreBar,
+                      onClick: R,
                       role: "button",
-                      children: b
+                      children: O
                           ? (0, r.jsx)(l.$jN, {
                                 type: l.$jN.Type.PULSING_ELLIPSIS,
-                                className: L.spinner,
+                                className: x.spinner,
                             })
                           : (0, r.jsx)(l.Text, {
-                                className: L.loadMore,
+                                className: x.loadMore,
                                 variant: "text-sm/bold",
-                                children: D.intl.format(w.default["7dMmJS"], {
-                                    pageSize: Math.min(d - M.length, R.iB),
+                                children: L.intl.format(D.default["7dMmJS"], {
+                                    pageSize: Math.min(h - k.length, P.iB),
                                 }),
                             }),
                   })
@@ -178,12 +195,12 @@ function G(e) {
         ],
     });
 }
-let B = () => {
+let Z = () => {
         let e = (0, y.Z)(),
             t = (0, O.ZM)(),
             n = (0, h.o)(
-                D.intl.formatToPlainString(w.default["7hqFl5"], { activeLinks: t.length }),
-                D.intl.string(w.default["Q/D/0d"]),
+                L.intl.formatToPlainString(D.default["7hqFl5"], { activeLinks: t.length }),
+                L.intl.string(D.default["Q/D/0d"]),
             ),
             i = (0, f.Qr)(!!e),
             a = (0, O.Rd)(i);
@@ -199,7 +216,7 @@ let B = () => {
                           : (0, r.jsx)(l.tEF, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: L.icon,
+                                className: x.icon,
                             }),
                       (0, r.jsx)(l.Text, {
                           variant: "eyebrow",
@@ -208,22 +225,22 @@ let B = () => {
                   ],
               });
     },
-    Z = (e) => {
+    F = (e) => {
         let { userId: t, subText: n, avatarSize: i = l.EFr.SIZE_40, hideUserTag: a = !1 } = e,
             o = (0, b.In)(t);
         return void 0 === o
             ? null
             : (0, r.jsxs)("div", {
-                  className: L.accountRow,
+                  className: x.accountRow,
                   children: [
-                      (0, r.jsx)(S.r, {
+                      (0, r.jsx)(A.r, {
                           user: o,
                           avatarSize: i,
                       }),
                       (0, r.jsxs)("div", {
-                          className: L.headerText,
+                          className: x.headerText,
                           children: [
-                              (0, r.jsx)(A.Z, {
+                              (0, r.jsx)(C.Z, {
                                   user: o,
                                   hideUserTag: a,
                               }),
@@ -239,12 +256,12 @@ let B = () => {
                   ],
               });
     },
-    F = () => {
+    V = () => {
         let e = (0, O.zu)(),
             t = (0, s.e7)([d.Z], () => d.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, m.G)({}),
             a = (e) => {
-                n(e), c.default.track(P.rMx.FAMILY_CENTER_ACTION, { action: R.YC.SelectTeen });
+                n(e), c.default.track(w.rMx.FAMILY_CENTER_ACTION, { action: P.YC.SelectTeen });
             },
             o = e.map((e) => ({
                 label: e.id,
@@ -252,14 +269,14 @@ let B = () => {
             })),
             u = i.useCallback(
                 (e) =>
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(F, {
                         userId: e.value,
                         avatarSize: l.EFr.SIZE_24,
                     }),
                 [],
             );
         return (0, r.jsx)(l.PhF, {
-            className: L.select,
+            className: x.select,
             renderOptionLabel: u,
             renderOptionValue: (e) => {
                 let [t] = e;
@@ -271,7 +288,7 @@ let B = () => {
             options: o,
         });
     },
-    V = () => {
+    H = () => {
         let e = (0, E.M)(),
             t = (0, y.Z)(),
             n = (0, O.ZM)(),
@@ -280,37 +297,37 @@ let B = () => {
         return null === e
             ? null
             : t && 1 !== n.length
-              ? (0, r.jsx)(F, {})
-              : (0, r.jsx)(Z, {
+              ? (0, r.jsx)(V, {})
+              : (0, r.jsx)(F, {
                     userId: e,
                     subText: a,
                 });
     },
-    H = () => {
+    Y = () => {
         let e = (0, _.PO)("family_center_activity_card"),
             t = (0, f._p)(e),
             n = (0, g.kE)(),
             i = (0, f.t3)(),
             a = (0, O.Rd)(i);
         return (0, r.jsxs)("div", {
-            className: e ? L.containerV2 : L.container,
+            className: e ? x.containerV2 : x.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: L.connectedCounter,
-                    children: [(0, r.jsx)(B, {}), (0, r.jsx)(U, {})],
+                    className: x.connectedCounter,
+                    children: [(0, r.jsx)(Z, {}), (0, r.jsx)(G, {})],
                 }),
                 (0, r.jsxs)("div", {
-                    className: x.box,
+                    className: M.box,
                     children: [
                         (0, r.jsx)("div", {
-                            className: L.header,
-                            children: (0, r.jsx)(V, {}),
+                            className: x.header,
+                            children: (0, r.jsx)(H, {}),
                         }),
                         (0, r.jsxs)("div", {
-                            className: L.content,
+                            className: x.content,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: e ? L.activityCounterRowV2 : L.activityCounterRow,
+                                    className: e ? x.activityCounterRowV2 : x.activityCounterRow,
                                     children: t.map((e) => {
                                         let [t, n] = e;
                                         return (0, r.jsx)(
@@ -323,16 +340,16 @@ let B = () => {
                                         );
                                     }),
                                 }),
-                                e ? (0, r.jsx)(N.Z, {}) : null,
+                                e ? (0, r.jsx)(R.Z, {}) : null,
                                 (0, r.jsx)("div", {
-                                    className: L.activityOverview,
+                                    className: x.activityOverview,
                                     children: n
                                         ? t.map((e) => {
                                               let [t] = e;
-                                              return (0, r.jsx)(G, { displayType: t }, "".concat(t, "-list"));
+                                              return (0, r.jsx)(B, { displayType: t }, "".concat(t, "-list"));
                                           })
-                                        : (0, r.jsx)(C.Z, {
-                                              className: L.emptyActivity,
+                                        : (0, r.jsx)(N.Z, {
+                                              className: x.emptyActivity,
                                               text: null != a ? a : "",
                                           }),
                                 }),
