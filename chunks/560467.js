@@ -164,7 +164,6 @@ function S() {
                                               value: h,
                                               onChange: S,
                                               placeholder: C.intl.string(b.default.Kg0Zio),
-                                              showCharacterCount: !0,
                                               maxLength: v.gM,
                                               disabled: w,
                                           }),
