@@ -20,7 +20,7 @@ let c = {
                         iconPosition: d,
                         withMixedDisabledOptions: f,
                     } = e,
-                    [_, p] = i.useState([]),
+                    [_, p] = i.useState(["option1"]),
                     h = i.useMemo(
                         () =>
                             [

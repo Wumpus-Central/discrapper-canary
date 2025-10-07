@@ -10,7 +10,7 @@ var r = n(647438),
 function d() {
     let e = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
         t = (0, u.Z)(null == e ? void 0 : e.id),
-        n = (0, c.U)({ location: "useAvailableWidgetTypes" }),
+        n = (0, c.Un)({ location: "useAvailableWidgetTypes" }),
         d = (0, s.k)({ location: "useAvailableWidgetTypes" });
     return r.useMemo(() => {
         let e = new Set(t.map((e) => e.type));

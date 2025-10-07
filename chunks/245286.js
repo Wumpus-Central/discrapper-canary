@@ -1,36 +1,38 @@
-n.d(t, { default: () => O }), n(388685);
+n.d(t, { default: () => _ }), n(388685);
 var r = n(951288),
     l = n(647438),
-    o = n(704215),
-    i = n(481060),
-    a = n(493773),
-    s = n(243778),
-    c = n(82084),
-    u = n(218353),
-    d = n(131051),
-    f = n(663389),
-    m = n(88658),
-    b = n(996733),
-    j = n(313789),
-    p = n(914578),
-    x = n(920952),
-    v = n(518596),
-    y = n(388032),
-    h = n(942408);
-function g(e) {
+    o = n(442837),
+    i = n(704215),
+    a = n(481060),
+    s = n(493773),
+    c = n(243778),
+    u = n(82084),
+    d = n(218353),
+    f = n(131051),
+    m = n(663389),
+    b = n(594174),
+    j = n(88658),
+    p = n(996733),
+    x = n(313789),
+    v = n(914578),
+    y = n(920952),
+    h = n(518596),
+    g = n(388032),
+    O = n(942408);
+function C(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, m.QB)({
+    (0, j.QB)({
         destinationPane: t,
         originPane: n,
-        subsection: f.Z.getSubsection(),
-        source: f.Z.getAnalyticsLocation(),
-        locationStack: f.Z.getAnalyticsLocations(),
+        subsection: m.Z.getSubsection(),
+        source: m.Z.getAnalyticsLocation(),
+        locationStack: m.Z.getAnalyticsLocations(),
     });
 }
-function O(e) {
+function _(e) {
     var t,
         { target: n } = e,
-        o = (function (e, t) {
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -51,77 +53,77 @@ function O(e) {
             }
             return l;
         })(e, ["target"]);
-    let i = b.Z.useField("query"),
-        { node: s, directory: u } = (0, d.Z)(x.Z, i),
-        m = ((t = j.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
-        y = l.useRef(null);
-    return (
-        (0, a.ZP)(() => {
-            let e = f.Z.getSection();
-            null != e &&
-                (g({
-                    destinationPanel: e,
-                    originPanel: null,
-                }),
-                (y.current = e));
-        }),
-        (0, r.jsx)(
-            c.Z,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
-                {
-                    root: s,
-                    directory: u,
-                    sidebarHeader: C,
-                    emptyState: _,
-                    sidebarFooter: p.Z,
-                    onPanelChange: (e) => {
-                        let t = (0, v.getUserSettingsSectionsByWebUserSettings)().get(e);
-                        null != t &&
-                            (g({
-                                destinationPanel: t,
-                                originPanel: y.current,
-                            }),
-                            (y.current = t));
-                    },
-                    target: m,
-                },
-                o,
-            ),
-        )
-    );
+    let a = p.Z.useField("query"),
+        { node: c, directory: d } = (0, f.Z)(y.Z, a),
+        j = ((t = x.n.ACCOUNT_PANEL), null == d.entry(n) ? t : n),
+        g = l.useRef(null);
+    return ((0, s.ZP)(() => {
+        let e = m.Z.getSection();
+        null != e &&
+            (C({
+                destinationPanel: e,
+                originPanel: null,
+            }),
+            (g.current = e));
+    }),
+    (0, o.e7)([b.default], () => null != b.default.getCurrentUser()))
+        ? (0, r.jsx)(
+              u.Z,
+              (function (e) {
+                  for (var t = 1; t < arguments.length; t++) {
+                      var n = null != arguments[t] ? arguments[t] : {},
+                          r = Object.keys(n);
+                      "function" == typeof Object.getOwnPropertySymbols &&
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                              }),
+                          )),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
+                                  t in e
+                                      ? Object.defineProperty(e, t, {
+                                            value: r,
+                                            enumerable: !0,
+                                            configurable: !0,
+                                            writable: !0,
+                                        })
+                                      : (e[t] = r);
+                          });
+                  }
+                  return e;
+              })(
+                  {
+                      root: c,
+                      directory: d,
+                      sidebarHeader: S,
+                      emptyState: P,
+                      sidebarFooter: v.Z,
+                      onPanelChange: (e) => {
+                          let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          null != t &&
+                              (C({
+                                  destinationPanel: t,
+                                  originPanel: g.current,
+                              }),
+                              (g.current = t));
+                      },
+                      target: j,
+                  },
+                  i,
+              ),
+          )
+        : null;
 }
-function C() {
-    let e = b.Z.useField("query"),
+function S() {
+    let e = p.Z.useField("query"),
         t = l.useRef(null),
-        [n, a] = (0, s.US)([o.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
-        c = l.useMemo(
+        [n, o] = (0, c.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        s = l.useMemo(
             () => ({
-                title: y.intl.string(y.t.Kv519f),
-                body: y.intl.string(y.t.cTGJBQ),
+                title: g.intl.string(g.t.Kv519f),
+                body: g.intl.string(g.t.cTGJBQ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -129,50 +131,50 @@ function C() {
             }),
             [],
         ),
-        d = l.useCallback((e) => {
-            b.Z.setState({ query: e });
+        u = l.useCallback((e) => {
+            p.Z.setState({ query: e });
         }, []),
         f = l.useCallback(() => {
-            b.Z.setState({ query: "" });
+            p.Z.setState({ query: "" });
         }, []);
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
-            className: h.searchBarContainer,
+            className: O.searchBarContainer,
             children: [
-                (0, r.jsx)(i.E1j, {
+                (0, r.jsx)(a.E1j, {
                     size: "md",
                     query: e,
-                    onChange: d,
+                    onChange: u,
                     onClear: f,
                 }),
                 (0, r.jsx)("div", {
-                    className: h.popoverAnchor,
+                    className: O.popoverAnchor,
                     ref: t,
                 }),
-                (0, r.jsx)(u.Z, {
-                    dismissibleContentType: o.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                (0, r.jsx)(d.Z, {
+                    dismissibleContentType: i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
                     targetElementRef: t,
                     visibleContent: n,
-                    markAsDismissed: a,
-                    props: c,
+                    markAsDismissed: o,
+                    props: s,
                 }),
             ],
         }),
     });
 }
-function _() {
+function P() {
     return (0, r.jsxs)("div", {
-        className: h.emptySearchResultsContainer,
+        className: O.emptySearchResultsContainer,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: y.intl.string(y.t.zihbmp),
+                children: g.intl.string(g.t.zihbmp),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: y.intl.string(y.t.XclvsL),
+                children: g.intl.string(g.t.XclvsL),
             }),
         ],
     });

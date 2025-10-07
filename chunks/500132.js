@@ -1,4 +1,4 @@
-n.d(t, { C: () => b });
+n.d(t, { C: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -85,62 +85,62 @@ function g() {
         className: u.radioIndicator,
         width: 20,
         height: 20,
-        viewBox: "0 0 20 20",
+        viewBox: "0 0 40 40",
+        fill: "none",
         shapeRendering: "geometricPrecision",
         children: [
             (0, r.jsx)("circle", {
-                cx: 10,
-                cy: 10,
-                r: 10,
+                cx: 20,
+                cy: 20,
+                r: 20,
                 className: u.outerRadioBase,
             }),
             (0, r.jsx)("circle", {
-                cx: 10,
-                cy: 10,
-                r: 9.5,
+                cx: 20,
+                cy: 20,
+                r: 20,
                 className: u.outerRadioFill,
             }),
             (0, r.jsx)("circle", {
-                cx: 10,
-                cy: 10,
-                r: 4,
+                cx: 20,
+                cy: 20,
+                r: 8,
                 className: u.innerDotRadio,
-            }),
-            (0, r.jsx)("circle", {
-                cx: 10,
-                cy: 10,
-                r: 10,
-                fill: "none",
-                strokeWidth: 1,
-                vectorEffect: "non-scaling-stroke",
-                className: u.outerRadioBorderStroke,
             }),
         ],
     });
 }
 function E(e) {
-    let { desc: t, disabled: n, leadingIcon: a, name: d, value: f, shouldAnimateOut: _ } = e,
+    let { desc: t, disabled: n, leadingIcon: a, name: d, value: f, isSelected: _ } = e,
         p = (0, i.useRef)(null),
-        h = (0, i.useRef)(null);
-    return (0, r.jsx)(c.tEY, {
-        focusTarget: p,
-        ringTarget: p,
-        within: !0,
-        children: (0, r.jsxs)(s.Y8, {
-            className: o()([u.item, _ && u.animateOut]),
-            value: f,
-            isDisabled: n,
-            inputRef: h,
-            ref: p,
-            children: [
-                (0, r.jsx)(g, {}),
-                (0, r.jsxs)(c.Kqy, {
-                    gap: 4,
-                    children: [
-                        (0, r.jsx)(l._, {
-                            className: u.label,
-                            children: (0, r.jsxs)("div", {
-                                className: u.labelContent,
+        h = (0, i.useRef)(null),
+        [m, E] = (0, i.useState)(void 0),
+        b = (0, i.useRef)(!1);
+    return (
+        (0, i.useEffect)(() => {
+            if (!b.current) {
+                b.current = !0;
+                return;
+            }
+            E(_ ? "animateIn" : "animateOut");
+        }, [_]),
+        (0, r.jsx)(c.tEY, {
+            focusTarget: p,
+            ringTarget: p,
+            within: !0,
+            children: (0, r.jsxs)(s.Y8, {
+                className: o()([u.radioGroupOption, "string" == typeof m && u[m]]),
+                value: f,
+                isDisabled: n,
+                inputRef: h,
+                ref: p,
+                children: [
+                    (0, r.jsx)(g, {}),
+                    (0, r.jsxs)(c.Kqy, {
+                        gap: 4,
+                        children: [
+                            (0, r.jsxs)(l._, {
+                                className: u.label,
                                 children: [
                                     null != a &&
                                         (0, r.jsx)(a, {
@@ -156,45 +156,40 @@ function E(e) {
                                     }),
                                 ],
                             }),
-                        }),
-                        null != t && "" !== t
-                            ? (0, r.jsx)(c.xvT, {
-                                  variant: "text-sm/normal",
-                                  color: "text-secondary",
-                                  children: t,
-                              })
-                            : null,
-                    ],
-                }),
-            ],
-        }),
-    });
+                            null != t && "" !== t
+                                ? (0, r.jsx)(c.xvT, {
+                                      variant: "text-sm/normal",
+                                      color: "text-secondary",
+                                      children: t,
+                                  })
+                                : null,
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
 }
 function b(e) {
-    var { onChange: t, options: n, value: a, disabled: o = !1, "aria-labelledby": l } = e,
-        d = h(e, ["onChange", "options", "value", "disabled", "aria-labelledby"]);
-    let _ = (0, i.useRef)(void 0),
-        m = _.current;
-    (0, i.useEffect)(() => {
-        _.current = a;
-    }, [a]);
-    let g = null != t ? (e) => t(e) : void 0;
+    var { onChange: t, options: n, value: i, disabled: a = !1, "aria-labelledby": o } = e,
+        l = h(e, ["onChange", "options", "value", "disabled", "aria-labelledby"]);
+    let d = null != t ? (e) => t(e) : void 0;
     return (0, r.jsx)(
         c.NIc,
-        p(f({}, d), {
+        p(f({}, l), {
             children: (e) =>
                 (0, r.jsx)(s.Ee, {
                     id: e.controlId,
                     className: u.group,
-                    isDisabled: o,
-                    onChange: g,
-                    "aria-labelledby": null != l ? l : e.labelId,
+                    isDisabled: a,
+                    onChange: d,
+                    "aria-labelledby": null != o ? o : e.labelId,
                     "aria-describedby": e.describedById,
                     "aria-errormessage": e.errorMessageId,
                     "data-mana-component": "BaseRadioGroup",
-                    value: a,
+                    value: i,
                     children: n.map((e, t) =>
-                        (0, r.jsx)(E, p(f({ index: t }, e), { shouldAnimateOut: m === e.value }), e.value),
+                        (0, r.jsx)(E, p(f({ index: t }, e), { isSelected: i === e.value }), e.value),
                     ),
                 }),
         }),

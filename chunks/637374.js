@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(199480),
     w = n(626135),
     D = n(669079),
-    x = n(74538),
-    L = n(296848),
-    j = n(51144),
-    M = n(626799),
+    L = n(74538),
+    x = n(296848),
+    M = n(51144),
+    j = n(626799),
     k = n(981631),
     U = n(474936),
     G = n(388032),
@@ -145,7 +145,7 @@ class W extends i.PureComponent {
                       }),
             ),
             Z(this, "renderTagline", () =>
-                this.props.isSelfGift ? G.intl.string(G.t.aUqE6e) : G.intl.string(G.t["2mWvHB"]),
+                this.props.isSelfGift ? G.intl.string(G.t.eEM3dn) : G.intl.string(G.t.tB8S6u),
             );
     }
 }
@@ -205,7 +205,7 @@ class K extends i.Component {
             o =
                 (!e.isSubscription && null != t) ||
                 (!e.isSelfRedeemable && i) ||
-                (e.isExistingPremiumSubscriptionDisallowed && (0, x.I5)(n));
+                (e.isExistingPremiumSubscriptionDisallowed && (0, L.I5)(n));
         return (
             (e.redeemed || o || e.isClaimed || !n.verified) && ((a.color = u.zx.Colors.BRAND), (a.disabled = !0)),
             (0, r.jsx)(
@@ -229,7 +229,7 @@ class K extends i.Component {
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
         return this.isCustomGiftMessage() && !n
-            ? G.intl.formatToPlainString(G.t.t1SOIS, { recipientDisplayName: j.ZP.getName(t) })
+            ? G.intl.formatToPlainString(G.t.t1SOIS, { recipientDisplayName: M.ZP.getName(t) })
             : null == r
               ? null
               : e.isSubscription
@@ -275,12 +275,12 @@ class K extends i.Component {
             return null != i
                 ? e.isSubscription
                     ? G.intl.format(G.t.l3VxgI, {
-                          username: j.ZP.getUserTag(i),
+                          username: M.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: s,
                       })
                     : G.intl.format(G.t["9cYrw8"], {
-                          username: j.ZP.getUserTag(i),
+                          username: M.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: s,
                       })
@@ -298,7 +298,7 @@ class K extends i.Component {
             if (null != i) {
                 let e = a.interval === U.rV.MONTH ? G.t["/RDIEB"] : G.t["3CX6Eh"];
                 return G.intl.format(e, {
-                    username: j.ZP.getUserTag(i),
+                    username: M.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: a.intervalCount,
                 });
@@ -309,7 +309,7 @@ class K extends i.Component {
                 intervalCount: a.intervalCount,
             });
         }
-        return null != i ? G.intl.format(G.t["3HsdQ0"], { username: j.ZP.getUserTag(i) }) : G.intl.string(G.t.Jdnjjo);
+        return null != i ? G.intl.format(G.t["3HsdQ0"], { username: M.ZP.getUserTag(i) }) : G.intl.string(G.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(d.zxk, {
@@ -323,7 +323,7 @@ class K extends i.Component {
         let { giftCode: e, width: t } = this.props;
         return null == e
             ? null
-            : (0, r.jsx)(M.$, {
+            : (0, r.jsx)(j.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
                   analyticsSection: k.jXE.GIFT_CODE_EMBED,
@@ -337,7 +337,7 @@ class K extends i.Component {
     render() {
         let { giftCode: e, resolved: t, width: n, isSelfGift: i } = this.props;
         if (null != e && null != e.promotion)
-            return (0, r.jsx)(M.$, {
+            return (0, r.jsx)(j.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: k.jXE.GIFT_CODE_EMBED,
@@ -442,7 +442,7 @@ let z = (0, p.Z)((0, _.Z)(K)),
             giftCode: i,
             gifter: o,
             currentUser: r,
-            subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, L.oE)(i.subscriptionPlanId) : null,
+            subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, x.oE)(i.subscriptionPlanId) : null,
             isSelfGift: null != i ? T.default.getId() === i.userId : T.default.getId() === n.id,
             resolved: S.Z.getIsResolved(t),
             libraryApplication:

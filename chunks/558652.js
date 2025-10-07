@@ -1,89 +1,143 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(626135),
-    o = n(113434),
-    s = n(937797),
-    c = n(264282),
-    u = n(78606),
-    d = n(710914),
-    p = n(46140),
-    f = n(981631),
-    h = n(388032),
-    g = n(872058);
-let m = [];
-function b() {
-    let { enabled: e } = s.$d.useConfig({ location: p.dr.QUEST_HOME_DESKTOP }),
-        [t, n] = i.useState(p.yq.SUGGESTED),
-        [b, _] = i.useState(m),
-        { quests: O, isFetchingCurrentQuests: E } = (0, o.bA)(
-            o.e5.ALL,
+    l = n(843611),
+    a = n(481060),
+    o = n(626135),
+    s = n(113434),
+    c = n(937797),
+    u = n(264282),
+    d = n(78606),
+    p = n(710914),
+    f = n(46140),
+    h = n(981631),
+    g = n(388032),
+    m = n(872058);
+let b = [];
+function _() {
+    let { enabled: e } = c.$d.useConfig({ location: f.dr.QUEST_HOME_DESKTOP }),
+        [t, n] = i.useState(f.yq.SUGGESTED),
+        [_, O] = i.useState(b),
+        {
+            quests: E,
+            isFetchingCurrentQuests: v,
+            hasFetched: y,
+        } = (0, s.bA)(
+            s.e5.ALL,
             i.useMemo(
                 () => ({
                     sortMethod: t,
-                    filters: b,
+                    filters: _,
                 }),
-                [t, b],
+                [t, _],
             ),
         ),
-        y = i.useCallback(() => {
-            _(m);
+        I = i.useCallback(() => {
+            O(b);
         }, []),
-        v = i.useRef(null),
-        I = i.useRef(null);
+        S = i.useRef(null),
+        C = i.useRef(null),
+        T = (0, l.TH)(),
+        N = (0, l.k6)();
     return (
         i.useEffect(() => {
+            if ("" !== T.hash && null != S.current && null != C.current) {
+                var e, n;
+                (t !== S.current || _ !== C.current) &&
+                    N.replace(
+                        ((e = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, T)),
+                        (n = n = { hash: void 0 }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (t) {
+                                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                              }),
+                        e),
+                    );
+            }
+        }, [t, _, T, N]),
+        i.useEffect(() => {
             e &&
-                (a.default.track(f.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
+                (o.default.track(h.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
                     sort_method: t,
-                    previous_sort_method: v.current,
+                    previous_sort_method: S.current,
                 }),
-                (v.current = t));
+                (S.current = t));
         }, [t, e]),
         i.useEffect(() => {
-            var t;
-            if (!e) return;
-            let n = b.map((e) => e.filter);
-            a.default.track(f.rMx.QUEST_HOME_FILTERS_CHANGED, {
-                filters: n,
-                previous_filters: null != (t = I.current) ? t : [],
-                num_quests_visible: O.length,
-            }),
-                (I.current = n);
-        }, [b, e, O.length]),
+            var t, n;
+            e &&
+                (o.default.track(h.rMx.QUEST_HOME_FILTERS_CHANGED, {
+                    filters: _.map((e) => e.filter),
+                    previous_filters: null != (n = null == (t = C.current) ? void 0 : t.map((e) => e.filter)) ? n : [],
+                    num_quests_visible: E.length,
+                }),
+                (C.current = _));
+        }, [_, e, E.length]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 e &&
                     (0, r.jsxs)("div", {
-                        className: g.headingWrapper,
+                        className: m.headingWrapper,
                         children: [
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(a.X6q, {
                                 variant: "heading-lg/medium",
-                                children: h.intl.string(h.t.giYD09),
+                                children: g.intl.string(g.t.giYD09),
                             }),
                             (0, r.jsxs)("div", {
-                                className: g.headingControls,
+                                className: m.headingControls,
                                 children: [
-                                    (0, r.jsx)(u.Z, {
+                                    (0, r.jsx)(d.Z, {
                                         onChange: n,
-                                        optionClassName: g.filterSortOption,
+                                        optionClassName: m.filterSortOption,
                                         selectedSortMethod: t,
                                     }),
-                                    (0, r.jsx)(c.Z, {
-                                        onChange: _,
-                                        optionClassName: g.filterSortOption,
-                                        selectedFilters: b,
+                                    (0, r.jsx)(u.Z, {
+                                        onChange: O,
+                                        optionClassName: m.filterSortOption,
+                                        selectedFilters: _,
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                (0, r.jsx)(d.Z, {
-                    quests: O,
-                    isFetching: E,
-                    hasFiltersApplied: b.length > 0,
-                    onClearFilters: y,
+                (0, r.jsx)(p.Z, {
+                    quests: E,
+                    isFetching: v,
+                    hasFetched: y,
+                    hasFiltersApplied: _.length > 0,
+                    onClearFilters: I,
                 }),
             ],
         })

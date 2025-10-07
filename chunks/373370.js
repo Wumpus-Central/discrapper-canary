@@ -1,6 +1,6 @@
 n.d(t, {
     CR: () => j,
-    DD: () => D,
+    DD: () => L,
 }),
     n(953529);
 var r = n(647438),
@@ -270,6 +270,26 @@ function N(e) {
     );
 }
 function R(e) {
+    var t;
+    let { quest: n, gameSheetHook: r, rewardNameWithArticle: i, targetMinutes: a } = e,
+        o = {
+            [f.S7.PACKAGE_ACTION_ADVENTURE]: p.t.H485IC,
+            [f.S7.PACKAGE_RPG_MMO]: p.t["3XS8Nj"],
+            [f.S7.PACKAGE_RACING_SPORTS]: p.t["X+UCjo"],
+            [f.S7.PACKAGE_SANDBOX_CREATIVE]: p.t["6o4n1d"],
+            [f.S7.PACKAGE_FAMILY_FRIENDLY]: p.t.DUsNmZ,
+            [f.S7.PACKAGE_HOLIDAY_SEASON]: p.t["cWP8/f"],
+            [f.S7.PACKAGE_NEW_YEARS]: p.t["8+sIJy"],
+        },
+        s = n.config.features.find((e) => e in o),
+        l = null != (t = null != s ? o[s] : null) ? t : p.t.CDeHur;
+    return p.intl.format(l, {
+        rewardNameWithArticle: i,
+        targetMinutes: a,
+        gameSheetHook: r,
+    });
+}
+function P(e) {
     let {
             quest: t,
             taskDetails: n,
@@ -294,13 +314,14 @@ function R(e) {
         onGameSheetOpened: o,
         onGameSheetClosed: s,
     });
-    return p.intl.format(p.t.CDeHur, {
+    return R({
+        quest: t,
         rewardNameWithArticle: l,
         targetMinutes: c,
         gameSheetHook: _,
     });
 }
-function P(e) {
+function w(e) {
     let {
             quest: t,
             taskDetails: n,
@@ -317,7 +338,7 @@ function P(e) {
         h = (0, s.Kr)(t.config),
         m = (0, s.$J)(t) && (0, s.$H)(t);
     if ((0, s.Pb)(t))
-        return R({
+        return P({
             quest: t,
             taskDetails: n,
             sourceQuestContent: a,
@@ -374,9 +395,9 @@ function P(e) {
               collectibleRewardDuration: h,
           });
 }
-function w(e) {
+function D(e) {
     var t;
-    return P(
+    return w(
         E(m({}, e), {
             currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser(),
             popoutTargetElementRef: e.popoutTargetElementRef,
@@ -385,7 +406,7 @@ function w(e) {
         }),
     );
 }
-function D(e) {
+function L(e) {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         o = (0, l.uA)({
             quest: t,
@@ -394,7 +415,7 @@ function D(e) {
         }),
         s = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         c = (0, l.Jf)(t);
-    return w(
+    return D(
         E(m({}, e), {
             connectedConsoleLinkOnClick: o,
             currentUser: s,
@@ -406,12 +427,12 @@ function D(e) {
 function x(e) {
     return (0, s.$J)(e) || (0, s.pO)(e) ? 0 : (0, s.Dr)({ quest: e }) ? 1 : (0, s.q8)(e) ? 2 : 3 * !!(0, s.Vl)(e);
 }
-function L(e) {
+function M(e) {
     return r.useMemo(() => x(e), [e]);
 }
 function j(e) {
     let { quest: t } = e;
-    switch (L(t)) {
+    switch (M(t)) {
         case 0:
             if (t.config.features.includes(f.S7.CLOUD_GAMING_ACTIVITY)) return p.intl.string(p.t["+qoymJ"]);
             if (t.config.features.includes(f.S7.START_QUEST_CTA)) return p.intl.string(p.t["Ie9++v"]);

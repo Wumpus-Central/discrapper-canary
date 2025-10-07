@@ -50,7 +50,7 @@ function v(e) {
 function I(e) {
     c.isPlatformEmbedded &&
         (d.ZP.InputEventServiceSetStatusCallback((t) => {
-            "running" === t.state ? (0, _.y)(!0) : (0, _.y)(!1),
+            (0, _.z)(t),
                 "running" === t.state
                     ? (m.info("System service initialized."),
                       l.default.track(p.rMx.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, {
@@ -59,7 +59,7 @@ function I(e) {
                           modules: ["input-service"],
                       }))
                     : "failure" === t.state &&
-                      (m.info("System service failed to initialize."),
+                      (m.info("System service failed to initialize.", t),
                       l.default.track(p.rMx.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, {
                           success: !1,
                           source: e,
@@ -80,12 +80,12 @@ async function T(e) {
             );
         }
 }
-function S() {
+async function S() {
     c.isPlatformEmbedded &&
         (d.ZP.InputEventServiceSetAllowed(!1),
-        a.Z.dispatch({
+        await a.Z.dispatch({
             type: "SYSTEM_SERVICE_INITIALIZE",
-            initialized: !1,
+            inputServiceStatus: { state: "unknown" },
             modules: ["input-service"],
         }),
         m.info("System service terminated."));

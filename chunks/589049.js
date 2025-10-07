@@ -1,30 +1,32 @@
-n.d(t, { Z: () => h });
-var r = n(951288);
+n.d(t, { Z: () => f });
+var i = n(951288);
 n(647438);
-var i = n(481060),
+var r = n(481060),
     l = n(906732),
     a = n(174609),
     o = n(728285),
     s = n(313789),
-    c = n(518596),
-    u = n(358085),
-    d = n(981631),
-    p = n(388032);
-function h() {
+    c = n(526665),
+    u = n(518596),
+    d = n(358085),
+    p = n(981631),
+    h = n(388032);
+function f() {
     let e = (0, o.bp)(),
-        { analyticsLocations: t } = (0, l.ZP)();
-    return e === d.IlC.APP || u.isPlatformEmbedded
-        ? (0, r.jsx)(i.sNh, {
+        { analyticsLocations: t, newestAnalyticsLocation: n } = (0, l.ZP)(),
+        f = (0, c.wy)(n);
+    return e === p.IlC.APP || d.isPlatformEmbedded || f
+        ? (0, i.jsx)(r.sNh, {
               id: "voice-and-video-settings",
-              label: p.intl.string(p.t.dsXapK),
+              label: h.intl.string(h.t.dsXapK),
               action: () => {
-                  (0, a.Z)(),
-                      (0, c.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, {
-                          section: d.oAB.VOICE,
+                  f || (0, a.Z)(),
+                      (0, u.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, {
+                          section: p.oAB.VOICE,
                           analyticsLocations: t,
                       });
               },
-              icon: i.ewm,
+              icon: r.ewm,
           })
         : null;
 }

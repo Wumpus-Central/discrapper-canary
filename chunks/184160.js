@@ -1,60 +1,55 @@
-n.d(t, { x: () => m });
+n.d(t, { x: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(512722),
     a = n.n(i),
-    o = n(780384),
-    l = n(755721),
-    s = n(410030),
-    C = n(807163),
-    d = n(74538),
-    c = n(987209),
-    u = n(563132),
-    p = n(409813),
-    _ = n(614223),
-    f = n(388032),
-    h = n(172463);
-function m(e) {
+    l = n(481060),
+    o = n(807163),
+    s = n(74538),
+    d = n(987209),
+    C = n(563132),
+    c = n(409813),
+    u = n(614223),
+    p = n(388032);
+function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        i = (0, s.ZP)(),
         {
-            activeSubscription: m,
-            selectedSkuId: x,
-            setSelectedPlanId: j,
-            startedPaymentFlowWithPaymentSourcesRef: g,
-        } = (0, u.JL)(),
-        { isGift: b } = (0, c.wD)(),
-        L = null != m ? (0, d.Af)(m) : null,
-        y = null != L ? (0, d.gq)(L.planId) : null,
-        v = null != L ? (0, d.Rd)(L.planId) : null,
-        S = (0, _.Kp)({
+            activeSubscription: i,
+            selectedSkuId: _,
+            setSelectedPlanId: f,
+            startedPaymentFlowWithPaymentSourcesRef: h,
+        } = (0, C.JL)(),
+        { isGift: m } = (0, d.wD)(),
+        x = null != i ? (0, s.Af)(i) : null,
+        j = null != x ? (0, s.gq)(x.planId) : null,
+        g = null != x ? (0, s.Rd)(x.planId) : null,
+        b = (0, u.Kp)({
             isTrial: !1,
-            isGift: b,
-            selectedSkuId: x,
-            startedPaymentFlowWithPaymentSources: g.current,
+            isGift: m,
+            selectedSkuId: _,
+            startedPaymentFlowWithPaymentSources: h.current,
         });
     return (
-        a()(null != v, "Expected premium type"),
-        (0, r.jsx)(C.Z, {
-            premiumType: v,
-            titleText: f.intl.string(f.t["7VcWW1"]),
-            subtitleText: f.intl.format(f.t.Qk34Ii, { subscriptionName: y }),
-            footer: (0, r.jsxs)("div", {
-                className: h.whatYouLoseButtonContainer,
+        a()(null != g, "Expected premium type"),
+        (0, r.jsx)(o.Z, {
+            premiumType: g,
+            titleText: p.intl.string(p.t["7VcWW1"]),
+            subtitleText: p.intl.format(p.t.Qk34Ii, { subscriptionName: j }),
+            footer: (0, r.jsxs)(l.hE2, {
+                direction: "horizontal-reverse",
+                align: "center",
                 children: [
-                    (0, r.jsx)(l.zx, {
-                        "data-migration-pending": !0,
+                    (0, r.jsx)(l.zxk, {
+                        variant: "primary",
+                        text: p.intl.string(p.t["3PatS0"]),
                         onClick: () => {
-                            S ? (j((0, _.nA)(x, m)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            b ? (f((0, u.nA)(_, i)), t(c.h8.REVIEW)) : t(c.h8.PLAN_SELECT);
                         },
-                        children: f.intl.string(f.t["3PatS0"]),
                     }),
-                    (0, r.jsx)(l.zx, {
-                        "data-migration-pending": !0,
-                        look: l.zx.Looks.LINK,
-                        color: (0, o.wj)(i) ? l.zx.Colors.WHITE : l.zx.Colors.PRIMARY,
+                    (0, r.jsx)(l.zxk, {
+                        variant: "secondary",
                         onClick: n,
-                        children: f.intl.string(f.t.h9tkAA),
+                        text: p.intl.string(p.t.h9tkAA),
                     }),
                 ],
             }),

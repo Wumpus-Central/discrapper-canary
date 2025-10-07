@@ -55,7 +55,7 @@ function p(e) {
             isDisabled: p,
             isReadOnly: h,
             "data-mana-component": "checkbox",
-            className: o()(_.checkboxItem, "string" == typeof S && _[S], "indicator" !== O && _.padding),
+            className: o()(_.checkboxOption, "string" == typeof S && _[S], "indicator" !== O && _.padding),
             value: String(b),
             children: (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -64,10 +64,6 @@ function p(e) {
                         ref: v,
                         "aria-hidden": !0,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: _.backgroundFill,
-                                "aria-hidden": !0,
-                            }),
                             (0, r.jsx)("svg", {
                                 className: _.checkmark,
                                 width: 20,
@@ -85,35 +81,32 @@ function p(e) {
                             }),
                             (0, r.jsx)(u.kSu, {
                                 className: _.checkStroke,
-                                size: "refresh_sm",
+                                size: "sm",
                                 color: "currentColor",
                             }),
                         ],
                     }),
                     N &&
                         (0, r.jsxs)(d.K, {
-                            gap: 8,
+                            gap: 4,
                             children: [
-                                (0, r.jsx)(l._, {
+                                (0, r.jsxs)(l._, {
                                     className: _.label,
-                                    children: (0, r.jsxs)("div", {
-                                        className: _.labelContent,
-                                        children: [
-                                            null != P &&
-                                                (0, r.jsx)(P, {
-                                                    className: _.leadingIcon,
-                                                    size: "sm",
-                                                    color: "currentColor",
-                                                    "aria-hidden": !0,
-                                                    focusable: !1,
-                                                }),
-                                            (0, r.jsx)(f.x, {
-                                                variant: "text-md/normal",
-                                                color: "primary" === y ? "text-primary" : "text-secondary",
-                                                children: m,
+                                    children: [
+                                        null != P &&
+                                            (0, r.jsx)(P, {
+                                                className: _.leadingIcon,
+                                                size: "sm",
+                                                color: "currentColor",
+                                                "aria-hidden": !0,
+                                                focusable: !1,
                                             }),
-                                        ],
-                                    }),
+                                        (0, r.jsx)(f.x, {
+                                            variant: "text-md/normal",
+                                            color: "primary" === y ? "text-primary" : "text-secondary",
+                                            children: m,
+                                        }),
+                                    ],
                                 }),
                                 R &&
                                     (0, r.jsx)(f.x, {

@@ -1,8 +1,9 @@
 n.d(t, {
-    J7: () => A,
-    SS: () => C,
-    oc: () => S,
-    rC: () => N,
+    J7: () => C,
+    LJ: () => P,
+    SS: () => N,
+    oc: () => A,
+    rC: () => R,
 }),
     n(388685);
 var r = n(951288),
@@ -24,24 +25,25 @@ var r = n(951288),
     b = n(201964),
     y = n(361110),
     O = n(956472),
-    v = n(642909),
-    I = n(215023),
-    T = n(981631);
-let S = (e, t, n, r) => {
-        u.default.track(T.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+    v = n(619899),
+    I = n(642909),
+    T = n(215023),
+    S = n(981631);
+let A = (e, t, n, r) => {
+        u.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
             collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
             sku_id: e.skuId,
             page_type: t,
             page_section: null == n ? void 0 : n.pageSection,
-            page_category: t === I.AW.HOME || null == n ? void 0 : n.pageCategory,
-            page_index: t === I.AW.CATALOG ? (null == n ? void 0 : n.pageIndex) : void 0,
-            page_size: t === I.AW.CATALOG ? (null == n ? void 0 : n.pageSize) : void 0,
+            page_category: t === T.AW.HOME || null == n ? void 0 : n.pageCategory,
+            page_index: t === T.AW.CATALOG ? (null == n ? void 0 : n.pageIndex) : void 0,
+            page_size: t === T.AW.CATALOG ? (null == n ? void 0 : n.pageSize) : void 0,
             tile_type: a.Z[e.type],
             tile_position: String(null == n ? void 0 : n.tilePosition),
             cta_name: r,
         });
     },
-    A = (e, t) => {
+    C = (e, t) => {
         let n = (0, h.Nd)(),
             r = null == n ? void 0 : n.tab,
             a = (0, p.Vc)(),
@@ -50,14 +52,14 @@ let S = (e, t, n, r) => {
             { analyticsLocations: m } = (0, c.ZP)(l.Z.COLLECTIBLES_SHOP_CARD),
             E = (0, s.e7)([f.Z], () => f.Z.getCategoryForProduct(e.skuId)),
             b = i.useRef(null),
-            y = (0, v.G)("useHandlePreviewClick"),
-            T = null != u && u === o.z.HERO && y ? I.Ch.THUMBNAIL : I.Ch.DEFAULT;
+            y = (0, I.G)("useHandlePreviewClick"),
+            v = null != u && u === o.z.HERO && y ? T.Ch.THUMBNAIL : T.Ch.DEFAULT;
         return i.useCallback(
             (t) => (n) => {
                 if (null == E) return;
                 let i = (0, O.oQ)({ product: e });
                 (b.current = n.currentTarget),
-                    S(e, r, _, null),
+                    A(e, r, _, null),
                     (0, g.T)({
                         product: e,
                         category: E,
@@ -66,13 +68,13 @@ let S = (e, t, n, r) => {
                         analyticsSource: t,
                         returnRef: b,
                         tab: r,
-                        variantType: T,
+                        variantType: v,
                     });
             },
-            [e, r, E, m, _, T],
+            [e, r, E, m, _, v],
         )(t);
     },
-    C = (e) => {
+    N = (e) => {
         let { previewingVariantIndex: t, handleEntering: n, handleLeaving: o } = (0, y.f)(e),
             l = (0, s.e7)([_.Z], () => _.Z.purchases),
             c = (0, m.o)(e, l),
@@ -95,7 +97,7 @@ let S = (e, t, n, r) => {
         }
         return [c, null];
     },
-    N = (e) => {
+    R = (e) => {
         if (null == e) return null;
         if (e.type === a.Z.VARIANTS_GROUP) {
             if (null == e.variants || 0 === e.variants.length) return null;
@@ -105,4 +107,9 @@ let S = (e, t, n, r) => {
             return n.type;
         }
         return e.type;
+    },
+    P = (e) => {
+        let t = (0, s.e7)([f.Z], () => f.Z.getCategoryForProduct(e)),
+            n = null == t ? void 0 : t.products.find((t) => t.skuId === e);
+        return (0, v.Cr)(n);
     };

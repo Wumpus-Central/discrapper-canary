@@ -1,4 +1,4 @@
-n.d(t, { Z: () => r });
+t.d(n, { Z: () => r });
 function r(e) {
-    return "".concat(e.serverIP, ":").concat(e.port);
+    return null == e.serverIP || null == e.port ? null : "".concat(e.serverIP, ":").concat(e.port);
 }

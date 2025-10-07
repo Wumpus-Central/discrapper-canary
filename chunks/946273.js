@@ -59,8 +59,8 @@ let m = (e, t) => {
     return p(e, { maxDaysOld: 7 }, t) && !o && !c && !n;
 };
 function g(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.Z, i.ZP];
-    return null != t && E(e, t, [n]) && null != r.getMember(t.id, e.id);
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.Z];
+    return null != t && E(e, t, [n]) && !e.isProvisional;
 }
 function E(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.Z];

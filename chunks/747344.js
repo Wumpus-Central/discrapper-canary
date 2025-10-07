@@ -10,7 +10,6 @@ function a() {
 let o = r.createContext({
     state: {
         isInitialized: !1,
-        isOpen: !1,
         activeDescendantIndex: null,
         listItems: [],
         filteredItems: [],
@@ -23,4 +22,6 @@ let o = r.createContext({
     selectionMode: "single",
     handleSelectionChange: i.dG4,
     onSelectionChange: i.dG4,
+    isOpen: !1,
+    setIsOpen: i.dG4,
 });

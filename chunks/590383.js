@@ -1,8 +1,8 @@
 t.d(n, { Z: () => u });
 var r,
     i = t(442837),
-    a = t(570140);
-function l(e, n, t) {
+    l = t(570140);
+function a(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -17,20 +17,23 @@ function l(e, n, t) {
 }
 let o = {},
     s = [];
-function c() {
+function d() {
     o = {};
 }
-class d extends (r = i.ZP.Store) {
+class c extends (r = i.ZP.Store) {
     getRegionStateForPingUrl(e) {
         if (null != e) return o[e];
+    }
+    getRegionState() {
+        return o;
     }
     getRegions() {
         return s;
     }
 }
-l(d, "displayName", "PortkeyRegionStore");
-let u = new d(a.Z, {
-    LOGOUT: c,
+a(c, "displayName", "PortkeyRegionStore");
+let u = new c(l.Z, {
+    LOGOUT: d,
     PORTKEY_REGION_PING_STATE_UPDATE: function (e) {
         var n, t;
         let { pingUrl: r, state: i } = e;
@@ -45,7 +48,7 @@ let u = new d(a.Z, {
                         }),
                     )),
                     r.forEach(function (n) {
-                        l(e, n, t[n]);
+                        a(e, n, t[n]);
                     });
             }
             return e;
@@ -65,7 +68,7 @@ let u = new d(a.Z, {
                   }),
             (o = n);
     },
-    PORTKEY_REGION_PING_STATE_RESET: c,
+    PORTKEY_REGION_PING_STATE_RESET: d,
     PORTKEY_FETCH_REGIONS_SUCCESS: function (e) {
         let { regions: n } = e;
         s = n;

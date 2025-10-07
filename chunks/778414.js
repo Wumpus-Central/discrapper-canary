@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => k,
-    Z: () => L,
+    C: () => V,
+    Z: () => U,
 }),
     n(388685);
 var r = n(951288),
@@ -8,31 +8,36 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    s = n(481060),
-    c = n(355467),
-    u = n(981312),
-    d = n(929677),
-    p = n(314897),
-    f = n(351402),
-    h = n(931847),
-    g = n(836197),
-    m = n(880421),
-    b = n(206599),
-    _ = n(5136),
-    O = n(690760),
-    E = n(747101),
-    y = n(517157),
-    v = n(860717),
-    I = n(430790),
-    S = n(640078),
-    C = n(190862),
-    T = n(682085),
-    N = n(996921),
-    j = n(661462),
-    P = n(795990),
-    x = n(388032),
-    A = n(479283);
-function Z(e) {
+    s = n(704215),
+    c = n(481060),
+    u = n(355467),
+    d = n(491662),
+    p = n(243778),
+    f = n(981312),
+    h = n(929677),
+    g = n(314897),
+    m = n(351402),
+    b = n(931847),
+    _ = n(836197),
+    O = n(880421),
+    E = n(206599),
+    v = n(50130),
+    y = n(5136),
+    I = n(690760),
+    S = n(747101),
+    C = n(517157),
+    T = n(860717),
+    N = n(28671),
+    j = n(430790),
+    P = n(640078),
+    x = n(190862),
+    A = n(682085),
+    Z = n(996921),
+    w = n(661462),
+    L = n(795990),
+    R = n(388032),
+    D = n(830202);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +62,7 @@ function Z(e) {
     }
     return e;
 }
-function w(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,67 +82,91 @@ function w(e, t) {
     }
     return i;
 }
-function L(e) {
+function U(e) {
     var { widget: t } = e,
-        n = w(e, ["widget"]);
-    return t instanceof h.q
-        ? (0, r.jsx)(v.Z, Z({ widget: t }, n))
-        : t instanceof g.zy
-          ? (0, r.jsx)(C.Z, Z({ widget: t }, n))
+        n = M(e, ["widget"]);
+    return t instanceof b.q
+        ? (0, r.jsx)(T.Z, k({ widget: t }, n))
+        : t instanceof _.zy
+          ? (0, r.jsx)(x.Z, k({ widget: t }, n))
           : null;
 }
-function R() {
+function G() {
     return (0, r.jsxs)("div", {
-        className: A.ukTeenDisclaimer,
+        className: D.ukTeenDisclaimer,
         children: [
-            (0, r.jsx)(s.d3s, { size: "xs" }),
-            (0, r.jsx)(s.Text, {
-                "aria-label": x.intl.string(x.t["7blcz8"]),
+            (0, r.jsx)(c.d3s, { size: "xs" }),
+            (0, r.jsx)(c.Text, {
+                "aria-label": R.intl.string(R.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: x.intl.string(x.t["7blcz8"]),
+                children: R.intl.string(R.t["7blcz8"]),
             }),
         ],
     });
 }
-function D(e) {
+function B(e) {
+    let { user: t } = e,
+        { application: n } = (0, v.G)(),
+        { token: i } = (0, d.o)(null == n ? void 0 : n.id),
+        l = (0, C.Z)(t.id),
+        a = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
+        o = l.some((e) => e instanceof b.q && e.applicationId === (null == n ? void 0 : n.id));
+    return null == n || !a || null == i || o
+        ? null
+        : (0, r.jsx)(p.ZP, {
+              contentTypes: [s.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
+              children: (e) => {
+                  let { visibleContent: i, markAsDismissed: l } = e;
+                  return i === s.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET
+                      ? (0, r.jsx)(N.Z, {
+                            user: t,
+                            application: n,
+                            onDismiss: l,
+                        })
+                      : null;
+              },
+          });
+}
+function H(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        a = (0, y.Z)(t.id),
-        s = (0, o.e7)([p.default], () => p.default.getId() === t.id),
-        _ = (() => {
-            let [e, t] = (0, o.Wu)([f.Z], () => [f.Z.ipCountryCode, f.Z.ipCountryCodeRequest]),
-                n = (0, u.U)();
+        a = (0, C.Z)(t.id),
+        s = (0, o.e7)([g.default], () => g.default.getId() === t.id),
+        c = (() => {
+            let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
+                n = (0, f.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && n && (0, c.GE)();
+                    null == e && null == t && n && (0, u.GE)();
                 }, [e, t, n]),
                 "GB" === e && n
             );
         })(),
-        v = (0, m.k)({ location: "UserProfileModalV2Widgets" }),
-        S = 0 === a.length && s,
-        C = i.useMemo(() => a.filter(g.Wc), [a]),
-        N = i.useMemo(() => a.filter((e) => e instanceof h.q), [a]);
-    (0, E.ZP)(C), (0, b.J)(s, C);
-    var j = t.id;
-    (0, O.s)(N);
-    let { data: x, refetch: A } = (0, d.O)(j),
-        Z = i.useRef(x);
+        d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
+        p = 0 === a.length && s,
+        v = i.useMemo(() => a.filter(_.Wc), [a]),
+        y = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
+    (0, S.ZP)(v), (0, E.J)(s, v);
+    var T = t.id;
+    (0, I.s)(y);
+    let { data: N, refetch: P } = (0, h.O)(T),
+        x = i.useRef(N);
     if (
-        ((Z.current = x),
+        ((x.current = N),
         i.useEffect(() => {
-            null !== Z.current && A();
-        }, [A]),
-        S)
+            null !== x.current && P();
+        }, [P]),
+        p)
     )
-        if (v) return (0, r.jsx)(T.Z, {});
-        else return (0, r.jsx)(P.Z, {});
+        if (d) return (0, r.jsx)(A.Z, {});
+        else return (0, r.jsx)(L.Z, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            s && _ && (0, r.jsx)(R, {}),
+            s && c && (0, r.jsx)(G, {}),
+            s && (0, r.jsx)(B, { user: t }),
             a.map((e, i) =>
                 (0, r.jsx)(
-                    L,
+                    U,
                     {
                         widget: e,
                         user: t,
@@ -148,21 +177,21 @@ function D(e) {
                     e.type,
                 ),
             ),
-            s && (0, r.jsx)(I.Z, {}),
+            s && (0, r.jsx)(j.Z, {}),
         ],
     });
 }
-function k(e) {
+function V(e) {
     var { user: t } = e,
-        n = w(e, ["user"]);
+        n = M(e, ["user"]);
     let l = i.useRef(null);
-    (0, _.r)({ container: l.current });
-    let o = (0, N.h)(t.id);
-    return (0, r.jsxs)(j.F, {
+    (0, y.r)({ container: l.current });
+    let o = (0, Z.h)(t.id);
+    return (0, r.jsxs)(w.F, {
         "data-scroller": !0,
         scrollerRef: l,
-        className: a()(A.scroller, { [A.hasToolbar]: o }),
+        className: a()(D.scroller, { [D.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(S.Z, { scrollerRef: l }), (0, r.jsx)(D, Z({ user: t }, n))],
+        children: [(0, r.jsx)(P.Z, { scrollerRef: l }), (0, r.jsx)(H, k({ user: t }, n))],
     });
 }

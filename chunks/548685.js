@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     i = n(442837),
     o = n(481060),
     c = n(782568),
@@ -12,8 +12,8 @@ var r = n(951288),
     p = n(626135),
     f = n(63063),
     C = n(74538),
-    _ = n(381585),
-    h = n(597688),
+    h = n(381585),
+    _ = n(597688),
     m = n(128922),
     b = n(38900),
     E = n(709999),
@@ -23,15 +23,15 @@ var r = n(951288),
     O = n(849275),
     T = n(619899),
     y = n(642909),
-    j = n(981631),
-    L = n(388032),
+    L = n(981631),
+    j = n(388032),
     k = n(345213),
     I = n(310582);
 let P = (e) => {
     var t;
     let {
             isLoading: n,
-            title: a,
+            title: s,
             sortedSkuIds: P,
             numVisibleItems: N,
             hasSorting: B,
@@ -40,8 +40,8 @@ let P = (e) => {
             buttonContainerClassName: Z,
         } = e,
         w = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        F = C.ZP.canUseCollectibles(w),
-        H = (0, y.G)("FeedBlock"),
+        H = C.ZP.canUseCollectibles(w),
+        F = (0, y.G)("FeedBlock"),
         {
             sortType: D,
             setSortType: M,
@@ -49,13 +49,13 @@ let P = (e) => {
             sortOptions: U,
             shuffleProducts: V,
             showRecommendationOption: z,
-        } = (0, O.Z)(P, F, A),
+        } = (0, O.Z)(P, H, A),
         G = (0, T.St)(W),
         K = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         q = (0, i.e7)([g.Z], () => g.Z.isFocused()),
         Y = !K && q,
         { animationPhase: X, startAnimation: Q } = (0, x.y)(),
-        J = (0, _.sp)(),
+        J = (0, h.sp)(),
         $ = null != (t = null == J ? void 0 : J.sessionId) ? t : "",
         ee = l.useRef(null),
         et = l.useCallback(
@@ -64,7 +64,7 @@ let P = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => M(e),
                 }),
-                    p.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: $,
                         sort_type: e,
                     });
@@ -75,7 +75,7 @@ let P = (e) => {
     return null == w
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(I.popularPicksSection, I.centeredSection),
+              className: a()(I.popularPicksSection, I.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: I.blockHeader,
@@ -85,13 +85,13 @@ let P = (e) => {
                               children: [
                                   (0, r.jsx)(o.X6q, {
                                       variant: "heading-lg/semibold",
-                                      children: a,
+                                      children: s,
                                   }),
                                   z &&
                                       (0, r.jsx)(o.ua7, {
-                                          text: L.intl.string(L.t["3taPdn"]),
+                                          text: j.intl.string(j.t["3taPdn"]),
                                           position: "top",
-                                          "aria-label": L.intl.string(L.t["3taPdn"]),
+                                          "aria-label": j.intl.string(j.t["3taPdn"]),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -126,7 +126,7 @@ let P = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  f.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  f.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
                                                           className: I.informationIcon,
                                                           children: (0, r.jsx)(o.d3s, { size: "sm" }),
@@ -155,11 +155,11 @@ let P = (e) => {
                           }),
                           B
                               ? (0, r.jsxs)("div", {
-                                    className: s()(I.headerRight, { [k.shopTakeOver]: H }),
+                                    className: a()(I.headerRight, { [k.shopTakeOver]: F }),
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-md/medium",
-                                            children: L.intl.string(L.t.uaX709),
+                                            children: j.intl.string(j.t.uaX709),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: Z,
@@ -167,7 +167,7 @@ let P = (e) => {
                                                 options: U,
                                                 select: et,
                                                 className: I.sortSelect,
-                                                popoutClassName: s()({ [k.shopTakeOver]: H }),
+                                                popoutClassName: a()({ [k.shopTakeOver]: F }),
                                                 isSelected: (e) => e === D,
                                                 serialize: (e) => e,
                                             }),
@@ -176,7 +176,7 @@ let P = (e) => {
                                             className: Z,
                                             children: (0, r.jsx)(o.zxk, {
                                                 variant: "secondary",
-                                                text: L.intl.string(L.t.X3tnc3),
+                                                text: j.intl.string(j.t.X3tnc3),
                                                 buttonRef: ee,
                                                 onClick: () => {
                                                     Q({
@@ -184,7 +184,7 @@ let P = (e) => {
                                                         onOutroComplete: V,
                                                         returnRef: ee,
                                                     }),
-                                                        p.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                        p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                             page_session_id: $,
                                                         });
                                                 },
@@ -206,7 +206,7 @@ let P = (e) => {
                             })
                           : G.slice(0, N).map((e, t) => {
                                 let n,
-                                    l = h.Z.getCategoryForProduct(e.skuId);
+                                    l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (Y)
                                     if (X === x.g.SHUFFLE_OUT)
@@ -234,25 +234,28 @@ let P = (e) => {
                                               ? (n = I.shuffleIntro)
                                               : X === x.g.SORT_IN && (n = I.sortChangedIntro);
                                 return (0, r.jsx)(
-                                    _.k0,
+                                    h.k0,
                                     {
                                         newValue: {
                                             tilePosition: t,
                                             pageSection: "popular picks",
                                             categoryPosition: 2,
                                         },
-                                        children: en
-                                            ? (0, r.jsx)("div", {
-                                                  className: n,
-                                                  children: (0, r.jsx)(S.Z, { skuId: null == e ? void 0 : e.skuId }),
-                                              })
-                                            : (0, r.jsx)(E.Z, {
-                                                  product: e,
-                                                  category: l,
-                                                  user: w,
-                                                  tab: R,
-                                                  className: n,
-                                              }),
+                                        children:
+                                            en && (null == e ? void 0 : e.skuId) != null
+                                                ? (0, r.jsx)("div", {
+                                                      className: n,
+                                                      children: (0, r.jsx)(S.Z, {
+                                                          skuId: null == e ? void 0 : e.skuId,
+                                                      }),
+                                                  })
+                                                : (0, r.jsx)(E.Z, {
+                                                      product: e,
+                                                      category: l,
+                                                      user: w,
+                                                      tab: R,
+                                                      className: n,
+                                                  }),
                                     },
                                     null == e ? void 0 : e.skuId,
                                 );

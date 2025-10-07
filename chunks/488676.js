@@ -26,7 +26,7 @@ let _ = {
                         withDescriptions: g,
                         withIcons: E,
                     } = e,
-                    [b, y] = i.useState(),
+                    [b, y] = i.useState("option1"),
                     O = i.useMemo(() => {
                         let e = [s.x, o.A, a.d, l.e, c.U];
                         return [

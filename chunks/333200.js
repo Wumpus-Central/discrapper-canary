@@ -1,10 +1,10 @@
 n.d(t, { V: () => p }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(816529),
+var i = n(793030),
     a = n(496600),
     o = n(713072),
-    s = n(747344);
+    s = n(680765);
 function l(e, t, n) {
     return (
         t in e
@@ -82,14 +82,15 @@ function p(e) {
     var {
             label: t,
             hideLabel: n,
-            required: i,
-            description: o,
-            helperText: s,
-            errorMessage: l,
-            successMessage: u,
-            wrapTags: _,
+            required: l,
+            description: u,
+            helperText: _,
+            errorMessage: p,
+            successMessage: h,
+            wrapTags: m,
+            maxOptionsVisible: g = 5,
         } = e,
-        p = f(e, [
+        E = f(e, [
             "label",
             "hideLabel",
             "required",
@@ -98,42 +99,67 @@ function p(e) {
             "errorMessage",
             "successMessage",
             "wrapTags",
+            "maxOptionsVisible",
         ]);
-    let { disabled: m } = p;
+    let { disabled: b } = E,
+        {
+            isOpen: y,
+            setIsOpen: O,
+            refs: v,
+            floatingStyles: I,
+            getFloatingProps: T,
+            getReferenceProps: S,
+        } = (0, i.ON0)({
+            placement: "bottom",
+            matchReferenceWidth: !0,
+        });
     return (0, r.jsxs)(
         a.uz,
-        d(c({}, p), {
+        d(c({}, E), {
             isCollapsible: !0,
+            isOpen: y,
+            setIsOpen: O,
             children: [
-                (0, r.jsx)(a.Ct, {
-                    label: t,
-                    hideLabel: n,
-                    required: i,
-                    disabled: m,
-                    description: o,
-                    helperText: s,
-                    errorMessage: l,
-                    successMessage: u,
-                    wrapTags: _,
-                    showChevronButton: !0,
-                }),
-                (0, r.jsx)(h, {}),
+                (0, r.jsx)(
+                    a.Ct,
+                    c(
+                        {
+                            label: t,
+                            hideLabel: n,
+                            required: l,
+                            disabled: b,
+                            description: u,
+                            helperText: _,
+                            errorMessage: p,
+                            successMessage: h,
+                            wrapTags: m,
+                            showChevronButton: !0,
+                            ref: v.setReference,
+                        },
+                        S(),
+                    ),
+                ),
+                y &&
+                    (0, r.jsx)(
+                        "div",
+                        d(
+                            c(
+                                {
+                                    ref: v.setFloating,
+                                    className: s.selectDropdown,
+                                    style: I,
+                                },
+                                T(),
+                            ),
+                            {
+                                children: (0, r.jsx)(a.px, {
+                                    renderListItem: (e) => (0, r.jsx)(o.W, c({}, e)),
+                                    maxVisibleItems: g,
+                                }),
+                            },
+                        ),
+                    ),
             ],
         }),
     );
-}
-function h() {
-    let { state: e, setState: t, inputFieldRef: n } = (0, s.T)();
-    function l() {
-        t((e) => d(c({}, e), { isOpen: !1 }));
-    }
-    return (0, r.jsx)(i.L, {
-        targetElementRef: n,
-        dialog: !1,
-        isOpen: e.isOpen,
-        width: e.width,
-        height: e.dropDownHeight,
-        onRequestClose: l,
-        children: (0, r.jsx)(a.px, { renderListItem: (e) => (0, r.jsx)(o.W, c({}, e)) }),
-    });
 }

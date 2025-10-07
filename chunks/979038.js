@@ -30,59 +30,59 @@ function C(e) {
         { themeType: w } = (0, m.z)(),
         D = (0, c.q)(P, "UserProfileActivityButtons"),
         L = (0, f.L)(null != (t = null == C ? void 0 : C.application_id) ? t : null == P ? void 0 : P.id),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS);
-    if ((0, s.Z)(C))
-        return (0, r.jsx)(O.Z, {
-            platformType: S.ABu.XBOX,
-            icon: () => (0, r.jsx)(h.Z, {}),
-            onAction: N,
-        });
-    if ((0, o.Z)(C))
-        return (0, r.jsx)(O.Z, {
-            platformType: S.ABu.PLAYSTATION,
-            icon: () => (0, r.jsx)(p.Z, {}),
-            onAction: N,
-        });
-    if ((0, l.Z)(C))
-        return (0, r.jsx)(I.Z, {
-            activity: C,
-            onAction: N,
-        });
-    let j = w === A.l.MODAL || w === A.l.MODAL_V2;
-    return L || !D || null == P || j
-        ? (0, i.Z)(C, S.xjy.JOIN) || (0, a.Z)(C)
-            ? (0, r.jsx)(b.Z, {
-                  user: n,
-                  activity: C,
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS),
+        M = w === A.l.MODAL || w === A.l.MODAL_V2;
+    return L || !D || null == P || M
+        ? (0, s.Z)(C)
+            ? (0, r.jsx)(O.Z, {
+                  platformType: S.ABu.XBOX,
+                  icon: () => (0, r.jsx)(h.Z, {}),
                   onAction: N,
-                  onClose: R,
               })
-            : (null == C ? void 0 : C.type) === S.IIU.HANG_STATUS
-              ? (0, r.jsx)(E.Z, {
-                    user: n,
-                    activity: C,
+            : (0, o.Z)(C)
+              ? (0, r.jsx)(O.Z, {
+                    platformType: S.ABu.PLAYSTATION,
+                    icon: () => (0, r.jsx)(p.Z, {}),
                     onAction: N,
-                    onClose: R,
                 })
-              : (null == C ? void 0 : C.buttons) != null && (null == C ? void 0 : C.buttons.length) >= 1
-                ? (0, r.jsx)(g.Z, {
-                      user: n,
+              : (0, l.Z)(C)
+                ? (0, r.jsx)(I.Z, {
                       activity: C,
                       onAction: N,
                   })
-                : (0, i.Z)(C, S.xjy.INSTANCE)
-                  ? (0, r.jsx)(y.Z, {
+                : (0, i.Z)(C, S.xjy.JOIN) || (0, a.Z)(C)
+                  ? (0, r.jsx)(b.Z, {
                         user: n,
                         activity: C,
                         onAction: N,
+                        onClose: R,
                     })
-                  : (0, _.dS)(C)
-                    ? (0, r.jsx)(v.Z, {
+                  : (null == C ? void 0 : C.type) === S.IIU.HANG_STATUS
+                    ? (0, r.jsx)(E.Z, {
+                          user: n,
                           activity: C,
                           onAction: N,
                           onClose: R,
                       })
-                    : null
+                    : (null == C ? void 0 : C.buttons) != null && (null == C ? void 0 : C.buttons.length) >= 1
+                      ? (0, r.jsx)(g.Z, {
+                            user: n,
+                            activity: C,
+                            onAction: N,
+                        })
+                      : (0, i.Z)(C, S.xjy.INSTANCE)
+                        ? (0, r.jsx)(y.Z, {
+                              user: n,
+                              activity: C,
+                              onAction: N,
+                          })
+                        : (0, _.dS)(C)
+                          ? (0, r.jsx)(v.Z, {
+                                activity: C,
+                                onAction: N,
+                                onClose: R,
+                            })
+                          : null
         : (0, r.jsx)(T.Z, {
               application: P,
               onAction: N,

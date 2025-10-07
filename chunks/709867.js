@@ -17,7 +17,22 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function c() {
+    return (c =
+        Object.assign ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            }
+            return e;
+        }).apply(this, arguments);
+}
+function u(e) {
+    if (null == e) throw TypeError("Cannot destructure " + e);
+    return e;
+}
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,51 +48,39 @@ function c(e) {
     }
     return e;
 }
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
 function f(e) {
-    let { onChange: t, options: n, label: l, disabled: u, value: f } = e,
-        _ = i.useMemo(() => new Set(n.map((e) => e.value)), [n]),
-        p = i.useCallback(
+    let { onChange: t, options: n, label: l, disabled: f, value: _ } = e,
+        p = i.useMemo(() => new Set(n.map((e) => e.value)), [n]),
+        h = i.useCallback(
             (e) => {
-                let n = e.filter((e) => _.has(e));
+                let n = e.filter((e) => p.has(e));
                 null == t || t(n);
             },
-            [_, t],
+            [p, t],
         );
     return (0, r.jsx)(o.NIc, {
         label: l,
         role: "group",
         children: (0, r.jsx)(a.cO, {
             className: s.group,
-            value: f,
-            onChange: p,
+            value: _,
+            onChange: h,
             "data-mana-component": "checkbox-group",
-            isDisabled: u,
-            children: n.map((e) =>
-                (0, r.jsx)(o.Cnq, d(c({ disabled: u || e.disabled }, e), { labelType: "primary" }), String(e.value)),
-            ),
+            isDisabled: f,
+            children: n.map((e) => {
+                let t = c({}, u(e));
+                return (0, r.jsx)(
+                    o.Cnq,
+                    d(
+                        {
+                            disabled: f || e.disabled,
+                            checked: null == _ ? void 0 : _.includes(e.value),
+                        },
+                        t,
+                    ),
+                    String(e.value),
+                );
+            }),
         }),
     });
 }

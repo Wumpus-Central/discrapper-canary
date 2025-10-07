@@ -100,6 +100,7 @@ let m = (() => {
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1,
         logKeyboardMismatches: !1,
+        alertStartupMetrics: !1,
     },
     b = h({}, E);
 function y(e) {
@@ -173,6 +174,9 @@ class T extends (r = o.ZP.Store) {
     }
     get logKeyboardMismatches() {
         return b.logKeyboardMismatches;
+    }
+    get alertStartupMetrics() {
+        return b.alertStartupMetrics;
     }
     getDebugOptionsHeaderValue() {
         return (

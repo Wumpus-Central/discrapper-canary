@@ -1,39 +1,25 @@
-n.d(e, { default: () => c }), n(953529);
-var i = n(951288),
-    a = n(647438),
-    s = n(481060),
-    l = n(388032),
-    r = n(370213);
-let c = (t) => {
-    let { transitionState: e, processFiles: n, onClose: c } = t;
+n.d(i, { default: () => p });
+var s = n(951288),
+    e = n(647438),
+    a = n(159691),
+    r = n(481060),
+    c = n(388032),
+    l = n(370213);
+let p = (t) => {
+    let { transitionState: i, processFiles: n, onClose: p } = t;
     return (
-        a.useEffect(() => {
+        e.useEffect(() => {
             (async () => {
-                e === s.Dvm.ENTERED && (await n(), c());
+                i === r.Dvm.ENTERED && (await n(), p());
             })();
-        }, [c, n, e]),
-        (0, i.jsx)(s.Y0X, {
-            transitionState: e,
-            size: s.CgR.SMALL,
-            "aria-label": l.intl.string(l.t["B/HSDQ"]),
-            parentComponent: "ImageInputUploadModal",
-            children: (0, i.jsxs)(s.hzk, {
-                className: r.modalContent,
-                children: [
-                    (0, i.jsx)(s.$jN, { className: r.spinner }),
-                    (0, i.jsx)(s.hjN, {
-                        tag: s.RB0.H1,
-                        titleClassName: r.title,
-                        title: l.intl.string(l.t["B/HSDQ"]),
-                        className: r.__invalid_content,
-                        children: (0, i.jsx)(s.R94, {
-                            type: s.geA.DESCRIPTION,
-                            className: r.description,
-                            children: l.intl.string(l.t.k7OALi),
-                        }),
-                    }),
-                ],
-            }),
+        }, [p, n, i]),
+        (0, s.jsx)(a.u_l, {
+            title: c.intl.string(c.t["B/HSDQ"]),
+            subtitle: c.intl.string(c.t.k7OALi),
+            actions: void 0,
+            onClose: p,
+            transitionState: i,
+            children: (0, s.jsx)(r.$jN, { className: l.spinner }),
         })
     );
 };

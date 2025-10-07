@@ -108,41 +108,41 @@ function E(e) {
 function Z(e) {
     let { guildId: n, instance: t } = e,
         i = (0, y.Z)(t),
-        S = null != t.serverIP && null != t.port,
-        [Z, D] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        G = Z !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        R = (0, l.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
-        A = a.useCallback(() => {
-            G || null == t.providerType
+        [S, Z] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        D = S !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        G = (0, l.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
+        R = a.useCallback(() => {
+            D || null == t.providerType
                 ? (0, O.Z)(n, t)
                 : (0, h.Z)({
                       provider: t.providerType,
                       onAccept: () => {
-                          D(C.L.TAKE_ACTION), (0, O.Z)(n, t);
+                          Z(C.L.TAKE_ACTION), (0, O.Z)(n, t);
                       },
                   });
-        }, [t, G, D, n]),
-        V = a.useCallback(() => {
-            (0, g.JG)(i), (0, d.showToast)((0, d.createToast)(N.intl.string(N.t["+5kSoa"]), d.ToastType.SUCCESS));
+        }, [t, D, Z, n]),
+        A = a.useCallback(() => {
+            (0, g.JG)(null != i ? i : ""),
+                (0, d.showToast)((0, d.createToast)(N.intl.string(N.t["+5kSoa"]), d.ToastType.SUCCESS));
         }, [i]),
-        W = (0, _.Z)(t.gameId, "cover"),
+        V = (0, _.Z)(t.gameId, "cover"),
         B = (0, x.Z)(n),
-        L = a.useCallback(() => {
+        W = a.useCallback(() => {
             var e;
             (0, f.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
-        M = a.useCallback(() => {
+        L = a.useCallback(() => {
             (0, p.WX)(n, t.id);
         }, [n, t.id]),
-        U = a.useMemo(() => {
+        M = a.useMemo(() => {
             switch (t.status) {
                 case s.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(T, { onClick: M }),
+                            (0, r.jsx)(T, { onClick: L }),
                             B &&
                                 (0, r.jsx)(w, {
-                                    onClick: L,
+                                    onClick: W,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -152,39 +152,36 @@ function Z(e) {
                 case s.V.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(k, {
-                                onClick: A,
-                                disabled: !S,
-                            }),
+                            (0, r.jsx)(k, { onClick: R }),
                             B &&
                                 (0, r.jsx)(w, {
-                                    onClick: L,
+                                    onClick: W,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
                 case s.V.MISSING_STOCK:
                     return B
-                        ? (0, r.jsx)(E, { onClick: L })
+                        ? (0, r.jsx)(E, { onClick: W })
                         : (0, r.jsx)(k, {
-                              onClick: A,
+                              onClick: R,
                               disabled: !0,
                           });
                 case s.V.DELETED:
                 case s.V.STARTUP_FAILED:
                     return B
                         ? (0, r.jsx)(w, {
-                              onClick: L,
+                              onClick: W,
                               disabled: null == t.gameServerPanelUrl,
                           })
                         : (0, r.jsx)(k, {
-                              onClick: A,
+                              onClick: R,
                               disabled: !0,
                           });
                 default:
                     return null;
             }
-        }, [t, A, B, L, S, M]);
+        }, [t, R, B, W, L]);
     return (0, r.jsxs)("div", {
         className: P.card,
         children: [
@@ -198,7 +195,7 @@ function Z(e) {
                                 className: P.serverHeader,
                                 children: [
                                     (0, r.jsx)("img", {
-                                        src: null != W ? W : "",
+                                        src: null != V ? V : "",
                                         alt: "",
                                         className: P.gameImage,
                                     }),
@@ -212,7 +209,7 @@ function Z(e) {
                                             (0, r.jsxs)(d.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "text-tertiary",
-                                                children: [null != R ? "".concat(R.name, " \u2022 ") : "", t.planName],
+                                                children: [null != G ? "".concat(G.name, " \u2022 ") : "", t.planName],
                                             }),
                                         ],
                                     }),
@@ -257,38 +254,39 @@ function Z(e) {
                                                 }),
                                                 (0, r.jsx)("div", {
                                                     className: P.serverIpContainer,
-                                                    children: S
-                                                        ? G
-                                                            ? (0, r.jsxs)(r.Fragment, {
-                                                                  children: [
-                                                                      (0, r.jsx)(d.Text, {
-                                                                          variant: "text-sm/medium",
-                                                                          children: i,
-                                                                      }),
-                                                                      (0, r.jsx)(d.P3F, {
-                                                                          className: P.copyButton,
-                                                                          "aria-label": N.intl.string(N.t.OpuAlJ),
-                                                                          onClick: V,
-                                                                          children: (0, r.jsx)(d.TIy, { size: "sm" }),
-                                                                      }),
-                                                                  ],
+                                                    children:
+                                                        null == i
+                                                            ? (0, r.jsx)(d.Text, {
+                                                                  variant: "text-sm/medium",
+                                                                  children: "\u2014",
                                                               })
-                                                            : null != t.providerType &&
-                                                              (0, r.jsx)(m.Z, {
-                                                                  onClick: () => {
-                                                                      (0, h.Z)({
-                                                                          provider: t.providerType,
-                                                                          onAccept: () => {
-                                                                              D(C.L.TAKE_ACTION), (0, O.Z)(n, t);
-                                                                          },
-                                                                      });
-                                                                  },
-                                                                  children: N.intl.string(I.default.UwXK29),
-                                                              })
-                                                        : (0, r.jsx)(d.Text, {
-                                                              variant: "text-sm/medium",
-                                                              children: "\u2014",
-                                                          }),
+                                                            : D
+                                                              ? (0, r.jsxs)(r.Fragment, {
+                                                                    children: [
+                                                                        (0, r.jsx)(d.Text, {
+                                                                            variant: "text-sm/medium",
+                                                                            children: i,
+                                                                        }),
+                                                                        (0, r.jsx)(d.P3F, {
+                                                                            className: P.copyButton,
+                                                                            "aria-label": N.intl.string(N.t.OpuAlJ),
+                                                                            onClick: A,
+                                                                            children: (0, r.jsx)(d.TIy, { size: "sm" }),
+                                                                        }),
+                                                                    ],
+                                                                })
+                                                              : null != t.providerType &&
+                                                                (0, r.jsx)(m.Z, {
+                                                                    onClick: () => {
+                                                                        (0, h.Z)({
+                                                                            provider: t.providerType,
+                                                                            onAccept: () => {
+                                                                                Z(C.L.TAKE_ACTION), (0, O.Z)(n, t);
+                                                                            },
+                                                                        });
+                                                                    },
+                                                                    children: N.intl.string(I.default.UwXK29),
+                                                                }),
                                                 }),
                                             ],
                                         }),
@@ -355,13 +353,13 @@ function Z(e) {
                             }),
                         ],
                     }),
-                    null != U &&
+                    null != M &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", { className: P.divider }),
                                 (0, r.jsx)("div", {
                                     className: P.serverActions,
-                                    children: U,
+                                    children: M,
                                 }),
                             ],
                         }),
@@ -377,7 +375,7 @@ function Z(e) {
             }),
             (0, r.jsx)("div", {
                 className: P.imageBackground,
-                children: (0, r.jsx)(v.M, { imageUrl: null != W ? W : "" }),
+                children: (0, r.jsx)(v.M, { imageUrl: null != V ? V : "" }),
             }),
         ],
     });

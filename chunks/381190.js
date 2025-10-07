@@ -1,87 +1,58 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(979554),
     s = n(481060),
-    l = n(357352),
-    c = n(449217),
-    u = n(922347),
-    d = n(135483),
-    f = n(212161),
-    _ = n(768581),
-    p = n(937615),
-    h = n(474936),
-    m = n(345909),
-    g = n(388032),
-    E = n(673599);
-let b = (e) => {
-        switch (e) {
-            case o.Z.AVATAR_DECORATION:
-                return g.intl.string(m.default.obi47u);
-            case o.Z.PROFILE_EFFECT:
-                return g.intl.string(m.default.RX8BMT);
-            case o.Z.NAMEPLATE:
-                return g.intl.string(m.default.nNGEHh);
-            case o.Z.BUNDLE:
-                return g.intl.string(m.default.VS1fKi);
-            default:
-                return "";
-        }
+    l = n(449217),
+    c = n(937615),
+    u = n(380979),
+    d = n(673599);
+let f = (e) => {
+        let { displayName: t, product: n } = e,
+            i = (0, u.vV)(n);
+        return null == i
+            ? null
+            : (0, r.jsx)("img", {
+                  src: i,
+                  alt: t,
+                  className: d.avatarDecorationPreview,
+              });
     },
-    y = (e) => {
-        let { displayName: t, product: n } = e;
-        if (0 === n.items.length) return null;
-        let i = n.items[0];
-        if (!(0, u.M)(i)) return null;
-        let a = (0, _.NZ)({
-            avatarDecoration: { asset: i.asset },
-            size: 40,
-            canAnimate: !0,
-        });
-        return (0, r.jsx)("img", {
-            src: a,
-            alt: t,
-            className: E.avatarDecorationPreview,
-        });
+    _ = (e) => {
+        let { displayName: t, product: n } = e,
+            i = (0, u.$U)(n);
+        return null == i
+            ? null
+            : (0, r.jsx)("img", {
+                  src: i,
+                  alt: t,
+                  className: d.nameplatePreview,
+              });
     },
-    O = (e) => {
-        let { displayName: t, product: n } = e;
-        if (0 === n.items.length) return null;
-        let i = n.items[0];
-        if (!(0, d.k)(i)) return null;
-        let a = (0, l.b)("collectibles/".concat(i.asset, "static.png"));
-        return (0, r.jsx)("img", {
-            src: a,
-            alt: t,
-            className: E.nameplatePreview,
-        });
+    p = (e) => {
+        let { displayName: t, product: n } = e,
+            i = (0, u.yz)(n);
+        return null == i
+            ? null
+            : (0, r.jsx)("img", {
+                  src: i,
+                  alt: t,
+                  className: d.avatarDecorationPreview,
+              });
     },
-    v = (e) => {
-        let { displayName: t, product: n } = e;
-        if (0 === n.items.length) return null;
-        let i = n.items[0];
-        if (!(0, f.H)(i)) return null;
-        let a = i.thumbnailPreviewSrc;
-        return (0, r.jsx)("img", {
-            src: a,
-            alt: t,
-            className: E.avatarDecorationPreview,
-        });
-    },
-    I = (e) => {
+    h = (e) => {
         let { subscriptionPlanId: t } = e;
         if (null == t)
             return (0, r.jsx)("div", {
-                className: E.purchasePlaceholder,
+                className: d.purchasePlaceholder,
                 children: (0, r.jsx)(s.EOn, {}),
             });
-        let n = h.GP[t],
-            i = (null == n ? void 0 : n.skuId) === h.Si.GUILD;
+        let n = (0, u.Km)(t);
         return (0, r.jsx)("div", {
-            className: E.purchasePlaceholder,
-            children: i
+            className: d.purchasePlaceholder,
+            children: n
                 ? (0, r.jsx)(s.$Eu, {
                       size: "custom",
                       width: 20,
@@ -94,69 +65,61 @@ let b = (e) => {
                   }),
         });
     },
-    T = (e) => {
+    m = (e) => {
         let { displayName: t, product: n } = e;
         if (null == n)
             return (0, r.jsx)("div", {
-                className: E.purchasePlaceholder,
+                className: d.purchasePlaceholder,
                 children: (0, r.jsx)(s.EOn, {}),
             });
         switch (n.type) {
             case o.Z.AVATAR_DECORATION:
-                return (0, r.jsx)(y, {
+                return (0, r.jsx)(f, {
                     displayName: t,
                     product: n,
                 });
             case o.Z.NAMEPLATE:
-                return (0, r.jsx)(O, {
+                return (0, r.jsx)(_, {
                     displayName: t,
                     product: n,
                 });
             case o.Z.PROFILE_EFFECT:
-                return (0, r.jsx)(v, {
+                return (0, r.jsx)(p, {
                     displayName: t,
                     product: n,
                 });
             default:
                 return (0, r.jsx)("div", {
-                    className: E.purchasePlaceholder,
+                    className: d.purchasePlaceholder,
                     children: (0, r.jsx)(s.EOn, {}),
                 });
         }
     },
-    S = (e) => {
-        let t,
-            n,
-            { skuId: i, subscriptionPlanId: o, total: l, currency: u, className: d } = e,
-            { product: f } = (0, c.Z)(i),
-            _ = null != o;
-        if (null !== i && !_ && null == f) return null;
-        if (null != f) (t = f.name), (n = b(f.type));
-        else if (_ && null != o) {
-            let e = h.GP[o];
-            t = null == e ? void 0 : e.name;
-        }
-        if (null == t) return null;
-        let m = (0, p.T4)(l, u);
+    g = (e) => {
+        let { skuId: t, subscriptionPlanId: n, total: i, currency: o, className: f } = e,
+            { product: _ } = (0, l.Z)(t),
+            { displayName: p, typeName: g, isSubscription: E } = (0, u.HB)(null != _ ? _ : null, n);
+        if ((null != t && !E && null == _) || null == p) return null;
+        let b = (0, c.T4)(i, o);
         return (0, r.jsxs)("div", {
-            className: a()(E.container, d),
+            className: a()(d.container, f),
             children: [
-                _
-                    ? (0, r.jsx)(I, { subscriptionPlanId: o })
-                    : (0, r.jsx)(T, {
-                          displayName: t,
-                          product: null != f ? f : null,
+                E
+                    ? (0, r.jsx)(h, { subscriptionPlanId: n })
+                    : (0, r.jsx)(m, {
+                          displayName: p,
+                          product: null != _ ? _ : null,
                       }),
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/semibold",
-                            children: null != n ? "".concat(t, " \u2022 ").concat(n) : t,
+                            children: null != g ? "".concat(p, " \u2022 ").concat(g) : p,
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-xs/medium",
                             color: "text-muted",
-                            children: m,
+                            children: b,
                         }),
                     ],
                 }),

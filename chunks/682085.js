@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(296009),
@@ -10,120 +10,108 @@ var r = n(951288),
     d = n(594174),
     p = n(785717),
     f = n(931847),
-    h = n(86419),
-    g = n(50130),
-    m = n(860717),
-    b = n(430790),
-    _ = n(795990),
-    O = n(872269),
-    E = n(228168),
-    v = n(921944),
-    y = n(388032),
-    I = n(66582);
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function C(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function T() {
-    let e = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { trackUserProfileEditAction: t } = (0, p.KZ)(),
-        { application: T, config: j } = (0, g.G)(),
-        { token: P, loading: x } = (0, c.o)(null == j ? void 0 : j.application_id),
-        A = i.useMemo(
+    h = n(50130),
+    g = n(28671),
+    m = n(430790),
+    b = n(795990),
+    _ = n(388032),
+    O = n(66582);
+function E() {
+    let { trackUserProfileEditAction: e } = (0, p.KZ)(),
+        t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        { application: E, config: v } = (0, h.G)(),
+        { token: y, loading: I } = (0, c.o)(null == v ? void 0 : v.application_id),
+        S = i.useMemo(
             () =>
-                (null == j ? void 0 : j.application_id) != null
+                (null == v ? void 0 : v.application_id) != null
                     ? new f.q({
                           type: l.l.APPLICATION,
-                          applicationId: j.application_id,
+                          applicationId: v.application_id,
                       })
                     : null,
-            [null == j ? void 0 : j.application_id],
+            [null == v ? void 0 : v.application_id],
         ),
-        Z = i.useCallback(() => {
-            null != A &&
-                ((0, h.qH)(A.type, A),
-                t({
-                    action: "WIDGET_ADDED",
-                    widgetEdited: A.type,
-                }),
-                (0, O.L$)(E.qb.WIDGET_ADDED));
-        }, [A, t]),
-        w = i.useCallback(() => {
-            t({ action: "PRESS_ADD_WIDGET" }),
+        C = i.useCallback(() => {
+            e({ action: "PRESS_ADD_WIDGET" }),
                 (0, s.ZDy)(
                     async () => {
-                        let { default: e } = await n.e("38576").then(n.bind(n, 925170));
-                        return (n) => (0, r.jsx)(e, C(S({}, n), { trackUserProfileEditAction: t }));
+                        let { default: t } = await n.e("38576").then(n.bind(n, 925170));
+                        return (n) => {
+                            var i, l;
+                            return (0, r.jsx)(
+                                t,
+                                ((i = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, n)),
+                                (l = l = { trackUserProfileEditAction: e }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      }),
+                                i),
+                            );
+                        };
                     },
                     { stackingBehavior: "stack" },
                 );
-        }, [t]);
-    if (null == e || null == T || null == A || x)
+        }, [e]);
+    if (null == t || null == E || null == S || I)
         return (0, r.jsx)("div", {
-            className: I.loading,
+            className: O.loading,
             children: (0, r.jsx)(s.$jN, {}),
         });
-    if (null == P) return (0, r.jsx)(_.Z, {});
-    let L = (0, r.jsxs)(s.Kqy, {
+    if (null == y) return (0, r.jsx)(b.Z, {});
+    let T = (0, r.jsxs)(s.Kqy, {
         gap: 4,
-        className: I.header,
+        className: O.header,
         children: [
             (0, r.jsx)(s.X6q, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: y.intl.string(y.t.oqalCw),
+                children: _.intl.string(_.t.oqalCw),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: y.intl.format(y.t.YnNFWV, { applicationName: T.name }),
+                children: _.intl.format(_.t.YnNFWV, { applicationName: E.name }),
             }),
         ],
     });
     return (0, r.jsx)(u.ZP, {
         contentTypes: [o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
         bypassAutoDismiss: !0,
-        children: (t) => {
-            let { visibleContent: n, markAsDismissed: i } = t;
+        children: (e) => {
+            let { visibleContent: n, markAsDismissed: i } = e;
             switch (n) {
                 case o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET:
                     return (0, r.jsxs)(s.Kqy, {
@@ -131,54 +119,13 @@ function T() {
                         align: "center",
                         children: [
                             (0, r.jsx)(s.LZC, { size: 32 }),
-                            L,
-                            (0, r.jsx)(m.Z, {
-                                user: e,
-                                widget: A,
-                                cta: (0, r.jsx)(N, {
-                                    heading: y.intl.format(y.t.OIzLCw, { applicationName: T.name }),
-                                    content: y.intl.format(y.t.BQySrq, { applicationName: T.name }),
-                                    buttons: (0, r.jsxs)(r.Fragment, {
-                                        children: [
-                                            (0, r.jsx)(s.ua7, {
-                                                text: y.intl.string(y.t.WAI6xs),
-                                                children: (e) =>
-                                                    (0, r.jsx)(
-                                                        s.Yd2,
-                                                        C(S({}, e), {
-                                                            variant: "secondary",
-                                                            size: "sm",
-                                                            icon: s.Dio,
-                                                            "aria-label": y.intl.string(y.t.WAI6xs),
-                                                            onClick: () => {
-                                                                i(v.L.USER_DISMISS);
-                                                            },
-                                                        }),
-                                                    ),
-                                            }),
-                                            (0, r.jsx)(s.ua7, {
-                                                text: y.intl.string(y.t.lBG2s7),
-                                                children: (e) =>
-                                                    (0, r.jsx)(
-                                                        s.Yd2,
-                                                        C(S({}, e), {
-                                                            variant: "primary",
-                                                            size: "sm",
-                                                            icon: s.kmB,
-                                                            "aria-label": y.intl.formatToPlainString(y.t.KfGahI, {
-                                                                applicationName: T.name,
-                                                            }),
-                                                            onClick: () => {
-                                                                i(v.L.TAKE_ACTION), Z();
-                                                            },
-                                                        }),
-                                                    ),
-                                            }),
-                                        ],
-                                    }),
-                                }),
+                            T,
+                            (0, r.jsx)(g.Z, {
+                                user: t,
+                                application: E,
+                                onDismiss: i,
                             }),
-                            (0, r.jsx)(b.Z, {}),
+                            (0, r.jsx)(m.Z, {}),
                         ],
                     });
                 case null:
@@ -187,51 +134,17 @@ function T() {
                         align: "center",
                         children: [
                             (0, r.jsx)(s.LZC, { size: 128 }),
-                            L,
+                            T,
                             (0, r.jsx)(s.zxk, {
                                 icon: s.qJs,
-                                text: y.intl.string(y.t.lBG2s7),
+                                text: _.intl.string(_.t.lBG2s7),
                                 size: "md",
                                 color: "secondary",
-                                onClick: w,
+                                onClick: C,
                             }),
                         ],
                     });
             }
         },
-    });
-}
-function N(e) {
-    return (0, r.jsxs)(s.Kqy, {
-        direction: "horizontal",
-        gap: 24,
-        padding: 16,
-        fullWidth: !1,
-        className: I.cta,
-        children: [
-            (0, r.jsxs)(s.Kqy, {
-                gap: 4,
-                children: [
-                    (0, r.jsx)(s.X6q, {
-                        variant: "heading-sm/medium",
-                        color: "text-default",
-                        children: e.heading,
-                    }),
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-xs/normal",
-                        color: "header-secondary",
-                        children: e.content,
-                    }),
-                ],
-            }),
-            (0, r.jsx)(s.Kqy, {
-                direction: "horizontal",
-                gap: 12,
-                align: "center",
-                justify: "end",
-                fullWidth: !1,
-                children: e.buttons,
-            }),
-        ],
     });
 }

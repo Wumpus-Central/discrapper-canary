@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    FZ: () => eL,
+    FZ: () => ex,
     ZP: () => e7,
     b6: () => eR,
     ik: () => ew,
@@ -42,10 +42,10 @@ var i,
     P = n(823379),
     w = n(358085),
     D = n(998502),
-    x = n(145597),
-    L = n(581567),
-    j = n(624126),
-    M = n(220410),
+    L = n(145597),
+    x = n(581567),
+    M = n(624126),
+    j = n(272304),
     k = n(981631),
     U = n(987650);
 function G(e, t, n) {
@@ -212,7 +212,7 @@ let V = new h.Z("RunningGameStore"),
     ],
     q = [],
     X = !0,
-    Q = !1,
+    Q = { state: "unknown" },
     J = new Set(),
     $ = [],
     ee = [],
@@ -370,7 +370,7 @@ function eR(e) {
                 overlayMethod: y.gl.Disabled,
             };
     }
-    let o = (0, O.NW)("getRawOverlayGameStatus") && (0, x.supportsOutOfProcess)() && !t,
+    let o = (0, O.NW)("getRawOverlayGameStatus") && (0, L.supportsOutOfProcess)() && !t,
         s = eN(null != a ? a : i),
         l = b.v.legacyEnabled,
         c = o && !s,
@@ -422,10 +422,10 @@ function ew(e) {
 function eD(e) {
     return !e.hidden && ew(e);
 }
-function ex() {
+function eL() {
     u.K.set(H, eo);
 }
-function eL(e, t, n, r) {
+function ex(e, t, n, r) {
     let i = F(B({}, e), {
         played:
             null != e.lastFocused && 0 !== e.lastFocused
@@ -437,7 +437,7 @@ function eL(e, t, n, r) {
     });
     return null != e.id && null != el[e.id] && (i.overlayWarn = el[e.id].warn), i;
 }
-function ej(e) {
+function eM(e) {
     return {
         name: e.name,
         exePath: e.exePath,
@@ -445,7 +445,7 @@ function ej(e) {
         lastFocused: e.lastFocused,
     };
 }
-function eM() {
+function ej() {
     let e = !1;
     return (
         ($ = o()
@@ -519,8 +519,8 @@ function eG(e) {
             }
         }),
         eo.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
-        ex(),
-        R.Z.setRecentGames(eB().map((e) => eL(e, e6, T.Z, S.Z))));
+        eL(),
+        R.Z.setRecentGames(eB().map((e) => ex(e, e6, T.Z, S.Z))));
 }
 function eB() {
     let e = o().values(eo.gameOverrides);
@@ -570,7 +570,7 @@ function ez(e) {
         (eo.gameOverrides[t] = F(B({}, r), { add: !0 })),
         eG(et),
         ek(),
-        ex(),
+        eL(),
         eS();
 }
 function eq() {
@@ -612,7 +612,7 @@ function e$(e) {
     if (
         (i && (eo.enableOverlay[eA(t)] = n),
         a && null != r && (eo.enableOverlayV3[eA(t)] = r),
-        ex(),
+        eL(),
         !__OVERLAY__ && null != (null != t.id ? T.Z.getDetectableGame(t.id) : null))
     ) {
         var o, s;
@@ -623,12 +623,12 @@ function e$(e) {
 function e0(e) {
     let { game: t } = e,
         n = ew(t);
-    (eo.enableDetection[eA(t)] = !n), ex(), C.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+    (eo.enableDetection[eA(t)] = !n), eL(), C.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
 }
 function e1(e) {
     let t = eA(e.game),
         n = eo.gameOverrides[t];
-    null == n && ((n = ej(e.game)).add = !0), (n.name = e.newName);
+    null == n && ((n = eM(e.game)).add = !0), (n.name = e.newName);
     let r = eA(n);
     delete eo.gameOverrides[t],
         (eo.gameOverrides[r] = n),
@@ -643,7 +643,7 @@ function e1(e) {
         eA(n) === t && ((n.name = e.newName), (i = !0));
     }),
         ek(),
-        ex(),
+        eL(),
         i && eS();
 }
 function e2(e) {
@@ -659,7 +659,7 @@ function e2(e) {
             delete ea[t]),
         et.some((e) => eA(e) === t) && eS(),
         ek(),
-        ex();
+        eL();
 }
 function e3(e) {
     var t;
@@ -673,7 +673,7 @@ function e4() {
     m.Z.hasLoadedExperiments && K.length > 0 && (eG(K), (K = []));
 }
 function e8(e) {
-    let { initialized: t, modules: n } = e;
+    let { inputServiceStatus: t, modules: n } = e;
     if (!n.includes("input-service")) return !1;
     Q = t;
 }
@@ -684,7 +684,7 @@ function e8(e) {
             t = new Set();
         r = {};
         let n = T.Z.games,
-            i = (0, O.NW)("handleGamesDatabaseUpdate") && (0, x.supportsOutOfProcess)();
+            i = (0, O.NW)("handleGamesDatabaseUpdate") && (0, L.supportsOutOfProcess)();
         for (let e of n) {
             var a, o, s, l;
             let t = eN(e),
@@ -731,7 +731,7 @@ function e8(e) {
                     });
             }),
             (e = e.filter((e) => null != e.executables && e.executables.length > 0));
-        let u = M.Tf.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;
+        let u = j.Tf.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;
         D.ZP.setObservedGamesCallback(e, u, (e) => {
             let n = [],
                 i = {};
@@ -782,13 +782,13 @@ function e8(e) {
                             orig_game_name_v1: o.origGameName,
                             game_id_v1: null == s ? void 0 : s.id,
                             distributor_v1: o.distributor,
-                            verified_v1: (0, L.vp)(
+                            verified_v1: (0, x.vp)(
                                 o.exePath,
                                 null != (r = null == s ? void 0 : s.executables) ? r : [],
                             ),
                             is_launcher_v1: o.isLauncher,
                             game_detection_enabled_v1: ew(o),
-                            executable_path_v1: (0, L.N6)(o.exePath),
+                            executable_path_v1: (0, x.N6)(o.exePath),
                             distributor_game_id_v1: o.sku,
                             hidden_by_distributor_v1: o.hidden,
                             game_metadata_v1: (0, I.sD)(o),
@@ -796,20 +796,20 @@ function e8(e) {
                             orig_game_name_v2: e.origGameName,
                             game_id_v2: c,
                             distributor_v2: e.distributor,
-                            verified_v2: (0, L.vp)(
+                            verified_v2: (0, x.vp)(
                                 e.exePath,
                                 null != (i = null == l ? void 0 : l.executables) ? i : [],
                             ),
                             is_launcher_v2: e.isLauncher,
                             game_detection_enabled_v2: ew(e),
-                            executable_path_v2: (0, L.N6)(e.exePath),
+                            executable_path_v2: (0, x.N6)(e.exePath),
                             distributor_game_id_v2: e.sku,
                             hidden_by_distributor_v2: e.hidden,
                             game_metadata_v2: (0, I.sD)(e),
                         });
                     }
             });
-        let _ = j.g.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).enabled;
+        let _ = M.g.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).enabled;
         D.ZP.setGameDetectionErrorCallback((e, t, n, r, i) => {
             _ &&
                 C.default.track(k.rMx.GAME_DETECTION_ERROR, {
@@ -854,8 +854,8 @@ class e5 extends (i = c.ZP.Store) {
         this.waitFor(T.Z, m.Z),
             (K = a.gamesSeen.filter((e) => !(0, I.le)(e))),
             this.syncWith([m.Z], e4),
-            this.syncWith([S.Z, T.Z, A.Z], o().throttle(eM, 1000)),
-            s && ex();
+            this.syncWith([S.Z, T.Z, A.Z], o().throttle(ej, 1000)),
+            s && eL();
     }
     getVisibleGame() {
         return null == en || eD(en) ? en : null;
@@ -946,7 +946,7 @@ class e5 extends (i = c.ZP.Store) {
         return null != (n = null == (t = er.find((t) => (0, g.Z)(e, t.windowHandle))) ? void 0 : t.name) ? n : null;
     }
     get canShowAdminWarning() {
-        return X && !Q;
+        return X && !this.isInputServiceInitialized();
     }
     isDetectionEnabled(e) {
         return ew(e);
@@ -955,8 +955,11 @@ class e5 extends (i = c.ZP.Store) {
         var t;
         ep.add(null != (t = (0, p.F)(e)) ? t : e);
     }
-    isInputServiceInitialized() {
+    getInputServiceStatus() {
         return Q;
+    }
+    isInputServiceInitialized() {
+        return "running" === Q.state;
     }
 }
 G(e5, "displayName", "RunningGameStore");

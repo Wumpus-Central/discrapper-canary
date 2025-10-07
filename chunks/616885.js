@@ -6,7 +6,6 @@ e.exports = {
     noMargin: "noMargin__89307",
     whatYouLoseItem: "whatYouLoseItem__89307",
     whatYouLoseItemLeftColumn: "whatYouLoseItemLeftColumn__89307",
-    whatYouLoseItemLearnMore: "whatYouLoseItemLearnMore__89307",
     whatYouLoseItemRightColumn: "whatYouLoseItemRightColumn__89307",
     textSingleLineEllipsis: "textSingleLineEllipsis__89307",
     profileCard: "profileCard__89307",

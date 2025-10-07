@@ -11,9 +11,9 @@ var s = n(951288),
     u = n(744993),
     x = n(693587),
     m = n(998964),
-    f = n(440589),
+    f = n(401561),
     h = n(388032),
-    v = n(999852);
+    v = n(927607);
 function I(e) {
     let { guildId: t, instance: n, onClose: I, transitionState: C } = e,
         N = (0, l.e7)([x.Z], () => {
@@ -25,7 +25,8 @@ function I(e) {
     }, [t, n.planId, N]);
     let T = (0, m.Z)(n),
         j = r.useCallback(() => {
-            (0, d.JG)(T), (0, o.showToast)((0, o.createToast)(h.intl.string(h.t["+5kSoa"]), o.ToastType.SUCCESS));
+            (0, d.JG)(null != T ? T : ""),
+                (0, o.showToast)((0, o.createToast)(h.intl.string(h.t["+5kSoa"]), o.ToastType.SUCCESS));
         }, [T]),
         S = r.useMemo(() => {
             switch (n.status) {
@@ -88,25 +89,26 @@ function I(e) {
                                   ),
                               ),
                           }),
-                          (0, s.jsxs)("div", {
-                              className: v.serverIpContainer,
-                              children: [
-                                  (0, s.jsx)("div", {
-                                      className: v.serverIpInput,
-                                      children: (0, s.jsx)(o.Text, {
-                                          variant: "text-md/medium",
-                                          color: "header-primary",
-                                          children: T,
+                          null != T &&
+                              (0, s.jsxs)("div", {
+                                  className: v.serverIpContainer,
+                                  children: [
+                                      (0, s.jsx)("div", {
+                                          className: v.serverIpInput,
+                                          children: (0, s.jsx)(o.Text, {
+                                              variant: "text-md/medium",
+                                              color: "header-primary",
+                                              children: T,
+                                          }),
                                       }),
-                                  }),
-                                  (0, s.jsx)(o.zxk, {
-                                      variant: "primary",
-                                      text: h.intl.string(h.t.OpuAlJ),
-                                      onClick: j,
-                                      icon: o.TIy,
-                                  }),
-                              ],
-                          }),
+                                      (0, s.jsx)(o.zxk, {
+                                          variant: "primary",
+                                          text: h.intl.string(h.t.OpuAlJ),
+                                          onClick: j,
+                                          icon: o.TIy,
+                                      }),
+                                  ],
+                              }),
                       ],
                   }),
     });

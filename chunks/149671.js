@@ -5,6 +5,7 @@ e.exports = {
     settingsContainer: "settingsContainer__8303d",
     sectionContainer: "sectionContainer__8303d",
     sectionHeader: "sectionHeader__8303d",
+    headerText: "headerText__8303d",
     sectionHeaderIcon: "sectionHeaderIcon__8303d",
     refresh: "refresh__8303d",
     footerContainer: "footerContainer__8303d",

@@ -86,15 +86,17 @@ function L() {
           : u.dG.ACTIVITY;
 }
 function x() {
-    return {
-        [u.MY.USER_ADD]: {},
-        [u.MY.GUILD_ADD]: {},
-        [u.MY.USER_INTERACTION]: {},
-        [u.MY.GUILD_INTERACTION]: {},
-        [u.MY.USER_CALLED]: {},
-        [u.MY.TOTAL_VOICE_MINUTES]: {},
-        [u.MY.PURCHASES]: {},
-    };
+    let e = new Map();
+    return (
+        e.set(u.MY.USER_ADD, new Map()),
+        e.set(u.MY.GUILD_ADD, new Map()),
+        e.set(u.MY.USER_INTERACTION, new Map()),
+        e.set(u.MY.GUILD_INTERACTION, new Map()),
+        e.set(u.MY.USER_CALLED, new Map()),
+        e.set(u.MY.TOTAL_VOICE_MINUTES, new Map()),
+        e.set(u.MY.PURCHASES, new Map()),
+        e
+    );
 }
 function M() {
     return {
@@ -121,10 +123,14 @@ function k(e) {
 }
 function U(e, t) {
     let n = t ? b : x();
-    return (b = e.reduce((e, t) => {
-        let r = t.display_type;
-        return void 0 !== n[r] && void 0 === n[r][t.event_id] && (e[r][t.event_id] = t), e;
-    }, n));
+    return (
+        e.forEach((e) => {
+            let t = e.display_type,
+                r = n.get(t);
+            void 0 === r || r.has(e.event_id) || r.set(e.event_id, e);
+        }),
+        (b = n)
+    );
 }
 function G(e) {
     D = e.reduce((e, t) => {
@@ -195,7 +201,7 @@ function H(e) {
 }
 function Y(e) {
     let { familyCenterTeenActivity: t } = e;
-    if (void 0 === t) return;
+    if (void 0 === t) return !1;
     let {
         actions: n,
         totals: r,
@@ -244,7 +250,7 @@ function X(e) {
 }
 function Q(e) {
     let { user: t } = e;
-    if (void 0 === t.linked_users) return;
+    if (void 0 === t.linked_users) return !1;
     let n = a.default.getUsers();
     t.linked_users.some((e) => {
         let { user_id: t } = e;
@@ -266,9 +272,8 @@ function $(e) {
 function ee() {
     let e = [];
     return (
-        Object.entries(b).forEach((t) => {
-            let [n, r] = t;
-            e.push(...Object.values(r));
+        b.forEach((t) => {
+            e.push(...Array.from(t.values()));
         }),
         e
     );
@@ -337,7 +342,8 @@ class ei extends i.Z {
         return null == m ? null : s.default.extractTimestamp(m);
     }
     getActionsForDisplayType(e) {
-        return Object.values(b[e]);
+        let t = b.get(e);
+        return null != t ? Array.from(t.values()) : [];
     }
     getTotalForDisplayType(e) {
         return y[e];

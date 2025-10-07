@@ -94,6 +94,7 @@ let E = i.memo(function (e) {
             children:
                 null == v
                     ? (0, r.jsx)(s.u, {
+                          asContainer: !0,
                           __unsupportedReactNodeAsText: (0, l.vc)(T, "LLLL"),
                           "aria-label": N,
                           position: I,

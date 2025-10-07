@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     i = n(636977),
     o = n(685816),
     c = n(442837),
@@ -23,8 +23,8 @@ var r = n(951288),
     O = n(655283),
     T = n(370039),
     y = n(937510),
-    j = n(38900),
-    L = n(709999),
+    L = n(38900),
+    j = n(709999),
     k = n(653126),
     I = n(401975),
     P = n(794324),
@@ -52,7 +52,7 @@ let M = (0, E.IC)(90),
     },
     U = (e) => {
         var t;
-        let { isLoading: n, handleTransition: a, category: U, heroBlock: V, tab: z, onVisibilityChange: G } = e,
+        let { isLoading: n, handleTransition: s, category: U, heroBlock: V, tab: z, onVisibilityChange: G } = e,
             K = (0, d.O)(
                 (e) => {
                     null == G || G(e);
@@ -95,12 +95,12 @@ let M = (0, E.IC)(90),
                 bannerStyleOverrides: en,
                 logoStyleOverrides: er,
                 heroLogo: el,
-                heroBannerStatic: ea,
-                heroBannerAnimated: es,
+                heroBannerStatic: es,
+                heroBannerAnimated: ea,
             } = (0, P.hr)(et),
             ei = null != (t = null == en ? void 0 : en.responsive) && t,
             eo = null == en ? void 0 : en.backgroundStyle,
-            ec = (0, A.Dp)(es),
+            ec = (0, A.Dp)(ea),
             eu = (0, c.e7)([b.Z], () => b.Z.products),
             ed = l.useMemo(() => (n ? [] : eu.size > 0 ? Q(et.rankedSkuIds) : []), [n, Q, et.rankedSkuIds, eu]),
             eg = l.useMemo(
@@ -117,11 +117,11 @@ let M = (0, E.IC)(90),
             { cardContainerRef: ep, totalCards: ef } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, u.dQu)(u.TVs.space.SPACE_XL),
-                    a = (0, p.Z)(() => {
-                        (null == s ? void 0 : s.current) != null &&
-                            n(Math.max(1, Math.floor((s.current.offsetWidth + r) / (246 + r))));
+                    s = (0, p.Z)(() => {
+                        (null == a ? void 0 : a.current) != null &&
+                            n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
                     }),
-                    s = (0, g.y)(a, [r, e], {
+                    a = (0, g.y)(s, [r, e], {
                         fireOnMount: !0,
                         fireOnDepsChange: !0,
                         enabled: e,
@@ -129,9 +129,9 @@ let M = (0, E.IC)(90),
                 return {
                     cardContainerRef: l.useCallback(
                         (t) => {
-                            (s.current = t), null != t && e && a();
+                            (a.current = t), null != t && e && s();
                         },
-                        [a, s, e],
+                        [s, a, e],
                     ),
                     totalCards: e ? t : 4,
                 };
@@ -158,7 +158,7 @@ let M = (0, E.IC)(90),
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
                       }),
                       (0, f.navigateToQuestHome)({ fromContent: i.j.ORBS_SHOP_HERO_CTA }))
-                    : (a("shop latest category hero", !eb || eE ? et.categorySkuId : void 0),
+                    : (s("shop latest category hero", !eb || eE ? et.categorySkuId : void 0),
                       _.default.track(H.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == J ? void 0 : J.sessionId,
                           sku_id: et.categorySkuId,
@@ -181,11 +181,11 @@ let M = (0, E.IC)(90),
                             })
                           : null,
                       (0, r.jsx)("div", {
-                          className: s()(D.banner, { [D.rivBanner]: ec }),
+                          className: a()(D.banner, { [D.rivBanner]: ec }),
                           style: null != eo ? { background: eo } : void 0,
                           children: (0, r.jsx)(Z.Z, {
-                              bannerStatic: ea,
-                              bannerAnimated: es,
+                              bannerStatic: es,
+                              bannerAnimated: ea,
                               isResponsive: ei,
                               eventTargetRef: q,
                           }),
@@ -205,7 +205,7 @@ let M = (0, E.IC)(90),
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
-                                        className: s()($ ? D.heroHeaderContainerStacked : D.heroHeaderContainer, {
+                                        className: a()($ ? D.heroHeaderContainerStacked : D.heroHeaderContainer, {
                                             [D.responsive]: ei,
                                         }),
                                         children: [
@@ -223,7 +223,7 @@ let M = (0, E.IC)(90),
                                                                   className: D.limitedTimeBadge,
                                                               }),
                                                           (0, r.jsxs)("div", {
-                                                              className: s()(D.heroLogoNameContainer, {
+                                                              className: a()(D.heroLogoNameContainer, {
                                                                   [D.heroLogoNameContainerStacked]: $,
                                                               }),
                                                               children: [
@@ -276,7 +276,7 @@ let M = (0, E.IC)(90),
                                         ],
                                     }),
                               (0, r.jsx)("div", {
-                                  className: s()({
+                                  className: a()({
                                       [D.row]: z === w.AW.HOME,
                                       [D.feed]: z === w.AW.ORBS,
                                   }),
@@ -285,7 +285,7 @@ let M = (0, E.IC)(90),
                                       n || eg
                                           ? (0, r.jsx)(r.Fragment, {
                                                 children: [...Array(ef)].map((e, t) =>
-                                                    eS ? (0, r.jsx)(I.Z, {}, t) : (0, r.jsx)(j.K, {}, t),
+                                                    eS ? (0, r.jsx)(I.Z, {}, t) : (0, r.jsx)(L.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(r.Fragment, {
@@ -301,23 +301,24 @@ let M = (0, E.IC)(90),
                                                                       pageSection: "top 4",
                                                                       categoryPosition: 0,
                                                                   },
-                                                                  children: eS
-                                                                      ? (0, r.jsx)(
-                                                                            k.Z,
-                                                                            { skuId: null == e ? void 0 : e.skuId },
-                                                                            e.skuId,
-                                                                        )
-                                                                      : (0, r.jsx)(
-                                                                            L.Z,
-                                                                            {
-                                                                                product: e,
-                                                                                category: n,
-                                                                                user: X,
-                                                                                tab: z,
-                                                                                shopBlockType: o.z.HERO,
-                                                                            },
-                                                                            e.skuId,
-                                                                        ),
+                                                                  children:
+                                                                      eS && (null == e ? void 0 : e.skuId) != null
+                                                                          ? (0, r.jsx)(
+                                                                                k.Z,
+                                                                                { skuId: null == e ? void 0 : e.skuId },
+                                                                                e.skuId,
+                                                                            )
+                                                                          : (0, r.jsx)(
+                                                                                j.Z,
+                                                                                {
+                                                                                    product: e,
+                                                                                    category: n,
+                                                                                    user: X,
+                                                                                    tab: z,
+                                                                                    shopBlockType: o.z.HERO,
+                                                                                },
+                                                                                e.skuId,
+                                                                            ),
                                                               },
                                                               null == e ? void 0 : e.skuId,
                                                           );

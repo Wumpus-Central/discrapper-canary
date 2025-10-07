@@ -24,7 +24,7 @@ function u(e) {
 }
 function d(e) {
     let { onSelectTab: t } = e,
-        { quests: n, isFetchingCurrentQuests: a } = (0, l.bA)(l.e5.CLAIMED);
+        { quests: n, isFetchingCurrentQuests: a, hasFetched: u } = (0, l.bA)(l.e5.CLAIMED);
     return a && 0 === n.length
         ? (0, r.jsx)(i.$jN, { className: c.spinner })
         : 0 === n.length
@@ -32,5 +32,6 @@ function d(e) {
           : (0, r.jsx)(s.Z, {
                 quests: n,
                 isFetching: a,
+                hasFetched: u,
             });
 }

@@ -1,21 +1,20 @@
-n.d(e, { Z: () => d });
+n.d(e, { Z: () => E });
 var i = n(951288),
-    l = n(603113),
-    u = n(657707),
-    r = n(481060),
-    s = n(893776),
-    a = n(509613),
-    o = n(313789),
-    c = n(518596),
-    E = n(388032);
-let d = (0, a.m7)(o.n.LOGOUT_SIDEBAR_ITEM, {
-    useTitle: () => E.intl.string(E.t["2jxGen"]),
-    icon: u.PBZ,
+    l = n(657707),
+    u = n(481060),
+    r = n(893776),
+    s = n(509613),
+    a = n(313789),
+    o = n(342386),
+    c = n(388032);
+let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
+    useTitle: () => c.intl.string(c.t["2jxGen"]),
+    icon: l.PBZ,
     onClick: () => {
-        (0, r.h7j)((t) => {
+        (0, u.h7j)((t) => {
             var e, n;
             return (0, i.jsx)(
-                r.ConfirmModal,
+                u.ConfirmModal,
                 ((e = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
@@ -42,24 +41,21 @@ let d = (0, a.m7)(o.n.LOGOUT_SIDEBAR_ITEM, {
                     return t;
                 })(
                     {
-                        header: E.intl.string(E.t["2jxGen"]),
-                        confirmText: E.intl.string(E.t["2jxGen"]),
-                        cancelText: E.intl.string(E.t["ETE/oK"]),
+                        header: c.intl.string(c.t["2jxGen"]),
+                        confirmText: c.intl.string(c.t["2jxGen"]),
+                        cancelText: c.intl.string(c.t["ETE/oK"]),
                         onCancel: t.onClose,
                         onConfirm: () => {
-                            l.flushSync(() => {
-                                (0, r.Mr3)(c.USER_SETTINGS_MODAL_KEY);
-                            }),
-                                s.Z.logout("settings");
+                            (0, o.default)(), r.Z.logout("settings");
                         },
                     },
                     t,
                 )),
                 (n = n =
                     {
-                        children: (0, i.jsx)(r.Text, {
+                        children: (0, i.jsx)(u.Text, {
                             variant: "text-md/normal",
-                            children: E.intl.string(E.t.SUnWBA),
+                            children: c.intl.string(c.t.SUnWBA),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

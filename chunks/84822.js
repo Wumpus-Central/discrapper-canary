@@ -47,6 +47,7 @@ e.exports = {
     largeImage: "largeImage__00943",
     borderRadius0: "borderRadius0__00943",
     smallImage: "smallImage__00943",
+    activitySectionDetails: "activitySectionDetails__00943",
     spotifySection: "spotifySection__00943 activitySection__00943",
     embeddedActivityTopRow: "embeddedActivityTopRow__00943",
     embeddedActivityName: "embeddedActivityName__00943",

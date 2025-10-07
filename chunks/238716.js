@@ -1,93 +1,69 @@
-n.d(t, { default: () => p }), n(388685), n(953529);
-var i = n(951288),
-    s = n(647438),
-    a = n(442837),
-    r = n(481060),
-    l = n(933557),
-    c = n(600164),
-    o = n(313201),
-    d = n(592125),
-    x = n(853856),
-    u = n(117984),
-    h = n(388032),
-    m = n(589253);
-function p(e) {
-    let { channelId: t, onClose: n, transitionState: p, heading: j, formTitle: v, allowReset: f = !1 } = e,
-        k = (0, o.Dt)(),
-        g = (0, a.e7)([d.Z], () => d.Z.getChannel(t)),
-        b = (0, l.ZP)(g),
-        y = x.Z.getNickname(t),
-        [C, E] = s.useState(null != y ? y : "");
+e.d(n, { default: () => h }), e(388685), e(953529);
+var i = e(951288),
+    a = e(647438),
+    l = e(442837),
+    s = e(159691),
+    r = e(481060),
+    o = e(933557),
+    c = e(592125),
+    u = e(853856),
+    d = e(117984),
+    p = e(388032),
+    x = e(589253);
+function h(t) {
+    let { channelId: n, onClose: e, transitionState: h, heading: m, formTitle: f, allowReset: v = !1 } = t,
+        k = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
+        C = (0, o.ZP)(k),
+        g = u.Z.getNickname(n),
+        [j, b] = a.useState(null != g ? g : "");
+    function y(t) {
+        t.preventDefault(), (0, d.UT)(n, j), e();
+    }
     return (0, i.jsx)("form", {
-        onSubmit: function (e) {
-            e.preventDefault(), (0, u.UT)(t, C), n();
-        },
-        children: (0, i.jsxs)(r.Y0X, {
-            transitionState: p,
-            "aria-labelledby": k,
-            parentComponent: "FavoritesSetNicknameModal",
+        onSubmit: y,
+        children: (0, i.jsxs)(s.u_l, {
+            title: m,
+            actions: [
+                {
+                    text: p.intl.string(p.t["ETE/oK"]),
+                    onClick: e,
+                    variant: "secondary",
+                },
+                {
+                    text: m,
+                    onClick: y,
+                    variant: "primary",
+                    type: "submit",
+                },
+            ],
+            onClose: e,
+            transitionState: h,
             children: [
-                (0, i.jsxs)(r.xBx, {
-                    separator: !0,
-                    justify: c.Z.Justify.BETWEEN,
-                    children: [
-                        (0, i.jsx)(r.X6q, {
-                            id: k,
-                            variant: "heading-lg/semibold",
-                            children: j,
-                        }),
-                        (0, i.jsx)(r.olH, { onClick: n }),
-                    ],
+                (0, i.jsx)(r.oil, {
+                    label: f,
+                    value: j,
+                    onChange: b,
+                    placeholder: null != C ? C : void 0,
+                    maxLength: 100,
+                    autoFocus: !0,
                 }),
-                (0, i.jsxs)(r.hzk, {
-                    children: [
-                        (0, i.jsx)("div", {
-                            className: m.name,
-                            children: (0, i.jsx)(r.oil, {
-                                label: v,
-                                value: C,
-                                onChange: E,
-                                placeholder: null != b ? b : void 0,
-                                maxLength: 100,
-                                autoFocus: !0,
-                            }),
-                        }),
-                        f && null != y
-                            ? (0, i.jsx)("div", {
-                                  className: m.reset,
-                                  children: (0, i.jsx)(r.Avr, {
-                                      text: h.intl.string(h.t.aE02R0),
-                                      onClick: function () {
-                                          (0, u.UT)(t, null), n();
-                                      },
-                                      textVariant: "text-sm/normal",
-                                  }),
-                              })
-                            : null,
-                        (0, i.jsx)(r.Text, {
-                            className: m.description,
-                            variant: "text-sm/normal",
-                            color: "header-secondary",
-                            children: h.intl.string(h.t["2vyz+P"]),
-                        }),
-                    ],
-                }),
-                (0, i.jsx)(r.mzw, {
-                    children: (0, i.jsxs)(r.hE2, {
-                        direction: "horizontal-reverse",
-                        children: [
-                            (0, i.jsx)(r.zxk, {
-                                variant: "primary",
-                                text: j,
-                                type: "submit",
-                            }),
-                            (0, i.jsx)(r.zxk, {
-                                variant: "secondary",
-                                text: h.intl.string(h.t["ETE/oK"]),
-                                onClick: n,
-                            }),
-                        ],
-                    }),
+                v && null != g
+                    ? (0, i.jsx)("div", {
+                          className: x.reset,
+                          children: (0, i.jsx)(r.Avr, {
+                              text: p.intl.string(p.t.aE02R0),
+                              onClick: function () {
+                                  (0, d.UT)(n, null), e();
+                              },
+                              textVariant: "text-sm/normal",
+                          }),
+                      })
+                    : null,
+                (0, i.jsx)(r.Text, {
+                    className: x.description,
+                    variant: "text-sm/normal",
+                    color: "header-secondary",
+                    children: p.intl.string(p.t["2vyz+P"]),
                 }),
             ],
         }),
