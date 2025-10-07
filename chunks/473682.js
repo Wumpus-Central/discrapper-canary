@@ -40,7 +40,12 @@ let o = {
     m = 10,
     p = 32,
     h = 1000,
-    x = "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "1415044199572832256" : "1415025086791942144";
+    x =
+        "production" === window.GLOBAL_ENV.PROJECT_ENV
+            ? "1425215263548117002"
+            : "staging" === window.GLOBAL_ENV.PROJECT_ENV
+              ? "1415044199572832256"
+              : "1415025086791942144";
 var f = 12633 == n.j ? (((r = {})[(r.SHOCKBYTE = 0)] = "SHOCKBYTE"), r) : null;
 let b = {
     [i.Z.SHOCKBYTE]:
