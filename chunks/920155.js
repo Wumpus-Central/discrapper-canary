@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -104,19 +104,21 @@ function S(e) {
         } = e,
         [R, P] = i.useState(p),
         [w, D] = i.useState(E),
-        x = i.useRef(E),
-        L = (0, c.e7)([d.Z], () => d.Z.getLayers()),
-        j = null != (t = L[L.length - 1]) ? t : "base",
-        M = i.useMemo(() => {
-            var e;
+        L = i.useRef(E),
+        x = (0, c.e7)([d.Z], () => d.Z.getLayers()),
+        M = null != (t = x[x.length - 1]) ? t : "base",
+        j = i.useMemo(() => {
+            var e, t;
             return (
                 null == a.current ||
-                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === j
+                (null != (t = null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer"))
+                    ? t
+                    : "base") === M
             );
-        }, [a, j]);
+        }, [a, M]);
     i.useEffect(() => {
-        M && p ? P(!0) : M || P(!1);
-    }, [M, p]);
+        j && p ? P(!0) : j || P(!1);
+    }, [j, p]);
     let k = () => {
             P(!1);
         },
@@ -129,7 +131,7 @@ function S(e) {
             var { setPopoutRef: t, position: i } = e,
                 c = y(e, ["setPopoutRef", "position"]);
             return (
-                null != i && i !== x.current && ((x.current = i), D(i), null == C || C(i)),
+                null != i && i !== L.current && ((L.current = i), D(i), null == C || C(i)),
                 U((e, i) => {
                     if (!i) return null;
                     let u = (0, r.jsx)(
