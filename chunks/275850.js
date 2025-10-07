@@ -128,31 +128,32 @@ function T(e, t) {
 }
 function S(e) {
     let {
-            selectedPaymentSourceId: t,
-            paymentSources: n,
-            prependOption: a,
-            hidePersonalInformation: u,
-            onChange: _,
-            onPaymentSourceAdd: p,
-            isTrial: h = !1,
-            disabled: E = !1,
-            className: b,
-            optionClassName: y,
-            dropdownLoading: S,
-            paymentGatewayRestrictions: A,
+            label: t,
+            selectedPaymentSourceId: n,
+            paymentSources: a,
+            prependOption: u,
+            hidePersonalInformation: _,
+            onChange: p,
+            onPaymentSourceAdd: h,
+            isTrial: E = !1,
+            disabled: b = !1,
+            className: y,
+            optionClassName: S,
+            dropdownLoading: A,
+            paymentGatewayRestrictions: C,
         } = e,
-        C = 0 === n.length,
-        N = (e) => {
-            if (e === O) null != p && p();
+        N = 0 === a.length,
+        R = (e) => {
+            if (e === O) null != h && h();
             else {
-                let t = n.find((t) => t.id === e);
-                null != _ && _(t);
+                let t = a.find((t) => t.id === e);
+                null != p && p(t);
             }
         },
-        R = [...(null != a ? [a] : []), ...n, v].map((e, t) => {
+        P = [...(null != u ? [u] : []), ...a, v].map((e, t) => {
             if (e instanceof f.ZP) {
-                let { brand: t, label: n } = I(e, u),
-                    i = e === v || null == A || (null == A ? void 0 : A.includes(e.paymentGateway));
+                let { brand: t, label: n } = I(e, _),
+                    i = e === v || null == C || (null == C ? void 0 : C.includes(e.paymentGateway));
                 return {
                     value: e.id,
                     label: (0, r.jsxs)("div", {
@@ -177,37 +178,38 @@ function S(e) {
                 }),
             };
         }),
-        P = T(
-            h,
-            i.useMemo(() => n.find((e) => e.id === t), [n, t]),
+        w = T(
+            E,
+            i.useMemo(() => a.find((e) => e.id === n), [a, n]),
         );
-    if (null == t && null != A && A.length > 0) {
-        let e = n.filter((e) => A.includes(e.paymentGateway));
-        t = 0 === e.length ? O : e[0].id;
+    if (null == n && null != C && C.length > 0) {
+        let e = a.filter((e) => C.includes(e.paymentGateway));
+        n = 0 === e.length ? O : e[0].id;
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            C
+            N
                 ? (0, r.jsx)(l.zxk, {
                       variant: "primary",
                       fullWidth: !0,
-                      onClick: p,
+                      onClick: h,
                       text: m.intl.string(m.t.eQ2bLi),
                   })
                 : (0, r.jsx)(c.q4e, {
-                      options: R,
-                      value: t,
-                      onChange: N,
-                      isDisabled: E,
-                      className: o()({ [g.paymentSourceHasWarning]: null != P }, b),
-                      optionClassName: y,
+                      options: P,
+                      value: n,
+                      label: t,
+                      onChange: R,
+                      isDisabled: b,
+                      className: o()({ [g.paymentSourceHasWarning]: null != w }, y),
+                      optionClassName: S,
                       placeholder: m.intl.string(m.t["8lqkf3"]),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return S ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }) : t.label;
+                          return A ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }) : t.label;
                       },
                   }),
-            null != P
+            null != w
                 ? (0, r.jsxs)("div", {
                       className: g.paymentSourceWarning,
                       children: [
@@ -220,7 +222,7 @@ function S(e) {
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
-                              children: P,
+                              children: w,
                           }),
                       ],
                   })

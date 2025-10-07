@@ -8,10 +8,10 @@ let s = (e) => {
     let { className: t, submitting: n, stripePaymentMethod: s } = e,
         { card: l } = null != s ? s : {},
         c = null != l ? a.ZP.getType(l.brand) : a.ZP.Types.UNKNOWN;
-    return (0, r.jsx)(i.hjN, {
+    return (0, r.jsx)("div", {
         className: t,
-        title: o.intl.string(o.t.mmDvV1),
         children: (0, r.jsx)(i.oil, {
+            label: o.intl.string(o.t.mmDvV1),
             leading: {
                 type: "image",
                 src: (0, a.hx)(c),

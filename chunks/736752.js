@@ -303,8 +303,7 @@ class z extends i.PureComponent {
         });
     }
     renderSecuritySettingsRedesign() {
-        return (0, r.jsxs)(c.Kqy, {
-            gap: 40,
+        return (0, r.jsxs)(c.l09, {
             children: [
                 this.renderConfirmModals(),
                 (0, r.jsx)(b.F, {
