@@ -31,9 +31,9 @@ var a,
     k = n(388032),
     A = n(450433);
 let E = [
-    [0, 25, 6.09, 29.57],
-    [0, 18.48, 9.07, 40.9],
-    [0, 35, 9.07, 40.9],
+    [0, 40],
+    [0, 40],
+    [0, 20],
 ];
 var R = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), (a[(a.LARGE = 2)] = "LARGE"), a);
 function T(e) {
@@ -74,15 +74,14 @@ function T(e) {
                 : void 0,
         [et, en] = (0, _.Cf)(null == ee ? void 0 : ee.toString(), "#000000"),
         ea = l.useMemo(() => {
-            let e = o()(et).darken(1).hex(),
-                [t, n, a, r] = E[H];
+            let e = o()(et).darken(1.5).alpha(0.9).hex(),
+                t = o()(et).alpha(0).hex(),
+                [n, a] = E[H];
             return "linear-gradient(to top, "
                 .concat(e, " ")
-                .concat(t + 25, "%, transparent ")
-                .concat(n + 25, "%), linear-gradient(to top, ")
-                .concat(e, " ")
-                .concat(a + 25, "%, transparent ")
-                .concat(r + 25, "%)");
+                .concat(30 + n, "%, ")
+                .concat(t, " ")
+                .concat(30 + a, "%)");
         }, [et, H]);
     if (null == B) return null;
     let er =
@@ -93,11 +92,12 @@ function T(e) {
     return (0, r.jsx)(g.tEY, {
         children: (0, r.jsxs)(p.kL8, {
             onClick: () => {
-                (0, y.g)({
-                    skuId: Y,
-                    applicationId: U,
-                    guildId: K,
-                });
+                null != K &&
+                    (0, y.g)({
+                        skuId: Y,
+                        applicationId: U,
+                        guildId: K,
+                    });
             },
             className: c()(A.card, {
                 [A.cardAnimation]: !z,
