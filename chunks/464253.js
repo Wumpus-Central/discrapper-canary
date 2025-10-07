@@ -45,6 +45,7 @@ class m {
         (this.mode = "verbatim-source"),
             (this.streamKey = e),
             (this.director.sound = null == r || r),
+            (this.director.application = null),
             this._onDirectorAction({
                 type: s.A.STREAM,
                 sourceId: t,
