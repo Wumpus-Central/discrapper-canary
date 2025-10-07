@@ -76,8 +76,9 @@ function m(e, t) {
     };
 }
 function g(e, t) {
-    let { enabled: n } = s.wL.useConfig({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }),
-        r = (0, i.e7)([f.ZP], () => (void 0 === t || null == e ? null : f.ZP.getMember(t, e.id))),
+    let { enabled: n } = s.wL.useConfig({ location: "useGuildMemberOrUserPendingDisplayNameStyles" });
+    n || (t = void 0);
+    let r = (0, i.e7)([f.ZP], () => (void 0 === t || null == e ? null : f.ZP.getMember(t, e.id))),
         { pendingUserDisplayNameStyles: a, userErrors: o } = (0, i.cj)([_.Z], () => ({
             pendingUserDisplayNameStyles: _.Z.getPendingDisplayNameStyles(),
             userErrors: _.Z.getErrors().displayNameStyles,
@@ -85,20 +86,13 @@ function g(e, t) {
         { pendingGuildDisplayNameStyles: l, guildErrors: u } = (0, i.cj)([c.Z], () => ({
             pendingGuildDisplayNameStyles: c.Z.getPendingDisplayNameStyles(),
             guildErrors: c.Z.getErrors().displayNameStyles,
-        })),
-        d = null == e ? void 0 : e.displayNameStyles,
-        p = null == r ? void 0 : r.displayNameStyles;
-    return null != t && n && (null != p || null != l)
-        ? {
-              currentDisplayNameStyles: null != p ? p : d,
-              pendingDisplayNameStyles: l,
-              pendingErrors: u,
-          }
-        : {
-              currentDisplayNameStyles: d,
-              pendingDisplayNameStyles: a,
-              pendingErrors: o,
-          };
+        }));
+    return {
+        userDisplayNameStyles: null == e ? void 0 : e.displayNameStyles,
+        guildDisplayNameStyles: null == r ? void 0 : r.displayNameStyles,
+        pendingDisplayNameStyles: null != t ? l : a,
+        pendingErrors: null != t ? u : o,
+    };
 }
 function E(e, t) {
     return (0, i.e7)([d.Z], () => {
