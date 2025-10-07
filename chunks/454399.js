@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(102725),
     f = n(342134),
     _ = n(966327),
-    p = n(638787);
+    p = n(890955);
 function h(e, t, n) {
     return (
         t in e
@@ -118,7 +118,8 @@ function O(e) {
         ]);
     let w = (0, _.c)(N),
         D = i.useId(),
-        L = i.useMemo(
+        L = null != h && ("string" != typeof h || "" !== h),
+        x = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: p.richTooltipContent,
@@ -131,23 +132,25 @@ function O(e) {
                         (0, r.jsxs)("div", {
                             className: p.textContent,
                             children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/bold",
-                                    children: h,
-                                }),
+                                L &&
+                                    (0, r.jsx)(o.Text, {
+                                        variant: "text-sm/bold",
+                                        children: h,
+                                    }),
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/medium",
+                                    color: L ? "text-secondary" : "text-primary",
                                     children: g,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [y, h, g],
+            [y, h, g, L],
         ),
-        { isVisible: x, triggerProps: j } = (0, d.l)(m({ targetElementRef: w.targetElementRef }, P)),
-        M = null != R ? R : "".concat((0, u.Sw)(h), "|").concat((0, u.Sw)(g)),
-        k = (0, f.Q)({ shouldShow: x });
+        { isVisible: M, triggerProps: j } = (0, d.l)(m({ targetElementRef: w.targetElementRef }, P)),
+        k = null != R ? R : "".concat((0, u.Sw)(null != h ? h : ""), "|").concat((0, u.Sw)(g)),
+        U = (0, f.Q)({ shouldShow: M });
     if (O) {
         let e = E(m({}, j), {
             onFocus: (0, u.tS)(j.onFocus, (e) => {
@@ -181,23 +184,23 @@ function O(e) {
         if (!i.isValidElement(n)) return null;
         t = (0, u.C9)(n, j, D, w.triggerRef);
     }
-    let U = k((e, t) =>
+    let G = U((e, t) =>
         t
             ? (0, r.jsx)(c.pn, {
                   isRichTooltip: !0,
                   children: (0, r.jsx)(l.N, {
-                      isVisible: x,
+                      isVisible: M,
                       isRendered: !0,
                       targetElementRef: w.targetElementRef,
                       id: D,
-                      content: L,
+                      content: x,
                       position: I,
                       align: T,
                       spacing: S,
                       caretConfig: A,
                       layerContext: null != C ? C : s.nz,
                       animationStyle: e,
-                      positionKey: M,
+                      positionKey: k,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
@@ -206,13 +209,13 @@ function O(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != L
+            null != x
                 ? (0, r.jsx)(a.n, {
                       id: D,
-                      children: L,
+                      children: x,
                   })
                 : null,
-            U,
+            G,
         ],
     });
 }
