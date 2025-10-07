@@ -36,6 +36,7 @@ var r = (function (e) {
             (e[(e.DSA_ELIGIBLE = 1)] = "DSA_ELIGIBLE"),
             (e[(e.IN_APP_ELIGIBLE = 2)] = "IN_APP_ELIGIBLE"),
             (e[(e.AGE_VERIFY_ELIGIBLE = 3)] = "AGE_VERIFY_ELIGIBLE"),
+            (e[(e.AGE_VERIFY_GLOBAL_ELIGIBLE = 4)] = "AGE_VERIFY_GLOBAL_ELIGIBLE"),
             e
         );
     })({}),
