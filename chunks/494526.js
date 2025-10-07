@@ -191,7 +191,7 @@ function L(e) {
                 }, [a, d, r, l]),
                 i.useEffect(() => {
                     let t = Date.now(),
-                        n = "".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
+                        n = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
                         r = new WebSocket(n);
                     T.info("[0ms] connecting to ".concat(n));
                     let i = (e) => T.info("[".concat("".concat(Date.now() - t, "ms"), "] ").concat(e)),
