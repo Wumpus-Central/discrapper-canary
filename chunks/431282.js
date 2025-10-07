@@ -71,17 +71,18 @@ function m(e) {
     });
 }
 function p(e) {
-    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f } = e,
-        b = null != n,
-        g = (0, s.Q1)({
+    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f, ref: b } = e,
+        g = null != n,
+        v = (0, s.Q1)({
             action: t,
             onClick: n,
         }),
-        [v, j] = r.useState(!1),
-        _ = r.useRef(null),
-        y = null != f,
-        C = y && b,
-        E = {
+        [j, _] = r.useState(!1),
+        y = r.useRef(null),
+        C = null != b ? b : y,
+        E = null != f,
+        S = E && g,
+        N = {
             offset: {
                 top: -8,
                 left: -8,
@@ -89,13 +90,13 @@ function p(e) {
                 bottom: -8,
             },
         },
-        S = r.useCallback(() => {
-            j(!0);
+        T = r.useCallback(() => {
+            _(!0);
         }, []),
-        N = r.useCallback(() => {
-            j(!1);
+        O = r.useCallback(() => {
+            _(!1);
         }, []),
-        T = () =>
+        P = () =>
             (0, a.jsxs)(a.Fragment, {
                 children: [
                     (0, a.jsx)("div", {
@@ -128,17 +129,17 @@ function p(e) {
                     }),
                 ],
             }),
-        O = (e) => {
+        I = (e) => {
             let t;
             return (
-                (t = C
+                (t = S
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)(l.P3F, {
                                   className: c.menuItemContent,
-                                  onClick: g,
-                                  focusProps: { offset: u(d({}, E.offset), { right: 0 }) },
-                                  children: T(),
+                                  onClick: v,
+                                  focusProps: { offset: u(d({}, N.offset), { right: 0 }) },
+                                  children: P(),
                               }),
                               (0, a.jsx)(
                                   l.P3F,
@@ -151,8 +152,8 @@ function p(e) {
                                           e,
                                       ),
                                       {
-                                          onClick: S,
-                                          focusProps: E,
+                                          onClick: T,
+                                          focusProps: N,
                                           children: (0, a.jsx)(i.Fbu, {
                                               size: "xs",
                                               color: "currentColor",
@@ -162,14 +163,14 @@ function p(e) {
                               ),
                           ],
                       })
-                    : y
+                    : E
                       ? (0, a.jsxs)(
                             l.P3F,
                             u(d({ className: c.menuItemContent }, e), {
-                                onClick: S,
-                                focusProps: E,
+                                onClick: T,
+                                focusProps: N,
                                 children: [
-                                    T(),
+                                    P(),
                                     (0, a.jsx)("div", {
                                         className: c.submenuIconWrapper,
                                         children: (0, a.jsx)(i.Fbu, {
@@ -182,34 +183,34 @@ function p(e) {
                         )
                       : (0, a.jsx)(l.P3F, {
                             className: c.menuItemContent,
-                            onClick: g,
-                            focusProps: E,
-                            children: T(),
+                            onClick: v,
+                            focusProps: N,
+                            children: P(),
                         })),
                 (0, a.jsx)("div", {
-                    ref: _,
+                    ref: C,
                     className: c.menuItemInner,
                     children: t,
                 })
             );
         };
-    return y
+    return E
         ? (0, a.jsx)("li", {
               className: c.menuItem,
-              onMouseEnter: S,
-              onMouseLeave: N,
+              onMouseEnter: T,
+              onMouseLeave: O,
               children: (0, a.jsx)(l.yRy, {
-                  targetElementRef: _,
+                  targetElementRef: C,
                   spacing: 0,
                   renderPopout: f,
-                  shouldShow: v,
-                  onRequestClose: N,
-                  children: O,
+                  shouldShow: j,
+                  onRequestClose: O,
+                  children: I,
               }),
           })
         : (0, a.jsx)("li", {
               className: c.menuItem,
-              children: O(),
+              children: I(),
           });
 }
 function h(e) {
