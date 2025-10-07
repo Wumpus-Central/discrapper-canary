@@ -8,20 +8,22 @@ var r = n(951288),
     c = n(59662),
     u = n(910557);
 function d(e) {
-    let { category: t, onClick: n, active: l } = e,
-        { useTitle: o, key: a } = t,
-        c = null == o ? void 0 : o();
-    return null == c
+    var t;
+    let { category: n, onClick: l, active: o } = e,
+        { useTitle: a, useNavigationTitle: c, key: d } = n,
+        f = null == a ? void 0 : a(),
+        m = null != (t = null == c ? void 0 : c()) ? t : f;
+    return null == m
         ? null
         : (0, r.jsx)(
               s.P3F,
               {
-                  onClick: n,
+                  onClick: l,
                   tag: "li",
-                  className: i()({ [u.active]: l }),
-                  children: c,
+                  className: i()({ [u.active]: o }),
+                  children: m,
               },
-              a,
+              d,
           );
 }
 function f(e) {

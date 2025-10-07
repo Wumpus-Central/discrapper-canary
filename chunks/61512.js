@@ -1,14 +1,17 @@
-n.d(t, { Z: () => d });
-var r = n(509613),
-    i = n(313789),
-    l = n(419386),
-    o = n(291011),
+n.d(e, { Z: () => E });
+var i = n(509613),
+    l = n(313789),
+    u = n(419386),
+    r = n(291011),
     s = n(392231),
     a = n(271524),
-    u = n(388032);
-let c = (0, r.CB)(i.n.NOTIFICATIONS_ADVANCED_ACCORDION, {
-        useTitle: (e) => (e ? u.intl.string(u.t.RyimDg) : u.intl.string(u.t.CUICbG)),
-        useSubtitle: () => u.intl.string(u.t.SwKADQ),
-        buildLayout: () => [o.Z, l.Z, s.Z, a.Z],
+    o = n(388032);
+let c = (0, i.CB)(l.n.NOTIFICATIONS_ADVANCED_ACCORDION, {
+        useTitle: (t) => (t ? o.intl.string(o.t.RyimDg) : o.intl.string(o.t.CUICbG)),
+        useSubtitle: () => o.intl.string(o.t.SwKADQ),
+        buildLayout: () => [r.Z, u.Z, s.Z, a.Z],
     }),
-    d = (0, r.k4)(i.n.NOTIFICATIONS_ADVANCED_CATEGORY, { buildLayout: () => [c] });
+    E = (0, i.k4)(l.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
+        useNavigationTitle: () => o.intl.string(o.t["31DySk"]),
+        buildLayout: () => [c],
+    });

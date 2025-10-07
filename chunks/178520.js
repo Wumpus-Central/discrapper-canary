@@ -1,30 +1,46 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(e, { Z: () => s }), n(388685);
 var i = n(658722),
-    r = n.n(i),
-    l = n(28682);
-function u(e, t, n) {
+    l = n.n(i),
+    u = n(481060),
+    r = n(28682);
+function s(t, e, n) {
     let i = new Set(),
-        u = function (e) {
-            var s;
-            let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                c = (null == (s = e.usePredicate) ? void 0 : s.call(e)) === !1 || a,
+        s = function (t) {
+            var a;
+            let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                c = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                E = (null == (a = t.usePredicate) ? void 0 : a.call(t)) === !1 || o,
                 d =
-                    (function (e, t, n, i) {
-                        var u, s;
-                        if (null != e.legacySearchKey) return t.length < 2 || i.has(e.legacySearchKey);
-                        if (e.type === l.Jq.SECTION && e.hoisted) return !0;
-                        let a = "useTitle" in e ? (null == (u = e.useTitle) ? void 0 : u.call(e, !1)) : void 0,
-                            o = "useSearchTerms" in e ? (null == (s = e.useSearchTerms) ? void 0 : s.call(e)) : void 0;
-                        if (n || (null == a && null == o)) return !1;
-                        if ("" === t) return !0;
-                        let c = t.toLowerCase();
-                        for (let e of null != o ? o : []) if (r()(c, e.toLowerCase())) return !0;
-                        return "string" == typeof a && r()(c, a.toLowerCase());
-                    })(e, t, c, n) || o,
-                E = !1;
-            if ((0, l.Lk)(e)) for (let t of e.layout) E = u(t, c, d) || E;
-            return !c && (d || E) && i.add(e.key), d || E;
+                    (function (t, e, n, i) {
+                        var s, a, o, c, E;
+                        if (null != t.legacySearchKey) return e.length < 2 || i.has(t.legacySearchKey);
+                        if (t.type === r.Jq.SECTION && t.hoisted) return !0;
+                        let d = "useTitle" in t ? (null == (s = t.useTitle) ? void 0 : s.call(t, !1)) : void 0,
+                            T =
+                                "useNavigationTitle" in t
+                                    ? null == (a = t.useNavigationTitle)
+                                        ? void 0
+                                        : a.call(t)
+                                    : void 0,
+                            I = "useSearchTerms" in t ? (null == (o = t.useSearchTerms) ? void 0 : o.call(t)) : void 0;
+                        if (n || (null == d && null == T && null == I)) return !1;
+                        if ("" === e) return !0;
+                        let O = e.toLowerCase();
+                        for (let t of null != I ? I : []) if (l()(O, t.toLowerCase())) return !0;
+                        let A = !1;
+                        if (null != d) {
+                            let t = null == (c = (0, u.qgQ)(d)) ? void 0 : c.toLowerCase();
+                            null != t && (A = l()(O, t));
+                        }
+                        if (null != T && !A) {
+                            let t = null == (E = (0, u.qgQ)(T)) ? void 0 : E.toLowerCase();
+                            null != t && (A = l()(O, t));
+                        }
+                        return A;
+                    })(t, e, E, n) || c,
+                T = !1;
+            if ((0, r.Lk)(t)) for (let e of t.layout) T = s(e, E, d) || T;
+            return !E && (d || T) && i.add(t.key), d || T;
         };
-    return u(e), i;
+    return s(t), i;
 }
