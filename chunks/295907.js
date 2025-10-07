@@ -442,7 +442,20 @@ var _ = (function (e) {
         );
     })({}),
     p = (function (e) {
-        return (e.ENTER = "Enter"), (e.TAB = "Tab"), (e.SPACE = " "), (e.ESCAPE = "Escape"), (e.SHIFT = "Shift"), e;
+        return (
+            (e.ENTER = "Enter"),
+            (e.TAB = "Tab"),
+            (e.SPACE = " "),
+            (e.ESCAPE = "Escape"),
+            (e.SHIFT = "Shift"),
+            (e.ARROW_UP = "ArrowUp"),
+            (e.ARROW_DOWN = "ArrowDown"),
+            (e.ARROW_LEFT = "ArrowLeft"),
+            (e.ARROW_RIGHT = "ArrowRight"),
+            (e.HOME = "Home"),
+            (e.END = "End"),
+            e
+        );
     })({}),
     h = (function (e) {
         return (

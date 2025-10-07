@@ -1,7 +1,7 @@
 n.d(t, { A: () => o }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(706898);
+    a = n(793030);
 let o = {
     title: "TabBar",
     stories: [
@@ -15,14 +15,14 @@ let o = {
                         id: "tab".concat(t + 1),
                         name: "Tab ".concat(t + 1),
                     }));
-                return (0, r.jsx)(a.n, {
+                return (0, r.jsx)(a.njP, {
                     type: n,
                     look: t,
                     selectedItem: s,
                     onItemSelect: l,
                     children: c.map((e) =>
                         (0, r.jsx)(
-                            a.n.Item,
+                            a.njP.Item,
                             {
                                 id: e.id,
                                 children: e.name,

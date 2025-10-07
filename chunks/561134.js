@@ -1,10 +1,10 @@
 n.d(t, { N: () => o });
 var r = n(951288),
     i = n(647438),
-    a = n(706898);
+    a = n(481060);
 function o(e) {
     let { groups: t, selectedStory: n, onStorySelect: o } = e;
-    return (0, r.jsx)(a.n, {
+    return (0, r.jsx)(a.njP, {
         selectedItem: n,
         orientation: "vertical",
         onItemSelect: (e) => {
@@ -15,10 +15,10 @@ function o(e) {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(a.n.Header, { children: e.title }),
+                        (0, r.jsx)(a.njP.Header, { children: e.title }),
                         e.stories.map((e) =>
                             (0, r.jsx)(
-                                a.n.Item,
+                                a.njP.Item,
                                 {
                                     selectedItem: n,
                                     id: e.id,
@@ -30,7 +30,7 @@ function o(e) {
                                 e.id,
                             ),
                         ),
-                        s < t.length - 1 && (0, r.jsx)(a.n.Separator, {}),
+                        s < t.length - 1 && (0, r.jsx)(a.njP.Separator, {}),
                     ],
                 },
                 e.title,
