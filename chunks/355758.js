@@ -9,7 +9,6 @@ e.exports = {
     churnDiscountBannerImage: "churnDiscountBannerImage__32fe3",
     activeSubButtons: "activeSubButtons__32fe3",
     churnDiscountBannerButton: "churnDiscountBannerButton__32fe3",
-    churnDiscountPill: "churnDiscountPill__32fe3",
     churnDiscountBannerExpiryDate: "churnDiscountBannerExpiryDate__32fe3",
     churnDiscountBannerWordMark: "churnDiscountBannerWordMark__32fe3",
 };

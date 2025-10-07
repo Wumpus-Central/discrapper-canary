@@ -1,25 +1,17 @@
-n.d(t, { $: () => d });
+n.d(t, { $: () => c });
 var r = n(442837),
     i = n(78839),
     a = n(431),
     o = n(937579),
-    s = n(219673),
-    l = n(66683),
-    c = n(104494),
-    u = n(474936);
-function d(e) {
-    var t;
-    let { enabled: n } = (0, l.k)({ location: e }),
-        { enabled: d } = s.b.useConfig({ location: e }),
-        f = (0, r.e7)([i.Z], () => i.Z.getPremiumTypeSubscription()),
-        _ = a.Z.isFetchingOffer(),
-        p = a.Z.hasFetchedOffer(),
-        h = (0, c.qm)(u.dT),
-        m = (0, c.qm)(u.dB),
-        g = null != (t = null != h ? h : m) ? t : null;
-    return (n || d) && (null == f ? void 0 : f.canceledAt) != null
-        ? null != g
-            ? g
-            : (_ || p || (0, o.Qe)(), null)
-        : null;
+    s = n(104494),
+    l = n(474936);
+function c() {
+    var e;
+    let t = (0, r.e7)([i.Z], () => i.Z.getPremiumTypeSubscription()),
+        n = a.Z.isFetchingOffer(),
+        c = a.Z.hasFetchedOffer(),
+        u = (0, s.qm)(l.dT),
+        d = (0, s.qm)(l.dB),
+        f = null != (e = null != u ? u : d) ? e : null;
+    return (null == t ? void 0 : t.canceledAt) == null ? null : null != f ? f : (n || c || (0, o.Qe)(), null);
 }

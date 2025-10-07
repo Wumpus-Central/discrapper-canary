@@ -17,9 +17,9 @@ var l,
     x = n(481060),
     f = n(447543),
     N = n(247272),
-    _ = n(110924),
-    j = n(100527),
-    S = n(906732),
+    S = n(110924),
+    _ = n(100527),
+    j = n(906732),
     b = n(835473),
     E = n(447003),
     y = n(471445),
@@ -385,11 +385,14 @@ class eI extends (l = s.PureComponent) {
                 })
               : n && null != t
                 ? (0, i.jsx)(x.YAO, {
-                      style: { "--custom-invite-section-header-height": 24 },
+                      style: {
+                          "--custom-invite-section-header-height": 24,
+                          "--custom-invite-section-header-gap": 16,
+                      },
                       className: ea.scroller,
                       sections: t.map((e) => e.length),
                       renderSection: this.renderSection,
-                      sectionHeight: 24,
+                      sectionHeight: this.getSectionHeight,
                       renderRow: this.renderRow,
                       rowHeight: this.getRowHeight,
                       paddingBottom: 16,
@@ -637,7 +640,9 @@ class eI extends (l = s.PureComponent) {
                 n({ sectionVisibility: eh(eg({}, t.sectionVisibility), { [e]: !this.getSectionVisibility(e) }) });
             }),
             ec(this, "getRowHeight", (e, t) => {
-                let { sections: n, rows: l } = this.props;
+                let { sections: n, rows: l } = this.props,
+                    i = this.getSectionVisibility(e);
+                if (null != n && !i) return 0;
                 switch ((null == n ? l[t] : n[e][t]).type) {
                     case q.bm.CHANNEL:
                     case q.bm.GROUP_DM:
@@ -653,8 +658,9 @@ class eI extends (l = s.PureComponent) {
                     { rows: l, sections: s, analyticsLocation: r, source: a } = this.props,
                     o = this.getInviteKey(),
                     u = null == s ? l[n] : s[t][n],
-                    d = "".concat(u.type, "-").concat(u.item.id);
-                if (!this.getSectionVisibility(t)) return null;
+                    d = "".concat(u.type, "-").concat(u.item.id),
+                    c = this.getSectionVisibility(t);
+                if (null != s && !c) return null;
                 switch (u.type) {
                     case q.bm.GROUP_DM:
                     case q.bm.CHANNEL:
@@ -686,11 +692,12 @@ class eI extends (l = s.PureComponent) {
                         return null;
                 }
             }),
+            ec(this, "getSectionHeight", (e) => (0 === e ? 24 : 40)),
             ec(this, "renderSection", (e) => {
                 let { section: t } = e,
                     { sections: n, isFriendsInVCInvitesEnabled: l } = this.props;
                 if (!l || null == n) return null;
-                let s = 0 === t ? er.intl.string(er.t.bjIaFB) : er.intl.string(er.t.Sd8Ix8),
+                let s = 0 === t ? er.intl.string(er.t.y29JXl) : er.intl.string(er.t.Sd8Ix8),
                     r = this.getSectionVisibility(t);
                 return (0, i.jsx)(ex, {
                     section: t,
@@ -704,7 +711,11 @@ class eI extends (l = s.PureComponent) {
 function ex(e) {
     let { section: t, heading: n, isOpen: l, onToggleVisibility: s } = e;
     return (0, i.jsxs)(x.P3F, {
-        style: { "--custom-icon-collapse-rotate": l ? "0deg" : "-90deg" },
+        style: {
+            "--custom-invite-section-header-height": 24,
+            "--custom-invite-section-header-gap": 16 * (0 !== t),
+            "--custom-icon-collapse-rotate": l ? "0deg" : "-90deg",
+        },
         className: ea.inviteSectionHeader,
         onClick: () => s(t),
         children: [
@@ -740,7 +751,7 @@ let ef = s.forwardRef(function (e, t) {
             page: x,
             analyticsLocation: y,
         } = e,
-        { analyticsLocations: T } = (0, S.ZP)(j.Z.INSTANT_INVITE_MODAL),
+        { analyticsLocations: T } = (0, j.ZP)(_.Z.INSTANT_INVITE_MODAL),
         O = (0, m.e7)([F.Z, R.Z, V.ZP], () => {
             if (null != r) return r;
             let e = F.Z.getChannelId(),
@@ -832,12 +843,12 @@ let ef = s.forwardRef(function (e, t) {
         ex = null == B ? void 0 : B.temporary,
         ef = a.vanityURLCode,
         eN = null != ef && ef.length > 0,
-        e_ = !et && !(null == O ? void 0 : O.isGuildVocal()) && eN,
-        ej = null != (n = null == B ? void 0 : B.flags) ? n : 0,
-        eS = (null == O ? void 0 : O.type) === ei.d4z.GUILD_VOICE,
+        eS = !et && !(null == O ? void 0 : O.isGuildVocal()) && eN,
+        e_ = null != (n = null == B ? void 0 : B.flags) ? n : 0,
+        ej = (null == O ? void 0 : O.type) === ei.d4z.GUILD_VOICE,
         eb = (0, E.Z)(O);
     et || (null == eo ? void 0 : eo.invite_code) == null || (ed = eo.invite_code);
-    let eE = s.useMemo(() => (G && eS ? (0, q.Qq)(K, A) : null), [G, eS, K, A]),
+    let eE = s.useMemo(() => (G && ej ? (0, q.Qq)(K, A) : null), [G, ej, K, A]),
         [ey, eT] = s.useState({
             query: "",
             maxAgeOptions: U,
@@ -846,10 +857,10 @@ let ef = s.forwardRef(function (e, t) {
             maxUses: null != eh && 0 !== eh ? eh : ev.value,
             temporary: null != ex && ex,
             networkError: void 0,
-            showVanityURL: e_,
+            showVanityURL: eS,
             currentPage: null != x ? x : el.RV.MAIN,
             lastPage: void 0,
-            flags: ej,
+            flags: e_,
             sectionVisibility: {},
             defaultSectionVisibility: {},
         }),
@@ -865,7 +876,7 @@ let ef = s.forwardRef(function (e, t) {
             },
             [ey.currentPage, eO],
         ),
-        eP = eS && !e_ && !en && !eb,
+        eP = ej && !eS && !en && !eb,
         { enabled: eZ } = P.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
@@ -880,7 +891,7 @@ let ef = s.forwardRef(function (e, t) {
         }, [eC, ey, v]),
         eD = s.useCallback(() => {
             let e = null == O ? void 0 : O.id;
-            0 === eM && 0 === eA && !ew && e_
+            0 === eM && 0 === eA && !ew && eS
                 ? eO({
                       networkError: void 0,
                       showVanityURL: !0,
@@ -906,20 +917,20 @@ let ef = s.forwardRef(function (e, t) {
                   ).catch((e) =>
                       eO({
                           networkError: e,
-                          showVanityURL: e_,
+                          showVanityURL: eS,
                       }),
                   )),
                 eA !== em.value && eR !== em.value && eO({ savedMaxAge: em.value });
-        }, [e_, et, O, o, null == eu ? void 0 : eu.id, C, d, eA, eM, ew, eO, eR, eV]),
-        eL = (0, _.Z)(O),
-        eU = (0, _.Z)((0, H.yE)(eV, h.$.IS_APPLICATION_BYPASS)),
+        }, [eS, et, O, o, null == eu ? void 0 : eu.id, C, d, eA, eM, ew, eO, eR, eV]),
+        eL = (0, S.Z)(O),
+        eU = (0, S.Z)((0, H.yE)(eV, h.$.IS_APPLICATION_BYPASS)),
         eF = null != eL && eL !== O,
         eB = null != eU && eU !== (0, H.yE)(eV, h.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
-        !e_ && (eF || eB) && eD();
-    }, [eD, eF, eB, e_]);
+        !eS && (eF || eB) && eD();
+    }, [eD, eF, eB, eS]);
     let { canCreateApplicationBypassInvites: ez, isManualApprovalGuild: eG } = (0, $.R)(a);
-    return (0, i.jsx)(S.Gt, {
+    return (0, i.jsx)(j.Gt, {
         value: T,
         children: (0, i.jsx)(eI, {
             ref: t,
@@ -945,7 +956,7 @@ let ef = s.forwardRef(function (e, t) {
             analyticsLocation: y,
             transitionState: g,
             onClose: v,
-            canShowVanityURL: e_,
+            canShowVanityURL: eS,
             isGuestInviteCreationToggleEnabled: eZ && eP,
             shouldHideTemporaryInviteToggle: (eZ && eP) || eG,
             modalState: ey,

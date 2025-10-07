@@ -7,7 +7,7 @@ var r = n(951288),
     l = n.n(s),
     c = n(155127),
     u = n(780900),
-    d = n(247679);
+    d = n(901259);
 function f(e, t, n) {
     return (
         t in e
@@ -134,10 +134,12 @@ function y(e) {
     if (
         (!0 === s && null != o && f.push((0, r.jsx)(i.Fragment, { children: o() }, "---sticky-header")),
         u.forEach((e) => {
-            var r;
+            var r, i;
             switch (
-                (e.section !== p && _.length > 0 && (f.push(null != c ? c(p, _) : _), (_ = [])),
-                (p = null != (r = e.section) ? r : 0),
+                (e.section !== p &&
+                    _.length > 0 &&
+                    (f.push(null != (r = null == c ? void 0 : c(p, _)) ? r : _), (_ = [])),
+                (p = null != (i = e.section) ? i : 0),
                 e.type)
             ) {
                 case "section":
@@ -188,10 +190,10 @@ function v(e, t, n, a) {
                 sidebarHeight: P,
                 listHeaderHeight: w = 0,
                 renderSection: D,
-                renderRow: x,
-                renderFooter: L,
-                renderSidebar: j,
-                renderListHeader: M,
+                renderRow: L,
+                renderFooter: x,
+                renderSidebar: M,
+                renderListHeader: j,
                 stickyListHeader: k,
                 wrapSection: U,
                 getAnchorId: G,
@@ -340,7 +342,7 @@ function v(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== ea.current.dirty && (ea.current.dirty = 2);
-            }, [ec, D, x, L, U, el, es, ea]),
+            }, [ec, D, L, x, U, el, es, ea]),
             (0, u.rS)({
                 scrollerRef: ei,
                 anchor: e_,
@@ -383,27 +385,27 @@ function v(e, t, n, a) {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: M,
+                                                renderListHeader: j,
                                                 stickyListHeader: k,
                                                 renderSection: D,
-                                                renderRow: x,
-                                                renderFooter: L,
+                                                renderRow: L,
+                                                renderFooter: x,
                                                 wrapSection: U,
                                                 spacerTop: es,
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, M, k, D, x, L, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, j, k, D, L, x, U, es],
                             ),
                             i.useMemo(
                                 () =>
                                     O({
                                         isSidebarVisible: eu,
-                                        renderSidebar: j,
+                                        renderSidebar: M,
                                         sidebarHeight: P,
                                         isListVisible: 0 !== ec.length,
                                     }),
-                                [eu, j, P, ec.length],
+                                [eu, M, P, ec.length],
                             ),
                         ],
                     },

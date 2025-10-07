@@ -1,113 +1,110 @@
-n.d(e, { U: () => y }), n(388685);
+n.d(e, { U: () => P }), n(388685);
 var i = n(951288),
     r = n(647438),
-    a = n(434333),
-    l = n(667202),
+    a = n(793030),
+    l = n(434333),
     s = n(481060),
     o = n(63063),
     c = n(74538),
-    u = n(219673),
-    d = n(10508),
-    m = n(45474),
-    f = n(594135),
-    p = n(474936),
-    g = n(981631),
-    h = n(388032),
-    x = n(950728),
-    C = n(997892),
-    P = n(234286),
-    v = n(288541);
-let y = () => {
+    u = n(10508),
+    d = n(45474),
+    m = n(594135),
+    f = n(474936),
+    p = n(981631),
+    g = n(388032),
+    h = n(950728),
+    x = n(997892),
+    C = n(288541);
+let P = () => {
     let {
             transitionState: t,
             onClose: e,
             premiumType: n,
-            premiumSubscription: y,
-            setStep: S,
-            applyOffer: E,
-            churnUserDiscountOffer: _,
-            discountedPrice: D,
-            fullPrice: N,
-        } = (0, f.a)(),
-        [j, T] = (0, r.useState)(!1),
-        [b, A] = (0, r.useState)(!1),
-        { enabled: O } = u.b.useConfig({ location: "ConfirmDiscountStep" }),
-        R = async () => {
-            if (null === _) return void A(!0);
-            T(!0), A(!1);
+            premiumSubscription: P,
+            setStep: v,
+            applyOffer: y,
+            churnUserDiscountOffer: E,
+            discountedPrice: S,
+            fullPrice: _,
+        } = (0, m.a)(),
+        [N, j] = (0, r.useState)(!1),
+        [D, T] = (0, r.useState)(!1),
+        A = async () => {
+            if (null === E) return void T(!0);
+            j(!0), T(!1);
             try {
-                await E(), S(m.R.DISCOUNT_APPLIED);
+                await y(), v(d.R.DISCOUNT_APPLIED);
             } catch (t) {
-                A(!0), T(!1);
+                T(!0), j(!1);
             }
         };
-    if (null === _ || null === D)
+    if (null === E || null === S)
         return (0, i.jsx)("div", {
-            className: x.spinnerContainer,
+            className: h.spinnerContainer,
             children: (0, i.jsx)(s.$jN, {}),
         });
-    let I = n === p.p9.TIER_2,
-        k = [
+    let O = n === f.p9.TIER_2,
+        R = [
             {
-                text: h.intl.string(h.t.zl7LZm),
+                text: g.intl.string(g.t.zl7LZm),
                 onClick: () => e(),
                 variant: "secondary",
-                disabled: j,
+                disabled: N,
             },
             {
-                text: h.intl.string(h.t.CKSuZG),
-                onClick: () => R(),
+                text: g.intl.string(g.t.CKSuZG),
+                onClick: () => A(),
                 variant: "primary",
                 icon: s.SrA,
-                loading: j,
-                disabled: j,
+                loading: N,
+                disabled: N,
             },
         ];
-    return (0, i.jsxs)(l.ExpressiveModal, {
+    return (0, i.jsxs)(a.ExpressiveModal, {
         graphic: {
             type: "image",
-            src: I ? (O ? v.Z : P) : C,
+            src: O ? C.Z : x,
         },
-        gradientColor: I ? "nitro-pink" : "nitro-green",
+        gradientColor: O ? "nitro-pink" : "nitro-green",
         transitionState: t,
         title:
-            y.status === g.O0b.CANCELED
-                ? h.intl.string(h.t["2Otztr"])
-                : "".concat(h.intl.format(h.t.q9Vxu7, { percent: _.discount.amount })),
-        actions: k,
+            P.status === p.O0b.CANCELED
+                ? g.intl.string(g.t["2Otztr"])
+                : "".concat(g.intl.format(g.t.q9Vxu7, { percent: E.discount.amount })),
+        actions: R,
         onClose: async () => e(),
         children: [
             (0, i.jsx)("div", {
-                className: x.offerDetailContainer,
-                children: (0, i.jsx)(d.o, {
-                    userDiscountOffer: _,
-                    offerState: d.w.CONFIRMING,
+                className: h.offerDetailContainer,
+                children: (0, i.jsx)(u.o, {
+                    userDiscountOffer: E,
+                    offerState: u.w.CONFIRMING,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: x.legalContainer,
+                className: h.legalContainer,
                 children: (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-secondary",
                     children:
-                        y.status === g.O0b.CANCELED
-                            ? h.intl.format(h.t.mY3ysL, {
-                                  discountedPrice: D,
-                                  billingPeriod: (0, c.JP)(_.discount.user_usage_limit_interval),
-                                  numMonths: _.discount.user_usage_limit,
-                                  fullPrice: N,
-                                  paidURL: o.Z.getArticleURL(g.BhN.PAID_TERMS),
+                        P.status === p.O0b.CANCELED
+                            ? g.intl.format(g.t.mY3ysL, {
+                                  discountedPrice: S,
+                                  billingPeriod: (0, c.JP)(E.discount.user_usage_limit_interval),
+                                  numMonths: E.discount.user_usage_limit,
+                                  fullPrice: _,
+                                  paidURL: o.Z.getArticleURL(p.BhN.PAID_TERMS),
                               })
-                            : h.intl.format(h.t.hrGTjI, {
-                                  discountedPrice: D,
-                                  billingPeriod: (0, c.JP)(_.discount.user_usage_limit_interval),
-                                  numMonths: _.discount.user_usage_limit,
-                                  fullPrice: N,
-                                  helpdeskArticle: o.Z.getArticleURL(g.BhN.PAID_TERMS),
+                            : g.intl.format(g.t.hrGTjI, {
+                                  discountedPrice: S,
+                                  billingPeriod: (0, c.JP)(E.discount.user_usage_limit_interval),
+                                  numMonths: E.discount.user_usage_limit,
+                                  fullPrice: _,
+                                  helpdeskArticle: o.Z.getArticleURL(p.BhN.PAID_TERMS),
                               }),
                 }),
             }),
-            b ? (0, i.jsx)(a.k, { children: h.intl.string(h.t["5mlOCQ"]) }) : null,
+            D ? (0, i.jsx)(l.k, { children: g.intl.string(g.t["5mlOCQ"]) }) : null,
         ],
     });
 };
