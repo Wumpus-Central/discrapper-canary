@@ -15,7 +15,7 @@ e.exports = {
     downloadButton: "downloadButton__4d95d",
     languageSelector: "languageSelector__4d95d",
     codeIcon: "codeIcon__4d95d",
-    modalRoot: "modalRoot__4d95d",
     modalContent: "modalContent__4d95d",
+    modalFooter: "modalFooter__4d95d",
     modalTextContainer: "modalTextContainer__4d95d",
 };
