@@ -148,15 +148,14 @@ function F(e) {
                     children: [
                         (0, r.jsx)(u.Text, {
                             className: j.sectionHeader,
-                            variant: "eyebrow",
-                            color: "header-secondary",
+                            variant: "text-md/semibold",
                             children: w,
                         }),
                         void 0 !== I.sectionDescription
                             ? (0, r.jsx)(u.Text, {
                                   className: j.sectionDescription,
                                   variant: "text-md/medium",
-                                  color: "text-muted",
+                                  color: "text-tertiary",
                                   children: I.sectionDescription(null != s && s, R),
                               })
                             : null,
@@ -326,8 +325,10 @@ let V = () => {
                             className: j.header,
                             children: (0, r.jsx)(W, {}),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: j.content,
+                        (0, r.jsxs)(u.Kqy, {
+                            gap: 32,
+                            padding: 32,
+                            fullWidth: !1,
                             children: [
                                 (0, r.jsx)("div", {
                                     className: e ? j.activityCounterRowV2 : j.activityCounterRow,
@@ -343,18 +344,20 @@ let V = () => {
                                         );
                                     }),
                                 }),
-                                e ? (0, r.jsx)(w.Z, {}) : null,
-                                (0, r.jsx)("div", {
+                                (0, r.jsxs)("div", {
                                     className: j.activityOverview,
-                                    children: n
-                                        ? t.map((e) => {
-                                              let [t] = e;
-                                              return (0, r.jsx)(F, { displayType: t }, "".concat(t, "-list"));
-                                          })
-                                        : (0, r.jsx)(P.Z, {
-                                              className: j.emptyActivity,
-                                              text: null != a ? a : "",
-                                          }),
+                                    children: [
+                                        e ? (0, r.jsx)(w.Z, {}) : null,
+                                        n
+                                            ? t.map((e) => {
+                                                  let [t] = e;
+                                                  return (0, r.jsx)(F, { displayType: t }, "".concat(t, "-list"));
+                                              })
+                                            : (0, r.jsx)(P.Z, {
+                                                  className: j.emptyActivity,
+                                                  text: null != a ? a : "",
+                                              }),
+                                    ],
                                 }),
                             ],
                         }),

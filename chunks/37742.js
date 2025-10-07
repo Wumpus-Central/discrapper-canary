@@ -6,7 +6,6 @@ e.exports = {
     tooltip: "tooltip__38524",
     header: "header__38524",
     headerText: "headerText__38524",
-    content: "content__38524",
     activityCounterRow: "activityCounterRow__38524",
     activityCounterRowV2: "activityCounterRowV2__38524",
     activityOverview: "activityOverview__38524",

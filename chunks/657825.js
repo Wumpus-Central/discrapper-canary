@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(594174),
     c = n(51144),
     u = n(198952),
-    d = n(133870);
+    d = n(905599);
 let f = (e) => {
     let { userId: t, subText: n, className: i } = e,
         f = (0, o.e7)([l.default], () => l.default.getUser(t));
@@ -27,11 +27,12 @@ let f = (e) => {
                           children: [
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
+                                  color: "interactive-active",
                                   children: c.ZP.getName(f),
                               }),
                               (0, r.jsx)(s.Text, {
-                                  variant: "text-xs/medium",
-                                  color: "text-muted",
+                                  variant: "text-sm/medium",
+                                  color: "text-secondary",
                                   children: n,
                               }),
                           ],

@@ -9,9 +9,9 @@ var i = n(399606),
     c = n(792258),
     u = n(657825),
     d = n(872608),
-    f = n(412297),
+    f = n(345909),
     _ = n(388032),
-    p = n(423294);
+    p = n(336888);
 let h = () => {
     let e = (0, i.e7)([s.Z], () => s.Z.getTopUserActivities()),
         t = (0, i.e7)([s.Z], () => s.Z.getTopGuildActivities());
@@ -23,7 +23,7 @@ let h = () => {
                     className: p.actionSection,
                     children: [
                         (0, r.jsx)(o.X6q, {
-                            variant: "eyebrow",
+                            variant: "text-md/medium",
                             className: p.sectionHeader,
                             children: _.intl.string(f.default.BxbvS0),
                         }),
@@ -58,7 +58,7 @@ let h = () => {
                     className: p.actionSection,
                     children: [
                         (0, r.jsx)(o.X6q, {
-                            variant: "eyebrow",
+                            variant: "text-md/medium",
                             className: p.sectionHeader,
                             children: _.intl.string(f.default.Lq9Sen),
                         }),

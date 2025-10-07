@@ -117,8 +117,8 @@ let f = (e) => {
                             children: null != g ? "".concat(p, " \u2022 ").concat(g) : p,
                         }),
                         (0, r.jsx)(s.Text, {
-                            variant: "text-xs/medium",
-                            color: "text-muted",
+                            variant: "text-sm/medium",
+                            color: "text-secondary",
                             children: b,
                         }),
                     ],

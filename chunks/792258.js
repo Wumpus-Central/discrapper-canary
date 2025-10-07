@@ -12,9 +12,9 @@ var i = n(120356),
     c = n(914788),
     u = n(322192),
     d = n(981631),
-    f = n(412297),
+    f = n(345909),
     _ = n(388032),
-    p = n(537731);
+    p = n(987588);
 let h = [18, 18, 16, 16, 14, 12, 10];
 function m(e) {
     var t;
@@ -51,8 +51,8 @@ let g = (e) => {
                         ],
                     }),
                     (0, r.jsx)(s.Text, {
-                        variant: "text-xs/medium",
-                        color: "text-muted",
+                        variant: "text-sm/medium",
+                        color: "text-secondary",
                         children:
                             null != i
                                 ? i
