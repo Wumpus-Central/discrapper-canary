@@ -14,15 +14,15 @@ var r = n(951288),
     o = n.n(a),
     s = n(924826),
     l = n(91192),
-    c = n(793030),
-    u = n(235874),
-    d = n(74655),
-    f = n(481060),
-    _ = n(393238),
-    p = n(434650),
+    c = n(907331),
+    u = n(793030),
+    d = n(235874),
+    f = n(74655),
+    _ = n(481060),
+    p = n(393238),
     h = n(98650),
     m = n(388032),
-    g = n(786614);
+    g = n(361421);
 function E(e, t, n) {
     return (
         t in e
@@ -177,8 +177,8 @@ function w(e) {
             popoutClassName: w,
             popoutPosition: L = "bottom",
             popoutLayerContext: x,
-            optionClassName: j,
-            closeOnSelect: M,
+            optionClassName: M,
+            closeOnSelect: j,
             select: k,
             isSelected: U,
             serialize: G,
@@ -195,7 +195,7 @@ function w(e) {
             layout: X = "vertical",
         } = e,
         [Q, J] = i.useState(!1),
-        { ref: $, width: ee, height: et } = (0, _.ZP)();
+        { ref: $, width: ee, height: et } = (0, p.ZP)();
     i.useLayoutEffect(() => {
         s && J(!1);
     }, [s]);
@@ -211,15 +211,15 @@ function w(e) {
             },
             [en, Q],
         ),
-        ei = (0, p.O)(er),
+        ei = (0, c.O)(er),
         ea = i.useCallback(
             (e) => {
-                if ((k(e), M)) {
+                if ((k(e), j)) {
                     var t;
                     null == (t = $.current) || t.focus();
                 }
             },
-            [k, M, $],
+            [k, j, $],
         ),
         eo = i.useCallback(
             (e) => {
@@ -235,10 +235,10 @@ function w(e) {
                 null == (e = $.current) || e.focus();
             }
         }, [h, $]),
-        (0, r.jsx)(u.y, {
+        (0, r.jsx)(d.y, {
             targetElementRef: $,
             spacing: 0,
-            animation: u.y.Animation.NONE,
+            animation: d.y.Animation.NONE,
             shouldShow: Q,
             onRequestOpen: () => {
                 en(!0);
@@ -250,7 +250,7 @@ function w(e) {
                 let { closePopout: n, position: i, updatePosition: a } = e;
                 return (0, r.jsx)(D, {
                     className: w,
-                    closeOnSelect: M,
+                    closeOnSelect: j,
                     maxVisibleItems: l,
                     width: "auto" === E ? void 0 : null != E ? E : ee,
                     isSelected: U,
@@ -260,7 +260,7 @@ function w(e) {
                     options: t,
                     serialize: G,
                     renderOptionLabel: C,
-                    optionClassName: j,
+                    optionClassName: M,
                     updatePosition: a,
                     popoutPosition: i,
                 });
@@ -269,10 +269,10 @@ function w(e) {
             layerContext: x,
             children: (e, t) => {
                 var { onClick: i, onKeyDown: l } = e,
-                    u = v(e, ["onClick", "onKeyDown"]),
-                    { isShown: _ } = t;
-                let p = _ ? f.u04 : f.CJ0;
-                return (0, r.jsx)(c.NIc, {
+                    c = v(e, ["onClick", "onKeyDown"]),
+                    { isShown: d } = t;
+                let p = d ? _.u04 : _.CJ0;
+                return (0, r.jsx)(u.NIc, {
                     label: Y,
                     description: W,
                     helperText: K,
@@ -281,11 +281,11 @@ function w(e) {
                     layout: X,
                     children: (e) =>
                         (0, r.jsxs)(
-                            d.U,
+                            f.U,
                             O(
                                 b(
                                     {
-                                        as: f.P3F,
+                                        as: _.P3F,
                                         tag: "div",
                                         role: "button",
                                         id: null == e ? void 0 : e.controlId,
@@ -307,11 +307,11 @@ function w(e) {
                                         onKeyDown: (e) => {
                                             "ArrowDown" === e.key
                                                 ? en(!0)
-                                                : "Escape" === e.key && _ && (e.stopPropagation(), en(!1)),
+                                                : "Escape" === e.key && d && (e.stopPropagation(), en(!1)),
                                                 l(e);
                                         },
                                     },
-                                    u,
+                                    c,
                                 ),
                                 {
                                     containerClassName: o()(g.container, a),
@@ -319,12 +319,12 @@ function w(e) {
                                     "data-variant": T,
                                     className: g.select,
                                     "aria-haspopup": "listbox",
-                                    "aria-expanded": _,
+                                    "aria-expanded": d,
                                     "aria-label": V,
                                     "aria-labelledby": H,
                                     children: [
                                         es.length > 0
-                                            ? (0, r.jsx)(f.Text, {
+                                            ? (0, r.jsx)(_.Text, {
                                                   className: g.value,
                                                   variant: "text-md/medium",
                                                   children: N(es),
@@ -336,19 +336,19 @@ function w(e) {
                                         (0, r.jsx)("div", {
                                             className: g.icons,
                                             children: F
-                                                ? (0, r.jsx)(f.bbz, {
+                                                ? (0, r.jsx)(_.bbz, {
                                                       dotRadius: 3.5,
                                                       themed: !0,
                                                   })
                                                 : (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           y
-                                                              ? (0, r.jsx)(f.P3F, {
+                                                              ? (0, r.jsx)(_.P3F, {
                                                                     role: "button",
                                                                     "aria-disabled": s,
                                                                     onClick: eo,
                                                                     "aria-label": m.intl.string(m.t.VkKicX),
-                                                                    children: (0, r.jsx)(f.Dio, {
+                                                                    children: (0, r.jsx)(_.Dio, {
                                                                         size: "xs",
                                                                         color: "currentColor",
                                                                         className: g.clear,
@@ -378,7 +378,7 @@ function D(e) {
             className: t,
             onSelect: n,
             closePopout: a,
-            closeOnSelect: u = !0,
+            closeOnSelect: c = !0,
             isSelected: d,
             options: f,
             width: _,
@@ -401,7 +401,7 @@ function D(e) {
             wrap: !0,
         }),
         w = i.useRef(null);
-    (0, c.Tbt)(w),
+    (0, u.Tbt)(w),
         i.useLayoutEffect(() => {
             var e;
             null == (e = w.current) || e.focus();
@@ -420,9 +420,9 @@ function D(e) {
         }, [T, A]);
     let D = i.useCallback(
             (e, t) => {
-                n(e), u && !t && a();
+                n(e), c && !t && a();
             },
-            [a, n, u],
+            [a, n, c],
         ),
         x = i.useMemo(
             () =>
@@ -445,7 +445,7 @@ function D(e) {
                 }),
             [D, d, y, f, m, E],
         ),
-        j = f.length <= p ? c.xVE : c.h21;
+        M = f.length <= p ? u.xVE : u.h21;
     return (0, r.jsx)(l.bG, {
         navigator: P,
         children: (0, r.jsx)(l.SJ, {
@@ -455,7 +455,7 @@ function D(e) {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
-                            j,
+                            M,
                             O(
                                 b(
                                     {
@@ -501,9 +501,9 @@ function L(e) {
             preventCloseOnSelect: u,
             serialize: d,
         } = e,
-        _ = (0, l.JA)(d(n));
+        f = (0, l.JA)(d(n));
     return (0, r.jsxs)(
-        f.P3F,
+        _.P3F,
         O(
             b(
                 {
@@ -511,7 +511,7 @@ function L(e) {
                     className: o()(g.option, t, { [g.optionDisabled]: c }),
                     onClick: () => !c && a(n, u),
                 },
-                _,
+                f,
             ),
             {
                 "aria-selected": s,
@@ -520,7 +520,7 @@ function L(e) {
                 children: [
                     i,
                     s &&
-                        (0, r.jsx)(f.owK, {
+                        (0, r.jsx)(_.owK, {
                             size: "custom",
                             color: "currentColor",
                             secondaryColor: "white",

@@ -10,9 +10,9 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(28664),
-    l = n(481060),
-    c = n(434650),
+    s = n(907331),
+    l = n(28664),
+    c = n(481060),
     u = n(456100),
     d = n(657305),
     f = n(367907),
@@ -106,20 +106,20 @@ function D(e, t) {
 let L = 16,
     x = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: a, userId: s } = e,
-            c = (e) => {
+            l = (e) => {
                 e.stopPropagation(), null == a || a();
             };
         return i && null == t
-            ? (0, r.jsx)(l.P3F, {
-                  onClick: c,
+            ? (0, r.jsx)(c.P3F, {
+                  onClick: l,
                   className: A.icons,
-                  children: (0, r.jsx)(l.EO4, {
+                  children: (0, r.jsx)(c.EO4, {
                       color: "currentColor",
                       className: o()(A.icon, A.hoverableIcon, n),
                   }),
               })
-            : (0, r.jsx)(l.P3F, {
-                  onClick: c,
+            : (0, r.jsx)(c.P3F, {
+                  onClick: l,
                   className: A.icons,
                   children: (0, r.jsx)(g.Z, {
                       userId: s,
@@ -143,7 +143,7 @@ function j(e) {
             mute: n,
             localMute: i,
             localVideoDisabled: a,
-            serverMute: c,
+            serverMute: s,
             deaf: f,
             serverDeaf: p,
             collapsed: h,
@@ -174,7 +174,7 @@ function j(e) {
             iconClassName: N,
             mute: n,
             localMute: i,
-            serverMute: c,
+            serverMute: s,
             deaf: f,
             serverDeaf: p,
         });
@@ -182,10 +182,10 @@ function j(e) {
         (a
             ? K.push(
                   (0, r.jsx)(
-                      s.u,
+                      l.u,
                       {
                           text: S.intl.string(S.t["PXMZ//"]),
-                          children: (0, r.jsx)(l.Amn, {
+                          children: (0, r.jsx)(c.Amn, {
                               size: "md",
                               color: "currentColor",
                               className: o()(A.icon, N),
@@ -197,10 +197,10 @@ function j(e) {
               )
             : K.push(
                   (0, r.jsx)(
-                      s.u,
+                      l.u,
                       {
                           text: S.intl.string(S.t.FlNoSU),
-                          children: (0, r.jsx)(l.Odl, {
+                          children: (0, r.jsx)(c.Odl, {
                               size: "md",
                               color: "currentColor",
                               className: o()(A.icon, N),
@@ -212,22 +212,22 @@ function j(e) {
         k &&
             K.push(
                 (0, r.jsx)(
-                    s.u,
+                    l.u,
                     {
                         text: S.intl.string(S.t.HFwRpq),
-                        children: (0, r.jsx)(l.Mgn, {
+                        children: (0, r.jsx)(c.Mgn, {
                             className: o()(A.icon, N),
-                            color: l.TVs.colors.STATUS_WARNING_BACKGROUND,
+                            color: c.TVs.colors.STATUS_WARNING_BACKGROUND,
                         }),
                     },
                     "disconnected",
                 ),
             );
-    let q = W ? l.iWm : l.nG3;
+    let q = W ? c.iWm : c.nG3;
     null != R &&
         K.push(
             (0, r.jsx)(
-                s.u,
+                l.u,
                 {
                     text: (0, d.Z)(R.name),
                     children: (0, r.jsx)(q, {
@@ -246,10 +246,10 @@ function j(e) {
         C &&
             K.push(
                 (0, r.jsx)(
-                    s.u,
+                    l.u,
                     {
                         text: S.intl.string(S.t.JH1SJy),
-                        children: (0, r.jsx)(l.tEF, {
+                        children: (0, r.jsx)(c.tEF, {
                             size: "xs",
                             color: "currentColor",
                             className: o()(A.icon, N),
@@ -306,7 +306,7 @@ function k(e, t) {
         {
             avatarContainerClass: i = A.avatarContainer,
             userNameClassName: a = A.usernameFont,
-            size: c = v.ipw.SMALL,
+            size: s = v.ipw.SMALL,
             selected: u = !1,
             disabled: d = !1,
             isOverlay: f = !1,
@@ -352,7 +352,7 @@ function k(e, t) {
         };
     function X() {
         return T && !R
-            ? (0, r.jsx)(s.u, {
+            ? (0, r.jsx)(l.u, {
                   text: S.intl.string(S.t.BVK71t),
                   children: (0, r.jsx)("div", {
                       className: o()(A.iconPriortySpeaker, { [A.iconPriortySpeakerSpeaking]: !D && !L && C }),
@@ -363,11 +363,11 @@ function k(e, t) {
     function Q() {
         return (0, r.jsx)("div", {
             className: o()(i, A.avatar, {
-                [A.avatarLarge]: c === v.ipw.LARGE,
-                [A.avatarSmall]: c === v.ipw.SMALL,
+                [A.avatarLarge]: s === v.ipw.LARGE,
+                [A.avatarSmall]: s === v.ipw.SMALL,
                 [A.avatarSpeaking]: C,
             }),
-            style: { backgroundImage: "url(".concat(V.getAvatarURL(x, c === v.ipw.LARGE ? 38 : 24), ")") },
+            style: { backgroundImage: "url(".concat(V.getAvatarURL(x, s === v.ipw.LARGE ? 38 : 24), ")") },
         });
     }
     function J() {
@@ -397,15 +397,15 @@ function k(e, t) {
     function $() {
         return (0, r.jsx)(j, N({ disabled: d }, _));
     }
-    return (0, r.jsx)(l.kL8, {
+    return (0, r.jsx)(c.kL8, {
         ref: t,
         className: o()(G, {
             [A.voiceUser]: !0,
             [A.overlap]: B,
             [A.selected]: u,
             [A.clickable]: null != h,
-            [A.userSmall]: c === v.ipw.SMALL,
-            [A.userLarge]: c === v.ipw.LARGE,
+            [A.userSmall]: s === v.ipw.SMALL,
+            [A.userLarge]: s === v.ipw.LARGE,
             [A.disabled]: !u && d,
             [A.ringing]: F,
         }),
@@ -425,26 +425,26 @@ function k(e, t) {
 }
 let U = i.forwardRef(k);
 function G(e) {
-    let { application: t, iconClassName: n, guildId: a, channelId: l, userId: u } = e,
+    let { application: t, iconClassName: n, guildId: a, channelId: c, userId: u } = e,
         [d, _] = i.useState(!1),
-        p = (0, c.O)((e) => _(e));
+        p = (0, s.O)((e) => _(e));
     i.useEffect(() => {
         d &&
             f.ZP.trackWithMetadata(v.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
-                channel_id: l,
+                channel_id: c,
                 guild_id: a,
                 user_id: u,
             });
-    }, [t.id, l, a, u, d]);
+    }, [t.id, c, a, u, d]);
     let m = () => {
         f.ZP.trackWithMetadata(v.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
-            channel_id: l,
+            channel_id: c,
             guild_id: a,
             game_name: t.name,
             user_id: u,
         });
     };
-    return (0, r.jsx)(s.u, {
+    return (0, r.jsx)(l.u, {
         text: S.intl.formatToPlainString(S.t.Sq9xJy, { game: t.name }),
         "aria-label": S.intl.formatToPlainString(S.t.Sq9xJy, { game: t.name }),
         children: (0, r.jsx)(h.Z, {
@@ -457,36 +457,36 @@ function G(e) {
     });
 }
 function B(e) {
-    let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: c, serverDeaf: u } = e,
+    let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: s, serverDeaf: u } = e,
         d = [];
     if (n) {
         let e,
             n = () => (i ? S.intl.string(S.t.Q8Uzoa) : a ? S.intl.string(S.t.uLddbW) : S.intl.string(S.t.tjtv3N));
-        e = a || i ? l.v0G : l.nRN;
-        let c = (0, r.jsx)(e, {
+        e = a || i ? c.v0G : c.nRN;
+        let s = (0, r.jsx)(e, {
             className: o()(A.icon, t, { [A.iconServer]: a }),
             color: "currentColor",
         });
         d.push(
             (0, r.jsx)(
-                s.u,
+                l.u,
                 {
                     text: n(),
-                    children: c,
+                    children: s,
                 },
                 "mute",
             ),
         );
     }
-    if (u || c) {
-        let e = u ? l.Vm4 : l.wE8,
+    if (u || s) {
+        let e = u ? c.Vm4 : c.wE8,
             n = (0, r.jsx)(e, {
                 className: o()(A.icon, t, { [A.iconServer]: u }),
                 color: "currentColor",
             });
         d.push(
             (0, r.jsx)(
-                s.u,
+                l.u,
                 {
                     text: u ? S.intl.string(S.t.btxSdH) : S.intl.string(S.t.NjmiOD),
                     children: n,

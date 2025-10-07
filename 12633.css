@@ -11353,30 +11353,37 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     color: var(--interactive-hover)
 }
 
-.modalRoot__4d95d {
-    height: 100%;
-    min-height: auto;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text
-}
-
 .modalContent__4d95d {
     display: grid;
     height: 100%;
+    min-height: 0;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
     width: 100%
+}
+
+.modalContent__4d95d .codeView__4d95d {
+    background-color: var(--background-surface-high)
+}
+
+.modalFooter__4d95d {
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    border-color: var(--border-subtle);
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    font-size: .875rem;
+    height: 40px;
+    justify-content: flex-end;
+    min-width: 0;
+    padding: var(--custom-modal-padding-md) var(--custom-modal-padding-md) 0
 }
 
 .modalTextContainer__4d95d {
     background-color: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
     overflow: scroll
-}
-
-.modalTextContainer__4d95d,
-.modalTextContainer__4d95d pre {
-    border-radius: 4px 4px 0 0;
-    box-sizing: border-box
 }
 
 .wrapper__58105 {
