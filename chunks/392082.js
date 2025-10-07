@@ -25,7 +25,6 @@ e.exports = {
     externalLinkIcon: "externalLinkIcon__50a54",
     dmSettingsHeader: "dmSettingsHeader__50a54",
     divider: "divider__50a54",
-    link: "link__50a54",
     footer: "footer__50a54",
     deauthorizeButton: "deauthorizeButton__50a54",
 };

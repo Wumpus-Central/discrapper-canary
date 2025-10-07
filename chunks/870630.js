@@ -43,89 +43,94 @@ let m = function (e) {
         case c.He.PRZELEWY24: {
             let i = (0, o.wj)(t) ? p : h,
                 { onNameChange: l, onEmailChange: c, onP24BankChange: f, p24BankValue: _, billingAddressInfo: g } = e;
-            return (0, r.jsxs)("div", {
+            return (0, r.jsx)("div", {
                 className: d.body,
-                children: [
-                    (0, r.jsx)(s.hjN, {
-                        title: u.intl.string(u.t["w/qqKC"]),
-                        children: (0, r.jsx)(s.oil, {
+                children: (0, r.jsxs)(s.Kqy, {
+                    gap: 16,
+                    children: [
+                        (0, r.jsx)(s.oil, {
+                            label: u.intl.string(u.t["w/qqKC"]),
                             inputRef: n,
                             name: u.intl.string(u.t["w/qqKC"]),
                             placeholder: u.intl.string(u.t["w/qqKC"]),
                             onChange: (e) => c(e),
                             value: g.email,
                         }),
-                    }),
-                    (0, r.jsx)(s.hjN, {
-                        className: d.nonTopInputWrapper,
-                        title: u.intl.string(u.t.yf7ms7),
-                        children: (0, r.jsx)(s.oil, {
+                        (0, r.jsx)(s.oil, {
+                            label: u.intl.string(u.t.yf7ms7),
                             name: u.intl.string(u.t.yf7ms7),
                             placeholder: u.intl.string(u.t.yf7ms7),
                             onChange: (e) => l(e),
                             value: g.name,
                         }),
-                    }),
-                    (0, r.jsxs)(s.hjN, {
-                        className: d.nonTopInputWrapper,
-                        title: u.intl.string(u.t.De3b8v),
-                        children: [
-                            (0, r.jsx)(a.P24BankElement, {
-                                options: {
-                                    value: _,
-                                    style: m,
-                                },
-                                onChange: (e) => f(e.value),
-                            }),
-                            (0, r.jsx)("div", {
-                                className: d.bankSelectionStub,
-                                children: (0, r.jsx)("img", {
-                                    src: i,
-                                    alt: "Przelewy24",
+                        (0, r.jsxs)(s.Kqy, {
+                            gap: 4,
+                            children: [
+                                (0, r.jsx)(s.Text, {
+                                    variant: "text-sm/semibold",
+                                    children: u.intl.string(u.t.De3b8v),
                                 }),
-                            }),
-                        ],
-                    }),
-                ],
+                                (0, r.jsx)(a.P24BankElement, {
+                                    options: {
+                                        value: _,
+                                        style: m,
+                                    },
+                                    onChange: (e) => f(e.value),
+                                }),
+                                (0, r.jsx)("div", {
+                                    className: d.bankSelectionStub,
+                                    children: (0, r.jsx)("img", {
+                                        src: i,
+                                        alt: "Przelewy24",
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             });
         }
         case c.He.EPS: {
             let { onAccountHolderNameChange: i, onEPSBankChange: l, epsBankValue: c, billingAddressInfo: p } = e,
                 h = (0, o.wj)(t) ? f : _;
-            return (0, r.jsxs)("div", {
+            return (0, r.jsx)("div", {
                 className: d.body,
-                children: [
-                    (0, r.jsx)(s.hjN, {
-                        title: u.intl.string(u.t.sN3wra),
-                        children: (0, r.jsx)(s.oil, {
+                children: (0, r.jsxs)(s.Kqy, {
+                    gap: 16,
+                    children: [
+                        (0, r.jsx)(s.oil, {
+                            label: u.intl.string(u.t.sN3wra),
                             inputRef: n,
                             name: u.intl.string(u.t.sN3wra),
                             placeholder: u.intl.string(u.t.sN3wra),
                             onChange: (e) => i(e),
                             value: p.name,
                         }),
-                    }),
-                    (0, r.jsxs)(s.hjN, {
-                        className: d.nonTopInputWrapper,
-                        title: u.intl.string(u.t.dFyV09),
-                        children: [
-                            (0, r.jsx)(a.EpsBankElement, {
-                                options: {
-                                    value: c,
-                                    style: m,
-                                },
-                                onChange: (e) => l(e.value),
-                            }),
-                            (0, r.jsx)("div", {
-                                className: d.bankSelectionStub,
-                                children: (0, r.jsx)("img", {
-                                    src: h,
-                                    alt: "EPS",
+                        (0, r.jsxs)(s.Kqy, {
+                            gap: 4,
+                            children: [
+                                (0, r.jsx)(s.Text, {
+                                    variant: "text-sm/semibold",
+                                    children: u.intl.string(u.t.dFyV09),
                                 }),
-                            }),
-                        ],
-                    }),
-                ],
+                                (0, r.jsx)(a.EpsBankElement, {
+                                    options: {
+                                        value: c,
+                                        style: m,
+                                    },
+                                    onChange: (e) => l(e.value),
+                                }),
+                                (0, r.jsx)("div", {
+                                    className: d.bankSelectionStub,
+                                    children: (0, r.jsx)("img", {
+                                        src: h,
+                                        alt: "EPS",
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
             });
         }
         default:

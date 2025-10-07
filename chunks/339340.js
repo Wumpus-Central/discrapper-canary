@@ -1,148 +1,140 @@
 n.d(t, {
-    a: () => I,
-    default: () => S,
+    a: () => v,
+    default: () => T,
 }),
     n(388685),
     n(704826),
     n(35282);
 var r = n(951288),
     i = n(647438),
-    a = n(399606),
-    o = n(343817),
-    s = n(667202),
-    l = n(481060),
-    c = n(787014),
-    u = n(904245),
-    d = n(12498),
-    f = n(541716),
-    _ = n(752305),
-    p = n(893718),
-    h = n(957730),
-    m = n(19780),
-    g = n(594174),
-    E = n(626135),
-    b = n(981631),
-    y = n(388032),
-    O = n(459931),
-    v = n(740353);
-let I = "VoiceChannelStatusModal",
-    T = 500;
-function S(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: S, onClose: A } = e,
-        C = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        N = (0, a.e7)([m.Z], () => m.Z.getMediaSessionId()),
-        [R, P] = i.useState(null != C ? C : ""),
-        [w, D] = i.useState(!1),
-        [L, x] = i.useState(null),
-        j = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        M = R.length > T;
+    a = n(793030),
+    o = n(399606),
+    s = n(343817),
+    l = n(787014),
+    c = n(904245),
+    u = n(12498),
+    d = n(541716),
+    f = n(752305),
+    _ = n(893718),
+    p = n(957730),
+    h = n(19780),
+    m = n(594174),
+    g = n(626135),
+    E = n(981631),
+    b = n(388032),
+    y = n(459931),
+    O = n(740353);
+let v = "VoiceChannelStatusModal",
+    I = 500;
+function T(e) {
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: T, onClose: S } = e,
+        A = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        C = (0, o.e7)([h.Z], () => h.Z.getMediaSessionId()),
+        [N, R] = i.useState(null != A ? A : ""),
+        [P, w] = i.useState(!1),
+        [D, L] = i.useState(null),
+        x = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        M = N.length > I;
     i.useEffect(() => {
-        E.default.track(b.rMx.OPEN_MODAL, {
+        g.default.track(E.rMx.OPEN_MODAL, {
             type: "Voice Channel Topic Modal",
             guild_id: t.guild_id,
-            location_stack: S,
+            location_stack: T,
         });
-    }, [t.guild_id, S]);
-    let k = (e) => {
-            x(new o.Hx(e, e.status).getAnyErrorMessage());
+    }, [t.guild_id, T]);
+    let j = (e) => {
+            L(new s.Hx(e, e.status).getAnyErrorMessage());
         },
-        U = (e) => {
+        k = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = u.Z.validateMessage(n, j, t.id);
-                return x(e), D(!1), { hasErrors: !0 };
+                let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
+                return L(e), w(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
-        G = async (e) => {
-            R === C && A(), null == e || e.preventDefault(), x(null), D(!0);
-            let n = R.length,
-                r = R.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
-                i = h.ZP.parse(t, R),
-                { hasErrors: a } = U(i);
+        U = async (e) => {
+            N === A && S(), null == e || e.preventDefault(), L(null), w(!0);
+            let n = N.length,
+                r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
+                i = p.ZP.parse(t, N),
+                { hasErrors: a } = k(i);
             if (!a) {
                 try {
-                    let e = await c.ZP.updateVoiceChannelStatus(t.id, i.content);
+                    let e = await l.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
-                        ? (E.default.track(b.rMx.VOICE_CHANNEL_TOPIC_SET, {
+                        ? (g.default.track(E.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
-                              media_session_id: N,
+                              media_session_id: C,
                               raw_length: n,
                               text_length: r,
-                              location_stack: S,
+                              location_stack: T,
                           }),
-                          A())
-                        : k(e);
+                          S())
+                        : j(e);
                 } catch (e) {
-                    k(e);
+                    j(e);
                 }
-                D(!1);
+                w(!1);
             }
         },
-        [B, Z] = i.useState((0, _.JM)(R)),
-        F = (e, t, n) => {
-            P(t), Z(n);
+        [G, B] = i.useState((0, f.JM)(N)),
+        Z = (e, t, n) => {
+            R(t), B(n);
         },
-        V = async () => (
-            M || w || (await G()),
+        F = async () => (
+            M || P || (await U()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0,
             })
         ),
-        H = (0, r.jsxs)(l.hjN, {
-            title: y.intl.string(y.t.Fq5lwM),
-            children: [
-                (0, r.jsx)(p.ZP, {
-                    innerClassName: O.textArea,
-                    textValue: R,
-                    richValue: B,
-                    placeholder: y.intl.formatToPlainString(y.t.DUXxBg, { channelName: t.name }),
-                    focused: !0,
-                    channel: t,
-                    onChange: F,
-                    onSubmit: V,
-                    type: f.Ie.VOICE_CHANNEL_STATUS,
-                    canMentionRoles: !1,
-                    canMentionChannels: !1,
-                    allowNewLines: !1,
-                    parentModalKey: I,
-                    maxCharacterCount: T,
-                    showRemainingCharsAfterCount: T / 2,
-                    emojiPickerCloseOnModalOuterClick: !0,
-                }),
-                null != L
-                    ? (0, r.jsx)(l.kzN, {
-                          className: O.error,
-                          children: L,
-                      })
-                    : null,
-            ],
+        V = (0, r.jsx)(a.NIc, {
+            label: b.intl.string(b.t.Fq5lwM),
+            errorMessage: D,
+            children: (0, r.jsx)(_.ZP, {
+                innerClassName: y.textArea,
+                textValue: N,
+                richValue: G,
+                placeholder: b.intl.formatToPlainString(b.t.DUXxBg, { channelName: t.name }),
+                focused: !0,
+                channel: t,
+                onChange: Z,
+                onSubmit: F,
+                type: d.Ie.VOICE_CHANNEL_STATUS,
+                canMentionRoles: !1,
+                canMentionChannels: !1,
+                allowNewLines: !1,
+                parentModalKey: v,
+                maxCharacterCount: I,
+                showRemainingCharsAfterCount: I / 2,
+                emojiPickerCloseOnModalOuterClick: !0,
+            }),
         });
-    return (0, r.jsx)(s.ExpressiveModal, {
+    return (0, r.jsx)(a.ExpressiveModal, {
         transitionState: n,
-        onClose: A,
+        onClose: S,
         graphic: {
             type: "image",
-            src: v,
+            src: O,
         },
-        title: y.intl.string(y.t["5CyJBQ"]),
-        subtitle: y.intl.string(y.t.NRBYjo),
+        title: b.intl.string(b.t["5CyJBQ"]),
+        subtitle: b.intl.string(b.t.NRBYjo),
         actions: [
             {
                 variant: "secondary",
-                text: y.intl.string(y.t["ETE/oK"]),
-                onClick: A,
+                text: b.intl.string(b.t["ETE/oK"]),
+                onClick: S,
             },
             {
                 variant: "primary",
-                loading: w,
+                loading: P,
                 disabled: M,
-                text: y.intl.string(y.t.XqK2Iy),
-                onClick: G,
+                text: b.intl.string(b.t.XqK2Iy),
+                onClick: U,
             },
         ],
-        children: H,
+        children: V,
     });
 }

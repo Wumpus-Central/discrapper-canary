@@ -126,7 +126,8 @@ function ee(e) {
                 children: (0, r.jsxs)("div", {
                     className: K.usernameRow,
                     children: [
-                        (0, r.jsx)(_.vwX, {
+                        (0, r.jsx)(_.Text, {
+                            variant: "text-md/medium",
                             className: K.fieldTitle,
                             children: W.intl.string(W.t.qqhR3N),
                         }),
@@ -227,7 +228,8 @@ function et(e) {
                 children: (0, r.jsxs)("div", {
                     className: K.usernameRow,
                     children: [
-                        (0, r.jsx)(_.vwX, {
+                        (0, r.jsx)(_.Text, {
+                            variant: "text-md/medium",
                             className: K.fieldTitle,
                             children: W.intl.string(W.t["9AjdkJ"]),
                         }),
@@ -340,7 +342,8 @@ function er(e) {
                 className: K.constrainedRow,
                 children: (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(_.vwX, {
+                        (0, r.jsx)(_.Text, {
+                            variant: "text-md/medium",
                             className: K.fieldTitle,
                             children: W.intl.string(W.t.tlZllJ),
                         }),
@@ -414,7 +417,8 @@ function ei(e) {
                     className: K.constrainedRow,
                     children: (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(_.vwX, {
+                            (0, r.jsx)(_.Text, {
+                                variant: "text-md/medium",
                                 className: K.fieldTitle,
                                 children: W.intl.string(W.t.kerONj),
                             }),
@@ -514,7 +518,8 @@ function eo(e) {
                 className: K.constrainedRow,
                 children: (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(_.vwX, {
+                        (0, r.jsx)(_.Text, {
+                            variant: "text-md/medium",
                             className: K.fieldTitle,
                             children: W.intl.string(W.t["/52UY2"]),
                         }),

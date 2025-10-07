@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(572004),
     b = n(878209),
     y = n(987338),
-    O = n(524281);
+    O = n(758746);
 function v(e, t, n) {
     return (
         t in e
@@ -54,11 +54,10 @@ function T() {
         s = i.useMemo(() => I({}, a, t), [a, t]),
         [c, u] = i.useState(""),
         d = (0, b.Ro)((0, b.Tc)((0, b.Cg)(o), s), c);
-    return (0, r.jsxs)(l.hjN, {
-        tag: l.RB0.H1,
-        title: "Experiments",
+    return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(l.E1j, {
+                placeholder: "Search experiments",
                 query: c,
                 onChange: u,
                 onClear: () => u(""),
@@ -125,8 +124,8 @@ function S(e) {
         R = (0, r.jsx)(l.kL8, {
             "aria-label": "Toggle visibility",
             onClick: I,
-            children: (0, r.jsxs)(l.vwX, {
-                tag: l.RB0.H3,
+            children: (0, r.jsxs)(l.Text, {
+                variant: "text-md/medium",
                 className: O.title,
                 children: [
                     (0, r.jsxs)("div", {
@@ -162,7 +161,7 @@ function S(e) {
     if (!h)
         return (0, r.jsx)("div", {
             className: O.group,
-            children: (0, r.jsx)(l.hjN, { children: R }),
+            children: R,
         });
     let P = "";
     return (
@@ -175,84 +174,75 @@ function S(e) {
         (0, r.jsxs)("div", {
             className: O.group,
             children: [
-                (0, r.jsxs)(l.hjN, {
-                    children: [
-                        R,
-                        (0, r.jsx)("div", {
-                            children: (0, r.jsx)(l.xJW, {
-                                title: t.system === u.I.LEGACY ? "Bucket Override" : "Variant Override",
-                                children: (0, r.jsx)(d.y, {
-                                    experiment: t,
-                                    experimentId: n,
-                                    overrideInfo: a,
-                                }),
-                            }),
-                        }),
-                        (0, r.jsxs)("div", {
-                            className: O.description,
-                            children: [
-                                (0, r.jsx)(l.R94, {
-                                    type: l.geA.DESCRIPTION,
-                                    children: P,
-                                }),
-                                null == A
-                                    ? (0, r.jsx)(l.R94, {
-                                          type: l.geA.DESCRIPTION,
-                                          children:
-                                              'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
-                                      })
-                                    : null,
-                            ],
-                        }),
-                        b
-                            ? (0, r.jsxs)("div", {
-                                  children: [
-                                      (0, r.jsx)(l.vwX, {
-                                          tag: "h5",
-                                          className: O.debugTitle,
-                                          children: "Server Descriptor",
-                                      }),
-                                      (0, r.jsx)(l.Text, {
-                                          variant: "code",
-                                          className: O.pre,
-                                          children: null == A ? "None" : JSON.stringify(A, void 0, 2),
-                                      }),
-                                      (0, r.jsx)(l.vwX, {
-                                          tag: "h5",
-                                          className: O.debugTitle,
-                                          children: "Override Descriptor",
-                                      }),
-                                      (0, r.jsx)(l.Text, {
-                                          variant: "code",
-                                          className: O.pre,
-                                          children:
-                                              (null == a ? void 0 : a.originalDescriptor) == null
-                                                  ? "None"
-                                                  : JSON.stringify(a.originalDescriptor, void 0, 2),
-                                      }),
-                                      (0, r.jsx)(l.vwX, {
-                                          tag: "h5",
-                                          className: O.debugTitle,
-                                          children: "Recent Exposures",
-                                      }),
-                                      (0, r.jsx)(l.Text, {
-                                          variant: "code",
-                                          className: O.pre,
-                                          children: 0 === C.length ? "None" : C.join("\n"),
-                                      }),
-                                  ],
-                              })
-                            : (0, r.jsx)("div", {
-                                  className: O.debugTitle,
-                                  children: (0, r.jsx)(l.Avr, {
-                                      variant: "secondary",
-                                      text: "More Details \xBB",
-                                      onClick: () => v(!0),
-                                  }),
-                              }),
-                    ],
+                R,
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(d.y, {
+                        label: t.system === u.I.LEGACY ? "Bucket Override" : "Variant Override",
+                        description: P,
+                        experiment: t,
+                        experimentId: n,
+                        overrideInfo: a,
+                    }),
                 }),
-                (0, r.jsx)(l.$i$, { className: O.divider }),
+                (0, r.jsx)("div", {
+                    className: O.description,
+                    children:
+                        null == A
+                            ? (0, r.jsx)(l.Text, {
+                                  variant: "text-sm/normal",
+                                  color: "text-secondary",
+                                  children:
+                                      'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
+                              })
+                            : null,
+                }),
+                b
+                    ? (0, r.jsxs)("div", {
+                          children: [
+                              (0, r.jsx)(l.Text, {
+                                  variant: "text-lg/medium",
+                                  className: O.debugTitle,
+                                  children: "Server Descriptor",
+                              }),
+                              (0, r.jsx)(l.Text, {
+                                  variant: "code",
+                                  className: O.pre,
+                                  children: null == A ? "None" : JSON.stringify(A, void 0, 2),
+                              }),
+                              (0, r.jsx)(l.Text, {
+                                  variant: "text-lg/medium",
+                                  className: O.debugTitle,
+                                  children: "Override Descriptor",
+                              }),
+                              (0, r.jsx)(l.Text, {
+                                  variant: "code",
+                                  className: O.pre,
+                                  children:
+                                      (null == a ? void 0 : a.originalDescriptor) == null
+                                          ? "None"
+                                          : JSON.stringify(a.originalDescriptor, void 0, 2),
+                              }),
+                              (0, r.jsx)(l.Text, {
+                                  variant: "text-lg/medium",
+                                  className: O.debugTitle,
+                                  children: "Recent Exposures",
+                              }),
+                              (0, r.jsx)(l.Text, {
+                                  variant: "code",
+                                  className: O.pre,
+                                  children: 0 === C.length ? "None" : C.join("\n"),
+                              }),
+                          ],
+                      })
+                    : (0, r.jsx)("div", {
+                          className: O.debugTitle,
+                          children: (0, r.jsx)(l.Avr, {
+                              variant: "secondary",
+                              text: "More Details \xBB",
+                              onClick: () => v(!0),
+                          }),
+                      }),
+                (0, r.jsx)(l.izJ, { className: O.divider }),
             ],
         })
     );
@@ -296,8 +286,8 @@ function A(e) {
         }),
         I = (0, r.jsx)(l.P3F, {
             onClick: h,
-            children: (0, r.jsxs)(l.vwX, {
-                tag: l.RB0.H3,
+            children: (0, r.jsxs)(l.Text, {
+                variant: "text-md/medium",
                 className: O.title,
                 children: [
                     (0, r.jsxs)("div", {
@@ -321,98 +311,87 @@ function A(e) {
         ? (0, r.jsxs)("div", {
               className: O.group,
               children: [
-                  (0, r.jsxs)(l.hjN, {
-                      children: [
-                          I,
-                          (0, r.jsx)("div", {
-                              children: (0, r.jsx)(l.xJW, {
-                                  title: "Bucket Override",
-                                  children: (0, r.jsx)(d.y, {
-                                      experiment: t,
-                                      experimentId: n,
-                                      overrideInfo: a,
-                                  }),
-                              }),
-                          }),
-                          (0, r.jsxs)("div", {
-                              className: O.description,
-                              children: [
-                                  (0, r.jsxs)(l.R94, {
-                                      type: l.geA.DESCRIPTION,
-                                      children: ["Current Assignments: ", v],
-                                  }),
-                                  null == m
-                                      ? (0, r.jsx)(l.R94, {
-                                            type: l.geA.DESCRIPTION,
-                                            children:
-                                                'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
-                                        })
-                                      : null,
-                              ],
-                          }),
-                          _
-                              ? (0, r.jsxs)("div", {
-                                    children: [
-                                        (0, r.jsx)(l.vwX, {
-                                            tag: "h5",
-                                            className: O.debugTitle,
-                                            children: "Guild Assignments",
-                                        }),
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "code",
-                                            className: O.pre,
-                                            children: b,
-                                        }),
-                                        (0, r.jsx)(l.vwX, {
-                                            tag: "h5",
-                                            className: O.debugTitle,
-                                            children: "Server Descriptor",
-                                        }),
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "code",
-                                            className: O.pre,
-                                            children: null == m ? "None" : JSON.stringify(m, void 0, 2),
-                                        }),
-                                        (0, r.jsx)(l.vwX, {
-                                            tag: "h5",
-                                            className: O.debugTitle,
-                                            children: "Override Descriptor",
-                                        }),
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "code",
-                                            className: O.pre,
-                                            children:
-                                                (null == a ? void 0 : a.originalDescriptor) == null
-                                                    ? "None"
-                                                    : JSON.stringify(a.originalDescriptor, void 0, 2),
-                                        }),
-                                        (0, r.jsx)(l.vwX, {
-                                            tag: "h5",
-                                            className: O.debugTitle,
-                                            children: "Recent Exposures",
-                                        }),
-                                        (0, r.jsx)(l.Text, {
-                                            variant: "code",
-                                            className: O.pre,
-                                            children: 0 === E.length ? "None" : E.join("\n"),
-                                        }),
-                                    ],
-                                })
-                              : (0, r.jsx)("div", {
-                                    className: O.debugTitle,
-                                    children: (0, r.jsx)(l.Avr, {
-                                        variant: "secondary",
-                                        text: "More Details \xBB",
-                                        onClick: () => p(!0),
-                                    }),
-                                }),
-                      ],
+                  I,
+                  (0, r.jsx)(d.y, {
+                      label: "Bucket Override",
+                      description: "Current Assignments: ".concat(v),
+                      experiment: t,
+                      experimentId: n,
+                      overrideInfo: a,
                   }),
-                  (0, r.jsx)(l.$i$, { className: O.divider }),
+                  (0, r.jsx)("div", {
+                      className: O.description,
+                      children:
+                          null == m
+                              ? (0, r.jsx)(l.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-secondary",
+                                    children:
+                                        'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
+                                })
+                              : null,
+                  }),
+                  _
+                      ? (0, r.jsxs)("div", {
+                            children: [
+                                (0, r.jsx)(l.Text, {
+                                    variant: "text-lg/medium",
+                                    className: O.debugTitle,
+                                    children: "Guild Assignments",
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "code",
+                                    className: O.pre,
+                                    children: b,
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "text-lg/medium",
+                                    className: O.debugTitle,
+                                    children: "Server Descriptor",
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "code",
+                                    className: O.pre,
+                                    children: null == m ? "None" : JSON.stringify(m, void 0, 2),
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "text-lg/medium",
+                                    className: O.debugTitle,
+                                    children: "Override Descriptor",
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "code",
+                                    className: O.pre,
+                                    children:
+                                        (null == a ? void 0 : a.originalDescriptor) == null
+                                            ? "None"
+                                            : JSON.stringify(a.originalDescriptor, void 0, 2),
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "text-lg/medium",
+                                    className: O.debugTitle,
+                                    children: "Recent Exposures",
+                                }),
+                                (0, r.jsx)(l.Text, {
+                                    variant: "code",
+                                    className: O.pre,
+                                    children: 0 === E.length ? "None" : E.join("\n"),
+                                }),
+                            ],
+                        })
+                      : (0, r.jsx)("div", {
+                            className: O.debugTitle,
+                            children: (0, r.jsx)(l.Avr, {
+                                variant: "secondary",
+                                text: "More Details \xBB",
+                                onClick: () => p(!0),
+                            }),
+                        }),
+                  (0, r.jsx)(l.izJ, { className: O.divider }),
               ],
           })
         : (0, r.jsx)("div", {
               className: O.group,
-              children: (0, r.jsx)(l.hjN, { children: I }),
+              children: I,
           });
 }

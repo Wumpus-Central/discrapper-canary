@@ -10,7 +10,7 @@ var a = n(951288),
     u = n(789654),
     m = n(246992),
     p = n(500949),
-    h = n(151085);
+    h = n(416825);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -149,7 +149,7 @@ function j(e) {
             steps: C = 26,
         } = t,
         E = (0, p.XM)(t),
-        N = (0, p.W6)(E, c);
+        S = (0, p.W6)(E, c);
     return (0, a.jsxs)(d.Kqy, {
         gap: 20,
         children: [
@@ -264,50 +264,57 @@ function j(e) {
                 onValueChange: (e) => (0, p.YC)(c, Math.round(e), n),
                 onMarkerRender: () => null,
             }),
-            (0, a.jsx)(d.hjN, {
-                title: "Palette Preview",
-                children: (0, a.jsx)("div", {
-                    className: h.paletteOverrides,
-                    "data-columnar": g,
-                    children: Object.entries(E).map((e, n) => {
-                        let [r, c] = e,
-                            u = (0, p.HI)(c),
-                            m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                            h = N[r];
-                        return (0, a.jsxs)(
-                            "div",
-                            {
-                                style: { backgroundColor: u },
-                                children: [
-                                    (0, a.jsxs)(d.Text, {
-                                        variant: g ? "text-sm/medium" : "text-xs/medium",
-                                        style: { color: m },
-                                        children: [
-                                            t.name,
-                                            ".",
-                                            n + 1,
-                                            g && null != h ? (0, a.jsx)("strong", { children: " - ".concat(h) }) : "",
-                                        ],
-                                    }),
-                                    g &&
+            (0, a.jsxs)("div", {
+                children: [
+                    (0, a.jsx)(d.Text, {
+                        variant: "text-md/semibold",
+                        children: "Palette Preview",
+                    }),
+                    (0, a.jsx)("div", {
+                        className: h.paletteOverrides,
+                        "data-columnar": g,
+                        children: Object.entries(E).map((e, n) => {
+                            let [r, c] = e,
+                                u = (0, p.HI)(c),
+                                m = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
+                                h = S[r];
+                            return (0, a.jsxs)(
+                                "div",
+                                {
+                                    style: { backgroundColor: u },
+                                    children: [
                                         (0, a.jsxs)(d.Text, {
-                                            variant: "text-xxs/medium",
-                                            style: {
-                                                opacity: 0.75,
-                                                color: m,
-                                            },
+                                            variant: g ? "text-sm/medium" : "text-xs/medium",
+                                            style: { color: m },
                                             children: [
-                                                (0, i.Z)((0, l.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
-                                                " - ",
-                                                u,
+                                                t.name,
+                                                ".",
+                                                n + 1,
+                                                g && null != h
+                                                    ? (0, a.jsx)("strong", { children: " - ".concat(h) })
+                                                    : "",
                                             ],
                                         }),
-                                ],
-                            },
-                            r,
-                        );
+                                        g &&
+                                            (0, a.jsxs)(d.Text, {
+                                                variant: "text-xxs/medium",
+                                                style: {
+                                                    opacity: 0.75,
+                                                    color: m,
+                                                },
+                                                children: [
+                                                    (0, i.Z)((0, l.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
+                                                    " - ",
+                                                    u,
+                                                ],
+                                            }),
+                                    ],
+                                },
+                                r,
+                            );
+                        }),
                     }),
-                }),
+                ],
             }),
         ],
     });

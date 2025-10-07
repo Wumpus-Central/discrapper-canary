@@ -34,44 +34,41 @@ function g() {
                 name: h.intl.string(p.default.m3oL7e),
             },
         ];
-    return (0, r.jsx)(o.hjN, {
-        className: m.formSection,
-        children: (0, r.jsxs)(o.C3N, {
-            label: h.intl.string(p.default.TG0Qsb),
-            description: h.intl.string(p.default.OO17Li),
-            children: [
-                (0, r.jsx)(a.E, {
-                    label: h.intl.string(p.default["/LHVbm"]),
-                    options: s,
-                    value: t,
-                    onChange: (e) => n(e),
-                }),
-                (0, r.jsxs)("div", {
-                    className: m.myServersContainer,
-                    children: [
-                        (0, r.jsxs)("div", {
-                            className: m.myServersHeaderContainer,
-                            children: [
-                                (0, r.jsx)(o.X6q, {
-                                    className: m.myServersTitle,
-                                    variant: "heading-md/medium",
-                                    color: "header-primary",
-                                    children: h.intl.string(h.t.TqdOvL),
+    return (0, r.jsxs)(o.C3N, {
+        label: h.intl.string(p.default.TG0Qsb),
+        description: h.intl.string(p.default.OO17Li),
+        children: [
+            (0, r.jsx)(a.E, {
+                label: h.intl.string(p.default["/LHVbm"]),
+                options: s,
+                value: t,
+                onChange: (e) => n(e),
+            }),
+            (0, r.jsxs)("div", {
+                className: m.myServersContainer,
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: m.myServersHeaderContainer,
+                        children: [
+                            (0, r.jsx)(o.X6q, {
+                                className: m.myServersTitle,
+                                variant: "heading-md/medium",
+                                color: "header-primary",
+                                children: h.intl.string(h.t.TqdOvL),
+                            }),
+                            !e &&
+                                (0, r.jsx)(o.Wn, {
+                                    className: m.myServersIgnoredWarning,
+                                    messageType: o.QYI.WARNING,
+                                    textColor: "text-feedback-warning",
+                                    children: h.intl.string(p.default["xxI0/f"]),
                                 }),
-                                !e &&
-                                    (0, r.jsx)(o.Wn, {
-                                        className: m.myServersIgnoredWarning,
-                                        messageType: o.QYI.WARNING,
-                                        textColor: "text-feedback-warning",
-                                        children: h.intl.string(p.default["xxI0/f"]),
-                                    }),
-                            ],
-                        }),
-                        (0, r.jsx)(d.Z, {}),
-                    ],
-                }),
-            ],
-        }),
+                        ],
+                    }),
+                    (0, r.jsx)(d.Z, {}),
+                ],
+            }),
+        ],
     });
 }
 function E() {
@@ -105,16 +102,10 @@ function b() {
         t = u.isPlatformEmbedded ? h.intl.string(p.default.UQ9RHB) : h.intl.string(h.t.oKqC4u);
     return (0, r.jsx)(s.F, {
         setting: _.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, r.jsxs)(o.hjN, {
-            className: m.formSection,
+        children: (0, r.jsxs)(o.Kqy, {
+            gap: 32,
             children: [
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(o.R94, {
-                        className: m.formDescription,
-                        type: o.R94.Types.DESCRIPTION,
-                        children: h.intl.string(p.default.t2Ysra),
-                    }),
-                }),
+                (0, r.jsx)("div", { children: h.intl.string(p.default.t2Ysra) }),
                 (0, r.jsx)(o.rsf, {
                     label: h.intl.string(p.default.WhdCGB),
                     description: t,
@@ -129,13 +120,11 @@ function b() {
 function y() {
     return (0, r.jsx)(s.F, {
         setting: _.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, r.jsx)(o.hjN, {
-            children: (0, r.jsx)(o.ToO, {
-                type: o.ToO.Types.PRIMARY,
-                body: h.intl.format(h.t.xvCsx8, {
-                    termsLink: f.EYA.TERMS,
-                    privacyLink: f.EYA.PRIVACY,
-                }),
+        children: (0, r.jsx)(o.ToO, {
+            type: o.ToO.Types.PRIMARY,
+            body: h.intl.format(h.t.xvCsx8, {
+                termsLink: f.EYA.TERMS,
+                privacyLink: f.EYA.PRIVACY,
             }),
         }),
     });
@@ -147,11 +136,11 @@ let O = function (e) {
         title: h.intl.string(h.t.Cq98yM),
         children: [
             (0, r.jsx)(b, {}),
-            (0, r.jsx)(o.izJ, { className: m.divider }),
+            (0, r.jsx)(o.izJ, { gap: 32 }),
             (0, r.jsx)(g, {}),
-            (0, r.jsx)(o.izJ, { className: m.divider }),
+            (0, r.jsx)(o.izJ, { gap: 32 }),
             (0, r.jsx)(E, {}),
-            (0, r.jsx)(o.izJ, { className: m.divider }),
+            (0, r.jsx)(o.izJ, { gap: 32 }),
             (0, r.jsx)(y, {}),
         ],
     });

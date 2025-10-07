@@ -1,32 +1,30 @@
-r.d(e, { default: () => g }), r(388685);
+r.d(e, { default: () => p }), r(388685);
 var n = r(951288),
     a = r(647438),
     i = r(538534),
-    o = r(481060),
-    c = r(881052),
-    l = r(434404),
-    s = r(78451),
-    d = r(915509),
-    u = r(981631),
-    p = r(388032),
-    b = r(197571);
-function g(t) {
+    o = r(881052),
+    c = r(434404),
+    l = r(78451),
+    s = r(915509),
+    d = r(981631),
+    u = r(388032);
+function p(t) {
     var e, r;
-    let { guild: g, onClose: y, hideColors: f } = t,
-        [_, m] = a.useState(g.verificationLevel),
-        [O, j] = a.useState(null),
-        h = g.features.has(u.oNc.COMMUNITY),
-        v = (0, s.IF)(h, f).filter((t) => !t.disabled),
-        x = a.useCallback(async () => {
-            null != O && j(null);
+    let { guild: p, onClose: b, hideColors: g } = t,
+        [y, f] = a.useState(p.verificationLevel),
+        [_, O] = a.useState(null),
+        m = p.features.has(d.oNc.COMMUNITY),
+        v = (0, l.IF)(m, g).filter((t) => !t.disabled),
+        j = a.useCallback(async () => {
+            null != _ && O(null);
             try {
-                await l.Z.saveGuild(g.id, { verificationLevel: _ }), l.Z.updateGuild({ verificationLevel: _ }), y();
+                await c.Z.saveGuild(p.id, { verificationLevel: y }), c.Z.updateGuild({ verificationLevel: y }), b();
             } catch (t) {
-                j(new c.Hx(t).getAnyErrorMessage());
+                O(new o.Hx(t).getAnyErrorMessage());
             }
-        }, [O, g.id, _, y]);
+        }, [_, p.id, y, b]);
     return (0, n.jsx)(
-        d.Z,
+        s.Z,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -54,23 +52,15 @@ function g(t) {
         })({}, t)),
         (r = r =
             {
-                title: p.intl.string(p.t.DpRdYG),
-                errorText: O,
-                onConfirm: x,
-                onCancel: y,
-                children: (0, n.jsxs)(o.hjN, {
-                    children: [
-                        (0, n.jsx)(o.R94, {
-                            type: o.R94.Types.DESCRIPTION,
-                            className: b.marginBottom20,
-                            children: p.intl.format(p.t.iuRk2t, {}),
-                        }),
-                        (0, n.jsx)(i.E, {
-                            value: _,
-                            options: v,
-                            onChange: (t) => m(t),
-                        }),
-                    ],
+                title: u.intl.string(u.t.DpRdYG),
+                description: u.intl.format(u.t.iuRk2t, {}),
+                errorText: _,
+                onConfirm: j,
+                onCancel: b,
+                children: (0, n.jsx)(i.E, {
+                    value: y,
+                    options: v,
+                    onChange: (t) => f(t),
                 }),
             }),
         Object.getOwnPropertyDescriptors

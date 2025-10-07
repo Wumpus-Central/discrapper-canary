@@ -18,8 +18,8 @@ var r,
     E = n(13430),
     v = n(213609),
     b = n(882037),
-    j = n(254942),
-    I = n(481230),
+    I = n(254942),
+    j = n(481230),
     N = n(388905),
     S = n(853268),
     O = n(639946),
@@ -191,7 +191,7 @@ class eu extends (r = l.PureComponent) {
             });
         try {
             this.inGuildOrChannelInviteFlow()
-                ? await (0, I.ZP)({
+                ? await (0, j.ZP)({
                       consent: i,
                       invite: d,
                       giftCodeSKUId: h,
@@ -199,7 +199,7 @@ class eu extends (r = l.PureComponent) {
                       globalName: _,
                       birthday: l,
                   })
-                : await (0, I.R$)({
+                : await (0, j.R$)({
                       email: e,
                       username: p,
                       globalName: _,
@@ -215,7 +215,7 @@ class eu extends (r = l.PureComponent) {
                 null == c || c();
         } catch (t) {
             if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
-            let e = (0, j.F)(t);
+            let e = (0, I.F)(t);
             this.setState({ apiErrors: e });
         }
     }
@@ -259,11 +259,11 @@ class eu extends (r = l.PureComponent) {
                 (0, i.jsxs)(N.gO, {
                     className: ei.authBlock,
                     children: [
-                        (0, i.jsx)(m.vwX, { children: er.intl.string(er.t["9AjdkJ"]) }),
                         (0, i.jsx)(g.u, {
                             text: er.intl.string(er.t["hBB85+"]),
                             position: "right",
                             children: (0, i.jsx)(N.II, {
+                                label: er.intl.string(er.t["9AjdkJ"]),
                                 autoFocus: !0,
                                 className: el.marginBottom8,
                                 name: "username",
@@ -458,7 +458,7 @@ class eu extends (r = l.PureComponent) {
                 passwordClientError: f,
                 dateOfBirthClientError: _,
                 registering: x,
-                apiErrors: { email: v, username: b, global_name: j, password: I, date_of_birth: S } = {},
+                apiErrors: { email: v, username: b, global_name: I, password: j, date_of_birth: S } = {},
             } = this.state,
             { consentRequired: O, authBoxClassName: C, hasLoggedInAccounts: A } = this.props,
             T = this.renderErrorMessage(),
@@ -520,7 +520,7 @@ class eu extends (r = l.PureComponent) {
                         name: "global_name",
                         value: s,
                         onChange: (e) => this.setState({ globalName: e }),
-                        error: ec(j),
+                        error: ec(I),
                         maxLength: en.hy,
                         autoComplete: "off",
                         setRef: (e) => {
@@ -575,7 +575,7 @@ class eu extends (r = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? er.intl.string(er.t.EkokLy) : null,
                             }),
-                        error: null != f ? f : ec(I),
+                        error: null != f ? f : ec(j),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {

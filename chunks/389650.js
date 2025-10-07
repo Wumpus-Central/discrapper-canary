@@ -99,24 +99,20 @@ class H extends i.PureComponent {
         let { keybind: e } = this.props,
             t = R.BB(e.shortcut);
         return g.Z.hasBind(t)
-            ? (0, r.jsx)(d.R94, {
-                  className: M.keybindMessage,
-                  type: d.geA.DESCRIPTION,
-                  style: { color: u.Z.unsafe_rawColors.RED_400.css },
+            ? (0, r.jsx)(d.Wn, {
+                  messageType: d.QYI.ERROR,
                   children: x.intl.string(x.t["7lQlw8"]),
               })
             : L.Sp.has(t)
-              ? (0, r.jsx)(d.R94, {
-                    className: M.keybindMessage,
-                    type: d.geA.DESCRIPTION,
-                    style: { color: u.Z.unsafe_rawColors.RED_400.css },
+              ? (0, r.jsx)(d.Wn, {
+                    messageType: d.QYI.ERROR,
                     children: x.intl.format(x.t.MOIaNT, {
                         keyboardNavArticle: C.Z.getArticleURL(D.BhN.KEYBOARD_NAVIGATION),
                     }),
                 })
-              : (0, r.jsx)(d.R94, {
+              : (0, r.jsx)(d.Text, {
+                    variant: "text-md/normal",
                     className: M.keybindMessage,
-                    type: d.geA.DESCRIPTION,
                     children: this.props.keybindDescriptions[e.action],
                 });
     }

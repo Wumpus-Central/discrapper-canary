@@ -1,119 +1,100 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(313201),
     s = n(723047),
-    o = n(727843),
-    c = n(290348),
-    d = n(164000),
-    u = n(783454),
-    m = n(862319),
+    a = n(727843),
+    o = n(290348),
+    c = n(164000),
+    d = n(783454),
+    u = n(862319),
     g = n(140285),
-    p = n(390583),
-    h = n(641249),
+    m = n(390583),
+    p = n(641249),
     f = n(574085),
-    b = n(293810),
-    x = n(388032),
-    j = n(605041);
-function v(e) {
+    h = n(293810),
+    x = n(388032);
+function b(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: v } = (0, o.N)(),
-        [_, O] = c.UE(n),
-        [y, C] = c.R7(n),
-        N = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: E } = (0, d.Z)(v),
-        I = (0, a.Dt)(),
-        S = (0, s.mY)();
-    return (0, r.jsxs)(u.Z, {
+        { editStateId: n, guildId: b } = (0, a.N)(),
+        [j, _] = o.UE(n),
+        [v, C] = o.R7(n),
+        O = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: y } = (0, c.Z)(b),
+        N = (0, s.mY)();
+    return (0, r.jsx)(d.Z, {
         title: x.intl.string(x.t.YNw2Sk),
         description: x.intl.string(x.t.zMW5r6),
-        children: [
-            (0, r.jsxs)(l.hjN, {
-                title: x.intl.string(x.t.DFlDaG),
-                disabled: S,
-                children: [
-                    (0, r.jsx)(l.R94, {
-                        type: l.R94.Types.DESCRIPTION,
-                        className: j.formDescription,
-                        disabled: S,
-                        children: x.intl.string(x.t.kHalVF),
-                    }),
-                    (0, r.jsx)(m.Z, {
-                        channelBenefits: _,
-                        intangibleBenefits: y,
-                        subscriptionListings: N,
-                        onImport: function (e, t) {
-                            O((t) => t.concat(e)), C((e) => e.concat(t));
-                        },
-                    }),
-                    (0, r.jsx)(l.LZC, { size: 8 }),
-                    (0, r.jsx)(m.w, {
-                        guildId: v,
-                        onImport: function (e) {
-                            O((t) => {
-                                let n = new Set(
-                                    t.map((e) => {
-                                        let { ref_id: t } = e;
-                                        return t;
-                                    }),
-                                );
-                                return [
-                                    ...t,
-                                    ...e
-                                        .filter((e) => !n.has(e))
-                                        .map((e) => ({
-                                            ref_id: e,
-                                            ref_type: b.Qs.CHANNEL,
-                                        })),
-                                ];
-                            });
-                        },
-                        disabled: S,
-                    }),
-                ],
-            }),
-            (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsxs)(l.hjN, {
-                title: x.intl.string(x.t.S2kKzM),
-                titleId: I,
-                disabled: S,
-                children: [
-                    (0, r.jsx)(l.R94, {
-                        type: l.R94.Types.DESCRIPTION,
-                        className: j.formDescription,
-                        disabled: S,
-                        children: x.intl.string(x.t["5a4Axc"]),
-                    }),
-                    E &&
+        children: (0, r.jsxs)(l.Kqy, {
+            gap: 24,
+            children: [
+                (0, r.jsxs)(l.NIc, {
+                    disabled: N,
+                    label: x.intl.string(x.t.DFlDaG),
+                    description: x.intl.string(x.t.kHalVF),
+                    children: [
+                        (0, r.jsx)(u.Z, {
+                            channelBenefits: j,
+                            intangibleBenefits: v,
+                            subscriptionListings: O,
+                            onImport: function (e, t) {
+                                _((t) => t.concat(e)), C((e) => e.concat(t));
+                            },
+                        }),
+                        (0, r.jsx)(u.w, {
+                            guildId: b,
+                            onImport: function (e) {
+                                _((t) => {
+                                    let n = new Set(
+                                        t.map((e) => {
+                                            let { ref_id: t } = e;
+                                            return t;
+                                        }),
+                                    );
+                                    return [
+                                        ...t,
+                                        ...e
+                                            .filter((e) => !n.has(e))
+                                            .map((e) => ({
+                                                ref_id: e,
+                                                ref_type: h.Qs.CHANNEL,
+                                            })),
+                                    ];
+                                });
+                            },
+                            disabled: N,
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(l.NIc, {
+                    label: x.intl.string(x.t.S2kKzM),
+                    description: x.intl.string(x.t["5a4Axc"]),
+                    disabled: N,
+                    children: (e) =>
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(g.Z, {
-                                    "aria-labelledby": I,
-                                    disabled: S,
-                                }),
-                                (0, r.jsx)(l.LZC, { size: 8 }),
+                                y &&
+                                    (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            (0, r.jsx)(g.Z, {
+                                                "aria-labelledby": e.labelId,
+                                                disabled: N,
+                                            }),
+                                            (0, r.jsx)(l.LZC, { size: 8 }),
+                                        ],
+                                    }),
+                                (0, r.jsx)(m.Z, {}),
                             ],
                         }),
-                    (0, r.jsx)(p.Z, {}),
-                ],
-            }),
-            (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsxs)(l.hjN, {
-                title: x.intl.string(x.t.RdwKw8),
-                disabled: S,
-                children: [
-                    (0, r.jsx)(l.R94, {
-                        type: l.R94.Types.DESCRIPTION,
-                        className: j.formDescription,
-                        disabled: S,
-                        children: x.intl.string(x.t.zAww7e),
-                    }),
-                    (0, r.jsx)(f.Z, {}),
-                ],
-            }),
-            (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(h.Z, {}),
-        ],
+                }),
+                (0, r.jsx)(l.NIc, {
+                    label: x.intl.string(x.t.RdwKw8),
+                    description: x.intl.string(x.t.zAww7e),
+                    disabled: N,
+                    children: (0, r.jsx)(f.Z, {}),
+                }),
+                (0, r.jsx)(p.Z, {}),
+            ],
+        }),
     });
 }

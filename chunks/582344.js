@@ -9,7 +9,7 @@ var a = n(951288),
     d = n(699867),
     u = n(227157),
     m = n(775195),
-    p = n(752519);
+    p = n(455698);
 function h() {
     let {
             dailyCapReached: e,
@@ -28,9 +28,8 @@ function h() {
         children: (0, a.jsxs)("div", {
             className: p.panelContainer,
             children: [
-                (0, a.jsxs)(s.hjN, {
-                    title: "Dismissible Content Overrides",
-                    tag: "h1",
+                (0, a.jsxs)(s.C3N, {
+                    label: "Dismissible Content Overrides",
                     children: [
                         (0, a.jsxs)(s.Kqy, {
                             gap: 4,
@@ -47,7 +46,7 @@ function h() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(s.izJ, { className: p.divider }),
+                        (0, a.jsx)(s.izJ, { gap: 24 }),
                         (0, a.jsx)(s.rsf, {
                             label: "Override Dismissible Content Daily Cap",
                             checked: t,
@@ -62,17 +61,13 @@ function h() {
                 }),
                 (0, a.jsx)(m.Z, {}),
                 (0, a.jsx)(u.Z, {}),
-                (0, a.jsxs)(s.hjN, {
-                    title: "All Dismissible Contents",
-                    tag: "h1",
+                (0, a.jsxs)(s.C3N, {
+                    label: "All Dismissible Contents",
                     children: [
-                        (0, a.jsx)("div", {
-                            className: p.searchBarContainer,
-                            children: (0, a.jsx)(s.E1j, {
-                                query: h,
-                                onChange: x,
-                                onClear: () => x(""),
-                            }),
+                        (0, a.jsx)(s.E1j, {
+                            query: h,
+                            onChange: x,
+                            onClear: () => x(""),
                         }),
                         (0, a.jsx)(d.Z, { items: f }),
                     ],

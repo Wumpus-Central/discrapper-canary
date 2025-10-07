@@ -1,79 +1,72 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(313201),
-    o = n(703656),
-    s = n(769654),
-    c = n(430824),
-    u = n(626135),
-    d = n(768581),
-    p = n(125631),
-    f = n(981631),
-    h = n(388032),
-    g = n(184904);
-let m = (0, a.hQ)(),
-    b = "".concat(m, "-decription");
-function _(e, t, n) {
+    a = n(703656),
+    o = n(769654),
+    s = n(430824),
+    c = n(626135),
+    u = n(768581),
+    d = n(125631),
+    p = n(981631),
+    f = n(388032),
+    h = n(184904);
+function g(e, t, n) {
     return (0, r.jsxs)(
         "button",
         {
-            className: g.container,
+            className: h.container,
             onClick: n,
             children: [
                 "function" == typeof e
                     ? (0, r.jsx)("div", {
-                          className: g.icon,
+                          className: h.icon,
                           children: (0, r.jsx)(e, {
-                              className: g.__invalid_iconInner,
+                              className: h.__invalid_iconInner,
                               color: l.TVs.colors.WHITE.css,
                           }),
                       })
                     : (0, r.jsx)("img", {
-                          className: g.icon,
+                          className: h.icon,
                           alt: "",
                           src: e,
                       }),
                 (0, r.jsx)(l.Text, {
-                    className: g.text,
+                    className: h.text,
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(p.Z, { className: g.arrow }),
+                (0, r.jsx)(d.Z, { className: h.arrow }),
             ],
         },
         t,
     );
 }
-function O() {
-    let e = c.Z.getGuildsArray().filter((e) => e.features.has(f.oNc.HUB));
+function m() {
+    let e = s.Z.getGuildsArray().filter((e) => e.features.has(p.oNc.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
-                className: g.header,
+                className: h.header,
                 children: [
-                    (0, r.jsx)(l.vwX, {
-                        tag: "h1",
-                        className: g.title,
-                        children: h.intl.string(h.t.IuMx1d),
+                    (0, r.jsx)(l.X6q, {
+                        variant: "heading-lg/semibold",
+                        color: "header-primary",
+                        children: f.intl.string(f.t.IuMx1d),
                     }),
-                    (0, r.jsx)(l.R94, {
-                        id: b,
-                        type: l.R94.Types.DESCRIPTION,
-                        children: (0, r.jsx)(l.Text, {
-                            tag: "div",
-                            variant: "heading-md/normal",
-                            children: h.intl.string(h.t.DwevPj),
-                        }),
+                    (0, r.jsx)(l.Text, {
+                        tag: "div",
+                        variant: "heading-md/normal",
+                        children: f.intl.string(f.t.DwevPj),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: g.grid,
+                className: h.grid,
                 children: [
                     e.map((e) =>
-                        _(
-                            d.ZP.getGuildIconURL({
+                        g(
+                            u.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
                                 size: 240,
@@ -82,14 +75,14 @@ function O() {
                             () => {
                                 var t;
                                 (t = e.id),
-                                    u.default.track(f.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
-                                    (0, s.X)(t);
+                                    c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
+                                    (0, o.X)(t);
                             },
                         ),
                     ),
-                    _(l.Jmo, h.intl.string(h.t.AhKnz8), () => {
-                        u.default.track(f.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
-                            (0, o.uL)(f.Z5c.GUILD_DISCOVERY);
+                    g(l.Jmo, f.intl.string(f.t.AhKnz8), () => {
+                        c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
+                            (0, a.uL)(p.Z5c.GUILD_DISCOVERY);
                     }),
                 ],
             }),

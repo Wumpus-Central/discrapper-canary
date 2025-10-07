@@ -419,27 +419,14 @@ function q(e) {
     }
     function er() {
         return n.revoked
-            ? (0, r.jsx)("div", {
-                  className: V.integrationsWrapper,
-                  children: (0, r.jsx)(_.R94, {
-                      className: V.integrationRevoked,
-                      children: F.intl.format(F.t["6C4lgI"], { onReconnect: ea }),
-                  }),
+            ? (0, r.jsx)(s.Wn, {
+                  messageType: s.QYI.INFO,
+                  children: F.intl.format(F.t["6C4lgI"], { onReconnect: ea }),
               })
             : n.integrations.length > 0
-              ? (0, r.jsxs)("div", {
-                    className: V.integrationsWrapper,
-                    children: [
-                        (0, r.jsx)(_.vwX, {
-                            children: (0, r.jsx)(_.Text, {
-                                variant: "text-xs/semibold",
-                                children: F.intl.string(F.t.fOe3fX),
-                            }),
-                        }),
-                        (0, r.jsx)("div", {
-                            children: n.integrations.map((e) => (0, r.jsx)(z, { integration: e }, e.id)),
-                        }),
-                    ],
+              ? (0, r.jsx)(_.NIc, {
+                    label: F.intl.string(F.t.fOe3fX),
+                    children: n.integrations.map((e) => (0, r.jsx)(z, { integration: e }, e.id)),
                 })
               : void 0;
     }

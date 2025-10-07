@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(594190),
     x = n(989941),
     f = n(695346),
-    g = n(881998),
-    b = n(449224),
+    b = n(881998),
+    g = n(449224),
     v = n(246992),
     j = n(451429),
     _ = n(441900);
@@ -40,7 +40,7 @@ function C() {
     let e = r.useRef(null),
         t = f.JG.useSetting(),
         [n, i] = r.useState(""),
-        o = (0, s.e7)([h.ZP, b.Z], () => (0, x.Z)(h.ZP, b.Z)),
+        o = (0, s.e7)([h.ZP, g.Z], () => (0, x.Z)(h.ZP, g.Z)),
         C = (0, p.q)(n),
         E = (0, s.Wu)([m.Z], () => {
             var e, t;
@@ -52,11 +52,11 @@ function C() {
                 ? t
                 : [];
         }),
-        N = (0, u.FG)(C, { allowedFlows: [u.ro.RPC] }),
-        S = (0, u.FG)(C, { allowedFlows: [u.ro.WEB] }),
-        T = (0, u.FG)(C),
-        { canDeauthorize: O, deauthorize: P } = (function (e) {
-            let t = (0, s.e7)([g.Z], () => g.Z.getNewestTokenForApplication(e)),
+        S = (0, u.FG)(C, { allowedFlows: [u.ro.RPC] }),
+        T = (0, u.FG)(C, { allowedFlows: [u.ro.WEB] }),
+        O = (0, u.FG)(C),
+        { canDeauthorize: N, deauthorize: P } = (function (e) {
+            let t = (0, s.e7)([b.Z], () => b.Z.getNewestTokenForApplication(e)),
                 n = r.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
@@ -76,15 +76,13 @@ function C() {
                         variant: "heading-lg/normal",
                         children: "Settings",
                     }),
-                    (0, a.jsx)(c.xJW, {
-                        title: "Receive DMs In Game",
-                        children: (0, a.jsx)(c.PhF, {
-                            options: y,
-                            isSelected: (e) => e === t,
-                            select: f.JG.updateSetting,
-                            popoutLayerContext: v.O$,
-                            serialize: (e) => e.toString(),
-                        }),
+                    (0, a.jsx)(c.PhF, {
+                        label: "Receive DMs In Game",
+                        options: y,
+                        isSelected: (e) => e === t,
+                        select: f.JG.updateSetting,
+                        popoutLayerContext: v.O$,
+                        serialize: (e) => e.toString(),
                     }),
                 ],
             }),
@@ -95,12 +93,10 @@ function C() {
                         variant: "heading-lg/normal",
                         children: "Application",
                     }),
-                    (0, a.jsx)(c.xJW, {
-                        title: "Application ID",
-                        children: (0, a.jsx)(c.oil, {
-                            value: n,
-                            onChange: i,
-                        }),
+                    (0, a.jsx)(c.oil, {
+                        label: "Application ID",
+                        value: n,
+                        onChange: i,
                     }),
                     null != o && null != o.id
                         ? (0, a.jsx)(c.zxk, {
@@ -138,8 +134,8 @@ function C() {
                         children: "Authorization",
                     }),
                     (0, a.jsx)(c.zxk, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: T.startAuthorization,
+                        disabled: !O.canStartAuthorization,
+                        onClick: O.startAuthorization,
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -150,19 +146,19 @@ function C() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.zxk, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: N.startAuthorization,
+                        disabled: !S.canStartAuthorization,
+                        onClick: S.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.zxk, {
-                        disabled: !S.canStartAuthorization,
-                        onClick: S.startAuthorization,
+                        disabled: !T.canStartAuthorization,
+                        onClick: T.startAuthorization,
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
                     (0, a.jsx)(c.zxk, {
-                        disabled: !O,
+                        disabled: !N,
                         onClick: P,
                         variant: "critical-primary",
                         text: "Deauthorize",

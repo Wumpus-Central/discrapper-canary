@@ -1,36 +1,35 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => h });
 var a = n(951288),
     r = n(647438),
-    l = n(481060),
-    i = n(881052),
+    i = n(481060),
+    l = n(881052),
     s = n(972959),
     o = n(729345),
     c = n(823385),
     d = n(620481),
     u = n(608934),
-    m = n(981631),
-    h = n(530146);
+    m = n(981631);
 let p = (0, s.H)(() => ({
     isRecording: !1,
     isUploading: !1,
     isSuccess: !1,
     errorMessage: null,
 }));
-function x() {
+function h() {
     let e = p.useField("isRecording"),
         t = p.useField("isUploading"),
         n = p.useField("isSuccess"),
         s = p.useField("errorMessage"),
-        x = r.useRef([]),
-        b = r.useRef(""),
+        h = r.useRef([]),
+        x = r.useRef(""),
         f = r.useCallback(() => {
             let { results: e, query: t } = c.Z.getProps();
-            (x.current !== e || b.current !== t) && ((x.current = e), (b.current = t), (0, d.OC)());
+            (h.current !== e || x.current !== t) && ((h.current = e), (x.current = t), (0, d.OC)());
         }, []);
     r.useEffect(() => {
         if (e) return c.Z.addChangeListener(f), () => c.Z.removeChangeListener(f);
     }, [f, e]);
-    let g = r.useCallback(async () => {
+    let b = r.useCallback(async () => {
         let { isUploading: e } = p.getState();
         if (!e)
             try {
@@ -46,31 +45,24 @@ function x() {
                         errorMessage: null,
                     });
             } catch (t) {
-                let e = new i.Hx(t);
+                let e = new l.Hx(t);
                 p.setState({ errorMessage: e.getAnyErrorMessage() });
             } finally {
                 p.setState({ isUploading: !1 });
             }
     }, []);
-    return (0, a.jsxs)(l.hjN, {
-        title: "Debug Logs Session",
-        tag: l.RB0.H3,
-        className: h.panelGroup,
+    return (0, a.jsxs)(i.C3N, {
+        label: "Debug Logs Session",
+        description:
+            "Click to emit debug logs as you search in the Quick Switcher. Includes your search term and all results. For each result, includes the record id, associated names, and frecency scores.",
         children: [
-            (0, a.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
-                className: h.subtitle,
-                children:
-                    "Click to emit debug logs as you search in the Quick Switcher. Includes your search term and all results. For each result, includes the record id, associated names, and frecency scores.",
-            }),
-            (0, a.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
-                className: h.subtitle,
+            (0, a.jsx)(i.Wn, {
+                messageType: i.QYI.INFO,
                 children: "When you are done, please remember to upload the logs.",
             }),
-            (0, a.jsxs)(l.hE2, {
+            (0, a.jsxs)(i.hE2, {
                 children: [
-                    (0, a.jsx)(l.zxk, {
+                    (0, a.jsx)(i.zxk, {
                         variant: e ? "critical-primary" : "primary",
                         onClick: () => p.setState({ isRecording: !e }),
                         text: e ? "Stop Recording" : "Start Recording",
@@ -79,7 +71,7 @@ function x() {
                         isUploading: t,
                         isSuccess: n,
                         errorMessage: s,
-                        onClick: g,
+                        onClick: b,
                         title: "Upload Session Logs",
                     }),
                 ],

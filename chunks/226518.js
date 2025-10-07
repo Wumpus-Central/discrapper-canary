@@ -2,7 +2,6 @@ e.exports = {
     preview: "preview__3e443",
     firstMessage: "firstMessage__3e443",
     compactPreview: "compactPreview__3e443",
-    forcedColorsWarning: "forcedColorsWarning__3e443",
     themeTitle: "themeTitle__3e443",
     title: "title__3e443",
     subtext: "subtext__3e443",

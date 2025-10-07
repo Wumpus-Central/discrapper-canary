@@ -1,5 +1,4 @@
 e.exports = {
-    container: "container__15926",
     groupListings: "groupListings__15926",
     createTierButton: "createTierButton__15926",
     createTierIcon: "createTierIcon__15926",

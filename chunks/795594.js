@@ -229,17 +229,18 @@ let ef = (e) => {
                   className: er.tosPrivacy,
                   children: [
                       null != t.terms_of_service_url
-                          ? (0, r.jsxs)(g.P3F, {
-                                tag: "a",
+                          ? (0, r.jsxs)(g.eee, {
                                 onClick: i,
-                                className: er.tos,
                                 tabIndex: n ? 0 : -1,
+                                className: er.tos,
                                 children: [
-                                    (0, r.jsx)(g.R94, {
-                                        className: er.link,
+                                    (0, r.jsx)(g.Text, {
+                                        variant: "text-sm/normal",
+                                        color: "text-link",
                                         children: en.intl.string(en.t["lx+GeX"]),
                                     }),
                                     (0, r.jsx)(g.Gr1, {
+                                        size: "sm",
                                         className: er.externalLinkIcon,
                                         color: "var(--text-link)",
                                     }),
@@ -253,17 +254,18 @@ let ef = (e) => {
                                     null != t.terms_of_service_url
                                         ? (0, r.jsx)("div", { className: er.divider })
                                         : null,
-                                    (0, r.jsxs)(g.P3F, {
-                                        tag: "a",
+                                    (0, r.jsxs)(g.eee, {
                                         onClick: a,
                                         className: er.privacy,
                                         tabIndex: n ? 0 : -1,
                                         children: [
-                                            (0, r.jsx)(g.R94, {
-                                                className: er.link,
+                                            (0, r.jsx)(g.Text, {
+                                                variant: "text-sm/normal",
+                                                color: "text-link",
                                                 children: en.intl.string(en.t.okSwq6),
                                             }),
                                             (0, r.jsx)(g.Gr1, {
+                                                size: "sm",
                                                 className: er.externalLinkIcon,
                                                 color: "var(--text-link)",
                                             }),
@@ -333,7 +335,10 @@ let ef = (e) => {
                                             className: er.permission,
                                             children: [
                                                 (0, r.jsx)("i", { className: er.permissionCheckmark }),
-                                                (0, r.jsx)(g.R94, { children: e }),
+                                                (0, r.jsx)(g.Text, {
+                                                    variant: "text-sm/normal",
+                                                    children: e,
+                                                }),
                                             ],
                                         },
                                         t,
@@ -350,7 +355,10 @@ let ef = (e) => {
                                                         className: er.permission,
                                                         children: [
                                                             (0, r.jsx)(ef, { disclosure: t }),
-                                                            (0, r.jsx)(g.R94, { children: i }),
+                                                            (0, r.jsx)(g.Text, {
+                                                                variant: "text-sm/normal",
+                                                                children: i,
+                                                            }),
                                                         ],
                                                     },
                                                     n + e.length,

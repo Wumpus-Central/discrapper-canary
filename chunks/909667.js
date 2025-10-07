@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(723047),
-    a = n(463939),
-    s = n(981631),
+    s = n(463939),
+    a = n(981631),
     o = n(388032);
 function c(e) {
     var { team: t } = e,
@@ -32,21 +32,21 @@ function c(e) {
     let c =
         (0, l.mY)() || null == t
             ? null
-            : o.intl.format(o.t.d1sCiY, { url: s.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+            : o.intl.format(o.t.d1sCiY, { url: a.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
     return 0 === n.payoutsByPeriod.length
-        ? (0, r.jsxs)(i.R94, {
-              type: i.R94.Types.DESCRIPTION,
+        ? (0, r.jsxs)(i.Text, {
+              variant: "text-sm/medium",
               children: [o.intl.string(o.t.RrtXu7), " ", c],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsxs)(i.R94, {
-                      type: i.R94.Types.DESCRIPTION,
+                  (0, r.jsxs)(i.Text, {
+                      variant: "text-sm/medium",
                       children: [o.intl.string(o.t["9Ub4KS"]), " ", c],
                   }),
                   (0, r.jsx)(i.LZC, { size: 16 }),
                   (0, r.jsx)(
-                      a.Z,
+                      s.Z,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},

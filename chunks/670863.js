@@ -1,4 +1,4 @@
-n.d(t, { j: () => P }), n(388685);
+n.d(t, { j: () => R }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -18,9 +18,8 @@ var r = n(951288),
     b = n(981631),
     y = n(65154),
     O = n(388032),
-    v = n(118896),
-    I = n(197571);
-function T(e, t, n) {
+    v = n(118896);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,16 +43,16 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -61,7 +60,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -70,8 +69,8 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = "SHOW_MORE";
-function R(e) {
+let C = "SHOW_MORE";
+function N(e) {
     return {
         [y.h7.AUDIO_INPUT]: {
             setDevice: u.Z.setInputDevice,
@@ -99,24 +98,26 @@ function R(e) {
         },
     }[e];
 }
-function P(e) {
+function R(e) {
     var {
             deviceType: t,
             location: a,
             showAllDevices: u = !1,
             selectedDeviceId: _,
             onSelectDevice: y,
-            hideDeviceTypeIcon: T = !1,
+            hideDeviceTypeIcon: I = !1,
+            label: A,
         } = e,
-        C = A(e, [
+        R = S(e, [
             "deviceType",
             "location",
             "showAllDevices",
             "selectedDeviceId",
             "onSelectDevice",
             "hideDeviceTypeIcon",
+            "label",
         ]);
-    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = R(t),
+    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = N(t),
         { analyticsLocations: M } = (0, d.ZP)(),
         j = (0, s.e7)([f.Z], () => f.Z.theme),
         [k, U] = i.useState(u),
@@ -126,14 +127,13 @@ function P(e) {
         V = null != _ ? _ : F,
         H = (0, s.e7)([h.Z], () => D(h.Z)),
         { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
-        W = (0, r.jsx)(c.R94, {
-            type: c.R94.Types.DESCRIPTION,
-            className: I.marginTop8,
+        W = (0, r.jsx)(c.Wn, {
+            messageType: c.QYI.WARNING,
             children: L(),
         }),
         K = i.useCallback(
             (e) => {
-                if (e === N)
+                if (e === C)
                     U(!0),
                         m.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: t,
@@ -175,10 +175,10 @@ function P(e) {
         return (0, r.jsxs)("div", {
             className: o()(v.deviceContainer, {
                 [v.multiLine]: u && null != t,
-                [v.withIcon]: !T,
+                [v.withIcon]: !I,
             }),
             children: [
-                !T &&
+                !I &&
                     (0, r.jsx)("div", {
                         className: v.deviceIcon,
                         children: (0, r.jsx)(w, {
@@ -226,7 +226,7 @@ function P(e) {
         }
         {
             let e = {
-                value: N,
+                value: C,
                 label: O.intl.string(O.t.E99UMj),
                 preventCloseOnSelect: !0,
             };
@@ -237,8 +237,9 @@ function P(e) {
         children: [
             (0, r.jsx)(
                 c.q4e,
-                S(
+                T(
                     {
+                        label: A,
                         value: V,
                         onChange: K,
                         options: q(),
@@ -251,7 +252,7 @@ function P(e) {
                         },
                         optionClassName: v.singleSelectOption,
                     },
-                    C,
+                    R,
                 ),
             ),
             !H && W,

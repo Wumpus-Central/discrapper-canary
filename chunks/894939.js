@@ -61,53 +61,51 @@ function R() {
         let { inDropdown: n } = t;
         return null == e ? null : n ? (0, r.jsx)(P, { guildId: e.value }) : null;
     }, []);
-    return (0, r.jsxs)(b.Z, {
-        children: [
-            (0, r.jsx)(o.xJW, {
-                title: S.intl.string(S.t.nzUc3N),
-                children: (0, r.jsx)(o.R94, {
-                    children: S.intl.format(S.t.u9RWmp, { helpdeskArticle: g.Z.getArticleURL(I.BhN.SOUNDBOARD) }),
+    return (0, r.jsx)(b.Z, {
+        children: (0, r.jsxs)(o.C3N, {
+            label: S.intl.string(S.t.nzUc3N),
+            description: S.intl.format(S.t.u9RWmp, { helpdeskArticle: g.Z.getArticleURL(I.BhN.SOUNDBOARD) }),
+            children: [
+                (0, r.jsx)(c.Z, {
+                    guildId: t,
+                    className: A.guildSelector,
+                    globalOption: {
+                        label: S.intl.string(S.t.CpEUPz),
+                        value: T.hY,
+                    },
+                    onChange: (e) => {
+                        n(null == e ? T.hY : e.id);
+                    },
+                    renderOptionSuffix: O,
+                    hideDivider: !0,
                 }),
-            }),
-            (0, r.jsx)(c.Z, {
-                guildId: t,
-                className: A.guildSelector,
-                globalOption: {
-                    label: S.intl.string(S.t.CpEUPz),
-                    value: T.hY,
-                },
-                onChange: (e) => {
-                    n(null == e ? T.hY : e.id);
-                },
-                renderOptionSuffix: O,
-                hideDivider: !0,
-            }),
-            (0, r.jsxs)(u.Z, {
-                title: S.intl.format(S.t.I2TsYG, {
-                    nitroWheelHook: () =>
-                        (0, r.jsx)(o.SrA, {
-                            size: "md",
-                            color: "currentColor",
-                            className: A.nitroWheel,
-                        }),
-                }),
-                children: [
-                    (0, r.jsx)(m.Z, {
-                        sound: d,
-                        isGlobal: E,
-                        onSelect: (n) => {
-                            null == n ? (0, p.aC)(t, e) : (0, p.SZ)(t, n, e);
-                        },
+                (0, r.jsxs)(u.Z, {
+                    title: S.intl.format(S.t.I2TsYG, {
+                        nitroWheelHook: () =>
+                            (0, r.jsx)(o.SrA, {
+                                size: "md",
+                                color: "currentColor",
+                                className: A.nitroWheel,
+                            }),
                     }),
-                    y &&
-                        (0, r.jsx)(o.Wn, {
-                            className: A.notice,
-                            messageType: o.QYI.WARNING,
-                            children: S.intl.string(S.t.WkPsFR),
+                    children: [
+                        (0, r.jsx)(m.Z, {
+                            sound: d,
+                            isGlobal: E,
+                            onSelect: (n) => {
+                                null == n ? (0, p.aC)(t, e) : (0, p.SZ)(t, n, e);
+                            },
                         }),
-                ],
-            }),
-        ],
+                        y &&
+                            (0, r.jsx)(o.Wn, {
+                                className: A.notice,
+                                messageType: o.QYI.WARNING,
+                                children: S.intl.string(S.t.WkPsFR),
+                            }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
 function P(e) {

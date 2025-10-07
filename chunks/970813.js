@@ -9,9 +9,8 @@ function l() {
     let { volume: e, onVolumeChange: t } = (0, a.Z)();
     return (0, i.X0)({ location: "UserSettingsSoundmojiVolume" })
         ? (0, r.jsx)(o.Z, {
-              title: s.intl.string(s.t.w9Hq8P),
-              description: s.intl.string(s.t.INenzc),
               label: s.intl.string(s.t["2JbvKy"]),
+              description: s.intl.string(s.t.INenzc),
               volume: e,
               onVolumeChange: t,
           })

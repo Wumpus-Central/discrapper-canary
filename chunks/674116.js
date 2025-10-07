@@ -47,8 +47,8 @@ function A() {
                                 setting: v.s6.VOICE_AND_VIDEO_MIC_TEST,
                                 children: [
                                     (0, r.jsx)(h.Z, {}),
-                                    (0, r.jsx)(i.R94, {
-                                        type: i.R94.Types.DESCRIPTION,
+                                    (0, r.jsx)(i.Text, {
+                                        variant: "text-sm/normal",
                                         children: T.intl.format(T.t["V+B3FB"], { guideURL: S }),
                                     }),
                                 ],

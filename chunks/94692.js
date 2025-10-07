@@ -108,11 +108,8 @@ class m extends n.PureComponent {
         return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(i.vwX, {
-                    tag: "h5",
-                    children: u.intl.string(u.t.WTJuNj),
-                }),
                 (0, l.jsx)(i.q4e, {
+                    label: u.intl.string(u.t.WTJuNj),
                     autoFocus: s,
                     options: this.getOptions(),
                     value: t,

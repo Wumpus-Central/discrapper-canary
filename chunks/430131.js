@@ -1,7 +1,6 @@
 n.d(t, { Z: () => m });
-var r = n(951288);
-n(647438);
-var i = n(442837),
+var r = n(951288),
+    i = n(442837),
     a = n(481060),
     o = n(594928),
     s = n(612659),
@@ -32,11 +31,12 @@ function m(e) {
                 maxLength: f.l$U,
                 onChange: T,
                 disabled: !O,
+                helperText: O ? void 0 : p.intl.string(p.t.gzjxQk),
             }),
             !O &&
-                (0, r.jsx)(a.R94, {
+                (0, r.jsx)(a.Text, {
+                    variant: "text-sm/normal",
                     className: h.nicknameDisabled,
-                    type: a.R94.Types.DESCRIPTION,
                     children: p.intl.string(p.t.gzjxQk),
                 }),
             I &&

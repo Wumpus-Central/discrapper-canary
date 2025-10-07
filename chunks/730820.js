@@ -132,9 +132,8 @@ class U extends i.PureComponent {
         if (o) {
             if (s || l) {
                 let e = n ? i.phone : this.maskPhoneNumber(i.phone);
-                t = (0, r.jsxs)(c.R94, {
-                    type: c.R94.Types.DESCRIPTION,
-                    className: D.marginBottom8,
+                t = (0, r.jsxs)(c.Text, {
+                    variant: "text-sm/normal",
                     children: [
                         P.intl.format(P.t.PXVoEB, { phoneNumber: e }),
                         (0, r.jsx)(c.eee, {
@@ -146,21 +145,17 @@ class U extends i.PureComponent {
                 });
             }
             if (l)
-                e = (0, r.jsx)(h.Z, {
-                    className: s ? "" : D.marginTop8,
-                    children: (0, r.jsx)(c.zxk, {
-                        variant: "critical-secondary",
-                        size: "sm",
-                        text: P.intl.string(P.t.KLWnio),
-                        loading: a,
-                        onClick: this.handleDisableSMS,
-                    }),
+                e = (0, r.jsx)(c.zxk, {
+                    variant: "critical-secondary",
+                    size: "sm",
+                    text: P.intl.string(P.t.KLWnio),
+                    loading: a,
+                    onClick: this.handleDisableSMS,
                 });
             else {
                 let t = (0, S.c)(i);
                 e = (0, r.jsxs)(c.hE2, {
                     size: "sm",
-                    className: s ? "" : D.marginTop8,
                     children: [
                         (0, r.jsx)(c.zxk, {
                             variant: "primary",
@@ -183,17 +178,10 @@ class U extends i.PureComponent {
             }
             return (0, r.jsx)(g.F, {
                 setting: C.s6.ACCOUNT_SMS_BACKUP,
-                children: (0, r.jsxs)(c.hjN, {
-                    className: D.marginTop40,
-                    title: P.intl.string(P.t.uHAJ5u),
-                    children: [
-                        (0, r.jsx)(c.R94, {
-                            type: c.R94.Types.DESCRIPTION,
-                            children: P.intl.string(P.t.fspJ4O),
-                        }),
-                        t,
-                        e,
-                    ],
+                children: (0, r.jsxs)(c.NIc, {
+                    label: P.intl.string(P.t.uHAJ5u),
+                    description: P.intl.string(P.t.fspJ4O),
+                    children: [t, e],
                 }),
             });
         }
@@ -222,73 +210,69 @@ class U extends i.PureComponent {
                 }),
             });
             let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
-            e = (0, r.jsxs)(c.hjN, {
-                title: P.intl.string(P.t.GfqHPj),
+            e = (0, r.jsxs)(c.Kqy, {
+                gap: 16,
                 children: [
-                    (0, r.jsx)(c.R94, {
-                        type: c.R94.Types.DESCRIPTION,
-                        className: D.marginBottom20,
-                        children: P.intl.format(P.t.OhmvYm, {}),
-                    }),
-                    (0, r.jsxs)(h.Z, {
+                    (0, r.jsxs)(c.NIc, {
+                        label: P.intl.string(P.t.GfqHPj),
+                        description: P.intl.format(P.t.OhmvYm, {}),
                         children: [
-                            (0, r.jsx)(h.Z.Child, {
-                                children: (0, r.jsx)("ul", {
-                                    className: w.checkboxGroup,
-                                    children: i(t.slice(0, t.length / 2)),
+                            (0, r.jsxs)(h.Z, {
+                                children: [
+                                    (0, r.jsx)(h.Z.Child, {
+                                        children: (0, r.jsx)("ul", {
+                                            className: w.checkboxGroup,
+                                            children: i(t.slice(0, t.length / 2)),
+                                        }),
+                                    }),
+                                    (0, r.jsx)(h.Z.Child, {
+                                        children: (0, r.jsx)("ul", {
+                                            className: w.checkboxGroup,
+                                            children: i(t.slice(t.length / 2)),
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(c.Avr, {
+                                textVariant: "text-sm/medium",
+                                onClick: this.generateBackupCodes,
+                                text: P.intl.string(P.t.RIThUl),
+                            }),
+                        ],
+                    }),
+                    (0, r.jsx)(c.izJ, {}),
+                ],
+            });
+        }
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(c.NIc, {
+                    label: P.intl.string(P.t.EPVq09),
+                    description: P.intl.string(P.t.bQwxiY),
+                    children: (0, r.jsxs)(c.hE2, {
+                        size: "sm",
+                        children: [
+                            n,
+                            (0, r.jsx)(g.F, {
+                                setting: C.s6.ACCOUNT_REMOVE_2FA,
+                                children: (0, r.jsx)(c.zxk, {
+                                    variant: "critical-secondary",
+                                    size: "sm",
+                                    text: P.intl.string(P.t["D+aE7u"]),
+                                    onClick: this.handleDisableMFA,
                                 }),
                             }),
-                            (0, r.jsx)(h.Z.Child, {
-                                children: (0, r.jsx)("ul", {
-                                    className: w.checkboxGroup,
-                                    children: i(t.slice(t.length / 2)),
+                            (0, r.jsx)(g.F, {
+                                setting: C.s6.ACCOUNT_ENABLE_2FA,
+                                children: (0, r.jsx)(c.zxk, {
+                                    variant: "primary",
+                                    size: "sm",
+                                    text: P.intl.string(P.t.cDgKtb),
+                                    onClick: A.ZP.enableMFA,
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", {
-                        children: (0, r.jsx)(c.Avr, {
-                            textVariant: "text-sm/medium",
-                            onClick: this.generateBackupCodes,
-                            text: P.intl.string(P.t.RIThUl),
-                        }),
-                    }),
-                    (0, r.jsx)(c.izJ, { className: D.marginTop20 }),
-                ],
-            });
-        }
-        return (0, r.jsxs)(c.hjN, {
-            children: [
-                (0, r.jsx)(c.vwX, { children: P.intl.string(P.t.EPVq09) }),
-                (0, r.jsx)(c.R94, {
-                    type: c.R94.Types.DESCRIPTION,
-                    className: D.marginBottom20,
-                    children: P.intl.string(P.t.bQwxiY),
-                }),
-                (0, r.jsxs)(c.hE2, {
-                    size: "sm",
-                    className: D.marginBottom20,
-                    children: [
-                        n,
-                        (0, r.jsx)(g.F, {
-                            setting: C.s6.ACCOUNT_REMOVE_2FA,
-                            children: (0, r.jsx)(c.zxk, {
-                                variant: "critical-secondary",
-                                size: "sm",
-                                text: P.intl.string(P.t["D+aE7u"]),
-                                onClick: this.handleDisableMFA,
-                            }),
-                        }),
-                        (0, r.jsx)(g.F, {
-                            setting: C.s6.ACCOUNT_ENABLE_2FA,
-                            children: (0, r.jsx)(c.zxk, {
-                                variant: "primary",
-                                size: "sm",
-                                text: P.intl.string(P.t.cDgKtb),
-                                onClick: A.ZP.enableMFA,
-                            }),
-                        }),
-                    ],
                 }),
                 e,
                 this.renderMFASMS(),
@@ -300,15 +284,11 @@ class U extends i.PureComponent {
         });
     }
     renderDisabled() {
-        return (0, r.jsxs)(c.hjN, {
-            title: P.intl.string(P.t.EPVq09),
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(c.R94, {
-                    type: c.R94.Types.DESCRIPTION,
-                    className: D.marginBottom20,
-                    children: P.intl.string(P.t["8aDa1t"]),
-                }),
-                (0, r.jsx)(c.xJW, {
+                (0, r.jsx)(c.NIc, {
+                    label: P.intl.string(P.t.EPVq09),
+                    description: P.intl.string(P.t["8aDa1t"]),
                     children: (0, r.jsx)(c.zxk, {
                         variant: "primary",
                         size: "sm",
@@ -327,17 +307,17 @@ class U extends i.PureComponent {
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
-                : (0, r.jsx)(c.hjN, {
-                      title: P.intl.string(P.t.EPVq09),
-                      children: (0, r.jsx)(c.R94, {
-                          type: c.R94.Types.DESCRIPTION,
+                : (0, r.jsx)(c.NIc, {
+                      label: P.intl.string(P.t.EPVq09),
+                      children: (0, r.jsx)(c.Wn, {
+                          messageType: c.QYI.WARNING,
                           children: P.intl.string(P.t.uggF7u),
                       }),
                   })
-            : (0, r.jsx)(c.hjN, {
-                  title: P.intl.string(P.t.EPVq09),
-                  children: (0, r.jsx)(c.R94, {
-                      type: c.R94.Types.DESCRIPTION,
+            : (0, r.jsx)(c.NIc, {
+                  label: P.intl.string(P.t.EPVq09),
+                  children: (0, r.jsx)(c.Wn, {
+                      messageType: c.QYI.INFO,
                       children: P.intl.string(P.t.PhHhsr),
                   }),
               });

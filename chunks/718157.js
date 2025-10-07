@@ -1,44 +1,46 @@
-n.d(t, { E: () => u });
+n.d(t, { E: () => u }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(456268),
+    s = n(481060),
+    a = n(456268),
     o = n(526429),
     c = n(128449),
     d = n(388032);
 function u(e) {
-    let { guildId: t, guildMetadata: n, isDisabled: u, clearable: m = !0 } = e,
-        g = (0, l.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
-        p = i.useCallback(
+    let { label: t, description: n, guildId: u, guildMetadata: g, isDisabled: m, clearable: p = !0 } = e,
+        f = (0, l.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
+        h = i.useCallback(
             (e) => {
-                (0, s.TA)(t, null != e ? e : c.o3);
+                (0, a.TA)(u, null != e ? e : c.o3);
             },
-            [t],
+            [u],
         ),
-        h = i.useMemo(
+        x = i.useMemo(
             () =>
-                g.map((e) => {
+                f.map((e) => {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
                         label: n,
                     };
                 }),
-            [g],
+            [f],
         );
-    return 0 === g.length
-        ? (0, r.jsx)(a.$jN, {})
+    return 0 === f.length
+        ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsx)(
-              a.VcW,
+              s.VcW,
               {
-                  value: n.primaryCategoryId === c.o3 ? null : n.primaryCategoryId,
+                  value: g.primaryCategoryId === c.o3 ? null : g.primaryCategoryId,
+                  label: t,
+                  description: n,
                   placeholder: d.intl.string(d.t.XqMe3N),
-                  options: h,
-                  onChange: p,
-                  isDisabled: u,
-                  clearable: m,
+                  options: x,
+                  onChange: h,
+                  isDisabled: m,
+                  clearable: p,
               },
-              h.length,
+              x.length,
           );
 }

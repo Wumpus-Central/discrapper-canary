@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -7,9 +7,8 @@ var r = n(951288),
     l = n(219929),
     c = n(618541),
     u = n(975060),
-    d = n(388032),
-    f = n(632236);
-class _ extends i.PureComponent {
+    d = n(388032);
+class f extends i.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && s.f6();
     }
@@ -17,26 +16,20 @@ class _ extends i.PureComponent {
         s.Nj().then(() => s.Dz());
     }
     render() {
-        let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
-        return (0, r.jsx)(o.hjN, {
-            className: t,
-            title: d.intl.string(d.t.QQBAoq),
-            children: (0, r.jsx)("div", {
-                className: f.inputWrapper,
-                children: (0, r.jsx)(o.oil, {
-                    leading: {
-                        type: "image",
-                        src: (0, l.hx)(l.ZP.Types.PAYPAL),
-                    },
-                    value: e,
-                    readOnly: !0,
-                    placeholder: null == n ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
-                }),
-            }),
+        let { braintreeEmail: e, paypalClient: t } = this.props;
+        return (0, r.jsx)(o.oil, {
+            label: d.intl.string(d.t.QQBAoq),
+            leading: {
+                type: "image",
+                src: (0, l.hx)(l.ZP.Types.PAYPAL),
+            },
+            value: e,
+            readOnly: !0,
+            placeholder: null == t ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
         });
     }
 }
-let p = a.ZP.connectStores([c.Z, u.Z], () => ({
+let _ = a.ZP.connectStores([c.Z, u.Z], () => ({
     braintreeEmail: u.Z.braintreeEmail,
     paypalClient: c.Z.getPayPalClient(),
-}))(_);
+}))(f);

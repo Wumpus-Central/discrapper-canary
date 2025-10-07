@@ -1,7 +1,6 @@
 n.d(t, { Z: () => g });
-var i = n(951288);
-n(647438);
-var r = n(780384),
+var i = n(951288),
+    r = n(780384),
     l = n(481060),
     a = n(410030),
     o = n(600164),
@@ -15,13 +14,13 @@ var r = n(780384),
 function g(e) {
     let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: f, canNavigate: h } = e,
         x = (0, a.ZP)();
-    return (0, i.jsxs)(l.hjN, {
+    return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(l.R94, {
-                type: l.geA.DESCRIPTION,
+            (0, i.jsx)(l.Text, {
+                variant: "text-sm/normal",
                 children: u.intl.format(u.t["5u+aV1"], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) }),
             }),
-            (0, i.jsx)(l.$i$, { className: p.headerDivider }),
+            (0, i.jsx)(l.izJ, { className: p.headerDivider }),
             t.length > 0
                 ? (0, i.jsx)(c.Z, {
                       webhooks: t,

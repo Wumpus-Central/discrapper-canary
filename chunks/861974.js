@@ -19,7 +19,8 @@ var i = n(120356),
             e
         );
     })({});
-function u(e) {
+function u(e, t) {
+    if (null != t) return t;
     switch (e) {
         case "warn":
             return o.Mgn;
@@ -54,17 +55,18 @@ function f(e) {
             className: o,
             textColor: c = "text-default",
             textVariant: f = "text-sm/medium",
+            icon: _,
         } = e,
-        _ = u(n),
-        p = d(n);
+        p = u(n, _),
+        h = d(n);
     return (0, r.jsxs)("div", {
-        className: a()(l.container, p, o),
+        className: a()(l.container, h, o),
         children: [
             (0, r.jsx)("div", {
                 className: l.iconDiv,
                 children:
-                    null != _
-                        ? (0, r.jsx)(_, {
+                    null != p
+                        ? (0, r.jsx)(p, {
                               className: l.icon,
                               color: "currentColor",
                           })

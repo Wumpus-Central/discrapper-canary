@@ -10,32 +10,32 @@ var l = n(951288),
     d = n(706371),
     m = n(563115),
     j = n(313201),
-    v = n(984933),
-    g = n(485386),
+    g = n(984933),
+    v = n(485386),
     h = n(402148),
-    x = n(570961),
-    p = n(208665),
+    p = n(570961),
+    x = n(208665),
     f = n(460117),
     b = n(290511),
     y = n(388032),
     O = n(82513);
 function C(e) {
-    let { transitionState: t, onClose: n, onSave: r, onDelete: g, option: h, guild: C, prompt: N, index: P } = e,
+    let { transitionState: t, onClose: n, onSave: r, onDelete: v, option: h, guild: C, prompt: N, index: P } = e,
         S = (0, j.Dt)(),
-        w = (0, a.e7)([v.ZP], () => v.ZP.getDefaultChannel(C.id)),
+        w = (0, a.e7)([g.ZP], () => g.ZP.getDefaultChannel(C.id)),
         [E, Z] = i.useState(() => {
             var e;
             return null != (e = null == h ? void 0 : h.emoji) ? e : null;
         }),
-        [k, R] = i.useState(() => {
+        [k, M] = i.useState(() => {
             var e;
             return null != (e = null == h ? void 0 : h.title) ? e : "";
         }),
-        [M, T] = i.useState(() => {
+        [R, _] = i.useState(() => {
             var e;
             return null != (e = null == h ? void 0 : h.description) ? e : "";
         }),
-        [_, B] = i.useState(() => {
+        [T, B] = i.useState(() => {
             var e;
             return new Set(null != (e = null == h ? void 0 : h.channelIds) ? e : []);
         }),
@@ -44,30 +44,30 @@ function C(e) {
             return new Set(null != (e = null == h ? void 0 : h.roleIds) ? e : []);
         }),
         [z, J] = i.useState({}),
-        A = i.useRef(null);
+        F = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        return null == (e = A.current) ? void 0 : e.focus();
+        return null == (e = F.current) ? void 0 : e.focus();
     }, []);
-    let F = i.useCallback(() => {
+    let H = i.useCallback(() => {
             var e;
             let t = {
                     id: null != (e = null == h ? void 0 : h.id) ? e : "".concat(Date.now()),
                     title: k,
-                    description: M,
-                    channelIds: Array.from(_).sort(),
+                    description: R,
+                    channelIds: Array.from(T).sort(),
                     roleIds: Array.from(D).sort(),
                     emoji: null == E ? void 0 : E,
                 },
                 l = (function (e, t, n, l) {
                     let i = {};
                     l.title.length <= 0 && (i.title = y.intl.string(y.t.p3PKzM));
-                    let r = (0, x.en)(e, t, n, l);
+                    let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
-                })(C, p.Z.editedOnboardingPrompts, N, t);
+                })(C, x.Z.editedOnboardingPrompts, N, t);
             J(l), o().isEmpty(l) && (r(t), n());
-        }, [_, M, E, C, n, r, null == h ? void 0 : h.id, N, D, k]),
-        H = i.useMemo(
+        }, [T, R, E, C, n, r, null == h ? void 0 : h.id, N, D, k]),
+        K = i.useMemo(
             () => [
                 {
                     text: y.intl.string(y.t["ETE/oK"]),
@@ -76,11 +76,11 @@ function C(e) {
                 },
                 {
                     text: y.intl.string(y.t.R3BPHx),
-                    onClick: F,
+                    onClick: H,
                     variant: "primary",
                 },
             ],
-            [F, n],
+            [H, n],
         );
     return (0, l.jsxs)(s.IX, {
         transitionState: t,
@@ -110,18 +110,18 @@ function C(e) {
                             (0, l.jsx)(u.oil, {
                                 label: y.intl.string(y.t.VWdcBg),
                                 required: !0,
-                                inputRef: A,
+                                inputRef: F,
                                 placeholder: y.intl.string(y.t.EHe6gY),
                                 value: k,
-                                onChange: (e) => R(e),
+                                onChange: (e) => M(e),
                                 maxLength: b.NE,
                                 autoFocus: !0,
                                 error: z.title,
                             }),
                             (0, l.jsx)(u.oil, {
                                 placeholder: y.intl.string(y.t.mIjgJC),
-                                value: M,
-                                onChange: (e) => T(e),
+                                value: R,
+                                onChange: (e) => _(e),
                                 maxLength: b.NO,
                             }),
                         ],
@@ -135,7 +135,7 @@ function C(e) {
                                 children: [
                                     (0, l.jsx)(d.Z, {
                                         guildId: C.id,
-                                        selectedChannelIds: _,
+                                        selectedChannelIds: T,
                                         placeholder: y.intl.string(y.t.vephiI),
                                         onChange: B,
                                         helperText: y.intl.string(y.t.SoT6wc),
@@ -159,33 +159,26 @@ function C(e) {
                         ],
                     }),
                     (0, l.jsx)(u.izJ, {}),
-                    (0, l.jsxs)("div", {
+                    (0, l.jsx)("div", {
                         className: O.emojiQuestionContainer,
-                        children: [
-                            (0, l.jsxs)("div", {
-                                children: [
-                                    (0, l.jsx)(u.vwX, { children: y.intl.string(y.t["4ahTBg"]) }),
-                                    (0, l.jsx)(u.R94, {
-                                        type: u.geA.DESCRIPTION,
-                                        children: y.intl.string(y.t.Iv9RGh),
-                                    }),
-                                ],
-                            }),
-                            (0, l.jsx)(f.Z, {
+                        children: (0, l.jsx)(s.NIc, {
+                            label: y.intl.string(y.t["4ahTBg"]),
+                            description: y.intl.string(y.t.Iv9RGh),
+                            children: (0, l.jsx)(f.Z, {
                                 emoji: E,
                                 setEmoji: Z,
                                 channel: w,
                             }),
-                        ],
+                        }),
                     }),
                 ],
             }),
             (0, l.jsx)(s.Go$, {
-                actions: H,
+                actions: K,
                 leading: (0, l.jsx)(u.Avr, {
                     text: y.intl.string(y.t.N86XcH),
                     onClick: () => {
-                        g(), n();
+                        v(), n();
                     },
                     variant: "critical",
                 }),
@@ -195,7 +188,7 @@ function C(e) {
 }
 function I(e) {
     let { guild: t, roleIds: n } = e,
-        i = (0, a.e7)([g.Z], () => g.Z.getManyRoles(t.id, n).find(h.F));
+        i = (0, a.e7)([v.Z], () => v.Z.getManyRoles(t.id, n).find(h.F));
     return null == i
         ? null
         : (0, l.jsx)("div", {

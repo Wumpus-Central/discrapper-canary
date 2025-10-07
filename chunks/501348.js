@@ -319,9 +319,8 @@ class eo extends i.Component {
                           children: Y.intl.string(Y.t.Ksh3io),
                       }),
                   }),
-                  children: (0, r.jsx)(d.R94, {
-                      type: d.R94.Types.DEFAULT,
-                      className: W.forcedColorsWarning,
+                  children: (0, r.jsx)(d.Wn, {
+                      messageType: d.QYI.INFO,
                       children: (0, g.b)() ? (0, r.jsx)(ea, {}) : Y.intl.string(Y.t.AUMSZG),
                   }),
               })

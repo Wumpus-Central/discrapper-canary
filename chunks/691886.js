@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(933557),
     d = n(471445),
     u = n(131704),
-    m = n(324067),
-    g = n(699516),
+    g = n(324067),
+    m = n(699516),
     p = n(594174),
     f = n(303737),
     h = n(981631),
@@ -64,8 +64,8 @@ function C(e) {
         l = (0, f.m7)(null != (t = null == i ? void 0 : i.parent_id) ? t : h.lds);
     if (null == i) return null;
     let s = (0, d.KS)(i),
-        a = (0, c.F6)(i, p.default, g.Z),
-        o = null != l ? (0, c.F6)(l, p.default, g.Z) : void 0;
+        a = (0, c.F6)(i, p.default, m.Z),
+        o = null != l ? (0, c.F6)(l, p.default, m.Z) : void 0;
     return (0, r.jsx)(_, {
         icon: null != s && (0, r.jsx)(s, { className: b.labelIcon }),
         title: a,
@@ -77,52 +77,61 @@ function O(e) {
     return null != t ? (0, r.jsx)(C, { channelId: t }) : (0, r.jsx)(v, {});
 }
 function y(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, "aria-labelledby": b, onChange: _ } = e,
-        v = x.intl.string(x.t.d7YJMD),
-        C = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
-        y = (0, f.m7)(null != l ? l : h.lds),
-        N = i.useMemo(() => {
+    let {
+            label: t,
+            guildId: l,
+            value: s,
+            initialChannelId: d,
+            omitChannelIds: b,
+            "aria-labelledby": _,
+            onChange: v,
+        } = e,
+        C = x.intl.string(x.t.d7YJMD),
+        y = (0, a.e7)([g.Z], () => g.Z.getCategories(l), [l]),
+        N = (0, f.m7)(null != s ? s : h.lds),
+        E = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: v,
+                        label: C,
                     },
                 ],
                 t = !1;
-            for (let n of C._categories)
-                for (let { channel: r } of C[n.channel.id])
+            for (let n of y._categories)
+                for (let { channel: r } of y[n.channel.id])
                     ((0, u.r8)(r.type) || (0, u.bw)(r.type)) &&
-                        ((r.id !== l && (null == d ? void 0 : d.has(r.id)) && (r.id !== s || l === s)) ||
-                            (l === r.id && (t = !0),
+                        ((r.id !== s && (null == b ? void 0 : b.has(r.id)) && (r.id !== d || s === d)) ||
+                            (s === r.id && (t = !0),
                             e.push({
                                 value: r.id,
-                                label: (0, c.F6)(r, p.default, g.Z),
+                                label: (0, c.F6)(r, p.default, m.Z),
                             })));
             return (
-                null == l ||
+                null == s ||
                     t ||
-                    null == y ||
+                    null == N ||
                     e.push({
-                        value: l,
-                        label: y.name,
+                        value: s,
+                        label: N.name,
                     }),
                 e
             );
-        }, [v, l, y, C, d, s]);
+        }, [C, s, N, y, b, d]);
     return (0, r.jsx)(o.PhF, {
+        label: t,
         placeholder: x.intl.string(x.t.r2pts7),
-        options: N,
+        options: E,
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e("33285"), n.e("45094"), n.e("31288")]).then(
                           n.bind(n, 797671),
                       );
-                      return (n) => {
-                          var i, l;
+                      return (t) => {
+                          var n, i;
                           return (0, r.jsx)(
                               e,
-                              ((i = (function (e) {
+                              ((n = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
@@ -146,14 +155,14 @@ function y(e) {
                                           });
                                   }
                                   return e;
-                              })({}, n)),
-                              (l = l =
+                              })({}, t)),
+                              (i = i =
                                   {
-                                      guildId: t,
-                                      onSubmit: _,
+                                      guildId: l,
+                                      onSubmit: v,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -161,22 +170,22 @@ function y(e) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              i),
+                              n),
                           );
                       };
                   })
-                : _(e);
+                : v(e);
         },
-        isSelected: (e) => null != l && j(e) === j(l),
+        isSelected: (e) => null != s && j(e) === j(s),
         serialize: j,
         renderOptionLabel: O,
         renderOptionValue: (e) => {
             let [t] = e;
             return O(t);
         },
-        "aria-labelledby": b,
+        "aria-labelledby": _,
     });
 }

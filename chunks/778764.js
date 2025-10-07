@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(49124), n(457542), n(953529);
+n.d(t, { Z: () => N }), n(388685), n(49124), n(457542);
 var r = n(951288),
     i = n(647438),
     a = n(849055),
@@ -340,15 +340,10 @@ function N() {
         i.useEffect(() => {
             n && !a && (m.vg(), d());
         }, [n, a, d]),
-        (0, r.jsxs)(l.hjN, {
-            title: y.intl.string(y.t.y7SXYW),
-            className: O.settings,
+        (0, r.jsxs)(l.NIc, {
+            label: y.intl.string(y.t.y7SXYW),
+            description: y.intl.string(y.t.TMukAA),
             children: [
-                (0, r.jsx)(l.R94, {
-                    type: l.R94.Types.DESCRIPTION,
-                    className: O.description,
-                    children: y.intl.string(y.t.TMukAA),
-                }),
                 e.length > 0 &&
                     (0, r.jsx)("div", {
                         className: O.credentialList,

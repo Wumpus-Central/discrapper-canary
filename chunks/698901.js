@@ -31,24 +31,16 @@ function o(e) {
     });
 }
 function c() {
-    return (0, a.jsxs)(i.hjN, {
-        title: "Hotspots",
-        tag: i.RB0.H1,
+    return (0, a.jsx)(i.C3N, {
+        label: "Hotspots",
+        description:
+            "All the 'hotspots' in app, and their current status. Use the select menu to override them on or off.",
         className: s.hotspotsSection,
-        children: [
-            (0, a.jsx)(i.Text, {
-                className: s.helpText,
-                tag: "p",
-                variant: "text-sm/normal",
-                children:
-                    'All the "hotspots" in app, and their current status. Use the select menu to override them on or off.',
-            }),
-            (0, a.jsx)(i.Kqy, {
-                gap: 20,
-                children: Object.keys(l.v6)
-                    .sort((e, t) => e.localeCompare(t))
-                    .map((e) => (0, a.jsx)(o, { hotspotLocation: e }, e)),
-            }),
-        ],
+        children: (0, a.jsx)(i.Kqy, {
+            gap: 20,
+            children: Object.keys(l.v6)
+                .sort((e, t) => e.localeCompare(t))
+                .map((e) => (0, a.jsx)(o, { hotspotLocation: e }, e)),
+        }),
     });
 }

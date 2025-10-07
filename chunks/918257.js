@@ -16,7 +16,6 @@ function f() {
         (e = (0, l.A)(n)), (0, a.xz)(e, t);
     }
     return (0, r.jsx)(c.Z, {
-        title: d.intl.string(d.t.xbMc8v),
         description: d.intl.format(d.t.BPbGq6, { helpCenterArticle: s.Z.getArticleURL(u.BhN.SOUNDBOARD) }),
         label: d.intl.string(d.t.kbFsAA),
         volume: e,

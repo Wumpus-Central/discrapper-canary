@@ -13,16 +13,16 @@ var r = n(951288),
     f = n(859235),
     v = n(898463),
     h = n(951394),
-    x = n(667344),
-    g = n(493075),
-    y = n(594174),
-    b = n(768581),
+    g = n(667344),
+    x = n(493075),
+    b = n(594174),
+    y = n(768581),
     j = n(55935),
     O = n(358085),
     _ = n(223356),
     S = n(225452),
     w = n(388032),
-    P = n(833541);
+    P = n(176059);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function k(e) {
         [q, B] = i.useState(),
         [V, W] = i.useState(""),
         [G, H] = i.useState([]),
-        [X, U] = i.useState(),
+        [U, X] = i.useState(),
         [Y, K] = i.useState(),
         [J, Q] = i.useState(!1),
         [F, $] = i.useState(""),
@@ -86,7 +86,7 @@ function k(e) {
         [ec, ed] = i.useState(!1),
         [em, ep] = i.useState(!1),
         [ef, ev] = i.useState(!1),
-        [eh, ex] = i.useState(null);
+        [eh, eg] = i.useState(null);
     i.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
         o.tn
@@ -100,25 +100,25 @@ function k(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "af3172fda6fa286649f2b2af02cd23cfd1235e82" !== e.body.hash) {
-                    let e = new Date("1759351048315"),
+                if (null != e.body && "fb22142a73a1d4c3aee05baf916b6e841eb4aee5" !== e.body.hash) {
+                    let e = new Date("1759871760911"),
                         t = new Date(),
                         n = (0, j.TD)(t, e);
-                    n.hours > 6 && ex(n.hours);
+                    n.hours > 6 && eg(n.hours);
                 }
             });
     }, []);
-    let eg = (0, a.e7)([y.default], () => {
-            let e = y.default.getCurrentUser();
+    let ex = (0, a.e7)([b.default], () => {
+            let e = b.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ey = (0, a.e7)([m.C], () => {
+        eb = (0, a.e7)([m.C], () => {
             var e;
             return null == (e = m.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
-        { overridesInfo: eb } = (0, g.s)(),
-        { overridesInfo: ej } = (0, x.Q)(),
-        eO = Object.entries(C({}, eb, ej)).map((e) => {
+        { overridesInfo: ey } = (0, x.s)(),
+        { overridesInfo: ej } = (0, g.Q)(),
+        eO = Object.entries(C({}, ey, ej)).map((e) => {
             let [t, { variantId: n }] = e;
             return {
                 experimentId: t,
@@ -131,7 +131,7 @@ function k(e) {
     async function eS() {
         var e, t;
         if ((ev(!1), "" === R || "" === M || null == q)) return void ed(!0);
-        let i = null == X || null == (e = X.features) ? void 0 : e.find((e) => (0, _.pD)(e) === Y);
+        let i = null == U || null == (e = U.features) ? void 0 : e.find((e) => (0, _.pD)(e) === Y);
         ep(!0), ed(!1);
         let l = (0, S.D)(
                 G.map((e) => {
@@ -146,7 +146,7 @@ function k(e) {
                     priority: q,
                     feature: i,
                     url: V,
-                    buildOverride: null != (t = null == ey ? void 0 : ey.id) ? t : null,
+                    buildOverride: null != (t = null == eb ? void 0 : eb.id) ? t : null,
                     experimentOverrides: eO,
                 },
                 !0 === J
@@ -164,7 +164,7 @@ function k(e) {
             ).catch(() => ev(!0));
         ep(!1),
             null != a && a.ok
-                ? (eg && window.open(a.body.permalink_url, "_blank"),
+                ? (ex && window.open(a.body.permalink_url, "_blank"),
                   e_(),
                   (0, u.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -194,10 +194,10 @@ function k(e) {
     }
     i.useEffect(() => {
         async function e() {
-            U(await (0, _.WG)());
+            X(await (0, _.WG)());
         }
-        eg && e();
-    }, [eg]),
+        ex && e();
+    }, [ex]),
         i.useEffect(() => {
             if (G.length > 0) {
                 var e;
@@ -247,22 +247,22 @@ function k(e) {
                 children: (0, r.jsxs)("form", {
                     onSubmit: eS,
                     children: [
-                        null != ey &&
+                        null != eb &&
                             (0, r.jsx)(u.ToO, {
                                 type: u.ToO.Types.DANGER,
                                 body: w.intl.format(w.t["yY60+/"], {
-                                    buildOverrideHook: () => (0, r.jsx)("b", { children: null == ey ? void 0 : ey.id }),
+                                    buildOverrideHook: () => (0, r.jsx)("b", { children: null == eb ? void 0 : eb.id }),
                                 }),
                                 title: w.intl.string(w.t["ZP/hEx"]),
                             }),
-                        null == ey &&
+                        null == eb &&
                             null != eh &&
                             (0, r.jsx)(u.ToO, {
                                 type: u.ToO.Types.DANGER,
                                 title: w.intl.formatToPlainString(w.t["ql2Q/f"], { hours: eh }),
                                 body: w.intl.string(w.t.x18RUl),
                             }),
-                        eg &&
+                        ex &&
                             Object.keys(eO).length > 0 &&
                             (0, r.jsx)(u.ToO, {
                                 type: u.ToO.Types.DANGER,
@@ -299,7 +299,7 @@ function k(e) {
                                     placeholder: "What did you expect to see?",
                                     value: M,
                                     onChange: z,
-                                    description: eg
+                                    description: ex
                                         ? "You can add additional information/media on the ticket after submitting"
                                         : void 0,
                                 }),
@@ -318,7 +318,7 @@ function k(e) {
                                                             (0, r.jsx)("img", {
                                                                 alt: "",
                                                                 className: P.formPriorityImage,
-                                                                src: (0, b.gT)({
+                                                                src: (0, y.gT)({
                                                                     id: t.emoji,
                                                                     animated: !0,
                                                                     size: 48,
@@ -352,15 +352,15 @@ function k(e) {
                                     maxVisibleItems: 4,
                                     closeOnSelect: !0,
                                 }),
-                                eg &&
+                                ex &&
                                     (0, r.jsx)(u.VcW, {
                                         label: w.intl.string(w.t["77VVd3"]),
                                         value: Y,
                                         options:
                                             null !=
                                             (D =
-                                                null == X ||
-                                                null == (T = X.features) ||
+                                                null == U ||
+                                                null == (T = U.features) ||
                                                 null == (k = T.filter((e) => "" !== (0, _.pD)(e))) ||
                                                 null ==
                                                     (t = k.map((e) => {
@@ -374,7 +374,7 @@ function k(e) {
                                                     : t.sort((e, t) => e.label.localeCompare(t.label)))
                                                 ? D
                                                 : [],
-                                        isDisabled: null == X,
+                                        isDisabled: null == U,
                                         onChange: (e) => K(e),
                                     }),
                                 (0, r.jsx)(u.oil, {
@@ -461,68 +461,64 @@ function k(e) {
                                     ],
                                 }),
                                 G.length > 0
-                                    ? (0, r.jsxs)(u.hjN, {
-                                          children: [
-                                              (0, r.jsx)(u.vwX, { children: "Preview" }),
-                                              (0, r.jsx)("div", {
-                                                  ref: L,
-                                                  className: P.attachments,
-                                                  children:
-                                                      G.length > 0 &&
-                                                      G.map((e) =>
-                                                          (0, r.jsxs)(
-                                                              "div",
-                                                              {
-                                                                  className: P.attachment,
-                                                                  children: [
-                                                                      (0, r.jsxs)("div", {
-                                                                          children: [
-                                                                              (0, r.jsx)(v.r, {
-                                                                                  size: f.q.SMALL,
-                                                                                  upload: e,
-                                                                              }),
-                                                                              (0, r.jsx)("div", {
-                                                                                  className: P.removeAttachment,
-                                                                                  children: (0, r.jsx)(h.ZP, {
-                                                                                      children: (0, r.jsx)(p.Z, {
-                                                                                          tooltip: w.intl.string(
-                                                                                              w.t.vN7REx,
-                                                                                          ),
-                                                                                          onClick: () => {
-                                                                                              var t;
-                                                                                              return (
-                                                                                                  (t = e.id),
-                                                                                                  void H(
-                                                                                                      G.filter(
-                                                                                                          (e) =>
-                                                                                                              e.id !==
-                                                                                                              t,
-                                                                                                      ),
-                                                                                                  )
-                                                                                              );
-                                                                                          },
-                                                                                          dangerous: !0,
-                                                                                          children: (0, r.jsx)(u.XHJ, {
-                                                                                              size: "md",
-                                                                                              color: "currentColor",
-                                                                                          }),
+                                    ? (0, r.jsx)(u.NIc, {
+                                          label: "Preview",
+                                          children: (0, r.jsx)("div", {
+                                              ref: L,
+                                              className: P.attachments,
+                                              children:
+                                                  G.length > 0 &&
+                                                  G.map((e) =>
+                                                      (0, r.jsxs)(
+                                                          "div",
+                                                          {
+                                                              className: P.attachment,
+                                                              children: [
+                                                                  (0, r.jsxs)("div", {
+                                                                      children: [
+                                                                          (0, r.jsx)(v.r, {
+                                                                              size: f.q.SMALL,
+                                                                              upload: e,
+                                                                          }),
+                                                                          (0, r.jsx)("div", {
+                                                                              className: P.removeAttachment,
+                                                                              children: (0, r.jsx)(h.ZP, {
+                                                                                  children: (0, r.jsx)(p.Z, {
+                                                                                      tooltip: w.intl.string(
+                                                                                          w.t.vN7REx,
+                                                                                      ),
+                                                                                      onClick: () => {
+                                                                                          var t;
+                                                                                          return (
+                                                                                              (t = e.id),
+                                                                                              void H(
+                                                                                                  G.filter(
+                                                                                                      (e) => e.id !== t,
+                                                                                                  ),
+                                                                                              )
+                                                                                          );
+                                                                                      },
+                                                                                      dangerous: !0,
+                                                                                      children: (0, r.jsx)(u.XHJ, {
+                                                                                          size: "md",
+                                                                                          color: "currentColor",
                                                                                       }),
                                                                                   }),
                                                                               }),
-                                                                          ],
-                                                                      }),
-                                                                      (0, r.jsx)(u.Text, {
-                                                                          variant: "text-xxs/medium",
-                                                                          color: "text-secondary",
-                                                                          children: e.filename,
-                                                                      }),
-                                                                  ],
-                                                              },
-                                                              e.id,
-                                                          ),
+                                                                          }),
+                                                                      ],
+                                                                  }),
+                                                                  (0, r.jsx)(u.Text, {
+                                                                      variant: "text-xxs/medium",
+                                                                      color: "text-secondary",
+                                                                      children: e.filename,
+                                                                  }),
+                                                              ],
+                                                          },
+                                                          e.id,
                                                       ),
-                                              }),
-                                          ],
+                                                  ),
+                                          }),
                                       })
                                     : null,
                                 ef
@@ -545,7 +541,7 @@ function k(e) {
                     children: [
                         (0, r.jsx)(u.zxk, {
                             variant: "primary",
-                            text: eg ? "Submit and Open Report" : "Submit Report",
+                            text: ex ? "Submit and Open Report" : "Submit Report",
                             loading: em,
                             onClick: eS,
                         }),

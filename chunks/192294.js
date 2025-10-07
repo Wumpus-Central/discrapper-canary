@@ -6,7 +6,6 @@ e.exports = {
     manual: "manual_ac7648",
     microphone: "microphone_ac7648",
     fill: "fill_ac7648",
-    inputDisabledWarning: "inputDisabledWarning_ac7648",
     inputSensitivitySlider: "inputSensitivitySlider_ac7648",
     inputSensitivityBar: "inputSensitivityBar_ac7648",
     inputSensitivityBarFill: "inputSensitivityBarFill_ac7648",

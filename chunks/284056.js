@@ -117,9 +117,10 @@ class N extends i.PureComponent {
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: i } = this.state;
-        return (0, r.jsx)(p.R94, {
+        return (0, r.jsx)(p.Text, {
+            variant: "text-xs/normal",
+            color: "text-secondary",
             className: I.micTestCaption,
-            type: p.R94.Types.DESCRIPTION,
             children: n ? (i ? e : t) : null,
         });
     }
@@ -143,25 +144,13 @@ class N extends i.PureComponent {
             O = e && !b ? v.intl.string(v.t["9viE2N"]) : null;
         b && e && !u && this._micTestStop();
         let T = s.length >= a.length ? s : a;
-        return (0, r.jsxs)("div", {
+        return (0, r.jsx)("div", {
             className: o()(I.container, E),
-            children: [
-                !m &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(p.vwX, {
-                                className: I.title,
-                                children: t,
-                            }),
-                            null != n &&
-                                (0, r.jsx)(p.R94, {
-                                    type: p.R94.Types.DESCRIPTION,
-                                    className: I.description,
-                                    children: n,
-                                }),
-                        ],
-                    }),
-                (0, r.jsxs)("div", {
+            children: (0, r.jsx)(p.NIc, {
+                label: null != t ? t : void 0,
+                hideLabel: m,
+                description: m ? null : n,
+                children: (0, r.jsxs)("div", {
                     className: I.micTest,
                     children: [
                         !m &&
@@ -204,7 +193,7 @@ class N extends i.PureComponent {
                         }),
                     ],
                 }),
-            ],
+            }),
         });
     }
     constructor(...e) {

@@ -25,22 +25,20 @@ function h(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.hjN, {
-                children: (0, r.jsxs)(s.P3F, {
-                    onClick: t,
-                    className: p.backContainer,
-                    children: [
-                        (0, r.jsx)(l.Z, {
-                            direction: l.Z.Directions.LEFT,
-                            className: p.icon,
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-lg/normal",
-                            color: "text-default",
-                            children: _.intl.string(_.t["13/7kZ"]),
-                        }),
-                    ],
-                }),
+            (0, r.jsxs)(s.P3F, {
+                onClick: t,
+                className: p.backContainer,
+                children: [
+                    (0, r.jsx)(l.Z, {
+                        direction: l.Z.Directions.LEFT,
+                        className: p.icon,
+                    }),
+                    (0, r.jsx)(s.Text, {
+                        variant: "text-lg/normal",
+                        color: "text-default",
+                        children: _.intl.string(_.t["13/7kZ"]),
+                    }),
+                ],
             }),
             (0, r.jsxs)("div", {
                 className: p.headerContainer,
@@ -72,7 +70,7 @@ function h(e) {
                 ],
             }),
             h.length > 0 &&
-                (0, r.jsx)(s.hjN, {
+                (0, r.jsx)("div", {
                     className: p.divider,
                     children: (0, r.jsx)("div", {
                         className: p.achievementGrid,
@@ -90,7 +88,7 @@ function h(e) {
                     }),
                 }),
             m.length > 0 &&
-                (0, r.jsxs)(s.hjN, {
+                (0, r.jsxs)("div", {
                     className: p.divider,
                     children: [
                         (0, r.jsx)("div", {
@@ -107,7 +105,7 @@ function h(e) {
                         }),
                     ],
                 }),
-            (0, r.jsx)(s.hjN, {
+            (0, r.jsx)("div", {
                 className: p.divider,
                 children: (0, r.jsx)("div", { className: p.bottomPadding }),
             }),

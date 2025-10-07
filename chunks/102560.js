@@ -15,10 +15,10 @@ var r = n(951288),
 let f = (e) => {
     let { guild: t, transitionState: n, onClose: i } = e,
         [f, h] = l.useState(7),
-        [j, g] = l.useState(null),
+        [g, j] = l.useState(null),
         [x, v] = l.useState([]),
         y = l.useCallback(async () => {
-            g(null), g(await u.Z.updateEstimate(t.id, f, x));
+            j(null), j(await u.Z.updateEstimate(t.id, f, x));
         }, [f, t.id, x]);
     l.useEffect(() => {
         y();
@@ -80,17 +80,17 @@ let f = (e) => {
                             options: O,
                         }),
                     }),
-                    (0, r.jsx)(c.R94, {
-                        type: c.R94.Types.DESCRIPTION,
+                    (0, r.jsx)(c.Text, {
+                        variant: "text-sm/normal",
                         className: p.spacing,
                         children:
                             x.length > 0
                                 ? b.intl.format(b.t["5WxHHh"], {
-                                      members: j,
+                                      members: g,
                                       days: f,
                                   })
                                 : b.intl.format(b.t.f13az8, {
-                                      members: j,
+                                      members: g,
                                       days: f,
                                   }),
                     }),

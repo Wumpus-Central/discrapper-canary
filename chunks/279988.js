@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -9,13 +9,13 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(31829);
-let g = function (e) {
+    g = n(31829);
+let m = function (e) {
     let {
             channelId: t,
             formField: n,
             index: i,
-            isDragEnabled: g,
+            isDragEnabled: m,
             isDropHovered: p,
             onDrop: f,
             onEdit: h,
@@ -31,7 +31,7 @@ let g = function (e) {
     return (0, r.jsxs)(d.Z, {
         field: n,
         index: i,
-        isDragEnabled: g,
+        isDragEnabled: m,
         isDropHovered: p,
         onDrop: f,
         onEdit: h,
@@ -47,15 +47,16 @@ let g = function (e) {
             }),
             0 !== y &&
                 (0, r.jsxs)(a.P3F, {
-                    className: l()(m.fieldFooterContainer, m.clickable),
+                    className: l()(g.fieldFooterContainer, g.clickable),
                     onClick: h,
                     children: [
-                        (0, r.jsx)(a.R94, {
-                            className: m.clickable,
+                        (0, r.jsx)(a.Text, {
+                            variant: "text-md/normal",
+                            className: g.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: y }),
                         }),
                         (0, r.jsx)(o.Z, {
-                            className: m.termsFieldCaretIcon,
+                            className: g.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
                             color: s.Z.unsafe_rawColors.WHITE_500.css,

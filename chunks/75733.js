@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -8,10 +8,9 @@ var r = n(951288),
     c = n(176354),
     d = n(434404),
     u = n(185923),
-    m = n(388032),
-    g = n(83552),
-    p = n(270856);
-function f(e) {
+    g = n(388032),
+    m = n(83552);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,11 +35,11 @@ function f(e) {
     }
     return e;
 }
-let h = { label: "" };
-function x(e) {
+let f = { label: "" };
+function h(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
-        m = i.useRef(null),
-        g = i.useMemo(
+        g = i.useRef(null),
+        m = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -59,10 +58,10 @@ function x(e) {
         ? (0, r.jsx)(a.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: g,
+              renderButtonContents: m,
           })
         : (0, r.jsx)(l.yRy, {
-              targetElementRef: m,
+              targetElementRef: g,
               position: "bottom",
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -77,13 +76,13 @@ function x(e) {
                   let { isShown: l } = t;
                   return (0, r.jsx)(
                       a.Z,
-                      ((n = f({}, e)),
+                      ((n = p({}, e)),
                       (i = i =
                           {
-                              ref: m,
+                              ref: g,
                               tabIndex: 0,
                               active: l,
-                              renderButtonContents: g,
+                              renderButtonContents: m,
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -102,7 +101,7 @@ function x(e) {
               },
           });
 }
-function b(e) {
+function x(e) {
     let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: o } = e,
         c = i.useCallback(() => {
             a(t, s, {
@@ -123,10 +122,10 @@ function b(e) {
             },
             [t, s, a],
         ),
-        m = i.useMemo(() => n.emoji, [n.emoji]),
+        g = i.useMemo(() => n.emoji, [n.emoji]),
         p = (null != n.label && n.label.length > 0) || null != n.emoji;
     return (0, r.jsx)("div", {
-        className: g.traitWrapper,
+        className: m.traitWrapper,
         children: (0, r.jsx)(l.oil, {
             disabled: o,
             value: n.label,
@@ -134,8 +133,8 @@ function b(e) {
             maxLength: 24,
             leading: {
                 type: "emoji",
-                button: (0, r.jsx)(x, {
-                    emoji: m,
+                button: (0, r.jsx)(h, {
+                    emoji: g,
                     disabled: o,
                     handleSelectEmoji: d,
                 }),
@@ -145,47 +144,36 @@ function b(e) {
         }),
     });
 }
-let j = [0, 1, 2, 3, 4];
-function _(e) {
+let b = [0, 1, 2, 3, 4];
+function j(e) {
     let { profile: t, canManageGuild: n } = e,
         s = i.useMemo(() => t.traits, [t]),
         a = i.useCallback(
             (e, t, n) => {
                 let r = [...s];
-                (r[t] = f({}, s[t], n)), d.Z.updateGuildProfile(e, { traits: r });
+                (r[t] = p({}, s[t], n)), d.Z.updateGuildProfile(e, { traits: r });
             },
             [s],
         );
-    return (0, r.jsxs)(l.hjN, {
-        className: p.section,
-        children: [
-            (0, r.jsxs)("div", {
-                className: p.sectionHeader,
-                children: [
-                    (0, r.jsx)(l.vwX, { children: m.intl.string(m.t.S6JNrq) }),
-                    (0, r.jsx)(l.R94, {
-                        type: "description",
-                        children: m.intl.string(m.t.l7Ig5e),
-                    }),
-                ],
+    return (0, r.jsx)(l.NIc, {
+        label: g.intl.string(g.t.S6JNrq),
+        description: g.intl.string(g.t.l7Ig5e),
+        children: (0, r.jsx)("div", {
+            className: m.grid,
+            children: b.map((e) => {
+                var i;
+                return (0, r.jsx)(
+                    x,
+                    {
+                        guildId: t.id,
+                        trait: null != (i = s[e]) ? i : f,
+                        index: e,
+                        onTraitUpdate: a,
+                        disabled: !n,
+                    },
+                    "trait-".concat(e),
+                );
             }),
-            (0, r.jsx)("div", {
-                className: g.grid,
-                children: j.map((e) => {
-                    var i;
-                    return (0, r.jsx)(
-                        b,
-                        {
-                            guildId: t.id,
-                            trait: null != (i = s[e]) ? i : h,
-                            index: e,
-                            onTraitUpdate: a,
-                            disabled: !n,
-                        },
-                        "trait-".concat(e),
-                    );
-                }),
-            }),
-        ],
+        }),
     });
 }

@@ -98,31 +98,26 @@ function N() {
                                 ],
                             }),
                             n.length > 0
-                                ? (0, r.jsxs)(d.hjN, {
-                                      title: O.size > 0 ? A.intl.string(A.t.mMEmRE) : A.intl.string(A.t.Vij32N),
-                                      children: [
-                                          (0, r.jsx)(d.R94, {
-                                              type: d.geA.DESCRIPTION,
-                                              children: A.intl.string(A.t.OTXyaW),
+                                ? (0, r.jsx)(d.NIc, {
+                                      label: O.size > 0 ? A.intl.string(A.t.mMEmRE) : A.intl.string(A.t.Vij32N),
+                                      description: A.intl.string(A.t.OTXyaW),
+                                      children: (0, r.jsx)("div", {
+                                          "data-button-hoisted-classname-wrapper": !0,
+                                          className: C.logOutAllButton,
+                                          children: (0, r.jsx)(d.zxk, {
+                                              variant: "critical-secondary",
+                                              size: "sm",
+                                              text:
+                                                  O.size > 0
+                                                      ? A.intl.formatToPlainString(A.t["83CPLi"], { count: O.size })
+                                                      : A.intl.string(A.t.cLmmeX),
+                                              onClick: () => {
+                                                  O.size > 0
+                                                      ? (0, p.L$)(Array.from(O))
+                                                      : (0, p.L$)(n.map((e) => e.id_hash));
+                                              },
                                           }),
-                                          (0, r.jsx)("div", {
-                                              "data-button-hoisted-classname-wrapper": !0,
-                                              className: C.logOutAllButton,
-                                              children: (0, r.jsx)(d.zxk, {
-                                                  variant: "critical-secondary",
-                                                  size: "sm",
-                                                  text:
-                                                      O.size > 0
-                                                          ? A.intl.formatToPlainString(A.t["83CPLi"], { count: O.size })
-                                                          : A.intl.string(A.t.cLmmeX),
-                                                  onClick: () => {
-                                                      O.size > 0
-                                                          ? (0, p.L$)(Array.from(O))
-                                                          : (0, p.L$)(n.map((e) => e.id_hash));
-                                                  },
-                                              }),
-                                          }),
-                                      ],
+                                      }),
                                   })
                                 : null,
                         ],
@@ -130,8 +125,8 @@ function N() {
           (0, r.jsxs)(v.N, {
               header: A.intl.string(A.t["+1h0k5"]),
               children: [
-                  (0, r.jsx)(d.R94, {
-                      type: d.geA.DESCRIPTION,
+                  (0, r.jsx)(d.Text, {
+                      variant: "text-sm/normal",
                       className: C.description,
                       children: A.intl.string(A.t.zZp619),
                   }),

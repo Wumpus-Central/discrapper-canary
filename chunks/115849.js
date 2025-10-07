@@ -133,14 +133,10 @@ function N(e) {
                 (0, r.jsxs)("div", {
                     className: b.addFriendWumpusWrapper,
                     children: [
-                        (0, r.jsx)(u.R94, {
-                            id: S,
-                            type: u.R94.Types.DESCRIPTION,
-                            children: (0, r.jsx)(u.Text, {
-                                tag: "div",
-                                variant: "heading-md/normal",
-                                children: m.intl.string(m.t["Rn/sLi"]),
-                            }),
+                        (0, r.jsx)(u.Text, {
+                            tag: "div",
+                            variant: "heading-md/normal",
+                            children: m.intl.string(m.t["Rn/sLi"]),
                         }),
                         (0, r.jsx)("img", {
                             src: v,

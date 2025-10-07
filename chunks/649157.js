@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(518596),
     _ = n(981631),
     p = n(388032),
-    h = n(896643),
+    h = n(558731),
     m = n(444675);
 function g(e, t, n) {
     return (
@@ -113,13 +113,11 @@ function O() {
         }, []);
     return (0, r.jsx)(d.Z, {
         title: p.intl.string(p.t.IHMsPj),
-        children: (0, r.jsx)(s.hjN, {
-            children: (0, r.jsx)(o.Gu, {
-                label: p.intl.string(p.t["mx+sp6"]),
-                onChange: O,
-                options: b,
-                value: t,
-            }),
+        children: (0, r.jsx)(o.Gu, {
+            label: p.intl.string(p.t["mx+sp6"]),
+            onChange: O,
+            options: b,
+            value: t,
         }),
     });
 }
