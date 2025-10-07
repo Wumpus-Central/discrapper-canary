@@ -1,189 +1,207 @@
-n.d(t, { Z: () => S }), n(388685);
-var a = n(951288),
-    r = n(647438),
-    l = n(120356),
-    i = n.n(l),
-    d = n(913527),
-    o = n.n(d),
-    c = n(793030),
-    s = n(442837),
-    u = n(481060),
-    g = n(727637),
-    f = n(607070),
-    p = n(277941),
-    m = n(466679),
-    I = n(210887),
-    b = n(55563),
-    v = n(937615),
-    _ = n(73346),
-    h = n(591759),
-    x = n(436585),
-    O = n(231338),
-    j = n(388032),
-    y = n(402920);
-function S(e) {
-    var t, n, l, d, S, A, C, L, E, k, T, R, N, Z, P, w, W, D;
-    let { applicationId: F, skuId: H, isWide: M = !1, guildId: Y } = e,
-        U = r.useRef(null),
-        G = (0, s.e7)([b.Z], () => b.Z.get(H)),
-        K = (0, s.e7)([I.Z], () => (0, c.wjy)(I.Z.theme)),
-        B = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
-        q = (0, g.Z)(U),
-        z = (0, m.m)(U),
-        X = r.useMemo(() => {
+n.d(t, {
+    C: () => T,
+    Z: () => R,
+}),
+    n(388685);
+var a,
+    r = n(951288),
+    l = n(647438),
+    i = n(688619),
+    o = n.n(i),
+    d = n(120356),
+    c = n.n(d),
+    s = n(913527),
+    u = n.n(s),
+    g = n(793030),
+    f = n(442837),
+    p = n(481060),
+    m = n(727637),
+    b = n(607070),
+    v = n(277941),
+    _ = n(220082),
+    I = n(466679),
+    h = n(210887),
+    x = n(55563),
+    j = n(937615),
+    O = n(73346),
+    S = n(591759),
+    C = n(164670),
+    y = n(436585),
+    L = n(231338),
+    k = n(388032),
+    A = n(450433);
+let E = [
+    [0, 25, 6.09, 29.57],
+    [0, 18.48, 9.07, 40.9],
+    [0, 35, 9.07, 40.9],
+];
+var R = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), (a[(a.LARGE = 2)] = "LARGE"), a);
+function T(e) {
+    var t, n, a, i, d, s, R, T, N, Z, P, M, w, D, G, F;
+    let { applicationId: U, skuId: Y, variant: H = 0, guildId: K } = e,
+        W = l.useRef(null),
+        B = (0, f.e7)([x.Z], () => x.Z.get(Y)),
+        q = (0, f.e7)([h.Z], () => (0, g.wjy)(h.Z.theme)),
+        z = (0, f.e7)([b.Z], () => b.Z.useReducedMotion),
+        X = (0, m.Z)(W),
+        $ = (0, I.m)(W),
+        { primaryIconAsset: J, primaryIconLabel: Q } = l.useMemo(() => (0, C.FE)(B, U), [B, U]),
+        V = l.useMemo(() => {
             var e, t;
             if (
-                (null == G || null == (t = G.tenantMetadata) || null == (e = t.socialLayer)
-                    ? void 0
-                    : e.carouselItems) == null
-            )
-                return null;
-            let n = {};
-            for (let e of G.tenantMetadata.socialLayer.carouselItems) {
-                if (null == e.labelIconAssetId) continue;
-                let t = h.Z.toURLSafe((0, _._W)(F, e.labelIconAssetId, 512, "png"));
-                null != t && (n[t.toString()] = e.label);
-            }
-            return n;
-        }, [null == G || null == (n = G.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.carouselItems, F]),
-        $ = r.useMemo(() => {
-            var e, t;
-            if (
-                (null == G || null == (t = G.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
+                (null == B || null == (t = B.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
                 null
             )
                 return null;
-            let n = o()(),
-                a = o()(G.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
-            return a <= 1 ? j.intl.string(j.t.Bc13HB) : j.intl.format(j.t.Io7ozs, { days: a });
-        }, [null == G || null == (d = G.tenantMetadata) || null == (l = d.socialLayer) ? void 0 : l.expiresAt]);
-    if (null == G) return null;
-    let J =
-            (null == (A = G.tenantMetadata) || null == (S = A.socialLayer) ? void 0 : S.cardImageAssetId) != null &&
-            null != (N = h.Z.toURLSafe((0, _._W)(F, G.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
-                ? N
-                : void 0,
-        Q =
-            (null == (L = G.tenantMetadata) || null == (C = L.socialLayer) ? void 0 : C.cardBackgroundImageAssetId) !=
-                null &&
+            let n = u()(),
+                a = u()(B.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
+            return a <= 1 ? k.intl.string(k.t.Bc13HB) : k.intl.format(k.t.Io7ozs, { days: a });
+        }, [null == B || null == (n = B.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
+        ee =
+            (null == B || null == (i = B.tenantMetadata) || null == (a = i.socialLayer)
+                ? void 0
+                : a.cardBackgroundImageAssetId) != null &&
             null !=
-                (Z = h.Z.toURLSafe((0, _._W)(F, G.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png")))
-                ? Z
-                : void 0;
-    return (0, a.jsx)(c.tEY, {
-        children: (0, a.jsxs)(u.kL8, {
+                (P = S.Z.toURLSafe(
+                    (0, O._W)(
+                        U,
+                        null == B ? void 0 : B.tenantMetadata.socialLayer.cardBackgroundImageAssetId,
+                        1024,
+                        "png",
+                    ),
+                ))
+                ? P
+                : void 0,
+        [et, en] = (0, _.Cf)(null == ee ? void 0 : ee.toString(), "#000000"),
+        ea = l.useMemo(() => {
+            let e = o()(et).darken(1).hex(),
+                [t, n, a, r] = E[H];
+            return "linear-gradient(to top, "
+                .concat(e, " ")
+                .concat(t + 25, "%, transparent ")
+                .concat(n + 25, "%), linear-gradient(to top, ")
+                .concat(e, " ")
+                .concat(a + 25, "%, transparent ")
+                .concat(r + 25, "%)");
+        }, [et, H]);
+    if (null == B) return null;
+    let er =
+        (null == (s = B.tenantMetadata) || null == (d = s.socialLayer) ? void 0 : d.cardImageAssetId) != null &&
+        null != (M = S.Z.toURLSafe((0, O._W)(U, B.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
+            ? M
+            : void 0;
+    return (0, r.jsx)(g.tEY, {
+        children: (0, r.jsxs)(p.kL8, {
             onClick: () => {
-                (0, x.g)({
-                    skuId: H,
-                    applicationId: F,
-                    guildId: Y,
+                (0, y.g)({
+                    skuId: Y,
+                    applicationId: U,
+                    guildId: K,
                 });
             },
-            className: i()(y.card, {
-                [y.cardAnimation]: !B,
-                [y.cardDark]: K,
-                [K ? y.cardDarkHighlighted : y.cardHighlighted]: q || z,
-                [y.cardWide]: M,
+            className: c()(A.card, {
+                [A.cardAnimation]: !z,
+                [A.cardDark]: q,
+                [q ? A.cardDarkHighlighted : A.cardHighlighted]: X || $,
+                [A.cardLarge]: 2 === H,
+                [A.cardMedium]: 1 === H,
             }),
-            ref: U,
-            "aria-label": G.name,
+            ref: W,
+            "aria-label": B.name,
             children: [
-                null != $ &&
-                    (0, a.jsx)(u.IGR, {
-                        text: $,
+                null != V &&
+                    (0, r.jsx)(p.IGR, {
+                        text: V,
                         disableColor: !0,
-                        className: y.badge,
+                        className: A.badge,
                     }),
-                (0, a.jsxs)("div", {
-                    className: i()(y.cardHeaderImg, { [y.cardHeaderImgWide]: M }),
-                    style:
-                        null != Q ? { backgroundImage: null != Q ? "url(".concat(Q.toString(), ")") : void 0 } : void 0,
-                    children: [
-                        null != J
-                            ? (0, a.jsx)("div", {
-                                  className: y.cardImgContainer,
-                                  children: (0, a.jsx)("img", {
-                                      draggable: "false",
-                                      src: J.toString(),
-                                      alt: G.name,
-                                      className: i()(y.cardImg, { [y.cardImgWide]: M }),
-                                  }),
-                              })
-                            : (0, a.jsx)(c.Prq, {
-                                  color: "white",
-                                  size: "custom",
-                                  height: 80,
-                                  width: 80,
+                null != er || null != ee
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)("div", {
+                                  className: A.cardBackgroundImage,
+                                  style: { backgroundImage: null != ee ? "url(".concat(ee.toString(), ")") : void 0 },
                               }),
-                        null != X &&
-                            (0, a.jsx)("div", {
-                                className: y.iconAssets,
-                                children: Object.entries(X).map((e, t) => {
-                                    let [n, r] = e;
-                                    return (0, a.jsx)(
-                                        "img",
-                                        {
-                                            src: n,
-                                            alt: r,
-                                            className: y.iconAsset,
-                                        },
-                                        t,
-                                    );
-                                }),
-                            }),
-                    ],
+                              null != er &&
+                                  (0, r.jsx)("img", {
+                                      draggable: "false",
+                                      src: er.toString(),
+                                      alt: B.name,
+                                      className: A.cardImage,
+                                  }),
+                          ],
+                      })
+                    : (0, r.jsx)("div", {
+                          className: A.ticketIconContainer,
+                          children: (0, r.jsx)(g.Prq, {
+                              color: "white",
+                              size: "custom",
+                              height: 80,
+                              width: 80,
+                              className: A.ticketIcon,
+                          }),
+                      }),
+                (0, r.jsx)("div", {
+                    className: c()(A.bottomGradient, { [A.bottomGradientLarge]: 2 === H }),
+                    style: { background: ea },
                 }),
-                (0, a.jsxs)("div", {
-                    className: y.details,
+                (0, r.jsxs)("div", {
+                    className: A.details,
                     children: [
-                        (0, a.jsx)(u.Text, {
-                            color: "header-primary",
-                            variant: "text-md/semibold",
-                            children: G.name,
+                        (0, r.jsx)("div", {
+                            className: A.titleContainer,
+                            children: (0, r.jsx)(p.Text, {
+                                color: "always-white",
+                                variant: "text-lg/bold",
+                                lineClamp: 1,
+                                children: B.name,
+                            }),
                         }),
-                        (0, a.jsxs)("div", {
-                            className: y.detailsWrapper,
+                        (0, r.jsxs)("div", {
+                            className: A.descriptionContainer,
                             children: [
-                                (0, a.jsx)("div", {
-                                    className: y.innerBlur,
-                                    children: (0, a.jsx)(u.Text, {
-                                        variant: "text-md/semibold",
-                                        color: "text-default",
-                                        children: (0, v.T4)(
-                                            null != (P = null == (E = G.price) ? void 0 : E.amount) ? P : 0,
-                                            null != (w = null == (k = G.price) ? void 0 : k.currency) ? w : O.pK.USD,
-                                        ),
+                                null != J &&
+                                    (0, r.jsx)("img", {
+                                        src: J.toString(),
+                                        alt: Q,
+                                        className: A.iconAsset,
                                     }),
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: y.innerHover,
-                                    children: (0, a.jsxs)(c.hE2, {
-                                        wrap: !1,
-                                        fullWidth: !0,
-                                        children: [
-                                            (0, a.jsx)(c.zxk, {
-                                                variant: "primary",
-                                                onClick: () => {},
-                                                text: j.intl.format(j.t.Xp5WTk, {
-                                                    price: (0, v.T4)(
-                                                        null != (W = null == (T = G.price) ? void 0 : T.amount) ? W : 0,
-                                                        null != (D = null == (R = G.price) ? void 0 : R.currency)
-                                                            ? D
-                                                            : O.pK.USD,
-                                                    ),
-                                                }),
-                                                fullWidth: !0,
-                                            }),
-                                            (0, a.jsx)(p.Z, {
-                                                onGift: () => {},
-                                                tooltipDelay: 250,
-                                            }),
-                                        ],
-                                    }),
+                                (0, r.jsx)(p.Text, {
+                                    variant: "text-md/semibold",
+                                    color: "always-white",
+                                    lineClamp: 1,
+                                    children: (0, j.T4)(
+                                        null != (w = null == (R = B.price) ? void 0 : R.amount) ? w : 0,
+                                        null != (D = null == (T = B.price) ? void 0 : T.currency) ? D : L.pK.USD,
+                                    ),
                                 }),
                             ],
                         }),
                     ],
+                }),
+                (0, r.jsx)("div", {
+                    className: A.buttonHover,
+                    children: (0, r.jsxs)(g.hE2, {
+                        wrap: !1,
+                        fullWidth: !0,
+                        children: [
+                            (0, r.jsx)(g.zxk, {
+                                variant: "primary",
+                                onClick: () => {},
+                                text: k.intl.format(k.t.Xp5WTk, {
+                                    price: (0, j.T4)(
+                                        null != (G = null == (N = B.price) ? void 0 : N.amount) ? G : 0,
+                                        null != (F = null == (Z = B.price) ? void 0 : Z.currency) ? F : L.pK.USD,
+                                    ),
+                                }),
+                                fullWidth: !0,
+                            }),
+                            (0, r.jsx)(v.Z, {
+                                onGift: () => {},
+                                tooltipDelay: 250,
+                            }),
+                        ],
+                    }),
                 }),
             ],
         }),

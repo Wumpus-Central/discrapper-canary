@@ -1,18 +1,21 @@
 n.d(t, {
-    K$: () => i,
-    Uc: () => o,
-    wK: () => a,
-    x6: () => s,
+    FE: () => u,
+    K$: () => o,
+    Uc: () => l,
+    wK: () => s,
+    x6: () => c,
 }),
     n(953529);
-var r = n(981631);
-function i(e) {
-    return null != e && e.productLine === r.POd.SOCIAL_LAYER_GAME_ITEM;
-}
-function a(e) {
-    return null != e && e.features.has(r.oNc.SOCIAL_LAYER_STOREFRONT);
-}
+var r = n(73346),
+    i = n(591759),
+    a = n(981631);
 function o(e) {
+    return null != e && e.productLine === a.POd.SOCIAL_LAYER_GAME_ITEM;
+}
+function s(e) {
+    return null != e && e.features.has(a.oNc.SOCIAL_LAYER_STOREFRONT);
+}
+function l(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -38,7 +41,7 @@ function o(e) {
         })),
     };
 }
-function s(e) {
+function c(e) {
     if (null != e)
         return {
             carouselItems: e.carousel_items.map((e) => ({
@@ -54,4 +57,26 @@ function s(e) {
             cardImageAssetId: e.card_image_asset_id,
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
+}
+function u(e, t) {
+    var n, a, o;
+    if (
+        (null == e || null == (a = e.tenantMetadata) || null == (n = a.socialLayer) ? void 0 : n.carouselItems) ==
+            null ||
+        0 === e.tenantMetadata.socialLayer.carouselItems.length
+    )
+        return {
+            primaryIconAsset: void 0,
+            primaryIconLabel: void 0,
+        };
+    let s = e.tenantMetadata.socialLayer.carouselItems[0];
+    return null == s.labelIconAssetId
+        ? {
+              primaryIconAsset: void 0,
+              primaryIconLabel: void 0,
+          }
+        : {
+              primaryIconAsset: null != (o = i.Z.toURLSafe((0, r._W)(t, s.labelIconAssetId, 512, "png"))) ? o : void 0,
+              primaryIconLabel: s.label,
+          };
 }
