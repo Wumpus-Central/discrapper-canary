@@ -63640,8 +63640,7 @@ html .progress__61462 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-8) var(--space-12);
-    width: 100%
+    padding: var(--space-8) var(--space-12)
 }
 
 .footerContainer_e80b85:hover {
