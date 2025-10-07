@@ -231,6 +231,9 @@ function L(e) {
             case b.dCx.ANSWER_PINNED:
                 o.add(e.getData("pinned"));
                 break;
+            case b.dCx.ANSWER_AUTHOR_TYPE:
+                o.add(e.getData("author_type"));
+                break;
             default:
                 o.add(e.getFullMatch().trim());
         }
