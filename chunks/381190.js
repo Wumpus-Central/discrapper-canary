@@ -1,122 +1,122 @@
-n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(979554),
-    s = n(481060),
-    l = n(449217),
-    c = n(937615),
-    u = n(380979),
-    d = n(673599);
-let f = (e) => {
+n.d(t, { Z: () => b });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(979554),
+    l = n(481060),
+    c = n(449217),
+    u = n(937615),
+    d = n(380979),
+    f = n(673599);
+let _ = (e) => {
         let { displayName: t, product: n } = e,
-            i = (0, u.vV)(n);
+            i = (0, d.vV)(n);
         return null == i
             ? null
             : (0, r.jsx)("img", {
                   src: i,
                   alt: t,
-                  className: d.avatarDecorationPreview,
-              });
-    },
-    _ = (e) => {
-        let { displayName: t, product: n } = e,
-            i = (0, u.$U)(n);
-        return null == i
-            ? null
-            : (0, r.jsx)("img", {
-                  src: i,
-                  alt: t,
-                  className: d.nameplatePreview,
+                  className: f.avatarDecorationPreview,
               });
     },
     p = (e) => {
         let { displayName: t, product: n } = e,
-            i = (0, u.yz)(n);
+            i = (0, d.$U)(n);
         return null == i
             ? null
             : (0, r.jsx)("img", {
                   src: i,
                   alt: t,
-                  className: d.avatarDecorationPreview,
+                  className: f.nameplatePreview,
               });
     },
     h = (e) => {
+        let { displayName: t, product: n } = e,
+            i = (0, d.yz)(n);
+        return null == i
+            ? null
+            : (0, r.jsx)("img", {
+                  src: i,
+                  alt: t,
+                  className: f.avatarDecorationPreview,
+              });
+    },
+    m = (e) => {
         let { subscriptionPlanId: t } = e;
         if (null == t)
             return (0, r.jsx)("div", {
-                className: d.purchasePlaceholder,
-                children: (0, r.jsx)(s.EOn, {}),
+                className: f.purchasePlaceholder,
+                children: (0, r.jsx)(l.EOn, {}),
             });
-        let n = (0, u.Km)(t);
+        let n = (0, d.Km)(t);
         return (0, r.jsx)("div", {
-            className: d.purchasePlaceholder,
+            className: f.purchasePlaceholder,
             children: n
-                ? (0, r.jsx)(s.$Eu, {
+                ? (0, r.jsx)(l.$Eu, {
                       size: "custom",
                       width: 20,
                       height: 20,
                   })
-                : (0, r.jsx)(s.SrA, {
+                : (0, r.jsx)(l.SrA, {
                       size: "custom",
                       width: 20,
                       height: 20,
                   }),
         });
     },
-    m = (e) => {
+    g = (e) => {
         let { displayName: t, product: n } = e;
         if (null == n)
             return (0, r.jsx)("div", {
-                className: d.purchasePlaceholder,
-                children: (0, r.jsx)(s.EOn, {}),
+                className: f.purchasePlaceholder,
+                children: (0, r.jsx)(l.EOn, {}),
             });
         switch (n.type) {
-            case o.Z.AVATAR_DECORATION:
-                return (0, r.jsx)(f, {
-                    displayName: t,
-                    product: n,
-                });
-            case o.Z.NAMEPLATE:
+            case s.Z.AVATAR_DECORATION:
                 return (0, r.jsx)(_, {
                     displayName: t,
                     product: n,
                 });
-            case o.Z.PROFILE_EFFECT:
+            case s.Z.NAMEPLATE:
                 return (0, r.jsx)(p, {
+                    displayName: t,
+                    product: n,
+                });
+            case s.Z.PROFILE_EFFECT:
+                return (0, r.jsx)(h, {
                     displayName: t,
                     product: n,
                 });
             default:
                 return (0, r.jsx)("div", {
-                    className: d.purchasePlaceholder,
-                    children: (0, r.jsx)(s.EOn, {}),
+                    className: f.purchasePlaceholder,
+                    children: (0, r.jsx)(l.EOn, {}),
                 });
         }
     },
-    g = (e) => {
-        let { skuId: t, subscriptionPlanId: n, total: i, currency: o, className: f } = e,
-            { product: _ } = (0, l.Z)(t),
-            { displayName: p, typeName: g, isSubscription: E } = (0, u.HB)(null != _ ? _ : null, n);
+    E = i.memo((e) => {
+        let { skuId: t, subscriptionPlanId: n, total: i, currency: a, className: s } = e,
+            { product: _ } = (0, c.Z)(t),
+            { displayName: p, typeName: h, isSubscription: E } = (0, d.HB)(null != _ ? _ : null, n);
         if ((null != t && !E && null == _) || null == p) return null;
-        let b = (0, c.T4)(i, o);
+        let b = (0, u.T4)(i, a);
         return (0, r.jsxs)("div", {
-            className: a()(d.container, f),
+            className: o()(f.container, s),
             children: [
                 E
-                    ? (0, r.jsx)(h, { subscriptionPlanId: n })
-                    : (0, r.jsx)(m, {
+                    ? (0, r.jsx)(m, { subscriptionPlanId: n })
+                    : (0, r.jsx)(g, {
                           displayName: p,
                           product: null != _ ? _ : null,
                       }),
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            children: null != g ? "".concat(p, " \u2022 ").concat(g) : p,
+                            children: null != h ? "".concat(p, " \u2022 ").concat(h) : p,
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: b,
@@ -125,4 +125,6 @@ let f = (e) => {
                 }),
             ],
         });
-    };
+    });
+E.displayName = "FamilyCenterActivityPurchaseRow";
+let b = E;

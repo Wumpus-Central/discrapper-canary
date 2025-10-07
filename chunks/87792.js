@@ -227,7 +227,7 @@ let V = () => {
                   ],
               });
     },
-    H = (e) => {
+    H = i.memo((e) => {
         let { userId: t, subText: n, avatarSize: i = u.EFr.SIZE_40, hideUserTag: a = !1 } = e,
             o = (0, O.In)(t);
         return void 0 === o
@@ -257,8 +257,9 @@ let V = () => {
                       }),
                   ],
               });
-    },
-    Y = () => {
+    });
+H.displayName = "FamilyCenterActivityCardAccountRow";
+let Y = () => {
         let e = (0, I.zu)(),
             t = (0, c.e7)([_.Z], () => _.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, E.G)({}),

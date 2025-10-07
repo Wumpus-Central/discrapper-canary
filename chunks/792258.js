@@ -1,67 +1,69 @@
 n.d(t, {
-    Z: () => g,
-    o: () => m,
+    Z: () => b,
+    o: () => g,
 });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(399606),
-    s = n(481060),
-    l = n(372769),
-    c = n(914788),
-    u = n(322192),
-    d = n(981631),
-    f = n(345909),
-    _ = n(388032),
-    p = n(987588);
-let h = [18, 18, 16, 16, 14, 12, 10];
-function m(e) {
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(399606),
+    l = n(481060),
+    c = n(372769),
+    u = n(914788),
+    d = n(322192),
+    f = n(981631),
+    _ = n(345909),
+    p = n(388032),
+    h = n(987588);
+let m = [18, 18, 16, 16, 14, 12, 10];
+function g(e) {
     var t;
-    return null != (t = h[e.length - 1]) ? t : h[h.length - 1];
+    return null != (t = m[e.length - 1]) ? t : m[m.length - 1];
 }
-let g = (e) => {
+let E = i.memo((e) => {
     let { guildId: t, className: n, customSubtext: i } = e,
-        h = (0, o.e7)([c.Z], () => c.Z.getGuild(t));
-    if (void 0 === h) return null;
-    let m = h.features.has(d.oNc.VERIFIED) || h.features.has(d.oNc.PARTNERED),
-        { name: g } = h;
+        a = (0, s.e7)([u.Z], () => u.Z.getGuild(t));
+    if (void 0 === a) return null;
+    let m = a.features.has(f.oNc.VERIFIED) || a.features.has(f.oNc.PARTNERED),
+        { name: g } = a;
     return (0, r.jsxs)("div", {
-        className: a()(p.container, n),
+        className: o()(h.container, n),
         children: [
-            (0, r.jsx)(u.Z, { guildId: t }),
+            (0, r.jsx)(d.Z, { guildId: t }),
             (0, r.jsxs)("div", {
-                className: p.descriptors,
+                className: h.descriptors,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: p.header,
+                        className: h.header,
                         children: [
                             m
-                                ? (0, r.jsx)(l.Z, {
-                                      guild: h,
+                                ? (0, r.jsx)(c.Z, {
+                                      guild: a,
                                       tooltipPosition: "bottom",
-                                      tooltipColor: s.ua7.Colors.PRIMARY,
-                                      className: p.guildBadge,
+                                      tooltipColor: l.ua7.Colors.PRIMARY,
+                                      className: h.guildBadge,
                                   })
                                 : null,
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: "text-md/semibold",
                                 children: g,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children:
                             null != i
                                 ? i
-                                : void 0 !== h.approximateMemberCount
-                                  ? _.intl.format(f.default["5JmNgo"], { members: h.approximateMemberCount })
+                                : void 0 !== a.approximateMemberCount
+                                  ? p.intl.format(_.default["5JmNgo"], { members: a.approximateMemberCount })
                                   : null,
                     }),
                 ],
             }),
         ],
     });
-};
+});
+E.displayName = "FamilyCenterActivityGuildRow";
+let b = E;
