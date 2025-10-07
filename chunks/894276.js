@@ -1,8 +1,9 @@
 n.d(t, {
-    Ng: () => p,
+    Ng: () => h,
     Re: () => l,
-    fg: () => h,
-    j_: () => _,
+    fg: () => m,
+    j_: () => p,
+    l2: () => g,
 }),
     n(953529),
     n(539854),
@@ -58,6 +59,21 @@ class u {
     }
 }
 class d extends u {
+    getLabel() {
+        return this.label;
+    }
+    getTreatments() {
+        return [{ treatmentId: 0 }, { treatmentId: 1 }];
+    }
+    getCachedEnabled() {
+        let e = this.getCachedConfig();
+        return null != e && 1 === e.treatmentId;
+    }
+    constructor(e, t) {
+        super(e), s(this, "label", void 0), (this.label = t);
+    }
+}
+class f extends u {
     getCachedBridgedStoreMode() {
         let e = this.getCachedConfig(),
             t = (() => {
@@ -87,7 +103,7 @@ class d extends u {
         super(e, r), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
     }
 }
-class f extends u {
+class _ extends u {
     getLabel() {
         return "libdiscore Telemetry";
     }
@@ -120,7 +136,8 @@ class f extends u {
         super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
     }
 }
-let _ = new d("2025-09-libdiscore-migrate-guildstore", "GuildStore", "Kv"),
-    p = new d("2025-09-libdiscore-guildrolestore", "GuildRoleStore", "Kkv"),
-    h = new d("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv");
-new f("2025-09-libdiscore-telemetry");
+let p = new f("2025-09-libdiscore-migrate-guildstore", "GuildStore", "Kv"),
+    h = new f("2025-09-libdiscore-guildrolestore", "GuildRoleStore", "Kkv"),
+    m = new f("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv");
+new _("2025-09-libdiscore-telemetry");
+let g = new d("2025-10-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
