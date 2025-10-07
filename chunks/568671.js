@@ -1,13 +1,14 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     a = n(626135),
-    o = n(292352),
-    s = n(981631),
-    l = n(345909),
-    c = n(388032);
-function u(e, t, n) {
+    o = n(546791),
+    s = n(292352),
+    l = n(981631),
+    c = n(345909),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,23 +32,24 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f() {
-    let e = () => {
-        (0, i.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("25520"), n.e("90688")]).then(n.bind(n, 978305));
-            return (t) => (0, r.jsx)(e, d({}, t));
-        }),
-            a.default.track(s.rMx.FAMILY_CENTER_ACTION, { action: o.YC.ShowQRCodeModal });
-    };
+function _() {
+    let e = (0, o.nE)(u.intl.string(c.default.Ta9byc), u.intl.string(c.default["8SLtqa"])),
+        t = () => {
+            (0, i.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e("20680"), n.e("90688")]).then(n.bind(n, 978305));
+                return (t) => (0, r.jsx)(e, f({}, t));
+            }),
+                a.default.track(l.rMx.FAMILY_CENTER_ACTION, { action: s.YC.ShowQRCodeModal });
+        };
     return (0, r.jsx)(i.zxk, {
         icon: i.IkH,
         variant: "primary",
-        text: c.intl.string(l.default.Ta9byc),
-        onClick: e,
+        text: e,
+        onClick: t,
     });
 }
