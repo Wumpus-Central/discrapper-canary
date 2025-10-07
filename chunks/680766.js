@@ -1,8 +1,8 @@
 n.d(t, { W: () => b }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(793030),
-    a = n(35916),
+var i = n(448814),
+    a = n(793030),
     o = n(496600),
     s = n(333200),
     l = n(673221),
@@ -119,7 +119,7 @@ let g = [
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: i.VL1,
+            leading: a.VL1,
             trailing: {
                 type: "badge",
                 badgeType: "new",
@@ -129,14 +129,14 @@ let g = [
             label: "Cat",
             value: "cat",
             id: "cat",
-            leading: i.VL1,
+            leading: a.VL1,
             trailing: "20m",
         },
         {
             label: "Dog",
             value: "dog",
             id: "dog",
-            leading: i.VL1,
+            leading: a.VL1,
         },
         {
             label: "Kangaroo",
@@ -160,7 +160,7 @@ let g = [
             label: "Snake",
             value: "snake",
             id: "snake",
-            leading: i.VL1,
+            leading: a.VL1,
             disabled: !0,
         },
     ],
@@ -540,11 +540,11 @@ let g = [
                 id: "listbox",
                 name: "ListBox",
                 component: function (e) {
-                    let { selectionMode: t, required: n, shouldFocusWrap: i, withLeadingAndTrailing: o } = e;
-                    return (0, r.jsx)(a.w, {
+                    let { selectionMode: t, required: n, shouldFocusWrap: a, withLeadingAndTrailing: o } = e;
+                    return (0, r.jsx)(i.w, {
                         selectionMode: t,
                         required: n,
-                        shouldFocusWrap: i,
+                        shouldFocusWrap: a,
                         items: o ? E : g,
                         onSelectionChange: c.dG,
                     });

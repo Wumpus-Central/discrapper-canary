@@ -15,9 +15,9 @@ var r = n(951288),
     c = n(61247),
     u = n(753187),
     d = n(993517),
-    f = n(793030),
-    _ = n(463208),
-    p = n(35916),
+    f = n(448814),
+    _ = n(793030),
+    p = n(463208),
     h = n(199823),
     m = n(713072),
     g = n(747344),
@@ -246,7 +246,7 @@ function L(e) {
             autoFocus: a,
             placeholder: s = O.intl.string(y.default["A+pfVV"]),
             name: u,
-            form: p,
+            form: f,
             showChevronButton: T = !1,
             onQueryChange: A,
             onFocus: N,
@@ -463,7 +463,7 @@ function L(e) {
                     }
                 );
             });
-            return (0, r.jsx)(f.QSK, {
+            return (0, r.jsx)(_.QSK, {
                 listRef: x,
                 label: O.intl.string(y.default.VMNfsb),
                 items: e,
@@ -498,9 +498,9 @@ function L(e) {
                         className: v.comboBoxInputContainer,
                         children: [
                             em,
-                            (0, r.jsx)(f.tEY, {
+                            (0, r.jsx)(_.tEY, {
                                 ringTarget: z,
-                                children: (0, r.jsx)(_.I, {
+                                children: (0, r.jsx)(p.I, {
                                     ref: M,
                                     id: n,
                                     className: o()(I.input, v.comboBoxInput, {
@@ -534,7 +534,7 @@ function L(e) {
             }),
             (0, r.jsx)(h.M, {
                 name: u,
-                form: p,
+                form: f,
                 disabled: J,
                 selectionMode: Z,
                 selectedItems: G.selectedItems,
@@ -548,7 +548,7 @@ function x(e) {
     var t;
     let { renderListItem: n, renderEmptyState: i, maxVisibleItems: a = 5 } = e,
         { state: o, selectionMode: s, listBoxId: l, required: c, disabled: u, handleSelectionChange: d } = (0, g.T)();
-    return (0, r.jsx)(p.w, {
+    return (0, r.jsx)(f.w, {
         id: l,
         required: c,
         disabled: u,
