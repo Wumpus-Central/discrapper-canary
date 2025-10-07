@@ -36,12 +36,15 @@ function f() {
 let _ = (e) => {
         let { themes: t } = e;
         (u = 2),
-            (c = t.filter(d).map((e) => ({
-                colors: e.colors,
-                gradient_angle: e.gradient_angle,
-                base_mix: e.base_mix,
-                base_theme: s.yW[e.base_theme],
-            })));
+            (c = t.filter(d).map((e) => {
+                let t = s.yW;
+                return {
+                    colors: e.colors,
+                    gradient_angle: e.gradient_angle,
+                    base_mix: e.base_mix,
+                    base_theme: t[e.base_theme],
+                };
+            }));
     },
     p = (e) => {
         let { error: t } = e;
