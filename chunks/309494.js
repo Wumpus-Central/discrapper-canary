@@ -9,9 +9,9 @@ var r = n(120356),
     c = n(51144),
     d = n(785717),
     u = n(388032),
-    m = n(740363);
+    m = n(508929);
 function p(e) {
-    let { user: t, isHovering: n } = e,
+    let { user: t, isVisible: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
     return o.wS
         ? (0, a.jsx)(s.Z, {

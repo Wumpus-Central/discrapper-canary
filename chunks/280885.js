@@ -15,8 +15,8 @@ function h(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHover: a = !1,
-            isHovering: h = !1,
+            animateOnHoverOrFocusOnly: a = !1,
+            isHoveringOrFocusing: h = !1,
             lineClamp: m = 6,
             setLineClamp: g = !0,
             textColor: E,

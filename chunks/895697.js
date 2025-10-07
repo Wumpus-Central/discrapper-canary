@@ -32,7 +32,7 @@ function R(e) {
             currentUser: n,
             displayProfile: R,
             guild: P,
-            isHovering: w,
+            isHoveringOrFocusing: w,
             onOpenProfile: D,
             channelId: L,
             onClose: x,

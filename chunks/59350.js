@@ -88,7 +88,7 @@ function $(e) {
         { avatarDecorationSrc: g } = (0, f.Z)({
             user: s,
             size: (0, p.y9)(K),
-            onlyAnimateOnHover: !h,
+            onlyAnimateOnHoverOrFocus: !h,
         }),
         x = (0, o.e7)([O.ZP], () => O.ZP.getSelfMember(i.id)),
         b = (0, o.Wu)([O.ZP], () => O.ZP.getMemberRoleWithPendingUpdates(i.id, s.id)),

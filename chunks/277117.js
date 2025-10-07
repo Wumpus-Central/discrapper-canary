@@ -17,21 +17,21 @@ var i = n(657707),
     b = n(280885),
     y = n(483424),
     _ = n(681837),
-    O = n(78806),
-    j = n(91433),
-    v = n(900927),
-    x = n(944043),
+    j = n(78806),
+    O = n(91433),
+    x = n(900927),
+    v = n(944043),
     C = n(678738),
     I = n(638970),
     E = n(502762),
     S = n(530),
     Z = n(827313),
-    P = n(981631),
-    T = n(671955),
+    T = n(981631),
+    P = n(671955),
     N = n(388032),
-    R = n(892068);
+    R = n(892273);
 function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, channel: A, isHovering: D, onOpenProfile: L } = e,
+    let { user: t, currentUser: n, displayProfile: w, channel: A, isHoveringOrFocusing: D, onOpenProfile: L } = e,
         { relationshipType: M, originApplicationId: k } = (0, l.cj)([d.Z], () => ({
             relationshipType: d.Z.getRelationshipType(t.id),
             originApplicationId: d.Z.getOriginApplicationId(t.id),
@@ -54,7 +54,7 @@ function w(e) {
                 onOpenProfile: L,
                 tags: (0, r.jsx)(m.Z, {
                     displayProfile: w,
-                    themeType: T.l.SIDEBAR,
+                    themeType: P.l.SIDEBAR,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -68,9 +68,9 @@ function w(e) {
                     ],
                 }),
             }),
-            M === P.OGo.PENDING_INCOMING &&
+            M === T.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(E.Z.Overlay, {
-                    children: (0, r.jsx)(j.Z, {
+                    children: (0, r.jsx)(O.Z, {
                         user: t,
                         channelId: A.id,
                         applicationId: k,
@@ -80,7 +80,7 @@ function w(e) {
                 (0, r.jsx)(
                     E.Z.Overlay,
                     {
-                        children: (0, r.jsx)(j.Z, {
+                        children: (0, r.jsx)(O.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -90,7 +90,7 @@ function w(e) {
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(v.Z, {
                 user: t,
                 className: R.card,
             }),
@@ -128,10 +128,10 @@ function w(e) {
                             heading: N.intl.string(N.t["61W33d"]),
                             headingColor: "header-primary",
                             children: (0, r.jsx)(b.Z, {
-                                userBio: w.bio,
-                                animateOnHover: !0,
-                                isHovering: D,
                                 userId: t.id,
+                                userBio: w.bio,
+                                isHoveringOrFocusing: D,
+                                animateOnHoverOrFocusOnly: !0,
                             }),
                         }),
                     (null == F ? void 0 : F.popularApplicationCommandIds) != null &&
@@ -144,12 +144,12 @@ function w(e) {
                         (0, r.jsx)(C.Z, {
                             heading: N.intl.string(N.t["Uv/eT0"]),
                             headingColor: "header-primary",
-                            children: (0, r.jsx)(O.Z, { applicationIds: G }),
+                            children: (0, r.jsx)(j.Z, { applicationIds: G }),
                         }),
                     (0, r.jsx)(C.Z, {
                         heading: t.bot ? N.intl.string(N.t["A//N4u"]) : N.intl.string(N.t.a6XYDw),
                         headingColor: "header-primary",
-                        children: (0, r.jsx)(v.Z, { userId: t.id }),
+                        children: (0, r.jsx)(x.Z, { userId: t.id }),
                     }),
                 ],
             }),

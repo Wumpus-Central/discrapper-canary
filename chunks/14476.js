@@ -1,86 +1,84 @@
-n.d(t, { c: () => f });
+n.d(t, { c: () => h });
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    s = n.n(l),
-    a = n(979554),
-    o = n(780384),
-    C = n(481060),
-    d = n(727637),
-    c = n(410030),
-    p = n(699758),
-    u = n(616066),
-    x = n(466679),
+    a = n(120356),
+    l = n.n(a),
+    o = n(979554),
+    s = n(780384),
+    d = n(481060),
+    C = n(410030),
+    c = n(104505),
+    u = n(699758),
+    p = n(616066),
     _ = n(388032),
-    h = n(632939);
-let f = (e) => {
+    f = n(632939);
+let h = (e) => {
     let {
             skuId: t,
             assetId: n,
-            user: l,
-            claimed: f,
-            onSelect: j,
-            productName: m,
-            a11yLabel: L,
+            user: a,
+            claimed: h,
+            onSelect: m,
+            productName: x,
+            a11yLabel: j,
             selectedSkuId: g,
             category: b,
         } = e,
-        S = i.useRef(null),
-        y = (0, d.Z)(S),
-        v = (0, x.m)(S),
-        E = !f && (y || v),
-        O = (0, c.ZP)(),
-        P = (0, o.wj)(O),
-        w = {
-            type: a.Z.AVATAR_DECORATION,
-            label: L,
+        y = i.useRef(null),
+        { isHoveringOrFocusing: v } = (0, c.Z)(y),
+        L = !h && v,
+        S = (0, C.ZP)(),
+        O = (0, s.wj)(S),
+        P = {
+            type: o.Z.AVATAR_DECORATION,
+            label: j,
             asset: n,
         };
-    return (0, r.jsx)(C.tEY, {
-        children: (0, r.jsxs)(C.kL8, {
-            ref: S,
-            "aria-label": null != m ? m : "",
+    return (0, r.jsx)(d.tEY, {
+        children: (0, r.jsxs)(d.kL8, {
+            ref: y,
+            "aria-label": null != x ? x : "",
             onClick: () => {
-                null == t || null == j || f || j(t);
+                null == t || null == m || h || m(t);
             },
-            className: s()(P ? h.shopCardDark : h.shopCard, {
-                [h.shopCardAnimation]: !f,
-                [P ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: E,
-                [h.shopCardSelected]: g === t,
+            className: l()(O ? f.shopCardDark : f.shopCard, {
+                [f.shopCardAnimation]: !h,
+                [O ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: L,
+                [f.shopCardSelected]: g === t,
             }),
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(h.preview, {
-                        [h.previewTrick]: b === p.KN.Trick,
-                        [h.previewTreat]: b === p.KN.Treat,
-                        [h.shopCardClaimed]: f,
+                    className: l()(f.preview, {
+                        [f.previewTrick]: b === u.KN.Trick,
+                        [f.previewTreat]: b === u.KN.Treat,
+                        [f.shopCardClaimed]: h,
                     }),
-                    children: (0, r.jsx)(u.R, {
-                        item: w,
-                        user: l,
-                        isHighlighted: E,
-                        avatarSize: C.EFr.SIZE_120,
-                        isPurchased: f,
+                    children: (0, r.jsx)(p.R, {
+                        item: P,
+                        user: a,
+                        isHighlighted: L,
+                        avatarSize: d.EFr.SIZE_120,
+                        isPurchased: h,
                     }),
                 }),
-                f &&
-                    (0, r.jsx)(C.dz2, {
+                h &&
+                    (0, r.jsx)(d.dz2, {
                         size: "custom",
                         width: 48,
                         height: 48,
-                        color: C.TVs.colors.WHITE,
-                        className: h.claimedIcon,
+                        color: d.TVs.colors.WHITE,
+                        className: f.claimedIcon,
                     }),
                 (0, r.jsxs)("div", {
-                    className: h.productName,
+                    className: f.productName,
                     children: [
-                        (0, r.jsx)(C.X6q, {
-                            variant: "text-lg/bold",
-                            children: m,
+                        (0, r.jsx)(d.X6q, {
+                            variant: "text-md/bold",
+                            children: x,
                         }),
-                        (0, r.jsx)(C.Text, {
+                        (0, r.jsx)(d.Text, {
                             variant: "text-md/normal",
-                            children: f ? _.intl.string(_.t["6cfuDg"]) : _.intl.string(_.t.QQsaCQ),
+                            children: h ? _.intl.string(_.t["6cfuDg"]) : _.intl.string(_.t.QQsaCQ),
                         }),
                     ],
                 }),

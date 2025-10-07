@@ -6,7 +6,7 @@ var a = t(951288),
     o = t(481060),
     s = t(596454),
     u = t(225433),
-    c = t(727637),
+    c = t(104505),
     d = t(318766),
     f = t(907040),
     m = t(984933),
@@ -75,7 +75,7 @@ function x(e) {
         }),
         E = (0, i.e7)([m.ZP], () => (null != t ? m.ZP.getDefaultChannel(t) : null)),
         I = l.useRef(null),
-        P = (0, c.Z)(I),
+        { isHoveringOrFocusing: P } = (0, c.Z)(I),
         Z = () => {
             S(void 0), C(void 0);
         },

@@ -114,22 +114,22 @@ function N(e) {
             bannerHeight: R,
             themePadding: P,
             pendingAccentColor: w,
-            animateOnHover: D = !1,
+            animateOnHoverOrFocusOnly: D = !1,
         } = e,
-        x = (0, _.Dt)(),
-        [L, j] = i.useState(!1),
-        M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        L = (0, _.Dt)(),
+        [x, M] = i.useState(!1),
+        j = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         k = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: O,
             size: N,
-            canAnimate: D || !k ? L : M,
+            canAnimate: D || !k ? x : j,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
-        V = (0, s._i)((0, d.ZP)(Z, B, !1)),
-        F = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
+        F = (0, s._i)((0, d.ZP)(Z, B, !1)),
+        V = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : F).hex,
         H = C(T),
         Y = H + S - P,
         W = R - A - P;
@@ -142,7 +142,7 @@ function N(e) {
         },
         children: [
             (0, r.jsxs)("mask", {
-                id: x,
+                id: L,
                 children: [
                     (0, r.jsx)("rect", {
                         fill: "white",
@@ -165,18 +165,18 @@ function N(e) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(x, ")"),
+                mask: "url(#".concat(L, ")"),
                 children: [
                     v,
                     (0, r.jsx)("div", {
                         className: o()(y.banner, I),
-                        onMouseMove: () => j(!0),
-                        onMouseLeave: () => j(!1),
+                        onMouseMove: () => M(!0),
+                        onMouseLeave: () => M(!1),
                         style: {
                             height: R,
                             minHeight: R,
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
-                            backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : F,
+                            backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V,
                         },
                         children: !k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
                     }),

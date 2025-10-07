@@ -4,10 +4,10 @@ var r = n(951288),
     l = n(137317),
     a = n(793030),
     s = n(481060),
-    o = n(727637),
-    c = n(410030),
-    d = n(100527),
-    u = n(906732),
+    o = n(410030),
+    c = n(100527),
+    d = n(906732),
+    u = n(104505),
     p = n(680295),
     h = n(785717),
     f = n(221292),
@@ -16,21 +16,21 @@ var r = n(951288),
     b = n(510659),
     y = n(892001),
     _ = n(899007),
-    O = n(867176),
-    j = n(451834),
-    v = n(502762),
-    x = n(952124),
+    j = n(867176),
+    O = n(451834),
+    x = n(502762),
+    v = n(952124),
     C = n(544989),
     I = n(481932),
     E = n(664794),
     S = n(4517),
     Z = n(350207),
-    P = n(277117),
-    T = n(52639),
+    T = n(277117),
+    P = n(52639),
     N = n(228168),
     R = n(671955),
     w = n(388032),
-    A = n(910455);
+    A = n(231688);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,22 +61,22 @@ function L(e) {
     let { user: n, currentUser: f, channel: w } = e,
         L = __OVERLAY__,
         k = (0, g.ZP)(n.id),
-        U = (0, c.ZP)(),
+        U = (0, o.ZP)(),
         G = i.useRef(Date.now()),
-        { analyticsLocations: H } = (0, u.ZP)(d.Z.USER_PROFILE_SIDEBAR),
+        { analyticsLocations: H } = (0, d.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         F = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: n.id,
             channelId: w.id,
         }),
         B = i.useRef(null),
-        z = (0, o.Z)(B),
-        V = (0, b.$m)(),
-        W = (0, s.q_F)({
-            opacity: +(null != V.interactionType),
+        { isHoveringOrFocusing: z, isHovering: V } = (0, u.Z)(B),
+        W = (0, b.$m)(),
+        Y = (0, s.q_F)({
+            opacity: +(null != W.interactionType),
             config: { duration: 150 },
         }),
-        Y = (e) => {
+        q = (e) => {
             (0, y.openUserProfileModal)(
                 D(
                     {
@@ -88,9 +88,9 @@ function L(e) {
                 ),
             );
         },
-        q = (0, m.Z)({ location: "UserProfileSidebar" }),
-        K = (null == k ? void 0 : k.widgets) != null && k.widgets.length > 0;
-    return (0, r.jsx)(u.Gt, {
+        K = (0, m.Z)({ location: "UserProfileSidebar" }),
+        Q = (null == k ? void 0 : k.widgets) != null && k.widgets.length > 0;
+    return (0, r.jsx)(d.Gt, {
         value: H,
         children: (0, r.jsx)(h.Mt, {
             value: F,
@@ -99,17 +99,17 @@ function L(e) {
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsx)(b.NJ, {
-                value: V,
-                children: (0, r.jsxs)(v.Z, {
+                value: W,
+                children: (0, r.jsxs)(x.Z, {
                     ref: B,
                     user: n,
                     displayProfile: k,
                     themeType: R.l.SIDEBAR,
                     themeOverride: U,
                     children: [
-                        null != V.interactionType &&
+                        null != W.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: W,
+                                style: Y,
                                 className: A.backdrop,
                             }),
                         (0, r.jsxs)(a.u2D, {
@@ -119,10 +119,10 @@ function L(e) {
                                         (0, r.jsx)(I.Z, {
                                             user: n,
                                             themeType: R.l.SIDEBAR,
-                                            shouldShowTooltip: null === V.interactionType,
+                                            shouldShowTooltip: null === W.interactionType,
                                         }),
                                         n.bot
-                                            ? (0, r.jsx)(x.Z, { user: n })
+                                            ? (0, r.jsx)(v.Z, { user: n })
                                             : (0, r.jsx)(E.Z, {
                                                   type: "banner",
                                                   user: n,
@@ -132,14 +132,14 @@ function L(e) {
                                 (0, r.jsxs)("div", {
                                     className: A.header,
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(j.Z, {
                                             user: n,
                                             displayProfile: k,
                                             themeType: R.l.SIDEBAR,
-                                            animateOnHover: !z,
+                                            animateOnHoverOrFocusOnly: !z,
                                             className: A.banner,
                                         }),
-                                        (0, r.jsx)(j.Z, {
+                                        (0, r.jsx)(O.Z, {
                                             userId: n.id,
                                             className: A.toast,
                                         }),
@@ -148,7 +148,7 @@ function L(e) {
                                             displayProfile: k,
                                             channelId: w.id,
                                             themeType: R.l.SIDEBAR,
-                                            onOpenProfile: L ? void 0 : Y,
+                                            onOpenProfile: L ? void 0 : q,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             user: n,
@@ -158,26 +158,26 @@ function L(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(T.Z, {
                                     user: n,
                                     currentUser: f,
                                     displayProfile: k,
                                     channel: w,
-                                    isHovering: null == V.interactionType && z,
-                                    onOpenProfile: L ? void 0 : Y,
+                                    isHoveringOrFocusing: null == W.interactionType && z,
+                                    onOpenProfile: L ? void 0 : q,
                                 }),
-                                q &&
-                                    K &&
+                                K &&
+                                    Q &&
                                     (0, r.jsx)("div", {
                                         className: A.widgetBreadcrumb,
                                         children: (0, r.jsx)(Z.Z, {
                                             widgets: k.widgets,
                                             onClick: () => {
-                                                null == Y || Y({ section: N.oh.WIDGETS });
+                                                null == q || q({ section: N.oh.WIDGETS });
                                             },
                                         }),
                                     }),
-                                (0, r.jsx)(T.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: n,
                                     channelId: w.id,
                                 }),
@@ -185,14 +185,14 @@ function L(e) {
                         }),
                         !L &&
                             (0, r.jsx)(M, {
-                                handleOpenProfile: Y,
+                                handleOpenProfile: q,
                                 analyticsLocations: H,
                                 context: F,
                             }),
                         (null == k ? void 0 : k.profileEffect) != null &&
                             (0, r.jsx)(p.Z, {
                                 skuId: null == k || null == (t = k.profileEffect) ? void 0 : t.skuId,
-                                isHovering: z,
+                                isHovering: V,
                                 urlQueryString: "dmView",
                             }),
                     ],

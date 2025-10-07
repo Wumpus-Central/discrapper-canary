@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(597688),
     E = n(579407),
     b = n(755419),
-    y = n(666765),
+    y = n(187951),
     O = n(223223);
 function v(e, t, n) {
     return (
@@ -52,7 +52,7 @@ let T = (e) => {
             i = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             { avatarDecorationSrc: a, eventHandlers: o } = (0, f.Z)({
                 user: i,
-                onlyAnimateOnHover: !0,
+                onlyAnimateOnHoverOrFocus: !0,
                 avatarDecorationOverride: t,
                 size: (0, d.y9)(u.EFr.SIZE_40),
             });

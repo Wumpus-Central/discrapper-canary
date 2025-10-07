@@ -7,8 +7,8 @@ var r = n(951288),
     s = n(28664),
     c = n(755721),
     u = n(481060),
-    d = n(727637),
-    p = n(782568),
+    d = n(782568),
+    p = n(104505),
     h = n(317632),
     f = n(174767),
     g = n(594174),
@@ -23,7 +23,7 @@ function y(e) {
         }),
         s = (0, m.vc)(o()(t.created_at), "LT"),
         c = i.useRef(null),
-        p = (0, d.Z)(c);
+        { isHoveringOrFocusing: d } = (0, p.Z)(c);
     return (
         i.useEffect(() => {
             n || (0, f.Br)(t);
@@ -52,7 +52,7 @@ function y(e) {
                                 (0, r.jsx)(O, {
                                     expired: n,
                                     invite: t,
-                                    isHoveringInvite: p,
+                                    isHoveringInvite: d,
                                 }),
                                 (0, r.jsx)(u.M0o, {
                                     className: _.deleteButton,
@@ -96,7 +96,7 @@ function y(e) {
 function O(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
         o = (0, a.e7)([h.Z], () => h.Z.isInviteGameInstalled(n)),
-        d = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
+        p = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
         [g, m] = i.useState(!1),
         y = i.useCallback(async () => {
             m(!0);
@@ -123,7 +123,7 @@ function O(e) {
                 children: b.intl.string(b.t["s+J8Dg"]),
             });
         else return null;
-    return o && d
+    return o && p
         ? (0, r.jsx)(c.zx, {
               className: _.primaryButton,
               color: c.Tt.GREEN,
@@ -138,7 +138,7 @@ function O(e) {
                 disabled: g,
                 size: c.Ph.SMALL,
                 color: c.Tt.TRANSPARENT,
-                onClick: () => (0, p.Z)(n.fallback_url),
+                onClick: () => (0, d.Z)(n.fallback_url),
                 children: b.intl.string(b.t["27y8KC"]),
             })
           : (0, r.jsx)(s.u, {
@@ -148,7 +148,7 @@ function O(e) {
                     disabled: !0,
                     size: c.Ph.SMALL,
                     color: c.Tt.TRANSPARENT,
-                    onClick: () => (0, p.Z)(n.fallback_url),
+                    onClick: () => (0, d.Z)(n.fallback_url),
                     children: (0, r.jsxs)("div", {
                         className: _.launchToJoinContainer,
                         children: [

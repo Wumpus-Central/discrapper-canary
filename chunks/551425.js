@@ -1,4 +1,4 @@
-n.d(e, { Z: () => v });
+n.d(e, { Z: () => P });
 var i = n(951288);
 n(647438);
 var r = n(979554),
@@ -12,7 +12,7 @@ var r = n(979554),
     p = n(594174),
     f = n(597688),
     m = n(22267),
-    h = n(799940);
+    h = n(948067);
 let g = s.EFr.SIZE_152,
     y = (0, a.y9)(g),
     O = (t) => {
@@ -85,7 +85,7 @@ let g = s.EFr.SIZE_152,
         return (0, i.jsx)("div", {
             className: h.profileEffectPreview,
             children: (0, i.jsx)(d.Z, {
-                isHovering: !0,
+                isHighlighted: !0,
                 skuId: null == e ? void 0 : e.skuId,
             }),
         });
@@ -103,7 +103,7 @@ let g = s.EFr.SIZE_152,
             }),
         });
     },
-    v = (t) => {
+    P = (t) => {
         let { giftCode: e } = t,
             n = (0, l.e7)([f.Z], () => f.Z.getProduct(e.skuId)),
             s = null == n ? void 0 : n.items[0];

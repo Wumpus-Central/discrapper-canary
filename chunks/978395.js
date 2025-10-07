@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(951288),
     i = n(442837),
     a = n(481060),
@@ -30,19 +30,19 @@ var r = n(951288),
     w = n(981631),
     D = n(671955),
     L = n(388032),
-    x = n(593540);
-function j(e) {
+    x = n(116649);
+function M(e) {
     let {
             user: t,
             currentUser: n,
-            displayProfile: j,
-            guild: M,
-            isHovering: k,
+            displayProfile: M,
+            guild: j,
+            isHoveringOrFocusing: k,
             onOpenProfile: U,
             channelId: G,
             onClose: B,
         } = e,
-        Z = u.ZP.useName(null == M ? void 0 : M.id, G, t),
+        Z = u.ZP.useName(null == j ? void 0 : j.id, G, t),
         { relationshipType: F, originApplicationId: V } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
@@ -52,7 +52,7 @@ function j(e) {
         W = (0, f.b)({ location: "UserProfilePopoutBody" }),
         K = t.id === n.id,
         z = (0, _.Z)({ location: "UserProfilePopoutBody" }),
-        q = (null == j ? void 0 : j.widgets) != null && j.widgets.length > 0,
+        q = (null == M ? void 0 : M.widgets) != null && M.widgets.length > 0,
         X = z && q,
         Q = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
@@ -64,15 +64,15 @@ function j(e) {
                 onOpenProfile: U,
                 onClose: B,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == M ? void 0 : M.id) &&
+                    t.hasAvatarForGuild(null == j ? void 0 : j.id) &&
                     (0, r.jsx)(C.Z, {
                         user: t,
                         nickname: Z,
                     }),
                 nickname: Z,
-                pronouns: null == j ? void 0 : j.pronouns,
+                pronouns: null == M ? void 0 : M.pronouns,
                 tags: (0, r.jsx)(p.Z, {
-                    displayProfile: j,
+                    displayProfile: M,
                     themeType: D.l.POPOUT,
                     onClose: B,
                 }),
@@ -92,7 +92,7 @@ function j(e) {
                 (0, r.jsx)(v.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == M ? void 0 : M.id,
+                        guildId: null == j ? void 0 : j.id,
                         channelId: G,
                         applicationId: V,
                     }),
@@ -132,13 +132,13 @@ function j(e) {
                   })
                 : (0, r.jsx)(A.Z, {
                       user: t,
-                      bio: null == j ? void 0 : j.bio,
+                      bio: null == M ? void 0 : M.bio,
                       hidePersonalInformation: Y,
                       onClose: B,
                   }),
             X &&
                 (0, r.jsx)(S.Z, {
-                    widgets: null == j ? void 0 : j.widgets,
+                    widgets: null == M ? void 0 : M.widgets,
                     onClick: () => {
                         null == U || U({ section: P.oh.WIDGETS });
                     },
@@ -152,21 +152,21 @@ function j(e) {
                 ? (0, r.jsx)(O.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == M ? void 0 : M.id,
+                      guildId: null == j ? void 0 : j.id,
                       onOpenUserProfileModal: U,
                       onClose: B,
                   })
                 : (0, r.jsx)(m.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == M ? void 0 : M.id,
+                      guildId: null == j ? void 0 : j.id,
                       onClose: B,
                   }),
-            null != M &&
+            null != j &&
                 (0, r.jsx)(N.Z, {
                     user: t,
                     currentUser: n,
-                    guild: M,
+                    guild: j,
                 }),
         ],
     });

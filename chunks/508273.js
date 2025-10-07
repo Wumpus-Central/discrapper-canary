@@ -52,10 +52,11 @@ function C(e) {
         }, [p, C, w]);
     return null == D
         ? (0, r.jsx)(y.Z, {})
-        : (0, r.jsxs)(l.P3F, {
+        : (0, r.jsxs)(l.kL8, {
               className: o()(I.guildInviteContainer, { [I.clickable]: C && p }),
               onClick: L,
               style: M,
+              "aria-label": v.intl.string(v.t.dcl9MT),
               children: [
                   (0, r.jsxs)("div", {
                       className: I.cardHeightMeasure,

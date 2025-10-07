@@ -1,14 +1,14 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(120356),
-    s = n.n(i),
-    a = n(979554),
+    s = n(120356),
+    a = n.n(s),
+    i = n(979554),
     o = n(876917),
     c = n(597688),
     u = n(616066),
     d = n(215023),
-    g = n(721275);
+    g = n(980800);
 let p = {
         x: 160,
         y: 160,
@@ -99,11 +99,11 @@ let p = {
             skuId: "1217625794382401577",
         },
     ],
-    _ = (e) => {
-        let { peaking: t, transitioning: n, style: i } = e,
+    C = (e) => {
+        let { peaking: t, transitioning: n, style: s } = e,
             p = window.innerHeight,
-            [_, C] = l.useState(!1),
-            h = f.map((e) => {
+            [C, h] = l.useState(!1),
+            _ = f.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -111,46 +111,46 @@ let p = {
             l.useEffect(() => {
                 n &&
                     setTimeout(() => {
-                        C(!0);
+                        h(!0);
                     }, d.lb);
             }, [n]),
             (0, r.jsx)("div", {
-                style: i,
-                className: s()(g.jumbleWrapper, {
+                style: s,
+                className: a()(g.jumbleWrapper, {
                     [g.peaking]: t,
-                    [g.transitioned]: _,
+                    [g.transitioned]: C,
                 }),
                 children: f.map((e, t) => {
-                    var l, i;
-                    let { top: s, left: c, rotation: f, size: _, skuId: C } = e,
-                        m = null == (l = h[t]) ? void 0 : l.items[0],
-                        b = null == (i = h[t]) ? void 0 : i.type,
-                        E = b === a.Z.AVATAR_DECORATION ? 384 : 512;
+                    var l, s;
+                    let { top: a, left: c, rotation: f, size: C, skuId: h } = e,
+                        m = null == (l = _[t]) ? void 0 : l.items[0],
+                        b = null == (s = _[t]) ? void 0 : s.type,
+                        E = b === i.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         "div",
                         {
                             className: g.asset,
                             style: {
-                                top: n ? -p - E : s,
+                                top: n ? -p - E : a,
                                 left: n ? "".concat(c - 75 - 350 * Math.random()) : c,
                                 transform: "rotate(".concat(f, "deg)"),
-                                height: _.y,
-                                width: _.x,
+                                height: C.y,
+                                width: C.x,
                                 transitionDelay: "".concat(Math.random() / 3, "s"),
                                 transitionDuration: "".concat(d.lb - 200 * Math.random(), "ms"),
                             },
                             children: [
-                                null != m && b === a.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: m }),
+                                null != m && b === i.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: m }),
                                 null != m &&
-                                    b === a.Z.PROFILE_EFFECT &&
+                                    b === i.Z.PROFILE_EFFECT &&
                                     (0, r.jsx)(o.Z, {
                                         skuId: m.skuId,
                                         isPurchased: !1,
-                                        isHovering: !0,
+                                        isHighlighted: !0,
                                     }),
                             ],
                         },
-                        C + t,
+                        h + t,
                     );
                 }),
             })

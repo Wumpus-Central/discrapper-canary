@@ -5,10 +5,10 @@ var r = n(951288),
     a = n.n(l),
     o = n(802433),
     s = n(680295),
-    c = n(165216),
+    c = n(803580),
     u = n(241822);
 let d = (e) => {
-    let { skuId: t, isHovering: n, forCollectedModal: l = !1, isPurchased: d, removeSetHeight: p = !1 } = e,
+    let { skuId: t, isHighlighted: n, forCollectedModal: l = !1, isPurchased: d, removeSetHeight: p = !1 } = e,
         f = l ? 250 : 0.1,
         [h, g] = i.useState(!0);
     return (i.useEffect(() => {
