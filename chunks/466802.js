@@ -22,6 +22,6 @@ let E = (0, l.x1)(r.n.NITRO_PANE, {
         buildLayout: () => [d],
         trailing: {
             type: u.PU.STRONGLY_DISCOURAGED_CUSTOM,
-            useDecoration: () => (0, a.x)(),
+            useDecoration: (t, e) => (0, a.x)(e),
         },
     });

@@ -58,11 +58,11 @@ function u(e) {
     return a ? s : null;
 }
 function d(e) {
-    let { useDecoration: t, visibleContent: n } = e;
-    return t(n);
+    let { useDecoration: t, visibleContent: n, isSelected: r } = e;
+    return t(n, r);
 }
 function f(e) {
-    let { trailing: t, visibleContent: n } = e;
+    let { trailing: t, visibleContent: n, isSelected: l } = e;
     if (null == t) return null;
     switch (t.type) {
         case o.PU.BADGE_COUNT:
@@ -70,6 +70,12 @@ function f(e) {
         case o.PU.BADGE_NEW:
             return (0, r.jsx)(u, s(a({}, t), { visibleContent: n }));
         case o.PU.STRONGLY_DISCOURAGED_CUSTOM:
-            return (0, r.jsx)(d, s(a({}, t), { visibleContent: n }));
+            return (0, r.jsx)(
+                d,
+                s(a({}, t), {
+                    visibleContent: n,
+                    isSelected: l,
+                }),
+            );
     }
 }

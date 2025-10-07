@@ -19,7 +19,7 @@ function f(e) {
 function m(e) {
     let { node: t, visibleContent: n } = e,
         { currentPanel: o, navigateTo: i, setShowNavigationMobile: m } = (0, s.t)(),
-        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: x, trailing: p } = t,
+        { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: p, trailing: x } = t,
         v = l.useMemo(() => t.layout[0], [t]),
         y = null != o && o.key === (null == v ? void 0 : v.key),
         h = b(),
@@ -39,12 +39,13 @@ function m(e) {
               active: y,
               children: [
                   (0, r.jsx)(j, {}),
-                  null != p &&
+                  null != x &&
                       (0, r.jsx)("div", {
                           className: d.itemContent,
                           children: (0, r.jsx)(c.W, {
-                              trailing: p,
+                              trailing: x,
                               visibleContent: n,
+                              isSelected: y,
                           }),
                       }),
               ],
@@ -58,7 +59,7 @@ function m(e) {
                           (0, r.jsxs)("div", {
                               className: d.itemContent,
                               children: [
-                                  (0, r.jsx)(x, {
+                                  (0, r.jsx)(p, {
                                       color: "currentColor",
                                       size: "refresh_sm",
                                       className: d.icon,
@@ -70,12 +71,13 @@ function m(e) {
                                   }),
                               ],
                           }),
-                          null != p &&
+                          null != x &&
                               (0, r.jsx)("div", {
                                   className: d.itemContent,
                                   children: (0, r.jsx)(c.W, {
-                                      trailing: p,
+                                      trailing: x,
                                       visibleContent: n,
+                                      isSelected: y,
                                   }),
                               }),
                       ],
