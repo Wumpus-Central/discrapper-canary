@@ -5,19 +5,17 @@ var r = n(951288),
     l = n.n(i),
     s = n(481060),
     o = n(514482);
-let c = a.memo(
-    a.forwardRef(function (e, t) {
-        let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, "aria-label": u } = e;
-        return (0, r.jsx)(s.kL8, {
-            ref: t,
-            className: l()(o.card, i, {
-                [o.clickable]: null != n,
-                [o.disabled]: c,
-            }),
-            onContextMenu: a,
-            onClick: c ? void 0 : n,
-            "aria-label": u,
-            children: d,
-        });
-    }),
-);
+let c = a.memo(function (e) {
+    let { onClick: t, onContextMenu: n, className: a, disabled: i, children: c, "aria-label": d, ref: u } = e;
+    return (0, r.jsx)(s.kL8, {
+        ref: u,
+        className: l()(o.card, a, {
+            [o.clickable]: null != t,
+            [o.disabled]: i,
+        }),
+        onContextMenu: n,
+        onClick: i ? void 0 : t,
+        "aria-label": d,
+        children: c,
+    });
+});

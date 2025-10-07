@@ -55,60 +55,61 @@ function u(e, t) {
         e
     );
 }
-let d = i.forwardRef(function (e, t) {
+let d = (e) => {
     let {
-            tag: n = "div",
-            children: s,
-            className: c,
-            style: d,
-            focusProps: f,
-            onClick: _,
-            onMouseEnter: p,
-            onDoubleClick: h,
-            onContextMenu: m,
-            onKeyDown: g,
-            onFocus: E,
-            onBlur: b,
-            onMouseOver: y,
-            onMouseDown: O,
-            onMouseLeave: v,
-            buttonProps: I,
-            "aria-label": T,
-            "aria-describedby": S,
+            tag: t = "div",
+            children: n,
+            className: s,
+            style: c,
+            focusProps: d,
+            onClick: f,
+            onMouseEnter: _,
+            onDoubleClick: p,
+            onContextMenu: h,
+            onKeyDown: m,
+            onFocus: g,
+            onBlur: E,
+            onMouseOver: b,
+            onMouseDown: y,
+            onMouseLeave: O,
+            buttonProps: v,
+            "aria-label": I,
+            "aria-describedby": T,
+            ref: S,
+            buttonRef: A,
         } = e,
-        A = i.useRef(null);
-    return (
-        i.useImperativeHandle(t, () => A.current),
-        (0, r.jsxs)(n, {
-            ref: A,
-            className: c,
-            style: d,
-            onClick: _,
-            onMouseEnter: p,
-            onMouseOver: y,
-            onMouseLeave: v,
-            onDoubleClick: h,
-            onMouseDown: O,
-            onContextMenu: m,
-            children: [
-                (0, r.jsx)(
-                    a.P,
-                    u(l({}, I), {
-                        focusProps: l({ ringTarget: A }, f),
-                        className: o.focusTarget,
-                        "aria-label": T,
-                        "aria-describedby": S,
-                        onClick: (e) => {
-                            e.stopPropagation(), null == _ || _(e);
-                        },
-                        onKeyDown: g,
-                        onFocus: E,
-                        onBlur: b,
-                        onMouseDown: O,
-                    }),
-                ),
-                s,
-            ],
-        })
-    );
-});
+        C = i.useRef(null),
+        N = null != S ? S : C;
+    return (0, r.jsxs)(t, {
+        ref: N,
+        className: s,
+        style: c,
+        onClick: f,
+        onMouseEnter: _,
+        onMouseOver: b,
+        onMouseLeave: O,
+        onDoubleClick: p,
+        onMouseDown: y,
+        onContextMenu: h,
+        children: [
+            (0, r.jsx)(
+                a.P,
+                u(l({}, v), {
+                    innerRef: A,
+                    focusProps: l({ ringTarget: N }, d),
+                    className: o.focusTarget,
+                    "aria-label": I,
+                    "aria-describedby": T,
+                    onClick: (e) => {
+                        e.stopPropagation(), null == f || f(e);
+                    },
+                    onKeyDown: m,
+                    onFocus: g,
+                    onBlur: E,
+                    onMouseDown: y,
+                }),
+            ),
+            n,
+        ],
+    });
+};
