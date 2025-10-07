@@ -327,8 +327,6 @@ class L extends _.Z {
                             e.hybridGdiPrintWindowFrames,
                             e.quartzFrames,
                             null != (t = e.desktopCapturerType) ? t : e.desktop_capturer_type,
-                            e.screens,
-                            e.windows,
                             e.activity,
                             e.goLiveCameraFrames,
                             e.screenCaptureKitFrames,

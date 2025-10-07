@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -257,7 +257,7 @@ class F extends c.Z {
         this.on(u.z.State, (e, t, n) => {
             if (
                 (l.Z.dispatch(
-                    M(
+                    j(
                         x(
                             {
                                 type: "RTC_CONNECTION_STATE",
@@ -273,16 +273,16 @@ class F extends c.Z {
             ) {
                 var r, i, s, c, u, d, f, _;
                 null == (r = this._connection) ||
-                    r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, o, s, l, c, u, d, f, _, m, g) => {
-                        let E = this.getMediaSessionId(),
-                            b = this.getRTCConnectionId(),
-                            y = this.getGoLiveSource();
-                        (0, I.q)().then((O) => {
-                            var v, I, S;
-                            let A = null;
-                            if (null != O) {
-                                let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = O;
-                                A = {
+                    r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, o, s, l, c, u, d, f, _) => {
+                        let m = this.getMediaSessionId(),
+                            g = this.getRTCConnectionId(),
+                            E = this.getGoLiveSource();
+                        (0, I.q)().then((b) => {
+                            var y, O, v;
+                            let I = null;
+                            if (null != b) {
+                                let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = b;
+                                I = {
                                     cpu_brand: e,
                                     cpu_vendor: t,
                                     cpu_memory: n,
@@ -290,7 +290,7 @@ class F extends c.Z {
                                     gpu_memory: i,
                                 };
                             }
-                            let C =
+                            let S =
                                     (null != e ? e : 0) +
                                     (null != t ? t : 0) +
                                     (null != n ? n : 0) +
@@ -298,13 +298,13 @@ class F extends c.Z {
                                     (null != i ? i : 0) +
                                     (null != a ? a : 0) +
                                     (null != c ? c : 0) +
-                                    (null != g ? g : 0) +
-                                    (null != m ? m : 0),
-                                N =
-                                    (null == y || null == (v = y.desktopSource) ? void 0 : v.sourcePid) != null
-                                        ? h.ZP.getGameForPID(y.desktopSource.sourcePid)
+                                    (null != _ ? _ : 0) +
+                                    (null != f ? f : 0),
+                                A =
+                                    (null == E || null == (y = E.desktopSource) ? void 0 : y.sourcePid) != null
+                                        ? h.ZP.getGameForPID(E.desktopSource.sourcePid)
                                         : null,
-                                { gameName: R, gameId: P, exe: L, distributor: j } = (0, p.G8)(N);
+                                { gameName: C, gameId: N, exe: R, distributor: P } = (0, p.G8)(A);
                             T.default.track(
                                 w.rMx.SCREENSHARE_FINISHED,
                                 x(
@@ -319,33 +319,31 @@ class F extends c.Z {
                                         hybrid_gdi_bitblt_frames: s,
                                         hybrid_gdi_printwindow_frames: l,
                                         quartz_frames: c,
-                                        screencapturekit_frames: g,
-                                        go_live_camera_frames: m,
-                                        total_frames: C,
+                                        screencapturekit_frames: _,
+                                        go_live_camera_frames: f,
+                                        total_frames: S,
                                         desktop_capturer_type: u,
-                                        media_session_id: E,
-                                        rtc_connection_id: b,
+                                        media_session_id: m,
+                                        rtc_connection_id: g,
                                         context: D.Yn.STREAM,
-                                        screens: d,
-                                        windows: f,
-                                        activity: _,
+                                        activity: d,
                                         soundshare_session:
                                             null !=
-                                            (S =
-                                                null == y || null == (I = y.desktopSource)
+                                            (v =
+                                                null == E || null == (O = E.desktopSource)
                                                     ? void 0
-                                                    : I.soundshareSession)
-                                                ? S
+                                                    : O.soundshareSession)
+                                                ? v
                                                 : void 0,
-                                        share_game_name: R,
-                                        share_game_id: P,
-                                        share_game_exe: L,
-                                        share_game_distributor: j,
+                                        share_game_name: C,
+                                        share_game_id: N,
+                                        share_game_exe: R,
+                                        share_game_distributor: P,
                                         picker_type_used:
                                             null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                         duration: this.analyticsContext.getDuration(),
                                     },
-                                    A,
+                                    I,
                                 ),
                             );
                         });
@@ -603,7 +601,7 @@ class F extends c.Z {
         let e = this.isOwner ? (0, P.Z)() : null;
         T.default.track(
             w.rMx.VIDEO_STREAM_STARTED,
-            M(x({}, this.getStreamAnalyticsProperties(), e), {
+            j(x({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: y.Z.getType(),
                 effective_connection_speed: y.Z.getEffectiveConnectionSpeed(),
                 service_provider: y.Z.getServiceProvider(),
@@ -637,7 +635,7 @@ class F extends c.Z {
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 T.default.track(
                     w.rMx.VIDEO_STREAM_ENDED,
-                    M(
+                    j(
                         x(
                             {},
                             a,
@@ -669,7 +667,7 @@ class F extends c.Z {
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     T.default.track(
                         w.rMx.VIDEO_STREAM_ENDED,
-                        M(
+                        j(
                             x(
                                 {},
                                 a,
