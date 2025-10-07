@@ -1,10 +1,9 @@
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => p }), n(539854);
 var r = n(979554),
-    i = n(778787),
-    a = n(803358),
-    o = n(194165),
-    s = n(889577);
-function l(e, t, n) {
+    i = n(884697),
+    a = n(778787),
+    o = n(803358);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +16,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +27,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,22 +44,22 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +67,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,27 +76,34 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class h extends a.Z {
+let _ = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
+class p extends o.Z {
     static fromServer(e) {
         var {
                 products: t,
                 logo: n,
                 hero_ranking: r,
-                pdp_bg: a,
-                mobile_bg: l,
-                mobile_banner: u,
-                catalog_banner_asset: _,
-                hero_banner: m,
-                hero_banner_asset: g,
-                featured_block: E,
-                hero_logo: b,
-                hero_banner_config: y,
-                hero_logo_display_config: O,
-                mobile_hero_path: v,
-                mobile_hero_animated_path: I,
+                pdp_bg: o,
+                mobile_bg: s,
+                mobile_banner: c,
+                catalog_banner_asset: f,
+                hero_banner_asset: h,
+                featured_block: m,
+                hero_logo: g,
+                hero_logo_display_config: E,
+                hero_banner_display_config: b,
+                hero_banner_url: y,
+                hero_banner_animated_url: O,
+                hero_logo_url: v,
+                catalog_banner_url: I,
+                catalog_banner_animated_url: T,
+                featured_block_url: S,
+                logo_url: A,
+                pdp_bg_url: C,
+                mobile_banner_url: N,
+                mobile_bg_url: R,
             } = e,
-            T = f(e, [
+            P = d(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -105,55 +111,76 @@ class h extends a.Z {
                 "mobile_bg",
                 "mobile_banner",
                 "catalog_banner_asset",
-                "hero_banner",
                 "hero_banner_asset",
                 "featured_block",
                 "hero_logo",
-                "hero_banner_config",
                 "hero_logo_display_config",
-                "mobile_hero_path",
-                "mobile_hero_animated_path",
+                "hero_banner_display_config",
+                "hero_banner_url",
+                "hero_banner_animated_url",
+                "hero_logo_url",
+                "catalog_banner_url",
+                "catalog_banner_animated_url",
+                "featured_block_url",
+                "logo_url",
+                "pdp_bg_url",
+                "mobile_banner_url",
+                "mobile_bg_url",
             ]);
-        return new h(
-            d(c({}, super.fromServer(T)), {
+        return new p(
+            u(l({}, super.fromServer(P)), {
                 products: t.reduce((e, t) => {
-                    let n = i.Z.fromServer(t);
-                    return (p(n.type) || 0 !== n.items.length) && e.push(n), e;
+                    let n = a.Z.fromServer(t);
+                    return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
                 }, []),
                 logo: n,
                 heroRanking: r,
-                pdpBg: a,
-                mobileBg: l,
-                mobileBanner: u,
-                catalogBannerAsset: _,
-                heroBanner: m,
-                heroBannerAsset: g,
-                featuredBlock: E,
-                heroLogo: b,
-                heroBannerConfig: null != y ? o.Z.fromServer(y) : void 0,
-                heroLogoDisplayConfig: null != O ? s.X.fromServer(O) : void 0,
-                mobileHeroPath: v,
-                mobileHeroAnimatedPath: I,
+                pdpBg: o,
+                mobileBg: s,
+                mobileBanner: c,
+                catalogBannerAsset: f,
+                heroBannerAsset: h,
+                featuredBlock: m,
+                heroLogo: g,
+                heroLogoDisplayConfig: (0, i.QG)(E),
+                heroBannerDisplayConfig: (0, i.QG)(b),
+                heroBannerUrl: y,
+                heroBannerAnimatedUrl: O,
+                heroLogoUrl: v,
+                catalogBannerUrl: I,
+                catalogBannerAnimatedUrl: T,
+                featuredBlockUrl: S,
+                logoUrl: A,
+                pdpBgUrl: C,
+                mobileBannerUrl: N,
+                mobileBgUrl: R,
             }),
         );
     }
     constructor(e) {
         super(e),
-            l(this, "products", void 0),
-            l(this, "logo", void 0),
-            l(this, "heroRanking", void 0),
-            l(this, "pdpBg", void 0),
-            l(this, "mobileBg", void 0),
-            l(this, "mobileBanner", void 0),
-            l(this, "catalogBannerAsset", void 0),
-            l(this, "heroBanner", void 0),
-            l(this, "heroBannerAsset", void 0),
-            l(this, "featuredBlock", void 0),
-            l(this, "heroLogo", void 0),
-            l(this, "heroBannerConfig", void 0),
-            l(this, "heroLogoDisplayConfig", void 0),
-            l(this, "mobileHeroPath", void 0),
-            l(this, "mobileHeroAnimatedPath", void 0),
+            s(this, "products", void 0),
+            s(this, "heroRanking", void 0),
+            s(this, "logo", void 0),
+            s(this, "pdpBg", void 0),
+            s(this, "mobileBg", void 0),
+            s(this, "mobileBanner", void 0),
+            s(this, "catalogBannerAsset", void 0),
+            s(this, "heroBannerAsset", void 0),
+            s(this, "featuredBlock", void 0),
+            s(this, "heroLogo", void 0),
+            s(this, "heroLogoDisplayConfig", void 0),
+            s(this, "heroBannerDisplayConfig", void 0),
+            s(this, "heroBannerUrl", void 0),
+            s(this, "heroBannerAnimatedUrl", void 0),
+            s(this, "heroLogoUrl", void 0),
+            s(this, "catalogBannerUrl", void 0),
+            s(this, "catalogBannerAnimatedUrl", void 0),
+            s(this, "featuredBlockUrl", void 0),
+            s(this, "logoUrl", void 0),
+            s(this, "pdpBgUrl", void 0),
+            s(this, "mobileBannerUrl", void 0),
+            s(this, "mobileBgUrl", void 0),
             (this.products = e.products),
             (this.logo = e.logo),
             (this.heroRanking = e.heroRanking),
@@ -161,13 +188,20 @@ class h extends a.Z {
             (this.mobileBg = e.mobileBg),
             (this.mobileBanner = e.mobileBanner),
             (this.catalogBannerAsset = e.catalogBannerAsset),
-            (this.heroBanner = e.heroBanner),
             (this.featuredBlock = e.featuredBlock),
             (this.heroLogo = e.heroLogo),
             (this.heroBannerAsset = e.heroBannerAsset),
-            (this.heroBannerConfig = e.heroBannerConfig),
             (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig),
-            (this.mobileHeroPath = e.mobileHeroPath),
-            (this.mobileHeroAnimatedPath = e.mobileHeroAnimatedPath);
+            (this.heroBannerDisplayConfig = e.heroBannerDisplayConfig),
+            (this.heroBannerUrl = e.heroBannerUrl),
+            (this.heroBannerAnimatedUrl = e.heroBannerAnimatedUrl),
+            (this.heroLogoUrl = e.heroLogoUrl),
+            (this.catalogBannerUrl = e.catalogBannerUrl),
+            (this.catalogBannerAnimatedUrl = e.catalogBannerAnimatedUrl),
+            (this.featuredBlockUrl = e.featuredBlockUrl),
+            (this.logoUrl = e.logoUrl),
+            (this.pdpBgUrl = e.pdpBgUrl),
+            (this.mobileBannerUrl = e.mobileBannerUrl),
+            (this.mobileBgUrl = e.mobileBgUrl);
     }
 }

@@ -21,8 +21,8 @@ var r = n(951288),
     v = n(870289),
     x = n(254690),
     O = n(655283),
-    T = n(370039),
-    y = n(937510),
+    y = n(370039),
+    T = n(937510),
     L = n(38900),
     j = n(709999),
     k = n(653126),
@@ -45,7 +45,6 @@ let M = (0, E.IC)(90),
         logoUrl: "",
         categorySkuId: void 0,
         bannerAsset: void 0,
-        fallbackBannerUrl: "",
         summary: "",
         type: o.z.HERO,
         categoryStoreListingId: "",
@@ -80,15 +79,14 @@ let M = (0, E.IC)(90),
                             logoUrl: (0, E.uV)(null != (t = U.heroLogo) ? t : U.logo, { size: M }),
                             categorySkuId: U.skuId,
                             bannerAsset: U.heroBannerAsset,
-                            fallbackBannerUrl: (0, E.uV)(U.heroBanner, {
-                                size: w.pv,
-                                format: "jpg",
-                            }),
                             summary: U.summary,
                             type: o.z.HERO,
                             categoryStoreListingId: U.storeListingId,
-                            bannerConfig: U.heroBannerConfig,
-                            logoConfig: U.heroLogoDisplayConfig,
+                            bannerDisplayConfig: U.heroBannerDisplayConfig,
+                            logoDisplayConfig: U.heroLogoDisplayConfig,
+                            heroLogoUrl: U.heroLogoUrl,
+                            heroBannerUrl: U.heroBannerUrl,
+                            heroBannerAnimatedUrl: U.heroBannerAnimatedUrl,
                         };
             }, [V, U]),
             {
@@ -136,8 +134,8 @@ let M = (0, E.IC)(90),
                     totalCards: e ? t : 4,
                 };
             })(z !== w.AW.ORBS),
-            eC = (0, T.a)()(ed),
-            eh = (0, y.l)(eC).slice(0, ef),
+            eC = (0, y.a)()(ed),
+            eh = (0, T.l)(eC).slice(0, ef),
             e_ = (0, B.St)(eh),
             em =
                 z === w.AW.ORBS
@@ -183,12 +181,14 @@ let M = (0, E.IC)(90),
                       (0, r.jsx)("div", {
                           className: a()(D.banner, { [D.rivBanner]: ec }),
                           style: null != eo ? { background: eo } : void 0,
-                          children: (0, r.jsx)(Z.Z, {
-                              bannerStatic: es,
-                              bannerAnimated: ea,
-                              isResponsive: ei,
-                              eventTargetRef: q,
-                          }),
+                          children:
+                              null != es &&
+                              (0, r.jsx)(Z.Z, {
+                                  bannerStatic: es,
+                                  bannerAnimated: ea,
+                                  isResponsive: ei,
+                                  eventTargetRef: q,
+                              }),
                       }),
                       (0, r.jsxs)("div", {
                           className: D.heroBlockContent,
@@ -227,7 +227,7 @@ let M = (0, E.IC)(90),
                                                                   [D.heroLogoNameContainerStacked]: $,
                                                               }),
                                                               children: [
-                                                                  null != et.logoUrl &&
+                                                                  null != el &&
                                                                       (0, r.jsx)("img", {
                                                                           className: D.heroHeaderLogo,
                                                                           src: el,

@@ -18,18 +18,22 @@ class a {
         return new a(e);
     }
     constructor(e) {
-        i(this, "bannerAsset", void 0),
-            i(this, "title", void 0),
+        i(this, "title", void 0),
             i(this, "body", void 0),
             i(this, "helpCenterUrl", void 0),
             i(this, "textColor", void 0),
             i(this, "endTime", void 0),
+            i(this, "bannerAsset", void 0),
+            i(this, "bannerUrl", void 0),
+            i(this, "bannerAnimatedUrl", void 0),
             (this.type = r.z.IMMERSIVE_BANNER),
-            (this.bannerAsset = e.banner_asset),
             (this.title = e.title),
             (this.body = e.body),
             (this.helpCenterUrl = e.help_center_url),
             (this.textColor = e.text_color),
-            (this.endTime = null != e.end_time ? new Date(e.end_time) : void 0);
+            (this.endTime = null != e.end_time ? new Date(e.end_time) : void 0),
+            (this.bannerAsset = e.banner_asset),
+            (this.bannerUrl = e.banner_url),
+            (this.bannerAnimatedUrl = e.banner_animated_url);
     }
 }

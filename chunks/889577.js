@@ -17,15 +17,29 @@ class i {
         return new i(e);
     }
     toDesktopStyles() {
-        if (null != this.desktopMaxHeight) return { maxHeight: this.desktopMaxHeight };
+        let e = {};
+        return (
+            null != this.desktopMaxHeight && (e.maxHeight = this.desktopMaxHeight),
+            null != this.backgroundStyle && (e.background = this.backgroundStyle),
+            Object.keys(e).length > 0 ? e : void 0
+        );
     }
     toMobileStyles() {
-        if (null != this.mobileMaxHeight) return { maxHeight: this.mobileMaxHeight };
+        let e = {};
+        return (
+            null != this.mobileMaxHeight && (e.maxHeight = this.mobileMaxHeight),
+            null != this.backgroundStyle && (e.background = this.backgroundStyle),
+            Object.keys(e).length > 0 ? e : void 0
+        );
     }
     constructor(e) {
         r(this, "desktopMaxHeight", void 0),
             r(this, "mobileMaxHeight", void 0),
+            r(this, "responsive", void 0),
+            r(this, "backgroundStyle", void 0),
             (this.desktopMaxHeight = e.desktop_max_height),
-            (this.mobileMaxHeight = e.mobile_max_height);
+            (this.mobileMaxHeight = e.mobile_max_height),
+            (this.responsive = e.responsive),
+            (this.backgroundStyle = e.background_style);
     }
 }

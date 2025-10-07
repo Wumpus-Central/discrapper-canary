@@ -1,8 +1,7 @@
-n.d(t, { s: () => s }), n(781311);
+n.d(t, { s: () => o }), n(781311);
 var r = n(685816),
-    i = n(194165),
-    a = n(889577);
-function o(e, t, n) {
+    i = n(884697);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,47 +14,53 @@ function o(e, t, n) {
         e
     );
 }
-class s {
+class o {
     static fromServer(e) {
-        return new s(e);
+        return new o(e);
     }
     constructor(e) {
-        o(this, "categorySkuId", void 0),
-            o(this, "name", void 0),
-            o(this, "summary", void 0),
-            o(this, "categoryStoreListingId", void 0),
-            o(this, "fallbackBannerUrl", void 0),
-            o(this, "bannerAsset", void 0),
-            o(this, "logoUrl", void 0),
-            o(this, "title", void 0),
-            o(this, "rankedSkuIds", void 0),
-            o(this, "unpublishedAt", void 0),
-            o(this, "bannerTextColor", void 0),
-            o(this, "bannerConfig", void 0),
-            o(this, "logoConfig", void 0),
-            o(this, "mobileHeroPath", void 0),
-            o(this, "mobileHeroAnimatedPath", void 0),
-            o(this, "mobileTitle", void 0),
-            o(this, "mobileSummary", void 0),
-            o(this, "mobileProductsTitle", void 0),
+        a(this, "categorySkuId", void 0),
+            a(this, "name", void 0),
+            a(this, "summary", void 0),
+            a(this, "categoryStoreListingId", void 0),
+            a(this, "bannerAsset", void 0),
+            a(this, "logoUrl", void 0),
+            a(this, "title", void 0),
+            a(this, "rankedSkuIds", void 0),
+            a(this, "unpublishedAt", void 0),
+            a(this, "bannerTextColor", void 0),
+            a(this, "bannerDisplayConfig", void 0),
+            a(this, "logoDisplayConfig", void 0),
+            a(this, "mobileHeroPath", void 0),
+            a(this, "mobileHeroAnimatedPath", void 0),
+            a(this, "mobileTitle", void 0),
+            a(this, "mobileSummary", void 0),
+            a(this, "mobileProductsTitle", void 0),
+            a(this, "heroBannerUrl", void 0),
+            a(this, "heroBannerAnimatedUrl", void 0),
+            a(this, "heroLogoUrl", void 0),
+            a(this, "mobileHeroUrl", void 0),
+            a(this, "mobileHeroAnimatedUrl", void 0),
             (this.type = r.z.HERO),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
             (this.summary = e.summary.trim()),
             (this.categoryStoreListingId = e.category_store_listing_id),
-            (this.fallbackBannerUrl = e.fallback_banner_url),
             (this.bannerAsset = e.banner_asset),
             (this.logoUrl = e.logo_url),
             (this.title = e.title),
             (this.rankedSkuIds = e.ranked_sku_ids),
             (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null),
             (this.bannerTextColor = e.banner_text_color),
-            (this.bannerConfig = null != e.config ? i.Z.fromServer(e.config) : void 0),
-            (this.logoConfig = null != e.logo_display_config ? a.X.fromServer(e.logo_display_config) : void 0),
+            (this.logoDisplayConfig = (0, i.QG)(e.logo_display_config)),
+            (this.bannerDisplayConfig = (0, i.QG)(e.banner_display_config)),
             (this.mobileTitle = e.mobile_title),
             (this.mobileSummary = e.mobile_summary),
             (this.mobileProductsTitle = e.mobile_products_title),
-            (this.mobileHeroPath = e.mobile_hero_path),
-            (this.mobileHeroAnimatedPath = e.mobile_hero_animated_path);
+            (this.heroBannerUrl = e.hero_banner_url),
+            (this.heroBannerAnimatedUrl = e.hero_banner_animated_url),
+            (this.heroLogoUrl = e.hero_logo_url),
+            (this.mobileHeroUrl = e.mobile_hero_url),
+            (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url);
     }
 }

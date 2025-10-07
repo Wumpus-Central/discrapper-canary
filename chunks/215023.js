@@ -1,26 +1,25 @@
 n.d(t, {
     AW: () => O,
-    Ch: () => G,
+    Ch: () => U,
     Cm: () => A,
-    HU: () => D,
+    HU: () => w,
     IV: () => C,
-    J0: () => R,
-    K8: () => w,
+    J0: () => N,
+    K8: () => P,
     RE: () => I,
-    Vt: () => x,
+    Vt: () => L,
     aK: () => T,
-    aP: () => U,
+    aP: () => k,
     bu: () => h,
     cv: () => p,
     f7: () => y,
     i0: () => b,
-    kN: () => P,
+    kN: () => R,
     lb: () => S,
     o0: () => M,
-    o8: () => L,
-    pv: () => N,
+    o8: () => D,
     rL: () => _,
-    xg: () => k,
+    xg: () => j,
     yf: () => E,
 }),
     n(388685);
@@ -89,12 +88,11 @@ let v = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
     S = 800,
     A = 604800000,
     C = 12,
-    N = 1128,
-    R = 518,
-    P = 5,
-    w = 3,
-    D = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
-var L = (function (e) {
+    N = 518,
+    R = 5,
+    P = 3,
+    w = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
+var D = (function (e) {
     return (
         (e[(e.FIAT = 0)] = "FIAT"),
         (e[(e.ORB = 1)] = "ORB"),
@@ -105,14 +103,14 @@ var L = (function (e) {
         e
     );
 })({});
-let x = {
+let L = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: f.a.PREMIUM_TIER_2_3_DAY,
     },
-    j = new Set(Object.values(x)),
-    M = (e) => j.has(e),
-    k = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    U = [
+    x = new Set(Object.values(L)),
+    M = (e) => x.has(e),
+    j = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
+    k = [
         {
             sortType: d.E.RELEVANCE,
             sortDirection: u.F.DESC,
@@ -134,6 +132,6 @@ let x = {
             sortDirection: u.F.DESC,
         },
     ];
-var G = (function (e) {
+var U = (function (e) {
     return (e.DEFAULT = "default"), (e.THUMBNAIL = "thumbnail"), e;
 })({});
