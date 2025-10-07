@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(539854), n(781311);
+n.d(t, { Z: () => Z }), n(539854), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -14,20 +14,21 @@ var r = n(951288),
     h = n(482798),
     m = n(687516),
     g = n(106301),
-    E = n(314897),
-    b = n(699516),
-    y = n(802529),
-    O = n(11133),
-    v = n(303524),
-    I = n(329520),
-    T = n(233023),
-    S = n(868781),
-    A = n(122943),
-    C = n(556638),
-    N = n(981631),
-    R = n(388032),
-    P = n(80568);
-function w(e, t, n) {
+    E = n(741570),
+    b = n(314897),
+    y = n(699516),
+    O = n(802529),
+    v = n(11133),
+    I = n(303524),
+    T = n(329520),
+    S = n(233023),
+    A = n(868781),
+    C = n(122943),
+    N = n(556638),
+    R = n(981631),
+    P = n(388032),
+    w = n(80568);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,12 +52,12 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,67 +69,67 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e) {
+function j(e) {
     let t = (0, d.R)("formatActivityString"),
         n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
-    return null != n ? (t ? n : R.intl.formatToPlainString(R.t["0wJXSk"], { name: n })) : R.intl.string(R.t.eXan7O);
+    return null != n ? (t ? n : P.intl.formatToPlainString(P.t["0wJXSk"], { name: n })) : P.intl.string(P.t.eXan7O);
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
-            ? R.intl.string(R.t["9FaEzs"])
+            ? P.intl.string(P.t["9FaEzs"])
             : e.isGuildStageVoice()
-              ? R.intl.string(R.t.QygGCA)
-              : R.intl.string(R.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
+              ? P.intl.string(P.t.QygGCA)
+              : P.intl.string(P.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
-function k(e) {
+function U(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: a } = (0, O.f)({ location: "StackedActivityStatus" }),
         { enableTopNavButton: o } = (0, h.Cq)({ location: "StackedActivityStatus" }),
         s = (0, p.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(M(t)),
+        null != t && i.push(j(t)),
         n.forEach((e) => {
-            let { tooltip: t } = (0, O.Z)(e, l);
+            let { tooltip: t } = (0, v.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(j(r, s)),
+        null == t && null != r && i.push(k(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
-function U(e) {
+function G(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
     return (0, r.jsxs)(l.xvT, {
         variant: t,
-        className: o()(n, P.activityCounter),
+        className: o()(n, w.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
 }
-function G(e) {
+function B(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xvT, {
         variant: t,
-        className: o()(P.dot, n),
-        children: C.l,
+        className: o()(w.dot, n),
+        children: N.l,
     });
 }
-function B(e) {
+function Z(e) {
     let {
         user: t,
         activities: n,
@@ -137,32 +138,39 @@ function B(e) {
         textClassName: d,
         iconClassName: p,
         textSize: h = "xs",
-        animateEmoji: y = !0,
-        hasQuest: O = !1,
-        hideEmoji: R = !1,
-        hideTooltip: w = !1,
+        animateEmoji: O = !0,
+        hasQuest: v = !1,
+        hideEmoji: P = !1,
+        hideTooltip: D = !1,
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
-    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        M = (0, m.Cf)(L),
-        j = i.useMemo(() => {
+    let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, m.Cf)(x),
+        k = (0, E.E)("ActivityStatus", l),
+        Z = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === N.IIU.CUSTOM_STATUS;
+                          return t === R.IIU.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        B = (0, c.e7)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)),
-        Z = (0, c.e7)([g.Z], () =>
-            B ? g.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === N.IIU.HANG_STATUS) : null,
+        F = (0, c.e7)([b.default], () => b.default.getId() === (null == t ? void 0 : t.id)),
+        V = (0, c.e7)([g.Z], () =>
+            k
+                ? F
+                    ? g.Z.getHangStatusActivity()
+                    : null != n
+                      ? n.find((e) => e.type === R.IIU.HANG_STATUS)
+                      : null
+                : null,
         ),
-        F = i.useMemo(() => {
+        H = i.useMemo(() => {
             var e;
             return (0, s.uniqWith)(
                 null !=
@@ -172,9 +180,9 @@ function B(e) {
                             : n.filter((e) => {
                                   let { type: t, name: n } = e;
                                   return (
-                                      t !== N.IIU.CUSTOM_STATUS &&
-                                      t !== N.IIU.HANG_STATUS &&
-                                      n !== (null == M ? void 0 : M.name)
+                                      t !== R.IIU.CUSTOM_STATUS &&
+                                      t !== R.IIU.HANG_STATUS &&
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -183,59 +191,59 @@ function B(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == M ? void 0 : M.name]),
-        V = null == n ? void 0 : n.find((e) => e.name === (null == M ? void 0 : M.name)),
-        H = (null == t ? void 0 : t.bot) === !0,
-        Y = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        W = (null == j ? void 0 : j.state) != null,
-        K = null != L,
-        z = !K && null != l,
-        q = F.length + (K || z ? 1 : 0),
-        X = q > 1,
-        Q = ((null == j ? void 0 : j.state) != null || null != Z) && "xs" === h,
-        J = k({
-            streamActivity: V,
-            otherActivities: F,
-            voiceActivityChannel: z ? l : null,
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
+        W = (null == t ? void 0 : t.bot) === !0,
+        K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
+        z = (null == Z ? void 0 : Z.state) != null,
+        q = null != x,
+        X = !q && null != l,
+        Q = H.length + (q || X ? 1 : 0),
+        J = Q > 1,
+        $ = ((null == Z ? void 0 : Z.state) != null || null != V) && "xs" === h,
+        ee = U({
+            streamActivity: Y,
+            otherActivities: H,
+            voiceActivityChannel: X ? l : null,
         });
-    if (Y) return null;
-    let $ = function () {
+    if (K) return null;
+    let et = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || w;
-            if (null != L)
-                return (0, r.jsx)(I.Z, {
-                    stream: L,
-                    game: V,
+                t = !0 === e || D;
+            if (null != x)
+                return (0, r.jsx)(T.Z, {
+                    stream: x,
+                    game: Y,
                     textVariant: "text-".concat(h, "/medium"),
                     textClassName: d,
                     iconClassName: p,
-                    hideText: Q,
-                    hideIcon: H,
+                    hideText: $,
+                    hideIcon: W,
                     hideTooltip: t,
                 });
-            let n = null == F ? void 0 : F[0];
+            let n = null == H ? void 0 : H[0];
             return null != n
-                ? (0, r.jsx)(S.Z, {
+                ? (0, r.jsx)(A.Z, {
                       activity: n,
                       textVariant: "text-".concat(h, "/medium"),
                       textClassName: d,
                       iconClassName: p,
-                      hideText: Q,
-                      hideIcon: H,
+                      hideText: $,
+                      hideIcon: W,
                       hideTooltip: t,
                   })
                 : null != l
-                  ? (0, r.jsx)(A.Z, {
+                  ? (0, r.jsx)(C.Z, {
                         channel: l,
                         textVariant: "text-".concat(h, "/medium"),
                         textClassName: d,
                         iconClassName: p,
-                        hideText: Q,
+                        hideText: $,
                         hideTooltip: t,
                     })
                   : null;
         },
-        ee = () => {
+        en = () => {
             let e = [],
                 t = {
                     textVariant: "text-sm/medium",
@@ -245,14 +253,14 @@ function B(e) {
                     canTruncate: !1,
                 };
             return (
-                null != L &&
+                null != x &&
                     e.push(
                         (0, r.jsx)(
-                            I.Z,
-                            x(
-                                D(
+                            T.Z,
+                            M(
+                                L(
                                     {
-                                        stream: L,
+                                        stream: x,
                                         game: null == n ? void 0 : n.find(f.Z),
                                     },
                                     t,
@@ -262,75 +270,75 @@ function B(e) {
                             "stream",
                         ),
                     ),
-                F.forEach((n, i) => {
-                    e.push((0, r.jsx)(S.Z, D({ activity: n }, t), "activity-".concat(i)));
+                H.forEach((n, i) => {
+                    e.push((0, r.jsx)(A.Z, L({ activity: n }, t), "activity-".concat(i)));
                 }),
-                z && e.push((0, r.jsx)(A.Z, x(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                X && e.push((0, r.jsx)(C.Z, M(L({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
-        et = () =>
-            (0, r.jsx)(U, {
+        er = () =>
+            (0, r.jsx)(G, {
                 textVariant: "text-".concat(h, "/medium"),
                 className: d,
-                hasCustomStatusText: W,
-                totalActivityCount: q,
+                hasCustomStatusText: z,
+                totalActivityCount: Q,
             }),
-        en = () =>
-            0 === q
+        ei = () =>
+            0 === Q
                 ? null
-                : X && !H
-                  ? w
+                : J && !W
+                  ? D
                       ? (0, r.jsxs)("div", {
-                            className: o()(P.activityContainer, Q && P.iconOnly),
-                            children: [$(), et()],
+                            className: o()(w.activityContainer, $ && w.iconOnly),
+                            children: [et(), er()],
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(P.container, P.activitiesTooltip, P.hasMultipleActivities),
-                            delay: C.X,
-                            text: ee(),
-                            "aria-label": J,
+                            tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
+                            delay: N.X,
+                            text: en(),
+                            "aria-label": ee,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    x(D({ className: o()(P.activityContainer, Q && P.iconOnly) }, e), {
-                                        children: [$(!0), et()],
+                                    M(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
+                                        children: [et(!0), er()],
                                     }),
                                 ),
                         })
-                  : $(),
-        er = o()(P.container, {
-            [P.textXs]: "xs" === h,
-            [P.textSm]: "sm" === h,
+                  : et(),
+        ea = o()(w.container, {
+            [w.textXs]: "xs" === h,
+            [w.textSm]: "sm" === h,
         }),
-        ei = () =>
-            null == j && null == Z
+        eo = () =>
+            null == Z && null == V
                 ? null
-                : (0, r.jsx)(T.Z, {
-                      customStatusActivity: j,
+                : (0, r.jsx)(S.Z, {
+                      customStatusActivity: Z,
                       textSize: h,
-                      animateEmoji: y,
-                      hideEmoji: R,
-                      hideTooltip: w,
+                      animateEmoji: O,
+                      hideEmoji: P,
+                      hideTooltip: D,
                       textClassName: d,
                       iconClassName: p,
-                      tooltipClassName: er,
+                      tooltipClassName: ea,
                       voiceChannel: l,
-                      hangStatus: Z,
+                      hangStatus: V,
                       userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {
-        className: er,
+        className: ea,
         children: [
-            en(),
-            (null != j || null != Z) &&
-                q > 0 &&
-                (0, r.jsx)(G, {
+            ei(),
+            (null != Z || null != V) &&
+                Q > 0 &&
+                (0, r.jsx)(B, {
                     textVariant: "text-".concat(h, "/normal"),
                     className: d,
                 }),
-            ei(),
-            O && (0, r.jsx)(v.Z, {}),
+            eo(),
+            v && (0, r.jsx)(I.Z, {}),
         ],
     });
 }
