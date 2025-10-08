@@ -26,8 +26,8 @@ var i = n(951288),
     P = n(17030),
     I = n(223135),
     Z = n(295536),
-    N = n(748855),
-    T = n(505905),
+    T = n(748855),
+    N = n(505905),
     A = n(981631),
     w = n(921944),
     M = n(388032),
@@ -84,17 +84,17 @@ function B(e) {
         G = (0, u.e7)([_.Z], () => _.Z.getCustomHangStatus()),
         z = (0, E.Z)(),
         W = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: q, allowPermanentClear: K } = (0, y.bN)({
+        { defaultStatusVariant: q, allowPermanentClear: Y } = (0, y.bN)({
             guildId: B.guild_id,
             location: "HangStatusPicker",
         }),
-        Y = (0, v.V)(q),
+        K = (0, v.V)(q),
         X = r.useRef(null),
         [J, Q] = r.useState(null != (n = null == G ? void 0 : G.status) ? n : ""),
         [$, ee] = r.useState(null != (l = null == G ? void 0 : G.emoji) ? l : null),
         [et, en] = r.useState(!1),
         ei = (0, u.e7)([_.Z], () => _.Z.getCurrentHangStatus()),
-        er = Y[ei],
+        er = K[ei],
         el = W.length > 0,
         ea = null == J || "" === J.trim(),
         eo = (0, j.Z)(B),
@@ -119,8 +119,8 @@ function B(e) {
         }, [J, $, ec]),
         r.useEffect(() => {
             var e;
-            J !== (null != (e = null == G ? void 0 : G.status) ? e : "") && "" !== J.trim() ? H(!0) : H(!1);
-        }, [J, null == G ? void 0 : G.status, $, null == G ? void 0 : G.emoji, H]),
+            et || (J !== (null != (e = null == G ? void 0 : G.status) ? e : "") && "" !== J.trim()) ? H(!0) : H(!1);
+        }, [J, null == G ? void 0 : G.status, $, null == G ? void 0 : G.emoji, H, et]),
         r.useEffect(() => {
             null == V || V(null == X ? void 0 : X.current);
         }, [X, V]);
@@ -130,7 +130,10 @@ function B(e) {
             },
             [ei, $, J],
         ),
-        eg = r.useCallback(
+        eg = r.useCallback(() => {
+            ee(null), Q(""), en(!1);
+        }, []),
+        eb = r.useCallback(
             (e) => {
                 let { emoji: t, status: n } = e;
                 (s()(t, null == G ? void 0 : G.emoji) && n === (null == G ? void 0 : G.status)) ||
@@ -138,13 +141,13 @@ function B(e) {
             },
             [null == G ? void 0 : G.emoji, null == G ? void 0 : G.status],
         ),
-        eb = r.useCallback(
+        eC = r.useCallback(
             (e) => {
                 var t, n;
                 null == e || null == (t = e.preventDefault) || t.call(e),
                     null != $ && 0 === J.trim().length && eu(!0),
                     ea ||
-                        (eg({
+                        (eb({
                             status: J,
                             emoji:
                                 null != $
@@ -158,9 +161,9 @@ function B(e) {
                         null == (n = F.current) || n.blur(),
                         en(!1));
             },
-            [J, $, eg, ea],
+            [J, $, eb, ea],
         ),
-        eC = r.useCallback(() => {
+        ey = r.useCallback(() => {
             var e, t;
             let n = null,
                 i = null;
@@ -191,7 +194,7 @@ function B(e) {
                 null == (e = F.current) || e.focus(),
                 b.default.track(A.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, x.Z)(B.id)));
         }, [eo, $, B.id]),
-        ey = r.useCallback(
+        e_ = r.useCallback(
             (e, t) => {
                 let n = (0, O.Z)(t);
                 (!ed || e) &&
@@ -200,18 +203,18 @@ function B(e) {
             },
             [B.id, ed],
         ),
-        e_ = r.useCallback(() => {
+        ev = r.useCallback(() => {
             H(!1);
         }, [H]),
-        ev = r.useCallback(() => {
+        ex = r.useCallback(() => {
             var e;
             J !== (null != (e = null == G ? void 0 : G.status) ? e : "") && "" !== J.trim() ? H(!0) : H(!1);
         }, [H, J, null == G ? void 0 : G.status]),
-        ex = r.useCallback(
+        eO = r.useCallback(
             (e, t, n) => {
                 var r;
                 let l = (0, O.Z)(e),
-                    a = l ? Y[e] : null,
+                    a = l ? K[e] : null,
                     o = _.Z.isFavorited(e),
                     s = l
                         ? (0, i.jsx)(I.Z, {
@@ -231,26 +234,26 @@ function B(e) {
                               className: R.icon,
                           });
                 return (0, i.jsx)(
-                    N.L,
+                    T.L,
                     {
                         label: l ? (null != (r = null == a ? void 0 : a.title) ? r : "") : e.status,
                         icon: s,
                         setStatus: () => {
-                            l ? em(e) : eg(e), en(!1);
+                            l ? em(e) : eb(e), en(!1);
                         },
                         isFavorited: o,
-                        onFavoriteClick: () => ey(o, e),
+                        onFavoriteClick: () => e_(o, e),
                     },
                     "".concat(n, "-").concat(t),
                 );
             },
-            [q, eg, em, Y, ey],
+            [q, eb, em, K, e_],
         ),
-        eO = r.useCallback(() => {
-            (0, C.Sc)(!0, K), ee(null), Q(""), en(!1);
-        }, [K]),
-        ej = r.useCallback((e) => {
-            en(!0), Q(e.substring(0, T.s0));
+        ej = r.useCallback(() => {
+            (0, C.Sc)(!0, Y), ee(null), Q(""), en(!1);
+        }, [Y]),
+        eE = r.useCallback((e) => {
+            en(!0), Q(e.substring(0, N.s0));
         }, []);
     return (0, i.jsxs)("div", {
         ref: X,
@@ -275,7 +278,7 @@ function B(e) {
                 role: "group",
                 className: a()(k.groupLabel, R.inputGroup),
                 children: (0, i.jsxs)("form", {
-                    onSubmit: eb,
+                    onSubmit: eC,
                     className: a()(k.item, R.input),
                     children: [
                         (0, i.jsxs)("div", {
@@ -284,9 +287,9 @@ function B(e) {
                                 (0, i.jsx)(h.oil, {
                                     inputRef: F,
                                     value: et || ep ? J : null != (o = null == er ? void 0 : er.title) ? o : "",
-                                    onBlur: e_,
-                                    onFocus: ev,
-                                    onChange: ej,
+                                    onBlur: ev,
+                                    onFocus: ex,
+                                    onChange: eE,
                                     placeholder: M.intl.string(M.t.KPop4u),
                                     leading: {
                                         type: "emoji",
@@ -302,21 +305,21 @@ function B(e) {
                                             ? es
                                                 ? {
                                                       icon: h.d4D,
-                                                      onClick: eb,
+                                                      onClick: eC,
                                                       "aria-label": M.intl.string(M.t.R3BPHx),
                                                       disabled: 0 === J.length,
                                                   }
                                                 : void 0
                                             : {
                                                   icon: h.XHJ,
-                                                  onClick: eO,
+                                                  onClick: ej,
                                                   "aria-label": M.intl.string(M.t.S90Fub),
                                               },
                                 }),
                                 (0, i.jsx)(h.hU, {
                                     variant: "secondary",
                                     icon: S.k,
-                                    onClick: eC,
+                                    onClick: ey,
                                     "aria-label": M.intl.string(M.t["5UAi5+"]),
                                 }),
                             ],
@@ -336,7 +339,10 @@ function B(e) {
                 role: "group",
                 className: a()(k.groupLabel, R.group, R.scroller),
                 children: [
-                    (0, i.jsx)(Z.d, { guildId: B.guild_id }),
+                    (0, i.jsx)(Z.d, {
+                        guildId: B.guild_id,
+                        onSetActivityStatus: eg,
+                    }),
                     el &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -351,7 +357,7 @@ function B(e) {
                                         (0, i.jsx)(h.r7p, { size: "xxs" }),
                                     ],
                                 }),
-                                W.map((e, t) => ex(e, t, "favorite")),
+                                W.map((e, t) => eO(e, t, "favorite")),
                             ],
                         }),
                     z.length > 0 &&
@@ -375,7 +381,7 @@ function B(e) {
                                 }),
                             ],
                         }),
-                    z.map((e, t) => ex(e, t, "recent")),
+                    z.map((e, t) => eO(e, t, "recent")),
                 ],
             }),
         ],

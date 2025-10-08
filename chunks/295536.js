@@ -1,34 +1,38 @@
-n.d(t, { d: () => p });
-var r = n(951288),
-    i = n(442837),
-    l = n(728345),
-    a = n(925329),
-    o = n(463421),
-    s = n(314897),
-    c = n(906605),
-    u = n(748855),
-    d = n(972526);
-function p(e) {
+n.d(t, { d: () => h });
+var i = n(951288),
+    r = n(647438),
+    l = n(442837),
+    a = n(728345),
+    o = n(925329),
+    s = n(463421),
+    c = n(314897),
+    u = n(906605),
+    d = n(748855),
+    p = n(972526);
+function h(e) {
     var t;
-    let { guildId: n } = e,
-        p = (0, i.e7)([s.default], () => s.default.getId()),
-        h = (0, o.Z)(p, n)[0],
-        f = null != (t = (0, l.IX)(null == h ? void 0 : h.application_id).data) ? t : void 0;
-    return null == f
+    let { guildId: n, onSetActivityStatus: h } = e,
+        f = (0, l.e7)([c.default], () => c.default.getId()),
+        m = (0, s.Z)(f, n)[0],
+        g = null != (t = (0, a.IX)(null == m ? void 0 : m.application_id).data) ? t : void 0,
+        b = r.useCallback(() => {
+            null != g && ((0, u.XE)(g.id, !0), h());
+        }, [g, h]);
+    return null == g
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(u.L, {
-                      label: f.name,
-                      icon: (0, r.jsx)(a.Z, {
-                          game: f,
-                          className: d.icon,
+                  (0, i.jsx)(d.L, {
+                      label: g.name,
+                      icon: (0, i.jsx)(o.Z, {
+                          game: g,
+                          className: p.icon,
                       }),
-                      setStatus: () => (0, c.XE)(f.id, !0),
+                      setStatus: b,
                   }),
-                  (0, r.jsx)("div", {
+                  (0, i.jsx)("div", {
                       role: "separator",
-                      className: d.separator,
+                      className: p.separator,
                   }),
               ],
           });
