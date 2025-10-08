@@ -6,7 +6,7 @@ var r = t(951288),
     o = t(535895),
     s = t(183369),
     d = t(943970),
-    c = t(233019);
+    c = t(20426);
 function u() {
     let { currentGame: e, planId: n } = (0, s.aj)(),
         t = (0, d.Z)(null == e ? void 0 : e.gameId, "cover");

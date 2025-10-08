@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,14 +18,14 @@ var r = n(951288),
     v = n(944486),
     j = n(594174),
     b = n(74538),
-    C = n(451467),
-    S = n(122186),
-    y = n(37113),
+    S = n(451467),
+    y = n(122186),
+    C = n(37113),
     O = n(981631),
     w = n(388032),
-    Z = n(79985),
-    I = n(763021),
-    N = n(10198);
+    Z = n(542257),
+    I = n(381994),
+    N = n(197571);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +93,7 @@ function R() {
         ],
     });
 }
-function k(e) {
+function A(e) {
     let t,
         n,
         {
@@ -150,7 +150,7 @@ function k(e) {
         }
     );
 }
-function A(e) {
+function k(e) {
     let {
             onClose: t,
             selectedPreset: n,
@@ -159,7 +159,7 @@ function A(e) {
             onResolutionChange: o,
             onFPSChange: x,
             onPresetChange: R,
-            targetGuildPremiumTier: A,
+            targetGuildPremiumTier: k,
             captureDeviceSelected: M,
         } = e,
         D = (0, c.e7)([j.default], () => {
@@ -173,15 +173,15 @@ function A(e) {
         W = (0, g.B4)(),
         z = !B && !U,
         [F, H] = i.useState(!1),
-        V = M ? y.z8 : y.WC,
+        V = M ? C.z8 : C.WC,
         Y = T(P({}, G), { section: O.jXE.STREAM_SETTINGS }),
         J = (0, r.jsx)(d.hE, {
             buttons: V.map((e) =>
-                k({
+                A({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, C.Z)(n, e.value, s, D, A, L),
-                    needsDemo: W && e.value !== y.LY.RESOLUTION_720,
+                    needsPremium: !(0, S.Z)(n, e.value, s, D, k, L),
+                    needsDemo: W && e.value !== C.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
                     onClose: t,
@@ -190,12 +190,12 @@ function A(e) {
             ),
         }),
         X = (0, r.jsx)(d.hE, {
-            buttons: y.k0.map((e) =>
-                k({
+            buttons: C.k0.map((e) =>
+                A({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, C.Z)(n, l, e.value, D, A, L),
-                    needsDemo: W && e.value === y.ws.FPS_60,
+                    needsPremium: !(0, S.Z)(n, l, e.value, D, k, L),
+                    needsDemo: W && e.value === C.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => x(e.value),
                     onClose: t,
@@ -205,24 +205,24 @@ function A(e) {
         }),
         K = [
             {
-                value: y.tI.PRESET_VIDEO,
+                value: C.tI.PRESET_VIDEO,
                 label: w.intl.string(w.t.HcwHc3),
             },
             ...(M
                 ? []
                 : [
                       {
-                          value: y.tI.PRESET_DOCUMENTS,
+                          value: C.tI.PRESET_DOCUMENTS,
                           label: w.intl.string(w.t["/RfohI"]),
                       },
                   ]),
             {
-                value: y.tI.PRESET_CUSTOM,
+                value: C.tI.PRESET_CUSTOM,
                 label: w.intl.string(w.t["+eOtrK"]),
             },
         ],
         q =
-            n === y.tI.PRESET_DOCUMENTS
+            n === C.tI.PRESET_DOCUMENTS
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(p.Z, {
@@ -237,13 +237,13 @@ function A(e) {
                               }),
                           }),
                           z
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -265,13 +265,13 @@ function A(e) {
                               ],
                           }),
                           z
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                     glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   });
     return (0, r.jsx)(

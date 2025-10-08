@@ -1,4 +1,4 @@
-t.d(n, { Z: () => L });
+t.d(n, { Z: () => T });
 var i = t(951288),
     l = t(647438),
     r = t(120356),
@@ -22,7 +22,7 @@ var i = t(951288),
     N = t(981631),
     O = t(474936),
     b = t(388032),
-    x = t(697485);
+    x = t(22706);
 function M(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.e7)([S.default], () => S.default.locale);
@@ -61,7 +61,7 @@ function M(e) {
         ],
     });
 }
-function L(e) {
+function T(e) {
     var n;
     let {
             premiumSubscriptionPlan: t,
@@ -70,14 +70,14 @@ function L(e) {
             onSkip: h,
             onSubscriptionConfirmation: S,
             analyticsLocation: y,
-            analyticsSourceLocation: L,
-            priceOptions: T,
+            analyticsSourceLocation: T,
+            priceOptions: L,
         } = e,
         { analyticsLocations: j, sourceAnalyticsLocations: C } = (0, p.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: A } = (0, u.TCT)(),
         k = (0, o.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         R = null == t || null == t.premiumSubscriptionType,
-        v = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
+        v = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, L),
         D = (0, I.T4)(v.amount, v.currency),
         Z = (0, P.N)(),
         w = null == Z ? void 0 : Z.trial_id,
@@ -188,7 +188,7 @@ function L(e) {
                                                               );
                                                           }),
                                                     e),
-                                                analyticsSourceLocation: L,
+                                                analyticsSourceLocation: T,
                                                 onSubscriptionConfirmation: S,
                                                 trialId: w,
                                             });

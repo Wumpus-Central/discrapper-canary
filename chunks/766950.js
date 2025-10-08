@@ -21,17 +21,17 @@ var l = n(951288),
     j = n(626135),
     v = n(51144),
     P = n(364747),
-    N = n(131016),
-    k = n(579346),
-    y = n(438759),
+    y = n(131016),
+    N = n(579346),
+    k = n(438759),
     O = n(512070),
     T = n(299939),
     E = n(305813),
     D = n(203872),
     R = n(981631),
-    A = n(62222),
+    A = n(693450),
     I = n(388032),
-    L = n(845378);
+    L = n(300119);
 function w(e) {
     var t, n, w, B;
     let { transitionState: Z, analyticsLocations: M, guildId: G, onClose: Y } = e,
@@ -93,7 +93,7 @@ function w(e) {
             }
         }, [ec, W, J, es, ee, Y, G]),
         eu = o.useCallback(() => {
-            let { fontId: e, effectId: t, colors: n } = (0, N.aY)();
+            let { fontId: e, effectId: t, colors: n } = (0, y.aY)();
             $(e), Q(t), t === i.m.GRADIENT ? ei(n) : eo(n[0]), j.default.track(R.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [ei, eo]),
         ep = o.useCallback(
@@ -144,12 +144,12 @@ function w(e) {
                                               displayName: F,
                                               className: L.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(y.Z, {
+                                          (0, l.jsx)(k.Z, {
                                               selectedEffectId: J,
                                               setSelectedEffectId: ep,
                                               className: L.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(k.Z, {
+                                          (0, l.jsx)(N.Z, {
                                               selectedColors: es,
                                               setSelectedColors: em,
                                               selectedEffectId: J,

@@ -123,7 +123,7 @@ var a = n(951288),
     tt = n(46140),
     tn = n(65154),
     ta = n(388032),
-    tr = n(490579);
+    tr = n(25874);
 function ti(e, t, n) {
     return (
         t in e

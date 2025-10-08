@@ -8,8 +8,8 @@ var l = n(951288),
     c = n(481060),
     d = n(981631),
     u = n(388032),
-    p = n(258640),
-    m = n(85854);
+    p = n(989308),
+    m = n(616132);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -160,11 +160,11 @@ function _(e) {
             gradientButtonClassName: v,
             allowBlackCustomColor: P = !1,
         } = e,
-        N = o.useCallback((e) => (0 !== e || P) && e !== t && !n.some((t) => t === e) && (P || 0 !== e), [n, t, P]),
+        y = o.useCallback((e) => (0 !== e || P) && e !== t && !n.some((t) => t === e) && (P || 0 !== e), [n, t, P]),
+        N = o.useRef(null),
         k = o.useRef(null),
-        y = o.useRef(null),
         O = o.useRef(null),
-        [T, E] = o.useState(() => (N(r) ? r : null)),
+        [T, E] = o.useState(() => (y(r) ? r : null)),
         [D, R] = o.useState({
             start: r,
             end: null != S ? S : d.p6O,
@@ -174,12 +174,12 @@ function _(e) {
             showEnd: !1,
         });
     o.useEffect(() => {
-        E(N(r) ? r : null),
+        E(y(r) ? r : null),
             R({
                 start: r,
                 end: null != S ? S : d.p6O,
             });
-    }, [r, N, S]);
+    }, [r, y, S]);
     let L = o.useCallback(
             (e) => {
                 null == p || p(e), E(null);
@@ -242,7 +242,7 @@ function _(e) {
                           }),
                           (0, l.jsx)(x, {
                               isStart: !0,
-                              buttonRef: y,
+                              buttonRef: k,
                               color: null != (o = D.start) ? o : d.p6O,
                               showPopout: A.showStart,
                               position: b,
@@ -290,18 +290,18 @@ function _(e) {
                 return _
                     ? i
                     : (0, l.jsx)(c.yRy, {
-                          targetElementRef: k,
+                          targetElementRef: N,
                           renderPopout: G,
                           position: b,
                           children: (e) =>
                               (0, l.jsx)(s.u, {
-                                  targetElementRef: k,
+                                  targetElementRef: N,
                                   text: u.intl.string(u.t["FHBa//"]),
                                   position: "bottom",
                                   children: (0, l.jsx)(
                                       "div",
                                       g(f({}, e), {
-                                          ref: k,
+                                          ref: N,
                                           children: i,
                                       }),
                                   ),

@@ -11,10 +11,10 @@ var o = n(120356),
     u = n(131016),
     p = n(7284),
     m = n(660662),
-    f = n(62222),
+    f = n(693450),
     g = n(388032),
-    h = n(77426),
-    x = n(355654);
+    h = n(959389),
+    x = n(204469);
 function _(e) {
     let { selectedFontId: t, setSelectedFontId: n, displayName: o, className: _ } = e,
         b = t !== i.C.DEFAULT,

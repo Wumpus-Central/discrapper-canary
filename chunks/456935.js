@@ -17,7 +17,7 @@ function s(e) {
             return "";
     }
 }
-n(866234),
+n(31829),
     i.sFg.NONE,
     i.sFg.LOW,
     r.Z.unsafe_rawColors.GREEN_360.css,

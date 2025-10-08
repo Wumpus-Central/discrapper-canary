@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(298814);
+    T = n(40175);
 function P(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function R(e, t) {
         e
     );
 }
-function Z(e) {
+function R(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: g } = e,
         [m, h] = i.useState(!1),
@@ -88,7 +88,7 @@ function Z(e) {
                     g(),
                     _.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
-                        R(w({}, (0, p.hH)(l.id)), {
+                        Z(w({}, (0, p.hH)(l.id)), {
                             target_user_id: s.id,
                             reason: a.reason,
                             location: v,
@@ -208,8 +208,8 @@ class D extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, o.h7j)((l) =>
                     (0, r.jsx)(
-                        Z,
-                        R(w({}, l), {
+                        R,
+                        Z(w({}, l), {
                             guild: e,
                             user: t,
                             ban: i,
@@ -221,7 +221,7 @@ class D extends i.PureComponent {
             P(this, "handleContextMenu", (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e("23835").then(n.bind(n, 768079));
-                    return (t) => (0, r.jsx)(e, R(w({}, t), { user: this.props.user }));
+                    return (t) => (0, r.jsx)(e, Z(w({}, t), { user: this.props.user }));
                 });
             });
     }
@@ -394,16 +394,16 @@ function k() {
             },
             [E],
         ),
-        Z = i.useMemo(() => P(b, u, _), [b, P, u, _]),
+        R = i.useMemo(() => P(b, u, _), [b, P, u, _]),
         D = null != b,
-        k = Z.length % 1000 == 0 && Z.length > 0 && D,
-        G = 0 === Z.length,
+        k = R.length % 1000 == 0 && R.length > 0 && D,
+        G = 0 === R.length,
         [M, U] = i.useState({
             currentPage: 1,
             pageSize: 100,
         });
     i.useEffect(() => {
-        h && 1 !== M.currentPage && U((e) => R(w({}, e), { currentPage: 1 }));
+        h && 1 !== M.currentPage && U((e) => Z(w({}, e), { currentPage: 1 }));
     }, [h, M.currentPage]);
     let B = i.useCallback(
             (e) => {
@@ -411,19 +411,19 @@ function k() {
             },
             [O],
         ),
-        F = i.useMemo(() => s().chunk(Z, M.pageSize), [M.pageSize, Z]),
+        F = i.useMemo(() => s().chunk(R, M.pageSize), [M.pageSize, R]),
         H = i.useCallback(
             (e) => {
                 var t, n, r;
                 null == (t = N.current) || t.scrollToSectionTop(0),
-                    (e + 1) * M.pageSize > Z.length &&
+                    (e + 1) * M.pageSize > R.length &&
                         k &&
                         !p &&
-                        ((z.current = null != (r = null == (n = Z[Z.length - 1]) ? void 0 : n.id) ? r : null),
+                        ((z.current = null != (r = null == (n = R[R.length - 1]) ? void 0 : n.id) ? r : null),
                         B(z.current)),
-                    (null != F[e - 1] || k) && U((t) => R(w({}, t), { currentPage: e }));
+                    (null != F[e - 1] || k) && U((t) => Z(w({}, t), { currentPage: e }));
             },
-            [M.pageSize, Z, k, F, B, p],
+            [M.pageSize, R, k, F, B, p],
         ),
         z = i.useRef(null);
     i.useEffect(() => {
@@ -476,7 +476,7 @@ function k() {
                   (0, r.jsx)("div", {
                       children: (0, r.jsx)(o.DsT, {
                           className: T.paginationInput,
-                          totalCount: Z.length + (k ? M.pageSize : 0),
+                          totalCount: R.length + (k ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: H,

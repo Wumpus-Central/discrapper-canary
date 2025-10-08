@@ -9,7 +9,7 @@ var l = t(951288),
     d = t(594914),
     u = t(231338),
     f = t(388032),
-    m = t(73262);
+    m = t(424215);
 function p(e) {
     var n, t, a, i;
     let { sku: o } = e;

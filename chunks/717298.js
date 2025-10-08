@@ -18,9 +18,9 @@ var r = n(951288),
     v = n(594190),
     j = n(695346),
     b = n(131951),
-    C = n(19780),
-    S = n(594174),
-    y = n(449224),
+    S = n(19780),
+    y = n(594174),
+    C = n(449224),
     O = n(358085),
     w = n(74538),
     Z = n(299570),
@@ -30,19 +30,19 @@ var r = n(951288),
     T = n(544753),
     E = n(853030),
     R = n(560749),
-    k = n(485299),
-    A = n(615161),
+    A = n(485299),
+    k = n(615161),
     M = n(289989),
     D = n(328242),
     L = n(565574),
     B = n(286420),
-    G = n(51708),
+    G = n(173044),
     U = n(801604),
     W = n(577257),
     z = n(70722),
-    F = n(137349),
+    F = n(637824),
     H = n(388032),
-    V = n(374079);
+    V = n(468918);
 function Y(e) {
     var t;
     let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: Y = [], selectSource: J = !0 } = e,
@@ -55,9 +55,9 @@ function Y(e) {
                     ((0, O.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, z.jR))),
         ),
         { analyticsLocations: q } = (0, _.ZP)(Y, g.Z.GO_LIVE_MODAL_V2),
-        Q = (0, f.e7)([S.default], () => S.default.getCurrentUser()),
+        Q = (0, f.e7)([y.default], () => y.default.getCurrentUser()),
         $ = (0, T.Z)(),
-        { state: ee, dispatch: et } = (0, A.Ti)(
+        { state: ee, dispatch: et } = (0, k.Ti)(
             o,
             Q,
             $,
@@ -127,7 +127,7 @@ function Y(e) {
             url: "",
         });
     }, [ec, ee.nativeSourceType]);
-    return (0, r.jsx)(A.Yw, {
+    return (0, r.jsx)(k.Yw, {
         state: ee,
         dispatch: et,
         children: (0, r.jsxs)(m.Y0X, {
@@ -135,8 +135,8 @@ function Y(e) {
                 impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
                     location_stack: q,
-                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, y.Z)) ? void 0 : t.id) : void 0,
-                    parent_media_session_id: C.Z.getMediaSessionId(),
+                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, C.Z)) ? void 0 : t.id) : void 0,
+                    parent_media_session_id: S.Z.getMediaSessionId(),
                 },
             },
             className: s()(V.root, {
@@ -154,7 +154,7 @@ function Y(e) {
                           onSelectChannel: ed,
                       })
                     : ei
-                      ? (0, r.jsx)(k.Z, { hideBackButton: null != o })
+                      ? (0, r.jsx)(A.Z, { hideBackButton: null != o })
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(m.xBx, {

@@ -18,7 +18,7 @@ var r = n(951288),
     j = n(733895),
     _ = n(981631),
     v = n(388032),
-    C = n(81190);
+    C = n(213798);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -185,8 +185,8 @@ let I = (e) => {
                 (0, r.jsx)(p.$jN, { className: C.__invalid_spinner }),
             ],
         });
-    let R = T ? v.t["WH+1Y2"] : v.t.a4MYDA,
-        Z = [
+    let Z = T ? v.t["WH+1Y2"] : v.t.a4MYDA,
+        R = [
             {
                 name: v.intl.string(v.t.yvk9p6),
                 failingName: v.intl.string(v.t["IY/UT0"]),
@@ -203,7 +203,7 @@ let I = (e) => {
                     minMembers: g.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: v.intl.format(R, { minMembers: g.minimumGuildSize.toLocaleString() }),
+                failingDescription: v.intl.format(Z, { minMembers: g.minimumGuildSize.toLocaleString() }),
                 checked: null == g ? void 0 : g.size,
             },
             {
@@ -430,13 +430,13 @@ let I = (e) => {
                           ],
                       });
             })(),
-            Z.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
+            R.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
                 (0, r.jsxs)(
                     i.Fragment,
                     {
                         children: [
                             (0, r.jsx)(N, O({}, e)),
-                            t < Z.length - 1 ? (0, r.jsx)("hr", { className: C.separator }) : null,
+                            t < R.length - 1 ? (0, r.jsx)("hr", { className: C.separator }) : null,
                         ],
                     },
                     "".concat(e.name),

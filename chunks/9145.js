@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(402113),
     _ = n(800965),
     j = n(592125),
-    O = n(271383),
-    x = n(944486),
+    x = n(271383),
+    O = n(944486),
     v = n(594174),
     C = n(585483),
     I = n(51144),
@@ -39,7 +39,7 @@ var r = n(951288),
     G = n(918559),
     H = n(981631),
     F = n(388032),
-    B = n(322678);
+    B = n(33985);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -117,13 +117,13 @@ function Y(e) {
             : ((e = Math.min(eu.height * G.I0)) > eu.width && (t = (e = eu.width) / G.I0), (ef = (eu.width - e) / 2));
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
-        ey = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
-        e_ = (0, s.Wu)([O.ZP], () => {
+        ey = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
+        e_ = (0, s.Wu)([x.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      O.ZP.getMember(ee.guild_id, e),
+                      x.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
         ej = i.useMemo(() => {
@@ -135,7 +135,7 @@ function Y(e) {
                 e
             );
         }, [e_]),
-        eO = (function (e, t, n) {
+        ex = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
@@ -178,7 +178,7 @@ function Y(e) {
                     : l;
             }, [o, e, n, t]);
         })(ea, es, q),
-        ex = (0, k.y)(),
+        eO = (0, k.y)(),
         { data: ev } = (0, R.K)(Z.B);
     if (null == X) return null;
     let eC = null == ev ? void 0 : ev.isFortniteActivity(X.id),
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: eO,
+                style: ex,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {
@@ -305,7 +305,7 @@ function Y(e) {
                                                       variant: "color-mix",
                                                   }),
                                               }),
-                                          ex
+                                          eO
                                               ? (0, r.jsx)(_.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {

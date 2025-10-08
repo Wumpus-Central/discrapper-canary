@@ -18,9 +18,9 @@ var r = n(951288),
     v = n(518596),
     j = n(592125),
     b = n(650774),
-    C = n(430824),
-    S = n(131951),
-    y = n(944486),
+    S = n(430824),
+    y = n(131951),
+    C = n(944486),
     O = n(594174),
     w = n(449224),
     Z = n(626135),
@@ -30,8 +30,8 @@ var r = n(951288),
     T = n(653255),
     E = n(989941),
     R = n(618407),
-    k = n(586290),
-    A = n(233037),
+    A = n(586290),
+    k = n(233037),
     M = n(810013),
     D = n(537135),
     L = n(641115),
@@ -40,8 +40,8 @@ var r = n(951288),
     U = n(981631),
     W = n(526761),
     z = n(388032),
-    F = n(740071),
-    H = n(79985);
+    F = n(734102),
+    H = n(542257);
 function V(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
         s = (0, o.e7)([m.ZP, w.Z], () => ((0, P.isWindows)() ? (0, E.Z)(m.ZP, w.Z) : null)),
@@ -90,7 +90,7 @@ function V(e) {
 }
 function Y(e) {
     let { onChange: t, guildId: n } = e,
-        i = (0, o.e7)([C.Z], () => C.Z.getGuild(n));
+        i = (0, o.e7)([S.Z], () => S.Z.getGuild(n));
     return null == i
         ? (t(), null)
         : (0, r.jsx)(c.xJW, {
@@ -169,7 +169,7 @@ function K(e) {
             },
             [n],
         ),
-        d = (0, o.e7)([S.Z], () => S.Z.getUseSystemScreensharePicker() && (0, P.isLinux)());
+        d = (0, o.e7)([y.Z], () => y.Z.getUseSystemScreensharePicker() && (0, P.isLinux)());
     return (0, r.jsx)("div", {
         className: s()(H.modalContent, F.checkboxRow),
         children: (0, r.jsx)(c.XZJ, {
@@ -211,7 +211,7 @@ function Q(e) {
             sound: p,
             previewDisabled: x,
             onClose: b,
-            onChangeSelectedFPS: C,
+            onChangeSelectedFPS: S,
             onChangeSelectedResolution: w,
             onChangeSelectedPreset: Z,
             onChangeSelectedChannelId: I,
@@ -221,20 +221,20 @@ function Q(e) {
             onChangeSound: B,
             onChangePreviewDisabled: G,
         } = e,
-        H = (0, o.e7)([y.Z, j.Z], () => j.Z.getChannel(y.Z.getVoiceChannelId())),
+        H = (0, o.e7)([C.Z, j.Z], () => j.Z.getChannel(C.Z.getVoiceChannelId())),
         Q = (0, o.e7)([T.Z], () => T.Z.GPUDriversOutdated),
         $ = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
         ee = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
         et = (0, R.Z)();
-    null != t && t.id.startsWith("screen") && !S.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
+    null != t && t.id.startsWith("screen") && !y.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
     let en = !!(null == t ? void 0 : t.id.startsWith("camera")),
         er = null != ee && ee.verified && !ee.bot,
         ei = null != H && !(0, u.Yk)(H),
-        el = !(0, o.e7)([S.Z], () => S.Z.getHardwareEncoding());
+        el = !(0, o.e7)([y.Z], () => y.Z.getHardwareEncoding());
     return (0, r.jsxs)(i.Fragment, {
         children: [
             en
-                ? (0, r.jsx)(k.Z, {
+                ? (0, r.jsx)(A.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: P,
                       onChangeAudioDevice: E,
@@ -265,7 +265,7 @@ function Q(e) {
                 : null,
             null != H
                 ? (0, r.jsx)(M.Z, { channel: H })
-                : (0, r.jsx)(A.Z, {
+                : (0, r.jsx)(k.Z, {
                       guildId: d,
                       selectedChannelId: l,
                       onChangeSelectedChannelId: I,
@@ -300,7 +300,7 @@ function Q(e) {
                 selectedResolution: a,
                 targetGuildPremiumTier: f,
                 onClose: b,
-                onFPSChange: C,
+                onFPSChange: S,
                 onResolutionChange: w,
                 onPresetChange: Z,
                 captureDeviceSelected: en,

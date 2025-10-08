@@ -27,8 +27,8 @@ var r,
     v = n(999382),
     C = n(260539),
     O = n(388032),
-    y = n(232386),
-    N = n(10198);
+    y = n(86477),
+    N = n(197571);
 function E(e, t, n) {
     return (
         t in e
@@ -120,14 +120,14 @@ function w() {
                     type: m.geA.DESCRIPTION,
                     children: O.intl.format(O.t.c0m8bG, {}),
                 }),
-                (0, i.jsx)(Z, {}),
-                (0, i.jsx)(m.izJ, { className: y.divider }),
                 (0, i.jsx)(R, {}),
+                (0, i.jsx)(m.izJ, { className: y.divider }),
+                (0, i.jsx)(Z, {}),
             ],
         }),
     });
 }
-function R() {
+function Z() {
     let { guild: e } = v.Z.getProps();
     c()(null != e, "guild cannot be null");
     let t = (0, d.e7)([S], () => S.error),
@@ -197,7 +197,7 @@ function R() {
         ],
     });
 }
-function Z() {
+function R() {
     return (0, i.jsxs)("div", {
         className: y.descriptionBox,
         children: [
@@ -484,7 +484,7 @@ function U(e) {
             text: O.intl.string(O.t.YI3iV1),
             onClick: () =>
                 (0, m.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("10570")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
                     return (n) => {
                         var r, l;
                         return (0, i.jsx)(

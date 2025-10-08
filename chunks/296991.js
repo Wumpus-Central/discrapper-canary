@@ -19,7 +19,7 @@ var r = n(951288),
     _ = n(592286),
     v = n(981631),
     C = n(388032),
-    O = n(761560);
+    O = n(94228);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +83,7 @@ function I(e) {
         I = i.useRef(null),
         S = i.useRef(null),
         [{ textValue: T, richValue: P }, w] = i.useState((0, p.eK)(t.value)),
-        [, R, Z] = (0, c.c)({
+        [, Z, R] = (0, c.c)({
             type: E,
             item: {
                 rule: t,
@@ -112,13 +112,13 @@ function I(e) {
     if (
         (i.useLayoutEffect(
             () => (
-                R(S),
-                Z(D(I)),
+                Z(S),
+                R(D(I)),
                 () => {
-                    R(null), D(null);
+                    Z(null), D(null);
                 }
             ),
-            [R, D, Z],
+            [Z, D, R],
         ),
         i.useEffect(() => {
             "" !== t.value && "" === T && w((0, p.eK)(t.value));
@@ -228,7 +228,7 @@ function S(e) {
             },
             [s, t, n],
         ),
-        R = i.useCallback(
+        Z = i.useCallback(
             (e, r, i) => {
                 if (s || null == t) return;
                 let l = t.indexOf(e);
@@ -240,36 +240,36 @@ function S(e) {
             },
             [s, p, t, n],
         ),
-        Z = t.length === _.X2,
+        R = t.length === _.X2,
         D = i.useMemo(() => {
-            let e = Z ? C.intl.formatToPlainString(C.t.tU718P, { number: _.X2 }) : void 0;
+            let e = R ? C.intl.formatToPlainString(C.t.tU718P, { number: _.X2 }) : void 0;
             return [
                 {
                     text: C.intl.string(C.t.DXq2oa),
                     onClick: () => T(C.intl.string(C.t.XudkSk)),
-                    disabled: Z || s,
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
                     text: C.intl.string(C.t.nSqTjI),
                     onClick: () => T(C.intl.string(C.t.np91jI)),
-                    disabled: Z || s,
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
                     text: C.intl.string(C.t.AtRxsL),
                     onClick: () => T(C.intl.string(C.t.PNIDDA)),
-                    disabled: Z || s,
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
                     text: C.intl.string(C.t["0K5NJi"]),
                     onClick: () => T(C.intl.string(C.t.HolIDw)),
-                    disabled: Z || s,
+                    disabled: R || s,
                     tooltipText: e,
                 },
             ];
-        }, [T, s, Z]);
+        }, [T, s, R]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -297,7 +297,7 @@ function S(e) {
                                             : r,
                                     );
                                 })(i),
-                            onRuleReorder: R,
+                            onRuleReorder: Z,
                             isDropHovered: i === p,
                             focused: i === E,
                             onFocus: S,
@@ -309,7 +309,7 @@ function S(e) {
                     ),
                 ),
             }),
-            !Z &&
+            !R &&
                 (0, r.jsx)(b.A, {
                     text: C.intl.string(C.t.Cq5Jub),
                     onClick: P,

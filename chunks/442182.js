@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(203377),
     I = n(981631),
     S = n(388032),
-    T = n(37134),
-    P = n(10083);
+    T = n(472039),
+    P = n(21321);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,7 +52,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function R(e, t) {
         e
     );
 }
-async function Z(e, t, n) {
+async function R(e, t, n) {
     let i = e.roles.filter((e) => e !== n);
     try {
         await _.Z.updateMemberRoles(t, e.id, i, [], [n]);
@@ -79,7 +79,7 @@ async function Z(e, t, n) {
         (0, d.h7j)((t) =>
             (0, r.jsx)(
                 a.Modal,
-                R(w({}, t), {
+                Z(w({}, t), {
                     title: S.intl.string(S.t.R0RpRU),
                     actions: [
                         {
@@ -104,12 +104,12 @@ function D(e) {
         f = i.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function b(e) {
         if ((e.stopPropagation(), !g)) {
-            if (e.shiftKey) return void Z(t, l, o);
+            if (e.shiftKey) return void R(t, l, o);
             let n = v.Z.getRole(o);
             (0, d.h7j)((e) =>
                 (0, r.jsx)(
                     a.Modal,
-                    R(w({}, e), {
+                    Z(w({}, e), {
                         title: S.intl.string(S.t["7sFNfX"]),
                         subtitle: S.intl.format(S.t.scORUl, {
                             username: t.name,
@@ -125,7 +125,7 @@ function D(e) {
                                 text: S.intl.string(S.t.N86XcH),
                                 variant: "critical-primary",
                                 onClick: () => {
-                                    Z(t, l, o), e.onClose();
+                                    R(t, l, o), e.onClose();
                                 },
                             },
                         ],
@@ -144,13 +144,13 @@ function D(e) {
         let i = x.default.getUser(t.id);
         null != i &&
             (0, u.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        R(w({}, t), {
+                        Z(w({}, t), {
                             user: i,
                             guildId: l,
                             showChatItems: !1,
@@ -171,7 +171,7 @@ function D(e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         d.P3F,
-                        R(w({}, e), {
+                        Z(w({}, e), {
                             innerRef: p,
                             className: T.memberRow,
                             onContextMenu: j,
@@ -333,11 +333,11 @@ function G(e) {
                 location_section: "Members",
             }),
                 (0, d.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            R(w({}, n), {
+                            Z(w({}, n), {
                                 roleId: l.id,
                                 guildId: t.id,
                             }),
