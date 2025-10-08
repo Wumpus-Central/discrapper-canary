@@ -8,16 +8,18 @@ n.d(t, {
 var r = n(72703);
 function i(e) {
     let t = {};
-    return (
-        void 0 !== e.pendingBanner && (t.banner = e.pendingBanner),
+    if (
+        (void 0 !== e.pendingBanner && (t.banner = e.pendingBanner),
         null != e.pendingBio && (t.bio = e.pendingBio),
         null != e.pendingPronouns && (t.pronouns = e.pendingPronouns),
         void 0 !== e.pendingAccentColor && (t.accent_color = e.pendingAccentColor),
         void 0 !== e.pendingThemeColors && (t.theme_colors = e.pendingThemeColors),
-        void 0 !== e.pendingProfileEffect &&
-            (t.profile_effect_id = null != e.pendingProfileEffect ? e.pendingProfileEffect.id : null),
-        t
-    );
+        void 0 !== e.pendingProfileEffect)
+    ) {
+        var n, r;
+        t.profile_effect_sku_id = null != (r = null == (n = e.pendingProfileEffect) ? void 0 : n.skuId) ? r : null;
+    }
+    return t;
 }
 function a(e) {
     let t = {};

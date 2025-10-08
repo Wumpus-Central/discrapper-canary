@@ -64,36 +64,32 @@ function E(e) {
     });
 }
 async function b(e, t) {
-    var n, r, u;
-    let d = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
-    if (null == d) return;
-    let f = l.dN.getSetting();
-    null != e.bio && f && (e.bio = s.ZP.parse(void 0, e.bio).content);
+    var n;
+    let r = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+    if (null == r) return;
+    let u = l.dN.getSetting();
+    null != e.bio && u && (e.bio = s.ZP.parse(void 0, e.bio).content);
     try {
         a.Z.dispatch({
             type: "USER_PROFILE_UPDATE_START",
-            userId: d,
+            userId: r,
         });
         let n = await i.tn.patch({
             url: null != t ? p.ANM.USER_GUILD_PROFILE(t, p.ME) : p.ANM.USER_PROFILE(p.ME),
             body: e,
             rejectWithError: !1,
         });
-        if (n.ok) {
-            let e = null == (r = n.body.profile_effect) ? void 0 : r.id,
-                t = null == (u = n.body.profile_effect) ? void 0 : u.expires_at;
+        if (n.ok)
             a.Z.dispatch(
                 g(
                     {
                         type: "USER_PROFILE_UPDATE_SUCCESS",
-                        userId: d,
-                        profileEffectId: e,
-                        profileEffectExpiresAt: t,
+                        userId: r,
                     },
                     n.body,
                 ),
             );
-        } else {
+        else {
             let e = new o.Hx(n);
             a.Z.dispatch({
                 type: "USER_PROFILE_UPDATE_FAILURE",

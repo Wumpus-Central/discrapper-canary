@@ -1,55 +1,56 @@
-r.d(t, { W: () => u }), r(388685);
-var n = r(647438),
-    l = r(979554),
-    i = r(809206),
-    a = r(350327),
-    o = r(884697),
-    s = r(328456),
-    c = r(388032);
-let u = (e) => {
-    let { product: t, onSuccess: u, onError: d } = e,
-        [p, f] = n.useState(!1),
-        { firstAvatarDecoration: b, firstProfileEffect: h, firstNameplate: g } = (0, s.Rj)(t),
-        O = (0, o.x6)(t)
-            ? c.intl.string(c.t.tf1ZZ2)
+n.d(t, { W: () => d }), n(388685);
+var r = n(647438),
+    l = n(979554),
+    i = n(809206),
+    a = n(164946),
+    o = n(350327),
+    s = n(884697),
+    c = n(328456),
+    u = n(388032);
+let d = (e) => {
+    let { product: t, onSuccess: d, onError: p } = e,
+        [f, b] = r.useState(!1),
+        { firstAvatarDecoration: y, firstProfileEffect: m, firstNameplate: O } = (0, c.Rj)(t),
+        g = (0, s.x6)(t)
+            ? u.intl.string(u.t.tf1ZZ2)
             : t.type === l.Z.AVATAR_DECORATION
-              ? c.intl.string(c.t.zOA4a2)
+              ? u.intl.string(u.t.zOA4a2)
               : t.type === l.Z.NAMEPLATE
-                ? c.intl.string(c.t.gOzMv7)
-                : c.intl.string(c.t.SWm2am);
+                ? u.intl.string(u.t.gOzMv7)
+                : u.intl.string(u.t.SWm2am);
     return {
-        handleUseNow: n.useCallback(async () => {
-            f(!0);
+        handleUseNow: r.useCallback(async () => {
+            b(!0);
             let e = {};
             try {
-                if ((null != b && (e.avatarDecoration = b), null != h)) {
-                    let e = { profile_effect_id: h.id };
-                    await (0, a.Z)(e);
+                if ((null != y && (e.avatarDecoration = y), null != m)) {
+                    let e = (0, a.g9)({ pendingProfileEffect: m });
+                    await (0, o.Z)(e);
                 }
-                null != g && (e.nameplate = g), Object.keys(e).length > 0 && (await (0, i.Mn)(e));
+                null != O && (e.nameplate = O), Object.keys(e).length > 0 && (await (0, i.Mn)(e));
                 {
                     let {
                         ToastPosition: e,
                         ToastType: t,
-                        createToast: n,
+                        createToast: r,
                         popToast: l,
                         showToast: i,
-                    } = await Promise.resolve().then(r.bind(r, 481060));
+                    } = await Promise.resolve().then(n.bind(n, 481060));
                     l(),
                         i(
-                            n(O, t.MESSAGE, {
+                            r(g, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,
                             }),
                         );
                 }
-                null == u || u();
+                null == d || d();
             } catch (e) {
-                null == d || d(e);
+                null == p || p(e);
             } finally {
-                f(!1);
+                b(!1);
             }
-        }, [b, h, g, u, O, d]),
-        isApplying: p,
+        }, [y, m, O, d, g, p]),
+        isApplying: f,
     };
 };
