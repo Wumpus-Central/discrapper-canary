@@ -1,112 +1,120 @@
-n.d(t, { default: () => v }), n(388685);
+n.d(t, { default: () => p }), n(388685);
 var a = n(951288),
     i = n(647438),
     l = n(755721),
-    o = n(481060),
-    r = n(493773),
-    s = n(626135),
-    d = n(326279),
-    c = n(533583),
-    m = n(981631),
-    u = n(388032),
-    N = n(767871);
-function p(e) {
+    r = n(481060),
+    o = n(493773),
+    c = n(626135),
+    s = n(326279),
+    d = n(533583),
+    u = n(981631),
+    m = n(388032),
+    N = n(193183);
+function T(e) {
     switch (e) {
-        case c.Q.INPUT:
-            return c.a.INPUT;
-        case c.Q.OUTPUT:
-            return c.a.OUTPUT;
-        case c.Q.INPUT_AND_OUTPUT:
-            return c.a.INPUT_AND_OUTPUT;
+        case d.Q.INPUT:
+            return d.a.INPUT;
+        case d.Q.OUTPUT:
+            return d.a.OUTPUT;
+        case d.Q.INPUT_AND_OUTPUT:
+            return d.a.INPUT_AND_OUTPUT;
         default:
             return null;
     }
 }
-function v(e) {
+function p(e) {
     let t,
-        { device: n, certifiedDeviceMetadata: v, onClose: f, transitionState: x } = e,
-        [h, T] = (0, i.useState)(null != n ? p(n.type) : null),
-        _ = (0, i.useRef)(!1);
-    function D() {
-        (_.current = !0), d.Wz(n.displayName);
+        { device: n, certifiedDeviceMetadata: p, onClose: f, transitionState: v } = e,
+        [U, h] = (0, i.useState)(null != n ? T(n.type) : null),
+        x = (0, i.useRef)(!1);
+    function _() {
+        (x.current = !0), s.Wz(n.displayName);
     }
-    (0, r.zq)(() => {
-        _.current || D();
+    (0, o.zq)(() => {
+        x.current || _();
     }),
         (0, i.useEffect)(() => {
-            s.default.track(m.rMx.OPEN_MODAL, {
-                type: null != v ? "New Audio Device Detected - Certified" : "New Audio Device Detected - Not Certified",
-                device_name: null != v ? "".concat(v.vendor.name, " ").concat(v.model.name) : n.displayName,
+            c.default.track(u.rMx.OPEN_MODAL, {
+                type: null != p ? "New Audio Device Detected - Certified" : "New Audio Device Detected - Not Certified",
+                device_name: null != p ? "".concat(p.vendor.name, " ").concat(p.model.name) : n.displayName,
             });
-        }, [n.displayName, v]);
-    let y = null != v ? u.intl.string(u.t.kiqvHR) : u.intl.string(u.t.AbnGIy);
+        }, [n.displayName, p]);
+    let D = null != p ? m.intl.string(m.t.kiqvHR) : m.intl.string(m.t.AbnGIy);
     switch (n.type) {
-        case c.Q.INPUT:
+        case d.Q.INPUT:
             t =
-                null != v
-                    ? u.intl.format(u.t.NqNqy8, {
-                          vendorName: v.vendor.name,
-                          modelName: v.model.name,
+                null != p
+                    ? m.intl.format(m.t.NqNqy8, {
+                          vendorName: p.vendor.name,
+                          modelName: p.model.name,
                       })
-                    : u.intl.format(u.t.stSaRk, { name: n.displayName });
+                    : m.intl.format(m.t.stSaRk, { name: n.displayName });
             break;
-        case c.Q.OUTPUT:
+        case d.Q.OUTPUT:
             t =
-                null != v
-                    ? u.intl.format(u.t.uPgqIC, {
-                          vendorName: v.vendor.name,
-                          modelName: v.model.name,
+                null != p
+                    ? m.intl.format(m.t.uPgqIC, {
+                          vendorName: p.vendor.name,
+                          modelName: p.model.name,
                       })
-                    : u.intl.format(u.t.jyhYp6, { name: n.displayName });
+                    : m.intl.format(m.t.jyhYp6, { name: n.displayName });
             break;
         default:
             t = (0, a.jsxs)(i.Fragment, {
                 children: [
-                    null != v
-                        ? u.intl.format(u.t["4Xyzx8"], {
-                              vendorName: v.vendor.name,
-                              modelName: v.model.name,
+                    null != p
+                        ? m.intl.format(m.t["4Xyzx8"], {
+                              vendorName: p.vendor.name,
+                              modelName: p.model.name,
                           })
-                        : u.intl.format(u.t.Z7XQcn, { name: n.displayName }),
-                    (0, a.jsx)(l.Gu, {
-                        value: h,
-                        className: N.options,
-                        onChange: (e) => {
-                            let { value: t } = e;
-                            return T(p(t));
-                        },
+                        : m.intl.format(m.t.Z7XQcn, { name: n.displayName }),
+                    (0, a.jsx)(r.FXm, {
+                        value: (function (e) {
+                            if (null == e) return null;
+                            switch (e) {
+                                case d.a.INPUT:
+                                    return d.Q.INPUT;
+                                case d.a.OUTPUT:
+                                    return d.Q.OUTPUT;
+                                case d.a.INPUT_AND_OUTPUT:
+                                    return d.Q.INPUT_AND_OUTPUT;
+                                default:
+                                    return null;
+                            }
+                        })(U),
+                        onChange: (e) => h(T(e)),
                         options: [
                             {
-                                name: u.intl.string(u.t.vhxqwc),
-                                value: c.Q.INPUT_AND_OUTPUT,
+                                name: m.intl.string(m.t.vhxqwc),
+                                value: d.Q.INPUT_AND_OUTPUT,
                             },
                             {
-                                name: u.intl.string(u.t["Kqs9+P"]),
-                                value: c.Q.INPUT,
+                                name: m.intl.string(m.t["Kqs9+P"]),
+                                value: d.Q.INPUT,
                             },
                             {
-                                name: u.intl.string(u.t.GGlM3d),
-                                value: c.Q.OUTPUT,
+                                name: m.intl.string(m.t.GGlM3d),
+                                value: d.Q.OUTPUT,
                             },
                         ],
                     }),
                 ],
             });
     }
-    return (0, a.jsxs)(o.Y0X, {
-        transitionState: x,
-        "aria-label": y,
+    return (0, a.jsxs)(r.Y0X, {
+        transitionState: v,
+        "aria-label": D,
         parentComponent: "ConnectedDeviceDetectionModal",
         children: [
-            (0, a.jsx)(o.xBx, {
+            (0, a.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, a.jsx)(o.X6q, {
+                children: (0, a.jsx)(r.X6q, {
                     variant: "heading-lg/semibold",
-                    children: y,
+                    children: D,
                 }),
             }),
-            (0, a.jsx)(o.hzk, {
-                children: (0, a.jsx)(o.Text, {
+            (0, a.jsx)(r.hzk, {
+                children: (0, a.jsx)(r.Text, {
                     variant: "text-md/normal",
                     children: (0, a.jsxs)(
                         i.Fragment,
@@ -118,11 +126,11 @@ function v(e) {
                                     look: l.zx.Looks.LINK,
                                     color: l.zx.Colors.LINK,
                                     onClick: () => {
-                                        (_.current = !0),
-                                            d.Gl(n.displayName),
-                                            s.default.track(m.rMx.MODAL_DISMISSED, {
+                                        (x.current = !0),
+                                            s.Gl(n.displayName),
+                                            c.default.track(u.rMx.MODAL_DISMISSED, {
                                                 type:
-                                                    null != v
+                                                    null != p
                                                         ? "New Audio Device Detected - Certified"
                                                         : "New Audio Device Detected - Not Certified",
                                                 location_object: n.displayName,
@@ -130,7 +138,7 @@ function v(e) {
                                             }),
                                             f();
                                     },
-                                    children: u.intl.formatToPlainString(u.t.cwS3Ex, { device: n.displayName }),
+                                    children: m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }),
                                 }),
                             ],
                         },
@@ -138,27 +146,27 @@ function v(e) {
                     ),
                 }),
             }),
-            (0, a.jsx)(o.mzw, {
+            (0, a.jsx)(r.mzw, {
                 children: (0, a.jsxs)("div", {
                     className: N.footerButtons,
                     children: [
                         (0, a.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: N.cancelButton,
-                            children: (0, a.jsx)(o.zxk, {
+                            children: (0, a.jsx)(r.zxk, {
                                 variant: "secondary",
-                                text: u.intl.string(u.t.vPBgq6),
+                                text: m.intl.string(m.t.vPBgq6),
                                 onClick: () => {
-                                    D(), f();
+                                    _(), f();
                                 },
                             }),
                         }),
-                        (0, a.jsx)(o.zxk, {
+                        (0, a.jsx)(r.zxk, {
                             variant: "primary",
-                            text: u.intl.string(u.t.ydkoDQ),
+                            text: m.intl.string(m.t.ydkoDQ),
                             onClick: () => {
-                                (_.current = !0),
-                                    null != h && d.mo(n.displayName, h, "New Audio Device Detected Modal"),
+                                (x.current = !0),
+                                    null != U && s.mo(n.displayName, U, "New Audio Device Detected Modal"),
                                     f();
                             },
                         }),
