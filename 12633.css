@@ -56701,6 +56701,14 @@ h3.improved__1689b:after {
     margin: 0 var(--space-4)
 }
 
+.compact__2debe .versionHash__2debe {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .wrapper__61a6b {
     background-color: var(--background-base-lower);
     background-position: 50% 0;
