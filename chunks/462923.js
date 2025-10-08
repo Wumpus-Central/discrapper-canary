@@ -1,4 +1,4 @@
-t.d(n, { ZP: () => Z }), t(388685);
+t.d(n, { ZP: () => G }), t(388685);
 var r = t(951288),
     a = t(647438),
     i = t(120356),
@@ -9,22 +9,23 @@ var r = t(951288),
     d = t(481060),
     u = t(243778),
     m = t(690221),
-    b = t(77498),
-    g = t(572004),
+    g = t(77498),
+    b = t(572004),
     f = t(49012),
     x = t(639777),
     p = t(744993),
     v = t(310978),
-    j = t(444083),
-    _ = t(943970),
+    j = t(450403),
+    _ = t(444083),
+    h = t(943970),
     y = t(998964),
     O = t(340887),
-    h = t(408629),
-    C = t(921944),
+    C = t(408629),
+    N = t(921944),
     I = t(401561),
-    N = t(388032),
-    P = t(842788);
-function S(e) {
+    P = t(388032),
+    S = t(842788);
+function T(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -49,29 +50,14 @@ function S(e) {
     }
     return e;
 }
-function T(e) {
-    return (0, r.jsx)(
-        d.zxk,
-        S(
-            {
-                fullWidth: !0,
-                text: N.intl.string(I.default.NHwQ0N),
-                variant: "secondary",
-            },
-            e,
-        ),
-    );
-}
 function w(e) {
     return (0, r.jsx)(
         d.zxk,
-        S(
+        T(
             {
                 fullWidth: !0,
-                text: N.intl.string(I.default["jO3u+/"]),
+                text: P.intl.string(I.default.NHwQ0N),
                 variant: "secondary",
-                icon: d.Gr1,
-                iconPosition: "end",
             },
             e,
         ),
@@ -80,11 +66,13 @@ function w(e) {
 function k(e) {
     return (0, r.jsx)(
         d.zxk,
-        S(
+        T(
             {
                 fullWidth: !0,
-                text: N.intl.string(I.default["0TMXHh"]),
-                variant: "primary",
+                text: P.intl.string(I.default["jO3u+/"]),
+                variant: "secondary",
+                icon: d.Gr1,
+                iconPosition: "end",
             },
             e,
         ),
@@ -93,10 +81,23 @@ function k(e) {
 function E(e) {
     return (0, r.jsx)(
         d.zxk,
-        S(
+        T(
             {
                 fullWidth: !0,
-                text: N.intl.string(I.default.irvMjo),
+                text: P.intl.string(I.default["0TMXHh"]),
+                variant: "primary",
+            },
+            e,
+        ),
+    );
+}
+function Z(e) {
+    return (0, r.jsx)(
+        d.zxk,
+        T(
+            {
+                fullWidth: !0,
+                text: P.intl.string(I.default.irvMjo),
                 variant: "primary",
                 icon: d.Gr1,
                 iconPosition: "end",
@@ -105,33 +106,33 @@ function E(e) {
         ),
     );
 }
-function Z(e) {
+function G(e) {
     let { guildId: n, instance: t } = e,
         i = (0, y.Z)(t),
-        [S, Z] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        D = S !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        G = (0, l.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
-        R = a.useCallback(() => {
+        [T, G] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        D = T !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        R = (0, l.e7)([g.Z], () => g.Z.getDetectableGame(t.gameId)),
+        A = a.useCallback(() => {
             D || null == t.providerType
                 ? (0, O.Z)(n, t)
-                : (0, h.Z)({
+                : (0, C.Z)({
                       provider: t.providerType,
                       onAccept: () => {
-                          Z(C.L.TAKE_ACTION), (0, O.Z)(n, t);
+                          G(N.L.TAKE_ACTION), (0, O.Z)(n, t);
                       },
                   });
-        }, [t, D, Z, n]),
-        A = a.useCallback(() => {
-            (0, g.JG)(null != i ? i : ""),
-                (0, d.showToast)((0, d.createToast)(N.intl.string(N.t["+5kSoa"]), d.ToastType.SUCCESS));
+        }, [t, D, G, n]),
+        V = a.useCallback(() => {
+            (0, b.JG)(null != i ? i : ""),
+                (0, d.showToast)((0, d.createToast)(P.intl.string(P.t["+5kSoa"]), d.ToastType.SUCCESS));
         }, [i]),
-        V = (0, _.Z)(t.gameId, "cover"),
-        B = (0, x.Z)(n),
-        W = a.useCallback(() => {
+        B = (0, h.Z)(t.gameId, "cover"),
+        W = (0, x.Z)(n),
+        L = a.useCallback(() => {
             var e;
             (0, f.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
-        L = a.useCallback(() => {
+        z = a.useCallback(() => {
             (0, p.WX)(n, t.id);
         }, [n, t.id]),
         M = a.useMemo(() => {
@@ -139,10 +140,10 @@ function Z(e) {
                 case s.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(T, { onClick: L }),
-                            B &&
-                                (0, r.jsx)(w, {
-                                    onClick: W,
+                            (0, r.jsx)(w, { onClick: z }),
+                            W &&
+                                (0, r.jsx)(k, {
+                                    onClick: L,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -152,230 +153,210 @@ function Z(e) {
                 case s.V.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(k, { onClick: R }),
-                            B &&
-                                (0, r.jsx)(w, {
-                                    onClick: W,
+                            (0, r.jsx)(E, { onClick: A }),
+                            W &&
+                                (0, r.jsx)(k, {
+                                    onClick: L,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
                 case s.V.MISSING_STOCK:
-                    return B
-                        ? (0, r.jsx)(E, { onClick: W })
-                        : (0, r.jsx)(k, {
-                              onClick: R,
+                    return W
+                        ? (0, r.jsx)(Z, { onClick: L })
+                        : (0, r.jsx)(E, {
+                              onClick: A,
                               disabled: !0,
                           });
                 case s.V.DELETED:
                 case s.V.STARTUP_FAILED:
-                    return B
-                        ? (0, r.jsx)(w, {
-                              onClick: W,
+                    return W
+                        ? (0, r.jsx)(k, {
+                              onClick: L,
                               disabled: null == t.gameServerPanelUrl,
                           })
-                        : (0, r.jsx)(k, {
-                              onClick: R,
+                        : (0, r.jsx)(E, {
+                              onClick: A,
                               disabled: !0,
                           });
                 default:
                     return null;
             }
-        }, [t, R, B, W, L]);
-    return (0, r.jsxs)("div", {
-        className: P.card,
+        }, [t, A, W, L, z]);
+    return (0, r.jsxs)(j.Z, {
+        actions: M,
         children: [
             (0, r.jsxs)("div", {
-                className: P.contentWrapper,
+                className: S.serverDetailsContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: P.serverDetailsContainer,
+                        className: S.serverHeader,
                         children: [
+                            (0, r.jsx)("img", {
+                                src: null != B ? B : "",
+                                alt: "",
+                                className: S.gameImage,
+                            }),
                             (0, r.jsxs)("div", {
-                                className: P.serverHeader,
+                                className: S.serverInfo,
                                 children: [
-                                    (0, r.jsx)("img", {
-                                        src: null != V ? V : "",
-                                        alt: "",
-                                        className: P.gameImage,
+                                    (0, r.jsx)(d.X6q, {
+                                        variant: "heading-sm/medium",
+                                        children: t.name,
                                     }),
-                                    (0, r.jsxs)("div", {
-                                        className: P.serverInfo,
-                                        children: [
-                                            (0, r.jsx)(d.X6q, {
-                                                variant: "heading-sm/medium",
-                                                children: t.name,
-                                            }),
-                                            (0, r.jsxs)(d.Text, {
-                                                variant: "text-sm/medium",
-                                                color: "text-tertiary",
-                                                children: [null != G ? "".concat(G.name, " \u2022 ") : "", t.planName],
-                                            }),
-                                        ],
+                                    (0, r.jsxs)(d.Text, {
+                                        variant: "text-sm/medium",
+                                        color: "text-tertiary",
+                                        children: [null != R ? "".concat(R.name, " \u2022 ") : "", t.planName],
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", {
-                                children: (0, r.jsxs)("div", {
-                                    className: P.detailsGrid,
+                        ],
+                    }),
+                    (0, r.jsx)("div", {
+                        children: (0, r.jsxs)("div", {
+                            className: S.detailsGrid,
+                            children: [
+                                (0, r.jsxs)("div", {
+                                    className: S.detailItem,
                                     children: [
-                                        (0, r.jsxs)("div", {
-                                            className: P.detailItem,
-                                            children: [
-                                                (0, r.jsx)(d.Text, {
-                                                    variant: "text-xs/semibold",
-                                                    color: "text-muted",
-                                                    children: N.intl.string(I.default.X0IaiI),
-                                                }),
-                                                (0, r.jsx)(d.Text, {
-                                                    variant: "text-sm/medium",
-                                                    children: ""
-                                                        .concat(
-                                                            null != t.onlineConnectionsCount
-                                                                ? t.onlineConnectionsCount
-                                                                : "\u2014",
-                                                            " / ",
-                                                        )
-                                                        .concat(
-                                                            null != t.maxConnectionsCount
-                                                                ? t.maxConnectionsCount
-                                                                : "\u2014",
-                                                        ),
-                                                }),
-                                            ],
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-xs/semibold",
+                                            color: "text-muted",
+                                            children: P.intl.string(I.default.X0IaiI),
                                         }),
-                                        (0, r.jsxs)("div", {
-                                            className: P.detailItem,
-                                            children: [
-                                                (0, r.jsx)(d.Text, {
-                                                    variant: "text-xs/semibold",
-                                                    color: "text-muted",
-                                                    children: N.intl.string(I.default["9pw/yM"]),
-                                                }),
-                                                (0, r.jsx)("div", {
-                                                    className: P.serverIpContainer,
-                                                    children:
-                                                        null == i
-                                                            ? (0, r.jsx)(d.Text, {
-                                                                  variant: "text-sm/medium",
-                                                                  children: "\u2014",
-                                                              })
-                                                            : D
-                                                              ? (0, r.jsxs)(r.Fragment, {
-                                                                    children: [
-                                                                        (0, r.jsx)(d.Text, {
-                                                                            variant: "text-sm/medium",
-                                                                            children: i,
-                                                                        }),
-                                                                        (0, r.jsx)(d.P3F, {
-                                                                            className: P.copyButton,
-                                                                            "aria-label": N.intl.string(N.t.OpuAlJ),
-                                                                            onClick: A,
-                                                                            children: (0, r.jsx)(d.TIy, { size: "sm" }),
-                                                                        }),
-                                                                    ],
-                                                                })
-                                                              : null != t.providerType &&
-                                                                (0, r.jsx)(m.Z, {
-                                                                    onClick: () => {
-                                                                        (0, h.Z)({
-                                                                            provider: t.providerType,
-                                                                            onAccept: () => {
-                                                                                Z(C.L.TAKE_ACTION), (0, O.Z)(n, t);
-                                                                            },
-                                                                        });
-                                                                    },
-                                                                    children: N.intl.string(I.default.UwXK29),
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-sm/medium",
+                                            children: ""
+                                                .concat(
+                                                    null != t.onlineConnectionsCount
+                                                        ? t.onlineConnectionsCount
+                                                        : "\u2014",
+                                                    " / ",
+                                                )
+                                                .concat(
+                                                    null != t.maxConnectionsCount ? t.maxConnectionsCount : "\u2014",
+                                                ),
+                                        }),
+                                    ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                    className: S.detailItem,
+                                    children: [
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-xs/semibold",
+                                            color: "text-muted",
+                                            children: P.intl.string(I.default["9pw/yM"]),
+                                        }),
+                                        (0, r.jsx)("div", {
+                                            className: S.serverIpContainer,
+                                            children:
+                                                null == i
+                                                    ? (0, r.jsx)(d.Text, {
+                                                          variant: "text-sm/medium",
+                                                          children: "\u2014",
+                                                      })
+                                                    : D
+                                                      ? (0, r.jsxs)(r.Fragment, {
+                                                            children: [
+                                                                (0, r.jsx)(d.Text, {
+                                                                    variant: "text-sm/medium",
+                                                                    children: i,
                                                                 }),
-                                                }),
-                                            ],
+                                                                (0, r.jsx)(d.P3F, {
+                                                                    className: S.copyButton,
+                                                                    "aria-label": P.intl.string(P.t.OpuAlJ),
+                                                                    onClick: V,
+                                                                    children: (0, r.jsx)(d.TIy, { size: "sm" }),
+                                                                }),
+                                                            ],
+                                                        })
+                                                      : null != t.providerType &&
+                                                        (0, r.jsx)(m.Z, {
+                                                            onClick: () => {
+                                                                (0, C.Z)({
+                                                                    provider: t.providerType,
+                                                                    onAccept: () => {
+                                                                        G(N.L.TAKE_ACTION), (0, O.Z)(n, t);
+                                                                    },
+                                                                });
+                                                            },
+                                                            children: P.intl.string(I.default.UwXK29),
+                                                        }),
+                                        }),
+                                    ],
+                                }),
+                                (0, r.jsxs)("div", {
+                                    className: S.detailItem,
+                                    children: [
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-xs/semibold",
+                                            color: "text-muted",
+                                            children: P.intl.string(I.default.MQQIu7),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: P.detailItem,
+                                            className: S.statusContainer,
                                             children: [
-                                                (0, r.jsx)(d.Text, {
-                                                    variant: "text-xs/semibold",
-                                                    color: "text-muted",
-                                                    children: N.intl.string(I.default.MQQIu7),
-                                                }),
-                                                (0, r.jsxs)("div", {
-                                                    className: P.statusContainer,
-                                                    children: [
-                                                        (0, r.jsx)("span", {
-                                                            className: o()(
-                                                                P.statusIndicator,
-                                                                null != t.status && P[t.status],
-                                                            ),
-                                                        }),
-                                                        (0, r.jsx)(d.Text, {
-                                                            variant: "text-sm/medium",
-                                                            children: (function (e) {
-                                                                switch (e) {
-                                                                    case s.V.STARTING:
-                                                                        return N.intl.string(I.default["7XF8pK"]);
-                                                                    case s.V.STARTUP_FAILED:
-                                                                        return N.intl.string(I.default["C/096+"]);
-                                                                    case s.V.OFFLINE:
-                                                                        return N.intl.string(I.default.Bz9gcH);
-                                                                    case s.V.ONLINE:
-                                                                        return N.intl.string(I.default["7q4iGR"]);
-                                                                    case s.V.DELETED:
-                                                                        return N.intl.string(I.default["UvP/1N"]);
-                                                                    case s.V.MISSING_STOCK:
-                                                                        return N.intl.string(I.default.ssC3cX);
-                                                                    case s.V.SLEEPING:
-                                                                        return N.intl.string(I.default.PS8AMT);
-                                                                    default:
-                                                                        return "\u2014";
-                                                                }
-                                                            })(t.status),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                        (0, r.jsxs)("div", {
-                                            className: P.detailItem,
-                                            children: [
-                                                (0, r.jsx)(d.Text, {
-                                                    variant: "text-xs/semibold",
-                                                    color: "text-muted",
-                                                    children: N.intl.string(I.default.fqrxlJ),
+                                                (0, r.jsx)("span", {
+                                                    className: o()(S.statusIndicator, null != t.status && S[t.status]),
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/medium",
-                                                    children: null != t.regionName ? t.regionName : "\u2014",
+                                                    children: (function (e) {
+                                                        switch (e) {
+                                                            case s.V.STARTING:
+                                                                return P.intl.string(I.default["7XF8pK"]);
+                                                            case s.V.STARTUP_FAILED:
+                                                                return P.intl.string(I.default["C/096+"]);
+                                                            case s.V.OFFLINE:
+                                                                return P.intl.string(I.default.Bz9gcH);
+                                                            case s.V.ONLINE:
+                                                                return P.intl.string(I.default["7q4iGR"]);
+                                                            case s.V.DELETED:
+                                                                return P.intl.string(I.default["UvP/1N"]);
+                                                            case s.V.MISSING_STOCK:
+                                                                return P.intl.string(I.default.ssC3cX);
+                                                            case s.V.SLEEPING:
+                                                                return P.intl.string(I.default.PS8AMT);
+                                                            default:
+                                                                return "\u2014";
+                                                        }
+                                                    })(t.status),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                            }),
-                        ],
-                    }),
-                    null != M &&
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsx)("div", { className: P.divider }),
-                                (0, r.jsx)("div", {
-                                    className: P.serverActions,
-                                    children: M,
+                                (0, r.jsxs)("div", {
+                                    className: S.detailItem,
+                                    children: [
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-xs/semibold",
+                                            color: "text-muted",
+                                            children: P.intl.string(I.default.fqrxlJ),
+                                        }),
+                                        (0, r.jsx)(d.Text, {
+                                            variant: "text-sm/medium",
+                                            children: null != t.regionName ? t.regionName : "\u2014",
+                                        }),
+                                    ],
                                 }),
                             ],
                         }),
-                    B &&
-                        (0, r.jsx)("div", {
-                            className: P.overflowMenu,
-                            children: (0, r.jsx)(j.Z, {
-                                guildId: n,
-                                instance: t,
-                            }),
-                        }),
+                    }),
                 ],
             }),
+            W &&
+                (0, r.jsx)("div", {
+                    className: S.overflowMenu,
+                    children: (0, r.jsx)(_.Z, {
+                        guildId: n,
+                        instance: t,
+                    }),
+                }),
             (0, r.jsx)("div", {
-                className: P.imageBackground,
-                children: (0, r.jsx)(v.M, { imageUrl: null != V ? V : "" }),
+                className: S.imageBackground,
+                children: (0, r.jsx)(v.M, { imageUrl: null != B ? B : "" }),
             }),
         ],
     });
