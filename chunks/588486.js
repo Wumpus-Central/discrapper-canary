@@ -99,6 +99,7 @@ class E extends o.C {
             type: 0,
             isTemplate: !1,
             fieldNumbersToCopy: [],
+            engineFeatureFlags: [],
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -200,6 +201,9 @@ class E extends o.C {
                         for (let t = e.int32() + e.pos; e.pos < t; ) a.fieldNumbersToCopy.push(e.int32());
                     else a.fieldNumbersToCopy.push(e.int32());
                     break;
+                case 29:
+                    a.engineFeatureFlags.push(e.string());
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -252,6 +256,8 @@ class E extends o.C {
             for (let n = 0; n < e.fieldNumbersToCopy.length; n++) t.int32(e.fieldNumbersToCopy[n]);
             t.join();
         }
+        for (let n = 0; n < e.engineFeatureFlags.length; n++)
+            t.tag(29, r.TD.LengthDelimited).string(e.engineFeatureFlags[n]);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -422,6 +428,13 @@ class E extends o.C {
                 kind: "scalar",
                 repeat: 1,
                 T: 5,
+            },
+            {
+                no: 29,
+                name: "engine_feature_flags",
+                kind: "scalar",
+                repeat: 2,
+                T: 9,
             },
         ]);
     }
