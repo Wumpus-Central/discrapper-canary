@@ -1,9 +1,9 @@
-n.d(e, { default: () => te }), n(388685), n(415506);
+n.d(t, { default: () => en }), n(388685), n(415506);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
-    s = n.n(l),
-    a = n(979554),
+    a = n.n(l),
+    s = n(979554),
     o = n(442837),
     u = n(780384),
     c = n(481060),
@@ -11,103 +11,104 @@ var i = n(951288),
     p = n(410030),
     f = n(607070),
     m = n(100527),
-    h = n(906732),
-    g = n(728345),
-    y = n(812206),
+    g = n(906732),
+    h = n(728345),
+    b = n(812206),
+    y = n(597688),
     O = n(884697),
-    b = n(583434),
-    j = n(551425),
-    v = n(832149),
-    P = n(745510),
-    S = n(313201),
-    x = n(925329),
-    Z = n(703656),
-    w = n(164670),
-    I = n(435883),
+    v = n(583434),
+    P = n(551425),
+    j = n(832149),
+    S = n(745510),
+    x = n(313201),
+    w = n(925329),
+    _ = n(703656),
+    I = n(164670),
+    Z = n(435883),
     A = n(146779),
     C = n(763296),
     T = n(82142),
-    R = n(283595),
-    E = n(594174),
-    N = n(509545),
-    k = n(55563),
-    D = n(626135),
-    G = n(176354),
+    E = n(283595),
+    N = n(594174),
+    k = n(509545),
+    R = n(55563),
+    G = n(626135),
+    D = n(176354),
     L = n(669079),
-    _ = n(296848),
-    M = n(51144),
-    U = n(479446),
-    H = n(715627),
-    F = n(981632),
+    M = n(296848),
+    U = n(51144),
+    H = n(479446),
+    F = n(715627),
+    B = n(981632),
     z = n(474936),
-    B = n(981631),
-    V = n(215023),
-    K = n(388032),
-    W = n(269142),
-    q = n(167969),
-    X = n(557256);
-function Y(t, e, n) {
+    V = n(981631),
+    K = n(215023),
+    W = n(388032),
+    q = n(269142),
+    X = n(167969),
+    Y = n(557256);
+function $(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let J = (t) => {
-        let { openedGift: e } = t,
-            { createMultipleConfettiAt: n } = r.useContext(P.h);
+let J = (e) => {
+        let { openedGift: t } = e,
+            { createMultipleConfettiAt: n } = r.useContext(S.h);
         return (
             r.useEffect(() => {
-                e && n(window.innerWidth / 2, window.innerHeight / 4);
-            }, [n, e]),
+                t && n(window.innerWidth / 2, window.innerHeight / 4);
+            }, [n, t]),
             null
         );
     },
-    Q = (t) => {
-        let { step: e, soundId: n } = t;
+    Q = (e) => {
+        let { step: t, soundId: n } = e;
         return (
             r.useEffect(() => {
-                var t;
-                if (e !== B.wZ8.CONFIRM) return;
+                var e;
+                if (t !== V.wZ8.CONFIRM) return;
                 let i = C.Z.getSoundById(n);
-                (0, A.playGiftSound)(n, null != (t = null == i ? void 0 : i.volume) ? t : 1);
-            }, [e, n]),
+                (0, A.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
+            }, [t, n]),
             null
         );
     };
-class $ extends r.Component {
+class ee extends r.Component {
     componentDidMount() {
-        let { application: t, sku: e, customGiftMessage: n, giftCode: i, emojiName: r } = this.props;
-        null == t && null != e && g.ZP.fetchApplication(e.applicationId);
+        let { application: e, sku: t, customGiftMessage: n, giftCode: i, emojiName: r } = this.props;
+        null == e && null != t && h.ZP.fetchApplication(t.applicationId);
         let l = null != n || null != i.giftStyle,
-            s = (0, O.mO)(i),
-            a = null != r ? G.ZP.getURL(r) : void 0,
-            o = (0, L.HL)({ productLine: null == e ? void 0 : e.productLine });
+            a = (0, O.mO)(i),
+            s = null != r ? D.ZP.getURL(r) : void 0,
+            o = (0, L.HL)({ productLine: null == t ? void 0 : t.productLine });
         this.setState({
             isCustomGift: l,
-            isCollectiblesGift: s,
-            emojiURL: a,
-            opened: s,
+            isCollectiblesGift: a,
+            emojiURL: s,
+            opened: a,
             isPremiumAppGift: o,
         }),
             this.trackStepAnalytics();
     }
     get step() {
-        let { libraryApplication: t, accepting: e, giftCode: n } = this.props,
-            { error: i, accepted: r, opened: l, isCustomGift: s, isPremiumAppGift: a } = this.state;
-        return (0, L.TO)(t, n, {
+        let { libraryApplication: e, accepting: t, giftCode: n } = this.props,
+            { error: i, accepted: r, opened: l, isCustomGift: a, isPremiumAppGift: s } = this.state;
+        return (0, L.TO)(e, n, {
             error: i,
             accepted: r,
-            accepting: e,
+            accepting: t,
             opened: l,
-            isCustomGift: s,
-            isPremiumAppGift: a,
+            isCustomGift: a,
+            isPremiumAppGift: s,
         });
     }
     get buttonText() {
@@ -117,113 +118,113 @@ class $ extends r.Component {
         });
     }
     get firstHeaderText() {
-        let { isCustomGift: t, opened: e, accepted: n, isPremiumAppGift: i } = this.state,
-            { giftCode: r, subscriptionPlan: l, collectiblesItemType: s, sku: o, application: u } = this.props;
-        if (t && this.step === B.wZ8.ERROR) return K.intl.formatToMarkdownString(K.t.JUvC0t, {});
+        let { isCustomGift: e, opened: t, accepted: n, isPremiumAppGift: i } = this.state,
+            { giftCode: r, subscriptionPlan: l, collectiblesItemType: a, sku: o, application: u } = this.props;
+        if (e && this.step === V.wZ8.ERROR) return W.intl.formatToMarkdownString(W.t.JUvC0t, {});
         if (i)
-            if (!e)
-                return K.intl.formatToPlainString(K.t.xHzRub, {
-                    recipientDisplayName: M.ZP.getName(E.default.getCurrentUser()),
+            if (!t)
+                return W.intl.formatToPlainString(W.t.xHzRub, {
+                    recipientDisplayName: U.ZP.getName(N.default.getCurrentUser()),
                 });
             else {
                 var c, d;
-                if (n) return K.intl.string(K.t["+BNMcH"]);
-                let t = E.default.getUser(r.userId);
-                return K.intl.formatToPlainString(K.t["2tBYtL"], {
-                    sender: M.ZP.getName(t),
+                if (n) return W.intl.string(W.t["+BNMcH"]);
+                let e = N.default.getUser(r.userId);
+                return W.intl.formatToPlainString(W.t["2tBYtL"], {
+                    sender: U.ZP.getName(e),
                     skuName: null != (c = null == o ? void 0 : o.name) ? c : "item",
                     applicationName: null != (d = null == u ? void 0 : u.name) ? d : "an application",
                 });
             }
-        if (t && !n)
-            if (!e)
-                return K.intl.formatToPlainString(K.t.xHzRub, {
-                    recipientDisplayName: M.ZP.getName(E.default.getCurrentUser()),
+        if (e && !n)
+            if (!t)
+                return W.intl.formatToPlainString(W.t.xHzRub, {
+                    recipientDisplayName: U.ZP.getName(N.default.getCurrentUser()),
                 });
             else {
-                let t = E.default.getUser(r.userId),
-                    e = M.ZP.getName(t);
-                if (null != s)
-                    switch (s) {
-                        case a.Z.AVATAR_DECORATION:
-                            return K.intl.formatToPlainString(K.t.SKduys, { sender: e });
-                        case a.Z.PROFILE_EFFECT:
-                            return K.intl.formatToPlainString(K.t["1w42T0"], { sender: e });
-                        case a.Z.NAMEPLATE:
-                            return K.intl.formatToPlainString(K.t.vFiQlZ, { sender: e });
+                let e = N.default.getUser(r.userId),
+                    t = U.ZP.getName(e);
+                if (null != a)
+                    switch (a) {
+                        case s.Z.AVATAR_DECORATION:
+                            return W.intl.formatToPlainString(W.t.SKduys, { sender: t });
+                        case s.Z.PROFILE_EFFECT:
+                            return W.intl.formatToPlainString(W.t["1w42T0"], { sender: t });
+                        case s.Z.NAMEPLATE:
+                            return W.intl.formatToPlainString(W.t.vFiQlZ, { sender: t });
                         default:
-                            return K.intl.formatToPlainString(K.t.U4Ko29, { sender: e });
+                            return W.intl.formatToPlainString(W.t.U4Ko29, { sender: t });
                     }
-                return K.intl.formatToPlainString(K.t["0UR0u7"], {
-                    sender: e,
+                return W.intl.formatToPlainString(W.t["0UR0u7"], {
+                    sender: t,
                     timeInterval:
                         (null == l ? void 0 : l.interval) === z.rV.MONTH
-                            ? K.intl.string(K.t.FPybU1)
-                            : K.intl.string(K.t.tfqrho),
+                            ? W.intl.string(W.t.FPybU1)
+                            : W.intl.string(W.t.tfqrho),
                 });
             }
         return null == this.props.sku ? null : (0, L.dQ)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = E.default.getUser(this.props.giftCode.userId);
-        return K.intl.formatToPlainString(K.t.DDO4W1, { sender: M.ZP.getName(t) });
+        let e = N.default.getUser(this.props.giftCode.userId);
+        return W.intl.formatToPlainString(W.t.DDO4W1, { sender: U.ZP.getName(e) });
     }
     get bodyText() {
-        let { sku: t, accepting: e, libraryApplication: n, subscriptionPlan: i, giftCode: r } = this.props;
-        if (null == t) return null;
-        let { error: l, accepted: s, isCustomGift: a, opened: o, isPremiumAppGift: u } = this.state;
+        let { sku: e, accepting: t, libraryApplication: n, subscriptionPlan: i, giftCode: r } = this.props;
+        if (null == e) return null;
+        let { error: l, accepted: a, isCustomGift: s, opened: o, isPremiumAppGift: u } = this.state;
         if (u) {
-            let t = E.default.getUser(r.userId);
+            let e = N.default.getUser(r.userId);
             return o
-                ? s
-                    ? K.intl.string(K.t.fLHIp6)
+                ? a
+                    ? W.intl.string(W.t.fLHIp6)
                     : null
-                : K.intl.formatToPlainString(K.t.DDO4W1, { sender: M.ZP.getName(t) });
+                : W.intl.formatToPlainString(W.t.DDO4W1, { sender: U.ZP.getName(e) });
         }
-        return !o && a
+        return !o && s
             ? null
             : (0, L.iM)({
                   step: this.step,
-                  sku: t,
+                  sku: e,
                   libraryApplication: n,
                   error: l,
-                  accepted: s,
-                  accepting: e,
+                  accepted: a,
+                  accepting: t,
                   onGoToLibrary: this.handleGoToLibrary,
                   subscriptionPlan: i,
               });
     }
     get errorMessage() {
-        let { libraryApplication: t, accepting: e } = this.props,
+        let { libraryApplication: e, accepting: t } = this.props,
             { error: n, accepted: i } = this.state;
-        return (0, L.e$)(t, n, i, e, this.handleGoToLibrary);
+        return (0, L.e$)(e, n, i, t, this.handleGoToLibrary);
     }
     get handleClick() {
-        let { giftCode: t, onClose: e } = this.props;
+        let { giftCode: e, onClose: t } = this.props;
         switch (this.step) {
-            case B.wZ8.ERROR:
-                return e;
-            case B.wZ8.SUCCESS:
-                if (__OVERLAY__ || null != t.subscriptionPlanId || this.state.isPremiumAppGift) return e;
+            case V.wZ8.ERROR:
+                return t;
+            case V.wZ8.SUCCESS:
+                if (__OVERLAY__ || null != e.subscriptionPlanId || this.state.isPremiumAppGift) return t;
                 return this.handleGoToLibrary;
-            case B.wZ8.OPEN:
+            case V.wZ8.OPEN:
                 return this.handleOpen;
-            case B.wZ8.CONFIRM:
+            case V.wZ8.CONFIRM:
             default:
                 return this.handleAccept;
         }
     }
     trackStepAnalytics() {
-        let { giftCode: t, customGiftMessage: e, emojiName: n, soundId: i, sku: r, analyticsLocations: l } = this.props,
-            { isCustomGift: s } = this.state;
-        D.default.track(B.rMx.GIFT_ACCEPT_STEP, {
+        let { giftCode: e, customGiftMessage: t, emojiName: n, soundId: i, sku: r, analyticsLocations: l } = this.props,
+            { isCustomGift: a } = this.state;
+        G.default.track(V.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             location_stack: l,
-            has_custom_message: s,
-            is_custom_message_edited: s && e !== K.intl.string(K.t.ZkOo1d),
-            gift_style: t.giftStyle,
-            gift_code: t.code,
+            has_custom_message: a,
+            is_custom_message_edited: a && t !== W.intl.string(W.t.ZkOo1d),
+            gift_style: e.giftStyle,
+            gift_code: e.code,
             emoji_name: n,
             sound_id: i,
             product_line: null == r ? void 0 : r.productLine,
@@ -231,44 +232,44 @@ class $ extends r.Component {
     }
     render() {
         let {
-                sku: t,
-                application: e,
+                sku: e,
+                application: t,
                 accepting: n,
                 onClose: r,
                 giftCode: l,
-                headerId: a,
+                headerId: s,
                 transitionState: o,
                 useReducedMotion: u,
                 onComplete: d,
                 customGiftMessage: p,
                 emojiName: f,
                 soundId: m,
-                isThemeDark: h,
+                isThemeDark: g,
             } = this.props,
-            g = E.default.getUser(l.userId),
+            h = N.default.getUser(l.userId),
             {
-                isCustomGift: y,
-                isCollectiblesGift: O,
-                accepted: b,
+                isCustomGift: b,
+                isCollectiblesGift: y,
+                accepted: O,
                 opened: v,
-                emojiURL: P,
+                emojiURL: j,
                 isPremiumAppGift: S,
             } = this.state,
-            Z = E.default.getCurrentUser(),
-            A = this.step === B.wZ8.ERROR,
-            C =
+            x = N.default.getCurrentUser(),
+            _ = this.step === V.wZ8.ERROR,
+            A =
                 (null == l ? void 0 : l.userId) != null &&
-                null != Z &&
-                (null == Z ? void 0 : Z.id) != null &&
-                l.userId === Z.id;
+                null != x &&
+                (null == x ? void 0 : x.id) != null &&
+                l.userId === x.id;
         switch (this.step) {
-            case B.wZ8.ERROR:
+            case V.wZ8.ERROR:
                 null == d || d(l, !1);
                 break;
-            case B.wZ8.SUCCESS:
+            case V.wZ8.SUCCESS:
                 null == d || d(l, !0);
         }
-        let T = (0, w.K$)(t);
+        let C = (0, I.K$)(e);
         return (0, i.jsxs)("div", {
             ref: this.modalRef,
             children: [
@@ -276,110 +277,110 @@ class $ extends r.Component {
                     "data-migration-pending": !0,
                     transitionState: o,
                     size: c.CgR.SMALL,
-                    className: W.modal,
-                    "aria-labelledby": a,
+                    className: q.modal,
+                    "aria-labelledby": s,
                     parentComponent: "GiftCodeModal",
                     children: [
                         null != l.giftStyle &&
+                            !b &&
                             !y &&
-                            !O &&
-                            (0, i.jsx)(F.Z, {
+                            (0, i.jsx)(B.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: l.giftStyle,
-                                className: W.seasonalGiftIcon,
+                                className: q.seasonalGiftIcon,
                             }),
-                        !y && (0, i.jsx)("div", { className: W.backSplash }),
-                        !O &&
+                        !b && (0, i.jsx)("div", { className: q.backSplash }),
+                        !y &&
                             (0, i.jsx)(c.olH, {
                                 "data-migration-pending": !0,
                                 onClick: r,
-                                className: W.closeButton,
+                                className: q.closeButton,
                             }),
                         (0, i.jsxs)(c.hzk, {
                             "data-migration-pending": !0,
-                            className: s()({
-                                [W.content]: !y,
-                                [W.contentCustomGift]: y,
+                            className: a()({
+                                [q.content]: !b,
+                                [q.contentCustomGift]: b,
                             }),
                             children: [
-                                (!O && !S && (null == l.giftStyle || (y && b))) || T
-                                    ? (0, i.jsx)(x.Z, {
-                                          size: x.A.LARGE,
-                                          game: e,
+                                (!y && !S && (null == l.giftStyle || (b && O))) || C
+                                    ? (0, i.jsx)(w.Z, {
+                                          size: w.A.LARGE,
+                                          game: t,
                                           skuId: l.skuId,
                                       })
                                     : null,
-                                A &&
+                                _ &&
                                     (0, i.jsx)("img", {
                                         alt: "",
-                                        src: h ? q : X,
+                                        src: g ? X : Y,
                                     }),
                                 (0, i.jsxs)(c.X6q, {
-                                    id: a,
-                                    className: s()({
-                                        [W.customGiftHeader]: y && !b,
-                                        [W.header]: !y || b,
+                                    id: s,
+                                    className: a()({
+                                        [q.customGiftHeader]: b && !O,
+                                        [q.header]: !b || O,
                                     }),
                                     variant: "heading-sm/semibold",
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: s()({ [W.customGiftHeaderText]: y }),
+                                            className: a()({ [q.customGiftHeaderText]: b }),
                                             children: this.firstHeaderText,
                                         }),
                                         (0, i.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
-                                !(y && !b) &&
+                                !(b && !O) &&
                                     (0, i.jsx)(c.Text, {
-                                        className: W.body,
+                                        className: q.body,
                                         variant: "text-sm/normal",
                                         children: this.bodyText,
                                     }),
-                                y &&
-                                    !O &&
+                                b &&
+                                    !y &&
                                     null != l.giftStyle &&
-                                    !b &&
-                                    !A &&
-                                    (0, i.jsx)(F.Z, {
+                                    !O &&
+                                    !_ &&
+                                    (0, i.jsx)(B.Z, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
-                                        className: W.giftAnimation,
+                                        className: q.giftAnimation,
                                         giftStyle: l.giftStyle,
                                     }),
-                                this.state.opened && !A && O && (0, i.jsx)(j.Z, { giftCode: l }),
-                                A &&
+                                this.state.opened && !_ && y && (0, i.jsx)(P.Z, { giftCode: l }),
+                                _ &&
                                     (0, i.jsx)(c.Text, {
-                                        className: W.body,
+                                        className: q.body,
                                         variant: "text-md/normal",
                                         children: this.errorMessage,
                                     }),
-                                y &&
+                                b &&
                                     this.state.opened &&
                                     !this.state.accepted &&
-                                    !A &&
+                                    !_ &&
                                     null != p &&
                                     "" !== p &&
-                                    !C &&
+                                    !A &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.vwX, {
-                                                children: K.intl.format(K.t.DDO4W1, { sender: M.ZP.getName(g) }),
+                                                children: W.intl.format(W.t.DDO4W1, { sender: U.ZP.getName(h) }),
                                             }),
                                             (0, i.jsx)(c.X6q, {
-                                                id: a,
-                                                className: W.customMessage,
+                                                id: s,
+                                                className: q.customMessage,
                                                 variant: "heading-sm/bold",
                                                 children: p,
                                             }),
                                         ],
                                     }),
-                                T &&
-                                    (0, i.jsx)(I.q, {
-                                        sku: t,
-                                        className: s()({
-                                            [W.gameItemImageGiftUnopened]: !this.state.opened,
-                                            [W.gameItemImageGiftOpened]: this.state.opened,
+                                C &&
+                                    (0, i.jsx)(Z.q, {
+                                        sku: e,
+                                        className: a()({
+                                            [q.gameItemImageGiftUnopened]: !this.state.opened,
+                                            [q.gameItemImageGiftOpened]: this.state.opened,
                                         }),
                                     }),
                                 (0, i.jsx)(c.zxk, {
@@ -396,17 +397,17 @@ class $ extends r.Component {
                 }),
                 null != l.giftStyle &&
                     !u &&
-                    this.step !== B.wZ8.ERROR &&
-                    !b &&
+                    this.step !== V.wZ8.ERROR &&
+                    !O &&
                     !n &&
                     v &&
-                    (null == f || null == P
-                        ? (0, i.jsx)(J, { openedGift: v && !b && !n })
-                        : (0, i.jsx)(H.Z, {
+                    (null == f || null == j
+                        ? (0, i.jsx)(J, { openedGift: v && !O && !n })
+                        : (0, i.jsx)(F.Z, {
                               confettiTarget: this.modalRef.current,
-                              emojiURL: P,
+                              emojiURL: j,
                           })),
-                !b &&
+                !O &&
                     !n &&
                     v &&
                     null != m &&
@@ -417,9 +418,9 @@ class $ extends r.Component {
             ],
         });
     }
-    constructor(...t) {
-        super(...t),
-            Y(this, "state", {
+    constructor(...e) {
+        super(...e),
+            $(this, "state", {
                 error: null,
                 accepted: !1,
                 opened: !1,
@@ -429,138 +430,137 @@ class $ extends r.Component {
                 emojiURL: void 0,
                 isPremiumAppGift: !1,
             }),
-            Y(this, "modalRef", r.createRef()),
-            Y(this, "handleOpen", () => {
+            $(this, "modalRef", r.createRef()),
+            $(this, "handleOpen", () => {
                 this.setState({ opened: !0 });
             }),
-            Y(this, "handleAccept", async () => {
-                let { giftCode: t, channelContext: e, onAccept: n } = this.props;
-                if (null == t) throw Error("GiftCode is null at acceptance.");
+            $(this, "handleAccept", async () => {
+                let { giftCode: e, channelContext: t, onAccept: n } = this.props;
+                if (null == e) throw Error("GiftCode is null at acceptance.");
                 try {
                     await d.Z.redeemGiftCode({
-                        code: t.code,
-                        options: { channelId: e },
+                        code: e.code,
+                        options: { channelId: t },
                     }),
                         this.setState({ accepted: !0 }),
                         null == n || n();
-                } catch (t) {
-                    this.setState({ error: t });
+                } catch (e) {
+                    this.setState({ error: e });
                 }
             }),
-            Y(this, "handleGoToLibrary", () => {
-                let { onClose: t, libraryApplication: e } = this.props;
-                (0, Z.uL)(B.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
+            $(this, "handleGoToLibrary", () => {
+                let { onClose: e, libraryApplication: t } = this.props;
+                (0, _.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
             }),
-            Y(this, "getDefaultAnimationStatus", () => (this.step === B.wZ8.OPEN ? U.SR.IDLE : U.SR.ACTION)),
-            Y(this, "getIdleAnimationStatus", () => {
-                if (this.step !== B.wZ8.OPEN) return U.SR.LOOP;
+            $(this, "getDefaultAnimationStatus", () => (this.step === V.wZ8.OPEN ? H.SR.IDLE : H.SR.ACTION)),
+            $(this, "getIdleAnimationStatus", () => {
+                if (this.step !== V.wZ8.OPEN) return H.SR.LOOP;
             });
     }
 }
-let tt = o.ZP.connectStores([R.Z, k.Z, y.Z, T.Z, N.Z, f.Z], (t) => {
-        let { giftCode: e } = t,
-            n = k.Z.get(e.skuId),
-            i = null != n ? y.Z.getApplication(n.applicationId) : null,
+let et = o.ZP.connectStores([E.Z, R.Z, b.Z, T.Z, k.Z, f.Z, y.Z], (e) => {
+        let { giftCode: t } = e,
+            n = R.Z.get(t.skuId),
+            i = null != n ? b.Z.getApplication(n.applicationId) : null,
             r = f.Z.useReducedMotion;
         return {
             sku: n,
             libraryApplication:
-                null != n && (null == e ? void 0 : e.entitlementBranches) != null
-                    ? (0, L.z2)(e.entitlementBranches, n, R.Z)
+                null != n && (null == t ? void 0 : t.entitlementBranches) != null
+                    ? (0, L.z2)(t.entitlementBranches, n, E.Z)
                     : null,
             application: i,
-            subscriptionPlan: null != e.subscriptionPlanId ? (0, _.oE)(e.subscriptionPlanId) : null,
-            accepting: T.Z.getIsAccepting(e.code),
+            subscriptionPlan: null != t.subscriptionPlanId ? (0, M.oE)(t.subscriptionPlanId) : null,
+            accepting: T.Z.getIsAccepting(t.code),
             useReducedMotion: r,
         };
-    })($),
-    te = (t) => {
-        var e,
+    })(ee),
+    en = (e) => {
+        var t,
             n,
-            r,
-            { channelContext: l, code: s, customGiftMessage: a, emojiName: c, soundId: d, onClose: f } = t,
-            g = (function (t, e) {
-                if (null == t) return {};
+            { channelContext: r, code: l, customGiftMessage: a, emojiName: s, soundId: c, onClose: d } = e,
+            f = (function (e, t) {
+                if (null == e) return {};
                 var n,
                     i,
-                    r = (function (t, e) {
-                        if (null == t) return {};
+                    r = (function (e, t) {
+                        if (null == e) return {};
                         var n,
                             i,
                             r = {},
-                            l = Object.keys(t);
-                        for (i = 0; i < l.length; i++) (n = l[i]), e.indexOf(n) >= 0 || (r[n] = t[n]);
+                            l = Object.keys(e);
+                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
-                    })(t, e);
+                    })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(t);
+                    var l = Object.getOwnPropertySymbols(e);
                     for (i = 0; i < l.length; i++)
                         (n = l[i]),
-                            !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(t, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
-        let y = (0, S.Dt)(),
-            O = (0, o.e7)([T.Z], () => T.Z.get(s)),
-            j = (0, p.ZP)(),
-            { analyticsLocations: P } = (0, h.ZP)(m.Z.GIFT_CODE_MODAL),
-            { product: x } = (0, b.T)(null == O ? void 0 : O.skuId);
-        return null == O
+            })(e, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
+        let h = (0, x.Dt)(),
+            b = (0, o.e7)([T.Z], () => T.Z.get(l)),
+            y = (0, p.ZP)(),
+            { analyticsLocations: P } = (0, g.ZP)(m.Z.GIFT_CODE_MODAL),
+            { product: S } = (0, v.T)(null == b ? void 0 : b.skuId, !0);
+        return null == b
             ? null
             : (0, i.jsx)(
-                  tt,
-                  ((e = (function (t) {
-                      for (var e = 1; e < arguments.length; e++) {
-                          var n = null != arguments[e] ? arguments[e] : {},
+                  et,
+                  ((t = (function (e) {
+                      for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {},
                               i = Object.keys(n);
                           "function" == typeof Object.getOwnPropertySymbols &&
                               (i = i.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (t) {
-                                      return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                   }),
                               )),
-                              i.forEach(function (e) {
-                                  Y(t, e, n[e]);
+                              i.forEach(function (t) {
+                                  $(e, t, n[t]);
                               });
                       }
-                      return t;
-                  })({}, g)),
+                      return e;
+                  })({}, f)),
                   (n = n =
                       {
                           customGiftMessage: a,
-                          channelContext: l,
-                          giftCode: O,
-                          headerId: y,
-                          emojiName: c,
-                          soundId: d,
+                          channelContext: r,
+                          giftCode: b,
+                          headerId: h,
+                          emojiName: s,
+                          soundId: c,
                           analyticsLocations: P,
-                          isThemeDark: (0, u.wj)(j),
-                          onClose: f,
-                          collectiblesItemType: null == x || null == (r = x.items[0]) ? void 0 : r.type,
+                          isThemeDark: (0, u.wj)(y),
+                          onClose: d,
+                          collectiblesItemType: (0, O.$W)(S),
                           onAccept:
-                              null != x
+                              null != S
                                   ? () => {
-                                        f(),
-                                            (0, v.Z)({
-                                                product: x,
+                                        d(),
+                                            (0, j.Z)({
+                                                product: S,
                                                 analyticsLocations: P,
-                                                purchaseType: V.o8.GIFT,
+                                                purchaseType: K.o8.GIFT,
                                             });
                                     }
                                   : void 0,
                       }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                      : (function (t, e) {
-                            var n = Object.keys(t);
+                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                      : (function (e, t) {
+                            var n = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
-                                var i = Object.getOwnPropertySymbols(t);
+                                var i = Object.getOwnPropertySymbols(e);
                                 n.push.apply(n, i);
                             }
                             return n;
-                        })(Object(n)).forEach(function (t) {
-                            Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                        })(Object(n)).forEach(function (e) {
+                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                         }),
-                  e),
+                  t),
               );
     };

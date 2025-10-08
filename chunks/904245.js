@@ -29,10 +29,10 @@ var r = n(278074),
     P = n(264229),
     w = n(413605),
     D = n(366980),
-    x = n(467512),
-    L = n(779832),
-    j = n(786761),
-    M = n(459618),
+    L = n(467512),
+    x = n(779832),
+    M = n(786761),
+    j = n(459618),
     k = n(541288),
     U = n(3148),
     G = n(48854),
@@ -134,8 +134,8 @@ function eR(e, t) {
 let eP = null,
     ew = new O.Z("MessageActionCreators"),
     eD = new O.Z("MessageQueue"),
-    ex = !1;
-class eL {
+    eL = !1;
+class ex {
     markComplete() {
         this.completed = !0;
     }
@@ -143,7 +143,7 @@ class eL {
         eA(this, "completed", !1);
     }
 }
-function ej(e) {
+function eM(e) {
     let {
             content: t,
             channelId: n,
@@ -156,7 +156,7 @@ function ej(e) {
     (0, y.ZP)(t).forEach((e) => {
         let { type: t, code: c, url: u } = e;
         if (t === b.g.INVITE)
-            eM({
+            ej({
                 inviteKey: c,
                 channelId: n,
                 messageId: r,
@@ -204,7 +204,7 @@ function ej(e) {
         else throw Error("Unknown coded link type: ".concat(t));
     });
 }
-function eM(e) {
+function ej(e) {
     var t, n;
     let {
             inviteKey: r,
@@ -315,6 +315,10 @@ let eB = {
         [eO.evJ.EMAIL_VERIFICATION_REQUIRED]: {
             messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
             messageGetter: () => eS.intl.string(eS.t.k1Cjqq),
+        },
+        [eO.evJ.GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED]: {
+            messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
+            messageGetter: () => eS.intl.string(eS.t.Z5SUur),
         },
         [eO.evJ.INVALID_MESSAGE_SEND_USER]: {
             messageName: "BOT_DM_SEND_FAILED_WITH_HELP_LINK",
@@ -588,7 +592,7 @@ let eB = {
                     rejectWithError: !1,
                 })
                 .then((e) => {
-                    if (e.body.length > 0) return (0, j.e5)(e.body[0]);
+                    if (e.body.length > 0) return (0, M.e5)(e.body[0]);
                 });
         },
         fetchMessages(e) {
@@ -636,7 +640,7 @@ let eB = {
             let O = c.Z.getOrCreate(t).loadStart(y);
             c.Z.commit(O), s.Z.dispatch({ type: "LOAD_MESSAGES" });
             let v = null == y ? void 0 : y.messageId,
-                T = new eL();
+                T = new ex();
             return (
                 d || this.fetchLocalMessages(t, n, r, i, T),
                 a.tn
@@ -862,8 +866,8 @@ let eB = {
             let o = null != (n = i.nonce) ? n : (0, G.r)();
             i = eR(eC({}, i), { nonce: o });
             let s = () => eZ._sendMessage(e, t, i),
-                l = L.ZP.backgroundify(s, void 0);
-            return (M.Z.recordMessageSendAttempt(e, o, i), es.Z.isReady(e))
+                l = x.ZP.backgroundify(s, void 0);
+            return (j.Z.recordMessageSendAttempt(e, o, i), es.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
                   ? (eD.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -1064,9 +1068,9 @@ let eB = {
                     onAttachmentUploadError: w,
                     announcementSendOptions: D,
                 } = n,
-                L = null != (i = n.flags) ? i : 0,
-                [j, Y] = (0, ee.Z)(d);
-            j && ((d = Y), (L = (0, ep.pj)(L, eO.iLy.SUPPRESS_NOTIFICATIONS)));
+                x = null != (i = n.flags) ? i : 0,
+                [M, Y] = (0, ee.Z)(d);
+            M && ((d = Y), (x = (0, ep.pj)(x, eO.iLy.SUPPRESS_NOTIFICATIONS)));
             let Q = !1,
                 J = (null == (r = n.messageReference) ? void 0 : r.type) === eO.Uvt.FORWARD;
             if (
@@ -1092,7 +1096,7 @@ let eB = {
                     type: et,
                     messageReference: y,
                     allowedMentions: O,
-                    flags: 0 !== L ? L : void 0,
+                    flags: 0 !== x ? x : void 0,
                     nonce: en,
                     poll: (0, V.x9)(I),
                     sharedCustomTheme: T,
@@ -1102,9 +1106,9 @@ let eB = {
                     ((0, Z.EL)(e, ea.id),
                     null != E && (ea.sticker_items = E.map((e) => $.Z.getStickerById(e)).filter((e) => null != e)),
                     eZ.receiveMessage(e, ea, !0, n)),
-                !ex && null != f && f.length > 0)
+                !eL && null != f && f.length > 0)
             ) {
-                ex = !0;
+                eL = !0;
                 let t = ef.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: r } = eZ.validateMessage(f, t, e);
                 eZ.sendBotMessage(e, n, r);
@@ -1118,7 +1122,7 @@ let eB = {
                     tts: p,
                     message_reference: y,
                     allowed_mentions: O,
-                    flags: L,
+                    flags: x,
                     analyticsLocation: m,
                 },
             };
@@ -1161,7 +1165,7 @@ let eB = {
                 null != P && P.length > 0)
             )
                 try {
-                    let t = await (0, x.c)({
+                    let t = await (0, L.c)({
                         channelId: e,
                         nonce: en,
                         items: P,
@@ -1224,7 +1228,7 @@ let eB = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                M.Z.recordMessageSendApiResponse(en),
+                                j.Z.recordMessageSendApiResponse(en),
                                     s.Z.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ed.S.SendMessage,
@@ -1245,7 +1249,7 @@ let eB = {
                                             author: ef.default.getCurrentUser(),
                                         },
                                     }),
-                                    ej({
+                                    eM({
                                         content: d,
                                         channelId: e,
                                         messageId: o.body.id,
@@ -1515,6 +1519,6 @@ let eB = {
                             confirmText: eS.intl.string(eS.t.BddRzc),
                         });
                 }),
-        trackInvite: eM,
+        trackInvite: ej,
     },
     eF = eZ;

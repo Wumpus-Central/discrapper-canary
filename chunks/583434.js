@@ -1,28 +1,30 @@
-n.d(t, { T: () => u }), n(388685);
+n.d(t, { T: () => d }), n(388685);
 var r = n(647438),
-    i = n(399606),
-    a = n(55563),
-    o = n(335131),
-    s = n(597688),
-    l = n(981631);
-let c = 3600000;
-function u(e, t) {
-    let n = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
-        u = null != n && n.productLine !== l.POd.COLLECTIBLES,
-        [d, f, _, p] = (0, i.Wu)([s.Z], () => [
-            s.Z.isFetchingProduct(e),
-            s.Z.getProduct(e),
-            s.Z.getProductFetchError(e),
-            s.Z.getProductFetchErrorTimestamp(e),
+    i = n(979554),
+    a = n(399606),
+    o = n(55563),
+    s = n(335131),
+    l = n(597688),
+    c = n(981631);
+let u = 3600000;
+function d(e, t) {
+    let n = (0, a.e7)([o.Z], () => (null != e ? o.Z.get(e) : null)),
+        d = null != n && n.productLine !== c.POd.COLLECTIBLES,
+        [f, _, p, h] = (0, a.Wu)([l.Z], () => [
+            l.Z.isFetchingProduct(e),
+            l.Z.getProduct(e),
+            l.Z.getProductFetchError(e),
+            l.Z.getProductFetchErrorTimestamp(e),
         ]),
-        h = null != _ && null != p && Date.now() - p < c;
+        m = null != p && null != h && Date.now() - h < u,
+        g = !0 === t && (null == _ ? void 0 : _.type) === i.Z.BUNDLE && 0 === _.items.length;
     return (
         (0, r.useEffect)(() => {
-            null == e || null != f || u || d || h || (0, o.jr)(e, { includeBundles: t });
-        }, [e, f, u, d, h, t]),
+            null == e || (null != _ && !g) || d || f || m || (0, s.jr)(e, { includeBundles: t });
+        }, [e, _, d, f, m, t, g]),
         {
-            product: f,
-            isFetching: d,
+            product: _,
+            isFetching: f,
         }
     );
 }
