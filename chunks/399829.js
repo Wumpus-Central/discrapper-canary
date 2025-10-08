@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(442837),
     d = n(28664),
     u = n(477690),
-    m = n(481060),
-    g = n(179360),
+    g = n(481060),
+    m = n(179360),
     p = n(129861),
     f = n(999382),
     h = n(905128),
@@ -43,7 +43,7 @@ class w extends i.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
-        null != e && (0, g.C0)(e), window.addEventListener("resize", this.measure);
+        null != e && (0, m.C0)(e), window.addEventListener("resize", this.measure);
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.measure);
@@ -83,9 +83,9 @@ class w extends i.Component {
             className: S.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
-                (0, r.jsx)(m.vwX, { children: I.intl.string(I.t["76OoX1"]) }),
-                (0, r.jsx)(m.R94, {
-                    type: m.R94.Types.DESCRIPTION,
+                (0, r.jsx)(g.vwX, { children: I.intl.string(I.t["76OoX1"]) }),
+                (0, r.jsx)(g.R94, {
+                    type: g.R94.Types.DESCRIPTION,
                     className: S.tierDefaultUnlockedDescription,
                     children: I.intl.string(I.t.DaYNQU),
                 }),
@@ -115,7 +115,7 @@ class w extends i.Component {
     render() {
         let { guildId: e, renderTier: t, levelSubscriptionCount: n, uniqueSubscriberCount: i, tiers: l } = this.props;
         return null == n
-            ? (0, r.jsx)(m.$jN, { type: m.$jN.Type.SPINNING_CIRCLE })
+            ? (0, r.jsx)(g.$jN, { type: g.$jN.Type.SPINNING_CIRCLE })
             : null == e
               ? null
               : (0, r.jsx)("div", {
@@ -185,18 +185,19 @@ class w extends i.Component {
                                   nick: e.nick,
                               }),
                               "aria-label": null != (i = e.nick) ? i : e.user.tag,
-                              children: (0, r.jsx)(m.qEK, {
+                              children: (0, r.jsx)(g.qEK, {
                                   tabIndex: -1,
+                                  "aria-label": e.user.username,
                                   src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
                                   className: s()(S.avatar, t, null != t ? S.subscriberMask : null),
-                                  size: m.EFr.SIZE_32,
+                                  size: g.EFr.SIZE_32,
                               }),
                           },
                           n,
                       );
             }),
             T(this, "renderSubscribersPopout", () =>
-                (0, r.jsx)(m.Ttm, {
+                (0, r.jsx)(g.Ttm, {
                     className: S.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
                         (0, r.jsxs)(
@@ -204,10 +205,10 @@ class w extends i.Component {
                             {
                                 className: S.subscribersPopoutUser,
                                 children: [
-                                    (0, r.jsx)(m.qEK, {
+                                    (0, r.jsx)(g.qEK, {
                                         src: e.user.getAvatarURL(this.props.guildId, 32),
                                         "aria-label": e.user.username,
-                                        size: m.EFr.SIZE_32,
+                                        size: g.EFr.SIZE_32,
                                         className: S.avatar,
                                     }),
                                     (0, r.jsx)("div", {
@@ -226,7 +227,7 @@ class w extends i.Component {
             ),
             T(this, "renderMoreSubscribers", (e, t, n) =>
                 (0, r.jsx)(
-                    m.yRy,
+                    g.yRy,
                     {
                         targetElementRef: this.subscribersPopoutTargetRef,
                         renderPopout: this.renderSubscribersPopout,
