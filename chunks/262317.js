@@ -183,7 +183,7 @@ let B = (0, p.$)(function (e) {
             e && ex(!1);
         },
         eR = () => {
-            if (!($ && (0, y.p9)(D, N.Z, I.Z, Z.Z, g.Z)[0])) return;
+            if (!($ && (0, y.p9)(D, N.Z, I.Z, Z.Z, g.default)[0])) return;
             let e = {
                 streamType: w.lo.GUILD,
                 ownerId: p.id,

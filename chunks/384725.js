@@ -1,48 +1,48 @@
-i.d(t, { Z: () => o });
-var n = i(951288);
-i(647438);
-var a = i(481060),
-    l = i(570140);
-let o = {
+n.d(t, { Z: () => a });
+var i = n(951288);
+n(647438);
+var o = n(481060),
+    r = n(570140);
+let a = {
     open(e) {
-        l.Z.dispatch({
+        r.Z.dispatch({
             type: "SAFETY_HUB_APPEAL_OPEN",
             classificationId: e,
         }),
-            (0, a.ZDy)(async () => {
-                let { default: t } = await i.e("65652").then(i.bind(i, 208265));
-                return (i) =>
-                    (0, n.jsx)(
+            (0, o.ZDy)(async () => {
+                let { default: t } = await Promise.all([n.e("65652"), n.e("59474")]).then(n.bind(n, 208265));
+                return (n) =>
+                    (0, i.jsx)(
                         t,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var i = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(i);
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(i).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(i, e).enumerable;
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = i[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
-                        })({ classificationId: e }, i),
+                        })({ classificationId: e }, n),
                     );
             });
     },
     close() {
-        l.Z.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
+        r.Z.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
     },
 };

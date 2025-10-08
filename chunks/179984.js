@@ -106,7 +106,7 @@ let Z = () => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? M : j;
+        t = n === P.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? M : j;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -186,7 +186,7 @@ let Z = () => {
                 headingOverride: L,
                 hidePill: x = !1,
                 selectedPlanColumnClassName: M,
-                selectedPlanTier: j = P.p9.TIER_2,
+                selectedPlanTier: j = P.PremiumTypes.TIER_2,
             } = e,
             { analyticsLocations: k } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, s.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
@@ -194,7 +194,7 @@ let Z = () => {
             K = (0, d.ZP)(),
             z = (0, l.ap)(K),
             q = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-            X = (0, E.M5)(q, P.p9.TIER_2),
+            X = (0, E.M5)(q, P.PremiumTypes.TIER_2),
             Q = (0, I.N)(),
             J = null == Q || null == (t = Q.subscription_trial) ? void 0 : t.sku_id,
             $ = (0, y.rT)(),
@@ -216,8 +216,8 @@ let Z = () => {
                     variant: "heading-lg/extrabold",
                     children: eu,
                 }),
-                column1: (0, r.jsx)(V, { premiumType: P.p9.TIER_0 }),
-                column2: (0, r.jsx)(V, { premiumType: P.p9.TIER_2 }),
+                column1: (0, r.jsx)(V, { premiumType: P.PremiumTypes.TIER_0 }),
+                column2: (0, r.jsx)(V, { premiumType: P.PremiumTypes.TIER_2 }),
             };
         C
             ? es.push({
@@ -246,7 +246,7 @@ let Z = () => {
                                     subscriptionTier: P.Si.TIER_0,
                                     showIcon: !1,
                                 }),
-                          $ === P.p9.TIER_2 || null != J
+                          $ === P.PremiumTypes.TIER_2 || null != J
                               ? null
                               : (0, r.jsx)(T.Z, {
                                     className: D.button,
@@ -270,7 +270,7 @@ let Z = () => {
                                     showIcon: !1,
                                     hasActivePromotion: el,
                                 }),
-                          $ === P.p9.TIER_0 || null != J
+                          $ === P.PremiumTypes.TIER_0 || null != J
                               ? null
                               : (0, r.jsx)(T.Z, {
                                     className: D.button,
@@ -302,7 +302,7 @@ let Z = () => {
                   : el
                     ? (0, r.jsx)(Z, {})
                     : (0, r.jsx)(F, {}));
-        let ef = J === P.Si.TIER_0 || $ === P.p9.TIER_0 || j === P.p9.TIER_0;
+        let ef = J === P.Si.TIER_0 || $ === P.PremiumTypes.TIER_0 || j === P.PremiumTypes.TIER_0;
         return (0, r.jsx)(_.Gt, {
             value: k,
             children: (0, r.jsxs)("div", {

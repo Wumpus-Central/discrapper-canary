@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(717881),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(871118),
     S = n(981631),
     A = n(388032),
-    C = n(839021);
+    C = n(720740);
 function N(e, t, n) {
     return (
         t in e
@@ -80,24 +80,24 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
         y.default.track(S.rMx.OPEN_POPOUT, {
@@ -110,7 +110,7 @@ class L extends i.PureComponent {
         });
     }
     renderPreview(e) {
-        let { onWatch: t, activeStream: n, currentUserId: i, canWatch: o, unavailableReason: a } = this.props;
+        let { onWatch: t, activeStream: n, currentUserId: i, canWatch: a, unavailableReason: o } = this.props;
         return (0, r.jsxs)(l.P3F, {
             onClick: t,
             className: C.previewContainer,
@@ -119,14 +119,14 @@ class L extends i.PureComponent {
                     className: C.previewImage,
                     stream: e,
                 }),
-                o
+                a
                     ? (0, r.jsx)("div", {
                           className: C.previewHover,
                           children: (0, r.jsx)(l.Text, {
                               variant: "text-sm/normal",
                               color: "none",
                               className: C.white,
-                              children: (0, I.Z)(e, n, i, a),
+                              children: (0, I.Z)(e, n, i, o),
                           }),
                       })
                     : null,
@@ -134,11 +134,11 @@ class L extends i.PureComponent {
         });
     }
     render() {
-        let { activity: e, user: t, stream: n, previewIsOpen: i, onAction: o, hideTip: s } = this.props;
+        let { activity: e, user: t, stream: n, previewIsOpen: i, onAction: a, hideTip: s } = this.props;
         return null == n
             ? null
             : (0, r.jsx)("div", {
-                  className: a()(C.streamPreviewWrapper, { [C.mounted]: i }),
+                  className: o()(C.streamPreviewWrapper, { [C.mounted]: i }),
                   children: (0, r.jsxs)("div", {
                       className: C.streamPreview,
                       children: [
@@ -160,7 +160,7 @@ class L extends i.PureComponent {
                                                     section: S.jXE.STREAM_VIEWER_POPOUT,
                                                 },
                                             },
-                                            onAction: o,
+                                            onAction: a,
                                         })
                                       : (0, r.jsx)(d.Z, {
                                             type: c.P.STREAM_PREVIEW,
@@ -169,7 +169,7 @@ class L extends i.PureComponent {
                                             guildId: n.guildId,
                                             channelId: n.channelId,
                                             className: C.activityActions,
-                                            onAction: o,
+                                            onAction: a,
                                         }),
                                   !s &&
                                       (0, r.jsx)(f.Z, {
@@ -186,10 +186,10 @@ class L extends i.PureComponent {
               });
     }
 }
-function j(e) {
+function M(e) {
     var { user: t, channel: n } = e,
-        o = D(e, ["user", "channel"]);
-    let [a, l] = (0, s.Wu)([b.Z, m.Z, g.Z, _.Z], () => (0, O.p9)(n, b.Z, m.Z, g.Z, _.Z)),
+        a = D(e, ["user", "channel"]);
+    let [o, l] = (0, s.Wu)([b.Z, m.Z, g.Z, _.default], () => (0, O.p9)(n, b.Z, m.Z, g.Z, _.default)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
         f = (0, s.e7)([h.default], () => h.default.getId()),
@@ -199,9 +199,9 @@ function j(e) {
     return (
         (0, u.$)(T, "StreamPreviewPopout"),
         (0, r.jsx)(
-            L,
-            w(R({}, o), {
-                canWatch: a,
+            x,
+            w(R({}, a), {
+                canWatch: o,
                 unavailableReason: l,
                 user: t,
                 streamApplication: y,

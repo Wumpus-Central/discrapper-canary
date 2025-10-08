@@ -32,9 +32,9 @@ var r = n(951288),
     L = n(981631),
     x = n(921944),
     M = n(474936),
-    j = n(119475),
+    j = n(684555),
     k = n(388032),
-    U = n(461917);
+    U = n(615676);
 function G(e, t, n) {
     return (
         t in e
@@ -144,7 +144,7 @@ function W(e) {
 }
 function K(e) {
     let { markAsDismissed: t } = e,
-        n = (0, O.m)(M.p9.TIER_2);
+        n = (0, O.m)(M.PremiumTypes.TIER_2);
     return (0, r.jsxs)("div", {
         className: U.coachmarkHeaderContainer,
         children: [
@@ -285,7 +285,7 @@ function Q(e) {
 }
 function J(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, O.m)(M.p9.TIER_2);
+        i = (0, O.m)(M.PremiumTypes.TIER_2);
     return (
         (0, P.hf)(i, h.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)("div", {
@@ -314,7 +314,7 @@ function J(e) {
 }
 function $(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        a = (0, O.m)(M.p9.TIER_2);
+        a = (0, O.m)(M.PremiumTypes.TIER_2);
     (0, P.hf)(a, h.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
         (0, P.Vb)(),

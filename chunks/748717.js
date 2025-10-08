@@ -9,5 +9,5 @@ var i = n(442837),
     c = n(474936);
 function u() {
     let e = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return (0, l.M5)(e, c.p9.TIER_2) ? (0, r.jsx)(a.Z, {}) : (0, r.jsx)(o.Z, {});
+    return (0, l.M5)(e, c.PremiumTypes.TIER_2) ? (0, r.jsx)(a.Z, {}) : (0, r.jsx)(o.Z, {});
 }

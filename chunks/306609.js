@@ -19,14 +19,14 @@ var r = n(951288),
     O = n(131951),
     h = n(594174),
     x = n(626135),
-    _ = n(111361),
-    P = n(74538),
+    P = n(111361),
+    _ = n(74538),
     w = n(743498),
     C = n(967021),
     E = n(709706),
     I = n(378441),
-    S = n(358820),
-    T = n(448697),
+    T = n(358820),
+    S = n(448697),
     N = n(946196),
     D = n(365831),
     Z = n(639539),
@@ -95,7 +95,7 @@ function z(e) {
             orientation: d.y.VERTICAL_TOP,
         });
     (0, L.useSyncMessages)(F.messagesLoader);
-    let Q = (0, s.e7)([h.default], () => (0, _.I5)(h.default.getCurrentUser())),
+    let Q = (0, s.e7)([h.default], () => (0, P.I5)(h.default.getCurrentUser())),
         J = (0, s.e7)([E.Z], () => E.Z.getCatalogUpdateTime()),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -135,7 +135,7 @@ function z(e) {
         }),
         es = i.useRef(null);
     (0, u.ZP)(() => {
-        (0, S.r5)(),
+        (0, T.r5)(),
             ei && (0, w.jG)(),
             x.default.track(M.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != er ? er : null });
     });
@@ -200,7 +200,7 @@ function z(e) {
                                     children: (0, r.jsx)(y.p, {
                                         showUpsell: !0,
                                         text: L.intl.format(L.t["XMDm8/"], {
-                                            nitroTierName: (0, P.Px)(R.p9.TIER_2),
+                                            nitroTierName: (0, _.Px)(R.PremiumTypes.TIER_2),
                                             onClick: () => (0, j.i)(),
                                         }),
                                         button: L.intl.string(L.t.cRCCJy),
@@ -217,7 +217,7 @@ function z(e) {
                         ],
                     }),
                 (0, r.jsx)(N.l, {}),
-                (0, r.jsx)(T.R, {}),
+                (0, r.jsx)(S.R, {}),
                 (0, r.jsx)(D.y, {}),
                 (0, r.jsxs)("div", {
                     className: l()(U.voiceFiltersFooter, { [U.hasActiveVoice]: null != er }),

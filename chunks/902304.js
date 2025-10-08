@@ -44,7 +44,7 @@ async function R(e) {
         e.selfDeaf !== d.Z.isSelfDeaf() && s.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
 function P(e) {
-    let t = E.Z.getAwaitingRemoteSessionInfo();
+    let t = E.default.getAwaitingRemoteSessionInfo();
     return e.find((e) => {
         let n = O.al.has(e.clientInfo.os),
             r = null != p.Z.getVoiceStateForSession(u.default.getId(), e.sessionId),
@@ -81,7 +81,7 @@ class w extends l.Z {
                 let r = d.Z.isSelfDeaf(),
                     i = d.Z.isSelfMute(),
                     a = u.default.getId(),
-                    o = E.Z.getRemoteSessionId();
+                    o = E.default.getRemoteSessionId();
                 if (null == o) return;
                 let s = p.Z.getVoiceStateForSession(a, o);
                 null != s &&
@@ -96,7 +96,7 @@ class w extends l.Z {
             }),
             T(this, "handleVoiceStateUpdates", (e) => {
                 let t = e.voiceStates,
-                    n = E.Z.getRemoteSessionId();
+                    n = E.default.getRemoteSessionId();
                 if (null == n) {
                     let e = t
                         .map((e) => {
@@ -113,7 +113,7 @@ class w extends l.Z {
                 null != r && (this.rollbackCommandTimeout.stop(), R(r));
             }),
             T(this, "handleSessionsChanged", () => {
-                let e = E.Z.getRemoteSessionId();
+                let e = E.default.getRemoteSessionId();
                 null != e && null == _.Z.getSessionById(e) && (0, m.s6)(),
                     null == e && this.maybeConnect(Object.values(_.Z.getSessions()));
             }),
@@ -131,9 +131,9 @@ class w extends l.Z {
                 let { id: n, result: r, error: i } = e;
                 if (("failed" !== r && "n/a" !== r) || null == i) return;
                 S.info("Console command Error result:", r, i);
-                let a = E.Z.getAwaitingRemoteSessionInfo();
+                let a = E.default.getAwaitingRemoteSessionInfo();
                 if ((null == a ? void 0 : a.commandId) !== n) return;
-                let o = E.Z.getDevice(a.type, null != (t = a.deviceId) ? t : ""),
+                let o = E.default.getDevice(a.type, null != (t = a.deviceId) ? t : ""),
                     s = (0, y.Z)(
                         null != o
                             ? o

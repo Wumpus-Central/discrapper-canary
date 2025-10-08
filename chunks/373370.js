@@ -335,7 +335,7 @@ function D(e) {
             onGameSheetOpened: d,
             onGameSheetClosed: f,
         } = e,
-        _ = (0, s.I5)(c, h.p9.TIER_2),
+        _ = (0, s.I5)(c, h.PremiumTypes.TIER_2),
         p = (0, l.Kr)(t.config),
         m = (0, l.$J)(t) && (0, l.$H)(t);
     if ((0, l.Pb)(t))

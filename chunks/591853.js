@@ -39,8 +39,8 @@ var c = n(442837),
     D = n(66999),
     L = n(359110),
     x = n(12168),
-    j = n(237583),
-    M = n(131704),
+    M = n(237583),
+    j = n(131704),
     k = n(592125),
     U = n(430824),
     G = n(496675),
@@ -68,7 +68,7 @@ var c = n(442837),
     es = n(981631),
     el = n(959517),
     ec = n(388032),
-    eu = n(951948);
+    eu = n(826565);
 function ed(e, t, n) {
     return (
         t in e
@@ -194,7 +194,7 @@ function ey(e) {
         D = null != R && 0 === s.length ? [R] : s,
         L = D.length > 0,
         x = D.length >= 2,
-        [j, M] = i.useState(!L),
+        [M, j] = i.useState(!L),
         U = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         B =
             null != t && m
@@ -272,10 +272,10 @@ function ey(e) {
         },
         W = null != f ? f : null != N ? N : null != w ? w : void 0,
         z = () => {
-            g((e) => !e), j && (null == E || E.focus());
+            g((e) => !e), M && (null == E || E.focus());
         },
         q = (e) => {
-            M(e), e && (null == E || E.focus());
+            j(e), e && (null == E || E.focus());
         };
     return (0, r.jsx)("div", {
         ref: O,
@@ -304,7 +304,7 @@ function ey(e) {
                               }),
                           }),
                     (0, r.jsxs)("div", {
-                        className: j ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
+                        className: M ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
                         children: [
                             (0, r.jsx)(y.A7, {
                                 placeholder: B,
@@ -353,7 +353,7 @@ function ey(e) {
                                 }),
                         ],
                     }),
-                    !1 === j &&
+                    !1 === M &&
                         (0, r.jsxs)("div", {
                             className: eu.primaryActionPopoutActionButtons,
                             children: [
@@ -656,7 +656,7 @@ function eS(e) {
             "trackRankingItemInteraction",
         ]);
     let E = (0, c.e7)([k.Z], () => k.Z.getChannel(null == s ? void 0 : s.channelId)),
-        [b] = i.useMemo(() => (0, R.p9)(E, V.Z, U.Z, G.Z, A.Z), [E]),
+        [b] = i.useMemo(() => (0, R.p9)(E, V.Z, U.Z, G.Z, A.default), [E]),
         { entry: y } = h,
         O = (0, q.dX)(y),
         v = O ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
@@ -673,13 +673,13 @@ function eS(e) {
         T = O ? I : void 0,
         { activity: S, activityApplication: w, fallbackApplication: D } = (0, $.Z)(y),
         { largeImage: L, smallImage: x } = (0, z.YC)(S, null != w ? w : D),
-        { largeImage: j } = (0, z.rv)({ entry: y });
+        { largeImage: M } = (0, z.rv)({ entry: y });
     return (0, r.jsxs)("div", {
         className: eu.popoutContentWrapper,
         children: [
             (0, r.jsx)(ev, ep(ef({}, h), { onUserPopoutClosed: f })),
             (0, r.jsxs)(eE, {
-                backgroundImgSrc: null == j ? void 0 : j.src,
+                backgroundImgSrc: null == M ? void 0 : M.src,
                 className: eu.streamingPopoutHero,
                 children: [
                     (0, r.jsx)(eI, {
@@ -763,7 +763,7 @@ function eA(e) {
                 ? n
                 : [];
         });
-    return null != e && null != t && null != n && M.sR.has(n.type)
+    return null != e && null != t && null != n && j.sR.has(n.type)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
@@ -796,7 +796,7 @@ function eA(e) {
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(j.Z, {
+                          (0, r.jsx)(M.Z, {
                               guildId: t.id,
                               users: i,
                               max: 3,
@@ -925,7 +925,7 @@ function eC(e) {
                                     }),
                                 ),
                         }),
-                        (0, r.jsx)(j.Z, {
+                        (0, r.jsx)(M.Z, {
                             guildId: u.id,
                             users: f,
                             max: 3,

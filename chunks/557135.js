@@ -66,7 +66,7 @@ let v = {
         t.isThread() &&
             (await d.Z.unarchiveThreadIfNecessary(t.id),
             u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, "Join Voice")));
-        let C = o.Z.getRemoteSessionId(),
+        let C = o.default.getRemoteSessionId(),
             N = p.Z.getVoiceStateForSession(f.default.getId(), C),
             R =
                 (null == N ? void 0 : N.channelId) === t.id ||

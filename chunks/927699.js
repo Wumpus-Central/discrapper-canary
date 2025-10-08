@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(388032),
     m = n(810270);
-let g = (0, f.kt)({
+let g = (0, f.createChannelRecord)({
     id: "1",
     type: p.d4z.DM,
 });

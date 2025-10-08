@@ -235,7 +235,7 @@ function K(e) {
             case "THREAD_UPDATE":
             case "CHANNEL_DELETE":
             case "THREAD_DELETE":
-                let r = (0, f.kt)(e.channel);
+                let r = (0, f.createChannelRecord)(e.channel);
                 if (!f.AW.has(r.type)) break;
                 o.Z.dispatch({
                     type: e.type,
@@ -245,18 +245,20 @@ function K(e) {
             case "CHANNEL_UPDATES":
                 o.Z.dispatch({
                     type: e.type,
-                    channels: e.channels.map((e) => (0, f.kt)(e)),
+                    channels: e.channels.map((e) => (0, f.createChannelRecord)(e)),
                 });
                 break;
             case "CONNECTION_OPEN_SUPPLEMENTAL":
-                (e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))),
+                (e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) =>
+                    (0, f.createChannelRecord)(e),
+                )),
                     o.Z.dispatch(e);
                 break;
             case "THREAD_LIST_SYNC":
-                o.Z.dispatch(C(S({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
+                o.Z.dispatch(C(S({}, e), { threads: e.threads.map((e) => (0, f.createChannelRecord)(e)) }));
                 break;
             case "GUILD_CREATE":
-                let i = (e) => (0, f.kt)(e),
+                let i = (e) => (0, f.createChannelRecord)(e),
                     a = e.guild;
                 switch (((a.threads = null == (n = a.threads) ? void 0 : n.map(i)), a.channels.op)) {
                     case "full_sync":

@@ -137,5 +137,5 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     },
     g = () => {
         let e = a.default.getCurrentUser();
-        return (0, s.M5)(e, c.p9.TIER_2);
+        return (0, s.M5)(e, c.PremiumTypes.TIER_2);
     };

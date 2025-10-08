@@ -42,7 +42,7 @@ class u {
         return null != (t = null == (e = this.themeColors) ? void 0 : e[0]) ? t : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return a.ZP.isPremiumAtLeast(this.premiumType, s.p9.TIER_2);
+        return a.ZP.isPremiumAtLeast(this.premiumType, s.PremiumTypes.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;

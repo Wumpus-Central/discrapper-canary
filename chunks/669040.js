@@ -396,7 +396,7 @@ let K = 0,
             ),
             ey = f.length > 0;
         function eO() {
-            let e = (0, x.Px)(H.p9.TIER_2);
+            let e = (0, x.Px)(H.PremiumTypes.TIER_2);
             return Y.intl.format(Y.t.gMVjeX, {
                 nitroTierName: e,
                 onClick: () => {

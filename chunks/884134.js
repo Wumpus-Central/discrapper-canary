@@ -35,9 +35,9 @@ var r = n(951288),
     j = n(981631),
     k = n(921944),
     U = n(474936),
-    G = n(119475),
+    G = n(684555),
     B = n(388032),
-    Z = n(882741);
+    Z = n(330749);
 let F = 0,
     V = 5000;
 function H(e) {
@@ -97,7 +97,7 @@ function K(e) {
 }
 function z(e) {
     let { markAsDismissed: t } = e,
-        n = (0, y.m)(U.p9.TIER_2);
+        n = (0, y.m)(U.PremiumTypes.TIER_2);
     return (0, r.jsxs)("div", {
         className: Z.coachmarkHeaderContainer,
         children: [
@@ -341,7 +341,7 @@ function $(e) {
 }
 function ee(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, y.m)(U.p9.TIER_2);
+        i = (0, y.m)(U.PremiumTypes.TIER_2);
     return (
         (0, D.hf)(i, h.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsx)("div", {
@@ -367,7 +367,7 @@ function ee(e) {
 function et(e) {
     var t;
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
-        s = (0, y.m)(U.p9.TIER_2),
+        s = (0, y.m)(U.PremiumTypes.TIER_2),
         c = (null == (t = (0, g.oq)().metadata) ? void 0 : t.from) === g.tE.SHARE_MESSAGE;
     (0, D.hf)(s, h.Z.CUSTOM_THEMES_EDITOR);
     let u = () => {

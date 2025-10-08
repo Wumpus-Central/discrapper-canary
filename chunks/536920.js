@@ -1,34 +1,34 @@
-a.d(t, { default: () => C }), a(388685), a(953529);
-var n = a(951288),
-    r = a(647438),
-    i = a(442837),
-    o = a(379649),
-    s = a(755721),
-    l = a(481060),
-    d = a(493773),
-    c = a(579806),
-    u = a(594190),
-    m = a(77498),
-    _ = a(626135),
-    h = a(837268),
-    x = a(371651),
-    p = a(981631),
-    g = a(388032),
-    v = a(94092);
-function C(e) {
-    let { onClose: t, transitionState: a, clientSettingType: C, gameId: j } = e,
+n.d(t, { default: () => j }), n(388685), n(953529);
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    s = n(379649),
+    l = n(755721),
+    o = n(481060),
+    c = n(493773),
+    d = n(579806),
+    u = n(594190),
+    m = n(77498),
+    _ = n(626135),
+    h = n(837268),
+    x = n(371651),
+    v = n(981631),
+    g = n(388032),
+    p = n(94092);
+function j(e) {
+    let { onClose: t, transitionState: n, clientSettingType: j, gameId: C } = e,
         [y, k] = r.useState("unreported"),
         [b, f] = r.useState(""),
-        [N, S] = r.useState(!1),
-        [w, R] = r.useState(!1),
+        [S, w] = r.useState(!1),
+        [N, R] = r.useState(!1),
         [z, Z] = r.useState(!1),
-        [I, P] = r.useState(!1),
-        A = (0, i.e7)([m.Z, u.ZP], () => {
+        [P, A] = r.useState(!1),
+        B = (0, i.e7)([m.Z, u.ZP], () => {
             var e;
-            let t = null != j ? j : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
+            let t = null != C ? C : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
             return null == t ? null : m.Z.getDetectableGame(t);
         }),
-        B = (0, i.e7)([x.default], () => {
+        H = (0, i.e7)([x.default], () => {
             var e;
             let t =
                 null !=
@@ -37,7 +37,7 @@ function C(e) {
                     : void 0;
             return null != t ? h.gl[t] : void 0;
         }),
-        H = r.useMemo(() => {
+        M = r.useMemo(() => {
             let e = {
                 not_working: g.t.CHXHFR,
                 not_useful: g.t.a95skZ,
@@ -53,111 +53,107 @@ function C(e) {
                 value: t,
             }));
         }, []),
-        M = async () => {
-            var e, a, n;
+        Y = async () => {
+            var e, n, a;
             if ("unreported" === y && 0 === b.length) {
-                Z(!0), await (0, o._v)(100), Z(!1), P(!0);
+                Z(!0), await (0, s._v)(100), Z(!1), A(!0);
                 return;
             }
-            S(!0),
-                await _.default.track(p.rMx.OVERLAY_DISABLED_SURVEY, {
+            w(!0),
+                await _.default.track(v.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: y,
                     comment: b,
-                    client_setting_type: C,
-                    application_id: null == A ? void 0 : A.id,
-                    application_name: null == A ? void 0 : A.name,
-                    most_recent_overlay_render_method: B,
+                    client_setting_type: j,
+                    application_id: null == B ? void 0 : B.id,
+                    application_name: null == B ? void 0 : B.name,
+                    most_recent_overlay_render_method: H,
                     hardware_display_count:
                         null !=
-                        (n = await (null === c.Z ||
-                        void 0 === c.Z ||
-                        null == (a = c.Z.hardware) ||
-                        null == (e = a.getDisplayCount)
+                        (a = await (null === d.Z ||
+                        void 0 === d.Z ||
+                        null == (n = d.Z.hardware) ||
+                        null == (e = n.getDisplayCount)
                             ? void 0
-                            : e.call(a)))
-                            ? n
+                            : e.call(n)))
+                            ? a
                             : null,
                 }),
-                await (0, o._v)(1000),
-                S(!1),
+                await (0, s._v)(1000),
+                w(!1),
                 R(!0),
-                await (0, o._v)(1500),
+                await (0, s._v)(1500),
                 t();
         };
     return (
-        (0, d.ZP)(() => {
-            _.default.track(p.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+        (0, c.ZP)(() => {
+            _.default.track(v.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
         }),
-        (0, n.jsxs)(l.Y0X, {
-            transitionState: a,
+        (0, a.jsxs)(o.Y0X, {
+            transitionState: n,
             "aria-label": g.intl.string(g.t.bomhnZ),
-            size: l.CgR.DYNAMIC,
-            className: v.root,
+            size: o.CgR.DYNAMIC,
+            className: p.root,
             parentComponent: "OverlayDisabledSurveyModal",
             children: [
-                (0, n.jsxs)(l.xBx, {
+                (0, a.jsxs)(o.xBx, {
                     children: [
-                        (0, n.jsxs)("div", {
-                            className: v.header,
+                        (0, a.jsxs)("div", {
+                            className: p.header,
                             children: [
-                                (0, n.jsx)(l.X6q, {
+                                (0, a.jsx)(o.X6q, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
                                     children: g.intl.string(g.t["9JKzxc"]),
                                 }),
-                                (0, n.jsx)(l.Text, {
+                                (0, a.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    className: v.description,
+                                    className: p.description,
                                     children: g.intl.string(g.t["2yjnmZ"]),
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(l.olH, {
+                        (0, a.jsx)(o.olH, {
                             onClick: t,
-                            className: v.closeButton,
+                            className: p.closeButton,
                         }),
                     ],
                 }),
-                (0, n.jsx)(l.hzk, {
-                    className: v.reasonContainer,
-                    children: (0, n.jsxs)(l.Ttm, {
+                (0, a.jsx)(o.hzk, {
+                    className: p.reasonContainer,
+                    children: (0, a.jsxs)(o.Ttm, {
                         children: [
-                            (0, n.jsxs)("div", {
+                            (0, a.jsxs)("div", {
                                 children: [
-                                    (0, n.jsx)(l.UkV, {
+                                    (0, a.jsx)(o.UkV, {
                                         isShaking: z,
                                         intensity: 1,
-                                        className: v.radioHeader,
-                                        children: (0, n.jsx)(l.Text, {
+                                        className: p.radioHeader,
+                                        children: (0, a.jsx)(o.Text, {
                                             variant: "text-sm/semibold",
-                                            color: I ? "text-danger" : "text-muted",
+                                            color: P ? "text-danger" : "text-muted",
                                             children: g.intl.string(g.t.yhUvdX),
                                         }),
                                     }),
-                                    (0, n.jsx)(s.Gu, {
+                                    (0, a.jsx)(o.FXm, {
                                         value: y,
-                                        radioItemClassName: v.radioItem,
-                                        className: v.radioGroup,
-                                        radioPosition: "right",
-                                        options: H,
+                                        options: M,
                                         onChange: (e) => {
-                                            let { value: t } = e;
-                                            k(t), P(!1), Z(!1);
+                                            k(e), A(!1), Z(!1);
                                         },
                                     }),
                                 ],
                             }),
-                            (0, n.jsxs)("div", {
-                                className: v.commentContainer,
+                            (0, a.jsxs)("div", {
+                                className: p.commentContainer,
                                 children: [
-                                    (0, n.jsx)(l.Text, {
+                                    (0, a.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-muted",
-                                        className: v.commentHeader,
+                                        className: p.commentHeader,
                                         children: g.intl.string(g.t.LYnrhY),
                                     }),
-                                    (0, n.jsx)(l.Kx8, {
+                                    (0, a.jsx)(o.Kx8, {
                                         autosize: !0,
                                         value: b,
                                         maxLength: 1000,
@@ -170,40 +166,40 @@ function C(e) {
                         ],
                     }),
                 }),
-                (0, n.jsxs)(l.mzw, {
-                    className: v.buttons,
+                (0, a.jsxs)(o.mzw, {
+                    className: p.buttons,
                     children: [
-                        (0, n.jsx)(l.zxk, {
+                        (0, a.jsx)(o.zxk, {
                             variant: "secondary",
                             text: g.intl.string(g.t["5WxrcX"]),
-                            disabled: N,
+                            disabled: S,
                             onClick: () => {
                                 t();
                             },
                         }),
-                        (0, n.jsx)(l.UkV, {
+                        (0, a.jsx)(o.UkV, {
                             isShaking: z,
                             intensity: 1,
-                            children: (0, n.jsx)(s.zx, {
-                                disabled: N,
-                                submitting: N,
-                                onClick: M,
+                            children: (0, a.jsx)(l.zx, {
+                                disabled: S,
+                                submitting: S,
+                                onClick: Y,
                                 color: (() => {
                                     switch (!0) {
-                                        case w:
-                                            return s.zx.Colors.GREEN;
+                                        case N:
+                                            return l.zx.Colors.GREEN;
                                         case z:
-                                            return s.zx.Colors.PRIMARY;
+                                            return l.zx.Colors.PRIMARY;
                                         default:
-                                            return s.zx.Colors.BRAND;
+                                            return l.zx.Colors.BRAND;
                                     }
                                 })(),
                                 children: (() => {
                                     switch (!0) {
-                                        case w:
-                                            return (0, n.jsx)(l.kmB, {});
                                         case N:
-                                            return (0, n.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS });
+                                            return (0, a.jsx)(o.kmB, {});
+                                        case S:
+                                            return (0, a.jsx)(o.$jN, { type: o.RAz.PULSING_ELLIPSIS });
                                         default:
                                             return g.intl.string(g.t.geKm7u);
                                     }

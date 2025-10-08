@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(698305),
     _ = n(981631),
     p = n(388032),
-    h = n(391022);
+    h = n(589687);
 function m(e, t, n) {
     return (
         t in e
@@ -64,7 +64,7 @@ function b(e, t) {
         e
     );
 }
-let y = (0, c.kt)({
+let y = (0, c.createChannelRecord)({
     id: "1",
     type: _.d4z.DM,
 });

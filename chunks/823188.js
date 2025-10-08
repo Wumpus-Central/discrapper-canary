@@ -130,7 +130,7 @@ function V(e) {
                             (0, r.jsx)(E.Z, { className: a()(k.title, k.tier0ApplicationHomeTitle) }),
                             (0, r.jsx)(P.Z, {
                                 isGift: l,
-                                premiumTier: L.p9.TIER_0,
+                                premiumTier: L.PremiumTypes.TIER_0,
                                 offerType: L.C.PREMIUM_TRIAL,
                                 offerTierMatchesCard: f === L.Si.TIER_0,
                                 showYearlyPrice: i,
@@ -198,7 +198,7 @@ function H(e) {
                             (0, r.jsx)(g.Z, { className: a()(k.title, k.tier0Title) }),
                             (0, r.jsx)(P.Z, {
                                 isGift: u,
-                                premiumTier: L.p9.TIER_0,
+                                premiumTier: L.PremiumTypes.TIER_0,
                                 offerType: L.C.PREMIUM_TRIAL,
                                 offerTierMatchesCard: E === L.Si.TIER_0,
                                 showYearlyPrice: s,
@@ -211,7 +211,7 @@ function H(e) {
                     (0, r.jsx)("div", { children: (0, r.jsx)(F, {}) }),
                 ],
             }),
-            u || E !== L.Si.TIER_0 ? null : (0, r.jsx)(R.t, { tier: L.p9.TIER_0 }),
+            u || E !== L.Si.TIER_0 ? null : (0, r.jsx)(R.t, { tier: L.PremiumTypes.TIER_0 }),
             i,
         ],
     });
@@ -346,7 +346,7 @@ function K(e) {
                                 }),
                             (0, r.jsx)(P.Z, {
                                 isGift: f,
-                                premiumTier: L.p9.TIER_2,
+                                premiumTier: L.PremiumTypes.TIER_2,
                                 offerType: N,
                                 offerTierMatchesCard: E === L.Si.TIER_2 || (0, T.Wp)(A, L.Si.TIER_2),
                                 showYearlyPrice: c,
@@ -469,7 +469,7 @@ function z(e) {
                                 }),
                             (0, r.jsx)(P.Z, {
                                 isGift: b,
-                                premiumTier: L.p9.TIER_2,
+                                premiumTier: L.PremiumTypes.TIER_2,
                                 offerType: Y,
                                 offerTierMatchesCard: G === L.Si.TIER_2 || (0, T.Wp)(V, L.Si.TIER_2),
                                 showYearlyPrice: _,
@@ -488,7 +488,7 @@ function z(e) {
                     }),
                 ],
             }),
-            b || (G !== L.Si.TIER_2 && null == V) ? null : (0, r.jsx)(R.t, { tier: L.p9.TIER_2 }),
+            b || (G !== L.Si.TIER_2 && null == V) ? null : (0, r.jsx)(R.t, { tier: L.PremiumTypes.TIER_2 }),
             f,
             D && (0, r.jsx)(I.K, {}),
         ],

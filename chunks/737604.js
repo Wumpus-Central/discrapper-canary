@@ -40,7 +40,7 @@ let h = 2,
             l.default.track(d.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: null == (t = s.default.getCurrentUser()) ? void 0 : t.premiumType,
-                icon_premium_tier: e !== u.aH.DEFAULT ? _.p9.TIER_2 : null,
+                icon_premium_tier: e !== u.aH.DEFAULT ? _.PremiumTypes.TIER_2 : null,
             });
         }
     };

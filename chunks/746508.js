@@ -861,7 +861,7 @@ function e0(e) {
 }
 let e1 = (0, y.Z)(function (e) {
     let t = (0, G.Z)(),
-        n = (0, u.e7)([U.Z], () => U.Z.getAwaitingRemoteSessionInfo()),
+        n = (0, u.e7)([U.default], () => U.default.getAwaitingRemoteSessionInfo()),
         l = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
         a = (0, u.cj)([ev.Z], () =>
             null != t

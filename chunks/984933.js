@@ -49,16 +49,16 @@ let T = "SELECTABLE",
     w = {},
     D = {
         comparator: -1,
-        channel: (0, _.kt)({
+        channel: (0, _.createChannelRecord)({
             id: v.Sc2,
             type: v.d4z.GUILD_CATEGORY,
             name: "Uncategorized",
         }),
     },
-    x = M(v.kod),
-    L = [],
-    j = {};
-function M(e) {
+    L = j(v.kod),
+    x = [],
+    M = {};
+function j(e) {
     return {
         id: e,
         [T]: [],
@@ -97,7 +97,7 @@ function Z() {
     }
     return e;
 }
-function V(e) {
+function F(e) {
     if (e === v.I_8) return Z();
     let t = {},
         n = m.Z.getMutableGuildChannelsForGuild(e);
@@ -108,9 +108,9 @@ function V(e) {
         };
     return t;
 }
-function F(e) {
+function V(e) {
     let { id: t } = e,
-        n = V(t);
+        n = F(t);
     return (
         a().forEach(n, (n) => {
             let r = n.channel;
@@ -133,8 +133,8 @@ function H() {
     (C = {}), (w = {}), (N = {}), (R = {}), null != A && Y(A);
 }
 function Y(e) {
-    let t = M(e);
-    return (C[e] = t), (w[e] = []), F(t), G(t), W(t), en(e), t;
+    let t = j(e);
+    return (C[e] = t), (w[e] = []), V(t), G(t), W(t), en(e), t;
 }
 function W(e) {
     let t = (N[e.id] = {}),
@@ -249,7 +249,7 @@ class el extends (r = s.ZP.Store) {
         return C;
     }
     getChannels(e) {
-        return null != e ? k(e) : x;
+        return null != e ? k(e) : L;
     }
     getFirstChannelOfType(e, t, n) {
         let r = this.getChannels(e)[n].find(t);
@@ -296,7 +296,7 @@ class el extends (r = s.ZP.Store) {
                           return t.id;
                       }))
             ? n
-            : L;
+            : x;
     }
     hasSelectableChannel(e, t) {
         return this.getSelectableChannelIds(e).includes(t);
@@ -312,7 +312,7 @@ class el extends (r = s.ZP.Store) {
     }
     getTextChannelNameDisambiguations(e) {
         var t;
-        return null != e && null != (t = N[e]) ? t : j;
+        return null != e && null != (t = N[e]) ? t : M;
     }
 }
 I(el, "displayName", "GuildChannelStore");

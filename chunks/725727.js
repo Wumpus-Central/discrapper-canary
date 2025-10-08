@@ -46,7 +46,7 @@ function g() {
                     : [...t, e],
             );
         }, []),
-        T = l.ZP.isPremiumExactly(t, h.p9.TIER_2),
+        T = l.ZP.isPremiumExactly(t, h.PremiumTypes.TIER_2),
         S =
             d.g.useExperiment(
                 { location: "useOutboundPromotions" },

@@ -243,7 +243,7 @@ function eu(e) {
         ey = i.useMemo(() => $(Q({}, eb), { section: Y.jXE.SOUNDBOARD_SOUND_PICKER }), [eb]),
         [eO, ev] = i.useState(null),
         eI = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        eT = (0, D.I5)(eI, K.p9.TIER_2),
+        eT = (0, D.I5)(eI, K.PremiumTypes.TIER_2),
         eS = (0, l.e7)([R.Z], () => {
             var e;
             return R.Z.getVoiceState(t, null != (e = null == eI ? void 0 : eI.id) ? e : Y.lds);
@@ -369,7 +369,7 @@ function eu(e) {
             null != e && ev(e);
         }, []),
         e0 = i.useCallback(() => {
-            let e = (0, D.Px)(K.p9.TIER_2);
+            let e = (0, D.Px)(K.PremiumTypes.TIER_2);
             return z.intl.format(z.t["tw/SSk"], {
                 nitroTierName: e,
                 onClick: e$,
@@ -557,7 +557,7 @@ function eu(e) {
                               is_external: !0,
                               location: $(Q({}, ey), { object: Y.qAy.SOUNDBOARD_SOUND }),
                               location_stack: eE,
-                              sku_id: D.ZP.getSkuIdForPremiumType(K.p9.TIER_2),
+                              sku_id: D.ZP.getSkuIdForPremiumType(K.PremiumTypes.TIER_2),
                           },
                           onClose: () => ev(null),
                           onLearnMore: g,

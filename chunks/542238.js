@@ -3,10 +3,10 @@ var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(258609),
-    s = n(845056);
+    s = n(114379);
 function l(e) {
     let { body: t, dismissCallback: n, errorCodeMessage: l } = e,
-        c = (0, a.e7)([o.Z], () => o.Z.getRemoteSessionId());
+        c = (0, a.e7)([o.default], () => o.default.getRemoteSessionId());
     return (i.useEffect(() => {
         null != c && n();
     }, [c, n]),

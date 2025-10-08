@@ -13,45 +13,45 @@ var i = n(268146),
     m = n(544753),
     h = n(615161),
     p = n(156582),
-    g = n(396678),
-    x = n(37113),
+    x = n(396678),
+    g = n(37113),
     _ = n(65154),
     v = n(137349),
     j = n(388032),
     b = n(246238);
 let S = [
         {
-            value: x.tI.PRESET_VIDEO,
+            value: g.tI.PRESET_VIDEO,
             canUse: (e) => !0,
         },
         {
-            value: x.tI.PRESET_DOCUMENTS,
+            value: g.tI.PRESET_DOCUMENTS,
             canUse: (e) => e !== i.vA.CAMERA,
         },
         {
-            value: x.tI.PRESET_CUSTOM,
+            value: g.tI.PRESET_CUSTOM,
             canUse: (e) => !0,
         },
     ],
-    C = [
+    y = [
         {
-            value: x.LY.RESOLUTION_720,
+            value: g.LY.RESOLUTION_720,
             canUse: (e) => !0,
         },
         {
-            value: x.LY.RESOLUTION_1080,
+            value: g.LY.RESOLUTION_1080,
             canUse: (e) => !0,
         },
         {
-            value: x.LY.RESOLUTION_1440,
+            value: g.LY.RESOLUTION_1440,
             canUse: (e) => !0,
         },
         {
-            value: x.LY.RESOLUTION_SOURCE,
+            value: g.LY.RESOLUTION_SOURCE,
             canUse: (e) => e !== i.vA.CAMERA,
         },
     ],
-    y = [x.ws.FPS_15, x.ws.FPS_30, x.ws.FPS_60];
+    C = [g.ws.FPS_15, g.ws.FPS_30, g.ws.FPS_60];
 function O(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
@@ -84,8 +84,8 @@ function w(e) {
         ] = (0, h.E_)(),
         D = !(0, c.$s)(k, "StreamOptionsMenu"),
         L = (0, m.Z)(),
-        [B, G] = null != (t = (0, g.Z)(x.tI.PRESET_VIDEO)) ? t : [x.LY.RESOLUTION_720, x.ws.FPS_30],
-        [U, W] = null != (n = (0, g.Z)(x.tI.PRESET_DOCUMENTS)) ? n : [x.LY.RESOLUTION_SOURCE, x.ws.FPS_15],
+        [B, G] = null != (t = (0, x.Z)(g.tI.PRESET_VIDEO)) ? t : [g.LY.RESOLUTION_720, g.ws.FPS_30],
+        [U, W] = null != (n = (0, x.Z)(g.tI.PRESET_DOCUMENTS)) ? n : [g.LY.RESOLUTION_SOURCE, g.ws.FPS_15],
         z = (0, o.M)({
             deviceType: _.h7.AUDIO_INPUT,
             selectedDeviceId: Z,
@@ -130,17 +130,17 @@ function w(e) {
                             label: (0, u.L)(t),
                             subtext: (function (e) {
                                 switch (e) {
-                                    case x.tI.PRESET_VIDEO:
+                                    case g.tI.PRESET_VIDEO:
                                         return j.intl.format(v.default.G5O1Mz, {
                                             resolution: (0, f.M)(B),
                                             frameRate: G,
                                         });
-                                    case x.tI.PRESET_DOCUMENTS:
+                                    case g.tI.PRESET_DOCUMENTS:
                                         return j.intl.format(v.default["8tcFLy"], {
                                             resolution: (0, f.M)(U),
                                             frameRate: W,
                                         });
-                                    case x.tI.PRESET_CUSTOM:
+                                    case g.tI.PRESET_CUSTOM:
                                         return;
                                     default:
                                         throw Error("No case implemented for ".concat(e));
@@ -156,51 +156,53 @@ function w(e) {
                     );
                 }),
             }),
-            T === x.tI.PRESET_CUSTOM &&
+            T === g.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.Clw, {}),
                         (0, r.jsx)(l.sNh, {
                             id: "resolution",
                             label: j.intl.string(v.default.IG5n0d),
-                            children: C.filter((e) => {
-                                let { canUse: t } = e;
-                                return t(A);
-                            }).map((e) => {
-                                let { value: t } = e;
-                                return (0, r.jsx)(
-                                    l.k5B,
-                                    {
-                                        group: "resolution",
-                                        id: "stream-option-resolution-".concat(t),
-                                        checked: E === t,
-                                        label:
-                                            t !== x.LY.RESOLUTION_720
-                                                ? (0, r.jsx)(O, { label: (0, f.M)(t) })
-                                                : (0, f.M)(t),
-                                        action: () =>
-                                            (function (e) {
-                                                if (!(0, d.Z)(T, e, R, a.default.getCurrentUser(), L))
-                                                    return (
-                                                        b(),
-                                                        (0, p.E)({
-                                                            analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
-                                                        })
-                                                    );
-                                                M({
-                                                    type: "set_resolution",
-                                                    resolution: e,
-                                                });
-                                            })(t),
-                                    },
-                                    t,
-                                );
-                            }),
+                            children: y
+                                .filter((e) => {
+                                    let { canUse: t } = e;
+                                    return t(A);
+                                })
+                                .map((e) => {
+                                    let { value: t } = e;
+                                    return (0, r.jsx)(
+                                        l.k5B,
+                                        {
+                                            group: "resolution",
+                                            id: "stream-option-resolution-".concat(t),
+                                            checked: E === t,
+                                            label:
+                                                t !== g.LY.RESOLUTION_720
+                                                    ? (0, r.jsx)(O, { label: (0, f.M)(t) })
+                                                    : (0, f.M)(t),
+                                            action: () =>
+                                                (function (e) {
+                                                    if (!(0, d.Z)(T, e, R, a.default.getCurrentUser(), L))
+                                                        return (
+                                                            b(),
+                                                            (0, p.E)({
+                                                                analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                            })
+                                                        );
+                                                    M({
+                                                        type: "set_resolution",
+                                                        resolution: e,
+                                                    });
+                                                })(t),
+                                        },
+                                        t,
+                                    );
+                                }),
                         }),
                         (0, r.jsx)(l.sNh, {
                             id: "frame-rate",
                             label: j.intl.string(j.t.SkkeIi),
-                            children: y.map((e) =>
+                            children: C.map((e) =>
                                 (0, r.jsx)(
                                     l.k5B,
                                     {
@@ -208,7 +210,7 @@ function w(e) {
                                         id: "stream-option-frame-rate-".concat(e),
                                         checked: R === e,
                                         label:
-                                            e === x.ws.FPS_60
+                                            e === g.ws.FPS_60
                                                 ? (0, r.jsx)(O, { label: "".concat(e, "fps") })
                                                 : "".concat(e, "fps"),
                                         action: () =>

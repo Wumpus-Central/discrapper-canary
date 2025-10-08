@@ -29,8 +29,8 @@ var i = n(120356),
     R = n(474936),
     P = n(681642),
     w = n(388032),
-    D = n(517793);
-function x(e, t, n) {
+    D = n(311838);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -100,15 +100,15 @@ function U(e) {
             className: i,
             badgeClassName: d,
             displayProfile: g,
-            onClose: x,
-            shouldOpenBadgeTooltip: j,
+            onClose: L,
+            shouldOpenBadgeTooltip: M,
             shouldGlowTenureBadge: U,
         } = e,
         { analyticsLocations: G } = (0, c.ZP)(l.Z.BADGE),
         { context: B, trackUserProfileAction: Z } = (0, v.KZ)(),
-        V = E.default.getCurrentUser(),
-        F = (0, y.yd)(null == V ? void 0 : V.premiumType, R.p9.TIER_2),
-        H = (0, S.Of)(null != (t = null == V ? void 0 : V.id) ? t : null),
+        F = E.default.getCurrentUser(),
+        V = (0, y.yd)(null == F ? void 0 : F.premiumType, R.PremiumTypes.TIER_2),
+        H = (0, S.Of)(null != (t = null == F ? void 0 : F.id) ? t : null),
         Y = (0, T.Z)(H).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
         className: a()(D.container, i),
@@ -123,7 +123,7 @@ function U(e) {
                     if (
                         (Z({ action: "PRESS_BADGE" }),
                         (0, I.NE)(
-                            L(
+                            x(
                                 {
                                     badge: e.id,
                                     analyticsLocations: G,
@@ -144,45 +144,45 @@ function U(e) {
                             (t.preventDefault(),
                             b.default.track(C.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: F,
+                                premium_type: V,
                                 viewed_user_id: null == g ? void 0 : g.userId,
                             }),
-                            F)
+                            V)
                         ) {
-                            (null == g ? void 0 : g.userId) === (null == V ? void 0 : V.id)
+                            (null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)
                                 ? (0, h.uL)(C.Z5c.NITRO_HOME)
                                 : (0, f.k)({
                                       analyticsLocations: G,
                                       displayProfile: g,
                                   }),
-                                null == x || x();
+                                null == L || L();
                             return;
                         }
-                        if ((null == g ? void 0 : g.userId) === (null == V ? void 0 : V.id)) {
+                        if ((null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)) {
                             let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: G }) : null;
                             if (null == n) return;
-                            return null == x || x(), n(t);
+                            return null == L || L(), n(t);
                         }
                         return (
                             (0, f.k)({
                                 analyticsLocations: G,
                                 displayProfile: g,
                             }),
-                            void (null == x || x())
+                            void (null == L || L())
                         );
                     }
                     let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: G }) : null;
-                    if (null != n) return null == x || x(), n(t);
+                    if (null != n) return null == L || L(), n(t);
                 },
                 v = () => {
                     e.id === T.i &&
                         b.default.track(
                             C.rMx.QUEST_CONTENT_VIEWED,
-                            M(L({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            j(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         Z({ action: "HOVER_BADGE" }),
                         (0, I.Qf)(
-                            L(
+                            x(
                                 {
                                     badge: e.id,
                                     analyticsLocations: G,
@@ -201,7 +201,7 @@ function U(e) {
                 {
                     text: S,
                     "aria-label": e.description,
-                    forceOpen: null != j && j(e.id),
+                    forceOpen: null != M && M(e.id),
                     delay: A.vB,
                     children: (0, r.jsx)(o.eee, {
                         onClick: y,

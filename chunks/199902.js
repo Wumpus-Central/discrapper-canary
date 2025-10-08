@@ -72,10 +72,10 @@ function D(e, t) {
         e
     );
 }
-let x = null,
-    L = {},
-    j = null;
-function M() {
+let L = null,
+    x = {},
+    M = null;
+function j() {
     (r = new Map()), (i = {}), (a = {}), (o = {});
 }
 function k(e) {
@@ -105,7 +105,7 @@ function Z(e) {
         (a = t.rtcStreams),
         (o = t.streamerActiveStreamMetadatas);
 }
-function V(e) {
+function F(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n, guildId: r, channelId: i, sessionId: a, selfStream: o, discoverable: s } = t;
@@ -126,12 +126,12 @@ function V(e) {
         }
     }, !1);
 }
-function F(e) {
+function V(e) {
     let { streamKey: t } = e,
         n = (0, p.my)(t);
     r.delete(t),
         r.set(t, D(P({}, n), { state: C.jm8.CONNECTING })),
-        n.ownerId === b.default.getId() && (L[n.channelId] = !1);
+        n.ownerId === b.default.getId() && (x[n.channelId] = !1);
 }
 function H(e) {
     var t;
@@ -252,11 +252,11 @@ function X(e) {
 }
 function Q(e) {
     let { id: t, channelId: n } = e;
-    (x = t),
+    (L = t),
         Array.from(r.values()).forEach((e) => {
-            (0, p.V9)(e) !== x && e.state === C.jm8.ENDED && G((0, p.V9)(e));
+            (0, p.V9)(e) !== L && e.state === C.jm8.ENDED && G((0, p.V9)(e));
         }),
-        null != t && (0, p.DB)(t) && t.includes(b.default.getId()) && (L[n] = !1);
+        null != t && (0, p.DB)(t) && t.includes(b.default.getId()) && (x[n] = !1);
 }
 function J(e) {
     let { streamKey: t, unavailable: i, reason: o } = e;
@@ -277,7 +277,7 @@ function J(e) {
             }),
             (l = C.jm8.ENDED);
     } else s.state === C.jm8.FAILED && o === C.si2.USER_REQUESTED && (l = C.jm8.FAILED);
-    r.set(t, D(P({}, s), { state: l })), l === C.jm8.ENDED && x !== t && G(t);
+    r.set(t, D(P({}, s), { state: l })), l === C.jm8.ENDED && L !== t && G(t);
 }
 function $(e) {
     let { streamKey: t } = e,
@@ -304,12 +304,12 @@ function ee(e) {
 }
 function et(e) {
     let { channelId: t, selfStreamHidden: n } = e;
-    (0, p.DB)(x) && (null == x ? void 0 : x.includes(b.default.getId())) && !1 === L[t] && !0 === n && (x = null),
-        (L[t] = n);
+    (0, p.DB)(L) && (null == L ? void 0 : L.includes(b.default.getId())) && !1 === x[t] && !0 === n && (L = null),
+        (x[t] = n);
 }
 function en(e) {
     let { intent: t } = e;
-    j = t;
+    M = t;
 }
 function er(e, t) {
     let n = y.Z.getBasicChannel(t);
@@ -318,22 +318,22 @@ function er(e, t) {
 function ei(e) {
     if (er(e.streamType, e.channelId)) return !0;
     let t = y.Z.getBasicChannel(e.channelId);
-    return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.Z)[0];
+    return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.default)[0];
 }
-M();
+j();
 class ea extends (c = u.ZP.PersistedStore) {
     initialize(e) {
         this.syncWith([I.Z], () => !0),
             this.waitFor(_.ZP, I.Z),
             (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 &&
-                Object.assign(L, null == e ? void 0 : e.selfStreamParticipantsHidden);
+                Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden);
     }
     getState() {
-        return { selfStreamParticipantsHidden: L };
+        return { selfStreamParticipantsHidden: x };
     }
     isSelfStreamHidden(e) {
         var t;
-        return null != (t = L[e]) && t;
+        return null != (t = x[e]) && t;
     }
     getLastActiveStream() {
         var e;
@@ -421,7 +421,7 @@ class ea extends (c = u.ZP.PersistedStore) {
         return null != n ? n.viewerIds : [];
     }
     getCurrentAppIntent() {
-        return j;
+        return M;
     }
     getStreamingState() {
         return (0, m.Z)(v.Z)
@@ -444,8 +444,8 @@ let eo = new ea(d.Z, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: W,
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: K,
     OVERLAY_INITIALIZE: Z,
-    VOICE_STATE_UPDATES: V,
-    STREAM_WATCH: F,
+    VOICE_STATE_UPDATES: F,
+    STREAM_WATCH: V,
     STREAM_START: H,
     STREAM_STOP: z,
     STREAM_CREATE: q,
@@ -457,7 +457,7 @@ let eo = new ea(d.Z, {
     SET_STREAM_APP_INTENT: en,
     RTC_CONNECTION_STATE: ee,
     CHANNEL_RTC_SELECT_PARTICIPANT: Q,
-    CONNECTION_OPEN: M,
-    CONNECTION_CLOSED: M,
-    LOGOUT: M,
+    CONNECTION_OPEN: j,
+    CONNECTION_CLOSED: j,
+    LOGOUT: j,
 });

@@ -5,7 +5,7 @@ n.d(t, {
     HL: () => en,
     JT: () => $,
     L2: () => z,
-    MY: () => M,
+    MY: () => j,
     Nz: () => V,
     Q_: () => F,
     TO: () => W,
@@ -16,7 +16,7 @@ n.d(t, {
     e$: () => Q,
     iM: () => X,
     pO: () => k,
-    xr: () => j,
+    xr: () => M,
     z2: () => J,
 }),
     n(388685),
@@ -87,9 +87,9 @@ let y = ["discordapp.com/gifts", "discord.com/gifts"],
     P = C(5, 3),
     w = "WUMP-?",
     D = [N, R, P, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-    x = new RegExp("^(".concat(w, ")?(").concat(D, ")$")),
-    L = "-";
-var j = (function (e) {
+    L = new RegExp("^(".concat(w, ")?(").concat(D, ")$")),
+    x = "-";
+var M = (function (e) {
     return (
         (e[(e.DEFAULT = 0)] = "DEFAULT"),
         (e[(e.CUSTOM_STYLE = 1)] = "CUSTOM_STYLE"),
@@ -97,8 +97,8 @@ var j = (function (e) {
         e
     );
 })({});
-let M = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
-    k = (e) => 0 !== M(e);
+let j = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
+    k = (e) => 0 !== j(e);
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -236,28 +236,28 @@ function q(e) {
         .with(
             {
                 interval: m.rV.MONTH,
-                premiumSubscriptionType: m.p9.TIER_2,
+                premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
             () => g.intl.formatToPlainString(g.t["vFfV+P"], { timeInterval: g.intl.string(g.t.FPybU1) }),
         )
         .with(
             {
                 interval: m.rV.YEAR,
-                premiumSubscriptionType: m.p9.TIER_2,
+                premiumSubscriptionType: m.PremiumTypes.TIER_2,
             },
             () => g.intl.formatToPlainString(g.t["vFfV+P"], { timeInterval: g.intl.string(g.t.tfqrho) }),
         )
         .with(
             {
                 interval: m.rV.MONTH,
-                premiumSubscriptionType: m.p9.TIER_1,
+                premiumSubscriptionType: m.PremiumTypes.TIER_1,
             },
             () => g.intl.formatToPlainString(g.t.gjKbFx, { intervalCount: e.intervalCount }),
         )
         .with(
             {
                 interval: m.rV.YEAR,
-                premiumSubscriptionType: m.p9.TIER_1,
+                premiumSubscriptionType: m.PremiumTypes.TIER_1,
             },
             () => g.intl.formatToPlainString(g.t.GIe7Bw, { intervalCount: e.intervalCount }),
         )
@@ -304,10 +304,10 @@ function J(e, t, n) {
     return a.length === i.length ? a[0] : null;
 }
 function $(e) {
-    let t = e.trim().split("/").pop().match(x);
+    let t = e.trim().split("/").pop().match(L);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(L, "g"), "");
+    return null == i ? null : i.replace(RegExp(x, "g"), "");
 }
 let ee = (e, t) =>
     (0, a.e7)([l.Z], () => {
@@ -327,7 +327,9 @@ function et(e, t) {
             return g.intl.string(g.t.roztIi);
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
             return g.intl.formatToPlainString(g.t["4YTHKy"], {
-                planName: (0, f.M5)(t, m.p9.TIER_2) ? g.intl.string(g.t["lG6a5+"]) : g.intl.string(g.t["FSOz7+"]),
+                planName: (0, f.M5)(t, m.PremiumTypes.TIER_2)
+                    ? g.intl.string(g.t["lG6a5+"])
+                    : g.intl.string(g.t["FSOz7+"]),
             });
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return g.intl.string(g.t["9i1J39"]);

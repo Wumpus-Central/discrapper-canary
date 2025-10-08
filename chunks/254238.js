@@ -62,7 +62,7 @@ function y(e, t) {
     });
 }
 async function O() {
-    let e = p.Z.getAwaitingRemoteSessionInfo(),
+    let e = p.default.getAwaitingRemoteSessionInfo(),
         t = null == e ? void 0 : e.nonce;
     o.Z.dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
     let n = [];

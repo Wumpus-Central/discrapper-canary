@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(503922);
+    y = n(445102);
 let O = "premiumRetentionEmojiPickerNotice",
     v = l.K.get(O),
     I = (e) => {
@@ -37,9 +37,9 @@ let O = "premiumRetentionEmojiPickerNotice",
             C = "".concat(T.id, ":").concat(A.toISOString());
         if (v === C) return null;
         let N =
-            h.ZP.getPremiumType(T.planId) === E.p9.TIER_0
+            h.ZP.getPremiumType(T.planId) === E.PremiumTypes.TIER_0
                 ? d.JX.PREMIUM_TIER_0
-                : h.ZP.getPremiumType(T.planId) === E.p9.TIER_1
+                : h.ZP.getPremiumType(T.planId) === E.PremiumTypes.TIER_1
                   ? d.JX.PREMIUM_TIER_1
                   : d.JX.PREMIUM_TIER_2;
         return (0, r.jsxs)("div", {

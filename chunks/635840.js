@@ -60,7 +60,7 @@ function N(t) {
                     children: [
                         (0, n.jsx)("div", {
                             className: _.answerChoicesContainer,
-                            children: (0, n.jsx)(l.Gu, {
+                            children: (0, n.jsx)(r.FXm, {
                                 value: A,
                                 options: u.map((t) => {
                                     let { nameGetter: i, value: e } = t;
@@ -69,8 +69,7 @@ function N(t) {
                                         value: e,
                                     };
                                 }),
-                                onChange: (t) => E(t.value),
-                                withTransparentBackground: !0,
+                                onChange: (t) => E(t),
                             }),
                         }),
                         "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER" === A &&

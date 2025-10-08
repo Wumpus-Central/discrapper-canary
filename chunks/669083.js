@@ -1,17 +1,17 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { default: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(442837),
-    o = n(755721),
-    l = n(481060),
-    a = n(13245),
-    c = n(600164),
-    d = n(212632),
-    u = n(906467),
-    p = n(556296),
-    h = n(237997),
-    f = n(998502),
-    g = n(13140),
+    o = n(481060),
+    l = n(13245),
+    a = n(600164),
+    c = n(212632),
+    d = n(906467),
+    u = n(556296),
+    p = n(237997),
+    h = n(998502),
+    f = n(13140),
+    g = n(486016),
     m = n(809357),
     y = n(624864),
     _ = n(987650),
@@ -33,58 +33,58 @@ function x(e, t, n) {
     );
 }
 function S() {
-    let e = h.default.getNotificationPositionMode(),
+    let e = p.default.getNotificationPositionMode(),
         t = e !== O._vf.DISABLED,
-        n = p.ZP.getOverlayKeybind(),
-        i = p.ZP.getOverlayChatKeybind();
-    a.Z.track(O.rMx.OVERLAY_SETTINGS_UPDATED, {
+        n = u.ZP.getOverlayKeybind(),
+        i = u.ZP.getOverlayChatKeybind();
+    l.Z.track(O.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
         text_notifications_mode: y.Z.isNotificationDisabled(_.n0.TextChat) ? "DISABLED" : "ENABLED",
-        text_opacity_slider: h.default.getTextWidgetOpacity(),
-        hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
-        text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
+        text_opacity_slider: p.default.getTextWidgetOpacity(),
+        hotkey: null != n ? (0, f.BB)(n.shortcut) : null,
+        text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null,
     });
 }
 class Z extends r.PureComponent {
     componentDidMount() {
-        a.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
+        l.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
             destination_pane: "OVERLAY SETTINGS",
             origin_pane: null,
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        a.Z.setNotificationPositionMode(t), S();
+        l.Z.setNotificationPositionMode(t), S();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
-        a.Z.setAvatarSizeMode(t);
+        l.Z.setAvatarSizeMode(t);
     }
     handleChangeDisplayNameMode(e) {
         let { value: t } = e;
-        a.Z.setDisplayNameMode(t);
+        l.Z.setDisplayNameMode(t);
     }
     handleChangeDisplayUserMode(e) {
         let { value: t } = e;
-        a.Z.setDisplayUserMode(t);
+        l.Z.setDisplayUserMode(t);
     }
     renderHeader() {
-        return (0, i.jsxs)(c.Z, {
-            direction: c.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(a.Z, {
+            direction: a.Z.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
             className: v.header,
             children: [
-                (0, i.jsxs)(c.Z, {
+                (0, i.jsxs)(a.Z, {
                     children: [
-                        (0, i.jsx)(l.vwX, {
+                        (0, i.jsx)(o.vwX, {
                             className: v.headerTitle,
                             tag: "h1",
                             children: b.intl.string(b.t["35G2Mj"]),
                         }),
-                        (0, i.jsx)(l.olH, {
+                        (0, i.jsx)(o.olH, {
                             className: v.headerClose,
                             onClick: this.props.onClose,
                         }),
@@ -96,25 +96,25 @@ class Z extends r.PureComponent {
     }
     renderTabBar() {
         let { selectedSection: e } = this.state,
-            t = u.Z.isDeveloper
-                ? (0, i.jsx)(l.njP.Item, {
+            t = d.Z.isDeveloper
+                ? (0, i.jsx)(o.njP.Item, {
                       id: "DEVELOPER",
                       className: v.tabBarItem,
                       children: "Developer",
                   })
                 : null;
-        return (0, i.jsxs)(l.njP, {
+        return (0, i.jsxs)(o.njP, {
             selectedItem: e,
             type: "top",
             className: v.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
-                (0, i.jsx)(l.njP.Item, {
+                (0, i.jsx)(o.njP.Item, {
                     id: "GENERAL",
                     className: v.tabBarItem,
                     children: b.intl.string(b.t["0FYxx8"]),
                 }),
-                (0, i.jsx)(l.njP.Item, {
+                (0, i.jsx)(o.njP.Item, {
                     id: "VOICE",
                     className: v.tabBarItem,
                     children: b.intl.string(b.t["3WeSiI"]),
@@ -137,7 +137,7 @@ class Z extends r.PureComponent {
                 e = this.renderGeneralSettings();
         }
         return (0, i.jsx)(
-            l.hzk,
+            o.hzk,
             {
                 className: v.content,
                 children: e,
@@ -152,47 +152,47 @@ class Z extends r.PureComponent {
                 showKeybindIndicators: n,
                 shouldShowInviteNotification: s,
             } = this.props,
-            o = !y.Z.isNotificationDisabled(_.n0.TextChat),
-            c = e !== O._vf.DISABLED;
+            a = !y.Z.isNotificationDisabled(_.n0.TextChat),
+            d = e !== O._vf.DISABLED;
         return (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(l.xJW, {
+                (0, i.jsx)(o.xJW, {
                     title: b.intl.string(b.t.IQv8Eh),
                     className: E.marginBottom20,
-                    children: (0, i.jsx)(d.Z, {
+                    children: (0, i.jsx)(c.Z, {
                         position: e,
                         onChange: this.handleChangeNotificationPositionMode,
                     }),
                 }),
-                (0, i.jsx)(l.rsf, {
+                (0, i.jsx)(o.rsf, {
                     label: b.intl.string(b.t.Fy5kPj),
-                    checked: o && c,
+                    checked: a && d,
                     onChange: this.handleToggleTextChatNotifications,
-                    disabled: !c,
+                    disabled: !d,
                 }),
-                (0, i.jsx)(l.rsf, {
+                (0, i.jsx)(o.rsf, {
                     label: b.intl.string(b.t["f+c48/"]),
                     description: b.intl.string(b.t.W9DVVV),
                     checked: s,
                     onChange: this.handleToggleInviteNotification,
                 }),
                 n &&
-                    (0, i.jsx)(l.rsf, {
+                    (0, i.jsx)(o.rsf, {
                         label: b.intl.string(b.t.XZTl9v),
                         checked: t,
-                        onChange: (e) => a.Z.setShowKeybindIndicators(e),
+                        onChange: (e) => l.Z.setShowKeybindIndicators(e),
                     }),
             ],
         });
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, i.jsxs)(l.Kqy, {
+        return (0, i.jsxs)(o.Kqy, {
             gap: 20,
             children: [
-                (0, i.jsx)(o.Gu, {
+                (0, i.jsx)(o.FXm, {
                     label: b.intl.string(b.t.dnvZSk),
-                    onChange: this.handleChangeAvatarSizeMode,
+                    onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
                         {
                             value: O.ipw.LARGE,
@@ -204,11 +204,10 @@ class Z extends r.PureComponent {
                         },
                     ],
                     value: e,
-                    size: o.l7.SMALL,
                 }),
-                (0, i.jsx)(o.Gu, {
+                (0, i.jsx)(o.FXm, {
                     label: b.intl.string(b.t.J0dpcH),
-                    onChange: this.handleChangeDisplayNameMode,
+                    onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
                         {
                             value: O.wC$.ALWAYS,
@@ -224,11 +223,10 @@ class Z extends r.PureComponent {
                         },
                     ],
                     value: t,
-                    size: o.l7.SMALL,
                 }),
-                (0, i.jsx)(o.Gu, {
+                (0, i.jsx)(o.FXm, {
                     label: b.intl.string(b.t.swsWWF),
-                    onChange: this.handleChangeDisplayUserMode,
+                    onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
                         {
                             value: O.OYC.ALWAYS,
@@ -240,7 +238,6 @@ class Z extends r.PureComponent {
                         },
                     ],
                     value: n,
-                    size: o.l7.SMALL,
                 }),
             ],
         });
@@ -248,7 +245,7 @@ class Z extends r.PureComponent {
     renderDeveloperSettings() {
         return (0, i.jsx)("div", {
             className: E.marginBottom20,
-            children: (0, i.jsx)(l.q4e, {
+            children: (0, i.jsx)(o.q4e, {
                 label: "Crashes",
                 value: void 0,
                 options: [
@@ -277,14 +274,14 @@ class Z extends r.PureComponent {
                         label: "Out of Memory",
                     },
                 ],
-                onChange: (e) => null != e && f.ZP.crash(e),
+                onChange: (e) => null != e && h.ZP.crash(e),
             }),
         });
     }
     render() {
-        return (0, i.jsxs)(l.Y0X, {
+        return (0, i.jsxs)(o.Y0X, {
             "aria-label": b.intl.string(b.t["35G2Mj"]),
-            transitionState: l.Dvm.ENTERED,
+            transitionState: o.Dvm.ENTERED,
             parentComponent: "OverlaySettings",
             children: [this.renderHeader(), this.renderBody()],
         });
@@ -296,11 +293,11 @@ class Z extends r.PureComponent {
                 this.setState({ selectedSection: e });
             }),
             x(this, "handleToggleTextChatNotifications", () => {
-                a.Z.setNotificationDisabled(_.n0.TextChat, !this.props.textChatDisabled), S();
+                l.Z.setNotificationDisabledSetting(g.i.TEXT_CHAT, !this.props.textChatDisabled), S();
             }),
             x(this, "handleToggleInviteNotification", () => {
                 let e = this.props.shouldShowInviteNotification;
-                a.Z.setNotificationDisabled(_.n0.ActivityInvite, !e);
+                l.Z.setNotificationDisabledSetting(g.i.GAME_ACTIVITY, !e);
             });
     }
 }
@@ -314,13 +311,13 @@ function C(e) {
             textChatDisabled: a,
             shouldShowKeybindIndicators: c,
             shouldShowInviteNotification: d,
-        } = (0, s.cj)([h.default, y.Z], () => ({
-            avatarSizeMode: h.default.getAvatarSizeMode(),
-            displayNameMode: h.default.getDisplayNameMode(),
-            displayUserMode: h.default.getDisplayUserMode(),
-            notificationPositionMode: h.default.getNotificationPositionMode(),
+        } = (0, s.cj)([p.default, y.Z], () => ({
+            avatarSizeMode: p.default.getAvatarSizeMode(),
+            displayNameMode: p.default.getDisplayNameMode(),
+            displayUserMode: p.default.getDisplayUserMode(),
+            notificationPositionMode: p.default.getNotificationPositionMode(),
             textChatDisabled: y.Z.isNotificationDisabled(_.n0.TextChat),
-            shouldShowKeybindIndicators: h.default.showKeybindIndicators,
+            shouldShowKeybindIndicators: p.default.showKeybindIndicators,
             shouldShowInviteNotification: !y.Z.isNotificationDisabled(_.n0.ActivityInvite),
         })),
         u = (0, m.Z)({ location: "Overlay Settings" });

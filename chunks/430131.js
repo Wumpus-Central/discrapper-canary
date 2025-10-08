@@ -11,12 +11,12 @@ var r = n(951288),
     f = n(981631),
     _ = n(474936),
     p = n(388032),
-    h = n(473385);
+    h = n(356683);
 function m(e) {
     let { errors: t, pendingNick: n, currentNick: m, username: g, user: E, guild: b } = e,
         y = null != n ? n : m,
         O = (0, i.e7)([u.Z], () => u.Z.can(f.Plq.CHANGE_NICKNAME, b) || u.Z.can(f.Plq.MANAGE_NICKNAMES, b)),
-        v = (0, s.m)(_.p9.TIER_2),
+        v = (0, s.m)(_.PremiumTypes.TIER_2),
         { enabled: I } = o.wL.useConfig({ location: "NicknameSection" });
     function T(e) {
         (0, d.wi)(e, m);

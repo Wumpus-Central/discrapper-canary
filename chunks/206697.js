@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(807284),
+    g = n(614246),
     E = n(492764),
     b = n(235810);
 function y(e, t, n) {
@@ -100,7 +100,7 @@ function v() {
           });
 }
 function I() {
-    let e = (0, f.Px)(h.p9.TIER_2),
+    let e = (0, f.Px)(h.PremiumTypes.TIER_2),
         t = i.useCallback(
             () =>
                 (0, l.ZDy)(async () => {

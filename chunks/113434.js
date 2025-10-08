@@ -904,7 +904,7 @@ function eF(e) {
         i = (0, A._p)(e),
         a = (0, A.f$)(e),
         o = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-        s = (0, I.I5)(o, U.p9.TIER_2);
+        s = (0, I.I5)(o, U.PremiumTypes.TIER_2);
     if (null == n) return G.intl.formatToPlainString(G.t.l9uXLy, { decorationName: t });
     let l = G.intl.formatToPlainString(G.t.o97tNj, { rewardName: t }),
         u = G.intl.formatToPlainString(G.t.PkyRZm, {

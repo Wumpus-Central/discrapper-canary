@@ -16,7 +16,7 @@ let f = function () {
         _ = (0, a.Z)(),
         p =
             (null == t ? void 0 : t.verified) === !0 &&
-            (0, s.M5)(t, d.p9.TIER_2) &&
+            (0, s.M5)(t, d.PremiumTypes.TIER_2) &&
             _.fetched &&
             _.fractionalState !== d.a$.FP_ONLY &&
             !n &&

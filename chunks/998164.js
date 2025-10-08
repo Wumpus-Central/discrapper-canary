@@ -2,14 +2,14 @@ n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    a = n(481060),
-    s = n(710344),
+    s = n(481060),
+    a = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
     u = n(430677),
-    m = n(388032),
-    g = n(197530);
+    g = n(388032),
+    m = n(359449);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,16 +53,16 @@ function h(e, t) {
         e
     );
 }
-let f = [];
-function b() {
+let h = [];
+function x() {
     return (0, r.jsx)("div", {
-        className: g.actionItemContainer,
+        className: m.actionItemContainer,
         children: (0, r.jsxs)("div", {
-            className: g.actionItem,
+            className: m.actionItem,
             children: [
                 (0, r.jsx)("div", {
-                    className: g.actionItemEmojiWrapper,
-                    children: (0, r.jsx)(a.snC, {
+                    className: m.actionItemEmojiWrapper,
+                    children: (0, r.jsx)(s.snC, {
                         size: "custom",
                         color: "currentColor",
                         height: 20,
@@ -70,45 +70,45 @@ function b() {
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: g.actionItemText,
-                    children: (0, r.jsx)(a.Text, {
+                    className: m.actionItemText,
+                    children: (0, r.jsx)(s.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: m.intl.string(m.t["K/i3iY"]),
+                        children: g.intl.string(g.t["K/i3iY"]),
                     }),
                 }),
             ],
         }),
     });
 }
-function x(e) {
+function b(e) {
     let { guildId: t, onAddAction: l } = e,
-        s = i.useCallback(() => {
+        a = i.useCallback(() => {
             if (null != t)
-                return (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e("7590").then(n.bind(n, 380716));
+                return (0, s.ZDy)(async () => {
+                    let { default: e } = await Promise.all([n.e("7590"), n.e("61351")]).then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            h(p({}, n), {
+                            f(p({}, n), {
                                 guildId: t,
                                 onSave: l,
                             }),
                         );
                 });
         }, [t, l]);
-    return (0, r.jsxs)(a.P3F, {
-        className: g.addActionItem,
-        onClick: s,
+    return (0, r.jsxs)(s.P3F, {
+        className: m.addActionItem,
+        onClick: a,
         children: [
-            (0, r.jsx)(a.oFk, {
+            (0, r.jsx)(s.oFk, {
                 size: "xs",
                 color: "currentColor",
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "none",
-                children: m.intl.string(m.t.qce3EB),
+                children: g.intl.string(g.t.qce3EB),
             }),
         ],
     });
@@ -117,19 +117,19 @@ let j = function (e) {
     let { guildId: t } = e,
         n = (0, l.Wu)([d.Z], () => {
             var e;
-            return null != (e = d.Z.getSettings().newMemberActions) ? e : f;
+            return null != (e = d.Z.getSettings().newMemberActions) ? e : h;
         }),
-        a = i.useCallback(
+        s = i.useCallback(
             (e, n) => {
                 (0, c.vR)(e), (0, c.ad)(t, e.channelId, n, !0);
             },
             [t],
         ),
-        m = i.useCallback(
+        g = i.useCallback(
             (e, r, i, l) => {
-                var a;
-                let s = null == (a = n[e]) ? void 0 : a.channelId;
-                null != s && null != d.Z.getSettings() && ((0, c.el)(s, r), (0, c.ad)(t, s, i, l));
+                var s;
+                let a = null == (s = n[e]) ? void 0 : s.channelId;
+                null != a && null != d.Z.getSettings() && ((0, c.el)(a, r), (0, c.ad)(t, a, i, l));
             },
             [n, t],
         ),
@@ -141,13 +141,13 @@ let j = function (e) {
             },
             [n],
         ),
-        _ = n.map((e) => h(p({}, e), { id: e.channelId })),
+        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
         v = i.useCallback((e) => {
             (0, c.hS)(e);
         }, []),
-        { handleDragStart: O, handleDragReset: y, handleDragComplete: C } = (0, s.Z)(_, v);
+        { handleDragStart: C, handleDragReset: O, handleDragComplete: y } = (0, a.Z)(_, v);
     return (0, r.jsxs)("div", {
-        className: g.section,
+        className: m.section,
         children: [
             n.map((e, n) =>
                 (0, r.jsx)(
@@ -156,20 +156,20 @@ let j = function (e) {
                         guildId: t,
                         action: e,
                         actionIndex: n,
-                        onChange: m,
+                        onChange: g,
                         onDelete: j,
-                        onDragStart: O,
-                        onDragReset: y,
-                        onDragComplete: C,
+                        onDragStart: C,
+                        onDragReset: O,
+                        onDragComplete: y,
                     },
                     e.channelId,
                 ),
             ),
-            (0, r.jsx)(b, {}),
+            (0, r.jsx)(x, {}),
             n.length < o.O9 &&
-                (0, r.jsx)(x, {
+                (0, r.jsx)(b, {
                     guildId: t,
-                    onAddAction: a,
+                    onAddAction: s,
                 }),
         ],
     });

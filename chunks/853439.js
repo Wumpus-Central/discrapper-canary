@@ -31,7 +31,7 @@ function f(e) {
             let t = r.find((t) => t.name === e.name);
             if (void 0 !== t) e.id = t.id;
             else if (!(e.id in u)) {
-                let t = (0, o.kt)(e);
+                let t = (0, o.createChannelRecord)(e);
                 u[e.id] = t;
             }
         });

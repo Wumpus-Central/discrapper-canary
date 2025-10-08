@@ -19,7 +19,7 @@ var d = t(120356),
     _ = t(474936),
     N = t(981631),
     j = t(388032),
-    p = t(397206);
+    p = t(667059);
 let B = (e) => {
     var a, t;
     let { transitionState: d, onClose: B, displayProfile: E } = e,
@@ -33,8 +33,8 @@ let B = (e) => {
             null != (t = (0, h.a1)(null != (a = null == E ? void 0 : E.userId) ? a : null == D ? void 0 : D.id))
                 ? t
                 : new Date(),
-        k = (0, x.yd)(null == D ? void 0 : D.premiumType, _.p9.TIER_2),
-        C = L.map((e) => {
+        k = (0, x.yd)(null == D ? void 0 : D.premiumType, _.PremiumTypes.TIER_2),
+        P = L.map((e) => {
             let { id: a, nameUnformatted: t, tenureReqNumMonths: d } = e,
                 l = j.intl.string(t),
                 r = (0, T.J)(a),
@@ -90,7 +90,7 @@ let B = (e) => {
                 a,
             );
         }),
-        M = () => {
+        y = () => {
             (0, m.uL)(N.Z5c.APPLICATION_STORE, {
                 source: c.Z.TIERED_TENURE_BADGES_MODAL,
                 sourceLocationStack: S,
@@ -127,14 +127,14 @@ let B = (e) => {
                               }),
                               (0, n.jsx)("div", {
                                   className: p.badgeList,
-                                  children: C,
+                                  children: P,
                               }),
                               null != E &&
                                   E.userId !== (null == D ? void 0 : D.id) &&
                                   (0, n.jsx)(r.gtL, {
                                       "data-migration-pending": !0,
                                       className: p.learnMoreButton,
-                                      onClick: M,
+                                      onClick: y,
                                       children: j.intl.string(j.t.hvVgAQ),
                                   }),
                           ],
@@ -149,11 +149,11 @@ let B = (e) => {
                               (0, n.jsx)(s.xvT, {
                                   variant: "text-md/medium",
                                   className: p.subHeader,
-                                  children: j.intl.format(j.t.ffatnZ, { onClick: M }),
+                                  children: j.intl.format(j.t.ffatnZ, { onClick: y }),
                               }),
                               (0, n.jsx)("div", {
                                   className: p.badgeList,
-                                  children: C,
+                                  children: P,
                               }),
                               (0, n.jsx)(b.Z, {
                                   className: p.subscribeButton,

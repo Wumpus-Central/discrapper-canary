@@ -10,5 +10,5 @@ let i = (0, r.le)({
 });
 function o(e, s) {
     let { enabled: t } = i.useConfig({ location: s });
-    return !!(0, n.M5)(e, a.p9.TIER_2) && t;
+    return !!(0, n.M5)(e, a.PremiumTypes.TIER_2) && t;
 }

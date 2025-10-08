@@ -25,7 +25,7 @@ class u extends r.Z {
     }
     maybeFetchActiveOutboundPromotions() {
         let e = i.default.getCurrentUser(),
-            t = a.ZP.isPremiumExactly(e, l.p9.TIER_2),
+            t = a.ZP.isPremiumExactly(e, l.PremiumTypes.TIER_2),
             n = o.g.getCurrentConfig(
                 { location: "maybeFetchActiveOutboundPromotions" },
                 {
@@ -43,7 +43,7 @@ class u extends r.Z {
             }),
             c(this, "maybeFetchBogoPromotion", async () => {
                 let e = i.default.getCurrentUser();
-                a.ZP.isPremiumExactly(e, l.p9.TIER_2);
+                a.ZP.isPremiumExactly(e, l.PremiumTypes.TIER_2);
             });
     }
 }

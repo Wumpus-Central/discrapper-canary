@@ -22,7 +22,7 @@ var r = n(951288),
     O = n(981631),
     I = n(474936),
     C = n(388032),
-    w = n(386393);
+    w = n(643930);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,7 +114,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let M = t || l,
             { location: k } = (0, m.O)(),
             F = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-            L = c && !h.ZP.isPremium(F, I.p9.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, F),
+            L = c && !h.ZP.isPremium(F, I.PremiumTypes.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, F),
             V = i.useCallback(() => {
                 L &&
                     M &&

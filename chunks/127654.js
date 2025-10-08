@@ -78,7 +78,7 @@ function T(e, t, n) {
             (0, o.openUploadError)({
                 title: O.intl.string(O.t["/tGlcn"]),
                 help: (0, g.BK)(r, i),
-                showPremiumUpsell: !(0, m.M5)(r, y.p9.TIER_2),
+                showPremiumUpsell: !(0, m.M5)(r, y.PremiumTypes.TIER_2),
                 fileSize: d,
             });
         return;

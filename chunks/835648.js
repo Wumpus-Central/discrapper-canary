@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(957825),
     O = n(474936),
     v = n(388032),
-    I = n(422840);
+    I = n(875825);
 function T(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ function D(e) {
         }),
     );
 }
-function x(e, t, n, i, a, o) {
+function L(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return (0, r.jsx)(
@@ -174,7 +174,7 @@ function x(e, t, n, i, a, o) {
             return null;
     }
 }
-function L(e) {
+function x(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjo);
@@ -191,7 +191,7 @@ function L(e) {
             return v.intl.string(v.t.Rtvk9f);
     }
 }
-function j(e) {
+function M(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjo);
@@ -205,14 +205,14 @@ function j(e) {
             return v.intl.string(v.t.Rtvk9f);
     }
 }
-function M(e) {
+function j(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return (0, r.jsx)(c.ua7, {
-        text: L(t),
-        "aria-label": j(t),
+        text: x(t),
+        "aria-label": M(t),
         position: "right",
-        children: (e) => x(t, i, a, e, l, o),
+        children: (e) => L(t, i, a, e, l, o),
     });
 }
 function k(e) {
@@ -226,7 +226,7 @@ function k(e) {
         } = e,
         u = i.useRef(null),
         _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        g = (0, m.I5)(_, O.p9.TIER_2),
+        g = (0, m.I5)(_, O.PremiumTypes.TIER_2),
         v = i.useCallback(
             (e, t, n, i) => {
                 let o = a && (0, E.O)(e.categoryInfo, g, s),
@@ -241,7 +241,7 @@ function k(e) {
                         }),
                             n();
                     };
-                return (0, r.jsx)(M, {
+                return (0, r.jsx)(j, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,

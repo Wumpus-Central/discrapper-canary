@@ -6,7 +6,7 @@ var r = n(258609),
     s = n(979651);
 function l(e) {
     if (i.ZP.disableVoiceChannelChangeAlert) return !1;
-    let t = r.Z.getRemoteSessionId();
+    let t = r.default.getRemoteSessionId();
     if (
         null != s.Z.getVoiceStateForSession(a.default.getId(), t) ||
         !s.Z.isCurrentClientInVoiceChannel() ||

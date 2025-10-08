@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(354459),
     y = n(474936),
     O = n(388032),
-    v = n(572065);
+    v = n(605299);
 function I(e, t, n) {
     return (
         t in e
@@ -118,16 +118,16 @@ function w(e) {
         h = C(e, ["hideBadges", "stream", "location"]);
     let v = i.useRef(null),
         { analyticsLocations: I, parentAnalyticsLocation: S } = (0, s.ZP)(),
-        N = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), y.p9.TIER_1)),
+        N = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), y.PremiumTypes.TIER_1)),
         w = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         D = i.useMemo(() => (null != n ? [n] : []), [n]),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null != w && (0, f.Z)(w.getGuildId(), w.id, I);
         }, [w, I]);
     if (null == n || null == w) return null;
-    let L = R;
+    let x = R;
     return (
-        t || N || (L = P),
+        t || N || (x = P),
         (0, r.jsx)(o.yRy, {
             targetElementRef: v,
             position: "top",
@@ -140,7 +140,7 @@ function w(e) {
                         activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: x,
+                        handleGoLive: L,
                         onInteraction: (0, c.u)("ManageStreamsButton", null != S ? S : u, {
                             entrypoint: b.A5.OTHER_BUTTON,
                         }),
@@ -155,7 +155,7 @@ function w(e) {
                         A(T({}, e), {
                             buttonRef: v,
                             label: O.intl.string(O.t.tmiYpK),
-                            iconComponent: L,
+                            iconComponent: x,
                             onClick: (t) => {
                                 (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS),
                                     null == e || e.onClick(t);

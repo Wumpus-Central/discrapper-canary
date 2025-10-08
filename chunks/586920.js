@@ -9,7 +9,7 @@ var i = n(951288),
     u = n(594135),
     d = n(474936),
     m = n(388032),
-    f = n(950728),
+    f = n(607993),
     p = n(997892),
     g = n(730949);
 let h = () => {
@@ -19,28 +19,28 @@ let h = () => {
             premiumType: n,
             confettiCanvas: h,
             churnUserDiscountOffer: x,
-            discountedPrice: C,
+            discountedPrice: P,
         } = (0, u.a)(),
-        P = (0, r.useRef)(null),
+        C = (0, r.useRef)(null),
         [v, y] = (0, r.useState)(!1),
-        E = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
+        T = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
     if (
         ((0, r.useEffect)(() => {
-            null !== P.current && null !== C && y(!0);
-        }, [P, C]),
+            null !== C.current && null !== P && y(!0);
+        }, [C, P]),
         null === x)
     )
         return null;
-    let S = n === d.p9.TIER_2;
+    let E = n === d.PremiumTypes.TIER_2;
     return (0, i.jsxs)("div", {
-        ref: P,
+        ref: C,
         children: [
             (0, i.jsx)(a.ExpressiveModal, {
                 graphic: {
                     type: "image",
-                    src: S ? g.Z : p,
+                    src: E ? g.Z : p,
                 },
-                gradientColor: S ? "nitro-pink" : "nitro-green",
+                gradientColor: E ? "nitro-pink" : "nitro-green",
                 transitionState: t,
                 title: m.intl.string(m.t.PZSyRk),
                 onClose: async () => e(),
@@ -52,10 +52,10 @@ let h = () => {
                     }),
                 }),
             }),
-            !E &&
+            !T &&
                 v &&
                 (0, i.jsx)(o.Z, {
-                    confettiTarget: P.current,
+                    confettiTarget: C.current,
                     confettiCanvas: h,
                     confettiVelocityMultiplier: 0.75,
                 }),

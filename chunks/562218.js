@@ -20,19 +20,19 @@ let p = () => {
                 premiumSubscription: p,
                 paymentsBlocked: h,
                 planId: x,
-                handleCancellation: C,
+                handleCancellation: P,
             } = (0, u.a)(),
-            [P, v] = (0, r.useState)(!1),
-            [y, S] = (0, r.useState)(!1),
+            [C, v] = (0, r.useState)(!1),
+            [y, T] = (0, r.useState)(!1),
             E = async () => {
-                v(!0), S(!1);
+                v(!0), T(!1);
                 try {
-                    await C(), n();
+                    await P(), n();
                 } catch (t) {
-                    S(!0), v(!1);
+                    T(!0), v(!1);
                 }
             },
-            _ =
+            S =
                 (p.items.some((t) => {
                     let { planId: e } = t;
                     return !d.dJ.has(e);
@@ -44,27 +44,27 @@ let p = () => {
                           let { planId: e } = t;
                           return !d.dJ.has(e);
                       })) != null,
-            D = [];
+            _ = [];
         return (
-            D.push({
+            _.push({
                 text: f.intl.string(f.t.h9tkAA),
                 onClick: () => n(),
                 variant: "secondary",
             }),
-            _
-                ? D.push({
+            S
+                ? _.push({
                       text: f.intl.string(f.t.PDTjLC),
                       onClick: () => m(c.R.PREVIEW),
-                      disabled: P,
+                      disabled: C,
                       variant: "critical-primary",
-                      loading: P,
+                      loading: C,
                   })
-                : D.push({
+                : _.push({
                       text: f.intl.string(f.t["cY+Ooa"]),
                       onClick: () => E(),
-                      disabled: P,
+                      disabled: C,
                       variant: "critical-primary",
-                      loading: P,
+                      loading: C,
                   }),
             (0, i.jsx)(a.Modal, {
                 size: "md",
@@ -73,7 +73,7 @@ let p = () => {
                     f.intl.format(f.t.LZunzc, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(x)) }),
                 ),
                 subtitle: g(h, s, p),
-                actions: D,
+                actions: _,
                 onClose: async () => n(),
                 children: y ? (0, i.jsx)(l.k, { children: f.intl.string(f.t["5mlOCQ"]) }) : null,
             })
@@ -87,14 +87,14 @@ let p = () => {
                 return f.intl.string(f.t.FClXh4);
             default:
                 switch (e) {
-                    case d.p9.TIER_0:
+                    case d.PremiumTypes.TIER_0:
                         return t
                             ? f.intl.format(f.t["l+A50N"], {
                                   date: n.currentPeriodEnd,
                                   helpdeskArticle: s.Z.getArticleURL(m.BhN.BLOCKED_PAYMENTS),
                               })
                             : f.intl.format(f.t.Y6Wfa2, { date: n.currentPeriodEnd });
-                    case d.p9.TIER_1:
+                    case d.PremiumTypes.TIER_1:
                         return t
                             ? f.intl.format(f.t.QN7eIi, {
                                   date: n.currentPeriodEnd,

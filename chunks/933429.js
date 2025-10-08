@@ -546,7 +546,7 @@ let eQ = [
                         !o &&
                         r <= 7 &&
                         r >= 0 &&
-                        (0, eO.M5)(n, eC.p9.TIER_2) &&
+                        (0, eO.M5)(n, eC.PremiumTypes.TIER_2) &&
                         !i &&
                         !n.hasFreePremium() &&
                         !t.isPurchasedExternally;

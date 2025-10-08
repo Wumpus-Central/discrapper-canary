@@ -50,8 +50,14 @@ function v(e) {
         w = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, _.t7)(),
         L = (0, _.lr)(),
-        x = n === E.p9.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
-        M = (null == P ? void 0 : P.hasActiveTrial) ? (null == w ? void 0 : w.premiumType) : D ? E.p9.TIER_2 : null,
+        x = n === E.PremiumTypes.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
+        M = (null == P ? void 0 : P.hasActiveTrial)
+            ? null == w
+                ? void 0
+                : w.premiumType
+            : D
+              ? E.PremiumTypes.TIER_2
+              : null,
         j = (0, h.N)(),
         k = (0, p.Ng)(),
         U = null == j ? void 0 : j.subscription_trial;
@@ -86,7 +92,7 @@ function v(e) {
     }
     if (!S && !t && i) {
         let e = f.ZP.formatPriceString(
-            f.ZP.getDefaultPrice(n === E.p9.TIER_0 ? E.Xh.PREMIUM_MONTH_TIER_0 : E.Xh.PREMIUM_MONTH_TIER_2),
+            f.ZP.getDefaultPrice(n === E.PremiumTypes.TIER_0 ? E.Xh.PREMIUM_MONTH_TIER_0 : E.Xh.PREMIUM_MONTH_TIER_2),
             E.rV.MONTH,
         );
         if (o === E.C.PREMIUM_TRIAL) {

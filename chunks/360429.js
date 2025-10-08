@@ -9,8 +9,8 @@ var l = n(392711),
     u = n(287734),
     s = n(872810),
     d = n(410575),
-    b = n(906732),
-    f = n(418469),
+    f = n(906732),
+    b = n(418469),
     p = n(701098),
     g = n(607783),
     O = n(435064),
@@ -117,7 +117,7 @@ function L(e) {
         })(t),
         Q = (function (e) {
             let t,
-                n = (0, i.e7)([h.Z], () => null != h.Z.getRemoteSessionId()),
+                n = (0, i.e7)([h.default], () => null != h.default.getRemoteSessionId()),
                 l = (0, i.e7)([Z.Z], () => Z.Z.getChannel(e.channelId), [e.channelId]),
                 a = T(e),
                 c = C.default.getCurrentUser(),
@@ -170,7 +170,7 @@ function L(e) {
                 l = x.Z.supports(A.AN.SIDECHAIN_COMPRESSION),
                 c = (0, i.e7)([x.Z], () => x.Z.getSidechainCompression()),
                 u = (0, i.e7)([x.Z], () => x.Z.getSidechainCompressionStrength()),
-                { analyticsLocations: s } = (0, b.ZP)();
+                { analyticsLocations: s } = (0, f.ZP)();
             return !n && t && l
                 ? (0, r.jsxs)(o.kSQ, {
                       children: [
@@ -200,7 +200,7 @@ function L(e) {
                   })
                 : null;
         })(t),
-        W = (0, f.Z)(t, v, L),
+        W = (0, b.Z)(t, v, L),
         F = (0, p.G)({
             stream: t,
             channelId: t.channelId,

@@ -483,7 +483,7 @@ let eT = function (e) {
         { suppress: Z, selfMute: A, mute: M } = (0, ec.Z)(n),
         { canGoLive: R } = (0, u.cj)([ei.Z], () => ({ canGoLive: (0, w.Z)(ei.Z) })),
         k = (0, N.Z)(),
-        D = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
+        D = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
         B = null != k,
         H = (0, u.e7)([er.Z], () => {
             var e;

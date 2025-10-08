@@ -4,11 +4,11 @@ n.d(t, {
     WH: () => P,
     aP: () => k,
     dV: () => Z,
-    g: () => M,
-    iV: () => j,
+    g: () => j,
+    iV: () => M,
     n9: () => U,
-    pR: () => L,
-    rn: () => x,
+    pR: () => x,
+    rn: () => L,
     tK: () => w,
     xc: () => G,
 });
@@ -94,9 +94,9 @@ function D(e, t) {
     let n = m.Z.getChannel(t);
     return i()(null != n, "Cannot join a null voice channel"), !b.Z.isInChannel(t) && (0, y.rY)(n, b.Z, g.Z);
 }
-function x(e, t) {
+function L(e, t) {
     let { defaultWatchMultipleStreams: n } = (0, c.$)({ location: "StreamActionCreators.watchStream" });
-    if (null != l.Z.getRemoteSessionId()) return;
+    if (null != l.default.getRemoteSessionId()) return;
     let { guildId: r, channelId: i } = e;
     if (null != r && D(r, i)) return;
     let a = (0, u.V9)(e),
@@ -113,22 +113,22 @@ function x(e, t) {
     }),
         o || (null != t && t.noFocus) || T.Z.selectParticipant(e.channelId, a);
 }
-function L(e, t) {
+function x(e, t) {
     s.Z.dispatch({
         type: "STREAM_UPDATE_SELF_HIDDEN",
         channelId: e,
         selfStreamHidden: t,
     });
 }
-function j(e, t) {
+function M(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && D(n, r)) return;
-    x(e, t);
+    L(e, t);
     let i = f.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
         a = E.Z.getVoiceChannelId();
     (i && a === r) || (0, d.Z)(e);
 }
-function M(e) {
+function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     n && k(e, t),
@@ -204,5 +204,5 @@ function Z(e, t) {
 function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.Z.getCurrentUserActiveStream();
-    null != t && M((0, u.V9)(t), e);
+    null != t && j((0, u.V9)(t), e);
 }

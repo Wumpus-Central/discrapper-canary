@@ -14,7 +14,7 @@ var r = A(951288),
     p = A(980272),
     m = A(258422);
 let h = (0, i.Z)(),
-    v = (0, c.kt)({
+    v = (0, c.createChannelRecord)({
         id: "1",
         type: g.d4z.DM,
     });

@@ -1,135 +1,130 @@
-t.d(n, { Z: () => N }), t(388685);
-var i = t(951288),
-    a = t(647438),
-    s = t(120356),
-    l = t.n(s),
-    r = t(442837),
-    o = t(755721),
-    c = t(481060),
-    d = t(570140),
-    x = t(600164),
-    m = t(236289),
-    p = t(788080),
-    u = t(613734),
-    g = t(800530),
-    _ = t(388032),
-    h = t(707489),
-    C = t(186425);
-function N(e) {
-    let { className: n, isDsaEligible: t = !1, onClose: s, onNext: N, onBack: j } = e,
-        I = (0, u.U0)(),
-        E = (0, r.e7)([m.Z], () => m.Z.getFreeTextAppealReason()),
-        [T, v] = a.useState(""),
-        [f, k] = a.useState(!1);
+i.d(n, { Z: () => C }), i(388685);
+var t = i(951288),
+    a = i(647438),
+    s = i(120356),
+    l = i.n(s),
+    r = i(442837),
+    o = i(481060),
+    c = i(570140),
+    d = i(600164),
+    x = i(236289),
+    m = i(788080),
+    g = i(613734),
+    p = i(800530),
+    u = i(388032),
+    h = i(708670),
+    N = i(428687);
+function C(e) {
+    let { className: n, isDsaEligible: i = !1, onClose: s, onNext: C, onBack: j } = e,
+        _ = (0, g.U0)(),
+        E = (0, r.e7)([x.Z], () => x.Z.getFreeTextAppealReason()),
+        [v, I] = a.useState(""),
+        [T, S] = a.useState(!1);
     a.useEffect(() => {
-        v(null != E ? E : ""), k(I === g.bK.SOMETHING_ELSE);
-    }, [E, I, t]);
-    let S = g.RY.map((e) => ({
+        I(null != E ? E : ""), S(_ === p.bK.SOMETHING_ELSE);
+    }, [E, _, i]);
+    let k = p.RY.map((e) => ({
         value: e,
-        name: (0, p.ox)(e),
+        name: (0, m.ox)(e),
     }));
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, i.jsxs)(c.xBx, {
+            (0, t.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
-                direction: x.Z.Direction.VERTICAL,
-                className: C.header,
+                direction: d.Z.Direction.VERTICAL,
+                className: N.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(c.X6q, {
-                        className: C.title,
+                    (0, t.jsx)(o.X6q, {
+                        className: N.title,
                         variant: "heading-xl/semibold",
-                        children: _.intl.string(_.t["C5q+pa"]),
+                        children: u.intl.string(u.t["C5q+pa"]),
                     }),
-                    (0, i.jsx)(c.Text, {
-                        className: C.subtitle,
+                    (0, t.jsx)(o.Text, {
+                        className: N.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: _.intl.string(_.t.VEcRh4),
+                        children: u.intl.string(u.t.VEcRh4),
                     }),
                     null != s &&
-                        (0, i.jsx)(c.olH, {
+                        (0, t.jsx)(o.olH, {
                             "data-migration-pending": !0,
-                            className: C.closeButton,
+                            className: N.closeButton,
                             onClick: s,
                         }),
                 ],
             }),
-            (0, i.jsxs)(c.hzk, {
+            (0, t.jsxs)(o.hzk, {
                 "data-migration-pending": !0,
                 className: l()(h.modalContent, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(o.Gu, {
-                        radioPosition: "right",
-                        radioItemClassName: C.radioItem,
-                        size: o.l7.NOT_SET,
-                        value: I,
-                        options: S,
+                    (0, t.jsx)(o.FXm, {
+                        value: _,
+                        options: k,
                         onChange: (e) => {
-                            let { value: n } = e;
-                            k(n === g.bK.SOMETHING_ELSE),
-                                n !== g.bK.SOMETHING_ELSE &&
-                                    (v(""),
-                                    d.Z.dispatch({
+                            S(e === p.bK.SOMETHING_ELSE),
+                                e !== p.bK.SOMETHING_ELSE &&
+                                    (I(""),
+                                    c.Z.dispatch({
                                         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
                                         userInput: "",
                                     })),
-                                d.Z.dispatch({
+                                c.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT",
-                                    signal: n,
+                                    signal: e,
                                 });
                         },
                     }),
-                    t &&
-                        f &&
-                        (0, i.jsxs)(i.Fragment, {
+                    i &&
+                        T &&
+                        (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, i.jsx)(c.Kx8, {
+                                (0, t.jsx)(o.Kx8, {
                                     rows: 4,
                                     maxLength: 1024,
-                                    placeholder: _.intl.string(_.t.bQrZIC),
-                                    value: T,
-                                    onChange: v,
+                                    placeholder: u.intl.string(u.t.bQrZIC),
+                                    value: v,
+                                    onChange: I,
                                     autoFocus: !0,
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, t.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-muted",
-                                    children: _.intl.string(_.t.xfNY3N),
+                                    children: u.intl.string(u.t.xfNY3N),
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(c.Text, {
+                    (0, t.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         className: h.disclaimer,
-                        children: _.intl.format(_.t["8k9GCQ"], {}),
+                        children: u.intl.format(u.t["8k9GCQ"], {}),
                     }),
                 ],
             }),
-            (0, i.jsx)(c.mzw, {
+            (0, t.jsx)(o.mzw, {
                 "data-migration-pending": !0,
-                children: (0, i.jsxs)(c.hE2, {
+                children: (0, t.jsxs)(o.hE2, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, i.jsx)(c.zxk, {
+                        (0, t.jsx)(o.zxk, {
                             variant: "primary",
-                            text: _.intl.string(_.t.PDTjLC),
+                            text: u.intl.string(u.t.PDTjLC),
                             onClick: () => {
-                                d.Z.dispatch({
+                                c.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-                                    userInput: T,
+                                    userInput: v,
                                 }),
-                                    null == N || N();
+                                    null == C || C();
                             },
                         }),
-                        (0, i.jsx)(c.zxk, {
+                        (0, t.jsx)(o.zxk, {
                             variant: "secondary",
-                            text: _.intl.string(_.t["13/7kZ"]),
+                            text: u.intl.string(u.t["13/7kZ"]),
                             onClick: () => {
-                                d.Z.dispatch({
+                                c.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-                                    userInput: T,
+                                    userInput: v,
                                 }),
                                     null == j || j();
                             },

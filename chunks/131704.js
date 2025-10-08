@@ -16,20 +16,20 @@ n.d(t, {
     X_: () => ee,
     Y0: () => X,
     _H: () => eG,
-    bc: () => k,
+    bc: () => j,
     bw: () => w,
+    createChannelRecord: () => eB,
     dF: () => q,
-    hv: () => L,
+    hv: () => x,
     iR: () => ei,
-    jD: () => eM,
-    kt: () => eB,
+    jD: () => ek,
     mn: () => ew,
     nl: () => eg,
     oj: () => N,
     ov: () => J,
-    q_: () => ek,
+    q_: () => ej,
     r8: () => I,
-    sR: () => M,
+    sR: () => k,
     tx: () => P,
     uC: () => H,
     vc: () => F,
@@ -182,15 +182,15 @@ function w(e) {
     return "SELECTABLE" !== e && P.has(e);
 }
 let D = new Set([m.d4z.GUILD_STAGE_VOICE]),
-    x = new Set([m.d4z.DM, m.d4z.GROUP_DM]);
-function L(e) {
-    return x.has(e);
+    L = new Set([m.d4z.DM, m.d4z.GROUP_DM]);
+function x(e) {
+    return L.has(e);
 }
-let j = new Set([m.d4z.GROUP_DM]);
-function k(e) {
-    return j.has(e);
+let M = new Set([m.d4z.GROUP_DM]);
+function j(e) {
+    return M.has(e);
 }
-let M = new Set([
+let k = new Set([
     m.d4z.DM,
     m.d4z.GROUP_DM,
     m.d4z.GUILD_TEXT,
@@ -200,7 +200,7 @@ let M = new Set([
     m.d4z.PRIVATE_THREAD,
 ]);
 function U(e) {
-    return M.has(e);
+    return k.has(e);
 }
 let G = new Set([
     m.d4z.DM,
@@ -484,13 +484,13 @@ class em extends e_ {
         return null != this.application_id;
     }
     isPrivate() {
-        return L(this.type);
+        return x(this.type);
     }
     isGroupDM() {
         return this.type === m.d4z.GROUP_DM;
     }
     isMultiUserDM() {
-        return k(this.type);
+        return j(this.type);
     }
     isDM() {
         return this.type === m.d4z.DM;
@@ -1023,8 +1023,8 @@ class ew extends em {
     }
 }
 class eD extends ew {}
-class ex extends ew {}
-class eL extends em {
+class eL extends ew {}
+class ex extends em {
     static fromServer(e, t) {
         var n, r, i, a, o;
         let s = {
@@ -1070,7 +1070,7 @@ class eL extends em {
             userLimit_: e.user_limit,
             videoQualityMode: e.video_quality_mode,
         };
-        return (0, d.gh)(s, eL);
+        return (0, d.gh)(s, ex);
     }
     constructor(e) {
         var t;
@@ -1095,7 +1095,7 @@ class eL extends em {
             (this.videoQualityMode = e.videoQualityMode);
     }
 }
-let ej = {
+let eM = {
     [m.d4z.DM]: ew.fromServer,
     [m.d4z.GROUP_DM]: ew.fromServer,
     [m.d4z.GUILD_TEXT]: eb.fromServer,
@@ -1104,32 +1104,32 @@ let ej = {
     [m.d4z.GUILD_CATEGORY]: eb.fromServer,
     [m.d4z.GUILD_ANNOUNCEMENT]: eb.fromServer,
     [m.d4z.GUILD_STORE]: eb.fromServer,
-    [m.d4z.ANNOUNCEMENT_THREAD]: eL.fromServer,
-    [m.d4z.PUBLIC_THREAD]: eL.fromServer,
-    [m.d4z.PRIVATE_THREAD]: eL.fromServer,
+    [m.d4z.ANNOUNCEMENT_THREAD]: ex.fromServer,
+    [m.d4z.PUBLIC_THREAD]: ex.fromServer,
+    [m.d4z.PRIVATE_THREAD]: ex.fromServer,
     [m.d4z.GUILD_DIRECTORY]: eb.fromServer,
     [m.d4z.GUILD_FORUM]: eC.fromServer,
     [m.d4z.GUILD_MEDIA]: eC.fromServer,
 };
-function ek(e, t) {
+function ej(e, t) {
     var n, r;
-    return (null != (r = ej[null != (n = e.type) ? n : m.d4z.GUILD_TEXT]) ? r : eg.fromServer)(e, t);
+    return (null != (r = eM[null != (n = e.type) ? n : m.d4z.GUILD_TEXT]) ? r : eg.fromServer)(e, t);
 }
-function eM(e) {
+function ek(e) {
     return eB(e);
 }
 let eU = {
     [m.d4z.DM]: eD,
-    [m.d4z.GROUP_DM]: ex,
+    [m.d4z.GROUP_DM]: eL,
     [m.d4z.GUILD_TEXT]: eS,
     [m.d4z.GUILD_VOICE]: eA,
     [m.d4z.GUILD_STAGE_VOICE]: eI,
     [m.d4z.GUILD_CATEGORY]: eO,
     [m.d4z.GUILD_ANNOUNCEMENT]: ey,
     [m.d4z.GUILD_STORE]: eT,
-    [m.d4z.ANNOUNCEMENT_THREAD]: eL,
-    [m.d4z.PUBLIC_THREAD]: eL,
-    [m.d4z.PRIVATE_THREAD]: eL,
+    [m.d4z.ANNOUNCEMENT_THREAD]: ex,
+    [m.d4z.PUBLIC_THREAD]: ex,
+    [m.d4z.PRIVATE_THREAD]: ex,
     [m.d4z.GUILD_DIRECTORY]: ev,
     [m.d4z.GUILD_FORUM]: eC,
     [m.d4z.GUILD_MEDIA]: eC,

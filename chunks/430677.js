@@ -8,14 +8,14 @@ var r = n(951288),
     c = n(481060),
     d = n(471445),
     u = n(603211),
-    m = n(307707),
-    g = n(734893),
+    g = n(307707),
+    m = n(734893),
     p = n(216701),
     f = n(592125),
     h = n(430824),
     x = n(768581),
     b = n(388032),
-    j = n(197530);
+    j = n(359449);
 let _ = function (e) {
     var t, l, _, v, C;
     let {
@@ -29,18 +29,18 @@ let _ = function (e) {
             onDragReset: P,
         } = e,
         w = (0, a.e7)([f.Z], () => f.Z.getChannel(y.channelId)),
-        R = (0, a.e7)([h.Z], () => h.Z.getGuild(O)),
-        { customEmoji: Z, unicodeEmoji: D } = (0, m.Z)(
+        Z = (0, a.e7)([h.Z], () => h.Z.getGuild(O)),
+        { customEmoji: R, unicodeEmoji: D } = (0, g.Z)(
             null == (t = y.emoji) ? void 0 : t.id,
             null == (l = y.emoji) ? void 0 : l.name,
         ),
-        A = null == y.emoji || null != Z || null != D,
+        A = null == y.emoji || null != R || null != D,
         L = x.ZP.getNewMemberActionIconURL({
             channelId: y.channelId,
             icon: y.icon,
         }),
         k = null;
-    null != w && (0, g.kb)(w) ? A || (k = b.intl.string(b.t.wAkIZW)) : (k = b.intl.string(b.t.CbTEKC));
+    null != w && (0, m.kb)(w) ? A || (k = b.intl.string(b.t.wAkIZW)) : (k = b.intl.string(b.t.CbTEKC));
     let {
             drag: G,
             dragSourcePosition: M,
@@ -57,7 +57,7 @@ let _ = function (e) {
         F = i.useCallback(() => {
             if (null != O)
                 return (0, c.ZDy)(async () => {
-                    let { default: e } = await n.e("7590").then(n.bind(n, 380716));
+                    let { default: e } = await Promise.all([n.e("7590"), n.e("61351")]).then(n.bind(n, 380716));
                     return (t) => {
                         var n, i;
                         return (0, r.jsx)(
@@ -111,7 +111,7 @@ let _ = function (e) {
                     };
                 });
         }, [O, y, N, E, I]);
-    if (null == w || null == R) return null;
+    if (null == w || null == Z) return null;
     let H = null != (C = (0, d.KS)(w)) ? C : c.VL1;
     return (0, r.jsxs)("div", {
         className: j.actionItemContainer,

@@ -32,7 +32,7 @@ var i = n(512722),
     D = n(291334),
     L = n(474936),
     x = n(388032),
-    M = n(737788);
+    M = n(486750);
 function j(e) {
     var t, n, i, j;
     let { guild: k, nameplateEnabled: U } = e,
@@ -40,7 +40,7 @@ function j(e) {
             let e = S.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        B = (0, d.m)(L.p9.TIER_2),
+        B = (0, d.m)(L.PremiumTypes.TIER_2),
         {
             pendingAvatar: Z,
             pendingNickname: F,

@@ -1,81 +1,81 @@
-n.d(t, { CustomThemesShareModalWrapper: () => C }), n(388685), n(704826), n(35282);
-var a = n(951288),
-    r = n(647438),
-    o = n(879690),
-    s = n(106351),
-    l = n(442837),
+n.d(t, { CustomThemesShareModalWrapper: () => y }), n(388685), n(704826), n(35282);
+var r = n(951288),
+    a = n(647438),
+    o = n(191336),
+    l = n(106351),
+    s = n(442837),
     i = n(786761),
-    u = n(3148),
-    c = n(210887),
+    c = n(3148),
+    u = n(210887),
     d = n(131704),
-    _ = n(626135),
-    f = n(233398),
+    f = n(626135),
+    b = n(233398),
     p = n(824988),
-    h = n(135102),
-    b = n(975919),
-    g = n(595830),
+    g = n(135102),
+    h = n(975919),
+    _ = n(595830),
     m = n(981631);
-let C = (e) => {
+let y = (e) => {
     let { transitionState: t, onClose: n } = e,
-        C = (0, r.useRef)((0, h.sf)()).current,
+        y = (0, a.useRef)((0, g.sf)()).current,
         {
-            selectedDestinations: M,
-            messageText: y,
-            canSend: x,
+            selectedDestinations: O,
+            messageText: j,
+            canSend: C,
             setSend: w,
-            updateMessage: S,
-            updateChannel: E,
-        } = (0, o.o)(C),
-        [I, O] = r.useState(!1),
-        { colors: j, chassisMixAmount: k, gradientAngle: v } = (0, f.Ig)(),
-        P = (0, l.e7)([c.Z], () => c.Z.theme),
-        W = (0, r.useMemo)(
+            updateMessage: v,
+            updateChannel: S,
+        } = (0, o.o)(y),
+        [P, x] = a.useState(!1),
+        { colors: E, chassisMixAmount: M, gradientAngle: k } = (0, b.Ig)(),
+        D = (0, s.e7)([u.Z], () => u.Z.theme),
+        I = (0, a.useMemo)(
             () => ({
-                colors: j.map((e) => e.replace("#", "")),
-                gradient_angle: v,
-                base_mix: k,
-                base_theme: (0, p.h)(P),
+                colors: E.map((e) => e.replace("#", "")),
+                gradient_angle: k,
+                base_mix: M,
+                base_theme: (0, p.h)(D),
             }),
-            [j, v, k, P],
+            [E, k, M, D],
         ),
-        T = r.useMemo(
+        T = a.useMemo(
             () =>
-                (0, d.kt)({
+                (0, d.createChannelRecord)({
                     id: "1",
-                    type: s.d.DM,
+                    type: l.d.DM,
                 }),
             [],
         ),
-        D = r.useMemo(
+        R = a.useMemo(
             () =>
                 (0, i.e5)(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                a = Object.keys(n);
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (a = a.concat(
+                                (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                a.forEach(function (t) {
-                                    var a;
-                                    (a = n[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: a,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = a);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })(
                         {},
-                        (0, u.ZP)({
+                        (0, c.ZP)({
                             channelId: T.id,
                             content: "",
                         }),
@@ -83,20 +83,20 @@ let C = (e) => {
                 ),
             [T],
         );
-    (0, r.useEffect)(() => {
-        S(D), E(T), O(!0);
-    }, [D, T, S, E]);
-    let L = r.useCallback(async () => {
-        if (!x()) return Promise.reject();
-        await (0, g.O)(M, W, y), _.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: M.length }), await n();
-    }, [W, M, y, x, n]);
-    return ((0, r.useEffect)(() => {
-        w(L);
-    }, [L, w]),
-    I)
-        ? (0, a.jsx)(h.fm.Provider, {
-              value: C,
-              children: (0, a.jsx)(b._, {
+    (0, a.useEffect)(() => {
+        v(R), S(T), x(!0);
+    }, [R, T, v, S]);
+    let Z = a.useCallback(async () => {
+        if (!C()) return Promise.reject();
+        await (0, _.O)(O, I, j), f.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: O.length }), await n();
+    }, [I, O, j, C, n]);
+    return ((0, a.useEffect)(() => {
+        w(Z);
+    }, [Z, w]),
+    P)
+        ? (0, r.jsx)(g.fm.Provider, {
+              value: y,
+              children: (0, r.jsx)(h._, {
                   transitionState: t,
                   onClose: n,
               }),

@@ -884,7 +884,7 @@ function tf() {
         D = (0, d.e7)([eL.Z], () => eL.Z.hasLayers()),
         L = (0, f.s9z)(f.JQI) || D || e$.s.isDisallowPopupsSet() || Z,
         M = (0, es.b)(),
-        U = (0, d.e7)([Q.Z], () => null != Q.Z.getAwaitingRemoteSessionInfo()),
+        U = (0, d.e7)([Q.default], () => null != Q.default.getAwaitingRemoteSessionInfo()),
         F = (0, d.e7)([eF.Z], () => eF.Z.getGuildId()),
         G = null == n ? void 0 : n.avatarDecoration,
         z = (0, P.R)(n, null != F ? F : void 0),

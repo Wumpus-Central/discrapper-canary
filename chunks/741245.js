@@ -16,7 +16,7 @@ var r,
     f = n(436774),
     _ = n(302221),
     p = n(474936),
-    h = n(513825);
+    h = n(536510);
 function m(e, t, n) {
     return (
         t in e
@@ -92,14 +92,14 @@ function O(e, t) {
 }
 let v = Object.freeze({
     DURATION: {
-        [p.p9.TIER_0]: 1000,
-        [p.p9.TIER_1]: 1000,
-        [p.p9.TIER_2]: 1500,
+        [p.PremiumTypes.TIER_0]: 1000,
+        [p.PremiumTypes.TIER_1]: 1000,
+        [p.PremiumTypes.TIER_2]: 1500,
     },
     DELAY: {
-        [p.p9.TIER_0]: 400,
-        [p.p9.TIER_1]: 400,
-        [p.p9.TIER_2]: 2200,
+        [p.PremiumTypes.TIER_0]: 400,
+        [p.PremiumTypes.TIER_1]: 400,
+        [p.PremiumTypes.TIER_2]: 2200,
     },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
@@ -159,8 +159,8 @@ class T extends (r = a.PureComponent) {
             case "PREMIUM_PAYMENT_STARTED":
             case "PREMIUM_UPGRADED":
             case "PREMIUM_UPDATED":
-                if (e === p.p9.TIER_0) return f.Rj.PREMIUM_TIER_0;
-                if (e === p.p9.TIER_1) return f.Rj.PREMIUM_TIER_1;
+                if (e === p.PremiumTypes.TIER_0) return f.Rj.PREMIUM_TIER_0;
+                if (e === p.PremiumTypes.TIER_1) return f.Rj.PREMIUM_TIER_1;
                 return f.Rj.PREMIUM_TIER_2;
             default:
                 throw Error("Unsupported ShineAnimation type specified");

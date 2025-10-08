@@ -14,7 +14,7 @@ var o = n(28664),
     f = n(365875);
 function g(e) {
     let { onApply: t, onSurpriseMe: n, onClose: g, canApply: h } = e,
-        x = (0, s.m)(u.p9.TIER_2),
+        x = (0, s.m)(u.PremiumTypes.TIER_2),
         _ = (0, l.jsx)(r.zxk, {
             variant: "secondary",
             size: "md",

@@ -64,7 +64,7 @@ var r = n(951288),
     ed = n(987650),
     ef = n(501787),
     e_ = n(388032),
-    ep = n(607547),
+    ep = n(289726),
     eh = n(131970),
     em = n(730462);
 function eg(e, t, n) {
@@ -358,19 +358,25 @@ function ek(e) {
             let a = !1,
                 s = !1;
             switch (t) {
-                case w.AE.LEGACY_GAME:
+                case w.OverlayToggledClientSettingType.LEGACY_GAME:
                     I(e), m.Z.toggleOverlay(o, e, g), (a = !e && y);
                     break;
-                case w.AE.OOP_GAME:
+                case w.OverlayToggledClientSettingType.OOP_GAME:
                     E(e), m.Z.toggleOverlay(o, y, e), (s = !e && g);
                     break;
-                case w.AE.LEGACY:
-                    b.Z.setEnabled(e, x), (0, w.ou)(e, w.AE.LEGACY, null != (n = o.id) ? n : null);
+                case w.OverlayToggledClientSettingType.LEGACY:
+                    b.Z.setEnabled(e, x),
+                        (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
                     break;
-                case w.AE.OOP:
-                    b.Z.setEnabled(D, e), (0, w.ou)(e, w.AE.OOP, null != (r = o.id) ? r : null);
+                case w.OverlayToggledClientSettingType.OOP:
+                    b.Z.setEnabled(D, e),
+                        (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
             }
-            (a || s) && (0, B.l)(a ? w.AE.LEGACY_GAME : w.AE.OOP_GAME, null != (i = o.id) ? i : null);
+            (a || s) &&
+                (0, B.l)(
+                    a ? w.OverlayToggledClientSettingType.LEGACY_GAME : w.OverlayToggledClientSettingType.OOP_GAME,
+                    null != (i = o.id) ? i : null,
+                );
         },
         k = (e, t) => {
             let n = !t && e,
@@ -409,8 +415,15 @@ function ek(e) {
             let i = null;
             if (
                 (n
-                    ? (i = "game" === t ? w.AE.LEGACY_GAME : w.AE.LEGACY)
-                    : r && (i = "game" === t ? w.AE.OOP_GAME : w.AE.OOP),
+                    ? (i =
+                          "game" === t
+                              ? w.OverlayToggledClientSettingType.LEGACY_GAME
+                              : w.OverlayToggledClientSettingType.LEGACY)
+                    : r &&
+                      (i =
+                          "game" === t
+                              ? w.OverlayToggledClientSettingType.OOP_GAME
+                              : w.OverlayToggledClientSettingType.OOP),
                 null != i)
             ) {
                 var a;
@@ -641,7 +654,9 @@ function ek(e) {
                                   checked: g && x,
                                   disabled: N,
                                   onChange: (e) => {
-                                      e && !x ? M(e, w.AE.OOP) : M(e, w.AE.OOP_GAME);
+                                      e && !x
+                                          ? M(e, w.OverlayToggledClientSettingType.OOP)
+                                          : M(e, w.OverlayToggledClientSettingType.OOP_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: ep.emptySpacer }),
@@ -659,7 +674,9 @@ function ek(e) {
                                   checked: y && D,
                                   disabled: C,
                                   onChange: (e) => {
-                                      e && !D ? M(e, w.AE.LEGACY) : M(e, w.AE.LEGACY_GAME);
+                                      e && !D
+                                          ? M(e, w.OverlayToggledClientSettingType.LEGACY)
+                                          : M(e, w.OverlayToggledClientSettingType.LEGACY_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: ep.emptySpacer }),
@@ -732,7 +749,8 @@ function eB() {
             var t, r;
             b.Z.setEnabled(e, a);
             let i = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.AE.LEGACY, i), !e && n && (0, B.l)(w.AE.LEGACY, i);
+            (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, i),
+                !e && n && (0, B.l)(w.OverlayToggledClientSettingType.LEGACY, i);
         },
         u = (e, t, n) => {
             let { enabledOOP: r } = n;
@@ -794,7 +812,7 @@ function eB() {
                               eG,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.AE.LEGACY_GAME,
+                                  clientSettingType: w.OverlayToggledClientSettingType.LEGACY_GAME,
                                   supportDisabled: l,
                                   gameApplication: s[t],
                                   getEnabledFromStatus: (e) => {
@@ -822,7 +840,8 @@ function eZ() {
             let i = !e && n;
             b.Z.setEnabled(a, e);
             let o = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.AE.OOP, o), i && (0, B.l)(w.AE.OOP, o);
+            (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, o),
+                i && (0, B.l)(w.OverlayToggledClientSettingType.OOP, o);
         },
         u = (e, t, n) => {
             let { enabledLegacy: r } = n;
@@ -880,7 +899,7 @@ function eZ() {
                               eG,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.AE.OOP_GAME,
+                                  clientSettingType: w.OverlayToggledClientSettingType.OOP_GAME,
                                   gameApplication: l[t],
                                   supportDisabled: o,
                                   getEnabledFromStatus: (e) => {
@@ -1084,7 +1103,7 @@ function eW(e) {
     };
 }
 function eK() {
-    return (0, K.kt)({
+    return (0, K.createChannelRecord)({
         id: "123",
         name: "Test Channel",
         type: ec.d4z.GUILD_VOICE,
@@ -1419,7 +1438,7 @@ function eQ(e) {
                           (0, r.jsx)("div", { className: ep.settingsDivider }),
                       ],
                   }),
-                  (0, r.jsxs)(h.hjN, {
+                  (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(eX, {
                               runningGame: i,

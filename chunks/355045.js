@@ -133,7 +133,7 @@ let T = function (e) {
                             }),
                         }),
                     }),
-                    E.ZP.hasFreeBoosts(S, N) || E.ZP.isPremium(S, O.p9.TIER_2)
+                    E.ZP.hasFreeBoosts(S, N) || E.ZP.isPremium(S, O.PremiumTypes.TIER_2)
                         ? (0, r.jsxs)(c.zx, {
                               "data-migration-pending": !0,
                               className: o()(I.guildBoostCta, I.guildBoostCtaSecondary),

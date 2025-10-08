@@ -82,8 +82,8 @@ let _ = (e) => {
                 },
                 5: {
                     label: (0, r.jsx)(_, { text: d.intl.string(d.t.ufhQCw) }),
-                    column1: (0, r.jsx)(p, { text: (0, o.v9)(c.p9.TIER_0) }),
-                    column2: (0, r.jsx)(p, { text: (0, o.v9)(c.p9.TIER_2) }),
+                    column1: (0, r.jsx)(p, { text: (0, o.v9)(c.PremiumTypes.TIER_0) }),
+                    column2: (0, r.jsx)(p, { text: (0, o.v9)(c.PremiumTypes.TIER_2) }),
                 },
                 6: {
                     label: (0, r.jsx)(_, { text: d.intl.string(d.t.VwxlMz) }),

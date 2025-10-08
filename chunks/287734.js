@@ -49,7 +49,7 @@ let g = {
         d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, h.h)(e, o, t, n, r));
     },
     disconnect() {
-        let e = o.Z.getRemoteSessionId();
+        let e = o.default.getRemoteSessionId();
         if ((null != e && a._(e), (0, c.ur)())) this.selectVoiceChannel(null);
         else {
             let e = u.Z.getChannel(f.Z.getChannelId()),

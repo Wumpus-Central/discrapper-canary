@@ -34,7 +34,7 @@ var i = n(120356),
     P = n(474936),
     w = n(981631),
     D = n(388032),
-    L = n(965406);
+    L = n(587277);
 function x(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function x(e, t, n) {
         e
     );
 }
-function j(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function j(e) {
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function k(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -223,11 +223,11 @@ function H() {
 let Y = function (e) {
     var t;
     let { subscription: i, renewalInvoicePreview: o, paymentSource: _, busy: C, analyticsLocation: x } = e,
-        M = "subscription_header",
+        j = "subscription_header",
         { analyticsLocations: H } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
         { fractionalState: Y } = (0, f.Z)({ forceFetch: !1 }),
         W = Y === P.a$.FP_SUB_PAUSED,
-        { enabled: K } = (0, S.ZP)({ location: M });
+        { enabled: K } = (0, S.ZP)({ location: j });
     (P.pj.has(i.planId) && w.JwP.ALL_PAUSEABLE.has(i.status) && !W) || (K = !1);
     let z = (0, A.Ng)(),
         q = null == z || null == (t = z.discount) ? void 0 : t.amount,
@@ -250,12 +250,12 @@ let Y = function (e) {
                     n.e("17938"),
                     n.e("69432"),
                     n.e("26526"),
-                    n.e("46573"),
+                    n.e("60088"),
                 ]).then(n.bind(n, 48813));
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        k(j({}, n), {
+                        k(M({}, n), {
                             premiumSubscription: i,
                             analyticsLocation: x,
                             analyticsLocations: H,
@@ -375,7 +375,7 @@ let Y = function (e) {
                             children: (t) =>
                                 (0, r.jsx)(
                                     N.Z,
-                                    k(j({}, t), {
+                                    k(M({}, t), {
                                         className: a()(L.toolsButton, L.premiumSettingsPushButton),
                                         disabled: e,
                                         onClick: () => {
@@ -489,9 +489,9 @@ let Y = function (e) {
     let eu = y.ZP.getStatusFromInvoice(i, o),
         ed = y.ZP.getPremiumType(ec),
         ef = {
-            [L.tier0]: ed === P.p9.TIER_0,
-            [L.tier1]: ed === P.p9.TIER_1,
-            [L.tier2]: ed === P.p9.TIER_2,
+            [L.tier0]: ed === P.PremiumTypes.TIER_0,
+            [L.tier1]: ed === P.PremiumTypes.TIER_1,
+            [L.tier2]: ed === P.PremiumTypes.TIER_2,
             [L.canceled]: eu === w.O0b.CANCELED,
             [L.pausePending]: eu === w.O0b.PAUSE_PENDING,
             [L.paused]: eu === w.O0b.PAUSED && !W,
@@ -499,7 +499,7 @@ let Y = function (e) {
         },
         e_ = null;
     switch (ed) {
-        case P.p9.TIER_0:
+        case P.PremiumTypes.TIER_0:
             e_ = (0, r.jsxs)("div", {
                 className: L.wordMark,
                 children: [
@@ -511,10 +511,10 @@ let Y = function (e) {
                 ],
             });
             break;
-        case P.p9.TIER_1:
+        case P.PremiumTypes.TIER_1:
             e_ = (0, r.jsx)(V, {});
             break;
-        case P.p9.TIER_2:
+        case P.PremiumTypes.TIER_2:
             e_ = (0, r.jsx)(g.Z, {
                 className: L.planName,
                 "aria-label": D.intl.string(D.t.lpNrPj),

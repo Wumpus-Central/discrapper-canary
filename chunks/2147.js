@@ -117,7 +117,7 @@ function ep(e, t) {
 let em = (0, E.hQ)(),
     ef = (0, E.hQ)(),
     eb = (0, E.hQ)(),
-    ex = (0, V.kt)({
+    ex = (0, V.createChannelRecord)({
         id: "1",
         type: el.d4z.DM,
     }),

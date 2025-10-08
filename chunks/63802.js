@@ -12,7 +12,7 @@ var i = n(120356),
     s = n(410030),
     l = n(325767),
     c = n(474936),
-    u = n(961850);
+    u = n(317691);
 function d(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ function m(e, t) {
 let g = "premium_new_tier_2_gradient",
     E = "premium_old_tier_2_gradient";
 function b(e) {
-    let { tier: t = c.p9.TIER_2 } = e,
+    let { tier: t = c.PremiumTypes.TIER_2 } = e,
         n = (0, s.ZP)(),
         i = (0, o.ap)(n);
     return (0, r.jsxs)(r.Fragment, {
@@ -99,8 +99,8 @@ function b(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: a()(u.rimGlowVertical, {
-                                [u.rimGlowVerticalTier0]: t === c.p9.TIER_0,
-                                [u.rimGlowVerticalTier2]: t === c.p9.TIER_2,
+                                [u.rimGlowVerticalTier0]: t === c.PremiumTypes.TIER_0,
+                                [u.rimGlowVerticalTier2]: t === c.PremiumTypes.TIER_2,
                             }),
                         }),
                         (0, r.jsx)(y, { foreground: u.buttonSparkleStar1 }),

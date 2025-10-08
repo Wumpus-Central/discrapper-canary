@@ -773,9 +773,9 @@ let eL = i.memo(function () {
         case em.kVF.PREMIUM_UNCANCEL:
             return (0, r.jsxs)(c.qXd, {
                 color:
-                    ex === eg.p9.TIER_1
+                    ex === eg.PremiumTypes.TIER_1
                         ? c.DM8.PREMIUM_TIER_1
-                        : ex === eg.p9.TIER_0
+                        : ex === eg.PremiumTypes.TIER_0
                           ? c.DM8.PREMIUM_TIER_0
                           : c.DM8.PREMIUM_TIER_2,
                 children: [
@@ -795,9 +795,9 @@ let eL = i.memo(function () {
                         color: "currentColor",
                         className: eO.premiumIcon,
                     }),
-                    ex === eg.p9.TIER_1
+                    ex === eg.PremiumTypes.TIER_1
                         ? ey.intl.formatToPlainString(ey.t.fXv4ws, { daysLeft: I.metadata.daysLeft })
-                        : ex === eg.p9.TIER_0
+                        : ex === eg.PremiumTypes.TIER_0
                           ? ey.intl.formatToPlainString(ey.t.ZOHZMj, { daysLeft: I.metadata.daysLeft })
                           : ey.intl.formatToPlainString(ey.t.outyHh, { daysLeft: I.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -828,9 +828,9 @@ let eL = i.memo(function () {
                                 });
                         },
                         children:
-                            ex === eg.p9.TIER_1
+                            ex === eg.PremiumTypes.TIER_1
                                 ? ey.intl.string(ey.t.BkbUPD)
-                                : ex === eg.p9.TIER_0
+                                : ex === eg.PremiumTypes.TIER_0
                                   ? ey.intl.string(ey.t.Px978f)
                                   : ey.intl.string(ey.t.LW5tCA),
                     }),
@@ -935,9 +935,9 @@ let eL = i.memo(function () {
                             );
                         },
                     }),
-                    ex === eg.p9.TIER_1
+                    ex === eg.PremiumTypes.TIER_1
                         ? ey.intl.formatToPlainString(ey.t.b6QUvb, { daysLeft: I.metadata.daysLeft })
-                        : ex === eg.p9.TIER_0
+                        : ex === eg.PremiumTypes.TIER_0
                           ? ey.intl.formatToPlainString(ey.t["tURZ/P"], { daysLeft: I.metadata.daysLeft })
                           : ey.intl.formatToPlainString(ey.t.AyC74O, { daysLeft: I.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -952,9 +952,9 @@ let eL = i.memo(function () {
                                 (0, en.openUserSettings)(et.n.SUBSCRIPTIONS_PANEL, { section: em.oAB.SUBSCRIPTIONS });
                         },
                         children:
-                            ex === eg.p9.TIER_1
+                            ex === eg.PremiumTypes.TIER_1
                                 ? ey.intl.string(ey.t.lboF5O)
-                                : ex === eg.p9.TIER_0
+                                : ex === eg.PremiumTypes.TIER_0
                                   ? ey.intl.string(ey.t["4UPwOj"])
                                   : ey.intl.string(ey.t["P/VvGR"]),
                     }),

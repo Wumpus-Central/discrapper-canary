@@ -73,8 +73,8 @@ let c = () => [
             {
                 id: 4,
                 label: l.intl.string(l.t.ufhQCw),
-                tier0ColumnData: { text: (0, i.v9)(o.p9.TIER_0) },
-                tier2ColumnData: { text: (0, i.v9)(o.p9.TIER_2) },
+                tier0ColumnData: { text: (0, i.v9)(o.PremiumTypes.TIER_0) },
+                tier2ColumnData: { text: (0, i.v9)(o.PremiumTypes.TIER_2) },
             },
             {
                 id: 11,

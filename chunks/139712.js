@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(124165),
     c = n(765305),
     u = n(388032),
-    d = n(994397);
+    d = n(450644);
 function f(e, t, n) {
     return (
         t in e
@@ -101,11 +101,13 @@ function E(e) {
             cancelText: u.intl.string(u.t["ETE/oK"]),
             onConfirm: I,
             confirmButtonColor: a.zx.Colors.BRAND,
-            children: (0, r.jsx)(a.Gu, {
+            children: (0, r.jsx)("div", {
                 className: d.responseOptions,
-                value: E,
-                options: (0, l.pF)(),
-                onChange: (e) => b(e.value),
+                children: (0, r.jsx)(o.FXm, {
+                    value: E,
+                    options: (0, l.pF)(),
+                    onChange: (e) => b(e),
+                }),
             }),
         }),
     );

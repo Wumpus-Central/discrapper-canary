@@ -19,7 +19,9 @@ let l = [
         {
             Icon: r.dz2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_2, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.dz2,
@@ -44,7 +46,9 @@ let l = [
         {
             Icon: r.rG2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_2, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.EO4,
@@ -63,7 +67,9 @@ let l = [
         {
             Icon: r.rG2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_2, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.EO4,
@@ -86,7 +92,9 @@ let l = [
         {
             Icon: r.rG2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_2, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.EO4,
@@ -117,7 +125,9 @@ let l = [
         {
             Icon: r.dz2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_0, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_0, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.dz2,
@@ -128,7 +138,9 @@ let l = [
         {
             Icon: r.rG2,
             getText: () =>
-                s.intl.formatToPlainString(s.t.p8QVLS, { maxUploadPremium: (0, a.v9)(o.p9.TIER_0, { useSpace: !1 }) }),
+                s.intl.formatToPlainString(s.t.p8QVLS, {
+                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_0, { useSpace: !1 }),
+                }),
         },
         {
             Icon: r.EO4,

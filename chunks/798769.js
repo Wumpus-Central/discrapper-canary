@@ -32,7 +32,7 @@ function h(e) {
         C = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
-                    return m === f.p9.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t["7YWj6+"]);
+                    return m === f.PremiumTypes.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t["7YWj6+"]);
                 case s.h8.ADD_PAYMENT_STEPS:
                     return _.intl.string(_.t.vHqbJC);
                 case s.h8.REVIEW:
@@ -77,14 +77,14 @@ function h(e) {
                     shouldShowPrice: !0,
                     upgradeToPremiumType: m,
                     renderAnimation: () =>
-                        m === f.p9.TIER_0
+                        m === f.PremiumTypes.TIER_0
                             ? (0, r.jsx)(d.zC, {
                                   className: p.headerAnimation,
                                   currentStep: t,
                                   purchaseState: h,
                                   pause: A,
                               })
-                            : m === f.p9.TIER_1
+                            : m === f.PremiumTypes.TIER_1
                               ? (0, r.jsx)(d.tK, {
                                     className: p.headerAnimation,
                                     currentStep: t,

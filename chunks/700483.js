@@ -16,10 +16,10 @@ var r = n(951288),
     b = n(74299),
     y = n(924301),
     _ = n(459502),
-    O = n(856691),
-    j = n(728285),
-    v = n(357156),
-    x = n(923973),
+    j = n(856691),
+    O = n(728285),
+    x = n(357156),
+    v = n(923973),
     C = n(829750),
     I = n(189771),
     E = n(294629),
@@ -53,7 +53,7 @@ var r = n(951288),
     ee = n(981631),
     et = n(354459),
     en = n(388032),
-    er = n(769265);
+    er = n(160103);
 function ei(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, c.ZP)(),
@@ -106,15 +106,15 @@ function ea(e) {
 }
 function es(e) {
     let { channel: t, onSelect: n } = e,
-        d = (0, j.bp)(),
-        { canManageGuildEvent: u } = (0, v.XJ)(t),
+        d = (0, O.bp)(),
+        { canManageGuildEvent: u } = (0, x.XJ)(t),
         p = (0, l.e7)([V.Z], () => V.Z.getStageInstanceByChannel(t.id), [t.id]),
         h = (0, l.e7)([y.ZP], () => y.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
         { suppress: m } = (0, E.Z)(t),
         b = D.default.getId(),
         [_] = (0, $.Z)(t),
-        O = z.ZP.isModerator(b, t.id),
-        x = (0, F.B)(t.id),
+        j = z.ZP.isModerator(b, t.id),
+        v = (0, F.B)(t.id),
         C = u(h),
         { parentAnalyticsLocation: I } = (0, c.ZP)(),
         S = i.useRef(null),
@@ -127,7 +127,7 @@ function es(e) {
                 channel: t,
                 appContext: d,
             });
-    return (O || C) && null != p
+    return (j || C) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: S,
               renderPopout: (e) => {
@@ -165,7 +165,7 @@ function es(e) {
                   });
               },
           })
-        : (m && !x) || _
+        : (m && !v) || _
           ? (0, r.jsx)(R.Z, {
                 label: en.intl.string(en.t.SMKyio),
                 onClick: Z,
@@ -220,9 +220,9 @@ let ed = i.memo(function (e) {
         { parentAnalyticsLocation: n } = (0, c.ZP)(),
         { suppress: s, selfMute: o, mute: f } = (0, E.Z)(t),
         y = (0, F.B)(t.id),
-        _ = (0, l.e7)([m.Z], () => null != m.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: O, enabled: j } = (0, x.Z)(),
-        v = (0, I.Z)(t),
+        _ = (0, l.e7)([m.default], () => null != m.default.getAwaitingRemoteSessionInfo()),
+        { cameraUnavailable: j, enabled: O } = (0, v.Z)(),
+        x = (0, I.Z)(t),
         { limit: N, reachedLimit: R } = (0, C.Z)(t),
         D = (0, l.e7)([U.default], () => U.default.getCurrentUser()),
         M = (0, l.e7)([L.Z], () => (0, b.Z)(L.Z)),
@@ -257,9 +257,9 @@ let ed = i.memo(function (e) {
             return (0, r.jsx)(A.C, {
                 ref: q,
                 centerButton: !0,
-                hasPermission: v,
-                enabled: j,
-                cameraUnavailable: O,
+                hasPermission: x,
+                enabled: O,
+                cameraUnavailable: j,
                 onChange: S.r,
                 onCameraUnavailable: T.Z,
                 channelLimitReached: R,
@@ -327,7 +327,7 @@ let ed = i.memo(function (e) {
                               currentUser: D,
                               exitFullScreen: () => null,
                               canGoLive: M,
-                              hasPermission: v,
+                              hasPermission: x,
                               disabled: V,
                           })
                         : null,
@@ -375,7 +375,7 @@ let ep = i.memo(function (e) {
                             u ? (0, r.jsx)(_.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: er.separator }),
                             u && s
-                                ? (0, r.jsx)(O.Z, {
+                                ? (0, r.jsx)(j.Z, {
                                       highlight: !0,
                                       channel: t,
                                   })

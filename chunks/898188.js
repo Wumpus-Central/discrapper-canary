@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(216701),
     O = n(981631),
     v = n(388032),
-    I = n(377421);
+    I = n(236426);
 let T = 60;
 function S(e) {
     let { action: t } = e,
@@ -56,7 +56,7 @@ function C(e) {
         { channelAction: h, completed: b } = (0, E.P3)(f, _),
         y = (0, E.K_)(f, null == h ? void 0 : h.channelId),
         O = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        C = (null == h ? void 0 : h.actionType) === g.oi.VIEW,
+        C = (null == h ? void 0 : h.actionType) === g.NewMemberActionTypes.VIEW,
         N = (0, c.dQu)(c.TVs.colors.WHITE),
         [R, P] = i.useState(!1),
         [w] = i.useState(new s.Z.Value(0)),
@@ -86,7 +86,7 @@ function C(e) {
                     delay: 400,
                 }).start();
         }, [b, D, R, O]);
-    let x = i.useCallback(() => {
+    let L = i.useCallback(() => {
         null != y && (0, m.gp)(f, y.channelId);
     }, [f, y]);
     return null == h || (C && !R)
@@ -104,7 +104,7 @@ function C(e) {
                             },
                             children: (0, r.jsxs)(c.P3F, {
                                 className: o()(I.banner, I.clickable),
-                                onClick: x,
+                                onClick: L,
                                 children: [
                                     (0, r.jsx)(A, {
                                         channelId: y.channelId,

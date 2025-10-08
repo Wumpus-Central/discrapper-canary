@@ -154,17 +154,17 @@ function w(e, t, n, r) {
 function D() {
     P();
 }
-let x = i().debounce(() => {
+let L = i().debounce(() => {
     U();
 }, T);
-function L(e, t, n) {
-    (0, h.RF)(e, t, { volume: n }), x();
-}
-function j(e, t, n) {
-    (0, h.RF)(e, t, { muted: n }), x.cancel(), U();
+function x(e, t, n) {
+    (0, h.RF)(e, t, { volume: n }), L();
 }
 function M(e, t, n) {
-    (0, h.RF)(e, t, { soundboardMuted: n }), x.cancel(), U();
+    (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
+}
+function j(e, t, n) {
+    (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
 }
 let k = i().debounce(c.On, 500, { maxWait: 500 });
 function U() {
@@ -188,21 +188,21 @@ function U() {
 function G(e) {
     let { context: t, userId: n, volume: r } = e;
     if (n === f.default.getId()) return;
-    let i = u.Z.getRemoteSessionId();
+    let i = u.default.getRemoteSessionId();
     null != i &&
         k(i, n, t, {
             muted: _.Z.isLocalMute(n, t),
             volume: r,
         }),
-        L(t, n, r);
+        x(t, n, r);
 }
 function B(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && j(t, n, _.Z.isLocalMute(n, t));
+    n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
 }
 function Z(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && M(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && j(t, n, d.Z.isLocalSoundboardMuted(n));
 }
 function F(e) {
     let {} = e;

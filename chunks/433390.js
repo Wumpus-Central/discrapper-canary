@@ -16,7 +16,7 @@ function f(e) {
         g = null != f ? f : d.intl.string(d.t["2pG5GR"]),
         E = null != h ? (0, s.Af)(h) : null,
         b = void 0 !== m ? m : null != E ? (0, s.Rd)(E.planId) : null == p ? void 0 : p.premiumType,
-        y = t === c.Si.TIER_2 && null != b && [c.p9.TIER_0, c.p9.TIER_1].includes(b);
+        y = t === c.Si.TIER_2 && null != b && [c.PremiumTypes.TIER_0, c.PremiumTypes.TIER_1].includes(b);
     y && (g = d.intl.string(d.t.IJI7ys));
     let O = null != h && (0, s.m3)(h);
     if (!((null != h && h.status !== u.O0b.ACCOUNT_HOLD && !(0, i.Q0)(h.planId) && !y && void 0 === m) || O))
@@ -56,7 +56,7 @@ function _(e) {
             ? ((t = d.intl.string(d.t["2pG5GR"])), (n = d.intl.string(d.t.jXaaRk)))
             : null != l && null != i && l === i
               ? ((t = d.intl.string(d.t.ymSxh4)), (n = d.intl.string(d.t.jXaaRk)))
-              : null == l && null != i && i === c.p9.TIER_2 && (n = d.intl.string(d.t.jXaaRk));
+              : null == l && null != i && i === c.PremiumTypes.TIER_2 && (n = d.intl.string(d.t.jXaaRk));
     return {
         disabledButtonText: t,
         disabledButtonTooltipText: n,

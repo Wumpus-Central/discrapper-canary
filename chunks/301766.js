@@ -58,11 +58,11 @@ class o extends r.Z {
         switch (this.skuId) {
             case i.Si.LEGACY:
             case i.Si.TIER_2:
-                return i.p9.TIER_2;
+                return i.PremiumTypes.TIER_2;
             case i.Si.TIER_1:
-                return i.p9.TIER_1;
+                return i.PremiumTypes.TIER_1;
             case i.Si.TIER_0:
-                return i.p9.TIER_0;
+                return i.PremiumTypes.TIER_0;
             default:
                 return null;
         }

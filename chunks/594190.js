@@ -616,8 +616,8 @@ function e$(e) {
         !__OVERLAY__ && null != (null != t.id ? T.Z.getDetectableGame(t.id) : null))
     ) {
         var o, s;
-        i && (0, E.ou)(n, E.AE.LEGACY_GAME, null != (o = t.id) ? o : null),
-            a && null != r && (0, E.ou)(r, E.AE.OOP_GAME, null != (s = t.id) ? s : null);
+        i && (0, E.ou)(n, E.OverlayToggledClientSettingType.LEGACY_GAME, null != (o = t.id) ? o : null),
+            a && null != r && (0, E.ou)(r, E.OverlayToggledClientSettingType.OOP_GAME, null != (s = t.id) ? s : null);
     }
 }
 function e0(e) {

@@ -120,7 +120,7 @@ function G(e) {
             }),
             (0, r.jsx)(N.Z, {
                 isGift: l,
-                premiumTier: R.p9.TIER_0,
+                premiumTier: R.PremiumTypes.TIER_0,
                 offerType: R.C.PREMIUM_TRIAL,
                 offerTierMatchesCard: b === R.Si.TIER_0,
                 showYearlyPrice: i,
@@ -198,7 +198,7 @@ function B(e) {
             }),
             (0, r.jsx)(N.Z, {
                 isGift: f,
-                premiumTier: R.p9.TIER_2,
+                premiumTier: R.PremiumTypes.TIER_2,
                 offerType: F,
                 offerTierMatchesCard: U === R.Si.TIER_2 || (0, O.Wp)(B, R.Si.TIER_2),
                 showYearlyPrice: i,

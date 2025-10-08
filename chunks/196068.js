@@ -21,7 +21,7 @@ var r = n(951288),
 let v = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, c.a0)(),
-        v = (0, a.e7)([_.default], () => h.ZP.isPremiumExactly(_.default.getCurrentUser(), b.p9.TIER_2)),
+        v = (0, a.e7)([_.default], () => h.ZP.isPremiumExactly(_.default.getCurrentUser(), b.PremiumTypes.TIER_2)),
         { enabled: I } = l.g.useExperiment(
             { location: "OutboundPromotionNotice" },
             {

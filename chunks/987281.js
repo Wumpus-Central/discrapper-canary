@@ -17,10 +17,10 @@ var l = n(442837),
     j = n(607783),
     O = n(786138),
     m = n(435064),
-    S = n(779618),
-    Z = n(39604),
-    v = n(258609),
-    I = n(441167),
+    v = n(779618),
+    S = n(39604),
+    I = n(258609),
+    Z = n(441167),
     y = n(700994),
     w = n(76021),
     x = n(199902),
@@ -54,10 +54,10 @@ function U(e) {
         }),
         G = (function (e) {
             let t = T(e),
-                n = (0, S.Z)(E.Z),
+                n = (0, v.Z)(E.Z),
                 o = m.Z.getSettings().clipsEnabled,
                 a = e.ownerId === C.default.getId(),
-                { enableViewerClipping: c, ignoreSenderPreference: s } = I.Z.useExperiment(
+                { enableViewerClipping: c, ignoreSenderPreference: s } = Z.Z.useExperiment(
                     { location: "StreamContextMenu" },
                     { autoTrackExposure: !1 },
                 ),
@@ -68,7 +68,7 @@ function U(e) {
                       id: "clip-stream",
                       disabled: !o || !(a || d) || u,
                       label: V.intl.string(V.t.U4URzM),
-                      action: () => (a ? (0, Z.C1)() : (0, Z.C1)((0, A.V9)(e))),
+                      action: () => (a ? (0, S.C1)() : (0, S.C1)((0, A.V9)(e))),
                   })
                 : null;
         })(t),
@@ -80,7 +80,7 @@ function U(e) {
         })(t),
         L = (function (e, t) {
             let n,
-                o = (0, l.e7)([v.Z], () => null != v.Z.getRemoteSessionId()),
+                o = (0, l.e7)([I.default], () => null != I.default.getRemoteSessionId()),
                 a = (0, l.e7)([P.Z], () => P.Z.getChannel(e.channelId), [e.channelId]),
                 u = T(e),
                 d = k.default.getCurrentUser(),

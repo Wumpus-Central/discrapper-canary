@@ -43,7 +43,7 @@ function p(e) {
         m = !1,
         g = null,
         E = a.default.getCurrentUser(),
-        b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.p9.TIER_0);
+        b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.PremiumTypes.TIER_0);
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e("92446"), n.e("5645")]).then(n.bind(n, 409858));
@@ -78,7 +78,7 @@ function p(e) {
                     !b &&
                     g.isSubscription &&
                     (null == g || null == (e = g.subscriptionPlan) ? void 0 : e.premiumSubscriptionType) ===
-                        u.p9.TIER_2 &&
+                        u.PremiumTypes.TIER_2 &&
                     s.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },

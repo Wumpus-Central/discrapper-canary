@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(639119),
     m = n(474936),
     g = n(388032),
-    E = n(716619);
+    E = n(911419);
 function b(e, t) {
     let n = f.ZP.getDefaultPrice(e),
         { intervalType: r } = f.ZP.getInterval(e),
@@ -63,8 +63,8 @@ let y = (e) => {
                 showTrialBadge: S = !1,
                 showDiscountBadge: A = !1,
             } = e,
-            C = I === m.p9.TIER_2;
-        n = I === m.p9.TIER_0 ? c.Z : I === m.p9.TIER_1 ? u.Z : l.Z;
+            C = I === m.PremiumTypes.TIER_2;
+        n = I === m.PremiumTypes.TIER_0 ? c.Z : I === m.PremiumTypes.TIER_1 ? u.Z : l.Z;
         let N = (0, p.Ng)(),
             R = null == N || null == (t = N.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
@@ -89,7 +89,7 @@ let y = (e) => {
                                 (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !C }) }),
                                 (S || A) &&
                                     (0, r.jsx)(y, {
-                                        isTier0: I === m.p9.TIER_0,
+                                        isTier0: I === m.PremiumTypes.TIER_0,
                                         discountAmount: A ? R : void 0,
                                     }),
                             ],

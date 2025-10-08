@@ -25,5 +25,4 @@ e.exports = {
     nativePickerTypes: "nativePickerTypes_a2de16",
     nativeSourceTypeButton: "nativeSourceTypeButton_a2de16",
     nativeSourceTypeButtonInner: "nativeSourceTypeButtonInner_a2de16",
-    hideRadioCheckbox: "hideRadioCheckbox_a2de16",
 };

@@ -152,7 +152,7 @@ let C = (e) => {
     },
     P = (e) => {
         let { premiumType: t, priceString: n } = e,
-            i = t === E.p9.TIER_0 ? b.intl.string(b.t.tUbSDA) : b.intl.string(b.t.Ipxkoq);
+            i = t === E.PremiumTypes.TIER_0 ? b.intl.string(b.t.tUbSDA) : b.intl.string(b.t.Ipxkoq);
         return (0, r.jsxs)("div", {
             className: y.planTitleWithPrice,
             children: [
@@ -192,7 +192,7 @@ let C = (e) => {
                         scope: "col",
                         className: y.cell,
                         children: (0, r.jsx)(P, {
-                            premiumType: E.p9.TIER_0,
+                            premiumType: E.PremiumTypes.TIER_0,
                             priceString: (0, f.T4)(t.amount, t.currency),
                         }),
                     }),
@@ -200,7 +200,7 @@ let C = (e) => {
                         scope: "col",
                         className: y.cell,
                         children: (0, r.jsx)(P, {
-                            premiumType: E.p9.TIER_2,
+                            premiumType: E.PremiumTypes.TIER_2,
                             priceString: o,
                         }),
                     }),
@@ -211,7 +211,7 @@ let C = (e) => {
     D = (e) => {
         var t;
         let n,
-            { className: a, hidePill: s = !1, selectedPlanTier: f = E.p9.TIER_2 } = e,
+            { className: a, hidePill: s = !1, selectedPlanTier: f = E.PremiumTypes.TIER_2 } = e,
             { analyticsLocations: I } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             S = (0, p.N)(),
             C = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
@@ -230,7 +230,7 @@ let C = (e) => {
                 text: e,
             });
         }
-        let k = C === E.Si.TIER_0 || f === E.p9.TIER_0;
+        let k = C === E.Si.TIER_0 || f === E.PremiumTypes.TIER_0;
         return (0, r.jsx)(u.Gt, {
             value: I,
             children: (0, r.jsxs)("div", {

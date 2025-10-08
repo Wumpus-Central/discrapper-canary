@@ -117,7 +117,10 @@ class I extends a.Z {
                 if (null == t || null == n) return;
                 let { memberActions: r, completedActions: i } = await this._getOrLoadOnboardingMemberActions(t),
                     a = null == r ? void 0 : r.find((e) => e.channelId === n);
-                (null == i ? void 0 : i[n]) !== !0 && null != a && a.actionType === p.oi.VIEW && (0, f.Oh)(t, n);
+                (null == i ? void 0 : i[n]) !== !0 &&
+                    null != a &&
+                    a.actionType === p.NewMemberActionTypes.VIEW &&
+                    (0, f.Oh)(t, n);
             }),
             b(this, "handleMessageSend", (e) => {
                 var t;
@@ -141,7 +144,10 @@ class I extends a.Z {
             b(this, "_completeChatAction", async (e, t) => {
                 let { memberActions: n, completedActions: r } = await this._getOrLoadOnboardingMemberActions(e),
                     i = null == n ? void 0 : n.find((e) => e.channelId === t);
-                (null == r ? void 0 : r[t]) !== !0 && null != i && i.actionType === p.oi.CHAT && (0, f.Oh)(e, t);
+                (null == r ? void 0 : r[t]) !== !0 &&
+                    null != i &&
+                    i.actionType === p.NewMemberActionTypes.CHAT &&
+                    (0, f.Oh)(e, t);
             }),
             b(this, "_getOrLoadOnboardingMemberActions", async (e) => {
                 let t = (0, m.s)(e),
