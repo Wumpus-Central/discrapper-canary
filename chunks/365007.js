@@ -1,11 +1,11 @@
 n.d(t, {
-    L$: () => _,
     Sr: () => p,
     WQ: () => f,
     cT: () => d,
     d$: () => c,
     ef: () => h,
     hL: () => u,
+    startRegisterWebAuthnCredential: () => _,
     us: () => l,
     vg: () => m,
 });
