@@ -6,8 +6,8 @@ var r = n(951288),
     a = n(481060),
     s = n(493773),
     c = n(243778),
-    u = n(82084),
-    d = n(218353),
+    u = n(886880),
+    d = n(82084),
     f = n(131051),
     m = n(663389),
     b = n(594174),
@@ -54,8 +54,8 @@ function _(e) {
             return l;
         })(e, ["target"]);
     let a = p.Z.useField("query"),
-        { node: c, directory: d } = (0, f.Z)(y.Z, a),
-        j = ((t = x.n.ACCOUNT_PANEL), null == d.entry(n) ? t : n),
+        { node: c, directory: u } = (0, f.Z)(y.Z, a),
+        j = ((t = x.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
         g = l.useRef(null);
     return ((0, s.ZP)(() => {
         let e = m.Z.getSection();
@@ -68,7 +68,7 @@ function _(e) {
     }),
     (0, o.e7)([b.default], () => null != b.default.getCurrentUser()))
         ? (0, r.jsx)(
-              u.Z,
+              d.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -96,7 +96,7 @@ function _(e) {
               })(
                   {
                       root: c,
-                      directory: d,
+                      directory: u,
                       sidebarHeader: S,
                       emptyState: P,
                       sidebarFooter: v.Z,
@@ -131,7 +131,7 @@ function S() {
             }),
             [],
         ),
-        u = l.useCallback((e) => {
+        d = l.useCallback((e) => {
             p.Z.setState({ query: e });
         }, []),
         f = l.useCallback(() => {
@@ -144,14 +144,14 @@ function S() {
                 (0, r.jsx)(a.E1j, {
                     size: "md",
                     query: e,
-                    onChange: u,
+                    onChange: d,
                     onClear: f,
                 }),
                 (0, r.jsx)("div", {
                     className: O.popoverAnchor,
                     ref: t,
                 }),
-                (0, r.jsx)(d.Z, {
+                (0, r.jsx)(u.Z, {
                     dismissibleContentType: i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
                     targetElementRef: t,
                     visibleContent: n,
