@@ -1,18 +1,18 @@
-r.d(t, {
+n.d(t, {
     al: () => b,
-    ck: () => R,
+    ck: () => Z,
 }),
-    r(388685),
-    r(539854),
-    r(784620),
-    r(973216);
-var n = r(951288),
-    a = r(647438),
-    i = r(112456),
-    l = r.n(i),
-    o = r(226961),
-    s = r(706619),
-    c = r(206314);
+    n(388685),
+    n(539854),
+    n(784620),
+    n(973216);
+var r = n(951288),
+    a = n(647438),
+    i = n(112456),
+    l = n.n(i),
+    o = n(226961),
+    s = n(706619),
+    c = n(206314);
 let d = {
     accelerateRate: "Accelerate Rate",
     audioDetected: "Audio Detected",
@@ -32,8 +32,8 @@ let d = {
     capturedFramesStdev: "Captured Frames Standard Deviation (ms)",
     codec: "Codec",
     cpuLimitedResolution: "CPU Limited Resolution",
-    currentSampleRate: "Current Sample Rate",
     currentDelay: "Current Delay",
+    currentSampleRate: "Current Sample Rate",
     decoderImplementationName: "Decoder",
     decodingCNG: "Decoding CNG",
     decodingMutedOutput: "Decoding Muted Output",
@@ -163,7 +163,7 @@ function v(e) {
     let { last: t } = e;
     return "".concat(t, " ms");
 }
-function D(e) {
+function E(e) {
     return e.toFixed(2);
 }
 let b = {
@@ -187,6 +187,7 @@ let b = {
         noiseCancellerFrames: !0,
         noiseCancellerProcessTime: !0,
         sinkWantAsInt: !0,
+        sinkWantLocalAsInt: !0,
         sumOfSquaredFramesDurations: !0,
         timestamp: !0,
         type: !0,
@@ -195,7 +196,7 @@ let b = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0,
     },
-    C = {
+    D = {
         accelerateRate: f,
         audioDetected: y,
         audioLevel: function (e) {
@@ -211,10 +212,10 @@ let b = {
         bytesReceived: m,
         bytesSent: m,
         codec: function (e) {
-            let { id: t, name: r } = e;
+            let { id: t, name: n } = e;
             return (
-                (r = null != (r = "" === r ? "unknown" : r) ? r : "unknown"),
-                "".concat(r[0].toUpperCase()).concat(r.slice(1), " (").concat(t, ")")
+                (n = null != (n = "" === n ? "unknown" : n) ? n : "unknown"),
+                "".concat(n[0].toUpperCase()).concat(n.slice(1), " (").concat(t, ")")
             );
         },
         cpuLimitedResolution: y,
@@ -228,7 +229,7 @@ let b = {
         encoderQualityPsnr: function (e) {
             return "".concat(Math.max(e, 0).toFixed(2), " dB");
         },
-        encoderQualityVmaf: D,
+        encoderQualityVmaf: E,
         encodeUsage: f,
         expandRate: f,
         filter: p,
@@ -248,8 +249,8 @@ let b = {
         relativeReceptionDelay: v,
         renderDelay: h,
         resolution: (e) => {
-            let { width: t, height: r } = e;
-            return "".concat(t, "x").concat(r);
+            let { width: t, height: n } = e;
+            return "".concat(t, "x").concat(n);
         },
         sampleRateMismatchPercent: f,
         secondaryDecodedRate: f,
@@ -258,19 +259,19 @@ let b = {
         },
         speechExpandRate: f,
         targetDelay: h,
-        videoEntropy: D,
+        videoEntropy: E,
         videohookBackend: function (e) {
             let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
             return e < t.length ? t[e] : "Unknown";
         },
     },
-    E = {
+    P = {
         audioLevel: function (e) {
             return Math.max(g(e), -100) + 100;
         },
     },
-    P = (e) => e,
-    j = (e) => {
+    j = (e) => e,
+    C = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -278,7 +279,7 @@ let b = {
                 time: Date.now(),
             }),
             t.length > 600 && t.shift(),
-            (0, n.jsx)(s.Z, {
+            (0, r.jsx)(s.Z, {
                 converter: e.converter,
                 dataPoints: t,
                 width: e.width,
@@ -286,22 +287,22 @@ let b = {
             })
         );
     };
-function R(e) {
-    var t, r, a;
+function Z(e) {
+    var t, n, a;
     let { label: i, value: l, section: u } = e,
-        m = null != (r = C[i]) ? r : P,
-        p = E[i],
+        m = null != (n = D[i]) ? n : j,
+        p = P[i],
         h =
             o.Pz[i] &&
             (Array.isArray(l) && l.length > 0 && "number" == typeof l[0].value
-                ? (0, n.jsx)(s.Z, {
+                ? (0, r.jsx)(s.Z, {
                       converter: p,
                       dataPoints: l,
                       width: 300,
                       height: 100,
                   })
                 : "number" == typeof l
-                  ? (0, n.jsx)(j, {
+                  ? (0, r.jsx)(C, {
                         converter: p,
                         value: l,
                         width: 300,
@@ -309,7 +310,7 @@ function R(e) {
                     })
                   : void 0),
         f = Array.isArray(l) ? (null == (t = l.at(-1)) ? void 0 : t.value) : l;
-    return (0, n.jsx)(c.Z, {
+    return (0, r.jsx)(c.Z, {
         label: i,
         valueRendered: m(f),
         section: u,
