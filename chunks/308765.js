@@ -535,10 +535,6 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(703767).Z,
     },
-    HighFiveManager: {
-        actions: ["VOICE_CHANNEL_EFFECT_SEND", "HIGH_FIVE_COMPLETE"],
-        inlineRequire: () => n(294270).Z,
-    },
     NativeCrashManager: {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
         inlineRequire: () => n(902558).Z,
