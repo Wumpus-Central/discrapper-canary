@@ -71201,7 +71201,7 @@ html .progress__61462 {
     border-radius: 24px;
     height: 330px;
     margin-bottom: 24px;
-    width: 660px
+    width: 100%
 }
 
 .header__81281 {
@@ -72027,6 +72027,10 @@ html .progress__61462 {
     margin: 0 auto -90px;
     padding-bottom: 60px;
     position: relative
+}
+
+.settingsContainer__94da4 {
+    width: 100%
 }
 
 .settingsHeroNoBackground__94da4 {
