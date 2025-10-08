@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(467055);
+n.d(t, { Z: () => M }), n(388685), n(467055);
 var r,
     i = n(108131),
     a = n.n(i),
@@ -111,23 +111,24 @@ let O = [c.Cm.User],
     C = new Set(),
     N = new Set(),
     R = "apexTrackedExposures",
-    P = 1,
+    P = 2,
     w = 604800000,
     D = {},
-    x = {};
-function L(e) {
-    let t = x[e];
-    return null == t && ((t = a().v3(e)), (x[e] = t)), t;
+    L = {};
+function x(e) {
+    let t = L[e];
+    return null == t && ((t = a().v3(e)), (L[e] = t)), t;
 }
-class j extends (r = o.ZP.PersistedStore) {
+class M extends (r = o.ZP.PersistedStore) {
     loadStoredState(e, t) {
         for (let n in (null != e && 1 === e.version && ((T = e.clientOverrides), (v = e.evaluatedExperiments)),
         (S = {}),
         t)) {
-            let e = L(n);
+            let e = x(n),
+                r = t[n];
             S[n] = {
                 hashedName: e,
-                variantId: t[n],
+                variantId: r,
                 isOverride: !0,
             };
         }
@@ -154,11 +155,12 @@ class j extends (r = o.ZP.PersistedStore) {
                         evaluationId: null != t ? t : void 0,
                         assignments: {},
                     };
-                for (let [t, r, o, s] of ((i[e] = a), n))
+                for (let [t, r, o, s, l] of ((i[e] = a), n))
                     null != o || (o = 0),
                         (a.assignments[t] = {
                             hashedName: t,
                             variantId: r,
+                            trackedVariantId: l,
                             isOverride: (o & c.V8.IsOverride) != 0,
                             revision: s,
                         });
@@ -169,7 +171,7 @@ class j extends (r = o.ZP.PersistedStore) {
     createOverride(e, t) {
         (T = p(f({}, T), {
             [e]: {
-                hashedName: L(e),
+                hashedName: x(e),
                 variantId: t,
                 isOverride: !0,
             },
@@ -207,7 +209,7 @@ class j extends (r = o.ZP.PersistedStore) {
         return null != i ? i : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let r = L(n),
+        let r = x(n),
             i = v[e][t];
         if (null != i) return i.assignments[r];
     }
@@ -220,10 +222,10 @@ class j extends (r = o.ZP.PersistedStore) {
         let i = null != (r = T[n]) ? r : S[n];
         if (null != i) return [void 0, i];
         let a = v[e][t];
-        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[L(n)]];
+        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[x(n)]];
     }
     trackExperimentExposure(e, t, n, r, i, a) {
-        let o = L("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
+        let o = x("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
         this.shouldTrackExposure(o) &&
             "user" === r &&
             (this.track(
@@ -241,7 +243,7 @@ class j extends (r = o.ZP.PersistedStore) {
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds("user")) {
-            let n = L("".concat(t, "|").concat(e));
+            let n = x("".concat(t, "|").concat(e));
             this.shouldTrackExposure(n) &&
                 (this.track(
                     u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
@@ -326,7 +328,7 @@ class j extends (r = o.ZP.PersistedStore) {
         D = {};
     }
     getHash(e) {
-        return L(e);
+        return x(e);
     }
     handleFetchStart(e) {
         C.add(e);
@@ -347,4 +349,4 @@ class j extends (r = o.ZP.PersistedStore) {
         super(...e), d(this, "track", () => Promise.resolve()), d(this, "surface", "unset");
     }
 }
-d(j, "displayName", "ApexExperimentStore"), d(j, "persistKey", "ApexExperimentStore");
+d(M, "displayName", "ApexExperimentStore"), d(M, "persistKey", "ApexExperimentStore");
