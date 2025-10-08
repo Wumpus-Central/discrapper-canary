@@ -154,29 +154,35 @@ let B = (0, p.$)(function (e) {
         } = e,
         eb = r.useRef(null),
         [eC, ey] = r.useState(!1),
-        [e_, ev] = r.useState(!1),
-        [ex, eO] = r.useState(!1),
-        [ej, eE] = r.useState(!1),
-        eS = ex || ej,
-        eP = e_ || eS,
-        eI = (null == em ? void 0 : em.session_id) != null,
-        eZ = () => {
+        e_ = r.useRef(null),
+        [ev, ex] = r.useState(!1),
+        [eO, ej] = r.useState(!1),
+        [eE, eS] = r.useState(!1),
+        eP = eO || eE,
+        eI = ev || eP,
+        eZ = (null == em ? void 0 : em.session_id) != null,
+        eT = () => {
             ey(!eC);
         },
-        eT = (e, t) => {
+        eN = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
-            null != t && n.has(t) && (ej && eE(!1), ex && eO(!1)), eN();
+            null != t && n.has(t) && (eE && eS(!1), eO && ej(!1)), eA();
         },
-        eN = () => {
-            ($ || eg || eI) && (null == er || er(p.id));
-        },
-        eA = (e) => {
-            e && ea && ev(!0);
+        eA = () => {
+            ($ || eg || eZ) && (null == er || er(p.id));
         },
         ew = (e) => {
-            e && ev(!1);
+            e
+                ? (e_.current = setTimeout(() => {
+                      ex(!0);
+                  }, 150 * !!ea))
+                : clearTimeout(e_.current);
+        };
+    r.useEffect(() => () => clearTimeout(e_.current), []);
+    let eM = (e) => {
+            e && ex(!1);
         },
-        eM = () => {
+        eR = () => {
             if (!($ && (0, y.p9)(D, N.Z, I.Z, Z.Z, g.Z)[0])) return;
             let e = {
                 streamType: w.lo.GUILD,
@@ -188,7 +194,7 @@ let B = (0, p.$)(function (e) {
                 ee ? ((0, _.Z)(e), s.Z.selectParticipant(e.channelId, (0, C.V9)(e))) : (0, d.iV)(e),
                 null == er || er(p.id);
         },
-        eR = (e) => {
+        ek = (e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -213,13 +219,13 @@ let B = (0, p.$)(function (e) {
                     );
             });
         },
-        ek = (e) =>
+        eL = (e) =>
             ep
                 ? (0, i.jsx)(
                       x.$,
                       L(k({}, e), {
                           channel: D,
-                          setIsHangStatusInputFocused: eO,
+                          setIsHangStatusInputFocused: ej,
                       }),
                   )
                 : null != ef
@@ -232,30 +238,30 @@ let B = (0, p.$)(function (e) {
                         }),
                     )
                   : null,
-        eL = () =>
+        eD = () =>
             (0, i.jsx)(j.Z, {
                 userId: p.id,
                 channel: D,
             }),
-        eD = () =>
+        eU = () =>
             (0, h.dl)() && (0, h.zd)(D.id)
                 ? null
                 : (0, i.jsx)(v.Z, {
                       user: p,
                       channel: D,
-                      onWatch: eM,
+                      onWatch: eR,
                       previewIsOpen: ea,
                       location: ed,
                   }),
-        eU = (0, i.jsx)("div", {
+        eB = (0, i.jsx)("div", {
             className: R.draggable,
             "data-dnd-name": D.name,
             onMouseEnter: ec
                 ? void 0
                 : () => {
-                      ($ || eg || eI) && !eC && (null == ei || ei(p.id));
+                      ($ || eg || eZ) && !eC && (null == ei || ei(p.id));
                   },
-            onMouseLeave: ec ? void 0 : eN,
+            onMouseLeave: ec ? void 0 : eA,
             children: (0, i.jsx)(E.Z, {
                 clickTrap:
                     (null == p ? void 0 : p.id) === (null == (t = T.default.getCurrentUser()) ? void 0 : t.id) && eC,
@@ -294,9 +300,9 @@ let B = (0, p.$)(function (e) {
                                 avatarContainerClass: a()({ [R.userAvatar]: !0 }),
                                 disabled: ec && !t,
                                 selected: eC,
-                                onClick: t ? void 0 : eZ,
-                                onDoubleClick: eM,
-                                onContextMenu: eR,
+                                onClick: t ? void 0 : eT,
+                                onDoubleClick: eR,
+                                onContextMenu: ek,
                                 guildId: D.guild_id,
                                 isSelf: ep,
                                 application: eh,
@@ -340,15 +346,15 @@ let B = (0, p.$)(function (e) {
                         }
                         let s = () => null;
                         return (
-                            eg && eP ? (s = ek) : $ ? (s = eD) : eI && p.id !== P.default.getId() && (s = eL),
+                            eg && eI ? (s = eL) : $ ? (s = eU) : eZ && p.id !== P.default.getId() && (s = eD),
                             (0, i.jsx)(o.yRy, {
                                 targetElementRef: eb,
                                 position: "right",
                                 renderPopout: s,
-                                shouldShow: (el || (eg && eS)) && !eC,
-                                onRequestClose: eT,
-                                align: eg && eP && !ep ? "center" : void 0,
-                                spacing: eg && eP ? 8 : 0,
+                                shouldShow: (el || (eg && eP)) && !eC,
+                                onRequestClose: eN,
+                                align: eg && eI && !ep ? "center" : void 0,
+                                spacing: eg && eI ? 8 : 0,
                                 children: () =>
                                     (0, i.jsx)(
                                         S.ZP,
@@ -356,9 +362,9 @@ let B = (0, p.$)(function (e) {
                                             ref: eb,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
-                                            handleHoverHangStatus: eA,
-                                            handleHoverIcons: ew,
-                                            onAddHangStatusClicked: () => eE(!0),
+                                            handleHoverHangStatus: ew,
+                                            handleHoverIcons: eM,
+                                            onAddHangStatusClicked: () => eS(!0),
                                         }),
                                     ),
                             })
@@ -366,5 +372,5 @@ let B = (0, p.$)(function (e) {
                     })(e),
             }),
         });
-    return Q ? J(eU) : eU;
+    return Q ? J(eB) : eB;
 });
