@@ -432,11 +432,11 @@ function j(e) {
     return r.useMemo(() => M(e), [e]);
 }
 function k(e) {
-    let { quest: t } = e;
+    let { quest: t, shortText: n = !1 } = e;
     switch (j(t)) {
         case 0:
             if (t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymJ"]);
-            if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(m.t["Ie9++v"]);
+            if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(n ? m.t.E4kW5O : m.t["Ie9++v"]);
             return m.intl.string(m.t.l7E81t);
         case 1:
             return m.intl.string(m.t.l7E81t);
@@ -444,7 +444,7 @@ function k(e) {
             return m.intl.string(m.t.umdNio);
         case 3:
             return t.config.features.includes(_.S7.START_QUEST_CTA)
-                ? m.intl.string(m.t.hRIVy8)
+                ? m.intl.string(n ? m.t.CkUzLS : m.t.hRIVy8)
                 : m.intl.string(m.t.l7E81t);
     }
 }
