@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(723307),
     y = n(981631),
     O = n(388032),
-    v = n(189730);
+    v = n(879048);
 function I(e, t, n) {
     return (
         t in e
@@ -77,7 +77,7 @@ let C = 10,
     P = 5,
     w = 8,
     D = 10,
-    x = (e) => {
+    L = (e) => {
         let { gameCount: t, onClose: n } = e;
         return (0, r.jsxs)("div", {
             className: v.headerContainer,
@@ -109,7 +109,7 @@ let C = 10,
             ],
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: l, onGameProfileModalClose: u } = e,
             d = (0, m.O5)(),
             _ = (0, a.e7)([c.Z], () => c.Z.getApplication(i.applicationId)),
@@ -130,7 +130,7 @@ let C = 10,
                 }),
                     await (0, s.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("89311"), n.e("20074")]).then(
+                            let { default: e } = await Promise.all([n.e("89311"), n.e("83123")]).then(
                                 n.bind(n, 644941),
                             );
                             return (t) =>
@@ -158,17 +158,20 @@ let C = 10,
                     A(T({}, e), {
                         className: v.gameClickable,
                         onClick: E,
-                        children: (0, r.jsx)(p.C, {
-                            game: i,
-                            application: _,
-                            className: v.coverArt,
-                            size: p.Z.SMALL,
+                        children: (0, r.jsx)("div", {
+                            className: v.coverArtContainer,
+                            children: (0, r.jsx)(p.C, {
+                                game: i,
+                                application: _,
+                                className: v.coverArt,
+                                size: p.Z.SMALL,
+                            }),
                         }),
                     }),
                 ),
         });
     },
-    j = () =>
+    M = () =>
         (0, r.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "75",
@@ -200,7 +203,7 @@ let C = 10,
                 }),
             ],
         });
-function M(e) {
+function j(e) {
     let {
         quest: t,
         applications: o,
@@ -246,7 +249,7 @@ function M(e) {
         return (0, r.jsxs)("div", {
             className: v.container,
             children: [
-                (0, r.jsx)(x, {
+                (0, r.jsx)(L, {
                     gameCount: e,
                     onClose: c,
                 }),
@@ -265,7 +268,7 @@ function M(e) {
               },
               className: v.container,
               children: [
-                  (0, r.jsx)(x, {
+                  (0, r.jsx)(L, {
                       gameCount: I.length,
                       onClose: c,
                   }),
@@ -274,7 +277,7 @@ function M(e) {
                       children: [
                           I.map((e) =>
                               (0, r.jsx)(
-                                  L,
+                                  x,
                                   {
                                       quest: t,
                                       game: e,
@@ -285,7 +288,7 @@ function M(e) {
                                   e.applicationId,
                               ),
                           ),
-                          Array.from({ length: S }, (e, t) => (0, r.jsx)(j, {}, "placeholder-".concat(t))),
+                          Array.from({ length: S }, (e, t) => (0, r.jsx)(M, {}, "placeholder-".concat(t))),
                       ],
                   }),
               ],
@@ -333,7 +336,7 @@ function k(e) {
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(M, {
+            return (0, r.jsx)(j, {
                 quest: u,
                 applications: n,
                 onClose: t,
