@@ -235,6 +235,7 @@ class M extends (r = o.ZP.PersistedStore) {
                     experiment: t,
                     exposure_location: n,
                     unit_type: r,
+                    tracked_variation_id: a,
                 },
                 { flush: !0 },
             ),
