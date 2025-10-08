@@ -1,35 +1,34 @@
 n.d(t, {
-    g: () => c,
-    mM: () => d,
-    tr: () => u,
+    g: () => l,
+    mM: () => u,
+    tr: () => c,
 }),
     n(442837);
 var r = n(430824),
     i = n(914010),
-    a = n(369274),
-    o = n(558921);
-let s = 3000,
-    l = 3600000;
+    a = n(558921);
+let o = 3000,
+    s = 3600000;
+function l() {
+    let { guildStore: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = null != e ? e : r.Z,
+        n = t.getGuild(a.y),
+        i = (null == n ? void 0 : n.joinedAt) instanceof Date && Date.now() - n.joinedAt.getTime() <= s;
+    return 1 === t.getGuildCount() && i;
+}
 function c(e) {
-    let { guildStore: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = null != t ? t : r.Z,
-        i = n.getGuild(o.y),
-        s = (null == i ? void 0 : i.joinedAt) instanceof Date && Date.now() - i.joinedAt.getTime() <= l;
-    return 1 === n.getGuildCount() && s && (0, a.Z)(e);
+    return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === a.g && l();
 }
 function u(e) {
-    return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === o.g && c("app");
-}
-function d(e) {
     return new Promise((t, n) => {
         if (i.Z.getGuildId() === e) return void t();
         let r = setTimeout(() => {
-                o(), n();
-            }, s),
+                s(), n();
+            }, o),
             a = () => {
-                i.Z.getGuildId() === e && (o(), t());
+                i.Z.getGuildId() === e && (s(), t());
             },
-            o = () => {
+            s = () => {
                 i.Z.removeChangeListener(a), clearTimeout(r);
             };
         i.Z.addChangeListener(a);

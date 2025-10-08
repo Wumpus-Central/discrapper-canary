@@ -21,10 +21,10 @@ var l = n(481060),
     y = n(358085),
     v = n(929809),
     I = n(179645),
-    C = n(701476),
-    S = n(785997),
-    N = n(981631),
-    T = n(188785),
+    S = n(701476),
+    C = n(785997),
+    T = n(981631),
+    N = n(188785),
     j = n(630724);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -85,18 +85,18 @@ class Z extends o.Z {
             a = I.Z.getType();
         if (null == a) return;
         switch (a) {
-            case C.M5.INVITE_UNCLAIMED:
+            case S.M5.INVITE_UNCLAIMED:
                 f.Z.flowStart(j.MK.INVITE, j.EW.NUF_STARTED);
                 break;
-            case C.M5.ORGANIC_REGISTERED:
+            case S.M5.ORGANIC_REGISTERED:
                 f.Z.flowStart(j.MK.ORGANIC, j.EW.NUF_STARTED);
                 break;
-            case C.M5.MARKETING_UNCLAIMED:
+            case S.M5.MARKETING_UNCLAIMED:
                 f.Z.flowStart(j.MK.ORGANIC_MARKETING, j.EW.NUF_STARTED);
         }
         let o = !1,
             A = _.Z.getGuildId();
-        if (a === C.M5.INVITE_UNCLAIMED) {
+        if (a === S.M5.INVITE_UNCLAIMED) {
             let e = b.Z.getGuild(A);
             null != e && (0, d.Dc)(e) && ((o = !0), (0, h.RM)(e.id));
         }
@@ -108,25 +108,25 @@ class Z extends o.Z {
                 open: async function (e) {
                     let t = (e) => {
                         switch (e) {
-                            case S.F.AGE_GATE:
+                            case C.F.AGE_GATE:
                                 f.Z.flowStep(j.MK.ANY, j.EW.AGE_GATE);
                                 break;
-                            case S.F.CHOOSE_TEMPLATE:
+                            case C.F.CHOOSE_TEMPLATE:
                                 f.Z.flowStep(j.MK.ANY, j.X2.GUILD_TEMPLATES);
                                 break;
-                            case S.F.CUSTOMIZE_GUILD:
+                            case C.F.CUSTOMIZE_GUILD:
                                 f.Z.flowStep(j.MK.ANY, j.X2.GUILD_CREATE);
                                 break;
-                            case S.F.CHANNEL_PROMPT:
+                            case C.F.CHANNEL_PROMPT:
                                 f.Z.flowStep(j.MK.ANY, j.X2.CHANNEL_PROMPT);
                                 break;
-                            case S.F.JOIN_GUILD:
+                            case C.F.JOIN_GUILD:
                                 f.Z.flowStep(j.MK.ANY, j.X2.JOIN_GUILD);
                                 break;
-                            case S.F.CREATION_INTENT:
+                            case C.F.CREATION_INTENT:
                                 f.Z.flowStep(j.MK.ANY, j.X2.CREATION_INTENT);
                                 break;
-                            case S.F.COMPLETE:
+                            case C.F.COMPLETE:
                                 f.Z.flowStep(j.MK.ANY, j.X2.SUCCESS);
                                 break;
                             case null:
@@ -143,18 +143,18 @@ class Z extends o.Z {
                             return (n) => (0, i.jsx)(e, x(P({}, n), { onSlideChange: t }));
                         },
                         {
-                            onCloseRequest: N.dG4,
+                            onCloseRequest: T.dG4,
                             onCloseCallback: e,
                             modalKey: r,
                         },
                     );
                 },
-                predicate: () => Z() && !T.a,
+                predicate: () => Z() && !N.a,
             },
             {
                 key: "New User Age Gate",
                 open: c.i,
-                predicate: () => w && !Z() && !T.a,
+                predicate: () => w && !Z() && !N.a,
             },
             {
                 key: "Claim Account Modal",
@@ -165,8 +165,8 @@ class Z extends o.Z {
                         !o &&
                         null != O.default.getCurrentUser() &&
                         !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) &&
-                        !T.a &&
-                        !(0, p.g)("new_user_manager")
+                        !N.a &&
+                        !(0, p.g)()
                     );
                 },
             },
@@ -175,7 +175,7 @@ class Z extends o.Z {
                 open: (e) => (0, u.hk)(A, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return o && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
+                    return o && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !N.a;
                 },
             },
             {
