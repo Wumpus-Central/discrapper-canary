@@ -28189,10 +28189,9 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .emojiErrorItem__67954 {
     align-items: center;
     background-color: var(--background-base-lower);
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
     display: flex;
     justify-content: center;
-    margin-bottom: 1px;
     padding: 16px
 }
 
