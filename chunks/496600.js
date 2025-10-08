@@ -13,8 +13,8 @@ var r = n(951288),
     s = n(392711),
     l = n(423802),
     c = n(61247),
-    u = n(753187),
-    d = n(993517),
+    u = n(483566),
+    d = n(590154),
     f = n(448814),
     _ = n(793030),
     p = n(463208),
@@ -226,7 +226,7 @@ function D(e) {
     var { hideLabel: t, description: n, helperText: i, errorMessage: a, successMessage: o, ref: s } = e,
         l = N(e, ["hideLabel", "description", "helperText", "errorMessage", "successMessage", "ref"]);
     let { id: c, required: d, label: f } = l;
-    return (0, r.jsx)(u.N, {
+    return (0, r.jsx)(u.g, {
         id: c,
         required: d,
         label: f,
@@ -259,7 +259,7 @@ function L(e) {
         M = i.useRef(null),
         j = i.useRef(null),
         k = i.useRef(null),
-        U = i.useContext(d.U),
+        U = i.useContext(d.z),
         {
             state: G,
             setState: B,
@@ -337,8 +337,7 @@ function L(e) {
                     null == (e = M.current) ||
                         e.scrollIntoView({
                             behavior: "smooth",
-                            inline: "end",
-                            block: "end",
+                            block: "nearest",
                         });
                 }, 10));
     }, [G.selectedItems, ea, D]);
