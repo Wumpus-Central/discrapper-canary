@@ -1,4 +1,4 @@
-n.d(t, { H: () => d });
+n.d(t, { H: () => f });
 var r = n(498607),
     i = n.n(r),
     a = n(442837),
@@ -8,8 +8,13 @@ var r = n(498607),
     c = n(945577),
     u = n(981631);
 function d(e) {
+    let { isSearchDesktopXDMExperimentEnabled: t, isGlobalXDMSettingSupported: n } = e;
+    return (!!t && !!n) || !!t;
+}
+function f(e) {
     let { guildId: t, channelId: n } = e,
-        r = (0, c.UX)({ location: "useDesktopSearchContext" });
+        r = (0, c.u5)({ location: "useDesktopSearchContext" }),
+        f = (0, c.UX)({ location: "useDesktopSearchContext" });
     return (0, a.e7)(
         [s.Z, o.Z, l.Z],
         () => {
@@ -23,7 +28,10 @@ function d(e) {
                         guildId: t,
                     }
                   : null != n && null != i && i.isPrivate()
-                    ? r
+                    ? d({
+                          isSearchDesktopXDMExperimentEnabled: f,
+                          isGlobalXDMSettingSupported: r,
+                      })
                         ? { type: u.aib.DMS }
                         : {
                               type: u.aib.CHANNEL,
@@ -31,7 +39,7 @@ function d(e) {
                           }
                     : null;
         },
-        [n, t, r],
+        [n, t, r, f],
         i(),
     );
 }

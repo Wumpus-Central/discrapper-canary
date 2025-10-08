@@ -1,12 +1,14 @@
 n.d(t, {
-    Gc: () => l,
+    Gc: () => c,
     UX: () => s,
-    wn: () => c,
+    u5: () => l,
+    wn: () => u,
 });
 var r = n(818083),
     i = n(154579);
 let a = {
-        enabled: !1,
+        isXDMSearchEnabled: !1,
+        isGlobalSettingSupported: !1,
         inExperiment: !1,
     },
     o = (0, r.B)({
@@ -19,7 +21,8 @@ let a = {
                 id: 0,
                 label: "Control group for xDM search on desktop",
                 config: {
-                    enabled: !1,
+                    isXDMSearchEnabled: !1,
+                    isGlobalSettingSupported: !1,
                     inExperiment: !0,
                 },
             },
@@ -27,7 +30,17 @@ let a = {
                 id: 1,
                 label: "Enables xDM search on desktop",
                 config: {
-                    enabled: !0,
+                    isXDMSearchEnabled: !0,
+                    isGlobalSettingSupported: !1,
+                    inExperiment: !0,
+                },
+            },
+            {
+                id: 2,
+                label: "Enables xDM search on desktop with global setting",
+                config: {
+                    isXDMSearchEnabled: !0,
+                    isGlobalSettingSupported: !0,
                     inExperiment: !0,
                 },
             },
@@ -39,7 +52,7 @@ function s(e) {
             location: t,
             autoTrackExposure: n,
         }),
-        { enabled: a } = o.useExperiment(
+        { isXDMSearchEnabled: a } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -54,6 +67,21 @@ function l(e) {
             location: t,
             autoTrackExposure: n,
         }),
+        { isGlobalSettingSupported: a, isXDMSearchEnabled: s } = o.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a && s;
+}
+function c(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n,
+        }),
         { inExperiment: a } = o.useExperiment(
             { location: t },
             {
@@ -63,7 +91,7 @@ function l(e) {
         );
     return a;
 }
-function c(e) {
+function u(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.ro)({
             location: t,
