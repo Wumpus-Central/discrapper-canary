@@ -1,8 +1,6 @@
-n.d(t, { m: () => r }), n(953529), n(642613), n(388685);
-var a = n(962774);
-function r(e) {
-    var t, n, r, i;
-    let l = e.skus
+function a(e) {
+    var t, n, a, r;
+    let i = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
                     title: e.title,
@@ -16,22 +14,21 @@ function r(e) {
                 };
             })
             .sort((e, t) => t.cost - e.cost),
-        s = l.length > 0 ? Math.min(...l.map((e) => e.cost)) : 0;
+        l = i.length > 0 ? Math.min(...i.map((e) => e.cost)) : 0;
     return {
         id: e.id,
         name: e.name,
         gameId:
             null !=
-            (i =
-                null == (r = e.tenant_metadata) || null == (n = r.guild_monetization) || null == (t = n.game_server)
+            (r =
+                null == (a = e.tenant_metadata) || null == (n = a.guild_monetization) || null == (t = n.game_server)
                     ? void 0
                     : t.game_application_id)
-                ? i
+                ? r
                 : "",
-        imageUrl: "",
         developer: "Game Server Provider",
-        plans: l,
-        regions: a.Y9,
-        baseCost: s,
+        plans: i,
+        baseCost: l,
     };
 }
+n.d(t, { m: () => a }), n(953529), n(642613), n(388685);

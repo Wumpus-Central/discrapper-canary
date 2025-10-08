@@ -31,7 +31,7 @@ function h(e) {
             r.Z.dispatch({
                 type: "PORTKEY_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: o.kd.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: o.k.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5000);
     let l = null != (n = null == (t = i.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
@@ -63,7 +63,7 @@ function x(e) {
               r.Z.dispatch({
                   type: "PORTKEY_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
-                  instances: o.qE.reduce((e, t) => ((e[t.id] = t), e), {}),
+                  instances: o.q.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
           }, 5000)
         : a.tn

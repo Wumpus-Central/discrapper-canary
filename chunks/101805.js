@@ -16,6 +16,7 @@ function r(e) {
         gameServerPanelUrl: e.provider_url,
         status: e.status,
         gameId: e.game_id,
+        gameConfig: e.game_config,
     };
 }
 n.d(t, { Z: () => r });
