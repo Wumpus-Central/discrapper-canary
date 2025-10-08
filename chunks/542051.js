@@ -205,16 +205,16 @@ class y extends (r = a.PureComponent) {
         throw Error("SearchResultsPopout.renderResults: Flow should never allow this...");
     }
     render() {
-        let { query: e, focusedIndex: t, navId: n, className: r } = this.props,
-            a = "" === e.trim();
+        let { query: e, focusedIndex: t, navId: n } = this.props,
+            r = "" === e.trim();
         return (0, i.jsxs)(l.u2D, {
-            className: s()(f.container, r),
+            className: f.container,
             onMouseDown: E,
             role: "listbox",
             id: n,
             tabIndex: -1,
             "aria-activedescendant": "".concat(n, "-").concat(t),
-            children: [this.renderQuery(a), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(a)],
+            children: [this.renderQuery(r), this.renderSearchInSelectedChannelAutocomplete(), this.renderResults(r)],
         });
     }
     constructor(...e) {
