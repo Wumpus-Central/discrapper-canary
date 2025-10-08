@@ -1,8 +1,9 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    a = n(570140),
+    o = n(125085);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,13 +16,13 @@ function o(e, t, n) {
         e
     );
 }
-let s = 0.05,
-    l = new Map(),
-    c = !1;
-function u(e) {
+let l = 0.05,
+    c = new Map(),
+    u = !1;
+function d(e) {
     var t;
     let n =
-        null != (t = l.get(e))
+        null != (t = c.get(e))
             ? t
             : {
                   editorState: null,
@@ -30,73 +31,82 @@ function u(e) {
                   searchResultsQueryString: null,
                   searchResultsQuery: null,
                   searchResultsOffset: null,
+                  searchMode: o.o,
               };
-    return l.set(e, n), n;
+    return c.set(e, n), n;
 }
-function d(e, t) {
-    let n = l.get(e);
+function f(e, t) {
+    let n = c.get(e);
     return null == n ? null : t(n);
 }
-function f(e) {
-    let { id: t, editorState: n } = e;
-    u(t).editorState = n;
-}
 function _(e) {
-    let { id: t } = e;
-    u(t);
+    let { id: t, editorState: n } = e;
+    d(t).editorState = n;
 }
 function p(e) {
     let { id: t } = e;
-    return l.delete(t);
+    d(t);
 }
 function h(e) {
-    let { id: t, showBlocked: n } = e;
-    u(t).showBlockedResults = n;
+    let { id: t } = e;
+    return c.delete(t);
 }
 function m(e) {
-    let { id: t } = e;
-    u(t).showNoResultsAlt = Math.random() < s;
+    let { id: t, showBlocked: n } = e;
+    d(t).showBlockedResults = n;
 }
 function g(e) {
+    let { id: t } = e;
+    d(t).showNoResultsAlt = Math.random() < l;
+}
+function E(e) {
     let { id: t, queryString: n, query: r, offset: i } = e,
-        a = u(t);
+        a = d(t);
     (a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0);
 }
-function E() {
-    c = !0;
+function b(e) {
+    let { id: t, searchMode: n } = e;
+    d(t).searchMode = n;
 }
-class b extends (r = i.ZP.Store) {
+function y() {
+    u = !0;
+}
+class O extends (r = i.ZP.Store) {
     getEditorState(e) {
-        return d(e, (e) => e.editorState);
+        return f(e, (e) => e.editorState);
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null != (t = d(e, (e) => e.showBlockedResults)) && t;
+        return null != (t = f(e, (e) => e.showBlockedResults)) && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null != (t = d(e, (e) => e.showNoResultsAlt)) && t;
+        return null != (t = f(e, (e) => e.showNoResultsAlt)) && t;
     }
     getSearchResultsQueryString(e) {
-        return d(e, (e) => e.searchResultsQueryString);
+        return f(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return d(e, (e) => e.searchResultsQuery);
+        return f(e, (e) => e.searchResultsQuery);
+    }
+    getSearchMode(e) {
+        return f(e, (e) => e.searchMode);
     }
     getSearchResultsOffset(e) {
-        return d(e, (e) => e.searchResultsOffset);
+        return f(e, (e) => e.searchResultsOffset);
     }
     getIsSearchTokensInitialized() {
-        return c;
+        return u;
     }
 }
-o(b, "displayName", "SearchQueryStore");
-let y = new b(a.Z, {
-    SEARCH_RESULTS_QUERY_UPDATE: g,
-    SEARCH_EDITOR_STATE_CLEAR: p,
-    SEARCH_ENSURE_SEARCH_STATE: _,
-    SEARCH_EDITOR_STATE_CHANGE: f,
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: h,
-    SEARCH_SET_SHOW_NO_RESULTS_ALT: m,
-    SEARCH_TOKENS_REFRESHED: E,
+s(O, "displayName", "SearchQueryStore");
+let v = new O(a.Z, {
+    SEARCH_RESULTS_QUERY_UPDATE: E,
+    SEARCH_EDITOR_STATE_CLEAR: h,
+    SEARCH_ENSURE_SEARCH_STATE: p,
+    SEARCH_EDITOR_STATE_CHANGE: _,
+    SEARCH_SET_SHOW_BLOCKED_RESULTS: m,
+    SEARCH_SET_SHOW_NO_RESULTS_ALT: g,
+    SEARCH_SEARCH_MODE_UPDATE: b,
+    SEARCH_TOKENS_REFRESHED: y,
 });

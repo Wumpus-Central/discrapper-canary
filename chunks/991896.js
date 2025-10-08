@@ -67,4 +67,12 @@ let a = {
             offset: a,
         });
     },
+    updateSearchMode: function (e, t) {
+        let n = (0, i.Tm)(e);
+        r.Z.dispatch({
+            type: "SEARCH_SEARCH_MODE_UPDATE",
+            id: n,
+            searchMode: t,
+        });
+    },
 };

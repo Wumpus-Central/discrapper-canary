@@ -41,7 +41,7 @@ var r = n(951288),
     k = n(723642),
     U = n(981631),
     G = n(388032),
-    B = n(557818);
+    B = n(339450);
 function Z(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function Z(e, t, n) {
         e
     );
 }
-n(571654);
+n(614346);
 let F = 512,
     V = (0, h.hQ)(),
     H = c()(D.Z.fetchMessages, 500);
@@ -479,6 +479,7 @@ function W(e) {
                         query: r,
                         queryString: n,
                     }),
+                    w.Z.updateSearchMode(t, U.QIO.NEWEST),
                     t.type === U.aib.DMS
                         ? D.Z.fetchCrossDMMessages({
                               searchContext: t,
@@ -491,7 +492,6 @@ function W(e) {
                               queryString: n,
                               searchEverywhere: i,
                               offset: 0,
-                              searchMode: U.QIO.NEWEST,
                           });
             },
             [t],
@@ -511,15 +511,15 @@ function W(e) {
         }),
         A = (0, C.nP)({ location: "Search" }),
         P = (0, C.KS)({ location: "Search" }),
-        w = A || P,
-        L = i.useMemo(
+        L = A || P,
+        x = i.useMemo(
             () =>
                 t.type === U.aib.DMS
                     ? G.intl.string(G.t.m7OrlZ)
-                    : w
+                    : L
                       ? G.intl.formatToPlainString(G.t.LDZtFB, { name: I })
                       : G.intl.string(G.t["5h0QOD"]),
-            [t.type, w, I],
+            [t.type, L, I],
         );
     return (0, r.jsx)(Y, {
         className: n,
@@ -530,8 +530,8 @@ function W(e) {
         keyboardModeEnabled: o,
         onSearch: y,
         isSearchActive: _,
-        placeholder: L,
-        isSearchFiltersRedesignEnabled: w,
+        placeholder: x,
+        isSearchFiltersRedesignEnabled: L,
     });
 }
 function K(e) {
