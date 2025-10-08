@@ -26,6 +26,7 @@ var r = (function (e) {
             (e.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE = "sensitive_content_filter_age_verification_notice"),
             (e.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE = "sensitive_content_filter_teen_notice"),
             (e.RESTRICTED_ACCOUNTS_SETTING_NOTICE = "restricted_accounts_setting_notice"),
+            (e.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE = "content_and_social_parental_controls_notice"),
             e
         );
     })({}),

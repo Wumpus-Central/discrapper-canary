@@ -27,6 +27,19 @@ var r = n(951288),
     N = n(388032);
 let R = () =>
         (0, r.jsxs)(g.Z, {
+            title: N.intl.string(N.t.xVRG4O),
+            webSetting: S.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            children: [
+                (0, r.jsx)(b.n, {}),
+                (0, r.jsx)(_.Z, {}),
+                (0, r.jsx)(h.Z, {}),
+                (0, r.jsx)(f.Z, {}),
+                (0, r.jsx)(c.Z, {}),
+                (0, r.jsx)(y.Z, {}),
+            ],
+        }),
+    P = () =>
+        (0, r.jsxs)(g.Z, {
             title: N.intl.string(N.t["y62Z/f"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: [
@@ -40,19 +53,6 @@ let R = () =>
                 (0, r.jsx)(O.Z, {}),
             ],
         }),
-    P = () =>
-        (0, r.jsxs)(g.Z, {
-            title: N.intl.string(N.t.xVRG4O),
-            webSetting: S.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [
-                (0, r.jsx)(b.n, {}),
-                (0, r.jsx)(_.Z, {}),
-                (0, r.jsx)(h.Z, {}),
-                (0, r.jsx)(f.Z, {}),
-                (0, r.jsx)(c.Z, {}),
-                (0, r.jsx)(y.Z, {}),
-            ],
-        }),
     w = () =>
         (0, r.jsxs)(g.Z, {
             title: N.intl.string(N.t["1Qn8iY"]),
@@ -61,7 +61,7 @@ let R = () =>
         }),
     D = () =>
         (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)(P, {}), (0, r.jsx)(R, {}), (0, r.jsx)(w, {})],
+            children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(w, {})],
         });
 function L() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
