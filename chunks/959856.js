@@ -175,6 +175,8 @@ class N extends s.Z {
     }
     setNoiseCancellationEnableStats(e) {}
     setNoiseCancellationDuringProcessing(e) {}
+    setNoiseCancellationAfterProcessing(e) {}
+    setVADAfterWebrtc(e) {}
     getAudioInputDevices() {
         return (0, E.Hg)();
     }

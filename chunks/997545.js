@@ -232,6 +232,8 @@ class L extends _.Z {
                                         automaticGainControlConfig: this.automaticGainControl,
                                         noiseCancellation: this.noiseCancellation,
                                         noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
+                                        noiseCancellationAfterProcessing: this.noiseCancellationAfterProcessing,
+                                        vadAfterWebrtc: this.vadAfterWebrtc,
                                         voiceFilters: null != this.voiceFilterId,
                                     }),
                                     n.setNoInputThreshold(-100),
@@ -583,6 +585,15 @@ class L extends _.Z {
             (0, b.zS)().setTransportOptions({
                 noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
             });
+    }
+    setNoiseCancellationAfterProcessing(e) {
+        (this.noiseCancellationAfterProcessing = e),
+            (0, b.zS)().setTransportOptions({
+                noiseCancellationAfterProcessing: this.noiseCancellationAfterProcessing,
+            });
+    }
+    setVADAfterWebrtc(e) {
+        (this.vadAfterWebrtc = e), (0, b.zS)().setTransportOptions({ vadAfterWebrtc: this.vadAfterWebrtc });
     }
     getNoiseCancellation() {
         return this.noiseCancellation;
@@ -1155,6 +1166,8 @@ class L extends _.Z {
             I(this, "automaticGainControl", { enabled: !0 }),
             I(this, "noiseCancellation", !1),
             I(this, "noiseCancellationDuringProcessing", !1),
+            I(this, "noiseCancellationAfterProcessing", !1),
+            I(this, "vadAfterWebrtc", !1),
             I(this, "voiceFilterId", null),
             I(this, "experimentalEncoders", !1),
             I(this, "hardwareH264", !0),

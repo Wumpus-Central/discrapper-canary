@@ -71,6 +71,8 @@ class E extends s.Z {
         return (0, f.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants, t);
     }
     setNoiseCancellationDuringProcessing(e) {}
+    setNoiseCancellationAfterProcessing(e) {}
+    setVADAfterWebrtc(e) {}
     getSelfMute() {
         return this.selfMute;
     }
