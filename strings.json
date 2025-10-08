@@ -13852,6 +13852,7 @@
   "Yp3SbG": "Stop",
   "sG+MGh": "Test",
   "hmfkCg": "Krisp",
+  "/tqmfH": "Noise cancellation is {enabled, select, true {enabled} false {disabled} other {controlled} } by the {inputProfile, select, VOICE_ISOLATION {Voice Isolation} STUDIO {Studio} other {selected} } input profile.",
   "vFiCS0": "Noise Suppression powered by Krisp",
   "t8QhiY": "Noise Suppression",
   "PoWNfX": "None",
