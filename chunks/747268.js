@@ -1,2 +1,6 @@
-n.d(t, { Z: () => r }), window.GLOBAL_ENV.RELEASE_CHANNEL;
-let r = window.GLOBAL_ENV.RELEASE_CHANNEL;
+n.d(t, {
+    Z: () => i,
+    o: () => r,
+});
+let r = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL,
+    i = window.GLOBAL_ENV.RELEASE_CHANNEL;

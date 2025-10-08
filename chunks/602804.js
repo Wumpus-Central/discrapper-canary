@@ -15,4 +15,6 @@ e.exports = {
     emptyIcon: "emptyIcon_febe19",
     emptyHeader: "emptyHeader_febe19",
     emptyBody: "emptyBody_febe19",
+    errorBox: "errorBox_febe19",
+    errorText: "errorText_febe19",
 };
