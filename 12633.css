@@ -23754,6 +23754,13 @@ svg.radioIcon_c1e9c4 {
 }
 
 .headerContent_e0f8ae {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.headerTextContainer_e0f8ae {
     display: flex;
     flex-direction: column;
     gap: 4px
@@ -23863,6 +23870,11 @@ svg.radioIcon_c1e9c4 {
 
 .instructionsLink_e0f8ae:hover {
     text-decoration: underline
+}
+
+.gameTile_e0f8ae {
+    height: 36px;
+    width: 36px
 }
 
 .hidden__7d7b6 {
