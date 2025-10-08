@@ -96,6 +96,7 @@ n.d(t, {
     OyE: () => r.OyE,
     OyP: () => r.OyP,
     P$X: () => r.P$X,
+    P3w: () => a.DynamicGraphicComponent,
     PBZ: () => r.PBZ,
     PEf: () => r.PEf,
     PZ7: () => r.PZ7,

@@ -1,128 +1,131 @@
-e.d(i, { default: () => A }), e(388685);
-var n = e(951288),
-    a = e(647438),
-    s = e(793030),
-    l = e(481060),
-    r = e(355467),
-    c = e(100527),
-    d = e(906732),
-    o = e(313201),
-    C = e(740492),
-    _ = e(626135),
-    u = e(171246),
-    N = e(225715),
-    I = e(635840),
-    S = e(981631),
-    x = e(388032),
-    E = e(304495);
-function A(t) {
-    let { transitionState: i, application: e, storeListing: A, subscription: O, guild: T, onClose: p } = t,
-        h = (0, o.Dt)(),
-        { analyticsLocations: m } = (0, d.ZP)(c.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+n.d(e, { default: () => O }), n(388685);
+var a = n(951288),
+    i = n(647438),
+    l = n(793030),
+    r = n(481060),
+    s = n(355467),
+    o = n(100527),
+    c = n(906732),
+    u = n(740492),
+    C = n(626135),
+    _ = n(171246),
+    d = n(225715),
+    p = n(553334),
+    I = n(981631),
+    N = n(388032),
+    A = n(290362);
+function O(t) {
+    let { transitionState: e, application: n, storeListing: O, subscription: E, guild: S, onClose: P } = t,
+        { analyticsLocations: T } = (0, c.ZP)(o.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
-            cancelSubscription: P,
+            cancelSubscription: f,
             error: g,
-            submitting: j,
+            submitting: m,
         } = ((t) => {
-            let [i, e] = a.useState(!1),
-                [n, s] = a.useState(null);
+            let [e, n] = i.useState(!1),
+                [a, l] = i.useState(null);
             return {
-                cancelSubscription: async (i) => {
+                cancelSubscription: async (e) => {
                     try {
-                        return e(!0), await r.EO(i, t), !0;
+                        return n(!0), await s.EO(e, t), !0;
                     } catch (t) {
-                        s(t);
+                        l(t);
                     } finally {
-                        e(!1);
+                        n(!1);
                     }
                 },
-                error: n,
-                submitting: i,
+                error: a,
+                submitting: e,
             };
-        })(m),
-        [L, f] = a.useState(0),
-        v = async () => {
-            (await P(O.id)) && (C.ZP.disableApplicationSubscriptionCancellationSurvey ? p() : f(1));
-        };
-    a.useEffect(() => {
-        _.default.track(S.rMx.CANCELLATION_FLOW_STARTED, { location_stack: m });
-    }, [m]);
-    let R = (0, u.KW)(A.skuFlags);
-    return (0, n.jsx)(s.IX, {
-        onClose: p,
-        transitionState: i,
-        "aria-labelledby": h,
-        children: (0, n.jsxs)(l.MyZ, {
-            activeSlide: L,
-            width: 480,
-            children: [
-                (0, n.jsx)(l.Mi4, {
-                    id: 0,
-                    children: (0, n.jsxs)("div", {
-                        className: E.slideContainer,
-                        children: [
-                            null != g ? (0, n.jsx)(l.kzN, { children: g.message }) : null,
-                            (0, n.jsxs)(s.fef, {
-                                children: [
-                                    (0, n.jsx)(l.LZC, { size: 16 }),
-                                    (0, n.jsxs)(N.q$, {
-                                        children: [
-                                            (0, n.jsx)(N.CW, { application: e }),
-                                            (0, n.jsx)(N.r0, {
-                                                id: h,
-                                                children: x.intl.format(x.t.irka9v, { tier: A.summary }),
-                                            }),
-                                            (0, n.jsx)(N.s$, {}),
-                                            (0, n.jsx)(N.K9, {
-                                                title: x.intl.string(x.t.LZunzc),
-                                                description: R
-                                                    ? x.intl.formatToPlainString(x.t["+HdfBw"], {
-                                                          timestamp: O.currentPeriodEnd.getTime(),
-                                                      })
-                                                    : x.intl.formatToPlainString(x.t.qxiBnZ, {
-                                                          timestamp: O.currentPeriodEnd.getTime(),
-                                                          guildName: null == T ? void 0 : T.name,
+        })(T),
+        b = async () => {
+            (await f(E.id)) &&
+                (u.ZP.disableApplicationSubscriptionCancellationSurvey
+                    ? P()
+                    : (0, r.ZDy)(
+                          async () => (
+                              await P(),
+                              (t) =>
+                                  (0, a.jsx)(
+                                      p.Z,
+                                      (function (t) {
+                                          for (var e = 1; e < arguments.length; e++) {
+                                              var n = null != arguments[e] ? arguments[e] : {},
+                                                  a = Object.keys(n);
+                                              "function" == typeof Object.getOwnPropertySymbols &&
+                                                  (a = a.concat(
+                                                      Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                          return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                       }),
-                                            }),
-                                            (0, n.jsx)(N.G9, {
-                                                applicationId: A.applicationId,
-                                                storeListingBenefits: A.benefits,
-                                            }),
-                                        ],
-                                    }),
-                                ],
-                            }),
-                            (0, n.jsx)(s.mzw, {
-                                children: (0, n.jsx)(s.Go$, {
-                                    actions: [
-                                        {
-                                            loading: j,
-                                            onClick: v,
-                                            text: x.intl.string(x.t.KSqyfX),
-                                            variant: "critical-primary",
-                                        },
-                                        {
-                                            onClick: p,
-                                            text: x.intl.string(x.t["05jDxs"]),
-                                            variant: "icon-only",
-                                        },
-                                    ],
-                                    actionsFullWidth: !0,
-                                }),
-                            }),
-                        ],
-                    }),
-                }),
-                (0, n.jsx)(l.Mi4, {
-                    id: 1,
-                    children: (0, n.jsx)("div", {
-                        className: E.slideContainer,
-                        children: (0, n.jsx)(I.Z, {
-                            application: e,
-                            subscriptionId: O.id,
-                            onClose: p,
-                        }),
-                    }),
+                                                  )),
+                                                  a.forEach(function (e) {
+                                                      var a;
+                                                      (a = n[e]),
+                                                          e in t
+                                                              ? Object.defineProperty(t, e, {
+                                                                    value: a,
+                                                                    enumerable: !0,
+                                                                    configurable: !0,
+                                                                    writable: !0,
+                                                                })
+                                                              : (t[e] = a);
+                                                  });
+                                          }
+                                          return t;
+                                      })(
+                                          {
+                                              application: n,
+                                              subscriptionId: E.id,
+                                          },
+                                          t,
+                                      ),
+                                  )
+                          ),
+                      ));
+        };
+    i.useEffect(() => {
+        C.default.track(I.rMx.CANCELLATION_FLOW_STARTED, { location_stack: T });
+    }, [T]);
+    let L = (0, _.KW)(O.skuFlags);
+    return (0, a.jsx)(l.ExpressiveModal, {
+        actions: [
+            {
+                loading: m,
+                onClick: b,
+                text: N.intl.string(N.t.KSqyfX),
+                variant: "critical-primary",
+            },
+        ],
+        graphic: {
+            type: "dynamic",
+            component: r.P3w.APPLICATION_IMAGE_HEADER,
+            aspectRatio: "16/9",
+            props: {
+                application: n,
+                className: A.largeAppIcon,
+            },
+        },
+        title: N.intl.string(N.t.CeCHk5),
+        subtitle: L
+            ? N.intl.format(N.t.fZP9QE, {
+                  applicationName: n.name,
+                  timestamp: E.currentPeriodEnd.getTime(),
+              })
+            : N.intl.format(N.t["3LeWBA"], {
+                  guild: null == S ? void 0 : S.name,
+                  applicationName: n.name,
+                  timestamp: E.currentPeriodEnd.getTime(),
+              }),
+        transitionState: e,
+        onClose: P,
+        children: (0, a.jsxs)("div", {
+            className: A.cancelModalBody,
+            children: [
+                null != g ? (0, a.jsx)(r.kzN, { children: g.message }) : null,
+                (0, a.jsx)(d.G9, {
+                    applicationId: n.id,
+                    storeListingBenefits: O.benefits,
+                    className: A.benefitsContainer,
                 }),
             ],
         }),
