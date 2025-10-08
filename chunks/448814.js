@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(924826),
     l = n(91192),
-    c = n(595824),
+    c = n(571155),
     u = n(652728),
     d = n(715644),
     f = n(777207),
@@ -196,10 +196,7 @@ function I(e) {
         f = (0, l.JA)(n);
     function _() {
         return "multiple" === s
-            ? (0, r.jsx)(c.X, {
-                  checked: i,
-                  displayOnly: !0,
-              })
+            ? (0, r.jsx)(c.F, { checked: i })
             : i
               ? (0, r.jsx)(u.k, {
                     color: "currentColor",

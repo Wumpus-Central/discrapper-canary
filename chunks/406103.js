@@ -17,7 +17,7 @@ let c = {
                         optionCount: n,
                         label: c,
                         description: u,
-                        iconPosition: d,
+                        showIcons: d,
                         withMixedDisabledOptions: f,
                     } = e,
                     [_, p] = i.useState(["option1"]),
@@ -28,35 +28,35 @@ let c = {
                                     label: "Option 1",
                                     value: "option1",
                                     description: null != u || "" === u ? u : void 0,
-                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    leadingIcon: d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                                 {
                                     label: "Option 2",
                                     value: "option2",
                                     description: null != u || "" === u ? u : void 0,
-                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    leadingIcon: d ? a.d3s : void 0,
                                     disabled: !!f || void 0,
                                 },
                                 {
                                     label: "Option 3",
                                     value: "option3",
                                     description: null != u || "" === u ? u : void 0,
-                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    leadingIcon: d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                                 {
                                     label: "Option 4",
                                     value: "option4",
                                     description: null != u || "" === u ? u : void 0,
-                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    leadingIcon: d ? a.d3s : void 0,
                                     disabled: !!f || void 0,
                                 },
                                 {
                                     label: "Option 5",
                                     value: "option5",
                                     description: null != u || "" === u ? u : void 0,
-                                    leadingIcon: "leading" === d ? a.d3s : void 0,
+                                    leadingIcon: d ? a.d3s : void 0,
                                     disabled: !f && void 0,
                                 },
                             ].slice(0, Math.max(1, Math.min(5, n))),
@@ -79,7 +79,7 @@ let c = {
                     gap: "md",
                     children: [
                         (0, r.jsx)(l.c, {
-                            value: _,
+                            selectedValues: _,
                             label: c,
                             onChange: m,
                             options: h,
@@ -162,20 +162,10 @@ let c = {
                     label: "Description",
                     defaultValue: "",
                 },
-                iconPosition: {
-                    type: "select",
-                    label: "Icon Position",
-                    options: [
-                        {
-                            label: "None",
-                            value: "none",
-                        },
-                        {
-                            label: "Leading",
-                            value: "leading",
-                        },
-                    ],
-                    defaultValue: "none",
+                showIcons: {
+                    type: "boolean",
+                    label: "Show Icons",
+                    defaultValue: !1,
                 },
                 withMixedDisabledOptions: {
                     type: "boolean",
