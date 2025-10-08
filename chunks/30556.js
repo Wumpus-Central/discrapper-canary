@@ -1,71 +1,71 @@
-t.d(n, { Z: () => s });
-var r = t(951288);
+t.d(n, { Z: () => a });
+var l = t(951288);
 t(647438);
-var l = t(481060),
-    o = t(493683),
-    i = t(475413),
-    c = t(388032);
-function s(e) {
-    var { type: n, userId: t, onClose: s } = e,
-        a = (function (e, n) {
+var i = t(481060),
+    r = t(493683),
+    o = t(475413),
+    s = t(388032);
+function a(e) {
+    var { type: n, userId: t, onClose: a } = e,
+        c = (function (e, n) {
             if (null == e) return {};
             var t,
-                r,
-                l = (function (e, n) {
+                l,
+                i = (function (e, n) {
                     if (null == e) return {};
                     var t,
-                        r,
-                        l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (l[t] = e[t]);
-                    return l;
+                        l,
+                        i = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (t = r[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                    return i;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (t = o[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (t = r[l]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
-            return l;
+            return i;
         })(e, ["type", "userId", "onClose"]);
-    let d = n === i.j8.TEXT ? i.tG : i.ef;
-    return (0, r.jsx)(
+    let d = n === o.j8.TEXT ? o.tG : o.ef;
+    return (0, l.jsx)(
         d,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
-                    r = Object.keys(t);
+                    l = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (l = l.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (n) {
-                        var r;
-                        (r = t[n]),
+                    l.forEach(function (n) {
+                        var l;
+                        (l = t[n]),
                             n in e
                                 ? Object.defineProperty(e, n, {
-                                      value: r,
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[n] = r);
+                                : (e[n] = l);
                     });
             }
             return e;
         })(
             {
                 action: "SEND_MESSAGE",
-                icon: l.kBi,
-                text: c.intl.string(c.t.zROXER),
-                tooltipText: c.intl.string(c.t.zROXER),
+                icon: i.kBi,
+                text: s.intl.string(s.t.zROXER),
+                tooltipText: s.intl.string(s.t.zROXER),
                 onClick: () => {
-                    o.Z.openPrivateChannel({ recipientIds: t }), null == s || s();
+                    r.Z.openPrivateChannel({ recipientIds: t }), null == a || a(), (0, i.pTH)();
                 },
             },
-            a,
+            c,
         ),
     );
 }
