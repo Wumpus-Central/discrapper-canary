@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(319396),
     O = n(778567),
     E = n(228168),
-    v = n(388032),
-    y = n(10094);
+    y = n(388032),
+    v = n(10094);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +83,7 @@ function C(e) {
     i.useEffect(() => {
         (null == T ? void 0 : T.visibility) != null && A(T.visibility === l.f.PUBLIC);
     }, [null == T ? void 0 : T.visibility]);
-    let { wishlist: Z, error: w } = (0, f.k)(n),
+    let { wishlist: Z, error: w } = (0, f.k)(n, t.id),
         L = i.useCallback(() => {
             if (null == n) return;
             let e = x ? l.f.PRIVATE : l.f.PUBLIC;
@@ -109,20 +109,20 @@ function C(e) {
           ? (0, r.jsx)(b.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
-                    className: y.emptyStateContainer,
+                    className: v.emptyStateContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: y.emptyStateText,
+                            className: v.emptyStateText,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: v.intl.string(v.t.HGnLLS),
+                                    children: y.intl.string(y.t.HGnLLS),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: v.intl.string(v.t["/X1ny8"]),
+                                    children: y.intl.string(y.t["/X1ny8"]),
                                 }),
                             ],
                         }),
@@ -131,30 +131,30 @@ function C(e) {
                                 variant: "primary",
                                 size: "sm",
                                 icon: s.EOn,
-                                text: v.intl.string(v.t.ZbS4QE),
+                                text: y.intl.string(y.t.ZbS4QE),
                                 onClick: R,
                             }),
                     ],
                 }),
             })
           : (0, r.jsxs)(b.F, {
-                className: y.scroller,
+                className: v.scroller,
                 fade: !0,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: y.headerRow,
+                        className: v.headerRow,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: y.teenDisclaimer,
+                                className: v.teenDisclaimer,
                                 children: [
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: v.intl.format(v.t.r6Y1Li, { count: Z.items.length }),
+                                        children: y.intl.format(y.t.r6Y1Li, { count: Z.items.length }),
                                     }),
                                     !x &&
                                         (0, r.jsx)(s.ua7, {
-                                            text: v.intl.string(v.t.RX7D9v),
+                                            text: y.intl.string(y.t.RX7D9v),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {
                                                     children: (0, r.jsx)(
@@ -181,7 +181,7 @@ function C(e) {
                                     x &&
                                         P &&
                                         (0, r.jsx)(s.ua7, {
-                                            text: v.intl.string(v.t.d78ChY),
+                                            text: y.intl.string(y.t.d78ChY),
                                             children: (e) =>
                                                 (0, r.jsx)(s.tEY, {
                                                     children: (0, r.jsx)(
@@ -209,13 +209,13 @@ function C(e) {
                             }),
                             j
                                 ? (0, r.jsxs)("div", {
-                                      className: y.headerActions,
+                                      className: v.headerActions,
                                       children: [
                                           (0, r.jsx)(s.zxk, {
                                               variant: "secondary",
                                               size: "sm",
                                               icon: s.qJs,
-                                              text: v.intl.string(v.t.SDUwMz),
+                                              text: y.intl.string(y.t.SDUwMz),
                                               onClick: R,
                                           }),
                                           (0, r.jsx)(O.Z, {
@@ -229,7 +229,7 @@ function C(e) {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: s.EOn,
-                                      text: v.intl.string(v.t["i/yzHh"]),
+                                      text: y.intl.string(y.t["i/yzHh"]),
                                       onClick: R,
                                   }),
                         ],

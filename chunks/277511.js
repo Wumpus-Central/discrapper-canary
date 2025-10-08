@@ -10,24 +10,25 @@ var r = n(544891),
     d = n(22494),
     p = n(981631);
 let f = {
-    async fetchWishlist(e) {
+    async fetchWishlist(e, t) {
         i.Z.dispatch({
             type: "WISHLIST_FETCH_START",
             wishlistId: e,
         });
         try {
-            var t;
-            let n = await r.tn.get({
+            var n;
+            let l = await r.tn.get({
                 url: p.ANM.USER_WISHLIST(e),
                 rejectWithError: !0,
             });
-            (null == (t = n.body) ? void 0 : t.wishlist_items) == null &&
+            (null == (n = l.body) ? void 0 : n.wishlist_items) == null &&
                 u.Z.captureMessage("Wishlist items not found in response");
-            let l = d.Z.fromServer(n.body);
+            let a = d.Z.fromServer(l.body);
             i.Z.dispatch({
                 type: "WISHLIST_FETCH_SUCCESS",
                 wishlistId: e,
-                wishlistData: l,
+                wishlistData: a,
+                updatedAt: t,
             });
         } catch (t) {
             i.Z.dispatch({

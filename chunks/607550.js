@@ -39,6 +39,9 @@ class c extends r.ZP.Store {
     getError(e) {
         return this.get(e).error;
     }
+    getUpdatedAt(e) {
+        return this.get(e).updatedAt;
+    }
 }
 let u = new c(i.Z, {
     WISHLIST_FETCH_START: function (e) {
@@ -47,9 +50,9 @@ let u = new c(i.Z, {
         (n.status = "fetching"), (n.error = void 0);
     },
     WISHLIST_FETCH_SUCCESS: function (e) {
-        let { wishlistId: t, wishlistData: n } = e,
-            r = s(t);
-        (r.data = n), (r.status = "success"), (r.error = void 0);
+        let { wishlistId: t, wishlistData: n, updatedAt: r } = e,
+            i = s(t);
+        (i.data = n), (i.status = "success"), (i.error = void 0), (i.updatedAt = r);
     },
     WISHLIST_FETCH_FAILURE: function (e) {
         let { wishlistId: t, error: n } = e,

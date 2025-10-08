@@ -1,66 +1,70 @@
-t.d(n, { Z: () => x }), t(539854);
-var l = t(607550),
-    i = t(699516),
-    r = t(621853),
-    o = t(46841),
-    s = t(837411),
-    a = t(477448),
-    c = t(612600),
-    d = t(585305),
-    u = t(806729),
-    m = t(517157),
-    p = t(708108),
-    f = t(146078),
-    h = t(228168),
+t.d(n, { Z: () => v }), t(539854);
+var l = t(370523),
+    i = t(607550),
+    r = t(699516),
+    o = t(621853),
+    s = t(46841),
+    a = t(837411),
+    c = t(477448),
+    d = t(612600),
+    u = t(585305),
+    m = t(806729),
+    p = t(517157),
+    f = t(708108),
+    h = t(146078),
+    x = t(228168),
     j = t(388032);
-function x(e) {
+function v(e) {
     let { user: n, currentUser: t } = e,
-        { mutualFriendsCount: x, mutualGuilds: v } = (0, u.Z)(n),
-        g = null == v ? void 0 : v.length,
-        b = (0, d.Z)(n),
-        y = (0, a.Z)({ location: "useUserProfileModalV2TabBarItems" }),
-        O = (0, c.Z)({ location: "useUserProfileModalV2TabBarItems" }),
-        I = (0, m.Z)(n.id),
-        Z = (0, o.S)({ location: "useUserProfileModalV2TabBarItems" }),
-        P = (0, s.Z)(n.id),
-        N = [],
-        T = n.id === (null == t ? void 0 : t.id),
-        E = r.Z.getFirstWishlistId(n.id),
-        A = (null != E ? l.Z.getWishlistItems(E) : []).length > 0,
-        S = I.length > 0;
-    ((T && y) || (S && O)) &&
-        N.push({
+        { mutualFriendsCount: v, mutualGuilds: g } = (0, m.Z)(n),
+        b = null == g ? void 0 : g.length,
+        y = (0, u.Z)(n),
+        I = (0, c.Z)({ location: "useUserProfileModalV2TabBarItems" }),
+        Z = (0, d.Z)({ location: "useUserProfileModalV2TabBarItems" }),
+        O = (0, p.Z)(n.id),
+        N = (0, s.S)({ location: "useUserProfileModalV2TabBarItems" }),
+        P = (0, a.Z)(n.id),
+        T = [],
+        A = n.id === (null == t ? void 0 : t.id),
+        E = o.Z.getFirstWishlistId(n.id),
+        S = null != E,
+        C = S ? o.Z.getWishlistSettings(n.id, E) : null,
+        _ = (S ? i.Z.getWishlistItems(E) : []).length > 0,
+        w = O.length > 0;
+    ((A && I) || (w && Z)) &&
+        T.push({
             text: j.intl.string(j.t.laViw8),
-            section: h.oh.WIDGETS,
+            section: x.oh.WIDGETS,
             subsection: void 0,
         }),
-        N.push({
+        T.push({
             text: j.intl.string(j.t.chq59f),
-            section: h.oh.ACTIVITY,
+            section: x.oh.ACTIVITY,
             subsection: void 0,
         });
-    let C = !1 === n.nsfwAllowed,
-        w = i.Z.isFriend(n.id);
+    let D = !1 === n.nsfwAllowed,
+        R = r.Z.isFriend(n.id),
+        L = (null == C ? void 0 : C.visibility) === l.f.PUBLIC;
     return (
-        Z &&
-            (T || (A && P && (!C || (C && w)))) &&
-            N.push({
+        N &&
+            (A || (_ && L && P && (!D || (D && R)))) &&
+            T.push({
                 text: j.intl.string(j.t["7lZ31N"]),
-                section: h.oh.WISHLIST,
+                section: x.oh.WISHLIST,
                 subsection: void 0,
             }),
         n.id !== (null == t ? void 0 : t.id) &&
-            b &&
-            (N.push({
-                text: (0, p.Z)(x),
-                section: h.oh.MUTUAL_FRIENDS,
+            y &&
+            (T.push({
+                text: (0, f.Z)(v),
+                section: x.oh.MUTUAL_FRIENDS,
                 subsection: void 0,
             }),
-            N.push({
-                text: (0, f.Z)(g),
-                section: h.oh.MUTUAL_GUILDS,
+            T.push({
+                text: (0, h.Z)(b),
+                section: x.oh.MUTUAL_GUILDS,
                 subsection: void 0,
             })),
-        N
+        T
     );
 }
