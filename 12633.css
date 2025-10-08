@@ -54720,7 +54720,7 @@ h3.improved__1689b:after {
     font-weight: var(--font-weight-medium)
 }
 
-.wrapper__33fbc {
+.wrapper_be018f {
     background-color: var(--background-base-lower);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-low);
@@ -54728,19 +54728,19 @@ h3.improved__1689b:after {
     overflow: hidden
 }
 
-.header__33fbc {
+.header_be018f {
     align-items: center;
     background-color: var(--background-secondary-alt);
     display: flex;
     justify-content: space-between
 }
 
-.content__33fbc,
-.header__33fbc {
+.content_be018f,
+.header_be018f {
     padding: 16px
 }
 
-.container_f18f64 {
+.container_bb8774 {
     background-color: var(--background-secondary-alt);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
@@ -54751,13 +54751,13 @@ h3.improved__1689b:after {
     width: 100%
 }
 
-.container_f18f64,
-.image_f18f64 {
+.container_bb8774,
+.image_bb8774 {
     display: flex;
     overflow: hidden
 }
 
-.image_f18f64 {
+.image_bb8774 {
     align-items: center;
     background-color: var(--brand-experiment);
     border-radius: 100%;
@@ -54765,13 +54765,13 @@ h3.improved__1689b:after {
     justify-content: center
 }
 
-.image_f18f64,
-.image_f18f64 img {
+.image_bb8774,
+.image_bb8774 img {
     height: 80px;
     width: 80px
 }
 
-.description_f18f64 {
+.description_bb8774 {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     display: -webkit-box;
@@ -54781,58 +54781,58 @@ h3.improved__1689b:after {
     width: 100%
 }
 
-.card_f18f64 {
+.card_bb8774 {
     background-color: var(--background-secondary-alt);
     gap: 10px;
     padding: 16px
 }
 
-.body_f18f64,
-.card_f18f64 {
+.body_bb8774,
+.card_bb8774 {
     align-items: center;
     display: flex;
     flex-direction: column
 }
 
-.body_f18f64 {
+.body_bb8774 {
     align-self: stretch;
     gap: 16px
 }
 
-.purchaseBtn_f18f64 {
+.purchaseBtn_bb8774 {
     width: 100%
 }
 
-.benefits_f18f64 {
+.benefits_bb8774 {
     background-color: var(--background-base-lower);
     flex-grow: 1;
     padding: 16px
 }
 
-.benefitsContainer_f18f64 {
+.benefitsContainer_bb8774 {
     gap: 24px
 }
 
-.benefitsContainer_f18f64,
-.benefitsList_f18f64 {
+.benefitsContainer_bb8774,
+.benefitsList_bb8774 {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
     flex-direction: column
 }
 
-.benefitsList_f18f64 {
+.benefitsList_bb8774 {
     gap: 12px
 }
 
-.benefitsBenefit_f18f64 {
+.benefitsBenefit_bb8774 {
     align-items: center;
     align-self: stretch;
     display: flex;
     gap: 16px
 }
 
-.cardBenefit_f18f64 {
+.cardBenefit_bb8774 {
     display: flex;
     gap: 16px;
     width: 100%
@@ -54840,19 +54840,19 @@ h3.improved__1689b:after {
 
 @value iconSize: 24px;
 
-.cardBenefitIcon_f18f64 {
+.cardBenefitIcon_bb8774 {
     font-size: 24px;
     height: 24px;
     width: 24px
 }
 
-.cardBenefitIcon_f18f64 img {
+.cardBenefitIcon_bb8774 img {
     height: 24px;
     object-fit: cover;
     width: 24px
 }
 
-.benefitsSummary_f18f64 {
+.benefitsSummary_bb8774 {
     align-items: center;
     align-self: stretch;
     background: var(--background-base-lowest);
@@ -54862,13 +54862,13 @@ h3.improved__1689b:after {
     padding: 16px
 }
 
-.hoverCard__8e5ca {
+.hoverCard_fdda30 {
     cursor: pointer;
     transition: box-shadow, transform .2s ease
 }
 
-.hoverCard__8e5ca:focus-within,
-.hoverCard__8e5ca:hover {
+.hoverCard_fdda30:focus-within,
+.hoverCard_fdda30:hover {
     box-shadow: var(--shadow-high);
     transform: translateY(-4px)
 }
@@ -61454,7 +61454,7 @@ html .progress__61462 {
     width: 16px
 }
 
-.container__5acc9 {
+.container__96554 {
     align-items: center;
     background: var(--background-base-lowest);
     border-radius: 12px;
@@ -61463,7 +61463,7 @@ html .progress__61462 {
     padding: 2px 8px
 }
 
-.containerScrollGradient__28775 {
+.containerScrollGradient__956c6 {
     background: linear-gradient(0deg, var(--background-base-low) 0, transparent 100%);
     bottom: 52px;
     height: 52px;
@@ -61475,7 +61475,7 @@ html .progress__61462 {
     width: 100%
 }
 
-.containerScrollGradient__28775[data-shown=true] {
+.containerScrollGradient__956c6[data-shown=true] {
     opacity: 1
 }
 
@@ -61512,14 +61512,14 @@ html .progress__61462 {
     margin-top: 8px
 }
 
-.container__90b74 {
+.container__8823a {
     background: var(--background-base-lower);
     box-sizing: border-box;
     padding-bottom: 24px;
     position: relative
 }
 
-.header__90b74 {
+.header__8823a {
     align-items: center;
     background-color: var(--background-base-lowest);
     display: flex;
@@ -61530,7 +61530,7 @@ html .progress__61462 {
     position: relative
 }
 
-.headerBackground__90b74 {
+.headerBackground__8823a {
     --custom-overlay-color: hsl(var(--primary-730-hsl)/0.9);
     background-image: linear-gradient(var(--custom-overlay-color), var(--custom-overlay-color)), var(--custom-background-url);
     background-position: 50%;
@@ -61545,11 +61545,11 @@ html .progress__61462 {
     width: 120%
 }
 
-.theme-light .headerBackground__90b74 {
+.theme-light .headerBackground__8823a {
     --custom-overlay-color: hsl(var(--white-500-hsl)/0.3)
 }
 
-.headerImage__90b74 {
+.headerImage__8823a {
     align-items: center;
     border-radius: 8px;
     display: flex;
@@ -61562,39 +61562,39 @@ html .progress__61462 {
     z-index: 1
 }
 
-.headerImage__90b74>img {
+.headerImage__8823a>img {
     border-radius: 8px;
     box-shadow: var(--shadow-high);
     max-height: 100%;
     max-width: 100%
 }
 
-.scroller__90b74 {
+.scroller__8823a {
     height: 100%;
     scrollbar-width: thin
 }
 
-.scrollContent__90b74 {
+.scrollContent__8823a {
     display: flex;
     flex-direction: column;
     padding-bottom: 32px
 }
 
-.content__90b74 {
+.content__8823a {
     padding: 0 16px
 }
 
-.details__90b74 {
+.details__8823a {
     gap: 8px
 }
 
-.benefits__90b74,
-.details__90b74 {
+.benefits__8823a,
+.details__8823a {
     display: flex;
     flex-direction: column
 }
 
-.benefits__90b74 {
+.benefits__8823a {
     align-items: flex-start;
     border-top: 1px solid var(--background-modifier-selected);
     gap: 16px;
@@ -61602,7 +61602,7 @@ html .progress__61462 {
     padding-top: 16px
 }
 
-.description__90b74 {
+.description__8823a {
     white-space: break-spaces
 }
 
