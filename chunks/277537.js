@@ -1,5 +1,6 @@
 n.d(t, {
-    PO: () => o,
+    PO: () => s,
+    vE: () => o,
     yI: () => a,
 });
 var r = n(818083),
@@ -19,5 +20,8 @@ let a = (0, r.B)({
     ],
 });
 function o(e) {
+    return a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;
+}
+function s(e) {
     return a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
 }

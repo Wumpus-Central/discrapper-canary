@@ -7,6 +7,7 @@ n.d(t, {
     iB: () => y,
     jV: () => I,
     k0: () => C,
+    lW: () => R,
     lx: () => b,
     m4: () => v,
     nE: () => N,
@@ -97,4 +98,5 @@ let d = 60,
         if (o.Z.getAreLinkedUsersProcessed()) return o.Z.getLinkedUsers();
         a.ZP.fetchLinkedUsers();
     },
-    N = (e, t) => ((0, s.PO)("family_center_activity_card") ? t : e);
+    N = (e, t) => ((0, s.PO)("family_center_activity_card") ? t : e),
+    R = (e, t) => ((0, s.vE)("family_center_activity_card") ? t : e);
