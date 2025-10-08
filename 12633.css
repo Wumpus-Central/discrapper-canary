@@ -34780,6 +34780,11 @@ screen and (max-width:485px) {
     width: 66px
 }
 
+.icon__9f2f4.large__9f2f4 {
+    height: 128px;
+    width: 128px
+}
+
 .container__9e80c {
     display: flex
 }
@@ -34832,7 +34837,7 @@ screen and (max-width:485px) {
 }
 
 .benefit__4328f {
-    background-color: var(--background-base-lower);
+    background-color: var(--background-mod-subtle);
     border-radius: 8px;
     padding: 16px
 }
