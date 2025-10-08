@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(129861),
     c = n(406943),
     u = n(385499),
-    d = n(181430),
+    d = n(386725),
     f = n(821795),
     _ = n(892567),
     p = n(172751),
@@ -18,90 +18,96 @@ var i = n(120356),
 function E(e) {
     let {
             user: t,
-            usernameIcon: n,
-            tags: i,
-            nickname: E,
-            nicknameIcons: b,
-            displayNameStyles: y = t.displayNameStyles,
-            pronouns: O,
-            className: v,
-            tagClassName: I,
-            isTryItOut: T,
-            onOpenProfile: S,
-            onClose: A,
-            nicknameVariant: C = "heading-lg/bold",
+            guildId: n,
+            usernameIcon: i,
+            tags: E,
+            nickname: b,
+            nicknameIcons: y,
+            pendingDisplayNameStyles: O,
+            pronouns: v,
+            className: I,
+            tagClassName: T,
+            isTryItOut: S,
+            onOpenProfile: A,
+            onClose: C,
+            nicknameVariant: N = "heading-lg/bold",
         } = e,
-        N = (e) =>
-            null == S
+        R = (e) =>
+            null == A
                 ? e
                 : (0, r.jsx)(s.kL8, {
-                      onClick: S,
+                      onClick: A,
                       className: g.clickableUsername,
                       "aria-label": m.intl.string(m.t["+Xp3ho"]),
                       children: e,
                   }),
-        R = null != O && O.length > 0,
-        P = (0, c.D)(t),
-        w = (0, d.Y)({ location: "UserProfileUsername" }) && null != y;
+        P = null != v && v.length > 0,
+        w = (0, c.D)(t),
+        D = (0, d.Z)({
+            userId: t.id,
+            guildId: n,
+            pendingDisplayNameStyles: O,
+        }),
+        L = null != D;
     return (0, r.jsxs)("div", {
-        className: a()(g.container, { [g.bot]: null != P }, v),
+        className: a()(g.container, { [g.bot]: null != w }, I),
         children: [
             (0, r.jsxs)("div", {
                 className: g.usernameRow,
                 children: [
-                    N(
-                        w
+                    R(
+                        L
                             ? (0, r.jsx)(s.Text, {
-                                  variant: C,
+                                  variant: N,
                                   children: (0, r.jsx)(_.Z, {
-                                      userName: E,
-                                      displayNameStyles: y,
+                                      userName: b,
+                                      displayNameStyles: D,
                                       effectDisplayType: f.F.ANIMATED,
                                       textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
                                       loop: !0,
                                       inProfile: !0,
-                                      shouldUnderlineOnHover: null != S,
+                                      shouldUnderlineOnHover: null != A,
                                   }),
                               })
                             : (0, r.jsx)(s.Text, {
                                   className: g.nickname,
-                                  variant: C,
-                                  children: E,
+                                  variant: N,
+                                  children: b,
                               }),
                     ),
-                    null != P &&
+                    null != w &&
                         (0, r.jsx)(u.Z, {
-                            type: P,
+                            type: w,
                             verified: t.isVerifiedBot(),
                         }),
-                    null != b &&
+                    null != y &&
                         (0, r.jsx)("div", {
                             className: g.nicknameIcons,
-                            children: b,
+                            children: y,
                         }),
                 ],
             }),
             (0, r.jsxs)("div", {
                 className: a()(g.tags, {
-                    [g.pronouns]: R,
-                    [g.bot]: null != P,
+                    [g.pronouns]: P,
+                    [g.bot]: null != w,
                 }),
                 children: [
                     !t.isProvisional &&
-                        N(
+                        R(
                             (0, r.jsx)(l.Z, {
                                 user: t,
-                                usernameIcon: n,
+                                usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: T,
-                                className: a()(g.userTag, I),
+                                forcePomelo: S,
+                                className: a()(g.userTag, T),
                                 usernameClass: g.userTagUsername,
                                 discriminatorClass: g.userTagDiscriminator,
                                 hideBotTag: !0,
                             }),
                         ),
-                    R &&
+                    P &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
@@ -113,21 +119,21 @@ function E(e) {
                                     text: m.intl.string(m.t.GI2A8P),
                                     delay: h.vB,
                                     children: (0, r.jsx)(s.Text, {
-                                        className: a()(g.pronounsText, I),
+                                        className: a()(g.pronounsText, T),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
-                                        children: O,
+                                        children: v,
                                     }),
                                 }),
                             ],
                         }),
                     (0, r.jsx)(p.ZP, {
                         userId: t.id,
-                        onClose: A,
+                        onClose: C,
                         containerClassName: g.guildTagContainer,
                         className: g.guildTag,
                     }),
-                    i,
+                    E,
                 ],
             }),
         ],

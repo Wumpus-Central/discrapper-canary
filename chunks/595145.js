@@ -261,6 +261,7 @@ function ea(e) {
                                                             children: [
                                                                 (0, l.jsx)(W.Z, {
                                                                     user: t,
+                                                                    guildId: ec,
                                                                     onClose: eg,
                                                                     nickname: O.ZP.useName(
                                                                         null == ew ? void 0 : ew.guildId,

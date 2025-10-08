@@ -1,19 +1,17 @@
-n.d(t, { Z: () => u });
-var r = n(951288),
-    i = n(442837),
-    a = n(696826),
-    o = n(181430),
-    s = n(720734),
-    l = n(594174),
-    c = n(51144);
-function u(e) {
+n.d(t, { Z: () => c });
+var a = n(951288),
+    r = n(442837),
+    i = n(696826),
+    l = n(720734),
+    s = n(594174),
+    o = n(51144);
+function c(e) {
     var t;
     let { nameplate: n } = e,
-        u = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        d = (0, o.Y)({ location: "AccountPreview" }),
-        f = null != (t = c.ZP.useName(u)) ? t : "";
-    return (0, r.jsx)(s.m, {
-        username: f,
+        c = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
+        d = null != (t = o.ZP.useName(c)) ? t : "";
+    return (0, a.jsx)(l.m, {
+        username: d,
         selfMute: !1,
         selfDeaf: !1,
         serverMute: !1,
@@ -21,8 +19,8 @@ function u(e) {
         suppress: !1,
         speaking: !1,
         streaming: !1,
-        status: a.Sk.ONLINE,
-        currentUser: u,
+        status: i.Sk.ONLINE,
+        currentUser: c,
         activities: [],
         applicationStream: void 0,
         userTag: "",
@@ -42,6 +40,5 @@ function u(e) {
         isQuestBarEmpty: !0,
         hasLoadedQuestBar: !0,
         isListenAlongVisible: !1,
-        isDisplayNameStylesEnabled: d,
     });
 }

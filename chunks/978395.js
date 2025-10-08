@@ -61,6 +61,7 @@ function M(e) {
         children: [
             (0, r.jsx)(I.Z, {
                 user: t,
+                guildId: null == j ? void 0 : j.id,
                 onOpenProfile: U,
                 onClose: B,
                 usernameIcon:

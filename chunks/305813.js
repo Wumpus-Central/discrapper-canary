@@ -1,55 +1,58 @@
-n.d(t, { Z: () => E }), n(388685);
-var o = n(951288),
-    l = n(647438),
+n.d(t, { Z: () => A }), n(388685);
+var l = n(951288),
+    o = n(647438),
     r = n(120356),
-    a = n.n(r),
-    i = n(442837),
+    i = n.n(r),
+    a = n(442837),
     s = n(481060),
     c = n(410030),
     d = n(22267),
-    u = n(786761),
-    p = n(3148),
-    m = n(739566),
-    f = n(753206),
-    g = n(678135),
-    h = n(643879),
-    x = n(687158),
-    _ = n(28660),
-    b = n(502762),
-    S = n(25990),
-    j = n(626135),
-    C = n(63063),
-    v = n(981631),
-    P = n(671955),
-    N = n(693450),
-    k = n(388032),
-    y = n(270816);
-function O(e) {
+    u = n(778825),
+    p = n(786761),
+    m = n(3148),
+    f = n(739566),
+    g = n(753206),
+    h = n(4242),
+    x = n(150039),
+    _ = n(678135),
+    b = n(643879),
+    S = n(687158),
+    C = n(28660),
+    j = n(502762),
+    v = n(25990),
+    P = n(626135),
+    N = n(63063),
+    k = n(981631),
+    y = n(671955),
+    O = n(693450),
+    T = n(388032),
+    E = n(270816);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            o = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (o = o.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            o.forEach(function (t) {
-                var o;
-                (o = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: o,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = o);
+                        : (e[t] = l);
             });
     }
     return e;
 }
-function T(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,8 +60,8 @@ function T(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var o = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, o);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -67,102 +70,121 @@ function T(e, t) {
         e
     );
 }
-function E(e) {
-    let { user: t, displayName: n, selectedFontId: r, selectedEffectId: E, selectedColors: R, onClose: L } = e,
-        A = (0, c.ZP)(),
-        I = (0, s.wjy)(A),
-        [w, B] = (0, l.useState)(I),
-        M = (0, x.ZP)(t.id, null),
-        { bannerSrc: Z } = (0, _.Z)({
-            displayProfile: M,
+function A(e) {
+    let {
+            user: t,
+            guild: n,
+            displayName: r,
+            selectedFontId: A,
+            selectedEffectId: L,
+            selectedColors: w,
+            onClose: B,
+        } = e,
+        Z = (0, c.ZP)(),
+        M = (0, s.wjy)(Z),
+        [G, Y] = (0, o.useState)(M),
+        H = (0, S.ZP)(t.id, null),
+        { bannerSrc: z } = (0, C.Z)({
+            displayProfile: H,
             size: 413,
             canAnimate: !1,
         }),
-        G = (0, i.cj)([S.Z], () => S.Z.getAllPending()),
-        Y = (0, h.SD)({
+        F = (0, a.cj)([v.Z, u.Z], () => (null == n ? v.Z.getAllPending() : u.Z.getAllPending())),
+        U = (0, b.SD)({
             userId: t.id,
-            image: G.pendingAvatar,
+            image: F.pendingAvatar,
         }),
-        H = w ? v.BRd.DARK : v.BRd.LIGHT;
-    ((I && w) || (!I && !w)) && (H = A);
-    let z = (0, l.useCallback)(() => {
-            j.default.track(v.rMx.DISPLAY_NAME_STYLES_CLOSED), L();
-        }, [L]),
-        F = (0, l.useCallback)((e) => {
-            B(e === v.BRd.DARK), j.default.track(v.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === v.BRd.DARK });
+        { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
+        V = null != K ? (0, h.Pb)(K) : void 0,
+        W = G ? k.BRd.DARK : k.BRd.LIGHT;
+    ((M && G) || (!M && !G)) && (W = Z);
+    let $ = (0, o.useCallback)(() => {
+            P.default.track(k.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
+        }, [B]),
+        J = (0, o.useCallback)((e) => {
+            Y(e === k.BRd.DARK), P.default.track(k.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === k.BRd.DARK });
         }, []),
-        U = (0, l.useMemo)(
+        Q = (0, o.useMemo)(
             () =>
-                T(O({}, (0, m.ij)(t, null)), {
-                    nick: n,
+                R(D({}, (0, f.ij)(t, null)), {
+                    nick: r,
                     displayNameStyles: {
-                        fontId: r,
-                        effectId: E,
-                        colors: R,
+                        fontId: A,
+                        effectId: L,
+                        colors: w,
                     },
                 }),
-            [t, r, E, R, n],
+            [t, A, L, w, r],
         );
-    return (0, o.jsxs)("div", {
-        className: y.previewSection,
+    return (0, l.jsxs)("div", {
+        className: E.previewSection,
         children: [
-            (0, o.jsx)(s.xBx, {
+            (0, l.jsx)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: y.sectionHeader,
-                children: (0, o.jsx)(s.olH, {
+                className: E.sectionHeader,
+                children: (0, l.jsx)(s.olH, {
                     "data-migration-pending": !0,
-                    onClick: z,
-                    innerClassName: y.closeButton,
+                    onClick: $,
+                    innerClassName: E.closeButton,
                 }),
             }),
-            null != Z &&
-                (0, o.jsx)(b.Z, {
+            null != z &&
+                (0, l.jsx)(j.Z, {
                     user: t,
-                    displayProfile: M,
-                    themeType: P.l.MODAL_V2,
-                    className: y.backgroundThemeContainer,
+                    displayProfile: H,
+                    themeType: y.l.MODAL_V2,
+                    className: E.backgroundThemeContainer,
                     forceUserTheme: !0,
-                    children: (0, o.jsx)("div", {
-                        className: y.bannerBackground,
-                        style: { backgroundImage: "url(".concat(Z, ")") },
+                    children: (0, l.jsx)("div", {
+                        className: E.bannerBackground,
+                        style: { backgroundImage: "url(".concat(z, ")") },
                     }),
                 }),
-            (0, o.jsx)(s.f6W, {
-                theme: H,
+            (0, l.jsx)(s.f6W, {
+                theme: W,
                 children: (e) =>
-                    (0, o.jsxs)("div", {
-                        className: a()(y.previewCards, e),
+                    (0, l.jsxs)("div", {
+                        className: i()(E.previewCards, e),
                         inert: !0,
                         children: [
-                            (0, o.jsx)(
-                                g.Z,
-                                T(O({ user: t }, G), {
-                                    pendingAvatar: Y,
-                                    pendingGlobalName: n,
-                                    pendingDisplayNameStyles: U.displayNameStyles,
-                                    canUsePremiumCustomization: !0,
-                                    disabledInputs: !0,
-                                    hideCustomStatus: !0,
-                                    hideBioSection: !0,
-                                    containerClassName: y.profile,
-                                    interactive: !1,
-                                    hideExampleButton: !0,
-                                }),
+                            (0, l.jsx)(
+                                _.Z,
+                                R(
+                                    D(
+                                        {
+                                            user: t,
+                                            guild: n,
+                                        },
+                                        F,
+                                    ),
+                                    {
+                                        pendingAvatar: U,
+                                        pendingGlobalName: r,
+                                        pendingDisplayNameStyles: Q.displayNameStyles,
+                                        canUsePremiumCustomization: !0,
+                                        disabledInputs: !0,
+                                        hideCustomStatus: !0,
+                                        hideBioSection: !0,
+                                        containerClassName: E.profile,
+                                        interactive: !1,
+                                        hideExampleButton: !0,
+                                    },
+                                ),
                             ),
-                            (0, o.jsx)(f.Z, {
-                                author: U,
-                                message: (0, u.e5)(
-                                    T(
-                                        O(
+                            (0, l.jsx)(g.Z, {
+                                author: Q,
+                                message: (0, p.e5)(
+                                    R(
+                                        D(
                                             {},
-                                            (0, p.ZP)({
+                                            (0, m.ZP)({
                                                 channelId: "1337",
-                                                content: k.intl.string(N.default.h5Cuen),
+                                                content: T.intl.string(O.default.h5Cuen),
                                             }),
                                         ),
                                         {
-                                            state: v.yb.SENT,
+                                            state: k.yb.SENT,
                                             id: "0",
                                         },
                                     ),
@@ -170,62 +192,64 @@ function E(e) {
                                 isGroupStart: !0,
                                 hideSimpleEmbedContent: !0,
                                 hideGuildTag: !0,
-                                className: y.chatMessage,
+                                className: E.chatMessage,
+                                previewGuildId: null == n ? void 0 : n.id,
                             }),
-                            (0, o.jsx)(d.Z, {
+                            (0, l.jsx)(d.Z, {
                                 user: t,
-                                nameplate: G.pendingNameplate,
-                                nameplateData: void 0 === G.pendingNameplate ? t.nameplate : void 0,
-                                pendingGlobalName: n,
-                                pendingDisplayNameStyles: U.displayNameStyles,
+                                guildId: null == n ? void 0 : n.id,
+                                nameplate: X,
+                                nameplateData: null == X ? (null != V ? V : q) : void 0,
+                                pendingGlobalName: r,
+                                pendingDisplayNameStyles: Q.displayNameStyles,
                                 isHighlighted: !0,
-                                className: y.nameplate,
+                                className: E.nameplate,
                             }),
                         ],
                     }),
             }),
-            (0, o.jsxs)("div", {
-                className: y.themeToggleSection,
+            (0, l.jsxs)("div", {
+                className: E.themeToggleSection,
                 children: [
-                    (0, o.jsx)(s.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: k.intl.format(N.default.prQba2, {
-                            helpArticleLink: C.Z.getArticleURL(v.BhN.DISPLAY_NAME_STYLES),
+                        children: T.intl.format(O.default.prQba2, {
+                            helpArticleLink: N.Z.getArticleURL(k.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, o.jsx)(D, {
-                        darkPreview: w,
-                        onToggleTheme: F,
+                    (0, l.jsx)(I, {
+                        darkPreview: G,
+                        onToggleTheme: J,
                     }),
                 ],
             }),
         ],
     });
 }
-function D(e) {
+function I(e) {
     let { darkPreview: t, onToggleTheme: n } = e,
-        l = t ? v.BRd.DARK : v.BRd.LIGHT;
-    return (0, o.jsx)(s.sY7, {
-        className: y.themeToggleControl,
-        optionClassName: y.themeToggleOption,
+        o = t ? k.BRd.DARK : k.BRd.LIGHT;
+    return (0, l.jsx)(s.sY7, {
+        className: E.themeToggleControl,
+        optionClassName: E.themeToggleOption,
         options: [
             {
                 name: "",
-                tooltip: k.intl.string(k.t.b8Cei4),
-                value: v.BRd.DARK,
+                tooltip: T.intl.string(T.t.b8Cei4),
+                value: k.BRd.DARK,
                 icon: s.Z6G,
-                className: l === v.BRd.DARK ? y.themeToggleOptionSelected : void 0,
+                className: o === k.BRd.DARK ? E.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: k.intl.string(k.t.K2sFfn),
-                value: v.BRd.LIGHT,
+                tooltip: T.intl.string(T.t.K2sFfn),
+                value: k.BRd.LIGHT,
                 icon: s.chG,
-                className: l === v.BRd.LIGHT ? y.themeToggleOptionSelected : void 0,
+                className: o === k.BRd.LIGHT ? E.themeToggleOptionSelected : void 0,
             },
         ],
-        value: l,
+        value: o,
         onChange: (e) => {
             let { value: t } = e;
             return n(t);

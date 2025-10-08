@@ -1,4 +1,4 @@
-n.d(t, { l: () => T });
+n.d(t, { l: () => A });
 var r = n(951288),
     i = n(647438),
     a = n(756715),
@@ -6,15 +6,16 @@ var r = n(951288),
     s = n(481060),
     l = n(100527),
     c = n(906732),
-    u = n(821795),
-    d = n(892567),
-    f = n(7284),
-    _ = n(402235),
-    p = n(670188),
-    h = n(592125),
-    m = n(91047),
-    g = n(392819);
-function E(e, t, n) {
+    u = n(386725),
+    d = n(821795),
+    f = n(892567),
+    _ = n(7284),
+    p = n(402235),
+    h = n(670188),
+    m = n(592125),
+    g = n(91047),
+    E = n(392819);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +56,22 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +79,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,69 +91,73 @@ function I(e, t) {
 function S(e, t) {
     return i.useCallback(
         (n) => {
-            let r = h.Z.getChannel(t);
-            null != r && null != e && (0, m.Pv)(n, e, r);
+            let r = m.Z.getChannel(t);
+            null != r && null != e && (0, g.Pv)(n, e, r);
         },
         [e, t],
     );
 }
-function T(e) {
+function A(e) {
     let {
             user: t,
             channelId: n,
-            guildId: h,
-            messageId: m,
-            stopPropagation: E = !1,
-            ariaLabel: y,
-            enableDisplayNameStyles: I = !1,
+            guildId: m,
+            messageId: g,
+            stopPropagation: b = !1,
+            ariaLabel: O,
+            enableDisplayNameStyles: T = !1,
         } = e,
-        T = i.useRef(null),
-        { analyticsLocations: A } = (0, c.ZP)(l.Z.USERNAME),
-        C = (0, _.ZP)(h, null == t ? void 0 : t.id),
-        N = (0, f.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles }),
-        R = S(t, n),
-        P = i.useContext(o.d);
+        A = i.useRef(null),
+        { analyticsLocations: C } = (0, c.ZP)(l.Z.USERNAME),
+        N = (0, p.ZP)(m, null == t ? void 0 : t.id),
+        R = (0, u.Z)({
+            userId: null == t ? void 0 : t.id,
+            guildId: m,
+        }),
+        P = (0, _.j)({ displayNameStyles: R }),
+        w = S(t, n),
+        D = i.useContext(o.d);
     return (
-        (0, g.Z)({
-            subscribeToGroupId: m,
+        (0, E.Z)({
+            subscribeToGroupId: g,
             authorId: null == t ? void 0 : t.id,
-            shouldSubscribe: I && (null == t ? void 0 : t.displayNameStyles) != null && null == h,
+            shouldSubscribe: T && null != R && null == m,
         }),
         i.useCallback(
             (e) => (i, o) => {
                 let l = null == e ? void 0 : e.colorStrings,
-                    f = C && null != l && null != l.primaryColor && null != l.secondaryColor,
+                    u = N && null != l && null != l.primaryColor && null != l.secondaryColor,
                     _ = (t, n) => {
                         var o, c, _;
-                        if (!I || (null == e ? void 0 : e.displayNameStyles) == null || null != h)
+                        if (!T || null == R || null != m)
                             return (0, r.jsx)(
                                 s.rz2,
-                                O(b({}, null != t ? t : {}), {
-                                    ref: T,
-                                    onContextMenu: R,
+                                v(y({}, null != t ? t : {}), {
+                                    ref: A,
+                                    onContextMenu: w,
                                     name: null != (c = (0, s.qgQ)(i)) ? c : "",
                                     colorString: null != (_ = null == e ? void 0 : e.colorString) ? _ : null,
                                     roleName: null == e ? void 0 : e.colorRoleName,
-                                    colorStrings: f ? l : null,
-                                    "aria-label": y,
-                                    className: N,
+                                    colorStrings: u ? l : null,
+                                    "aria-label": O,
+                                    className: P,
                                 }),
                             );
                         {
-                            let l =
-                                (null == P ? void 0 : P.animate) || (null == n ? void 0 : n.isShown)
-                                    ? u.F.ANIMATED
-                                    : u.F.PLAIN;
+                            let e =
+                                (null == D ? void 0 : D.animate) || (null == n ? void 0 : n.isShown)
+                                    ? d.F.ANIMATED
+                                    : d.F.PLAIN;
                             return (0, r.jsx)(
                                 a.Anchor,
-                                O(b({}, null != t ? t : {}), {
-                                    ref: T,
-                                    onContextMenu: R,
-                                    "aria-label": y,
-                                    children: (0, r.jsx)(d.Z, {
+                                v(y({}, null != t ? t : {}), {
+                                    ref: A,
+                                    onContextMenu: w,
+                                    "aria-label": O,
+                                    children: (0, r.jsx)(f.Z, {
                                         userName: null != (o = (0, s.qgQ)(i)) ? o : "",
-                                        displayNameStyles: null == e ? void 0 : e.displayNameStyles,
-                                        effectDisplayType: l,
+                                        displayNameStyles: R,
+                                        effectDisplayType: e,
                                         shouldUnderlineOnHover: !0,
                                         loop: !0,
                                     }),
@@ -160,27 +165,27 @@ function T(e) {
                             );
                         }
                     },
-                    g = (e) => (t) => {
-                        E && null != t && t.stopPropagation(), e(t);
+                    p = (e) => (t) => {
+                        b && null != t && t.stopPropagation(), e(t);
                     };
                 return (0, r.jsx)(
                     c.Gt,
                     {
-                        value: A,
+                        value: C,
                         children:
                             null != t
-                                ? (0, r.jsx)(p.Z, {
-                                      targetElementRef: T,
+                                ? (0, r.jsx)(h.Z, {
+                                      targetElementRef: A,
                                       user: t,
-                                      guildId: h,
+                                      guildId: m,
                                       channelId: n,
-                                      messageId: m,
+                                      messageId: g,
                                       roleId: null == e ? void 0 : e.colorRoleId,
                                       clickTrap: !0,
                                       children: (e, t) => {
                                           var { onClick: n } = e,
-                                              r = v(e, ["onClick"]);
-                                          return _(b({ onClick: g(n) }, r), t);
+                                              r = I(e, ["onClick"]);
+                                          return _(y({ onClick: p(n) }, r), t);
                                       },
                                   })
                                 : _(void 0, void 0),
@@ -188,7 +193,7 @@ function T(e) {
                     o,
                 );
             },
-            [A, t, n, h, m, R, E, y, C, N, null == P ? void 0 : P.animate, I],
+            [C, t, n, m, g, w, b, O, N, P, null == D ? void 0 : D.animate, R, T],
         )
     );
 }

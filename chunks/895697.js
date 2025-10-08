@@ -51,6 +51,7 @@ function R(e) {
         children: [
             (0, r.jsx)(E.Z, {
                 user: t,
+                guildId: null == P ? void 0 : P.id,
                 onOpenProfile: D,
                 nickname: M,
                 pronouns: null == R ? void 0 : R.pronouns,

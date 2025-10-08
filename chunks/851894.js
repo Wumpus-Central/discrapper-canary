@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(856768),
     w = n(981631),
     D = n(388032),
-    x = n(813709);
-function L(e, t, n) {
+    L = n(813709);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function j(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,7 +76,7 @@ function k(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,7 +106,7 @@ function G(e, t) {
 function B(e) {
     (0, l.ZDy)(async () => {
         let { default: t } = await n.e("84509").then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, j({ source: k(j({}, e), { page: w.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, M({ source: k(M({}, e), { page: w.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
 function Z(e) {
@@ -116,9 +116,9 @@ function Z(e) {
             let e = I.default.getCurrentUser();
             return o()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        L = (0, s.e7)([O.Z], () => !O.Z.isFetchingProfile(a.id, null == t ? void 0 : t.id)),
-        M = (0, s.e7)([v.Z], () => v.Z.hidePersonalInformation),
-        G = (0, s.cj)([C.Z], () => k(j({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        x = (0, s.e7)([O.Z], () => !O.Z.isFetchingProfile(a.id, null == t ? void 0 : t.id)),
+        j = (0, s.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        G = (0, s.cj)([C.Z], () => k(M({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: Z, pendingAvatar: F, pendingNameplate: V } = G,
         H = U(G, ["source", "pendingAvatar", "pendingNameplate"]),
         Y = (0, y.SD)({
@@ -140,9 +140,9 @@ function Z(e) {
                 });
         }, [Z]);
     let { enabled: z } = h.Z.useConfig({ location: "GuildIdentitySettingsPage" });
-    return M
+    return j
         ? (0, r.jsx)(u.Z, {})
-        : L
+        : x
           ? (0, r.jsxs)(_.Gt, {
                 value: n,
                 children: [
@@ -164,14 +164,14 @@ function Z(e) {
                                   (0, r.jsx)(E.Z, {
                                       profilePreviewTitle: (0, r.jsx)(l.X6q, {
                                           variant: "heading-md/medium",
-                                          className: x.profilePreviewTitle,
+                                          className: L.profilePreviewTitle,
                                           children: D.intl.formatToPlainString(D.t.Tc0slJ, {
                                               guildName: null == t ? void 0 : t.name,
                                           }),
                                       }),
                                       profilePreview: (0, r.jsx)(
                                           b.Z,
-                                          k(j({}, H), {
+                                          k(M({}, H), {
                                               pendingAvatar: Y,
                                               pendingDisplayNameStyles: K,
                                               user: a,
@@ -182,6 +182,7 @@ function Z(e) {
                                       ),
                                       nameplatePreview: z
                                           ? (0, r.jsx)(p.Z, {
+                                                pendingDisplayNameStyles: K,
                                                 user: a,
                                                 guildId: null == t ? void 0 : t.id,
                                                 nameplate: V,

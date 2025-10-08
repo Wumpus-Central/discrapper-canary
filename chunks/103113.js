@@ -2,11 +2,11 @@ n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    o = n(727637),
-    s = n(100527),
-    l = n(906732),
-    c = n(580552),
-    u = n(313201),
+    o = n(100527),
+    s = n(906732),
+    l = n(580552),
+    c = n(313201),
+    u = n(104505),
     d = n(680295),
     f = n(5192),
     _ = n(785717),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(544989),
     S = n(671955),
     A = n(388032),
-    C = n(593540);
+    C = n(116649);
 function N(e, t, n) {
     return (
         t in e
@@ -63,13 +63,13 @@ function P(e) {
             roleId: D,
             openedAt: L,
             setPopoutRef: x,
-            closePopout: j,
-            disableUserProfileLink: M = __OVERLAY__,
+            closePopout: M,
+            disableUserProfileLink: j = __OVERLAY__,
             newAnalyticsLocations: k = [],
             disableAutoFocus: U = !1,
         } = e,
         G = (0, h.ZP)(n.id, N),
-        { analyticsLocations: B } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: B } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
         Z = (0, _.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -79,12 +79,12 @@ function P(e) {
             roleId: D,
         }),
         F = i.useRef(null),
-        V = (0, o.Z)(F);
+        V = (0, u.X)(F);
     i.useEffect(() => {
         null == x || x(null == F ? void 0 : F.current);
     }, [F, x]);
     let H = () => {
-            null == j || j(),
+            null == M || M(),
                 (0, m.openUserProfileModal)(
                     R(
                         {
@@ -95,7 +95,7 @@ function P(e) {
                     ),
                 );
         },
-        Y = !M && (0, c.Z)(n.id),
+        Y = !j && (0, l.Z)(n.id),
         W = () =>
             Y
                 ? (0, r.jsx)(a.sNh, {
@@ -116,9 +116,9 @@ function P(e) {
                   })
                 : null,
         K = U ? "div" : a.VqE,
-        z = (0, u.Dt)(),
+        z = (0, c.Dt)(),
         q = f.ZP.useName(N, P, n);
-    return (0, r.jsx)(l.Gt, {
+    return (0, r.jsx)(s.Gt, {
         value: B,
         children: (0, r.jsx)(_.Mt, {
             value: Z,
@@ -172,12 +172,13 @@ function P(e) {
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: n,
+                                        guildId: N,
                                         nickname: f.ZP.getName(N, P, n),
                                         onOpenProfile: Y ? H : void 0,
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: G,
                                             themeType: S.l.POPOUT,
-                                            onClose: j,
+                                            onClose: M,
                                         }),
                                     }),
                                     (0, r.jsx)(y.Z, {

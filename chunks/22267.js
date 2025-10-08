@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(181430),
+    f = n(386725),
     _ = n(821795),
     p = n(892567),
     h = n(172751),
@@ -63,12 +63,15 @@ let C = {
                       })
                     : void 0,
             z = C[k],
-            q = (0, f.Y)({ location: "NameplatePreview" }),
-            X = void 0 !== M ? M : null == t ? void 0 : t.displayNameStyles,
-            Q = null != a ? I.intl.formatToPlainString(I.t.YJig7O, { a11y_text: a.label }) : I.intl.string(I.t.SZeUdX);
+            q = (0, f.Z)({
+                userId: null == t ? void 0 : t.id,
+                guildId: n,
+                pendingDisplayNameStyles: M,
+            }),
+            X = null != a ? I.intl.formatToPlainString(I.t.YJig7O, { a11y_text: a.label }) : I.intl.string(I.t.SZeUdX);
         return (0, r.jsx)("div", {
             role: "img",
-            "aria-label": Q,
+            "aria-label": X,
             style: {
                 color: Z ? "white" : "black",
                 width: null != B ? "".concat(B, "px") : "100%",
@@ -115,12 +118,12 @@ let C = {
                                           }),
                                           name: (0, r.jsx)(p.Z, {
                                               userName: K,
-                                              displayNameStyles: X,
+                                              displayNameStyles: q,
                                               effectDisplayType: G ? _.F.PLAIN : _.F.ANIMATED,
                                               loop: !0,
                                           }),
                                           innerClassName: P,
-                                          withDisplayNameStyles: q && null != X,
+                                          withDisplayNameStyles: null != q,
                                       }),
                                   })
                                 : null,

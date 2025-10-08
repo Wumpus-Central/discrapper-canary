@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => X,
-    x: () => Z,
+    Z: () => Q,
+    x: () => F,
 }),
     n(388685);
 var r = n(951288),
@@ -19,23 +19,24 @@ var r = n(951288),
     m = n(693728),
     g = n(554300),
     E = n(558602),
-    b = n(821795),
-    y = n(892567),
-    O = n(7284),
-    v = n(172751),
-    I = n(736144),
-    T = n(884902),
-    S = n(113434),
-    A = n(553393),
-    C = n(518950),
-    N = n(624138),
-    R = n(51144),
-    P = n(981631),
-    w = n(674563),
-    D = n(524484),
-    L = n(388032),
-    x = n(894723);
-function M(e, t, n) {
+    b = n(386725),
+    y = n(821795),
+    O = n(892567),
+    v = n(7284),
+    I = n(172751),
+    T = n(736144),
+    S = n(884902),
+    A = n(113434),
+    C = n(553393),
+    N = n(518950),
+    R = n(624138),
+    P = n(51144),
+    w = n(981631),
+    D = n(674563),
+    L = n(524484),
+    x = n(388032),
+    M = n(894723);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +49,7 @@ function M(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,12 +60,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function U(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,22 +77,22 @@ function k(e, t) {
     }
     return n;
 }
-function U(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : U(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function G(e, t) {
+function B(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = B(e, t);
+        i = Z(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -99,7 +100,7 @@ function G(e, t) {
     }
     return i;
 }
-function B(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -108,49 +109,49 @@ function B(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
-    F = 3,
-    V = i.memo(function (e) {
+let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
+    V = 3,
+    H = i.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
             ? (0, r.jsx)(s.u, {
-                  __unsupportedReactNodeAsText: null != i ? i : L.intl.string(L.t.pclUFB),
+                  __unsupportedReactNodeAsText: null != i ? i : x.intl.string(x.t.pclUFB),
                   children: (0, r.jsx)(c.CEn, {
                       size: "md",
                       color: "currentColor",
-                      className: x.ownerIcon,
+                      className: M.ownerIcon,
                   }),
               })
             : null;
     }),
-    H = i.memo(function (e) {
+    Y = i.memo(function (e) {
         let { premiumSince: t, onClickPremiumGuildIcon: n } = e;
         return null == t
             ? null
             : (0, r.jsx)(s.u, {
-                  text: L.intl.formatToPlainString(L.t.IWkAq6, { date: t }),
+                  text: x.intl.formatToPlainString(x.t.IWkAq6, { date: t }),
                   asContainer: !0,
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
                       tabIndex: -1,
                       children: (0, r.jsx)(c.$Eu, {
                           color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                          className: x.premiumIcon,
+                          className: M.premiumIcon,
                       }),
                   }),
               });
     }),
-    Y = i.memo(function (e) {
+    W = i.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
-        let n = w.Hb.BOT;
+        let n = D.Hb.BOT;
         return (0, r.jsx)(h.Z, {
-            className: x.botTag,
+            className: M.botTag,
             type: n,
             verified: t.isVerifiedBot(),
         });
     }),
-    W = i.memo(function (e) {
+    K = i.memo(function (e) {
         let {
             user: t,
             isOwner: n,
@@ -161,20 +162,20 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(Y, { user: t }),
-                (0, r.jsx)(V, {
+                (0, r.jsx)(W, { user: t }),
+                (0, r.jsx)(H, {
                     isOwner: n,
                     lostPermissionTooltipText: i,
                     ownerTooltipText: a,
                 }),
-                (0, r.jsx)(H, {
+                (0, r.jsx)(Y, {
                     premiumSince: o,
                     onClickPremiumGuildIcon: s,
                 }),
             ],
         });
     }),
-    K = i.memo(function (e) {
+    z = i.memo(function (e) {
         let {
                 colorRoleName: t,
                 colorString: n,
@@ -185,15 +186,19 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 guildId: l,
                 isHovering: u,
             } = e,
-            d = (0, O.j)({ displayNameStyles: null == s ? void 0 : s.displayNameStyles }),
-            f = null == l && (null == s ? void 0 : s.displayNameStyles) != null;
+            d = (0, b.Z)({
+                userId: null == s ? void 0 : s.id,
+                guildId: l,
+            }),
+            f = (0, v.j)({ displayNameStyles: d }),
+            _ = null == l && null != d;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                f
-                    ? (0, r.jsx)(y.Z, {
+                _
+                    ? (0, r.jsx)(O.Z, {
                           userName: null != a ? a : "",
-                          displayNameStyles: s.displayNameStyles,
-                          effectDisplayType: u ? b.F.ANIMATED : b.F.STATIC,
+                          displayNameStyles: d,
+                          effectDisplayType: u ? y.F.ANIMATED : y.F.STATIC,
                           loop: !0,
                       })
                     : (0, r.jsx)(c.PUh, {
@@ -201,22 +206,22 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                           colorString: n,
                           colorStrings: i,
                           name: a,
-                          className: x.name,
-                          displayNameStylesFont: d,
+                          className: M.name,
+                          displayNameStylesFont: f,
                           animateRoleGradient: u,
                       }),
                 !o &&
-                    (0, r.jsx)(v.ZP, {
+                    (0, r.jsx)(I.ZP, {
                         primaryGuild: null == s ? void 0 : s.primaryGuild,
                         userId: null == s ? void 0 : s.id,
                         contextGuildId: l,
                         disableGuildProfile: !0,
-                        className: x.clanTag,
+                        className: M.clanTag,
                     }),
             ],
         });
     }),
-    z = i.memo(function (e) {
+    q = i.memo(function (e) {
         let {
                 user: t,
                 shouldAnimateStatus: n,
@@ -231,16 +236,16 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 typingRef: p,
                 currentUser: h,
             } = e,
-            m = a === P.Skl.OFFLINE,
+            m = a === w.Skl.OFFLINE,
             g = n ? c.Xo$ : c.qEK,
-            E = (0, u.Z)(i) ? P.Skl.STREAMING : a;
+            E = (0, u.Z)(i) ? w.Skl.STREAMING : a;
         return (
             (E = m ? void 0 : E),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(
                         g,
-                        U(j({}, o), {
+                        G(k({}, o), {
                             size: c.EFr.SIZE_32,
                             src: s,
                             isMobile: l,
@@ -252,16 +257,16 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             typingIndicatorRef: _,
                         }),
                     ),
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(T.Z, {
                         confettiSpawnRef: p,
                         shouldFire: d && null != h && t.id !== h.id,
-                        confettiLocation: D.Hn.MEMBER_USER,
+                        confettiLocation: L.Hn.MEMBER_USER,
                     }),
                 ],
             })
         );
     }),
-    q = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 hideSubtext: t,
                 hideTooltip: n = !1,
@@ -292,7 +297,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                 ? void 0
                                 : a.find((e) => {
                                       let { type: t } = e;
-                                      return t === P.IIU.CUSTOM_STATUS;
+                                      return t === w.IIU.CUSTOM_STATUS;
                                   }),
                         user: c,
                         channel: u,
@@ -313,7 +318,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   hideTooltip: n,
               });
     }),
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         let {
                 selected: t = !1,
                 colorString: n,
@@ -329,18 +334,18 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 activities: O,
                 applicationStream: v,
                 status: I,
-                shouldAnimateStatus: N = !1,
-                isMobile: w,
+                shouldAnimateStatus: T = !1,
+                isMobile: R,
                 premiumSince: D,
                 channel: L,
-                guildId: M,
-                className: k,
-                nameplate: B,
+                guildId: x,
+                className: j,
+                nameplate: U,
                 hideClanTag: Z = !1,
-                hideSubtext: V = !1,
+                hideSubtext: F = !1,
                 hideTooltip: H = !1,
                 onMouseDown: Y,
-                onKeyDown: X,
+                onKeyDown: W,
                 onClick: Q,
                 onContextMenu: J,
                 onClickPremiumGuildIcon: $,
@@ -354,7 +359,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 ref: es,
             } = e,
             el = null == b ? void 0 : b.id,
-            ec = R.ZP.useName(b),
+            ec = P.ZP.useName(b),
             eu = i.useRef(null),
             ed = null != es ? es : eu,
             [ef, e_] = i.useState(!1),
@@ -362,7 +367,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             [em, eg] = i.useState(null),
             { voiceChannel: eE } = (0, _.Z)({
                 userId: el,
-                guildId: M,
+                guildId: x,
             }),
             { voiceActivityStatusEnabled: eb } = (0, d.U)({ location: "MemberListItem" }),
             ey = eb ? eE : void 0,
@@ -370,22 +375,22 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 avatarDecorationSrc: eO,
                 avatarSrc: ev,
                 eventHandlers: eI,
-            } = (0, C.Z)({
+            } = (0, N.Z)({
                 userId: el,
                 size: c.EFr.SIZE_32,
                 animateOnHover: !(t || ef),
-                guildId: M,
+                guildId: x,
             }),
             eT = null != eo ? eo : {},
             { onFocus: eS } = eT,
-            eA = G(eT, ["onFocus"]),
-            eC = (0, T.X7)(M, el, null != a ? a : null),
+            eA = B(eT, ["onFocus"]),
+            eC = (0, S.X7)(x, el, null != a ? a : null),
             [eN, eR] = i.useState(!1);
         i.useEffect(() => {
             t && eR(!1);
         }, [t]);
-        let eP = (0, S.fN)(O),
-            ew = (0, S.Wi)(eP, v, el) && t && !eN,
+        let eP = (0, A.fN)(O),
+            ew = (0, A.Wi)(eP, v, el) && t && !eN,
             eD = i.useCallback(() => {
                 e_(!0);
             }, []),
@@ -406,9 +411,9 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     null == eP
                         ? null
                         : (0, r.jsx)(
-                              A.Z,
-                              U(
-                                  j(
+                              C.Z,
+                              G(
+                                  k(
                                       {
                                           name: null != E ? E : ec,
                                           quest: eP,
@@ -425,7 +430,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == b
             ? (0, r.jsx)(m.Z, {
                   avatarSize: c.EFr.SIZE_32,
-                  className: x.placeholder,
+                  className: M.placeholder,
               })
             : (0, r.jsx)(c.yRy, {
                   targetElementRef: ed,
@@ -435,21 +440,21 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: c.yRy.Animation.NONE,
-                  spacing: -F,
+                  spacing: -V,
                   children: () =>
                       (0, r.jsx)(
                           g.Z,
-                          j(
+                          k(
                               {
                                   ref: ed,
                                   selected: t,
-                                  className: o()(x.member, k, {
-                                      [x.offline]: I === P.Skl.OFFLINE && !t,
-                                      [x.flatBottom]: ew,
+                                  className: o()(M.member, j, {
+                                      [M.offline]: I === w.Skl.OFFLINE && !t,
+                                      [M.flatBottom]: ew,
                                   }),
-                                  innerClassName: x.memberInner,
+                                  innerClassName: M.memberInner,
                                   onClick: Q,
-                                  onKeyDown: X,
+                                  onKeyDown: W,
                                   onMouseDown: Y,
                                   onContextMenu: J,
                                   onMouseEnter: eD,
@@ -459,51 +464,51 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   name:
                                       null == p
                                           ? (0, r.jsx)("span", {
-                                                className: x.username,
-                                                children: (0, r.jsx)(K, {
+                                                className: M.username,
+                                                children: (0, r.jsx)(z, {
                                                     colorRoleName: l,
                                                     colorString: null != n ? n : null,
                                                     name: null != E ? E : ec,
                                                     colorStrings: eC,
                                                     hideClanTag: Z,
                                                     user: b,
-                                                    guildId: M,
+                                                    guildId: x,
                                                     isHovering: ef,
                                                 }),
                                             })
                                           : (0, r.jsx)(s.u, {
                                                 text: p,
                                                 children: (0, r.jsx)("span", {
-                                                    className: o()(x.username, x.lostPermission),
-                                                    children: (0, r.jsx)(K, {
+                                                    className: o()(M.username, M.lostPermission),
+                                                    children: (0, r.jsx)(z, {
                                                         colorRoleName: l,
                                                         colorString: null != n ? n : null,
                                                         name: null != E ? E : ec,
                                                         colorStrings: eC,
                                                         hideClanTag: Z,
                                                         user: b,
-                                                        guildId: M,
+                                                        guildId: x,
                                                         isHovering: ef,
                                                     }),
                                                 }),
                                             }),
-                                  avatar: (0, r.jsx)(z, {
+                                  avatar: (0, r.jsx)(q, {
                                       user: b,
-                                      shouldAnimateStatus: N,
+                                      shouldAnimateStatus: T,
                                       activities: O,
                                       status: I,
                                       eventHandlers: eI,
                                       avatarSrc: ev,
-                                      isMobile: w,
+                                      isMobile: R,
                                       isTyping: h,
                                       avatarDecorationSrc: eO,
                                       handleSetTypingRef: ej,
                                       typingRef: em,
                                       currentUser: y,
                                   }),
-                                  nameplate: B,
-                                  subText: (0, r.jsx)(q, {
-                                      hideSubtext: V,
+                                  nameplate: U,
+                                  subText: (0, r.jsx)(X, {
+                                      hideSubtext: F,
                                       activities: O,
                                       status: I,
                                       applicationStream: v,
@@ -514,7 +519,7 @@ let Z = (0, N.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       quest: eP,
                                       hideTooltip: H,
                                   }),
-                                  decorators: (0, r.jsx)(W, {
+                                  decorators: (0, r.jsx)(K, {
                                       user: b,
                                       isOwner: u,
                                       lostPermissionTooltipText: p,
