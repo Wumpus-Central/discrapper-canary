@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__94da4",
+    settingsContainer: "settingsContainer__94da4",
     settingsHeroNoBackground: "settingsHeroNoBackground__94da4",
     noTopPaddingOverride: "noTopPaddingOverride__94da4",
     settingsHeroBogoHeight: "settingsHeroBogoHeight__94da4",

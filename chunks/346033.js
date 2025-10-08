@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(474936),
     L = n(981631),
     x = n(388032),
-    j = n(163594),
-    M = n(476284),
+    M = n(740150),
+    j = n(689095),
     k = n(865215);
 let U = (e) => {
         let { inOfferExperience: t } = e;
@@ -66,7 +66,7 @@ let U = (e) => {
             q(!0);
         }, []);
         let es = (0, r.jsx)("div", {
-            className: M.premiumTierCardsContainerSettings,
+            className: j.premiumTierCardsContainerSettings,
             children: (0, r.jsx)(l.$, {
                 innerRef: n,
                 onChange: (e) => H(e),
@@ -77,47 +77,48 @@ let U = (e) => {
                     tier0CTAButton: (0, r.jsx)(I.Z, {
                         showIcon: !1,
                         subscriptionTier: D.Si.TIER_0,
-                        className: j.subButton,
+                        className: M.subButton,
                         look: u.iL.OUTLINED,
                         color: u.Tt.WHITE,
-                        buttonShineClassName: j.buttonShine,
+                        buttonShineClassName: M.buttonShine,
                     }),
                     tier2CTAButton:
                         et === D.Si.TIER_0
                             ? (0, r.jsx)(I.Z, {
                                   showIcon: !1,
                                   subscriptionTier: D.Si.TIER_2,
-                                  className: j.subButton,
+                                  className: M.subButton,
                                   look: u.iL.OUTLINED,
                                   color: u.Tt.WHITE,
-                                  buttonShineClassName: j.buttonShine,
+                                  buttonShineClassName: M.buttonShine,
                               })
                             : (0, r.jsx)(I.Z, {
                                   color: u.Tt.BRAND_INVERTED,
                                   showIcon: !1,
                                   subscriptionTier: D.Si.TIER_2,
-                                  className: j.subButton,
+                                  className: M.subButton,
                                   hasActivePromotion: ei,
-                                  textOptions: { textClassName: j.subButtonText },
-                                  buttonShineClassName: j.buttonShine,
+                                  textOptions: { textClassName: M.subButtonText },
+                                  buttonShineClassName: M.buttonShine,
                               }),
                 }),
             }),
         });
         return (0, r.jsxs)("div", {
-            className: M.container,
+            className: j.container,
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, r.jsx)(A.Z, {
                     premiumSubscription: X,
-                    className: o()(M.existingSubscriberSpacing, { [M.zIndex1]: en }),
+                    className: o()(j.existingSubscriberSpacing, { [j.zIndex1]: en }),
                 }),
                 (0, r.jsx)(U, { inOfferExperience: en }),
                 (0, r.jsxs)("div", {
+                    className: o()({ [j.settingsContainer]: !en }),
                     children: [
                         null != ea &&
                             (0, r.jsx)(T.C, {
-                                className: M.giftPromoCard,
+                                className: j.giftPromoCard,
                                 config: ea,
                             }),
                         (0, r.jsx)(l.$, {
@@ -129,10 +130,10 @@ let U = (e) => {
                                 ref: a,
                                 subscriptionTier: $,
                                 className: o()({
-                                    [M.settingsHeroNoBackground]: en,
-                                    [M.trialMarketingMargin]: en,
-                                    [M.settingsHeroBogoHeight]: er,
-                                    [M.noTopPaddingOverride]: null != X,
+                                    [j.settingsHeroNoBackground]: en,
+                                    [j.trialMarketingMargin]: en,
+                                    [j.settingsHeroBogoHeight]: er,
+                                    [j.noTopPaddingOverride]: null != X,
                                 }),
                                 isDarkMode: B,
                             }),
@@ -140,15 +141,15 @@ let U = (e) => {
                     ],
                 }),
                 es,
-                (0, r.jsx)(R.Z, { className: M.perkCardsContainerSpacingSettings }),
+                (0, r.jsx)(R.Z, { className: j.perkCardsContainerSpacingSettings }),
                 (0, r.jsx)("div", {
-                    className: M.planComparisonTableContainer,
+                    className: j.planComparisonTableContainer,
                     children: (0, r.jsx)(w.Z, {
-                        className: M.planComparisonTable,
+                        className: j.planComparisonTable,
                         hideCTAs: !0,
                     }),
                 }),
-                (0, r.jsx)("div", { className: M.footerSpacing }),
+                (0, r.jsx)("div", { className: j.footerSpacing }),
                 (0, r.jsx)(P.Z, {
                     isVisible: K && z,
                     subscriptionTier: $,
@@ -165,12 +166,12 @@ let U = (e) => {
                     },
                     children: (0, r.jsx)("div", {
                         ref: C,
-                        className: M.bottomOfPageVisibilitySensor,
+                        className: j.bottomOfPageVisibilitySensor,
                     }),
                 }),
                 (0, r.jsx)("img", {
                     src: k,
-                    className: M.bottomIllustration,
+                    className: j.bottomIllustration,
                     width: 112,
                     height: 85,
                     alt: x.intl.string(x.t.X4IxWF),
