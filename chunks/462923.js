@@ -1,32 +1,33 @@
-t.d(n, { ZP: () => D }), t(388685);
+t.d(n, { ZP: () => R }), t(388685);
 var r = t(951288),
     a = t(647438),
     i = t(120356),
-    o = t.n(i),
+    s = t.n(i),
     l = t(660815),
-    s = t(442837),
+    o = t(442837),
     c = t(704215),
-    d = t(481060),
-    u = t(243778),
-    m = t(690221),
-    g = t(77498),
-    b = t(572004),
-    f = t(823379),
-    x = t(49012),
-    p = t(639777),
-    v = t(744993),
-    j = t(310978),
-    _ = t(450403),
-    h = t(444083),
-    y = t(943970),
+    d = t(681715),
+    u = t(481060),
+    m = t(243778),
+    g = t(690221),
+    b = t(77498),
+    f = t(572004),
+    x = t(823379),
+    p = t(49012),
+    v = t(639777),
+    j = t(744993),
+    _ = t(310978),
+    h = t(450403),
+    y = t(444083),
+    C = t(943970),
     O = t(998964),
-    C = t(340887),
-    I = t(408629),
-    N = t(921944),
-    P = t(401561),
-    S = t(388032),
-    T = t(842788);
-function w(e) {
+    I = t(340887),
+    N = t(408629),
+    P = t(921944),
+    S = t(401561),
+    T = t(388032),
+    w = t(842788);
+function k(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -51,29 +52,14 @@ function w(e) {
     }
     return e;
 }
-function k(e) {
-    return (0, r.jsx)(
-        d.zxk,
-        w(
-            {
-                fullWidth: !0,
-                text: S.intl.string(P.default.NHwQ0N),
-                variant: "secondary",
-            },
-            e,
-        ),
-    );
-}
 function E(e) {
     return (0, r.jsx)(
-        d.zxk,
-        w(
+        u.zxk,
+        k(
             {
                 fullWidth: !0,
-                text: S.intl.string(P.default["jO3u+/"]),
+                text: T.intl.string(S.default.NHwQ0N),
                 variant: "secondary",
-                icon: d.Gr1,
-                iconPosition: "end",
             },
             e,
         ),
@@ -81,12 +67,14 @@ function E(e) {
 }
 function Z(e) {
     return (0, r.jsx)(
-        d.zxk,
-        w(
+        u.zxk,
+        k(
             {
                 fullWidth: !0,
-                text: S.intl.string(P.default["0TMXHh"]),
-                variant: "primary",
+                text: T.intl.string(S.default["jO3u+/"]),
+                variant: "secondary",
+                icon: u.Gr1,
+                iconPosition: "end",
             },
             e,
         ),
@@ -94,57 +82,70 @@ function Z(e) {
 }
 function G(e) {
     return (0, r.jsx)(
-        d.zxk,
-        w(
+        u.zxk,
+        k(
             {
                 fullWidth: !0,
-                text: S.intl.string(P.default.irvMjo),
+                text: T.intl.string(S.default["0TMXHh"]),
                 variant: "primary",
-                icon: d.Gr1,
-                iconPosition: "end",
             },
             e,
         ),
     );
 }
 function D(e) {
+    return (0, r.jsx)(
+        u.zxk,
+        k(
+            {
+                fullWidth: !0,
+                text: T.intl.string(S.default.irvMjo),
+                variant: "primary",
+                icon: u.Gr1,
+                iconPosition: "end",
+            },
+            e,
+        ),
+    );
+}
+function R(e) {
     let { guildId: n, instance: t } = e,
         i = (0, O.Z)(t),
-        [w, D] = (0, u.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        R = w !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        A = (0, s.e7)([g.Z], () => g.Z.getDetectableGame(t.gameId)),
-        V = a.useCallback(() => {
-            R || null == t.providerType
-                ? (0, C.Z)(n, t)
-                : (0, I.Z)({
+        [k, R] = (0, m.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        A = k !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        V = (0, o.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
+        L = a.useCallback(() => {
+            A || null == t.providerType
+                ? (0, I.Z)(n, t)
+                : (0, N.Z)({
                       provider: t.providerType,
                       onAccept: () => {
-                          D(N.L.TAKE_ACTION), (0, C.Z)(n, t);
+                          R(P.L.TAKE_ACTION), (0, I.Z)(n, t);
                       },
                   });
-        }, [t, R, D, n]),
-        B = a.useCallback(() => {
-            (0, b.JG)(null != i ? i : ""),
-                (0, d.showToast)((0, d.createToast)(S.intl.string(S.t["+5kSoa"]), d.ToastType.SUCCESS));
+        }, [t, A, R, n]),
+        W = a.useCallback(() => {
+            (0, f.JG)(null != i ? i : ""),
+                (0, u.showToast)((0, u.createToast)(T.intl.string(T.t["+5kSoa"]), u.ToastType.SUCCESS));
         }, [i]),
-        W = (0, y.Z)(t.gameId, "cover"),
-        L = (0, p.Z)(n),
-        M = a.useCallback(() => {
+        B = (0, C.Z)(t.gameId, "cover"),
+        M = (0, v.Z)(n),
+        U = a.useCallback(() => {
             var e;
-            (0, x.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
+            (0, p.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl]),
         z = a.useCallback(() => {
-            (0, v.WX)(n, t.id);
+            (0, j.WX)(n, t.id);
         }, [n, t.id]),
-        U = a.useMemo(() => {
+        F = a.useMemo(() => {
             switch (t.status) {
                 case l.V.SLEEPING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(k, { onClick: z }),
-                            L &&
-                                (0, r.jsx)(E, {
-                                    onClick: M,
+                            (0, r.jsx)(E, { onClick: z }),
+                            M &&
+                                (0, r.jsx)(Z, {
+                                    onClick: U,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -154,66 +155,79 @@ function D(e) {
                 case l.V.STARTING:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(Z, { onClick: V }),
-                            L &&
-                                (0, r.jsx)(E, {
-                                    onClick: M,
+                            (0, r.jsx)(G, { onClick: L }),
+                            M &&
+                                (0, r.jsx)(Z, {
+                                    onClick: U,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
+                case l.V.STARTUP_FAILED:
                 case l.V.MISSING_STOCK:
-                    return L
-                        ? (0, r.jsx)(G, { onClick: M })
-                        : (0, r.jsx)(Z, {
-                              onClick: V,
+                    return M
+                        ? (0, r.jsx)(D, { onClick: U })
+                        : (0, r.jsx)(G, {
+                              onClick: L,
                               disabled: !0,
                           });
                 case l.V.DELETED:
-                case l.V.STARTUP_FAILED:
-                    return L
-                        ? (0, r.jsx)(E, {
-                              onClick: M,
+                    return M
+                        ? (0, r.jsx)(Z, {
+                              onClick: U,
                               disabled: null == t.gameServerPanelUrl,
                           })
-                        : (0, r.jsx)(Z, {
-                              onClick: V,
+                        : (0, r.jsx)(G, {
+                              onClick: L,
                               disabled: !0,
                           });
                 default:
                     return null;
             }
-        }, [t, V, L, M, z]),
-        F = a.useMemo(() => {
+        }, [t, L, M, U, z]),
+        K = a.useMemo(() => {
             if (null == t.gameConfig) return null;
-            let e = [t.gameConfig.type, t.gameConfig.version].filter(f.lm).join(" ");
+            let e = [t.gameConfig.type, t.gameConfig.version].filter(x.lm).join(" ");
             return "" === e ? null : e;
-        }, [t.gameConfig]);
-    return (0, r.jsxs)(_.Z, {
-        actions: U,
+        }, [t.gameConfig]),
+        X = a.useMemo(() => {
+            switch (t.status) {
+                case l.V.STARTING:
+                    if (null == t.gameServerPanelUrl) return T.intl.string(S.default.K59Dxc);
+                    return null;
+                case l.V.STARTUP_FAILED:
+                    return T.intl.string(M ? S.default.lpwWOD : S.default.pNWcub);
+                case l.V.MISSING_STOCK:
+                    return T.intl.string(M ? S.default.CksIra : S.default.pNWcub);
+                default:
+                    return null;
+            }
+        }, [t.status, t.gameServerPanelUrl, M]);
+    return (0, r.jsxs)(h.Z, {
+        actions: F,
         children: [
             (0, r.jsxs)("div", {
-                className: T.serverDetailsContainer,
+                className: w.serverDetailsContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: T.serverHeader,
+                        className: w.serverHeader,
                         children: [
                             (0, r.jsx)("img", {
-                                src: null != W ? W : "",
+                                src: null != B ? B : "",
                                 alt: "",
-                                className: T.gameImage,
+                                className: w.gameImage,
                             }),
                             (0, r.jsxs)("div", {
-                                className: T.serverInfo,
+                                className: w.serverInfo,
                                 children: [
-                                    (0, r.jsx)(d.X6q, {
+                                    (0, r.jsx)(u.X6q, {
                                         variant: "heading-sm/medium",
                                         children: t.name,
                                     }),
-                                    (0, r.jsx)(d.Text, {
+                                    (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-tertiary",
-                                        children: [null == A ? void 0 : A.name, F].filter(f.lm).join(" \u2022 "),
+                                        children: [null == V ? void 0 : V.name, K].filter(x.lm).join(" \u2022 "),
                                     }),
                                 ],
                             }),
@@ -221,17 +235,17 @@ function D(e) {
                     }),
                     (0, r.jsx)("div", {
                         children: (0, r.jsxs)("div", {
-                            className: T.detailsGrid,
+                            className: w.detailsGrid,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: T.detailItem,
+                                    className: w.detailItem,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: S.intl.string(P.default.X0IaiI),
+                                            children: T.intl.string(S.default.X0IaiI),
                                         }),
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
                                             children: ""
                                                 .concat(
@@ -247,101 +261,119 @@ function D(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.detailItem,
+                                    className: w.detailItem,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: S.intl.string(P.default["9pw/yM"]),
+                                            children: T.intl.string(S.default["9pw/yM"]),
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: T.serverIpContainer,
+                                            className: w.serverIpContainer,
                                             children:
                                                 null == i
-                                                    ? (0, r.jsx)(d.Text, {
+                                                    ? (0, r.jsx)(u.Text, {
                                                           variant: "text-sm/medium",
                                                           children: "\u2014",
                                                       })
-                                                    : R
+                                                    : A
                                                       ? (0, r.jsxs)(r.Fragment, {
                                                             children: [
-                                                                (0, r.jsx)(d.Text, {
+                                                                (0, r.jsx)(u.Text, {
                                                                     variant: "text-sm/medium",
                                                                     children: i,
                                                                 }),
-                                                                (0, r.jsx)(d.P3F, {
-                                                                    className: T.copyButton,
-                                                                    "aria-label": S.intl.string(S.t.OpuAlJ),
-                                                                    onClick: B,
-                                                                    children: (0, r.jsx)(d.TIy, { size: "sm" }),
+                                                                (0, r.jsx)(u.P3F, {
+                                                                    className: w.copyButton,
+                                                                    "aria-label": T.intl.string(T.t.OpuAlJ),
+                                                                    onClick: W,
+                                                                    children: (0, r.jsx)(u.TIy, { size: "sm" }),
                                                                 }),
                                                             ],
                                                         })
                                                       : null != t.providerType &&
-                                                        (0, r.jsx)(m.Z, {
+                                                        (0, r.jsx)(g.Z, {
                                                             onClick: () => {
-                                                                (0, I.Z)({
+                                                                (0, N.Z)({
                                                                     provider: t.providerType,
                                                                     onAccept: () => {
-                                                                        D(N.L.TAKE_ACTION), (0, C.Z)(n, t);
+                                                                        R(P.L.TAKE_ACTION), (0, I.Z)(n, t);
                                                                     },
                                                                 });
                                                             },
-                                                            children: S.intl.string(P.default.UwXK29),
+                                                            children: T.intl.string(S.default.UwXK29),
                                                         }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.detailItem,
+                                    className: w.detailItem,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: S.intl.string(P.default.MQQIu7),
+                                            children: T.intl.string(S.default.MQQIu7),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: T.statusContainer,
+                                            className: w.statusContainer,
                                             children: [
-                                                (0, r.jsx)("span", {
-                                                    className: o()(T.statusIndicator, null != t.status && T[t.status]),
-                                                }),
-                                                (0, r.jsx)(d.Text, {
+                                                t.status === l.V.STARTING
+                                                    ? (0, r.jsx)(u.$jN, {
+                                                          type: u.RAz.SPINNING_CIRCLE_SIMPLE,
+                                                          className: w.statusLoading,
+                                                          itemClassName: w.statusLoadingItem,
+                                                      })
+                                                    : (0, r.jsx)("span", {
+                                                          className: s()(
+                                                              w.statusIndicator,
+                                                              null != t.status && w[t.status],
+                                                          ),
+                                                      }),
+                                                (0, r.jsx)(u.Text, {
                                                     variant: "text-sm/medium",
                                                     children: (function (e) {
                                                         switch (e) {
                                                             case l.V.STARTING:
-                                                                return S.intl.string(P.default["7XF8pK"]);
+                                                                return T.intl.string(S.default["7XF8pK"]);
                                                             case l.V.STARTUP_FAILED:
-                                                                return S.intl.string(P.default["C/096+"]);
+                                                                return T.intl.string(S.default["C/096+"]);
                                                             case l.V.OFFLINE:
-                                                                return S.intl.string(P.default.Bz9gcH);
+                                                                return T.intl.string(S.default.Bz9gcH);
                                                             case l.V.ONLINE:
-                                                                return S.intl.string(P.default["7q4iGR"]);
+                                                                return T.intl.string(S.default["7q4iGR"]);
                                                             case l.V.DELETED:
-                                                                return S.intl.string(P.default["UvP/1N"]);
+                                                                return T.intl.string(S.default["UvP/1N"]);
                                                             case l.V.MISSING_STOCK:
-                                                                return S.intl.string(P.default.ssC3cX);
+                                                                return T.intl.string(S.default.ssC3cX);
                                                             case l.V.SLEEPING:
-                                                                return S.intl.string(P.default.PS8AMT);
+                                                                return T.intl.string(S.default.PS8AMT);
                                                             default:
                                                                 return "\u2014";
                                                         }
                                                     })(t.status),
                                                 }),
+                                                null != X &&
+                                                    (0, r.jsx)(d.u, {
+                                                        position: "top",
+                                                        text: X,
+                                                        children: (0, r.jsx)(u.idN, {
+                                                            className: w.statusTooltipIcon,
+                                                            size: "xs",
+                                                        }),
+                                                    }),
                                             ],
                                         }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.detailItem,
+                                    className: w.detailItem,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: S.intl.string(P.default.fqrxlJ),
+                                            children: T.intl.string(S.default.fqrxlJ),
                                         }),
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             variant: "text-sm/medium",
                                             children: null != t.regionName ? t.regionName : "\u2014",
                                         }),
@@ -352,17 +384,17 @@ function D(e) {
                     }),
                 ],
             }),
-            L &&
+            M &&
                 (0, r.jsx)("div", {
-                    className: T.overflowMenu,
-                    children: (0, r.jsx)(h.Z, {
+                    className: w.overflowMenu,
+                    children: (0, r.jsx)(y.Z, {
                         guildId: n,
                         instance: t,
                     }),
                 }),
             (0, r.jsx)("div", {
-                className: T.imageBackground,
-                children: (0, r.jsx)(j.M, { imageUrl: null != W ? W : "" }),
+                className: w.imageBackground,
+                children: (0, r.jsx)(_.M, { imageUrl: null != B ? B : "" }),
             }),
         ],
     });
