@@ -1,21 +1,24 @@
-n.d(t, { Z: () => d }), n(953529);
-var r = n(647438),
-    i = n(442837),
-    l = n(480916),
-    a = n(292263),
-    o = n(352138),
-    c = n(81643),
-    s = n(469775),
-    u = n(388032);
-let d = function (e, t) {
-    let { methods: n, loading: d } = (0, i.cj)([a.Z], () => ({
-            methods: a.Z.methods,
-            loading: a.Z.loading,
+n.d(t, { Z: () => u }), n(953529);
+var a = n(647438),
+    r = n(442837),
+    i = n(480916),
+    l = n(292263),
+    s = n(352138),
+    o = n(81643),
+    c = n(469775),
+    d = n(388032);
+let u = function (e, t) {
+    let { methods: n, loading: u } = (0, r.cj)([l.Z], () => ({
+            methods: l.Z.methods,
+            loading: l.Z.loading,
         })),
-        { initiateAgeVerification: f } = (0, c.WD)(e, !1, null, !0);
+        { initiateAgeVerification: m } = (0, o.WD)({
+            onComplete: e,
+            shouldShowExpressiveModal: !0,
+        });
     return (
-        r.useEffect(() => {
-            null == n && (0, o.J)();
+        a.useEffect(() => {
+            null == n && (0, s.J)();
         }, [n]),
         {
             ageVerificationMethods:
@@ -23,22 +26,22 @@ let d = function (e, t) {
                     ? void 0
                     : n
                           .map((e) => {
-                              let n = s.ed[e];
+                              let n = c.ed[e];
                               if (null == n) return null;
-                              let { title: r, description: i } = n;
+                              let { title: a, description: r } = n;
                               return {
                                   id: e,
-                                  title: u.intl.string(r),
-                                  description: u.intl.string(i),
+                                  title: d.intl.string(a),
+                                  description: d.intl.string(r),
                                   onClick: async (n) => {
-                                      (0, l.x3)(n, l.d_.EXPRESSIVE_PRIMARY, l.sU.METHOD_SELECT, e),
+                                      (0, i.x3)(n, i.d_.EXPRESSIVE_PRIMARY, i.sU.METHOD_SELECT, e),
                                           null == t || t(),
-                                          await f(l.cU.EXPRESSIVE_GET_STARTED, e);
+                                          await m(i.cU.EXPRESSIVE_GET_STARTED, e);
                                   },
                               };
                           })
                           .filter((e) => null != e),
-            loading: d,
+            loading: u,
         }
     );
 };

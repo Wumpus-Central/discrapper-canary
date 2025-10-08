@@ -1,42 +1,42 @@
-t.d(n, { default: () => E }), t(388685), t(953529);
-var r = t(951288),
-    i = t(647438),
-    o = t(772848),
-    l = t(793030),
-    a = t(704215),
-    c = t(481060),
-    s = t(243778),
-    d = t(690221),
-    u = t(138201),
-    x = t(420846),
-    b = t(63063),
-    m = t(168107),
-    f = t(480916),
-    _ = t(81643),
-    h = t(469775),
-    j = t(981631),
-    p = t(800530),
-    v = t(388032),
-    y = t(678189);
-let E = function (e) {
-    let { transitionState: n, entryPoint: t, onClose: E } = e,
-        [R, g] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        A = i.useRef(R),
-        [O, C] = (0, s.US)([R], void 0, !0),
-        { loading: T, initiateAgeVerification: I } = (0, _.WD)(E),
-        N = i.useMemo(() => (0, o.Z)(), []),
-        k = i.useRef(!1);
+n.d(t, { default: () => I }), n(388685), n(953529);
+var r = n(951288),
+    i = n(647438),
+    s = n(772848),
+    o = n(793030),
+    a = n(704215),
+    l = n(481060),
+    u = n(243778),
+    c = n(690221),
+    _ = n(138201),
+    E = n(420846),
+    A = n(63063),
+    R = n(168107),
+    d = n(480916),
+    p = n(81643),
+    x = n(469775),
+    T = n(981631),
+    f = n(800530),
+    M = n(388032),
+    C = n(889469);
+let I = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: I } = e,
+        [U, m] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        L = i.useRef(U),
+        [S, h] = (0, u.US)([U], void 0, !0),
+        { loading: G, initiateAgeVerification: N } = (0, p.WD)({ onComplete: I }),
+        O = i.useMemo(() => (0, s.Z)(), []),
+        b = i.useRef(!1);
     return (
         i.useEffect(() => {
-            A.current = O;
-        }, [O]),
+            L.current = S;
+        }, [S]),
         i.useLayoutEffect(
             () => () => {
-                if (k.current) return;
-                let e = A.current;
+                if (b.current) return;
+                let e = L.current;
                 null != e &&
-                    ((k.current = !0),
-                    x.Z.maybeOpenAgeVerificationUserFeedback({
+                    ((b.current = !0),
+                    E.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
                     }));
@@ -44,61 +44,61 @@ let E = function (e) {
             [],
         ),
         i.useEffect(() => {
-            (0, f.lA)(N, f.d_.PRIMARY, t);
-        }, [N, t]),
-        (0, r.jsxs)(l.Modal, {
-            transitionState: n,
-            onClose: E,
-            title: v.intl.string(v.t.JHNunp),
-            subtitle: v.intl.string(v.t["+BLIGh"]),
+            (0, d.lA)(O, d.d_.PRIMARY, n);
+        }, [O, n]),
+        (0, r.jsxs)(o.Modal, {
+            transitionState: t,
+            onClose: I,
+            title: M.intl.string(M.t.JHNunp),
+            subtitle: M.intl.string(M.t["+BLIGh"]),
             actions: [
                 {
-                    text: v.intl.string(v.t.SJMnkZ),
-                    loading: T,
-                    icon: c.Gr1,
+                    text: M.intl.string(M.t.SJMnkZ),
+                    loading: G,
+                    icon: l.Gr1,
                     iconPosition: "end",
                     onClick: async () => {
-                        (0, f.x3)(N, f.d_.PRIMARY, f.sU.GET_STARTED),
-                            g(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
-                            await I(f.cU.GET_STARTED_MODAL);
+                        (0, d.x3)(O, d.d_.PRIMARY, d.sU.GET_STARTED),
+                            m(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
+                            await N(d.cU.GET_STARTED_MODAL);
                     },
                 },
             ],
-            actionBarInput: (0, r.jsxs)(d.Z, {
+            actionBarInput: (0, r.jsxs)(c.Z, {
                 onClick: () => {
-                    m.Z.openUrl(b.Z.getArticleURL(j.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, f.x3)(N, f.d_.PRIMARY, f.sU.LEARN_MORE);
+                    R.Z.openUrl(A.Z.getArticleURL(T.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, d.x3)(O, d.d_.PRIMARY, d.sU.LEARN_MORE);
                 },
-                className: y.learnMoreButton,
+                className: C.learnMoreButton,
                 children: [
-                    v.intl.string(v.t["aA6q//"]),
-                    (0, r.jsx)(c.Gr1, {
+                    M.intl.string(M.t["aA6q//"]),
+                    (0, r.jsx)(l.Gr1, {
                         size: "xs",
                         color: "currentColor",
                     }),
                 ],
             }),
             children: [
-                (0, h.uH)(N).map((e, n) => {
-                    let { title: t, description: i } = e;
+                (0, x.uH)(O).map((e, t) => {
+                    let { title: n, description: i } = e;
                     return (0, r.jsx)(
-                        u.JZ,
+                        _.JZ,
                         {
-                            title: t,
+                            title: n,
                             description: i,
                             listType: "numbered",
-                            index: n,
+                            index: t,
                         },
-                        n,
+                        t,
                     );
                 }),
-                (0, r.jsx)(c.Text, {
+                (0, r.jsx)(l.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: y.requestContainer,
-                    children: v.intl.format(v.t.pJAxgY, {
+                    className: C.requestContainer,
+                    children: M.intl.format(M.t.pJAxgY, {
                         handleOnRequestHook: () => {
-                            m.Z.openUrl(p.sQ.APPEALS_LINK), (0, f.x3)(N, f.d_.PRIMARY, f.sU.MANUAL_REVIEW_REQUEST);
+                            R.Z.openUrl(f.sQ.APPEALS_LINK), (0, d.x3)(O, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
                         },
                     }),
                 }),

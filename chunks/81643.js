@@ -1,5 +1,5 @@
 n.d(t, {
-    AY: () => x,
+    AY: () => L,
     F5: () => D,
     Jm: () => T,
     L0: () => C,
@@ -95,46 +95,44 @@ function P() {
     );
 }
 function w(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        [s, u] = r.useState(!1),
-        d = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        { current: h } = r.useRef(null == d ? void 0 : d.ageVerificationStatus),
-        m = r.useCallback(() => {
+    let { onComplete: t, isRetry: n = !1, visibleContent: o = null, shouldShowExpressiveModal: s = !1 } = e,
+        [u, d] = r.useState(!1),
+        h = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        { current: m } = r.useRef(null == h ? void 0 : h.ageVerificationStatus),
+        g = r.useCallback(() => {
             a.Z.dispatch({
                 type: "CLOSE_AGE_VERIFICATION_MODAL",
-                status: h,
+                status: m,
             }),
-                t ||
+                n ||
                     c.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_intro_screen",
-                        visibleContent: n,
+                        visibleContent: o,
                     });
-        }, [h, t, n]);
+        }, [m, n, o]);
     return {
-        loading: s,
+        loading: u,
         initiateAgeVerification: r.useCallback(
-            async (t, n) => {
-                u(!0);
+            async (e, n) => {
+                d(!0);
                 try {
                     a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await (0, p.K)(n);
                     _.Z.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
-                        onComplete: e,
-                        onClose: m,
-                        onCancel: m,
-                        entryPoint: t,
-                        shouldShowExpressiveModal: o,
+                        onComplete: t,
+                        onClose: g,
+                        onCancel: g,
+                        entryPoint: e,
+                        shouldShowExpressiveModal: s,
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(E.wQ.TIGGER_PAWTECT_ERROR), m();
+                    l.Z.showFailedToast(E.wQ.TIGGER_PAWTECT_ERROR), g();
                 } finally {
-                    u(!1);
+                    d(!1);
                 }
             },
-            [e, m, o],
+            [t, g, s],
         ),
     };
 }
@@ -152,6 +150,6 @@ function D(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
-function x(e) {
+function L(e) {
     return null != e && h.dx.has(e);
 }

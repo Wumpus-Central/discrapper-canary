@@ -2,21 +2,24 @@ n.d(e, { default: () => b });
 var i = n(951288),
     r = n(647438),
     o = n(772848),
-    l = n(667202),
+    l = n(793030),
     s = n(481060),
     a = n(138201),
     c = n(63063),
     u = n(168107),
     d = n(480916),
     p = n(81643),
-    f = n(981631),
-    x = n(800530),
-    R = n(388032),
-    g = n(740076),
+    R = n(981631),
+    f = n(800530),
+    x = n(388032),
+    g = n(396723),
     E = n(736056);
 let b = function (t) {
     let { transitionState: e, entryPoint: n, onClose: b } = t,
-        { loading: m, initiateAgeVerification: O } = (0, p.WD)(b, !0),
+        { loading: m, initiateAgeVerification: O } = (0, p.WD)({
+            onComplete: b,
+            isRetry: !0,
+        }),
         _ = r.useMemo(() => (0, o.Z)(), []);
     r.useEffect(() => {
         (0, d.lA)(_, d.d_.RETRY, n);
@@ -24,21 +27,21 @@ let b = function (t) {
     let T = r.useMemo(
         () => [
             {
-                title: R.intl.string(R.t.FYkioq),
-                description: R.intl.string(R.t.xMfbR0),
-                buttonText: R.intl.string(R.t.RtOE1t),
+                title: x.intl.string(x.t.FYkioq),
+                description: x.intl.string(x.t.xMfbR0),
+                buttonText: x.intl.string(x.t.RtOE1t),
                 buttonLoading: m,
                 onButtonPress: () => {
                     O(d.cU.RETRY_MODAL), (0, d.x3)(_, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {
-                title: R.intl.string(R.t["LZO+HR"]),
-                description: R.intl.string(R.t.N2mHaG),
-                buttonText: R.intl.string(R.t["LZO+HR"]),
+                title: x.intl.string(x.t["LZO+HR"]),
+                description: x.intl.string(x.t.N2mHaG),
+                buttonText: x.intl.string(x.t["LZO+HR"]),
                 buttonLoading: m,
                 onButtonPress: () => {
-                    u.Z.openUrl(x.sQ.APPEALS_LINK), (0, d.x3)(_, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
+                    u.Z.openUrl(f.sQ.APPEALS_LINK), (0, d.x3)(_, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
                 },
             },
         ],
@@ -52,8 +55,8 @@ let b = function (t) {
             src: E.Z,
             type: "image",
         },
-        title: R.intl.string(R.t["5l3R/v"]),
-        subtitle: R.intl.string(R.t.O7SO0N),
+        title: x.intl.string(x.t["5l3R/v"]),
+        subtitle: x.intl.string(x.t.O7SO0N),
         children: (0, i.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 16,
@@ -63,7 +66,7 @@ let b = function (t) {
                     className: g.infoBox,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: R.intl.string(R.t.El4aXl),
+                    children: x.intl.string(x.t.El4aXl),
                 }),
                 T.map((t, e) =>
                     (0, i.jsx)(
@@ -99,9 +102,9 @@ let b = function (t) {
                 (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: R.intl.format(R.t["L+FgkZ"], {
+                    children: x.intl.format(x.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            u.Z.openUrl(c.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                            u.Z.openUrl(c.Z.getArticleURL(R.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                                 (0, d.x3)(_, d.d_.RETRY, d.sU.LEARN_MORE);
                         },
                     }),
