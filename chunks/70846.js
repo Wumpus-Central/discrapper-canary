@@ -1,57 +1,30 @@
-a.d(t, { default: () => d });
-var r = a(951288);
-a(647438);
-var s = a(481060),
-    l = a(313201),
-    n = a(426642),
-    i = a(388032),
-    o = a(997328);
-let d = (e) => {
-    let { transitionState: t, errors: a, onClose: d } = e,
-        c = (0, l.Dt)();
-    return (0, r.jsxs)(s.Y0X, {
-        transitionState: t,
-        "aria-labelledby": c,
-        parentComponent: "ImageInputUploadErrorModal",
-        children: [
-            (0, r.jsx)(s.xBx, {
-                separator: !1,
-                className: o.modalHeader,
-                children: (0, r.jsx)(s.olH, {
-                    onClick: d,
-                    className: o.closeButton,
-                }),
-            }),
-            (0, r.jsxs)(s.hzk, {
-                className: o.modalContent,
-                children: [
-                    (0, r.jsxs)(s.hjN, {
-                        className: o.header,
-                        children: [
-                            (0, r.jsx)(s.vwX, {
-                                id: c,
-                                className: o.title,
-                                children: i.intl.string(i.t.PanA4O),
-                            }),
-                            (0, r.jsx)(s.R94, {
-                                type: s.geA.DESCRIPTION,
-                                children: i.intl.string(i.t["8Ql1Aw"]),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)("div", {
-                        className: o.errors,
-                        children: (0, r.jsx)(s.Ttm, {
-                            children: a.map((e) => (0, r.jsx)(n.Z, { error: e }, e.filename)),
-                        }),
-                    }),
-                    (0, r.jsx)(s.zxk, {
-                        variant: "primary",
-                        text: i.intl.string(i.t["NX+WJC"]),
-                        onClick: d,
-                    }),
-                ],
-            }),
-        ],
+e.d(r, { default: () => l });
+var s = e(951288),
+    i = e(647438),
+    n = e(159691),
+    a = e(426642),
+    o = e(388032),
+    c = e(336774);
+let l = (t) => {
+    let { transitionState: r, errors: e, onClose: l } = t,
+        d = i.useMemo(
+            () => [
+                {
+                    variant: "secondary",
+                    text: o.intl.string(o.t["NX+WJC"]),
+                    onClick: l,
+                },
+            ],
+            [l],
+        );
+    return (0, s.jsx)(n.u_l, {
+        title: o.intl.string(o.t.AUIsQU),
+        transitionState: r,
+        onClose: l,
+        actions: d,
+        children: (0, s.jsx)("div", {
+            className: c.errors,
+            children: e.map((t) => (0, s.jsx)(a.Z, { error: t }, t.filename)),
+        }),
     });
 };
