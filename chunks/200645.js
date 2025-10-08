@@ -1,15 +1,17 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(481060),
     s = n(594190),
     l = n(865066),
-    c = n(358085),
-    u = n(998502),
-    d = n(388032),
-    f = n(761588);
-function _(e, t, n) {
+    c = n(63063),
+    u = n(358085),
+    d = n(998502),
+    f = n(981631),
+    _ = n(388032),
+    p = n(761588);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,63 +24,65 @@ function _(e, t, n) {
         e
     );
 }
-function p() {
+function m() {
     let e = (0, l.O9)(),
         [t, n] = i.useState(!1),
-        [c, u] = i.useState(() => (0, l.aL)()),
-        _ = (0, a.e7)([s.ZP], () => s.ZP.getInputServiceStatus()),
-        p = i.useCallback(async () => {
-            n(!0), c ? await (0, l.OK)("windows-settings") : await (0, l.sU)("windows-settings"), n(!1), u((0, l.aL)());
-        }, [c]);
+        [u, d] = i.useState(() => (0, l.aL)()),
+        h = (0, a.e7)([s.ZP], () => s.ZP.getInputServiceStatus()),
+        m = i.useCallback(async () => {
+            n(!0), u ? await (0, l.OK)("windows-settings") : await (0, l.sU)("windows-settings"), n(!1), d((0, l.aL)());
+        }, [u]);
     if (!e) return null;
-    let h = "running" === _.state;
+    let g = "running" === h.state;
     return (0, r.jsxs)("div", {
-        className: f.systemServiceContainer,
+        className: p.systemServiceContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: f.systemServiceTextContainer,
+                className: p.systemServiceTextContainer,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: d.intl.string(d.t["roHq8/"]),
+                        children: _.intl.string(_.t["roHq8/"]),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: d.intl.string(d.t.lYuubm),
+                        children: _.intl.format(_.t["8CAL+P"], {
+                            helpCenterLink: c.Z.getArticleURL(f.BhN.SYSTEM_SERVICE),
+                        }),
                     }),
-                    c
+                    u
                         ? (0, r.jsx)(o.Text, {
                               variant: "text-sm/normal",
-                              color: h ? "text-feedback-positive" : "text-feedback-warning",
-                              children: h
-                                  ? d.intl.string(d.t.KHVMkZ)
-                                  : d.intl.format(d.t["5Rlr0d"], { status: _.state }),
+                              color: g ? "text-feedback-positive" : "text-feedback-warning",
+                              children: g
+                                  ? _.intl.string(_.t.KHVMkZ)
+                                  : _.intl.format(_.t["5Rlr0d"], { status: h.state }),
                           })
                         : null,
                 ],
             }),
             (0, r.jsx)(o.zxk, {
-                variant: c ? "critical-secondary" : "primary",
+                variant: u ? "critical-secondary" : "primary",
                 loading: t,
-                onClick: p,
-                text: c ? d.intl.string(d.t.pAwbdH) : d.intl.string(d.t["1iI46O"]),
+                onClick: m,
+                text: u ? _.intl.string(_.t.pAwbdH) : _.intl.string(_.t["1iI46O"]),
             }),
         ],
     });
 }
-class h extends i.PureComponent {
+class g extends i.PureComponent {
     async componentDidMount() {
         this.setState({
-            openOnStartup: await u.ZP.getSetting("OPEN_ON_STARTUP", !0),
-            startMinimized: await u.ZP.getSetting("START_MINIMIZED", !1),
-            minimizeToTray: await u.ZP.getSetting("MINIMIZE_TO_TRAY", !0),
+            openOnStartup: await d.ZP.getSetting("OPEN_ON_STARTUP", !0),
+            startMinimized: await d.ZP.getSetting("START_MINIMIZED", !1),
+            minimizeToTray: await d.ZP.getSetting("MINIMIZE_TO_TRAY", !0),
         });
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            i = (0, c.isLinux)() ? d.intl.string(d.t["7pPjTU"]) : d.intl.string(d.t.ZkDZoq);
+            i = (0, u.isLinux)() ? _.intl.string(_.t["7pPjTU"]) : _.intl.string(_.t.ZkDZoq);
         return (0, r.jsx)(o.hjN, {
             tag: o.RB0.H1,
             title: i,
@@ -86,44 +90,44 @@ class h extends i.PureComponent {
                 gap: 24,
                 children: [
                     (0, r.jsx)(o.rsf, {
-                        label: d.intl.string(d.t.WQm4p6),
-                        description: d.intl.string(d.t["s/cQra"]),
+                        label: _.intl.string(_.t.WQm4p6),
+                        description: _.intl.string(_.t["s/cQra"]),
                         checked: e,
                         onChange: this.handleToggleOpenOnStartup,
                     }),
-                    (0, c.isWindows)()
+                    (0, u.isWindows)()
                         ? (0, r.jsx)(o.rsf, {
-                              label: d.intl.string(d.t.n7Yjen),
-                              description: d.intl.string(d.t.o2FSjI),
+                              label: _.intl.string(_.t.n7Yjen),
+                              description: _.intl.string(_.t.o2FSjI),
                               checked: !!e && t,
                               disabled: !e,
                               onChange: this.handleToggleStartMinimized,
                           })
                         : null,
                     (0, r.jsx)(o.rsf, {
-                        label: d.intl.string(d.t.abLFen),
-                        description: d.intl.string(d.t["mVuX+v"]),
+                        label: _.intl.string(_.t.abLFen),
+                        description: _.intl.string(_.t["mVuX+v"]),
                         checked: n,
                         onChange: this.handleToggleMinimizeToTray,
                     }),
-                    (0, r.jsx)(p, {}),
+                    (0, r.jsx)(m, {}),
                 ],
             }),
         });
     }
     constructor(e) {
         super(e),
-            _(this, "handleToggleOpenOnStartup", () => {
+            h(this, "handleToggleOpenOnStartup", () => {
                 let e = !this.state.openOnStartup;
-                this.setState({ openOnStartup: e }), u.ZP.send("TOGGLE_OPEN_ON_STARTUP", e);
+                this.setState({ openOnStartup: e }), d.ZP.send("TOGGLE_OPEN_ON_STARTUP", e);
             }),
-            _(this, "handleToggleStartMinimized", () => {
+            h(this, "handleToggleStartMinimized", () => {
                 let e = !this.state.startMinimized;
-                this.setState({ startMinimized: e }), u.ZP.send("TOGGLE_START_MINIMIZED", e);
+                this.setState({ startMinimized: e }), d.ZP.send("TOGGLE_START_MINIMIZED", e);
             }),
-            _(this, "handleToggleMinimizeToTray", () => {
+            h(this, "handleToggleMinimizeToTray", () => {
                 let e = !this.state.minimizeToTray;
-                this.setState({ minimizeToTray: e }), u.ZP.send("TOGGLE_MINIMIZE_TO_TRAY", e);
+                this.setState({ minimizeToTray: e }), d.ZP.send("TOGGLE_MINIMIZE_TO_TRAY", e);
             }),
             (this.state = {
                 openOnStartup: !0,
@@ -132,4 +136,4 @@ class h extends i.PureComponent {
             });
     }
 }
-let m = h;
+let E = g;
