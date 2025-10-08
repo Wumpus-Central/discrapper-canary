@@ -10,7 +10,7 @@ var s = n(120356),
     d = n(644646),
     u = n(46140),
     p = n(388032),
-    m = n(895758);
+    m = n(96656);
 let g = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: s, partnerBranding: g, useReducedMotion: f } = e,
         { status: h } = (0, c.n)({
@@ -20,8 +20,8 @@ let g = (e) => {
         x = null == h ? void 0 : h.progressBlur,
         _ = (null == h ? void 0 : h.label1) || (null == h ? void 0 : h.label2),
         b = null == h ? void 0 : h.shineWipe,
-        j = x ? 70 : 48,
-        v = x ? 12 : 8,
+        v = x ? 70 : 48,
+        j = x ? 12 : 8,
         C = x ? -74 : -48,
         y = x ? 0 : _ ? -4 : 6;
     return (0, r.jsxs)(r.Fragment, {
@@ -41,7 +41,7 @@ let g = (e) => {
                             }),
                             n.to({
                                 range: [0, 1],
-                                output: [1, 64 / j],
+                                output: [1, 64 / v],
                             }),
                         ],
                         (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
@@ -49,7 +49,7 @@ let g = (e) => {
                 },
                 children: (0, r.jsx)(d.Z, {
                     learnMoreStyle: "text",
-                    learnMoreFontSize: s ? (j / 64) * 12 : void 0,
+                    learnMoreFontSize: s ? (v / 64) * 12 : void 0,
                     quest: t,
                     questContent: l.jn.QUEST_BAR_V2,
                     location: u.dr.QUESTS_BAR,
@@ -57,10 +57,10 @@ let g = (e) => {
                     sourceQuestContent: l.jn.QUEST_BAR_V2,
                     showShine: !b,
                     style: {
-                        width: j,
-                        height: j,
-                        marginRight: v,
-                        borderRadius: (j / 64) * 8,
+                        width: v,
+                        height: v,
+                        marginRight: j,
+                        borderRadius: (v / 64) * 8,
                     },
                 }),
             }),
@@ -70,7 +70,7 @@ let g = (e) => {
                     [m.rewardHighlightLogoCTALabel]: _,
                 }),
                 style: {
-                    height: x ? j : void 0,
+                    height: x ? v : void 0,
                     transform: (0, a.to)(
                         [
                             n.to({

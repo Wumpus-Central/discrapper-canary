@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(755721),
@@ -8,18 +8,18 @@ var i = n(755721),
     o = n(769998),
     c = n(671066),
     d = n(273504),
-    u = n(464992);
-function m(e) {
+    u = n(75765);
+function g(e) {
     let { action: t, triggerType: n, toggled: a, onToggleAction: o } = e,
         c = (0, s.c)(t.type, t, n);
     if (null == c) return null;
-    let { headerText: d, descriptionText: m, icon: g } = c;
+    let { headerText: d, descriptionText: g, icon: m } = c;
     return (0, r.jsxs)("div", {
         className: u.actionContainer,
         children: [
             (0, r.jsx)("div", {
                 className: u.actionIconContainer,
-                children: (0, r.jsx)(g, {
+                children: (0, r.jsx)(m, {
                     size: "md",
                     color: "currentColor",
                     className: u.actionIcon,
@@ -35,7 +35,7 @@ function m(e) {
                     (0, r.jsx)(l.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: m,
+                        children: g,
                     }),
                 ],
             }),
@@ -51,7 +51,7 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { action: t, guildId: n, triggerType: i, toggled: l, onToggleAction: s } = e;
     switch (t.type) {
         case d.jj.FLAG_TO_CHANNEL:
@@ -77,7 +77,7 @@ function g(e) {
                 onToggleAction: s,
             });
         default:
-            return (0, r.jsx)(m, {
+            return (0, r.jsx)(g, {
                 action: t,
                 guildId: n,
                 toggled: l,

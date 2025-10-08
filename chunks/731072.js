@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(66544);
+    u = n(721257);
 function p(e) {
     let {
             integrations: t,

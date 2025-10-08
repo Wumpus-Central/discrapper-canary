@@ -12,12 +12,12 @@ var r = n(951288),
     c = n(313201),
     d = n(817460),
     u = n(723047),
-    m = n(528027),
-    g = n(686807),
+    g = n(528027),
+    m = n(686807),
     p = n(157018),
     f = n(828656),
     h = n(388032),
-    x = n(172931);
+    x = n(28742);
 function b(e) {
     let {
             guildId: t,
@@ -27,7 +27,7 @@ function b(e) {
             description: c,
             targetType: d,
             index: u,
-            dndName: g,
+            dndName: m,
             onEdit: p,
             onMove: b,
             disabled: j = !1,
@@ -48,7 +48,7 @@ function b(e) {
                 (0, r.jsxs)("div", {
                     className: x.emojiWrapper,
                     children: [
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(g.Z, {
                             guildId: t,
                             emojiId: n,
                             emojiName: l,
@@ -58,7 +58,7 @@ function b(e) {
                             (0, r.jsx)("div", {
                                 ref: v,
                                 className: x.dragIconWrapper,
-                                "data-dnd-name": g,
+                                "data-dnd-name": m,
                                 children: (0, r.jsx)(o.Vni, {
                                     size: "xs",
                                     color: "currentColor",
@@ -104,8 +104,8 @@ function b(e) {
 }
 function j(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
-        m = (0, c.Dt)(),
-        { isDragging: f } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
+        g = (0, c.Dt)(),
+        { isDragging: f } = (0, a.f)((e) => ({ isDragging: e.getItemType() === g })),
         h = (0, u.mY)();
     return 0 === t.length
         ? null
@@ -121,9 +121,9 @@ function j(e) {
                                   guildId: o,
                                   emojiId: e.emoji_id,
                                   emojiName: e.emoji_name,
-                                  title: (0, g.Z)(e),
+                                  title: (0, m.Z)(e),
                                   description: e.description,
-                                  targetType: m,
+                                  targetType: g,
                                   index: t,
                                   dndName: (0, p.Z)(e),
                                   onEdit: () => n(t),

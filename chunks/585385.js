@@ -8,8 +8,8 @@ var i = n(120356),
     o = n(948851),
     u = n(868728),
     d = n(388032),
-    c = n(451964),
-    g = n(197571);
+    c = n(869306),
+    g = n(10198);
 let h = (e) => {
     let {
             handleDone: t,
@@ -24,7 +24,7 @@ let h = (e) => {
             onSetInviteFlags: f,
         } = e,
         N = (0, a.ZP)(),
-        { maxAgeOptions: _, maxAge: j, maxUses: S, temporary: b, flags: E } = i;
+        { maxAgeOptions: S, maxAge: _, maxUses: j, temporary: b, flags: E } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(r.xBx, {
@@ -46,9 +46,9 @@ let h = (e) => {
             }),
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: h,
-                maxAgeOptions: _,
-                maxAge: j,
-                maxUses: S,
+                maxAgeOptions: S,
+                maxAge: _,
+                maxUses: j,
                 temporary: b,
                 onToggleTemporary: p,
                 onSelectMaxAge: v,

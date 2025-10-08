@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(699516),
     d = n(594174),
     u = n(556012),
-    m = n(388032),
-    g = n(464992);
+    g = n(388032),
+    m = n(75765);
 function p(e) {
     var t;
     let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
@@ -24,18 +24,18 @@ function p(e) {
     if (null == b) return null;
     let { headerText: v, descriptionText: C, icon: O } = b;
     return (0, r.jsxs)("div", {
-        className: g.actionContainer,
+        className: m.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: g.actionIconContainer,
+                className: m.actionIconContainer,
                 children: (0, r.jsx)(O, {
                     size: "md",
                     color: "currentColor",
-                    className: g.actionIcon,
+                    className: m.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: g.actionTextContainer,
+                className: m.actionTextContainer,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: "heading-sm/semibold",
@@ -51,13 +51,13 @@ function p(e) {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != _ && m.intl.format(m.t["8Sr/am"], { channelName: _ }),
+                                null != _ && g.intl.format(g.t["8Sr/am"], { channelName: _ }),
                                 (0, r.jsx)(s.P3F, {
                                     onClick: x(!0),
-                                    className: g.editChannel,
+                                    className: m.editChannel,
                                     tag: "span",
                                     role: "link",
-                                    children: m.intl.string(m.t["3gUsJS"]),
+                                    children: g.intl.string(g.t["3gUsJS"]),
                                 }),
                             ],
                         }),
@@ -67,7 +67,7 @@ function p(e) {
                 children: (0, r.jsx)(l.VL, {
                     checked: f,
                     onChange: x(!1),
-                    className: g.__invalid_actionCheckbox,
+                    className: m.__invalid_actionCheckbox,
                 }),
             }),
         ],

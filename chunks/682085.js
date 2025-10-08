@@ -15,21 +15,21 @@ var r = n(951288),
     m = n(430790),
     b = n(795990),
     _ = n(388032),
-    O = n(66582);
+    O = n(267233);
 function E() {
     let { trackUserProfileEditAction: e } = (0, p.KZ)(),
         t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: E, config: v } = (0, h.G)(),
-        { token: y, loading: I } = (0, c.o)(null == v ? void 0 : v.application_id),
+        { application: E, config: y } = (0, h.G)(),
+        { token: v, loading: I } = (0, c.o)(null == y ? void 0 : y.application_id),
         S = i.useMemo(
             () =>
-                (null == v ? void 0 : v.application_id) != null
+                (null == y ? void 0 : y.application_id) != null
                     ? new f.q({
                           type: l.l.APPLICATION,
-                          applicationId: v.application_id,
+                          applicationId: y.application_id,
                       })
                     : null,
-            [null == v ? void 0 : v.application_id],
+            [null == y ? void 0 : y.application_id],
         ),
         C = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
@@ -90,7 +90,7 @@ function E() {
             className: O.loading,
             children: (0, r.jsx)(s.$jN, {}),
         });
-    if (null == y) return (0, r.jsx)(b.Z, {});
+    if (null == v) return (0, r.jsx)(b.Z, {});
     let T = (0, r.jsxs)(s.Kqy, {
         gap: 4,
         className: O.header,

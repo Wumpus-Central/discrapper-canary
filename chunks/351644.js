@@ -31,14 +31,14 @@ var i = n(951288),
     T = n(981631),
     k = n(49898),
     A = n(388032),
-    D = n(81187),
+    D = n(280219),
     R = n(509399),
     L = n(790904),
     M = n(609182);
-function B(e, t) {
+function U(e, t) {
     return t.includes(e);
 }
-function U(e) {
+function B(e) {
     let { query: t, setQuery: n } = e,
         l = r.useCallback(
             (e) => {
@@ -129,7 +129,7 @@ function W(e) {
         }, [ei, ea, W, er, ed, eu]),
         ef = Object.values(G).length,
         eh = r.useMemo(() => {
-            let e = ef > 100 ? B : s();
+            let e = ef > 100 ? U : s();
             return Object.values(G).filter((t) => {
                 var n;
                 let { application: i } = t;
@@ -452,7 +452,7 @@ function W(e) {
                                             children: A.intl.string(A.t.pUBKho),
                                         }),
                                         ef > 4
-                                            ? (0, i.jsx)(U, {
+                                            ? (0, i.jsx)(B, {
                                                   query: et,
                                                   setQuery: en,
                                               })

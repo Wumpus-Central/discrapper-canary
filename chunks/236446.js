@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(390885),
     v = n(314897),
     b = n(896797),
-    j = n(954824),
-    I = n(781428),
+    I = n(954824),
+    j = n(781428),
     N = n(163671),
     S = n(423527),
     O = n(981631),
@@ -28,8 +28,8 @@ var r = n(951288),
     A = n(630724),
     T = n(436620),
     Z = n(388032),
-    P = n(160033),
-    R = n(197571);
+    P = n(858518),
+    R = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ c.ZP.initialize();
 class w extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            T.KO || j.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            T.KO || I.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
@@ -122,7 +122,7 @@ class w extends i.PureComponent {
             case y.Rj.RESOLVED:
                 if (n || !T.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
-                    return (0, r.jsx)(I.Z, {
+                    return (0, r.jsx)(j.Z, {
                         guildTemplate: e,
                         transitionTo: i,
                         location: l,

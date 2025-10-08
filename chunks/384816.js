@@ -20,10 +20,10 @@ var i = t(442837),
     b = t(179828),
     y = t(228168),
     I = t(388032),
-    Z = t(54966);
+    Z = t(438160);
 function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, subsection: N, onClose: T } = e,
-        { trackUserProfileAction: P } = (0, m.KZ)(),
+    let { user: n, currentUser: t, displayProfile: O, subsection: N, onClose: P } = e,
+        { trackUserProfileAction: T } = (0, m.KZ)(),
         A = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
         E = (0, s.Y)({ userId: n.id }),
         S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
@@ -93,7 +93,7 @@ function O(e) {
                                 applicationRoleConnection: e,
                                 locale: C,
                                 onApplicationClicked: () => {
-                                    P({ action: "PRESS_APP_CONNECTION" }), T();
+                                    T({ action: "PRESS_APP_CONNECTION" }), P();
                                 },
                                 selectedGuildId: null != A ? A : void 0,
                             },
@@ -108,7 +108,7 @@ function O(e) {
                     userId: n.id,
                     className: Z.note,
                     autoFocus: N === y.Tb.NOTE,
-                    onUpdate: () => P({ action: "SET_NOTE" }),
+                    onUpdate: () => T({ action: "SET_NOTE" }),
                 }),
             }),
         ],

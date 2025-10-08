@@ -18,7 +18,7 @@ var i = n(951288),
     y = n(955384),
     _ = n(981631),
     v = n(224837),
-    x = n(360514);
+    x = n(5898);
 function O(e) {
     let { value: t, channel: n } = e;
     return (0, b.v)({
@@ -51,13 +51,13 @@ function j(e) {
             }),
             [c],
         ),
-        N = (0, l.e7)([d.default], () => d.default.getId()),
-        T = r.useCallback(
+        T = (0, l.e7)([d.default], () => d.default.getId()),
+        N = r.useCallback(
             (e, i, r) => {
                 let { content: l } = r,
                     c = f.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     u = null != P && null != P.author ? P.author.id : null,
-                    d = S && (u === N || c),
+                    d = S && (u === T || c),
                     p = {
                         content: l,
                         components: void 0,
@@ -81,7 +81,7 @@ function j(e) {
                     Promise.resolve()
                 );
             },
-            [P, S, N, t, n],
+            [P, S, T, t, n],
         ),
         A = r.useCallback(
             (e) => {
@@ -145,7 +145,7 @@ function j(e) {
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
               onConfirmDelete: o.Z.confirmDelete,
-              saveMessage: T,
+              saveMessage: N,
               validateEdit: O,
               children: A,
           })

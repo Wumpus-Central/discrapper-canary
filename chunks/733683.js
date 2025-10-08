@@ -12,12 +12,12 @@ var r,
     c = n(772848),
     d = n(374470),
     u = n(477690),
-    m = n(481060),
-    g = n(624138),
+    g = n(481060),
+    m = n(624138),
     p = n(981631),
-    f = n(989308),
+    f = n(258640),
     h = n(388032),
-    x = n(31441);
+    x = n(301142);
 function b(e, t, n) {
     return (
         t in e
@@ -32,8 +32,8 @@ function b(e, t, n) {
     );
 }
 let j = -1,
-    _ = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    v = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    _ = (0, m.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    v = (0, m.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     C = {
         tension: 140,
         friction: 30,
@@ -81,11 +81,11 @@ class y extends (r = l.Component) {
             s = null != l ? l.numRequired : null,
             a = null != s ? s - e : null;
         return (0, i.jsxs)(
-            m.Cys,
+            g.Cys,
             {
                 targetElementRef: this.foregroundTooltipElementRef,
                 position: "right",
-                color: m.ua7.Colors.PRIMARY,
+                color: g.ua7.Colors.PRIMARY,
                 tooltipClassName: x.foregroundTooltip,
                 children: [
                     (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),
@@ -130,20 +130,20 @@ class y extends (r = l.Component) {
             c = a[n],
             d = s >= e.numRequired,
             u = null != c && e.key === c.key,
-            g = e.key === a[0].key,
+            m = e.key === a[0].key,
             p = this.getTierDisabled(e);
-        l = g ? x.tierFirst : p ? x.tierInProgress : u ? x.tierCurrent : d ? x.tierAccomplished : x.tierInProgress;
-        let f = e.y - (g ? 0 : v / 2),
+        l = m ? x.tierFirst : p ? x.tierInProgress : u ? x.tierCurrent : d ? x.tierAccomplished : x.tierInProgress;
+        let f = e.y - (m ? 0 : v / 2),
             h = this.state.tierMarkerActive >= t,
-            j = !g && u && h;
+            j = !m && u && h;
         return (0, i.jsx)(
-            m.ua7,
+            g.ua7,
             {
                 text: this.renderTierMarkerTooltip(e),
                 position: "right",
                 "aria-label": null != (r = e.name) ? r : "",
                 children: (e) =>
-                    (0, i.jsx)(m.AMe, {
+                    (0, i.jsx)(g.AMe, {
                         from: { scale: 1 },
                         to: { scale: j ? 1.625 : 1 },
                         config: O,
@@ -176,7 +176,7 @@ class y extends (r = l.Component) {
                                         },
                                         children:
                                             j &&
-                                            (0, i.jsx)(m.dz2, {
+                                            (0, i.jsx)(g.dz2, {
                                                 size: "md",
                                                 color: "currentColor",
                                                 className: x.currentTierIcon,
@@ -240,7 +240,7 @@ class y extends (r = l.Component) {
                     height: e,
                     fill: "currentColor",
                 }),
-                (0, i.jsx)(m.AMe, {
+                (0, i.jsx)(g.AMe, {
                     from: { height: 0 },
                     to: { height: n },
                     config: C,

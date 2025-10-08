@@ -16,7 +16,7 @@ var r = n(722770),
     m = n(246133),
     p = n(981631),
     h = n(388032),
-    x = n(54482);
+    x = n(138005);
 let f = [
         {
             duration: 15 * d.Z.Millis.MINUTE,
@@ -175,7 +175,7 @@ function _(e) {
             currentStatus: e,
             description: _(p.Skl.DND),
         }),
-        N = v({
+        T = v({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
             description: _(p.Skl.INVISIBLE),
@@ -186,7 +186,7 @@ function _(e) {
             (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
             E,
             S,
-            N,
+            T,
             u || d
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [

@@ -15,8 +15,8 @@ var r = n(951288),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(325659),
-    v = n(197571);
+    E = n(942970),
+    v = n(10198);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function j(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function j(e, t) {
     );
 }
 s.ZP.initialize();
-let I = {
+let j = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj,
@@ -87,7 +87,7 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                j(b({}, n), {
+                                I(b({}, n), {
                                     onFormSubmit: s,
                                     onResend: t,
                                     onSuccess: o,
@@ -106,7 +106,7 @@ let I = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(b({}, t), {
+                            I(b({}, t), {
                                 onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
@@ -176,12 +176,12 @@ let I = {
                           (0, r.jsx)("div", {
                               className: E.container,
                               children: n.map((e) =>
-                                  null == I[e]
+                                  null == j[e]
                                       ? null
                                       : (0, r.jsx)(
                                             N,
                                             {
-                                                title: x.intl.string(I[e]),
+                                                title: x.intl.string(j[e]),
                                                 menuType: e,
                                             },
                                             e,

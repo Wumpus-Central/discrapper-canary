@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(978684),
     v = n(264229),
     b = n(929809),
-    j = n(703656),
-    I = n(108427),
+    I = n(703656),
+    j = n(108427),
     N = n(314897),
     S = n(896797),
     O = n(701190),
@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(701476),
     M = n(436620),
     U = n(388032),
-    G = n(197571);
+    G = n(10198);
 function B(e, t, n) {
     return (
         t in e
@@ -61,14 +61,14 @@ async function K(e) {
 class H extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((y.default.track(w.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)("invite"), !M.KO)) {
+        if ((y.default.track(w.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, j.e)("invite"), !M.KO)) {
             let e = this.getInviteKey();
             Z.Z.launch("discord://" + w.Z5c.INVITE(e), () => void 0);
         }
         if (!t && e) {
             let e = this.getInviteKey(),
                 { baseCode: t } = (0, v.fU)(e);
-            (0, j.dL)(w.Z5c.INVITE_LOGIN(t));
+            (0, I.dL)(w.Z5c.INVITE_LOGIN(t));
         }
     }
     componentDidUpdate(e) {

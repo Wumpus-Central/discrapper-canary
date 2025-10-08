@@ -9,18 +9,18 @@ var i = n(442837),
     c = n(496675),
     d = n(556012),
     u = n(273504),
-    m = n(981631),
-    g = n(590433),
+    g = n(981631),
+    m = n(590433),
     p = n(388032),
-    f = n(464992);
+    f = n(75765);
 function h(e) {
     var t;
     let { action: n, triggerType: h, guildId: x, toggled: b, onToggleAction: j } = e,
         _ = (e) => () => j(e),
         v = (0, d.c)(n.type, n, h),
         C = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        O = null != C ? (0, g.L9)(C) : null,
-        y = (0, i.e7)([c.Z, o.Z], () => c.Z.can(m.Plq.MODERATE_MEMBERS, o.Z.getGuild(x)), [x]);
+        O = null != C ? (0, m.L9)(C) : null,
+        y = (0, i.e7)([c.Z, o.Z], () => c.Z.can(g.Plq.MODERATE_MEMBERS, o.Z.getGuild(x)), [x]);
     if (null == v) return null;
     let { headerText: N, descriptionText: E, icon: I } = v;
     return (0, r.jsxs)("div", {

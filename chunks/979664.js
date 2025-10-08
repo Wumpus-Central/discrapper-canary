@@ -7,17 +7,17 @@ var r = n(951288),
     o = n(999382),
     c = n(486324),
     d = n(388032),
-    u = n(713611),
-    m = n(270856);
-function g(e) {
+    u = n(655544),
+    g = n(998918);
+function m(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
-        m = i.useCallback(() => {
+        g = i.useCallback(() => {
             l(null);
         }, [l]),
-        g = i.useCallback(
+        m = i.useCallback(
             (e, t) => {
                 (0, s.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -81,7 +81,7 @@ function g(e) {
                         }),
                         (0, r.jsx)(a.ZP, {
                             tabIndex: 0,
-                            onChange: g,
+                            onChange: m,
                             disabled: !o,
                         }),
                     ],
@@ -92,7 +92,7 @@ function g(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       text: d.intl.string(d.t.x8AlTk),
-                      onClick: m,
+                      onClick: g,
                       disabled: !o,
                   })
                 : null,
@@ -106,10 +106,10 @@ function p(e) {
         className: u.container,
         children: [
             (0, r.jsxs)(s.hjN, {
-                className: m.section,
+                className: g.section,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: m.sectionHeader,
+                        className: g.sectionHeader,
                         children: [
                             (0, r.jsx)(s.vwX, { children: d.intl.string(d.t.FkQnxM) }),
                             (0, r.jsx)(s.R94, {
@@ -118,7 +118,7 @@ function p(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(m, {
                         profile: t,
                         canManageGuild: n,
                         handleIconChange: i,

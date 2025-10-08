@@ -47,9 +47,9 @@ var r = n(951288),
     z = n(726985),
     q = n(981631),
     X = n(908442),
-    Q = n(674336),
-    J = n(620842),
-    $ = n(197571);
+    Q = n(670873),
+    J = n(504401),
+    $ = n(10198);
 function ee(e, t, n) {
     return (
         t in e
@@ -1165,7 +1165,7 @@ function eg() {
                         }),
                     ],
                 }),
-                (0, r.jsx)(c.NIc, {
+                (0, r.jsx)(c.gNt, {
                     label: "Reset Changelog",
                     description: "This will reset the changelog, so it will show again on the next startup.",
                     children: (0, r.jsx)(p.zxk, {

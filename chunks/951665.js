@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     s = n(457414),
     a = n(311173),
     o = n(388032),
-    c = n(97247);
+    c = n(332310);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,18 +49,18 @@ function u(e, t) {
         e
     );
 }
-function m(e) {
+function g(e) {
     var t;
-    let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
-        [p, f] = i.useState(!g),
+    let { rule: n, onChangeRule: g, collapsed: m = !1 } = e,
+        [p, f] = i.useState(!m),
         h = i.useCallback(() => {
             f(!p);
         }, [p, f]),
         x = i.useCallback(
             (e) => {
-                m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
+                g(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
-            [m, n],
+            [g, n],
         );
     return (0, s.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {

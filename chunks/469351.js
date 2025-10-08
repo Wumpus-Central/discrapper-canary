@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(76535),
     d = n(395586),
     u = n(204875),
-    m = n(715796),
-    g = n(411667),
+    g = n(715796),
+    m = n(411667),
     p = n(434404),
     f = n(962086),
     h = n(225675),
@@ -26,7 +26,7 @@ var r = n(951288),
     I = n(981631),
     S = n(176505),
     T = n(388032),
-    P = n(68920);
+    P = n(514709);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: w } = (0, O.eD)(t),
@@ -35,7 +35,7 @@ function w(e) {
         D = null != R && (0, b.eM)(R, Z),
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
-    (0, m.P)(R);
+    (0, g.P)(R);
     let G = i.useCallback(() => {
         if (null == R) return;
         let e = j.Z.getEveryoneRole(R);
@@ -121,7 +121,7 @@ function w(e) {
         guildId: t,
         children: [
             M,
-            (0, r.jsx)(g.Z, { guild: R }),
+            (0, r.jsx)(m.Z, { guild: R }),
             (0, r.jsx)("div", {
                 className: P.tabBarContainer,
                 children: U,

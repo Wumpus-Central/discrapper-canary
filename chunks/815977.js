@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(755721),
     d = n(481060),
     u = n(503089),
-    m = n(266454),
-    g = n(768762),
+    g = n(266454),
+    m = n(768762),
     p = n(585483),
     f = n(999382),
     h = n(213956),
@@ -28,7 +28,7 @@ var r = n(951288),
     T = n(707076),
     P = n(981631),
     w = n(388032),
-    R = n(344037);
+    R = n(24773);
 function Z() {
     let e = (0, a.e7)([f.Z], () => f.Z.getGuildId());
     return null == e ? null : (0, r.jsx)(D, { guildId: e });
@@ -45,7 +45,7 @@ function D(e) {
         Z = !v && f;
     switch (
         (i.useEffect(() => {
-            (0, m.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
+            (0, g.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []),
         l)
     ) {
@@ -104,9 +104,9 @@ function D(e) {
                             (0, _.NB)(), (0, x.BG)(), (0, j.bj)(), (0, b.$K)(O.PG.LANDING);
                         },
                         children: [
-                            (0, r.jsx)(g.Z, {
+                            (0, r.jsx)(m.Z, {
                                 className: R.arrow,
-                                direction: g.Z.Directions.LEFT,
+                                direction: m.Z.Directions.LEFT,
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",

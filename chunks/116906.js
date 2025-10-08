@@ -19,11 +19,11 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     y = t(388032),
-    I = t(7994),
-    Z = t(878449);
+    I = t(847540),
+    Z = t(883172);
 function O(e) {
-    let { user: n, currentUser: t, guildId: O, subsection: N, onClose: T } = e,
-        { voiceActivityStatusEnabled: P } = (0, o.U)({ location: "UserProfileModalActivity" }),
+    let { user: n, currentUser: t, guildId: O, subsection: N, onClose: P } = e,
+        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: "UserProfileModalActivity" }),
         A = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: E, recent: S, stream: C } = (0, m.Z)(n.id),
         { voiceChannel: _, voiceActivity: w } = (0, p.Z)({
@@ -37,7 +37,7 @@ function O(e) {
             return e === r.Skl.OFFLINE || e === r.Skl.INVISIBLE;
         }),
         M = E.length > 0 || null != C,
-        U = P && null == C && null == w && null != _,
+        U = T && null == C && null == w && null != _,
         k = !L && (M || U),
         B = S.length > 0;
     return k || B || !D
@@ -58,7 +58,7 @@ function O(e) {
                                                 user: n,
                                                 currentUser: t,
                                                 voiceChannel: _,
-                                                onClose: T,
+                                                onClose: P,
                                             }),
                                         }),
                                     null != C &&
@@ -67,7 +67,7 @@ function O(e) {
                                                 user: n,
                                                 currentUser: t,
                                                 stream: C,
-                                                onClose: T,
+                                                onClose: P,
                                             }),
                                         }),
                                     E.map((e, i) =>
@@ -78,7 +78,7 @@ function O(e) {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
-                                                    onClose: T,
+                                                    onClose: P,
                                                 }),
                                             },
                                             "live-".concat(i),
@@ -114,7 +114,7 @@ function O(e) {
                                             children: (0, l.jsx)(x.Z, {
                                                 user: n,
                                                 entry: e,
-                                                onClose: T,
+                                                onClose: P,
                                             }),
                                         },
                                         e.id,

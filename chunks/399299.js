@@ -12,14 +12,14 @@ var r = n(951288),
     m = n(594190),
     h = n(925329),
     p = n(565138),
-    g = n(695346),
-    x = n(313789),
+    x = n(695346),
+    g = n(313789),
     _ = n(494620),
     v = n(518596),
     j = n(592125),
     b = n(650774),
-    S = n(430824),
-    C = n(131951),
+    C = n(430824),
+    S = n(131951),
     y = n(944486),
     O = n(594174),
     w = n(449224),
@@ -30,8 +30,8 @@ var r = n(951288),
     T = n(653255),
     E = n(989941),
     R = n(618407),
-    A = n(586290),
-    k = n(233037),
+    k = n(586290),
+    A = n(233037),
     M = n(810013),
     D = n(537135),
     L = n(641115),
@@ -40,21 +40,21 @@ var r = n(951288),
     U = n(981631),
     W = n(526761),
     z = n(388032),
-    F = n(734102),
-    H = n(542257);
+    F = n(740071),
+    H = n(79985);
 function V(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
         s = (0, o.e7)([m.ZP, w.Z], () => ((0, P.isWindows)() ? (0, E.Z)(m.ZP, w.Z) : null)),
         u = (0, o.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         f = (0, o.e7)([m.ZP], () => m.ZP.getRunningGames()),
         p = (0, o.Wu)([d.Z], () => f.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(I.lm), [f]),
-        g = null;
-    if ((null != t ? (g = t.name) : null != s && (g = s.name), null == g)) return null;
-    let x = (0, B.Z)(s, t, f),
+        x = null;
+    if ((null != t ? (x = t.name) : null != s && (x = s.name), null == x)) return null;
+    let g = (0, B.Z)(s, t, f),
         _ = i
             ? p.find((e) => {
                   let { id: t } = e;
-                  return t === (null == x ? void 0 : x.id);
+                  return t === (null == g ? void 0 : g.id);
               })
             : u,
         v = null != t && t.id.startsWith("screen") ? c.pzj : c.GON;
@@ -73,7 +73,7 @@ function V(e) {
                     : (0, r.jsx)(v, { className: F.selectedIcon }),
                 (0, r.jsx)("span", {
                     className: F.ellipsisText,
-                    children: g,
+                    children: x,
                 }),
                 n
                     ? (0, r.jsx)(a.zx, {
@@ -90,7 +90,7 @@ function V(e) {
 }
 function Y(e) {
     let { onChange: t, guildId: n } = e,
-        i = (0, o.e7)([S.Z], () => S.Z.getGuild(n));
+        i = (0, o.e7)([C.Z], () => C.Z.getGuild(n));
     return null == i
         ? (t(), null)
         : (0, r.jsx)(c.xJW, {
@@ -146,9 +146,9 @@ function X(e) {
             var e;
             return null != (e = b.Z.getMemberCount(t)) ? e : 0;
         }),
-        l = g.eo.useSetting(),
+        l = x.eo.useSetting(),
         a = i.useCallback((e) => {
-            g.eo.updateSetting(e), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
+            x.eo.updateSetting(e), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
         }, []);
     return n >= 2 && n <= G.tB
         ? (0, r.jsx)("div", {
@@ -169,7 +169,7 @@ function K(e) {
             },
             [n],
         ),
-        d = (0, o.e7)([C.Z], () => C.Z.getUseSystemScreensharePicker() && (0, P.isLinux)());
+        d = (0, o.e7)([S.Z], () => S.Z.getUseSystemScreensharePicker() && (0, P.isLinux)());
     return (0, r.jsx)("div", {
         className: s()(H.modalContent, F.checkboxRow),
         children: (0, r.jsx)(c.XZJ, {
@@ -209,9 +209,9 @@ function Q(e) {
             selectSource: m,
             selectGuild: h,
             sound: p,
-            previewDisabled: g,
+            previewDisabled: x,
             onClose: b,
-            onChangeSelectedFPS: S,
+            onChangeSelectedFPS: C,
             onChangeSelectedResolution: w,
             onChangeSelectedPreset: Z,
             onChangeSelectedChannelId: I,
@@ -226,15 +226,15 @@ function Q(e) {
         $ = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
         ee = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
         et = (0, R.Z)();
-    null != t && t.id.startsWith("screen") && !C.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
+    null != t && t.id.startsWith("screen") && !S.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
     let en = !!(null == t ? void 0 : t.id.startsWith("camera")),
         er = null != ee && ee.verified && !ee.bot,
         ei = null != H && !(0, u.Yk)(H),
-        el = !(0, o.e7)([C.Z], () => C.Z.getHardwareEncoding());
+        el = !(0, o.e7)([S.Z], () => S.Z.getHardwareEncoding());
     return (0, r.jsxs)(i.Fragment, {
         children: [
             en
-                ? (0, r.jsx)(A.Z, {
+                ? (0, r.jsx)(k.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: P,
                       onChangeAudioDevice: E,
@@ -265,7 +265,7 @@ function Q(e) {
                 : null,
             null != H
                 ? (0, r.jsx)(M.Z, { channel: H })
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(A.Z, {
                       guildId: d,
                       selectedChannelId: l,
                       onChangeSelectedChannelId: I,
@@ -286,7 +286,7 @@ function Q(e) {
                     children: z.intl.format(z.t.zCLXws, {
                         onClick: () => {
                             b(),
-                                (0, v.openUserSettings)(x.n.VOICE_AND_VIDEO_PANEL, {
+                                (0, v.openUserSettings)(g.n.VOICE_AND_VIDEO_PANEL, {
                                     section: U.oAB.VOICE,
                                     subsection: W.gP,
                                     scrollPosition: W.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION,
@@ -300,13 +300,13 @@ function Q(e) {
                 selectedResolution: a,
                 targetGuildPremiumTier: f,
                 onClose: b,
-                onFPSChange: S,
+                onFPSChange: C,
                 onResolutionChange: w,
                 onPresetChange: Z,
                 captureDeviceSelected: en,
             }),
             (0, r.jsx)(q, {
-                enabled: g,
+                enabled: x,
                 onChange: G,
             }),
         ],

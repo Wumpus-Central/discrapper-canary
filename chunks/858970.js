@@ -17,7 +17,7 @@ var l = t(951288),
     v = t(981631),
     g = t(671955),
     b = t(388032),
-    y = t(220566);
+    y = t(65464);
 function I(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -50,8 +50,8 @@ function Z(e) {
             channelId: Z,
             messageId: O,
             roleId: N,
-            transitionState: T,
-            openedAt: P,
+            transitionState: P,
+            openedAt: T,
             onHide: A,
             sourceAnalyticsLocations: E = [],
         } = e,
@@ -84,13 +84,13 @@ function Z(e) {
         value: _,
         children: (0, l.jsx)(u.Mt, {
             value: w,
-            openedAt: P,
+            openedAt: T,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, l.jsx)(r.Y0X, {
                 "data-migration-pending": !0,
-                transitionState: T,
+                transitionState: P,
                 className: y.root,
                 "aria-label": M,
                 parentComponent: "RestrictedUserProfileModalV2",

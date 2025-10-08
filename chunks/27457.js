@@ -54,7 +54,7 @@ var r = n(951288),
     Q = n(524484),
     J = n(65154),
     $ = n(388032),
-    ee = n(7504);
+    ee = n(400872);
 let et = [X.fO.ACTIVITY],
     en = i.memo((e) => {
         var t, n, l, s, c, u, _;
@@ -271,7 +271,7 @@ let et = [X.fO.ACTIVITY],
                 });
         }
         let e2 = i.useRef(null),
-            e7 = y.type === X.fO.STREAM ? d.pzj : d.Odl;
+            e5 = y.type === X.fO.STREAM ? d.pzj : d.Odl;
         return (0, r.jsx)(h.Z, {
             section: q.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -353,7 +353,7 @@ let et = [X.fO.ACTIVITY],
                                     ep
                                         ? (0, r.jsx)("div", {
                                               className: ee.selectedScreen,
-                                              children: (0, r.jsx)(e7, {
+                                              children: (0, r.jsx)(e5, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: ee.selectedIcon,

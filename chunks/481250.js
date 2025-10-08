@@ -1,6 +1,6 @@
 n.d(t, {
-    VE: () => x,
-    lV: () => Z,
+    VE: () => Z,
+    lV: () => R,
 }),
     n(539854),
     n(642613),
@@ -24,14 +24,14 @@ var r = n(951288),
     E = n(51144),
     b = n(513547),
     D = n(65154),
-    P = n(966117),
-    j = n(197571);
+    P = n(593235),
+    j = n(10198);
 let C = {
     [D.Z.NO_OVERRIDE]: "None",
     [D.Z.LOW]: "Low Quality Stream",
     [D.Z.HIGH]: "High Quality Stream",
 };
-function x(e) {
+function Z(e) {
     let t = [],
         n = 0;
     for (
@@ -61,16 +61,16 @@ function x(e) {
         );
     return t;
 }
-let R = {
+let x = {
     ssrc: 1,
     codec: 2,
 };
-function Z(e) {
+function R(e) {
     let {
             streams: t,
             context: n,
             mediaEngineConnectionId: i,
-            userId: Z,
+            userId: R,
             videoStreams: S,
             title: F,
             showUserInfo: N = !1,
@@ -78,12 +78,12 @@ function Z(e) {
         } = e,
         [k, B] = a.useState("0"),
         w = (0, s.e7)([y.Z], () => (N ? y.Z.getGuildId() : null)),
-        A = (0, s.e7)([v.default], () => (N && null != Z ? v.default.getUser(Z) : null)),
-        T = (0, s.e7)([h.ZP], () => (N && null != w && null != Z ? h.ZP.getNick(w, Z) : null));
-    if (null == t || (N && null == Z) || 0 === t.length) return (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
-    let O = F;
-    N && null != A && (O = "".concat(F, " \u2014 ").concat(null != T ? T : E.ZP.getName(A)));
-    let L = t.map((e, t) =>
+        A = (0, s.e7)([v.default], () => (N && null != R ? v.default.getUser(R) : null)),
+        T = (0, s.e7)([h.ZP], () => (N && null != w && null != R ? h.ZP.getNick(w, R) : null));
+    if (null == t || (N && null == R) || 0 === t.length) return (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
+    let L = F;
+    N && null != A && (L = "".concat(F, " \u2014 ").concat(null != T ? T : E.ZP.getName(A)));
+    let O = t.map((e, t) =>
             (0, r.jsx)(
                 c.njP.Item,
                 {
@@ -109,8 +109,8 @@ function Z(e) {
         G = (function (e, t, n, a, i) {
             let o = [];
             for (let t of Object.keys(e).sort((e, t) => {
-                let n = R[e],
-                    r = R[t];
+                let n = x[e],
+                    r = x[t];
                 return n !== r
                     ? void 0 === n
                         ? 1
@@ -164,17 +164,17 @@ function Z(e) {
                                       })
                                     : null;
                             })(e, n, a, i),
-                        x(o),
+                        Z(o),
                     ],
                 },
                 "".concat(e.type, " + ").concat(e.ssrc),
             );
-        })(V, 0, i, Z, S),
+        })(V, 0, i, R, S),
         _ =
             I &&
             "video" === V.type &&
             null != i &&
-            null != Z &&
+            null != R &&
             null != S &&
             (0, r.jsx)(m.Z, {
                 className: j.marginBottom20,
@@ -186,9 +186,9 @@ function Z(e) {
                             children: "Simulcast Override",
                         }),
                         (0, r.jsx)(c.q4e, {
-                            value: g.ZP.getSimulcastDebugOverride(Z, n),
+                            value: g.ZP.getSimulcastDebugOverride(R, n),
                             onChange: (e) => {
-                                d.MS(Z, n, e);
+                                d.MS(R, n, e);
                             },
                             options: Object.values(D.Z).map((e) => ({
                                 value: e,
@@ -200,7 +200,7 @@ function Z(e) {
             });
     return (0, r.jsxs)(c.hjN, {
         tag: c.RB0.H2,
-        title: O,
+        title: L,
         children: [
             (0, r.jsx)(c.njP, {
                 type: "top",
@@ -208,7 +208,7 @@ function Z(e) {
                 selectedItem: k,
                 onItemSelect: B,
                 className: P.tabBar,
-                children: L,
+                children: O,
             }),
             G,
             _,

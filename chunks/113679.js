@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -8,11 +8,11 @@ var r = n(951288),
     c = n(140031),
     d = n(981631),
     u = n(388032),
-    m = n(49465);
-function g(e) {
+    g = n(555091);
+function m(e) {
     let { guild: t } = e,
         n = i.useId(),
-        g = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
+        m = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
         p = t.features.has(d.oNc.COMMUNITY),
         [f, h] = i.useState(t.features.has(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
@@ -24,14 +24,14 @@ function g(e) {
     return p
         ? null
         : (0, r.jsxs)("div", {
-              className: m.bannerContainer,
+              className: g.bannerContainer,
               children: [
                   (0, r.jsx)(c.Z, {
                       width: 64,
                       height: 64,
                   }),
                   (0, r.jsxs)("div", {
-                      className: m.headingContainer,
+                      className: g.headingContainer,
                       children: [
                           (0, r.jsx)(s.X6q, {
                               variant: "heading-lg/semibold",
@@ -46,12 +46,12 @@ function g(e) {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: m.buttonContainer,
+                      className: g.buttonContainer,
                       children: (0, r.jsx)(s.rsf, {
                           id: n,
                           checked: f,
                           onChange: x,
-                          disabled: !g,
+                          disabled: !m,
                       }),
                   }),
               ],

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(100568),
     d = n(417865),
     u = n(442837),
-    m = n(481060),
-    g = n(541716),
+    g = n(481060),
+    m = n(541716),
     p = n(752305),
     f = n(893718),
     h = n(592125),
@@ -19,7 +19,7 @@ var r = n(951288),
     _ = n(592286),
     v = n(981631),
     C = n(388032),
-    O = n(94228);
+    O = n(761560);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -134,11 +134,11 @@ function I(e) {
         children: (0, r.jsxs)("div", {
             className: O.inputWrapper,
             children: [
-                (0, r.jsx)(m.P3F, {
+                (0, r.jsx)(g.P3F, {
                     onMouseDown: () => j(l),
                     children: (0, r.jsx)(f.ZP, {
                         innerClassName: O.rulesTextAreaInput,
-                        type: g.Ie.RULES_INPUT,
+                        type: m.Ie.RULES_INPUT,
                         textValue: T,
                         richValue: P,
                         channel: n,
@@ -167,10 +167,10 @@ function I(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: O.clearButton,
-                    children: (0, r.jsx)(m.hU, {
+                    children: (0, r.jsx)(g.hU, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: m.k$p,
+                        icon: g.k$p,
                         "aria-label": C.intl.string(C.t.VkKicX),
                         onClick: u,
                     }),
@@ -181,7 +181,7 @@ function I(e) {
                     "data-dnd-name": A,
                     children:
                         y &&
-                        (0, r.jsx)(m.Vni, {
+                        (0, r.jsx)(g.Vni, {
                             size: "xs",
                             color: "currentColor",
                             className: O.dragIcon,
@@ -196,7 +196,7 @@ function S(e) {
         a = l.rulesChannelId,
         c = l.features.has(v.oNc.PREVIEW_ENABLED),
         d = (0, u.e7)([h.Z], () => (null != a ? h.Z.getChannel(a) : null)),
-        g = (0, u.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
+        m = (0, u.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
         [p, f] = i.useState(null),
         [E, S] = i.useState(null),
         T = i.useCallback(
@@ -278,7 +278,7 @@ function S(e) {
                     (0, r.jsx)(
                         I,
                         {
-                            rulesChannel: null != d ? d : g,
+                            rulesChannel: null != d ? d : m,
                             rule: e,
                             index: i,
                             onChange: (e) => w(e, i),
@@ -315,7 +315,7 @@ function S(e) {
                     onClick: P,
                     disabled: s,
                 }),
-            (0, r.jsx)(m.X6q, {
+            (0, r.jsx)(g.X6q, {
                 variant: "text-xs/bold",
                 color: "text-muted",
                 className: O.exampleRulesTitle,

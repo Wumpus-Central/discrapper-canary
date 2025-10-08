@@ -5,7 +5,7 @@ var r = n(951288),
     i = n(404975),
     a = n(924052),
     s = n(59662),
-    c = n(990757);
+    c = n(4640);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function f(e) {
         } = e,
         [g, O] = l.useState(!0),
         [C, _] = l.useState(null == (t = b.entry(j)) ? void 0 : t.targetPanel),
-        [P, S] = l.useState(() => b.typedGet(C)),
+        [S, P] = l.useState(() => b.typedGet(C)),
         N = l.useCallback(() => k(void 0), []),
         [E, k] = l.useState({
             target: j,
@@ -86,7 +86,7 @@ function f(e) {
                     if (t.targetPanel.key !== (null == C ? void 0 : C.key)) {
                         let e = t.targetPanel;
                         T(() => {
-                            k(d(u({}, n), { animateScroll: !1 })), S(e), _(e), null == y || y(e.key);
+                            k(d(u({}, n), { animateScroll: !1 })), P(e), _(e), null == y || y(e.key);
                         });
                     } else k(d(u({}, n), { animateScroll: !0 }));
                 },
@@ -111,7 +111,7 @@ function f(e) {
                 }),
                 (0, r.jsx)(o.Z, {
                     onClose: I,
-                    setting: null != (f = w.currentPanel) ? f : P,
+                    setting: null != (f = w.currentPanel) ? f : S,
                 }),
             ],
         }),

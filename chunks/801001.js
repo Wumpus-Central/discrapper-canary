@@ -18,9 +18,9 @@ var l = n(951288),
     f = n(460117),
     b = n(290511),
     y = n(388032),
-    O = n(82513);
+    O = n(421261);
 function C(e) {
-    let { transitionState: t, onClose: n, onSave: r, onDelete: v, option: h, guild: C, prompt: N, index: P } = e,
+    let { transitionState: t, onClose: n, onSave: r, onDelete: v, option: h, guild: C, prompt: I, index: P } = e,
         S = (0, j.Dt)(),
         w = (0, a.e7)([g.ZP], () => g.ZP.getDefaultChannel(C.id)),
         [E, Z] = i.useState(() => {
@@ -64,9 +64,9 @@ function C(e) {
                     l.title.length <= 0 && (i.title = y.intl.string(y.t.p3PKzM));
                     let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
-                })(C, x.Z.editedOnboardingPrompts, N, t);
+                })(C, x.Z.editedOnboardingPrompts, I, t);
             J(l), o().isEmpty(l) && (r(t), n());
-        }, [T, R, E, C, n, r, null == h ? void 0 : h.id, N, D, k]),
+        }, [T, R, E, C, n, r, null == h ? void 0 : h.id, I, D, k]),
         K = i.useMemo(
             () => [
                 {
@@ -102,7 +102,7 @@ function C(e) {
                     (0, l.jsx)(u.X6q, {
                         id: S,
                         variant: "heading-lg/semibold",
-                        children: null != N.title && N.title.length > 0 ? N.title : y.intl.string(y.t.vY91Cw),
+                        children: null != I.title && I.title.length > 0 ? I.title : y.intl.string(y.t.vY91Cw),
                     }),
                     (0, l.jsxs)(u.Kqy, {
                         gap: 8,
@@ -152,7 +152,7 @@ function C(e) {
                                 ],
                             }),
                             null == z.roles ? null : (0, l.jsx)(u.pdY, { error: z.roles }),
-                            (0, l.jsx)(I, {
+                            (0, l.jsx)(N, {
                                 guild: C,
                                 roleIds: D,
                             }),
@@ -161,7 +161,7 @@ function C(e) {
                     (0, l.jsx)(u.izJ, {}),
                     (0, l.jsx)("div", {
                         className: O.emojiQuestionContainer,
-                        children: (0, l.jsx)(s.NIc, {
+                        children: (0, l.jsx)(s.gNt, {
                             label: y.intl.string(y.t["4ahTBg"]),
                             description: y.intl.string(y.t.Iv9RGh),
                             children: (0, l.jsx)(f.Z, {
@@ -186,7 +186,7 @@ function C(e) {
         ],
     });
 }
-function I(e) {
+function N(e) {
     let { guild: t, roleIds: n } = e,
         i = (0, a.e7)([v.Z], () => v.Z.getManyRoles(t.id, n).find(h.F));
     return null == i

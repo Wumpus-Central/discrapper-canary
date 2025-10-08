@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    m = n(692547),
-    g = n(755721),
+    g = n(692547),
+    m = n(755721),
     p = n(481060),
     f = n(984933),
     h = n(63063),
@@ -18,7 +18,7 @@ var r = n(951288),
     j = n(733895),
     _ = n(981631),
     v = n(388032),
-    C = n(213798);
+    C = n(81190);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,23 +79,23 @@ let N = (e) => {
         s
             ? ((d = (0, r.jsx)(p.Mgn, {
                   size: "custom",
-                  color: m.Z.unsafe_rawColors.YELLOW_300.css,
+                  color: g.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20,
               })),
               (u = null != a ? a : i))
             : l
-              ? ((d = (0, r.jsx)(g.$q, {
+              ? ((d = (0, r.jsx)(m.$q, {
                     readOnly: !0,
-                    shape: g.zV.ROUND,
+                    shape: m.zV.ROUND,
                     size: 20,
-                    type: g.M0.INVERTED,
+                    type: m.M0.INVERTED,
                     value: !0,
                 })),
                 (u = i))
               : ((d = (0, r.jsx)(p.k$p, {
                     size: "custom",
-                    color: m.Z.unsafe_rawColors.RED_400.css,
+                    color: g.Z.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20,
                 })),
@@ -144,8 +144,8 @@ function E(e, t) {
 }
 let I = (e) => {
     let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
-        { nsfwProperties: S } = null != m ? m : {},
+        [g, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
+        { nsfwProperties: S } = null != g ? g : {},
         T = null == t ? void 0 : t.features.has(_.oNc.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
         w = (0, u.e7)(
@@ -172,7 +172,7 @@ let I = (e) => {
             [t.id, P],
             E,
         );
-    if (I || null == m)
+    if (I || null == g)
         return (0, r.jsxs)("div", {
             className: s()(C.container, C.loaderContainer, a),
             children: [
@@ -195,31 +195,31 @@ let I = (e) => {
                     termsURL: _.EYA.TERMS,
                     guidelinesURL: h.Z.getArticleURL(_.BhN.PUBLIC_GUILD_GUILDLINES),
                 }),
-                checked: null == m ? void 0 : m.safeEnvironment,
+                checked: null == g ? void 0 : g.safeEnvironment,
             },
             {
-                name: v.intl.formatToPlainString(v.t.NYovAw, { minMembers: m.minimumGuildSize }),
+                name: v.intl.formatToPlainString(v.t.NYovAw, { minMembers: g.minimumGuildSize }),
                 failingName: v.intl.formatToPlainString(v.t.wvJwYm, {
-                    minMembers: m.minimumGuildSize.toLocaleString(),
+                    minMembers: g.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: v.intl.format(R, { minMembers: m.minimumGuildSize.toLocaleString() }),
-                checked: null == m ? void 0 : m.size,
+                failingDescription: v.intl.format(R, { minMembers: g.minimumGuildSize.toLocaleString() }),
+                checked: null == g ? void 0 : g.size,
             },
             {
                 name: v.intl.string(v.t.PtxOCA),
                 failingName: v.intl.string(v.t.JPF5IC),
                 description: v.intl.formatToPlainString(v.t.VT0bQE, {
-                    minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
+                    minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
                 }),
                 failingDescription: v.intl.formatToPlainString(v.t.jYwM1d, {
-                    minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: d()(x.default.extractTimestamp(l)).add(m.minimumGuildAge, "days").format("LL"),
+                    minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
+                    passDate: d()(x.default.extractTimestamp(l)).add(g.minimumGuildAge, "days").format("LL"),
                 }),
-                checked: null == m ? void 0 : m.age,
+                checked: null == g ? void 0 : g.age,
             },
             {
-                name: (null == m ? void 0 : m.healthScorePending)
+                name: (null == g ? void 0 : g.healthScorePending)
                     ? v.intl.string(v.t.G77ud3)
                     : v.intl.string(v.t["95nW0N"]),
                 failingName: v.intl.string(v.t["+GHxPz"]),
@@ -232,14 +232,14 @@ let I = (e) => {
                             variant: "text-sm/normal",
                             children: v.intl.string(v.t.LjqS0N),
                         }),
-                        (null == m ? void 0 : m.engagementHealthy)
+                        (null == g ? void 0 : g.engagementHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",
                                   children: v.intl.string(v.t["X8Lt7+"]),
                               }),
-                        (null == m ? void 0 : m.retentionHealthy)
+                        (null == g ? void 0 : g.retentionHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
@@ -247,8 +247,8 @@ let I = (e) => {
                                   children: v.intl.string(v.t["esdy8/"]),
                               }),
                         (() => {
-                            if (null == m || null == m.healthScore) return !1;
-                            let { retentionHealthy: e, engagementHealthy: t, healthScore: n } = m,
+                            if (null == g || null == g.healthScore) return !1;
+                            let { retentionHealthy: e, engagementHealthy: t, healthScore: n } = g,
                                 {
                                     avg_nonnew_participators: r,
                                     avg_nonnew_communicators: i,
@@ -256,21 +256,21 @@ let I = (e) => {
                                 } = n;
                             return (!e && null != l) || (!t && null != r && null != i);
                         })() &&
-                            (0, r.jsx)(g.zx, {
+                            (0, r.jsx)(m.zx, {
                                 className: C.detailsButton,
-                                look: g.zx.Looks.LINK,
-                                size: g.zx.Sizes.NONE,
-                                color: g.zx.Colors.LINK,
+                                look: m.zx.Looks.LINK,
+                                size: m.zx.Sizes.NONE,
+                                color: m.zx.Colors.LINK,
                                 onClick: () =>
                                     (0, p.ZDy)(async () => {
                                         let { default: e } = await n.e("23401").then(n.bind(n, 666599));
-                                        return (t) => (0, r.jsx)(e, y(O({}, t), { guildChecklist: m }));
+                                        return (t) => (0, r.jsx)(e, y(O({}, t), { guildChecklist: g }));
                                     }),
                                 children: v.intl.string(v.t.qyiTHx),
                             }),
                     ],
                 }),
-                pendingDescription: (null == m ? void 0 : m.size)
+                pendingDescription: (null == g ? void 0 : g.size)
                     ? v.intl.format(v.t.ALtXIC, {
                           checkBackHook: (e, t) =>
                               (0, r.jsx)(
@@ -283,8 +283,8 @@ let I = (e) => {
                               ),
                       })
                     : v.intl.formatToPlainString(v.t["6S/96O"], { minMembers: 200 }),
-                checked: null == m ? void 0 : m.healthy,
-                pending: null == m ? void 0 : m.healthScorePending,
+                checked: null == g ? void 0 : g.healthy,
+                pending: null == g ? void 0 : g.healthScorePending,
             },
             {
                 name: v.intl.string(v.t["/cghSE"]),
@@ -407,14 +407,14 @@ let I = (e) => {
                 failingDescription: v.intl.format(v.t.kBXInZ, {
                     onClick: () => b.Z.setSection(_.pNK.SAFETY, _.KsC.SAFETY_PERMISSIONS),
                 }),
-                checked: null == m ? void 0 : m.protected,
+                checked: null == g ? void 0 : g.protected,
             },
         ];
     return (0, r.jsxs)("div", {
         className: s()(C.container, a),
         children: [
             (() => {
-                let e = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
+                let e = (null == g ? void 0 : g.sufficient) ? n(909425) : n(177266);
                 return null == o
                     ? null
                     : (0, r.jsxs)("div", {

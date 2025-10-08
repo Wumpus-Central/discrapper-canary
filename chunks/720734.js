@@ -31,8 +31,8 @@ var a = n(951288),
     O = n(100527),
     N = n(906732),
     P = n(541638),
-    k = n(676742),
-    I = n(1585),
+    I = n(676742),
+    k = n(1585),
     w = n(304761),
     R = n(865427),
     A = n(358221),
@@ -85,8 +85,8 @@ var a = n(951288),
     eO = n(723547),
     eN = n(361045),
     eP = n(74650),
-    ek = n(306609),
-    eI = n(170293),
+    eI = n(306609),
+    ek = n(170293),
     ew = n(8404),
     eR = n(199902),
     eA = n(314897),
@@ -123,7 +123,7 @@ var a = n(951288),
     tt = n(46140),
     tn = n(65154),
     ta = n(388032),
-    tr = n(25874);
+    tr = n(490579);
 function ti(e, t, n) {
     return (
         t in e
@@ -195,7 +195,7 @@ function tm(e) {
         j = null != t ? t : v,
         y = (0, eH.NZ)({
             avatarDecoration: x,
-            size: (0, I.y9)(f.EFr.SIZE_32),
+            size: (0, k.y9)(f.EFr.SIZE_32),
         }),
         C = (0, q.Z)(),
         {
@@ -879,7 +879,7 @@ function tf() {
                 : null;
         }),
         T = (0, d.e7)([eV.Z], () => eV.Z.getPremiumTypeSubscription()),
-        I = (0, d.e7)([eM.Z], () => eM.Z.getSpeakingWhileMuted()),
+        k = (0, d.e7)([eM.Z], () => eM.Z.getSpeakingWhileMuted()),
         Z = (0, d.e7)([A.Z], () => A.Z.isFullscreenInContext()),
         D = (0, d.e7)([eL.Z], () => eL.Z.hasLayers()),
         L = (0, f.s9z)(f.JQI) || D || e$.s.isDisallowPopupsSet() || Z,
@@ -888,7 +888,7 @@ function tf() {
         F = (0, d.e7)([eF.Z], () => eF.Z.getGuildId()),
         G = null == n ? void 0 : n.avatarDecoration,
         z = (0, P.R)(n, null != F ? F : void 0),
-        B = (0, k.Z)(i ? z : G),
+        B = (0, I.Z)(i ? z : G),
         V = eQ.ZP.useName(null != F ? F : void 0, null, n),
         H = null != (t = e0.ZP.useName(n)) ? t : "",
         q = (null == n || null == (e = n.avatarDecoration) ? void 0 : e.skuId) === e9.rL,
@@ -953,7 +953,7 @@ function tf() {
             serverDeaf: E,
             serverMute: g,
             speaking: p,
-            speakingWhileMuted: I,
+            speakingWhileMuted: k,
             status: c,
             streaming: s,
             suppress: _,
@@ -1059,10 +1059,10 @@ function tg(e) {
         S = r.useRef(null),
         T = r.useRef(null),
         P = (0, ew.b)(E),
-        { activeVoice: k, mostRecentlyRequestedVoiceId: I, lastInitAttemptMayHaveCrashed: w } = (0, eS.o)(),
+        { activeVoice: I, mostRecentlyRequestedVoiceId: k, lastInitAttemptMayHaveCrashed: w } = (0, eS.o)(),
         { showSilentLagWarning: R } = (0, eE.Y)(),
-        A = null != k,
-        Z = (0, eC.z)(k),
+        A = null != I,
+        Z = (0, eC.z)(I),
         U = (0, d.e7)([eU.Z], () => eU.Z.isConnected()),
         { Component: F, events: G, play: B } = P,
         V = i || s ? f.v0G : F,
@@ -1303,7 +1303,7 @@ function tg(e) {
                               shouldShow: Q,
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
-                                  return (0, a.jsx)(ek.l, { onSettingsButtonClick: t });
+                                  return (0, a.jsx)(eI.l, { onSettingsButtonClick: t });
                               },
                               children: (e, t) => {
                                   var { onClick: n } = e,
@@ -1410,8 +1410,8 @@ function tg(e) {
                                                                   onClick: (e) => {
                                                                       i(te.L.INDIRECT_ACTION),
                                                                           n(e),
-                                                                          null != I && !Q && w
-                                                                              ? (0, eI.$)(() => $(!0))
+                                                                          null != k && !Q && w
+                                                                              ? (0, ek.$)(() => $(!0))
                                                                               : $(!Q);
                                                                   },
                                                               },

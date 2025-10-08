@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     s = n(481060),
     a = n(388032),
-    o = n(289086);
+    o = n(24491);
 function c(e) {
     let {
         className: t,
@@ -14,8 +14,8 @@ function c(e) {
         onPreview: c,
         onToggle: d,
         animateStatus: u,
-        firstLine: m,
-        secondLine: g,
+        firstLine: g,
+        secondLine: m,
         disabled: p,
     } = e;
     return (0, r.jsxs)("div", {
@@ -41,11 +41,11 @@ function c(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
-                        children: m,
+                        children: g,
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
-                        children: g,
+                        children: m,
                     }),
                 ],
             }),

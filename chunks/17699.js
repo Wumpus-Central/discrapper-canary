@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(239091),
     d = n(749210),
     u = n(479531),
-    m = n(110924),
-    g = n(410030),
+    g = n(110924),
+    m = n(410030),
     p = n(367907),
     f = n(906732),
     h = n(218867),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(40175);
+    T = n(298814);
 function P(e, t, n) {
     return (
         t in e
@@ -75,8 +75,8 @@ function R(e, t) {
 }
 function Z(e) {
     var t;
-    let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: m } = e,
-        [g, h] = i.useState(!1),
+    let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: g } = e,
+        [m, h] = i.useState(!1),
         [x, b] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
         v = null != (t = null == j ? void 0 : j[0]) ? t : null;
@@ -85,7 +85,7 @@ function Z(e) {
             b(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, s.id),
-                    m(),
+                    g(),
                     _.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
                         R(w({}, (0, p.hH)(l.id)), {
@@ -155,13 +155,13 @@ function Z(e) {
                         (0, r.jsx)(o.zxk, {
                             variant: "primary",
                             text: S.intl.string(S.t.i4jeWV),
-                            onClick: m,
+                            onClick: g,
                         }),
                         (0, r.jsx)(o.zxk, {
                             variant: "critical-secondary",
                             text: S.intl.string(S.t.UPcIa2),
                             onClick: O,
-                            loading: g,
+                            loading: m,
                         }),
                     ],
                 }),
@@ -283,10 +283,10 @@ function L(e) {
         u = i.useCallback(() => {
             O.Z.setSection(I.pNK.SAFETY), (0, N.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
-        m = i.useCallback((e) => {
+        g = i.useCallback((e) => {
             s(e), 0 === e.trim().length && O.Z.setSearchQuery(e);
         }, []),
-        g = i.useCallback(() => {
+        m = i.useCallback(() => {
             s(""), O.Z.setSearchQuery("");
         }, []),
         p = i.useCallback(async () => {
@@ -331,9 +331,9 @@ function L(e) {
                             query: null != l ? l : "",
                             placeholder: S.intl.string(S.t.MiqUmZ),
                             "aria-label": S.intl.string(S.t.MiqUmZ),
-                            onChange: m,
+                            onChange: g,
                             onKeyDown: f,
-                            onClear: g,
+                            onClear: m,
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
@@ -357,11 +357,11 @@ function k() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, a.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
-        f = (0, m.Z)(p),
+        f = (0, g.Z)(p),
         h = p !== f,
         [b] = (0, a.e7)([y.Z], () => y.Z.getBans(), [], v.Q),
         _ = null != (e = null == b ? void 0 : b.size) ? e : 0,
-        C = (0, g.ZP)(),
+        C = (0, m.ZP)(),
         O = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
         E = i.useCallback(

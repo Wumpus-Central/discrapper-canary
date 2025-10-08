@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(607070),
     _ = n(100527),
     j = n(367907),
-    x = n(906732),
-    O = n(493324),
+    O = n(906732),
+    x = n(493324),
     v = n(611064),
     C = n(677432),
     I = n(178762),
@@ -44,7 +44,7 @@ var r = n(951288),
     V = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(32482);
+    q = n(854641);
 function K(e, t, n) {
     return (
         t in e
@@ -140,8 +140,8 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                 status: y,
                 channel: _,
                 guildId: j,
-                isTyping: x,
-                isMobileOnline: O,
+                isTyping: O,
+                isMobileOnline: x,
                 premiumSince: v,
                 nameplate: C,
             } = e,
@@ -175,7 +175,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -251,10 +251,10 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: x,
+                            isTyping: O,
                             channel: _,
                             guildId: j,
-                            isMobile: O,
+                            isMobile: x,
                             onClickPremiumGuildIcon: w,
                             selected: S,
                             itemProps: I,
@@ -348,7 +348,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, O.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -667,7 +667,7 @@ class el extends i.Component {
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, x.ZP)(_.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, O.ZP)(_.Z.MEMBER_LIST),
         s = (0, p.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         o = (0, p.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
@@ -682,7 +682,7 @@ function ea(e) {
         }),
         b = i.useRef(null),
         j = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        O = i.useCallback(
+        x = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -726,12 +726,12 @@ function ea(e) {
         ),
         I = (0, d.ZP)({
             id: "members-".concat(t.id),
-            setFocus: O,
+            setFocus: x,
             isEnabled: s,
             scrollToStart: v,
             scrollToEnd: C,
         });
-    return (0, r.jsx)(x.Gt, {
+    return (0, r.jsx)(O.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(q.container, n),

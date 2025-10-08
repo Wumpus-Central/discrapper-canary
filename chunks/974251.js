@@ -26,8 +26,8 @@ var i = n(951288),
     P = n(885110),
     I = n(585483),
     Z = n(358085),
-    N = n(127654),
-    T = n(316595),
+    T = n(127654),
+    N = n(316595),
     A = n(443603),
     w = n(193910),
     M = n(951211),
@@ -35,7 +35,7 @@ var i = n(951288),
     k = n(356659),
     L = n(921944),
     D = n(388032),
-    U = n(90274);
+    U = n(935730);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,8 +82,8 @@ function H(e, t) {
 let V = r.memo(function (e) {
     var t, l;
     let { className: V, channel: F, draftType: G, editorTextContent: z, setValue: W, canOnlyUseTextCommands: q } = e,
-        K = (0, C.bp)(),
-        Y = r.useRef(null),
+        Y = (0, C.bp)(),
+        K = r.useRef(null),
         X = r.useRef(null),
         J = (0, o.e7)([P.Z], () => P.Z.getActivities()),
         Q = (0, o.e7)([f.Z], () => f.Z.getSettings().clipsEnabled),
@@ -126,7 +126,7 @@ let V = r.memo(function (e) {
     r.useEffect(() => {
         let e = () => {
             var e;
-            return null == (e = Y.current) ? void 0 : e.activateUploadDialogue();
+            return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
             I.S.subscribe(R.CkL.UPLOAD_FILE, e),
@@ -153,7 +153,7 @@ let V = r.memo(function (e) {
             newClipsCount: ev,
             canPostPolls: eC,
             canLaunchActivities: ey,
-            appContext: K,
+            appContext: Y,
             canSendScheduledMessages: e_,
         });
     if (0 === ex.length) return null;
@@ -196,7 +196,7 @@ let V = r.memo(function (e) {
                                 channel: F,
                                 onFileUpload: () => {
                                     var e;
-                                    return null == (e = Y.current) ? void 0 : e.activateUploadDialogue();
+                                    return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
                                 },
                                 draftType: G,
                                 editorTextContent: z,
@@ -222,7 +222,7 @@ let V = r.memo(function (e) {
                                 onDoubleClick: ed
                                     ? () => {
                                           var e;
-                                          return null == (e = Y.current) ? void 0 : e.activateUploadDialogue();
+                                          return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
                                       }
                                     : void 0,
                                 "aria-haspopup": "menu",
@@ -238,13 +238,13 @@ let V = r.memo(function (e) {
             (0, i.jsx)("div", {
                 className: U.uploadInput,
                 children: (0, i.jsx)(u.Z, {
-                    ref: Y,
+                    ref: K,
                     onChange: (e) => {
                         var t, n, i;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
-                                ? (0, N.G)(F, [])
-                                : (0, N.d)(t, F, G, {
+                                ? (0, T.G)(F, [])
+                                : (0, T.d)(t, F, G, {
                                       requireConfirm: !0,
                                       showLargeMessageDialog: i,
                                       origin: "file_picker",
@@ -259,7 +259,7 @@ let V = r.memo(function (e) {
             }),
             (0, i.jsx)("div", {
                 className: U.attachWrapper,
-                children: (0, i.jsx)(T.Z, {
+                children: (0, i.jsx)(N.Z, {
                     channel: F,
                     isOmniMenuOpen: "attachMenu" === eo,
                     openOmniMenu: () => es("attachMenu"),

@@ -5,14 +5,14 @@ var r = n(951288),
     a = n(454585),
     o = n(273744),
     s = n(388032),
-    c = n(124252),
-    d = n(197571);
+    c = n(132875),
+    d = n(10198);
 let u = (e) => {
         var t, n;
         let {
                 data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
-                onChange: h,
-                initialText: b,
+                onChange: b,
+                initialText: h,
                 isRequired: x,
             } = e,
             v = i.useRef(
@@ -59,29 +59,29 @@ let u = (e) => {
                 ),
             ),
             [j, y] = i.useState(""),
-            [O, C] = i.useState(null);
+            [O, I] = i.useState(null);
         i.useEffect(() => {
             var e;
-            y(null != (e = null == b ? void 0 : b.value) ? e : "");
-        }, [b]);
-        let I = i.useCallback(
+            y(null != (e = null == h ? void 0 : h.value) ? e : "");
+        }, [h]);
+        let C = i.useCallback(
             (e) => {
                 let t = null != f ? new RegExp(f) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (C(null),
+                      (I(null),
                       y(e),
-                      h({
+                      b({
                           value: e,
                           isValid: !0,
                       }))
-                    : (C(s.intl.string(s.t["24xrGR"])),
-                      h({
+                    : (I(s.intl.string(s.t["24xrGR"])),
+                      b({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [h, f],
+            [b, f],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -103,7 +103,7 @@ let u = (e) => {
                     }),
                 (0, r.jsx)(l.Kx8, {
                     maxLength: g,
-                    onChange: I,
+                    onChange: C,
                     value: j,
                     error: O,
                     rows: p,

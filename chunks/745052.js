@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(325708),
     O = n(320149),
     E = n(82295),
-    v = n(252618),
-    y = n(605236),
+    y = n(252618),
+    v = n(605236),
     I = n(243778),
     S = n(984370),
     C = n(797614),
@@ -50,8 +50,8 @@ var r = n(951288),
     X = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(803882),
-    et = n(97009);
+    ee = n(735516),
+    et = n(161655);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -247,7 +247,7 @@ function el(e) {
 let ea = (e) => {
     let t = (0, U.Z)();
     return (i.useEffect(() => {
-        (0, y.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+        (0, v.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
     null == e.targetElementRef.current || R.Z.hasLayers() || (0, p.$sL)())
         ? e.children
@@ -342,12 +342,12 @@ let es = (0, h.Z)(function (e) {
     i.useEffect(() => {
         null != g && !_ && O && b && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
     }, [g, O, b, _]);
-    let [y, I] = i.useState(K.pS.REQUESTS),
+    let [v, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
+        (0, y.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -377,7 +377,7 @@ let es = (0, h.Z)(function (e) {
                                         (0, r.jsx)(S.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
                                             "aria-label": $.intl.string($.t.e7GWjY),
-                                            selectedItem: y,
+                                            selectedItem: v,
                                             type: "top-pill",
                                             onItemSelect: A,
                                             children: [
@@ -401,7 +401,7 @@ let es = (0, h.Z)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: et.content,
-                            children: (0, r.jsx)(eo, { section: y }),
+                            children: (0, r.jsx)(eo, { section: v }),
                         }),
                     ],
                 }),

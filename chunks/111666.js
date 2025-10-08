@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(167762),
     O = n(151459),
     E = n(981631),
-    v = n(388032),
-    y = n(10058);
+    y = n(388032),
+    v = n(319763);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,8 +87,8 @@ function C(e) {
                             if (!g.Z.isFriend(n)) return !1;
                             let O = m.default.getUser(n);
                             if (null == O) return !1;
-                            let v = !1,
-                                y = null;
+                            let y = !1,
+                                v = null;
                             if (null != i) {
                                 let t = i.type;
                                 if (
@@ -111,41 +111,41 @@ function C(e) {
                                                   .concat(null != (p = i.details) ? p : "")
                                             : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
-                                        ((v = !0),
+                                        ((y = !0),
                                         e(n, "presence", l),
-                                        (y = {
+                                        (v = {
                                             user: O,
                                             activity: i,
                                         }));
                                 } else
                                     (null == (s = r.current[n]) ? void 0 : s.presence) != null &&
-                                        ((v = !0), e(n, "presence", null));
+                                        ((y = !0), e(n, "presence", null));
                             }
                             if (null != a) {
                                 let t = f.Z.getChannel(a);
                                 if (null != t) {
                                     let i = "voice-".concat(t.id);
                                     (null == (b = r.current[n]) ? void 0 : b.voice) !== i &&
-                                        ((v = !0),
+                                        ((y = !0),
                                         e(n, "voice", i),
-                                        (y = {
+                                        (v = {
                                             user: O,
                                             voiceChannel: t,
                                         }));
                                 }
                             } else
                                 (null == (o = r.current[n]) ? void 0 : o.voice) != null &&
-                                    ((v = !0), e(n, "voice", null));
+                                    ((y = !0), e(n, "voice", null));
                             return (
-                                v &&
-                                    null != y &&
-                                    ((_ = y),
+                                y &&
+                                    null != v &&
+                                    ((_ = v),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                                     t(_),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
                                     }, 10000))),
-                                v
+                                y
                             );
                         },
                         a = (e) => {
@@ -205,7 +205,7 @@ function C(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: y.container,
+                className: v.container,
                 children: N((e, t) =>
                     null == t
                         ? null
@@ -222,7 +222,7 @@ function C(e) {
                                           I(
                                               {
                                                   ref: T,
-                                                  className: y.activityWrapper,
+                                                  className: v.activityWrapper,
                                                   style: e,
                                               },
                                               n,
@@ -237,12 +237,12 @@ function C(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: v.statusText,
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: v.statusText,
                                                         }),
                                               ],
                                           },
@@ -264,8 +264,8 @@ function C(e) {
                             onClick: e,
                             icon: o.iFz,
                             iconSize: b,
-                            "aria-label": v.intl.string(v.t.TdEu5e),
-                            tooltip: i ? null : v.intl.string(v.t.TdEu5e),
+                            "aria-label": y.intl.string(y.t.TdEu5e),
+                            tooltip: i ? null : y.intl.string(y.t.TdEu5e),
                             selected: i,
                             showBadge: n,
                         }),

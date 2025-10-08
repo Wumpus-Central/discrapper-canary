@@ -10,9 +10,9 @@ var r = n(951288),
     u = n(881052),
     m = n(313201),
     f = n(703656),
-    h = n(981631),
-    g = n(388032),
-    p = n(85890);
+    p = n(981631),
+    h = n(388032),
+    g = n(341430);
 let v = (0, m.hQ)(),
     _ = (e) => {
         let { email: t, guildId: n, onClose: i } = e,
@@ -22,47 +22,47 @@ let v = (0, m.hQ)(),
                 if (null != n)
                     try {
                         let e = await d.Z.verifyCode(s, n, t);
-                        e.guild && (null == i || i(), (0, f.uL)(h.Z5c.CHANNEL(e.guild.id)));
+                        e.guild && (null == i || i(), (0, f.uL)(p.Z5c.CHANNEL(e.guild.id)));
                     } catch (e) {
                         x(new u.Hx(e));
                     }
             }, [s, t, n, i]),
-            y = o().throttle(() => {
+            E = o().throttle(() => {
                 d.Z.sendVerificationEmail(t, !0, n);
             }, 1000),
-            E = async (e) => {
-                null != s && "" !== s && e.charCode === h.yXg.ENTER && (await N());
+            y = async (e) => {
+                null != s && "" !== s && e.charCode === p.yXg.ENTER && (await N());
             };
         return (0, r.jsxs)("div", {
-            className: p.container,
+            className: g.container,
             children: [
-                (0, r.jsx)("div", { className: p.topImage }),
+                (0, r.jsx)("div", { className: g.topImage }),
                 (0, r.jsx)(c.X6q, {
-                    className: a()(p.centerText, p.header),
+                    className: a()(g.centerText, g.header),
                     variant: "heading-xl/semibold",
-                    children: g.intl.string(g.t.SJ3Lxc),
+                    children: h.intl.string(h.t.SJ3Lxc),
                 }),
                 (0, r.jsx)("div", {
-                    className: p.descriptionWidth,
+                    className: g.descriptionWidth,
                     children: (0, r.jsx)(c.Text, {
-                        className: p.centerText,
+                        className: g.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: g.intl.format(g.t["b+W0oq"], {
+                        children: h.intl.format(h.t["b+W0oq"], {
                             email: t,
-                            onClick: y,
+                            onClick: E,
                         }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: p.formItem,
+                    className: g.formItem,
                     children: [
                         (0, r.jsx)(c.vwX, {
                             id: v,
-                            children: g.intl.string(g.t.rpWT1t),
+                            children: h.intl.string(h.t.rpWT1t),
                         }),
                         (0, r.jsx)(c.oil, {
-                            onKeyPress: E,
+                            onKeyPress: y,
                             onChange: (e) => {
                                 null != e && "" !== e && m(e);
                             },
@@ -75,7 +75,7 @@ let v = (0, m.hQ)(),
                     fullWidth: !0,
                     onClick: N,
                     variant: "primary",
-                    text: g.intl.string(g.t.geKm7u),
+                    text: h.intl.string(h.t.geKm7u),
                 }),
             ],
         });

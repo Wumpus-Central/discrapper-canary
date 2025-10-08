@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => g,
+    Q: () => m,
     Z: () => x,
 }),
     n(388685);
@@ -10,9 +10,9 @@ var r = n(951288),
     a = n(587431),
     o = n(756066),
     c = n(388032),
-    d = n(52726),
+    d = n(370191),
     u = n(270395);
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function m(e) {
     }
     return e;
 }
-let g = "role_subscriptions_eligibility_modal";
+let m = "role_subscriptions_eligibility_modal";
 function p(e) {
     let { guild: t, eligibility: i, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
     return (0, r.jsx)(l.zxk, {
@@ -50,7 +50,7 @@ function p(e) {
                         var l, c;
                         return (0, r.jsx)(
                             e,
-                            ((l = m({}, n)),
+                            ((l = g({}, n)),
                             (c = c =
                                 {
                                     eligibility: i,
@@ -75,7 +75,7 @@ function p(e) {
                         );
                     };
                 },
-                { modalKey: g },
+                { modalKey: m },
             );
         },
         size: "md",
@@ -85,21 +85,21 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: d, loading: u, submitAcceptTermsRequest: m } = (0, s.Z)(t.id),
-        [g, p] = i.useState(!1);
+        { canSubmitAcceptance: o, error: d, loading: u, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
+        [m, p] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.XZJ, {
                 onChange: function () {
                     p((e) => !e);
                 },
-                checked: g,
+                checked: m,
                 label: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(l.zxk, {
-                disabled: !g || !o,
-                onClick: m,
+                disabled: !m || !o,
+                onClick: g,
                 loading: u,
                 variant: "expressive",
                 text: c.intl.string(c.t.NL5ZNT),
@@ -124,7 +124,7 @@ function h(e) {
         } = n;
     return c
         ? u
-            ? (0, r.jsx)(o.Z, m({}, n))
+            ? (0, r.jsx)(o.Z, g({}, n))
             : (0, r.jsx)(f, {
                   guild: t,
                   checkboxText: d,

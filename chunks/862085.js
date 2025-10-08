@@ -5,13 +5,13 @@ var i = n(755721),
     l = n(481060),
     s = n(556012),
     a = n(388032),
-    o = n(464992);
+    o = n(75765);
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
         u = (e) => () => d(e),
-        m = (0, s.c)(t.type, t, n);
-    if (null == m) return null;
-    let { headerText: g, descriptionText: p, icon: f } = m;
+        g = (0, s.c)(t.type, t, n);
+    if (null == g) return null;
+    let { headerText: m, descriptionText: p, icon: f } = g;
     return (0, r.jsxs)("div", {
         className: o.actionContainer,
         children: [
@@ -28,7 +28,7 @@ function c(e) {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: "heading-sm/semibold",
-                        children: g,
+                        children: m,
                     }),
                     (0, r.jsx)(l.Text, {
                         color: "interactive-normal",

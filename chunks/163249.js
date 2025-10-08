@@ -8,9 +8,9 @@ var r = n(951288),
     c = n(493544),
     d = n(607070),
     u = n(714939),
-    m = n(981631),
-    g = n(388032),
-    p = n(203552);
+    g = n(981631),
+    m = n(388032),
+    p = n(22168);
 function f(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -63,7 +63,7 @@ function h(e) {
                         (0, r.jsx)(a.qEK, {
                             size: a.EFr.SIZE_56,
                             "aria-hidden": !0,
-                            status: m.Skl.ONLINE,
+                            status: g.Skl.ONLINE,
                             src: t.avatar,
                         }),
                         (0, r.jsx)(a.Text, {
@@ -88,29 +88,29 @@ function x() {
                     roles: [
                         [
                             {
-                                name: g.intl.string(g.t["7oaPPj"]),
+                                name: m.intl.string(m.t["7oaPPj"]),
                                 color: "#7e00fc",
                             },
                             {
-                                name: g.intl.string(g.t["Z/HN6+"]),
+                                name: m.intl.string(m.t["Z/HN6+"]),
                                 color: "#faa61a",
                             },
                             {
-                                name: g.intl.string(g.t.lvHTg4),
+                                name: m.intl.string(m.t.lvHTg4),
                                 color: "#f06ea8",
                             },
                         ],
                         [
                             {
-                                name: g.intl.string(g.t["6yECkp"]),
+                                name: m.intl.string(m.t["6yECkp"]),
                                 color: "#45ddc0",
                             },
                             {
-                                name: g.intl.string(g.t["5DabCQ"]),
+                                name: m.intl.string(m.t["5DabCQ"]),
                                 color: "#00b0f4",
                             },
                             {
-                                name: g.intl.string(g.t.bB900d),
+                                name: m.intl.string(m.t.bB900d),
                                 color: "#ba1616",
                             },
                         ],
@@ -123,29 +123,29 @@ function x() {
                     roles: [
                         [
                             {
-                                name: g.intl.string(g.t["xz/Vfn"]),
+                                name: m.intl.string(m.t["xz/Vfn"]),
                                 color: "#4a76e6",
                             },
                             {
-                                name: g.intl.string(g.t.Bceru7),
+                                name: m.intl.string(m.t.Bceru7),
                                 color: "#ad87ff",
                             },
                             {
-                                name: g.intl.string(g.t.W51slp),
+                                name: m.intl.string(m.t.W51slp),
                                 color: "#6defcf",
                             },
                         ],
                         [
                             {
-                                name: g.intl.string(g.t.y9gTiY),
+                                name: m.intl.string(m.t.y9gTiY),
                                 color: "#ff73fa",
                             },
                             {
-                                name: g.intl.string(g.t.HslvdX),
+                                name: m.intl.string(m.t.HslvdX),
                                 color: "#3ba55c",
                             },
                             {
-                                name: g.intl.string(g.t.ipL1AA),
+                                name: m.intl.string(m.t.ipL1AA),
                                 color: "#ff1b66",
                             },
                         ],
@@ -158,29 +158,29 @@ function x() {
                     roles: [
                         [
                             {
-                                name: g.intl.string(g.t.pAFEbm),
+                                name: m.intl.string(m.t.pAFEbm),
                                 color: "#20d6b8",
                             },
                             {
-                                name: g.intl.string(g.t["p/HZEB"]),
+                                name: m.intl.string(m.t["p/HZEB"]),
                                 color: "#236136",
                             },
                             {
-                                name: g.intl.string(g.t["9Qp/JS"]),
+                                name: m.intl.string(m.t["9Qp/JS"]),
                                 color: "#ff9a15",
                             },
                         ],
                         [
                             {
-                                name: g.intl.string(g.t.craF5e),
+                                name: m.intl.string(m.t.craF5e),
                                 color: "#ff78b9",
                             },
                             {
-                                name: g.intl.string(g.t.L1TvXF),
+                                name: m.intl.string(m.t.L1TvXF),
                                 color: "#00b0f4",
                             },
                             {
-                                name: g.intl.string(g.t.lqKz9P),
+                                name: m.intl.string(m.t.lqKz9P),
                                 color: "#6f52e4",
                             },
                         ],
@@ -219,7 +219,7 @@ function x() {
 function b(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [s, d] = i.useState(!1),
-        m = async () => {
+        g = async () => {
             d(!0), await o.Z.createRole(t.id), d(!1);
         },
         f = i.useCallback(() => {
@@ -228,7 +228,7 @@ function b(e) {
     return (0, r.jsx)(c.NM, {
         children: (0, r.jsxs)(a.hjN, {
             className: p.section,
-            title: g.intl.string(g.t.LPJmLy),
+            title: m.intl.string(m.t.LPJmLy),
             tag: a.RB0.H2,
             children: [
                 (0, r.jsxs)("div", {
@@ -237,21 +237,21 @@ function b(e) {
                         (0, r.jsx)(x, {}),
                         (0, r.jsx)(a.X6q, {
                             variant: "heading-xl/semibold",
-                            children: g.intl.string(g.t.ALlnbm),
+                            children: m.intl.string(m.t.ALlnbm),
                         }),
                         (0, r.jsx)(a.Text, {
                             color: "header-secondary",
                             variant: "text-md/normal",
                             className: p.introBody,
-                            children: g.intl.string(g.t["1ydhVl"]),
+                            children: m.intl.string(m.t["1ydhVl"]),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
                             children: (0, r.jsx)(a.zxk, {
                                 variant: "primary",
-                                text: g.intl.string(g.t.JZZjQE),
-                                onClick: m,
+                                text: m.intl.string(m.t.JZZjQE),
+                                onClick: g,
                                 loading: s,
                             }),
                         }),

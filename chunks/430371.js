@@ -18,8 +18,8 @@ var i = n(951288),
     y = n(796638),
     _ = n(981631),
     v = n(354459),
-    x = n(394024),
-    O = n(597843);
+    x = n(450906),
+    O = n(74246);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,8 +72,8 @@ function I(e) {
             onSelectParticipant: l,
             onContextMenuParticipant: I,
             onFullscreenParticipant: Z,
-            participants: N,
-            filteredParticipants: T,
+            participants: T,
+            filteredParticipants: N,
             popoutWindow: A,
             inCall: w,
             channel: M,
@@ -90,7 +90,7 @@ function I(e) {
         G = p.default.getId(),
         [z, W] = r.useState(null),
         q = (0, c.Z)(z),
-        [K, Y] = r.useState(!0),
+        [Y, K] = r.useState(!0),
         [X, J] = r.useState(!1),
         Q = R.type === v.fO.ACTIVITY,
         $ = (0, u.Z)(Q ? R.applicationId : void 0),
@@ -115,13 +115,13 @@ function I(e) {
     (n = en || Q ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
         r.useEffect(() => {
             let e = setTimeout(() => {
-                Y(!1);
+                K(!1);
             }, 250);
             return () => {
                 clearTimeout(e);
             };
         }, []);
-    let ef = K || null == q,
+    let ef = Y || null == q,
         em = ef ? "animate-never" : "animate-always",
         eg = (0, s.q_F)(
             {
@@ -170,16 +170,16 @@ function I(e) {
             em,
         ),
         ev = r.useCallback((e) => {
-            W(e), Y(!1);
+            W(e), K(!1);
         }, []),
-        ex = en ? [] : (0, C.n3)(N, R, G),
-        { visibleParticipants: eO, participantTileWidth: ej } = (0, y.ZB)(D, T);
+        ex = en ? [] : (0, C.n3)(T, R, G),
+        { visibleParticipants: eO, participantTileWidth: ej } = (0, y.ZB)(D, N);
     return (0, i.jsxs)("div", {
         className: a()(O.root, x.flexCenter, L),
         children: [
             (0, i.jsxs)("div", {
                 className: O.tileWrapper,
-                style: { opacity: ee && K ? 0 : 1 },
+                style: { opacity: ee && Y ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(o.animated.div, {
                         className: O.videoFrame,

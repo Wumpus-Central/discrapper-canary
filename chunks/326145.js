@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -15,11 +15,11 @@ var r = n(951288),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(76531),
-    E = n(718215);
-function v(e) {
+    O = n(812070),
+    E = n(904885);
+function y(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: v, height: y } = (0, c.ZP)(),
+        { ref: l, width: y, height: v } = (0, c.ZP)(),
         I = i.useCallback(() => {
             null != t &&
                 null != n &&
@@ -49,8 +49,8 @@ function v(e) {
                 ? (0, r.jsx)(u.Z, {
                       className: E.artwork,
                       src: C,
-                      width: v,
-                      height: y,
+                      width: y,
+                      height: v,
                       imageClassName: E.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),

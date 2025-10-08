@@ -26,8 +26,8 @@ var a = n(951288),
     O = n(892001),
     N = n(899007),
     P = n(648052),
-    k = n(867176),
-    I = n(537006),
+    I = n(867176),
+    k = n(537006),
     w = n(483424),
     R = n(681837),
     A = n(638970),
@@ -56,8 +56,8 @@ var a = n(951288),
     ea = n(228168),
     er = n(671955),
     ei = n(388032),
-    el = n(54482),
-    es = n(116649);
+    el = n(138005),
+    es = n(593540);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -119,8 +119,8 @@ function ec(e) {
         eO = G.Sb.useSetting(),
         eN = (0, $.I)(e_),
         eP = (0, Y.g)(n),
-        ek = (0, j.Z)({ analyticsLocations: ef }),
-        eI = (0, H.I5)(t),
+        eI = (0, j.Z)({ analyticsLocations: ef }),
+        ek = (0, H.I5)(t),
         ew = (0, h.p)({ location: "UserProfileAccountPopout" }),
         eR = (0, E.b)({ location: "UserProfileAccountPopout" }),
         eA = r.useRef(null),
@@ -155,8 +155,8 @@ function ec(e) {
             eW(en.L.USER_DISMISS), n();
         }, [eW, n]),
         eq = r.useCallback(() => {
-            (ep && null != em) || (ek(), eK());
-        }, [ek, eK, ep, em]),
+            (ep && null != em) || (eI(), eK());
+        }, [eI, eK, ep, em]),
         eY = ep && null != em,
         eX = (0, q.K)(em, ef, eH, n, eK),
         eJ = (0, C.k)({ location: "UserProfileAccountPopout" });
@@ -182,7 +182,7 @@ function ec(e) {
                             (0, a.jsxs)("div", {
                                 className: es.header,
                                 children: [
-                                    (0, a.jsx)(k.Z, {
+                                    (0, a.jsx)(I.Z, {
                                         user: t,
                                         displayProfile: ex,
                                         themeType: er.l.POPOUT,
@@ -243,8 +243,8 @@ function ec(e) {
                                                 n(), eF({ section: ea.oh.WIDGETS });
                                             },
                                         }),
-                                    (0, a.jsx)(I.Z, {
-                                        isPremiumUser: eI,
+                                    (0, a.jsx)(k.Z, {
+                                        isPremiumUser: ek,
                                         onInteraction: n,
                                     }),
                                     eR

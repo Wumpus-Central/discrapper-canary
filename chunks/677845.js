@@ -21,7 +21,7 @@ var i = n(951288),
     x = n(251564),
     O = n(695492),
     j = n(981631),
-    E = n(312439);
+    E = n(53155);
 function S(e) {
     let {
             participants: t,
@@ -30,8 +30,8 @@ function S(e) {
             onContextMenu: P,
             channel: I,
             className: Z,
-            inCall: N,
-            totalNumberOfParticipants: T,
+            inCall: T,
+            totalNumberOfParticipants: N,
         } = e,
         A = (0, m.bp)() === j.IlC.POPOUT,
         w = (0, o.e7)([C.Z], () => C.Z.getGuild(I.guild_id), [I.guild_id]),
@@ -68,7 +68,7 @@ function S(e) {
                         onClick: n,
                         onDoubleClick: S,
                         onContextMenu: P,
-                        inCall: N,
+                        inCall: T,
                         width: t,
                         inPopout: A,
                     },
@@ -80,7 +80,7 @@ function S(e) {
             type: l.ImpressionTypes.VIEW,
             name: l.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
-                total_participants: T,
+                total_participants: N,
                 can_invite: D,
                 is_afk_channel: U,
                 channel_user_limit: I.userLimit,

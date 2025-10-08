@@ -9,17 +9,17 @@ var i = n(159691),
     c = n(495437),
     d = n(267101),
     u = n(863663),
-    m = n(676651),
-    g = n(613810),
+    g = n(676651),
+    m = n(613810),
     p = n(391181),
     f = n(388032),
-    h = n(82917);
+    h = n(931281);
 let x = "guild-product-listings-header";
 function b(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
-        m = (0, d.ue)(t, { publishedOnly: !1 }),
+        g = (0, d.ue)(t, { publishedOnly: !1 }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: b } = (0, a.gX)(t),
-        j = m.length > 0;
+        j = g.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.vwX, {
@@ -31,7 +31,7 @@ function b(e) {
                 ? (0, r.jsx)("ul", {
                       className: h.productListings,
                       "aria-labelledby": x,
-                      children: m.map((e) =>
+                      children: g.map((e) =>
                           (0, r.jsx)(
                               "li",
                               {
@@ -99,7 +99,7 @@ function b(e) {
                                           return (n = e.id), void (0, o.JG)((0, u.ar)(t, n));
                                       },
                                       onTestDownload: () =>
-                                          g.Z.open({
+                                          m.Z.open({
                                               guildId: t,
                                               productId: e.id,
                                           }),
@@ -123,7 +123,7 @@ function j(e) {
     let { guildId: t } = e,
         { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
         s = (e) => {
-            m.h(t, e);
+            g.h(t, e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [

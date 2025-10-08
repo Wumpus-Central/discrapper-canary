@@ -18,7 +18,7 @@ var i = n(951288),
     y = n(641033),
     _ = n(989830),
     v = n(388032),
-    x = n(23586);
+    x = n(436083);
 let O = r.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -158,7 +158,7 @@ let O = r.memo(function (e) {
         r.useEffect(() => {
             (P.multiplier > 1 || P.value > 0) && (I.current = P);
         }, [P]);
-        let { multiplier: Z, value: N } = r.useMemo(
+        let { multiplier: Z, value: T } = r.useMemo(
             () => ({
                 value: E ? P.value : I.current.value,
                 multiplier: E ? P.multiplier : I.current.multiplier,
@@ -176,7 +176,7 @@ let O = r.memo(function (e) {
                     className: x.combo,
                     style: S,
                     children: (0, i.jsx)(j, {
-                        value: N,
+                        value: T,
                         multiplier: Z,
                     }),
                 }),

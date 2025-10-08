@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     s = n(647438),
     o = n(120356),
@@ -14,7 +14,7 @@ var r = n(951288),
     f = n(439826),
     h = n(43779),
     x = n(981631),
-    _ = n(88036);
+    _ = n(974326);
 function b(e) {
     var t, n;
     let {
@@ -22,8 +22,8 @@ function b(e) {
             className: d,
             questContent: u,
             contentPosition: b,
-            rowIndex: j,
-            impressionRef: v,
+            rowIndex: v,
+            impressionRef: j,
             sourceQuestContent: C,
         } = e,
         [y, E] = s.useState(!1),
@@ -45,7 +45,7 @@ function b(e) {
                 }),
                 w && (0, p.loadVideoQuestModal)();
         }, [P, o.id, u, w, C, b]),
-        R = s.useCallback(() => {
+        A = s.useCallback(() => {
             E(!1),
                 P({
                     questId: o.id,
@@ -58,7 +58,7 @@ function b(e) {
                     sourceQuestContent: C,
                 });
         }, [P, o.id, u, C, b]),
-        A = s.useContext(g.t),
+        R = s.useContext(g.t),
         { visibilityElementRef: B, almostVisibleInViewport: k } = (function (e) {
             let [t, n] = s.useState(!1),
                 r = s.useCallback((e) => {
@@ -76,17 +76,17 @@ function b(e) {
                 ),
                 almostVisibleInViewport: t,
             };
-        })(null != (n = null == A || null == (t = A.current) ? void 0 : t.getScrollerNode()) ? n : null);
+        })(null != (n = null == R || null == (t = R.current) ? void 0 : t.getScrollerNode()) ? n : null);
     return (0, r.jsxs)("div", {
         id: "quest-tile-".concat(o.id),
         ref: (e) => {
-            (v.current = e), (B.current = e);
+            (j.current = e), (B.current = e);
         },
         className: a()(_.container, d),
         onMouseEnter: N,
-        onMouseLeave: R,
+        onMouseLeave: A,
         onFocus: N,
-        onBlur: R,
+        onBlur: A,
         children: [
             (0, r.jsx)(f.Z, {
                 quest: o,
@@ -101,7 +101,7 @@ function b(e) {
                 questContent: u,
                 isHovering: y,
                 contentPosition: b,
-                rowIndex: j,
+                rowIndex: v,
                 onReceiveErrorHints: S,
                 isVisibleInViewport: k,
                 sourceQuestContent: C,
@@ -109,7 +109,7 @@ function b(e) {
         ],
     });
 }
-function j(e) {
+function v(e) {
     return (0, r.jsx)(u.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,

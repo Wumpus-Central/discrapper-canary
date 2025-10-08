@@ -26,8 +26,8 @@ var i = n(951288),
     P = n(320781),
     I = n(269203),
     Z = n(86863),
-    N = n(558756),
-    T = n(753898),
+    T = n(558756),
+    N = n(753898),
     A = n(734386),
     w = n(184279),
     M = n(438306),
@@ -36,8 +36,8 @@ var i = n(951288),
     L = n(981631),
     D = n(176505),
     U = n(388032),
-    B = n(963392),
-    H = n(197571);
+    B = n(40036),
+    H = n(10198);
 function V(e) {
     let { canManageRoles: t, channel: n } = e,
         r = t && (0, p.Yk)(n),
@@ -85,7 +85,7 @@ function F(e) {
     )
         return F
             ? (0, i.jsx)(w.Z, { channel: p })
-            : (0, i.jsx)(T.Z, {
+            : (0, i.jsx)(N.Z, {
                   channel: p,
                   children: U.intl.string(U.t.Rzvnio),
               });
@@ -97,7 +97,7 @@ function F(e) {
                   (e = (0, i.jsxs)("div", {
                       className: B.buttonContainer,
                       children: [
-                          (0, i.jsx)(N.W, {
+                          (0, i.jsx)(T.W, {
                               className: B.button,
                               channel: p,
                               user: P,
@@ -117,7 +117,7 @@ function F(e) {
                       channel: p,
                       showingBanner: h,
                   })),
-            (0, i.jsxs)(T.Z, {
+            (0, i.jsxs)(N.Z, {
                 channel: p,
                 user: P,
                 children: [
@@ -146,7 +146,7 @@ function F(e) {
             });
         else if (p.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(I.Z, { channel: p });
         else
-            return (0, i.jsx)(T.Z, {
+            return (0, i.jsx)(N.Z, {
                 channel: p,
                 children: U.intl.format(U.t.MFwcqK, { name: y }),
             });

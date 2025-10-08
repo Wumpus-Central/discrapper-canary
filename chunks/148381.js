@@ -6,16 +6,16 @@ var r = n(951288),
     o = n(481060),
     a = n(493773),
     c = n(958707),
-    d = n(542257),
-    u = n(308300);
+    d = n(79985),
+    u = n(378671);
 function f(e) {
     let { title: t, scrollerClassName: n, scrollerInnerClassName: l, children: f } = e,
         m = i.useRef(null),
         [h, p] = i.useState(!1),
-        [g, x] = i.useState(!1),
+        [x, g] = i.useState(!1),
         _ = i.useCallback(() => {
             let { current: e } = m;
-            null != e && (p(!e.isScrolledToTop()), x(!e.isScrolledToBottom()));
+            null != e && (p(!e.isScrolledToTop()), g(!e.isScrolledToBottom()));
         }, []);
     return (
         (0, a.Ng)(() => _()),
@@ -35,7 +35,7 @@ function f(e) {
                     className: n,
                     children: (0, r.jsx)(o.Den, {
                         ref: m,
-                        className: s()(u.scrollerInner, l, { [u.bottomSeparator]: g }),
+                        className: s()(u.scrollerInner, l, { [u.bottomSeparator]: x }),
                         onScroll: _,
                         children: f,
                     }),

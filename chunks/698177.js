@@ -12,14 +12,14 @@ var r = n(951288),
     g = n(388905),
     m = n(815660),
     p = n(388032),
-    f = n(149715),
-    _ = n(197571);
+    f = n(465106),
+    _ = n(10198);
 let x = () => {
     let [e, t] = i.useState(""),
         [l, x] = i.useState(""),
         [E, v] = i.useState(!1),
-        [b, j] = i.useState(!1),
-        [I, N] = i.useState(null),
+        [b, I] = i.useState(!1),
+        [j, N] = i.useState(null),
         [S, O] = i.useState(null),
         y = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
         C = y.code.split(" ")[0],
@@ -34,7 +34,7 @@ let x = () => {
             v(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, l);
-                N(null), O(null), j(!0), c.Z.validatePhoneForSupport(t);
+                N(null), O(null), I(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
                 e.body.message ? (N(null), O(e.body.message)) : (N(e.body.phone), O(e.body.code));
             } finally {
@@ -78,7 +78,7 @@ let x = () => {
                               spellCheck: "false",
                               onChange: t,
                               forceMode: u.Nz.PHONE,
-                              error: I,
+                              error: j,
                           }),
                           (0, r.jsx)(g.II, {
                               className: _.marginTop20,

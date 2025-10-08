@@ -17,15 +17,15 @@ var r = n(951288),
     y = n(699516),
     _ = n(111583),
     j = n(594174),
-    x = n(626135),
-    O = n(585483),
+    O = n(626135),
+    x = n(585483),
     v = n(233870),
     C = n(51144),
     I = n(998502),
     E = n(276264),
     S = n(981631),
     Z = n(388032),
-    T = n(32482);
+    T = n(854641);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,13 +57,13 @@ function w(e) {
     let { user: t, channel: s, status: d, activities: u } = e,
         p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(s.id)[t.id]),
         f = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        O = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
         T = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("92775")]).then(
                     n.bind(n, 354589),
                 );
                 return (n) => {
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(C.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            O.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
-                O.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            x.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: s.id }),
+                x.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -156,7 +156,7 @@ function w(e) {
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: x,
+                        isMobile: O,
                         nick: v,
                         nameplate: A,
                         onClick: (e) => {
@@ -219,7 +219,7 @@ function D(e) {
             A,
         );
     i.useEffect(() => {
-        x.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        O.default.track(S.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,

@@ -16,9 +16,9 @@ var r = n(951288),
     x = n(497505),
     _ = n(667105),
     b = n(585857),
-    j = n(795057),
-    v = n(388032),
-    C = n(19672);
+    v = n(795057),
+    j = n(388032),
+    C = n(936289);
 function y(e) {
     return (0, r.jsx)(c.Text, {
         className: C.microphoneUnitBodyText,
@@ -33,7 +33,7 @@ function E(e) {
         l = (0, _.k3)(t.id, x.jn.QUEST_BAR_V2, x.jn.QUEST_BAR_V2),
         d = (0, _.g2)({ useReducedMotion: n }),
         b = (0, p.O5)(),
-        j = (0, m.aM)(),
+        v = (0, m.aM)(),
         {
             errorHints: E,
             startingConsoleQuest: O,
@@ -57,11 +57,11 @@ function E(e) {
             return {
                 header: e
                     ? (0, f.Pb)(t)
-                        ? v.intl.string(v.t.N33EuL)
-                        : v.intl.formatToPlainString(v.t["28Ql29"], { gameTitle: n })
+                        ? j.intl.string(j.t.N33EuL)
+                        : j.intl.formatToPlainString(j.t["28Ql29"], { gameTitle: n })
                     : (0, f.Pb)(t)
-                      ? v.intl.string(v.t.YstzGB)
-                      : v.intl.formatToPlainString(v.t.gX0Qc3, { gameTitle: n }),
+                      ? j.intl.string(j.t.YstzGB)
+                      : j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
@@ -73,7 +73,7 @@ function E(e) {
                                       return (0, r.jsx)(
                                           y,
                                           {
-                                              children: v.intl.format(o, {
+                                              children: j.intl.format(o, {
                                                   account_name: null == s ? void 0 : s.name,
                                                   onClick: () => {
                                                       (0, f.fY)(
@@ -84,7 +84,7 @@ function E(e) {
                                                           {
                                                               content: x.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
-                                                              impressionId: j,
+                                                              impressionId: v,
                                                               sourceQuestContent: x.jn.QUEST_BAR_V2,
                                                           },
                                                       );
@@ -103,11 +103,11 @@ function E(e) {
                               color: "text-muted",
                               variant: "text-xxs/normal",
                               children: (0, f.Pb)(t)
-                                  ? v.intl.string(v.t.bUyEZW)
-                                  : v.intl.format(v.t.GXqvCw, { gameTitle: n }),
+                                  ? j.intl.string(j.t.bUyEZW)
+                                  : j.intl.format(j.t.GXqvCw, { gameTitle: n }),
                           }),
             };
-        }, [E, t, o, j]);
+        }, [E, t, o, v]);
     return (0, r.jsxs)("div", {
         className: C.microphoneUnit,
         children: [
@@ -214,17 +214,17 @@ let O = function (e) {
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(j.y3, {
+                            (0, r.jsx)(v.y3, {
                                 children: (0, f.Pb)(t)
-                                    ? v.intl.string(v.t["5tXqFR"])
-                                    : v.intl.formatToPlainString(v.t["+8JB6e"], { gameTitle: l }),
+                                    ? j.intl.string(j.t["5tXqFR"])
+                                    : j.intl.formatToPlainString(j.t["+8JB6e"], { gameTitle: l }),
                             }),
                         isComplete: o || c,
                     },
                     {
                         renderContent: () =>
-                            (0, r.jsx)(j.y3, {
-                                children: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }),
+                            (0, r.jsx)(v.y3, {
+                                children: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }),
                             }),
                         isComplete: c,
                     },
@@ -234,8 +234,8 @@ let O = function (e) {
                 isQuestComplete: c,
             };
         }, [a, i.length, t, n.targetMinutes]);
-    return (0, r.jsx)(j.ZP, {
-        heading: v.intl.string(v.t.UPWlJi),
+    return (0, r.jsx)(v.ZP, {
+        heading: j.intl.string(j.t.UPWlJi),
         steps: c,
         children:
             u &&

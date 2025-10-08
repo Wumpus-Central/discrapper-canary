@@ -26,8 +26,8 @@ var i = n(951288),
     P = n(703656),
     I = n(210887),
     Z = n(606956),
-    N = n(271383),
-    T = n(430824),
+    T = n(271383),
+    N = n(430824),
     A = n(607744),
     w = n(496675),
     M = n(594174),
@@ -38,7 +38,7 @@ var i = n(951288),
     U = n(701488),
     B = n(815660),
     H = n(388032),
-    V = n(97508);
+    V = n(989028);
 function F(e, t, n) {
     return (
         t in e
@@ -376,16 +376,16 @@ function q(e) {
     var t, n;
     let { channel: r, children: l } = e,
         a = r.getGuildId(),
-        s = (0, o.e7)([T.Z], () => T.Z.getGuild(a)),
+        s = (0, o.e7)([N.Z], () => N.Z.getGuild(a)),
         c = (0, o.e7)([A.Z], () => A.Z.getCheck(a)),
         u = r.type === D.d4z.GUILD_ANNOUNCEMENT && null != s && s.features.has(D.oNc.NEWS),
         d = (0, o.e7)([Z.Z], () => (u ? Z.Z.getFollowerStatsForChannel(r.id) : null)),
         p = (0, o.e7)([O.Z], () => O.Z.isLurking(a)),
         f = (0, o.e7)([M.default], () => M.default.getCurrentUser()),
         m = null != (t = null == f ? void 0 : f.isStaff()) && t,
-        g = (0, o.e7)([N.ZP], () => {
+        g = (0, o.e7)([T.ZP], () => {
             var e, t;
-            return null != f && null != (t = null == (e = N.ZP.getMember(a, f.id)) ? void 0 : e.isPending) && t;
+            return null != f && null != (t = null == (e = T.ZP.getMember(a, f.id)) ? void 0 : e.isPending) && t;
         }),
         b = !!(0, y.Dc)(s),
         v = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),

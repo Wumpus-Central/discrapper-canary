@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,20 +12,20 @@ var r = n(951288),
     m = n(2052),
     h = n(924557),
     p = n(600164),
-    g = n(436774),
-    x = n(140465),
+    x = n(436774),
+    g = n(140465),
     _ = n(592125),
     v = n(944486),
     j = n(594174),
     b = n(74538),
-    S = n(451467),
-    C = n(122186),
+    C = n(451467),
+    S = n(122186),
     y = n(37113),
     O = n(981631),
     w = n(388032),
-    Z = n(542257),
-    I = n(381994),
-    N = n(197571);
+    Z = n(79985),
+    I = n(763021),
+    N = n(10198);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,7 +82,7 @@ function R() {
         children: [
             (0, r.jsx)(u.SrA, {
                 size: "md",
-                color: g.JX.PREMIUM_TIER_2,
+                color: x.JX.PREMIUM_TIER_2,
                 className: I.premiumIcon,
             }),
             (0, r.jsx)(u.Text, {
@@ -93,7 +93,7 @@ function R() {
         ],
     });
 }
-function A(e) {
+function k(e) {
     let t,
         n,
         {
@@ -150,16 +150,16 @@ function A(e) {
         }
     );
 }
-function k(e) {
+function A(e) {
     let {
             onClose: t,
             selectedPreset: n,
             selectedResolution: l,
             selectedFPS: s,
             onResolutionChange: o,
-            onFPSChange: g,
+            onFPSChange: x,
             onPresetChange: R,
-            targetGuildPremiumTier: k,
+            targetGuildPremiumTier: A,
             captureDeviceSelected: M,
         } = e,
         D = (0, c.e7)([j.default], () => {
@@ -170,17 +170,17 @@ function k(e) {
         B = b.ZP.canStreamQuality(b.U2.MID, D),
         { location: G } = (0, m.O)(),
         U = (0, h.Zq)({ autoTrackExposure: !1 }),
-        W = (0, x.B4)(),
+        W = (0, g.B4)(),
         z = !B && !U,
         [F, H] = i.useState(!1),
         V = M ? y.z8 : y.WC,
         Y = T(P({}, G), { section: O.jXE.STREAM_SETTINGS }),
         J = (0, r.jsx)(d.hE, {
             buttons: V.map((e) =>
-                A({
+                k({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, S.Z)(n, e.value, s, D, k, L),
+                    needsPremium: !(0, C.Z)(n, e.value, s, D, A, L),
                     needsDemo: W && e.value !== y.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
@@ -191,13 +191,13 @@ function k(e) {
         }),
         X = (0, r.jsx)(d.hE, {
             buttons: y.k0.map((e) =>
-                A({
+                k({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, S.Z)(n, l, e.value, D, k, L),
+                    needsPremium: !(0, C.Z)(n, l, e.value, D, A, L),
                     needsDemo: W && e.value === y.ws.FPS_60,
                     analyticsLocation: Y,
-                    onClick: () => g(e.value),
+                    onClick: () => x(e.value),
                     onClose: t,
                     setIsHovering: H,
                 }),
@@ -237,13 +237,13 @@ function k(e) {
                               }),
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(S.Z, {
                                     message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(S.c, {}),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -265,13 +265,13 @@ function k(e) {
                               ],
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(S.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                     glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(S.c, {}),
                       ],
                   });
     return (0, r.jsx)(

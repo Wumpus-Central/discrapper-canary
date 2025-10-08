@@ -5,16 +5,16 @@ n.d(t, {
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    a = n.n(l),
-    s = n(128922),
+    s = n.n(l),
+    a = n(128922),
     i = n(401975),
-    o = n(638758),
-    c = n(887353),
-    u = n(198501),
-    d = n(300179);
+    o = n(55783),
+    c = n(654664),
+    u = n(970217),
+    d = n(670185);
 let g = () =>
         (0, r.jsx)("div", {
-            className: a()(u.skeleton, d.shopCard),
+            className: s()(u.skeleton, d.shopCard),
             children: (0, r.jsxs)("div", {
                 className: u.cardBody,
                 children: [
@@ -26,7 +26,7 @@ let g = () =>
             }),
         }),
     p = () => {
-        let e = s.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
+        let e = a.Z.useConfig({ location: "ShopSkeleton" }).showCardsV2;
         return (0, r.jsx)("div", {
             className: u.skeletonsContainer,
             children: Array.from({ length: 3 }).map((t, n) =>
@@ -36,9 +36,9 @@ let g = () =>
                         className: c.cardsContainer,
                         children: [
                             e
-                                ? (0, r.jsx)("div", { className: a()(o.catalogBanner, u.bannerSkeletonV2) })
+                                ? (0, r.jsx)("div", { className: s()(o.catalogBanner, u.bannerSkeletonV2) })
                                 : (0, r.jsx)("div", {
-                                      className: a()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
+                                      className: s()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
                                       children: (0, r.jsx)("div", { className: u.bannerBody }),
                                   }),
                             Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(i.Z, {}, n) : (0, r.jsx)(g, {}, n))),

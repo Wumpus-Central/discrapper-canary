@@ -8,21 +8,21 @@ var r = n(951288),
     c = n(516129),
     d = n(345861),
     u = n(768581),
-    m = n(434404),
-    g = n(981631),
+    g = n(434404),
+    m = n(981631),
     p = n(30513),
     f = n(486324),
     h = n(200299),
     x = n(388032),
-    b = n(197530);
+    b = n(359449);
 let j = function (e) {
     let { guild: t } = e,
-        j = t.features.has(g.oNc.BANNER),
+        j = t.features.has(m.oNc.BANNER),
         _ = i.useCallback(
             (e, i) => {
-                if (null == e || void 0 === i) return void m.Z.saveGuild(t.id, { homeHeader: null });
+                if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -58,7 +58,7 @@ let j = function (e) {
                                     file: i,
                                     onCrop: (e) => {
                                         let { imageUri: n } = e;
-                                        return m.Z.saveGuild(t.id, { homeHeader: n });
+                                        return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
                                     uploadType: f.pC.HOME_HEADER,
                                 },
@@ -73,10 +73,10 @@ let j = function (e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, s.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, s.yw)(m.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
-                            section: g.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: g.qAy.LEARN_MORE,
+                            section: m.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: m.qAy.LEARN_MORE,
                         },
                         guild_id: null == t ? void 0 : t.id,
                         location_stack: [],
@@ -84,9 +84,9 @@ let j = function (e) {
                     (0, o.Z)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
-                            section: g.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: g.qAy.ONBOARDING_EDIT,
-                            page: g.ZY5.GUILD_SETTINGS,
+                            section: m.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: m.qAy.ONBOARDING_EDIT,
+                            page: m.ZY5.GUILD_SETTINGS,
                         },
                         guild: t,
                         perks: (0, p.XO)(),
@@ -123,7 +123,7 @@ let j = function (e) {
                           (0, r.jsx)(a.Z, {
                               className: b.boostIndicator,
                               guild: t,
-                              guildFeature: g.oNc.BANNER,
+                              guildFeature: m.oNc.BANNER,
                               onClick: v,
                           }),
                       ],
@@ -169,7 +169,7 @@ let j = function (e) {
                           (0, r.jsx)(a.Z, {
                               className: b.boostIndicator,
                               guild: t,
-                              guildFeature: g.oNc.BANNER,
+                              guildFeature: m.oNc.BANNER,
                               onClick: v,
                           }),
                       ],

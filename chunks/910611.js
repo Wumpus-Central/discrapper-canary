@@ -31,12 +31,12 @@ var i = n(951288),
     P = n(946734),
     I = n(99843),
     Z = n(372564),
-    N = n(984370),
-    T = n(217314),
+    T = n(984370),
+    N = n(217314),
     A = n(981631),
     w = n(921944),
     M = n(388032),
-    R = n(97009);
+    R = n(161655);
 function k(e) {
     var t;
     let { channel: n, children: r } = e,
@@ -184,7 +184,7 @@ function L(e) {
         });
     switch (t.type) {
         case A.d4z.DM:
-            return (0, i.jsx)(T.Z, {
+            return (0, i.jsx)(N.Z, {
                 level: y,
                 channel: t,
                 handleClick: c,
@@ -212,7 +212,7 @@ function L(e) {
                                   ? M.intl.string(M.t.l1dkSE)
                                   : M.intl.string(M.t.Pnajj4),
                           ),
-                          (0, i.jsx)(N.Z.Title, {
+                          (0, i.jsx)(T.Z.Title, {
                               level: y,
                               onContextMenu: d,
                               onClick: c,
@@ -228,7 +228,7 @@ function L(e) {
                                   ? M.intl.string(M.t.l1dkSE)
                                   : M.intl.string(M.t.Pnajj4),
                           ),
-                          (0, i.jsx)(N.Z.Title, {
+                          (0, i.jsx)(T.Z.Title, {
                               level: y,
                               onContextMenu: d,
                               onClick: c,
@@ -241,7 +241,7 @@ function L(e) {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     B(b, M.intl.string(M.t.BVZqJi)),
-                    (0, i.jsx)(N.Z.Title, {
+                    (0, i.jsx)(T.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
@@ -253,7 +253,7 @@ function L(e) {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     B(b, M.intl.string(M.t.EErMzM)),
-                    (0, i.jsx)(N.Z.Title, {
+                    (0, i.jsx)(T.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
@@ -270,14 +270,14 @@ function L(e) {
                 x = (0, i.jsxs)(r.Fragment, {
                     children: [
                         B(e, M.intl.string(M.t.Pnajj4)),
-                        (0, i.jsx)(N.Z.Title, {
+                        (0, i.jsx)(T.Z.Title, {
                             level: y,
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
                             children: (0, h.F6)(l, O.default, v.Z),
                         }),
-                        (0, i.jsx)(N.Z.Caret, {}),
+                        (0, i.jsx)(T.Z.Caret, {}),
                     ],
                 });
             }
@@ -286,7 +286,7 @@ function L(e) {
                 children: [
                     x,
                     B(j ? null : b, M.intl.string(M.t["7Xm5QE"])),
-                    (0, i.jsx)(N.Z.Title, {
+                    (0, i.jsx)(T.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
@@ -306,12 +306,12 @@ function L(e) {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     null !== b
-                        ? (0, i.jsx)(N.Z.ChannelIcon, {
+                        ? (0, i.jsx)(T.Z.ChannelIcon, {
                               icon: b,
                               "aria-hidden": !0,
                           })
                         : null,
-                    (0, i.jsxs)(N.Z.Title, {
+                    (0, i.jsxs)(T.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
@@ -386,7 +386,7 @@ function B(e, t) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null !== e &&
-                (0, i.jsx)(N.Z.ChannelIcon, {
+                (0, i.jsx)(T.Z.ChannelIcon, {
                     icon: e,
                     "aria-hidden": !0,
                 }),
@@ -411,7 +411,7 @@ function H(e) {
                   },
                   className: R.guildBreadcrumbContainer,
                   children: [
-                      "left" === l && (0, i.jsx)(N.Z.Caret, { direction: "left" }),
+                      "left" === l && (0, i.jsx)(T.Z.Caret, { direction: "left" }),
                       (0, i.jsx)("div", {
                           ref: d,
                           children: (0, i.jsx)(g.Z, {
@@ -421,7 +421,7 @@ function H(e) {
                               active: !0,
                           }),
                       }),
-                      "right" === l && (0, i.jsx)(N.Z.Caret, { direction: "right" }),
+                      "right" === l && (0, i.jsx)(T.Z.Caret, { direction: "right" }),
                   ],
               }),
           })

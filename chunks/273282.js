@@ -8,15 +8,15 @@ var r = n(951288),
     c = n(434404),
     d = n(821458),
     u = n(585961),
-    m = n(981631),
-    g = n(30513),
+    g = n(981631),
+    m = n(30513),
     p = n(200299),
     f = n(388032),
-    h = n(43628);
+    h = n(289059);
 function x(e) {
     let { guild: t, canManageGuild: n, buttonClassName: x } = e,
         { analyticsLocations: b } = (0, s.ZP)(),
-        j = t.features.has(m.oNc.INVITE_SPLASH),
+        j = t.features.has(g.oNc.INVITE_SPLASH),
         _ = n && j,
         v = i.useRef(null),
         C = i.useCallback((e) => {
@@ -29,9 +29,9 @@ function x(e) {
                     (0, d.E6)({
                         guild: t,
                         analyticsLocations: b,
-                        analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
-                        analyticsObject: m.qAy.BUTTON_CTA,
-                        perks: (0, g.o9)(),
+                        analyticsSection: g.jXE.GUILD_INVITE_BACKGROUND,
+                        analyticsObject: g.qAy.BUTTON_CTA,
+                        perks: (0, m.o9)(),
                     });
             },
             [b, t],

@@ -26,10 +26,10 @@ var i = n(951288),
     P = n(396769),
     I = n(967128),
     Z = n(318374),
-    N = n(981631),
-    T = n(388032),
-    A = n(338518),
-    w = n(430864);
+    T = n(981631),
+    N = n(388032),
+    A = n(73288),
+    w = n(602009);
 function M(e) {
     let { channel: t } = e,
         [n, l] = r.useState(!1),
@@ -50,7 +50,7 @@ function M(e) {
                             forceRoles: { [e.id]: e },
                             context: t,
                         });
-                        return c.Db(n, c.$e(N.Plq.ADMINISTRATOR, N.Plq.VIEW_CHANNEL));
+                        return c.Db(n, c.$e(T.Plq.ADMINISTRATOR, T.Plq.VIEW_CHANNEL));
                     })
                     .value(),
             [t, M, L],
@@ -66,17 +66,17 @@ function M(e) {
                 .filter((e) => {
                     var n;
                     let i = E.BT({
-                            permission: N.Plq.ADMINISTRATOR,
+                            permission: T.Plq.ADMINISTRATOR,
                             user: e,
                             context: t,
                         }),
                         r = null != (n = t.permissionOverwrites[e.id]) ? n : E.Hn,
-                        l = c.e$(r.allow, N.Plq.VIEW_CHANNEL);
+                        l = c.e$(r.allow, T.Plq.VIEW_CHANNEL);
                     return i || l;
                 })
                 .value();
         }, [t, k]),
-        B = O.Z.can(N.Plq.MANAGE_CHANNELS, t) || O.Z.can(N.Plq.MANAGE_ROLES, t),
+        B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
         H = r.useCallback(() => l(!1), []);
     return (0, i.jsxs)(I.ZP, {
         channelId: t.id,
@@ -85,10 +85,10 @@ function M(e) {
                 locked: !0,
                 channelType: t.type,
             }),
-            (0, i.jsx)(I.Ot, { children: T.intl.format(T.t.I3R7Vl, { channelName: o }) }),
+            (0, i.jsx)(I.Ot, { children: N.intl.format(N.t.I3R7Vl, { channelName: o }) }),
             (0, i.jsx)(I.jz, {
                 className: w.markup,
-                children: T.intl.format(T.t.QuwqjI, {
+                children: N.intl.format(N.t.QuwqjI, {
                     channelName: o,
                     topicHook: () => y.Z.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
@@ -98,7 +98,7 @@ function M(e) {
                       className: A.channelSettingButtons,
                       children: [
                           (0, i.jsx)(P.Z, {
-                              label: T.intl.string(T.t.dMJ3Y2),
+                              label: N.intl.string(N.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, i.jsx)(d.BFJ, {
                                   size: "xs",
@@ -106,7 +106,7 @@ function M(e) {
                               }),
                           }),
                           (0, i.jsx)(P.Z, {
-                              label: T.intl.string(T.t["3gUsJS"]),
+                              label: N.intl.string(N.t["3gUsJS"]),
                               onClick: function () {
                                   p.ZP.open(t.id);
                               },
@@ -150,14 +150,14 @@ function M(e) {
                                     tag: "span",
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: T.intl.string(T.t.rt0ERU),
+                                    children: N.intl.string(N.t.rt0ERU),
                                 }),
                             ],
                         });
                     })(),
                     D.map((e, n) => {
                         var r, l;
-                        let o = null != (l = e.colorString) ? l : N.Pbq,
+                        let o = null != (l = e.colorString) ? l : T.Pbq,
                             s = (null == (r = e.tags) ? void 0 : r.guild_connections) !== void 0;
                         return B
                             ? (0, i.jsx)(
@@ -169,7 +169,7 @@ function M(e) {
                                       disabled: !B,
                                       verified: s,
                                       onClick: () => {
-                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
+                                          C.Z.open(t.guild_id, T.pNK.MEMBERS), C.Z.selectRole(e.id);
                                       },
                                   },
                                   e.id,

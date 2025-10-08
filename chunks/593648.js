@@ -38,7 +38,7 @@ var r = n(951288),
     G = n(981631),
     B = n(468788),
     Z = n(388032),
-    F = n(197571);
+    F = n(10198);
 function V(e, t, n) {
     return (
         t in e
@@ -227,7 +227,7 @@ function q(e) {
         _ = null != g.Z.useHolidaySoundpack();
     return (0, r.jsx)(A.F, {
         setting: U.s6.NOTIFICATIONS_SOUNDS,
-        children: (0, r.jsxs)(u.hjN, {
+        children: (0, r.jsxs)("div", {
             children: [
                 _
                     ? (0, r.jsxs)(r.Fragment, {
@@ -559,8 +559,8 @@ function ee() {
                   (0, r.jsxs)(A.F, {
                       setting: U.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
-                          (0, r.jsx)(u.hjN, {
-                              title: "New Notification Settings (Advanced, Staff Only)",
+                          (0, r.jsx)(u.C3N, {
+                              label: "New Notification Settings (Advanced, Staff Only)",
                               children: (0, r.jsxs)("div", {
                                   style: {
                                       display: "flex",

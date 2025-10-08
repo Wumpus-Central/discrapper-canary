@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(585483),
     O = n(145604),
     E = n(718813),
-    v = n(981631),
-    y = n(3484);
+    y = n(981631),
+    v = n(776457);
 let I = i.memo(function () {
     let e = (0, u.Z)(),
         t = i.useRef(null),
@@ -32,9 +32,9 @@ let I = i.memo(function () {
         i.useEffect(() => (p.Z.setLayout(d.ZP), p.Z.enable(), () => p.Z.disable()), []),
         i.useEffect(
             () => (
-                _.S.subscribe(v.CkL.SHAKE_APP, n),
+                _.S.subscribe(y.CkL.SHAKE_APP, n),
                 () => {
-                    _.S.unsubscribe(v.CkL.SHAKE_APP, n);
+                    _.S.unsubscribe(y.CkL.SHAKE_APP, n);
                 }
             ),
             [n],
@@ -42,10 +42,10 @@ let I = i.memo(function () {
         (0, h.Z)(),
         (0, r.jsxs)(o.F0h, {
             ref: t,
-            className: y.app,
+            className: v.app,
             children: [
                 (0, r.jsx)(E.Z, {
-                    className: y.layers,
+                    className: v.layers,
                     children: (0, r.jsx)(s.Z, {}),
                 }),
                 (0, r.jsx)(g.Z, {}),

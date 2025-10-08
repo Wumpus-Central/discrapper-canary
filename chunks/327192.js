@@ -39,7 +39,7 @@ var r = n(951288),
     B = n(856651),
     Z = n(921944),
     F = n(388032),
-    V = n(11049);
+    V = n(465631);
 function H(e, t, n) {
     return (
         t in e
@@ -424,7 +424,7 @@ function q(e) {
                   children: F.intl.format(F.t["6C4lgI"], { onReconnect: ea }),
               })
             : n.integrations.length > 0
-              ? (0, r.jsx)(_.NIc, {
+              ? (0, r.jsx)(_.gNt, {
                     label: F.intl.string(F.t.fOe3fX),
                     children: n.integrations.map((e) => (0, r.jsx)(z, { integration: e }, e.id)),
                 })
@@ -531,7 +531,7 @@ function X() {
             },
             [],
         ),
-        (0, r.jsx)(_.NIc, {
+        (0, r.jsx)(_.gNt, {
             label: F.intl.string(F.t.ZeDrUV),
             description: F.intl.format(F.t["oYc+Gx"], { privacyPolicyUrl: G.EYA.PRIVACY }),
             children: (0, r.jsx)(J, {}),

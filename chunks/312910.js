@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(372444),
     d = n(852679),
     u = n(317169),
-    m = n(926491),
-    g = n(145499),
+    g = n(926491),
+    m = n(145499),
     p = n(424218),
     f = n(267642),
     h = n(63063),
@@ -18,7 +18,7 @@ var i = n(442837),
     b = n(981631),
     j = n(611480),
     _ = n(388032),
-    v = n(96761);
+    v = n(881332);
 let C = {
         page: b.ZY5.GUILD_SETTINGS,
         section: b.jXE.GUILD_SETTINGS_STICKERS,
@@ -93,10 +93,10 @@ let C = {
             o = (0, f.Qi)(s, a),
             d = (0, f.FZ)(a),
             u = (0, f.A3)(a),
-            m = s.length;
+            g = s.length;
         return null == d || a === b.Eu4.TIER_3 || o > 0
             ? null
-            : (m > u
+            : (g > u
                   ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: d })),
                     (n = _.intl.formatToPlainString(_.t["13hOWl"], { level: d })),
                     (i = b.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
@@ -120,9 +120,9 @@ let C = {
     },
     E = () => {
         let e = (0, i.e7)([x.Z], () => x.Z.getGuild()),
-            t = (0, i.e7)([m.Z], () => {
+            t = (0, i.e7)([g.Z], () => {
                 var t;
-                return null != e && null != (t = m.Z.getStickersByGuildId(e.id)) ? t : [];
+                return null != e && null != (t = g.Z.getStickersByGuildId(e.id)) ? t : [];
             }, [e]),
             { analyticsLocations: n } = (0, a.ZP)(s.Z.STICKERS);
         if (null == e) return null;
@@ -145,7 +145,7 @@ let C = {
                           })
                         : (0, r.jsx)(O, { guild: e }),
                     (0, r.jsx)(l.izJ, { className: v.divider }),
-                    (0, r.jsx)(g.Z, { guild: e }),
+                    (0, r.jsx)(m.Z, { guild: e }),
                 ],
             }),
         });

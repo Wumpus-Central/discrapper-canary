@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(422034),
     c = n(268685),
     u = n(388032),
-    d = n(612574);
+    d = n(94723);
 function f(e) {
     let { affinities: t, className: n } = e,
         a = (e) => (null != e.globalName ? e.globalName : e.username),

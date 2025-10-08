@@ -4,14 +4,14 @@ n(647438);
 var a = n(481060),
     l = n(313789),
     o = n(518596),
-    r = n(181211),
-    s = n(188879),
+    s = n(181211),
+    r = n(188879),
     c = n(981631),
     d = n(726985),
-    u = n(22860);
+    u = n(699244);
 let m = (e) => {
     let { transitionState: t, onClose: n, classificationId: m, source: p } = e,
-        f = (0, r.Z)(),
+        f = (0, s.Z)(),
         h = () => {
             n(),
                 (0, o.openUserSettings)(l.n.ACCOUNT_PANEL, {
@@ -38,7 +38,7 @@ let m = (e) => {
                 className: u.modalContent,
                 children: f
                     ? (0, i.jsx)(a.$jN, {})
-                    : (0, i.jsx)(s.Z, {
+                    : (0, i.jsx)(r.Z, {
                           classificationId: m,
                           source: p,
                           onError: h,

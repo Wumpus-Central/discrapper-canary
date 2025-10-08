@@ -15,7 +15,7 @@ var i = t(120356),
     h = t(785717),
     x = t(49898),
     j = t(388032),
-    v = t(20163);
+    v = t(638999);
 function g(e) {
     let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
         o = (0, c.rm)(n, t);

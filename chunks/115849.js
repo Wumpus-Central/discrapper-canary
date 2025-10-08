@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(981631),
     g = n(295907),
     m = n(388032),
-    b = n(470840),
-    _ = n(197571);
+    b = n(118213),
+    _ = n(10198);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,8 +58,8 @@ function E(e, t) {
         e
     );
 }
-let v = n(349181),
-    y = {
+let y = n(349181),
+    v = {
         canSend: !1,
         hint: null,
         success: null,
@@ -71,11 +71,11 @@ let v = n(349181),
 function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return y;
+            return v;
         case "SUCCESS":
-            return E(O({}, y), { success: t.text });
+            return E(O({}, v), { success: t.text });
         case "HINT":
-            return E(O({}, y), {
+            return E(O({}, v), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -90,7 +90,7 @@ function N(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(T, y),
+        [o, p] = i.useReducer(T, v),
         { canSend: O, hint: E, error: N, success: j } = o;
     return (
         i.useEffect(() => {
@@ -139,7 +139,7 @@ function N(e) {
                             children: m.intl.string(m.t["Rn/sLi"]),
                         }),
                         (0, r.jsx)("img", {
-                            src: v,
+                            src: y,
                             alt: "Wumpus Waving",
                         }),
                     ],

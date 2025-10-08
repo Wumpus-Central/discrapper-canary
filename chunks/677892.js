@@ -15,10 +15,10 @@ var r = n(951288),
     c = n(734893),
     d = n(8426),
     u = n(969632),
-    m = n(974513),
-    g = n(290511),
+    g = n(974513),
+    m = n(290511),
     p = n(388032),
-    f = n(54028);
+    f = n(376933);
 function h(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: a, status: o, onEdit: c, extra: d } = e;
@@ -132,11 +132,11 @@ function x(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
         [r, s] = (0, o.VF)(e, n);
-    return s.length >= g.md && r.length >= g.X;
+    return s.length >= m.md && r.length >= m.X;
 }
 function b(e) {
     let t = x(e),
-        n = (0, m.O4)(e);
+        n = (0, g.O4)(e);
     return t || n;
 }
 function j(e) {
@@ -147,7 +147,7 @@ function j(e) {
         [, j] = (0, o.VF)(t, b),
         _ = j.length,
         v = x(t),
-        C = (0, m.O4)(t),
+        C = (0, g.O4)(t),
         O = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
         y = O
             ? p.intl.formatToPlainString(p.t.nHwnLC, {
@@ -157,8 +157,8 @@ function j(e) {
             : v
               ? p.intl.formatToPlainString(p.t.HxEwSk, { numDefaultChannels: _ })
               : p.intl.formatToPlainString(p.t.ey3uVV, {
-                    numDefaultChannels: g.md,
-                    numChattableChannels: g.X,
+                    numDefaultChannels: m.md,
+                    numChattableChannels: m.X,
                 });
     return (0, r.jsx)(h, {
         title: O ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t["4GSygo"]),
@@ -178,9 +178,9 @@ function _(e) {
         c = (0, l.Wu)([a.Z], () => a.Z.getDefaultChannelIds(t)),
         d = (0, l.Wu)([a.Z], () => a.Z.getOnboardingPrompts(t)),
         u = d.length,
-        [m, g] = (0, o.dF)(t, d, c),
-        x = m.length,
-        b = m.length + g.length,
+        [g, m] = (0, o.dF)(t, d, c),
+        x = g.length,
+        b = g.length + m.length,
         j = (x / b) * 100,
         _ = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
         v = u > 0,
@@ -215,14 +215,14 @@ function _(e) {
 }
 function v(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
-        m = (0, l.e7)([u.Z], () => u.Z.getSettings()),
-        g = (0, l.e7)([a.Z], () => a.Z.getEnabled(t)),
-        x = (0, c.uo)(m),
-        b = m.enabled,
+        g = (0, l.e7)([u.Z], () => u.Z.getSettings()),
+        m = (0, l.e7)([a.Z], () => a.Z.getEnabled(t)),
+        x = (0, c.uo)(g),
+        b = g.enabled,
         j = i.useCallback(() => {
             (0, d.To)(t, !b);
         }, [t, b]),
-        _ = !(0, c.av)(m),
+        _ = !(0, c.av)(g),
         v = "none";
     _ && (x && !o ? (v = "good") : x || (v = "required"));
     let C = p.intl.string(p.t.GMOwOD);
@@ -230,7 +230,7 @@ function v(e) {
     let O = null;
     return (
         _ &&
-            g &&
+            m &&
             (O = (0, r.jsx)("div", {
                 className: f.inlineSwitch,
                 children: (0, r.jsx)(s.rsf, {

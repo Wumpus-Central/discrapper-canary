@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(186078),
     l = n(137158),
-    s = n(31829);
+    s = n(866234);
 let a = function (e) {
     let {
             formField: t,
@@ -13,8 +13,8 @@ let a = function (e) {
             onDrop: c,
             onEdit: d,
             onRemove: u,
-            canRemove: m,
-            actionsLocation: g,
+            canRemove: g,
+            actionsLocation: m,
             fieldStyle: p,
         } = e,
         { label: f } = t;
@@ -27,8 +27,8 @@ let a = function (e) {
         onEdit: d,
         onRemove: u,
         title: f,
-        canRemove: m,
-        actionsLocation: g,
+        canRemove: g,
+        actionsLocation: m,
         fieldStyle: p,
         children: (0, r.jsx)(i.BO, {
             field: t,

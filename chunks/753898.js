@@ -17,7 +17,7 @@ var i = n(951288),
     C = n(518950),
     y = n(967128),
     _ = n(388032),
-    v = n(963392);
+    v = n(40036);
 function x(e) {
     var t;
     let { channel: n, children: x, user: O } = e,
@@ -32,17 +32,17 @@ function x(e) {
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
         }),
-        [Z, N] = r.useState(!1),
-        T = r.useCallback(() => {
-            P.onMouseEnter(), N(!0);
+        [Z, T] = r.useState(!1),
+        N = r.useCallback(() => {
+            P.onMouseEnter(), T(!0);
         }, [P]),
         A = r.useCallback(() => {
-            P.onMouseLeave(), N(!1);
+            P.onMouseLeave(), T(!1);
         }, [P]),
         w = !n.isMultiUserDM() && (null == O ? void 0 : O.displayNameStyles) != null;
     return (0, i.jsxs)(y.ZP, {
         channelId: n.id,
-        onMouseEnter: T,
+        onMouseEnter: N,
         onMouseLeave: A,
         children: [
             (() => {

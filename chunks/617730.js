@@ -10,7 +10,7 @@ var i = n(755721),
     u = n(258356),
     d = n(981631),
     h = n(388032),
-    g = n(292660);
+    g = n(55916);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +68,7 @@ function f(e) {
             ) &&
             null != v &&
             (0, c.WT)(t),
-        j = ((e) => {
+        I = ((e) => {
             let { state: t } = e;
             switch (t) {
                 case d.r2o.ACCEPTING:
@@ -78,7 +78,7 @@ function f(e) {
                     return !1;
             }
         })(t),
-        I = {
+        j = {
             invite: t,
             user: v,
             guild: _,
@@ -89,7 +89,7 @@ function f(e) {
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: x,
-              isSubmitting: j,
+              isSubmitting: I,
               onAcceptInvite: n,
           })
         : (0, r.jsxs)("div", {
@@ -100,12 +100,12 @@ function f(e) {
                       guild: _,
                       user: b || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, I), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.UM, p(m({}, I), { showBigUserIcon: b })),
-                  (0, r.jsx)(c.V6, m({}, I)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, j), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.UM, p(m({}, j), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.V6, m({}, j)),
                   (0, r.jsx)(i.zx, {
                       onClick: n,
-                      submitting: j,
+                      submitting: I,
                       className: g.acceptButton,
                       children: h.intl.string(h.t.ohMvm5),
                   }),

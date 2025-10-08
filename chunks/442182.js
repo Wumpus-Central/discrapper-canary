@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(239091),
-    m = n(479531),
-    g = n(616780),
+    g = n(479531),
+    m = n(616780),
     p = n(100527),
     f = n(906732),
     h = n(670188),
@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(203377),
     I = n(981631),
     S = n(388032),
-    T = n(472039),
-    P = n(21321);
+    T = n(37134),
+    P = n(10083);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ async function Z(e, t, n) {
     try {
         await _.Z.updateMemberRoles(t, e.id, i, [], [n]);
     } catch (t) {
-        let e = new m.Z(t);
+        let e = new g.Z(t);
         (0, d.h7j)((t) =>
             (0, r.jsx)(
                 a.Modal,
@@ -99,11 +99,11 @@ async function Z(e, t, n) {
     }
 }
 function D(e) {
-    let { member: t, guildId: l, roleId: o, locked: m } = e,
+    let { member: t, guildId: l, roleId: o, locked: g } = e,
         p = i.useRef(null),
         f = i.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function b(e) {
-        if ((e.stopPropagation(), !m)) {
+        if ((e.stopPropagation(), !g)) {
             if (e.shiftKey) return void Z(t, l, o);
             let n = v.Z.getRole(o);
             (0, d.h7j)((e) =>
@@ -144,7 +144,7 @@ function D(e) {
         let i = x.default.getUser(t.id);
         null != i &&
             (0, u.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -159,7 +159,7 @@ function D(e) {
             });
     }
     return (
-        (0, g.$)(f, "GuildSettingsRolesEditMembers"),
+        (0, m.$)(f, "GuildSettingsRolesEditMembers"),
         (0, r.jsx)("div", {
             className: P.contentWidth,
             children: (0, r.jsx)(h.Z, {
@@ -187,10 +187,10 @@ function D(e) {
                                 (0, r.jsx)("div", {
                                     className: T.removeButtonContainer,
                                     children: (0, r.jsx)(c.u, {
-                                        text: m ? S.intl.string(S.t.wkrQaG) : S.intl.string(S.t["7sFNfX"]),
+                                        text: g ? S.intl.string(S.t.wkrQaG) : S.intl.string(S.t["7sFNfX"]),
                                         position: "top",
                                         children: (0, r.jsx)(d.P3F, {
-                                            className: s()(T.removeButton, { [T.removeButtonDisabled]: m }),
+                                            className: s()(T.removeButton, { [T.removeButtonDisabled]: g }),
                                             onClick: b,
                                             children: (0, r.jsx)(d.k$p, {
                                                 size: "xs",
@@ -251,13 +251,13 @@ function L(e) {
             roleMembers: c,
             handleAddClick: u,
         } = e,
-        { analyticsLocations: m } = (0, f.ZP)(p.Z.MEMBER_LIST),
-        g = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, C.rY)(t, g);
-    let h = i.useMemo(() => c.filter((e) => (0, C.eg)(g, e)), [c, g]),
+        { analyticsLocations: g } = (0, f.ZP)(p.Z.MEMBER_LIST),
+        m = i.useMemo(() => l.trim().toLowerCase(), [l]);
+    (0, C.rY)(t, m);
+    let h = i.useMemo(() => c.filter((e) => (0, C.eg)(m, e)), [c, m]),
         x = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(f.Gt, {
-        value: m,
+        value: g,
         children: (0, r.jsx)(d._2F, {
             className: T.list,
             sections: [Math.max(h.length, 1)],
@@ -316,8 +316,8 @@ function k(e) {
 }
 function G(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: c } = e,
-        [u, m] = i.useState(""),
-        { headerHeight: g, headerRef: p } = (0, O.Z)(0),
+        [u, g] = i.useState(""),
+        { headerHeight: m, headerRef: p } = (0, O.Z)(0),
         { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
         x = l.managed || a,
         _ = (0, C.e)(t.id, l.id),
@@ -333,7 +333,7 @@ function G(e) {
                 location_section: "Members",
             }),
                 (0, d.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -363,7 +363,7 @@ function G(e) {
                             }),
                             (0, r.jsx)(k, {
                                 query: u,
-                                setQuery: m,
+                                setQuery: g,
                                 locked: x,
                                 handleAddClick: N,
                             }),
@@ -379,7 +379,7 @@ function G(e) {
                 }),
             }),
             (0, r.jsx)(L, {
-                headerHeight: g + 8,
+                headerHeight: m + 8,
                 query: u,
                 guildId: t.id,
                 roleId: l.id,

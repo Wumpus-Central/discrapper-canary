@@ -18,14 +18,14 @@ var r = n(951288),
     E = n(283595),
     v = n(55563),
     b = n(669079),
-    j = n(63063),
-    I = n(51144),
+    I = n(63063),
+    j = n(51144),
     N = n(481153),
     S = n(781428),
     O = n(423527),
     y = n(981631),
     C = n(388032),
-    A = n(197571);
+    A = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ class Z extends i.PureComponent {
                     children: C.intl.string(C.t.fIv16O),
                 }),
                 (0, r.jsx)(g.zx, {
-                    onClick: () => window.open(j.Z.getArticleURL(y.BhN.GIFTING), "_blank"),
+                    onClick: () => window.open(I.Z.getArticleURL(y.BhN.GIFTING), "_blank"),
                     look: g.zx.Looks.LINK,
                     color: g.zx.Colors.LINK,
                     children: C.intl.string(C.t["/CjuXF"]),
@@ -182,7 +182,7 @@ class Z extends i.PureComponent {
                     : (0, r.jsx)(g.i_, {
                           className: A.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
-                              userTag: I.ZP.getUserTag(t),
+                              userTag: j.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout,
                           }),
                       }),

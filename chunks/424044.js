@@ -14,15 +14,15 @@ var r = n(951288),
     p = n(314897),
     f = n(981631),
     _ = n(388032),
-    x = n(197571);
+    x = n(10198);
 l.ZP.initialize();
 let E = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
         E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)("RSL - Landing Page"),
-        [b, j] = i.useState(!1),
-        [I, N] = i.useState(_.intl.string(_.t["9exy+f"])),
+        [b, I] = i.useState(!1),
+        [j, N] = i.useState(_.intl.string(_.t["9exy+f"])),
         [S, O] = i.useState(!0),
         y = (e) => {
             switch (e) {
@@ -65,10 +65,10 @@ let E = (e) => {
                 } catch (e) {
                     y(null == (n = e.body) ? void 0 : n.code);
                 } finally {
-                    j(!1);
+                    I(!1);
                 }
             };
-            j(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
+            I(!0), e((0, c.Z)(t)), (0, m.e)("report_second_look");
         }, [t]),
         v &&
             !S &&
@@ -76,7 +76,7 @@ let E = (e) => {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
-                        children: I,
+                        children: j,
                     }),
                     b && (0, r.jsx)(s.$jN, {}),
                 ],

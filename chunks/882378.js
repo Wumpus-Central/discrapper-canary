@@ -14,33 +14,33 @@ var r = n(951288),
     g = n(665149),
     m = n(134612),
     b = n(388032),
-    y = n(807597);
+    y = n(554828);
 let _ = i.memo(function (e) {
     let { channel: t } = e,
         _ = (0, d.h)(t.id),
         j = (0, u.o)(t.id),
-        x = (0, p.M)(t.id),
-        O = (0, a.f9)(),
+        O = (0, p.M)(t.id),
+        x = (0, a.f9)(),
         v = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         C = i.useCallback(
-            () => (j ? b.intl.string(b.t["16QyDg"]) : null != x ? b.intl.string(b.t.kCN9i4) : null),
-            [j, x],
+            () => (j ? b.intl.string(b.t["16QyDg"]) : null != O ? b.intl.string(b.t.kCN9i4) : null),
+            [j, O],
         ),
-        I = i.useMemo(() => (j || null != x) && !O && !v, [j, x, O, v]),
+        I = i.useMemo(() => (j || null != O) && !x && !v, [j, O, x, v]),
         [E, S] = i.useState(C());
     i.useEffect(() => {
-        null != x &&
+        null != O &&
             null != _ &&
             (s.uvj.announce(b.intl.string(b.t.acsXuL)),
             setTimeout(() => {
-                (0, c.T)(t.id, [x.id]);
+                (0, c.T)(t.id, [O.id]);
             }, 5000),
             (0, h.KQ)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: x.id,
-                warningType: x.type,
-                isNudgeWarning: null != x,
+                warningId: O.id,
+                warningType: O.type,
+                isNudgeWarning: null != O,
                 viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP,
             })),
             j &&
@@ -48,7 +48,7 @@ let _ = i.memo(function (e) {
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
                 }, 5000));
-    }, [t, x, _, j]),
+    }, [t, O, _, j]),
         (0, o.ZP)(() => {
             null != _ &&
                 (0, h.KQ)({
@@ -56,20 +56,20 @@ let _ = i.memo(function (e) {
                     senderId: t.getRecipientId(),
                     warningId: _.id,
                     warningType: _.type,
-                    isNudgeWarning: null != x,
+                    isNudgeWarning: null != O,
                     viewName: h.pb.SAFETY_TOOLS_BUTTON,
                 });
         }),
         i.useEffect(() => {
             let e = C();
             null != e && S(e);
-        }, [j, x, C]);
+        }, [j, O, C]);
     let Z = i.useCallback(() => {
-        null != x && (0, c.T)(t.id, [x.id]),
+        null != O && (0, c.T)(t.id, [O.id]),
             null != _ &&
                 ((0, s.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("37157")]).then(
+                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("2742")]).then(
                             n.bind(n, 611446),
                         );
                         return (n) => {
@@ -92,9 +92,9 @@ let _ = i.memo(function (e) {
                     warningId: _.id,
                     warningType: _.type,
                     cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != x,
+                    isNudgeWarning: null != O,
                 }));
-    }, [x, _, t]);
+    }, [O, _, t]);
     return null == _
         ? null
         : (0, r.jsx)(s.ua7, {
@@ -109,7 +109,7 @@ let _ = i.memo(function (e) {
                       icon: s.b7C,
                       onClick: Z,
                       tooltip: b.intl.string(b.t.rpc2qq),
-                      tooltipDisabled: null != x,
+                      tooltipDisabled: null != O,
                   }),
           });
 });

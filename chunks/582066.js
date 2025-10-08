@@ -9,18 +9,18 @@ var i = n(120356),
     c = n(731722),
     d = n(172751),
     u = n(446094),
-    m = n(430824),
-    g = n(594174),
+    g = n(430824),
+    m = n(594174),
     p = n(5192),
     f = n(978088),
-    h = n(659854),
+    h = n(755032),
     x = n(388032),
-    b = n(65992);
+    b = n(820309);
 function j(e) {
     var t, n;
     let { guildId: i } = e,
-        j = (0, s.e7)([m.Z], () => m.Z.getGuild(i)),
-        _ = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        j = (0, s.e7)([g.Z], () => g.Z.getGuild(i)),
+        _ = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { onAdoptTag: v, isAdopting: C } = (0, u.Z)(i),
         O =
             (null == _ || null == (t = _.primaryGuild) ? void 0 : t.identityGuildId) === i &&

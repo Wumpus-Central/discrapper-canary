@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(224336),
     O = n(730749),
     E = n(666743),
-    v = n(115130),
-    y = n(812206),
+    y = n(115130),
+    v = n(812206),
     I = n(770146),
     S = n(600164),
     C = n(606081),
@@ -44,7 +44,7 @@ var r = n(951288),
     z = n(73346),
     W = n(3570),
     q = n(689796),
-    Y = n(15470),
+    Y = n(978436),
     K = n(506648),
     Q = n(449275),
     X = n(445986),
@@ -59,7 +59,7 @@ var r = n(951288),
     ea = n(981631),
     eo = n(186901),
     es = n(388032),
-    ec = n(561537);
+    ec = n(868113);
 function eu(e, t, n) {
     return (
         t in e
@@ -514,7 +514,7 @@ class ef extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, p.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("37100")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -651,23 +651,23 @@ class ef extends i.PureComponent {
 }
 let eh = (0, O.Z)(
     (0, E.Z)(
-        o.ZP.connectStores([R.Z, A.Z, x.default, G.Z, M.Z, k.Z, U.Z, v.Z, y.Z, L.Z, Z.Z, D.Z], (e) => {
+        o.ZP.connectStores([R.Z, A.Z, x.default, G.Z, M.Z, k.Z, U.Z, y.Z, v.Z, L.Z, Z.Z, D.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error("Needs applicationId or skuId");
-                (t = i), null != (l = null != (n = k.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l));
+                (t = i), null != (l = null != (n = k.Z.get(i)) ? n.applicationId : null) && (r = v.Z.getApplication(l));
             } else if (null == i) {
                 if (null == l) throw Error("Needs applicationId or skuId");
-                null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? k.Z.get(t) : null);
+                null != (r = v.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? k.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ea.l4R.STICKER) && (n = null);
-            let c = null != l && (U.Z.inTestModeForApplication(l) || v.Z.inDevModeForApplication(l));
+            let c = null != l && (U.Z.inTestModeForApplication(l) || y.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? y.Z.getApplication(l) : null,
+                application: null != l ? v.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && D.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && D.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && L.Z.shouldFetchStatisticsForApplication(l),

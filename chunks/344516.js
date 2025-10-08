@@ -14,8 +14,8 @@ var l = n(951288),
     x = n(981631),
     V = n(65154),
     j = n(388032),
-    m = n(476265),
-    C = n(197571);
+    m = n(191809),
+    C = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ class Z extends i.PureComponent {
     render() {
         return (0, l.jsx)("div", {
             className: C.marginBottom20,
-            children: (0, l.jsxs)(o.NIc, {
+            children: (0, l.jsxs)(o.gNt, {
                 label: j.intl.string(j.t["sqUm+v"]),
                 role: "group",
                 children: [this.renderAutomaticVADToggle(), this.renderSlider()],
@@ -113,7 +113,7 @@ function b(e) {
                 ? (0, l.jsxs)(o.Kqy, {
                       gap: 20,
                       children: [
-                          (0, l.jsx)(o.NIc, {
+                          (0, l.jsx)(o.gNt, {
                               label: j.intl.string(j.t.YkDjVF),
                               children: (0, l.jsx)(d.Z, {
                                   defaultValue: C,

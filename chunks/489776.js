@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(85960),
     d = n(65912),
     u = n(564488),
-    m = n(388032),
-    g = n(32490);
+    g = n(388032),
+    m = n(593631);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,11 +80,11 @@ function h(e) {
         });
     return null == _ || O
         ? (0, r.jsxs)("div", {
-              className: g.mainRuleContainer,
+              className: m.mainRuleContainer,
               style: { height: O ? "auto" : "60px" },
               children: [
                   (0, r.jsx)(l.animated.div, {
-                      className: g.animatedRuleCardContainer,
+                      className: m.animatedRuleCardContainer,
                       style: I,
                       children: (0, r.jsx)(u.Z, {
                           rule: y,
@@ -92,10 +92,10 @@ function h(e) {
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {
-                      className: g.animatedNewRuleContainer,
+                      className: m.animatedNewRuleContainer,
                       style: E,
                       children: (0, r.jsxs)(a.P3F, {
-                          className: g.addAnotherRuleCardContainer,
+                          className: m.addAnotherRuleCardContainer,
                           onClick: () => {
                               v(t, n);
                           },
@@ -105,12 +105,12 @@ function h(e) {
                                   width: 20,
                                   height: 20,
                                   color: s.Z.BLUE_345,
-                                  className: g.plusIcon,
+                                  className: m.plusIcon,
                               }),
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: C() }),
+                                  children: g.intl.format(g.t.dNjRAQ, { ruleName: C() }),
                               }),
                           ],
                       }),

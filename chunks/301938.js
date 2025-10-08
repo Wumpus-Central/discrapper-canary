@@ -12,12 +12,12 @@ var r = n(951288),
     g = n(720196),
     m = n(981631),
     p = n(388032),
-    f = n(710509),
-    _ = n(197571);
+    f = n(926609),
+    _ = n(10198);
 function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
         [v, b] = i.useState(!1),
-        [j, I] = i.useState(null),
+        [I, j] = i.useState(null),
         [N, S] = i.useState(null),
         [O, y] = i.useState(""),
         C = i.useRef(null);
@@ -53,7 +53,7 @@ function x(e) {
                             className: _.marginBottom20,
                             value: O,
                             onChange: y,
-                            error: j,
+                            error: I,
                             autoComplete: "new-password",
                             maxLength: 72,
                             placeholder: p.intl.string(p.t["yY/PXV"]),
@@ -63,12 +63,12 @@ function x(e) {
                             onClick: () => {
                                 if (!v) {
                                     if (0 === O.length) {
-                                        I(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                        j(p.intl.string(p.t.R98xDw)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
                                         null != N && S(null),
-                                        null != j && I(null),
+                                        null != I && j(null),
                                         t(""),
                                         b(!0),
                                         h.Z.post({
@@ -96,7 +96,7 @@ function x(e) {
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
-                                                        ? I(t.getAnyErrorMessage())
+                                                        ? j(t.getAnyErrorMessage())
                                                         : S(
                                                               (function (e) {
                                                                   switch (e) {

@@ -34,8 +34,8 @@ var a = n(951288),
     x = n(131951),
     f = n(246992),
     b = n(65154),
-    g = n(653301),
-    v = n(451429);
+    g = n(25016),
+    v = n(866403);
 function j(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -121,8 +121,8 @@ function y() {
         {
             krispModels: N,
             krispModelOverride: P,
-            inputMode: k,
-            echoCancellation: I,
+            inputMode: I,
+            echoCancellation: k,
             autoThreshold: w,
             vadUseKrisp: R,
             vadKrispActivationThreshold: A,
@@ -248,7 +248,7 @@ function y() {
                                 }),
                             ],
                         }),
-                    k === b.pM.VOICE_ACTIVITY &&
+                    I === b.pM.VOICE_ACTIVITY &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(c.rsf, {
@@ -286,7 +286,7 @@ function y() {
                         }),
                     (0, a.jsx)(c.rsf, {
                         label: "Echo Cancellation",
-                        checked: I,
+                        checked: k,
                         onChange: (e) => d.Z.setEchoCancellation(e),
                     }),
                     (0, a.jsxs)(c.Kqy, {
@@ -324,7 +324,7 @@ function y() {
                                                           audioBuffer: i,
                                                           createdAt: Date.now(),
                                                           suppression: G,
-                                                          echoCancellation: I,
+                                                          echoCancellation: k,
                                                           krispSuppressionLevel: j,
                                                       },
                                                   ]);

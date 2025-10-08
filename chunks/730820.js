@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(343396),
-    D = n(197571);
+    w = n(719766),
+    D = n(10198);
 function L(e, t, n) {
     return (
         t in e
@@ -178,7 +178,7 @@ class U extends i.PureComponent {
             }
             return (0, r.jsx)(g.F, {
                 setting: C.s6.ACCOUNT_SMS_BACKUP,
-                children: (0, r.jsxs)(c.NIc, {
+                children: (0, r.jsxs)(c.gNt, {
                     label: P.intl.string(P.t.uHAJ5u),
                     description: P.intl.string(P.t.fspJ4O),
                     children: [t, e],
@@ -213,7 +213,7 @@ class U extends i.PureComponent {
             e = (0, r.jsxs)(c.Kqy, {
                 gap: 16,
                 children: [
-                    (0, r.jsxs)(c.NIc, {
+                    (0, r.jsxs)(c.gNt, {
                         label: P.intl.string(P.t.GfqHPj),
                         description: P.intl.format(P.t.OhmvYm, {}),
                         children: [
@@ -246,7 +246,7 @@ class U extends i.PureComponent {
         }
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(c.NIc, {
+                (0, r.jsx)(c.gNt, {
                     label: P.intl.string(P.t.EPVq09),
                     description: P.intl.string(P.t.bQwxiY),
                     children: (0, r.jsxs)(c.hE2, {
@@ -286,7 +286,7 @@ class U extends i.PureComponent {
     renderDisabled() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(c.NIc, {
+                (0, r.jsx)(c.gNt, {
                     label: P.intl.string(P.t.EPVq09),
                     description: P.intl.string(P.t["8aDa1t"]),
                     children: (0, r.jsx)(c.zxk, {
@@ -307,14 +307,14 @@ class U extends i.PureComponent {
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
-                : (0, r.jsx)(c.NIc, {
+                : (0, r.jsx)(c.gNt, {
                       label: P.intl.string(P.t.EPVq09),
                       children: (0, r.jsx)(c.Wn, {
                           messageType: c.QYI.WARNING,
                           children: P.intl.string(P.t.uggF7u),
                       }),
                   })
-            : (0, r.jsx)(c.NIc, {
+            : (0, r.jsx)(c.gNt, {
                   label: P.intl.string(P.t.EPVq09),
                   children: (0, r.jsx)(c.Wn, {
                       messageType: c.QYI.INFO,

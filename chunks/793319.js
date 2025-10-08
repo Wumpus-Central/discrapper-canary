@@ -1,6 +1,6 @@
 n.d(t, {
     NZ: () => eE,
-    ZP: () => eN,
+    ZP: () => eT,
     r: () => ej,
 }),
     n(388685);
@@ -31,8 +31,8 @@ var i = n(951288),
     P = n(522651),
     I = n(795318),
     Z = n(243778),
-    N = n(258609),
-    T = n(446226),
+    T = n(258609),
+    N = n(446226),
     A = n(569545),
     w = n(74299),
     M = n(803647),
@@ -49,8 +49,8 @@ var i = n(951288),
     z = n(791592),
     W = n(136995),
     q = n(402113),
-    K = n(197016),
-    Y = n(386000),
+    Y = n(197016),
+    K = n(386000),
     X = n(331197),
     J = n(698877),
     Q = n(25827),
@@ -75,7 +75,7 @@ var i = n(951288),
     eb = n(981631),
     eC = n(354459),
     ey = n(921944),
-    e_ = n(32312);
+    e_ = n(817675);
 function ev() {
     return (ev =
         Object.assign ||
@@ -334,7 +334,7 @@ let eP = r.memo(function (e) {
     r.useEffect(() => {
         E() !== S && f(!0);
     }, [S, E]);
-    let N = r.useCallback(() => {
+    let T = r.useCallback(() => {
         if (null != C) (0, g.g)((0, A.V9)(C));
         else for (let e of _) (0, g.g)((0, A.V9)(e));
     }, [_, C]);
@@ -387,7 +387,7 @@ let eP = r.memo(function (e) {
                                     streamActive: !0,
                                     color: "disconnect",
                                     onClick: () => {
-                                        (0, P.v)(o, P.d.STOP_WATCHING), N();
+                                        (0, P.v)(o, P.d.STOP_WATCHING), T();
                                     },
                                     onPopoutClick: _.length > 1 ? r : null,
                                     isSelfStream: !1,
@@ -395,7 +395,7 @@ let eP = r.memo(function (e) {
                             );
                         case "CALL":
                             return (0, i.jsx)(
-                                K.Z,
+                                Y.Z,
                                 eO(ex({}, c), {
                                     color: "disconnect",
                                     onClick: () => {
@@ -469,7 +469,7 @@ function eI(e) {
 function eZ(e) {
     return (0, I.u)(e, _.Z.VOICE_CONTROL_TRAY, { entrypoint: eC.A5.CARET });
 }
-let eN = function (e) {
+let eT = function (e) {
     var t;
     let { channel: n, className: l, onDisconnectCall: o, exitFullScreen: c, idleProps: d } = e,
         h = r.useRef(null),
@@ -482,8 +482,8 @@ let eN = function (e) {
         I = (0, es.Z)(n),
         { suppress: Z, selfMute: A, mute: M } = (0, ec.Z)(n),
         { canGoLive: R } = (0, u.cj)([ei.Z], () => ({ canGoLive: (0, w.Z)(ei.Z) })),
-        k = (0, T.Z)(),
-        D = (0, u.e7)([N.Z], () => null != N.Z.getAwaitingRemoteSessionInfo()),
+        k = (0, N.Z)(),
+        D = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
         B = null != k,
         H = (0, u.e7)([er.Z], () => {
             var e;
@@ -492,7 +492,7 @@ let eN = function (e) {
         F = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
         { analyticsLocations: q } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
-        K = (0, $.Hu)({
+        Y = (0, $.Hu)({
             location: _.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
@@ -500,7 +500,7 @@ let eN = function (e) {
         et = (0, V.Z)(n),
         en = r.useRef(null),
         eu = r.useRef(null),
-        ep = K
+        ep = Y
             ? (e) => {
                   (0, f.jW)(e, () =>
                       Promise.resolve(() =>
@@ -542,7 +542,7 @@ let eN = function (e) {
                                               let t,
                                                   { closePopout: n } = e;
                                               return (
-                                                  (t = K
+                                                  (t = Y
                                                       ? (0, i.jsx)(ee.l, {
                                                             wide: !0,
                                                             showOutputDevices: !0,
@@ -585,7 +585,7 @@ let eN = function (e) {
                                           children: (e, t) => {
                                               let { onClick: n } = e,
                                                   { isShown: r } = t;
-                                              return (0, i.jsx)(Y.Z, {
+                                              return (0, i.jsx)(K.Z, {
                                                   ref: en,
                                                   centerButton: !0,
                                                   onPopoutClick: B ? null : n,

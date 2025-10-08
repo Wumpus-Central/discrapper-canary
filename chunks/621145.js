@@ -3,8 +3,8 @@ var i = n(951288),
     a = n(647438),
     l = n(392711),
     o = n(442837),
-    r = n(481060),
-    s = n(640108),
+    s = n(481060),
+    r = n(640108),
     c = n(406432),
     d = n(169525),
     u = n(786761),
@@ -16,19 +16,19 @@ var i = n(951288),
     y = n(524444),
     b = n(884182),
     v = n(25015),
-    x = n(963550),
-    _ = n(845080),
+    _ = n(963550),
+    x = n(845080),
     j = n(594174),
     E = n(630388),
     O = n(956664),
-    P = n(709054),
-    A = n(236289),
+    A = n(709054),
+    P = n(236289),
     C = n(788080),
     w = n(800530),
     T = n(981631),
     S = n(217702),
-    N = n(20316);
-function L(e) {
+    L = n(934064);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -53,7 +53,7 @@ function L(e) {
     }
     return e;
 }
-function k(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function k(e, t) {
         e
     );
 }
-let I = (e) => {
+let k = (e) => {
     let { message: t } = e,
         { attachments: n } = t;
     if (0 === n.length) return null;
@@ -80,7 +80,7 @@ let I = (e) => {
         return (0, d.dn)(e.originalItem, t);
     }
     return (0, i.jsx)("div", {
-        className: N.classificationEvidenceMessageAttachment,
+        className: L.classificationEvidenceMessageAttachment,
         children: (0, i.jsx)(b.Z, {
             items: n.map((e) => {
                 var n;
@@ -121,7 +121,7 @@ let I = (e) => {
                                     width: n ? a : "100%",
                                     height: n ? o : "100%",
                                 },
-                                children: (0, i.jsx)(s.ZP, {
+                                children: (0, i.jsx)(r.ZP, {
                                     className: e.className,
                                     forceExternal: !1,
                                     src: t.url,
@@ -131,7 +131,7 @@ let I = (e) => {
                                     volume: e.volume,
                                     autoPlay: !1,
                                     autoMute: !1,
-                                    type: s.ZP.Types.VIDEO,
+                                    type: r.ZP.Types.VIDEO,
                                     mediaLayoutType: e.mediaLayoutType,
                                     fileName: t.filename,
                                     fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -149,7 +149,7 @@ let I = (e) => {
                     renderImageComponent: (e) =>
                         (0, i.jsx)(
                             g.dS,
-                            k(L({}, e), {
+                            I(N({}, e), {
                                 hiddenSpoilers: !0,
                                 shouldHideMediaOptions: !0,
                                 shouldLink: !1,
@@ -170,28 +170,28 @@ function U(e) {
     var t;
     let { flaggedContent: n } = e,
         l = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
-        [s, d] = a.useState({}),
+        [r, d] = a.useState({}),
         [m, g] = a.useState(!0),
-        y = (0, o.e7)([A.Z], () => A.Z.getUsername()),
+        y = (0, o.e7)([P.Z], () => P.Z.getUsername()),
         b = n[0],
         E = ((e, t, n, i) => {
             let a = e.attachments.map((e) => {
                 var n, i, a, l;
-                let o = k(L({}, e), {
+                let o = I(N({}, e), {
                     filename: (0, C.eS)(e),
                     size: 0,
                     proxy_url: e.url,
                 });
                 return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
-                    ? k(L({}, o), {
+                    ? I(N({}, o), {
                           width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : w.Sv,
                           height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : w.EY,
                       })
                     : o;
             });
             return (0, u.e5)(
-                k(
-                    L(
+                I(
+                    N(
                         {},
                         (0, p.ZP)({
                             author:
@@ -210,13 +210,13 @@ function U(e) {
                         }),
                     ),
                     {
-                        timestamp: new Date(P.default.extractTimestamp(e.id)).toISOString(),
+                        timestamp: new Date(A.default.extractTimestamp(e.id)).toISOString(),
                         attachments: a,
                         state: T.yb.SENT,
                     },
                 ),
             );
-        })(b, s, l, y),
+        })(b, r, l, y),
         O = (0, f.ZP)(E),
         S = (0, v.Z)(E, {
             hideSimpleEmbedContent: !1,
@@ -260,20 +260,20 @@ function U(e) {
                                 width: 0,
                                 height: 0,
                             });
-                    }).then((t) => d((n) => k(L({}, n), { [e.id]: t }))),
+                    }).then((t) => d((n) => I(N({}, n), { [e.id]: t }))),
                 ),
         ).finally(() => g(!1));
     }, [b.attachments]),
     "" === E.content && 0 === E.attachments.length)
         ? null
         : (0, i.jsx)("div", {
-              className: N.classificationEvidenceCard,
+              className: L.classificationEvidenceCard,
               children: m
-                  ? (0, i.jsx)(r.$jN, {})
+                  ? (0, i.jsx)(s.$jN, {})
                   : (0, i.jsx)(h.Z, {
                         compact: !1,
-                        childrenHeader: (0, _.Z)({
-                            author: k(L({}, l), {
+                        childrenHeader: (0, x.Z)({
+                            author: I(N({}, l), {
                                 colorString: "",
                                 colorStrings: null,
                                 nick: null != (t = null == l ? void 0 : l.username) ? t : y,
@@ -287,8 +287,8 @@ function U(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1,
                         }),
-                        childrenAccessories: (0, i.jsx)(I, { message: E }),
-                        childrenMessageContent: (0, x.Z)({ message: E }, S.content),
+                        childrenAccessories: (0, i.jsx)(k, { message: E }),
+                        childrenMessageContent: (0, _.Z)({ message: E }, S.content),
                         hasThread: !1,
                         hasReply: !1,
                         author: O,
