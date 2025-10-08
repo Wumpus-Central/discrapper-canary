@@ -25,7 +25,7 @@ n.d(t, {
 var r = n(860911),
     i = n(70956),
     a = n(546791),
-    o = n(345909),
+    o = n(412297),
     s = n(388032);
 let l = 30 * i.Z.Millis.SECOND,
     c = 8,
@@ -207,9 +207,9 @@ let S = new Map([
             {
                 priority: 175,
                 tooltipHeader: () => s.intl.string(o.default.eo4Fxs),
-                tooltipDescription: (e) => (e ? s.intl.string(o.default["Mx+/eX"]) : s.intl.string(o.default.n3otj4)),
+                tooltipDescription: () => s.intl.string(o.default["O/AElp"]),
                 sectionHeader: (e) => s.intl.formatToPlainString(o.default.eGFWUV, { count: e }),
-                sectionDescription: (e) => (e ? s.intl.string(o.default["Mx+/eX"]) : s.intl.string(o.default.n3otj4)),
+                sectionDescription: () => s.intl.string(o.default["O/AElp"]),
             },
         ],
         [
