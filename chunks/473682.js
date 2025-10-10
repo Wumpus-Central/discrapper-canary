@@ -1,22 +1,21 @@
 n.d(t, {
-    BH: () => b,
-    IU: () => x,
-    M4: () => d,
-    Ne: () => u,
-    T9: () => o,
-    Vb: () => s,
-    cF: () => h,
-    gM: () => p,
-    hK: () => c,
-    mg: () => f,
-    zI: () => m,
+    BH: () => x,
+    IU: () => h,
+    M4: () => c,
+    Ne: () => d,
+    Q_: () => f,
+    T9: () => s,
+    Vb: () => l,
+    cF: () => p,
+    gM: () => m,
+    hK: () => o,
+    zI: () => u,
 });
 var a,
-    r,
-    i = n(763600),
-    l = n(48541),
-    s = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
-let o = {
+    r = n(763600),
+    i = n(48541),
+    l = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+let s = {
         steps: {
             "select-game": {
                 onBack: { type: "close" },
@@ -34,22 +33,22 @@ let o = {
             },
         },
     },
-    c = 24,
-    d = 680,
-    u = 12633 == n.j ? d - 2 * c : null,
-    m = 10,
-    p = 32,
-    h = 1000,
-    x =
+    o = 24,
+    c = 680,
+    d = 12633 == n.j ? c - 2 * o : null,
+    u = 10,
+    m = 32,
+    p = 1000,
+    h =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1425215263548117002"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
-              : "1415025086791942144";
-var f = 12633 == n.j ? (((r = {})[(r.SHOCKBYTE = 0)] = "SHOCKBYTE"), r) : null;
-let b = {
-    [i.Z.SHOCKBYTE]:
-        window.GLOBAL_ENV.RELEASE_CHANNEL === l.C.STAGING
-            ? "https://purple-prod.shockbyte.dev/support"
-            : "https://discord.shockbyte.com/support",
-};
+              : "1415025086791942144",
+    x = {
+        [r.Z.SHOCKBYTE]:
+            window.GLOBAL_ENV.RELEASE_CHANNEL === i.C.STAGING
+                ? "https://purple-prod.shockbyte.dev/support"
+                : "https://discord.shockbyte.com/support",
+    },
+    f = { [r.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" };

@@ -1,6 +1,6 @@
 function a(e) {
-    var t, n, a, r;
-    let i = e.skus
+    var t, n, a, r, i, l, s;
+    let o = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
                     title: e.title,
@@ -14,21 +14,24 @@ function a(e) {
                 };
             })
             .sort((e, t) => t.cost - e.cost),
-        l = i.length > 0 ? Math.min(...i.map((e) => e.cost)) : 0;
+        c = o.length > 0 ? Math.min(...o.map((e) => e.cost)) : 0;
     return {
         id: e.id,
         name: e.name,
         gameId:
             null !=
-            (r =
+            (s =
                 null == (a = e.tenant_metadata) || null == (n = a.guild_monetization) || null == (t = n.game_server)
                     ? void 0
                     : t.game_application_id)
-                ? r
+                ? s
                 : "",
-        developer: "Game Server Provider",
-        plans: i,
-        baseCost: l,
+        provider:
+            null == (l = e.tenant_metadata) || null == (i = l.guild_monetization) || null == (r = i.game_server)
+                ? void 0
+                : r.provider,
+        plans: o,
+        baseCost: c,
     };
 }
 n.d(t, { m: () => a }), n(953529), n(642613), n(388685);
