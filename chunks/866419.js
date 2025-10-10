@@ -1,81 +1,104 @@
 n.d(t, {
-    Bv: () => g,
-    SK: () => O,
-    YZ: () => v,
-    _m: () => h,
-    ft: () => b,
-    jJ: () => E,
-    lT: () => y,
-    zu: () => p,
+    Bv: () => b,
+    SK: () => T,
+    YZ: () => S,
+    _m: () => g,
+    ft: () => O,
+    jJ: () => y,
+    lT: () => v,
+    zu: () => m,
 }),
+    n(388685),
     n(49124);
 var r = n(647438),
-    i = n(780384),
-    a = n(781391),
-    o = n(210887),
-    s = n(695346);
+    i = n(442837),
+    a = n(780384),
+    o = n(781391),
+    s = n(210887),
+    l = n(695346);
 n(581883);
-var l = n(233398),
-    c = n(238302),
-    u = n(803038),
-    d = n(893712),
-    f = n(469115),
-    _ = n(231338);
-function p() {
+var c = n(233398),
+    u = n(238302),
+    d = n(36982),
+    f = n(803038),
+    _ = n(893712),
+    p = n(469115),
+    h = n(231338);
+function m() {
     return !1;
 }
-var h = (function (e) {
+var g = (function (e) {
     return (e.RESET_BUTTON = "reset_button"), (e.EDITOR_CLOSE = "editor_close"), e;
 })({});
-function m(e) {
-    return (0, i.wj)(e) ? _.BR.DARK : _.BR.LIGHT;
+function E(e) {
+    return (0, a.wj)(e) ? h.BR.DARK : h.BR.LIGHT;
 }
-function g(e) {
-    let t = s.L1.getSetting(),
+function b(e) {
+    let t = l.L1.getSetting(),
         n =
             null != t.backgroundGradientPresetId &&
-            t.backgroundGradientPresetId in f.qt &&
-            f.qt[t.backgroundGradientPresetId].theme !== e;
-    (0, a.y)(e), n && (0, c.kj)();
+            t.backgroundGradientPresetId in p.qt &&
+            p.qt[t.backgroundGradientPresetId].theme !== e;
+    (0, o.y)(e), n && (0, u.kj)();
 }
-function E() {
-    let e = r.useRef(null);
-    return (
-        r.useEffect(() => {
-            e.current = o.Z.theme;
-        }, []),
-        r.useCallback((t) => {
-            var n, r, i, u;
-            let d = s.L1.getSetting().customUserThemeSettings;
-            l.Ig.getState().setAll({
-                colors: null != (n = null == d ? void 0 : d.colors) ? n : "reset_button" === t ? [l.Dp] : [],
-                gradientAngle: null != (r = null == d ? void 0 : d.gradientAngle) ? r : 0,
-                chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH,
+function y() {
+    let [e] = r.useState(() => s.Z.theme);
+    return r.useCallback(
+        (t) => {
+            let { resetColors: n, resetGradientAngle: r, resetChassisMixAmount: i, resetBaseTheme: a } = I(t, e);
+            c.Ig.getState().setAll({
+                colors: n,
+                gradientAngle: r,
+                chassisMixAmount: i,
             }),
-                "reset_button" === t ? g(m(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
-            let f = s.L1.getSetting().backgroundGradientPresetId;
-            null != f && (0, c.zO)(f);
-        }, [])
+                "reset_button" === t ? b(E(null != a ? a : s.Z.theme)) : (0, o.UD)();
+            let d = l.L1.getSetting().backgroundGradientPresetId;
+            null != d && (0, u.zO)(d);
+        },
+        [e],
     );
 }
-function b() {
-    let e = m(o.Z.theme);
-    e !== o.Z.theme && g(e);
-}
-function y(e, t, n) {
-    0 === e.length && n([t]), b();
-}
 function O() {
-    var e, t, n;
-    let { colors: r, chassisMixAmount: i, gradientAngle: a } = (0, l.Ig)(),
-        o = s.L1.getSetting().customUserThemeSettings,
-        c = null != (e = null == o ? void 0 : o.colors) ? e : [l.Dp],
-        u = null != (t = null == o ? void 0 : o.gradientAngle) ? t : 0,
-        d = null != (n = null == o ? void 0 : o.baseMix) ? n : l.BH;
-    return JSON.stringify(r) === JSON.stringify(c) && i === d && a === u;
+    let e = E(s.Z.theme);
+    e !== s.Z.theme && b(e);
 }
-function v(e) {
-    let t = d.L.useExperiment({ location: e }).enabled,
-        n = u.Mc.useExperiment({ location: e }).v2EditorEnabled;
+function v(e, t, n) {
+    0 === e.length && n([t]), O();
+}
+function I(e, t) {
+    var n, r, i, a;
+    let o = l.L1.getSetting().customUserThemeSettings,
+        s = d.Z.getSavedCustomTheme(),
+        u = "reset_button" === e ? [c.Dp] : [],
+        f = 0,
+        _ = c.BH,
+        p = t;
+    return (
+        (null == o ? void 0 : o.colors) != null
+            ? ((u = o.colors), (f = null != (n = o.gradientAngle) ? n : 0), (_ = null != (r = o.baseMix) ? r : c.BH))
+            : "reset_button" === e &&
+              null != s &&
+              ((u = s.colors),
+              (f = null != (i = s.gradient_angle) ? i : 0),
+              (_ = null != (a = s.base_mix) ? a : c.BH),
+              (p = s.base_theme)),
+        {
+            resetColors: u,
+            resetGradientAngle: f,
+            resetChassisMixAmount: _,
+            resetBaseTheme: p,
+        }
+    );
+}
+function T() {
+    let { colors: e, chassisMixAmount: t, gradientAngle: n } = (0, c.Ig)(),
+        a = (0, i.e7)([s.Z], () => s.Z.theme),
+        [o] = r.useState(() => s.Z.theme),
+        { resetColors: l, resetGradientAngle: u, resetChassisMixAmount: d, resetBaseTheme: f } = I("reset_button", o);
+    return JSON.stringify(e) === JSON.stringify(l) && t === d && n === u && a === f;
+}
+function S(e) {
+    let t = _.L.useExperiment({ location: e }).enabled,
+        n = f.Mc.useExperiment({ location: e }).v2EditorEnabled;
     return t && n;
 }
