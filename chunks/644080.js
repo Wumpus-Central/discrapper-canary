@@ -32,7 +32,7 @@ function _(e) {
               }
             : {
                   variant: "expressive",
-                  icon: c.$Eu,
+                  icon: c.Ucv,
                   text: b.intl.string(b.t["+7XY39"]),
               };
     return (0, l.jsx)("div", {

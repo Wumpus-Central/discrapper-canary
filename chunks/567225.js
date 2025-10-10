@@ -6,30 +6,30 @@ var a = n(120356),
     r = n(481060),
     s = n(943970),
     o = n(401561),
-    u = n(388032),
-    c = n(720534);
+    c = n(388032),
+    u = n(720534);
 function d(e) {
     let { className: t, game: n, onClick: a, imageClassName: d, titleClassName: m, disabled: v = !1 } = e,
         f = (0, s.Z)(n.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
         "aria-disabled": v,
-        className: i()(c.game, { [c.disabled]: v }, t),
+        className: i()(u.game, { [u.disabled]: v }, t),
         onClick: v ? void 0 : () => a(n),
         children: [
             (0, l.jsxs)("div", {
-                className: i()(c.gameImageContainer, d),
+                className: i()(u.gameImageContainer, d),
                 children: [
                     (0, l.jsx)("img", {
-                        className: c.image,
+                        className: u.image,
                         alt: "",
                         src: null != f ? f : "",
                     }),
-                    (0, l.jsx)("div", { className: c.gameImageBorder }),
-                    (0, l.jsx)("div", { className: c.gameImageOverlay }),
+                    (0, l.jsx)("div", { className: u.gameImageBorder }),
+                    (0, l.jsx)("div", { className: u.gameImageOverlay }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: i()(c.textContainer, m),
+                className: i()(u.textContainer, m),
                 children: [
                     (0, l.jsx)(r.X6q, {
                         variant: "heading-sm/semibold",
@@ -38,15 +38,15 @@ function d(e) {
                         children: n.name,
                     }),
                     (0, l.jsxs)("div", {
-                        className: c.boostContainer,
+                        className: u.boostContainer,
                         children: [
-                            (0, l.jsx)(r.$Eu, {
+                            (0, l.jsx)(r.Ucv, {
                                 size: "sm",
                                 color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                             }),
                             (0, l.jsx)(r.Text, {
                                 variant: "text-sm/medium",
-                                children: u.intl.formatToPlainString(
+                                children: c.intl.formatToPlainString(
                                     n.plans.length > 1 ? o.default.Vf4vwM : o.default.ZzpD5u,
                                     { boostCount: n.baseCost },
                                 ),

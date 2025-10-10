@@ -13,8 +13,8 @@ var i = n(120356),
     m = n(39540),
     h = n(152165),
     p = n(615161),
-    x = n(70722),
-    g = n(231338),
+    g = n(70722),
+    x = n(231338),
     _ = n(388032),
     v = n(341338);
 function j(e) {
@@ -40,9 +40,9 @@ function j(e) {
 }
 function b(e) {
     let { onSourceSelect: t } = e;
-    (0, f.UB)(), (0, m.Z)(t, g.Vq);
+    (0, f.UB)(), (0, m.Z)(t, x.Vq);
     let [{ nativeSourceType: n }, i] = (0, p.E_)(),
-        l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, x.jR);
+        l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, g.jR);
     return (0, r.jsxs)("div", {
         className: v.root,
         children: [

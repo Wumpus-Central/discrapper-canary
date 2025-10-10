@@ -32,7 +32,7 @@ function j(e) {
                 toolbar: (0, r.jsx)("div", {}),
                 children: [
                     (0, r.jsx)(c.ZP.Icon, {
-                        icon: i.$Eu,
+                        icon: i.Ucv,
                         "aria-label": "",
                     }),
                     (0, r.jsx)(c.ZP.Title, { children: p.intl.string(x.default.lH9Dio) }),

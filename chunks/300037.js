@@ -48,7 +48,7 @@ let E = function (e) {
                           (0, r.jsxs)("div", {
                               className: g.guildBoostStatsContainer,
                               children: [
-                                  (0, r.jsx)(l.$Eu, {
+                                  (0, r.jsx)(l.Ucv, {
                                       color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                       className: g.guildBoostBadge,
                                   }),

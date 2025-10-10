@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -13,9 +13,9 @@ var i = n(442837),
     m = n(148381),
     h = n(388032),
     p = n(376681);
-function x(e) {
-    let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: x } = e,
-        g = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+function g(e) {
+    let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: g } = e,
+        x = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         _ = (0, i.e7)([o.Z, s.ZP, a.Z], () => (0, u.h_)(s.ZP.getChannels(n), o.Z, a.Z)),
         v = (0, i.e7)([d.ZP], () => d.ZP.getVoiceStates(n)),
         j = _.map((e) => {
@@ -29,7 +29,7 @@ function x(e) {
                             : n
                                   .filter((e) => {
                                       let { user: t } = e;
-                                      return t.id !== (null == g ? void 0 : g.id);
+                                      return t.id !== (null == x ? void 0 : x.id);
                                   })
                                   .map((e) => {
                                       let { user: t } = e;
@@ -50,7 +50,7 @@ function x(e) {
             itemTitleClassName: p.channelTitleWrapper,
             onChange: (e) => {
                 let { value: t } = e;
-                return x(t);
+                return g(t);
             },
         }),
     });

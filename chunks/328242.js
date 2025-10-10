@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(642613);
+n.d(t, { Z: () => N }), n(388685), n(642613);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -12,15 +12,15 @@ var r = n(951288),
     m = n(594190),
     h = n(320724),
     p = n(751571),
-    x = n(569984),
-    g = n(63063),
+    g = n(569984),
+    x = n(63063),
     _ = n(358085),
     v = n(747268),
     j = n(215915),
     b = n(855403),
     S = n(567126),
-    y = n(615161),
-    C = n(761274),
+    C = n(615161),
+    y = n(761274),
     O = n(637824),
     w = n(388032),
     Z = n(602804);
@@ -38,7 +38,7 @@ function I(e) {
               : (0, r.jsx)(u.GON, { size: "xs" })
           : (0, r.jsx)(u.Odl, { size: "xs" });
 }
-function N(e) {
+function P(e) {
     let { source: t, selected: n, onClick: i } = e,
         { url: l, name: o } = t;
     return (0, r.jsxs)(u.P3F, {
@@ -83,7 +83,7 @@ function N(e) {
         ],
     });
 }
-function P(e) {
+function N(e) {
     let { onClick: t } = e,
         [
             {
@@ -91,12 +91,12 @@ function P(e) {
                 deviceSources: l,
                 screenSources: s,
                 sourceType: o,
-                fetchingSources: g,
+                fetchingSources: x,
                 selectedSource: O,
                 discordSourceId: I,
-                hasPermission: P,
+                hasPermission: N,
             },
-        ] = (0, y.E_)(),
+        ] = (0, C.E_)(),
         { smarterSourceOrdering: E } = (0, j.E)({ location: "GoLiveSourceGrid" }),
         R = (0, d.e7)([m.ZP], () => m.ZP.getRunningGames()),
         A = (0, d.cj)([m.ZP], () => {
@@ -105,7 +105,7 @@ function P(e) {
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
-        k = (0, d.e7)([x.Z], () => x.Z.quests),
+        k = (0, d.e7)([g.Z], () => g.Z.quests),
         M = (0, S.jx)(k, R, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
@@ -119,8 +119,8 @@ function P(e) {
                 : n,
         [M, E, n, I, A],
     );
-    if (g) {
-        if (!P) {
+    if (x) {
+        if (!N) {
             let e = !1;
             if ((0, _.isMac)()) {
                 var L, B;
@@ -143,7 +143,7 @@ function P(e) {
                         (0, r.jsx)(u.zxk, {
                             text: w.intl.string(w.t["XgZk+v"]),
                             onClick: () => {
-                                p.Z.openSettings(C.Eu.SCREEN_RECORDING);
+                                p.Z.openSettings(y.Eu.SCREEN_RECORDING);
                             },
                         }),
                 ],
@@ -161,7 +161,7 @@ function P(e) {
               className: Z.root,
               children: G.map((e) =>
                   (0, r.jsx)(
-                      N,
+                      P,
                       {
                           onClick: t,
                           source: e,
@@ -198,7 +198,7 @@ function T() {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/semibold",
-                children: w.intl.format(O.default.xpVzr6, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
+                children: w.intl.format(O.default.xpVzr6, { helpdeskURL: x.Z.getArticleURL(360040816151) }),
             }),
         ],
     });

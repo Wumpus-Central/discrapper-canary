@@ -18,15 +18,15 @@ var i = n(951288),
     h = n(388032),
     A = n(382775);
 function P(e) {
-    let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: E, analyticsPage: R } = e,
-        [j, v] = a.useState(!1),
+    let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: v, analyticsPage: E } = e,
+        [R, j] = a.useState(!1),
         y = (0, l.vRw)(),
         C = (0, d.Dt)(),
         { analyticsLocations: I, newestAnalyticsLocation: Z } = (0, s.ZP)(c.Z.GIF_PICKER);
     async function B(e) {
         let { gifSrc: t } = e;
-        if (null == t || j) return;
-        v(!0);
+        if (null == t || R) return;
+        j(!0);
         let a = (0, m.Q)(t),
             r = await fetch(a),
             c = await r.blob();
@@ -67,7 +67,7 @@ function P(e) {
                                     file: new File([c], "tenor.gif", { type: "image/gif" }),
                                     onCrop: P,
                                     uploadType: b,
-                                    showUpsellHeader: E,
+                                    showUpsellHeader: v,
                                 },
                                 t,
                             ),
@@ -80,9 +80,9 @@ function P(e) {
         g.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
-            location: { page: R },
+            location: { page: E },
         });
-    }, [I, R]);
+    }, [I, E]);
     let w = b === x.pC.AVATAR || b === x.pC.BANNER,
         L = (0, f.M)(!w);
     return (0, i.jsx)(s.Gt, {
@@ -93,11 +93,11 @@ function P(e) {
             size: l.CgR.SMALL,
             parentComponent: "GIFPickerCroppingModal",
             children: [
-                E &&
+                v &&
                     !L &&
                     (0, i.jsx)(p.Z, {
                         type: b,
-                        analyticsPage: R,
+                        analyticsPage: E,
                         analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0,
                     }),
@@ -119,15 +119,15 @@ function P(e) {
                 (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsx)(u.Z, {
-                            contentClassName: r()({ [A.gifPickerContent]: E && L }),
-                            className: r()(A.gifPicker, { [A.loadingOverlay]: j }),
+                            contentClassName: r()({ [A.gifPickerContent]: v && L }),
+                            className: r()(A.gifPicker, { [A.loadingOverlay]: R }),
                             onSelectGIF: B,
                             hideFavorites: !0,
                         }),
-                        j && (0, i.jsx)(l.$jN, { className: A.spinner }),
+                        R && (0, i.jsx)(l.$jN, { className: A.spinner }),
                     ],
                 }),
-                E &&
+                v &&
                     L &&
                     (0, i.jsx)(_.Z, {
                         uploadType: b,

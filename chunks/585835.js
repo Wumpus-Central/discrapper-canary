@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -17,20 +17,20 @@ var i = n(951288),
     x = n(981631),
     j = n(388032),
     v = n(473059);
-function y(e) {
+function O(e) {
     var t, n, l;
     let {
-            name: y,
-            icon: O,
+            name: O,
+            icon: y,
             imageSrc: _,
             iconBackgroundColor: C,
             iconClassName: N,
-            iconWrapperClassName: w,
-            details: S,
+            iconWrapperClassName: S,
+            details: w,
             integration: P,
             buttonText: I,
-            buttonDisabled: Z,
-            hasNextSection: E,
+            buttonDisabled: E,
+            hasNextSection: Z,
             onButtonClick: T,
             guildId: k,
             isScrolling: A,
@@ -44,7 +44,7 @@ function y(e) {
         H =
             null == I || null == T
                 ? null
-                : E
+                : Z
                   ? (0, i.jsxs)(d.Kqy, {
                         direction: "horizontal",
                         fullWidth: !1,
@@ -55,7 +55,7 @@ function y(e) {
                                 variant: "text-sm/normal",
                                 children: I,
                             }),
-                            E
+                            Z
                                 ? (0, i.jsx)(d.Fbu, {
                                       size: "custom",
                                       color: "currentColor",
@@ -69,7 +69,7 @@ function y(e) {
                   : (0, i.jsx)(d.zxk, {
                         size: "sm",
                         buttonRef: B,
-                        disabled: Z,
+                        disabled: E,
                         onClick: T,
                         text: I,
                     });
@@ -126,7 +126,7 @@ function y(e) {
     let G =
             U && (null != W.current || null != B.current)
                 ? (0, i.jsx)(c.J2, {
-                      targetElementRef: E ? W : B,
+                      targetElementRef: Z ? W : B,
                       title: j.intl.string(j.t.ufFDiI),
                       body: j.intl.string(j.t.TyMJwM),
                       onRequestClose: () => {
@@ -156,13 +156,13 @@ function y(e) {
             align: "center",
             children: [
                 (0, i.jsx)(f.Z, {
-                    name: y,
-                    icon: O,
+                    name: O,
+                    icon: y,
                     imageSrc: _,
                     iconBackgroundColor: C,
                     iconClassName: N,
-                    iconWrapperClassName: w,
-                    details: S,
+                    iconWrapperClassName: S,
+                    details: w,
                     isPremium: z.length > 0,
                     children: (function (e, t) {
                         var n, r;
@@ -210,7 +210,7 @@ function y(e) {
                 R,
             ],
         });
-    return E
+    return Z
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
                   D && null != k && null != P && h.Z.dismissOverviewTooltip(k, P.integration), null == T || T();

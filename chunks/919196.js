@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => S }), n(388685), n(539854), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(243814),
@@ -17,8 +17,8 @@ var i = n(951288),
     x = n(366598),
     j = n(125657),
     v = n(725875),
-    y = n(981631),
-    O = n(388032),
+    O = n(981631),
+    y = n(388032),
     _ = n(85541);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,20 +75,20 @@ function N(e) {
         ((t = C({}, c)),
         (n = n =
             {
-                header: O.intl.formatToPlainString(O.t["rL9d//"], { applicationName: r.name }),
-                confirmText: O.intl.string(O.t.ebGf4u),
-                cancelText: O.intl.string(O.t["ETE/oK"]),
+                header: y.intl.formatToPlainString(y.t["rL9d//"], { applicationName: r.name }),
+                confirmText: y.intl.string(y.t.ebGf4u),
+                cancelText: y.intl.string(y.t["ETE/oK"]),
                 onConfirm: () => {
                     d.Z.disableIntegration(l.id, a.id).catch(() => {
                         s.Z.show({
-                            title: O.intl.string(O.t.wYqMmJ),
-                            body: O.intl.string(O.t.A4Mnsr),
+                            title: y.intl.string(y.t.wYqMmJ),
+                            body: y.intl.string(y.t.A4Mnsr),
                         });
                     });
                 },
                 children: (0, i.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: O.intl.format(O.t.FGE8yc, { applicationName: r.name }),
+                    children: y.intl.format(y.t.FGE8yc, { applicationName: r.name }),
                 }),
             }),
         Object.getOwnPropertyDescriptors
@@ -106,23 +106,23 @@ function N(e) {
         t),
     );
 }
-function w(e) {
+function S(e) {
     var t;
     let {
             guild: n,
             applicationIntegration: s,
             selectableWebhookChannels: d,
-            editedWebhook: w,
-            errors: S,
+            editedWebhook: S,
+            errors: w,
             canNavigate: P,
         } = e,
-        { application: I, integration: Z, webhooks: E } = s,
+        { application: I, integration: E, webhooks: Z } = s,
         [T, k] = (0, a.Wu)(
             [m.Z],
-            () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, I.bot.id, n)],
+            () => [m.Z.can(O.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(O.Plq.MANAGE_GUILD, I.bot.id, n)],
             [I.bot, n],
         ),
-        A = (0, a.e7)([m.Z], () => m.Z.can(y.Plq.MANAGE_WEBHOOKS, n), [n]),
+        A = (0, a.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         D = r.useCallback(() => {
             P() &&
                 (0, o.h7j)((e) =>
@@ -132,32 +132,32 @@ function w(e) {
                             {
                                 guild: n,
                                 application: I,
-                                integration: Z,
+                                integration: E,
                             },
                             e,
                         ),
                     ),
                 );
-        }, [I, P, n, Z]),
+        }, [I, P, n, E]),
         R = r.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(Z.id) }),
+                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: g.default.extractTimestamp(E.id) }),
                 },
             ];
             return (
-                null != Z.user &&
+                null != E.user &&
                     e.push({
                         icon: o.tBG,
-                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(Z.user) }),
+                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: f.ZP.getUserTag(E.user) }),
                     }),
                 e
             );
-        }, [Z.id, Z.user]),
+        }, [E.id, E.user]),
         L = r.useMemo(() => {
             var e;
-            return null != I.bot && (null == (e = Z.scopes) ? void 0 : e.includes(l.x.BOT))
+            return null != I.bot && (null == (e = E.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
                       guild: n,
                       applicationIntegration: s,
@@ -168,10 +168,10 @@ function w(e) {
                       children: (0, i.jsx)(o.Text, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: O.intl.string(O.t.pfLnzc),
+                          children: y.intl.string(y.t.pfLnzc),
                       }),
                   });
-        }, [I.bot, s, n, Z.scopes]);
+        }, [I.bot, s, n, E.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
@@ -203,7 +203,7 @@ function w(e) {
                                   size: "xs",
                                   color: "currentColor",
                               }),
-                              title: O.intl.string(O.t.AOdOYm),
+                              title: y.intl.string(y.t.AOdOYm),
                           }),
                           L,
                       ],
@@ -217,14 +217,14 @@ function w(e) {
                             size: "md",
                             color: "currentColor",
                         }),
-                        title: O.intl.string(O.t["t9ZX/P"]),
+                        title: y.intl.string(y.t["t9ZX/P"]),
                     }),
-                    E.length > 0
+                    Z.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: E,
-                              editedWebhook: w,
+                              webhooks: Z,
+                              editedWebhook: S,
                               selectableWebhookChannels: d,
-                              errors: S,
+                              errors: w,
                               canNavigate: P,
                           })
                         : (0, i.jsx)(o.Zbd, {
@@ -233,7 +233,7 @@ function w(e) {
                               children: (0, i.jsx)(o.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: A ? O.intl.string(O.t.ahPd2d) : O.intl.string(O.t.axqYMj),
+                                  children: A ? y.intl.string(y.t.ahPd2d) : y.intl.string(y.t.axqYMj),
                               }),
                           }),
                 ],
@@ -247,7 +247,7 @@ function w(e) {
                     (0, i.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: k ? O.intl.string(O.t.hdneLy) : O.intl.string(O.t.xRCMq6),
+                        children: k ? y.intl.string(y.t.hdneLy) : y.intl.string(y.t.xRCMq6),
                     }),
                     (0, i.jsx)(c.Z.Child, {
                         grow: 0,
@@ -255,7 +255,7 @@ function w(e) {
                         children: (0, i.jsx)(o.zxk, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: O.intl.string(O.t.ebGf4u),
+                            text: y.intl.string(y.t.ebGf4u),
                             disabled: !k,
                             onClick: D,
                         }),

@@ -480,7 +480,7 @@ let ev = {
                     ariaLabel: ex.intl.string(ex.t["8+VX4+"]),
                     element: ei.Z,
                     className: eb.serverBoostTabItem,
-                    icon: (0, r.jsx)(s.$Eu, {
+                    icon: (0, r.jsx)(s.Ucv, {
                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         size: "sm",
                         className: eb.icon,

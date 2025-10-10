@@ -34,7 +34,7 @@ function p(e) {
             },
             [h, n, p.id],
         ),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 h() &&
                     (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
@@ -62,7 +62,7 @@ function p(e) {
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: j,
                         onDisable: v,
-                        onToggleExpand: () => y(e.id),
+                        onToggleExpand: () => O(e.id),
                     },
                     e.id,
                 ),

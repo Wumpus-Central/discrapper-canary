@@ -12,8 +12,8 @@ var r = n(951288),
     m = n(72897),
     h = n(537135),
     p = n(176940),
-    x = n(65154),
-    g = n(388032),
+    g = n(65154),
+    x = n(388032),
     _ = n(591554),
     v = n(542257),
     j = n(197571);
@@ -21,9 +21,9 @@ function b(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: l } = e;
     s()(null != t, "Camera capture device cannot be null");
     let o = (0, p.Z)(),
-        [b, S] = (0, m.Ls)(x.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
-        y = b.concat(S),
-        [C, O] = i.useState(
+        [b, S] = (0, m.Ls)(g.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
+        C = b.concat(S),
+        [y, O] = i.useState(
             (function (e, t, n) {
                 var r;
                 let i = t.find((t) => t.id === e);
@@ -32,10 +32,10 @@ function b(e) {
                     (0, c.stringSimilarity)(i.name, t.name) > (0, c.stringSimilarity)(i.name, e.name) ? t : e,
                 );
                 return null != (r = null == l ? void 0 : l.id) ? r : null;
-            })(t.id, o, y),
+            })(t.id, o, C),
         );
     return (
-        null != C && l(C),
+        null != y && l(y),
         (0, r.jsx)(u.hjN, {
             title: "Capture Device",
             className: v.modalContent,
@@ -55,17 +55,17 @@ function b(e) {
                                     color: d.zx.Colors.PRIMARY,
                                     size: d.zx.Sizes.SMALL,
                                     onClick: n,
-                                    children: g.intl.string(g.t.GEgsAw),
+                                    children: x.intl.string(x.t.GEgsAw),
                                 }),
                             ],
                         }),
                     }),
                     (0, r.jsx)(f.j, {
-                        label: g.intl.string(g.t.y4ooen),
-                        deviceType: x.h7.AUDIO_INPUT,
+                        label: x.intl.string(x.t.y4ooen),
+                        deviceType: g.h7.AUDIO_INPUT,
                         location: "CaptureDeviceConfig",
                         className: j.__invalid_marginaTop8,
-                        selectedDeviceId: C,
+                        selectedDeviceId: y,
                         onSelectDevice: (e) => (O(e), l(e), !1),
                     }),
                 ],

@@ -24,7 +24,7 @@ let m = (e) => {
                 ? (null != v && (i = u.intl.string(u.t.hUgjyM)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(a.$Eu, {
+                          (0, r.jsx)(a.Ucv, {
                               color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                               className: g.unlockedIcon,
                           }),
@@ -38,7 +38,7 @@ let m = (e) => {
                 : (null != v && (i = u.intl.string(u.t.L2wYYm)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(a.$Eu, {
+                          (0, r.jsx)(a.Ucv, {
                               color: "currentColor",
                               className: g.icon,
                           }),

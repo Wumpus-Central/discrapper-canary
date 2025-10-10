@@ -127,7 +127,7 @@ let T = {
                     }),
                     A !== p.Eu4.NONE
                         ? k
-                            ? (0, r.jsx)(s.mTd, {
+                            ? (0, r.jsx)(s.zkc, {
                                   className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: "xxs",
                                   color: "currentColor",

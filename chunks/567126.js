@@ -22,21 +22,21 @@ var r = n(951288),
     m = n(579806),
     h = n(600164),
     p = n(152708),
-    x = n(594190),
-    g = n(751571),
+    g = n(594190),
+    x = n(751571),
     _ = n(509212),
     v = n(569984),
     j = n(977156),
     b = n(28798),
     S = n(131951),
-    y = n(449224),
-    C = n(358085),
+    C = n(449224),
+    y = n(358085),
     O = n(463727),
     w = n(855403),
     Z = n(299570),
     I = n(960861),
-    N = n(59468),
-    P = n(989941),
+    P = n(59468),
+    N = n(989941),
     T = n(39540),
     E = n(958707),
     R = n(152165),
@@ -73,8 +73,8 @@ function U(e) {
     return e;
 }
 function W(e, t, n, r) {
-    let i = (0, C.isWindows)() ? (0, P.Z)(x.ZP, y.Z) : null,
-        l = x.ZP.getRunningGames(),
+    let i = (0, y.isWindows)() ? (0, N.Z)(g.ZP, C.Z) : null,
+        l = g.ZP.getRunningGames(),
         s = null == n ? void 0 : n.split(":")[1],
         o = e.id.split(":")[1];
     if (null != s && s === o) return 0;
@@ -112,13 +112,13 @@ function F(e) {
         o = S.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, m] = i.useState(null),
         [_, j] = i.useState(null),
-        [y, C] = i.useState(null),
-        w = null != y && y.length > 0,
+        [C, y] = i.useState(null),
+        w = null != C && C.length > 0,
         [Z, I] = i.useState(c.vA.WINDOW),
-        [P, T] = i.useState(!1),
+        [N, T] = i.useState(!1),
         R = i.useRef(null),
         k = i.useRef(new u.Xp()),
-        D = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
+        D = (0, d.e7)([g.ZP], () => g.ZP.getRunningGames()),
         U = z(
             (0, d.e7)([v.Z], () => v.Z.quests),
             D,
@@ -136,23 +136,23 @@ function F(e) {
     i.useEffect(() => {
         let e = k.current;
         return (
-            (0, N.t)({
+            (0, P.t)({
                 width: 176,
                 height: 99,
             }).then((e) => {
                 let { screenSources: t, windowSources: n, cameraSources: r } = e;
-                m(t), j(n), C(r);
+                m(t), j(n), y(r);
             }),
             e.start(1000, async () => {
                 let {
                     screenSources: e,
                     windowSources: t,
                     cameraSources: n,
-                } = await (0, N.t)({
+                } = await (0, P.t)({
                     width: 176,
                     height: 99,
                 });
-                m(e), j(t), C(n);
+                m(e), j(t), y(n);
             }),
             () => {
                 e.stop();
@@ -164,7 +164,7 @@ function F(e) {
         }, []),
         [V, Y] = i.useState(void 0);
     i.useEffect(() => {
-        g.Z.hasPermission(M.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(Y);
+        x.Z.hasPermission(M.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(Y);
     }, []);
     let J = (function (e) {
         switch (e) {
@@ -173,7 +173,7 @@ function F(e) {
             case c.vA.SCREEN:
                 return a;
             case c.vA.CAMERA:
-                return y;
+                return C;
         }
     })(Z);
     if (null == J)
@@ -215,7 +215,7 @@ function F(e) {
             (0, r.jsxs)("div", {
                 className: G.segmentContainer,
                 children: [
-                    (0, r.jsx)(E.Z, { separator: P }),
+                    (0, r.jsx)(E.Z, { separator: N }),
                     (0, r.jsx)(f.sY7, {
                         options: (function () {
                             let e = [
@@ -384,13 +384,13 @@ function Y(e) {
             },
             [t, c],
         ),
-        x = (0, C.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR),
-        g = (0, C.isMac)(),
+        g = (0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR),
+        x = (0, y.isMac)(),
         [_, v] = i.useState(!1),
         j = i.useCallback(() => {
             v(!_);
         }, [_]),
-        b = x
+        b = g
             ? (0, r.jsx)(H, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
@@ -409,7 +409,7 @@ function Y(e) {
                           text: B.intl.string(B.t.dG2A1N),
                           icon: f.GON,
                       }),
-                      g
+                      x
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
                                 id: "app",
@@ -477,8 +477,8 @@ function J(e) {
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
         i.useEffect(() => {
-            (0, C.isLinux)() ||
-            ((0, C.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR))
+            (0, y.isLinux)() ||
+            ((0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR))
                 ? (0, Z.T)(l)
                 : (0, Z.t)();
         }, [l]),

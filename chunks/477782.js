@@ -1,41 +1,41 @@
-e.d(n, { default: () => f }), e(388685);
-var i = e(951288),
-    a = e(647438),
-    o = e(793030),
-    r = e(481060),
-    l = e(117984),
-    s = e(388032);
-function f(t) {
-    let { onClose: n, transitionState: e } = t,
-        [f, u] = a.useState("");
-    return (0, i.jsx)("form", {
+i.d(n, { default: () => u }), i(388685);
+var e = i(951288),
+    a = i(647438),
+    s = i(793030),
+    o = i(481060),
+    r = i(117984),
+    l = i(388032);
+function u(t) {
+    let { onClose: n, transitionState: i } = t,
+        [u, c] = a.useState("");
+    return (0, e.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(), (0, l.CM)(f), n();
+            t.preventDefault(), (0, r.CM)(u), n();
         },
-        children: (0, i.jsx)(o.Modal, {
-            title: s.intl.string(s.t["ISN+ND"]),
+        children: (0, e.jsx)(s.Modal, {
+            title: l.intl.string(l.t["ISN+ND"]),
             actions: [
                 {
-                    text: s.intl.string(s.t["ETE/oK"]),
+                    text: l.intl.string(l.t["ETE/oK"]),
                     onClick: n,
                     variant: "secondary",
                 },
                 {
-                    text: s.intl.string(s.t["ISN+ND"]),
+                    text: l.intl.string(l.t["ISN+ND"]),
                     variant: "primary",
                     type: "submit",
                     autoFocus: !1,
-                    disabled: "" === f,
+                    disabled: "" === u,
                 },
             ],
-            transitionState: e,
+            transitionState: i,
             onClose: n,
-            children: (0, i.jsx)(r.oil, {
-                label: s.intl.string(s.t.OCAkGB),
-                value: f,
-                onChange: u,
+            children: (0, e.jsx)(o.oil, {
+                label: l.intl.string(l.t.OCAkGB),
+                value: u,
+                onChange: c,
                 maxLength: 100,
-                placeholder: s.intl.string(s.t.eTVbt7),
+                placeholder: l.intl.string(l.t.eTVbt7),
                 autoFocus: !0,
             }),
         }),

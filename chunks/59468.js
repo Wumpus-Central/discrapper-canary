@@ -46,7 +46,7 @@ async function d(e) {
         m = (0, o._)(),
         h = await m,
         p = await f,
-        x = p
+        g = p
             .filter((e) => e.id.startsWith(i.vA.SCREEN))
             .map((e) => {
                 var t, n;
@@ -97,7 +97,7 @@ async function d(e) {
                     t
                 );
             }),
-        g = (function (e, t) {
+        x = (function (e, t) {
             let n = {};
             return (
                 t.forEach((e) => {
@@ -132,8 +132,8 @@ async function d(e) {
                     };
                 })),
         {
-            windowSources: g,
-            screenSources: x,
+            windowSources: x,
+            screenSources: g,
             cameraSources: _,
         }
     );

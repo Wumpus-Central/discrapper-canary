@@ -33,7 +33,7 @@ function g(e) {
     return (0, r.jsx)(s.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
-        iconNode: (0, r.jsx)(l.$Eu, {
+        iconNode: (0, r.jsx)(l.Ucv, {
             className: m.icon,
             color: "currentColor",
             size: "sm",

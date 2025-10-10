@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => j,
-    Z: () => y,
+    Z: () => O,
 }),
     n(35282),
     n(388685);
@@ -92,17 +92,17 @@ class v extends (i = l.PureComponent) {
                 name: c,
                 makeURL: f,
                 disabled: v,
-                onChange: y,
-                showIcon: O,
+                onChange: O,
+                showIcon: y,
                 showIconDisabled: _,
                 className: C,
                 imageClassName: N,
-                iconClassName: w,
-                iconWrapperClassName: S,
+                iconClassName: S,
+                iconWrapperClassName: w,
                 icon: P,
                 hideSize: I,
-                imageStyle: Z,
-                showRemoveButton: E,
+                imageStyle: E,
+                showRemoveButton: Z,
                 maxFileSizeBytes: T,
                 onFileSizeError: k,
                 onOpenImageSelectModal: A,
@@ -124,12 +124,12 @@ class v extends (i = l.PureComponent) {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, Z), { backgroundImage: n }),
+                    style: x(h({}, E), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
                             (0, r.jsx)("div", {
-                                className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, w),
+                                className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
                                 children: P,
                             }),
                     ],
@@ -153,11 +153,11 @@ class v extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: O ? o()(g.imageUploaderIconWrapper, S) : void 0,
+                        className: y ? o()(g.imageUploaderIconWrapper, w) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, Z), { backgroundImage: n }),
+                                style: x(h({}, E), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,
@@ -171,7 +171,7 @@ class v extends (i = l.PureComponent) {
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
-                                              onChange: y,
+                                              onChange: O,
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
                                               tabIndex: 0,
@@ -186,15 +186,15 @@ class v extends (i = l.PureComponent) {
                                     "aria-hidden": "true",
                                     children: s,
                                 }),
-                            O &&
+                            y &&
                                 (0, r.jsx)(j, {
-                                    className: w,
+                                    className: S,
                                     icon: P,
                                 }),
                         ],
                     }),
                 }),
-                E ? l : null,
+                Z ? l : null,
             ],
         });
     }
@@ -216,4 +216,4 @@ f(v, "defaultProps", {
     maxFileSizeBytes: 1 / 0,
     icon: null,
 });
-let y = v;
+let O = v;

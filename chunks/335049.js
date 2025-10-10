@@ -17,13 +17,13 @@ var i = n(951288),
     x = n(592125),
     j = n(271383),
     v = n(485386),
-    y = n(246946),
-    O = n(594174),
+    O = n(246946),
+    y = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
-    w = n(243226);
-function S(e) {
+    S = n(243226);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -77,7 +77,7 @@ function I(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        P(S({}, t), {
+                        P(w({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Mu7),
                         }),
@@ -88,7 +88,7 @@ function I(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(E, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -96,7 +96,7 @@ function I(e) {
                 openEntryContextMenu: u,
             });
         case m.Kw.ROLE:
-            return (0, i.jsx)(E, {
+            return (0, i.jsx)(Z, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function I(e) {
             });
     }
 }
-function Z(e) {
+function E(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -144,24 +144,24 @@ function Z(e) {
         ? null
         : (0, i.jsxs)("div", {
               onContextMenu: h,
-              className: w.identifier,
+              className: S.identifier,
               children: [
                   (0, i.jsx)(p, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: a()(w.channelIcon, w.image),
+                      className: a()(S.channelIcon, S.image),
                   }),
                   (0, i.jsx)(u.Text, {
-                      className: w.roleName,
+                      className: S.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
                       children: m,
                   }),
                   null != f
                       ? (0, i.jsxs)(u.Text, {
-                            className: w.tag,
+                            className: S.tag,
                             variant: "text-sm/normal",
                             children: ["(", f, ")"],
                         })
@@ -170,7 +170,7 @@ function Z(e) {
               ],
           });
 }
-function E(e) {
+function Z(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
         m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
@@ -188,7 +188,7 @@ function E(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                P(S({}, t), {
+                                P(w({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -201,19 +201,19 @@ function E(e) {
         ? null
         : (0, i.jsxs)("div", {
               onContextMenu: g,
-              className: w.identifier,
+              className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(f.Z, S({ className: a()(w.__invalid_icon, w.image) }, b))
+                      ? (0, i.jsx)(f.Z, w({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
                             height: 23,
-                            className: a()(w.shield, w.image),
+                            className: a()(S.shield, S.image),
                             color: null != (t = m.colorString) ? t : C.Pbq,
                         }),
                   (0, i.jsx)(u.Text, {
-                      className: w.roleName,
+                      className: S.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
                       children: m.name,
@@ -224,26 +224,26 @@ function E(e) {
 }
 function T(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
-        o = (0, c.e7)([O.default], () => O.default.getUser(n)),
+        o = (0, c.e7)([y.default], () => y.default.getUser(n)),
         s = (0, c.e7)([j.ZP], () => {
             var e;
             return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        d = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation);
+        d = (0, c.e7)([O.Z], () => O.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {
               onContextMenu: a,
-              className: w.identifier,
+              className: S.identifier,
               children: [
                   (0, i.jsx)(u.qEK, {
-                      className: w.image,
+                      className: S.image,
                       src: o.getAvatarURL(t.id, 24),
                       "aria-label": o.username,
                       size: u.EFr.SIZE_24,
                   }),
                   (0, i.jsx)(u.Text, {
-                      className: w.roleName,
+                      className: S.roleName,
                       color: "header-primary",
                       variant: "text-md/normal",
                       children: null != s ? s : o.username,
@@ -251,7 +251,7 @@ function T(e) {
                   d
                       ? null
                       : (0, i.jsx)(u.Text, {
-                            className: w.tag,
+                            className: S.tag,
                             variant: "text-sm/normal",
                             children: _.ZP.getUserTag(o),
                         }),
@@ -264,7 +264,7 @@ function k(e) {
     return (0, i.jsx)(d.u, {
         text: t,
         children: (0, i.jsx)("div", {
-            className: w.lockIcon,
+            className: S.lockIcon,
             children: (0, i.jsx)(u.mBM, {
                 size: "xs",
                 color: "currentColor",

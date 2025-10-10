@@ -68,7 +68,7 @@ function b(e) {
                     color: l.Tt.CUSTOM,
                     size: l.Ph.LARGE,
                     intent: c.P.NONE,
-                    icon: (0, r.jsx)(a.$Eu, {
+                    icon: (0, r.jsx)(a.Ucv, {
                         className: _.boostButtonIcon,
                         size: "sm",
                         color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,

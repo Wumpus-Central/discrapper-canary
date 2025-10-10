@@ -53,7 +53,7 @@ let _ = (e) => {
         return (0, r.jsx)("div", {
             className: f.purchasePlaceholder,
             children: n
-                ? (0, r.jsx)(l.$Eu, {
+                ? (0, r.jsx)(l.Ucv, {
                       size: "custom",
                       width: 20,
                       height: 20,

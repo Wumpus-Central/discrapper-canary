@@ -1,198 +1,198 @@
-n.d(t, {
-    $p: () => a,
+r.d(t, {
+    $p: () => o,
     AK: () => d,
-    Es: () => u,
+    Es: () => c,
     U$: () => s,
-    kH: () => c,
+    kH: () => u,
 }),
-    n(190126),
-    n(368063),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
-    n(388685),
-    n(415506),
-    n(410992),
-    n(227481),
-    n(730884),
-    n(20464),
-    n(341884),
-    n(364341),
-    n(629680),
-    n(505025),
-    n(918970),
-    n(121784),
-    n(644351),
-    n(146733);
-var r = n(392711),
-    i = n(36793),
-    l = n(486324);
-async function a(e) {
+    r(190126),
+    r(368063),
+    r(65234),
+    r(111804),
+    r(490233),
+    r(97749),
+    r(388685),
+    r(415506),
+    r(410992),
+    r(227481),
+    r(730884),
+    r(20464),
+    r(341884),
+    r(364341),
+    r(629680),
+    r(505025),
+    r(918970),
+    r(121784),
+    r(644351),
+    r(146733);
+var n = r(392711),
+    i = r(36793),
+    a = r(486324);
+async function o(e) {
     let {
             file: t,
-            image: r,
-            cropDimensions: a,
+            image: n,
+            cropDimensions: o,
             cropOriginCoordinates: s,
-            maxDimensions: o,
-            imageRotation: u = 0,
-            resizeWidth: c = null,
+            maxDimensions: l,
+            imageRotation: c = 0,
+            resizeWidth: u = null,
             resizeHeight: d = null,
         } = e,
         {
-            sourceX: h,
-            sourceY: m,
-            sourceWidth: g,
+            sourceX: m,
+            sourceY: g,
+            sourceWidth: h,
             sourceHeight: p,
         } = (0, i.GS)({
-            image: r,
-            cropDimensions: a,
+            image: n,
+            cropDimensions: o,
             cropOriginCoordinates: s,
-            maxDimensions: o,
-            imageRotation: u,
+            maxDimensions: l,
+            imageRotation: c,
         }),
-        f = await t.arrayBuffer(),
-        v = new Worker(new URL("/assets/" + n.u("86047"), n.b)),
-        x = new Promise((e, t) => {
-            v.onmessage = (n) => {
-                let { data: r } = n;
-                if (r.type === l.u.CROP_GIF_COMPLETE) {
+        E = await t.arrayBuffer(),
+        C = new Worker(new URL("/assets/" + r.u("86047"), r.b)),
+        f = new Promise((e, t) => {
+            C.onmessage = (r) => {
+                let { data: n } = r;
+                if (n.type === a.u.CROP_GIF_COMPLETE) {
                     var i;
                     e(
-                        ((i = new Blob([r.result])),
+                        ((i = new Blob([n.result])),
                         new Promise((e) => {
                             let t = new FileReader();
                             (t.onload = (t) => {
-                                var n;
-                                let r = null == (n = t.target) ? void 0 : n.result;
-                                "string" == typeof r ? e(r) : e("");
+                                var r;
+                                let n = null == (r = t.target) ? void 0 : r.result;
+                                "string" == typeof n ? e(n) : e("");
                             }),
                                 t.readAsDataURL(i);
                         })),
                     ),
-                        v.terminate();
+                        C.terminate();
                 } else
-                    r.type === l.u.CROP_GIF_ERROR &&
-                        (t(Error("Error cropping GIF", { cause: null == r ? void 0 : r.error })), v.terminate());
+                    n.type === a.u.CROP_GIF_ERROR &&
+                        (t(Error("Error cropping GIF", { cause: null == n ? void 0 : n.error })), C.terminate());
             };
         });
     return (
-        v.postMessage({
-            type: l.u.CROP_GIF_START,
-            gif: new Uint8Array(f),
-            x: 0 | h,
-            y: 0 | m,
-            width: 0 | g,
+        C.postMessage({
+            type: a.u.CROP_GIF_START,
+            gif: new Uint8Array(E),
+            x: 0 | m,
+            y: 0 | g,
+            width: 0 | h,
             height: 0 | p,
-            imageRotation: 0 | u,
-            resizeWidth: c,
+            imageRotation: 0 | c,
+            resizeWidth: u,
             resizeHeight: d,
         }),
         {
-            result: x,
-            cancelFn: () => v.terminate(),
+            result: f,
+            cancelFn: () => C.terminate(),
         }
     );
 }
-function s(e, t, n) {
+function s(e, t, r) {
     return {
-        x: (0, r.clamp)(e, n.left, n.right),
-        y: (0, r.clamp)(t, n.bottom, n.top),
+        x: (0, n.clamp)(e, r.left, r.right),
+        y: (0, n.clamp)(t, r.bottom, r.top),
     };
 }
-function o(e, t, n, r) {
-    let i = n,
-        a = r,
-        s = l.vJ;
-    return (n > s && ((i = s), (a = (s / n) * r)), n / r < e)
+function l(e, t, r, n) {
+    let i = r,
+        o = n,
+        s = a.vJ;
+    return (r > s && ((i = s), (o = (s / r) * n)), r / n < e)
         ? {
               width: i,
-              height: a,
+              height: o,
           }
         : {
-              width: (t / a) * i,
+              width: (t / o) * i,
               height: t,
           };
 }
-function u(e, t, n) {
+function c(e, t, r) {
     switch (e) {
-        case l.pC.AVATAR:
-        case l.pC.AVATAR_DECORATION:
-        case l.pC.GUILD_ICON:
+        case a.pC.AVATAR:
+        case a.pC.AVATAR_DECORATION:
+        case a.pC.GUILD_ICON:
             return {
                 width: t,
-                height: n,
+                height: r,
             };
-        case l.pC.BANNER:
-            let r = l.qj;
-            return o(l.MY, r, t, n);
-        case l.pC.GUILD_BANNER:
-            let i = l.C5;
-            return o(l.Ij, i, t, n);
-        case l.pC.VIDEO_BACKGROUND:
-            let a = l.PB;
-            return o(l.Ff, a, t, n);
-        case l.pC.SCHEDULED_EVENT_IMAGE:
-            let s = l.WV;
-            return o(l.ut, s, t, n);
-        case l.pC.HOME_HEADER:
-            return o(l.sX, l.SW, t, n);
+        case a.pC.BANNER:
+            let n = a.qj;
+            return l(a.MY, n, t, r);
+        case a.pC.GUILD_BANNER:
+            let i = a.C5;
+            return l(a.Ij, i, t, r);
+        case a.pC.VIDEO_BACKGROUND:
+            let o = a.PB;
+            return l(a.Ff, o, t, r);
+        case a.pC.SCHEDULED_EVENT_IMAGE:
+            let s = a.WV;
+            return l(a.ut, s, t, r);
+        case a.pC.HOME_HEADER:
+            return l(a.sX, a.SW, t, r);
     }
 }
-function c(e, t, n) {
-    let r = {
+function u(e, t, r) {
+    let n = {
             top: 0,
             bottom: 0,
             left: 0,
             right: 0,
         },
-        i = e - n.width,
-        l = t - n.height;
+        i = e - r.width,
+        a = t - r.height;
     return (
-        0 !== i && ((r.left = -Math.abs(i / 2)), (r.right = i / 2)),
-        0 !== l && ((r.bottom = -Math.abs(l / 2)), (r.top = l / 2)),
-        r
+        0 !== i && ((n.left = -Math.abs(i / 2)), (n.right = i / 2)),
+        0 !== a && ((n.bottom = -Math.abs(a / 2)), (n.top = a / 2)),
+        n
     );
 }
-function d(e, t, n, r) {
+function d(e, t, r, n) {
     switch (e) {
-        case l.pC.AVATAR:
-        case l.pC.AVATAR_DECORATION:
-        case l.pC.GUILD_ICON:
-            let i = Math.min(t, n);
+        case a.pC.AVATAR:
+        case a.pC.AVATAR_DECORATION:
+        case a.pC.GUILD_ICON:
+            let i = Math.min(t, r);
             return {
                 width: i,
                 height: i,
             };
-        case l.pC.BANNER:
-            let a = Math.min(t, l.vJ);
-            return {
-                width: a,
-                height: a * (1 / l.MY),
-            };
-        case l.pC.GUILD_BANNER:
-            let s = Math.min(t, l.vJ);
-            return {
-                width: s,
-                height: Math.min((9 / 16) * s, r),
-            };
-        case l.pC.VIDEO_BACKGROUND:
-            let o = Math.min(t, l.vJ);
+        case a.pC.BANNER:
+            let o = Math.min(t, a.vJ);
             return {
                 width: o,
-                height: (9 / 16) * o,
+                height: o * (1 / a.MY),
             };
-        case l.pC.SCHEDULED_EVENT_IMAGE:
-            let u = Math.min(t, l.vJ);
+        case a.pC.GUILD_BANNER:
+            let s = Math.min(t, a.vJ);
             return {
-                width: u,
-                height: 0.4 * u,
+                width: s,
+                height: Math.min((9 / 16) * s, n),
             };
-        case l.pC.HOME_HEADER:
-            let c = Math.min(t, l.vJ);
+        case a.pC.VIDEO_BACKGROUND:
+            let l = Math.min(t, a.vJ);
+            return {
+                width: l,
+                height: (9 / 16) * l,
+            };
+        case a.pC.SCHEDULED_EVENT_IMAGE:
+            let c = Math.min(t, a.vJ);
             return {
                 width: c,
-                height: c * (1 / l.sX),
+                height: 0.4 * c,
+            };
+        case a.pC.HOME_HEADER:
+            let u = Math.min(t, a.vJ);
+            return {
+                width: u,
+                height: u * (1 / a.sX),
             };
     }
 }

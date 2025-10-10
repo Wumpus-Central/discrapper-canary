@@ -34,7 +34,7 @@ let l = [
     ],
     c = [
         {
-            Icon: r.$Eu,
+            Icon: r.Ucv,
             getText: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "en-US";
                 return s.intl.formatToPlainString(s.t.T9RTr6, {
@@ -109,7 +109,7 @@ let l = [
             getText: () => s.intl.string(s.t.W180bW),
         },
         {
-            Icon: r.$Eu,
+            Icon: r.Ucv,
             getText: () => s.intl.string(s.t.cdfuUV),
         },
         {

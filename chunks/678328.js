@@ -8,8 +8,8 @@ var l = n(951288),
     r = n.n(i),
     s = n(481060),
     o = n(494620),
-    u = n(748745),
-    c = n(567225),
+    c = n(748745),
+    u = n(567225),
     d = n(535895),
     m = n(183369),
     v = n(422663),
@@ -68,7 +68,7 @@ function x() {
                                   className: p.gameInstanceContainer,
                                   children: n.map((t, n) =>
                                       (0, l.jsx)(
-                                          u.Z,
+                                          c.Z,
                                           {
                                               guildId: e,
                                               gameInstance: t,
@@ -93,7 +93,7 @@ function x() {
                               className: p.gameContainer,
                               children: Object.values(t).map((e, t) =>
                                   (0, l.jsx)(
-                                      c.Z,
+                                      u.Z,
                                       {
                                           game: e,
                                           disabled: h,

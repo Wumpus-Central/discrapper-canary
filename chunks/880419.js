@@ -122,7 +122,7 @@ function y(e) {
                                 let { text: e, icon: t } = (function (e) {
                                     let { cost: t, isActive: n, compact: i, iconSize: l } = e,
                                         o = null != l ? l : "sm",
-                                        a = n ? s.mTd : s.$Eu;
+                                        a = n ? s.zkc : s.Ucv;
                                     return i
                                         ? {
                                               text: t.toString(),

@@ -53,9 +53,9 @@ function a(e) {
         })(e, ["tier"]);
     switch (t) {
         case l.Eu4.TIER_1:
-            return (0, r.jsx)(i.XGX, s({}, n));
+            return (0, r.jsx)(i.lJJ, s({}, n));
         case l.Eu4.TIER_2:
-            return (0, r.jsx)(i.$Eu, s({}, n));
+            return (0, r.jsx)(i.Ucv, s({}, n));
         case l.Eu4.TIER_3:
             return (0, r.jsx)(i.iOe, s({}, n));
         case l.Eu4.NONE:

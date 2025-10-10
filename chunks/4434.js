@@ -242,7 +242,7 @@ function ed(e) {
                     ? (0, r.jsxs)("div", {
                           className: et.existingSlotNotice,
                           children: [
-                              (0, r.jsx)(_.$Eu, {
+                              (0, r.jsx)(_.Ucv, {
                                   className: et.existingSlotIcon,
                                   color: d.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
                               }),

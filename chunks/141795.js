@@ -387,7 +387,7 @@ class k extends I.ZP {
             this.isCancelled())
         )
             return void this.handleComplete(this.id);
-        if (this.item.platform === I.ow.WEB) {
+        if (this.allowOptimization && this.item.platform === I.ow.WEB) {
             let e = await k.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
             null != e &&
                 (null != e.convertedFile &&
@@ -760,8 +760,8 @@ class k extends I.ZP {
             service_provider: m.Z.getServiceProvider(),
         });
     }
-    constructor(e, t, n, r) {
-        var i, a, o, s;
+    constructor(e, t, n, r, i) {
+        var a, o, s, l;
         super(e, n),
             N(this, "status", "NOT_STARTED"),
             N(this, "channelId", void 0),
@@ -773,6 +773,7 @@ class k extends I.ZP {
             N(this, "reactNativeFileIndex", void 0),
             N(this, "error", void 0),
             N(this, "reactNativeFilePrepped", !1),
+            N(this, "allowOptimization", !0),
             N(this, "startTime", void 0),
             N(this, "uploadAnalytics", new j()),
             N(this, "contentHash", void 0),
@@ -791,9 +792,10 @@ class k extends I.ZP {
                 this.emit("progress", n, r, i), (this.loaded = n);
             }),
             (this.channelId = t),
-            (this.preCompressionSize = null != (o = null == (i = e.file) ? void 0 : i.size) ? o : 0),
-            (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
+            (this.preCompressionSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
+            (this.currentSize = null != (l = null == (o = e.file) ? void 0 : o.size) ? l : 0),
             (this.reactNativeFileIndex = r),
+            null != i && (this.allowOptimization = i),
             (this._abortController = new AbortController()),
             null != this.origin &&
                 (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : I.BS[this.origin]),

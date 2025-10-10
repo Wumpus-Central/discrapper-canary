@@ -172,7 +172,7 @@ function q(e) {
                                 (0, y.Z)(n, x.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
                             },
                             variant: "expressive",
-                            icon: m.$Eu,
+                            icon: m.Ucv,
                             text: U.intl.string(U.t["+7XY39"]),
                         }),
                     ],

@@ -188,7 +188,7 @@ let j = function (e) {
                                   }),
                                   (0, r.jsx)(l.zxk, {
                                       variant: "expressive",
-                                      icon: l.$Eu,
+                                      icon: l.Ucv,
                                       text: x.intl.string(x.t["+7XY39"]),
                                       onClick: v,
                                   }),

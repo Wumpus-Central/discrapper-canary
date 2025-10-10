@@ -10,14 +10,14 @@ var n = r(951288),
     u = r(795338),
     p = r(880419),
     f = r(279604),
-    m = r(787188),
-    v = r(388032),
+    v = r(787188),
+    m = r(388032),
     j = r(397321);
 function x(e) {
     let { canUseBoosts: t, guildId: r, powerup: a } = e,
         [x, b] = o.useState(!1),
         g = (0, c.ZP)(r, a),
-        O = (0, m._)(a, g, !1),
+        O = (0, v._)(a, g, !1),
         y = (0, c.UP)(g),
         { disabled: C } = (0, l.Z)(r, a, y),
         { onActivate: h } = (0, f.ZP)(r, a),
@@ -57,14 +57,14 @@ function x(e) {
                                             (0, n.jsxs)("div", {
                                                 className: j.statusContainer,
                                                 children: [
-                                                    (0, n.jsx)(s.$Eu, {
+                                                    (0, n.jsx)(s.Ucv, {
                                                         size: "sm",
                                                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                     }),
                                                     (0, n.jsx)(s.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "text-secondary",
-                                                        children: v.intl.formatToPlainString(v.t.t2Wbo6, {
+                                                        children: m.intl.formatToPlainString(m.t.t2Wbo6, {
                                                             required: a.cost,
                                                             decorator: "",
                                                         }),

@@ -5,8 +5,8 @@ var l = n(951288),
     r = n(481060),
     s = n(838968),
     o = n(880419),
-    u = n(693587),
-    c = n(943970),
+    c = n(693587),
+    u = n(943970),
     d = n(967647),
     m = n(989308),
     v = n(388032),
@@ -51,7 +51,7 @@ function g(e) {
                         {
                             icon: {
                                 type: "icon",
-                                asset: r.mTd,
+                                asset: r.zkc,
                             },
                             text: a.toString(),
                             variant: "secondary",
@@ -82,7 +82,7 @@ function g(e) {
 function b(e) {
     var t, n, o, d;
     let { guildId: b, gameInstance: p, onClick: j } = e,
-        x = (0, i.e7)([u.Z], () => u.Z.getStateForGuild(b)),
+        x = (0, i.e7)([c.Z], () => c.Z.getStateForGuild(b)),
         y = a.useMemo(() => {
             var e;
             return null == x || null == (e = x.entitlements) ? void 0 : e[p.entitlementId];
@@ -96,7 +96,7 @@ function b(e) {
             null == (t = n.game_server)
                 ? void 0
                 : t.boost_price,
-        P = (0, c.Z)(p.gameId, "icon");
+        P = (0, u.Z)(p.gameId, "icon");
     return null == h
         ? null
         : (0, l.jsxs)(r.P3F, {

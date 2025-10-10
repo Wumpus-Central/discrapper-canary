@@ -448,7 +448,7 @@ function eN(e) {
                                       (0, r.jsxs)("div", {
                                           className: Q.boostCardSubtitle,
                                           children: [
-                                              (0, r.jsx)(p.$Eu, {
+                                              (0, r.jsx)(p.Ucv, {
                                                   color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                   className: Q.boostCardGem,
                                               }),

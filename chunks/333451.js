@@ -30,13 +30,13 @@ function M(e) {
         className: x.perksList,
         children: [
             (0, i.jsx)(h.Z, {
-                icon: u.$Eu,
+                icon: u.Ucv,
                 iconClassName: x.perkIconGuild,
                 description: b.intl.formatToPlainString(b.t.sQBgs7, { numFreeGuildSubscriptions: O.cb }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, i.jsx)(h.Z, {
-                icon: u.$Eu,
+                icon: u.Ucv,
                 iconClassName: x.perkIconGuild,
                 description: b.intl.formatToPlainString(b.t["1A6vXl"], { percent: (0, y.T3)(t, O.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,

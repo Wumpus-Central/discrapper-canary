@@ -8,8 +8,8 @@ var n = r(951288),
 function c(e) {
     var t,
         r,
-        { guildId: c, title: d, description: u, powerups: p, footerInfoText: f, footerAction: m } = e,
-        v = (function (e, t) {
+        { guildId: c, title: d, description: u, powerups: p, footerInfoText: f, footerAction: v } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -72,9 +72,9 @@ function c(e) {
                 title: d,
                 subtitle: u,
                 actionBarInput: x,
-                actions: null != m ? [m] : [],
+                actions: null != v ? [v] : [],
             },
-            v,
+            m,
         )),
         (r = r =
             {

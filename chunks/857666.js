@@ -40,9 +40,9 @@ function _(e, t) {
                               h = (null == c ? void 0 : c[o.IN]) != null,
                               j = g.intl.string(m.default["/egwJC"]),
                               C = h ? void 0 : g.intl.string(m.default.W6Vwn5),
-                              E = h ? void 0 : g.intl.string(m.default.lvk1GR),
-                              I = h ? g.intl.string(m.default["9CfkLC"]) : g.intl.string(g.t["+7XY39"]),
-                              w = h ? "secondary" : "expressive",
+                              I = h ? void 0 : g.intl.string(m.default.lvk1GR),
+                              w = h ? g.intl.string(m.default["9CfkLC"]) : g.intl.string(g.t["+7XY39"]),
+                              E = h ? "secondary" : "expressive",
                               Z = i
                                   ? () => {
                                         h
@@ -93,13 +93,13 @@ function _(e, t) {
                                                           title: d,
                                                           description: g.intl.string(m.default.BBRFRU),
                                                           powerups: e,
-                                                          footerInfoText: E,
+                                                          footerInfoText: I,
                                                           footerAction:
-                                                              i && null != Z && null != I
+                                                              i && null != Z && null != w
                                                                   ? {
-                                                                        variant: w,
-                                                                        text: I,
-                                                                        icon: "expressive" === w ? a.$Eu : void 0,
+                                                                        variant: E,
+                                                                        text: w,
+                                                                        icon: "expressive" === E ? a.Ucv : void 0,
                                                                         onClick: Z,
                                                                     }
                                                                   : void 0,

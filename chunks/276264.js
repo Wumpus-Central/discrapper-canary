@@ -134,7 +134,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
                       tabIndex: -1,
-                      children: (0, r.jsx)(c.$Eu, {
+                      children: (0, r.jsx)(c.Ucv, {
                           color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                           className: M.premiumIcon,
                       }),

@@ -17,17 +17,17 @@ var i = n(951288),
     x = n(225433),
     j = n(129861),
     v = n(493544),
-    y = n(700582),
-    O = n(410030),
+    O = n(700582),
+    y = n(410030),
     _ = n(835473),
     C = n(933557),
     N = n(346486),
-    w = n(600164),
-    S = n(925329),
+    S = n(600164),
+    w = n(925329),
     P = n(666657),
     I = n(664452),
-    Z = n(560114),
-    E = n(685929),
+    E = n(560114),
+    Z = n(685929),
     T = n(592125),
     k = n(699516),
     A = n(594174),
@@ -94,17 +94,17 @@ function F(e) {
         expiresAt: d,
         onRevokeInvite: u,
     } = e;
-    return (0, i.jsxs)(w.Z, {
+    return (0, i.jsxs)(S.Z, {
         className: a()(B.inviteSettingsInviteRow, W.card, { [B.inviteDisabledRow]: t }),
         children: [
-            (0, i.jsxs)(w.Z, {
+            (0, i.jsxs)(S.Z, {
                 grow: 3,
                 basis: 0,
-                align: w.Z.Align.CENTER,
+                align: S.Z.Align.CENTER,
                 className: B.text,
                 children: [
                     null != n &&
-                        (0, i.jsx)(y.Z, {
+                        (0, i.jsx)(O.Z, {
                             user: n,
                             size: g.EFr.SIZE_24,
                             className: B.avatar,
@@ -127,21 +127,21 @@ function F(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(w.Z, {
+            (0, i.jsx)(S.Z, {
                 grow: 3,
                 shrink: 1,
                 basis: 0,
-                align: w.Z.Align.CENTER,
+                align: S.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsxs)("div", {
                     className: B.inviteSourceContainer,
                     children: [o, s],
                 }),
             }),
-            (0, i.jsx)(w.Z, {
+            (0, i.jsx)(S.Z, {
                 grow: 1,
                 basis: 0,
-                align: w.Z.Align.CENTER,
+                align: S.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsx)(g.Text, {
                     className: B.uses,
@@ -149,10 +149,10 @@ function F(e) {
                     children: c,
                 }),
             }),
-            (0, i.jsx)(w.Z, {
+            (0, i.jsx)(S.Z, {
                 grow: 2,
                 basis: 0,
-                align: w.Z.Align.CENTER,
+                align: S.Z.Align.CENTER,
                 className: a()(B.text, B.countdownColumn),
                 children: (0, i.jsx)(g.Text, {
                     className: B.countdown,
@@ -220,7 +220,7 @@ function q(e) {
             var e;
             return A.default.getUser(null == (e = r.linkedLobby) ? void 0 : e.linked_by);
         }),
-        c = (0, E.Y)(r);
+        c = (0, Z.Y)(r);
     return (0, i.jsx)(F, {
         isDisabled: a,
         inviter: s,
@@ -229,9 +229,9 @@ function q(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: B.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(S.Z, {
+                (0, i.jsx)(w.Z, {
                     game: o,
-                    size: S.A.XXSMALL,
+                    size: w.A.XXSMALL,
                 }),
                 (0, i.jsx)(g.Text, {
                     className: B.linkedChannelJoinSourceText,
@@ -274,10 +274,10 @@ function V(e) {
         loading: f = !1,
     } = e;
     s()(null != l, "guild is required");
-    let h = (0, O.ZP)(),
+    let h = (0, y.ZP)(),
         x = (0, R.MQ)(l),
         j = (0, R.O4)(l),
-        y = r.useMemo(
+        O = r.useMemo(
             () =>
                 null == t || f
                     ? []
@@ -297,7 +297,7 @@ function V(e) {
                 f
                     ? []
                     : [
-                          ...y.map((e) => ({
+                          ...O.map((e) => ({
                               type: "invite",
                               data: e,
                           })),
@@ -306,13 +306,13 @@ function V(e) {
                               data: e,
                           })),
                       ],
-            [y, _, f],
+            [O, _, f],
         ),
         N = () => {
             (0, g.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        Z.default,
+                        E.default,
                         z(G({}, e), {
                             channel: u,
                             guild: l,
@@ -321,7 +321,7 @@ function V(e) {
                     ),
             );
         },
-        [S, E] = r.useState(62),
+        [w, Z] = r.useState(62),
         k = () => {
             let e = { source: P.Zu.GUILD_SETTINGS };
             (0, g.ZDy)(
@@ -364,16 +364,16 @@ function V(e) {
                     );
                 else
                     return (0, i.jsxs)(
-                        w.Z,
+                        S.Z,
                         {
                             children: [
-                                (0, i.jsx)(w.Z.Child, {
+                                (0, i.jsx)(S.Z.Child, {
                                     grow: 3,
                                     basis: 0,
                                     className: H.marginReset,
                                     children: (0, i.jsx)(g.vwX, { children: U.intl.string(U.t.EgHyKy) }),
                                 }),
-                                (0, i.jsx)(w.Z.Child, {
+                                (0, i.jsx)(S.Z.Child, {
                                     basis: 0,
                                     grow: 3,
                                     className: H.marginReset,
@@ -381,12 +381,12 @@ function V(e) {
                                         children: _.length > 0 ? U.intl.string(U.t.l7VISU) : U.intl.string(U.t.LBlFEB),
                                     }),
                                 }),
-                                (0, i.jsx)(w.Z.Child, {
+                                (0, i.jsx)(S.Z.Child, {
                                     grow: 1,
                                     basis: 0,
                                     children: (0, i.jsx)(g.vwX, { children: U.intl.string(U.t.erWrmJ) }),
                                 }),
-                                (0, i.jsx)(w.Z.Child, {
+                                (0, i.jsx)(S.Z.Child, {
                                     grow: 2,
                                     basis: 0,
                                     children: (0, i.jsx)(g.vwX, { children: U.intl.string(U.t["1aM27e"]) }),
@@ -457,8 +457,8 @@ function V(e) {
                 return (0, i.jsx)(
                     L.Y,
                     {
-                        hasInvites: y.length > 0,
-                        setHeight: E,
+                        hasInvites: O.length > 0,
+                        setHeight: Z,
                         onShowDisableInvites: k,
                         onShowInviteModal: N,
                         hasInviteDisabledPermission: x,
@@ -513,7 +513,7 @@ function V(e) {
                 : 1 === e
                   ? 109
                   : 2 === e
-                    ? S
+                    ? w
                     : 3 === e
                       ? 0 === C.length && 0 === t && f
                           ? 62

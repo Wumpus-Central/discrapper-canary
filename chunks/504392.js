@@ -31,9 +31,9 @@ var r = n(951288),
     h = n(27237),
     j = n(426771),
     C = n(51859),
-    E = n(184478),
-    I = n(877362),
-    w = n(460608),
+    I = n(184478),
+    w = n(877362),
+    E = n(460608),
     Z = n(279604),
     P = n(385902),
     y = n(332538),
@@ -167,7 +167,7 @@ function L(e) {
                       toolbar: (0, r.jsx)("div", {}),
                       children: [
                           (0, r.jsx)(d.Z.Icon, {
-                              icon: c.$Eu,
+                              icon: c.Ucv,
                               "aria-label": "",
                           }),
                           (0, r.jsx)(d.Z.Title, { children: A.intl.string(S.default.yv3DJC) }),
@@ -269,8 +269,8 @@ function L(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  M ? (0, r.jsx)(E.Z, { guildId: t }) : (0, r.jsx)(I.Z, { guildId: t }),
-                                  (0, r.jsx)(w.Z, { guildId: t }),
+                                  M ? (0, r.jsx)(I.Z, { guildId: t }) : (0, r.jsx)(w.Z, { guildId: t }),
+                                  (0, r.jsx)(E.Z, { guildId: t }),
                               ],
                           }),
                       ],

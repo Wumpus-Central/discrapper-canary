@@ -32,10 +32,10 @@ function b(e) {
         b = (0, c.Z)(t),
         h = b.length > 0,
         { shouldShow: j, notificationConfig: C } = (0, f._)(t, "GuildPowerupNotificationContainer"),
-        E = [];
-    j && E.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [I, w] = (0, a.ZT)(E, t),
-        Z = null != I && null != C,
+        I = [];
+    j && I.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [w, E] = (0, a.ZT)(I, t),
+        Z = null != w && null != C,
         P = [];
     Z || h || P.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
     let [y, T] = (0, a.US)(P),
@@ -60,7 +60,7 @@ function b(e) {
                             {
                                 notificationConfig: C,
                                 markAsDismissed: (e) => {
-                                    w(e);
+                                    E(e);
                                 },
                             },
                             "rollback-notification",

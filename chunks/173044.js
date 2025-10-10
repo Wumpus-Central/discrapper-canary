@@ -13,31 +13,31 @@ var i = n(755721),
     m = n(156582),
     h = n(474936),
     p = n(637824),
-    x = n(388032),
-    g = n(312518);
+    g = n(388032),
+    x = n(312518);
 function _(e) {
     var t, n, _;
     let { onClose: v } = e,
         { analyticsLocations: j } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
         b = (0, d.N)(),
         S = (0, c.Ng)(),
-        y =
+        C =
             (null == b || null == (t = b.subscription_trial) ? void 0 : t.sku_id) === h.Si.TIER_2 ||
             (0, c.Wp)(S, h.Si.TIER_2),
-        C = x.intl.string(p.default["+f+cqq"]);
+        y = g.intl.string(p.default["+f+cqq"]);
     return (
-        y &&
+        C &&
             (null != b
-                ? (C = (0, f.Rt)({
+                ? (y = (0, f.Rt)({
                       intervalType: null == b || null == (n = b.subscription_trial) ? void 0 : n.interval,
                       intervalCount: null == b || null == (_ = b.subscription_trial) ? void 0 : _.interval_count,
                   }))
-                : null != S && (C = x.intl.formatToPlainString(x.t.bkQ4bG, { percent: S.discount.amount }))),
+                : null != S && (y = g.intl.formatToPlainString(g.t.bkQ4bG, { percent: S.discount.amount }))),
         (0, r.jsxs)("div", {
-            className: g.root,
+            className: x.root,
             children: [
                 (0, r.jsxs)(l.Text, {
-                    className: g.infoText,
+                    className: x.infoText,
                     variant: "text-xs/normal",
                     color: "always-white",
                     children: [
@@ -45,7 +45,7 @@ function _(e) {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        x.intl.format(x.t.sLJ3ER, {
+                        g.intl.format(g.t.sLJ3ER, {
                             onNitroClick: function () {
                                 (0, m.E)({
                                     analyticsLocation: j[0],
@@ -56,19 +56,19 @@ function _(e) {
                     ],
                 }),
                 (0, r.jsx)(u.Z, {
-                    className: g.ctaButton,
-                    iconClassName: g.premiumIcon,
+                    className: x.ctaButton,
+                    iconClassName: x.premiumIcon,
                     size: i.zx.Sizes.TINY,
                     color: i.zx.Colors.BRAND_INVERTED,
                     subscriptionTier: h.Si.TIER_2,
-                    buttonShineClassName: g.premiumShine,
+                    buttonShineClassName: x.premiumShine,
                     iconColor: a.JX.PREMIUM_TIER_2,
                     onClick: () => {
                         v();
                     },
                     textOptions: {
-                        subscribeText: C,
-                        textClassName: g.ctaButtonText,
+                        subscribeText: y,
+                        textClassName: x.ctaButtonText,
                     },
                 }),
             ],

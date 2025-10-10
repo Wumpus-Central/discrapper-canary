@@ -15,7 +15,7 @@ let c = (0, u.x1)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANE, {
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_SIDEBAR_ITEM, {
-        icon: l.$Eu,
+        icon: l.Ucv,
         useTitle: () => o.intl.string(o.t.Nn1lJy),
         legacySearchKey: a.s6.GUILD_BOOSTING,
         buildLayout: () => [E],

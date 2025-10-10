@@ -79,7 +79,7 @@ function x(e) {
                 (0, r.jsxs)("div", {
                     className: l()(f.inline, f.inlineBoost),
                     children: [
-                        (0, r.jsx)(a.$Eu, {
+                        (0, r.jsx)(a.Ucv, {
                             size: "sm",
                             color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         }),

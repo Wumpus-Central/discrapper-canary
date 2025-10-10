@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(953529);
+n.d(t, { Z: () => I }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -19,7 +19,7 @@ var r = n(951288),
     h = n(922434),
     j = n(530045),
     C = n(611087);
-function E(e) {
+function I(e) {
     let { guildId: t } = e,
         n = (0, s.e7)([m.Z], () => m.Z.getStateForGuild(t)),
         o = i.useMemo(() => {
@@ -37,8 +37,8 @@ function E(e) {
                       statusText: _.intl.string(v.default.FFLkm5),
                   };
         }, [null == n ? void 0 : n.entitlements]),
-        E = (0, f.d)((null == o ? void 0 : o.type) === "active"),
-        I = i.useMemo(() => {
+        I = (0, f.d)((null == o ? void 0 : o.type) === "active"),
+        w = i.useMemo(() => {
             if ((null == n ? void 0 : n.catalog) == null) return 0;
             let e = Object.values(n.catalog);
             return 0 === e.length ? 0 : Math.min(...e.map((e) => e.baseCost));
@@ -69,15 +69,15 @@ function E(e) {
                   }),
                   (0, r.jsx)(p.Q9, {
                       title: _.intl.string(x.default["fjt/vr"]),
-                      textColor: E,
+                      textColor: I,
                       footer: (0, r.jsx)(p.uf, {
-                          cost: I,
+                          cost: w,
                           costDecorator: "+",
                           status: o,
                       }),
                       children: (0, r.jsx)(a.xvT, {
                           className: b.description,
-                          color: E,
+                          color: I,
                           variant: "text-sm/medium",
                           children: _.intl.string(x.default.P7VSCg),
                       }),

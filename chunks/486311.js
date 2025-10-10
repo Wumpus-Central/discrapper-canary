@@ -105,7 +105,7 @@ let j = {
                             className: O.container,
                             id: "skill-trees-".concat(t),
                             renderIcon: (e) =>
-                                (0, r.jsx)(s.$Eu, {
+                                (0, r.jsx)(s.Ucv, {
                                     size: "md",
                                     className: e,
                                     color: "currentColor",

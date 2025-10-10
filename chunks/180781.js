@@ -22,7 +22,7 @@ function p(e) {
         : (0, i.jsxs)("div", {
               className: g.container,
               children: [
-                  (0, i.jsx)(o.$Eu, {
+                  (0, i.jsx)(o.Ucv, {
                       color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                       className: g.guildBoostingIcon,
                   }),

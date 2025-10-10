@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(767714),
     h = n(74538),
     p = n(981631),
-    x = n(474936),
-    g = n(388032),
+    g = n(474936),
+    x = n(388032),
     _ = n(476215);
 function v(e) {
     var { location: t } = e,
@@ -45,9 +45,9 @@ function v(e) {
         o = i.useCallback(() => {
             if (null != l) {
                 var e;
-                return null != (e = (0, h.fr)(l, x.Si.TIER_2)) ? e : g.intl.string(g.t.Y2WKTk);
+                return null != (e = (0, h.fr)(l, g.Si.TIER_2)) ? e : x.intl.string(x.t.Y2WKTk);
             }
-            return g.intl.string(g.t.Y2WKTk);
+            return x.intl.string(x.t.Y2WKTk);
         }, [l]);
     return (0, r.jsx)(
         m.Z,
@@ -79,7 +79,7 @@ function v(e) {
             {
                 className: s()(_.enhancedCTA, _.ctaGradientBackground),
                 iconClassName: _.premiumIcon,
-                subscriptionTier: x.Si.TIER_2,
+                subscriptionTier: g.Si.TIER_2,
                 textOptions: { textOverride: o() },
                 size: a.zx.Sizes.TINY,
                 premiumModalAnalyticsLocation: t,
@@ -103,7 +103,7 @@ function j() {
             (0, r.jsx)(c.Text, {
                 variant: "text-xs/medium",
                 className: _.reverseTrialEducationText,
-                children: g.intl.format(g.t.GimLpa, {}),
+                children: x.intl.format(x.t.GimLpa, {}),
             }),
         ],
     });
@@ -131,7 +131,7 @@ function b(e) {
                         children:
                             null != t
                                 ? t
-                                : g.intl.format(g.t["L/zCtr"], {
+                                : x.intl.format(x.t["L/zCtr"], {
                                       onClick: () =>
                                           i({
                                               analyticsLocation: o,

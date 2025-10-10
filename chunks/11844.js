@@ -97,7 +97,7 @@ let b = function () {
     return (0, r.jsxs)("div", {
         className: p.wrapper,
         children: [
-            (0, r.jsx)(o.$Eu, {
+            (0, r.jsx)(o.Ucv, {
                 color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                 className: p.boostIcon,
             }),

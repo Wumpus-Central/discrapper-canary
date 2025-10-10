@@ -434,7 +434,7 @@ function en(e) {
         className: I.iconWrapper,
         innerRef: R,
         onClick: l,
-        children: (0, r.jsx)(d.$Eu, {
+        children: (0, r.jsx)(d.Ucv, {
             color: d.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
             className: I.icon,
             onMouseEnter: x,

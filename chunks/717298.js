@@ -12,21 +12,21 @@ var r = n(951288),
     m = n(481060),
     h = n(668781),
     p = n(579806),
-    x = n(89425),
-    g = n(100527),
+    g = n(89425),
+    x = n(100527),
     _ = n(906732),
     v = n(594190),
     j = n(695346),
     b = n(131951),
     S = n(19780),
-    y = n(594174),
-    C = n(449224),
+    C = n(594174),
+    y = n(449224),
     O = n(358085),
     w = n(74538),
     Z = n(299570),
     I = n(960861),
-    N = n(989941),
-    P = n(562224),
+    P = n(989941),
+    N = n(562224),
     T = n(544753),
     E = n(853030),
     R = n(560749),
@@ -54,8 +54,8 @@ function Y(e) {
                 ((0, O.isLinux)() ||
                     ((0, O.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, z.jR))),
         ),
-        { analyticsLocations: q } = (0, _.ZP)(Y, g.Z.GO_LIVE_MODAL_V2),
-        Q = (0, f.e7)([y.default], () => y.default.getCurrentUser()),
+        { analyticsLocations: q } = (0, _.ZP)(Y, x.Z.GO_LIVE_MODAL_V2),
+        Q = (0, f.e7)([C.default], () => C.default.getCurrentUser()),
         $ = (0, T.Z)(),
         { state: ee, dispatch: et } = (0, k.Ti)(
             o,
@@ -96,7 +96,7 @@ function Y(e) {
         ec = i.useCallback(
             async (e) => {
                 j.eo.updateSetting(ee.notifyFriends), j.I0.updateSetting(ee.hidePreview);
-                let [t, r] = await (0, P.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
+                let [t, r] = await (0, N.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: ee.preset,
                     fps: ee.fps,
                     resolution: ee.resolution,
@@ -117,7 +117,7 @@ function Y(e) {
             [n, ee, q],
         );
     async function ed(e) {
-        (await (0, x.Z)({ channelId: e })) && null != o && ec(o);
+        (await (0, g.Z)({ channelId: e })) && null != o && ec(o);
     }
     let eu = i.useCallback(() => {
         var e;
@@ -135,7 +135,7 @@ function Y(e) {
                 impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
                     location_stack: q,
-                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, C.Z)) ? void 0 : t.id) : void 0,
+                    application_id: (0, O.isWindows)() ? (null == (t = (0, P.Z)(v.ZP, y.Z)) ? void 0 : t.id) : void 0,
                     parent_media_session_id: S.Z.getMediaSessionId(),
                 },
             },

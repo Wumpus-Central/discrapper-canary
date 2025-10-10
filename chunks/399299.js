@@ -12,21 +12,21 @@ var r = n(951288),
     m = n(594190),
     h = n(925329),
     p = n(565138),
-    x = n(695346),
-    g = n(313789),
+    g = n(695346),
+    x = n(313789),
     _ = n(494620),
     v = n(518596),
     j = n(592125),
     b = n(650774),
     S = n(430824),
-    y = n(131951),
-    C = n(944486),
+    C = n(131951),
+    y = n(944486),
     O = n(594174),
     w = n(449224),
     Z = n(626135),
     I = n(823379),
-    N = n(63063),
-    P = n(358085),
+    P = n(63063),
+    N = n(358085),
     T = n(653255),
     E = n(989941),
     R = n(618407),
@@ -44,17 +44,17 @@ var r = n(951288),
     H = n(542257);
 function V(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
-        s = (0, o.e7)([m.ZP, w.Z], () => ((0, P.isWindows)() ? (0, E.Z)(m.ZP, w.Z) : null)),
+        s = (0, o.e7)([m.ZP, w.Z], () => ((0, N.isWindows)() ? (0, E.Z)(m.ZP, w.Z) : null)),
         u = (0, o.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         f = (0, o.e7)([m.ZP], () => m.ZP.getRunningGames()),
         p = (0, o.Wu)([d.Z], () => f.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(I.lm), [f]),
-        x = null;
-    if ((null != t ? (x = t.name) : null != s && (x = s.name), null == x)) return null;
-    let g = (0, B.Z)(s, t, f),
+        g = null;
+    if ((null != t ? (g = t.name) : null != s && (g = s.name), null == g)) return null;
+    let x = (0, B.Z)(s, t, f),
         _ = i
             ? p.find((e) => {
                   let { id: t } = e;
-                  return t === (null == g ? void 0 : g.id);
+                  return t === (null == x ? void 0 : x.id);
               })
             : u,
         v = null != t && t.id.startsWith("screen") ? c.pzj : c.GON;
@@ -73,7 +73,7 @@ function V(e) {
                     : (0, r.jsx)(v, { className: F.selectedIcon }),
                 (0, r.jsx)("span", {
                     className: F.ellipsisText,
-                    children: x,
+                    children: g,
                 }),
                 n
                     ? (0, r.jsx)(a.zx, {
@@ -146,9 +146,9 @@ function X(e) {
             var e;
             return null != (e = b.Z.getMemberCount(t)) ? e : 0;
         }),
-        l = x.eo.useSetting(),
+        l = g.eo.useSetting(),
         a = i.useCallback((e) => {
-            x.eo.updateSetting(e), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
+            g.eo.updateSetting(e), Z.default.track(U.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
         }, []);
     return n >= 2 && n <= G.tB
         ? (0, r.jsx)("div", {
@@ -169,7 +169,7 @@ function K(e) {
             },
             [n],
         ),
-        d = (0, o.e7)([y.Z], () => y.Z.getUseSystemScreensharePicker() && (0, P.isLinux)());
+        d = (0, o.e7)([C.Z], () => C.Z.getUseSystemScreensharePicker() && (0, N.isLinux)());
     return (0, r.jsx)("div", {
         className: s()(H.modalContent, F.checkboxRow),
         children: (0, r.jsx)(c.XZJ, {
@@ -209,34 +209,34 @@ function Q(e) {
             selectSource: m,
             selectGuild: h,
             sound: p,
-            previewDisabled: x,
+            previewDisabled: g,
             onClose: b,
             onChangeSelectedFPS: S,
             onChangeSelectedResolution: w,
             onChangeSelectedPreset: Z,
             onChangeSelectedChannelId: I,
-            onChangeSource: P,
+            onChangeSource: N,
             onChangeAudioDevice: E,
             onChangeGuild: D,
             onChangeSound: B,
             onChangePreviewDisabled: G,
         } = e,
-        H = (0, o.e7)([C.Z, j.Z], () => j.Z.getChannel(C.Z.getVoiceChannelId())),
+        H = (0, o.e7)([y.Z, j.Z], () => j.Z.getChannel(y.Z.getVoiceChannelId())),
         Q = (0, o.e7)([T.Z], () => T.Z.GPUDriversOutdated),
         $ = (0, o.e7)([T.Z], () => T.Z.problematicGPUDriver),
         ee = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
         et = (0, R.Z)();
-    null != t && t.id.startsWith("screen") && !y.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
+    null != t && t.id.startsWith("screen") && !C.Z.supportsScreenSoundshare() && (et = z.intl.string(z.t["1b0Gm5"]));
     let en = !!(null == t ? void 0 : t.id.startsWith("camera")),
         er = null != ee && ee.verified && !ee.bot,
         ei = null != H && !(0, u.Yk)(H),
-        el = !(0, o.e7)([y.Z], () => y.Z.getHardwareEncoding());
+        el = !(0, o.e7)([C.Z], () => C.Z.getHardwareEncoding());
     return (0, r.jsxs)(i.Fragment, {
         children: [
             en
                 ? (0, r.jsx)(A.Z, {
                       selectedSource: t,
-                      onChangeVideoDeviceSource: P,
+                      onChangeVideoDeviceSource: N,
                       onChangeAudioDevice: E,
                   })
                 : (0, r.jsxs)("div", {
@@ -244,7 +244,7 @@ function Q(e) {
                           (0, r.jsx)(V, {
                               selectSource: m,
                               sourceChanged: c,
-                              onChangeSource: P,
+                              onChangeSource: N,
                               selectedSource: t,
                           }),
                           null != et ? (0, r.jsx)(J, { text: et }) : null,
@@ -275,7 +275,7 @@ function Q(e) {
             $
                 ? (0, r.jsx)(J, {
                       text: z.intl.format(z.t.RrLvub, {
-                          helpCenterLink: N.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES),
+                          helpCenterLink: P.Z.getArticleURL(U.BhN.NVIDIA_DRIVER_ISSUES),
                       }),
                   })
                 : null,
@@ -286,7 +286,7 @@ function Q(e) {
                     children: z.intl.format(z.t.zCLXws, {
                         onClick: () => {
                             b(),
-                                (0, v.openUserSettings)(g.n.VOICE_AND_VIDEO_PANEL, {
+                                (0, v.openUserSettings)(x.n.VOICE_AND_VIDEO_PANEL, {
                                     section: U.oAB.VOICE,
                                     subsection: W.gP,
                                     scrollPosition: W.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION,
@@ -306,7 +306,7 @@ function Q(e) {
                 captureDeviceSelected: en,
             }),
             (0, r.jsx)(q, {
-                enabled: x,
+                enabled: g,
                 onChange: G,
             }),
         ],

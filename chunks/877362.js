@@ -19,9 +19,9 @@ var r = n(951288),
     h = n(594174),
     j = n(5192),
     C = n(998502),
-    E = n(981631),
-    I = n(989308),
-    w = n(388032),
+    I = n(981631),
+    w = n(989308),
+    E = n(388032),
     Z = n(127181),
     P = n(350618);
 let y = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
@@ -65,17 +65,17 @@ function T(e) {
                       children: [
                           (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
-                              children: w.intl.string(S ? I.default.KSWK1d : I.default.XXXX5u),
+                              children: E.intl.string(S ? w.default.KSWK1d : w.default.XXXX5u),
                           }),
                           (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
-                              children: w.intl.format(S ? I.default["7fWTg4"] : I.default["7PXeeX"], {
+                              children: E.intl.format(S ? w.default["7fWTg4"] : w.default["7PXeeX"], {
                                   onClick: () => {
                                       (0, p.f)({
                                           guildId: i,
                                           location: {
-                                              section: E.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: E.qAy.LEARN_MORE,
+                                              section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: I.qAy.LEARN_MORE,
                                           },
                                       });
                                   },
@@ -143,8 +143,8 @@ function T(e) {
                               colorStrings: C.colorStrings,
                           }),
                           className: o()(Z.content, Z.exampleMessage),
-                          message: w.intl.string(w.t["6OSasb"]),
-                          decorations: (0, r.jsx)(c.$Eu, {
+                          message: E.intl.string(E.t["6OSasb"]),
+                          decorations: (0, r.jsx)(c.Ucv, {
                               color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                               className: Z.boostIcon,
                           }),
@@ -153,14 +153,14 @@ function T(e) {
                       guild: u,
                       className: Z.content,
                       analyticsLocation: {
-                          page: E.ZY5.GUILD_POWERUPS_OVERVIEW,
-                          section: E.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                          page: I.ZY5.GUILD_POWERUPS_OVERVIEW,
+                          section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
                       color: s.Tt.BRAND,
                       size: s.Ph.MEDIUM,
                       intent: m.P.NONE,
                       fullWidth: !0,
-                      icon: (0, r.jsx)(c.$Eu, {
+                      icon: (0, r.jsx)(c.Ucv, {
                           color: "currentColor",
                           size: "sm",
                       }),
