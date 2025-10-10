@@ -94,16 +94,17 @@ class p extends o.Z {
                 hero_banner_display_config: b,
                 hero_banner_url: y,
                 hero_banner_animated_url: O,
-                hero_logo_url: v,
-                catalog_banner_url: I,
-                catalog_banner_animated_url: T,
-                featured_block_url: S,
-                logo_url: A,
-                pdp_bg_url: C,
-                mobile_banner_url: N,
-                mobile_bg_url: R,
+                hero_rive_url: v,
+                hero_logo_url: I,
+                catalog_banner_url: T,
+                catalog_banner_animated_url: S,
+                featured_block_url: A,
+                logo_url: C,
+                pdp_bg_url: N,
+                mobile_banner_url: R,
+                mobile_bg_url: P,
             } = e,
-            P = d(e, [
+            w = d(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -118,6 +119,7 @@ class p extends o.Z {
                 "hero_banner_display_config",
                 "hero_banner_url",
                 "hero_banner_animated_url",
+                "hero_rive_url",
                 "hero_logo_url",
                 "catalog_banner_url",
                 "catalog_banner_animated_url",
@@ -128,7 +130,7 @@ class p extends o.Z {
                 "mobile_bg_url",
             ]);
         return new p(
-            u(l({}, super.fromServer(P)), {
+            u(l({}, super.fromServer(w)), {
                 products: t.reduce((e, t) => {
                     let n = a.Z.fromServer(t);
                     return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
@@ -146,14 +148,15 @@ class p extends o.Z {
                 heroBannerDisplayConfig: (0, i.QG)(b),
                 heroBannerUrl: y,
                 heroBannerAnimatedUrl: O,
-                heroLogoUrl: v,
-                catalogBannerUrl: I,
-                catalogBannerAnimatedUrl: T,
-                featuredBlockUrl: S,
-                logoUrl: A,
-                pdpBgUrl: C,
-                mobileBannerUrl: N,
-                mobileBgUrl: R,
+                heroRiveUrl: v,
+                heroLogoUrl: I,
+                catalogBannerUrl: T,
+                catalogBannerAnimatedUrl: S,
+                featuredBlockUrl: A,
+                logoUrl: C,
+                pdpBgUrl: N,
+                mobileBannerUrl: R,
+                mobileBgUrl: P,
             }),
         );
     }
@@ -173,6 +176,7 @@ class p extends o.Z {
             s(this, "heroBannerDisplayConfig", void 0),
             s(this, "heroBannerUrl", void 0),
             s(this, "heroBannerAnimatedUrl", void 0),
+            s(this, "heroRiveUrl", void 0),
             s(this, "heroLogoUrl", void 0),
             s(this, "catalogBannerUrl", void 0),
             s(this, "catalogBannerAnimatedUrl", void 0),
@@ -195,6 +199,7 @@ class p extends o.Z {
             (this.heroBannerDisplayConfig = e.heroBannerDisplayConfig),
             (this.heroBannerUrl = e.heroBannerUrl),
             (this.heroBannerAnimatedUrl = e.heroBannerAnimatedUrl),
+            (this.heroRiveUrl = e.heroRiveUrl),
             (this.heroLogoUrl = e.heroLogoUrl),
             (this.catalogBannerUrl = e.catalogBannerUrl),
             (this.catalogBannerAnimatedUrl = e.catalogBannerAnimatedUrl),

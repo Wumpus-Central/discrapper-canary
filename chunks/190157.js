@@ -1,7 +1,4 @@
-n.d(t, {
-    Dp: () => a,
-    gT: () => s,
-});
+n.d(t, { gT: () => a });
 var r = n(951288);
 n(647438);
 let l = (e) => {
@@ -18,10 +15,6 @@ let l = (e) => {
         );
     },
     a = (e) => {
-        var t;
-        return null != (t = null == e ? void 0 : e.endsWith(".riv")) && t;
-    },
-    s = (e) => {
         let { isCustomCursorEnabled: t, className: n, riveEventTargetRef: a } = e,
             s = (e) => {
                 let { button: n } = l(e),

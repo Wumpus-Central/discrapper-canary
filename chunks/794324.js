@@ -23,27 +23,25 @@ let u = (e) => {
             var r, a;
             let o = null != n || null != i,
                 s = null != n && null == i;
-            return l
-                ? {
-                      bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
-                      logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
-                      heroLogo: null != t ? t : e.heroLogoUrl,
-                      heroBannerStatic: null != n ? n : e.heroBannerUrl,
-                      heroBannerAnimated: s ? void 0 : null != i ? i : e.heroBannerAnimatedUrl,
-                  }
-                : {
-                      bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
-                      logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
-                      heroLogo: null != t ? t : e.logoUrl,
-                      heroBannerStatic: null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static,
-                      heroBannerAnimated: s
-                          ? void 0
-                          : null != i
-                            ? i
-                            : null == (a = e.bannerAsset)
-                              ? void 0
-                              : a.animated,
-                  };
+            if (l)
+                return {
+                    bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
+                    logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
+                    heroLogo: null != t ? t : e.heroLogoUrl,
+                    heroBannerStatic: null != n ? n : e.heroBannerUrl,
+                    heroBannerAnimated: s ? void 0 : null != i ? i : e.heroBannerAnimatedUrl,
+                    heroBannerRive: null != i ? i : e.heroRiveUrl,
+                };
+            let c = null == (r = e.bannerAsset) ? void 0 : r.animated,
+                u = (null == c ? void 0 : c.endsWith(".riv")) ? c : e.heroRiveUrl;
+            return {
+                bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
+                logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
+                heroLogo: null != t ? t : e.logoUrl,
+                heroBannerStatic: null != n ? n : null == (a = e.bannerAsset) ? void 0 : a.static,
+                heroBannerAnimated: s ? void 0 : null != i ? i : c,
+                heroBannerRive: s ? void 0 : null != i ? i : u,
+            };
         }, [t, n, i, e, l]);
     },
     d = (e, t) => {

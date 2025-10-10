@@ -10,25 +10,25 @@ var l = n(120356),
     u = n(451478),
     d = n(410572);
 let g = (e) => {
-    let { bannerStatic: t, bannerAnimated: n, isResponsive: l = !1, eventTargetRef: g } = e,
-        p = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-        f = (0, s.e7)([u.Z], () => u.Z.isFocused()),
-        C = null != n && !p && f;
-    return null != n && n.endsWith(".riv")
+    let { bannerStatic: t, bannerAnimated: n, bannerRive: l, isResponsive: g = !1, eventTargetRef: p } = e,
+        f = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+        C = (0, s.e7)([u.Z], () => u.Z.isFocused()),
+        h = null != n && !f && C;
+    return null != l
         ? (0, r.jsx)(i.B, {
-              src: n,
+              src: l,
               fit: "fit-width",
-              eventTargetRef: g,
+              eventTargetRef: p,
           })
-        : C
+        : h
           ? (0, r.jsx)(c.Z, {
-                className: a()({ [d.responsive]: l }, d.bannerAsset, d.bannerVideoBackground),
+                className: a()({ [d.responsive]: g }, d.bannerAsset, d.bannerVideoBackground),
                 src: n,
                 autoPlay: !0,
                 loop: !0,
             })
           : (0, r.jsx)("div", {
-                className: a()({ [d.responsive]: l }, d.bannerAsset, d.bannerImage),
+                className: a()({ [d.responsive]: g }, d.bannerAsset, d.bannerImage),
                 style: { backgroundImage: "url(".concat(t, ")") },
             });
 };
