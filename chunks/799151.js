@@ -1,36 +1,35 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => p });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(137317),
     l = n(442837),
-    c = n(710593),
-    u = n(481060),
-    d = n(607070),
-    f = n(79320),
-    _ = n(388032),
-    p = n(110109);
-function h(e) {
+    c = n(481060),
+    u = n(607070),
+    d = n(79320),
+    f = n(388032),
+    _ = n(110109);
+function p(e) {
     let { className: t } = e,
         n = [
             {
                 keybinds: ["Spacebar", "Enter"],
-                name: _.intl.string(_.t["cs/HVF"]),
+                name: f.intl.string(f.t["cs/HVF"]),
             },
             {
                 keybinds: ["up", "down"],
-                name: _.intl.string(_.t.dmMqa2),
+                name: f.intl.string(f.t.dmMqa2),
             },
             {
                 keybinds: ["ESC"],
-                name: _.intl.string(_.t["1ioMJS"]),
+                name: f.intl.string(f.t["1ioMJS"]),
             },
         ],
-        a = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        h = (0, f.zP)();
-    return (0, u.Yzy)(
-        h,
+        a = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        p = (0, d.zP)();
+    return (0, c.Yzy)(
+        p,
         {
             enter: {
                 from: {
@@ -52,9 +51,9 @@ function h(e) {
     )((e, a) =>
         a
             ? (0, r.jsx)("div", {
-                  className: o()(p.positioner, t),
+                  className: o()(_.positioner, t),
                   children: (0, r.jsx)(s.animated.div, {
-                      className: p.container,
+                      className: _.container,
                       style: e,
                       children: n.map((e, t) => {
                           let { keybinds: a, name: o } = e;
@@ -62,22 +61,22 @@ function h(e) {
                               i.Fragment,
                               {
                                   children: [
-                                      (0, r.jsx)(u.Text, {
+                                      (0, r.jsx)(c.Text, {
                                           variant: "text-md/semibold",
-                                          className: p.bindName,
+                                          className: _.bindName,
                                           children: o,
                                       }),
                                       a.map((e) =>
                                           (0, r.jsx)(
-                                              c.M,
+                                              c.M2$,
                                               {
                                                   shortcut: e,
-                                                  className: p.shortcut,
+                                                  className: _.shortcut,
                                               },
                                               e,
                                           ),
                                       ),
-                                      t < n.length - 1 ? (0, r.jsx)("span", { className: p.separator }) : null,
+                                      t < n.length - 1 ? (0, r.jsx)("span", { className: _.separator }) : null,
                                   ],
                               },
                               o,

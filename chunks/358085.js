@@ -1,99 +1,23 @@
 n.r(t),
     n.d(t, {
-        PlatformTypes: () => r,
-        getNativePlatform: () => v,
-        getOS: () => I,
-        getPlatform: () => y,
-        getPlatformName: () => O,
-        isAndroid: () => h,
-        isAndroidChrome: () => f,
-        isAndroidWeb: () => _,
-        isDesktop: () => u,
-        isIOS: () => m,
-        isLinux: () => c,
-        isMac: () => l,
-        isMacWeb: () => p,
-        isOculusWeb: () => g,
-        isPlatformEmbedded: () => a,
-        isWeb: () => d,
-        isWindows: () => s,
-        platformPrefersDeepLink: () => E,
-        platformSupportsActivityJoin: () => b,
-    }),
-    n(35282);
-var r = (function (e) {
-    return (e.WINDOWS = "WINDOWS"), (e.OSX = "OSX"), (e.LINUX = "LINUX"), (e.WEB = "WEB"), e;
-})({});
-let i = window.DiscordNative,
-    a = null != i,
-    o = null != i ? i.process.platform : "";
-function s() {
-    return /^win/.test(o);
-}
-function l() {
-    return "darwin" === o;
-}
-function c() {
-    return "linux" === o;
-}
-function u() {
-    return s() || l() || c();
-}
-function d() {
-    return "WEB" === y();
-}
-function f() {
-    return (
-        null != navigator.userAgent &&
-        null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
-    );
-}
-function _() {
-    var e;
-    return (null == (e = navigator.userAgent) ? void 0 : e.match(/android/i)) != null;
-}
-function p() {
-    var e;
-    return (null == (e = navigator.userAgent) ? void 0 : e.match(/Macintosh/i)) != null;
-}
-function h() {
-    return "android" === o;
-}
-function m() {
-    return "ios" === o;
-}
-function g() {
-    var e;
-    return (null == (e = navigator.userAgent) ? void 0 : e.match(/OculusBrowser/i)) != null;
-}
-function E() {
-    return g();
-}
-function b() {
-    return u() || g() || a;
-}
-function y() {
-    return s() ? "WINDOWS" : l() ? "OSX" : c() ? "LINUX" : "WEB";
-}
-function O() {
-    return o;
-}
-function v() {
-    switch (o) {
-        case "ios":
-        case "android":
-            return o;
-        default:
-            return "web";
-    }
-}
-function I() {
-    let { userAgent: e } = window.navigator;
-    if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
-    if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
-    if (/Android/.test(e)) return "android";
-    if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "blackberry";
-    if (/Mac/i.test(e))
-        return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
-    else if (/Linux/i.test(e)) return "linux";
-}
+        PlatformTypes: () => r.AB,
+        getNativePlatform: () => r.qq,
+        getOS: () => r.Ij,
+        getPlatform: () => r.Xf,
+        getPlatformName: () => r.y8,
+        isAndroid: () => r.Dt,
+        isAndroidChrome: () => r.jI,
+        isAndroidWeb: () => r.eL,
+        isDesktop: () => r.nI,
+        isIOS: () => r.gn,
+        isLinux: () => r.IJ,
+        isMac: () => r.V5,
+        isMacWeb: () => r.ox,
+        isOculusWeb: () => r.l5,
+        isPlatformEmbedded: () => r.FB,
+        isWeb: () => r.$L,
+        isWindows: () => r.ED,
+        platformPrefersDeepLink: () => r.qU,
+        platformSupportsActivityJoin: () => r.Qd,
+    });
+var r = n(818710);
