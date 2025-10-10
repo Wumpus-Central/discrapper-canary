@@ -482,6 +482,7 @@ var r = (function (e) {
             (e[(e.HANG_STATUS_POPOVER_NUX = 622)] = "HANG_STATUS_POPOVER_NUX"),
             (e[(e.REPORT_TO_MOD_EXIT_SURVEY_NOTICE = 623)] = "REPORT_TO_MOD_EXIT_SURVEY_NOTICE"),
             (e[(e.NAGBAR_NOTICE_PASSKEY_BACKUP = 624)] = "NAGBAR_NOTICE_PASSKEY_BACKUP"),
+            (e[(e.DISPLAY_NAME_STYLES_NITRO_HOME_TILE = 625)] = "DISPLAY_NAME_STYLES_NITRO_HOME_TILE"),
             e
         );
     })({}),
