@@ -1,19 +1,29 @@
-n.d(t, { C: () => c });
+n.d(t, { C: () => u });
 var a = n(951288);
 n(647438);
-var r = n(646466),
-    i = n(484486),
-    l = n(812381),
-    s = n(511010),
-    o = n(809863);
-let c = () =>
+var r = n(481060),
+    i = n(646466),
+    l = n(484486),
+    s = n(812381),
+    o = n(11075),
+    c = n(511010),
+    d = n(809863);
+let u = () =>
     (0, a.jsxs)("div", {
-        className: o.previewPanel,
+        className: d.previewPanel,
         children: [
-            (0, a.jsx)(l.a, {}),
-            (0, a.jsx)(s.Z, { className: o.divider }),
-            (0, a.jsx)(i.Z, {}),
-            (0, a.jsx)(s.Z, { className: o.divider }),
-            (0, a.jsx)(r.O, {}),
+            (0, a.jsx)(o.a, { className: d.previewSection }),
+            (0, a.jsxs)(r.hjN, {
+                title: "Shop Overrides",
+                tag: "h1",
+                className: d.previewSection,
+                children: [
+                    (0, a.jsx)(s.a, {}),
+                    (0, a.jsx)(c.Z, { className: d.divider }),
+                    (0, a.jsx)(l.Z, {}),
+                    (0, a.jsx)(c.Z, { className: d.divider }),
+                    (0, a.jsx)(i.O, {}),
+                ],
+            }),
         ],
     });
