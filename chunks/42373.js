@@ -90,14 +90,11 @@ function S(e) {
         case m.NA.SHOW_YOUR_STYLE:
             t = b.yourStyleBackground;
             break;
-        case m.NA.PERMADECOS:
-            t = b.permadecosBackground;
-            break;
-        case m.NA.VOICE_FILTERS:
-            t = b.voiceFiltersBackground;
-            break;
         case m.NA.CUSTOM_THEMES:
             t = b.customThemesBackground;
+            break;
+        case m.NA.DISPLAY_NAME_STYLES:
+            t = b.displayNameStylesBackground;
     }
     return t;
 }
