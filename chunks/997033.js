@@ -1,1 +1,1 @@
-e.exports = { priceTag: "priceTag__3b1b0" };
+e.exports = { insufficientOrbs: "insufficientOrbs__3b1b0" };

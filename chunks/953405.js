@@ -3,15 +3,14 @@ var r = n(951288),
     i = n(481060),
     a = n(558060),
     l = n(539598),
-    o = n(755007),
+    o = n(409116),
     s = n(231338),
     c = n(388032),
     u = n(551909);
 function d(e) {
-    var t;
-    let { orbPrice: n, isProductDisabled: a, hasSufficientOrbs: l } = e,
-        s = a ? c.intl.string(c.t.wu4gyc) : c.intl.string(c.t.eFNRzc),
-        d = a || !l;
+    let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: a } = e,
+        l = n ? c.intl.string(c.t.wu4gyc) : c.intl.string(c.t.eFNRzc),
+        s = n || !a;
     return (0, r.jsxs)("div", {
         className: u.priceLine,
         children: [
@@ -19,36 +18,35 @@ function d(e) {
                 className: u.orbText,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-xs/normal",
-                    className: d ? u.disabled : void 0,
-                    children: s,
+                    className: s ? u.disabled : void 0,
+                    children: l,
                 }),
             }),
-            (0, r.jsx)(o.Z, {
-                orbAmount: null != (t = null == n ? void 0 : n.amount) ? t : 1 / 0,
-                className: d ? u.disabled : void 0,
+            (0, r.jsx)(o.F, {
+                price: t,
+                className: s ? u.disabled : void 0,
             }),
         ],
     });
 }
 function m(e) {
-    var t;
     let {
-            prices: n,
-            isPremiumUser: i,
-            discount: c,
-            product: m,
-            hasSufficientOrbs: p,
-            isProductDisabled: v,
-            discountOfferAmount: f,
+            prices: t,
+            isPremiumUser: n,
+            discount: i,
+            product: c,
+            hasSufficientOrbs: m,
+            isProductDisabled: p,
+            discountOfferAmount: v,
         } = e,
-        h = null != f;
-    return 0 === n.length
+        f = null != v;
+    return 0 === t.length
         ? null
-        : n[0].currency === s.pK.DISCORD_ORB
+        : t[0].currency === s.pK.DISCORD_ORB
           ? (0, r.jsx)(d, {
-                orbPrice: n[0],
-                isProductDisabled: v,
-                hasSufficientOrbs: p,
+                orbPrice: t[0],
+                isProductDisabled: p,
+                hasSufficientOrbs: m,
             })
           : (0, r.jsxs)("div", {
                 className: u.priceLine,
@@ -57,22 +55,22 @@ function m(e) {
                         className: u.priceTagContainer,
                         children: [
                             (0, r.jsx)(a.Z, {
-                                product: m,
-                                discount: c,
-                                isPremiumUser: i,
-                                hideStrikethroughPrice: !i || h,
+                                product: c,
+                                discount: i,
+                                isPremiumUser: n,
+                                hideStrikethroughPrice: !n || f,
                                 nitroIconType: "tooltip",
                                 nitroIconSize: "xs",
-                                discountOfferAmount: f,
+                                discountOfferAmount: v,
                             }),
-                            i || h ? null : (0, r.jsx)(l.Z, { product: m }),
+                            n || f ? null : (0, r.jsx)(l.Z, { product: c }),
                         ],
                     }),
-                    n.length > 1 &&
-                        n[1].currency === s.pK.DISCORD_ORB &&
-                        (0, r.jsx)(o.Z, {
-                            orbAmount: null != (t = n[1].amount) ? t : 1 / 0,
-                            className: v || !p ? u.disabled : void 0,
+                    t.length > 1 &&
+                        t[1].currency === s.pK.DISCORD_ORB &&
+                        (0, r.jsx)(o.F, {
+                            price: t[1],
+                            className: p || !m ? u.disabled : void 0,
                         }),
                 ],
             });
