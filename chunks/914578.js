@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -14,7 +14,7 @@ var r = n(951288),
     j = n(981631),
     p = n(388032),
     x = n(989281);
-function v(e) {
+function y(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "settings-footer-more-menu",
@@ -42,7 +42,7 @@ function v(e) {
         }),
     });
 }
-function y() {
+function v() {
     let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
@@ -93,7 +93,7 @@ function y() {
                         animation: a.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(v, { onClose: t });
+                            return (0, r.jsx)(y, { onClose: t });
                         },
                         children: (t, n) => {
                             var l, o;

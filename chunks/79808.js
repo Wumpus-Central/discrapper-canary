@@ -57,21 +57,21 @@ function f(e) {
             target: j,
             onClose: p,
             sidebarHeader: x,
-            sidebarFooter: v,
-            onPanelChange: y,
-            emptyState: h,
+            sidebarFooter: y,
+            onPanelChange: v,
+            emptyState: g,
         } = e,
-        [g, O] = l.useState(!0),
+        [h, O] = l.useState(!0),
         [C, _] = l.useState(null == (t = b.entry(j)) ? void 0 : t.targetPanel),
         [S, P] = l.useState(() => b.typedGet(C)),
-        N = l.useCallback(() => k(void 0), []),
-        [E, k] = l.useState({
+        N = l.useCallback(() => T(void 0), []),
+        [E, T] = l.useState({
             target: j,
             targetAccordion: null == (n = b.entry(j)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
             complete: N,
         }),
-        { navigateWithValidation: T } = (0, a.Cu)(),
+        { navigateWithValidation: k } = (0, a.Cu)(),
         w = l.useMemo(
             () => ({
                 currentPanel: b.typedGet(C),
@@ -85,18 +85,18 @@ function f(e) {
                     };
                     if (t.targetPanel.key !== (null == C ? void 0 : C.key)) {
                         let e = t.targetPanel;
-                        T(() => {
-                            k(d(u({}, n), { animateScroll: !1 })), P(e), _(e), null == y || y(e.key);
+                        k(() => {
+                            T(d(u({}, n), { animateScroll: !1 })), P(e), _(e), null == v || v(e.key);
                         });
-                    } else k(d(u({}, n), { animateScroll: !0 }));
+                    } else T(d(u({}, n), { animateScroll: !0 }));
                 },
                 navTransition: E,
-                showNavigationMobile: g,
+                showNavigationMobile: h,
                 setShowNavigationMobile: O,
             }),
-            [b, C, E, g, N, T, y],
+            [b, C, E, h, N, k, v],
         ),
-        I = () => T(p);
+        I = () => k(p);
     return (0, r.jsx)(s.j.Provider, {
         value: w,
         children: (0, r.jsxs)("div", {
@@ -105,9 +105,9 @@ function f(e) {
                 (0, r.jsx)(i.P, {
                     root: m,
                     header: x,
-                    footer: v,
+                    footer: y,
                     onClose: I,
-                    emptyState: h,
+                    emptyState: g,
                 }),
                 (0, r.jsx)(o.Z, {
                     onClose: I,

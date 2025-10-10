@@ -16,16 +16,16 @@ function c(e) {
             return null == (n = null == (t = e.usePredicate) ? void 0 : t.call(e)) || n;
         }),
         x = null != m ? p.slice(0, m) : p,
-        v = null != m ? p.slice(m) : [],
-        y = null != b ? b : l.Fragment,
-        h =
-            null != (t = null == j ? void 0 : j(u, v.length))
+        y = null != m ? p.slice(m) : [],
+        v = null != b ? b : l.Fragment,
+        g =
+            null != (t = null == j ? void 0 : j(u, y.length))
                 ? t
-                : ((n = v.length),
+                : ((n = y.length),
                   u
                       ? s.intl.formatToPlainString(s.t["3SHL+f"], { count: n })
                       : s.intl.formatToPlainString(s.t["8JRFyc"], { count: n }));
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(v, {
         children: [
             x.map((e, t) =>
                 (0, r.jsxs)(
@@ -33,23 +33,23 @@ function c(e) {
                     {
                         children: [
                             (0, r.jsx)(i.Z, { node: e }),
-                            (t !== x.length - 1 || v.length > 0) && (0, r.jsx)(o.izJ, {}),
+                            (t !== x.length - 1 || y.length > 0) && (0, r.jsx)(o.izJ, {}),
                         ],
                     },
                     e.key,
                 ),
             ),
-            v.length > 0 &&
+            y.length > 0 &&
                 (0, r.jsx)(a.I, {
-                    title: h,
+                    title: g,
                     isOpen: u,
                     setIsOpen: d,
                     compact: !0,
-                    children: v.map((e, t) =>
+                    children: y.map((e, t) =>
                         (0, r.jsxs)(
                             l.Fragment,
                             {
-                                children: [(0, r.jsx)(i.Z, { node: e }), t !== v.length - 1 && (0, r.jsx)(o.izJ, {})],
+                                children: [(0, r.jsx)(i.Z, { node: e }), t !== y.length - 1 && (0, r.jsx)(o.izJ, {})],
                             },
                             e.key,
                         ),

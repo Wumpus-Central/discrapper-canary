@@ -20,23 +20,23 @@ function m(e) {
     let { node: t, visibleContent: n } = e,
         { currentPanel: o, navigateTo: i, setShowNavigationMobile: m } = (0, s.t)(),
         { useTitle: b, stronglyDiscouragedCustomComponent: j, icon: p, trailing: x } = t,
-        v = l.useMemo(() => t.layout[0], [t]),
-        y = null != o && o.key === (null == v ? void 0 : v.key),
-        h = b(),
-        g =
-            null != v
+        y = l.useMemo(() => t.layout[0], [t]),
+        v = null != o && o.key === (null == y ? void 0 : y.key),
+        g = b(),
+        h =
+            null != y
                 ? () => {
-                      i(v.key), m(!1);
+                      i(y.key), m(!1);
                   }
                 : t.onClick,
         O = l.useMemo(() => {
             var e;
-            return null != (e = null == v ? void 0 : v.layout.flatMap((e) => e.layout)) ? e : [];
-        }, [v]);
+            return null != (e = null == y ? void 0 : y.layout.flatMap((e) => e.layout)) ? e : [];
+        }, [y]);
     return null != j
         ? (0, r.jsxs)(f, {
-              onClick: g,
-              active: y,
+              onClick: h,
+              active: v,
               children: [
                   (0, r.jsx)(j, {}),
                   null != x &&
@@ -45,7 +45,7 @@ function m(e) {
                           children: (0, r.jsx)(c.W, {
                               trailing: x,
                               visibleContent: n,
-                              isSelected: y,
+                              isSelected: v,
                           }),
                       }),
               ],
@@ -53,8 +53,8 @@ function m(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(f, {
-                      onClick: g,
-                      active: y,
+                      onClick: h,
+                      active: v,
                       children: [
                           (0, r.jsxs)("div", {
                               className: d.itemContent,
@@ -67,7 +67,7 @@ function m(e) {
                                   (0, r.jsx)(a.Text, {
                                       variant: "text-md/medium",
                                       color: "currentColor",
-                                      children: h,
+                                      children: g,
                                   }),
                               ],
                           }),
@@ -77,12 +77,12 @@ function m(e) {
                                   children: (0, r.jsx)(c.W, {
                                       trailing: x,
                                       visibleContent: n,
-                                      isSelected: y,
+                                      isSelected: v,
                                   }),
                               }),
                       ],
                   }),
-                  y && O.length > 1 && (0, r.jsx)(u.Z, { categories: O }),
+                  v && O.length > 1 && (0, r.jsx)(u.Z, { categories: O }),
               ],
           });
 }

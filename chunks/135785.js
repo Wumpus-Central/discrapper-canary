@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(313789),
-    l = n(518596),
+    l = n(947889),
     c = n(63063),
     u = n(74538),
     d = n(140465),
@@ -17,18 +17,19 @@ let m = (e) => {
     let t,
         n,
         { premiumSubscription: i, className: m, textColor: g } = e,
-        E = (0, d.Nx)();
+        E = (0, d.Nx)(),
+        b = (0, l.Z)();
     if (null == i) return null;
-    let b = null != i ? u.ZP.getPremiumPlanItem(i) : null;
+    let y = null != i ? u.ZP.getPremiumPlanItem(i) : null;
     if (
         (u.ZP.isBoostOnlySubscription(i)
             ? (t = p.intl.string(p.t.Uj0md3))
-            : null != b && (t = u.ZP.getDisplayPremiumType(b.planId)),
+            : null != y && (t = u.ZP.getDisplayPremiumType(y.planId)),
         null == t)
     )
         return null;
-    let y = () => (0, l.openUserSettings)(s.n.SUBSCRIPTIONS_PANEL, { section: _.oAB.SUBSCRIPTIONS }),
-        O = (null != b ? u.ZP.getSkuIdForPlan(b.planId) : null) === f.Si.TIER_1;
+    let O = () => b(s.n.SUBSCRIPTIONS_PANEL, { section: _.oAB.SUBSCRIPTIONS }),
+        v = (null != y ? u.ZP.getSkuIdForPlan(y.planId) : null) === f.Si.TIER_1;
     return (
         (n = null != g ? g : E ? "always-white" : "text-default"),
         (0, r.jsxs)(o.Zbd, {
@@ -45,14 +46,14 @@ let m = (e) => {
                 (0, r.jsx)(o.Text, {
                     variant: "text-sm/medium",
                     color: n,
-                    children: O
+                    children: v
                         ? p.intl.format(p.t["tYuv+f"], {
                               helpdeskArticle: c.Z.getArticleURL(_.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: y,
+                              onSubscriptionsClick: O,
                           })
                         : p.intl.format(p.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: y,
+                              onSubscriptionsClick: O,
                           }),
                 }),
             ],

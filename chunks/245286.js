@@ -14,10 +14,10 @@ var r = n(951288),
     j = n(88658),
     p = n(996733),
     x = n(313789),
-    v = n(914578),
-    y = n(920952),
-    h = n(518596),
-    g = n(388032),
+    y = n(914578),
+    v = n(920952),
+    g = n(518596),
+    h = n(388032),
     O = n(942408);
 function C(e) {
     let { destinationPanel: t, originPanel: n } = e;
@@ -54,9 +54,9 @@ function _(e) {
             return l;
         })(e, ["target"]);
     let a = p.Z.useField("query"),
-        { node: c, directory: u } = (0, f.Z)(y.Z, a),
+        { node: c, directory: u } = (0, f.Z)(v.Z, a),
         j = ((t = x.n.ACCOUNT_PANEL), null == u.entry(n) ? t : n),
-        g = l.useRef(null);
+        h = l.useRef(null);
     return ((0, s.ZP)(() => {
         let e = m.Z.getSection();
         null != e &&
@@ -64,7 +64,7 @@ function _(e) {
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (g.current = e));
+            (h.current = e));
     }),
     (0, o.e7)([b.default], () => null != b.default.getCurrentUser()))
         ? (0, r.jsx)(
@@ -99,15 +99,15 @@ function _(e) {
                       directory: u,
                       sidebarHeader: S,
                       emptyState: P,
-                      sidebarFooter: v.Z,
+                      sidebarFooter: y.Z,
                       onPanelChange: (e) => {
-                          let t = (0, h.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, g.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (C({
                                   destinationPanel: t,
-                                  originPanel: g.current,
+                                  originPanel: h.current,
                               }),
-                              (g.current = t));
+                              (h.current = t));
                       },
                       target: j,
                   },
@@ -122,8 +122,8 @@ function S() {
         [n, o] = (0, c.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         s = l.useMemo(
             () => ({
-                title: g.intl.string(g.t.Kv519f),
-                body: g.intl.string(g.t.cTGJBQ),
+                title: h.intl.string(h.t.Kv519f),
+                body: h.intl.string(h.t.cTGJBQ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -169,12 +169,12 @@ function P() {
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: g.intl.string(g.t.zihbmp),
+                children: h.intl.string(h.t.zihbmp),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: g.intl.string(g.t.XclvsL),
+                children: h.intl.string(h.t.XclvsL),
             }),
         ],
     });

@@ -12,8 +12,8 @@ var r = n(951288),
 function m(e) {
     var t,
         n,
-        { root: m, directory: b, target: j, onPanelChange: p, sidebarHeader: x, sidebarFooter: v, emptyState: y } = e,
-        h = (function (e, t) {
+        { root: m, directory: b, target: j, onPanelChange: p, sidebarHeader: x, sidebarFooter: y, emptyState: v } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -34,7 +34,7 @@ function m(e) {
             }
             return l;
         })(e, ["root", "directory", "target", "onPanelChange", "sidebarHeader", "sidebarFooter", "emptyState"]);
-    let [g, O] = l.useState(!1),
+    let [h, O] = l.useState(!1),
         [C, _] = l.useState(1.4),
         S = l.useRef(null),
         P = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -58,7 +58,7 @@ function m(e) {
             );
         }, [P, N]),
         (0, r.jsx)(a.UkV, {
-            isShaking: g,
+            isShaking: h,
             intensity: C,
             children: (0, r.jsx)(
                 i.A,
@@ -86,18 +86,18 @@ function m(e) {
                             });
                     }
                     return e;
-                })({}, h)),
+                })({}, g)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: h.onClose,
+                            onClose: g.onClose,
                             root: m,
                             directory: b,
                             target: j,
                             onPanelChange: p,
                             sidebarHeader: x,
-                            emptyState: y,
-                            sidebarFooter: v,
+                            emptyState: v,
+                            sidebarFooter: y,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

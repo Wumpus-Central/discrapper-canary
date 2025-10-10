@@ -8,13 +8,13 @@ var i = n(120356),
     l = n(95632);
 function c(e) {
     let { label: t, onClick: n, "aria-hidden": i, leading: c, trailing: d, inInput: f = !1 } = e,
-        _ = (0, r.jsx)("div", {});
+        _ = null;
     null != c &&
         (_ = (0, r.jsx)("div", {
             className: s.leading,
             children: (0, r.jsx)(u, { accessory: c }),
         }));
-    let p = (0, r.jsx)("div", {});
+    let p = null;
     return (
         null != d &&
             (p = (0, r.jsx)("div", {
@@ -31,6 +31,10 @@ function c(e) {
                     variant: "text-md/normal",
                     color: "currentColor",
                     lineClamp: 1,
+                    style: {
+                        gridColumnStart: null != _ ? "2" : "1",
+                        gridColumnEnd: null != p ? "2" : "3",
+                    },
                     children: t,
                 }),
                 p,
