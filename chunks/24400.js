@@ -14,7 +14,7 @@ function _() {
     return (0, r.jsx)(s.U, {
         setting: u.s6.PRIVACY_SAFETY_ALERTS_V2,
         scrollPosition: c.FY.DM_SAFETY_ALERTS_V2,
-        children: (0, r.jsx)(l.Z, {
+        children: (0, r.jsx)(l.ZP, {
             value: e,
             onChange: a.Q,
             title: f.intl.string(f.t.qFsx5u),

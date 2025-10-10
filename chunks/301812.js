@@ -34,7 +34,7 @@ function E(e) {
         ? null
         : (0, r.jsx)(c.U, {
               setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
-              children: (0, r.jsx)(u.Z, {
+              children: (0, r.jsx)(u.ZP, {
                   title: m.intl.string(g.default.WhdCGB),
                   value: !l,
                   onChange: f,

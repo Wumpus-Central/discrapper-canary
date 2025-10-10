@@ -16,7 +16,7 @@ function u() {
             i.vV.updateControlledSetting(n, !e);
         };
     return (0, r.jsx)(a.U, {
-        children: (0, r.jsx)(o.Z, {
+        children: (0, r.jsx)(o.ZP, {
             title: u ? c.intl.string(c.t.PMsfcH) : c.intl.string(c.t.RAQUSE),
             note: u ? c.intl.string(c.t.XXGmuL) : c.intl.string(c.t.wbYDfX),
             value: !t,

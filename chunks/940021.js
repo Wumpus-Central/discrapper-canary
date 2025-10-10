@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(915009),
@@ -9,21 +9,23 @@ var i = n(915009),
     c = n(51331),
     u = n(726985),
     d = n(981631),
-    f = n(388032);
-function _() {
+    f = n(388032),
+    _ = n(345909);
+function p() {
     let e = o.bh.useSetting(),
         t = (0, s.W)("DataUsageQuestsSetting"),
         n = (0, i.LN)(),
-        _ = t ? f.t.sJYh5u : f.t.VkS7YW,
-        p = t ? f.t.cf9mvb : f.t["7Q2yX1"];
+        p = t ? f.t.sJYh5u : f.t.VkS7YW,
+        h = t ? f.t.cf9mvb : f.t["7Q2yX1"];
     return (0, r.jsx)(l.U, {
         setting: u.s6.PRIVACY_DATA_QUESTS_V2,
-        children: (0, r.jsx)(c.Z, {
-            title: f.intl.string(_),
-            note: f.intl.format(p, { helpdeskArticle: a.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) }),
+        children: (0, r.jsx)(c.ZP, {
+            title: f.intl.string(p),
+            note: f.intl.format(h, { helpdeskArticle: a.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
             onChange: (e) => o.bh.updateSetting(!e),
             disabled: n,
+            tooltipText: n ? f.intl.string(_.default["6Af/c3"]) : void 0,
         }),
     });
 }

@@ -34,7 +34,7 @@ function E(e) {
         ? null
         : (0, r.jsx)(u.U, {
               setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
-              children: (0, r.jsx)(d.Z, {
+              children: (0, r.jsx)(d.ZP, {
                   title: g.intl.string(g.t["T+nevL"]),
                   value: !c,
                   onChange: _,

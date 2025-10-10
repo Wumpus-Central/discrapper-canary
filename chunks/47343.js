@@ -91,13 +91,13 @@ let _ = () => {
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(u.ZP, {
                         title: p.intl.string(p.t["/2ed39"]),
                         value: x,
                         onChange: b,
                     }),
                     l &&
-                        (0, r.jsx)(u.Z, {
+                        (0, r.jsx)(u.ZP, {
                             title: p.intl.string(p.t.bN4m1N),
                             value: E,
                             onChange: I,
