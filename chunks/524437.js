@@ -2223,6 +2223,9 @@ class ed extends o.C {
                 case 35:
                     a.selfHarmContentSettings = el.internalBinaryRead(e, e.uint32(), n, a.selfHarmContentSettings);
                     break;
+                case 36:
+                    a.isCrossDmSearchEnabled = s.D5.internalBinaryRead(e, e.uint32(), n, a.isCrossDmSearchEnabled);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2312,7 +2315,9 @@ class ed extends o.C {
             e.showMentionSuggestions &&
                 s.D5.internalBinaryWrite(e.showMentionSuggestions, t.tag(34, r.TD.LengthDelimited).fork(), n).join(),
             e.selfHarmContentSettings &&
-                el.internalBinaryWrite(e.selfHarmContentSettings, t.tag(35, r.TD.LengthDelimited).fork(), n).join();
+                el.internalBinaryWrite(e.selfHarmContentSettings, t.tag(35, r.TD.LengthDelimited).fork(), n).join(),
+            e.isCrossDmSearchEnabled &&
+                s.D5.internalBinaryWrite(e.isCrossDmSearchEnabled, t.tag(36, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2524,6 +2529,12 @@ class ed extends o.C {
                 name: "self_harm_content_settings",
                 kind: "message",
                 T: () => el,
+            },
+            {
+                no: 36,
+                name: "is_cross_dm_search_enabled",
+                kind: "message",
+                T: () => s.D5,
             },
         ]);
     }

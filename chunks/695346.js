@@ -1024,3 +1024,9 @@ let eQ = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     );
+(0, f.Zc)(
+    "textAndImages",
+    "isCrossDmSearchEnabled",
+    (e) => (null == e ? void 0 : e.value),
+    (e) => o.D5.create({ value: e }),
+);
