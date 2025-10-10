@@ -277,34 +277,36 @@ function T(e) {
         p = null != (t = c.rR.useSetting()) ? t : b.K,
         h = i.useCallback(
             (e) => {
-                if (e) {
-                    let e = { type: y.aib.DMS };
-                    g.Z.transitionQueryStateToSearchContext(n, e, (t) => {
-                        g.Z.fetchCrossDMMessages({
-                            searchContext: e,
-                            selectedPageIndex: 0,
-                            queryString: t,
+                if (p !== e) {
+                    if (e) {
+                        let e = { type: y.aib.DMS };
+                        g.Z.transitionQueryStateToSearchContext(n, e, (t) => {
+                            g.Z.fetchCrossDMMessages({
+                                searchContext: e,
+                                selectedPageIndex: 0,
+                                queryString: t,
+                            });
                         });
-                    });
-                } else {
-                    let e = {
-                        type: y.aib.CHANNEL,
-                        channelId: l,
-                    };
-                    g.Z.transitionQueryStateToSearchContext(n, e, (t) => {
-                        let n = (0, u.kG)(t),
-                            r = (0, u.$G)(n);
-                        g.Z.fetchMessages({
-                            searchContext: e,
-                            queryString: t,
-                            searchQuery: r,
-                            offset: 0,
+                    } else {
+                        let e = {
+                            type: y.aib.CHANNEL,
+                            channelId: l,
+                        };
+                        g.Z.transitionQueryStateToSearchContext(n, e, (t) => {
+                            let n = (0, u.kG)(t),
+                                r = (0, u.$G)(n);
+                            g.Z.fetchMessages({
+                                searchContext: e,
+                                queryString: t,
+                                searchQuery: r,
+                                offset: 0,
+                            });
                         });
-                    });
+                    }
+                    c.rR.updateSetting(e);
                 }
-                c.rR.updateSetting(e);
             },
-            [n, l],
+            [n, l, p],
         );
     return (0, r.jsx)(o.yRy, {
         targetElementRef: d,

@@ -337,9 +337,10 @@ let F = [],
             [en, er] = (0, p.US)(et),
             ei = en === o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             el = i.useCallback(() => {
+                if (n.isSearching) return;
                 let e = "".concat(O.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4u)) + " ";
-                E.Z.appendTextToSearchInput(t, e);
-            }, [t]);
+                E.Z.appendToSearchInputText(t, e);
+            }, [t, n.isSearching]);
         return (0, r.jsxs)("section", {
             className: M.searchResultsWrap,
             "aria-label": L.intl.string(L.t.zkoeq6),
