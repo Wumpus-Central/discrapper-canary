@@ -18,7 +18,7 @@ function f() {
         i.IU.updateControlledSetting(t, !e);
     }
     return (0, r.jsx)(a.U, {
-        children: (0, r.jsx)(o.ZP, {
+        children: (0, r.jsx)(o.Z, {
             title: d.intl.string(d.t["3o2ojo"]),
             value: !n && !f,
             onChange: (e) => _(e),

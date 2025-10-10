@@ -17,7 +17,7 @@ function f() {
     return null == t
         ? null
         : (0, r.jsx)(a.U, {
-              children: (0, r.jsx)(o.ZP, {
+              children: (0, r.jsx)(o.Z, {
                   title: d.intl.string(d.t.CyLYKS),
                   note: d.intl.format(u.default["6mK5Pz"], {
                       helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS),

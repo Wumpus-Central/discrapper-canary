@@ -11,7 +11,7 @@ var i = n(838436),
 function d() {
     let { hasConsented: e, updateConsent: t } = (0, s.aR)(l.pjP.USAGE_STATISTICS);
     return (0, r.jsx)(i.U, {
-        children: (0, r.jsx)(a.ZP, {
+        children: (0, r.jsx)(a.Z, {
             title: u.intl.string(c.default.HjstRU),
             note: u.intl.format(c.default.Z5yJZ2, { helpdeskArticle: o.Z.getArticleURL(l.BhN.DATA_PRIVACY_CONTROLS) }),
             value: e,

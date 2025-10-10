@@ -20,14 +20,14 @@ function p() {
         : (0, r.jsxs)(o.Z, {
               children: [
                   (0, r.jsx)(s.U, {
-                      children: (0, r.jsx)(l.ZP, {
+                      children: (0, r.jsx)(l.Z, {
                           title: _.intl.string(_.t["7x9dyM"]),
                           value: p.all,
                           onChange: (e) => a.vB.updateControlledSetting(t, e ? f.HGf : f.HGf & ~f.SOq.NO_RELATION),
                       }),
                   }),
                   (0, r.jsx)(s.U, {
-                      children: (0, r.jsx)(l.ZP, {
+                      children: (0, r.jsx)(l.Z, {
                           title: _.intl.string(_.t.NfeuZ2),
                           value: p.all || p.mutualFriends,
                           onChange: (e) =>
@@ -38,7 +38,7 @@ function p() {
                       }),
                   }),
                   (0, r.jsx)(s.U, {
-                      children: (0, r.jsx)(l.ZP, {
+                      children: (0, r.jsx)(l.Z, {
                           title: _.intl.string(_.t.qsMfsL),
                           value: p.all || p.mutualGuilds,
                           onChange: (e) =>

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -11,9 +11,8 @@ var r = n(951288),
     f = n(922628),
     _ = n(726985),
     p = n(981631),
-    h = n(388032),
-    m = n(345909);
-function g() {
+    h = n(388032);
+function m() {
     let e = (0, s.LN)(),
         t = (0, a.e7)([l.Z], () => l.Z.hasConsented(p.pjP.USAGE_STATISTICS)),
         n = i.useCallback((e) => {
@@ -29,13 +28,12 @@ function g() {
         }, []);
     return (0, r.jsx)(u.U, {
         setting: _.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
-        children: (0, r.jsx)(d.ZP, {
+        children: (0, r.jsx)(d.Z, {
             title: h.intl.string(h.t.XuADY2),
             note: h.intl.format(h.t.igTSGx, { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_PRIVACY_CONTROLS) }),
             value: t,
             onChange: n,
             disabled: e,
-            tooltipText: e ? h.intl.string(m.default["6Af/c3"]) : void 0,
         }),
     });
 }

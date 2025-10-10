@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(755721),
@@ -18,16 +18,15 @@ var r = n(951288),
     b = n(726985),
     y = n(736530),
     O = n(981631),
-    v = n(388032),
-    I = n(345909);
-function T(e) {
+    v = n(388032);
+function I(e) {
     let { ingress: t, guildId: n } = e,
         E = (0, _.c_)(),
-        T = d.h2.useSetting().includes(n),
-        S = (0, u.q)(),
-        A = (0, f.r)(),
-        C = (0, o.LN)(),
-        N = i.useCallback(
+        I = d.h2.useSetting().includes(n),
+        T = (0, u.q)(),
+        S = (0, f.r)(),
+        A = (0, o.LN)(),
+        C = i.useCallback(
             (e) => {
                 let r = (0, c.YK)();
                 e ? r.delete(n) : r.add(n),
@@ -40,21 +39,21 @@ function T(e) {
             },
             [n, t],
         );
-    function R(e, t) {
+    function N(e, t) {
         l.default.track(O.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t,
         });
     }
-    let P = (e) => {
-            w(!e);
+    let R = (e) => {
+            P(!e);
         },
-        w = (e) => {
+        P = (e) => {
             let t = () => {
-                    d.gR.updateSetting(e), d.h2.updateSetting(e ? s.Z.getGuildIds() : []), R(e, !0);
+                    d.gR.updateSetting(e), d.h2.updateSetting(e ? s.Z.getGuildIds() : []), N(e, !0);
                 },
                 n = () => {
-                    d.gR.updateSetting(e), R(e, !1);
+                    d.gR.updateSetting(e), N(e, !1);
                 };
             (0, m.V)({
                 header: v.intl.string(v.t["uUr+GR"]),
@@ -66,31 +65,30 @@ function T(e) {
                 onCancel: t,
             });
         },
-        D = A ? v.intl.string(v.t.PMsfcH) : v.intl.string(v.t.RAQUSE);
+        w = S ? v.intl.string(v.t.PMsfcH) : v.intl.string(v.t.RAQUSE);
     return (0, r.jsx)(p.U, {
         setting: b.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === y.T
-                ? (0, r.jsx)(h.ZP, {
-                      title: D,
-                      note: A ? v.intl.string(v.t.XXGmuL) : v.intl.string(v.t.wbYDfX),
-                      value: !S,
-                      onChange: P,
-                      disabled: C,
-                      tooltipText: C ? v.intl.string(I.default["6Af/c3"]) : void 0,
-                  })
-                : (0, r.jsx)(h.ZP, {
-                      title: D,
-                      note: E ? v.intl.string(v.t.V0ka0d) : A ? v.intl.string(v.t.F9WY3d) : v.intl.string(v.t.G7c3Xl),
+                ? (0, r.jsx)(h.Z, {
+                      title: w,
+                      note: S ? v.intl.string(v.t.XXGmuL) : v.intl.string(v.t.wbYDfX),
                       value: !T,
-                      onChange: N,
+                      onChange: R,
+                      disabled: A,
+                  })
+                : (0, r.jsx)(h.Z, {
+                      title: w,
+                      note: E ? v.intl.string(v.t.V0ka0d) : S ? v.intl.string(v.t.F9WY3d) : v.intl.string(v.t.G7c3Xl),
+                      value: !I,
+                      onChange: C,
                   }),
     });
 }
-function S(e) {
+function T(e) {
     let { ingress: t = E.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         i = (0, _.is)();
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(I, {
         ingress: t,
         guildId: null != n ? n : i,
     });
