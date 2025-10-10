@@ -247,7 +247,7 @@ function A(e) {
                                     text: z,
                                     onClick: R,
                                     loading: O,
-                                    icon: b.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : void 0,
+                                    icon: (0, I.gF)(b),
                                 }),
                             ],
                         }),
