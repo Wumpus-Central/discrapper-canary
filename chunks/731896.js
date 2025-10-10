@@ -21,7 +21,6 @@ let f = (e) => {
             () =>
                 null != n
                     ? {
-                          id: n.id,
                           skuId: n.skuId,
                           config: n,
                       }

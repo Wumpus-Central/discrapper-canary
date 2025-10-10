@@ -23,44 +23,33 @@ var r = n(544891),
     i = n(570140),
     a = n(981631);
 async function o(e, t) {
+    var n;
     let {
-        nick: n,
-        avatar: o,
-        avatarDescription: s,
-        avatarId: l,
-        avatarDecoration: c,
-        nameplate: u,
-        displayNameStyles: d,
+        nick: o,
+        avatar: s,
+        avatarDescription: l,
+        avatarId: c,
+        avatarDecoration: u,
+        nameplate: d,
+        displayNameStyles: f,
     } = t;
     if (null == e) throw Error("Need guildId");
     i.Z.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT" });
-    let f = {
-        nick: n,
-        avatar: o,
-        avatar_description: s,
-        avatar_id: l,
-        avatar_decoration_id: null === c ? null : null == c ? void 0 : c.id,
-        avatar_decoration_sku_id: null === c ? null : null == c ? void 0 : c.skuId,
-        collectibles:
-            void 0 !== u
-                ? {
-                      nameplate:
-                          null === u
-                              ? null
-                              : {
-                                    id: u.id,
-                                    sku_id: u.skuId,
-                                },
-                  }
-                : void 0,
-        display_name_font_id: void 0 !== d ? (null !== d ? d.fontId : null) : void 0,
-        display_name_effect_id: void 0 !== d ? (null !== d ? d.effectId : null) : void 0,
-        display_name_colors: void 0 !== d ? (null !== d ? d.colors : null) : void 0,
+    let _ = {
+        nick: o,
+        avatar: s,
+        avatar_description: l,
+        avatar_id: c,
+        avatar_decoration_sku_id: void 0 !== u ? (null != (n = null == u ? void 0 : u.skuId) ? n : null) : void 0,
+        collectibles: void 0 !== d ? { nameplate: null === d ? null : { sku_id: d.skuId } } : void 0,
+        display_name_font_id: void 0 !== f ? (null !== f ? f.fontId : null) : void 0,
+        display_name_effect_id: void 0 !== f ? (null !== f ? f.effectId : null) : void 0,
+        display_name_colors: void 0 !== f ? (null !== f ? f.colors : null) : void 0,
     };
     try {
         let t = await r.tn.patch({
                 url: a.ANM.SET_GUILD_MEMBER(e),
-                body: f,
+                body: _,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
@@ -72,7 +61,7 @@ async function o(e, t) {
                 guildMember: n,
                 guildId: e,
             }),
-            (null != o || null != l) && i.Z.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            (null != s || null != c) && i.Z.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
             t
         );
     } catch (t) {

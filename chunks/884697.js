@@ -3,11 +3,11 @@ n.d(t, {
     $W: () => en,
     Ad: () => U,
     BH: () => P,
-    Cs: () => L,
+    Cs: () => x,
     G1: () => y,
     IC: () => X,
     OT: () => J,
-    QG: () => k,
+    QG: () => j,
     Qf: () => eu,
     Vw: () => T,
     WW: () => ee,
@@ -29,7 +29,7 @@ n.d(t, {
     qS: () => I,
     ql: () => N,
     rN: () => w,
-    uV: () => j,
+    uV: () => k,
     v5: () => er,
     x0: () => ea,
     x6: () => et,
@@ -176,42 +176,42 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
                     : (e.push(t), e),
             [],
         ),
-    L = (e, t) => {
+    x = (e, t) => {
         let n = (0, r.flatMap)([...e.values()], "products");
         return (0, r.uniqBy)(t ? D(n) : n, "storeListingId");
     },
-    x = (e, t) => {
+    L = (e, t) => {
         if (t === i.Z.AVATAR_DECORATION) {
             let t = (0, r.flatMap)([...e.values()], "items").filter(c.M);
-            return (0, r.uniqBy)(t, "id");
+            return (0, r.uniqBy)(t, "skuId");
         }
         if (t === i.Z.PROFILE_EFFECT) {
             let t = (0, r.flatMap)([...e.values()], "items").filter(d.H);
-            return (0, r.uniqBy)(t, "id");
+            return (0, r.uniqBy)(t, "skuId");
         }
         if (t === i.Z.NAMEPLATE) {
             let t = (0, r.flatMap)([...e.values()], "items").filter(u.k);
-            return (0, r.uniqBy)(t, "id");
+            return (0, r.uniqBy)(t, "skuId");
         }
         return [];
     },
     M = (e, t) => {
-        let n = L(e, !0);
+        let n = x(e, !0);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, "items").filter(c.M);
-            return (0, r.uniqBy)(e, "id");
+            return (0, r.uniqBy)(e, "skuId");
         }
         if (t === i.Z.PROFILE_EFFECT) {
             let e = (0, r.flatMap)(n, "items").filter(d.H);
-            return (0, r.uniqBy)(e, "id");
+            return (0, r.uniqBy)(e, "skuId");
         }
         if (t === i.Z.NAMEPLATE) {
             let e = (0, r.flatMap)(n, "items").filter(u.k);
-            return (0, r.uniqBy)(e, "id");
+            return (0, r.uniqBy)(e, "skuId");
         }
         return [];
     },
-    j = (e, t) => {
+    k = (e, t) => {
         var n;
         if (null == e || "" === e) return "";
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
@@ -222,27 +222,27 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
         let l = p.ANM.APPLICATION_ASSET(p.XAJ, e, s);
         return "".concat(location.protocol).concat(i).concat(l, "?size=").concat(o);
     },
-    k = (e) => (null != e ? f.X.fromServer(e) : void 0),
-    U = (e) => x(e, i.Z.AVATAR_DECORATION),
+    j = (e) => (null != e ? f.X.fromServer(e) : void 0),
+    U = (e) => L(e, i.Z.AVATAR_DECORATION),
     G = (e) => M(e, i.Z.AVATAR_DECORATION),
-    B = (e, t) => (0, r.uniqBy)([...U(e), ...G(t)], "id"),
-    Z = (e) => x(e, i.Z.PROFILE_EFFECT),
+    B = (e, t) => (0, r.uniqBy)([...U(e), ...G(t)], "skuId"),
+    Z = (e) => L(e, i.Z.PROFILE_EFFECT),
     F = (e) => M(e, i.Z.PROFILE_EFFECT),
-    V = (e, t) => (0, r.uniqBy)([...Z(e), ...F(t)], "id"),
+    V = (e, t) => (0, r.uniqBy)([...Z(e), ...F(t)], "skuId"),
     H = (e, t) => {
         let n = Z(t),
             r = F(e).filter((e) => {
-                let { id: t } = e;
-                return !n.some((e) => e.id === t);
+                let { skuId: t } = e;
+                return !n.some((e) => e.skuId === t);
             });
         return {
             purchased: n,
             shopPreviews: r,
         };
     },
-    Y = (e) => x(e, i.Z.NAMEPLATE),
+    Y = (e) => L(e, i.Z.NAMEPLATE),
     W = (e) => M(e, i.Z.NAMEPLATE),
-    K = (e, t) => (0, r.uniqBy)([...Y(e), ...W(t)], "id"),
+    K = (e, t) => (0, r.uniqBy)([...Y(e), ...W(t)], "skuId"),
     z = (e) => e.applicationId === p.XAJ,
     q = 3.8,
     X = (e) => q * e,

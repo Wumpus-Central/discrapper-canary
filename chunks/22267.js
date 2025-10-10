@@ -38,11 +38,11 @@ let C = {
                 innerClassName: P,
                 isHighlighted: w,
                 showStatus: D,
-                showPlaceholderUser: L,
-                pendingGlobalName: x,
+                showPlaceholderUser: x,
+                pendingGlobalName: L,
                 pendingDisplayNameStyles: M,
-                avatarDecorationOverride: j,
-                nameplatePreviewSize: k = "default",
+                avatarDecorationOverride: k,
+                nameplatePreviewSize: j = "default",
                 isPurchased: U = !1,
                 skipEffectDisplayName: G = !1,
                 width: B,
@@ -57,12 +57,12 @@ let C = {
                 null != t
                     ? (0, E.Ly)({
                           pendingNickname: void 0,
-                          pendingGlobalName: x,
+                          pendingGlobalName: L,
                           user: t,
                           guildMember: W,
                       })
                     : void 0,
-            z = i.useMemo(() => C[k], [k]),
+            z = i.useMemo(() => C[j], [j]),
             q = (0, f.Z)({
                 userId: null == t ? void 0 : t.id,
                 guildId: n,
@@ -85,8 +85,8 @@ let C = {
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(R, T.nameplatePreview, {
                     [T.nameplatePurchased]: U && !w,
-                    [T.large]: "large" === k,
-                    [T.xlarge]: "xlarge" === k,
+                    [T.large]: "large" === j,
+                    [T.xlarge]: "xlarge" === j,
                     [T.inheritWidth]: null != B,
                 }),
                 children: [
@@ -97,16 +97,16 @@ let C = {
                                 nameplate: F,
                                 hovered: w,
                                 placement: m.i.PREVIEW,
-                                content: L ? void 0 : Y,
+                                content: x ? void 0 : Y,
                             },
-                            null == a ? void 0 : a.id,
+                            null == a ? void 0 : a.skuId,
                         ),
                     (0, r.jsxs)("div", {
                         className: T.overlayContainer,
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(T.avatarContainer, !L && T.avatarVisible),
+                                      className: o()(T.avatarContainer, !x && T.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
                                           ref: Y,
                                           avatar: (0, r.jsx)(d.Z, {
@@ -115,7 +115,7 @@ let C = {
                                               avatarSize: z,
                                               status: D ? V : void 0,
                                               "aria-hidden": !0,
-                                              avatarDecorationOverride: null != j ? { asset: j.asset } : void 0,
+                                              avatarDecorationOverride: null != k ? { asset: k.asset } : void 0,
                                           }),
                                           decorators: (0, r.jsx)(h.ZP, {
                                               userId: t.id,
@@ -134,7 +134,7 @@ let C = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(T.avatarContainer, L && T.avatarVisible),
+                                className: o()(T.avatarContainer, x && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: Z ? S : A,

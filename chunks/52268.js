@@ -231,10 +231,7 @@ let y = () => 80,
                     });
                 },
                 getSectionHeight: () => 16,
-                getItemKey: (e, t) => {
-                    var n, r;
-                    return null != (r = null == (n = d[e].items[t]) ? void 0 : n.id) ? r : null;
-                },
+                getItemKey: (e, t) => d[e].items[t].skuId,
                 getItemHeight: y,
                 removeEdgeItemGutters: !0,
             }),

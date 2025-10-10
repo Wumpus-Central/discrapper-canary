@@ -1,4 +1,4 @@
-r.d(t, { default: () => A }), r(388685);
+r.d(t, { default: () => C }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(442837),
@@ -22,7 +22,7 @@ var n = r(951288),
     P = r(474936),
     b = r(388032),
     E = r(88785);
-function C(e) {
+function I(e) {
     let {
             user: t,
             categories: r,
@@ -30,48 +30,43 @@ function C(e) {
             analyticsLocations: o,
             onClose: m,
             initialSelectedDecoration: v,
-            initialSelectedDecorationId: j,
-            isTryItOutFlow: S,
-            guild: C,
+            isTryItOutFlow: j,
+            guild: S,
         } = e,
         {
-            pendingAvatarDecoration: A,
-            setPendingAvatarDecoration: I,
-            savedAvatarDecoration: w,
+            pendingAvatarDecoration: I,
+            setPendingAvatarDecoration: C,
+            savedAvatarDecoration: A,
         } = (0, g.Z)({
             analyticsLocations: o,
-            isTryItOut: S,
-            guildId: null == C ? void 0 : C.id,
+            isTryItOut: j,
+            guildId: null == S ? void 0 : S.id,
         }),
-        [T, N] = i.useState(() => {
-            var e, t;
-            if (null != v) return v;
-            let n = (0, u.iC)(l, r);
-            return null != j
-                ? null != (e = n.find((e) => e.id === j))
-                    ? e
-                    : null
-                : void 0 !== A
-                  ? A
-                  : null == w
+        [w, T] = i.useState(() => {
+            var e;
+            return null != v
+                ? v
+                : void 0 !== I
+                  ? I
+                  : null == A
                     ? null
                     : null !=
-                        (t = n.find((e) => {
+                        (e = (0, u.iC)(l, r).find((e) => {
                             let { skuId: t } = e;
-                            return t === w.skuId;
+                            return t === A.skuId;
                         }))
-                      ? t
+                      ? e
                       : null;
         }),
-        { product: Z, purchase: D } = (0, d.Z)(null == T ? void 0 : T.skuId),
-        _ = y.ZP.canUseCollectibles(t),
-        k = i.useRef(null),
-        R = (0, p.Z)(o),
-        L =
-            void 0 === A
-                ? (null == T ? void 0 : T.skuId) === (null == w ? void 0 : w.skuId)
-                : (null == T ? void 0 : T.skuId) === (null == A ? void 0 : A.skuId),
-        M = i.useCallback(
+        { product: N, purchase: Z } = (0, d.Z)(null == w ? void 0 : w.skuId),
+        k = y.ZP.canUseCollectibles(t),
+        D = i.useRef(null),
+        _ = (0, p.Z)(o),
+        R =
+            void 0 === I
+                ? (null == w ? void 0 : w.skuId) === (null == A ? void 0 : A.skuId)
+                : (null == w ? void 0 : w.skuId) === (null == I ? void 0 : I.skuId),
+        L = i.useCallback(
             (e) => {
                 m(),
                     (0, c.mK)({
@@ -107,19 +102,19 @@ function C(e) {
                 children: [
                     (0, n.jsx)(f.Z, {
                         user: t,
-                        guild: C,
-                        pendingAvatarDecoration: T,
-                        selectedAvatarDecorationRef: k,
+                        guild: S,
+                        pendingAvatarDecoration: w,
+                        selectedAvatarDecorationRef: D,
                         onSelect: (e) => {
-                            N(e), null != e && R(e);
+                            T(e), null != e && _(e);
                         },
-                        onOpenShop: M,
+                        onOpenShop: L,
                     }),
                     (0, n.jsx)(O.Z, {
                         className: E.modalPreview,
                         user: t,
-                        guildId: null == C ? void 0 : C.id,
-                        avatarDecorationOverride: T,
+                        guildId: null == S ? void 0 : S.id,
+                        avatarDecorationOverride: w,
                     }),
                 ],
             }),
@@ -127,35 +122,35 @@ function C(e) {
                 "data-migration-pending": !0,
                 className: E.modalFooter,
                 children: [
-                    (null != D && (!(0, u.qS)(D) || _)) || null === T
+                    (null != Z && (!(0, u.qS)(Z) || k)) || null === w
                         ? (0, n.jsx)(s.zxk, {
                               variant: "primary",
                               text: b.intl.string(b.t.Jh8fJy),
                               onClick: () => {
-                                  I(T), m();
+                                  C(w), m();
                               },
-                              disabled: L,
+                              disabled: R,
                           })
-                        : null == D && (_ || !(0, u.G1)(Z))
+                        : null == Z && (k || !(0, u.G1)(N))
                           ? (0, n.jsx)(s.zxk, {
                                 variant: "primary",
-                                onClick: () => M(null == Z ? void 0 : Z.skuId),
+                                onClick: () => L(null == N ? void 0 : N.skuId),
                                 text: b.intl.string(b.t.fYfGgI),
                             })
                           : (0, n.jsx)(x.Z, {
                                 subscriptionTier: P.Si.TIER_2,
-                                showGradient: !_,
+                                showGradient: !k,
                                 textOptions: {
                                     textOverride: y.ZP.isPremium(t)
                                         ? b.intl.string(b.t.KXLX7u)
-                                        : _
+                                        : k
                                           ? b.intl.string(b.t.mr4K7O)
                                           : b.intl.string(b.t.pj0XBA),
                                 },
                             }),
-                    !_ && (0, u.G1)(Z)
+                    !k && (0, u.G1)(N)
                         ? (0, n.jsx)(h.Z, {
-                              product: Z,
+                              product: N,
                               onClose: m,
                           })
                         : (0, n.jsx)(s.zxk, {
@@ -168,55 +163,53 @@ function C(e) {
         ],
     });
 }
-function A(e) {
+function C(e) {
     let {
             transitionState: t,
             analyticsLocations: r,
             onClose: c,
             onCloseModal: u,
             initialSelectedDecoration: d,
-            initialSelectedDecorationId: p,
-            isTryItOutFlow: h,
-            guild: x,
+            isTryItOutFlow: p,
+            guild: h,
         } = e,
-        g = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
-        { analyticsLocations: y } = (0, o.ZP)(r, a.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: O, purchases: f, isFetchingCategories: P, isFetchingPurchases: b } = (0, m.ZP)(),
-        A = P || (b && 0 === f.size);
+        x = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
+        { analyticsLocations: g } = (0, o.ZP)(r, a.Z.EDIT_AVATAR_DECORATION_MODAL),
+        { categories: y, purchases: O, isFetchingCategories: f, isFetchingPurchases: P } = (0, m.ZP)(),
+        b = f || (P && 0 === O.size);
     return (
         i.useEffect(() => {
             j.default.track(S.rMx.OPEN_MODAL, {
                 type: S.jXE.AVATAR_DECORATION_CUSTOMIZATION,
-                location_stack: y,
+                location_stack: g,
             });
-        }, [y]),
-        null == g
+        }, [g]),
+        null == x
             ? null
             : (0, n.jsx)(o.Gt, {
-                  value: y,
+                  value: g,
                   children: (0, n.jsx)(s.Y0X, {
                       transitionState: t,
                       className: E.modal,
-                      size: A ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
+                      size: b ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       "data-migration-pending": !0,
-                      children: A
+                      children: b
                           ? (0, n.jsx)(s.$jN, {
                                 className: E.spinner,
                                 type: s.$jN.Type.SPINNING_CIRCLE,
                             })
-                          : (0, n.jsx)(C, {
-                                user: g,
-                                guild: x,
-                                categories: O,
-                                purchases: f,
-                                analyticsLocations: y,
+                          : (0, n.jsx)(I, {
+                                user: x,
+                                guild: h,
+                                categories: y,
+                                purchases: O,
+                                analyticsLocations: g,
                                 initialSelectedDecoration: d,
-                                initialSelectedDecorationId: p,
                                 onClose: () => {
                                     u(), null == c || c();
                                 },
-                                isTryItOutFlow: h,
+                                isTryItOutFlow: p,
                             }),
                   }),
               })

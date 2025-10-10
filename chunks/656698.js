@@ -79,6 +79,6 @@ class u extends r.Z {
         return new u(s(a({}, l(e, ["sku_id"])), { skuId: t }));
     }
     constructor(e) {
-        super(), i(this, "id", void 0), i(this, "skuId", void 0), (this.id = e.id), (this.skuId = e.skuId);
+        super(), i(this, "skuId", void 0), (this.skuId = e.skuId);
     }
 }

@@ -211,7 +211,7 @@ let O = () => 80,
                         ),
                     )
                     .otherwise((e) => {
-                        let r = (null == i ? void 0 : i.id) === e.id;
+                        let r = (null == i ? void 0 : i.skuId) === e.skuId;
                         return (0, n.jsx)(
                             S,
                             {
@@ -240,7 +240,7 @@ let O = () => 80,
                 });
             },
             getSectionHeight: (e) => u[e].height,
-            getItemKey: (e, t) => u[e].items[t].id,
+            getItemKey: (e, t) => u[e].items[t].skuId,
             getItemHeight: O,
         });
     };

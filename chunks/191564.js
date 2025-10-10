@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685);
+n.d(t, { default: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -92,8 +92,8 @@ function C(e) {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
-        [C, S] = i.useState(() => (null != p ? p : void 0 !== x ? x : null == m ? null : null != m ? m : null)),
-        [I, w] = i.useMemo(() => {
+        [C, I] = i.useState(() => (null != p ? p : void 0 !== x ? x : null == m ? null : null != m ? m : null)),
+        [S, A] = i.useMemo(() => {
             var e;
             let t = P.find((e) => {
                     let { skuId: t } = e;
@@ -114,17 +114,18 @@ function C(e) {
                 n,
             ];
         }, [C, P, v]),
-        { product: A, purchase: N } = (0, d.Z)(null == I ? void 0 : I.skuId),
-        Z = i.useRef(null),
-        k = b.ZP.canUseCollectibles(t),
+        { product: w, purchase: N } = (0, d.Z)(null == S ? void 0 : S.skuId),
+        k = i.useRef(null),
+        Z = b.ZP.canUseCollectibles(t),
         D =
-            (null == C ? void 0 : C.skuId) ===
-            (void 0 === x ? (null == m ? void 0 : m.skuId) : null == x ? void 0 : x.skuId),
+            void 0 === x
+                ? (null == C ? void 0 : C.skuId) === (null == m ? void 0 : m.skuId)
+                : (null == C ? void 0 : C.skuId) === (null == x ? void 0 : x.skuId),
         T = i.useCallback(
             (e) => {
-                S(e);
+                I(e);
             },
-            [S],
+            [I],
         ),
         U = i.useCallback(
             (e) => {
@@ -163,15 +164,15 @@ function C(e) {
                         user: t,
                         guild: n,
                         pendingProfileEffect: C,
-                        selectedProfileEffectRef: Z,
+                        selectedProfileEffectRef: k,
                         onSelect: T,
                         onOpenShop: U,
                     }),
                     (0, r.jsx)(y.Z, {
                         user: t,
-                        canApplySelectedChange: w,
-                        pendingProfileEffectRecord: I,
-                        product: A,
+                        canApplySelectedChange: A,
+                        pendingProfileEffectRecord: S,
+                        product: w,
                         purchase: N,
                         guild: n,
                     }),
@@ -184,9 +185,9 @@ function C(e) {
                 },
                 onClose: f,
                 onOpenShop: U,
-                product: A,
+                product: w,
                 purchase: N,
-                canUseCollectibles: k,
+                canUseCollectibles: Z,
                 selectedProfileEffect: C,
                 disableApplyButton: D,
                 analyticsLocations: h,
@@ -194,7 +195,7 @@ function C(e) {
         ],
     });
 }
-function S(e) {
+function I(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffect: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: b } = (0, f.Z)(),
         y = (0, l.e7)([h.default], () => h.default.getCurrentUser()),

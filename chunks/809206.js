@@ -4,7 +4,7 @@ n.d(t, {
     I5: () => O,
     Mn: () => b,
     NI: () => N,
-    OU: () => x,
+    OU: () => L,
     P6: () => D,
     Rx: () => S,
     S2: () => E,
@@ -15,7 +15,7 @@ n.d(t, {
     b9: () => R,
     cV: () => T,
     e1: () => I,
-    iR: () => L,
+    iR: () => x,
     s4: () => C,
     si: () => P,
     ss: () => g,
@@ -135,7 +135,8 @@ function b(e) {
         o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT" }),
         (0, l.Z)(
             (e) => {
-                let o = p(
+                var o, l;
+                let f = p(
                     {
                         username: t,
                         email: r,
@@ -151,24 +152,22 @@ function b(e) {
                     },
                     e,
                 );
-                null === m && (o.avatar_decoration_id = null),
-                    null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)),
-                    null === O && (o.nameplate_id = null),
-                    null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)),
-                    void 0 !== v && (o.primary_guild_id = v),
+                void 0 !== m && (f.avatar_decoration_sku_id = null != (o = null == m ? void 0 : m.skuId) ? o : null),
+                    void 0 !== O && (f.nameplate_sku_id = null != (l = null == O ? void 0 : O.skuId) ? l : null),
+                    void 0 !== v && (f.primary_guild_id = v),
                     null != I
-                        ? ((o.display_name_font_id = I.fontId),
-                          (o.display_name_effect_id = I.effectId),
-                          (o.display_name_colors = I.colors))
+                        ? ((f.display_name_font_id = I.fontId),
+                          (f.display_name_effect_id = I.effectId),
+                          (f.display_name_colors = I.colors))
                         : null === I &&
-                          ((o.display_name_font_id = null),
-                          (o.display_name_effect_id = null),
-                          (o.display_name_colors = null));
-                let l = i.K.get(u.JkL),
-                    f = (0, d.xJ)();
-                null != f && null != l && ((o.push_provider = f), (o.push_token = l));
-                let T = i.K.get(u.scU);
-                return null != d.mv && null != T && ((o.push_voip_provider = d.mv), (o.push_voip_token = T)), E(o);
+                          ((f.display_name_font_id = null),
+                          (f.display_name_effect_id = null),
+                          (f.display_name_colors = null));
+                let T = i.K.get(u.JkL),
+                    S = (0, d.xJ)();
+                null != S && null != T && ((f.push_provider = S), (f.push_token = T));
+                let A = i.K.get(u.scU);
+                return null != d.mv && null != A && ((f.push_voip_provider = d.mv), (f.push_voip_token = A)), E(f);
             },
             {
                 checkEnabled: !1,
@@ -266,9 +265,9 @@ function w() {
 function D() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
-function L() {
+function x() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function x() {
+function L() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

@@ -32,7 +32,6 @@ let u = {},
             e.items.forEach((n) => {
                 if (!(0, s.H)(n)) return;
                 let r = {
-                    id: n.id,
                     skuId: e.skuId,
                     config: n,
                 };
@@ -68,7 +67,6 @@ let u = {},
         let { configs: t } = e;
         t.forEach((e) => {
             g(e.skuId, {
-                id: e.id,
                 skuId: e.skuId,
                 config: e,
             });

@@ -120,7 +120,7 @@ let y = (0, a.U)((e) => ({
         collectionAssets: {},
         avatarDecorationAssets: {},
         previewProfileEffectSkuId: null,
-        previewAvatarDecorationId: null,
+        previewAvatarDecorationSkuId: null,
         setPreviewEnabled: (t) => e({ previewEnabled: t }),
         upsertCollectionAsset: (t, n) =>
             (0, s.j)(() => {
@@ -205,7 +205,7 @@ let y = (0, a.U)((e) => ({
                             avatarDecorationAssets: {},
                             previewEnabled: !1,
                             previewProfileEffectSkuId: null,
-                            previewAvatarDecorationId: null,
+                            previewAvatarDecorationSkuId: null,
                         }
                     ),
                 );
@@ -217,11 +217,11 @@ let y = (0, a.U)((e) => ({
                     previewEnabled: null != t,
                 }),
             ),
-        setPreviewAvatarDecorationId: (t) =>
+        setPreviewAvatarDecorationSkuId: (t) =>
             (0, s.j)(() =>
                 e({
-                    previewAvatarDecorationId: t,
-                    previewEnabled: !0,
+                    previewAvatarDecorationSkuId: t,
+                    previewEnabled: null != t,
                 }),
             ),
     })),
@@ -282,7 +282,7 @@ let y = (0, a.U)((e) => ({
         return e && 0 !== r.length ? (null != n ? t[n] : r[0]) : null;
     },
     C = (e) => {
-        let { previewEnabled: t, previewAvatarDecorationId: n } = y(),
+        let { previewEnabled: t, previewAvatarDecorationSkuId: n } = y(),
             i = y((e) => e.avatarDecorationAssets);
         return r.useMemo(() => {
             let r = Object.values(i);
@@ -298,7 +298,7 @@ let y = (0, a.U)((e) => ({
         }, [e, t, n, i]);
     },
     N = (e) => {
-        let { previewEnabled: t, previewAvatarDecorationId: n } = y(),
+        let { previewEnabled: t, previewAvatarDecorationSkuId: n } = y(),
             i = y((e) => e.avatarDecorationAssets);
         return r.useMemo(() => {
             if (null == e || e.type !== o.Z.AVATAR_DECORATION || 0 === e.items.length) return e;
@@ -307,7 +307,7 @@ let y = (0, a.U)((e) => ({
         }, [e, t, n, i]);
     },
     R = (e) => {
-        let { previewEnabled: t, previewAvatarDecorationId: n } = y(),
+        let { previewEnabled: t, previewAvatarDecorationSkuId: n } = y(),
             i = y((e) => e.avatarDecorationAssets);
         return r.useMemo(() => {
             if (null == e) return null;

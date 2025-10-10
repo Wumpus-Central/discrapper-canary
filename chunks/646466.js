@@ -123,7 +123,7 @@ let h = [
         });
     },
     j = () => {
-        let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
+        let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, o.N9)(),
             { avatarDecorationAssets: n } = (0, o.xq)(),
             l = r.useMemo(
                 () => [
