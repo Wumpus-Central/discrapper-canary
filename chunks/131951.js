@@ -1072,6 +1072,7 @@ function no(e) {
 }
 function ns(e, t) {
     (0, es.isWindows)() &&
+        e > 1 &&
         T.YT(e, { soundshare_session: t }).then((t) => {
             null == t ||
                 L.ZP.shouldContinueWithoutElevatedProcessForPID(e) ||
