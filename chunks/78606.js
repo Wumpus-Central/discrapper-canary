@@ -2,21 +2,10 @@ n.d(t, { Z: () => u });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(670362),
-    o = n(46140),
-    s = n(388032);
-function c(e) {
-    switch (e) {
-        case o.yq.SUGGESTED:
-            return s.intl.string(s.t.gBfXPT);
-        case o.yq.MOST_RECENT:
-            return s.intl.string(s.t.K6oEu7);
-        case o.yq.EXPIRING_SOON:
-            return s.intl.string(s.t.IB22n5);
-        case o.yq.RECENTLY_ENROLLED:
-            return s.intl.string(s.t["BB+2tb"]);
-    }
-}
+    a = n(509212),
+    o = n(113434),
+    s = n(670362),
+    c = n(388032);
 let u = function (e) {
     let { onChange: t, optionClassName: n, selectedSortMethod: u } = e,
         d = i.useCallback(
@@ -25,26 +14,27 @@ let u = function (e) {
             },
             [t],
         ),
-        p = i.useMemo(
+        p = (0, o.$I)(),
+        f = i.useMemo(
             () =>
-                Object.keys(o.yq).map((e) => ({
-                    name: c(o.yq[e]),
-                    value: o.yq[e],
+                p.map((e) => ({
+                    name: e.label,
+                    value: e.value,
                     radioBarClassName: n,
                 })),
-            [n],
+            [p, n],
         );
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(s.Z, {
         renderPopout: (e, t) => {
             let { closePopout: n } = e;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.g, {
+                    (0, r.jsx)(s.g, {
                         id: t,
-                        children: s.intl.string(s.t.tZXJIS),
+                        children: c.intl.string(c.t.tZXJIS),
                     }),
                     (0, r.jsx)(l.FXm, {
-                        options: p,
+                        options: f,
                         onChange: (e) => {
                             n(), d(e);
                         },
@@ -86,7 +76,7 @@ let u = function (e) {
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: c(u),
+                        text: (0, a.NL)(u),
                         icon: l.hic,
                         iconPosition: "end",
                         variant: "secondary",

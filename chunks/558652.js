@@ -1,50 +1,48 @@
-n.d(t, { Z: () => _ }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => m }), n(388685), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(843611),
     a = n(481060),
-    o = n(626135),
-    s = n(113434),
-    c = n(937797),
-    u = n(264282),
-    d = n(78606),
-    p = n(710914),
-    f = n(46140),
-    h = n(981631),
-    g = n(388032),
-    m = n(872058);
-let b = [];
-function _() {
-    let { enabled: e } = c.$d.useConfig({ location: f.dr.QUEST_HOME_DESKTOP }),
-        [t, n] = i.useState(f.yq.SUGGESTED),
-        [_, O] = i.useState(b),
+    o = n(113434),
+    s = n(937797),
+    c = n(264282),
+    u = n(78606),
+    d = n(710914),
+    p = n(46140),
+    f = n(388032),
+    h = n(872058);
+let g = [];
+function m() {
+    let { enabled: e } = s.$d.useConfig({ location: p.dr.QUEST_HOME_DESKTOP }),
+        [t, n] = i.useState(p.yq.SUGGESTED),
+        [m, b] = i.useState(g),
         {
-            quests: E,
-            isFetchingCurrentQuests: y,
-            hasFetched: v,
-        } = (0, s.bA)(
-            s.e5.ALL,
+            quests: _,
+            isFetchingCurrentQuests: O,
+            hasFetched: E,
+        } = (0, o.bA)(
+            o.e5.ALL,
             i.useMemo(
                 () => ({
                     sortMethod: t,
-                    filters: _,
+                    filters: m,
                 }),
-                [t, _],
+                [t, m],
             ),
         ),
-        I = i.useCallback(() => {
-            O(b);
+        y = i.useCallback(() => {
+            b(g);
         }, []),
-        S = i.useRef(null),
-        C = i.useRef(null),
-        T = (0, l.TH)(),
-        N = (0, l.k6)();
+        v = i.useRef(null),
+        I = i.useRef(null),
+        S = (0, l.TH)(),
+        C = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== T.hash && null != S.current && null != C.current) {
+            if ("" !== S.hash && null != v.current && null != I.current) {
                 var e, n;
-                (t !== S.current || _ !== C.current) &&
-                    N.replace(
+                (t !== v.current || m !== I.current) &&
+                    C.replace(
                         ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -69,7 +67,7 @@ function _() {
                                     });
                             }
                             return e;
-                        })({}, T)),
+                        })({}, S)),
                         (n = n = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -86,58 +84,51 @@ function _() {
                         e),
                     );
             }
-        }, [t, _, T, N]),
+        }, [t, m, S, C]),
         i.useEffect(() => {
-            e &&
-                (o.default.track(h.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
-                    sort_method: t,
-                    previous_sort_method: S.current,
-                }),
-                (S.current = t));
-        }, [t, e]),
+            v.current = t;
+        }, [t]),
         i.useEffect(() => {
-            var t, n;
-            e &&
-                (o.default.track(h.rMx.QUEST_HOME_FILTERS_CHANGED, {
-                    filters: _.map((e) => e.filter),
-                    previous_filters: null != (n = null == (t = C.current) ? void 0 : t.map((e) => e.filter)) ? n : [],
-                    num_quests_visible: E.length,
-                }),
-                (C.current = _));
-        }, [_, e, E.length]),
+            I.current = m;
+        }, [m]),
+        (0, o.SU)({
+            selectedSortMethod: t,
+            selectedFilters: m,
+            numQuestsVisible: _.length,
+        }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 e &&
                     (0, r.jsxs)("div", {
-                        className: m.headingWrapper,
+                        className: h.headingWrapper,
                         children: [
                             (0, r.jsx)(a.X6q, {
                                 variant: "heading-lg/medium",
-                                children: g.intl.string(g.t.giYD09),
+                                children: f.intl.string(f.t.giYD09),
                             }),
                             (0, r.jsxs)("div", {
-                                className: m.headingControls,
+                                className: h.headingControls,
                                 children: [
-                                    (0, r.jsx)(d.Z, {
+                                    (0, r.jsx)(u.Z, {
                                         onChange: n,
-                                        optionClassName: m.filterSortOption,
+                                        optionClassName: h.filterSortOption,
                                         selectedSortMethod: t,
                                     }),
-                                    (0, r.jsx)(u.Z, {
-                                        onChange: O,
-                                        optionClassName: m.filterSortOption,
-                                        selectedFilters: _,
+                                    (0, r.jsx)(c.Z, {
+                                        onChange: b,
+                                        optionClassName: h.filterSortOption,
+                                        selectedFilters: m,
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                (0, r.jsx)(p.Z, {
-                    quests: E,
-                    isFetching: y,
-                    hasFetched: v,
-                    hasFiltersApplied: _.length > 0,
-                    onClearFilters: I,
+                (0, r.jsx)(d.Z, {
+                    quests: _,
+                    isFetching: O,
+                    hasFetched: E,
+                    hasFiltersApplied: m.length > 0,
+                    onClearFilters: y,
                 }),
             ],
         })

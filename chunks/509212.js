@@ -25,13 +25,16 @@ n.d(t, {
     LM: () => eR,
     Mo: () => tG,
     NI: () => tU,
+    NL: () => tF,
     Nj: () => eM,
+    Nt: () => tV,
     PB: () => tn,
     PM: () => eh,
     Pb: () => eG,
     Qe: () => W,
     Rc: () => tZ,
     Rt: () => e8,
+    T2: () => tH,
     U3: () => ei,
     V$: () => tf,
     VB: () => tC,
@@ -1021,4 +1024,38 @@ function tB(e) {
 }
 function tZ(e, t) {
     return null != e && null != t && (0, h.p9)(t, O.Z, E.Z, y.Z, p.default)[0];
+}
+function tF(e) {
+    switch (e) {
+        case j.yq.SUGGESTED:
+            return G.intl.string(G.t.gBfXPT);
+        case j.yq.MOST_RECENT:
+            return G.intl.string(G.t.K6oEu7);
+        case j.yq.EXPIRING_SOON:
+            return G.intl.string(G.t.IB22n5);
+        case j.yq.RECENTLY_ENROLLED:
+            return G.intl.string(G.t["BB+2tb"]);
+    }
+}
+function tV(e) {
+    switch (e) {
+        case j.XJ.REWARD_VIRTUAL_CURRENCY:
+            return G.intl.string(G.t.ElYQFR);
+        case j.XJ.REWARD_COLLECTIBLE:
+            return G.intl.string(G.t.Jg17Ul);
+        case j.XJ.REWARD_IN_GAME:
+            return G.intl.string(G.t["O/J2kp"]);
+        case j.XJ.TASK_VIDEO:
+            return G.intl.string(G.t.e0iISE);
+        case j.XJ.TASK_PLAY:
+            return G.intl.string(G.t["1nJR4u"]);
+    }
+}
+function tH(e) {
+    switch (e) {
+        case "reward":
+            return G.intl.string(G.t.vjLqAQ);
+        case "task":
+            return G.intl.string(G.t.Hufmsr);
+    }
 }
