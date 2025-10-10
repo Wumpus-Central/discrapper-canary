@@ -173,7 +173,10 @@ function y() {
         B();
     }, [B]),
         (0, u.zq)(() => {
-            d.Z.setMode(x.Z.getMode(), { vadDuringPreProcess: null });
+            d.Z.setMode(x.Z.getMode(), {
+                vadDuringPreProcess: null,
+                vadKrispActivationThreshold: void 0,
+            });
         });
     let H = [];
     return (

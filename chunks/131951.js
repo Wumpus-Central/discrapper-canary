@@ -299,10 +299,14 @@ function tj() {
         i = tM(r),
         a = eK[null != (e = i.activeInputProfile) ? e : eT._.CUSTOM],
         o = eN({}, null != (t = i.modeOptions) ? t : {}, null != (n = a.modeOptions) ? n : {});
-    return (
-        null == o.vadDuringPreProcess && (o.vadDuringPreProcess = (0, z.C)({ location: "getSettings" }).enabled),
-        eP(eN({}, i, a), { modeOptions: o })
-    );
+    if (
+        (null == o.vadDuringPreProcess && (o.vadDuringPreProcess = (0, z.C)({ location: "getSettings" }).enabled),
+        (null == o.vadKrispActivationThreshold && !0 === a.automaticGainControl) || !0 === i.automaticGainControl)
+    ) {
+        let e = (0, M.U)({ location: "getSettings" });
+        null != e.vadKrispActivationThreshold && (o.vadKrispActivationThreshold = e.vadKrispActivationThreshold);
+    }
+    return eP(eN({}, i, a), { modeOptions: o });
 }
 function tk(e) {
     var t, n;
@@ -311,7 +315,7 @@ function tk(e) {
         vadThreshold: r.modeOptions.threshold,
         vadAutoThreshold: r.modeOptions.autoThreshold,
         vadUseKrisp: r.modeOptions.vadUseKrisp && n9(),
-        vadKrispActivationThreshold: null != (t = r.modeOptions.vadKrispActivationThreshold) ? t : 0.5,
+        vadKrispActivationThreshold: null != (t = r.modeOptions.vadKrispActivationThreshold) ? t : eU,
         vadLeading: r.modeOptions.vadLeading,
         vadTrailing: r.modeOptions.vadTrailing,
         vadDuringPreProcess: null != (n = r.modeOptions.vadDuringPreProcess) && n,
