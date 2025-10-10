@@ -196,19 +196,19 @@ function R(e) {
           });
 }
 function P(e) {
-    let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
+    let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: c } = e,
         u = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
         f = (e) => {
-            null == e || e.stopPropagation(), N(u, n, t, d.Vh.POPULAR_COMMANDS, l), null == c || c(t);
+            null == e || e.stopPropagation(), N(u, n, t, d.Vh.POPULAR_COMMANDS, s), null == c || c(t);
         };
     return (0, r.jsx)(o.u, {
         text: i,
         position: "top",
-        children: (0, r.jsxs)(s.zx, {
+        children: (0, r.jsx)(l.zxk, {
+            size: "sm",
+            variant: "secondary",
             onClick: f,
-            color: s.Tt.PRIMARY,
-            size: s.Ph.ICON,
-            children: [v.GI, n],
+            text: "".concat(v.GI).concat(n),
         }),
     });
 }
