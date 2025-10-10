@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A });
 var r = n(951288),
     i = n(481060),
     a = n(924628),
@@ -15,29 +15,30 @@ var r = n(951288),
     m = n(402583),
     g = n(230341),
     E = n(893996),
-    b = n(266132),
-    y = n(726985),
-    O = n(388032);
-function v() {
-    return (0, r.jsxs)(E.Z, {
-        title: O.intl.string(O.t.WWaFn5),
-        description: O.intl.format(O.t["/6sFWV"], { helpArticle: (0, s.uV)() }),
-        webSetting: y.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-        children: [(0, r.jsx)(g.Z, {}), (0, r.jsx)(b.Z, {})],
-    });
-}
+    b = n(441007),
+    y = n(266132),
+    O = n(726985),
+    v = n(388032);
 function I() {
-    return (0, r.jsx)(E.Z, {
-        title: O.intl.string(O.t.BG7Qsb),
-        webSetting: y.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
-        children: (0, r.jsx)(d.Z, {}),
+    return (0, r.jsxs)(E.Z, {
+        title: v.intl.string(v.t.WWaFn5),
+        description: v.intl.format(v.t["/6sFWV"], { helpArticle: (0, s.uV)() }),
+        webSetting: O.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+        children: [(0, r.jsx)(g.Z, {}), (0, r.jsx)(y.Z, {})],
     });
 }
 function T() {
+    return (0, r.jsx)(E.Z, {
+        title: v.intl.string(v.t.BG7Qsb),
+        webSetting: O.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        children: (0, r.jsx)(d.Z, {}),
+    });
+}
+function S() {
     let e = (0, c.W)("UserSettingsDataAndPrivacy");
     return (0, r.jsxs)(E.Z, {
-        title: O.intl.string(O.t.SRZyHh),
-        webSetting: y.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        title: v.intl.string(v.t.SRZyHh),
+        webSetting: O.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
         children: [
             (0, r.jsx)(m.Z, {}),
             (0, r.jsx)(h.Z, {}),
@@ -47,15 +48,16 @@ function T() {
         ],
     });
 }
-function S() {
+function A() {
     return (
         (0, o.ZP)(() => {
             (0, a.I)(), (0, l.A)();
         }),
         (0, r.jsx)(u.N, {
-            header: O.intl.string(O.t.OAuOHB),
+            header: v.intl.string(v.t.OAuOHB),
+            notice: (0, r.jsx)(b.Z, { page: b.N.DATA_AND_PRIVACY }),
             children: (0, r.jsxs)(i.l09, {
-                children: [(0, r.jsx)(T, {}), (0, r.jsx)(I, {}), (0, r.jsx)(v, {})],
+                children: [(0, r.jsx)(S, {}), (0, r.jsx)(T, {}), (0, r.jsx)(I, {})],
             }),
         })
     );

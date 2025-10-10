@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     a = n(915009),
@@ -9,8 +9,9 @@ var r = n(951288),
     u = n(51331),
     d = n(726985),
     f = n(981631),
-    _ = n(388032);
-function p() {
+    _ = n(388032),
+    p = n(345909);
+function h() {
     let e = l.xq.useSetting(),
         t = i.useMemo(() => (0, s.bL)(e), [e]),
         n = (0, a.LN)();
@@ -18,16 +19,17 @@ function p() {
         children: [
             (0, r.jsx)(c.U, {
                 setting: d.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(u.ZP, {
                     title: _.intl.string(_.t["7x9dyM"]),
                     value: t.all,
                     onChange: (e) => l.xq.updateSetting(e ? f.HGf : f.HGf & ~f.SOq.NO_RELATION),
                     disabled: n,
+                    tooltipText: n ? _.intl.string(p.default["6Af/c3"]) : void 0,
                 }),
             }),
             (0, r.jsx)(c.U, {
                 setting: d.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(u.ZP, {
                     title: _.intl.string(_.t.NfeuZ2),
                     value: t.all || t.mutualFriends,
                     onChange: (t) =>
@@ -35,11 +37,12 @@ function p() {
                             t ? o.pj(e, f.SOq.MUTUAL_FRIENDS) : o.M1(e, f.SOq.MUTUAL_FRIENDS, f.SOq.NO_RELATION),
                         ),
                     disabled: n,
+                    tooltipText: n ? _.intl.string(p.default["6Af/c3"]) : void 0,
                 }),
             }),
             (0, r.jsx)(c.U, {
                 setting: d.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(u.ZP, {
                     title: _.intl.string(_.t.qsMfsL),
                     value: t.all || t.mutualGuilds,
                     onChange: (t) =>
@@ -47,6 +50,7 @@ function p() {
                             t ? o.pj(e, f.SOq.MUTUAL_GUILDS) : o.M1(e, f.SOq.MUTUAL_GUILDS, f.SOq.NO_RELATION),
                         ),
                     disabled: n,
+                    tooltipText: n ? _.intl.string(p.default["6Af/c3"]) : void 0,
                 }),
             }),
         ],

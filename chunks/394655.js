@@ -12,7 +12,7 @@ function f() {
     let e = (0, i.p)();
     return (0, r.jsx)(s.U, {
         setting: c.s6.PRIVACY_KEYWORD_FILTER_V2,
-        children: (0, r.jsx)(l.Z, {
+        children: (0, r.jsx)(l.ZP, {
             value: e,
             onChange: (e) =>
                 o.gw.updateSetting({

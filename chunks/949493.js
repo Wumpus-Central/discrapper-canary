@@ -7,57 +7,57 @@ var r = n(951288),
     l = n(526156),
     c = n(924356),
     u = n(901151),
-    d = n(931461),
-    f = n(24400),
-    _ = n(122897),
-    p = n(694569),
-    h = n(394655),
-    m = n(540204),
-    g = n(893996),
-    E = n(273927),
-    b = n(211466),
-    y = n(864239),
-    O = n(190014),
-    v = n(301812),
-    I = n(988043),
-    T = n(919539),
+    d = n(24400),
+    f = n(122897),
+    _ = n(694569),
+    p = n(394655),
+    h = n(540204),
+    m = n(893996),
+    g = n(273927),
+    E = n(211466),
+    b = n(864239),
+    y = n(190014),
+    O = n(301812),
+    v = n(988043),
+    I = n(919539),
+    T = n(441007),
     S = n(726985),
     A = n(583139),
     C = n(981631),
     N = n(388032);
 let R = () =>
-        (0, r.jsxs)(g.Z, {
+        (0, r.jsxs)(m.Z, {
             title: N.intl.string(N.t.xVRG4O),
             webSetting: S.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [
-                (0, r.jsx)(b.n, {}),
-                (0, r.jsx)(_.Z, {}),
-                (0, r.jsx)(h.Z, {}),
+                (0, r.jsx)(E.n, {}),
                 (0, r.jsx)(f.Z, {}),
+                (0, r.jsx)(p.Z, {}),
+                (0, r.jsx)(d.Z, {}),
                 (0, r.jsx)(c.Z, {}),
-                (0, r.jsx)(y.Z, {}),
+                (0, r.jsx)(b.Z, {}),
             ],
         }),
     P = () =>
-        (0, r.jsxs)(g.Z, {
+        (0, r.jsxs)(m.Z, {
             title: N.intl.string(N.t["y62Z/f"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: [
                 (0, r.jsx)(a.F, {
                     setting: S.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                    children: (0, r.jsx)(m.Z, {}),
+                    children: (0, r.jsx)(h.Z, {}),
                 }),
-                (0, r.jsx)(I.Z, {}),
-                (0, r.jsx)(T.Z, {}),
                 (0, r.jsx)(v.Z, {}),
+                (0, r.jsx)(I.Z, {}),
                 (0, r.jsx)(O.Z, {}),
+                (0, r.jsx)(y.Z, {}),
             ],
         }),
     w = () =>
-        (0, r.jsxs)(g.Z, {
+        (0, r.jsxs)(m.Z, {
             title: N.intl.string(N.t["1Qn8iY"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(E.ZP, {})],
+            children: [(0, r.jsx)(_.Z, {}), (0, r.jsx)(g.ZP, {})],
         }),
     D = () =>
         (0, r.jsxs)(r.Fragment, {
@@ -79,7 +79,7 @@ function L() {
         ];
     return (0, r.jsx)(s.N, {
         header: N.intl.string(N.t["+o1pDQ"]),
-        notice: (0, r.jsx)(d.I, {}),
+        notice: (0, r.jsx)(T.Z, { page: T.N.CONTENT_AND_SOCIAL }),
         children: (0, r.jsx)(l.Z, {
             parentSetting: S.s6.CONTENT_SOCIAL,
             settingsSection: C.oAB.CONTENT_AND_SOCIAL,

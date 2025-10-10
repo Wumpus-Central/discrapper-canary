@@ -140,7 +140,7 @@ function A() {
     let e = f._j.useSetting();
     return (0, r.jsx)(g.U, {
         setting: b.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
-        children: (0, r.jsx)(E.Z, {
+        children: (0, r.jsx)(E.ZP, {
             title: O.intl.string(O.t.XpBObG),
             note: O.intl.format(O.t.oZsHTE, { helpdeskArticle: u.Z.getArticleURL(y.BhN.SLAYER_GAME_FRIENDS) }),
             value: e,

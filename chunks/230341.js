@@ -12,7 +12,7 @@ function f() {
     let e = (0, i.e7)([o.Z], () => o.Z.getPersistentCodesEnabled());
     return (0, r.jsx)(l.U, {
         setting: u.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES,
-        children: (0, r.jsx)(c.Z, {
+        children: (0, r.jsx)(c.ZP, {
             value: e,
             onChange: a.Z.updatePersistentCodesEnabled,
             title: d.intl.string(d.t["opi/XF"]),

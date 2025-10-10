@@ -1,103 +1,111 @@
 n.d(t, {
-    E2: () => S,
-    LI: () => E,
-    Qr: () => g,
-    _p: () => T,
-    f0: () => O,
-    iB: () => y,
-    jV: () => I,
-    k0: () => C,
-    lW: () => R,
-    lx: () => b,
-    m4: () => v,
-    nE: () => N,
-    t3: () => m,
-    yH: () => A,
+    E2: () => A,
+    LI: () => b,
+    MH: () => D,
+    Qr: () => E,
+    _p: () => S,
+    f0: () => v,
+    iB: () => O,
+    jV: () => T,
+    k0: () => N,
+    lW: () => P,
+    lx: () => y,
+    m4: () => I,
+    nE: () => R,
+    t3: () => g,
+    yH: () => C,
 }),
     n(388685),
     n(642613);
 var r = n(913527),
-    i = n.n(r);
-n(594174);
-var a = n(260722),
-    o = n(914788),
-    s = n(277537),
-    l = n(292352),
-    c = n(345909),
-    u = n(388032);
-let d = 60,
-    f = 3600,
-    _ = 86400,
-    p = 172800,
-    h = 604800,
-    m = () => ({
-        today: u.intl.string(c.default.VjIAQU),
-        yesterday: u.intl.string(c.default["2a8xHR"]),
-        days: c.default.Xt6oND,
+    i = n.n(r),
+    a = n(594174),
+    o = n(260722),
+    s = n(914788),
+    l = n(277537),
+    c = n(292352),
+    u = n(345909),
+    d = n(388032);
+let f = 60,
+    _ = 3600,
+    p = 86400,
+    h = 172800,
+    m = 604800,
+    g = () => ({
+        today: d.intl.string(u.default.VjIAQU),
+        yesterday: d.intl.string(u.default["2a8xHR"]),
+        days: u.default.Xt6oND,
     }),
-    g = (e) =>
+    E = (e) =>
         e
             ? {
-                  today: u.intl.string(c.default["2AtcIi"]),
-                  yesterday: u.intl.string(c.default.stOECg),
-                  days: c.default.n8n5BQ,
+                  today: d.intl.string(u.default["2AtcIi"]),
+                  yesterday: d.intl.string(u.default.stOECg),
+                  days: u.default.n8n5BQ,
               }
             : {
-                  today: u.intl.string(c.default.g1ZX6u),
-                  yesterday: u.intl.string(c.default.s3qSVl),
-                  days: c.default.f1UJiI,
+                  today: d.intl.string(u.default.g1ZX6u),
+                  yesterday: d.intl.string(u.default.s3qSVl),
+                  days: u.default.f1UJiI,
               },
-    E = (e, t, n) => {
+    b = (e, t, n) => {
         let r = i()().diff(i()(e), "s"),
             a = t(),
             o = i()(e).format("LL");
-        return r < _
+        return r < p
             ? a.today
-            : r < p
+            : r < h
               ? a.yesterday
-              : u.intl.formatToPlainString(a.days, { days: Math.min(Math.floor(r / _), null != n ? n : 999) });
+              : d.intl.formatToPlainString(a.days, { days: Math.min(Math.floor(r / p), null != n ? n : 999) });
     },
-    b = (e, t) => {
+    y = (e, t) => {
         let n = i()().diff(i()(e), "s"),
             r = t(),
             a = i()(e).format("LL");
-        return n < d
+        return n < f
             ? r.seconds
-            : n < f
-              ? u.intl.formatToPlainString(r.minutes, { count: Math.floor(n / d) })
-              : n < _
-                ? u.intl.formatToPlainString(r.hours, { count: Math.floor(n / f) })
-                : n < p
+            : n < _
+              ? d.intl.formatToPlainString(r.minutes, { count: Math.floor(n / f) })
+              : n < p
+                ? d.intl.formatToPlainString(r.hours, { count: Math.floor(n / _) })
+                : n < h
                   ? r.yesterday
-                  : n < h
-                    ? u.intl.formatToPlainString(r.days, { count: Math.floor(n / _) })
-                    : u.intl.formatToPlainString(r.date, { date: a });
+                  : n < m
+                    ? d.intl.formatToPlainString(r.days, { count: Math.floor(n / p) })
+                    : d.intl.formatToPlainString(r.date, { date: a });
     },
-    y = (e) =>
-        e.display_type === l.MY.USER_ADD ||
-        e.display_type === l.MY.USER_INTERACTION ||
-        e.display_type === l.MY.USER_CALLED,
-    O = (e) => e.display_type === l.MY.GUILD_ADD || e.display_type === l.MY.GUILD_INTERACTION,
-    v = (e) => e.display_type === l.MY.PURCHASES,
-    I = (e) => {
-        for (let t of Object.values(l.MY)) if (t.toString() === e) return t;
-    },
+    O = (e) =>
+        e.display_type === c.MY.USER_ADD ||
+        e.display_type === c.MY.USER_INTERACTION ||
+        e.display_type === c.MY.USER_CALLED,
+    v = (e) => e.display_type === c.MY.GUILD_ADD || e.display_type === c.MY.GUILD_INTERACTION,
+    I = (e) => e.display_type === c.MY.PURCHASES,
     T = (e) => {
-        let t = S(e);
-        return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
+        for (let t of Object.values(c.MY)) if (t.toString() === e) return t;
     },
     S = (e) => {
-        let t = new Map(l.tx);
-        return e && (t = new Map([...t, ...l.U])), t;
+        let t = A(e);
+        return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
     },
     A = (e) => {
+        let t = new Map(c.tx);
+        return e && (t = new Map([...t, ...c.U])), t;
+    },
+    C = (e) => {
         let t = Math.floor(e / 60),
             n = e % 60;
         return t > 0 ? "".concat(t, "h ").concat(n, "m") : "".concat(n, "m");
     },
-    C = () => {
-        if (o.Z.getAreLinkedUsersProcessed()) return o.Z.getLinkedUsers();
-        a.ZP.fetchLinkedUsers();
+    N = () => {
+        if (s.Z.getAreLinkedUsersProcessed()) return s.Z.getLinkedUsers();
+        o.ZP.fetchLinkedUsers();
     },
-    N = (e, t) => ((0, s.PO)("family_center_activity_card") ? t : e),
-    R = (e, t) => ((0, s.vE)("family_center_activity_card") ? t : e);
+    R = (e, t) => ((0, l.PO)("family_center_activity_card") ? t : e),
+    P = (e, t) => ((0, l.vE)("family_center_activity_card") ? t : e),
+    w = () => Object.values(s.Z.getLinkedUsers()).some((e) => e.link_status === c.ne.ACTIVE),
+    D = () => {
+        let e = a.default.getCurrentUser(),
+            t = w(),
+            n = (0, l.vE)("settings-controls");
+        return (null == e ? void 0 : e.nsfwAllowed) === !1 && t && n;
+    };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -11,12 +11,13 @@ var r = n(951288),
     f = n(922628),
     _ = n(726985),
     p = n(981631),
-    h = n(388032);
-function m() {
+    h = n(388032),
+    m = n(345909);
+function g() {
     let e = (0, a.cj)([l.Z], () => l.Z.hasConsented(p.pjP.PERSONALIZATION)),
         [t, n] = i.useState(e),
-        m = (0, s.LN)(),
-        g = (e) => {
+        g = (0, s.LN)(),
+        E = (e) => {
             e
                 ? (0, o.g)([p.pjP.PERSONALIZATION], [])
                       .catch(f.S)
@@ -35,12 +36,13 @@ function m() {
         };
     return (0, r.jsx)(u.U, {
         setting: _.s6.PRIVACY_DATA_PERSONALIZE_V2,
-        children: (0, r.jsx)(d.Z, {
+        children: (0, r.jsx)(d.ZP, {
             title: h.intl.string(h.t.MNKzys),
             note: h.intl.format(h.t["eQL/Mj"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_USED_FOR_RECOMMENDED) }),
             value: t,
-            onChange: g,
-            disabled: m,
+            onChange: E,
+            disabled: g,
+            tooltipText: g ? h.intl.string(m.default["6Af/c3"]) : void 0,
         }),
     });
 }
