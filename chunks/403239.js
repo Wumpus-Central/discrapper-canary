@@ -1,53 +1,52 @@
-r.d(t, { q: () => d }), r(388685);
+r.d(t, { q: () => u }), r(388685);
 var n = r(647438),
     i = r(79116),
     o = r(100568),
     a = r(417865),
     l = r(665379),
-    c = r(481060),
-    s = r(592183),
-    u = r(517157);
-function d(e) {
-    let { dropRef: t, dragRef: r, userId: d, widget: f, index: g, disableInteraction: p = !1 } = e,
-        b = (0, u.Z)(d),
-        m = (0, c.zPA)(),
-        { isDragging: O, currentItem: y } = (0, i.f)((e) => ({
+    c = r(592183),
+    s = r(517157);
+function u(e) {
+    let { dropRef: t, dragRef: r, userId: u, widget: d, index: f, disableInteraction: g = !1 } = e,
+        p = (0, s.Z)(u),
+        { isDragging: b, currentItem: m } = (0, i.f)((e) => ({
             isDragging: e.isDragging(),
             currentItem: e.getItem(),
         })),
-        j = (0, n.useCallback)(
+        O = (0, n.useCallback)(
             (e, t) => {
-                let r = b.slice(),
+                let r = p.slice(),
                     [n] = r.splice(e, 1);
-                r.splice(t, 0, n), s.Z.setPendingWidgets(r);
+                r.splice(t, 0, n), c.Z.setPendingWidgets(r);
             },
-            [b],
+            [p],
         ),
-        [, x, h] = (0, o.c)({
+        [, y, j] = (0, o.c)({
             type: "WIDGET",
             item: {
-                widgetType: f.type,
-                index: g,
-                widget: f,
-                originalIndex: null != g ? g : 0,
+                widgetType: d.type,
+                index: f,
+                widget: d,
+                originalIndex: null != f ? f : 0,
+                type: "WIDGET",
             },
-            canDrag: () => !p,
+            canDrag: () => !g,
             collect: (e) => ({
                 handlerId: e.getHandlerId(),
                 isDragging: e.isDragging(),
             }),
         });
     (0, n.useEffect)(() => {
-        h((0, l.r)(), { captureDraggingState: !0 });
-    }, [h]);
-    let [{ dragSourcePosition: v }, _] = (0, a.L)({
+        j((0, l.r)(), { captureDraggingState: !0 });
+    }, [j]);
+    let [{ dragSourcePosition: x }, h] = (0, a.L)({
         accept: "WIDGET",
-        canDrop: () => !p,
+        canDrop: () => !g,
         collect: (e) => {
             let t = null,
                 r = e.getItem();
             return (
-                null != r && e.isOver() && e.canDrop() && r.widgetType !== f.type && (t = r.originalIndex),
+                null != r && e.isOver() && e.canDrop() && r.widgetType !== d.type && (t = r.originalIndex),
                 {
                     handlerId: e.getHandlerId(),
                     dragSourcePosition: t,
@@ -55,32 +54,19 @@ function d(e) {
             );
         },
         drop: (e) => {
-            let t = null != g ? g : 0;
-            j(e.index, t), (e.index = t);
-        },
-        hover: (e, r) => {
-            var n;
-            if (p || m || null == t.current || !r.isOver({ shallow: !0 })) return;
-            let i = e.index,
-                o = null != g ? g : 0;
-            if (i === o) return;
-            let a = null == (n = t.current) ? void 0 : n.getBoundingClientRect(),
-                l = (a.bottom - a.top) / 2,
-                c = r.getClientOffset();
-            if (null == c) return;
-            let s = c.y - a.top;
-            (!(i < o) || !(s < l)) && ((i > o && s > l) || (j(i, o), (e.index = o)));
+            let t = null != f ? f : 0;
+            O(e.index, t), (e.index = t);
         },
     });
-    return null == g || p
+    return null == f || g
         ? {
               isDragging: !1,
               dragSourcePosition: null,
           }
-        : (x(r),
-          _(t),
+        : (y(r),
+          h(t),
           {
-              isDragging: O && (null == y ? void 0 : y.widgetType) === f.type,
-              dragSourcePosition: v,
+              isDragging: b && (null == m ? void 0 : m.widgetType) === d.type,
+              dragSourcePosition: x,
           });
 }
