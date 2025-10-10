@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => I,
-    openUploadError: () => T,
+    A: () => v,
+    openUploadError: () => I,
 });
 var r = n(951288);
 n(647438);
@@ -11,16 +11,15 @@ var i = n(120356),
     l = n(313201),
     c = n(174609),
     u = n(47280),
-    d = n(998076),
-    f = n(355314),
-    _ = n(911311),
-    p = n(703656),
-    h = n(626135),
-    m = n(310752),
-    g = n(731994),
-    E = n(981631),
-    b = n(995751);
-function y(e, t, n) {
+    d = n(355314),
+    f = n(911311),
+    _ = n(703656),
+    p = n(626135),
+    h = n(310752),
+    m = n(731994),
+    g = n(981631),
+    E = n(995751);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,58 +43,56 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: y, fileSize: O, onClose: v } = e,
-        I = (0, l.Dt)(),
-        T = null != y ? y : g.J6,
-        S = (0, u.ZP)({ location: "UploadError" }),
-        A = (0, d.Z)({ location: "UploadError" }),
-        C = S || A,
-        N = () => {
+function O(e) {
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: b, fileSize: y, onClose: O } = e,
+        v = (0, l.Dt)(),
+        I = null != b ? b : m.J6,
+        T = (0, u.ZP)({ location: "UploadError" }),
+        S = () => {
             (0, c.Z)(),
-                v(),
-                h.default.track(E.rMx.PREMIUM_PROMOTION_OPENED, {
-                    location_section: E.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                    location_object: E.qAy.NAVIGATION_LINK,
+                O(),
+                p.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, {
+                    location_section: g.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                    location_object: g.qAy.NAVIGATION_LINK,
                 }),
-                (0, p.uL)(E.Z5c.APPLICATION_STORE);
+                (0, _.uL)(g.Z5c.APPLICATION_STORE);
         };
     return i
-        ? C
-            ? (0, r.jsx)(_.Z, {
+        ? T
+            ? (0, r.jsx)(f.Z, {
                   transitionState: o,
-                  onClose: v,
-                  handleLearnMore: N,
+                  onClose: O,
+                  handleLearnMore: S,
               })
-            : (0, r.jsx)(f.Z, {
+            : (0, r.jsx)(d.Z, {
                   transitionState: o,
-                  onClose: v,
-                  handleLearnMore: N,
-                  fileSize: O,
+                  onClose: O,
+                  handleLearnMore: S,
+                  fileSize: y,
               })
         : (0, r.jsx)(s.Y0, {
               size: s.Cg.DYNAMIC,
-              "aria-labelledby": I,
+              "aria-labelledby": v,
               transitionState: o,
               parentComponent: "UploadError",
               children: (0, r.jsx)("div", {
-                  className: a()(b.uploadDropModal, b.error),
+                  className: a()(E.uploadDropModal, E.error),
                   children: (0, r.jsxs)("div", {
-                      className: b.inner,
+                      className: E.inner,
                       children: [
-                          (0, r.jsx)(m.Z, { icons: T }),
+                          (0, r.jsx)(h.Z, { icons: I }),
                           (0, r.jsx)("div", {
-                              id: I,
-                              className: b.title,
+                              id: v,
+                              className: E.title,
                               children: t,
                           }),
                           (0, r.jsx)("div", {
-                              className: b.instructions,
+                              className: E.instructions,
                               children: n,
                           }),
                       ],
@@ -103,7 +100,7 @@ function v(e) {
               }),
           });
 }
-let I = "UPLOAD_ERROR_MODAL_KEY";
-function T(e) {
-    (0, o.h7)((t) => (0, r.jsx)(v, O({}, t, e)), { modalKey: I });
+let v = "UPLOAD_ERROR_MODAL_KEY";
+function I(e) {
+    (0, o.h7)((t) => (0, r.jsx)(O, y({}, t, e)), { modalKey: v });
 }

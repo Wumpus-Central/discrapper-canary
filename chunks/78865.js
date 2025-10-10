@@ -1,19 +1,18 @@
-r.d(t, { default: () => m });
+r.d(t, { default: () => y });
 var n = r(951288);
 r(647438);
 var o = r(952265),
     a = r(174609),
     c = r(47280),
-    l = r(998076),
-    i = r(790527),
-    s = r(731502),
-    u = r(703656),
-    b = r(626135),
-    f = r(981631),
-    d = r(474936),
-    p = r(388032),
-    O = r(880916);
-function y(e) {
+    l = r(790527),
+    i = r(731502),
+    s = r(703656),
+    u = r(626135),
+    b = r(981631),
+    f = r(474936),
+    d = r(388032),
+    p = r(880916);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -38,9 +37,9 @@ function y(e) {
     }
     return e;
 }
-function m(e) {
+function y(e) {
     var { onClose: t, analyticsSource: r } = e,
-        m = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -62,58 +61,56 @@ function m(e) {
             return o;
         })(e, ["onClose", "analyticsSource"]);
     let g = (0, n.jsx)("img", {
-        className: O.art,
+        className: p.art,
         alt: "HD Streaming Nitro Perk",
         src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
     });
-    function h() {
+    function m() {
         (0, a.Z)(),
             (0, o.pT)(),
-            b.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: f.jXE.STREAM_UPSELL_MODAL,
-                location_object: f.qAy.NAVIGATION_LINK,
+            u.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: b.jXE.STREAM_UPSELL_MODAL,
+                location_object: b.qAy.NAVIGATION_LINK,
             }),
-            (0, u.uL)(f.Z5c.APPLICATION_STORE);
+            (0, s.uL)(b.Z5c.APPLICATION_STORE);
     }
-    let j = p.intl.string(p.t.ewxv3N),
-        S = p.intl.string(p.t.qlsCDA),
-        v = (0, c.ZP)({ location: "StreamUpsellModal" }),
-        P = (0, l.Z)({ location: "StreamUpsellModal" });
-    return v || P
+    let h = d.intl.string(d.t.ewxv3N),
+        j = d.intl.string(d.t.qlsCDA);
+    return (0, c.ZP)({ location: "StreamUpsellModal" })
         ? (0, n.jsx)(
-              s.Z,
-              y(
+              i.Z,
+              O(
                   {
                       onClose: t,
-                      handleLearnMore: h,
+                      handleLearnMore: m,
                   },
-                  m,
+                  y,
               ),
           )
         : (0, n.jsx)(
-              i.Z,
-              y(
+              l.Z,
+              O(
                   {
-                      title: j,
-                      glowUp: S,
-                      body: S,
+                      title: h,
+                      glowUp: j,
+                      body: j,
                       artElement: g,
-                      artContainerClassName: O.artContainer,
-                      type: d.cd.STREAM_QUALITY_UPSELL,
+                      artContainerClassName: p.artContainer,
+                      type: f.cd.STREAM_QUALITY_UPSELL,
                       analyticsLocation: {
-                          section: f.jXE.STREAM_UPSELL_MODAL,
-                          object: f.qAy.BUTTON_CTA,
+                          section: b.jXE.STREAM_UPSELL_MODAL,
+                          object: b.qAy.BUTTON_CTA,
                       },
                       analyticsSource: r,
                       onClose: t,
                       onSubscribeClick: a.Z,
-                      secondaryCTA: p.intl.string(p.t.ZnqyZ2),
-                      onSecondaryClick: h,
+                      secondaryCTA: d.intl.string(d.t.ZnqyZ2),
+                      onSecondaryClick: m,
                       showEnhancedUpsell: !0,
                       enableArtBoxShadow: !1,
-                      headerClassName: O.header,
+                      headerClassName: p.header,
                   },
-                  m,
+                  y,
               ),
           );
 }
