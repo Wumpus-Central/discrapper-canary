@@ -1,49 +1,47 @@
-n.d(t, { Z: () => m }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(843611),
     a = n(481060),
     o = n(113434),
-    s = n(937797),
-    c = n(264282),
-    u = n(78606),
-    d = n(710914),
-    p = n(46140),
-    f = n(388032),
-    h = n(872058);
-let g = [];
-function m() {
-    let { enabled: e } = s.$d.useConfig({ location: p.dr.QUEST_HOME_DESKTOP }),
-        [t, n] = i.useState(p.yq.SUGGESTED),
-        [m, b] = i.useState(g),
+    s = n(264282),
+    c = n(78606),
+    u = n(710914),
+    d = n(46140),
+    p = n(388032),
+    f = n(872058);
+let h = [];
+function g() {
+    let [e, t] = i.useState(d.yq.SUGGESTED),
+        [n, g] = i.useState(h),
         {
-            quests: _,
-            isFetchingCurrentQuests: O,
-            hasFetched: E,
+            quests: m,
+            isFetchingCurrentQuests: b,
+            hasFetched: _,
         } = (0, o.bA)(
             o.e5.ALL,
             i.useMemo(
                 () => ({
-                    sortMethod: t,
-                    filters: m,
+                    sortMethod: e,
+                    filters: n,
                 }),
-                [t, m],
+                [e, n],
             ),
         ),
-        y = i.useCallback(() => {
-            b(g);
+        O = i.useCallback(() => {
+            g(h);
         }, []),
-        v = i.useRef(null),
-        I = i.useRef(null),
-        S = (0, l.TH)(),
-        C = (0, l.k6)();
+        E = i.useRef(null),
+        y = i.useRef(null),
+        v = (0, l.TH)(),
+        I = (0, l.k6)();
     return (
         i.useEffect(() => {
-            if ("" !== S.hash && null != v.current && null != I.current) {
-                var e, n;
-                (t !== v.current || m !== I.current) &&
-                    C.replace(
-                        ((e = (function (e) {
+            if ("" !== v.hash && null != E.current && null != y.current) {
+                var t, r;
+                (e !== E.current || n !== y.current) &&
+                    I.replace(
+                        ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -67,10 +65,10 @@ function m() {
                                     });
                             }
                             return e;
-                        })({}, S)),
-                        (n = n = { hash: void 0 }),
+                        })({}, v)),
+                        (r = r = { hash: void 0 }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -78,57 +76,56 @@ function m() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(n)).forEach(function (t) {
-                                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
-                        e),
+                        t),
                     );
             }
-        }, [t, m, S, C]),
+        }, [e, n, v, I]),
         i.useEffect(() => {
-            v.current = t;
-        }, [t]),
+            E.current = e;
+        }, [e]),
         i.useEffect(() => {
-            I.current = m;
-        }, [m]),
+            y.current = n;
+        }, [n]),
         (0, o.SU)({
-            selectedSortMethod: t,
-            selectedFilters: m,
-            numQuestsVisible: _.length,
+            selectedSortMethod: e,
+            selectedFilters: n,
+            numQuestsVisible: m.length,
         }),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                e &&
-                    (0, r.jsxs)("div", {
-                        className: h.headingWrapper,
-                        children: [
-                            (0, r.jsx)(a.X6q, {
-                                variant: "heading-lg/medium",
-                                children: f.intl.string(f.t.giYD09),
-                            }),
-                            (0, r.jsxs)("div", {
-                                className: h.headingControls,
-                                children: [
-                                    (0, r.jsx)(u.Z, {
-                                        onChange: n,
-                                        optionClassName: h.filterSortOption,
-                                        selectedSortMethod: t,
-                                    }),
-                                    (0, r.jsx)(c.Z, {
-                                        onChange: b,
-                                        optionClassName: h.filterSortOption,
-                                        selectedFilters: m,
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                (0, r.jsx)(d.Z, {
-                    quests: _,
-                    isFetching: O,
-                    hasFetched: E,
-                    hasFiltersApplied: m.length > 0,
-                    onClearFilters: y,
+                (0, r.jsxs)("div", {
+                    className: f.headingWrapper,
+                    children: [
+                        (0, r.jsx)(a.X6q, {
+                            variant: "heading-lg/medium",
+                            children: p.intl.string(p.t.giYD09),
+                        }),
+                        (0, r.jsxs)("div", {
+                            className: f.headingControls,
+                            children: [
+                                (0, r.jsx)(c.Z, {
+                                    onChange: t,
+                                    optionClassName: f.filterSortOption,
+                                    selectedSortMethod: e,
+                                }),
+                                (0, r.jsx)(s.Z, {
+                                    onChange: g,
+                                    optionClassName: f.filterSortOption,
+                                    selectedFilters: n,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(u.Z, {
+                    quests: m,
+                    isFetching: b,
+                    hasFetched: _,
+                    hasFiltersApplied: n.length > 0,
+                    onClearFilters: O,
                 }),
             ],
         })

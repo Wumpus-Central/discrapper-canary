@@ -1,8 +1,7 @@
 n.d(t, {
-    $d: () => s,
     CD: () => o,
     DL: () => i,
-    m8: () => l,
+    m8: () => s,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -28,12 +27,6 @@ let i = (0, r.le)({
         return t;
     },
     s = (0, r.le)({
-        name: "2025-08-quest-home-v2-sorting-filtering",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    l = (0, r.le)({
         name: "2025-08-quest-home-v2-entrypoint-relocation",
         kind: "user",
         defaultConfig: { enabled: !1 },
