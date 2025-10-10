@@ -306,74 +306,77 @@ let eh = function (e) {
                           tabs: D,
                       })
                     : es
-                      ? (0, r.jsx)(X.t.Provider, {
+                      ? (0, r.jsxs)(X.t.Provider, {
                             value: eh,
-                            children: (0, r.jsxs)(j.Z, {
-                                onScroll: U,
-                                ref: eh,
-                                children: [
-                                    (0, r.jsx)(N.a, {
-                                        selectedTabId: w,
-                                        handleTransition: L,
-                                        tabs: D,
-                                        icon: d.qDn,
-                                        children: (0, r.jsx)(A.V9, {
-                                            analyticsPage: ee.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                            cardAlignment: A.ek.END,
-                                            ctaText: er.intl.string(er.t["J+vlIS"]),
-                                            ctaOnClick: eg,
-                                        }),
+                            children: [
+                                (0, r.jsx)(N.a, {
+                                    selectedTabId: w,
+                                    handleTransition: L,
+                                    tabs: D,
+                                    icon: d.qDn,
+                                    children: (0, r.jsx)(A.V9, {
+                                        analyticsPage: ee.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                        cardAlignment: A.ek.END,
+                                        ctaText: er.intl.string(er.t["J+vlIS"]),
+                                        ctaOnClick: eg,
                                     }),
-                                    w !== k.e5.PREVIEW_TOOL &&
-                                        (0, r.jsxs)(I.Z, {
-                                            title: eu,
-                                            description: ep,
-                                            button: es
-                                                ? (0, r.jsxs)(d.hE2, {
-                                                      children: [
-                                                          (0, r.jsx)(d.zxk, {
-                                                              variant: "overlay-primary",
-                                                              text: er.intl.string(er.t["1Wm129"]),
-                                                              onClick: () =>
-                                                                  (0, _.mK)({
-                                                                      openInLayer: !1,
-                                                                      tab: et.AW.ORBS,
-                                                                      analyticsLocations: [],
-                                                                      analyticsSource: h.Z.INTRO_TO_ORBS_QUEST_BANNER,
-                                                                  }),
-                                                          }),
-                                                          (0, r.jsx)(d.zxk, {
-                                                              variant: "overlay-secondary",
-                                                              text: er.intl.string(er.t["7kTAgI"]),
-                                                              onClick: ec,
-                                                          }),
-                                                      ],
-                                                  })
-                                                : (0, r.jsx)(d.zxk, {
-                                                      variant: "overlay-primary",
-                                                      text: er.intl.string(er.t.hvVgAQ),
-                                                      onClick: ec,
-                                                      icon: d.Gr1,
-                                                      iconPosition: "end",
-                                                  }),
-                                            className: a()(ei.bannerContainer, { [ei.orbsContainer]: es }),
-                                            children: [
-                                                (0, r.jsx)("div", {
-                                                    className: a()(ei.bannerGradient, { [ei.orbsGradient]: es }),
-                                                }),
-                                                (0, r.jsx)(ed, { onLoadComplete: ea }),
-                                            ],
+                                }),
+                                (0, r.jsxs)(j.Z, {
+                                    onScroll: U,
+                                    ref: eh,
+                                    children: [
+                                        w !== k.e5.PREVIEW_TOOL &&
+                                            (0, r.jsxs)(I.Z, {
+                                                title: eu,
+                                                description: ep,
+                                                button: es
+                                                    ? (0, r.jsxs)(d.hE2, {
+                                                          children: [
+                                                              (0, r.jsx)(d.zxk, {
+                                                                  variant: "overlay-primary",
+                                                                  text: er.intl.string(er.t["1Wm129"]),
+                                                                  onClick: () =>
+                                                                      (0, _.mK)({
+                                                                          openInLayer: !1,
+                                                                          tab: et.AW.ORBS,
+                                                                          analyticsLocations: [],
+                                                                          analyticsSource:
+                                                                              h.Z.INTRO_TO_ORBS_QUEST_BANNER,
+                                                                      }),
+                                                              }),
+                                                              (0, r.jsx)(d.zxk, {
+                                                                  variant: "overlay-secondary",
+                                                                  text: er.intl.string(er.t["7kTAgI"]),
+                                                                  onClick: ec,
+                                                              }),
+                                                          ],
+                                                      })
+                                                    : (0, r.jsx)(d.zxk, {
+                                                          variant: "overlay-primary",
+                                                          text: er.intl.string(er.t.hvVgAQ),
+                                                          onClick: ec,
+                                                          icon: d.Gr1,
+                                                          iconPosition: "end",
+                                                      }),
+                                                className: a()(ei.bannerContainer, { [ei.orbsContainer]: es }),
+                                                children: [
+                                                    (0, r.jsx)("div", {
+                                                        className: a()(ei.bannerGradient, { [ei.orbsGradient]: es }),
+                                                    }),
+                                                    (0, r.jsx)(ed, { onLoadComplete: ea }),
+                                                ],
+                                            }),
+                                        (0, r.jsx)(S.Z, {
+                                            children:
+                                                w === k.e5.CLAIMED
+                                                    ? (0, r.jsx)(el, { onSelectTab: L })
+                                                    : w === k.e5.PREVIEW_TOOL
+                                                      ? (0, r.jsx)(V.Z, {})
+                                                      : (0, r.jsx)(q.Z, {}),
                                         }),
-                                    (0, r.jsx)(S.Z, {
-                                        children:
-                                            w === k.e5.CLAIMED
-                                                ? (0, r.jsx)(el, { onSelectTab: L })
-                                                : w === k.e5.PREVIEW_TOOL
-                                                  ? (0, r.jsx)(V.Z, {})
-                                                  : (0, r.jsx)(q.Z, {}),
-                                    }),
-                                ],
-                            }),
+                                    ],
+                                }),
+                            ],
                         })
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
