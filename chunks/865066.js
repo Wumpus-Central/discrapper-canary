@@ -29,15 +29,16 @@ function E() {
     return !!c.isPlatformEmbedded && null != (e = d.ZP.IsSystemServiceInstalled()) && e;
 }
 function b() {
-    var e;
-    if (!c.isPlatformEmbedded) return !1;
-    let { enabled: t } = f.Z.getConfig({ location: "can-install" });
-    return !!t && null != (e = d.ZP.CanSystemServiceBeInstalled()) && e;
+    if (!c.isPlatformEmbedded || !0 !== d.ZP.CanSystemServiceBeInstalled()) return !1;
+    let { enabled: e } = f.Z.getConfig({ location: "can-install" });
+    return e;
 }
 function y() {
     var e;
-    let { enabled: t } = f.Z.useConfig({ location: "can-install-hook" });
-    return !!c.isPlatformEmbedded && !!t && null != (e = d.ZP.CanSystemServiceBeInstalled()) && e;
+    let t = !!c.isPlatformEmbedded && null != (e = d.ZP.CanSystemServiceBeInstalled()) && e,
+        n = t ? "can-install-hook" : "can-install-hook-disabled",
+        { enabled: r } = f.Z.useConfig({ location: n });
+    return !!t && r;
 }
 function O() {
     let e = (0, r.e7)([s.ZP], () => s.ZP.canShowAdminWarning),

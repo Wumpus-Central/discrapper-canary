@@ -16,25 +16,18 @@ var r = n(442837),
 let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     f = 3,
     _ = (e) => {
-        let { cards: t, perksCards: n, showVoiceFiltersCard: r, showCustomThemesCard: i } = e,
-            a = f,
-            o = (e) => {
+        let { cards: t, perksCards: n, showProfileWidgets: r } = e,
+            i = f,
+            a = (e) => {
                 let { card: n } = e;
-                t.length < a && t.push(n);
-            },
-            s = () => {
-                o({ card: n.specialShopPerks });
-            },
-            l = g();
+                t.length < i && t.push(n);
+            };
         return (
-            r ? o({ card: n.voiceFilters }) : i ? o({ card: n.customThemes }) : o({ card: n.nameplates }),
-            null != n.tenureBadge && o({ card: n.tenureBadge }),
-            o({ card: n.permadecos }),
-            l ? 0 === t.length && s() : o({ card: n.referralProgram }),
-            o({ card: n.newAppStylesUpdateJune2024 }),
-            o({ card: n.serverProfiles }),
-            o({ card: n.earlyAccess }),
-            o({ card: n.unlimitedSuperReactions }),
+            r && a({ card: n.profileWidgets }),
+            a({ card: n.customThemes }),
+            null != n.tenureBadge && a({ card: n.tenureBadge }),
+            a({ card: n.permadecos }),
+            a({ card: n.newAppStylesUpdateJune2024 }),
             t
         );
     },
@@ -46,13 +39,12 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 isPremiumSubscriber: i,
                 fractionalState: a,
                 isInReverseTrial: o,
-                showVoiceFiltersCard: s,
-                showCustomThemesCard: u,
+                showProfileWidgets: s,
             } = e,
-            d = [];
+            u = [];
         switch (n) {
             case l.gM.PERKS_DISCOVERABILITY:
-                d =
+                u =
                     !1 === i
                         ? [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
                         : a === c.a$.FP_ONLY
@@ -60,21 +52,20 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case l.gM.WHATS_NEW:
-                d = _({
-                    cards: d,
+                u = _({
+                    cards: u,
                     perksCards: t,
-                    showVoiceFiltersCard: s,
-                    showCustomThemesCard: u,
+                    showProfileWidgets: s,
                 });
                 break;
             case l.gM.CARD_CAROUSEL_FIRST_ROW:
-                d =
+                u =
                     !1 === i
                         ? [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                         : [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess];
                 break;
             case l.gM.CARD_CAROUSEL_SECOND_ROW:
-                d =
+                u =
                     !1 === i
                         ? [t.customSoundsEverywhere, t.specialStickerAccess]
                         : a === c.a$.FP_ONLY
@@ -103,14 +94,14 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                             ];
                 break;
             case l.gM.CARD_CAROUSEL_THIRD_ROW:
-                d =
+                u =
                     a === c.a$.FP_ONLY
                         ? o
                             ? [t.entranceSoundsSeeAllVariation]
                             : [t.entranceSoundsSeeAllVariation, t.greyBadge]
                         : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return r && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
+        return r && (u = u.filter((e) => !e.hideOnNarrowScreen)), u;
     },
     h = (e) => {
         let t = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
@@ -134,8 +125,4 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     m = () => {
         let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
         return (0, s.I5)(e);
-    },
-    g = () => {
-        let e = a.default.getCurrentUser();
-        return (0, s.M5)(e, c.PremiumTypes.TIER_2);
     };
