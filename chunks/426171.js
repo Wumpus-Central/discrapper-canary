@@ -10,8 +10,8 @@ n.d(t, {
     n(388685);
 var r = n(647438),
     l = n(843611),
-    s = n(442837),
-    a = n(607070),
+    a = n(442837),
+    s = n(607070),
     i = n(100527),
     o = n(906732),
     c = n(819640),
@@ -36,24 +36,24 @@ let m = "".concat("#").concat("itemSkuId", "="),
         }, [e, t.pathname]);
     },
     v = () => {
-        let e = (0, s.e7)([c.Z], () => c.Z.getLayers().includes(_.S9g.COLLECTIBLES_SHOP)),
+        let e = (0, a.e7)([c.Z], () => c.Z.getLayers().includes(_.S9g.COLLECTIBLES_SHOP)),
             t = (0, C.R)(),
             n = r.useRef(null),
-            a = (0, l.TH)(),
+            s = (0, l.TH)(),
             m =
-                a.pathname === _.Z5c.COLLECTIBLES_SHOP
+                s.pathname === _.Z5c.COLLECTIBLES_SHOP
                     ? i.Z.HOME_PAGE_SHOP_TAB
-                    : a.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
+                    : s.pathname === _.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
                       ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN
                       : i.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: E } = (0, o.ZP)(m),
             S = (0, p.Z)();
         r.useEffect(() => {
             if (e) return;
-            let t = b.exec(a.hash);
+            let t = b.exec(s.hash);
             null != t ? (n.current = t[1]) : (n.current = null);
-        }, [S, e, a.hash]);
-        let v = (0, s.e7)([d.Z], () => d.Z.initialProductSkuId);
+        }, [S, e, s.hash]);
+        let v = (0, a.e7)([d.Z], () => d.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let r = null;
@@ -61,17 +61,17 @@ let m = "".concat("#").concat("itemSkuId", "="),
                 let e = setTimeout(() => {
                     ((e) => {
                         let { productSkuId: t, analyticsLocations: n, analyticsSource: r, tab: l } = e,
-                            s = u.Z.getProduct(t),
-                            a = u.Z.getCategoryForProduct(t);
-                        if (null != s && null != a) {
-                            let e = s,
-                                o = (0, h.oQ)({ product: s }),
+                            a = u.Z.getProduct(t),
+                            s = u.Z.getCategoryForProduct(t);
+                        if (null != a && null != s) {
+                            let e = a,
+                                o = (0, h.oQ)({ product: a }),
                                 c = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (c !== document.activeElement && (null == c || c.focus()),
-                                null != s.variantGroupStoreListingId)
+                                null != a.variantGroupStoreListingId)
                             ) {
-                                let n = u.Z.getProductByStoreListingId(s.variantGroupStoreListingId);
+                                let n = u.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
                                 if (null != n) {
                                     var i;
                                     e = n;
@@ -81,7 +81,7 @@ let m = "".concat("#").concat("itemSkuId", "="),
                             }
                             (0, f.T)({
                                 product: e,
-                                category: a,
+                                category: s,
                                 analyticsSource: r,
                                 analyticsLocations: n,
                                 tab: l,
@@ -101,8 +101,8 @@ let m = "".concat("#").concat("itemSkuId", "="),
     },
     x = (e) => {
         let t = r.useRef({}),
-            n = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-            l = (0, s.e7)([u.Z], () => u.Z.isFetchingCategories),
+            n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+            l = (0, a.e7)([u.Z], () => u.Z.isFetchingCategories),
             [i, o] = r.useState(null),
             c = r.useCallback((e, n) => {
                 t.current[e] = n;

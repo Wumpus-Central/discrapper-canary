@@ -16,8 +16,8 @@ var i,
     y = n(872810),
     _ = n(586902),
     O = n(835473),
-    b = n(933557),
-    v = n(600164),
+    v = n(933557),
+    b = n(600164),
     E = n(594190),
     x = n(925329),
     S = n(569545),
@@ -27,8 +27,8 @@ var i,
     I = n(552282),
     P = n(345243),
     w = n(565799),
-    T = n(501655),
-    N = n(786915),
+    N = n(501655),
+    T = n(786915),
     D = n(7188),
     k = n(597998),
     R = n(199902),
@@ -117,8 +117,8 @@ function eo(e) {
         } = e,
         y = (0, Q.Z)({ location: "overlay_voice_widget" }),
         O = (0, a.e7)([B.default], () => B.default.showKeybindIndicators),
-        b = (0, a.e7)([A.default], () => A.default.getId()),
-        v = (0, a.e7)([z.Z], () => z.Z.isLocalMute(i.id)),
+        v = (0, a.e7)([A.default], () => A.default.getId()),
+        b = (0, a.e7)([z.Z], () => z.Z.isLocalMute(i.id)),
         E = (0, a.e7)([R.Z], () => R.Z.getCurrentUserActiveStream()),
         x = (0, a.Wu)([R.Z], () => (null != E ? R.Z.getViewerIds(E) : [])),
         S = (0, _.Z)({
@@ -129,8 +129,8 @@ function eo(e) {
         C = (0, a.e7)([R.Z], () => null != R.Z.getStreamForUser(i.id, g)),
         j = s.useMemo(() => null != E && E.ownerId !== i.id && x.includes(i.id), [E, i.id, x]);
     if (d === $.OYC.ONLY_WHILE_SPEAKING && n && !S) return null;
-    let I = i.id === b,
-        { mute: P, selfMute: w, suppress: T, deaf: N, selfDeaf: D } = m,
+    let I = i.id === v,
+        { mute: P, selfMute: w, suppress: N, deaf: T, selfDeaf: D } = m,
         L = y && O,
         M = w && (!I || !L);
     return (0, r.jsxs)(r.Fragment, {
@@ -153,11 +153,11 @@ function eo(e) {
                 isOverlay: !0,
                 size: u,
                 priority: Z,
-                mute: P || M || v,
-                localMute: v,
-                serverMute: P || T,
-                deaf: N || D,
-                serverDeaf: N,
+                mute: P || M || b,
+                localMute: b,
+                serverMute: P || N,
+                deaf: T || D,
+                serverDeaf: T,
                 userNameClassName: l()(en.username, {
                     [en.locked]: n,
                     [en.hidden]: n && (c === $.wC$.NEVER || (!S && c === $.wC$.ONLY_WHILE_SPEAKING)),
@@ -168,7 +168,7 @@ function eo(e) {
                 (0, r.jsx)(X.Z, {
                     value: w,
                     action: $.kg4.TOGGLE_MUTE,
-                    shouldShow: !P && !T,
+                    shouldShow: !P && !N,
                 }),
         ],
     });
@@ -307,9 +307,9 @@ class el extends (i = s.PureComponent) {
                                       game: o,
                                   })
                                 : (0, r.jsx)(C.Z, { title: f }),
-                            (0, r.jsxs)(v.Z, {
-                                direction: v.Z.Direction.VERTICAL,
-                                justify: v.Z.Justify.BETWEEN,
+                            (0, r.jsxs)(b.Z, {
+                                direction: b.Z.Direction.VERTICAL,
+                                justify: b.Z.Justify.BETWEEN,
                                 className: en.streamerInfo,
                                 children: [
                                     (0, r.jsx)(h.Text, {
@@ -322,12 +322,12 @@ class el extends (i = s.PureComponent) {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(b.Z, {
                         grow: 0,
                         children: [
                             (0, r.jsx)("div", {
                                 className: en.streamerIconWrapper,
-                                children: (0, r.jsx)(N.Z, {
+                                children: (0, r.jsx)(T.Z, {
                                     stream: u,
                                     iconClassName: en.streamerIcon,
                                     appContext: $.IlC.OVERLAY,
@@ -456,7 +456,7 @@ class el extends (i = s.PureComponent) {
 function ea(e) {
     var t;
     let n = (0, a.e7)([V.Z, L.Z], () => L.Z.getChannel(V.Z.getVoiceChannelId())),
-        i = (0, b.ZP)(n),
+        i = (0, v.ZP)(n),
         o = (function () {
             let [e] = (0, a.e7)(
                     [G.ZP, w.Z, V.Z, L.Z],
@@ -465,7 +465,7 @@ function ea(e) {
                         return null == e
                             ? [[], -1]
                             : e.isGuildStageVoice()
-                              ? [w.Z.getMutableParticipants(e.id, T.pV.SPEAKER), w.Z.getParticipantsVersion(e.id)]
+                              ? [w.Z.getMutableParticipants(e.id, N.pV.SPEAKER), w.Z.getParticipantsVersion(e.id)]
                               : [G.ZP.getVoiceStatesForChannel(e), G.ZP.getVoiceStateVersion(e.getGuildId())];
                     },
                     [],

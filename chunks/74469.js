@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -6,26 +6,29 @@ var r = n(951288),
     s = n(481060),
     l = n(313201),
     c = n(243778),
-    u = n(731722),
-    d = n(993413),
-    f = n(996073),
-    _ = n(594174),
-    p = n(840720),
-    h = n(921944),
-    m = n(526761),
-    g = n(388032),
-    E = n(999087);
-let b = (0, l.hQ)(),
-    y = i.memo(function (e) {
+    u = n(305347),
+    d = n(731722),
+    f = n(172751),
+    _ = n(993413),
+    p = n(996073),
+    h = n(594174),
+    m = n(840720),
+    g = n(921944),
+    E = n(131085),
+    b = n(526761),
+    y = n(388032),
+    O = n(999087);
+let v = (0, l.hQ)(),
+    I = i.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: l } = e,
-            [y, O] = (0, c.US)([o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            v = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            I = (0, a.e7)([_.default], () => {
+            [I, T] = (0, c.US)([o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
+            S = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            A = (0, a.e7)([h.default], () => {
                 var e;
-                return (0, u.Pb)(null == (e = _.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
+                return (0, d.Pb)(null == (e = h.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
-            T = void 0 !== n ? n : I,
-            S = i.useMemo(
+            C = void 0 !== n ? n : A,
+            N = i.useMemo(
                 () =>
                     t.reduce((e, t) => {
                         var n;
@@ -40,16 +43,16 @@ let b = (0, l.hQ)(),
                     }, []),
                 [t],
             ),
-            A = i.useCallback(
+            R = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
-                    let a = v.get(e.value);
+                    let a = S.get(e.value);
                     if (null == a) return null;
                     let o = null == (t = a.profile) ? void 0 : t.tag;
                     return null == o
                         ? null
-                        : (0, r.jsx)(p.Z, {
+                        : (0, r.jsx)(m.Z, {
                               guildTag: o,
                               guildBadge: null != (i = null == (n = a.profile) ? void 0 : n.badge) ? i : void 0,
                               guildId: a.id,
@@ -58,56 +61,95 @@ let b = (0, l.hQ)(),
                               guildIconSize: 32,
                           });
                 },
-                [v],
+                [S],
             ),
-            C = i.useCallback(
+            P = i.useCallback(
+                (e) => {
+                    var t;
+                    if (null == e) return null;
+                    let n = S.get(e.value);
+                    return null == n || null == (null == (t = n.profile) ? void 0 : t.tag)
+                        ? null
+                        : (0, r.jsx)(u.Ft, {
+                              guildId: n.id,
+                              guildName: n.name,
+                              guildIcon: n.icon,
+                              iconSize: 32,
+                              animate: !1,
+                          });
+                },
+                [S],
+            ),
+            w = i.useCallback(
+                (e) => {
+                    var t, n, i;
+                    if (null == e) return null;
+                    let a = S.get(e.value);
+                    if (null == a) return null;
+                    let o = null == (t = a.profile) ? void 0 : t.tag;
+                    return null == o
+                        ? null
+                        : (0, r.jsx)(f.m0, {
+                              guildId: a.id,
+                              guildTag: o,
+                              guildBadge: null != (i = null == (n = a.profile) ? void 0 : n.badge) ? i : void 0,
+                              badgeSize: E.Gg.SIZE_16,
+                              textColor: "interactive-normal",
+                              textVariant: "text-sm/semibold",
+                          });
+                },
+                [S],
+            ),
+            D = i.useCallback(
                 (e) => {
                     let t = e[0];
-                    return null == t ? null : (0, r.jsx)(r.Fragment, { children: A(t) });
+                    return null == t ? null : (0, r.jsx)(r.Fragment, { children: R(t) });
                 },
-                [A],
+                [R],
             ),
-            N = i.useCallback(
+            L = i.useCallback(
                 (e) => {
-                    O(h.L.TAKE_ACTION), null == l || l(e);
+                    T(g.L.TAKE_ACTION), null == l || l(e);
                 },
-                [O, l],
+                [T, l],
             ),
-            R = i.useCallback((e) => e === T, [T]),
-            P = i.useCallback((e) => e, []),
-            w = i.useCallback(() => {
-                O(h.L.TAKE_ACTION), null == l || l(null);
-            }, [O, l]),
-            D = i.useRef(null);
+            x = i.useCallback((e) => e === C, [C]),
+            M = i.useCallback((e) => e, []),
+            j = i.useCallback(() => {
+                T(g.L.TAKE_ACTION), null == l || l(null);
+            }, [T, l]),
+            k = i.useRef(null);
         return (
-            (0, f.Z)(D, m.Y_.GUILD_TAG),
-            (0, r.jsxs)(d.Z, {
-                title: g.intl.string(g.t.Pdd1nZ),
-                titleId: b,
-                ref: D,
+            (0, p.Z)(k, b.Y_.GUILD_TAG),
+            (0, r.jsxs)(_.Z, {
+                title: y.intl.string(y.t.Pdd1nZ),
+                titleId: v,
+                ref: k,
                 titleIcon:
-                    y === o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
+                    I === o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
                     (0, r.jsx)(s.IGR, {
-                        text: g.intl.string(g.t.y2b7CA),
-                        className: E.newBadge,
+                        text: y.intl.string(y.t.y2b7CA),
+                        className: O.newBadge,
                     }),
                 children: [
                     (0, r.jsx)(s.Text, {
-                        className: E.subtitle,
+                        className: O.subtitle,
                         variant: "text-sm/normal",
-                        children: g.intl.string(g.t.mlZ6Jy),
+                        children: y.intl.string(y.t.mlZ6Jy),
                     }),
                     (0, r.jsx)(s.PhF, {
-                        className: E.select,
-                        optionClassName: E.selectPopout,
-                        isSelected: R,
-                        options: S,
-                        select: N,
-                        renderOptionValue: C,
-                        renderOptionLabel: A,
-                        serialize: P,
-                        clear: w,
-                        clearable: null != T,
+                        className: O.select,
+                        optionClassName: O.selectPopout,
+                        isSelected: x,
+                        options: N,
+                        select: L,
+                        renderLeading: P,
+                        renderTrailing: w,
+                        renderOptionValue: D,
+                        serialize: M,
+                        clear: j,
+                        clearable: null != C,
+                        maxVisibleItems: 8,
                     }),
                 ],
             })

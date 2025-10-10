@@ -2,8 +2,8 @@ t.d(n, { default: () => w });
 var r = t(951288),
     i = t(647438),
     l = t(392711),
-    c = t.n(l),
-    a = t(442837),
+    a = t.n(l),
+    c = t(442837),
     o = t(481060),
     s = t(45114),
     u = t(493773),
@@ -29,7 +29,7 @@ var j = t(709054),
 function w(e) {
     let { transitionState: n, onClose: l, guildId: w } = e,
         I = (0, d.Dt)(),
-        S = (0, a.e7)([p.Z], () => p.Z.getGuild(w)),
+        S = (0, c.e7)([p.Z], () => p.Z.getGuild(w)),
         D = (0, b.Z)(null == S ? void 0 : S.id),
         T = (0, x.ZP)(w),
         L = i.useRef(h.ZP.ackMessageId(w, N.W.GUILD_EVENT)),
@@ -46,7 +46,7 @@ function w(e) {
             });
         }),
         i.useEffect(() => {
-            c()(T)
+            a()(T)
                 .map((e) => e.creator_id)
                 .filter(v.lm)
                 .uniq()

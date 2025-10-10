@@ -24,8 +24,8 @@ var i = t(951288),
     C = t(626135),
     A = t(768581),
     T = t(358085),
-    L = t(998502),
-    P = t(379164),
+    P = t(998502),
+    L = t(379164),
     b = t(590965),
     R = t(981631),
     z = t(474936),
@@ -115,7 +115,7 @@ function U(e) {
                     }),
                     (0, i.jsx)(p.zx, {
                         size: p.zx.Sizes.LARGE,
-                        onClick: () => P.Z.close(),
+                        onClick: () => L.Z.close(),
                         color: p.zx.Colors.BRAND,
                         children: Z.intl.string(Z.t.wcqOoK),
                     }),
@@ -149,7 +149,7 @@ function y(e) {
     ]);
     let O = (0, h.yr)();
     l.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? L.ZP.minimize() : L.ZP.restore(), L.ZP.focus());
+        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? P.ZP.minimize() : P.ZP.restore(), P.ZP.focus());
     }, []);
     let y = (0, N.Dt)(),
         { analyticsLocations: F } = (0, _.ZP)(m.Z.INVITE_MODAL);
@@ -158,7 +158,7 @@ function y(e) {
         return (0, i.jsx)(U, { transitionState: g });
     if (null == j.channel) return null;
     function G() {
-        null != j && P.Z.acceptInvite(j);
+        null != j && L.Z.acceptInvite(j);
     }
     let { guild: V, channel: W, inviter: B, target_application: w } = j,
         Y = null != V,
@@ -277,7 +277,7 @@ function y(e) {
                                                         invite_code: null == j ? void 0 : j.code,
                                                         guild_id: null == j || null == (e = j.guild) ? void 0 : e.id,
                                                     }),
-                                                        P.Z.close();
+                                                        L.Z.close();
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
                                                 children: Z.intl.string(Z.t.ndsK4e),

@@ -1,14 +1,14 @@
-n.d(t, { h: () => a }), n(388685);
+n.d(t, { h: () => s }), n(388685);
 var r = n(647438),
     l = n(884697),
-    s = n(215023);
-let a = (e) => {
+    a = n(215023);
+let s = (e) => {
     let { scrollerRef: t, sortedCategories: n } = e,
-        [a, i] = r.useState(1),
+        [s, i] = r.useState(1),
         o = r.useCallback(
             (e) => {
                 let t = n.findIndex((t) => t.skuId === e);
-                return -1 === t ? 1 : Math.floor(t / s.kN) + 1;
+                return -1 === t ? 1 : Math.floor(t / a.kN) + 1;
             },
             [n],
         ),
@@ -16,13 +16,13 @@ let a = (e) => {
             (e) => {
                 if (null != e && !(0, l.$2)(e)) {
                     let t = o(e);
-                    t !== a && i(t);
+                    t !== s && i(t);
                 }
             },
-            [o, a, i],
+            [o, s, i],
         );
     return {
-        currentPage: a,
+        currentPage: s,
         handlePageChange: r.useCallback(
             (e) => {
                 var n;

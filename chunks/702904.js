@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(35282);
+n.d(t, { Z: () => b }), n(388685), n(35282);
 var a = n(951288),
     r = n(647438),
     i = n(399606),
@@ -687,30 +687,10 @@ let x = [
             },
         ],
     };
-function b(e) {
-    let { label: t, value: n, disabled: r } = e;
-    return r
-        ? (0, a.jsx)(s.Text, {
-              className: p.header,
-              variant: "text-lg/bold",
-              children: t,
-          })
-        : (0, a.jsxs)("div", {
-              className: p.countryContainer,
-              children: [
-                  (0, a.jsx)("img", {
-                      alt: "",
-                      className: p.countryFlagEmoji,
-                      src: _(n),
-                  }),
-                  t,
-              ],
-          });
-}
-function g() {
+function b() {
     let [e, t] = r.useState("US"),
         [n, c] = r.useState("pm_card_us"),
-        [g, j] = r.useState(!1),
+        [b, v] = r.useState(!1),
         _ = Object.values((0, i.e7)([d.Z], () => d.Z.paymentSources)),
         y = f[e],
         C = async () => {
@@ -763,11 +743,18 @@ function g() {
                                 isSelected: (t) => t === e,
                                 options: x,
                                 select: (e) => {
-                                    t(e), c(f[e][0].value), j(1 === f[e].length);
+                                    t(e), c(f[e][0].value), v(1 === f[e].length);
                                 },
                                 popoutLayerContext: u.O$,
                                 popoutWidth: 200,
-                                renderOptionLabel: b,
+                                renderLeading: (e) =>
+                                    e.disabled
+                                        ? null
+                                        : (0, a.jsx)("img", {
+                                              alt: "",
+                                              className: p.countryFlagEmoji,
+                                              src: j(e.value),
+                                          }),
                                 optionClassName: p.countryOption,
                             }),
                             (0, a.jsx)(s.PhF, {
@@ -777,7 +764,7 @@ function g() {
                                 select: c,
                                 popoutLayerContext: u.O$,
                                 popoutWidth: 200,
-                                isDisabled: g,
+                                isDisabled: b,
                             }),
                             (0, a.jsx)(s.zxk, {
                                 variant: "primary",
@@ -808,13 +795,13 @@ function g() {
                         variant: "text-md/normal",
                         children: "Existing Payment Sources",
                     }),
-                    _.map((e) => (0, a.jsx)(v, { paymentSource: e }, e.id)),
+                    _.map((e) => (0, a.jsx)(g, { paymentSource: e }, e.id)),
                 ],
             }),
         })
     );
 }
-function v(e) {
+function g(e) {
     let { paymentSource: t } = e;
     return (0, a.jsxs)("div", {
         className: m.inputRow,
@@ -832,15 +819,15 @@ function v(e) {
             (0, a.jsx)("img", {
                 alt: t.country,
                 className: p.countryFlagEmoji,
-                src: _(t.country),
+                src: j(t.country),
             }),
         ],
     });
 }
-let j = ["AN", "MI", "TP"],
-    _ = (e) => {
+let v = ["AN", "MI", "TP"],
+    j = (e) => {
         if (null == e) return "";
-        if (j.includes(e)) return "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg";
+        if (v.includes(e)) return "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg";
         let t = e
             .toUpperCase()
             .split("")

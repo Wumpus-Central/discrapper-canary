@@ -16,8 +16,8 @@ var i = n(951288),
     y = n(703656),
     _ = n(254761),
     O = n(70956),
-    b = n(145597),
-    v = n(41534),
+    v = n(145597),
+    b = n(41534),
     E = n(837268),
     x = n(692546),
     S = n(518084),
@@ -39,9 +39,9 @@ function P(e, t, n) {
     );
 }
 let w = 10 * O.Z.Millis.SECOND;
-function T() {
-    let e = (0, b.getPID)(),
-        t = (0, b.getRPCAuthToken)();
+function N() {
+    let e = (0, v.getPID)(),
+        t = (0, v.getRPCAuthToken)();
     (0, f.lW)({
         type: C.BmY.DISPATCH,
         pid: e,
@@ -55,7 +55,7 @@ function T() {
         ],
     });
 }
-class N extends r.PureComponent {
+class T extends r.PureComponent {
     componentDidMount() {
         (this.notificationTimer = setTimeout(this.hideNotification, w)),
             h.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: Z.n0.OverlayCrashed });
@@ -124,13 +124,13 @@ class N extends r.PureComponent {
             P(this, "notificationTimer", void 0),
             P(this, "contentDomRef", r.createRef()),
             P(this, "hideNotification", () => {
-                T();
+                N();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
             P(this, "handleReload", (e) => {
                 this.setState({ busy: !0 }),
-                    T(),
+                    N(),
                     h.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
                         {
@@ -169,11 +169,11 @@ class k extends r.PureComponent {
             error: e,
             info: t,
         });
-        let i = (0, b.getPID)(),
-            r = (0, b.getRPCAuthToken)();
+        let i = (0, v.getPID)(),
+            r = (0, v.getRPCAuthToken)();
         (0, f.lW)({
             type: C.BmY.DISPATCH,
-            pid: (0, b.getPID)(),
+            pid: (0, v.getPID)(),
             token: r,
             payloads: [
                 {
@@ -188,8 +188,8 @@ class k extends r.PureComponent {
                 },
             ],
         }),
-            setImmediate(() => window.addEventListener("click", T));
-        let s = (0, v.V6)(e, E.gl.Hook, { extra: t });
+            setImmediate(() => window.addEventListener("click", N));
+        let s = (0, b.V6)(e, E.gl.Hook, { extra: t });
         h.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -204,7 +204,7 @@ class k extends r.PureComponent {
         let { children: e, className: t } = this.props,
             { error: n, info: r } = this.state;
         return null != n
-            ? (0, i.jsx)(N, {
+            ? (0, i.jsx)(T, {
                   error: n,
                   info: r,
               })

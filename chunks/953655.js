@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    s = n.n(l),
-    a = n(87290),
+    a = n.n(l),
+    s = n(87290),
     i = n(960048),
     o = n(381585),
     c = n(953528),
@@ -14,13 +14,13 @@ let p = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         return (0, r.jsx)("div", {
-            className: s()(g.col2, g.centeredSection),
+            className: a()(g.col2, g.centeredSection),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
-                          if (e.type === a.O.CATEGORY) {
-                              let s =
+                          if (e.type === s.O.CATEGORY) {
+                              let a =
                                   null != e.unpublishedAt
                                       ? d.intl.string(d.t["h/uBCQ"])
                                       : ((e) => {
@@ -52,7 +52,7 @@ let p = (e) => {
                                           u.q,
                                           {
                                               subblock: e,
-                                              badgeText: s,
+                                              badgeText: a,
                                               handleTransition: t,
                                           },
                                           e.categoryStoreListingId,
@@ -70,9 +70,9 @@ let p = (e) => {
             l = (0, c.QH)("collectibles_featured_block");
         if (null == n || n.length < 2)
             return i.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
-        let [a, p] = n,
+        let [s, p] = n,
             f =
-                (null == a ? void 0 : a.unpublishedAt) != null
+                (null == s ? void 0 : s.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCQ"])
                     : (() => {
                             switch (l) {
@@ -83,8 +83,8 @@ let p = (e) => {
                                     return !1;
                             }
                         })() &&
-                        (null == a ? void 0 : a.storeListingId) != null &&
-                        "" !== a.storeListingId
+                        (null == s ? void 0 : s.storeListingId) != null &&
+                        "" !== s.storeListingId
                       ? d.intl.string(d.t["soka7+"])
                       : void 0,
             C =
@@ -104,18 +104,18 @@ let p = (e) => {
                       ? d.intl.string(d.t["soka7+"])
                       : d.intl.string(d.t["o/oRJC"]);
         return (0, r.jsx)("div", {
-            className: s()(g.col2, g.centeredSection),
+            className: a()(g.col2, g.centeredSection),
             children: (0, r.jsxs)(o.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != a ? a.name : null == p ? void 0 : p.name,
+                    pageCategory: null != s ? s.name : null == p ? void 0 : p.name,
                     pageSection: "featured_block",
-                    tilePosition: +(null == a),
+                    tilePosition: +(null == s),
                 },
                 children: [
-                    null != a &&
+                    null != s &&
                         (0, r.jsx)(u.q, {
-                            category: a,
+                            category: s,
                             badgeText: f,
                             handleTransition: t,
                         }),
@@ -130,24 +130,24 @@ let p = (e) => {
         });
     },
     C = (e) => {
-        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: s } = e;
         return t
             ? (0, r.jsxs)("div", {
-                  className: s()(g.col2, g.centeredSection),
+                  className: a()(g.col2, g.centeredSection),
                   children: [
                       (0, r.jsx)("div", {
-                          className: s()(g.skeleton, g.featuredBlock),
+                          className: a()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                       (0, r.jsx)("div", {
-                          className: s()(g.skeleton, g.featuredBlock),
+                          className: a()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                   ],
               })
-            : null != a
+            : null != s
               ? (0, r.jsx)(p, {
-                    featuredBlockRecord: a,
+                    featuredBlockRecord: s,
                     handleTransition: n,
                     isLoading: !1,
                 })

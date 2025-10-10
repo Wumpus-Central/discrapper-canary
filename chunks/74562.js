@@ -3,8 +3,8 @@ var r = t(951288);
 t(647438);
 var i = t(442837),
     l = t(481060),
-    c = t(434404),
-    a = t(939863),
+    a = t(434404),
+    c = t(939863),
     o = t(430824),
     s = t(496675),
     u = t(981631),
@@ -19,7 +19,7 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: g.container,
         children: [
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(c.Z, {
                 children: (0, r.jsx)("div", {
                     className: g.circle,
                     children: (0, r.jsx)(l.Que, {
@@ -50,7 +50,7 @@ function p(e) {
                     className: g.roleTip,
                     children: d.intl.format(d.t["K+DH2t"], {
                         onClick: () => {
-                            c.Z.open(n, u.pNK.ROLES), t();
+                            a.Z.open(n, u.pNK.ROLES), t();
                         },
                     }),
                 }),

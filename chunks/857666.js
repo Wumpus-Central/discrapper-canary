@@ -41,8 +41,8 @@ function _(e, t) {
                               j = g.intl.string(m.default["/egwJC"]),
                               C = h ? void 0 : g.intl.string(m.default.W6Vwn5),
                               I = h ? void 0 : g.intl.string(m.default.lvk1GR),
-                              w = h ? g.intl.string(m.default["9CfkLC"]) : g.intl.string(g.t["+7XY39"]),
-                              E = h ? "secondary" : "expressive",
+                              E = h ? g.intl.string(m.default["9CfkLC"]) : g.intl.string(g.t["+7XY39"]),
+                              w = h ? "secondary" : "expressive",
                               Z = i
                                   ? () => {
                                         h
@@ -95,11 +95,11 @@ function _(e, t) {
                                                           powerups: e,
                                                           footerInfoText: I,
                                                           footerAction:
-                                                              i && null != Z && null != w
+                                                              i && null != Z && null != E
                                                                   ? {
-                                                                        variant: E,
-                                                                        text: w,
-                                                                        icon: "expressive" === E ? a.Ucv : void 0,
+                                                                        variant: w,
+                                                                        text: E,
+                                                                        icon: "expressive" === w ? a.Ucv : void 0,
                                                                         onClick: Z,
                                                                     }
                                                                   : void 0,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
 var l = n(873546),
-    s = n(399606),
-    a = n(481060),
+    a = n(399606),
+    s = n(481060),
     i = n(100527),
     o = n(594174),
     c = n(74538),
@@ -22,7 +22,7 @@ let S = (e) => {
         let { product: t, selectedVariantIndex: n, cardRef: h } = e,
             S = (0, d.Nd)(),
             v = null == S ? void 0 : S.tab,
-            x = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+            x = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
             O = c.ZP.canUseCollectibles(x),
             y = (0, u.sp)(),
             { isPurchased: T, isPartiallyOwnedBundle: L } = (0, p.L)(t),
@@ -44,10 +44,10 @@ let S = (e) => {
         return k || l.tq || N || !I || v === b.AW.ORBS
             ? null
             : j
-              ? (0, r.jsx)(a.hU, {
+              ? (0, r.jsx)(s.hU, {
                     variant: "primary",
                     "aria-label": E.intl.string(E.t.SKNnqq),
-                    icon: a.tEF,
+                    icon: s.tEF,
                     onClick: (e) => {
                         e.stopPropagation(), B(e);
                     },
@@ -65,11 +65,11 @@ let S = (e) => {
     },
     v = (e) => {
         let { skuId: t, cardRef: n, selectedVariantIndex: l } = e,
-            s = (0, C.LJ)(t);
-        if (null == s) return null;
-        let a = (0, h.W)(s, l);
+            a = (0, C.LJ)(t);
+        if (null == a) return null;
+        let s = (0, h.W)(a, l);
         return (0, r.jsx)(S, {
-            product: a,
+            product: s,
             cardRef: n,
             selectedVariantIndex: l,
         });

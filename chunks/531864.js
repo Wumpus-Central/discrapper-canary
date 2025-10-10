@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(979554),
     o = n(876917),
     c = n(597688),
@@ -100,7 +100,7 @@ let p = {
         },
     ],
     C = (e) => {
-        let { peaking: t, transitioning: n, style: s } = e,
+        let { peaking: t, transitioning: n, style: a } = e,
             p = window.innerHeight,
             [C, h] = l.useState(!1),
             _ = f.map((e) => {
@@ -115,23 +115,23 @@ let p = {
                     }, d.lb);
             }, [n]),
             (0, r.jsx)("div", {
-                style: s,
-                className: a()(g.jumbleWrapper, {
+                style: a,
+                className: s()(g.jumbleWrapper, {
                     [g.peaking]: t,
                     [g.transitioned]: C,
                 }),
                 children: f.map((e, t) => {
-                    var l, s;
-                    let { top: a, left: c, rotation: f, size: C, skuId: h } = e,
+                    var l, a;
+                    let { top: s, left: c, rotation: f, size: C, skuId: h } = e,
                         m = null == (l = _[t]) ? void 0 : l.items[0],
-                        b = null == (s = _[t]) ? void 0 : s.type,
+                        b = null == (a = _[t]) ? void 0 : a.type,
                         E = b === i.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         "div",
                         {
                             className: g.asset,
                             style: {
-                                top: n ? -p - E : a,
+                                top: n ? -p - E : s,
                                 left: n ? "".concat(c - 75 - 350 * Math.random()) : c,
                                 transform: "rotate(".concat(f, "deg)"),
                                 height: C.y,

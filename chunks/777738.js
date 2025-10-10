@@ -14,7 +14,6 @@ e.exports = {
     rewardHeading: "rewardHeading_b83a17",
     rewardSubheadingText: "rewardSubheadingText_b83a17",
     rewardSubheadingIcon: "rewardSubheadingIcon_b83a17",
-    platformSelectionOptionLabelContainer: "platformSelectionOptionLabelContainer_b83a17",
     platformSelectionOptionIcon: "platformSelectionOptionIcon_b83a17",
     confettiCanvas: "confettiCanvas_b83a17",
     cosponsorFooter: "cosponsorFooter_b83a17",

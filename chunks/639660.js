@@ -34,8 +34,8 @@ function b(e) {
         { shouldShow: j, notificationConfig: C } = (0, f._)(t, "GuildPowerupNotificationContainer"),
         I = [];
     j && I.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [w, E] = (0, a.ZT)(I, t),
-        Z = null != w && null != C,
+    let [E, w] = (0, a.ZT)(I, t),
+        Z = null != E && null != C,
         P = [];
     Z || h || P.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
     let [y, T] = (0, a.US)(P),
@@ -60,7 +60,7 @@ function b(e) {
                             {
                                 notificationConfig: C,
                                 markAsDismissed: (e) => {
-                                    E(e);
+                                    w(e);
                                 },
                             },
                             "rollback-notification",

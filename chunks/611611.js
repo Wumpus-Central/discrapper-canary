@@ -1,4 +1,4 @@
-n.d(t, { default: () => x }), n(388685);
+n.d(t, { default: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(525769),
@@ -7,8 +7,8 @@ var r = n(951288),
     c = n(755721),
     s = n(481060),
     u = n(240872),
-    d = n(213609),
-    f = n(542383),
+    f = n(213609),
+    d = n(542383),
     m = n(79390),
     p = n(728076),
     b = n(2466),
@@ -38,42 +38,29 @@ function w(e) {
     let { selectedDuration: t, onSelect: n } = e,
         l = (0, b.Z)(),
         a = l[t];
-    return (0, r.jsxs)("div", {
+    return (0, r.jsx)("div", {
         className: v.duration,
-        children: [
-            (0, r.jsx)(s.Text, {
-                variant: "text-md/medium",
-                color: "header-secondary",
-                tag: "label",
-                "aria-hidden": !0,
-                children: h.intl.string(h.t.bGHzxc),
+        children: (0, r.jsx)(s.PhF, {
+            label: h.intl.string(h.t.bGHzxc),
+            "aria-label": h.intl.formatToPlainString(h.t.nXNHND, { duration: a }),
+            className: v.durationSelect,
+            options: Object.entries(l).map((e) => {
+                let [t, n] = e;
+                return {
+                    label: n,
+                    value: parseInt(t),
+                };
             }),
-            (0, r.jsx)(s.PhF, {
-                "aria-label": h.intl.formatToPlainString(h.t.nXNHND, { duration: a }),
-                className: v.durationSelect,
-                options: Object.entries(l).map((e) => {
-                    let [t, n] = e;
-                    return {
-                        label: n,
-                        value: parseInt(t),
-                    };
-                }),
-                isSelected: (e) => e === t,
-                select: n,
-                serialize: (e) => "".concat(e),
-                renderOptionLabel: (e) =>
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-sm/normal",
-                        children: e.label,
-                    }),
-                popoutPosition: "top",
-            }),
-        ],
+            isSelected: (e) => e === t,
+            select: n,
+            serialize: (e) => "".concat(e),
+            popoutPosition: "top",
+        }),
     });
 }
-function x(e) {
-    let { channel: t, transitionState: n, onClose: b, initialQuestion: k, initialAnswers: C, initialDuration: R } = e;
-    (0, d.Z)({
+function k(e) {
+    let { channel: t, transitionState: n, onClose: b, initialQuestion: C, initialAnswers: x, initialDuration: R } = e;
+    (0, f.Z)({
         type: y.n.MODAL,
         name: a.z.POLL_EDITOR_VIEWED,
     });
@@ -91,8 +78,8 @@ function x(e) {
             answers: A,
             question: I,
             allowMultiSelect: N,
-            setAllowMultiSelect: L,
-            duration: U,
+            setAllowMultiSelect: U,
+            duration: L,
             setDuration: T,
             handleQuestionChange: Z,
             handleAnswerTextChange: B,
@@ -109,8 +96,8 @@ function x(e) {
             shouldFocusOnInvalidField: X,
             setShouldFocusOnInvalidField: J,
         } = (0, p.Z)(t, b, D, {
-            initialQuestion: k,
-            initialAnswers: C,
+            initialQuestion: C,
+            initialAnswers: x,
             initialDuration: R,
         }),
         { trackPollCreationCancelled: Q } = (0, g.l)(A, N),
@@ -139,7 +126,7 @@ function x(e) {
             (e) => {
                 var n, l;
                 return (0, r.jsx)(
-                    x,
+                    k,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -205,7 +192,7 @@ function x(e) {
     let en = l.useCallback(() => {
             n === s.Dvm.ENTERED && F();
         }, [F, n]),
-        er = (0, f.Z)({
+        er = (0, d.Z)({
             disabled: V,
             onSubmit: en,
         }),
@@ -228,7 +215,7 @@ function x(e) {
         actionBarInput: (0, r.jsx)(c.VL, {
             className: v.checkbox,
             checked: N,
-            onChange: (e) => L(e),
+            onChange: (e) => U(e),
             label: h.intl.string(h.t["Ux+iQU"]),
         }),
         children: (0, r.jsxs)("div", {
@@ -291,7 +278,7 @@ function x(e) {
                 }),
                 (0, r.jsx)(s.LZC, { size: 18 }),
                 (0, r.jsx)(w, {
-                    selectedDuration: U,
+                    selectedDuration: L,
                     onSelect: T,
                 }),
             ],

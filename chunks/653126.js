@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(622535),
     o = n(481060),
     c = n(100527),
@@ -21,10 +21,10 @@ var r = n(951288),
 let v = l.memo(function (e) {
         let { product: t } = e,
             n = (0, u.Nd)(),
-            s = null == n ? void 0 : n.tab,
+            a = null == n ? void 0 : n.tab,
             v = (0, b.zQ)(t),
             x = l.useRef(null),
-            { handleCardVisibilityChange: O } = (0, d.E)(t.skuId, s === E.AW.CATALOG ? "full" : s),
+            { handleCardVisibilityChange: O } = (0, d.E)(t.skuId, a === E.AW.CATALOG ? "full" : a),
             y = (0, _.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD),
             [T, L] = (0, _.SS)(t);
         return (0, r.jsx)(i.$, {
@@ -46,7 +46,7 @@ let v = l.memo(function (e) {
                                 className: S.innerContainer,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: a()(S.baseProductCardDetailsContainer, {
+                                        className: s()(S.baseProductCardDetailsContainer, {
                                             [S.hasVariantSwitcher]: null != L,
                                         }),
                                         children: [

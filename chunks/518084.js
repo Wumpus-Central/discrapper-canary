@@ -35,8 +35,8 @@ let y = h.t_t.DEFAULT,
         type: y,
         opacity: _,
     }),
-    b = s.createContext(void 0),
-    v = (e) => {
+    v = s.createContext(void 0),
+    b = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -62,7 +62,7 @@ let y = h.t_t.DEFAULT,
         return (0, r.jsx)(O.Consumer, {
             children: (e) => {
                 let { type: s } = e;
-                return (0, r.jsx)(b.Consumer, {
+                return (0, r.jsx)(v.Consumer, {
                     children: (e) => {
                         var o, a;
                         return (0, r.jsx)(
@@ -112,7 +112,7 @@ let y = h.t_t.DEFAULT,
 class E extends (i = s.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(v.Consumer, {
             children: (i) =>
                 (0, r.jsx)(O.Consumer, {
                     children: (s) => {
@@ -154,7 +154,7 @@ let x = (e) => {
     },
     S = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(v.Consumer, {
             children: (e) =>
                 (0, r.jsx)("div", {
                     className: l()(f.content, { [f.staticSize]: !i }, n),
@@ -166,7 +166,7 @@ let x = (e) => {
 (x.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [v, E, S];
+    let i = [b, E, S];
     return (0, r.jsx)(O.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
@@ -174,7 +174,7 @@ let x = (e) => {
             if ("string" == typeof t.type) return s.cloneElement(t, { style: l });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(b.Provider, {
+                    return (0, r.jsx)(v.Provider, {
                         value: l,
                         children: t,
                     });
@@ -229,5 +229,5 @@ let x = (e) => {
             }),
         });
     }),
-    (x.Bar = v);
+    (x.Bar = b);
 let Z = x;

@@ -82,17 +82,21 @@ function p(e) {
     var {
             label: t,
             hideLabel: n,
-            required: l,
-            description: u,
-            helperText: _,
-            errorMessage: p,
-            successMessage: h,
-            wrapTags: m,
-            maxOptionsVisible: g = 5,
+            hideTags: l,
+            placeholder: u,
+            required: _,
+            description: p,
+            helperText: h,
+            errorMessage: m,
+            successMessage: g,
+            wrapTags: E,
+            maxOptionsVisible: b = 5,
         } = e,
-        E = f(e, [
+        y = f(e, [
             "label",
             "hideLabel",
+            "hideTags",
+            "placeholder",
             "required",
             "description",
             "helperText",
@@ -101,24 +105,24 @@ function p(e) {
             "wrapTags",
             "maxOptionsVisible",
         ]);
-    let { disabled: b } = E,
+    let { disabled: O } = y,
         {
-            isOpen: y,
-            setIsOpen: O,
-            refs: v,
-            floatingStyles: I,
-            getFloatingProps: T,
-            getReferenceProps: S,
+            isOpen: v,
+            setIsOpen: I,
+            refs: T,
+            floatingStyles: S,
+            getFloatingProps: A,
+            getReferenceProps: C,
         } = (0, i.ON0)({
             placement: "bottom",
             matchReferenceWidth: !0,
         });
     return (0, r.jsxs)(
         a.uz,
-        d(c({}, E), {
+        d(c({}, y), {
             isCollapsible: !0,
-            isOpen: y,
-            setIsOpen: O,
+            isOpen: v,
+            setIsOpen: I,
             children: [
                 (0, r.jsx)(
                     a.Ct,
@@ -126,35 +130,37 @@ function p(e) {
                         {
                             label: t,
                             hideLabel: n,
-                            required: l,
-                            disabled: b,
-                            description: u,
-                            helperText: _,
-                            errorMessage: p,
-                            successMessage: h,
-                            wrapTags: m,
+                            hideTags: l,
+                            placeholder: u,
+                            required: _,
+                            disabled: O,
+                            description: p,
+                            helperText: h,
+                            errorMessage: m,
+                            successMessage: g,
+                            wrapTags: E,
                             showChevronButton: !0,
-                            ref: v.setReference,
+                            ref: T.setReference,
                         },
-                        S(),
+                        C(),
                     ),
                 ),
-                y &&
+                v &&
                     (0, r.jsx)(
                         "div",
                         d(
                             c(
                                 {
-                                    ref: v.setFloating,
+                                    ref: T.setFloating,
                                     className: s.selectDropdown,
-                                    style: I,
+                                    style: S,
                                 },
-                                T(),
+                                A(),
                             ),
                             {
                                 children: (0, r.jsx)(a.px, {
                                     renderListItem: (e) => (0, r.jsx)(o.W, c({}, e)),
-                                    maxVisibleItems: g,
+                                    maxVisibleItems: b,
                                 }),
                             },
                         ),

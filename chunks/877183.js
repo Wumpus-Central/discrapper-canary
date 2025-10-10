@@ -80,7 +80,7 @@ function g(e) {
             },
             e,
         ),
-        { trackView: O, trackClick: b } = (0, u.R)(_, { notif_type: _ });
+        { trackView: O, trackClick: v } = (0, u.R)(_, { notif_type: _ });
     return {
         icon: l,
         title: g,
@@ -97,20 +97,20 @@ function g(e) {
         confirmText: t ? h.intl.string(h.t.TxyTbm) : void 0,
         onConfirmClick: t
             ? () => {
-                  b("unlock"), s.Z.setInputLocked(!1, (0, d.getPID)());
+                  v("unlock"), s.Z.setInputLocked(!1, (0, d.getPID)());
               }
             : void 0,
         onNotificationShow: () => {
             O(), t && (0, o.Q3)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         },
         onNotificationClick: (e, t) => {
-            b("unlock"),
+            v("unlock"),
                 a.default.isOverlayOOPEnabledForPid((0, d.getPID)())
                     ? s.Z.setInputLocked(!1, (0, d.getPID)())
                     : c.default.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            b("dismiss");
+            v("dismiss");
         },
     };
 }

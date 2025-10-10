@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var l = n(907331),
-    s = n(481060),
-    a = n(168020),
+    a = n(481060),
+    s = n(168020),
     i = n(794324),
     o = n(859788),
     c = n(388032),
@@ -65,12 +65,12 @@ let g = (e) => {
                     className: u.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(a.R, {
+                            ? (0, r.jsx)(s.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })
                             : null,
-                        (0, r.jsx)(s.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: "heading-xxl/bold",
                             className: u.title,
                             color: "header-primary",
@@ -78,14 +78,14 @@ let g = (e) => {
                             children: t.title,
                         }),
                         h || _
-                            ? (0, r.jsxs)(s.Text, {
+                            ? (0, r.jsxs)(a.Text, {
                                   variant: "text-md/medium",
                                   style: d({}, C),
                                   children: [
                                       h && t.body,
                                       h && _ && " ",
                                       _ &&
-                                          (0, r.jsx)(s.eee, {
+                                          (0, r.jsx)(a.eee, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
                                               style: d({}, C),

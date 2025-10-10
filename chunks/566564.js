@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(685816),
     o = n(481060),
     c = n(702486),
@@ -28,7 +28,7 @@ var r = n(951288),
     k = n(310582);
 let I = (e) => {
         var t;
-        let { handleTransition: n, numVisibleItems: s, isFetchingCategories: o, tab: c, isFullScreen: u } = e,
+        let { handleTransition: n, numVisibleItems: a, isFetchingCategories: o, tab: c, isFullScreen: u } = e,
             { noCache: h, includeUnpublished: O } = (0, _.Z)(),
             [L, I] = l.useState(!1),
             P = (0, d.sp)(),
@@ -86,7 +86,7 @@ let I = (e) => {
               })
             : B || 0 === R.length
               ? (0, r.jsxs)("div", {
-                    className: a()(k.loadingContainer, k.feedContent),
+                    className: s()(k.loadingContainer, k.feedContent),
                     children: [
                         (0, r.jsx)(S.Z, {
                             isLoading: B,
@@ -101,7 +101,7 @@ let I = (e) => {
                         (0, r.jsx)(E.Z, {
                             isLoading: B,
                             title: c === T.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS),
-                            numVisibleItems: s,
+                            numVisibleItems: a,
                             hasSorting: c === T.AW.HOME,
                             tab: c,
                         }),
@@ -145,7 +145,7 @@ let I = (e) => {
                                             title:
                                                 c === T.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS),
                                             isLoading: B || o,
-                                            numVisibleItems: s,
+                                            numVisibleItems: a,
                                             sortedSkuIds: f,
                                             buttonContainerClassName:
                                                 (null == t ? void 0 : t.type) === i.z.IMMERSIVE_BANNER
@@ -210,7 +210,7 @@ let I = (e) => {
                                 children: (0, r.jsx)(
                                     "div",
                                     {
-                                        className: a()(k.blockContainer, k.feedContent, {
+                                        className: s()(k.blockContainer, k.feedContent, {
                                             [k.skipPadding]: 0 === l || p,
                                         }),
                                         children: d,
@@ -223,9 +223,9 @@ let I = (e) => {
                 });
     },
     P = (e) => {
-        let { isFullScreen: t, handleTransition: n, tab: s, transitionState: a } = e,
+        let { isFullScreen: t, handleTransition: n, tab: a, transitionState: s } = e,
             i = l.useRef(null),
-            { handleScroll: g } = (0, c.z)(i, s),
+            { handleScroll: g } = (0, c.z)(i, a),
             p = (0, h.R)(),
             f = (0, d.sp)(),
             [C, _] = l.useState(T.IV),
@@ -261,10 +261,10 @@ let I = (e) => {
                                     handleTransition: n,
                                     numVisibleItems: C,
                                     isFetchingCategories: p,
-                                    tab: s,
+                                    tab: a,
                                     isFullScreen: t,
                                 }),
-                                s !== T.AW.CATALOG &&
+                                a !== T.AW.CATALOG &&
                                     C >= 36 &&
                                     (0, r.jsxs)("div", {
                                         className: k.endOfFeed,
@@ -281,9 +281,9 @@ let I = (e) => {
                                                         u.default.track(L.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == f ? void 0 : f.sessionId,
-                                                            page_type: s,
+                                                            page_type: a,
                                                             page_category:
-                                                                s === T.AW.HOME || null == f ? void 0 : f.pageCategory,
+                                                                a === T.AW.HOME || null == f ? void 0 : f.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -298,12 +298,12 @@ let I = (e) => {
                                 children: [
                                     (0, r.jsx)(O.Z, {
                                         peaking: m,
-                                        transitioning: a === T.f7.OUT,
+                                        transitioning: s === T.f7.OUT,
                                     }),
                                     (0, r.jsx)(O.Z, {
                                         style: { left: 1850 },
                                         peaking: m,
-                                        transitioning: a === T.f7.OUT,
+                                        transitioning: s === T.f7.OUT,
                                     }),
                                 ],
                             }),

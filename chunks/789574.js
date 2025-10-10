@@ -1,78 +1,99 @@
 n.d(t, {
-    Z: () => m,
-    j: () => p,
+    Z: () => b,
+    j: () => j,
 });
 var r = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(139387),
-    s = n(852860),
-    a = n(490655),
-    o = n(434404),
-    c = n(999382),
-    d = n(145260),
-    u = n(821864),
-    g = n(905753);
-function m(e) {
+var i = n(13107),
+    l = n(442837),
+    s = n(481060),
+    a = n(139387),
+    o = n(852860),
+    c = n(490655),
+    d = n(496675),
+    u = n(434404),
+    g = n(999382),
+    m = n(145260),
+    p = n(821864),
+    f = n(905753),
+    h = n(981631),
+    x = n(388032);
+function b(e) {
     let { refToScroller: t } = e,
-        n = (0, i.e7)([c.Z], () => c.Z.getGuild()),
+        n = (0, l.e7)([g.Z], () => g.Z.getGuild()),
         {
-            section: l,
+            section: i,
             sectionId: s,
-            integrations: o,
-            editedIntegration: u,
-            webhooks: g,
-            editedWebhook: m,
+            integrations: a,
+            editedIntegration: o,
+            webhooks: d,
+            editedWebhook: u,
             isFetching: p,
             errors: f,
-        } = (0, i.cj)([d.default], () => ({
-            editedIntegration: d.default.editedIntegration,
-            editedWebhook: d.default.editedWebhook,
-            errors: d.default.getErrors(),
-            integrations: d.default.integrations,
-            isFetching: d.default.isFetching(),
-            section: d.default.getSection(),
-            sectionId: d.default.getSectionId(),
-            webhooks: d.default.webhooks,
+        } = (0, l.cj)([m.default], () => ({
+            editedIntegration: m.default.editedIntegration,
+            editedWebhook: m.default.editedWebhook,
+            errors: m.default.getErrors(),
+            integrations: m.default.integrations,
+            isFetching: m.default.isFetching(),
+            section: m.default.getSection(),
+            sectionId: m.default.getSectionId(),
+            webhooks: m.default.webhooks,
         }));
     return null == n
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(c.Z, {
               guild: n,
-              section: l,
+              section: i,
               sectionId: s,
-              integrations: o,
-              webhooks: g,
-              editedIntegration: u,
-              editedWebhook: m,
+              integrations: a,
+              webhooks: d,
+              editedIntegration: o,
+              editedWebhook: u,
               isFetchingWebhooks: p,
-              hasChanges: d.default.hasChanges,
+              hasChanges: m.default.hasChanges,
               errors: f,
               refToScroller: t,
           });
 }
-function p() {
-    let { guild: e, submitting: t } = (0, i.cj)([c.Z], () => ({
-        guild: c.Z.getGuild(),
-        submitting: c.Z.isSubmitting(),
-    }));
-    return (0, r.jsx)(s.Z, {
-        submitting: t,
-        onReset: () => {
-            l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
-        },
-        onSave: () => {
-            if (null != e) {
-                if (null != d.default.editedIntegration) l.Z.saveIntegration(e.id, d.default.editedIntegration);
-                else if (null != d.default.editedWebhook) l.Z.saveWebhook(e.id, d.default.editedWebhook);
-                else if (null != d.default.editedCommandId) {
-                    let t = d.default.getSectionId(),
-                        n = g.Z.getEditedApplication();
-                    if (null == t || null == n) return;
-                    l.Z.saveApplicationPermissions(t, e.id, Object.values(n));
+function j() {
+    var e;
+    let { guild: t, submitting: n } = (0, l.cj)([g.Z], () => ({
+            guild: g.Z.getGuild(),
+            submitting: g.Z.isSubmitting(),
+        })),
+        c = (0, l.e7)([d.Z], () => d.Z.can(h.Plq.KICK_MEMBERS, t)),
+        b = !1,
+        j = null;
+    return (
+        c ||
+            (null == (e = m.default.editedIntegration) ? void 0 : e.expire_behavior) !== i.l.KICK ||
+            ((b = !0),
+            (j = (0, r.jsx)(s.Text, {
+                color: "text-danger",
+                variant: "text-md/normal",
+                children: x.intl.string(x.t["mrO/ZW"]),
+            }))),
+        (0, r.jsx)(o.Z, {
+            submitting: n,
+            disabled: b,
+            errorMessage: j,
+            onReset: () => {
+                a.Z.init(), p.Ui(), null != t && u.Z.init(t.id);
+            },
+            onSave: () => {
+                if (null != t) {
+                    if (null != m.default.editedIntegration) a.Z.saveIntegration(t.id, m.default.editedIntegration);
+                    else if (null != m.default.editedWebhook) a.Z.saveWebhook(t.id, m.default.editedWebhook);
+                    else if (null != m.default.editedCommandId) {
+                        let e = m.default.getSectionId(),
+                            n = f.Z.getEditedApplication();
+                        if (null == e || null == n) return;
+                        a.Z.saveApplicationPermissions(e, t.id, Object.values(n));
+                    }
+                    g.Z.hasChanges() && u.Z.saveGuild(t.id, { features: t.features });
                 }
-                c.Z.hasChanges() && o.Z.saveGuild(e.id, { features: e.features });
-            }
-        },
-    });
+            },
+        })
+    );
 }

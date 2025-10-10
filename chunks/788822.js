@@ -1,8 +1,8 @@
 n.d(t, { q: () => C });
 var r = n(951288),
     l = n(647438),
-    s = n(622535),
-    a = n(481060),
+    a = n(622535),
+    s = n(481060),
     i = n(626135),
     o = n(381585),
     c = n(597688),
@@ -26,11 +26,11 @@ let C = (e) => {
         O = l.useRef(null),
         y = null == m ? void 0 : m.bodyText,
         T = (0, o.sp)();
-    return (0, r.jsx)(s.$, {
+    return (0, r.jsx)(a.$, {
         innerRef: O,
         onChange: v,
         threshold: 0,
-        children: (0, r.jsxs)(a.P3F, {
+        children: (0, r.jsxs)(s.P3F, {
             className: f.featuredBlock,
             innerRef: O,
             style: (function (e) {
@@ -73,7 +73,7 @@ let C = (e) => {
             },
             children: [
                 null != b &&
-                    (0, r.jsx)(a.IGR, {
+                    (0, r.jsx)(s.IGR, {
                         disableColor: !0,
                         text: b,
                         className: f.featuredBlockBadge,
@@ -82,7 +82,7 @@ let C = (e) => {
                     className: f.featuredBlockTextContainer,
                     children:
                         null != y &&
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             lineClamp: 4,
                             className: f.featuredBlockBodyText,
                             style: { color: null != (C = null == m ? void 0 : m.bannerTextColor) ? C : "white" },
@@ -92,7 +92,7 @@ let C = (e) => {
                 }),
                 (0, r.jsx)("div", {
                     className: f.featuredBlockButtonContainer,
-                    children: (0, r.jsx)(a.zxk, {
+                    children: (0, r.jsx)(s.zxk, {
                         variant: "overlay-primary",
                         text: p.intl.string(p.t.jVcuVV),
                         onClick: (e) => {

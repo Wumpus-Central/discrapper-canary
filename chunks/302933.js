@@ -1,8 +1,8 @@
 n.d(t, { J: () => p });
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(137317),
     o = n(873546),
     c = n(435935),
@@ -11,7 +11,7 @@ var r = n(951288),
     g = n(779485);
 let p = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: n, isFullScreen: l } = e,
-        s = (0, u.q_F)({
+        a = (0, u.q_F)({
             transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
             opacity: +!!n,
             config: {
@@ -20,7 +20,7 @@ let p = l.memo(function (e) {
             },
         });
     return (0, r.jsxs)(i.animated.div, {
-        className: a()([g.countDownWrapper, l && g.fullScreenWrapper, o.tq && g.mobileWrapper]),
+        className: s()([g.countDownWrapper, l && g.fullScreenWrapper, o.tq && g.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -48,7 +48,7 @@ let p = l.memo(function (e) {
             return e;
         })(
             {},
-            s,
+            a,
             null != t.bannerUrl &&
                 "" !== t.bannerUrl && {
                     backgroundImage: "url(".concat(t.bannerUrl, ")"),

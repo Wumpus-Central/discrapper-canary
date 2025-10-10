@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(622535),
     o = n(481060),
     c = n(63063),
@@ -14,7 +14,7 @@ var r = n(951288),
     C = n(388032),
     h = n(310582);
 let _ = (e) => {
-    var t, n, s;
+    var t, n, a;
     let { wideBannerBlock: _, handleTransition: m, tab: b } = e,
         E = null == (t = u.Z.getCategoryByStoreListingId(_.categoryStoreListingId)) ? void 0 : t.skuId,
         S = l.useRef(null),
@@ -44,15 +44,15 @@ let _ = (e) => {
         threshold: 0,
         children: (0, r.jsxs)("div", {
             ref: S,
-            className: a()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: j }),
+            className: s()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: j }),
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(h.wideBannerBackgroundImg, { [h.extraRounded]: j }),
+                    className: s()(h.wideBannerBackgroundImg, { [h.extraRounded]: j }),
                     children: (0, r.jsx)("img", {
                         ref: v,
                         src: L,
                         alt: _.title,
-                        className: a()(h.wideBannerArt, { [h.wideBannerArtOrbs]: j }),
+                        className: s()(h.wideBannerArt, { [h.wideBannerArtOrbs]: j }),
                         style: { height: null != x ? "".concat(x, "px") : "auto" },
                     }),
                 }),
@@ -69,7 +69,7 @@ let _ = (e) => {
                                 children: _.title,
                             }),
                             (0, r.jsx)(o.Text, {
-                                style: { color: null != (s = _.bannerTextColor) ? s : "var(--text-muted)" },
+                                style: { color: null != (a = _.bannerTextColor) ? a : "var(--text-muted)" },
                                 lineClamp: 2,
                                 variant: j ? "text-md/medium" : "text-sm/medium",
                                 children: j

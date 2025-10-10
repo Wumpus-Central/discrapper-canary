@@ -175,6 +175,7 @@ let I = r.memo(function (e) {
                             }),
                         helpdeskArticle: x.Z.getArticleURL(N.BhN.TWITCH_INTEGRATION),
                     }),
+                    errors: R,
                     canNavigate: K,
                 }));
             break;
@@ -191,6 +192,7 @@ let I = r.memo(function (e) {
                         connectAction: () => (0, u.Z)({ platformType: N.ABu.YOUTUBE }),
                         helpdeskArticle: x.Z.getArticleURL(N.BhN.YOUTUBE_INTEGRATION),
                     }),
+                    errors: R,
                     canNavigate: K,
                 }));
             break;

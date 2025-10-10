@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var l = n(399606),
-    s = n(481060),
-    a = n(594174),
+    a = n(481060),
+    s = n(594174),
     i = n(74538),
     o = n(597688),
     c = n(994587),
@@ -21,7 +21,7 @@ let m = (e) => {
             g = null == n ? void 0 : n.tab,
             { isPurchased: m, isPartiallyOwnedBundle: b } = (0, d.L)(t),
             E = (0, l.e7)([o.Z], () => o.Z.getCategoryForProduct(t.skuId)),
-            S = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+            S = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
             v = i.ZP.canUseCollectibles(S),
             x = (0, p.Iw)(t),
             { isOrbExclusive: O } = (0, f.Ip)({
@@ -34,19 +34,19 @@ let m = (e) => {
             T = (null == E ? void 0 : E.skuId) === C.bu && (0, u.WW)(t.skuId);
         return b || m || !y
             ? O
-                ? (0, r.jsx)(s.IGR, {
+                ? (0, r.jsx)(a.IGR, {
                       text: h.intl.string(h.t["0TmQRE"]),
                       disableColor: !0,
                       className: _.productCardBadge,
                   })
                 : T
-                  ? (0, r.jsx)(s.IGR, {
+                  ? (0, r.jsx)(a.IGR, {
                         text: h.intl.string(h.t.S6kE9v),
                         disableColor: !0,
                         className: _.productCardBadge,
                     })
                   : null
-            : (0, r.jsx)(s.IGR, {
+            : (0, r.jsx)(a.IGR, {
                   text: h.intl.string(h.t.y2b7CA),
                   disableColor: !0,
                   className: _.productCardBadge,

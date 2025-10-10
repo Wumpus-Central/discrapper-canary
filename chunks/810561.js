@@ -16,9 +16,9 @@ function _(e) {
             guildEventId: a,
             onRecurrenceClick: _,
             hideScroller: p = !1,
-            activeRecurrenceId: b,
+            activeRecurrenceId: g,
         } = e,
-        { recurrenceStartTimes: g, canViewMoreRecurrences: h, updateRecurrenceStartTimes: m } = (0, c.Z)(a, n, t),
+        { recurrenceStartTimes: m, canViewMoreRecurrences: b, updateRecurrenceStartTimes: h } = (0, c.Z)(a, n, t),
         f = p ? "div" : l.Ttm;
     return (0, i.jsxs)("div", {
         className: u.recurrences,
@@ -31,7 +31,7 @@ function _(e) {
             (0, i.jsxs)(f, {
                 className: r()(u.scroller, { [u.showScroller]: !p }),
                 children: [
-                    g.map((e) => {
+                    m.map((e) => {
                         let n = o.default.fromTimestamp(e.getTime());
                         return (0, i.jsx)(
                             s.Z,
@@ -40,17 +40,17 @@ function _(e) {
                                 originalScheduledStartTime: e,
                                 guildEventId: a,
                                 onClick: _,
-                                isActive: n === b,
+                                isActive: n === g,
                             },
                             n,
                         );
                     }),
-                    h &&
+                    b &&
                         (0, i.jsx)("div", {
                             className: u.buttonContainer,
                             children: (0, i.jsx)(l.Avr, {
                                 onClick: (e) => {
-                                    e.stopPropagation(), m();
+                                    e.stopPropagation(), h();
                                 },
                                 text: d.intl.string(d.t["8O7Hp6"]),
                                 size: "sm",

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => b });
+n.r(t), n.d(t, { default: () => v });
 var i = n(951288),
     r = n(647438),
     s = n(442837),
@@ -17,7 +17,7 @@ var i = n(951288),
     _ = n(631553),
     O = n(981631);
 n(635324), n(29973), n(308765), n(913487), n(606206), s.ZP.initialize();
-let b = function () {
+let v = function () {
     return (
         r.useEffect(
             () => (

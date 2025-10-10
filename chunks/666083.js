@@ -1,18 +1,18 @@
-n.d(t, { default: () => p }), n(953529), n(388685);
+n.d(t, { default: () => d }), n(953529), n(388685);
 var r = n(951288),
     a = n(647438),
-    o = n(238651),
-    i = n(442837),
+    i = n(238651),
+    o = n(442837),
     c = n(481060),
     l = n(607070),
     s = n(530618),
     u = n(372654),
     f = n(477487);
-function p(e) {
+function d(e) {
     var t,
         n,
-        { title: p, description: d, image: b, button: m } = e,
-        g = (function (e, t) {
+        { title: d, description: p, image: b, button: g } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -21,25 +21,25 @@ function p(e) {
                     var n,
                         r,
                         a = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
             return a;
         })(e, ["title", "description", "image", "button"]);
-    let O = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
+    let O = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         y = a.useRef(null),
-        j = a.useRef(new o.qA()),
+        j = a.useRef(new i.qA()),
         [v, h] = a.useState(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.O_, {
+            (0, r.jsx)(i.O_, {
                 ref: h,
                 className: f.confettiCanvas,
                 environment: j.current,
@@ -76,7 +76,7 @@ function p(e) {
                         className: f.modal,
                         size: c.CgR.DYNAMIC,
                     },
-                    g,
+                    m,
                 )),
                 (n = n =
                     {
@@ -96,15 +96,15 @@ function p(e) {
                                             children: [
                                                 (0, r.jsx)(c.X6q, {
                                                     variant: "heading-xl/extrabold",
-                                                    children: p,
+                                                    children: d,
                                                 }),
                                                 (0, r.jsx)(c.Text, {
                                                     tag: "span",
                                                     className: f.description,
                                                     variant: "text-sm/normal",
-                                                    children: d,
+                                                    children: p,
                                                 }),
-                                                m,
+                                                g,
                                             ],
                                         }),
                                     ],
@@ -113,7 +113,7 @@ function p(e) {
                             (0, r.jsx)(c.olH, {
                                 "data-migration-pending": !0,
                                 className: f.close,
-                                onClick: g.onClose,
+                                onClick: m.onClose,
                             }),
                             !O &&
                                 (0, r.jsx)(s.Z, {

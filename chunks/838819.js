@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => W }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(772848),
     o = n(399606),
     c = n(952265),
@@ -39,22 +39,22 @@ var r = n(951288),
     D = n(345213);
 let M = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
-            s = (0, c.f9)();
+            a = (0, c.f9)();
         return (
             l.useEffect(() => {
-                if (!n || s) return;
+                if (!n || a) return;
                 let e = (e) => {
                     e.key === H.mR.Escape && r();
                 };
                 return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
-            }, [n, s, r]),
+            }, [n, a, r]),
             t
         );
     },
     W = function (e) {
         let { isFullScreen: t = !0, tab: n = Z.AW.HOME } = e;
         (0, C.z)(f.f), (0, L.f)();
-        let s = (0, g.Z)((0, i.Z)()),
+        let a = (0, g.Z)((0, i.Z)()),
             c = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
             { userProfile: H, wishlistId: W } = (0, o.cj)(
                 [h.Z],
@@ -75,7 +75,7 @@ let M = (e) => {
             { categories: q, refreshCategories: Y } = (0, y.ZP)(
                 { logPerf: !0 },
                 {
-                    sessionId: s,
+                    sessionId: a,
                     tab: K,
                     isFullScreen: t,
                 },
@@ -91,12 +91,12 @@ let M = (e) => {
         let en = l.useCallback((e, t) => {
                 et(e), J(t);
             }, []),
-            { selectedTab: er, transitionState: el, transitionToTab: es } = (0, j.B)(K, t);
-        (0, O.q3)(s, er, $, el, ee), (0, O.EB)(er, c);
-        let { dismissShopButtonDC: ea } = (0, A.Z)();
+            { selectedTab: er, transitionState: el, transitionToTab: ea } = (0, j.B)(K, t);
+        (0, O.q3)(a, er, $, el, ee), (0, O.EB)(er, c);
+        let { dismissShopButtonDC: es } = (0, A.Z)();
         l.useEffect(() => {
-            ea();
-        }, [ea]),
+            es();
+        }, [es]),
             l.useEffect(() => {
                 t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
             }, [t]);
@@ -119,7 +119,7 @@ let M = (e) => {
                   value: eg,
                   children: (0, r.jsx)(S.k0, {
                       newValue: {
-                          sessionId: s,
+                          sessionId: a,
                           pageCategory: $,
                           pageSize: Z.kN,
                       },
@@ -129,7 +129,7 @@ let M = (e) => {
                               onClose: V,
                               shouldAddEventListener: t && !ei,
                               children: (0, r.jsxs)("div", {
-                                  className: a()(F.shop, { [D.shopTakeOver]: U }),
+                                  className: s()(F.shop, { [D.shopTakeOver]: U }),
                                   ref: t ? eo : ec,
                                   tabIndex: -1,
                                   children: [
@@ -137,11 +137,11 @@ let M = (e) => {
                                           isFullScreen: t,
                                           isLayer: ei,
                                           onClose: V,
-                                          handleTransition: es,
+                                          handleTransition: ea,
                                           selectedTab: er,
                                       }),
                                       (0, r.jsx)("div", {
-                                          className: a()(F.shopViewWrapper, {
+                                          className: s()(F.shopViewWrapper, {
                                               [F.visible]: el === Z.f7.VISIBLE,
                                               [F.in]: el === Z.f7.IN,
                                               [F.out]: el === Z.f7.OUT,
@@ -150,7 +150,7 @@ let M = (e) => {
                                               tab: er,
                                               isFullScreen: t,
                                               refreshCategories: Y,
-                                              transitionToTab: es,
+                                              transitionToTab: ea,
                                               transitionState: el,
                                               sortedCategories: X,
                                               updateAnalyticsState: en,

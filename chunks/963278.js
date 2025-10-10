@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     i = n(481060),
     o = n(594174),
     c = n(381585),
@@ -15,12 +15,12 @@ var l = n(120356),
     C = n(310582);
 let h = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        h = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
+        h = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         _ = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
     return null == h
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(C.shelfBlockContainer, C.centeredSection),
+              className: a()(C.shelfBlockContainer, C.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: C.blockHeader,
@@ -40,9 +40,9 @@ let h = (e) => {
                       className: C.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
-                              let s = u.Z.getCategoryForProduct(e),
-                                  a = u.Z.getProduct(e);
-                              return null == s || null == a
+                              let a = u.Z.getCategoryForProduct(e),
+                                  s = u.Z.getProduct(e);
+                              return null == a || null == s
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -57,8 +57,8 @@ let h = (e) => {
                                                 : (0, r.jsx)(
                                                       g.Z,
                                                       {
-                                                          product: a,
-                                                          category: s,
+                                                          product: s,
+                                                          category: a,
                                                           user: h,
                                                           tab: l,
                                                       },

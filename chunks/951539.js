@@ -1,6 +1,6 @@
 t.d(n, {
-    ZP: () => g,
-    so: () => b,
+    ZP: () => m,
+    so: () => g,
 }),
     t(388685);
 var i = t(442837),
@@ -14,16 +14,16 @@ var i = t(442837),
     u = t(924301),
     _ = t(765305),
     p = t(981631);
-function b(e) {
-    let [n, t, i, b] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP, l.Z, c.Z, r.Z];
+function g(e) {
+    let [n, t, i, g] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP, l.Z, c.Z, r.Z];
     if ((0, u.Z2)(e)) return !1;
-    let { guild_id: g, channel_id: h } = e,
-        m = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(h),
-        f = i.getGuild(g),
-        v = b.getStageInstanceByChannel(h);
+    let { guild_id: m, channel_id: b } = e,
+        h = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(b),
+        f = i.getGuild(m),
+        v = g.getStageInstanceByChannel(b);
     return (
-        !!(0, a.b)(s.Z, f, m, v) &&
-        null != m &&
+        !!(0, a.b)(s.Z, f, h, v) &&
+        null != h &&
         (function (e) {
             let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z],
                 { entityType: t, channelId: i } =
@@ -39,6 +39,6 @@ function b(e) {
         })(e, [t])
     );
 }
-function g(e) {
-    return (0, i.e7)([o.ZP, l.Z, c.Z, r.Z], () => b(e, [o.ZP, l.Z, c.Z, r.Z]), [e]);
+function m(e) {
+    return (0, i.e7)([o.ZP, l.Z, c.Z, r.Z], () => g(e, [o.ZP, l.Z, c.Z, r.Z]), [e]);
 }

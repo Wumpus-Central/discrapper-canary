@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(951288),
     l = n(647438),
-    s = n(335818),
-    a = n(481060),
+    a = n(335818),
+    s = n(481060),
     i = n(501431),
     o = n(149705),
     c = n(388032);
@@ -20,17 +20,17 @@ function u() {
                     search: e,
                 });
             }
-            return 1 === e.size && e.has(s.G.AVATAR_DECORATION)
+            return 1 === e.size && e.has(a.G.AVATAR_DECORATION)
                 ? c.intl.format(c.t.s1UzGR, { count: n })
-                : 1 === e.size && e.has(s.G.NAMEPLATE)
+                : 1 === e.size && e.has(a.G.NAMEPLATE)
                   ? c.intl.format(c.t.ZWGN9f, { count: n })
-                  : 1 === e.size && e.has(s.G.PROFILE_EFFECT)
+                  : 1 === e.size && e.has(a.G.PROFILE_EFFECT)
                     ? c.intl.format(c.t["v/7apq"], { count: n })
-                    : 1 === e.size && e.has(s.G.BUNDLE)
+                    : 1 === e.size && e.has(a.G.BUNDLE)
                       ? c.intl.format(c.t.fZ1rdn, { count: n })
                       : c.intl.format(c.t["/rPvmZ"], { count: n });
         }, [e, n, d, t, u]);
-    return (0, r.jsx)(a.X6q, {
+    return (0, r.jsx)(s.X6q, {
         variant: "heading-lg/semibold",
         children: g(),
     });

@@ -10,4 +10,5 @@ e.exports = {
     syncedRole: "syncedRole__24585",
     emoji: "emoji__24585",
     expandIcon: "expandIcon__24585",
+    kickPermissionWarning: "kickPermissionWarning__24585",
 };

@@ -1,16 +1,16 @@
 n.d(t, {
     QH: () => i,
-    pj: () => s,
+    pj: () => a,
 });
 var r,
     l = n(427164),
-    s =
+    a =
         (((r = {}).NO_BADGE = "no_badge"),
         (r.FIRST_BLOCK_ONLY = "first_block_only"),
         (r.RIGHT_BLOCK_ONLY = "right_block_only"),
         (r.BOTH_BLOCKS = "both_blocks"),
         r);
-let a = (0, l.le)({
+let s = (0, l.le)({
         name: "2025-10-collectibles-featured-block-new-badge",
         kind: "user",
         defaultConfig: { variant: "no_badge" },
@@ -21,4 +21,4 @@ let a = (0, l.le)({
             3: { variant: "both_blocks" },
         },
     }),
-    i = (e) => a.useConfig({ location: e }).variant;
+    i = (e) => s.useConfig({ location: e }).variant;

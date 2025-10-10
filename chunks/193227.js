@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(907331),
     o = n(399606),
     c = n(481060),
@@ -24,10 +24,10 @@ var r = n(951288),
     y = n(887353);
 function T(e) {
     let { products: t, header: n, category: l } = e,
-        s = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        a = (0, x.St)(t),
+        a = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        s = (0, x.St)(t),
         i = g.Z.useConfig({ location: "Products" }).showCardsV2;
-    return null == s || 0 === t.length
+    return null == a || 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
               children: [
@@ -41,7 +41,7 @@ function T(e) {
                       : (0, r.jsx)(c.LZC, { size: 24 }),
                   (0, r.jsx)("div", {
                       className: y.cardsContainer,
-                      children: a.map((e, t) =>
+                      children: s.map((e, t) =>
                           (0, r.jsx)(
                               d.k0,
                               {
@@ -53,7 +53,7 @@ function T(e) {
                                             {
                                                 category: l,
                                                 product: e,
-                                                user: s,
+                                                user: a,
                                                 tab: O.AW.CATALOG,
                                             },
                                             e.skuId,
@@ -77,10 +77,10 @@ function L(e) {
 }
 function j(e) {
     let { category: t, isFullScreen: n } = e,
-        [s, a] = l.useState(!1),
+        [a, s] = l.useState(!1),
         o = (0, i.O)(
             (e) => {
-                a(e);
+                s(e);
             },
             n ? 0.13 : 0.15,
         );
@@ -92,7 +92,7 @@ function j(e) {
 }
 function k(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: s, isFullScreen: i, currentPage: o, handlePageChange: u } = e,
+    let { sortedCategories: n, setCategoryRef: a, isFullScreen: i, currentPage: o, handlePageChange: u } = e,
         g = (0, d.sp)(),
         f = (0, S.R)(),
         C = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
@@ -137,13 +137,13 @@ function k(e) {
     return f
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)("div", {
-              className: a()(y.categories, { [y.categoriesNoFilter]: !T }),
+              className: s()(y.categories, { [y.categoriesNoFilter]: !T }),
               children: [
                   x.map((e, t) =>
                       (0, r.jsx)(
                           "div",
                           {
-                              ref: (t) => s(e.skuId, t),
+                              ref: (t) => a(e.skuId, t),
                               children: (0, r.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
                                   children: (0, r.jsx)(j, {

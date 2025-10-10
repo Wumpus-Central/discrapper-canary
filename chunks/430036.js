@@ -16,8 +16,8 @@ var i = n(951288),
     y = n(744061),
     _ = n(36311),
     O = n(655687),
-    b = n(823748),
-    v = n(25007),
+    v = n(823748),
+    b = n(25007),
     E = n(199649),
     x = n(1397),
     S = n(541716),
@@ -27,8 +27,8 @@ var i = n(951288),
     I = n(249458),
     P = n(552062),
     w = n(957730),
-    T = n(400023),
-    N = n(623292),
+    N = n(400023),
+    T = n(623292),
     D = n(807092),
     k = n(592125),
     R = n(703558),
@@ -263,7 +263,7 @@ class el extends r.Component {
                               er(ei({}, l), { location: $.dy.OVERLAY }),
                           ),
                           this.setState((0, Z.H2)()),
-                          (0, N.A6)(n.id),
+                          (0, T.A6)(n.id),
                           r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
@@ -349,7 +349,7 @@ class ea extends r.PureComponent {
                           channelId: t.id,
                       })
                     : (0, i.jsx)(
-                          T.Z,
+                          N.Z,
                           {
                               channel: t,
                               className: et.messages,
@@ -369,7 +369,7 @@ class ea extends r.PureComponent {
                     children: [
                         !a &&
                             !p &&
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(b.Z, {
                                 channel: t,
                                 guild: l,
                             }),
@@ -570,7 +570,7 @@ function ec(e) {
         y = (0, c.e7)([W.default], () => (null != g ? W.default.getUser(g) : null)),
         { placeholder: _ } = (0, O.Z)({ channel: o });
     return null != o && null != h && Q.TPd.GUILD_THREADS_ONLY.has(o.type)
-        ? (0, i.jsx)(b.Z, {})
+        ? (0, i.jsx)(v.Z, {})
         : (0, i.jsx)(
               ea,
               ei(

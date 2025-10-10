@@ -7,8 +7,8 @@ var r = n(647438),
 function c(e) {
     var t, n;
     let { channelId: c, localCreationAnswerId: s, image: u } = e,
-        d = null == u ? void 0 : u.emoji,
-        f = (null == u || null == (t = u.mediaAttachmentState) ? void 0 : t.status) === o._.PREPARING,
+        f = null == u ? void 0 : u.emoji,
+        d = (null == u || null == (t = u.mediaAttachmentState) ? void 0 : t.status) === o._.PREPARING,
         m = (0, l.e7)([i.Z], () => i.Z.getUpload(c, s, a.d.Poll)),
         [p, b] = r.useState(),
         [g, j] = r.useState("");
@@ -26,8 +26,8 @@ function c(e) {
             );
         }, [null == m || null == (n = m.item) ? void 0 : n.file]),
         {
-            emoji: d,
-            isLoadingMedia: f,
+            emoji: f,
+            isLoadingMedia: d,
             hasUpload: null != m,
             upload: m,
             mediaUrl: p,

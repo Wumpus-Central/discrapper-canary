@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(907331),
     o = n(636977),
     c = n(685816),
@@ -51,7 +51,7 @@ let M = (0, E.IC)(90),
     },
     U = (e) => {
         var t;
-        let { isLoading: n, handleTransition: s, category: U, heroBlock: V, tab: z, onVisibilityChange: G } = e,
+        let { isLoading: n, handleTransition: a, category: U, heroBlock: V, tab: z, onVisibilityChange: G } = e,
             K = (0, i.O)(
                 (e) => {
                     null == G || G(e);
@@ -93,12 +93,12 @@ let M = (0, E.IC)(90),
                 bannerStyleOverrides: en,
                 logoStyleOverrides: er,
                 heroLogo: el,
-                heroBannerStatic: es,
-                heroBannerAnimated: ea,
+                heroBannerStatic: ea,
+                heroBannerAnimated: es,
             } = (0, P.hr)(et),
             ei = null != (t = null == en ? void 0 : en.responsive) && t,
             eo = null == en ? void 0 : en.backgroundStyle,
-            ec = (0, A.Dp)(ea),
+            ec = (0, A.Dp)(es),
             eu = (0, u.e7)([b.Z], () => b.Z.products),
             ed = l.useMemo(() => (n ? [] : eu.size > 0 ? Q(et.rankedSkuIds) : []), [n, Q, et.rankedSkuIds, eu]),
             eg = l.useMemo(
@@ -115,11 +115,11 @@ let M = (0, E.IC)(90),
             { cardContainerRef: ep, totalCards: ef } = ((e) => {
                 let [t, n] = l.useState(1),
                     r = (0, d.dQu)(d.TVs.space.SPACE_XL),
-                    s = (0, p.Z)(() => {
-                        (null == a ? void 0 : a.current) != null &&
-                            n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
+                    a = (0, p.Z)(() => {
+                        (null == s ? void 0 : s.current) != null &&
+                            n(Math.max(1, Math.floor((s.current.offsetWidth + r) / (246 + r))));
                     }),
-                    a = (0, g.y)(s, [r, e], {
+                    s = (0, g.y)(a, [r, e], {
                         fireOnMount: !0,
                         fireOnDepsChange: !0,
                         enabled: e,
@@ -127,9 +127,9 @@ let M = (0, E.IC)(90),
                 return {
                     cardContainerRef: l.useCallback(
                         (t) => {
-                            (a.current = t), null != t && e && s();
+                            (s.current = t), null != t && e && a();
                         },
-                        [s, a, e],
+                        [a, s, e],
                     ),
                     totalCards: e ? t : 4,
                 };
@@ -156,7 +156,7 @@ let M = (0, E.IC)(90),
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
                       }),
                       (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
-                    : (s("shop latest category hero", !eb || eE ? et.categorySkuId : void 0),
+                    : (a("shop latest category hero", !eb || eE ? et.categorySkuId : void 0),
                       _.default.track(H.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == J ? void 0 : J.sessionId,
                           sku_id: et.categorySkuId,
@@ -179,13 +179,13 @@ let M = (0, E.IC)(90),
                             })
                           : null,
                       (0, r.jsx)("div", {
-                          className: a()(D.banner, { [D.rivBanner]: ec }),
+                          className: s()(D.banner, { [D.rivBanner]: ec }),
                           style: null != eo ? { background: eo } : void 0,
                           children:
-                              null != es &&
+                              null != ea &&
                               (0, r.jsx)(Z.Z, {
-                                  bannerStatic: es,
-                                  bannerAnimated: ea,
+                                  bannerStatic: ea,
+                                  bannerAnimated: es,
                                   isResponsive: ei,
                                   eventTargetRef: q,
                               }),
@@ -205,7 +205,7 @@ let M = (0, E.IC)(90),
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
-                                        className: a()($ ? D.heroHeaderContainerStacked : D.heroHeaderContainer, {
+                                        className: s()($ ? D.heroHeaderContainerStacked : D.heroHeaderContainer, {
                                             [D.responsive]: ei,
                                         }),
                                         children: [
@@ -223,7 +223,7 @@ let M = (0, E.IC)(90),
                                                                   className: D.limitedTimeBadge,
                                                               }),
                                                           (0, r.jsxs)("div", {
-                                                              className: a()(D.heroLogoNameContainer, {
+                                                              className: s()(D.heroLogoNameContainer, {
                                                                   [D.heroLogoNameContainerStacked]: $,
                                                               }),
                                                               children: [
@@ -276,7 +276,7 @@ let M = (0, E.IC)(90),
                                         ],
                                     }),
                               (0, r.jsx)("div", {
-                                  className: a()({
+                                  className: s()({
                                       [D.row]: z === w.AW.HOME,
                                       [D.feed]: z === w.AW.ORBS,
                                   }),

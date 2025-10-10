@@ -17,41 +17,49 @@ function p(e) {
             labelText: b,
             descriptionText: g,
             helpText: f,
-            canNavigate: h,
+            errors: h,
+            canNavigate: x,
         } = e,
-        x = o.Z.get(m),
-        j = r.useCallback(
-            async (e) => {
-                h() && (await s.Z.enableIntegration(p.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
-            },
-            [h, p.id],
-        ),
+        j = o.Z.get(m),
         v = r.useCallback(
-            (e) => {
-                h() &&
-                    (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
-                    s.Z.disableIntegration(p.id, e.id));
+            async (e) => {
+                x() && (await s.Z.enableIntegration(p.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
             },
-            [h, n, p.id],
+            [x, p.id],
         ),
         O = r.useCallback(
             (e) => {
-                h() &&
+                x() &&
+                    (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
+                    s.Z.disableIntegration(p.id, e.id));
+            },
+            [x, n, p.id],
+        ),
+        y = r.useCallback(
+            (e) => {
+                x() &&
                     (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
             },
-            [h, n],
+            [x, n],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
                 name: b,
-                icon: null == x ? void 0 : x.icon.whiteSVG,
-                iconBackgroundColor: null == x ? void 0 : x.color,
+                icon: null == j ? void 0 : j.icon.whiteSVG,
+                iconBackgroundColor: null == j ? void 0 : j.color,
                 iconClassName: u.platformIcon,
                 description: g,
                 isHeader: !0,
             }),
             (0, i.jsx)(l.izJ, { className: u.headerDivider }),
+            "message" in h &&
+                (0, i.jsx)(l.Text, {
+                    className: u.errorText,
+                    color: "text-danger",
+                    variant: "text-sm/normal",
+                    children: h.message,
+                }),
             t.map((e) =>
                 (0, i.jsx)(
                     d.Z,
@@ -60,9 +68,9 @@ function p(e) {
                         editedIntegration: n,
                         guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
-                        onEnable: j,
-                        onDisable: v,
-                        onToggleExpand: () => O(e.id),
+                        onEnable: v,
+                        onDisable: O,
+                        onToggleExpand: () => y(e.id),
                     },
                     e.id,
                 ),

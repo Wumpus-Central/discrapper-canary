@@ -1,8 +1,8 @@
 t.d(n, { default: () => f }), t(388685), t(953529);
 var i = t(951288),
     l = t(647438),
-    r = t(793030),
-    a = t(442837),
+    a = t(793030),
+    r = t(442837),
     s = t(755721),
     c = t(481060),
     o = t(41776),
@@ -10,40 +10,40 @@ var i = t(951288),
     d = t(513449),
     h = t(592125),
     v = t(430824),
-    m = t(305298),
-    g = t(405613),
+    g = t(305298),
+    m = t(405613),
     x = t(460838),
-    C = t(765305),
-    p = t(388032),
+    p = t(765305),
+    C = t(388032),
     j = t(602872);
 function f(e) {
     var n;
     let { transitionState: t, event: f, onSuccess: y, onClose: N } = e,
         { guild_id: k, privacy_level: E } = f,
-        b = (0, a.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
-        w = (0, a.e7)([v.Z], () => v.Z.getGuild(k), [k]),
+        b = (0, r.e7)([h.Z], () => h.Z.getChannel(f.channel_id), [f]),
+        w = (0, r.e7)([v.Z], () => v.Z.getGuild(k), [k]),
         { canManageGuildEvent: I } = (0, u.XJ)(null != b ? b : w),
         S = I(f),
-        O = (0, a.e7)([o.Z], () => o.Z.isLurking(k), [k]),
-        Z = f.entity_type === C.WX.STAGE_INSTANCE,
+        O = (0, r.e7)([o.Z], () => o.Z.isLurking(k), [k]),
+        Z = f.entity_type === p.WX.STAGE_INSTANCE,
         [_, T] = l.useState(Z),
-        [P, { loading: L, error: A }] = (0, m.Z)();
+        [P, { loading: L, error: A }] = (0, g.Z)();
     if (!S) return null;
-    let G = E === C.j8.PUBLIC ? p.intl.string(p.t.HhlaLC) : p.intl.string(p.t.GI3xXV),
+    let G = E === p.j8.PUBLIC ? C.intl.string(C.t.HhlaLC) : C.intl.string(C.t.GI3xXV),
         X = () => {
             null == y || y(), N(), (0, d.Ku)(!1);
         },
         R = async () => {
             await P(f, _, { onSuccess: X });
         };
-    return (0, i.jsxs)(r.Modal, {
+    return (0, i.jsxs)(a.Modal, {
         transitionState: t,
         onClose: N,
         title: f.name,
-        subtitle: p.intl.format(p.t.UMajoq, {
+        subtitle: C.intl.format(C.t.UMajoq, {
             privacyLevel: G,
             privacyLevelHook: (e, n) =>
-                E !== C.j8.PUBLIC
+                E !== p.j8.PUBLIC
                     ? null
                     : (0, i.jsxs)(
                           "div",
@@ -67,14 +67,14 @@ function f(e) {
         actions: [
             {
                 variant: "secondary",
-                text: p.intl.string(p.t.CZGqeX),
+                text: C.intl.string(C.t.CZGqeX),
                 onClick: () => {
                     N();
                 },
             },
             {
                 variant: "active",
-                text: p.intl.string(p.t.cK1GGR),
+                text: C.intl.string(C.t.cK1GGR),
                 onClick: R,
                 loading: L,
             },
@@ -85,7 +85,7 @@ function f(e) {
                 channel: b,
                 name: f.name,
                 description: null != (n = f.description) ? n : void 0,
-                imageSource: (0, g.Z)(f),
+                imageSource: (0, m.Z)(f),
                 isActive: !1,
                 isUserLurking: O,
                 speakers: [],
@@ -98,7 +98,7 @@ function f(e) {
                     className: j.verticalSpacing,
                     checked: _,
                     onChange: (e) => T(e),
-                    label: p.intl.string(p.t.dGNtgI),
+                    label: C.intl.string(C.t.dGNtgI),
                     labelType: "secondary",
                 }),
             null != A && null != A.getAnyErrorMessage()

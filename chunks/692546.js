@@ -34,7 +34,7 @@ function _(e) {
     (y = !0), (m.x = t), (m.y = n);
 }
 let O = new Map();
-function b(e, t) {
+function v(e, t) {
     if (null == t) O.delete(e), 0 === O.size && (window.removeEventListener("mousemove", _), (y = !1));
     else {
         let n = O.get(e);
@@ -66,21 +66,21 @@ function b(e, t) {
                 }),
             }),
                 (n = e),
-                v ||
+                b ||
                     (n.setClickZoneCallback((e, t, n) => {
                         let i = O.get(e);
                         null != i && (y || ((m.x = t), (m.y = n)), i.instance.click());
                     }),
-                    (v = !0));
+                    (b = !0));
         }
 }
-let v = !1;
+let b = !1;
 class E extends (i = r.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), b(this.zone, null);
+        this.interval.stop(), v(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -104,7 +104,7 @@ class E extends (i = r.PureComponent) {
                 let e = this.props.contentDomRef.current;
                 if ((0, l.kK)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
-                    b(this.zone, {
+                    v(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,

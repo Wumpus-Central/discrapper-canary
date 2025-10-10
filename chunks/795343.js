@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685), n(35282);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(399606),
     o = n(481060),
     c = n(594174),
@@ -24,7 +24,7 @@ var r = n(951288),
     y = n(891131);
 function T(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: s, scrollerRef: T, tab: L } = e,
+    let { isFetchingCategories: n, isFullScreen: a, scrollerRef: T, tab: L } = e,
         j = (0, d.sp)(),
         k = null != (t = null == j ? void 0 : j.sessionId) ? t : "",
         { noCache: I, includeUnpublished: P } = (0, v.Z)(),
@@ -47,11 +47,11 @@ function T(e) {
                 sessionId: k,
                 checkpoint: _.a.SHOP_RENDERED,
                 tab: L,
-                isFullScreen: s,
+                isFullScreen: a,
                 unpublishedCategoriesShown: P,
                 cacheDisabled: I,
             });
-    }, [k, s, P, I, n, L]);
+    }, [k, a, P, I, n, L]);
     let W = l.useRef(null),
         { setQueryPageSize: U, setQueryPageOffset: V, queryPageSize: z } = (0, C.S)(),
         [G, K] = l.useState(!1),
@@ -86,11 +86,11 @@ function T(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: a()({ [y.productsEmpty]: Y }),
+                className: s()({ [y.productsEmpty]: Y }),
                 children: [
                     Y && (0, r.jsx)(x.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: a()(y.products, { [y.loadIn]: G }),
+                        className: s()(y.products, { [y.loadIn]: G }),
                         ref: W,
                         children: [
                             q && [...Array(z)].map((e, t) => (Q ? (0, r.jsx)(S.Z, {}, t) : (0, r.jsx)(m.K, {}, t))),

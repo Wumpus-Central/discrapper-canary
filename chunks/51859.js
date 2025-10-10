@@ -21,12 +21,12 @@ function x(e) {
         j = (0, s.ZP)(t, n).type !== g.A3.INACTIVE,
         C = (0, m.d)(j),
         I = (0, a.g1)(t, "GuildPowerupPerkCard"),
-        w = n.skuId === o.A$;
+        E = n.skuId === o.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => h(e),
         guildId: t,
         powerup: n,
-        badge: w && I ? "beta" : void 0,
+        badge: E && I ? "beta" : void 0,
         children: [
             (0, r.jsx)(d.m, {
                 className: v.image,

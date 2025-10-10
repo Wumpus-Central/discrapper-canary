@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -7,8 +7,8 @@ var r = n(951288),
     c = n(481060),
     s = n(596454),
     u = n(907040),
-    d = n(906411),
-    f = n(592125),
+    f = n(906411),
+    d = n(592125),
     m = n(358085),
     p = n(79390),
     b = n(35463),
@@ -57,7 +57,7 @@ function P(e) {
           ? (0, r.jsx)(s.Z, {
                 className: o,
                 emojiId: i.id,
-                emojiName: i.type === d.B.UNICODE ? i.optionallyDiverseSequence : i.name,
+                emojiName: i.type === f.B.UNICODE ? i.optionallyDiverseSequence : i.name,
                 animated: i.animated,
             })
           : c;
@@ -89,20 +89,20 @@ function w(e) {
         }),
     });
 }
-function x(e) {
+function k(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
             buttonImage: a,
             onEmojiSelect: s,
-            onEmojiRemove: d,
+            onEmojiRemove: f,
             answerIndex: m,
             shouldShowEmojiPicker: g,
-            toggleEmojiPicker: x,
-            containerRef: k,
+            toggleEmojiPicker: k,
+            containerRef: C,
         } = e,
-        C = l.useRef(null),
-        R = (0, o.e7)([f.Z], () => f.Z.getChannel(t)),
+        x = l.useRef(null),
+        R = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
         {
             emoji: E,
             isLoadingMedia: _,
@@ -116,9 +116,9 @@ function x(e) {
         }),
         I = S || null != E,
         N = l.useCallback(() => {
-            d(m);
-        }, [d, m]),
-        L = l.useMemo(
+            f(m);
+        }, [f, m]),
+        U = l.useMemo(
             () =>
                 S
                     ? y.intl.formatToPlainString(y.t.vcC7Qk, {
@@ -133,7 +133,7 @@ function x(e) {
                       : y.intl.formatToPlainString(y.t.emdpNj, { answerNumber: m + 1 }),
             [S, E, m, A],
         ),
-        U = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)("div", {
@@ -157,12 +157,12 @@ function x(e) {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(w, {
                     onSelect: t,
-                    onEditMedia: x,
+                    onEditMedia: k,
                     onDeleteMedia: N,
                     closePopout: t,
                 });
             },
-            [N, x],
+            [N, k],
         ),
         Z = _
             ? (0, r.jsx)(c.$jN, { className: h.spinnerWrapperDefault })
@@ -181,10 +181,10 @@ function x(e) {
               }),
         B = i()(O.CT, h.expressionPickerButtonDefault, { [h.canEditMedia]: I });
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: k,
-        renderPopout: U,
+        targetElementRef: C,
+        renderPopout: L,
         shouldShow: g,
-        onRequestClose: x,
+        onRequestClose: k,
         animation: c.yRy.Animation.NONE,
         position: "bottom",
         spacing: 2,
@@ -193,7 +193,7 @@ function x(e) {
             return (
                 v(e, ["aria-controls", "aria-expanded"]),
                 (0, r.jsx)(c.yRy, {
-                    targetElementRef: C,
+                    targetElementRef: x,
                     animation: c.yRy.Animation.NONE,
                     position: "bottom",
                     renderPopout: T,
@@ -228,12 +228,12 @@ function x(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: C }, u)),
+                            })({ innerRef: x }, u)),
                             (a = a =
                                 {
                                     className: B,
-                                    onClick: I && !g ? i : x,
-                                    "aria-label": L,
+                                    onClick: I && !g ? i : k,
+                                    "aria-label": U,
                                     "aria-controls": null != t ? t : o,
                                     "aria-expanded": n || s,
                                     children: [
@@ -267,7 +267,7 @@ function x(e) {
         },
     });
 }
-function k(e) {
+function C(e) {
     let {
             channelId: t,
             answer: n,
@@ -276,8 +276,8 @@ function k(e) {
             onAnswerTextChange: o,
             onEmojiSelect: s,
             onEmojiRemove: u,
-            canRemoveAnswer: d,
-            onRemoveAnswer: f,
+            canRemoveAnswer: f,
+            onRemoveAnswer: d,
             addAnswer: b,
             submitPoll: j,
             error: O,
@@ -286,7 +286,7 @@ function k(e) {
         } = e,
         P = l.useRef(null),
         w = l.useRef(null),
-        k = l.useRef(null);
+        C = l.useRef(null);
     l.useImperativeHandle(h, () => ({
         focusDeleteButton: () => {
             var e;
@@ -294,10 +294,10 @@ function k(e) {
         },
         focusInput: () => {
             var e;
-            return null == (e = k.current) ? void 0 : e.focus();
+            return null == (e = C.current) ? void 0 : e.focus();
         },
     }));
-    let [C, R] = l.useState(!1),
+    let [x, R] = l.useState(!1),
         E = l.useCallback(() => {
             R((e) => !e);
         }, []),
@@ -319,7 +319,7 @@ function k(e) {
             },
             [b, n, v, a, i, j, E],
         ),
-        S = (0, r.jsx)(x, {
+        S = (0, r.jsx)(k, {
             containerRef: P,
             channelId: t,
             buttonImage: n.image,
@@ -327,7 +327,7 @@ function k(e) {
             onEmojiRemove: u,
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: a,
-            shouldShowEmojiPicker: C,
+            shouldShowEmojiPicker: x,
             toggleEmojiPicker: E,
         });
     return (0, r.jsx)("div", {
@@ -338,11 +338,11 @@ function k(e) {
                 type: "emoji",
                 button: S,
             },
-            trailing: d
+            trailing: f
                 ? {
                       "aria-label": y.intl.formatToPlainString(y.t["22fjER"], { answerNumber: a + 1 }),
                       icon: c.XHJ,
-                      onClick: () => f(a),
+                      onClick: () => d(a),
                       buttonRef: w,
                   }
                 : void 0,
@@ -357,7 +357,7 @@ function k(e) {
                 }),
             onKeyDown: _,
             maxLength: g.WA,
-            inputRef: k,
+            inputRef: C,
         }),
     });
 }

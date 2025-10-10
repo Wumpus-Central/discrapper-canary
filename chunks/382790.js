@@ -28,11 +28,11 @@ function O(e, t, n) {
         e
     );
 }
-function b(e) {
+function v(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.default, { onClose: t });
 }
-class v extends (i = s.PureComponent) {
+class b extends (i = s.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
             s =
@@ -47,7 +47,7 @@ class v extends (i = s.PureComponent) {
                       )
                     : (0, r.jsx)(m.Z, {
                           title: y.intl.string(y.t.YUU0RE),
-                          renderSettings: b,
+                          renderSettings: v,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {}),
                       }),
@@ -72,5 +72,5 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-O(v, "defaultProps", { contained: !1 });
-let E = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(v);
+O(b, "defaultProps", { contained: !1 });
+let E = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);

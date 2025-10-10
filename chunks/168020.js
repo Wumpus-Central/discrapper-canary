@@ -2,12 +2,12 @@ n.d(t, { R: () => o }), n(35282);
 var r = n(951288);
 n(647438);
 var l = n(481060),
-    s = n(774078),
-    a = n(388032),
+    a = n(774078),
+    s = n(388032),
     i = n(64092);
 let o = (e) => {
     let { endDate: t, size: n = "md" } = e,
-        { days: o, hours: c, minutes: u } = (0, s.Z)(t),
+        { days: o, hours: c, minutes: u } = (0, a.Z)(t),
         d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
@@ -44,7 +44,7 @@ let o = (e) => {
                       ),
             ),
             (0, r.jsx)(l.nn4, {
-                children: a.intl.format(a.t.j6IyVV, {
+                children: s.intl.format(s.t.j6IyVV, {
                     days: o,
                     hours: c,
                     minutes: u,

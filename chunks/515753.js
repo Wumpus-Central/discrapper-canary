@@ -21,8 +21,8 @@ var r = n(951288),
     O = n(481060),
     v = n(493683),
     y = n(239091),
-    h = n(420660),
-    g = n(468363),
+    g = n(420660),
+    h = n(468363),
     j = n(326255),
     x = n(956221),
     N = n(771173),
@@ -204,9 +204,9 @@ let eo = ee.ZP.getEnableHardwareAcceleration() ? O.Xo$ : O.qEK,
                 role: b,
                 "aria-posinset": v,
                 "aria-setsize": y,
-                listItemRef: h,
+                listItemRef: g,
             } = e,
-            g = ea(e, [
+            h = ea(e, [
                 "route",
                 "selected",
                 "icon",
@@ -229,7 +229,7 @@ let eo = ee.ZP.getEnableHardwareAcceleration() ? O.Xo$ : O.qEK,
             focusProps: ei({ within: !0 }, es),
             "aria-posinset": v,
             "aria-setsize": y,
-            ref: h,
+            ref: g,
             children: (0, r.jsx)(O.vjx, {
                 as: "div",
                 selected: n,
@@ -245,7 +245,7 @@ let eo = ee.ZP.getEnableHardwareAcceleration() ? O.Xo$ : O.qEK,
                                 },
                                 className: er.link,
                             },
-                            g,
+                            h,
                         ),
                         {
                             children: [
@@ -273,7 +273,7 @@ function em(e) {
             isGDMFacepileEnabled: l,
             selected: o = !1,
             user: p,
-            activities: g,
+            activities: h,
             applicationStream: x,
             voiceChannel: R,
             isTyping: F,
@@ -288,8 +288,8 @@ function em(e) {
         [em, eb] = i.useState(!1),
         [eO, ev] = i.useState(!1),
         ey = i.useRef(null),
-        eh = i.useRef(null),
-        eg = null != q ? q : eh,
+        eg = i.useRef(null),
+        eh = null != q ? q : eg,
         {
             avatarSrc: ej,
             avatarDecorationSrc: ex,
@@ -465,9 +465,9 @@ function em(e) {
                 role: n,
                 focusProps: el(ei({}, es), {
                     focusTarget: ey,
-                    ringTarget: eg,
+                    ringTarget: eh,
                 }),
-                ref: eg,
+                ref: eh,
                 onMouseEnter: eB,
                 onMouseLeave: ez,
                 onMouseDown: eQ,
@@ -541,7 +541,7 @@ function em(e) {
                                                 );
                                                 let n = null;
                                                 return (
-                                                    p.isSystemUser() || (n = (0, h.Z)(g) ? et.Skl.STREAMING : G),
+                                                    p.isSystemUser() || (n = (0, g.Z)(h) ? et.Skl.STREAMING : G),
                                                     (0, r.jsx)(
                                                         eo,
                                                         el(ei({}, eN), {
@@ -574,7 +574,7 @@ function em(e) {
                                                         }),
                                                     })
                                                   : (0, j.Z)({
-                                                          activities: g,
+                                                          activities: h,
                                                           status: G,
                                                           applicationStream: x,
                                                           voiceChannel: R,
@@ -582,7 +582,7 @@ function em(e) {
                                                     ? (0, r.jsx)(N.Z, {
                                                           location: "PrivateChannel",
                                                           user: p,
-                                                          activities: g,
+                                                          activities: h,
                                                           voiceChannel: R,
                                                           applicationStream: x,
                                                           animateEmoji: ee || em || eO,
@@ -677,7 +677,7 @@ let eb =
                           isMobile: null != c && Q.Z.isMobileOnline(c),
                       };
                   }, [t, c, a]),
-                  { voiceActivityStatusEnabled: d } = (0, g.U)({ location: "PrivateChannel" }),
+                  { voiceActivityStatusEnabled: d } = (0, h.U)({ location: "PrivateChannel" }),
                   { voiceChannel: p } = (0, x.Z)({ userId: c }),
                   f = (0, F.K)({ user: l }),
                   b = (0, m.e7)([X.default, q.Z], () => {

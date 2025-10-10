@@ -4,7 +4,7 @@ var r = n(179360),
     a = n(430824),
     o = n(496675),
     s = n(914010),
-    l = n(634952),
+    l = n(755458),
     c = n(713081),
     u = n(905128),
     d = n(158638),
@@ -34,7 +34,7 @@ class m extends i.Z {
                 guildId: t.id,
                 location: "GuildPowerupsManager",
             }),
-            l.Lz.trackExposure({
+            l.u7.trackExposure({
                 guildId: t.id,
                 location: "GuildPowerupsManager",
             }),

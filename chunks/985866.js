@@ -23,8 +23,8 @@ var r = n(951288),
     O = n(572004),
     S = n(302221),
     A = n(617136),
-    _ = n(509212),
-    T = n(113434),
+    T = n(509212),
+    _ = n(113434),
     N = n(569984),
     R = n(497505),
     I = n(685138),
@@ -32,8 +32,8 @@ var r = n(951288),
     D = n(566078),
     P = n(602667),
     Z = n(644646),
-    L = n(78826),
-    k = n(46140),
+    k = n(78826),
+    L = n(46140),
     q = n(675654),
     M = n(388032),
     B = n(777738);
@@ -42,7 +42,7 @@ function Q(e) {
     let { quest: n, rewardCode: a, hasTieredRewardCodes: o, sourceQuestContent: s } = e,
         i = (0, d.wj)((0, h.ZP)()),
         u = (0, I.n)({
-            location: k.dr.REWARD_CODE_MODAL,
+            location: L.dr.REWARD_CODE_MODAL,
             questConfig: n.config,
         }).enabled,
         m = (0, p.dQu)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
@@ -64,7 +64,7 @@ function Q(e) {
                 i = (null == (t = o.userStatus) ? void 0 : t.claimedAt) != null || null != l,
                 c = s ? "" : M.intl.string(M.t.UUKbio),
                 d = s
-                    ? (0, _.o9)({
+                    ? (0, T.o9)({
                           quest: o,
                           idx:
                               null != (r = null == l ? void 0 : l.tier)
@@ -86,7 +86,7 @@ function Q(e) {
             rewardCode: a,
             hasTieredRewardCodes: o,
         }),
-        { hasError: y, isLoading: j } = (0, L.d7)();
+        { hasError: y, isLoading: j } = (0, k.d7)();
     return (0, r.jsxs)("div", {
         style: b,
         className: B.rewardTile,
@@ -106,7 +106,7 @@ function Q(e) {
                         className: l()(B.rewardTileAsset, { [B.rewardTileAssetLoading]: j || y }),
                         quest: n,
                         questContent: R.jn.QUEST_BAR_V2,
-                        location: k.dr.REWARD_CODE_MODAL,
+                        location: L.dr.REWARD_CODE_MODAL,
                         sourceQuestContent: s,
                     }),
                 ],
@@ -231,7 +231,7 @@ function W(e) {
             isClaimingReward: N.Z.isClaimingReward(l.id),
         })),
         ee = (0, A.O5)(),
-        et = (0, _.oo)({ quest: l }),
+        et = (0, T.oo)({ quest: l }),
         en = !0 === S ? (0, j.b)(l) : J,
         er = z && (null == (t = l.userStatus) ? void 0 : t.claimedAt) == null && null == en,
         {
@@ -294,7 +294,7 @@ function W(e) {
                         ? M.intl.format(M.t.m0btAQ, {})
                         : M.intl.format(M.t["ZUA/Ul"], { rewardName: s.defaultRewardName }),
                 });
-            let i = (0, _.C1)({
+            let i = (0, T.C1)({
                 quest: t,
                 rewardCode: o,
                 selectedPlatformType: n,
@@ -318,7 +318,7 @@ function W(e) {
         ep = a.useMemo(
             () =>
                 Z.map((e) => ({
-                    label: (0, _.t2)(e),
+                    label: (0, T.t2)(e),
                     value: e,
                 })),
             [Z],
@@ -335,11 +335,11 @@ function W(e) {
                         es(!1), U(e);
                     },
                     isSelected: (e) => e === W,
-                    serialize: (e) => (0, _.t2)(e),
+                    serialize: (e) => (0, T.t2)(e),
                     className: ei ? B.errorInput : "",
                     isDisabled: K,
-                    renderOptionLabel: (e) => {
-                        let t = (function (e) {
+                    renderLeading: (e) =>
+                        (function (e) {
                             switch (e) {
                                 case R.y$.CROSS_PLATFORM:
                                     return (0, r.jsx)(p.Che, { className: B.platformSelectionOptionIcon });
@@ -352,12 +352,7 @@ function W(e) {
                                 case R.y$.XBOX:
                                     return (0, r.jsx)(p.Mko, { className: B.platformSelectionOptionIcon });
                             }
-                        })(e.value);
-                        return (0, r.jsxs)("div", {
-                            className: B.platformSelectionOptionLabelContainer,
-                            children: [t, e.label],
-                        });
-                    },
+                        })(e.value),
                 }),
                 ei ? (0, r.jsx)(p.pdY, { error: M.intl.string(M.t.rbZBMT) }) : null,
             ],
@@ -394,11 +389,11 @@ function W(e) {
     let eh = a.useMemo(
             () =>
                 et
-                    ? (0, _.o9)({
+                    ? (0, T.o9)({
                           quest: l,
                           idx: null == en ? void 0 : en.tier,
                       })
-                    : (0, _.o9)({
+                    : (0, T.o9)({
                           quest: l,
                           idx: 0,
                       }),
@@ -410,7 +405,7 @@ function W(e) {
                     ? null
                     : (null == en ? void 0 : en.code) == null || "" === en.code
                       ? eh.redemptionLink
-                      : eh.redemptionLink.replace(k.Dp, encodeURIComponent(en.code)),
+                      : eh.redemptionLink.replace(L.Dp, encodeURIComponent(en.code)),
             [eh, en],
         ),
         ew = (0, E.G$)({
@@ -437,7 +432,7 @@ function W(e) {
           : ex && (ev = M.intl.string(M.t["+zx47e"]));
     let eO = !X && null != en && !P && !ei,
         eS = null != eb && et,
-        eA = (0, T.Gd)(l.id);
+        eA = (0, _.Gd)(l.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -464,8 +459,8 @@ function W(e) {
                                     onClick: () => o(),
                                 }),
                                 !eS &&
-                                    (0, r.jsx)(L.p, {
-                                        source: k.dr.REWARD_CODE_MODAL,
+                                    (0, r.jsx)(k.p, {
+                                        source: L.dr.REWARD_CODE_MODAL,
                                         questId: l.id,
                                         children: (0, r.jsx)(Q, {
                                             quest: l,

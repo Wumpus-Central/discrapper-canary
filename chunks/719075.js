@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(951288),
     l = n(647438),
-    s = n(399606),
-    a = n(481060),
+    a = n(399606),
+    s = n(481060),
     i = n(825102),
     o = n(594174),
     c = n(74538),
@@ -22,7 +22,7 @@ let v = (e) => {
         let { product: t } = e,
             n = (0, u.Nd)(),
             h = null == n ? void 0 : n.tab,
-            v = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+            v = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
             x = c.ZP.canUseCollectibles(v),
             { isDisabled: O } = (0, g.G)(t.skuId),
             { isPurchased: y, isPartiallyOwnedBundle: T } = (0, p.L)(t),
@@ -38,7 +38,7 @@ let v = (e) => {
                 hasDiscountOffer: P,
             });
         return O
-            ? (0, r.jsx)(a.Text, {
+            ? (0, r.jsx)(s.Text, {
                   tag: "div",
                   variant: "heading-md/semibold",
                   color: "header-muted",
@@ -51,7 +51,7 @@ let v = (e) => {
                     isPartiallyPurchased: T,
                 })
               : L
-                ? (0, r.jsx)(a.Text, {
+                ? (0, r.jsx)(s.Text, {
                       variant: "text-md/semibold",
                       className: S.priceTag,
                       children: E.intl.string(E.t.rt69oq),

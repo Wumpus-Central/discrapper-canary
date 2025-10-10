@@ -20,14 +20,14 @@ function y(e) {
         y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
     if ((0, a.e7)([h.Z], () => h.Z.isNotificationDisabled(f.n0.TextChat)) || y === g._vf.DISABLED) return null;
     let O = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        b = (0, l.groupBy)(O, (e) => e.type);
+        v = (0, l.groupBy)(O, (e) => e.type);
     return (0, i.jsx)(u.Z, {
         contentDomRef: s,
         observeInterval: 200,
         children: (0, i.jsx)("div", {
             ref: s,
             className: o()(m.container, m[y]),
-            children: Object.entries(b).map((e) => {
+            children: Object.entries(v).map((e) => {
                 let [r, s] = e;
                 return 0 === s.length
                     ? null

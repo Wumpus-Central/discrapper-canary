@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     l = n(647438),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     i = n(481060),
     o = n(702486),
     c = n(626135),
@@ -22,7 +22,7 @@ var r = n(951288),
     x = n(388032),
     O = n(452785);
 function y(e) {
-    let { isFullScreen: t, tab: n, sortedCategories: s, initialCategoryId: c, onUnmount: u } = e;
+    let { isFullScreen: t, tab: n, sortedCategories: a, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
@@ -50,9 +50,9 @@ function y(e) {
             p || S(!1);
         }, [p, S]),
         (0, r.jsx)("div", {
-            className: a()(O.pageWrapper, { [O.pageWrapperFilter]: p }),
+            className: s()(O.pageWrapper, { [O.pageWrapperFilter]: p }),
             children: (0, r.jsxs)("main", {
-                className: a()(O.page, { [O.pageFilter]: p }),
+                className: s()(O.page, { [O.pageFilter]: p }),
                 children: [
                     (0, r.jsx)(i.yWw, {
                         className: O.shopScroll,
@@ -65,7 +65,7 @@ function y(e) {
                             setFilterBarOpen: S,
                             tab: n,
                             scrollerRef: f,
-                            sortedCategories: s,
+                            sortedCategories: a,
                             setCategoryRef: m,
                         }),
                     }),
@@ -85,7 +85,7 @@ let T = (e) => {
     let {
             isFullScreen: t,
             isSmallScreen: n,
-            filterBarOpen: s,
+            filterBarOpen: a,
             setFilterBarOpen: o,
             tab: C,
             scrollerRef: y,
@@ -118,7 +118,7 @@ let T = (e) => {
         R = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (!n || !s) return;
+            if (!n || !a) return;
             let e = (e) => {
                 let t = e.target;
                 null === k.current ||
@@ -137,11 +137,11 @@ let T = (e) => {
                     o(!1));
             };
             return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
-        }, [n, s, o, P]),
+        }, [n, a, o, P]),
         (0, r.jsx)("div", {
             className: O.inventoryWrapper,
             children: (0, r.jsxs)("div", {
-                className: a()(O.inventory, {
+                className: s()(O.inventory, {
                     [O.inventoryFilter]: j,
                     [O.pageFullscreen]: t,
                 }),
@@ -155,7 +155,7 @@ let T = (e) => {
                                     children: (0, r.jsx)(p.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: a()(O.controlsRightSide, { [O.controlsRightSideResponsive]: n }),
+                                    className: s()(O.controlsRightSide, { [O.controlsRightSideResponsive]: n }),
                                     children: [
                                         (0, r.jsxs)("div", {
                                             className: O.sortBy,
@@ -171,7 +171,7 @@ let T = (e) => {
                                             ref: R,
                                             children: (0, r.jsx)(i.zxk, {
                                                 onClick: () => {
-                                                    let e = !s;
+                                                    let e = !a;
                                                     c.default.track(v.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: null == P ? void 0 : P.sessionId,
                                                         page_section: null == P ? void 0 : P.pageSection,
@@ -184,14 +184,14 @@ let T = (e) => {
                                                         o(e);
                                                 },
                                                 variant: "secondary",
-                                                text: x.intl.string(s ? x.t.fYtm6e : x.t.TeTYEx),
+                                                text: x.intl.string(a ? x.t.fYtm6e : x.t.TeTYEx),
                                                 icon: i.gXV,
                                                 iconPosition: "end",
                                             }),
                                         }),
                                     ],
                                 }),
-                                s &&
+                                a &&
                                     n &&
                                     (0, r.jsx)("div", {
                                         className: O.filterOverlay,

@@ -16,8 +16,8 @@ var i = n(951288),
     y = n(58468),
     _ = n(796974),
     O = n(324067),
-    b = n(984933),
-    v = n(888369),
+    v = n(984933),
+    b = n(888369),
     E = n(430824),
     x = n(496675),
     S = n(878884),
@@ -27,8 +27,8 @@ var i = n(951288),
     I = n(938475),
     P = n(518084),
     w = n(669083),
-    T = n(711553),
-    N = n(981631),
+    N = n(711553),
+    T = n(981631),
     D = n(647086),
     k = n(388032),
     R = n(613322);
@@ -152,7 +152,7 @@ class M extends r.PureComponent {
             { guild: o } = s,
             { controller: a, renderBanner: c, bannerVisible: d, communityInfoVisible: g } = this.state,
             m = (null == o ? void 0 : o.id) === D._ ? u.j : u.E;
-        return (0, i.jsxs)(T.Z, {
+        return (0, i.jsxs)(N.Z, {
             header:
                 null != o
                     ? (0, i.jsx)(p.ZP, {
@@ -245,7 +245,7 @@ function z(e) {
     var t;
     let { guildId: n } = e,
         r = (0, o.e7)([E.Z], () => E.Z.getGuild(n)),
-        s = (0, o.e7)([b.ZP], () => b.ZP.getChannels(n)),
+        s = (0, o.e7)([v.ZP], () => v.ZP.getChannels(n)),
         l = (0, o.e7)([O.Z], () => O.Z.getCategories(n)),
         { mutedChannels: d, collapseMuted: u } = (0, o.cj)([j.ZP], () => ({
             mutedChannels: j.ZP.getMutedChannels(n),
@@ -259,12 +259,12 @@ function z(e) {
             return t;
         }),
         w = (0, o.e7)([C.Z], () => C.Z.getVoiceChannelId()),
-        T = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
+        N = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         D = (0, o.e7)([m.Z], () => m.Z.version),
-        k = (0, o.e7)([v.default], () => v.default.getGuildChangeSentinel(n)),
+        k = (0, o.e7)([b.default], () => b.default.getGuildChangeSentinel(n)),
         R = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
-        L = null != (t = null == r ? void 0 : r.features.has(N.oNc.COMMUNITY)) && t,
+        L = null != (t = null == r ? void 0 : r.features.has(T.oNc.COMMUNITY)) && t,
         z = (0, o.e7)([Z.Z], () => Z.Z.getChannelId()),
         V = (0, o.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(M, {
@@ -282,7 +282,7 @@ function z(e) {
         collapsedChannels: h,
         collapseMuted: u,
         guildReadStateSentinel: k,
-        permissionVersion: T,
+        permissionVersion: N,
         categoryCollapseVersion: D,
         embeddedAppsByChannel: R,
         activeEventsByChannel: A,
