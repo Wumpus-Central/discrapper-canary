@@ -116,7 +116,6 @@ let Z = "1",
 function W(e) {
     let { disabled: t = !1, onClick: n, text: i, children: a, tooltipPosition: s = "top", ref: l } = e;
     return (0, r.jsx)(d.u, {
-        asContainer: !0,
         text: i,
         position: s,
         children: (0, r.jsx)(f.P3F, {
@@ -291,11 +290,17 @@ let X = i.forwardRef(function (e, t) {
                 ? "top"
                 : "bottom",
         [eD, eL] = i.useState(!1),
-        ex = eN && en;
-    function eM() {
+        ex = i.useCallback(() => {
+            eL(!0);
+        }, []),
+        eM = i.useCallback(() => {
+            eL(!1);
+        }, []),
+        ej = eN && en;
+    function ek() {
         Q || eh(ee);
     }
-    function ej(e) {
+    function eU(e) {
         if (
             (eT &&
                 !eO &&
@@ -304,16 +309,20 @@ let X = i.forwardRef(function (e, t) {
             null != $)
         )
             return void $(e);
-        eM();
+        ek();
     }
-    let ek = K({
-            sound: T,
-            previewSound: em,
-            disabled: eN && !B,
+    let eG = (0, r.jsx)("div", {
+            onMouseEnter: ex,
+            onMouseLeave: eM,
+            children: K({
+                sound: T,
+                previewSound: em,
+                disabled: eN && !B,
+            }),
         }),
-        eU = (e) =>
+        eB = (e) =>
             Q || eN
-                ? ex
+                ? ej
                     ? (0, r.jsx)(f.mBM, {
                           size: "xs",
                           color: "currentColor",
@@ -325,21 +334,25 @@ let X = i.forwardRef(function (e, t) {
                       color: "currentColor",
                       className: o()(x.primaryIcon, e),
                   }),
-        eG = (0, r.jsx)(z, {
-            sound: T,
-            disabled: !W && !B,
+        eZ = (0, r.jsx)("div", {
+            onMouseEnter: ex,
+            onMouseLeave: eM,
+            children: (0, r.jsx)(z, {
+                sound: T,
+                disabled: !W && !B,
+            }),
         }),
-        eB = () =>
-            ex && !er
+        eF = () =>
+            ej && !er
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)("div", { className: x.buttonOverlayBackground }),
-                          eU(x.primaryIconTopLevel),
+                          eB(x.primaryIconTopLevel),
                           (0, r.jsx)("div", {
                               className: x.buttonOverlay,
                               children: (0, r.jsxs)("div", {
                                   className: x.buttonOverlayActions,
-                                  children: [eR && ek, eR && eG],
+                                  children: [eR && eG, eR && eZ],
                               }),
                           }),
                       ],
@@ -358,12 +371,12 @@ let X = i.forwardRef(function (e, t) {
                                             setTooltipShowing: eL,
                                         })
                                       : (0, r.jsxs)(r.Fragment, {
-                                            children: [eR && ek, eU(), eR && eG],
+                                            children: [eR && eG, eB(), eR && eZ],
                                         }),
                           }),
                       ],
                   });
-    function eZ() {
+    function eV() {
         switch (et) {
             case A.Pb.ADD:
                 return (0, r.jsxs)("div", {
@@ -373,7 +386,7 @@ let X = i.forwardRef(function (e, t) {
                         (0, r.jsxs)("div", {
                             className: x.buttonOverlayActions,
                             children: [
-                                ek,
+                                eG,
                                 (0, r.jsxs)("div", {
                                     className: x.addButton,
                                     children: [
@@ -389,7 +402,7 @@ let X = i.forwardRef(function (e, t) {
                                         }),
                                     ],
                                 }),
-                                eR && eG,
+                                eR && eZ,
                             ],
                         }),
                     ],
@@ -399,7 +412,7 @@ let X = i.forwardRef(function (e, t) {
             case A.Pb.PLAY:
             case A.Pb.SOUNDMOJI:
             default:
-                return eB();
+                return eF();
         }
     }
     i.useEffect(() => {
@@ -412,7 +425,7 @@ let X = i.forwardRef(function (e, t) {
             () => e.stop()
         );
     }, [eT]);
-    let eF = (0, b.a)(eb.current);
+    let eH = (0, b.a)(eb.current);
     return (0, r.jsxs)("li", {
         ref: t,
         className: o()(x.soundButtonWrapper, P),
@@ -450,7 +463,7 @@ let X = i.forwardRef(function (e, t) {
                             M,
                         ),
                         onClick: (e) => {
-                            null == ej || ej(e);
+                            null == eU || eU(e);
                         },
                         onContextMenu: X && !eN ? ep : void 0,
                         children: [
@@ -473,7 +486,7 @@ let X = i.forwardRef(function (e, t) {
                                     }),
                                 ],
                             }),
-                            eZ(),
+                            eV(),
                         ],
                     }),
                 ),
@@ -486,7 +499,7 @@ let X = i.forwardRef(function (e, t) {
             !0 === eo &&
                 (0, r.jsx)(b.Z, {
                     sound: T,
-                    containerDimensions: eF,
+                    containerDimensions: eH,
                     ref: es,
                 }),
         ],
