@@ -9,7 +9,7 @@ var r = n(647438),
             (e[(e.COLLECTIBLES_PREVIEW = 1)] = "COLLECTIBLES_PREVIEW"),
             (e[(e.GUILD_TAG_COACHMARK_ASSET = 2)] = "GUILD_TAG_COACHMARK_ASSET"),
             (e[(e.ACCOUNT_LINK_DISPLAY = 3)] = "ACCOUNT_LINK_DISPLAY"),
-            (e[(e.PORTKEY_GAME_INSTRUCTIONS_ASSET = 4)] = "PORTKEY_GAME_INSTRUCTIONS_ASSET"),
+            (e[(e.GAME_SERVER_GAME_INSTRUCTIONS_ASSET = 4)] = "GAME_SERVER_GAME_INSTRUCTIONS_ASSET"),
             (e[(e.APPLICATION_IMAGE_HEADER = 5)] = "APPLICATION_IMAGE_HEADER"),
             e
         );
@@ -19,7 +19,7 @@ let a = {
         1: () => n.e("96887").then(n.bind(n, 669636)),
         2: () => n.e("8124").then(n.bind(n, 413915)),
         3: () => n.e("72261").then(n.bind(n, 718717)),
-        4: () => n.e("76126").then(n.bind(n, 720441)),
+        4: () => n.e("99726").then(n.bind(n, 839427)),
         5: () => n.e("11909").then(n.bind(n, 255111)),
     },
     o = {

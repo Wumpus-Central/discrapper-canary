@@ -10,7 +10,7 @@ var a = n(951288),
     u = n(87454),
     m = n(667815),
     p = n(645041),
-    h = n(744993),
+    h = n(905551),
     x = n(713081),
     f = n(675478),
     b = n(581883),
@@ -259,9 +259,9 @@ function I() {
                 }),
                 (0, a.jsx)(c.zxk, {
                     variant: "primary",
-                    text: "Reset Portkey ToS",
+                    text: "Reset GameServer ToS",
                     onClick: () => {
-                        (0, h.g$)(!1);
+                        (0, h.WY)(!1);
                     },
                 }),
             ],

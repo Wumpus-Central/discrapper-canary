@@ -170,9 +170,9 @@ let eL = (0, u.Un)({
         renderLoader: eR,
     }),
     eF = (0, u.Un)({
-        createPromise: () => Promise.all([n.e("952"), n.e("85683")]).then(n.bind(n, 15133)),
-        webpackId: 15133,
-        name: "PortkeyPage",
+        createPromise: () => Promise.all([n.e("63639"), n.e("62934")]).then(n.bind(n, 109838)),
+        webpackId: 109838,
+        name: "GameServerPage",
         renderLoader: eR,
     }),
     ez = (e) => {
@@ -243,7 +243,7 @@ let eL = (0, u.Un)({
                         guildId: l,
                         powerupListingId: null != (g = n.get("powerupId")) ? g : n.get("powerupSkuId"),
                     });
-                case ej.oC.PORTKEY:
+                case ej.oC.GAME_SERVERS:
                     return (0, r.jsx)(eF, { guildId: l });
                 case ej.oC.REPORT_TO_MOD:
                     return (0, r.jsx)(C.Z, {});

@@ -47,7 +47,7 @@ function a(e, t, n) {
         });
     }
     return (
-        n && e === i.Us.PERK && o.push({ type: "portkey" }),
+        n && e === i.Us.PERK && o.push({ type: "gameServer" }),
         (function (e) {
             let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN),
                 n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);

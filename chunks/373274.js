@@ -26,7 +26,7 @@ var r,
     v = n(258871),
     j = n(216306),
     x = n(398758),
-    C = n(601328),
+    C = n(737982),
     E = n(486311),
     S = n(620304),
     I = n(220444),
@@ -693,14 +693,14 @@ class eh extends (r = l.PureComponent) {
                                 },
                                 er.z.GUILD_BOOSTS,
                             );
-                        case er.z.PORTKEY:
+                        case er.z.GAME_SERVERS:
                             return (0, i.jsx)(
                                 C.Z,
                                 {
                                     guildId: r.id,
-                                    selected: a === eo.oC.PORTKEY,
+                                    selected: a === eo.oC.GAME_SERVERS,
                                 },
-                                er.z.PORTKEY,
+                                er.z.GAME_SERVERS,
                             );
                         default:
                             return null;

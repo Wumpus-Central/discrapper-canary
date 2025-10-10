@@ -10,7 +10,7 @@ var r = n(399606),
     d = n(994592),
     p = n(265418),
     h = n(398758),
-    f = n(634952),
+    f = n(755458),
     g = n(639777),
     m = n(330791),
     b = n(443063),
@@ -31,7 +31,7 @@ function y(e) {
         N = (0, m.l)(!(0, h.r1)(e.id)),
         Z = e.features.has(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         w = (0, g.Z)(e.id),
-        T = (0, f.A0)(e.id, "useGuildActionRows"),
+        T = (0, f.BU)(e.id, "useGuildActionRows"),
         A = e.features.has(_.oNc.GAME_SERVERS);
     return (
         I && S.push(b.z.GUILD_HUB_HEADER_OPTIONS),
@@ -46,7 +46,7 @@ function y(e) {
         ((E && (P || Z)) || (n && e.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
             S.push(b.z.GUILD_MOD_DASH_MEMBER_SAFETY),
         w && S.push(b.z.GUILD_BOOSTS),
-        T && A && S.push(b.z.PORTKEY),
+        T && A && S.push(b.z.GAME_SERVERS),
         S
     );
 }

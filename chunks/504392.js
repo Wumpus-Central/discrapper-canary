@@ -21,9 +21,9 @@ var r = n(951288),
     u = n(243778),
     d = n(984370),
     p = n(703656),
-    f = n(744993),
-    m = n(634952),
-    g = n(248641),
+    f = n(905551),
+    m = n(755458),
+    g = n(773149),
     v = n(713081),
     x = n(905128),
     _ = n(639777),
@@ -32,8 +32,8 @@ var r = n(951288),
     j = n(426771),
     C = n(51859),
     I = n(184478),
-    w = n(877362),
-    E = n(460608),
+    E = n(877362),
+    w = n(460608),
     Z = n(279604),
     P = n(385902),
     y = n(332538),
@@ -46,9 +46,9 @@ var r = n(951288),
 let R = [N.Us.LEVEL, N.Us.PERK];
 function L(e) {
     let { guildId: t, powerupListingId: o } = e,
-        L = (0, m.A0)(t, "GuildPowerupsOverview");
+        L = (0, m.BU)(t, "GuildPowerupsOverview");
     i.useEffect(() => {
-        L && (0, f.po)(t);
+        L && (0, f.ce)(t);
     }, [t, L]),
         i.useEffect(() => {
             (0, v.Sn)(t), (0, v.BN)(t);
@@ -255,8 +255,12 @@ function L(e) {
                                                                   },
                                                                   "powerup-group-".concat(e.group),
                                                               );
-                                                          case "portkey":
-                                                              return (0, r.jsx)(g.Z, { guildId: t }, "powerup-portkey");
+                                                          case "gameServer":
+                                                              return (0, r.jsx)(
+                                                                  g.Z,
+                                                                  { guildId: t },
+                                                                  "powerup-game-server",
+                                                              );
                                                       }
                                                   }),
                                               }),
@@ -269,8 +273,8 @@ function L(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  M ? (0, r.jsx)(I.Z, { guildId: t }) : (0, r.jsx)(w.Z, { guildId: t }),
-                                  (0, r.jsx)(E.Z, { guildId: t }),
+                                  M ? (0, r.jsx)(I.Z, { guildId: t }) : (0, r.jsx)(E.Z, { guildId: t }),
+                                  (0, r.jsx)(w.Z, { guildId: t }),
                               ],
                           }),
                       ],

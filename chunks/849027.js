@@ -7,7 +7,7 @@ var r = n(430198),
     l = n(931261),
     c = n(994592),
     u = n(444230),
-    d = n(634952),
+    d = n(755458),
     f = n(953252),
     _ = n(911560),
     p = n(592125),
@@ -47,9 +47,9 @@ async function O(e) {
                 return !0;
             case y.oC.REPORT_TO_MOD:
                 return null != O && (0, f.Z)(O);
-            case y.oC.PORTKEY:
+            case y.oC.GAME_SERVERS:
                 return (
-                    (0, d.ZO)(t, "isAccessibleChannelOrThreadPath") && null != O && O.features.has(b.oNc.GAME_SERVERS)
+                    (0, d.v$)(t, "isAccessibleChannelOrThreadPath") && null != O && O.features.has(b.oNc.GAME_SERVERS)
                 );
             default:
                 (0, g.vE)(n);
