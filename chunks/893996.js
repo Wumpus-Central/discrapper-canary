@@ -13,7 +13,7 @@ function o(e) {
                 description: o,
                 children: t,
             }),
-            (0, r.jsx)(i.izJ, {}),
+            (0, r.jsx)(i.izJ, { gap: 32 }),
         ],
     });
 }
