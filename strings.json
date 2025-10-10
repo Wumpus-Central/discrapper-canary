@@ -559,7 +559,7 @@
   "Sv236e": "You can manage certain settings for your teen’s account. Your teen will not be able to adjust these specific settings on their own. We encourage you to talk to your teen about how to customize these settings.",
   "w0JA3N": "{count, plural, one {Message parent} other {Message parents} }",
   "ggcjPT": "{count, plural, one {Message Guardian} other {Message Guardians} }",
-  "X9rW0t": "Some settings are managed by your guardian. Check in with them to make changes.",
+  "X9rW0t": "Some $[settings]({{openSettingsHook}}) are managed by your guardian. Check in with them to make changes.",
   "1xBHHR": "To protect your teen's privacy, you will not be able to see the contents of their messages or calls.",
   "0QDVFB": "Your parents will not see the contents of your messages or calls.",
   "82y87e": "What your teen writes or says",

@@ -1,22 +1,24 @@
-n.d(t, { J: () => I });
+n.d(t, { J: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
     o = n(481060),
     s = n(493683),
-    l = n(511010),
-    c = n(981312),
-    u = n(342386),
-    d = n(260722),
-    f = n(277537),
-    _ = n(841409),
-    p = n(780985),
-    h = n(631885),
-    m = n(292352),
-    g = n(345909),
-    E = n(388032),
-    b = n(271650);
-let y = (e) => {
+    l = n(230711),
+    c = n(511010),
+    u = n(981312),
+    d = n(342386),
+    f = n(260722),
+    _ = n(277537),
+    p = n(841409),
+    h = n(780985),
+    m = n(631885),
+    g = n(292352),
+    E = n(981631),
+    b = n(345909),
+    y = n(388032),
+    O = n(271650);
+let v = (e) => {
         let { title: t, buttonText: n, onButtonPress: i } = e;
         return (0, r.jsxs)(a.Kqy, {
             padding: {
@@ -41,10 +43,13 @@ let y = (e) => {
             ],
         });
     },
-    O = () => {
-        let e = (0, h.ZM)(),
+    I = () => {
+        let e = (0, m.ZM)(),
             t = () => {
-                (0, u.default)(), s.Z.openPrivateChannel({ recipientIds: e });
+                (0, d.default)(), s.Z.openPrivateChannel({ recipientIds: e });
+            },
+            n = () => {
+                l.Z.setSection(E.oAB.CONTENT_AND_SOCIAL);
             };
         return (0, r.jsxs)(a.Kqy, {
             justify: "space-between",
@@ -58,17 +63,27 @@ let y = (e) => {
                     children: [
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/semibold",
-                            children: E.intl.string(g.default.ahKIJC),
+                            children: y.intl.string(b.default.ahKIJC),
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
                             color: "text-tertiary",
-                            children: E.intl.string(g.default.X9rW0t),
+                            children: y.intl.format(b.default.X9rW0t, {
+                                openSettingsHook: (e, t) =>
+                                    (0, r.jsx)(
+                                        o.eee,
+                                        {
+                                            onClick: n,
+                                            children: e,
+                                        },
+                                        t,
+                                    ),
+                            }),
                         }),
                     ],
                 }),
                 (0, r.jsx)(o.zxk, {
-                    text: E.intl.formatToPlainString(g.default.ggcjPT, { count: e.length }),
+                    text: y.intl.formatToPlainString(b.default.ggcjPT, { count: e.length }),
                     onClick: t,
                     variant: "secondary",
                     size: "sm",
@@ -76,12 +91,12 @@ let y = (e) => {
             ],
         });
     },
-    v = () => {
-        let e = (0, p.cz)(),
-            t = (0, p.$r)(),
-            { handleTabChange: n } = (0, _.Z)();
+    T = () => {
+        let e = (0, h.cz)(),
+            t = (0, h.$r)(),
+            { handleTabChange: n } = (0, p.Z)();
         i.useEffect(() => {
-            (null == e ? void 0 : e.id) != null && t && d.ZP.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
+            (null == e ? void 0 : e.id) != null && t && f.ZP.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
         }, [null == e ? void 0 : e.id, t]);
         let o = (e) => {
             n(e);
@@ -94,36 +109,36 @@ let y = (e) => {
                     children: [
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/semibold",
-                            children: E.intl.string(g.default.ahKIJC),
+                            children: y.intl.string(b.default.ahKIJC),
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
                             color: "text-tertiary",
-                            children: E.intl.string(g.default.Sv236e),
+                            children: y.intl.string(b.default.Sv236e),
                         }),
                     ],
                 }),
-                (0, r.jsx)(y, {
-                    title: E.intl.string(E.t["+o1pDQ"]),
-                    buttonText: E.intl.string(E.t.bt75u7),
-                    onButtonPress: () => o(m.dG.CONTENT_AND_SOCIAL),
+                (0, r.jsx)(v, {
+                    title: y.intl.string(y.t["+o1pDQ"]),
+                    buttonText: y.intl.string(y.t.bt75u7),
+                    onButtonPress: () => o(g.dG.CONTENT_AND_SOCIAL),
                 }),
-                (0, r.jsx)(l.Z, { className: b.divider }),
-                (0, r.jsx)(y, {
-                    title: E.intl.string(E.t.OAuOHB),
-                    buttonText: E.intl.string(E.t.bt75u7),
-                    onButtonPress: () => o(m.dG.DATA_AND_PRIVACY),
+                (0, r.jsx)(c.Z, { className: O.divider }),
+                (0, r.jsx)(v, {
+                    title: y.intl.string(y.t.OAuOHB),
+                    buttonText: y.intl.string(y.t.bt75u7),
+                    onButtonPress: () => o(g.dG.DATA_AND_PRIVACY),
                 }),
             ],
         });
     },
-    I = () => {
-        let e = (0, c.U)(),
-            t = (0, h.ZM)();
-        return (0, f.PO)("settings-controls") && 0 !== t.length
+    S = () => {
+        let e = (0, u.U)(),
+            t = (0, m.ZM)();
+        return (0, _.PO)("settings-controls") && 0 !== t.length
             ? (0, r.jsx)("div", {
-                  className: b.container,
-                  children: e ? (0, r.jsx)(O, {}) : (0, r.jsx)(v, {}),
+                  className: O.container,
+                  children: e ? (0, r.jsx)(I, {}) : (0, r.jsx)(T, {}),
               })
             : null;
     };
