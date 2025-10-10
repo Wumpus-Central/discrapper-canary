@@ -46,6 +46,7 @@ function O() {
         label: E.default.i284fX,
         labelHook: t,
         noticeType: m.nq.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
+        count: e.length,
     });
 }
 function v() {
