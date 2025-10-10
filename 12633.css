@@ -12098,7 +12098,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background-color: var(--background-surface-high);
     border-radius: 4px;
     box-shadow: var(--shadow-border), var(--shadow-high);
-    height: 284px;
     margin-top: 4px;
     max-width: 176px;
     overflow: hidden;
@@ -21641,7 +21640,7 @@ svg.radioIcon_c1e9c4 {
 .showEffect_dfb989.container_dfb989 .toon_dfb989 {
     --custom-toon-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h s calc(max(12, l * 0.4)));
     --custom-toon-stroke-width: calc(1.6px + 0.04em);
-    --custom-toon-margin: calc(var(--custom-toon-stroke-width)*-1);
+    --custom-toon-margin: calc(var(--custom-toon-stroke-width)*-1 + 0.02em);
     paint-order: stroke fill;
     position: relative;
     -webkit-text-stroke-width: var(--custom-toon-stroke-width);

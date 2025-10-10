@@ -102,6 +102,7 @@ function S(e) {
                                       (0, r.jsx)(p.Z, {
                                           shouldUseThemeColor: !0,
                                           className: E.orbsBalanceIcon,
+                                          customSize: 14,
                                       }),
                                       K,
                                   ],
@@ -121,6 +122,7 @@ function S(e) {
                                           (0, r.jsx)(p.Z, {
                                               shouldUseThemeColor: !0,
                                               className: E.orbsBalanceIcon,
+                                              customSize: 14,
                                           }),
                                           K,
                                       ],
