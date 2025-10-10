@@ -24,7 +24,6 @@ function m() {
             n.length > 0 &&
                 m &&
                 (0, a.jsx)(i.u, {
-                    asContainer: !0,
                     text: d.intl.string(d.t.L99HQk),
                     children: (0, a.jsx)(l.Mgn, {
                         size: "xs",
