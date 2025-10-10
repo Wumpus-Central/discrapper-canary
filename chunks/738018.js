@@ -315,8 +315,9 @@ function W(e) {
     if (_.Z.hidePersonalInformation) return null;
     {
         let t = n(741995).Z,
-            r = (0, E.Tm)(e),
-            i = t.getHistory(r);
+            r = (0, E.BX)(e);
+        if (null == r) return null;
+        let i = t.getHistory(r);
         return null == i
             ? null
             : {
@@ -395,18 +396,7 @@ function $() {
     return null != T && J(T);
 }
 function ee() {
-    if (null == T) return !1;
-    if ((0, E.R6)(T)) {
-        var e;
-        let t = (0, E.Tm)(T),
-            n = S.get(t);
-        if (null == n) return !1;
-        let { type: r, filter: i, token: a } = n.mode,
-            o = null == a || null == (e = a.getFullMatch()) ? void 0 : e.trim(),
-            s = null == o || 0 === o.length;
-        if (r === O.Sap.FILTER && i === O.dCx.FILTER_IN && s) return J(T);
-    }
-    return !1;
+    return null != T && J(T);
 }
 class et extends (r = o.ZP.Store) {
     initialize() {

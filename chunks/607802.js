@@ -1,30 +1,31 @@
 n.d(t, {
-    $G: () => D,
-    AH: () => S,
-    BU: () => G,
-    Fr: () => Y,
-    Fz: () => H,
-    Jl: () => k,
-    Ko: () => N,
-    Pe: () => W,
-    R6: () => K,
-    Tm: () => v,
-    UP: () => L,
-    Vj: () => C,
-    WU: () => V,
-    X$: () => X,
-    X3: () => z,
-    b7: () => T,
-    cl: () => B,
-    g9: () => M,
-    i3: () => U,
-    jW: () => w,
-    kG: () => F,
-    nI: () => x,
-    nl: () => q,
-    qc: () => j,
-    s5: () => I,
-    zH: () => A,
+    $G: () => M,
+    AH: () => N,
+    BU: () => F,
+    BX: () => S,
+    Fr: () => z,
+    Fz: () => K,
+    Jl: () => B,
+    Ko: () => w,
+    Pe: () => q,
+    R6: () => X,
+    Tm: () => T,
+    UP: () => j,
+    Vj: () => P,
+    WU: () => W,
+    X$: () => $,
+    X3: () => Q,
+    b7: () => C,
+    cl: () => V,
+    g9: () => U,
+    i3: () => Z,
+    jW: () => x,
+    kG: () => Y,
+    nI: () => k,
+    nl: () => J,
+    qc: () => G,
+    s5: () => A,
+    zH: () => R,
 }),
     n(35282),
     n(388685),
@@ -43,17 +44,19 @@ var a = n(349033),
     l = n(984933),
     c = n(731290),
     u = n(699516),
-    d = n(246946),
-    f = n(594174),
-    _ = n(709054),
-    p = n(51144),
-    h = n(748610),
-    m = n(731267),
-    g = n(532428);
+    d = n(944486),
+    f = n(246946),
+    _ = n(594174),
+    p = n(709054),
+    h = n(51144),
+    m = n(748610),
+    g = n(945577),
+    E = n(731267),
+    b = n(532428);
 n(723642);
-var E = n(981631),
-    b = n(388032);
-function y(e, t, n) {
+var y = n(981631),
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -66,7 +69,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,67 +80,75 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e) {
+function T(e) {
     switch (e.type) {
-        case E.aib.GUILD:
+        case y.aib.GUILD:
             return e.guildId;
-        case E.aib.GUILD_CHANNEL:
-        case E.aib.CHANNEL:
-        case E.aib.THREAD:
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.CHANNEL:
+        case y.aib.THREAD:
             return e.channelId;
-        case E.aib.DMS:
+        case y.aib.DMS:
             return e.type;
-        case E.aib.FAVORITES:
-            return E.I_8;
+        case y.aib.FAVORITES:
+            return y.I_8;
     }
 }
-function I(e) {
+function S(e) {
+    let t = (0, g.N3)({ location: "getSearchHistoryStateId" });
+    if (e.type === y.aib.DMS && t) {
+        var n;
+        return null != (n = d.Z.getChannelId(y.ME)) ? n : null;
+    }
+    return T(e);
+}
+function A(e) {
     switch (e.type) {
-        case E.aib.GUILD_CHANNEL:
-        case E.aib.GUILD:
-        case E.aib.THREAD:
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.GUILD:
+        case y.aib.THREAD:
             return e.guildId;
-        case E.aib.CHANNEL:
+        case y.aib.CHANNEL:
             var t;
             let n = s.Z.getChannel(e.channelId);
             return null != (t = null == n ? void 0 : n.guild_id) ? t : null;
-        case E.aib.FAVORITES:
-            return E.I_8;
+        case y.aib.FAVORITES:
+            return y.I_8;
         default:
             return null;
     }
 }
-function T(e) {
-    return e.type === E.aib.GUILD || e.type === E.aib.GUILD_CHANNEL || e.type === E.aib.THREAD;
+function C(e) {
+    return e.type === y.aib.GUILD || e.type === y.aib.GUILD_CHANNEL || e.type === y.aib.THREAD;
 }
-function S(e) {
+function N(e) {
     switch (e.type) {
-        case E.aib.GUILD_CHANNEL:
-        case E.aib.CHANNEL:
-        case E.aib.THREAD:
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.CHANNEL:
+        case y.aib.THREAD:
             return e.channelId;
         default:
             return null;
     }
 }
-function A(e) {
+function R(e) {
     switch (e) {
-        case E.QIO.MOST_RELEVANT:
+        case y.QIO.MOST_RELEVANT:
             return {
                 sort_by: "relevance",
                 sort_order: "desc",
             };
-        case E.QIO.OLDEST:
+        case y.QIO.OLDEST:
             return {
                 sort_by: "timestamp",
                 sort_order: "asc",
             };
-        case E.QIO.NEWEST:
+        case y.QIO.NEWEST:
         default:
             return {
                 sort_by: "timestamp",
@@ -145,92 +156,92 @@ function A(e) {
             };
     }
 }
-function C(e) {
+function P(e) {
     return null == e.sort_by || null == e.sort_order
-        ? E.QIO.NEWEST
+        ? y.QIO.NEWEST
         : "relevance" === e.sort_by
-          ? E.QIO.MOST_RELEVANT
+          ? y.QIO.MOST_RELEVANT
           : "asc" === e.sort_order
-            ? E.QIO.OLDEST
-            : E.QIO.NEWEST;
+            ? y.QIO.OLDEST
+            : y.QIO.NEWEST;
 }
-function N(e) {
+function w(e) {
     switch (e) {
-        case E.dCx.FILTER_FROM:
-            return b.intl.string(b.t.E466pK);
-        case E.dCx.FILTER_MENTIONS:
-            return b.intl.string(b.t.BYvFWl);
-        case E.dCx.FILTER_HAS:
-            return b.intl.string(b.t.bhSYbW);
-        case E.dCx.FILTER_BEFORE:
-        case E.dCx.FILTER_ON:
-        case E.dCx.FILTER_AFTER:
-            return b.intl.string(b.t.Zbbc1N);
-        case E.dCx.FILTER_IN:
-            return b.intl.string(b.t["GpM+//"]);
-        case E.dCx.FILTER_FILE_TYPE:
-            return b.intl.string(b.t.FXcAFR);
-        case E.dCx.FILTER_FILE_NAME:
-            return b.intl.string(b.t.uAbFDA);
-        case E.dCx.FILTER_PINNED:
-            return b.intl.string(b.t.UJxL3d);
-        case E.dCx.FILTER_AUTHOR_TYPE:
-            return b.intl.string(b.t.qCQzBg);
+        case y.dCx.FILTER_FROM:
+            return O.intl.string(O.t.E466pK);
+        case y.dCx.FILTER_MENTIONS:
+            return O.intl.string(O.t.BYvFWl);
+        case y.dCx.FILTER_HAS:
+            return O.intl.string(O.t.bhSYbW);
+        case y.dCx.FILTER_BEFORE:
+        case y.dCx.FILTER_ON:
+        case y.dCx.FILTER_AFTER:
+            return O.intl.string(O.t.Zbbc1N);
+        case y.dCx.FILTER_IN:
+            return O.intl.string(O.t["GpM+//"]);
+        case y.dCx.FILTER_FILE_TYPE:
+            return O.intl.string(O.t.FXcAFR);
+        case y.dCx.FILTER_FILE_NAME:
+            return O.intl.string(O.t.uAbFDA);
+        case y.dCx.FILTER_PINNED:
+            return O.intl.string(O.t.UJxL3d);
+        case y.dCx.FILTER_AUTHOR_TYPE:
+            return O.intl.string(O.t.qCQzBg);
     }
 }
-let R = {
-    [E.dCx.FILTER_BEFORE]: !0,
-    [E.dCx.FILTER_AFTER]: !0,
-    [E.dCx.FILTER_ON]: !0,
+let D = {
+    [y.dCx.FILTER_BEFORE]: !0,
+    [y.dCx.FILTER_AFTER]: !0,
+    [y.dCx.FILTER_ON]: !0,
 };
-function P(e) {
-    let t = g.ZP[e],
+function L(e) {
+    let t = b.ZP[e],
         n = null != t ? t.queryKey : null;
     return null == n && (n = "content"), n;
 }
-function w(e, t) {
+function x(e, t) {
     if (c.Z.didAgree(t)) {
-        let t = f.default.getCurrentUser();
+        let t = _.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function D(e) {
+function M(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
-        if (E.TNx.test(n)) return;
+        if (y.TNx.test(n)) return;
         switch (n) {
-            case E.dCx.ANSWER_BEFORE:
-            case E.dCx.ANSWER_ON:
-            case E.dCx.ANSWER_AFTER:
+            case y.dCx.ANSWER_BEFORE:
+            case y.dCx.ANSWER_ON:
+            case y.dCx.ANSWER_AFTER:
                 let r = e.getData("start"),
                     i = e.getData("end");
-                r && (t.min_id = _.default.fromTimestamp(r)), i && (t.max_id = _.default.fromTimestamp(i));
+                r && (t.min_id = p.default.fromTimestamp(r)), i && (t.max_id = p.default.fromTimestamp(i));
                 return;
         }
-        let a = P(n);
+        let a = L(n);
         null == t[a] && (t[a] = new Set());
         let o = t[a];
         switch (n) {
-            case E.dCx.ANSWER_USERNAME_FROM:
-            case E.dCx.ANSWER_USERNAME_MENTIONS:
+            case y.dCx.ANSWER_USERNAME_FROM:
+            case y.dCx.ANSWER_USERNAME_MENTIONS:
                 o.add(e.getData("userId"));
                 break;
-            case E.dCx.ANSWER_FILE_TYPE:
-            case E.dCx.ANSWER_FILE_NAME:
+            case y.dCx.ANSWER_FILE_TYPE:
+            case y.dCx.ANSWER_FILE_NAME:
                 o.add(e.getMatch(1));
                 break;
-            case E.dCx.ANSWER_IN:
+            case y.dCx.ANSWER_IN:
                 var s;
                 for (let t of null != (s = e.getData("channelIds")) ? s : []) o.add(t);
                 break;
-            case E.dCx.ANSWER_HAS:
+            case y.dCx.ANSWER_HAS:
                 o.add(e.getData("has"));
                 break;
-            case E.dCx.ANSWER_PINNED:
+            case y.dCx.ANSWER_PINNED:
                 o.add(e.getData("pinned"));
                 break;
-            case E.dCx.ANSWER_AUTHOR_TYPE:
+            case y.dCx.ANSWER_AUTHOR_TYPE:
                 o.add(e.getData("author_type"));
                 break;
             default:
@@ -241,7 +252,7 @@ function D(e) {
         r instanceof Set && (t[n] = Array.from(r));
     if (t.content) {
         delete t.contents;
-        let e = m.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
+        let e = E.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
         if (e.enabled) {
             let n = [],
                 r = e.brackets
@@ -265,7 +276,7 @@ function D(e) {
     }
     return t;
 }
-function L(e) {
+function j(e) {
     var t;
     return (null == e ? void 0 : e.contents) != null && e.contents.length > 0
         ? null == e || null == (t = e.contents)
@@ -275,13 +286,13 @@ function L(e) {
           ? void 0
           : e.content;
 }
-function x(e) {
+function k(e) {
     return e
         .map((e) => (e.type === a.ZP.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
         .join(" ")
         .trim();
 }
-function M(e, t, n) {
+function U(e, t, n) {
     let r,
         i,
         a = e.find((a, o) =>
@@ -299,56 +310,56 @@ function M(e, t, n) {
               anchorOffset: n,
           };
 }
-function j(e, t) {
+function G(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
     if (0 === t.length)
         return {
-            type: E.Sap.EMPTY,
+            type: y.Sap.EMPTY,
             filter: null,
             token: null,
         };
     if (null == r)
         return {
-            type: E.Sap.FILTER_ALL,
+            type: y.Sap.FILTER_ALL,
             filter: null,
             token: null,
         };
-    if ((0, g._m)(r.type)) {
+    if ((0, b._m)(r.type)) {
         if (null == i || i.type === a.ZP.NON_TOKEN_TYPE)
             return {
-                type: E.Sap.FILTER,
+                type: y.Sap.FILTER,
                 filter: r.type,
                 token: i,
             };
-        if (null != i && !E.KA4.test(i.type))
+        if (null != i && !y.KA4.test(i.type))
             return {
-                type: E.Sap.FILTER,
+                type: y.Sap.FILTER,
                 filter: r.type,
                 token: null,
             };
     }
-    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, g._m)(o.type)
+    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, b._m)(o.type)
         ? {
-              type: E.Sap.FILTER,
+              type: y.Sap.FILTER,
               filter: o.type,
               token: r,
           }
         : (r.type === a.ZP.NON_TOKEN_TYPE && (n = r),
           {
-              type: E.Sap.FILTER_ALL,
+              type: y.Sap.FILTER_ALL,
               filter: null,
               token: n,
           });
 }
-function k(e) {
+function B(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => "\\".concat(t));
         return '"'.concat(t, '"');
     }
 }
-function U(e, t) {
+function Z(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -357,10 +368,10 @@ function U(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = B(i)), t.type === y.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
-                        let e = g.ZP[r];
+                        let e = b.ZP[r];
                         (null == e ? void 0 : e.key) != null &&
                             (null == e ? void 0 : e.key) !== "" &&
                             (i = "".concat(e.key, " ").concat(i));
@@ -379,40 +390,40 @@ function U(e, t) {
         })
     );
 }
-function G(e) {
+function F(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function B(e) {
+function V(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let Z = new a.ZP();
-function F(e) {
-    return Z.tokenize(e);
-}
-function V() {
-    return Z.clearCache();
-}
-function H(e) {
-    return null != e ? R[e] : null;
-}
-function Y(e, t) {
-    let n = E.TNx.test(e.type);
-    return (null != t || !n) && (null == t || !n || !!E.KA4.test(t.type));
+let H = new a.ZP();
+function Y(e) {
+    return H.tokenize(e);
 }
 function W() {
-    (0, g.WK)(), Z.reset(), i()(g.ZP).forOwn((e, t) => Z.addRule(O({ type: t }, e))), h.Z.markSearchTokensRefreshed();
+    return H.clearCache();
 }
 function K(e) {
-    return !!T(e) || (e.type === E.aib.DMS && !d.Z.hidePersonalInformation);
+    return null != e ? D[e] : null;
 }
-function z(e) {
+function z(e, t) {
+    let n = y.TNx.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!y.KA4.test(t.type));
+}
+function q() {
+    (0, b.WK)(), H.reset(), i()(b.ZP).forOwn((e, t) => H.addRule(I({ type: t }, e))), m.Z.markSearchTokensRefreshed();
+}
+function X(e) {
+    return !!C(e) || (e.type === y.aib.DMS && !f.Z.hidePersonalInformation);
+}
+function Q(e) {
     let t = e.name,
         n = !1;
-    if (e.isGroupDM()) t = (0, o.F6)(e, f.default, u.Z);
+    if (e.isGroupDM()) t = (0, o.F6)(e, _.default, u.Z);
     else if (e.isDM()) {
         let n = e.getRecipientId(),
-            r = f.default.getUser(n),
-            i = p.ZP.getUserTag(r);
+            r = _.default.getUser(n),
+            i = h.ZP.getUserTag(r);
         if (null == i) return null;
         t = i;
     } else {
@@ -420,20 +431,20 @@ function z(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = k(t)), n) ? "#".concat(t) : t;
+    return ((t = B(t)), n) ? "#".concat(t) : t;
 }
-function q(e) {
+function J(e) {
     var t;
-    if (e.isGroupDM()) return (0, o.F6)(e, f.default, u.Z);
+    if (e.isGroupDM()) return (0, o.F6)(e, _.default, u.Z);
     if (e.isDM()) {
         let t = e.getRecipientId(),
-            n = f.default.getUser(t);
-        return p.ZP.getUserTag(n);
+            n = _.default.getUser(t);
+        return h.ZP.getUserTag(n);
     }
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function X() {
+function $() {
     var e, t;
-    return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
+    return null != (t = null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

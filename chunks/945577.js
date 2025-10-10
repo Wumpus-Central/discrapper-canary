@@ -1,8 +1,9 @@
 n.d(t, {
-    Gc: () => c,
+    Gc: () => u,
+    N3: () => c,
     UX: () => s,
     u5: () => l,
-    wn: () => u,
+    wn: () => d,
 });
 var r = n(818083),
     i = n(154579);
@@ -78,6 +79,21 @@ function l(e) {
 }
 function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n,
+        }),
+        { isGlobalSettingSupported: a, isXDMSearchEnabled: s } = o.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r,
+            },
+        );
+    return a && s;
+}
+function u(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.nd)({
             location: t,
             autoTrackExposure: n,
@@ -91,7 +107,7 @@ function c(e) {
         );
     return a;
 }
-function u(e) {
+function d(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.ro)({
             location: t,

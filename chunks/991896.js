@@ -3,27 +3,30 @@ var r = n(570140),
     i = n(607802);
 let a = {
     addSearchHistoryItem: function (e, t) {
-        let n = (0, i.Tm)(e);
-        r.Z.dispatch({
-            type: "SEARCH_HISTORY_WEB_ADD_ITEM",
-            id: n,
-            query: t,
-        });
+        let n = (0, i.BX)(e);
+        null != n &&
+            r.Z.dispatch({
+                type: "SEARCH_HISTORY_WEB_ADD_ITEM",
+                id: n,
+                query: t,
+            });
     },
     removeSearchHistoryItem: function (e, t) {
-        let n = (0, i.Tm)(e);
-        r.Z.dispatch({
-            type: "SEARCH_HISTORY_WEB_REMOVE_ITEM",
-            id: n,
-            query: t,
-        });
+        let n = (0, i.BX)(e);
+        null != n &&
+            r.Z.dispatch({
+                type: "SEARCH_HISTORY_WEB_REMOVE_ITEM",
+                id: n,
+                query: t,
+            });
     },
     clearSearchHistory: function (e) {
-        let t = (0, i.Tm)(e);
-        r.Z.dispatch({
-            type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS",
-            id: t,
-        });
+        let t = (0, i.BX)(e);
+        null != t &&
+            r.Z.dispatch({
+                type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS",
+                id: t,
+            });
     },
     updateSearchEditorState: function (e, t) {
         let n = (0, i.Tm)(e);
