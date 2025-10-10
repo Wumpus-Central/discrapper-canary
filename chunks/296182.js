@@ -1,59 +1,65 @@
 n.d(t, {
-    Jj: () => p,
-    Lz: () => m,
-    gS: () => h,
-    lT: () => g,
-    s$: () => E,
-    wV: () => l,
+    Jj: () => h,
+    Lz: () => g,
+    gS: () => m,
+    lT: () => E,
+    s$: () => b,
+    wV: () => c,
 });
 var r = n(829883),
-    i = n(378233),
-    a = n(823379),
-    o = n(591759),
-    s = n(998502);
-let l = "png",
-    c = "https://media.discordapp.net",
-    u = "cdn.discordapp.com",
-    d = "localhost",
-    f = "3000",
-    _ = "http://localhost:4000";
-function p(e) {
-    return !((0, i.B0)(e) || (0, r.zt)(e));
-}
-function h(e, t, n) {
-    let r = s.ZP.canSaveImage(e, null != n ? n : t),
-        i = o.Z.isDiscordAssetUrl(e, t, n),
-        a = p(e);
-    return r && i && a;
+    i = n(198620),
+    a = n(378233),
+    o = n(823379),
+    s = n(591759),
+    l = n(998502);
+let c = "png",
+    u = "https://media.discordapp.net",
+    d = "cdn.discordapp.com",
+    f = "localhost",
+    _ = "3000",
+    p = "http://localhost:4000";
+function h(e) {
+    return !((0, a.B0)(e) || (0, r.zt)(e));
 }
 function m(e, t, n) {
-    let r = s.ZP.canCopyImage(e),
-        i = o.Z.isDiscordAssetUrl(e, t, n),
-        a = p(e);
+    let r = l.ZP.canSaveImage(e, null != n ? n : t),
+        i = s.Z.isDiscordAssetUrl(e, t, n),
+        a = h(e);
     return r && i && a;
 }
-function g(e, t) {
-    return (0, a.ii)() && null != e ? e : t;
+function g(e, t, n) {
+    let r = l.ZP.canCopyImage(e),
+        i = s.Z.isDiscordAssetUrl(e, t, n),
+        a = h(e);
+    return r && i && a;
 }
-function E(e, t, n, r) {
-    let i = o.Z.toURLSafe(e);
-    if (null == i || i.host === u) return e;
-    let l = (0, s.xG)(e, t),
-        p = !1;
+function E(e, t) {
+    if ((0, o.ii)()) return null != e ? e : t;
+    if (null != e) {
+        let n = s.Z.toURLSafe(t);
+        if (null != n && (0, i._M)(n)) return e;
+    }
+    return t;
+}
+function b(e, t, n, r) {
+    let i = s.Z.toURLSafe(e);
+    if (null == i || i.host === d) return e;
+    let a = (0, l.xG)(e, t),
+        c = !1;
     if (
-        (i.origin === c && (p = !0),
-        (0, a.ii)() && i.origin === _ && (p = !0),
+        (i.origin === u && (c = !0),
+        (0, o.ii)() && i.origin === p && (c = !0),
         i.searchParams.delete("width"),
         i.searchParams.delete("height"),
         i.searchParams.delete("quality"),
         i.searchParams.delete("size"),
-        p)
+        c)
     )
-        if ((0, a.ii)()) {
-            if (o.Z.isOriginalContentTypeDifferent(t, n)) return i.toString();
-            (i.host = d),
-                (i.port = f),
+        if ((0, o.ii)()) {
+            if (s.Z.isOriginalContentTypeDifferent(t, n)) return i.toString();
+            (i.host = f),
+                (i.port = _),
                 i.pathname.startsWith("/attachments/") && (i.pathname = "/channels/" + i.pathname.substring(13));
-        } else i.host = u;
-    return i.searchParams.delete("format"), null == l && null != r && i.searchParams.append("format", r), i.toString();
+        } else i.host = d;
+    return i.searchParams.delete("format"), null == a && null != r && i.searchParams.append("format", r), i.toString();
 }
