@@ -27,7 +27,7 @@ let O = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
         buildLayout: () => [A],
         trailing: {
             type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
-            dismissibleContentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
+            getDismissibleContentTypes: () => [u.z.FAMILY_CENTER_NEW_BADGE],
             useDecoration: function (t) {
                 let e = (0, s.gU)();
                 return t === u.z.FAMILY_CENTER_NEW_BADGE

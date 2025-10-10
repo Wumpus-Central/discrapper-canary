@@ -23,7 +23,7 @@ let E = (0, l.x1)(r.n.APPEARANCE_PANE, {
         buildLayout: () => [d],
         trailing: {
             type: u.PU.BADGE_NEW,
-            dismissibleContentTypes: (0, s.$Z)(),
+            getDismissibleContentTypes: s.$Z,
             badgeComponent: s.c$,
         },
     });

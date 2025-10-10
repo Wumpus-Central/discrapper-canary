@@ -24,6 +24,6 @@ let d = (0, r.x1)(a.n.SESSIONS_PANE, {
         buildLayout: () => [T],
         trailing: {
             type: s.PU.BADGE_NEW,
-            dismissibleContentTypes: [u.z.AUTH_SESSIONS_NEW],
+            getDismissibleContentTypes: () => [u.z.AUTH_SESSIONS_NEW],
         },
     });

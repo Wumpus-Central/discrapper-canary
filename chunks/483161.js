@@ -82,7 +82,7 @@ let _ = (0, c.x1)(O.n.PROFILE_PANE, {
         },
         trailing: {
             type: E.PU.BADGE_NEW,
-            dismissibleContentTypes: (0, A.OF)(),
+            getDismissibleContentTypes: A.OF,
             badgeComponent: A.W8,
         },
     });
