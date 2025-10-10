@@ -1,45 +1,52 @@
-n.d(t, { H: () => f });
+n.d(t, { H: () => p });
 var r = n(498607),
     i = n.n(r),
     a = n(442837),
-    o = n(592125),
-    s = n(430824),
-    l = n(914010),
-    c = n(945577),
-    u = n(981631);
-function d(e) {
-    let { isSearchDesktopXDMExperimentEnabled: t, isGlobalXDMSettingSupported: n } = e;
-    return (!!t && !!n) || !!t;
+    o = n(695346),
+    s = n(592125),
+    l = n(430824),
+    c = n(914010),
+    u = n(945577),
+    d = n(125085),
+    f = n(981631);
+function _(e) {
+    let {
+        isSearchDesktopXDMExperimentEnabled: t,
+        isGlobalXDMSettingSupported: n,
+        isCrossDMSearchEnabledSetting: r,
+    } = e;
+    return t && n ? (null != r ? r : d.K) : !!t;
 }
-function f(e) {
+function p(e) {
     let { guildId: t, channelId: n } = e,
-        r = (0, c.u5)({ location: "useDesktopSearchContext" }),
-        f = (0, c.UX)({ location: "useDesktopSearchContext" });
+        r = (0, u.u5)({ location: "useDesktopSearchContext" }),
+        d = _({
+            isSearchDesktopXDMExperimentEnabled: (0, u.UX)({ location: "useDesktopSearchContext" }),
+            isGlobalXDMSettingSupported: r,
+            isCrossDMSearchEnabledSetting: o.rR.useSetting(),
+        });
     return (0, a.e7)(
-        [s.Z, o.Z, l.Z],
+        [l.Z, s.Z, c.Z],
         () => {
-            let e = s.Z.getGuild(t),
-                i = o.Z.getChannel(n);
-            return l.Z.getGuildId() === u.I_8
-                ? { type: u.aib.FAVORITES }
+            let e = l.Z.getGuild(t),
+                r = s.Z.getChannel(n);
+            return c.Z.getGuildId() === f.I_8
+                ? { type: f.aib.FAVORITES }
                 : null != t && null != e
                   ? {
-                        type: u.aib.GUILD,
+                        type: f.aib.GUILD,
                         guildId: t,
                     }
-                  : null != n && null != i && i.isPrivate()
-                    ? d({
-                          isSearchDesktopXDMExperimentEnabled: f,
-                          isGlobalXDMSettingSupported: r,
-                      })
-                        ? { type: u.aib.DMS }
+                  : null != n && null != r && r.isPrivate()
+                    ? d
+                        ? { type: f.aib.DMS }
                         : {
-                              type: u.aib.CHANNEL,
+                              type: f.aib.CHANNEL,
                               channelId: n,
                           }
                     : null;
         },
-        [n, t, r, f],
+        [n, t, d],
         i(),
     );
 }

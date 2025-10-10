@@ -28,7 +28,7 @@ let C = {
         large: c.EFr.SIZE_40,
         default: c.EFr.SIZE_32,
     },
-    N = (e) => {
+    N = i.memo(function (e) {
         let {
                 user: t,
                 guildId: n,
@@ -62,13 +62,19 @@ let C = {
                           guildMember: W,
                       })
                     : void 0,
-            z = C[k],
+            z = i.useMemo(() => C[k], [k]),
             q = (0, f.Z)({
                 userId: null == t ? void 0 : t.id,
                 guildId: n,
                 pendingDisplayNameStyles: M,
             }),
-            X = null != a ? I.intl.formatToPlainString(I.t.YJig7O, { a11y_text: a.label }) : I.intl.string(I.t.SZeUdX);
+            X = i.useMemo(
+                () =>
+                    null != a
+                        ? I.intl.formatToPlainString(I.t.YJig7O, { a11y_text: a.label })
+                        : I.intl.string(I.t.SZeUdX),
+                [a],
+            );
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": X,
@@ -146,4 +152,4 @@ let C = {
                 ],
             }),
         });
-    };
+    });

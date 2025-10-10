@@ -185,4 +185,13 @@ let C = {
             replace: r,
         });
     },
+    transitionQueryStateToSearchContext: function (e, t, n) {
+        let r = (0, u.Tm)(e),
+            i = h.Z.getEditorState(r);
+        if (null == i) return;
+        let a = o.Sq(i);
+        p.Z.updateSearchEditorState(t, i);
+        let s = h.Z.getSearchMode(r);
+        p.Z.updateSearchMode(t, null != s ? s : g.o), l.Z.clearSearchMessages(r), p.Z.clearSearchEditorState(e), n(a);
+    },
 };
