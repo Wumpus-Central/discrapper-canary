@@ -8,6 +8,7 @@ e.exports = {
     invalidContainer: "invalidContainer_df3f07",
     inactiveContainer: "inactiveContainer_df3f07",
     layoutLocked: "layoutLocked_df3f07",
+    overlayMountPx: "overlayMountPx_df3f07",
     layoutUnlocked: "layoutUnlocked_df3f07 layoutLocked_df3f07",
     previewingInGameHeader: "previewingInGameHeader_df3f07",
 };

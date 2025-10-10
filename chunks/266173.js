@@ -1,19 +1,17 @@
-n.d(t, { Z: () => M }), n(388685), n(49124);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(579092),
     i = n(433517),
     a = n(765250),
     o = n(13245),
     s = n(147913),
-    l = n(633289),
-    c = n(314897),
-    u = n(355863),
-    d = n(145597),
-    f = n(486016),
-    _ = n(32300),
-    p = n(624864),
-    h = n(757744),
-    m = n(981631);
-function g(e, t, n) {
+    l = n(355863),
+    c = n(145597),
+    u = n(486016),
+    d = n(32300),
+    f = n(624864),
+    _ = n(757744),
+    p = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +24,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +35,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,300 +52,285 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = "overlay-negative-experiment-notification-settings",
-    v = "overlay-negative-experiment-widget-settings",
-    I = !1,
-    T = !1,
-    S = !0,
-    A = new r.Yd("OverlayNegativeWidgetExperimentManager");
-function C(e) {
+let b = "overlay-negative-experiment-notification-settings",
+    y = "overlay-negative-experiment-widget-settings",
+    O = !1,
+    v = !1,
+    I = !0,
+    T = new r.Yd("OverlayNegativeWidgetExperimentManager");
+function S(e) {
     switch (e) {
-        case m.Odu.VOICE:
-        case m.Odu.TEXT:
-        case m.Odu.GUILDS:
-        case m.Odu.GUILDS_TEXT:
-        case m.Odu.QUICK_ACTIONS:
-            return d.OVERLAY_LAYOUT_ID;
+        case p.Odu.VOICE:
+        case p.Odu.TEXT:
+        case p.Odu.GUILDS:
+        case p.Odu.GUILDS_TEXT:
+        case p.Odu.QUICK_ACTIONS:
+            return c.OVERLAY_LAYOUT_ID;
         default:
-            return h.$S;
+            return _.$S;
     }
 }
-function N(e) {
-    let t = u.Z.getWidgetsByTypeAndLayout(e, C(e));
-    if (0 !== t.length) return t[0];
+let A = {
+    [p.Odu.VIDEO]: !0,
+    [p.Odu.VOICE]: !0,
+    [p.Odu.VOICE_V3]: !0,
+};
+function C(e) {
+    let [t] = l.Z.getWidgetsByTypeAndLayout(e, S(e));
+    if (null != t || (([t] = l.Z.getWidgetsByType(e)), null != t)) return t;
+    for (let t of Object.values(l.Z.getAllWidgets())) if (t.type === e) return t;
+}
+class N {
+    constructor() {
+        h(this, "_widgetSettings", void 0),
+            h(this, "_notificationSettings", void 0),
+            h(this, "setWidgetSetting", (e, t) => {
+                var n;
+                (this._widgetSettings[e] = m({}, null != (n = this._widgetSettings[e]) ? n : {}, t)),
+                    __OVERLAY__ || i.K.set(y, this._widgetSettings);
+            }),
+            h(this, "getWidgetSetting", (e) => this._widgetSettings[e]),
+            h(this, "hasWidgetSetting", (e) => null != this._widgetSettings[e]),
+            h(this, "setNotificationSetting", (e, t) => {
+                var n;
+                (this._notificationSettings[e] = m({}, null != (n = this._notificationSettings[e]) ? n : {}, t)),
+                    __OVERLAY__ || i.K.set(b, this._notificationSettings);
+            }),
+            h(this, "hasNotificationSetting", (e) => null != this._notificationSettings[e]),
+            h(this, "getNotificationSetting", (e) => this._notificationSettings[e]),
+            (this._widgetSettings = i.K.get(y, {})),
+            (this._notificationSettings = i.K.get(b, {})),
+            __OVERLAY__ && ((this._widgetSettings = {}), (this._notificationSettings = {}));
+    }
 }
 class R {
     constructor() {
-        g(this, "_widgetSettings", void 0),
-            g(this, "_notificationSettings", void 0),
-            g(this, "setWidgetSetting", (e, t) => {
-                var n;
-                (this._widgetSettings[e] = E({}, null != (n = this._widgetSettings[e]) ? n : {}, t)),
-                    i.K.set(v, this._widgetSettings);
-            }),
-            g(this, "getWidgetSetting", (e) => this._widgetSettings[e]),
-            g(this, "hasWidgetSetting", (e) => null != this._widgetSettings[e]),
-            g(this, "setNotificationSetting", (e, t) => {
-                var n;
-                (this._notificationSettings[e] = E({}, null != (n = this._notificationSettings[e]) ? n : {}, t)),
-                    i.K.set(O, this._notificationSettings);
-            }),
-            g(this, "hasNotificationSetting", (e) => null != this._notificationSettings[e]),
-            g(this, "getNotificationSetting", (e) => this._notificationSettings[e]),
-            (this._widgetSettings = i.K.get(v, {})),
-            (this._notificationSettings = i.K.get(O, {}));
-    }
-}
-class P {
-    constructor() {
-        g(this, "_defaultWidgetPinned", {}),
-            g(this, "initializeAllDefaultWidgetConfigs", () => {
-                for (let e of Object.keys(m.Odu)) {
+        h(this, "_defaultWidgetPinned", {}),
+            h(this, "initializeAllDefaultWidgetConfigs", () => {
+                for (let e of Object.keys(p.Odu)) {
                     let t = e,
-                        n = u.Z.getWidgetConfig(t);
+                        n = l.Z.getWidgetConfig(t);
                     null != n &&
                         null == this._defaultWidgetPinned[t] &&
                         (this._defaultWidgetPinned[t] = n.defaultSettings.pinned);
                 }
-                A.info("Initialized all default widget configs", { defaultWidgetConfigs: this._defaultWidgetPinned });
             }),
-            g(this, "overrideDefaultWidgetPinned", async (e, t) => {
-                let n = u.Z.getWidgetConfig(e);
-                if (null == n)
-                    return void A.error("Override default widget pinned: Widget config not found", { widgetType: e });
-                null == this._defaultWidgetPinned[e] && (this._defaultWidgetPinned[e] = n.defaultSettings.pinned),
-                    await (0, a.K4)(e, { defaultSettings: y(E({}, n.defaultSettings), { pinned: t }) });
+            h(this, "overrideDefaultWidgetPinned", async (e, t) => {
+                if (__OVERLAY__) return;
+                let n = l.Z.getWidgetConfig(e);
+                null != n &&
+                    (null == this._defaultWidgetPinned[e] && (this._defaultWidgetPinned[e] = n.defaultSettings.pinned),
+                    await (0, a.K4)(e, { defaultSettings: E(m({}, n.defaultSettings), { pinned: t }) }));
             }),
-            g(this, "restoreDefaultWidgetPinned", async (e) => {
-                let t = u.Z.getWidgetConfig(e);
-                if (null == t)
-                    return void A.error("Override default widget pinned: Widget config not found", { widgetType: e });
-                if (null == this._defaultWidgetPinned[e]) return;
+            h(this, "restoreDefaultWidgetPinned", async (e) => {
+                if (__OVERLAY__) return;
+                let t = l.Z.getWidgetConfig(e);
+                if (null == t || null == this._defaultWidgetPinned[e]) return;
                 let n = this._defaultWidgetPinned[e];
-                await (0, a.K4)(e, { defaultSettings: y(E({}, t.defaultSettings), { pinned: n }) });
+                await (0, a.K4)(e, { defaultSettings: E(m({}, t.defaultSettings), { pinned: n }) });
             }),
-            g(this, "getWidgetPinned", (e) => {
-                var t;
-                return null != (t = this._defaultWidgetPinned[e]) && t;
+            h(this, "getDefaultWidgetPinned", (e) => {
+                let t = this._defaultWidgetPinned[e];
+                return null != t ? t : e in A && A[e];
             });
     }
 }
-class w {
+class P {
     constructor() {
-        g(this, "_storage", new R()),
-            g(this, "_config", new P()),
-            g(this, "updateWidgetPinned", (e, t) => {
+        h(this, "_storage", new N()),
+            h(this, "_config", new R()),
+            h(this, "updateWidgetPinned", (e, t) => {
                 this._storage.setWidgetSetting(e, { pinned: t });
             }),
-            g(this, "hasWidgetSetting", (e) => this._storage.hasWidgetSetting(e)),
-            g(this, "initializeWidget", (e) => {
-                let t = N(e);
-                if (null == t) return void A.error("Initialize widget: Widget not found", { widgetType: e });
-                if (this.hasWidgetSetting(e)) return;
+            h(this, "hasWidgetSetting", (e) => this._storage.hasWidgetSetting(e)),
+            h(this, "initializeWidget", (e) => {
+                let t = C(e);
+                if (null == t || this.hasWidgetSetting(e)) return;
                 let n = t.pinned;
                 this.updateWidgetPinned(e, n);
             }),
-            g(this, "unpinWidget", async (e) => {
-                let t = N(e);
-                if (null == t) return void A.error("Unpin widget: Widget not found", { widgetType: e });
-                let n = t.pinned;
-                await this._config.overrideDefaultWidgetPinned(e, I),
+            h(this, "unpinWidget", async (e) => {
+                let t = C(e);
+                null != t &&
+                    (this.initializeWidget(e),
+                    __OVERLAY__ || (await this._config.overrideDefaultWidgetPinned(e, O)),
                     await (0, a.xh)(t.id, {
-                        forcedPinnedState: I,
-                        shouldTrack: T,
-                    }),
-                    this.hasWidgetSetting(e) || this.updateWidgetPinned(e, n);
+                        forcedPinnedState: O,
+                        shouldTrack: v,
+                    }));
             }),
-            g(this, "restoreWidget", async (e) => {
+            h(this, "restoreWidget", async (e) => {
                 var t;
                 let n = this._storage.getWidgetSetting(e),
-                    r = this._config.getWidgetPinned(e),
+                    r = this._config.getDefaultWidgetPinned(e),
                     i = null != (t = null == n ? void 0 : n.pinned) ? t : r,
-                    o = N(e);
-                if (null == o) return void A.error("Restore widget: Widget not found", { widgetType: e });
-                await this._config.restoreDefaultWidgetPinned(e),
+                    o = C(e);
+                null != o &&
+                    (e === p.Odu.VOICE && (i = !0),
+                    __OVERLAY__ || (await this._config.restoreDefaultWidgetPinned(e)),
                     null != i &&
                         (await (0, a.xh)(o.id, {
                             forcedPinnedState: i,
-                            shouldTrack: T,
-                        }),
-                        this.updateWidgetPinned(e, i));
+                            shouldTrack: v,
+                        })));
             }),
-            g(this, "updateNotificationSetting", (e, t) => {
+            h(this, "updateNotificationSetting", (e, t) => {
                 this._storage.setNotificationSetting(e, { disabled: t });
             }),
-            g(this, "hasNotificationSetting", (e) => this._storage.hasNotificationSetting(e)),
-            g(this, "initializeNotification", (e) => {
+            h(this, "hasNotificationSetting", (e) => this._storage.hasNotificationSetting(e)),
+            h(this, "initializeNotification", (e) => {
                 if (this.hasNotificationSetting(e)) return;
-                let t = p.Z.isNotificationDisabledBySetting(e);
+                let t = f.Z.isNotificationDisabledBySetting(e);
                 this.updateNotificationSetting(e, t);
             }),
-            g(this, "disableNotification", async (e) => {
-                this.initializeNotification(e), await o.Z.setNotificationDisabledSetting(e, S, T);
+            h(this, "disableNotification", async (e) => {
+                this.initializeNotification(e), await o.Z.setNotificationDisabledSetting(e, I, v);
             }),
-            g(this, "restoreNotification", async (e) => {
+            h(this, "restoreNotification", async (e) => {
                 var t;
                 let n = this._storage.getNotificationSetting(e),
                     r = null != (t = null == n ? void 0 : n.disabled) && t;
-                null != r && (await o.Z.setNotificationDisabledSetting(e, r, T));
+                null != r && (await o.Z.setNotificationDisabledSetting(e, r, v));
             }),
             this._config.initializeAllDefaultWidgetConfigs();
     }
 }
-function D() {
-    return Object.values(f.i);
+function w() {
+    return Object.values(u.i);
 }
-let L = new Set([f.i.WELCOME_GENERAL, f.i.GO_LIVE_NUDGE, f.i.GAME_ACTIVITY]);
-class x extends s.Z {
+let D = new Set([u.i.WELCOME_GENERAL, u.i.GO_LIVE_NUDGE, u.i.GAME_ACTIVITY]);
+class L extends s.Z {
     constructor(...e) {
+        var t;
         super(...e),
-            g(this, "_settings", new w()),
-            g(this, "_hasInitialized", !1),
-            g(this, "_isProcessing", !1),
-            g(this, "getWidgetExperimentSettings", () => {
+            (t = this),
+            h(this, "_settings", new P()),
+            h(this, "_hasInitialized", !1),
+            h(this, "_hasInitializedLegacyOverlay", !1),
+            h(this, "_isProcessing", !1),
+            h(this, "getWidgetExperimentSettings", (e) => {
                 let {
-                        voiceWidgetDefaultUnpinned: e,
-                        videoWidgetDefaultUnpinned: t,
-                        unlockedOnlyDefaultOverlay: n,
-                    } = (0, _.Sy)("OverlayNegativeWidgetExperimentManager"),
-                    r = new Set(),
+                        voiceWidgetDefaultUnpinned: t,
+                        videoWidgetDefaultUnpinned: n,
+                        unlockedOnlyDefaultOverlay: r,
+                    } = (0, d.Sy)(
+                        "".concat(__OVERLAY__ ? "LegacyOverlay" : "MainApp", "_ExperimentManager_WidgetSettings"),
+                        e,
+                    ),
                     i = new Set(),
-                    a = e || n,
-                    o = t || n;
+                    a = new Set(),
+                    o = t || r,
+                    s = n || r;
                 return (
-                    a ? (r.add(m.Odu.VOICE_V3), r.add(m.Odu.VOICE)) : (i.add(m.Odu.VOICE_V3), i.add(m.Odu.VOICE)),
-                    o ? r.add(m.Odu.VIDEO) : i.add(m.Odu.VIDEO),
-                    n ? r.add(m.Odu.NOTIFICATIONS) : i.add(m.Odu.NOTIFICATIONS),
+                    o ? (i.add(p.Odu.VOICE_V3), i.add(p.Odu.VOICE)) : (a.add(p.Odu.VOICE_V3), a.add(p.Odu.VOICE)),
+                    s ? i.add(p.Odu.VIDEO) : a.add(p.Odu.VIDEO),
                     {
-                        widgetsToOverride: r,
-                        widgetsToRestore: i,
+                        widgetsToOverride: i,
+                        widgetsToRestore: a,
                     }
                 );
             }),
-            g(this, "processWidgetExperiment", async () => {
-                let { widgetsToOverride: e, widgetsToRestore: t } = this.getWidgetExperimentSettings();
-                for (let e of Object.values(m.Odu)) this._settings.initializeWidget(e);
-                for (let e of t) await this._settings.restoreWidget(e);
-                for (let t of e) await this._settings.unpinWidget(t);
-                A.info(
-                    "Widget experiment settings: ".concat(
-                        JSON.stringify({
-                            widgetsToOverride: e,
-                            widgetsToRestore: t,
-                        }),
-                    ),
-                );
+            h(this, "processWidgetExperiment", async function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                    { widgetsToOverride: n, widgetsToRestore: r } = t.getWidgetExperimentSettings(e);
+                for (let e of Object.values(p.Odu)) t._settings.initializeWidget(e);
+                for (let e of r) await t._settings.restoreWidget(e);
+                for (let e of n) await t._settings.unpinWidget(e);
+                n.size > 0 &&
+                    T.info("Experiment Override: Widgets", {
+                        widgetsToRestore: r,
+                        widgetsToOverride: n,
+                    });
             }),
-            g(this, "getNotificationExperimentSettings", () => {
+            h(this, "getNotificationExperimentSettings", (e) => {
                 let {
-                        notificationsDefaultOff: e,
-                        disableWelcomeNotification: t,
-                        unlockedOnlyDefaultOverlay: n,
-                    } = (0, _.Sy)("OverlayNegativeWidgetExperimentManager"),
-                    r = new Set(),
-                    i = new Set();
-                for (let a of D())
-                    n
-                        ? r.add(a)
-                        : t
-                          ? L.has(a)
-                              ? r.add(a)
-                              : i.add(a)
-                          : e && a !== f.i.WELCOME_GENERAL
-                            ? r.add(a)
-                            : i.add(a);
+                        notificationsDefaultOff: t,
+                        disableWelcomeNotification: n,
+                        unlockedOnlyDefaultOverlay: r,
+                    } = (0, d.Sy)(
+                        "".concat(__OVERLAY__ ? "LegacyOverlay" : "MainApp", "_ExperimentManager_NotificationSettings"),
+                        e,
+                    ),
+                    i = new Set(),
+                    a = new Set();
+                for (let e of w())
+                    r
+                        ? i.add(e)
+                        : n
+                          ? D.has(e)
+                              ? i.add(e)
+                              : a.add(e)
+                          : t && e !== u.i.WELCOME_GENERAL
+                            ? i.add(e)
+                            : a.add(e);
                 return {
-                    notificationsToOverride: r,
-                    notificationsToRestore: i,
+                    notificationsToOverride: i,
+                    notificationsToRestore: a,
                 };
             }),
-            g(this, "processNotificationExperiment", async () => {
-                let { notificationsToOverride: e, notificationsToRestore: t } =
-                    this.getNotificationExperimentSettings();
-                for (let e of D()) this._settings.initializeNotification(e);
-                for (let e of t) await this._settings.restoreNotification(e);
-                for (let t of e) await this._settings.disableNotification(t);
-                A.info(
-                    "Notification experiment settings: ".concat(
-                        JSON.stringify({
-                            notificationsToOverride: e,
-                            notificationsToRestore: t,
-                        }),
-                    ),
-                );
+            h(this, "processNotificationExperiment", async (e) => {
+                if (__OVERLAY__) return;
+                let { notificationsToOverride: t, notificationsToRestore: n } =
+                    this.getNotificationExperimentSettings(e);
+                for (let e of w()) this._settings.initializeNotification(e);
+                for (let e of n) await this._settings.restoreNotification(e);
+                for (let e of t) await this._settings.disableNotification(e);
+                t.size > 0 &&
+                    T.info("Experiment Override: Notifications", {
+                        notificationsToRestore: n,
+                        notificationsToOverride: t,
+                    });
             }),
-            g(this, "processAllExperiments", async () => {
-                __OVERLAY__ ||
-                    (this.terminate(!0),
-                    (this._isProcessing = !0),
-                    await this.processWidgetExperiment(),
-                    await this.processNotificationExperiment(),
-                    (this._isProcessing = !1),
-                    this.initialize());
+            h(this, "processAllExperiments", async (e) => {
+                if (!this._isProcessing) {
+                    this._isProcessing = !0;
+                    try {
+                        await this.processWidgetExperiment(e), await this.processNotificationExperiment(e);
+                    } catch (e) {
+                        T.error("Experiments processing failed", { error: e });
+                    } finally {
+                        this._isProcessing = !1;
+                    }
+                }
             }),
-            g(this, "maybeInitExperiments", async (e) => {
-                this._hasInitialized ||
-                    ((this._hasInitialized = !0),
-                    A.info("Experiments initializing... (".concat(e, ")")),
-                    await this.processAllExperiments(),
-                    A.info("Experiments initialized (".concat(e, ")")));
-            }),
-            g(this, "handlePostConnectionOpen", async () => {
+            h(this, "handlePostConnectionOpen", async () => {
                 __OVERLAY__ ||
                     this._isProcessing ||
-                    (l.Z.hasLoaded(c.default.getId()) && (await this.maybeInitExperiments("POST_CONNECTION_OPEN")));
+                    this._hasInitialized ||
+                    ((this._hasInitialized = !0), await this.processAllExperiments(!1));
             }),
-            g(this, "handleExperimentsInit", async () => {
-                __OVERLAY__ || this._isProcessing || (await this.maybeInitExperiments("EXPERIMENTS_FETCH_SUCCESS"));
+            h(this, "handleExperimentOverrideBucket", async () => {
+                this._isProcessing || (await this.processAllExperiments(!1));
             }),
-            g(this, "handleExperimentOverrideBucket", async (e) => {
-                __OVERLAY__ ||
-                    this._isProcessing ||
-                    (A.info("Experiments processing...", { action: e }), await this.processAllExperiments());
-            }),
-            g(this, "handleSetNotificationDisabledSetting", (e) => {
+            h(this, "handleSetNotificationDisabledSetting", (e) => {
                 let { setting: t, disabled: n } = e;
-                __OVERLAY__ ||
-                    this._isProcessing ||
-                    (A.info("Setting notification disabled setting...", {
-                        setting: t,
-                        disabled: n,
-                    }),
-                    this._settings.updateNotificationSetting(t, n));
+                !this._isProcessing && (__OVERLAY__ || this._settings.updateNotificationSetting(t, n));
             }),
-            g(this, "handleSetPinned", (e) => {
+            h(this, "handleSetPinned", (e) => {
                 let { widgetId: t, pinned: n } = e;
-                if (__OVERLAY__ || this._isProcessing || null != n) return;
-                let r = u.Z.getWidget(t);
+                if (this._isProcessing || null != n) return;
+                let r = l.Z.getWidget(t);
                 if (null == r) return;
                 let i = r.pinned;
-                A.info("Setting widget pinned...", {
-                    widgetId: t,
-                    pinned: i,
-                }),
-                    this._settings.updateWidgetPinned(r.type, i);
+                this._settings.updateWidgetPinned(r.type, i);
             }),
-            g(this, "actions", {
+            h(this, "actions", {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
-                APEX_EXPERIMENTS_FETCH_SUCCESS: this.handleExperimentsInit,
-                APEX_EXPERIMENT_OVERRIDE_CLEAR: this.handleExperimentOverrideBucket,
-                APEX_EXPERIMENT_OVERRIDE_DELETE: this.handleExperimentOverrideBucket,
-                APEX_EXPERIMENT_OVERRIDE_CREATE: this.handleExperimentOverrideBucket,
-                OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: this.handleSetNotificationDisabledSetting,
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleExperimentOverrideBucket,
+                OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: this.handleSetNotificationDisabledSetting,
                 LAYOUT_SET_PINNED: this.handleSetPinned,
             });
     }
 }
-let M = new x();
+let x = new L();

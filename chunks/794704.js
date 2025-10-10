@@ -972,14 +972,14 @@ function eF() {
         }),
     });
 }
-let eV = (e, t, n, r) =>
+let eV = (e, t, n) =>
     [
         {
             title: e_.t.eVE4LS,
             description: e_.t["72WNqq"],
             disabledSetting: D.i.TEXT_CHAT,
         },
-        r && {
+        {
             title: e_.t.oifnSk,
             description: e_.t.bgU5r6,
             disabledSetting: D.i.WELCOME_GENERAL,
@@ -1010,12 +1010,11 @@ let eV = (e, t, n, r) =>
 function eH() {
     let { allowActivityWidget: e, allowNowPlaying: t } = (0, x.o4)("user_settings"),
         { enabled: n } = (0, x.aq)("OverlayV3StreamWatchNudge"),
-        { disableWelcomeNotification: i } = (0, x.pN)("OverlayNotificationSettings"),
-        a = eV(e, t, n, i),
-        o = (e) => (t) => {
+        i = eV(e, t, n),
+        a = (e) => (t) => {
             b.Z.setNotificationDisabledSetting(e, !t);
         },
-        s = (0, _.e7)([U.Z], () => U.Z.getDisabledNotifications());
+        o = (0, _.e7)([U.Z], () => U.Z.getDisabledNotifications());
     return (0, r.jsxs)("div", {
         className: ep.notificationSettingsContainer,
         children: [
@@ -1024,7 +1023,7 @@ function eH() {
                 color: "header-primary",
                 children: e_.intl.string(e_.t.xOE5bG),
             }),
-            a.map((e) =>
+            i.map((e) =>
                 (0, r.jsxs)(
                     eD,
                     {
@@ -1046,8 +1045,8 @@ function eH() {
                                 ],
                             }),
                             (0, r.jsx)(h.rsf, {
-                                checked: !s.has(e.disabledSetting),
-                                onChange: o(e.disabledSetting),
+                                checked: !o.has(e.disabledSetting),
+                                onChange: a(e.disabledSetting),
                             }),
                         ],
                     },

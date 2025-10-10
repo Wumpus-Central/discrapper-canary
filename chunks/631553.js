@@ -16,8 +16,8 @@ var r = n(951288),
     y = n(668781),
     _ = n(239091),
     O = n(13245),
-    b = n(425493),
-    v = n(593472),
+    v = n(425493),
+    b = n(593472),
     E = n(951483),
     x = n(714338),
     S = n(185666),
@@ -28,8 +28,8 @@ n(70097);
 var I = n(266454),
     P = n(594190),
     w = n(74299),
-    T = n(989941),
-    N = n(377400),
+    N = n(989941),
+    T = n(377400),
     D = n(329557),
     k = n(199902),
     R = n(314897),
@@ -84,8 +84,8 @@ function eO(e, t, n) {
     );
 }
 (f.ZP.PersistedStore.disableWrites = __OVERLAY__), f.ZP.initialize();
-let eb = null;
-function ev(e) {
+let ev = null;
+function eb(e) {
     e.preventDefault();
 }
 function eE(e) {
@@ -148,8 +148,8 @@ let ex = (e) => {
                 ? null
                 : (0, r.jsx)("div", {
                       className: e_.closeContainer,
-                      children: (0, r.jsx)(b.Z, {
-                          variant: b.Z.Variants.BOLD,
+                      children: (0, r.jsx)(v.Z, {
+                          variant: v.Z.Variants.BOLD,
                           keybind: t,
                           closeAction: n,
                       }),
@@ -174,16 +174,19 @@ class eZ extends s.Component {
         O.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        O.Z.startSession(), N.Z.initialize(), S.Z.initialize(), D.Z.initialize();
+        O.Z.startSession(), T.Z.initialize(), S.Z.initialize(), D.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
         if (t) {
-            if (t && !e.initialized) return void this.initialSetup();
+            if (t && !this.didUpdate) {
+                (this.didUpdate = !0), this.initialSetup();
+                return;
+            }
             if (!e.locked && this.props.locked) {
-                if ((window.addEventListener("contextmenu", ev, !1), null != eb)) {
-                    let e = Date.now() - eb;
-                    O.Z.track(em.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (eb = null);
+                if ((window.addEventListener("contextmenu", eb, !1), null != ev)) {
+                    let e = Date.now() - ev;
+                    O.Z.track(em.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ev = null);
                 }
                 x.Z.disable(),
                     (this.activeKeyEventShapes = []),
@@ -191,8 +194,8 @@ class eZ extends s.Component {
             } else
                 e.locked &&
                     !this.props.locked &&
-                    (window.removeEventListener("contextmenu", ev, !1),
-                    null == eb && ((eb = Date.now()), O.Z.track(em.rMx.OVERLAY_UNLOCKED)),
+                    (window.removeEventListener("contextmenu", eb, !1),
+                    null == ev && ((ev = Date.now()), O.Z.track(em.rMx.OVERLAY_UNLOCKED)),
                     x.Z.disable(),
                     (this.activeKeyEventShapes = []),
                     x.Z.setLayout(E.Sr),
@@ -202,77 +205,66 @@ class eZ extends s.Component {
         }
     }
     initialSetup() {
-        let {
-            connectedToVoice: e,
-            locked: t,
-            canGoLive: n,
-            isStreaming: i,
-            voiceGuild: r,
-            voiceChannelId: s,
-            game: o,
-            showKeybindNotification: l,
-            dismissKeybindNotification: a,
-            isOOPOverlayAvailable: c,
-        } = this.props;
+        let e,
+            {
+                connectedToVoice: t,
+                locked: n,
+                canGoLive: i,
+                isStreaming: r,
+                voiceGuild: s,
+                voiceChannelId: o,
+                game: l,
+                showKeybindNotification: a,
+                dismissKeybindNotification: c,
+            } = this.props;
         O.Z.track(em.rMx.OVERLAY_INITIALIZED, {
-            voice_widget_connected: e,
+            voice_widget_connected: t,
             text_widget_connected: Y.default.isPinned(em.Odu.TEXT),
             overlay_render_method: ei.gl[ei.gl.Hook],
             unpinned_widget_types: M.Z.getAllUnpinnedPinnedWidgets(ee.OVERLAY_LAYOUT_ID),
         }),
             et.Z.trackExposure({ location: "Overlay" });
-        let d = n && !i && null != o,
-            u = e && null != r && null != s,
-            p = (0, I.zu)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX),
-            h = eh.Z.isNotificationDisabled(ef.n0.WelcomeNudge),
-            f = eh.Z.isNotificationDisabled(ef.n0.GoLiveNudge),
-            m = [];
+        let d = i && !r && null != l,
+            u = t && null != s && null != o;
+        (0, I.zu)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX) || (0, I.Q3)(g.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
+        let p = eh.Z.isNotificationDisabled(ef.n0.WelcomeNudge),
+            h = eh.Z.isNotificationDisabled(ef.n0.GoLiveNudge);
         if (
-            (h ||
-                (m.push({ type: ef.nc.WELCOME }),
-                c
-                    ? m.push({
-                          type: ef.nc.OOP_WELCOME,
-                          game: null != o ? o : void 0,
-                          isFirstTimeNux: !p,
-                      })
-                    : l
-                      ? m.push({
-                            type: ef.nc.KEYBIND_INDICATORS,
-                            markAsDismissed: a,
-                        })
-                      : d && u && !f
-                        ? m.push({
-                              type: ef.nc.GO_LIVE_VOICE,
-                              game: o,
-                              voiceChannelId: s,
-                              voiceGuild: r,
-                          })
-                        : d &&
-                          !f &&
-                          m.push({
-                              type: ef.nc.GO_LIVE_NON_VOICE,
-                              game: o,
-                          })),
+            (p || (e = { type: ef.nc.WELCOME }),
+            a && !p
+                ? (e = {
+                      type: ef.nc.KEYBIND_INDICATORS,
+                      markAsDismissed: c,
+                  })
+                : d && u && !h
+                  ? (e = {
+                        type: ef.nc.GO_LIVE_VOICE,
+                        game: l,
+                        voiceChannelId: o,
+                        voiceGuild: s,
+                    })
+                  : d &&
+                    !h &&
+                    (e = {
+                        type: ef.nc.GO_LIVE_NON_VOICE,
+                        game: l,
+                    }),
             setTimeout(async () => {
-                if ((await (0, Q.s5)(), m.length > 0)) {
-                    let e = m[m.length - 1];
-                    O.Z.overlayMounted(e);
-                } else O.Z.overlayMounted();
+                await (0, Q.s5)(), null != e ? O.Z.overlayMounted(e) : O.Z.overlayMounted();
             }, 128),
             window.addEventListener("resize", this.handleWindowResize),
-            t && window.addEventListener("contextmenu", ev, !1),
+            n && window.addEventListener("contextmenu", eb, !1),
             J.isPlatformEmbedded)
         ) {
             let e = (0, H.M)();
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
-                var _;
+                var f;
                 e.setPerfInfoCallback((e) => {
                     O.Z.track(em.rMx.OVERLAY_PERF_INFO, e);
                 }),
-                    null == (_ = e.broadcastCommand) ||
-                        _.call(e, {
+                    null == (f = e.broadcastCommand) ||
+                        f.call(e, {
                             message: "set_perf_report_interval",
                             interval: 15 * X.Z.Millis.MINUTE,
                         });
@@ -300,8 +292,8 @@ class eZ extends s.Component {
         window.removeEventListener("resize", this.handleWindowResize),
             window.removeEventListener("keydown", this.onKeyDownGlobal, !0),
             window.removeEventListener("keyup", this.onKeyUpGlobal, !0),
-            this.props.locked && window.removeEventListener("contextmenu", ev, !1),
-            N.Z.terminate(),
+            this.props.locked && window.removeEventListener("contextmenu", eb, !1),
+            T.Z.terminate(),
             S.Z.terminate(),
             D.Z.terminate();
     }
@@ -374,11 +366,13 @@ class eZ extends s.Component {
                     keybind: t,
                 }),
                 (0, r.jsx)(es.Z, {}),
+                (0, r.jsx)("div", { className: e_.overlayMountPx }),
             ],
         });
     }
     constructor(e) {
         super(e),
+            eO(this, "didUpdate", !1),
             eO(this, "handleWindowResize", () => {
                 F.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
@@ -414,10 +408,10 @@ function eC() {
     let {
             locked: n,
             initialized: i,
-            incompatibleApp: s,
-            activeRegions: o,
-            isPreviewingInGame: l,
-            trackedGame: a,
+            incompatibleApp: o,
+            activeRegions: l,
+            isPreviewingInGame: a,
+            trackedGame: c,
         } = (0, f.cj)([Y.default], () => ({
             locked: Y.default.isLocked((0, ee.getPID)()),
             initialized: Y.default.initialized,
@@ -426,41 +420,46 @@ function eC() {
             isPreviewingInGame: Y.default.isPreviewingInGame(),
             trackedGame: Y.default.getTrackedGame((0, ee.getPID)()),
         })),
-        c = (0, f.e7)([K.Z], () => K.Z.windowSize()),
-        d = (0, f.e7)([B.ZP], () => B.ZP.getOverlayKeybind()),
-        u = (0, f.e7)([V.Z], () => V.Z.getVoiceChannelId()),
-        p = (0, f.e7)([A.Z], () => A.Z.getChannel(u)),
-        h = (0, f.e7)([L.Z], () => (null != p ? L.Z.getGuild(p.guild_id) : null)),
-        g = (0, f.e7)([P.ZP, U.Z], () => (0, T.Z)(P.ZP, U.Z)),
-        m = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
-        y = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: _ } = (0, C.ZP)(Z.Z.OVERLAY),
-        { showKeybindIndicators: O, dismissKeybindNotification: b } = (0, eo.K)(),
-        E = (null == a ? void 0 : a.fullscreenType) === v.Jx.FULLSCREEN,
-        x = null != (e = null == a ? void 0 : a.oopEnabled) && e,
-        S = en.v.oopEnabled,
-        j = null != (t = null == a ? void 0 : a.hasChangedRenderMode) && t,
-        { useContextualNudge: I, disableNudge: N } = (0, er.J0)("OverlaySetup");
-    return (0, r.jsx)(C.Gt, {
-        value: _,
-        children: (0, r.jsx)(eZ, {
-            locked: n,
-            initialized: i,
-            incompatibleApp: s,
-            activeRegions: o,
-            isPreviewingInGame: l,
-            windowSize: c,
-            keybind: null != d ? (0, $.BB)(d.shortcut, !0) : "???",
-            keybindKeyCodes: null != d ? d.shortcut : [],
-            connectedToVoice: null != u,
-            voiceChannelId: null != p ? p.id : null,
-            voiceGuild: h,
-            game: g,
-            canGoLive: m,
-            isStreaming: y,
-            showKeybindNotification: O,
-            dismissKeybindNotification: b,
-            isOOPOverlayAvailable: (!I || (S && x && E && !j)) && !N,
-        }),
-    });
+        d = (0, f.e7)([K.Z], () => K.Z.windowSize()),
+        u = (0, f.e7)([B.ZP], () => B.ZP.getOverlayKeybind()),
+        p = (0, f.e7)([V.Z], () => V.Z.getVoiceChannelId()),
+        h = (0, f.e7)([A.Z], () => A.Z.getChannel(p)),
+        g = (0, f.e7)([L.Z], () => (null != h ? L.Z.getGuild(h.guild_id) : null)),
+        m = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
+        y = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
+        _ = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
+        { analyticsLocations: O } = (0, C.ZP)(Z.Z.OVERLAY),
+        { showKeybindIndicators: v, dismissKeybindNotification: E } = (0, eo.K)(),
+        x = (null == c ? void 0 : c.fullscreenType) === b.Jx.FULLSCREEN,
+        S = null != (e = null == c ? void 0 : c.oopEnabled) && e,
+        j = en.v.oopEnabled,
+        I = null != (t = null == c ? void 0 : c.hasChangedRenderMode) && t,
+        { useContextualNudge: T, disableNudge: D } = (0, er.J0)("OverlaySetup");
+    return (
+        s.useEffect(() => {
+            i && (0, er.F3)();
+        }, [i]),
+        (0, r.jsx)(C.Gt, {
+            value: O,
+            children: (0, r.jsx)(eZ, {
+                locked: n,
+                initialized: i,
+                incompatibleApp: o,
+                activeRegions: l,
+                isPreviewingInGame: a,
+                windowSize: d,
+                keybind: null != u ? (0, $.BB)(u.shortcut, !0) : "???",
+                keybindKeyCodes: null != u ? u.shortcut : [],
+                connectedToVoice: null != p,
+                voiceChannelId: null != h ? h.id : null,
+                voiceGuild: g,
+                game: m,
+                canGoLive: y,
+                isStreaming: _,
+                showKeybindNotification: v,
+                dismissKeybindNotification: E,
+                isOOPOverlayAvailable: (!T || (j && S && x && !I)) && !D,
+            }),
+        })
+    );
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    F3: () => w,
+    F3: () => P,
     J0: () => b,
     NW: () => c,
     OV: () => o,
@@ -17,7 +17,6 @@ n.d(t, {
     lj: () => v,
     mB: () => m,
     o4: () => s,
-    pN: () => P,
     qA: () => E,
     tU: () => S,
     td: () => _,
@@ -353,9 +352,6 @@ function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function P(e) {
-    return N.useExperiment({ location: e });
-}
-function w() {
+function P() {
     v("OVERLAY_INITIALIZED"), S("OVERLAY_INITIALIZED"), R("OVERLAY_INITIALIZED");
 }

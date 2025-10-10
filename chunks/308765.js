@@ -339,10 +339,6 @@ let i = {
     OverlayNegativeWidgetExperimentManager: {
         actions: [
             "POST_CONNECTION_OPEN",
-            "APEX_EXPERIMENTS_FETCH_SUCCESS",
-            "APEX_EXPERIMENT_OVERRIDE_CLEAR",
-            "APEX_EXPERIMENT_OVERRIDE_DELETE",
-            "APEX_EXPERIMENT_OVERRIDE_CREATE",
             "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
             "EXPERIMENT_OVERRIDE_BUCKET",
             "LAYOUT_SET_PINNED",

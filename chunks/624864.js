@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => I }), n(388685), n(467055);
 var r,
     i = n(442837),
     a = n(570140),
@@ -115,7 +115,24 @@ function y(e) {
             (0, s.vE)(e);
     }
 }
-class O extends (r = i.ZP.PersistedStore) {
+function O(e) {
+    let { overlayNotificationSettings: t } = e;
+    m.notificationSettings = new Set(t.notificationSettings);
+    let n = Object.fromEntries(
+        Object.entries(t.gameSettings)
+            .filter((e) => {
+                let [t, n] = e;
+                return null != n.limitedInteractionOverride;
+            })
+            .map((e) => {
+                var t;
+                let [n, r] = e;
+                return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : void 0 }];
+            }),
+    );
+    m.gameSettings = d({}, m.gameSettings, n);
+}
+class v extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = h();
@@ -125,6 +142,18 @@ class O extends (r = i.ZP.PersistedStore) {
             ),
         })),
             this.waitFor(o.default);
+    }
+    getInitialOverlayState() {
+        return {
+            gameSettings: Object.fromEntries(
+                Object.entries(m.gameSettings).map((e) => {
+                    var t;
+                    let [n, r] = e;
+                    return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : null }];
+                }),
+            ),
+            notificationSettings: Array.from(m.notificationSettings),
+        };
     }
     getState() {
         return m;
@@ -147,9 +176,10 @@ class O extends (r = i.ZP.PersistedStore) {
         return y(e);
     }
 }
-u(O, "displayName", "OverlaySettingsStore"), u(O, "persistKey", "OverlaySettingsStore");
-let v = new O(a.Z, {
+u(v, "displayName", "OverlaySettingsStore"), u(v, "persistKey", "OverlaySettingsStore");
+let I = new v(a.Z, {
     LOGOUT: p,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: E,
     OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: b,
+    OVERLAY_INITIALIZE: O,
 });
