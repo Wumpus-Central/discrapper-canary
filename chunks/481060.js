@@ -132,6 +132,7 @@ n.d(t, {
     M2$: () => a.M2$,
     MGJ: () => e_.M,
     Mec: () => i.Mec,
+    MgI: () => i.MgI,
     Mgn: () => i.Mgn,
     Mi4: () => eo.M,
     Mjp: () => i.Mjp,

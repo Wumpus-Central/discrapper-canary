@@ -7,6 +7,7 @@ e.exports = {
     questRewardEmbedXs: "questRewardEmbedXs__2055a",
     taskDetails: "taskDetails__2055a",
     taskInstructions: "taskInstructions__2055a",
+    fullWidthShinyCtaButtonWrapper: "fullWidthShinyCtaButtonWrapper__2055a",
     ctaButtonWrapper: "ctaButtonWrapper__2055a",
     learnMoreLink: "learnMoreLink__2055a",
     ctaTooltipText: "ctaTooltipText__2055a",
