@@ -4419,6 +4419,7 @@ var nE = (function (e) {
             (e.EXPRESSION_PICKER_CATEGORY_SELECTED = "expression_picker_category_selected"),
             (e.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED = "expression_picker_category_collapse_toggled"),
             (e.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED = "expression_picker_soundboard_sound_previewed"),
+            (e.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED = "expression_picker_soundboard_sounds_loaded"),
             (e.EXPRESSION_PICKER_STICKER_SHOP_VIEWED = "expression_picker_sticker_shop_viewed"),
             (e.EXPRESSION_PICKER_EXPRESSION_FOCUS = "expression_picker_expression_focus"),
             (e.EXPRESSION_PICKER_EXPRESSION_SELECTED = "expression_picker_expression_selected"),
