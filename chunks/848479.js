@@ -81,9 +81,28 @@ class c extends a.h {
             return null;
         }
     }
+    getMemoryPrivateUsageElectronRenderer() {
+        try {
+            return o.ZP.getDiscordMemoryPrivateUsageElectronRenderer();
+        } catch (e) {
+            return null;
+        }
+    }
     getMemoryUsageElectronRendererUsedHeapSize() {
         var e, t;
         return null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getUsedHeapSize)
+            ? void 0
+            : e.call(t);
+    }
+    getMemoryHeapStats() {
+        var e, t;
+        return null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getHeapStats)
+            ? void 0
+            : e.call(t);
+    }
+    getBlinkMemoryInfo() {
+        var e, t;
+        return null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getBlinkMemoryInfo)
             ? void 0
             : e.call(t);
     }
