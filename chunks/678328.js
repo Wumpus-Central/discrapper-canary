@@ -8,13 +8,13 @@ var l = n(951288),
     r = n.n(i),
     s = n(481060),
     o = n(494620),
-    c = n(748745),
-    u = n(567225),
+    u = n(748745),
+    c = n(567225),
     d = n(535895),
     m = n(183369),
     v = n(422663),
-    g = n(473682),
-    f = n(401561),
+    f = n(473682),
+    g = n(401561),
     b = n(388032),
     p = n(782991);
 function j() {
@@ -22,7 +22,7 @@ function j() {
         className: p.maxInstancesWarning,
         children: (0, l.jsx)(s.Text, {
             variant: "text-sm/medium",
-            children: b.intl.formatToPlainString(f.default.kUNv8P, { maxInstances: g.zI }),
+            children: b.intl.formatToPlainString(g.default.kUNv8P, { maxInstances: f.zI }),
         }),
     });
 }
@@ -47,7 +47,7 @@ function x() {
             },
             [i, x],
         ),
-        h = n.length >= g.zI,
+        h = n.length >= f.zI,
         P = n.length > 0;
     return 0 === Object.values(t).length
         ? (0, l.jsx)("div", {
@@ -62,13 +62,13 @@ function x() {
                           children: [
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(f.default.wzC4ws),
+                                  children: b.intl.string(g.default.wzC4ws),
                               }),
                               (0, l.jsx)("div", {
                                   className: p.gameInstanceContainer,
                                   children: n.map((t, n) =>
                                       (0, l.jsx)(
-                                          c.Z,
+                                          u.Z,
                                           {
                                               guildId: e,
                                               gameInstance: t,
@@ -87,13 +87,13 @@ function x() {
                           P &&
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(f.default.l4UdiY),
+                                  children: b.intl.string(g.default.l4UdiY),
                               }),
                           (0, l.jsx)("div", {
                               className: p.gameContainer,
                               children: Object.values(t).map((e, t) =>
                                   (0, l.jsx)(
-                                      u.Z,
+                                      c.Z,
                                       {
                                           game: e,
                                           disabled: h,
@@ -106,7 +106,7 @@ function x() {
                       ],
                   }),
                   (0, l.jsxs)(v.ok, {
-                      step: g.Vb.SELECT_GAME,
+                      step: f.Vb.SELECT_GAME,
                       className: p.footerContainer,
                       children: [
                           (0, l.jsxs)("div", {
@@ -115,7 +115,7 @@ function x() {
                                   (0, l.jsx)(s.d3s, { size: "sm" }),
                                   (0, l.jsx)(s.Text, {
                                       variant: "text-sm/medium",
-                                      children: b.intl.string(f.default.RBv43d),
+                                      children: b.intl.string(g.default.RBv43d),
                                   }),
                               ],
                           }),

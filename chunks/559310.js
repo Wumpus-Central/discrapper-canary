@@ -29,7 +29,7 @@ function s(e) {
         },
         {
             autoTrackExposure: t,
-            disable: r,
+            disable: !r,
         },
     );
 }
@@ -46,7 +46,7 @@ function r(e) {
         },
         {
             autoTrackExposure: t,
-            disable: r,
+            disable: !r,
         },
     );
 }

@@ -6,30 +6,30 @@ var a = n(120356),
     r = n(481060),
     s = n(943970),
     o = n(401561),
-    c = n(388032),
-    u = n(720534);
+    u = n(388032),
+    c = n(720534);
 function d(e) {
     let { className: t, game: n, onClick: a, imageClassName: d, titleClassName: m, disabled: v = !1 } = e,
-        g = (0, s.Z)(n.gameId, "cover");
+        f = (0, s.Z)(n.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
         "aria-disabled": v,
-        className: i()(u.game, { [u.disabled]: v }, t),
+        className: i()(c.game, { [c.disabled]: v }, t),
         onClick: v ? void 0 : () => a(n),
         children: [
             (0, l.jsxs)("div", {
-                className: i()(u.gameImageContainer, d),
+                className: i()(c.gameImageContainer, d),
                 children: [
                     (0, l.jsx)("img", {
-                        className: u.image,
+                        className: c.image,
                         alt: "",
-                        src: null != g ? g : "",
+                        src: null != f ? f : "",
                     }),
-                    (0, l.jsx)("div", { className: u.gameImageBorder }),
-                    (0, l.jsx)("div", { className: u.gameImageOverlay }),
+                    (0, l.jsx)("div", { className: c.gameImageBorder }),
+                    (0, l.jsx)("div", { className: c.gameImageOverlay }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: i()(u.textContainer, m),
+                className: i()(c.textContainer, m),
                 children: [
                     (0, l.jsx)(r.X6q, {
                         variant: "heading-sm/semibold",
@@ -38,7 +38,7 @@ function d(e) {
                         children: n.name,
                     }),
                     (0, l.jsxs)("div", {
-                        className: u.boostContainer,
+                        className: c.boostContainer,
                         children: [
                             (0, l.jsx)(r.$Eu, {
                                 size: "sm",
@@ -46,7 +46,7 @@ function d(e) {
                             }),
                             (0, l.jsx)(r.Text, {
                                 variant: "text-sm/medium",
-                                children: c.intl.formatToPlainString(
+                                children: u.intl.formatToPlainString(
                                     n.plans.length > 1 ? o.default.Vf4vwM : o.default.ZzpD5u,
                                     { boostCount: n.baseCost },
                                 ),
