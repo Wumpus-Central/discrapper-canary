@@ -178,17 +178,17 @@ function D(e) {
         onboardingResponsesSeen: i,
     });
 }
-function x(e) {
+function L(e) {
     let { guildId: t, channelIds: n } = e;
     b[t] = E(m({}, b[t]), { defaultChannelIds: n });
 }
-function L(e) {
+function x(e) {
     let { guildId: t, mode: n } = e,
         r = b[t];
     null != r && (r.mode = n);
 }
-let j = [],
-    M = [],
+let M = [],
+    j = [],
     k = [];
 class U extends (r = o.ZP.Store) {
     initialize() {
@@ -196,19 +196,19 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : j;
+        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : M;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : j;
+        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : M;
     }
     getOnboardingResponses(e) {
         var t, n, r;
         return l.Z.isFullServerPreview(e)
-            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : M)
+            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : j)
             : null != (r = null == (t = b[e]) ? void 0 : t.responses)
               ? r
-              : M;
+              : j;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -219,10 +219,10 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return M;
+        if (null == n) return j;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? M
+            ? j
             : a().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e),
@@ -234,10 +234,10 @@ class U extends (r = o.ZP.Store) {
         return l.Z.isFullServerPreview(e)
             ? null != (t = null == r ? void 0 : r.prompts)
                 ? t
-                : j
+                : M
             : null != r && r.enabled && null != (n = r.prompts)
               ? n
-              : j;
+              : M;
     }
     getDefaultChannelIds(e) {
         var t, n;
@@ -296,6 +296,6 @@ let G = new U(s.Z, {
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: R,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: R,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: x,
-    GUILD_SETTINGS_ONBOARDING_SET_MODE: L,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: L,
+    GUILD_SETTINGS_ONBOARDING_SET_MODE: x,
 });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -95,7 +95,7 @@ class s extends (r = i.ZP.Store) {
         this._onboardingModalOpenedPrior = !1;
     }
     constructor() {
-        super(o.Z, {
+        super(a.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -110,16 +110,16 @@ class s extends (r = i.ZP.Store) {
                 this.setBalancePillOverlay(e.balancePillOverlay);
             },
         }),
-            a(this, "_entitlements", null),
-            a(this, "_redeemingSkuId", null),
-            a(this, "_isRedeemingVirtualCurrency", !1),
-            a(this, "_redeemVirtualCurrencyError", null),
-            a(this, "_balance", null),
-            a(this, "_fetchBalanceError", null),
-            a(this, "_isFetchingBalance", !1),
-            a(this, "_onboardingModalOpenedPrior", !1),
-            a(this, "_balancePillOverlay", !1);
+            o(this, "_entitlements", null),
+            o(this, "_redeemingSkuId", null),
+            o(this, "_isRedeemingVirtualCurrency", !1),
+            o(this, "_redeemVirtualCurrencyError", null),
+            o(this, "_balance", null),
+            o(this, "_fetchBalanceError", null),
+            o(this, "_isFetchingBalance", !1),
+            o(this, "_onboardingModalOpenedPrior", !1),
+            o(this, "_balancePillOverlay", !1);
     }
 }
-a(s, "displayName", "VirtualCurrencyStore");
+o(s, "displayName", "VirtualCurrencyStore");
 let l = new s();

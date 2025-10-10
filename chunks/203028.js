@@ -47,7 +47,7 @@ function _(e) {
                     });
             }
         })(_),
-        { subtitle: C, icon: S } = (function (e) {
+        { subtitle: S, icon: C } = (function (e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: p } = e,
                 _ = i.length,
@@ -177,7 +177,7 @@ function _(e) {
                 icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.MULTIPLE }),
             };
         })(_),
-        N = (0, u.Z)({
+        T = (0, u.Z)({
             applicationId: null == (i = _.currentActivities[0]) || null == (t = i.activity) ? void 0 : t.application_id,
             location: "FriendsActivityFeed",
             source: c.m1.FriendsActivityFeed,
@@ -186,10 +186,10 @@ function _(e) {
         priorityUser: v,
         guildId: null == y ? void 0 : y.id,
         title: I,
-        subtitle: C,
-        icon: S,
-        onSubtitleClick: N,
-        onIconClick: N,
+        subtitle: S,
+        icon: C,
+        onSubtitleClick: T,
+        onIconClick: T,
         onContextMenu: (e) => O(e, v.user),
     });
 }

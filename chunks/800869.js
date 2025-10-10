@@ -2,9 +2,9 @@ n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(793030),
     o = n(159691),
-    s = n(481060),
-    l = n(921944),
-    a = n(989308),
+    l = n(481060),
+    a = n(921944),
+    s = n(989308),
     c = n(388032),
     u = n(176179),
     d = n(719119);
@@ -21,12 +21,12 @@ function p(e) {
             (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-md/semibold",
-                children: c.intl.string(a.default.diMhWV),
+                children: c.intl.string(s.default.diMhWV),
             }),
             (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-sm/medium",
-                children: c.intl.string(a.default.pycxTk),
+                children: c.intl.string(s.default.pycxTk),
             }),
             (0, r.jsx)("div", {
                 className: u.close,
@@ -35,9 +35,9 @@ function p(e) {
                     size: "md",
                     "aria-label": c.intl.string(c.t.cpT0Cg),
                     onClick: () => {
-                        t(l.L.USER_DISMISS);
+                        t(a.L.USER_DISMISS);
                     },
-                    icon: s.Dio,
+                    icon: l.Dio,
                 }),
             }),
         ],

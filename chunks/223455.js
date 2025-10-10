@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => x });
+n.r(t), n.d(t, { default: () => Z });
 var r = n(951288),
     a = n(120356),
     i = n.n(a),
@@ -21,7 +21,7 @@ var r = n(951288),
     P = n(677601),
     j = n(702511);
 let C = [u.S, m.O, p.U, h._];
-function x(e) {
+function Z(e) {
     let { windowKey: t, channelId: n } = e,
         a = (0, s.e7)([b.Z], () => b.Z.getChannel(n));
     o()(null != a, "channel cannot be null for popout");

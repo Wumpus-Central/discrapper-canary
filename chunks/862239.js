@@ -70,7 +70,7 @@ function x(e) {
         ],
     });
 }
-function u(e) {
+function p(e) {
     let { channel: t } = e,
         n = (function (e) {
             switch (e) {
@@ -119,7 +119,7 @@ function u(e) {
         ],
     });
 }
-function p(e) {
+function u(e) {
     let { benefit: t } = e;
     return void 0 === t
         ? null
@@ -148,13 +148,13 @@ function f(e) {
                 className: m.benefitTypeHeader,
                 children: d.intl.string(d.t.rI43W1),
             }),
-            t.channels.map((e) => (0, a.jsx)(u, { channel: e }, e.id)),
+            t.channels.map((e) => (0, a.jsx)(p, { channel: e }, e.id)),
             (0, a.jsx)(l.Text, {
                 variant: "text-xs/semibold",
                 className: m.benefitTypeHeader,
                 children: d.intl.string(d.t.XqWRLi),
             }),
-            t.additional_perks.map((e, t) => (0, a.jsx)(p, { benefit: e.name }, t)),
+            t.additional_perks.map((e, t) => (0, a.jsx)(u, { benefit: e.name }, t)),
         ],
     });
 }

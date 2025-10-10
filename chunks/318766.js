@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -118,15 +118,15 @@ let P = function (e) {
             ref: P,
         } = e,
         [w, D] = i.useState(!1),
-        [x, L] = i.useState(50),
-        j = w || y,
-        M = (0, h.l)(b, "emojiButton", j ? "Hovered" : "Normal"),
-        k = R(x),
+        [L, x] = i.useState(50),
+        M = w || y,
+        j = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
+        k = R(L),
         U = i.useCallback(() => {
-            if (j) return;
+            if (M) return;
             let e = Math.floor(Math.random() * A);
-            D(!0), L(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
-        }, [j, D, L]),
+            D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
+        }, [M, D, x]),
         G = i.useCallback(() => {
             D(!1);
         }, [D]),
@@ -150,7 +150,7 @@ let P = function (e) {
             (0, r.jsx)(u.P3F, {
                 innerRef: z,
                 tabIndex: t,
-                className: o()(M, n),
+                className: o()(j, n),
                 onMouseEnter: () => {
                     var t;
                     U(), null == (t = e.onMouseEnter) || t.call(e);
@@ -176,7 +176,7 @@ let P = function (e) {
                         ? a()
                         : (0, r.jsx)(u.AMe, {
                               config: C,
-                              to: { value: +!!j },
+                              to: { value: +!!M },
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
@@ -186,13 +186,13 @@ let P = function (e) {
                                       }),
                                       children: [
                                           (0, r.jsx)("div", {
-                                              className: o()(b.sprite, b.spriteColored, j ? b.active : b.inactive),
+                                              className: o()(b.sprite, b.spriteColored, M ? b.active : b.inactive),
                                           }),
                                           (0, r.jsx)("div", {
                                               className: o()(
                                                   b.sprite,
                                                   H ? b.spritePremiumColored : b.spriteGreyscale,
-                                                  j ? b.inactive : b.active,
+                                                  M ? b.inactive : b.active,
                                                   { [b.reducedMotion]: W },
                                               ),
                                           }),

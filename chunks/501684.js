@@ -1,7 +1,7 @@
 let r, _, n, o, i;
 a.d(e, {
     $A: () => L,
-    PR: () => T,
+    PR: () => f,
     YF: () => O,
     _4: () => h,
     _j: () => P,
@@ -12,32 +12,32 @@ var c = a(622916),
     E = a(688838),
     s = a(665909),
     l = a(795927),
-    u = a(661129),
-    I = a(231550),
+    I = a(661129),
+    u = a(231550),
     R = a(428983),
     d = a(622574),
     N = a(288570);
 let A = {},
-    f = {};
-function T(t, e = !1) {
-    return S("cls", t, D, r, e);
+    T = {};
+function f(t, e = !1) {
+    return y("cls", t, D, r, e);
 }
 function L(t, e = !1) {
-    return S("lcp", t, m, n, e);
+    return y("lcp", t, m, n, e);
 }
 function p(t) {
-    return S("fid", t, C, _);
+    return y("fid", t, C, _);
 }
 function h(t) {
-    return S("ttfb", t, v, o);
+    return y("ttfb", t, v, o);
 }
 function O(t) {
-    return S("inp", t, y, i);
+    return y("inp", t, S, i);
 }
 function P(t, e) {
     return (
         U(t, e),
-        f[t] ||
+        T[t] ||
             ((function (t) {
                 let e = {};
                 "event" === t && (e.durationThreshold = 0),
@@ -49,7 +49,7 @@ function P(t, e) {
                         e,
                     );
             })(t),
-            (f[t] = !0)),
+            (T[t] = !0)),
         b(t, e)
     );
 }
@@ -79,7 +79,7 @@ function D() {
     );
 }
 function C() {
-    return (0, u.F)((t) => {
+    return (0, I.F)((t) => {
         g("fid", { metric: t }), (_ = t);
     });
 }
@@ -96,14 +96,14 @@ function v() {
         g("ttfb", { metric: t }), (o = t);
     });
 }
-function y() {
-    return (0, I.Y)((t) => {
+function S() {
+    return (0, u.Y)((t) => {
         g("inp", { metric: t }), (i = t);
     });
 }
-function S(t, e, a, r, _ = !1) {
+function y(t, e, a, r, _ = !1) {
     let n;
-    return U(t, e), f[t] || ((n = a()), (f[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0);
+    return U(t, e), T[t] || ((n = a()), (T[t] = !0)), r && e({ metric: r }), b(t, e, _ ? n : void 0);
 }
 function U(t, e) {
     (A[t] = A[t] || []), A[t].push(e);

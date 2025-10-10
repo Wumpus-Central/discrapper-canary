@@ -1,16 +1,16 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(159691),
-    s = n(481060),
+    s = n(159691),
+    a = n(481060),
     o = n(367907),
     c = n(357352),
     d = n(434404),
     u = n(626135),
-    m = n(629481),
-    g = n(981631),
+    g = n(629481),
+    m = n(981631),
     p = n(388032),
     f = n(689409);
 function h(e) {
@@ -22,7 +22,7 @@ function h(e) {
                 "div",
                 {
                     className: f.pill,
-                    children: (0, r.jsx)(s.Text, {
+                    children: (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         children: e,
                     }),
@@ -32,9 +32,9 @@ function h(e) {
         ),
     });
 }
-function b(e) {
+function x(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        b = [
+        x = [
             [p.intl.string(p.t["73h51N"]), p.intl.string(p.t["gbjs//"])],
             [p.intl.string(p.t.mCoH0d), p.intl.string(p.t["l/BuSE"])],
             [p.intl.string(p.t.psQktr), p.intl.string(p.t.nMhIZW)],
@@ -50,26 +50,26 @@ function b(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: f.pillContainer,
-                            children: b.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
+                            children: x.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
                         }),
                         (0, r.jsxs)("div", {
                             className: f.ctaContent,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-lg/medium",
                                     color: "header-primary",
                                     children: p.intl.string(p.t["67arYG"]),
                                 }),
                                 n &&
-                                    (0, r.jsx)(a.zxk, {
+                                    (0, r.jsx)(s.zxk, {
                                         text: p.intl.string(p.t.oyzLpK),
-                                        icon: s.ZSh,
+                                        icon: a.ZSh,
                                         iconPosition: "end",
                                         size: "md",
                                         onClick: () => {
                                             var e, n;
                                             u.default.track(
-                                                g.rMx.GUILD_SHOP_PREVIEW_CLICK,
+                                                m.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -96,7 +96,7 @@ function b(e) {
                                                     }
                                                     return e;
                                                 })({}, (0, o.hH)(t))),
-                                                (n = n = { action_taken: m.mz.GET_STARTED_CLICK }),
+                                                (n = n = { action_taken: g.mz.GET_STARTED_CLICK }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                                                     : (function (e, t) {
@@ -115,7 +115,7 @@ function b(e) {
                                                       }),
                                                 e),
                                             ),
-                                                d.Z.open(t, g.pNK.GUILD_PRODUCTS);
+                                                d.Z.open(t, m.pNK.GUILD_PRODUCTS);
                                         },
                                     }),
                             ],

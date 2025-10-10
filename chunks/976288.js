@@ -1,4 +1,4 @@
-n.d(t, { d: () => D }), n(953529), n(388685);
+n.d(t, { d: () => R }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(345074),
@@ -8,19 +8,19 @@ var r = n(951288),
     c = n(456268),
     d = n(681460),
     u = n(345861),
-    m = n(650774),
-    g = n(434404),
+    g = n(650774),
+    m = n(434404),
     p = n(999382),
     f = n(490597),
     h = n(983858),
     x = n(832321),
     b = n(718157),
     j = n(450474),
-    v = n(557359),
-    _ = n(386885),
-    O = n(203377),
-    y = n(929834),
-    C = n(388032),
+    _ = n(557359),
+    v = n(386885),
+    C = n(203377),
+    O = n(929834),
+    y = n(388032),
     N = n(912440);
 function E() {
     return (0, r.jsx)(a.Text, {
@@ -35,17 +35,17 @@ function I(e) {
     var t;
     let { guild: n, requireDescription: o } = e,
         c = i.useCallback((e) => {
-            g.Z.updateGuild({ discoverySplash: e });
+            m.Z.updateGuild({ discoverySplash: e });
         }, []),
         d = i.useCallback(() => {
-            g.Z.updateGuild({ discoverySplash: null });
+            m.Z.updateGuild({ discoverySplash: null });
         }, []),
         p = i.useCallback((e) => {
-            g.Z.updateGuild({ description: e });
+            m.Z.updateGuild({ description: e });
         }, []),
-        { memberCount: f, onlineCount: x } = (0, s.cj)([m.Z], () => ({
-            memberCount: m.Z.getMemberCount(n.id),
-            onlineCount: m.Z.getOnlineCount(n.id),
+        { memberCount: f, onlineCount: x } = (0, s.cj)([g.Z], () => ({
+            memberCount: g.Z.getMemberCount(n.id),
+            onlineCount: g.Z.getOnlineCount(n.id),
         }));
     return (0, r.jsxs)("div", {
         className: N.twoColumns,
@@ -59,12 +59,12 @@ function I(e) {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
                                 className: N.header,
-                                children: C.intl.string(C.t.LYju5O),
+                                children: y.intl.string(y.t.LYju5O),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: C.intl.string(C.t["53LhIy"]),
+                                children: y.intl.string(y.t["53LhIy"]),
                             }),
                         ],
                     }),
@@ -74,12 +74,12 @@ function I(e) {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 className: N.subHeader,
-                                children: C.intl.string(C.t.JaecVF),
+                                children: y.intl.string(y.t.JaecVF),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: C.intl.string(C.t.VJMq8f),
+                                children: y.intl.string(y.t.VJMq8f),
                             }),
                             (0, r.jsxs)("div", {
                                 className: N.buttonList,
@@ -88,7 +88,7 @@ function I(e) {
                                         className: N.editableSection,
                                         children: (0, r.jsx)(u.Z, {
                                             onChange: c,
-                                            text: C.intl.string(C.t["3UB9aW"]),
+                                            text: y.intl.string(y.t["3UB9aW"]),
                                             size: "sm",
                                             variant: "secondary",
                                         }),
@@ -100,7 +100,7 @@ function I(e) {
                                               children: (0, r.jsx)(a.zxk, {
                                                   variant: "critical-secondary",
                                                   size: "sm",
-                                                  text: C.intl.string(C.t.N86XcH),
+                                                  text: y.intl.string(y.t.N86XcH),
                                                   onClick: d,
                                               }),
                                           })
@@ -115,18 +115,18 @@ function I(e) {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 className: N.subHeader,
-                                children: [C.intl.string(C.t["1Ts7QE"]), o ? (0, r.jsx)(E, {}) : null],
+                                children: [y.intl.string(y.t["1Ts7QE"]), o ? (0, r.jsx)(E, {}) : null],
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: C.intl.string(C.t["6Y9q8f"]),
+                                children: y.intl.string(y.t["6Y9q8f"]),
                             }),
                             (0, r.jsx)("div", {
                                 className: N.editableSection,
                                 children: (0, r.jsx)(a.Kx8, {
                                     value: null != (t = n.description) ? t : "",
-                                    placeholder: C.intl.string(C.t.Nvfows),
+                                    placeholder: y.intl.string(y.t.Nvfows),
                                     onChange: p,
                                     maxLength: l.Us,
                                 }),
@@ -155,12 +155,12 @@ function S(e) {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: N.header,
-                        children: C.intl.string(C.t["5b4VCQ"]),
+                        children: y.intl.string(y.t["5b4VCQ"]),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: C.intl.string(C.t.MMEJFB),
+                        children: y.intl.string(y.t.MMEJFB),
                     }),
                 ],
             }),
@@ -170,12 +170,12 @@ function S(e) {
                         variant: "text-xs/bold",
                         color: "text-muted",
                         className: N.subHeader,
-                        children: [C.intl.string(C.t.Rv9An5), i ? (0, r.jsx)(E, {}) : null],
+                        children: [y.intl.string(y.t.Rv9An5), i ? (0, r.jsx)(E, {}) : null],
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: C.intl.string(C.t.CE5Gyc),
+                        children: y.intl.string(y.t.CE5Gyc),
                     }),
                     (0, r.jsx)("div", {
                         className: N.editableSection,
@@ -192,12 +192,12 @@ function S(e) {
                         variant: "text-xs/bold",
                         color: "text-muted",
                         className: N.subHeader,
-                        children: C.intl.string(C.t.oOPlPD),
+                        children: y.intl.string(y.t.oOPlPD),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: C.intl.string(C.t["4jnzlZ"]),
+                        children: y.intl.string(y.t["4jnzlZ"]),
                     }),
                     (0, r.jsx)("div", {
                         className: N.editableSection,
@@ -221,19 +221,19 @@ function S(e) {
 }
 function T(e) {
     let { guildId: t, guildMetadata: n, requireTag: l, error: s } = e,
-        [u, m] = i.useState(null),
-        g = i.useCallback(
+        [u, g] = i.useState(null),
+        m = i.useCallback(
             (e) => {
                 let r = Array.from(e),
                     i = [...n.keywords].filter((e) => !r.includes(e));
-                m(null), (0, c.zH)(t, i);
+                g(null), (0, c.zH)(t, i);
             },
             [t, n],
         ),
         p = i.useCallback(
             (e) => {
                 let { keywords: r } = n;
-                !(r.length >= O.G7) && (r.includes(e) || (m(null), (0, c.zH)(t, [...r, e])));
+                !(r.length >= C.G7) && (r.includes(e) || (g(null), (0, c.zH)(t, [...r, e])));
             },
             [t, n],
         ),
@@ -242,12 +242,12 @@ function T(e) {
                 (0, f.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
                     .map((e) => {
-                        let t = n.keywords.length >= O.G7;
+                        let t = n.keywords.length >= C.G7;
                         return {
                             text: e,
                             onClick: () => p(e),
                             disabled: t,
-                            tooltipText: t ? C.intl.string(C.t.Xx7XeH) : void 0,
+                            tooltipText: t ? y.intl.string(y.t.Xx7XeH) : void 0,
                         };
                     }),
             [n.keywords, n.primaryCategoryId, p],
@@ -268,16 +268,16 @@ function T(e) {
                 children: [
                     (0, r.jsx)(o.Z, {
                         required: l,
-                        label: C.intl.string(C.t["0PJZXl"]),
-                        description: C.intl.string(C.t.ztiTDA),
-                        tagsLabel: C.intl.string(C.t["0PJZXl"]),
+                        label: y.intl.string(y.t["0PJZXl"]),
+                        description: y.intl.string(y.t.ztiTDA),
+                        tagsLabel: y.intl.string(y.t["0PJZXl"]),
                         tags: b,
-                        onRemoveTag: g,
+                        onRemoveTag: m,
                         onAddTag: p,
-                        onAddTagError: m,
-                        maxTags: O.G7,
-                        maxTaxLength: O._0,
-                        placeholder: n.keywords.length < 1 ? C.intl.string(C.t.EL4Lho) : void 0,
+                        onAddTagError: g,
+                        maxTags: C.G7,
+                        maxTaxLength: C._0,
+                        placeholder: n.keywords.length < 1 ? y.intl.string(y.t.EL4Lho) : void 0,
                     }),
                     null != x
                         ? (0, r.jsx)(a.Text, {
@@ -296,7 +296,7 @@ function T(e) {
                               variant: "text-xs/bold",
                               color: "text-muted",
                               className: N.subHeader,
-                              children: C.intl.string(C.t.sF28Oj),
+                              children: y.intl.string(y.t.sF28Oj),
                           }),
                           (0, r.jsx)("div", {
                               className: N.editableSection,
@@ -324,19 +324,19 @@ function P(e) {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: N.header,
-                        children: C.intl.string(C.t.DhJ8ur),
+                        children: y.intl.string(y.t.DhJ8ur),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: C.intl.string(C.t["/RSSlZ"]),
+                        children: y.intl.string(y.t["/RSSlZ"]),
                     }),
                     (0, r.jsx)("div", {
                         className: N.editableSection,
                         children: (0, r.jsx)(a.zxk, {
                             size: "sm",
                             variant: l ? "secondary" : "active",
-                            text: l ? C.intl.string(C.t.XnrNLi) : C.intl.string(C.t.bHbZLC),
+                            text: l ? y.intl.string(y.t.XnrNLi) : y.intl.string(y.t.bHbZLC),
                             onClick: o,
                         }),
                     }),
@@ -353,9 +353,9 @@ function P(e) {
 }
 function w(e) {
     let { preferredLocale: t } = e,
-        n = i.useMemo(() => (0, y.jb)(), []),
+        n = i.useMemo(() => (0, O.jb)(), []),
         l = i.useCallback((e) => {
-            g.Z.updateGuild({ preferredLocale: e });
+            m.Z.updateGuild({ preferredLocale: e });
         }, []);
     return (0, r.jsxs)("div", {
         className: N.twoColumns,
@@ -366,12 +366,12 @@ function w(e) {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: N.header,
-                        children: C.intl.string(C.t.pO60f3),
+                        children: y.intl.string(y.t.pO60f3),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: C.intl.string(C.t["SF/GRk"]),
+                        children: y.intl.string(y.t["SF/GRk"]),
                     }),
                 ],
             }),
@@ -386,10 +386,10 @@ function w(e) {
         ],
     });
 }
-function R() {
+function Z() {
     return (0, r.jsx)("div", { className: N.divider });
 }
-function D(e) {
+function R(e) {
     let { requireTerms: t, rules: n, settingsView: i } = e,
         {
             errors: l,
@@ -404,7 +404,7 @@ function D(e) {
             };
         });
     if (null == o) return null;
-    let c = i === _.U.ELIGIBLE_DISABLED;
+    let c = i === v.U.ELIGIBLE_DISABLED;
     return (0, r.jsxs)("div", {
         className: N.settings,
         children: [
@@ -412,30 +412,30 @@ function D(e) {
                 guild: o,
                 requireDescription: c,
             }),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(Z, {}),
             (0, r.jsx)(S, {
                 guild: o,
                 guildMetadata: a,
                 requirePrimaryCategory: c,
                 error: l.discovery_splash,
             }),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(Z, {}),
             (0, r.jsx)(T, {
                 guildId: o.id,
                 guildMetadata: a,
                 requireTag: c,
                 error: l.keywords,
             }),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(Z, {}),
             (0, r.jsx)(P, {
                 guild: o,
                 guildMetadata: a,
             }),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(Z, {}),
             (0, r.jsx)(w, { preferredLocale: o.preferredLocale }),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(Z, {}),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(v.A, {
+                children: (0, r.jsx)(_.A, {
                     requireTerms: t,
                     rules: n,
                 }),

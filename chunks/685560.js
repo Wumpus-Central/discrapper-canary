@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var a = n(951288),
     r = n(913527),
     i = n.n(r),
@@ -18,7 +18,7 @@ var a = n(951288),
     v = n(430824),
     j = n(914010),
     _ = n(981631),
-    y = n(736525);
+    y = n(617659);
 let C = [
         o.z.GUILD_POWERUP_PERKS_COACHMARK,
         o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
@@ -34,12 +34,12 @@ let C = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     S = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    N = [
+    T = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function T(e) {
+function O(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -55,7 +55,7 @@ function T(e) {
             return "ADOPT_CLAN_IDENTITY_NOTICE";
     }
 }
-async function O(e, t, n) {
+async function N(e, t, n) {
     await Promise.all(
         t.map((e) =>
             s.tn.patch({
@@ -74,7 +74,7 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function k() {
+function I() {
     let e = (0, l.e7)([j.Z], () => j.Z.getGuildId()),
         t = (0, l.e7)([v.Z], () => {
             var t;
@@ -141,14 +141,14 @@ function k() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        O(e, r.slice(Math.floor(r.length / 2)), !1);
+                                        N(e, r.slice(Math.floor(r.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        O(e, r, !0);
+                                        N(e, r, !0);
                                     },
                                 }),
                             ],
@@ -186,7 +186,7 @@ function k() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: T(t),
+                                    label: O(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -207,7 +207,7 @@ function k() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: T(t),
+                                    label: O(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -228,7 +228,7 @@ function k() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        N.map((e) =>
+                        T.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

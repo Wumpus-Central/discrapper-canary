@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => m,
     j: () => p,
 });
 var r = n(951288);
@@ -12,8 +12,8 @@ var i = n(442837),
     c = n(999382),
     d = n(145260),
     u = n(821864),
-    m = n(905753);
-function g(e) {
+    g = n(905753);
+function m(e) {
     let { refToScroller: t } = e,
         n = (0, i.e7)([c.Z], () => c.Z.getGuild()),
         {
@@ -21,8 +21,8 @@ function g(e) {
             sectionId: s,
             integrations: o,
             editedIntegration: u,
-            webhooks: m,
-            editedWebhook: g,
+            webhooks: g,
+            editedWebhook: m,
             isFetching: p,
             errors: f,
         } = (0, i.cj)([d.default], () => ({
@@ -42,9 +42,9 @@ function g(e) {
               section: l,
               sectionId: s,
               integrations: o,
-              webhooks: m,
+              webhooks: g,
               editedIntegration: u,
-              editedWebhook: g,
+              editedWebhook: m,
               isFetchingWebhooks: p,
               hasChanges: d.default.hasChanges,
               errors: f,
@@ -67,7 +67,7 @@ function p() {
                 else if (null != d.default.editedWebhook) l.Z.saveWebhook(e.id, d.default.editedWebhook);
                 else if (null != d.default.editedCommandId) {
                     let t = d.default.getSectionId(),
-                        n = m.Z.getEditedApplication();
+                        n = g.Z.getEditedApplication();
                     if (null == t || null == n) return;
                     l.Z.saveApplicationPermissions(t, e.id, Object.values(n));
                 }

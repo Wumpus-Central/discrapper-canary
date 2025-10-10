@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(785547),
     O = n(730749),
     E = n(112724),
-    v = n(812206),
-    y = n(44315),
+    y = n(812206),
+    v = n(44315),
     I = n(600164),
     S = n(167533),
     C = n(925329),
@@ -243,8 +243,8 @@ class q extends i.PureComponent {
                 (0, r.jsx)(h.Exd, {
                     percent: t,
                     size: h.Exd.Sizes.SMALL,
-                    foregroundColor: (0, y.Lq)(n),
-                    foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
+                    foregroundColor: (0, v.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, v.Lq)(i[0]), (0, v.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
                 }),
                 (0, r.jsx)("div", {
@@ -659,8 +659,8 @@ function ee(e, t, n, r) {
     }, []);
 }
 let et = (0, E.Z)(
-    c.ZP.connectStores([v.Z, P.Z, x.Z, N.Z, A.Z], () => ({
-        applications: [...ee(x.Z.activeItems, !1, v.Z, P.Z), ...ee(x.Z.finishedItems, !0, v.Z, P.Z)],
+    c.ZP.connectStores([y.Z, P.Z, x.Z, N.Z, A.Z], () => ({
+        applications: [...ee(x.Z.activeItems, !1, y.Z, P.Z), ...ee(x.Z.finishedItems, !0, y.Z, P.Z)],
         paused: x.Z.paused,
         isFocused: A.Z.isFocused(),
         theme: N.Z.theme,

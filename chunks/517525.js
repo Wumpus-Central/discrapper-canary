@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(28664),
     f = n(477690),
     p = n(481060),
-    m = n(2052),
-    _ = n(906732),
-    g = n(194082),
-    b = n(484459),
-    E = n(594174),
+    _ = n(2052),
+    m = n(906732),
+    b = n(194082),
+    E = n(484459),
+    g = n(594174),
     v = n(626135),
     h = n(74538),
     S = n(557457),
@@ -22,7 +22,7 @@ var r = n(951288),
     O = n(981631),
     I = n(474936),
     C = n(388032),
-    w = n(643930);
+    w = n(386393);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,14 +92,14 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 participant: o,
                 isUpsellEnabled: c,
                 shape: f,
-                size: b,
+                size: E,
                 didTrackUpsellViewed: P,
                 setDidTrackUpsellViewed: x,
                 className: A,
                 premiumIndicator: T,
                 quality: R,
             } = e,
-            { analyticsLocations: N } = (0, _.ZP)(),
+            { analyticsLocations: N } = (0, m.ZP)(),
             D = null != (0, y.Z)(o);
         try {
             t = (0, S.nG)(R);
@@ -112,8 +112,8 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             l = !1;
         }
         let M = t || l,
-            { location: k } = (0, m.O)(),
-            F = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+            { location: k } = (0, _.O)(),
+            F = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
             L = c && !h.ZP.isPremium(F, I.PremiumTypes.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, F),
             V = i.useCallback(() => {
                 L &&
@@ -145,8 +145,8 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 onClick: V,
                 className: a()(
                     w.qualityIndicator,
-                    b,
-                    g.eE[f],
+                    E,
+                    b.eE[f],
                     D ? w.qualityIndicatorLowQuality : w.qualityIndicatorFullQuality,
                     { [w.clickable]: L && M },
                 ),
@@ -170,33 +170,33 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             text: U,
             className: a()(A, w.qualityIndicatorBadge, { [w.qualityIndicatorBadgePremium]: M && T }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
-            shape: g.eE[f],
+            shape: b.eE[f],
         });
     },
     F = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: l = !0, size: c, className: s, premiumIndicator: u } = e,
             [d, f] = i.useState(!1),
-            m = (0, S.W3)(t),
-            { reducedMotion: _ } = i.useContext(p.Sfi),
-            E = n && null != m;
+            _ = (0, S.W3)(t),
+            { reducedMotion: m } = i.useContext(p.Sfi),
+            g = n && null != _;
         i.useEffect(() => {
-            (0, b.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+            (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
         let v = (0, p.Yzy)(
-                E,
+                g,
                 {
                     enter: {
-                        from: _.enabled ? T : x,
-                        to: _.enabled ? R : A,
+                        from: m.enabled ? T : x,
+                        to: m.enabled ? R : A,
                     },
-                    leave: _.enabled ? T : x,
+                    leave: m.enabled ? T : x,
                     config: M,
                 },
                 "animate-always",
             ),
             h = (0, p.q_F)(
                 {
-                    to: E ? D : N,
+                    to: g ? D : N,
                     config: M,
                 },
                 "animate-always",
@@ -220,7 +220,7 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                           didTrackUpsellViewed: d,
                                           setDidTrackUpsellViewed: f,
                                           premiumIndicator: u,
-                                          quality: m,
+                                          quality: _,
                                       }),
                                   })
                                 : null,
@@ -228,10 +228,10 @@ let P = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         (0, r.jsx)(o.animated.div, {
                             style: h,
                             className: w.liveIndicator,
-                            children: (0, r.jsx)(g.ZP, {
-                                look: g.jZ.RED,
+                            children: (0, r.jsx)(b.ZP, {
+                                look: b.jZ.RED,
                                 size: c,
-                                shape: E ? p.Dv2.ROUND_RIGHT : p.Dv2.ROUND,
+                                shape: g ? p.Dv2.ROUND_RIGHT : p.Dv2.ROUND,
                             }),
                         }),
                     ],

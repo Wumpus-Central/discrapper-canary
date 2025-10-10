@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-let s = {
+let a = {
     async fetch() {
         try {
             let e = await i.tn.get({

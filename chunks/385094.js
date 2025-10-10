@@ -26,22 +26,22 @@ function E(e, t, n) {
         { direction: C } = (0, h.j)(),
         { onAction: N, linkBehavior: R, keyboardNavigationBehavior: P, shouldSelectOnPressUp: w } = r.Co.get(t),
         D = (0, i.mp)(),
-        x = (0, f.useRef)(null),
-        L = () => {
+        L = (0, f.useRef)(null),
+        x = () => {
             var e;
             null === n.current ||
-                ((null == x.current || S.key === x.current) &&
+                ((null == L.current || S.key === L.current) &&
                     (null == (e = n.current) ? void 0 : e.contains(document.activeElement))) ||
                 (0, u.e)(n.current);
         },
-        j = {},
-        M = e.hasChildItems,
+        M = {},
+        j = e.hasChildItems,
         k = t.selectionManager.isLink(S.key);
     if (null != S && "expandedKeys" in t) {
         let e = null == (O = (v = t.collection).getChildren) ? void 0 : O.call(v, S.key);
-        (M = M || [...(null != e ? e : [])].length > 1),
-            null == N && !k && "none" === t.selectionManager.selectionMode && M && (N = () => t.toggleKey(S.key));
-        let n = M ? t.expandedKeys.has(S.key) : void 0,
+        (j = j || [...(null != e ? e : [])].length > 1),
+            null == N && !k && "none" === t.selectionManager.selectionMode && j && (N = () => t.toggleKey(S.key));
+        let n = j ? t.expandedKeys.has(S.key) : void 0,
             r = 1;
         if (S.level > 0 && (null == S ? void 0 : S.parentKey) != null) {
             let e = t.collection.getItem(S.parentKey);
@@ -50,7 +50,7 @@ function E(e, t, n) {
                     (e) => "item" === e.type,
                 ).length);
         } else r = [...t.collection].filter((e) => 0 === e.level && "item" === e.type).length;
-        j = {
+        M = {
             "aria-expanded": n,
             "aria-level": S.level + 1,
             "aria-posinset": (null == S ? void 0 : S.index) + 1,
@@ -67,7 +67,7 @@ function E(e, t, n) {
                 N || (null == (E = S.props) ? void 0 : E.onAction)
                     ? (0, a.t)(null == (y = S.props) ? void 0 : y.onAction, N ? () => N(S.key) : void 0)
                     : void 0,
-            focus: L,
+            focus: x,
             linkBehavior: R,
         }),
         B = (e) => {
@@ -76,13 +76,13 @@ function E(e, t, n) {
             if (
                 ((r.currentNode = document.activeElement), "expandedKeys" in t && document.activeElement === n.current)
             ) {
-                if (e.key === m[C] && t.selectionManager.focusedKey === S.key && M && !t.expandedKeys.has(S.key)) {
+                if (e.key === m[C] && t.selectionManager.focusedKey === S.key && j && !t.expandedKeys.has(S.key)) {
                     t.toggleKey(S.key), e.stopPropagation();
                     return;
                 } else if (
                     e.key === g[C] &&
                     t.selectionManager.focusedKey === S.key &&
-                    M &&
+                    j &&
                     t.expandedKeys.has(S.key)
                 ) {
                     t.toggleKey(S.key), e.stopPropagation();
@@ -136,7 +136,7 @@ function E(e, t, n) {
             }
         },
         Z = (e) => {
-            if (((x.current = S.key), e.target !== n.current)) {
+            if (((L.current = S.key), e.target !== n.current)) {
                 (0, _.E)() || t.selectionManager.setFocusedKey(S.key);
                 return;
             }
@@ -173,7 +173,7 @@ function E(e, t, n) {
         "aria-colindex": 1,
     };
     return {
-        rowProps: { ...(0, c.d)(Y, j) },
+        rowProps: { ...(0, c.d)(Y, M) },
         gridCellProps: W,
         descriptionProps: { id: D },
         ...G,

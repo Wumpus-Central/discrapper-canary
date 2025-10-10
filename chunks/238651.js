@@ -1,8 +1,8 @@
 n.d(t, {
-    Ji: () => x,
+    Ji: () => L,
     O_: () => w,
     qA: () => c,
-    uR: () => L,
+    uR: () => x,
 });
 var r = n(647438),
     i = n(772848);
@@ -756,7 +756,7 @@ var w = r.forwardRef(function (e, t) {
             },
             [E, D, m],
         );
-        var x = r.useCallback(
+        var L = r.useCallback(
                 function (e, t) {
                     A.current.set(e.id, {
                         confetti: e,
@@ -766,18 +766,18 @@ var w = r.forwardRef(function (e, t) {
                 },
                 [D],
             ),
-            L = r.useCallback(
+            x = r.useCallback(
                 function (e, t, n, r, a) {
                     var o,
                         s = R(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
-                    return x(s, t), s;
+                    return L(s, t), s;
                 },
-                [x],
+                [L],
             ),
-            j = r.useCallback(function (e) {
+            M = r.useCallback(function (e) {
                 A.current.delete(e);
             }, []),
-            M = r.useCallback(function () {
+            j = r.useCallback(function () {
                 return A.current.clear();
             }, []),
             k = r.useCallback(function () {
@@ -787,17 +787,17 @@ var w = r.forwardRef(function (e, t) {
             t,
             function () {
                 return {
-                    createConfetti: L,
-                    addConfetti: x,
-                    deleteConfetti: j,
-                    clearConfetti: M,
+                    createConfetti: x,
+                    addConfetti: L,
+                    deleteConfetti: M,
+                    clearConfetti: j,
                     getCanvas: k,
                     addReadyListener: I,
                     removeReadyListener: T,
                     isReady: v,
                 };
             },
-            [L, x, j, M, k, I, T, v],
+            [x, L, M, j, k, I, T, v],
         );
         var U = r.useCallback(
                 function (e, t) {
@@ -869,7 +869,7 @@ var w = r.forwardRef(function (e, t) {
                 },
                 [U, u],
             ),
-            V = r.useCallback(
+            F = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: d });
                 },
@@ -885,7 +885,7 @@ var w = r.forwardRef(function (e, t) {
                         e("click", G, l),
                         e("mousedown", B, c),
                         e("mousemove", Z, u),
-                        e("mouseup", V, d),
+                        e("mouseup", F, d),
                         function () {
                             window.removeEventListener("click", G),
                                 window.removeEventListener("mousedown", B),
@@ -894,7 +894,7 @@ var w = r.forwardRef(function (e, t) {
                         }
                     );
                 },
-                [G, B, Z, V, l, c, u, d],
+                [G, B, Z, F, l, c, u, d],
             ),
             r.useEffect(
                 function () {
@@ -935,7 +935,7 @@ var w = r.forwardRef(function (e, t) {
         height: 0,
         left: "-100%",
     },
-    x = r.forwardRef(function (e, t) {
+    L = r.forwardRef(function (e, t) {
         var n = e.className,
             i = e.visible,
             a = void 0 !== i && i,
@@ -1081,7 +1081,7 @@ var w = r.forwardRef(function (e, t) {
             })
         );
     });
-function L(e, t) {
+function x(e, t) {
     var n,
         i,
         a = r.useState(null != (n = null == t ? void 0 : t.isReady) && n),

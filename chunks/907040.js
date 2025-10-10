@@ -34,17 +34,17 @@ var r = n(951288),
     P = n(536442),
     w = n(609218),
     D = n(695346),
-    x = n(984933),
-    L = n(594174),
-    j = n(626135),
-    M = n(111361),
+    L = n(984933),
+    x = n(594174),
+    M = n(626135),
+    j = n(111361),
     k = n(624138),
     U = n(543241),
     G = n(253696),
     B = n(199257),
     Z = n(636411),
-    V = n(380331),
-    F = n(170762),
+    F = n(380331),
+    V = n(170762),
     H = n(22363),
     Y = n(784222),
     W = n(141507),
@@ -286,19 +286,19 @@ let eu = (e, t) => {
                 showOnlyUnicode: eP = !1,
                 showAddEmojiButton: ew = !1,
             } = e,
-            { onFocus: eD, onKeyDown: ex, autoFocus: eL = !0, accessory: ej } = ev,
-            eM = (0, u.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
+            { onFocus: eD, onKeyDown: eL, autoFocus: ex = !0, accessory: eM } = ev,
+            ej = (0, u.e7)([L.ZP], () => (null != f ? L.ZP.getDefaultChannel(f) : null), [f]),
             [ek, eU] = i.useState(null),
             eG = i.useRef(""),
             eB = (0, S.Iu)((e) => e.searchQuery),
             eZ = i.useRef(null),
-            eV = i.useRef(null),
-            eF = i.useRef(null);
-        null == c && null != eM && (c = eM);
+            eF = i.useRef(null),
+            eV = i.useRef(null);
+        null == c && null != ej && (c = ej);
         let eH = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
             [eY, eW] = i.useState(!1),
-            eK = L.default.getCurrentUser(),
-            ez = (0, M.I5)(eK);
+            eK = x.default.getCurrentUser(),
+            ez = (0, j.I5)(eK);
         i.useImperativeHandle(t, () => ({ onPickerOpen: ta }));
         let { location: eq } = (0, m.O)(),
             { page: eX, section: eQ, object: eJ, openPopoutType: e$, popoutLocation: e0 } = eO,
@@ -307,8 +307,8 @@ let eu = (e, t) => {
             { diversitySurrogate: e3 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eB, c, l, eP),
             e8 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
-            e6 = D.d4.useSetting(),
-            e5 = i.useMemo(() => new Set(e6), [e6]),
+            e5 = D.d4.useSetting(),
+            e6 = i.useMemo(() => new Set(e5), [e5]),
             e7 = i.useCallback((e) => {
                 D.d4.updateSetting(Array.from(e));
             }, []),
@@ -329,7 +329,7 @@ let eu = (e, t) => {
                 includeCreateEmojiButton: et,
                 pickerIntention: l,
                 emojiSearchResults: e4,
-                collapsedSections: e5,
+                collapsedSections: e6,
                 emojiPaddingHorizontal: ea,
                 emojiSpriteSize: A,
                 shouldShowSoundmojiInEmojiPicker: eR,
@@ -401,18 +401,18 @@ let eu = (e, t) => {
                 columnCounts: tr,
                 onSelectEmoji: er,
                 emojiGrid: tn,
-                emojiList: eV,
+                emojiList: eF,
                 channelGuildId: eH,
                 isBurstReaction: eY,
             });
-        ef(eu, eV),
-            e_(eu, e3, eF, eL),
+        ef(eu, eF),
+            e_(eu, e3, eV, ex),
             i.useEffect(() => {
                 eE || (0, S.ql)("");
             }, [eE]),
             i.useEffect(
                 () => (
-                    j.default.track(
+                    M.default.track(
                         Q.rMx.OPEN_POPOUT,
                         en(
                             {
@@ -468,19 +468,19 @@ let eu = (e, t) => {
             },
             tm = () => {
                 var e;
-                eW(!eY), null == (e = eF.current) || e.focus();
+                eW(!eY), null == (e = eV.current) || e.focus();
             },
             tg = (0, r.jsx)(H.Z, {
                 channel: c,
                 pickerIntention: l,
-                emojiListRef: eV,
+                emojiListRef: eF,
                 onKeyDown: (e) => {
-                    null == td || td(e), null == ex || ex(e);
+                    null == td || td(e), null == eL || eL(e);
                 },
-                searchBarRef: eF,
+                searchBarRef: eV,
                 onFocus: eD,
-                autoFocus: eL,
-                accessory: ej,
+                autoFocus: ex,
+                accessory: eM,
                 headerClassName: ey,
                 diversitySurrogate: e3,
                 isBurstReaction: eY,
@@ -522,7 +522,7 @@ let eu = (e, t) => {
                                             children: (e) => {
                                                 let { visibleContent: t, markAsDismissed: n } = e;
                                                 if (t === d.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP)
-                                                    return (0, r.jsx)(F.Z, { markAsDismissed: () => n(J.L.UNKNOWN) });
+                                                    return (0, r.jsx)(V.Z, { markAsDismissed: () => n(J.L.UNKNOWN) });
                                             },
                                         }),
                                         eT
@@ -540,10 +540,10 @@ let eu = (e, t) => {
                                                       {
                                                           children: tp
                                                               ? (0, r.jsx)(K.Z, {
-                                                                    collapsedSections: e5,
+                                                                    collapsedSections: e6,
                                                                     diversitySurrogate: e3,
                                                                     emojiGrid: tn,
-                                                                    emojiListRef: eV,
+                                                                    emojiListRef: eF,
                                                                     emojiSize: A,
                                                                     getEmojiItemProps: tl,
                                                                     getEmojiRowProps: tc,
@@ -580,9 +580,9 @@ let eu = (e, t) => {
                         }),
                         eT
                             ? null
-                            : (0, r.jsx)(V.Z, {
+                            : (0, r.jsx)(F.Z, {
                                   className: o()(ee.categoryList, eN),
-                                  emojiListRef: eV,
+                                  emojiListRef: eF,
                                   sectionDescriptors: tt,
                                   intention: l,
                                   channel: c,

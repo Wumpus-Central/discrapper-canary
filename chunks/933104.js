@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => I,
+    $h: () => P,
     cO: () => Z,
-    jG: () => P,
+    jG: () => I,
     yI: () => N,
 });
 var r = n(951288);
@@ -15,21 +15,21 @@ var i = n(120356),
     u = n(100527),
     d = n(623624),
     p = n(970731),
-    f = n(430824),
-    h = n(639777),
+    h = n(430824),
+    f = n(639777),
     g = n(441536),
     m = n(795338),
     b = n(279604),
-    O = n(535396),
+    _ = n(535396),
     y = n(981631),
-    _ = n(921944),
+    O = n(921944),
     v = n(989308),
     j = n(388032),
     x = n(428197),
     C = n(928381),
     E = n(283902),
     S = n(225375);
-function P(e) {
+function I(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(w, {
         asset: (0, r.jsx)(m.g, { className: x.image }),
@@ -40,9 +40,9 @@ function P(e) {
         markAsDismissed: i,
     });
 }
-function I(e) {
+function P(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        i = (0, h.Z)(t);
+        i = (0, f.Z)(t);
     return (0, r.jsx)(w, {
         asset: (0, r.jsx)("img", {
             alt: "",
@@ -65,9 +65,9 @@ function I(e) {
 }
 function N(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([f.Z], () => {
+        l = (0, s.e7)([h.Z], () => {
             var e;
-            return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: o } = (0, b.ZP)(t, n[0]);
     if (0 === n.length) return;
@@ -115,7 +115,7 @@ function Z(e) {
             markAsDismissed: i,
             buttonCTA: j.intl.string(j.t.RzWDqa),
         });
-    let a = n.find((e) => O.NL.has(e.skuId));
+    let a = n.find((e) => _.NL.has(e.skuId));
     return null != a
         ? (0, r.jsx)(w, {
               header: j.intl.string(v.default["kA2c+v"]),
@@ -155,7 +155,7 @@ function w(e) {
             return i;
         })(e, ["asset", "header", "content", "caretPosition", "markAsDismissed"]);
     let d = null != o ? o : p.DF.LEFT_TOP,
-        f = d === p.DF.TOP_CENTER || d === p.DF.LEFT_TOP ? x[d] : "";
+        h = d === p.DF.TOP_CENTER || d === p.DF.LEFT_TOP ? x[d] : "";
     return (0, r.jsx)(
         p.ZP,
         (function (e) {
@@ -192,7 +192,7 @@ function w(e) {
                         (0, r.jsx)(c.olH, {
                             "data-migration-pending": !0,
                             className: x.close,
-                            onClick: () => (null == s ? void 0 : s(_.L.USER_DISMISS)),
+                            onClick: () => (null == s ? void 0 : s(O.L.USER_DISMISS)),
                         }),
                     ],
                 }),
@@ -205,7 +205,7 @@ function w(e) {
                     color: "text-muted",
                     children: i,
                 }),
-                className: l()(x.container, f),
+                className: l()(x.container, h),
                 headerClassName: x.header,
                 contentClassName: x.header,
                 caretPosition: d,

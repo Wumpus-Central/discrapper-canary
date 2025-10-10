@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(481060),
+var r = n(481060),
     l = n(340541),
     a = n(728285),
     o = n(493754),
@@ -22,24 +22,24 @@ function d(e, t, n, d) {
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -47,17 +47,17 @@ function d(e, t, n, d) {
                 );
         },
         f = (0, l._k)({ location: "more_settings_invite_item" }),
-        m = f.isInCallEntrypointEnabled ? i.oLu : i.ejJ;
+        m = f.isInCallEntrypointEnabled ? r.oLu : r.ejJ;
     if (null != d)
-        return (0, r.jsx)(i.sNh, {
+        return (0, i.jsx)(r.sNh, {
             id: "invite-to-stream",
             label: u.intl.string(u.t["OzOM/v"]),
             action: h,
-            icon: i.ejJ,
+            icon: r.ejJ,
         });
     if (null == t || null == e || !s.Z.can(c.Plq.CREATE_INSTANT_INVITE, e)) return null;
     let g = f.isInCallEntrypointEnabled ? u.intl.string(u.t["EE+P0N"]) : u.intl.string(u.t["6Qgren"]);
-    return (0, r.jsx)(i.sNh, {
+    return (0, i.jsx)(r.sNh, {
         id: "invite-friends",
         label: g,
         action: h,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(997841), n(358797);
+n.d(t, { Z: () => V }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -97,23 +97,23 @@ function D(e) {
     let { libraryApplications: t } = e;
     R(t);
 }
-function x(e) {
+function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         a = B(t, n);
     null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (A = !0), I.add(i);
 }
-function L(e) {
+function x(e) {
     let { libraryApplication: t } = e,
         n = c.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
     (O[r] = n), I.delete(r);
 }
-function j(e) {
+function M(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
     (S[(0, d.Tu)(t, n)] = r), C();
 }
-function M(e) {
+function j(e) {
     let { applicationId: t, branchId: n } = e;
     if (T[t] === n) return !1;
     (T[t] = n), N();
@@ -142,7 +142,7 @@ function B(e, t) {
 function Z() {
     return h({}, v, O);
 }
-class V extends (r = o.ZP.Store) {
+class F extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
@@ -210,16 +210,16 @@ class V extends (r = o.ZP.Store) {
         });
     }
 }
-p(V, "displayName", "LibraryApplicationStore");
-let F = new V(l.Z, {
+p(F, "displayName", "LibraryApplicationStore");
+let V = new F(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_START: x,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
-    LIBRARY_APPLICATION_UPDATE: L,
-    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: j,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: M,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
+    LIBRARY_APPLICATION_UPDATE: x,
+    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: j,
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: k,
     DEVELOPER_TEST_MODE_RESET: U,
 });

@@ -1,29 +1,29 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i = n(951288);
 n(647438);
 var r = n(120356),
-    o = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    o = n(481060),
     a = n(809357),
     s = n(795482);
-function c(e) {
-    let { onClick: t, keybind: n, className: r, IconComponent: c } = e,
-        u = (0, a.o)();
+function u(e) {
+    let { onClick: t, keybind: n, className: r, IconComponent: u } = e,
+        c = (0, a.o)();
     return (0, i.jsxs)("div", {
-        className: o()(s.buttonContainer, r),
+        className: l()(s.buttonContainer, r),
         children: [
-            (0, i.jsx)(l.P3F, {
+            (0, i.jsx)(o.P3F, {
                 className: s.button,
                 onClick: t,
                 "aria-hidden": !0,
-                children: (0, i.jsx)(c, {
+                children: (0, i.jsx)(u, {
                     size: "md",
                     color: "currentColor",
                     "aria-hidden": !0,
                 }),
             }),
-            null != n && u
-                ? (0, i.jsx)(l.Text, {
+            null != n && c
+                ? (0, i.jsx)(o.Text, {
                       className: s.keybind,
                       "aria-hidden": !0,
                       variant: "text-xxs/bold",

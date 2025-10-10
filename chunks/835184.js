@@ -1,104 +1,104 @@
-n.d(e, { Z: () => E });
-var l,
+n.d(t, { Z: () => g });
+var i,
     r = n(442837),
-    i = n(570140),
-    o = n(314897),
-    u = n(924301),
-    c = n(658041),
-    a = n(765305);
-function s(t, e, n) {
+    l = n(570140),
+    a = n(314897),
+    o = n(924301),
+    s = n(658041),
+    c = n(765305);
+function u(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function d(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            l = Object.keys(n);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            l.forEach(function (e) {
-                s(t, e, n[e]);
+            i.forEach(function (t) {
+                u(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-let g = {},
-    f = {};
-function b(t) {
-    let e = d({}, g);
-    delete e[t], (g = e);
-    let n = d({}, f);
-    delete n[t], (f = n);
+let p = {},
+    h = {};
+function f(e) {
+    let t = d({}, p);
+    delete t[e], (p = t);
+    let n = d({}, h);
+    delete n[e], (h = n);
 }
-class v extends (l = r.ZP.PersistedStore) {
-    initialize(t) {
-        if (null != t) {
-            var e, n;
-            (g = null != (e = t.upcomingEventDismissals) ? e : {}),
-                (f = null != (n = t.upcomingEventSeenTimestamps) ? n : {});
+class m extends (i = r.ZP.PersistedStore) {
+    initialize(e) {
+        if (null != e) {
+            var t, n;
+            (p = null != (t = e.upcomingEventDismissals) ? t : {}),
+                (h = null != (n = e.upcomingEventSeenTimestamps) ? n : {});
         }
     }
-    getGuildEventNoticeDismissalTime(t) {
-        return g[t];
+    getGuildEventNoticeDismissalTime(e) {
+        return p[e];
     }
     getAllEventDismissals() {
-        return g;
+        return p;
     }
-    getUpcomingNoticeSeenTime(t) {
-        return f[t];
+    getUpcomingNoticeSeenTime(e) {
+        return h[e];
     }
     getAllUpcomingNoticeSeenTimes() {
-        return f;
+        return h;
     }
     getState() {
         return {
-            upcomingEventDismissals: g,
-            upcomingEventSeenTimestamps: f,
+            upcomingEventDismissals: p,
+            upcomingEventSeenTimestamps: h,
         };
     }
 }
-s(v, "displayName", "UpcomingEventNoticesStore"), s(v, "persistKey", "UpcomingEventNotices");
-let E = new v(i.Z, {
-    UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (t) {
-        let { eventId: e } = t,
-            n = d({}, g);
-        (n[e] = Date.now()), (g = n);
+u(m, "displayName", "UpcomingEventNoticesStore"), u(m, "persistKey", "UpcomingEventNotices");
+let g = new m(l.Z, {
+    UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
+        let { eventId: t } = e,
+            n = d({}, p);
+        (n[t] = Date.now()), (p = n);
     },
-    GUILD_SCHEDULED_EVENT_UPDATE: function (t) {
-        let { guildScheduledEvent: e } = t;
-        (e.status === a.p1.CANCELED || e.status === a.p1.COMPLETED) && b(e.id);
+    GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
+        let { guildScheduledEvent: t } = e;
+        (t.status === c.p1.CANCELED || t.status === c.p1.COMPLETED) && f(t.id);
     },
-    GUILD_SCHEDULED_EVENT_DELETE: function (t) {
-        let { guildScheduledEvent: e } = t;
-        b(e.id);
+    GUILD_SCHEDULED_EVENT_DELETE: function (e) {
+        let { guildScheduledEvent: t } = e;
+        f(t.id);
     },
-    GUILD_SCHEDULED_EVENT_USER_ADD: function (t) {
-        let { userId: e, guildEventId: n } = t;
-        if (e !== o.default.getId()) return;
-        let l = u.ZP.getGuildScheduledEvent(n);
-        if (null == l || l.status !== a.p1.SCHEDULED || null != g[n]) return;
-        let r = f[n];
-        if ((0, c.M)(l, void 0, r, !1) === a.X_.NEW_EVENT) {
-            let t = d({}, g);
-            (t[n] = Date.now()), (g = t);
+    GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
+        let { userId: t, guildEventId: n } = e;
+        if (t !== a.default.getId()) return;
+        let i = o.ZP.getGuildScheduledEvent(n);
+        if (null == i || i.status !== c.p1.SCHEDULED || null != p[n]) return;
+        let r = h[n];
+        if ((0, s.M)(i, void 0, r, !1) === c.X_.NEW_EVENT) {
+            let e = d({}, p);
+            (e[n] = Date.now()), (p = e);
         }
     },
-    UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (t) {
-        let { guildEventId: e } = t,
-            n = d({}, f);
-        (n[e] = Date.now()), (f = n);
+    UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (e) {
+        let { guildEventId: t } = e,
+            n = d({}, h);
+        (n[t] = Date.now()), (h = n);
     },
 });

@@ -8,7 +8,7 @@ let a = {
     GAMING: i.Tg$,
     FRIENDS: i.z93,
     CLUBS: l,
-    SCHOOL_CLUB: i.FGi,
+    SCHOOL_CLUB: i.Nl8,
     STUDY: i.Dwq,
     LOCAL_COMMUNITY: i.YdV,
     CREATORS: i.lor,

@@ -3,14 +3,14 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(686546),
-    o = n(565138),
-    s = n(411198),
-    a = n(388032),
+    s = n(565138),
+    a = n(411198),
+    o = n(388032),
     c = n(407749);
 let u = (e) => {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
-    let u = s.Qs(t),
+    let u = a.Qs(t),
         { name: d, description: h } = u;
     return (0, r.jsxs)("div", {
         children: [
@@ -18,7 +18,7 @@ let u = (e) => {
                 variant: "heading-md/normal",
                 color: "header-muted",
                 className: c.alignStart,
-                children: a.intl.string(a.t.Eabu19),
+                children: o.intl.string(o.t.Eabu19),
             }),
             (0, r.jsxs)("div", {
                 className: c.guild,
@@ -27,9 +27,9 @@ let u = (e) => {
                         mask: l.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
-                        children: (0, r.jsx)(o.Z, {
+                        children: (0, r.jsx)(s.Z, {
                             guild: u,
-                            size: o.Z.Sizes.MEDIUM,
+                            size: s.Z.Sizes.MEDIUM,
                             active: !0,
                         }),
                     }),
@@ -47,7 +47,7 @@ let u = (e) => {
                                     null != n && n > 0
                                         ? (0, r.jsx)(i.Text, {
                                               variant: "text-sm/normal",
-                                              children: a.intl.format(a.t["LC+S+v"], { membersOnline: n }),
+                                              children: o.intl.format(o.t["LC+S+v"], { membersOnline: n }),
                                           })
                                         : null,
                                 ],

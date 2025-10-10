@@ -4,33 +4,33 @@ var r = n(951288),
     l = n(81897),
     a = n(906732),
     o = n(566898),
-    c = n(785717),
-    s = n(806729),
+    s = n(785717),
+    c = n(806729),
     u = n(857302),
     d = n(892001),
-    f = n(252417),
-    g = n(264481),
-    b = n(661462),
-    p = n(443680);
+    p = n(252417),
+    f = n(264481),
+    h = n(661462),
+    g = n(443680);
 function m(e) {
-    let { user: t, guildId: n, channelId: m, onClose: O } = e,
-        { analyticsLocations: j } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: x } = (0, c.KZ)(),
-        { mutualFriends: v, mutualFriendsCount: h } = (0, s.Z)(t),
-        _ = (0, l.Z)();
+    let { user: t, guildId: n, channelId: m, onClose: b } = e,
+        { analyticsLocations: _ } = (0, a.ZP)(),
+        { context: O, trackUserProfileAction: E } = (0, s.KZ)(),
+        { mutualFriends: y, mutualFriendsCount: v } = (0, c.Z)(t),
+        I = (0, l.Z)();
     return (
         i.useEffect(() => {
-            (0, u.Z)(t.id, _);
-        }, [t.id, _]),
-        (0, r.jsx)(b.F, {
-            className: p.scroller,
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
+        (0, r.jsx)(h.F, {
+            className: g.scroller,
             children:
-                null == v
-                    ? Array.from({ length: null != h ? h : 10 }).map((e, t) =>
+                null == y
+                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
                               {
-                                  className: p.friendsLoadingItem,
+                                  className: g.friendsLoadingItem,
                                   children: [
                                       (0, r.jsx)(o.ZT, {
                                           width: 40,
@@ -45,12 +45,12 @@ function m(e) {
                               t,
                           ),
                       )
-                    : 0 === v.length
-                      ? (0, r.jsx)(g.s_, {})
-                      : v.map((e) => {
+                    : 0 === y.length
+                      ? (0, r.jsx)(f.s_, {})
+                      : y.map((e) => {
                             let { key: t, user: i, status: l } = e;
                             return (0, r.jsx)(
-                                f.Z,
+                                p.Z,
                                 {
                                     user: i,
                                     status: l,
@@ -58,8 +58,8 @@ function m(e) {
                                     channelId: m,
                                     onSelect: () => {
                                         var e, t;
-                                        null == O || O(),
-                                            x({ action: "PRESS_MUTUAL_FRIEND" }),
+                                        null == b || b(),
+                                            E({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, d.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,11 +86,11 @@ function m(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, y)),
+                                                })({}, O)),
                                                 (t = t =
                                                     {
                                                         userId: i.id,
-                                                        sourceAnalyticsLocations: j,
+                                                        sourceAnalyticsLocations: _,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

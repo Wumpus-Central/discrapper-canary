@@ -6,7 +6,7 @@ n.d(t, {
     ic: () => A,
     n5: () => R,
     rU: () => D,
-    s8: () => x,
+    s8: () => L,
 }),
     n(388685),
     n(35282);
@@ -533,7 +533,7 @@ class D extends a.Component {
         });
     }
 }
-class x extends a.Component {
+class L extends a.Component {
     renderContent() {
         let e,
             t,

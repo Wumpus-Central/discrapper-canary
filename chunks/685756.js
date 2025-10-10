@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => D,
-    Z: () => x,
+    Z: () => L,
 }),
     n(410992),
     n(227481),
@@ -19,8 +19,8 @@ n.d(t, {
     n(997841);
 var r = n(512722),
     i = n.n(r),
-    o = n(261470),
-    a = n(47770),
+    a = n(261470),
+    o = n(47770),
     s = n(379649),
     l = n(710845),
     c = n(857192),
@@ -189,7 +189,7 @@ var D = (function (e) {
         e
     );
 })({});
-class x extends a.Z {
+class L extends o.Z {
     createWebSocket() {
         this.logger.info("[CONNECT] ".concat(this.url)),
             null !== this.webSocket &&
@@ -533,23 +533,23 @@ class x extends a.Z {
             channelId: n,
             userId: r,
             sessionId: i,
-            token: o,
-            maxDaveProtocolVersion: a,
+            token: a,
+            maxDaveProtocolVersion: o,
             video: s = !1,
             streamParameters: l,
         } = e;
         (this.serverId = t),
             (this.channelId = n),
             (this.sessionId = i),
-            (this.token = o),
+            (this.token = a),
             (this.connectionState = 2),
             this.send(0, {
                 server_id: t,
                 channel_id: n,
                 user_id: r,
                 session_id: i,
-                token: o,
-                max_dave_protocol_version: a,
+                token: a,
+                max_dave_protocol_version: o,
                 video: s,
                 streams: R(l),
             });
@@ -597,12 +597,12 @@ class x extends a.Z {
     }
     selectProtocol(e, t, n, r) {
         let i,
-            o = {};
+            a = {};
         null == n
             ? (i = null)
             : "sdp" in n && null != n.sdp && "" !== n.sdp
               ? ((i = n.sdp),
-                (o = m(p({}, n), {
+                (a = m(p({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                 })))
@@ -617,7 +617,7 @@ class x extends a.Z {
                     port: n.port,
                     mode: n.mode,
                 }),
-                (o = m(p({}, n), {
+                (a = m(p({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                     experiments: r,
@@ -629,7 +629,7 @@ class x extends a.Z {
                         protocol: e,
                         data: i,
                     },
-                    o,
+                    a,
                 ),
             );
     }
@@ -678,7 +678,7 @@ class x extends a.Z {
         super(),
             _(this, "url", void 0),
             _(this, "logger", void 0),
-            _(this, "backoff", new o.Z(1000, 5000)),
+            _(this, "backoff", new a.Z(1000, 5000)),
             _(this, "webSocket", void 0),
             _(this, "connectionState", void 0),
             _(this, "heartbeatInterval", void 0),

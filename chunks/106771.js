@@ -13,8 +13,8 @@ var l = n(951288),
     f = n(413097);
 function h(e) {
     var t;
-    let { command: n, application: h, onClick: v, query: y, searchResultsPosition: x } = e,
-        b = i.useCallback(
+    let { command: n, application: h, onClick: v, query: x, searchResultsPosition: y } = e,
+        g = i.useCallback(
             (e) => {
                 if ((0, s.BQ)(h)) {
                     let t = h instanceof o.ZP ? h : o.ZP.createFromServer(h);
@@ -52,17 +52,17 @@ function h(e) {
             },
             [h],
         ),
-        { iconURL: g, name: j, description: N } = i.useMemo(() => (0, s.sl)(h, { fakeAppIconURL: f }), [h]),
+        { iconURL: b, name: N, description: j } = i.useMemo(() => (0, s.sl)(h, { fakeAppIconURL: f }), [h]),
         C = i.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : N;
+            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : j;
             return null == t ? null : (0, c.ae)(t, void 0);
-        }, [N, null == n ? void 0 : n.displayDescription]),
+        }, [j, null == n ? void 0 : n.displayDescription]),
         { trackSearchResultsItemImpressionRef: E } = (0, p.Z)({
             applicationId: h.id,
             commandId: null == n ? void 0 : n.id,
-            query: y,
-            searchResultsPosition: x,
+            query: x,
+            searchResultsPosition: y,
         });
     return (0, l.jsx)(r.P3F, {
         className: m.clickable,
@@ -70,12 +70,12 @@ function h(e) {
             E.current = e;
         },
         onClick: v,
-        onContextMenu: b,
+        onContextMenu: g,
         children: (0, l.jsxs)(r.Rny, {
             className: m.focusBlock,
             children: [
                 (0, l.jsx)(d.Z, {
-                    src: g,
+                    src: b,
                     className: m.icon,
                     "aria-hidden": !0,
                     rendersPlaceholder: !0,
@@ -87,7 +87,7 @@ function h(e) {
                             variant: "heading-md/semibold",
                             color: "header-primary",
                             lineClamp: 1,
-                            children: null != (t = null == n ? void 0 : n.displayName) ? t : j,
+                            children: null != (t = null == n ? void 0 : n.displayName) ? t : N,
                         }),
                         (0, l.jsx)(r.Text, {
                             variant: "text-sm/normal",
@@ -102,7 +102,7 @@ function h(e) {
                           className: m.cmdAppName,
                           variant: "text-sm/normal",
                           color: "text-secondary",
-                          children: j,
+                          children: N,
                       })
                     : null,
                 (0, l.jsx)("div", { className: m.underline }),

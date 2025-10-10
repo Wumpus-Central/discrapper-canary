@@ -30,7 +30,7 @@ function j(e) {
     r.useEffect(() => {
         null != N && s.Z.requestMembersById(n.id, N);
     }, [n.id, N]);
-    let Z = r.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
+    let w = r.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
     return null == y
         ? null
         : (0, i.jsx)(o.Zbd, {
@@ -64,7 +64,7 @@ function j(e) {
                           for (let e of m.VY) l.e$(r, e) ? a.push(e) : s.push(e);
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(o.$i$, { className: x.divider }),
+                                  (0, i.jsx)(o.izJ, { className: x.divider }),
                                   n.length > 0
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
@@ -93,7 +93,7 @@ function j(e) {
                                       : null,
                               ],
                           });
-                      })(y, n, null != (t = null == O ? void 0 : O.roles) ? t : [], Z),
+                      })(y, n, null != (t = null == O ? void 0 : O.roles) ? t : [], w),
                   ],
               }),
           });

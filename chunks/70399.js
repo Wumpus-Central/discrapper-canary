@@ -11,7 +11,7 @@ var r = n(951288),
     c = n(835473),
     u = n(621853),
     d = n(388032),
-    p = n(373942);
+    p = n(685009);
 function f(e) {
     let { applicationId: t, size: n = "default" } = e,
         i = (0, o.e7)([u.Z], () => u.Z.getApplicationWidgetApplicationConfig(t));

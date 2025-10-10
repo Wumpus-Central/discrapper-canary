@@ -1,88 +1,88 @@
-n.d(t, { Z: () => h }), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var r = n(951288),
     i = n(793030),
     o = n(442837),
-    s = n(704215),
-    l = n(243778),
-    a = n(430824),
+    l = n(704215),
+    a = n(243778),
+    s = n(430824),
     c = n(618460),
     u = n(800869),
     d = n(366751),
     p = n(309945),
-    m = n(385902),
-    g = n(981631),
-    f = n(989308),
+    f = n(385902),
+    m = n(981631),
+    g = n(989308),
     v = n(388032),
-    _ = n(547885);
-function x() {
+    x = n(547885);
+function _() {
     return (0, r.jsx)("div", {
-        className: _.staffContainer,
+        className: x.staffContainer,
         children: (0, r.jsx)(i.xvT, {
             variant: "text-sm/medium",
-            children: v.intl.string(f.default.l9n4QU),
+            children: v.intl.string(g.default.l9n4QU),
         }),
     });
 }
-function h(e) {
+function b(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([a.Z], () => {
+        n = (0, o.e7)([s.Z], () => {
             var e;
-            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(m.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        h = (0, c.Z)(t),
-        b = h.length > 0,
-        { shouldShow: C, notificationConfig: j } = (0, m._)(t, "GuildPowerupNotificationContainer"),
-        T = [];
-    C && T.push(s.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [E, P] = (0, l.ZT)(T, t),
-        I = null != E && null != j,
-        y = [];
-    I || b || y.push(s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
-    let [w, Z] = (0, l.US)(y),
-        S = ((e) => {
+        b = (0, c.Z)(t),
+        h = b.length > 0,
+        { shouldShow: j, notificationConfig: C } = (0, f._)(t, "GuildPowerupNotificationContainer"),
+        E = [];
+    j && E.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [I, w] = (0, a.ZT)(E, t),
+        Z = null != I && null != C,
+        P = [];
+    Z || h || P.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
+    let [y, T] = (0, a.US)(P),
+        N = ((e) => {
             let n = [];
             return (
-                b &&
+                h &&
                     n.push(
                         (0, r.jsx)(
                             p.Z,
                             {
                                 guildId: t,
-                                powerups: h,
+                                powerups: b,
                             },
                             "expiring-powerups",
                         ),
                     ),
-                I &&
+                Z &&
                     n.push(
                         (0, r.jsx)(
                             d.Z,
                             {
-                                notificationConfig: j,
+                                notificationConfig: C,
                                 markAsDismissed: (e) => {
-                                    P(e);
+                                    w(e);
                                 },
                             },
                             "rollback-notification",
                         ),
                     ),
                 null != e &&
-                    e === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK &&
-                    n.push((0, r.jsx)(u.Z, { markAsDismissed: Z }, "info-card")),
+                    e === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK &&
+                    n.push((0, r.jsx)(u.Z, { markAsDismissed: T }, "info-card")),
                 n
             );
-        })(w);
-    return 0 !== S.length || n
+        })(y);
+    return 0 !== N.length || n
         ? (0, r.jsxs)("div", {
-              className: _.container,
+              className: x.container,
               children: [
                   (0, r.jsx)(i.xvT, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: v.intl.string(f.default["3FRira"]),
+                      children: v.intl.string(g.default["3FRira"]),
                   }),
-                  n && (0, r.jsx)(x, {}),
-                  S.map((e) => e),
+                  n && (0, r.jsx)(_, {}),
+                  N.map((e) => e),
               ],
           })
         : null;

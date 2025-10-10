@@ -1,12 +1,12 @@
-n.d(t, { M: () => a });
+n.d(t, { M: () => i });
 var l = n(951288),
-    i = n(841431);
-function a(e) {
+    a = n(841431);
+function i(e) {
     let { imageUrl: t } = e;
     return (0, l.jsx)("div", {
-        className: i.container,
+        className: a.container,
         children: (0, l.jsx)("div", {
-            className: i.blurredBackground,
+            className: a.blurredBackground,
             style: { backgroundImage: "url(".concat(t, ")") },
         }),
     });

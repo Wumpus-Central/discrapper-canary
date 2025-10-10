@@ -2,8 +2,8 @@ n.d(t, { Z: () => o }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(981631),
-    s = n(388032);
+    s = n(981631),
+    a = n(388032);
 let o = (e) => {
     var t,
         n,
@@ -12,14 +12,14 @@ let o = (e) => {
             tagsLabel: c,
             value: d,
             onRemoveTag: u,
-            onAddTag: m,
-            onAddTagError: g,
+            onAddTag: g,
+            onAddTagError: m,
             maxTaxLength: p,
             maxTags: f,
             disabled: h,
-            placeholder: b,
+            placeholder: x,
         } = e,
-        x = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -56,23 +56,23 @@ let o = (e) => {
             let e = j.trim();
             if (0 !== e.length) {
                 if (null != f && o.length >= f) {
-                    null == g || g(s.intl.string(s.t.Xx7XeH));
+                    null == m || m(a.intl.string(a.t.Xx7XeH));
                     return;
                 }
-                m(e), _("");
+                g(e), _("");
             }
-        }, [j, f, m, g, o.length]),
-        O = i.useCallback(
+        }, [j, f, g, m, o.length]),
+        C = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
-                    case a.yXg.BACKSPACE:
+                    case s.yXg.BACKSPACE:
                         0 === j.length &&
                             o.length > 0 &&
                             (e.preventDefault(), e.stopPropagation(), null == u || u(new Set([o[o.length - 1].id])));
                         break;
-                    case a.yXg.ENTER:
-                    case a.yXg.TAB:
-                    case a.yXg.COMMA:
+                    case s.yXg.ENTER:
+                    case s.yXg.TAB:
+                    case s.yXg.COMMA:
                         e.preventDefault(), e.stopPropagation(), v();
                 }
             },
@@ -113,17 +113,17 @@ let o = (e) => {
                     onRemove: u,
                 },
             },
-            x,
+            b,
         )),
         (n = n =
             {
                 value: j,
-                onKeyDown: O,
+                onKeyDown: C,
                 onChange: _,
                 maxLength: p,
                 disabled: h,
                 onBlur: v,
-                placeholder: b,
+                placeholder: x,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

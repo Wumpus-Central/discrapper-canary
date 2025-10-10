@@ -20,20 +20,20 @@ var r = n(951288),
     x = n(113434),
     _ = n(497505),
     b = n(475595),
-    j = n(602667),
-    v = n(667105),
+    v = n(602667),
+    j = n(667105),
     C = n(981631),
     y = n(388032),
     E = n(301889);
 function O(e) {
     var t;
-    let { quest: n, errorHints: o, transitionState: j, onClose: O, sourceQuestContent: T } = e,
+    let { quest: n, errorHints: o, transitionState: v, onClose: O, sourceQuestContent: T } = e,
         [w, P] = (0, s.useState)(o),
         N = (0, x.KX)(),
-        R = (0, g.O5)(),
-        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        A = (0, g.O5)(),
+        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
-        k = (0, v.g2)({
+        k = (0, j.g2)({
             useReducedMotion: B,
             className: E.colorTransition,
         }),
@@ -45,7 +45,7 @@ function O(e) {
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
-                    R({
+                    A({
                         questId: n.id,
                         questContent: _.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
@@ -57,7 +57,7 @@ function O(e) {
             },
         });
     return (0, r.jsx)(i.Modal, {
-        transitionState: j,
+        transitionState: v,
         onClose: O,
         title: y.intl.string(y.t.W5lmKi),
         subtitle: N.message,
@@ -71,7 +71,7 @@ function O(e) {
                         {
                             content: _.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: A,
+                            impressionId: R,
                             sourceQuestContent: T,
                         },
                     )),
@@ -218,7 +218,7 @@ function T(e) {
     (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return function (n) {
-            return (0, r.jsx)(j.A, {
+            return (0, r.jsx)(v.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
                 questContent: _.jn.CONNECTIONS_MODAL,

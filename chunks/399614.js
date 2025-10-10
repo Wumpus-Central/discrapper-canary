@@ -1,15 +1,15 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    a = n(481060),
-    s = n(710344),
+    s = n(481060),
+    a = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
     u = n(922112),
-    m = n(388032),
-    g = n(197530);
+    g = n(388032),
+    m = n(197530);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,16 +53,16 @@ function h(e, t) {
         e
     );
 }
-let f = [],
-    b = function (e) {
+let h = [],
+    x = function (e) {
         let { guildId: t } = e,
-            b = (0, l.Wu)([d.Z], () => {
+            x = (0, l.Wu)([d.Z], () => {
                 var e;
-                return null != (e = d.Z.getSettings().resourceChannels) ? e : f;
+                return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
-            x = i.useMemo(() => b.map((e) => h(p({}, e), { id: e.channelId })), [b]),
-            { handleDragStart: j, handleDragReset: v, handleDragComplete: _ } = (0, s.Z)(x, c.lq),
-            O = i.useCallback(
+            b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
+            { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
+            C = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
                     null != r &&
@@ -73,25 +73,25 @@ let f = [],
                 },
                 [t],
             ),
-            y = i.useCallback(() => {
+            O = i.useCallback(() => {
                 if (null != t)
-                    return (0, a.ZDy)(async () => {
+                    return (0, s.ZDy)(async () => {
                         let { default: e } = await n.e("84725").then(n.bind(n, 462499));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                h(p({}, n), {
+                                f(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
-                                    onIconUpload: O,
+                                    onIconUpload: C,
                                 }),
                             );
                     });
-            }, [t, O]);
+            }, [t, C]);
         return (0, r.jsxs)("div", {
-            className: g.editResources,
+            className: m.editResources,
             children: [
-                b.map((e, n) =>
+                x.map((e, n) =>
                     (0, r.jsx)(
                         u.Z,
                         {
@@ -99,25 +99,25 @@ let f = [],
                             resourceChannel: e,
                             index: n,
                             onDragStart: j,
-                            onDragReset: v,
-                            onDragComplete: _,
+                            onDragReset: _,
+                            onDragComplete: v,
                         },
                         e.channelId,
                     ),
                 ),
-                b.length < o.x3 &&
-                    (0, r.jsxs)(a.P3F, {
-                        className: g.addActionItem,
-                        onClick: y,
+                x.length < o.x3 &&
+                    (0, r.jsxs)(s.P3F, {
+                        className: m.addActionItem,
+                        onClick: O,
                         children: [
-                            (0, r.jsx)(a.oFk, {
+                            (0, r.jsx)(s.oFk, {
                                 size: "xs",
                                 color: "currentColor",
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 color: "none",
-                                children: m.intl.string(m.t["w9/qGR"]),
+                                children: g.intl.string(g.t["w9/qGR"]),
                             }),
                         ],
                     }),

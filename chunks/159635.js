@@ -201,7 +201,7 @@
         P = / *\n+$/,
         w = RegExp("^( *)(" + I + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + I + " )\\n*|\\s*\n*$)"),
         D = /(?:^|\n)( *)$/,
-        x = (function () {
+        L = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
                 n = /^ *-+: *$/,
@@ -263,9 +263,9 @@
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
             };
         })(),
-        L = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
-        j = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
-        M = /mailto:/i,
+        x = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+        M = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
+        j = /mailto:/i,
         k = function (e, t, n) {
             var r = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[r]) {
@@ -335,8 +335,8 @@
             },
             nptable: {
                 order: G++,
-                match: s(x.NPTABLE_REGEX),
-                parse: x.parseNpTable,
+                match: s(L.NPTABLE_REGEX),
+                parse: L.parseNpTable,
                 react: null,
                 html: null,
             },
@@ -501,8 +501,8 @@
             },
             table: {
                 order: G++,
-                match: s(x.TABLE_REGEX),
-                parse: x.parseTable,
+                match: s(L.TABLE_REGEX),
+                parse: L.parseTable,
                 react: function (e, t, n) {
                     var r = function (t) {
                             return null == e.align[t] ? {} : { textAlign: e.align[t] };
@@ -639,7 +639,7 @@
                     var r = e[1],
                         i = e[1];
                     return (
-                        M.test(i) || (i = "mailto:" + i),
+                        j.test(i) || (i = "mailto:" + i),
                         {
                             type: "link",
                             content: [
@@ -678,7 +678,7 @@
             link: {
                 order: G++,
                 requiredFirstCharacters: ["["],
-                match: o(RegExp("^\\[(" + L + ")\\]\\(" + j + "\\)")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\(" + M + "\\)")),
                 parse: function (e, t, n) {
                     return {
                         content: t(e[1], n),
@@ -703,7 +703,7 @@
             },
             image: {
                 order: G++,
-                match: o(RegExp("^!\\[(" + L + ")\\]\\(" + j + "\\)")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\(" + M + "\\)")),
                 parse: function (e, t, n) {
                     return {
                         alt: e[1],
@@ -733,7 +733,7 @@
             },
             reflink: {
                 order: G++,
-                match: o(RegExp("^\\[(" + L + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                     return k(e, n, {
                         type: "link",
@@ -745,7 +745,7 @@
             },
             refimage: {
                 order: G++,
-                match: o(RegExp("^!\\[(" + L + ")\\]\\s*\\[([^\\]]*)\\]")),
+                match: o(RegExp("^!\\[(" + x + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                     return k(e, n, {
                         type: "image",
@@ -870,7 +870,7 @@
                 }
             );
         },
-        V = function (e) {
+        F = function (e) {
             var t = function (n, r) {
                 if (((r = r || {}), !Array.isArray(n))) return e(n, t, r);
                 for (var i = r.key, a = [], o = null, s = 0; s < n.length; s++) {
@@ -884,7 +884,7 @@
             };
             return t;
         },
-        F = function (e) {
+        V = function (e) {
             var t = function (n, r) {
                 return ((r = r || {}), Array.isArray(n))
                     ? n
@@ -965,8 +965,8 @@
         reactElement: u,
         defaultRawParse: Y,
         ruleOutput: Z,
-        reactFor: V,
-        htmlFor: F,
+        reactFor: F,
+        htmlFor: V,
         defaultParse: function () {
             return (
                 "undefined" != typeof console &&

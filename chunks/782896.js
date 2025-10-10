@@ -63,9 +63,9 @@ function m(e) {
         m = (0, i.useMemo)(() => a.filter((e) => null != e), [a]),
         {
             visibleGuilds: b,
-            numTruncated: O,
+            numTruncated: _,
             visibleGuildsTooltip: y,
-            numTruncatedTooltipGuilds: _,
+            numTruncatedTooltipGuilds: O,
         } = (0, i.useMemo)(() => {
             let e = [...m];
             if (null != n) {
@@ -90,7 +90,7 @@ function m(e) {
         "aria-label": p.intl.string(d.default.TG0Qsb),
         text: (0, r.jsx)(g, {
             guilds: y,
-            numTruncated: _,
+            numTruncated: O,
         }),
         position: "top",
         children: (0, r.jsxs)("div", {
@@ -108,13 +108,13 @@ function m(e) {
                         e.id,
                     ),
                 ),
-                O > 0 &&
+                _ > 0 &&
                     (0, r.jsx)(f, {
                         children: (0, r.jsxs)(o.Text, {
                             className: h.textItem,
                             color: "text-secondary",
                             variant: "text-xxs/semibold",
-                            children: ["+", O],
+                            children: ["+", _],
                         }),
                     }),
             ],

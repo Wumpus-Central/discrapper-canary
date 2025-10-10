@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+n.d(t, { Z: () => y }), n(539854), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(287734),
@@ -18,11 +18,11 @@ var i = n(287734),
     _ = n(868854),
     O = n(817915),
     E = n(981631);
-function v(e) {
-    let { party: t, onChannelContextMenu: n, quest: v } = e,
-        y = (0, _.L)(),
+function y(e) {
+    let { party: t, onChannelContextMenu: n, quest: y } = e,
+        v = (0, _.L)(),
         { voiceChannels: I, currentActivities: S, partiedMembers: C, applicationStreams: T, guildContext: N } = t,
-        j = (0, p.z1)(v),
+        j = (0, p.z1)(y),
         P = [],
         x = (e) => {
             let { length: t } = P;
@@ -63,7 +63,7 @@ function v(e) {
         }
     return (
         T.length > 0 &&
-            y &&
+            v &&
             T.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
                 x(
@@ -83,7 +83,7 @@ function v(e) {
                 );
             }),
         S.forEach((e, t) => {
-            var n, i, l, p, m, _, y, T, P;
+            var n, i, l, p, m, _, v, T, P;
             let { activity: A, game: Z, playingMembers: w, activityUser: L } = e;
             if (null == A || null == A.type) return null;
             if (S.length > 1 && A.type === E.IIU.PLAYING && !(0, a.Z)(A) && null != Z)
@@ -177,7 +177,7 @@ function v(e) {
                                     getAssetImage: g.xF,
                                     user: L,
                                 },
-                                "rich-presence-".concat(null != (y = A.session_id) ? y : t, "-").concat(L.id),
+                                "rich-presence-".concat(null != (v = A.session_id) ? v : t, "-").concat(L.id),
                             ),
                         )
                       : (0, c.Z)(A) &&
@@ -189,11 +189,11 @@ function v(e) {
                             ),
                         );
             j &&
-                null != v &&
+                null != y &&
                 null != Z &&
-                (0, d._D)(A, v) &&
-                (null == v.userStatus || !(0, d.zE)(v.userStatus, f.jn.ACTIVITY_PANEL)) &&
-                x((0, r.jsx)(h.Z, { quest: v }, "quest-".concat(v.id, "-").concat(null != (P = A.session_id) ? P : t)));
+                (0, d._D)(A, y) &&
+                (null == y.userStatus || !(0, d.zE)(y.userStatus, f.jn.ACTIVITY_PANEL)) &&
+                x((0, r.jsx)(h.Z, { quest: y }, "quest-".concat(y.id, "-").concat(null != (P = A.session_id) ? P : t)));
         }),
         P.length > 0 ? (0, r.jsx)(b.Z.Body, { children: P }) : null
     );

@@ -1,4 +1,4 @@
-n.d(t, { w: () => g });
+n.d(t, { w: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(780384),
@@ -6,12 +6,12 @@ var r = n(951288),
     a = n(410030),
     o = n(434404),
     c = n(388032),
-    d = n(600977),
+    d = n(317351),
     u = n(935653),
-    m = n(449874);
-function g(e) {
+    g = n(449874);
+function m(e) {
     let { canManageGuild: t, premiumProgressBarEnabled: n } = e,
-        g = (0, a.ZP)(),
+        m = (0, a.ZP)(),
         p = i.useCallback((e) => {
             o.Z.updateGuild({ premiumProgressBarEnabled: e });
         }, []);
@@ -32,7 +32,7 @@ function g(e) {
                 className: d.column,
                 children: (0, r.jsx)("img", {
                     alt: c.intl.string(c.t.UOJp5e),
-                    src: (0, l.ap)(g) ? m : u,
+                    src: (0, l.ap)(m) ? g : u,
                     className: d.progressBarImage,
                 }),
             }),

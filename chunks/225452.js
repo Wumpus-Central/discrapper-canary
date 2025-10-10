@@ -1,10 +1,10 @@
-n.d(t, { D: () => i });
-function i(e) {
+n.d(t, { D: () => r });
+function r(e) {
     return e.map((e, t) => {
-        var n, i;
+        var n, r;
         return {
             file: e.file,
-            name: null != (i = e.id) ? i : "attachment_".concat(t),
+            name: null != (r = e.id) ? r : "attachment_".concat(t),
             filename: null == (n = e.file) ? void 0 : n.name,
         };
     });

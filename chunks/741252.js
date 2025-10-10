@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => i });
 var l = n(951288),
-    i = n(481060);
-function a(e, t, a) {
-    (0, i.ZDy)(async () => {
-        let { default: i } = await n.e("61268").then(n.bind(n, 37208));
+    a = n(481060);
+function i(e, t, i) {
+    (0, a.ZDy)(async () => {
+        let { default: a } = await n.e("61268").then(n.bind(n, 37208));
         return (n) =>
             (0, l.jsx)(
-                i,
+                a,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function a(e, t, a) {
                     {
                         portkeyGame: t,
                         guildId: e,
-                        status: a,
+                        status: i,
                     },
                     n,
                 ),

@@ -1,25 +1,25 @@
-n.d(e, { M: () => u });
-var l = n(913527),
-    r = n.n(l),
-    i = n(709054),
-    o = n(765305);
-function u(t, e, n, l) {
-    let u = r()(),
-        c = new Date(t.scheduled_start_time).getTime(),
-        a = {
-            start: c - o.VF,
-            end: c,
+n.d(t, { M: () => o });
+var i = n(913527),
+    r = n.n(i),
+    l = n(709054),
+    a = n(765305);
+function o(e, t, n, i) {
+    let o = r()(),
+        s = new Date(e.scheduled_start_time).getTime(),
+        c = {
+            start: s - a.VF,
+            end: s,
         };
-    if (u.isBetween(a.start, a.end)) {
-        if (null != e) {
-            let t = r()(e),
-                n = t.isBetween(a.start, a.end),
-                i = t.isBetween(r()(c).subtract(o.zV, "days"), c);
-            return n || (i && !l) ? void 0 : o.X_.EVENT_STARTING_SOON;
+    if (o.isBetween(c.start, c.end)) {
+        if (null != t) {
+            let e = r()(t),
+                n = e.isBetween(c.start, c.end),
+                l = e.isBetween(r()(s).subtract(a.zV, "days"), s);
+            return n || (l && !i) ? void 0 : a.X_.EVENT_STARTING_SOON;
         }
-        return o.X_.EVENT_STARTING_SOON;
+        return a.X_.EVENT_STARTING_SOON;
     }
-    let s = i.default.extractTimestamp(t.id),
-        d = Math.min((null != n ? n : s) + o.Fc, c);
-    if (u.isBetween(s, d) && null == e && !l) return o.X_.NEW_EVENT;
+    let u = l.default.extractTimestamp(e.id),
+        d = Math.min((null != n ? n : u) + a.Fc, s);
+    if (o.isBetween(u, d) && null == t && !i) return a.X_.NEW_EVENT;
 }

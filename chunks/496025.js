@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(35282);
+n.d(t, { Z: () => O }), n(388685), n(35282);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -19,9 +19,9 @@ var a = n(951288),
     j = n(432877),
     _ = n(246992),
     y = n(37812),
-    C = n(462689),
-    E = n(866403);
-function N() {
+    C = n(165432),
+    E = n(451429);
+function S() {
     var e;
     let t = (0, o.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
         [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
@@ -85,7 +85,7 @@ function N() {
         ],
     });
 }
-function S() {
+function T() {
     let e = r.useCallback(() => {
         d.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -96,7 +96,7 @@ function S() {
         onClick: e,
     });
 }
-function T() {
+function O() {
     let e = (0, o.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], o.pF).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
@@ -115,9 +115,9 @@ function T() {
         children: [
             e,
             (0, a.jsx)("div", { className: C.divider }),
-            (0, a.jsx)(N, {}),
-            (0, a.jsx)("div", { className: C.divider }),
             (0, a.jsx)(S, {}),
+            (0, a.jsx)("div", { className: C.divider }),
+            (0, a.jsx)(T, {}),
         ],
     });
 }

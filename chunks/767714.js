@@ -125,13 +125,13 @@ let y = function (e) {
             "color",
             "iconColor",
         ]);
-    let x = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        L = (0, d.Z)({
+    let L = (0, o.e7)([c.Z], () => c.Z.isFocused()),
+        x = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == m ? void 0 : m.textOverride,
             defaultTextOverride: null == m ? void 0 : m.subscribeText,
         }),
-        j = {
+        M = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: y,
@@ -141,11 +141,11 @@ let y = function (e) {
             confirmationFooter: N,
             paymentModalBanner: R,
         };
-    function M(e) {
+    function j(e) {
         let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            g(h({}, j), {
+            g(h({}, M), {
                 children: (o) => {
                     let { onClick: c } = o;
                     return (0, r.jsxs)(
@@ -154,7 +154,7 @@ let y = function (e) {
                             h(
                                 {
                                     "data-migration-pending": !0,
-                                    disabled: L.disabled,
+                                    disabled: x.disabled,
                                     onClick: c,
                                     innerClassName: _.premiumSubscribeButton,
                                     color: n,
@@ -173,7 +173,7 @@ let y = function (e) {
                                             : n === s.Tt.BRAND_INVERTED
                                               ? _.brandShine
                                               : void 0,
-                                    pauseAnimation: !x || T,
+                                    pauseAnimation: !L || T,
                                 },
                                 D,
                                 e,
@@ -188,7 +188,7 @@ let y = function (e) {
                                         }),
                                     (0, r.jsx)("span", {
                                         className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: L.buttonText,
+                                        children: x.buttonText,
                                     }),
                                 ],
                             },
@@ -198,10 +198,10 @@ let y = function (e) {
             }),
         );
     }
-    return null != L.buttonTooltipText
+    return null != x.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
-              text: L.buttonTooltipText,
-              children: M,
+              text: x.buttonTooltipText,
+              children: j,
           })
-        : M();
+        : j();
 };

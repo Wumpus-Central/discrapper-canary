@@ -8,8 +8,8 @@ var r = a(151122),
     E = a(467510),
     s = a(688838),
     l = a(622916),
-    u = a(454463),
-    I = a(878719),
+    I = a(454463),
+    u = a(878719),
     R = a(163162);
 let d = (0, r._I)((t = {}) => {
     let e = {
@@ -29,28 +29,28 @@ let d = (0, r._I)((t = {}) => {
                 (0, o.V)((t) => {
                     let { stackParser: e, attachStacktrace: r } = A();
                     if ((0, _.s3)() !== a || (0, R.Wz)()) return;
-                    let { msg: o, url: i, line: l, column: u, error: d } = t,
+                    let { msg: o, url: i, line: l, column: I, error: d } = t,
                         N = (function (t, e, a, r) {
                             let _ = (t.exception = t.exception || {}),
                                 n = (_.values = _.values || []),
                                 o = (n[0] = n[0] || {}),
                                 i = (o.stacktrace = o.stacktrace || {}),
                                 l = (i.frames = i.frames || []),
-                                u = isNaN(parseInt(r, 10)) ? void 0 : r,
-                                I = isNaN(parseInt(a, 10)) ? void 0 : a,
+                                I = isNaN(parseInt(r, 10)) ? void 0 : r,
+                                u = isNaN(parseInt(a, 10)) ? void 0 : a,
                                 R = (0, c.HD)(e) && e.length > 0 ? e : (0, E.l4)();
                             return (
                                 0 === l.length &&
                                     l.push({
-                                        colno: u,
+                                        colno: I,
                                         filename: R,
                                         function: s.Fi,
                                         in_app: !0,
-                                        lineno: I,
+                                        lineno: u,
                                     }),
                                 t
                             );
-                        })((0, I.ME)(e, d || o, void 0, r, !1), i, l, u);
+                        })((0, u.ME)(e, d || o, void 0, r, !1), i, l, I);
                     (N.level = "error"),
                         (0, n.eN)(N, {
                             originalException: d,
@@ -87,7 +87,7 @@ let d = (0, r._I)((t = {}) => {
                                           ],
                                       },
                                   })
-                                : (0, I.ME)(a, i, void 0, o, !0);
+                                : (0, u.ME)(a, i, void 0, o, !0);
                         (E.level = "error"),
                             (0, n.eN)(E, {
                                 originalException: i,
@@ -102,7 +102,7 @@ let d = (0, r._I)((t = {}) => {
     };
 });
 function N(t) {
-    u.X && l.kg.log(`Global Handler attached: ${t}`);
+    I.X && l.kg.log(`Global Handler attached: ${t}`);
 }
 function A() {
     let t = (0, _.s3)();

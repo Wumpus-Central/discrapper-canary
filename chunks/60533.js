@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(594174),
     d = n(388032),
     u = n(254574);
-function m(e) {
+function g(e) {
     let { guild: t } = e,
         n = (0, i.e7)([c.default], () => {
             let e = c.default.getCurrentUser();

@@ -1,32 +1,32 @@
 n.d(t, {
     AX: () => s,
     BR: () => d,
-    Bo: () => g,
+    Bo: () => b,
     Df: () => f,
-    LT: () => b,
+    LT: () => E,
     ZZ: () => p,
-    cV: () => c,
-    fW: () => E,
-    gr: () => m,
-    oW: () => u,
+    cV: () => u,
+    fW: () => m,
+    gr: () => _,
+    oW: () => c,
 });
 var r = n(261470),
-    l = n(544891),
-    i = n(570140),
+    i = n(544891),
+    l = n(570140),
     a = n(984063),
     o = n(981631);
-function u(e, t, n, r, l) {
-    i.Z.dispatch({
+function c(e, t, n, r, i) {
+    l.Z.dispatch({
         type: "SHARED_CANVAS_DRAW_LINE_POINT",
         channelId: e,
         userId: n,
         lineId: t,
         streamerId: r,
-        point: l,
+        point: i,
     });
 }
 function s(e, t, n, r) {
-    return l.tn.post({
+    return i.tn.post({
         url: o.ANM.SHARED_CANVAS_LINES(e, n),
         body: {
             line_id: t,
@@ -35,8 +35,8 @@ function s(e, t, n, r) {
         rejectWithError: !1,
     });
 }
-function c(e, t, n, r) {
-    i.Z.dispatch({
+function u(e, t, n, r) {
+    l.Z.dispatch({
         type: "SHARED_CANVAS_UPDATE_LINE_POINTS",
         userId: t,
         lineId: e,
@@ -45,14 +45,14 @@ function c(e, t, n, r) {
     });
 }
 function d(e, t, n) {
-    return l.tn.post({
+    return i.tn.post({
         url: o.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
         body: { emoji_hose: n },
         rejectWithError: !1,
     });
 }
 function f(e, t, n) {
-    l.tn.del({
+    i.tn.del({
         url: o.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new r.Z(),
         rejectWithError: !0,
@@ -60,34 +60,34 @@ function f(e, t, n) {
 }
 function p(e, t) {
     (t.state = a.f.STOP),
-        i.Z.dispatch({
+        l.Z.dispatch({
             type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
             emojiHose: t,
             userId: t.userId,
             streamerId: e,
         });
 }
-function m(e, t, n) {
-    i.Z.dispatch({
+function _(e, t, n) {
+    l.Z.dispatch({
         type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
         emojiHose: e,
         userId: t,
         streamerId: n,
     });
 }
-function E(e, t) {
-    i.Z.dispatch({
+function m(e, t) {
+    l.Z.dispatch({
         type: "SHARED_CANVAS_CLEAR_DRAWABLES",
         drawables: e,
         streamerId: t,
     });
 }
-function g(e) {
-    i.Z.dispatch({
+function b(e) {
+    l.Z.dispatch({
         type: "SHARED_CANVAS_SET_DRAW_MODE",
         drawMode: e,
     });
 }
-function b() {
-    i.Z.dispatch({ type: "TOGGLE_OVERLAY_CANVAS" });
+function E() {
+    l.Z.dispatch({ type: "TOGGLE_OVERLAY_CANVAS" });
 }

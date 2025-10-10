@@ -1,84 +1,84 @@
-t.d(n, { Z: () => g });
-var i = t(951288);
-t(647438);
-var a = t(120356),
-    s = t.n(a),
-    l = t(481060),
-    r = t(600164),
-    o = t(548647),
-    c = t(696375),
-    d = t(800530),
-    x = t(388032),
-    m = t(691196),
-    p = t(186425),
-    u = t(160557);
-function g(e) {
-    let { className: n, onNext: t, onClose: a } = e,
-        g = (0, o.n)();
-    return (0, i.jsxs)(i.Fragment, {
+i.d(n, { Z: () => u });
+var t = i(951288);
+i(647438);
+var a = i(120356),
+    s = i.n(a),
+    l = i(481060),
+    r = i(600164),
+    o = i(548647),
+    c = i(696375),
+    d = i(800530),
+    x = i(388032),
+    m = i(691196),
+    g = i(186425),
+    p = i(160557);
+function u(e) {
+    let { className: n, onNext: i, onClose: a } = e,
+        u = (0, o.n)();
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, i.jsxs)(l.xBx, {
+            (0, t.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 direction: r.Z.Direction.VERTICAL,
-                className: p.header,
+                className: g.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)("div", {
+                    (0, t.jsx)("div", {
                         className: m.iconContainer,
-                        children: (0, i.jsx)("img", {
-                            src: u,
+                        children: (0, t.jsx)("img", {
+                            src: p,
                             alt: "",
                             className: m.icon,
                         }),
                     }),
-                    (0, i.jsx)(l.X6q, {
-                        className: p.title,
+                    (0, t.jsx)(l.X6q, {
+                        className: g.title,
                         variant: "heading-xl/semibold",
                         children: x.intl.string(x.t.QMbTSk),
                     }),
-                    (0, i.jsx)(l.X6q, {
-                        className: p.subtitle,
+                    (0, t.jsx)(l.X6q, {
+                        className: g.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
                         children: x.intl.string(x.t.Qdx8AA),
                     }),
                     null != a &&
-                        (0, i.jsx)(l.olH, {
+                        (0, t.jsx)(l.olH, {
                             "data-migration-pending": !0,
-                            className: p.closeButton,
+                            className: g.closeButton,
                             onClick: a,
                         }),
                 ],
             }),
-            (0, i.jsxs)(l.hzk, {
+            (0, t.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
                 className: s()(m.modalContent, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, t.jsx)(l.X6q, {
                         variant: "heading-md/bold",
                         color: "header-primary",
                         className: m.actionsHeader,
                         children: x.intl.string(x.t["9BRc1N"]),
                     }),
-                    (0, i.jsx)(c.Z, {
+                    (0, t.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => g(d.n0.ClickCommunityGuidelinesLink),
+                        onClick: () => u(d.n0.ClickCommunityGuidelinesLink),
                     }),
-                    (0, i.jsx)(c.Z, {
+                    (0, t.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => g(d.n0.ClickWarningSystemHelpcenterLink),
+                        onClick: () => u(d.n0.ClickWarningSystemHelpcenterLink),
                     }),
                 ],
             }),
-            (0, i.jsx)(l.mzw, {
+            (0, t.jsx)(l.mzw, {
                 "data-migration-pending": !0,
-                children: (0, i.jsx)(l.zxk, {
+                children: (0, t.jsx)(l.zxk, {
                     variant: "primary",
                     text: x.intl.string(x.t.i4jeWV),
-                    onClick: t,
+                    onClick: i,
                 }),
             }),
         ],

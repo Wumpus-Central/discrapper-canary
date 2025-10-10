@@ -14,14 +14,14 @@ var l = n(951288),
     I = n(604509),
     N = n(216019),
     T = n(286359);
-let b = "hTKzmak",
+let O = "hTKzmak",
     S =
         ((r = window.GLOBAL_ENV.INVITE_HOST),
         (o = ""),
         null == r && ((r = location.host), (o = m.Z5c.INVITE(""))),
         "".concat(location.protocol, "//").concat(r).concat(o, "/")),
-    O = [b, "".concat(S).concat(b), "".concat(S).concat("wumpus-friends")],
-    E = (e) => {
+    E = [O, "".concat(S).concat(O), "".concat(S).concat("wumpus-friends")],
+    b = (e) => {
         let { onClick: t } = e;
         return (0, l.jsxs)(s.P3F, {
             className: I.rowContainer,
@@ -68,7 +68,7 @@ function C(e) {
         var e;
         r && (null == (e = x.current) || e.focus());
     }, [r]);
-    let g = (e) => {
+    let h = (e) => {
         e.preventDefault();
         let t = o.trim();
         if ("" === t) return void C(f.intl.string(f.t.IRq5am));
@@ -129,7 +129,7 @@ function C(e) {
                 className: I.__invalid_content,
                 children: [
                     (0, l.jsx)("form", {
-                        onSubmit: g,
+                        onSubmit: h,
                         className: I.inputForm,
                         children: (0, l.jsx)(s.oil, {
                             label: f.intl.string(f.t.qreV29),
@@ -137,7 +137,7 @@ function C(e) {
                             error: T,
                             value: o,
                             onChange: d,
-                            placeholder: "".concat(S).concat(b),
+                            placeholder: "".concat(S).concat(O),
                             inputRef: x,
                         }),
                     }),
@@ -148,7 +148,7 @@ function C(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: I.sampleLinks,
-                        children: O.map((e) =>
+                        children: E.map((e) =>
                             (0, l.jsx)(
                                 s.P3F,
                                 {
@@ -160,7 +160,7 @@ function C(e) {
                             ),
                         ),
                     }),
-                    (0, l.jsx)(E, { onClick: n }),
+                    (0, l.jsx)(b, { onClick: n }),
                 ],
             }),
             (0, l.jsxs)(s.mzw, {
@@ -170,7 +170,7 @@ function C(e) {
                         variant: "primary",
                         text: f.intl.string(f.t["Ts/9AQ"]),
                         loading: m,
-                        onClick: g,
+                        onClick: h,
                     }),
                     (0, l.jsx)(a.zx, {
                         color: a.zx.Colors.PRIMARY,

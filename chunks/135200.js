@@ -1,18 +1,18 @@
-r.d(t, { Z: () => g });
-var n,
+n.d(t, { Z: () => g });
+var r,
     i,
-    a = r(31775),
-    o = r.n(a),
-    s = r(442837),
-    l = r(570140),
-    c = r(70956);
+    l = n(31775),
+    s = n.n(l),
+    a = n(442837),
+    o = n(570140),
+    c = n(70956);
 let u = {
         taken: null,
         error: void 0,
         rateLimited: !0,
     },
     d = {
-        validations: new (o())({
+        validations: new (s())({
             max: 100,
             maxAge: 60000,
         }),
@@ -31,7 +31,7 @@ let u = {
             },
         },
     };
-class m extends (i = s.ZP.Store) {
+class h extends (i = a.ZP.Store) {
     isRateLimited() {
         return null != d.retryAfterTime && Date.now() < d.retryAfterTime;
     }
@@ -62,34 +62,34 @@ class m extends (i = s.ZP.Store) {
         return d.suggestions.migration.fetched;
     }
 }
-(n = "displayName") in m
-    ? Object.defineProperty(m, n, {
+(r = "displayName") in h
+    ? Object.defineProperty(h, r, {
           value: "PomeloStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (m[n] = "PomeloStore");
-let g = new m(l.Z, {
+    : (h[r] = "PomeloStore");
+let g = new h(o.Z, {
     POMELO_ATTEMPT_SUCCESS: function (e) {
-        let { username: t, taken: r } = e;
-        d.validations.set(t, { taken: r });
+        let { username: t, taken: n } = e;
+        d.validations.set(t, { taken: n });
     },
     POMELO_ATTEMPT_FAILURE: function (e) {
-        let { username: t, error: r, statusCode: n, retryAfter: i } = e;
-        429 === n
+        let { username: t, error: n, statusCode: r, retryAfter: i } = e;
+        429 === r
             ? d.validations.set(
                   t,
                   {
                       taken: null,
-                      error: r,
+                      error: n,
                       rateLimited: !0,
                   },
                   (null != i ? i : 7) * c.Z.Millis.SECOND,
               )
             : d.validations.set(t, {
                   taken: null,
-                  error: r,
+                  error: n,
               }),
             null != i && (d.retryAfterTime = Date.now() + i * c.Z.Millis.SECOND);
     },
@@ -119,10 +119,10 @@ let g = new m(l.Z, {
         d.suggestions.migration.usernameSuggestionLoading = t;
     },
     POMELO_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
-        let { suggestion: t, source: r } = e;
+        let { suggestion: t, source: n } = e;
         (d.suggestions.registration = {
             suggestion: t,
-            source: r,
+            source: n,
             fetched: !0,
         }),
             (null == t ? void 0 : t.username) != null && d.validations.set(t.username, { taken: !1 });

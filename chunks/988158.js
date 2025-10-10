@@ -1,46 +1,46 @@
-e.d(a, {
-    X: () => r,
-    h: () => i,
+a.d(e, {
+    X: () => o,
+    h: () => r,
 }),
-    e(704826),
-    e(35282),
-    e(388685);
-var n = e(647438),
-    l = e(902676);
-function i(t) {
-    let { protocol: a, hostname: e } = n.useMemo(
+    a(704826),
+    a(35282),
+    a(388685);
+var n = a(647438),
+    l = a(902676);
+function r(t) {
+    let { protocol: e, hostname: a } = n.useMemo(
             () => ({
                 protocol: (0, l.E)(t),
                 hostname: (0, l.F)(t),
             }),
             [t],
         ),
-        i = "//" === t.substr(a.length, 2) ? "//" : "",
-        r = "".concat(a).concat(i).concat(e);
+        r = "//" === t.substr(e.length, 2) ? "//" : "",
+        o = "".concat(e).concat(r).concat(a);
     return {
-        protocol: a,
-        authorityPrefix: i,
-        hostname: e,
-        theRestOfTheUrl: t.replace(r, ""),
+        protocol: e,
+        authorityPrefix: r,
+        hostname: a,
+        theRestOfTheUrl: t.replace(o, ""),
     };
 }
-function r(t) {
-    let { url: a, trustUrl: e, onConfirm: l, onCancel: r, onClose: s } = t,
-        [o, c] = n.useState(!1),
-        { protocol: d, authorityPrefix: u, hostname: x, theRestOfTheUrl: h } = i(a),
-        m = n.useCallback(() => {
-            o && e(a), null == s || s(), l();
-        }, [a, o, e, l, s]);
+function o(t) {
+    let { url: e, trustUrl: a, onConfirm: l, onCancel: o, onClose: s } = t,
+        [c, i] = n.useState(!1),
+        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: x } = r(e),
+        p = n.useCallback(() => {
+            c && a(e), null == s || s(), l();
+        }, [e, c, a, l, s]);
     return {
         protocol: d,
         authorityPrefix: u,
-        hostname: x,
-        theRestOfTheUrl: h,
-        shouldTrustUrl: o,
-        setShouldTrustUrl: c,
-        handleConfirm: m,
+        hostname: m,
+        theRestOfTheUrl: x,
+        shouldTrustUrl: c,
+        setShouldTrustUrl: i,
+        handleConfirm: p,
         handleCancel: n.useCallback(() => {
-            null == s || s(), r();
-        }, [r, s]),
+            null == s || s(), o();
+        }, [o, s]),
     };
 }

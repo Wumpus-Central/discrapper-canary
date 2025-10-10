@@ -20,8 +20,8 @@ function _() {
         [_, O] = i.useState(b),
         {
             quests: E,
-            isFetchingCurrentQuests: v,
-            hasFetched: y,
+            isFetchingCurrentQuests: y,
+            hasFetched: v,
         } = (0, s.bA)(
             s.e5.ALL,
             i.useMemo(
@@ -134,8 +134,8 @@ function _() {
                     }),
                 (0, r.jsx)(p.Z, {
                     quests: E,
-                    isFetching: v,
-                    hasFetched: y,
+                    isFetching: y,
+                    hasFetched: v,
                     hasFiltersApplied: _.length > 0,
                     onClearFilters: I,
                 }),

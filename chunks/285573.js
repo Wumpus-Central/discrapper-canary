@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,16 +14,16 @@ var r = n(951288),
     g = n(981631),
     m = n(490897),
     b = n(55940);
-let O = (0, c.B)(function (e) {
+let _ = (0, c.B)(function (e) {
     let {
             guild: t,
             selectedChannelId: l,
             position: c,
-            disableManageChannels: O,
+            disableManageChannels: _,
             sorting: y,
-            sortingType: _,
-            sortingPosition: j,
-            connectChannelDragSource: v,
+            sortingType: O,
+            sortingPosition: v,
+            connectChannelDragSource: j,
             connectChannelDropTarget: x,
             tabIndex: C,
         } = e,
@@ -32,8 +32,8 @@ let O = (0, c.B)(function (e) {
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         S = (0, a.e7)([u.Z], () => u.Z.getChannel(null == E ? void 0 : E.parent_id)),
-        P = l === (null == E ? void 0 : E.id),
-        I = (0, a.e7)([p.Z], () =>
+        I = l === (null == E ? void 0 : E.id),
+        P = (0, a.e7)([p.Z], () =>
             null != S ? p.Z.can(g.Plq.MANAGE_CHANNELS, S) : null != t && p.Z.can(g.Plq.MANAGE_CHANNELS, t),
         ),
         N = i.useCallback(
@@ -91,19 +91,19 @@ let O = (0, c.B)(function (e) {
             [E],
         );
     if (null == E) return null;
-    let w = (0, h.jo)(c, j),
-        Z = (0, h.CN)(E, y, _),
+    let Z = (0, h.jo)(c, v),
+        w = (0, h.CN)(E, y, O),
         T = (0, r.jsx)("div", {
-            className: o()(w, {
-                [b.disabled]: Z,
-                [b.selected]: P,
+            className: o()(Z, {
+                [b.disabled]: w,
+                [b.selected]: I,
             }),
             "data-dnd-name": E.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
                 channel: E,
                 guild: t,
-                selected: P,
+                selected: I,
                 onContextMenu: N,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
@@ -114,11 +114,11 @@ let O = (0, c.B)(function (e) {
                     }),
                     (0, r.jsx)(h.hR, {
                         channel: E,
-                        disableManageChannels: O,
+                        disableManageChannels: _,
                         tabIndex: C,
                     }),
                 ],
             }),
         });
-    return I && (T = x(v(T))), T;
+    return P && (T = x(j(T))), T;
 });

@@ -16,20 +16,20 @@ var i = n(481060),
     m = n(185457),
     O = n(933409),
     h = n(389052),
-    E = n(24311),
-    j = n(158508),
-    v = n(710631),
+    v = n(24311),
+    E = n(158508),
+    j = n(710631),
     P = n(297047),
     p = n(88966),
     y = n(712301),
     S = n(47091),
     C = n(991307),
     M = n(37258),
-    x = n(931617),
-    I = n(700994),
+    I = n(931617),
+    x = n(700994),
     N = n(332031),
-    _ = n(981631),
-    A = n(388032);
+    A = n(981631),
+    _ = n(388032);
 let T = (0, a.Z)(
     (0, o.Z)(
         function (e) {
@@ -43,9 +43,9 @@ let T = (0, a.Z)(
                     onSelect: U,
                 } = e,
                 D = {
-                    page: _.ZY5.GUILD_CHANNEL,
-                    section: _.jXE.CHAT_USERNAME,
-                    object: _.qAy.CONTEXT_MENU_ITEM,
+                    page: A.ZY5.GUILD_CHANNEL,
+                    section: A.jXE.CHAT_USERNAME,
+                    object: A.qAy.CONTEXT_MENU_ITEM,
                 },
                 L = (0, M.Z)({
                     userId: t.id,
@@ -54,7 +54,7 @@ let T = (0, a.Z)(
                 w = (0, P.Z)(t, n, T),
                 k = (0, p.Z)(t.id, T),
                 R = (0, N.Z)(t.id),
-                B = (0, E.Z)({
+                B = (0, v.Z)({
                     user: t,
                     context: T,
                 }),
@@ -64,7 +64,7 @@ let T = (0, a.Z)(
                     context: T,
                 }),
                 V = (0, f.Z)({ user: t }),
-                G = (0, I.Z)(t.id),
+                G = (0, x.Z)(t.id),
                 F = (0, C.Z)(t.id),
                 Y = (0, c.Z)({
                     guildId: n,
@@ -76,7 +76,7 @@ let T = (0, a.Z)(
                     user: t,
                     guildId: n,
                 }),
-                Q = (0, v.Z)({
+                Q = (0, j.Z)({
                     user: t,
                     guildId: n,
                 }),
@@ -89,23 +89,23 @@ let T = (0, a.Z)(
                     guildId: n,
                     location: "GuildUserContextMenu",
                 }),
-                $ = (0, j.Z)({
+                $ = (0, E.Z)({
                     user: t,
                     guildId: n,
                     location: "GuildUserContextMenu",
                 }),
                 ee = (0, O.Z)(t, n),
-                et = (0, x.Z)(t.id, n),
+                et = (0, I.Z)(t.id, n),
                 en = (0, y.Z)(t, n),
                 el = (0, d.Z)({
                     id: t.id,
-                    label: A.intl.string(A.t["/AXYnJ"]),
+                    label: _.intl.string(_.t["/AXYnJ"]),
                 }),
                 ei = t.isNonUserBot();
             return (0, l.jsxs)(i.v2r, {
                 navId: "user-context",
                 onClose: r.Zy,
-                "aria-label": A.intl.string(A.t.liqwPD),
+                "aria-label": _.intl.string(_.t.liqwPD),
                 onSelect: U,
                 children: [
                     !ei &&
@@ -129,7 +129,7 @@ let T = (0, a.Z)(
                 ],
             });
         },
-        { object: _.qAy.CONTEXT_MENU },
+        { object: A.qAy.CONTEXT_MENU },
     ),
     [u.Z.CONTEXT_MENU, u.Z.GUILD_USER_MENU],
 );

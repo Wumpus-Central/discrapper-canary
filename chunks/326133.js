@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    I = n(826191);
+    I = n(671982);
 function T(e, t, n) {
     return (
         t in e
@@ -98,8 +98,8 @@ let P = 490,
     D = 245,
     L = 200,
     x = 120,
-    j = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, j, M, k;
+    M = i.forwardRef(function (e, t) {
+        var n, a, T, A, R, M, j, k;
         let { channel: U, type: G, editorHeight: B, onVisibilityChange: Z, editorScrollerRef: F, barsHeight: V } = e,
             H = (0, h.Dt)(),
             Y = (0, l.e7)([E.Z], () => {
@@ -169,10 +169,10 @@ let P = 490,
         null != J &&
             (er = (null == (R = G.autocomplete) ? void 0 : R.small)
                 ? L
-                : (null == (j = K.query) ? void 0 : j.type) === b.eq.EMOJIS_AND_STICKERS
+                : (null == (M = K.query) ? void 0 : M.type) === b.eq.EMOJIS_AND_STICKERS
                   ? w
                   : D);
-        let ei = Math.max(B, null != (M = null == F || null == (T = F.current) ? void 0 : T.clientHeight) ? M : 0),
+        let ei = Math.max(B, null != (j = null == F || null == (T = F.current) ? void 0 : T.clientHeight) ? j : 0),
             ea = Math.min(0.5 * window.innerHeight, ei);
         er = Math.min(window.innerHeight - x - ea - (null != V ? V : 0), er);
         let eo = (0, r.jsx)(_.ZP, {

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(951288);
 n(647438);
 var l = n(325767);
-function o(e) {
+function i(e) {
     var t,
         n,
-        { width: o = 24, height: i = 24, color: a = "currentColor" } = e,
+        { width: i = 24, height: o = 24, color: a = "currentColor" } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -15,14 +15,14 @@ function o(e) {
                     var n,
                         r,
                         l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
@@ -56,8 +56,8 @@ function o(e) {
         })({}, (0, l.Z)(s))),
         (n = n =
             {
-                width: o,
-                height: i,
+                width: i,
+                height: o,
                 viewBox: "0 0 23 21",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",

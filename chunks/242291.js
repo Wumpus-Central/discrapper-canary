@@ -1,13 +1,13 @@
 n.d(t, {
     C0: () => R,
     GN: () => P,
-    M2: () => x,
+    M2: () => L,
     Nq: () => N,
-    SZ: () => M,
-    aC: () => j,
+    SZ: () => j,
+    aC: () => M,
     lF: () => G,
     pI: () => A,
-    sR: () => L,
+    sR: () => x,
     tt: () => U,
 }),
     n(539854);
@@ -71,7 +71,7 @@ function D() {
         (e) => null != e.joinSound,
     );
 }
-async function x(e) {
+async function L(e) {
     let t = p.default.getCurrentUser(),
         n = (0, o.Z)(),
         r = (0, v.k9)(e);
@@ -84,7 +84,7 @@ async function x(e) {
         w(a, n.id);
     }
 }
-function L(e) {
+function x(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
         a = [];
@@ -95,7 +95,7 @@ function L(e) {
     }
     return a;
 }
-function j(e, t) {
+function M(e, t) {
     (0, l.PS)(
         e,
         (n) => {
@@ -110,7 +110,7 @@ function j(e, t) {
         l.fy.INFREQUENT_USER_ACTION,
     );
 }
-function M(e, t, n) {
+function j(e, t, n) {
     (0, l.PS)(
         e,
         (r) => {

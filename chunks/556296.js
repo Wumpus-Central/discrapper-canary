@@ -92,17 +92,17 @@ let w = new f.Z("KeybindsStore"),
         managed: !0,
         params: {},
     };
-function x() {
+function L() {
     var e;
     let t = null != (e = (0, b.pz)(!1).get("Backquote")) ? e : "`";
     return "+" === t ? (t = "plus") : 0 === t.length && (t = "`"), "shift+".concat(t);
 }
-let L = "1001",
-    j = 10,
-    M = function (e) {
+let x = "1001",
+    M = 10,
+    j = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return {
-            id: L,
+            id: x,
             action: v.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
             shortcut: e,
             enabled: t,
@@ -152,11 +152,11 @@ function G(e) {
             [...n, [S.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
 }
 let B = () => {
-        let e = x();
+        let e = L();
         "shift" === e && (U("Default overlay keybind is only shift", e, null), (e = "shift+`"));
         let t = G(e);
-        if (null == t) return M([], !1);
-        if (k(t)) return M(t, !0);
+        if (null == t) return j([], !1);
+        if (k(t)) return j(t, !0);
         let n = (0, y.UR)("shift"),
             r = (0, b.T_)("`");
         return (
@@ -165,7 +165,7 @@ let B = () => {
                 : null == n
                   ? U("Unable to get shift code", e, t, { shiftCode: n })
                   : null == r && U("Unable to get backtick code", e, t),
-            M(t, !1)
+            j(t, !1)
         );
     },
     Z = {},
@@ -227,9 +227,9 @@ function $(e, t) {
             } finally {
                 setTimeout(() => {
                     q.includes(e) && q.splice(q.indexOf(e), 1);
-                }, j);
+                }, M);
             }
-        }, j);
+        }, M);
 }
 function ee() {
     let e = B();
@@ -460,7 +460,7 @@ let eg = [
         );
     },
     function () {
-        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, x());
+        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, L());
     },
     function () {
         return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");

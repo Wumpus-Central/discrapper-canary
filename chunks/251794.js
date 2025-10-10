@@ -1,68 +1,68 @@
-t.d(e, {
+n.d(t, {
     q: () => s,
-    z: () => i,
+    z: () => a,
 });
-var n = t(951288);
-t(647438);
-var r = t(481060);
-function l(A) {
-    for (var e = 1; e < arguments.length; e++) {
-        var t = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(t);
+var r = n(951288);
+n(647438);
+var l = n(481060);
+function i(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(t).filter(function (A) {
-                    return Object.getOwnPropertyDescriptor(t, A).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                var n;
-                (n = t[e]),
-                    e in A
-                        ? Object.defineProperty(A, e, {
-                              value: n,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (A[e] = n);
+                        : (e[t] = r);
             });
     }
-    return A;
+    return e;
 }
-function i(A) {
-    let { guildId: e, userId: i, anaylticsLocations: s, modReportId: a } = A;
-    (0, r.ZDy)(async () => {
-        let { default: A } = await t.e("72920").then(t.bind(t, 109730));
-        return (t) =>
-            (0, n.jsx)(
-                A,
-                l(
+function a(e) {
+    let { guildId: t, userId: a, anaylticsLocations: s, modReportId: o } = e;
+    (0, l.ZDy)(async () => {
+        let { default: e } = await n.e("72920").then(n.bind(n, 109730));
+        return (n) =>
+            (0, r.jsx)(
+                e,
+                i(
                     {
-                        guildId: e,
-                        userId: i,
+                        guildId: t,
+                        userId: a,
                         anaylticsLocations: s,
-                        modReportId: a,
+                        modReportId: o,
                     },
-                    t,
+                    n,
                 ),
             );
     });
 }
-function s(A) {
-    let { guildId: e, userId: i, anaylticsLocations: s } = A;
-    (0, r.ZDy)(async () => {
-        let { default: A } = await t.e("76233").then(t.bind(t, 171494));
-        return (t) =>
-            (0, n.jsx)(
-                A,
-                l(
+function s(e) {
+    let { guildId: t, userId: a, anaylticsLocations: s } = e;
+    (0, l.ZDy)(async () => {
+        let { default: e } = await n.e("76233").then(n.bind(n, 171494));
+        return (n) =>
+            (0, r.jsx)(
+                e,
+                i(
                     {
-                        guildId: e,
-                        userId: i,
+                        guildId: t,
+                        userId: a,
                         anaylticsLocations: s,
                     },
-                    t,
+                    n,
                 ),
             );
     });

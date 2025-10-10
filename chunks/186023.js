@@ -25,11 +25,11 @@ let h = (e) => {
             isAuthenticated: y = !0,
         } = e,
         O = (0, c.Dt)(),
-        { nodes: C, root_node_id: I, success_node_id: Z, fail_node_id: S } = n,
-        [T, P] = i.useState(I),
+        { nodes: I, root_node_id: C, success_node_id: Z, fail_node_id: S } = n,
+        [P, T] = i.useState(C),
         [N, E] = i.useState(void 0),
         [k, w] = i.useState(void 0),
-        [R, D] = i.useState([]),
+        [D, R] = i.useState([]),
         [M, A] = i.useState(void 0),
         [B, L] = i.useState(void 0),
         U = (0, _.PO)("in_app_report_modal");
@@ -40,7 +40,7 @@ let h = (e) => {
             var n, r, i;
             let { destination: a } = e,
                 [, o] = a,
-                c = C[o];
+                c = I[o];
             if (void 0 === c) return void d.Z.increment({ name: l.V.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
             if (c.elements.some((e) => "skip" === e.type) && (null == (n = c.button) ? void 0 : n.type) === "next")
                 return G(
@@ -88,7 +88,7 @@ let h = (e) => {
                     r),
                 );
             if (
-                (D([...R, e]),
+                (R([...D, e]),
                 null != c.key && (null == v || v(c.key)),
                 E(void 0),
                 w(void 0),
@@ -99,60 +99,60 @@ let h = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: c.report_type,
-                    current_node: C[T].id,
+                    current_node: I[P].id,
                     next_node: c.id,
                 });
             }
-            P(o);
+            T(o);
         },
         W = async (e) => {
             var r;
-            let i = y ? await (0, p.ZD)(n, t, [...R, e]) : await (0, p.fw)(n, t, [...R, e], j),
+            let i = y ? await (0, p.ZD)(n, t, [...D, e]) : await (0, p.fw)(n, t, [...D, e], j),
                 l = null == i || null == (r = i.body) ? void 0 : r.report_id;
-            null != l && A(l), L(C[e.nodeRef].report_type), null == x || x(l);
+            null != l && A(l), L(I[e.nodeRef].report_type), null == x || x(l);
         },
         z = () => {
             var e, n;
-            if (R.length < 1) return;
-            let r = [...R],
+            if (D.length < 1) return;
+            let r = [...D],
                 i = r.pop(),
-                l = null != (n = null == i ? void 0 : i.nodeRef) ? n : I;
+                l = null != (n = null == i ? void 0 : i.nodeRef) ? n : C;
             if (t.name === m.b.MESSAGE || t.name === m.b.FIRST_DM) {
                 let e = t.record.id;
                 s.ZP.trackWithMetadata(f.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
-                    report_sub_type: C[l].report_type,
-                    current_node: C[T].id,
-                    next_node: C[l].id,
+                    report_sub_type: I[l].report_type,
+                    current_node: I[P].id,
+                    next_node: I[l].id,
                 });
             }
             E(null == i || null == (e = i.multiSelect) ? void 0 : e.state),
                 w(null == i ? void 0 : i.textInput),
-                P(l),
-                D(r),
+                T(l),
+                R(r),
                 null == v || v("..");
         },
         F = i.useMemo(() => {
             let e = [],
                 t = [];
-            for (let l in C) {
+            for (let l in I) {
                 var n, r, i;
-                let a = C[l];
-                if (a.id !== Z && a.id !== S && a.id !== I) {
+                let a = I[l];
+                if (a.id !== Z && a.id !== S && a.id !== C) {
                     if (a.key.endsWith("_SUBMIT") || (null == (n = a.button) ? void 0 : n.type) === "submit") {
                         t.push(a);
                         continue;
                     }
                     if ((e.push(a), (null == (r = a.button) ? void 0 : r.type) === "next")) {
                         let t = null == (i = a.button) ? void 0 : i.target,
-                            n = e.indexOf(C[t]);
-                        -1 !== n && (e.splice(n, 1), e.push(C[t]));
+                            n = e.indexOf(I[t]);
+                        -1 !== n && (e.splice(n, 1), e.push(I[t]));
                     }
                 }
             }
-            return [C[I], ...e, ...t, C[Z], C[S]];
-        }, [C, I, S, Z]);
+            return [I[C], ...e, ...t, I[Z], I[S]];
+        }, [I, C, S, Z]);
     return (0, r.jsx)(a.Y0X, {
         "data-migration-pending": !0,
         transitionState: h.transitionState,
@@ -160,7 +160,7 @@ let h = (e) => {
         parentComponent: "InAppReportModal",
         children: (0, r.jsx)(a.MyZ, {
             width: 440,
-            activeSlide: T,
+            activeSlide: P,
             centered: !1,
             children: F.map((e) =>
                 (0, r.jsx)(
@@ -173,7 +173,7 @@ let h = (e) => {
                                 node: e,
                                 reportType: t,
                                 reportSubType: B,
-                                history: R,
+                                history: D,
                                 onModalClose: h.onClose,
                                 onSelectChild: G,
                                 onNavigateBack: z,
@@ -183,7 +183,7 @@ let h = (e) => {
                                 failNodeId: S,
                                 onSubmit: W,
                                 reportId: M,
-                                nodeMap: C,
+                                nodeMap: I,
                             }),
                         }),
                     },

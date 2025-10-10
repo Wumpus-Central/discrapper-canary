@@ -13,11 +13,11 @@ var r = n(951288),
     d = n(493773),
     f = n(763520),
     p = n(194082),
-    m = n(710845),
-    _ = n(965048),
-    g = n(590293),
-    b = n(595816),
-    E = n(863908),
+    _ = n(710845),
+    m = n(965048),
+    b = n(590293),
+    E = n(595816),
+    g = n(863908),
     v = n(871118),
     h = n(517525),
     S = n(352978),
@@ -42,7 +42,7 @@ var r = n(951288),
     V = n(65154),
     U = n(388032),
     W = n(7504);
-let H = new m.Z("StreamTile");
+let H = new _.Z("StreamTile");
 function B(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: c } = e,
         s = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
@@ -69,7 +69,7 @@ function z(e) {
             selected: n,
             onVideoResize: l,
             fit: p,
-            inPopout: m,
+            inPopout: _,
             inOverlayPopout: h = !1,
             width: M,
             focused: k,
@@ -78,16 +78,16 @@ function z(e) {
         } = e,
         q = j.Z.getVideoComponent(),
         Y = (0, o.e7)([C.default], () => C.default.getId()),
-        G = (0, g.Z)(),
+        G = (0, b.Z)(),
         { stream: K, user: Q, streamId: X } = t,
         J = (0, o.e7)([w.Z], () => w.Z.getChannel(K.channelId)),
         $ = (0, o.e7)([I.Z], () => I.Z.getActiveStreamForUser(Q.id, K.guildId), [Q.id, K.guildId]),
-        { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
+        { defaultWatchMultipleStreams: ee } = (0, E.P)({ location: "StreamTile" }),
         et = (0, o.e7)([I.Z], () => I.Z.getAllActiveStreams().length > 0),
         en = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
         er = (null == $ ? void 0 : $.ownerId) === Y,
-        ei = er && !en && !m,
-        el = null != $ ? (0, E.Z)($, Q, Q.id === Y, ei) : null,
+        ei = er && !en && !_,
+        el = null != $ ? (0, g.Z)($, Q, Q.id === Y, ei) : null,
         ea = M < 195;
     (0, d.ZP)(() => {
         !et &&
@@ -95,7 +95,7 @@ function z(e) {
             !er &&
             ((0, u.rn)(K), s.Z.updateStageStreamSize(K.channelId, !1));
     });
-    let eo = (0, _.c)(V.Yn.STREAM, t.user.id);
+    let eo = (0, m.c)(V.Yn.STREAM, t.user.id);
     if (
         (i.useEffect(() => {
             H.info(
@@ -236,7 +236,7 @@ function z(e) {
                     : null,
                 (0, r.jsx)(A.Z, {
                     stream: K,
-                    inPopout: m,
+                    inPopout: _,
                 }),
             ],
         });

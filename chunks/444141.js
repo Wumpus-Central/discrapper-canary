@@ -1,38 +1,38 @@
-t.d(n, { Z: () => m });
-var r = t(951288),
-    l = t(481060),
-    o = t(906732),
-    i = t(5192),
-    c = t(785717),
-    s = t(892001),
-    a = t(687158),
+t.d(n, { Z: () => p });
+var l = t(951288),
+    i = t(481060),
+    r = t(906732),
+    o = t(5192),
+    s = t(785717),
+    a = t(892001),
+    c = t(687158),
     d = t(388032);
 function u(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            l = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[n] = l);
             });
     }
     return e;
 }
-function f(e, n) {
+function m(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -40,8 +40,8 @@ function f(e, n) {
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
+                      var l = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, l);
                   }
                   return t;
               })(Object(n)).forEach(function (t) {
@@ -50,24 +50,24 @@ function f(e, n) {
         e
     );
 }
-function m(e) {
-    let { user: n, guildId: t, channelId: m, displayProfile: p, onClose: h } = e,
-        { analyticsLocations: x, sourceAnalyticsLocations: b } = (0, o.ZP)(),
-        { context: j, trackUserProfileAction: g } = (0, c.KZ)(),
-        v = (0, a.ZP)(n.id, t);
-    return (null == v ? void 0 : v.guildId) == null || null == j
+function p(e) {
+    let { user: n, guildId: t, channelId: p, displayProfile: f, onClose: h } = e,
+        { analyticsLocations: x, sourceAnalyticsLocations: j } = (0, r.ZP)(),
+        { context: v, trackUserProfileAction: g } = (0, s.KZ)(),
+        b = (0, c.ZP)(n.id, t);
+    return (null == b ? void 0 : b.guildId) == null || null == v
         ? null
-        : (null == p ? void 0 : p.guildId) != null
-          ? (0, r.jsx)(l.sNh, {
+        : (null == f ? void 0 : f.guildId) != null
+          ? (0, l.jsx)(i.sNh, {
                 id: "view-main-profile",
                 label: d.intl.string(d.t.GISTtb),
-                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(void 0, void 0, n) }),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: o.ZP.getName(void 0, void 0, n) }),
                 action: () => {
                     null == h || h(),
-                        (0, s.openUserProfileModal)(
-                            f(u({}, j), {
+                        (0, a.openUserProfileModal)(
+                            m(u({}, v), {
                                 showGuildProfile: !1,
-                                sourceAnalyticsLocations: b,
+                                sourceAnalyticsLocations: j,
                             }),
                         ),
                         g(
@@ -76,21 +76,21 @@ function m(e) {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
                                     analyticsLocations: x,
                                 },
-                                j,
+                                v,
                             ),
                         );
                 },
             })
-          : (0, r.jsx)(l.sNh, {
+          : (0, l.jsx)(i.sNh, {
                 id: "view-server-profile",
                 label: d.intl.string(d.t.DisZzM),
-                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(t, m, n) }),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: o.ZP.getName(t, p, n) }),
                 action: () => {
                     null == h || h(),
-                        (0, s.openUserProfileModal)(
-                            f(u({}, j), {
+                        (0, a.openUserProfileModal)(
+                            m(u({}, v), {
                                 showGuildProfile: !0,
-                                sourceAnalyticsLocations: b,
+                                sourceAnalyticsLocations: j,
                             }),
                         ),
                         g(
@@ -99,7 +99,7 @@ function m(e) {
                                     action: "PRESS_VIEW_SERVER_PROFILE",
                                     analyticsLocations: x,
                                 },
-                                j,
+                                v,
                             ),
                         );
                 },

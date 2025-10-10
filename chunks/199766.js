@@ -1,24 +1,24 @@
 n.d(t, {
-    I: () => l,
-    T: () => i,
+    I: () => i,
+    T: () => l,
 });
 var r = n(673125);
-function l(e, t, n, r, l) {
+function i(e, t, n, r, i) {
     e.save(),
         e.beginPath(),
         (e.fillStyle = r),
-        e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + l, 0, 2 * Math.PI),
+        e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + i, 0, 2 * Math.PI),
         e.fill(),
         e.restore();
 }
-function i(e, t, n, l) {
+function l(e, t, n, i) {
     e.save();
-    let i = r.Z.getAvatarImage(l);
-    if (null == i) return;
+    let l = r.Z.getAvatarImage(i);
+    if (null == l) return;
     let a = 20 * window.devicePixelRatio;
     e.beginPath(),
         e.arc(t, n, a / 2, 0, 2 * Math.PI),
         e.clip(),
-        e.drawImage(i, t - a / 2, n - a / 2, a, a),
+        e.drawImage(l, t - a / 2, n - a / 2, a, a),
         e.restore();
 }

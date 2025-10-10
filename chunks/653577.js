@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,21 +14,21 @@ var r = n(951288),
     g = n(388032),
     m = n(158871),
     b = n(430864);
-function O(e) {
+function _(e) {
     let {
             channel: t,
             connected: n,
             hovered: l,
-            subtitle: O,
+            subtitle: _,
             onClick: y,
-            enableHangStatus: _,
-            allowChannelTopic: j,
+            enableHangStatus: O,
+            allowChannelTopic: v,
         } = e,
-        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        x = null != v && v.length > 0,
+        j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        x = null != j && j.length > 0,
         C = (0, c.ZP)(t, !0),
-        E = (!_ || !!j) && C,
-        S = null != O && O.length > 0;
+        E = (!O || !!v) && C,
+        S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             x &&
@@ -40,20 +40,20 @@ function O(e) {
         null == t.guild_id)
     )
         return null;
-    let P = o()(m.statusDiv, n && E ? m.hoverable : null);
+    let I = o()(m.statusDiv, n && E ? m.hoverable : null);
     return x
         ? (0, r.jsx)(s.P3F, {
-              className: P,
+              className: I,
               onClick: E ? y : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
               }),
           })
         : n && E && (!S || l)
           ? (0, r.jsxs)(s.P3F, {
-                className: P,
+                className: I,
                 onClick: y,
                 children: [
                     (0, r.jsx)(s.Text, {
@@ -69,6 +69,6 @@ function O(e) {
                 ],
             })
           : S
-            ? (0, r.jsx)(d.Z, { children: O })
+            ? (0, r.jsx)(d.Z, { children: _ })
             : null;
 }

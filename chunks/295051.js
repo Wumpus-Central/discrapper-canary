@@ -1,7 +1,7 @@
 n.d(t, {
-    hH: () => g,
+    hH: () => m,
     xl: () => p,
-    zA: () => m,
+    zA: () => g,
 });
 var r = n(951288),
     i = n(647438),
@@ -10,7 +10,7 @@ var r = n(951288),
     a = n(821458),
     o = n(981631),
     c = n(30513),
-    d = n(674119);
+    d = n(829930);
 function u(e) {
     let {
             guild: t,
@@ -18,23 +18,23 @@ function u(e) {
             analyticsSection: o,
             analyticsObject: c,
             getPerks: u,
-            targetPremiumGuildTier: m,
+            targetPremiumGuildTier: g,
         } = e,
-        { analyticsLocations: g } = (0, l.ZP)(),
+        { analyticsLocations: m } = (0, l.ZP)(),
         p = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, a.E6)({
                         guild: t,
-                        analyticsLocations: g,
+                        analyticsLocations: m,
                         analyticsSection: o,
                         analyticsObject: c,
                         perks: u(),
-                        targetPremiumGuildTier: m,
+                        targetPremiumGuildTier: g,
                     });
             },
-            [g, c, o, t, u, m],
+            [m, c, o, t, u, g],
         );
     return (0, r.jsx)(s.Z, {
         guild: t,
@@ -43,7 +43,7 @@ function u(e) {
         onClick: p,
     });
 }
-function m(e) {
+function g(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {
         guild: t,
@@ -53,7 +53,7 @@ function m(e) {
         getPerks: c.XO,
     });
 }
-function g(e) {
+function m(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {
         guild: t,

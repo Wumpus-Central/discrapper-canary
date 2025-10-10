@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(481060),
     d = n(485386),
     u = n(496675),
-    m = n(700785),
-    g = n(647086),
+    g = n(700785),
+    m = n(647086),
     p = n(135899),
     f = n(388032),
     h = n(824804);
@@ -43,13 +43,13 @@ function x(e) {
     return e;
 }
 function b(e) {
-    return p.$X.filter((t) => (null == e ? void 0 : e.id) !== g._ && m.oz(t, e));
+    return p.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && g.oz(t, e));
 }
 function j(e) {
     let { guild: t } = e,
         i = (0, a.e7)([d.Z], () => d.Z.getEveryoneRole(t)),
-        m = b(t),
-        g = m.length > 0,
+        g = b(t),
+        m = g.length > 0,
         j = p.$X.some((e) => {
             var n, r;
             return !u.Z.can(e, t, null, {
@@ -84,11 +84,11 @@ function j(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
-                            children: f.intl.format(f.t.RXAtdH, { numPerms: m.length }),
+                            children: f.intl.format(f.t.RXAtdH, { numPerms: g.length }),
                         }),
                     ],
                 }),
-                g
+                m
                     ? (0, r.jsx)(c.Mgn, {
                           size: "custom",
                           color: "currentColor",
@@ -107,7 +107,7 @@ function j(e) {
                       }),
             ],
         });
-    return g
+    return m
         ? j
             ? (0, r.jsx)(o.u, {
                   text: f.intl.string(f.t["E5v/a2"]),

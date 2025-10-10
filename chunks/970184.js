@@ -142,7 +142,7 @@ let P = (e) => {
 };
 function w(e, t) {
     var n, r;
-    let a = i.useContext(M),
+    let a = i.useContext(j),
         o = i.useCallback(
             (t) => {
                 var n;
@@ -206,7 +206,7 @@ function D(e, t, n, r) {
         error: d,
     };
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let r = (0, a.e7)([O.Z], () => O.Z.getInteractionComponentState(e.customId, t.id)),
         { error: s, validate: c } = w(t, r),
         u = i.useCallback(
@@ -234,17 +234,17 @@ function x(e, t, n) {
         }
     );
 }
-function L(e) {
+function x(e) {
     return () => {
         throw Error("".concat(e, " does not support state"));
     };
 }
-function j(e) {
+function M(e) {
     return () => {
         throw Error("".concat(e, " does not support parents"));
     };
 }
-let M = i.createContext(null);
+let j = i.createContext(null);
 function k(e) {
     let {
             children: t,
@@ -268,7 +268,7 @@ function k(e) {
                 };
             if (null != a)
                 return {
-                    useComponentState: x.bind(null, a),
+                    useComponentState: L.bind(null, a),
                     channelId: a.channelId,
                     containerId: a.customId,
                     modal: a,
@@ -279,28 +279,28 @@ function k(e) {
                 };
             if (null != o)
                 return {
-                    useComponentState: L("ApplicationWidget"),
+                    useComponentState: x("ApplicationWidget"),
                     containerId: R(o),
                     applicationWidget: o,
                     validators: s,
                     validationErrors: l,
                     setValidationErrors: c,
-                    getParents: j("ApplicationWidget"),
+                    getParents: M("ApplicationWidget"),
                 };
             throw Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
         }, [n, a, o, u, s, l, c]);
-    return (0, r.jsx)(M.Provider, {
+    return (0, r.jsx)(j.Provider, {
         value: d,
         children: t,
     });
 }
 function U(e, t) {
-    return i.useContext(M).useComponentState(e, t);
+    return i.useContext(j).useComponentState(e, t);
 }
 function G() {
-    return i.useContext(M);
+    return i.useContext(j);
 }
 function B(e) {
     var t, n;
-    return null != (n = null == (t = i.useContext(M).validationErrors) ? void 0 : t[e.id]) ? n : null;
+    return null != (n = null == (t = i.useContext(j).validationErrors) ? void 0 : t[e.id]) ? n : null;
 }

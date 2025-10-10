@@ -127,27 +127,27 @@ function T(e) {
         } = e,
         {
             application: D,
-            selectedPlan: x,
-            hasAcceptedTerms: L,
-            purchaseType: j,
-            paymentSourceId: M,
+            selectedPlan: L,
+            hasAcceptedTerms: x,
+            purchaseType: M,
+            paymentSourceId: j,
             activeSubscription: k,
             devShelfFetchState: U,
             hasPaymentSources: G,
         } = (0, c.JL)(),
         { enabled: B } = _.Z.useConfig({ location: "SubscriptionReviewButton" }),
         Z = v({
-            purchaseType: j,
-            plan: x,
+            purchaseType: M,
+            plan: L,
             premiumSubscription: E,
             isGift: y,
             planGroup: T,
             isPrepaidPaymentSource: S,
             inReverseTrial: R,
-            paymentSourceId: M,
+            paymentSourceId: j,
             hasPaymentSources: G,
         }),
-        { analyticsLocations: V } = (0, l.ZP)();
+        { analyticsLocations: F } = (0, l.ZP)();
     if (null != i || null != a || d) {
         let e = y && B ? "expressive" : "active";
         return (0, r.jsx)(o.zxk, {
@@ -225,14 +225,14 @@ function T(e) {
     if (A)
         return (0, r.jsx)(o.zxk, {
             variant: "expressive",
-            "data-testid": L ? "purchase" : "submitButton",
+            "data-testid": x ? "purchase" : "submitButton",
             text: Z,
-            onClick: L ? C : () => I(n, f),
+            onClick: x ? C : () => I(n, f),
             loading: m,
             iconPosition: "start",
             icon: () => (0, r.jsx)(o.SrA, { color: "currentColor" }),
         });
-    else if (!L)
+    else if (!x)
         return (0, r.jsx)(o.ua7, {
             text: g.intl.string(g.t.XdvBLS),
             children: (e) =>
@@ -254,14 +254,14 @@ function T(e) {
                     ),
                 ),
         });
-    else if (R && null != k && null != M)
+    else if (R && null != k && null != j)
         return (0, r.jsx)(p.Z, {
             activeSubscription: k,
             onNext: P,
             isSubmitting: m,
-            paymentSourceId: M,
+            paymentSourceId: j,
             buttonLabel: Z,
-            analyticsLocations: V,
+            analyticsLocations: F,
         });
     else if (y && B)
         return (0, r.jsx)(o.zxk, {

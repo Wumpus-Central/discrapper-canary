@@ -8,19 +8,19 @@ var r = n(951288),
     c = n(442837),
     d = n(538534),
     u = n(481060),
-    m = n(570140),
-    g = n(275759),
+    g = n(570140),
+    m = n(275759),
     p = n(63063),
     f = n(243730),
     h = n(84058),
     x = n(103576),
     b = n(95242),
     j = n(530198),
-    v = n(420966),
-    _ = n(203377),
-    O = n(981631),
-    y = n(856651),
-    C = n(388032),
+    _ = n(420966),
+    v = n(203377),
+    C = n(981631),
+    O = n(856651),
+    y = n(388032),
     N = n(144563),
     E = n(21321);
 function I(e) {
@@ -49,7 +49,7 @@ function I(e) {
     return e;
 }
 function S(e, t) {
-    return t !== g.O1.AND
+    return t !== m.O1.AND
         ? Object.values(o().groupBy(e, (e) => "".concat(e.connectionType, ":").concat(e.applicationId)))
         : 0 === e.length
           ? []
@@ -63,20 +63,20 @@ function T(e) {
             (0, r.jsx)(u.X6q, {
                 className: N.headerHeading,
                 variant: "eyebrow",
-                children: C.intl.string(C.t.nMir29),
+                children: y.intl.string(y.t.nMir29),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 className: N.headerNoConfigSubtitle,
-                children: C.intl.format(C.t.q5f7tL, {
-                    helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN),
+                children: y.intl.format(y.t.q5f7tL, {
+                    helpdeskArticleUrl: p.Z.getArticleURL(C.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
             (0, r.jsx)(u.zxk, {
                 disabled: n,
                 onClick: t,
-                text: C.intl.string(C.t["OSvW5+"]),
+                text: y.intl.string(y.t["OSvW5+"]),
                 fullWidth: !0,
                 variant: "primary",
             }),
@@ -86,8 +86,8 @@ function T(e) {
 function P(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: P, headerRef: w } = (0, b.Z)(0),
-        { scrolledToTop: R, handleScroll: D } = (0, v.V)(),
-        Z = (0, c.e7)([f.Z], () => {
+        { scrolledToTop: Z, handleScroll: R } = (0, _.V)(),
+        D = (0, c.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
@@ -95,8 +95,8 @@ function P(e) {
             var e;
             return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        L = A.length > 1 ? g.O1.OR : g.O1.AND,
-        k = i.useMemo(() => (L === g.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
+        L = A.length > 1 ? m.O1.OR : m.O1.AND,
+        k = i.useMemo(() => (L === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
         G = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -111,12 +111,12 @@ function P(e) {
             (0, h.d_)(n.id, S(r, L));
     }
     function U() {
-        m.Z.dispatch({
+        g.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
             onComplete: (e) => M(e),
             excludedPlatformTypes: G,
             integrations: o,
-            onCompleteApplication: (e) => M(y.Kt, e),
+            onCompleteApplication: (e) => M(O.Kt, e),
         });
     }
     let B = null;
@@ -132,7 +132,7 @@ function P(e) {
             (e = (0, r.jsx)(u.zxk, {
                 disabled: l,
                 onClick: U,
-                text: C.intl.string(C.t["OSvW5+"]),
+                text: y.intl.string(y.t["OSvW5+"]),
                 icon: u.oFk,
                 fullWidth: !0,
                 variant: "secondary",
@@ -149,38 +149,38 @@ function P(e) {
                                         className: N.headerTitleTextContainer,
                                         children: (0, r.jsx)(u.X6q, {
                                             variant: "eyebrow",
-                                            children: C.intl.string(C.t.nMir29),
+                                            children: y.intl.string(y.t.nMir29),
                                         }),
                                     }),
                                     (0, r.jsx)(u.Avr, {
                                         variant: "critical",
                                         onClick: F,
                                         disabled: l,
-                                        text: C.intl.string(C.t.ntW1cX),
+                                        text: y.intl.string(y.t.ntW1cX),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: "text-sm/normal",
-                                children: C.intl.format(C.t.q5f7tL, {
-                                    helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN),
+                                children: y.intl.format(y.t.q5f7tL, {
+                                    helpdeskArticleUrl: p.Z.getArticleURL(C.BhN.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
                         ],
                     })),
                     (function (e, t, n, i, l) {
-                        let s = S(i, g.O1.OR);
+                        let s = S(i, m.O1.OR);
                         return (0, r.jsx)(d.E, {
-                            label: C.intl.string(C.t.Xs7PHR),
+                            label: y.intl.string(y.t.Xs7PHR),
                             options: [
                                 {
-                                    name: C.intl.string(C.t["W3iY5+"]),
-                                    value: g.O1.OR,
+                                    name: y.intl.string(y.t["W3iY5+"]),
+                                    value: m.O1.OR,
                                 },
                                 {
-                                    name: C.intl.string(C.t.gHXS9P),
-                                    value: g.O1.AND,
+                                    name: y.intl.string(y.t.gHXS9P),
+                                    value: m.O1.AND,
                                 },
                             ],
                             onChange: (e) => l(i, e),
@@ -282,21 +282,21 @@ function P(e) {
     return (0, r.jsx)(u.yWw, {
         className: N.scroller,
         style: { scrollPaddingTop: P },
-        onScroll: D,
+        onScroll: R,
         children: (0, r.jsxs)("div", {
             className: E.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !R }),
+                    className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
                     ref: w,
-                    children: (0, r.jsx)(v.Z, {
+                    children: (0, r.jsx)(_.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: _.ZI.VERIFICATIONS,
+                        selectedSection: v.ZI.VERIFICATIONS,
                         setSelectedSection: a,
                     }),
                 }),
-                (null != Z ? Z : 0) > 0
+                (null != D ? D : 0) > 0
                     ? (0, r.jsxs)("div", {
                           className: N.warningContainer,
                           children: [
@@ -310,7 +310,7 @@ function P(e) {
                               (0, r.jsx)(u.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: C.intl.string(C.t["2aFeeX"]),
+                                  children: y.intl.string(y.t["2aFeeX"]),
                               }),
                           ],
                       })

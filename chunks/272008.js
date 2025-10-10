@@ -13,16 +13,16 @@ n.d(t, {
     gU: () => ee,
     gl: () => Z,
     is: () => D,
-    it: () => x,
+    it: () => L,
     lL: () => $,
     lx: () => X,
-    m0: () => j,
+    m0: () => M,
     nE: () => F,
     pf: () => B,
     qm: () => q,
     w: () => Q,
     wF: () => k,
-    xw: () => L,
+    xw: () => x,
 }),
     n(415506);
 var r = n(990547),
@@ -153,13 +153,13 @@ async function D(e) {
         rejectWithError: !1,
     });
 }
-async function x() {
+async function L() {
     await i.tn.del({
         url: T.ANM.QUESTS_RESET_RECENT_QUEST_COMPLETIONS,
         rejectWithError: !1,
     });
 }
-async function L() {
+async function x() {
     if (!E.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" }),
             m.Z.recordQuestRequestAttempt(T.ANM.QUESTS_CURRENT_QUESTS, "fetch_quests");
@@ -194,7 +194,7 @@ async function L() {
         }
     }
 }
-async function j(e) {
+async function M(e) {
     let { questId: t, streamKey: n, applicationId: i, terminal: s = !1 } = e;
     try {
         var l;
@@ -232,7 +232,7 @@ async function j(e) {
         });
     }
 }
-function M(e) {
+function j(e) {
     var t, n;
     return (
         e instanceof c.CaptchaCancelError ||
@@ -291,7 +291,7 @@ async function U(e, t) {
                 type: "QUESTS_ENROLL_FAILURE",
                 questId: e,
             }),
-            M(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
+            j(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
         );
     }
 }

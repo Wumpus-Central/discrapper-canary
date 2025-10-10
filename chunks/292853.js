@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
@@ -13,24 +13,24 @@ var r = n(951288),
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -43,8 +43,8 @@ function m(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -56,22 +56,22 @@ function m(e, t) {
 function g(e) {
     let { channel: t, narrow: n } = e;
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             c.default.track(
                 d.rMx.CHANNEL_BANNER_VIEWED,
                 m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "channel_opt_in" }),
             );
         }, [t]),
-        (0, r.jsxs)("div", {
+        (0, i.jsxs)("div", {
             className: a()(h.chatHeaderBar, { [h.narrow]: n }),
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, i.jsx)(o.Text, {
                     className: h.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: p.intl.string(p.t.iOWmmJ),
                 }),
-                (0, r.jsx)(o.zxk, {
+                (0, i.jsx)(o.zxk, {
                     size: "sm",
                     variant: "primary",
                     onClick: () => {

@@ -74,8 +74,8 @@ function x(e) {
             emojiName: w,
         }),
         E = (0, i.e7)([m.ZP], () => (null != t ? m.ZP.getDefaultChannel(t) : null)),
-        I = l.useRef(null),
-        { isHoveringOrFocusing: P } = (0, c.Z)(I),
+        P = l.useRef(null),
+        { isHoveringOrFocusing: I } = (0, c.Z)(P),
         Z = () => {
             S(void 0), C(void 0);
         },
@@ -97,12 +97,12 @@ function x(e) {
         T = !M.isDeletedCustomEmoji && M.hasEmojiDisplayName;
     return (0, a.jsx)("div", {
         className: n,
-        children: (0, a.jsx)(o.NIc, {
+        children: (0, a.jsx)(o.gNt, {
             required: _,
             label: p.intl.string(p.t["3BQmiI"]),
             errorMessage: null != x ? x : void 0,
             children: (0, a.jsx)(o.yRy, {
-                targetElementRef: I,
+                targetElementRef: P,
                 animation: o.yRy.Animation.NONE,
                 position: "top",
                 renderPopout: (e) => {
@@ -130,7 +130,7 @@ function x(e) {
                         r.U,
                         v(b({}, e), {
                             className: y.emojiInput,
-                            ref: I,
+                            ref: P,
                             children: [
                                 (0, a.jsx)(d.Z, {
                                     active: t,
@@ -150,7 +150,7 @@ function x(e) {
                                     color: T ? "text-default" : "text-muted",
                                     children: T ? ":".concat(O, ":") : p.intl.string(p.t.QTK0TE),
                                 }),
-                                T && P && (0, a.jsx)(u.Z, v(b({}, e), { onClick: k })),
+                                T && I && (0, a.jsx)(u.Z, v(b({}, e), { onClick: k })),
                             ],
                         }),
                     );

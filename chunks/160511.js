@@ -10,14 +10,14 @@ var l = n(951288),
     u = n(357507);
 function h(e) {
     let { mfaChallenge: t, finish: n, setSlide: h, onClose: f, isSlideReady: g, headerAlignStart: m } = e,
-        [x, p] = r.useState(!1),
-        [S, j] = r.useState(null),
-        [b, y] = r.useState(!1),
+        [p, x] = r.useState(!1),
+        [S, b] = r.useState(null),
+        [j, y] = r.useState(!1),
         [v, C] = r.useState(null),
         [Z, w] = r.useState(""),
         k = r.useRef(null);
     r.useEffect(() => {
-        p(!0),
+        x(!0),
             s.tn
                 .post({
                     url: d.ANM.LOGIN_SMS_SEND,
@@ -26,14 +26,14 @@ function h(e) {
                     rejectWithError: !1,
                 })
                 .then((e) => {
-                    j(e.body.phone);
+                    b(e.body.phone);
                 })
                 .catch((e) => {
                     var t, n;
                     C(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                 })
                 .finally(() => {
-                    p(!1);
+                    x(!1);
                 });
     }, [t.ticket]),
         r.useEffect(() => {
@@ -80,12 +80,12 @@ function h(e) {
                                     value: Z,
                                     autoComplete: "one-time-code",
                                     spellCheck: "false",
-                                    disabled: b,
+                                    disabled: j,
                                 }),
                                 (0, l.jsx)(a.zxk, {
                                     variant: "secondary",
                                     text: c.intl.string(c.t.ZF29Ly),
-                                    loading: x,
+                                    loading: p,
                                     onClick: () => {
                                         s.tn
                                             .post({
@@ -95,7 +95,7 @@ function h(e) {
                                                 rejectWithError: !1,
                                             })
                                             .then((e) => {
-                                                j(e.body.phone);
+                                                b(e.body.phone);
                                             })
                                             .catch((e) => {
                                                 var t;
@@ -114,7 +114,7 @@ function h(e) {
                 setSlide: h,
                 showConfirm: !0,
                 disabled: Z.length !== i.Gz,
-                submitting: b,
+                submitting: j,
             }),
         ],
     });

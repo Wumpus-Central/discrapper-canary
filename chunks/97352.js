@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var r = n(647438),
-    i = n(399606),
+var i = n(647438),
+    r = n(399606),
     l = n(570140),
     a = n(607070),
     o = n(222677),
@@ -9,17 +9,17 @@ var r = n(647438),
     u = n(566006);
 function d() {
     let e = s.Yk.useSetting(),
-        t = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
-    r.useEffect(() => {
+        t = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
+    i.useEffect(() => {
         function n(n) {
-            let { messageId: r, channelId: i, emoji: l, optimistic: a, reactionType: s } = n;
+            let { messageId: i, channelId: r, emoji: l, optimistic: a, reactionType: s } = n;
             a ||
                 s !== u.O.BURST ||
                 !e ||
                 t ||
                 (0, o.T6)({
-                    channelId: i,
-                    messageId: r,
+                    channelId: r,
+                    messageId: i,
                     emoji: l,
                     key: c.I.EXTERNAL,
                 });

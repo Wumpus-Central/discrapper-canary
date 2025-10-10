@@ -1,9 +1,9 @@
 n.d(t, {
     EO: () => G,
-    LY: () => M,
+    LY: () => j,
     Nj: () => a.Z,
-    a5: () => L,
-    c4: () => x,
+    a5: () => x,
+    c4: () => L,
     g7: () => w,
     jZ: () => C,
     mE: () => B,
@@ -12,7 +12,7 @@ n.d(t, {
     rY: () => P,
     rt: () => R,
     wR: () => k,
-    wl: () => j,
+    wl: () => M,
 }),
     n(415506),
     n(539854),
@@ -136,7 +136,7 @@ function D(e) {
         a
     );
 }
-function x(e) {
+function L(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e;
     return D({
         channels: t,
@@ -145,7 +145,7 @@ function x(e) {
         voiceStates: i,
     }).map((e) => e.user);
 }
-function L(e) {
+function x(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:
@@ -172,7 +172,7 @@ function L(e) {
             return null;
     }
 }
-function j(e) {
+function M(e) {
     if (null == e) return "text";
     let t = e.isMediaChannel();
     if (e.type === g.d4z.GUILD_VOICE) return f.Z.can(g.Plq.CONNECT, e) ? "voice" : "voice-locked";
@@ -182,7 +182,7 @@ function j(e) {
     if (e.type === g.d4z.GUILD_MEDIA) return "media";
     else if (c.sR.has(e.type)) return "text";
 }
-function M(e) {
+function j(e) {
     let t,
         n = u.Z.getChannel(_.Z.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === g.d4z.GUILD_TEXT) t = n.id;

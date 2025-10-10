@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(485589),
     a = n(424706),
     l = n(14160),
     i = n(247123),
-    u = n(207662);
-let o = {
+    o = n(207662);
+let u = {
     id: "aria-allowed-attributes",
-    selector: u.J8,
+    selector: o.J8,
     tags: ["wcag2a", "wcag412"],
     metadata: {
         description: "Only use supported ARIA attributes",
@@ -16,7 +16,7 @@ let o = {
         let t = (0, a.cY)(e),
             n = r.roles.get(t);
         if (null == n) return i.w;
-        for (let r of u.cg)
+        for (let r of o.cg)
             if (e.hasAttribute(r) && !n.props.hasOwnProperty(r)) {
                 if ("aria-expanded" === r && e.hasAttribute("aria-controls")) continue;
                 if (!(0, l.p)(e)) return i.w;

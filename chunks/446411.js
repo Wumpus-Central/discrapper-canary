@@ -36,19 +36,19 @@ var r,
     P = n(626135),
     w = n(585483),
     D = n(55935),
-    x = n(408433),
-    L = n(956664),
-    j = n(624138),
-    M = n(591759),
+    L = n(408433),
+    x = n(956664),
+    M = n(624138),
+    j = n(591759),
     k = n(468846),
     U = n(401419),
     G = n(249458),
     B = n(981631),
     Z = n(217702),
     F = n(388032),
-    V = n(111925),
-    H = n(348594),
-    Y = n(602009);
+    V = n(781452),
+    H = n(374299),
+    Y = n(430864);
 function W(e, t, n) {
     return (
         t in e
@@ -114,7 +114,7 @@ function er(e, t) {
     return "".concat(r + 1, " / ").concat(r + n + 1);
 }
 function ei(e) {
-    let t = M.Z.toURLSafe(e);
+    let t = j.Z.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
 function ea(e) {
@@ -144,9 +144,9 @@ function ea(e) {
             onVolumeChange: N,
             onMute: P,
             href: D,
-            placeholder: x,
-            placeholderVersion: j,
-            sourceMetadata: M,
+            placeholder: L,
+            placeholderVersion: M,
+            sourceMetadata: j,
         } = e,
         [U, G] = a.useState(b),
         Z = null != d && null == d.proxyURL,
@@ -168,7 +168,7 @@ function ea(e) {
     );
     let { width: Y, height: W } = u;
     null != d && ((Y = d.width), (W = d.height));
-    let K = (0, L.Tj)({
+    let K = (0, x.Tj)({
         width: Y,
         height: W,
         maxWidth: l,
@@ -182,8 +182,8 @@ function ea(e) {
             children: m({
                 poster: z,
                 src: d.proxyURL,
-                placeholder: x,
-                placeholderVersion: j,
+                placeholder: L,
+                placeholderVersion: M,
                 width: Y,
                 height: W,
                 responsive: p,
@@ -200,7 +200,7 @@ function ea(e) {
                 onMute: P,
                 onControlsHide: A,
                 onControlsShow: C,
-                sourceMetadata: M,
+                sourceMetadata: j,
             }),
         });
     if (U && null != d) {
@@ -270,10 +270,10 @@ function ea(e) {
                 responsive: p,
                 containerClassName: V.embedVideoImageComponent,
                 imageClassName: V.embedVideoImageComponentInner,
-                placeholder: x,
-                placeholderVersion: j,
+                placeholder: L,
+                placeholderVersion: M,
                 onClick: E && null != d ? H : null,
-                sourceMetadata: M,
+                sourceMetadata: j,
                 analyticsSource: "EmbedVideo",
             }),
             (0, i.jsx)("div", {
@@ -285,8 +285,8 @@ function ea(e) {
                               onPlay: null != d ? H : null,
                               externalURL: D,
                               renderLinkComponent: g,
-                              messageId: null == M || null == (t = M.message) ? void 0 : t.id,
-                              channelId: null == M || null == (n = M.message) ? void 0 : n.channel_id,
+                              messageId: null == j || null == (t = j.message) ? void 0 : t.id,
+                              channelId: null == j || null == (n = j.message) ? void 0 : n.channel_id,
                           })
                         : null,
                 }),
@@ -904,7 +904,7 @@ class es extends (r = a.PureComponent) {
             { maxMediaWidth: r, maxMediaHeight: a } = this.state,
             o = null != (e = n.image) ? e : n.video;
         if (null == o) return null;
-        let { width: s, height: l } = (0, L.Tj)({
+        let { width: s, height: l } = (0, x.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: r,
@@ -997,7 +997,7 @@ class es extends (r = a.PureComponent) {
             { maxMediaWidth: o, maxMediaHeight: s } = this.state,
             l = null != t ? t : r;
         if (null == l) return;
-        let { width: c } = (0, L.Tj)({
+        let { width: c } = (0, x.Tj)({
             width: l.width,
             height: l.height,
             maxWidth: o,
@@ -1007,7 +1007,7 @@ class es extends (r = a.PureComponent) {
         if (i === B.hBH.RICH && void 0 !== n) return ee;
         if (i === B.hBH.GIFV) {
             var u, d, f, _;
-            let { width: e } = (0, L.Tj)({
+            let { width: e } = (0, x.Tj)({
                 width:
                     null != (d = null != (u = null == r ? void 0 : r.width) ? u : null == a ? void 0 : a.width) ? d : 0,
                 height:
@@ -1031,7 +1031,7 @@ class es extends (r = a.PureComponent) {
     }
     isInline() {
         let { hideMedia: e, embed: t } = this.props;
-        return !e && (0, x.dY)(t);
+        return !e && (0, L.dY)(t);
     }
     renderSuppressButton(e) {
         return (0, i.jsx)(c.P3F, {
@@ -1070,7 +1070,7 @@ class es extends (r = a.PureComponent) {
             let e = null != r ? r : a;
             if (void 0 !== e) {
                 let { minWidth: n, minHeight: r } = null != (t = this.getMinSize()) ? t : {},
-                    { width: i } = (0, L.Tj)({
+                    { width: i } = (0, x.Tj)({
                         width: e.width,
                         height: e.height,
                         maxWidth: l,
@@ -1082,7 +1082,7 @@ class es extends (r = a.PureComponent) {
             }
         }
         let f = en / (u.Z.fontScale / 100),
-            _ = (null != s ? (0, j.TZ)(s) : 0) >= f,
+            _ = (null != s ? (0, M.TZ)(s) : 0) >= f,
             p = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= et,
             h = _ || p;
         return {
@@ -1169,7 +1169,7 @@ class es extends (r = a.PureComponent) {
                             },
                         },
                     },
-                    (0, x.vP)(this.props.embed),
+                    (0, L.vP)(this.props.embed),
                 ),
             ),
             W(this, "onReveal", () => {

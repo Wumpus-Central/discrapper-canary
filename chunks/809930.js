@@ -1,15 +1,15 @@
 n.d(t, { a: () => s });
-var r = n(818083),
-    i = n(141537),
-    a = n(202613);
-let o = (0, r.B)({
+var a = n(818083),
+    r = n(141537),
+    i = n(202613);
+let l = (0, a.B)({
         kind: "user",
         id: "2025-08_do_not_disturb_reminder",
         label: "Do Not Disturb Reminder",
         defaultConfig: {
             enabled: !1,
-            titleText: a.default["3t3FR0"],
-            bodyText: a.default.zyFyf3,
+            titleText: i.default["3t3FR0"],
+            bodyText: i.default.zyFyf3,
         },
         treatments: [
             {
@@ -17,8 +17,8 @@ let o = (0, r.B)({
                 label: "Enabled - Copy 1",
                 config: {
                     enabled: !0,
-                    titleText: a.default["3t3FR0"],
-                    bodyText: a.default.zyFyf3,
+                    titleText: i.default["3t3FR0"],
+                    bodyText: i.default.zyFyf3,
                 },
             },
             {
@@ -26,8 +26,8 @@ let o = (0, r.B)({
                 label: "Enabled - Copy 2",
                 config: {
                     enabled: !0,
-                    titleText: a.default.Onha6O,
-                    bodyText: a.default["7cuAe3"],
+                    titleText: i.default.Onha6O,
+                    bodyText: i.default["7cuAe3"],
                 },
             },
             {
@@ -35,10 +35,10 @@ let o = (0, r.B)({
                 label: "Enabled - Copy 3",
                 config: {
                     enabled: !0,
-                    titleText: a.default.NtY0dX,
-                    bodyText: a.default["3nnb4u"],
+                    titleText: i.default.NtY0dX,
+                    bodyText: i.default["3nnb4u"],
                 },
             },
         ],
     }),
-    s = (e) => (0, i.sM)(o, e);
+    s = (e) => (0, r.sM)(l, e);

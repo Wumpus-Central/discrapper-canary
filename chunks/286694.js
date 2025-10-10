@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var l = n(951288);
 n(647438);
 var i = n(442837),
@@ -10,18 +10,18 @@ var i = n(442837),
     d = n(471253),
     c = n(88751),
     g = n(981631),
-    f = n(388032);
-function m(e, t, n) {
-    var m;
+    m = n(388032);
+function f(e, t, n) {
+    var f;
     let Z = a.Z.getChannel(n),
         E = (0, i.e7)([o.Z], () => o.Z.getGuild(t), [t]),
         P = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, n), [n, e.id]),
-        v = (null == (m = s.default.getCurrentUser()) ? void 0 : m.id) === e.id,
+        v = (null == (f = s.default.getCurrentUser()) ? void 0 : f.id) === e.id,
         b = (0, i.e7)([u.Z], () => null != n && u.Z.canWithPartialContext(g.Plq.MUTE_MEMBERS, { channelId: n }), [n]);
     return null != Z && null != E && (b || v) && P.speaker
         ? (0, l.jsx)(r.sNh, {
               id: "audience",
-              label: v ? f.intl.string(f.t["6C6PJy"]) : f.intl.string(f.t.VK3vQ0),
+              label: v ? m.intl.string(m.t["6C6PJy"]) : m.intl.string(m.t.VK3vQ0),
               action: () => {
                   v ? (0, d.yi)(Z) : (0, d.hz)(e, Z);
               },

@@ -37,8 +37,8 @@ var r,
     w = n(981631),
     D = n(185923),
     L = n(388032),
-    x = n(537221);
-function j(e, t, n) {
+    x = n(512746);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function j(e, t, n) {
         e
     );
 }
-function M(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -134,7 +134,7 @@ class H extends a.PureComponent {
             l = this.isSelectable();
         return (0, i.jsx)(
             f.P3F,
-            U(M({}, e), {
+            U(j({}, e), {
                 className: s()(x.clickable, r, n),
                 id: null != (t = Z(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
@@ -165,13 +165,13 @@ class H extends a.PureComponent {
     }
     constructor(e) {
         super(e),
-            j(this, "selectable", !0),
-            j(this, "layoutClass", x.autocompleteRowVertical),
-            j(this, "handleMouseEnter", () => {
+            M(this, "selectable", !0),
+            M(this, "layoutClass", x.autocompleteRowVertical),
+            M(this, "handleMouseEnter", () => {
                 let { onHover: e, index: t, selected: n } = this.props;
                 null == e || n || "number" != typeof t || e(t);
             }),
-            j(this, "handleClick", (e) => {
+            M(this, "handleClick", (e) => {
                 let { onClick: t, index: n } = this.props;
                 null != t && "number" == typeof n && t(n, e);
             }),
@@ -229,7 +229,7 @@ class z extends H {
         return (0, i.jsx)("div", { className: s()(e, x.divider) });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", x.dividerContainer), j(this, "selectable", !1);
+        super(...e), M(this, "layoutClass", x.dividerContainer), M(this, "selectable", !1);
     }
 }
 class q extends H {
@@ -332,7 +332,7 @@ class X extends H {
         });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", x.autoCompleteRowSuggestion);
+        super(...e), M(this, "layoutClass", x.autoCompleteRowSuggestion);
     }
 }
 class Q extends H {
@@ -349,7 +349,7 @@ class Q extends H {
                 roleStyle: "username",
                 includeConvenienceGlow: !0,
             }),
-            h = l ? M({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? j({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(P.RX, {
             children: [
                 (0, i.jsx)(P.z5, {
@@ -464,7 +464,7 @@ class et extends H {
         });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
+        super(...e), M(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
     }
 }
 class en extends H {
@@ -492,7 +492,7 @@ class en extends H {
         );
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
+        super(...e), M(this, "layoutClass", s()(x.autocompleteRowVertical, x.autocompleteRowVerticalSmall));
     }
 }
 class er extends H {
@@ -506,7 +506,7 @@ class er extends H {
         });
     }
     constructor(...e) {
-        super(...e), j(this, "layoutClass", x.autocompleteRowHorizontal);
+        super(...e), M(this, "layoutClass", x.autocompleteRowHorizontal);
     }
 }
 class ei extends H {
@@ -516,7 +516,7 @@ class ei extends H {
 }
 class ea extends H {
     renderContent() {
-        return (0, i.jsx)(O.Z, M({}, this.props));
+        return (0, i.jsx)(O.Z, j({}, this.props));
     }
 }
 class eo extends H {
@@ -549,26 +549,26 @@ class es extends (r = a.PureComponent) {
                   value: { id: null != o ? o : "" },
                   children: (0, i.jsx)("div", {
                       className: s()(x.autocomplete, n),
-                      children: (0, i.jsx)("div", U(M({ className: s()(x.autocompleteInner, r) }, l), { children: t })),
+                      children: (0, i.jsx)("div", U(j({ className: s()(x.autocompleteInner, r) }, l), { children: t })),
                   }),
               })
             : null;
     }
 }
-j(es, "Generic", Y),
-    j(es, "Loading", W),
-    j(es, "Title", K),
-    j(es, "Divider", z),
-    j(es, "User", q),
-    j(es, "UserSuggestion", X),
-    j(es, "Role", Q),
-    j(es, "Channel", J),
-    j(es, "Command", $),
-    j(es, "NewCommand", ee),
-    j(es, "Emoji", et),
-    j(es, "GIFIntegration", er),
-    j(es, "Sticker", en),
-    j(es, "EmojiUpsell", ei),
-    j(es, "Soundmoji", ea),
-    j(es, "Game", eo);
+M(es, "Generic", Y),
+    M(es, "Loading", W),
+    M(es, "Title", K),
+    M(es, "Divider", z),
+    M(es, "User", q),
+    M(es, "UserSuggestion", X),
+    M(es, "Role", Q),
+    M(es, "Channel", J),
+    M(es, "Command", $),
+    M(es, "NewCommand", ee),
+    M(es, "Emoji", et),
+    M(es, "GIFIntegration", er),
+    M(es, "Sticker", en),
+    M(es, "EmojiUpsell", ei),
+    M(es, "Soundmoji", ea),
+    M(es, "Game", eo);
 let el = es;

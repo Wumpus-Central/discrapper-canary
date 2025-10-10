@@ -13,14 +13,14 @@ var n = a(696486),
     E = a(101284),
     s = a(467510),
     l = a(622916),
-    u = a(873567),
-    I = a(665909),
+    I = a(873567),
+    u = a(665909),
     R = a(395848),
     d = a(501684),
     N = a(108185),
     A = a(896247),
-    f = a(416987);
-let T = 0,
+    T = a(416987);
+let f = 0,
     L = {};
 function p() {
     let t = (0, N.QV)();
@@ -31,7 +31,7 @@ function p() {
                 if (!e) return;
                 let a = (0, N.XL)(E.Z1),
                     r = (0, N.XL)(e.startTime);
-                I.X && l.kg.log("[Measurements] Adding FID"),
+                u.X && l.kg.log("[Measurements] Adding FID"),
                     (L.fid = {
                         value: t.value,
                         unit: "millisecond",
@@ -44,7 +44,7 @@ function p() {
             a = (0, d.PR)(({ metric: t }) => {
                 let e = t.entries[t.entries.length - 1];
                 e &&
-                    (I.X && l.kg.log("[Measurements] Adding CLS"),
+                    (u.X && l.kg.log("[Measurements] Adding CLS"),
                     (L.cls = {
                         value: t.value,
                         unit: "",
@@ -54,7 +54,7 @@ function p() {
             n = (0, d.$A)(({ metric: t }) => {
                 let e = t.entries[t.entries.length - 1];
                 e &&
-                    (I.X && l.kg.log("[Measurements] Adding LCP"),
+                    (u.X && l.kg.log("[Measurements] Adding LCP"),
                     (L.lcp = {
                         value: t.value,
                         unit: "millisecond",
@@ -63,7 +63,7 @@ function p() {
             }, !0),
             o = (0, d._4)(({ metric: t }) => {
                 t.entries[t.entries.length - 1] &&
-                    (I.X && l.kg.log("[Measurements] Adding TTFB"),
+                    (u.X && l.kg.log("[Measurements] Adding TTFB"),
                     (L.ttfb = {
                         value: t.value,
                         unit: "millisecond",
@@ -144,12 +144,12 @@ function P() {
 function g(t) {
     let e = (0, N.QV)();
     if (!e || !R.m.performance.getEntries || !E.Z1) return;
-    I.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
+    u.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
     let a = (0, N.XL)(E.Z1),
         o = e.getEntries(),
         { op: d, start_timestamp: p } = (0, n.XU)(t);
     if (
-        (o.slice(T).forEach((e) => {
+        (o.slice(f).forEach((e) => {
             let r = (0, N.XL)(e.startTime),
                 _ = (0, N.XL)(Math.max(0, e.duration));
             if ("navigation" !== d || !p || !(a + r < p))
@@ -189,33 +189,33 @@ function g(t) {
                     case "measure": {
                         var E = t,
                             s = e,
-                            T = r,
+                            f = r,
                             h = _,
                             O = a;
                         let n = (0, A.W)(),
-                            o = O + Math.max(T, (0, N.XL)(n ? n.requestStart : 0)),
-                            c = O + T,
-                            u = { [i.S3]: "auto.resource.browser.metrics" };
+                            o = O + Math.max(f, (0, N.XL)(n ? n.requestStart : 0)),
+                            c = O + f,
+                            I = { [i.S3]: "auto.resource.browser.metrics" };
                         o !== c &&
-                            ((u["sentry.browser.measure_happened_before_request"] = !0),
-                            (u["sentry.browser.measure_start_time"] = o)),
+                            ((I["sentry.browser.measure_happened_before_request"] = !0),
+                            (I["sentry.browser.measure_start_time"] = o)),
                             (0, N.Y)(E, o, c + h, {
                                 name: s.name,
                                 op: s.entryType,
-                                attributes: u,
+                                attributes: I,
                             });
-                        let R = (0, f.Y)(),
+                        let R = (0, T.Y)(),
                             d = e.startTime < R.firstHiddenTime;
                         "first-paint" === e.name &&
                             d &&
-                            (I.X && l.kg.log("[Measurements] Adding FP"),
+                            (u.X && l.kg.log("[Measurements] Adding FP"),
                             (L.fp = {
                                 value: e.startTime,
                                 unit: "millisecond",
                             })),
                             "first-contentful-paint" === e.name &&
                                 d &&
-                                (I.X && l.kg.log("[Measurements] Adding FCP"),
+                                (u.X && l.kg.log("[Measurements] Adding FCP"),
                                 (L.fcp = {
                                     value: e.startTime,
                                     unit: "millisecond",
@@ -225,7 +225,7 @@ function g(t) {
                     case "resource":
                         !(function (t, e, a, r, _, n) {
                             if ("xmlhttprequest" === e.initiatorType || "fetch" === e.initiatorType) return;
-                            let o = (0, u.en)(a),
+                            let o = (0, I.en)(a),
                                 c = { [i.S3]: "auto.resource.browser.metrics" };
                             C(c, e, "transferSize", "http.response_transfer_size"),
                                 C(c, e, "encodedBodySize", "http.response_content_length"),
@@ -244,7 +244,7 @@ function g(t) {
                         })(t, e, e.name, r, _, a);
                 }
         }),
-        (T = Math.max(o.length - 1, 0)),
+        (f = Math.max(o.length - 1, 0)),
         (function (t) {
             let e = R.m.navigator;
             if (!e) return;
@@ -269,7 +269,7 @@ function g(t) {
             if (!e) return;
             let { responseStart: a, requestStart: r } = e;
             r <= a &&
-                (I.X && l.kg.log("[Measurements] Adding TTFB Request Time"),
+                (u.X && l.kg.log("[Measurements] Adding TTFB Request Time"),
                 (t["ttfb.requestTime"] = {
                     value: a - r,
                     unit: "millisecond",
@@ -281,7 +281,7 @@ function g(t) {
                 let r = e.value,
                     _ = Math.abs((a + (0, N.XL)(r) - p) * 1000),
                     n = _ - r;
-                I.X && l.kg.log(`[Measurements] Normalized ${t} from ${r} to ${_} (${n})`), (e.value = _);
+                u.X && l.kg.log(`[Measurements] Normalized ${t} from ${r} to ${_} (${n})`), (e.value = _);
             });
         let e = L["mark.fid"];
         e &&
@@ -298,14 +298,14 @@ function g(t) {
             }),
             (h = t),
             r &&
-                (I.X && l.kg.log("[Measurements] Adding LCP Data"),
+                (u.X && l.kg.log("[Measurements] Adding LCP Data"),
                 r.element && h.setAttribute("lcp.element", (0, s.Rt)(r.element)),
                 r.id && h.setAttribute("lcp.id", r.id),
                 r.url && h.setAttribute("lcp.url", r.url.trim().slice(0, 200)),
                 h.setAttribute("lcp.size", r.size)),
             _ &&
                 _.sources &&
-                (I.X && l.kg.log("[Measurements] Adding CLS Data"),
+                (u.X && l.kg.log("[Measurements] Adding CLS Data"),
                 _.sources.forEach((t, e) => h.setAttribute(`cls.source.${e + 1}`, (0, s.Rt)(t.node))));
     }
     (r = void 0), (_ = void 0), (L = {});

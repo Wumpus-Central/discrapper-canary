@@ -14,13 +14,13 @@ var i = n(951288),
     g = n(45474),
     h = n(594135),
     x = n(388032),
-    C = n(181679);
-let P = (t) => {
+    P = n(181679);
+let C = (t) => {
         let { churnUserDiscountOffer: e } = t;
         return null == e
             ? null
             : (0, i.jsx)("div", {
-                  className: C.previewContainer,
+                  className: P.previewContainer,
                   children: (0, i.jsx)(p.o, { userDiscountOffer: e }),
               });
     },
@@ -31,7 +31,7 @@ let P = (t) => {
                 premiumType: n,
                 setStep: a,
                 churnUserDiscountOffer: p,
-                isFetchingChurnDiscountOffer: C,
+                isFetchingChurnDiscountOffer: P,
             } = (0, h.a)(),
             v = (0, o.e7)([d.default], () => {
                 let t = d.default.getCurrentUser();
@@ -41,8 +41,8 @@ let P = (t) => {
             (0, u.Z)(v.id, v.getAvatarURL(null, 80));
         }, [v]);
         let y = (0, m.Z)(),
-            S = "US" === y.ipCountryCode && "CA" === y.ipSubdivisionCode;
-        if (C)
+            T = "US" === y.ipCountryCode && "CA" === y.ipSubdivisionCode;
+        if (P)
             return (0, i.jsx)(s.Modal, {
                 transitionState: t,
                 title: "",
@@ -66,7 +66,7 @@ let P = (t) => {
                       variant: "secondary",
                   }),
             E.push({
-                text: S ? x.intl.string(x.t.PfnxqK) : x.intl.string(x.t["3PatS0"]),
+                text: T ? x.intl.string(x.t.PfnxqK) : x.intl.string(x.t["3PatS0"]),
                 onClick: () => a(g.R.CONFIRM),
                 variant: "primary",
             }),
@@ -75,7 +75,7 @@ let P = (t) => {
                 title: x.intl.string(x.t.PWq8TE),
                 subtitle: x.intl.formatToPlainString(x.t.nsGVzs, {}),
                 actions: E,
-                preview: null !== p && (0, i.jsx)(P, { churnUserDiscountOffer: p }),
+                preview: null !== p && (0, i.jsx)(C, { churnUserDiscountOffer: p }),
                 onClose: async () => e(),
                 children: (0, i.jsx)(f.g, {
                     currentUser: v,

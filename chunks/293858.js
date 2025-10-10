@@ -2,8 +2,8 @@ n.d(t, { b: () => y });
 var r = n(951288),
     i = n(647438),
     a = n(512722),
-    o = n.n(a),
-    l = n(704215),
+    l = n.n(a),
+    o = n(704215),
     s = n(605236),
     d = n(347896),
     C = n(717401),
@@ -15,8 +15,8 @@ var r = n(951288),
     h = n(107998),
     m = n(614277),
     x = n(400981),
-    g = n(435020),
-    j = n(698708),
+    j = n(435020),
+    g = n(698708),
     b = n(921944);
 function y(e) {
     let t,
@@ -30,65 +30,65 @@ function y(e) {
             continueSessionToInitialStep: O,
         } = e,
         {
-            activeSubscription: E,
-            paymentSources: P,
-            paymentSourceId: I,
-            selectedPlan: w,
-            selectedSkuId: T,
-            step: k,
-            updatedSubscription: A,
-            startingPremiumSubscriptionPlanIdRef: M,
+            activeSubscription: P,
+            paymentSources: E,
+            paymentSourceId: w,
+            selectedPlan: I,
+            selectedSkuId: k,
+            step: T,
+            updatedSubscription: M,
+            startingPremiumSubscriptionPlanIdRef: A,
             startingFractionalPremiumEndsAtRef: Z,
         } = (0, f.JL)(),
         {
             isGift: N,
             giftRecipient: R,
-            giftCode: F,
-            hasSentMessage: B,
-            isSendingMessage: U,
-            sendGiftMessage: H,
-            claimableRewards: G,
+            giftCode: B,
+            hasSentMessage: F,
+            isSendingMessage: G,
+            sendGiftMessage: U,
+            claimableRewards: H,
             selectedGiftingPromotionReward: D,
         } = (0, _.wD)(),
         { confirmationFooter: z } = (0, h.zb)(),
-        K = (0, C.id)(w, N, G),
-        Y = (0, d.Z)(),
-        W = (0, C.a5)(w),
+        K = (0, C.id)(I, N, H),
+        W = (0, d.Z)(),
+        Y = (0, C.a5)(I),
         V = (0, C.tK)(null == D ? void 0 : D.skuId),
-        q = (0, g.$)(P, I),
-        J = N && null != D && W;
-    o()(null != w, "Expected plan to selected"),
-        o()(null != T, "Expected selectedSkuId"),
-        o()(null != k, "Step should be set");
+        q = (0, j.$)(E, w),
+        J = N && null != D && Y;
+    l()(null != I, "Expected plan to selected"),
+        l()(null != k, "Expected selectedSkuId"),
+        l()(null != T, "Step should be set");
     let X = i.useCallback(() => {
         n(), null == y || y();
     }, [n, y]);
     i.useEffect(() => {
-        !N || null == R || null == F || B || U || (0, u.pO)(R) || H({ onSubscriptionConfirmation: y });
-    }, [H, N, R, F, B, U, y]),
+        !N || null == R || null == B || F || G || (0, u.pO)(R) || U({ onSubscriptionConfirmation: y });
+    }, [U, N, R, B, F, G, y]),
         i.useEffect(() => {
-            null != Y &&
-                null != Y.reminderNotice &&
+            null != W &&
+                null != W.reminderNotice &&
                 K &&
-                (0, s.wH)(l.z.GIFTING_PROMOTION_REMINDER, Y.dismissibleContentVersion, {
+                (0, s.wH)(o.z.GIFTING_PROMOTION_REMINDER, W.dismissibleContentVersion, {
                     dismissAction: b.L.INDIRECT_ACTION,
                 });
-        }, [Y, K]);
+        }, [W, K]);
     let Q = null != O ? c.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != L) t = L(w, X, A);
+    if (null != L) t = L(I, X, M);
     else if (N)
         t = (0, r.jsx)(c.TB, {
-            planId: w.id,
+            planId: I.id,
             onClose: X,
         });
     else {
         let e =
-            M.current === w.id
+            A.current === I.id
                 ? { postSuccessGuild: v }
                 : {
                       followupSKUInfo: S,
-                      startingPremiumSubscriptionPlanId: M.current,
-                      isDowngrade: null != E && (0, p.GY)(E, w.id, a),
+                      startingPremiumSubscriptionPlanId: A.current,
+                      isDowngrade: null != P && (0, p.GY)(P, I.id, a),
                   };
         t = (0, r.jsx)(
             c.ZP,
@@ -118,7 +118,7 @@ function y(e) {
                 return e;
             })(
                 {
-                    planId: w.id,
+                    planId: I.id,
                     onClose: X,
                     paymentSourceType: q,
                     hideClose: null != z,
@@ -132,7 +132,7 @@ function y(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(m.C3, {
-                children: [(0, r.jsx)(j.Z, {}), t],
+                children: [(0, r.jsx)(g.Z, {}), t],
             }),
             null != z && z,
             J &&

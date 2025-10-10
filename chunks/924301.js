@@ -134,7 +134,7 @@ function P(e) {
         s = (null == (n = T[e.guild_scheduled_event_id]) || null == (t = n[o]) ? void 0 : t[e.user_id]) != null,
         l = e.user_id === c.default.getId();
     (s || !l) &&
-        (null == (i = T[e.guild_scheduled_event_id]) || null == (r = i[o]) || delete r[e.user_id], x(e), a && (O += 1));
+        (null == (i = T[e.guild_scheduled_event_id]) || null == (r = i[o]) || delete r[e.user_id], L(e), a && (O += 1));
 }
 function w(e, t, n) {
     let r = N(t);
@@ -151,7 +151,7 @@ function D(e) {
                 : -1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
-function x(e) {
+function L(e) {
     var t, n;
     let r = N(e.guild_scheduled_event_exception_id),
         i =
@@ -162,7 +162,7 @@ function x(e) {
                 : 1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
-function L(e) {
+function x(e) {
     let { guilds: t } = e;
     return (
         y.clear(),
@@ -174,11 +174,11 @@ function L(e) {
         !0
     );
 }
-function j(e) {
+function M(e) {
     let { guildScheduledEvent: t } = e;
     A(t);
 }
-function M(e) {
+function j(e) {
     let { guildId: t, guildScheduledEvents: n } = e,
         r = y.values(g.GUILD_EVENT(t), !0).map((e) => e.id),
         i = n.map((e) => e.id);
@@ -210,7 +210,7 @@ function Z(e) {
     let { guildScheduledEvent: t } = e;
     return C(t.id), !0;
 }
-function V(e) {
+function F(e) {
     let { eventException: t } = e,
         n = y.get(t.event_id);
     if (null == n) return !1;
@@ -218,7 +218,7 @@ function V(e) {
         i = [...n.guild_scheduled_event_exceptions];
     return r < 0 ? i.push(t) : (i[r] = t), A(m(p({}, n), { guild_scheduled_event_exceptions: i })), !0;
 }
-function F(e) {
+function V(e) {
     let { eventException: t } = e,
         n = y.get(t.event_id);
     if (null == n) return !1;
@@ -347,11 +347,11 @@ class et extends (r = o.ZP.Store) {
 }
 _(et, "displayName", "GuildScheduledEventStore");
 let en = new et(l.Z, {
-    CONNECTION_OPEN: L,
+    CONNECTION_OPEN: x,
     GUILD_CREATE: k,
     GUILD_DELETE: U,
-    FETCH_GUILD_EVENT: j,
-    FETCH_GUILD_EVENTS_FOR_GUILD: M,
+    FETCH_GUILD_EVENT: M,
+    FETCH_GUILD_EVENTS_FOR_GUILD: j,
     GUILD_SCHEDULED_EVENT_CREATE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_SCHEDULED_EVENT_DELETE: Z,
@@ -361,9 +361,9 @@ let en = new et(l.Z, {
     GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: W,
     GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: q,
     INVITE_RESOLVE_SUCCESS: Q,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: V,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: V,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: F,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: F,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: F,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: V,
     GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: H,
     LOGOUT: X,
 });

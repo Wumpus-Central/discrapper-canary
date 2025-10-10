@@ -38,8 +38,8 @@ var r = A(951288),
     z = A(981631),
     w = A(674563),
     R = A(388032),
-    L = A(707449);
-function k(e) {
+    L = A(179598);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(A);
@@ -64,7 +64,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -189,12 +189,12 @@ function J(e) {
         ew = null != eW ? eW : ey,
         eR = null != eZ && "published" in eZ,
         eL = null != eZ && !eR,
-        ek = null != (b = null == eo ? void 0 : eo.role_id) ? b : null,
-        [eD, eB] = n.useState(),
-        eE = null != eD || null != ek,
-        eG = (0, d.e7)([j.Z], () => (null != ek && null !== eD ? j.Z.getRole(eA, ek) : null != eD ? eD : void 0), [
-            eD,
+        eD = null != (b = null == eo ? void 0 : eo.role_id) ? b : null,
+        [ek, eB] = n.useState(),
+        eE = null != ek || null != eD,
+        eG = (0, d.e7)([j.Z], () => (null != eD && null !== ek ? j.Z.getRole(eA, eD) : null != ek ? ek : void 0), [
             ek,
+            eD,
             eA,
         ]),
         eY = "";
@@ -223,11 +223,11 @@ function J(e) {
                     image: ex,
                     imageName: eV,
                     isImageChanged: eP,
-                    newRoleParams: eD,
+                    newRoleParams: ek,
                     hasSavedAttachments: ez,
                     hasUnsavedAttachmentChanges: eQ,
                 }),
-            [eo, eh, eC, eq, ex, eV, eP, eD, ez, eQ],
+            [eo, eh, eC, eq, ex, eV, eP, ek, ez, eQ],
         ),
         e9 = n.useMemo(
             () =>
@@ -280,7 +280,7 @@ function J(e) {
             (e) =>
                 (0, r.jsx)(
                     _,
-                    k(
+                    D(
                         {
                             guildId: eA,
                             productId: el,
@@ -291,14 +291,14 @@ function J(e) {
             e6,
         );
     }, [eA, e6, el]);
-    let e8 = async (e) => {
-        let t = (0, F.pM)({ newRoleParams: eD });
+    let e7 = async (e) => {
+        let t = (0, F.pM)({ newRoleParams: ek });
         if ((eI(t), null != t)) return;
         let A = await eX(e);
         if ((eF(!1), null != A)) {
-            if ((null != e.name && ev(A.name), null != e.description && eb(A.description), null != eD)) {
+            if ((null != e.name && ev(A.name), null != e.description && eb(A.description), null != ek)) {
                 let e = A.role_id;
-                o()(null != e, "Cannot update role without role ID"), await g.Z.updateRole(eA, e, eD);
+                o()(null != e, "Cannot update role without role ID"), await g.Z.updateRole(eA, e, ek);
             }
             eB(void 0), ei(A.id), "published" in e && !0 === e.published && ea();
         }
@@ -312,7 +312,7 @@ function J(e) {
         n.useEffect(() => {
             e$ && eJ(void 0);
         }, [e$]);
-    let e7 = n.useRef(null),
+    let e8 = n.useRef(null),
         e2 = !e3 || (!ed && es >= S.dD);
     return (0, r.jsxs)(u.Y0X, {
         transitionState: en,
@@ -358,7 +358,7 @@ function J(e) {
                     (0, r.jsx)(u.zJl, {
                         children: (0, r.jsxs)("div", {
                             className: L.productFieldsSection,
-                            ref: e7,
+                            ref: e8,
                             children: [
                                 (0, r.jsx)(u.oil, {
                                     label: R.intl.string(R.t.Hsk7xc),
@@ -396,7 +396,7 @@ function J(e) {
                                     selectedPriceTier: eC,
                                     setPriceTier: ej,
                                 }),
-                                (0, r.jsx)(u.NIc, {
+                                (0, r.jsx)(u.gNt, {
                                     label: R.intl.string(R.t["sqXj6+"]),
                                     errorMessage:
                                         null != ($ = null == ew ? void 0 : ew.getFirstFieldErrorMessage("image"))
@@ -427,7 +427,7 @@ function J(e) {
                                     }),
                                 }),
                                 eT
-                                    ? (0, r.jsx)(u.NIc, {
+                                    ? (0, r.jsx)(u.gNt, {
                                           label: R.intl.string(R.t.zLrtkJ),
                                           errorMessage:
                                               null !=
@@ -437,7 +437,7 @@ function J(e) {
                                           children: (0, r.jsx)(N.s, {
                                               onFileAdded: () => {
                                                   var e;
-                                                  null == (e = e7.current) ||
+                                                  null == (e = e8.current) ||
                                                       e.scrollIntoView({
                                                           behavior: "smooth",
                                                           block: "end",
@@ -452,10 +452,10 @@ function J(e) {
                                               null != (et = null == ew ? void 0 : ew.getFirstFieldErrorMessage(F.NB))
                                                   ? et
                                                   : void 0,
-                                          newRoleParams: eD,
+                                          newRoleParams: ek,
                                           setNewRoleParams: eB,
                                           guildId: eA,
-                                          listingRoleId: ek,
+                                          listingRoleId: eD,
                                           productId: el,
                                       })
                                     : null,
@@ -478,7 +478,7 @@ function J(e) {
                                     onClick: () => {
                                         o()(e3, "Attempting to publish/unpublish when not allowed"),
                                             eJ(ed ? "unpublish" : "publish"),
-                                            e8(D(k({}, e_), { published: !ed }));
+                                            e7(k(D({}, e_), { published: !ed }));
                                     },
                                     submitting: eR,
                                 }),
@@ -526,8 +526,8 @@ function J(e) {
                                     onChange: (e) => {
                                         e ? eB((0, Q.YP)()) : eB(void 0);
                                     },
-                                    warning: null === eD ? (0, r.jsx)(Q.aN, {}) : void 0,
-                                    disabled: null != ek,
+                                    warning: null === ek ? (0, r.jsx)(Q.aN, {}) : void 0,
+                                    disabled: null != eD,
                                 }),
                                 (0, r.jsx)(Y, {
                                     text: R.intl.string(R.t.C6wP2d),
@@ -543,7 +543,7 @@ function J(e) {
                                                     return (t) =>
                                                         (0, r.jsx)(
                                                             e,
-                                                            D(k({}, t), {
+                                                            k(D({}, t), {
                                                                 header: R.intl.string(R.t["2Wihyc"]),
                                                                 confirmText: R.intl.string(R.t.N86XcH),
                                                                 cancelText: R.intl.string(R.t["ETE/oK"]),
@@ -575,7 +575,7 @@ function J(e) {
                                               "cannot save changes for published product without adding all fields",
                                           ),
                                               eJ("update_publish"),
-                                              e8(e_);
+                                              e7(e_);
                                       },
                                   })
                                 : (0, r.jsx)(u.zxk, {
@@ -586,7 +586,7 @@ function J(e) {
                                       onClick: () => {
                                           o()(e0, "cannot save changes without name or price tier"),
                                               eJ("draft"),
-                                              e8(e_);
+                                              e7(e_);
                                       },
                                   }),
                         }),
@@ -607,6 +607,6 @@ function _(e) {
         guildId: e.guildId,
         editSkuId: null != (t = e.productId) ? t : void 0,
         onFileSizeError: () => (0, b.Z)(S.ve),
-        children: (0, r.jsx)(J, k({}, e)),
+        children: (0, r.jsx)(J, D({}, e)),
     });
 }

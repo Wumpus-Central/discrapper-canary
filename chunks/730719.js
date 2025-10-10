@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
     a = n(107461);
-let s = (e) => {
+let o = (e) => {
     let { errorMessage: t, onClose: n } = e;
     return null == t || "" === t
         ? null

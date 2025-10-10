@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => j }), n(388685), n(35282);
+n.d(t, { Z: () => M }), n(388685), n(35282);
 var i,
     a,
     o = n(442837),
@@ -86,12 +86,12 @@ function w() {
 function D() {
     r = !1;
 }
-function x(e) {
+function L(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && S !== n && (S = n), t)) R(C(e));
     (r = void 0), (A = Date.now());
 }
-class L extends (a = o.ZP.PersistedStore) {
+class x extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
@@ -180,9 +180,9 @@ class L extends (a = o.ZP.PersistedStore) {
         (T[e] = !0), s.K.set(E, T);
     }
 }
-g(L, "displayName", "GameStore"),
-    g(L, "persistKey", "GameStore"),
-    g(L, "migrations", [
+g(x, "displayName", "GameStore"),
+    g(x, "persistKey", "GameStore"),
+    g(x, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -210,9 +210,9 @@ g(L, "displayName", "GameStore"),
             detectableGames: [],
         }),
     ]);
-let j = new L(l.Z, {
+let M = new x(l.Z, {
     OVERLAY_INITIALIZE: P,
     GAMES_DATABASE_FETCH: w,
     GAMES_DATABASE_FETCH_FAIL: D,
-    GAMES_DATABASE_UPDATE: x,
+    GAMES_DATABASE_UPDATE: L,
 });

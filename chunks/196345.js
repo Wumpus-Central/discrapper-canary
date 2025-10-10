@@ -14,7 +14,7 @@ var l = n(120356),
     s = n(454585),
     c = n(489813),
     u = n(388032),
-    d = n(162359);
+    d = n(624463);
 function C(e) {
     let { terms: t, channelId: n, className: l } = e;
     return (0, r.jsx)("div", {

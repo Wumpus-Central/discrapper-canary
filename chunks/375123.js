@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => o,
+    C: () => a,
     Z: () => i,
 });
 var r = n(154579);
@@ -10,7 +10,7 @@ function i(e) {
         autoTrackExposure: n,
     });
 }
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e;
     return !(0, r.nd)({
         location: t,

@@ -1,6 +1,6 @@
 n.d(t, { A: () => o });
 var r = n(818083);
-function l(e) {
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function l(e) {
     }
     return e;
 }
-function i(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,12 +58,12 @@ let a = {
             {
                 id: 1,
                 label: "VC Status Icons",
-                config: i(l({}, a), { enableVCStatusIcons: !0 }),
+                config: l(i({}, a), { enableVCStatusIcons: !0 }),
             },
             {
                 id: 2,
                 label: "Request to Stream without Overlay Notification",
-                config: i(l({}, a), {
+                config: l(i({}, a), {
                     enableVCStatusIcons: !0,
                     enableRequestToStream: !0,
                     enableOpenTIVForPing: !0,
@@ -72,7 +72,7 @@ let a = {
             {
                 id: 3,
                 label: "Request to Stream with Overlay Notification",
-                config: i(l({}, a), {
+                config: l(i({}, a), {
                     enableVCStatusIcons: !0,
                     enableRequestToStream: !0,
                     enableOpenTIVForPing: !0,

@@ -28,8 +28,8 @@ n(70097);
 var I = n(266454),
     P = n(594190),
     w = n(74299),
-    N = n(989941),
-    T = n(377400),
+    T = n(989941),
+    N = n(377400),
     D = n(329557),
     k = n(199902),
     R = n(314897),
@@ -42,8 +42,8 @@ var I = n(266454),
     U = n(449224),
     G = n(574254),
     B = n(556296),
-    H = n(808506),
-    F = n(372679),
+    F = n(808506),
+    H = n(372679),
     Y = n(237997),
     K = n(451478),
     X = n(70956),
@@ -174,7 +174,7 @@ class eZ extends s.Component {
         O.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        O.Z.startSession(), T.Z.initialize(), S.Z.initialize(), D.Z.initialize();
+        O.Z.startSession(), N.Z.initialize(), S.Z.initialize(), D.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -264,7 +264,7 @@ class eZ extends s.Component {
             t && window.addEventListener("contextmenu", ev, !1),
             J.isPlatformEmbedded)
         ) {
-            let e = (0, F.M)();
+            let e = (0, H.M)();
             if (null == e) return;
             if (void 0 !== e.setPerfInfoCallback) {
                 var _;
@@ -301,7 +301,7 @@ class eZ extends s.Component {
             window.removeEventListener("keydown", this.onKeyDownGlobal, !0),
             window.removeEventListener("keyup", this.onKeyUpGlobal, !0),
             this.props.locked && window.removeEventListener("contextmenu", ev, !1),
-            T.Z.terminate(),
+            N.Z.terminate(),
             S.Z.terminate(),
             D.Z.terminate();
     }
@@ -380,7 +380,7 @@ class eZ extends s.Component {
     constructor(e) {
         super(e),
             eO(this, "handleWindowResize", () => {
-                H.default.isFocusedPidOutOfProcess()
+                F.default.isFocusedPidOutOfProcess()
                     ? this.forceUpdate()
                     : u()(() => {
                           this.forceUpdate();
@@ -431,7 +431,7 @@ function eC() {
         u = (0, f.e7)([V.Z], () => V.Z.getVoiceChannelId()),
         p = (0, f.e7)([A.Z], () => A.Z.getChannel(u)),
         h = (0, f.e7)([L.Z], () => (null != p ? L.Z.getGuild(p.guild_id) : null)),
-        g = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
+        g = (0, f.e7)([P.ZP, U.Z], () => (0, T.Z)(P.ZP, U.Z)),
         m = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         y = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
         { analyticsLocations: _ } = (0, C.ZP)(Z.Z.OVERLAY),
@@ -440,7 +440,7 @@ function eC() {
         x = null != (e = null == a ? void 0 : a.oopEnabled) && e,
         S = en.v.oopEnabled,
         j = null != (t = null == a ? void 0 : a.hasChangedRenderMode) && t,
-        { useContextualNudge: I, disableNudge: T } = (0, er.J0)("OverlaySetup");
+        { useContextualNudge: I, disableNudge: N } = (0, er.J0)("OverlaySetup");
     return (0, r.jsx)(C.Gt, {
         value: _,
         children: (0, r.jsx)(eZ, {
@@ -460,7 +460,7 @@ function eC() {
             isStreaming: y,
             showKeybindNotification: O,
             dismissKeybindNotification: b,
-            isOOPOverlayAvailable: (!I || (S && x && E && !j)) && !T,
+            isOOPOverlayAvailable: (!I || (S && x && E && !j)) && !N,
         }),
     });
 }

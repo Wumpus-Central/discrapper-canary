@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => R,
-    Z: () => j,
+    Z: () => M,
 }),
     n(953529),
     n(388685);
@@ -10,7 +10,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(786920),
+    c = n(137317),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -232,7 +232,7 @@ let P = (e) => {
                   }),
               });
     },
-    x = (e) => {
+    L = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -286,7 +286,7 @@ let P = (e) => {
                                     (0, r.jsx)(c.animated.div, {
                                         className: O.overlayStickerWrapper,
                                         style: e,
-                                        children: (0, r.jsx)(L, {
+                                        children: (0, r.jsx)(x, {
                                             className: O.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -313,7 +313,7 @@ let P = (e) => {
             )
         );
     },
-    L = (e) => {
+    x = (e) => {
         let {
                 isInteracting: t = !1,
                 disableAnimation: n = !1,
@@ -352,7 +352,7 @@ let P = (e) => {
                         onError: h,
                     }),
                     a &&
-                        (0, r.jsx)(x, {
+                        (0, r.jsx)(L, {
                             disableAnimation: n,
                             enlargeScaleFactor: s,
                             enlargeWithName: o,
@@ -366,4 +366,4 @@ let P = (e) => {
             "".concat(u.id, ",").concat(c),
         );
     },
-    j = L;
+    M = x;

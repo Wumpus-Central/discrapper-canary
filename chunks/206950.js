@@ -2,8 +2,8 @@ n.d(t, { F: () => u });
 var r = n(647438),
     i = n(232567),
     l = n(786761),
-    a = n(3148),
-    s = n(598077),
+    s = n(3148),
+    a = n(598077),
     o = n(981631),
     c = n(388032),
     d = n(540167);
@@ -37,7 +37,7 @@ function u(e) {
                     return e;
                 })(
                     {},
-                    (0, a.ZP)({
+                    (0, s.ZP)({
                         channelId: "1337",
                         content: e,
                     }),
@@ -61,14 +61,14 @@ function u(e) {
                       }),
                 t),
             ),
-            u = new s.Z({
+            u = new a.Z({
                 id: "313337",
                 username: c.intl.string(c.t.cqpybG),
                 discriminator: "0000",
                 bot: !1,
             });
         r.author = u;
-        let m = i.$k(u);
-        return null != m && ((r.author = m), (r.author.getAvatarURL = () => d.Z)), r;
+        let g = i.$k(u);
+        return null != g && ((r.author = g), (r.author.getAvatarURL = () => d.Z)), r;
     }, [e]);
 }

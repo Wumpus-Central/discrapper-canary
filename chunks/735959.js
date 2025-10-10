@@ -1,22 +1,22 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(951288),
     r = n(647438),
-    l = n(631562),
-    i = n(913527),
-    s = n.n(i),
+    i = n(631562),
+    l = n(913527),
+    s = n.n(l),
     o = n(330711),
     c = n(442837),
     d = n(481060),
     u = n(665149),
     m = n(706454),
-    x = n(185910),
+    p = n(185910),
     h = n(257785),
-    p = n(388032);
+    x = n(388032);
 function f() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = r.useState(),
-        i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
-        f = r.useMemo(() => p.t[i], [i]);
+        l = (0, i.runtimeHashMessageKey)(null != t ? t : ""),
+        f = r.useMemo(() => x.t[l], [l]);
     return (0, a.jsxs)("div", {
         children: [
             (0, a.jsxs)(u.ZP, {
@@ -40,11 +40,11 @@ function f() {
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "System",
-                        children: p.systemLocale,
+                        children: x.systemLocale,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "@discord/intl",
-                        children: p.intl.currentLocale,
+                        children: x.intl.currentLocale,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "common i18n",
@@ -68,7 +68,7 @@ function f() {
             (0, a.jsx)(h.E, {
                 children: (0, a.jsx)(h.Z9, {
                     name: "Unique Rendered Main Messages",
-                    children: Object.keys(p.t).length,
+                    children: Object.keys(x.t).length,
                 }),
             }),
             (0, a.jsx)("div", {
@@ -85,7 +85,7 @@ function f() {
                 children: [
                     (0, a.jsx)(h.Z9, {
                         name: "Hashed key",
-                        children: i,
+                        children: l,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "Exists?",
@@ -93,7 +93,7 @@ function f() {
                     }),
                 ],
             }),
-            (0, a.jsx)(x.Z, { data: null == f ? void 0 : f(e) }),
+            (0, a.jsx)(p.Z, { data: null == f ? void 0 : f(e) }),
         ],
     });
 }

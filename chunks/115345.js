@@ -4,7 +4,7 @@ n.d(t, {
     cG: () => G,
     ly: () => B,
     oL: () => X,
-    vo: () => F,
+    vo: () => V,
 }),
     n(388685),
     n(997841),
@@ -39,8 +39,8 @@ var r = n(647438),
     P = n(981631),
     w = n(490897),
     D = n(526761),
-    x = n(388032);
-function L(e, t, n) {
+    L = n(388032);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function L(e, t, n) {
         e
     );
 }
-function j(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,12 +64,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,7 +86,7 @@ function k(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,10 +108,10 @@ function U(e, t) {
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => k(j({}, n), { [e]: t }));
+                s((n) => k(M({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
-            getDebug: () => V(Object.values(u), t),
+            getDebug: () => F(Object.values(u), t),
         }
     );
 }
@@ -153,7 +153,7 @@ function Z(e, t, n, r, i) {
         muted: b.ZP.isMuted(e.id) && !b.ZP.isTemporarilyMuted(e.id),
     };
 }
-function V(e, t) {
+function F(e, t) {
     let n = t.reduce((e, t) => {
             var n;
             return e + Number(null != (n = t.num_year_opens) ? n : 0);
@@ -197,7 +197,7 @@ function V(e, t) {
         .concat(r, "\n\n")
         .concat(s.join("\n\n"));
 }
-function F(e) {
+function V(e) {
     let [t, n] = r.useState(!1),
         [i, a] = r.useState(!1),
         o = r.useCallback(
@@ -247,8 +247,8 @@ async function H(e, t) {
     } catch (e) {
         I.Z.captureException(e),
             c.Z.show({
-                title: x.intl.string(x.t.j2d6Ki),
-                body: x.intl.string(x.t.mCjLAQ),
+                title: L.intl.string(L.t.j2d6Ki),
+                body: L.intl.string(L.t.mCjLAQ),
                 onConfirm: t,
             });
     }
@@ -273,7 +273,7 @@ function Y(e) {
     return () => {
         y.default.track(
             P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            k(j({}, n), {
+            k(M({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
                     .filter((e) => e.mode === R.AR.UseGreyDot)

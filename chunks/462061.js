@@ -13,11 +13,11 @@ var r = n(951288),
     d = n(763520),
     f = n(358221),
     p = n(414910),
-    m = n(502053),
-    _ = n(965048),
-    g = n(266910),
-    b = n(352978),
-    E = n(928518),
+    _ = n(502053),
+    m = n(965048),
+    b = n(266910),
+    E = n(352978),
+    g = n(928518),
     v = n(518950),
     h = n(470956),
     S = n(314897),
@@ -69,7 +69,7 @@ function M(e) {
         q = H.id === W,
         Y = (0, w.ZP)(t),
         G = (0, o.e7)([I.Z], () => I.Z.isFocused()),
-        K = (0, o.e7)([E.Z], () => E.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
+        K = (0, o.e7)([g.Z], () => g.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
         Q = (0, o.e7)([O.Z], () => null != H.id && O.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         X = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(n.guild_id, H.id)),
         J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(A.intl.string(A.t["pFO/Pj"])) : ""),
@@ -82,8 +82,8 @@ function M(e) {
             animateOnHover: !$,
         }),
         er = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
-        ei = (0, _.Z)(x.Yn.DEFAULT, t.user.id),
-        el = (0, m.Z)(t.user.id),
+        ei = (0, m.Z)(x.Yn.DEFAULT, t.user.id),
+        el = (0, _.Z)(t.user.id),
         ea = {
             channel: n,
             selectedParticipant: er,
@@ -106,7 +106,7 @@ function M(e) {
                   selected: s,
               })
             : (0, r.jsx)(
-                  b.Z,
+                  E.Z,
                   {
                       onResize: Z,
                       wrapperClassName: T.videoWrapper,
@@ -123,7 +123,7 @@ function M(e) {
               )
         : (0, r.jsx)("div", {
               className: a()(T.content, { [T.blockedAvatar]: D || M }),
-              children: (0, r.jsx)(g.Z, {
+              children: (0, r.jsx)(b.Z, {
                   "aria-label": J,
                   src: et,
                   avatarDecoration: en,

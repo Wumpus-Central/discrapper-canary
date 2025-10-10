@@ -1,12 +1,12 @@
-var r = u(448730),
-    n = u(386015),
-    f = u(232396),
-    o = u(263604);
+var r = n(448730),
+    i = n(386015),
+    l = n(232396),
+    s = n(263604);
 e.exports = function (e) {
     return function (t) {
-        var u = n((t = o(t))) ? f(t) : void 0,
-            i = u ? u[0] : t.charAt(0),
-            s = u ? r(u, 1).join("") : t.slice(1);
-        return i[e]() + s;
+        var n = i((t = s(t))) ? l(t) : void 0,
+            a = n ? n[0] : t.charAt(0),
+            o = n ? r(n, 1).join("") : t.slice(1);
+        return a[e]() + o;
     };
 };

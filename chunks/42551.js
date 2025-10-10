@@ -14,8 +14,8 @@ var r = n(951288),
     p = n(563115),
     f = n(910693),
     h = n(893966),
-    j = n(527379),
-    g = n(285173),
+    g = n(527379),
+    j = n(285173),
     x = n(388032),
     v = n(115491),
     y = n(266631);
@@ -41,7 +41,7 @@ function H(e) {
                                     (0, r.jsx)("div", { className: o()(v.labelBackground, n && v.selected) }),
                                     (0, r.jsx)(b.lo1.Label, {
                                         children: (0, r.jsx)(
-                                            g.Z,
+                                            j.Z,
                                             {
                                                 className: y.roleTooltipItem,
                                                 role: l,
@@ -64,7 +64,7 @@ function H(e) {
         },
         w = l.useCallback(
             (e) => {
-                (0, j.Dr)(t, { selectedRoleIds: e }), i(e);
+                (0, g.Dr)(t, { selectedRoleIds: e }), i(e);
             },
             [t, i],
         ),

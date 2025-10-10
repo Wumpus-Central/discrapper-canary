@@ -1,6 +1,6 @@
-n.d(t, { Z: () => C }), n(388685);
-var r,
-    i = n(873546),
+n.d(t, { Z: () => _ }), n(388685);
+var i,
+    r = n(873546),
     l = n(442837),
     a = n(570140),
     o = n(38618),
@@ -22,14 +22,14 @@ function u(e, t, n) {
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
+            i.forEach(function (t) {
                 u(e, t, n[t]);
             });
     }
@@ -43,8 +43,8 @@ function p(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -58,19 +58,19 @@ let h = {},
     m = !0,
     g = {},
     b = !1;
-function _() {
+function C() {
     if (((g = {}), !m))
         for (let [e, t] of Object.entries(s.Z)) {
             let n = !1 !== h[e];
             if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (g[e] = !1);
         }
 }
-class y extends (r = l.ZP.Store) {
+class y extends (i = l.ZP.Store) {
     initialize() {
-        _(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(o.Z);
+        C(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(o.Z);
     }
     shouldShow(e) {
-        return !(!b || m || c.a || (i.tq && ["writing-messages", "organize-by-topic"].includes(e))) && (g[e] || !1);
+        return !(!b || m || c.a || (r.tq && ["writing-messages", "organize-by-topic"].includes(e))) && (g[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !m;
@@ -87,20 +87,20 @@ class y extends (r = l.ZP.Store) {
     }
 }
 u(y, "displayName", "TutorialIndicatorStore");
-let C = new y(a.Z, {
+let _ = new y(a.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         (b = !0),
             (m = !0),
             (h = {}),
             null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))),
-            _();
+            C();
     },
     CONNECTION_CLOSED: function () {
         b = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], _();
+        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], C();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         f = p(d({}, f), { [e.tutorialId]: e.renderData });

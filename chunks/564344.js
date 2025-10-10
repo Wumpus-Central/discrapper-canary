@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(526761),
     S = n(726985),
     A = n(388032),
-    C = n(683326);
+    C = n(455734);
 function N() {
     u.Z.useExperiment({ location: "profile_customization_auto" });
     let e = (0, s.e7)([f.Z], () => f.Z.getGuild()),
@@ -34,7 +34,7 @@ function N() {
         { subsection: R, setSubsection: P } = (0, v.Z)(),
         w = g.R.useField("hasSearchResults"),
         D = g.R.useField("searchResults");
-    function x(t) {
+    function L(t) {
         if (R !== t) {
             if (n) {
                 y.S.dispatch(I.CkL.SHAKE_APP, {
@@ -51,14 +51,14 @@ function N() {
         null != N &&
             (0, p.Z)(N.id, N.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
     }, [null == a ? void 0 : a.id, N]);
-    let L = !0,
-        j = !0;
+    let x = !0,
+        M = !0;
     return (
         w &&
             1 === D.length &&
             (D.includes(S.s6.PROFILE_SERVER_PROFILES)
-                ? (x(T.NB.GUILD), (j = !1))
-                : D.includes(S.s6.PROFILE_USER_PROFILE) && (x(T.NB.USER_PROFILE), (L = !1))),
+                ? (L(T.NB.GUILD), (M = !1))
+                : D.includes(S.s6.PROFILE_USER_PROFILE) && (L(T.NB.USER_PROFILE), (x = !1))),
         (0, r.jsxs)(h.N, {
             header: A.intl.string(A.t["vi7f+v"]),
             children: [
@@ -67,9 +67,9 @@ function N() {
                     type: "top",
                     look: "brand",
                     selectedItem: R,
-                    onItemSelect: x,
+                    onItemSelect: L,
                     children: [
-                        j
+                        M
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {
@@ -80,7 +80,7 @@ function N() {
                                   T.NB.USER_PROFILE,
                               )
                             : null,
-                        L
+                        x
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {

@@ -1,12 +1,12 @@
-var n = r(975269),
-    o = r(457965),
-    a = r(98958);
-e.exports = o
+var r = n(975269),
+    i = n(457965),
+    a = n(98958);
+e.exports = i
     ? function (e, t) {
-          return o(e, "toString", {
+          return i(e, "toString", {
               configurable: !0,
               enumerable: !1,
-              value: n(t),
+              value: r(t),
               writable: !0,
           });
       }

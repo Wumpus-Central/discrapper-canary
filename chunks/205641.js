@@ -1,15 +1,15 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i,
     l = n(951288),
-    a = n(647438),
-    s = n(120356),
-    o = n.n(s),
+    s = n(647438),
+    a = n(120356),
+    o = n.n(a),
     c = n(392711),
     d = n.n(c),
     u = n(82923),
-    m = n(463299);
-function g(e, t, n) {
+    g = n(463299);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function g(e, t, n) {
     );
 }
 var p = (((i = p || {})[(i.HOVERING = 0)] = "HOVERING"), (i[(i.FLYING = 1)] = "FLYING"), i);
-let h = Object.freeze({
+let f = Object.freeze({
     HOVERING: {
         Y_DURATION: 1500,
         Y_VALUE: -5,
@@ -61,7 +61,7 @@ let h = Object.freeze({
         OPACITY_DURATION_DIVIDEND: 2,
     },
 });
-function f(e, t, n, r) {
+function h(e, t, n, r) {
     return u.Z.sequence(
         d().times(t, (i) =>
             u.Z.timing(e, {
@@ -71,7 +71,7 @@ function f(e, t, n, r) {
         ),
     );
 }
-class b extends (r = a.Component) {
+class x extends (r = s.Component) {
     componentDidMount() {
         this.startAnimation();
     }
@@ -93,77 +93,77 @@ class b extends (r = a.Component) {
         this.y.setValue(0), this.x.setValue(0), this.opacity.setValue(1), this.fireScale.setValue(1);
     }
     startHoverAnimate() {
-        this.resetAnimation(), this.hoverAnimate(h.HOVERING.Y_VALUE);
+        this.resetAnimation(), this.hoverAnimate(f.HOVERING.Y_VALUE);
     }
     createFireAnimation(e, t, n, r) {
-        return f(this.fireScale, e, t, () => d().random(n, r));
+        return h(this.fireScale, e, t, () => d().random(n, r));
     }
     async hoverAnimate(e) {
         var t;
         if (0 !== this.props.stage || this.isUnmounted) return;
         let n = e > 1,
-            r = n ? h.HOVERING.FIRE_MIN_INTENSITY_FALLING : h.HOVERING.FIRE_MIN_INTENSITY_RISING,
-            i = n ? h.HOVERING.FIRE_MAX_INTENSITY_FALLING : h.HOVERING.FIRE_MAX_INTENSITY_RISING,
-            l = this.createFireAnimation(h.HOVERING.FIRE_COUNT, h.HOVERING.Y_DURATION, r, i),
-            a = u.Z.timing(this.y, {
+            r = n ? f.HOVERING.FIRE_MIN_INTENSITY_FALLING : f.HOVERING.FIRE_MIN_INTENSITY_RISING,
+            i = n ? f.HOVERING.FIRE_MAX_INTENSITY_FALLING : f.HOVERING.FIRE_MAX_INTENSITY_RISING,
+            l = this.createFireAnimation(f.HOVERING.FIRE_COUNT, f.HOVERING.Y_DURATION, r, i),
+            s = u.Z.timing(this.y, {
                 toValue: e,
-                duration: h.HOVERING.Y_DURATION,
+                duration: f.HOVERING.Y_DURATION,
                 easing: u.Z.Easing.inOut(u.Z.Easing.ease),
             });
-        (this.currentAnimation = u.Z.parallel([a, l])),
+        (this.currentAnimation = u.Z.parallel([s, l])),
             await (null == (t = this.currentAnimation) ? void 0 : t.start()),
-            this.hoverAnimate(e * h.HOVERING.Y_VALUE_MODIFIER);
+            this.hoverAnimate(e * f.HOVERING.Y_VALUE_MODIFIER);
     }
     createShakeAnimation(e, t, n) {
-        return f(this.x, e, t, (e) => d().random(1, n) * (e % 2 == 0 ? 1 : -1));
+        return h(this.x, e, t, (e) => d().random(1, n) * (e % 2 == 0 ? 1 : -1));
     }
     async flyAnimate() {
         var e;
         let t = u.Z.spring(this.y, {
-                toValue: h.FALLING.Y_VALUE,
+                toValue: f.FALLING.Y_VALUE,
                 overshootClamping: !0,
             }),
             n = u.Z.spring(this.fireScale, {
-                toValue: h.FALLING.FIRE_VALUE,
+                toValue: f.FALLING.FIRE_VALUE,
                 overshootClamping: !0,
             }),
             r = u.Z.parallel([t, n]),
             i = u.Z.timing(this.y, {
-                toValue: h.STAGING.Y_VALUE,
-                duration: h.STAGING.DURATION,
+                toValue: f.STAGING.Y_VALUE,
+                duration: f.STAGING.DURATION,
             }),
-            l = this.createShakeAnimation(h.STAGING.SHAKE_COUNT, h.STAGING.DURATION, h.STAGING.SHAKE_INTENSITY),
-            a = this.createFireAnimation(
-                h.STAGING.FIRE_COUNT,
-                h.STAGING.DURATION,
-                h.STAGING.FIRE_MIN_INTENSITY,
-                h.STAGING.FIRE_MAX_INTENSITY,
+            l = this.createShakeAnimation(f.STAGING.SHAKE_COUNT, f.STAGING.DURATION, f.STAGING.SHAKE_INTENSITY),
+            s = this.createFireAnimation(
+                f.STAGING.FIRE_COUNT,
+                f.STAGING.DURATION,
+                f.STAGING.FIRE_MIN_INTENSITY,
+                f.STAGING.FIRE_MAX_INTENSITY,
             ),
-            s = u.Z.parallel([i, l, a]),
+            a = u.Z.parallel([i, l, s]),
             o = u.Z.timing(this.y, {
-                toValue: h.FLYING.Y_VALUE,
-                duration: h.FLYING.DURATION,
-                easing: h.FLYING.Y_EASING,
+                toValue: f.FLYING.Y_VALUE,
+                duration: f.FLYING.DURATION,
+                easing: f.FLYING.Y_EASING,
             }),
             c = u.Z.timing(this.x, {
-                toValue: h.FLYING.X_VALUE,
-                duration: h.FLYING.DURATION,
-                easing: h.FLYING.X_EASING,
+                toValue: f.FLYING.X_VALUE,
+                duration: f.FLYING.DURATION,
+                easing: f.FLYING.X_EASING,
             }),
             d = u.Z.timing(this.opacity, {
-                toValue: h.FLYING.OPACITY_VALUE,
-                duration: h.FLYING.DURATION / h.FLYING.OPACITY_DURATION_DIVIDEND,
-                delay: h.FLYING.DURATION / h.FLYING.OPACITY_DURATION_DIVIDEND,
+                toValue: f.FLYING.OPACITY_VALUE,
+                duration: f.FLYING.DURATION / f.FLYING.OPACITY_DURATION_DIVIDEND,
+                delay: f.FLYING.DURATION / f.FLYING.OPACITY_DURATION_DIVIDEND,
             }),
-            m = this.createFireAnimation(
-                h.FLYING.FIRE_COUNT,
-                h.FLYING.DURATION,
-                h.FLYING.FIRE_MIN_INTENSITY,
-                h.FLYING.FIRE_MAX_INTENSITY,
+            g = this.createFireAnimation(
+                f.FLYING.FIRE_COUNT,
+                f.FLYING.DURATION,
+                f.FLYING.FIRE_MIN_INTENSITY,
+                f.FLYING.FIRE_MAX_INTENSITY,
             ),
-            g = u.Z.parallel([o, c, d, m]);
+            m = u.Z.parallel([o, c, d, g]);
         if (
-            ((this.currentAnimation = u.Z.sequence([r, s, g])),
+            ((this.currentAnimation = u.Z.sequence([r, a, m])),
             await (null == (e = this.currentAnimation) ? void 0 : e.start()),
             !this.isUnmounted)
         ) {
@@ -196,7 +196,7 @@ class b extends (r = a.Component) {
     render() {
         let { className: e, style: t } = this.props;
         return (0, l.jsxs)(u.Z.div, {
-            className: o()(m.animation, e),
+            className: o()(g.animation, e),
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -208,39 +208,39 @@ class b extends (r = a.Component) {
                             }),
                         )),
                         r.forEach(function (t) {
-                            g(e, t, n[t]);
+                            m(e, t, n[t]);
                         });
                 }
                 return e;
             })({}, t, this.getWumpusStyle()),
             children: [
                 (0, l.jsx)("div", {
-                    className: m.fireTopWrapper,
+                    className: g.fireTopWrapper,
                     children: (0, l.jsx)(u.Z.div, {
-                        className: m.fire,
+                        className: g.fire,
                         style: this.getFireStyle(),
                     }),
                 }),
                 (0, l.jsx)("div", {
-                    className: m.fireBottomWrapper,
+                    className: g.fireBottomWrapper,
                     children: (0, l.jsx)(u.Z.div, {
-                        className: m.fire,
+                        className: g.fire,
                         style: this.getFireStyle(),
                     }),
                 }),
-                (0, l.jsx)("div", { className: m.wumpus }),
+                (0, l.jsx)("div", { className: g.wumpus }),
             ],
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, "x", new u.Z.Value(0)),
-            g(this, "y", new u.Z.Value(0)),
-            g(this, "opacity", new u.Z.Value(1)),
-            g(this, "fireScale", new u.Z.Value(1)),
-            g(this, "currentAnimation", null),
-            g(this, "isUnmounted", !1);
+            m(this, "x", new u.Z.Value(0)),
+            m(this, "y", new u.Z.Value(0)),
+            m(this, "opacity", new u.Z.Value(1)),
+            m(this, "fireScale", new u.Z.Value(1)),
+            m(this, "currentAnimation", null),
+            m(this, "isUnmounted", !1);
     }
 }
-g(b, "Stages", p);
-let x = b;
+m(x, "Stages", p);
+let b = x;

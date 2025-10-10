@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(512384),
     O = n(670188),
     E = n(314897),
-    v = n(131951),
-    y = n(51144),
+    y = n(131951),
+    v = n(51144),
     I = n(524484),
     S = n(388032),
     C = n(720711);
@@ -98,14 +98,14 @@ function x(e) {
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, g.ZP)(),
         { channel: E, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
-        D = (0, o.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
+        D = (0, o.e7)([y.Z], () => y.Z.isLocalMute(x.id)),
         k = (0, d.Z)({
             userId: x.id,
             checkSoundSharing: !0,
         }),
         M = null != (t = E.getGuildId()) ? t : void 0,
         U = x.getAvatarURL(E.guild_id, 24),
-        G = null != A ? A : y.ZP.getName(x),
+        G = null != A ? A : v.ZP.getName(x),
         {
             icon: B,
             colorize: H,
@@ -251,8 +251,8 @@ function A(e) {
             }),
             focusProps: j,
         }),
-        v = b && s ? t : m;
-    return v.length <= 0
+        y = b && s ? t : m;
+    return y.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
               className: a()(C.scroller, l),
@@ -263,7 +263,7 @@ function A(e) {
                   role: "group",
                   "aria-label": S.intl.string(S.t["/ZgaVV"]),
                   children: [
-                      v.map((e) => {
+                      y.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== d
                               ? (0, r.jsx)(

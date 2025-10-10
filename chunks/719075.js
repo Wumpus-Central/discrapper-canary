@@ -25,7 +25,7 @@ let v = (e) => {
             v = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
             x = c.ZP.canUseCollectibles(v),
             { isDisabled: O } = (0, g.G)(t.skuId),
-            { isPurchased: T, isPartiallyOwnedBundle: y } = (0, p.L)(t),
+            { isPurchased: y, isPartiallyOwnedBundle: T } = (0, p.L)(t),
             L = (0, d.G1)(t),
             { enabled: j } = (0, i.WX)({ location: "product_card_price" }),
             k = l.useMemo(() => (0, d.BH)(t, x), [t, x]),
@@ -45,10 +45,10 @@ let v = (e) => {
                   className: S.priceTag,
                   children: E.intl.string(E.t.wu4gyc),
               })
-            : T || y
+            : y || T
               ? (0, r.jsx)(f.U, {
                     className: S.priceTag,
-                    isPartiallyPurchased: y,
+                    isPartiallyPurchased: T,
                 })
               : L
                 ? (0, r.jsx)(a.Text, {

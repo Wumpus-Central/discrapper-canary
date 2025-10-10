@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685);
 var a = n(951288);
 n(647438);
 var r = n(913527),
-    l = n.n(r),
-    i = n(442837),
+    i = n.n(r),
+    l = n(442837),
     s = n(704215),
     o = n(713284),
     c = n(211644),
@@ -21,7 +21,7 @@ let m = (e) => {
                 return "UNKNOWN TYPE:";
         }
     },
-    h = [
+    p = [
         {
             key: "events",
             render(e) {
@@ -30,7 +30,7 @@ let m = (e) => {
             },
         },
     ],
-    p = [
+    h = [
         {
             key: "candidates",
             render(e) {
@@ -40,12 +40,12 @@ let m = (e) => {
         },
     ];
 function x() {
-    let e = (0, i.e7)([o.Z], () => o.Z.getDCFEvents()),
+    let e = (0, l.e7)([o.Z], () => o.Z.getDCFEvents()),
         t = (0, c.ZP)((e) => e.candidates),
         n = (0, c.ZP)((e) => e.lastWinnerTime),
-        r = 0 !== n ? l()(n).fromNow() : "n/a",
+        r = 0 !== n ? i()(n).fromNow() : "n/a",
         x = (0, c.ZP)((e) => e.recentlyShown[0]),
-        b = e.map((e) => {
+        f = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: m(t) + n.toString(),
@@ -53,7 +53,7 @@ function x() {
                 dismissibleContent: n,
             };
         }),
-        f = Array.from(t.keys()).map((e) => ({
+        b = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e,
         }));
@@ -74,14 +74,14 @@ function x() {
                 className: u.candidatesTableContainer,
                 children: (0, a.jsx)(d.Z, {
                     className: u.candidatesTable,
-                    columns: p,
-                    data: f,
+                    columns: h,
+                    data: b,
                 }),
             }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)(d.Z, {
-                columns: h,
-                data: b,
+                columns: p,
+                data: f,
             }),
         ],
     });

@@ -63,21 +63,21 @@ function T(e) {
             showOpaqueBackground: w = !1,
         } = e,
         D = (0, i.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        x = (0, i.e7)([c.Z], () => {
+        L = (0, i.e7)([c.Z], () => {
             var e;
             return c.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : y.lds);
         }),
-        L = (0, o.U)(t, I),
-        j = (0, m.C)(t),
-        k = (0, f.SO)(D),
-        { shouldHideGuildPurchaseEntryPoints: M } = (0, l.uP)(n),
+        x = (0, o.U)(t, I),
+        M = (0, m.C)(t),
+        j = (0, f.SO)(D),
+        { shouldHideGuildPurchaseEntryPoints: k } = (0, l.uP)(n),
         U = (0, m.k)(t),
         G = (0, E.Z)({
             guildId: n,
             guildProductListingId: t.id,
             sourceAnalyticsLocations: O,
         });
-    if (null == D || M) return null;
+    if (null == D || k) return null;
     let B = () =>
             (0, b.e)({
                 guildId: n,
@@ -96,13 +96,13 @@ function T(e) {
         H = (0, r.jsx)(g.m, {
             product: t,
             guildId: n,
-            showEditProduct: k,
+            showEditProduct: j,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: k ? Z : () => {},
+            onEditProduct: j ? Z : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: F,
@@ -112,13 +112,13 @@ function T(e) {
     return (0, r.jsx)(
         h.Z,
         {
-            imageUrl: L,
+            imageUrl: x,
             name: t.name,
             description: t.description,
             formattedPrice: U,
-            role: x,
+            role: L,
             ctaComponent: (0, r.jsx)(a.zxk, v({}, G)),
-            productType: j,
+            productType: M,
             shouldShowFullDescriptionButton: T,
             onShowFullDescription: B,
             onTapCard: B,

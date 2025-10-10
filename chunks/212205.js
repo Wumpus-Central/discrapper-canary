@@ -1,71 +1,71 @@
-e.d(n, { Z: () => o });
-var i = e(951288);
-e(647438);
-var r = e(442837),
-    l = e(481060),
-    s = e(914010),
-    a = e(362658),
-    d = e(981631),
-    u = e(388032);
-function o(t) {
-    let n = (0, r.e7)([s.Z], () => s.Z.getGuildId()),
-        o = t.type === d.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: c } = (0, a.z)("useChannelFavoriteSetNickname");
-    return __OVERLAY__ || n !== d.I_8
+t.d(n, { Z: () => c });
+var i = t(951288);
+t(647438);
+var r = t(442837),
+    l = t(481060),
+    a = t(914010),
+    s = t(362658),
+    o = t(981631),
+    d = t(388032);
+function c(e) {
+    let n = (0, r.e7)([a.Z], () => a.Z.getGuildId()),
+        c = e.type === o.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: u } = (0, s.z)("useChannelFavoriteSetNickname");
+    return __OVERLAY__ || n !== o.I_8
         ? null
         : (0, i.jsx)(l.sNh, {
               id: "set-channel-nickname",
-              label: c && o ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
+              label: u && c ? d.intl.string(d.t.xXYKiI) : d.intl.string(d.t.dilOFx),
               action: function () {
                   (0, l.ZDy)(async () => {
-                      let { default: n } = await e.e("46161").then(e.bind(e, 238716));
-                      return (e) => {
+                      let { default: n } = await t.e("46161").then(t.bind(t, 238716));
+                      return (t) => {
                           var r, l;
                           return (0, i.jsx)(
                               n,
-                              ((r = (function (t) {
+                              ((r = (function (e) {
                                   for (var n = 1; n < arguments.length; n++) {
-                                      var e = null != arguments[n] ? arguments[n] : {},
-                                          i = Object.keys(e);
+                                      var t = null != arguments[n] ? arguments[n] : {},
+                                          i = Object.keys(t);
                                       "function" == typeof Object.getOwnPropertySymbols &&
                                           (i = i.concat(
-                                              Object.getOwnPropertySymbols(e).filter(function (t) {
-                                                  return Object.getOwnPropertyDescriptor(e, t).enumerable;
+                                              Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                               }),
                                           )),
                                           i.forEach(function (n) {
                                               var i;
-                                              (i = e[n]),
-                                                  n in t
-                                                      ? Object.defineProperty(t, n, {
+                                              (i = t[n]),
+                                                  n in e
+                                                      ? Object.defineProperty(e, n, {
                                                             value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0,
                                                         })
-                                                      : (t[n] = i);
+                                                      : (e[n] = i);
                                           });
                                   }
-                                  return t;
-                              })({}, e)),
+                                  return e;
+                              })({}, t)),
                               (l = l =
                                   {
-                                      channelId: t.id,
-                                      heading: c && o ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
-                                      formTitle: c && o ? u.intl.string(u.t.OCAkGB) : u.intl.string(u.t["621LJC"]),
-                                      allowReset: !(c && o),
+                                      channelId: e.id,
+                                      heading: u && c ? d.intl.string(d.t.xXYKiI) : d.intl.string(d.t.dilOFx),
+                                      formTitle: u && c ? d.intl.string(d.t.OCAkGB) : d.intl.string(d.t["621LJC"]),
+                                      allowReset: !(u && c),
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                                  : (function (t, n) {
-                                        var e = Object.keys(t);
+                                  : (function (e, n) {
+                                        var t = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var i = Object.getOwnPropertySymbols(t);
-                                            e.push.apply(e, i);
+                                            var i = Object.getOwnPropertySymbols(e);
+                                            t.push.apply(t, i);
                                         }
-                                        return e;
-                                    })(Object(l)).forEach(function (t) {
-                                        Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(l, t));
+                                        return t;
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               r),
                           );

@@ -71,14 +71,14 @@ function C(e) {
                     D(!1), u();
                 }));
     }, [u, P, t.guildId, t.soundId]);
-    let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
-        j = x === y.y.JOIN_GUILD,
-        k = !E && w,
-        M = i.useMemo(
+    let { buttonType: L, description: x } = (0, y.Z)(t, n, v, C),
+        M = L === y.y.JOIN_GUILD,
+        j = !E && w,
+        k = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
             [O, v, C],
         );
-    return k
+    return j
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)("div", {
               className: S.infoContainer,
@@ -97,11 +97,11 @@ function C(e) {
                                   }),
                                   (0, r.jsx)(o.xvT, {
                                       variant: "text-sm/normal",
-                                      children: L,
+                                      children: x,
                                   }),
                               ],
                           }),
-                          null != M &&
+                          null != k &&
                               (0, r.jsxs)("div", {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
@@ -114,13 +114,13 @@ function C(e) {
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: M,
+                                              expressionSourceGuild: k,
                                               hasJoinedExpressionSourceGuild: v,
-                                              isDisplayingJoinGuildButtonInPopout: j,
+                                              isDisplayingJoinGuildButtonInPopout: M,
                                           }),
                                       }),
                                       (0, r.jsx)(A, {
-                                          buttonType: x,
+                                          buttonType: L,
                                           discoverableGuildId: null == C ? void 0 : C.id,
                                           closePopout: l,
                                       }),

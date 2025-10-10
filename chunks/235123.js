@@ -38,8 +38,8 @@ function h(e, t, n) {
         w = -1;
     T || (!R && P) || (w = 0);
     let D = (0, s.z)(h.props),
-        x = (0, l.fU)(h.props),
-        { focusableProps: L } = (0, d.kc)({ isDisabled: T }, n);
+        L = (0, l.fU)(h.props),
+        { focusableProps: x } = (0, d.kc)({ isDisabled: T }, n);
     return {
         removeButtonProps: {
             "aria-label": m.format("removeButtonLabel"),
@@ -48,7 +48,7 @@ function h(e, t, n) {
             id: g,
             onPress: () => (E ? E(new Set([h.key])) : null),
         },
-        rowProps: (0, c.d)(L, b, D, x, {
+        rowProps: (0, c.d)(x, b, D, L, {
             tabIndex: w,
             onKeyDown: E ? S : void 0,
             "aria-describedby": N["aria-describedby"],

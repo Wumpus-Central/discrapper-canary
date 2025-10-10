@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var a = n(780384),
     r = n(410030),
     i = n(291175),
@@ -88,7 +88,7 @@ let E = {
             light: C.Z,
         },
     };
-function N() {
+function T() {
     let e = (0, l.Z)(),
         t = (0, a.wj)((0, r.ZP)());
     if (!e) return null;

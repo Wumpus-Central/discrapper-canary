@@ -1,26 +1,26 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(786920),
+    l = n(137317),
     s = n(442837),
     a = n(692547),
     o = n(215569),
     c = n(780384),
     d = n(481060),
     u = n(410030),
-    m = n(367907),
-    g = n(626135),
+    g = n(367907),
+    m = n(626135),
     p = n(585483),
     f = n(999382),
     h = n(743475),
-    b = n(983135),
-    x = n(8426),
+    x = n(983135),
+    b = n(8426),
     j = n(969632),
-    v = n(570961),
-    _ = n(208665),
-    O = n(359191),
-    y = n(84658),
-    C = n(142961),
+    _ = n(570961),
+    v = n(208665),
+    C = n(359191),
+    O = n(84658),
+    y = n(142961),
     N = n(232764),
     E = n(729311),
     I = n(966301),
@@ -28,7 +28,7 @@ var r = n(951288),
     T = n(981631),
     P = n(388032),
     w = n(982086);
-function R(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,27 +71,27 @@ function D(e, t) {
         e
     );
 }
-function Z() {
+function D() {
     let e = (0, s.e7)([f.Z], () => f.Z.getGuild());
     return null == e ? null : (0, r.jsx)(A, { guild: e });
 }
 function A(e) {
     let { guild: t } = e,
         f = t.id,
-        Z = (0, s.e7)([O.Z], () => O.Z.getCurrentPage()),
-        A = (0, C.Z)(f),
+        D = (0, s.e7)([C.Z], () => C.Z.getCurrentPage()),
+        A = (0, y.Z)(f),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: k,
             hasErrors: G,
-        } = (0, s.cj)([O.Z], () => ({
-            hasChanges: O.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: O.Z.hasErrors(),
+        } = (0, s.cj)([C.Z], () => ({
+            hasChanges: C.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: C.Z.hasErrors(),
         })),
-        M = (0, s.e7)([O.Z], () => {
-            let e = (0, y.lg)(Z);
-            return null != e && !O.Z.isEducationUpsellDismissed(e);
+        M = (0, s.e7)([C.Z], () => {
+            let e = (0, O.lg)(D);
+            return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
         U = (0, u.ZP)(),
         B = i.useRef(null),
@@ -116,31 +116,31 @@ function A(e) {
         );
     }, [H]);
     let z = (0, d.dQu)(a.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        V = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        W = (0, c.wj)(U) ? z : V,
+        W = (0, d.dQu)(a.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        V = (0, c.wj)(U) ? z : W,
         K = F.to({
             range: [0, 1],
-            output: [W, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()],
+            output: [V, (0, d.dQu)(a.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
-        if (Z === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
-        else if (Z === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
-        else if (Z === y.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
-        else if ((Z === y.PG.LANDING || Z === y.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
+        if (D === O.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
+        else if (D === O.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
+        else if (D === O.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
+        else if ((D === O.PG.LANDING || D === O.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
     }
-    let Y = Z === y.xh[y.xh.length - 1],
+    let Y = D === O.xh[O.xh.length - 1],
         q = async () => {
-            let e = _.Z.advancedMode;
+            let e = v.Z.advancedMode;
             if (L)
                 try {
-                    if (Z === y.PG.DEFAULT_CHANNELS)
+                    if (D === O.PG.DEFAULT_CHANNELS)
                         await (0, h.DO)(t).then(() =>
-                            e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                            e ? (0, _.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (Z === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (Z === y.PG.HOME_SETTINGS) {
+                    else if (D === O.PG.CUSTOMIZATION_QUESTIONS) await (0, _.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (D === O.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
-                        await (0, x.oo)(t.id, e);
+                        await (0, b.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
@@ -148,37 +148,37 @@ function A(e) {
             return !0;
         },
         X = async () => {
-            g.default.track(
+            m.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                D(R({}, (0, m.hH)(f)), {
-                    step: y.PG[Z],
+                R(Z({}, (0, g.hH)(f)), {
+                    step: O.PG[D],
                     back: !1,
                     skip: !L,
                 }),
             ),
-                (0, b.Nb)((0, y.lg)(Z)),
-                (await q()) && (0, b.IG)(f, Z);
+                (0, x.Nb)((0, O.lg)(D)),
+                (await q()) && (0, x.IG)(f, D);
         },
-        Q = async () => {
-            g.default.track(
+        J = async () => {
+            m.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                D(R({}, (0, m.hH)(f)), {
-                    step: y.PG[Z],
+                R(Z({}, (0, g.hH)(f)), {
+                    step: O.PG[D],
                     back: !0,
                     skip: !1,
                 }),
             ),
-                (await q()) && (0, b.Wy)(f, Z);
+                (await q()) && (0, x.Wy)(f, D);
         },
-        J = null;
+        Q = null;
     M &&
-        (Z === y.PG.SAFETY_CHECK
-            ? (J = (0, r.jsx)(N.j7, {}))
-            : Z === y.PG.DEFAULT_CHANNELS
-              ? (J = (0, r.jsx)(N.Io, {}))
-              : Z === y.PG.CUSTOMIZATION_QUESTIONS
-                ? (J = (0, r.jsx)(N.cZ, {}))
-                : Z === y.PG.HOME_SETTINGS && (J = (0, r.jsx)(N.g6, {})));
+        (D === O.PG.SAFETY_CHECK
+            ? (Q = (0, r.jsx)(N.j7, {}))
+            : D === O.PG.DEFAULT_CHANNELS
+              ? (Q = (0, r.jsx)(N.Io, {}))
+              : D === O.PG.CUSTOMIZATION_QUESTIONS
+                ? (Q = (0, r.jsx)(N.cZ, {}))
+                : D === O.PG.HOME_SETTINGS && (Q = (0, r.jsx)(N.g6, {})));
     let $ = (0, r.jsx)("div", {
             className: M ? w.hidden : void 0,
             children: (0, r.jsx)(d.zxk, {
@@ -187,7 +187,7 @@ function A(e) {
                 text: P.intl.string(P.t["13/7kZ"]),
                 icon: d.whL,
                 iconPosition: "start",
-                onClick: Q,
+                onClick: J,
                 disabled: M || G,
             }),
         }),
@@ -222,7 +222,7 @@ function A(e) {
                                       }),
                                       (0, r.jsxs)("div", {
                                           className: w.educationUpsell,
-                                          children: [J, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
+                                          children: [Q, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
                                       }),
                                   ],
                               })

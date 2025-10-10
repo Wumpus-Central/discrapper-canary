@@ -1233,7 +1233,7 @@ Object.freeze({
     "profile-gradient-role-pill-border": [r.I.WHITE, r.I.PRIMARY_660, r.I.WHITE, r.I.WHITE],
     "profile-gradient-section-box": [r.I.BLACK, r.I.WHITE, r.I.BLACK, r.I.BLACK],
     "radio-background-active": [r.I.BLURPLE_50, r.I.BLURPLE_50, r.I.BLURPLE_50, r.I.BLURPLE_50],
-    "radio-background-default": [r.I.OPACITY_BLACK_8, r.I.OPACITY_WHITE_4, r.I.OPACITY_BLACK_8, r.I.OPACITY_BLACK_8],
+    "radio-background-default": [r.I.OPACITY_BLACK_8, r.I.OPACITY_BLACK_4, r.I.OPACITY_BLACK_8, r.I.OPACITY_BLACK_8],
     "radio-background-default-selected": [r.I.BLURPLE_50, r.I.BLURPLE_50, r.I.BLURPLE_50, r.I.BLURPLE_50],
     "radio-background-hover": [r.I.OPACITY_BLACK_8, r.I.OPACITY_4, r.I.OPACITY_BLACK_8, r.I.OPACITY_BLACK_8],
     "radio-background-hover-selected": [r.I.BLURPLE_60, r.I.BLURPLE_60, r.I.BLURPLE_60, r.I.BLURPLE_60],

@@ -1,34 +1,34 @@
-n.d(t, { v: () => l }), n(953529);
-var r = n(951288);
+n.d(t, { v: () => o }), n(953529);
+var a = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(921944),
-    o = n(388032),
+var r = n(481060),
+    i = n(921944),
+    l = n(388032),
     s = n(820762);
-function l(e) {
+function o(e) {
     let { markAsDismissed: t, onCTA: n } = e;
-    return (0, r.jsx)("div", {
+    return (0, a.jsx)("div", {
         className: s.popup,
-        children: (0, r.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
             className: s.content,
             children: [
-                (0, r.jsx)(i.P3F, {
+                (0, a.jsx)(r.P3F, {
                     className: s.closeIcon,
-                    onClick: () => t(a.L.USER_DISMISS),
-                    children: (0, r.jsx)(i.Dio, { size: "xs" }),
+                    onClick: () => t(i.L.USER_DISMISS),
+                    children: (0, a.jsx)(r.Dio, { size: "xs" }),
                 }),
-                (0, r.jsx)(i.Text, {
+                (0, a.jsx)(r.Text, {
                     className: s.description,
                     variant: "text-md/normal",
-                    children: o.intl.string(o.t["Ny/0ur"]),
+                    children: l.intl.string(l.t["Ny/0ur"]),
                 }),
-                (0, r.jsx)(i.zxk, {
+                (0, a.jsx)(r.zxk, {
                     variant: "primary",
                     size: "sm",
-                    text: o.intl.string(o.t.TYo739),
+                    text: l.intl.string(l.t.TYo739),
                     fullWidth: !0,
                     onClick: () => {
-                        t(a.L.TAKE_ACTION), n();
+                        t(i.L.TAKE_ACTION), n();
                     },
                 }),
             ],

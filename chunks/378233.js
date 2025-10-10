@@ -3,14 +3,14 @@ n.d(t, {
     Hc: () => w,
     J8: () => D,
     Q6: () => C,
-    V9: () => j,
+    V9: () => M,
     WD: () => P,
     Zt: () => I,
     Zv: () => S,
     _V: () => A,
-    cv: () => L,
+    cv: () => x,
     gM: () => U,
-    jl: () => x,
+    jl: () => L,
     z: () => R,
 }),
     n(413496),
@@ -120,19 +120,19 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
     },
     D = (e) => e.type === d.n0.GUILD,
-    x = (e) => e.type === d.n0.STANDARD,
-    L = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    j = (e) => {
+    L = (e) => e.type === d.n0.STANDARD,
+    x = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
+    M = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    M = [];
+    j = [];
 function k() {
     var e, t;
     return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
         ? t
-        : M;
+        : j;
 }
 function U(e) {
     return k().includes(e);

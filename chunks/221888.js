@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(415506), n(388685);
+n.d(t, { Z: () => L }), n(415506), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -155,7 +155,7 @@ function w(e) {
     });
 }
 let D = [];
-function x(e) {
+function L(e) {
     let {
             channelId: t,
             guildId: a,
@@ -167,9 +167,9 @@ function x(e) {
         } = e,
         A = i.useRef(null),
         R = (0, p.Z)(),
-        [x, L] = i.useState(!1),
-        j = i.useRef(new u.sW(N, () => L(!1))),
-        M = (0, c.Wu)([m.Z, g.default], () => {
+        [L, x] = i.useState(!1),
+        M = i.useRef(new u.sW(N, () => x(!1))),
+        j = (0, c.Wu)([m.Z, g.default], () => {
             if (s.type === y.fO.STREAM) {
                 let e = m.Z.getViewerIds(s.id);
                 return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
@@ -181,13 +181,13 @@ function x(e) {
                 : D;
         }, [s]);
     i.useEffect(() => {
-        R && (j.current.cancel(), L(!1));
+        R && (M.current.cancel(), x(!1));
     }, [R]);
     let k = i.useCallback(() => {
-            j.current.cancel(), L(!0);
+            M.current.cancel(), x(!0);
         }, []),
         U = i.useCallback(() => {
-            j.current.delay();
+            M.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
@@ -205,17 +205,17 @@ function x(e) {
             },
             [U, k],
         );
-    if (0 === M.length) return null;
+    if (0 === j.length) return null;
     if (b)
         return (0, r.jsx)(w, {
             maxVisibleUsers: T,
-            users: M,
+            users: j,
             guildId: a,
             channelId: t,
             className: h,
             participantType: s.type,
         });
-    let B = l()(M)
+    let B = l()(j)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
@@ -231,12 +231,12 @@ function x(e) {
         )
         .value();
     return (
-        M.length > T &&
+        j.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 "div",
                 {
                     className: I.overflow,
-                    children: ["+", M.length - T + 1],
+                    children: ["+", j.length - T + 1],
                 },
                 "overflow",
             )),
@@ -253,10 +253,10 @@ function x(e) {
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: M,
+                            users: j,
                             disableInteraction: v,
                         }),
-                    shouldShow: x && !R,
+                    shouldShow: L && !R,
                     position: "top",
                     children: () =>
                         (0, r.jsx)("div", {

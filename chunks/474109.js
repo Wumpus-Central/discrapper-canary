@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(388032);
 let m = "app-download-item",
     b = "add-server-item";
-function O() {
+function _() {
     return !1;
 }
 function y(e) {
@@ -25,11 +25,11 @@ function y(e) {
         (e !== m && e !== b && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
     );
 }
-let _ = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
-    j = i.forwardRef(function (e, t) {
+let O = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
+    v = i.forwardRef(function (e, t) {
         var n, i;
         let d = (0, l.Wu)([u.ZP, c.Z, s.default], () =>
-                _(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
+                O(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
             ),
             h = (0, l.e7)([p.Z], () => p.Z.isFocused()),
             f = (0, l.e7)([a.Z], () => a.Z.getExpandedFolders());
@@ -64,7 +64,7 @@ let _ = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                 {
                     ref: t,
                     items: d,
-                    isUnread: O,
+                    isUnread: _,
                     textUnread: g.intl.string(g.t.y2b7CA),
                     textMention: g.intl.string(g.t.y2b7CA),
                     isMentioned: y,

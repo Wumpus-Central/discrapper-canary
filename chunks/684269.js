@@ -1,18 +1,18 @@
-n.d(e, { Z: () => i });
-var l = n(695346),
-    a = n(875425);
-let r = [a.FO.MINUTES_30, a.FO.HOURS_1, a.FO.HOURS_4];
-function i() {
-    var t;
-    let e = l.Ok.getSetting();
-    if (null == e || "" === e.expiresAtMs) return a.FO.TODAY;
-    let n = Number(e.expiresAtMs);
-    if (isNaN(n)) return a.FO.TODAY;
-    if (0 === n) return a.FO.DONT_CLEAR;
-    let i = new Date(),
+n.d(t, { Z: () => a });
+var r = n(695346),
+    i = n(875425);
+let l = [i.FO.MINUTES_30, i.FO.HOURS_1, i.FO.HOURS_4];
+function a() {
+    var e;
+    let t = r.Ok.getSetting();
+    if (null == t || "" === t.expiresAtMs) return i.FO.TODAY;
+    let n = Number(t.expiresAtMs);
+    if (isNaN(n)) return i.FO.TODAY;
+    if (0 === n) return i.FO.DONT_CLEAR;
+    let a = new Date(),
         o = new Date(n);
-    if (i.getFullYear() !== o.getFullYear() || i.getMonth() !== o.getMonth() || i.getDate() !== o.getDate())
-        return a.FO.TODAY;
-    let s = Number(n) - Date.now();
-    return null != (t = r.find((t) => s <= t)) ? t : a.FO.TODAY;
+    if (a.getFullYear() !== o.getFullYear() || a.getMonth() !== o.getMonth() || a.getDate() !== o.getDate())
+        return i.FO.TODAY;
+    let u = Number(n) - Date.now();
+    return null != (e = l.find((e) => u <= e)) ? e : i.FO.TODAY;
 }

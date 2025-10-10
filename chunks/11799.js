@@ -19,12 +19,12 @@ let p = () => {
         let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: h = !1, initialPageSize: f } = e,
             g = (0, i.e7)([u.Z], () => u.Z.shouldReload()),
             m = r.useRef(!1),
-            [b, O] = r.useState(!1),
+            [b, _] = r.useState(!1),
             {
                 initialized: y,
-                loading: _,
-                items: j,
-                hasMore: v,
+                loading: O,
+                items: v,
+                hasMore: j,
                 cursor: x,
                 errored: C,
             } = (0, i.cj)([c.Z], () => ({
@@ -43,12 +43,12 @@ let p = () => {
             r.useEffect(() => {
                 y && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
             }, [t, y]);
-        let P = (0, o.Z)();
+        let I = (0, o.Z)();
         r.useEffect(
             () => () => {
-                p ? !P() && (C || j.length > 100) && (0, s.jF)() : n && j.length > 100 && (0, s.jF)();
+                p ? !I() && (C || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, j, p, P, C],
+            [n, v, p, I, C],
         ),
             r.useEffect(() => {
                 let e = g && t;
@@ -60,15 +60,15 @@ let p = () => {
                         everyone_filter: S,
                     });
             }, [y, g, t, h, E, S, f]);
-        let I = r.useCallback(
+        let P = r.useCallback(
             async (e) => {
                 !m.current &&
                     y &&
-                    v &&
+                    j &&
                     null != x &&
                     (e || !C) &&
                     ((m.current = !0),
-                    O(!0),
+                    _(!0),
                     await (0, s.jk)(
                         {
                             after: x,
@@ -81,16 +81,16 @@ let p = () => {
                             m.current = !1;
                         },
                     ),
-                    O(!1));
+                    _(!1));
             },
-            [y, v, x, C, h, E, S],
+            [y, j, x, C, h, E, S],
         );
         return {
             initialized: y,
-            loading: _,
-            items: j,
-            hasMore: v,
-            loadMore: I,
+            loading: O,
+            items: v,
+            hasMore: j,
+            loadMore: P,
             loadingMore: b,
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);

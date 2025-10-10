@@ -1,6 +1,6 @@
 t.d(n, {
     GV: () => m,
-    iQ: () => x,
+    iQ: () => g,
 }),
     t(539854),
     t(388685),
@@ -41,7 +41,7 @@ async function m(e, n) {
         l()(null != t, "could not find or create channel");
     }
 }
-async function x(e) {
+async function g(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { channel_id: t, entity_type: i, name: r, id: s, guild_id: c } = e;
     switch (i) {

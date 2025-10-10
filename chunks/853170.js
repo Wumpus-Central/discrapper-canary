@@ -1,8 +1,8 @@
-n.d(t, { e: () => s });
+n.d(t, { e: () => a });
 var r = n(818083),
     i = n(751823),
-    a = n(875527);
-let o = (0, r.B)({
+    o = n(875527);
+let l = (0, r.B)({
     kind: "user",
     id: "2025-08_audio_context_menu_refresh",
     label: "Audio context menu refresh experiment",
@@ -15,17 +15,17 @@ let o = (0, r.B)({
         },
     ],
 });
-function s(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.L.useExperiment({ location: t }, { autoTrackExposure: n }),
-        s = (0, a.Hu)({
+        a = (0, o.Hu)({
             location: t,
             autoTrackExposure: !1,
         });
-    return o.useExperiment(
+    return l.useExperiment(
         { location: t },
         {
-            disable: r || s,
+            disable: r || a,
             autoTrackExposure: n,
         },
     );

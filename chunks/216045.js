@@ -29,17 +29,17 @@ var r = n(951288),
     P = n(246946),
     w = n(25990),
     D = n(594174),
-    x = n(626135),
-    L = n(74538),
-    j = n(413182),
-    M = n(695346),
+    L = n(626135),
+    x = n(74538),
+    M = n(413182),
+    j = n(695346),
     k = n(265159),
     U = n(532495),
     G = n(981631),
     B = n(921944),
     Z = n(388032),
-    V = n(391371);
-function F(e, t, n) {
+    F = n(391371);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -141,12 +141,12 @@ function Q() {
             image: l,
         }),
         B = (0, s.e7)([w.Z], () => w.Z.showNotice()),
-        F = M.dN.useSetting() && null != a ? O.ZP.parse(void 0, a).content : a,
-        Y = L.ZP.canUsePremiumProfileCustomization(e),
+        V = j.dN.useSetting() && null != a ? O.ZP.parse(void 0, a).content : a,
+        Y = x.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: z, newestAnalyticsLocation: Q } = (0, m.ZP)(h.Z.USER_SETTINGS_USER_PROFILE);
     q(), X(), i.useEffect(() => () => f.Z.wait(_.W3), []);
     let [J, $] = i.useState(!1),
-        { showRedesign: ee } = j.b.useExperiment({ location: "profile customization" }),
+        { showRedesign: ee } = M.b.useExperiment({ location: "profile customization" }),
         et = !Y,
         en = i.useRef(null);
     return t
@@ -164,7 +164,7 @@ function Q() {
                                       user: e,
                                       canUsePremiumCustomization: Y,
                                       onUpsellClick: k.Z,
-                                      pendingBio: F,
+                                      pendingBio: V,
                                   },
                                   y,
                               ),
@@ -183,7 +183,7 @@ function Q() {
                                   y,
                               ),
                               {
-                                  className: V.nameplatePreview,
+                                  className: F.nameplatePreview,
                                   isHighlighted: !0,
                               },
                           ),
@@ -208,16 +208,16 @@ function Q() {
                   et &&
                       !B &&
                       (0, r.jsx)(v.p, {
-                          className: V.floatingNitroUpsell,
+                          className: F.floatingNitroUpsell,
                           showUpsell: et && !J,
                           text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, I.y)({ analyticsSource: Q }) }),
                           textVariant: "heading-md/medium",
                           button: (0, r.jsxs)(d.gtL, {
-                              className: V.floatingNitroButton,
-                              innerClassName: V.floatingNitroButtonInner,
+                              className: F.floatingNitroButton,
+                              innerClassName: F.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  x.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  L.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == en ||

@@ -1,19 +1,19 @@
-n.d(t, { Z: () => s });
-var a = n(951288);
-n(647438);
-var l = n(481060),
-    r = n(906732),
-    i = n(453925),
-    o = n(821564),
-    c = n(632304);
-function s() {
-    let { analyticsLocations: e } = (0, r.ZP)();
+e.d(t, { Z: () => a });
+var l = e(951288);
+e(647438);
+var i = e(481060),
+    r = e(906732),
+    o = e(453925),
+    u = e(821564),
+    c = e(632304);
+function a() {
+    let { analyticsLocations: n } = (0, r.ZP)();
     return [
-        (0, a.jsx)(l.kSQ, { children: (0, o.Z)(e) }, "input-mode-items"),
-        (0, a.jsxs)(
-            l.kSQ,
+        (0, l.jsx)(i.kSQ, { children: (0, u.Z)(n) }, "input-mode-items"),
+        (0, l.jsxs)(
+            i.kSQ,
             {
-                children: [(0, i.Z)(e), (0, c.Z)(e)],
+                children: [(0, o.Z)(n), (0, c.Z)(n)],
             },
             "input-output",
         ),

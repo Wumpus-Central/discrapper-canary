@@ -1,31 +1,31 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => r });
 var l = n(951288);
 n(647438);
-var r = n(325767);
-function a(e) {
+var a = n(325767);
+function r(e) {
     var t,
         n,
-        { width: a = 24, height: i = 24, color: o = "currentColor", foreground: c } = e,
-        s = (function (e, t) {
+        { width: r = 24, height: i = 24, color: o = "currentColor", foreground: s } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
-                r = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         l,
-                        r = {},
-                        a = Object.keys(e);
-                    for (l = 0; l < a.length; l++) (n = a[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                        a = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < a.length; l++)
-                    (n = a[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return r;
+            return a;
         })(e, ["width", "height", "color", "foreground"]);
     return (0, l.jsx)(
         "svg",
@@ -53,15 +53,15 @@ function a(e) {
                     });
             }
             return e;
-        })({}, (0, r.Z)(s))),
+        })({}, (0, a.Z)(c))),
         (n = n =
             {
-                width: a,
+                width: r,
                 height: i,
                 viewBox: "0 0 18 20",
                 children: (0, l.jsx)("path", {
                     fill: o,
-                    className: c,
+                    className: s,
                     fillRule: "evenodd",
                     clipRule: "evenodd",
                     d: "M8.17187 0H9.83854V0.833333H8.17187V0ZM8.17324 0.833419V1.75009H9.83991V0.833419H8.17324ZM8.17324 4.16662V5.41675H9.83991V4.16662H11.5066V5.83325H15.6719V14.1666H11.5066V15.8333H16.5052C16.9654 15.8333 17.3385 15.4602 17.3385 14.9999V4.99992C17.3385 4.53968 16.9654 4.16659 16.5052 4.16659H9.83991V3.58342H8.17324V4.16659H1.50521C1.04497 4.16659 0.671875 4.53968 0.671875 4.99992V14.9999C0.671875 15.4602 1.04497 15.8333 1.50521 15.8333H6.50658V14.1666H2.33854V5.83325H6.50658V4.16662H8.17324ZM8.17324 7.25008V9.08342H9.83991V7.25008H8.17324ZM8.17324 10.9167V12.7501H9.83991V10.9167H8.17324ZM8.17324 14.5834V16.4167H9.83991V14.5834H8.17324ZM9.83854 19.1668V20H8.17187V19.1667H8.17324V18.2501H9.83991V19.1668H9.83854Z",

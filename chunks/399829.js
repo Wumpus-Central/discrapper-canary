@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -282,7 +282,7 @@ class w extends i.Component {
             );
     }
 }
-let R = c.ZP.connectStores([C.Z, h.Z, f.Z, _.Z, O.default, v.ZP], () => {
+let Z = c.ZP.connectStores([C.Z, h.Z, f.Z, _.Z, O.default, v.ZP], () => {
     var e, t;
     let n = f.Z.getGuildId(),
         r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : E.Eu4.NONE,

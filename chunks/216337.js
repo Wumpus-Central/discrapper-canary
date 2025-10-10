@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(607070),
@@ -18,30 +18,30 @@ let f = () =>
                 let { default: t } = e;
                 return t;
             }),
-    m = i.memo(function (e) {
+    m = r.memo(function (e) {
         let { channel: t, isLastItem: n } = e,
-            i = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+            r = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
             m = (0, l.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
             g = (0, s.Gu)(t),
             b = (0, l.e7)([c.default], () => c.default.getId());
         return n
             ? m && !g && t.ownerId !== b
-                ? (0, r.jsxs)("div", {
+                ? (0, i.jsxs)("div", {
                       className: h.box,
                       children: [
-                          (0, r.jsx)(a.Fmz, {
+                          (0, i.jsx)(a.Fmz, {
                               importData: f,
-                              shouldAnimate: !i,
+                              shouldAnimate: !r,
                               className: h.animation,
                           }),
-                          (0, r.jsxs)("div", {
+                          (0, i.jsxs)("div", {
                               className: h.textContainer,
                               children: [
-                                  (0, r.jsx)(a.X6q, {
+                                  (0, i.jsx)(a.X6q, {
                                       variant: "heading-md/semibold",
                                       children: p.intl.string(p.t.OmBThI),
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: "text-sm/normal",
                                       color: "header-secondary",
                                       children: p.intl.string(p.t.zcs5kp),
@@ -51,5 +51,5 @@ let f = () =>
                       ],
                   })
                 : null
-            : (0, r.jsx)("div", { className: h.divider });
+            : (0, i.jsx)("div", { className: h.divider });
     });

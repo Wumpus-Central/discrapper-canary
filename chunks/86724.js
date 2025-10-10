@@ -84,13 +84,13 @@ function C(e, t, n, r) {
         (e.isInline = (e) => !!T.has(e.type) || d(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && S.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            j(e, () => p(t));
+            M(e, () => p(t));
         }),
         (e.deleteForward = (t) => {
-            j(e, () => h(t));
+            M(e, () => h(t));
         }),
         (e.deleteFragment = (t) => {
-            j(e, () => m(t));
+            M(e, () => m(t));
         });
     let E = null,
         b = null,
@@ -148,7 +148,7 @@ function N(e) {
             commandChanged: d,
             previousOptionValues: f,
         } = e,
-        { command: _, commandText: p } = L(i),
+        { command: _, commandText: p } = x(i),
         h = o.activeCommand;
     if (
         (!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) ||
@@ -167,7 +167,7 @@ function N(e) {
             let e = R(i, s, o),
                 t = m.tM(i, h, s.id);
             return (
-                x({
+                L({
                     guildId: s.guild_id,
                     channelId: s.id,
                     command: h,
@@ -195,7 +195,7 @@ function N(e) {
         let e = y.bN.richValue(i)[0],
             t = e.children[0];
         if (A.has(e.type) && y.LC.isText(t)) {
-            let e = M(t.text, s);
+            let e = j(t.text, s);
             if (null != e)
                 return (
                     a.Po({
@@ -216,7 +216,7 @@ function N(e) {
             }),
             r = null != (n = null == t ? void 0 : t[0].optionName) ? n : null;
         return (
-            x({
+            L({
                 guildId: s.guild_id,
                 channelId: s.id,
                 command: h,
@@ -420,7 +420,7 @@ function D(e, t) {
         !0)
     );
 }
-function x(e) {
+function L(e) {
     let {
         guildId: t,
         channelId: n,
@@ -467,7 +467,7 @@ function x(e) {
     }
     h && a.g7(n, _);
 }
-function L(e) {
+function x(e) {
     let t = m.cr(e);
     if (null == t)
         return {
@@ -486,12 +486,12 @@ function L(e) {
               commandText: null,
           };
 }
-function j(e, t) {
+function M(e, t) {
     let n = m.cu(e)[0];
     t();
     let r = y.M8.toPoint(e.selection);
     if (null == r || n === m.cu(e)[0]) return;
-    let { command: i, commandText: a } = L(e);
+    let { command: i, commandText: a } = x(e);
     !(null == i || null == a || a.endsWith(" ")) &&
         y.Jz.equals(r, {
             path: O.u9,
@@ -499,7 +499,7 @@ function j(e, t) {
         }) &&
         b.Q.insertText(e, " ");
 }
-function M(e, t) {
+function j(e, t) {
     if (!e.startsWith("/")) return null;
     let n = (0, f.hV)(t, e.substring(1));
     if (!n.hasSpaceTerminator) return null;

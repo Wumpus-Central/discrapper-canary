@@ -41,14 +41,14 @@ function i(e, t) {
         e
     );
 }
-function r(e, t) {
-    var n, r, s, a, o, u, d;
+function s(e, t) {
+    var n, s, r, a, o, u, d;
     let c = i(
         l(
             i(
                 l(
                     {
-                        max_uses: null != (s = e.maxUses) ? s : null,
+                        max_uses: null != (r = e.maxUses) ? r : null,
                         max_age: null != (a = e.maxAge) ? a : null,
                         temporary: null != (o = e.temporary) ? o : null,
                     },
@@ -56,7 +56,7 @@ function r(e, t) {
                 ),
                 { target_type: null != (u = e.targetType) ? u : null },
             ),
-            (null == (r = e.targetApplication) ? void 0 : r.id) == null
+            (null == (s = e.targetApplication) ? void 0 : s.id) == null
                 ? {}
                 : { target_application_id: e.targetApplication.id },
         ),
@@ -65,4 +65,4 @@ function r(e, t) {
     for (let e of Object.keys(t)) if (t[e] !== c[e]) return !1;
     return !0;
 }
-n.d(t, { m: () => r }), n(997841), n(388685);
+n.d(t, { m: () => s }), n(997841), n(388685);

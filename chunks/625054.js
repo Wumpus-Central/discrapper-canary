@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(525654),
     i = n.n(r),
     l = n(643191);
-let o = {
+let s = {
     dump(e) {
         let t;
         null != performance.memory &&

@@ -1,23 +1,23 @@
-i.d(t, { s: () => r });
-var n = i(951288);
-i(647438);
-var a = i(481060),
-    l = i(621145),
-    o = i(388032),
-    s = i(945052);
+n.d(t, { s: () => r });
+var i = n(951288);
+n(647438);
+var a = n(481060),
+    l = n(621145),
+    o = n(388032),
+    s = n(945052);
 let r = (e) => {
     let { flaggedContent: t } = e;
     return 0 === t.length
         ? null
-        : (0, n.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: s.classificationEvidenceContainer,
               children: [
-                  (0, n.jsx)(a.Text, {
+                  (0, i.jsx)(a.Text, {
                       variant: "eyebrow",
                       color: "text-muted",
                       children: o.intl.string(o.t.s64CMj),
                   }),
-                  (0, n.jsx)(l.Z, { flaggedContent: t }),
+                  (0, i.jsx)(l.Z, { flaggedContent: t }),
               ],
           });
 };

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(951288),
     l = n(647438),
-    i = n(979554),
+    s = n(979554),
     a = n(399606),
-    s = n(780384),
+    i = n(780384),
     o = n(481060),
     c = n(410030),
     u = n(594174),
@@ -11,8 +11,8 @@ var r = n(951288),
     g = n(381585),
     p = n(597688),
     f = n(128922),
-    h = n(370039),
-    C = n(937510),
+    C = n(370039),
+    h = n(937510),
     _ = n(303952),
     m = n(38900),
     b = n(709999),
@@ -21,39 +21,39 @@ var r = n(951288),
     v = n(215023),
     x = n(981631),
     O = n(388032),
-    T = n(887353),
-    y = n(558513),
+    y = n(887353),
+    T = n(558513),
     L = n(662128),
     j = n(676790),
     k = n(665195),
     I = n(42742),
     P = n(283727),
     N = n(266058),
-    A = n(719138);
-function B(e) {
+    B = n(719138);
+function A(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: B, scrollerRef: R, tab: Z } = e,
+    let { isFetchingCategories: n, isFullScreen: A, scrollerRef: R, tab: Z } = e,
         w = (0, g.sp)(),
-        F = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: M, includeUnpublished: H } = (0, S.Z)(),
-        D = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
+        { noCache: F, includeUnpublished: D } = (0, S.Z)(),
+        M = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         W = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [U, V] = l.useState(1),
         z = (0, c.Fg)(),
-        G = (0, s.ap)(z),
-        [q, K, Y] = l.useMemo(() => {
+        G = (0, i.ap)(z),
+        [K, q, Y] = l.useMemo(() => {
             switch (Z) {
                 case v.AW.AVATAR_DECORATIONS:
-                    return [O.intl.string(O.t.dRZYND), G ? k.Z : j.Z, i.Z.AVATAR_DECORATION];
+                    return [O.intl.string(O.t.dRZYND), G ? k.Z : j.Z, s.Z.AVATAR_DECORATION];
                 case v.AW.PROFILE_EFFECTS:
-                    return [O.intl.string(O.t["1cNjt7"]), G ? A.Z : N.Z, i.Z.PROFILE_EFFECT];
+                    return [O.intl.string(O.t["1cNjt7"]), G ? B.Z : N.Z, s.Z.PROFILE_EFFECT];
                 case v.AW.NAMEPLATES:
-                    return [O.intl.string(O.t.V68Fq6), G ? P.Z : I.Z, i.Z.NAMEPLATE];
+                    return [O.intl.string(O.t.V68Fq6), G ? P.Z : I.Z, s.Z.NAMEPLATE];
                 case v.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFppq), G ? L.Z : y.Z, i.Z.BUNDLE];
+                    return [O.intl.string(O.t.FYFppq), G ? L.Z : T.Z, s.Z.BUNDLE];
             }
         }, [Z, G]),
-        X = (0, h.a)(),
+        X = (0, C.a)(),
         Q = l.useMemo(
             () =>
                 X(
@@ -61,50 +61,50 @@ function B(e) {
                         var t;
                         return (
                             e.type === Y ||
-                            (e.type === i.Z.VARIANTS_GROUP &&
+                            (e.type === s.Z.VARIANTS_GROUP &&
                                 (null == (t = e.variants) ? void 0 : t.some((e) => e.type === Y)) === !0)
                         );
                     }),
                 ),
             [W, Y, X],
         ),
-        J = (0, C.l)(Q);
+        J = (0, h.l)(Q);
     l.useEffect(() => {
         (0, _.n)({
-            sessionId: F,
+            sessionId: H,
             checkpoint: _.a.SHOP_MOUNTED,
             tab: Z,
-            isFullScreen: B,
-            unpublishedCategoriesShown: H,
-            cacheDisabled: M,
+            isFullScreen: A,
+            unpublishedCategoriesShown: D,
+            cacheDisabled: F,
         });
     }, []),
         l.useEffect(() => {
             n ||
                 (0, _.n)({
-                    sessionId: F,
+                    sessionId: H,
                     checkpoint: _.a.SHOP_RENDERED,
                     tab: Z,
-                    isFullScreen: B,
-                    unpublishedCategoriesShown: H,
-                    cacheDisabled: M,
+                    isFullScreen: A,
+                    unpublishedCategoriesShown: D,
+                    cacheDisabled: F,
                 });
-        }, [F, B, H, M, n, Z]);
+        }, [H, A, D, F, n, Z]);
     let $ = f.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
-    return n || null == D
+    return n || null == M
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
-                      style: { backgroundImage: "url(".concat(K, ")") },
-                      className: T.bannerContainer,
+                      style: { backgroundImage: "url(".concat(q, ")") },
+                      className: y.bannerContainer,
                       children: (0, r.jsx)(o.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: q,
+                          children: K,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: T.products,
+                      className: y.products,
                       children: J.slice(40 * (U - 1), 40 * U).map((e, t) => {
                           let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
@@ -119,7 +119,7 @@ function B(e) {
                                                   b.Z,
                                                   {
                                                       product: e,
-                                                      user: D,
+                                                      user: M,
                                                       category: n,
                                                       tab: Z,
                                                   },
@@ -132,7 +132,7 @@ function B(e) {
                   }),
                   J.length > 40 &&
                       (0, r.jsx)("div", {
-                          className: T.paginationContainer,
+                          className: y.paginationContainer,
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(o.DsT, {
                                   currentPage: U,

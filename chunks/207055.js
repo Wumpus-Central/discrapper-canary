@@ -1,6 +1,6 @@
 n.d(t, { Z: () => U }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -14,8 +14,8 @@ var r = n(951288),
     m = n(574176),
     g = n(106301),
     b = n(882522),
-    y = n(512384),
-    C = n(763624),
+    C = n(512384),
+    y = n(763624),
     _ = n(463421),
     v = n(470956),
     x = n(597998),
@@ -32,9 +32,9 @@ var r = n(951288),
     w = n(262317),
     M = n(981631),
     R = n(524484),
-    k = n(106252);
-let L = i.memo((e) => {
-    var t, n, i, l;
+    k = n(968080);
+let L = r.memo((e) => {
+    var t, n, r, l;
     let { mute: a, deaf: s, user: x, channel: P, sessionId: I, nick: k } = e,
         L = x.id,
         D = (0, o.e7)([j.default], () => j.default.getId() === L, [L]),
@@ -78,42 +78,42 @@ let L = i.memo((e) => {
             location: "VoiceUsers",
         }),
         en = (0, f.ZP)(P, !0, x),
-        er = (0, o.e7)([g.Z], () => (D ? g.Z.getHangStatusActivity() : null), [D]),
-        ei = (0, b.j)(L),
+        ei = (0, o.e7)([g.Z], () => (D ? g.Z.getHangStatusActivity() : null), [D]),
+        er = (0, b.j)(L),
         el = (0, v.Eu)(P.id, L),
-        { enableVCStatusIcons: ea, enableRequestToStream: eo } = C.A.useExperiment(
+        { enableVCStatusIcons: ea, enableRequestToStream: eo } = y.A.useExperiment(
             {
                 guildId: P.guild_id,
                 location: "VoiceUsers",
             },
             { autoTrackExposure: (null == Y ? void 0 : Y.session_id) != null },
         );
-    return (0, r.jsx)(y.Z, {
+    return (0, i.jsx)(C.Z, {
         shakeLocation: R.oZ.VOICE_USER,
         isShaking: F,
-        children: (0, r.jsx)(
+        children: (0, i.jsx)(
             w.ZP,
-            ((i = (function (e) {
+            ((r = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
@@ -139,22 +139,22 @@ let L = i.memo((e) => {
                     isSelf: D,
                     requestToStreamActivity: eo ? Y : void 0,
                     application: (ea || et) && (null == Y ? void 0 : Y.session_id) != null ? K : void 0,
-                    showHangStatus: en && et && (D || null != ei),
-                    hangStatusActivity: D ? er : ei,
+                    showHangStatus: en && et && (D || null != er),
+                    hangStatusActivity: D ? ei : er,
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
                   })(Object(l)).forEach(function (e) {
-                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                   }),
-            i),
+            r),
         ),
     });
 });
@@ -172,30 +172,30 @@ let D = [],
                 location: m,
                 numAudience: g,
                 withGuildIcon: b = !1,
-                className: y,
-                children: C,
+                className: C,
+                children: y,
             } = e,
-            [_, O] = i.useState(null),
-            [E, S] = i.useState(!1),
-            Z = i.useRef(null),
+            [_, O] = r.useState(null),
+            [E, S] = r.useState(!1),
+            Z = r.useRef(null),
             T = (0, v.Es)(l.id, null != c ? c : D),
-            N = i.useRef(
+            N = r.useRef(
                 new s.sW(50, () => {
                     O(Z.current), (Z.current = null);
                 }),
             ),
-            A = i.useRef(
+            A = r.useRef(
                 new s.sW(175, () => {
                     O(null);
                 }),
             ),
-            R = i.useCallback(
+            R = r.useCallback(
                 (e) => {
                     t && (S(!0), A.current.cancel(), (Z.current = e), N.current.delay());
                 },
                 [t],
             ),
-            U = i.useCallback(
+            U = r.useCallback(
                 (e) => {
                     t && (N.current.cancel(), _ === e && (S(!1), A.current.delay()));
                 },
@@ -220,11 +220,11 @@ let D = [],
             if (null == T || 0 === T.length) return null;
             let e = u && T.length > d + 1 ? T.slice(0, d) : T,
                 t = h.Z.getGuildRingingUsers(l.id),
-                i = e.map((e) => {
-                    var i;
+                r = e.map((e) => {
+                    var r;
                     let { user: a, nick: o, voiceState: s } = e,
                         c = t.has(a.id);
-                    return (0, r.jsx)(
+                    return (0, i.jsx)(
                         L,
                         {
                             user: a,
@@ -235,7 +235,7 @@ let D = [],
                             video: s.selfVideo,
                             serverMute: s.mute,
                             serverDeaf: s.deaf,
-                            sessionId: null != (i = s.sessionId) ? i : "",
+                            sessionId: null != (r = s.sessionId) ? r : "",
                             channel: l,
                             collapsed: u,
                             canDrag: n && P.Z.can(M.Plq.MOVE_MEMBERS, l),
@@ -251,24 +251,24 @@ let D = [],
                 });
             return (
                 null != g && g > 0
-                    ? i.push(
-                          (0, r.jsx)(w.ul, {
+                    ? r.push(
+                          (0, i.jsx)(w.ul, {
                               collapsed: u,
                               numAudience: g,
                           }),
                       )
-                    : u && T.length > d + 1 && i.push((0, r.jsx)(w.XX, { numUsers: T.length - d })),
-                i
+                    : u && T.length > d + 1 && r.push((0, i.jsx)(w.XX, { numUsers: T.length - d })),
+                r
             );
         })();
-        return null == H && null == C
+        return null == H && null == y
             ? null
-            : (0, r.jsxs)(x.eJ, {
-                  className: a()(y, k.list, {
+            : (0, i.jsxs)(x.eJ, {
+                  className: a()(C, k.list, {
                       [k.collapsed]: u,
                       [k.withGuildIcon]: b,
                   }),
                   collapsed: u,
-                  children: [H, C],
+                  children: [H, y],
               });
     };

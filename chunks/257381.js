@@ -1,7 +1,7 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => o });
 var a = r(665352),
     n = r(856308);
-let s = new a.Z({
+let o = new a.Z({
     id: "xyz-abs-d65",
     cssId: "--xyz-abs-d65",
     name: "Absolute XYZ D65",

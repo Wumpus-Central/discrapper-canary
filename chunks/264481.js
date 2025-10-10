@@ -1,7 +1,7 @@
 n.d(t, {
-    P9: () => S,
+    P9: () => C,
     Uf: () => N,
-    b0: () => C,
+    b0: () => S,
     s_: () => I,
 }),
     n(388685);
@@ -12,7 +12,7 @@ var r = n(951288),
     o = n(493683),
     s = n(410030),
     c = n(726542),
-    u = n(220410),
+    u = n(272304),
     d = n(313789),
     p = n(518596),
     f = n(5192),
@@ -102,7 +102,7 @@ function I() {
         bodyText: t,
     });
 }
-function C() {
+function S() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = i.useState(() => {
             var e;
@@ -113,7 +113,7 @@ function C() {
         bodyText: t,
     });
 }
-function S(e) {
+function C(e) {
     let { user: t, guildId: n, channelId: s, onClose: c } = e,
         u = f.ZP.getName(n, s, t),
         d = m.intl.formatToPlainString(m.t.sjSitL, { name: u }),

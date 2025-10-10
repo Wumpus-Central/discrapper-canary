@@ -17,7 +17,7 @@ function p(e) {
         g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         E = (0, a.pxk)(p),
         b = { height: E * h };
-    return n.length > 2
+    return n.length > 0
         ? (0, r.jsx)("img", {
               alt: "",
               src: t,

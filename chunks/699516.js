@@ -127,11 +127,11 @@ function D(e) {
         }),
         w();
 }
-function x(e) {
+function L(e) {
     for (let [t, n] of (p.clear(), N.clear(), e.relationships)) R(t, n);
     w();
 }
-function L(e) {
+function x(e) {
     let t = p.get(e.relationship.id);
     R(e.relationship.id, e.relationship.type),
         null != e.relationship.nickname && (h = f(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
@@ -153,7 +153,7 @@ function L(e) {
                 user: e.relationship.user,
             });
 }
-function j(e) {
+function M(e) {
     P(e.relationship.id),
         null != h[e.relationship.id] && ((h = u({}, h)), delete h[e.relationship.id]),
         null != m[e.relationship.id] && ((m = u({}, m)), delete m[e.relationship.id]),
@@ -163,7 +163,7 @@ function j(e) {
         g.delete(e.relationship.id),
         w();
 }
-function M(e) {
+function j(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
         null == t.since ? delete m[t.id] : (m[t.id] = t.since),
@@ -304,10 +304,10 @@ class G extends (r = i.ZP.Store) {
 c(G, "displayName", "RelationshipStore");
 let B = new G(a.Z, {
     CONNECTION_OPEN: D,
-    OVERLAY_INITIALIZE: x,
-    RELATIONSHIP_ADD: L,
-    RELATIONSHIP_REMOVE: j,
-    RELATIONSHIP_UPDATE: M,
+    OVERLAY_INITIALIZE: L,
+    RELATIONSHIP_ADD: x,
+    RELATIONSHIP_REMOVE: M,
+    RELATIONSHIP_UPDATE: j,
     RELATIONSHIP_PENDING_INCOMING_REMOVED: k,
     UPDATE_STRANGER_STATUS: U,
 });

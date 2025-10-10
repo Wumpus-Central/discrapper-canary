@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(144991),
-    m = n(496675),
-    g = n(594174),
+    g = n(496675),
+    m = n(594174),
     p = n(626135),
     f = n(233608),
     h = n(700785),
@@ -68,7 +68,7 @@ function S(e, t) {
 }
 function T(e) {
     let { guild: t, role: n, locked: l } = e,
-        s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         u = i.useMemo(
             () =>
                 h.uB({
@@ -77,15 +77,15 @@ function T(e) {
                 }),
             [s, t],
         ),
-        m = i.useMemo(() => ({ [n.id]: S(I({}, n), { permissions: h.Hn }) }), [n]),
+        g = i.useMemo(() => ({ [n.id]: S(I({}, n), { permissions: h.Hn }) }), [n]),
         p = i.useMemo(
             () =>
                 h.uB({
                     user: s,
                     context: t,
-                    roles: m,
+                    roles: g,
                 }),
-            [s, t, m],
+            [s, t, g],
         ),
         f = !a.fS(u, p);
     return (0, r.jsx)(c.u, {
@@ -117,8 +117,8 @@ function P(e) {
             ],
         });
     function s(e) {
-        return m.Z.can(e, t)
-            ? !m.Z.can(e, t, null, { [n.id]: S(I({}, n), { permissions: a.Od(n.permissions, e) }) }) &&
+        return g.Z.can(e, t)
+            ? !g.Z.can(e, t, null, { [n.id]: S(I({}, n), { permissions: a.Od(n.permissions, e) }) }) &&
                   y.intl.string(y.t["K+D+GB"])
             : y.intl.string(y.t.nOtPMD);
     }
@@ -153,7 +153,7 @@ function P(e) {
 function w(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, initialSearchQuery: o } = e,
         [c, u] = i.useState(null != o ? o : ""),
-        m = i
+        g = i
             .useMemo(() => f.Z.generateGuildPermissionSpec(t), [t])
             .map((e) =>
                 S(I({}, e), {
@@ -167,7 +167,7 @@ function w(e) {
                 }),
             )
             .filter((e) => e.permissions.length > 0),
-        { headerHeight: g, headerRef: h } = (0, j.Z)(0),
+        { headerHeight: m, headerRef: h } = (0, j.Z)(0),
         { scrolledToTop: x, handleScroll: b } = (0, _.V)(),
         T = i.useRef(!1);
     return (
@@ -178,7 +178,7 @@ function w(e) {
         }, [c]),
         (0, r.jsx)(d.yWw, {
             className: N.scroller,
-            style: { scrollPaddingTop: g },
+            style: { scrollPaddingTop: m },
             onScroll: b,
             children: (0, r.jsxs)("div", {
                 className: E.contentWidth,
@@ -212,7 +212,7 @@ function w(e) {
                     (0, r.jsx)(P, {
                         guild: t,
                         role: n,
-                        specs: m,
+                        specs: g,
                         locked: l,
                     }),
                 ],

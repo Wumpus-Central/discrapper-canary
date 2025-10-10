@@ -34,10 +34,10 @@ var N = n(587061),
     P = n(314910),
     w = n(728285),
     D = n(22205),
-    x = n(746106),
-    L = n(892071),
-    j = n(358085),
-    M = n(62883),
+    L = n(746106),
+    x = n(892071),
+    M = n(358085),
+    j = n(62883),
     k = n(998502),
     U = n(473159),
     G = n(928518),
@@ -98,7 +98,7 @@ function W(e, t) {
 }
 function K(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && j.isPlatformEmbedded && !n;
+    return t && M.isPlatformEmbedded && !n;
 }
 class z extends (r = a.Component) {
     componentDidMount() {
@@ -109,9 +109,9 @@ class z extends (r = a.Component) {
             this.updateClientTheme(),
             (0, U.O)(e),
             e.addEventListener("blur", this.handleBlur),
-            j.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", M.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", M.contextMenuCallbackWeb, !1),
+            M.isPlatformEmbedded
+                ? t.addEventListener("contextmenu", j.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", j.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
@@ -124,9 +124,9 @@ class z extends (r = a.Component) {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            j.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", M.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", M.contextMenuCallbackWeb),
+            M.isPlatformEmbedded
+                ? t.removeEventListener("contextmenu", j.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", j.contextMenuCallbackWeb),
             (0, d.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
@@ -176,7 +176,7 @@ class z extends (r = a.Component) {
             themeOverride: _,
             hideModals: m = !1,
         } = this.props;
-        (0, j.getPlatform)();
+        (0, M.getPlatform)();
         let g = K({
                 withTitleBar: o,
                 isFullScreen: a,
@@ -184,7 +184,7 @@ class z extends (r = a.Component) {
             E = r === Z.$J ? D.Z : S.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
-                x.w,
+                L.w,
                 {
                     windowKey: r,
                     themeOverride: _,
@@ -243,7 +243,7 @@ class z extends (r = a.Component) {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
                         G.Z.unmountWindow(this.props.windowKey),
-                            j.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
+                            M.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
                     };
                 null != t
                     ? t({
@@ -261,7 +261,7 @@ class z extends (r = a.Component) {
 V(z, "defaultProps", { withTitleBar: !0 });
 let q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
-            { lang: l, style: u, className: d } = (0, L.vP)();
+            { lang: l, style: u, className: d } = (0, x.vP)();
         return (
             a.useEffect(() => {
                 let e = n.document.documentElement;

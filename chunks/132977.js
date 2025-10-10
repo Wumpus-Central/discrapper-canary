@@ -10,8 +10,8 @@ var r,
     s = n.n(o),
     l = n(748780),
     c = n(755721),
-    u = n(727637),
-    d = n(600164),
+    u = n(600164),
+    d = n(104505),
     f = n(929370);
 function _(e, t, n) {
     return (
@@ -106,9 +106,9 @@ class v extends (r = a.PureComponent) {
             l.Z.div,
             m(p({}, a), {
                 className: s()(f.shineContainer, t, { [f.shinePaused]: r }),
-                children: (0, i.jsx)(d.Z, {
-                    align: d.Z.Align.CENTER,
-                    justify: d.Z.Justify.CENTER,
+                children: (0, i.jsx)(u.Z, {
+                    align: u.Z.Align.CENTER,
+                    justify: u.Z.Justify.CENTER,
                     className: y[n],
                     children: (0, i.jsx)("div", { className: O[n] }),
                 }),
@@ -124,7 +124,7 @@ let I = (e) => {
             disabled: r,
             submitting: o,
             pauseAnimation: l,
-            shineSize: d = "default",
+            shineSize: u = "default",
             shinePaused: _,
             buttonShineClassName: h,
             onlyShineOnHover: E,
@@ -141,7 +141,7 @@ let I = (e) => {
             "onlyShineOnHover",
         ]);
     let y = a.useRef(null),
-        O = (0, u.Z)(y),
+        O = (0, d.X)(y),
         I = !r && !o && !0 !== l && (!E || O);
     return (0, i.jsxs)(
         c.zx,
@@ -164,7 +164,7 @@ let I = (e) => {
                               "data-migration-pending": !0,
                               shinePaused: _,
                               className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, h),
-                              shineSize: d,
+                              shineSize: u,
                           })
                         : null,
                 ],

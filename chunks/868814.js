@@ -2,19 +2,19 @@ n.d(t, { Z: () => o }), n(539854), n(642613);
 var r = n(442837),
     i = n(977258),
     l = n(958832),
-    a = n(592125),
-    s = n(981631);
+    s = n(592125),
+    a = n(981631);
 function o(e) {
-    return (0, r.Wu)([l.Z, a.Z], () => {
+    return (0, r.Wu)([l.Z, s.Z], () => {
         var t;
         let n = (null != (t = l.Z.getTopChannelIds(e.id)) ? t : [])
-                .map((e) => a.Z.getChannel(e))
+                .map((e) => s.Z.getChannel(e))
                 .filter((t) => null == t || t.id !== e.rulesChannelId),
             r = [],
             o = 0;
         return (
             n.forEach((e) => {
-                if (e.type === s.d4z.GUILD_ANNOUNCEMENT) {
+                if (e.type === a.d4z.GUILD_ANNOUNCEMENT) {
                     if (o >= 2) return;
                     o++;
                 }

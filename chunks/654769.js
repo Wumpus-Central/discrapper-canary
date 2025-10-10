@@ -81,7 +81,7 @@ function D(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,16 +92,16 @@ function x(e, t) {
         e
     );
 }
-let L = C.isPlatformEmbedded && (0, C.isWindows)(),
-    j = L && 10 > parseFloat(l.Z.os.release),
-    M = !0;
-if (L && !j) {
+let x = C.isPlatformEmbedded && (0, C.isWindows)(),
+    M = x && 10 > parseFloat(l.Z.os.release),
+    j = !0;
+if (x && !M) {
     let [e, , t] = l.Z.os.release.split(".");
-    M = parseInt(e) > 10 || parseInt(t) >= 15063;
+    j = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let k = new u.Z("NotificationUtils"),
     U =
-        (L && M) ||
+        (x && j) ||
         ("Chrome" === s().name && 47 > parseFloat(s().version)) ||
         ("Firefox" === s().name && 52 > parseFloat(s().version));
 async function G() {
@@ -123,20 +123,20 @@ function Z(e) {
     } catch (e) {}
     return null;
 }
-async function V() {
+async function F() {
     let e = await G();
     return (null == e ? void 0 : e.authorizationStatus) === "authorized" && (null == e ? void 0 : e.sound) === !0;
 }
-function F(e, t) {
+function V(e, t) {
     var n;
     return null != (n = (0, g.Z)(null != t ? t : m.Z.getSoundpack())[e]) ? n : e;
 }
 async function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    if (await V())
+    if (await F())
         try {
-            await N.ZP.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: F(e, n) });
+            await N.ZP.invoke("NOTIFICATIONS_SEND_NOTIFICATION", { sound: V(e, n) });
             return;
         } catch (e) {
             k.warn("Native notification sound failed with error: ", e);
@@ -147,9 +147,9 @@ let Y = a().throttle(H, 1000, { leading: !0 });
 function W() {
     N.ZP.flashFrame(!1);
 }
-L && (window.addEventListener("focus", W), N.ZP.on("MAIN_WINDOW_FOCUS", W));
+x && (window.addEventListener("focus", W), N.ZP.on("MAIN_WINDOW_FOCUS", W));
 let K = window.Notification;
-if (j) {
+if (M) {
     let e = {};
     N.ZP.on("NOTIFICATION_CLICK", (t, n) => {
         let r = e[n];
@@ -273,11 +273,11 @@ async function $(e, t, n, r, i) {
             (null == g ? void 0 : g.authorizationStatus) === "authorized" ||
             (null == g ? void 0 : g.authorizationStatus) === "provisional",
         D = null != g ? P : await X(),
-        j = P,
+        M = P,
         B = v.Z.disableNotifications && null == i.overrideStreamerMode,
-        Z = !C.isPlatformEmbedded || ((0, C.isMac)() && j) || N.ZP.shouldDisplayNotifications(),
-        V = !B && D && Z,
-        H = x(w({}, r), {
+        Z = !C.isPlatformEmbedded || ((0, C.isMac)() && M) || N.ZP.shouldDisplayNotifications(),
+        F = !B && D && Z,
+        H = L(w({}, r), {
             action: void 0,
             ping: void 0,
             banner: void 0,
@@ -285,7 +285,7 @@ async function $(e, t, n, r, i) {
         }),
         Y = H,
         W = H;
-    if (((r.banner = await (0, _.K)()), !V)) {
+    if (((r.banner = await (0, _.K)()), !F)) {
         null != i.sound &&
             !1 !== i.playSoundIfDisabled &&
             (J(i.sound, null != (a = i.volume) ? a : 1, i.soundpack),
@@ -296,7 +296,7 @@ async function $(e, t, n, r, i) {
     t.includes("\0") && (k.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (k.warn("Notification body contains null character, setting to empty string"), (n = ""));
     let q = null != (o = null == i ? void 0 : i.tag) ? o : null,
-        Q = j && (null == g ? void 0 : g.sound) === !0 && (null == g ? void 0 : g.authorizationStatus) === "authorized",
+        Q = M && (null == g ? void 0 : g.sound) === !0 && (null == g ? void 0 : g.authorizationStatus) === "authorized",
         $ = (e, t) => {
             var n;
             null == (n = i.onShown) || n.call(i),
@@ -308,15 +308,15 @@ async function $(e, t, n, r, i) {
     if (
         (null == i.sound || Q || (J(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)),
         i.isUserAvatar && null != e && (e = await (0, p.D)(e)),
-        L && y.Z.taskbarFlash && N.ZP.flashFrame(!0),
-        j)
+        x && y.Z.taskbarFlash && N.ZP.flashFrame(!0),
+        M)
     ) {
         let a = {
             title: t,
             body: n,
         };
         null != e && (a.icon = e),
-            (null == i ? void 0 : i.sound) != null && (a.sound = F(i.sound, i.soundpack)),
+            (null == i ? void 0 : i.sound) != null && (a.sound = V(i.sound, i.soundpack)),
             (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag),
             (null == i ? void 0 : i.fallbackDeepLink) != null && (a.fallbackDeepLink = i.fallbackDeepLink),
             Array.isArray(i.actions) && (a.actions = i.actions);
@@ -386,7 +386,7 @@ async function $(e, t, n, r, i) {
             k.warn("Native notification failed with error: ", e);
         }
     }
-    null != i.sound && j && (J(i.sound, null != (h = i.volume) ? h : 1, i.soundpack), (r.ping = !0));
+    null != i.sound && M && (J(i.sound, null != (h = i.volume) ? h : 1, i.soundpack), (r.ping = !0));
     let ee = {
         icon: e,
         body: n,
@@ -408,7 +408,7 @@ async function $(e, t, n, r, i) {
         let n = "";
         null == (t = i.onClick) || t.call(i, n);
     }),
-    M)
+    j)
         ? {
               notification: m,
               trackingProps: r,

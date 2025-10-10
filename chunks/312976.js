@@ -1,8 +1,8 @@
-r.d(t, { Z: () => o });
+r.d(t, { Z: () => s });
 var a = r(665352),
     n = r(135164),
-    s = r(656653);
-let o = new a.Z({
+    o = r(656653);
+let s = new a.Z({
     id: "lch",
     name: "LCH",
     coords: {
@@ -26,7 +26,7 @@ let o = new a.Z({
             [r, a, n] = e;
         return (
             (t = 0.02 > Math.abs(a) && 0.02 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
-            [r, Math.sqrt(a ** 2 + n ** 2), (0, s.j)(t)]
+            [r, Math.sqrt(a ** 2 + n ** 2), (0, o.j)(t)]
         );
     },
     toBase(e) {

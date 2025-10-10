@@ -1,43 +1,43 @@
 A.d(t, {
-    P: () => o,
-    W: () => i,
+    P: () => i,
+    W: () => o,
 }),
     A(415506);
-var n = A(951288),
-    r = A(647438),
-    l = A(828762);
-let a = r.createContext(void 0);
-function o() {
-    let e = r.useContext(a);
+var r = A(951288),
+    n = A(647438),
+    a = A(828762);
+let l = n.createContext(void 0);
+function i() {
+    let e = n.useContext(l);
     if (null == e) throw Error("No GuildProductAttachmentManagerContextProvider found");
     return e;
 }
-function i(e) {
+function o(e) {
     var { children: t, guildId: A } = e,
-        r = (function (e, t) {
+        n = (function (e, t) {
             if (null == e) return {};
             var A,
-                n,
-                r = (function (e, t) {
+                r,
+                n = (function (e, t) {
                     if (null == e) return {};
                     var A,
-                        n,
-                        r = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (A = l[n]), t.indexOf(A) >= 0 || (r[A] = e[A]);
-                    return r;
+                        r,
+                        n = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (A = a[r]), t.indexOf(A) >= 0 || (n[A] = e[A]);
+                    return n;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (A = l[n]),
-                        !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (r[A] = e[A]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (A = a[r]),
+                        !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (n[A] = e[A]);
             }
-            return r;
+            return n;
         })(e, ["children", "guildId"]);
-    let o = (0, l.Z)(A, r);
-    return (0, n.jsx)(a.Provider, {
-        value: o,
+    let i = (0, a.Z)(A, n);
+    return (0, r.jsx)(l.Provider, {
+        value: i,
         children: t,
     });
 }

@@ -66,7 +66,7 @@ let p = (n, e, l) => {
             icon: n === s.t4x.GUILD_HEADER ? i.ejJ : void 0,
             action: () =>
                 (0, i.ZDy)(async () => {
-                    let { default: i } = await Promise.all([t.e("7654"), t.e("62292")]).then(t.bind(t, 560114));
+                    let { default: i } = await Promise.all([t.e("7654"), t.e("81404")]).then(t.bind(t, 560114));
                     return (t) => {
                         var c, o;
                         return (0, r.jsx)(

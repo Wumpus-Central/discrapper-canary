@@ -11,10 +11,10 @@ class E {
     }
     add(t, e, a, o = "none", E = {}, s = (0, r.ph)()) {
         let l = Math.floor(s),
-            u = (0, c.s3)(e),
-            I = (0, c.Bg)(E),
+            I = (0, c.s3)(e),
+            u = (0, c.Bg)(E),
             R = (0, c.OC)(o),
-            d = (0, c.Ic)(t, u, R, I),
+            d = (0, c.Ic)(t, I, R, u),
             N = this._buckets.get(d),
             A = N && t === n.is ? N.metric.weight : 0;
         N
@@ -23,13 +23,13 @@ class E {
                   metric: new i.ZN[t](a),
                   timestamp: l,
                   metricType: t,
-                  name: u,
+                  name: I,
                   unit: R,
-                  tags: I,
+                  tags: u,
               }),
               this._buckets.set(d, N));
-        let f = "string" == typeof a ? N.metric.weight - A : a;
-        (0, _.yc)(t, u, f, R, E, d);
+        let T = "string" == typeof a ? N.metric.weight - A : a;
+        (0, _.yc)(t, I, T, R, E, d);
     }
     flush() {
         if (0 === this._buckets.size) return;

@@ -96,15 +96,15 @@ function w(e) {
 function D() {
     S.reset();
 }
-function x(e) {
-    let { guild: t } = e;
-    t.id === v.Z.getGuildId() && F();
-}
 function L(e) {
+    let { guild: t } = e;
+    t.id === v.Z.getGuildId() && V();
+}
+function x(e) {
     let { guild: t } = e;
     S.clearWithoutFlushing(t.id, !0);
 }
-function j(e) {
+function M(e) {
     let { guildId: t, userIds: n } = e;
     return (
         n.forEach((e) => {
@@ -113,7 +113,7 @@ function j(e) {
         !1
     );
 }
-function M(e) {
+function j(e) {
     let { guildId: t, userIds: n } = e;
     return (
         n.forEach((e) => {
@@ -142,11 +142,11 @@ function Z(e) {
     let { guildId: t, channelId: n } = e;
     return C(t, n);
 }
-function V(e) {
+function F(e) {
     let { guildId: t, channelId: n } = e;
     return !m.Z.isUnavailable(t) && C(t, n);
 }
-function F() {
+function V() {
     return C(v.Z.getGuildId(), O.Z.getChannelId());
 }
 function H(e) {
@@ -185,7 +185,7 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], F);
+        this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], V);
     }
     getSubscribedThreadIds() {
         return S.getSubscribedThreadIds();
@@ -211,12 +211,12 @@ let q = new z(l.Z, {
     CONNECTION_CLOSED: P,
     IDLE: w,
     LOGOUT: D,
-    VOICE_CHANNEL_SELECT: V,
-    CHANNEL_SELECT: V,
-    GUILD_CREATE: x,
-    GUILD_DELETE: L,
-    GUILD_SUBSCRIPTIONS_MEMBERS_ADD: j,
-    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: M,
+    VOICE_CHANNEL_SELECT: F,
+    CHANNEL_SELECT: F,
+    GUILD_CREATE: L,
+    GUILD_DELETE: x,
+    GUILD_SUBSCRIPTIONS_MEMBERS_ADD: M,
+    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: j,
     GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: k,
     GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: U,
     GUILD_SUBSCRIPTIONS_CHANNEL: B,
@@ -225,5 +225,5 @@ let q = new z(l.Z, {
     INBOX_OPEN: K,
     THREAD_UPDATE: H,
     THREAD_DELETE: Y,
-    THREAD_LIST_SYNC: F,
+    THREAD_LIST_SYNC: V,
 });

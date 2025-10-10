@@ -1,6 +1,6 @@
 n.d(t, {
     o: () => i,
-    t: () => o,
+    t: () => a,
 });
 var r = n(427164),
     i = (function (e) {
@@ -10,8 +10,8 @@ var r = n(427164),
             e
         );
     })({});
-let o = (0, r.le)({
-    name: "2025-08_soundboard_upsell_pinning",
+let a = (0, r.le)({
+    name: "2025-08-soundboard-upsell-pinning",
     kind: "user",
     defaultConfig: {},
     variations: {

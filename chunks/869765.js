@@ -202,21 +202,21 @@ function D(e) {
     let { ids: t, channelId: n } = e;
     return O(t, (e) => P(n, e));
 }
-function x(e) {
+function L(e) {
     let { message: t } = e;
     b.set(t.channel_id, t.id, {
         state: 0,
         message: t,
     });
 }
-function L() {
+function x() {
     b.clear();
 }
-function j(e) {
+function M(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
-function M(e) {
+function j(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {
         let { first_message: t } = e;
@@ -248,18 +248,18 @@ let U = new k(s.Z, {
     LOAD_MESSAGES_AROUND_SUCCESS: v,
     SEARCH_MESSAGES_SUCCESS: T,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
-    LOAD_THREADS_SUCCESS: j,
-    LOAD_ARCHIVED_THREADS_SUCCESS: j,
+    LOAD_THREADS_SUCCESS: M,
+    LOAD_ARCHIVED_THREADS_SUCCESS: M,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
-    LOAD_FORUM_POSTS: M,
+    LOAD_FORUM_POSTS: j,
     MESSAGE_CREATE: S,
     MESSAGE_UPDATE: C,
     MESSAGE_DELETE: w,
     MESSAGE_DELETE_BULK: D,
-    CREATE_PENDING_REPLY: x,
+    CREATE_PENDING_REPLY: L,
     CHANNEL_DELETE: N,
     THREAD_DELETE: N,
     GUILD_DELETE: R,
-    CONNECTION_OPEN: L,
-    LOGOUT: L,
+    CONNECTION_OPEN: x,
+    LOGOUT: x,
 });

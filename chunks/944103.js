@@ -1,20 +1,20 @@
 n.d(t, { Z: () => s }), n(388685);
-var r = n(647438),
-    i = n(442837),
+var i = n(647438),
+    r = n(442837),
     l = n(131704),
     a = n(423589),
     o = n(390289);
 function s(e) {
     let t = (0, a.Mn)("useShouldRenderBanner"),
-        [n, s] = r.useState("");
-    r.useEffect(() => {
+        [n, s] = i.useState("");
+    i.useEffect(() => {
         s("");
     }, [e.id]);
-    let c = (0, i.e7)([o.Z], () => o.Z.getLastActionTime(e.id));
-    r.useEffect(() => {
+    let c = (0, r.e7)([o.Z], () => o.Z.getLastActionTime(e.id));
+    i.useEffect(() => {
         l.$N.has(e.type) && n !== e.id && t && o.Z.maybeAutoUpgradeChannel(e.id) && s(e.id);
     }, [n, t, c, e]);
-    let u = r.useCallback(() => s(""), []);
+    let u = i.useCallback(() => s(""), []);
     return {
         showUnreadsNotice: n === e.id,
         clearUnreadsNotice: u,

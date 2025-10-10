@@ -1,36 +1,36 @@
-t.d(n, { Z: () => h });
-var r = t(951288),
-    i = t(647438),
-    o = t(481060),
-    a = t(372900),
-    l = t(238246),
-    c = t(788983),
-    s = t(207035),
-    d = t(823748),
-    u = t(981631),
-    p = t(815523);
-function b(e) {
-    let { windowKey: n, channel: t } = e;
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(372900),
+    l = n(238246),
+    s = n(788983),
+    c = n(207035),
+    u = n(823748),
+    d = n(981631),
+    b = n(815523);
+function p(e) {
+    let { windowKey: t, channel: n } = e;
     return (0, r.jsx)(l.Z, {
         withTitleBar: !0,
-        windowKey: n,
-        title: t.name,
-        channelId: t.id,
-        contentClassName: p.popoutContent,
-        children: (0, r.jsx)(a.Z.Provider, {
-            value: t.guild_id,
-            children: (0, r.jsx)(d.Z, { providedChannel: t }),
+        windowKey: t,
+        title: n.name,
+        channelId: n.id,
+        contentClassName: b.popoutContent,
+        children: (0, r.jsx)(o.Z.Provider, {
+            value: n.guild_id,
+            children: (0, r.jsx)(u.Z, { providedChannel: n }),
         }),
     });
 }
-function h(e, n) {
-    let t = (0, s.P)(n),
-        a = i.useCallback(() => {
-            c.bA(
-                "".concat(u.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
-                (n) =>
-                    (0, r.jsx)(b, {
-                        windowKey: n,
+function f(e, t) {
+    let n = (0, c.P)(t),
+        o = i.useCallback(() => {
+            s.bA(
+                "".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
+                (t) =>
+                    (0, r.jsx)(p, {
+                        windowKey: t,
                         channel: e,
                     }),
                 {
@@ -39,11 +39,11 @@ function h(e, n) {
                 },
             );
         }, [e]);
-    return t
-        ? (0, r.jsx)(o.sNh, {
+    return n
+        ? (0, r.jsx)(a.sNh, {
               id: "channel-pop-out",
               label: "Open in Popout",
-              action: () => a(),
+              action: () => o(),
           })
         : null;
 }

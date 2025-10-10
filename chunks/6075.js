@@ -49,10 +49,10 @@ function w(e, t) {
     return /^\w+:\/\//.test(e)
         ? "undefined" != typeof fetch
             ? D(e, t)
-            : x(e, t)
-        : j(e)
+            : L(e, t)
+        : M(e)
           ? Promise.resolve((0, r.u0)(e))
-          : M(e, t);
+          : j(e, t);
 }
 function D(e, { length: t } = {}) {
     let n = { method: "GET" };
@@ -61,11 +61,11 @@ function D(e, { length: t } = {}) {
         fetch(e, n).then((e) => e.arrayBuffer())
     );
 }
-function x(e, { length: t } = {}) {
+function L(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = {};
         Number.isInteger(t) && t >= 0 && (i.headers = { range: `bytes=0-${t - 1}` }),
-            L(e)(e, i, (e) => {
+            x(e)(e, i, (e) => {
                 if (e.statusCode >= 200 && e.statusCode <= 299) {
                     let t = [];
                     e.on("data", (e) => t.push(A.from(e))),
@@ -75,13 +75,13 @@ function x(e, { length: t } = {}) {
             }).on("error", (e) => r(e));
     });
 }
-function L(e) {
+function x(e) {
     return /^https:\/\//.test(e) ? require("https").get : require("http").get;
 }
-function j(e) {
+function M(e) {
     return /^data:[^;,]*(;base64)?,/.test(e);
 }
-function M(e, { length: t } = {}) {
+function j(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = k();
         i.open(e, (a, o) => {
@@ -158,10 +158,10 @@ function V(
             fileDataOffset: P,
             jfifDataOffset: w,
             tiffHeaderOffset: D,
-            iptcDataOffset: x,
-            xmpChunks: L,
-            iccChunks: j,
-            mpfDataOffset: M,
+            iptcDataOffset: L,
+            xmpChunks: x,
+            iccChunks: M,
+            mpfDataOffset: j,
             pngHeaderOffset: k,
             pngTextChunks: U,
             pngChunkOffsets: G,
@@ -184,12 +184,12 @@ function V(
         if (
             (n.Thumbnail && ((C.Thumbnail = n.Thumbnail), delete n.Thumbnail),
             t ? ((C.exif = n), K(C)) : (C = (0, r.wB)({}, C, n)),
-            a.Z.USE_TIFF && a.Z.USE_IPTC && n["IPTC-NAA"] && !z(x))
+            a.Z.USE_TIFF && a.Z.USE_IPTC && n["IPTC-NAA"] && !z(L))
         ) {
             let e = f.Z.read(n["IPTC-NAA"].value, 0, i);
             t ? (C.iptc = e) : (C = (0, r.wB)({}, C, e));
         }
-        if (a.Z.USE_TIFF && a.Z.USE_XMP && n.ApplicationNotes && !q(L)) {
+        if (a.Z.USE_TIFF && a.Z.USE_XMP && n.ApplicationNotes && !q(x)) {
             let e = _.Z.read((0, r.nZ)(n.ApplicationNotes.value), void 0, o);
             t ? (C.xmp = e) : (delete e._raw, (C = (0, r.wB)({}, C, e)));
         }
@@ -197,7 +197,7 @@ function V(
             let e = p.Z.read(n.PhotoshopSettings.value, i);
             t ? (C.photoshop = e) : (C = (0, r.wB)({}, C, e));
         }
-        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !X(j)) {
+        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !X(M)) {
             let e = h.Z.read(n.ICC_Profile.value, [
                 {
                     offset: 0,
@@ -219,24 +219,24 @@ function V(
         }
         n.MakerNote && delete n.MakerNote.__offset;
     }
-    if (a.Z.USE_JPEG && a.Z.USE_IPTC && z(x)) {
+    if (a.Z.USE_JPEG && a.Z.USE_IPTC && z(L)) {
         A = !0;
-        let n = f.Z.read(e, x, i);
+        let n = f.Z.read(e, L, i);
         t ? (C.iptc = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_XMP && q(L)) {
+    if (a.Z.USE_XMP && q(x)) {
         A = !0;
-        let n = _.Z.read(e, L, o);
+        let n = _.Z.read(e, x, o);
         t ? (C.xmp = n) : (delete n._raw, (C = (0, r.wB)({}, C, n)));
     }
-    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && X(j)) {
+    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && X(M)) {
         A = !0;
-        let t = h.Z.read(e, j, n);
+        let t = h.Z.read(e, M, n);
         t instanceof Promise ? N.push(t.then(eo)) : eo(t);
     }
-    if (a.Z.USE_MPF && $(M)) {
+    if (a.Z.USE_MPF && $(j)) {
         A = !0;
-        let n = c.Z.read(e, M, i);
+        let n = c.Z.read(e, j, i);
         t ? (C.mpf = n) : (C = (0, r.wB)({}, C, n));
     }
     if (a.Z.USE_PNG && a.Z.USE_PNG_FILE && ee(k)) {

@@ -15,7 +15,7 @@ var r = n(951288),
     u = n(755721),
     d = n(481060),
     f = n(388032),
-    _ = n(404792);
+    _ = n(792323);
 function p(e, t, n) {
     return (
         t in e
@@ -143,18 +143,18 @@ function C(e) {
             onQueryChange: P,
         } = e,
         [w, D] = i.useState(""),
-        x = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 D(e), null == P || P(e);
             },
             [P],
         ),
-        [L] = i.useState(!0),
-        [j, M] = i.useState(null),
+        [x] = i.useState(!0),
+        [M, j] = i.useState(null),
         k = i.useId(),
         U = i.useRef(null);
     i.useLayoutEffect(() => {
-        let e = document.querySelector("[".concat(y, '="').concat(j, '"]')),
+        let e = document.querySelector("[".concat(y, '="').concat(M, '"]')),
             t = U.current;
         null != t &&
             null != e &&
@@ -162,7 +162,7 @@ function C(e) {
                 node: e,
                 padding: 12,
             });
-    }, [j]);
+    }, [M]);
     let G = n(w),
         B = 0 === G.length,
         Z = null != R ? R : f.intl.string(f.t["4o4z3d"]),
@@ -186,7 +186,7 @@ function C(e) {
             [],
         ),
         Y = i.useCallback((e, t) => {
-            M(t);
+            j(t);
             let n = document.querySelector(e),
                 r = U.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -209,8 +209,8 @@ function C(e) {
                     ref: n,
                     role: "combobox",
                     "aria-label": b,
-                    "aria-expanded": L,
-                    "aria-controls": L ? k : void 0,
+                    "aria-expanded": x,
+                    "aria-controls": x ? k : void 0,
                     "aria-owns": k,
                     "aria-haspopup": "listbox",
                     className: o()(_.combobox, p),
@@ -222,19 +222,19 @@ function C(e) {
                                 autoFocus: I,
                                 placeholder: t,
                                 query: w,
-                                onChange: x,
+                                onChange: L,
                                 onKeyDown: i,
-                                onBlur: () => M(null),
-                                onClear: () => x(""),
+                                onBlur: () => j(null),
+                                onClear: () => L(""),
                                 inputProps: {
                                     "aria-multiline": !1,
-                                    "aria-activedescendant": null != j ? j : void 0,
+                                    "aria-activedescendant": null != M ? M : void 0,
                                 },
                             }),
                         }),
                         (0, r.jsx)("div", {
                             children:
-                                L &&
+                                x &&
                                 (B
                                     ? (0, r.jsxs)("div", {
                                           className: _.empty,
@@ -252,7 +252,7 @@ function C(e) {
                                       })
                                     : (0, r.jsx)(A.Provider, {
                                           value: {
-                                              activeDescendant: j,
+                                              activeDescendant: M,
                                               selected: a,
                                               setSelected: u,
                                               itemToString: C,

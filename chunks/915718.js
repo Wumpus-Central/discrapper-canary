@@ -16,10 +16,10 @@ var r = n(951288),
     b = n(728285),
     y = n(560688),
     _ = n(173507),
-    O = n(523746),
-    j = n(819640),
-    v = n(131951),
-    x = n(699516),
+    j = n(523746),
+    x = n(819640),
+    O = n(131951),
+    v = n(699516),
     C = n(594174),
     I = n(979651),
     E = n(585483),
@@ -68,7 +68,7 @@ class A extends i.PureComponent {
         return (
             d
                 ? ((h = !0), (p = R.intl.string(R.t.izMR7u)), (e = o.ua7.Colors.RED))
-                : v.Z.supports(N.AN.VIDEO)
+                : O.Z.supports(N.AN.VIDEO)
                   ? a
                       ? ((p = R.intl.string(R.t.PHzjvb)), (e = o.ua7.Colors.RED), (h = !0))
                       : i && c === Z.WtW.VIDEO
@@ -192,28 +192,28 @@ function D(e) {
         s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         o = (0, l.e7)([I.Z], () => I.Z.isInChannel(n.id)),
         c = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        { callActive: d, callUnavailable: f } = (0, l.cj)([O.Z], () => ({
-            callActive: O.Z.isCallActive(n.id),
-            callUnavailable: O.Z.isCallUnavailable(n.id),
+        { callActive: d, callUnavailable: f } = (0, l.cj)([j.Z], () => ({
+            callActive: j.Z.isCallActive(n.id),
+            callUnavailable: j.Z.isCallUnavailable(n.id),
         })),
         g = n.getRecipientId(),
-        { notFriend: y, isBlocked: _ } = (0, l.cj)([x.Z], () => ({
-            notFriend: n.type === Z.d4z.DM && null != g && !x.Z.isFriend(g),
-            isBlocked: n.type === Z.d4z.DM && null != g && x.Z.isBlocked(g),
+        { notFriend: y, isBlocked: _ } = (0, l.cj)([v.Z], () => ({
+            notFriend: n.type === Z.d4z.DM && null != g && !v.Z.isFriend(g),
+            isBlocked: n.type === Z.d4z.DM && null != g && v.Z.isBlocked(g),
         })),
-        v = (0, l.e7)([C.default], () => C.default.getUser(g)),
+        O = (0, l.e7)([C.default], () => C.default.getUser(g)),
         E = (0, b.bp)(),
         S = [],
         T = (0, p.Z)(n.id),
-        P = (0, l.e7)([j.Z], () => j.Z.hasLayers());
-    return (T && !P && S.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == v ? void 0 : v.bot))
+        P = (0, l.e7)([x.Z], () => x.Z.hasLayers());
+    return (T && !P && S.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == O ? void 0 : O.bot))
         ? null
         : (0, r.jsx)(A, {
               channel: n,
               mode: s,
               inCall: o,
               callActive: d,
-              isProvisional: null != (t = null == v ? void 0 : v.isProvisional) && t,
+              isProvisional: null != (t = null == O ? void 0 : O.isProvisional) && t,
               callUnavailable: f,
               notFriend: y,
               isBlocked: _,

@@ -1,26 +1,26 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => Z });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(399606),
+    s = n.n(l),
+    a = n(399606),
     o = n(481060),
     c = n(100527),
     d = n(906732),
     u = n(189357),
-    m = n(613464),
-    g = n(434404),
+    g = n(613464),
+    m = n(434404),
     p = n(6025),
     f = n(892001),
     h = n(433355),
-    b = n(430824),
-    x = n(893966),
+    x = n(430824),
+    b = n(893966),
     j = n(527379),
     _ = n(305473),
     v = n(113679),
-    O = n(440857),
-    y = n(472596),
-    C = n(598948),
+    C = n(440857),
+    O = n(472596),
+    y = n(598948),
     N = n(428936),
     E = n(41586),
     I = n(918192),
@@ -28,17 +28,17 @@ var r = n(951288),
     T = n(388032),
     P = n(490745),
     w = n(630016);
-function R(e) {
+function Z(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([b.Z], () => b.Z.getGuild(t)),
+        n = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
-        R = (0, u.m)(t),
-        Z = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
+        Z = (0, u.m)(t),
+        R = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        L = (0, s.e7)([x.Z], () => x.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        L = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         k = i.useCallback(
             (e) => {
                 null != e &&
@@ -50,28 +50,28 @@ function R(e) {
             },
             [l],
         ),
-        M = i.useRef(null),
-        G = i.useCallback(() => {
+        G = i.useRef(null),
+        M = i.useCallback(() => {
             var e;
-            null == (e = M.current) || e.resetSearchText();
+            null == (e = G.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let U = (0, y.xb)(!1, !1, L);
+    let U = (0, O.xb)(!1, !1, L);
     return (0, r.jsxs)(d.Gt, {
         value: l,
         children: [
             (0, r.jsx)("div", {
-                className: a()(w.customColumn, P.override, P.settingsColumn),
+                className: s()(w.customColumn, P.override, P.settingsColumn),
                 children: (0, r.jsx)("div", {
                     className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
-                        className: a()(w.customScroller, P.settingsVerticalScroller),
+                        className: s()(w.customScroller, P.settingsVerticalScroller),
                         orientation: "auto",
                         children: (0, r.jsx)(o.w0Z, {
                             className: P.settingsHorizontalScroller,
                             orientation: "auto",
                             children: (0, r.jsxs)("main", {
-                                className: a()(
+                                className: s()(
                                     w.customColumn,
                                     w.contentColumnDefault,
                                     P.override,
@@ -104,16 +104,16 @@ function R(e) {
                                                               children: [
                                                                   (0, r.jsx)(E.Z, {
                                                                       guild: n,
-                                                                      ref: M,
+                                                                      ref: G,
                                                                   }),
-                                                                  (0, r.jsx)(C.Z, {
+                                                                  (0, r.jsx)(y.Z, {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
                                                                       onSelectRow: k,
-                                                                      onResetForNewMembers: G,
+                                                                      onResetForNewMembers: M,
                                                                   }),
-                                                                  U !== y.po.SUCCESS_STILL_INDEXING &&
+                                                                  U !== O.po.SUCCESS_STILL_INDEXING &&
                                                                       (0, r.jsx)(N.Z, { guildId: n.id }),
                                                               ],
                                                           })
@@ -132,7 +132,7 @@ function R(e) {
                                                                               onClick: (e) => {
                                                                                   null != n &&
                                                                                       (e.preventDefault(),
-                                                                                      g.Z.close(),
+                                                                                      m.Z.close(),
                                                                                       (0, j._X)(n.id));
                                                                               },
                                                                           }),
@@ -145,15 +145,15 @@ function R(e) {
                                         },
                                         "body",
                                     ),
-                                    (0, r.jsx)(O.Z, { guildId: n.id }),
+                                    (0, r.jsx)(C.Z, { guildId: n.id }),
                                 ],
                             }),
                         }),
                     }),
                 }),
             }),
-            R &&
-                null != Z &&
+            Z &&
+                null != R &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(o.ZMr, {
@@ -163,9 +163,9 @@ function R(e) {
                         (0, r.jsx)("div", {
                             className: P.modViewSidebarContainer,
                             style: { width: S.$Y6 },
-                            children: (0, r.jsx)(m.Z, {
-                                userId: Z.details.userId,
-                                guildId: Z.details.guildId,
+                            children: (0, r.jsx)(g.Z, {
+                                userId: R.details.userId,
+                                guildId: R.details.guildId,
                                 onClose: D,
                             }),
                         }),

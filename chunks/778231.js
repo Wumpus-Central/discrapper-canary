@@ -3,59 +3,59 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    s = n(384275),
-    o = n(686546),
+    o = n(384275),
+    s = n(686546),
     c = n(522289),
     d = n(359993),
     u = n(146078),
-    m = n(881998),
-    p = n(709054),
-    g = n(388032),
-    x = n(719706),
-    h = n(970952);
+    _ = n(881998),
+    m = n(709054),
+    p = n(388032),
+    g = n(719706),
+    f = n(970952);
 let b = (e) => {
     var t, n;
     let { entry: b } = e,
-        { name: _ } = b,
-        f = (0, l.e7)([m.Z], () => m.Z.getNewestTokenForApplication(b.id)),
-        v = null != (n = b.getIconURL(40)) ? n : h,
+        { name: h } = b,
+        x = (0, l.e7)([_.Z], () => _.Z.getNewestTokenForApplication(b.id)),
+        v = null != (n = b.getIconURL(40)) ? n : f,
         j = (0, d.Z)({ application: b }),
         y = i.useRef(!1);
     i.useEffect(() => {
-        y.current || (s.Z.fetch(), (y.current = !0));
+        y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
-    let O = null != f ? p.default.extractTimestamp(f.id) : void 0;
+    let O = null != x ? m.default.extractTimestamp(x.id) : void 0;
     return (0, r.jsxs)("div", {
-        className: x.container,
+        className: g.container,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: x.header,
+                className: g.header,
                 variant: "heading-sm/semibold",
-                children: g.intl.string(g.t["aYfK//"]),
+                children: p.intl.string(p.t["aYfK//"]),
             }),
             (0, r.jsx)("div", {
-                className: x.appContainer,
+                className: g.appContainer,
                 children: (0, r.jsxs)("div", {
-                    className: x.appInfo,
+                    className: g.appInfo,
                     children: [
-                        (0, r.jsx)(o.ZP, {
-                            mask: o.ZP.Masks.AVATAR_DEFAULT,
+                        (0, r.jsx)(s.ZP, {
+                            mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: x.appIconMask,
+                            className: g.appIconMask,
                             children: (0, r.jsx)("img", {
                                 src: v,
                                 alt: "",
-                                className: x.appIcon,
+                                className: g.appIcon,
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: x.textContainer,
+                            className: g.textContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",
                                     variant: "text-md/medium",
-                                    children: _,
+                                    children: h,
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -66,7 +66,7 @@ let b = (e) => {
                                                   children: (0, u.Z)(j.length),
                                               }),
                                               (0, r.jsx)(c.Z, {
-                                                  className: x.guildStack,
+                                                  className: g.guildStack,
                                                   guilds: j,
                                                   maxGuilds: 6,
                                               }),
@@ -83,7 +83,7 @@ let b = (e) => {
                                                   (0, r.jsx)(a.Text, {
                                                       color: "text-default",
                                                       variant: "text-md/normal",
-                                                      children: g.intl.formatToPlainString(g.t.C9rUOz, {
+                                                      children: p.intl.formatToPlainString(p.t.C9rUOz, {
                                                           authorizedAt: O,
                                                       }),
                                                   }),

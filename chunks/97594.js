@@ -1,21 +1,21 @@
 n.d(t, { default: () => S }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
-    o = n.n(l),
-    a = n(466377),
+    a = n.n(l),
+    o = n(466377),
     s = n(481060),
     c = n(376641),
     u = n(714338),
     d = n(607070),
-    p = n(585483),
-    f = n(254109),
-    y = n(212459),
-    m = n(730606),
+    f = n(585483),
+    p = n(254109),
+    m = n(212459),
+    y = n(730606),
     O = n(860153),
     b = n(981631),
-    g = n(388032),
-    E = n(105969);
+    E = n(388032),
+    g = n(105969);
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
@@ -32,23 +32,23 @@ function S(e) {
         T = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "onClose",
             "items",
@@ -57,9 +57,9 @@ function S(e) {
             "shouldHideMediaOptions",
             "transitionState",
         ]);
-    let [j, C] = i.useState(null != l ? l : 0),
-        [P, D] = i.useState(!1),
-        [x, L] = (0, s.q_F)(() => ({
+    let [j, C] = r.useState(null != l ? l : 0),
+        [D, x] = r.useState(!1),
+        [P, L] = (0, s.q_F)(() => ({
             scale: d.Z.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
@@ -68,87 +68,87 @@ function S(e) {
                 tension: 300,
             },
         })),
-        w = i.useRef(null);
-    i.useEffect(() => {
+        R = r.useRef(null);
+    r.useEffect(() => {
         if (null != t)
             return (
-                p.S.subscribe(b.CkL.MEDIA_MODAL_CLOSE, t),
+                f.S.subscribe(b.CkL.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    p.S.unsubscribe(b.CkL.MEDIA_MODAL_CLOSE, t);
+                    f.S.unsubscribe(b.CkL.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]),
-        i.useEffect(() => {
+        r.useEffect(() => {
             var e, t;
-            v === s.Dvm.ENTERING && h(x.scale, 1),
+            v === s.Dvm.ENTERING && h(P.scale, 1),
                 v === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(c.P)),
-                v === s.Dvm.HIDDEN && (h(x.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)),
-                v === s.Dvm.EXITING && h(x.scale, 0.9);
+                v === s.Dvm.HIDDEN && (h(P.scale, 0.9), u.Z.disable(), u.Z.enableTemp(c.v)),
+                v === s.Dvm.EXITING && h(P.scale, 0.9);
             let n = () => {
                     u.Z.disable(), v === s.Dvm.ENTERED ? u.Z.enableTemp(c.P) : u.Z.enableTemp(c.v);
                 },
-                r = () => {
+                i = () => {
                     u.Z.disableTemp();
                 },
-                i = null == (t = w.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = R.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
-                null == i || i.addEventListener("focus", n),
-                null == i || i.addEventListener("blur", r),
+                null == r || r.addEventListener("focus", n),
+                null == r || r.addEventListener("blur", i),
                 () => {
-                    null == i || i.removeEventListener("focus", n),
-                        null == i || i.removeEventListener("blur", r),
+                    null == r || r.removeEventListener("focus", n),
+                        null == r || r.removeEventListener("blur", i),
                         u.Z.disableTemp();
                 }
             );
-        }, [v, x]);
-    let R = i.useCallback((e) => {
-            C(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
+        }, [v, P]);
+    let M = r.useCallback((e) => {
+            C(e), (0, p.yg)(p.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        M = i.useMemo(
+        I = r.useMemo(
             () => ({
-                scale: x.scale,
-                x: x.x,
-                y: x.y,
+                scale: P.scale,
+                x: P.x,
+                y: P.y,
                 setScale(e, t) {
-                    h(x.scale, e, null == t ? void 0 : t.immediate);
+                    h(P.scale, e, null == t ? void 0 : t.immediate);
                 },
                 setOffset(e, t, n) {
-                    h(x.x, e, null == n ? void 0 : n.immediate), h(x.y, t, null == n ? void 0 : n.immediate);
+                    h(P.x, e, null == n ? void 0 : n.immediate), h(P.y, t, null == n ? void 0 : n.immediate);
                 },
-                zoomed: P,
+                zoomed: D,
                 setZoomed(e) {
-                    D(e), h(x.scale, e ? 2.5 : 1), e || (h(x.x, 0), h(x.y, 0));
+                    x(e), h(P.scale, e ? 2.5 : 1), e || (h(P.x, 0), h(P.y, 0));
                 },
             }),
-            [P, x],
+            [D, P],
         );
-    return (0, r.jsx)(s.f6W, {
+    return (0, i.jsx)(s.f6W, {
         theme: b.BRd.MIDNIGHT,
         children: (e) => {
-            var i, l;
-            return (0, r.jsx)(
+            var r, l;
+            return (0, i.jsx)(
                 s.Y0X,
-                ((i = (function (e) {
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
@@ -156,7 +156,7 @@ function S(e) {
                     {
                         "data-migration-pending": !0,
                         hideShadow: !0,
-                        className: o()(E.carouselModal, e),
+                        className: a()(g.carouselModal, e),
                         transitionState: v,
                     },
                     T,
@@ -164,27 +164,27 @@ function S(e) {
                 (l = l =
                     {
                         size: s.CgR.DYNAMIC,
-                        animation: a.fM.SUBTLE,
+                        animation: o.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        "aria-label": g.intl.string(g.t.AMTX3t),
+                        "aria-label": E.intl.string(E.t.AMTX3t),
                         parentComponent: "MediaViewerModal",
-                        children: (0, r.jsxs)(y.z.Provider, {
-                            value: M,
+                        children: (0, i.jsxs)(m.z.Provider, {
+                            value: I,
                             children: [
-                                (0, r.jsx)(O.Z, {
+                                (0, i.jsx)(O.Z, {
                                     item: n[j],
                                     hideMediaOptions: _,
                                     onClose: t,
                                 }),
-                                (0, r.jsx)("div", {
+                                (0, i.jsx)("div", {
                                     style: { display: "none" },
-                                    ref: w,
+                                    ref: R,
                                 }),
-                                (0, r.jsx)(m.ZP, {
+                                (0, i.jsx)(y.ZP, {
                                     items: n,
                                     startIndex: j,
-                                    onIndexChange: R,
+                                    onIndexChange: M,
                                     enabledContentHarmTypeFlags: S,
                                     shouldHideMediaOptions: _,
                                 }),
@@ -192,18 +192,18 @@ function S(e) {
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                i),
+                r),
             );
         },
     });

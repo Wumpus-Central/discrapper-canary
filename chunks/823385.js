@@ -41,10 +41,10 @@ function P(e, t, n) {
 }
 let w = "seenQSTutorial",
     D = 5,
-    x = 100,
-    L = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
-    j = 0,
-    M = !1,
+    L = 100,
+    x = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
+    M = 0,
+    j = !1,
     k = !1,
     U = null,
     G = [],
@@ -195,10 +195,10 @@ function q(e, t) {
         default:
             G = e;
     }
-    if (t !== B) (B = t), (Z = Math.max(t.length, Z)), (j = (0, u.gJ)(u.a8.DOWN, -1, G));
+    if (t !== B) (B = t), (Z = Math.max(t.length, Z)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
     else {
-        let e = G[j];
-        null != e && e.type === u.h8.HEADER && (j = (0, u.gJ)(u.a8.DOWN, j, G));
+        let e = G[M];
+        null != e && e.type === u.h8.HEADER && (M = (0, u.gJ)(u.a8.DOWN, M, G));
     }
     ea.emitChange();
 }
@@ -213,7 +213,7 @@ function X(e) {
         (r =
             null != r
                 ? r
-                : new u.ZP($, L, null != i ? x : D, {
+                : new u.ZP($, x, null != i ? L : D, {
                       frecencyBoosters: !0,
                       blacklist: s,
                       allowSnowflake: !0,
@@ -249,7 +249,7 @@ function et(e) {
         o = i.trim();
     if (null == r) return !1;
     if (U !== a) {
-        r.setResultTypes(null != a ? [a] : L), r.setLimit(null != a ? x : D);
+        r.setResultTypes(null != a ? [a] : x), r.setLimit(null != a ? L : D);
         let e = null != (t = T.Z.getGuildId()) ? t : void 0;
         a === u.h8.USER && null != e
             ? r.setOptions(
@@ -277,18 +277,18 @@ function et(e) {
     } else r.search(o, void 0);
 }
 function en(e) {
-    j = e.selectedIndex;
+    M = e.selectedIndex;
 }
 function er() {
-    if (M) return !1;
-    (M = !0), l.K.set(w, !0);
+    if (j) return !1;
+    (j = !0), l.K.set(w, !0);
 }
 class ei extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(b.ZP, y.Z, m.Z),
             this.syncWith([p.Z], () => !0),
-            (M = l.K.get(w) || !1),
+            (j = l.K.get(w) || !1),
             (V = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
@@ -326,8 +326,8 @@ class ei extends (i = s.ZP.PersistedStore) {
             query: null != r ? r.query : "",
             queryMode: U,
             results: G,
-            selectedIndex: j,
-            seenTutorial: M,
+            selectedIndex: M,
+            seenTutorial: j,
             maxQueryLength: Z,
         };
     }

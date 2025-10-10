@@ -35,9 +35,9 @@ function l(e) {
     }
     return e;
 }
-let c = 360,
+let c = 460,
     u = {
-        sidebarWidth: 360,
+        sidebarWidth: 460,
         lastOpenTabId: null,
         displayTools: !1,
         showDevWidget: !1,

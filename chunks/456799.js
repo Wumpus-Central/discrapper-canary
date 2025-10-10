@@ -1,24 +1,24 @@
-s.d(t, { Z: () => o });
-var n = s(951288);
-s(647438);
-var r = s(120356),
-    a = s.n(r),
-    i = s(481060),
-    l = s(188764);
-let o = function (e) {
-    let { allowClicks: t = !1, children: s, withBorder: r = !1 } = e;
-    return (0, n.jsx)(i.Rny, {
-        children: (0, n.jsx)(i.Zbd, {
-            className: a()(l.componentPreviewWrapper, { [l.componentPreviewWrapperBordered]: r }),
-            outline: r,
-            children: (0, n.jsx)("div", {
-                className: l.componentPreview,
+n.d(t, { Z: () => l });
+var r = n(951288);
+n(647438);
+var s = n(120356),
+    o = n.n(s),
+    a = n(481060),
+    i = n(188764);
+let l = function (e) {
+    let { allowClicks: t = !1, children: n, withBorder: s = !1 } = e;
+    return (0, r.jsx)(a.Rny, {
+        children: (0, r.jsx)(a.Zbd, {
+            className: o()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: s }),
+            outline: s,
+            children: (0, r.jsx)("div", {
+                className: i.componentPreview,
                 onClickCapture: t
                     ? void 0
                     : function (e) {
                           e.stopPropagation();
                       },
-                children: s,
+                children: n,
             }),
         }),
     });

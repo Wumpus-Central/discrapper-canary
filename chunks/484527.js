@@ -1,31 +1,31 @@
-r.d(t, { Z: () => h }), r(388685), r(35282);
-var n = r(951288),
-    i = r(647438),
-    l = r(120356),
-    a = r.n(l),
-    s = r(643872),
-    o = r(442837),
-    c = r(481060),
-    u = r(570140),
-    d = r(652898),
-    m = r(93093),
-    p = r(768581),
-    f = r(810568),
-    g = r(981631),
-    j = r(388032),
-    x = r(226788),
-    v = r(943987);
-function h(e) {
-    let { detectedGame: t, trackClick: r, onInviteResolved: l, closeModal: h } = e,
-        [O, b] = i.useState(),
-        y = (0, o.e7)([m.Z], () => {
+n.d(t, { Z: () => j }), n(388685), n(35282);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    s = n(643872),
+    o = n(442837),
+    c = n(481060),
+    d = n(570140),
+    u = n(652898),
+    m = n(93093),
+    f = n(768581),
+    p = n(810568),
+    x = n(981631),
+    g = n(388032),
+    h = n(226788),
+    v = n(943987);
+function j(e) {
+    let { detectedGame: t, trackClick: n, onInviteResolved: l, closeModal: j } = e,
+        [O, y] = i.useState(),
+        I = (0, o.e7)([m.Z], () => {
             var e, t;
             return (
                 (null == O || null == (e = O.guild) ? void 0 : e.id) != null &&
                 m.Z.isMember(null == O || null == (t = O.guild) ? void 0 : t.id)
             );
         }),
-        P = i.useMemo(() => {
+        b = i.useMemo(() => {
             var e;
             return null == (e = t.websites)
                 ? void 0
@@ -40,64 +40,64 @@ function h(e) {
                 let t = e.split("/").pop();
                 if (null != t) {
                     if (null != O && O.code.toLowerCase() === t.toLowerCase()) return;
-                    let e = await (0, d.Z)(t);
-                    !0 !== e.banned && (b(e.invite), null != e.invite && (null == l || l(e.invite)));
+                    let e = await (0, u.Z)(t);
+                    !0 !== e.banned && (y(e.invite), null != e.invite && (null == l || l(e.invite)));
                 }
             };
-            null != P && e(P.url);
-        }, [P, l, O]),
-        null == O || null == O.guild || !O.guild.features.includes(g.oNc.VERIFIED))
+            null != b && e(b.url);
+        }, [b, l, O]),
+        null == O || null == O.guild || !O.guild.features.includes(x.oNc.VERIFIED))
     )
         return null;
-    let w = p.ZP.getGuildIconURL({
+    let E = f.ZP.getGuildIconURL({
         id: O.guild.id,
         icon: O.guild.icon,
         size: 32,
     });
-    return (0, n.jsxs)("div", {
-        className: x.column,
+    return (0, r.jsxs)("div", {
+        className: h.column,
         children: [
-            (0, n.jsx)(c.X6q, {
-                className: x.sectionHeader,
+            (0, r.jsx)(c.X6q, {
+                className: h.sectionHeader,
                 variant: "text-xs/semibold",
                 color: "header-secondary",
-                children: j.intl.string(j.t.kBDZSE),
+                children: g.intl.string(g.t.kBDZSE),
             }),
-            (0, n.jsxs)("div", {
-                className: a()(x.row, x.gapMd),
+            (0, r.jsxs)("div", {
+                className: a()(h.row, h.gapMd),
                 children: [
-                    (0, n.jsx)("img", {
+                    (0, r.jsx)("img", {
                         className: v.guildIcon,
-                        src: w,
-                        alt: j.intl.formatToPlainString(j.t.xm6W9P, { guildName: O.guild.name }),
+                        src: E,
+                        alt: g.intl.formatToPlainString(g.t.xm6W9P, { guildName: O.guild.name }),
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: v.inviteInfo,
                         children: [
-                            (0, n.jsx)(c.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: "text-sm/normal",
                                 children: O.guild.name,
                             }),
                             null != O.approximate_member_count &&
-                                (0, n.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-xxs/normal",
-                                    children: j.intl.format(j.t.zRl6XV, { count: O.approximate_member_count }),
+                                    children: g.intl.format(g.t.zRl6XV, { count: O.approximate_member_count }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(c.zxk, {
+            (0, r.jsx)(c.zxk, {
                 variant: "secondary",
-                text: y ? j.intl.string(j.t.cEnaW1) : j.intl.string(j.t.XpeFYm),
+                text: I ? g.intl.string(g.t.cEnaW1) : g.intl.string(g.t.XpeFYm),
                 onClick: () => {
-                    h(),
-                        r(f.as.JoinOfficialServer),
-                        u.Z.dispatch({
+                    j(),
+                        n(p.as.JoinOfficialServer),
+                        d.Z.dispatch({
                             type: "INVITE_MODAL_OPEN",
                             invite: O,
                             code: O.code,
-                            context: g.IlC.APP,
+                            context: x.IlC.APP,
                         });
                 },
             }),

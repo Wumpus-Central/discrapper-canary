@@ -6,7 +6,7 @@ var i = n(442837),
     a = n(833664),
     o = n(468363),
     s = n(353647),
-    c = n(220410),
+    c = n(272304),
     u = n(566898),
     d = n(158776),
     p = n(885110),
@@ -21,8 +21,8 @@ var i = n(442837),
     y = n(864141),
     v = n(264481),
     I = n(693408),
-    C = n(661462),
-    S = n(228168),
+    S = n(661462),
+    C = n(228168),
     T = n(981631),
     N = n(388032),
     j = n(158069);
@@ -36,18 +36,18 @@ function P(e) {
             userId: t.id,
             guildId: x,
         }),
-        V = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(t.id)),
-        H = t.id === n.id,
+        H = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(t.id)),
+        V = t.id === n.id,
         F = (0, i.e7)([p.Z, d.Z], () => {
-            let e = H ? p.Z.getStatus() : d.Z.getStatus(t.id);
+            let e = V ? p.Z.getStatus() : d.Z.getStatus(t.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         z = k.length > 0 || null != U,
         W = L && null == U && null == B && null != G,
-        Y = !F && (z || W),
-        K = M.length > 0,
-        q = k.some((e) => (0, a.Z)(e));
-    if (!Y && !K && V)
+        q = !F && (z || W),
+        Y = M.length > 0,
+        K = k.some((e) => (0, a.Z)(e));
+    if (!q && !Y && H)
         return (0, r.jsx)("div", {
             className: j.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -70,9 +70,9 @@ function P(e) {
                 ),
             ),
         });
-    if (!Y && !K && !V) {
+    if (!q && !Y && !H) {
         var Q;
-        return H
+        return V
             ? (0, r.jsx)(v.Uf, { onClose: w })
             : (0, r.jsx)(v.P9, {
                   user: t,
@@ -81,13 +81,13 @@ function P(e) {
                   onClose: w,
               });
     }
-    return (0, r.jsxs)(C.F, {
+    return (0, r.jsxs)(S.F, {
         className: j.scroller,
         fade: !0,
         children: [
             (() => {
-                let e = H && D && !q;
-                return Y
+                let e = V && D && !K;
+                return q
                     ? (0, r.jsx)(I.Z, {
                           heading: N.intl.string(N.t.J6STd3),
                           children: (0, r.jsxs)("ul", {
@@ -147,10 +147,10 @@ function P(e) {
                         })
                       : null;
             })(),
-            K
+            Y
                 ? (0, r.jsx)(I.Z, {
                       heading: N.intl.string(N.t.jzgEoK),
-                      introText: H
+                      introText: V
                           ? N.intl.format(N.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
@@ -163,7 +163,7 @@ function P(e) {
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: Z === S.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: Z === C.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
                           className: j.cards,
                           children: M.map((e) =>

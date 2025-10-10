@@ -1,5 +1,5 @@
-n.d(e, { P: () => a });
-let l = (0, n(818083).B)({
+n.d(t, { P: () => i });
+let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-04_custom_status_clear_after_times",
     label: "Custom Status Clear After Times Experiment",
@@ -12,8 +12,8 @@ let l = (0, n(818083).B)({
         },
     ],
 });
-function a(t) {
-    let { location: e, autoTrackExposure: n = !0 } = t,
-        { enabled: a } = l.useExperiment({ location: e }, { autoTrackExposure: n });
-    return a;
+function i(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }

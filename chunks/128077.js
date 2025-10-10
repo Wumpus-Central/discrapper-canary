@@ -1,14 +1,14 @@
-r.d(t, { f: () => a }), r(388685);
-var n = r(647438),
-    l = r(751648),
-    i = r(388032);
+n.d(t, { f: () => a }), n(388685);
+var r = n(647438),
+    l = n(751648),
+    i = n(388032);
 function a() {
-    let [e, t] = (0, n.useState)(""),
-        [r, a] = (0, n.useState)([]),
-        [o, s] = (0, n.useState)(null),
-        [c, u] = (0, n.useState)(!1);
+    let [e, t] = (0, r.useState)(""),
+        [n, a] = (0, r.useState)([]),
+        [o, s] = (0, r.useState)(null),
+        [c, u] = (0, r.useState)(!1);
     return (
-        (0, n.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (null != o)
                 return void t(
                     i.intl.format(i.t["7gHWra"], {
@@ -16,8 +16,8 @@ function a() {
                         errorMessage: o.message,
                     }),
                 );
-            if (null != r && r.length > 0) {
-                let e = r.map((e) => {
+            if (null != n && n.length > 0) {
+                let e = n.map((e) => {
                     var t;
                     return null == (t = e.sku) ? void 0 : t.name;
                 });
@@ -27,20 +27,20 @@ function a() {
                         redeemedItemDescription: ""
                             .concat(1 === e.length ? "SKU" : "SKUs", ": ")
                             .concat(e.join(", "), ". Entitlement ")
-                            .concat(1 === r.length ? "ID" : "IDs", ": ")
-                            .concat(r.map((e) => e.id).join(", ")),
+                            .concat(1 === n.length ? "ID" : "IDs", ": ")
+                            .concat(n.map((e) => e.id).join(", ")),
                     }),
                 );
                 return;
             }
             t("");
-        }, [r, o]),
+        }, [n, o]),
         {
-            entitlements: r,
+            entitlements: n,
             error: o,
             isSubmitting: c,
             responseMessage: e,
-            redeemVirtualCurrency: function (e, t, r) {
+            redeemVirtualCurrency: function (e, t, n) {
                 return (0, l.df)({
                     skuId: e,
                     loadId: t,
@@ -48,7 +48,7 @@ function a() {
                         u(!0), s(null);
                     },
                     onRedeemSucceed: (e) => {
-                        a(e), u(!1), null == r || r(e);
+                        a(e), u(!1), null == n || n(e);
                     },
                     onRedeemFail: (e) => {
                         s(e), u(!1);

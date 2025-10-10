@@ -4,12 +4,12 @@ n(647438);
 var i = n(442837),
     a = n(768494),
     o = n(549635),
-    s = n(169525),
-    l = n(499376),
-    c = n(611170),
-    u = n(128854),
-    d = n(884182),
-    f = n(207982),
+    s = n(120324),
+    l = n(169525),
+    c = n(499376),
+    u = n(611170),
+    d = n(128854),
+    f = n(884182),
     _ = n(592125),
     p = n(52824),
     h = n(630388),
@@ -24,12 +24,12 @@ function E(e) {
             gifAutoPlay: y,
             getGifFavButton: O,
             getOnMediaItemContextMenu: v,
-        } = (0, u.c)();
+        } = (0, d.c)();
     if (null == t || null == n) return null;
     let I = e.items.map((e) => (0, o.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
         { srcToOnClickOverride: T, srcToHandlePreloadImage: S } =
             I.length > 1
-                ? (0, f.G)(
+                ? (0, s.G)(
                       I,
                       {
                           shouldHideMediaOptions: E,
@@ -44,7 +44,7 @@ function E(e) {
     function A(e, n) {
         var r;
         let i = e.originalItem;
-        return (0, s.lK)(i.media, n, i.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
+        return (0, l.lK)(i.media, n, i.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
     }
     let C = e.items.map((e, n) => {
         let r = e.media,
@@ -55,7 +55,7 @@ function E(e) {
                 item: {
                     uniqueId: "".concat(r.proxyUrl, "--").concat(n),
                     originalItem: e,
-                    type: (0, l.pU)(r),
+                    type: (0, c.pU)(r),
                     downloadUrl: r.url,
                     height: r.height,
                     width: r.width,
@@ -66,9 +66,9 @@ function E(e) {
                 onContextMenu: o,
                 autoPlayGif: y,
                 getObscureReason: A,
-                renderImageComponent: c.aB,
-                renderVideoComponent: c.rJ,
-                renderVisualPlaceholderComponent: c.yF,
+                renderImageComponent: u.aB,
+                renderVideoComponent: u.rJ,
+                renderVisualPlaceholderComponent: u.yF,
                 renderAudioComponent: g.dG4,
                 renderPlaintextFilePreview: g.dG4,
                 renderGenericFileComponent: g.dG4,
@@ -78,14 +78,14 @@ function E(e) {
                 canRemoveItem: !1,
                 onRemoveItem: g.dG4,
             },
-            u = (0, p.q)({
+            l = (0, p.q)({
                 proxyURL: r.proxyUrl,
                 url: r.url,
             });
-        return u in T && ((s.onClick = T[u]), (s.handlePreloadImage = S[u])), s;
+        return l in T && ((s.onClick = T[l]), (s.handlePreloadImage = S[l])), s;
     });
     return (0, r.jsx)("div", {
-        children: (0, r.jsx)(d.Z, {
+        children: (0, r.jsx)(f.Z, {
             items: C,
             isInAppComponentsV2: !0,
         }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
     l = n(647438),
-    o = n(498607),
-    i = n.n(o),
+    i = n(498607),
+    o = n.n(i),
     a = n(399606),
     s = n(481060),
     c = n(588215),
@@ -18,7 +18,7 @@ let b = [
 ];
 function p(e) {
     let { guildId: t, onClose: n } = e,
-        o = (0, a.e7)([u.Z], () => u.Z.getSearchStateByGuildId(t), [t], i()),
+        i = (0, a.e7)([u.Z], () => u.Z.getSearchStateByGuildId(t), [t], o()),
         p = l.useCallback(
             (e) => {
                 var n, r;
@@ -48,7 +48,7 @@ function p(e) {
                                 });
                         }
                         return e;
-                    })({}, o)),
+                    })({}, i)),
                     (r = r = { selectedSort: e }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -65,7 +65,7 @@ function p(e) {
                     n),
                 );
             },
-            [t, o],
+            [t, i],
         );
     return (0, r.jsx)(s.v2r, {
         navId: "members-table-sort-menu",
@@ -96,7 +96,7 @@ function p(e) {
                             }
                         })(e),
                         checked:
-                            (t = o.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t
+                            (t = i.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t
                                 ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC
                                 : e === t,
                         disabled: !1,

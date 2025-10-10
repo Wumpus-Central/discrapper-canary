@@ -1,24 +1,24 @@
-i.d(t, { Z: () => p }), i(388685);
-var n = i(442837),
-    r = i(715903),
-    s = i(71619),
-    o = i(41776),
-    l = i(665906),
-    a = i(271383),
-    d = i(607744),
-    c = i(496675),
-    u = i(432376),
-    h = i(981631);
-function p(e) {
-    var t, i;
-    let p = null == e ? void 0 : e.guild_id,
-        g = (0, n.e7)([d.Z], () => null == p || d.Z.canChatInGuild(p), [p]),
-        m = (0, n.e7)([o.Z], () => null != p && o.Z.isLurking(p), [p]),
-        f = (0, n.e7)([a.ZP], () => null != p && a.ZP.isCurrentUserGuest(p), [p]),
-        v = (0, n.e7)([c.Z], () => g && c.Z.can(h.Plq.ADD_REACTIONS, e), [g, e]),
-        O = (0, r.ux)(p),
-        [, b] = (0, s.AB)(p),
-        y = (0, l.$R)(e);
+n.d(t, { Z: () => f }), n(388685);
+var i = n(442837),
+    r = n(715903),
+    o = n(71619),
+    l = n(41776),
+    s = n(665906),
+    a = n(271383),
+    c = n(607744),
+    u = n(496675),
+    d = n(432376),
+    p = n(981631);
+function f(e) {
+    var t, n;
+    let f = null == e ? void 0 : e.guild_id,
+        O = (0, i.e7)([c.Z], () => null == f || c.Z.canChatInGuild(f), [f]),
+        b = (0, i.e7)([l.Z], () => null != f && l.Z.isLurking(f), [f]),
+        h = (0, i.e7)([a.ZP], () => null != f && a.ZP.isCurrentUserGuest(f), [f]),
+        m = (0, i.e7)([u.Z], () => O && u.Z.can(p.Plq.ADD_REACTIONS, e), [O, e]),
+        g = (0, r.ux)(f),
+        [, y] = (0, o.AB)(f),
+        v = (0, s.$R)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -30,59 +30,59 @@ function p(e) {
           }
         : ((t = (function (e) {
               for (var t = 1; t < arguments.length; t++) {
-                  var i = null != arguments[t] ? arguments[t] : {},
-                      n = Object.keys(i);
+                  var n = null != arguments[t] ? arguments[t] : {},
+                      i = Object.keys(n);
                   "function" == typeof Object.getOwnPropertySymbols &&
-                      (n = n.concat(
-                          Object.getOwnPropertySymbols(i).filter(function (e) {
-                              return Object.getOwnPropertyDescriptor(i, e).enumerable;
+                      (i = i.concat(
+                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
                           }),
                       )),
-                      n.forEach(function (t) {
-                          var n;
-                          (n = i[t]),
+                      i.forEach(function (t) {
+                          var i;
+                          (i = n[t]),
                               t in e
                                   ? Object.defineProperty(e, t, {
-                                        value: n,
+                                        value: i,
                                         enumerable: !0,
                                         configurable: !0,
                                         writable: !0,
                                     })
-                                  : (e[t] = n);
+                                  : (e[t] = i);
                       });
               }
               return e;
           })(
               {},
-              (0, u.Z)({
+              (0, d.Z)({
                   channel: e,
-                  canChat: g,
+                  canChat: O,
                   renderReactions: !0,
-                  canAddNewReactions: v,
-                  isLurking: m,
-                  isGuest: f,
-                  communicationDisabled: b,
-                  isActiveChannelOrUnarchivableThread: y,
-                  isAutomodQuarantined: O,
+                  canAddNewReactions: m,
+                  isLurking: b,
+                  isGuest: h,
+                  communicationDisabled: y,
+                  isActiveChannelOrUnarchivableThread: v,
+                  isAutomodQuarantined: g,
               }),
           )),
-          (i = i =
+          (n = n =
               {
-                  isLurking: m,
-                  isGuest: f,
+                  isLurking: b,
+                  isGuest: h,
                   isPendingMember: !1,
               }),
           Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
               : (function (e, t) {
-                    var i = Object.keys(e);
+                    var n = Object.keys(e);
                     if (Object.getOwnPropertySymbols) {
-                        var n = Object.getOwnPropertySymbols(e);
-                        i.push.apply(i, n);
+                        var i = Object.getOwnPropertySymbols(e);
+                        n.push.apply(n, i);
                     }
-                    return i;
-                })(Object(i)).forEach(function (e) {
-                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                    return n;
+                })(Object(n)).forEach(function (e) {
+                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                 }),
           t);
 }

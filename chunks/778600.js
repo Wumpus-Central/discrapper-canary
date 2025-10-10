@@ -41,7 +41,7 @@ function s(t, e) {
     (_[(_.Comment = 5)] = "Comment");
 let l =
         "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-    u = {
+    I = {
         map: {},
         getId: () => (console.error(l), -1),
         getNode: () => (console.error(l), null),
@@ -53,7 +53,7 @@ let l =
             console.error(l);
         },
     };
-function I(t, e, a, r, _ = window) {
+function u(t, e, a, r, _ = window) {
     let n = _.Object.getOwnPropertyDescriptor(t, e);
     return (
         _.Object.defineProperty(
@@ -63,14 +63,14 @@ function I(t, e, a, r, _ = window) {
                 ? a
                 : {
                       set(t) {
-                          T(() => {
+                          f(() => {
                               a.set.call(this, t);
                           }, 0),
                               n && n.set && n.set.call(this, t);
                       },
                   },
         ),
-        () => I(t, e, n || {}, !0)
+        () => u(t, e, n || {}, !0)
     );
 }
 function R(t, e, a) {
@@ -112,7 +112,7 @@ function d(t, e, a, r, _) {
 "undefined" != typeof window &&
     window.Proxy &&
     window.Reflect &&
-    (u = new Proxy(u, { get: (t, e, a) => ("map" === e && console.error(l), Reflect.get(t, e, a)) })),
+    (I = new Proxy(I, { get: (t, e, a) => ("map" === e && console.error(l), Reflect.get(t, e, a)) })),
     /[1-9][0-9]{12}/.test(Date.now().toString());
 let N = {};
 function A(t) {
@@ -129,10 +129,10 @@ function A(t) {
         } catch (t) {}
     return (N[t] = r.bind(window));
 }
-function f(...t) {
+function T(...t) {
     return A("requestAnimationFrame")(...t);
 }
-function T(...t) {
+function f(...t) {
     return A("setTimeout")(...t);
 }
 var L = (((n = L || {})[(n["2D"] = 0)] = "2D"), (n[(n.WebGL = 1)] = "WebGL"), (n[(n.WebGL2 = 2)] = "WebGL2"), n);
@@ -250,7 +250,7 @@ let D = new Map(),
         ]
             .filter((t) => "function" == typeof e[t])
             .find((a) => t instanceof e[a]);
-function y(t, e, a, r, _) {
+function S(t, e, a, r, _) {
     let n = [];
     try {
         let o = R(t.HTMLCanvasElement.prototype, "getContext", function (t) {
@@ -274,7 +274,7 @@ function y(t, e, a, r, _) {
         n.forEach((t) => t());
     };
 }
-function S(t, e, a, r, _, n, o, i) {
+function y(t, e, a, r, _, n, o, i) {
     let c = [];
     for (let o of Object.getOwnPropertyNames(t))
         if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(o))
@@ -297,7 +297,7 @@ function S(t, e, a, r, _, n, o, i) {
                 });
                 c.push(E);
             } catch (_) {
-                let r = I(t, o, {
+                let r = u(t, o, {
                     set(t) {
                         a(this.canvas, {
                             type: e,
@@ -405,7 +405,7 @@ class U {
             }
             p(() => {
                 if ((n && "all" === e && this.initCanvasMutationObserver(t, a, r, _), n && "number" == typeof e)) {
-                    let e = y(t, a, r, _, !0);
+                    let e = S(t, a, r, _, !0);
                     this.restoreHandlers.push(() => {
                         e();
                     });
@@ -481,7 +481,7 @@ class U {
         });
     }
     initCanvasMutationObserver(t, e, a, r) {
-        let _ = y(t, e, a, r, !1),
+        let _ = S(t, e, a, r, !1),
             n = (function (t, e, a, r, _) {
                 let n = [];
                 for (let o of Object.getOwnPropertyNames(e.CanvasRenderingContext2D.prototype))
@@ -491,7 +491,7 @@ class U {
                             return function (...i) {
                                 return (
                                     d(this.canvas, a, r, _, !0) ||
-                                        T(() => {
+                                        f(() => {
                                             let a = m(i, e, this);
                                             t(this.canvas, {
                                                 type: L["2D"],
@@ -505,7 +505,7 @@ class U {
                         });
                         n.push(i);
                     } catch (r) {
-                        let a = I(e.CanvasRenderingContext2D.prototype, o, {
+                        let a = u(e.CanvasRenderingContext2D.prototype, o, {
                             set(e) {
                                 t(this.canvas, {
                                     type: L["2D"],
@@ -524,9 +524,9 @@ class U {
             o = (function (t, e, a, r, _, n) {
                 let o = [];
                 return (
-                    o.push(...S(e.WebGLRenderingContext.prototype, L.WebGL, t, a, r, _, n, e)),
+                    o.push(...y(e.WebGLRenderingContext.prototype, L.WebGL, t, a, r, _, n, e)),
                     void 0 !== e.WebGL2RenderingContext &&
-                        o.push(...S(e.WebGL2RenderingContext.prototype, L.WebGL2, t, a, r, _, n, e)),
+                        o.push(...y(e.WebGL2RenderingContext.prototype, L.WebGL2, t, a, r, _, n, e)),
                     () => {
                         o.forEach((t) => t());
                     }
@@ -573,9 +573,9 @@ class U {
                 }
                 return e;
             },
-            u = (e) => {
+            I = (e) => {
                 if (this.windows.length) {
-                    if (s && e - s < E) return void f(u);
+                    if (s && e - s < E) return void T(I);
                     (s = e),
                         l(c).forEach((e) => {
                             if (!this.mirror.hasNode(e)) return;
@@ -627,26 +627,26 @@ class U {
                                     });
                             }
                         }),
-                        f(u);
+                        T(I);
                 }
             };
-        return f(u);
+        return T(I);
     }
     startPendingCanvasMutationFlusher() {
-        f(() => this.flushPendingCanvasMutations());
+        T(() => this.flushPendingCanvasMutations());
     }
     startRAFTimestamping() {
         let t = (e) => {
-            (this.rafStamps.latestId = e), f(t);
+            (this.rafStamps.latestId = e), T(t);
         };
-        f(t);
+        T(t);
     }
     flushPendingCanvasMutations() {
         this.pendingCanvasMutations.forEach((t, e) => {
             let a = this.mirror.getId(e);
             this.flushPendingCanvasMutationFor(e, a);
         }),
-            f(() => this.flushPendingCanvasMutations());
+            T(() => this.flushPendingCanvasMutations());
     }
     flushPendingCanvasMutationFor(t, e) {
         if (this.frozen || this.locked) return;

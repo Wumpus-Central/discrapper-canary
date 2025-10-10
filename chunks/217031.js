@@ -1,4 +1,4 @@
-n.d(t, { Y: () => U });
+n.d(t, { Y: () => k });
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -182,7 +182,7 @@ function D(e) {
         }),
     );
 }
-function k(e) {
+function R(e) {
     var { channel: t, subLabel: n } = e,
         r = T(e, ["channel", "subLabel"]);
     let i = (0, b.ZP)(t),
@@ -201,7 +201,7 @@ function k(e) {
         }),
     );
 }
-function R(e) {
+function U(e) {
     var { channel: t, subLabel: n } = e,
         r = T(e, ["channel", "subLabel"]);
     let i = (0, o.e7)([Z.Z], () => Z.Z.getGuild(null == t ? void 0 : t.guild_id)),
@@ -260,7 +260,7 @@ function R(e) {
         }),
     );
 }
-function U(e) {
+function k(e) {
     let {
             rowData: t,
             message: n,
@@ -308,9 +308,9 @@ function U(e) {
                 return d === m.h8.USER
                     ? (0, l.jsx)(D, A({ user: f }, y))
                     : d === m.h8.GROUP_DM
-                      ? (0, l.jsx)(k, A({ channel: f }, y))
+                      ? (0, l.jsx)(R, A({ channel: f }, y))
                       : d === m.h8.TEXT_CHANNEL || d === m.h8.VOICE_CHANNEL
-                        ? (0, l.jsx)(R, A({ channel: f }, y))
+                        ? (0, l.jsx)(U, A({ channel: f }, y))
                         : void (0, L.vE)(d);
             },
             [u, a, n, i, t, o, c],

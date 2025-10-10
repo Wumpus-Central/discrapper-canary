@@ -3,21 +3,21 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(622822),
-    o = n(665149),
-    s = n(91159),
+    s = n(665149),
+    o = n(91159),
     c = n(593130),
-    u = n(388032),
-    d = n(568592);
+    d = n(388032),
+    u = n(568592);
 function p(e) {
     let { channel: t } = e,
         [n, p] = i.useState(!1),
         h = i.useRef(null),
         f = (0, a.$5)(t),
-        m = i.useCallback(() => {
+        g = i.useCallback(() => {
             p(!1);
         }, []),
-        g = i.useCallback(() => {
-            n || (0, s.U4)("Popout"), p(!n);
+        m = i.useCallback(() => {
+            n || (0, o.U4)("Popout"), p(!n);
         }, [n]);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: h,
@@ -26,13 +26,13 @@ function p(e) {
         align: "right",
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: m,
+        onRequestClose: g,
         renderPopout: function () {
             return (0, r.jsx)(l.VqE, {
                 children: (0, r.jsx)(c.Z, {
-                    className: d.browser,
+                    className: u.browser,
                     channel: t,
-                    onClose: m,
+                    onClose: g,
                 }),
             });
         },
@@ -41,7 +41,7 @@ function p(e) {
             var n, i;
             let { isShown: a } = t;
             return (0, r.jsx)(
-                o.JO,
+                s.JO,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,11 +70,11 @@ function p(e) {
                 (i = i =
                     {
                         ref: h,
-                        className: d.icon,
-                        onClick: g,
+                        className: u.icon,
+                        onClick: m,
                         icon: l.or_,
-                        "aria-label": u.intl.string(u.t.B2panJ),
-                        tooltip: a ? null : u.intl.string(u.t.B2panJ),
+                        "aria-label": d.intl.string(d.t.B2panJ),
+                        tooltip: a ? null : d.intl.string(d.t.B2panJ),
                         disabled: f,
                         selected: a,
                     }),

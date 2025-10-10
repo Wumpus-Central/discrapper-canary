@@ -87,18 +87,18 @@ var r = n(260674),
             I && m && (C = i.maybeMap(C, m)), (A = [{ value: C.length > 0 ? C.join(",") || null : void 0 }]);
         else if (l(g)) A = g;
         else {
-            var x = Object.keys(C);
-            A = E ? x.sort(E) : x;
+            var L = Object.keys(C);
+            A = E ? L.sort(E) : L;
         }
-        var L = f ? String(n).replace(/\./g, "%2E") : String(n),
-            j = o && l(C) && 1 === C.length ? L + "[]" : L;
-        if (s && l(C) && 0 === C.length) return j + "[]";
-        for (var M = 0; M < A.length; ++M) {
-            var k = A[M],
+        var x = f ? String(n).replace(/\./g, "%2E") : String(n),
+            M = o && l(C) && 1 === C.length ? x + "[]" : x;
+        if (s && l(C) && 0 === C.length) return M + "[]";
+        for (var j = 0; j < A.length; ++j) {
+            var k = A[j],
                 U = "object" == typeof k && k && void 0 !== k.value ? k.value : C[k];
             if (!d || null !== U) {
                 var G = b && f ? String(k).replace(/\./g, "%2E") : String(k),
-                    B = l(C) ? ("function" == typeof a ? a(j, G) : j) : j + (b ? "." + G : "[" + G + "]");
+                    B = l(C) ? ("function" == typeof a ? a(M, G) : M) : M + (b ? "." + G : "[" + G + "]");
                 S.set(t, R);
                 var Z = r();
                 Z.set(h, S),

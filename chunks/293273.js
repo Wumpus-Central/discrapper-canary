@@ -79,8 +79,8 @@ function x(e, t) {
         e
     );
 }
-let j = [],
-    M = {};
+let M = [],
+    j = {};
 function k() {
     var e, t;
     let n = [],
@@ -93,7 +93,7 @@ function k() {
     let o = A.Z.getStream();
     null != o && n.push(D({ type: P.IIU.STREAMING }, o));
     let l = new Set();
-    s().forEach(M, (e) => {
+    s().forEach(j, (e) => {
         let [, t] = e;
         null != t.application_id && (l.add(t.name), n.push(t));
     });
@@ -133,28 +133,28 @@ function k() {
             emoji: null == e ? void 0 : e.emoji,
         });
     }
-    a()(j, n) || (j = n);
+    a()(M, n) || (M = n);
 }
 function U() {
-    (M = {}), k();
+    (j = {}), k();
 }
 function G(e) {
     let { socketId: t, pid: n, activity: r, partyPrivacy: i } = e;
-    if (a()(M[t], [n, r, i])) return !1;
-    null != r ? (M[t] = [n, r, i]) : delete M[t], k();
+    if (a()(j[t], [n, r, i])) return !1;
+    null != r ? (j[t] = [n, r, i]) : delete j[t], k();
 }
 function B(e) {
     let { socketId: t } = e;
-    delete M[t], k();
+    delete j[t], k();
 }
 function Z(e) {
     let { localActivities: t } = e;
-    (M = D({}, t)), k();
+    (j = D({}, t)), k();
 }
 function F() {
     let e = {},
         t = !1;
-    for (let [i, [a, o, s]] of Object.entries(M)) {
+    for (let [i, [a, o, s]] of Object.entries(j)) {
         var n, r;
         let l = null != (n = o.flags) ? n : 0,
             c = (0, d.S)(
@@ -166,7 +166,7 @@ function F() {
             );
         c !== l ? ((e[i] = [a, x(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
     }
-    return t ? ((M = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
+    return t ? ((j = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
 function V() {
     F(), k();
@@ -176,10 +176,10 @@ class H extends (r = l.ZP.Store) {
         this.waitFor(p.ZP, u.ZP, A.Z, T.Z, y.Z, v.Z, C.Z, m.Z, R.Z, f.Z), this.syncWith([g.Z, m.Z], () => k());
     }
     getActivities() {
-        return j;
+        return M;
     }
     getPrimaryActivity() {
-        return j[0];
+        return M[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
@@ -188,13 +188,13 @@ class H extends (r = l.ZP.Store) {
         return this.findActivity((e) => e.type === P.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return j.find(e);
+        return M.find(e);
     }
     getApplicationActivities() {
-        return M;
+        return j;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(M)) if (t === e) return n;
+        for (let [t, n] of Object.values(j)) if (t === e) return n;
         return null;
     }
 }

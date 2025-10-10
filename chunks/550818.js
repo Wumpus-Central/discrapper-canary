@@ -16,10 +16,10 @@ var r = n(951288),
     b = n(502762),
     y = n(848780),
     _ = n(907179),
-    O = n(671955),
-    j = n(388032),
-    v = n(491010),
-    x = n(268293);
+    j = n(671955),
+    x = n(388032),
+    O = n(491010),
+    v = n(268293);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,32 +68,32 @@ function I(e) {
                 ref: N,
                 user: t,
                 displayProfile: E,
-                themeType: O.l.SIDEBAR,
+                themeType: j.l.SIDEBAR,
                 themeOverride: S,
                 children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
-                        className: v.container,
+                        className: O.container,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: x,
-                                className: v.preview,
+                                src: v,
+                                className: O.preview,
                                 "aria-hidden": !0,
                             }),
                             (0, r.jsxs)("div", {
-                                className: v.body,
+                                className: O.body,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: v.headerContainer,
+                                        className: O.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.X6q, {
                                                 variant: "heading-lg/bold",
-                                                children: j.intl.string(j.t.b33pLC),
+                                                children: x.intl.string(x.t.b33pLC),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5u"], {
+                                                children: x.intl.format(Z ? x.t["8F+WNz"] : x.t["/cZp5u"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),

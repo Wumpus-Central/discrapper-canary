@@ -29,8 +29,8 @@ var r = n(392711),
     P = n(364458),
     w = n(981631),
     D = n(689079),
-    x = n(388032);
-function L(e, t, n) {
+    L = n(388032);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function j(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,7 +76,7 @@ function k(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,8 +86,8 @@ let U = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     G = /^$|\n *$/,
     B = /^ *>>> ?/,
     Z = /^ *> ?/gm,
-    V = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function F(e) {
+    F = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+function V(e) {
     let t = (0, v.yw)(e[1]);
     if (null == t)
         return {
@@ -116,10 +116,10 @@ let H = (e) => {
     W = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: k(j({}, o().defaultRules.escape), {
+        escape: k(M({}, o().defaultRules.escape), {
             match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)),
         }),
-        blockQuote: k(j({}, o().defaultRules.blockQuote), {
+        blockQuote: k(M({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [" ", ">"],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
@@ -153,12 +153,12 @@ let H = (e) => {
             },
         }),
         link: v.ZP,
-        autolink: k(j({}, o().defaultRules.autolink), { parse: F }),
-        mailto: k(j({}, o().defaultRules.mailto), {
+        autolink: k(M({}, o().defaultRules.autolink), { parse: V }),
+        mailto: k(M({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ["<"],
         }),
-        tel: k(j({}, o().defaultRules.mailto), {
+        tel: k(M({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ["<"],
             match: o().inlineRegex(
                 /^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/,
@@ -181,11 +181,11 @@ let H = (e) => {
                 );
             },
         }),
-        url: k(j({}, o().defaultRules.url), {
+        url: k(M({}, o().defaultRules.url), {
             requiredFirstCharacters: ["h", "s"],
             match(e, t) {
                 if (!t.inline) return null;
-                let n = V.exec(e);
+                let n = F.exec(e);
                 if (null != n) {
                     let e = 0,
                         t = n[0];
@@ -201,18 +201,18 @@ let H = (e) => {
                 }
                 return n;
             },
-            parse: F,
+            parse: V,
         }),
         strong: o().defaultRules.strong,
         em: o().defaultRules.em,
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: A.ZP,
-        inlineCode: k(j({}, o().defaultRules.inlineCode), {
+        inlineCode: k(M({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
                 return !0 === n.parseInlineCodeChildContent
-                    ? k(j({}, r), { validationChildContent: t(r.content, n) })
+                    ? k(M({}, r), { validationChildContent: t(r.content, n) })
                     : r;
             },
         }),
@@ -255,7 +255,7 @@ let H = (e) => {
                 if (null == d)
                     return {
                         type: "text",
-                        content: "@".concat(x.intl.string(x.t["YV4F/v"])),
+                        content: "@".concat(L.intl.string(L.t["YV4F/v"])),
                     };
                 let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
@@ -310,7 +310,7 @@ let H = (e) => {
                 }
                 let l = e[1],
                     c = null != l && w.Xyh.test(l.trim()),
-                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(x.intl.string(x.t.sKdZ6e)) : e[0];
+                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -387,7 +387,7 @@ let H = (e) => {
                         content: [
                             {
                                 type: "text",
-                                content: x.intl.string(x.t["11pdXV"]),
+                                content: L.intl.string(L.t["11pdXV"]),
                             },
                         ],
                         icon: void 0,
@@ -402,7 +402,7 @@ let H = (e) => {
                         {
                             type: "text",
                             content: "".concat(
-                                null != (a = null == l ? void 0 : l.name) ? a : x.intl.string(x.t["11pdXV"]),
+                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXV"]),
                             ),
                         },
                     ],
@@ -601,7 +601,7 @@ let er = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = k(j({}, n), { parseDepth: i + 1 }),
+                        a = k(M({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(647438),
-    i = n(106351),
-    a = n(442837),
-    o = n(434650),
+    i = n(907331),
+    a = n(106351),
+    o = n(442837),
     s = n(430824),
     l = n(63205),
     c = n(765383),
@@ -11,7 +11,7 @@ let d = 0;
 function f(e) {
     var t, n;
     let { message: f, channel: _, enabled: p = !0 } = e,
-        h = (0, a.e7)([s.Z], () => {
+        h = (0, o.e7)([s.Z], () => {
             var e;
             let t = s.Z.getGuild(_.guild_id);
             return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
@@ -21,7 +21,7 @@ function f(e) {
             null != f.webhookId &&
             f.hasFlag(u.iLy.IS_CROSSPOST) &&
             null != _.guild_id,
-        g = _.type === i.d.GUILD_ANNOUNCEMENT && h,
+        g = _.type === a.d.GUILD_ANNOUNCEMENT && h,
         E = !f.hasFlag(u.iLy.EPHEMERAL) && (m || g),
         b = m && null != f.messageReference ? f.messageReference.message_id : f.id,
         y = m && null != f.messageReference ? f.messageReference.channel_id : _.id,
@@ -51,7 +51,7 @@ function f(e) {
                 autoTrackExposure: !0,
             },
         ).enabled,
-        T = (0, o.O)(v, d, I);
+        T = (0, i.O)(v, d, I);
     return (
         r.useEffect(
             () => () => {

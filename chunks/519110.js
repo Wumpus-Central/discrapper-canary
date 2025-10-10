@@ -69,7 +69,7 @@ function E(e) {
         T = (0, p.Go)(),
         w = (0, l.e7)([O.Z], () => (t === f.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
         I = null != w && T.includes(w.id),
-        N = (0, l.e7)([u.ZP], () => {
+        A = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
                 else if (null != E) {
@@ -78,7 +78,7 @@ function E(e) {
                 }
             }
         }),
-        A = (0, c.C1)(null, N);
+        N = (0, c.C1)(null, A);
     return null != w && t === f.S.STICKER
         ? (0, y.J8)(w) && !(0, y.V9)(w)
             ? null
@@ -99,21 +99,21 @@ function E(e) {
                     },
                     label: h.intl.string(h.t.kWmiPT),
                 })
-        : null != N && t === f.S.EMOJI
-          ? A
+        : null != A && t === f.S.EMOJI
+          ? N
               ? (0, r.jsx)(a.sNh, {
                     id: "unfavorite",
-                    action: () => (0, o.Xe)(N),
+                    action: () => (0, o.Xe)(A),
                     label: h.intl.string(h.t.Ay49KC),
                 })
               : (0, r.jsx)(a.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, c.J1)({
-                            emoji: N,
+                            emoji: A,
                             location: j(v({}, Z), { object: m.qAy.EMOJI }),
                         }),
-                            (0, o.$K)(N);
+                            (0, o.$K)(A);
                     },
                     label: h.intl.string(h.t["nNsr6+"]),
                 })

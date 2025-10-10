@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(632285),
     v = n(979233),
     I = n(17845),
-    C = n(374939),
-    S = n(233374),
+    S = n(374939),
+    C = n(233374),
     T = n(611928),
     N = n(763433),
     j = n(283293),
@@ -54,7 +54,7 @@ var r = n(951288),
     et = n(215023),
     en = n(186901),
     er = n(388032),
-    ei = n(838997),
+    ei = n(728963),
     el = n(13299),
     ea = n(890631),
     eo = n(164792),
@@ -188,7 +188,7 @@ function ef(e) {
                     className: ei.redirectNoticeBannerContainer,
                     children: (0, r.jsx)(ep, { onLoadComplete: t }),
                 }),
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(S.Z, {
                     children: (0, r.jsxs)("div", {
                         className: ei.redirectNoticeContainer,
                         children: [
@@ -364,7 +364,7 @@ let eh = function (e) {
                                                 (0, r.jsx)(ed, { onLoadComplete: ea }),
                                             ],
                                         }),
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(S.Z, {
                                         children:
                                             w === k.e5.CLAIMED
                                                 ? (0, r.jsx)(el, { onSelectTab: L })
@@ -409,11 +409,11 @@ let eh = function (e) {
                                                     (0, r.jsx)(ed, { onLoadComplete: ea }),
                                                 ],
                                             }),
-                                            (0, r.jsxs)(C.Z, {
+                                            (0, r.jsxs)(S.Z, {
                                                 children: [
                                                     (0, r.jsx)("div", {
                                                         className: ei.tabs,
-                                                        children: (0, r.jsx)(S.Z, {
+                                                        children: (0, r.jsx)(C.Z, {
                                                             tabs: D,
                                                             selectedTab: w,
                                                             onTabSelect: L,

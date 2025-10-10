@@ -53,7 +53,7 @@ let i = [
                     e.requestAnimationFrame && (0, _.hl)(o.m9, "requestAnimationFrame", s),
                     e.XMLHttpRequest && "XMLHttpRequest" in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, "send", l);
                 let t = e.eventTarget;
-                t && (Array.isArray(t) ? t : i).forEach(u);
+                t && (Array.isArray(t) ? t : i).forEach(I);
             },
         };
     });
@@ -114,7 +114,7 @@ function l(t) {
         );
     };
 }
-function u(t) {
+function I(t) {
     let e = o.m9,
         a = e[t] && e[t].prototype;
     a &&

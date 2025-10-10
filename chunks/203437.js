@@ -10,26 +10,26 @@ var a = t(951288),
     d = t(430824),
     f = t(496675),
     m = t(771845),
-    h = t(594174),
-    g = t(267642),
+    g = t(594174),
+    h = t(267642),
     p = t(709054),
     y = t(208049),
     b = t(763296),
     v = t(710111),
     x = t(981631),
     j = t(388032),
-    _ = t(697847);
-function w(e) {
+    w = t(697847);
+function _(e) {
     let { availableSlots: n, className: t } = e;
     return (0, a.jsxs)(s.Text, {
-        className: r()(_.suffixNode, t),
+        className: r()(w.suffixNode, t),
         variant: "text-sm/medium",
         color: "text-primary",
         children: [
             (0, a.jsx)(s.gj8, {
                 size: "md",
                 color: "currentColor",
-                className: _.speakerIcon,
+                className: w.speakerIcon,
             }),
             j.intl.format(j.t["8Dyg1N"], { slots: n }),
         ],
@@ -37,11 +37,11 @@ function w(e) {
 }
 function N(e) {
     let { value: n, className: t, onChange: i } = e,
-        N = (0, o.cj)([m.ZP, f.Z, h.default, d.Z], () => {
+        N = (0, o.cj)([m.ZP, f.Z, g.default, d.Z], () => {
             let e = {};
             for (let n of m.ZP.getFlattenedGuildIds()) {
                 let t = d.Z.getGuild(n);
-                null != t && (0, c.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
+                null != t && (0, c.Gw)(t, f.Z, g.default).canCreateExpressions && (e[t.id] = t);
             }
             return e;
         }),
@@ -49,7 +49,7 @@ function N(e) {
             let e = {};
             for (let [t, a] of p.default.entries(N)) {
                 var n;
-                let l = (0, g.yw)(a, null != (n = b.Z.getSoundsForGuild(t)) ? n : v.Hy, a.premiumTier);
+                let l = (0, h.yw)(a, null != (n = b.Z.getSoundsForGuild(t)) ? n : v.Hy, a.premiumTier);
                 e[t] = l;
             }
             return e;
@@ -74,7 +74,7 @@ function N(e) {
                 null == e || "" === e.value
                     ? null
                     : (0, a.jsx)(u.Z, {
-                          className: r()(_.guildSelectOptionIcon, { [_.disabledOption]: e.disabled }),
+                          className: r()(w.guildSelectOptionIcon, { [w.disabledOption]: e.disabled }),
                           guild: N[e.value],
                           size: u.Z.Sizes.SMOL,
                           active: !0,
@@ -86,40 +86,40 @@ function N(e) {
                 let n = null == e ? void 0 : e.value;
                 return null == n || "" === n
                     ? null
-                    : (0, a.jsx)(w, {
-                          className: r()({ [_.disabledOption]: null == e ? void 0 : e.disabled }),
+                    : (0, a.jsx)(_, {
+                          className: r()({ [w.disabledOption]: null == e ? void 0 : e.disabled }),
                           availableSlots: C[n],
                       });
             },
             [C],
         ),
-        I = l.useCallback(
+        P = l.useCallback(
             (e) =>
                 (0, a.jsx)("div", {
-                    className: r()({ [_.disabledOption]: e.disabled }),
+                    className: r()({ [w.disabledOption]: e.disabled }),
                     children: e.label,
                 }),
             [],
         ),
-        P = l.useCallback(
+        I = l.useCallback(
             (e) => {
                 C[e] <= 0 || i(e);
             },
             [C, i],
         ),
-        k = (() => {
+        Z = (() => {
             let e = C[null != n ? n : x.lds];
             return null == e || e > 0 ? n : void 0;
         })();
     return (0, a.jsx)(s.VcW, {
         className: t,
-        onChange: P,
-        value: k,
+        onChange: I,
+        value: Z,
         multi: !1,
         options: S,
         renderOptionPrefix: O,
         renderOptionSuffix: E,
-        renderOptionLabel: I,
+        renderOptionLabel: P,
         placeholder: 0 === S.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD),
     });
 }

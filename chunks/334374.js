@@ -1,39 +1,39 @@
-n.d(t, { Z: () => u }), n(388685), n(35282), n(784620), n(973216);
+n.d(t, { Z: () => c }), n(388685), n(35282), n(784620), n(973216);
 var r = n(951288),
-    l = n(647438),
-    i = n(414910),
+    i = n(647438),
+    l = n(414910),
     a = n(226961),
     o = n(447661);
-function u(e) {
+function c(e) {
     let { currentUserId: t, participant: n } = e,
-        u = (0, i.Z)(n.type),
-        [s, c] = l.useState(),
-        [d, f] = l.useState(),
-        [p, m] = l.useState(),
-        E = n.id.split(":").at(-1),
-        g = t === E,
-        b = l.useCallback((e, t, n) => {
-            var r, l, i;
+        c = (0, l.Z)(n.type),
+        [s, u] = i.useState(),
+        [d, f] = i.useState(),
+        [p, _] = i.useState(),
+        m = n.id.split(":").at(-1),
+        b = t === m,
+        E = i.useCallback((e, t, n) => {
+            var r, i, l;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
-            c(null != (r = null == o ? void 0 : o.codec) ? r : "unknown"),
+            u(null != (r = null == o ? void 0 : o.codec) ? r : "unknown"),
                 f(
-                    void 0 === (l = null == o ? void 0 : o.resolution) || (0 === l.width && 0 === l.height)
+                    void 0 === (i = null == o ? void 0 : o.resolution) || (0 === i.width && 0 === i.height)
                         ? "unknown"
-                        : l.width + " x " + l.height,
+                        : i.width + " x " + i.height,
                 ),
-                m(
+                _(
                     (null == o ? void 0 : o.bitrateEstimate) !== void 0
-                        ? ((i = o.bitrateEstimate), "".concat((i / 1000).toFixed(2), " Kbps"))
+                        ? ((l = o.bitrateEstimate), "".concat((l / 1000).toFixed(2), " Kbps"))
                         : "unknown",
                 );
         }, []);
     return (
-        l.useEffect(() => {
-            let e = () => b(E, u, g);
+        i.useEffect(() => {
+            let e = () => E(m, c, b);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, E, u, b]),
+        }, [b, m, c, E]),
         (0, r.jsxs)("div", {
             className: o.streamInfoContainer,
             children: [
@@ -49,7 +49,7 @@ function u(e) {
                     className: o.infoRow,
                     children: [(0, r.jsx)("span", { children: "Resolution: " }), (0, r.jsx)("strong", { children: d })],
                 }),
-                g &&
+                b &&
                     (0, r.jsxs)("div", {
                         className: o.infoRow,
                         children: [

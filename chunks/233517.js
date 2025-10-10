@@ -3,16 +3,16 @@ a.d(e, {
     TM: () => g,
     Tb: () => s,
     YA: () => A,
-    av: () => f,
+    av: () => T,
     cg: () => C,
     dk: () => h,
-    eN: () => u,
-    eW: () => T,
+    eN: () => I,
+    eW: () => f,
     mG: () => N,
     rJ: () => R,
     sU: () => d,
     uT: () => l,
-    v: () => I,
+    v: () => u,
     xv: () => p,
     yj: () => P,
     yl: () => L,
@@ -32,10 +32,10 @@ function l(t, e) {
         r = "string" != typeof e ? { captureContext: e } : void 0;
     return (0, o.nZ)().captureMessage(t, a, r);
 }
-function u(t, e) {
+function I(t, e) {
     return (0, o.nZ)().captureEvent(t, e);
 }
-function I(t, e) {
+function u(t, e) {
     (0, o.aF)().setContext(t, e);
 }
 function R(t) {
@@ -50,10 +50,10 @@ function N(t) {
 function A(t, e) {
     (0, o.aF)().setTag(t, e);
 }
-function f(t) {
+function T(t) {
     (0, o.aF)().setUser(t);
 }
-function T() {
+function f() {
     return (0, o.aF)().lastEventId();
 }
 async function L(t) {
@@ -85,8 +85,8 @@ function P(t) {
             ...(s && { userAgent: s }),
             ...t,
         }),
-        u = a.getSession();
-    return u && "ok" === u.status && (0, c.CT)(u, { status: "exited" }), g(), a.setSession(l), r.setSession(l), l;
+        I = a.getSession();
+    return I && "ok" === I.status && (0, c.CT)(I, { status: "exited" }), g(), a.setSession(l), r.setSession(l), l;
 }
 function g() {
     let t = (0, o.aF)(),

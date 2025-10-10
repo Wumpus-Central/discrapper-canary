@@ -20,13 +20,13 @@ var r = n(951288),
     y = n(974042),
     v = n(365113),
     I = n(849862),
-    C = n(666286),
-    S = n(596957),
+    S = n(666286),
+    C = n(596957),
     T = n(576360),
     N = n(981631),
     j = n(723359),
     P = n(388032),
-    x = n(194783);
+    x = n(236202);
 function A() {
     return (0, r.jsx)("div", {
         className: x.inviteToolbar,
@@ -130,26 +130,26 @@ let Z = function (e) {
             content: P.intl.string(P.t.LuZzxs),
             className: x.item,
         });
-    let V = null,
-        H = (0, r.jsx)("div", {
+    let H = null,
+        V = (0, r.jsx)("div", {
             className: x.nowPlayingColumn,
             children: (0, r.jsx)(_.Z, {}),
         });
     return (
         w === N.pJs.ADD_FRIEND
-            ? (V = (0, r.jsx)(C.Z, {}))
+            ? (H = (0, r.jsx)(S.Z, {}))
             : w === N.pJs.YOU
               ? B
-                  ? (V = (0, r.jsx)(T.Z, {}))
-                  : ((V = (0, r.jsx)(c.Ttm, {
+                  ? (H = (0, r.jsx)(T.Z, {}))
+                  : ((H = (0, r.jsx)(c.Ttm, {
                         className: x.nowPlayingFullWidth,
                         children: (0, r.jsx)("div", {
                             style: { maxWidth: 600 },
                             children: (0, r.jsx)(_.Z, {}),
                         }),
                     })),
-                    (H = null))
-              : (V = (0, r.jsx)(S.Z, { titleId: U })),
+                    (V = null))
+              : (H = (0, r.jsx)(C.Z, { titleId: U })),
         (0, r.jsxs)("main", {
             className: x.container,
             "aria-label": P.intl.string(P.t.TdEu5e),
@@ -203,9 +203,9 @@ let Z = function (e) {
                             id: w,
                             className: x.peopleColumn,
                             "aria-labelledby": U,
-                            children: V,
+                            children: H,
                         }),
-                        H,
+                        V,
                     ],
                 }),
             ],

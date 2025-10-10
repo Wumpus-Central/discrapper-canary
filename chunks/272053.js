@@ -192,25 +192,25 @@ class D {
         m(this, "_nextCheck", void 0), m(this, "_started", void 0), (this._started = !1);
     }
 }
-let x = new D();
-function L() {
-    p.Z.enabled ? x.start() : x.stop();
+let L = new D();
+function x() {
+    p.Z.enabled ? L.start() : L.stop();
 }
-function j(e) {
+function M(e) {
     var t;
     if (a()(e.stream, T)) return !1;
     T = null != (t = e.stream) ? t : null;
 }
-class M extends (r = o.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
-        L(), this.waitFor(_.Z), this.syncWith([p.Z], L);
+        x(), this.waitFor(_.Z), this.syncWith([p.Z], x);
     }
     getStream() {
         return T;
     }
 }
-m(M, "displayName", "ExternalStreamingStore");
-let k = new M(l.Z, {
-    STREAMING_UPDATE: j,
-    USER_CONNECTIONS_UPDATE: () => x._check(),
+m(j, "displayName", "ExternalStreamingStore");
+let k = new j(l.Z, {
+    STREAMING_UPDATE: M,
+    USER_CONNECTIONS_UPDATE: () => L._check(),
 });

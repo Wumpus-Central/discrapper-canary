@@ -82,7 +82,7 @@ function R() {
     }
 }
 function P(e) {
-    d.Z.getConfig({ location: "handlePowerEvent" }).power_events ? j({}) : (e && (r = Date.now()), N());
+    d.Z.getConfig({ location: "handlePowerEvent" }).power_events ? M({}) : (e && (r = Date.now()), N());
 }
 if (!__OVERLAY__) {
     p.isPlatformEmbedded && (null === u.Z || void 0 === u.Z ? void 0 : u.Z.remotePowerMonitor) != null
@@ -101,7 +101,7 @@ if (!__OVERLAY__) {
           }))
         : setInterval(N, 30 * _.Z.Millis.SECOND);
     let e = o()(() => {
-        d.Z.getConfig({ location: "handleGenericInput" }).generic_inputs && j({});
+        d.Z.getConfig({ location: "handleGenericInput" }).generic_inputs && M({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
@@ -113,13 +113,13 @@ function D(e) {
 }
 function L(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== g.Dg.NONE && t === h.default.getId() && j({}), !1;
+    return n !== g.Dg.NONE && t === h.default.getId() && M({}), !1;
 }
 function x(e) {
     let { state: t } = e;
     return (T = t === m.$7l.BACKGROUND), (r = null), (b = Date.now()), N(), !1;
 }
-function j(e) {
+function M(e) {
     let { timestamp: t, type: n } = e,
         i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
@@ -135,9 +135,9 @@ function j(e) {
         !1)
     );
 }
-function M() {
+function j() {
     if (!d.Z.getConfig({ location: "handleSettingsProtoUpdate" }).settings_updates) return !1;
-    j({});
+    M({});
 }
 class k extends (i = s.ZP.Store) {
     isIdle() {
@@ -162,11 +162,11 @@ let U = new k(l.Z, {
     AFK: D,
     SPEAKING: L,
     APP_STATE_UPDATE: x,
-    OVERLAY_SET_NOT_IDLE: j,
-    CHANNEL_SELECT: j,
-    VOICE_CHANNEL_SELECT: j,
-    WINDOW_FOCUS: j,
-    OVERLAY_INITIALIZE: j,
-    OVERLAY_SET_INPUT_LOCKED: j,
-    USER_SETTINGS_PROTO_UPDATE: M,
+    OVERLAY_SET_NOT_IDLE: M,
+    CHANNEL_SELECT: M,
+    VOICE_CHANNEL_SELECT: M,
+    WINDOW_FOCUS: M,
+    OVERLAY_INITIALIZE: M,
+    OVERLAY_SET_INPUT_LOCKED: M,
+    USER_SETTINGS_PROTO_UPDATE: j,
 });

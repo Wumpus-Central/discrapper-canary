@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(442837),
     i = n(570140),
     l = n(107105),
@@ -20,10 +20,10 @@ var r = n(442837),
     y = n(238679),
     v = n(863141),
     I = n(981631),
-    C = n(701488),
-    S = n(408491),
-    N = n(65154);
-function T(e, t, n) {
+    S = n(701488),
+    C = n(408491),
+    T = n(65154);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function T(e, t, n) {
         e
     );
 }
-class P {
+class j {
     loadServer() {
         for (let e of (O.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
             this.rpcServer.registerTransport(e);
@@ -120,13 +120,13 @@ class P {
             i.Z.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleQuestEnrollSuccess);
     }
     constructor(e) {
-        T(this, "rpcServer", void 0),
-            T(this, "transports", void 0),
-            T(this, "rpcCommandHandlers", void 0),
-            T(this, "rpcEventHandlers", void 0),
-            T(this, "stores", void 0),
-            T(this, "registerTransportsForEmbeddedPlatform", void 0),
-            T(this, "handleMessage", (e) => {
+        N(this, "rpcServer", void 0),
+            N(this, "transports", void 0),
+            N(this, "rpcCommandHandlers", void 0),
+            N(this, "rpcEventHandlers", void 0),
+            N(this, "stores", void 0),
+            N(this, "registerTransportsForEmbeddedPlatform", void 0),
+            N(this, "handleMessage", (e) => {
                 let t, n, r;
                 if (0 === this.rpcServer.subscriptions.length) return;
                 "MESSAGE_CREATE" === e.type && this.handleActivityMessage(e);
@@ -162,10 +162,10 @@ class P {
                         i,
                     );
             }),
-            T(this, "handleSpeaking", (e) => {
+            N(this, "handleSpeaking", (e) => {
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let t = 0 !== e.speakingFlags ? I.zMe.SPEAKING_START : I.zMe.SPEAKING_STOP;
-                if (e.context === N.Yn.DEFAULT) {
+                if (e.context === T.Yn.DEFAULT) {
                     let n = h.Z.getVoiceChannelId();
                     if (null != n) {
                         let r = o.Z.getChannel(n);
@@ -183,7 +183,7 @@ class P {
                     }
                 }
             }),
-            T(this, "handleVoiceChannelSelect", (e) => {
+            N(this, "handleVoiceChannelSelect", (e) => {
                 let { guildId: t, channelId: n } = e;
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(
@@ -195,7 +195,7 @@ class P {
                         },
                     );
             }),
-            T(this, "handleNotificationCreate", (e) => {
+            N(this, "handleNotificationCreate", (e) => {
                 let { channelId: t, message: n, icon: r, title: i, body: l } = e;
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(
@@ -210,7 +210,7 @@ class P {
                         },
                     );
             }),
-            T(this, "handleActivityJoin", (e) => {
+            N(this, "handleActivityJoin", (e) => {
                 let { applicationId: t, secret: n, intent: r, embedded: i } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let l = { secret: n };
@@ -222,10 +222,10 @@ class P {
                     ),
                     this.rpcServer.dispatchToSubscriptions(I.zMe.GAME_JOIN, (e) => e.socket.application.id === t, l);
             }),
-            T(this, "handleActivityLayoutModeUpdate", (e) => {
+            N(this, "handleActivityLayoutModeUpdate", (e) => {
                 let { applicationId: t, layoutMode: n } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let r = n !== C.cE.FOCUSED;
+                let r = n !== S.cE.FOCUSED;
                 this.rpcServer.dispatchToSubscriptions(
                     I.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -237,11 +237,11 @@ class P {
                         { layout_mode: n },
                     );
             }),
-            T(this, "handleFrameUpdateLayoutMode", (e) => {
+            N(this, "handleFrameUpdateLayoutMode", (e) => {
                 let { applicationId: t, layoutMode: n } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let r = n === S.U.PIP ? C.cE.PIP : C.cE.FOCUSED,
-                    i = r !== C.cE.FOCUSED;
+                let r = n === C.U.PIP ? S.cE.PIP : S.cE.FOCUSED,
+                    i = r !== S.cE.FOCUSED;
                 this.rpcServer.dispatchToSubscriptions(
                     I.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
@@ -253,7 +253,7 @@ class P {
                         { layout_mode: r },
                     );
             }),
-            T(this, "handleThermalStateChange", (e) => {
+            N(this, "handleThermalStateChange", (e) => {
                 let { applicationId: t } = e;
                 if (0 === this.rpcServer.subscriptions.length || null == t) return;
                 let n = { thermal_state: (0, l.bY)() };
@@ -263,17 +263,17 @@ class P {
                     n,
                 );
             }),
-            T(this, "handleScreenOrientationUpdate", (e) => {
+            N(this, "handleScreenOrientationUpdate", (e) => {
                 let { screenOrientation: t } = e;
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(I.zMe.ORIENTATION_UPDATE, {}, { screen_orientation: t });
             }),
-            T(this, "handleEmbeddedActivityUpdate", () => {
+            N(this, "handleEmbeddedActivityUpdate", () => {
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let e = (0, y.dO)();
                 this.rpcServer.dispatchToSubscriptions(I.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e);
             }),
-            T(this, "handleActivityMessage", (e) => {
+            N(this, "handleActivityMessage", (e) => {
                 var t;
                 let { channelId: n, message: r } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
@@ -317,13 +317,13 @@ class P {
                         );
                 }
             }),
-            T(this, "handleOAuth2TokenRevoke", (e) => {
+            N(this, "handleOAuth2TokenRevoke", (e) => {
                 let { accessToken: t } = e;
                 this.rpcServer.sockets.forEach((e) => {
                     e.authorization.accessToken === t && e.close(I.$VG.TOKEN_REVOKED, "Token revoked");
                 });
             }),
-            T(this, "handleGuildCreate", (e) => {
+            N(this, "handleGuildCreate", (e) => {
                 let {
                         guild: { id: t },
                     } = e,
@@ -339,7 +339,7 @@ class P {
                         },
                     );
             }),
-            T(this, "handleChannelCreate", (e) => {
+            N(this, "handleChannelCreate", (e) => {
                 let {
                     channel: { id: t, name: n, type: r },
                 } = e;
@@ -354,10 +354,10 @@ class P {
                         },
                     );
             }),
-            T(this, "handleLogout", () => {
+            N(this, "handleLogout", () => {
                 this.rpcServer.sockets.forEach((e) => e.close(I.$VG.CLOSE_NORMAL, "User logout"));
             }),
-            T(this, "handleRelationshipAdd", (e) => {
+            N(this, "handleRelationshipAdd", (e) => {
                 let {
                     relationship: { id: t, type: n },
                 } = e;
@@ -369,7 +369,7 @@ class P {
                     (0, E.kb)(i, e.socket.application.id),
                 );
             }),
-            T(this, "handleRelationshipUpdate", (e) => {
+            N(this, "handleRelationshipUpdate", (e) => {
                 let {
                     relationship: { id: t, type: n },
                 } = e;
@@ -381,7 +381,7 @@ class P {
                     (0, E.kb)(i, e.socket.application.id),
                 );
             }),
-            T(this, "handleRelationshipRemove", (e) => {
+            N(this, "handleRelationshipRemove", (e) => {
                 let {
                     relationship: { id: t },
                 } = e;
@@ -393,7 +393,7 @@ class P {
                     (0, E.kb)(r, e.socket.application.id),
                 );
             }),
-            T(this, "handlePresenceUpdates", (e) => {
+            N(this, "handlePresenceUpdates", (e) => {
                 let { updates: t } = e;
                 if (0 !== this.rpcServer.subscriptions.length)
                     for (let e of new Set(
@@ -412,7 +412,7 @@ class P {
                         );
                     }
             }),
-            T(this, "handlePresencesReplace", () => {
+            N(this, "handlePresencesReplace", () => {
                 if (0 !== this.rpcServer.subscriptions.length)
                     for (let [e, t] of f.Z.getMutableRelationships().entries()) {
                         if (t === I.OGo.NONE) continue;
@@ -424,7 +424,7 @@ class P {
                         );
                     }
             }),
-            T(this, "handleUserUpdate", (e) => {
+            N(this, "handleUserUpdate", (e) => {
                 let {
                     user: { id: t },
                 } = e;
@@ -438,7 +438,7 @@ class P {
                     (0, E.kb)(i, e.socket.application.id),
                 );
             }),
-            T(this, "handleEntitlementCreate", (e) => {
+            N(this, "handleEntitlementCreate", (e) => {
                 let { entitlement: t } = e;
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(
@@ -447,7 +447,7 @@ class P {
                         { entitlement: t },
                     );
             }),
-            T(this, "handleEntitlementDelete", (e) => {
+            N(this, "handleEntitlementDelete", (e) => {
                 let { entitlement: t } = e;
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(
@@ -456,7 +456,7 @@ class P {
                         { entitlement: t },
                     );
             }),
-            T(this, "handleQuestEnrollSuccess", (e) => {
+            N(this, "handleQuestEnrollSuccess", (e) => {
                 let { enrolledQuestUserStatus: t } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let n = t.questId,

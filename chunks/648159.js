@@ -1,14 +1,14 @@
 n.d(t, { Z: () => a });
 var l = n(647438),
     i = n(252618),
-    r = n(358085),
-    s = n(388032);
+    s = n(358085),
+    r = n(388032);
 function a() {
     return (
         l.useEffect(() => {
-            r.isPlatformEmbedded ||
+            s.isPlatformEmbedded ||
                 (0, i.EM)({
-                    messages: [s.intl.string(s.t.KIX3cn), s.intl.string(s.t["UbO+8v"]), s.intl.string(s.t.MbySu7)],
+                    messages: [r.intl.string(r.t.KIX3cn), r.intl.string(r.t["UbO+8v"]), r.intl.string(r.t.MbySu7)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0,

@@ -45,24 +45,24 @@ function w(e, t, n) {
     );
 }
 let D = 3000,
-    x = 800,
-    L = {};
-function j(e) {
+    L = 800,
+    x = {};
+function M(e) {
     return "".concat(e.channel_id, ":").concat(e.id);
 }
-function M() {
-    Object.values(L).forEach((e) => {
+function j() {
+    Object.values(x).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (L = {});
+        (x = {});
 }
 function k(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
-    let n = j(e);
-    if (null != L[n]) {
-        let { timeout: r, setAt: i } = L[n];
-        return U(e, t, i), clearTimeout(r), delete L[n], !0;
+    let n = M(e);
+    if (null != x[n]) {
+        let { timeout: r, setAt: i } = x[n];
+        return U(e, t, i), clearTimeout(r), delete x[n], !0;
     }
     return !1;
 }
@@ -123,16 +123,16 @@ let B = (e, t) => {
     }
 };
 function Z(e) {
-    return null == L[j(e)];
+    return null == x[M(e)];
 }
 function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(Z) : e.filter(Z);
     i.forEach((e) => {
-        let t = j(e);
-        null == L[t] &&
+        let t = M(e);
+        null == x[t] &&
             (d.Z.increment({ name: s.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (L[t] = {
+            (x[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     G(e);
@@ -143,10 +143,10 @@ function F(e, t) {
     r
         ? setTimeout(() => {
               B(
-                  i.filter((e) => null != L[j(e)]),
+                  i.filter((e) => null != x[M(e)]),
                   a,
               );
-          }, Math.random() * x)
+          }, Math.random() * L)
         : B(i, a);
 }
 function V(e) {
@@ -472,7 +472,7 @@ class eo extends c.Z {
                 SIDEBAR_VIEW_CHANNEL: et,
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
-                LOGOUT: M,
+                LOGOUT: j,
                 SEARCH_MESSAGES_SUCCESS: Q,
                 MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
                 CHANNEL_SELECT: en,

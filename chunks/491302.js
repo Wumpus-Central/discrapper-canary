@@ -125,7 +125,7 @@ function f(e) {
             (C = (0, i.jsxs)("div", {
                 className: g.body,
                 children: [
-                    (0, i.jsx)(a.$i$, { className: g.topDivider }),
+                    (0, i.jsx)(a.izJ, { className: g.topDivider }),
                     (0, i.jsxs)(a.Kqy, {
                         gap: 24,
                         children: [
@@ -158,7 +158,7 @@ function f(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(a.$i$, { className: g.bottomDivider }),
+                            (0, i.jsx)(a.izJ, { className: g.bottomDivider }),
                             (0, i.jsx)(l.Avr, {
                                 onClick: O,
                                 size: "sm",

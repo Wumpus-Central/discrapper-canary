@@ -34,10 +34,10 @@ var r,
     P = n(630388),
     w = n(153066),
     D = n(740265),
-    x = n(122810),
-    L = n(833664),
-    j = n(503438),
-    M = n(802856),
+    L = n(122810),
+    x = n(833664),
+    M = n(503438),
+    j = n(802856),
     k = n(420660),
     U = n(39628),
     G = n(701488),
@@ -121,7 +121,7 @@ function Q(e) {
     let { activity: t } = e,
         n = null;
     return (
-        (0, j.Z)(t) && (n = B.ABu.SPOTIFY),
+        (0, M.Z)(t) && (n = B.ABu.SPOTIFY),
         null != t.platform && [B.M7m.PS4, B.M7m.PS5].includes(t.platform) && (n = B.ABu.PLAYSTATION),
         n
     );
@@ -234,7 +234,7 @@ class $ extends (r = a.PureComponent) {
             { assets: f, application_id: _ } = e;
         if (null == f || (null == f.large_image && null == f.small_image)) return null;
         (0, k.Z)(e) && (o = q[u]);
-        let p = (0, j.Z)(e),
+        let p = (0, M.Z)(e),
             h =
                 null != f.large_image
                     ? (0, i.jsx)("img", {
@@ -355,7 +355,7 @@ class $ extends (r = a.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: r, activityGuild: a } = this.props;
-        return null != e.assets || (0, x.Z)(e) || e.type !== B.IIU.PLAYING || "ActivityFeed" === n || t.bot
+        return null != e.assets || (0, L.Z)(e) || e.type !== B.IIU.PLAYING || "ActivityFeed" === n || t.bot
             ? null
             : null == r && null != a
               ? (0, i.jsx)("div", { className: s()(F.gameIcon, F.screenshareIcon) })
@@ -369,7 +369,7 @@ class $ extends (r = a.PureComponent) {
         if (r) return null;
         let { details: a, type: o } = e;
         if (o === B.IIU.CUSTOM_STATUS) return null;
-        let l = (0, L.Z)(e),
+        let l = (0, x.Z)(e),
             c = e.name,
             u = c;
         return (o === B.IIU.HANG_STATUS
@@ -382,7 +382,7 @@ class $ extends (r = a.PureComponent) {
               : !l &&
                 ((c = a),
                 (u = a),
-                (0, j.Z)(e) && null != e.sync_id && null != a
+                (0, M.Z)(e) && null != e.sync_id && null != a
                     ? (u = (0, i.jsx)(d.eee, {
                           className: F.bodyLink,
                           onClick: this.handleOpenSpotifyTrack,
@@ -410,8 +410,8 @@ class $ extends (r = a.PureComponent) {
                 (t = () => {
                     (0, S.X)(a.id);
                 });
-        else if (!(0, L.Z)(e)) {
-            if (((o = r), (s = r), (0, j.Z)(e) && null != r)) {
+        else if (!(0, x.Z)(e)) {
+            if (((o = r), (s = r), (0, M.Z)(e) && null != r)) {
                 let t = (t, n) =>
                     (0, i.jsx)(
                         A.Z,
@@ -443,7 +443,7 @@ class $ extends (r = a.PureComponent) {
                 })
               : (0, i.jsx)("div", {
                     title: null != s ? s : void 0,
-                    className: (0, k.Z)(e) || (0, j.Z)(e) ? F.detailsWrap : F.details,
+                    className: (0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
                     children: o,
                 });
     }
@@ -452,11 +452,11 @@ class $ extends (r = a.PureComponent) {
         return n && null != t
             ? null == r
                 ? (0, i.jsx)("div", {
-                      className: (0, k.Z)(e) || (0, j.Z)(e) ? F.detailsWrap : F.details,
+                      className: (0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
                       children: Z.intl.format(Z.t["hq/Qzc"], { guildName: t.name }),
                   })
                 : (0, i.jsxs)("div", {
-                      className: s()((0, k.Z)(e) || (0, j.Z)(e) ? F.detailsWrap : F.details, F.guildDetails),
+                      className: s()((0, k.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details, F.guildDetails),
                       children: [
                           (0, i.jsx)(O.Z, {
                               guild: t,
@@ -486,11 +486,11 @@ class $ extends (r = a.PureComponent) {
     }
     renderTimePlayed(e) {
         let { activityGuild: t } = this.props;
-        if (!(0, L.Z)(e) || (0, j.Z)(e)) return null;
+        if (!(0, x.Z)(e) || (0, M.Z)(e)) return null;
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, x.Z)(e)
+            : (0, L.Z)(e)
               ? (0, i.jsx)(X, { timestamps: n })
               : (0, i.jsx)(T.ZP, {
                     start: n.start,
@@ -500,7 +500,7 @@ class $ extends (r = a.PureComponent) {
                 });
     }
     renderTimeBar(e) {
-        if (!(0, j.Z)(e)) return null;
+        if (!(0, M.Z)(e)) return null;
         let { timestamps: t } = e;
         if (null == t) return null;
         let { start: n, end: r } = t;
@@ -520,8 +520,8 @@ class $ extends (r = a.PureComponent) {
             c = o,
             u = o;
         if (
-            !(0, L.Z)(e) &&
-            ((c = null == l ? void 0 : l.large_text), (u = null == l ? void 0 : l.large_text), (0, j.Z)(e) && null != c)
+            !(0, x.Z)(e) &&
+            ((c = null == l ? void 0 : l.large_text), (u = null == l ? void 0 : l.large_text), (0, M.Z)(e) && null != c)
         ) {
             let t = (t, n) =>
                 null != e.sync_id && null != u
@@ -591,7 +591,7 @@ class $ extends (r = a.PureComponent) {
         let u = "ActivityFeed" === t,
             f = "StreamPreview" === t,
             _ = !1;
-        (0, M.Z)(c)
+        (0, j.Z)(c)
             ? ((e = this.renderXboxImage()), (_ = !0))
             : null == (e = this.renderImage(c)) && (_ = null != (e = this.renderGameImage(c)));
         let p = this.renderName(c),

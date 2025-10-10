@@ -12,9 +12,9 @@ var u,
     x = n(592125),
     f = n(496675),
     N = n(699516),
-    _ = n(981631),
-    j = n(245335);
-let S = new Set(),
+    S = n(981631),
+    _ = n(245335);
+let j = new Set(),
     b = [],
     E = new Map(),
     y = {
@@ -30,25 +30,25 @@ function T(e) {
             autoTrackExposure: !1,
         }),
         n = new Set(),
-        l = (null == r ? void 0 : r.type) === _.d4z.GUILD_VOICE,
+        l = (null == r ? void 0 : r.type) === S.d4z.GUILD_VOICE,
         i = null;
-    null == s || o === j.Iq.EMBEDDED_APPLICATION || (t && l) || (i = s.id);
-    let a = (0, I.rh)(S, i);
+    null == s || o === _.Iq.EMBEDDED_APPLICATION || (t && l) || (i = s.id);
+    let a = (0, I.rh)(j, i);
     for (let e of (null == a || N.Z.isBlockedOrIgnored(a.id) || n.add(a.id), p.Z.getUserAffinities()))
         n.add(e.otherUserId);
     let u = new Set();
     return (
-        o === j.Iq.EMBEDDED_APPLICATION &&
+        o === _.Iq.EMBEDDED_APPLICATION &&
             m.Z.getChannelHistory()
                 .map((e) => x.Z.getChannel(e))
                 .filter(v.lm)
-                .filter((e) => e.type === _.d4z.GUILD_TEXT)
-                .filter((e) => f.Z.can(_.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === S.d4z.GUILD_TEXT)
+                .filter((e) => f.Z.can(S.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => u.add(e.id)),
         (0, I.an)({
             query: e,
-            omitUserIds: S,
+            omitUserIds: j,
             suggestedUserIds: n,
             maxRowsWithoutQuery: 100,
             omitGuildId: i,
@@ -105,7 +105,7 @@ let P = new C(g.Z, {
             (r = u),
             (a = d),
             (o = c),
-            (S = new Set([
+            (j = new Set([
                 ...t,
                 ...N.Z.getBlockedOrIgnoredIDs(),
                 ...(0, I.Sz)({

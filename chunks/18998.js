@@ -107,7 +107,7 @@ class b extends l.Component {
             });
     }
 }
-class O extends (r = l.PureComponent) {
+class _ extends (r = l.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -210,11 +210,11 @@ class O extends (r = l.PureComponent) {
             });
     }
 }
-f(O, "contextType", p.Sfi),
-    f(O, "defaultProps", {
+f(_, "contextType", p.Sfi),
+    f(_, "defaultProps", {
         className: h.container,
         reverse: !1,
         hide: !1,
         animate: !0,
     });
-let y = O;
+let y = _;

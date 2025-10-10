@@ -1,59 +1,59 @@
-n.d(t, { e: () => i });
-function r(e, t, n) {
+e.d(n, { e: () => o });
+function r(t, n, e) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in t
+            ? Object.defineProperty(t, n, {
+                  value: e,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
-        e
+            : (t[n] = e),
+        t
     );
 }
-var i = (function () {
-    var e;
-    function t(e, n) {
-        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        r(this, "spec", void 0), r(this, "monitor", void 0), (this.spec = e), (this.monitor = n);
+var o = (function () {
+    var t;
+    function n(t, e) {
+        if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
+        r(this, "spec", void 0), r(this, "monitor", void 0), (this.spec = t), (this.monitor = e);
     }
     return (
-        (e = [
+        (t = [
             {
                 key: "canDrop",
                 value: function () {
-                    var e = this.spec,
-                        t = this.monitor;
-                    return !e.canDrop || e.canDrop(t.getItem(), t);
+                    var t = this.spec,
+                        n = this.monitor;
+                    return !t.canDrop || t.canDrop(n.getItem(), n);
                 },
             },
             {
                 key: "hover",
                 value: function () {
-                    var e = this.spec,
-                        t = this.monitor;
-                    e.hover && e.hover(t.getItem(), t);
+                    var t = this.spec,
+                        n = this.monitor;
+                    t.hover && t.hover(n.getItem(), n);
                 },
             },
             {
                 key: "drop",
                 value: function () {
-                    var e = this.spec,
-                        t = this.monitor;
-                    if (e.drop) return e.drop(t.getItem(), t);
+                    var t = this.spec,
+                        n = this.monitor;
+                    if (t.drop) return t.drop(n.getItem(), n);
                 },
             },
         ]),
-        (function (e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
+        (function (t, n) {
+            for (var e = 0; e < n.length; e++) {
+                var r = n[e];
                 (r.enumerable = r.enumerable || !1),
                     (r.configurable = !0),
                     "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                    Object.defineProperty(t, r.key, r);
             }
-        })(t.prototype, e),
-        t
+        })(n.prototype, t),
+        n
     );
 })();

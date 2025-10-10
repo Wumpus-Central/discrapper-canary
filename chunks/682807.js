@@ -38,14 +38,14 @@ function h(e) {
                               ),
                           ),
                           null != a.terms_of_service_url
-                              ? (0, r.jsx)(f, {
+                              ? (0, r.jsx)(_, {
                                     icon: s.aAW,
                                     url: a.terms_of_service_url,
                                     children: p.intl.string(p.t.s7STcX),
                                 })
                               : null,
                           null != a.privacy_policy_url
-                              ? (0, r.jsx)(f, {
+                              ? (0, r.jsx)(_, {
                                     icon: s.mBM,
                                     url: a.privacy_policy_url,
                                     children: p.intl.string(p.t.kH3JR0),
@@ -69,14 +69,14 @@ function g(e) {
             : null == u || null == (n = u.icon)
               ? void 0
               : n.lightSVG;
-    return (0, r.jsx)(f, {
+    return (0, r.jsx)(_, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
         url: a,
         children: i,
     });
 }
-function f(e) {
+function _(e) {
     let { icon: t, imageSrc: n, iconColor: a, url: l, children: c } = e,
         d = (0, u.nu)(),
         p = null;

@@ -1,14 +1,14 @@
 i.d(e, { default: () => v }), i(388685);
 var n = i(951288),
     r = i(647438),
-    c = i(793030),
-    s = i(442837),
-    o = i(312568),
-    a = i(481060),
+    a = i(374481),
+    s = i(793030),
+    o = i(442837),
+    c = i(481060),
     l = i(728345),
     p = i(812206),
-    d = i(886176),
-    u = i(572004),
+    u = i(886176),
+    d = i(572004),
     _ = i(504211),
     x = i(283836),
     f = i(507608),
@@ -20,7 +20,7 @@ var n = i(951288),
     j = i(325380);
 function v(t) {
     let { onClose: e, transitionState: i, appId: v, guildId: w } = t,
-        C = (0, s.e7)([p.Z], () => p.Z.getApplication(v), [v]),
+        C = (0, o.e7)([p.Z], () => p.Z.getApplication(v), [v]),
         [Z, y] = r.useState(() => (p.Z.isFetchingApplication(v) ? { status: 1 } : { status: 0 }));
     r.useEffect(() => {
         0 === Z.status &&
@@ -41,37 +41,37 @@ function v(t) {
     let T = m.intl.formatToPlainString(m.t.XDRjs7, { appName: C.name }),
         A = (0, n.jsx)("div", {
             className: b.icon,
-            children: (0, n.jsx)(d.Z, {}),
+            children: (0, n.jsx)(u.Z, {}),
         }),
-        I = u.wS
-            ? (0, n.jsx)(a.hU, {
+        I = d.wS
+            ? (0, n.jsx)(c.hU, {
                   "aria-label": m.intl.string(m.t.WqhZsr),
-                  icon: () => (0, n.jsx)(a.xPt, { size: "sm" }),
+                  icon: () => (0, n.jsx)(c.xPt, { size: "sm" }),
                   onClick: () => {
                       let t = ""
                           .concat(location.protocol, "//")
                           .concat(location.host)
                           .concat(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, g.GlobalDiscoveryAppsSections.STORE));
-                      (0, u.JG)(t, () =>
-                          (0, a.showToast)((0, a.createToast)(m.intl.string(m.t["L/PwZW"]), a.ToastType.SUCCESS)),
+                      (0, d.JG)(t, () =>
+                          (0, c.showToast)((0, c.createToast)(m.intl.string(m.t["L/PwZW"]), c.ToastType.SUCCESS)),
                       ),
                           (0, _.X)(v, _.B.STORE_MODAL);
                   },
                   variant: "icon-only",
               })
             : void 0;
-    return (0, n.jsxs)(c.IX, {
+    return (0, n.jsxs)(s.IX, {
         transitionState: i,
         "aria-label": T,
         onClose: e,
         size: "xl",
         children: [
-            (0, n.jsx)(c.xBx, {
+            (0, n.jsx)(s.xBx, {
                 leading: A,
                 title: T,
                 trailing: I,
             }),
-            (0, n.jsx)(o.Z, {
+            (0, n.jsx)(a.Z, {
                 children: (0, n.jsx)("main", {
                     className: j.bodyInner,
                     children: (0, n.jsx)(f.AF, {
@@ -82,8 +82,8 @@ function v(t) {
                     }),
                 }),
             }),
-            (0, n.jsx)(c.mzw, {
-                children: (0, n.jsx)(a.Text, {
+            (0, n.jsx)(s.mzw, {
+                children: (0, n.jsx)(c.Text, {
                     variant: "text-md/normal",
                     children:
                         null != C.termsOfServiceUrl || null != C.privacyPolicyUrl

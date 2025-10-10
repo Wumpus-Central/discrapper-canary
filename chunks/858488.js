@@ -1,24 +1,24 @@
-t.d(n, { Z: () => u }), t(388685);
+t.d(n, { Z: () => o }), t(388685);
 var l = t(951288);
 t(647438);
 var i = t(442837),
     r = t(481060),
     a = t(699516),
-    o = t(388032);
-function u(e) {
-    let { user: n, onAction: u, appContext: s } = e,
-        c = n.id,
-        [d, g] = (0, i.Wu)([a.Z], () => {
+    u = t(388032);
+function o(e) {
+    let { user: n, onAction: o, appContext: s } = e,
+        d = n.id,
+        [c, g] = (0, i.Wu)([a.Z], () => {
             var e;
-            return [a.Z.isFriend(c), null != (e = a.Z.getNickname(c)) ? e : null];
-        }, [c]);
-    if (!d) return null;
-    let Z = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
+            return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
+        }, [d]);
+    if (!c) return null;
+    let Z = null == g ? u.intl.string(u.t.BGYkaG) : u.intl.string(u.t["8pOYUF"]);
     return (0, l.jsx)(r.sNh, {
         id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
         label: Z,
         action: () => {
-            null == u || u(),
+            null == o || o(),
                 (0, r.ZDy)(
                     async () => {
                         let { default: e } = await t.e("25070").then(t.bind(t, 670794));

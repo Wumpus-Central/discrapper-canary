@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => T }), n(388685);
+n.r(t), n.d(t, { default: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -48,7 +48,7 @@ let I = [
             platformKey: 2,
         },
     ],
-    C = [
+    S = [
         {
             getOs: () => y.intl.string(y.t.wCVyNT),
             icon: v.ios,
@@ -62,7 +62,7 @@ let I = [
             platformKey: 4,
         },
     ],
-    S = (e) => {
+    C = (e) => {
         let { url: t, text: n, onClick: i } = e,
             l = (0, p.nY)({ grow: !0 });
         return (0, r.jsx)(f.eee, {
@@ -73,7 +73,7 @@ let I = [
             children: n,
         });
     },
-    N = (e) => {
+    T = (e) => {
         let t,
             { platform: n, onClick: i, onMouseEnter: l, isActive: o, claimed: s } = e,
             { getOs: c, icon: u, url: d, platformKey: p } = n,
@@ -83,7 +83,7 @@ let I = [
             t = d.map((e, t) => {
                 let n = s ? e.url() : "";
                 return (0, r.jsx)(
-                    S,
+                    C,
                     {
                         url: n,
                         onClick: () => i(h),
@@ -94,7 +94,7 @@ let I = [
             });
         else {
             let e = s ? d() : void 0;
-            t = (0, r.jsx)(S, {
+            t = (0, r.jsx)(C, {
                 url: e,
                 onClick: () => i(h),
                 text: y.intl.string(y.t["1WjMbG"]),
@@ -130,12 +130,12 @@ let I = [
             }),
         });
     };
-function T(e) {
+function N(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         a = (0, d.e7)([b.default], () => b.default.getCurrentUser()),
         o = (0, d.e7)([m.default], () => m.default.getFingerprint()),
         p = null == a || a.isClaimed(),
-        [O, S] = i.useState(
+        [O, C] = i.useState(
             (function () {
                 var e;
                 switch (null == (e = s().os) ? void 0 : e.family) {
@@ -159,7 +159,7 @@ function T(e) {
                 }
             })(),
         );
-    function T(e) {
+    function N(e) {
         (null != u.getToken() || null != o) &&
             _.default.track(E.rMx.DOWNLOAD_APP, {
                 platform: e,
@@ -171,8 +171,8 @@ function T(e) {
             }),
             p || (n(), h.j());
     }
-    function P(e) {
-        S(e);
+    function j(e) {
+        C(e);
     }
     i.useEffect(() => {
         _.default.track(E.rMx.OPEN_MODAL, {
@@ -180,11 +180,11 @@ function T(e) {
             source: { location: t },
         });
     }, [t]);
-    let j = (0, g.Dt)();
+    let P = (0, g.Dt)();
     return (0, r.jsxs)(f.Y0X, {
         className: v.downloadApps,
         transitionState: l,
-        "aria-labelledby": j,
+        "aria-labelledby": P,
         parentComponent: "DownloadAppsModal",
         children: [
             (0, r.jsx)(f.olH, {
@@ -196,7 +196,7 @@ function T(e) {
                 children: [
                     (0, r.jsx)(f.nn4, {
                         children: (0, r.jsx)(f.H, {
-                            id: j,
+                            id: P,
                             children: y.intl.string(y.t.BK8LKy),
                         }),
                     }),
@@ -213,12 +213,12 @@ function T(e) {
                                     className: v.platforms,
                                     children: I.map((e) =>
                                         (0, r.jsx)(
-                                            N,
+                                            T,
                                             {
                                                 isActive: O === e.platformKey,
                                                 platform: e,
-                                                onClick: T,
-                                                onMouseEnter: P,
+                                                onClick: N,
+                                                onMouseEnter: j,
                                                 claimed: p,
                                             },
                                             e.platformKey,
@@ -238,14 +238,14 @@ function T(e) {
                                 }),
                             (0, r.jsx)("ul", {
                                 className: v.platforms,
-                                children: C.map((e) =>
+                                children: S.map((e) =>
                                     (0, r.jsx)(
-                                        N,
+                                        T,
                                         {
                                             isActive: O === e.platformKey,
                                             platform: e,
-                                            onClick: T,
-                                            onMouseEnter: P,
+                                            onClick: N,
+                                            onMouseEnter: j,
                                             claimed: p,
                                         },
                                         e.platformKey,

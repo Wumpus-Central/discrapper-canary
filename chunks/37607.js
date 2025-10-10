@@ -74,7 +74,7 @@ function j(e) {
                         helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
                     }),
                 }),
-                (0, i.jsx)(o.$i$, { className: h.headerDivider }),
+                (0, i.jsx)(o.izJ, { className: h.headerDivider }),
                 c.map((e) =>
                     (0, i.jsx)(
                         x,

@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(723047),
-    a = n(727843),
-    s = n(290348),
+    s = n(727843),
+    a = n(290348),
     o = n(764163),
     c = n(861345),
     d = n(293810),
     u = n(388032);
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,22 +53,22 @@ function g(e, t) {
     );
 }
 function p() {
-    let { editStateId: e, guildId: t } = (0, a.N)(),
-        [n, p] = s.R7(e);
-    function h(e, t) {
-        let { name: r, description: i, emojiId: l, emojiName: a } = e,
-            s = [...n],
+    let { editStateId: e, guildId: t } = (0, s.N)(),
+        [n, p] = a.R7(e);
+    function f(e, t) {
+        let { name: r, description: i, emojiId: l, emojiName: s } = e,
+            a = [...n],
             o = {
                 name: r,
                 description: i,
                 emoji_id: l,
-                emoji_name: a,
+                emoji_name: s,
                 ref_type: d.Qs.INTANGIBLE,
                 ref_id: void 0,
             };
-        null != t ? (s[t] = o) : s.push(o), p(s);
+        null != t ? (a[t] = o) : a.push(o), p(a);
     }
-    let f = (0, l.mY)();
+    let h = (0, l.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.p, {
@@ -77,10 +77,10 @@ function p() {
                     (0, i.h7j)((i) =>
                         (0, r.jsx)(
                             o.DI,
-                            g(m({}, i), {
+                            m(g({}, i), {
                                 guildId: t,
                                 initialData: n[e],
-                                onSave: (t) => h(t, e),
+                                onSave: (t) => f(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
@@ -103,14 +103,14 @@ function p() {
                     (0, i.h7j)((e) =>
                         (0, r.jsx)(
                             o.DI,
-                            g(m({}, e), {
+                            m(g({}, e), {
                                 guildId: t,
-                                onSave: (e) => h(e),
+                                onSave: (e) => f(e),
                             }),
                         ),
                     );
                 },
-                disabled: f,
+                disabled: h,
                 children: u.intl.string(u.t["6dwqo6"]),
             }),
         ],

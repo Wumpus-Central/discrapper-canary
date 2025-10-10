@@ -28,7 +28,7 @@ var r = n(951288),
     R = n(925994),
     P = n(981631),
     w = n(388032),
-    D = n(744114);
+    D = n(564355);
 function L(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -251,7 +251,7 @@ class G extends i.Component {
                 required: R,
                 maxCharacterCount: w,
                 allowNewLines: L,
-                isEditorIdle: j,
+                isEditorIdle: M,
                 isAutocompleteVisible: k,
                 "aria-describedby": U,
                 "aria-labelledby": G,
@@ -293,7 +293,7 @@ class G extends i.Component {
                 }),
                 spellcheckEnabled: b,
                 useNewSlashCommands: y,
-                isEditorIdle: j,
+                isEditorIdle: M,
                 isAutocompleteVisible: k,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
@@ -309,14 +309,14 @@ class G extends i.Component {
             Y = E
                 ? (0, r.jsx)(
                       N.Z,
-                      M(x({ ref: this.ref }, H), {
+                      j(x({ ref: this.ref }, H), {
                           type: g,
                           value: u && !Z ? (0, T.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: v,
                       }),
                   )
-                : (0, r.jsx)(C.Z, M(x({ ref: this.ref }, H), { value: u && !Z ? "" : l }));
+                : (0, r.jsx)(C.Z, j(x({ ref: this.ref }, H), { value: u && !Z ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(O.d9, {

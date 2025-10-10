@@ -1,48 +1,48 @@
 n.d(t, { Z: () => h });
-var r = n(951288);
+var a = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(819557),
-    a = n(132392),
-    o = n(118589),
-    c = n(210825),
-    s = n(345262),
-    u = n(241945),
-    d = n(388032),
-    f = n(133023);
+var r = n(481060),
+    i = n(819557),
+    l = n(132392),
+    s = n(118589),
+    o = n(210825),
+    c = n(345262),
+    d = n(241945),
+    u = n(388032),
+    m = n(133023);
 let p = {
-        [o.UA.EMAIL_VERIFICATION]: d.intl.string(u.default.HC4IiY),
-        [o.UA.REFRESH_APP]: d.intl.string(u.default.SzfxQ0),
-        [o.UA.AGE_VERIFICATION]: d.intl.string(u.default["dSkE/P"]),
+        [s.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiY),
+        [s.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ0),
+        [s.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/P"]),
     },
     h = function () {
-        let { task: e } = (0, a.T)(),
+        let { task: e } = (0, l.T)(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
-        return (0, r.jsxs)(i.Kqy, {
+        return (0, a.jsxs)(r.Kqy, {
             direction: "vertical",
             justify: "space-between",
-            padding: s.h,
-            className: f.container,
+            padding: c.h,
+            className: m.container,
             children: [
-                (0, r.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     direction: "vertical",
                     justify: "space-between",
                     children: [
-                        (0, r.jsx)(i.X6q, {
+                        (0, a.jsx)(r.X6q, {
                             variant: "display-md",
-                            className: f.title,
-                            children: d.intl.string(u.default["/OpRAA"]),
+                            className: m.title,
+                            children: u.intl.string(d.default["/OpRAA"]),
                         }),
-                        (0, r.jsx)(i.Kqy, {
+                        (0, a.jsx)(r.Kqy, {
                             direction: "vertical",
                             justify: "space-between",
                             gap: 0,
                             children: e.flow_context.tasks.map((e, n) => {
-                                var i;
-                                return (0, r.jsx)(
-                                    l.q,
+                                var r;
+                                return (0, a.jsx)(
+                                    i.q,
                                     {
-                                        title: null != (i = p[e.task_type]) ? i : "",
+                                        title: null != (r = p[e.task_type]) ? r : "",
                                         listType: "numbered",
                                         index: n,
                                         color: n === t ? "text-primary" : n < t ? "feedback-positive" : "text-muted",
@@ -54,11 +54,11 @@ let p = {
                         }),
                     ],
                 }),
-                (0, r.jsx)(i.Text, {
+                (0, a.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: d.intl.format(u.default["0DHxys"], {
-                        handleLogOut: () => (0, c.R)("safety_flows_sidebar"),
+                    children: u.intl.format(d.default["0DHxys"], {
+                        handleLogOut: () => (0, o.R)("safety_flows_sidebar"),
                     }),
                 }),
             ],

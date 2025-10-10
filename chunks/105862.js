@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var l = n(951288),
     i = n(647438),
     r = n(780384),
@@ -13,14 +13,14 @@ var l = n(951288),
     f = n(431048),
     h = n(983008),
     v = n(478408);
-function y(e) {
+function x(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
-        y = (0, o.ZP)(),
-        x = (0, r.ap)(y) ? v : h,
-        b = i.useCallback(() => {
+        x = (0, o.ZP)(),
+        y = (0, r.ap)(x) ? v : h,
+        g = i.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: g } = (0, d.Z)({
+        { trackSectionImpressionRef: b } = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1,
@@ -29,14 +29,14 @@ function y(e) {
         className: n ? f.containerPadding : void 0,
         children: (0, l.jsxs)("div", {
             ref: (e) => {
-                g.current = e;
+                b.current = e;
             },
             className: f.container,
             children: [
                 t &&
                     (0, l.jsx)("img", {
                         className: f.image,
-                        src: x,
+                        src: y,
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -62,7 +62,7 @@ function y(e) {
                         sectionTitle: m.intl.string(m.t["kw8/ER"]),
                         sectionBody: m.intl.string(m.t.GZoV1N),
                     }),
-                    onClick: b,
+                    onClick: g,
                 }),
             ],
         }),

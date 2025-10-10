@@ -20,7 +20,7 @@ var i = n(658722),
     o = n(392711),
     s = n.n(o),
     l = n(423802),
-    c = n(101186),
+    c = n(509160),
     u = n(827837),
     d = n(815372),
     f = n(620490),
@@ -46,8 +46,8 @@ var i = n(658722),
     D = n(675478),
     L = n(131704),
     x = n(345162),
-    j = n(598077),
-    M = n(314897),
+    M = n(598077),
+    j = n(314897),
     k = n(592125),
     U = n(580005),
     G = n(77498),
@@ -150,8 +150,8 @@ let eb = new h.Z("AutocompleteUtils"),
     eD = 8,
     eL = 1,
     ex = 1000,
-    ej = 0.2,
-    eM = 0.1,
+    eM = 0.2,
+    ej = 0.1,
     ek = 50,
     eU = () => !0,
     eG = /(\t|\s)/,
@@ -202,8 +202,8 @@ function eW(e) {
             }
         } else o[n] = 1 + r / i;
     }
-    for (let e of K.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ej;
-    for (let e of k.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + eM;
+    for (let e of K.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + eM;
+    for (let e of k.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ej;
     return o;
 }
 let eK = [B.sH, B.Zb, el.d4z.GUILD_CATEGORY];
@@ -251,7 +251,7 @@ function eJ(e) {
         let e,
             r,
             f = n[m];
-        f instanceof j.Z
+        f instanceof M.Z
             ? ((r = f), (e = null == (b = Z.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = es.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -1231,7 +1231,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                           };
                       })
                     : Z.ZP.getMembers(n.guild_id).filter(eX),
-                s = M.default.getId(),
+                s = j.default.getId(),
                 l = X.default.getUsers(),
                 c = q.Z.getGuildId(),
                 u = t.toLocaleLowerCase(),
@@ -1241,7 +1241,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 var p, h, m, g;
                 let t, o;
                 if (_.length >= r) break;
-                e instanceof j.Z
+                e instanceof M.Z
                     ? ((o = e), (t = null == (m = Z.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                     : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId]));
                 let f = null == (p = K.Z.getNickname(o.id)) ? void 0 : p.toLocaleLowerCase(),

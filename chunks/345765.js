@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(392711),
     i = n(126313),
     a = n(570140),
@@ -72,7 +72,7 @@ function D(e) {
     let t = T.get(e);
     void 0 !== t && (clearTimeout(t), T.delete(e));
 }
-function x() {
+function L() {
     var e;
     let t = null != (e = A.get(v)) ? e : 0;
     if ((t > 0 && t <= y) || (D(v), !w(v))) return;
@@ -88,7 +88,7 @@ function x() {
             v,
             setTimeout(
                 () =>
-                    L({
+                    x({
                         feedId: v,
                         feature: i.L.INBOX,
                     }),
@@ -96,7 +96,7 @@ function x() {
             ),
         );
 }
-async function L(e) {
+async function x(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
     if (w(t) || r)
         try {
@@ -115,7 +115,7 @@ async function L(e) {
                 A.set(t, 0),
                 S.delete(t),
                 P(t, { loading: !1 }),
-                t === v && ((C = null), x());
+                t === v && ((C = null), L());
         } catch (o) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
@@ -125,7 +125,7 @@ async function L(e) {
                     t,
                     setTimeout(
                         () =>
-                            L({
+                            x({
                                 feedId: t,
                                 feature: n,
                                 force: r,
@@ -142,11 +142,11 @@ async function L(e) {
             S.delete(t);
         }
 }
-function j() {
-    x();
-}
 function M() {
-    j();
+    L();
+}
+function j() {
+    M();
 }
 function k() {
     D(v);
@@ -154,7 +154,7 @@ function k() {
 function U(e) {
     let { feedId: t, feature: n } = e;
     D(t),
-        L({
+        x({
             feedId: t,
             feature: n,
             force: !0,
@@ -164,7 +164,7 @@ function G(e) {
     let { refreshAfterMs: t } = e,
         n = m.Z.getFeed(v);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null &&
-        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
+        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), L());
 }
 function B(e) {
     var t;
@@ -172,20 +172,20 @@ function B(e) {
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && N(n, r);
 }
 function Z() {
-    L({
+    x({
         feedId: g.YN.GLOBAL_FEED,
         feature: i.L.GAME_PROFILE,
     });
 }
-class V extends o.Z {
+class F extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: M,
+                POST_CONNECTION_OPEN: j,
                 CONNECTION_CLOSED: k,
-                WINDOW_FOCUS: j,
-                IDLE: j,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: j,
+                WINDOW_FOCUS: M,
+                IDLE: M,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
                 CONTENT_INVENTORY_MANUAL_REFRESH: U,
                 CONTENT_INVENTORY_INBOX_STALE: G,
                 SPOTIFY_NEW_TRACK: B,
@@ -193,4 +193,4 @@ class V extends o.Z {
             });
     }
 }
-let F = new V();
+let V = new F();

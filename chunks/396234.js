@@ -8,7 +8,7 @@ var r = a(370336),
     o = a(696486);
 function i(t, e) {
     var a, i, c, E;
-    let { fingerprint: s, span: l, breadcrumbs: u, sdkProcessingMetadata: I } = e;
+    let { fingerprint: s, span: l, breadcrumbs: I, sdkProcessingMetadata: u } = e;
     (function (t, e) {
         let { extra: a, tags: _, user: n, contexts: o, level: i, transactionName: c } = e,
             E = (0, r.Jr)(a);
@@ -32,11 +32,11 @@ function i(t, e) {
                 ...l,
                 ...t.user,
             });
-        let u = (0, r.Jr)(o);
-        u &&
-            Object.keys(u).length &&
+        let I = (0, r.Jr)(o);
+        I &&
+            Object.keys(I).length &&
             (t.contexts = {
-                ...u,
+                ...I,
                 ...t.contexts,
             }),
             i && (t.level = i),
@@ -64,9 +64,9 @@ function i(t, e) {
         (function (t, e) {
             let a = [...(t.breadcrumbs || []), ...e];
             t.breadcrumbs = a.length ? a : void 0;
-        })(t, u),
+        })(t, I),
         (c = t),
-        (E = I),
+        (E = u),
         (c.sdkProcessingMetadata = {
             ...c.sdkProcessingMetadata,
             ...E,
@@ -83,8 +83,8 @@ function c(t, e) {
         breadcrumbs: c,
         fingerprint: s,
         eventProcessors: l,
-        attachments: u,
-        propagationContext: I,
+        attachments: I,
+        propagationContext: u,
         transactionName: R,
         span: d,
     } = e;
@@ -99,10 +99,10 @@ function c(t, e) {
         c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),
         s.length && (t.fingerprint = [...t.fingerprint, ...s]),
         l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),
-        u.length && (t.attachments = [...t.attachments, ...u]),
+        I.length && (t.attachments = [...t.attachments, ...I]),
         (t.propagationContext = {
             ...t.propagationContext,
-            ...I,
+            ...u,
         });
 }
 function E(t, e, a) {

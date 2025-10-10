@@ -9,19 +9,19 @@ var r = n(951288),
     d = n(231239),
     u = n(881052),
     m = n(686546),
-    h = n(565138),
-    f = n(768581),
-    g = n(411198),
-    p = n(888592),
-    x = n(388032),
+    f = n(565138),
+    p = n(768581),
+    h = n(411198),
+    g = n(888592),
+    v = n(388032),
     _ = n(642480),
-    v = n(216019);
+    x = n(216019);
 function N(e) {
     var t, n, l;
     let { guildInfo: i, onClick: a, submitting: s } = e,
         o =
             null !=
-            (t = f.ZP.getGuildIconURL({
+            (t = p.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
                 size: 40,
@@ -36,10 +36,10 @@ function N(e) {
                 mask: m.ZP.Masks.AVATAR_DEFAULT,
                 width: 40,
                 height: 40,
-                children: (0, r.jsx)(h.Z, {
+                children: (0, r.jsx)(f.Z, {
                     className: _.guildIcon,
                     iconSrc: o,
-                    guild: (0, g.yS)(
+                    guild: (0, h.yS)(
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -80,7 +80,7 @@ function N(e) {
                               }),
                         n),
                     ),
-                    size: h.Z.Sizes.MEDIUM,
+                    size: f.Z.Sizes.MEDIUM,
                 }),
             }),
             (0, r.jsx)(c.Text, {
@@ -93,27 +93,27 @@ function N(e) {
                 : (0, r.jsx)("img", {
                       className: _.__invalid_arrow,
                       alt: "",
-                      src: v,
+                      src: x,
                   }),
         ],
     });
 }
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [h, f] = l.useState(null),
-        [g, v] = l.useState(void 0),
-        [E, S] = l.useState(null),
-        y = () => t(p.tF.SUBMIT_SCHOOL),
+        [f, p] = l.useState(null),
+        [h, x] = l.useState(void 0),
+        [E, y] = l.useState(null),
+        S = () => t(g.tF.SUBMIT_SCHOOL),
         j = i;
     return (
-        null != g && "" !== g && (j = i.filter((e) => o()(g.toLowerCase(), e.name.toLowerCase()))),
+        null != h && "" !== h && (j = i.filter((e) => o()(h.toLowerCase(), e.name.toLowerCase()))),
         (0, r.jsxs)("div", {
             className: _.container,
             children: [
                 (0, r.jsx)(c.X6q, {
                     className: a()(_.centerText, _.header),
                     variant: "heading-xl/semibold",
-                    children: x.intl.string(x.t.mOMeiY),
+                    children: v.intl.string(v.t.mOMeiY),
                 }),
                 (0, r.jsx)("div", {
                     className: _.description,
@@ -121,7 +121,7 @@ let E = (e) => {
                         className: _.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: x.intl.format(x.t.dZeiTE, { onJoinWaitlist: y }),
+                        children: v.intl.format(v.t.dZeiTE, { onJoinWaitlist: S }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -131,20 +131,20 @@ let E = (e) => {
                             className: _.searchContainer,
                             children: [
                                 (0, r.jsx)(c.E1j, {
-                                    placeholder: x.intl.string(x.t["5h0QOD"]),
+                                    placeholder: v.intl.string(v.t["5h0QOD"]),
                                     onChange: (e) => {
-                                        v(e);
+                                        x(e);
                                     },
-                                    "aria-label": x.intl.string(x.t["5h0QOD"]),
-                                    query: null != g ? g : "",
+                                    "aria-label": v.intl.string(v.t["5h0QOD"]),
+                                    query: null != h ? h : "",
                                     onClear: () => {
-                                        v(void 0);
+                                        x(void 0);
                                     },
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     color: "text-danger",
                                     variant: "text-xs/normal",
-                                    children: null == h ? void 0 : h.getAnyErrorMessage(),
+                                    children: null == f ? void 0 : f.getAnyErrorMessage(),
                                 }),
                             ],
                         }),
@@ -162,14 +162,14 @@ let E = (e) => {
                                                     onClick:
                                                         ((l = e.id),
                                                         async () => {
-                                                            f(null), s(l), S(l);
+                                                            p(null), s(l), y(l);
                                                             try {
                                                                 await d.Z.sendVerificationEmail(n, !0, l),
-                                                                    t(p.tF.VERIFY_PIN);
+                                                                    t(g.tF.VERIFY_PIN);
                                                             } catch (e) {
-                                                                f(new u.Hx(e));
+                                                                p(new u.Hx(e));
                                                             } finally {
-                                                                S(null);
+                                                                y(null);
                                                             }
                                                         }),
                                                     submitting: E === e.id,
@@ -187,12 +187,12 @@ let E = (e) => {
                                           (0, r.jsx)(c.X6q, {
                                               className: a()(_.centerText, _.header),
                                               variant: "heading-xl/semibold",
-                                              children: x.intl.string(x.t["1eUrDQ"]),
+                                              children: v.intl.string(v.t["1eUrDQ"]),
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               className: _.centerText,
                                               variant: "text-md/normal",
-                                              children: x.intl.format(x.t.flgDKC, { onJoinWaitlist: y }),
+                                              children: v.intl.format(v.t.flgDKC, { onJoinWaitlist: S }),
                                           }),
                                       ],
                                   }),

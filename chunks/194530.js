@@ -20,7 +20,7 @@ function _(e) {
         P = (0, a.e7)([l.Z], () => l.Z.getErrors()),
         w = (0, a.e7)([l.Z], () => l.Z.getFormState()),
         D = i.useRef(null);
-    async function x(e) {
+    async function L(e) {
         e.preventDefault(), (0, s.b9)();
         let t = !1;
         if (
@@ -74,7 +74,7 @@ function _(e) {
                     ],
                 }),
                 (0, r.jsxs)("form", {
-                    onSubmit: x,
+                    onSubmit: L,
                     children: [
                         (0, r.jsx)(o.hzk, {
                             className: f.content,

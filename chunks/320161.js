@@ -118,7 +118,7 @@ function I(e) {
     let P = E >= v.length - 1,
         w = P ? s.FGA.RED : s.FGA.GREEN,
         D = T ? w : s.FGA.PRIMARY,
-        x = () => {
+        L = () => {
             var e;
             if (!T) return t;
             let n = (0, a.clamp)(E - 1, 0, v.length - 1),
@@ -128,10 +128,10 @@ function I(e) {
                 children: i(),
             });
         },
-        L = (e, t) => {
+        x = (e, t) => {
             !A && T && t.phase === d.UkZ.LEAVE && S(!1);
         },
-        j = () => {
+        M = () => {
             null == f || f(),
                 (0, c.JG)(n),
                 l.default.track(d.rMx.TEXT_COPIED),
@@ -142,18 +142,18 @@ function I(e) {
                 R.start(y, () => I(0));
         };
     return (0, r.jsx)(s.ua7, {
-        text: x(),
+        text: L(),
         delay: h,
         "aria-label": _,
         color: D,
         forceOpen: A,
-        onAnimationRest: L,
+        onAnimationRest: x,
         children: (e) => {
             var { onClick: t, onMouseEnter: n } = e;
             return u(
                 m(p({}, g(e, ["onClick", "onMouseEnter"])), {
                     onClick: () => {
-                        null == t || t(), j();
+                        null == t || t(), M();
                     },
                     onMouseEnter: () => {
                         if (!T) {

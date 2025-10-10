@@ -5,21 +5,21 @@ var r = n(951288),
     a = n.n(o),
     i = n(238651),
     l = n(603113),
-    c = n(488290),
+    c = n(137317),
     d = n(442837),
     u = n(110924),
     p = n(607070),
     m = n(819640),
     g = n(569379),
     f = n(675654),
-    h = n(438724),
+    h = n(674386),
     x = n(197857);
 let _ = ["#51BC9D"],
     b = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: b, progressBarRef: j, isExpanded: v, isHovered: C } = e,
-            { completionSpring: y, startCompletionAnimation: O } = (0, g.G)(),
-            E = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
+        let { expansionSpring: n, overlayRef: o, quest: b, progressBarRef: v, isExpanded: j, isHovered: C } = e,
+            { completionSpring: y, startCompletionAnimation: E } = (0, g.G)(),
+            O = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
             S = s.useRef(!1),
             T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             w = s.useRef(null),
@@ -36,7 +36,7 @@ let _ = ["#51BC9D"],
             q = (0, i.uR)(A, B),
             D = s.useCallback(() => {
                 if (T) return;
-                let e = j.current,
+                let e = v.current,
                     t = w.current;
                 if (null != t && null != e && q.isReady) {
                     var n, r, s, o, a, i;
@@ -127,25 +127,25 @@ let _ = ["#51BC9D"],
                         100,
                     );
                 }
-            }, [j, w, q, T]),
-            L = (0, u.Z)(v);
+            }, [v, w, q, T]),
+            L = (0, u.Z)(j);
         return (s.useEffect(() => {
-            E && v && !L && (O(), D());
-        }, [v, E, O, D, L]),
+            O && j && !L && (E(), D());
+        }, [j, O, E, D, L]),
         s.useEffect(() => {
-            E &&
+            O &&
                 !P &&
                 N &&
                 setTimeout(() => {
-                    O(), D();
+                    E(), D();
                 }, 200);
-        }, [E, N, P, O, D]),
+        }, [O, N, P, E, D]),
         s.useEffect(() => {
-            q.isReady && (!S.current && E && (O(), D()), (S.current = E));
-        }, [E, S, D, O, q]),
+            q.isReady && (!S.current && O && (E(), D()), (S.current = O));
+        }, [O, S, D, E, q]),
         s.useEffect(() => {
-            C && E && (O(), D());
-        }, [C, E, O, D]),
+            C && O && (E(), D());
+        }, [C, O, E, D]),
         T)
             ? null
             : (0, r.jsxs)("div", {

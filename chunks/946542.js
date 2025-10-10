@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(951288),
     a = n(647438),
-    i = n(481060),
-    l = n(434650),
+    i = n(907331),
+    l = n(481060),
     s = n(768581),
     o = n(255333),
     c = n(881294),
@@ -12,13 +12,13 @@ var r = n(951288),
     m = n(981631),
     h = n(388032),
     g = n(431085);
-function f(e) {
-    let { applicationId: t, similarApplications: n, onSelectApplication: i, similarLoadId: s } = e,
+function _(e) {
+    let { applicationId: t, similarApplications: n, onSelectApplication: l, similarLoadId: s } = e,
         o = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
-                [r, i] = a.useState(),
-                s = (0, l.O)((e) => {
-                    e && i(t);
+                [r, l] = a.useState(),
+                s = (0, i.O)((e) => {
+                    e && l(t);
                 });
             return (
                 a.useEffect(() => {
@@ -39,11 +39,11 @@ function f(e) {
         ref: o,
         children: n.map((e, n) =>
             (0, r.jsx)(
-                _,
+                f,
                 {
                     applicationId: t,
                     similarApplication: e,
-                    onSelectApplication: i,
+                    onSelectApplication: l,
                     similarLoadId: s,
                     position: n,
                 },
@@ -52,9 +52,9 @@ function f(e) {
         ),
     });
 }
-function _(e) {
-    var t, n, l;
-    let { applicationId: o, similarApplication: u, onSelectApplication: h, position: f, similarLoadId: _ } = e,
+function f(e) {
+    var t, n, i;
+    let { applicationId: o, similarApplication: u, onSelectApplication: h, position: _, similarLoadId: f } = e,
         b = (0, p.Z)({ application: u }),
         x = null == (t = u.categories) ? void 0 : t[0],
         v = a.useMemo(
@@ -71,13 +71,13 @@ function _(e) {
                 current_page: "product",
                 application_id: o,
                 suggested_application_id: u.id,
-                position: f,
-                load_id: _,
+                position: _,
+                load_id: f,
                 shown_mutual_guilds_count: b.length,
             }),
                 h(u.id);
-        }, [h, u.id, o, b.length, _, f]);
-    return (0, r.jsxs)(i.P3F, {
+        }, [h, u.id, o, b.length, f, _]);
+    return (0, r.jsxs)(l.P3F, {
         onClick: C,
         className: g.appContainer,
         children: [
@@ -100,7 +100,7 @@ function _(e) {
                                     minWidth: 0,
                                     overflow: "hidden",
                                 },
-                                children: (0, r.jsx)(i.X6q, {
+                                children: (0, r.jsx)(l.X6q, {
                                     variant: "heading-md/semibold",
                                     color: "header-primary",
                                     className: g.appName,
@@ -108,7 +108,7 @@ function _(e) {
                                 }),
                             }),
                             null != x
-                                ? (0, r.jsx)(i.Text, {
+                                ? (0, r.jsx)(l.Text, {
                                       className: g.appCategory,
                                       variant: "text-xs/medium",
                                       color: "text-muted",
@@ -119,13 +119,13 @@ function _(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 className: g.appDescription,
                 variant: "text-sm/medium",
                 color: "header-secondary",
                 lineClamp: 2,
                 children:
-                    null != (l = null == (n = u.directory_entry) ? void 0 : n.short_description) ? l : u.description,
+                    null != (i = null == (n = u.directory_entry) ? void 0 : n.short_description) ? i : u.description,
             }),
             (0, r.jsx)(d.Z, {
                 application: u,
@@ -139,14 +139,14 @@ function _(e) {
     });
 }
 let b = function (e) {
-    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: l, similarLoadId: s } = e;
+    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: i, similarLoadId: s } = e;
     return n !== o.M.FETCHING && (null == a || 0 === a.length)
         ? null
         : (0, r.jsxs)("div", {
               className: g.sectionContainer,
               children: [
                   (0, r.jsx)("div", { className: g.divider }),
-                  (0, r.jsx)(i.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       className: g.sectionHeader,
@@ -156,10 +156,10 @@ let b = function (e) {
                       loading: n === o.M.FETCHING,
                       children:
                           null != a
-                              ? (0, r.jsx)(f, {
+                              ? (0, r.jsx)(_, {
                                     applicationId: t,
                                     similarApplications: a,
-                                    onSelectApplication: l,
+                                    onSelectApplication: i,
                                     similarLoadId: s,
                                 })
                               : null,

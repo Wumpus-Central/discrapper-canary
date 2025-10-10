@@ -137,7 +137,7 @@ class f extends i.PureComponent {
                                 authyURL: "https://www.authy.com/",
                             }),
                         }),
-                        (0, s.jsx)(n.$i$, { className: u.divider }),
+                        (0, s.jsx)(n.izJ, { className: u.divider }),
                         (0, s.jsx)(p, {
                             image: (0, s.jsx)(c.ZP, { text: b }),
                             label: h.intl.string(h.t["91InFx"]),
@@ -159,7 +159,7 @@ class f extends i.PureComponent {
                                 ],
                             }),
                         }),
-                        (0, s.jsx)(n.$i$, { className: u.divider }),
+                        (0, s.jsx)(n.izJ, { className: u.divider }),
                         (0, s.jsx)(p, {
                             image: (0, s.jsx)("img", {
                                 alt: "",

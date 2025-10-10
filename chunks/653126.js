@@ -25,8 +25,8 @@ let v = l.memo(function (e) {
             v = (0, b.zQ)(t),
             x = l.useRef(null),
             { handleCardVisibilityChange: O } = (0, d.E)(t.skuId, s === E.AW.CATALOG ? "full" : s),
-            T = (0, _.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD),
-            [y, L] = (0, _.SS)(t);
+            y = (0, _.J7)(t, c.Z.COLLECTIBLES_SHOP_CARD),
+            [T, L] = (0, _.SS)(t);
         return (0, r.jsx)(i.$, {
             innerRef: x,
             onChange: O,
@@ -35,7 +35,7 @@ let v = l.memo(function (e) {
                 className: S.baseProductCardHoverContainer,
                 children: (0, r.jsx)(o.kL8, {
                     ref: x,
-                    onClick: T,
+                    onClick: y,
                     "aria-label": v,
                     className: S.baseProductCardContainer,
                     children: (0, r.jsxs)("div", {
@@ -73,12 +73,12 @@ let v = l.memo(function (e) {
                                         (0, r.jsx)(C.Z, {
                                             skuId: t.skuId,
                                             cardRef: x,
-                                            selectedVariantIndex: y,
+                                            selectedVariantIndex: T,
                                         }),
                                         (0, r.jsx)(h.Z, {
                                             skuId: t.skuId,
                                             cardRef: x,
-                                            selectedVariantIndex: y,
+                                            selectedVariantIndex: T,
                                         }),
                                     ],
                                 }),

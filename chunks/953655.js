@@ -1,26 +1,26 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    i = n.n(l),
+    s = n.n(l),
     a = n(87290),
-    s = n(960048),
+    i = n(960048),
     o = n(381585),
     c = n(953528),
     u = n(788822),
     d = n(388032),
-    g = n(687983);
+    g = n(310582);
 let p = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         return (0, r.jsx)("div", {
-            className: i()(g.col2, g.centeredSection),
+            className: s()(g.col2, g.centeredSection),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === a.O.CATEGORY) {
-                              let i =
+                              let s =
                                   null != e.unpublishedAt
                                       ? d.intl.string(d.t["h/uBCQ"])
                                       : ((e) => {
@@ -52,7 +52,7 @@ let p = (e) => {
                                           u.q,
                                           {
                                               subblock: e,
-                                              badgeText: i,
+                                              badgeText: s,
                                               handleTransition: t,
                                           },
                                           e.categoryStoreListingId,
@@ -69,7 +69,7 @@ let p = (e) => {
         let { handleTransition: t, categories: n } = e,
             l = (0, c.QH)("collectibles_featured_block");
         if (null == n || n.length < 2)
-            return s.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
+            return i.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
         let [a, p] = n,
             f =
                 (null == a ? void 0 : a.unpublishedAt) != null
@@ -87,7 +87,7 @@ let p = (e) => {
                         "" !== a.storeListingId
                       ? d.intl.string(d.t["soka7+"])
                       : void 0,
-            h =
+            C =
                 (null == p ? void 0 : p.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCQ"])
                     : (() => {
@@ -104,7 +104,7 @@ let p = (e) => {
                       ? d.intl.string(d.t["soka7+"])
                       : d.intl.string(d.t["o/oRJC"]);
         return (0, r.jsx)("div", {
-            className: i()(g.col2, g.centeredSection),
+            className: s()(g.col2, g.centeredSection),
             children: (0, r.jsxs)(o.k0, {
                 newValue: {
                     categoryPosition: 1,
@@ -122,25 +122,25 @@ let p = (e) => {
                     null != p &&
                         (0, r.jsx)(u.q, {
                             category: p,
-                            badgeText: h,
+                            badgeText: C,
                             handleTransition: t,
                         }),
                 ],
             }),
         });
     },
-    h = (e) => {
+    C = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
         return t
             ? (0, r.jsxs)("div", {
-                  className: i()(g.col2, g.centeredSection),
+                  className: s()(g.col2, g.centeredSection),
                   children: [
                       (0, r.jsx)("div", {
-                          className: i()(g.skeleton, g.featuredBlock),
+                          className: s()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                       (0, r.jsx)("div", {
-                          className: i()(g.skeleton, g.featuredBlock),
+                          className: s()(g.skeleton, g.featuredBlock),
                           children: (0, r.jsx)("div", { className: g.skeletonBody }),
                       }),
                   ],

@@ -1,4 +1,4 @@
-n.d(t, { ApplicationCommandShareModal: () => O }), n(388685);
+n.d(t, { ApplicationCommandShareModal: () => _ }), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(793030),
@@ -22,14 +22,14 @@ let S = [s.yU.CHAT],
     C = () => {
         (0, a.Mr3)(y.s);
     };
-function O(e) {
+function _(e) {
     var t,
         {
             applicationId: n,
             channel: s,
             command: y,
-            onClose: O,
-            requireLaunchChannel: _,
+            onClose: _,
+            requireLaunchChannel: O,
             onShareResult: P,
             previewMessage: E,
         } = e,
@@ -85,7 +85,7 @@ function O(e) {
                 },
             )),
         D = r.useRef(0),
-        [A, k] = r.useState(_ && null != Z ? [Z] : []),
+        [A, k] = r.useState(O && null != Z ? [Z] : []),
         I = A.length,
         F = I >= 5,
         [R, U] = r.useState(""),
@@ -100,7 +100,7 @@ function O(e) {
             },
             [H],
         ),
-        G = r.useCallback(() => (P(!1), O()), [P, O]),
+        G = r.useCallback(() => (P(!1), _()), [P, _]),
         [W] = (0, o.Z)([n]),
         V = r.useCallback(() => {
             U("");
@@ -112,7 +112,7 @@ function O(e) {
             null == (e = X.current) || e.focus();
         }
     }, [R]);
-    let J = r.useCallback(
+    let Q = r.useCallback(
             (e) => {
                 k((t) => {
                     let n = t.findIndex((t) => {
@@ -126,15 +126,15 @@ function O(e) {
             },
             [F, H],
         ),
-        [Q, Y] = r.useMemo(() => {
+        [Y, B] = r.useMemo(() => {
             if (T) return [null, !1];
             let e = M.find((e) => e.untranslatedName === y.name);
             return void 0 !== e ? [e, !1] : [null, !0];
         }, [y, M, T]),
-        B = r.useCallback(
+        J = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === Q) return;
+                if (null === Y) return;
                 N(!0);
                 let n = (await Promise.all(e.map(u.qx))).filter(p.lm);
                 t && (P(!0), C()),
@@ -164,7 +164,7 @@ function O(e) {
                             i = f.Z.getGuild(null == l ? void 0 : l.guild_id);
                         null !=
                             (await (0, m.Z)({
-                                command: Q,
+                                command: Y,
                                 optionValues: r,
                                 context: {
                                     channel: l,
@@ -176,30 +176,30 @@ function O(e) {
                     P(!0),
                     C();
             },
-            [P, Q, y.options],
+            [P, Y, y.options],
         ),
         K = r.useCallback(() => {
-            B(A, { closeAfterSend: !0 });
-        }, [B, A]);
+            J(A, { closeAfterSend: !0 });
+        }, [J, A]);
     if (T)
         return (0, l.jsx)(i.Modal, {
             title: v.intl.string(v.t.fuFvw8),
             "aria-label": v.intl.string(v.t.fuFvw8),
             transitionState: w.transitionState,
-            onClose: O,
+            onClose: _,
             actions: [],
             children: (0, l.jsx)(a.$jN, { className: x.spinnerContainer }),
         });
-    if (Y)
+    if (B)
         return (0, l.jsx)(i.Modal, {
             title: v.intl.string(v.t.fuFvw8),
             "aria-label": v.intl.string(v.t.fuFvw8),
             transitionState: w.transitionState,
-            onClose: O,
+            onClose: _,
             actions: [
                 {
                     text: v.intl.string(v.t.cpT0Cg),
-                    onClick: O,
+                    onClick: _,
                     variant: "primary",
                 },
             ],
@@ -209,7 +209,7 @@ function O(e) {
             q.length > 0
                 ? (0, l.jsx)(g.F, {
                       rowData: q,
-                      handleToggleDestination: J,
+                      handleToggleDestination: Q,
                       selectedDestinations: A,
                       disableSelection: F,
                       originDestination: Z,

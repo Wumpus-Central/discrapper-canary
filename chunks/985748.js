@@ -2,9 +2,9 @@ r.d(t, { Z: () => c });
 var n = r(951288);
 r(647438);
 var i = r(750312),
-    l = r(189988),
-    o = r(232083);
-function a(e) {
+    o = r(189988),
+    a = r(232083);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -42,21 +42,21 @@ function c(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["user", "widget", "containerClassName"]);
     return (0, n.jsx)(
         i.Z,
-        ((t = a(
+        ((t = l(
             {
                 userId: c.id,
                 widget: s,
@@ -69,8 +69,8 @@ function c(e) {
                 children:
                     s.games.length > 0
                         ? (0, n.jsx)(
-                              o.Z,
-                              a(
+                              a.Z,
+                              l(
                                   {
                                       user: c,
                                       games: s.games,
@@ -80,7 +80,7 @@ function c(e) {
                                   d,
                               ),
                           )
-                        : (0, n.jsx)(l.Z, { widgetType: s.type }),
+                        : (0, n.jsx)(o.Z, { widgetType: s.type }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

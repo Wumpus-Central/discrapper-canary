@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311);
+n.d(t, { Z: () => x }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311);
 var i,
     l = n(951288),
     r = n(647438),
@@ -10,8 +10,8 @@ var i,
     u = n(251625),
     h = n(226951),
     g = n(981631),
-    m = n(388032),
-    p = n(508547);
+    p = n(388032),
+    m = n(508547);
 function f(e, t, n) {
     return (
         t in e
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-class x extends (i = r.Component) {
+class b extends (i = r.Component) {
     getSelectedSection(e) {
         let { selectedSection: t } = this.state;
         if (null != t) return t;
@@ -42,25 +42,25 @@ class x extends (i = r.Component) {
         if (this.isEmpty()) n.push(1);
         else for (let e of t) n.push(e.length);
         return (0, l.jsxs)(c.VqE, {
-            className: a()(p.container, "bottom" === e ? p.positionBottom : p.positionTop),
+            className: a()(m.container, "bottom" === e ? m.positionBottom : m.positionTop),
             "aria-label": this.props["aria-label"],
             children: [
-                (0, l.jsx)("div", { className: p.autocompleteShadow }),
+                (0, l.jsx)("div", { className: m.autocompleteShadow }),
                 (0, l.jsx)("div", {
-                    className: p.autocompleteArrowWrapper,
-                    children: (0, l.jsx)("div", { className: p.autocompleteArrow }),
+                    className: m.autocompleteArrowWrapper,
+                    children: (0, l.jsx)("div", { className: m.autocompleteArrow }),
                 }),
                 (0, l.jsxs)("header", {
-                    className: p.header,
+                    className: m.header,
                     children: [
-                        (0, l.jsx)("div", { className: p.autocompleteHeaderBackground }),
+                        (0, l.jsx)("div", { className: m.autocompleteHeaderBackground }),
                         (0, l.jsx)("div", {
-                            className: p.headerText,
+                            className: m.headerText,
                             children: this.props.label,
                         }),
                         (0, l.jsx)("input", {
                             type: "text",
-                            className: p.input,
+                            className: m.input,
                             placeholder: this.props.placeholder,
                             ref: this.inputRef,
                             onChange: this.handleChange,
@@ -69,9 +69,9 @@ class x extends (i = r.Component) {
                     ],
                 }),
                 (0, l.jsx)("section", {
-                    className: p.sectionTag,
+                    className: m.sectionTag,
                     children: (0, l.jsx)(c.aVo, {
-                        className: p.autocompleteScroller,
+                        className: m.autocompleteScroller,
                         fade: !0,
                         sections: n,
                         sectionHeight: this.getSectionHeight,
@@ -177,7 +177,7 @@ class x extends (i = r.Component) {
                     : (0, l.jsx)(
                           "div",
                           {
-                              className: p.section,
+                              className: m.section,
                               children: n,
                           },
                           t,
@@ -191,13 +191,13 @@ class x extends (i = r.Component) {
                     return (0, l.jsxs)(
                         "div",
                         {
-                            className: p.empty,
+                            className: m.empty,
                             children: [
                                 (0, l.jsx)("p", {
-                                    className: p.noResultsHeader,
-                                    children: m.intl.string(m.t["4o4z3d"]),
+                                    className: m.noResultsHeader,
+                                    children: p.intl.string(p.t["4o4z3d"]),
                                 }),
-                                (0, l.jsx)("p", { children: m.intl.string(m.t.QwSXv7) }),
+                                (0, l.jsx)("p", { children: p.intl.string(p.t.QwSXv7) }),
                             ],
                         },
                         "empty",
@@ -210,9 +210,9 @@ class x extends (i = r.Component) {
                     {
                         onClick: this.handleClick.bind(this, n, i),
                         onMouseEnter: this.handleMouseEnter.bind(this, n, i),
-                        className: a()(p.row, { [p.selected]: o === n && r === i }),
+                        className: a()(m.row, { [m.selected]: o === n && r === i }),
                         children: (0, l.jsx)("div", {
-                            className: p.rowInner,
+                            className: m.rowInner,
                             children: this.props.onRenderResult(d, n),
                         }),
                     },
@@ -221,5 +221,5 @@ class x extends (i = r.Component) {
             });
     }
 }
-f(x, "defaultProps", { sections: [null] });
-let j = o.ZP.connectStores([d.Z], () => ({ keyboardModeEnabled: d.Z.keyboardModeEnabled }))(x);
+f(b, "defaultProps", { sections: [null] });
+let x = o.ZP.connectStores([d.Z], () => ({ keyboardModeEnabled: d.Z.keyboardModeEnabled }))(b);

@@ -40,22 +40,22 @@ function b(e) {
             },
             [t, v, _],
         ),
-        w = i.useCallback(() => {
+        T = i.useCallback(() => {
             _.getState().setTagFilter(t.id, new Set()), C || n();
         }, [_, t.id, C, n]),
-        T = (0, a.ZP)({
+        w = (0, a.ZP)({
             id: "".concat(t.id, "-all-tags-dropdown-navigator"),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: p,
             scrollToEnd: p,
         }),
-        O = i.useRef(null);
+        S = i.useRef(null);
     return (
         i.useEffect(() => {
             requestAnimationFrame(() => {
-                if (null != O.current) {
-                    let e = O.current.querySelector(".".concat(x.tag));
+                if (null != S.current) {
+                    let e = S.current.querySelector(".".concat(x.tag));
                     null != e && e.focus();
                 }
             });
@@ -92,7 +92,7 @@ function b(e) {
                     }),
                 }),
                 (0, r.jsx)(l.bG, {
-                    navigator: T,
+                    navigator: w,
                     children: (0, r.jsx)(l.SJ, {
                         children: (e) => {
                             var t,
@@ -151,7 +151,7 @@ function b(e) {
                                 })(
                                     {
                                         ref: (e) => {
-                                            (i.current = e), (O.current = e);
+                                            (i.current = e), (S.current = e);
                                         },
                                     },
                                     a,
@@ -192,7 +192,7 @@ function b(e) {
                 (0, r.jsx)("div", { className: x.separator }),
                 (0, r.jsx)(o.Avr, {
                     "aria-label": f.intl.string(f.t["98EPQE"]),
-                    onClick: w,
+                    onClick: T,
                     text: f.intl.string(f.t["98EPQE"]),
                 }),
             ],

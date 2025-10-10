@@ -1,8 +1,8 @@
-r.d(t, { Z: () => u });
-var n,
+n.d(t, { Z: () => d });
+var r,
     i,
-    l = r(442837),
-    a = r(570140);
+    l = n(442837),
+    a = n(570140);
 let s = {},
     o = {};
 class c extends (i = l.ZP.Store) {
@@ -13,21 +13,21 @@ class c extends (i = l.ZP.Store) {
         return o[e];
     }
 }
-(n = "displayName") in c
-    ? Object.defineProperty(c, n, {
+(r = "displayName") in c
+    ? Object.defineProperty(c, r, {
           value: "GameProfileStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (c[n] = "GameProfileStore");
-let u = new c(a.Z, {
+    : (c[r] = "GameProfileStore");
+let d = new c(a.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-        let { applicationId: t, games: r } = e;
-        s[t] = r;
+        let { applicationId: t, games: n } = e;
+        s[t] = n;
     },
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
-        let { applicationId: t, error: r } = e;
-        o[t] = r;
+        let { applicationId: t, error: n } = e;
+        o[t] = n;
     },
 });

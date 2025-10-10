@@ -12,9 +12,9 @@ var l = n(951288),
     m = n(388032),
     f = n(493891);
 function h(e) {
-    let { context: t, entrypoint: n, title: r, look: h, items: v, sectionName: y, sectionOverallPosition: x } = e,
-        b = (0, u.s)(),
-        g = i.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
+    let { context: t, entrypoint: n, title: r, look: h, items: v, sectionName: x, sectionOverallPosition: y } = e,
+        g = (0, u.s)(),
+        b = i.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
     return (0, l.jsxs)("section", {
         className: f.container,
         "aria-label": m.intl.formatToPlainString(m.t.iobNIC, { sectionTitle: r }),
@@ -39,17 +39,17 @@ function h(e) {
                     children: v.map((e, n) => {
                         let { application: i, installOnDemand: r, showsPromoted: a } = e;
                         return (0, l.jsx)(
-                            g,
+                            b,
                             {
                                 context: t,
                                 application: i,
                                 look: h,
-                                sectionName: y,
+                                sectionName: x,
                                 resultsPosition: n,
                                 location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: r,
-                                isOneClickCTA: b,
-                                sectionOverallPosition: x,
+                                isOneClickCTA: g,
+                                sectionOverallPosition: y,
                                 showsPromoted: a,
                             },
                             i.id,

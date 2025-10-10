@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => g });
 var r = n(951288),
     l = n(647438),
-    o = n(498607),
-    i = n.n(o),
+    i = n(498607),
+    o = n.n(i),
     a = n(399606),
     s = n(481060),
     c = n(203893),
@@ -55,26 +55,26 @@ function h(e, t) {
         e
     );
 }
-function j(e) {
+function g(e) {
     let { guildId: t, onClose: n } = e,
-        o = (0, a.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], i()),
-        j = (0, u.dW)(t),
-        g = l.useCallback(() => {
-            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY),
-                (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
-        }, [t, o, j]),
+        i = (0, a.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], o()),
+        g = (0, u.dW)(t),
+        j = l.useCallback(() => {
+            i.requireUnusualDmActivity || g(u.aY.UNUSUAL_DM_ACTIVITY),
+                (0, C.Dr)(t, h(f({}, i), { requireUnusualDmActivity: !i.requireUnusualDmActivity }));
+        }, [t, i, g]),
         x = l.useCallback(() => {
-            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED),
-                (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
-        }, [t, o, j]),
+            i.requireCommunicationDisabled || g(u.aY.COMMUNICATION_DISABLED),
+                (0, C.Dr)(t, h(f({}, i), { requireCommunicationDisabled: !i.requireCommunicationDisabled }));
+        }, [t, i, g]),
         v = l.useCallback(() => {
-            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
-        }, [t, o, j]),
+            i.requireUnusualAccountActivity || g(u.aY.UNUSUAL_ACCOUNT_ACTIVITY),
+                (0, C.Dr)(t, h(f({}, i), { requireUnusualAccountActivity: !i.requireUnusualAccountActivity }));
+        }, [t, i, g]),
         y = l.useCallback(() => {
-            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED),
-                (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
-        }, [t, o, j]);
+            i.requireUsernameQuarantined || g(u.aY.USERNAME_QUARANTINED),
+                (0, C.Dr)(t, h(f({}, i), { requireUsernameQuarantined: !i.requireUsernameQuarantined }));
+        }, [t, i, g]);
     return (0, r.jsx)(s.v2r, {
         navId: "member-safety-flags",
         onClose: n,
@@ -97,8 +97,8 @@ function j(e) {
                             b.intl.string(b.t.ZRnONz),
                         ],
                     }),
-                    action: g,
-                    checked: o.requireUnusualDmActivity,
+                    action: j,
+                    checked: i.requireUnusualDmActivity,
                 }),
                 (0, r.jsx)(s.S89, {
                     id: "toggle-require-communication-disabled",
@@ -116,7 +116,7 @@ function j(e) {
                         ],
                     }),
                     action: x,
-                    checked: o.requireCommunicationDisabled,
+                    checked: i.requireCommunicationDisabled,
                 }),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -134,7 +134,7 @@ function j(e) {
                                 ],
                             }),
                             action: v,
-                            checked: o.requireUnusualAccountActivity,
+                            checked: i.requireUnusualAccountActivity,
                         }),
                         (0, r.jsx)(s.S89, {
                             id: "toggle-require-username-quarantined",
@@ -152,7 +152,7 @@ function j(e) {
                                 ],
                             }),
                             action: y,
-                            checked: o.requireUsernameQuarantined,
+                            checked: i.requireUsernameQuarantined,
                         }),
                     ],
                 }),

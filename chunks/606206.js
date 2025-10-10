@@ -1,20 +1,20 @@
-let r;
-n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282);
-var l,
-    s = n(442837),
-    i = n(570140),
-    a = n(278323),
-    o = n(212819),
-    c = n(933557),
-    u = n(592125),
+let l;
+n.d(t, { Z: () => P }), n(388685), n(539854), n(781311), n(35282);
+var i,
+    r = n(442837),
+    a = n(570140),
+    o = n(278323),
+    s = n(212819),
+    u = n(933557),
+    c = n(592125),
     d = n(430824),
-    h = n(293273),
-    f = n(158776),
-    g = n(699516),
+    f = n(293273),
+    g = n(158776),
+    h = n(699516),
     p = n(594174),
-    O = n(55589),
-    y = n(981631);
-function x(e, t, n) {
+    E = n(55589),
+    N = n(981631);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,40 +27,40 @@ function x(e, t, n) {
         e
     );
 }
-let b = [o.h8.TEXT_CHANNEL, o.h8.GROUP_DM, o.h8.USER],
-    N = null,
-    m = null,
-    E = [],
-    C = [];
-function j(e) {
-    (E = [...E, e]),
-        (C = C.map((e) => {
+let y = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
+    C = null,
+    _ = null,
+    T = [],
+    m = [];
+function I(e) {
+    (T = [...T, e]),
+        (m = m.map((e) => {
             var t, n;
             return (
                 (t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            l = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                x(e, t, n[t]);
+                            l.forEach(function (t) {
+                                O(e, t, n[t]);
                             });
                     }
                     return e;
                 })({}, e)),
-                (n = n = { sent: E.includes(e.data.record.id) }),
+                (n = n = { sent: T.includes(e.data.record.id) }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var l = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, l);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {
@@ -69,60 +69,60 @@ function j(e) {
                 t
             );
         })),
-        P.emitChange();
+        x.emitChange();
 }
-function v() {
-    (N = null), null != r && (r.destroy(), (r = null)), null != m && m();
+function S() {
+    (C = null), null != l && (l.destroy(), (l = null)), null != _ && _();
 }
-function T() {
-    let e = null != N && null != N.application_id ? h.Z.getApplicationActivity(N.application_id) : null;
-    if (null != N && (null == e || null == e.party || null == e.party.id)) return v();
+function b() {
+    let e = null != C && null != C.application_id ? f.Z.getApplicationActivity(C.application_id) : null;
+    if (null != C && (null == e || null == e.party || null == e.party.id)) return S();
 }
-class I extends (l = s.ZP.Store) {
+class v extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z);
+        this.waitFor(f.Z);
     }
     getActivity() {
-        return N;
+        return C;
     }
     getQuery() {
         var e;
-        return null != (e = null == r ? void 0 : r.query) ? e : "";
+        return null != (e = null == l ? void 0 : l.query) ? e : "";
     }
     getResults() {
-        return C;
+        return m;
     }
 }
-x(I, "displayName", "ActivityInviteModalStore");
-let P = new I(i.Z, {
+O(v, "displayName", "ActivityInviteModalStore");
+let x = new v(a.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (N = e.activity),
-                (m = e.resolve),
-                (E = []),
-                null == r &&
-                    (r = new o.ZP(
+            (C = e.activity),
+                (_ = e.resolve),
+                (T = []),
+                null == l &&
+                    (l = new s.ZP(
                         (e, t) => {
-                            (C = (
+                            (m = (
                                 "" === t.trim()
                                     ? (function () {
                                           let e = [];
                                           return (
-                                              O.Z.getPrivateChannelIds().forEach((t) => {
-                                                  let n = u.Z.getChannel(t);
+                                              E.Z.getPrivateChannelIds().forEach((t) => {
+                                                  let n = c.Z.getChannel(t);
                                                   if (null != n)
-                                                      if (n.type === y.d4z.DM) {
+                                                      if (n.type === N.d4z.DM) {
                                                           let t = n.getRecipientId(),
-                                                              r = null != t ? p.default.getUser(t) : null;
-                                                          null != r &&
+                                                              l = null != t ? p.default.getUser(t) : null;
+                                                          null != l &&
                                                               e.push({
-                                                                  type: o.h8.USER,
-                                                                  record: r,
+                                                                  type: s.h8.USER,
+                                                                  record: l,
                                                                   score: 0,
                                                               });
                                                       } else
                                                           n.isMultiUserDM() &&
                                                               e.push({
-                                                                  type: o.h8.GROUP_DM,
+                                                                  type: s.h8.GROUP_DM,
                                                                   record: n,
                                                                   score: 0,
                                                               });
@@ -134,33 +134,33 @@ let P = new I(i.Z, {
                             )
                                 .map((e) => {
                                     switch (e.type) {
-                                        case o.h8.USER: {
+                                        case s.h8.USER: {
                                             let { record: t } = e;
                                             return {
-                                                type: o.h8.USER,
-                                                sent: E.includes(t.id),
-                                                status: f.Z.getStatus(t.id),
+                                                type: s.h8.USER,
+                                                sent: T.includes(t.id),
+                                                status: g.Z.getStatus(t.id),
                                                 data: e,
                                             };
                                         }
-                                        case o.h8.TEXT_CHANNEL: {
+                                        case s.h8.TEXT_CHANNEL: {
                                             var t;
                                             let { record: n } = e,
-                                                r = u.Z.getChannel(n.parent_id),
-                                                l = d.Z.getGuild(n.guild_id);
+                                                l = c.Z.getChannel(n.parent_id),
+                                                i = d.Z.getGuild(n.guild_id);
                                             return {
-                                                type: o.h8.TEXT_CHANNEL,
-                                                sent: E.includes(n.id),
-                                                categoryName: null != r ? (0, c.F6)(r, p.default, g.Z) : "",
-                                                guildName: null != (t = null == l ? void 0 : l.name) ? t : "",
+                                                type: s.h8.TEXT_CHANNEL,
+                                                sent: T.includes(n.id),
+                                                categoryName: null != l ? (0, u.F6)(l, p.default, h.Z) : "",
+                                                guildName: null != (t = null == i ? void 0 : i.name) ? t : "",
                                                 data: e,
                                             };
                                         }
-                                        case o.h8.GROUP_DM: {
+                                        case s.h8.GROUP_DM: {
                                             let { record: t } = e;
                                             return {
-                                                type: o.h8.GROUP_DM,
-                                                sent: E.includes(t.id),
+                                                type: s.h8.GROUP_DM,
+                                                sent: T.includes(t.id),
                                                 data: e,
                                             };
                                         }
@@ -169,42 +169,42 @@ let P = new I(i.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                P.emitChange();
+                                x.emitChange();
                         },
-                        b,
+                        y,
                         100,
                     )),
-                r.search("");
+                l.search("");
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;
-            null != r && r.search(t);
+            null != l && l.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == N) return;
+            if (null == C) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? a.Z.sendActivityInvite({
+                ? o.Z.sendActivityInvite({
                       channelId: t,
-                      type: y.mFx.JOIN,
-                      activity: N,
+                      type: N.mFx.JOIN,
+                      activity: C,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => j(t))
+                  }).then(() => I(t))
                 : null != n &&
-                  a.Z.sendActivityInviteUser({
+                  o.Z.sendActivityInviteUser({
                       userId: n,
-                      type: y.mFx.JOIN,
-                      activity: N,
+                      type: N.mFx.JOIN,
+                      activity: C,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => j(n));
+                  }).then(() => I(n));
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: v,
+        ACTIVITY_INVITE_MODAL_CLOSE: S,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != N && (v(), !0);
+            return !!t && null != C && (S(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: T,
-        RPC_APP_DISCONNECTED: T,
+        LOCAL_ACTIVITY_UPDATE: b,
+        RPC_APP_DISCONNECTED: b,
     }),
-    S = 12633 == n.j ? P : null;
+    P = 12633 == n.j ? x : null;

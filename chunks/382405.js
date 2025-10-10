@@ -21,17 +21,17 @@ var i = n(120356),
     y = n(810568),
     v = n(168524),
     I = n(960870),
-    C = n(139793),
-    S = n(502762),
+    S = n(139793),
+    C = n(502762),
     T = n(652853),
     N = n(576759),
-    P = n(336383),
-    j = n(373826),
+    j = n(336383),
+    P = n(373826),
     x = n(614716),
     A = n(228168),
     Z = n(616922),
     w = n(671955),
-    L = n(663907);
+    L = n(704543);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,14 +80,14 @@ function D(e) {
             entry: n,
             analyticsLocations: D,
         }),
-        M = (0, C.Z)({
+        M = (0, S.Z)({
             userId: t.id,
             onAction: k,
         });
     return null == R
         ? (0, r.jsx)("article", {
               "aria-labelledby": f,
-              children: (0, r.jsxs)(S.Z.Overlay, {
+              children: (0, r.jsxs)(C.Z.Overlay, {
                   className: l()(L.card, u),
                   ref: M,
                   children: [
@@ -105,7 +105,7 @@ function D(e) {
                                   (0, r.jsx)("div", {
                                       className: L.details,
                                       children: (0, r.jsx)("div", {
-                                          children: (0, r.jsx)(j.f, {
+                                          children: (0, r.jsx)(P.f, {
                                               variant: "heading-sm/semibold",
                                               text: x,
                                               id: f,
@@ -118,7 +118,7 @@ function D(e) {
                   ],
               }),
           })
-        : (0, r.jsxs)(P.Z, {
+        : (0, r.jsxs)(j.Z, {
               ref: M,
               className: u,
               subsection: A.Tb.RECENT_ACTIVITY,
@@ -154,7 +154,7 @@ function D(e) {
                                                   R(e),
                                                   g !== w.l.MODAL && g !== w.l.MODAL_V2 && (null == p || p());
                                           },
-                                          children: (0, r.jsx)(j.f, {
+                                          children: (0, r.jsx)(P.f, {
                                               variant: "heading-sm/semibold",
                                               text: x,
                                               id: f,
@@ -194,11 +194,11 @@ function k(e) {
             entry: n,
             analyticsLocations: g,
         }),
-        O = (0, C.Z)({
+        O = (0, S.Z)({
             userId: t.id,
             onAction: m,
         });
-    return (0, r.jsxs)(P.Z, {
+    return (0, r.jsxs)(j.Z, {
         ref: O,
         className: l,
         subsection: A.Tb.RECENT_ACTIVITY,
@@ -234,12 +234,12 @@ function k(e) {
                                 null == h || "" === h
                                     ? (0, r.jsxs)("div", {
                                           children: [
-                                              (0, r.jsx)(j.f, {
+                                              (0, r.jsx)(P.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: n.extra.media_title,
                                                   id: u,
                                               }),
-                                              (0, r.jsx)(j.Z, {
+                                              (0, r.jsx)(P.Z, {
                                                   variant: "text-xs/normal",
                                                   text: n.extra.media_subtitle,
                                               }),
@@ -251,12 +251,12 @@ function k(e) {
                                               e.stopPropagation(), m({ action: "PRESS_TEXT" }), (0, p.Y)(h);
                                           },
                                           children: [
-                                              (0, r.jsx)(j.f, {
+                                              (0, r.jsx)(P.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: n.extra.media_title,
                                                   id: u,
                                               }),
-                                              (0, r.jsx)(j.Z, {
+                                              (0, r.jsx)(P.Z, {
                                                   variant: "text-xs/normal",
                                                   text: n.extra.media_subtitle,
                                               }),
@@ -287,14 +287,14 @@ function M(e) {
             entry: l,
             analyticsLocations: m,
         }),
-        O = (0, C.Z)({
+        O = (0, S.Z)({
             userId: i.id,
             onAction: b,
         }),
         y = null == (t = l.extra.entries[0]) ? void 0 : t.media;
     return null == y
         ? null
-        : (0, r.jsxs)(P.Z, {
+        : (0, r.jsxs)(j.Z, {
               ref: O,
               className: o,
               subsection: A.Tb.RECENT_ACTIVITY,
@@ -323,7 +323,7 @@ function M(e) {
                                   children: [
                                       (0, r.jsxs)("div", {
                                           children: [
-                                              (0, r.jsx)(j.f, {
+                                              (0, r.jsx)(P.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: y.title,
                                                   onClick: () => {
@@ -332,7 +332,7 @@ function M(e) {
                                                   },
                                                   id: f,
                                               }),
-                                              (0, r.jsx)(j.Z, {
+                                              (0, r.jsx)(P.Z, {
                                                   variant: "text-xs/normal",
                                                   text: null == (n = y.artists[0]) ? void 0 : n.name,
                                                   onClick: () => {
@@ -373,7 +373,7 @@ function U(e) {
             entry: n,
             analyticsLocations: p,
         }),
-        g = (0, C.Z)({
+        g = (0, S.Z)({
             userId: t.id,
             onAction: h,
         }),
@@ -381,7 +381,7 @@ function U(e) {
             applicationId: n.extra.application_id,
             onClose: a,
         });
-    return (0, r.jsxs)(P.Z, {
+    return (0, r.jsxs)(j.Z, {
         ref: g,
         className: l,
         subsection: A.Tb.RECENT_ACTIVITY,
@@ -407,7 +407,7 @@ function U(e) {
                             className: L.details,
                             children: [
                                 (0, r.jsx)("div", {
-                                    children: (0, r.jsx)(j.f, {
+                                    children: (0, r.jsx)(P.f, {
                                         variant: "heading-sm/semibold",
                                         text: n.extra.activity_name,
                                         onClick: () => {

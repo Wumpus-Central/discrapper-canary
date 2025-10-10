@@ -1,7 +1,7 @@
-n.d(t, { Z: () => g });
-var r = n(951288),
-    i = n(120356),
-    a = n.n(i),
+n.d(t, { Z: () => b });
+var i = n(951288),
+    r = n(120356),
+    a = n.n(r),
     l = n(442837),
     o = n(481060),
     s = n(884697),
@@ -12,70 +12,70 @@ var r = n(951288),
     _ = n(25990),
     m = n(74538),
     h = n(388032),
-    v = n(763740);
-let g = (e) => {
-    let { user: t, guildId: n, selectedNameplate: i } = e,
-        g = (0, l.e7)([_.Z], () => _.Z.getPendingGlobalName()),
-        { product: b, purchase: x } = (0, c.Z)(null == i ? void 0 : i.skuId),
-        C = (0, p.kd)(b),
+    g = n(763740);
+let b = (e) => {
+    let { user: t, guildId: n, selectedNameplate: r } = e,
+        b = (0, l.e7)([_.Z], () => _.Z.getPendingGlobalName()),
+        { product: v, purchase: x } = (0, c.Z)(null == r ? void 0 : r.skuId),
+        C = (0, p.kd)(v),
         f = m.ZP.canUseCollectibles(t),
-        w = (0, s.qS)(x),
-        I = (0, s.G1)(b),
-        P = !f && w,
-        y = null == x || P;
-    return (0, r.jsxs)("div", {
-        className: a()(v.previewBorder, { [v.upsell]: null != i && y }),
+        I = (0, s.qS)(x),
+        P = (0, s.G1)(v),
+        y = !f && I,
+        w = null == x || y;
+    return (0, i.jsxs)("div", {
+        className: a()(g.previewBorder, { [g.upsell]: null != r && w }),
         children: [
-            (0, r.jsx)("div", {
-                className: v.previewBox,
+            (0, i.jsx)("div", {
+                className: g.previewBox,
                 role: "img",
                 "aria-label": h.intl.string(h.t.SZeUdX),
-                children: (0, r.jsxs)("div", {
-                    className: v.previewContents,
+                children: (0, i.jsxs)("div", {
+                    className: g.previewContents,
                     "aria-hidden": !0,
                     children: [
-                        (0, r.jsx)(d.d, {
+                        (0, i.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, r.jsx)(d.d, {
+                        (0, i.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, r.jsx)(u.Z, {
+                        (0, i.jsx)(u.Z, {
                             user: t,
                             guildId: n,
-                            nameplate: i,
-                            pendingGlobalName: g,
+                            nameplate: r,
+                            pendingGlobalName: b,
                             isHighlighted: !0,
                         }),
-                        (0, r.jsx)(d.d, {
+                        (0, i.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, r.jsx)(d.d, {
+                        (0, i.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
                     ],
                 }),
             }),
-            null != i &&
-                (0, r.jsxs)("div", {
-                    className: v.previewDescription,
+            null != r &&
+                (0, i.jsxs)("div", {
+                    className: g.previewDescription,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: "text-sm/semibold",
                             children: C,
                         }),
-                        y &&
-                            (0, r.jsx)(o.Text, {
+                        w &&
+                            (0, i.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: P
+                                children: y
                                     ? h.intl.string(h.t.nD78oa)
-                                    : I && f
+                                    : P && f
                                       ? h.intl.string(h.t.hmyYKy)
-                                      : I
+                                      : P
                                         ? h.intl.string(h.t.JY1i0t)
                                         : h.intl.string(h.t.fEGjVV),
                             }),

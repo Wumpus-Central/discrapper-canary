@@ -1,5 +1,5 @@
 n.d(t, { Z: () => i });
-let i = (0, n(879690).U)((e) => ({
+let i = (0, n(191336).U)((e) => ({
     showSuggestions: !0,
     showActivityTicker: !0,
     setShowSuggestions: (t) => e({ showSuggestions: t }),

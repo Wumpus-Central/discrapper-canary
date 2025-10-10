@@ -1,26 +1,26 @@
 n.d(t, {
     Df: () => d,
-    S_: () => u,
+    S_: () => c,
     V5: () => a,
-    VX: () => l,
-    ZP: () => p,
+    VX: () => o,
+    ZP: () => h,
     ih: () => s,
-    xc: () => c,
+    xc: () => u,
 });
 var i = n(972959);
 let r = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000,
     },
-    o = (0, i.H)(() => r),
-    l = 10000,
+    l = (0, i.H)(() => r),
+    o = 10000,
     a = 20000,
     s = 500,
-    c = 1000;
-function u(e) {
-    o.setState({ timeToLiveMs: e });
+    u = 1000;
+function c(e) {
+    l.setState({ timeToLiveMs: e });
 }
 function d(e) {
-    o.setState({ reappearTimeMs: e });
+    l.setState({ reappearTimeMs: e });
 }
-let p = o;
+let h = l;

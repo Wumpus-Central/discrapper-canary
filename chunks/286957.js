@@ -1,81 +1,81 @@
 r.d(t, {
-    XV: () => a,
+    XV: () => l,
     aE: () => u,
     kd: () => s,
     zK: () => c,
 });
 var n,
     i = r(379405),
-    l = r(481060),
-    o = r(388032);
-let a = {
+    o = r(481060),
+    a = r(388032);
+let l = {
         [i._.BETTER_THAN_YOU]: {
-            getText: () => o.intl.string(o.t.jbIRBA),
-            icon: l.jrt,
+            getText: () => a.intl.string(a.t.jbIRBA),
+            icon: o.jrt,
         },
         [i._.CASUAL]: {
-            getText: () => o.intl.string(o.t.xcFFv7),
-            icon: l.jrt,
+            getText: () => a.intl.string(a.t.xcFFv7),
+            icon: o.jrt,
         },
         [i._.INTERMEDIATE]: {
-            getText: () => o.intl.string(o.t["A/mIs7"]),
-            icon: l.jrt,
+            getText: () => a.intl.string(a.t["A/mIs7"]),
+            icon: o.jrt,
         },
         [i._.EXPERT]: {
-            getText: () => o.intl.string(o.t.RIOFc3),
-            icon: l.jrt,
+            getText: () => a.intl.string(a.t.RIOFc3),
+            icon: o.jrt,
         },
         [i._.LOVE_IT]: {
-            getText: () => o.intl.string(o.t["1rN7BA"]),
-            icon: l.lbB,
+            getText: () => a.intl.string(a.t["1rN7BA"]),
+            icon: o.lbB,
         },
         [i._.KIND_OF_LOVE_IT]: {
-            getText: () => o.intl.string(o.t.bCBpVl),
-            icon: l.lbB,
+            getText: () => a.intl.string(a.t.bCBpVl),
+            icon: o.lbB,
         },
         [i._.KIND_OF_HATE_IT]: {
-            getText: () => o.intl.string(o.t["/WcmcH"]),
-            icon: l.kZ9,
+            getText: () => a.intl.string(a.t["/WcmcH"]),
+            icon: o.kZ9,
         },
         [i._.RAGE_QUITTING]: {
-            getText: () => o.intl.string(o.t["NXZ/MT"]),
-            icon: l.kZ9,
+            getText: () => a.intl.string(a.t["NXZ/MT"]),
+            icon: o.kZ9,
         },
         [i._.OPEN_TO_PLAY]: {
-            getText: () => o.intl.string(o.t.q30PoK),
-            icon: l.iFz,
+            getText: () => a.intl.string(a.t.q30PoK),
+            icon: o.iFz,
         },
         [i._.LOOKING_FOR_GROUP]: {
-            getText: () => o.intl.string(o.t.DWWAAQ),
-            icon: l.iFz,
+            getText: () => a.intl.string(a.t.DWWAAQ),
+            icon: o.iFz,
         },
         [i._.LOOKING_FOR_TIPS]: {
-            getText: () => o.intl.string(o.t.KQDVvL),
-            icon: l.iFz,
+            getText: () => a.intl.string(a.t.KQDVvL),
+            icon: o.iFz,
         },
         [i._.OPEN_TO_TEACH]: {
-            getText: () => o.intl.string(o.t["5HhQo6"]),
-            icon: l.iFz,
+            getText: () => a.intl.string(a.t["5HhQo6"]),
+            icon: o.iFz,
         },
     },
     c = (e) => {
-        let t = a[e];
+        let t = l[e];
         return null != t ? t : null;
     };
 var s = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);
 let u = {
     skill_level: {
-        getLabel: () => o.intl.string(o.t.MKqADA),
+        getLabel: () => a.intl.string(a.t.MKqADA),
         type: "radio",
         tags: [i._.CASUAL, i._.INTERMEDIATE, i._.EXPERT, i._.BETTER_THAN_YOU],
     },
     rating: {
-        getLabel: () => o.intl.string(o.t["7/umur"]),
+        getLabel: () => a.intl.string(a.t["7/umur"]),
         type: "checkbox",
         tags: [i._.LOVE_IT, i._.KIND_OF_LOVE_IT, i._.KIND_OF_HATE_IT, i._.RAGE_QUITTING],
     },
     looking_for: {
-        getLabel: () => o.intl.string(o.t["5Dez19"]),
+        getLabel: () => a.intl.string(a.t["5Dez19"]),
         type: "checkbox",
         tags: [i._.LOOKING_FOR_GROUP, i._.OPEN_TO_PLAY, i._.LOOKING_FOR_TIPS, i._.OPEN_TO_TEACH],
     },

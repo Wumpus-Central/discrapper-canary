@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+n.d(t, { Z: () => O }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(951288),
     a = n(647438),
     i = n(442837),
@@ -12,8 +12,8 @@ var r = n(951288),
     m = n(881294),
     h = n(523311),
     g = n(292191),
-    f = n(258971),
-    _ = n(133743),
+    _ = n(258971),
+    f = n(133743),
     b = n(680474),
     x = n(571737),
     v = n(796150),
@@ -21,10 +21,10 @@ var r = n(951288),
     j = n(213746),
     y = n(979007),
     I = n(981631),
-    O = n(388032),
-    S = n(352677);
-let P = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: P, initialTab: E, onButtonsVisibilityChange: N } = e,
+    S = n(388032),
+    P = n(352677);
+let O = function (e) {
+    let { applicationId: t, onSelectApplication: n, onScroll: O, initialTab: E, onButtonsVisibilityChange: N } = e,
         T = a.useRef(null),
         A = (0, i.e7)([u.Z], () => u.Z.getApplication(t)),
         L = (0, i.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
@@ -40,7 +40,7 @@ let P = function (e) {
         a.useEffect(() => () => N(!0), [N]);
     let R = null == A ? void 0 : A.storefront_available,
         [Z, w] = a.useState(null != E ? E : y.GlobalDiscoveryAppsSections.ABOUT),
-        D = a.useCallback(
+        k = a.useCallback(
             (e) => {
                 var t;
                 null == (t = T.current) || t.scrollTo({ to: 0 }), w(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
@@ -50,13 +50,13 @@ let P = function (e) {
     a.useEffect(() => {
         (null == A ? void 0 : A.storefront_available) && null != t && (0, l.Z)(t);
     }, [null == A ? void 0 : A.storefront_available, t]);
-    let k = (0, f.Uc)(),
+    let D = (0, _.Uc)(),
         M = (0, i.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
         G = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
         B = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
         z = {
             displayedSimilarApplications: B,
-            previousView: k,
+            previousView: D,
         },
         U = a.useRef(z);
     a.useEffect(() => {
@@ -67,7 +67,7 @@ let P = function (e) {
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PAGE_VIEWED, {
-                    current_page: f.m_.APPLICATION,
+                    current_page: _.m_.APPLICATION,
                     previous_page: null == t ? void 0 : t.type,
                     application_id: A.id,
                     referrer: document.referrer,
@@ -78,11 +78,11 @@ let P = function (e) {
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
-                    label: O.intl.string(O.t.DkyHMD),
+                    label: S.intl.string(S.t.DkyHMD),
                 },
                 {
                     id: y.GlobalDiscoveryAppsSections.STORE,
-                    label: O.intl.string(O.t.jgEXGB),
+                    label: S.intl.string(S.t.jgEXGB),
                 },
             ],
             [],
@@ -104,43 +104,43 @@ let P = function (e) {
                 }),
                     w(e),
                     e === y.GlobalDiscoveryAppsSections.ABOUT
-                        ? (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t))
-                        : (0, _.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                        ? (0, f.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t))
+                        : (0, f.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t],
         ),
         Y = Z === y.GlobalDiscoveryAppsSections.ABOUT;
     return (0, r.jsx)(c.Z, {
-        onScroll: P,
+        onScroll: O,
         ref: T,
         children: (0, r.jsx)(s.Z, {
             children:
                 null == A
                     ? null == L || L === u.M.FETCHING
                         ? (0, r.jsx)("div", {
-                              className: S.centerContainer,
+                              className: P.centerContainer,
                               children: (0, r.jsx)(h.Z, { loading: !0 }),
                           })
                         : (0, r.jsx)("div", {
-                              className: S.centerContainer,
-                              children: (0, r.jsx)(g.Z, { className: S.error }),
+                              className: P.centerContainer,
+                              children: (0, r.jsx)(g.Z, { className: P.error }),
                           })
                     : (0, r.jsxs)("div", {
-                          className: S.detailContainer,
+                          className: P.detailContainer,
                           children: [
                               (0, r.jsx)(x.Z, {
                                   application: A,
                                   onButtonsVisibilityChange: N,
                               }),
                               (0, r.jsxs)("div", {
-                                  className: S.contentContainer,
+                                  className: P.contentContainer,
                                   children: [
                                       (0, r.jsxs)("div", {
-                                          className: S.contentTabsContainer,
+                                          className: P.contentTabsContainer,
                                           children: [
                                               R &&
                                                   (0, r.jsx)("div", {
-                                                      className: S.contentTabs,
+                                                      className: P.contentTabs,
                                                       children: (0, r.jsx)(o.Z, {
                                                           tabs: F,
                                                           onTabSelect: H,
@@ -152,14 +152,14 @@ let P = function (e) {
                                                   applicationId: t,
                                                   fetchState: M,
                                                   similarApplications: B,
-                                                  onSelectApplication: D,
+                                                  onSelectApplication: k,
                                                   similarLoadId: null == G ? void 0 : G.loadId,
                                               }),
                                           ],
                                       }),
                                       Y &&
                                           (0, r.jsx)(v.Z, {
-                                              className: S.sidebar,
+                                              className: P.sidebar,
                                               application: A,
                                               view: "side",
                                           }),

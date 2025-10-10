@@ -16,11 +16,11 @@ var r = n(951288),
     x = n(626135),
     b = n(74538),
     y = n(934261),
-    P = n(52268),
-    j = n(981631),
+    j = n(52268),
+    P = n(981631),
     v = n(474936),
     O = n(388032),
-    _ = n(913211);
+    _ = n(238983);
 function E(e) {
     let {
         user: t,
@@ -88,14 +88,14 @@ function C(e) {
             analyticsLocations: h,
         } = e,
         { pendingProfileEffect: x } = (0, g.bd)(n),
-        [j, v] = i.useMemo(() => {
+        [P, v] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
         [C, S] = i.useState(() => (null != p ? p : void 0 !== x ? x : null == m ? null : null != m ? m : null)),
         [I, w] = i.useMemo(() => {
             var e;
-            let t = j.find((e) => {
+            let t = P.find((e) => {
                     let { skuId: t } = e;
                     return t === (null == C ? void 0 : C.skuId);
                 }),
@@ -113,11 +113,11 @@ function C(e) {
                     : null,
                 n,
             ];
-        }, [C, j, v]),
-        { product: A, purchase: Z } = (0, d.Z)(null == I ? void 0 : I.skuId),
-        N = i.useRef(null),
-        D = b.ZP.canUseCollectibles(t),
-        k =
+        }, [C, P, v]),
+        { product: A, purchase: N } = (0, d.Z)(null == I ? void 0 : I.skuId),
+        Z = i.useRef(null),
+        k = b.ZP.canUseCollectibles(t),
+        D =
             (null == C ? void 0 : C.skuId) ===
             (void 0 === x ? (null == m ? void 0 : m.skuId) : null == x ? void 0 : x.skuId),
         T = i.useCallback(
@@ -159,11 +159,11 @@ function C(e) {
                 "data-migration-pending": !0,
                 className: _.modalContent,
                 children: [
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(j.Z, {
                         user: t,
                         guild: n,
                         pendingProfileEffect: C,
-                        selectedProfileEffectRef: N,
+                        selectedProfileEffectRef: Z,
                         onSelect: T,
                         onOpenShop: U,
                     }),
@@ -172,7 +172,7 @@ function C(e) {
                         canApplySelectedChange: w,
                         pendingProfileEffectRecord: I,
                         product: A,
-                        purchase: Z,
+                        purchase: N,
                         guild: n,
                     }),
                 ],
@@ -185,10 +185,10 @@ function C(e) {
                 onClose: f,
                 onOpenShop: U,
                 product: A,
-                purchase: Z,
-                canUseCollectibles: D,
+                purchase: N,
+                canUseCollectibles: k,
                 selectedProfileEffect: C,
-                disableApplyButton: k,
+                disableApplyButton: D,
                 analyticsLocations: h,
             }),
         ],
@@ -198,17 +198,17 @@ function S(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffect: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: b } = (0, f.Z)(),
         y = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        { analyticsLocations: P } = (0, c.ZP)(n, s.Z.EDIT_PROFILE_EFFECT_MODAL),
+        { analyticsLocations: j } = (0, c.ZP)(n, s.Z.EDIT_PROFILE_EFFECT_MODAL),
         v = (0, g.Kg)(y, u);
     return (
         i.useEffect(() => {
-            x.default.track(j.rMx.OPEN_MODAL, {
-                type: j.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: P,
+            x.default.track(P.rMx.OPEN_MODAL, {
+                type: P.jXE.PROFILE_EFFECT_CUSTOMIZATION,
+                location_stack: j,
             });
-        }, [P]),
+        }, [j]),
         (0, r.jsx)(c.Gt, {
-            value: P,
+            value: j,
             children: (0, r.jsx)(o.Y0X, {
                 transitionState: t,
                 className: _.modal,
@@ -228,7 +228,7 @@ function S(e) {
                           initialSelectedProfileEffect: a,
                           currentSavedEffect: v,
                           onClose: d,
-                          analyticsLocations: P,
+                          analyticsLocations: j,
                       }),
             }),
         })

@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function j(e, t) {
         e
     );
 }
-class M {
+class j {
     constructor() {
         D(this, "gpuBoostRequests", new Set()),
             D(this, "isGPUBoosted", !1),
@@ -129,7 +129,7 @@ function G(e, t, n) {
 let B = new Set(),
     Z = new Set(),
     F = {},
-    V = new M(),
+    V = new j(),
     H = new Set(),
     Y = null,
     W = !1,
@@ -437,7 +437,7 @@ async function eS(e) {
                 popoutInitializationStages: ea,
             }),
             await (0, C.f)(en),
-            (ea = j(L({}, ea), { popoutOpened: !0 }));
+            (ea = M(L({}, ea), { popoutOpened: !0 }));
         let r = {
             renderer_started: !0,
             fullscreen_type: await (0, A.hj)(e, 0),
@@ -481,7 +481,7 @@ async function eS(e) {
         k.error("failed to create out of process overlay host window", t),
             em(e, t),
             c.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED_DISABLED),
-            (ea = j(L({}, ea), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + t })),
+            (ea = M(L({}, ea), { errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + t })),
             U(e, "renderer_window_mounting_failed", {
                 error: t,
                 popoutInitializationStages: ea,
@@ -611,10 +611,10 @@ function eL(e) {
 function ex() {
     ew(null, !0), tr.emitChange();
 }
-function ej(e) {
+function eM(e) {
     return G(null != K ? K : null, "overlay_focused", { focusedPID: e.pid }), (K = e.pid), !0;
 }
-function eM(e) {
+function ej(e) {
     if (!H.has(e) || !ea.allDone) return;
     let t = ed(e).mounting_started_at;
     ef(e, {
@@ -625,12 +625,12 @@ function eM(e) {
 }
 function ek() {
     var e;
-    (ea = j(L({}, ea), { showInactiveCalled: !0 })), null == Y || null == (e = Y.onPopoutShowInactive) || e.call(Y);
+    (ea = M(L({}, ea), { showInactiveCalled: !0 })), null == Y || null == (e = Y.onPopoutShowInactive) || e.call(Y);
 }
 function eU() {
-    (ea = j(L({}, ea), { allDone: !0 })),
+    (ea = M(L({}, ea), { allDone: !0 })),
         H.forEach((e) => {
-            eM(e);
+            ej(e);
         });
 }
 function eG(e) {
@@ -647,10 +647,10 @@ function eZ(e) {
     (z = t), eR();
 }
 function eF(e) {
-    U(e, "_successfullyShownCallback"), H.add(e), eM(e);
+    U(e, "_successfullyShownCallback"), H.add(e), ej(e);
 }
 function eV(e) {
-    (ea = j(L({}, ea), { windowHandleSentToNative: e })),
+    (ea = M(L({}, ea), { windowHandleSentToNative: e })),
         e && c.Z.updateOverlayState((0, b.getPID)(), I.mM.WAITING_FOR_REACT_INITIALIZATION),
         tr.emitChange();
 }
@@ -898,7 +898,7 @@ let tr = new tn(
                   OVERLAY_UPDATE_OVERLAY_STATE: e0,
                   OVERLAY_SET_GPU_BOOST_REQUESTED: eX,
                   OVERLAY_CRASHED: eq,
-                  OVERLAY_FOCUSED: ej,
+                  OVERLAY_FOCUSED: eM,
                   OVERLAY_SET_MODULE_LOGGING: te,
                   OVERLAY_SET_STATE_DEBUGGING: tt,
                   OVERLAY_OOP_UI_INITIALIZED: eU,

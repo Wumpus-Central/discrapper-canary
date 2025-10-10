@@ -94,39 +94,39 @@ async function A(e, t) {
         w = null == P ? void 0 : P.getGuildId(),
         D = null == (n = u.Z.getGuild(w)) ? void 0 : n.premiumTier;
     if (null == N || null == P || null == R) return [!1, "no user or channel"];
-    let x = null;
-    if (null == (x = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
+    let L = null;
+    if (null == (L = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
         !d.Z.getUseSystemScreensharePicker() &&
         !(await o.Z.hasPermission(b.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
-    let { preset: L, resolution: j, fps: M, soundshareEnabled: k } = l.Z.getState(),
-        U = null != (g = null == t ? void 0 : t.preset) ? g : L,
+    let { preset: x, resolution: M, fps: j, soundshareEnabled: k } = l.Z.getState(),
+        U = null != (g = null == t ? void 0 : t.preset) ? g : x,
         [G, B] = null != (y = (0, m.Z)(U, N, D)) ? y : [],
-        Z = null != (v = null != G ? G : null == t ? void 0 : t.resolution) ? v : j,
-        V = null != (T = null != B ? B : null == t ? void 0 : t.fps) ? T : M,
-        F = null != (A = null == t ? void 0 : t.previewDisabled) ? A : s.I0.getSetting(),
+        Z = null != (v = null != G ? G : null == t ? void 0 : t.resolution) ? v : M,
+        F = null != (T = null != B ? B : null == t ? void 0 : t.fps) ? T : j,
+        V = null != (A = null == t ? void 0 : t.previewDisabled) ? A : s.I0.getSetting(),
         H = null != (C = null == t ? void 0 : t.soundshareEnabled) ? C : k;
     return (
-        (0, h.Z)(U, Z, V, N, D, P) || ((U = E.tI.PRESET_VIDEO), (Z = E.LY.RESOLUTION_720), (V = E.ws.FPS_30)),
+        (0, h.Z)(U, Z, F, N, D, P) || ((U = E.tI.PRESET_VIDEO), (Z = E.LY.RESOLUTION_720), (F = E.ws.FPS_30)),
         (0, i.Rc)({
             preset: U,
             resolution: Z,
-            frameRate: V,
+            frameRate: F,
             soundshareEnabled: H,
         }),
         (0, i.WH)(
             w,
             R,
-            I(O({}, S(x)), {
-                audioSourceId: (null == (p = x.id) ? void 0 : p.startsWith(r.vA.CAMERA))
+            I(O({}, S(L)), {
+                audioSourceId: (null == (p = L.id) ? void 0 : p.startsWith(r.vA.CAMERA))
                     ? null == t
                         ? void 0
                         : t.audioSourceId
                     : void 0,
                 sound: H,
-                previewDisabled: F,
+                previewDisabled: V,
                 goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs,
                 analyticsLocations: null == t ? void 0 : t.analyticsLocations,
             }),

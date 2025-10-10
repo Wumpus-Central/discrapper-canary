@@ -26,17 +26,17 @@ function b(e) {
         }),
     });
 }
-function O(e) {
+function _(e) {
     var t;
     let { onClick: n } = e,
         p = (0, l.e7)([a.Z], () => a.Z.getFakeGameData()),
         h = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
         b = null != (t = null == p ? void 0 : p.start) ? t : null == h ? void 0 : h.start,
-        O = d.SE.useSetting().length > 0,
+        _ = d.SE.useSetting().length > 0,
         { now: y } = (0, s.tS)(),
-        _ = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, y)), [b, y]);
+        O = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, y)), [b, y]);
     if (null == b) return null;
-    let j = [...(O ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), _];
+    let v = [...(_ ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), O];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -45,7 +45,7 @@ function O(e) {
             variant: "text-xs/medium",
             color: "text-feedback-positive",
             lineClamp: 1,
-            children: j.join(" \xB7 "),
+            children: v.join(" \xB7 "),
         }),
     });
 }
@@ -58,7 +58,7 @@ function y(e) {
         ? null
         : a && s !== o.Skl.INVISIBLE
           ? i
-              ? (0, r.jsx)(O, { onClick: t })
+              ? (0, r.jsx)(_, { onClick: t })
               : null
           : (0, r.jsx)(b, { onClick: t });
 }

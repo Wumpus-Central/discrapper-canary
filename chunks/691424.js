@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(69626),
     w = n(142990),
     D = n(382056),
-    x = n(532901),
-    L = n(311739),
-    j = n(981631),
-    M = n(176505),
+    L = n(532901),
+    x = n(311739),
+    M = n(981631),
+    j = n(176505),
     k = n(430864),
     U = n(154257);
 function G(e, t, n) {
@@ -76,7 +76,7 @@ function Z(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function V(e, t) {
         e
     );
 }
-function F(e) {
+function V(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, a) {
@@ -116,7 +116,7 @@ function H(e) {
                 d = _.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = V(B({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
+                e = F(B({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
             }
             return (0, r.jsx)(
                 y.Y,
@@ -137,18 +137,18 @@ function Y(e, t, n) {
     let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(j.oNc.COMMUNITY) && (0, O.uL)(j.Z5c.CHANNEL(e, t));
+        r.features.has(M.oNc.COMMUNITY) && (0, O.uL)(M.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case "home":
         case "guide":
-            i(M.oC.GUILD_HOME);
+            i(j.oC.GUILD_HOME);
             break;
         case "browse":
-            i(M.oC.CHANNEL_BROWSER);
+            i(j.oC.CHANNEL_BROWSER);
             break;
         case "customize":
-            i(M.oC.CUSTOMIZE_COMMUNITY);
+            i(j.oC.CUSTOMIZE_COMMUNITY);
             break;
         case "linked-roles":
             if (null != n) {
@@ -403,15 +403,15 @@ let K = {
     },
 };
 function z(e) {
-    return V(B({}, K), {
-        link: (0, x.Z)(e),
+    return F(B({}, K), {
+        link: (0, L.Z)(e),
         devLink: (0, w.Z)(e),
-        emoji: F(e),
+        emoji: V(e),
         customEmoji: H(e),
         channelMention: (0, R.Z)(e),
         commandMention: (0, P.ZP)(e),
         attachmentLink: (0, N.Z)(e),
-        shopLink: (0, L.Z)(e),
+        shopLink: (0, x.Z)(e),
         gameMention: D.Z,
     });
 }

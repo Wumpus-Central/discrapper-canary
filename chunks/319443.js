@@ -12,8 +12,8 @@ var r = n(951288),
     m = n(611928),
     h = (n(763433), n(922122)),
     g = n(680180),
-    f = n(726115),
-    _ = n(703656),
+    _ = n(726115),
+    f = n(703656),
     b = n(314897),
     x = n(594174),
     v = n(626135),
@@ -21,9 +21,9 @@ var r = n(951288),
     j = n(31569),
     y = n(370210),
     I = n(678694),
-    O = n(216780),
-    S = n(881294),
-    P = n(975907),
+    S = n(216780),
+    P = n(881294),
+    O = n(975907),
     E = n(119014),
     N = n(258971),
     T = n(133743),
@@ -32,8 +32,8 @@ var r = n(951288),
     R = n(548514),
     Z = n(370648),
     w = n(569527),
-    D = n(979007),
-    k = n(981631),
+    k = n(979007),
+    D = n(981631),
     M = n(388032),
     G = n(813525);
 function B(e) {
@@ -80,10 +80,10 @@ function B(e) {
 }
 function z() {
     let e = a.useCallback(() => {
-            (0, S.qF)();
+            (0, P.qF)();
         }, []),
         t = a.useCallback(() => {
-            (0, S.rf)();
+            (0, P.rf)();
         }, []);
     return (0, r.jsxs)(c.qXd, {
         color: c.DM8.BRAND,
@@ -105,12 +105,12 @@ function z() {
                 children: [
                     (0, r.jsx)(c.NoS, {
                         onClick: e,
-                        noticeType: k.kVF.LOGIN,
+                        noticeType: D.kVF.LOGIN,
                         children: M.intl.string(M.t["825cFx"]),
                     }),
                     (0, r.jsx)(c.NoS, {
                         onClick: t,
-                        noticeType: k.kVF.REGISTER,
+                        noticeType: D.kVF.REGISTER,
                         minor: !0,
                         children: M.intl.string(M.t.HAkXzs),
                     }),
@@ -124,13 +124,13 @@ let U = function () {
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
         { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
-        U = (0, S.nu)(),
+        U = (0, P.nu)(),
         F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: V, section: H } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
         X = (0, o.e7)([I.Z], () => I.Z.getCategories()),
-        K = a.useMemo(() => [(0, O.KQ)(), ...X], [X]),
-        q = a.useMemo(() => K.find((e) => e.id === Number(W)), [K, W]),
+        q = a.useMemo(() => [(0, S.KQ)(), ...X], [X]),
+        K = a.useMemo(() => q.find((e) => e.id === Number(W)), [q, W]),
         { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == F ? void 0 : F.toString()),
         [ee, et] = a.useState(!0),
         en = N.z8.useField("trackedOpenedFromExternalEntrypoint"),
@@ -138,8 +138,8 @@ let U = function () {
         ea = (0, o.e7)([x.default], () => x.default.getCurrentUser());
     a.useEffect(() => {
         if (!en && null == er) {
-            let e = (0, f.PM)();
-            v.default.track(k.rMx.APP_DIRECTORY_OPENED, {
+            let e = (0, _.PM)();
+            v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
                 source: N.xF.EXTERNAL,
                 session_id: e,
                 user_id: null == ea ? void 0 : ea.id,
@@ -167,7 +167,7 @@ let U = function () {
             onSearchTextChange: ec,
             onClearSearch: ed,
             onSearchSubmit: eu,
-        } = (0, P.M)({ initialQuery: null != Y ? Y : "" }),
+        } = (0, O.M)({ initialQuery: null != Y ? Y : "" }),
         ep = j.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: em,
@@ -179,21 +179,21 @@ let U = function () {
             searchBarState: ep,
             setSearchBarState: (e) => j.Z.setState({ searchBarState: e }),
         }),
-        ef = a.useCallback(
+        e_ = a.useCallback(
             (e) => {
                 $(e), es && ed(), y();
             },
             [es, ed, $, y],
         ),
-        e_ = a.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
+        ef = a.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
         eb = el || es,
         ex = a.useCallback(() => {
-            null != (0, N.Uc)() ? (0, _.op)() : (0, T.Yp)();
+            null != (0, N.Uc)() ? (0, f.op)() : (0, T.Yp)();
         }, []),
         ev = (0, s.debounce)((e) => {
             let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
             t > 0 &&
-                (0, S.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+                (0, P.zZ)(D.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (t + n) / r,
                     current_page: a,
                 });
@@ -246,7 +246,7 @@ let U = function () {
                                                             ? M.intl.formatToPlainString(M.t.zHdzqa, { query: Y })
                                                             : M.intl.formatToPlainString(M.t.Qhj5Bg, {
                                                                   categoryName:
-                                                                      null != (e = null == q ? void 0 : q.name)
+                                                                      null != (e = null == K ? void 0 : K.name)
                                                                           ? e
                                                                           : M.intl.string(M.t.E407b2),
                                                               }),
@@ -254,7 +254,7 @@ let U = function () {
                                               : (0, r.jsx)(h.Z, {
                                                     tabs: Q,
                                                     selectedTab: J,
-                                                    onTabSelect: ef,
+                                                    onTabSelect: e_,
                                                     onAvailableWidthChange: em,
                                                 }),
                                           (0, r.jsx)(g.Z, {
@@ -274,25 +274,25 @@ let U = function () {
                     el
                         ? (0, r.jsx)(L.Z, {
                               onScroll: (e) => eC(e, N.m_.APPLICATION),
-                              onSelectApplication: e_,
+                              onSelectApplication: ef,
                               applicationId: V,
                               initialTab: H,
                               onButtonsVisibilityChange: et,
                           })
                         : es
                           ? (0, r.jsx)(w.Z, {
-                                onSelectApplication: e_,
+                                onSelectApplication: ef,
                                 onScroll: (e) => eC(e, N.m_.SEARCH),
                             })
-                          : J === D.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                          : J === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                             ? (0, r.jsx)(Z.Z, {
                                   onScroll: (e) => eC(e, N.m_.HOME),
-                                  onSelectApplication: e_,
+                                  onSelectApplication: ef,
                               })
                             : (0, r.jsx)(A.Z, {
                                   tabId: Number(J),
                                   onScroll: (e) => eC(e, N.m_.CATEGORY),
-                                  onSelectApplication: e_,
+                                  onSelectApplication: ef,
                               }),
                 ],
             }),

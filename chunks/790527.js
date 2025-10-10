@@ -67,17 +67,17 @@ function w(e) {
             title: R,
             type: w,
             guildBoostProps: D,
-            analyticsSource: x,
-            analyticsLocation: L,
-            body: j,
-            context: M,
+            analyticsSource: L,
+            analyticsLocation: x,
+            body: M,
+            context: j,
             glowUp: k,
             modalClassName: U,
             modalContentClassName: G,
             artContainerClassName: B,
             artClassName: Z,
-            headerClassName: V,
-            bodyClassName: F,
+            headerClassName: F,
+            bodyClassName: V,
             transitionState: H,
             onClose: Y,
             onSubscribeClick: W,
@@ -152,9 +152,9 @@ function w(e) {
             !eh,
         { analyticsLocations: eb } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         ey = {
-            analyticsLocation: L,
+            analyticsLocation: x,
             analyticsLocations: eb,
-            analyticsSource: x,
+            analyticsSource: L,
             guildBoostProps: D,
             type: w,
         },
@@ -196,7 +196,7 @@ function w(e) {
     let eS = () => {
             if (eh)
                 return (0, r.jsx)(p.Z, {
-                    analyticsLocation: L,
+                    analyticsLocation: x,
                     guild: D.guild,
                     onClose: Y,
                 });
@@ -212,7 +212,7 @@ function w(e) {
             return (0, r.jsx)(y.Z, {
                 className: es,
                 showGradient: ea || eo,
-                premiumModalAnalyticsLocation: L,
+                premiumModalAnalyticsLocation: x,
                 subscriptionTier: et,
                 size: l.zx.Sizes.SMALL,
                 color: ea || eo ? l.zx.Colors.CUSTOM : l.zx.Colors.GREEN,
@@ -269,8 +269,8 @@ function w(e) {
                                         ? a
                                         : I.Si.TIER_2,
                                 headingText: R,
-                                context: M,
-                                analyticsLocationObject: L,
+                                context: j,
+                                analyticsLocationObject: x,
                                 discountOffer: eg,
                                 trialOffer: em,
                                 children: k,
@@ -283,7 +283,7 @@ function w(e) {
                                         className: A.bodyContent,
                                         children: [
                                             (0, r.jsxs)(c.X6q, {
-                                                className: o()(A.header, { [A.enhancedHeader]: ea }, V),
+                                                className: o()(A.header, { [A.enhancedHeader]: ea }, F),
                                                 variant: "heading-xl/bold",
                                                 children: [R, $ ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null],
                                             }),
@@ -291,8 +291,8 @@ function w(e) {
                                             ec,
                                             (0, r.jsx)(c.Text, {
                                                 variant: ef ? "text-sm/normal" : "text-md/normal",
-                                                className: o()(F, A.subHeader),
-                                                children: j,
+                                                className: o()(V, A.subHeader),
+                                                children: M,
                                             }),
                                         ],
                                     }),

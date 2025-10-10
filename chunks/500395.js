@@ -1,29 +1,29 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(990547),
     l = n(481060),
-    a = n(213609),
-    s = n(787051),
+    s = n(213609),
+    a = n(787051),
     o = n(696936),
     c = n(539290),
     d = n(975464),
     u = n(388032),
-    m = n(370511),
-    g = n(270395);
+    g = n(370511),
+    m = n(270395);
 function p(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: s } = t;
+        { noticeText: n, ctaLabel: i, ctaClickable: s, onCtaClicked: a } = t;
     return (0, r.jsxs)("div", {
-        className: m.__invalid_ctaContainer,
+        className: g.__invalid_ctaContainer,
         children: [
             (0, r.jsx)("img", {
-                className: m.__invalid_heroBanner,
-                src: g,
+                className: g.__invalid_heroBanner,
+                src: m,
                 alt: u.intl.string(u.t.Af4klJ),
             }),
             (0, r.jsxs)("div", {
-                className: m.__invalid_ctaContent,
+                className: g.__invalid_ctaContent,
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: "heading-xl/semibold",
@@ -38,23 +38,23 @@ function p(e) {
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(c.Z, {
-                        className: m.waitlist,
+                        className: g.waitlist,
                         color: o.W.BROWN,
                         buttonPosition: c.E.RIGHT,
                         notice: n,
                         ctaLabel: i,
-                        ctaDisabled: !a,
-                        onClick: s,
+                        ctaDisabled: !s,
+                        onClick: a,
                     }),
                 ],
             }),
         ],
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, s.Z)(t.id);
-    return ((0, a.Z)({
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
+    return ((0, s.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id },
@@ -62,7 +62,7 @@ function h(e) {
     o)
         ? (0, r.jsx)(l.$jN, {})
         : (0, r.jsxs)("div", {
-              className: m.__invalid_container,
+              className: g.__invalid_container,
               children: [
                   (0, r.jsx)(p, { config: n }),
                   (0, r.jsx)(d.C, {

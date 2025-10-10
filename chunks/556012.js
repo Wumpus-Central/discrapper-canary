@@ -28,7 +28,7 @@ let f = function (e) {
     }
 };
 function E(e, t, n) {
-    var E, g, d, O;
+    var E, g, d, S;
     return ((e) => {
         switch (e) {
             case o.jj.BLOCK_MESSAGE:
@@ -89,7 +89,7 @@ function E(e, t, n) {
                       : null,
               icon:
                   null !=
-                  (O = ((e) => {
+                  (S = ((e) => {
                       switch (e) {
                           case o.jj.BLOCK_MESSAGE:
                               return r.k$p;
@@ -101,7 +101,7 @@ function E(e, t, n) {
                               return r.ics;
                       }
                   })(e))
-                      ? O
+                      ? S
                       : r.k$p,
               isEditable: e !== o.jj.QUARANTINE_USER,
           }

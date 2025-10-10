@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(728285),
@@ -16,31 +16,31 @@ var r = n(951288),
 function b(e) {
     let { channelId: t, onClick: n } = e,
         b = (0, o.bp)(),
-        y = (0, m.qY)(t),
-        C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: _ } = (0, s.XJ)(C),
-        v = _(y),
-        x = i.useRef(null);
-    if (null == y) return null;
+        C = (0, m.qY)(t),
+        y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        { canManageGuildEvent: _ } = (0, s.XJ)(y),
+        v = _(C),
+        x = r.useRef(null);
+    if (null == C) return null;
     let O = () => {
-            if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
+            if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
             n();
         },
         j = () => {
-            h.Z.endEvent(y.id, y.guild_id);
+            h.Z.endEvent(C.id, C.guild_id);
         };
     return v
-        ? (0, r.jsx)(a.yRy, {
+        ? (0, i.jsx)(a.yRy, {
               targetElementRef: x,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(c.Z, {
-                      children: (0, r.jsx)(a.v2r, {
+                  return (0, i.jsx)(c.Z, {
+                      children: (0, i.jsx)(a.v2r, {
                           navId: "exit-options",
                           onSelect: () => {},
                           "aria-label": g.intl.string(g.t["K6/mk5"]),
                           onClose: t,
-                          children: (0, r.jsx)(a.sNh, {
+                          children: (0, i.jsx)(a.sNh, {
                               id: "end-voice-event",
                               color: "danger",
                               action: j,
@@ -55,7 +55,7 @@ function b(e) {
               animation: a.yRy.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(u.Z, {
+                  return (0, i.jsx)(u.Z, {
                       buttonRef: x,
                       label: g.intl.string(g.t["6vrfgo"]),
                       onClick: O,
@@ -63,7 +63,7 @@ function b(e) {
                   });
               },
           })
-        : (0, r.jsx)(u.Z, {
+        : (0, i.jsx)(u.Z, {
               label: g.intl.string(g.t["6vrfgo"]),
               onClick: n,
           });

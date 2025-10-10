@@ -1,18 +1,18 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(194359),
-    s = n(367907),
-    o = n(138201),
+    o = n(367907),
+    s = n(138201),
     c = n(592125),
     d = n(699516),
     u = n(5192),
-    m = n(981631),
-    p = n(388032);
-let g = (e) => {
-    let { user: t, channelId: n, reportId: g } = e,
-        { isIgnored: x, isBlocked: h } = (0, l.cj)(
+    _ = n(981631),
+    m = n(388032);
+let p = (e) => {
+    let { user: t, channelId: n, reportId: p } = e,
+        { isIgnored: g, isBlocked: f } = (0, l.cj)(
             [d.Z],
             () => ({
                 isIgnored: d.Z.isIgnored(t.id),
@@ -21,20 +21,20 @@ let g = (e) => {
             [t],
         ),
         b = (0, l.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        _ = i.useMemo(() => u.ZP.getName(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, t), [b, t]),
-        f = i.useCallback(() => {
-            s.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
+        h = i.useMemo(() => u.ZP.getName(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, t), [b, t]),
+        x = i.useCallback(() => {
+            o.ZP.trackWithMetadata(_.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: g,
+                report_id: p,
             }),
                 a.Z.ignoreUser(t.id, "web_iar_ignore_user_element", n);
-        }, [t, g, n]),
-        v = i.useMemo(() => x || h, [x, h]);
-    return (0, r.jsx)(o.JZ, {
-        title: p.intl.formatToPlainString(p.t.U3yyFh, { username: _ }),
-        description: p.intl.string(p.t.naWE6e),
-        buttonText: v ? p.intl.string(p.t.nDdxOD) : p.intl.string(p.t.ICYEfX),
+        }, [t, p, n]),
+        v = i.useMemo(() => g || f, [g, f]);
+    return (0, r.jsx)(s.JZ, {
+        title: m.intl.formatToPlainString(m.t.U3yyFh, { username: h }),
+        description: m.intl.string(m.t.naWE6e),
+        buttonText: v ? m.intl.string(m.t.nDdxOD) : m.intl.string(m.t.ICYEfX),
         buttonDisabled: v,
-        onButtonPress: f,
+        onButtonPress: x,
     });
 };

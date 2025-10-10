@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var i = n(951288);
 n(647438);
 var l = n(442837),
@@ -12,17 +12,17 @@ var l = n(442837),
     E = n(901461),
     f = n(981631),
     m = n(388032);
-function g(e, t) {
+function _(e, t) {
     let n = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        g = (0, u.$R)(t),
-        _ = (0, l.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, t), [t]),
-        { firstMessage: S } = (0, l.e7)([o.Z], () => o.Z.getMessage(t.id), [t.id]),
-        N = _ || (null != n && e.canDeleteOwnMessage(n.id));
+        _ = (0, u.$R)(t),
+        g = (0, l.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, t), [t]),
+        { firstMessage: N } = (0, l.e7)([o.Z], () => o.Z.getMessage(t.id), [t.id]),
+        S = g || (null != n && e.canDeleteOwnMessage(n.id));
     return e.state === f.yb.SENDING ||
-        !N ||
+        !S ||
         f.V$x.UNDELETABLE.has(e.type) ||
-        !g ||
-        (t.isModeratorReportChannel() && (e.id === (null == S ? void 0 : S.id) || (0, E.Z)(e)))
+        !_ ||
+        (t.isModeratorReportChannel() && (e.id === (null == N ? void 0 : N.id) || (0, E.Z)(e)))
         ? null
         : (0, i.jsx)(s.sNh, {
               id: "delete",

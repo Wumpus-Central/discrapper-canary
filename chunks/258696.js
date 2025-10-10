@@ -38,9 +38,9 @@ function S(e) {
 function A(e) {
     var t, n, i, f, _, p, y;
     let { type: O, disabled: A, channel: N, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
-        x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        L = C(N.id, O, P),
-        { activeCommand: j, activeCommandOption: M } = (0, o.cj)([c.Z], () => ({
+        L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        x = C(N.id, O, P),
+        { activeCommand: M, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(N.id),
             activeCommandOption: c.Z.getActiveOption(N.id),
         })),
@@ -51,7 +51,7 @@ function A(e) {
         Z = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
-            null == j &&
+            null == M &&
             !k &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
@@ -65,7 +65,7 @@ function A(e) {
                 ),
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
-            null == j &&
+            null == M &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -78,7 +78,7 @@ function A(e) {
                 ),
             ),
         Z &&
-            null == j &&
+            null == M &&
             U.push(
                 (0, r.jsx)(
                     b.Z,
@@ -91,7 +91,7 @@ function A(e) {
             ),
         !Z &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
-            null == j &&
+            null == M &&
             w &&
             U.push(
                 (0, r.jsx)(
@@ -104,7 +104,7 @@ function A(e) {
                 ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == j || (null != M && M.type !== s.jw.ATTACHMENT)) &&
+        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,
@@ -117,13 +117,13 @@ function A(e) {
         ),
     null != D && U.push(D),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
-        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || x) &&
+        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || L) &&
         U.push(
             (0, r.jsx)(
                 v.Z,
                 {
                     onClick: R,
-                    disabled: A || L,
+                    disabled: A || x,
                 },
                 "submit",
             ),

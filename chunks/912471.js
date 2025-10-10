@@ -62,14 +62,14 @@ let T = 26,
     P = null,
     w = null,
     D = 0,
-    x = 0,
-    L = { state: "uninitialized" },
-    j = _.Z.getState(),
-    M = (0, E.H)(),
+    L = 0,
+    x = { state: "uninitialized" },
+    M = _.Z.getState(),
+    j = (0, E.H)(),
     k = d.default.getToken();
 function U() {
     if (null != P) return;
-    let e = 0 === x ? 0 : S - (performance.now() - x);
+    let e = 0 === L ? 0 : S - (performance.now() - L);
     m.Z.addBreadcrumb({
         message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(
             e / 1000,
@@ -143,10 +143,10 @@ async function F() {
         (0, g.O)(),
         Z(),
     );
-    p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (x = performance.now()), (0, l.Z)();
+    p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (L = performance.now()), (0, l.Z)();
 }
 function V() {
-    if (!(null != k && (0, y.y)()) || performance.now() - x <= S) return;
+    if (!(null != k && (0, y.y)()) || performance.now() - L <= S) return;
     let e = { client_heartbeat_version: T };
     p.default.track(O.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
 }
@@ -155,8 +155,8 @@ function Y() {
     let e = [];
     return (
         null != k &&
-            (M && e.push("foregrounded"),
-            j !== O.hes.DISCONNECTED && j !== O.hes.RTC_DISCONNECTED && e.push("rtc_connected")),
+            (j && e.push("foregrounded"),
+            M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push("rtc_connected")),
         {
             active: e.length > 0,
             ver: T,
@@ -200,12 +200,12 @@ function X(e) {
 }
 function Q() {
     o.K.remove(C),
-        (L = {
+        (x = {
             state: "loaded",
             session: null,
         }),
         B(),
-        (x = 0);
+        (L = 0);
 }
 function J() {
     var e;
@@ -224,19 +224,19 @@ function ee() {
 }
 function et() {
     let e = _.Z.getState();
-    j !== e && ((j = e), K());
+    M !== e && ((M = e), K());
 }
 function en(e) {
     let { focused: t } = e;
-    M !== t && ((M = t), K());
+    j !== t && ((j = t), K());
 }
 function er(e) {
     let { state: t } = e,
         n = t === O.$7l.ACTIVE;
-    M !== n && ((M = n), K());
+    j !== n && ((j = n), K());
 }
 function ei() {
-    (j = _.Z.getState()), (M = (0, E.H)()), ee();
+    (M = _.Z.getState()), (j = (0, E.H)()), ee();
 }
 function ea() {
     m.Z.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
@@ -253,9 +253,9 @@ async function eo() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = null,
-        a = "loaded" === L.state ? (null == (e = L.session) ? void 0 : e.uuid) : null;
+        a = "loaded" === x.state ? (null == (e = x.session) ? void 0 : e.uuid) : null;
     try {
-        n = "uninitialized" === L.state ? X(await o.K.getAfterRefresh(C)) : L.session;
+        n = "uninitialized" === x.state ? X(await o.K.getAfterRefresh(C)) : x.session;
     } catch (e) {
         m.Z.captureException(e);
     }
@@ -274,7 +274,7 @@ async function eo() {
                   (n.lastUsedTimestamp = e),
                   q(n))
                 : null != n && (0, b.qK)(n) && (n = null),
-            (L = {
+            (x = {
                 state: "loaded",
                 session: n,
             }),
@@ -287,6 +287,6 @@ async function eo() {
     })();
 }
 function es() {
-    let e = "uninitialized" === L.state ? X(o.K.get(C)) : L.session;
+    let e = "uninitialized" === x.state ? X(o.K.get(C)) : x.session;
     return null == e || (0, b.qK)(e) ? null : e;
 }

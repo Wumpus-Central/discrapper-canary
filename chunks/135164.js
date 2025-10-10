@@ -1,12 +1,12 @@
-r.d(t, { Z: () => u });
+r.d(t, { Z: () => l });
 var a = r(665352),
     n = r(629990),
-    s = r(341901);
-let o = 216 / 24389,
+    o = r(341901);
+let s = 216 / 24389,
     i = 24 / 116,
     c = 24389 / 27,
-    l = n.mh.D50,
-    u = new a.Z({
+    u = n.mh.D50,
+    l = new a.Z({
         id: "lab",
         name: "Lab",
         coords: {
@@ -21,10 +21,10 @@ let o = 216 / 24389,
                 refRange: [-125, 125],
             },
         },
-        white: l,
-        base: s.Z,
+        white: u,
+        base: o.Z,
         fromBase(e) {
-            let t = e.map((e, t) => e / l[t]).map((e) => (e > o ? Math.cbrt(e) : (c * e + 16) / 116));
+            let t = e.map((e, t) => e / u[t]).map((e) => (e > s ? Math.cbrt(e) : (c * e + 16) / 116));
             return [116 * t[1] - 16, 500 * (t[0] - t[1]), 200 * (t[1] - t[2])];
         },
         toBase(e) {
@@ -37,7 +37,7 @@ let o = 216 / 24389,
                     t[0] > i ? Math.pow(t[0], 3) : (116 * t[0] - 16) / c,
                     e[0] > 8 ? Math.pow((e[0] + 16) / 116, 3) : e[0] / c,
                     t[2] > i ? Math.pow(t[2], 3) : (116 * t[2] - 16) / c,
-                ].map((e, t) => e * l[t])
+                ].map((e, t) => e * u[t])
             );
         },
         formats: {

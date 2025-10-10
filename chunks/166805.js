@@ -44,7 +44,7 @@ function v(e) {
         i.useEffect(() => {
             m();
         }, [t, m]);
-    let R = i.useCallback(
+    let Z = i.useCallback(
         async (e) => {
             T(!0), await (0, h.c)(t, e, N), T(!1);
         },
@@ -56,7 +56,7 @@ function v(e) {
                   (0, r.jsx)(o.rsf, {
                       label: j.intl.string(j.t.NR6hub),
                       checked: y,
-                      onChange: R,
+                      onChange: Z,
                       disabled: S,
                   }),
                   w
@@ -83,14 +83,14 @@ function v(e) {
                                     children: [
                                         (0, r.jsx)("div", {
                                             className: _.column,
-                                            children: (0, r.jsx)(s.NIc, {
+                                            children: (0, r.jsx)(s.gNt, {
                                                 label: j.intl.string(j.t.TRyLUl),
                                                 children: (0, r.jsx)(d.Z, { value: t }),
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: _.column,
-                                            children: (0, r.jsx)(s.NIc, {
+                                            children: (0, r.jsx)(s.gNt, {
                                                 label: j.intl.string(j.t.VECJcH),
                                                 children: (0, r.jsx)(d.Z, { value: E }),
                                             }),
@@ -103,7 +103,7 @@ function v(e) {
                                     children: [
                                         (0, r.jsx)("div", {
                                             className: _.column,
-                                            children: (0, r.jsx)(s.NIc, {
+                                            children: (0, r.jsx)(s.gNt, {
                                                 label: j.intl.string(j.t.XVGbn5),
                                                 description: j.intl.string(j.t["+baN19"]),
                                                 children: (0, r.jsx)(d.Z, { value: I }),

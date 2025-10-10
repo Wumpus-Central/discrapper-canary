@@ -29,16 +29,16 @@ function b(e) {
         {
             acceptMessageRequest: v,
             isAcceptLoading: I,
-            isUserProfileLoading: C,
-            isOptimisticAccepted: S,
+            isUserProfileLoading: S,
+            isOptimisticAccepted: C,
         } = (0, p.m)({
             user: n,
             onAcceptSuccess: y,
             onRejectSuccess: E,
             onError: O,
         }),
-        N = I || C,
-        T = N || S;
+        T = I || S,
+        N = T || C;
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [
@@ -57,8 +57,8 @@ function b(e) {
                         onClick: (e) => {
                             v(b.id), e.stopPropagation();
                         },
-                        disabled: T,
-                        loading: N,
+                        disabled: N,
+                        loading: T,
                     }),
                     (0, r.jsx)(h.Z, { channel: b }),
                 ],

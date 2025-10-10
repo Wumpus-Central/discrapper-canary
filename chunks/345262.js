@@ -1,5 +1,5 @@
-n.d(t, { h: () => r });
-let r = {
+n.d(t, { h: () => a });
+let a = {
     bottom: 40,
     left: 32,
     right: 32,

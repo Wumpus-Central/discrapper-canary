@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     d = n(734893),
     u = n(150512),
-    m = n(314897),
-    g = n(8426),
+    g = n(314897),
+    m = n(8426),
     p = n(969632),
     f = n(535907),
     h = n(388032),
@@ -57,7 +57,7 @@ let b = function (e) {
                                 {
                                     guildId: t,
                                     welcomeMessage: l,
-                                    onSave: (e) => (0, g._N)(e),
+                                    onSave: (e) => (0, m._N)(e),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -77,7 +77,7 @@ let b = function (e) {
                 }),
             [t, l],
         ),
-        j = (0, a.e7)([m.default], () => m.default.getId());
+        j = (0, a.e7)([g.default], () => g.default.getId());
     return (0, d.pw)(l)
         ? (0, r.jsx)(c.zxk, {
               variant: "primary",

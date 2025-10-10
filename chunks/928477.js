@@ -1,11 +1,11 @@
 n.d(t, {
     JA: () => k,
     Jw: () => D,
-    Od: () => M,
+    Od: () => j,
     Wj: () => G,
     gK: () => U,
-    oD: () => L,
-    vH: () => x,
+    oD: () => x,
+    vH: () => L,
 }),
     n(35282),
     n(704826),
@@ -48,25 +48,25 @@ var r = n(647438),
             e
         );
     })({});
-function x(e) {
+function L(e) {
     let t = (0, A.NE)(e);
     return (0, A.Xu)(e) ? (t ? 2 : 3) : 1;
 }
-function L(e, t) {
+function x(e, t) {
     var n;
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
-function j(e, t) {
+function M(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
-function M(e, t) {
+function j(e, t) {
     var n, r, i, a, o, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : "",
         d = null != (s = null == c || null == (a = c.poll) || null == (i = a.question) ? void 0 : i.text) ? s : "";
-    if ("" !== u) return j(u, 40);
+    if ("" !== u) return M(u, 40);
     {
-        if ("" !== d) return j(d, 80);
+        if ("" !== d) return M(d, 80);
         let t = p.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : "", e.id, !0),
             n = (0, C.Z)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
@@ -85,7 +85,7 @@ function M(e, t) {
             if (t.length > 40) break;
             i = t;
         }
-        return j(i, 40);
+        return M(i, 40);
     }
 }
 function k(e) {
@@ -103,10 +103,10 @@ function k(e) {
         async (e, r, _) => {
             var p;
             let h = null == n,
-                m = L(a, o),
+                m = x(a, o),
                 b = null != (p = a.name) ? p : "";
             if ("" === b && d) {
-                let e = M(t, n);
+                let e = j(t, n);
                 b = "" !== e ? e : w.intl.string(w.t["7Xm5QE"]);
             }
             let y = (0, S.WD)(t),

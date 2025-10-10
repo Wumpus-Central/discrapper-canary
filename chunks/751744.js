@@ -1,67 +1,67 @@
-t.d(n, { default: () => p }), t(953529);
-var i = t(951288),
-    r = t(647438),
-    l = t(793030),
-    o = t(442837),
-    c = t(481060),
-    s = t(168107),
-    a = t(480916),
-    d = t(819557),
-    u = t(138201),
-    x = t(331692),
-    m = t(103879),
-    b = t(236289),
-    f = t(800530),
-    j = t(388032);
+n.d(e, { default: () => j }), n(953529);
+var i = n(951288),
+    r = n(647438),
+    l = n(793030),
+    s = n(442837),
+    c = n(481060),
+    o = n(168107),
+    a = n(480916),
+    d = n(819557),
+    x = n(138201),
+    u = n(331692),
+    m = n(103879),
+    p = n(236289),
+    g = n(800530),
+    f = n(388032);
 let h = [
         {
-            title: j.intl.string(j.t["1+E7LC"]),
-            description: j.intl.string(j.t.BXiat7),
+            title: f.intl.string(f.t["1+E7LC"]),
+            description: f.intl.string(f.t.BXiat7),
         },
         {
-            title: j.intl.string(j.t.iMQXtL),
-            description: j.intl.string(j.t.oQ0vws),
+            title: f.intl.string(f.t.iMQXtL),
+            description: f.intl.string(f.t.oQ0vws),
         },
         {
-            title: j.intl.string(j.t["oY/z1d"]),
-            description: j.intl.string(j.t.wtj02d),
+            title: f.intl.string(f.t["oY/z1d"]),
+            description: f.intl.string(f.t.wtj02d),
         },
     ],
-    p = function (e) {
-        let { onClose: n, transitionState: t, classificationId: p } = e,
-            v = (0, o.e7)([b.Z], () => b.Z.getAgeVerificationWebviewUrl()),
-            g = (0, o.e7)([b.Z], () => b.Z.getIsLoadingAgeVerification()),
-            _ = r.useCallback(() => {
-                n(), x.Z.close();
-            }, [n]),
-            y = r.useCallback(() => {
-                x.Z.success(), _(), x.Z.start_verification_check();
-            }, [_]);
+    j = function (t) {
+        let { onClose: e, transitionState: n, classificationId: j } = t,
+            _ = (0, s.e7)([p.Z], () => p.Z.getAgeVerificationWebviewUrl()),
+            v = (0, s.e7)([p.Z], () => p.Z.getIsLoadingAgeVerification()),
+            b = r.useCallback(() => {
+                e(), u.Z.close();
+            }, [e]),
+            N = r.useCallback(() => {
+                u.Z.success(), b(), u.Z.start_verification_check();
+            }, [b]);
         return (
             r.useEffect(() => {
-                "" !== v &&
-                    s.Z.showAgeVerification({
-                        webviewUrl: v,
-                        onComplete: y,
+                "" !== _ &&
+                    o.Z.showAgeVerification({
+                        webviewUrl: _,
+                        onComplete: N,
                         useV1: !0,
                         entryPoint: a.cU.AUTOMATED_UNDERAGE_APPEALS,
                     });
-            }, [v, y]),
+            }, [_, N]),
             (0, i.jsx)(l.Modal, {
-                onClose: n,
-                transitionState: t,
-                title: j.intl.string(j.t["9SDLnp"]),
-                subtitle: j.intl.string(j.t["yvx///"]),
+                onClose: e,
+                transitionState: n,
+                title: f.intl.string(f.t["9SDLnp"]),
+                subtitle: f.intl.string(f.t["yvx///"]),
                 actions: [
                     {
-                        text: j.intl.string(j.t.dKacJy),
-                        onClick: _,
+                        text: f.intl.string(f.t.dKacJy),
+                        onClick: b,
                         variant: "secondary",
                     },
                     {
-                        text: j.intl.string(j.t["54b8V1"]),
-                        onClick: () => (0, m.FN)(p),
-                        loading: g,
+                        text: f.intl.string(f.t["54b8V1"]),
+                        onClick: () => (0, m.FN)(j),
+                        loading: v,
                     },
                 ],
                 children: (0, i.jsxs)(c.Kqy, {
@@ -69,17 +69,17 @@ let h = [
                     direction: "vertical",
                     children: [
                         (0, i.jsx)(d.z, {
-                            children: h.map((e, n) => {
-                                let { title: t, description: r } = e;
+                            children: h.map((t, e) => {
+                                let { title: n, description: r } = t;
                                 return (0, i.jsx)(
                                     d.q,
                                     {
-                                        title: t,
+                                        title: n,
                                         description: r,
-                                        index: n,
+                                        index: e,
                                         listType: "numbered",
                                     },
-                                    n,
+                                    e,
                                 );
                             }),
                         }),
@@ -87,14 +87,14 @@ let h = [
                             gap: 8,
                             direction: "vertical",
                             children: [
-                                (0, i.jsx)(u.rT, {
-                                    title: j.intl.string(j.t.WPwp1d),
-                                    children: (0, i.jsx)(u.JZ, {
-                                        title: j.intl.string(j.t.N9WJMD),
-                                        description: j.intl.string(j.t["NHq38/"]),
-                                        buttonText: j.intl.string(j.t["9iy4lJ"]),
+                                (0, i.jsx)(x.rT, {
+                                    title: f.intl.string(f.t.WPwp1d),
+                                    children: (0, i.jsx)(x.JZ, {
+                                        title: f.intl.string(f.t.N9WJMD),
+                                        description: f.intl.string(f.t["NHq38/"]),
+                                        buttonText: f.intl.string(f.t["9iy4lJ"]),
                                         titleVariant: "text-md/medium",
-                                        onButtonPress: () => window.open(f.sQ.AGE_VERIFICATION_LINK, "_blank"),
+                                        onButtonPress: () => window.open(g.sQ.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
                                 }),
                                 (0, i.jsx)(c.Kqy, {
@@ -102,8 +102,8 @@ let h = [
                                     children: (0, i.jsx)(c.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
-                                        children: j.intl.format(j.t.ZbWsOD, {
-                                            learnMoreLink: f.sQ.LEARN_MORE_UU_APPEAL_LINK,
+                                        children: f.intl.format(f.t.ZbWsOD, {
+                                            learnMoreLink: g.sQ.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
                                 }),

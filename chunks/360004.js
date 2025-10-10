@@ -1,7 +1,7 @@
-n.d(t, { d: () => l });
-var r = n(818083),
+n.d(t, { d: () => r });
+var l = n(818083),
     a = n(987338);
-let s = (0, r.B)({
+let s = (0, l.B)({
     kind: "guild",
     id: "2025-06_thread_search_partial_name_match",
     label: "Partial search term matching for thread titles",
@@ -15,14 +15,14 @@ let s = (0, r.B)({
         },
     ],
 });
-function l(e, t) {
+function r(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        { enabled: r } = s.useExperiment(
+        { enabled: l } = s.useExperiment(
             {
                 guildId: e,
                 location: t,
             },
             { autoTrackExposure: n },
         );
-    return r;
+    return l;
 }

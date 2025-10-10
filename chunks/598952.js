@@ -1,43 +1,43 @@
-n.d(t, { Z: () => s });
+n.d(e, { Z: () => c });
 var r = n(951288);
 n(647438);
-var a = n(481060),
-    i = n(294763);
-function s(e) {
-    var t;
-    let { attachment: n } = e,
-        s = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
+var o = n(481060),
+    a = n(294763);
+function c(t) {
+    var e;
+    let { attachment: n } = t,
+        c = Math.round(((null != (e = n.size) ? e : 0) / 1024 / 1024) * 100) / 100;
     return (0, r.jsxs)("div", {
-        className: i.container,
+        className: a.container,
         children: [
-            (0, r.jsx)(a.ZKT, {
+            (0, r.jsx)(o.ZKT, {
                 size: "xs",
                 color: "currentColor",
-                className: i.fileIcon,
+                className: a.fileIcon,
             }),
-            (0, r.jsx)(a.LZC, {
+            (0, r.jsx)(o.LZC, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                className: i.fileName,
+                className: a.fileName,
                 children: n.filename,
             }),
-            (0, r.jsx)(a.LZC, {
+            (0, r.jsx)(o.LZC, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsx)("div", { className: i.dot }),
-            (0, r.jsx)(a.LZC, {
+            (0, r.jsx)("div", { className: a.dot }),
+            (0, r.jsx)(o.LZC, {
                 size: 8,
                 horizontal: !0,
             }),
-            (0, r.jsxs)(a.Text, {
+            (0, r.jsxs)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: [s, "MB"],
+                children: [c, "MB"],
             }),
         ],
     });

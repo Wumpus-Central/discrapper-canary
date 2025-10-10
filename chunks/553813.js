@@ -352,20 +352,20 @@ function w(e, t, n) {
 function D(e, t, n) {
     return R(t, e, n);
 }
-function x(e, n) {
+function L(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(e, r, n);
     });
 }
-function L(e, n) {
+function x(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(r, e, n);
     });
 }
-function j(e, t, n) {
+function M(e, t, n) {
     return R(e, t, n) > 0;
 }
-function M(e, t, n) {
+function j(e, t, n) {
     return 0 > R(e, t, n);
 }
 function k(e, t, n) {
@@ -393,34 +393,34 @@ function Z(e, t, n, r) {
         case "!=":
             return U(e, n, r);
         case ">":
-            return j(e, n, r);
+            return M(e, n, r);
         case ">=":
             return G(e, n, r);
         case "<":
-            return M(e, n, r);
+            return j(e, n, r);
         case "<=":
             return B(e, n, r);
         default:
             throw TypeError("Invalid operator: " + t);
     }
 }
-function V(e, t) {
+function F(e, t) {
     if (
         ((t && "object" == typeof t) ||
             (t = {
                 loose: !!t,
                 includePrerelease: !1,
             }),
-        e instanceof V)
+        e instanceof F)
     )
         if (!!t.loose === e.loose) return e;
         else e = e.value;
-    if (!(this instanceof V)) return new V(e, t);
+    if (!(this instanceof F)) return new F(e, t);
     r("comparator", e, t),
         (this.options = t),
         (this.loose = !!t.loose),
         this.parse(e),
-        this.semver === F ? (this.value = "") : (this.value = this.operator + this.semver.version),
+        this.semver === V ? (this.value = "") : (this.value = this.operator + this.semver.version),
         r("comp", this);
 }
 (t.rcompareIdentifiers = S),
@@ -431,17 +431,17 @@ function V(e, t) {
     (t.compareLoose = P),
     (t.compareBuild = w),
     (t.rcompare = D),
-    (t.sort = x),
-    (t.rsort = L),
-    (t.gt = j),
-    (t.lt = M),
+    (t.sort = L),
+    (t.rsort = x),
+    (t.gt = M),
+    (t.lt = j),
     (t.eq = k),
     (t.neq = U),
     (t.gte = G),
     (t.lte = B),
     (t.cmp = Z),
-    (t.Comparator = V);
-var F = {};
+    (t.Comparator = F);
+var V = {};
 function H(e, t) {
     if (
         ((t && "object" == typeof t) ||
@@ -453,7 +453,7 @@ function H(e, t) {
     )
         if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
         else return new H(e.raw, t);
-    if (e instanceof V) return new H(e.value, t);
+    if (e instanceof F) return new H(e.value, t);
     if (!(this instanceof H)) return new H(e, t);
     if (
         ((this.options = t),
@@ -642,7 +642,7 @@ function er(e, t, n) {
     for (var i = 0; i < e.length; i++) if (!e[i].test(t)) return !1;
     if (t.prerelease.length && !n.includePrerelease) {
         for (i = 0; i < e.length; i++)
-            if ((r(e[i].semver), e[i].semver !== F && e[i].semver.prerelease.length > 0)) {
+            if ((r(e[i].semver), e[i].semver !== V && e[i].semver.prerelease.length > 0)) {
                 var a = e[i].semver;
                 if (a.major === t.major && a.minor === t.minor && a.patch === t.patch) return !0;
             }
@@ -701,7 +701,7 @@ function es(e, t) {
                     0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                 case "":
                 case ">=":
-                    (!n || j(n, t)) && (n = t);
+                    (!n || M(n, t)) && (n = t);
                     break;
                 case "<":
                 case "<=":
@@ -728,10 +728,10 @@ function eu(e, t, n) {
 function ed(e, t, n, r) {
     switch (((e = new y(e, r)), (t = new H(t, r)), n)) {
         case ">":
-            (i = j), (a = B), (o = M), (s = ">"), (l = ">=");
+            (i = M), (a = B), (o = j), (s = ">"), (l = ">=");
             break;
         case "<":
-            (i = M), (a = G), (o = j), (s = "<"), (l = "<=");
+            (i = j), (a = G), (o = M), (s = "<"), (l = "<=");
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
@@ -743,7 +743,7 @@ function ed(e, t, n, r) {
             f = null;
         if (
             (u.forEach(function (e) {
-                e.semver === F && (e = new V(">=0.0.0")),
+                e.semver === V && (e = new F(">=0.0.0")),
                     (d = d || e),
                     (f = f || e),
                     i(e.semver, d.semver, r) ? (d = e) : o(e.semver, f.semver, r) && (f = e);
@@ -777,19 +777,19 @@ function ep(e, t) {
     } else r = e.match(l[u.COERCE]);
     return null === r ? null : g(r[2] + "." + (r[3] || "0") + "." + (r[4] || "0"), t);
 }
-(V.prototype.parse = function (e) {
+(F.prototype.parse = function (e) {
     var t = this.options.loose ? l[u.COMPARATORLOOSE] : l[u.COMPARATOR],
         n = e.match(t);
     if (!n) throw TypeError("Invalid comparator: " + e);
     (this.operator = void 0 !== n[1] ? n[1] : ""),
         "=" === this.operator && (this.operator = ""),
-        n[2] ? (this.semver = new y(n[2], this.options.loose)) : (this.semver = F);
+        n[2] ? (this.semver = new y(n[2], this.options.loose)) : (this.semver = V);
 }),
-    (V.prototype.toString = function () {
+    (F.prototype.toString = function () {
         return this.value;
     }),
-    (V.prototype.test = function (e) {
-        if ((r("Comparator.test", e, this.options.loose), this.semver === F || e === F)) return !0;
+    (F.prototype.test = function (e) {
+        if ((r("Comparator.test", e, this.options.loose), this.semver === V || e === V)) return !0;
         if ("string" == typeof e)
             try {
                 e = new y(e, this.options);
@@ -798,8 +798,8 @@ function ep(e, t) {
             }
         return Z(e, this.operator, this.semver, this.options);
     }),
-    (V.prototype.intersects = function (e, t) {
-        if (!(e instanceof V)) throw TypeError("a Comparator is required");
+    (F.prototype.intersects = function (e, t) {
+        if (!(e instanceof F)) throw TypeError("a Comparator is required");
         if (
             ((t && "object" == typeof t) ||
                 (t = {
@@ -861,7 +861,7 @@ function ep(e, t) {
                     return !!e.match(i);
                 })),
             (a = a.map(function (e) {
-                return new V(e, this.options);
+                return new F(e, this.options);
             }, this))
         );
     }),

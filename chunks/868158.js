@@ -1,7 +1,7 @@
 n.d(t, {
     Eb: () => D,
-    Fx: () => M,
-    IM: () => x,
+    Fx: () => j,
+    IM: () => L,
     J2: () => F,
     r$: () => w,
 }),
@@ -124,7 +124,7 @@ function w(e, t) {
                       }))
                 ? n
                 : [],
-        c = L(t, r, (e) => ({
+        c = x(t, r, (e) => ({
             id: e.id,
             members: e.members,
             presences: e.presences,
@@ -157,7 +157,7 @@ function D() {
         };
     });
 }
-function x(e, t, n) {
+function L(e, t, n) {
     var r,
         { users: a, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ["users", "relationships", "private_channels", "merged_members", "guilds"]);
@@ -180,7 +180,7 @@ function x(e, t, n) {
                       ))
                 ? r
                 : [],
-        p = L(t, u, (e) => Z(e));
+        p = x(t, u, (e) => Z(e));
     return (
         null != p && _.push(p),
         T(v({}, d), {
@@ -192,14 +192,14 @@ function x(e, t, n) {
         })
     );
 }
-function L(e, t, n) {
+function x(e, t, n) {
     return null == R || R.identifyTime !== e || (null != t && t.some((e) => e.id === R.guild.id)) ? null : n(R.guild);
 }
-function j(e) {
+function M(e) {
     let t = p.Z.getGuildEmojis(e);
     return null != t ? Object.values(t) : null;
 }
-function M(e, t) {
+function j(e, t) {
     var n;
     let r = E.Z.getGuild(e.id),
         i = F(
@@ -209,7 +209,7 @@ function M(e, t) {
                 : {
                       properties: b.dS(r),
                       roles: g.Z.getRolesSnapshot(r.id),
-                      emojis: j(r.id),
+                      emojis: M(r.id),
                       stickers: null != (n = h.Z.getRawStickersByGuild().get(r.id)) ? n : null,
                   },
         );
@@ -254,7 +254,7 @@ function G(e) {
             (N[i.id] = {
                 properties: b.dS(i),
                 roles: g.Z.getRolesSnapshot(i.id),
-                emojis: j(i.id),
+                emojis: M(i.id),
                 stickers: null != (r = n.get(i.id)) ? r : null,
             });
     }

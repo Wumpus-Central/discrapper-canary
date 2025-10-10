@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }),
+n.d(t, { Z: () => S }),
     n(388685),
     n(704826),
     n(35282),
@@ -25,7 +25,7 @@ var a = n(951288),
     x = n(373071),
     f = n(489495),
     b = n(189),
-    g = n(664046),
+    g = n(558270),
     v = n(346537),
     j = n(830318);
 function _(e) {
@@ -77,13 +77,13 @@ let C = {
         [f.cq.REDUCED_MOTION]: null,
     },
     E = "debug",
-    N = (e) => {
+    S = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, x.n6)(),
             i = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-            [N, S] = r.useState(!0),
-            T = r.useRef(null),
-            [O, P] = r.useState(!1),
+            [S, T] = r.useState(!0),
+            O = r.useRef(null),
+            [N, P] = r.useState(!1),
             [I, k] = r.useState(!1),
             [w, R] = r.useState([]),
             [A, Z] = r.useState(C),
@@ -108,7 +108,7 @@ let C = {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            B = (e, t) => {
+            z = (e, t) => {
                 let n = G(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
@@ -139,13 +139,13 @@ let C = {
                         }
                     });
             }, [t.config.stillFrames]);
-        let z = {
+        let B = {
                 effect: t,
                 upsertConfig: n,
             },
-            V = r.useRef(z);
+            V = r.useRef(B);
         return (r.useEffect(() => {
-            V.current = z;
+            V.current = B;
         }),
         r.useEffect(() => {
             let { effect: e, upsertConfig: t } = V.current;
@@ -179,11 +179,11 @@ let C = {
                               className: l()(g.col, g.preview),
                               children: [
                                   (0, a.jsx)("img", {
-                                      src: O ? v : j,
+                                      src: N ? v : j,
                                       alt: "",
                                       width: 450,
                                   }),
-                                  N && (0, a.jsx)(b.Z, { config: F }),
+                                  S && (0, a.jsx)(b.Z, { config: F }),
                               ],
                           }),
                           (0, a.jsxs)("div", {
@@ -218,10 +218,10 @@ let C = {
                                                   }),
                                                   (0, a.jsx)("input", {
                                                       type: "checkbox",
-                                                      checked: O,
+                                                      checked: N,
                                                       className: g.checkBox,
                                                       onChange: () => {
-                                                          P(!O);
+                                                          P(!N);
                                                       },
                                                   }),
                                               ],
@@ -253,7 +253,7 @@ let C = {
                                               children: [
                                                   "Upload Animated Layer",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: T,
+                                                      ref: O,
                                                       onChange: (e) => {
                                                           let t = G(e);
                                                           null != t &&
@@ -280,8 +280,8 @@ let C = {
                                               children: [
                                                   "Upload thumbnail.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: T,
-                                                      onChange: (e) => B(f.cq.THUMBNAIL, e),
+                                                      ref: O,
+                                                      onChange: (e) => z(f.cq.THUMBNAIL, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -291,8 +291,8 @@ let C = {
                                               children: [
                                                   "Upload static.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: T,
-                                                      onChange: (e) => B(f.cq.STATIC, e),
+                                                      ref: O,
+                                                      onChange: (e) => z(f.cq.STATIC, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -302,8 +302,8 @@ let C = {
                                               children: [
                                                   "Upload reduced_motion.png",
                                                   (0, a.jsx)(m.Z, {
-                                                      ref: T,
-                                                      onChange: (e) => B(f.cq.REDUCED_MOTION, e),
+                                                      ref: O,
+                                                      onChange: (e) => z(f.cq.REDUCED_MOTION, e),
                                                       multiple: !1,
                                                   }),
                                               ],
@@ -318,7 +318,7 @@ let C = {
                                               variant: "primary",
                                               text: "Replay Animation",
                                               onClick: () => {
-                                                  S(!1), setTimeout(() => S(!0), 100);
+                                                  T(!1), setTimeout(() => T(!0), 100);
                                               },
                                           }),
                                       }),
@@ -662,7 +662,7 @@ let C = {
                                                                       children: "Add Alternative",
                                                                   }),
                                                                   (0, a.jsx)(m.Z, {
-                                                                      ref: T,
+                                                                      ref: O,
                                                                       onChange: (e) =>
                                                                           ((e, t) => {
                                                                               let n = G(e);

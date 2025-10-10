@@ -22,8 +22,8 @@ function _(e) {
             hasClips: y,
             hasNewClips: v,
             lastClipsSession: I,
-            remindersEnabled: C,
-            hasAnyClipAnimations: S,
+            remindersEnabled: S,
+            hasAnyClipAnimations: C,
         } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
@@ -31,10 +31,10 @@ function _(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
-        N = null != I && I.newClipIds.length > 0,
-        T = (0, h.n)((e) => e.clipsButtonRef),
-        P = (0, h.n)((e) => e.setClipsButtonRef),
-        j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
+        T = null != I && I.newClipIds.length > 0,
+        N = (0, h.n)((e) => e.clipsButtonRef),
+        j = (0, h.n)((e) => e.setClipsButtonRef),
+        P = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: x, allowIdle: A } = (0, s.Y)("animation");
     function Z() {
         (0, a.ZDy)(
@@ -73,22 +73,22 @@ function _(e) {
             { modalKey: m.Qr },
         );
     }
-    return (i.useEffect(() => (S ? x() : A(), () => A()), [S, x, A]), E && O && y)
+    return (i.useEffect(() => (C ? x() : A(), () => A()), [C, x, A]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != T &&
+                  null != N &&
                       t &&
-                      C &&
-                      N &&
+                      S &&
+                      T &&
                       !(0, a.$sL)() &&
-                      !j &&
+                      !P &&
                       (0, r.jsx)(g.Z, {
-                          clipIconRef: T,
+                          clipIconRef: N,
                           lastClipsSession: I,
                           onOpenClipsGallery: Z,
                       }),
                   (0, r.jsx)("div", {
-                      ref: P,
+                      ref: j,
                       children: (0, r.jsx)(o.JO, {
                           className: _,
                           icon: a.AlX,

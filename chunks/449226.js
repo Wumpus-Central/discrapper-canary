@@ -4,11 +4,11 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     s = n(481060),
-    a = n(298392);
+    a = n(824804);
 function o(e) {
     var t, n;
     let { checked: i, onChange: o, disabled: c, className: d, tooltipProps: u } = e,
-        m = (e) => {
+        g = (e) => {
             e.stopPropagation(), e.preventDefault();
         };
     return (0, r.jsx)(
@@ -39,9 +39,9 @@ function o(e) {
             return e;
         })(
             {
-                onClick: m,
-                onMouseDown: m,
-                onMouseUp: m,
+                onClick: g,
+                onMouseDown: g,
+                onMouseUp: g,
                 className: l()(a.switch, d),
             },
             u,

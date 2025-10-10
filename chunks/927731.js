@@ -72,8 +72,8 @@ function E(e) {
             addNewEditStateFromTemplate: T,
             removeEditStateId: P,
         } = b.B7(h, t, { includeSoftDeleted: !0 }),
-        [w, R] = i.useState({}),
-        Z = i.useMemo(() => {
+        [w, Z] = i.useState({}),
+        R = i.useMemo(() => {
             let e = I.map((e) => {
                 var t;
                 return null != (t = w[e]) ? t : e;
@@ -107,8 +107,8 @@ function E(e) {
                       )
                     : S();
         }, [t, T, S, l, A, D]),
-        k = b.Lo(Z),
-        G = i.useCallback(() => Z.forEach(b.GM), [Z]),
+        k = b.Lo(R),
+        G = i.useCallback(() => R.forEach(b.GM), [R]),
         M = (0, x.mY)(),
         U = (0, o.e7)([g.Z], () => g.Z.getProps().subsection);
     return (
@@ -126,7 +126,7 @@ function E(e) {
                 (0, r.jsxs)("div", {
                     className: C.groupListings,
                     children: [
-                        Z.map((e) =>
+                        R.map((e) =>
                             (0, r.jsx)(
                                 j.Z,
                                 {
@@ -138,7 +138,7 @@ function E(e) {
                                     onDeleteEditState: () => P(e),
                                     onBeforeDispatchNewListing: (t) => {
                                         var n;
-                                        return (n = t.id), void R((t) => y(O({}, t), { [n]: e }));
+                                        return (n = t.id), void Z((t) => y(O({}, t), { [n]: e }));
                                     },
                                     onAfterDispatchNewListing: () => P(e),
                                 },
@@ -194,7 +194,7 @@ function I(e) {
         l = (0, f.GG)(t),
         { maxTiers: s } = (0, p.s1)(t),
         a = l.map((e) => e.id);
-    return (0, r.jsx)(d.NIc, {
+    return (0, r.jsx)(d.gNt, {
         label: v.intl.string(v.t["72+Soq"]),
         description: v.intl.format(v.t.nHRSvL, { maxTiers: s }),
         children: (0, r.jsx)(E, {

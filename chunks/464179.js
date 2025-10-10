@@ -10,7 +10,7 @@ var r,
     d = n(823379),
     f = n(754103),
     _ = n(388032),
-    p = n(156588);
+    p = n(189068);
 function h(e, t, n) {
     return (
         t in e
@@ -185,10 +185,10 @@ var x = (function (e) {
             e
         );
     })(x || {}),
-    j = (function (e) {
+    M = (function (e) {
         return (e.EDIT = "edit"), (e.CREATE = "create"), e;
-    })(j || {});
-let M = {
+    })(M || {});
+let j = {
         [O]: l.G,
         [v]: o.X,
     },
@@ -390,7 +390,7 @@ let M = {
                 }
             },
             renderInput(t) {
-                let n = M[e],
+                let n = j[e],
                     r =
                         null == t.value ||
                         "" === t.value ||
@@ -536,7 +536,7 @@ class W extends (r = a.PureComponent) {
     }
 }
 h(W, "Layouts", x),
-    h(W, "Modes", j),
+    h(W, "Modes", M),
     h(W, "defaultProps", {
         name: "",
         country: "",

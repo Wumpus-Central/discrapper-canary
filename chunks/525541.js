@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(481060),
+var r = n(481060),
     l = n(493683),
     a = n(726521),
     o = n(213010),
@@ -20,17 +20,17 @@ function u(e) {
             onMouseLeave: g,
         } = e,
         b = (0, o.Q)(t),
-        _ = (0, s.V)(n.id, t);
-    if (!b || null == _) return null;
+        C = (0, s.V)(n.id, t);
+    if (!b || null == C) return null;
     let y = () => {
         null == f || f(), l.Z.closePrivateChannel(n.id, p);
     };
-    return (0, r.jsx)(i.zxk, {
+    return (0, i.jsx)(r.zxk, {
         size: d,
         variant: "critical-primary",
-        disabled: null == _,
+        disabled: null == C,
         onClick: () => {
-            null == h || h(), (0, a.WL)(_, y);
+            null == h || h(), (0, a.WL)(C, y);
         },
         onMouseEnter: m,
         onMouseLeave: g,

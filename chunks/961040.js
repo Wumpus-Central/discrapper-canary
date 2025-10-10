@@ -15,22 +15,22 @@ var r = n(951288),
     m = n(888831);
 function b(e) {
     let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: h, spacing: b = 0 } = e,
-        { isOpen: y, setIsOpen: _ } = (0, p.Z)(),
-        j = i.useCallback(() => {
-            _(!1);
-        }, [_]),
+        { isOpen: y, setIsOpen: O } = (0, p.Z)(),
         v = i.useCallback(() => {
-            _(!y);
-        }, [y, _]);
+            O(!1);
+        }, [O]),
+        j = i.useCallback(() => {
+            O(!y);
+        }, [y, O]);
     (0, c.ZP)(() => {
         let e = () => {
-            _(!1);
+            O(!1);
         };
         return s.Z.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => s.Z.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         i.useEffect(
-            () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, v), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, v)),
-            [v],
+            () => (u.S.subscribe(f.CkL.TOGGLE_INBOX, j), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, j)),
+            [j],
         );
     let { entrypoint: x } = (0, d.pN)({ location: "NotificationsInboxPopout" });
     return (0, r.jsx)(a.yRy, {
@@ -40,7 +40,7 @@ function b(e) {
         animation: x === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
         animationPosition: x === d.u3.TITLE_BAR_LEFT ? "bottom" : "left",
         position: n,
-        onRequestClose: j,
+        onRequestClose: v,
         spacing: b,
         renderPopout: () =>
             (0, r.jsx)(a.VqE, {
@@ -49,15 +49,15 @@ function b(e) {
                     [m.repositionLayerTitlebarPopout]: x === d.u3.TITLE_BAR_LEFT,
                     [m.repositionLayerSidebarPopout]: x === d.u3.SERVER_RAIL_TOP,
                 }),
-                children: (0, r.jsx)(O, {}),
+                children: (0, r.jsx)(_, {}),
             }),
         children: (e, n) => {
             let { isShown: r } = n;
-            return t(v, r, e);
+            return t(j, r, e);
         },
     });
 }
-function O() {
+function _() {
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [

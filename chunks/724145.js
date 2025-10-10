@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(803038),
     w = n(55358),
     D = n(572397),
-    x = n(708154),
-    L = n(705262),
-    j = n(981631),
-    M = n(921944),
+    L = n(708154),
+    x = n(705262),
+    M = n(981631),
+    j = n(921944),
     k = n(474936),
     U = n(388032),
     G = n(204089);
@@ -55,7 +55,7 @@ let B = () =>
         let { markAsDismissed: t } = e,
             n = (0, D.q)(),
             i = () => {
-                null != t && t(M.L.DISMISS), n(j.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, w.C)();
+                null != t && t(j.L.DISMISS), n(M.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, w.C)();
             };
         return (0, r.jsxs)("div", {
             className: G.editorHeader,
@@ -98,9 +98,9 @@ let B = () =>
             I = (e) => {
                 e &&
                     (null == a || a(),
-                    null != o && o(M.L.PRIMARY),
+                    null != o && o(j.L.PRIMARY),
                     null != u &&
-                        ((0, L.Yk)({
+                        ((0, x.Yk)({
                             isPersisted: !0,
                             themeName: c.Us[u.id],
                             analyticsLocations: s,
@@ -115,8 +115,8 @@ let B = () =>
                   subscriptionTier: k.Si.TIER_2,
                   defaultTextOverride: b,
                   premiumModalAnalyticsLocation: {
-                      object: j.qAy.BUTTON_CTA,
-                      objectType: j.Qqv.BUY,
+                      object: M.qAy.BUTTON_CTA,
+                      objectType: M.Qqv.BUY,
                   },
                   onSubscribeModalClose: I,
                   fullWidth: !0,
@@ -135,10 +135,10 @@ let B = () =>
             [c, d] = i.useState(!1),
             f = (0, D.q)(),
             _ = () => {
-                null != t && t(M.L.DISMISS),
-                    f(j.rMx.CLIENT_THEME_PREVIEW_CLOSED),
+                null != t && t(j.L.DISMISS),
+                    f(M.rMx.CLIENT_THEME_PREVIEW_CLOSED),
                     (0, w.C)(),
-                    n || (0, S.openUserSettings)(T.n.APPEARANCE_PANEL, { section: j.oAB.APPEARANCE });
+                    n || (0, S.openUserSettings)(T.n.APPEARANCE_PANEL, { section: M.oAB.APPEARANCE });
             },
             p = (0, b.B)(
                 {
@@ -187,16 +187,16 @@ function H(e) {
         })),
         d = (0, E.oq)().activePanel === E.wh.CLIENT_THEMES,
         _ = (0, D.q)();
-    i.useEffect(() => _(j.rMx.CLIENT_THEME_PREVIEW_VIEWED), [_]),
+    i.useEffect(() => _(M.rMx.CLIENT_THEME_PREVIEW_VIEWED), [_]),
         i.useEffect(() => {
             c &&
-                C.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+                C.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: k.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a,
                 });
         }, [c, a]);
     let b = (0, D.J)(),
-        y = (0, p.Z)(null, c ? b : j.dG4);
+        y = (0, p.Z)(null, c ? b : M.dG4);
     return (
         i.useEffect(() => {
             if (c && !d) return b;
@@ -210,14 +210,14 @@ function H(e) {
                 children: (0, r.jsxs)(f.y5t, {
                     children: [
                         n ? (0, r.jsx)(B, {}) : (0, r.jsx)(Z, { markAsDismissed: t }),
-                        s && (0, r.jsx)(x.Z, {}),
+                        s && (0, r.jsx)(L.Z, {}),
                         (0, r.jsx)(f.Ttm, {
                             className: G.editorBody,
-                            children: (0, r.jsxs)(L.ZP, {
-                                type: L.yH.EDITOR,
+                            children: (0, r.jsxs)(x.ZP, {
+                                type: x.yH.EDITOR,
                                 children: [
-                                    !c && (0, r.jsx)(L.ZP.Basic, { className: G.selectionGroup }),
-                                    (0, r.jsx)(L.ZP.Gradient, {
+                                    !c && (0, r.jsx)(x.ZP.Basic, { className: G.selectionGroup }),
+                                    (0, r.jsx)(x.ZP.Gradient, {
                                         className: G.selectionGroup,
                                         isCoachmark: n,
                                     }),

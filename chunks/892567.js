@@ -37,32 +37,32 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 displayNameStyles: a,
                 inProfile: T,
             }),
-            { useReducedMotion: D, saturation: x } = (0, d.cj)([p.Z], () => ({
+            { useReducedMotion: D, saturation: L } = (0, d.cj)([p.Z], () => ({
                 useReducedMotion: p.Z.useReducedMotion,
                 saturation: p.Z.desaturateUserColors ? p.Z.saturation : 1,
             })),
-            { includeNonProfile: L } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
-            j = (0, g.Y)({ location: "UserNameWithEffects" }),
-            M = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            { includeNonProfile: x } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
+            M = (0, g.Y)({ location: "UserNameWithEffects" }),
+            j = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
             k = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
             U = (0, y.R)(k),
             G = (0, _.qgQ)(n),
             B = (0, f.EJ)(G, k === c.m.TOON ? v.emoji : void 0),
             Z = i.useMemo(
                 () =>
-                    null != a && j
+                    null != a && M
                         ? a.colors.map((e) =>
                               (0, h.wh)({
                                   foreground: o()(e),
-                                  background: k === c.m.TOON ? o()("#333") : o()(M),
+                                  background: k === c.m.TOON ? o()("#333") : o()(j),
                                   ratio: U.minContrastRatio,
-                                  saturationFactor: x,
+                                  saturationFactor: L,
                               }).hex(),
                           )
                         : [],
-                [a, j, k, U.minContrastRatio, x, M],
+                [a, M, k, U.minContrastRatio, L, j],
             );
-        if (!j || (!T && !L) || null == a) return n;
+        if (!M || (!T && !x) || null == a) return n;
         let F = (0, b.K)(k, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,

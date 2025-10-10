@@ -5,11 +5,11 @@ var r = t(951288),
     a = t(906732),
     o = t(678328),
     s = t(560467),
-    c = t(183369),
-    d = t(473682),
-    u = t(440589),
-    m = t(388032),
-    g = t(197080);
+    d = t(183369),
+    c = t(473682),
+    u = t(401561),
+    g = t(388032),
+    m = t(831119);
 function p(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -54,16 +54,16 @@ function x(e, n) {
     );
 }
 function f(e) {
-    let { step: n, setFooterNode: t } = (0, c.aj)(),
+    let { step: n, setFooterNode: t } = (0, d.aj)(),
         { title: a, subtitle: f } = (function (e) {
             switch (e) {
-                case d.Vb.SELECT_GAME:
+                case c.Vb.SELECT_GAME:
                     return {
-                        title: m.intl.string(u.default.DG1SHB),
-                        subtitle: m.intl.string(u.default.hkWuWF),
+                        title: g.intl.string(u.default.DG1SHB),
+                        subtitle: g.intl.string(u.default.hkWuWF),
                     };
-                case d.Vb.SERVER_SETTINGS:
-                    return { title: m.intl.string(u.default.Eonh9P) };
+                case c.Vb.SERVER_SETTINGS:
+                    return { title: g.intl.string(u.default.Eonh9P) };
             }
         })(n);
     return (0, r.jsxs)(
@@ -76,29 +76,29 @@ function f(e) {
                     subtitle: f,
                 }),
                 (0, r.jsx)(l.zJl, {
-                    className: g.modalContent,
-                    style: { width: d.M4 },
+                    className: m.modalContent,
+                    style: { width: c.M4 },
                     children: (0, r.jsx)("div", {
-                        style: { padding: d.hK },
+                        style: { padding: c.hK },
                         children: (0, r.jsxs)(l.MyZ, {
-                            width: d.Ne,
+                            width: c.Ne,
                             activeSlide: n,
                             children: [
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: d.Vb.SELECT_GAME,
+                                        id: c.Vb.SELECT_GAME,
                                         children: (0, r.jsx)(o.Z, {}),
                                     },
-                                    d.Vb.SELECT_GAME,
+                                    c.Vb.SELECT_GAME,
                                 ),
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: d.Vb.SERVER_SETTINGS,
+                                        id: c.Vb.SERVER_SETTINGS,
                                         children: (0, r.jsx)(s.Z, {}),
                                     },
-                                    d.Vb.SERVER_SETTINGS,
+                                    c.Vb.SERVER_SETTINGS,
                                 ),
                             ],
                         }),
@@ -113,6 +113,6 @@ function _(e) {
     let { analyticsLocations: n } = (0, a.ZP)();
     return (0, r.jsx)(a.Gt, {
         value: n,
-        children: (0, r.jsx)(c.KO, x(p({}, e), { children: (0, r.jsx)(f, p({}, e)) })),
+        children: (0, r.jsx)(d.KO, x(p({}, e), { children: (0, r.jsx)(f, p({}, e)) })),
     });
 }

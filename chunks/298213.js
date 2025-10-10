@@ -2,9 +2,9 @@ n.d(t, { Z: () => g });
 var r = n(570140),
     i = n(194359),
     a = n(855796),
-    o = n(497060),
+    o = n(128064),
     s = n(699516),
-    l = n(885149),
+    l = n(801195),
     c = n(981631);
 function u(e, t, n) {
     return (
@@ -73,7 +73,7 @@ function p(e) {
 }
 function h(e) {
     let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
-        c = (0, o.pB)("useFriendRequestActions"),
+        c = (0, o.c_)("useFriendRequestActions"),
         u = s.Z.isStranger(t);
     return null == n && c && !1 !== u
         ? u && c

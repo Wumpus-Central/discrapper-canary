@@ -218,26 +218,26 @@ let P = g(h({}, l().defaultRules.link), {
         if (0 === m.trim().length || 0 === P.length) return u();
         let w = R(l().unescapeUrl(o)),
             D = null == w,
-            x = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
-        if (D || x) return u();
-        let L = g(h({}, n), {
+            L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
+        if (D || L) return u();
+        let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0,
             }),
-            j = n.allowEmojiLinks ? v : O,
-            M = [...j, ...I],
+            M = n.allowEmojiLinks ? v : O,
+            j = [...M, ...I],
             k = [...T, ...S],
-            U = A(t(E, L), M, [f.b.EMOJI]),
-            G = A(t(y, L), k);
+            U = A(t(E, x), j, [f.b.EMOJI]),
+            G = A(t(y, x), k);
         if (null == U || null == G || 0 === C(U).trim().length) return u();
-        let B = i().pick(t.rules, j),
-            Z = l().parserFor(B)(_.whitespaceSanitized, L),
-            V = p.whitespaceSanitized,
-            { target: F } = w;
+        let B = i().pick(t.rules, M),
+            Z = l().parserFor(B)(_.whitespaceSanitized, x),
+            F = p.whitespaceSanitized,
+            { target: V } = w;
         return {
             content: Z,
-            target: F,
-            title: V,
+            target: V,
+            title: F,
         };
     },
 });

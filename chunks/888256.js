@@ -10,7 +10,7 @@ function c(e) {
         d = t.isClaimed();
     return (0, r.jsx)(a.F, {
         setting: o.s6.ACCOUNT_DISABLE_ACCOUNT,
-        children: (0, r.jsx)(i.NIc, {
+        children: (0, r.jsx)(i.gNt, {
             label: s.intl.string(s.t.ZKsIkp),
             description: d ? s.intl.string(s.t.TIh3Ym) : s.intl.string(s.t.czsGAw),
             children: (0, r.jsxs)(i.hE2, {

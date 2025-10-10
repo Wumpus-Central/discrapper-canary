@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => U,
-    i: () => M,
+    i: () => j,
 });
 var r = n(951288),
     i = n(647438),
@@ -33,8 +33,8 @@ var r = n(951288),
     w = n(921944),
     D = n(474936),
     L = n(388032),
-    x = n(352334);
-let j = () => {
+    x = n(505575);
+let M = () => {
         (0, E.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: w.L.PRIMARY,
             forceTrack: !0,
@@ -42,7 +42,7 @@ let j = () => {
             (0, g.XO)(g.wh.CLIENT_THEMES),
             (0, R.default)();
     },
-    M = () => {
+    j = () => {
         var e, t;
         let { analyticsLocations: n } = (0, f.ZP)(d.Z.USER_SETTINGS),
             o = (0, a.e7)([_.Z], () => _.Z.isPreview),
@@ -62,7 +62,7 @@ let j = () => {
                               (0, r.jsx)(l.zxk, {
                                   variant: "secondary",
                                   text: L.intl.string(L.t["E+COuL"]),
-                                  onClick: () => j(),
+                                  onClick: () => M(),
                               }),
                               (0, r.jsx)(O.Z, {
                                   subscriptionTier: D.Si.TIER_2,
@@ -81,7 +81,7 @@ let j = () => {
                               (0, r.jsx)(l.zxk, {
                                   variant: "secondary",
                                   text: L.intl.string(L.t["E+COuL"]),
-                                  onClick: () => j(),
+                                  onClick: () => M(),
                               }),
                               (0, r.jsx)(v.Z, {
                                   showGradient: !1,
@@ -110,7 +110,7 @@ let j = () => {
                                 variant: "secondary",
                                 fullWidth: !0,
                                 text: L.intl.string(L.t["E+COuL"]),
-                                onClick: () => j(),
+                                onClick: () => M(),
                             }),
                         }),
                         (0, r.jsx)("div", { className: x.premiumTier2Divider }),
@@ -194,5 +194,5 @@ let U = () =>
         : (0, r.jsx)(l.zxk, {
               variant: "primary",
               text: L.intl.string(L.t.qYXrkZ),
-              onClick: j,
+              onClick: M,
           });

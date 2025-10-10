@@ -36,8 +36,8 @@ var r = n(951288),
     D = n(583046),
     L = n(897829),
     x = n(74179),
-    j = n(896246),
-    M = n(320317),
+    M = n(896246),
+    j = n(320317),
     k = n(994427),
     U = n(814076),
     G = n(712297),
@@ -47,7 +47,7 @@ var r = n(951288),
     V = n(283307),
     H = n(981631),
     Y = n(474936),
-    W = n(695694);
+    W = n(876414);
 function K(e, t, n) {
     return (
         t in e
@@ -162,9 +162,9 @@ function ee(e) {
             stepConfigs: q,
             breadcrumbs: J,
         }),
-        [ex, ej] = (0, k.Z)(eR),
-        { paymentError: eM, paymentAuthenticationState: ek } = (0, j.Z)(),
-        { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, M.Z)(),
+        [ex, eM] = (0, k.Z)(eR),
+        { paymentError: ej, paymentAuthenticationState: ek } = (0, M.Z)(),
+        { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, j.Z)(),
         eZ = (0, u.Z)(() => {
             let e = null != S ? S : (0, l.Z)();
             return (
@@ -293,9 +293,9 @@ function ee(e) {
                 breadcrumbs: eD,
                 previousStepRef: eL,
                 purchaseState: ex,
-                setPurchaseState: ej,
+                setPurchaseState: eM,
                 paymentAuthenticationState: ek,
-                paymentError: eM,
+                paymentError: ej,
                 purchaseError: eU,
                 setPurchaseError: eB,
                 purchasePreviewError: tm,

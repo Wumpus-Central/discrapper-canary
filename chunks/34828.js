@@ -1,6 +1,6 @@
 n.d(t, {
-    X: () => C,
-    Z: () => T,
+    X: () => S,
+    Z: () => N,
 }),
     n(35282);
 var r,
@@ -42,14 +42,14 @@ let g = { ignoredDevices: {} },
         justChanged: !1,
     },
     I = /\(([^)]+)\)/;
-function C(e) {
+function S(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
         let t = e.name.match(I);
         if (null != t) return t[1];
     }
     return e.name;
 }
-function S(e, t, n) {
+function C(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
@@ -62,7 +62,7 @@ function S(e, t, n) {
             }
           : e;
 }
-class N extends (r = a.ZP.DeviceSettingsStore) {
+class T extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (m = null != e ? e : g);
     }
@@ -88,9 +88,9 @@ class N extends (r = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-h(N, "displayName", "ConnectedDeviceStore"),
-    h(N, "persistKey", "ConnectedDeviceStore"),
-    h(N, "migrations", [
+h(T, "displayName", "ConnectedDeviceStore"),
+    h(T, "persistKey", "ConnectedDeviceStore"),
+    h(T, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -130,13 +130,13 @@ h(N, "displayName", "ConnectedDeviceStore"),
             return e;
         },
     ]);
-let T = new N(o.Z, {
+let N = new T(o.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             r = {};
         (y.justChanged = !1),
             t.forEach((e) => {
-                if (((r[C(e)] = e.id), e.id === f.w5)) {
+                if (((r[S(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
                     n !== y.id && (y.justChanged = !0), (y.id = n);
@@ -146,7 +146,7 @@ let T = new N(o.Z, {
         if (
             ((v.justChanged = !1),
             n.forEach((e) => {
-                if (((i[C(e)] = e.id), e.id === f.w5)) {
+                if (((i[S(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
                     n !== v.id && (v.justChanged = !0), (v.id = n);
@@ -169,12 +169,12 @@ let T = new N(o.Z, {
                 : (l()
                       .difference(o, a)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.Q.INPUT);
+                          E[e] = C(E[e], e, p.Q.INPUT);
                       }),
                   l()
                       .difference(c, s)
                       .forEach((e) => {
-                          E[e] = S(E[e], e, p.Q.OUTPUT);
+                          E[e] = C(E[e], e, p.Q.OUTPUT);
                       })),
             !(l().isEqual(a, o) && l().isEqual(s, c)) && ((_ = r), (O = i), !0)
         );

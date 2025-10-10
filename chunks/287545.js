@@ -33,10 +33,10 @@ var i = n(772848),
     P = n(148720),
     w = n(122613),
     D = n(790920),
-    x = n(201567),
-    L = n(16609),
-    j = n(761122),
-    M = n(983695),
+    L = n(201567),
+    x = n(16609),
+    M = n(761122),
+    j = n(983695),
     k = n(917107),
     U = n(981631),
     G = n(388032);
@@ -63,7 +63,7 @@ function Y(e) {
         releasePhase:
             null == e || null == (t = e.activity)
                 ? void 0
-                : t.client_platform_config[(0, j.Z)((0, I.getOS)())].release_phase,
+                : t.client_platform_config[(0, M.Z)((0, I.getOS)())].release_phase,
     };
 }
 function W(e) {
@@ -108,8 +108,8 @@ async function X(e) {
             rejectWithError: !1,
         }));
     let l = F[n],
-        c = (0, L.p)(r),
-        u = (0, L.j)(r),
+        c = (0, x.p)(r),
+        u = (0, x.j)(r),
         d = g.Z.getChannel(c),
         f = y.default.getCurrentUser();
     if (null == l || null == f) return;
@@ -162,8 +162,8 @@ function Q(e) {
         } = e,
         h = m.default.getId(),
         b = l.find((e) => e.userId === h),
-        v = (0, L.p)(u),
-        I = (0, L.j)(u),
+        v = (0, x.p)(u),
+        I = (0, x.j)(u),
         A = g.Z.getChannel(v);
     if ((o && null != A && A.isPrivate() && a && null == b && s.Z.selectParticipant(A.id, null), null == b)) return;
     let R = E.Z.getMediaSessionId(),
@@ -171,14 +171,14 @@ function Q(e) {
         w = null == R && (null == A ? void 0 : A.isVocal()) === !0 && (null == A ? void 0 : A.isPrivate()) === !1;
     if (null == P || w) return;
     let D = (0, i.Z)(),
-        x = "location" in c ? 2 : 1,
-        j = y.default.getCurrentUser();
-    if (null == j) return;
-    let M = C.ZP.getShelfActivities(I),
+        L = "location" in c ? 2 : 1,
+        M = y.default.getCurrentUser();
+    if (null == M) return;
+    let j = C.ZP.getShelfActivities(I),
         k = S.Z.getState().shelfOrder,
         G = (0, N.Z)({
             applicationId: r,
-            activityConfigs: M,
+            activityConfigs: j,
         }),
         B = 1 + k.findIndex((e) => e === r),
         { releasePhase: Z } = Y(G),
@@ -189,7 +189,7 @@ function Q(e) {
             activityUserSessionId: D,
             launchId: c.launchId,
             mediaSessionIds: W,
-            activitiesInfraVersion: x,
+            activitiesInfraVersion: L,
         };
     F[r] = K;
     let z = V[r];
@@ -201,7 +201,7 @@ function Q(e) {
             activity_session_id: P,
             application_id: r,
             location_stack: null == z ? void 0 : z.locations,
-            user_premium_tier: j.premiumType,
+            user_premium_tier: M.premiumType,
             raw_thermal_state: H,
             n_participants: null != A ? _.Z.getUserParticipantCount(A.id) : null,
             is_activity_start: o,
@@ -229,7 +229,7 @@ function Q(e) {
             is_activity_start: o,
             shelf_rank: null == G || null == (n = G.activity) ? void 0 : n.shelf_rank,
             shelf_sorted_rank: B > 0 ? B : null,
-            activities_infra_version: x,
+            activities_infra_version: L,
             embedded_activity_location_kind: u.kind,
         });
 }
@@ -282,7 +282,7 @@ class $ extends c.Z {
             B(this, "handleSelectedChannelUpdate", () => {
                 let e = b.Z.getVoiceChannelId();
                 for (let { location: t, applicationId: n } of C.ZP.getSelfEmbeddedActivities().values()) {
-                    let r = (0, L.p)(t);
+                    let r = (0, x.p)(t);
                     null != r &&
                         (0, k.Z)(r) &&
                         r !== e &&
@@ -296,7 +296,7 @@ class $ extends c.Z {
                         n = m.default.getId();
                     t.forEach((e) => {
                         if (e.userIds.has(n)) {
-                            let t = (0, L.p)(e.location),
+                            let t = (0, x.p)(e.location),
                                 n = C.ZP.getSelfEmbeddedActivityForChannel(t);
                             null == n
                                 ? this.leaveActivity({
@@ -323,7 +323,7 @@ class $ extends c.Z {
             B(this, "handleActivityLaunchFail", async (e) => {
                 let { error: t, nonce: n, channelId: r, guildId: i, applicationId: a, isStart: o, locationKind: s } = e,
                     l = K(a, n),
-                    c = await (0, x.k)(t, a);
+                    c = await (0, L.k)(t, a);
                 this.showLaunchErrorModal(c.message);
                 let u = g.Z.getChannel(r),
                     d = p.Z.getRawThermalState();
@@ -392,7 +392,7 @@ class $ extends c.Z {
                 if ((null == u ? void 0 : u.applicationId) === a) return;
                 let d = await f.ZP.fetchApplication(a);
                 if (!(0, D.a)()) return void this.showLaunchErrorModal(G.intl.string(G.t.UXoQTk));
-                if (!(0, M.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms))
+                if (!(0, j.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms))
                     return void this.showLaunchErrorModal(G.intl.string(G.t.uGDCc3));
                 let _ = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
                     { activityConfigs: p, applications: m } = await (0, A.w1)({ guildId: _ });
@@ -436,7 +436,7 @@ class $ extends c.Z {
                 let { guild: t } = e;
                 C.ZP.getSelfEmbeddedActivities().forEach((e) => {
                     let { location: n, applicationId: r } = e,
-                        i = (0, L.j)(n);
+                        i = (0, x.j)(n);
                     t.id === i &&
                         this.leaveActivity({
                             location: n,

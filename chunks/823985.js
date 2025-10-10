@@ -1,18 +1,18 @@
-n.d(e, {
-    j: () => a,
-    r: () => r,
+i.d(n, {
+    j: () => e,
+    r: () => l,
 }),
-    n(35282);
-var i = n(981631);
-function a(t, e) {
+    i(35282);
+var a = i(981631);
+function e(t, n) {
     return (
-        e === i.ABu.MASTODON && /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(t), /^.+\.[^.@]{2,}$/.test(t)
+        n === a.ABu.MASTODON && /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(t), /^.+\.[^.@]{2,}$/.test(t)
     );
 }
-function r(t) {
-    return t === i.ABu.MASTODON
+function l(t) {
+    return t === a.ABu.MASTODON
         ? "@example@mastodon.social"
-        : t === i.ABu.BLUESKY
+        : t === a.ABu.BLUESKY
           ? "example.bsky.social"
           : "clyde@example.com";
 }

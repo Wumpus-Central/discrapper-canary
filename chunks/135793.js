@@ -9,8 +9,8 @@ var r = n(951288),
     i = n(647438),
     a = n(990547),
     o = n(311570),
-    s = n(704215),
-    l = n(257465),
+    s = n(793030),
+    l = n(704215),
     c = n(481060),
     u = n(596454),
     d = n(100527),
@@ -47,7 +47,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,38 +75,38 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let M = 190,
+let j = 190,
     k = 178,
     U = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     G = (e) => {
-        let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: l = "activate", source: u } = e,
+        let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: s = "activate", source: u } = e,
             d = m.Z.getChannel(t);
         null != d &&
-            ((0, _.Q3)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
+            ((0, _.Q3)(l.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
             (0, c.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(x({}, t), {
+                            M(L({}, t), {
                                 channel: d,
                                 message: i,
                                 onRedeem: a,
                                 onUnmount: o,
                                 source: u,
-                                buttonUseState: l,
+                                buttonUseState: s,
                             }),
                         );
                 },
@@ -114,10 +114,10 @@ let M = 190,
             ));
     };
 function B(e) {
-    let { transitionState: t, channel: n, message: o, onRedeem: s, onUnmount: u, buttonUseState: d, source: f } = e;
+    let { transitionState: t, channel: n, message: o, onRedeem: l, onUnmount: u, buttonUseState: d, source: f } = e;
     (0, i.useEffect)(() => u, [u]);
     let _ = (0, i.useCallback)(() => ((0, c.Mr3)(U), Promise.resolve()), []);
-    return (0, r.jsx)(l.IX, {
+    return (0, r.jsx)(s.IX, {
         transitionState: t,
         onClose: _,
         trackingProps: {
@@ -129,7 +129,7 @@ function B(e) {
         children: (0, r.jsx)(Z, {
             channel: n,
             message: o,
-            onRedeem: s,
+            onRedeem: l,
             buttonUseState: d,
         }),
     });
@@ -164,8 +164,8 @@ function Z(e) {
                 variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS,
             });
         }, [w, N]),
-        x = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
-        L = (0, i.useMemo)(() => {
+        L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
+        x = (0, i.useMemo)(() => {
             if (null != E) {
                 if ("apply" === s) return 3;
                 if (E.type === C.qc2.DEVELOPER_GIFT) return 1;
@@ -173,13 +173,13 @@ function Z(e) {
             }
             return 0;
         }, [E, R, s]),
-        j = (0, i.useMemo)(() => (0 === L ? 1 : u ? 2 : 3 * (null == _)), [u, _, L]);
+        M = (0, i.useMemo)(() => (0 === x ? 1 : u ? 2 : 3 * (null == _)), [u, _, x]);
     return (0, r.jsx)(F, {
         channel: t,
-        buttonPurchaseState: L,
-        buttonDisabledState: j,
+        buttonPurchaseState: x,
+        buttonDisabledState: M,
         price: p,
-        onActionClick: x,
+        onActionClick: L,
         loading: P,
         selectedEmoji: null != _ ? _ : void 0,
         isReaction: l,
@@ -448,7 +448,7 @@ let F = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     c.zxk,
-                    j(x({}, e), {
+                    M(L({}, e), {
                         onClick: o,
                         disabled: s,
                         text: l,
@@ -465,7 +465,7 @@ let F = (e) => {
                     (0, r.jsx)(c.Eep, {
                         src: w,
                         width: k,
-                        height: M,
+                        height: j,
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",

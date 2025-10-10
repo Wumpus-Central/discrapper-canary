@@ -20,11 +20,11 @@ var r = n(951288),
     y = n(242291),
     v = n(792165),
     I = n(603074),
-    C = n(981631),
-    S = n(921944),
-    N = n(388032),
-    T = n(890332);
-function P(e) {
+    S = n(981631),
+    C = n(921944),
+    T = n(388032),
+    N = n(890332);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function P(e) {
     }
     return e;
 }
-function j(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,16 +98,16 @@ function x(e) {
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
         [U, G] = (0, b.cv)(M),
-        { analyticsLocations: B, parentAnalyticsLocation: V } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
-    function H(e) {
+        { analyticsLocations: B, parentAnalyticsLocation: H } = (0, h.ZP)(f.Z.SOUNDBOARD_BUTTON);
+    function V(e) {
         null != k &&
             (0, p.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        j(
-                            P(
+                        P(
+                            j(
                                 {
                                     guildId: k,
                                     sourceAnalyticsLocations: B,
@@ -122,27 +122,27 @@ function x(e) {
     let {
             Component: F,
             play: z,
-            events: { onMouseEnter: W, onMouseLeave: Y },
+            events: { onMouseEnter: W, onMouseLeave: q },
         } = (0, c.j)(),
-        K = i.useCallback(() => {
+        Y = i.useCallback(() => {
             L || D(!R);
         }, [L, R]);
     return (
         (0, E.yp)({
-            event: C.CkL.TOGGLE_SOUNDBOARD,
-            handler: K,
+            event: S.CkL.TOGGLE_SOUNDBOARD,
+            handler: Y,
         }),
         (0, r.jsx)(h.Gt, {
             value: B,
             children: (0, r.jsx)(d.ua7, {
                 targetElementRef: x,
                 text: A
-                    ? N.intl.string(N.t["Ox4/zc"])
+                    ? T.intl.string(T.t["Ox4/zc"])
                     : Z
-                      ? N.intl.string(N.t["+YBKYG"])
+                      ? T.intl.string(T.t["+YBKYG"])
                       : w
-                        ? N.intl.string(N.t.X1lQlp)
-                        : N.intl.string(N.t["6EJvHh"]),
+                        ? T.intl.string(T.t.X1lQlp)
+                        : T.intl.string(T.t["6EJvHh"]),
                 children: (e) =>
                     (0, r.jsx)(d.yRy, {
                         targetElementRef: x,
@@ -170,25 +170,25 @@ function x(e) {
                                 ref: x,
                                 children: (0, r.jsx)(
                                     u.zx,
-                                    j(
-                                        P(
-                                            j(P({ "data-migration-pending": !0 }, e, t), {
-                                                className: a()(T.button, T.buttonColor, {
-                                                    [T.greyButtonActive]: R,
-                                                    [T.disabled]: L,
+                                    P(
+                                        j(
+                                            P(j({ "data-migration-pending": !0 }, e, t), {
+                                                className: a()(N.button, N.buttonColor, {
+                                                    [N.greyButtonActive]: R,
+                                                    [N.disabled]: L,
                                                 }),
-                                                wrapperClassName: T.button,
-                                                innerClassName: T.buttonContents,
+                                                wrapperClassName: N.button,
+                                                innerClassName: N.buttonContents,
                                                 disabled: L,
                                                 onClick: () => {
                                                     var t;
                                                     null != U &&
                                                         U !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                        G(S.L.UNKNOWN),
+                                                        G(C.L.UNKNOWN),
                                                         null == e || null == (t = e.onClick) || t.call(e),
                                                         D(!R),
                                                         z(),
-                                                        (0, g.v)(V, g.d.SOUNDBOARD);
+                                                        (0, g.v)(H, g.d.SOUNDBOARD);
                                                 },
                                                 onMouseEnter: (t) => {
                                                     var n, r;
@@ -200,9 +200,9 @@ function x(e) {
                                                     var n, r;
                                                     null == (n = l.onMouseLeave) || n.call(l, t),
                                                         null == e || null == (r = e.onMouseLeave) || r.call(e),
-                                                        Y();
+                                                        q();
                                                 },
-                                                onContextMenu: H,
+                                                onContextMenu: V,
                                                 fullWidth: !0,
                                                 size: u.zx.Sizes.MEDIUM,
                                             }),
@@ -210,7 +210,7 @@ function x(e) {
                                         ),
                                         {
                                             children: (0, r.jsx)(F, {
-                                                className: T.buttonIcon,
+                                                className: N.buttonIcon,
                                                 size: "sm",
                                                 color: "currentColor",
                                             }),

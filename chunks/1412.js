@@ -1,40 +1,40 @@
-n.d(t, { Y: () => u });
-var r = n(647438),
-    i = n(344669),
-    o = n(338972),
-    a = n(219384);
-function u(e, t) {
-    var n = (0, o.N)(),
+e.d(n, { Y: () => u });
+var r = e(647438),
+    o = e(344669),
+    i = e(338972),
+    a = e(219384);
+function u(t, n) {
+    var e = (0, i.N)(),
         u = (0, r.useMemo)(
             function () {
-                return new i.x(n.getBackend());
+                return new o.x(e.getBackend());
             },
-            [n],
+            [e],
         );
     return (
         (0, a.L)(
             function () {
                 return (
-                    (u.dragSourceOptions = e || null),
+                    (u.dragSourceOptions = t || null),
                     u.reconnect(),
                     function () {
                         return u.disconnectDragSource();
                     }
                 );
             },
-            [u, e],
+            [u, t],
         ),
         (0, a.L)(
             function () {
                 return (
-                    (u.dragPreviewOptions = t || null),
+                    (u.dragPreviewOptions = n || null),
                     u.reconnect(),
                     function () {
                         return u.disconnectDragPreview();
                     }
                 );
             },
-            [u, t],
+            [u, n],
         ),
         u
     );

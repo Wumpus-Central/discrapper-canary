@@ -37,13 +37,13 @@ let d = i.memo(
                 role: R = "list",
             } = e,
             [P, w] = i.useState(-1),
-            [D, x] = i.useState(-1),
-            L = i.useRef(null),
-            j = i.useRef(0),
-            M = i.useRef(-1);
+            [D, L] = i.useState(-1),
+            x = i.useRef(null),
+            M = i.useRef(0),
+            j = i.useRef(-1);
         (0, l.Ng)(() => {
             var e;
-            let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
+            let t = null == (e = x.current) ? void 0 : e.getScrollerNode();
             null != t && (t.scrollTop = N);
         });
         let k = i.useCallback(() => {
@@ -130,10 +130,10 @@ let d = i.memo(
         (F.current = W), (V.current = Y);
         let K = i.useCallback(() => {
             var e;
-            let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
+            let t = null == (e = x.current) ? void 0 : e.getScrollerNode();
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
-            x(r),
+            L(r),
                 w(i),
                 null == a ||
                     a({
@@ -146,22 +146,22 @@ let d = i.memo(
         }, [D, K]),
             i.useEffect(() => {
                 var e;
-                let t = null == (e = L.current) ? void 0 : e.getScrollerNode(),
-                    n = u(L);
+                let t = null == (e = x.current) ? void 0 : e.getScrollerNode(),
+                    n = u(x);
                 if (null == t || null == n) return;
                 let r = new n.ResizeObserver(K);
                 return r.observe(t), () => r.disconnect();
             }, [K]);
         let z = i.useCallback(() => {
             var e;
-            let t = null == (e = L.current) ? void 0 : e.getScrollerNode(),
-                r = u(L);
+            let t = null == (e = x.current) ? void 0 : e.getScrollerNode(),
+                r = u(x);
             null != t &&
                 null != r &&
-                (r.cancelAnimationFrame(M.current),
-                (M.current = r.requestAnimationFrame(() => {
+                (r.cancelAnimationFrame(j.current),
+                (j.current = r.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (j.current = e), null == n || n(e), w(e);
+                    (M.current = e), null == n || n(e), w(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -171,7 +171,7 @@ let d = i.memo(
                     var t;
                     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: r = !1 } = n;
-                    null == (t = L.current) ||
+                    null == (t = x.current) ||
                         t.scrollTo({
                             to: e,
                             animate: r,
@@ -181,7 +181,7 @@ let d = i.memo(
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
                         i = V.current[e],
-                        a = u(L);
+                        a = u(x);
                     null != i &&
                         null != a &&
                         a.requestAnimationFrame(() => {
@@ -191,21 +191,21 @@ let d = i.memo(
                                     offset: { top: s, bottom: l },
                                 } = i,
                                 c = G(o),
-                                u = s - (T ? c : 0) - r <= j.current,
-                                d = l + r >= j.current + D;
+                                u = s - (T ? c : 0) - r <= M.current,
+                                d = l + r >= M.current + D;
                             if (u) {
-                                let i = j.current + c - s,
-                                    a = T ? j.current - i : s;
-                                null == (t = L.current) ||
+                                let i = M.current + c - s,
+                                    a = T ? M.current - i : s;
+                                null == (t = x.current) ||
                                     t.scrollTo({
                                         to: 0 === e ? 0 : a - r,
                                         animate: n,
                                     });
                             } else if (d) {
-                                let e = l - (j.current + D);
-                                null == (a = L.current) ||
+                                let e = l - (M.current + D);
+                                null == (a = x.current) ||
                                     a.scrollTo({
-                                        to: j.current + e + r,
+                                        to: M.current + e + r,
                                         animate: n,
                                     });
                             }
@@ -215,12 +215,12 @@ let d = i.memo(
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
                         i = F.current[e],
-                        a = u(L);
+                        a = u(x);
                     null != i &&
                         null != a &&
                         a.requestAnimationFrame(() => {
                             var t;
-                            null == (t = L.current) ||
+                            null == (t = x.current) ||
                                 t.scrollTo({
                                     to: (0 === e ? 0 : i.offset.top) + r,
                                     animate: n,
@@ -235,11 +235,11 @@ let d = i.memo(
                 getRowDescriptors: () => V.current,
                 getScrollerNode: () => {
                     var e;
-                    return null == (e = L.current) ? void 0 : e.getScrollerNode();
+                    return null == (e = x.current) ? void 0 : e.getScrollerNode();
                 },
                 scrollIntoViewNode: (e) => {
                     var t;
-                    return null == (t = L.current) ? void 0 : t.scrollIntoViewNode({ node: e });
+                    return null == (t = x.current) ? void 0 : t.scrollIntoViewNode({ node: e });
                 },
             }),
             [G, T, H, D],
@@ -314,7 +314,7 @@ let d = i.memo(
         return (0, r.jsxs)($, {
             fade: C,
             className: o()(c.scroller, S),
-            ref: L,
+            ref: x,
             onScroll: z,
             children: [
                 (0, r.jsx)("div", {

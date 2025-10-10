@@ -9,8 +9,8 @@ var l = n(951288),
     d = n(763624),
     c = n(607361),
     g = n(463421),
-    f = n(981631),
-    m = n(658805),
+    m = n(981631),
+    f = n(658805),
     Z = n(388032);
 function E(e, t) {
     let { enableRequestToStream: n } = d.A.useExperiment(
@@ -30,10 +30,10 @@ function E(e, t) {
               r.sNh,
               {
                   id: "request-to-stream",
-                  label: Z.intl.format(m.default["8qq+Hx"], { applicationName: b.name }),
+                  label: Z.intl.format(f.default["8qq+Hx"], { applicationName: b.name }),
                   action: function () {
                       a.Z.sendActivityInvite({
-                          type: f.mFx.STREAM_REQUEST,
+                          type: m.mFx.STREAM_REQUEST,
                           channelId: t.id,
                           activity: P,
                           content: "<@".concat(e, ">"),

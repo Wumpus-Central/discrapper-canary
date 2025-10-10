@@ -31,8 +31,8 @@ function y(e) {
             entityType: S,
             channelId: I,
             description: T,
-            name: w,
-            image: Z,
+            name: Z,
+            image: w,
             scheduledEndTime: k,
             scheduledStartTime: D,
             recurrenceRule: R,
@@ -44,12 +44,12 @@ function y(e) {
             let e = (0, g.v1)(t);
             return null != e ? e : { startDate: a()(D) };
         }, [t, D]),
-        [M, U] = l.useState(() => (0, g.zi)(a()(D), R)),
-        L = l.useRef(null);
+        [U, L] = l.useState(() => (0, g.zi)(a()(D), R)),
+        M = l.useRef(null);
     l.useEffect(() => {
         if (P) {
             var e;
-            null == (e = L.current) || e.focus();
+            null == (e = M.current) || e.focus();
         }
     }, [P]);
     let V = (e) => {
@@ -126,9 +126,9 @@ function y(e) {
                             },
                             placeholder: f.intl.string(f.t["6/yarq"]),
                             maxLength: p.p,
-                            value: w,
+                            value: Z,
                             autoComplete: "off",
-                            inputRef: L,
+                            inputRef: M,
                         }),
                         (0, r.jsx)(v.Z, {
                             className: b.formItem,
@@ -142,12 +142,12 @@ function y(e) {
                                     null != k &&
                                     (null == n ? void 0 : n.isBefore(t)) &&
                                     (r.scheduledEndTime = t.add(1, "hour").toISOString()),
-                                    null != t && null != M && (r.recurrenceRule = (0, g.mF)(M, t)),
+                                    null != t && null != U && (r.recurrenceRule = (0, g.mF)(U, t)),
                                     C(r);
                             },
                             onRecurrenceChange: (e) => {
                                 let t = G.startDate;
-                                null != t && (C({ recurrenceRule: (0, g.mF)(e, t) }), U(e));
+                                null != t && (C({ recurrenceRule: (0, g.mF)(e, t) }), L(e));
                             },
                             schedule: G,
                             recurrenceRule: R,
@@ -168,17 +168,17 @@ function y(e) {
                             maxLength: p.wm,
                             autosize: !0,
                         }),
-                        (0, r.jsx)(s.NIc, {
+                        (0, r.jsx)(s.gNt, {
                             label: f.intl.string(f.t.Ly121d),
                             description: f.intl.string(f.t.B9C9bW),
                             children:
-                                null != Z
+                                null != w
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(o.Z, {
                                                   className: b.imagePreview,
                                                   iconWrapperClassName: b.imagePreviewInner,
-                                                  image: Z,
+                                                  image: w,
                                                   makeURL: (e) => {
                                                       if (null == e) return null;
                                                       if (null != y) {

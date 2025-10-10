@@ -1,32 +1,32 @@
 t.r(n), t.d(n, { default: () => d }), t(388685);
-var r = t(951288);
+var l = t(951288);
 t(647438);
-var l = t(788111),
-    o = t(752342),
-    i = t(886794),
-    c = t(583816),
-    s = t(595145);
-function a(e) {
+var i = t(788111),
+    r = t(752342),
+    o = t(886794),
+    s = t(858970),
+    a = t(595145);
+function c(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            l = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[n] = l);
             });
     }
     return e;
@@ -36,31 +36,31 @@ function d(e) {
         t = (function (e, n) {
             if (null == e) return {};
             var t,
-                r,
-                l = (function (e, n) {
+                l,
+                i = (function (e, n) {
                     if (null == e) return {};
                     var t,
-                        r,
-                        l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (l[t] = e[t]);
-                    return l;
+                        l,
+                        i = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (t = r[l]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                    return i;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (t = o[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (t = r[l]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
-            return l;
+            return i;
         })(e, ["hideRestrictedProfile"]);
     let { user: d } = t,
-        [u, f] = (0, l.Z)(d.id);
+        [u, m] = (0, i.Z)(d.id);
     return u && !n
-        ? (0, r.jsx)(c.Z, a({ onHide: f }, t))
+        ? (0, l.jsx)(s.Z, c({ onHide: m }, t))
         : d.isNonUserBot()
-          ? (0, r.jsx)(i.Z, a({}, t))
+          ? (0, l.jsx)(o.Z, c({}, t))
           : d.bot
-            ? (0, r.jsx)(o.Z, a({}, t))
-            : (0, r.jsx)(s.Z, a({}, t));
+            ? (0, l.jsx)(r.Z, c({}, t))
+            : (0, l.jsx)(a.Z, c({}, t));
 }

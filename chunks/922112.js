@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(603211),
     d = n(734893),
     u = n(592125),
-    m = n(768581),
-    g = n(8426),
+    g = n(768581),
+    m = n(8426),
     p = n(969632),
     f = n(388032),
     h = n(197530);
@@ -20,7 +20,7 @@ let x = function (e) {
         N = null;
     (null != y && (0, d.k3)(y)) || (N = f.intl.string(f.t.kTdL8f));
     let E = null == O || 0 === O.length,
-        I = m.ZP.getResourceChannelIconURL({
+        I = g.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon,
         }),
@@ -37,19 +37,19 @@ let x = function (e) {
             onDragComplete: b,
             onDragReset: _,
         }),
-        R = i.useCallback(
+        Z = i.useCallback(
             (e) => {
-                (0, g.XG)(l.channelId, e);
+                (0, m.XG)(l.channelId, e);
             },
             [l.channelId],
         ),
-        Z = i.useCallback(
+        R = i.useCallback(
             (e, n) => {
                 let r = p.Z.getSettings();
                 null != r &&
-                    ((0, g.XG)(l.channelId, e),
-                    (0, g.oo)(t, r).then(() => {
-                        (0, g.mM)(t, e.channelId, n);
+                    ((0, m.XG)(l.channelId, e),
+                    (0, m.oo)(t, r).then(() => {
+                        (0, m.mM)(t, e.channelId, n);
                     }));
             },
             [t, l],
@@ -91,9 +91,9 @@ let x = function (e) {
                                 {
                                     guildId: t,
                                     resourceChannel: l,
-                                    onSave: R,
-                                    onDelete: () => (0, g.Hz)(l.channelId),
-                                    onIconUpload: Z,
+                                    onSave: Z,
+                                    onDelete: () => (0, m.Hz)(l.channelId),
+                                    onIconUpload: R,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -111,7 +111,7 @@ let x = function (e) {
                         );
                     };
                 }),
-            [t, l, R, Z],
+            [t, l, Z, R],
         );
     return null == y
         ? null

@@ -69,30 +69,30 @@ function N(e) {
         P = (null == T ? void 0 : T.features.has(I.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         w = (0, f.mY)(null == T ? void 0 : T.id),
         D = w && R,
-        x = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
-        L = [],
-        j = y.y.GUILD_SHOP_FULL_PREVIEW;
+        L = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
+        x = [],
+        M = y.y.GUILD_SHOP_FULL_PREVIEW;
     C || (P && w)
-        ? (L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_PRODUCTS : y.y.GUILD_ROLE_SUBSCRIPTIONS),
-          L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_ROLE_SUBSCRIPTIONS : y.y.GUILD_PRODUCTS),
-          (j = L[0]))
+        ? (x.push(L === O.a3.PRODUCTS_FIRST ? y.y.GUILD_PRODUCTS : y.y.GUILD_ROLE_SUBSCRIPTIONS),
+          x.push(L === O.a3.PRODUCTS_FIRST ? y.y.GUILD_ROLE_SUBSCRIPTIONS : y.y.GUILD_PRODUCTS),
+          (M = x[0]))
         : P && !w
-          ? (L.push(y.y.GUILD_PRODUCTS), (j = y.y.GUILD_PRODUCTS))
+          ? (x.push(y.y.GUILD_PRODUCTS), (M = y.y.GUILD_PRODUCTS))
           : !P &&
             w &&
-            (L.push(y.y.GUILD_ROLE_SUBSCRIPTIONS),
-            (j = y.y.GUILD_ROLE_SUBSCRIPTIONS),
-            N && L.push(y.y.GUILD_PRODUCTS_PREVIEW)),
-        (a = null != a ? a : j);
-    let [M, k] = i.useState(a),
-        U = (N && !D) || M === y.y.GUILD_PRODUCTS_PREVIEW;
+            (x.push(y.y.GUILD_ROLE_SUBSCRIPTIONS),
+            (M = y.y.GUILD_ROLE_SUBSCRIPTIONS),
+            N && x.push(y.y.GUILD_PRODUCTS_PREVIEW)),
+        (a = null != a ? a : M);
+    let [j, k] = i.useState(a),
+        U = (N && !D) || j === y.y.GUILD_PRODUCTS_PREVIEW;
     i.useEffect(() => {
         k(a);
     }, [a]);
     let G = (e) => {
         (0, u.Q3)(l.z.SERVER_SHOP_PHANTOM_PREVIEW);
         let t = S({}, (0, c.hH)(o));
-        if (M === y.y.GUILD_PRODUCTS_PREVIEW)
+        if (j === y.y.GUILD_PRODUCTS_PREVIEW)
             e.stopPropagation(), k(y.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = v.mz.DISMISS_TAB_PREVIEW);
         else {
             var n;
@@ -103,9 +103,9 @@ function N(e) {
     };
     return (0, r.jsx)(A.Provider, {
         value: {
-            selectedTab: M,
+            selectedTab: j,
             setSelectedTab: k,
-            categoryTabs: L,
+            categoryTabs: x,
             isPhantomPreview: U,
             handlePreviewDismiss: G,
         },

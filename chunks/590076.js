@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -10,38 +10,38 @@ var r = n(951288),
     d = n(364125),
     f = n(90753),
     p = n(806777);
-function m(e) {
+function _(e) {
     let { focused: t, channelId: n, streamerId: l, stream: u } = e,
-        m = i.useRef(null),
-        _ = (0, o.e7)([s.default], () => s.default.getCurrentUser());
-    a()(null != _, "user cannot be null"), (0, f.Z)(m, _, l, n);
+        _ = i.useRef(null),
+        m = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    a()(null != m, "user cannot be null"), (0, f.Z)(_, m, l, n);
     let {
-        handleClick: g,
-        handleMouseDown: b,
-        handleMouseEnter: E,
+        handleClick: b,
+        handleMouseDown: E,
+        handleMouseEnter: g,
         handleMouseMove: v,
         handleMouseUp: h,
     } = (0, d.Z)({
-        user: _,
+        user: m,
         channelId: n,
         streamerId: l,
         stream: u,
         focused: t,
-        canvas: m.current,
+        canvas: _.current,
     });
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)("canvas", {
-            ref: m,
-            onClick: g,
-            onMouseDown: b,
-            onMouseEnter: E,
+            ref: _,
+            onClick: b,
+            onMouseDown: E,
+            onMouseEnter: g,
             onMouseMove: v,
             onMouseUp: h,
             className: p.sharedCanvas,
         }),
     });
 }
-function _(e) {
+function m(e) {
     let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
         {
             guildId: e.guildId,
@@ -52,7 +52,7 @@ function _(e) {
     return !t || e.hasScreenMessage
         ? null
         : (0, r.jsx)(
-              m,
+              _,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

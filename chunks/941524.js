@@ -1,33 +1,33 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(512508),
-    l = n(654626),
-    a = n(563115);
-function s(e) {
+    l = n(706371),
+    s = n(563115);
+function a(e) {
     let {
             guildId: t,
             selectedChannelIds: n,
-            selectedRoleIds: s,
+            selectedRoleIds: a,
             onChange: o,
             placeholder: c,
             disableEveryoneRole: d,
             includeRoleRestrictedPrivateChannels: u = !1,
-            includeStageVoiceChannels: m = !1,
-            helperText: g,
+            includeStageVoiceChannels: g = !1,
+            helperText: m,
             className: p,
         } = e,
-        h = (0, l.r)(t, n, u, m),
-        f = (0, a.h)(t, s, d);
+        f = (0, l.r)(t, n, u, g),
+        h = (0, s.h)(t, a, d);
     return (0, r.jsx)(i.ZP, {
-        channelRows: h,
-        roleRows: f,
+        channelRows: f,
+        roleRows: h,
         guildId: t,
         selectedChannelIds: n,
-        selectedRoleIds: s,
+        selectedRoleIds: a,
         onChange: o,
         placeholder: c,
-        helperText: g,
+        helperText: m,
         className: p,
     });
 }

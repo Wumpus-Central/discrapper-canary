@@ -20,8 +20,8 @@ var r = n(570140),
     y = n(199902),
     v = n(131951),
     I = n(246946),
-    C = n(556296),
-    S = n(808506),
+    S = n(556296),
+    C = n(808506),
     T = n(237997),
     N = n(626135),
     j = n(554174),
@@ -158,7 +158,7 @@ let R = {
         },
         [x.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
             onTrigger(e, t) {
-                if (!(0, C.I1)(t.shortcut)) return;
+                if (!(0, S.I1)(t.shortcut)) return;
                 let n = (0, j.Z)();
                 null != n && l.Z.setInputLocked(!T.default.isLocked(n), n);
             },
@@ -169,13 +169,13 @@ let R = {
         },
         [x.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
             onTrigger() {
-                let e = S.default.getFocusedPID(),
+                let e = C.default.getFocusedPID(),
                     t = null != e;
                 null != e &&
                     t &&
                     T.default.isPinned(x.Odu.TEXT) &&
                     T.default.isLocked(e) &&
-                    S.default.isReady(e) &&
+                    C.default.isReady(e) &&
                     l.Z.activateRegion(x.O0n.TEXT_WIDGET);
             },
             keyEvents: {

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(e, { Z: () => s });
 var i = n(509613),
-    r = n(695346),
-    l = n(869235),
-    o = n(388032);
-let a = (0, i.qs)(l.t.TEXT_TO_SPEECH_COMMAND, {
-    useTitle: () => o.intl.string(o.t.VpSKeH),
-    useSubtitle: () => o.intl.string(o.t.qvTIwc),
-    useValue: r.OW.useSetting,
-    setValue: r.OW.updateSetting,
+    l = n(695346),
+    u = n(313789),
+    r = n(388032);
+let s = (0, i.qs)(u.n.TEXT_TO_SPEECH_COMMAND, {
+    useTitle: () => r.intl.string(r.t.VpSKeH),
+    useSubtitle: () => r.intl.string(r.t.qvTIwc),
+    useValue: l.OW.useSetting,
+    setValue: l.OW.updateSetting,
 });

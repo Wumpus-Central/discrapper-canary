@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => o });
 var r = n(424706),
     a = n(14160),
     l = n(247123),
     i = n(207662);
-let u = {
+let o = {
     id: "button-name",
     selector: 'button, [role="button"], [role="link"], [role="menuitem"], [role="tab"]',
     tags: ["wcag2a", "wcag412", "section508", "section508.22.a", "ACT"],

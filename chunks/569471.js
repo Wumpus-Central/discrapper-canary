@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(997841);
+n.d(t, { Z: () => M }), n(388685), n(997841);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -91,7 +91,7 @@ function O(e) {
         !0 === t.muted
             ? ((g = new Set(g)).add(e),
               m.setTimer(e, t.muteConfig, () => {
-                  (h[e].muted = !1), (g = new Set(g)).delete(e), L.emitChange();
+                  (h[e].muted = !1), (g = new Set(g)).delete(e), x.emitChange();
               }) && ((h[e].muted = !1), (g = new Set(g)).delete(e)))
             : (g = new Set(g)).delete(e);
 }
@@ -211,7 +211,7 @@ function D(e) {
         r
     );
 }
-class x extends (r = o.ZP.Store) {
+class L extends (r = o.ZP.Store) {
     hasJoined(e) {
         return e in h;
     }
@@ -237,8 +237,8 @@ class x extends (r = o.ZP.Store) {
         return g.has(e);
     }
 }
-d(x, "displayName", "JoinedThreadsStore");
-let L = new x(s.Z, {
+d(L, "displayName", "JoinedThreadsStore");
+let x = new L(s.Z, {
         CONNECTION_OPEN: v,
         OVERLAY_INITIALIZE: I,
         GUILD_CREATE: T,
@@ -254,4 +254,4 @@ let L = new x(s.Z, {
         THREAD_MEMBER_LOCAL_UPDATE: w,
         THREAD_MEMBERS_UPDATE: D,
     }),
-    j = L;
+    M = x;

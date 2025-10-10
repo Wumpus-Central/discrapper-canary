@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => k,
-    p: () => M,
+    p: () => j,
 }),
     n(953529);
 var r = n(951288),
@@ -29,14 +29,14 @@ var r = n(951288),
     A = n(474936),
     C = n(981631),
     N = n(388032),
-    R = n(398068),
-    P = n(885807),
-    w = n(456208),
+    R = n(124527),
+    P = n(591867),
+    w = n(325380),
     D = n(428946),
-    x = n(42948),
-    L = n(109194),
-    j = n(352812),
-    M = (function (e) {
+    L = n(42948),
+    x = n(109194),
+    M = n(352812),
+    j = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PARENT_CONTAINER = 1)] = "PARENT_CONTAINER"),
@@ -49,7 +49,7 @@ function k(e) {
             containerContext: t,
             image: n,
             title: a,
-            description: M,
+            description: j,
             enableSocialProof: k,
             analyticsLocationSection: U,
             upsellViewedTrackingData: G,
@@ -90,7 +90,7 @@ function k(e) {
         ee = (0, T.Z)(A.Si.TIER_2);
     if ($) {
         let e;
-        e = V ? ((0, m.rO)() ? D.Z : x.Z) : (0, m.rO)() ? L.Z : j.Z;
+        e = V ? ((0, m.rO)() ? D.Z : L.Z) : (0, m.rO)() ? x.Z : M.Z;
         let t = V ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -133,7 +133,7 @@ function k(e) {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
                                             className: R.body,
-                                            children: M,
+                                            children: j,
                                         }),
                                     ],
                                 }),
@@ -203,7 +203,7 @@ function k(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 className: P.body,
-                                children: M,
+                                children: j,
                             }),
                         ],
                     }),

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => a });
-var r = n(687516),
-    i = n(5192),
+var i = n(687516),
+    r = n(5192),
     l = n(388032);
 function a(e, t, n) {
-    let a = (0, r.Cf)(n),
-        o = i.ZP.getName(e.getGuildId(), e.id, t);
+    let a = (0, i.Cf)(n),
+        o = r.ZP.getName(e.getGuildId(), e.id, t);
     return null == n
         ? o
         : (null == a ? void 0 : a.name) != null

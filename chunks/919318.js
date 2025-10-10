@@ -28,8 +28,8 @@ var l = t(951288),
     w = t(388032),
     E = t(877762),
     S = t(430864),
-    A = t(931057);
-function k(e) {
+    k = t(931057);
+function A(e) {
     let n,
         t,
         { firstMedia: r, channelId: a } = e,
@@ -157,7 +157,7 @@ function M(e) {
                   })
                 : null,
             null == C && null != p
-                ? (0, l.jsx)(k, {
+                ? (0, l.jsx)(A, {
                       firstMedia: p,
                       channelId: n.channelId,
                   })
@@ -181,7 +181,7 @@ function L(e) {
                       }),
                       (0, l.jsx)("img", {
                           className: E.emptyStateImage,
-                          src: A,
+                          src: k,
                           alt: "",
                       }),
                       (0, l.jsx)("div", {

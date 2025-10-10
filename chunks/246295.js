@@ -1,26 +1,26 @@
 n.d(t, { V: () => o }), n(388685);
-var c = n(647438),
-    i = n(905693),
-    r = n(981631),
+var i = n(647438),
+    r = n(905693),
+    c = n(981631),
     l = n(388032);
 function o(e) {
-    let [t, n] = c.useState(!1),
-        [o, s] = c.useState(!1),
-        [a, d] = c.useState(!1);
+    let [t, n] = i.useState(!1),
+        [o, a] = i.useState(!1),
+        [s, u] = i.useState(!1);
     return {
-        rules: c.useMemo(() => {
-            let c = l.intl.format(l.t.S2lVJS, {
+        rules: i.useMemo(() => {
+            let i = l.intl.format(l.t.S2lVJS, {
                 onCommunityGuidelinesClick: () =>
-                    (0, i.lW)({
-                        articleId: r.BhN.PUBLIC_GUILD_GUILDLINES,
+                    (0, r.lW)({
+                        articleId: c.BhN.PUBLIC_GUILD_GUILDLINES,
                         guildId: e,
-                        modalStep: i.tK.AGREE_TO_RULES,
+                        modalStep: r.tK.AGREE_TO_RULES,
                     }),
                 onDiscoveryGuidelinesClick: () =>
-                    (0, i.lW)({
-                        articleId: r.BhN.SERVER_DISCOVERY_GUIDELINES,
+                    (0, r.lW)({
+                        articleId: c.BhN.SERVER_DISCOVERY_GUIDELINES,
                         guildId: e,
-                        modalStep: i.tK.AGREE_TO_RULES,
+                        modalStep: r.tK.AGREE_TO_RULES,
                     }),
             });
             return [
@@ -35,18 +35,18 @@ function o(e) {
                     key: "nonNSFW",
                     title: l.intl.string(l.t.iwnCh4),
                     body: l.intl.string(l.t.UKFzER),
-                    onCheck: () => s(!o),
+                    onCheck: () => a(!o),
                     checked: o,
                 },
                 {
                     key: "guidelines",
-                    title: c,
+                    title: i,
                     body: l.intl.string(l.t.u0Go2t),
-                    onCheck: () => d(!a),
-                    checked: a,
+                    onCheck: () => u(!s),
+                    checked: s,
                 },
             ];
-        }, [a, e, t, o]),
-        rulesAccepted: t && o && a,
+        }, [s, e, t, o]),
+        rulesAccepted: t && o && s,
     };
 }

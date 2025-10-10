@@ -6,7 +6,7 @@ var i = n(442837),
     a = n(594174),
     o = n(621853),
     s = n(835255),
-    c = n(465004);
+    c = n(855587);
 function u(e) {
     let { item: t, profileOwner: n, wishlistId: i, isOwner: a } = e;
     return (0, l.Q)(t)

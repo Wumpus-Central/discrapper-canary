@@ -88,19 +88,19 @@ function I(e) {
     let P = (0, f.a)(T).find((e) => e.value === c),
         w = +(null != P),
         D = null != S && null != P && S.variantId === P.value,
-        x = () => {
+        L = () => {
             null != P && (D ? (0, d.rX)(T.system, n, null) : (0, d.rX)(T.system, n, P.value));
         },
-        L = (0, r.jsx)(v, { url: t }),
-        j = null;
+        x = (0, r.jsx)(v, { url: t }),
+        M = null;
     return (1 === w && null != P
-        ? (j = (0, r.jsx)(o.Text, {
+        ? (M = (0, r.jsx)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: P.label,
           }))
         : null != C &&
-          (j = (0, r.jsxs)(o.Text, {
+          (M = (0, r.jsxs)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: ["Server Config: ", N],
@@ -129,12 +129,12 @@ function I(e) {
                                                       variant: "text-md/semibold",
                                                       children: T.title,
                                                   }),
-                                                  j,
+                                                  M,
                                               ],
                                           }),
                                       ],
                                   }),
-                                  L,
+                                  x,
                               ],
                           }),
                       }),
@@ -144,7 +144,7 @@ function I(e) {
                             fullWidth: !0,
                             variant: D ? "critical-primary" : "primary",
                             text: D ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
-                            onClick: x,
+                            onClick: L,
                         })
                       : (0, r.jsx)("div", {
                             className: m.experimentOverride,

@@ -1,6 +1,6 @@
 n.d(t, {
-    X9: () => j,
-    b8: () => M,
+    X9: () => M,
+    b8: () => j,
     hz: () => L,
 }),
     n(388685),
@@ -71,7 +71,7 @@ function x(e) {
         };
     }, [e.id, e.icon, e.name, e.bot]);
 }
-function j(e, t) {
+function M(e, t) {
     let { application: n, customId: i, components: a } = e,
         s = (0, f.Z)(),
         [u, _] = r.useState(null),
@@ -112,7 +112,7 @@ function j(e, t) {
         onSubmit: O,
     };
 }
-function M(e) {
+function j(e) {
     let { application: t, customId: n } = e,
         { applicationIconURL: r, applicationName: i, applicationBaseUrl: o } = x(t),
         s = g.Z.getChannel(e.channelId);

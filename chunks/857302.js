@@ -1,10 +1,10 @@
-r.d(t, { Z: () => a });
-var n = r(232567),
-    i = r(621853);
-function a(e, t) {
+n.d(t, { Z: () => l });
+var r = n(232567),
+    i = n(621853);
+function l(e, t) {
     if (i.Z.isFetchingFriends(e)) return;
-    let r = i.Z.getMutualFriendsCount(e);
-    if (0 === r) return;
-    let a = i.Z.getMutualFriends(e);
-    if (null == r || null == a || a.length !== r) return (0, n.Sr)(e, t);
+    let n = i.Z.getMutualFriendsCount(e);
+    if (0 === n) return;
+    let l = i.Z.getMutualFriends(e);
+    if (null == n || null == l || l.length !== n) return (0, r.Sr)(e, t);
 }

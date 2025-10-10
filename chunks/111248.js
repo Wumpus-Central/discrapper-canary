@@ -1,6 +1,6 @@
-n.d(t, { Z: () => _ }), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => C }), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -14,52 +14,52 @@ var r = n(951288),
     m = n(330831),
     g = n(315091);
 let b = "CameraPreviewPosition";
-function _(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: _, participants: y, onSelectParticipant: C } = e,
-        [x, v] = (function () {
-            let [e, t] = i.useState(() => s.K.get(b, h.VD2.BOTTOM_RIGHT));
+function C(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: C, participants: y, onSelectParticipant: _ } = e,
+        [v, x] = (function () {
+            let [e, t] = r.useState(() => s.K.get(b, h.VD2.BOTTOM_RIGHT));
             return [
                 e,
-                i.useCallback((e) => {
+                r.useCallback((e) => {
                     s.K.set(b, e), t(e);
                 }, []),
             ];
         })(),
-        O = i.useRef(null),
-        j = null == _.getGuildId() ? 70 : 50,
+        O = r.useRef(null),
+        j = null == C.getGuildId() ? 70 : 50,
         E = (0, o.e7)([d.Z], () => d.Z.pipWidth(f.cL.CAMERA_PREVIEW)),
         S = y.length,
-        I = E * S + 8 * (S - 1),
-        P = i.useMemo(
+        P = E * S + 8 * (S - 1),
+        I = r.useMemo(
             () => ({
                 minWidth: f.Rv[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1),
                 maxWidth: f.$i[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1),
             }),
             [S],
         );
-    i.useLayoutEffect(() => {
+    r.useLayoutEffect(() => {
         var e;
         null == (e = O.current) || e.ensureIsInPosition();
     }, [y.length]);
-    let Z = i.useCallback(
+    let Z = r.useCallback(
             (e) => {
                 let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
                 c.d7(t, f.cL.CAMERA_PREVIEW);
             },
             [S],
         ),
-        T = i.useCallback(
+        T = r.useCallback(
             (e, t) => {
-                v(t);
+                x(t);
             },
-            [v],
+            [x],
         );
-    return (0, r.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: m.container,
-        children: (0, r.jsx)(u._, {
-            position: x,
+        children: (0, i.jsx)(u._, {
+            position: v,
             id: 0,
-            width: I,
+            width: P,
             ref: O,
             onMove: T,
             onResize: Z,
@@ -69,22 +69,22 @@ function _(e) {
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: P,
-            children: (0, r.jsx)("div", {
+            resizeConfig: I,
+            children: (0, i.jsx)("div", {
                 className: m.tileContainer,
                 children: y.map((e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         p.ZP,
                         {
                             participant: e,
-                            channel: _,
+                            channel: C,
                             onContextMenu: n,
                             className: a()(m.tile, g.elevationHigh),
                             fit: p.BP.COVER,
                             inCall: !0,
                             inPopout: !1,
                             width: 160,
-                            onClick: C,
+                            onClick: _,
                         },
                         e.id,
                     ),

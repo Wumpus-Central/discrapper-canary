@@ -1,6 +1,6 @@
 n.d(t, {
     AZ: () => N,
-    BM: () => j,
+    BM: () => M,
     Cj: () => d,
     WY: () => C,
     YD: () => D,
@@ -10,7 +10,7 @@ n.d(t, {
     rj: () => p,
     vq: () => g,
     wh: () => w,
-    xj: () => L,
+    xj: () => x,
 }),
     n(415506),
     n(388685),
@@ -353,14 +353,14 @@ function D(e) {
                           },
             };
         })
-        .sort(x)[0].hex;
+        .sort(L)[0].hex;
 }
-function x(e, t) {
+function L(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function L(e) {
+function x(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;
@@ -373,7 +373,7 @@ function L(e) {
           ? void 0
           : t.toHexString();
 }
-function j(e, t, n) {
+function M(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),
         i = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),

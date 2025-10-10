@@ -41,10 +41,10 @@ let T = !1,
     P = !1,
     w = !0,
     D = Object.freeze([]),
-    x = Object.freeze([]),
-    L = [],
-    j = [];
-function M(e) {
+    L = Object.freeze([]),
+    x = [],
+    M = [];
+function j(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
@@ -88,14 +88,14 @@ function Z() {
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
         n = w || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
-    a()(N, n) || ((N = n), (R = M(n)), (t = !0));
+    a()(N, n) || ((N = n), (R = j(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
     D !== r && ((D = r), (t = !0));
     let i = O.Z.getHiddenActivities();
-    x !== i && (x = i),
+    L !== i && (L = i),
         t &&
-            (j = M(
-                (L = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+            (M = j(
+                (x = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                     .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                     .value()),
             ));
@@ -107,7 +107,7 @@ function V() {
     return (T = !1), Z();
 }
 function H() {
-    (w = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, L);
+    (w = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, x);
 }
 function Y() {
     H();
@@ -129,14 +129,14 @@ class W extends (r = l.ZP.Store) {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? j : R;
+        return e ? M : R;
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? L : N;
+        return e ? x : N;
     }
     getHiddenActivities() {
-        return x;
+        return L;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

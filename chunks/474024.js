@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,47 +8,47 @@ var r = n(951288),
     c = n(481060),
     d = n(314852),
     u = n(330705),
-    m = n(423252),
-    g = n(434404),
+    g = n(423252),
+    m = n(434404),
     p = n(436879),
     f = n(981631),
     h = n(388032),
-    b = n(250425);
-function x(e) {
+    x = n(109229);
+function b(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
-        x = n.id,
+        b = n.id,
         j = a.Y.VISIBLE.has(n.visibility),
-        v = (0, o.e7)([d.Z], () => {
+        _ = (0, o.e7)([d.Z], () => {
             var e;
-            return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
-        }, [x]),
-        _ = i.useRef(null);
-    (0, p.Z)(_, f.KsC.PROFILE_VISIBILITY);
-    let O = i.useCallback(() => {
+            return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
+        }, [b]),
+        v = i.useRef(null);
+    (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
+    let C = i.useCallback(() => {
             j
-                ? g.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED })
-                : g.Z.updateGuildProfile(x, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [x, v, j]),
-        y = i.useCallback(() => {
-            g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
+                ? m.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED })
+                : m.Z.updateGuildProfile(b, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [b, _, j]),
+        O = i.useCallback(() => {
+            m.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        C = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
+        y = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
-        className: b.twoColumnContainer,
-        ref: _,
+        className: x.twoColumnContainer,
+        ref: v,
         children: [
             (0, r.jsxs)("div", {
-                className: b.column,
+                className: x.column,
                 children: [
                     (0, r.jsx)(c.rsf, {
                         label: h.intl.string(h.t.fjHWen),
                         description: h.intl.string(h.t.J1YOV1),
                         checked: !j,
-                        onChange: O,
-                        disabled: C || !l,
+                        onChange: C,
+                        disabled: y || !l,
                     }),
-                    C &&
+                    y &&
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
@@ -57,7 +57,7 @@ function x(e) {
                                     (0, r.jsx)(
                                         c.eee,
                                         {
-                                            onClick: y,
+                                            onClick: O,
                                             children: e,
                                         },
                                         t,
@@ -67,9 +67,9 @@ function x(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s()(b.column, { [b.profileViewDisabled]: j }),
-                children: (0, r.jsx)(m.Z, {
-                    guildId: x,
+                className: s()(x.column, { [x.profileViewDisabled]: j }),
+                children: (0, r.jsx)(g.Z, {
+                    guildId: b,
                     name: null,
                 }),
             }),

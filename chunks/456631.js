@@ -1,36 +1,36 @@
 let r;
 n.d(t, {
-    H: () => g,
-    Z: () => O,
+    H: () => b,
+    Z: () => S,
 }),
     n(388685),
     n(290780);
-var l,
-    i,
+var i,
+    l,
     a = n(392711),
     o = n(442837),
-    u = n(780384),
+    c = n(780384),
     s = n(570140),
-    c = n(70956),
+    u = n(70956),
     d = n(963838),
     f = n(354459);
 let p = [],
-    m = {},
-    E = [],
-    g = (e) => {
+    _ = {},
+    m = [],
+    b = (e) => {
         null != e &&
             s.Z.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_CLEAR",
                 userId: e,
             });
     },
-    b = [],
-    S = 10 * c.Z.Millis.SECOND,
+    E = [],
+    g = 10 * u.Z.Millis.SECOND,
     v = (0, a.debounce)(() => {
-        let e = (0, d.cX)(E);
-        u.uv.announce(e, "polite"), (E = []);
+        let e = (0, d.cX)(m);
+        c.uv.announce(e, "polite"), (m = []);
     }, 500);
-class h extends (l = o.ZP.Store) {
+class h extends (i = o.ZP.Store) {
     get recentlyUsedEmojis() {
         return p;
     }
@@ -41,21 +41,21 @@ class h extends (l = o.ZP.Store) {
         return r;
     }
     getEffectForUserId(e) {
-        return m[e];
+        return _[e];
     }
 }
-(i = "displayName") in h
-    ? Object.defineProperty(h, i, {
+(l = "displayName") in h
+    ? Object.defineProperty(h, l, {
           value: "VoiceChannelEffectsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (h[i] = "VoiceChannelEffectsStore");
-let O = new h(s.Z, {
+    : (h[l] = "VoiceChannelEffectsStore");
+let S = new h(s.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
         let { userId: t } = e;
-        null != m[t] && delete m[t];
+        null != _[t] && delete _[t];
     },
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
         let { emoji: t } = e;
@@ -65,13 +65,13 @@ let O = new h(s.Z, {
         let { emoji: t, userId: n, animationType: r } = e;
         null != t &&
             null != r &&
-            ((m[n] = {
+            ((_[n] = {
                 emoji: t,
                 sentAt: Date.now(),
                 animationType: r,
             }),
-            (E = [
-                ...E,
+            (m = [
+                ...m,
                 {
                     emojiName: t.name,
                     userId: n,
@@ -81,10 +81,10 @@ let O = new h(s.Z, {
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
         let e = new Date();
-        if ((b = [e, ...b].slice(0, 20)).length >= 20) {
-            let t = b[b.length - 1],
+        if ((E = [e, ...E].slice(0, 20)).length >= 20) {
+            let t = E[E.length - 1],
                 n = e.getTime() - t.getTime();
-            n < S && (r = new Date(e.getTime() + S - n));
+            n < g && (r = new Date(e.getTime() + g - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {

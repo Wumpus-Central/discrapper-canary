@@ -91,20 +91,20 @@ async function I(e, t) {
         i &&
             a &&
             (a !== window.UserLeap.visitorId || window.UserLeap.token !== i) &&
-            (S("token", i),
-            S("vid", a),
+            (T("token", i),
+            T("vid", a),
             s.e.emit(s.S.VisitorIDUpdated, { visitorId: a }),
             (window.UserLeap.token = i),
             (window.UserLeap.visitorId = a));
     }
     return null != (i = l.json) && i.logMessage && console.warn(`[Sprig] ${l.json.logMessage}`), l;
 }
-function S(e, t) {
+function T(e, t) {
     let n = s.l.getItemObject("userleap.ids"),
         r = n[window.UserLeap.envId];
     r ? (r[e] = t) : (r = { [e]: t }), (n[window.UserLeap.envId] = r), s.l.setItemObject("userleap.ids", n);
 }
-function T() {
+function S() {
     return window.previewMode ? "0" : (window.UserLeap.visitorId ?? "");
 }
 function A(e, t, n) {
@@ -112,7 +112,7 @@ function A(e, t, n) {
     return (
         t &&
             t.forEach((e) => {
-                r.push(e), e === v ? r.push(window.UserLeap.envId) : e === O && r.push(T());
+                r.push(e), e === v ? r.push(window.UserLeap.envId) : e === O && r.push(S());
             }),
         n && r.push(n),
         r.join("/")
@@ -135,21 +135,21 @@ let C = async (e, t, r) => {
             surveyId: O,
             uuid: v,
             vid: I,
-            sessionReplay: S,
-            studyType: T,
+            sessionReplay: T,
+            studyType: S,
         } = e,
         A = (0, s.g)(window.UserLeap),
         C = R(A),
         P = N(A);
-    if (S)
+    if (T)
         if (C)
             s.e.emit(s.S.ReplayCapture, {
                 responseGroupUid: y,
                 hasQuestions: !!(null != g && g.length),
                 surveyId: O,
-                uploadId: S.uploadId,
-                replayType: S.replayDurationType ?? "before",
-                seconds: S.replayDurationSeconds,
+                uploadId: T.uploadId,
+                replayType: T.replayDurationType ?? "before",
+                seconds: T.replayDurationSeconds,
                 generateVideoUploadUrlPayload: {
                     mediaRecordingUid: (0, s.v)(),
                     mediaType: "screen",
@@ -175,7 +175,7 @@ let C = async (e, t, r) => {
                 responseGroupId: y,
                 surveyId: O,
                 visitorId: I,
-                replayParams: S,
+                replayParams: T,
                 completeUploadHeaders: A,
                 apiUrl: window.UserLeap._API_URL,
                 triggerTimestamp: Date.now(),
@@ -261,19 +261,19 @@ let C = async (e, t, r) => {
             "survey.id": O,
         });
     let w,
-        j,
+        M,
         k,
         U,
         G = document.createElement("div"),
         B = (e) => {
             let { "view.version": t } = e;
-            t !== A["x-ul-sdk-version"] && x(), s.e.removeListener("verify.view.version", B);
+            t !== A["x-ul-sdk-version"] && L(), s.e.removeListener("verify.view.version", B);
         };
     s.e.on("verify.view.version", B),
         (window.UserLeap.useMobileStyling = P),
         (0, s.h)(A)
             ? ((w = "ul-direct-embeded-frame"),
-              (j = document.head),
+              (M = document.head),
               (k = window),
               (U = !1),
               (() => {
@@ -286,7 +286,7 @@ let C = async (e, t, r) => {
                   (D(O, f),
                   (G.id = w),
                   window.UserLeap.container.appendChild(G),
-                  L(),
+                  x(),
                   s.e.emit(s.S.SurveyLifeCycle, { state: "presented" }),
                   s.e.emit(s.S.SurveyPresented, {
                       name: s.S.SurveyPresented,
@@ -294,11 +294,11 @@ let C = async (e, t, r) => {
                   })))
             : ({
                   frameId: w,
-                  contentWinDocHead: j,
+                  contentWinDocHead: M,
                   contentWindow: k,
                   hasOverlay: U,
                   iframe: G,
-              } = M({
+              } = j({
                   productConfig: m,
                   useMobileStyling: P,
                   surveyId: O,
@@ -331,7 +331,7 @@ let C = async (e, t, r) => {
         },
         responseGroupUid: y,
         startingQuestionIdx: null == (a = window.UserLeap.config) ? void 0 : a.startingQuestionIdx,
-        studyType: T,
+        studyType: S,
         styleNonce: window.UserLeap.styleNonce,
         surveyId: O,
         tabTitle: document.title,
@@ -389,7 +389,7 @@ let C = async (e, t, r) => {
                         once: !0,
                     },
                 ));
-    null == j || j.appendChild(H);
+    null == M || M.appendChild(H);
     let W = {
         success: !0,
         surveyState: "ready",
@@ -423,7 +423,7 @@ let w = "0px",
             ? r.appendChild(window.UserLeap.container)
             : document.body.appendChild(window.UserLeap.container);
     },
-    x = (e, t) => {
+    L = (e, t) => {
         var n;
         G();
         let r = window.UserLeap.container;
@@ -431,7 +431,7 @@ let w = "0px",
             try {
                 null == (n = r.parentNode) || n.removeChild(r),
                     (window.UserLeap.container = null),
-                    S("trackStartUrl", null),
+                    T("trackStartUrl", null),
                     s.e.emit(s.S.SurveyLifeCycle, { state: "dismissed" }),
                     s.e.emit(s.S.SurveyClosed, {
                         name: s.S.SurveyClosed,
@@ -444,12 +444,12 @@ let w = "0px",
                     t instanceof Error && window.UserLeap.reportError("dismissActiveSurvey", t);
             }
     },
-    L = () => {
+    x = () => {
         s.e.once(s.S.SurveyWillClose, ({ initiator: e, studyType: t }) => {
-            s.e.removeAllListeners(s.S.CloseSurveyOnOverlayClick), x(e, t);
+            s.e.removeAllListeners(s.S.CloseSurveyOnOverlayClick), L(e, t);
         });
     },
-    j = (e, t, n, r) => {
+    M = (e, t, n, r) => {
         var i, a;
         let o,
             s = {
@@ -534,15 +534,15 @@ let w = "0px",
             d
         );
     },
-    M = ({ productConfig: e, useMobileStyling: t, surveyId: n, isFeedback: r }) => {
+    j = ({ productConfig: e, useMobileStyling: t, surveyId: n, isFeedback: r }) => {
         var i, a;
         let o = P,
             l = r && "slider" === e.desktopDisplay;
         D(n, r, l), U();
         let c = document.createElement("iframe");
         (c.id = o), c.setAttribute("title", "Sprig User Feedback Dialog");
-        let u = j(c, e, t, r);
-        L();
+        let u = M(c, e, t, r);
+        x();
         let d = !1;
         c.setHeight = (e) => {
             (parseInt(c.style.height) == e && d) ||
@@ -1050,10 +1050,10 @@ let eg = (e) => {
     eO,
     ev,
     eI,
-    eS = {},
-    eT = (e, t = 1) => {
+    eT = {},
+    eS = (e, t = 1) => {
         let { name: n } = e;
-        eS[n] = (eS[n] || 0) + t;
+        eT[n] = (eT[n] || 0) + t;
     },
     eA = (e) => {
         let t = 1;
@@ -1076,20 +1076,20 @@ let eg = (e) => {
     eN = (e) => {
         switch (e.type) {
             case "childList":
-                return eT(ey, eC(e.addedNodes)), void eT(eO, eC(e.removedNodes));
+                return eS(ey, eC(e.addedNodes)), void eS(eO, eC(e.removedNodes));
             case "attributes":
-                return void eT(ev);
+                return void eS(ev);
             case "characterData":
-                return void eT(eI);
+                return void eS(eI);
         }
     },
     eR = (e) => e.forEach(eN),
     eP = () => {
-        ey.report(eS[ey.name] || 0),
-            eO.report(eS[eO.name] || 0),
-            ev.report(eS[ev.name] || 0),
-            eI.report(eS[eI.name] || 0),
-            (eS = {});
+        ey.report(eT[ey.name] || 0),
+            eO.report(eT[eO.name] || 0),
+            ev.report(eT[ev.name] || 0),
+            eI.report(eT[eI.name] || 0),
+            (eT = {});
     },
     ew = (e = 1000) => {
         (ey = (0, s.r)("sdk_mutations_nodes_added")),
@@ -1141,10 +1141,10 @@ let eg = (e) => {
                 })(),
                 ew());
     },
-    ex = "test",
-    eL = ["popState", "pushState", "replaceState"],
-    ej = {},
-    eM = "!email",
+    eL = "test",
+    ex = ["popState", "pushState", "replaceState"],
+    eM = {},
+    ej = "!email",
     ek = "pageUrl",
     eU = window.location.href;
 function eG(e) {
@@ -1178,7 +1178,7 @@ function eG(e) {
             c &&
             c !== window.location.href &&
             e &&
-            eL.includes(e.type) &&
+            ex.includes(e.type) &&
             window.UserLeap("dismissActiveSurvey", s.D.PageChange);
 }
 let eB = { capture: !0 },
@@ -1216,7 +1216,7 @@ function eH() {
         t = e[window.UserLeap.envId];
     (window.UserLeap.visitorId = t || (0, s.v)()),
         s.b.info("NewVid", { vid: window.UserLeap.visitorId }),
-        S("vid", window.UserLeap.visitorId),
+        T("vid", window.UserLeap.visitorId),
         t || ((e[window.UserLeap.envId] = window.UserLeap.visitorId), s.l.setItemObject("sprig.anon.env.vid.map", e)),
         s.e.emit(s.S.VisitorIDUpdated, { visitorId: window.UserLeap.visitorId });
 }
@@ -1272,8 +1272,8 @@ function eW() {
         ["hashchange", "popstate"].forEach((e) => window.addEventListener(e, eG, !0));
 }
 async function eK(e, t) {
-    let n = T();
-    e && !t && (window.UserLeap._config.mode = ex);
+    let n = S();
+    e && !t && (window.UserLeap._config.mode = eL);
     let r = N((0, s.g)(window.UserLeap)),
         i = await I(
             (function (e) {
@@ -1372,7 +1372,7 @@ let eq = function (e) {
             }
             let g = o ?? window.location.href;
             f.url || (f.url = g),
-                S("trackStartUrl", g),
+                T("trackStartUrl", g),
                 null != (r = null == (n = window.UserLeap) ? void 0 : n._config) &&
                     r.optimizelyEnabled &&
                     (R((0, s.g)(window.UserLeap)) || eh.getAndSetWebOptimizelyExperiments(),
@@ -1426,7 +1426,7 @@ let eq = function (e) {
                     }
                 );
             }
-            u && S("uid", u), d && S("aid", d);
+            u && T("uid", u), d && T("aid", d);
             let b = E.json;
             b.invalidPreviewKey && s.l.removeItem("sprig.previewKey");
             let y = f.trackPageView ? f.url : void 0;
@@ -1581,8 +1581,8 @@ let eq = function (e) {
                     );
                 }
                 if (a)
-                    for (let e of (a.email && !a[eM] && ((a[eM] = a.email), delete a.email), Object.keys(a)))
-                        a[e] === ej[e] && delete a[e];
+                    for (let e of (a.email && !a[ej] && ((a[ej] = a.email), delete a.email), Object.keys(a)))
+                        a[e] === eM[e] && delete a[e];
                 if (
                     !(
                         (a && 0 !== Object.keys(a).length) ||
@@ -1600,7 +1600,7 @@ let eq = function (e) {
                               body: JSON.stringify(a),
                               method: "PUT",
                           })).ok
-                            ? Object.assign(ej, a)
+                            ? Object.assign(eM, a)
                             : n.reportError &&
                               (console.warn("[Sprig] (ERR-432) identifyAndSetAttributes failed", n.error),
                               n.error && window.UserLeap.reportError("identifyAndSetAttributes", n.error))
@@ -1608,8 +1608,8 @@ let eq = function (e) {
                               body: JSON.stringify(o),
                               method: "PUT",
                           })),
-                    a && a[eM] && (window.UserLeap.email = a[eM]),
-                    n.ok && (r && S("uid", r), i && S("aid", i)),
+                    a && a[ej] && (window.UserLeap.email = a[ej]),
+                    n.ok && (r && T("uid", r), i && T("aid", i)),
                     { success: !!n.ok }
                 );
             },
@@ -1687,7 +1687,7 @@ let eq = function (e) {
                     });
                 i.ok
                     ? (r !== window.UserLeap.visitorId && (null == (n = s.m.replay) || n.clearUserReplayData()),
-                      S("uid", t))
+                      T("uid", t))
                     : i.reportError &&
                       (console.warn("[Sprig] (ERR-420) Failed to set user id", i.error),
                       i.error && window.UserLeap.reportError("setUserId", i.error));
@@ -1703,7 +1703,7 @@ let eq = function (e) {
                         }
                     );
                 }
-                return (window.UserLeap.partnerAnonymousId = e), S("aid", e), { success: !0 };
+                return (window.UserLeap.partnerAnonymousId = e), T("aid", e), { success: !0 };
             },
             track: async (e, n, r = {}, i) =>
                 t({
@@ -1830,7 +1830,7 @@ let eq = function (e) {
             setVisitorAttribute: (e, t) => (
                 console.warn("[Sprig] setVisitorAttribute is deprecated. Please use setAttribute"), r.setAttribute(e, t)
             ),
-            setEmail: async (e) => r.setAttribute(eM, e),
+            setEmail: async (e) => r.setAttribute(ej, e),
             setVisitorEmail: async (e) => (
                 console.warn("[Sprig] setVisitorEmail is deprecated. Please use setEmail"), r.setEmail(e)
             ),
@@ -1891,7 +1891,7 @@ let eq = function (e) {
 };
 async function eX(e, t, n = {}, r = {}) {
     let i = window.__cfg && window.__cfg.mode,
-        a = T(),
+        a = S(),
         l = window.UserLeap.envId,
         c = window.document.documentElement,
         u = {
@@ -1950,8 +1950,8 @@ function eQ(e = {}) {
             c = window.UserLeap.sampleRate,
             u = l.sampled;
         if (c) {
-            if ((null === u && S("sampled", (u = Math.random() < c)), !u)) return;
-        } else null !== u && S("sampled", null);
+            if ((null === u && T("sampled", (u = Math.random() < c)), !u)) return;
+        } else null !== u && T("sampled", null);
         window.UserLeap._API_URL || (window.UserLeap._API_URL = "https://api.sprig.com");
         let d = [...window.UserLeap._queue];
         (window.UserLeap._queue = new em(window.UserLeap, [])), window.UserLeap._queue.pause();
@@ -2036,7 +2036,7 @@ function eQ(e = {}) {
             }),
             s.e.emit(s.S.VisitorIDUpdated, { visitorId: window.UserLeap.visitorId }),
             s.e.on(s.S.VisitorIDUpdated, () => {
-                for (let e in ej) delete ej[e];
+                for (let e in eM) delete eM[e];
             });
     }
     (window.UserLeap.UPDATES = s.E),

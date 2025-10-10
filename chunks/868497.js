@@ -8,20 +8,20 @@ var r = a(873567),
     E = a(73453),
     s = a(696486),
     l = a(789112),
-    u = a(793373),
-    I = a(152228),
+    I = a(793373),
+    u = a(152228),
     R = a(305625);
 function d(t, e, a, N, A = "auto.http.browser") {
     if (!t.fetchData) return;
-    let f = (0, E.z)() && e(t.fetchData.url);
-    if (t.endTimestamp && f) {
+    let T = (0, E.z)() && e(t.fetchData.url);
+    if (t.endTimestamp && T) {
         let e = t.fetchData.__span;
         if (!e) return;
         let a = N[e];
         a &&
             ((function (t, e) {
                 if (e.response) {
-                    (0, u.Q0)(t, e.response.status);
+                    (0, I.Q0)(t, e.response.status);
                     let a = e.response && e.response.headers && e.response.headers.get("content-length");
                     if (a) {
                         let e = parseInt(a);
@@ -30,7 +30,7 @@ function d(t, e, a, N, A = "auto.http.browser") {
                 } else
                     e.error &&
                         t.setStatus({
-                            code: u.jt,
+                            code: I.jt,
                             message: "internal_error",
                         });
                 t.end();
@@ -38,7 +38,7 @@ function d(t, e, a, N, A = "auto.http.browser") {
             delete N[e]);
         return;
     }
-    let T = (0, i.nZ)(),
+    let f = (0, i.nZ)(),
         L = (0, i.s3)(),
         { method: p, url: h } = t.fetchData,
         O = (function (t) {
@@ -51,8 +51,8 @@ function d(t, e, a, N, A = "auto.http.browser") {
         P = O ? (0, r.en)(O).host : void 0,
         g = !!(0, s.HN)(),
         D =
-            f && g
-                ? (0, I.qp)({
+            T && g
+                ? (0, u.qp)({
                       name: `${p} ${h}`,
                       attributes: {
                           url: h,
@@ -73,14 +73,14 @@ function d(t, e, a, N, A = "auto.http.browser") {
             let {
                     traceId: E,
                     spanId: l,
-                    sampled: u,
-                    dsc: I,
+                    sampled: I,
+                    dsc: u,
                 } = {
                     ...(0, i.aF)().getPropagationContext(),
                     ...a.getPropagationContext(),
                 },
-                d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, u),
-                N = (0, n.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
+                d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, I),
+                N = (0, n.IQ)(u || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
                 A = r.headers || ("undefined" != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
             if (!A)
                 return {
@@ -108,7 +108,7 @@ function d(t, e, a, N, A = "auto.http.browser") {
                     }
                 );
             }
-        })(e, L, T, a, (0, E.z)() && g ? D : void 0);
+        })(e, L, f, a, (0, E.z)() && g ? D : void 0);
     }
     return D;
 }

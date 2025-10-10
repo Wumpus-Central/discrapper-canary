@@ -1,16 +1,16 @@
-n.d(t, { Z: () => c }), n(388685);
-var r = n(509613),
-    i = n(960412),
-    l = n(151662),
-    o = n(313789),
+n.d(e, { Z: () => c }), n(388685);
+var i = n(509613),
+    l = n(960412),
+    u = n(151662),
+    r = n(313789),
     s = n(996231),
     a = n(663623),
-    u = n(388032);
-let c = (0, r.k4)(o.n.NOTIFICATIONS_EMAIL_CATEGORY, {
-    useTitle: () => u.intl.string(u.t["w/qqKC"]),
+    o = n(388032);
+let c = (0, i.k4)(r.n.NOTIFICATIONS_EMAIL_CATEGORY, {
+    useTitle: () => o.intl.string(o.t["w/qqKC"]),
     init: function () {
-        let { initialized: e } = l.Z.getEmailSettings();
-        e || (0, i.Y7)();
+        let { initialized: t } = u.Z.getEmailSettings();
+        t || (0, l.Y7)();
     },
     buildLayout: () => [...s.Z, a.Z],
 });

@@ -1,4 +1,4 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => g }), r(388685);
 var n = r(951288),
     s = r(647438),
     i = r(481060),
@@ -60,7 +60,7 @@ class b extends s.PureComponent {
                                     placeholder: h.intl.string(h.t.xV9hVl),
                                     autoFocus: !0,
                                 }),
-                                (0, n.jsx)(i.NIc, {
+                                (0, n.jsx)(i.gNt, {
                                     label: h.intl.string(h.t.xpurRE),
                                     children: (0, n.jsx)(d, {
                                         defaultColor: c.Wyy,
@@ -151,4 +151,4 @@ class b extends s.PureComponent {
             });
     }
 }
-let f = b;
+let g = b;

@@ -1,5 +1,5 @@
 let r, i, a, o;
-n.d(t, { Z: () => F }), n(472816), n(794429), n(642613), n(388685), n(539854), n(583741);
+n.d(t, { Z: () => V }), n(472816), n(794429), n(642613), n(388685), n(539854), n(583741);
 var s,
     l = n(392711),
     c = n.n(l),
@@ -74,19 +74,19 @@ function R(e, t) {
 let P = {},
     w = {},
     D = {},
-    x = [],
-    L = {},
-    j = {
+    L = [],
+    x = {},
+    M = {
         status: "ok",
         lastRequest: null,
         lastResponse: null,
     },
-    M = [],
+    j = [],
     k = [],
     U = 75,
     G = 25;
 function B() {
-    M = h.Z.getProps()
+    j = h.Z.getProps()
         .results.filter((e) => e.type === _.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -155,26 +155,26 @@ class Z extends (s = u.ZP.PersistedStore) {
         return !(null == i ? void 0 : i.fetching) && 0 === o;
     }
     channelAffinities() {
-        return x;
-    }
-    channelAffinitiesById() {
         return L;
     }
+    channelAffinitiesById() {
+        return x;
+    }
     channelAffinitiesStatus() {
-        return j;
+        return M;
     }
     shouldFetchChannelAffinities() {
         return !(
-            "fetching" === j.status ||
-            (null != j.lastResponse && Date.now() - j.lastResponse < 30 * v.Z.Millis.SECOND)
+            "fetching" === M.status ||
+            (null != M.lastResponse && Date.now() - M.lastResponse < 30 * v.Z.Millis.SECOND)
         );
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: r, numChannels: i = G } = e,
             a = [];
         return (
-            t && (a = a.concat(M)),
-            n && (a = a.concat(x.map((e) => e.channel_id))),
+            t && (a = a.concat(j)),
+            n && (a = a.concat(L.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
                     let t = m.Z.getChannel(e);
@@ -190,12 +190,12 @@ class Z extends (s = u.ZP.PersistedStore) {
         return a;
     }
 }
-function V(e, t, n, r) {
+function F(e, t, n, r) {
     let i = null == t || t < n;
     return !(null == e || e > r) && !i;
 }
 A(Z, "persistKey", "SummaryStore");
-let F = new Z(d.Z, {
+let V = new Z(d.Z, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {
         let { channelId: t } = e;
@@ -285,7 +285,7 @@ let F = new Z(d.Z, {
                 a =
                     null == (n = P[t])
                         ? void 0
-                        : n.findIndex((t) => V(e.topVisibleMessage, e.bottomVisibleMessage, t.startId, t.endId));
+                        : n.findIndex((t) => F(e.topVisibleMessage, e.bottomVisibleMessage, t.startId, t.endId));
             }
     },
     SET_SELECTED_SUMMARY(e) {
@@ -304,7 +304,7 @@ let F = new Z(d.Z, {
         null != n ? (D[t.id] = n) : delete D[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        j = R(C({}, j), {
+        M = R(C({}, M), {
             status: "fetching",
             lastRequest: Date.now(),
         });
@@ -313,20 +313,20 @@ let F = new Z(d.Z, {
         var t;
         let { affinities: n, error: r } = e;
         if (null != r) {
-            (x = []),
-                (L = {}),
-                (j = R(C({}, j), {
+            (L = []),
+                (x = {}),
+                (M = R(C({}, M), {
                     status: "error",
                     lastResponse: Date.now(),
                 }));
             return;
         }
-        (x = null != n ? n : []),
-            (L =
+        (L = null != n ? n : []),
+            (x =
                 null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}))
                     ? t
                     : {}),
-            (j = R(C({}, j), {
+            (M = R(C({}, M), {
                 status: "ok",
                 lastResponse: Date.now(),
             }));

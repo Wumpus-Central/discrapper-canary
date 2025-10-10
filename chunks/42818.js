@@ -1,5 +1,5 @@
 n.d(t, {
-    As: () => M,
+    As: () => j,
     By: () => k,
     Lu: () => U,
     e9: () => Y,
@@ -91,7 +91,7 @@ let D = (e, t) => {
         var n;
         return !!(null == (n = e.discounts) ? void 0 : n.some((e) => e.type === t));
     },
-    x = (e, t) => {
+    L = (e, t) => {
         var n, r, i;
         return (
             e.subscriptionPlanPrice -
@@ -100,7 +100,7 @@ let D = (e, t) => {
                 : 0)
         );
     };
-function L(e, t, n, r) {
+function x(e, t, n, r) {
     let i = D(e, d.eW.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case T.Xh.PREMIUM_MONTH_LEGACY:
@@ -137,7 +137,7 @@ function L(e, t, n, r) {
     }
     throw Error("Unexpected invoice plan: ".concat(e.subscriptionPlanId));
 }
-function j(e) {
+function M(e) {
     var t;
     let {
             invoiceItem: n,
@@ -152,7 +152,7 @@ function j(e) {
         h = (0, c.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
         m = null == (t = (0, O.N)(f)) ? void 0 : t.subscription_trial;
     l()(null != h, "Missing subscriptionPlan");
-    let b = L(
+    let b = x(
         n,
         h,
         d,
@@ -203,7 +203,7 @@ function j(e) {
         inTrialPeriod: _,
     });
 }
-function M(e) {
+function j(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)("div", {
         className: C.invoiceItemLabelWithIcon,
@@ -244,7 +244,7 @@ function k(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != a
-                ? (0, r.jsx)(j, {
+                ? (0, r.jsx)(M, {
                       invoiceItem: a,
                       currency: t.currency,
                       isPrepaidPaymentSource: n,
@@ -284,7 +284,7 @@ function U(e) {
                 e.discounts.find((e) => e.type === d.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION),
         ),
         f = D(s, d.eW.PREMIUM_TRIAL),
-        _ = x(s, d.eW.SUBSCRIPTION_PLAN),
+        _ = L(s, d.eW.SUBSCRIPTION_PLAN),
         p = s.quantity * _,
         h = s.amount + (null != c ? c.amount : 0) - p + (null != u ? u.amount : 0),
         m = o
@@ -296,7 +296,7 @@ function U(e) {
             .reduce((e, t) => e + t.amount, 0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j, {
+            (0, r.jsx)(M, {
                 invoiceItem: s,
                 currency: t.currency,
                 overrideAmount: p,
@@ -306,7 +306,7 @@ function U(e) {
             0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(M, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, {
                               planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name,
                           }),
@@ -316,7 +316,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(M, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.string(A.t["+as5ZW"]),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD),
@@ -364,7 +364,7 @@ function Z(e) {
         children: A.intl.format(A.t.JWWD4O, { renewalDate: c }),
     });
 }
-function V(e) {
+function F(e) {
     let { isUpdate: t, currentInvoice: n, newInvoice: i, inTrialPeriod: a } = e,
         s = null != n ? (0, y.j)(n.invoiceItems) : null,
         l = null != n ? (0, g.dn)(n) : null,
@@ -379,7 +379,7 @@ function V(e) {
                           (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.tuqjWV) }),
                           B(G((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, r.jsx)(
-                                  j,
+                                  M,
                                   {
                                       invoiceItem: e,
                                       currency: n.currency,
@@ -398,7 +398,7 @@ function V(e) {
                     null != s &&
                     !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, r.jsx)(
-                    j,
+                    M,
                     {
                         invoiceItem: e,
                         currency: i.currency,
@@ -423,7 +423,7 @@ function V(e) {
         ],
     });
 }
-function F(e) {
+function V(e) {
     var t;
     let {
             proratedInvoice: n,
@@ -499,7 +499,7 @@ function H(e) {
             d
                 ? null
                 : (0, r.jsx)(v.P7, {
-                      children: (0, r.jsx)(F, {
+                      children: (0, r.jsx)(V, {
                           proratedInvoice: n,
                           renewalInvoice: a,
                           isTrial: l,
@@ -523,7 +523,7 @@ function H(e) {
                             ],
                         }),
                         O
-                            ? (0, r.jsx)(V, {
+                            ? (0, r.jsx)(F, {
                                   isUpdate: s,
                                   currentInvoice: y,
                                   newInvoice: a,

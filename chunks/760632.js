@@ -1,48 +1,48 @@
-n.d(t, { M: () => g });
+n.d(t, { M: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(434404),
-    s = n(388032);
+    s = n(434404),
+    a = n(388032);
 let o = "".concat(60),
     c = "".concat(300),
     d = "".concat(900),
     u = "".concat(1800),
-    m = "".concat(3600);
-function g(e) {
-    let { canManageGuild: t, afkTimeout: n, afkChannelId: g } = e,
+    g = "".concat(3600);
+function m(e) {
+    let { canManageGuild: t, afkTimeout: n, afkChannelId: m } = e,
         p = i.useMemo(
             () => [
                 {
                     value: o,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 1 }),
+                    label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 1 }),
                 },
                 {
                     value: c,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 5 }),
+                    label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 5 }),
                 },
                 {
                     value: d,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 15 }),
+                    label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 15 }),
                 },
                 {
                     value: u,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 30 }),
+                    label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 30 }),
                 },
                 {
-                    value: m,
-                    label: s.intl.formatToPlainString(s.t.xCjYxM, { hours: 1 }),
+                    value: g,
+                    label: a.intl.formatToPlainString(a.t.xCjYxM, { hours: 1 }),
                 },
             ],
             [],
         ),
-        h = i.useCallback((e) => {
-            a.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
+        f = i.useCallback((e) => {
+            s.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
     return (0, r.jsx)(l.q4e, {
         value: null == n ? null : "".concat(n),
         options: p,
-        isDisabled: null == g || !t,
-        onChange: h,
+        isDisabled: null == m || !t,
+        onChange: f,
     });
 }

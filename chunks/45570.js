@@ -1,17 +1,17 @@
 n.d(t, { Z: () => o });
 var a = n(951288);
 n(647438);
-var l = n(481060),
-    r = n(547972),
-    i = n(326528);
+var i = n(481060),
+    l = n(547972),
+    r = n(326528);
 function o() {
-    return (0, i.b)().map((e) =>
+    return (0, r.b)().map((e) =>
         (0, a.jsx)(
-            l.sNh,
+            i.sNh,
             {
                 id: e.id,
                 label: e.title,
-                action: () => (0, r.Z)(e.id),
+                action: () => (0, l.Z)(e.id),
             },
             e.id,
         ),

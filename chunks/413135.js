@@ -153,10 +153,10 @@ function O(e, t, n) {
             case "utf-8":
                 return D(this, t, n);
             case "ascii":
-                return j(this, t, n);
+                return M(this, t, n);
             case "latin1":
             case "binary":
-                return M(this, t, n);
+                return j(this, t, n);
             case "base64":
                 return w(this, t, n);
             case "ucs2":
@@ -306,7 +306,7 @@ function D(e, t, n) {
             r.push(u),
             (i += d);
     }
-    return L(r);
+    return x(r);
 }
 (r = 2147483647),
     (c.TYPED_ARRAY_SUPPORT = (function e() {
@@ -521,20 +521,20 @@ function D(e, t, n) {
             data: Array.prototype.slice.call(this._arr || this, 0),
         };
     });
-var x = 4096;
-function L(e) {
+var L = 4096;
+function x(e) {
     var t = e.length;
-    if (t <= x) return String.fromCharCode.apply(String, e);
-    for (var n = "", r = 0; r < t; ) n += String.fromCharCode.apply(String, e.slice(r, (r += x)));
+    if (t <= L) return String.fromCharCode.apply(String, e);
+    for (var n = "", r = 0; r < t; ) n += String.fromCharCode.apply(String, e.slice(r, (r += L)));
     return n;
 }
-function j(e, t, n) {
+function M(e, t, n) {
     var r = "";
     n = Math.min(e.length, n);
     for (var i = t; i < n; ++i) r += String.fromCharCode(127 & e[i]);
     return r;
 }
-function M(e, t, n) {
+function j(e, t, n) {
     var r = "";
     n = Math.min(e.length, n);
     for (var i = t; i < n; ++i) r += String.fromCharCode(e[i]);
@@ -562,7 +562,7 @@ function B(e, t, n, r, i, a) {
 function Z(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError("Index out of range");
 }
-function V(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     return (
         (t *= 1),
         (n >>>= 0),
@@ -571,7 +571,7 @@ function V(e, t, n, r, i) {
         n + 4
     );
 }
-function F(e, t, n, r, i) {
+function V(e, t, n, r, i) {
     return (
         (t *= 1),
         (n >>>= 0),
@@ -809,16 +809,16 @@ function F(e, t, n, r, i) {
         );
     }),
     (c.prototype.writeFloatLE = function (e, t, n) {
-        return V(this, e, t, !0, n);
-    }),
-    (c.prototype.writeFloatBE = function (e, t, n) {
-        return V(this, e, t, !1, n);
-    }),
-    (c.prototype.writeDoubleLE = function (e, t, n) {
         return F(this, e, t, !0, n);
     }),
-    (c.prototype.writeDoubleBE = function (e, t, n) {
+    (c.prototype.writeFloatBE = function (e, t, n) {
         return F(this, e, t, !1, n);
+    }),
+    (c.prototype.writeDoubleLE = function (e, t, n) {
+        return V(this, e, t, !0, n);
+    }),
+    (c.prototype.writeDoubleBE = function (e, t, n) {
+        return V(this, e, t, !1, n);
     }),
     (c.prototype.copy = function (e, t, n, r) {
         if (!c.isBuffer(e)) throw TypeError("argument should be a Buffer");

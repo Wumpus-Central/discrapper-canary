@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(442837),
     d = n(28664),
     u = n(481060),
-    m = n(239091),
-    g = n(749210),
+    g = n(239091),
+    m = n(749210),
     p = n(493773),
     f = n(607070),
     h = n(134433),
@@ -33,7 +33,7 @@ function w(e) {
         {
             guild: c,
             role: d,
-            highestRole: g,
+            highestRole: m,
             selectedItem: p,
             onClick: f,
             currentPosition: x,
@@ -42,12 +42,12 @@ function w(e) {
             onDragComplete: C,
             roleStyle: y,
         } = e,
-        N = (0, O.T)(c, g, d),
+        N = (0, O.T)(c, m, d),
         E = (0, j.fI)(d),
         S = null == N && !E,
         w = (null == (t = d.tags) ? void 0 : t.guild_connections) !== void 0,
-        R = (0, b._f)(c.id, d, d.colorStrings),
-        [, Z] = (0, a.c)({
+        Z = (0, b._f)(c.id, d, d.colorStrings),
+        [, R] = (0, a.c)({
             type: P,
             item: () => (
                 _(d.id),
@@ -85,13 +85,13 @@ function w(e) {
             : "dot" === y
               ? (0, r.jsx)(u.FhE, {
                     color: L,
-                    colors: R,
+                    colors: Z,
                     background: !1,
                     tooltip: !1,
                 })
               : (0, r.jsx)(u.xko, {
                     color: L,
-                    colors: R,
+                    colors: Z,
                 })),
         (0, r.jsxs)(u.njP.Item, {
             className: s()(T.row, {
@@ -103,7 +103,7 @@ function w(e) {
             itemType: "side",
             onClick: f,
             onContextMenu: function (e) {
-                (0, m.jW)(e, async () => {
+                (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                     return (t) => {
                         var n, i;
@@ -159,7 +159,7 @@ function w(e) {
             "aria-label": d.name,
             clickableRef: (e) => {
                 var t;
-                Z(A(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                R(A(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 l,
@@ -179,14 +179,14 @@ function w(e) {
         })
     );
 }
-function R(e) {
+function Z(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, c.e7)([C.Z], () => C.Z.roles),
-        m = (0, c.e7)([_.Z], () => _.Z.getHighestRole(t)),
+        g = (0, c.e7)([_.Z], () => _.Z.getHighestRole(t)),
         h = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         [b, j] = i.useState(o.length),
         { scrolledToTop: O, handleScroll: I } = (0, N.V)(),
-        { handleDragStart: P, handleDragReset: R, handleDragComplete: Z } = (0, y.Z)(o),
+        { handleDragStart: P, handleDragReset: Z, handleDragComplete: R } = (0, y.Z)(o),
         D = i.useRef(null),
         A = i.useCallback(
             (e) => {
@@ -237,7 +237,7 @@ function R(e) {
                                 children: (0, r.jsx)(u.P3F, {
                                     className: T.addRole,
                                     onClick: () => {
-                                        g.Z.createRole(t.id), a(E.ZI.DISPLAY);
+                                        m.Z.createRole(t.id), a(E.ZI.DISPLAY);
                                     },
                                     children: (0, r.jsx)(u.qJs, {
                                         size: "custom",
@@ -263,13 +263,13 @@ function R(e) {
                                     {
                                         guild: t,
                                         role: e,
-                                        highestRole: m,
+                                        highestRole: g,
                                         selectedItem: n,
                                         onClick: () => l(e.id),
                                         currentPosition: i,
                                         onDragStart: P,
-                                        onDragReset: R,
-                                        onDragComplete: Z,
+                                        onDragReset: Z,
+                                        onDragComplete: R,
                                         roleStyle: h,
                                     },
                                     e.id,

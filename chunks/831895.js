@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
-    o = n.n(a),
-    l = n(481060),
+    l = n.n(a),
+    o = n(481060),
     s = n(347896),
     d = n(699758),
     C = n(913338),
@@ -13,36 +13,36 @@ function p(e) {
     var t, n, a, p;
     let { defaultCategory: _, onCategoryChange: f, className: h } = e,
         [m, x] = i.useState(_),
-        [g, j] = i.useState(null),
+        [j, g] = i.useState(null),
         b = (0, s.Z)(),
-        L = i.useMemo(
+        y = i.useMemo(
             () => [
                 {
                     name: c.intl.string(c.t["6Zuiv7"]),
                     value: d.KN.Trick,
                     key: "Trick",
-                    icon: (0, r.jsx)(l.yDF, {
+                    icon: (0, r.jsx)(o.yDF, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => j(d.KN.Trick),
-                    onMouseLeave: () => j(null),
+                    onMouseEnter: () => g(d.KN.Trick),
+                    onMouseLeave: () => g(null),
                 },
                 {
                     name: c.intl.string(c.t["2UeOlZ"]),
                     value: d.KN.Treat,
                     key: "Treat",
-                    icon: (0, r.jsx)(l.sq, {
+                    icon: (0, r.jsx)(o.sq, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => j(d.KN.Treat),
-                    onMouseLeave: () => j(null),
+                    onMouseEnter: () => g(d.KN.Treat),
+                    onMouseLeave: () => g(null),
                 },
             ],
             [],
         ),
-        y = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 x(e.value), f(e.value);
             },
@@ -57,39 +57,39 @@ function p(e) {
                 ? void 0
                 : a.getAnimationData;
     return (0, r.jsxs)("div", {
-        className: o()(u.container, h),
+        className: l()(u.container, h),
         children: [
             (0, r.jsx)(C.w, {
-                options: L,
+                options: y,
                 value: m,
-                onChange: y,
+                onChange: L,
             }),
-            g === d.KN.Trick &&
+            j === d.KN.Trick &&
                 null != v &&
                 (0, r.jsx)("div", {
-                    className: o()(u.animationOverlay, u.trickAnimation),
-                    children: (0, r.jsx)(l.Fmz, {
+                    className: l()(u.animationOverlay, u.trickAnimation),
+                    children: (0, r.jsx)(o.Fmz, {
                         shouldAnimate: !0,
                         loop: !0,
                         autoplay: !0,
                         className: u.lottieAnimation,
                         importData: v,
-                        renderer: l.Fmz.Renderers.SVG,
-                        versionKey: +(g === d.KN.Trick),
+                        renderer: o.Fmz.Renderers.SVG,
+                        versionKey: +(j === d.KN.Trick),
                     }),
                 }),
-            g === d.KN.Treat &&
+            j === d.KN.Treat &&
                 null != S &&
                 (0, r.jsx)("div", {
-                    className: o()(u.animationOverlay, u.treatAnimation),
-                    children: (0, r.jsx)(l.Fmz, {
+                    className: l()(u.animationOverlay, u.treatAnimation),
+                    children: (0, r.jsx)(o.Fmz, {
                         shouldAnimate: !0,
                         loop: !0,
                         autoplay: !0,
                         className: u.lottieAnimation,
                         importData: S,
-                        renderer: l.Fmz.Renderers.SVG,
-                        versionKey: +(g === d.KN.Treat),
+                        renderer: o.Fmz.Renderers.SVG,
+                        versionKey: +(j === d.KN.Treat),
                     }),
                 }),
         ],

@@ -2,25 +2,25 @@ n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(570140),
+    s = n(481060),
+    a = n(570140),
     o = n(355467),
     c = n(37234),
     d = n(821849),
     u = n(774078),
-    m = n(100527),
-    g = n(15640),
+    g = n(100527),
+    m = n(15640),
     p = n(774380),
-    h = n(404270),
-    f = n(441536),
-    b = n(174604),
-    x = n(399829),
+    f = n(404270),
+    h = n(441536),
+    x = n(174604),
+    b = n(399829),
     j = n(428862),
-    v = n(899667),
-    _ = n(626135),
-    O = n(267642),
-    y = n(63063),
-    C = n(999382),
+    _ = n(899667),
+    v = n(626135),
+    C = n(267642),
+    O = n(63063),
+    y = n(999382),
     N = n(981631),
     E = n(388032),
     I = n(424359);
@@ -43,12 +43,12 @@ function S(e) {
 }
 function T(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
-        i = (0, O.gZ)(t, n),
-        l = (0, O.nW)((0, O.Jh)(n));
+        i = (0, C.gZ)(t, n),
+        l = (0, C.nW)((0, C.Jh)(n));
     if (null == i || null == l) return null;
-    let s = (0, O._k)(t, n);
-    return (0, r.jsxs)(a.Wn, {
-        messageType: a.QYI.WARNING,
+    let a = (0, C._k)(t, n);
+    return (0, r.jsxs)(s.Wn, {
+        messageType: s.QYI.WARNING,
         children: [
             (0, r.jsx)("div", {
                 className: I.guildBoostingGracePeriodTitle,
@@ -56,14 +56,14 @@ function T(e) {
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
-                appliedGuildBoostsToMaintain: s,
+                appliedGuildBoostsToMaintain: a,
                 tierName: l,
             }),
         ],
     });
 }
 let P = (e) => {
-    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: i, tier: l, tiers: a, tierIndex: s, guildId: o } = e;
+    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: i, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
     return (0, r.jsx)(
         j.Z,
         {
@@ -71,7 +71,7 @@ let P = (e) => {
             tier: l,
             onSetRef: n,
             isAnimatedTo: t,
-            hasBottomMargin: s !== a.length - 1,
+            hasBottomMargin: a !== s.length - 1,
             guildId: o,
         },
         l.tier,
@@ -79,19 +79,19 @@ let P = (e) => {
 };
 function w() {
     i.useEffect(() => {
-        s.Z.wait(() => {
+        a.Z.wait(() => {
             (0, o.tZ)(), (0, d.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
-        t = (0, l.e7)([v.Z], () => (null != e ? v.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
-        n = (0, g.V)();
+    let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),
+        t = (0, l.e7)([_.Z], () => (null != e ? _.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
+        n = (0, m.V)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(a.vwX, {
-                        tag: a.RB0.H1,
+                    (0, r.jsx)(s.vwX, {
+                        tag: s.RB0.H1,
                         children: E.intl.string(E.t.nLovSU),
                     }),
                     null != t && null != e
@@ -100,32 +100,32 @@ function w() {
                               guildId: e.id,
                           })
                         : null,
-                    (0, r.jsx)(a.R94, {
-                        type: a.R94.Types.DESCRIPTION,
+                    (0, r.jsx)(s.R94, {
+                        type: s.R94.Types.DESCRIPTION,
                         className: I.titleBlurb,
                         children: E.intl.format(E.t.hLOkp6, {
-                            helpdeskArticle: y.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
+                            helpdeskArticle: O.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
                         }),
                     }),
                 ],
             }),
             null != e &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(x.Z, {
                     guild: e,
                     onButtonClick: function () {
-                        null != e && ((0, c.xf)(), (0, f.Z)(e.id, m.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
+                        null != e && ((0, c.xf)(), (0, h.Z)(e.id, g.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
                     },
                 }),
-            (0, r.jsx)(x.Z, {
-                tiers: (0, O.cP)(null != e && e.features.has(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
+            (0, r.jsx)(b.Z, {
+                tiers: (0, C.cP)(null != e && e.features.has(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
                 renderTier: P,
             }),
             (0, r.jsx)("div", { className: I.divider }),
-            n ? (0, r.jsx)(h.Z, {}) : null,
+            n ? (0, r.jsx)(f.Z, {}) : null,
             n
                 ? (0, r.jsx)(p.Z, {
                       onOpenPremiumClick: () =>
-                          void _.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void v.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
                                   page: N.ZY5.GUILD_SETTINGS,
                                   section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,

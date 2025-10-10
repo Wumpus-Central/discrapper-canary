@@ -207,7 +207,7 @@ function h(e) {
             },
             [x, j],
         ),
-        w = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 c.current = null != e ? (0, s.jb)(t, e) : null;
             },
@@ -220,9 +220,9 @@ function h(e) {
                 onKeyDown: y,
                 ref: g,
             },
-            setFocus: w,
+            setFocus: T,
         }),
-        [t, y, w],
+        [t, y, T],
     );
 }
 let g = {

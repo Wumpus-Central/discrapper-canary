@@ -4,9 +4,9 @@ n.d(t, {
     EN: () => D,
     F0: () => m,
     LX: () => N,
-    TH: () => j,
-    UO: () => M,
-    k6: () => L,
+    TH: () => M,
+    UO: () => j,
+    k6: () => x,
     l_: () => I,
     rs: () => w,
     s6: () => h,
@@ -292,19 +292,19 @@ function D(e) {
         };
     return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
 }
-var x = i.useContext;
-function L() {
-    return x(p);
-}
-function j() {
-    return x(h).location;
+var L = i.useContext;
+function x() {
+    return L(p);
 }
 function M() {
-    var e = x(h).match;
+    return L(h).location;
+}
+function j() {
+    var e = L(h).match;
     return e ? e.params : {};
 }
 function k(e) {
-    var t = j(),
-        n = x(h).match;
+    var t = M(),
+        n = L(h).match;
     return e ? N(t.pathname, e) : n;
 }

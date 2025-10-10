@@ -8,20 +8,20 @@ var r = n(951288),
     c = n(981312),
     d = n(430824),
     u = n(63063),
-    m = n(999382),
-    g = n(432774),
+    g = n(999382),
+    m = n(432774),
     p = n(682255),
     f = n(888429),
     h = n(217472),
-    b = n(202905),
-    x = n(44867),
+    x = n(202905),
+    b = n(44867),
     j = n(557359),
-    v = n(658666),
-    _ = n(307375),
-    O = n(384632),
-    y = n(981631),
-    C = n(388032),
-    N = n(332177);
+    _ = n(658666),
+    v = n(307375),
+    C = n(384632),
+    O = n(981631),
+    y = n(388032),
+    N = n(912231);
 function E(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
@@ -29,7 +29,7 @@ function E(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, g.k)(e), (0, p.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, m.k)(e), (0, p.V)(e), (0, a.le)(), (0, a.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -37,15 +37,15 @@ function E(e) {
             [n],
         );
     switch (t.joinType) {
-        case O.A.INVITE:
+        case C.A.INVITE:
             return (0, r.jsx)(j.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules,
             });
-        case O.A.APPLY:
-            return (0, r.jsx)(b.r, { pendingFields: t.pendingVerificationFields });
-        case O.A.DISCOVERABLE:
-            return (0, r.jsx)(x.c, {
+        case C.A.APPLY:
+            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+        case C.A.DISCOVERABLE:
+            return (0, r.jsx)(b.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -62,9 +62,9 @@ function I(e) {
                 ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel,
             };
         }),
-        o = (0, l.e7)([v.Z], () => {
+        o = (0, l.e7)([_.Z], () => {
             var e;
-            return null == (e = v.Z.pendingState) ? void 0 : e.isAgeRestricted;
+            return null == (e = _.Z.pendingState) ? void 0 : e.isAgeRestricted;
         }),
         c = i.useCallback(
             (e) => {
@@ -72,16 +72,16 @@ function I(e) {
             },
             [t],
         ),
-        m = n === y.V_K.AGE_RESTRICTED && a !== y.V_K.AGE_RESTRICTED;
+        g = n === O.V_K.AGE_RESTRICTED && a !== O.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(s.hjN, {
         children: (0, r.jsx)(s.rsf, {
-            label: C.intl.string(C.t.N9xEJC),
-            description: C.intl.format(C.t["iyQQ6+"], {
-                helpArticleLink: u.Z.getArticleURL(y.BhN.NSFW_SERVER_AGE_RESTRICTION),
+            label: y.intl.string(y.t.N9xEJC),
+            description: y.intl.format(y.t["iyQQ6+"], {
+                helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
             }),
             checked: o,
             onChange: c,
-            disabled: m,
+            disabled: g,
         }),
     });
 }
@@ -98,8 +98,8 @@ function S(e) {
           });
 }
 function T() {
-    let e = (0, l.e7)([m.Z], () => m.Z.getProps().guild),
-        t = (0, l.e7)([v.Z], () => v.Z.pendingState);
+    let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
+        t = (0, l.e7)([_.Z], () => _.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
@@ -117,9 +117,9 @@ function T() {
             (0, r.jsx)(s.X6q, {
                 color: "header-primary",
                 variant: "heading-lg/semibold",
-                children: C.intl.string(C.t.YJlvBA),
+                children: y.intl.string(y.t.YJlvBA),
             }),
-            (0, r.jsx)(_.h, {
+            (0, r.jsx)(v.h, {
                 onTypePicked: n,
                 activeType: a,
                 guild: e,

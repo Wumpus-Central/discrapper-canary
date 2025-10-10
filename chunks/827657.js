@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(951288),
     l = n(647438),
-    o = n(481060),
-    i = n(994463),
+    i = n(481060),
+    o = n(994463),
     a = n(472596),
     s = n(918192),
     c = n(388032),
@@ -13,7 +13,7 @@ function d(e) {
             () => ({
                 [a.po.LOADING]: null,
                 [a.po.SUCCESS_STILL_INDEXING]: {
-                    icon: (0, r.jsx)(i.Z, {}),
+                    icon: (0, r.jsx)(o.Z, {}),
                     message: c.intl.string(c.t.AXPbZm),
                 },
                 [a.po.SUCCESS_EMPTY]: {
@@ -33,7 +33,7 @@ function d(e) {
                       className: u.__invalid_noResultsIconContainer,
                       children: n.icon,
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(i.Text, {
                       variant: "text-md/normal",
                       color: "text-muted",
                       children: n.message,

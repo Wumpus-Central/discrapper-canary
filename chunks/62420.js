@@ -1,50 +1,50 @@
-e.d(n, { Z: () => u }), e(539854), e(388685);
-var i = e(951288);
-e(647438);
-var r = e(481060),
-    l = e(117984),
-    s = e(593214),
-    a = e(362658),
-    d = e(388032);
-function u(t) {
-    let n = (0, s.Mt)(),
-        e = (0, s.s4)(t.id),
-        u = (0, s.zv)(),
-        { isFavoritesPerk: o } = (0, a.z)("useChannelMoveToCategory");
-    if (__OVERLAY__ || !n || null == e || !o) return null;
-    let [c, f] = (function (t) {
+t.d(n, { Z: () => d }), t(539854), t(388685);
+var i = t(951288);
+t(647438);
+var r = t(481060),
+    l = t(117984),
+    a = t(593214),
+    s = t(362658),
+    o = t(388032);
+function d(e) {
+    let n = (0, a.Mt)(),
+        t = (0, a.s4)(e.id),
+        d = (0, a.zv)(),
+        { isFavoritesPerk: c } = (0, s.z)("useChannelMoveToCategory");
+    if (__OVERLAY__ || !n || null == t || !c) return null;
+    let [u, f] = (function (e) {
         let n = [],
-            e = null;
-        for (let i of t) null == i.id ? (e = i) : n.push(i);
-        return [e, n];
-    })(u.filter((t) => t.id !== (null == e ? void 0 : e.parentId)));
-    function g(t) {
-        null != e && (0, l.uA)(e.id, t);
+            t = null;
+        for (let i of e) null == i.id ? (t = i) : n.push(i);
+        return [t, n];
+    })(d.filter((e) => e.id !== (null == t ? void 0 : t.parentId)));
+    function h(e) {
+        null != t && (0, l.uA)(t.id, e);
     }
-    return null == c && 0 === f.length
+    return null == u && 0 === f.length
         ? null
         : (0, i.jsxs)(r.sNh, {
               id: "move-to-category",
-              label: d.intl.string(d.t.FAplmp),
+              label: o.intl.string(o.t.FAplmp),
               children: [
-                  null != c &&
+                  null != u &&
                       (0, i.jsx)(r.kSQ, {
                           children: (0, i.jsx)(r.sNh, {
                               id: "favorite-uncategorized",
-                              label: c.name,
-                              action: () => g(c.id),
+                              label: u.name,
+                              action: () => h(u.id),
                           }),
                       }),
                   f.length > 0 &&
                       (0, i.jsx)(r.kSQ, {
-                          children: f.map((t) => {
-                              let { id: n, name: e } = t;
+                          children: f.map((e) => {
+                              let { id: n, name: t } = e;
                               return (0, i.jsx)(
                                   r.sNh,
                                   {
                                       id: "favorite-".concat(n),
-                                      label: e,
-                                      action: () => g(n),
+                                      label: t,
+                                      action: () => h(n),
                                   },
                                   n,
                               );

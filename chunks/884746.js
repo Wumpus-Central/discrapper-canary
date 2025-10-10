@@ -1,26 +1,26 @@
-r.d(t, { q: () => c }), r(539854);
-var n = r(442837),
-    l = r(146085),
-    s = r(984933),
-    i = r(496675);
-function c(e) {
+n.d(t, { q: () => s }), n(539854);
+var r = n(442837),
+    l = n(146085),
+    i = n(984933),
+    a = n(496675);
+function s(e) {
     var t;
-    let r = null != (t = null == e ? void 0 : e.id) ? t : null;
-    return (0, n.Wu)(
-        [s.ZP, i.Z],
+    let n = null != (t = null == e ? void 0 : e.id) ? t : null;
+    return (0, r.Wu)(
+        [i.ZP, a.Z],
         () =>
-            s.ZP.getChannels(r)[s.Zb].reduce((e, t) => {
-                let r = t.channel;
+            i.ZP.getChannels(n)[i.Zb].reduce((e, t) => {
+                let n = t.channel;
                 return (
-                    r.isGuildStageVoice() &&
+                    n.isGuildStageVoice() &&
                         (function (e) {
-                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Z;
                             return !!e.isGuildStageVoice() && t.can(l.yP, e);
-                        })(t.channel, i.Z) &&
-                        e.push(r),
+                        })(t.channel, a.Z) &&
+                        e.push(n),
                     e
                 );
             }, []),
-        [r],
+        [n],
     );
 }

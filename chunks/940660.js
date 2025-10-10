@@ -55,10 +55,10 @@ var a,
     P = RegExp(S, "g"),
     w = RegExp("&#13;?", "g"),
     D = RegExp("&#8203;?", "g"),
-    x = ["bold", "bolder", "500", "600", "700", "800", "900"],
-    L = ["light", "lighter", "normal", "100", "200", "300", "400"],
-    j = ["className", "href", "rel", "target", "title"],
-    M = ["alt", "className", "height", "src", "width"],
+    L = ["bold", "bolder", "500", "600", "700", "800", "900"],
+    x = ["light", "lighter", "normal", "100", "200", "300", "400"],
+    M = ["className", "href", "rel", "target", "title"],
+    j = ["alt", "className", "height", "src", "width"],
     k =
         (i((a = {}), f("public/DraftStyleDefault/depth0"), 0),
         i(a, f("public/DraftStyleDefault/depth1"), 1),
@@ -105,19 +105,19 @@ var a,
         var t = e;
         return !!(t.href && ("http:" === t.protocol || "https:" === t.protocol || "mailto:" === t.protocol));
     },
-    V = function (e) {
+    F = function (e) {
         if (!I(e)) return !1;
         var t = e;
         return !!(t.attributes.getNamedItem("src") && t.attributes.getNamedItem("src").value);
     },
-    F = function (e, t) {
+    V = function (e, t) {
         if (!v(e)) return t;
         var n = e,
             r = n.style.fontWeight,
             i = n.style.fontStyle,
             a = n.style.textDecoration;
         return t.withMutations(function (e) {
-            x.indexOf(r) >= 0 ? e.add("BOLD") : L.indexOf(r) >= 0 && e.remove("BOLD"),
+            L.indexOf(r) >= 0 ? e.add("BOLD") : x.indexOf(r) >= 0 && e.remove("BOLD"),
                 "italic" === i ? e.add("ITALIC") : "normal" === i && e.remove("ITALIC"),
                 "underline" === a && e.add("UNDERLINE"),
                 "line-through" === a && e.add("STRIKETHROUGH"),
@@ -246,7 +246,7 @@ var a,
                         this._addBreakNode(i, t);
                         continue;
                     }
-                    if (V(i)) {
+                    if (F(i)) {
                         this._addImgNode(i, t);
                         continue;
                     }
@@ -256,7 +256,7 @@ var a,
                     }
                     var h = t;
                     U.has(a) && (h = h.add(U.get(a))),
-                        (h = F(i, h)),
+                        (h = V(i, h)),
                         n.push.apply(n, this._toBlockConfigs(Array.from(i.childNodes), h));
                 }
                 return n;
@@ -302,7 +302,7 @@ var a,
                 if (I(e)) {
                     var n = e,
                         r = {};
-                    M.forEach(function (e) {
+                    j.forEach(function (e) {
                         var t = n.getAttribute(e);
                         t && (r[e] = t);
                     }),
@@ -317,7 +317,7 @@ var a,
                 if (y(e)) {
                     var r = e,
                         i = {};
-                    j.forEach(function (e) {
+                    M.forEach(function (e) {
                         var t = r.getAttribute(e);
                         t && (i[e] = t);
                     }),

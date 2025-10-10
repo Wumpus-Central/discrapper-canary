@@ -1,6 +1,6 @@
 a.d(e, {
     Eg: () => m,
-    Jd: () => y,
+    Jd: () => S,
     S1: () => D,
     jp: () => C,
     lA: () => v,
@@ -15,21 +15,21 @@ var r = a(636361),
     E = a(233517),
     s = a(510529),
     l = a(622916),
-    u = a(694043),
-    I = a(688838),
+    I = a(694043),
+    u = a(688838),
     R = a(393523),
     d = a(833772),
     N = a(454463),
     A = a(163162),
-    f = a(408720),
-    T = a(515737),
+    T = a(408720),
+    f = a(515737),
     L = a(804410),
     p = a(376457),
     h = a(42367),
     O = a(297117),
     P = a(387486);
 function g(t) {
-    return [(0, r.S)(), (0, _.C)(), (0, T.t)(), (0, f.f)(), (0, L.k)(), (0, h.O)(), (0, n.R)(), (0, p.s)()];
+    return [(0, r.S)(), (0, _.C)(), (0, f.t)(), (0, T.f)(), (0, L.k)(), (0, h.O)(), (0, n.R)(), (0, p.s)()];
 }
 function D(t = {}) {
     let e = (function (t = {}) {
@@ -71,13 +71,13 @@ function D(t = {}) {
             );
         });
     N.X &&
-        !(0, u.Ak)() &&
+        !(0, I.Ak)() &&
         l.kg.warn(
             "No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.",
         );
     let a = {
             ...e,
-            stackParser: (0, I.Sq)(e.stackParser || O.Dt),
+            stackParser: (0, u.Sq)(e.stackParser || O.Dt),
             integrations: (0, o.m8)(e),
             transport: e.transport || P.f,
         },
@@ -143,7 +143,7 @@ function m() {}
 function v(t) {
     t();
 }
-function y(t) {
+function S(t) {
     let e = (0, c.s3)();
     e && e.captureUserFeedback(t);
 }

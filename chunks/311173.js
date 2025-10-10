@@ -1,115 +1,115 @@
-n.d(t, { Z: () => b }), n(388685), n(953529);
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(63063),
     c = n(256569),
     d = n(858457),
     u = n(273504),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     p = n(140876);
-let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
-function f(e) {
+let f = o.Z.getArticleURL(g.BhN.GUILD_AUTOMOD_REGEX);
+function h(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
         ? (0, r.jsx)("div", {
               className: p.subtext,
-              children: (0, r.jsx)(s.Text, {
+              children: (0, r.jsx)(a.Text, {
                   className: p.errorSpan,
                   variant: "text-xs/medium",
                   color: "text-danger",
-                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h }),
+                  children: null != i ? i : m.intl.format(m.t.jKYAPj, { helpArticle: f }),
               }),
           })
-        : (0, r.jsx)(s.Text, {
+        : (0, r.jsx)(a.Text, {
               className: p.subtext,
               variant: "text-xs/medium",
               color: "text-muted",
               children: n,
           });
 }
-function b(e) {
+function x(e) {
     var t, n;
-    let { rule: l, onChangeText: s, className: o } = e,
+    let { rule: l, onChangeText: a, className: o } = e,
         {
-            patterns: m,
-            valueError: b,
-            errors: x,
+            patterns: g,
+            valueError: x,
+            errors: b,
             validatePatternsChanged: j,
-            validateEditingValueChanged: v,
-        } = (0, d.Z)(l, s),
-        [_] = i.useState(() => ({
-            tags: m,
+            validateEditingValueChanged: _,
+        } = (0, d.Z)(l, a),
+        [v] = i.useState(() => ({
+            tags: g,
             value: "",
             selections: [],
             isSelecting: !1,
         })),
-        O = i.useMemo(
+        C = i.useMemo(
             () =>
-                x.reduce((e, t) => {
+                b.reduce((e, t) => {
                     let {
                         pattern: n,
                         message: r,
                         description: i,
                         erroringCharacterLength: l = n.length,
-                        erroringCharacterOffset: a = 0,
+                        erroringCharacterOffset: s = 0,
                     } = t;
                     return (
-                        null == m.find((e) => e === n) ||
+                        null == g.find((e) => e === n) ||
                             (e[n] = {
                                 value: n,
                                 message: null != i ? i : r,
                                 erroringCharacterLength: l,
-                                erroringCharacterOffset: a,
+                                erroringCharacterOffset: s,
                             }),
                         e
                     );
                 }, {}),
-            [x, m],
+            [b, g],
+        ),
+        O = i.useCallback(
+            (e) => {
+                j(e, g);
+            },
+            [j, g],
         ),
         y = i.useCallback(
             (e) => {
-                j(e, m);
+                _(e);
             },
-            [j, m],
-        ),
-        C = i.useCallback(
-            (e) => {
-                v(e);
-            },
-            [v],
+            [_],
         );
     return (0, r.jsxs)("div", {
-        className: a()(p.keywordsContainer, o),
+        className: s()(p.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
                 placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-                initialValue: _,
-                onChangeTags: y,
-                onChangeNewTagValue: C,
-                tagErrors: O,
+                initialValue: v,
+                onChangeTags: O,
+                onChangeNewTagValue: y,
+                tagErrors: C,
                 maxTags: u.VW,
             }),
-            (0, r.jsx)(f, {
-                text: g.intl.format(g.t["PGC/AA"], { helpArticle: h }),
-                hasErrors: x.length > 0 || null != b,
+            (0, r.jsx)(h, {
+                text: m.intl.format(m.t["PGC/AA"], { helpArticle: f }),
+                hasErrors: b.length > 0 || null != x,
                 errorText:
                     null !=
                     (n =
                         null ==
-                        (t = x.find((e) => {
+                        (t = b.find((e) => {
                             let { pattern: t } = e;
                             return t === d.r;
                         }))
                             ? void 0
                             : t.message)
                         ? n
-                        : null == b
+                        : null == x
                           ? void 0
-                          : b.message,
+                          : x.message,
             }),
         ],
     });

@@ -67,7 +67,7 @@ function D(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,18 +78,18 @@ function x(e, t) {
         e
     );
 }
-let L = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
+    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     Z = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    V = M + j + 2 * U,
-    F = L + j,
-    H = F + (B + 2 * Z),
-    Y = M + k + 2 * U,
+    F = j + M + 2 * U,
+    V = x + M,
+    H = V + (B + 2 * Z),
+    Y = j + k + 2 * U,
     W = 7;
 function K(e) {
     let {
@@ -108,7 +108,7 @@ function K(e) {
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
-            x(w({}, p), {
+            L(w({}, p), {
                 "aria-label": (0, O.Nf)(l, E),
                 className: o()({
                     [R.categoryItemGuildCategory]: null != E,
@@ -138,8 +138,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: M,
-                              width: M,
+                              height: j,
+                              width: j,
                               size: "custom",
                           })
                         : null,
@@ -204,14 +204,14 @@ let z = (e) => {
                 }),
             [b, v, A, y, P, w],
         ),
-        x = i.useMemo(() => [8, 8, 0, 8], []),
-        L = i.useCallback(
+        L = i.useMemo(() => [8, 8, 0, 8], []),
+        x = i.useCallback(
             (e, t) => {
                 let n = A[t];
-                if (n.type === S.En.RECENT) return V;
+                if (n.type === S.En.RECENT) return F;
                 if (n.type === S.En.GUILD) {
                     let e = A[t + 1];
-                    return null != e && e.type !== S.En.GUILD ? H : F;
+                    return null != e && e.type !== S.En.GUILD ? H : V;
                 }
                 return Y;
             },
@@ -234,7 +234,7 @@ let z = (e) => {
                       ? (r += 1)
                       : ((e += 1), (t += 1));
             });
-            let i = V + t * F + H;
+            let i = F + t * V + H;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
@@ -269,9 +269,9 @@ let z = (e) => {
                 if (n.type === S.En.RECENT) return t ? 0 : k;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
-                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * Z + j + r : j) : t ? r : j;
+                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * Z + M + r : M) : t ? r : M;
                 }
-                return t ? j + r : 2 * j;
+                return t ? M + r : 2 * M;
             },
             [A, Q],
         ),
@@ -289,12 +289,12 @@ let z = (e) => {
         className: t,
         store: h.kJ,
         categories: A,
-        listPadding: x,
+        listPadding: L,
         onScroll: $,
         renderCategoryListItem: D,
         renderSection: en,
         rowCount: A.length,
-        categoryHeight: L,
+        categoryHeight: x,
         getScrollOffsetForIndex: et,
         rowCountBySection: X,
         children: (e) =>
@@ -310,8 +310,8 @@ let z = (e) => {
                     children: (0, r.jsx)(f.EO4, {
                         size: "custom",
                         color: "currentColor",
-                        height: M,
-                        width: M,
+                        height: j,
+                        width: j,
                     }),
                 },
                 er,

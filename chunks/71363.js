@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(75077),
     v = n(981631),
     I = n(388032),
-    T = n(184388),
+    T = n(677599),
     S = n(865215);
 let A = (e) => {
     let t,
@@ -33,12 +33,12 @@ let A = (e) => {
             return !1 !== r.canReveal && "upcomingDropUntimed" !== r.name && (e[n] = r), e;
         }, {}),
         { analyticsLocations: D } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [x, L] = i.useState(!1),
-        j = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        M = (0, O.mN)(),
+        [L, x] = i.useState(!1),
+        M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        j = (0, O.mN)(),
         { fractionalState: k } = (0, _.Z)(),
         U = (0, h.W)();
-    M
+    j
         ? ((t = I.intl.string(I.t["+vt7w8"])), (n = I.intl.string(I.t.LgHbnJ)))
         : ((t = I.intl.string(I.t.LgHbnJ)), (n = I.intl.string(I.t["+vt7w8"])));
     let G = () => {
@@ -52,7 +52,7 @@ let A = (e) => {
     return (0, r.jsx)(c.yWw, {
         className: o()(T.allPerksScroller, {
             [T.open]: a,
-            [T.openCloseReduceMotion]: j,
+            [T.openCloseReduceMotion]: M,
         }),
         ref: R,
         children: (0, r.jsx)(c.$1m, {
@@ -81,7 +81,7 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_FIRST_ROW,
-                                    isPremiumSubscriber: M,
+                                    isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
                                     fractionalState: k,
                                     isInReverseTrial: U,
@@ -99,7 +99,7 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_SECOND_ROW,
-                                    isPremiumSubscriber: M,
+                                    isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
                                     fractionalState: k,
                                     isInReverseTrial: U,
@@ -117,7 +117,7 @@ let A = (e) => {
                                 cards: (0, O.ZM)({
                                     perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_THIRD_ROW,
-                                    isPremiumSubscriber: M,
+                                    isPremiumSubscriber: j,
                                     hideCardsOnNarrowScreen: !0,
                                     fractionalState: k,
                                     isInReverseTrial: U,
@@ -131,9 +131,9 @@ let A = (e) => {
                         innerRef: P,
                         onChange: (e) => {
                             e &&
-                                !x &&
+                                !L &&
                                 (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
-                                L(!0));
+                                x(!0));
                         },
                         children: (0, r.jsx)("div", {
                             ref: P,

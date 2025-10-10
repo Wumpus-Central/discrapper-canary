@@ -36,12 +36,12 @@ function S(e) {
         } = e,
         P = (0, l.e7)([_.default], () => _.default.locale),
         w = (0, l.e7)([p.Z], () => p.Z.get(n)),
-        { isGift: D, giftRecipient: x } = (0, f.wD)(),
-        L = D && (0, h.pO)(x);
+        { isGift: D, giftRecipient: L } = (0, f.wD)(),
+        x = D && (0, h.pO)(L);
     s()(null != w, "Missing subscriptionPlan");
-    let j = null != t && t.planId === n,
-        M =
-            j ||
+    let M = null != t && t.planId === n,
+        j =
+            M ||
             (n === v.Xh.PREMIUM_MONTH_TIER_2 &&
                 null != t &&
                 [v.Xh.PREMIUM_YEAR_TIER_0, v.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
@@ -77,13 +77,13 @@ function S(e) {
         K = () =>
             V
                 ? Y()
-                : (w.interval === v.rV.YEAR && null != t) || (Z && !j)
+                : (w.interval === v.rV.YEAR && null != t) || (Z && !M)
                   ? w.interval === v.rV.YEAR && null != t
                       ? (0, r.jsxs)("span", {
                             className: T.planOptionMonthsFree,
                             children: ["(", I.intl.string(I.t["122kWF"]), ")"],
                         })
-                      : Z && !j
+                      : Z && !M
                         ? W()
                         : void 0
                   : null,
@@ -92,12 +92,12 @@ function S(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         className: a()(T.planOptionInterval, {
-                            [T.optionSelected]: o || L,
-                            [T.updatedOptionSelected]: A && (o || L),
+                            [T.optionSelected]: o || x,
+                            [T.updatedOptionSelected]: A && (o || x),
                         }),
-                        children: [(0, g.L7)(w.interval, D, B, w.intervalCount, L, (0, g.Rd)(w.id)), L && K()],
+                        children: [(0, g.L7)(w.interval, D, B, w.intervalCount, x, (0, g.Rd)(w.id)), x && K()],
                     }),
-                    L &&
+                    x &&
                         (0, r.jsx)("div", {
                             className: T.planOneTimeCost,
                             children: I.intl.format(I.t.ori2Ji, { currencyAmount: (0, E.T4)(G.amount, G.currency) }),
@@ -129,7 +129,7 @@ function S(e) {
                   : null;
         };
     return (0, r.jsxs)(d.P3F, {
-        role: L ? "menuitem" : "radio",
+        role: x ? "menuitem" : "radio",
         "aria-checked": o,
         tabIndex: o ? 0 : -1,
         focusProps: {
@@ -140,19 +140,19 @@ function S(e) {
                 bottom: 0,
             },
         },
-        onClick: M ? void 0 : () => i(n),
+        onClick: j ? void 0 : () => i(n),
         className: a()(T.planOptionClickableContainer, {
-            [T.selectedPlan]: L && o,
-            [T.selectionBox]: L,
+            [T.selectedPlan]: x && o,
+            [T.selectionBox]: x,
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: a()(T.planOption, { [T.planOptionDisabled]: M }),
+                className: a()(T.planOption, { [T.planOptionDisabled]: j }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: T.planOptionClickable,
                         children: [
-                            !L &&
+                            !x &&
                                 (0, r.jsx)(u.$q, {
                                     readOnly: !0,
                                     displayOnly: !0,
@@ -163,12 +163,12 @@ function S(e) {
                                     className: T.planOptionCheckbox,
                                 }),
                             z(),
-                            j &&
+                            M &&
                                 (0, r.jsxs)("span", {
                                     className: T.planOptionCurrentPlan,
                                     children: ["(", I.intl.string(I.t.ymSxh4), ")"],
                                 }),
-                            !L && K(),
+                            !x && K(),
                         ],
                     }),
                     A
@@ -177,7 +177,7 @@ function S(e) {
                               children: I.intl.format(I.t.hXcaLS, { price: q() }),
                           })
                         : (0, r.jsx)("div", {
-                              className: a()({ [T.optionSelected]: o || L }),
+                              className: a()({ [T.optionSelected]: o || x }),
                               children: (0, E.T4)(G.amount, G.currency),
                           }),
                 ],

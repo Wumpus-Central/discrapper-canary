@@ -1,25 +1,25 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(951288),
     r = n(647438),
-    l = n(442837),
+    s = n(442837),
     o = n(481060),
-    s = n(13245),
+    l = n(13245),
     a = n(313201),
     c = n(237997),
     d = n(766032),
     u = n(987650),
-    h = n(981631),
-    p = n(388032),
+    p = n(981631),
+    h = n(388032),
     f = n(264815);
 let g = Object.values(u.wF).map((e) => 100 * e),
     m = (0, a.hQ)();
 class y extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        s.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
-            s.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
+            l.Z.track(p.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        s.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
+        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
         return (0, i.jsxs)("div", {
@@ -28,7 +28,7 @@ class y extends r.PureComponent {
                 (0, i.jsx)(o.vwX, {
                     id: m,
                     className: f.title,
-                    children: p.intl.string(p.t.OVovCQ),
+                    children: h.intl.string(h.t.OVovCQ),
                 }),
                 (0, i.jsx)("div", {
                     className: f.sliderContainer,
@@ -42,7 +42,7 @@ class y extends r.PureComponent {
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
                         markers: g,
-                        onMarkerRender: h.dG4,
+                        onMarkerRender: p.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
                         "aria-labelledby": m,
@@ -65,4 +65,4 @@ class y extends r.PureComponent {
             })(this, "initialValue", 100 * this.props.opacity);
     }
 }
-let O = l.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);
+let _ = s.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

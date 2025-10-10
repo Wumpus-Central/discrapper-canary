@@ -1,7 +1,7 @@
-n.d(t, { g: () => i });
+n.d(t, { g: () => s });
 var r = n(818083),
     l = n(987338);
-let i = (0, r.B)({
+let s = (0, r.B)({
     kind: "user",
     id: "2025-02_shop_paired_deco_upsell",
     label: "Shop Paired Deco Upsell Experiment",

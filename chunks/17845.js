@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(481060),
     c = n(410030),
     d = n(688465),
-    u = n(795396);
+    u = n(196073);
 function p(e) {
     let { title: t, betaTag: n, color: a = "header-primary" } = e;
     return (0, r.jsxs)(o.X6q, {
@@ -19,8 +19,8 @@ function p(e) {
 }
 function m(e) {
     let { title: t, titleColor: n, description: i, button: d, className: m, children: h, betaTag: g = !1 } = e,
-        f = (0, c.ZP)(),
-        _ = (0, s.wj)(f),
+        _ = (0, c.ZP)(),
+        f = (0, s.wj)(_),
         b = a.useMemo(
             () =>
                 Array.isArray(t)
@@ -55,7 +55,7 @@ function m(e) {
                             (0, r.jsx)(o.Text, {
                                 className: u.description,
                                 variant: "text-md/medium",
-                                color: _ ? "text-muted" : "header-primary",
+                                color: f ? "text-muted" : "header-primary",
                                 children: i,
                             }),
                         null != d &&

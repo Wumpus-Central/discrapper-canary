@@ -1,4 +1,4 @@
-a.d(e, { j: () => u }), a(388685);
+a.d(e, { j: () => I }), a(388685);
 var r = a(509068),
     _ = a(804410),
     n = a(408720),
@@ -11,13 +11,13 @@ let s = ["oppobrowser", "realmebrowser", "heytapbrowser"],
         maxBudgetMinute: 1,
         maxBudgetHour: 3,
     });
-function u() {
+function I() {
     r.S1({
         tunnel: "/error-reporting-proxy/web",
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-c2bfb92a811c876d91c5a52ac8fa580f0d4bd30e",
+        release: "discord_web-ae4efbcfaa9d846c31bddd37199b78a7cae5f6e3",
         beforeSend: function (t, e) {
             return !(
                 (null != t.exception &&
@@ -81,8 +81,8 @@ function u() {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        o.YA("buildNumber", "436507"),
-        o.YA("builtAt", String("1756130131974"));
+        o.YA("buildNumber", "455626"),
+        o.YA("builtAt", String("1759959805372"));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && "object" == typeof t) for (let e in t) o.YA(e, t[e]);
     return i;

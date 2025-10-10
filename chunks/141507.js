@@ -37,15 +37,15 @@ let w = (e) => {
     D = i.memo(function (e) {
         let t,
             D,
-            x,
-            { className: L, emojiGrid: j, guildId: M, pickerIntention: k, channel: U } = e,
+            L,
+            { className: x, emojiGrid: M, guildId: j, pickerIntention: k, channel: U } = e,
             { enabled: G } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
             B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
                 var e;
                 let { rowIndex: t, columnIndex: n } = B;
-                return null == (e = j[t]) ? void 0 : e[n];
-            }, [j, B]);
+                return null == (e = M[t]) ? void 0 : e[n];
+            }, [M, B]);
         switch (null == Z ? void 0 : Z.type) {
             case S.ld.EMOJI:
                 t = null == Z ? void 0 : Z.emoji;
@@ -72,9 +72,9 @@ let w = (e) => {
             V = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
-            W = (0, v.C1)(M, P(t) ? t : null),
+            W = (0, v.C1)(j, P(t) ? t : null),
             K = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: z } = (0, I.Z)(M, k),
+            { newlyAddedEmojis: z } = (0, I.Z)(j, k),
             q = (null == Z ? void 0 : Z.type) === S.ld.EMOJI ? Z.subCategory : A.t0.NONE;
         if (
             (i.useEffect(() => {
@@ -92,7 +92,7 @@ let w = (e) => {
                                 emoji: t,
                                 subCategory: q,
                                 position: Z.columnIndex + 1,
-                                newlyAddedHighlight: q === A.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id),
+                                newlyAddedHighlight: q === A.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(j, t.id),
                             }));
                 };
             }),
@@ -154,7 +154,7 @@ let w = (e) => {
                       shouldAnimate: !H && V,
                   })
                 : null;
-        x =
+        L =
             G && "CREATE_EMOJI" === t.type
                 ? C.intl.string(C.t.XCmLfH)
                 : "EXPAND_OR_COLLAPSE_EMOJI" === t.type
@@ -168,15 +168,15 @@ let w = (e) => {
                 : w({
                       inspectedEmoji: t,
                       channel: U,
-                      guildId: M,
+                      guildId: j,
                       intention: k,
                       guild: F,
                   });
         return (0, r.jsx)(p.Z, {
-            className: L,
+            className: x,
             graphicPrimary: D,
             graphicSecondary: J,
-            titlePrimary: x,
+            titlePrimary: L,
             titleSecondary: $,
             isFavorite: W,
             emojiSubCategory: q,

@@ -2,7 +2,7 @@ n.d(t, {
     Ne: () => f,
     Ny: () => g,
     Or: () => b,
-    jt: () => O,
+    jt: () => _,
 }),
     n(388685);
 var r = n(951288);
@@ -85,7 +85,7 @@ function b(e) {
         isCurrentUserConnected: l,
     });
 }
-function O(e) {
+function _(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, r] = (function (e) {
             switch (e) {

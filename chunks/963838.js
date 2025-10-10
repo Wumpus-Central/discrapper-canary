@@ -2,9 +2,9 @@ n.d(t, {
     Iu: () => G,
     Jw: () => k,
     _r: () => B,
-    cX: () => V,
+    cX: () => F,
     lv: () => U,
-    v: () => L,
+    v: () => x,
 });
 var r = n(392711),
     i = n.n(r),
@@ -36,16 +36,16 @@ var r = n(392711),
     P = n(768581),
     w = n(176354),
     D = n(353368),
-    x = n(388032);
-let L = {
+    L = n(388032);
+let x = {
         start: 10,
         end: 15,
     },
-    j = [a],
-    M = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    M = [a],
+    j = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
     k = {
-        [D.q.BASIC]: j,
-        [D.q.PREMIUM]: M,
+        [D.q.BASIC]: M,
+        [D.q.PREMIUM]: j,
     },
     U = i().memoize(
         (e) =>
@@ -99,7 +99,7 @@ function Z(e, t) {
         .uniq()
         .value();
 }
-function V(e) {
+function F(e) {
     var t, n, r, i, a, o;
     if (e.length < 1) return "";
     let s = Z(e, "userId"),
@@ -108,17 +108,17 @@ function V(e) {
     return s.length < 1
         ? ""
         : 1 === s.length
-          ? x.intl.formatToPlainString(x.t.yZYxzM, {
+          ? L.intl.formatToPlainString(L.t.yZYxzM, {
                 firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c,
             })
           : 2 === s.length
-            ? x.intl.formatToPlainString(x.t["8rmtbW"], {
+            ? L.intl.formatToPlainString(L.t["8rmtbW"], {
                   firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
                   secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c,
               })
-            : x.intl.formatToPlainString(x.t["/okjv7"], {
+            : L.intl.formatToPlainString(L.t["/okjv7"], {
                   firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
                   secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,

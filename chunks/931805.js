@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => m,
+    K: () => g,
     O: () => u,
 });
 var r = n(951288),
@@ -24,7 +24,7 @@ function u(e) {
     }),
         (0, l.xf)();
 }
-function m() {
+function g() {
     return (0, r.jsxs)("div", {
         className: d.rowContainer,
         children: [

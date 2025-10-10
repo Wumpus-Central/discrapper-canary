@@ -1,5 +1,5 @@
-t.d(n, { S: () => r });
-let o = (0, t(427164).le)({
+n.d(t, { S: () => i });
+let r = (0, n(427164).le)({
     name: "2025-09-user-profile-wishlist-viewing",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -8,7 +8,7 @@ let o = (0, t(427164).le)({
         1: { enabled: !0 },
     },
 });
-function r(e) {
-    let { location: n } = e;
-    return o.useConfig({ location: n }).enabled;
+function i(e) {
+    let { location: t } = e;
+    return r.useConfig({ location: t }).enabled;
 }

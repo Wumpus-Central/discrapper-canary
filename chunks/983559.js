@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(892001),
     _ = n(899007),
     j = n(867176),
-    O = n(451834),
-    x = n(502762),
+    x = n(451834),
+    O = n(502762),
     v = n(952124),
     C = n(544989),
     I = n(481932),
@@ -100,7 +100,7 @@ function L(e) {
             isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsx)(b.NJ, {
                 value: W,
-                children: (0, r.jsxs)(x.Z, {
+                children: (0, r.jsxs)(O.Z, {
                     ref: B,
                     user: n,
                     displayProfile: k,
@@ -139,7 +139,7 @@ function L(e) {
                                             animateOnHoverOrFocusOnly: !z,
                                             className: A.banner,
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             userId: n.id,
                                             className: A.toast,
                                         }),

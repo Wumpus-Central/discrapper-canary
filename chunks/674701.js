@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => x,
-    Z: () => L,
+    U: () => L,
+    Z: () => x,
 });
 var r = n(951288),
     i = n(647438),
@@ -32,18 +32,18 @@ var r = n(951288),
     P = n(268685),
     w = n(388032),
     D = n(553517),
-    x = (function (e) {
+    L = (function (e) {
         return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
     })({});
-function L(e) {
+function x(e) {
     let {
             giftIntentType: t,
             premiumGiftIntentCardType: n,
             recipientUser: a,
-            onMouseEnter: x,
-            onMouseLeave: L,
-            popoutPosition: j,
-            analyticsPage: M,
+            onMouseEnter: L,
+            onMouseLeave: x,
+            popoutPosition: M,
+            analyticsPage: j,
             analyticsSection: k,
             glow: U,
             giftIntentSecondaryAction: G,
@@ -92,7 +92,7 @@ function L(e) {
                 analyticsLocation: "system_message" === n ? r.chat : r.actionButtonCoachmark,
                 analyticsLocations: Z,
                 analyticsObject: {
-                    page: M,
+                    page: j,
                     section: k,
                     object: N.qAy.BUTTON_CTA,
                     objectType: N.Qqv.GIFT,
@@ -135,8 +135,8 @@ function L(e) {
             [D.outerGlow]: U,
             [D.contentCoachmark]: q,
         }),
-        onMouseEnter: x,
-        onMouseLeave: L,
+        onMouseEnter: L,
+        onMouseLeave: x,
         children: (0, r.jsxs)("div", {
             className: o()(X, { [D.innerGlow]: U }),
             children: [
@@ -224,11 +224,11 @@ function L(e) {
                         }),
                     ],
                 }),
-                null != j &&
+                null != M &&
                     (0, r.jsx)("div", {
                         className: o()(D.connector, {
-                            [D.leftPopoutConnector]: "left" === j,
-                            [D.rightPopoutConnector]: "right" === j,
+                            [D.leftPopoutConnector]: "left" === M,
+                            [D.rightPopoutConnector]: "right" === M,
                         }),
                     }),
             ],

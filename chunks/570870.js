@@ -1,281 +1,281 @@
-n.d(t, { Z: () => w }), n(388685);
-var r = n(951288),
-    l = n(647438),
-    i = n(512722),
-    o = n.n(i),
-    c = n(442837),
-    a = n(481060),
-    s = n(10718),
-    u = n(367790),
-    d = n(667204),
-    f = n(826298),
-    p = n(276022),
-    b = n(978983),
-    h = n(430824),
-    m = n(594174),
-    g = n(959218),
-    O = n(981631),
-    y = n(689079),
-    j = n(388032),
-    v = n(386348);
-let w = (e) => {
-    let t,
-        { commandType: n, commandTargetId: i, channel: w, guildId: E, onHeightUpdate: P, context: x } = e,
-        S = (0, c.e7)([h.Z], () => h.Z.getGuild(null != E ? E : w.guild_id)),
-        Z = (0, c.e7)([m.default], () => m.default.getUser(i)),
-        C = (0, p.Z)({
-            user: Z,
-            guildId: null == S ? void 0 : S.id,
-            context: x,
+t.d(n, { Z: () => y }), t(388685);
+var l = t(951288),
+    i = t(647438),
+    r = t(512722),
+    o = t.n(r),
+    c = t(442837),
+    s = t(481060),
+    a = t(10718),
+    u = t(367790),
+    d = t(667204),
+    p = t(826298),
+    f = t(276022),
+    m = t(978983),
+    h = t(430824),
+    b = t(594174),
+    g = t(959218),
+    j = t(981631),
+    x = t(689079),
+    _ = t(388032),
+    w = t(891628);
+let y = (e) => {
+    let n,
+        { commandType: t, commandTargetId: r, channel: y, guildId: C, onHeightUpdate: I, context: O } = e,
+        v = (0, c.e7)([h.Z], () => h.Z.getGuild(null != C ? C : y.guild_id)),
+        E = (0, c.e7)([b.default], () => b.default.getUser(r)),
+        P = (0, f.Z)({
+            user: E,
+            guildId: null == v ? void 0 : v.id,
+            context: O,
         }),
-        A = l.useMemo(
+        k = i.useMemo(
             () => ({
-                channel: w,
+                channel: y,
                 type: "channel",
             }),
-            [w],
+            [y],
         ),
-        { newUIEnabled: I, searchEnabled: k } = g.Z.useConfig({ location: "useAppsCommandItems" }),
-        [D, N] = l.useState(""),
-        T = "" !== D,
+        { newUIEnabled: Z, searchEnabled: T } = g.Z.useConfig({ location: "useAppsCommandItems" }),
+        [N, A] = i.useState(""),
+        F = "" !== N,
         {
-            commands: U,
-            commandsByActiveSection: V,
-            sectionDescriptors: F,
-            loading: L,
-        } = s.wi({
-            context: A,
+            commands: M,
+            commandsByActiveSection: S,
+            sectionDescriptors: R,
+            loading: H,
+        } = a.wi({
+            context: k,
             filters: {
-                text: T ? D : void 0,
-                commandTypes: [n],
+                text: F ? N : void 0,
+                commandTypes: [t],
             },
             options: {
-                limit: y.lr,
-                includeFrecency: I && !T,
-                scoreMethod: T ? u.p.COMMAND_OR_APPLICATION : void 0,
+                limit: x.lr,
+                includeFrecency: Z && !F,
+                scoreMethod: F ? u.p.COMMAND_OR_APPLICATION : void 0,
             },
             allowFetch: !0,
         }),
-        { sections: M } = l.useMemo(() => {
+        { sections: U } = i.useMemo(() => {
             let e = {};
             return (
-                F.forEach((t) => {
-                    e[t.id] = t;
+                R.forEach((n) => {
+                    e[n.id] = n;
                 }),
                 { sections: e }
             );
-        }, [F]),
-        R = l.useRef(L);
-    l.useEffect(() => {
-        L !== R.current && ((R.current = L), null == P || P());
-    }, [L, P]);
-    let _ = l.useCallback(
-            (e, t) => {
-                let { showAppIcon: n } = t;
-                o()(null != w, "menu item should not show if channel is null");
-                let l = M[e.applicationId],
-                    c = n && null != l ? (0, f.ky)(l) : void 0;
-                return (0, r.jsx)(
-                    a.sNh,
+        }, [R]),
+        D = i.useRef(H);
+    i.useEffect(() => {
+        H !== D.current && ((D.current = H), null == I || I());
+    }, [H, I]);
+    let L = i.useCallback(
+            (e, n) => {
+                let { showAppIcon: t } = n;
+                o()(null != y, "menu item should not show if channel is null");
+                let i = U[e.applicationId],
+                    c = t && null != i ? (0, p.ky)(i) : void 0;
+                return (0, l.jsx)(
+                    s.sNh,
                     {
                         id: e.id,
                         label: e.displayName,
                         iconLeft:
                             null != c
                                 ? () =>
-                                      (0, r.jsx)(c, {
-                                          channel: w,
-                                          section: l,
+                                      (0, l.jsx)(c, {
+                                          channel: y,
+                                          section: i,
                                           width: 20,
                                           height: 20,
                                           selectable: !1,
                                       })
                                 : void 0,
-                        icon: I ? a.Uuj : void 0,
+                        icon: Z ? s.Uuj : void 0,
                         action: () => {
                             (0, d.Z)({
                                 command: e,
                                 optionValues: {},
                                 context: {
-                                    channel: w,
-                                    guild: S,
+                                    channel: y,
+                                    guild: v,
                                 },
-                                commandTargetId: i,
+                                commandTargetId: r,
                             });
                         },
                     },
                     e.id,
                 );
             },
-            [w, M, I, S, i],
+            [y, U, Z, v, r],
         ),
-        H = l.useCallback(
+        G = i.useCallback(
             (e) => {
-                let { section: t, data: n } = e;
-                return (0, r.jsx)(
-                    a.kSQ,
+                let { section: n, data: t } = e;
+                return (0, l.jsx)(
+                    s.kSQ,
                     {
-                        label: j.intl.string(j.t.V0w2am),
-                        children: n.map((e) => _(e, { showAppIcon: !0 })),
+                        label: _.intl.string(_.t.V0w2am),
+                        children: t.map((e) => L(e, { showAppIcon: !0 })),
                     },
-                    t.id,
+                    n.id,
                 );
             },
-            [_],
+            [L],
         ),
-        Y = l.useCallback(
+        Q = i.useCallback(
             (e) => {
-                let { section: t, data: n } = e,
-                    l = (0, f.ky)(t);
-                return (0, r.jsx)(
-                    a.sNh,
+                let { section: n, data: t } = e,
+                    i = (0, p.ky)(n);
+                return (0, l.jsx)(
+                    s.sNh,
                     {
-                        id: t.id,
-                        label: t.name,
+                        id: n.id,
+                        label: n.name,
                         iconLeft:
-                            null != l
+                            null != i
                                 ? () =>
-                                      (0, r.jsx)(l, {
-                                          channel: w,
-                                          section: t,
+                                      (0, l.jsx)(i, {
+                                          channel: y,
+                                          section: n,
                                           width: 20,
                                           height: 20,
                                           selectable: !1,
                                       })
                                 : void 0,
-                        children: n.map((e) => _(e, { showAppIcon: !1 })),
+                        children: t.map((e) => L(e, { showAppIcon: !1 })),
                     },
-                    t.id,
+                    n.id,
                 );
             },
-            [w, _],
+            [y, L],
         ),
-        K = (0, r.jsx)(
-            a.II_,
+        V = (0, l.jsx)(
+            s.II_,
             {
                 id: "command-search",
-                control: (e, t) => {
-                    var n, l;
-                    return (0, r.jsx)(
-                        a.ne,
-                        ((n = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                control: (e, n) => {
+                    var t, i;
+                    return (0, l.jsx)(
+                        s.ne,
+                        ((t = (function (e) {
+                            for (var n = 1; n < arguments.length; n++) {
+                                var t = null != arguments[n] ? arguments[n] : {},
+                                    l = Object.keys(t);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (l = l.concat(
+                                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                    l.forEach(function (n) {
+                                        var l;
+                                        (l = t[n]),
+                                            n in e
+                                                ? Object.defineProperty(e, n, {
+                                                      value: l,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[n] = l);
                                     });
                             }
                             return e;
                         })({}, e)),
-                        (l = l =
+                        (i = i =
                             {
-                                query: D,
-                                onChange: N,
-                                placeholder: j.intl.string(j.t.m1UwbG),
-                                ref: t,
+                                query: N,
+                                onChange: A,
+                                placeholder: _.intl.string(_.t.m1UwbG),
+                                ref: n,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                            : (function (e, n) {
+                                  var t = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var l = Object.getOwnPropertySymbols(e);
+                                      t.push.apply(t, l);
                                   }
-                                  return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                  return t;
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
-                        n),
+                        t),
                     );
                 },
             },
             "command-search",
         );
-    if (L)
-        t = (0, r.jsx)(
-            a.sNh,
+    if (H)
+        n = (0, l.jsx)(
+            s.sNh,
             {
                 id: "menu-commands-placeholder",
-                render: () => (0, r.jsx)(b.Z, {}),
+                render: () => (0, l.jsx)(m.Z, {}),
                 disabled: !0,
             },
             "menu-commands-placeholder",
         );
     else {
-        if (0 === U.length)
-            t = (0, r.jsxs)(r.Fragment, {
+        if (0 === M.length)
+            n = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    T &&
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [K, (0, r.jsx)(a.Clw, {})],
+                    F &&
+                        (0, l.jsxs)(l.Fragment, {
+                            children: [V, (0, l.jsx)(s.Clw, {})],
                         }),
-                    (0, r.jsx)(
-                        a.sNh,
+                    (0, l.jsx)(
+                        s.sNh,
                         {
                             id: "menu-commands-empty",
-                            label: j.intl.string(j.t.YSNlV1),
+                            label: _.intl.string(_.t.YSNlV1),
                             disabled: !0,
                         },
                         "menu-commands-empty",
                     ),
                 ],
             });
-        else if (I)
-            if (T)
-                t = (0, r.jsxs)(r.Fragment, {
-                    children: [K, (0, r.jsx)(a.Clw, {}), U.map((e) => _(e, { showAppIcon: !0 }))],
+        else if (Z)
+            if (F)
+                n = (0, l.jsxs)(l.Fragment, {
+                    children: [V, (0, l.jsx)(s.Clw, {}), M.map((e) => L(e, { showAppIcon: !0 }))],
                 });
             else {
-                let e = V.find((e) => {
-                        let { section: t } = e;
-                        return t.id === y.bi.FRECENCY;
+                let e = S.find((e) => {
+                        let { section: n } = e;
+                        return n.id === x.bi.FRECENCY;
                     }),
-                    n = V.filter((e) => {
-                        let { section: t } = e;
-                        return t.id !== y.bi.FRECENCY;
+                    t = S.filter((e) => {
+                        let { section: n } = e;
+                        return n.id !== x.bi.FRECENCY;
                     });
-                t = (0, r.jsxs)(r.Fragment, {
+                n = (0, l.jsxs)(l.Fragment, {
                     children: [
-                        k && K,
-                        null != e && H(e),
-                        (0, r.jsx)(a.kSQ, {
-                            label: j.intl.string(j.t.PHjkRE),
-                            children: n.map((e) => Y(e)),
+                        T && V,
+                        null != e && G(e),
+                        (0, l.jsx)(s.kSQ, {
+                            label: _.intl.string(_.t.PHjkRE),
+                            children: t.map((e) => Q(e)),
                         }),
                     ],
                 });
             }
-        else t = U.map((e) => _(e, { showAppIcon: !0 }));
-        null != C &&
-            C.length > 0 &&
-            (t = (0, r.jsxs)(r.Fragment, {
-                children: [t, (0, r.jsx)(a.Clw, {}, "separator"), C],
+        else n = M.map((e) => L(e, { showAppIcon: !0 }));
+        null != P &&
+            P.length > 0 &&
+            (n = (0, l.jsxs)(l.Fragment, {
+                children: [n, (0, l.jsx)(s.Clw, {}, "separator"), P],
             }));
     }
-    if (!O.TPd.TEXTUAL.has(w.type))
-        if (null == C) return null;
-        else t = C;
-    return (0, r.jsx)(a.sNh, {
+    if (!j.TPd.TEXTUAL.has(y.type))
+        if (null == P) return null;
+        else n = P;
+    return (0, l.jsx)(s.sNh, {
         id: "apps",
-        label: j.intl.string(j.t.PHjkRE),
-        listClassName: v.list,
-        children: t,
+        label: _.intl.string(_.t.PHjkRE),
+        listClassName: w.list,
+        children: n,
     });
 };

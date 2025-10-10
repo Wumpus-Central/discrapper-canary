@@ -1,37 +1,37 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(780384),
-    l = n(481060),
-    s = n(410030),
-    a = n(518950),
-    o = n(51144),
-    C = n(105759),
-    d = n(898969),
+    a = n(481060),
+    l = n(410030),
+    o = n(518950),
+    s = n(51144),
+    d = n(105759),
+    C = n(898969),
     c = n(703614),
-    p = n(268685),
-    u = n(388032),
-    x = n(908780);
-let h = () => {
-    let e = (0, C.Z)(),
-        { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
+    u = n(268685),
+    p = n(388032),
+    _ = n(908780);
+let f = () => {
+    let e = (0, d.Z)(),
+        { avatarSrc: t, eventHandlers: n } = (0, o.Z)({
             userId: null == e ? void 0 : e.id,
-            size: p.EF.SIZE_32,
+            size: u.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        h = (0, s.Fg)(),
-        _ = (0, i.ap)(h),
-        f = o.ZP.getName(e),
-        j = _ ? d.Z : c.Z;
+        f = (0, l.Fg)(),
+        h = (0, i.ap)(f),
+        m = s.ZP.getName(e),
+        x = h ? C.Z : c.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
-              className: x.attributionBannerContainer,
+              className: _.attributionBannerContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: x.avatarContainer,
+                      className: _.avatarContainer,
                       children: (0, r.jsx)(
-                          l.qEK,
+                          a.qEK,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -60,18 +60,18 @@ let h = () => {
                               {
                                   src: t,
                                   "aria-label": e.username,
-                                  size: p.EF.SIZE_32,
+                                  size: u.EF.SIZE_32,
                               },
                               n,
                           ),
                       ),
                   }),
-                  (0, r.jsx)(l.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: "text-xs/bold",
-                      className: x.bannerHeader,
-                      children: u.intl.format(u.t.oxhCOj, { userName: f }),
+                      className: _.bannerHeader,
+                      children: p.intl.format(p.t.oxhCOj, { userName: m }),
                   }),
-                  (0, r.jsx)(j, { className: x.bannerIcon }),
+                  (0, r.jsx)(x, { className: _.bannerIcon }),
               ],
           });
 };

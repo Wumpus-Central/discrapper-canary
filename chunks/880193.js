@@ -28,7 +28,7 @@ function _(e) {
         [N, E] = p.PK(n),
         [I, S] = p.d9(n, 1024),
         { imageCTA: T, imageAriaLabel: P, setFilename: w } = (0, f.Z)(_),
-        R = i.useMemo(() => {
+        Z = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -41,7 +41,7 @@ function _(e) {
                 ? e
                 : [];
         }, [t]);
-    function Z(e, t) {
+    function R(e, t) {
         null != t && w(t.name), S(e);
     }
     let D = (0, g.mY)(),
@@ -72,7 +72,7 @@ function _(e) {
                             className: j.formSplitHalf,
                             children: (0, r.jsx)(s.q4e, {
                                 label: b.intl.string(b.t.Ibl4BQ),
-                                options: R,
+                                options: Z,
                                 isDisabled: D || null == t,
                                 placeholder: b.intl.string(b.t["88XZDg"]),
                                 value: O,
@@ -95,11 +95,11 @@ function _(e) {
                 (0, r.jsxs)("div", {
                     className: j.iconSection,
                     children: [
-                        (0, r.jsx)(s.NIc, {
+                        (0, r.jsx)(s.gNt, {
                             label: b.intl.string(b.t.RUBM2t),
                             description: b.intl.string(b.t["0iUofH"]),
                             children: (0, r.jsx)(o.Z, {
-                                onChange: Z,
+                                onChange: R,
                                 "aria-label": P,
                                 disabled: D,
                                 text: T,
@@ -115,7 +115,7 @@ function _(e) {
                             hideSize: !0,
                             className: j.iconUploader,
                             imageClassName: j.tierSymbolUploaderInner,
-                            onChange: Z,
+                            onChange: R,
                             "aria-label": P,
                             disabled: D,
                         }),

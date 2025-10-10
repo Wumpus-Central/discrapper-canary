@@ -56,15 +56,15 @@ let A = (0, r.debounce)(o.xc, 1000),
     P = 5 * b.Z.Millis.SECOND,
     w = 12 * b.Z.Millis.SECOND,
     D = null;
-function x(e) {
+function L(e) {
     var t;
     null == (t = C[e]) || t.stop(), delete C[e];
 }
-function L(e) {
+function x(e) {
     var t;
     null == (t = N[e]) || t.stop(), delete N[e];
 }
-function j(e, t) {
+function M(e, t) {
     if (m.Z.getVoiceChannelId() !== e) return !1;
     let n = _.Z.getChannel(e);
     if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != d.Z.getActiveStreamForUser(t, n.getGuildId()))
@@ -74,7 +74,7 @@ function j(e, t) {
     let i = (0, O.V9)(r);
     return i !== D && ((D = i), (0, o.rn)(r, { noFocus: !0 }), !0);
 }
-function M(e, t) {
+function j(e, t) {
     let n = null != t ? t : h.Z.getPreferredRegion();
     null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, o.dV)(e, n);
 }
@@ -98,7 +98,7 @@ class U extends s.Z {
                     { channelId: r } = (0, O.my)(t),
                     i = _.Z.getChannel(r);
                 k(t, null == i ? void 0 : i.isGuildStageVoice()),
-                    x(t),
+                    L(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
                             let n = (0, O.V9)(e);
@@ -122,7 +122,7 @@ class U extends s.Z {
             T(this, "handleStreamCreate", (e) => {
                 var t;
                 let { streamKey: n } = e;
-                L(n);
+                x(n);
                 let { ownerId: r, guildId: i } = (0, O.my)(n);
                 if (
                     null == i ||
@@ -139,11 +139,11 @@ class U extends s.Z {
             }),
             T(this, "handleStreamUpdate", (e) => {
                 let { streamKey: t } = e;
-                L(t);
+                x(t);
             }),
             T(this, "handleStreamDelete", (e) => {
                 let { reason: t, streamKey: n } = e;
-                L(n),
+                x(n),
                     t === I.si2.STREAM_FULL &&
                         ((0, l.kr)(S({ type: l.u.STREAM_FULL }, (0, c.rT)(n))),
                         (0, o.aP)(n, !1),
@@ -151,7 +151,7 @@ class U extends s.Z {
             }),
             T(this, "handleStreamClose", (e) => {
                 let { streamKey: t } = e;
-                x(t), L(t);
+                L(t), x(t);
             }),
             T(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t } = e;
@@ -161,14 +161,14 @@ class U extends s.Z {
                     let { ownerId: t } = e;
                     return t !== f.default.getId();
                 })[0];
-                null != n && j(t, n.ownerId);
+                null != n && M(t, n.ownerId);
             }),
             T(this, "handleVoiceStateUpdates", (e) => {
                 let { voiceStates: t } = e;
                 t.forEach((e) => {
                     let { userId: t, channelId: n, guildId: r, selfStream: a } = e;
                     if ((this.platformHandleVoiceStateUpdate(e), t !== f.default.getId() && null != n)) {
-                        if (a && j(n, t)) return;
+                        if (a && M(n, t)) return;
                         let e = d.Z.getActiveStreamForUser(t, r);
                         if (null != e && e.channelId === n) {
                             if (!a && e.state !== I.jm8.ENDED) {
@@ -178,7 +178,7 @@ class U extends s.Z {
                                 n.start(R, () => (0, o.aP)(t, !1)), (C[t] = n);
                             }
                             if (a && e.state === I.jm8.ENDED) {
-                                x((0, O.V9)(e));
+                                L((0, O.V9)(e));
                                 let n = d.Z.getStreamForUser(t, r);
                                 if (null == n) return;
                                 (0, o.rn)(n);
@@ -190,12 +190,12 @@ class U extends s.Z {
             T(this, "handleCallUpdate", (e) => {
                 let { channelId: t, region: n } = e,
                     r = d.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && M((0, O.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && j((0, O.V9)(r), n);
             }),
             T(this, "handleChannelUpdates", (e) => {
                 let { channels: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && M((0, O.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && j((0, O.V9)(n), e.rtcRegion);
             }),
             T(this, "actions", {
                 STREAM_WATCH: this.handleStreamWatch,

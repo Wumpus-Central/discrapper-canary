@@ -1,14 +1,14 @@
-n.d(t, { Z: () => i });
-var r = n(791819);
-function i(e, t) {
+r.d(t, { Z: () => n });
+var a = r(791819);
+function n(e, t) {
     if (null == e) return {};
-    var n,
-        i,
-        l = (0, r.Z)(e, t);
+    var r,
+        n,
+        o = (0, a.Z)(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < o.length; i++)
-            (n = o[i]), -1 === t.indexOf(n) && {}.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+        var s = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < s.length; n++)
+            (r = s[n]), -1 === t.indexOf(r) && {}.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
     }
-    return l;
+    return o;
 }

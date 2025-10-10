@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => H }), n(539854), n(388685);
+n.d(t, { ZP: () => V }), n(539854), n(388685);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -20,7 +20,7 @@ var r,
     y = n(594174),
     v = n(981631),
     I = n(474936);
-function C(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function C(e, t, n) {
         e
     );
 }
-function S(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -117,23 +117,23 @@ class x extends c.Z {
     constructor(e) {
         var t;
         super(),
-            C(this, "key", void 0),
-            C(this, "userId", void 0),
-            C(this, "type", void 0),
-            C(this, "status", void 0),
-            C(this, "isMobile", void 0),
-            C(this, "activities", void 0),
-            C(this, "applicationStream", void 0),
-            C(this, "user", void 0),
-            C(this, "usernameLower", void 0),
-            C(this, "mutualGuildsLength", void 0),
-            C(this, "mutualGuilds", void 0),
-            C(this, "nickname", void 0),
-            C(this, "spam", void 0),
-            C(this, "giftIntentType", void 0),
-            C(this, "ignoredUser", void 0),
-            C(this, "applicationId", void 0),
-            C(this, "isGameRelationship", void 0),
+            S(this, "key", void 0),
+            S(this, "userId", void 0),
+            S(this, "type", void 0),
+            S(this, "status", void 0),
+            S(this, "isMobile", void 0),
+            S(this, "activities", void 0),
+            S(this, "applicationStream", void 0),
+            S(this, "user", void 0),
+            S(this, "usernameLower", void 0),
+            S(this, "mutualGuildsLength", void 0),
+            S(this, "mutualGuilds", void 0),
+            S(this, "nickname", void 0),
+            S(this, "spam", void 0),
+            S(this, "giftIntentType", void 0),
+            S(this, "ignoredUser", void 0),
+            S(this, "applicationId", void 0),
+            S(this, "isGameRelationship", void 0),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -162,7 +162,7 @@ class A {
                     r === v.OGo.FRIEND && e.add(n),
                     new x(
                         T(
-                            S(
+                            C(
                                 {
                                     key: n,
                                     type: r,
@@ -197,7 +197,7 @@ class A {
                     n.push(
                         new x(
                             T(
-                                S(
+                                C(
                                     {
                                         key: "".concat(r, "-").concat(l),
                                         type: a,
@@ -222,7 +222,7 @@ class A {
             p.Z.getSuggestions(),
             (e) =>
                 new x(
-                    S(
+                    C(
                         {
                             key: e.key,
                             userId: e.key,
@@ -300,7 +300,7 @@ class A {
         );
     }
     constructor(e = []) {
-        C(this, "_rows", void 0), (this._rows = e);
+        S(this, "_rows", void 0), (this._rows = e);
     }
 }
 let Z = !0,
@@ -328,7 +328,7 @@ function B(e) {
         return !D && !!R.update(e) && ((R = R.clone()), !0);
     };
 }
-class V extends (r = a.ZP.Store) {
+class H extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, O.Z, y.default, _.Z, b.ZP, m.Z, p.Z, u.Z, d.Z),
             this.syncWith([E.Z], G),
@@ -347,8 +347,8 @@ class V extends (r = a.ZP.Store) {
         };
     }
 }
-C(V, "displayName", "FriendsStore");
-let H = new V(o.Z, {
+S(H, "displayName", "FriendsStore");
+let V = new H(o.Z, {
     CONNECTION_OPEN: function () {
         U();
     },

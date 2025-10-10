@@ -1,9 +1,9 @@
 n.d(t, { _: () => l });
 var r = n(535396),
-    o = n(989308),
-    i = n(388032);
+    i = n(989308),
+    o = n(388032);
 function l(e, t, n) {
-    var l, s, a;
+    var l, a, s;
     return (null == (l = t.sourceEntitlement) ? void 0 : l.ends_at) != null
         ? {
               type: "expiring",
@@ -17,17 +17,17 @@ function l(e, t, n) {
           : t.type === r.A3.LEVEL_ACTIVATED
             ? {
                   type: "active",
-                  statusText: i.intl.formatToPlainString(o.default.WRRYUV, {
+                  statusText: o.intl.formatToPlainString(i.default.WRRYUV, {
                       perkName:
-                          null != (a = null == (s = t.sourcePowerup) ? void 0 : s.title)
-                              ? a
-                              : i.intl.string(i.t.BfF6EB),
+                          null != (s = null == (a = t.sourcePowerup) ? void 0 : a.title)
+                              ? s
+                              : o.intl.string(o.t.BfF6EB),
                   }),
               }
             : t.type === r.A3.POWERUP_ACTIVATED
               ? {
                     type: "active",
-                    statusText: i.intl.string(o.default.FFLkm5),
+                    statusText: o.intl.string(i.default.FFLkm5),
                 }
               : null;
 }

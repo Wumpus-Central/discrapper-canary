@@ -1,11 +1,11 @@
-n.d(e, { Z: () => i });
-var l = n(512722),
-    a = n.n(l),
-    r = n(875425);
-function i(t) {
-    if (t !== r.FO.TODAY) return a()("number" == typeof t, "Invalid custom status clear timeout"), t;
+n.d(t, { Z: () => a });
+var r = n(512722),
+    i = n.n(r),
+    l = n(875425);
+function a(e) {
+    if (e !== l.FO.TODAY) return i()("number" == typeof e, "Invalid custom status clear timeout"), e;
     {
-        let t = new Date();
-        return new Date(t.getFullYear(), t.getMonth(), t.getDate() + 1).getTime() - t.getTime();
+        let e = new Date();
+        return new Date(e.getFullYear(), e.getMonth(), e.getDate() + 1).getTime() - e.getTime();
     }
 }

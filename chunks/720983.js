@@ -1,15 +1,15 @@
-t.d(n, { Z: () => s });
-var a = t(951288),
-    l = t(120356),
-    r = t.n(l),
-    i = t(481060),
-    d = t(73346),
-    o = t(411935),
-    c = t(260999);
+n.d(t, { Z: () => s });
+var a = n(951288),
+    r = n(120356),
+    l = n.n(r),
+    i = n(481060),
+    o = n(73346),
+    d = n(411935),
+    c = n(260999);
 function s(e) {
-    let { guildId: n, storefront: t, selectedPageIndex: l } = e;
-    if (null == t) return null;
-    let s = null != t.logoAssetId ? (0, d._W)(t.applicationId, t.logoAssetId, 75) : null;
+    let { guildId: t, storefront: n, selectedPageIndex: r } = e;
+    if (null == n) return null;
+    let s = null != n.logoAssetId ? (0, o._W)(n.applicationId, n.logoAssetId, 75) : null;
     return (0, a.jsxs)("div", {
         className: c.headerContainer,
         children: [
@@ -20,24 +20,24 @@ function s(e) {
                         (0, a.jsx)("img", {
                             className: c.logo,
                             src: s,
-                            alt: t.title,
+                            alt: n.title,
                         }),
                     (0, a.jsx)(i.Text, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: t.title,
+                        children: n.title,
                     }),
                 ],
             }),
-            t.pages.map((e, t) =>
+            n.pages.map((e, n) =>
                 (0, a.jsx)(
                     i.P3F,
                     {
                         onClick: () => {
-                            (0, o.K)(n, t);
+                            (0, d.K)(t, n);
                         },
-                        className: r()(c.pageTitleContainer, { [c.selectedPageIndicator]: l === t }),
+                        className: l()(c.pageTitleContainer, { [c.selectedPageIndicator]: r === n }),
                         children: (0, a.jsx)(i.X6q, {
                             variant: "heading-md/semibold",
                             color: "text-default",
@@ -45,7 +45,7 @@ function s(e) {
                             children: e.title,
                         }),
                     },
-                    "".concat(e.title, "-").concat(t),
+                    "".concat(e.title, "-").concat(n),
                 ),
             ),
         ],

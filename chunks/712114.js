@@ -1,6 +1,6 @@
 n.d(t, { Z: () => h });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(990547),
     a = n(481060),
     o = n(213609),
@@ -11,7 +11,7 @@ var r = n(951288),
     p = n(945202);
 function h(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: h } = e;
-    return (i.useEffect(
+    return (r.useEffect(
         () => () => {
             (0, c.eL)();
         },
@@ -24,37 +24,37 @@ function h(e) {
     }),
     null == n)
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: p.recentClipsPopout,
               children: [
-                  (0, r.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: p.thumbnailStackContainer,
-                      children: (0, r.jsx)(u.Z, {}),
+                      children: (0, i.jsx)(u.Z, {}),
                   }),
-                  (0, r.jsx)(a.X6q, {
+                  (0, i.jsx)(a.X6q, {
                       className: p.header,
                       color: "header-primary",
                       variant: "heading-md/extrabold",
                       children: d.intl.format(d.t["+qxkzM"], { count: n.newClipIds.length }),
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, i.jsx)(a.Text, {
                       color: "text-default",
                       className: p.__invalid_content,
                       variant: "text-sm/medium",
                       children: d.intl.format(d.t["7XX0/f"], { applicationName: n.applicationName }),
                   }),
-                  (0, r.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: p.buttonsContainer,
-                      children: (0, r.jsxs)(a.hE2, {
+                      children: (0, i.jsxs)(a.hE2, {
                           children: [
-                              (0, r.jsx)(a.zxk, {
+                              (0, i.jsx)(a.zxk, {
                                   variant: "secondary",
                                   text: d.intl.string(d.t["7r5Z19"]),
                                   onClick: function () {
                                       (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
                                   },
                               }),
-                              (0, r.jsx)(a.zxk, {
+                              (0, i.jsx)(a.zxk, {
                                   variant: "primary",
                                   text: d.intl.string(d.t.md4qKy),
                                   onClick: t,

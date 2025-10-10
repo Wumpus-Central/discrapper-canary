@@ -1,6 +1,6 @@
 n.d(t, { Z: () => f });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(442837),
     a = n(430824),
     o = n(594174),
@@ -16,7 +16,7 @@ function h(e) {
         g = (0, l.e7)([o.default], () => (null != m ? o.default.getUser(m) : null)),
         b = (0, l.e7)([a.Z], () => a.Z.getGuild(t.guild_id));
     (0, s.Cv)(n);
-    let _ = (0, c.Z)({
+    let C = (0, c.Z)({
             channel: t,
             user: g,
             guild: b,
@@ -26,14 +26,14 @@ function h(e) {
             user: g,
             guild: b,
         }),
-        C = [
+        _ = [
             (0, u.Z)({
                 channel: t,
                 message: n,
                 user: g,
                 guild: b,
             }),
-            _,
+            C,
             y,
             (0, p.Z)({
                 channel: t,
@@ -41,22 +41,22 @@ function h(e) {
                 guild: b,
             }),
         ].filter((e) => null != e);
-    return t.isModeratorReportChannel() && 0 !== C.length
-        ? (0, r.jsx)(r.Fragment, { children: C.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) })
+    return t.isModeratorReportChannel() && 0 !== _.length
+        ? (0, i.jsx)(i.Fragment, { children: _.map((e, t) => (0, i.jsx)(r.Fragment, { children: e }, t)) })
         : null;
 }
 function f(e) {
     let { message: t, channel: n } = e;
-    return (0, r.jsx)(r.Fragment, {
-        children: t.messageSnapshots.map((e, i) =>
-            (0, r.jsx)(
+    return (0, i.jsx)(i.Fragment, {
+        children: t.messageSnapshots.map((e, r) =>
+            (0, i.jsx)(
                 h,
                 {
                     channel: n,
                     message: t,
                     snapshot: e,
                 },
-                i,
+                r,
             ),
         ),
     });

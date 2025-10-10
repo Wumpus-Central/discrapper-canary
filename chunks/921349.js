@@ -492,7 +492,7 @@ let k = i.forwardRef(function (e, t) {
                             var t;
                             null == (t = eg.onKeyDown) || t.call(eg, e), c(e), e2(e);
                         };
-                    return (0, r.jsx)(p.NIc, {
+                    return (0, r.jsx)(p.gNt, {
                         label: ec,
                         hideLabel: eu,
                         required: ed,

@@ -7,11 +7,11 @@ function n(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-var s = function (e) {
+var o = function (e) {
         var t = document.createElement("script");
         (t.async = !0), (t.defer = !0), (t.src = e), document.head && document.head.appendChild(t);
     },
-    o = /(http|https):\/\/(www)?.+\/recaptcha/,
+    s = /(http|https):\/\/(www)?.+\/recaptcha/,
     i = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
     c = (function (e) {
         function t() {
@@ -32,9 +32,9 @@ var s = function (e) {
                 (t._inject = function () {
                     t.props.inject &&
                         !Array.from(document.scripts).reduce(function (e, t) {
-                            return e || o.test(t.src);
+                            return e || s.test(t.src);
                         }, !1) &&
-                        s(
+                        o(
                             "https://recaptcha.net/recaptcha/api.js?render=explicit" +
                                 (t.props.hl ? "&hl=" + t.props.hl : ""),
                         );

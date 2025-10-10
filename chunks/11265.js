@@ -1,32 +1,32 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    a = n(786920),
+    a = n(137317),
     o = n(481060),
     c = n(393238),
     d = n(388032),
     u = n(165121);
-let m = i.memo(function (e) {
+let g = i.memo(function (e) {
     var t, n;
     let {
             renderHeader: l,
-            children: m,
-            isExpanded: g,
+            children: g,
+            isExpanded: m,
             isStuck: p,
             onExpand: f,
             disableAnimation: h,
-            disableBackground: b,
+            disableBackground: x,
         } = e,
-        [x, j] = i.useState(!0),
-        [v, _] = i.useState(!1),
-        { ref: O, height: y = 0 } = (0, c.ZP)(),
-        { ref: C, height: N = 0 } = (0, c.ZP)(),
-        [E, I] = i.useState(g),
+        [b, j] = i.useState(!0),
+        [_, v] = i.useState(!1),
+        { ref: C, height: O = 0 } = (0, c.ZP)(),
+        { ref: y, height: N = 0 } = (0, c.ZP)(),
+        [E, I] = i.useState(m),
         S = (0, o.q_F)(
             {
-                height: E ? N + y : y,
+                height: E ? N + O : O,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -68,18 +68,18 @@ let m = i.memo(function (e) {
                           }),
                     t),
                 onStart: () => {
-                    _(!1);
+                    v(!1);
                 },
                 onRest: () => {
-                    _(!0);
+                    v(!0);
                 },
             },
-            x || h ? "animate-never" : "respect-motion-settings",
+            b || h ? "animate-never" : "respect-motion-settings",
         );
     return (
         i.useLayoutEffect(() => {
-            _(!1), I(g);
-        }, [g]),
+            v(!1), I(m);
+        }, [m]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
                 j(!1);
@@ -88,23 +88,23 @@ let m = i.memo(function (e) {
         }, []),
         (0, r.jsx)(o.P3F, {
             className: s()(u.editCard, {
-                [u.toggled]: g,
-                [u.noBackground]: b,
+                [u.toggled]: m,
+                [u.noBackground]: x,
             }),
             children: (0, r.jsxs)(a.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: m && _ }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {
-                        innerRef: O,
+                        innerRef: C,
                         onClick: p ? void 0 : f,
-                        className: s()(u.innerHeader, { [u.toggled]: g && p }),
+                        className: s()(u.innerHeader, { [u.toggled]: m && p }),
                         "aria-label": d.intl.string(d.t.dcl9MT),
                         children: l,
                     }),
                     (0, r.jsx)("div", {
-                        ref: C,
-                        children: m,
+                        ref: y,
+                        children: g,
                     }),
                 ],
             }),

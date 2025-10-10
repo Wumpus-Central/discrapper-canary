@@ -1,17 +1,17 @@
-r.d(t, { L: () => a });
-var n = r(951288);
-r(647438);
-var o = r(409813),
-    c = r(443650),
-    l = r(464797),
-    i = r(594816);
+n.d(t, { L: () => a });
+var r = n(951288);
+n(647438);
+var o = n(409813),
+    c = n(443650),
+    l = n(464797),
+    i = n(594816);
 function u(e) {
     let { onClose: t } = e,
-        { guildProductListing: r } = (0, l._)();
-    return (0, n.jsx)(c.Z, {
-        guildProductListing: r,
+        { guildProductListing: n } = (0, l._)();
+    return (0, r.jsx)(c.Z, {
+        guildProductListing: n,
         className: i.header,
         onClose: t,
     });
 }
-let a = (e, t, r) => (r === o.h8.CONFIRM ? null : (0, n.jsx)(u, { onClose: () => t(!1) }));
+let a = (e, t, n) => (n === o.h8.CONFIRM ? null : (0, r.jsx)(u, { onClose: () => t(!1) }));

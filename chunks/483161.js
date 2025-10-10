@@ -1,4 +1,4 @@
-n.d(e, { z: () => L });
+n.d(e, { z: () => N });
 var i = n(951288),
     l = n(657707),
     u = n(442837),
@@ -15,20 +15,20 @@ var i = n(951288),
     A = n(620163),
     S = n(726985),
     y = n(388032),
-    _ = n(88651);
-let g = (0, c.x1)(O.n.PROFILE_PANE, {
+    g = n(88651);
+let _ = (0, c.x1)(O.n.PROFILE_PANE, {
         buildLayout: () => [],
         render: o.Z,
     }),
     b = (0, c.wf)(O.n.PROFILE_PANEL, {
         useTitle: () => y.intl.string(y.t["vi7f+v"]),
-        buildLayout: () => [g],
+        buildLayout: () => [_],
         notice: {
             stores: [s.Z, T.Z],
             element: a.Z,
         },
     }),
-    L = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
+    N = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
         icon: l.tBG,
         useTitle: () => y.intl.string(y.t["vi7f+v"]),
         legacySearchKey: S.s6.PROFILE_CUSTOMIZATION,
@@ -43,7 +43,7 @@ let g = (0, c.x1)(O.n.PROFILE_PANE, {
             return null == e
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: _.profileCustomizationTab,
+                      className: g.profileCustomizationTab,
                       children: [
                           (0, i.jsx)(r.qEK, {
                               src: n,
@@ -52,7 +52,7 @@ let g = (0, c.x1)(O.n.PROFILE_PANE, {
                               "aria-label": y.intl.string(y.t.lqaIxM),
                           }),
                           (0, i.jsxs)("div", {
-                              className: _.textContainer,
+                              className: g.textContainer,
                               children: [
                                   (0, i.jsx)(r.Text, {
                                       color: "header-primary",
@@ -61,7 +61,7 @@ let g = (0, c.x1)(O.n.PROFILE_PANE, {
                                       children: null != (t = e.globalName) ? t : e.username,
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: _.editProfilesRow,
+                                      className: g.editProfilesRow,
                                       children: [
                                           (0, i.jsx)(r.Text, {
                                               variant: "text-sm/normal",

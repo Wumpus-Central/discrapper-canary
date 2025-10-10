@@ -20,10 +20,10 @@ function g(e) {
         [v, j] = r.useState(!1),
         _ = (0, i.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { loading: E, hasAlreadyLinked: S, canStartAuthorization: N, startAuthorization: T } = (0, o.FG)(C),
-        O = (0, m.ZP)(_),
+        { loading: E, hasAlreadyLinked: S, canStartAuthorization: T, startAuthorization: O } = (0, o.FG)(C),
+        N = (0, m.ZP)(_),
         P =
-            null == O || null == (t = O.widgets)
+            null == N || null == (t = N.widgets)
                 ? void 0
                 : t.some((e) => e instanceof d.q && e.applicationId === (null == C ? void 0 : C.id));
     return null == y || null == y.edit_profile_upsell_image || null == C || E
@@ -33,7 +33,7 @@ function g(e) {
                   ? P
                       ? []
                       : [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : N
+                  : T
                     ? [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
@@ -70,7 +70,7 @@ function g(e) {
                               : {
                                     text: b.intl.string(b.t.DSJi39),
                                     onClick: () => {
-                                        T(),
+                                        O(),
                                             j(!0),
                                             (0, p.openUserProfileModal)({
                                                 userId: _,

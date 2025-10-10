@@ -28,17 +28,17 @@ var r = n(620014),
     P = "[object Boolean]",
     w = "[object Date]",
     D = "[object Error]",
-    x = "[object Function]",
-    L = "[object GeneratorFunction]",
-    j = "[object Map]",
-    M = "[object Number]",
+    L = "[object Function]",
+    x = "[object GeneratorFunction]",
+    M = "[object Map]",
+    j = "[object Number]",
     k = "[object Object]",
     U = "[object RegExp]",
     G = "[object Set]",
     B = "[object String]",
     Z = "[object Symbol]",
-    V = "[object WeakMap]",
-    F = "[object ArrayBuffer]",
+    F = "[object WeakMap]",
+    V = "[object ArrayBuffer]",
     H = "[object DataView]",
     Y = "[object Float32Array]",
     W = "[object Float64Array]",
@@ -52,28 +52,28 @@ var r = n(620014),
     ee = {};
 function et(e, t, n, R, P, w) {
     var D,
-        j = t & S,
-        M = t & A,
+        M = t & S,
+        j = t & A,
         U = t & C;
     if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var G = E(e);
     if (G) {
-        if (((D = h(e)), !j)) return c(e, D);
+        if (((D = h(e)), !M)) return c(e, D);
     } else {
         var B = p(e),
-            Z = B == x || B == L;
-        if (b(e)) return l(e, j);
+            Z = B == L || B == x;
+        if (b(e)) return l(e, M);
         if (B == k || B == N || (Z && !P)) {
-            if (((D = M || Z ? {} : g(e)), !j)) return M ? d(e, s(D, e)) : u(e, o(D, e));
+            if (((D = j || Z ? {} : g(e)), !M)) return j ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!ee[B]) return P ? e : {};
-            D = m(e, B, j);
+            D = m(e, B, M);
         }
     }
     w || (w = new r());
-    var V = w.get(e);
-    if (V) return V;
+    var F = w.get(e);
+    if (F) return F;
     w.set(e, D),
         v(e)
             ? e.forEach(function (r) {
@@ -83,8 +83,8 @@ function et(e, t, n, R, P, w) {
               e.forEach(function (r, i) {
                   D.set(i, et(r, t, n, i, e, w));
               });
-    var F = U ? (M ? _ : f) : M ? T : I,
-        H = G ? void 0 : F(e);
+    var V = U ? (j ? _ : f) : j ? T : I,
+        H = G ? void 0 : V(e);
     return (
         i(H || e, function (r, i) {
             H && (r = e[(i = r)]), a(D, i, et(r, t, n, i, e, w));
@@ -94,7 +94,7 @@ function et(e, t, n, R, P, w) {
 }
 (ee[N] =
     ee[R] =
-    ee[F] =
+    ee[V] =
     ee[H] =
     ee[P] =
     ee[w] =
@@ -103,8 +103,8 @@ function et(e, t, n, R, P, w) {
     ee[K] =
     ee[z] =
     ee[q] =
-    ee[j] =
     ee[M] =
+    ee[j] =
     ee[k] =
     ee[U] =
     ee[G] =
@@ -115,5 +115,5 @@ function et(e, t, n, R, P, w) {
     ee[J] =
     ee[$] =
         !0),
-    (ee[D] = ee[x] = ee[V] = !1),
+    (ee[D] = ee[L] = ee[F] = !1),
     (e.exports = et);

@@ -1,12 +1,12 @@
-n.d(t, { G: () => s });
+n.d(t, { G: () => o });
 var r = n(442837),
-    l = n(607070),
+    i = n(607070),
     a = n(675997);
-function s(e) {
+function o(e) {
     let { enableShopTakeOver: t } = a.Z.useConfig({ location: e }),
-        n = (0, r.e7)([l.Z], () => {
+        n = (0, r.e7)([i.Z], () => {
             var e;
-            return null == (e = l.Z.enableCustomCursor) || e;
+            return null == (e = i.Z.enableCustomCursor) || e;
         });
     return t && n;
 }

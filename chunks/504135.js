@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(743236),
     d = n(525220),
     f = n(939350),
-    _ = n(515527);
+    _ = n(334405);
 function p(e, t, n) {
     return (
         t in e
@@ -86,29 +86,29 @@ function E(e) {
             dontCloseOnAction: D,
             iconProps: L,
         } = e,
-        { onSelect: x, onInteraction: j } = i.useContext(c.p),
-        M = i.useRef(null),
+        { onSelect: x, onInteraction: M } = i.useContext(c.p),
+        j = i.useRef(null),
         k = i.useCallback(
             (e) => {
                 var t;
-                if ((null == j || j({ type: c.U.DEFAULT }), null == S)) return !1;
+                if ((null == M || M({ type: c.U.DEFAULT }), null == S)) return !1;
                 (e.shiftKey && w) || D || A(),
                     e.persist(),
                     null == x || x(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => S(e));
             },
-            [S, A, x, w, D, j],
+            [S, A, x, w, D, M],
         );
     return (
         i.useEffect(() => {
-            I && ((0, u.F)(M), null == C || C());
+            I && ((0, u.F)(j), null == C || C());
         }, [I, C]),
         (0, r.jsxs)(
             s.P3F,
             g(
                 h(
                     {
-                        innerRef: M,
+                        innerRef: j,
                         className: o()(_.item, _.labelContainer, f._[t], N, {
                             [_.disabled]: v,
                             [_.focused]: I,

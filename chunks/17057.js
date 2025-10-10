@@ -2,37 +2,37 @@ n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(265299),
-    o = n(388032),
-    s = n(818923),
-    l = n(142441);
+    l = n(265299),
+    a = n(388032),
+    o = n(818923),
+    s = n(142441);
 let c = function (e) {
     let { questId: t } = e;
     return (0, r.jsx)("div", {
-        className: s.previewBackground,
+        className: o.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: s.previewCard,
+            className: o.previewCard,
             children: [
                 (0, r.jsx)(i.X6q, {
                     variant: "heading-md/semibold",
-                    children: o.intl.string(o.t.YCrItr),
+                    children: a.intl.string(a.t.IcljUl),
                 }),
                 (0, r.jsx)("div", {
-                    className: l.embedHelper,
+                    className: s.embedHelper,
                     children: (0, r.jsx)("span", {
-                        className: l.helperText,
-                        children: o.intl.string(o.t.lSSsqK),
+                        className: s.helperText,
+                        children: a.intl.string(a.t.q97mEh),
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: l.embedSections,
+                    className: s.embedSections,
                     children: (0, r.jsx)("div", {
-                        className: l.embedSection,
+                        className: s.embedSection,
                         children: (0, r.jsx)("div", {
-                            className: l.embedWrapper,
+                            className: s.embedWrapper,
                             children: (0, r.jsx)("div", {
-                                className: l.questsEmbed,
-                                children: (0, r.jsx)(a.Z, { questId: t }),
+                                className: s.questsEmbed,
+                                children: (0, r.jsx)(l.Z, { questId: t }),
                             }),
                         }),
                     }),

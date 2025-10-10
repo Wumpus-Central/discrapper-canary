@@ -7,9 +7,9 @@ var r = n(951288),
     o = n(441536),
     c = n(434404),
     d = n(353857),
-    u = n(755032),
-    m = n(388032),
-    g = n(565744);
+    u = n(659854),
+    g = n(388032),
+    m = n(764009);
 function p(e) {
     let { className: t, guildId: n, selectedBadge: p } = e,
         f = i.useCallback(
@@ -21,22 +21,22 @@ function p(e) {
         h = i.useCallback(() => {
             (0, o.Z)(n, s.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
-        b = (0, a.Z)(),
-        x = i.useId();
+        x = (0, a.Z)(),
+        b = i.useId();
     return (0, r.jsxs)("div", {
         className: t,
         children: [
             (0, r.jsx)(l.vwX, {
-                id: x,
-                className: g.sectionTitle,
-                children: m.intl.string(u.default.pb7lpK),
+                id: b,
+                className: m.sectionTitle,
+                children: g.intl.string(u.default.pb7lpK),
             }),
             (0, r.jsx)(d.g, {
-                badgeCollection: b,
+                badgeCollection: x,
                 handleBoostUpsellClick: h,
                 onBadgeClicked: f,
                 selectedBadge: p,
-                headingId: x,
+                headingId: b,
             }),
         ],
     });

@@ -70,21 +70,21 @@ let _ = "mp4",
     I = "downsized_small.mp4",
     T = "original.mp4",
     S = m,
-    A = M(S) ? a.EO.VIDEO : a.EO.IMAGE,
+    A = j(S) ? a.EO.VIDEO : a.EO.IMAGE,
     C = null,
     N = "",
     R = "",
     P = [],
     w = [],
     D = [],
-    x = [];
-function L(e) {
+    L = [];
+function x(e) {
     C = e.analyticsID;
 }
-function j(e) {
+function M(e) {
     "" === (N = e.query) && ((R = ""), (P = []), (D = []));
 }
-function M(e) {
+function j(e) {
     switch (e) {
         case b:
         case y:
@@ -153,11 +153,11 @@ function Z(e) {
     let { items: t } = e;
     D = t;
 }
-function V(e) {
+function F(e) {
     let { items: t } = e;
-    x = t;
+    L = t;
 }
-class F extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     getAnalyticsID() {
         return C;
     }
@@ -180,16 +180,16 @@ class F extends (r = i.ZP.Store) {
         return D;
     }
     getTrendingSearchTerms() {
-        return x;
+        return L;
     }
 }
-c(F, "displayName", "GIFPickerViewStore");
-let H = new F(o.Z, {
-    GIF_PICKER_INITIALIZE: L,
-    GIF_PICKER_QUERY: j,
+c(V, "displayName", "GIFPickerViewStore");
+let H = new V(o.Z, {
+    GIF_PICKER_INITIALIZE: x,
+    GIF_PICKER_QUERY: M,
     GIF_PICKER_QUERY_SUCCESS: U,
     GIF_PICKER_QUERY_FAILURE: G,
     GIF_PICKER_TRENDING_FETCH_SUCCESS: B,
     GIF_PICKER_SUGGESTIONS_SUCCESS: Z,
-    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: V,
+    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: F,
 });

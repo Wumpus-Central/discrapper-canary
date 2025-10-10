@@ -1,30 +1,30 @@
-s.d(t, { Z: () => u });
-var n = s(951288),
-    r = s(647438),
-    a = s(866442),
-    i = s(481060),
-    l = s(188764);
-function o(e) {
+n.d(t, { Z: () => d });
+var r = n(951288),
+    s = n(647438),
+    o = n(866442),
+    a = n(481060),
+    i = n(188764);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var s = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(s);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(s).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = s[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -35,47 +35,47 @@ function c(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var s = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      s.push.apply(s, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return s;
-              })(Object(t)).forEach(function (s) {
-                  Object.defineProperty(e, s, Object.getOwnPropertyDescriptor(t, s));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = function (e) {
-    let { colorKey: t, value: s, onChange: u, title: d } = e,
-        g = r.useRef(null);
-    return (0, n.jsxs)(i.xJW, {
+let d = function (e) {
+    let { colorKey: t, value: n, onChange: d, title: u } = e,
+        p = s.useRef(null);
+    return (0, r.jsxs)(a.xJW, {
         children: [
-            (0, n.jsx)(i.vwX, { children: d }),
-            (0, n.jsx)(i.yRy, {
-                targetElementRef: g,
+            (0, r.jsx)(a.vwX, { children: u }),
+            (0, r.jsx)(a.yRy, {
+                targetElementRef: p,
                 renderPopout: (e) =>
-                    (0, n.jsx)(
-                        i.Z$W,
-                        c(o({}, e), {
-                            value: s,
-                            onChange: (e) => u(t, (0, a.Rf)(e)),
+                    (0, r.jsx)(
+                        a.Z$W,
+                        c(l({}, e), {
+                            value: n,
+                            onChange: (e) => d(t, (0, o.Rf)(e)),
                         }),
                     ),
                 children: (e) =>
-                    (0, n.jsx)(
-                        i.P3F,
-                        c(o({}, e), {
-                            innerRef: g,
+                    (0, r.jsx)(
+                        a.P3F,
+                        c(l({}, e), {
+                            innerRef: p,
                             tag: "span",
                             "aria-label": "Select a color",
-                            className: l.swatchContainer,
-                            style: { backgroundColor: s },
-                            children: (0, n.jsx)(i.ilE, {
+                            className: i.swatchContainer,
+                            style: { backgroundColor: n },
+                            children: (0, r.jsx)(a.ilE, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: l.swatchIcon,
+                                className: i.swatchIcon,
                             }),
                         }),
                     ),

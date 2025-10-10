@@ -209,7 +209,7 @@ class _ extends o.C {
                 case 9:
                     a.filter = {
                         oneofKind: "clientIp",
-                        clientIp: M.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
+                        clientIp: j.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
                     };
                     break;
                 case 10:
@@ -306,7 +306,7 @@ class _ extends o.C {
             "clientLocation" === e.filter.oneofKind &&
                 N.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
-                M.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
+                j.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
                 v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             "bot" === e.filter.oneofKind &&
@@ -388,7 +388,7 @@ class _ extends o.C {
                 name: "client_ip",
                 kind: "message",
                 oneof: "filter",
-                T: () => M,
+                T: () => j,
             },
             {
                 no: 10,
@@ -1058,7 +1058,7 @@ class L extends o.C {
     }
 }
 let x = new L();
-class j extends o.C {
+class M extends o.C {
     create(e) {
         let t = { blocks: [] };
         return (
@@ -1105,7 +1105,7 @@ class j extends o.C {
         ]);
     }
 }
-let M = new j();
+let j = new M();
 class k extends o.C {
     create(e) {
         let t = {};

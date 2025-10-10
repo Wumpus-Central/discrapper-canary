@@ -127,17 +127,17 @@ function w(e) {
             },
             l,
         ),
-        x = u
+        L = u
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
-        L = t.length > 1;
+        x = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.ZP, {
                 children: (e) =>
-                    L
+                    x
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(v.Z, {
@@ -173,11 +173,11 @@ function w(e) {
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
-                                onContextMenu: x,
+                                onContextMenu: L,
                             }),
                     }),
             }),
-            L &&
+            x &&
                 (0, r.jsx)(y.ZP, {
                     children: (e) =>
                         (0, r.jsx)(O.Z, {

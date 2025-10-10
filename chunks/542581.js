@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
-    s = n(786920),
-    o = n(524825),
+    s = n(137317),
+    o = n(574583),
     c = n(481060),
     d = n(787014),
     u = n(454585),
@@ -35,7 +35,7 @@ let b = i.memo(function (e) {
         setTimeout(a, 350);
     }, [j, a]);
     let [T, w] = i.useState(!j),
-        O = (0, c.q_F)({
+        S = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
@@ -43,7 +43,7 @@ let b = i.memo(function (e) {
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
-              style: O,
+              style: S,
               className: T ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)("div", {
                   className: x.container,

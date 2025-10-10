@@ -42,19 +42,19 @@ function p(e) {
                 })
                 .filter((e) => !(e.id in o.Tm) && h.has(e.id));
         }, [null == (t = p.result) ? void 0 : t.sections, h]),
-        y = (0, u.h)(v);
+        x = (0, u.h)(v);
     return {
         appsInThisServer: l.useMemo(
             () =>
                 r()
                     .compact(
-                        y.map((e) => {
+                        x.map((e) => {
                             let { application: t } = e;
                             return t;
                         }),
                     )
                     .map((e) => ({ application: e })),
-            [y],
+            [x],
         ),
         isLoading: p.fetchState.fetching || f,
     };

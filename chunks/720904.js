@@ -14,8 +14,8 @@ var i = n(120356),
     b = n(768581),
     p = n(176354),
     O = n(981631),
-    m = n(185923),
-    y = n(388032),
+    y = n(185923),
+    m = n(388032),
     h = n(561782);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,8 +60,8 @@ function j(e, t) {
         e
     );
 }
-let E = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
-function S(e) {
+let S = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+function E(e) {
     let { emoji: t, isFocused: n } = e,
         { animated: i, src: a, surrogates: s } = t;
     return (
@@ -83,7 +83,7 @@ function S(e) {
                     j(
                         v(
                             {
-                                "aria-label": y.intl.formatToPlainString(y.t["/iYSo6"], { emojiName: t.name }),
+                                "aria-label": m.intl.formatToPlainString(m.t["/iYSo6"], { emojiName: t.name }),
                                 className: l()(h.button, { [h.focused]: n }),
                             },
                             e,
@@ -110,11 +110,11 @@ function P(e, t) {
     let n = (0, s.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && E.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
+            !(e.useSpriteSheet && S.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
             !p.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: m.Hz.REACTION,
+                intention: y.Hz.REACTION,
             })
         );
     });
@@ -133,7 +133,7 @@ function P(e, t) {
                           id: "quickreact-".concat(null != (l = n.id) ? l : i),
                           render: (e) => {
                               let { isFocused: t } = e;
-                              return (0, r.jsx)(S, {
+                              return (0, r.jsx)(E, {
                                   emoji: n,
                                   isFocused: t,
                               });

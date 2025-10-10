@@ -35,10 +35,10 @@ function h(e) {
                 (m.current = !0);
         }, [t, _, b, n, l]);
     let O = null != _,
-        [E, v] = i.useState(window.innerWidth);
+        [E, y] = i.useState(window.innerWidth);
     i.useEffect(() => {
         let e = (0, o.debounce)(() => {
-            v(window.innerWidth);
+            y(window.innerWidth);
         }, 250);
         return (
             window.addEventListener("resize", e),
@@ -47,7 +47,7 @@ function h(e) {
             }
         );
     }, []);
-    let y = E >= 1610 ? 3 : E >= 1340 ? 2 : 1;
+    let v = E >= 1610 ? 3 : E >= 1340 ? 2 : 1;
     return n && 0 === t.length
         ? (0, r.jsx)(c.$jN, { className: f.spinner })
         : 0 === t.length
@@ -70,7 +70,7 @@ function h(e) {
                 {
                     className: f.container,
                     children: t.map((e, t) => {
-                        let n = Math.floor(t / y);
+                        let n = Math.floor(t / v);
                         return (0, r.jsx)(
                             d.Z,
                             {

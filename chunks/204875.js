@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(28664),
     l = n(481060),
-    a = n(760564);
-function s(e) {
+    s = n(760564);
+function a(e) {
     var t,
         n,
-        { children: s, disabled: o, disabledTooltip: c, id: d } = e,
+        { children: a, disabled: o, disabledTooltip: c, id: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -60,13 +60,13 @@ function s(e) {
                 return e;
             })(
                 {
-                    className: a.tabBarItem,
+                    className: s.tabBarItem,
                     id: d,
                     disabled: o,
                 },
                 u,
             )),
-            (n = n = { children: s }),
+            (n = n = { children: a }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

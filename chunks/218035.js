@@ -1,38 +1,38 @@
-n.d(e, {
-    Z: () => f,
+e.d(i, {
+    Z: () => S,
     c: () => _,
 });
-var i = n(951288);
-n(647438);
-var l = n(442837),
-    a = n(481060),
-    s = n(87051),
-    r = n(729052),
-    o = n(9156),
-    d = n(621600),
-    c = n(981631),
-    u = n(388032);
-function g(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+var n = e(951288);
+e(647438);
+var l = e(442837),
+    s = e(481060),
+    a = e(87051),
+    r = e(729052),
+    d = e(9156),
+    o = e(621600),
+    c = e(981631),
+    g = e(388032);
+function u(t) {
+    let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (t.type) {
         case c.d4z.GUILD_VOICE:
-            return e
+            return i
                 ? [
                       {
                           setting: c.bL.NULL,
-                          label: null != t.parent_id ? u.intl.string(u.t.wlrV1d) : u.intl.string(u.t["1Wn2Mz"]),
+                          label: null != t.parent_id ? g.intl.string(g.t.wlrV1d) : g.intl.string(g.t["1Wn2Mz"]),
                       },
                       {
                           setting: c.bL.ALL_MESSAGES,
-                          label: u.intl.string(u.t["9sGJkp"]),
+                          label: g.intl.string(g.t["9sGJkp"]),
                       },
                       {
                           setting: c.bL.ONLY_MENTIONS,
-                          label: u.intl.format(u.t.cpcXvb, {}),
+                          label: g.intl.format(g.t.cpcXvb, {}),
                       },
                       {
                           setting: c.bL.NO_MESSAGES,
-                          label: u.intl.string(u.t.CtVGyc),
+                          label: g.intl.string(g.t.CtVGyc),
                       },
                   ]
                 : null;
@@ -40,107 +40,107 @@ function g(t) {
             return [
                 {
                     setting: c.bL.NULL,
-                    label: null != t.parent_id ? u.intl.string(u.t.wlrV1d) : u.intl.string(u.t["1Wn2Mz"]),
+                    label: null != t.parent_id ? g.intl.string(g.t.wlrV1d) : g.intl.string(g.t["1Wn2Mz"]),
                 },
                 {
                     setting: c.bL.ONLY_MENTIONS,
-                    label: u.intl.string(u.t["BENn//"]),
+                    label: g.intl.string(g.t["BENn//"]),
                 },
                 {
                     setting: c.bL.NO_MESSAGES,
-                    label: u.intl.string(u.t.CtVGyc),
+                    label: g.intl.string(g.t.CtVGyc),
                 },
             ];
         default:
             return [
                 {
                     setting: c.bL.NULL,
-                    label: null != t.parent_id ? u.intl.string(u.t.wlrV1d) : u.intl.string(u.t["1Wn2Mz"]),
+                    label: null != t.parent_id ? g.intl.string(g.t.wlrV1d) : g.intl.string(g.t["1Wn2Mz"]),
                 },
                 {
                     setting: c.bL.ALL_MESSAGES,
-                    label: u.intl.string(u.t["n/bTaW"]),
+                    label: g.intl.string(g.t["n/bTaW"]),
                 },
                 {
                     setting: c.bL.ONLY_MENTIONS,
-                    label: u.intl.format(u.t.L2hmY2, {}),
+                    label: g.intl.format(g.t.L2hmY2, {}),
                 },
                 {
                     setting: c.bL.NO_MESSAGES,
-                    label: u.intl.string(u.t.CtVGyc),
+                    label: g.intl.string(g.t.CtVGyc),
                 },
             ];
     }
 }
 function _(t) {
-    let e = t.getGuildId(),
-        n = t.id,
-        _ = (0, l.e7)([o.ZP], () => {
-            let n = c.bL.NULL;
+    let i = t.getGuildId(),
+        e = t.id,
+        _ = (0, l.e7)([d.ZP], () => {
+            let e = c.bL.NULL;
             return (
-                null != t.parent_id && (n = o.ZP.getChannelMessageNotifications(e, t.parent_id)),
-                n !== c.bL.NULL ? n : o.ZP.getMessageNotifications(e)
+                null != t.parent_id && (e = d.ZP.getChannelMessageNotifications(i, t.parent_id)),
+                e !== c.bL.NULL ? e : d.ZP.getMessageNotifications(i)
             );
-        }, [e, t.parent_id]),
-        f = (0, l.e7)([o.ZP], () => o.ZP.getNewForumThreadsCreated(t)),
-        S = (0, l.e7)([o.ZP], () => o.ZP.getChannelOverrides(e)[n], [e, n]),
-        E = null == S ? c.bL.NULL : S.message_notifications,
-        h = (0, r.p2)(t),
-        N = g(t, h);
+        }, [i, t.parent_id]),
+        S = (0, l.e7)([d.ZP], () => d.ZP.getNewForumThreadsCreated(t)),
+        L = (0, l.e7)([d.ZP], () => d.ZP.getChannelOverrides(i)[e], [i, e]),
+        h = null == L ? c.bL.NULL : L.message_notifications,
+        E = (0, r.p2)(t),
+        N = u(t, E);
     return null == N
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, n.jsxs)(n.Fragment, {
               children: [
                   t.isForumLikeChannel()
-                      ? (0, i.jsxs)(i.Fragment, {
+                      ? (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, i.jsx)(a.S89, {
+                                (0, n.jsx)(s.S89, {
                                     id: "new-forum-threads-created",
-                                    label: u.intl.string(u.t.Rkgjpq),
-                                    checked: f,
-                                    action: () => s.Z.setForumThreadsCreated(t, !f),
+                                    label: g.intl.string(g.t.Rkgjpq),
+                                    checked: S,
+                                    action: () => a.Z.setForumThreadsCreated(t, !S),
                                 }),
-                                (0, i.jsx)(a.Clw, {}),
+                                (0, n.jsx)(s.Clw, {}),
                             ],
                         })
                       : null,
                   N.map((l) => {
-                      let { setting: r, label: o } = l;
-                      return (0, i.jsx)(
-                          a.k5B,
+                      let { setting: r, label: d } = l;
+                      return (0, n.jsx)(
+                          s.k5B,
                           {
                               group: "channel-notifications",
                               id: "".concat(r),
-                              label: o,
+                              label: d,
                               subtext:
                                   r === c.bL.NULL
-                                      ? (function (t, e) {
-                                            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                      ? (function (t, i) {
+                                            let e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                             switch (t) {
                                                 case c.bL.ALL_MESSAGES:
-                                                    return e.type === c.d4z.GUILD_VOICE && n
-                                                        ? u.intl.string(u.t["9sGJkp"])
-                                                        : u.intl.string(u.t["n/bTaW"]);
+                                                    return i.type === c.d4z.GUILD_VOICE && e
+                                                        ? g.intl.string(g.t["9sGJkp"])
+                                                        : g.intl.string(g.t["n/bTaW"]);
                                                 case c.bL.ONLY_MENTIONS:
-                                                    return u.intl.format(u.t.L2hmY2, {});
+                                                    return g.intl.format(g.t.L2hmY2, {});
                                                 case c.bL.NO_MESSAGES:
-                                                    return u.intl.string(u.t.CtVGyc);
+                                                    return g.intl.string(g.t.CtVGyc);
                                                 case c.bL.NULL:
                                                 default:
                                                     return;
                                             }
-                                        })(_, t, h)
+                                        })(_, t, E)
                                       : void 0,
                               action: () => {
-                                  null != e &&
-                                      s.Z.updateChannelOverrideSettings(
+                                  null != i &&
+                                      a.Z.updateChannelOverrideSettings(
+                                          i,
                                           e,
-                                          n,
                                           { message_notifications: r },
-                                          d.UE.notifications(r),
+                                          o.UE.notifications(r),
                                       );
                               },
-                              checked: r === E,
+                              checked: r === h,
                           },
                           r,
                       );
@@ -148,30 +148,30 @@ function _(t) {
               ],
           });
 }
-function f(t) {
-    var e, n;
-    let s = _(t),
-        d = (0, l.e7)([o.ZP], () => o.ZP.resolvedMessageNotifications(t), [t]),
-        f = (0, l.e7)([o.ZP], () => o.ZP.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
-        S = null == f ? c.bL.NULL : f.message_notifications,
-        E = (0, r.p2)(t),
-        h =
-            S === c.bL.NULL && t.isGuildStageVoice()
-                ? u.intl.format(u.t.L2hmY2, {})
-                : null == (n = g(t, E)) ||
+function S(t) {
+    var i, e;
+    let a = _(t),
+        o = (0, l.e7)([d.ZP], () => d.ZP.resolvedMessageNotifications(t), [t]),
+        S = (0, l.e7)([d.ZP], () => d.ZP.getChannelOverrides(t.guild_id)[t.id], [t.guild_id, t.id]),
+        L = null == S ? c.bL.NULL : S.message_notifications,
+        h = (0, r.p2)(t),
+        E =
+            L === c.bL.NULL && t.isGuildStageVoice()
+                ? g.intl.format(g.t.L2hmY2, {})
+                : null == (e = u(t, h)) ||
                     null ==
-                        (e = n.find((t) => {
-                            let { setting: e } = t;
-                            return e === d;
+                        (i = e.find((t) => {
+                            let { setting: i } = t;
+                            return i === o;
                         }))
                   ? void 0
-                  : e.label;
-    return null != s
-        ? (0, i.jsx)(a.sNh, {
+                  : i.label;
+    return null != a
+        ? (0, n.jsx)(s.sNh, {
               id: "channel-notifications",
-              label: u.intl.string(u.t.h850Sk),
-              subtext: h,
-              children: s,
+              label: g.intl.string(g.t.h850Sk),
+              subtext: E,
+              children: a,
           })
         : null;
 }

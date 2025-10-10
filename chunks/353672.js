@@ -1,38 +1,38 @@
-n.d(e, { Z: () => c });
+n.d(e, { Z: () => o });
 var i = n(951288);
 n(647438);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    o = n(514923);
-function c(t) {
-    let { tips: e, className: n, headerText: r } = t;
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(514923);
+function o(t) {
+    let { tips: e, className: n, headerText: s } = t;
     return (0, i.jsxs)("div", {
-        className: s()(o.tipsSection, n),
+        className: r()(a.tipsSection, n),
         children: [
             (0, i.jsx)("div", {
-                className: o.tipsHeader,
-                children: (0, i.jsx)(a.X6q, {
+                className: a.tipsHeader,
+                children: (0, i.jsx)(l.X6q, {
                     variant: "heading-lg/bold",
-                    className: o.headerText,
-                    children: r,
+                    className: a.headerText,
+                    children: s,
                 }),
             }),
             (0, i.jsx)("ul", {
-                className: o.tipsList,
+                className: a.tipsList,
                 children: e.map((t, e) =>
                     (0, i.jsxs)(
                         "li",
                         {
-                            className: o.tipRow,
+                            className: a.tipRow,
                             children: [
-                                (0, i.jsx)(a.X6q, {
+                                (0, i.jsx)(l.X6q, {
                                     variant: "heading-md/semibold",
                                     color: "text-brand",
-                                    className: o.tipNumber,
+                                    className: a.tipNumber,
                                     children: e + 1,
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: "text-sm/medium",
                                     children: t,
                                 }),

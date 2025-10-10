@@ -20,12 +20,12 @@ var r = n(951288),
     y = n(954313),
     v = n(703656),
     I = n(922482),
-    C = n(565799),
-    S = n(501655),
-    N = n(427679),
-    T = n(448206),
-    P = n(670188),
-    j = n(496675),
+    S = n(565799),
+    C = n(501655),
+    T = n(427679),
+    N = n(448206),
+    j = n(670188),
+    P = n(496675),
     x = n(594174),
     A = n(662868),
     Z = n(981631),
@@ -36,20 +36,20 @@ function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
         d = (0, O.k5)(t.id),
-        P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
+        j = (0, o.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
             [m.Z],
             () => ({
-                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == P ? void 0 : P.id }),
+                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == j ? void 0 : j.id }),
                 isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id }),
             }),
-            [P, d],
+            [j, d],
         ),
         U = null == l ? void 0 : l.id,
-        G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
-        B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        V = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
-        H = (0, T.Z)(null == l ? void 0 : l.id),
+        G = (0, o.Wu)([S.Z], () => [...new Set(S.Z.getMutableParticipants(U, C.pV.SPEAKER).map((e) => e.user))], [U]),
+        B = (0, o.e7)([S.Z], () => (null != U ? S.Z.getParticipantCount(U, C.pV.AUDIENCE) : 0), [U]),
+        H = (0, o.e7)([P.Z], () => P.Z.can(Z.Plq.CONNECT, l)),
+        V = (0, N.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([x.default], () => x.default.getUser(F), [F]);
     i.useEffect(() => {
@@ -57,9 +57,9 @@ function D(e) {
     }, [F]);
     let {
         noticeType: W,
-        title: Y,
-        location: K,
-        locationIcon: q,
+        title: q,
+        location: Y,
+        locationIcon: K,
         canListenIn: Q,
         buttonText: X,
         users: J,
@@ -279,10 +279,10 @@ function D(e) {
                 return { noticeType: null };
             })({
                 guildEvent: d,
-                stageInstance: P,
+                stageInstance: j,
                 activeChannel: l,
-                canConnect: V,
-                myRole: H,
+                canConnect: H,
+                myRole: V,
                 eventCreator: z,
                 speakers: G,
                 listenerCount: B,
@@ -290,7 +290,7 @@ function D(e) {
                 isStageNoticeHidden: D,
                 isStudyRoomNotice: n,
             }),
-        [d, P, l, V, H, z, G, B, M, D, n],
+        [d, j, l, H, V, z, G, B, M, D, n],
     );
     return null == W
         ? null
@@ -345,17 +345,17 @@ function D(e) {
                       variant: "text-md/medium",
                       color: "header-primary",
                       className: a()(R.title, R.live),
-                      children: Y,
+                      children: q,
                   }),
                   (0, r.jsxs)("div", {
                       className: R.locationContainer,
                       children: [
-                          q,
+                          K,
                           (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               className: R.location,
-                              children: K,
+                              children: Y,
                           }),
                       ],
                   }),
@@ -387,7 +387,7 @@ function D(e) {
 function k(e) {
     let { user: t, guildId: n } = e,
         l = i.useRef(null);
-    return (0, r.jsx)(P.Z, {
+    return (0, r.jsx)(j.Z, {
         targetElementRef: l,
         user: t,
         guildId: n,

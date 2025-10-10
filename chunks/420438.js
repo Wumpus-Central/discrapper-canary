@@ -15,31 +15,31 @@ function a(e, t, n) {
         e
     );
 }
-let o = {};
-class s extends (r = i.ZP.PersistedStore) {
+let s = {};
+class o extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         for (let t in e) {
             let n = e[t];
-            o[t] = new Set(n);
+            s[t] = new Set(n);
         }
     }
     hasViewedPrompt(e, t) {
-        let n = o[t];
+        let n = s[t];
         return null != n && !!n.has(e);
     }
     getState() {
-        return o;
+        return s;
     }
 }
-a(s, "displayName", "GuildPromptsStore"), a(s, "persistKey", "GuildPromptsStore");
-let c = new s(l.Z, {
+a(o, "displayName", "GuildPromptsStore"), a(o, "persistKey", "GuildPromptsStore");
+let c = new o(l.Z, {
     GUILD_PROMPT_VIEWED: function (e) {
         let { prompt: t, guildId: n } = e,
-            r = o[n];
-        return null == r ? ((o[n] = new Set()), o[n].add(t), !0) : !r.has(t) && (r.add(t), !0);
+            r = s[n];
+        return null == r ? ((s[n] = new Set()), s[n].add(t), !0) : !r.has(t) && (r.add(t), !0);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return null != o[t.id] && !t.unavailable && (delete o[t.id], !0);
+        return null != s[t.id] && !t.unavailable && (delete s[t.id], !0);
     },
 });

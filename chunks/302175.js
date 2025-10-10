@@ -3,12 +3,12 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(831209),
-    c = n(494497),
-    u = n(793030),
-    d = n(481060),
-    f = n(434650),
+    c = n(907331),
+    u = n(494497),
+    d = n(793030),
+    f = n(481060),
     _ = n(100527),
     p = n(906732),
     h = n(879892),
@@ -29,7 +29,7 @@ var r = n(951288),
     P = n(388032),
     w = n(765179),
     D = n(630564);
-function x(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function x(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +53,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,12 +83,12 @@ function M(e, t) {
 }
 function k(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
-        { analyticsLocations: u } = (0, p.ZP)(),
+        { analyticsLocations: d } = (0, p.ZP)(),
         E = (0, O.g1)(t, "GuildPowerupMarketingPowerupCard"),
-        b = n.skuId === c.A$,
+        b = n.skuId === u.A$,
         y = (0, S.ZP)(t, n).type !== C.A3.INACTIVE,
         T = (0, I.Z)(t),
-        [x, j] = i.useState(!1),
+        [L, M] = i.useState(!1),
         [k, U] = i.useState(!1),
         G = k,
         B = i.useCallback(() => {
@@ -100,10 +100,10 @@ function k(e) {
                         section: N.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: u,
+                    analyticsLocations: d,
                     guild: e,
                 });
-        }, [t, u]),
+        }, [t, d]),
         Z = i.useCallback(() => {
             a(), (0, A.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId);
         }, [t, n.skuId, a]),
@@ -111,7 +111,7 @@ function k(e) {
             tension: 400,
             friction: 30,
         },
-        V = (0, d.q_F)({
+        V = (0, f.q_F)({
             transform: G
                 ? "translateX(-50%) translateY(16px) scale(1)"
                 : "translateX(-50%) translateY(24px) scale(1.40)",
@@ -119,22 +119,22 @@ function k(e) {
             transformOrigin: "center 0%",
             config: F,
         }),
-        H = (0, d.q_F)({
+        H = (0, f.q_F)({
             y: G ? -25 : 0,
             config: F,
         }),
-        Y = (0, d.q_F)({
+        Y = (0, f.q_F)({
             opacity: +!!G,
             transform: G ? "translateY(0)" : "translateY(20px)",
             config: F,
         }),
         W = i.useCallback((e) => {
-            e && j(!0);
+            e && M(!0);
         }, []),
-        K = (0, f.O)(W),
+        K = (0, c.O)(W),
         z = (0, v.Z)(n, k);
     return (0, r.jsxs)("div", {
-        className: o()(D.topPerksCard, D.animatedTopPerksCard, w.powerupCard, { [D.animate]: x }),
+        className: o()(D.topPerksCard, D.animatedTopPerksCard, w.powerupCard, { [D.animate]: L }),
         onMouseEnter: () => U(!0),
         onMouseLeave: () => U(!1),
         children: [
@@ -152,7 +152,7 @@ function k(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: M(L({}, H), { transform: H.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: j(x({}, H), { transform: H.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(D.contentContainer, w.contentContainer),
                 children: [
                     (0, r.jsx)(m.xm, {
@@ -167,7 +167,7 @@ function k(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: D.button,
-                                children: (0, r.jsx)(d.zxk, {
+                                children: (0, r.jsx)(f.zxk, {
                                     variant: "primary",
                                     text: P.intl.string(P.t["oPAx7+"]),
                                     onClick: B,
@@ -177,7 +177,7 @@ function k(e) {
                             T &&
                                 (0, r.jsx)("div", {
                                     className: D.button,
-                                    children: (0, r.jsx)(d.zxk, {
+                                    children: (0, r.jsx)(f.zxk, {
                                         variant: "secondary",
                                         text: P.intl.string(P.t.GoCQxc),
                                         onClick: Z,
@@ -190,17 +190,17 @@ function k(e) {
             }),
             !E &&
                 !b &&
-                (0, r.jsx)(d.IGR, {
+                (0, r.jsx)(f.IGR, {
                     className: D.topPerksCardNew,
                     text: P.intl.string(P.t.y2b7CA),
                 }),
             b &&
-                (0, r.jsx)(d.IGR, {
+                (0, r.jsx)(f.IGR, {
                     className: D.topPerksCardNew,
                     text: P.intl.string(P.t.oW0eUV),
                     color: l.Z.BG_BRAND,
                 }),
-            x && (0, r.jsx)("div", { className: D.shineLine }),
+            L && (0, r.jsx)("div", { className: D.shineLine }),
         ],
     });
 }
@@ -219,11 +219,11 @@ let U = 3,
                   ref: t,
                   className: w.container,
                   children: [
-                      (0, r.jsx)(u.X6q, {
+                      (0, r.jsx)(d.X6q, {
                           variant: "heading-xxl/extrabold",
                           children: P.intl.string(R.default.wjI18f),
                       }),
-                      (0, r.jsx)(u.xvT, {
+                      (0, r.jsx)(d.xvT, {
                           variant: "text-lg/medium",
                           children: P.intl.format(R.default.S562fn, {
                               helpDeskArticle: E.Z.getArticleURL(N.BhN.GUILD_BOOSTING_FAQ),

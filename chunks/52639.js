@@ -1,39 +1,39 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(81897),
     l = n(906732),
     a = n(566898),
-    o = n(769654),
-    s = n(785717),
+    s = n(769654),
+    o = n(785717),
     c = n(806729),
-    u = n(857302),
-    d = n(892001),
+    d = n(857302),
+    u = n(892001),
     p = n(483517),
     h = n(252417),
     f = n(821179),
-    m = n(502762),
-    g = n(686625),
+    g = n(502762),
+    m = n(686625),
     b = n(388032),
-    _ = n(439178);
-function y(e) {
+    y = n(439178);
+function _(e) {
     let { user: t, channelId: n } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
-        { context: C } = (0, s.KZ)(),
+        { analyticsLocations: _ } = (0, l.ZP)(),
+        { context: j } = (0, o.KZ)(),
         x = (0, i.Z)(),
-        { mutualFriendsCount: v, mutualFriends: O, mutualGuilds: j } = (0, c.Z)(t),
-        E = !t.bot && null != v && v > 0,
-        S = null != j && j.length > 0;
-    return E || S
-        ? (0, r.jsxs)(m.Z.Overlay, {
-              className: _.overlay,
+        { mutualFriendsCount: O, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
+        I = !t.bot && null != O && O > 0,
+        E = null != C && C.length > 0;
+    return I || E
+        ? (0, r.jsxs)(g.Z.Overlay, {
+              className: y.overlay,
               children: [
-                  S &&
-                      (0, r.jsx)(g.Z, {
+                  E &&
+                      (0, r.jsx)(m.Z, {
                           section: "MUTUAL_GUILDS",
                           header: b.intl.string(b.t["4lTDZm"]),
-                          listClassName: _.list,
-                          items: j.map((e) => {
+                          listClassName: y.list,
+                          items: C.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
                                   f.Z,
@@ -41,26 +41,26 @@ function y(e) {
                                       user: t,
                                       guild: n,
                                       nick: i,
-                                      onSelect: () => (0, o.X)(n.id),
+                                      onSelect: () => (0, s.X)(n.id),
                                   },
                                   n.id,
                               );
                           }),
                       }),
-                  S && E && (0, r.jsx)(p.Z, { className: _.divider }),
-                  E &&
-                      (0, r.jsx)(g.Z, {
+                  E && I && (0, r.jsx)(p.Z, { className: y.divider }),
+                  I &&
+                      (0, r.jsx)(m.Z, {
                           section: "MUTUAL_FRIENDS",
                           header: b.intl.string(b.t["0mTJ3t"]),
-                          listClassName: _.list,
-                          onExpand: () => (0, u.Z)(t.id, x),
+                          listClassName: y.list,
+                          onExpand: () => (0, d.Z)(t.id, x),
                           items:
-                              null == O
-                                  ? Array.from({ length: v }).map((e, t) =>
+                              null == v
+                                  ? Array.from({ length: O }).map((e, t) =>
                                         (0, r.jsxs)(
                                             "div",
                                             {
-                                                className: _.loadingMutualFriend,
+                                                className: y.loadingMutualFriend,
                                                 children: [
                                                     (0, r.jsx)(a.ZT, {
                                                         width: 40,
@@ -75,7 +75,7 @@ function y(e) {
                                             t,
                                         ),
                                     )
-                                  : O.map((e) => {
+                                  : v.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
                                             h.Z,
@@ -85,7 +85,7 @@ function y(e) {
                                                 channelId: n,
                                                 onSelect: () => {
                                                     var e, t;
-                                                    (0, d.openUserProfileModal)(
+                                                    (0, u.openUserProfileModal)(
                                                         ((e = (function (e) {
                                                             for (var t = 1; t < arguments.length; t++) {
                                                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -115,11 +115,11 @@ function y(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, C)),
+                                                        })({}, j)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,
-                                                                sourceAnalyticsLocations: y,
+                                                                sourceAnalyticsLocations: _,
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685), n(539854);
+n.d(t, { Z: () => F }), n(388685), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -71,15 +71,15 @@ function D(e) {
     let { entitlements: t } = e;
     (g = {}), t.forEach(N);
 }
-function x() {}
-function L() {
+function L() {}
+function x() {
     y = !0;
 }
-function j(e) {
+function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) C(e);
 }
-function M() {
+function j() {
     (O = !1), (y = !1), (v = !1);
 }
 function k(e) {
@@ -213,10 +213,10 @@ class Z extends (r = s.yh) {
     }
 }
 h(Z, "displayName", "EntitlementStore");
-let V = new Z(l.Z, {
+let F = new Z(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: P,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
-    ENTITLEMENT_FETCH_APPLICATION_FAIL: x,
+    ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: D,
     SKU_PURCHASE_SUCCESS: k,
     VIRTUAL_CURRENCY_REDEEM_SUCCESS: k,
@@ -225,7 +225,7 @@ let V = new Z(l.Z, {
     ENTITLEMENT_UPDATE: G,
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
-    ENTITLEMENTS_FETCH_FOR_USER_START: L,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: j,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: M,
+    ENTITLEMENTS_FETCH_FOR_USER_START: x,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: j,
 });

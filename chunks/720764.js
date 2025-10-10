@@ -27,15 +27,15 @@ function j(e) {
             errors: C,
             canNavigate: N,
         } = e,
-        Z = (0, d.ZP)(),
-        [S, w] = r.useState(null),
-        [I, T] = r.useState(null);
+        w = (0, d.ZP)(),
+        [S, P] = r.useState(null),
+        [I, Z] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(O);
         t = e.length > 0 ? e[0] : null;
     }
-    let P = r.useCallback(async () => {
+    let E = r.useCallback(async () => {
         if (N() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
@@ -57,13 +57,13 @@ function j(e) {
                     null
                 );
             });
-            null != e && (T(e.id), w(e));
+            null != e && (Z(e.id), P(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {
-        0 === v.length && P();
+        0 === v.length && E();
     });
-    let E = null !== t;
+    let T = null !== t;
     return (0, i.jsxs)(a.hjN, {
         children: [
             (0, i.jsx)(a.R94, {
@@ -73,7 +73,7 @@ function j(e) {
                     developersArticle: b.EYA.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, i.jsx)(a.$i$, { className: f.headerDivider }),
+            (0, i.jsx)(a.izJ, { className: f.headerDivider }),
             v.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -84,8 +84,8 @@ function j(e) {
                                   variant: "primary",
                                   size: "sm",
                                   text: g.intl.string(g.t["nrO/HB"]),
-                                  disabled: !E,
-                                  onClick: P,
+                                  disabled: !T,
+                                  onClick: E,
                               }),
                           }),
                           (0, i.jsx)(m.Z, {
@@ -125,7 +125,7 @@ function j(e) {
                               }),
                           ],
                       });
-                  })(Z, E, P),
+                  })(w, T, E),
         ],
     });
 }

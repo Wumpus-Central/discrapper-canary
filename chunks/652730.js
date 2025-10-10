@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r,
-    i,
+var i,
+    r,
     l = n(442837),
     a = n(570140),
     o = n(41776);
@@ -10,7 +10,7 @@ function u() {
     let e = o.Z.mostRecentLurkedGuildId();
     null != e ? ((s = e), (c = null)) : ((c = null != s ? s : null), (s = null));
 }
-class d extends (i = l.ZP.Store) {
+class d extends (r = l.ZP.Store) {
     initialize() {
         this.syncWith([o.Z], u);
     }
@@ -18,12 +18,12 @@ class d extends (i = l.ZP.Store) {
         return c === e;
     }
 }
-(r = "displayName") in d
-    ? Object.defineProperty(d, r, {
+(i = "displayName") in d
+    ? Object.defineProperty(d, i, {
           value: "LurkerModePopoutStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (d[r] = "LurkerModePopoutStore");
+    : (d[i] = "LurkerModePopoutStore");
 let p = new d(a.Z);

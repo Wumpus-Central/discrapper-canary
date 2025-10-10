@@ -1,66 +1,66 @@
-r.d(t, {
+n.d(t, {
     R: () => f,
     _: () => s,
 });
-var n = r(951288),
-    o = r(647438),
-    c = r(512722),
-    l = r.n(c),
-    i = r(442837),
-    u = r(240864);
+var r = n(951288),
+    o = n(647438),
+    c = n(512722),
+    l = n.n(c),
+    i = n(442837),
+    u = n(240864);
 let a = o.createContext(void 0);
 function s() {
     let e = o.useContext(a);
     return l()(null != e, "GuildProductPurchaseContext not found"), e;
 }
 function f(e) {
-    var { children: t, guildProductListingId: r } = e,
+    var { children: t, guildProductListingId: n } = e,
         o = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 o = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         o = {},
                         c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (r = 0; r < c.length; r++)
+                    (n = c[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ["children", "guildProductListingId"]);
-    let c = (0, i.e7)([u.Z], () => u.Z.getGuildProduct(r));
+    let c = (0, i.e7)([u.Z], () => u.Z.getGuildProduct(n));
     return (
         l()(null != c, "guildProductListing cannot be null"),
-        (0, n.jsx)(a.Provider, {
+        (0, r.jsx)(a.Provider, {
             value: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        n.forEach(function (t) {
-                            var n;
-                            (n = r[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: n,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = n);
+                                    : (e[t] = r);
                         });
                 }
                 return e;

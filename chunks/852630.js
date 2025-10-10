@@ -1,23 +1,23 @@
-n.d(t, { Z: () => l });
-var r = n(951288),
-    i = n(515753),
-    a = n(82892),
-    o = n(131704),
+n.d(t, { Z: () => o });
+var a = n(951288),
+    r = n(515753),
+    i = n(82892),
+    l = n(131704),
     s = n(981631);
-function l(e) {
+function o(e) {
     let { selected: t, nameplate: n } = e,
-        l = (0, a.x)(),
-        c = new o.mn({
+        o = (0, i.x)(),
+        c = new l.mn({
             id: "0",
             type: s.d4z.DM,
             name: "self",
             guild_id: "0",
-            recipients: [l.id],
+            recipients: [o.id],
         });
-    return (0, r.jsx)(i.RS, {
+    return (0, a.jsx)(r.RS, {
         selected: t,
         channel: c,
-        user: l,
+        user: o,
         nameplate: n,
     });
 }

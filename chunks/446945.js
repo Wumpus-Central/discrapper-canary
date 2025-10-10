@@ -1,16 +1,16 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(239091),
-    a = n(838221),
-    s = n(246364),
+    s = n(838221),
+    a = n(246364),
     o = n(540457),
     c = n(700833),
     d = n(388032),
     u = n(789113);
-function m(e) {
-    let { addFormField: t, onSelect: n, guild: o, allowTerms: m } = e;
+function g(e) {
+    let { addFormField: t, onSelect: n, guild: o, allowTerms: g } = e;
     return (0, r.jsx)(i.v2r, {
         navId: "add-questions",
         className: u.menu,
@@ -21,34 +21,34 @@ function m(e) {
             children: [
                 (0, r.jsx)(i.sNh, {
                     id: "text-input",
-                    icon: (0, i.GSL)(a.Z),
+                    icon: (0, i.GSL)(s.Z),
                     label: d.intl.string(d.t.w6Q9w8),
-                    action: () => (0, c.Md)(s.QJ.TEXT_INPUT, t, o),
+                    action: () => (0, c.Md)(a.QJ.TEXT_INPUT, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "paragraph",
                     icon: i.OvV,
                     label: d.intl.string(d.t.gG0JBA),
-                    action: () => (0, c.Md)(s.QJ.PARAGRAPH, t, o),
+                    action: () => (0, c.Md)(a.QJ.PARAGRAPH, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "multiple-choice",
                     icon: i.jE$,
                     label: d.intl.string(d.t.ooKh3t),
-                    action: () => (0, c.Md)(s.QJ.MULTIPLE_CHOICE, t, o),
+                    action: () => (0, c.Md)(a.QJ.MULTIPLE_CHOICE, t, o),
                 }),
-                m &&
+                g &&
                     (0, r.jsx)(i.sNh, {
                         id: "terms",
                         icon: i.snC,
                         label: d.intl.string(d.t["3pz9t7"]),
-                        action: () => (0, c.Md)(s.QJ.TERMS, t, o),
+                        action: () => (0, c.Md)(a.QJ.TERMS, t, o),
                     }),
             ],
         }),
     });
 }
-let g = function (e) {
+let m = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
     return (0, r.jsx)(o.A, {
         text: d.intl.string(d.t.CoHdoK),
@@ -57,9 +57,9 @@ let g = function (e) {
             (0, l.vq)(
                 e,
                 (e) => {
-                    var l, a;
+                    var l, s;
                     return (0, r.jsx)(
-                        m,
+                        g,
                         ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -85,14 +85,14 @@ let g = function (e) {
                             }
                             return e;
                         })({}, e)),
-                        (a = a =
+                        (s = s =
                             {
                                 addFormField: t,
                                 guild: n,
                                 allowTerms: i,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -100,8 +100,8 @@ let g = function (e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
                         l),
                     );

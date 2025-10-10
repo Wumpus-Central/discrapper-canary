@@ -1,6 +1,6 @@
-n.d(t, { R: () => l });
-var r = n(481060),
-    i = n(893776);
-function l(e) {
-    (0, r.pTH)(), i.Z.logout(e);
+n.d(t, { R: () => i });
+var a = n(481060),
+    r = n(893776);
+function i(e) {
+    (0, a.pTH)(), r.Z.logout(e);
 }

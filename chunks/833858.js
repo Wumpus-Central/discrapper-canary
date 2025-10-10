@@ -116,7 +116,7 @@ let b = () => ({
             title: s.intl.string(s.t.fFTJTE),
             emoji: {
                 id: void 0,
-                name: "\uD83D\uDCA8",
+                name: "\uD83E\uDDFB",
             },
         },
         [a.tN.CHILLING]: {

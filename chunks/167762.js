@@ -11,14 +11,14 @@ var i,
     l = n(647438),
     a = n(392711),
     s = n(91192),
-    o = n(442837),
-    c = n(681715),
-    u = n(481060),
-    d = n(278323),
-    f = n(493683),
-    p = n(239091),
-    g = n(194359),
-    h = n(434650),
+    o = n(907331),
+    c = n(442837),
+    u = n(681715),
+    d = n(481060),
+    f = n(278323),
+    p = n(493683),
+    g = n(239091),
+    h = n(194359),
     y = n(724757),
     m = n(620662),
     O = n(420660),
@@ -112,7 +112,7 @@ function H(e, t) {
     }
     return r;
 }
-let J = u.EFr.SIZE_32,
+let J = d.EFr.SIZE_32,
     B = [_.OV, _.wO, _.f, _.v1, _.pQ];
 var Y =
     (((i = {}).USER_CONTEXT_MENU = "user_context_menu"),
@@ -132,7 +132,7 @@ let X = l.memo((e) => {
             user: t,
             activities: i = [],
             gameProfileEntry: a,
-            index: c,
+            index: u,
             closeParentPopout: y,
             isSuggestion: E,
             relationshipType: j,
@@ -152,11 +152,11 @@ let X = l.memo((e) => {
             animateOnHover: !0,
             guildId: null,
         }),
-        H = (0, s.JA)("".concat(c)),
+        H = (0, s.JA)("".concat(u)),
         [Y, X] = l.useState(!1),
         [$, ee] = l.useState({}),
         et = i.filter((e) => e.type === W.IIU.PLAYING && (0, m.Z)(e, W.xjy.JOIN)),
-        en = (0, o.Wu)([R.Z], () =>
+        en = (0, c.Wu)([R.Z], () =>
             R.Z.getActivities().filter((e) => e.type === W.IIU.PLAYING && (0, m.Z)(e, W.xjy.JOIN)),
         ),
         { voiceChannel: ei } = (0, b.Z)({ userId: t.id }),
@@ -166,7 +166,7 @@ let X = l.memo((e) => {
             applicationStream: ea,
             isMobile: es,
             newStatus: eo,
-        } = (0, o.cj)([G.Z, D.Z], () => {
+        } = (0, c.cj)([G.Z, D.Z], () => {
             let e = G.Z.getStatus(t.id),
                 n = D.Z.getAnyStreamForUser(t.id),
                 r = G.Z.isMobileOnline(t.id),
@@ -185,7 +185,7 @@ let X = l.memo((e) => {
             },
             [U, F, ec],
         ),
-        ed = (0, h.O)(eu),
+        ed = (0, o.O)(eu),
         ef = l.useCallback(() => {
             X(!0);
         }, []),
@@ -235,7 +235,7 @@ let X = l.memo((e) => {
         eh = l.useCallback(
             (e) => {
                 null == T || T("user_context_menu", t.id),
-                    (0, p.jW)(e, async () => {
+                    (0, g.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                         return (n) =>
                             (0, r.jsx)(
@@ -255,7 +255,7 @@ let X = l.memo((e) => {
                     e.stopPropagation(),
                     null == T || T("open_direct_message", t.id),
                     (0, P.i)(w, !0),
-                    f.Z.openPrivateChannel({ recipientIds: t.id }),
+                    p.Z.openPrivateChannel({ recipientIds: t.id }),
                     null != y && y();
             },
             [t.id, y, w, T],
@@ -265,7 +265,7 @@ let X = l.memo((e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     null == T || T("send_friend_request", t.id),
-                    g.Z.addRelationship({
+                    h.Z.addRelationship({
                         userId: t.id,
                         context: { location: "friends-popout" },
                     });
@@ -281,7 +281,7 @@ let X = l.memo((e) => {
                 )
                     try {
                         ee((e) => Q(K({}, e), { [n.application_id]: !0 })),
-                            await d.Z.sendActivityInviteUser({
+                            await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN,
                                 userId: t.id,
                                 activity: n,
@@ -304,7 +304,7 @@ let X = l.memo((e) => {
                 )
                     try {
                         ee((e) => Q(K({}, e), { [n.application_id]: !0 })),
-                            await d.Z.sendActivityInviteUser({
+                            await f.Z.sendActivityInviteUser({
                                 type: W.mFx.JOIN_REQUEST,
                                 userId: t.id,
                                 activity: n,
@@ -339,7 +339,7 @@ let X = l.memo((e) => {
                                 onMouseEnter: ef,
                                 onMouseLeave: ep,
                                 avatar: (0, r.jsx)(
-                                    u.qEK,
+                                    d.qEK,
                                     Q(K({}, q), {
                                         size: J,
                                         src: M,
@@ -373,11 +373,11 @@ let X = l.memo((e) => {
                                       children: [
                                           (0, r.jsx)(C.sF, {
                                               label: z.intl.string(z.t.MMlhsr),
-                                              icon: u.dz2,
+                                              icon: d.dz2,
                                               onClick: (e) => {
                                                   e.preventDefault(),
                                                       e.stopPropagation(),
-                                                      g.Z.addRelationship({
+                                                      h.Z.addRelationship({
                                                           userId: t.id,
                                                           context: { location: "friends-popout" },
                                                       }),
@@ -386,11 +386,11 @@ let X = l.memo((e) => {
                                           }),
                                           (0, r.jsx)(C.sF, {
                                               label: z.intl.string(z.t.ytCpKi),
-                                              icon: u.Dio,
+                                              icon: d.Dio,
                                               onClick: (e) => {
                                                   e.preventDefault(),
                                                       e.stopPropagation(),
-                                                      g.Z.removeRelationship(t.id, { location: "friends-popout" }),
+                                                      h.Z.removeRelationship(t.id, { location: "friends-popout" }),
                                                       null == T || T("decline_friend_request", t.id);
                                               },
                                           }),
@@ -399,18 +399,18 @@ let X = l.memo((e) => {
                                 : j === W.OGo.PENDING_OUTGOING
                                   ? (0, r.jsx)(C.sF, {
                                         label: z.intl.string(z.t["bTfA//"]),
-                                        icon: u.iHX,
+                                        icon: d.iHX,
                                         onClick: (e) => {
                                             e.preventDefault(),
                                                 e.stopPropagation(),
-                                                g.Z.cancelFriendRequest(t.id, { location: "friends-popout" }),
+                                                h.Z.cancelFriendRequest(t.id, { location: "friends-popout" }),
                                                 null == T || T("cancel_friend_request", t.id);
                                         },
                                     })
                                   : E
                                     ? (0, r.jsx)(C.sF, {
                                           label: z.intl.string(z.t.w5uwoK),
-                                          icon: u.oLu,
+                                          icon: d.oLu,
                                           onClick: em,
                                       })
                                     : null,
@@ -423,7 +423,7 @@ let X = l.memo((e) => {
                                                 label: $[e.application_id]
                                                     ? z.intl.string(z.t["8BEiNj"])
                                                     : z.intl.string(z.t.OKsSCQ),
-                                                icon: $[e.application_id] ? u.dz2 : u.V9,
+                                                icon: $[e.application_id] ? d.dz2 : d.V9,
                                                 onClick: (t) => eN(t, e),
                                             },
                                             e.application_id,
@@ -440,7 +440,7 @@ let X = l.memo((e) => {
                                                           channel: null != (n = t.globalName) ? n : t.username,
                                                           game: e.name,
                                                       }),
-                                                icon: $[e.application_id] ? u.dz2 : u.ejJ,
+                                                icon: $[e.application_id] ? d.dz2 : d.ejJ,
                                                 onClick: (t) => eO(t, e),
                                             },
                                             e.application_id,
@@ -452,12 +452,12 @@ let X = l.memo((e) => {
                                 j !== W.OGo.PENDING_OUTGOING &&
                                 (0, r.jsx)(C.sF, {
                                     label: z.intl.string(z.t["g33r/P"]),
-                                    icon: u.kBi,
+                                    icon: d.kBi,
                                     onClick: ey,
                                 }),
                             (0, r.jsx)(C.sF, {
                                 label: z.intl.string(z.t.UKOtz8),
-                                icon: u.xhG,
+                                icon: d.xhG,
                                 onClick: eh,
                             }),
                         ],
@@ -486,9 +486,9 @@ let et = l.memo(function (e) {
     let {
             containerClassName: t,
             listClassName: i,
-            closePopout: d,
+            closePopout: o,
             renderHeader: f,
-            onAction: g,
+            onAction: p,
             onFriendVisible: h,
             autoFocus: m = !1,
             appContext: O = W.IlC.APP,
@@ -497,7 +497,7 @@ let et = l.memo(function (e) {
         v = l.useRef(null),
         _ = (0, y.Z)("friends-popout", v),
         S = (function () {
-            let e = (0, o.Wu)([U.Z, F.default, G.Z], () => {
+            let e = (0, c.Wu)([U.Z, F.default, G.Z], () => {
                     let e = [];
                     for (let [t, n] of U.Z.getMutableRelationships().entries()) {
                         if (n !== W.OGo.PENDING_INCOMING && n !== W.OGo.PENDING_OUTGOING) continue;
@@ -516,7 +516,7 @@ let et = l.memo(function (e) {
                     }
                     return e.sort((e, t) => t.timestamp - e.timestamp), e;
                 }),
-                t = (0, o.Wu)([T.Z, F.default, G.Z, U.Z, L.Z], () => {
+                t = (0, c.Wu)([T.Z, F.default, G.Z, U.Z, L.Z], () => {
                     let e = T.Z.getUserAffinitiesMap(),
                         t = [];
                     for (let [n, i] of e.entries()) {
@@ -548,10 +548,10 @@ let et = l.memo(function (e) {
                     });
                 }, []),
                 n = (function () {
-                    let e = (0, o.e7)([R.Z], () => R.Z.getPrimaryActivity()),
+                    let e = (0, c.e7)([R.Z], () => R.Z.getPrimaryActivity()),
                         t = null == e ? void 0 : e.application_id,
                         n = (0, j.N)(t);
-                    return (0, o.cj)([U.Z, F.default, G.Z, L.Z], () => {
+                    return (0, c.cj)([U.Z, F.default, G.Z, L.Z], () => {
                         let i = (null == e ? void 0 : e.name) != null && null != t,
                             r = {
                                 activities: [],
@@ -621,7 +621,7 @@ let et = l.memo(function (e) {
                         return r.activities.sort(a), r.online.sort(a), r.offline.sort(a), r;
                     }, [n, e, t]);
                 })(),
-                i = (0, o.e7)([R.Z], () => R.Z.getPrimaryActivity());
+                i = (0, c.e7)([R.Z], () => R.Z.getPrimaryActivity());
             return l.useMemo(() => {
                 var r;
                 return {
@@ -667,7 +667,7 @@ let et = l.memo(function (e) {
         x = l.useCallback(
             (0, a.debounce)(
                 () => {
-                    null == g || g("search_friends");
+                    null == p || p("search_friends");
                 },
                 1000,
                 {
@@ -675,7 +675,7 @@ let et = l.memo(function (e) {
                     trailing: !1,
                 },
             ),
-            [g],
+            [p],
         ),
         A = l.useCallback(
             (e) => {
@@ -690,21 +690,21 @@ let et = l.memo(function (e) {
         }, [Z, x]),
         M = l.useCallback(
             (e) => {
-                (0, p.jW)(e, async () => {
+                (0, g.jW)(e, async () => {
                     let { default: e } = await n.e("23087").then(n.bind(n, 29131));
-                    return (t) => (0, r.jsx)(e, Q(K({}, t), { onClose: d }));
+                    return (t) => (0, r.jsx)(e, Q(K({}, t), { onClose: o }));
                 }),
-                    null == g || g("open_settings_modal");
+                    null == p || p("open_settings_modal");
             },
-            [d, g],
+            [o, p],
         ),
         J = l.useCallback(() => {
-            (0, u.ZDy)(async () => {
+            (0, d.ZDy)(async () => {
                 let { default: e } = await n.e("49078").then(n.bind(n, 539725));
                 return (t) => (0, r.jsx)(e, K({}, t));
             }),
-                null == g || g("open_friend_modal");
-        }, [g]),
+                null == p || p("open_friend_modal");
+        }, [p]),
         B = l.useCallback(
             (e) => {
                 let { section: t } = e,
@@ -734,13 +734,13 @@ let et = l.memo(function (e) {
                 return (0, r.jsxs)(E.Z, {
                     className: V.section,
                     children: [
-                        (0, r.jsx)(u.nn4, {
+                        (0, r.jsx)(d.nn4, {
                             children: z.intl.format(z.t.UaqbkZ, {
                                 title: n,
                                 count: i,
                             }),
                         }),
-                        (0, r.jsxs)(u.P3F, {
+                        (0, r.jsxs)(d.P3F, {
                             onClick: () => l && k(t),
                             "aria-hidden": !0,
                             className: l ? V.sectionCollapsible : void 0,
@@ -750,12 +750,12 @@ let et = l.memo(function (e) {
                                 i,
                                 l
                                     ? a
-                                        ? (0, r.jsx)(u.Fbu, {
+                                        ? (0, r.jsx)(d.Fbu, {
                                               size: "md",
                                               color: "currentColor",
                                               className: V.chevronIcon,
                                           })
-                                        : (0, r.jsx)(u.CJ0, {
+                                        : (0, r.jsx)(d.CJ0, {
                                               size: "md",
                                               color: "currentColor",
                                               className: V.chevronIcon,
@@ -799,16 +799,16 @@ let et = l.memo(function (e) {
                           X,
                           Q(K({}, t), {
                               index: e.row,
-                              closeParentPopout: d,
+                              closeParentPopout: o,
                               isSuggestion: 3 === e.section,
                               appContext: O,
-                              onAction: g,
+                              onAction: p,
                               onFriendVisible: h,
                           }),
                           "".concat(e.section, ":").concat(t.user.id),
                       );
             },
-            [w, d, O, g, h],
+            [w, o, O, p, h],
         ),
         { showSuggestions: $ } = (0, q.Z)(),
         et = l.useMemo(() => {
@@ -834,30 +834,30 @@ let et = l.memo(function (e) {
                 : (0, r.jsxs)("div", {
                       className: V.header,
                       children: [
-                          (0, r.jsx)(u.X6q, {
+                          (0, r.jsx)(d.X6q, {
                               variant: "heading-lg/semibold",
                               children: z.intl.string(z.t.TdEu5e),
                           }),
                           (0, r.jsxs)("div", {
                               className: V.controlButtons,
                               children: [
-                                  (0, r.jsx)(c.u, {
+                                  (0, r.jsx)(u.u, {
                                       text: z.intl.string(z.t.w5uwoK),
-                                      children: (0, r.jsx)(u.hU, {
+                                      children: (0, r.jsx)(d.hU, {
                                           "aria-label": z.intl.string(z.t.w5uwoK),
                                           size: "sm",
                                           variant: "secondary",
-                                          icon: u.oLu,
+                                          icon: d.oLu,
                                           onClick: J,
                                       }),
                                   }),
-                                  (0, r.jsx)(c.u, {
+                                  (0, r.jsx)(u.u, {
                                       text: z.intl.string(z.t["3D5yo6"]),
-                                      children: (0, r.jsx)(u.hU, {
+                                      children: (0, r.jsx)(d.hU, {
                                           "aria-label": z.intl.string(z.t["3D5yo6"]),
                                           size: "sm",
                                           variant: "secondary",
-                                          icon: u.xhG,
+                                          icon: d.xhG,
                                           onClick: M,
                                       }),
                                   }),
@@ -867,7 +867,7 @@ let et = l.memo(function (e) {
                   }),
             (0, r.jsx)("div", {
                 className: V.searchContainer,
-                children: (0, r.jsx)(u.E1j, {
+                children: (0, r.jsx)(d.E1j, {
                     query: P,
                     onChange: A,
                     onClear: D,
@@ -878,7 +878,7 @@ let et = l.memo(function (e) {
             en
                 ? (0, r.jsx)("div", {
                       className: V.emptyStateContainer,
-                      children: (0, r.jsx)(u.Text, {
+                      children: (0, r.jsx)(d.Text, {
                           variant: "text-md/normal",
                           color: "text-muted",
                           children: z.intl.string(z.t["7sW4h4"]),
@@ -890,10 +890,10 @@ let et = l.memo(function (e) {
                           children: (e) => {
                               var { ref: t, role: n } = e,
                                   l = H(e, ["ref", "role"]);
-                              return (0, r.jsx)(u.Wdt, {
+                              return (0, r.jsx)(d.Wdt, {
                                   children: (e) =>
                                       (0, r.jsx)(
-                                          u.aVo,
+                                          d.aVo,
                                           K(
                                               {
                                                   innerRole: n,
@@ -930,7 +930,7 @@ let et = l.memo(function (e) {
 function en(e) {
     let { onOpen: t, onClose: n, children: i, popoutPosition: a, popoutAlign: s } = e,
         [o, c] = l.useState(!1),
-        d = l.useRef(null),
+        u = l.useRef(null),
         f = l.useCallback(() => {
             c(!1), null == n || n();
         }, [n]),
@@ -950,9 +950,9 @@ function en(e) {
                 }),
             [f],
         );
-    return (0, r.jsx)(u.yRy, {
-        targetElementRef: d,
-        animation: u.yRy.Animation.NONE,
+    return (0, r.jsx)(d.yRy, {
+        targetElementRef: u,
+        animation: d.yRy.Animation.NONE,
         position: a,
         align: s,
         autoInvert: !1,
@@ -963,7 +963,7 @@ function en(e) {
         clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return i(p, n, e, d);
+            return i(p, n, e, u);
         },
     });
 }

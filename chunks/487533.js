@@ -1,13 +1,13 @@
-function k(a, i, x) {
-    a.assets[0].p = i;
-    let k = a.layers.findIndex((a) => "flag" === a.nm);
+function l(e, t, n) {
+    e.assets[0].p = t;
+    let l = e.layers.findIndex((e) => "flag" === e.nm);
     return (
-        a.layers[k].shapes[0].it.forEach((i, r) => {
-            "gr" === a.layers[k].shapes[0].it[r].ty &&
-                a.layers[k].shapes[0].it[r].it.findIndex((a) => "fl" === a.ty) >= 0 &&
-                (a.layers[k].shapes[0].it[r].it[1].c.k = [...x.map((a) => a / 256), 1]);
+        e.layers[l].shapes[0].it.forEach((t, r) => {
+            "gr" === e.layers[l].shapes[0].it[r].ty &&
+                e.layers[l].shapes[0].it[r].it.findIndex((e) => "fl" === e.ty) >= 0 &&
+                (e.layers[l].shapes[0].it[r].it[1].c.k = [...n.map((e) => e / 256), 1]);
         }),
-        a
+        e
     );
 }
-x.d(i, { Z: () => k }), x(388685);
+n.d(t, { Z: () => l }), n(388685);

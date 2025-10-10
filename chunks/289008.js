@@ -294,7 +294,7 @@
                       stripe: n,
                   };
         },
-        x = function (e) {
+        L = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -308,9 +308,9 @@
                     url: "https://stripe.com/docs/stripe-js/react",
                 }));
         },
-        L = t.createContext(null);
-    L.displayName = "ElementsContext";
-    var j = function (e, t) {
+        x = t.createContext(null);
+    x.displayName = "ElementsContext";
+    var M = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find Elements context; You need to wrap the part of your app that ".concat(
@@ -320,7 +320,7 @@
                 );
             return e;
         },
-        M = function (e) {
+        j = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -391,19 +391,19 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(s.stripe);
+                        L(s.stripe);
                     },
                     [s.stripe],
                 ),
-                t.createElement(L.Provider, { value: s }, i)
+                t.createElement(x.Provider, { value: s }, i)
             );
         };
-    M.propTypes = {
+    j.propTypes = {
         stripe: O.any,
         options: O.object,
     };
     var k = function (e) {
-            return j(t.useContext(L), e);
+            return M(t.useContext(x), e);
         },
         U = function () {
             return k("calls useElements()").elements;
@@ -415,7 +415,7 @@
     var B = ["on", "session"],
         Z = t.createContext(null);
     Z.displayName = "CheckoutSdkContext";
-    var V = function (e, t) {
+    var F = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
@@ -425,8 +425,8 @@
                 );
             return e;
         },
-        F = t.createContext(null);
-    F.displayName = "CheckoutContext";
+        V = t.createContext(null);
+    V.displayName = "CheckoutContext";
     var H = function (e, t) {
             if (!e) return null;
             e.on, e.session;
@@ -527,7 +527,7 @@
             ),
                 t.useEffect(
                     function () {
-                        x(d.stripe);
+                        L(d.stripe);
                     },
                     [d.stripe],
                 );
@@ -538,7 +538,7 @@
                 [d.checkoutSdk, s],
             );
             return d.checkoutSdk
-                ? t.createElement(Z.Provider, { value: d }, t.createElement(F.Provider, { value: E }, i))
+                ? t.createElement(Z.Provider, { value: d }, t.createElement(V.Provider, { value: E }, i))
                 : null;
         };
     W.propTypes = {
@@ -549,11 +549,11 @@
         }).isRequired,
     };
     var K = function (e) {
-            return V(t.useContext(Z), e);
+            return F(t.useContext(Z), e);
         },
         z = function (e) {
             var n = t.useContext(Z),
-                r = t.useContext(L);
+                r = t.useContext(x);
             if (n && r)
                 throw Error(
                     "You cannot wrap the part of your app that ".concat(
@@ -561,11 +561,11 @@
                         " in both <CheckoutProvider> and <Elements> providers.",
                     ),
                 );
-            return n ? V(n, e) : j(r, e);
+            return n ? F(n, e) : M(r, e);
         },
         q = function () {
             K("calls useCheckout()");
-            var e = t.useContext(F);
+            var e = t.useContext(V);
             if (!e)
                 throw Error(
                     "Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.",
@@ -603,8 +603,8 @@
                         P = l(t.useState(null), 2),
                         w = P[0],
                         D = P[1],
-                        x = t.useRef(null),
-                        L = t.useRef(null);
+                        L = t.useRef(null),
+                        x = t.useRef(null);
                     v(w, "blur", d),
                         v(w, "focus", f),
                         v(w, "escape", h),
@@ -627,7 +627,7 @@
                         v(w, "ready", i),
                         t.useLayoutEffect(
                             function () {
-                                if (null === x.current && null !== L.current && (C || N)) {
+                                if (null === L.current && null !== x.current && (C || N)) {
                                     var t = null;
                                     if (N)
                                         switch (e) {
@@ -664,34 +664,34 @@
                                                 );
                                         }
                                     else C && (t = C.create(e, u));
-                                    (x.current = t), D(t), t && t.mount(L.current);
+                                    (L.current = t), D(t), t && t.mount(x.current);
                                 }
                             },
                             [C, N, u],
                         );
-                    var j = I(u);
+                    var M = I(u);
                     return (
                         t.useEffect(
                             function () {
-                                if (x.current) {
-                                    var e = R(u, j, ["paymentRequest"]);
-                                    e && "update" in x.current && x.current.update(e);
+                                if (L.current) {
+                                    var e = R(u, M, ["paymentRequest"]);
+                                    e && "update" in L.current && L.current.update(e);
                                 }
                             },
-                            [u, j],
+                            [u, M],
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
-                                if (x.current && "function" == typeof x.current.destroy)
+                                if (L.current && "function" == typeof L.current.destroy)
                                     try {
-                                        x.current.destroy(), (x.current = null);
+                                        L.current.destroy(), (L.current = null);
                                     } catch (e) {}
                             };
                         }, []),
                         t.createElement("div", {
                             id: a,
                             className: o,
-                            ref: L,
+                            ref: x,
                         })
                     );
                 },
@@ -789,7 +789,7 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(s);
+                        L(s);
                     },
                     [s],
                 );
@@ -923,7 +923,7 @@
         (e.CardNumberElement = eu),
         (e.CheckoutProvider = W),
         (e.CurrencySelectorElement = ey),
-        (e.Elements = M),
+        (e.Elements = j),
         (e.ElementsConsumer = G),
         (e.EmbeddedCheckout = eo),
         (e.EmbeddedCheckoutProvider = er),

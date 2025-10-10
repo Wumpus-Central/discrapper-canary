@@ -1,14 +1,14 @@
-n.d(t, { Z: () => c });
+n.d(e, { Z: () => c });
 var i = n(442837),
-    r = n(292556),
-    l = n(509613),
-    o = n(292959),
-    a = n(869235),
-    s = n(981631),
-    u = n(388032);
-let c = (0, l.qs)(a.t.DESKTOP_NOTIFICATIONS, {
-    useTitle: () => u.intl.string(u.t["/0WClp"]),
-    useSubtitle: () => u.intl.string(u.t.wF9ih4),
-    useValue: () => (0, i.e7)([o.Z], () => o.Z.getDesktopType()) !== s.qrD.NEVER,
-    setValue: (e) => r.default.setDesktopType(e ? s.qrD.ALL : s.qrD.NEVER),
+    l = n(292556),
+    u = n(509613),
+    r = n(292959),
+    s = n(313789),
+    a = n(981631),
+    o = n(388032);
+let c = (0, u.qs)(s.n.DESKTOP_NOTIFICATIONS, {
+    useTitle: () => o.intl.string(o.t["/0WClp"]),
+    useSubtitle: () => o.intl.string(o.t.wF9ih4),
+    useValue: () => (0, i.e7)([r.Z], () => r.Z.getDesktopType()) !== a.qrD.NEVER,
+    setValue: (t) => l.default.setDesktopType(t ? a.qrD.ALL : a.qrD.NEVER),
 });

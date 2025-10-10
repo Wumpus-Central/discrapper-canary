@@ -1,16 +1,16 @@
 r.d(t, {
-    FX: () => p,
+    FX: () => b,
     ZP: () => g,
-    kN: () => b,
+    kN: () => p,
     kO: () => d,
     qU: () => f,
 }),
     r(388685);
 var n = r(647438),
     i = r(442837),
-    l = r(224706),
-    o = r(669764),
-    a = r(77498),
+    o = r(224706),
+    a = r(669764),
+    l = r(77498),
     c = r(836197);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,13 +56,13 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
+    return (0, i.e7)([a.Z], () => a.Z.isFetching(e));
 }
 function f(e) {
     n.useEffect(() => {
         if (e.length > 0) {
-            let t = e.filter((e) => o.Z.canFetch(e));
-            t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
+            let t = e.filter((e) => a.Z.canFetch(e));
+            t.length > 0 && o.Z.getDetectableGamesSupplemental(t);
         }
     }, [e]);
 }
@@ -85,20 +85,20 @@ function g(e) {
         ),
     );
 }
-function b(e) {
-    let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
+function p(e) {
+    let [t, r] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]);
     return n.useMemo(() => {
         let t = {};
         return (
             e.forEach((e) => {
-                t[e] = o.Z.getGame(e);
+                t[e] = a.Z.getGame(e);
             }),
             t
         );
     }, [e, t, r]);
 }
-function p(e) {
-    let t = b(e.games.map((e) => e.applicationId));
+function b(e) {
+    let t = p(e.games.map((e) => e.applicationId));
     return n.useMemo(
         () =>
             new c.zy(
@@ -110,7 +110,7 @@ function p(e) {
                                 gameName: r.name,
                                 imageSrc: r.coverImageUrl,
                             });
-                        let n = a.Z.getDetectableGame(e.applicationId);
+                        let n = l.Z.getDetectableGame(e.applicationId);
                         return u(s({}, e), { gameName: null == n ? void 0 : n.name });
                     }),
                 }),

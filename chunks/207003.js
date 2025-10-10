@@ -22,8 +22,8 @@ var r = n(951288),
     j = n(430824),
     Z = n(496675),
     O = n(158776),
-    _ = n(306680),
-    P = n(699516),
+    P = n(306680),
+    _ = n(699516),
     C = n(594174),
     L = n(55935),
     T = n(823379),
@@ -31,7 +31,7 @@ var r = n(951288),
     w = n(981631),
     D = n(490897),
     R = n(388032),
-    M = n(652109);
+    M = n(834505);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -170,7 +170,7 @@ function H(e) {
         l = I(e, ["user", "subLabel"]);
     let a = N.ZP.useName(t),
         i = N.ZP.useUserTag(t, { decoration: "never" }),
-        s = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
+        s = (0, c.e7)([_.Z], () => _.Z.getNickname(t.id)),
         u = (0, c.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, r.jsx)(
         U,
@@ -210,11 +210,11 @@ function F(e) {
         l = I(e, ["channel", "subLabel"]);
     let a = (0, c.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, m.ZP)(t),
-        s = (0, c.e7)([E.Z, C.default, P.Z], () => {
+        s = (0, c.e7)([E.Z, C.default, _.Z], () => {
             let e = E.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, m.F6)(e, C.default, P.Z, !1);
+            return null == e ? null : (0, m.F6)(e, C.default, _.Z, !1);
         }),
-        o = (0, c.e7)([_.ZP], () => _.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
+        o = (0, c.e7)([P.ZP], () => P.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         d = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.Mmi : f.VL1;

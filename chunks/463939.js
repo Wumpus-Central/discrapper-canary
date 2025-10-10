@@ -8,8 +8,8 @@ var r,
     c = n(913527),
     d = n.n(c),
     u = n(28664),
-    m = n(481060),
-    g = n(264451),
+    g = n(481060),
+    m = n(264451),
     p = n(759178),
     f = n(462087),
     h = n(685201),
@@ -46,7 +46,7 @@ function O(e) {
 }
 let y = (e) => {
     let { dateUtc: t } = e;
-    return (0, l.jsx)(m.Text, {
+    return (0, l.jsx)(g.Text, {
         variant: "text-md/medium",
         color: "interactive-active",
         children: d()(t).utc().format("MMMM YYYY"),
@@ -56,7 +56,7 @@ function N(e) {
     let { item: t } = e,
         { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, x.j0)(t),
         a = null != s ? d()(s).add(15, "days").toISOString() : void 0,
-        o = (0, g.Zo)(a, "MMM D");
+        o = (0, m.Zo)(a, "MMM D");
     switch (n) {
         case _.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
@@ -69,7 +69,7 @@ function N(e) {
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     v.intl.string(v.t["0SrNPz"]),
-                    (0, l.jsx)(m.k$p, {
+                    (0, l.jsx)(g.k$p, {
                         size: "md",
                         color: "currentColor",
                         className: C.statusErrorIcon,
@@ -81,7 +81,7 @@ function N(e) {
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         v.intl.string(v.t["0SrNPz"]),
-                        (0, l.jsx)(m.k$p, {
+                        (0, l.jsx)(g.k$p, {
                             size: "md",
                             color: "currentColor",
                             className: C.statusErrorIcon,
@@ -111,7 +111,7 @@ function N(e) {
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     v.intl.string(v.t.eoSslJ),
-                    (0, l.jsx)(m.owK, {
+                    (0, l.jsx)(g.owK, {
                         size: "md",
                         color: "currentColor",
                         className: C.statusPaidIcon,
@@ -125,7 +125,7 @@ function N(e) {
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     p.Z.getStatusErrorText(r),
-                    (0, l.jsx)(m.k$p, {
+                    (0, l.jsx)(g.k$p, {
                         size: "md",
                         color: "currentColor",
                         className: C.statusErrorIcon,
@@ -141,7 +141,7 @@ let E = (0, b.i$)({
         renderHeader() {
             let e = (0, l.jsx)(u.u, {
                 text: v.intl.string(v.t.q3PkLy),
-                children: (0, l.jsx)(m.d3s, {
+                children: (0, l.jsx)(g.d3s, {
                     size: "xs",
                     color: "currentColor",
                     className: C.amountDisclaimer,
@@ -193,7 +193,7 @@ let E = (0, b.i$)({
                 renderHeader() {
                     let e = (0, l.jsx)(u.u, {
                         text: v.intl.string(v.t.cIGvZG),
-                        children: (0, l.jsx)(m.d3s, {
+                        children: (0, l.jsx)(g.d3s, {
                             size: "xs",
                             color: "currentColor",
                             className: C.statusDisclaimer,

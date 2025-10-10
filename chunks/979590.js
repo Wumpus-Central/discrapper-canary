@@ -42,13 +42,13 @@
                 (W(e.r) && W(e.g) && W(e.b)
                     ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = "%" === String(e.r).substr(-1) ? "prgb" : "rgb"))
                     : W(e.h) && W(e.s) && W(e.v)
-                      ? ((r = V(e.s)), (i = V(e.v)), (t = h(e.h, r, i)), (l = !0), (c = "hsv"))
+                      ? ((r = F(e.s)), (i = F(e.v)), (t = h(e.h, r, i)), (l = !0), (c = "hsv"))
                       : W(e.h) &&
                         W(e.s) &&
                         W(e.l) &&
-                        ((r = V(e.s)), (a = V(e.l)), (t = _(e.h, r, a)), (l = !0), (c = "hsl")),
+                        ((r = F(e.s)), (a = F(e.l)), (t = _(e.h, r, a)), (l = !0), (c = "hsl")),
                 e.hasOwnProperty("a") && (n = e.a)),
-            (n = j(n)),
+            (n = M(n)),
             {
                 ok: l,
                 format: e.format || c,
@@ -61,16 +61,16 @@
     }
     function d(e, t, n) {
         return {
-            r: 255 * M(e, 255),
-            g: 255 * M(t, 255),
-            b: 255 * M(n, 255),
+            r: 255 * j(e, 255),
+            g: 255 * j(t, 255),
+            b: 255 * j(n, 255),
         };
     }
     function f(e, t, n) {
-        e = M(e, 255);
+        e = j(e, 255);
         var r,
             i,
-            a = s(e, (t = M(t, 255)), (n = M(n, 255))),
+            a = s(e, (t = j(t, 255)), (n = j(n, 255))),
             l = o(e, t, n),
             c = (a + l) / 2;
         if (a == l) r = i = 0;
@@ -105,7 +105,7 @@
                     ? e + (t - e) * (2 / 3 - n) * 6
                     : e;
         }
-        if (((e = M(e, 360)), (t = M(t, 100)), (n = M(n, 100)), 0 === t)) r = i = a = n;
+        if (((e = j(e, 360)), (t = j(t, 100)), (n = j(n, 100)), 0 === t)) r = i = a = n;
         else {
             var s = n < 0.5 ? n * (1 + t) : n + t - n * t,
                 l = 2 * n - s;
@@ -118,10 +118,10 @@
         };
     }
     function p(e, t, n) {
-        e = M(e, 255);
+        e = j(e, 255);
         var r,
             i,
-            a = s(e, (t = M(t, 255)), (n = M(n, 255))),
+            a = s(e, (t = j(t, 255)), (n = j(n, 255))),
             l = o(e, t, n),
             c = a,
             u = a - l;
@@ -146,7 +146,7 @@
         };
     }
     function h(e, n, r) {
-        (e = 6 * M(e, 360)), (n = M(n, 100)), (r = M(r, 100));
+        (e = 6 * j(e, 360)), (n = j(n, 100)), (r = j(r, 100));
         var i = t.floor(e),
             a = e - i,
             o = r * (1 - n),
@@ -169,7 +169,7 @@
             : i.join("");
     }
     function g(e, t, n, r, i) {
-        var o = [Z(a(e).toString(16)), Z(a(t).toString(16)), Z(a(n).toString(16)), Z(F(r))];
+        var o = [Z(a(e).toString(16)), Z(a(t).toString(16)), Z(a(n).toString(16)), Z(V(r))];
         return i &&
             o[0].charAt(0) == o[0].charAt(1) &&
             o[1].charAt(0) == o[1].charAt(1) &&
@@ -179,7 +179,7 @@
             : o.join("");
     }
     function E(e, t, n, r) {
-        return [Z(F(r)), Z(a(e).toString(16)), Z(a(t).toString(16)), Z(a(n).toString(16))].join("");
+        return [Z(V(r)), Z(a(e).toString(16)), Z(a(t).toString(16)), Z(a(n).toString(16))].join("");
     }
     function b(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -341,7 +341,7 @@
             );
         },
         setAlpha: function (e) {
-            return (this._a = j(e)), (this._roundA = a(100 * this._a) / 100), this;
+            return (this._a = M(e)), (this._roundA = a(100 * this._a) / 100), this;
         },
         toHsv: function () {
             var e = p(this._r, this._g, this._b);
@@ -406,33 +406,33 @@
         },
         toPercentageRgb: function () {
             return {
-                r: a(100 * M(this._r, 255)) + "%",
-                g: a(100 * M(this._g, 255)) + "%",
-                b: a(100 * M(this._b, 255)) + "%",
+                r: a(100 * j(this._r, 255)) + "%",
+                g: a(100 * j(this._g, 255)) + "%",
+                b: a(100 * j(this._b, 255)) + "%",
                 a: this._a,
             };
         },
         toPercentageRgbString: function () {
             return 1 == this._a
                 ? "rgb(" +
-                      a(100 * M(this._r, 255)) +
+                      a(100 * j(this._r, 255)) +
                       "%, " +
-                      a(100 * M(this._g, 255)) +
+                      a(100 * j(this._g, 255)) +
                       "%, " +
-                      a(100 * M(this._b, 255)) +
+                      a(100 * j(this._b, 255)) +
                       "%)"
                 : "rgba(" +
-                      a(100 * M(this._r, 255)) +
+                      a(100 * j(this._r, 255)) +
                       "%, " +
-                      a(100 * M(this._g, 255)) +
+                      a(100 * j(this._g, 255)) +
                       "%, " +
-                      a(100 * M(this._b, 255)) +
+                      a(100 * j(this._b, 255)) +
                       "%, " +
                       this._roundA +
                       ")";
         },
         toName: function () {
-            return 0 === this._a ? "transparent" : !(this._a < 1) && (x[m(this._r, this._g, this._b, !0)] || !1);
+            return 0 === this._a ? "transparent" : !(this._a < 1) && (L[m(this._r, this._g, this._b, !0)] || !1);
         },
         toFilter: function (e) {
             var t = "#" + E(this._r, this._g, this._b, this._a),
@@ -519,7 +519,7 @@
         (c.fromRatio = function (e, t) {
             if ("object" == typeof e) {
                 var n = {};
-                for (var r in e) e.hasOwnProperty(r) && ("a" === r ? (n[r] = e[r]) : (n[r] = V(e[r])));
+                for (var r in e) e.hasOwnProperty(r) && ("a" === r ? (n[r] = e[r]) : (n[r] = F(e[r])));
                 e = n;
             }
             return c(e, t);
@@ -737,16 +737,16 @@
             yellow: "ff0",
             yellowgreen: "9acd32",
         }),
-        x = (c.hexNames = L(D));
-    function L(e) {
+        L = (c.hexNames = x(D));
+    function x(e) {
         var t = {};
         for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
         return t;
     }
-    function j(e) {
+    function M(e) {
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }
-    function M(e, n) {
+    function j(e, n) {
         G(e) && (e = "100%");
         var r = B(e);
         return ((e = o(n, s(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 0.000001 > t.abs(e - n))
@@ -768,10 +768,10 @@
     function Z(e) {
         return 1 == e.length ? "0" + e : "" + e;
     }
-    function V(e) {
+    function F(e) {
         return e <= 1 && (e = 100 * e + "%"), e;
     }
-    function F(e) {
+    function V(e) {
         return t.round(255 * parseFloat(e)).toString(16);
     }
     function H(e) {

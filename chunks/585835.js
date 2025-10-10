@@ -25,26 +25,26 @@ function y(e) {
             imageSrc: _,
             iconBackgroundColor: C,
             iconClassName: N,
-            iconWrapperClassName: S,
-            details: Z,
-            integration: w,
+            iconWrapperClassName: w,
+            details: S,
+            integration: P,
             buttonText: I,
-            buttonDisabled: P,
-            hasNextSection: T,
-            onButtonClick: E,
+            buttonDisabled: Z,
+            hasNextSection: E,
+            onButtonClick: T,
             guildId: k,
             isScrolling: A,
             canShowMigrationTooltip: D,
             trailing: R,
         } = e,
         [L, M] = r.useState(!1),
-        B = D && !A && !L && void 0 !== k && null != w,
-        U = r.useRef(null),
+        U = D && !A && !L && void 0 !== k && null != P,
+        B = r.useRef(null),
         W = r.useRef(null),
         H =
-            null == I || null == E
+            null == I || null == T
                 ? null
-                : T
+                : E
                   ? (0, i.jsxs)(d.Kqy, {
                         direction: "horizontal",
                         fullWidth: !1,
@@ -55,7 +55,7 @@ function y(e) {
                                 variant: "text-sm/normal",
                                 children: I,
                             }),
-                            T
+                            E
                                 ? (0, i.jsx)(d.Fbu, {
                                       size: "custom",
                                       color: "currentColor",
@@ -68,14 +68,14 @@ function y(e) {
                     })
                   : (0, i.jsx)(d.zxk, {
                         size: "sm",
-                        buttonRef: U,
-                        disabled: P,
-                        onClick: E,
+                        buttonRef: B,
+                        disabled: Z,
+                        onClick: T,
                         text: I,
                     });
     r.useEffect(() => {
         var e, t;
-        B &&
+        U &&
             g.default.track(
                 x.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((e = (function (e) {
@@ -105,7 +105,7 @@ function y(e) {
                 })({}, (0, u.hH)(k))),
                 (t = t =
                     {
-                        application_id: null == w ? void 0 : w.application.id,
+                        application_id: null == P ? void 0 : P.application.id,
                         location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -122,15 +122,15 @@ function y(e) {
                       }),
                 e),
             );
-    }, [k, null == w ? void 0 : w.application.id, B]);
+    }, [k, null == P ? void 0 : P.application.id, U]);
     let G =
-            B && (null != W.current || null != U.current)
+            U && (null != W.current || null != B.current)
                 ? (0, i.jsx)(c.J2, {
-                      targetElementRef: T ? W : U,
+                      targetElementRef: E ? W : B,
                       title: j.intl.string(j.t.ufFDiI),
                       body: j.intl.string(j.t.TyMJwM),
                       onRequestClose: () => {
-                          M(!0), h.Z.dismissOverviewTooltip(k, w.integration);
+                          M(!0), h.Z.dismissOverviewTooltip(k, P.integration);
                       },
                       position: "bottom",
                       align: "center",
@@ -139,15 +139,15 @@ function y(e) {
                 : null,
         z = (0, s.Wu)([m.Z], () => {
             var e;
-            return null != w && null != k && null != (e = m.Z.getApplicationEntitlementsForGuild(w.application.id, k))
+            return null != P && null != k && null != (e = m.Z.getApplicationEntitlementsForGuild(P.application.id, k))
                 ? e
                 : [];
         }),
         F = (0, p.LD)(k, !0),
         K =
-            (null == w ? void 0 : w.application) != null &&
+            (null == P ? void 0 : P.application) != null &&
             Object.keys(
-                null != (l = null == (n = F.result) || null == (t = n.sections[w.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = F.result) || null == (t = n.sections[P.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -161,8 +161,8 @@ function y(e) {
                     imageSrc: _,
                     iconBackgroundColor: C,
                     iconClassName: N,
-                    iconWrapperClassName: S,
-                    details: Z,
+                    iconWrapperClassName: w,
+                    details: S,
                     isPremium: z.length > 0,
                     children: (function (e, t) {
                         var n, r;
@@ -203,17 +203,17 @@ function y(e) {
                                 }),
                             })
                         );
-                    })(w, K),
+                    })(P, K),
                 }),
                 G,
                 H,
                 R,
             ],
         });
-    return T
+    return E
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  D && null != k && null != w && h.Z.dismissOverviewTooltip(k, w.integration), null == E || E();
+                  D && null != k && null != P && h.Z.dismissOverviewTooltip(k, P.integration), null == T || T();
               },
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,

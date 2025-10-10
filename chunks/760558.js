@@ -36,8 +36,8 @@ let v = (e) => {
         [N, R] = i.useState(S[0]),
         [P, w] = i.useState(!1),
         [D, L] = i.useState(n),
-        [x, j] = i.useState(null != t ? t : T.slice(0, 1)),
-        M = i.useMemo(
+        [x, M] = i.useState(null != t ? t : T.slice(0, 1)),
+        j = i.useMemo(
             () =>
                 null == x
                     ? []
@@ -94,7 +94,7 @@ let v = (e) => {
                                 children: [
                                     (0, r.jsx)(c.FiK, {
                                         value: x.length,
-                                        onChange: (e) => j(T.slice(0, e)),
+                                        onChange: (e) => M(T.slice(0, e)),
                                         minValue: 1,
                                         maxValue: T.length,
                                     }),
@@ -117,13 +117,13 @@ let v = (e) => {
                     },
                     transitionState: v,
                     isTransfer: k,
-                    selectedSlotGuilds: M,
+                    selectedSlotGuilds: j,
                 }),
             CONFIRM() {
                 if (null == D) return null;
                 let e = x.filter((e) => (0, h.tl)(e)).length,
                     t = x.length,
-                    n = M.length,
+                    n = j.length,
                     i = "CONFIRM" === S[0] ? U : () => R(S[S.indexOf(N) - 1]),
                     a = async () => {
                         if (null != D && (null == x ? void 0 : x.length) !== 0) {
@@ -175,7 +175,7 @@ let v = (e) => {
                     ],
                     children: k
                         ? (0, r.jsx)(m.Z.TransferBody, {
-                              fromGuilds: M,
+                              fromGuilds: j,
                               toGuild: D,
                               blurb: y.intl.formatToPlainString(y.t.SSA2lp, {
                                   slotCount: t,

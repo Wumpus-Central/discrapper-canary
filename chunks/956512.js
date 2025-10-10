@@ -75,12 +75,12 @@ function C(e, t) {
 }
 function N(e) {
     let { currentUserId: t, message: T, application: A, channel: N, analyticsLocations: R, onView: P } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(A),
-        L = g.ZP.getApplicationIconURL({
+        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: L } = (0, d.E)(A),
+        x = g.ZP.getApplicationIconURL({
             id: A.id,
             icon: A.icon,
         }),
-        j = (0, i.e7)([f.ZP, h.Z], () =>
+        M = (0, i.e7)([f.ZP, h.Z], () =>
             f.ZP.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === A.id) return !0;
@@ -88,7 +88,7 @@ function N(e) {
                 return null != n && t === n.id;
             }),
         ),
-        M = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
+        j = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
         k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         U = b.default.extractTimestamp(T.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(T, N, t) }),
@@ -98,18 +98,18 @@ function N(e) {
     return (
         U
             ? ((Z = I.intl.string(v.default.u4QmWl)), (F = !0))
-            : null != M
+            : null != j
               ? ((Z = I.intl.string(v.default.P0wwmJ)), (F = !0))
               : k !== N.id
                 ? ((Z = I.intl.string(v.default.qRXatr)), (F = !0))
-                : null == j && ((Z = I.intl.string(v.default["43zohI"])), (F = !0)),
+                : null == M && ((Z = I.intl.string(v.default["43zohI"])), (F = !0)),
         (0, r.jsx)(c.W, {
             header: I.intl.string(v.default.nAyuPj),
             title: A.name,
             staticBannerSrc: w,
             videoBannerSrc: D,
-            bannerAspectRatio: x,
-            iconSrc: null != L ? L : void 0,
+            bannerAspectRatio: L,
+            iconSrc: null != x ? x : void 0,
             info: G,
             actions:
                 T.author.id === t
@@ -120,14 +120,14 @@ function N(e) {
                               trackingArea: u.j_.STREAM,
                               disabled: F,
                               onClick: () => {
-                                  null != j &&
+                                  null != M &&
                                       ((0, E.isWindows)()
-                                          ? (0, _.Z)(j.pid)
+                                          ? (0, _.Z)(M.pid)
                                           : (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),
                                                     n.e("46746"),
-                                                    n.e("39173"),
+                                                    n.e("53448"),
                                                 ]).then(n.bind(n, 60594));
                                                 return (t) => (0, r.jsx)(e, C(S({}, t), { analyticsLocation: B }));
                                             }));

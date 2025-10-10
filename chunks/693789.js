@@ -165,11 +165,11 @@ function v(e) {
             onMouseUp: P,
             onMouseEnter: w,
             onMouseLeave: D,
-            onKeyDown: x,
-            children: L,
-            rel: j,
-            buttonRef: k,
-            focusProps: M,
+            onKeyDown: L,
+            children: x,
+            rel: M,
+            buttonRef: j,
+            focusProps: k,
             "aria-label": U,
             submittingStartedLabel: G,
             submittingFinishedLabel: B,
@@ -205,7 +205,7 @@ function v(e) {
     let F = _ || m,
         V = F && (null != w || null != D),
         H = V ? null : T,
-        Y = y(M, t),
+        Y = y(k, t),
         W = i.useRef(!1);
     i.useEffect(() => {
         !0 === m && ((W.current = !0), l.uvj.announce(null != G ? G : c.intl.string(c.t.pfChQk))),
@@ -213,25 +213,25 @@ function v(e) {
     }, [m, G, B]);
     let K = (0, r.jsx)(
         l.tEY,
-        p(f({}, M), {
+        p(f({}, k), {
             offset: Y,
             children: (0, r.jsxs)(
                 "button",
                 p(f({}, F ? null : Z), {
                     "aria-label": U,
                     "aria-busy": !!m || void 0,
-                    ref: k,
+                    ref: j,
                     onClick: F ? (e) => e.preventDefault() : C,
                     onDoubleClick: F ? (e) => e.preventDefault() : N,
                     onMouseUp: _ ? void 0 : P,
                     onMouseDown: _ ? void 0 : R,
                     onMouseEnter: w,
                     onMouseLeave: D,
-                    onKeyDown: _ ? void 0 : x,
+                    onKeyDown: _ ? void 0 : L,
                     type: v,
                     disabled: _,
                     style: I,
-                    rel: j,
+                    rel: M,
                     className: o()(
                         S,
                         O({
@@ -255,7 +255,7 @@ function v(e) {
                             : null,
                         (0, r.jsx)("div", {
                             className: o()(u.contents, A),
-                            children: L,
+                            children: x,
                         }),
                     ],
                 }),

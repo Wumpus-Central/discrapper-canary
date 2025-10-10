@@ -1,23 +1,23 @@
-n.d(t, { Z: () => y }), n(539854);
+n.d(t, { Z: () => _ }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n(442837),
-    o = n(481060),
-    s = n(481051),
+    s = n(481060),
+    o = n(481051),
     c = n(871499),
-    u = n(306680),
-    d = n(111583),
+    d = n(306680),
+    u = n(111583),
     p = n(459273),
     h = n(566620),
     f = n(317381),
-    m = n(918559),
-    g = n(981631),
+    g = n(918559),
+    m = n(981631),
     b = n(388032),
-    _ = n(332139);
-function y(e) {
+    y = n(332139);
+function _(e) {
     var { channelId: t, className: n } = e,
-        y = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -38,19 +38,19 @@ function y(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let C = i.useRef(null),
-        x = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === m.MI.RESIZABLE),
-        v = i.useCallback(() => {
-            let e = x ? m.MI.NO_CHAT : m.MI.RESIZABLE;
+    let j = i.useRef(null),
+        x = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+        O = i.useCallback(() => {
+            let e = x ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, h.gC)(e);
         }, [x]),
-        { unreadCount: O, mentionCount: j } = (function (e) {
-            let t = (0, a.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]),
+        { unreadCount: v, mentionCount: C } = (function (e) {
+            let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
-                    [u.ZP],
+                    [d.ZP],
                     () => ({
-                        unreadCount: u.ZP.getUnreadCount(e),
-                        mentionCount: u.ZP.getMentionCount(e),
+                        unreadCount: d.ZP.getUnreadCount(e),
+                        mentionCount: d.ZP.getMentionCount(e),
                     }),
                     [e],
                 );
@@ -60,23 +60,23 @@ function y(e) {
                 isTyping: t,
             };
         })(t),
-        E = i.useCallback(() => {
+        I = i.useCallback(() => {
             var e;
-            null == (e = C.current) || e.focus();
+            null == (e = j.current) || e.focus();
         }, []);
     (0, p.yp)({
-        event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: E,
+        event: m.CkL.FOCUS_CHAT_BUTTON,
+        handler: I,
     });
-    let S = x ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
-        I = [S];
-    j > 0 && I.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: j })),
-        O > 0 && I.push(b.intl.string(b.t.x5zAGR));
-    let P = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        Z = j > 0 ? j : O,
-        T = Z > 0;
+    let E = x ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
+        S = [E];
+    C > 0 && S.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
+        v > 0 && S.push(b.intl.string(b.t.x5zAGR));
+    let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+        T = C > 0 ? C : v,
+        P = T > 0;
     return (0, r.jsxs)("div", {
-        className: _.wrapper,
+        className: y.wrapper,
         children: [
             (0, r.jsx)(
                 c.d,
@@ -107,23 +107,23 @@ function y(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: C,
-                        onClick: v,
-                        label: S,
-                        "aria-label": I.join(", "),
+                        buttonRef: j,
+                        onClick: O,
+                        label: E,
+                        "aria-label": S.join(", "),
                         tooltipPosition: "top",
-                        iconComponent: P === m.MI.NO_CHAT ? o.sXD : o.hic,
+                        iconComponent: Z === g.MI.NO_CHAT ? s.sXD : s.hic,
                         themeable: !0,
                         className: n,
                     },
-                    y,
+                    _,
                 ),
             ),
-            T
-                ? (0, r.jsx)(s.Z, {
-                      hasMentions: j > 0,
-                      truncatedCount: Z > 99 ? "99+" : Z,
-                      className: _.badge,
+            P
+                ? (0, r.jsx)(o.Z, {
+                      hasMentions: C > 0,
+                      truncatedCount: T > 99 ? "99+" : T,
+                      className: y.badge,
                   })
                 : null,
         ],

@@ -1,8 +1,8 @@
 n.d(t, { default: () => j });
 var r = n(951288),
     l = n(647438),
-    i = n(215569),
-    s = n(257465),
+    i = n(793030),
+    s = n(215569),
     a = n(159691),
     o = n(755721),
     c = n(481060),
@@ -41,7 +41,7 @@ let b = () =>
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)(s.IX, {
+                      (0, r.jsxs)(i.IX, {
                           transitionState: t,
                           "aria-labelledby": I,
                           size: "xl",
@@ -64,7 +64,7 @@ let b = () =>
                               }),
                           ],
                       }),
-                      (0, r.jsx)(i.W, {
+                      (0, r.jsx)(s.W, {
                           children:
                               !0 === j &&
                               (0, r.jsx)(c.oXn, {

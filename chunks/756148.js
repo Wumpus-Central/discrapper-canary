@@ -1,5 +1,5 @@
-n.d(t, { I: () => r });
-class r {
+n.d(t, { I: () => a });
+class a {
     static getSiteKey(e) {
         return null != e
             ? e
@@ -12,14 +12,14 @@ class r {
             null != t && (null == n || n("recaptcha-element-exists-callback"), t());
             return;
         }
-        let r = document.createElement("script");
-        (r.src = "https://www.google.com/recaptcha/enterprise.js?render=".concat(this.getSiteKey(e))),
-            (r.id = "recaptcha-script-".concat(this.getSiteKey(e))),
-            (r.async = !0),
-            (r.defer = !0),
-            document.body.appendChild(r),
+        let a = document.createElement("script");
+        (a.src = "https://www.google.com/recaptcha/enterprise.js?render=".concat(this.getSiteKey(e))),
+            (a.id = "recaptcha-script-".concat(this.getSiteKey(e))),
+            (a.async = !0),
+            (a.defer = !0),
+            document.body.appendChild(a),
             null != t &&
-                (r.onload = () => {
+                (a.onload = () => {
                     null == n || n("recaptcha-script-onload-callback"), t();
                 });
     }

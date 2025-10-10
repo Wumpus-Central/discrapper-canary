@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(823379),
     d = n(84613),
     u = n(740903),
-    m = n(723136),
-    g = n(598622),
+    g = n(723136),
+    m = n(598622),
     p = n(388032),
     f = n(687726);
 function h(e) {
@@ -76,11 +76,11 @@ function x(e) {
                 }
             );
         }, [d, x]),
-        v = (0, g.Q)(t),
-        _ = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        O = v[u.u.DM_AND_SPAM_PROTECTION],
-        y = v[u.u.PERMISSIONS],
-        C = (0, o.pr)(t.id);
+        _ = (0, m.Q)(t),
+        v = _[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        C = _[u.u.DM_AND_SPAM_PROTECTION],
+        O = _[u.u.PERMISSIONS],
+        y = (0, o.pr)(t.id);
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(l.X6q, {
@@ -89,7 +89,7 @@ function x(e) {
                 className: f.header,
                 children: p.intl.string(p.t["0A+VSE"]),
             }),
-            (0, r.jsx)(m.z, { guild: t }),
+            (0, r.jsx)(g.z, { guild: t }),
             (0, r.jsxs)("div", {
                 className: f.safetyChecklist,
                 children: [
@@ -97,8 +97,8 @@ function x(e) {
                         icon: n(14215),
                         title: p.intl.string(p.t["53eF5u"]),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                            enabled: _.filter((e) => e.enabled).length,
-                            total: _.length,
+                            enabled: v.filter((e) => e.enabled).length,
+                            total: v.length,
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION,
                     }),
@@ -107,13 +107,13 @@ function x(e) {
                         icon: n(128724),
                         title: p.intl.string(p.t.O0SfFx),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                            enabled: O.filter((e) => e.enabled).length,
-                            total: O.length,
+                            enabled: C.filter((e) => e.enabled).length,
+                            total: C.length,
                         }),
                         page: u.u.DM_AND_SPAM_PROTECTION,
                     }),
                     (0, r.jsx)("div", { className: f.divider }),
-                    C &&
+                    y &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(h, {
@@ -132,8 +132,8 @@ function x(e) {
                         icon: n(913414),
                         title: p.intl.string(p.t.xrmhRU),
                         subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
-                            enabled: y.filter((e) => e.enabled).length,
-                            total: y.length,
+                            enabled: O.filter((e) => e.enabled).length,
+                            total: O.length,
                         }),
                         page: u.u.PERMISSIONS,
                     }),

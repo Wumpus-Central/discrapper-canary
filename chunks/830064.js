@@ -1,35 +1,35 @@
-l.d(t, { Z: () => e });
-var s = l(951288);
+t.d(l, { Z: () => e });
+var s = t(951288);
 function e(a) {
-    var t, l;
+    var l, t;
     return (0, s.jsxs)(
         "svg",
-        ((t = (function (a) {
-            for (var t = 1; t < arguments.length; t++) {
-                var l = null != arguments[t] ? arguments[t] : {},
-                    s = Object.keys(l);
+        ((l = (function (a) {
+            for (var l = 1; l < arguments.length; l++) {
+                var t = null != arguments[l] ? arguments[l] : {},
+                    s = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (s = s.concat(
-                        Object.getOwnPropertySymbols(l).filter(function (a) {
-                            return Object.getOwnPropertyDescriptor(l, a).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (a) {
+                            return Object.getOwnPropertyDescriptor(t, a).enumerable;
                         }),
                     )),
-                    s.forEach(function (t) {
+                    s.forEach(function (l) {
                         var s;
-                        (s = l[t]),
-                            t in a
-                                ? Object.defineProperty(a, t, {
+                        (s = t[l]),
+                            l in a
+                                ? Object.defineProperty(a, l, {
                                       value: s,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (a[t] = s);
+                                : (a[l] = s);
                     });
             }
             return a;
         })({}, a)),
-        (l = l =
+        (t = t =
             {
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
@@ -1502,18 +1502,18 @@ function e(a) {
                 ],
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
-            : (function (a, t) {
-                  var l = Object.keys(a);
+            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(t))
+            : (function (a, l) {
+                  var t = Object.keys(a);
                   if (Object.getOwnPropertySymbols) {
                       var s = Object.getOwnPropertySymbols(a);
-                      l.push.apply(l, s);
+                      t.push.apply(t, s);
                   }
-                  return l;
-              })(Object(l)).forEach(function (a) {
-                  Object.defineProperty(t, a, Object.getOwnPropertyDescriptor(l, a));
+                  return t;
+              })(Object(t)).forEach(function (a) {
+                  Object.defineProperty(l, a, Object.getOwnPropertyDescriptor(t, a));
               }),
-        t),
+        l),
     );
 }
-l(647438);
+t(647438);

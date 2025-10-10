@@ -31,15 +31,15 @@ function y(e) {
     let [N, R] = i.useState(C),
         P = (0, l.iE)(),
         w = (0, l.yX)(),
-        [D, x] = i.useState(),
-        [L, j] = i.useState(
+        [D, L] = i.useState(),
+        [x, M] = i.useState(
             t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? p.intl.string(p.t.ZkOo1d) : c,
         ),
-        [M, k] = i.useState(void 0),
+        [j, k] = i.useState(void 0),
         [U, G] = i.useState(void 0),
         B = (0, u.E5)(b, t),
-        [Z, V] = i.useState(!1),
-        [F, H] = i.useState(!1),
+        [Z, F] = i.useState(!1),
+        [V, H] = i.useState(!1),
         [Y, W] = i.useState(),
         K = i.useCallback(
             (e) => {
@@ -48,14 +48,14 @@ function y(e) {
                     H(!0),
                     (0, s.YD)(y, B)
                         .then(() => {
-                            H(!1), null == t || t(), V(!0);
+                            H(!1), null == t || t(), F(!0);
                         })
                         .catch((e) => {
-                            H(!1), W(e), V(!0);
+                            H(!1), W(e), F(!0);
                         })
                 );
             },
-            [y, B, H, V, W],
+            [y, B, H, F, W],
         ),
         z = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(g.Provider, {
@@ -69,24 +69,24 @@ function y(e) {
             setGiftRecipientError: I,
             validatingGiftRecipient: T,
             setValidatingGiftRecipient: S,
-            soundEffect: M,
+            soundEffect: j,
             setSoundEffect: k,
             emojiConfetti: U,
             setEmojiConfetti: G,
-            customGiftMessage: L,
-            setCustomGiftMessage: j,
+            customGiftMessage: x,
+            setCustomGiftMessage: M,
             selectedGiftStyle: N,
             setSelectedGiftStyle: R,
             sendGiftMessage: K,
             hasSentMessage: Z,
-            isSendingMessage: F,
+            isSendingMessage: V,
             giftMessageError: Y,
             recommendedGiftSkuIds: z,
             giftingOrigin: _,
             claimableRewards: P,
             claimableVariants: w,
             selectedGiftingPromotionReward: D,
-            setSelectedGiftingPromotionReward: x,
+            setSelectedGiftingPromotionReward: L,
         },
         children: E,
     });

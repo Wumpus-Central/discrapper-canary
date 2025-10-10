@@ -25,8 +25,8 @@ let h = (e) => {
             category: b,
         } = e,
         y = i.useRef(null),
-        { isHoveringOrFocusing: v } = (0, c.Z)(y),
-        L = !h && v,
+        { isHoveringOrFocusing: L } = (0, c.Z)(y),
+        v = !h && L,
         S = (0, C.ZP)(),
         O = (0, s.wj)(S),
         P = {
@@ -43,7 +43,7 @@ let h = (e) => {
             },
             className: l()(O ? f.shopCardDark : f.shopCard, {
                 [f.shopCardAnimation]: !h,
-                [O ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: L,
+                [O ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: v,
                 [f.shopCardSelected]: g === t,
             }),
             children: [
@@ -56,7 +56,7 @@ let h = (e) => {
                     children: (0, r.jsx)(p.R, {
                         item: P,
                         user: a,
-                        isHighlighted: L,
+                        isHighlighted: v,
                         avatarSize: d.EFr.SIZE_120,
                         isPurchased: h,
                     }),

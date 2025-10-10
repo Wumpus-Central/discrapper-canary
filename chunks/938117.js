@@ -85,17 +85,17 @@ function S(e) {
     i.useEffect(() => {
         (0, u.XV)();
     }, []);
-    let x = (0, a.cj)([d.Z], () => (D ? d.Z.videoFilterAssets : {})),
-        L = i.useMemo(() => Object.values(x).filter((e) => e.type === m.xV.BACKGROUND), [x]),
-        j = (0, s.O)(),
-        M = {
+    let L = (0, a.cj)([d.Z], () => (D ? d.Z.videoFilterAssets : {})),
+        x = i.useMemo(() => Object.values(L).filter((e) => e.type === m.xV.BACKGROUND), [L]),
+        M = (0, s.O)(),
+        j = {
             isVideoBackgroundSupported: w,
             onSelectBackgroundOption: I,
             selectedBackgroundOption: O,
         },
-        k = i.useRef(M);
+        k = i.useRef(j);
     i.useEffect(() => {
-        k.current = M;
+        k.current = j;
     }),
         i.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
@@ -115,10 +115,10 @@ function S(e) {
         },
         G = (e) => {
             I(e),
-                (0, _.FU)(e, S, { location: j.location })
+                (0, _.FU)(e, S, { location: M.location })
                     .then(() => P(null))
                     .catch(() => {
-                        P(b.intl.string(b.t.ejrSLS)), (0, _.FU)(null, S, { location: j.location });
+                        P(b.intl.string(b.t.ejrSLS)), (0, _.FU)(null, S, { location: M.location });
                     });
         },
         B = () => {
@@ -129,7 +129,7 @@ function S(e) {
                         e,
                         T(v({}, n), {
                             onLearnMore: t,
-                            analyticsSource: T(v({}, j.location), { object: g.qAy.BUTTON_CTA }),
+                            analyticsSource: T(v({}, M.location), { object: g.qAy.BUTTON_CTA }),
                         }),
                     );
             });
@@ -147,7 +147,7 @@ function S(e) {
                       : null,
                   (0, r.jsx)(h.Z, {
                       canUseCustomBackgrounds: D,
-                      customBackgroundOptions: L,
+                      customBackgroundOptions: x,
                       selectedOption: O,
                       onSelectOption: G,
                       onUpsellClick: B,

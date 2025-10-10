@@ -10,7 +10,7 @@ n.d(t, {
     jr: () => B,
     lW: () => Z,
     mK: () => D,
-    oK: () => j,
+    oK: () => M,
     oc: () => k,
     p8: () => K,
     qg: () => G,
@@ -113,20 +113,20 @@ let D = (e) => {
     x = () => {
         s.Z.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" }), (0, l.xf)();
     },
-    j = (e) => {
+    M = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN",
             item: e,
         });
     },
-    M = (e, t) => !!e == !!t,
+    j = (e, t) => !!e == !!t,
     k = (e, t) =>
-        M(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) &&
-        M(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) &&
-        M(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) &&
-        M(null == e ? void 0 : e.includePopularPicks, null == t ? void 0 : t.includePopularPicks) &&
-        M(null == e ? void 0 : e.includeDynamicBlocks, null == t ? void 0 : t.includeDynamicBlocks) &&
-        M(null == e ? void 0 : e.includeNameplatesOnMobile, null == t ? void 0 : t.includeNameplatesOnMobile) &&
+        j(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) &&
+        j(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) &&
+        j(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) &&
+        j(null == e ? void 0 : e.includePopularPicks, null == t ? void 0 : t.includePopularPicks) &&
+        j(null == e ? void 0 : e.includeDynamicBlocks, null == t ? void 0 : t.includeDynamicBlocks) &&
+        j(null == e ? void 0 : e.includeNameplatesOnMobile, null == t ? void 0 : t.includeNameplatesOnMobile) &&
         (null == e ? void 0 : e.countryCode) === (null == t ? void 0 : t.countryCode) &&
         (null == e ? void 0 : e.paymentGateway) === (null == t ? void 0 : t.paymentGateway) &&
         (null == e ? void 0 : e.shopHomeConfig) === (null == t ? void 0 : t.shopHomeConfig) &&

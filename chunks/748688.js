@@ -7,7 +7,7 @@ a.d(e, {
     db: () => h,
     dz: () => b,
     nm: () => v,
-    ph: () => S,
+    ph: () => y,
     x5: () => p,
 });
 var r = a(559508),
@@ -19,18 +19,18 @@ var r = a(559508),
     E = a(617726),
     s = a(899517),
     l = a(454463),
-    u = a(163162);
-let I = String(0),
+    I = a(163162);
+let u = String(0),
     R = "",
     d = "",
     N = "",
-    A = (u.m9.navigator && u.m9.navigator.userAgent) || "",
-    f = "",
-    T =
-        (u.m9.navigator && u.m9.navigator.language) ||
-        (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages["0"]) ||
+    A = (I.m9.navigator && I.m9.navigator.userAgent) || "",
+    T = "",
+    f =
+        (I.m9.navigator && I.m9.navigator.language) ||
+        (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages["0"]) ||
         "",
-    L = u.m9.navigator && u.m9.navigator.userAgentData;
+    L = I.m9.navigator && I.m9.navigator.userAgentData;
 function p(t) {
     return "pageload" === (0, _.XU)(t).op;
 }
@@ -60,7 +60,7 @@ function O(t) {
             if (
                 ((R = t.platform || ""),
                 (N = t.architecture || ""),
-                (f = t.model || ""),
+                (T = t.model || ""),
                 (d = t.platformVersion || ""),
                 t.fullVersionList && t.fullVersionList.length > 0)
             ) {
@@ -73,7 +73,7 @@ let P = new WeakMap(),
     g = !1,
     D = 30000;
 function C() {
-    let t = u.m9.Profiler;
+    let t = I.m9.Profiler;
     if ("function" != typeof t) {
         l.X &&
             o.kg.log(
@@ -166,7 +166,7 @@ function v(t, e, a, _) {
                               samples: [],
                               stacks: [],
                               frames: [],
-                              thread_metadata: { [I]: { name: "main" } },
+                              thread_metadata: { [u]: { name: "main" } },
                           },
                           _ = t.samples[0];
                       if (!_) return r;
@@ -180,7 +180,7 @@ function v(t, e, a, _) {
                                       (r.samples[o] = {
                                           elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                           stack_id: e,
-                                          thread_id: I,
+                                          thread_id: u,
                                       });
                                   return;
                               }
@@ -203,7 +203,7 @@ function v(t, e, a, _) {
                               let s = {
                                   elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                   stack_id: a,
-                                  thread_id: I,
+                                  thread_id: u,
                               };
                               (r.stacks[a] = E), (r.samples[o] = s), a++;
                           }),
@@ -221,7 +221,7 @@ function v(t, e, a, _) {
         environment: _.environment || r.J,
         runtime: {
             name: "javascript",
-            version: u.m9.navigator.userAgent,
+            version: I.m9.navigator.userAgent,
         },
         os: {
             name: R,
@@ -229,8 +229,8 @@ function v(t, e, a, _) {
             build_number: A,
         },
         device: {
-            locale: T,
-            model: f,
+            locale: f,
+            model: T,
             manufacturer: A,
             architecture: N,
             is_emulator: !1,
@@ -278,24 +278,24 @@ function v(t, e, a, _) {
                 name: _.transaction || "",
                 id: _.event_id || (0, c.DM)(),
                 trace_id: L,
-                active_thread_id: I,
+                active_thread_id: u,
                 relative_start_ns: "0",
                 relative_end_ns: ((O - h) * 1000000).toFixed(0),
             },
         ],
     };
 }
-let y = new Map();
-function S() {
-    return y.size;
+let S = new Map();
+function y() {
+    return S.size;
 }
 function U(t) {
-    let e = y.get(t);
-    return e && y.delete(t), e;
+    let e = S.get(t);
+    return e && S.delete(t), e;
 }
 function b(t, e) {
-    if ((y.set(t, e), y.size > 30)) {
-        let t = y.keys().next().value;
-        y.delete(t);
+    if ((S.set(t, e), S.size > 30)) {
+        let t = S.keys().next().value;
+        S.delete(t);
     }
 }

@@ -1,20 +1,20 @@
-n.d(t, { s: () => o });
-var r = n(647438),
-    i = n(971749);
-function o(e, t, n) {
-    var o = (0, r.useMemo)(
+e.d(n, { s: () => i });
+var r = e(647438),
+    o = e(971749);
+function i(t, n, e) {
+    var i = (0, r.useMemo)(
         function () {
-            return new i.O(e, t, n);
+            return new o.O(t, n, e);
         },
-        [t, n],
+        [n, e],
     );
     return (
         (0, r.useEffect)(
             function () {
-                o.spec = e;
+                i.spec = t;
             },
-            [e],
+            [t],
         ),
-        o
+        i
     );
 }

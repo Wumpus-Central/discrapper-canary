@@ -1,9 +1,9 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(941524),
-    s = n(563115),
+    s = n(941524),
+    a = n(563115),
     o = n(388032),
     c = n(482908);
 function d(e) {
@@ -49,9 +49,9 @@ function u(e, t) {
         e
     );
 }
-let m = i.memo(function (e) {
+let g = i.memo(function (e) {
     let { rule: t, onlyRoles: n = !1, onChangeRule: i } = e,
-        m = (0, r.jsx)(a.Z, {
+        g = (0, r.jsx)(s.Z, {
             guildId: t.guildId,
             selectedChannelIds: t.exemptChannels,
             selectedRoleIds: t.exemptRoles,
@@ -67,16 +67,16 @@ let m = i.memo(function (e) {
         });
     return (
         n &&
-            (m = (0, r.jsx)(s.Z, {
+            (g = (0, r.jsx)(a.Z, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
                 onChange: (e) => i(u(d({}, t), { exemptRoles: e })),
                 placeholder: o.intl.string(o.t.aFO1Iy),
                 disableEveryoneRole: !0,
             })),
-        (0, r.jsxs)(l.xJW, {
+        (0, r.jsxs)("div", {
             children: [
-                m,
+                g,
                 (0, r.jsx)(l.Text, {
                     color: "header-secondary",
                     variant: "text-xs/normal",

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(852860),
-    s = n(699553),
+    s = n(852860),
+    a = n(699553),
     o = n(314852),
     c = n(434404),
     d = n(999382);
@@ -12,8 +12,8 @@ function u() {
         t = null == e ? void 0 : e.id,
         n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
         u = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
-        m = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
-        g = i.useMemo(() => (null == n ? void 0 : n.getAnyErrorMessage()), [n]),
+        g = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
+        m = i.useMemo(() => (null == n ? void 0 : n.getAnyErrorMessage()), [n]),
         p = i.useCallback(() => {
             if (null == e || null == u) return;
             let t = {
@@ -26,15 +26,15 @@ function u() {
                 gameApplicationIds: u.gameApplicationIds,
                 customBanner: u.customBanner,
             };
-            (0, s.pV)(e.id, t);
+            (0, a.pV)(e.id, t);
         }, [e, u]),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
-    return (0, r.jsx)(a.Z, {
-        submitting: m,
-        errorMessage: g,
+    return (0, r.jsx)(s.Z, {
+        submitting: g,
+        errorMessage: m,
         onSave: p,
-        onReset: h,
+        onReset: f,
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { k: () => m });
+n.d(t, { k: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(772848),
@@ -8,16 +8,16 @@ var r = n(951288),
     c = n(183023),
     d = n(650774),
     u = n(231338);
-function m(e) {
+function g(e) {
     let { guild: t, discoverableGuild: n } = e,
-        m = null == t ? void 0 : t.id,
-        { memberCount: g, onlineCount: p } = (0, s.cj)([d.Z], () => {
+        g = null == t ? void 0 : t.id,
+        { memberCount: m, onlineCount: p } = (0, s.cj)([d.Z], () => {
             var e, t;
             return {
-                memberCount: null != (e = d.Z.getMemberCount(m)) ? e : 1234,
-                onlineCount: null != (t = d.Z.getOnlineCount(m)) ? t : 1234,
+                memberCount: null != (e = d.Z.getMemberCount(g)) ? e : 1234,
+                onlineCount: null != (t = d.Z.getOnlineCount(g)) ? t : 1234,
             };
-        }, [m]),
+        }, [g]),
         f = i.useRef((0, l.Z)()),
         h = i.useMemo(() => {
             var e, r;
@@ -56,7 +56,7 @@ function m(e) {
                         emojis: i,
                         emojiCount: i.length,
                         presenceCount: p,
-                        memberCount: g,
+                        memberCount: m,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -72,7 +72,7 @@ function m(e) {
                       }),
                 e),
             );
-        }, [n, t, g, p]),
+        }, [n, t, m, p]),
         x = i.useMemo(() => {
             var e;
             let t = null == h || null == (e = h.emojis) ? void 0 : e[0];

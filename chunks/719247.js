@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(661869),
+    a = n.n(i),
+    o = n(661869),
     s = n(876215),
     l = n(442837),
     c = n(570140),
@@ -37,7 +37,7 @@ function b(e) {
 function y(e) {
     return (0, p.n2)(e)
         ? null
-        : (0, p.kr)(e) && e.author_type === a.i.USER
+        : (0, p.kr)(e) && e.author_type === o.i.USER
           ? u.Z.getActivities(e.author_id).find((t) =>
                 t.type === h.IIU.PLAYING && (0, f.m9)(e)
                     ? (0, _.cN)(e, t)
@@ -74,14 +74,14 @@ function T() {
         n = new Set(),
         r = new Set();
     for (let t of d.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: o } = O(
+        let { updatedKeys: i, matchedKeys: a } = O(
             n.size > 0 ? t.entries.filter((e) => !n.has(b(e.content))) : t.entries,
         );
         for (let e of i) n.add(e);
-        for (let e of o) r.add(e);
+        for (let e of a) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of o().difference(t, [...r])) E.delete(n), (e = !0);
+    for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
 class S extends (r = l.ZP.Store) {

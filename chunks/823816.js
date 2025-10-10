@@ -1,7 +1,7 @@
-t.d(n, { m: () => o });
-var l = t(427164),
-    i = t(438379);
-let r = (0, l.le)({
+n.d(t, { m: () => o });
+var r = n(427164),
+    i = n(438379);
+let a = (0, r.le)({
     name: "2025-09-user-profile-application-widgets-viewing",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -11,11 +11,11 @@ let r = (0, l.le)({
     },
 });
 function o(e) {
-    let { location: n, autoTrackExposure: t = !0 } = e,
-        l = (0, i.J)({
-            location: n,
-            autoTrackExposure: t,
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.J)({
+            location: t,
+            autoTrackExposure: n,
         }),
-        o = r.useConfig({ location: n }).enabled;
-    return !l && o;
+        o = a.useConfig({ location: t }).enabled;
+    return !r && o;
 }

@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(113434),
     _ = n(497505),
     b = n(111131),
-    j = n(623249),
-    v = n(477005),
+    v = n(623249),
+    j = n(477005),
     C = n(685613),
     y = n(110560),
     E = n(670638),
@@ -27,8 +27,8 @@ var r = n(951288),
     w = n(642145),
     P = n(981631),
     N = n(388032),
-    R = n(518388);
-function A(e) {
+    A = n(518388);
+function R(e) {
     var t;
     let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: c } = e,
         { ref: p, height: g = 0 } = (0, u.ZP)([o]),
@@ -57,10 +57,10 @@ function A(e) {
                           },
             [o, f, h, a],
         ),
-        v = 2 !== _,
+        j = 2 !== _,
         C = (0, d.q_F)({
-            opacity: +!!v,
-            height: v ? g : 0,
+            opacity: +!!j,
+            height: j ? g : 0,
             config: w.Y,
         }),
         y = 0 === _ ? d.Mgn : d.d3s,
@@ -70,10 +70,10 @@ function A(e) {
         style: C,
         children: (0, r.jsxs)("div", {
             ref: p,
-            className: R.hints,
+            className: A.hints,
             children: [
                 (0, r.jsxs)("div", {
-                    className: R.hintsContainer,
+                    className: A.hintsContainer,
                     children: [
                         (0, r.jsx)(y, {
                             size: "xs",
@@ -90,7 +90,7 @@ function A(e) {
                     (0, r.jsx)(d.Avr, {
                         text: N.intl.string(N.t["yKJi+/"]),
                         onClick: () =>
-                            (0, j.y)({
+                            (0, v.y)({
                                 quest: n,
                                 errorHints: o,
                                 sourceQuestContent: c,
@@ -106,7 +106,7 @@ function B(e) {
     var t, n, o, i, u;
     let {
             quest: m,
-            isHovering: j,
+            isHovering: v,
             errorHints: w,
             warningHints: B,
             isVisibleInViewport: k,
@@ -126,8 +126,8 @@ function B(e) {
         }),
         H = (null == (n = m.userStatus) ? void 0 : n.enrolledAt) != null,
         F = (null == (o = m.userStatus) ? void 0 : o.completedAt) != null,
-        { onAssetLoadComplete: X } = s.useContext(O.k),
-        z = s.useCallback(async () => {
+        { onAssetLoadComplete: z } = s.useContext(O.k),
+        X = s.useCallback(async () => {
             V &&
                 ((0, f.zi)(m) || H
                     ? (0, y.openVideoQuestModal)({
@@ -156,43 +156,43 @@ function B(e) {
                         })));
         }, [V, m, H, L]);
     return (0, r.jsxs)("div", {
-        className: R.container,
+        className: A.container,
         children: [
             (0, r.jsx)("div", {
-                className: R.heroAssetWrapper,
-                children: (0, r.jsx)(v.Z, {
+                className: A.heroAssetWrapper,
+                children: (0, r.jsx)(j.Z, {
                     quest: m,
-                    isInteracting: j,
+                    isInteracting: v,
                     hideAssets: !k,
                     imageSize: {
                         width: 1320,
                         height: 370,
                     },
-                    containerClassName: R.heroAssetCont,
+                    containerClassName: A.heroAssetCont,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: a()(R.overlay, {
-                    [R.darkThemeGradient]: M,
-                    [R.lightThemeGradient]: !M,
+                className: a()(A.overlay, {
+                    [A.darkThemeGradient]: M,
+                    [A.lightThemeGradient]: !M,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: R.positionContentOverBackground,
+                className: A.positionContentOverBackground,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: R.contents,
+                        className: A.contents,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: R.topRow,
+                                className: A.topRow,
                                 children: [
                                     m.preview &&
                                         (0, r.jsx)("div", {
-                                            className: R.pill,
+                                            className: A.pill,
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: "eyebrow",
                                                 color: "always-white",
-                                                className: R.eyebrowText,
+                                                className: A.eyebrowText,
                                                 children: N.intl.string(N.t.SKNnqq),
                                             }),
                                         }),
@@ -208,12 +208,12 @@ function B(e) {
                                             asContainer: !0,
                                             tag: "span",
                                             children: (0, r.jsx)(d.P3F, {
-                                                className: R.utilButtonWrapper,
+                                                className: A.utilButtonWrapper,
                                                 "aria-label": N.intl.string(N.t.RscU7O),
-                                                onClick: z,
+                                                onClick: X,
                                                 children: (0, r.jsx)(d.o1U, {
                                                     color: "currentColor",
-                                                    className: R.utilButtonIcon,
+                                                    className: A.utilButtonIcon,
                                                 }),
                                             }),
                                         }),
@@ -259,12 +259,12 @@ function B(e) {
                                                 })({}, e)),
                                                 (n = n =
                                                     {
-                                                        className: R.utilButtonWrapper,
+                                                        className: A.utilButtonWrapper,
                                                         "aria-label": N.intl.string(N.t.DEoVWV),
                                                         children: (0, r.jsx)(d.xhG, {
                                                             size: "md",
                                                             color: "currentColor",
-                                                            className: R.utilButtonIcon,
+                                                            className: A.utilButtonIcon,
                                                         }),
                                                     }),
                                                 Object.getOwnPropertyDescriptors
@@ -293,18 +293,18 @@ function B(e) {
                                 showPlaceholder: !k,
                                 width: 100,
                                 height: 30,
-                                className: R.partnerBranding,
+                                className: A.partnerBranding,
                                 children: (0, r.jsx)(C.ZP, {
-                                    className: R.partnerBranding,
-                                    logotypeClassName: R.partnerLogotypes,
+                                    className: A.partnerBranding,
+                                    logotypeClassName: A.partnerLogotypes,
                                     quest: m,
                                     separatorSpacing: C.US.MEDIUM,
                                     withGameTile: !1,
-                                    onLoadComplete: X,
+                                    onLoadComplete: z,
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.bottomRow,
+                                className: A.bottomRow,
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-sm/medium",
@@ -327,7 +327,7 @@ function B(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(A, {
+                    (0, r.jsx)(R, {
                         quest: m,
                         errorHints: w,
                         warningHints: B,

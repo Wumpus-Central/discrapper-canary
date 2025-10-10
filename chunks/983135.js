@@ -1,33 +1,33 @@
 n.d(t, {
-    $K: () => x,
+    $K: () => T,
     IG: () => v,
     Nb: () => _,
     Ts: () => j,
-    Wy: () => D,
-    di: () => b,
+    Wy: () => b,
+    di: () => D,
 }),
     n(388685);
 var l = n(570140),
-    i = n(668781),
-    r = n(479531),
-    s = n(983736),
-    a = n(45966),
+    r = n(668781),
+    i = n(479531),
+    a = n(983736),
+    s = n(45966),
     o = n(819553),
     c = n(637853),
     d = n(17181),
     u = n(962086),
     m = n(225675),
-    h = n(592125),
-    I = n(430824),
-    g = n(823379),
-    N = n(434404),
-    S = n(889369),
-    f = n(570961),
-    p = n(84658),
-    E = n(176505),
-    T = n(290511),
-    O = n(388032);
-function x(e) {
+    g = n(592125),
+    h = n(430824),
+    f = n(823379),
+    I = n(434404),
+    p = n(889369),
+    N = n(570961),
+    O = n(84658),
+    S = n(176505),
+    E = n(290511),
+    x = n(388032);
+function T(e) {
     l.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_STEP",
         step: e,
@@ -41,22 +41,22 @@ function _(e) {
         });
 }
 async function j(e, t) {
-    let n = a.Z.getEnabled(e),
-        s = Array.from(S.Z.editedDefaultChannelIds).filter((e) => null != h.Z.getChannel(e)),
-        [o, d] = (0, c.d9)(e, [...s]);
-    if (n && t === T.Un.ONBOARDING_DEFAULT && (d.length < T.md || o.length < T.X))
-        return void i.Z.show({
-            title: O.intl.string(O.t.iLdiqa),
-            body: O.intl.string(O.t.JOT74e),
+    let n = s.Z.getEnabled(e),
+        a = Array.from(p.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
+        [o, d] = (0, c.d9)(e, [...a]);
+    if (n && t === E.Un.ONBOARDING_DEFAULT && (d.length < E.md || o.length < E.X))
+        return void r.Z.show({
+            title: x.intl.string(x.t.iLdiqa),
+            body: x.intl.string(x.t.JOT74e),
         });
     try {
-        await (0, f.n_)(e, { mode: t });
+        await (0, N.n_)(e, { mode: t });
     } catch (n) {
         var u;
-        let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
-        i.Z.show({
-            title: O.intl.string(O.t.iLdiqa),
-            body: [e, t].filter(g.lm).join(": "),
+        let { fieldName: e, error: t } = null != (u = new i.Z(n).getAnyErrorMessageAndField()) ? u : {};
+        r.Z.show({
+            title: x.intl.string(x.t.iLdiqa),
+            body: [e, t].filter(f.lm).join(": "),
         });
     }
     l.Z.dispatch({
@@ -66,17 +66,17 @@ async function j(e, t) {
     });
 }
 function v(e, t) {
-    let n = p.xh.findIndex((e) => e === t);
-    -1 !== n && n !== p.xh.length - 1 && x(p.xh[n + 1]);
+    let n = O.xh.findIndex((e) => e === t);
+    -1 !== n && n !== O.xh.length - 1 && T(O.xh[n + 1]);
 }
-function D(e, t) {
-    let n = p.xh.findIndex((e) => e === t);
-    -1 !== n && 0 !== n && x(p.xh[n - 1]);
+function b(e, t) {
+    let n = O.xh.findIndex((e) => e === t);
+    -1 !== n && 0 !== n && T(O.xh[n - 1]);
 }
-async function b(e) {
-    let t = I.Z.getGuild(e);
+async function D(e) {
+    let t = h.Z.getGuild(e);
     null != t &&
-        (N.Z.close(),
+        (I.Z.close(),
         (0, u.iD)(t.id, {
             type: m.z.NEW_MEMBER,
             roles: {},
@@ -85,7 +85,7 @@ async function b(e) {
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
             memberOptions: {
-                isPending: (0, s.Dc)(t),
+                isPending: (0, a.Dc)(t),
                 flags: 0,
             },
         }),
@@ -94,6 +94,6 @@ async function b(e) {
         await (0, d.default)({
             guildId: t.id,
             isPreview: !0,
-            returnChannelId: E.oC.GUILD_HOME,
+            returnChannelId: S.oC.GUILD_HOME,
         }));
 }

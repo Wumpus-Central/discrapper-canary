@@ -5,7 +5,7 @@ var r = n(951288),
     l = n.n(a),
     s = n(512722),
     o = n.n(s),
-    c = n(524825),
+    c = n(574583),
     d = n(924826),
     u = n(91192),
     m = n(536895),
@@ -22,9 +22,9 @@ var r = n(951288),
     y = n(472243),
     T = n(923664),
     w = n(284182),
-    O = n(795639),
-    S = n(957730),
-    N = n(25015),
+    S = n(795639),
+    N = n(957730),
+    O = n(25015),
     P = n(252032),
     I = n(216572),
     E = n(913663),
@@ -125,7 +125,7 @@ function ed(e) {
         C = (0, g.Wu)([z.Z], () => z.Z.getUploads(t.id, L.d.FirstThreadMessage)),
         y = f && _ && u,
         T = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        N = (function (e, t) {
+        O = (function (e, t) {
             let n = (0, Q.AF)(),
                 r = (0, X.ql)(e);
             return i.useCallback(() => {
@@ -165,7 +165,7 @@ function ed(e) {
                 (t, r, i) => {
                     let { name: a, textAreaState: l } = n.getState();
                     null == t && (t = l.textValue), (t = t.trim());
-                    let { content: s } = S.ZP.parse(e, t);
+                    let { content: s } = N.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
                         r = null == (o = E.Z.getStickerPreview(e.id, ec.drafts.type)) ? void 0 : o.map((e) => e.id);
@@ -279,7 +279,7 @@ function ed(e) {
             children: (0, r.jsx)("div", {
                 "aria-label": u ? ea.intl.string(ea.t.dq7mAQ) : ea.intl.string(ea.t["5h0QOD"]),
                 className: l()(el.container, { [el.collapsed]: !f }),
-                onClick: !f && u ? N : void 0,
+                onClick: !f && u ? O : void 0,
                 children: (0, r.jsxs)("form", {
                     onMouseDown: v,
                     onFocus: v,
@@ -317,7 +317,7 @@ function ed(e) {
                                         x && (0, r.jsx)(ex, {}),
                                     ],
                                 }),
-                                y && (T ? (0, r.jsx)(O._, { parentChannel: t }) : (0, r.jsx)(J.Z, { channelId: t.id })),
+                                y && (T ? (0, r.jsx)(S._, { parentChannel: t }) : (0, r.jsx)(J.Z, { channelId: t.id })),
                             ],
                         }),
                         (0, r.jsxs)("div", {
@@ -600,7 +600,7 @@ let eg = i.memo(function (e) {
                 channel_id: t.id,
                 content: n,
             }),
-            { content: a } = (0, N.Z)(i, {
+            { content: a } = (0, O.Z)(i, {
                 hideSimpleEmbedContent: !0,
                 isInteracting: !1,
                 formatInline: !1,

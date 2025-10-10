@@ -71,35 +71,35 @@ function D(e) {
               checkElevated: n,
           });
 }
-function x(e) {
+function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = N[e];
     return null != n ? n : (N[e] = D(e, t));
 }
-function L(e) {
+function x(e) {
     if (null != e) {
         var t;
         R[e] = (null != (t = R[e]) ? t : 0) + 1;
     }
 }
-function j() {
+function M() {
     for (let e in ((C = {}), (N = {}), R)) R[e] += 1;
     P += 1;
 }
-function M() {
-    j();
+function j() {
+    M();
 }
 function k() {
     $();
 }
 function U() {
-    j();
+    M();
 }
 function G(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null == (t = I.default.getCurrentUser()) ? void 0 : t.id)) return !1;
-    j();
+    M();
 }
 function B(e) {
     let {
@@ -113,7 +113,7 @@ function B(e) {
             context: n,
         });
     if (N[n.id] === i) return !1;
-    (N[n.id] = i), (P += 1), L(n.getGuildId());
+    (N[n.id] = i), (P += 1), x(n.getGuildId());
 }
 function Z(e) {
     let { channels: t } = e,
@@ -126,19 +126,19 @@ function Z(e) {
                 user: r,
                 context: t,
             });
-        N[t.id] !== i && ((N[t.id] = i), L(t.getGuildId()), (n = !0));
+        N[t.id] !== i && ((N[t.id] = i), x(t.getGuildId()), (n = !0));
     }
     return !!n && ((P += 1), n);
 }
-function V() {
+function F() {
     return !0;
 }
-function F(e) {
+function V(e) {
     var t;
-    return (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (L(e.guildId), !0);
+    return (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (x(e.guildId), !0);
 }
 function H(e) {
-    return !!(0, _.s)(e) && (L(e.guildId), !0);
+    return !!(0, _.s)(e) && (x(e.guildId), !0);
 }
 function Y(e) {
     let { messages: t } = e;
@@ -153,7 +153,7 @@ function W(e) {
 }
 function K(e) {
     let { channel: t } = e;
-    return delete N[t.id], (P += 1), L(t.guild_id), !1;
+    return delete N[t.id], (P += 1), x(t.guild_id), !1;
 }
 function z(e) {
     let { guildId: t } = e;
@@ -163,7 +163,7 @@ function z(e) {
         delete N[e.id];
     }),
         (P += 1),
-        L(t);
+        x(t);
 }
 function q(e) {
     let { instance: t } = e,
@@ -185,7 +185,7 @@ function X(e) {
         delete N[e.id];
     }),
         (P += 1),
-        L(t);
+        x(t);
 }
 function Q(e, t, n, r) {
     let i = b.Hn;
@@ -194,7 +194,7 @@ function Q(e, t, n, r) {
             let i = y.Z.getChannel(e.parent_id);
             return null == i ? b.Hn : b.Og(e, Q(i, t, n, r), f.Z.hasJoined(e.id));
         }
-        i = x(e.id);
+        i = L(e.id);
     } else (0, E.lM)(e) && (i = w(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? b.uB({
@@ -212,7 +212,7 @@ class J extends (r = s.ZP.Store) {
         this.waitFor(I.default, v.Z, y.Z, O.ZP, f.Z, d.Z, c.Z);
     }
     getChannelPermissions(e) {
-        return p.Ec.has(e.type) ? D(e.id) : x(e.id);
+        return p.Ec.has(e.type) ? D(e.id) : L(e.id);
     }
     getGuildPermissions(e) {
         return w(e.id);
@@ -299,11 +299,11 @@ function $() {
 }
 A(J, "displayName", "PermissionStore");
 let ee = new J(l.Z, {
-    BACKGROUND_SYNC: M,
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
-    CACHE_LOADED: M,
-    CACHE_LOADED_LAZY: M,
+    BACKGROUND_SYNC: j,
+    CONNECTION_OPEN: j,
+    OVERLAY_INITIALIZE: j,
+    CACHE_LOADED: j,
+    CACHE_LOADED_LAZY: j,
     CONNECTION_CLOSED: k,
     GUILD_CREATE: U,
     GUILD_UPDATE: U,
@@ -312,16 +312,16 @@ let ee = new J(l.Z, {
     GUILD_MEMBER_UPDATE: G,
     CURRENT_USER_UPDATE: G,
     CHANNEL_CREATE: B,
-    THREAD_CREATE: V,
-    THREAD_UPDATE: V,
-    THREAD_LIST_SYNC: V,
-    LOAD_THREADS_SUCCESS: V,
-    LOAD_ARCHIVED_THREADS_SUCCESS: V,
+    THREAD_CREATE: F,
+    THREAD_UPDATE: F,
+    THREAD_LIST_SYNC: F,
+    LOAD_THREADS_SUCCESS: F,
+    LOAD_ARCHIVED_THREADS_SUCCESS: F,
     CHANNEL_UPDATES: Z,
     LOAD_MESSAGES_SUCCESS: Y,
     SEARCH_MESSAGES_SUCCESS: W,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: W,
-    THREAD_MEMBER_UPDATE: F,
+    THREAD_MEMBER_UPDATE: V,
     THREAD_MEMBERS_UPDATE: H,
     CHANNEL_DELETE: K,
     GUILD_ROLE_CREATE: z,

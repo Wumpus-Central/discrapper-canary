@@ -94,10 +94,10 @@ function C(e, t) {
 let N = i.forwardRef(function (e, t) {
     var a, v, T;
     let C,
-        { canRemove: N, className: R, role: P, onRemove: w, guildId: D, disableBorderColor: x, onMouseDown: L } = e,
-        j = (0, s.JA)(P.id),
-        { tabIndex: M } = j,
-        k = A(j, ["tabIndex"]),
+        { canRemove: N, className: R, role: P, onRemove: w, guildId: D, disableBorderColor: L, onMouseDown: x } = e,
+        M = (0, s.JA)(P.id),
+        { tabIndex: j } = M,
+        k = A(M, ["tabIndex"]),
         U = (0, E.p9)({
             roleId: P.id,
             size: 16,
@@ -150,8 +150,8 @@ let N = i.forwardRef(function (e, t) {
             });
     let z = i.useMemo(() => {
             var t;
-            return I({ borderColor: x ? void 0 : H }, null != (t = e.style) ? t : {});
-        }, [H, x, e.style]),
+            return I({ borderColor: L ? void 0 : H }, null != (t = e.style) ? t : {});
+        }, [H, L, e.style]),
         q = () =>
             N
                 ? (0, r.jsx)(d.u, {
@@ -160,7 +160,7 @@ let N = i.forwardRef(function (e, t) {
                       children: (0, r.jsxs)(f.P3F, {
                           className: o()(O.roleRemoveButtonCanRemove, O.roleRemoveButton),
                           onClick: w,
-                          tabIndex: M,
+                          tabIndex: j,
                           focusProps: { focusClassName: O.roleRemoveIconFocused },
                           "aria-hidden": !1,
                           "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: P.name }),
@@ -193,9 +193,9 @@ let N = i.forwardRef(function (e, t) {
                         className: o()(O.role, R),
                         style: z,
                         onContextMenu: Z,
-                        onMouseDown: L,
+                        onMouseDown: x,
                         "aria-label": P.name,
-                        tabIndex: M,
+                        tabIndex: j,
                     },
                     k,
                 ),

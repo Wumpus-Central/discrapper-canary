@@ -43,7 +43,7 @@ let d = {},
 function D(e) {
     p = !0;
 }
-function x(e) {
+function L(e) {
     let {
         classifications: t,
         accountStanding: n,
@@ -54,14 +54,14 @@ function x(e) {
     } = e;
     (d = a()(t, "id")), (_ = n), (E = r), (b = i), (p = !1), (h = !0), (m = null), (S = o), (y = s);
 }
-function L(e) {
+function x(e) {
     let { error: t } = e;
     (p = !1), (h = !1), (m = t);
 }
-function j(e) {
+function M(e) {
     (f[e.classificationId] = l.OY.PENDING), (p = !0);
 }
-function M(e) {
+function j(e) {
     let { classification: t, accountStanding: n, isDsaEligible: r, username: i, isAppealEligible: a } = e;
     (d[t.id] = t), (f[t.id] = l.OY.SUCCESS), (_ = n), (p = !1), (m = null), (E = r), (b = a), (h = !0), (S = i);
 }
@@ -84,11 +84,11 @@ function Z(e) {
     let { userInput: t } = e;
     T = t;
 }
-function V(e) {
+function F(e) {
     let {} = e;
     (O = !0), (v = null);
 }
-function F(e) {
+function V(e) {
     let { classificationId: t } = e;
     (O = !1), (v = null), (d[t].appeal_status = { status: l.hQ.REVIEW_PENDING });
 }
@@ -206,17 +206,17 @@ class et extends (r = o.ZP.Store) {
 u(et, "displayName", "SafetyHubStore");
 let en = new et(s.Z, {
     SAFETY_HUB_FETCH_START: D,
-    SAFETY_HUB_FETCH_SUCCESS: x,
-    SAFETY_HUB_FETCH_FAILURE: L,
-    SAFETY_HUB_FETCH_CLASSIFICATION_START: j,
-    SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: M,
+    SAFETY_HUB_FETCH_SUCCESS: L,
+    SAFETY_HUB_FETCH_FAILURE: x,
+    SAFETY_HUB_FETCH_CLASSIFICATION_START: M,
+    SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: j,
     SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: k,
     SAFETY_HUB_APPEAL_OPEN: U,
     SAFETY_HUB_APPEAL_CLOSE: G,
     SAFETY_HUB_APPEAL_SIGNAL_SELECT: B,
     SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: Z,
-    SAFETY_HUB_REQUEST_REVIEW_START: V,
-    SAFETY_HUB_REQUEST_REVIEW_SUCCESS: F,
+    SAFETY_HUB_REQUEST_REVIEW_START: F,
+    SAFETY_HUB_REQUEST_REVIEW_SUCCESS: V,
     SAFETY_HUB_REQUEST_REVIEW_FAILURE: H,
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: Y,
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: W,

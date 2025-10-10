@@ -28,17 +28,17 @@ var r = n(98405),
     P = n(573078),
     w = n(117895),
     D = n(840991),
-    x = n(335024),
-    L = n(199838),
-    j = n(176682),
-    M = L.get,
-    k = L.set,
-    U = L.enforce,
+    L = n(335024),
+    x = n(199838),
+    M = n(176682),
+    j = x.get,
+    k = x.set,
+    U = x.enforce,
     G = w.f,
     B = D.f,
     Z = i.RangeError,
-    V = c.ArrayBuffer,
-    F = V.prototype,
+    F = c.ArrayBuffer,
+    V = F.prototype,
     H = c.DataView,
     Y = l.NATIVE_ARRAY_BUFFER_VIEWS,
     W = l.TYPED_ARRAY_TAG,
@@ -51,13 +51,13 @@ var r = n(98405),
         P(e, t, {
             configurable: !0,
             get: function () {
-                return M(this)[t];
+                return j(this)[t];
             },
         });
     },
     $ = function (e) {
         var t;
-        return T(F, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
+        return T(V, e) || "ArrayBuffer" === (t = y(e)) || "SharedArrayBuffer" === t;
     },
     ee = function (e, t) {
         return q(e) && !v(t) && t in e && _(+t) && t >= 0;
@@ -100,11 +100,11 @@ o
               b = E && E.prototype,
               y = {},
               v = function (e, t) {
-                  var n = M(e);
+                  var n = j(e);
                   return n.view[c](t * o + n.byteOffset, !0);
               },
               T = function (e, t, r) {
-                  var i = M(e);
+                  var i = j(e);
                   i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
@@ -123,7 +123,7 @@ o
                 ((E = t(function (e, t, n, r) {
                     return (
                         u(e, b),
-                        j(
+                        M(
                             (function () {
                                 return O(t)
                                     ? $(t)
@@ -133,7 +133,7 @@ o
                                               ? new _(t, m(n, o))
                                               : new _(t)
                                         : q(t)
-                                          ? x(E, t)
+                                          ? L(E, t)
                                           : a(C, E, t)
                                     : new _(h(t));
                             })(),
@@ -162,9 +162,9 @@ o
                                 if (f % o || (s = f - d) < 0) throw new Z(Q);
                             } else if ((s = p(r) * o) + d > f) throw new Z(Q);
                             l = s / o;
-                        } else if (q(t)) return x(E, t);
+                        } else if (q(t)) return L(E, t);
                         else return a(C, E, t);
-                    else i = new V((s = (l = h(t)) * o));
+                    else i = new F((s = (l = h(t)) * o));
                     for (
                         k(e, {
                             buffer: i,

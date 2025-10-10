@@ -8,9 +8,9 @@ var r = n(951288),
     c = n(55889),
     d = n(300453),
     u = n(620436),
-    m = n(273504),
-    g = n(388032),
-    p = n(956764);
+    g = n(273504),
+    m = n(388032),
+    p = n(290135);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,14 +57,14 @@ function h(e, t) {
 function x(e) {
     var t, n;
     let { rule: x, onChangeRule: b } = e,
-        [j, v] = i.useState(null == (t = x.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        _ = (0, a.a)(x.guildId, !1);
+        [j, _] = i.useState(null == (t = x.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+        v = (0, a.a)(x.guildId, !1);
     return (0, r.jsxs)("div", {
         className: p.cardContentsContainer,
         children: [
             (0, r.jsxs)(d.Z, {
                 step: 1,
-                header: g.intl.string(g.t.IGfuTU),
+                header: m.intl.string(m.t.IGfuTU),
                 children: [
                     (0, r.jsxs)("div", {
                         className: p.mentionLimitContainer,
@@ -82,13 +82,13 @@ function x(e) {
                                 children: [
                                     (0, r.jsx)(s.X6q, {
                                         variant: "heading-sm/semibold",
-                                        children: g.intl.string(g.t["s/26oa"]),
+                                        children: m.intl.string(m.t["s/26oa"]),
                                     }),
                                     (0, r.jsx)(s.Text, {
                                         color: "interactive-normal",
                                         variant: "text-xs/medium",
                                         className: p.descriptionHint,
-                                        children: g.intl.string(g.t["8uW4/P"]),
+                                        children: m.intl.string(m.t["8uW4/P"]),
                                     }),
                                 ],
                             }),
@@ -97,7 +97,7 @@ function x(e) {
                                 children: (0, r.jsx)(s.FiK, {
                                     value: j,
                                     onChange: (e) => {
-                                        v(e),
+                                        _(e),
                                             b(
                                                 h(f({}, x), {
                                                     triggerMetadata: h(f({}, x.triggerMetadata), {
@@ -106,14 +106,14 @@ function x(e) {
                                                 }),
                                             );
                                     },
-                                    minValue: m.Vg,
-                                    maxValue: m.Lg,
+                                    minValue: g.Vg,
+                                    maxValue: g.Lg,
                                     className: p.stepper,
                                 }),
                             }),
                         ],
                     }),
-                    _
+                    v
                         ? (0, r.jsxs)("div", {
                               className: p.mentionLimitContainer,
                               children: [
@@ -130,13 +130,13 @@ function x(e) {
                                       children: [
                                           (0, r.jsx)(s.X6q, {
                                               variant: "heading-sm/semibold",
-                                              children: g.intl.string(g.t.XnuC9v),
+                                              children: m.intl.string(m.t.XnuC9v),
                                           }),
                                           (0, r.jsx)(s.Text, {
                                               color: "interactive-normal",
                                               variant: "text-xs/medium",
                                               className: p.descriptionHint,
-                                              children: g.intl.string(g.t.EDBe5u),
+                                              children: m.intl.string(m.t.EDBe5u),
                                           }),
                                       ],
                                   }),
@@ -164,7 +164,7 @@ function x(e) {
             (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(d.Z, {
                 step: 2,
-                header: g.intl.string(g.t["18TOiY"]),
+                header: m.intl.string(m.t["18TOiY"]),
                 children: (0, r.jsx)(o.Z, {
                     rule: x,
                     onChangeRule: b,
@@ -173,7 +173,7 @@ function x(e) {
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(d.Z, {
                 step: 3,
-                header: g.intl.string(g.t.eq3gjo),
+                header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(c.Z, {
                     rule: x,
                     onChangeRule: b,

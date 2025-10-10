@@ -1,5 +1,5 @@
 a.d(e, {
-    $k: () => f,
+    $k: () => T,
     Dp: () => C,
     Gx: () => m,
     HN: () => v,
@@ -11,9 +11,9 @@ a.d(e, {
     ed: () => D,
     i0: () => R,
     j5: () => g,
-    ve: () => I,
+    ve: () => u,
     wy: () => N,
-    yc: () => y,
+    yc: () => S,
 });
 var r = a(370336),
     _ = a(370541),
@@ -24,8 +24,8 @@ var r = a(370336),
     E = a(899195),
     s = a(988097),
     l = a(793373),
-    u = a(99342);
-let I = 0,
+    I = a(99342);
+let u = 0,
     R = 1;
 function d(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
@@ -54,16 +54,16 @@ function A(t) {
         r = p(t);
     return (0, _.$p)(e, a, r);
 }
-function f(t) {
+function T(t) {
     return "number" == typeof t
-        ? T(t)
+        ? f(t)
         : Array.isArray(t)
           ? t[0] + t[1] / 1000000000
           : t instanceof Date
-            ? T(t.getTime())
+            ? f(t.getTime())
             : (0, n.ph)();
 }
-function T(t) {
+function f(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
 function L(t) {
@@ -79,8 +79,8 @@ function L(t) {
                 data: e,
                 description: o,
                 parent_span_id: c,
-                start_timestamp: f(n),
-                timestamp: f(i) || void 0,
+                start_timestamp: T(n),
+                timestamp: T(i) || void 0,
                 status: h(l),
                 op: e[s.$J],
                 origin: e[s.S3],
@@ -126,9 +126,9 @@ function m(t) {
 function v() {
     let t = (0, i.c)(),
         e = (0, o.G)(t);
-    return e.getActiveSpan ? e.getActiveSpan() : (0, u.Y)((0, c.nZ)());
+    return e.getActiveSpan ? e.getActiveSpan() : (0, I.Y)((0, c.nZ)());
 }
-function y(t, e, a, r, _, n) {
+function S(t, e, a, r, _, n) {
     let o = v();
     o && (0, E.V)(o, t, e, a, r, _, n);
 }

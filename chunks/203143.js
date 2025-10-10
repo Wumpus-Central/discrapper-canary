@@ -49,7 +49,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,18 +77,18 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -172,7 +172,7 @@ function Z(e) {
         initialAnswerId: o,
     });
 }
-function V(e) {
+function F(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
     (0, N.eu)(t, n, (e) => {
         var n;
@@ -185,14 +185,14 @@ function V(e) {
         };
     });
 }
-function F(e) {
+function V(e) {
     let { channelId: t, messageId: n } = e,
         r = T.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function H(e) {
     let { channelId: t, messageId: n, answerIds: r } = e,
-        i = F({
+        i = V({
             channelId: t,
             messageId: n,
         }),
@@ -245,7 +245,7 @@ async function Y(e) {
         });
     let a = (0, N.fU)(t, n);
     i()(null != a, "Must not be able to vote without existing state!");
-    let o = F({
+    let o = V({
         channelId: t,
         messageId: n,
     });
@@ -256,7 +256,7 @@ async function Y(e) {
             n,
             (e) => (
                 i()(null != e, "Must not be able to vote without existing state!"),
-                j(x({}, e), {
+                M(L({}, e), {
                     submitting: !0,
                     editing: !1,
                 })
@@ -290,7 +290,7 @@ async function Y(e) {
             }),
             (0, N.eu)(t, n, (e) => {
                 if (null != e)
-                    return j(x({}, e), {
+                    return M(L({}, e), {
                         submitting: !1,
                         editing: !1,
                     });
@@ -368,7 +368,7 @@ async function z(e) {
             });
             break;
         case "cancel":
-            V({
+            F({
                 channelId: t,
                 messageId: n,
                 isEditing: !1,
@@ -395,7 +395,7 @@ let q = {
         var t,
             n,
             { answerId: r } = e;
-        let { channelId: i, messageId: a, message: o } = U(M(e, ["answerId"])),
+        let { channelId: i, messageId: a, message: o } = U(j(e, ["answerId"])),
             { tapShouldOpenVotersModal: s } = null != (n = (0, R.Tk)(o)) ? n : {};
         if (!0 === s)
             return void Z({
@@ -430,7 +430,7 @@ let q = {
                     }
                 );
             }
-            let s = x({}, e),
+            let s = L({}, e),
                 c = new Set(s.selectedAnswerIds);
             if (((s.selectedAnswerIds = c), c.has(r))) c.delete(r);
             else {
@@ -455,7 +455,7 @@ let q = {
         });
     },
     handlePollSubmitVote: Y,
-    handleUpdateVoteEditingState: V,
+    handleUpdateVoteEditingState: F,
     handlePollActionTapped: z,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: a, layout: o, onClose: l } = e,
@@ -500,7 +500,7 @@ let q = {
                 null == l || l();
         } catch (e) {
             if ("poll" === (e instanceof p.Hx ? e : new p.Hx(e)).getAnyErrorMessage() && null != e.text)
-                throw j(x({}, e), { body: JSON.parse(e.text) });
+                throw M(L({}, e), { body: JSON.parse(e.text) });
             throw e;
         }
     },

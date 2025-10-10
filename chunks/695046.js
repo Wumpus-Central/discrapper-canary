@@ -372,7 +372,7 @@ function C(e) {
             withTransparentBackground: C,
         } = e,
         N = (0, u.Gc)(),
-        R = i.useContext(l.UgQ),
+        R = i.useContext(l.zbb),
         P = S({
             labelledBy: null != I ? I : N.titleId,
             orientation: A,
@@ -418,7 +418,7 @@ function C(e) {
 function N(e) {
     var { label: t, description: n, required: i } = e,
         a = b(e, ["label", "description", "required"]);
-    return (0, r.jsx)(l.NIc, {
+    return (0, r.jsx)(l.gNt, {
         label: t,
         description: n,
         required: i,

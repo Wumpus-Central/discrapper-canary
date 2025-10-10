@@ -78,13 +78,13 @@ let R = i.memo((e) => {
         y = null == e ? void 0 : e.onCtaClick,
         S = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         [C, w] = i.useState(!1),
-        [D, x] = i.useState(!1),
-        L =
+        [D, L] = i.useState(!1),
+        x =
             b === E.gM.CARD_CAROUSEL_FIRST_ROW ||
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             b === E.gM.CARD_CAROUSEL_THIRD_ROW,
-        j = (0, g.Z)(),
-        [M, k] = (0, _.cv)(null != a && n ? [a] : []),
+        M = (0, g.Z)(),
+        [j, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
         F = (0, s.debounce)(() => {
             p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, s.snakeCase)(t) });
@@ -100,19 +100,19 @@ let R = i.memo((e) => {
             null == y || y(), V();
         };
     e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
-    let Y = M !== a || null == a || D,
+    let Y = j !== a || null == a || D,
         W = (e) => {
             C &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(T.flipCard) &&
-                (x(!0),
+                (L(!0),
                 p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
                 null != a && k(v.L.TAKE_ACTION));
         };
     return (i.useEffect(() => {
         S &&
             C &&
-            (x(!0),
+            (L(!0),
             p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
             null != a && k(v.L.TAKE_ACTION));
     }, [S, C, a, t, k]),
@@ -156,8 +156,8 @@ let R = i.memo((e) => {
                     className: T.hoverWrapper,
                     children: (0, r.jsx)("div", {
                         className: o()({
-                            [T.noFlipCardContainer]: !L,
-                            [T.noFlipCardContainerCarousel]: L,
+                            [T.noFlipCardContainer]: !x,
+                            [T.noFlipCardContainerCarousel]: x,
                             [T.forceShadow]: h,
                             [T.reducedMotion]: S,
                         }),
@@ -184,7 +184,7 @@ let R = i.memo((e) => {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: T.flipCardFront,
-                                    children: (0, r.jsx)(P, N(A({}, j.upcomingDropUntimed), { pillText: "" })),
+                                    children: (0, r.jsx)(P, N(A({}, M.upcomingDropUntimed), { pillText: "" })),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: T.flipCardBack,
@@ -202,7 +202,7 @@ let R = i.memo((e) => {
                         }),
                     }),
                 })
-        : (0, r.jsx)(R, N(A({}, j.upcomingDropUntimed), { forceShadow: h }));
+        : (0, r.jsx)(R, N(A({}, M.upcomingDropUntimed), { forceShadow: h }));
 });
 R.displayName = "PremiumPerkCard";
 let P = i.forwardRef((e, t) => {

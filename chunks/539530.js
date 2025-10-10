@@ -1,32 +1,32 @@
 n.d(t, {
     $0: () => u,
-    ZP: () => x,
+    ZP: () => m,
 }),
     n(388685),
     n(539854);
-var l,
-    i = n(647438),
-    r = n(399606),
-    s = n(597688),
-    a = n(1870),
-    o = n(884697),
+var i,
+    r = n(647438),
+    a = n(399606),
+    l = n(597688),
+    o = n(1870),
+    s = n(884697),
     c = n(235897),
     d = n(388032),
-    u = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
+    u = (((i = {}).PURCHASE = "purchase"), (i.PREMIUM_PURCHASE = "premium_purchase"), (i.PREVIEW = "preview"), i);
 let p = { id: "None" },
-    m = { id: "Shop" },
-    x = () => {
-        let e = (0, r.e7)([a.Z], () => a.Z.purchases),
-            [t, n] = (0, r.Wu)([s.Z], () => [s.Z.categories, s.Z.products]);
+    _ = { id: "Shop" },
+    m = () => {
+        let e = (0, a.e7)([o.Z], () => o.Z.purchases),
+            [t, n] = (0, a.Wu)([l.Z], () => [l.Z.categories, l.Z.products]);
         return (
             c.Z.useConfig({ location: "use nameplate sections" }),
-            (0, i.useMemo)(() => {
-                let l = (0, o.Y)(e, t).reduce(
-                    (t, l) => {
-                        let i = e.get(l.skuId),
-                            r = (0, o.G1)(null != i ? i : n.get(l.skuId));
+            (0, r.useMemo)(() => {
+                let i = (0, s.Y)(e, t).reduce(
+                    (t, i) => {
+                        let r = e.get(i.skuId),
+                            a = (0, s.G1)(null != r ? r : n.get(i.skuId));
                         return (
-                            r ? t.premium_purchase.push(l) : null != i ? t.purchase.push(l) : r || t.preview.push(l), t
+                            a ? t.premium_purchase.push(i) : null != r ? t.purchase.push(i) : a || t.preview.push(i), t
                         );
                     },
                     {
@@ -38,19 +38,19 @@ let p = { id: "None" },
                 return [
                     {
                         section: "purchase",
-                        items: [p, m, ...l.purchase],
+                        items: [p, _, ...i.purchase],
                         height: 12,
                         header: d.intl.string(d.t["WfGV5+"]),
                     },
                     {
                         section: "premium_purchase",
-                        items: l.premium_purchase,
+                        items: i.premium_purchase,
                         height: 12,
                         header: d.intl.string(d.t.TiLCg4),
                     },
                     {
                         section: "preview",
-                        items: l.preview,
+                        items: i.preview,
                         height: 12,
                         header: d.intl.string(d.t["1vbbeX"]),
                     },

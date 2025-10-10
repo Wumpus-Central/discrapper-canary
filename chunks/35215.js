@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -19,10 +19,11 @@ var r = n(951288),
     y = n(475595),
     O = n(602667),
     v = n(723307),
-    I = n(981631),
-    T = n(388032),
-    S = n(879048);
-function A(e, t, n) {
+    I = n(46140),
+    T = n(981631),
+    S = n(388032),
+    A = n(879048);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +36,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,12 +47,12 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
 }
-function N(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -63,58 +64,73 @@ function N(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let P = 10,
-    w = 20,
-    D = 4,
-    L = 5,
-    x = 8,
-    M = 10,
-    j = (e) => {
+let w = 10,
+    D = 20,
+    L = 4,
+    x = 5,
+    M = 8,
+    j = 10;
+function k(e) {
+    var t;
+    let n = {
+            [I.S7.PACKAGE_ACTION_ADVENTURE]: S.t.PYFVdX,
+            [I.S7.PACKAGE_RPG_MMO]: S.t.rFQo2N,
+            [I.S7.PACKAGE_RACING_SPORTS]: S.t.zDRa6u,
+            [I.S7.PACKAGE_SANDBOX_CREATIVE]: S.t.vz9U2d,
+            [I.S7.PACKAGE_FAMILY_FRIENDLY]: S.t.IOiAEx,
+            [I.S7.PACKAGE_HOLIDAY_SEASON]: S.t.cJPqvL,
+            [I.S7.PACKAGE_NEW_YEARS]: S.t.S0w2mp,
+        },
+        r = e.config.features.find((e) => e in n),
+        i = null != (t = null != r ? n[r] : null) ? t : S.t["D+DkEB"];
+    return S.intl.string(i);
+}
+let U = (e) => {
         let { quest: t, onClose: n } = e,
             i = (0, a.e7)([m.Z], () => m.Z.getState().theme),
-            o = (0, s.wj)(i) ? I.BRd.DARK : I.BRd.LIGHT;
+            o = (0, s.wj)(i) ? T.BRd.DARK : T.BRd.LIGHT;
         return (0, r.jsxs)("div", {
-            className: S.headerContainer,
+            className: A.headerContainer,
             children: [
                 (0, r.jsxs)("div", {
-                    className: S.headerContent,
+                    className: A.headerContent,
                     children: [
                         (0, r.jsx)("img", {
-                            className: S.gameTile,
+                            className: A.gameTile,
                             alt: t.config.messages.gameTitle,
                             src: (0, y.fh)(t, y.eC.GAME_TILE, o).url,
                         }),
                         (0, r.jsxs)("div", {
-                            className: S.headerTextContainer,
+                            className: A.headerTextContainer,
                             children: [
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-primary",
-                                    children: T.intl.string(T.t["D+DkEB"]),
+                                    children: k(t),
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-tertiary",
-                                    children: T.intl.string(T.t.VgN1Bg),
+                                    children: S.intl.string(S.t.VgN1Bg),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, r.jsx)(l.P3F, {
-                    className: S.closeButton,
-                    "aria-label": T.intl.string(T.t.cpT0Cg),
+                    className: A.closeButton,
+                    "aria-label": S.intl.string(S.t.cpT0Cg),
                     onClick: n,
                     children: (0, r.jsx)(l.Dio, {
                         size: "md",
@@ -124,7 +140,7 @@ let P = 10,
             ],
         });
     },
-    k = (e) => {
+    G = (e) => {
         let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: s, onGameProfileModalClose: c } = e,
             d = (0, E.O5)(),
             f = (0, a.e7)([u.Z], () => u.Z.getApplication(i.applicationId)),
@@ -151,7 +167,7 @@ let P = 10,
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    C(
+                                    N(
                                         {
                                             applicationId: i.applicationId,
                                             source: _.m1.GameSheet,
@@ -170,15 +186,15 @@ let P = 10,
             children: (e) =>
                 (0, r.jsx)(
                     l.P3F,
-                    R(C({}, e), {
-                        className: S.gameClickable,
+                    P(N({}, e), {
+                        className: A.gameClickable,
                         onClick: m,
                         children: (0, r.jsx)("div", {
-                            className: S.coverArtContainer,
+                            className: A.coverArtContainer,
                             children: (0, r.jsx)(h.C, {
                                 game: i,
                                 application: f,
-                                className: S.coverArt,
+                                className: A.coverArt,
                                 size: h.Z.SMALL,
                             }),
                         }),
@@ -186,7 +202,7 @@ let P = 10,
                 ),
         });
     },
-    U = () =>
+    B = () =>
         (0, r.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "75",
@@ -218,7 +234,7 @@ let P = 10,
                 }),
             ],
         });
-function G(e) {
+function Z(e) {
     let {
         quest: t,
         applications: o,
@@ -239,38 +255,38 @@ function G(e) {
                 .map((e) => f.Z.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, p.z6)(e.applicationId))
-                .slice(0, P),
+                .slice(0, w),
         ),
         O = i.useMemo(() => {
             let e = y.length;
-            return e <= D ? D - e : e === L ? 0 : e <= x ? x - e : M - e;
+            return e <= L ? L - e : e === x ? 0 : e <= M ? M - e : j - e;
         }, [y.length]);
     if (
         (i.useEffect(() => {
             b &&
-                (g.default.track(I.rMx.QUEST_GAME_SHEET_ERROR, {
+                (g.default.track(T.rMx.QUEST_GAME_SHEET_ERROR, {
                     quest_id: t.id,
                     error_type: v.n.FETCH_FAILED,
                 }),
                 s(),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("12198").then(n.bind(n, 521760));
-                    return (t) => (0, r.jsx)(e, C({}, t));
+                    return (t) => (0, r.jsx)(e, N({}, t));
                 }));
         }, [b, t.id, s]),
         E && !b)
     ) {
-        let e = Math.min(o.length, P);
+        let e = Math.min(o.length, w);
         return (0, r.jsxs)("div", {
-            className: S.container,
+            className: A.container,
             children: [
-                (0, r.jsx)(j, {
+                (0, r.jsx)(U, {
                     quest: t,
                     onClose: s,
                 }),
                 (0, r.jsx)("div", {
-                    className: S.gameGrid,
-                    children: o.slice(0, e).map((e) => (0, r.jsx)("div", { className: S.placeholderArt }, e)),
+                    className: A.gameGrid,
+                    children: o.slice(0, e).map((e) => (0, r.jsx)("div", { className: A.placeholderArt }, e)),
                 }),
             ],
         });
@@ -281,18 +297,18 @@ function G(e) {
               ref: (e) => {
                   _.current = e;
               },
-              className: S.container,
+              className: A.container,
               children: [
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(U, {
                       quest: t,
                       onClose: s,
                   }),
                   (0, r.jsxs)("div", {
-                      className: S.gameGrid,
+                      className: A.gameGrid,
                       children: [
                           y.map((e) =>
                               (0, r.jsx)(
-                                  k,
+                                  G,
                                   {
                                       quest: t,
                                       game: e,
@@ -303,13 +319,13 @@ function G(e) {
                                   e.applicationId,
                               ),
                           ),
-                          Array.from({ length: O }, (e, t) => (0, r.jsx)(U, {}, "placeholder-".concat(t))),
+                          Array.from({ length: O }, (e, t) => (0, r.jsx)(B, {}, "placeholder-".concat(t))),
                       ],
                   }),
               ],
           });
 }
-function B(e) {
+function F(e) {
     let {
             targetElementRef: t,
             applications: n,
@@ -351,7 +367,7 @@ function B(e) {
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(G, {
+            return (0, r.jsx)(Z, {
                 quest: u,
                 applications: n,
                 onClose: t,
@@ -365,19 +381,19 @@ function B(e) {
         onRequestClose: I,
         position: y,
         align: O,
-        spacing: w,
+        spacing: D,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
         children: (e) => a(e, m),
     });
 }
-let Z = function (e) {
+let V = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
         : (0, r.jsx)(O.A, {
               questOrQuests: e.quest,
               questContent: b.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(B, R(C({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(F, P(N({}, e), { impressionRef: t })),
           });
 };

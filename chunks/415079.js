@@ -107,11 +107,11 @@ function v(e) {
     return t !== e && (m.set(e, t), g.set(t, e)), t;
 }
 let I = (e) => g.get(e);
-function S(e, { blocked: t } = {}) {
+function T(e, { blocked: t } = {}) {
     let n = indexedDB.deleteDatabase(e);
     return t && (n.onblocked = (e) => t(e.oldVersion, e)), v(n).then(() => {});
 }
-let T = ["get", "getKey", "getAll", "getAllKeys", "count"],
+let S = ["get", "getKey", "getAll", "getAllKeys", "count"],
     A = ["put", "add", "delete", "clear"],
     C = new Map();
 function N(e, t) {
@@ -120,7 +120,7 @@ function N(e, t) {
     let n = t.replace(/FromIndex$/, ""),
         r = t !== n,
         i = A.includes(n);
-    if (!(n in (r ? IDBIndex : IDBObjectStore).prototype) || (!i && !T.includes(n))) return;
+    if (!(n in (r ? IDBIndex : IDBObjectStore).prototype) || (!i && !S.includes(n))) return;
     let a = async function (e, ...t) {
         let a = this.transaction(e, i ? "readwrite" : "readonly"),
             o = a.store;
@@ -137,7 +137,7 @@ let R = ["continue", "continuePrimaryKey", "advance"],
     P = {},
     w = new WeakMap(),
     D = new WeakMap(),
-    x = {
+    L = {
         get(e, t) {
             if (!R.includes(t)) return e[t];
             let n = P[t];
@@ -151,13 +151,13 @@ let R = ["continue", "continuePrimaryKey", "advance"],
             );
         },
     };
-async function* L(...e) {
+async function* x(...e) {
     let t = this;
     if ((t instanceof IDBCursor || (t = await t.openCursor(...e)), !t)) return;
-    let n = new Proxy(t, x);
+    let n = new Proxy(t, L);
     for (D.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (w.get(n) || t.continue())), w.delete(n);
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t === Symbol.asyncIterator && p(e, [IDBIndex, IDBObjectStore, IDBCursor])) ||
         ("iterate" === t && p(e, [IDBIndex, IDBObjectStore]))
@@ -165,10 +165,10 @@ function j(e, t) {
 }
 b((e) => ({
     ...e,
-    get: (t, n, r) => (j(t, n) ? L : e.get(t, n, r)),
-    has: (t, n) => j(t, n) || e.has(t, n),
+    get: (t, n, r) => (M(t, n) ? x : e.get(t, n, r)),
+    has: (t, n) => M(t, n) || e.has(t, n),
 }));
-let M = "sprigReplayIframeLoaded",
+let j = "sprigReplayIframeLoaded",
     k = "sprigReplayIframeSettings",
     U = "sprigReplayIframeTakeFullSnapshot",
     G = "sprigReplayTeardown",
@@ -509,7 +509,7 @@ let ep = (e, t) => {
                 null == (t = e.source) || t.postMessage({ type: U }, { targetOrigin: e.origin });
             }));
     };
-(async () => ec() && Promise.allSettled([S("replayStorage"), S("sprig.replay")]))();
+(async () => ec() && Promise.allSettled([T("replayStorage"), T("sprig.replay")]))();
 let ev = new (class {
         openDB() {
             return (function (e, t, { blocked: n, upgrade: r, blocking: i, terminated: a } = {}) {
@@ -556,7 +556,7 @@ let ev = new (class {
         }
         async deleteDB() {
             try {
-                await S("sprigReplay");
+                await T("sprigReplay");
             } catch {}
         }
         async bulkAdd(e, t) {
@@ -667,8 +667,8 @@ let ev = new (class {
         }
     })(),
     eI = [],
-    eS,
     eT,
+    eS,
     eA,
     eC,
     eN,
@@ -676,21 +676,21 @@ let ev = new (class {
     eP = [],
     ew = !1,
     eD = 0,
-    ex = !1,
     eL = !1,
-    ej = [],
-    eM = !1,
-    ek = () => ex && !ew && Date.now() <= eA,
+    ex = !1,
+    eM = [],
+    ej = !1,
+    ek = () => eL && !ew && Date.now() <= eA,
     eU = ({ apiUrl: e, config: t, triggerSnapshot: n, forceInit: r = !1 }) => {
-        (ex && !r) ||
+        (eL && !r) ||
             (l.a.isStorageAvailable
                 ? ((eP = []),
-                  ej.splice(0),
+                  eM.splice(0),
                   eI.splice(0),
                   (eD = 0),
                   (eN = n),
-                  (eT = e),
-                  (eS = {
+                  (eS = e),
+                  (eT = {
                       responseGroupUuid: t.responseGroupUuid,
                       surveyId: t.surveyId,
                       userAgent: t.userAgent,
@@ -698,8 +698,8 @@ let ev = new (class {
                   }),
                   (eC = t.maxDurationSeconds),
                   eH(),
-                  ex || (eR = window.setInterval(eF, 500)),
-                  (ex = !0))
+                  eL || (eR = window.setInterval(eF, 500)),
+                  (eL = !0))
                 : (ew = !0));
     },
     eG = [_.Drag, _.Input, _.MediaInteraction, _.MouseInteraction, _.MouseMove, _.Scroll, _.Selection, _.TouchMove],
@@ -712,11 +712,11 @@ let ev = new (class {
         Date.now() - e > 35000 && (null == eN || eN());
     },
     eV = async () => {
-        if (eP.length || eM) return;
-        eM = !0;
+        if (eP.length || ej) return;
+        ej = !0;
         let e = await ez();
         if (!e) return void (ew = !0);
-        ej.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (eM = !1);
+        eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ej = !1);
     },
     eH = () => {
         let e = l.a.getItem("sprig.alwayson.info");
@@ -724,7 +724,7 @@ let ev = new (class {
             l.b.info("Read stored session state", e);
             let t = JSON.parse(e);
             (ew = t.disabled),
-                (eS = t.metadata),
+                (eT = t.metadata),
                 (eP = t.uploadUrls),
                 (eD = t.currentIndex),
                 (eA = t.expirationTimestamp),
@@ -771,7 +771,7 @@ let ev = new (class {
     },
     ez = async () => {
         if (!ek()) return;
-        let { surveyId: e, responseGroupUuid: t } = eS,
+        let { surveyId: e, responseGroupUuid: t } = eT,
             n = {
                 responseGroupUuid: t,
                 surveyId: e,
@@ -780,7 +780,7 @@ let ev = new (class {
         l.b.info("Fetching always-on upload urls", n);
         let r = await eW(
             () =>
-                (0, l.s)(`${eT}/sdk/1/replayUrls`, {
+                (0, l.s)(`${eS}/sdk/1/replayUrls`, {
                     method: "POST",
                     body: JSON.stringify(n),
                     headers: (0, l.g)(window.UserLeap),
@@ -800,7 +800,7 @@ let ev = new (class {
     eq = async () => {
         if (eP.length) return eP.shift();
         let e = new Promise((e) => {
-            ej.push(e);
+            eM.push(e);
         });
         return eV(), e;
     },
@@ -818,7 +818,7 @@ let ev = new (class {
                 data: {
                     tag: "Sprig_Meta",
                     payload: {
-                        ...eS,
+                        ...eT,
                         index: a,
                         visitorId: window.UserLeap.visitorId ?? "",
                         timestamp: i,
@@ -829,7 +829,7 @@ let ev = new (class {
     },
     eQ = (e, t) => {
         ek() &&
-            !eL &&
+            !ex &&
             (e || eI.length) &&
             (e &&
                 eI.length &&
@@ -843,7 +843,7 @@ let ev = new (class {
             eI.push(t));
     };
 window.addEventListener("beforeunload", async () => {
-    (eL = !0),
+    (ex = !0),
         ek() &&
             (l.b.info("Always On handle page unload"),
             (() => {
@@ -851,7 +851,7 @@ window.addEventListener("beforeunload", async () => {
                 eI.length && (e = eI[0].timestamp);
                 let t = {
                     disabled: ew,
-                    metadata: eS,
+                    metadata: eT,
                     uploadUrls: eP,
                     currentIndex: eD,
                     pendingEventTimestamp: e,
@@ -888,7 +888,7 @@ let eJ = async (e, t) => {
     e3,
     e4 = !1,
     e8 = [],
-    e6 = (e) => {
+    e5 = (e) => {
         var t, n, r, i;
         if (null != (t = e.event) && t.includes("Sprig_Scroll")) {
             let t =
@@ -898,9 +898,9 @@ let eJ = async (e, t) => {
             if (!t) return;
             el.scrollEventUuids[t] = e.uuid;
         }
-        e8.push(e), e4 || e5();
+        e8.push(e), e4 || e6();
     },
-    e5 = () => {
+    e6 = () => {
         (e4 = !0),
             setTimeout(async () => {
                 if (ef() || e_()) return;
@@ -1382,7 +1382,7 @@ let eJ = async (e, t) => {
                                     let n = c || (!!t && e.type === f.Meta);
                                     (c = !1),
                                         eQ(n, e),
-                                        e6({
+                                        e5({
                                             uuid: (0, l.v)(),
                                             event: JSON.stringify(e),
                                             isValidStart: n,
@@ -1396,7 +1396,7 @@ let eJ = async (e, t) => {
                                     (((e, t) => {
                                         window.addEventListener("message", (n) => {
                                             var r;
-                                            n.data.type === M &&
+                                            n.data.type === j &&
                                                 (B.push({
                                                     source: n.source,
                                                     origin: n.origin,

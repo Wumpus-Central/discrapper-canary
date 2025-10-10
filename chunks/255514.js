@@ -13,15 +13,15 @@ var r = n(951288),
     p = n(778231),
     g = n(816342),
     f = n(15667),
-    h = n(76264),
-    b = n(805746),
+    b = n(76264),
+    h = n(805746),
     x = n(822686),
     v = n(356110),
     j = n(730719),
     y = n(996701),
     O = n(238122),
-    C = n(273514),
-    I = n(995712),
+    I = n(273514),
+    C = n(995712),
     Z = n(763431),
     S = n(234937),
     P = n(473121),
@@ -44,8 +44,8 @@ var r = n(951288),
     q = n(375790),
     V = n(981631),
     X = n(388032),
-    H = n(304726),
-    Q = n(880637);
+    H = n(764295),
+    Q = n(520310);
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -107,11 +107,11 @@ let ee = (e) => {
         em = Y(t, "text"),
         ep = l.s.REPORT_TO_MOD.has(n.name),
         [eg, ef] = i.useState(!1),
-        [eh, eb] = i.useState(!1),
+        [eb, eh] = i.useState(!1),
         [ex, ev] = i.useState(""),
         [ej, ey] = i.useState(() => ({})),
-        [eO, eC] = i.useState(() => ({})),
-        eI = i.useMemo(() => ("message" === n.name ? n.record.channel_id : void 0), [n]),
+        [eO, eI] = i.useState(() => ({})),
+        eC = i.useMemo(() => ("message" === n.name ? n.record.channel_id : void 0), [n]),
         eZ = i.useCallback(
             (e) => ({
                 nodeRef: t.id,
@@ -135,13 +135,13 @@ let ee = (e) => {
                 value: t,
                 isValid: n,
             }),
-                eC(r);
+                eI(r);
         },
         eT = (e) => {
             en(eZ(e));
         };
     i.useEffect(() => {
-        null != el && ey(el), null != eo && eC(eo);
+        null != el && ey(el), null != eo && eI(eo);
     }, [el, eo]),
         i.useEffect(() => {
             if (null != es) {
@@ -172,8 +172,8 @@ let ee = (e) => {
             }
         }, [es]),
         i.useEffect(() => {
-            t.is_auto_submit && !eh && (eb(!0), ei(eZ(["", t.id])));
-        }, [t.is_auto_submit, eh, ei, eZ, t.id]);
+            t.is_auto_submit && !eb && (eh(!0), ei(eZ(["", t.id])));
+        }, [t.is_auto_submit, eb, ei, eZ, t.id]);
     let eN = (0, u.fW)(ee),
         eE = null != Y(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name),
         ek = (0, d.U)(),
@@ -231,7 +231,7 @@ let ee = (e) => {
                                 eE &&
                                     (0, r.jsx)(T.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
-                                        channelId: eI,
+                                        channelId: eC,
                                         reportId: ea,
                                     }),
                                 eR && (0, r.jsx)(B.Z, { parents: eD }),
@@ -248,7 +248,7 @@ let ee = (e) => {
                                                 : "user" === n.name
                                                   ? n.record
                                                   : n.record.author,
-                                        channelId: eI,
+                                        channelId: eC,
                                         reportId: ea,
                                         reportType: n,
                                     }),
@@ -260,7 +260,7 @@ let ee = (e) => {
                                         "report_to_mod_message" === n.name) &&
                                     (0, r.jsx)(D.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
-                                        channelId: eI,
+                                        channelId: eC,
                                         reportId: ea,
                                     }),
                                 null != Y(t, "delete_message") &&
@@ -277,7 +277,7 @@ let ee = (e) => {
                                     }),
                                 null != Y(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, r.jsx)(b.Z, {
+                                    (0, r.jsx)(h.Z, {
                                         application: n.record,
                                         reportId: ea,
                                     }),
@@ -308,10 +308,10 @@ let ee = (e) => {
                         (0, r.jsx)(S.Z, { event: n.record }),
                     null != Y(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === n.name &&
-                        (0, r.jsx)(C.Z, { entry: n.record }),
+                        (0, r.jsx)(I.Z, { entry: n.record }),
                     null != Y(t, "guild_discovery_preview") &&
                         "guild_discovery" === n.name &&
-                        (0, r.jsx)(I.Z, { entry: n.record }),
+                        (0, r.jsx)(C.Z, { entry: n.record }),
                     null != Y(t, "app_preview") && "application" === n.name && (0, r.jsx)(p.Z, { entry: n.record }),
                     null != es &&
                         (0, r.jsx)(w.Z, {
@@ -341,7 +341,7 @@ let ee = (e) => {
                     (0, r.jsxs)("div", {
                         className: Q.listContainer,
                         children: [
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(b.Z, {
                                 node: t,
                                 onSelectChild: eT,
                                 nodeMap: e.nodeMap,

@@ -1,9 +1,9 @@
-t.d(e, { nC: () => f }), t(388685), t(704826), t(35282), t(539854);
-var n = t(392711),
-    r = t.n(n),
-    l = t(619864),
-    i = t(193995);
-let s = new Set([
+n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854);
+var r = n(392711),
+    l = n.n(r),
+    i = n(619864),
+    s = n(193995);
+let a = new Set([
     "a",
     "an",
     "and",
@@ -38,67 +38,67 @@ let s = new Set([
     "will",
     "with",
 ]);
-function a(A) {
-    return A.replace(/('|\u2019|\uFF07)(s|S)$/, "");
+function o(e) {
+    return e.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
-function o(A) {
-    return A.toLowerCase();
+function u(e) {
+    return e.toLowerCase();
 }
-function g(A) {
-    return s.has(A);
+function c(e) {
+    return a.has(e);
 }
-function c(A) {
-    return 0 === A.length;
+function E(e) {
+    return 0 === e.length;
 }
-function f(A) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        t = A.length >= l.zV && A.length <= l.y_ && e,
-        n = new Set(r()(A.split(/\W+/)).map(a).reject(c).map(o).reject(g).map(i.a).value());
-    return (A) =>
-        (function A(e, t, n) {
-            if (Array.isArray(e)) e.forEach((e) => A(e, t, n));
-            else if ("list" === e.type) e.items.forEach((e) => A(e, t, n));
-            else if ("string" == typeof e.content && "codeBlock" !== e.type) {
-                let A = [],
-                    r = "";
-                e.content.split(/(\W+)/g).forEach((e) => {
-                    !(function (A, e) {
-                        let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (c((A = o(a(A)))) || g(A)) return !1;
-                        let n = (0, i.a)(A);
-                        if (t) {
-                            for (let A of e.values()) if (n.includes(A)) return !0;
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = e.length >= i.zV && e.length <= i.y_ && t,
+        r = new Set(l()(e.split(/\W+/)).map(o).reject(E).map(u).reject(c).map(s.a).value());
+    return (e) =>
+        (function e(t, n, r) {
+            if (Array.isArray(t)) t.forEach((t) => e(t, n, r));
+            else if ("list" === t.type) t.items.forEach((t) => e(t, n, r));
+            else if ("string" == typeof t.content && "codeBlock" !== t.type) {
+                let e = [],
+                    l = "";
+                t.content.split(/(\W+)/g).forEach((t) => {
+                    !(function (e, t) {
+                        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                        if (E((e = u(o(e)))) || c(e)) return !1;
+                        let r = (0, s.a)(e);
+                        if (n) {
+                            for (let e of t.values()) if (r.includes(e)) return !0;
                             return !1;
                         }
-                        return e.has(n);
-                    })(e, t, n)
-                        ? (r += e)
-                        : (r.length > 0 &&
-                              A.push({
+                        return t.has(r);
+                    })(t, n, r)
+                        ? (l += t)
+                        : (l.length > 0 &&
+                              e.push({
                                   type: "text",
-                                  content: r,
+                                  content: l,
                               }),
-                          A.push({
+                          e.push({
                               type: "highlight",
-                              content: e,
+                              content: t,
                           }),
-                          (r = ""));
+                          (l = ""));
                 }),
-                    A.length > 0 &&
-                        (r.length > 0 &&
-                            A.push({
+                    e.length > 0 &&
+                        (l.length > 0 &&
+                            e.push({
                                 type: "text",
-                                content: r,
+                                content: l,
                             }),
-                        "text" === e.type
-                            ? (e.content = A)
-                            : (e.content = [
+                        "text" === t.type
+                            ? (t.content = e)
+                            : (t.content = [
                                   {
                                       type: "text",
-                                      content: A,
+                                      content: e,
                                   },
                               ]));
-            } else null != e.content && A(e.content, t, n);
-            return e;
-        })(A, n, t);
+            } else null != t.content && e(t.content, n, r);
+            return t;
+        })(e, r, n);
 }

@@ -17,8 +17,8 @@ var r,
     _ = n(785547),
     O = n(600164),
     E = n(167533),
-    v = n(925329),
-    y = n(707409),
+    y = n(925329),
+    v = n(707409),
     I = n(490983),
     S = n(799777),
     C = n(626135),
@@ -101,9 +101,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 (0, i.jsxs)(O.Z, {
                     align: O.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(v.Z, {
+                        (0, i.jsx)(y.Z, {
                             game: e.application,
-                            size: v.A.SMALL,
+                            size: y.A.SMALL,
                             className: A.gameIcon,
                         }),
                         (0, i.jsxs)("div", {
@@ -160,9 +160,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         : e.isNew
                           ? x.intl.string(x.t["+F0Tho"])
                           : 0 !== e.lastPlayed
-                            ? (0, i.jsx)(y.ZP, {
+                            ? (0, i.jsx)(v.ZP, {
                                   end: e.lastPlayed,
-                                  location: y.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
+                                  location: v.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
                               })
                             : x.intl.string(x.t.EoWLrq)),
                     (0, i.jsx)(O.Z, {

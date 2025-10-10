@@ -1,4 +1,4 @@
-a.d(e, { f: () => T });
+a.d(e, { f: () => f });
 var r = a(469359),
     _ = a(157079),
     n = a(393523),
@@ -8,14 +8,14 @@ var r = a(469359),
     E = a(910731),
     s = a(64685),
     l = a(394798),
-    u = a(622916),
-    I = a(467510),
+    I = a(622916),
+    u = a(467510),
     R = a(954211),
     d = a(886115),
     N = a(873567),
     A = a(454463),
-    f = a(163162);
-let T = (0, o._I)((t = {}) => {
+    T = a(163162);
+let f = (0, o._I)((t = {}) => {
     let e = {
         console: !0,
         dom: !0,
@@ -28,7 +28,7 @@ let T = (0, o._I)((t = {}) => {
     return {
         name: "Breadcrumbs",
         setup(t) {
-            var a, o, T, L, p, h, O;
+            var a, o, f, L, p, h, O;
             e.console &&
                 (0, E.e)(
                     ((a = t),
@@ -57,19 +57,19 @@ let T = (0, o._I)((t = {}) => {
                 e.dom &&
                     (0, r.O)(
                         ((o = t),
-                        (T = e.dom),
+                        (f = e.dom),
                         function (t) {
                             let e, a;
                             if ((0, i.s3)() !== o) return;
-                            let r = "object" == typeof T ? T.serializeAttribute : void 0,
+                            let r = "object" == typeof f ? f.serializeAttribute : void 0,
                                 _ =
-                                    "object" == typeof T && "number" == typeof T.maxStringLength
-                                        ? T.maxStringLength
+                                    "object" == typeof f && "number" == typeof f.maxStringLength
+                                        ? f.maxStringLength
                                         : void 0;
                             _ &&
                                 _ > 1024 &&
                                 (A.X &&
-                                    u.kg.warn(
+                                    I.kg.warn(
                                         `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${_} was configured. Sentry will use 1024 instead.`,
                                     ),
                                 (_ = 1024)),
@@ -78,11 +78,11 @@ let T = (0, o._I)((t = {}) => {
                                 var n;
                                 let o = t.event,
                                     i = (n = o) && n.target ? o.target : o;
-                                (e = (0, I.Rt)(i, {
+                                (e = (0, u.Rt)(i, {
                                     keyAttrs: r,
                                     maxStringLength: _,
                                 })),
-                                    (a = (0, I.iY)(i));
+                                    (a = (0, u.iY)(i));
                             } catch (t) {
                                 e = "<unknown>";
                             }
@@ -182,7 +182,7 @@ let T = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== h) return;
                             let e = t.from,
                                 a = t.to,
-                                r = (0, N.en)(f.m9.location.href),
+                                r = (0, N.en)(T.m9.location.href),
                                 _ = e ? (0, N.en)(e) : void 0,
                                 n = (0, N.en)(a);
                             (_ && _.path) || (_ = r),

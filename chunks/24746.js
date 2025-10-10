@@ -12,7 +12,7 @@ var r = n(951288),
     m = n(412850);
 let h = o().parserFor(u.Z),
     g = o().reactFor(o().ruleOutput(u.Z, "react"));
-function f(e) {
+function _(e) {
     let { description: t, supportsMarkdown: n } = e,
         [i, s] = a.useState(!1),
         o = a.useRef(null);
@@ -29,7 +29,7 @@ function f(e) {
         return e.observe(o.current), () => e.disconnect();
     }, []);
     let [u, p] = a.useState(!1),
-        f = a.useCallback(() => {
+        _ = a.useCallback(() => {
             p((e) => !e);
         }, []);
     return (0, r.jsxs)(r.Fragment, {
@@ -55,15 +55,15 @@ function f(e) {
                       }),
             }),
             i || u
-                ? (0, r.jsx)(_, {
+                ? (0, r.jsx)(f, {
                       isShowingMore: u,
-                      onToggle: f,
+                      onToggle: _,
                   })
                 : null,
         ],
     });
 }
-function _(e) {
+function f(e) {
     let { onToggle: t, isShowingMore: n } = e,
         i = a.useMemo(
             () =>
@@ -104,12 +104,12 @@ let b = function (e) {
         o = a.useMemo(
             () =>
                 null != l && l.length > 0
-                    ? (0, r.jsx)(f, {
+                    ? (0, r.jsx)(_, {
                           description: l,
                           supportsMarkdown: !0,
                       })
                     : null != s && s.length > 0
-                      ? (0, r.jsx)(f, {
+                      ? (0, r.jsx)(_, {
                             description: s,
                             supportsMarkdown: !1,
                         })

@@ -98,8 +98,8 @@ let w = new u.Z("OverlayRenderStore"),
     D = b.R5.UNSET,
     L = !1,
     x = !1,
-    j = !1,
-    M = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
+    M = !1,
+    j = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
     k = null,
     U = {},
     G = null,
@@ -529,7 +529,7 @@ async function em(e, t) {
     else for (let e of X()) await eo(e), await (0, a._v)(16);
 }
 function eg() {
-    eu(), (j = !1), (B = null), eL();
+    eu(), (M = !1), (B = null), eL();
 }
 function eE(e) {
     let { legacyEnabled: t, oopEnabled: n } = e;
@@ -648,15 +648,15 @@ function eD(e) {
     null != t && s.Z.updateTrackedGame(e.pid, t);
 }
 function eL() {
-    d.Z.hasLoadedExperiments && !j && ((j = !0), em(E.v.legacyEnabled, E.v.oopEnabled));
+    d.Z.hasLoadedExperiments && !M && ((M = !0), em(E.v.legacyEnabled, E.v.oopEnabled));
 }
 function ex() {
-    (j = !1), (B = null);
+    (M = !1), (B = null);
 }
-function ej() {
-    (j = !1), (B = null), eI();
+function eM() {
+    (M = !1), (B = null), eI();
 }
-class eM extends (r = i.ZP.Store) {
+class ej extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(f.ZP, _.default, d.Z, I.Z), this.syncWith([d.Z], eL);
     }
@@ -664,7 +664,7 @@ class eM extends (r = i.ZP.Store) {
         return H;
     }
     getHasLoadedExperiments() {
-        return j;
+        return M;
     }
     getForcedRenderMode() {
         return D;
@@ -743,15 +743,15 @@ class eM extends (r = i.ZP.Store) {
         return Object.values(U).filter((e) => e.overlayMethod !== b.gl.Disabled && e.state === b.mM.OVERLAY_RENDERING);
     }
 }
-S(eM, "displayName", "OverlayRenderStore");
-let ek = new eM(
+S(ej, "displayName", "OverlayRenderStore");
+let ek = new ej(
         o.Z,
-        !M
+        !j
             ? {}
             : {
                   CONNECTION_OPEN: eg,
                   LOGIN: ex,
-                  LOGOUT: ej,
+                  LOGOUT: eM,
                   EXPERIMENT_OVERRIDE_BUCKET: eg,
                   OVERLAY_SET_ENABLED: eE,
                   GAME_LAUNCH_SUCCESS: eb,

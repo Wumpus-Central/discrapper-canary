@@ -1,17 +1,17 @@
 n.d(t, {
     C1: () => H,
     Gh: () => Y,
-    N0: () => M,
+    N0: () => j,
     T1: () => k,
     Tm: () => W,
-    _Q: () => j,
+    _Q: () => M,
     eL: () => K,
     eU: () => G,
-    em: () => L,
+    em: () => x,
     jv: () => q,
     rO: () => Q,
     sS: () => X,
-    yg: () => x,
+    yg: () => L,
     yi: () => U,
     yl: () => B,
     zq: () => z,
@@ -97,13 +97,13 @@ function D(e, t) {
         e
     );
 }
-async function x(e) {
+async function L(e) {
     let { allowVoiceRecording: t } = e;
     await f.tU.updateSetting(t),
         b.default.track(N.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }),
         a.Z.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
-async function L(e) {
+async function x(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1 } = e;
     await a.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
@@ -121,7 +121,7 @@ async function L(e) {
                 ),
             );
 }
-function j(e) {
+function M(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     a.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
@@ -133,7 +133,7 @@ function j(e) {
                 D(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
             );
 }
-function M(e) {
+function j(e) {
     a.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { remindersEnabled: e },

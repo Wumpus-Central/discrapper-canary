@@ -1,12 +1,12 @@
 r.d(t, { L: () => k });
 var a = r(44837),
     n = r(381537),
-    s = r(891943),
-    o = r(856706),
+    o = r(891943),
+    s = r(856706),
     i = r(706852),
     c = r(371101),
-    l = r(174083),
-    u = r(565294),
+    u = r(174083),
+    l = r(565294),
     f = r(565963),
     b = r(647438),
     d = r(639519),
@@ -32,7 +32,7 @@ function Z(e) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? v(Object(r), !0).forEach(function (t) {
-                  (0, u.Z)(e, t, r[t]);
+                  (0, l.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -66,16 +66,16 @@ function M(e) {
                 a.forEach(function (a) {
                     console.error('Styling method "'.concat(a, '" is deprecated, use "theme" property instead')),
                         (t[r[a]] = function (t) {
-                            for (var r = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++)
-                                s[o - 1] = arguments[o];
-                            return { style: Z(Z({}, r), e[a].apply(e, s)) };
+                            for (var r = t.style, n = arguments.length, o = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++)
+                                o[s - 1] = arguments[s];
+                            return { style: Z(Z({}, r), e[a].apply(e, o)) };
                         });
                 })),
             t);
     return e.invertTheme && (n = (0, g.y7)(n)), { styling: (0, m.Z)(n) };
 }
 var k = (function (e) {
-    (0, i.Z)(u, e);
+    (0, i.Z)(l, e);
     var t,
         r =
             ((t = (function () {
@@ -89,18 +89,18 @@ var k = (function (e) {
             })()),
             function () {
                 var e,
-                    r = (0, l.Z)(u);
+                    r = (0, u.Z)(l);
                 return (
-                    (e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)),
+                    (e = t ? Reflect.construct(r, arguments, (0, u.Z)(this).constructor) : r.apply(this, arguments)),
                     (0, c.Z)(this, e)
                 );
             });
-    function u(e) {
+    function l(e) {
         var t;
-        return (0, s.Z)(this, u), ((t = r.call(this, e)).state = M(e)), t;
+        return (0, o.Z)(this, l), ((t = r.call(this, e)).state = M(e)), t;
     }
     return (
-        (0, o.Z)(u, [
+        (0, s.Z)(l, [
             {
                 key: "UNSAFE_componentWillReceiveProps",
                 value: function (e) {
@@ -125,8 +125,8 @@ var k = (function (e) {
                     var e = this.props,
                         t = e.data,
                         r = e.keyPath,
-                        s = e.postprocessValue,
-                        o = e.hideRoot,
+                        o = e.postprocessValue,
+                        s = e.hideRoot,
                         i = (e.theme, e.invertTheme, (0, n.Z)(e, y)),
                         c = this.state.styling;
                     return b.createElement(
@@ -138,15 +138,15 @@ var k = (function (e) {
                                 {},
                                 Z(
                                     {
-                                        postprocessValue: s,
-                                        hideRoot: o,
+                                        postprocessValue: o,
+                                        hideRoot: s,
                                         styling: c,
                                     },
                                     i,
                                 ),
                                 {
-                                    keyPath: o ? [] : r,
-                                    value: s(t),
+                                    keyPath: s ? [] : r,
+                                    value: o(t),
                                 },
                             ),
                         ),
@@ -154,10 +154,10 @@ var k = (function (e) {
                 },
             },
         ]),
-        u
+        l
     );
 })(b.Component);
-(0, u.Z)(k, "propTypes", {
+(0, l.Z)(k, "propTypes", {
     data: h().any,
     hideRoot: h().bool,
     theme: h().oneOfType([h().object, h().string]),
@@ -166,7 +166,7 @@ var k = (function (e) {
     postprocessValue: h().func,
     sortObjectKeys: h().oneOfType([h().func, h().bool]),
 }),
-    (0, u.Z)(k, "defaultProps", {
+    (0, l.Z)(k, "defaultProps", {
         shouldExpandNode: function (e, t, r) {
             return 0 === r;
         },

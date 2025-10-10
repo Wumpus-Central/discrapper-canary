@@ -27,7 +27,7 @@ function b(e, t, n) {
         e
     );
 }
-function O(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function y(e, t) {
         e
     );
 }
-class _ extends o.Z {
+class O extends o.Z {
     _initialize() {
         __OVERLAY__
             ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
@@ -87,7 +87,7 @@ class _ extends o.Z {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    O(
+                    _(
                         {
                             channel: t,
                             content: l,
@@ -101,7 +101,7 @@ class _ extends o.Z {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         return new Promise((t, n) => {
             (0, s.Z)(
-                y(O({}, e), {
+                y(_({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
                     },
@@ -146,7 +146,7 @@ class _ extends o.Z {
             }),
             b(this, "_handlePremiumPaymentModalOpen", (e) => {
                 (0, s.Z)(
-                    y(O({}, e), {
+                    y(_({}, e), {
                         analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
@@ -167,4 +167,4 @@ class _ extends o.Z {
             });
     }
 }
-let v = new _();
+let v = new O();

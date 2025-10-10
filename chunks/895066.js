@@ -440,14 +440,14 @@ class g extends a.Z {
                                     P = null != (a = t.fecPacketsReceived) ? a : 0,
                                     w = null != (o = t.fecPacketsDiscarded) ? o : 0,
                                     D = null != (s = t.jitterBuffer) ? s : 0,
-                                    x = {
+                                    L = {
                                         audioJitterBuffer: t.audioJitterBuffer,
                                         audioJitterTarget: t.audioJitterTarget,
                                         audioJitterDelay: t.audioJitterDelay,
                                         relativeReceptionDelay: t.relativeReceptionDelay,
                                         relativePlayoutDelay: t.relativePlayoutDelay,
                                     },
-                                    L = {
+                                    x = {
                                         silent: t.opSilence,
                                         normal: t.opNormal,
                                         merged: t.opMerge,
@@ -456,7 +456,7 @@ class g extends a.Z {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG,
                                     },
-                                    j = {
+                                    M = {
                                         passthroughCount: null != (l = t.passthroughCount) ? l : 0,
                                         decryptSuccessCount: null != (c = t.decryptSuccessCount) ? c : 0,
                                         decryptFailureCount: null != (u = t.decryptFailureCount) ? u : 0,
@@ -474,8 +474,8 @@ class g extends a.Z {
                                         l =
                                             null != (m = e.decryptFailureBeforeSuccessCount)
                                                 ? m
-                                                : j.decryptSuccessCount > 0
-                                                  ? j.decryptFailureCount
+                                                : M.decryptSuccessCount > 0
+                                                  ? M.decryptFailureCount
                                                   : void 0;
                                     r > 0 &&
                                         a >= 0 &&
@@ -493,17 +493,17 @@ class g extends a.Z {
                                                 mosSum: e.mosSum + o,
                                                 mosCount: e.mosCount + +(o > 0),
                                                 mosBuckets: s,
-                                                bufferStats: x,
-                                                frameOpStats: L,
+                                                bufferStats: L,
+                                                frameOpStats: x,
                                                 decryptFailureBeforeSuccessCount: l,
                                             },
-                                            j,
+                                            M,
                                         )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
                                             previous: this.periodicInboundStats[n].previous,
                                             currentTimestampMs: performance.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum:
                                                 this.periodicInboundStats[n].accelerateRateSum +
                                                 (null != (g = t.accelerateRate) ? g : 0),
@@ -531,16 +531,16 @@ class g extends a.Z {
                                             mosSum: 0,
                                             mosCount: 0,
                                             mosBuckets: [0, 0, 0, 0, 0],
-                                            bufferStats: x,
-                                            frameOpStats: L,
+                                            bufferStats: L,
+                                            frameOpStats: x,
                                         },
-                                        j,
+                                        M,
                                     )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: performance.now(),
-                                            previous: L,
+                                            previous: x,
                                             currentTimestampMs: performance.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum: null != (O = t.accelerateRate) ? O : 0,
                                             expandRateSum: null != (v = t.expandRate) ? v : 0,
                                             preemptiveExpandRateSum: null != (I = t.preemptiveExpandRate) ? I : 0,

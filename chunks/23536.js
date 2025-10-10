@@ -1,22 +1,22 @@
-n.d(t, { Z: () => _ }), n(784620), n(973216);
+n.d(t, { Z: () => y }), n(784620), n(973216);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(780384),
-    o = n(481060),
-    s = n(332148),
+    s = n(481060),
+    o = n(332148),
     c = n(493773),
-    u = n(198620),
-    d = n(210887),
+    d = n(198620),
+    u = n(210887),
     p = n(624453),
     h = n(306680),
     f = n(494404),
-    m = n(257559),
-    g = n(388032);
+    g = n(257559),
+    m = n(388032);
 let b = [];
-function _(e) {
-    let { channel: t, onJump: _ } = e,
-        { items: y, state: C } = (0, l.cj)([p.Z], () => {
+function y(e) {
+    let { channel: t, onJump: y } = e,
+        { items: _, state: j } = (0, l.cj)([p.Z], () => {
             var e, n;
             let r = p.Z.getPins(t.id);
             return {
@@ -24,35 +24,35 @@ function _(e) {
                 state: null != (n = null == r ? void 0 : r.state) ? n : p.M.LOADING,
             };
         }),
-        x = i.useMemo(() => y.map((e) => e.message), [y]),
-        v = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
+        x = i.useMemo(() => _.map((e) => e.message), [_]),
+        O = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
-        v && s.Z.ackPins(t.id);
-    }, [v, t.id]),
+        O && o.Z.ackPins(t.id);
+    }, [O, t.id]),
         (0, c.ZP)(() => {
-            x.some(u.k5) && s.Z.fetchPins(t.id, { reset: !0 });
+            x.some(d.k5) && o.Z.fetchPins(t.id, { reset: !0 });
         });
-    let O = i.useCallback(() => {
-            s.Z.fetchPins(t.id);
+    let v = i.useCallback(() => {
+            o.Z.fetchPins(t.id);
         }, [t.id]),
-        j = i.useCallback(() => {
+        C = i.useCallback(() => {
             var e;
-            s.Z.fetchPins(t.id, { before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt });
-        }, [t.id, y]),
-        E = (0, l.e7)([d.Z], () => (0, a.ap)(d.Z.theme));
-    return (0, r.jsx)(o.VqE, {
-        "aria-label": g.intl.string(g.t["mp1N//"]),
+            o.Z.fetchPins(t.id, { before: null == (e = _.at(-1)) ? void 0 : e.pinnedAt });
+        }, [t.id, _]),
+        I = (0, l.e7)([u.Z], () => (0, a.ap)(u.Z.theme));
+    return (0, r.jsx)(s.VqE, {
+        "aria-label": m.intl.string(m.t["mp1N//"]),
         children: (0, r.jsx)(f.ZP, {
             channel: t,
-            onFetch: O,
+            onFetch: v,
             messages: x,
-            loading: C === p.M.LOADING,
-            hasMore: C === p.M.LOADED_HAS_MORE,
+            loading: j === p.M.LOADING,
+            hasMore: j === p.M.LOADED_HAS_MORE,
             analyticsName: "Channel Pins",
             renderEmptyState: function () {
-                if (y.length > 0) return;
-                let e = g.intl.string(t.isPrivate() ? g.t.rhqcbG : g.t.fmyaWF),
-                    i = E ? n(306059) : n(281485);
+                if (_.length > 0) return;
+                let e = m.intl.string(t.isPrivate() ? m.t.rhqcbG : m.t.fmyaWF),
+                    i = I ? n(306059) : n(281485);
                 return (0, r.jsx)(
                     f.nH,
                     {
@@ -64,16 +64,16 @@ function _(e) {
             },
             renderHeader: () =>
                 (0, r.jsx)(f.h4, {
-                    icon: o.qQX,
-                    title: g.intl.string(g.t["mp1N//"]),
+                    icon: s.qQX,
+                    title: m.intl.string(m.t["mp1N//"]),
                 }),
             onCloseMessage: function (e, n) {
-                null != e && (n.shiftKey ? s.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e));
+                null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : g.Z.confirmUnpin(t, e));
             },
-            onJump: _,
-            loadMore: j,
+            onJump: y,
+            loadMore: C,
             getProTip: function () {
-                return t.isPrivate() ? g.intl.string(g.t["3dLGAg"]) : g.intl.string(g.t.KTbRcn);
+                return t.isPrivate() ? m.intl.string(m.t["3dLGAg"]) : m.intl.string(m.t.KTbRcn);
             },
             listName: "pins",
         }),

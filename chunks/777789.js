@@ -53,7 +53,7 @@ function b(e) {
         c = (0, s.e7)([p.Z], () => null != p.Z.getStateForGuild(t.id));
     return (
         i.useEffect(() => {
-            c || (0, _.Fm)(t.id);
+            c || (0, _.BN)(t.id);
         }, [c, t.id]),
         (0, r.jsxs)("div", {
             className: o()(m.subscription, n),

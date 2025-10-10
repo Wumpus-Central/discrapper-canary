@@ -1,7 +1,7 @@
-n.d(t, { x: () => u });
+n.d(t, { x: () => s });
 var r = n(476098),
     i = n(156755),
-    o = n(521548);
+    l = n(521548);
 function a(e, t, n) {
     return (
         t in e
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-var u = (function () {
+var s = (function () {
     var e;
     function t(e) {
         var n = this;
@@ -164,13 +164,13 @@ var u = (function () {
             {
                 key: "didDragSourceOptionsChange",
                 value: function () {
-                    return !(0, o.w)(this.lastConnectedDragSourceOptions, this.dragSourceOptions);
+                    return !(0, l.w)(this.lastConnectedDragSourceOptions, this.dragSourceOptions);
                 },
             },
             {
                 key: "didDragPreviewOptionsChange",
                 value: function () {
-                    return !(0, o.w)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions);
+                    return !(0, l.w)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions);
                 },
             },
             {

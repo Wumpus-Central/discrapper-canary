@@ -20,7 +20,7 @@ function o(e, t, n) {
 let c = ["pct_retained", "new_members", "visitors", "communicators"],
     d = {},
     u = null;
-function m(e) {
+function g(e) {
     let { guildId: t, stats: n } = e;
     u = null;
     let r = {},
@@ -51,7 +51,7 @@ function m(e) {
             return e;
         })({}, i, r, d[t]));
 }
-function g(e) {
+function m(e) {
     let { error: t } = e;
     u = t.code;
 }
@@ -65,10 +65,10 @@ class p extends (r = s.ZP.Store) {
 }
 o(p, "displayName", "GuildSettingsAnalyticsStore");
 let f = new p(a.Z, {
-    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: m,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: m,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: m,
-    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: g,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: g,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: g,
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: g,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: g,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: g,
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: m,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: m,
 });

@@ -1,42 +1,42 @@
-t.d(n, { Q: () => a });
-var i = t(951288),
-    r = t(481060);
-function a(e, n) {
-    (0, r.ZDy)(async () => {
-        let { default: r } = await t.e("88856").then(t.bind(t, 862065));
-        return (t) =>
-            (0, i.jsx)(
-                r,
+n.d(t, { Q: () => i });
+var l = n(951288),
+    a = n(481060);
+function i(e, t) {
+    (0, a.ZDy)(async () => {
+        let { default: a } = await n.e("88856").then(n.bind(n, 862065));
+        return (n) =>
+            (0, l.jsx)(
+                a,
                 (function (e) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var t = null != arguments[n] ? arguments[n] : {},
-                            i = Object.keys(t);
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            l = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            (l = l.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (n) {
-                                var i;
-                                (i = t[n]),
-                                    n in e
-                                        ? Object.defineProperty(e, n, {
-                                              value: i,
+                            l.forEach(function (t) {
+                                var l;
+                                (l = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = i);
+                                        : (e[t] = l);
                             });
                     }
                     return e;
                 })(
                     {
                         guildId: e,
-                        gameInstance: n,
+                        gameInstance: t,
                     },
-                    t,
+                    n,
                 ),
             );
     });

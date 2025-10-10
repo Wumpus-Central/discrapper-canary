@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(787014),
     o = n(933557),
@@ -17,13 +17,13 @@ var i = n(442837),
 function b(e) {
     let { channel: t } = e,
         n = (0, o.ZP)(t, !0),
-        b = (0, i.e7)([u.Z], () => u.Z.can(h.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
-    return (0, r.jsxs)(p.ZP, {
+        b = (0, r.e7)([u.Z], () => u.Z.can(h.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+    return (0, i.jsxs)(p.ZP, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(p.Kq, { channelType: t.type }),
-            (0, r.jsx)(p.Ot, { children: f.intl.format(f.t.I3R7Vl, { channelName: n }) }),
-            (0, r.jsx)(p.jz, {
+            (0, i.jsx)(p.Kq, { channelType: t.type }),
+            (0, i.jsx)(p.Ot, { children: f.intl.format(f.t.I3R7Vl, { channelName: n }) }),
+            (0, i.jsx)(p.jz, {
                 className: g.markup,
                 children: f.intl.format(f.t.pYMVRU, {
                     channelName: n,
@@ -31,14 +31,14 @@ function b(e) {
                 }),
             }),
             b
-                ? (0, r.jsx)("div", {
+                ? (0, i.jsx)("div", {
                       className: m.buttonContainer,
-                      children: (0, r.jsx)(d.Z, {
+                      children: (0, i.jsx)(d.Z, {
                           label: f.intl.string(f.t["3gUsJS"]),
                           onClick: () => {
                               a.ZP.open(t.id);
                           },
-                          icon: (0, r.jsx)(l.vdY, {
+                          icon: (0, i.jsx)(l.vdY, {
                               size: "xs",
                               color: "currentColor",
                           }),

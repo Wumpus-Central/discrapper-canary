@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r,
     i = n(31775),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(40572),
     c = n(914010),
@@ -24,7 +24,7 @@ let f = {},
     _ = {},
     p = 0,
     h = !1,
-    m = new (o())({
+    m = new (a())({
         max: 5,
         maxAge: u.Z.Millis.HOUR,
     });
@@ -59,7 +59,7 @@ function T(e) {
     let { emojiId: t, userImage: n } = e;
     m.set(t, n);
 }
-class S extends (r = a.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }

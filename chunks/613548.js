@@ -26,8 +26,8 @@ var i = n(951288),
     P = n(606304),
     I = n(358221),
     Z = n(355827),
-    N = n(185935),
-    T = n(354459),
+    T = n(185935),
+    N = n(354459),
     A = n(388032),
     w = n(956235);
 function M(e) {
@@ -36,7 +36,7 @@ function M(e) {
             let e = Date.now();
             return s()(P.Z.getSpeakers())
                 .map((e) => I.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === T.fO.USER && e.speaking && !(0, _.ZP)(e))
+                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, _.ZP)(e))
                 .sortBy((t) => -P.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -84,7 +84,7 @@ function R(e) {
             [s],
         ),
         A = t.isGuildVoice() && !n,
-        { hasParticipantsPanel: R } = (0, N.Z)({ location: "ChannelCallHeaderToolbar" }),
+        { hasParticipantsPanel: R } = (0, T.Z)({ location: "ChannelCallHeaderToolbar" }),
         k = !P && R && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: L, inInbox: D } = C.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         U = [];
@@ -110,7 +110,7 @@ function R(e) {
                 "clips-enabled-indicator",
             ),
         ),
-        (null == _ ? void 0 : _.type) === T.fO.STREAM &&
+        (null == _ ? void 0 : _.type) === N.fO.STREAM &&
             (U.push(
                 (0, i.jsx)(
                     v.Z,
@@ -134,7 +134,7 @@ function R(e) {
                     "live-indicator",
                 ),
             )),
-        (null == _ ? void 0 : _.type) === T.fO.USER &&
+        (null == _ ? void 0 : _.type) === N.fO.USER &&
             U.push(
                 (0, i.jsx)(
                     x.Z,

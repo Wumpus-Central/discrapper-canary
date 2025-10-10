@@ -38,7 +38,7 @@ function g(e) {
         y = (e) => {
             j.getState().setTagSetting(t.id, e), n();
         },
-        w = null != t.availableTags && t.availableTags.length > 0;
+        T = null != t.availableTags && t.availableTags.length > 0;
     return (0, r.jsx)("div", {
         className: h.container,
         children: (0, r.jsxs)(s.v2r, {
@@ -98,7 +98,7 @@ function g(e) {
                               }),
                           ],
                       }),
-                w
+                T
                     ? (0, r.jsxs)(s.kSQ, {
                           label: u.intl.string(u.t.Paxaur),
                           children: [

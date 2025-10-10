@@ -1,10 +1,10 @@
 n.d(t, {
     G7: () => l,
-    LG: () => d,
+    LG: () => o,
     Pg: () => i,
     ZI: () => c,
     _0: () => a,
-    mf: () => o,
+    mf: () => u,
 });
 var r,
     s = n(388032);
@@ -17,17 +17,17 @@ var c =
     (r[(r.MEMBERS = 2)] = "MEMBERS"),
     (r[(r.VERIFICATIONS = 3)] = "VERIFICATIONS"),
     r);
-let u = {
+let d = {
     afk_channel_id: () => s.intl.string(s.t.KuYcnZ),
     public_updates_channel_id: () => s.intl.string(s.t.vAyDGR),
     safety_alerts_channel_id: () => s.intl.string(s.t.sMkYEx),
     system_channel_id: () => s.intl.string(s.t.NASFnp),
 };
-function d(e) {
+function o(e) {
     var t;
     if (0 === Object.keys(e).length) return null;
     let n = Object.keys(e)[0],
-        r = null == (t = u[n]) ? void 0 : t.call(u);
+        r = null == (t = d[n]) ? void 0 : t.call(d);
     return null != r ? "(".concat(r, ") ").concat(e[n]) : e[n];
 }
-let o = "https://discord.gg";
+let u = "https://discord.gg";

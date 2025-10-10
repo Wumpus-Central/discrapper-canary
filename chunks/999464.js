@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -10,13 +10,13 @@ var r = n(951288),
     u = n(888592),
     m = n(981631),
     f = n(388032),
-    h = n(192354);
-let g = (0, d.hQ)(),
-    p = (e) => {
-        let { email: t, setStep: n, onBack: i, school: d, setSchool: p } = e,
+    p = n(946189);
+let h = (0, d.hQ)(),
+    g = (e) => {
+        let { email: t, setStep: n, onBack: i, school: d, setSchool: g } = e,
             [v, _] = l.useState(null),
             [x, N] = l.useState(!1),
-            y = async () => {
+            E = async () => {
                 _(null), N(!0);
                 try {
                     await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
@@ -26,47 +26,47 @@ let g = (0, d.hQ)(),
                     N(!1);
                 }
             },
-            E = async (e) => {
-                null != d && "" !== d && e.charCode === m.yXg.ENTER && (await y());
+            y = async (e) => {
+                null != d && "" !== d && e.charCode === m.yXg.ENTER && (await E());
             };
         return (0, r.jsxs)("div", {
-            className: h.container,
+            className: p.container,
             children: [
-                (0, r.jsx)("div", { className: h.__invalid_topImage }),
+                (0, r.jsx)("div", { className: p.__invalid_topImage }),
                 (0, r.jsx)(s.X6q, {
-                    className: a()(h.centerText, h.header),
+                    className: a()(p.centerText, p.header),
                     variant: "heading-xl/semibold",
                     children: f.intl.string(f.t["2FNWBA"]),
                 }),
                 (0, r.jsx)("div", {
-                    className: h.descriptionWidth,
+                    className: p.descriptionWidth,
                     children: (0, r.jsx)(s.Text, {
-                        className: h.centerText,
+                        className: p.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: f.intl.string(f.t["/4y6o6"]),
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.formItem,
+                    className: p.formItem,
                     children: [
                         (0, r.jsx)(s.vwX, {
-                            id: g,
+                            id: h,
                             children: f.intl.string(f.t["L+AfJi"]),
                         }),
                         (0, r.jsx)(s.oil, {
-                            onKeyPress: E,
+                            onKeyPress: y,
                             placeholder: f.intl.string(f.t.Y1btJS),
                             onChange: (e) => {
-                                p(e);
+                                g(e);
                             },
                             error: null == v ? void 0 : v.getAnyErrorMessage(),
-                            "aria-labelledby": g,
+                            "aria-labelledby": h,
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.footer,
+                    className: p.footer,
                     children: [
                         (0, r.jsx)(s.Avr, {
                             variant: "secondary",
@@ -76,7 +76,7 @@ let g = (0, d.hQ)(),
                         (0, r.jsx)(s.zxk, {
                             variant: "primary",
                             text: f.intl.string(f.t.PDsYAg),
-                            onClick: y,
+                            onClick: E,
                             loading: x,
                         }),
                     ],

@@ -175,7 +175,7 @@ function b(e) {
         l = h(e, ["onChange", "options", "value", "disabled", "aria-labelledby"]);
     let d = null != t ? (e) => t(e) : void 0;
     return (0, r.jsx)(
-        c.NIc,
+        c.gNt,
         p(f({}, l), {
             children: (e) =>
                 (0, r.jsx)(s.Ee, {

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => O }), n(388685);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(392711),
     a = n(990547),
     o = n(399606),
@@ -14,22 +14,22 @@ var r = n(951288),
     m = n(594174),
     g = n(607361),
     b = n(463421),
-    _ = n(981631),
+    C = n(981631),
     y = n(658805),
-    C = n(388032),
-    x = n(405143);
-function v(e) {
+    _ = n(388032),
+    v = n(405143);
+function x(e) {
     let t,
         { activity: n, channel: l, userId: a } = e,
         u = (0, d.IX)(n.application_id).data,
-        [p, h] = i.useState(!1),
-        [m, g] = i.useState(0),
+        [p, h] = r.useState(!1),
+        [m, g] = r.useState(0),
         b = (0, o.e7)([f.Z], () => f.Z.getChannelId() !== l.id);
-    async function v() {
+    async function x() {
         g(1);
         try {
             await c.Z.sendActivityInvite({
-                type: _.mFx.STREAM_REQUEST,
+                type: C.mFx.STREAM_REQUEST,
                 channelId: l.id,
                 activity: n,
                 content: "<@".concat(a, ">"),
@@ -42,33 +42,33 @@ function v(e) {
         }
         g(2);
     }
-    if ((b && (t = C.intl.string(y.default.qRXatr)), n.type === _.IIU.PLAYING)) {
+    if ((b && (t = _.intl.string(y.default.qRXatr)), n.type === C.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
-        return (0, r.jsxs)("div", {
-            className: x.activityRow,
+        return (0, i.jsxs)("div", {
+            className: v.activityRow,
             children: [
-                (0, r.jsxs)("div", {
-                    className: x.activityRowContent,
+                (0, i.jsxs)("div", {
+                    className: v.activityRowContent,
                     children: [
                         p || null == e
-                            ? (0, r.jsx)(s.IMN, {
+                            ? (0, i.jsx)(s.IMN, {
                                   size: "custom",
                                   width: 46,
                                   height: 46,
                               })
-                            : (0, r.jsx)("img", {
+                            : (0, i.jsx)("img", {
                                   src: e,
                                   alt: n.name,
                                   onError: () => h(!0),
                               }),
-                        (0, r.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-tertiary",
-                                    children: C.intl.string(C.t.BMTj29),
+                                    children: _.intl.string(_.t.BMTj29),
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-md/medium",
                                     children: n.name,
                                 }),
@@ -76,17 +76,17 @@ function v(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.zxk, {
+                (0, i.jsx)(s.zxk, {
                     loading: 1 === m,
                     disabled: b || 2 === m,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === m ? C.intl.string(y.default["8HU1Mz"]) : C.intl.string(y.default.DKHheX),
-                    onClick: v,
+                    text: 2 === m ? _.intl.string(y.default["8HU1Mz"]) : _.intl.string(y.default.DKHheX),
+                    onClick: x,
                 }),
                 null != t &&
-                    (0, r.jsx)(s.Text, {
-                        className: x.disabledReason,
+                    (0, i.jsx)(s.Text, {
+                        className: v.disabledReason,
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: t,
@@ -100,36 +100,36 @@ function O(e) {
         s = (0, o.e7)([m.default], () => m.default.getUser(t)),
         c = (0, b.Z)(t, n.guild_id),
         d = (0, g.Z)(t, n.id),
-        f = i.useMemo(
+        f = r.useMemo(
             () =>
                 l.uniqWith(c, (e, t) => {
                     if (e.application_id === t.application_id) return !0;
                     let n = h.Z.getGameByName(e.name),
-                        r = h.Z.getGameByName(t.name);
-                    return (null != n && n === r) || e.name === t.name;
+                        i = h.Z.getGameByName(t.name);
+                    return (null != n && n === i) || e.name === t.name;
                 }),
             [c],
         ),
-        _ = null == s || !d || 0 === f.length;
+        C = null == s || !d || 0 === f.length;
     return ((0, u.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
             properties: {},
         },
-        { disableTrack: _ },
+        { disableTrack: C },
     ),
-    _)
+    C)
         ? null
-        : (0, r.jsx)(p.Z.Provider, {
+        : (0, i.jsx)(p.Z.Provider, {
               value: n.guild_id,
-              children: (0, r.jsx)("div", {
-                  className: x.root,
-                  children: (0, r.jsx)("div", {
-                      className: x.activityList,
+              children: (0, i.jsx)("div", {
+                  className: v.root,
+                  children: (0, i.jsx)("div", {
+                      className: v.activityList,
                       children: f.map((e) =>
-                          (0, r.jsx)(
-                              v,
+                          (0, i.jsx)(
+                              x,
                               {
                                   activity: e,
                                   channel: n,

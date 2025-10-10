@@ -1,17 +1,17 @@
-n.d(t, { E: () => s });
+n.d(t, { E: () => i });
 var r = n(951288),
-    i = n(120356),
-    a = n.n(i),
-    o = n(172349);
-function s(e) {
-    let { width: t, height: n, showPlaceholder: i, children: s, className: l } = e;
-    return i
+    s = n(120356),
+    o = n.n(s),
+    a = n(172349);
+function i(e) {
+    let { width: t, height: n, showPlaceholder: s, children: i, className: l } = e;
+    return s
         ? (0, r.jsx)("div", {
-              className: a()(o.placeholderElement, l),
+              className: o()(a.placeholderElement, l),
               style: {
                   width: t,
                   height: n,
               },
           })
-        : s;
+        : i;
 }

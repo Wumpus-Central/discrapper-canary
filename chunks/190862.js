@@ -1,8 +1,8 @@
-r.d(t, { Z: () => v });
+r.d(t, { Z: () => x });
 var n = r(951288),
     i = r(296009),
-    a = r(442837),
-    o = r(314897),
+    o = r(442837),
+    a = r(314897),
     l = r(86419),
     c = r(747101),
     s = r(556045),
@@ -47,14 +47,14 @@ function y(e, t) {
             var r,
                 n,
                 i = {},
-                a = Object.keys(e);
-            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                o = Object.keys(e);
+            for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < a.length; n++)
-            (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < o.length; n++)
+            (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
@@ -74,15 +74,15 @@ let j = (e) => {
                 return null;
         }
     },
-    v = (e) => {
+    x = (e) => {
         var { widget: t, user: r, disableInteraction: i } = e,
             d = y(e, ["widget", "user", "disableInteraction"]);
         let f = (0, c.FX)(t),
             { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
-            v = (0, a.e7)([o.default], () => o.default.getId() === r.id),
-            x = v && !i && g,
-            h = (0, l.mR)(f),
-            _ = (0, l.Hy)(f, { isCurrentUser: v }),
+            x = (0, o.e7)([a.default], () => a.default.getId() === r.id),
+            h = x && !i && g,
+            v = (0, l.mR)(f),
+            _ = (0, l.Hy)(f, { isCurrentUser: x }),
             w = (0, l.kQ)(f);
         return (0, n.jsx)(
             j,
@@ -91,9 +91,9 @@ let j = (e) => {
                     widget: f,
                     user: r,
                     disableInteraction: i,
-                    headerTitle: h,
+                    headerTitle: v,
                     headerSubtitle: _,
-                    headerActionButtons: v
+                    headerActionButtons: x
                         ? [
                               (0, n.jsx)(
                                   u.Z,
@@ -107,7 +107,7 @@ let j = (e) => {
                           ]
                         : void 0,
                     trailingContent:
-                        x &&
+                        h &&
                         (0, n.jsx)(b.Z, {
                             userId: r.id,
                             widgetType: f.type,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     a = n(647438),
     i = n(442837),
@@ -12,7 +12,7 @@ var r = n(951288),
     x = n(388032),
     f = n(929148);
 let h = "expanded-area";
-function j(e) {
+function p(e) {
     let { attachments: t, role: n, roleLocked: i } = e,
         [l, m] = a.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
@@ -68,7 +68,7 @@ function j(e) {
         ],
     });
 }
-function _(e) {
+function j(e) {
     var t;
     let { listing: n } = e,
         a = null != (t = n.attachments) ? t : [],
@@ -85,7 +85,7 @@ function _(e) {
                 textVariant: "text-md/medium",
                 locked: o,
             })
-          : (0, r.jsx)(j, {
+          : (0, r.jsx)(p, {
                 attachments: a,
                 role: s,
                 roleLocked: o,

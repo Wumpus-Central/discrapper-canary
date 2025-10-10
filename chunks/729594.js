@@ -108,13 +108,13 @@ function O(e, t) {
         var P = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
         if (!P)
             for (var w = this.hostname.split(/\./), N = 0, D = w.length; N < D; N++) {
-                var x = w[N];
-                if (x && !x.match(f)) {
-                    for (var L = "", j = 0, M = x.length; j < M; j++) x.charCodeAt(j) > 127 ? (L += "x") : (L += x[j]);
-                    if (!L.match(f)) {
+                var L = w[N];
+                if (L && !L.match(f)) {
+                    for (var x = "", M = 0, j = L.length; M < j; M++) L.charCodeAt(M) > 127 ? (x += "x") : (x += L[M]);
+                    if (!x.match(f)) {
                         var k = w.slice(0, N),
                             U = w.slice(N + 1),
-                            G = x.match(_);
+                            G = L.match(_);
                         G && (k.push(G[1]), U.unshift(G[2])),
                             U.length && (y = "/" + U.join(".") + y),
                             (this.hostname = k.join("."));
@@ -132,10 +132,10 @@ function O(e, t) {
     }
     if (!p[I])
         for (var N = 0, D = l.length; N < D; N++) {
-            var V = l[N];
-            if (-1 !== y.indexOf(V)) {
-                var F = encodeURIComponent(V);
-                F === V && (F = escape(V)), (y = y.split(V).join(F));
+            var F = l[N];
+            if (-1 !== y.indexOf(F)) {
+                var V = encodeURIComponent(F);
+                V === F && (V = escape(F)), (y = y.split(F).join(V));
             }
         }
     var H = y.indexOf("#");

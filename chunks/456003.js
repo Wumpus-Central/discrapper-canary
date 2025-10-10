@@ -1,6 +1,6 @@
 n.r(e),
     n.d(e, {
-        default: () => s,
+        default: () => a,
         messagesLoader: () => r,
     });
 let { createLoader: i } = n(631562),
@@ -41,4 +41,4 @@ let { createLoader: i } = n(631562),
         "en-US",
     ),
     { makeMessagesProxy: l } = n(631562),
-    s = l(r);
+    a = l(r);

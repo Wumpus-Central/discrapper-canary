@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     s = n(970683),
-    o = n(893776),
-    a = n(493773),
+    a = n(893776),
+    o = n(493773),
     c = n(129293),
     u = n(80206),
     d = n(17894),
@@ -19,13 +19,13 @@ function _(e) {
     let { location: t, transitionTo: n = f } = e,
         [l, _] = i.useState("submitting"),
         x = i.useRef(void 0);
-    (0, a.ZP)(() => {
+    (0, o.ZP)(() => {
         (0, h.e)("verify_email");
         let e = (0, c.Z)(t);
         if (null == e) return void _("failed");
         (async () => {
             try {
-                let t = await o.Z.verify(e);
+                let t = await a.Z.verify(e);
                 _("succeeded"), (x.current = t);
             } catch (e) {
                 _("failed");

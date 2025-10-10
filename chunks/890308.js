@@ -69,7 +69,7 @@
             for (e = n ? I(e / p) : e >> 1, e += I(e / t); e > (v * f) >> 1; r += u) e = I(e / v);
             return I(r + ((v + 1) * e) / (e + _));
         }
-        function x(e) {
+        function L(e) {
             var t,
                 n,
                 r,
@@ -105,7 +105,7 @@
             }
             return R(E);
         }
-        function L(e) {
+        function x(e) {
             var t,
                 n,
                 r,
@@ -135,14 +135,14 @@
             }
             return A.join("");
         }
-        function j(e) {
-            return C(e, function (e) {
-                return E.test(e) ? x(e.slice(4).toLowerCase()) : e;
-            });
-        }
         function M(e) {
             return C(e, function (e) {
-                return b.test(e) ? "xn--" + L(e) : e;
+                return E.test(e) ? L(e.slice(4).toLowerCase()) : e;
+            });
+        }
+        function j(e) {
+            return C(e, function (e) {
+                return b.test(e) ? "xn--" + x(e) : e;
             });
         }
         if (
@@ -152,10 +152,10 @@
                     decode: N,
                     encode: R,
                 },
-                decode: x,
-                encode: L,
-                toASCII: M,
-                toUnicode: j,
+                decode: L,
+                encode: x,
+                toASCII: j,
+                toUnicode: M,
             }),
             "function" == typeof define && "object" == typeof define.amd && define.amd)
         )

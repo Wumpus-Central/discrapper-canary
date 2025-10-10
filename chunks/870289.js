@@ -1,11 +1,11 @@
 n.d(t, {
-    FF: () => s,
-    KS: () => a,
+    FF: () => a,
+    KS: () => s,
     eN: () => i,
 });
 var r = n(818083),
     l = n(987338);
-let a = (0, r.B)({
+let s = (0, r.B)({
         kind: "user",
         id: "2025-06_collectibles_browse",
         label: "Collectibles Browse Experiment",
@@ -33,5 +33,5 @@ let a = (0, r.B)({
             },
         ],
     }),
-    s = (e) => a.useExperiment({ location: e }).filterEnabled,
-    i = (e) => a.useExperiment({ location: e }).searchEnabled;
+    a = (e) => s.useExperiment({ location: e }).filterEnabled,
+    i = (e) => s.useExperiment({ location: e }).searchEnabled;

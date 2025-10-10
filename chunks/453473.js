@@ -33,10 +33,10 @@ var r = n(951288),
     P = n(664559),
     w = n(767893),
     D = n(206697),
-    x = n(74551),
-    L = n(981631),
-    j = n(388032),
-    M = n(125919);
+    L = n(74551),
+    x = n(981631),
+    M = n(388032),
+    j = n(125919);
 function k(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = V(e, t);
+        i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function Z(e, t) {
     }
     return i;
 }
-function V(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -110,7 +110,7 @@ function V(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let F = {
+let V = {
     offset: {
         left: 4,
         right: -12,
@@ -119,13 +119,13 @@ let F = {
 function H(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(p.VqE, {
-        "aria-label": j.intl.string(j.t["2pAkDA"]),
+        "aria-label": M.intl.string(M.t["2pAkDA"]),
         children: (0, r.jsxs)("div", {
-            className: M.popoutContainer,
+            className: j.popoutContainer,
             children: [
                 (0, r.jsx)(m.h4, {
                     icon: p.plf,
-                    title: j.intl.string(j.t["2pAkDA"]),
+                    title: M.intl.string(M.t["2pAkDA"]),
                 }),
                 (0, r.jsx)(Y, { closePopout: t }),
             ],
@@ -165,7 +165,7 @@ function W(e) {
             c(!l), l ? null == n || n() : null == t || t();
         }, [n, t, l]);
     i.useEffect(
-        () => (T.S.subscribe(L.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(L.CkL.TOGGLE_FOR_LATER, f)),
+        () => (T.S.subscribe(x.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(x.CkL.TOGGLE_FOR_LATER, f)),
         [f],
     );
     let h = (0, _.e7)([N.Z], () => N.Z.hasOverdueReminder(), []);
@@ -217,7 +217,7 @@ function K(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: M.messagesScroller,
+                                    className: j.messagesScroller,
                                 },
                                 o,
                             ),
@@ -249,7 +249,7 @@ function z(e) {
                 var r;
                 await (0, C.fC)(t, s),
                     e.shiftKey || n(),
-                    I.default.track(L.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    I.default.track(x.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
@@ -262,20 +262,20 @@ function z(e) {
         c = (0, _.e7)(
             [v.Z],
             () =>
-                !!((null == s ? void 0 : s.type) === L.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) ||
-                v.Z.can(L.Plq.VIEW_CHANNEL, s),
+                !!((null == s ? void 0 : s.type) === x.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) ||
+                v.Z.can(x.Plq.VIEW_CHANNEL, s),
         );
     return null != s && null != t.message && c
         ? (0, r.jsxs)("div", {
-              className: M.messageContainer,
+              className: j.messageContainer,
               children: [
                   (0, r.jsx)(p.P3F, {
-                      className: M.clickableMessageBackground,
+                      className: j.clickableMessageBackground,
                       onClick: l,
-                      "aria-label": j.intl.string(j.t["+TSRGB"]),
+                      "aria-label": M.intl.string(M.t["+TSRGB"]),
                   }),
                   null != t.saveData.dueAt
-                      ? (0, r.jsx)(x.Z, {
+                      ? (0, r.jsx)(L.Z, {
                             reminder: t,
                             throttledNow: a,
                         })
@@ -286,16 +286,16 @@ function z(e) {
                       {
                           message: t.message,
                           channel: s,
-                          className: M.message,
+                          className: j.message,
                           compact: O.jU.getSetting(),
                           animateAvatar: !1,
-                          focusProps: F,
+                          focusProps: V,
                           trackAnnouncementViews: !0,
                       },
                       t.message.id,
                   ),
                   (0, r.jsx)(y.ZP, {
-                      className: M.hoverBar,
+                      className: j.hoverBar,
                       children: (0, r.jsx)(X, {
                           savedMessage: t,
                           jumpToMessage: l,
@@ -304,10 +304,10 @@ function z(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(M.messageContainer, M.deletedMessage),
+              className: o()(j.messageContainer, j.deletedMessage),
               children: [
                   (0, r.jsx)("div", {
-                      className: M.deleteIcon,
+                      className: j.deleteIcon,
                       children: (0, r.jsx)(p.Mgn, {
                           size: "xxs",
                           color: p.TVs.colors.INTERACTIVE_ACTIVE,
@@ -316,14 +316,14 @@ function z(e) {
                   (0, r.jsx)(p.X6q, {
                       variant: "text-md/semibold",
                       color: "header-secondary",
-                      children: null != t.saveData.dueAt ? j.intl.string(j.t["wuQm+v"]) : j.intl.string(j.t.o572FR),
+                      children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+v"]) : M.intl.string(M.t.o572FR),
                   }),
                   (0, r.jsx)(y.ZP, {
-                      className: M.hoverBar,
+                      className: j.hoverBar,
                       children: (0, r.jsx)(
                           y.sF,
                           {
-                              label: j.intl.string(j.t.SvXS1d),
+                              label: M.intl.string(M.t.SvXS1d),
                               icon: p.XHJ,
                               dangerous: !0,
                               onClick: () => (0, A.x)(t.saveData),
@@ -354,7 +354,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t.yjGtdH),
+                          label: M.intl.string(M.t.yjGtdH),
                           icon: p.dz2,
                           onClick: () =>
                               (0, A.z)({
@@ -368,7 +368,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t.vrbqs7),
+                          label: M.intl.string(M.t.vrbqs7),
                           icon: p.vdY,
                           onClick: (e) =>
                               (0, h.jW)(e, async () => {
@@ -377,7 +377,7 @@ function X(e) {
                                       (0, r.jsx)(
                                           e,
                                           B(U({}, n), {
-                                              label: j.intl.string(j.t.roMu1N),
+                                              label: M.intl.string(M.t.roMu1N),
                                               message: t.message,
                                           }),
                                       );
@@ -389,8 +389,8 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t["+TSRGB"]),
-                          icon: p.d4D,
+                          label: M.intl.string(M.t["+TSRGB"]),
+                          icon: p.acy,
                           onClick: (e) => i(e),
                       },
                       "jump-to-message",
@@ -398,7 +398,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t.SvXS1d),
+                          label: M.intl.string(M.t.SvXS1d),
                           icon: p.plf,
                           onClick: () => (0, A.x)(t.saveData),
                       },
@@ -411,7 +411,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t.mJ3P0N),
+                          label: M.intl.string(M.t.mJ3P0N),
                           icon: p.T39,
                           onClick: (e) =>
                               (0, h.jW)(e, async () => {
@@ -420,7 +420,7 @@ function X(e) {
                                       (0, r.jsx)(
                                           e,
                                           B(U({}, n), {
-                                              label: j.intl.string(j.t.mJ3P0N),
+                                              label: M.intl.string(M.t.mJ3P0N),
                                               message: t.message,
                                           }),
                                       );
@@ -431,8 +431,8 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t["+TSRGB"]),
-                          icon: p.d4D,
+                          label: M.intl.string(M.t["+TSRGB"]),
+                          icon: p.acy,
                           onClick: (e) => i(e),
                       },
                       "jump-to-message",
@@ -440,7 +440,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: j.intl.string(j.t.SvXS1d),
+                          label: M.intl.string(M.t.SvXS1d),
                           icon: p.plf,
                           onClick: () => (0, A.x)(t.saveData),
                       },

@@ -21,8 +21,8 @@ var r = n(951288),
     _ = n(836197),
     O = n(880421),
     E = n(206599),
-    v = n(50130),
-    y = n(5136),
+    y = n(50130),
+    v = n(5136),
     I = n(690760),
     S = n(747101),
     C = n(517157),
@@ -107,7 +107,7 @@ function G() {
 }
 function B(e) {
     let { user: t } = e,
-        { application: n } = (0, v.G)(),
+        { application: n } = (0, y.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
         l = (0, C.Z)(t.id),
         a = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
@@ -144,11 +144,11 @@ function H(e) {
         })(),
         d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
         p = 0 === a.length && s,
-        v = i.useMemo(() => a.filter(_.Wc), [a]),
-        y = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
-    (0, S.ZP)(v), (0, E.J)(s, v);
+        y = i.useMemo(() => a.filter(_.Wc), [a]),
+        v = i.useMemo(() => a.filter((e) => e instanceof b.q), [a]);
+    (0, S.ZP)(y), (0, E.J)(s, y);
     var T = t.id;
-    (0, I.s)(y);
+    (0, I.s)(v);
     let { data: N, refetch: P } = (0, h.O)(T),
         x = i.useRef(N);
     if (
@@ -185,7 +185,7 @@ function V(e) {
     var { user: t } = e,
         n = M(e, ["user"]);
     let l = i.useRef(null);
-    (0, y.r)({ container: l.current });
+    (0, v.r)({ container: l.current });
     let o = (0, Z.h)(t.id);
     return (0, r.jsxs)(w.F, {
         "data-scroller": !0,

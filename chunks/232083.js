@@ -2,7 +2,7 @@ r.d(t, { Z: () => a });
 var n = r(951288);
 r(647438);
 var i = r(623132),
-    l = r(112794);
+    o = r(112794);
 function a(e) {
     var { games: t, widgetType: r } = e,
         a = (function (e, t) {
@@ -14,20 +14,20 @@ function a(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["games", "widgetType"]);
     return (0, n.jsx)("ul", {
-        className: l.cardList,
+        className: o.cardList,
         children: t.map((e, t) =>
             (0, n.jsx)(
                 "li",

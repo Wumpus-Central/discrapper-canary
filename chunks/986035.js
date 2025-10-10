@@ -1,17 +1,17 @@
-n.d(t, { Z: () => s }), n(953529);
+n.d(t, { Z: () => o }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(480916),
-    o = n(469438);
-let s = function (e) {
+    s = n(469438);
+let o = function (e) {
     let {
         title: t,
         description: n,
-        agreement: s,
+        agreement: o,
         disagreement: c,
-        onAgree: u,
-        onDisagree: d,
+        onAgree: d,
+        onDisagree: u,
         modalType: p,
         channelId: h,
         guildId: f,
@@ -19,18 +19,18 @@ let s = function (e) {
     i.useEffect(() => {
         (0, a.YT)(p, h, f);
     }, [p, h, f]);
-    let m = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, p, h, f), null == d || d();
-        }, [d, p, h, f]),
-        g = i.useCallback(() => {
-            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, p, h, f), null == u || u();
-        }, [u, p, h, f]);
+    let g = i.useCallback(() => {
+            (0, a.qd)(a.iP.NSFW_CHANNEL_DISAGREE_CTA, p, h, f), null == u || u();
+        }, [u, p, h, f]),
+        m = i.useCallback(() => {
+            (0, a.qd)(a.iP.NSFW_CHANNEL_AGREE_CTA, p, h, f), null == d || d();
+        }, [d, p, h, f]);
     return (0, r.jsxs)(l.Kqy, {
         justify: "center",
         align: "center",
         direction: "vertical",
         gap: 16,
-        className: o.gatedContent,
+        className: s.gatedContent,
         children: [
             (0, r.jsxs)(l.Kqy, {
                 gap: 8,
@@ -40,12 +40,12 @@ let s = function (e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-lg/semibold",
-                        className: o.title,
+                        className: s.title,
                         children: t,
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
-                        className: o.description,
+                        className: s.description,
                         color: "text-muted",
                         children: n,
                     }),
@@ -57,17 +57,17 @@ let s = function (e) {
                 align: "center",
                 gap: 16,
                 children: [
-                    null != c && null != d
+                    null != c && null != u
                         ? (0, r.jsx)(l.zxk, {
                               variant: "secondary",
                               text: c,
-                              onClick: m,
+                              onClick: g,
                           })
                         : null,
-                    null != s && null != u
+                    null != o && null != d
                         ? (0, r.jsx)(l.zxk, {
-                              onClick: g,
-                              text: s,
+                              onClick: m,
+                              text: o,
                           })
                         : null,
                 ],

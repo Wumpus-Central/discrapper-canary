@@ -14,17 +14,17 @@ var r,
     g = n(925549),
     m = n(607070),
     b = n(100527),
-    O = n(367907),
+    _ = n(367907),
     y = n(906732),
-    _ = n(453542),
+    O = n(453542),
     v = n(702321),
     j = n(82295),
     x = n(313201),
     C = n(860144),
     E = n(214852),
     S = n(518311),
-    P = n(355298),
-    I = n(869404),
+    I = n(355298),
+    P = n(869404),
     N = n(333984),
     Z = n(984802),
     w = n(592125),
@@ -32,8 +32,8 @@ var r,
     A = n(55589),
     R = n(515753),
     D = n(981631),
-    M = n(388032),
-    L = n(777126);
+    L = n(388032),
+    M = n(777126);
 function k(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ let B = l.memo(function () {
         width: "184",
         height: "428",
         viewBox: "0 0 184 428",
-        className: L.empty,
+        className: M.empty,
         children: [
             (0, i.jsx)("rect", {
                 x: 40,
@@ -313,7 +313,7 @@ class F extends (r = l.Component) {
                                 {
                                     fade: !0,
                                     innerRole: o,
-                                    innerAriaLabel: M.intl.string(M.t.YUU0RE),
+                                    innerAriaLabel: L.intl.string(L.t.YUU0RE),
                                     innerTag: "ul",
                                     ref: (e) => {
                                         var t;
@@ -323,7 +323,7 @@ class F extends (r = l.Component) {
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
                                     onScroll: this.handleScroll,
-                                    className: L.scroller,
+                                    className: M.scroller,
                                     sectionHeight: this.getSectionHeight,
                                     paddingTop: t,
                                     paddingBottom: 8,
@@ -369,9 +369,9 @@ class F extends (r = l.Component) {
                             .length,
                     };
                 (this.hasReportedAnalytics = !0),
-                    O.ZP.trackWithMetadata(
+                    _.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
-                        G(U({}, u, (0, _.X)()), {
+                        G(U({}, u, (0, O.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
@@ -435,20 +435,20 @@ class F extends (r = l.Component) {
                     ? (0, i.jsxs)(
                           j.Z,
                           {
-                              className: a()(L.privateChannelsHeaderContainer, { [L.tall]: "side" === r }),
+                              className: a()(M.privateChannelsHeaderContainer, { [M.tall]: "side" === r }),
                               children: [
                                   (0, i.jsx)("span", {
-                                      className: L.headerText,
-                                      children: M.intl.string(M.t.YUU0RE),
+                                      className: M.headerText,
+                                      children: L.intl.string(L.t.YUU0RE),
                                   }),
                                   null == r &&
                                       (0, i.jsx)(S.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
-                                          tooltip: M.intl.string(M.t["6Urw1t"]),
+                                          tooltip: L.intl.string(L.t["6Urw1t"]),
                                           tooltipPosition: "top",
                                           popoutAlign: "left",
-                                          className: L.privateChannelRecipientsInviteButtonIconContainer,
-                                          iconClassName: L.privateChannelRecipientsInviteButtonIcon,
+                                          className: M.privateChannelRecipientsInviteButtonIconContainer,
+                                          iconClassName: M.privateChannelRecipientsInviteButtonIcon,
                                           icon: f.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
@@ -456,7 +456,7 @@ class F extends (r = l.Component) {
                                       (0, i.jsx)(S.l, {
                                           popoutAlign: "left",
                                           icon: f.kL_,
-                                          text: M.intl.string(M.t["6Urw1t"]),
+                                          text: L.intl.string(L.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
                                       }),
@@ -491,10 +491,10 @@ let V = (e) => {
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
         h = l.Children.count(o),
         g = w.Z.getMutablePrivateChannels(),
-        O = (0, I.k1)(g),
-        _ = (0, p.Wu)([A.Z, P.Z, N.Z], () => {
+        _ = (0, P.k1)(g),
+        O = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
             let e = A.Z.getPrivateChannelIds();
-            return (0, I.tU)(e, [P.Z, N.Z]);
+            return (0, P.tU)(e, [I.Z, N.Z]);
         }, []);
     (0, E.z)(C.R);
     let { analyticsLocations: v } = (0, y.ZP)(b.Z.CONTACTS_LIST),
@@ -506,7 +506,7 @@ let V = (e) => {
         })),
         R = l.useRef(null),
         D = null != s ? s : R,
-        M = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 let t = D.current,
                     n = document.querySelector(e);
@@ -526,7 +526,7 @@ let V = (e) => {
             },
             [D],
         ),
-        L = l.useCallback(
+        M = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = D.current;
@@ -552,10 +552,10 @@ let V = (e) => {
         V = (0, d.ZP)({
             id: "private-channels-".concat(B),
             isEnabled: S,
-            scrollToStart: L,
+            scrollToStart: M,
             scrollToEnd: k,
             defaultFocused: (h + +!!a).toString(),
-            setFocus: M,
+            setFocus: L,
         });
     return (0, i.jsx)(y.Gt, {
         value: v,
@@ -565,8 +565,8 @@ let V = (e) => {
                 F,
                 G(U({}, e), {
                     density: t,
-                    channels: O,
-                    privateChannelIds: _,
+                    channels: _,
+                    privateChannelIds: O,
                     listRef: D,
                     theme: null != j ? j : r,
                     version: T,

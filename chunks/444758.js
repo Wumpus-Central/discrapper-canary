@@ -183,10 +183,10 @@ function D(e) {
         content: e,
     };
 }
-function x(e) {
+function L(e) {
     return null != e ? w(e) : D("#".concat(y.intl.string(y.t.J90oLS)));
 }
-function L() {
+function x() {
     return C(
         {
             name: y.intl.string(y.t.zLZPmp).toLowerCase(),
@@ -196,7 +196,7 @@ function L() {
         "italics",
     );
 }
-function j(e, t, n, r, i) {
+function M(e, t, n, r, i) {
     let a = u.Z.getGuild(e),
         o = (null == a ? void 0 : a.id) === r;
     return {
@@ -206,10 +206,10 @@ function j(e, t, n, r, i) {
         messageId: n,
         originalLink: i,
         inContent: null == a || o ? null : [A(a)],
-        content: [L()],
+        content: [x()],
     };
 }
-function M(e, t, n, r) {
+function j(e, t, n, r) {
     let i = A(e),
         a = C(t),
         o = R(t.isForumPost);
@@ -270,9 +270,9 @@ function k(e, t, n, r) {
                 inContent: [C(e)],
                 content: [R(!1)],
             });
-        else return x(r);
+        else return L(r);
     let o = e.guildId === n;
-    return v({}, i, M(a, e, o, null != t));
+    return v({}, i, j(a, e, o, null != t));
 }
 let U = {
         order: E.ZP.order,
@@ -286,7 +286,7 @@ let U = {
                     id: r,
                 };
             let i = P(r, n.mentionChannels);
-            return null == i ? j(null, r, null, S(n.channelId)) : k(i, null, S(n.channelId));
+            return null == i ? M(null, r, null, S(n.channelId)) : k(i, null, S(n.channelId));
         },
     },
     G = {
@@ -305,7 +305,7 @@ let U = {
                     o = e[3];
                 if (null == a) return w(r);
                 let s = P(a, null);
-                return null == s ? j(i, a, o, S(n.channelId), r) : k(s, o, S(n.channelId), r);
+                return null == s ? M(i, a, o, S(n.channelId), r) : k(s, o, S(n.channelId), r);
             },
         },
         mediaPostLink: {
@@ -322,7 +322,7 @@ let U = {
                 let l = P(o, null);
                 if (null != l) return k(l, s, S(n.channelId), r);
                 let c = P(a, null);
-                return null != c ? k(c, s, S(n.channelId), r) : j(i, a, s, S(n.channelId), r);
+                return null != c ? k(c, s, S(n.channelId), r) : M(i, a, s, S(n.channelId), r);
             },
         },
     };

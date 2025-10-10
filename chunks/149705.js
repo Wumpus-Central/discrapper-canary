@@ -1,5 +1,5 @@
 n.d(t, { a: () => i });
-var r = n(879690);
+var r = n(191336);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -25,7 +25,7 @@ function l(e) {
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -43,7 +43,7 @@ function a(e, t) {
         e
     );
 }
-let s = {
+let a = {
         skus: [],
         currentPage: 0,
         totalCount: 0,
@@ -52,13 +52,13 @@ let s = {
         isFetchingResults: !1,
     },
     i = (0, r.U)((e) =>
-        a(l({}, s), {
+        s(l({}, a), {
             onSetResponse: (t) => {
                 let n = Math.floor(t.pageOffset / t.pageLimit) + 1;
-                e(a(l({}, t), { currentPage: n }));
+                e(s(l({}, t), { currentPage: n }));
             },
             setSearchError: (t) => {
-                e(a(l({}, s), { searchError: t }));
+                e(s(l({}, a), { searchError: t }));
             },
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });
@@ -67,7 +67,7 @@ let s = {
                 e({ searchError: null });
             },
             clear: () => {
-                e(l({}, s));
+                e(l({}, a));
             },
         }),
     );

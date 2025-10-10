@@ -1,6 +1,6 @@
 n.d(t, { n: () => f });
-var r = n(951288),
-    i = n(442837),
+var i = n(951288),
+    r = n(442837),
     l = n(755721),
     a = n(481060),
     o = n(384275),
@@ -12,9 +12,9 @@ var r = n(951288),
     h = n(388032);
 let f = (e) => {
     let { className: t, channel: n, user: f, application: m, oauth2Token: g } = e,
-        b = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
+        b = (0, r.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
     if (!f.bot || null == m) return null;
-    function _() {
+    function C() {
         o.Z.delete(g.id);
         let e = b.get(m.id);
         null != e &&
@@ -23,44 +23,44 @@ let f = (e) => {
                 applicationId: m.id,
             });
     }
-    return (0, r.jsx)(l.zx, {
+    return (0, i.jsx)(l.zx, {
         className: t,
         size: l.Ph.SMALL,
         color: l.zx.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
-                let i = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
+                let r = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
                 (0, a.h7j)((e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         s.default,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })(
                             {
                                 title: h.intl.string(h.t.DT39Aw),
-                                body: i,
+                                body: r,
                                 confirmText: h.intl.string(h.t.xUqheH),
                                 confirmColor: l.Tt.RED,
                                 cancelText: h.intl.string(h.t["ETE/oK"]),
@@ -75,7 +75,7 @@ let f = (e) => {
                         channel_id: n.id,
                         channel_type: n.type,
                     });
-            })(m, _, n),
+            })(m, C, n),
         children: h.intl.string(h.t["5S3sQE"]),
     });
 };

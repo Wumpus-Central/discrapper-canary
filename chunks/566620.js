@@ -48,10 +48,10 @@ var r = n(990547),
     P = n(973616),
     w = n(314897),
     D = n(592125),
-    x = n(430824),
-    L = n(496675),
-    j = n(594174),
-    M = n(979651),
+    L = n(430824),
+    x = n(496675),
+    M = n(594174),
+    j = n(979651),
     k = n(626135),
     U = n(630388),
     G = n(823379),
@@ -158,7 +158,7 @@ async function eo(e) {
             channelId: null != r ? r : null,
             proxyTicket: t,
         });
-        let n = j.default.getCurrentUser();
+        let n = M.default.getCurrentUser();
         if (
             (null != n &&
                 (0, q.Z)({
@@ -288,7 +288,7 @@ async function el(e) {
             };
     }
     let y = D.Z.getChannel(r),
-        O = null != i ? x.Z.getGuild(i) : null;
+        O = null != i ? L.Z.getGuild(i) : null;
     if (null == y)
         return {
             result: "failure",
@@ -300,7 +300,7 @@ async function el(e) {
             r = F.ZP.getCurrentEmbeddedActivity();
         (null == r ? void 0 : r.applicationId) != null &&
             (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
-        let i = j.default.getCurrentUser();
+        let i = M.default.getCurrentUser();
         if (
             null != i &&
             !(await (0, V.p)({
@@ -373,7 +373,7 @@ async function ec(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
         c = w.default.getSessionId(),
-        u = j.default.getCurrentUser(),
+        u = M.default.getCurrentUser(),
         d = n;
     if (null == d)
         return {
@@ -400,9 +400,9 @@ async function ec(e) {
     let p = (0, W.e4)({
         channelId: i,
         ChannelStore: D.Z,
-        GuildStore: x.Z,
-        PermissionStore: L.Z,
-        VoiceStateStore: M.Z,
+        GuildStore: L.Z,
+        PermissionStore: x.Z,
+        VoiceStateStore: j.Z,
     });
     if (p !== W.jy.CAN_LAUNCH) {
         let e = 4;
@@ -509,7 +509,7 @@ function eu(e) {
     if (null != a) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
-            t = null == (o = j.default.getCurrentUser()) ? void 0 : o.id,
+            t = null == (o = M.default.getCurrentUser()) ? void 0 : o.id,
             r = F.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
         e ===

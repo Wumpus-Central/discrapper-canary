@@ -3,11 +3,11 @@ var r = n(951288),
     l = n(647438),
     s = n(120356),
     a = n.n(s),
-    i = n(636977),
-    o = n(685816),
-    c = n(442837),
-    u = n(481060),
-    d = n(434650),
+    i = n(907331),
+    o = n(636977),
+    c = n(685816),
+    u = n(442837),
+    d = n(481060),
     g = n(393903),
     p = n(448986),
     f = n(110560),
@@ -46,13 +46,13 @@ let M = (0, E.IC)(90),
         categorySkuId: void 0,
         bannerAsset: void 0,
         summary: "",
-        type: o.z.HERO,
+        type: c.z.HERO,
         categoryStoreListingId: "",
     },
     U = (e) => {
         var t;
         let { isLoading: n, handleTransition: s, category: U, heroBlock: V, tab: z, onVisibilityChange: G } = e,
-            K = (0, d.O)(
+            K = (0, i.O)(
                 (e) => {
                     null == G || G(e);
                 },
@@ -61,7 +61,7 @@ let M = (0, E.IC)(90),
             ),
             q = l.useRef(null),
             Y = (0, R.G)("HeroBlock"),
-            X = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+            X = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
             Q = (0, N.Z)(),
             J = (0, m.sp)(),
             $ = x.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && z !== w.AW.ORBS,
@@ -80,7 +80,7 @@ let M = (0, E.IC)(90),
                             categorySkuId: U.skuId,
                             bannerAsset: U.heroBannerAsset,
                             summary: U.summary,
-                            type: o.z.HERO,
+                            type: c.z.HERO,
                             categoryStoreListingId: U.storeListingId,
                             bannerDisplayConfig: U.heroBannerDisplayConfig,
                             logoDisplayConfig: U.heroLogoDisplayConfig,
@@ -99,7 +99,7 @@ let M = (0, E.IC)(90),
             ei = null != (t = null == en ? void 0 : en.responsive) && t,
             eo = null == en ? void 0 : en.backgroundStyle,
             ec = (0, A.Dp)(ea),
-            eu = (0, c.e7)([b.Z], () => b.Z.products),
+            eu = (0, u.e7)([b.Z], () => b.Z.products),
             ed = l.useMemo(() => (n ? [] : eu.size > 0 ? Q(et.rankedSkuIds) : []), [n, Q, et.rankedSkuIds, eu]),
             eg = l.useMemo(
                 () =>
@@ -114,7 +114,7 @@ let M = (0, E.IC)(90),
             ),
             { cardContainerRef: ep, totalCards: ef } = ((e) => {
                 let [t, n] = l.useState(1),
-                    r = (0, u.dQu)(u.TVs.space.SPACE_XL),
+                    r = (0, d.dQu)(d.TVs.space.SPACE_XL),
                     s = (0, p.Z)(() => {
                         (null == a ? void 0 : a.current) != null &&
                             n(Math.max(1, Math.floor((a.current.offsetWidth + r) / (246 + r))));
@@ -155,7 +155,7 @@ let M = (0, E.IC)(90),
                           sectionType: H.jXE.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: H.qAy.CTA_TO_QUEST_HOME,
                       }),
-                      (0, f.navigateToQuestHome)({ fromContent: i.j.ORBS_SHOP_HERO_CTA }))
+                      (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                     : (s("shop latest category hero", !eb || eE ? et.categorySkuId : void 0),
                       _.default.track(H.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == J ? void 0 : J.sessionId,
@@ -198,7 +198,7 @@ let M = (0, E.IC)(90),
                                         className: D.rivBannerButtonContainer,
                                         children:
                                             !n &&
-                                            (0, r.jsx)(u.zxk, {
+                                            (0, r.jsx)(d.zxk, {
                                                 variant: "overlay-primary",
                                                 onClick: ev,
                                                 text: em,
@@ -217,7 +217,7 @@ let M = (0, E.IC)(90),
                                                       className: D.heroHeaderBadgeLogoSummaryContainer,
                                                       children: [
                                                           null != et.unpublishedAt &&
-                                                              (0, r.jsx)(u.IGR, {
+                                                              (0, r.jsx)(d.IGR, {
                                                                   disableColor: !0,
                                                                   text: F.intl.string(F.t["h/uBCQ"]),
                                                                   className: D.limitedTimeBadge,
@@ -238,14 +238,14 @@ let M = (0, E.IC)(90),
                                                                                   : er.toDesktopStyles(),
                                                                       }),
                                                                   null != et.title &&
-                                                                      (0, r.jsx)(u.X6q, {
+                                                                      (0, r.jsx)(d.X6q, {
                                                                           variant: "heading-xxl/bold",
                                                                           className: D.title,
                                                                           color: "header-primary",
                                                                           children: et.title,
                                                                       }),
                                                                   "" !== et.summary &&
-                                                                      (0, r.jsx)(u.Text, {
+                                                                      (0, r.jsx)(d.Text, {
                                                                           variant: eE
                                                                               ? "text-lg/medium"
                                                                               : "text-md/normal",
@@ -267,7 +267,7 @@ let M = (0, E.IC)(90),
                                                     className: $
                                                         ? D.heroHeaderButtonContainerStacked
                                                         : D.heroHeaderButtonContainer,
-                                                    children: (0, r.jsx)(u.zxk, {
+                                                    children: (0, r.jsx)(d.zxk, {
                                                         variant: "overlay-primary",
                                                         onClick: ev,
                                                         text: em,
@@ -315,7 +315,7 @@ let M = (0, E.IC)(90),
                                                                                     category: n,
                                                                                     user: X,
                                                                                     tab: z,
-                                                                                    shopBlockType: o.z.HERO,
+                                                                                    shopBlockType: c.z.HERO,
                                                                                 },
                                                                                 e.skuId,
                                                                             ),

@@ -1,8 +1,8 @@
 e.d(i, { default: () => C });
 var s = e(951288),
     n = e(647438),
-    o = e(704215),
-    r = e(667202),
+    o = e(793030),
+    r = e(704215),
     l = e(481060),
     c = e(266454),
     a = e(749681),
@@ -15,15 +15,15 @@ var s = e(951288),
     _ = e(388032),
     p = e(817238);
 function C(t) {
-    let { guildId: i, transitionState: C, onClose: h, analyticsType: v = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+    let { guildId: i, transitionState: C, onClose: h, analyticsType: v = r.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
         n.useEffect(() => {
             d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: o.z[v],
+                type: r.z[v],
                 guild_id: i,
             });
         }, [i, v]),
-        (0, s.jsx)(r.ExpressiveModal, {
+        (0, s.jsx)(o.ExpressiveModal, {
             title: _.intl.string(_.t["2tv5YG"]),
             subtitle: _.intl.string(_.t.pgwlDw),
             transitionState: C,

@@ -1,13 +1,13 @@
-n.d(t, { _: () => a });
-var r = n(647438),
-    i = n(86392),
-    o = n(338972);
+e.d(n, { _: () => a });
+var r = e(647438),
+    o = e(86392),
+    i = e(338972);
 function a() {
-    var e = (0, o.N)();
+    var t = (0, i.N)();
     return (0, r.useMemo)(
         function () {
-            return new i.p(e);
+            return new o.p(t);
         },
-        [e],
+        [t],
     );
 }

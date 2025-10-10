@@ -184,7 +184,7 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(d.NIc, {
+            (0, a.jsx)(d.gNt, {
                 label: "Base Color",
                 description: "The base color the <code>{name}</code> palette is generated from.",
                 children: (0, a.jsx)("input", {

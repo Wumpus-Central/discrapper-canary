@@ -1,30 +1,30 @@
-o.d(t, { Z: () => u }), o(953529);
-var n = o(951288);
-o(647438);
-var r = o(120356),
-    a = o.n(r),
-    c = o(793030),
-    s = o(119331),
-    i = o(336227),
-    l = o(467541);
+n.d(t, { Z: () => u }), n(953529);
+var r = n(951288);
+n(647438);
+var o = n(120356),
+    a = n.n(o),
+    i = n(793030),
+    l = n(119331),
+    c = n(336227),
+    s = n(467541);
 function u(e) {
     let { powerup: t } = e,
-        o = (0, i.Z)(t);
-    return (0, n.jsx)("div", {
-        className: l.levelContainer,
-        children: o.map((e) => {
-            let { Icon: t, className: o } = (0, s.t)(e.perkIcon, !1);
-            return (0, n.jsxs)(
+        n = (0, c.Z)(t);
+    return (0, r.jsx)("div", {
+        className: s.levelContainer,
+        children: n.map((e) => {
+            let { Icon: t, className: n } = (0, l.t)(e.perkIcon, !1);
+            return (0, r.jsxs)(
                 "div",
                 {
-                    className: l.perkContainer,
+                    className: s.perkContainer,
                     children: [
-                        (0, n.jsx)(t, {
+                        (0, r.jsx)(t, {
                             color: "currentColor",
-                            className: a()(l.perkIcon, o),
+                            className: a()(s.perkIcon, n),
                         }),
-                        (0, n.jsx)(c.xvT, {
-                            className: l.perkText,
+                        (0, r.jsx)(i.xvT, {
+                            className: s.perkText,
                             color: "text-default",
                             variant: "text-sm/medium",
                             children: e.description,

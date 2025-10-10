@@ -4,27 +4,27 @@ n(647438);
 var i = n(442837),
     l = n(481060),
     a = n(665149),
-    o = n(853856),
-    s = n(117984),
+    s = n(853856),
+    o = n(117984),
     c = n(593214),
-    u = n(362658),
-    d = n(916069),
+    d = n(362658),
+    u = n(916069),
     p = n(388032);
 function h(e) {
     let { channel: t } = e,
-        { isFavoritesPerk: n } = (0, u.z)("ChannelFavoritesHeaderButton"),
-        h = (0, d.Z)(),
+        { isFavoritesPerk: n } = (0, d.z)("ChannelFavoritesHeaderButton"),
+        h = (0, u.Z)(),
         { notifyFavoriteAdded: f } = (0, c.up)(),
-        m = (0, i.e7)([o.Z], () => o.Z.isFavorite(t.id));
+        g = (0, i.e7)([s.Z], () => s.Z.isFavorite(t.id));
     if (!n || h) return null;
-    let g = m ? l.r7p : l.vxU,
-        b = m ? p.intl.string(p.t.Bou7lZ) : p.intl.string(p.t["4wcdEx"]);
+    let m = g ? l.r7p : l.vxU,
+        b = g ? p.intl.string(p.t.Bou7lZ) : p.intl.string(p.t["4wcdEx"]);
     return (0, r.jsx)(a.ZP.Icon, {
-        icon: g,
+        icon: m,
         tooltip: b,
         "aria-label": b,
         onClick: () => {
-            m ? (0, s.oC)(t.id) : (f(), (0, s.kj)(t.id));
+            g ? (0, o.oC)(t.id) : (f(), (0, o.kj)(t.id));
         },
     });
 }

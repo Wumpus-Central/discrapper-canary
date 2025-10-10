@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
-var r = n(509613),
-    i = n(313789),
-    l = n(161618),
-    o = n(388032);
-let s = (0, r.k4)(i.n.NOTIFICATIONS_BADGES_CATEGORY, {
-    useTitle: () => o.intl.string(o.t.l6w3Vl),
-    buildLayout: () => [l.Z],
+n.d(e, { Z: () => s });
+var i = n(509613),
+    l = n(313789),
+    u = n(161618),
+    r = n(388032);
+let s = (0, i.k4)(l.n.NOTIFICATIONS_BADGES_CATEGORY, {
+    useTitle: () => r.intl.string(r.t.l6w3Vl),
+    buildLayout: () => [u.Z],
 });

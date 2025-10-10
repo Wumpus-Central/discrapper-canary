@@ -13,25 +13,25 @@ var r = n(951288),
     u = n(24124),
     d = n(239091),
     p = n(636449),
-    f = n(620662),
-    h = n(833664),
+    h = n(620662),
+    f = n(833664),
     g = n(513202),
     m = n(906732),
     b = n(20471),
     _ = n(522651),
-    O = n(311352),
-    y = n(48131),
-    v = n(220410),
+    y = n(311352),
+    O = n(48131),
+    v = n(272304),
     j = n(668519),
     x = n(803647),
     C = n(131704),
     E = n(944486),
     S = n(626135),
-    P = n(381096),
-    I = n(870569),
+    I = n(381096),
+    P = n(870569),
     N = n(981631),
-    w = n(388032),
-    Z = n(258628);
+    Z = n(388032),
+    w = n(258628);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,7 +84,7 @@ function R(e, t, n) {
             (t.application_id === e.id ||
                 (null == (r = e.linkedGames) ? void 0 : r.some((e) => e.id === t.application_id))) &&
             t.type === N.IIU.PLAYING &&
-            (0, f.Z)(t, N.xjy.JOIN)
+            (0, h.Z)(t, N.xjy.JOIN)
         );
     }
     return !1;
@@ -93,10 +93,10 @@ let D = i.memo(function (e) {
         var t;
         let l,
             a,
-            f,
+            h,
             D,
             {
-                stream: L,
+                stream: M,
                 canGoLive: k,
                 guildId: U,
                 isStreaming: G,
@@ -147,13 +147,13 @@ let D = i.memo(function (e) {
             ),
             er = i.useCallback(
                 (e) => () => {
-                    (0, _.v)(J, _.d.LEAVE_ACTIVITY), y.Z.stopFrame({ applicationId: e });
+                    (0, _.v)(J, _.d.LEAVE_ACTIVITY), O.Z.stopFrame({ applicationId: e });
                 },
                 [J],
             ),
             ei = i.useCallback(() => {
-                (0, x.Z)(L);
-            }, [L]),
+                (0, x.Z)(M);
+            }, [M]),
             el = i.useCallback(() => {
                 let e = null != B && (0, C.vd)(B.type) ? B : null,
                     t = null != e ? e.getGuildId() : U;
@@ -190,9 +190,9 @@ let D = i.memo(function (e) {
                 hasAlreadyLinked: ec,
                 connectionApp: eu,
             } = (0, b.FG)(K, { allowedFlows: [b.ro.RPC] }),
-            ed = P.Z.useConfig({ location: "ActivityActions" }).enabled,
+            ed = I.Z.useConfig({ location: "ActivityActions" }).enabled,
             ep = i.useRef(null),
-            [ef, eh] = i.useState(!1);
+            [eh, ef] = i.useState(!1);
         i.useEffect(
             () => () => {
                 null != ep.current && clearTimeout(ep.current);
@@ -200,7 +200,7 @@ let D = i.memo(function (e) {
             [],
         ),
             i.useEffect(() => {
-                ec && (eh(!1), null != ep.current && (clearTimeout(ep.current), (ep.current = null)));
+                ec && (ef(!1), null != ep.current && (clearTimeout(ep.current), (ep.current = null)));
             }, [ec]);
         let eg =
                 (null != V || null == H || (0, p.R)()) && (G || k)
@@ -209,42 +209,42 @@ let D = i.memo(function (e) {
                             (a = () => {
                                 ei(), (0, _.v)(J, _.d.STREAM, !1);
                             }),
-                            (f = c.g5r),
-                            (D = w.intl.string(w.t.S5anIS)))
+                            (h = c.g5r),
+                            (D = Z.intl.string(Z.t.S5anIS)))
                           : F
                             ? ((l = !1),
                               (a = () => {
                                   el(), (0, _.v)(J, _.d.STREAM, !0);
                               }),
-                              (f = c.hGI),
+                              (h = c.hGI),
                               (D =
                                   null != V
-                                      ? w.intl.formatToPlainString(w.t.AB5gT0, { game: V.name })
-                                      : w.intl.string(w.t.FeUKeH)))
+                                      ? Z.intl.formatToPlainString(Z.t.AB5gT0, { game: V.name })
+                                      : Z.intl.string(Z.t.FeUKeH)))
                             : ((l = !0),
                               (a = null),
-                              (f = c.hGI),
+                              (h = c.hGI),
                               (D =
                                   null != B && (0, C.vd)(B.type)
-                                      ? w.intl.string(w.t.uQn9Bw)
+                                      ? Z.intl.string(Z.t.uQn9Bw)
                                       : null != U
-                                        ? w.intl.string(w.t.fBXEoK)
-                                        : w.intl.string(w.t.n3feND))),
+                                        ? Z.intl.string(Z.t.fBXEoK)
+                                        : Z.intl.string(Z.t.n3feND))),
                       (0, r.jsx)("div", {
-                          className: Z.panelButtonContainer,
-                          children: (0, r.jsx)(I.Z, {
+                          className: w.panelButtonContainer,
+                          children: (0, r.jsx)(P.Z, {
                               tooltipText: D,
                               disabled: l,
                               onClick: a,
-                              icon: f,
+                              icon: h,
                           }),
                       }))
                     : null,
             em =
                 ee && null == H
-                    ? (0, r.jsx)(I.Z, {
+                    ? (0, r.jsx)(P.Z, {
                           ref: q,
-                          tooltipText: w.intl.string(w.t["hC/Ze3"]),
+                          tooltipText: Z.intl.string(Z.t["hC/Ze3"]),
                           onClick: et,
                           icon: c.ejJ,
                       })
@@ -252,29 +252,29 @@ let D = i.memo(function (e) {
             eb =
                 null == H
                     ? null
-                    : (0, r.jsx)(I.Z, {
-                          tooltipText: w.intl.string(w.t["R/FK4O"]),
+                    : (0, r.jsx)(P.Z, {
+                          tooltipText: Z.intl.string(Z.t["R/FK4O"]),
                           onClick: en(H.applicationId, H.location),
                           icon: c.PBZ,
                       }),
             e_ =
                 null == z
                     ? null
-                    : (0, r.jsx)(I.Z, {
-                          tooltipText: w.intl.string(w.t["R/FK4O"]),
+                    : (0, r.jsx)(P.Z, {
+                          tooltipText: Z.intl.string(Z.t["R/FK4O"]),
                           onClick: er(z.applicationId),
                           icon: c.PBZ,
                       }),
-            eO = null == L ? null : (0, r.jsx)(O.Z, {}),
-            ey =
+            ey = null == M ? null : (0, r.jsx)(y.Z, {}),
+            eO =
                 ed && ea && !ec
-                    ? (0, r.jsx)(M, {
+                    ? (0, r.jsx)(L, {
                           runningGame: V,
                           startAuthorization: () => {
-                              eh(!0),
+                              ef(!0),
                                   null != ep.current && clearTimeout(ep.current),
                                   (ep.current = setTimeout(() => {
-                                      eh(!1);
+                                      ef(!1);
                                   }, 90000)),
                                   es();
                           },
@@ -283,8 +283,8 @@ let D = i.memo(function (e) {
                       })
                     : null,
             ev =
-                $ && null != W && (0, h.Z)(W)
-                    ? (0, r.jsx)(I.Z, {
+                $ && null != W && (0, f.Z)(W)
+                    ? (0, r.jsx)(P.Z, {
                           tooltipText: "Report Issue",
                           onClick: eo,
                           icon: c.xhG,
@@ -293,28 +293,28 @@ let D = i.memo(function (e) {
             ej =
                 ed && ea && !ec
                     ? (0, r.jsx)(s.J2, {
-                          title: w.intl.string(w.t.ULvRFR),
-                          body: w.intl.string(w.t.HJJDr6),
+                          title: Z.intl.string(Z.t.ULvRFR),
+                          body: Z.intl.string(Z.t.HJJDr6),
                           targetElementRef: X,
                           position: "top",
                           align: "center",
                           caretConfig: { align: "center" },
-                          shouldShow: ef,
+                          shouldShow: eh,
                           onRequestClose: () => {
-                              eh(!1), null != ep.current && (clearTimeout(ep.current), (ep.current = null));
+                              ef(!1), null != ep.current && (clearTimeout(ep.current), (ep.current = null));
                           },
                       })
                     : null;
-        return null == eg && null == em && null == eb && null == e_ && null == ey && null == ev
+        return null == eg && null == em && null == eb && null == e_ && null == eO && null == ev
             ? null
             : (0, r.jsxs)("div", {
-                  className: Z.actions,
-                  children: [null != ey ? ey : em, eg, null != (t = null != eb ? eb : e_) ? t : eO, ev, ej],
+                  className: w.actions,
+                  children: [null != eO ? eO : em, eg, null != (t = null != eb ? eb : e_) ? t : ey, ev, ej],
               });
     }),
-    M = i.forwardRef(function (e, t) {
+    L = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
-        return (0, r.jsx)(I.Z, {
+        return (0, r.jsx)(P.Z, {
             ref: t,
             onClick: () => {
                 var e, t;
@@ -326,6 +326,6 @@ let D = i.memo(function (e) {
                     i();
             },
             icon: a.u,
-            tooltipText: w.intl.string(w.t.sbdnp6),
+            tooltipText: Z.intl.string(Z.t.sbdnp6),
         });
     });

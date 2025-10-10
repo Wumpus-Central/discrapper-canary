@@ -3,36 +3,36 @@ var a = n(951288),
     r = n(647438),
     l = n(120356),
     i = n.n(l),
-    d = n(442837),
-    o = n(481060),
+    o = n(442837),
+    d = n(481060),
     c = n(411935),
     s = n(210218),
     u = n(720983),
     g = n(323540),
     f = n(171524),
-    p = n(596446);
+    p = n(140594);
 function m(e) {
     var t, n, l;
-    let { guildId: m, initialPageIndex: I = 0 } = e,
-        b = (0, d.e7)([s.Z], () => s.Z.getStorefrontData(m)),
-        v = (0, d.e7)([s.Z], () => s.Z.getStorefrontState(m)),
-        _ =
-            ((null == b ? void 0 : b.storefront) != null || (null == b ? void 0 : b.error)) &&
-            !(null == b ? void 0 : b.loading);
+    let { guildId: m, initialPageIndex: b = 0 } = e,
+        v = (0, o.e7)([s.Z], () => s.Z.getStorefrontData(m)),
+        _ = (0, o.e7)([s.Z], () => s.Z.getStorefrontState(m)),
+        I =
+            ((null == v ? void 0 : v.storefront) != null || (null == v ? void 0 : v.error)) &&
+            !(null == v ? void 0 : v.loading);
     if (
         (r.useEffect(() => {
-            null == b && (0, c.Y)(m);
-        }, [m, b]),
+            null == v && (0, c.Y)(m);
+        }, [m, v]),
         r.useEffect(() => {
-            (0, c.K)(m, I);
-        }, [m, I]),
-        !_ || (null == b ? void 0 : b.storefront) == null)
+            (0, c.K)(m, b);
+        }, [m, b]),
+        !I || (null == v ? void 0 : v.storefront) == null)
     )
         return (0, a.jsx)("div", {
             className: i()(p.spinner, p.container),
-            children: (0, a.jsx)(o.$jN, {}),
+            children: (0, a.jsx)(d.$jN, {}),
         });
-    let h = null != (l = null == v ? void 0 : v.activePage) ? l : I;
+    let h = null != (l = null == _ ? void 0 : _.activePage) ? l : b;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
@@ -40,20 +40,20 @@ function m(e) {
                 children: [
                     (0, a.jsx)(u.Z, {
                         guildId: m,
-                        storefront: b.storefront,
+                        storefront: v.storefront,
                         selectedPageIndex: h,
                     }),
                     (0, a.jsx)(g.$, {
-                        applicationId: b.storefront.applicationId,
+                        applicationId: v.storefront.applicationId,
                         guildId: m,
-                        page: b.storefront.pages[h],
+                        page: v.storefront.pages[h],
                     }),
                 ],
             }),
             (0, a.jsx)(f.n, {
-                applicationId: b.storefront.applicationId,
+                applicationId: v.storefront.applicationId,
                 backgroundImageAssetId:
-                    null == (n = b.storefront.pages[h]) || null == (t = n.leaderboard)
+                    null == (n = v.storefront.pages[h]) || null == (t = n.leaderboard)
                         ? void 0
                         : t.backgroundImageAssetId,
             }),

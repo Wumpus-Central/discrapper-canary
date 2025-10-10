@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(755721),
     d = n(481060),
     u = n(274136),
-    m = n(2052),
-    g = n(906732),
+    g = n(2052),
+    m = n(906732),
     p = n(678558),
     f = n(852679),
     h = n(357156),
@@ -49,7 +49,7 @@ let w = (e) => {
             ],
         });
     },
-    R = () =>
+    Z = () =>
         (0, r.jsx)("div", {
             className: P.placeholderCard,
             children: (0, r.jsx)("img", {
@@ -58,9 +58,9 @@ let w = (e) => {
                 src: n(872732),
             }),
         }),
-    Z = (e) => {
+    R = (e) => {
         let { guild: t } = e,
-            { location: i } = (0, m.O)(),
+            { location: i } = (0, g.O)(),
             { canCreateExpressions: l } = (0, h.XJ)(t);
         return (0, r.jsx)(d.zxk, {
             variant: "primary",
@@ -115,11 +115,11 @@ let w = (e) => {
     D = (e) => {
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
-            m = (0, a.e7)([C.Z], () => {
+            g = (0, a.e7)([C.Z], () => {
                 var e;
                 return null != (e = C.Z.getStickersByGuildId(t.id)) ? e : [];
             }, [t]),
-            { analyticsLocations: _ } = (0, g.ZP)(),
+            { analyticsLocations: _ } = (0, m.ZP)(),
             D = (0, b.Z)(t.id),
             A = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
             L = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : D,
@@ -127,7 +127,7 @@ let w = (e) => {
         if (
             (i.useEffect(() => {
                 window.dispatchEvent(new Event("resize"));
-            }, [m]),
+            }, [g]),
             l)
         )
             return (0, r.jsx)(d.$jN, {});
@@ -135,7 +135,7 @@ let w = (e) => {
             {
                 tier: I.Eu4.NONE,
                 title: (0, r.jsx)(w, {
-                    guildStickers: m,
+                    guildStickers: g,
                     currentGuildTier: A,
                     tier: I.Eu4.NONE,
                     children: T.intl.string(T.t.tfVXhI),
@@ -144,7 +144,7 @@ let w = (e) => {
             {
                 tier: I.Eu4.TIER_1,
                 title: (0, r.jsx)(w, {
-                    guildStickers: m,
+                    guildStickers: g,
                     currentGuildTier: A,
                     tier: I.Eu4.TIER_1,
                     children: T.intl.string(T.t.nzXtaW),
@@ -153,7 +153,7 @@ let w = (e) => {
             {
                 tier: I.Eu4.TIER_2,
                 title: (0, r.jsx)(w, {
-                    guildStickers: m,
+                    guildStickers: g,
                     currentGuildTier: A,
                     tier: I.Eu4.TIER_2,
                     children: T.intl.string(T.t["h33/ub"]),
@@ -162,7 +162,7 @@ let w = (e) => {
             {
                 tier: I.Eu4.TIER_3,
                 title: (0, r.jsx)(w, {
-                    guildStickers: m,
+                    guildStickers: g,
                     currentGuildTier: A,
                     tier: I.Eu4.TIER_3,
                     children: T.intl.string(T.t.BfF6EB),
@@ -175,17 +175,17 @@ let w = (e) => {
                 var i;
                 let l,
                     a,
-                    { isAnimatedTo: g, onSetRef: b, tier: j, tiers: C, tierIndex: O } = e,
+                    { isAnimatedTo: m, onSetRef: b, tier: j, tiers: C, tierIndex: O } = e,
                     { canCreateExpressions: N, canManageGuildExpression: w } = (0, h.Gw)(t),
                     G = C[O - 1],
                     M = null != G ? (0, v.A3)(G.tier) : 0,
                     U = (0, v.A3)(j.tier, t),
                     B = (0, v.ig)(j.tier),
-                    F = m.slice(M, U),
+                    F = g.slice(M, U),
                     H = F.length > 0,
                     z = A < j.tier,
                     W =
-                        ((i = m.length),
+                        ((i = g.length),
                         i < (0, v.A3)(I.Eu4.NONE)
                             ? I.Eu4.NONE
                             : i < (0, v.A3)(I.Eu4.TIER_1)
@@ -203,7 +203,7 @@ let w = (e) => {
                     X = B - F.length,
                     J = V ? Math.min(5 - ((F.length + 0) % 5), X) : 0,
                     Q = [];
-                for (let e = 0; e < J; e++) Q.push((0, r.jsx)(R, {}, "placeholder-".concat(e)));
+                for (let e = 0; e < J; e++) Q.push((0, r.jsx)(Z, {}, "placeholder-".concat(e)));
                 let $ = t.premiumTier < j.tier && D >= I.oCV[j.tier],
                     ee = T.intl.string(T.t.dtFw5e),
                     et = () => {
@@ -258,14 +258,14 @@ let w = (e) => {
                                   objectType: (0, v.ge)(j.tier),
                               },
                           }))
-                        : V && (a = (0, r.jsx)(Z, { guild: t })),
+                        : V && (a = (0, r.jsx)(R, { guild: t })),
                     (0, r.jsxs)(
                         E.Z,
                         {
                             subscriptionCount: L,
                             tier: j,
                             onSetRef: b,
-                            isAnimatedTo: g,
+                            isAnimatedTo: m,
                             hasBottomMargin: O !== C.length - 1,
                             withCardBody: !K,
                             headerButton: a,

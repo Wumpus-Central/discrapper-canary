@@ -26,9 +26,9 @@ var i = n(951288),
 function P(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: P, setWhichPopoutIsOpen: I } = e,
         Z = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
-        N = (0, p.KF)(t.id),
-        T = (0, p.g5)(N),
-        A = N !== p.jy.CAN_LAUNCH || Z,
+        T = (0, p.KF)(t.id),
+        N = (0, p.g5)(T),
+        A = T !== p.jy.CAN_LAUNCH || Z,
         { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: k } = (0, v.Z)(200, 300),
         L = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
         D = (0, l.e7)(
@@ -116,8 +116,8 @@ function P(e) {
                                                 ref: q,
                                                 children: (0, i.jsx)(x.Z, {
                                                     disabled: A,
-                                                    "aria-label": T,
-                                                    label: U ? void 0 : T,
+                                                    "aria-label": N,
+                                                    label: U ? void 0 : N,
                                                     isActivityActive: D,
                                                     onClick: () => {
                                                         G(),

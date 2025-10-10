@@ -1,93 +1,93 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(786920),
+    s = n(647438),
+    o = n(120356),
+    a = n.n(o),
+    i = n(137317),
     l = n(113434),
     c = n(497505),
-    u = n(164495),
-    d = n(759853),
-    f = n(95985),
-    _ = n(688927),
-    p = n(743294),
-    h = n(557579);
-let m = i.forwardRef(function (e, t) {
-    var n, a;
+    d = n(164495),
+    u = n(759853),
+    p = n(95985),
+    m = n(688927),
+    g = n(743294),
+    f = n(557579);
+let h = s.forwardRef(function (e, t) {
+    var n, o;
     let {
-            className: m,
-            expansionSpring: g,
-            isExpanded: E,
+            className: h,
+            expansionSpring: x,
+            isExpanded: _,
             isExpansionAnimationComplete: b,
-            quest: y,
-            taskDetails: O,
-            useReducedMotion: v,
-            onCtxMenuOpen: I,
-            onCtxMenuClose: T,
-            onCtxMenuSelect: S,
-            overlayRef: A,
+            quest: v,
+            taskDetails: j,
+            useReducedMotion: C,
+            onCtxMenuOpen: y,
+            onCtxMenuClose: E,
+            onCtxMenuSelect: O,
+            overlayRef: S,
         } = e,
-        C = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
-        N = (0, l.Jf)(y),
-        R = i.useRef(null),
-        P = (null == (a = y.userStatus) ? void 0 : a.enrolledAt) != null,
-        w = null != N ? N.percentComplete : O.percentComplete,
-        [D, x] = i.useState(!1);
+        T = (null == (n = v.userStatus) ? void 0 : n.completedAt) != null,
+        w = (0, l.Jf)(v),
+        P = s.useRef(null),
+        N = (null == (o = v.userStatus) ? void 0 : o.enrolledAt) != null,
+        A = null != w ? w.percentComplete : j.percentComplete,
+        [R, B] = s.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            C &&
-                (0, r.jsx)(d.Z, {
-                    expansionSpring: g,
-                    overlayRef: A,
-                    progressBarRef: R,
-                    quest: y,
-                    isExpanded: E,
-                    isHovered: D,
+            T &&
+                (0, r.jsx)(u.Z, {
+                    expansionSpring: x,
+                    overlayRef: S,
+                    progressBarRef: P,
+                    quest: v,
+                    isExpanded: _,
+                    isHovered: R,
                 }),
-            (0, r.jsx)(s.animated.div, {
+            (0, r.jsx)(i.animated.div, {
                 ref: t,
-                "aria-hidden": E && b,
-                className: o()(m, h.contentCollapsed, {
-                    [h.contentCollapsedExpanded]: E,
-                    [h.contentCollapsedAccepted]: P,
+                "aria-hidden": _ && b,
+                className: a()(h, f.contentCollapsed, {
+                    [f.contentCollapsedExpanded]: _,
+                    [f.contentCollapsedAccepted]: N,
                 }),
                 style: {
-                    opacity: g.to({
+                    opacity: x.to({
                         range: [0, 1],
                         output: [1, 0],
                     }),
-                    backgroundImage: C ? "linear-gradient(90deg, ".concat(p.aY, ", ").concat(p.v6, ")") : void 0,
+                    backgroundImage: T ? "linear-gradient(90deg, ".concat(g.aY, ", ").concat(g.v6, ")") : void 0,
                 },
-                onMouseEnter: () => x(!0),
-                onMouseLeave: () => x(!1),
+                onMouseEnter: () => B(!0),
+                onMouseLeave: () => B(!1),
                 children: (0, r.jsxs)("div", {
-                    className: h.contentCollapsedWrapper,
+                    className: f.contentCollapsedWrapper,
                     children: [
-                        C &&
+                        T &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(_.Z, {
-                                        quest: y,
-                                        onCtxMenuOpen: I,
-                                        onCtxMenuClose: T,
-                                        onCtxMenuSelect: S,
+                                    (0, r.jsx)(m.Z, {
+                                        quest: v,
+                                        onCtxMenuOpen: y,
+                                        onCtxMenuClose: E,
+                                        onCtxMenuSelect: O,
                                     }),
-                                    (0, r.jsx)("div", { className: h.divider }),
+                                    (0, r.jsx)("div", { className: f.divider }),
                                 ],
                             }),
-                        P
-                            ? (0, r.jsx)(f.Z, {
+                        N
+                            ? (0, r.jsx)(p.Z, {
                                   contentLocation: "collapsed",
-                                  quest: y,
-                                  progressBarRef: R,
+                                  quest: v,
+                                  progressBarRef: P,
                                   isExpanded: !1,
-                                  percentComplete: w,
+                                  percentComplete: A,
                               })
                             : null,
-                        C &&
-                            (0, r.jsx)(u.y, {
-                                quest: y,
-                                useReducedMotion: v,
+                        T &&
+                            (0, r.jsx)(d.y, {
+                                quest: v,
+                                useReducedMotion: C,
                                 isExpanded: !1,
                                 awaitingConsoleConnections: !1,
                                 hasMadeProgress: !0,
@@ -95,7 +95,7 @@ let m = i.forwardRef(function (e, t) {
                                 activeScreen: c.LI.DESKTOP,
                                 showBackButton: !1,
                                 onBack: () => {},
-                                taskDetails: O,
+                                taskDetails: j,
                                 sourceQuestContent: c.jn.QUEST_BAR_V2,
                             }),
                     ],

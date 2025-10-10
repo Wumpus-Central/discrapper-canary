@@ -13,9 +13,9 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(434650),
+    s = n(907331),
+    l = n(442837),
+    c = n(481060),
     u = n(607070),
     d = n(206295),
     f = n(70097),
@@ -44,7 +44,7 @@ function b(e) {
 function y(e) {
     let { onClick: t, children: n, className: i } = e;
     return null != t
-        ? (0, r.jsx)(l.P3F, {
+        ? (0, r.jsx)(c.P3F, {
               onClick: t,
               className: o()({ [g.cursorPointer]: null != t }, i),
               children: n,
@@ -72,9 +72,9 @@ function O(e) {
     T = b(T);
     let { primaryColor: C, secondaryColor: N } = (0, d.Z)(null != v ? v : h),
         R = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")"),
-        P = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        P = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         w = i.useRef(!1),
-        D = (0, c.O)(
+        D = (0, s.O)(
             (e) => {
                 if (!1 === w.current && e) {
                     var t;
@@ -93,16 +93,16 @@ function O(e) {
             },
             void 0,
         ),
-        x = null != h,
-        L = null != E && !1 === P,
-        j = x || L,
-        M = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        L = null != h,
+        x = null != E && !1 === P,
+        M = L || x,
+        j = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
         k = i.useRef(null),
         U = i.useCallback(() => {
             let e = k.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        G = i.useMemo(() => !!L && new URL(E).pathname.endsWith(".gif"), [L, E]),
+        G = i.useMemo(() => !!x && new URL(E).pathname.endsWith(".gif"), [x, E]),
         B = i.useMemo(() => {
             if (null != S)
                 return (e) => {
@@ -119,12 +119,12 @@ function O(e) {
         ref: D,
         className: g.embed,
         children: [
-            j &&
+            M &&
                 (0, r.jsxs)(y, {
                     onClick: Z,
-                    className: o()(g.bannerWrapper, M, { [g.showVideoOnFocus]: L }),
+                    className: o()(g.bannerWrapper, j, { [g.showVideoOnFocus]: x }),
                     children: [
-                        L &&
+                        x &&
                             (G
                                 ? (0, r.jsx)("div", {
                                       className: g.videoBanner,
@@ -138,7 +138,7 @@ function O(e) {
                                       muted: !0,
                                       className: g.videoBanner,
                                   })),
-                        x &&
+                        L &&
                             (0, r.jsx)("div", {
                                 className: g.staticBanner,
                                 style: { backgroundImage: "url(".concat(h, ")") },
@@ -153,7 +153,7 @@ function O(e) {
                         className: g.contentContainer,
                         children: [
                             null != n &&
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     color: "none",
                                     className: g.header,
@@ -171,7 +171,7 @@ function O(e) {
                                     (0, r.jsxs)("div", {
                                         className: g.content,
                                         children: [
-                                            (0, r.jsx)(l.Text, {
+                                            (0, r.jsx)(c.Text, {
                                                 variant: "text-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
@@ -196,7 +196,7 @@ function O(e) {
                                                 onClick: a,
                                                 disabled: o,
                                                 disabledReason: s,
-                                                submitting: c,
+                                                submitting: l,
                                                 trackingArea: u,
                                             } = e,
                                             d = 0 === t;
@@ -205,10 +205,10 @@ function O(e) {
                                             {
                                                 className: g.buttonWithPossibleDisabledTextWrapper,
                                                 children: [
-                                                    (0, r.jsx)(l.zxk, {
+                                                    (0, r.jsx)(c.zxk, {
                                                         variant: d ? "overlay-primary" : "overlay-secondary",
                                                         disabled: o || null != s,
-                                                        loading: c,
+                                                        loading: l,
                                                         icon: i,
                                                         text: n,
                                                         onClick: (e) => {
@@ -224,7 +224,7 @@ function O(e) {
                                                         fullWidth: !0,
                                                     }),
                                                     null != s &&
-                                                        (0, r.jsx)(l.Text, {
+                                                        (0, r.jsx)(c.Text, {
                                                             variant: "text-xs/medium",
                                                             color: "none",
                                                             className: g.disabledReason,

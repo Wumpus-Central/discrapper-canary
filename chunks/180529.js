@@ -3,8 +3,8 @@ var r,
     i = n(951288),
     l = n(647438),
     s = n(796075),
-    o = n(786920),
-    a = n(481060);
+    a = n(137317),
+    o = n(481060);
 let c = null != (r = window.ResizeObserver) ? r : s.d;
 function u(e) {
     let { show: t, children: n, top: r = 0, bottom: s = 0 } = e,
@@ -27,7 +27,7 @@ function u(e) {
                 }
             );
         })(),
-        h = (0, a.q_F)({
+        h = (0, o.q_F)({
             from: {
                 height: 0,
                 paddingBottom: "0px",
@@ -43,7 +43,7 @@ function u(e) {
                 friction: 26,
             },
         }),
-        g = (0, a.q_F)({
+        g = (0, o.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
@@ -51,14 +51,14 @@ function u(e) {
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e),
             },
         });
-    return (0, i.jsx)(o.animated.div, {
+    return (0, i.jsx)(a.animated.div, {
         style: {
             overflow: "hidden",
             height: h.height,
             paddingBottom: h.paddingBottom,
             marginTop: h.marginTop,
         },
-        children: (0, i.jsx)(o.animated.div, {
+        children: (0, i.jsx)(a.animated.div, {
             style: { opacity: g.opacity },
             ref: u,
             children: n,

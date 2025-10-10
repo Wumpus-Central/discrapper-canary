@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(823379),
     i = n(131085),
     l = n(388032);
-function a(e, t) {
+function s(e, t) {
     return l.intl.formatToPlainString(l.t.g79C8f, {
-        primaryColor: s(e),
-        secondaryColor: s(t),
+        primaryColor: a(e),
+        secondaryColor: a(t),
     });
 }
-function s(e) {
+function a(e) {
     switch (e) {
         case i.KD.HOT_PINK:
             return l.intl.string(l.t.DfOkjI);

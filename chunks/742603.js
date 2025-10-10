@@ -27,8 +27,8 @@ var r = n(120356),
     P = n(618158),
     I = n(358221),
     Z = n(362721),
-    N = n(887012),
-    T = n(613548),
+    T = n(887012),
+    N = n(613548),
     A = n(221888),
     w = n(339340),
     M = n(354459),
@@ -76,7 +76,7 @@ function H(e) {
 function V(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
-        a = (0, N.Z)(l, !0),
+        a = (0, T.Z)(l, !0),
         o = (0, g.qY)(l.id),
         c = null != o ? (0, b.DK)(o) : null,
         d = null != o;
@@ -147,8 +147,8 @@ function F(e) {
         [S] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         P = L.intl.string(L.t.BVZqJi);
     t.isDM() ? (P = L.intl.string(L.t.jN2DfX)) : t.isGroupDM() && (P = L.intl.string(L.t["e5y+go"]));
-    let N = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
-        A = t.isGuildVoice() && u && null != N && N.length > 0,
+    let T = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
+        A = t.isGuildVoice() && u && null != T && T.length > 0,
         R = (0, Z.ZP)(t),
         B = A
             ? (0, i.jsx)(o.u, {
@@ -203,7 +203,7 @@ function F(e) {
                           (0, i.jsx)(s.Text, {
                               variant: "text-xs/normal",
                               className: l()(D.channelStatus, U.markup, { [D.hoverable]: R }),
-                              children: O.Z.parseVoiceChannelStatus(N, !0, { channelId: t.id }),
+                              children: O.Z.parseVoiceChannelStatus(T, !0, { channelId: t.id }),
                           }),
                           R &&
                               (0, i.jsx)(s.vdY, {
@@ -231,7 +231,7 @@ function F(e) {
                         innerClassName: D.headerBarChildren,
                         toolbarClassName: D.toolbar,
                         childrenBottom: B,
-                        toolbar: (0, i.jsx)(T.Z, {
+                        toolbar: (0, i.jsx)(N.Z, {
                             channel: t,
                             appContext: c,
                             inCall: u,

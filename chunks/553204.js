@@ -1,23 +1,23 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(477690),
+    s = n.n(l),
+    a = n(477690),
     o = n(481060),
     c = n(91218),
     d = n(518738),
     u = n(208567),
-    m = n(624138),
-    g = n(388032),
+    g = n(624138),
+    m = n(388032),
     p = n(257466);
-let h = (0, m.Mg)(s.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
-function f(e) {
-    let { role: t, "aria-label": n = g.intl.string(g.t["MsUY/f"]), className: l, onClick: s, disabled: m = !1 } = e,
-        f = i.useRef(null),
-        b = i.useMemo(() => (0, d.Kz)(t, h), [t]),
-        x =
-            null != b
+let f = (0, g.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+function h(e) {
+    let { role: t, "aria-label": n = m.intl.string(m.t["MsUY/f"]), className: l, onClick: a, disabled: g = !1 } = e,
+        h = i.useRef(null),
+        x = i.useMemo(() => (0, d.Kz)(t, f), [t]),
+        b =
+            null != x
                 ? (0, r.jsx)(
                       c.Z,
                       (function (e) {
@@ -49,7 +49,7 @@ function f(e) {
                               enableTooltip: !1,
                               className: p.icon,
                           },
-                          b,
+                          x,
                       ),
                   )
                 : (0, r.jsx)(o.FmF, {
@@ -58,19 +58,19 @@ function f(e) {
                       className: p.icon,
                   });
     return (0, r.jsx)(o.tEY, {
-        ringTarget: f,
+        ringTarget: h,
         children: (0, r.jsxs)(o.P3F, {
             "aria-label": n,
-            className: a()(p.container, l, { [p.disabled]: m }),
-            onClick: m ? void 0 : s,
-            "aria-disabled": m,
+            className: s()(p.container, l, { [p.disabled]: g }),
+            onClick: g ? void 0 : a,
+            "aria-disabled": g,
             children: [
                 (0, r.jsx)("div", {
-                    ref: f,
+                    ref: h,
                     className: p.preview,
-                    children: x,
+                    children: b,
                 }),
-                null != b ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
+                null != x ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null,
             ],
         }),
     });

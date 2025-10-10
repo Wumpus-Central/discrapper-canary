@@ -1,6 +1,6 @@
 n.d(t, { Z: () => a });
 var r = n(647438),
-    i = n(434650);
+    i = n(907331);
 function a(e) {
     let { onVisible: t, threshold: n, minTimeVisibleMs: a } = e,
         o = r.useRef(!1),

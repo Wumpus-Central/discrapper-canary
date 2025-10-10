@@ -1,105 +1,105 @@
 n.d(t, { Z: () => N }), n(388685), n(953529);
-var r = n(951288),
+var a = n(951288),
     o = n(647438),
-    a = n(512722),
-    i = n.n(a),
-    s = n(442837),
-    l = n(692547),
+    s = n(512722),
+    r = n.n(s),
+    l = n(442837),
+    i = n(692547),
     c = n(755721),
     u = n(481060),
     d = n(771308),
-    f = n(13430),
-    _ = n(594174),
-    p = n(63063),
+    _ = n(13430),
+    p = n(594174),
+    f = n(63063),
     m = n(981631),
-    b = n(723359),
-    h = n(388032),
-    x = n(181576);
+    h = n(723359),
+    b = n(388032),
+    E = n(181576);
 function N(e) {
     let { onComplete: t, onClose: n } = e,
-        [a, N] = o.useState(null),
-        [y, j] = o.useState(null),
-        [E, v] = o.useState(!1),
-        C = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        T = o.useRef(null);
-    async function O(e) {
-        e.preventDefault(), i()(null != a, "Cannot submit null birthday."), v(!0);
+        [s, N] = o.useState(null),
+        [x, T] = o.useState(null),
+        [A, C] = o.useState(!1),
+        j = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        O = o.useRef(null);
+    async function y(e) {
+        e.preventDefault(), r()(null != s, "Cannot submit null birthday."), C(!0);
         try {
-            await d.Av(a, b.L0.NEW_USER_FLOW), t();
+            await d.Av(s, h.L0.NEW_USER_FLOW), t();
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) d.wE(b.L0.NEW_USER_FLOW), d.hp(b.L0.NEW_USER_FLOW), n();
+            if (null != e.body && null != e.body.date_of_birth) d.wE(h.L0.NEW_USER_FLOW), d.hp(h.L0.NEW_USER_FLOW), n();
             else {
-                var r;
-                (null == e || null == (r = e.body) ? void 0 : r.username) != null
-                    ? j(h.intl.string(h.t["TGg/2t"]))
-                    : j(null == e ? void 0 : e.body.message);
+                var a;
+                (null == e || null == (a = e.body) ? void 0 : a.username) != null
+                    ? T(b.intl.string(b.t["TGg/2t"]))
+                    : T(null == e ? void 0 : e.body.message);
             }
         }
-        v(!1);
+        C(!1);
     }
     o.useEffect(() => {
-        null != C && null != C.nsfwAllowed && t();
-    }, [C, t]);
-    let I = o.useCallback(
+        null != j && null != j.nsfwAllowed && t();
+    }, [j, t]);
+    let v = o.useCallback(
             (e) => {
                 N(e);
             },
             [N],
         ),
-        g = o.useCallback(() => {
+        I = o.useCallback(() => {
             var e;
-            null == (e = T.current) || e.focus();
-        }, [T]);
-    return null == C
+            null == (e = O.current) || e.focus();
+        }, [O]);
+    return null == j
         ? null
-        : (0, r.jsxs)("form", {
-              className: x.content,
-              onSubmit: O,
+        : (0, a.jsxs)("form", {
+              className: E.content,
+              onSubmit: y,
               children: [
-                  (0, r.jsx)(u.gw7, {
+                  (0, a.jsx)(u.gw7, {
                       size: "custom",
                       width: 56,
                       height: 40,
-                      className: x.logo,
-                      color: l.Z.unsafe_rawColors.BRAND_500.css,
+                      className: E.logo,
+                      color: i.Z.unsafe_rawColors.BRAND_500.css,
                   }),
-                  (0, r.jsx)(u.X6q, {
-                      className: x.title,
+                  (0, a.jsx)(u.X6q, {
+                      className: E.title,
                       variant: "heading-xl/semibold",
-                      children: h.intl.string(h.t.n7i7sr),
+                      children: b.intl.string(b.t.n7i7sr),
                   }),
-                  (0, r.jsx)(u.Text, {
+                  (0, a.jsx)(u.Text, {
                       color: "text-default",
-                      className: x.description,
+                      className: E.description,
                       variant: "text-md/normal",
-                      children: h.intl.format(h.t.fa8kW1, { helpURL: p.Z.getArticleURL(m.BhN.AGE_GATE) }),
+                      children: b.intl.format(b.t.fa8kW1, { helpURL: f.Z.getArticleURL(m.BhN.AGE_GATE) }),
                   }),
-                  (0, r.jsx)(u.ze6, {
+                  (0, a.jsx)(u.ze6, {
                       theme: m.BRd.LIGHT,
-                      children: (0, r.jsx)(f.Z, {
+                      children: (0, a.jsx)(_.Z, {
                           required: !0,
                           autoFocus: !0,
-                          wrapperClassName: x.formItem,
-                          label: h.intl.string(h.t.rhBeKS),
+                          wrapperClassName: E.formItem,
+                          label: b.intl.string(b.t.rhBeKS),
                           name: "birthday",
-                          onChange: I,
-                          onPopulated: g,
-                          error: y,
-                          value: a,
+                          onChange: v,
+                          onPopulated: I,
+                          error: x,
+                          value: s,
                       }),
                   }),
-                  (0, r.jsx)("div", {
-                      className: x.footer,
-                      children: (0, r.jsx)("div", {
-                          className: x.buttonWrapper,
-                          children: (0, r.jsx)(c.zx, {
-                              buttonRef: T,
+                  (0, a.jsx)("div", {
+                      className: E.footer,
+                      children: (0, a.jsx)("div", {
+                          className: E.buttonWrapper,
+                          children: (0, a.jsx)(c.zx, {
+                              buttonRef: O,
                               type: "submit",
                               size: c.zx.Sizes.LARGE,
-                              submitting: E,
-                              disabled: null == a,
+                              submitting: A,
+                              disabled: null == s,
                               fullWidth: !0,
-                              children: h.intl.string(h.t.PDTjLC),
+                              children: b.intl.string(b.t.PDTjLC),
                           }),
                       }),
                   }),

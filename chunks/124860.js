@@ -1,6 +1,6 @@
 n.d(t, {
     Cd: () => m,
-    YR: () => p,
+    YR: () => x,
 }),
     n(388685),
     n(415506);
@@ -59,9 +59,9 @@ function g(e, t) {
 }
 function m(e) {
     var t, n;
-    let { mfaChallenge: h, mfaFinish: m, onEarlyClose: x, onClose: p, headerAlignStart: S, width: j = 440 } = e,
-        [b, y] = r.useState(null != (n = null == (t = h.methods[0]) ? void 0 : t.type) ? n : "select"),
-        [v, C] = r.useState(b),
+    let { mfaChallenge: h, mfaFinish: m, onEarlyClose: p, onClose: x, headerAlignStart: S, width: b = 440 } = e,
+        [j, y] = r.useState(null != (n = null == (t = h.methods[0]) ? void 0 : t.type) ? n : "select"),
+        [v, C] = r.useState(j),
         Z = async (e) => {
             let { mfaType: t, data: n } = e;
             await m({
@@ -69,18 +69,18 @@ function m(e) {
                 data: n,
                 ticket: h.ticket,
             }),
-                null != p && p();
+                null != x && x();
         },
         w = {
             mfaChallenge: h,
             finish: Z,
             setSlide: y,
-            onClose: x,
+            onClose: p,
             headerAlignStart: S,
         };
     return (0, l.jsxs)(i.MyZ, {
-        activeSlide: b,
-        width: j,
+        activeSlide: j,
+        width: b,
         onSlideReady: C,
         children: [
             (0, l.jsx)(i.Mi4, {
@@ -110,7 +110,7 @@ function m(e) {
         ],
     });
 }
-function x(e) {
+function p(e) {
     let { mfaChallenge: t, finish: n, transitionState: r, onClose: s } = e;
     return (0, l.jsx)(i.Y0X, {
         transitionState: r,
@@ -125,11 +125,11 @@ function x(e) {
         }),
     });
 }
-function p(e, t, n) {
+function x(e, t, n) {
     (0, i.h7j)(
         (n) =>
             (0, l.jsx)(
-                x,
+                p,
                 f(
                     {
                         finish: t,

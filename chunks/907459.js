@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -48,7 +48,7 @@ let D = () => {
             subscriptionTier: R.Si.TIER_2,
         });
     },
-    x = (e) => {
+    L = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
                 null == t || t(N.L.DISMISS), (0, h.Ll)(), (0, T.O)();
@@ -78,7 +78,7 @@ let D = () => {
             ],
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([S.Z], () => S.Z.isUpsellPreview),
             a = () => {
@@ -100,7 +100,7 @@ let D = () => {
             ],
         });
     };
-function j(e) {
+function M(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
         { analyticsLocations: a } = (0, p.ZP)(_.Z.APP_ICON_EDITOR),
         l = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
@@ -130,7 +130,7 @@ function j(e) {
                   "data-app-right-panel": !0,
                   children: (0, r.jsxs)(u.y5t, {
                       children: [
-                          (0, r.jsx)(x, { markAsDismissed: n }),
+                          (0, r.jsx)(L, { markAsDismissed: n }),
                           (0, r.jsx)(u.Ttm, {
                               className: w.editorBody,
                               children: (0, r.jsx)(A.Z, {
@@ -138,7 +138,7 @@ function j(e) {
                                   isEditor: !0,
                               }),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, r.jsx)(x, {
                               markAsDismissed: n,
                               isCoachmark: t,
                           }),

@@ -4,24 +4,24 @@ n(647438);
 var i = n(481060),
     l = n(434404),
     a = n(962086),
-    o = n(303737),
-    s = n(981631),
+    s = n(303737),
+    o = n(981631),
     c = n(388032),
-    u = n(941057),
-    d = n(497224);
+    d = n(941057),
+    u = n(497224);
 function p(e) {
     let { guildId: t } = e;
     return (0, r.jsx)("div", {
-        className: u.upsellPage,
+        className: d.upsellPage,
         children: (0, r.jsxs)("div", {
-            className: u.upsellContainer,
+            className: d.upsellContainer,
             children: [
                 (0, r.jsx)("img", {
-                    src: d,
+                    src: u,
                     alt: "",
                 }),
                 (0, r.jsxs)("div", {
-                    className: u.upsellContent,
+                    className: d.upsellContent,
                     children: [
                         (0, r.jsx)(i.X6q, {
                             variant: "heading-xl/semibold",
@@ -29,19 +29,19 @@ function p(e) {
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
-                            className: u.bodyText,
+                            className: d.bodyText,
                             children: c.intl.string(c.t.GpOWIi),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: u.__invalid_button,
+                            className: d.__invalid_button,
                             children: (0, r.jsx)(i.zxk, {
                                 variant: "primary",
                                 text: c.intl.string(c.t["I/XhUl"]),
                                 onClick: () => {
                                     (0, a.mL)(t),
-                                        l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS),
-                                        (0, o.GN)(t);
+                                        l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS),
+                                        (0, s.GN)(t);
                                 },
                             }),
                         }),

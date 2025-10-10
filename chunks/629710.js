@@ -9,7 +9,7 @@ n.d(t, {
     X6: () => I,
     aQ: () => U,
     g4: () => N,
-    hi: () => x,
+    hi: () => L,
     kC: () => v,
     kh: () => O,
     px: () => G,
@@ -47,7 +47,7 @@ let g = -1,
     y = (e, t) => {
         let n = d.default.getCurrentUser();
         if (null == n || t === n.id) return m.qn.NONE;
-        let r = x(e, t, [l.Z, u.Z]);
+        let r = L(e, t, [l.Z, u.Z]);
         return null == r ? m.qn.NONE : O(r);
     },
     O = (e) => {
@@ -219,11 +219,11 @@ function R(e, t) {
     if (0 === n.length) return !1;
     switch (e.type) {
         case p.l.Embed:
-            return L(e.media, n);
+            return x(e.media, n);
         case p.l.Attachment:
-            return j(e.media, n);
-        case p.l.GenericMedia:
             return M(e.media, n);
+        case p.l.GenericMedia:
+            return j(e.media, n);
         default:
             return !1;
     }
@@ -265,7 +265,7 @@ function D(e) {
     for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function x(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.Z, u.Z],
         [r, i] = n,
         a = r.getChannel(e),
@@ -278,7 +278,7 @@ function x(e, t) {
               : p.n.NON_FRIEND_DM
           : p.n.GUILD;
 }
-function L(e, t) {
+function x(e, t) {
     var n, r, i, a, o, s, l;
     return (
         !(
@@ -309,7 +309,7 @@ function L(e, t) {
         ) && k(B(e), t)
     );
 }
-function j(e, t) {
+function M(e, t) {
     var n;
     return (
         0 !== t.length &&
@@ -324,7 +324,7 @@ function j(e, t) {
         k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
-function M(e, t) {
+function j(e, t) {
     var n;
     return (
         0 !== t.length &&

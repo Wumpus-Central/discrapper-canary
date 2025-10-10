@@ -1,138 +1,138 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    a = n(442837),
-    o = n(46973),
-    s = n(481060),
-    l = n(846027),
+    o = n(442837),
+    l = n(46973),
+    a = n(481060),
+    s = n(846027),
     c = n(284056),
     u = n(410575),
     d = n(906732),
-    f = n(213609),
-    _ = n(650958),
-    p = n(453925),
-    h = n(967003),
-    m = n(632304),
-    g = n(131951),
-    E = n(19780),
-    b = n(556296),
-    y = n(358085),
-    O = n(822556),
-    v = n(981631),
-    I = n(345655),
-    T = n(65154),
-    S = n(388032),
-    A = n(895634);
-function C(e) {
+    p = n(213609),
+    m = n(650958),
+    f = n(453925),
+    b = n(967003),
+    g = n(632304),
+    v = n(131951),
+    y = n(19780),
+    j = n(556296),
+    O = n(358085),
+    h = n(822556),
+    x = n(981631),
+    P = n(345655),
+    _ = n(65154),
+    w = n(388032),
+    C = n(895634);
+function E(e) {
     let {
             appContext: t,
             onInteraction: n,
-            onSelect: C,
-            onClose: N,
-            maybeRenderPTTCheckbox: R = !1,
-            renderDeafenCheckbox: P = !1,
-            renderInputProfiles: w = !1,
+            onSelect: E,
+            onClose: I,
+            maybeRenderPTTCheckbox: T = !1,
+            renderDeafenCheckbox: S = !1,
+            renderInputProfiles: N = !1,
             renderOutputDevices: D = !1,
-            renderOutputVolume: x = !1,
-            renderInputDevices: L = !1,
-            renderInputVolume: j = !1,
-            maybeRenderInputMeter: k = !1,
-            renderSettingsButton: M = !1,
+            renderOutputVolume: Z = !1,
+            renderInputDevices: k = !1,
+            renderInputVolume: M = !1,
+            maybeRenderInputMeter: A = !1,
+            renderSettingsButton: R = !1,
         } = e,
-        { analyticsLocations: U } = (0, d.ZP)();
-    (0, f.Z)({
+        { analyticsLocations: V } = (0, d.ZP)();
+    (0, p.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: U },
+        properties: { location_stack: V },
     });
-    let G = (0, O.Z)(t),
-        B = (0, _.M)({
-            deviceType: T.h7.AUDIO_INPUT,
-            analyticsLocations: U,
+    let F = (0, h.Z)(t),
+        L = (0, m.M)({
+            deviceType: _.h7.AUDIO_INPUT,
+            analyticsLocations: V,
             asSubmenu: !0,
         }),
-        Z = (0, _.M)({
-            deviceType: T.h7.AUDIO_OUTPUT,
-            analyticsLocations: U,
+        U = (0, m.M)({
+            deviceType: _.h7.AUDIO_OUTPUT,
+            analyticsLocations: V,
             asSubmenu: !0,
         }),
-        F = (0, a.e7)([g.Z], () => g.Z.getActiveInputProfile()),
-        V = (0, h.Z)(U),
-        H = (0, p.Z)(U),
-        Y = (0, m.Z)(U),
-        W = o.Yn.DEFAULT,
-        K = g.Z.isSelfDeaf(W),
-        z = (0, a.e7)([g.Z], () => g.Z.getMode()),
-        q = z === v.pM4.VOICE_ACTIVITY ? v.pM4.PUSH_TO_TALK : v.pM4.VOICE_ACTIVITY,
-        X = (0, a.e7)([g.Z, b.ZP], () => {
+        Y = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
+        H = (0, b.Z)(V),
+        z = (0, f.Z)(V),
+        q = (0, g.Z)(V),
+        B = l.Yn.DEFAULT,
+        W = v.Z.isSelfDeaf(B),
+        X = (0, o.e7)([v.Z], () => v.Z.getMode()),
+        K = X === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
+        G = (0, o.e7)([v.Z, j.ZP], () => {
             var e;
-            let t = (null == (e = g.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
-                n = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK, !1, !0),
-                r = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
+            let t = (null == (e = v.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
+                n = null != j.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK, !1, !0),
+                r = null != j.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
             return t || n || r;
         }),
-        Q = (0, a.e7)([E.Z], () => null != E.Z.getChannelId());
+        Q = (0, o.e7)([y.Z], () => null != y.Z.getChannelId());
     return (0, r.jsx)(u.Z, {
-        object: v.qAy.CONTEXT_MENU,
-        children: (0, r.jsxs)(s.v2r, {
-            onSelect: C,
+        object: x.qAy.CONTEXT_MENU,
+        children: (0, r.jsxs)(a.v2r, {
+            onSelect: E,
             onInteraction: n,
-            onClose: N,
+            onClose: I,
             navId: "audio-device-context",
             variant: "fixed",
-            "aria-label": S.intl.string(S.t.ZR1Ss7),
-            className: A.menu,
+            "aria-label": w.intl.string(w.t.ZR1Ss7),
+            className: C.menu,
             children: [
-                (0, r.jsxs)(s.kSQ, {
-                    children: [L && B, w && V, D && Z],
+                (0, r.jsxs)(a.kSQ, {
+                    children: [k && L, N && H, D && U],
                 }),
-                (0, r.jsxs)(s.kSQ, {
+                (0, r.jsxs)(a.kSQ, {
                     children: [
-                        j && H,
-                        k &&
+                        M && z,
+                        A &&
                             Q &&
-                            (0, r.jsx)(s.II_, {
+                            (0, r.jsx)(a.II_, {
                                 id: "input-device-meter",
                                 control: () =>
                                     (0, r.jsx)(c.Z, {
                                         notchBackground: c._.BLACK,
-                                        location: { section: v.jXE.CONTEXT_MENU },
+                                        location: { section: x.jXE.CONTEXT_MENU },
                                         meterOnly: !0,
-                                        containerClassName: A.customMenuItem,
-                                        notchClassName: A.customNotches,
+                                        containerClassName: C.customMenuItem,
+                                        notchClassName: C.customNotches,
                                     }),
                             }),
-                        x && Y,
+                        Z && q,
                     ],
                 }),
-                (0, r.jsxs)(s.kSQ, {
+                (0, r.jsxs)(a.kSQ, {
                     children: [
-                        R && y.isPlatformEmbedded && X
-                            ? (0, r.jsx)(s.S89, {
-                                  checked: z === v.pM4.PUSH_TO_TALK,
+                        T && O.isPlatformEmbedded && G
+                            ? (0, r.jsx)(a.S89, {
+                                  checked: X === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
-                                  label: S.intl.string(S.t.Q8gkVF),
-                                  action: () => l.Z.setMode(q, void 0, void 0, { analyticsLocations: U }),
-                                  disabled: F === I._.STUDIO,
+                                  label: w.intl.string(w.t.Q8gkVF),
+                                  action: () => s.Z.setMode(K, void 0, void 0, { analyticsLocations: V }),
+                                  disabled: Y === P._.STUDIO,
                               })
                             : null,
-                        P &&
+                        S &&
                             (0, r.jsx)(
-                                s.S89,
+                                a.S89,
                                 {
                                     id: "deafen",
-                                    label: S.intl.string(S.t.wjcRFR),
+                                    label: w.intl.string(w.t.wjcRFR),
                                     action: () =>
-                                        l.Z.toggleSelfDeaf({
-                                            context: W,
+                                        s.Z.toggleSelfDeaf({
+                                            context: B,
                                             location: "AudioDeviceMenu",
                                         }),
-                                    checked: K,
+                                    checked: W,
                                 },
                                 "self-deafen",
                             ),
-                        M && G,
+                        R && F,
                     ],
                 }),
             ],

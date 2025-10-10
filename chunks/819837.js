@@ -1,11 +1,11 @@
-t.d(e, { O: () => f });
-var n = t(951288);
-t(647438);
-var r = t(331595),
-    l = t(84502);
-let i = ["#FFB84B", "#FFE361"],
-    s = [0.56, 0.77],
-    a = [
+g.d(t, { O: () => l });
+var v = g(951288);
+g(647438);
+var e = g(331595),
+    r = g(84502);
+let f = ["#FFB84B", "#FFE361"],
+    B = [0.56, 0.77],
+    h = [
         {
             base: 3,
             tint: 1,
@@ -15,9 +15,9 @@ let i = ["#FFB84B", "#FFE361"],
             tint: 1,
         },
     ],
-    o = ["#FF1C90", "#FF7FC0"],
-    g = [0.2, 0.4],
-    c = [
+    n = ["#FF1C90", "#FF7FC0"],
+    C = [0.2, 0.4],
+    w = [
         {
             base: 7,
             tint: 1,
@@ -27,222 +27,222 @@ let i = ["#FFB84B", "#FFE361"],
             tint: 1,
         },
     ],
-    f = (A) => {
-        var e,
-            t,
-            { width: f = 24, height: v = 24, primaryTintColor: h, secondaryTintColor: u } = A,
-            d = (function (A, e) {
+    l = (A) => {
+        var t,
+            g,
+            { width: l = 24, height: Q = 24, primaryTintColor: i, secondaryTintColor: H } = A,
+            o = (function (A, t) {
                 if (null == A) return {};
-                var t,
-                    n,
-                    r = (function (A, e) {
+                var g,
+                    v,
+                    e = (function (A, t) {
                         if (null == A) return {};
-                        var t,
-                            n,
-                            r = {},
-                            l = Object.keys(A);
-                        for (n = 0; n < l.length; n++) (t = l[n]), e.indexOf(t) >= 0 || (r[t] = A[t]);
-                        return r;
-                    })(A, e);
+                        var g,
+                            v,
+                            e = {},
+                            r = Object.keys(A);
+                        for (v = 0; v < r.length; v++) (g = r[v]), t.indexOf(g) >= 0 || (e[g] = A[g]);
+                        return e;
+                    })(A, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(A);
-                    for (n = 0; n < l.length; n++)
-                        (t = l[n]),
-                            !(e.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(A, t) && (r[t] = A[t]);
+                    var r = Object.getOwnPropertySymbols(A);
+                    for (v = 0; v < r.length; v++)
+                        (g = r[v]),
+                            !(t.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (e[g] = A[g]);
                 }
-                return r;
+                return e;
             })(A, ["width", "height", "primaryTintColor", "secondaryTintColor"]);
-        let { primaryColorsTransformed: E, secondaryColorsTransformed: C } = (0, l.s)({
-            primaryBaseColors: i,
-            primaryTintColor: h,
-            primaryTintLuminances: s,
-            primaryLuminanceWeights: a,
-            secondaryBaseColors: o,
-            secondaryTintColor: u,
-            secondaryTintLuminances: g,
-            secondaryLuminanceWeights: c,
+        let { primaryColorsTransformed: s, secondaryColorsTransformed: a } = (0, r.s)({
+            primaryBaseColors: f,
+            primaryTintColor: i,
+            primaryTintLuminances: B,
+            primaryLuminanceWeights: h,
+            secondaryBaseColors: n,
+            secondaryTintColor: H,
+            secondaryTintLuminances: C,
+            secondaryLuminanceWeights: w,
         });
-        return (0, n.jsxs)(
+        return (0, v.jsxs)(
             "svg",
-            ((e = (function (A) {
-                for (var e = 1; e < arguments.length; e++) {
-                    var t = null != arguments[e] ? arguments[e] : {},
-                        n = Object.keys(t);
+            ((t = (function (A) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var g = null != arguments[t] ? arguments[t] : {},
+                        v = Object.keys(g);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(t).filter(function (A) {
-                                return Object.getOwnPropertyDescriptor(t, A).enumerable;
+                        (v = v.concat(
+                            Object.getOwnPropertySymbols(g).filter(function (A) {
+                                return Object.getOwnPropertyDescriptor(g, A).enumerable;
                             }),
                         )),
-                        n.forEach(function (e) {
-                            var n;
-                            (n = t[e]),
-                                e in A
-                                    ? Object.defineProperty(A, e, {
-                                          value: n,
+                        v.forEach(function (t) {
+                            var v;
+                            (v = g[t]),
+                                t in A
+                                    ? Object.defineProperty(A, t, {
+                                          value: v,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (A[e] = n);
+                                    : (A[t] = v);
                         });
                 }
                 return A;
-            })({}, (0, r.Z)(d))),
-            (t = t =
+            })({}, (0, e.Z)(o))),
+            (g = g =
                 {
-                    width: f,
-                    height: v,
+                    width: l,
+                    height: Q,
                     viewBox: "0 0 16 16",
                     fill: "none",
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M0.999985 2V14H1.99998V15H14V14H15V2H14V3H13V4H11V3H9.99998V2H8.99998V1H6.99998V2H5.99998V3H4.99998V4H2.99998V3H1.99998V2H0.999985Z",
-                            fill: E[1],
+                            fill: s[1],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M0.999985 3H1.99998L1.99998 2L0.999985 2L0.999985 3Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M1.99998 4H2.99998V3H1.99998V4Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M4.99998 4H5.99998V3H4.99998V4Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M9.99998 4H11V3H9.99998V4Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M9 2.00002V1.00002H7V2.00002H6V3.00002H7V5.00002H9V3.00002H10V2.00002H9Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M2 5.00002V4.00002H1V13H2V14H3V5.00002H2Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M13 5.00002V4.00002H14V15H12V5.00002H13Z",
-                            fill: E[0],
+                            fill: s[0],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M4.99999 5.00002H3V15H4.99999V5.00002Z",
-                            fill: E[0],
+                            fill: s[0],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M6.99998 15H8.99998V13H6.99998V15Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M10 7.00002V6.00002H9V5.00002H7V6.00002H6V7.00002H5V8.00001H6V11H7V12H9V11H10V8.00001H11V7.00002H10Z",
-                            fill: C[0],
+                            fill: a[0],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M6.99998 12H8.99998V10H6.99998V12Z",
-                            fill: C[1],
+                            fill: a[1],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M9 7.00002V6.00002H7V7.00002H6V9.00001H10V7.00002H9Z",
-                            fill: C[1],
+                            fill: a[1],
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M6.99998 9.00002H8.99998V7.00002H6.99998V9.00002Z",
                             fill: "white",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M0.999985 15H1.99998L1.99998 14H0.999985L0.999985 15Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M1.99998 3H2.99998V2L1.99998 2V3Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M4.99998 3H5.99998V2L4.99998 2V3Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M5.99998 2L6.99998 2V1L5.99998 1V2Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M6.99998 1L8.99998 1V0L6.99998 0V1Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M2.99998 4L4.99998 4V3H2.99998V4Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M8.99998 2L9.99998 2V1L8.99998 1V2Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M9.99998 3H11V2L9.99998 2V3Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M13 3H14V2L13 2V3Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M11 4L13 4V3H11V4Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M14 15H15V14H14V15Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M1 1.00002V1.52588e-05H0V14H1V2.00002H2V1.00002H1Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M15 1.52588e-05V1.00002H14V2.00002H15V14H16V1.52588e-05H15Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M14 15H1.99998V16H14V15Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M6.99998 13H8.99998V12H6.99998V13Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M8.99998 12H9.99998V11H8.99998V12Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M5.99998 12H6.99998V11H5.99998V12Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M4.99998 11H5.99998V8H4.99998V11Z",
                             fill: "black",
                         }),
-                        (0, n.jsx)("path", {
+                        (0, v.jsx)("path", {
                             d: "M9.99998 11H11V8H9.99998V11Z",
                             fill: "black",
                         }),
                     ],
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (A, e) {
-                      var t = Object.keys(A);
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(g))
+                : (function (A, t) {
+                      var g = Object.keys(A);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(A);
-                          t.push.apply(t, n);
+                          var v = Object.getOwnPropertySymbols(A);
+                          g.push.apply(g, v);
                       }
-                      return t;
-                  })(Object(t)).forEach(function (A) {
-                      Object.defineProperty(e, A, Object.getOwnPropertyDescriptor(t, A));
+                      return g;
+                  })(Object(g)).forEach(function (A) {
+                      Object.defineProperty(t, A, Object.getOwnPropertyDescriptor(g, A));
                   }),
-            e),
+            t),
         );
     };

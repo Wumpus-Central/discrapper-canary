@@ -1,11 +1,11 @@
-r.d(t, { Z: () => a });
+r.d(t, { Z: () => o });
 var n = r(951288);
 r(647438);
 var i = r(325767);
-function a(e) {
+function o(e) {
     var t,
         r,
-        { width: a = 16, height: o = 16, color: s = "currentColor", foreground: l } = e,
+        { width: o = 16, height: a = 16, color: s = "currentColor", foreground: l } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -15,14 +15,14 @@ function a(e) {
                     var r,
                         n,
                         i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
@@ -56,8 +56,8 @@ function a(e) {
         })({}, (0, i.Z)(c))),
         (r = r =
             {
-                width: a,
-                height: o,
+                width: o,
+                height: a,
                 viewBox: "0 0 23 23",
                 children: (0, n.jsx)("path", {
                     fillRule: "evenodd",

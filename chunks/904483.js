@@ -1,33 +1,33 @@
-n.d(t, { Z: () => g });
-var i = n(951288);
+n.d(t, { Z: () => p });
+var r = n(951288);
 n(647438);
-var r = n(442837),
+var i = n(442837),
     l = n(481060),
-    s = n(496675),
-    o = n(981631),
-    a = n(647086),
-    c = n(388032);
-function u(e) {
+    a = n(496675),
+    c = n(981631),
+    o = n(647086),
+    u = n(388032);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -40,8 +40,8 @@ function d(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -50,27 +50,27 @@ function d(e, t) {
         e
     );
 }
-function g(e) {
-    let t = (0, r.e7)([s.Z], () => s.Z.can(o.Plq.MANAGE_CHANNELS, e));
+function p(e) {
+    let t = (0, i.e7)([a.Z], () => a.Z.can(c.Plq.MANAGE_CHANNELS, e));
     return __OVERLAY__
         ? null
-        : e.id === a._
-          ? (0, i.jsx)(l.sNh, {
+        : e.id === o._
+          ? (0, r.jsx)(l.sNh, {
                 id: "create-category",
-                label: c.intl.string(c.t["ISN+ND"]),
+                label: u.intl.string(u.t["ISN+ND"]),
                 action: () =>
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e("1812").then(n.bind(n, 477782));
-                        return (t) => (0, i.jsx)(e, u({}, t));
+                        return (t) => (0, r.jsx)(e, s({}, t));
                     }),
             })
           : t
             ? [
-                  (0, i.jsx)(
+                  (0, r.jsx)(
                       l.sNh,
                       {
                           id: "create-channel",
-                          label: c.intl.string(c.t["fUYU+v"]),
+                          label: u.intl.string(u.t["fUYU+v"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([
@@ -79,10 +79,10 @@ function g(e) {
                                       n.e("70725"),
                                   ]).then(n.bind(n, 218613));
                                   return (n) =>
-                                      (0, i.jsx)(
+                                      (0, r.jsx)(
                                           t,
-                                          d(u({}, n), {
-                                              channelType: o.d4z.GUILD_TEXT,
+                                          d(s({}, n), {
+                                              channelType: c.d4z.GUILD_TEXT,
                                               guildId: e.id,
                                           }),
                                       );
@@ -90,11 +90,11 @@ function g(e) {
                       },
                       "create-channel",
                   ),
-                  (0, i.jsx)(
+                  (0, r.jsx)(
                       l.sNh,
                       {
                           id: "create-category",
-                          label: c.intl.string(c.t["ISN+ND"]),
+                          label: u.intl.string(u.t["ISN+ND"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([
@@ -103,10 +103,10 @@ function g(e) {
                                       n.e("70725"),
                                   ]).then(n.bind(n, 218613));
                                   return (n) =>
-                                      (0, i.jsx)(
+                                      (0, r.jsx)(
                                           t,
-                                          d(u({}, n), {
-                                              channelType: o.d4z.GUILD_CATEGORY,
+                                          d(s({}, n), {
+                                              channelType: c.d4z.GUILD_CATEGORY,
                                               guildId: e.id,
                                           }),
                                       );

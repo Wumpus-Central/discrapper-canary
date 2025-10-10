@@ -5,18 +5,18 @@ n.d(t, {
     Ho: () => Z,
     Ib: () => h,
     P8: () => N,
-    PJ: () => V,
+    PJ: () => F,
     Rp: () => Y,
     Uq: () => G,
     Y4: () => B,
     hn: () => b,
-    iA: () => j,
+    iA: () => M,
     ib: () => R,
     lh: () => J,
     mF: () => q,
     ub: () => D,
     v1: () => k,
-    x6: () => M,
+    x6: () => j,
     zi: () => X,
 }),
     n(388685),
@@ -127,10 +127,10 @@ function D(e, t, n) {
         diffMinutes: r.diff(n, "minutes"),
     };
 }
-function x(e) {
+function L(e) {
     return new o.OG(A[e]);
 }
-function L(e, t) {
+function x(e, t) {
     let n;
     return (
         null != e &&
@@ -142,7 +142,7 @@ function L(e, t) {
         n
     );
 }
-function j(e, t) {
+function M(e, t) {
     let n = U(t),
         r = a()(u.default.extractTimestamp(e)),
         i = (null == n ? void 0 : n.endDate) != null ? r.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -151,7 +151,7 @@ function j(e, t) {
         endDate: i,
     };
 }
-function M(e, t) {
+function j(e, t) {
     var n;
     if (null == t) return e;
     let r = null != (n = t.scheduled_end_time) ? n : e.endDate;
@@ -161,10 +161,10 @@ function M(e, t) {
     };
 }
 function k(e) {
-    return L(e.scheduledStartTime, e.scheduledEndTime);
+    return x(e.scheduledStartTime, e.scheduledEndTime);
 }
 function U(e) {
-    return L(e.scheduled_start_time, e.scheduled_end_time);
+    return x(e.scheduled_start_time, e.scheduled_end_time);
 }
 function G(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
@@ -192,7 +192,7 @@ function Z(e) {
         })
     );
 }
-function V(e, t, n) {
+function F(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = n > new Date() ? n : new Date(),
         a = new Date();
@@ -200,12 +200,12 @@ function V(e, t, n) {
     let o = t.between(i, a, !0, (t, n) => n < e + 1);
     return r && o.length > 0 && n.getTime() === o[0].getTime() ? o.slice(1) : o.slice(0, e);
 }
-function F(e) {
+function V(e) {
     return null == e.recurrence_rule ? null : new Date(e.scheduled_start_time);
 }
 function H(e) {
     if (null == e) return null;
-    let t = F(e);
+    let t = V(e);
     return null != t ? u.default.fromTimestamp(Math.floor(t.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND) : null;
 }
 function Y(e, t) {
@@ -228,19 +228,19 @@ function Y(e, t) {
     }
 }
 function W(e) {
-    let t = x(e.toDate().getDay()),
-        n = x(e.toDate().getUTCDay());
+    let t = L(e.toDate().getDay()),
+        n = L(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? v : n.weekday - t.weekday < 0 ? O : y;
 }
 function K(e) {
-    let t = x(e.toDate().getDay()),
-        n = x(e.toDate().getUTCDay());
+    let t = L(e.toDate().getDay()),
+        n = L(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? T : I;
 }
 function z(e, t) {
     let n = W(t),
         r = K(t),
-        i = x(t.toDate().getUTCDay()),
+        i = L(t.toDate().getUTCDay()),
         a = Math.ceil(t.toDate().getUTCDate() / 7),
         s = t.toDate();
     switch ((s.setMilliseconds(0), e)) {

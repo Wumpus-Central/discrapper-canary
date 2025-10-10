@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => o,
+    T: () => a,
     X: () => i,
 });
 let r = (0, n(818083).B)({
@@ -33,7 +33,7 @@ function i(e) {
     let { location: t } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
-function o(e) {
+function a(e) {
     let { location: t } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).v2Enabled;
 }

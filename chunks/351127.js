@@ -1,77 +1,77 @@
-t.d(e, {
-    B2: () => C,
-    Ov: () => E,
-    Qn: () => u,
-    _o: () => d,
-    pd: () => h,
+n.d(t, {
+    B2: () => g,
+    Ov: () => m,
+    Qn: () => T,
+    _o: () => I,
+    pd: () => A,
 }),
-    t(388685),
-    t(415506),
-    t(539854);
-var n = t(149765),
-    r = t(399606),
-    l = t(601964),
-    i = t(345162),
-    s = t(271383),
-    a = t(485386),
-    o = t(430824),
-    g = t(594174),
-    c = t(700785),
-    f = t(981631),
-    v = t(135899);
-let h = Object.keys(f.Plq),
-    u = Array.from(
+    n(388685),
+    n(415506),
+    n(539854);
+var r = n(149765),
+    l = n(399606),
+    i = n(601964),
+    s = n(345162),
+    a = n(271383),
+    o = n(485386),
+    u = n(430824),
+    c = n(594174),
+    E = n(700785),
+    d = n(981631),
+    _ = n(135899);
+let A = Object.keys(d.Plq),
+    T = Array.from(
         new Set([
-            ...v.$X,
-            ...f.yYS,
-            f.Plq.ADMINISTRATOR,
-            f.Plq.KICK_MEMBERS,
-            f.Plq.BAN_MEMBERS,
-            f.Plq.MANAGE_GUILD,
-            f.Plq.MANAGE_CHANNELS,
-            f.Plq.MANAGE_ROLES,
-            f.Plq.MANAGE_MESSAGES,
-            f.Plq.MANAGE_THREADS,
-            f.Plq.MANAGE_GUILD_EXPRESSIONS,
-            f.Plq.CREATE_GUILD_EXPRESSIONS,
-            f.Plq.MANAGE_EVENTS,
-            f.Plq.CREATE_EVENTS,
-            f.Plq.MODERATE_MEMBERS,
-            f.Plq.MENTION_EVERYONE,
-            f.Plq.MANAGE_WEBHOOKS,
+            ..._.$X,
+            ...d.yYS,
+            d.Plq.ADMINISTRATOR,
+            d.Plq.KICK_MEMBERS,
+            d.Plq.BAN_MEMBERS,
+            d.Plq.MANAGE_GUILD,
+            d.Plq.MANAGE_CHANNELS,
+            d.Plq.MANAGE_ROLES,
+            d.Plq.MANAGE_MESSAGES,
+            d.Plq.MANAGE_THREADS,
+            d.Plq.MANAGE_GUILD_EXPRESSIONS,
+            d.Plq.CREATE_GUILD_EXPRESSIONS,
+            d.Plq.MANAGE_EVENTS,
+            d.Plq.CREATE_EVENTS,
+            d.Plq.MODERATE_MEMBERS,
+            d.Plq.MENTION_EVERYONE,
+            d.Plq.MANAGE_WEBHOOKS,
         ]),
-    ).map((A) => {
-        let e = h.find((e) => f.Plq[e] === A);
-        if (null == e) throw Error("Permission ".concat(A, " not found in Permissions"));
-        return e;
+    ).map((e) => {
+        let t = A.find((t) => d.Plq[t] === e);
+        if (null == t) throw Error("Permission ".concat(e, " not found in Permissions"));
+        return t;
     }),
-    d = new Set(f.yYS);
-function E(A, e) {
-    return A === e;
+    I = new Set(d.yYS);
+function m(e, t) {
+    return e === t;
 }
-function C(A, e, t) {
-    let v = (0, r.e7)([o.Z], () => o.Z.getGuild(e), [e]);
-    return (0, r.e7)([s.ZP, g.default, a.Z], () => {
-        let r = {},
-            o = s.ZP.getMember(e, A),
-            h = g.default.getUser(A);
-        if (null == v || null == o || null == h) return r;
-        let u = a.Z.getEveryoneRole(v),
-            d = c.uB({
-                user: h,
-                context: v,
+function g(e, t, n) {
+    let _ = (0, l.e7)([u.Z], () => u.Z.getGuild(t), [t]);
+    return (0, l.e7)([a.ZP, c.default, o.Z], () => {
+        let l = {},
+            u = a.ZP.getMember(t, e),
+            A = c.default.getUser(e);
+        if (null == _ || null == u || null == A) return l;
+        let T = o.Z.getEveryoneRole(_),
+            I = E.uB({
+                user: A,
+                context: _,
             });
-        for (let A of t) {
-            let e = f.Plq[A];
-            if (n.e$(d, e)) {
-                for (let t of ((r[A] = []), o.roles)) {
-                    let n = a.Z.getRole(v.id, t);
-                    null != n && ((0, i.Fs)(n, f.Plq.ADMINISTRATOR) || (0, i._N)(n, e)) && r[A].push(n.id);
+        for (let e of n) {
+            let t = d.Plq[e];
+            if (r.e$(I, t)) {
+                for (let n of ((l[e] = []), u.roles)) {
+                    let r = o.Z.getRole(_.id, n);
+                    null != r && ((0, s.Fs)(r, d.Plq.ADMINISTRATOR) || (0, s._N)(r, t)) && l[e].push(r.id);
                 }
-                ((0, i.Fs)(u, f.Plq.ADMINISTRATOR) || (0, i._N)(u, e)) && r[A].push(u.id),
-                    (0, l.eM)(v, h) && r[A].push(h.id);
+                ((0, s.Fs)(T, d.Plq.ADMINISTRATOR) || (0, s._N)(T, t)) && l[e].push(T.id),
+                    (0, i.eM)(_, A) && l[e].push(A.id);
             }
         }
-        return r;
-    }, [v, e, t, A]);
+        return l;
+    }, [_, t, n, e]);
 }

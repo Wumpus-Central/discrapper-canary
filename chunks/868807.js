@@ -1,6 +1,6 @@
 n.d(t, { a: () => f }), n(388685);
-var r = n(392711),
-    i = n.n(r),
+var i = n(392711),
+    r = n.n(i),
     l = n(442837),
     a = n(544891),
     o = n(570140),
@@ -14,8 +14,8 @@ function f(e) {
     var t;
     let { id: n } = e,
         {
-            loaded: r,
-            message: i,
+            loaded: i,
+            message: r,
             error: a,
         } = (0, l.cj)([u.Z, s.Z, c.ZP], () => {
             let e = c.ZP.lastMessageId(n),
@@ -33,17 +33,17 @@ function f(e) {
         }, [n]),
         o = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        !r && null == i && o && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
+        !i && null == r && o && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
         {
-            loaded: r,
+            loaded: i,
             error: a,
-            message: i,
+            message: r,
         }
     );
 }
 async function m() {
     try {
-        for (; !i().isEmpty(p); ) await g();
+        for (; !r().isEmpty(p); ) await g();
     } finally {
         h = null;
     }

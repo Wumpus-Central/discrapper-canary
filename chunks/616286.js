@@ -1,6 +1,6 @@
 n.d(t, { T: () => j }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -14,14 +14,14 @@ var r = n(951288),
     m = n(111583),
     g = n(459273),
     b = n(880831),
-    _ = n(774168),
+    C = n(774168),
     y = n(871499),
-    C = n(981631),
-    x = n(388032);
-function v(e) {
+    _ = n(981631),
+    v = n(388032);
+function x(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
-        { unreadCount: r, mentionCount: i } = (0, s.cj)(
+        { unreadCount: i, mentionCount: r } = (0, s.cj)(
             [h.ZP],
             () => ({
                 unreadCount: h.ZP.getUnreadCount(e),
@@ -30,18 +30,18 @@ function v(e) {
             [e],
         );
     return {
-        unreadCount: r,
-        mentionCount: i,
+        unreadCount: i,
+        mentionCount: r,
         voiceChannelIsSelected: n,
         isTyping: t,
     };
 }
 function O(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: i, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = v(n);
-    return (0, r.jsx)(_.Z, {
+        { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = x(n);
+    return (0, i.jsx)(C.Z, {
         className: t,
-        unreadCount: i,
+        unreadCount: r,
         mentionCount: l,
         isTyping: a,
         canBadge: o,
@@ -56,28 +56,28 @@ function j(e) {
             onClick: h,
             inPopout: f,
             showRequestToSpeakSidebar: m,
-            toggleRequestToSpeakSidebar: _,
+            toggleRequestToSpeakSidebar: C,
         } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "channelId",
             "className",
@@ -89,17 +89,17 @@ function j(e) {
         ]);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
         { disabled: S } = j,
-        I = i.useRef(null),
-        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        P = r.useRef(null),
+        I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: T,
             mentionCount: N,
         } = (function (e) {
-            let { unreadCount: t, mentionCount: n, isTyping: r } = v(e),
-                [l, a] = i.useState(!1);
+            let { unreadCount: t, mentionCount: n, isTyping: i } = x(e),
+                [l, a] = r.useState(!1);
             return (
-                i.useEffect(() => {
+                r.useEffect(() => {
                     a(t > 0);
                     let e = setTimeout(() => {
                         a(!1);
@@ -109,93 +109,93 @@ function j(e) {
                     };
                 }, [t]),
                 {
-                    isShowing: l || n > 0 || r,
+                    isShowing: l || n > 0 || i,
                     unreadCount: t,
                     mentionCount: n,
                 }
             );
         })(n),
-        A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
-        }, [n, P, h, m, _, E]),
-        w = i.useCallback(
+        A = r.useCallback(() => {
+            (0, p.v)(E, p.d.CHAT, !I), null == h || h(), !I && m && (null == C || C()), c.Z.updateChatOpen(n, !I);
+        }, [n, I, h, m, C, E]),
+        w = r.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, r.jsx)(O, {
+                return (0, i.jsx)(O, {
                     className: t,
                     channelId: n,
                 });
             },
             [n],
         ),
-        R = i.useCallback(() => {
+        M = r.useCallback(() => {
             var e;
-            null == (e = I.current) || e.focus();
+            null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: C.CkL.FOCUS_CHAT_BUTTON,
-        handler: S ? null : R,
+        event: _.CkL.FOCUS_CHAT_BUTTON,
+        handler: S ? null : M,
     });
-    let [M, D] = i.useState(!1),
-        L = i.useCallback(() => {
-            f && D(!0);
+    let [R, k] = r.useState(!1),
+        L = r.useCallback(() => {
+            f && k(!0);
         }, [f]);
     (0, g.yp)({
-        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: _.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: L,
     }),
-        i.useEffect(() => {
+        r.useEffect(() => {
             let e;
             return (
-                M &&
+                R &&
                     (e = setTimeout(() => {
-                        D(!1);
+                        k(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [M]);
-    let k = [(t = f && S ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t["5KxXrK"]))];
+        }, [R]);
+    let D = [(t = f && S ? v.intl.string(v.t.DPgc5u) : I ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t["5KxXrK"]))];
     return (
-        N > 0 && k.push(x.intl.formatToPlainString(x.t["3l1GOz"], { mentionCount: N })),
-        T > 0 && k.push(x.intl.string(x.t.x5zAGR)),
-        (0, r.jsx)(
+        N > 0 && D.push(v.intl.formatToPlainString(v.t["3l1GOz"], { mentionCount: N })),
+        T > 0 && D.push(v.intl.string(v.t.x5zAGR)),
+        (0, i.jsx)(
             y.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
             })(
                 {
-                    buttonRef: I,
+                    buttonRef: P,
                     onClick: A,
                     label: t,
-                    "aria-label": k.join(", "),
+                    "aria-label": D.join(", "),
                     iconComponent: w,
                     tooltipPosition: "bottom",
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
-                    forceTooltipOpen: M,
+                    forceTooltipOpen: R,
                 },
                 j,
             ),

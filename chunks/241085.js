@@ -25,7 +25,7 @@ var r = n(951288),
     A = n(292419),
     C = n(756043),
     N = n(388032),
-    R = n(319194);
+    R = n(975279);
 function P(e) {
     let { dropping: t, fileInputRef: n, minValues: i, maxValues: a, guildId: s } = e,
         l = (0, v.dg)(s),
@@ -163,9 +163,9 @@ function L(e) {
     l()(null != E, "FileUploadActionComponent must be used inside a channel");
     let O = null == (t = g.modal) ? void 0 : t.customId;
     l()(null != O, "FileUploadActionComponent requires modalCustomId from context");
-    let { uploadIds: v, setUploadIds: L, currentUploads: x, error: j } = (0, C.t)(e),
-        M = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
-    l()(null != M, "FileUploadActionComponent requires a valid channel");
+    let { uploadIds: v, setUploadIds: L, currentUploads: x, error: M } = (0, C.t)(e),
+        j = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
+    l()(null != j, "FileUploadActionComponent requires a valid channel");
     let k = i.useCallback((e) => {
             var t;
             e.preventDefault(), (null == (t = e.dataTransfer) ? void 0 : t.types.includes("Files")) && m(!0);
@@ -181,7 +181,7 @@ function L(e) {
                         title: N.intl.string(N.t.wOr6hI),
                         help: N.intl.formatToPlainString(N.t.dy6viI, { maxValues: a }),
                     });
-                if ((0, T.Bf)(e, M.guild_id)) return (0, I.G)(M, e);
+                if ((0, T.Bf)(e, j.guild_id)) return (0, I.G)(j, e);
                 let n = e.map((e) => {
                     let n = (0, A.VD)(O),
                         r = {
@@ -202,7 +202,7 @@ function L(e) {
                 });
                 L(v.concat(n));
             },
-            [v, a, M, L, O, E],
+            [v, a, j, L, O, E],
         ),
         B = i.useCallback(
             (e) => {
@@ -243,7 +243,7 @@ function L(e) {
               ref: u,
               className: o()(R.container, {
                   [R.dropping]: h,
-                  [R.error]: null != j,
+                  [R.error]: null != M,
               }),
               children: [
                   v.length >= a
@@ -253,7 +253,7 @@ function L(e) {
                             fileInputRef: s,
                             minValues: n,
                             maxValues: a,
-                            guildId: M.guild_id,
+                            guildId: j.guild_id,
                         }),
                   x.length > 0 &&
                       (0, r.jsx)("div", {

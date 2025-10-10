@@ -11,8 +11,8 @@ var r = a(101284),
     E = a(99342),
     s = a(696486),
     l = a(789112),
-    u = a(793373),
-    I = a(152228);
+    I = a(793373),
+    u = a(152228);
 let R = {
     idleTimeout: 1000,
     finalTimeout: 30000,
@@ -22,8 +22,8 @@ function d(t, e = {}) {
     let a,
         N = new Map(),
         A = !1,
-        f = "externalFinish",
-        T = !e.disableAutoFinish,
+        T = "externalFinish",
+        f = !e.disableAutoFinish,
         L = [],
         {
             idleTimeout: p = R.idleTimeout,
@@ -36,21 +36,21 @@ function d(t, e = {}) {
     let D = (0, n.nZ)(),
         C = (0, s.HN)(),
         m = (function (t) {
-            let e = (0, I.qp)(t);
+            let e = (0, u.qp)(t);
             return (0, E.D)((0, n.nZ)(), e), o.X && _.kg.log("[Tracing] Started span is an idle span"), e;
         })(t);
     function v() {
         a && (clearTimeout(a), (a = void 0));
     }
-    function y(t) {
+    function S(t) {
         v(),
             (a = setTimeout(() => {
-                !A && 0 === N.size && T && ((f = "idleTimeout"), m.end(t));
+                !A && 0 === N.size && f && ((T = "idleTimeout"), m.end(t));
             }, p));
     }
-    function S(t) {
+    function y(t) {
         a = setTimeout(() => {
-            !A && T && ((f = "heartbeatFailed"), m.end(t));
+            !A && f && ((T = "heartbeatFailed"), m.end(t));
         }, O);
     }
     function U(t) {
@@ -58,13 +58,13 @@ function d(t, e = {}) {
         let e = (0, s.XU)(m),
             { start_timestamp: a } = e;
         if (!a) return;
-        (e.data || {})[i.ju] || m.setAttribute(i.ju, f), _.kg.log(`[Tracing] Idle span "${e.op}" finished`);
+        (e.data || {})[i.ju] || m.setAttribute(i.ju, T), _.kg.log(`[Tracing] Idle span "${e.op}" finished`);
         let r = (0, s.Dp)(m).filter((t) => t !== m),
             n = 0;
         r.forEach((e) => {
             e.isRecording() &&
                 (e.setStatus({
-                    code: u.jt,
+                    code: I.jt,
                     message: "cancelled",
                 }),
                 e.end(t),
@@ -93,9 +93,9 @@ function d(t, e = {}) {
                 if (!c.length) return U(i), Reflect.apply(t, e, [i, ...n]);
                 let E = c.map((t) => (0, s.XU)(t).timestamp).filter((t) => !!t),
                     l = E.length ? Math.max(...E) : void 0,
-                    u = (0, s.XU)(m).start_timestamp,
-                    I = Math.min(u ? u + h / 1000 : 1 / 0, Math.max(u || -1 / 0, Math.min(i, l || 1 / 0)));
-                return U(I), Reflect.apply(t, e, [I, ...n]);
+                    I = (0, s.XU)(m).start_timestamp,
+                    u = Math.min(I ? I + h / 1000 : 1 / 0, Math.max(I || -1 / 0, Math.min(i, l || 1 / 0)));
+                return U(u), Reflect.apply(t, e, [u, ...n]);
             },
         })),
         L.push(
@@ -105,30 +105,30 @@ function d(t, e = {}) {
                     t === m ||
                     (0, s.XU)(t).timestamp ||
                     ((0, s.Dp)(m).includes(t) &&
-                        ((e = t.spanContext().spanId), v(), N.set(e, !0), S((0, r.ph)() + O / 1000)));
+                        ((e = t.spanContext().spanId), v(), N.set(e, !0), y((0, r.ph)() + O / 1000)));
             }),
         ),
         L.push(
             g.on("spanEnd", (t) => {
                 if (!A) {
                     var e;
-                    (e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && y((0, r.ph)() + p / 1000);
+                    (e = t.spanContext().spanId), N.has(e) && N.delete(e), 0 === N.size && S((0, r.ph)() + p / 1000);
                 }
             }),
         ),
         L.push(
             g.on("idleSpanEnableAutoFinish", (t) => {
-                t === m && ((T = !0), y(), N.size && S());
+                t === m && ((f = !0), S(), N.size && y());
             }),
         ),
-        e.disableAutoFinish || y(),
+        e.disableAutoFinish || S(),
         setTimeout(() => {
             A ||
                 (m.setStatus({
-                    code: u.jt,
+                    code: I.jt,
                     message: "deadline_exceeded",
                 }),
-                (f = "finalTimeout"),
+                (T = "finalTimeout"),
                 m.end());
         }, h),
         m

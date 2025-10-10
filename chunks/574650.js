@@ -118,21 +118,21 @@ let A = () => {
         },
         w = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
         D = null,
-        x = null,
         L = null,
-        j = [y.notice, O.notice];
+        x = null,
+        M = [y.notice, O.notice];
     switch (w) {
         case p.wB.SUBMITTED:
-            (D = b.intl.string(b.t["5iLvS0"])), (x = b.intl.string(b.t.mqtdmZ)), (L = R);
+            (D = b.intl.string(b.t["5iLvS0"])), (L = b.intl.string(b.t.mqtdmZ)), (x = R);
             break;
         case p.wB.REJECTED:
-            (D = b.intl.string(b.t.lk30cX)), (x = b.intl.string(b.t["8RrsHh"])), (L = P), j.push(y.error);
+            (D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t["8RrsHh"])), (x = P), M.push(y.error);
             break;
         default:
-            (D = b.intl.string(b.t.G5YKXF)), (x = b.intl.string(b.t["r8/DT0"])), (L = N);
+            (D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t["r8/DT0"])), (x = N);
     }
     return (0, r.jsxs)("div", {
-        className: a()(...j),
+        className: a()(...M),
         children: [
             (0, r.jsx)(c.Text, {
                 className: y.header,
@@ -142,8 +142,8 @@ let A = () => {
             (0, r.jsx)(c.zxk, {
                 variant: "overlay-primary",
                 size: "sm",
-                onClick: L,
-                text: x,
+                onClick: x,
+                text: L,
             }),
         ],
     });

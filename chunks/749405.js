@@ -28,15 +28,15 @@ function h(e) {
             isAcceptLoading: y,
             isRejectLoading: v,
             isUserProfileLoading: I,
-            isOptimisticAccepted: C,
-            isOptimisticRejected: S,
+            isOptimisticAccepted: S,
+            isOptimisticRejected: C,
         } = (0, u.m)({
             user: n,
             onAcceptSuccess: _,
             onRejectSuccess: b,
             onError: m,
         }),
-        N = y || v || I || C || S;
+        T = y || v || I || S || C;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -58,8 +58,8 @@ function h(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), E(h.id);
                             },
-                            disabled: N,
-                            loading: v || S,
+                            disabled: T,
+                            loading: v || C,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -72,8 +72,8 @@ function h(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), O(h.id);
                             },
-                            disabled: N,
-                            loading: y || I || C,
+                            disabled: T,
+                            loading: y || I || S,
                         }),
                     }),
                 ],

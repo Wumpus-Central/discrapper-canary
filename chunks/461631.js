@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(872269),
     u = n(228168),
     d = n(388032),
-    p = n(624285);
+    p = n(747615);
 function f(e) {
     let { item: t, wishlistId: n, iconSize: i = "refresh_sm", className: f } = e,
         { analyticsLocations: h } = (0, o.ZP)(),

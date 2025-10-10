@@ -162,12 +162,12 @@ function D(e) {
             applicationId: r.id,
         });
 }
-function x(e) {
+function L(e) {
     let { botUserId: t } = e,
         n = g.botUserIdToAppUsage[t];
     null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
 }
-function L(e) {
+function x(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -176,20 +176,20 @@ function L(e) {
     }
     return n;
 }
-function j(e) {
+function M(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t)
         (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function k(e) {
+function j(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _.set(t, r);
 }
-function M(e) {
+function k(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -318,13 +318,13 @@ let z = new K(a.Z, {
     APPLICATION_FETCH_FAIL: C,
     APPLICATIONS_FETCH: N,
     APPLICATIONS_FETCH_SUCCESS: P,
-    APPLICATIONS_FETCH_FAIL: L,
+    APPLICATIONS_FETCH_FAIL: x,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: j,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: j,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: j,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
-    BILLING_PAYMENTS_FETCH_SUCCESS: M,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: j,
+    BILLING_PAYMENTS_FETCH_SUCCESS: k,
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,
     GIFT_CODE_RESOLVE_SUCCESS: G,
@@ -333,7 +333,7 @@ let z = new K(a.Z, {
     LOAD_MESSAGES_SUCCESS: F,
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,
     USER_PROFILE_FETCH_SUCCESS: D,
-    APP_DM_OPEN: x,
+    APP_DM_OPEN: L,
     USER_AUTHORIZED_APPS_UPDATE: Y,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: W,
     OAUTH2_TOKEN_CREATE: H,

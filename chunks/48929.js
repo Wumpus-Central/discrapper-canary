@@ -1,6 +1,6 @@
 n.d(t, { Z: () => f }), n(388685);
-var r,
-    i,
+var i,
+    r,
     l = n(442837),
     a = n(570140),
     o = n(430198),
@@ -9,19 +9,19 @@ var r,
     u = n(709054),
     d = n(522579);
 let p = new Set();
-class h extends (r = l.ZP.Store) {
+class h extends (i = l.ZP.Store) {
     shouldDisplayPrompt(e) {
         return p.has(e);
     }
 }
-(i = "displayName") in h
-    ? Object.defineProperty(h, i, {
+(r = "displayName") in h
+    ? Object.defineProperty(h, r, {
           value: "MediaPostSharePromptStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (h[i] = "MediaPostSharePromptStore");
+    : (h[r] = "MediaPostSharePromptStore");
 let f = new h(a.Z, {
     CONNECTION_OPEN: function () {
         p = new Set();
@@ -31,10 +31,10 @@ let f = new h(a.Z, {
         if (e.isPushNotification) return;
         let n = e.message;
         if (s.default.getId() !== (null == (t = n.author) ? void 0 : t.id) || !(0, d.z9)(n.id, n.channel_id)) return;
-        let r = c.Z.getChannel(n.channel_id);
-        null != r &&
-            null != r.parent_id &&
-            o.Z.isChannelGated(r.guild_id, r.parent_id) &&
+        let i = c.Z.getChannel(n.channel_id);
+        null != i &&
+            null != i.parent_id &&
+            o.Z.isChannelGated(i.guild_id, i.parent_id) &&
             p.add(u.default.castMessageIdAsChannelId(e.message.id));
     },
     DISMISS_MEDIA_POST_SHARE_PROMPT: function (e) {

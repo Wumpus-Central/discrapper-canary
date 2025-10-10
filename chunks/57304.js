@@ -59,26 +59,26 @@ let b = function (e) {
         n = (0, o.$5)(t),
         [b, y] = i.useState(!1),
         _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
-        O = (0, c.Aq)(),
-        j = i.useRef(null),
-        v = i.useCallback(() => {
+        j = (0, c.Aq)(),
+        x = i.useRef(null),
+        O = i.useCallback(() => {
             n || y((e) => !e);
         }, [n]);
-    function x(e) {
-        (null == e ? void 0 : e.shiftKey) || O.dispatch(h.CkL.POPOUT_CLOSE);
+    function v(e) {
+        (null == e ? void 0 : e.shiftKey) || j.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                u.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, v),
+                u.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, O),
                 () => {
-                    u.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, v);
+                    u.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, O);
                 }
             ),
-            [v],
+            [O],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: j,
+            targetElementRef: x,
             shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
@@ -90,7 +90,7 @@ let b = function (e) {
                 return (0, r.jsx)(
                     s.Z,
                     m(g({}, e), {
-                        onJump: x,
+                        onJump: v,
                         channel: t,
                     }),
                 );
@@ -101,8 +101,8 @@ let b = function (e) {
                 return (0, r.jsx)(
                     p.JO,
                     m(g({}, e), {
-                        ref: j,
-                        onClick: v,
+                        ref: x,
+                        onClick: O,
                         tooltip: i ? null : f.intl.string(f.t["mp1N//"]),
                         icon: a.qQX,
                         iconSize: 20,

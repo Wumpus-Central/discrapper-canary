@@ -1,73 +1,73 @@
-n.d(t, { default: () => y }), n(388685);
-var r = n(951288);
+n.d(t, { default: () => C }), n(388685);
+var i = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(239091),
-    a = n(883385),
-    o = n(108843),
-    u = n(100527),
-    c = n(299206),
-    s = n(882188),
-    d = n(819403),
-    f = n(286694),
-    b = n(314897),
-    _ = n(238296),
-    O = n(933409),
+var l = n(481060),
+    r = n(239091),
+    u = n(883385),
+    a = n(108843),
+    d = n(100527),
+    o = n(299206),
+    c = n(882188),
+    _ = n(819403),
+    s = n(286694),
+    E = n(314897),
+    A = n(238296),
+    f = n(933409),
     g = n(981631),
-    E = n(388032);
-let y = (0, o.Z)(
-    (0, a.Z)(
+    v = n(388032);
+let C = (0, a.Z)(
+    (0, u.Z)(
         function (e) {
-            let { user: t, channel: n, guildId: a, onSelect: o, onInteraction: u, context: g } = e,
-                y = n.id,
-                S = t.isNonUserBot(),
-                p = t.id === b.default.getId(),
-                v = (0, d.Z)(t),
-                m = (0, f.Z)(t, a, y),
-                A = (0, _.Y)({
-                    isOwnSettings: p,
+            let { user: t, channel: n, guildId: u, onSelect: a, onInteraction: d, context: g } = e,
+                C = n.id,
+                M = t.isNonUserBot(),
+                S = t.id === E.default.getId(),
+                O = (0, _.Z)(t),
+                b = (0, s.Z)(t, u, C),
+                I = (0, A.Y)({
+                    isOwnSettings: S,
                     userId: t.id,
-                    channelId: y,
-                    guildId: a,
+                    channelId: C,
+                    guildId: u,
                     context: g,
                 }),
-                [I, P] = (0, _.E)(t, y, a),
-                j = (0, O.Z)(t, a, y),
-                C = (0, c.Z)({
+                [Z, T] = (0, A.E)(t, C, u),
+                h = (0, f.Z)(t, u, C),
+                N = (0, o.Z)({
                     id: t.id,
-                    label: E.intl.string(E.t["/AXYnJ"]),
+                    label: v.intl.string(v.t["/AXYnJ"]),
                 }),
-                Z = (0, s.Z)(t.id, n);
-            return (0, r.jsx)(i.v2r, {
+                k = (0, c.Z)(t.id, n);
+            return (0, i.jsx)(l.v2r, {
                 navId: "user-context",
-                onClose: l.Zy,
-                "aria-label": E.intl.string(E.t.liqwPD),
-                onSelect: o,
-                onInteraction: u,
+                onClose: r.Zy,
+                "aria-label": v.intl.string(v.t.liqwPD),
+                onSelect: a,
+                onInteraction: d,
                 variant: "fixed",
                 children:
-                    !S &&
-                    (0, r.jsxs)(r.Fragment, {
+                    !M &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, r.jsxs)(i.kSQ, {
-                                children: [v, m],
+                            (0, i.jsxs)(l.kSQ, {
+                                children: [O, b],
                             }),
-                            Z,
-                            A,
-                            !p &&
-                                (0, r.jsx)(i.kSQ, {
-                                    children: (0, r.jsxs)(i.sNh, {
+                            k,
+                            I,
+                            !S &&
+                                (0, i.jsx)(l.kSQ, {
+                                    children: (0, i.jsxs)(l.sNh, {
                                         id: "more-options",
-                                        label: E.intl.string(E.t.PdRCRk),
-                                        children: [I, (0, r.jsx)(i.kSQ, { children: j }), P],
+                                        label: v.intl.string(v.t.PdRCRk),
+                                        children: [Z, (0, i.jsx)(l.kSQ, { children: h }), T],
                                     }),
                                 }),
-                            p && (0, r.jsx)(i.kSQ, { children: C }),
+                            S && (0, i.jsx)(l.kSQ, { children: N }),
                         ],
                     }),
             });
         },
         { object: g.qAy.CONTEXT_MENU },
     ),
-    [u.Z.VOICE_USER],
+    [d.Z.VOICE_USER],
 );

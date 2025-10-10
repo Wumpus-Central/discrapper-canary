@@ -1,7 +1,7 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(647438),
-    a = n(358085);
-function l(e) {
+    l = n(358085);
+function a(e) {
     let t = r.useRef(e);
     return (
         r.useEffect(() => {
@@ -10,8 +10,8 @@ function l(e) {
         r.useCallback((e) => {
             let n = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                 r = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
-                { disabled: l = !1, onSubmit: i } = t.current;
-            "enter" === e.key.toLowerCase() && ("macos" === (0, a.getOS)() ? r : n) && !l && (e.preventDefault(), i());
+                { disabled: a = !1, onSubmit: i } = t.current;
+            "enter" === e.key.toLowerCase() && ("macos" === (0, l.getOS)() ? r : n) && !a && (e.preventDefault(), i());
         }, [])
     );
 }

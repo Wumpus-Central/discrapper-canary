@@ -53,7 +53,7 @@ function D(e, t) {
         (null != A && A.applicationId === e && A.branchId === t)
     );
 }
-function x() {
+function L() {
     let e = v[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
@@ -66,11 +66,11 @@ function x() {
         }
     }
 }
-function L(e, t) {
+function x(e, t) {
     let n = (0, _.Tu)(e, t);
     return v.findIndex((e) => e.comboId === n);
 }
-function j(e, t, n, r) {
+function M(e, t, n, r) {
     let i = (0, _.Tu)(e, t),
         a = {
             comboId: i,
@@ -78,44 +78,44 @@ function j(e, t, n, r) {
         },
         o = I.indexOf(i);
     -1 !== o && I.splice(o, 1);
-    let s = L(e, t);
-    0 !== s && (n ? -1 === s && (v.push(a), x()) : (s > 0 && v.splice(s, 1), v.unshift(a), x())),
+    let s = x(e, t);
+    0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())),
         !n && T && p.Z.resume(),
         w();
 }
-function M(e, t) {
+function j(e, t) {
     let n = (0, _.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
-    let i = L(e, t);
-    -1 !== i && (v.splice(i, 1), w()), x();
+    let i = x(e, t);
+    -1 !== i && (v.splice(i, 1), w()), L();
 }
 function k(e) {
     let { applicationId: t, branchId: n } = e;
-    N.set((0, _.Tu)(t, n), "Install"), j(t, n, !1, "Patch");
+    N.set((0, _.Tu)(t, n), "Install"), M(t, n, !1, "Patch");
 }
 function U(e) {
-    Z(e), F(e);
+    Z(e), V(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
-    N.set((0, _.Tu)(t, n), "Repair"), j(t, n, !1, "Repair");
+    N.set((0, _.Tu)(t, n), "Repair"), M(t, n, !1, "Repair");
 }
 function B(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
-    j(t, n, r, "Patch");
+    M(t, n, r, "Patch");
 }
 function Z(e) {
     let { applicationId: t, branchId: n } = e;
-    M(t, n);
-}
-function V(e) {
-    let { applicationId: t, branchId: n } = e,
-        r = L(t, n);
-    if (r < 1) return !1;
-    v.splice(0, 0, v.splice(r, 1)[0]), x(), T && p.Z.resume(), w();
+    j(t, n);
 }
 function F(e) {
+    let { applicationId: t, branchId: n } = e,
+        r = x(t, n);
+    if (r < 1) return !1;
+    v.splice(0, 0, v.splice(r, 1)[0]), L(), T && p.Z.resume(), w();
+}
+function V(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, _.Tu)(t, n),
         i = I.indexOf(r);
@@ -123,7 +123,7 @@ function F(e) {
 }
 function H(e) {
     let { state: t } = e;
-    !C && ((C = !0), x(), T || p.Z.resume());
+    !C && ((C = !0), L(), T || p.Z.resume());
     let n = T;
     (T = t.paused), (S = t.currentTask), (A = t.nextTask);
     let r = !1;
@@ -155,7 +155,7 @@ function H(e) {
         }
         return !0;
     })),
-        x(),
+        L(),
         (r || n !== T) && w();
 }
 function Y() {
@@ -172,7 +172,7 @@ function W(e) {
             let { context: e } = t;
             if (null != e) {
                 let { application_id: t, branch_id: n } = e;
-                M(t, n);
+                j(t, n);
             }
         }
     }
@@ -229,7 +229,7 @@ class Q extends (r = o.ZP.Store) {
         return T;
     }
     getQueuePosition(e, t) {
-        return L(e, t);
+        return x(e, t);
     }
     isCorruptInstallation() {
         return R;
@@ -242,8 +242,8 @@ let J = new Q(l.Z, {
     DISPATCH_APPLICATION_UNINSTALL: U,
     DISPATCH_APPLICATION_CANCEL: Z,
     DISPATCH_APPLICATION_REPAIR: G,
-    DISPATCH_APPLICATION_MOVE_UP: V,
-    DISPATCH_APPLICATION_REMOVE_FINISHED: F,
+    DISPATCH_APPLICATION_MOVE_UP: F,
+    DISPATCH_APPLICATION_REMOVE_FINISHED: V,
     DISPATCH_APPLICATION_STATE_UPDATE: H,
     DISPATCH_APPLICATION_ERROR: W,
     CONNECTION_OPEN: z,

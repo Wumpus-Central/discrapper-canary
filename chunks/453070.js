@@ -3,8 +3,8 @@ n.d(t, {
     LZ: () => D,
     Pq: () => v,
     RJ: () => P,
-    Sd: () => j,
-    XW: () => L,
+    Sd: () => M,
+    XW: () => x,
     el: () => T,
     fP: () => A,
     fQ: () => S,
@@ -215,7 +215,7 @@ function D() {
     let e = w();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let x = (e) => {
+let L = (e) => {
         let t = P(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [g.Z, m.Z],
@@ -269,7 +269,7 @@ let x = (e) => {
             ];
         }, [n, t, a, s, o, e]);
     },
-    L = function (e) {
+    x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (0, i.e7)([g.Z], () => g.Z.getStickerById(e.id)),
             [a, o] = r.useState(!0),
@@ -308,7 +308,7 @@ let x = (e) => {
             ? [e, s]
             : [null != n ? n : null, s];
     },
-    j = (e) => {
-        let t = x(e);
+    M = (e) => {
+        let t = L(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

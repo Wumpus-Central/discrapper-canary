@@ -3,7 +3,7 @@ var a = n(951288),
     r = n(481060),
     l = n(570140);
 let i = (e) => {
-    let { skuId: t, applicationId: i, guildId: d } = e;
+    let { skuId: t, applicationId: i, guildId: o } = e;
     (0, r.ZDy)(
         async () => {
             let { default: e } = await n.e("84802").then(n.bind(n, 250317));
@@ -62,7 +62,7 @@ let i = (e) => {
         l.Z.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_SELECT_SKU",
             skuId: t,
-            guildId: d,
+            guildId: o,
         });
     });
 };

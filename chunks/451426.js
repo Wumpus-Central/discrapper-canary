@@ -1,85 +1,85 @@
-t.d(n, { Z: () => h }), t(953529), t(388685);
-var i = t(951288),
-    a = t(647438),
-    s = t(442837),
-    l = t(481060),
-    r = t(570140),
-    o = t(600164),
-    c = t(103879),
-    d = t(236289),
-    x = t(788080),
-    m = t(613734),
-    p = t(981631),
-    u = t(388032),
-    g = t(545833),
-    _ = t(186425);
-function h(e) {
-    let { className: n, isDsaEligible: t, onClose: h, onNext: C, onBack: N } = e,
-        j = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
-        { classification: I } = (0, m.YG)(null != j ? j : p.lds),
-        E = (0, x.c7)(null == I ? void 0 : I.description),
-        T = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
-        v = (0, s.e7)([d.Z], () => d.Z.getAppealSignal()),
-        f = (0, s.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
-        [k, S] = a.useState(!1),
-        [A, Z] = a.useState(""),
-        L = a.useCallback((e) => {
+i.d(n, { Z: () => N }), i(953529), i(388685);
+var t = i(951288),
+    a = i(647438),
+    s = i(442837),
+    l = i(481060),
+    r = i(570140),
+    o = i(600164),
+    c = i(103879),
+    d = i(236289),
+    x = i(788080),
+    m = i(613734),
+    g = i(981631),
+    p = i(388032),
+    u = i(545833),
+    h = i(186425);
+function N(e) {
+    let { className: n, isDsaEligible: i, onClose: N, onNext: C, onBack: j } = e,
+        _ = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
+        { classification: E } = (0, m.YG)(null != _ ? _ : g.lds),
+        v = (0, x.c7)(null == E ? void 0 : E.description),
+        I = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
+        T = (0, s.e7)([d.Z], () => d.Z.getAppealSignal()),
+        S = (0, s.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
+        [k, A] = a.useState(!1),
+        [Z, L] = a.useState(""),
+        P = a.useCallback((e) => {
             r.Z.dispatch({
                 type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
                 userInput: e,
             });
         }, []),
         b = a.useCallback(async () => {
-            if (null !== j)
+            if (null !== _)
                 try {
-                    Z(""), await c.uR(j, v, f), null == C || C();
+                    L(""), await c.uR(_, T, S), null == C || C();
                 } catch (n) {
                     var e;
-                    Z((0, x.Zs)(null == (e = n.body) ? void 0 : e.code));
+                    L((0, x.Zs)(null == (e = n.body) ? void 0 : e.code));
                 }
-        }, [j, v, f, C]);
-    return (0, i.jsxs)(i.Fragment, {
+        }, [_, T, S, C]);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, i.jsxs)(l.xBx, {
+            (0, t.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 direction: o.Z.Direction.VERTICAL,
-                className: _.header,
+                className: h.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(l.X6q, {
-                        className: _.title,
+                    (0, t.jsx)(l.X6q, {
+                        className: h.title,
                         variant: "heading-xl/semibold",
-                        children: u.intl.string(u.t["C5q+pa"]),
+                        children: p.intl.string(p.t["C5q+pa"]),
                     }),
-                    (0, i.jsx)(l.Text, {
-                        className: _.subtitle,
+                    (0, t.jsx)(l.Text, {
+                        className: h.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: u.intl.string(u.t["G2g/g4"]),
+                        children: p.intl.string(p.t["G2g/g4"]),
                     }),
-                    null != h &&
-                        (0, i.jsx)(l.olH, {
+                    null != N &&
+                        (0, t.jsx)(l.olH, {
                             "data-migration-pending": !0,
-                            className: _.closeButton,
-                            onClick: h,
+                            className: h.closeButton,
+                            onClick: N,
                         }),
                 ],
             }),
-            (0, i.jsxs)(l.hzk, {
+            (0, t.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
                 className: n,
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)("ul", {
-                        className: g.listContainer,
-                        children: [(0, x.ox)(v), f]
+                    (0, t.jsx)("ul", {
+                        className: u.listContainer,
+                        children: [(0, x.ox)(T), S]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
-                                (0, i.jsx)(
+                                (0, t.jsx)(
                                     "li",
                                     {
-                                        className: g.listItem,
-                                        children: (0, i.jsx)(l.Text, {
+                                        className: u.listItem,
+                                        children: (0, t.jsx)(l.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
                                             children: e,
@@ -89,69 +89,69 @@ function h(e) {
                                 ),
                             ),
                     }),
-                    t &&
-                        (0, i.jsx)("div", {
-                            className: g.anchorContainer,
-                            children: (0, i.jsx)(l.eee, {
-                                onClick: () => S((e) => !e),
-                                children: (0, i.jsx)(l.X6q, {
+                    i &&
+                        (0, t.jsx)("div", {
+                            className: u.anchorContainer,
+                            children: (0, t.jsx)(l.eee, {
+                                onClick: () => A((e) => !e),
+                                children: (0, t.jsx)(l.X6q, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
-                                    children: f.length > 0 ? u.intl.string(u.t.tnE3bW) : u.intl.string(u.t.uoQFIi),
+                                    children: S.length > 0 ? p.intl.string(p.t.tnE3bW) : p.intl.string(p.t.uoQFIi),
                                 }),
                             }),
                         }),
                     k &&
-                        t &&
-                        (0, i.jsx)("div", {
-                            className: g.inputContainer,
-                            children: (0, i.jsx)(l.Kx8, {
-                                value: f,
-                                onChange: L,
+                        i &&
+                        (0, t.jsx)("div", {
+                            className: u.inputContainer,
+                            children: (0, t.jsx)(l.Kx8, {
+                                value: S,
+                                onChange: P,
                             }),
                         }),
-                    (0, i.jsx)("div", {
-                        className: _.policyContainer,
-                        children: (0, i.jsx)(l.Text, {
+                    (0, t.jsx)("div", {
+                        className: h.policyContainer,
+                        children: (0, t.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            children: E,
+                            children: v,
                         }),
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, t.jsx)(l.Text, {
                         variant: "text-xs/medium",
                         color: "header-secondary",
-                        className: g.footerText,
-                        children: u.intl.string(u.t.d6qgY2),
+                        className: u.footerText,
+                        children: p.intl.string(p.t.d6qgY2),
                     }),
                 ],
             }),
-            (0, i.jsxs)(l.mzw, {
+            (0, t.jsxs)(l.mzw, {
                 "data-migration-pending": !0,
                 direction: o.Z.Direction.VERTICAL,
                 children: [
-                    "" !== A &&
-                        (0, i.jsx)(l.Text, {
-                            className: g.errorText,
+                    "" !== Z &&
+                        (0, t.jsx)(l.Text, {
+                            className: u.errorText,
                             variant: "text-lg/normal",
                             color: "text-danger",
-                            children: A,
+                            children: Z,
                         }),
-                    (0, i.jsx)("div", {
-                        className: g.buttonContainer,
-                        children: (0, i.jsxs)(l.hE2, {
+                    (0, t.jsx)("div", {
+                        className: u.buttonContainer,
+                        children: (0, t.jsxs)(l.hE2, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, i.jsx)(l.zxk, {
+                                (0, t.jsx)(l.zxk, {
                                     variant: "secondary",
-                                    text: u.intl.string(u.t["13/7kZ"]),
-                                    onClick: N,
-                                    disabled: T,
+                                    text: p.intl.string(p.t["13/7kZ"]),
+                                    onClick: j,
+                                    disabled: I,
                                 }),
-                                (0, i.jsx)(l.zxk, {
+                                (0, t.jsx)(l.zxk, {
                                     variant: "critical-primary",
-                                    text: u.intl.string(u.t.geKm7u),
+                                    text: p.intl.string(p.t.geKm7u),
                                     onClick: b,
-                                    loading: T,
+                                    loading: I,
                                 }),
                             ],
                         }),

@@ -11,26 +11,26 @@ var r = a(263449),
     E = a(370336),
     s = a(395848),
     l = a(501684),
-    u = a(108185);
-let I = [],
+    I = a(108185);
+let u = [],
     R = new Map();
 function d() {
-    if ((0, u.QV)() && i.Z1) {
+    if ((0, I.QV)() && i.Z1) {
         let t = (0, l.YF)(({ metric: t }) => {
             let e,
                 a = (0, r.s3)();
             if (!a || void 0 == t.value) return;
             let l = t.entries.find((e) => e.duration === t.value && N[e.name]);
             if (!l) return;
-            let { interactionId: I } = l,
+            let { interactionId: u } = l,
                 d = N[l.name],
                 A = a.getOptions(),
-                f = (0, u.XL)(i.Z1 + l.startTime),
-                T = (0, u.XL)(t.value),
+                T = (0, I.XL)(i.Z1 + l.startTime),
+                f = (0, I.XL)(t.value),
                 L = (0, r.nZ)(),
                 p = (0, _.HN)(),
                 h = p ? (0, _.Gx)(p) : void 0,
-                O = (null != I ? R.get(I) : void 0) || h,
+                O = (null != u ? R.get(u) : void 0) || h,
                 P = O ? (0, _.XU)(O).description : L.getScopeData().transactionName,
                 g = L.getUser(),
                 D = a.getIntegrationByName("Replay"),
@@ -40,7 +40,7 @@ function d() {
                 e = L.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
             let v = (0, c.Rt)(l.target),
-                y = (0, E.Jr)({
+                S = (0, E.Jr)({
                     release: A.release,
                     environment: A.environment,
                     transaction: P,
@@ -51,18 +51,18 @@ function d() {
                     replay_id: C || void 0,
                     "user_agent.original": s.m.navigator && s.m.navigator.userAgent,
                 }),
-                S = (0, o.qp)({
+                y = (0, o.qp)({
                     name: v,
                     op: `ui.interaction.${d}`,
-                    attributes: y,
-                    startTime: f,
+                    attributes: S,
+                    startTime: T,
                     experimental: { standalone: !0 },
                 });
-            S.addEvent("inp", {
+            y.addEvent("inp", {
                 [n.E1]: "millisecond",
                 [n.Wb]: t.value,
             }),
-                S.end(f + T);
+                y.end(T + f);
         });
         return () => {
             t();
@@ -106,11 +106,11 @@ function A(t) {
             if (!(0, l.cN)(t) || !a) return;
             let e = t.interactionId;
             if (null != e && !R.has(e)) {
-                if (I.length > 10) {
-                    let t = I.shift();
+                if (u.length > 10) {
+                    let t = u.shift();
                     R.delete(t);
                 }
-                I.push(e), R.set(e, a);
+                u.push(e), R.set(e, a);
             }
         });
     };

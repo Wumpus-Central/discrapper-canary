@@ -1,15 +1,15 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(536982),
-    a = n(285318),
-    s = n(456677),
+    s = n(285318),
+    a = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
     u = n(273504),
-    m = n(388032),
-    g = n(145468);
+    g = n(388032),
+    m = n(145468);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,52 +53,52 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
-    var t, n, f;
-    let { rule: b, onChangeRule: x } = e,
+function h(e) {
+    var t, n, h;
+    let { rule: x, onChangeRule: b } = e,
         j = i.useCallback(
             (e) => {
-                x(h(p({}, b), { triggerMetadata: h(p({}, b.triggerMetadata), { allowList: e }) }));
+                b(f(p({}, x), { triggerMetadata: f(p({}, x.triggerMetadata), { allowList: e }) }));
             },
-            [x, b],
+            [b, x],
         );
     return (0, r.jsxs)("div", {
-        className: g.cardContentsContainer,
+        className: m.cardContentsContainer,
         children: [
             (0, r.jsxs)(c.Z, {
                 step: 1,
-                header: m.intl.string(m.t.CX5YfX),
+                header: g.intl.string(g.t.CX5YfX),
                 children: [
-                    (0, r.jsx)(a.Z, {
-                        rule: b,
-                        onChangeRule: x,
+                    (0, r.jsx)(s.Z, {
+                        rule: x,
+                        onChangeRule: b,
                     }),
                     (0, r.jsx)(l.Z, {
                         onChange: j,
-                        initialValue: null == (t = b.triggerMetadata) ? void 0 : t.allowList,
+                        initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
                         maxWordCount: u.I3,
                         collapsed:
-                            (null == (n = b.triggerMetadata) ? void 0 : n.allowList) == null ||
-                            (null == (f = b.triggerMetadata) ? void 0 : f.allowList.length) === 0,
+                            (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null ||
+                            (null == (h = x.triggerMetadata) ? void 0 : h.allowList.length) === 0,
                     }),
                 ],
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(c.Z, {
                 step: 2,
-                header: m.intl.string(m.t["18TOiY"]),
-                children: (0, r.jsx)(s.Z, {
-                    rule: b,
-                    onChangeRule: x,
+                header: g.intl.string(g.t["18TOiY"]),
+                children: (0, r.jsx)(a.Z, {
+                    rule: x,
+                    onChangeRule: b,
                 }),
             }),
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
             (0, r.jsx)(c.Z, {
                 step: 3,
-                header: m.intl.string(m.t.eq3gjo),
+                header: g.intl.string(g.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
-                    rule: b,
-                    onChangeRule: x,
+                    rule: x,
+                    onChangeRule: b,
                 }),
             }),
         ],

@@ -1,148 +1,148 @@
-l.r(t), l.d(t, { default: () => v }), l(388685), l(35282);
-var s = l(951288),
-    e = l(647438),
-    c = l(873546),
-    i = l(442837),
-    r = l(481060),
-    f = l(830064),
-    d = l(388905),
-    o = l(625128),
-    n = l(362762),
-    x = l(703656),
-    h = l(617136),
-    p = l(272008),
-    j = l(497505),
-    M = l(110560),
-    k = l(46140),
-    z = l(981631),
-    u = l(186901),
-    m = l(388032),
-    L = l(781984),
-    y = l(74830),
-    g = l(13299);
-i.ZP.initialize();
-let b = c.tq || c.Em;
-function v(a) {
-    let { match: t } = a,
-        l = (0, i.e7)([n.Z], () => n.Z.getState("quests")),
-        c = t.params.questId,
-        v = (function (a) {
-            let [t, l] = e.useState(null);
+a.r(t), a.d(t, { default: () => b }), a(388685), a(35282);
+var s = a(951288),
+    n = a(647438),
+    i = a(873546),
+    l = a(442837),
+    r = a(481060),
+    c = a(830064),
+    d = a(388905),
+    g = a(625128),
+    o = a(362762),
+    m = a(703656),
+    u = a(617136),
+    _ = a(272008),
+    x = a(497505),
+    p = a(110560),
+    h = a(46140),
+    E = a(981631),
+    T = a(186901),
+    j = a(388032),
+    N = a(781984),
+    k = a(74830),
+    v = a(13299);
+l.ZP.initialize();
+let I = i.tq || i.Em;
+function b(e) {
+    let { match: t } = e,
+        a = (0, l.e7)([o.Z], () => o.Z.getState("quests")),
+        i = t.params.questId,
+        b = (function (e) {
+            let [t, a] = n.useState(null);
             return (
-                e.useEffect(() => {
-                    (0, p.gU)(a)
-                        .then((a) =>
-                            l({
+                n.useEffect(() => {
+                    (0, _.gU)(e)
+                        .then((e) =>
+                            a({
                                 status: "ok",
-                                value: a,
+                                value: e,
                             }),
                         )
-                        .catch(() => l({ status: "error" }));
-                }, [l, a]),
+                        .catch(() => a({ status: "error" }));
+                }, [a, e]),
                 t
             );
-        })(c);
-    e.useEffect(() => {
-        b ||
-            (null == l
-                ? ((0, h.dA)({
-                      questId: c,
-                      event: z.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
+        })(i);
+    n.useEffect(() => {
+        I ||
+            (null == a
+                ? ((0, u.dA)({
+                      questId: i,
+                      event: E.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
                       properties: {},
-                      sourceQuestContent: j.jn.QUEST_HOME_DESKTOP,
+                      sourceQuestContent: x.jn.QUEST_HOME_DESKTOP,
                   }),
-                  o.Z.openNativeAppModal("quests", z.Etm.DEEP_LINK, {
-                      type: u.jE.QUEST_HOME,
-                      params: { questId: c },
+                  g.Z.openNativeAppModal("quests", E.Etm.DEEP_LINK, {
+                      type: T.jE.QUEST_HOME,
+                      params: { questId: i },
                   }))
-                : l === z.kEZ.OPEN_FAIL &&
-                  (0, x.dL)({
-                      pathname: z.Z5c.QUEST_HOME,
-                      hash: c,
+                : a === E.kEZ.OPEN_FAIL &&
+                  (0, m.dL)({
+                      pathname: E.Z5c.QUEST_HOME,
+                      hash: i,
                   }));
-    }, [l, c]);
-    let O = e.useCallback(() => (0, M.openAppWithQuest)(c), [c]);
-    if (b)
+    }, [a, i]);
+    let f = n.useCallback(() => (0, p.openAppWithQuest)(i), [i]);
+    if (I)
         return (0, s.jsxs)("div", {
-            className: L.page,
+            className: N.page,
             children: [
                 (0, s.jsx)("img", {
-                    className: L.bgImg,
-                    src: g.ZP,
+                    className: N.bgImg,
+                    src: v.ZP,
                     alt: "",
                 }),
                 (0, s.jsx)("div", {
-                    className: L.logoContainer,
+                    className: N.logoContainer,
                     children: (0, s.jsx)("img", {
-                        src: y,
+                        src: k,
                         alt: "",
                     }),
                 }),
-                null != v &&
+                null != b &&
                     (0, s.jsxs)("div", {
-                        className: L.card,
+                        className: N.card,
                         children: [
-                            "ok" === v.status &&
+                            "ok" === b.status &&
                                 (0, s.jsxs)(s.Fragment, {
                                     children: [
                                         (0, s.jsx)("div", {
-                                            className: L.gameTile,
+                                            className: N.gameTile,
                                             children: (0, s.jsx)("img", {
                                                 src: ""
-                                                    .concat(k.tD)
-                                                    .concat(c, "/dark/")
-                                                    .concat(v.value.assets.gameTile),
+                                                    .concat(h.HO)
+                                                    .concat(i, "/dark/")
+                                                    .concat(b.value.assets.gameTile),
                                                 alt: "",
-                                                className: L.gameTileImg,
+                                                className: N.gameTileImg,
                                             }),
                                         }),
                                         (0, s.jsx)(r.X6q, {
                                             variant: "heading-lg/semibold",
                                             color: "text-default",
-                                            className: L.headingText,
-                                            children: v.value.messages.questName,
+                                            className: N.headingText,
+                                            children: b.value.messages.questName,
                                         }),
                                     ],
                                 }),
                             (0, s.jsx)(r.Text, {
                                 variant: "text-md/normal",
-                                className: L.bodyText,
-                                children: m.intl.string(m.t.NweJIy),
+                                className: N.bodyText,
+                                children: j.intl.string(j.t.NweJIy),
                             }),
                             (0, s.jsx)(r.zxk, {
                                 variant: "primary",
-                                text: m.intl.string(m.t.UQvCf3),
+                                text: j.intl.string(j.t.UQvCf3),
                                 fullWidth: !0,
-                                onClick: O,
+                                onClick: f,
                             }),
                         ],
                     }),
             ],
         });
-    let W = null == l || l === z.kEZ.OPENING || l === z.kEZ.OPEN_FAIL;
+    let O = null == a || a === E.kEZ.OPENING || a === E.kEZ.OPEN_FAIL;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(f.Z, {
-                className: L.backgroundArtwork,
+            (0, s.jsx)(c.Z, {
+                className: N.backgroundArtwork,
                 preserveAspectRatio: "xMinYMin slice",
             }),
             (0, s.jsx)("div", {
-                className: L.container,
+                className: N.container,
                 children: (0, s.jsx)(d.ZP, {
-                    children: W
+                    children: O
                         ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, s.jsx)(d.Dx, { children: m.intl.string(m.t["Z+hCVV"]) }),
+                                  (0, s.jsx)(d.Dx, { children: j.intl.string(j.t["Z+hCVV"]) }),
                                   (0, s.jsx)(d.Hh, {}),
                               ],
                           })
                         : (0, s.jsxs)(s.Fragment, {
                               children: [
                                   (0, s.jsx)(d.Dx, {
-                                      className: L.appOpenedTitle,
-                                      children: m.intl.string(m.t.csrAMD),
+                                      className: N.appOpenedTitle,
+                                      children: j.intl.string(j.t.csrAMD),
                                   }),
-                                  (0, s.jsx)(d.DK, { children: m.intl.string(m.t.ghBJz8) }),
+                                  (0, s.jsx)(d.DK, { children: j.intl.string(j.t.ghBJz8) }),
                               ],
                           }),
                 }),

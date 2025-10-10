@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(981631),
     T = n(388032),
     N = n(199679);
-let P = (0, i.memo)(function (e) {
-    var t, n, l, P, j, x;
+let j = (0, i.memo)(function (e) {
+    var t, n, l, j, P, x;
     let { quest: A } = e,
         [Z, w] = (0, i.useState)(!1),
         [L, R] = (0, i.useState)(24),
@@ -34,22 +34,22 @@ let P = (0, i.memo)(function (e) {
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
         B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: V, height: H = 0 } = (0, p.ZP)(),
+        { ref: H, height: V = 0 } = (0, p.ZP)(),
         F = (0, f.ZP)(),
         z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
             day: "numeric",
         }),
-        W = null != (j = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? j : 0,
-        Y = A.config.rewards[W],
-        K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
-        q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
-        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
-        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        W = null != (P = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? P : 0,
+        q = A.config.rewards[W],
+        Y = (null == q ? void 0 : q.type) === s.w.FRACTIONAL_PREMIUM,
+        K = (null == q ? void 0 : q.type) === s.w.COLLECTIBLE,
+        Q = (null == q ? void 0 : q.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == q || null == (j = q.collectibleProduct) || null == (l = j.items) ? void 0 : l[0],
         J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
-        if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
+        if (!K || null == t || null == U.current || null == M.current || null == G.current) return;
         let n = M.current.getBoundingClientRect(),
             r = U.current.getBoundingClientRect(),
             i = G.current.getBoundingClientRect();
@@ -58,7 +58,7 @@ let P = (0, i.memo)(function (e) {
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
         et = (0, i.useMemo)(() => (0, y.fh)(A, y.eC.REWARD), [A]),
-        en = Z ? H + 8 : 0,
+        en = Z ? V + 8 : 0,
         er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
         ea = (function (e, t) {
@@ -122,7 +122,7 @@ let P = (0, i.memo)(function (e) {
                     quest_id: A.id,
                 });
         };
-    return null == Y || D
+    return null == q || D
         ? null
         : (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {
@@ -135,7 +135,7 @@ let P = (0, i.memo)(function (e) {
                   className: a()(N.container, { [N.hovered]: Z }),
                   children: [
                       null != B &&
-                          q &&
+                          K &&
                           null != J &&
                           (0, r.jsx)("div", {
                               ref: G,
@@ -147,7 +147,7 @@ let P = (0, i.memo)(function (e) {
                                   guildId: null,
                               }),
                           }),
-                      K
+                      Y
                           ? (0, r.jsx)(v.Z, { className: N.image })
                           : Q
                             ? (0, r.jsx)(I.Z, { className: N.image })
@@ -184,7 +184,7 @@ let P = (0, i.memo)(function (e) {
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          ref: V,
+                          ref: H,
                           className: N.details,
                           children: [
                               (0, r.jsx)(d.X6q, {
@@ -198,7 +198,7 @@ let P = (0, i.memo)(function (e) {
                                   color: $ ? "text-muted" : "always-white",
                                   style: { opacity: $ ? 1 : 0.75 },
                                   children: T.intl.format(T.t.kXVcV1, {
-                                      reward: Y.name,
+                                      reward: q.name,
                                       claimedDate: z,
                                   }),
                               }),

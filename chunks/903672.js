@@ -14,17 +14,17 @@ var r = n(951288),
     g = n(294218),
     m = n(216789),
     b = n(695346),
-    O = n(592125),
+    _ = n(592125),
     y = n(731290),
-    _ = n(944486),
+    O = n(944486),
     v = n(455199),
     j = n(655354),
     x = n(324081),
     C = n(240126),
     E = n(981631),
     S = n(388032),
-    P = n(889833);
-let I = {
+    I = n(889833);
+let P = {
     offset: {
         left: 4,
         right: -12,
@@ -46,7 +46,7 @@ function N(e, t, n) {
 }
 function Z(e) {
     let { onJump: t } = e,
-        n = (0, a.e7)([O.Z, _.Z], () => O.Z.getChannel(_.Z.getChannelId())),
+        n = (0, a.e7)([_.Z, O.Z], () => _.Z.getChannel(O.Z.getChannelId())),
         {
             messages: l,
             hasMore: s,
@@ -65,11 +65,11 @@ function Z(e) {
         j = (0, m.Us)({ location: "RecentMentions" }),
         x = (0, p.Z)(g),
         C = (0, p.Z)(b),
-        I = (0, p.Z)(y);
+        P = (0, p.Z)(y);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != x && g !== x) || (null != C && b !== C) || (null != I && y !== I)) && N(n, !0);
-    }, [x, g, C, b, I, y, n, !0]),
+        ((null != x && g !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
+    }, [x, g, C, b, P, y, n, !0]),
         (0, d.ZP)(() => {
             (null == l ? void 0 : l.some(f.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
@@ -81,8 +81,8 @@ function Z(e) {
         );
     let Z = i.useCallback(() => null, []);
     return (0, r.jsx)(u.ZP, {
-        className: o()(P.recentMentionsPopout, { [P.widerInbox]: j }),
-        scrollerClassName: P.scroller,
+        className: o()(I.recentMentionsPopout, { [I.widerInbox]: j }),
+        scrollerClassName: I.scroller,
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
@@ -120,12 +120,12 @@ function w(e, t) {
 function T(e) {
     let { message: t, gotoMessage: n, dismissible: i } = e;
     if (null == t) return null;
-    let l = O.Z.getChannel(t.channel_id);
+    let l = _.Z.getChannel(t.channel_id);
     if (null == l || (0, h._t)(l) || (0, h.ft)(l)) return null;
     let o = y.Z.didAgree(l.getGuildId()),
         a = !!(0, h.qF)(l) && !o;
     return (0, r.jsxs)("div", {
-        className: P.container,
+        className: I.container,
         children: [
             (0, r.jsx)(x.Z, {
                 channel: l,
@@ -133,7 +133,7 @@ function T(e) {
                 children:
                     null != i
                         ? (0, r.jsx)(s.M0o, {
-                              className: P.closeButton,
+                              className: I.closeButton,
                               tooltip: S.intl.string(S.t.cpT0Cg),
                               color: s.YX$.TERTIARY,
                               icon: (0, r.jsx)(s.Dio, {
@@ -145,10 +145,10 @@ function T(e) {
                         : null,
             }),
             (0, r.jsxs)("div", {
-                className: P.messageContainer,
+                className: I.messageContainer,
                 children: [
                     (0, r.jsx)(j.Z, {
-                        className: P.jumpMessageButton,
+                        className: I.jumpMessageButton,
                         onJump: n,
                     }),
                     (0, r.jsx)(
@@ -156,11 +156,11 @@ function T(e) {
                         {
                             message: t,
                             channel: l,
-                            className: P.message,
+                            className: I.message,
                             hideAccessories: a,
                             compact: b.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: I,
+                            focusProps: P,
                             trackAnnouncementViews: !0,
                         },
                         t.id,

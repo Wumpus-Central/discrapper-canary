@@ -1,6 +1,6 @@
 n.d(t, {
-    FG: () => h,
-    ju: () => f,
+    FG: () => f,
+    ju: () => h,
     ro: () => p,
 }),
     n(997841),
@@ -15,7 +15,7 @@ var r,
     u = n(491662),
     d = n(981631),
     p = (((r = {}).RPC = "rpc"), (r.WEB = "web"), r);
-function f(e) {
+function h(e) {
     var t, n, r, i, o;
     if (null == e) return null;
     if (
@@ -34,17 +34,17 @@ function f(e) {
     }
     return null;
 }
-function h(e) {
+function f(e) {
     let { allowedFlows: t = ["rpc", "web"] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = i.useMemo(() => f(e), [e]),
+        n = i.useMemo(() => h(e), [e]),
         r = (0, a.t)(null == n ? void 0 : n.id, "AUTHORIZE_REQUEST"),
         l = t.includes("rpc") && r,
         s = t.includes("web") && (null == n ? void 0 : n.connectionEntrypointUrl) != null,
         d = l || s,
-        { token: p, loading: h } = (0, u.o)(null == n ? void 0 : n.id, { disableFetch: !d });
+        { token: p, loading: f } = (0, u.o)(null == n ? void 0 : n.id, { disableFetch: !d });
     return {
-        loading: h,
-        hasAlreadyLinked: !h && null != p,
+        loading: f,
+        hasAlreadyLinked: !f && null != p,
         canStartAuthorization: d,
         startAuthorization: i.useCallback(
             () =>

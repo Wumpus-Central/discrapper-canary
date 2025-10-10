@@ -5,14 +5,14 @@ n.d(t, {
 });
 var r = n(399606),
     i = n(594174),
-    o = n(473007),
-    a = n(914788),
+    a = n(473007),
+    o = n(914788),
     s = n(880257);
 let l = () => {
         let e = (0, s.Z)();
-        return (0, r.e7)([a.Z, i.default], () => {
+        return (0, r.e7)([o.Z, i.default], () => {
             if (!e) return i.default.getCurrentUser();
-            let t = a.Z.getSelectedTeenId();
+            let t = o.Z.getSelectedTeenId();
             if (null !== t) return i.default.getUser(t);
         });
     },
@@ -22,10 +22,10 @@ let l = () => {
             if (null != t) return t;
         }),
     u = () => {
-        let e = a.Z.getSelectedTeenId(),
-            { hasLoadedSettings: t, isLoading: n } = (0, r.cj)([o.Z], () => ({
-                hasLoadedSettings: null != e && o.Z.hasSettingsForUser(e),
-                isLoading: o.Z.isLoading,
+        let e = o.Z.getSelectedTeenId(),
+            { hasLoadedSettings: t, isLoading: n } = (0, r.cj)([a.Z], () => ({
+                hasLoadedSettings: null != e && a.Z.hasSettingsForUser(e),
+                isLoading: a.Z.isLoading,
             }));
         return null !== e && !t && !n;
     };

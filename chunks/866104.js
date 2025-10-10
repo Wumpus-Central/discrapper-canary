@@ -106,10 +106,10 @@ function R(e) {
         R = (0, c.Z)("(max-width: 1439px)"),
         { selectedTab: P, isPhantomPreview: w } = (0, O.m)(),
         D = P === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/P"]) : T.intl.string(T.t.XyqKh4),
-        x = (e) => {
+        L = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
-    function L(e, t) {
+    function x(e, t) {
         return (0, r.jsx)(
             "span",
             {
@@ -119,7 +119,7 @@ function R(e) {
             t,
         );
     }
-    let j = g
+    let M = g
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(h, {
@@ -164,7 +164,7 @@ function R(e) {
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)("div", {
-                                ref: x,
+                                ref: L,
                                 children: (0, r.jsx)(l.X6q, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
@@ -180,11 +180,11 @@ function R(e) {
                                 color: "text-default",
                                 children: T.intl.format(T.t["7JwrlJ"], {
                                     username: d,
-                                    usernameHook: L,
+                                    usernameHook: x,
                                 }),
                             }),
                             (0, r.jsx)(l.LZC, { size: 9 }),
-                            j,
+                            M,
                         ],
                     }),
                 ],

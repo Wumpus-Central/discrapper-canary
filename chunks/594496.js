@@ -32,7 +32,7 @@ var i = n(512722),
     D = n(291334),
     L = n(474936),
     x = n(388032),
-    M = n(486750);
+    M = n(737788);
 function j(e) {
     var t, n, i, j;
     let { guild: k, nameplateEnabled: U } = e,

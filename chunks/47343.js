@@ -9,9 +9,9 @@ var r = n(951288),
     u = n(51331),
     d = n(259580),
     h = n(626135),
-    p = n(731971),
-    g = n(981631),
-    m = n(388032),
+    g = n(731971),
+    m = n(981631),
+    p = n(388032),
     f = n(152143);
 let _ = () => {
     var e;
@@ -22,12 +22,12 @@ let _ = () => {
             dmsAllowed: x,
             showActivity: E,
             setNickname: v,
-            setDmsAllowed: j,
-            setShowActivity: b,
-            guildId: I,
+            setDmsAllowed: b,
+            setShowActivity: I,
+            guildId: j,
             inviteCode: N,
-        } = (0, p.XW)(),
-        O = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
+        } = (0, g.XW)(),
+        S = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
     return (0, r.jsxs)("div", {
         className: s()(f.editProfileContainer, { [f.opened]: t }),
         children: [
@@ -35,8 +35,8 @@ let _ = () => {
                 className: f.header,
                 onClick: () => {
                     t ||
-                        h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: I,
+                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                            guild_id: j,
                             invite_code: N,
                         }),
                         n(!t);
@@ -52,12 +52,12 @@ let _ = () => {
                             (0, r.jsx)(a.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: m.intl.string(m.t.A5wHQ0),
+                                children: p.intl.string(p.t.A5wHQ0),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: m.intl.string(m.t.UKCSER),
+                                children: p.intl.string(p.t.UKCSER),
                             }),
                         ],
                     }),
@@ -72,35 +72,35 @@ let _ = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: s()(f.customizationSection, { [f.opened]: t }, O ? null : f.condensed),
+                className: s()(f.customizationSection, { [f.opened]: t }, S ? null : f.condensed),
                 children: [
-                    O &&
+                    S &&
                         (0, r.jsxs)("div", {
                             className: f.serverNickname,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
-                                    children: m.intl.string(m.t.me1lRk),
+                                    children: p.intl.string(p.t.me1lRk),
                                 }),
                                 (0, r.jsx)(a.oil, {
-                                    placeholder: m.intl.string(m.t["09Q8ys"]),
-                                    maxLength: g.l$U,
+                                    placeholder: p.intl.string(p.t["09Q8ys"]),
+                                    maxLength: m.l$U,
                                     value: _,
                                     onChange: v,
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.Z, {
-                        title: m.intl.string(m.t["/2ed39"]),
+                        title: p.intl.string(p.t["/2ed39"]),
                         value: x,
-                        onChange: j,
+                        onChange: b,
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
-                            title: m.intl.string(m.t.bN4m1N),
+                            title: p.intl.string(p.t.bN4m1N),
                             value: E,
-                            onChange: b,
+                            onChange: I,
                         }),
                 ],
             }),

@@ -1,31 +1,31 @@
-n.d(t, { S: () => p });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    o = n.n(i),
-    a = n(594174),
-    l = n(747101),
-    c = n(817053),
-    s = n(533815),
-    u = n(919498),
-    d = n(853072),
-    f = n(932366),
-    g = n(133458);
+r.d(t, { S: () => p });
+var n = r(951288);
+r(647438);
+var i = r(120356),
+    o = r.n(i),
+    a = r(594174),
+    l = r(747101),
+    c = r(817053),
+    s = r(533815),
+    u = r(919498),
+    d = r(853072),
+    f = r(932366),
+    g = r(133458);
 function p(e) {
-    let { game: t, userId: n, widgetType: i, guildId: p, channelId: b, disableInteraction: m = !1 } = e,
+    let { game: t, userId: r, widgetType: i, guildId: p, channelId: b, disableInteraction: m = !1 } = e,
         O = (0, d.Z)(t.applicationId).length > 0,
         y = a.default.getCurrentUser(),
-        j = (null == y ? void 0 : y.id) === n;
+        j = (null == y ? void 0 : y.id) === r;
     return (0, l.kO)(t.applicationId)
-        ? (0, r.jsx)("div", { className: f.loadingCover })
-        : (0, r.jsxs)("div", {
+        ? (0, n.jsx)("div", { className: f.loadingCover })
+        : (0, n.jsxs)("div", {
               className: g.container,
               children: [
-                  (0, r.jsx)(c.Z, {
+                  (0, n.jsx)(c.Z, {
                       imageSrc: t.imageSrc,
                       gameName: t.gameName,
                       applicationId: t.applicationId,
-                      userId: n,
+                      userId: r,
                       disableInteraction: m,
                       className: o()(
                           O ? g.socialProofBackdrop : void 0,
@@ -34,14 +34,14 @@ function p(e) {
                   }),
                   !m &&
                       j &&
-                      (0, r.jsx)(s.Z, {
+                      (0, n.jsx)(s.Z, {
                           game: t,
                           widgetType: i,
                           className: g.removeGameButton,
                           iconSize: "xs",
                       }),
                   !m &&
-                      (0, r.jsx)(u.Z, {
+                      (0, n.jsx)(u.Z, {
                           className: g.socialProof,
                           applicationId: t.applicationId,
                           guildId: p,

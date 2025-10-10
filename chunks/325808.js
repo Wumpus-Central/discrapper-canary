@@ -74,7 +74,7 @@ function I(e) {
                     gap: 16,
                     direction: "horizontal",
                     children: [
-                        (0, r.jsx)(s.NIc, {
+                        (0, r.jsx)(s.gNt, {
                             label: E.intl.string(E.t.YkDjVF),
                             children: (0, r.jsx)(c.Z, {
                                 defaultValue: i,

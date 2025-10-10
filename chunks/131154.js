@@ -1,16 +1,16 @@
 t.d(n, { Z: () => s });
 var i = t(951288);
 t(647438);
-var r = t(120356),
-    a = t.n(r),
+var a = t(120356),
+    r = t.n(a),
     l = t(481060),
     o = t(388032),
     c = t(140764);
 function s(e) {
-    let { guild: n, speakers: t, speakerCount: r, className: s } = e,
+    let { guild: n, speakers: t, speakerCount: a, className: s } = e,
         d = t.slice(0, 5),
         u = d.map((e) => {
-            var t, r;
+            var t, a;
             return (0, i.jsxs)(
                 "div",
                 {
@@ -33,12 +33,12 @@ function s(e) {
                         }),
                     ],
                 },
-                null == e || null == (r = e.user) ? void 0 : r.id,
+                null == e || null == (a = e.user) ? void 0 : a.id,
             );
         }),
-        _ = r - d.length;
+        _ = a - d.length;
     return (0, i.jsxs)("div", {
-        className: a()(c.grid, s),
+        className: r()(c.grid, s),
         children: [
             u,
             _ > 0 &&

@@ -1,17 +1,17 @@
-n.d(t, { E: () => g });
+n.d(t, { E: () => m });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(768581),
+    s = n(481060),
+    a = n(768581),
     o = n(723047),
     c = n(570533),
     d = n(388032),
     u = n(562337);
-function m(e) {
+function g(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: i = !1 } = e,
-        o = s.ZP.getEmojiURL({
+        o = a.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
             size: 32,
@@ -24,7 +24,7 @@ function m(e) {
                 src: o,
                 alt: t.name,
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 color: "header-primary",
                 variant: "text-md/medium",
                 className: u.emojiAlias,
@@ -32,9 +32,9 @@ function m(e) {
             }),
             (0, r.jsx)("div", {
                 className: u.deleteButton,
-                children: (0, r.jsx)(a.hU, {
+                children: (0, r.jsx)(s.hU, {
                     variant: "secondary",
-                    icon: a.XHJ,
+                    icon: s.XHJ,
                     onClick: () => n(t),
                     "aria-label": d.intl.string(d.t.dVS92d),
                     disabled: i,
@@ -43,20 +43,20 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { tierEmojiIds: t, guildId: n, onRemoveEmoji: i } = e,
         l = (0, c.Z)(n),
-        a = null != t ? l.filter((e) => t.has(e.id)) : [],
-        s = (0, o.mY)();
+        s = null != t ? l.filter((e) => t.has(e.id)) : [],
+        a = (0, o.mY)();
     return (0, r.jsx)("div", {
         className: u.container,
-        children: a.map((e) =>
+        children: s.map((e) =>
             (0, r.jsx)(
-                m,
+                g,
                 {
                     emoji: e,
                     onRemoveEmoji: () => i(e),
-                    disabled: s,
+                    disabled: a,
                 },
                 e.id,
             ),

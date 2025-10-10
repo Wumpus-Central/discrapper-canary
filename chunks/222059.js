@@ -1,4 +1,4 @@
-n.d(t, { u: () => M }), n(388685);
+n.d(t, { u: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(91192),
@@ -9,27 +9,27 @@ var r = n(951288),
     u = n(864682),
     d = n(975298),
     p = n(550385),
-    f = n(899740),
-    h = n(849862),
+    h = n(899740),
+    f = n(849862),
     g = n(460181),
     m = n(155409),
     b = n(944486),
-    O = n(594174),
+    _ = n(594174),
     y = n(431),
-    _ = n(774343),
+    O = n(774343),
     v = n(417363),
     j = n(941128),
     x = n(780570),
     C = n(278464),
     E = n(276952),
     S = n(682662),
-    P = n(662146),
-    I = n(674552),
+    I = n(662146),
+    P = n(674552),
     N = n(981631),
     Z = n(474936),
     w = n(871465),
     T = n(388032),
-    A = n(688825);
+    A = n(815141);
 let R = {
     origin: {
         x: -16,
@@ -44,19 +44,19 @@ let R = {
 };
 function D(e) {
     var t, n;
-    let { selected: o, user: d, badge: f, link: h, showProgressBadge: b } = e,
-        [O, y] = i.useState(!1),
-        [_, v] = i.useState(!1),
+    let { selected: o, user: d, badge: h, link: f, showProgressBadge: b } = e,
+        [_, y] = i.useState(!1),
+        [O, v] = i.useState(!1),
         [j, x] = i.useState(null),
         [C, Z] = i.useState(0),
         D = (0, l.Ie)("home"),
-        M = (0, p.oq)().activePanel === p.wh.APP_ICON,
-        L = () => {
+        L = (0, p.oq)().activePanel === p.wh.APP_ICON,
+        M = () => {
             x(null), Z(0), clearTimeout(j);
         };
     if (null == d) return null;
     let k = T.intl.string(T.t.YUU0RE);
-    _ && (k = a.K.get(N.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    O && (k = a.K.get(N.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
     let U = null;
     !o &&
         b &&
@@ -64,12 +64,12 @@ function D(e) {
             className: A.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let G = o || O || M,
+    let G = o || _ || L,
         B = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: f > 0 ? (0, I.Ne)(f) : null,
+            lowerBadge: h > 0 ? (0, P.Ne)(h) : null,
             upperBadge: U,
-            lowerBadgeSize: { width: (0, s.OVM)(f) },
+            lowerBadgeSize: { width: (0, s.OVM)(h) },
             children: (0, r.jsx)(
                 s.LYs,
                 ((t = (function (e) {
@@ -103,9 +103,9 @@ function D(e) {
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != j && clearTimeout(j), x(setTimeout(L, 500)), Z(C + 1), 15 === C)
+                                (null != j && clearTimeout(j), x(setTimeout(M, 500)), Z(C + 1), 15 === C)
                             ) {
-                                L();
+                                M();
                                 let e = !a.K.get(N.wli);
                                 a.K.set(N.wli, e),
                                     e && a.K.set(w.O, !0),
@@ -126,7 +126,7 @@ function D(e) {
                 (n = n =
                     {
                         to: {
-                            pathname: h,
+                            pathname: f,
                             state: {
                                 analyticsSource: {
                                     page: N.ZY5.GUILD_CHANNEL,
@@ -162,10 +162,10 @@ function D(e) {
                 children: [
                     (0, r.jsx)(E.Z, {
                         selected: o,
-                        hovered: O,
+                        hovered: _,
                         className: A.pill,
                     }),
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(I.Z, {
                         color: s.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: k,
@@ -177,7 +177,7 @@ function D(e) {
         }),
     });
 }
-function M() {
+function L() {
     let e = (0, C.n)(),
         t = (0, o.e7)([j.Z, v.Z], () => {
             let e = (0, c.E)(j.Z.activeItems, v.Z),
@@ -185,7 +185,7 @@ function M() {
                 r = x.xI(n, t);
             return r > 0 && r < 100;
         }),
-        n = (0, h.If)(),
+        n = (0, f.If)(),
         i = Object.keys(Z.nG),
         l = (0, d.Z)(),
         { unviewedTrialCount: a, unviewedDiscountCount: s } = (0, o.cj)([y.Z], () => ({
@@ -193,11 +193,11 @@ function M() {
             unviewedDiscountCount: y.Z.getUnacknowledgedDiscountOffers().length,
         })),
         u = l.fractionalState === Z.a$.NONE ? a + s : 0,
-        p = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
-        g = (0, f.q)(),
+        p = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        g = (0, h.q)(),
         m = n + u + g,
         E = m === u && u > 0 && n + g === 0,
-        S = _.Z.getHomeLink();
+        S = O.Z.getHomeLink();
     return (
         E && (S = N.Z5c.APPLICATION_STORE),
         (0, r.jsx)(D, {

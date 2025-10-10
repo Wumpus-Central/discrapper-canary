@@ -1,24 +1,24 @@
 r.d(t, { Z: () => b });
 var a = r(44837),
     n = r(381537),
-    s = r(647438),
-    o = r(639519),
-    i = r.n(o),
+    o = r(647438),
+    s = r(639519),
+    i = r.n(s),
     c = r(208844),
-    l = ["data"];
-function u(e) {
+    u = ["data"];
+function l(e) {
     return "".concat(e.length, " ").concat(1 !== e.length ? "items" : "item");
 }
 var f = function (e) {
     var t = e.data,
-        r = (0, n.Z)(e, l);
-    return s.createElement(
+        r = (0, n.Z)(e, u);
+    return o.createElement(
         c.Z,
         (0, a.Z)({}, r, {
             data: t,
             nodeType: "Array",
             nodeTypeIndicator: "[]",
-            createItemString: u,
+            createItemString: l,
             expandable: t.length > 0,
         }),
     );

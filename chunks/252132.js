@@ -1,31 +1,31 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(27457),
     l = n(131951),
     a = n(441997);
-function o(e) {
+function s(e) {
     var {
             aspectRatio: t,
             blocked: n,
-            ignored: o,
-            channel: s,
+            ignored: s,
+            channel: o,
             className: c,
-            focused: u,
-            children: d,
+            focused: d,
+            children: u,
             inCall: p,
             inPopout: h,
             noBorder: f,
-            onClick: m,
-            onContextMenu: g,
+            onClick: g,
+            onContextMenu: m,
             onDoubleClick: b,
-            onVideoResize: _,
-            paused: y,
-            pulseSpeakingIndicator: C,
+            onVideoResize: y,
+            paused: _,
+            pulseSpeakingIndicator: j,
             participant: x,
-            width: v,
+            width: O,
         } = e,
-        O = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -65,9 +65,9 @@ function o(e) {
             "participant",
             "width",
         ]);
-    let j = l.Z.getVideoComponent();
+    let C = l.Z.getVideoComponent();
     return (0, r.jsx)("div", {
-        style: { width: v },
+        style: { width: O },
         className: a.spaceBetweenTiles,
         children: (0, r.jsxs)("div", {
             className: a.tileSizer,
@@ -102,27 +102,27 @@ function o(e) {
                     })(
                         {
                             blocked: n,
-                            ignored: o,
-                            channel: s,
+                            ignored: s,
+                            channel: o,
                             className: c,
-                            focused: u,
+                            focused: d,
                             inCall: p,
                             inPopout: h,
                             noBorder: f,
-                            onClick: m,
-                            onContextMenu: g,
+                            onClick: g,
+                            onContextMenu: m,
                             onDoubleClick: b,
-                            onVideoResize: _,
+                            onVideoResize: y,
                             participant: x,
-                            paused: y,
-                            pulseSpeakingIndicator: C,
-                            videoComponent: j,
-                            width: v,
+                            paused: _,
+                            pulseSpeakingIndicator: j,
+                            videoComponent: C,
+                            width: O,
                         },
-                        O,
+                        v,
                     ),
                 ),
-                d,
+                u,
             ],
         }),
     });

@@ -1,28 +1,28 @@
-n.d(t, { Z: () => u });
-var r = n(951288);
+n.d(t, { Z: () => c });
+var l = n(951288);
 n(647438);
-var l = n(120356),
-    s = n.n(l),
-    i = n(481060),
-    a = n(570928),
-    o = n(388032),
-    c = n(980941);
-let u = function (e) {
-    let { className: t, hasVideo: n, text: l, hasConnectedChannel: u, textVariant: d = "text-md/medium" } = e,
-        h = n ? o.intl.string(o.t.IlHdW1) : o.intl.string(o.t.WsOisr);
-    return (0, r.jsx)(a.Z, {
-        className: s()(t, c.hoverableStatus),
-        hoverText: u
-            ? (0, r.jsx)(i.Text, {
+var i = n(120356),
+    r = n.n(i),
+    a = n(481060),
+    o = n(570928),
+    s = n(388032),
+    u = n(980941);
+let c = function (e) {
+    let { className: t, hasVideo: n, text: i, hasConnectedChannel: c, textVariant: d = "text-md/medium" } = e,
+        f = n ? s.intl.string(s.t.IlHdW1) : s.intl.string(s.t.WsOisr);
+    return (0, l.jsx)(o.Z, {
+        className: r()(t, u.hoverableStatus),
+        hoverText: c
+            ? (0, l.jsx)(a.Text, {
                   variant: d,
                   color: "currentColor",
-                  children: h,
+                  children: f,
               })
             : null,
-        children: (0, r.jsx)(i.Text, {
+        children: (0, l.jsx)(a.Text, {
             variant: d,
             color: "currentColor",
-            children: l,
+            children: i,
         }),
     });
 };

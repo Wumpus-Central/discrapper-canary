@@ -45,7 +45,7 @@ var r,
     P = n(947599),
     w = {},
     D = "undefined" != typeof Uint8Array && A ? A(Uint8Array) : r,
-    x = {
+    L = {
         __proto__: null,
         "%AggregateError%": "undefined" == typeof AggregateError ? r : AggregateError,
         "%Array%": Array,
@@ -132,10 +132,10 @@ if (A)
     try {
         null.error;
     } catch (e) {
-        var L = A(A(e));
-        x["%Error.prototype%"] = L;
+        var x = A(A(e));
+        L["%Error.prototype%"] = x;
     }
-var j = function e(t) {
+var M = function e(t) {
         var n;
         if ("%AsyncFunction%" === t) n = y("async function () {}");
         else if ("%GeneratorFunction%" === t) n = y("function* () {}");
@@ -147,9 +147,9 @@ var j = function e(t) {
             var i = e("%AsyncGenerator%");
             i && A && (n = A(i.prototype));
         }
-        return (x[t] = n), n;
+        return (L[t] = n), n;
     },
-    M = {
+    j = {
         __proto__: null,
         "%ArrayBufferPrototype%": ["ArrayBuffer", "prototype"],
         "%ArrayPrototype%": ["Array", "prototype"],
@@ -208,13 +208,13 @@ var j = function e(t) {
     G = k.call(P, Array.prototype.concat),
     B = k.call(R, Array.prototype.splice),
     Z = k.call(P, String.prototype.replace),
-    V = k.call(P, String.prototype.slice),
-    F = k.call(P, RegExp.prototype.exec),
+    F = k.call(P, String.prototype.slice),
+    V = k.call(P, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
-        var t = V(e, 0, 1),
-            n = V(e, -1);
+        var t = F(e, 0, 1),
+            n = F(e, -1);
         if ("%" === t && "%" !== n) throw new c("invalid intrinsic syntax, expected closing `%`");
         if ("%" === n && "%" !== t) throw new c("invalid intrinsic syntax, expected opening `%`");
         var r = [];
@@ -228,9 +228,9 @@ var j = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(M, r) && (r = "%" + (n = M[r])[0] + "%"), U(x, r))) {
-            var i = x[r];
-            if ((i === w && (i = j(r)), void 0 === i && !t))
+        if ((U(j, r) && (r = "%" + (n = j[r])[0] + "%"), U(L, r))) {
+            var i = L[r];
+            if ((i === w && (i = M(r)), void 0 === i && !t))
                 throw new u("intrinsic " + e + " exists, but is not available. Please file an issue!");
             return {
                 alias: n,
@@ -243,7 +243,7 @@ var j = function e(t) {
 e.exports = function (e, t) {
     if ("string" != typeof e || 0 === e.length) throw new u("intrinsic name must be a non-empty string");
     if (arguments.length > 1 && "boolean" != typeof t) throw new u('"allowMissing" argument must be a boolean');
-    if (null === F(/^%?[^%]*%?$/, e))
+    if (null === V(/^%?[^%]*%?$/, e))
         throw new c("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
     var n = W(e),
         r = n.length > 0 ? n[0] : "",
@@ -255,11 +255,11 @@ e.exports = function (e, t) {
     l && ((r = l[0]), B(n, G([0, 1], l)));
     for (var d = 1, f = !0; d < n.length; d += 1) {
         var _ = n[d],
-            p = V(_, 0, 1),
-            h = V(_, -1);
+            p = F(_, 0, 1),
+            h = F(_, -1);
         if (('"' === p || "'" === p || "`" === p || '"' === h || "'" === h || "`" === h) && p !== h)
             throw new c("property names with quotes must have matching quotes");
-        if ((("constructor" !== _ && f) || (s = !0), (r += "." + _), U(x, (a = "%" + r + "%")))) o = x[a];
+        if ((("constructor" !== _ && f) || (s = !0), (r += "." + _), U(L, (a = "%" + r + "%")))) o = L[a];
         else if (null != o) {
             if (!(_ in o)) {
                 if (!t) throw new u("base intrinsic for " + e + " exists, but the property is not available.");
@@ -269,7 +269,7 @@ e.exports = function (e, t) {
                 var m = O(o, _);
                 o = (f = !!m) && "get" in m && !("originalValue" in m.get) ? m.get : o[_];
             } else (f = U(o, _)), (o = o[_]);
-            f && !s && (x[a] = o);
+            f && !s && (L[a] = o);
         }
     }
     return o;

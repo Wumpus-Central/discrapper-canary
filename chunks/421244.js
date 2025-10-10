@@ -34,7 +34,7 @@ var r = n(98405),
         !E(function () {
             L("a", /./);
         }),
-    j = o(
+    M = o(
         function (e, t, n, r) {
             N(this, {
                 type: C,
@@ -58,7 +58,7 @@ var r = n(98405),
                   s(r, !1));
         },
     ),
-    M = function (e) {
+    j = function (e) {
         var t,
             n,
             r,
@@ -71,7 +71,7 @@ var r = n(98405),
             (n = !!~D(s, "g")),
             (r = !!~D(s, "u")),
             (t.lastIndex = c(i.lastIndex)),
-            new j(t, a, n, r)
+            new M(t, a, n, r)
         );
     };
 r(
@@ -91,10 +91,10 @@ r(
             } else {
                 if (p(e) && !~D(u(l(h(e))), "g")) throw new w("`.matchAll` does not allow non-global regexes");
                 if (x) return L(a, e);
-                if ((void 0 === (n = m(e, S)) && T && "RegExp" === _(e) && (n = M), n)) return i(n, e, a);
+                if ((void 0 === (n = m(e, S)) && T && "RegExp" === _(e) && (n = j), n)) return i(n, e, a);
             }
-            return (t = u(a)), (r = RegExp(e, "g")), T ? i(M, r, t) : r[S](t);
+            return (t = u(a)), (r = RegExp(e, "g")), T ? i(j, r, t) : r[S](t);
         },
     },
 ),
-    T || S in P || g(P, S, M);
+    T || S in P || g(P, S, j);

@@ -83,11 +83,11 @@ function D(e, t) {
         e
     );
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -95,7 +95,7 @@ function x(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,8 +104,8 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 43,
-    M = 25,
+let M = 43,
+    j = 25,
     k = 40,
     U = 250;
 function G(e) {
@@ -149,7 +149,7 @@ let B = (e) => {
             ],
         });
     };
-class V extends i.PureComponent {
+class F extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsxs)(f.P3F, {
@@ -200,10 +200,10 @@ class V extends i.PureComponent {
             });
     }
 }
-let F = u.ZP.connectStores([O.Z], (e) => {
+let V = u.ZP.connectStores([O.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && O.Z.can(A.Plq.MANAGE_MESSAGES, t) };
-})(V);
+})(F);
 function H(e) {
     let {
             analyticsName: t,
@@ -220,7 +220,7 @@ function H(e) {
             listName: R,
         } = e,
         w = i.useRef(null),
-        L = (0, p.Z)(R, w),
+        x = (0, p.Z)(R, w),
         B = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
         Z = (0, u.e7)([I.Z], () => I.Z.windowSize());
     i.useEffect(() => {
@@ -243,15 +243,15 @@ function H(e) {
                 }
             );
         }, []);
-    let V = i.useCallback(() => {
+    let F = i.useCallback(() => {
             var e;
             let t = null == (e = w.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && a && !s && (null == _ || _());
         }, [a, _, s]),
-        F = [],
+        V = [],
         H = !0;
     null == n || (s && 0 === n.length)
-        ? (F = [
+        ? (V = [
               (0, r.jsx)(
                   "div",
                   {
@@ -262,11 +262,11 @@ function H(e) {
               ),
           ])
         : 0 === n.length
-          ? F.push((0, r.jsx)(i.Fragment, { children: g() }, "empty-state"))
+          ? V.push((0, r.jsx)(i.Fragment, { children: g() }, "empty-state"))
           : ((H = !1),
-            (F = []),
+            (V = []),
             l().each(n, (e) => {
-                F.push(...E(e));
+                V.push(...E(e));
             }));
     let Y = null;
     null != n &&
@@ -311,7 +311,7 @@ function H(e) {
                       }),
                   })
                 : null,
-        z = { maxHeight: Z.height - j - M - 48 };
+        z = { maxHeight: Z.height - M - j - 48 };
     B && (z.maxHeight -= k);
     let q = null != _ && a;
     return (0, r.jsx)("div", {
@@ -325,16 +325,16 @@ function H(e) {
             children: [
                 (0, r.jsxs)(f.Den, {
                     className: o()(N.messagesPopout, y),
-                    onScroll: q ? V : void 0,
+                    onScroll: q ? F : void 0,
                     ref: w,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: L,
+                            navigator: x,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
-                                        n = x(e, ["ref"]);
-                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: F }));
+                                        n = L(e, ["ref"]);
+                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: V }));
                                 },
                             }),
                         }),
@@ -395,7 +395,7 @@ function Y(e) {
                                   message: t,
                                   channel: n,
                               }),
-                              (0, r.jsx)(F, {
+                              (0, r.jsx)(V, {
                                   channel: a,
                                   message: t,
                                   jumping: R,

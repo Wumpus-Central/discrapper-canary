@@ -1,6 +1,6 @@
 n.d(t, {
     N4: () => _,
-    P2: () => f,
+    P2: () => m,
     Q9: () => b,
     aB: () => h,
     c: () => v,
@@ -8,20 +8,20 @@ n.d(t, {
     uf: () => x,
 });
 var r = n(951288),
-    o = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    i = n(647438),
+    o = n(120356),
+    l = n.n(o),
     a = n(481060),
     s = n(377171),
     c = n(192371),
     u = n(834209),
     d = n(989308),
     p = n(388032),
-    m = n(237522);
-function f(e) {
+    f = n(237522);
+function m(e) {
     let { text: t } = e;
     return (0, r.jsxs)("div", {
-        className: m.inline,
+        className: f.inline,
         children: [
             (0, r.jsx)(a.owK, {
                 size: "xs",
@@ -38,7 +38,7 @@ function f(e) {
 function g(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)("div", {
-        className: m.inline,
+        className: f.inline,
         children: [
             (0, r.jsx)(a.Mgn, {
                 size: "xs",
@@ -55,7 +55,7 @@ function g(e) {
 function v(e) {
     let { removingAt: t } = e;
     return (0, r.jsxs)("div", {
-        className: m.rollbackInline,
+        className: f.rollbackInline,
         children: [
             (0, r.jsx)(a.Mgn, {
                 size: "xs",
@@ -70,21 +70,21 @@ function v(e) {
     });
 }
 function x(e) {
-    let { cost: t, costDecorator: n, status: o, className: i } = e,
-        s = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
+    let { cost: t, costDecorator: n, status: i, className: o } = e,
+        s = void 0 !== t ? f.labelContainer : f.labelContainerEnd;
     return (0, r.jsxs)("div", {
-        className: l()(s, i),
+        className: l()(s, o),
         children: [
             void 0 !== t &&
                 (0, r.jsxs)("div", {
-                    className: l()(m.inline, m.inlineBoost),
+                    className: l()(f.inline, f.inlineBoost),
                     children: [
                         (0, r.jsx)(a.$Eu, {
                             size: "sm",
                             color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         }),
                         (0, r.jsx)(a.Text, {
-                            className: m.price,
+                            className: f.price,
                             tag: "div",
                             variant: "heading-md/semibold",
                             color: "text-secondary",
@@ -95,67 +95,67 @@ function x(e) {
                         }),
                     ],
                 }),
-            (null == o ? void 0 : o.type) === "expiring" && (0, r.jsx)(g, { dateString: o.expiringAt }),
-            (null == o ? void 0 : o.type) === "removing" && (0, r.jsx)(v, { removingAt: o.removingAt }),
-            (null == o ? void 0 : o.type) === "active" && (0, r.jsx)(f, { text: o.statusText }),
+            (null == i ? void 0 : i.type) === "expiring" && (0, r.jsx)(g, { dateString: i.expiringAt }),
+            (null == i ? void 0 : i.type) === "removing" && (0, r.jsx)(v, { removingAt: i.removingAt }),
+            (null == i ? void 0 : i.type) === "active" && (0, r.jsx)(m, { text: i.statusText }),
         ],
     });
 }
 function _(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
-        className: m.buttonContainer,
+        className: f.buttonContainer,
         children: t,
     });
 }
 function b(e) {
-    let { title: t, textColor: n, children: o, footer: i } = e;
+    let { title: t, textColor: n, children: i, footer: o } = e;
     return (0, r.jsxs)("div", {
-        className: m.contentContainer,
+        className: f.contentContainer,
         children: [
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)("div", {
-                        className: m.headerContainer,
+                        className: f.headerContainer,
                         children: (0, r.jsx)(a.X6q, {
                             color: n,
                             variant: "heading-md/bold",
                             children: t,
                         }),
                     }),
-                    o,
+                    i,
                 ],
             }),
-            i,
+            o,
         ],
     });
 }
-let h = o.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
     let {
         className: n,
-        label: o,
-        isActive: i,
+        label: i,
+        isActive: o,
         isWarning: c,
         badge: u,
         canRollback: d,
-        onClick: f,
+        onClick: m,
         onMouseOver: g,
         onMouseLeave: v,
         children: x,
     } = e;
     return (0, r.jsx)("div", {
-        className: l()(m.parentContainer, { [m.rollbackInactive]: d && !i }),
+        className: l()(f.parentContainer, { [f.rollbackInactive]: d && !o }),
         ref: t,
         children: (0, r.jsxs)(a.kL8, {
-            "aria-label": o,
-            onClick: f,
+            "aria-label": i,
+            onClick: m,
             onMouseOver: g,
             onMouseLeave: v,
             className: l()(
-                m.container,
+                f.container,
                 {
-                    [m.active]: i,
-                    [m.warning]: c || (d && i),
+                    [f.active]: o,
+                    [f.warning]: c || (d && o),
                 },
                 n,
             ),
@@ -163,12 +163,12 @@ let h = o.forwardRef(function (e, t) {
                 x,
                 "new" === u &&
                     (0, r.jsx)(a.IGR, {
-                        className: m.new,
+                        className: f.new,
                         text: p.intl.string(p.t.y2b7CA),
                     }),
                 "beta" === u &&
                     (0, r.jsx)(a.IGR, {
-                        className: m.new,
+                        className: f.new,
                         text: p.intl.string(p.t.oW0eUV),
                         color: s.Z.BG_BRAND,
                     }),

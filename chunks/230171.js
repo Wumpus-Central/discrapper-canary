@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => M,
-    U: () => x.U,
+    O: () => j,
+    U: () => L.U,
 }),
     n(539854),
     n(784620),
@@ -37,10 +37,10 @@ var r = n(951288),
     P = n(172109),
     w = n(880251),
     D = n(515344),
-    x = n(967249),
-    L = n(388032),
-    j = n(217648);
-function M(e) {
+    L = n(967249),
+    x = n(388032),
+    M = n(217648);
+function j(e) {
     var t;
     let { app: n, linkType: a, activityCustomId: o, activityReferrerId: l, message: m, onView: g } = e,
         { name: E, bot: O } = (n = (0, P.O)(n)),
@@ -51,8 +51,8 @@ function M(e) {
             icon: n.icon,
             bot: O,
         }),
-        { staticBannerSrc: N, videoBannerSrc: x, bannerAspectRatio: j } = (0, w.E)(n),
-        M = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
+        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, w.E)(n),
+        j = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: B, instanceId: Z, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
         H = (0, u.Z)(),
@@ -73,10 +73,10 @@ function M(e) {
                           e.push({
                               label:
                                   null == Z
-                                      ? L.intl.string(L.t.RscU7O)
+                                      ? x.intl.string(x.t.RscU7O)
                                       : F
-                                        ? L.intl.string(L.t.DPfdsr)
-                                        : L.intl.string(L.t.sqe0ho),
+                                        ? x.intl.string(x.t.DPfdsr)
+                                        : x.intl.string(x.t.sqe0ho),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
@@ -85,7 +85,7 @@ function M(e) {
                                       isStart: null == Z,
                                       embeddedActivitiesManager: H,
                                       customId: o,
-                                      referrerId: M,
+                                      referrerId: j,
                                       analyticsLocations: G,
                                   });
                               },
@@ -94,7 +94,7 @@ function M(e) {
                       !K &&
                           W &&
                           e.push({
-                              label: L.intl.string(L.t.JeK1Wl),
+                              label: x.intl.string(x.t.JeK1Wl),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, _.W)({
@@ -102,21 +102,21 @@ function M(e) {
                                       botId: v,
                                       analyticsLocations: G,
                                       customId: o,
-                                      referrerId: M,
+                                      referrerId: j,
                                   });
                               },
                           }))
                     : null != q && e.push(q),
                 e
             );
-        }, [K, W, Z, F, B, n.id, H, o, M, G, I, q, v]),
+        }, [K, W, Z, F, B, n.id, H, o, j, G, I, q, v]),
         Q = I ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
     return (0, r.jsx)(C.W, {
         title: E,
         staticBannerSrc: N,
-        videoBannerSrc: x,
+        videoBannerSrc: L,
         onClickBanner: z,
-        bannerAspectRatio: j,
+        bannerAspectRatio: M,
         iconSrc: S,
         info: Q,
         actions: X,
@@ -124,7 +124,7 @@ function M(e) {
         trackingConfig: {
             id: n.id,
             linkType: a,
-            referrerId: M,
+            referrerId: j,
             activityCustomId: o,
             onView: g,
             guildId: null == (t = y.Z.getChannel(m.channel_id)) ? void 0 : t.guild_id,
@@ -153,7 +153,7 @@ function k(e) {
                     compactDisplay: "short",
                 }),
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
-            return 0 === r ? null : L.intl.format(L.t["6IW6Wl"], { guildCount: n.format(r) });
+            return 0 === r ? null : x.intl.format(x.t["6IW6Wl"], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
         _ = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
@@ -161,14 +161,14 @@ function k(e) {
             null != _ &&
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/medium",
-                    className: j.description,
+                    className: M.description,
                     color: "none",
                     children: _,
                 }),
             null != f &&
                 (0, r.jsxs)(l.Text, {
                     variant: "text-xs/normal",
-                    className: j.tagline,
+                    className: M.tagline,
                     color: "none",
                     lineClamp: 1,
                     children: [
@@ -205,7 +205,7 @@ function U(e) {
                 return (0, r.jsx)(N.K, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: L.intl.formatToPlainString(L.t["IJa+4+"], { count: d.length }),
+                    activityText: x.intl.formatToPlainString(x.t["IJa+4+"], { count: d.length }),
                 });
             if (u.some((e) => (0, m.ig)(e) === o.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
@@ -214,10 +214,10 @@ function U(e) {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        L.intl.string(L.t.TsWCdX),
+                        x.intl.string(x.t.TsWCdX),
                     ],
                 });
-            let e = a > 0 ? L.intl.format(L.t.z8EAJS, { count: a }) : L.intl.string(L.t.RjceQU);
+            let e = a > 0 ? x.intl.format(x.t.z8EAJS, { count: a }) : x.intl.string(x.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(l.tBG, {
@@ -233,14 +233,14 @@ function U(e) {
             n.length > 0 &&
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/medium",
-                    className: j.description,
+                    className: M.description,
                     color: "none",
                     lineClamp: 1,
                     children: n.map((e, t) =>
                         (0, r.jsx)(
                             "span",
                             {
-                                className: j.tag,
+                                className: M.tag,
                                 children: e,
                             },
                             t,
@@ -249,7 +249,7 @@ function U(e) {
                 }),
             (0, r.jsx)(l.Text, {
                 variant: "text-xs/normal",
-                className: j.tagline,
+                className: M.tagline,
                 color: "none",
                 lineClamp: 1,
                 children: f,

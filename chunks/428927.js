@@ -1,51 +1,51 @@
-t.d(n, { Z: () => f });
-var r = t(951288);
+t.d(n, { Z: () => m });
+var l = t(951288);
 t(647438);
-var l = t(481060),
-    o = t(37234),
-    i = t(769654),
-    c = t(785717),
-    s = t(806729),
-    a = t(821179),
+var i = t(481060),
+    r = t(37234),
+    o = t(769654),
+    s = t(785717),
+    a = t(806729),
+    c = t(821179),
     d = t(388032),
     u = t(878449);
-function f(e) {
+function m(e) {
     let { user: n, onClose: t } = e,
-        { trackUserProfileAction: f } = (0, c.KZ)(),
-        { mutualGuilds: m, isFetching: p } = (0, s.Z)(n);
-    return (0, r.jsx)(l.zJl, {
+        { trackUserProfileAction: m } = (0, s.KZ)(),
+        { mutualGuilds: p, isFetching: f } = (0, a.Z)(n);
+    return (0, l.jsx)(i.zJl, {
         className: u.listScroller,
         fade: !0,
         children:
-            null == m && p
-                ? (0, r.jsx)("div", {
+            null == p && f
+                ? (0, l.jsx)("div", {
                       className: u.empty,
-                      children: (0, r.jsx)(l.$jN, {}),
+                      children: (0, l.jsx)(i.$jN, {}),
                   })
-                : (null != m || p) && (null == m ? void 0 : m.length) !== 0
-                  ? null == m
+                : (null != p || f) && (null == p ? void 0 : p.length) !== 0
+                  ? null == p
                       ? void 0
-                      : m.map((e) => {
-                            let { guild: l, nick: c } = e;
-                            return (0, r.jsx)(
-                                a.Z,
+                      : p.map((e) => {
+                            let { guild: i, nick: s } = e;
+                            return (0, l.jsx)(
+                                c.Z,
                                 {
                                     user: n,
-                                    guild: l,
-                                    nick: c,
+                                    guild: i,
+                                    nick: s,
                                     onSelect: () => {
                                         var e;
-                                        f({ action: "PRESS_MUTUAL_GUILD" }), (e = l.id), (0, i.X)(e), t(), (0, o.xf)();
+                                        m({ action: "PRESS_MUTUAL_GUILD" }), (e = i.id), (0, o.X)(e), t(), (0, r.xf)();
                                     },
                                 },
-                                l.id,
+                                i.id,
                             );
                         })
-                  : (0, r.jsxs)("div", {
+                  : (0, l.jsxs)("div", {
                         className: u.empty,
                         children: [
-                            (0, r.jsx)("div", { className: u.emptyIconGuilds }),
-                            (0, r.jsx)("div", {
+                            (0, l.jsx)("div", { className: u.emptyIconGuilds }),
+                            (0, l.jsx)("div", {
                                 className: u.emptyText,
                                 children: d.intl.string(d.t.zjVh8v),
                             }),

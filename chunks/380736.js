@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(442837),
     c = n(755721),
     u = n(481060),
@@ -116,10 +116,10 @@ let C = i.memo(function (e) {
             status: P,
             containerRef: w,
             className: D,
-            wrapperClassName: x,
+            wrapperClassName: L,
         } = e,
-        [L, j] = i.useState(!1),
-        M = n || L || P === g._1z.FOCUSED,
+        [x, M] = i.useState(!1),
+        j = n || x || P === g._1z.FOCUSED,
         k = (0, l.e7)([h.ZP], () => h.ZP.isInputLocked((0, f.getPID)()));
     i.useEffect(() => {
         null == a || a();
@@ -143,10 +143,10 @@ let C = i.memo(function (e) {
             [m],
         ),
         Z = i.useCallback(() => {
-            j(!0);
+            M(!0);
         }, []),
         F = i.useCallback(() => {
-            j(!1);
+            M(!1);
         }, []);
     function V() {
         return (0, r.jsx)(_.Z, {
@@ -156,7 +156,7 @@ let C = i.memo(function (e) {
         });
     }
     function H() {
-        let e = "function" == typeof O ? O(M, k) : O;
+        let e = "function" == typeof O ? O(j, k) : O;
         return null != O
             ? (0, r.jsx)(u.Text, {
                   className: b.hint,
@@ -210,7 +210,7 @@ let C = i.memo(function (e) {
                 });
     }
     function K() {
-        let e = null == N ? void 0 : N(M, k);
+        let e = null == N ? void 0 : N(j, k);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -231,7 +231,7 @@ let C = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: "interactive-normal",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (M ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
                                           children: S,
                                       })
                                     : null,
@@ -254,7 +254,7 @@ let C = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(b.overflowWrapper, x),
+                className: o()(b.overflowWrapper, L),
                 onScroll: A,
                 children: (0, r.jsx)(u.P3F, {
                     innerRef: w,
@@ -369,12 +369,12 @@ function D(e) {
             },
             [h, c],
         ),
-        x = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        L = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
             props: {
-                onNotificationShow: L,
-                onDismissClick: j,
-                renderFooter: M,
+                onNotificationShow: x,
+                onDismissClick: M,
+                renderFooter: j,
                 onNotificationClick: k,
                 onConfirmClick: U,
                 onCancelClick: G,
@@ -414,7 +414,7 @@ function D(e) {
                     onNotificationClick: A,
                     onConfirmClick: null != p ? P : void 0,
                     onCancelClick: null != h ? D : void 0,
-                    renderFooter: x,
+                    renderFooter: L,
                     expand: !1,
                     index: n,
                     locked: a,

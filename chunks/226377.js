@@ -8,27 +8,27 @@ var r = a(899517),
     E = a(152228),
     s = a(366569),
     l = a(147498);
-function u(t, e) {
+function I(t, e) {
     let a = (0, r.Y)("globalMetricsAggregators", () => new WeakMap()),
         _ = a.get(t);
     if (_) return _;
     let n = new e(t);
     return t.on("flush", () => n.flush()), t.on("close", () => n.close()), a.set(t, n), n;
 }
-function I(t, e, a, r, n = {}) {
+function u(t, e, a, r, n = {}) {
     let E = n.client || (0, o.s3)();
     if (!E) return;
     let s = (0, c.HN)(),
         l = s ? (0, c.Gx)(s) : void 0,
         R = l && (0, c.XU)(l).description,
         { unit: d, tags: N, timestamp: A } = n,
-        { release: f, environment: T } = E.getOptions(),
+        { release: T, environment: f } = E.getOptions(),
         L = {};
-    f && (L.release = f),
-        T && (L.environment = T),
+    T && (L.release = T),
+        f && (L.environment = f),
         R && (L.transaction = R),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
-        u(E, t).add(
+        I(E, t).add(
             e,
             a,
             r,
@@ -41,18 +41,18 @@ function I(t, e, a, r, n = {}) {
         );
 }
 function R(t, e, a, r) {
-    I(t, l.g_, e, N(a), r);
+    u(t, l.g_, e, N(a), r);
 }
 let d = {
     increment: function (t, e, a = 1, r) {
-        I(t, l.JM, e, N(a), r);
+        u(t, l.JM, e, N(a), r);
     },
     distribution: R,
     set: function (t, e, a, r) {
-        I(t, l.is, e, a, r);
+        u(t, l.is, e, a, r);
     },
     gauge: function (t, e, a, r) {
-        I(t, l.uG, e, N(a), r);
+        u(t, l.uG, e, N(a), r);
     },
     timing: function (t, e, a, r = "second", _) {
         if ("function" == typeof a) {
@@ -84,7 +84,7 @@ let d = {
             unit: r,
         });
     },
-    getMetricsAggregatorForClient: u,
+    getMetricsAggregatorForClient: I,
 };
 function N(t) {
     return "string" == typeof t ? parseInt(t) : t;

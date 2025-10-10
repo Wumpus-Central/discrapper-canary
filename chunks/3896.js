@@ -1,21 +1,21 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(456935),
     c = n(259580),
     d = n(981631),
     u = n(388032),
-    m = n(824804);
-function g(e) {
+    g = n(824804);
+function m(e) {
     let { guild: t } = e,
         l = t.verificationLevel,
-        g = i.useMemo(() => (0, o.I9)(l), [l]);
-    return (0, r.jsxs)(s.P3F, {
+        m = i.useMemo(() => (0, o.I9)(l), [l]);
+    return (0, r.jsxs)(a.P3F, {
         onClick: () =>
-            (0, s.ZDy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e("72458").then(n.bind(n, 694278));
                 return (n) => {
                     var i, l;
@@ -67,42 +67,42 @@ function g(e) {
                     );
                 };
             }),
-        className: a()(m.simpleItemWrapper, m.clickable),
+        className: s()(g.simpleItemWrapper, g.clickable),
         children: [
             (0, r.jsxs)("div", {
-                className: m.itemContent,
+                className: g.itemContent,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: u.intl.string(u.t.DpRdYG),
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
                         children: u.intl.string(u.t.mA17eH),
                     }),
                     (0, r.jsx)("div", {
-                        className: m.__invalid_pillRow,
-                        children: (0, r.jsxs)(s.Text, {
+                        className: g.__invalid_pillRow,
+                        children: (0, r.jsxs)(a.Text, {
                             variant: "text-xs/medium",
                             color: "interactive-normal",
-                            className: m.valuePill,
+                            className: g.valuePill,
                             children: [
                                 l === d.sFg.VERY_HIGH
-                                    ? (0, r.jsx)(s.AtH, {
+                                    ? (0, r.jsx)(a.AtH, {
                                           size: "custom",
                                           color: "currentColor",
                                           width: 16,
                                           height: 16,
                                       })
-                                    : (0, r.jsx)(s._XJ, {
+                                    : (0, r.jsx)(a._XJ, {
                                           size: "custom",
                                           color: "currentColor",
                                           width: 16,
                                           height: 16,
                                       }),
-                                g,
+                                m,
                             ],
                         }),
                     }),
@@ -112,7 +112,7 @@ function g(e) {
                 height: 24,
                 width: 24,
                 direction: c.Z.Directions.RIGHT,
-                className: m.caret,
+                className: g.caret,
             }),
         ],
     });

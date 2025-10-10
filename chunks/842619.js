@@ -1,12 +1,12 @@
-n.d(e, { Z: () => f });
-var i,
-    l,
-    a = n(442837),
-    r = n(570140),
+n.d(t, { Z: () => f });
+var l,
+    i,
+    r = n(442837),
+    a = n(570140),
     o = n(818083),
-    u = n(314897);
-let s = {},
-    d = (0, o.B)({
+    s = n(314897);
+let u = {},
+    c = (0, o.B)({
         kind: "user",
         id: "2025-03_slayer_notif_supression_killswitch",
         label: "Disable suppressing notifications with slayer game active",
@@ -19,26 +19,26 @@ let s = {},
             },
         ],
     });
-class c extends (l = a.ZP.Store) {
+class d extends (i = r.ZP.Store) {
     areSlayerNotificationsSuppressed() {
-        if (d.getCurrentConfig({ location: "Store" }, { autoTrackExposure: !1 }).enabled) return !1;
-        for (let t in s) if (s[t] === u.default.getId()) return !0;
+        if (c.getCurrentConfig({ location: "Store" }, { autoTrackExposure: !1 }).enabled) return !1;
+        for (let e in u) if (u[e] === s.default.getId()) return !0;
         return !1;
     }
 }
-(i = "displayName") in c
-    ? Object.defineProperty(c, i, {
+(l = "displayName") in d
+    ? Object.defineProperty(d, l, {
           value: "RpcNotificationSettingsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (c[i] = "RpcNotificationSettingsStore");
-let f = new c(r.Z, {
-    RPC_APP_DISCONNECTED: function (t) {
-        delete s[t.socketId];
+    : (d[l] = "RpcNotificationSettingsStore");
+let f = new d(a.Z, {
+    RPC_APP_DISCONNECTED: function (e) {
+        delete u[e.socketId];
     },
-    SET_RPC_NOTIFICATION_SETTINGS: function (t) {
-        delete s[t.socketId], t.suppressNotifications && (s[t.socketId] = t.targetUserId);
+    SET_RPC_NOTIFICATION_SETTINGS: function (e) {
+        delete u[e.socketId], e.suppressNotifications && (u[e.socketId] = e.targetUserId);
     },
 });

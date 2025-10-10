@@ -61,7 +61,7 @@ let _ = function (e) {
         children: (0, r.jsxs)("div", {
             className: o()(d.phoneField, t),
             children: [
-                (0, r.jsx)(l.NIc, {
+                (0, r.jsx)(l.gNt, {
                     label: u.intl.string(u.t["k+bvrK"]),
                     children: (0, r.jsx)(l.VcW, {
                         value: E,

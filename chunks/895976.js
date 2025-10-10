@@ -1,19 +1,19 @@
 n.d(t, { B: () => d }), n(388685);
 var l = n(647438),
     i = n(442837),
-    r = n(247272),
-    s = n(751771),
+    s = n(247272),
+    r = n(751771),
     a = n(938475),
     o = n(245335),
     u = n(981631);
 function d(e) {
     let { guild: t, inviteChannel: n, inviteTargetType: d, applicationId: c } = e,
-        [h, g, m, p] = (0, i.Wu)(
-            [s.Z, a.ZP],
+        [g, h, m, p] = (0, i.Wu)(
+            [r.Z, a.ZP],
             () => [
-                s.Z.getInviteSuggestionRows(),
-                s.Z.getTotalSuggestionsCount() >= 1,
-                s.Z.getInitialCounts(),
+                r.Z.getInviteSuggestionRows(),
+                r.Z.getTotalSuggestionsCount() >= 1,
+                r.Z.getInitialCounts(),
                 null == n ? null : a.ZP.getVoiceStatesForChannel(n),
             ],
             [n],
@@ -32,7 +32,7 @@ function d(e) {
         }, [n]);
     return (
         l.useEffect(() => {
-            (0, r.x)({
+            (0, s.x)({
                 omitUserIds: v,
                 guild: t,
                 channel: n,
@@ -41,8 +41,8 @@ function d(e) {
             }).catch(u.VqG);
         }, [v, t, n, c, d]),
         {
-            rows: h,
-            showFriends: g,
+            rows: g,
+            showFriends: h,
             initialCounts: m,
         }
     );

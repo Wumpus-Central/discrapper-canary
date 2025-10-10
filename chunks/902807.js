@@ -1,9 +1,9 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    a = n(786920),
+    a = n(137317),
     o = n(481060),
     c = n(152406);
 class d extends i.Component {
@@ -77,7 +77,7 @@ class d extends i.Component {
     }
 }
 let u = (0, a.animated)(d),
-    m = function (e) {
+    g = function (e) {
         let { className: t, name: n, icon: i, iconClassName: l } = e,
             a = (0, o.Yzy)(
                 {

@@ -83,7 +83,7 @@ function h(e) {
         ],
     });
 }
-function j(e) {
+function g(e) {
     let { onHandleEnableLockdown: t, incidentData: n, guildName: l } = e;
     return (0, r.jsxs)("div", {
         className: p.subheaderContainer,
@@ -123,7 +123,7 @@ function j(e) {
         ],
     });
 }
-function g(e) {
+function j(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: o } = e;
     return (0, r.jsxs)("div", {
         className: p.subheaderContainer,
@@ -258,13 +258,13 @@ function x(e) {
                 incidentData: n,
             });
         case 2:
-            return (0, r.jsx)(j, {
+            return (0, r.jsx)(g, {
                 onHandleEnableLockdown: b,
                 incidentData: n,
                 guildName: t.name,
             });
         case 3:
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(j, {
                 onHandleEnableLockdown: b,
                 onHandleReportFalseAlarm: p,
                 incidentData: n,

@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(951288),
-    i = n(647438),
-    l = n(59662);
-function o(e) {
+    l = n(647438),
+    o = n(59662);
+function i(e) {
     let { node: t, children: n } = e,
-        { navTransition: o } = (0, l.t)(),
-        a = i.useRef(null);
+        { navTransition: i } = (0, o.t)(),
+        a = l.useRef(null);
     return (
-        i.useEffect(() => {
-            if ((null == o ? void 0 : o.target) === t.key) {
+        l.useEffect(() => {
+            if ((null == i ? void 0 : i.target) === t.key) {
                 var e;
                 null == (e = a.current) ||
                     e.scrollIntoView({
-                        behavior: o.animateScroll ? "smooth" : "auto",
+                        behavior: i.animateScroll ? "smooth" : "auto",
                         block: "center",
                     }),
-                    o.complete();
+                    i.complete();
             }
-        }, [o, t.key]),
+        }, [i, t.key]),
         (0, r.jsx)("div", {
             ref: a,
             "data-debug-key": t.key,

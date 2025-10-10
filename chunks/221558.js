@@ -1,4 +1,4 @@
-r.d(i, { Z: () => p });
+r.d(t, { Z: () => p });
 var e = r(951288),
     n = r(647438),
     a = r(793030),
@@ -7,21 +7,21 @@ var e = r(951288),
     d = r(430824),
     c = r(5888),
     o = r(198358),
-    x = r(509950),
+    x = r(484718),
     u = r(388032);
 function p() {
     let {
-            guilds: { guilds: t, numGuildsJoined: i },
+            guilds: { guilds: i, numGuildsJoined: t },
         } = (0, s.e7)([c.Z], () => c.Z.getCheckpointData()),
         r = (0, n.useMemo)(
             () =>
-                t
-                    .map((t) => {
-                        let { guildId: i } = t;
-                        return d.Z.getGuild(i);
+                i
+                    .map((i) => {
+                        let { guildId: t } = i;
+                        return d.Z.getGuild(t);
                     })
-                    .filter((t) => null != t),
-            [t],
+                    .filter((i) => null != i),
+            [i],
         );
     return (0, e.jsxs)(o.Z, {
         children: [
@@ -29,23 +29,23 @@ function p() {
                 variant: "display-sm",
                 color: "text-primary",
                 children: u.intl.format(x.default.mAroeH, {
-                    joinedCount: i,
+                    joinedCount: t,
                     guildCount: r.length,
                 }),
             }),
-            r.map((i, r) =>
+            r.map((t, r) =>
                 (0, e.jsxs)(
                     "div",
                     {
                         children: [
                             (0, e.jsx)(l.Z, {
-                                guild: i,
+                                guild: t,
                                 size: l.Z.Sizes.XLARGE,
                             }),
                             (0, e.jsx)(a.xvT, {
                                 variant: "display-md",
                                 color: "text-primary",
-                                children: i.name,
+                                children: t.name,
                             }),
                             0 === r &&
                                 (0, e.jsxs)("div", {
@@ -53,7 +53,7 @@ function p() {
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
-                                            children: t[0].numMessagesSent,
+                                            children: i[0].numMessagesSent,
                                         }),
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
@@ -63,7 +63,7 @@ function p() {
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
-                                            children: t[0].numMinutesListening + t[0].numMinutesSpeaking,
+                                            children: i[0].numMinutesListening + i[0].numMinutesSpeaking,
                                         }),
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
@@ -74,7 +74,7 @@ function p() {
                                 }),
                         ],
                     },
-                    i.id,
+                    t.id,
                 ),
             ),
         ],

@@ -11,16 +11,16 @@ var a = n(951288),
     m = n(335131),
     p = n(70097),
     f = n(507808),
-    C = n(43747),
-    _ = n(960919),
+    _ = n(43747),
+    C = n(960919),
     b = n(509212),
     h = n(272008),
     x = n(497505),
     y = n(515108),
     g = n(291967),
     j = n(46140),
-    E = n(981631),
-    v = n(215023),
+    v = n(981631),
+    E = n(215023),
     R = n(388032),
     N = n(561549),
     A = n(582425),
@@ -48,17 +48,17 @@ function w(e) {
         i = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [u, m] = r.useState(!i),
         f = (0, c.ZP)(),
-        C = (0, l.apv)(f),
-        _ = C ? S.Z : A.Z,
-        b = C ? L.Z : T.Z,
+        _ = (0, l.apv)(f),
+        C = _ ? S.Z : A.Z,
+        b = _ ? L.Z : T.Z,
         h = r.useRef(null),
         x = r.useRef(null),
         [y, g] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        [v, R] = r.useState(!1);
+        [j, v] = r.useState(!1),
+        [E, R] = r.useState(!1);
     r.useEffect(() => {
-        y && j && v && t();
-    }, [y, j, v, t]),
+        y && j && E && t();
+    }, [y, j, E, t]),
         r.useEffect(() => {
             n ||
                 i ||
@@ -84,7 +84,7 @@ function w(e) {
                 playsInline: !0,
                 className: s()(N.centerOrb, N.idleOrb, { [N.hidden]: u }),
                 controls: !1,
-                onCanPlayThrough: r.useCallback(() => E(!0), []),
+                onCanPlayThrough: r.useCallback(() => v(!0), []),
                 children: (0, a.jsx)("source", {
                     src: b,
                     type: "video/webm",
@@ -100,7 +100,7 @@ function w(e) {
                 onCanPlayThrough: r.useCallback(() => g(!0), []),
                 onEnded: O,
                 children: (0, a.jsx)("source", {
-                    src: _,
+                    src: C,
                     type: "video/webm",
                 }),
             }),
@@ -120,14 +120,14 @@ function I(e) {
     let { isLoading: t, onClose: n, orbsEarned: r, orbsBalance: i, onVideoLoaded: s } = e,
         o = async () => {
             (0, f.Y)({
-                pageType: E.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                sectionType: E.jXE.ORBS_REWARD_MODAL,
-                ctaObject: E.qAy.CTA_TO_ORBS_SHOP,
+                pageType: v.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: v.jXE.ORBS_REWARD_MODAL,
+                ctaObject: v.qAy.CTA_TO_ORBS_SHOP,
             }),
                 await n(),
                 (0, m.mK)({
                     openInLayer: !1,
-                    tab: v.AW.ORBS,
+                    tab: E.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: u.Z.QUEST_REWARD_MODAL,
                 });
@@ -145,7 +145,7 @@ function I(e) {
                     (0, a.jsxs)("div", {
                         className: N.heading,
                         children: [
-                            (0, a.jsx)(_.M, {
+                            (0, a.jsx)(C.M, {
                                 shouldUseThemeColor: !0,
                                 className: N.orbsIcon,
                             }),
@@ -192,12 +192,12 @@ function P(e) {
     var t;
     let { quest: n, onClose: i, transitionState: s, sourceQuestContent: o, location: l } = e,
         c = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
-        { balance: d, error: u } = (0, C.A)(),
+        { balance: d, error: u } = (0, _.A)(),
         m = (0, b.LM)(n.config),
         [p, f] = r.useState(c ? "success" : "loading"),
-        [_, E] = r.useState(!1),
-        v = r.useCallback(() => {
-            E(!0);
+        [C, v] = r.useState(!1),
+        E = r.useCallback(() => {
+            v(!0);
         }, []);
     r.useEffect(() => {
         c ||
@@ -206,7 +206,7 @@ function P(e) {
                 .then(() => f("success"))
                 .catch(() => f("error"));
     }, [n.id, c, p, l]);
-    let N = !_ || "loading" === p || (null == d && null == u),
+    let N = !C || "loading" === p || (null == d && null == u),
         A = "error" === p || null == m || (null == d && null != u);
     return (0, a.jsx)(y.Z, {
         onClose: i,
@@ -225,7 +225,7 @@ function P(e) {
                       orbsEarned: m,
                       orbsBalance: d,
                       isLoading: N,
-                      onVideoLoaded: v,
+                      onVideoLoaded: E,
                   }),
               }),
     });

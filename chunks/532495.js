@@ -30,8 +30,8 @@ var i = n(512722),
     P = n(594174),
     w = n(74538),
     D = n(388032),
-    x = n(436360);
-function L(e, t, n) {
+    L = n(436360);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function L(e, t, n) {
         e
     );
 }
-function j(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +55,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,14 +77,14 @@ function k(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function U() {
-    var e, t, n, i, L, M, U, G;
+    var e, t, n, i, x, j, U, G;
     let B = (0, o.e7)([P.default], () => {
             let e = P.default.getCurrentUser();
             return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
@@ -104,7 +104,7 @@ function U() {
         } = (0, o.cj)([R.Z], () => {
             let e = R.Z.getAllPending(),
                 t = R.Z.getErrors();
-            return k(j({}, e), { errors: t });
+            return k(M({}, e), { errors: t });
         }),
         J = (0, T.SD)({
             userId: B.id,
@@ -123,10 +123,10 @@ function U() {
                   ? i
                   : [],
         eo =
-            (null != (L = null == (t = Q.bio) ? void 0 : t.length) ? L : 0) > 0
+            (null != (x = null == (t = Q.bio) ? void 0 : t.length) ? x : 0) > 0
                 ? Q.bio
-                : null != (M = null == $ ? void 0 : $.bio)
-                  ? M
+                : null != (j = null == $ ? void 0 : $.bio)
+                  ? j
                   : [],
         es = (0, u.w)(),
         el = (0, N.Z)({ location: "DefaultCustomizationSections" }),
@@ -164,7 +164,7 @@ function U() {
                       "color",
                   );
     return (0, r.jsxs)("div", {
-        className: x.sectionsContainer,
+        className: L.sectionsContainer,
         children: [
             (0, r.jsx)(h.Z, {
                 placeholder: B.username,

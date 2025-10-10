@@ -271,15 +271,15 @@ let R = {
     P = /(-# +)/,
     w = (0, _.Z)([S, R]),
     D = (0, _.Z)([A, R]),
-    x = l._p(w),
-    L = l._p(D),
-    j = {
+    L = l._p(w),
+    x = l._p(D),
+    M = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    M = new (o())(j),
-    k = new (o())(j);
+    j = new (o())(M),
+    k = new (o())(M);
 function U(e, t, n) {
     let r = [],
         i = {
@@ -289,8 +289,8 @@ function U(e, t, n) {
             isSlate: !0,
             allowGameMentions: !0,
         },
-        a = n ? L : x,
-        o = n ? k : M,
+        a = n ? x : L,
+        o = n ? k : j,
         s = o.get(e);
     if (null != s) return s;
     let l =
@@ -360,7 +360,7 @@ function Z(e, t, n, r, a) {
         case "paragraph":
         case "text":
         case "emoticon":
-            return F(e, t, o || "", r, a);
+            return V(e, t, o || "", r, a);
         case "emoji":
         case "customEmoji": {
             let i = t.substring(r);
@@ -449,7 +449,7 @@ function Z(e, t, n, r, a) {
                     attributes: [s],
                     data: n,
                 });
-            return F(e, t, l[0], r, a);
+            return V(e, t, l[0], r, a);
         case "em":
         case "autolink":
         case "mailto":
@@ -466,11 +466,11 @@ function Z(e, t, n, r, a) {
         case "link":
         case "subtext": {
             r = W(t, r);
-            let { before: n, after: i } = V(t, s, r, l);
+            let { before: n, after: i } = F(t, s, r, l);
             return (
                 (r = H(e, t, n, r, "syntaxBefore")),
                 a.push(s),
-                (r = F(e, t, null != o ? o : "", r, a)),
+                (r = V(e, t, null != o ? o : "", r, a)),
                 a.pop(),
                 (r = H(e, t, i, r, "syntaxAfter")),
                 W(t, r)
@@ -480,7 +480,7 @@ function Z(e, t, n, r, a) {
             throw Error("Slate: Unknown rule type: ".concat(s));
     }
 }
-function V(e, t, n, r) {
+function F(e, t, n, r) {
     if ("inlineCode" === t)
         return {
             before: r[1],
@@ -500,7 +500,7 @@ function V(e, t, n, r) {
     if ("inlineStyle" === i.type) return i;
     throw Error("Slate: rule must be an inlineStyle");
 }
-function F(e, t, n, r, i) {
+function V(e, t, n, r, i) {
     return (
         "string" == typeof n
             ? (r = Y({

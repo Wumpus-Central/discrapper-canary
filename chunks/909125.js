@@ -3,19 +3,19 @@ var r = n(647438),
     i = n(619864),
     l = n(154579),
     a = n(981631);
-let o = i.vU + a.vpv,
-    s = i.vU / a.vpv;
+let s = i.vU + a.vpv,
+    o = i.vU / a.vpv;
 function c(e) {
     let { totalResults: t, isSearching: n } = e,
-        [c, u] = r.useState(t);
+        [c, d] = r.useState(t);
     r.useEffect(() => {
-        n || u(t);
+        n || d(t);
     }, [t, n]);
-    let d = c > i.vU + a.vpv,
+    let u = c > i.vU + a.vpv,
         p = (0, l.nd)({ location: "useSearchResultsPagination" });
     return {
-        isPaginationTotalCountLimited: d && !p,
-        paginationTotalCount: Math.min(c, o),
-        paginationMaxIndex: s,
+        isPaginationTotalCountLimited: u && !p,
+        paginationTotalCount: Math.min(c, s),
+        paginationMaxIndex: o,
     };
 }

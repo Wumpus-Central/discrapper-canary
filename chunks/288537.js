@@ -28,17 +28,17 @@ var r,
     P = 286,
     w = 30,
     D = 19,
-    x = 573,
-    L = 15,
-    j = 3,
-    M = 258,
+    L = 573,
+    x = 15,
+    M = 3,
+    j = 258,
     k = 262,
     U = 32,
     G = 42,
     B = 69,
     Z = 73,
-    V = 91,
-    F = 103,
+    F = 91,
+    V = 103,
     H = 113,
     Y = 666,
     W = 1,
@@ -101,7 +101,7 @@ function ea(e, t) {
         c = e.window,
         u = e.w_mask,
         d = e.prev,
-        f = e.strstart + M,
+        f = e.strstart + j,
         _ = c[a + o - 1],
         p = c[a + o];
     e.prev_length >= e.good_match && (i >>= 2), s > e.lookahead && (s = e.lookahead);
@@ -120,7 +120,7 @@ function ea(e, t) {
             c[++a] === c[++n] &&
             a < f
         );
-        if (((r = M - (f - a)), (a = f - M), r > o)) {
+        if (((r = j - (f - a)), (a = f - j), r > o)) {
             if (((e.match_start = t), (o = r), r >= s)) break;
             (_ = c[a + o - 1]), (p = c[a + o]);
         }
@@ -149,18 +149,18 @@ function eo(e) {
             a += s;
         }
         if (0 === e.strm.avail_in) break;
-        if (((n = ei(e.strm, e.window, e.strstart + e.lookahead, a)), (e.lookahead += n), e.lookahead + e.insert >= j))
+        if (((n = ei(e.strm, e.window, e.strstart + e.lookahead, a)), (e.lookahead += n), e.lookahead + e.insert >= M))
             for (
                 o = e.strstart - e.insert,
                     e.ins_h = e.window[o],
                     e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[o + 1]) & e.hash_mask;
                 e.insert &&
-                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[o + j - 1]) & e.hash_mask),
+                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[o + M - 1]) & e.hash_mask),
                 (e.prev[o & e.w_mask] = e.head[e.ins_h]),
                 (e.head[e.ins_h] = o),
                 o++,
                 e.insert--,
-                !(e.lookahead + e.insert < j));
+                !(e.lookahead + e.insert < M));
             );
     } while (e.lookahead < k && 0 !== e.strm.avail_in);
 }
@@ -172,22 +172,22 @@ function es(e, t) {
         }
         if (
             ((n = 0),
-            e.lookahead >= j &&
-                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + j - 1]) & e.hash_mask),
+            e.lookahead >= M &&
+                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + M - 1]) & e.hash_mask),
                 (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
                 (e.head[e.ins_h] = e.strstart)),
             0 !== n && e.strstart - n <= e.w_size - k && (e.match_length = ea(e, n)),
-            e.match_length >= j)
+            e.match_length >= M)
         )
             if (
-                ((r = a._tr_tally(e, e.strstart - e.match_start, e.match_length - j)),
+                ((r = a._tr_tally(e, e.strstart - e.match_start, e.match_length - M)),
                 (e.lookahead -= e.match_length),
-                e.match_length <= e.max_lazy_match && e.lookahead >= j)
+                e.match_length <= e.max_lazy_match && e.lookahead >= M)
             ) {
                 e.match_length--;
                 do
                     e.strstart++,
-                        (e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + j - 1]) & e.hash_mask),
+                        (e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + M - 1]) & e.hash_mask),
                         (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
                         (e.head[e.ins_h] = e.strstart);
                 while (0 != --e.match_length);
@@ -200,7 +200,7 @@ function es(e, t) {
         else (r = a._tr_tally(e, 0, e.window[e.strstart])), e.lookahead--, e.strstart++;
         if (r && (et(e, !1), 0 === e.strm.avail_out)) return W;
     }
-    return ((e.insert = e.strstart < j - 1 ? e.strstart : j - 1), t === f)
+    return ((e.insert = e.strstart < M - 1 ? e.strstart : M - 1), t === f)
         ? (et(e, !0), 0 === e.strm.avail_out)
             ? z
             : q
@@ -216,35 +216,35 @@ function el(e, t) {
         }
         if (
             ((n = 0),
-            e.lookahead >= j &&
-                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + j - 1]) & e.hash_mask),
+            e.lookahead >= M &&
+                ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + M - 1]) & e.hash_mask),
                 (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
                 (e.head[e.ins_h] = e.strstart)),
             (e.prev_length = e.match_length),
             (e.prev_match = e.match_start),
-            (e.match_length = j - 1),
+            (e.match_length = M - 1),
             0 !== n &&
                 e.prev_length < e.max_lazy_match &&
                 e.strstart - n <= e.w_size - k &&
                 ((e.match_length = ea(e, n)),
                 e.match_length <= 5 &&
-                    (e.strategy === y || (e.match_length === j && e.strstart - e.match_start > 4096)) &&
-                    (e.match_length = j - 1)),
-            e.prev_length >= j && e.match_length <= e.prev_length)
+                    (e.strategy === y || (e.match_length === M && e.strstart - e.match_start > 4096)) &&
+                    (e.match_length = M - 1)),
+            e.prev_length >= M && e.match_length <= e.prev_length)
         ) {
-            (i = e.strstart + e.lookahead - j),
-                (r = a._tr_tally(e, e.strstart - 1 - e.prev_match, e.prev_length - j)),
+            (i = e.strstart + e.lookahead - M),
+                (r = a._tr_tally(e, e.strstart - 1 - e.prev_match, e.prev_length - M)),
                 (e.lookahead -= e.prev_length - 1),
                 (e.prev_length -= 2);
             do
                 ++e.strstart <= i &&
-                    ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + j - 1]) & e.hash_mask),
+                    ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + M - 1]) & e.hash_mask),
                     (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]),
                     (e.head[e.ins_h] = e.strstart));
             while (0 != --e.prev_length);
             if (
                 ((e.match_available = 0),
-                (e.match_length = j - 1),
+                (e.match_length = M - 1),
                 e.strstart++,
                 r && (et(e, !1), 0 === e.strm.avail_out))
             )
@@ -260,7 +260,7 @@ function el(e, t) {
         } else (e.match_available = 1), e.strstart++, e.lookahead--;
     }
     return (e.match_available && ((r = a._tr_tally(e, 0, e.window[e.strstart - 1])), (e.match_available = 0)),
-    (e.insert = e.strstart < j - 1 ? e.strstart : j - 1),
+    (e.insert = e.strstart < M - 1 ? e.strstart : M - 1),
     t === f)
         ? (et(e, !0), 0 === e.strm.avail_out)
             ? z
@@ -271,19 +271,19 @@ function el(e, t) {
 }
 function ec(e, t) {
     for (var n, r, i, o, s = e.window; ; ) {
-        if (e.lookahead <= M) {
-            if ((eo(e), e.lookahead <= M && t === c)) return W;
+        if (e.lookahead <= j) {
+            if ((eo(e), e.lookahead <= j && t === c)) return W;
             if (0 === e.lookahead) break;
         }
         if (
             ((e.match_length = 0),
-            e.lookahead >= j &&
+            e.lookahead >= M &&
                 e.strstart > 0 &&
                 (r = s[(i = e.strstart - 1)]) === s[++i] &&
                 r === s[++i] &&
                 r === s[++i])
         ) {
-            o = e.strstart + M;
+            o = e.strstart + j;
             do;
             while (
                 r === s[++i] &&
@@ -296,11 +296,11 @@ function ec(e, t) {
                 r === s[++i] &&
                 i < o
             );
-            (e.match_length = M - (o - i)), e.match_length > e.lookahead && (e.match_length = e.lookahead);
+            (e.match_length = j - (o - i)), e.match_length > e.lookahead && (e.match_length = e.lookahead);
         }
         if (
-            (e.match_length >= j
-                ? ((n = a._tr_tally(e, 1, e.match_length - j)),
+            (e.match_length >= M
+                ? ((n = a._tr_tally(e, 1, e.match_length - M)),
                   (e.lookahead -= e.match_length),
                   (e.strstart += e.match_length),
                   (e.match_length = 0))
@@ -354,7 +354,7 @@ function ef(e) {
         (e.block_start = 0),
         (e.lookahead = 0),
         (e.insert = 0),
-        (e.match_length = e.prev_length = j - 1),
+        (e.match_length = e.prev_length = M - 1),
         (e.match_available = 0),
         (e.ins_h = 0);
 }
@@ -396,7 +396,7 @@ function e_() {
         (this.strategy = 0),
         (this.good_match = 0),
         (this.nice_match = 0),
-        (this.dyn_ltree = new i.Buf16(2 * x)),
+        (this.dyn_ltree = new i.Buf16(2 * L)),
         (this.dyn_dtree = new i.Buf16((2 * w + 1) * 2)),
         (this.bl_tree = new i.Buf16((2 * D + 1) * 2)),
         $(this.dyn_ltree),
@@ -405,7 +405,7 @@ function e_() {
         (this.l_desc = null),
         (this.d_desc = null),
         (this.bl_desc = null),
-        (this.bl_count = new i.Buf16(L + 1)),
+        (this.bl_count = new i.Buf16(x + 1)),
         (this.heap = new i.Buf16(2 * P + 1)),
         $(this.heap),
         (this.heap_len = 0),
@@ -467,7 +467,7 @@ function eg(e, t, n, r, a, o) {
         (l.hash_bits = a + 7),
         (l.hash_size = 1 << l.hash_bits),
         (l.hash_mask = l.hash_size - 1),
-        (l.hash_shift = ~~((l.hash_bits + j - 1) / j)),
+        (l.hash_shift = ~~((l.hash_bits + M - 1) / M)),
         (l.window = new i.Buf8(2 * l.w_size)),
         (l.head = new i.Buf16(l.hash_size)),
         (l.prev = new i.Buf16(l.w_size)),
@@ -568,9 +568,9 @@ function eE(e, t) {
                 (l = i.gzindex < i.gzhead.name.length ? 255 & i.gzhead.name.charCodeAt(i.gzindex++) : 0), en(i, l);
             } while (0 !== l);
             i.gzhead.hcrc && i.pending > o && (e.adler = s(e.adler, i.pending_buf, i.pending - o, o)),
-                0 === l && ((i.gzindex = 0), (i.status = V));
-        } else i.status = V;
-    if (i.status === V)
+                0 === l && ((i.gzindex = 0), (i.status = F));
+        } else i.status = F;
+    if (i.status === F)
         if (i.gzhead.comment) {
             o = i.pending;
             do {
@@ -588,10 +588,10 @@ function eE(e, t) {
                     en(i, l);
             } while (0 !== l);
             i.gzhead.hcrc && i.pending > o && (e.adler = s(e.adler, i.pending_buf, i.pending - o, o)),
-                0 === l && (i.status = F);
-        } else i.status = F;
+                0 === l && (i.status = V);
+        } else i.status = V;
     if (
-        (i.status === F &&
+        (i.status === V &&
             (i.gzhead.hcrc
                 ? (i.pending + 2 > i.pending_buf_size && ee(e),
                   i.pending + 2 <= i.pending_buf_size &&
@@ -639,7 +639,7 @@ function eE(e, t) {
 function eb(e) {
     var t;
     return e && e.state
-        ? (t = e.state.status) !== G && t !== B && t !== Z && t !== V && t !== F && t !== H && t !== Y
+        ? (t = e.state.status) !== G && t !== B && t !== Z && t !== F && t !== V && t !== H && t !== Y
             ? Q(e, m)
             : ((e.state = null), t === H ? Q(e, g) : p)
         : m;
@@ -671,23 +671,23 @@ function ey(e, t) {
             e.next_in = 0,
             e.input = t,
             eo(n);
-        n.lookahead >= j;
+        n.lookahead >= M;
     ) {
-        (r = n.strstart), (a = n.lookahead - (j - 1));
+        (r = n.strstart), (a = n.lookahead - (M - 1));
         do
-            (n.ins_h = ((n.ins_h << n.hash_shift) ^ n.window[r + j - 1]) & n.hash_mask),
+            (n.ins_h = ((n.ins_h << n.hash_shift) ^ n.window[r + M - 1]) & n.hash_mask),
                 (n.prev[r & n.w_mask] = n.head[n.ins_h]),
                 (n.head[n.ins_h] = r),
                 r++;
         while (--a);
-        (n.strstart = r), (n.lookahead = j - 1), eo(n);
+        (n.strstart = r), (n.lookahead = M - 1), eo(n);
     }
     return (
         (n.strstart += n.lookahead),
         (n.block_start = n.strstart),
         (n.insert = n.lookahead),
         (n.lookahead = 0),
-        (n.match_length = n.prev_length = j - 1),
+        (n.match_length = n.prev_length = M - 1),
         (n.match_available = 0),
         (e.next_in = c),
         (e.input = u),

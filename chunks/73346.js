@@ -1,7 +1,7 @@
 n.d(t, {
-    Gg: () => L,
+    Gg: () => x,
     Kb: () => R,
-    Ww: () => M,
+    Ww: () => j,
     ZI: () => A,
     _W: () => C,
     uF: () => P,
@@ -201,10 +201,10 @@ function D(e, t, n) {
               userInfo: i,
           };
 }
-let x = [];
-function L(e, t, n, r, a) {
+let L = [];
+function x(e, t, n, r, a) {
     let o = t.get(e);
-    if (null == o) return x;
+    if (null == o) return L;
     let s = o.applicationId,
         l = [],
         c = [],
@@ -225,11 +225,11 @@ function L(e, t, n, r, a) {
     }
     return l;
 }
-let j = [];
-function M(e, t, n) {
+let M = [];
+function j(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return j;
+    if (null == r || null == i) return M;
     let a = [];
     (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;

@@ -79,10 +79,10 @@ function w() {
 function D() {
     v = !0;
 }
-function x() {
+function L() {
     y = !0;
 }
-function L(e) {
+function x(e) {
     var t;
     (b = {}),
         e.invites.forEach((e) => {
@@ -91,10 +91,10 @@ function L(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (y = !1);
 }
-function j(e) {
+function M(e) {
     delete m[e.channelId];
 }
-class M extends (i = d.ZP.Store) {
+class j extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let {
@@ -122,8 +122,8 @@ class M extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(M, "displayName", "InstantInviteStore");
-let k = new M(f.Z, {
+h(j, "displayName", "InstantInviteStore");
+let k = new j(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: N,
@@ -134,7 +134,7 @@ let k = new M(f.Z, {
     INSTANT_INVITE_REVOKE_SUCCESS: C,
     FRIEND_INVITE_REVOKE_REQUEST: w,
     FRIEND_INVITE_CREATE_REQUEST: D,
-    FRIEND_INVITES_FETCH_REQUEST: x,
-    FRIEND_INVITES_FETCH_RESPONSE: L,
-    INSTANT_INVITE_CLEAR: j,
+    FRIEND_INVITES_FETCH_REQUEST: L,
+    FRIEND_INVITES_FETCH_RESPONSE: x,
+    INSTANT_INVITE_CLEAR: M,
 });

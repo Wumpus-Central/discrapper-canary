@@ -86,7 +86,7 @@ function D(e) {
     for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
 }
-let x = {
+let L = {
     enter: {
         BEG: 0,
         END: 22,
@@ -100,7 +100,7 @@ let x = {
         END: 200,
     },
 };
-function L() {
+function x() {
     return n
         .e("77843")
         .then(n.t.bind(n, 931152, 19))
@@ -109,7 +109,7 @@ function L() {
             return t;
         });
 }
-function j(e) {
+function M(e) {
     if (null == e) return "enter";
     switch (e) {
         case "enter":
@@ -120,7 +120,7 @@ function j(e) {
             return "enter";
     }
 }
-let M = i.forwardRef(function (e, t) {
+let j = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [o, l] = i.useState(null),
         { confettiCanvas: c } = i.useContext(s.h),
@@ -179,7 +179,7 @@ function k(e) {
     let { children: t } = e,
         n = i.useRef({}),
         [a, s] = i.useState(null),
-        l = j(a),
+        l = M(a),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef("jack_o_lantern"),
@@ -228,7 +228,7 @@ function k(e) {
                   Object.keys(w).map((e) => {
                       let t = w[e];
                       return (0, r.jsx)(
-                          M,
+                          j,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -246,10 +246,10 @@ function k(e) {
                                     animationRef: I,
                                     className: p.lottieAnimation,
                                     nextScene: l,
-                                    sceneSegments: x,
+                                    sceneSegments: L,
                                     onScenePlay: O,
                                     onSceneComplete: v,
-                                    importData: L,
+                                    importData: x,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),

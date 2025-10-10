@@ -1,4 +1,4 @@
-n.d(t, { m: () => h });
+n.d(t, { m: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,18 +52,18 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: h,
+            innerClassName: f,
             renderIcon: g,
             text: m,
             selected: b,
-            trailing: O,
+            trailing: _,
             background: y,
-            showUnread: _ = !1,
+            showUnread: O = !1,
             ref: v,
         } = e,
         j = (function (e, t) {
@@ -104,8 +104,8 @@ function h(e) {
         ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            f(p({}, j), {
-                buttonProps: f(p({}, x), {
+            h(p({}, j), {
+                buttonProps: h(p({}, x), {
                     id: n,
                     role: "button",
                 }),
@@ -127,9 +127,9 @@ function h(e) {
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
                     y,
-                    _ ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
+                    O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, h]),
+                        className: l()([d.link, d.basicChannelRowLink, f]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [
@@ -142,7 +142,7 @@ function h(e) {
                                     "aria-hidden": !0,
                                     children: m,
                                 }),
-                                O,
+                                _,
                             ],
                         }),
                     }),

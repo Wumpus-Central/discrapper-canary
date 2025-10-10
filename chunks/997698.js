@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(793030),
     l = n(481060),
-    a = n(760632),
-    s = n(578053),
+    s = n(760632),
+    a = n(578053),
     o = n(388032),
     c = n(354962);
 function d(e) {
@@ -18,7 +18,7 @@ function d(e) {
                         className: c.halfWidth,
                         children: [
                             (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.KuYcnZ) }),
-                            (0, r.jsx)(s.g, {
+                            (0, r.jsx)(a.g, {
                                 canManageGuild: t,
                                 guildId: n.id,
                                 afkChannelId: n.afkChannelId,
@@ -29,7 +29,7 @@ function d(e) {
                         className: c.halfWidth,
                         children: [
                             (0, r.jsx)(l.vwX, { children: o.intl.string(o.t.brhYaW) }),
-                            (0, r.jsx)(a.M, {
+                            (0, r.jsx)(s.M, {
                                 canManageGuild: t,
                                 afkChannelId: n.afkChannelId,
                                 afkTimeout: n.afkTimeout,

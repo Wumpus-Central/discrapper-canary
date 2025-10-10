@@ -1,25 +1,25 @@
 n.d(t, {
     PA: () => l,
-    Wl: () => c,
+    Wl: () => s,
 });
-var r = n(990547);
+var a = n(990547);
 n(479531);
-var i = n(573261),
-    a = n(981631);
+var r = n(573261),
+    i = n(981631);
 async function l() {
-    let e = await i.Z.get({
-        url: a.ANM.SAFETY_FLOWS_TASK,
-        trackedActionData: { event: r.NetworkActionNames.USER_VERIFY },
-        rejectWithError: !1,
+    let e = await r.Z.get({
+        url: i.ANM.SAFETY_FLOWS_TASK,
+        trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
+        rejectWithError: !0,
     });
     return 204 === e.status ? null : e.body;
 }
-async function c(e) {
+async function s(e) {
     return (
-        await i.Z.post({
-            url: a.ANM.SAFETY_FLOWS_TASK,
+        await r.Z.post({
+            url: i.ANM.SAFETY_FLOWS_TASK,
             body: e,
-            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY },
+            trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
             rejectWithError: !0,
         })
     ).body;

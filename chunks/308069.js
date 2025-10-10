@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     o = n(120356),
     a = n.n(o),
-    i = n(488290),
+    i = n(137317),
     l = n(481060),
     c = n(617136),
     d = n(915750),
@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(303385),
     _ = n(46140),
     b = n(388032),
-    j = n(461579);
-let v = (0, i.animated)(g.ZP),
+    v = n(579605);
+let j = (0, i.animated)(g.ZP),
     C = (e) => {
         let {
                 quest: t,
@@ -26,8 +26,8 @@ let v = (0, i.animated)(g.ZP),
                 onCtxMenuOpen: g,
                 onCtxMenuClose: C,
                 useReducedMotion: y,
-                isExpanded: O,
-                isExpansionAnimationComplete: E,
+                isExpanded: E,
+                isExpansionAnimationComplete: O,
             } = e,
             S = (0, d.aM)(),
             { status: T } = (0, m.n)({
@@ -50,14 +50,14 @@ let v = (0, i.animated)(g.ZP),
                     sourceQuestContent: p.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            A = O && E,
+            A = E && O,
             R = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: a()(j.clickable, { [j.logo]: A }),
-                children: (0, r.jsx)(v, {
+                className: a()(v.clickable, { [v.logo]: A }),
+                children: (0, r.jsx)(j, {
                     quest: t,
                     withGameTile: !1,
-                    logotypeClassName: j.partnerBranding,
+                    logotypeClassName: v.partnerBranding,
                     logotypeStyle: {
                         height: w ? 32 : 24,
                         maxWidth: w ? 130 : 92,
@@ -74,7 +74,7 @@ let v = (0, i.animated)(g.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: A }),
+            className: a()(v.wrapper, v.rewardHighlightWrapper, { [v.interactable]: A }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -88,7 +88,7 @@ let v = (0, i.animated)(g.ZP),
             },
             children: [
                 (0, r.jsx)(i.animated.div, {
-                    className: j.opaqueExpandedBackground,
+                    className: v.opaqueExpandedBackground,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -104,7 +104,7 @@ let v = (0, i.animated)(g.ZP),
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {
-                    className: j.promotedBadgeWrapper,
+                    className: v.promotedBadgeWrapper,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -113,7 +113,7 @@ let v = (0, i.animated)(g.ZP),
                     },
                     children: [
                         (0, r.jsxs)(l.P3F, {
-                            className: j.promotedBadge,
+                            className: v.promotedBadge,
                             onClick: P,
                             children: [
                                 (0, r.jsx)(l.Text, {
@@ -123,7 +123,7 @@ let v = (0, i.animated)(g.ZP),
                                 }),
                                 (0, r.jsx)(l.idN, {
                                     color: l.TVs.colors.WHITE,
-                                    className: j.promotedBadgeIcon,
+                                    className: v.promotedBadgeIcon,
                                 }),
                             ],
                         }),
@@ -167,12 +167,12 @@ let v = (0, i.animated)(g.ZP),
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            className: j.submenuWrapper,
+                                            className: v.submenuWrapper,
                                             "aria-label": b.intl.string(b.t.DEoVWV),
                                             children: (0, r.jsx)(l.xhG, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: a()(j.submenuIcon, j.white),
+                                                className: a()(v.submenuIcon, v.white),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

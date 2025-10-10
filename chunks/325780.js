@@ -1,6 +1,6 @@
 n.d(t, { k: () => f });
 var r = n(951288),
-    i = n(753187),
+    i = n(483566),
     a = n(573830);
 function o(e, t, n) {
     return (
@@ -79,7 +79,7 @@ function f(e) {
     var { checked: t, disabled: n, id: o, onChange: l, focusProps: d, hasIcon: f = !1 } = e,
         _ = u(e, ["checked", "disabled", "id", "onChange", "focusProps", "hasIcon"]);
     return (0, r.jsx)(
-        i.N,
+        i.g,
         c(s({}, _), {
             id: o,
             disabled: n,

@@ -8,14 +8,14 @@ var r = a(967752),
     E = a(370336),
     s = a(116698),
     l = a(538022),
-    u = a(510529),
-    I = a(263449),
+    I = a(510529),
+    u = a(263449),
     R = a(255768),
     d = a(380132),
     N = a(151122),
     A = a(112797),
-    f = a(305625),
-    T = a(820754),
+    T = a(305625),
+    f = a(820754),
     L = a(822578);
 let p = "Not capturing exception because it's already been captured.";
 class h {
@@ -30,7 +30,7 @@ class h {
             t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : R.X && _.kg.warn("No DSN provided, client will not send events."),
             this._dsn)
         ) {
-            let e = (0, u.U)(this._dsn, t.tunnel, t._metadata ? t._metadata.sdk : void 0);
+            let e = (0, I.U)(this._dsn, t.tunnel, t._metadata ? t._metadata.sdk : void 0);
             this._transport = t.transport({
                 tunnel: this._options.tunnel,
                 recordDroppedEvent: this.recordDroppedEvent.bind(this),
@@ -184,7 +184,7 @@ class h {
     _isEnabled() {
         return !1 !== this.getOptions().enabled && void 0 !== this._transport;
     }
-    _prepareEvent(t, e, a, r = (0, I.aF)()) {
+    _prepareEvent(t, e, a, r = (0, u.aF)()) {
         let _ = this.getOptions(),
             n = Object.keys(this._integrations);
         return (
@@ -208,7 +208,7 @@ class h {
                         ...t.contexts,
                     }),
                         (t.sdkProcessingMetadata = {
-                            dynamicSamplingContext: n || (0, f._l)(a, this),
+                            dynamicSamplingContext: n || (0, T._l)(a, this),
                             ...t.sdkProcessingMetadata,
                         });
                 }
@@ -231,8 +231,8 @@ class h {
             c = O(t),
             E = t.type || "error",
             l = `before send for type \`${E}\``,
-            u = void 0 === _ ? void 0 : (0, T.o)(_);
-        if (c && "number" == typeof u && Math.random() > u)
+            I = void 0 === _ ? void 0 : (0, f.o)(_);
+        if (c && "number" == typeof I && Math.random() > I)
             return (
                 this.recordDroppedEvent("sample_rate", "error", t),
                 (0, i.$2)(
@@ -242,13 +242,13 @@ class h {
                     ),
                 )
             );
-        let I = "replay_event" === E ? "replay" : E,
+        let u = "replay_event" === E ? "replay" : E,
             R = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
         return this._prepareEvent(t, e, a, R)
             .then((a) => {
                 if (null === a)
                     throw (
-                        (this.recordDroppedEvent("event_processor", I, t),
+                        (this.recordDroppedEvent("event_processor", u, t),
                         new s.b("An event processor returned `null`, will not send event.", "log"))
                     );
                 return e.data && !0 === e.data.__sentry__
@@ -298,7 +298,7 @@ class h {
             })
             .then((r) => {
                 if (null === r) {
-                    if ((this.recordDroppedEvent("before_send", I, t), n)) {
+                    if ((this.recordDroppedEvent("before_send", u, t), n)) {
                         let e = 1 + (t.spans || []).length;
                         this.recordDroppedEvent("before_send", "span", e);
                     }

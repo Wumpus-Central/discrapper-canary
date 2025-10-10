@@ -1,93 +1,93 @@
-t.d(n, { default: () => h }), t(388685);
-var i = t(951288),
-    a = t(647438),
-    s = t(990547),
-    l = t(481060),
-    r = t(613734),
-    o = t(409617),
-    c = t(451426),
-    d = t(384725),
-    x = t(534044),
-    m = t(670199),
-    p = t(800530),
-    u = t(981631),
-    _ = t(149390);
+i.d(n, { default: () => h }), i(388685);
+var t = i(951288),
+    a = i(647438),
+    s = i(990547),
+    l = i(481060),
+    r = i(613734),
+    o = i(409617),
+    c = i(451426),
+    d = i(384725),
+    x = i(534044),
+    m = i(670199),
+    g = i(800530),
+    p = i(981631),
+    u = i(149390);
 function h(e) {
-    let { classificationId: n, transitionState: t, initialSlide: h = p.Cs.SPEED_BUMP, onClose: g } = e,
-        [C, N] = a.useState(h),
-        { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : u.lds),
-        E = (null == j ? void 0 : j.is_spam) || !1,
-        T = (null == j ? void 0 : j.is_coppa) || !1,
-        v = null == j ? void 0 : j.appeal_ingestion_type;
+    let { classificationId: n, transitionState: i, initialSlide: h = g.Cs.SPEED_BUMP, onClose: N } = e,
+        [C, j] = a.useState(h),
+        { classification: _, isDsaEligible: E } = (0, r.YG)(null != n ? n : p.lds),
+        v = (null == _ ? void 0 : _.is_spam) || !1,
+        I = (null == _ ? void 0 : _.is_coppa) || !1,
+        T = null == _ ? void 0 : _.appeal_ingestion_type;
     a.useEffect(() => {
-        N(h);
-    }, [N, h]);
-    let f = a.useCallback(() => {
-            d.Z.close(), g();
-        }, [g]),
-        S = a.useCallback(() => {
-            var e;
-            let n = null == (e = p.JQ[C]) ? void 0 : e.next;
-            n ? N(n) : f();
-        }, [C, f]),
+        j(h);
+    }, [j, h]);
+    let S = a.useCallback(() => {
+            d.Z.close(), N();
+        }, [N]),
         k = a.useCallback(() => {
             var e;
-            let n = null == (e = p.JQ[C]) ? void 0 : e.prev;
-            n ? N(n) : f();
-        }, [C, f]);
-    return (0, i.jsx)(l.Y0X, {
+            let n = null == (e = g.JQ[C]) ? void 0 : e.next;
+            n ? j(n) : S();
+        }, [C, S]),
+        A = a.useCallback(() => {
+            var e;
+            let n = null == (e = g.JQ[C]) ? void 0 : e.prev;
+            n ? j(n) : S();
+        }, [C, S]);
+    return (0, t.jsx)(l.Y0X, {
         "data-migration-pending": !0,
-        transitionState: t,
+        transitionState: i,
         disableTrack: !0,
         size: l.CgR.DYNAMIC,
         parentComponent: "AppealIngestionModal",
-        children: (0, i.jsx)("div", {
-            className: _.container,
-            children: (0, i.jsxs)(l.MyZ, {
+        children: (0, t.jsx)("div", {
+            className: u.container,
+            children: (0, t.jsxs)(l.MyZ, {
                 activeSlide: C,
                 width: 500,
                 children: [
-                    (0, i.jsx)(l.Mi4, {
-                        id: p.Cs.SPEED_BUMP,
+                    (0, t.jsx)(l.Mi4, {
+                        id: g.Cs.SPEED_BUMP,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
-                        impressionProperties: p.ZW,
-                        children: (0, i.jsx)(m.Z, {
-                            classification: j,
-                            onClose: f,
-                            onNext: S,
-                            isSpam: E,
-                            isCoppa: T,
-                            appealIngestionType: v,
-                            isDsaEligible: I,
+                        impressionProperties: g.ZW,
+                        children: (0, t.jsx)(m.Z, {
+                            classification: _,
+                            onClose: S,
+                            onNext: k,
+                            isSpam: v,
+                            isCoppa: I,
+                            appealIngestionType: T,
+                            isDsaEligible: E,
                         }),
                     }),
-                    (0, i.jsx)(l.Mi4, {
-                        id: p.Cs.COLLECT_SIGNAL,
+                    (0, t.jsx)(l.Mi4, {
+                        id: g.Cs.COLLECT_SIGNAL,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
-                        impressionProperties: p.ZW,
-                        children: (0, i.jsx)(o.Z, {
-                            isDsaEligible: I,
-                            onClose: f,
-                            onNext: S,
-                            onBack: k,
+                        impressionProperties: g.ZW,
+                        children: (0, t.jsx)(o.Z, {
+                            isDsaEligible: E,
+                            onClose: S,
+                            onNext: k,
+                            onBack: A,
                         }),
                     }),
-                    (0, i.jsx)(l.Mi4, {
-                        id: p.Cs.CONFIRM_SUBMISSION,
+                    (0, t.jsx)(l.Mi4, {
+                        id: g.Cs.CONFIRM_SUBMISSION,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-                        impressionProperties: p.ZW,
-                        children: (0, i.jsx)(c.Z, {
-                            isDsaEligible: I,
-                            onClose: f,
-                            onNext: S,
-                            onBack: k,
+                        impressionProperties: g.ZW,
+                        children: (0, t.jsx)(c.Z, {
+                            isDsaEligible: E,
+                            onClose: S,
+                            onNext: k,
+                            onBack: A,
                         }),
                     }),
-                    (0, i.jsx)(l.Mi4, {
-                        id: p.Cs.REQUEST_SENT,
+                    (0, t.jsx)(l.Mi4, {
+                        id: g.Cs.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
-                        impressionProperties: p.ZW,
-                        children: (0, i.jsx)(x.Z, { onNext: S }),
+                        impressionProperties: g.ZW,
+                        children: (0, t.jsx)(x.Z, { onNext: k }),
                     }),
                 ],
             }),

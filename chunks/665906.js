@@ -5,8 +5,8 @@ n.d(t, {
     Gu: () => B,
     JQ: () => A,
     NE: () => b,
-    RG: () => x,
-    Xb: () => M,
+    RG: () => L,
+    Xb: () => j,
     Xu: () => O,
     Y: () => G,
     cD: () => v,
@@ -14,7 +14,7 @@ n.d(t, {
     kn: () => w,
     tM: () => E,
     tc: () => P,
-    xl: () => L,
+    xl: () => x,
     yw: () => U,
 }),
     n(388685);
@@ -118,7 +118,7 @@ function R(e, t, n) {
 }
 function P(e) {
     let t = (0, o.e7)([p.Z], () => N(e, p.Z)),
-        n = M(e);
+        n = j(e);
     return R(e, t, n);
 }
 function w(e) {
@@ -136,7 +136,7 @@ function D(e) {
             (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && n))
     );
 }
-function x(e) {
+function L(e) {
     var t;
     return (
         null != e &&
@@ -147,20 +147,20 @@ function x(e) {
                 p.Z.can(g.Plq.SEND_MESSAGES_IN_THREADS, e)))
     );
 }
-function L(e) {
+function x(e) {
     let t = p.Z.can(g.Plq.MANAGE_THREADS, e);
     return e.isArchivedLockedThread() && !t;
 }
-function j(e, t) {
+function M(e, t) {
     return null != e && t.can(g.Plq.MANAGE_THREADS, e);
 }
-function M(e) {
+function j(e) {
     return (0, o.e7)([p.Z], () => k(e, [p.Z]));
 }
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [p.Z],
         [n] = t;
-    return j(e, n);
+    return M(e, n);
 }
 function U(e) {
     return (0, o.e7)([_.Z, p.Z, f.default], () => {
@@ -185,6 +185,6 @@ function G(e) {
     return !t && e.isVocalThread() && i && n && r && !a;
 }
 function B(e) {
-    let t = M(e);
+    let t = j(e);
     return e.isLockedThread() && !t;
 }

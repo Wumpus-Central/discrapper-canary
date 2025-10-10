@@ -1,6 +1,6 @@
 n.d(t, {
     J9: () => l.J,
-    Jt: () => L,
+    Jt: () => x,
     K0: () => P,
     Pd: () => g,
     f$: () => s.f$,
@@ -127,7 +127,7 @@ function E(e, t, n, r, o) {
             }),
         null != t.context)
     ) {
-        let e = j(t.context);
+        let e = M(t.context);
         null != e && b.set("X-Context-Properties", e);
     }
     null != t.retried && 0 !== t.retried && b.set("X-Failed-Requests", "".concat(t.retried)),
@@ -141,7 +141,7 @@ function E(e, t, n, r, o) {
     let y = () => {
         (t.backoff = null != t.backoff ? t.backoff : new a.Z()),
             (t.retried = (null != t.retried ? t.retried : 0) + 1),
-            t.backoff.fail(() => x(t.url).then(() => E(e, t, n, r, o)));
+            t.backoff.fail(() => L(t.url).then(() => E(e, t, n, r, o)));
     };
     null == w || null == (d = w.prepareRequest) || d.call(w, b),
         b.ok((e) => null != e.status),
@@ -325,11 +325,11 @@ let w = null;
 function D(e) {
     w = e;
 }
-let x = () => Promise.resolve();
-function L(e) {
-    x = e;
+let L = () => Promise.resolve();
+function x(e) {
+    L = e;
 }
-function j(e) {
+function M(e) {
     try {
         return u.from(JSON.stringify(e)).toString("base64");
     } catch (e) {

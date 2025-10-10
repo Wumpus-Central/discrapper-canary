@@ -22,8 +22,8 @@ var i = n(951288),
     g = n(493683),
     y = n(13245),
     O = n(99690),
-    E = n(493773),
-    v = n(620662),
+    v = n(493773),
+    E = n(620662),
     S = n(835473),
     b = n(194082),
     x = n(297781),
@@ -52,7 +52,7 @@ var i = n(951288),
     B = n(959517),
     Y = n(388032),
     Q = n(847121);
-function X(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -77,7 +77,7 @@ function X(e) {
     }
     return e;
 }
-function K(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -106,12 +106,12 @@ function J(e) {
             return () => clearTimeout(e);
         }
     }, [s]);
-    let E = null != n && (0, v.Z)(n, H.xjy.JOIN),
+    let v = null != n && (0, E.Z)(n, H.xjy.JOIN),
         S = async (e) => {
             if (null != a && "unsent" === s) {
                 e.stopPropagation();
                 try {
-                    if ((u("sending"), E))
+                    if ((u("sending"), v))
                         await f.Z.sendActivityInviteUser({
                             type: H.mFx.JOIN,
                             userId: a.id,
@@ -172,8 +172,8 @@ function J(e) {
                     userId: a.id,
                 });
         },
-        x = E ? Y.intl.string(Y.t["3fRyS0"]) : Y.intl.string(Y.t.XHxDIS),
-        I = E
+        x = v ? Y.intl.string(Y.t["3fRyS0"]) : Y.intl.string(Y.t.XHxDIS),
+        I = v
             ? (0, i.jsx)(p.ejJ, {
                   color: "currentColor",
                   size: "sm",
@@ -217,7 +217,7 @@ function q(e) {
         a = null != (t = null == l ? void 0 : l.application_id) ? t : n.extra.application_id,
         s = (0, c.e7)([R.Z], () => (null != o ? R.Z.getApplicationActivity(o.id, a) : null), [a, o]),
         [u, m] = r.useState("unsent");
-    if (!(null != s && (0, v.Z)(s, H.xjy.JOIN))) return null;
+    if (!(null != s && (0, E.Z)(s, H.xjy.JOIN))) return null;
     let g = async (e) => {
             if (null != o && "unsent" === u) {
                 e.stopPropagation();
@@ -399,7 +399,7 @@ function et(e) {
 function en(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
         l = (0, I.Z)(t, "useLiveActivityRows");
-    (0, E.ZP)(() => {
+    (0, v.ZP)(() => {
         (0, w._)();
     });
     let o = (0, c.e7)([A.Z], () => (null == t ? null : A.Z.getApplicationActivity(t)), [t]),
@@ -440,7 +440,7 @@ function en(e) {
                 });
         }, [t, i]);
     return (
-        (0, E.ZP)(() => (Z.L(), () => Z.v())),
+        (0, v.ZP)(() => (Z.L(), () => Z.v())),
         {
             entries: r.useMemo(() => {
                 let e = l.filter((e) => !d.some((t) => t.activityUser.id === e.author_id)),
@@ -488,11 +488,11 @@ function en(e) {
 }
 function ei(e) {
     let t = en(e);
-    return (0, i.jsx)(et, K(X({}, t), { className: e.className }));
+    return (0, i.jsx)(et, X(K({}, t), { className: e.className }));
 }
 function er(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
-        l = null != t && (0, v.Z)(t, H.xjy.JOIN),
+        l = null != t && (0, E.Z)(t, H.xjy.JOIN),
         o = (0, S.q)(null == t ? void 0 : t.application_id),
         a = null != o && (0, z.yE)(o.flags, H.udG.EMBEDDED);
     return null == t || null == n
@@ -533,7 +533,7 @@ function el(e) {
         a = (0, c.e7)([L.default], () => L.default.getCurrentUser()),
         s = null != l ? l : r,
         u = (0, c.e7)([A.Z], () => (null == s ? null : A.Z.getApplicationActivity(s)), [s]);
-    (0, E.ZP)(() => (Z.L(), () => Z.v()));
+    (0, v.ZP)(() => (Z.L(), () => Z.v()));
     let d = en({
         gamingId: s,
         userAffinityThresholdV2: 0.00145,
@@ -550,7 +550,7 @@ function el(e) {
                   }),
                   (0, i.jsx)(
                       et,
-                      K(X({}, d), {
+                      X(K({}, d), {
                           className: Q.contentInventoryContainer,
                           hideHeader: !0,
                       }),

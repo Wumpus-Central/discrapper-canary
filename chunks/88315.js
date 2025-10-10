@@ -1,28 +1,28 @@
 n.d(t, {
-    P7: () => m,
+    P7: () => _,
     RR: () => p,
-    UN: () => c,
-    bg: () => E,
+    UN: () => u,
+    bg: () => m,
     hn: () => d,
     np: () => f,
 });
 var r = n(979590),
-    l = n.n(r),
-    i = n(866442),
+    i = n.n(r),
+    l = n(866442),
     a = n(220082),
     o = n(594174),
-    u = n(984063),
+    c = n(984063),
     s = n(813900);
-function c(e) {
+function u(e) {
     let t = e.current,
         n = null == t ? void 0 : t.getContext("2d");
     null != t && null != n && n.clearRect(0, 0, t.width, t.height);
 }
 function d(e, t) {
-    let { width: n, height: r, left: l, top: i } = e.getBoundingClientRect();
+    let { width: n, height: r, left: i, top: l } = e.getBoundingClientRect();
     return {
-        x: (t.clientX - l) / n,
-        y: (t.clientY - i) / r,
+        x: (t.clientX - i) / n,
+        y: (t.clientY - l) / r,
     };
 }
 function f(e, t) {
@@ -35,27 +35,27 @@ function p(e, t, n) {
         deltaTime: e.deltaTime,
     };
 }
-function m(e) {
-    return e.type === u.W.LINE;
+function _(e) {
+    return e.type === c.W.LINE;
 }
-function E(e, t, n, r) {
-    var u;
-    let c = o.default.getUser(e),
-        d = null == c ? void 0 : c.getAvatarURL(null, s.Ks),
-        f = null != d ? (null == (u = a.SR.getState().palette[d]) ? void 0 : u[0]) : null,
+function m(e, t, n, r) {
+    var c;
+    let u = o.default.getUser(e),
+        d = null == u ? void 0 : u.getAvatarURL(null, s.Ks),
+        f = null != d ? (null == (c = a.SR.getState().palette[d]) ? void 0 : c[0]) : null,
         p =
             null != f
                 ? "#".concat(
-                      l()({
+                      i()({
                           r: f[0],
                           g: f[1],
                           b: f[2],
                       }).toHex(),
                   )
                 : r,
-        m = (0, i.Bd)((0, i._i)(p)) > 0.5 ? n : t;
+        _ = (0, l.Bd)((0, l._i)(p)) > 0.5 ? n : t;
     return {
         fillColor: p,
-        outlineColor: m,
+        outlineColor: _,
     };
 }

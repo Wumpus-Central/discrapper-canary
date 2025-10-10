@@ -1,4 +1,4 @@
-r.r(i), r.d(i, { default: () => M }), r(388685);
+r.r(t), r.d(t, { default: () => M }), r(388685);
 var e = r(951288),
     n = r(647438),
     a = r(120356),
@@ -10,16 +10,16 @@ var e = r(951288),
     x = r(425196),
     u = r(860277),
     p = r(118045),
-    h = r(221558),
-    m = r(360469),
+    m = r(221558),
+    h = r(360469),
     v = r(741549),
     j = r(271268),
     f = r(626698),
     y = r(612776),
-    T = r(231338),
-    E = r(509950),
-    Z = r(388032),
-    g = r(356379);
+    E = r(231338),
+    T = r(484718),
+    g = r(388032),
+    Z = r(691446);
 let S = {
     0: y.W.WELCOME,
     1: y.W.MESSAGES,
@@ -32,20 +32,20 @@ let S = {
     8: y.W.QUESTS,
     9: y.W.END,
 };
-function M(t) {
-    let {} = t,
-        [i, r] = n.useState(0),
-        a = S[i],
+function M(i) {
+    let {} = i,
+        [t, r] = n.useState(0),
+        a = S[t],
         M = n.useCallback(() => {
-            if (i >= y.t.length - 1) return void (0, d.xf)();
-            r(i + 1);
-        }, [i]);
+            if (t >= y.t.length - 1) return void (0, d.xf)();
+            r(t + 1);
+        }, [t]);
     return (0, e.jsx)(l.f6W, {
-        theme: T.BR.DARKER,
-        children: (t) =>
+        theme: E.BR.DARKER,
+        children: (i) =>
             (0, e.jsxs)("div", {
-                className: s()(g.container, t),
-                "aria-label": Z.intl.string(E.default["CdU/PD"]),
+                className: s()(Z.container, i),
+                "aria-label": g.intl.string(T.default["CdU/PD"]),
                 children: [
                     (0, e.jsxs)(l.MyZ, {
                         activeSlide: a,
@@ -56,7 +56,7 @@ function M(t) {
                             }),
                             (0, e.jsx)(l.Mi4, {
                                 id: y.W.MESSAGES,
-                                children: (0, e.jsx)(m.Z, {}),
+                                children: (0, e.jsx)(h.Z, {}),
                             }),
                             (0, e.jsx)(l.Mi4, {
                                 id: y.W.EMOJIS,
@@ -68,7 +68,7 @@ function M(t) {
                             }),
                             (0, e.jsx)(l.Mi4, {
                                 id: y.W.GUILDS,
-                                children: (0, e.jsx)(h.Z, {}),
+                                children: (0, e.jsx)(m.Z, {}),
                             }),
                             (0, e.jsx)(l.Mi4, {
                                 id: y.W.FRIENDS,
@@ -93,39 +93,39 @@ function M(t) {
                         ],
                     }),
                     (0, e.jsxs)("div", {
-                        className: s()(g.header, t),
+                        className: s()(Z.header, i),
                         children: [
                             (0, e.jsxs)("div", {
-                                className: g.logo,
+                                className: Z.logo,
                                 children: [
                                     (0, e.jsx)(l.gw7, { color: l.TVs.colors.BG_BRAND }),
                                     (0, e.jsx)(l.Text, {
                                         variant: "display-sm",
                                         color: "text-primary",
-                                        className: g.logoText,
-                                        children: Z.intl.string(E.default["CdU/PD"]),
+                                        className: Z.logoText,
+                                        children: g.intl.string(T.default["CdU/PD"]),
                                     }),
                                 ],
                             }),
                             (0, e.jsx)(c.Z, {
-                                currentStep: i,
+                                currentStep: t,
                                 totalSteps: y.t.length,
-                                className: g.stepIndicator,
+                                className: Z.stepIndicator,
                             }),
                             (0, e.jsx)(l.P3F, {
                                 onClick: d.xf,
-                                className: g.closeButton,
+                                className: Z.closeButton,
                                 children: (0, e.jsx)(l.Uz9, {}),
                             }),
                         ],
                     }),
                     (0, e.jsx)(l.P3F, {
                         onClick: M,
-                        className: g.nextButton,
+                        className: Z.nextButton,
                         children: (0, e.jsx)(l.Text, {
                             variant: "display-sm",
                             color: "text-primary",
-                            children: Z.intl.string(Z.t.PDTjLC),
+                            children: g.intl.string(g.t.PDTjLC),
                         }),
                     }),
                 ],

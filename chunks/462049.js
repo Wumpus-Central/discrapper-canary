@@ -25,11 +25,11 @@ function g(e, t) {
     let m = e.getUint32(t + n);
     if (m === o) return w(e, h, p);
     if (m === s) return D(e, t, h, p);
-    if (m === f) return x(e, t, h, p);
-    if (m === _) return L(e, h, p);
+    if (m === f) return L(e, t, h, p);
+    if (m === _) return x(e, h, p);
     let g = e.getUint8(h);
     return m === l
-        ? M(e, t, h + i, p)
+        ? j(e, t, h + i, p)
         : m === c
           ? (0, a.I)(e, g, h + i, p)
           : m === u
@@ -160,21 +160,21 @@ function D(e, t, n, r) {
         length: r,
     };
 }
-function x(e, t, n, r) {
+function L(e, t, n, r) {
     return {
         type: "ipco",
         properties: k(e, n, r - (n - t)),
         length: r,
     };
 }
-function L(e, t, n) {
+function x(e, t, n) {
     return {
         type: "colr",
-        icc: j(e, t),
+        icc: M(e, t),
         length: n,
     };
 }
-function j(e, t) {
+function M(e, t) {
     let n = 4,
         r = (0, i.oH)(e, t, n);
     if ("prof" === r || "rICC" === r)
@@ -185,7 +185,7 @@ function j(e, t) {
             chunksTotal: 1,
         };
 }
-function M(e, t, n, r) {
+function j(e, t, n, r) {
     return {
         type: "meta",
         subBoxes: k(e, n + 3, r - (n + 3 - t)),

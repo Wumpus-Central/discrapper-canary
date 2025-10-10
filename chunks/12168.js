@@ -8,11 +8,11 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(786920),
+    l = n(137317),
     c = n(481060),
     u = n(596454),
-    d = n(727637),
-    f = n(313201),
+    d = n(313201),
+    f = n(104505),
     _ = n(543241),
     p = n(318766),
     h = n(907040),
@@ -87,10 +87,10 @@ let N = O.Hz.CHAT,
     ].filter(b.lm);
 function P(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
-        f = i.useRef(null),
-        _ = (0, d.Z)(f);
+        d = i.useRef(null),
+        _ = (0, f.X)(d);
     return (0, r.jsx)("span", {
-        ref: f,
+        ref: d,
         children: (0, r.jsx)(c.P3F, {
             onClick: a,
             focusProps: { enabled: !n },
@@ -142,17 +142,17 @@ function D(e) {
             closePopout: a,
             onFocus: l,
             onSelectEmoji: u,
-            onSelectDisabledEmoji: d,
+            onSelectDisabledEmoji: f,
             onExpandedToggle: p,
             emojiSearchProps: m,
             recentlyUsedEmojis: b,
             analyticsOverride: T,
             ref: A,
         } = e,
-        D = (0, f.Dt)(),
-        [x, L] = i.useState(!1),
-        j = (0, _.wC)(t.guild_id),
-        M = (0, s.uniqBy)([...j, ...R], "name")
+        D = (0, d.Dt)(),
+        [L, x] = i.useState(!1),
+        M = (0, _.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...M, ...R], "name")
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -162,9 +162,9 @@ function D(e) {
                     }),
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && M.splice(M.length - 1, 1, b[0]);
+    null != b && b.length > 0 && j.splice(j.length - 1, 1, b[0]);
     let k = (e) => {
-            L(e), null == p || p(e);
+            x(e), null == p || p(e);
         },
         U = (e) => {
             let { emoji: t, willClose: n } = e;
@@ -172,7 +172,7 @@ function D(e) {
             null != t && u(t), k(!n), n && g.kJ.setSearchPlaceholder(null);
         },
         G = (e) => {
-            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? k(!0) : k(!x));
+            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? k(!0) : k(!L));
         };
     return (0, r.jsxs)(c.VqE, {
         "aria-labelledby": D,
@@ -193,17 +193,17 @@ function D(e) {
                     (0, r.jsx)(h.Z, {
                         analyticsOverride: T,
                         channel: t,
-                        className: o()(I.animatedPicker, { [I.animatedPickerTall]: x }),
-                        headerClassName: o()(I.emojiPickerHeader, { [I.emojiPickerHeaderExpanded]: x }),
+                        className: o()(I.animatedPicker, { [I.animatedPickerTall]: L }),
+                        headerClassName: o()(I.emojiPickerHeader, { [I.emojiPickerHeaderExpanded]: L }),
                         closePopout: a,
-                        onSelectEmoji: x ? U : () => {},
-                        shouldHidePickerActions: !x,
+                        onSelectEmoji: L ? U : () => {},
+                        shouldHidePickerActions: !L,
                         wrapper: "div",
                         pickerIntention: N,
                         searchProps: C(S({}, m), {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
-                                isEmojiPickerExpanded: x,
+                                isEmojiPickerExpanded: L,
                                 onSetExpanded: k,
                                 onFocus: l,
                             }),
@@ -214,7 +214,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)("div", {
                             className: o()(I.slots, I.slotsWide),
-                            children: M.map((e) => {
+                            children: j.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
@@ -235,7 +235,7 @@ function D(e) {
                                                 isDisabled: n,
                                                 onClick: () => {
                                                     n
-                                                        ? null == d || d(e)
+                                                        ? null == f || f(e)
                                                         : U({
                                                               emoji: e,
                                                               willClose: !0,

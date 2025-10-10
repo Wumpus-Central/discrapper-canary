@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(786920),
+    o = n(137317),
     s = n(442837),
     c = n(481060),
     u = n(607070),
@@ -30,7 +30,7 @@ function y(e) {
         C = (0, s.e7)([g.Z], () => g.Z.hasSaveablePendingChanges()),
         T = (0, s.e7)([g.Z], () => g.Z.isSubmitting),
         N = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        P = (0, c.Yzy)(C, {
+        j = (0, c.Yzy)(C, {
             from: {
                 opacity: 0,
                 y: 80 * !N,
@@ -59,7 +59,7 @@ function y(e) {
         i.useEffect(() => {
             C && c.uvj.announce(O.intl.string(O.t["0Y/qkJ"]));
         }, [C]);
-    let j = i.useCallback(async () => {
+    let P = i.useCallback(async () => {
             try {
                 await h.Z.savePendingWidgets(v);
             } catch (e) {
@@ -94,7 +94,7 @@ function y(e) {
         x = i.useCallback(() => {
             h.Z.clearPendingWidgets();
         }, []);
-    return P((e, n) =>
+    return j((e, n) =>
         n
             ? (0, r.jsx)(o.animated.div, {
                   className: t,
@@ -123,7 +123,7 @@ function y(e) {
                                       size: "sm",
                                       variant: "primary",
                                       text: O.intl.string(O.t.R3BPHx),
-                                      onClick: j,
+                                      onClick: P,
                                       loading: T,
                                       disabled: !C || T,
                                   }),

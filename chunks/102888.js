@@ -1,16 +1,16 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(128557),
-    o = n(981631),
-    s = n(388032),
+    s = n(981631),
+    o = n(388032),
     c = n(957717);
-let u = (e) => {
-    let { guild: t, onAddGuild: u } = e,
-        d = i.useCallback(() => {
+let d = (e) => {
+    let { guild: t, onAddGuild: d } = e,
+        u = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("81404")]).then(n.bind(n, 560114));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
@@ -43,8 +43,8 @@ let u = (e) => {
                         (l = l =
                             {
                                 guild: t,
-                                source: o.t4x.HUB_DIRECTORY,
-                                analyticsLocation: { section: o.jXE.HUB_WELCOME_CTA },
+                                source: s.t4x.HUB_DIRECTORY,
+                                analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA },
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -74,28 +74,28 @@ let u = (e) => {
             (0, r.jsx)(l.X6q, {
                 className: c.emptyTitle,
                 variant: "heading-xl/semibold",
-                children: s.intl.format(s.t.vyvrpK, { guildName: t.name }),
+                children: o.intl.format(o.t.vyvrpK, { guildName: t.name }),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 className: c.emptySubtitle,
-                children: s.intl.string(s.t.WypE0t),
+                children: o.intl.string(o.t.WypE0t),
             }),
-            null != u
+            null != d
                 ? (0, r.jsx)(a.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
-                      header: s.intl.string(s.t.hyK15u),
+                      header: o.intl.string(o.t.hyK15u),
                       completed: !1,
-                      onClick: u,
+                      onClick: d,
                   })
                 : null,
             (0, r.jsx)(a.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
-                header: s.intl.string(s.t.L4bwJy),
+                header: o.intl.string(o.t.L4bwJy),
                 completed: !1,
-                onClick: d,
+                onClick: u,
             }),
         ],
     });

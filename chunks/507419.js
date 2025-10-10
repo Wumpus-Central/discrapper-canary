@@ -11,7 +11,7 @@ var a = t(951288),
     f = t(612926);
 let m = l.memo(function (e) {
     let { sound: n, volume: t, disabled: m } = e,
-        [h, g] = l.useState(!1),
+        [g, h] = l.useState(!1),
         p = l.useRef(null),
         { file: y, audio: b, loadAudioFromFile: v } = (0, s.p)(),
         x = l.useMemo(() => (0, r.Z)(n.soundId), [n]);
@@ -31,13 +31,13 @@ let m = l.memo(function (e) {
                                       ? ((b.volume = (0, o.Z)(t)),
                                         (b.currentTime = 0),
                                         b.play(),
-                                        g(!0),
-                                        b.addEventListener("ended", () => g(!1), { once: !0 }))
-                                      : (b.pause(), g(!1)));
+                                        h(!0),
+                                        b.addEventListener("ended", () => h(!1), { once: !0 }))
+                                      : (b.pause(), h(!1)));
                           },
                     className: f.playButton,
-                    "aria-label": h ? d.intl.string(d.t.hHBkuL) : d.intl.string(d.t.RscU7O),
-                    children: h
+                    "aria-label": g ? d.intl.string(d.t.hHBkuL) : d.intl.string(d.t.RscU7O),
+                    children: g
                         ? (0, a.jsx)(i.wNq, {
                               size: "xs",
                               color: "currentColor",

@@ -14,11 +14,11 @@ var r = n(951288),
     g = n(612226),
     m = n(951483),
     b = n(714338),
-    O = n(607070),
+    _ = n(607070),
     y = n(460181),
-    _ = n(585483),
-    j = n(264549),
-    v = n(981631),
+    O = n(585483),
+    v = n(264549),
+    j = n(981631),
     x = n(388032),
     C = n(870525);
 function E(e, t, n) {
@@ -40,26 +40,26 @@ let S = {
     LEFT: u().throttle(() => (0, y.GN)("ddr-left"), 100),
     RIGHT: u().throttle(() => (0, y.GN)("ddr-right"), 100),
 };
-function P(e) {
+function I(e) {
     switch (e.keyCode) {
-        case v.yXg.ARROW_UP:
+        case j.yXg.ARROW_UP:
             return "UP";
-        case v.yXg.ARROW_DOWN:
+        case j.yXg.ARROW_DOWN:
             return "DOWN";
-        case v.yXg.ARROW_LEFT:
+        case j.yXg.ARROW_LEFT:
             return "LEFT";
-        case v.yXg.ARROW_RIGHT:
+        case j.yXg.ARROW_RIGHT:
             return "RIGHT";
         default:
             return null;
     }
 }
-let I = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
+let P = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
 function N(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)("div", { className: o()(C.backdrop, { [C.show]: t }) });
 }
-function w() {
+function Z() {
     let e = i.useMemo(
         () =>
             u()((0, g.Rv)())
@@ -69,7 +69,7 @@ function w() {
     );
     return (0, r.jsx)("div", {
         className: C.keyboardShortcutList,
-        children: I.map((t) => {
+        children: P.map((t) => {
             let n = e[t],
                 i = (0, g.UD)(t),
                 l = (0, g.U6)(t);
@@ -137,17 +137,17 @@ function w() {
         }),
     });
 }
-class Z extends i.PureComponent {
+class w extends i.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []),
-            _.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            _.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            O.S.subscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            O.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.addEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.addEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        _.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            _.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        O.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            O.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.removeEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.removeEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
@@ -203,7 +203,7 @@ class Z extends i.PureComponent {
                 (0, r.jsx)(f.yWw, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(f.y5t, { children: (0, r.jsx)(w, {}) }),
+                    children: (0, r.jsx)(f.y5t, { children: (0, r.jsx)(Z, {}) }),
                 }),
             ],
         });
@@ -278,21 +278,21 @@ class Z extends i.PureComponent {
                 if (
                     (this.lastInputedKeys.push(e.keyCode),
                     (this.lastInputedKeys = this.lastInputedKeys.slice(-5)),
-                    this.lastInputedKeys[0] === v.yXg.H &&
-                        this.lastInputedKeys[1] === v.yXg.H &&
-                        this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT &&
-                        this.lastInputedKeys[3] === v.yXg.N &&
-                        this.lastInputedKeys[4] === v.yXg.K &&
+                    this.lastInputedKeys[0] === j.yXg.H &&
+                        this.lastInputedKeys[1] === j.yXg.H &&
+                        this.lastInputedKeys[2] === j.yXg.ARROW_RIGHT &&
+                        this.lastInputedKeys[3] === j.yXg.N &&
+                        this.lastInputedKeys[4] === j.yXg.K &&
                         this.props.activateRagingDemon(),
                     this.props.keyboardModeEnabled)
                 )
                     return;
-                let t = P(e);
+                let t = I(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             E(this, "handleKeyUp", (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = P(e);
+                let t = I(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             E(this, "onArrowClick", (e) => {
@@ -325,9 +325,9 @@ function A(e) {
         [l, a] = i.useState(!1),
         [s, c] = i.useState(!1),
         u = i.useMemo(() => (__OVERLAY__ ? (0, m.Zg)() : (0, g.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: y } = (0, p.cj)([O.Z], () => ({
-            keyboardModeEnabled: O.Z.keyboardModeEnabled,
-            useReducedMotion: O.Z.useReducedMotion,
+        { keyboardModeEnabled: d, useReducedMotion: y } = (0, p.cj)([_.Z], () => ({
+            keyboardModeEnabled: _.Z.keyboardModeEnabled,
+            useReducedMotion: _.Z.useReducedMotion,
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -342,7 +342,7 @@ function A(e) {
                     component: "div",
                     children: l
                         ? (0, r.jsx)(
-                              j.Z,
+                              v.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);
@@ -351,7 +351,7 @@ function A(e) {
                               "raging-demo",
                           )
                         : (0, r.jsx)(
-                              Z,
+                              w,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

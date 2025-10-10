@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
+n.d(e, { Z: () => s });
 var i = n(951288),
-    r = n(509613),
-    l = n(869235),
-    o = n(388032);
-let a = (0, r.ON)(l.t.HIGH_ACTIVITY_NOTIFICATIONS, {
-    render: () => (0, i.jsx)("div", { children: o.intl.string(o.t.D9yVAA) }),
-    useSearchTerms: () => [o.intl.string(o.t.D9yVAA)],
+    l = n(509613),
+    u = n(313789),
+    r = n(388032);
+let s = (0, l.ON)(u.n.HIGH_ACTIVITY_NOTIFICATIONS, {
+    render: () => (0, i.jsx)("div", { children: r.intl.string(r.t.D9yVAA) }),
+    useSearchTerms: () => [r.intl.string(r.t.D9yVAA)],
 });

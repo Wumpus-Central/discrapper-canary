@@ -8,22 +8,22 @@ var r = n(951288),
     c = n(481060),
     d = n(393238),
     u = n(607070),
-    m = n(596390),
-    g = n(180002);
+    g = n(596390),
+    m = n(180002);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { value: a, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: m } = e,
+    let { value: a, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: g } = e,
         [p, f, h] = i.useMemo(() => {
-            if (null == m) return [];
-            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = a.length } = null != m ? m : {},
+            if (null == g) return [];
+            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = a.length } = null != g ? g : {},
                 n = a.slice(0, e);
             return [n, a.slice(e, e + t), a.slice(e + t)];
-        }, [a, m]);
-    return null == m
+        }, [a, g]);
+    return null == g
         ? (0, r.jsx)("div", {
-              className: s()(g.chipletValue, {
-                  [g.isEditing]: d,
-                  [g.isSelected]: c,
+              className: s()(m.chipletValue, {
+                  [m.isEditing]: d,
+                  [m.isSelected]: c,
               }),
               ref: t,
               children: a,
@@ -32,14 +32,14 @@ let p = i.forwardRef(function (e, t) {
                 (null != (l = null == f ? void 0 : f.length) ? l : 0) >
             70
           ? (0, r.jsx)(o.u, {
-                "aria-label": m.message,
+                "aria-label": g.message,
                 __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
-                    "aria-label": m.message,
+                    "aria-label": g.message,
                     children: [
-                        m.message,
+                        g.message,
                         " ",
                         (0, r.jsx)("span", {
-                            className: g.errorOverflowValue,
+                            className: m.errorOverflowValue,
                             children: f,
                         }),
                     ],
@@ -48,15 +48,15 @@ let p = i.forwardRef(function (e, t) {
                 forceOpen: u || void 0,
                 children: (0, r.jsxs)("div", {
                     ref: t,
-                    className: s()(g.chipletValue, {
-                        [g.isEditing]: d,
-                        [g.isError]: null != m && !d,
-                        [g.isOverflowing]: null != m && !d,
+                    className: s()(m.chipletValue, {
+                        [m.isEditing]: d,
+                        [m.isError]: null != g && !d,
+                        [m.isOverflowing]: null != g && !d,
                     }),
                     children: [
                         (0, r.jsx)("span", { children: p }),
                         (0, r.jsx)("span", {
-                            className: g.errorValue,
+                            className: m.errorValue,
                             children: f,
                         }),
                         (0, r.jsx)("span", { children: h }),
@@ -65,18 +65,18 @@ let p = i.forwardRef(function (e, t) {
             })
           : (0, r.jsxs)("div", {
                 ref: t,
-                className: s()(g.chipletValue, {
-                    [g.isEditing]: d,
-                    [g.isError]: null != m && !d,
+                className: s()(m.chipletValue, {
+                    [m.isEditing]: d,
+                    [m.isError]: null != g && !d,
                 }),
                 children: [
                     (0, r.jsx)("span", { children: p }),
                     (0, r.jsx)(o.u, {
-                        text: m.message,
+                        text: g.message,
                         position: "top",
                         forceOpen: u || void 0,
                         children: (0, r.jsx)("span", {
-                            className: g.errorValue,
+                            className: m.errorValue,
                             children: f,
                         }),
                     }),
@@ -104,13 +104,13 @@ function f(e) {
         S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
-        R = N > I ? N : I;
+        Z = N > I ? N : I;
     i.useEffect(() => {
         j
             ? (P(!0),
               (w.current = setTimeout(() => {
                   P(!1), (w.current = null);
-              }, m.I5)))
+              }, g.I5)))
             : P(!1);
     }, [j]),
         i.useEffect(
@@ -119,7 +119,7 @@ function f(e) {
             },
             [],
         );
-    let Z = i.useCallback(
+    let R = i.useCallback(
             (e) => {
                 n(e.target.value);
             },
@@ -143,7 +143,7 @@ function f(e) {
         A = i.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
-                m.ye.has(e.key)
+                g.ye.has(e.key)
                     ? (e.preventDefault(), e.stopPropagation(), D(!0))
                     : "Backspace" === e.key && n && (e.preventDefault(), e.stopPropagation(), D(!0));
             },
@@ -163,15 +163,15 @@ function f(e) {
             [f],
         );
     return (0, r.jsx)("div", {
-        className: g.chipletFlexContainer,
+        className: m.chipletFlexContainer,
         children: (0, r.jsxs)("div", {
             ref: E,
-            className: s()(g.chipletContainer, {
-                [g.isEditing]: C,
-                [g.smallBlink]: !C && !S,
-                [g.isSelected]: h,
-                [g.isSelecting]: x,
-                [g.isError]: null != b && !C,
+            className: s()(m.chipletContainer, {
+                [m.isEditing]: C,
+                [m.smallBlink]: !C && !S,
+                [m.isSelected]: h,
+                [m.isSelecting]: x,
+                [m.isError]: null != b && !C,
             }),
             children: [
                 (0, r.jsxs)(c.P3F, {
@@ -181,22 +181,22 @@ function f(e) {
                     ignoreKeyPress: !0,
                     onMouseEnter: () => P(!0),
                     onMouseLeave: () => P(!1),
-                    className: s()(g.chipletContainerInner, {
-                        [g.isSelecting]: x,
-                        [g.isEditing]: C,
+                    className: s()(m.chipletContainerInner, {
+                        [m.isSelecting]: x,
+                        [m.isEditing]: C,
                     }),
                     ref: v,
                     children: [
                         (0, r.jsx)("input", {
-                            className: s()(g.chipletInput, {
-                                [g.isEditing]: C,
-                                [g.isSelecting]: x,
+                            className: s()(m.chipletInput, {
+                                [m.isEditing]: C,
+                                [m.isSelecting]: x,
                             }),
                             ref: _,
-                            onChange: Z,
+                            onChange: R,
                             onKeyDownCapture: A,
                             value: t,
-                            style: { width: R > 0 ? R : "calc(".concat(t.length, "ch + 10px)") },
+                            style: { width: Z > 0 ? Z : "calc(".concat(t.length, "ch + 10px)") },
                         }),
                         (0, r.jsx)(p, {
                             ref: y,
@@ -210,12 +210,12 @@ function f(e) {
                 }),
                 !C &&
                     (0, r.jsx)(c.P3F, {
-                        className: g.closeIconContainer,
+                        className: m.closeIconContainer,
                         onClick: k,
                         children: (0, r.jsx)(c.Dio, {
                             size: "xxs",
                             color: "currentColor",
-                            className: g.closeIcon,
+                            className: m.closeIcon,
                         }),
                     }),
             ],

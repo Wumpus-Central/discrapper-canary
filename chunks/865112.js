@@ -1,8 +1,8 @@
 n.d(t, {
-    RB: () => _,
-    VH: () => O,
-    Vi: () => j,
-    Vu: () => v,
+    RB: () => O,
+    VH: () => _,
+    Vi: () => v,
+    Vu: () => j,
     q7: () => y,
 });
 var r = n(692547),
@@ -20,7 +20,7 @@ var r = n(692547),
     g = n(549931),
     m = n(178561),
     b = n(39863);
-let O = {
+let _ = {
         MISSED_MESSAGES: f,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
@@ -58,8 +58,8 @@ let O = {
                 return "NOTIFICATION_CENTER";
         }
     },
-    _ = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
-    j = (e) => {
+    O = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
+    v = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {
@@ -99,7 +99,7 @@ let O = {
                 return null;
         }
     },
-    v = (e) => {
+    j = (e) => {
         switch (e.item_enum) {
             case i.AM.UPDATE_PROFILE:
                 return l.Y9;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -7,40 +7,40 @@ var r = n(951288),
     o = n(314852),
     c = n(434404),
     d = n(999382),
-    u = n(755032),
-    m = n(388032);
-function g() {
+    u = n(659854),
+    g = n(388032);
+function m() {
     let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         t = null == e ? void 0 : e.id,
         n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
-        g = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
+        m = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         p = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
         f = i.useMemo(
             () =>
                 (null == n ? void 0 : n.status) === 429
-                    ? m.intl.string(u.default["bFRS/v"])
+                    ? g.intl.string(u.default["bFRS/v"])
                     : null == n
                       ? void 0
                       : n.getAnyErrorMessage(),
             [n],
         ),
         h = i.useCallback(() => {
-            if (null == e || null == g) return;
+            if (null == e || null == m) return;
             let t = {
-                tag: g.tag,
-                badge: g.badge,
-                badgeColorPrimary: g.badgeColorPrimary,
-                badgeColorSecondary: g.badgeColorSecondary,
+                tag: m.tag,
+                badge: m.badge,
+                badgeColorPrimary: m.badgeColorPrimary,
+                badgeColorSecondary: m.badgeColorSecondary,
             };
             (0, a.pV)(e.id, t);
-        }, [e, g]),
-        b = i.useCallback(() => {
+        }, [e, m]),
+        x = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
     return (0, r.jsx)(s.Z, {
         submitting: p,
         errorMessage: f,
         onSave: h,
-        onReset: b,
+        onReset: x,
     });
 }

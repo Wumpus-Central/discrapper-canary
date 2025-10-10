@@ -1,4 +1,4 @@
-n.d(t, { r: () => h });
+n.d(t, { r: () => v });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -76,27 +76,27 @@ function j(e, t) {
     }
     return l;
 }
-let v = (e) => {
+let h = (e) => {
         let {
                 variantGroupProduct: t,
                 variant: n,
                 variantIndex: i,
                 totalVariants: d,
-                selectedVariantIndex: v,
-                onEnter: h,
+                selectedVariantIndex: h,
+                onEnter: v,
                 onLeave: x,
             } = e,
             { isPurchased: E } = (0, f.L)(n),
             P = (0, o.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(i)),
             { onFocus: _ } = P,
             C = j(P, ["onFocus"]),
-            A = l.useCallback(
+            S = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), _();
                 },
                 [_, t, i],
             ),
-            S = (0, b.SQ)(n);
+            A = (0, b.SQ)(n);
         return (0, r.jsx)(c.u, {
             asContainer: !0,
             text: y.intl.string(y.t["6cfuDg"]),
@@ -107,30 +107,30 @@ let v = (e) => {
                 g(O({}, C), {
                     tag: "li",
                     onMouseEnter: () => {
-                        h();
+                        v();
                     },
                     onMouseLeave: () => {
                         x();
                     },
                     onFocus: () => {
-                        h();
+                        v();
                     },
                     onBlur: () => {
                         x();
                     },
-                    onClick: A,
+                    onClick: S,
                     onKeyDown: (e) => {
-                        e.key === s.R8.ENTER && A(e);
+                        e.key === s.R8.ENTER && S(e);
                     },
                     className: m.thumbnailVariant,
                     children: (0, r.jsxs)("div", {
-                        className: a()(m.thumbnailImage, { [m.selected]: i === v }),
+                        className: a()(m.thumbnailImage, { [m.selected]: i === h }),
                         style: { zIndex: d - i },
                         children: [
-                            null != S &&
-                                "" !== S &&
+                            null != A &&
+                                "" !== A &&
                                 (0, r.jsx)("img", {
-                                    src: S,
+                                    src: A,
                                     alt: n.variantLabel,
                                     className: m.thumbnailImg,
                                     onError: (e) => {
@@ -149,7 +149,7 @@ let v = (e) => {
             ),
         });
     },
-    h = (e) => {
+    v = (e) => {
         var t, n;
         let {
                 variantGroupProduct: l,
@@ -160,10 +160,10 @@ let v = (e) => {
             } = e,
             b = c.previewingVariantIndex,
             y = null == (t = l.variants) ? void 0 : t[f],
-            h = null !== b ? (null == (n = l.variants) ? void 0 : n[b]) : void 0,
+            v = null !== b ? (null == (n = l.variants) ? void 0 : n[b]) : void 0,
             x = (0, d.Z)("shop-variants-group-".concat(l.storeListingId), s.hy.HORIZONTAL);
         if (null == y) return null;
-        let E = null != h ? h.variantLabel : null == y ? void 0 : y.variantLabel;
+        let E = null != v ? v.variantLabel : null == y ? void 0 : y.variantLabel;
         return (0, r.jsx)(o.bG, {
             navigator: x,
             children: (0, r.jsx)(o.SJ, {
@@ -183,7 +183,7 @@ let v = (e) => {
                                         className: m.variantsList,
                                         children: l.variants.map((e, t) =>
                                             (0, r.jsx)(
-                                                v,
+                                                h,
                                                 {
                                                     variantGroupProduct: l,
                                                     variant: e,

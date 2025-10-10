@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => o });
 var r = n(424706),
     a = n(14160),
     l = n(247123),
     i = n(207662);
-let u = {
+let o = {
     id: "alt-text",
     selector: 'img, [role="img"]',
     tags: ["wcag2a", "wcag111", "section508", "section508.22.a", "ACT"],

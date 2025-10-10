@@ -1,13 +1,13 @@
 n.d(t, { Z: () => c });
 var a = n(951288),
     r = n(647438),
-    l = n(164617),
-    i = n(793030),
+    i = n(164617),
+    l = n(793030),
     s = n(159691),
     o = n(481060);
 function c() {
-    let e = Object.keys(l).map((e) => (0, a.jsx)(d, { riveName: e }, e));
-    return (0, a.jsx)(i.Kqy, {
+    let e = Object.keys(i).map((e) => (0, a.jsx)(d, { riveName: e }, e));
+    return (0, a.jsx)(l.Kqy, {
         gap: 24,
         padding: 8,
         style: { boxSizing: "border-box" },
@@ -16,16 +16,16 @@ function c() {
 }
 function d(e) {
     let { riveName: t } = e,
-        n = l[t].riveSrc,
+        n = i[t].riveSrc,
         c = r.useRef(null),
         d = (0, o.o8M)(n);
     return (0, a.jsxs)(
-        i.Kqy,
+        l.Kqy,
         {
             gap: 8,
             children: [
                 (0, a.jsx)("label", { children: t }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(l.Kqy, {
                     justify: "space-between",
                     direction: "horizontal",
                     align: "center",

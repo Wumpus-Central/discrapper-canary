@@ -42,7 +42,7 @@ let f = 20,
                     ),
                 [n],
             ),
-            x = (0, u.Qs)({
+            L = (0, u.Qs)({
                 activeCategoryIndex: w,
                 isScrolling: N,
                 listRef: R,
@@ -50,9 +50,9 @@ let f = 20,
                 scrollOffset: f,
                 searchQuery: P,
             }),
-            L = i.useCallback(
+            x = i.useCallback(
                 (e) => {
-                    x(e),
+                    L(e),
                         p({
                             listRef: R,
                             searchQuery: P,
@@ -61,12 +61,12 @@ let f = 20,
                         }),
                         null == C || C(e);
                 },
-                [x, P, D, C],
+                [L, P, D, C],
             );
         return (
             i.useEffect(() => {
-                null != R.current && L(0);
-            }, [L, R]),
+                null != R.current && x(0);
+            }, [x, R]),
             (0, u.Xs)({
                 searchQuery: P,
                 activeCategoryIndex: w,
@@ -123,7 +123,7 @@ let f = 20,
                         : (0, r.jsx)(o.Z, {
                               role: "none presentation",
                               listPadding: _,
-                              onScroll: L,
+                              onScroll: x,
                               renderRow: h,
                               renderSection: m,
                               renderSectionHeader: g,

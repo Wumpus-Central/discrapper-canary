@@ -16,20 +16,20 @@ var r = n(951288),
     m = n(255269),
     g = n(937889),
     N = n(804063),
-    O = n(703656),
-    h = n(359110),
+    h = n(703656),
+    O = n(359110),
     f = n(695346),
     R = n(131704),
     S = n(592125),
-    p = n(430824),
-    C = n(496675),
+    C = n(430824),
+    p = n(496675),
     D = n(699516),
     L = n(944486),
     U = n(594174),
     M = n(607802),
-    b = n(101695),
+    x = n(101695),
     v = n(683101),
-    x = n(981631),
+    b = n(981631),
     P = n(388032),
     j = n(858283);
 function y(e) {
@@ -74,10 +74,10 @@ function G(e) {
             startIndex: E,
             resultRefs: d,
             totalResults: N,
-            scrollTo: O,
+            scrollTo: h,
             renderEmbeds: R,
             offset: M,
-            jumpToMessage: b,
+            jumpToMessage: x,
             listNavigator: P,
             favoriteSearch: G,
         } = e,
@@ -86,14 +86,14 @@ function G(e) {
         w = l.useCallback((e) => {
             if (e === L.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            null != t && (C.Z.can(x.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.Kh)(t.id);
+            null != t && (p.Z.can(b.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
         }, []),
         z = null != s ? (0, _.F6)(s, U.default, D.Z, !1) : "???",
-        V = G && null != s.guild_id ? (null == (t = p.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
+        V = G && null != s.guild_id ? (null == (t = C.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
         Z = (null == s ? void 0 : s.parent_id) != null ? S.Z.getChannel(s.parent_id) : null,
         B = null != (n = null == Z ? void 0 : Z.name) ? n : null,
         H = null != (i = (0, A.KS)(s)) ? i : u.VL1,
-        K = C.Z.can(x.Plq.MANAGE_MESSAGES, s),
+        K = p.Z.can(b.Plq.MANAGE_MESSAGES, s),
         { content: W } = (0, g.ZP)(
             {
                 content: z,
@@ -154,13 +154,13 @@ function G(e) {
                                 d.current[n] = e;
                             },
                             totalResults: N,
-                            scrollTo: O,
+                            scrollTo: h,
                             renderEmbeds: R,
                             searchOffset: M,
                             pageResultsLength: a.length,
                             message: e,
                             index: n,
-                            onJump: b,
+                            onJump: x,
                             listItemProps: P.getItemProps({ index: n }),
                         },
                         "search-result-".concat(n),
@@ -181,11 +181,11 @@ let k = l.memo(function (e) {
             ignoreCount: I,
             onPageChange: m,
             onClick: g,
-            paginationTotalCount: h,
+            paginationTotalCount: O,
             renderPageWrapper: f,
             onBlockedResultsClick: R,
-            searchRequestAnalyticsId: p,
-            searchResultsQuery: C,
+            searchRequestAnalyticsId: C,
+            searchResultsQuery: p,
             isFavoritesSearch: L,
         } = e,
         { offset: U, totalResults: v, isSearching: y, showBlockedResults: k } = s,
@@ -194,11 +194,11 @@ let k = l.memo(function (e) {
                 if ((null == g || g(e, t), (0, N.Z)(e))) {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
-                        (0, O.uL)(x.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: C }),
+                        (0, h.uL)(b.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [g, p],
+            [g, C],
         ),
         w = l.useMemo(() => {
             let e,
@@ -248,7 +248,7 @@ let k = l.memo(function (e) {
             setFocus: Z,
             onSelect: B,
         }),
-        K = (0, E.nC)(null != (t = (0, M.UP)(C)) ? t : ""),
+        K = (0, E.nC)(null != (t = (0, M.UP)(p)) ? t : ""),
         W = w.map((e) => {
             let { channel: t, messages: n, startIndex: l } = e;
             return (0, r.jsx)(
@@ -353,12 +353,12 @@ let k = l.memo(function (e) {
                 : null,
             !y &&
                 !L &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(x.Z, {
                     renderPageWrapper: f,
                     onPageChange: m,
                     offset: U,
-                    totalCount: null != h ? h : v,
-                    pageSize: x.vpv,
+                    totalCount: null != O ? O : v,
+                    pageSize: b.vpv,
                 }),
         ],
     });

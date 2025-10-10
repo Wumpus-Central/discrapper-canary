@@ -1,10 +1,10 @@
-n.d(e, {
-    QU: () => r,
+n.d(t, {
+    QU: () => a,
     _x: () => o,
 });
-var i = n(818083),
-    l = n(432919);
-let a = (0, i.B)({
+var l = n(818083),
+    i = n(432919);
+let r = (0, l.B)({
         kind: "user",
         id: "2025-06_desktop_notifications_view_tracking",
         label: "Track when a desktop notification is viewed",
@@ -17,13 +17,13 @@ let a = (0, i.B)({
             },
         ],
     }),
-    r = (t) => {
-        let { enabled: e } = a.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-        return e;
+    a = (e) => {
+        let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+        return t;
     },
-    o = (t, e) => {
-        if (null == e) return !1;
-        let n = (0, l.h)(e),
-            i = r(t);
-        return n && i;
+    o = (e, t) => {
+        if (null == t) return !1;
+        let n = (0, i.h)(t),
+            l = a(e);
+        return n && l;
     };

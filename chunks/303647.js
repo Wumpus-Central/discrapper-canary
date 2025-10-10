@@ -1,6 +1,6 @@
 a.d(e, { default: () => b }), a(388685), a(953529);
-var i = a(951288),
-    l = a(647438),
+var l = a(951288),
+    i = a(647438),
     n = a(793030),
     r = a(481060),
     s = a(479531),
@@ -10,53 +10,53 @@ var i = a(951288),
     d = a(960780);
 function b(t) {
     var e, a;
-    let { transitionState: b, onClose: g, entry: p } = t,
-        [h, m] = l.useState(null != (e = p.description) ? e : ""),
-        [I, _] = l.useState(null != (a = p.primaryCategoryId) ? a : c.AR.UNCATEGORIZED),
-        [f, x] = l.useState(!1),
-        [C, v] = l.useState(null),
+    let { transitionState: b, onClose: g, entry: h } = t,
+        [p, m] = i.useState(null != (e = h.description) ? e : ""),
+        [x, I] = i.useState(null != (a = h.primaryCategoryId) ? a : c.AR.UNCATEGORIZED),
+        [C, _] = i.useState(!1),
+        [f, v] = i.useState(null),
         y = async () => {
-            if ((v(null), h !== p.description || I !== p.primaryCategoryId)) {
-                x(!0);
+            if ((v(null), p !== h.description || x !== h.primaryCategoryId)) {
+                _(!0);
                 try {
-                    await (0, o.Dr)(p.channelId, p.guildId, h, I), x(!1), g();
+                    await (0, o.Dr)(h.channelId, h.guildId, p, x), _(!1), g();
                 } catch (t) {
-                    x(!1), v(new s.Z(t));
+                    _(!1), v(new s.Z(t));
                 }
             }
         };
-    return (0, i.jsx)(n.Modal, {
+    return (0, l.jsx)(n.Modal, {
         transitionState: b,
         "aria-label": u.intl.string(u.t.eQ2bLi),
         onClose: g,
-        title: u.intl.formatToPlainString(u.t.w9tsNj, { guildName: p.name }),
+        title: u.intl.formatToPlainString(u.t.w9tsNj, { guildName: h.name }),
         subtitle: u.intl.string(u.t["vEkX//"]),
         actions: [
             {
                 variant: "primary",
                 text: u.intl.string(u.t.R3BPHx),
                 onClick: y,
-                loading: f,
+                loading: C,
             },
         ],
-        children: (0, i.jsxs)("div", {
+        children: (0, l.jsxs)("div", {
             className: d.createGuild,
             children: [
-                (0, i.jsx)(r.Kx8, {
+                (0, l.jsx)(r.Kx8, {
                     label: u.intl.string(u.t.FFFAGh),
-                    value: h,
+                    value: p,
                     maxLength: 200,
                     placeholder: u.intl.string(u.t.VzuITE),
                     onChange: m,
-                    error: null == C ? void 0 : C.getAnyErrorMessage(),
+                    error: null == f ? void 0 : f.getAnyErrorMessage(),
                 }),
-                (0, i.jsx)(r.q4e, {
+                (0, l.jsx)(r.q4e, {
                     label: u.intl.string(u.t.Olo8FB),
                     placeholder: u.intl.string(u.t.XqMe3N),
-                    options: (0, c.b7)(p.channelId),
+                    options: (0, c.b7)(h.channelId),
                     clearable: !1,
-                    value: I,
-                    onChange: _,
+                    value: x,
+                    onChange: I,
                     maxVisibleItems: 4,
                 }),
             ],

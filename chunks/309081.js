@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -15,8 +15,8 @@ var r = n(951288),
     g = n(489887),
     j = n(185923),
     O = n(957825),
-    h = n(388032),
-    y = n(514271);
+    y = n(388032),
+    h = n(514271);
 function v(e, t) {
     if (null == e) return {};
     var n,
@@ -65,22 +65,22 @@ function P(e) {
 function w(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: a } = e;
     return (0, r.jsx)("div", {
-        className: y.menuContainer,
+        className: h.menuContainer,
         children: (0, r.jsx)(c.v2r, {
             navId: "poll-media-edit-menu",
             onClose: a,
-            "aria-label": h.intl.string(h.t["cV+h7O"]),
+            "aria-label": y.intl.string(y.t["cV+h7O"]),
             onSelect: t,
             children: (0, r.jsxs)(c.kSQ, {
                 children: [
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-replace",
-                        label: h.intl.string(h.t.CZeRhY),
+                        label: y.intl.string(y.t.CZeRhY),
                         action: n,
                     }),
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-delete",
-                        label: h.intl.string(h.t.IhMxgo),
+                        label: y.intl.string(y.t.IhMxgo),
                         action: l,
                         color: "danger",
                     }),
@@ -99,9 +99,9 @@ function x(e) {
             answerIndex: m,
             shouldShowEmojiPicker: g,
             toggleEmojiPicker: x,
-            containerRef: C,
+            containerRef: k,
         } = e,
-        k = l.useRef(null),
+        C = l.useRef(null),
         R = (0, o.e7)([f.Z], () => f.Z.getChannel(t)),
         {
             emoji: E,
@@ -121,23 +121,23 @@ function x(e) {
         L = l.useMemo(
             () =>
                 S
-                    ? h.intl.formatToPlainString(h.t.vcC7Qk, {
+                    ? y.intl.formatToPlainString(y.t.vcC7Qk, {
                           imageName: (0, p.fw)(A),
                           answerNumber: m + 1,
                       })
                     : null != E
-                      ? h.intl.formatToPlainString(h.t.ncOAhY, {
+                      ? y.intl.formatToPlainString(y.t.ncOAhY, {
                             emojiName: E.name,
                             answerNumber: m + 1,
                         })
-                      : h.intl.formatToPlainString(h.t.emdpNj, { answerNumber: m + 1 }),
+                      : y.intl.formatToPlainString(y.t.emdpNj, { answerNumber: m + 1 }),
             [S, E, m, A],
         ),
-        T = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)("div", {
-                    className: y.emojiPicker,
+                    className: h.emojiPicker,
                     children: (0, r.jsx)(u.Z, {
                         channel: R,
                         pickerIntention: j.Hz.POLLS,
@@ -152,7 +152,7 @@ function x(e) {
             },
             [R, s, m],
         ),
-        U = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(w, {
@@ -165,24 +165,24 @@ function x(e) {
             [N, x],
         ),
         Z = _
-            ? (0, r.jsx)(c.$jN, { className: y.spinnerWrapperDefault })
+            ? (0, r.jsx)(c.$jN, { className: h.spinnerWrapperDefault })
             : (0, r.jsx)(P, {
                   hasUpload: S,
                   mediaUrl: D,
                   mediaFilename: A,
-                  imageClassName: i()(y.media, y.gifDefault),
+                  imageClassName: i()(h.media, h.gifDefault),
                   emoji: E,
-                  emojiClassName: i()(y.media, y.emojiDefault),
+                  emojiClassName: i()(h.media, h.emojiDefault),
                   fallback: (0, r.jsx)(c.EO4, {
                       size: "sm",
                       color: "currentColor",
-                      className: y.expressionPickerIconDefault,
+                      className: h.expressionPickerIconDefault,
                   }),
               }),
-        B = i()(O.CT, y.expressionPickerButtonDefault, { [y.canEditMedia]: I });
+        B = i()(O.CT, h.expressionPickerButtonDefault, { [h.canEditMedia]: I });
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: C,
-        renderPopout: T,
+        targetElementRef: k,
+        renderPopout: U,
         shouldShow: g,
         onRequestClose: x,
         animation: c.yRy.Animation.NONE,
@@ -193,10 +193,10 @@ function x(e) {
             return (
                 v(e, ["aria-controls", "aria-expanded"]),
                 (0, r.jsx)(c.yRy, {
-                    targetElementRef: k,
+                    targetElementRef: C,
                     animation: c.yRy.Animation.NONE,
                     position: "bottom",
-                    renderPopout: U,
+                    renderPopout: T,
                     children: (e) => {
                         var l,
                             a,
@@ -228,7 +228,7 @@ function x(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: k }, u)),
+                            })({ innerRef: C }, u)),
                             (a = a =
                                 {
                                     className: B,
@@ -242,7 +242,7 @@ function x(e) {
                                             (0, r.jsx)(c.vdY, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: y.editIcon,
+                                                className: h.editIcon,
                                                 "aria-hidden": !0,
                                             }),
                                     ],
@@ -267,7 +267,7 @@ function x(e) {
         },
     });
 }
-function C(e) {
+function k(e) {
     let {
             channelId: t,
             answer: n,
@@ -281,23 +281,23 @@ function C(e) {
             addAnswer: b,
             submitPoll: j,
             error: O,
-            ref: y,
+            ref: h,
             answerRowRefs: v,
         } = e,
         P = l.useRef(null),
         w = l.useRef(null),
-        C = l.useRef(null);
-    l.useImperativeHandle(y, () => ({
+        k = l.useRef(null);
+    l.useImperativeHandle(h, () => ({
         focusDeleteButton: () => {
             var e;
             return null == (e = w.current) ? void 0 : e.focus();
         },
         focusInput: () => {
             var e;
-            return null == (e = C.current) ? void 0 : e.focus();
+            return null == (e = k.current) ? void 0 : e.focus();
         },
     }));
-    let [k, R] = l.useState(!1),
+    let [C, R] = l.useState(!1),
         E = l.useCallback(() => {
             R((e) => !e);
         }, []),
@@ -327,7 +327,7 @@ function C(e) {
             onEmojiRemove: u,
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: a,
-            shouldShowEmojiPicker: k,
+            shouldShowEmojiPicker: C,
             toggleEmojiPicker: E,
         });
     return (0, r.jsx)("div", {
@@ -340,14 +340,14 @@ function C(e) {
             },
             trailing: d
                 ? {
-                      "aria-label": h.intl.formatToPlainString(h.t["22fjER"], { answerNumber: a + 1 }),
+                      "aria-label": y.intl.formatToPlainString(y.t["22fjER"], { answerNumber: a + 1 }),
                       icon: c.XHJ,
                       onClick: () => f(a),
                       buttonRef: w,
                   }
                 : void 0,
-            "aria-label": h.intl.formatToPlainString(h.t["3+V8Gx"], { answerNumber: a + 1 }),
-            placeholder: h.intl.string(h.t.NNHVlp),
+            "aria-label": y.intl.formatToPlainString(y.t["3+V8Gx"], { answerNumber: a + 1 }),
+            placeholder: y.intl.string(y.t.NNHVlp),
             value: n.text,
             onChange: (e) =>
                 o({
@@ -357,7 +357,7 @@ function C(e) {
                 }),
             onKeyDown: _,
             maxLength: g.WA,
-            inputRef: C,
+            inputRef: k,
         }),
     });
 }

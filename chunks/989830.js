@@ -1,9 +1,9 @@
-i.d(t, { Z: () => a });
-var n = i(442837),
-    r = i(314897),
-    s = i(351780),
-    o = i(843693);
-function l(e, t) {
+n.d(t, { Z: () => s });
+var i = n(442837),
+    r = n(314897),
+    l = n(351780),
+    a = n(843693);
+function o(e, t) {
     return (
         e === t ||
         ((null == e ? void 0 : e.channelId) === (null == t ? void 0 : t.channelId) &&
@@ -11,7 +11,7 @@ function l(e, t) {
             (null == e ? void 0 : e.multiplier) === (null == t ? void 0 : t.multiplier))
     );
 }
-function a(e) {
-    let t = (0, n.e7)([s.Z], () => !!s.Z.isEnabled() && s.Z.combosEnabled);
-    return (0, n.e7)([o.ZP, r.default], () => (t ? o.ZP.getUserCombo(r.default.getId(), e) : void 0), [e, t], l);
+function s(e) {
+    let t = (0, i.e7)([l.Z], () => !!l.Z.isEnabled() && l.Z.combosEnabled);
+    return (0, i.e7)([a.ZP, r.default], () => (t ? a.ZP.getUserCombo(r.default.getId(), e) : void 0), [e, t], o);
 }

@@ -20,8 +20,8 @@ var r = n(951288),
     y = n(258609),
     _ = n(569545),
     j = n(102172),
-    O = n(728285),
-    x = n(352978),
+    x = n(728285),
+    O = n(352978),
     v = n(880395),
     C = n(670188),
     I = n(199902),
@@ -34,7 +34,7 @@ var r = n(951288),
     R = n(248400),
     w = n(981631),
     A = n(354459),
-    D = n(685046);
+    D = n(375767);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -146,7 +146,7 @@ let k = 16 / 9,
                 inPopout: h,
             } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
-            { id: g, blocked: b, ignored: O } = t,
+            { id: g, blocked: b, ignored: x } = t,
             v = (0, o.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
             { selectedParticipant: C, largeStream: E } = (0, o.cj)([m.Z], () => ({
                 selectedParticipant: null != l ? m.Z.getSelectedParticipant(l.id) : null,
@@ -174,9 +174,9 @@ let k = 16 / 9,
             {
                 participant: n,
                 aspectRatio: k,
-                fit: n.type === A.fO.USER ? x.L.COVER : void 0,
+                fit: n.type === A.fO.USER ? O.L.COVER : void 0,
                 blocked: b,
-                ignored: O,
+                ignored: x,
                 channel: l,
                 className: D.tile,
                 inCall: !0,
@@ -194,14 +194,14 @@ let k = 16 / 9,
         var t;
         let { participant: i, channel: l, width: c } = e,
             { newestAnalyticsLocation: d } = (0, f.ZP)(h.Z.STAGE_TILE),
-            p = (0, O.bp)(),
+            p = (0, x.bp)(),
             y = l.getGuildId(),
             _ = E.default.getId();
         a()(null != y, "Channel cannot be guildless");
         let { user: j } = i,
-            x = (0, o.e7)([m.Z], () => m.Z.getParticipant(l.id, i.id), [l.id, i.id]),
+            O = (0, o.e7)([m.Z], () => m.Z.getParticipant(l.id, i.id), [l.id, i.id]),
             C = (0, o.e7)([P.ZP], () => P.ZP.isModerator(j.id, l.id), [l.id, j.id]);
-        if (null == x || x.type === A.fO.ACTIVITY) return null;
+        if (null == O || O.type === A.fO.ACTIVITY) return null;
         let I = (e) => {
                 (0, g.h)({
                     type: s.ImpressionTypes.MENU,
@@ -261,7 +261,7 @@ let k = 16 / 9,
                                     n.e("98783"),
                                     n.e("8982"),
                                     n.e("7717"),
-                                    n.e("19848"),
+                                    n.e("52021"),
                                 ]).then(n.bind(n, 757387));
                                 return (t) =>
                                     (0, r.jsx)(
@@ -284,10 +284,10 @@ let k = 16 / 9,
                         );
                 }
             };
-        return x.type !== A.fO.USER || (null == (t = x.voiceState) ? void 0 : t.selfVideo)
+        return O.type !== A.fO.USER || (null == (t = O.voiceState) ? void 0 : t.selfVideo)
             ? (0, r.jsx)(G, {
                   stageParticipant: i,
-                  rtcParticipant: x,
+                  rtcParticipant: O,
                   channel: l,
                   guildId: y,
                   user: j,
@@ -298,7 +298,7 @@ let k = 16 / 9,
               })
             : (0, r.jsx)(U, {
                   stageParticipant: i,
-                  rtcParticipant: x,
+                  rtcParticipant: O,
                   channel: l,
                   guildId: y,
                   user: j,

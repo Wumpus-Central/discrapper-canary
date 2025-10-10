@@ -1,4 +1,4 @@
-n.d(t, { default: () => L }), n(388685);
+n.d(t, { default: () => M }), n(388685);
 var r,
     l = n(951288),
     i = n(647438),
@@ -30,7 +30,7 @@ var r,
     w = n(765305),
     k = n(981631),
     D = n(388032),
-    R = n(333050);
+    R = n(869939);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ var G =
     (r[(r.PREVIEW = 2)] = "PREVIEW"),
     (r[(r.SUCCESS = 3)] = "SUCCESS"),
     r);
-function M(e) {
+function U(e) {
     let { modal: t } = e,
         { createMultipleConfetti: n } = i.useContext(d.h);
     return (
@@ -129,7 +129,7 @@ function M(e) {
         null
     );
 }
-function U(e) {
+function L(e) {
     let {
             guildId: t,
             guildEvent: n,
@@ -173,7 +173,7 @@ function U(e) {
         k = (0, j.xt)(n),
         A = (e) => Math.max(0, Math.min(e, w - 1)),
         [_, z] = i.useState(+!!k),
-        [U, L] = i.useState(!1),
+        [L, M] = i.useState(!1),
         V = i.useMemo(
             () =>
                 Z.slice(0, _ + 1)
@@ -187,7 +187,7 @@ function U(e) {
     let W = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         q = i.useRef(null),
         B = (e) => {
-            L(!1), z(A(e));
+            M(!1), z(A(e));
         },
         Y = i.useRef(B);
     i.useEffect(() => {
@@ -212,7 +212,7 @@ function U(e) {
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !W && X ? (0, l.jsx)(M, { modal: q.current }) : null,
+                !W && X ? (0, l.jsx)(U, { modal: q.current }) : null,
                 (0, l.jsxs)(o.hzk, {
                     className: R.content,
                     scrollerRef: q,
@@ -230,7 +230,7 @@ function U(e) {
                             activeSlide: F,
                             width: 440,
                             onSlideReady: (e) => {
-                                L(e === F);
+                                M(e === F);
                             },
                             children: [
                                 (0, l.jsx)(o.Mi4, {
@@ -239,7 +239,7 @@ function U(e) {
                                         guildId: t,
                                         guildEvent: n,
                                         validationErrorMessage: d.entity,
-                                        isSlideReady: U,
+                                        isSlideReady: L,
                                         onChange: p,
                                     }),
                                 }),
@@ -252,7 +252,7 @@ function U(e) {
                                         onChange: p,
                                         error: v,
                                         validationErrorMessage: d.schedule,
-                                        isSlideReady: U,
+                                        isSlideReady: L,
                                     }),
                                 }),
                                 (0, l.jsx)(o.Mi4, {
@@ -317,7 +317,7 @@ function U(e) {
         })
     );
 }
-function L(e) {
+function M(e) {
     let { guildId: t, guildScheduledEventId: r, transitionState: a, onClose: u } = e;
     (0, s.e7)([h.Z], () => h.Z.getGuild(t));
     let d = (0, s.e7)([j.ZP], () => j.ZP.getGuildScheduledEvent(r), [r]),
@@ -349,13 +349,13 @@ function L(e) {
                 e
             );
         }),
-        M = i.useMemo(() => (0, Z.Z)(v, P), [v, P]);
-    return (0, l.jsx)(U, {
+        U = i.useMemo(() => (0, Z.Z)(v, P), [v, P]);
+    return (0, l.jsx)(L, {
         guildId: t,
         guildEvent: v,
         guildEventId: r,
         isEdit: P,
-        formErrors: M,
+        formErrors: U,
         transitionState: a,
         loading: R,
         error: G,

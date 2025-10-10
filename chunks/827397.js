@@ -1,32 +1,32 @@
-r.d(t, { Z: () => a });
-var n = r(647438),
-    o = r(494497),
-    i = r(481060),
-    l = r(434404),
-    u = r(535396),
-    s = r(981631);
-function a(e, t) {
-    let r = n.useCallback(
-        (r) => {
-            if ((r.stopPropagation(), t.type !== u.Us.LEVEL))
-                switch (((0, i.Mr3)(u.H2), t.skuId)) {
-                    case o.IN:
-                        l.Z.open(e, s.pNK.TAG, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+n.d(t, { Z: () => c });
+var r = n(647438),
+    i = n(494497),
+    l = n(481060),
+    o = n(434404),
+    a = n(535396),
+    s = n(981631);
+function c(e, t) {
+    let n = r.useCallback(
+        (n) => {
+            if ((n.stopPropagation(), t.type !== a.Us.LEVEL))
+                switch (((0, l.Mr3)(a.H2), t.skuId)) {
+                    case i.IN:
+                        o.Z.open(e, s.pNK.TAG, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case o.If:
-                        l.Z.open(e, s.pNK.ROLES, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case i.If:
+                        o.Z.open(e, s.pNK.ROLES, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case o.A$:
-                        l.Z.open(
+                    case i.A$:
+                        o.Z.open(
                             e,
                             s.pNK.BOOST_PERKS,
                             s.jXE.GUILD_POWERUPS_OVERVIEW_CARD,
                             s.KsC.BOOST_PERKS_VANITY_URL,
                         );
                         return;
-                    case o.Vk:
-                    case o.MB:
-                        (0, i.pTH)(), l.Z.open(e, s.pNK.TAG, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case i.Vk:
+                    case i.MB:
+                        (0, l.pTH)(), o.Z.open(e, s.pNK.TAG, s.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:
                         return;
@@ -34,5 +34,5 @@ function a(e, t) {
         },
         [e, t],
     );
-    return t.type === u.Us.PERK ? r : void 0;
+    return t.type === a.Us.PERK ? n : void 0;
 }

@@ -1,56 +1,56 @@
-n.d(t, { q: () => c }), n(388685);
-var r = n(647438),
-    a = n(626135),
-    o = n(323321),
+n.d(e, { q: () => u }), n(388685);
+var a = n(647438),
+    r = n(626135),
+    i = n(323321),
     l = n(45474),
-    u = n(981631);
-let c = (e, t, n) => {
-    let [c, i] = r.useState(e),
-        [s, _] = r.useState(Date.now()),
-        [f] = r.useState(Date.now()),
-        O = r.useCallback(
-            (e) => {
-                a.default.track(
-                    u.rMx.CANCELLATION_FLOW_STEP,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+    s = n(981631);
+let u = (t, e, n) => {
+    let [u, o] = a.useState(t),
+        [c, d] = a.useState(Date.now()),
+        [m] = a.useState(Date.now()),
+        O = a.useCallback(
+            (t) => {
+                r.default.track(
+                    s.rMx.CANCELLATION_FLOW_STEP,
+                    (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
+                                a = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                (a = a.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                a.forEach(function (e) {
+                                    var a;
+                                    (a = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
+                                                  value: a,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (t[e] = a);
                                 });
                         }
-                        return e;
+                        return t;
                     })(
                         {
-                            from_step: l.O[c],
-                            to_step: l.O[e],
-                            step_duration_ms: Date.now() - s,
-                            flow_duration_ms: Date.now() - f,
+                            from_step: l.O[u],
+                            to_step: l.O[t],
+                            step_duration_ms: Date.now() - c,
+                            flow_duration_ms: Date.now() - m,
                             location_stack: n,
                         },
-                        (0, o.v)(t),
+                        (0, i.v)(e),
                     ),
                 ),
-                    i(e),
-                    _(Date.now());
+                    o(t),
+                    d(Date.now());
             },
-            [n, f, s, c, t],
+            [n, m, c, u, e],
         );
-    return [c, O, s, f];
+    return [u, O, c, m];
 };

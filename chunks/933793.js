@@ -1,39 +1,39 @@
-i.d(n, { Z: () => Z });
-var e = i(951288);
-i(647438);
-var l = i(442837),
-    r = i(481060),
-    a = i(240872),
-    d = i(456269),
-    o = i(346479),
-    s = i(665906),
-    u = i(592125),
-    c = i(176505),
-    h = i(388032);
-function Z(t) {
-    let n = (0, l.e7)([u.Z], () => u.Z.getChannel(t.parent_id)),
-        i = (0, s.Xb)(t),
-        Z = (0, d.kF)(t);
-    return (null == n ? void 0 : n.isForumLikeChannel()) && i
+e.d(n, { Z: () => h });
+var i = e(951288);
+e(647438);
+var a = e(442837),
+    l = e(481060),
+    r = e(240872),
+    o = e(456269),
+    s = e(346479),
+    d = e(665906),
+    u = e(592125),
+    c = e(176505),
+    f = e(388032);
+function h(t) {
+    let n = (0, a.e7)([u.Z], () => u.Z.getChannel(t.parent_id)),
+        e = (0, d.Xb)(t),
+        h = (0, o.kF)(t);
+    return (null == n ? void 0 : n.isForumLikeChannel()) && e
         ? t.hasFlag(c.zZ.PINNED)
-            ? (0, e.jsx)(r.sNh, {
+            ? (0, i.jsx)(l.sNh, {
                   id: "unpin-thread",
-                  label: h.intl.string(h.t.trD8am),
-                  action: () => o.Z.unpin(t),
+                  label: f.intl.string(f.t.trD8am),
+                  action: () => s.Z.unpin(t),
               })
-            : (0, e.jsx)(r.sNh, {
+            : (0, i.jsx)(l.sNh, {
                   id: "pin-thread",
-                  label: h.intl.string(h.t.EnaWho),
+                  label: f.intl.string(f.t.EnaWho),
                   action: function () {
-                      null != Z
-                          ? a.Z.show({
-                                title: h.intl.string(h.t.IMbjxs),
-                                body: h.intl.string(h.t["mi5+Vl"]),
+                      null != h
+                          ? r.Z.show({
+                                title: f.intl.string(f.t.IMbjxs),
+                                body: f.intl.string(f.t["mi5+Vl"]),
                                 onConfirm: async () => {
-                                    await o.Z.unpin(Z), o.Z.pin(t);
+                                    await s.Z.unpin(h), s.Z.pin(t);
                                 },
                             })
-                          : o.Z.pin(t);
+                          : s.Z.pin(t);
                   },
               })
         : null;

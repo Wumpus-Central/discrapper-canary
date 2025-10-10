@@ -145,7 +145,7 @@ function A(e) {
             },
             [v],
         ),
-        { items: j } = (0,
+        { items: M } = (0,
         {
             [b.Sap.EMPTY]: () => {
                 let e = [];
@@ -400,10 +400,10 @@ function A(e) {
                 return { items: [...t] };
             },
         }[R.type])(),
-        M = i.useMemo(() => {
+        j = i.useMemo(() => {
             let e = [];
             return (
-                j.forEach((t) => {
+                M.forEach((t) => {
                     switch (t.type) {
                         case f.i.ROW:
                             e.push(t);
@@ -414,9 +414,9 @@ function A(e) {
                 }),
                 e
             );
-        }, [j]);
+        }, [M]);
     return {
-        items: j,
-        itemsData: M,
+        items: M,
+        itemsData: j,
     };
 }

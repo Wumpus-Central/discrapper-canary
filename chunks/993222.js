@@ -30,16 +30,16 @@ let m = (e) => {
                 tab: g,
                 hasDiscountOffer: null != x,
             }),
-            T = (0, u.Yq)(t.skuId),
-            y = (null == E ? void 0 : E.skuId) === C.bu && (0, u.WW)(t.skuId);
-        return b || m || !T
+            y = (0, u.Yq)(t.skuId),
+            T = (null == E ? void 0 : E.skuId) === C.bu && (0, u.WW)(t.skuId);
+        return b || m || !y
             ? O
                 ? (0, r.jsx)(s.IGR, {
                       text: h.intl.string(h.t["0TmQRE"]),
                       disableColor: !0,
                       className: _.productCardBadge,
                   })
-                : y
+                : T
                   ? (0, r.jsx)(s.IGR, {
                         text: h.intl.string(h.t.S6kE9v),
                         disableColor: !0,

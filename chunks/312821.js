@@ -1,46 +1,46 @@
-n.d(t, { U: () => a });
-var r = n(219384),
-    i = n(665764);
-function o(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+e.d(n, { U: () => a });
+var r = e(219384),
+    o = e(665764);
+function i(t, n) {
+    (null == n || n > t.length) && (n = t.length);
+    for (var e = 0, r = Array(n); e < n; e++) r[e] = t[e];
     return r;
 }
-function a(e, t, n) {
+function a(t, n, e) {
     var a,
         u =
-            (function (e) {
-                if (Array.isArray(e)) return e;
-            })((a = (0, i.r)(e, t, n))) ||
-            (function (e, t) {
-                var n,
+            (function (t) {
+                if (Array.isArray(t)) return t;
+            })((a = (0, o.r)(t, n, e))) ||
+            (function (t, n) {
+                var e,
                     r,
-                    i = null == e ? null : ("undefined" != typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
-                if (null != i) {
-                    var o = [],
+                    o = null == t ? null : ("undefined" != typeof Symbol && t[Symbol.iterator]) || t["@@iterator"];
+                if (null != o) {
+                    var i = [],
                         a = !0,
                         u = !1;
                     try {
-                        for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), o.length !== t); a = !0);
-                    } catch (e) {
-                        (u = !0), (r = e);
+                        for (o = o.call(t); !(a = (e = o.next()).done) && (i.push(e.value), i.length !== n); a = !0);
+                    } catch (t) {
+                        (u = !0), (r = t);
                     } finally {
                         try {
-                            a || null == i.return || i.return();
+                            a || null == o.return || o.return();
                         } finally {
                             if (u) throw r;
                         }
                     }
-                    return o;
+                    return i;
                 }
             })(a, 2) ||
-            (function (e, t) {
-                if (e) {
-                    if ("string" == typeof e) return o(e, 2);
-                    var n = Object.prototype.toString.call(e).slice(8, -1);
-                    if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
-                        return Array.from(e);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(e, t);
+            (function (t, n) {
+                if (t) {
+                    if ("string" == typeof t) return i(t, 2);
+                    var e = Object.prototype.toString.call(t).slice(8, -1);
+                    if (("Object" === e && t.constructor && (e = t.constructor.name), "Map" === e || "Set" === e))
+                        return Array.from(t);
+                    if ("Arguments" === e || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)) return i(t, n);
                 }
             })(a, 2) ||
             (function () {
@@ -49,14 +49,14 @@ function a(e, t, n) {
                 );
             })(),
         c = u[0],
-        s = u[1];
+        l = u[1];
     return (
         (0, r.L)(
             function () {
-                var t = e.getHandlerId();
-                if (null != t) return e.subscribeToStateChange(s, { handlerIds: [t] });
+                var n = t.getHandlerId();
+                if (null != n) return t.subscribeToStateChange(l, { handlerIds: [n] });
             },
-            [e, s],
+            [t, l],
         ),
         c
     );

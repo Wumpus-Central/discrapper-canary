@@ -122,22 +122,22 @@ function w(e) {
 function D(e) {
     (I = {}), O.clear(), e.guilds.forEach(N);
 }
-function x(e) {
+function L(e) {
     let { threadMessages: t } = e;
     for (let e in (v = E({}, t))) {
         let n = t[e].mostRecentMessage;
         null != n && (t[e].mostRecentMessage = new u.ZP(y(E({}, n), { author: new d.Z(n.author) })));
     }
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     N(t);
 }
-function j(e) {
+function M(e) {
     let { guild: t } = e;
     T(t.id);
 }
-function M(e) {
+function j(e) {
     let { channel: t } = e;
     P(t);
 }
@@ -178,16 +178,16 @@ function Z(e) {
     let { channel: t } = e;
     delete v[t.id];
 }
-function V(e) {
+function F(e) {
     let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
     if (n || r || null != i) return !1;
     let a = f.Z.getChannel(t.channel_id);
-    if (null == a || !c.Ec.has(a.type) || !F(a, t)) return !1;
+    if (null == a || !c.Ec.has(a.type) || !V(a, t)) return !1;
     A(a, (e) => {
         (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
     });
 }
-function F(e, t) {
+function V(e, t) {
     return !(
         t.type === m.uaV.THREAD_STARTER_MESSAGE ||
         (e.isForumPost() && t.id === p.default.castChannelIdAsMessageId(e.id))
@@ -295,11 +295,11 @@ class q extends (r = o.ZP.Store) {
 g(q, "displayName", "ThreadMessageStore");
 let X = new q(s.Z, {
     CONNECTION_OPEN: D,
-    OVERLAY_INITIALIZE: x,
-    GUILD_CREATE: L,
-    GUILD_DELETE: j,
-    THREAD_CREATE: M,
-    THREAD_UPDATE: M,
+    OVERLAY_INITIALIZE: L,
+    GUILD_CREATE: x,
+    GUILD_DELETE: M,
+    THREAD_CREATE: j,
+    THREAD_UPDATE: j,
     THREAD_LIST_SYNC: k,
     LOAD_THREADS_SUCCESS: U,
     LOAD_ARCHIVED_THREADS_SUCCESS: U,
@@ -310,7 +310,7 @@ let X = new q(s.Z, {
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: G,
     THREAD_DELETE: Z,
     CHANNEL_DELETE: B,
-    MESSAGE_CREATE: V,
+    MESSAGE_CREATE: F,
     MESSAGE_UPDATE: H,
     MESSAGE_DELETE: Y,
     MESSAGE_DELETE_BULK: W,

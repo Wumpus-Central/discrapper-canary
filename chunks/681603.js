@@ -1,23 +1,23 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => x });
 var i = n(647438),
     r = n(149765),
-    o = n(442837),
-    l = n(367907),
-    a = n(731429),
-    s = n(188471),
+    s = n(442837),
+    o = n(367907),
+    l = n(731429),
+    a = n(188471),
     c = n(318885),
-    u = n(592125),
-    d = n(984933),
+    d = n(592125),
+    u = n(984933),
     p = n(271383),
-    f = n(430824),
-    h = n(496675),
-    m = n(944486),
-    g = n(914010),
+    h = n(430824),
+    f = n(496675),
+    g = n(944486),
+    m = n(914010),
     y = n(594174),
-    O = n(237997),
-    b = n(145597),
-    v = n(981631);
-function E(e) {
+    _ = n(237997),
+    O = n(145597),
+    b = n(981631);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-class _ extends i.Component {
+class E extends i.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
         let {
@@ -50,13 +50,13 @@ class _ extends i.Component {
             selectedChannel: n,
             isMemberPending: i,
             hasPreviewEnabled: r,
-            postableChannelCount: o,
+            postableChannelCount: s,
         } = this.props;
         if (null != t && (t !== e.selectedGuild || (i && !e.isMemberPending))) {
-            var d, p;
+            var u, p;
             (0, c.Q)(
-                v.rMx.GUILD_VIEWED,
-                ((d = E(
+                b.rMx.GUILD_VIEWED,
+                ((u = v(
                     {},
                     i
                         ? {
@@ -65,9 +65,9 @@ class _ extends i.Component {
                           }
                         : {},
                 )),
-                (p = p = { postable_channels: o }),
+                (p = p = { postable_channels: s }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
+                    ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(p))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -76,43 +76,43 @@ class _ extends i.Component {
                           }
                           return n;
                       })(Object(p)).forEach(function (e) {
-                          Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
+                          Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(p, e));
                       }),
-                d),
+                u),
             ),
-                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
+                (0, a.a)(b.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
         }
         if (null != n && n !== e.selectedChannel) {
-            let e = (0, a.K)(u.Z.getChannel(n), !0);
-            (0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))),
-                (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
+            let e = (0, l.K)(d.Z.getChannel(n), !0);
+            (0, c.Q)(b.rMx.CHANNEL_OPENED, v({}, e, (0, o.$H)(n))),
+                (0, a.a)(b.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
         }
     }
     render() {
         return null;
     }
 }
-let S = o.ZP.connectStores([g.Z, m.Z, f.Z, y.default, O.default, d.ZP, h.Z, p.ZP], () => {
+let x = s.ZP.connectStores([m.Z, g.Z, h.Z, y.default, _.default, u.ZP, f.Z, p.ZP], () => {
     var e, t, n;
-    let i = g.Z.getGuildId(),
-        o = m.Z.getChannelId(i),
-        l = f.Z.getGuild(i),
-        a = y.default.getCurrentUser(),
-        s = null != (t = d.ZP.getChannels(null == l ? void 0 : l.id)[d.sH]) ? t : [],
+    let i = m.Z.getGuildId(),
+        s = g.Z.getChannelId(i),
+        o = h.Z.getGuild(i),
+        l = y.default.getCurrentUser(),
+        a = null != (t = u.ZP.getChannels(null == o ? void 0 : o.id)[u.sH]) ? t : [],
         c =
-            s.length > 0
-                ? s.filter((e) => {
+            a.length > 0
+                ? a.filter((e) => {
                       let { channel: t } = e;
-                      return h.Z.can(r.$e(v.Plq.SEND_MESSAGES, v.Plq.VIEW_CHANNEL), t);
+                      return f.Z.can(r.$e(b.Plq.SEND_MESSAGES, b.Plq.VIEW_CHANNEL), t);
                   }).length
                 : 0,
-        u = null != a && null != i && null != (n = null == (e = p.ZP.getMember(i, a.id)) ? void 0 : e.isPending) && n;
+        d = null != l && null != i && null != (n = null == (e = p.ZP.getMember(i, l.id)) ? void 0 : e.isPending) && n;
     return {
         selectedGuild: i,
-        selectedChannel: o,
-        locked: O.default.isLocked((0, b.getPID)()),
-        hasPreviewEnabled: null == l ? void 0 : l.features.has(v.oNc.PREVIEW_ENABLED),
-        isMemberPending: u,
+        selectedChannel: s,
+        locked: _.default.isLocked((0, O.getPID)()),
+        hasPreviewEnabled: null == o ? void 0 : o.features.has(b.oNc.PREVIEW_ENABLED),
+        isMemberPending: d,
         postableChannelCount: c,
     };
-})(_);
+})(E);

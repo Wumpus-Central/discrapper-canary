@@ -2,20 +2,20 @@ n.d(t, { P: () => d });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(601964),
+    s = n(481060),
+    a = n(601964),
     o = n(594174),
     c = n(981631);
 function d(e) {
     let t = (null == e ? void 0 : e.features.has(c.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
         d = (null == e ? void 0 : e.features.has(c.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
         u = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        m = null != e && (0, s.eM)(e, u);
+        g = null != e && (0, a.eM)(e, u);
     i.useEffect(() => {
         null != e &&
             t &&
-            m &&
-            (0, a.ZDy)(async () => {
+            g &&
+            (0, s.ZDy)(async () => {
                 let { default: t } = await n.e("710").then(n.bind(n, 32342));
                 return (n) => {
                     var i, l;
@@ -67,5 +67,5 @@ function d(e) {
                     );
                 };
             });
-    }, [t, d, e, m]);
+    }, [t, d, e, g]);
 }

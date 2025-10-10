@@ -28,17 +28,17 @@ var r = n(687249),
     P = "[object Date]",
     w = "[object Error]",
     D = "[object Function]",
-    x = "[object GeneratorFunction]",
-    L = "[object Map]",
-    j = "[object Number]",
-    M = "[object Object]",
+    L = "[object GeneratorFunction]",
+    x = "[object Map]",
+    M = "[object Number]",
+    j = "[object Object]",
     k = "[object RegExp]",
     U = "[object Set]",
     G = "[object String]",
     B = "[object Symbol]",
     Z = "[object WeakMap]",
-    V = "[object ArrayBuffer]",
-    F = "[object DataView]",
+    F = "[object ArrayBuffer]",
+    V = "[object DataView]",
     H = "[object Float32Array]",
     Y = "[object Float64Array]",
     W = "[object Int8Array]",
@@ -51,23 +51,23 @@ var r = n(687249),
     $ = {};
 function ee(e, t, n, N, R, P) {
     var w,
-        L = t & T,
-        j = t & S,
+        x = t & T,
+        M = t & S,
         k = t & A;
     if ((n && (w = R ? n(e, N, R, P) : n(e)), void 0 !== w)) return w;
     if (!O(e)) return e;
     var U = E(e);
     if (U) {
-        if (((w = h(e)), !L)) return c(e, w);
+        if (((w = h(e)), !x)) return c(e, w);
     } else {
         var G = p(e),
-            B = G == D || G == x;
-        if (b(e)) return l(e, L);
-        if (G == M || G == C || (B && !R)) {
-            if (((w = j || B ? {} : g(e)), !L)) return j ? d(e, s(w, e)) : u(e, o(w, e));
+            B = G == D || G == L;
+        if (b(e)) return l(e, x);
+        if (G == j || G == C || (B && !R)) {
+            if (((w = M || B ? {} : g(e)), !x)) return M ? d(e, s(w, e)) : u(e, o(w, e));
         } else {
             if (!$[G]) return R ? e : {};
-            w = m(e, G, L);
+            w = m(e, G, x);
         }
     }
     P || (P = new r());
@@ -82,19 +82,19 @@ function ee(e, t, n, N, R, P) {
               e.forEach(function (r, i) {
                   w.set(i, ee(r, t, n, i, e, P));
               });
-    var V = k ? (j ? _ : f) : j ? keysIn : I,
-        F = U ? void 0 : V(e);
+    var F = k ? (M ? _ : f) : M ? keysIn : I,
+        V = U ? void 0 : F(e);
     return (
-        i(F || e, function (r, i) {
-            F && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
+        i(V || e, function (r, i) {
+            V && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
         }),
         w
     );
 }
 ($[C] =
     $[N] =
-    $[V] =
     $[F] =
+    $[V] =
     $[R] =
     $[P] =
     $[H] =
@@ -102,9 +102,9 @@ function ee(e, t, n, N, R, P) {
     $[W] =
     $[K] =
     $[z] =
-    $[L] =
-    $[j] =
+    $[x] =
     $[M] =
+    $[j] =
     $[k] =
     $[U] =
     $[G] =

@@ -1,96 +1,96 @@
 n.d(t, {
-    V9: () => g,
-    ek: () => m,
+    V9: () => b,
+    ek: () => f,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+var a = n(951288),
+    r = n(647438),
+    i = n(120356),
+    l = n.n(i),
     s = n(351773),
-    l = n(507808),
+    o = n(507808),
     c = n(790542),
-    u = n(317257),
-    d = n(120786),
-    f = n(82856),
-    _ = n(981631),
-    p = n(388032),
-    h = n(152935);
-let m = {
-        START: h.alignLeft,
-        END: h.alignRight,
+    d = n(317257),
+    u = n(120786),
+    m = n(82856),
+    p = n(981631),
+    h = n(388032),
+    x = n(152935);
+let f = {
+        START: x.alignLeft,
+        END: x.alignRight,
     },
-    g = (e) => {
+    b = (e) => {
         let {
                 showNotificationBadge: t,
                 ctaText: n,
-                ctaOnClick: o,
-                anchorPillType: g,
-                analyticsPage: E,
-                linkText: b = p.intl.string(p.t.XRdyj4),
-                cardAlignment: y = m.START,
-                className: O,
+                ctaOnClick: i,
+                anchorPillType: b,
+                analyticsPage: g,
+                linkText: v = h.intl.string(h.t.XRdyj4),
+                cardAlignment: j = f.START,
+                className: _,
             } = e,
-            { balance: v } = (0, c.A)(),
-            [I, T] = i.useState(u.b.DEFAULT),
-            [S, A] = i.useState(!1),
-            [C, N] = i.useState(!1),
-            R = i.useRef(null),
-            P = i.useCallback(() => {
+            { balance: y } = (0, c.A)(),
+            [C, E] = r.useState(d.b.DEFAULT),
+            [S, T] = r.useState(!1),
+            [O, N] = r.useState(!1),
+            P = r.useRef(null),
+            I = r.useCallback(() => {
                 let e = !S;
                 e &&
-                    null != E &&
-                    (0, l.Y)({
-                        pageType: E,
-                        sectionType: _.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: _.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    null != g &&
+                    (0, o.Y)({
+                        pageType: g,
+                        sectionType: p.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    T(e ? u.b.SELECTED : u.b.DEFAULT),
-                    A(e);
-            }, [S, E]),
-            w = i.useCallback(() => {
-                S && P();
-            }, [S, P]),
-            D = (0, s.Z)(null, w),
-            x = i.useMemo(
+                    E(e ? d.b.SELECTED : d.b.DEFAULT),
+                    T(e);
+            }, [S, g]),
+            k = r.useCallback(() => {
+                S && I();
+            }, [S, I]),
+            w = (0, s.Z)(null, k),
+            R = r.useMemo(
                 () =>
-                    (0, r.jsx)(d.L, {
-                        analyticsPage: E,
+                    (0, a.jsx)(u.L, {
+                        analyticsPage: g,
                         ctaText: n,
                         ctaOnClick: () => {
-                            P(), o();
+                            I(), i();
                         },
-                        linkText: b,
+                        linkText: v,
                     }),
-                [E, n, b, P, o],
+                [g, n, v, I, i],
             );
-        return (0, r.jsxs)("div", {
-            className: a()(h.container, O, {
-                [h.hidden]: C,
-                [h.visible]: !C,
+        return (0, a.jsxs)("div", {
+            className: l()(x.container, _, {
+                [x.hidden]: O,
+                [x.visible]: !O,
             }),
             children: [
-                (0, r.jsx)(f.y, {
-                    pillRef: R,
-                    anchorPillType: g,
-                    balance: v,
-                    balanceWidgetMode: I,
+                (0, a.jsx)(m.y, {
+                    pillRef: P,
+                    anchorPillType: b,
+                    balance: y,
+                    balanceWidgetMode: C,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: P,
+                    onClick: I,
                     showNotificationBadge: t,
                 }),
                 S &&
-                    (0, r.jsx)("div", {
-                        className: a()(h.cardContainer, y, {
-                            [h.hidden]: C,
-                            [h.visible]: !C,
+                    (0, a.jsx)("div", {
+                        className: l()(x.cardContainer, j, {
+                            [x.hidden]: O,
+                            [x.visible]: !O,
                         }),
-                        ref: D,
-                        children: x,
+                        ref: w,
+                        children: R,
                     }),
             ],
         });
     };
-g.CardAlignment = m;
+b.CardAlignment = f;

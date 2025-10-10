@@ -3,7 +3,7 @@ n.d(t, {
     UB: () => D,
     Uc: () => I,
     ZP: () => H,
-    kE: () => x,
+    kE: () => L,
 });
 var i,
     a = n(647438),
@@ -78,7 +78,7 @@ function D() {
         [],
     );
 }
-function x() {
+function L() {
     return (0, a.useEffect)(
         () => (
             A++,
@@ -90,14 +90,14 @@ function x() {
         [],
     );
 }
-function L() {
+function x() {
     let e = u.Z.getChannel(p.Z.getVoiceChannelId());
     return (T = null != e && (0, m.Z)(f.Z) && (0, h.JL)(e, d.Z, _.Z, !1)), w(), !1;
 }
-function j() {
+function M() {
     return null != r ? (0, E.Z)(r) : null;
 }
-function M() {
+function j() {
     return null != r ? (0, g.Z)(r) : null;
 }
 function k() {
@@ -106,13 +106,13 @@ function k() {
     return {
         sourceId: "prepicked:0",
         nativePickerStyleUsed: N.lastPresentedPickerStyle,
-        sourceName: null != (e = j()) ? e : O.intl.string(O.t["KKcy9/"]),
+        sourceName: null != (e = M()) ? e : O.intl.string(O.t["KKcy9/"]),
         sound: t,
     };
 }
 class U extends (i = o.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, p.Z, u.Z, d.Z, _.Z], L), L();
+        this.syncWith([f.Z, p.Z, u.Z, d.Z, _.Z], x), x();
     }
     supported() {
         return R();
@@ -130,10 +130,10 @@ class U extends (i = o.ZP.Store) {
         return r;
     }
     getLastPickedContentTitle() {
-        return j();
+        return M();
     }
     getLastPickedContentPID() {
-        return M();
+        return j();
     }
     getStreamStartOptions() {
         return k();
@@ -156,14 +156,14 @@ function Z(e) {
         lastPickerError: t,
     };
 }
-function V(e) {
+function F(e) {
     let { style: t } = e;
     N = {
         lastPickerAction: 0,
         lastPresentedPickerStyle: t,
     };
 }
-function F() {
+function V() {
     N = {};
 }
 v(U, "displayName", "NativeScreenSharePickerStore");
@@ -171,6 +171,6 @@ let H = new U(s.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: G,
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: B,
     NATIVE_SCREEN_SHARE_PICKER_ERROR: Z,
-    NATIVE_SCREEN_SHARE_PICKER_PRESENT: V,
-    NATIVE_SCREEN_SHARE_PICKER_RELEASE: F,
+    NATIVE_SCREEN_SHARE_PICKER_PRESENT: F,
+    NATIVE_SCREEN_SHARE_PICKER_RELEASE: V,
 });

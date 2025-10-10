@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => v,
+    B: () => _,
     Z: () => j,
 }),
     n(953529),
@@ -8,18 +8,18 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     o = n(481060),
     c = n(668781),
     d = n(603211),
     u = n(307707),
-    m = n(216701),
-    g = n(570961),
+    g = n(216701),
+    m = n(570961),
     p = n(290511),
-    h = n(388032),
-    f = n(900492);
-function b(e) {
+    f = n(388032),
+    h = n(900492);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function b(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,45 +63,45 @@ function x(e, t) {
     );
 }
 function j(e) {
-    var t, i, a, c;
+    var t, i, s, c;
     let {
             guild: j,
-            prompt: v,
-            singleColumn: _,
-            promptIndex: O,
-            option: y,
-            hasError: C,
+            prompt: _,
+            singleColumn: v,
+            promptIndex: C,
+            option: O,
+            hasError: y,
             onDragStart: N,
             onDragComplete: E,
             onDragReset: I,
         } = e,
         S = null,
-        T = s().findIndex(v.options, (e) => e.id === y.id),
+        T = a().findIndex(_.options, (e) => e.id === O.id),
         {
             drag: P,
             dragSourcePosition: w,
-            drop: R,
-            setIsDraggable: Z,
+            drop: Z,
+            setIsDraggable: R,
         } = (0, d.Z)({
-            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(v.id),
+            type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(_.id),
             index: T,
-            optionId: y.id,
+            optionId: O.id,
             onDragStart: N,
             onDragComplete: E,
             onDragReset: I,
         }),
         { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(
-            null == (t = y.emoji) ? void 0 : t.id,
-            null == (i = y.emoji) ? void 0 : i.name,
+            null == (t = O.emoji) ? void 0 : t.id,
+            null == (i = O.emoji) ? void 0 : i.name,
         );
     return (
-        (0, p.Oq)(y.emoji) || null != D || null != A || (S = h.intl.string(h.t["61wfmp"])),
+        (0, p.Oq)(O.emoji) || null != D || null != A || (S = f.intl.string(f.t["61wfmp"])),
         (0, r.jsxs)(o.P3F, {
-            className: l()(f.optionCard, {
-                [f.hasError]: C || null != S,
-                [f.dropIndicatorBefore]: null != w && T < w,
-                [f.dropIndicatorAfter]: null != w && T > w,
-                [f.singleColumn]: _,
+            className: l()(h.optionCard, {
+                [h.hasError]: y || null != S,
+                [h.dropIndicatorBefore]: null != w && T < w,
+                [h.dropIndicatorAfter]: null != w && T > w,
+                [h.singleColumn]: v,
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -109,60 +109,60 @@ function j(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            x(b({}, t), {
+                            b(x({}, t), {
                                 guild: j,
-                                prompt: v,
-                                option: y,
-                                index: O,
+                                prompt: _,
+                                option: O,
+                                index: C,
                                 onSave: (e) => {
-                                    (0, g.Kk)(j, v.id, { options: v.options.map((t) => (t.id === y.id ? e : t)) });
+                                    (0, m.Kk)(j, _.id, { options: _.options.map((t) => (t.id === O.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, g.Kk)(j, v.id, { options: v.options.filter((e) => e.id !== y.id) });
+                                    (0, m.Kk)(j, _.id, { options: _.options.filter((e) => e.id !== O.id) });
                                 },
                             }),
                         );
                 }),
-            onMouseEnter: () => Z(!0),
-            onMouseLeave: () => Z(!1),
+            onMouseEnter: () => R(!0),
+            onMouseLeave: () => R(!1),
             innerRef: (e) => {
-                P(R(e));
+                P(Z(e));
             },
             children: [
                 (0, r.jsx)("div", {
-                    className: f.dragContainer,
+                    className: h.dragContainer,
                     children: (0, r.jsx)(o.Vni, {
                         size: "xs",
                         color: "currentColor",
-                        className: f.__invalid_dragIcon,
+                        className: h.__invalid_dragIcon,
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.optionCardRow,
+                    className: h.optionCardRow,
                     children: [
                         (0, r.jsx)("div", {
-                            className: f.emoji,
-                            children: (0, r.jsx)(m.Z, {
-                                emojiId: null == (a = y.emoji) ? void 0 : a.id,
-                                emojiName: null == (c = y.emoji) ? void 0 : c.name,
+                            className: h.emoji,
+                            children: (0, r.jsx)(g.Z, {
+                                emojiId: null == (s = O.emoji) ? void 0 : s.id,
+                                emojiName: null == (c = O.emoji) ? void 0 : c.name,
                                 defaultComponent: null,
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: f.text,
+                            className: h.text,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-md/medium",
                                     color: "header-primary",
                                     lineClamp: 1,
-                                    children: y.title,
+                                    children: O.title,
                                 }),
-                                "" !== y.description &&
+                                "" !== O.description &&
                                     (0, r.jsx)(o.Text, {
-                                        className: f.description,
+                                        className: h.description,
                                         variant: "text-xs/normal",
                                         color: "header-secondary",
-                                        children: y.description,
+                                        children: O.description,
                                     }),
                             ],
                         }),
@@ -178,55 +178,55 @@ function j(e) {
         })
     );
 }
-function v(e) {
-    let { guild: t, prompt: i, promptIndex: a, singleColumn: s } = e,
+function _(e) {
+    let { guild: t, prompt: i, promptIndex: s, singleColumn: a } = e,
         d = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("1862").then(n.bind(n, 801001));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        x(b({}, n), {
+                        b(x({}, n), {
                             guild: t,
                             prompt: i,
                             onSave: (e) =>
-                                (0, g.Kk)(t, i.id, {
+                                (0, m.Kk)(t, i.id, {
                                     options: [...i.options, e],
                                 }),
                             onDelete: () => {},
-                            index: a,
+                            index: s,
                         }),
                     );
             });
         };
     return (0, r.jsx)(o.P3F, {
-        className: l()(f.optionCard, f.addOptionCard, {
-            [f.addFirstOptionCard]: 0 === i.options.length,
-            [f.singleColumn]: s,
+        className: l()(h.optionCard, h.addOptionCard, {
+            [h.addFirstOptionCard]: 0 === i.options.length,
+            [h.singleColumn]: a,
         }),
         onClick: () => {
             i.options.length + 1 === p.fY
                 ? c.Z.show({
-                      title: h.intl.string(h.t.TggC7u),
-                      body: h.intl.formatToPlainString(h.t.kPQKam, { thresholdCount: p.fY }),
-                      confirmText: h.intl.string(h.t.BddRzc),
-                      cancelText: h.intl.string(h.t["ETE/oK"]),
+                      title: f.intl.string(f.t.TggC7u),
+                      body: f.intl.formatToPlainString(f.t.kPQKam, { thresholdCount: p.fY }),
+                      confirmText: f.intl.string(f.t.BddRzc),
+                      cancelText: f.intl.string(f.t["ETE/oK"]),
                       onConfirm: d,
                   })
                 : d();
         },
         children: (0, r.jsxs)("div", {
-            className: f.optionCardRow,
+            className: h.optionCardRow,
             children: [
                 (0, r.jsx)(o.oFk, {
                     size: "md",
                     color: "currentColor",
-                    className: f.plusIcon,
+                    className: h.plusIcon,
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/medium",
                     color: "header-primary",
-                    children: h.intl.string(h.t.Ty3lgo),
+                    children: f.intl.string(f.t.Ty3lgo),
                 }),
             ],
         }),

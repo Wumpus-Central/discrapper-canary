@@ -1,40 +1,40 @@
-i.d(e, { Z: () => c }), i(388685);
-var n = i(951288),
-    r = i(647438),
-    l = i(238651),
-    s = i(745510),
-    a = i(675654);
+n.d(t, { Z: () => c }), n(388685);
+var i = n(951288),
+    r = n(647438),
+    l = n(238651),
+    a = n(745510),
+    s = n(675654);
 let o = {
         xMin: -40,
         xMax: 40,
         yMin: -40,
         yMax: -70,
     },
-    u = (t, e, i) => (null == i ? e : (t * i) / 100),
-    c = r.memo(function (t) {
+    u = (e, t, n) => (null == n ? t : (e * n) / 100),
+    c = r.memo(function (e) {
         let {
-                confettiTarget: e,
-                colors: i,
+                confettiTarget: t,
+                colors: n,
                 emojiURL: c,
                 numBursts: d,
-                particlesPerBurst: f,
-                offsetXPercentageMax: p,
+                particlesPerBurst: p,
+                offsetXPercentageMax: f,
                 offsetXPercentageMin: m,
-                offsetYPercentageMax: h,
-                offsetYPercentageMin: g,
-                customConfettiCanvas: y,
-                speedValues: b = o,
+                offsetYPercentageMax: g,
+                offsetYPercentageMin: h,
+                customConfettiCanvas: b,
+                speedValues: y = o,
                 dragCoefficientValue: O = 1.66,
-                onAnimationEnd: P,
-            } = t,
-            [v, j] = r.useState(null),
-            { confettiCanvas: S } = r.useContext(s.h),
-            x = (0, l.uR)(null != y ? y : S, v),
-            [w, Z] = r.useState(!1);
+                onAnimationEnd: v,
+            } = e,
+            [P, j] = r.useState(null),
+            { confettiCanvas: S } = r.useContext(a.h),
+            x = (0, l.uR)(null != b ? b : S, P),
+            [w, _] = r.useState(!1);
         r.useEffect(() => {
-            w && (null == P || P());
+            w && (null == v || v());
         });
-        let _ = r.useMemo(() => {
+        let I = r.useMemo(() => {
             if (null != c)
                 return [
                     {
@@ -45,75 +45,75 @@ let o = {
         }, [c]);
         return (
             r.useEffect(() => {
-                if (null == e) return;
-                let t = Array(null != d ? d : 4).fill(0);
+                if (null == t) return;
+                let e = Array(null != d ? d : 4).fill(0);
                 return (
-                    (t = t.map((i, n) =>
+                    (e = e.map((n, i) =>
                         setTimeout(() => {
                             x.createMultipleConfetti(
-                                (function (t, e, i, n, r) {
-                                    var l, s;
+                                (function (e, t, n, i, r) {
+                                    var l, a;
                                     let c = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                         d = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
-                                        f = u(t.width, 100, i),
-                                        p = u(t.height, 75, r),
-                                        m = u(t.width, 350, e),
-                                        h = u(t.height, 75, n),
-                                        { xMin: g, xMax: y, yMin: b, yMax: O } = c;
+                                        p = u(e.width, 100, n),
+                                        f = u(e.height, 75, r),
+                                        m = u(e.width, 350, t),
+                                        g = u(e.height, 75, i),
+                                        { xMin: h, xMax: b, yMin: y, yMax: O } = c;
                                     return (
-                                        (l = (function (t) {
-                                            for (var e = 1; e < arguments.length; e++) {
-                                                var i = null != arguments[e] ? arguments[e] : {},
-                                                    n = Object.keys(i);
+                                        (l = (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    i = Object.keys(n);
                                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                                    (n = n.concat(
-                                                        Object.getOwnPropertySymbols(i).filter(function (t) {
-                                                            return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                                                    (i = i.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                         }),
                                                     )),
-                                                    n.forEach(function (e) {
-                                                        var n;
-                                                        (n = i[e]),
-                                                            e in t
-                                                                ? Object.defineProperty(t, e, {
-                                                                      value: n,
+                                                    i.forEach(function (t) {
+                                                        var i;
+                                                        (i = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
                                                                       writable: !0,
                                                                   })
-                                                                : (t[e] = n);
+                                                                : (e[t] = i);
                                                     });
                                             }
-                                            return t;
-                                        })({}, a.We)),
-                                        (s = s =
+                                            return e;
+                                        })({}, s.We)),
+                                        (a = a =
                                             {
                                                 position: {
                                                     type: "static-random",
                                                     minValue: {
-                                                        x: t.left + f,
-                                                        y: t.top + p,
+                                                        x: e.left + p,
+                                                        y: e.top + f,
                                                     },
                                                     maxValue: {
-                                                        x: t.left + m,
-                                                        y: t.top + h,
+                                                        x: e.left + m,
+                                                        y: e.top + g,
                                                     },
                                                 },
                                                 velocity: {
                                                     type: "static-random",
                                                     minValue: {
-                                                        x: g,
-                                                        y: b,
+                                                        x: h,
+                                                        y: y,
                                                     },
                                                     maxValue: {
-                                                        x: y,
+                                                        x: b,
                                                         y: O,
                                                     },
                                                 },
                                                 size: {
                                                     type: "static-random",
-                                                    minValue: a.Ko,
-                                                    maxValue: a.Ko,
+                                                    minValue: s.Ko,
+                                                    maxValue: s.Ko,
                                                 },
                                                 dragCoefficient: {
                                                     type: "static",
@@ -121,36 +121,36 @@ let o = {
                                                 },
                                             }),
                                         Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
-                                            : (function (t, e) {
-                                                  var i = Object.keys(t);
+                                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                                            : (function (e, t) {
+                                                  var n = Object.keys(e);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var n = Object.getOwnPropertySymbols(t);
-                                                      i.push.apply(i, n);
+                                                      var i = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, i);
                                                   }
-                                                  return i;
-                                              })(Object(s)).forEach(function (t) {
-                                                  Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(s, t));
+                                                  return n;
+                                              })(Object(a)).forEach(function (e) {
+                                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                               }),
                                         l
                                     );
-                                })(e.getBoundingClientRect(), p, m, h, g, b, O),
-                                null != f ? f : 50,
+                                })(t.getBoundingClientRect(), f, m, g, h, y, O),
+                                null != p ? p : 50,
                             ),
-                                n === t.length - 1 && null != P && Z(!0);
-                        }, 60 * n),
+                                i === e.length - 1 && null != v && _(!0);
+                        }, 60 * i),
                     )),
                     () => {
-                        for (let e of t) clearTimeout(e);
+                        for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [x, e, d, f, p, m, h, g, b, O, P]),
-            (0, n.jsx)(l.Ji, {
+            }, [x, t, d, p, f, m, g, h, y, O, v]),
+            (0, i.jsx)(l.Ji, {
                 ref: j,
-                sprites: null != _ ? _ : a.CA,
-                colors: null != i ? i : a.Br,
-                spriteWidth: a.Ko,
-                spriteHeight: a.Ko,
+                sprites: null != I ? I : s.CA,
+                colors: null != n ? n : s.Br,
+                spriteWidth: s.Ko,
+                spriteHeight: s.Ko,
             })
         );
     });

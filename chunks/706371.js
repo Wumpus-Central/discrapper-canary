@@ -80,9 +80,9 @@ function d(e) {
             helperText: d,
             className: u,
         } = e,
-        m = c(t, n, s, o);
+        g = c(t, n, s, o);
     return (0, r.jsx)(a.ZP, {
-        channelRows: m,
+        channelRows: g,
         guildId: t,
         selectedChannelIds: n,
         onChange: (e, t) => i(e),

@@ -80,15 +80,15 @@ let N = i.memo(function (e) {
             onPlay: P,
             onPause: w,
             onError: D,
-            playbackCacheKey: x,
+            playbackCacheKey: L,
         } = e,
-        L = i.useRef(null),
-        j = i.useMemo(() => (null != x ? d.ZP.getPlaybackPosition(x) : 0), [x]),
-        M = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
-        [k, U] = i.useState(j > 0),
-        [G, B] = i.useState(j),
-        [Z, V] = i.useState(y),
-        [F, H] = i.useState(!1),
+        x = i.useRef(null),
+        M = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
+        j = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
+        [k, U] = i.useState(M > 0),
+        [G, B] = i.useState(M),
+        [Z, F] = i.useState(y),
+        [V, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, X] = i.useState(!1),
@@ -103,13 +103,13 @@ let N = i.memo(function (e) {
         }, []),
         ei = i.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || V(t);
+            isNaN(t) || F(t);
         }, []),
         ea = i.useCallback(
             (e) => {
-                null != y && null != x && (0, u.U)(x, e, y);
+                null != y && null != L && (0, u.U)(L, e, y);
             },
-            [x, y],
+            [L, y],
         ),
         eo = i.useCallback(() => {
             W(!1),
@@ -122,11 +122,11 @@ let N = i.memo(function (e) {
             K || (ea(0), eo());
         }, [eo, K, ea]),
         el = i.useCallback((e) => {
-            let t = L.current;
+            let t = x.current;
             null != t && (B(e), (t.currentTime = e), U(!0));
         }, []),
         ec = i.useCallback(() => {
-            let e = L.current;
+            let e = x.current;
             if (null == e) return;
             let t = e.error;
             null == D || D(t);
@@ -139,8 +139,8 @@ let N = i.memo(function (e) {
             [_],
         ),
         ed = i.useCallback(() => {
-            H(!F), null == h || h(!F);
-        }, [F, h]),
+            H(!V), null == h || h(!V);
+        }, [V, h]),
         ef = i.useCallback(() => {
             z(!0);
         }, []),
@@ -149,7 +149,7 @@ let N = i.memo(function (e) {
         }, [G, Z, eo, ea]),
         ep = i.useCallback(
             (e) => {
-                let t = L.current;
+                let t = x.current;
                 null != Z && null != t && (el(e * Z), clearTimeout(et.current), (et.current = void 0));
             },
             [Z, el],
@@ -169,8 +169,8 @@ let N = i.memo(function (e) {
         eg.current = em;
     }),
         i.useEffect(() => {
-            j > 0 && el(j);
-        }, [j, el]),
+            M > 0 && el(M);
+        }, [M, el]),
         i.useEffect(() => {
             let e;
             return (
@@ -178,7 +178,7 @@ let N = i.memo(function (e) {
                     !K &&
                     (e = setInterval(() => {
                         var e, t;
-                        ea(null != (t = null == (e = L.current) ? void 0 : e.currentTime) ? t : 0);
+                        ea(null != (t = null == (e = x.current) ? void 0 : e.currentTime) ? t : 0);
                     }, m.Z.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
@@ -195,7 +195,7 @@ let N = i.memo(function (e) {
                             r(
                                 !1,
                                 t,
-                                (null != (a = null == (i = L.current) ? void 0 : i.duration) ? a : 0) *
+                                (null != (a = null == (i = x.current) ? void 0 : i.duration) ? a : 0) *
                                     m.Z.Millis.SECOND,
                             );
                 } else {
@@ -205,17 +205,17 @@ let N = i.memo(function (e) {
                     null == n || n(t, i), ea(t), (eh.current = null);
                 }
         }, [Y, n, Z, ea]),
-        A(L, Y, B),
+        A(x, Y, B),
         C(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
-        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M }),
-        eO = "".concat(M.toString().replace(/^0/, ""), "X");
+        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: j }),
+        eO = "".concat(j.toString().replace(/^0/, ""), "X");
     t =
         "Safari" === platform.name
             ? (0, r.jsx)(i.Suspense, {
                   children: (0, r.jsx)(I, {
-                      ref: L,
+                      ref: x,
                       className: v.audioElement,
                       src: n,
                       preload: Q,
@@ -223,22 +223,22 @@ let N = i.memo(function (e) {
                       onEnded: es,
                       onLoadedMetadata: ei,
                       onError: ec,
-                      muted: F,
+                      muted: V,
                       volume: $,
-                      playbackRate: M,
+                      playbackRate: j,
                   }),
               })
             : (0, r.jsx)(f.Z, {
-                  ref: L,
+                  ref: x,
                   className: v.audioElement,
                   controls: !1,
                   preload: Q,
                   onEnded: es,
                   onLoadedMetadata: ei,
                   onError: ec,
-                  muted: F,
+                  muted: V,
                   volume: $,
-                  playbackRate: M,
+                  playbackRate: j,
                   playing: Y && !K,
                   children: (0, r.jsx)("source", { src: n }),
               });
@@ -279,7 +279,7 @@ let N = i.memo(function (e) {
             }),
             (0, r.jsx)(l.P3F, {
                 className: v.playbackRateContainer,
-                onClick: () => T(M),
+                onClick: () => T(j),
                 "aria-label": ey,
                 children: (0, r.jsx)(l.Text, {
                     variant: "text-xs/semibold",
@@ -292,7 +292,7 @@ let N = i.memo(function (e) {
                 iconClassName: v.volumeButtonIcon,
                 iconColor: "currentColor",
                 sliderWrapperClassName: v.volumeSlider,
-                muted: F,
+                muted: V,
                 value: (0, g.P)($, 1),
                 minValue: 0,
                 maxValue: 1,

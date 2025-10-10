@@ -20,21 +20,21 @@ var r,
     y = n(981631);
 let v = "ActivityTrackingStore",
     I = 30 * h.Z.Millis.MINUTE,
-    C = 5 * h.Z.Millis.MINUTE,
-    S = null != (r = o.K.get(v)) ? r : {},
-    N = {},
-    T = !1;
-function P(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && j(e, !0);
-    let n = N[e.applicationId];
-    null != n && (n.stop(), delete N[e.applicationId]), delete S[e.applicationId], o.K.set(v, S);
-}
+    S = 5 * h.Z.Millis.MINUTE,
+    C = null != (r = o.K.get(v)) ? r : {},
+    T = {},
+    N = !1;
 function j(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    t && P(e, !0);
+    let n = T[e.applicationId];
+    null != n && (n.stop(), delete T[e.applicationId]), delete C[e.applicationId], o.K.set(v, C);
+}
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         r = null != e.updatedAt ? n - e.updatedAt : 0;
-    r > I + C && (r = 0);
+    r > I + S && (r = 0);
     let i = (0, g.OT)(e.applicationId, _.Z),
         l = E.Z.getVoiceChannelId(),
         a = m.default.getSessionId(),
@@ -52,9 +52,9 @@ function j(e) {
         mediaSessionId: c,
     }),
         (e.updatedAt = n);
-    let d = N[e.applicationId];
-    null == d && (d = N[e.applicationId] = new s.Xp()).start(I, () => j(e)),
-        t || ((S[e.applicationId] = e), o.K.set(v, S));
+    let d = T[e.applicationId];
+    null == d && (d = T[e.applicationId] = new s.Xp()).start(I, () => P(e)),
+        t || ((C[e.applicationId] = e), o.K.set(v, C));
 }
 function x() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -64,26 +64,26 @@ function x() {
         let t = b.Z.getGameByName(e);
         null != t &&
             (n.add(t.id),
-            t.id in S ||
-                j({
+            t.id in C ||
+                P({
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: r,
                     exePath: (0, d.N6)(null != i ? i : ""),
                 }));
     }
-    for (let t of Object.keys(S)) n.has(t) || P(S[t], e);
+    for (let t of Object.keys(C)) n.has(t) || j(C[t], e);
 }
 function A() {
-    for (let e of Object.keys(S)) P(S[e]);
-    T = !1;
+    for (let e of Object.keys(C)) j(C[e]);
+    N = !1;
 }
 class Z extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(p.ZP, f.Z, _.Z), this.syncWith([f.Z], x);
     }
     getActivities() {
-        return S;
+        return C;
     }
 }
 (l = "displayName") in Z
@@ -97,9 +97,9 @@ class Z extends (i = a.ZP.Store) {
     new Z(c.Z, {
         RUNNING_GAMES_CHANGE: () => x(),
         CONNECTION_OPEN: function () {
-            if (T) return !1;
-            for (let e of Object.keys(S)) j(S[e]);
-            x(!1), (T = !0);
+            if (N) return !1;
+            for (let e of Object.keys(C)) P(C[e]);
+            x(!1), (N = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
@@ -108,14 +108,14 @@ class Z extends (i = a.ZP.Store) {
         LOGOUT: A,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
-                r = S[t];
+                r = C[t];
             if (null == r) return !1;
-            (r.token = n), o.K.set(v, S);
+            (r.token = n), o.K.set(v, C);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
-                n = S[t];
+                n = C[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), o.K.set(v, S);
+            (n.token = null), (n.updatedAt = null), o.K.set(v, C);
         },
     });

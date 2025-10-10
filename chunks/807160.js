@@ -29,10 +29,10 @@ var r,
     P = n(419922),
     w = n(342386),
     D = n(46141),
-    x = n(485386),
-    L = n(430824),
-    j = n(853872),
-    M = n(509545),
+    L = n(485386),
+    x = n(430824),
+    M = n(853872),
+    j = n(509545),
     k = n(230307),
     U = n(259580),
     G = n(572004),
@@ -185,7 +185,7 @@ function e_(e) {
     let { guildId: t, guildProductListingId: n } = e,
         r = (0, y.hO)(t, n, { requireCurrentGuild: !1 }),
         o = (0, v.C)(r),
-        s = (0, f.e7)([L.Z], () => L.Z.getGuild(t)),
+        s = (0, f.e7)([x.Z], () => x.Z.getGuild(t)),
         l =
             (null == r ? void 0 : r.role_id) != null && (null == r ? void 0 : r.attachments_count) === 0
                 ? z.intl.string(z.t.H11qcX)
@@ -220,7 +220,7 @@ function ep(e) {
         o = (0, y.hO)(r, a, { requireCurrentGuild: !1 }),
         s = (0, f.e7)([O.Z], () => O.Z.getGuildProductFetchState(a) === O.M.FETCHING),
         l = null == o ? void 0 : o.role_id,
-        c = (0, f.e7)([x.Z], () => (null != l ? x.Z.getRole(r, l) : void 0), [r, l]),
+        c = (0, f.e7)([L.Z], () => (null != l ? L.Z.getRole(r, l) : void 0), [r, l]),
         u = (0, T.Z)({
             guildId: r,
             productId: a,
@@ -827,7 +827,7 @@ function em(e) {
             applicationStatistics: p,
             gameApplication: h,
             paymentSources: g,
-        } = (0, f.cj)([j.Z, k.Z, m.Z], () => {
+        } = (0, f.cj)([M.Z, k.Z, m.Z], () => {
             var e, t;
             return {
                 applicationStatistics: null != u ? k.Z.getCurrentUserStatisticsForApplication(u) : null,
@@ -837,7 +837,7 @@ function em(e) {
                         : null == (e = r.sku)
                           ? void 0
                           : e.application,
-                paymentSources: j.Z.paymentSources,
+                paymentSources: M.Z.paymentSources,
             };
         }),
         E = (0, f.e7)([m.Z], () => (null != d ? m.Z.getApplication(d) : null)),
@@ -845,10 +845,10 @@ function em(e) {
     a.useEffect(() => {
         _ && null != d && (0, N.UM)(d);
     }, [d, _]);
-    let y = (0, f.e7)([L.Z], () => L.Z.getGuild(null == h ? void 0 : h.guildId)),
+    let y = (0, f.e7)([x.Z], () => x.Z.getGuild(null == h ? void 0 : h.guildId)),
         O = c ? h : void 0,
         v = r.subscription,
-        I = (0, f.e7)([M.Z], () => (null != v && v.type !== Y.NYc.PREMIUM ? M.Z.get(v.items[0].planId) : null));
+        I = (0, f.e7)([j.Z], () => (null != v && v.type !== Y.NYc.PREMIUM ? j.Z.get(v.items[0].planId) : null));
     return (0, i.jsx)(eh, {
         applicationStatistics: p,
         application: _ ? E : O,

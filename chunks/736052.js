@@ -1,14 +1,14 @@
 n.d(t, { Z: () => u }), n(997841);
-var r = n(399606),
-    i = n(592125),
+var i = n(399606),
+    r = n(592125),
     l = n(630388),
     a = n(637271),
     o = n(931261),
     s = n(981631),
     c = n(176505);
 function u(e) {
-    let t = (0, r.e7)([i.Z, a.Z], () => {
-            let t = i.Z.getChannel(e);
+    let t = (0, i.e7)([r.Z, a.Z], () => {
+            let t = r.Z.getChannel(e);
             if (
                 null != t &&
                 (0, l.yE)(t.flags, c.zZ.IS_GUILD_RESOURCE_CHANNEL) &&

@@ -1,105 +1,105 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    o = n.n(l),
-    s = n(481060),
-    a = n(782568),
-    u = n(163379),
-    c = n(31336),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
+    a = n(481060),
+    s = n(782568),
+    c = n(163379),
+    u = n(31336),
     d = n(906467),
     f = n(63063),
-    g = n(604227),
-    y = n(924983),
-    O = n(981631),
-    E = n(388032),
-    b = n(530785);
-function p(e) {
+    m = n(604227),
+    b = n(924983),
+    j = n(981631),
+    p = n(388032),
+    x = n(989281);
+function v(e) {
     let { onClose: t } = e;
-    return (0, r.jsx)(s.v2r, {
+    return (0, r.jsx)(a.v2r, {
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, r.jsxs)(s.kSQ, {
+        children: (0, r.jsxs)(a.kSQ, {
             children: [
-                (0, r.jsx)(s.sNh, {
+                (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: E.intl.string(E.t.LRmNAg),
-                    action: () => (0, u.Z)(!0),
+                    label: p.intl.string(p.t.LRmNAg),
+                    action: () => (0, c.Z)(!0),
                 }),
-                (0, r.jsx)(s.sNh, {
+                (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: E.intl.string(E.t["0nUKy8"]),
-                    action: () => (0, a.Z)(O.EYA.ACKNOWLEDGEMENTS),
+                    label: p.intl.string(p.t["0nUKy8"]),
+                    action: () => (0, s.Z)(j.EYA.ACKNOWLEDGEMENTS),
                 }),
-                (0, r.jsx)(s.sNh, {
+                (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: E.intl.string(E.t["Yl/Rio"]),
-                    action: () => (0, a.Z)(f.w),
+                    label: p.intl.string(p.t["Yl/Rio"]),
+                    action: () => (0, s.Z)(f.w),
                 }),
             ],
         }),
     });
 }
-function v() {
-    let e = i.useRef(null),
+function y() {
+    let e = l.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
         children: [
             t &&
-                (0, r.jsx)(s.P3F, {
-                    className: b.devToolsEducation,
-                    onClick: () => (0, c.d8)(),
-                    children: (0, r.jsx)(y.$, { legacy: !1 }),
+                (0, r.jsx)(a.P3F, {
+                    className: x.devToolsEducation,
+                    onClick: () => (0, u.d8)(),
+                    children: (0, r.jsx)(b.$, { legacy: !1 }),
                 }),
-            (0, r.jsx)(g.Z, { compact: !0 }),
+            (0, r.jsx)(m.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
-                className: b.links,
+                className: x.links,
                 children: [
-                    (0, r.jsx)(s.eee, {
-                        href: O.EYA.PRIVACY,
-                        children: (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.eee, {
+                        href: j.EYA.PRIVACY,
+                        children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: E.intl.string(E.t["Knf/f3"]),
+                            children: p.intl.string(p.t["Knf/f3"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: b.bullet,
+                        className: x.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(s.eee, {
-                        href: O.EYA.TERMS,
-                        children: (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.eee, {
+                        href: j.EYA.TERMS,
+                        children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: E.intl.string(E.t.uFSTGh),
+                            children: p.intl.string(p.t.uFSTGh),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: b.bullet,
+                        className: x.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(s.yRy, {
+                    (0, r.jsx)(a.yRy, {
                         targetElementRef: e,
                         position: "top",
                         align: "center",
                         spacing: 0,
-                        animation: s.yRy.Animation.NONE,
+                        animation: a.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(p, { onClose: t });
+                            return (0, r.jsx)(v, { onClose: t });
                         },
                         children: (t, n) => {
-                            var i, l;
+                            var l, o;
                             return (0, r.jsx)(
-                                s.eee,
-                                ((i = (function (e) {
+                                a.eee,
+                                ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -124,20 +124,20 @@ function v() {
                                     }
                                     return e;
                                 })({}, t)),
-                                (l = l =
+                                (o = o =
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: o()(b.moreButton, { [b.active]: n.isShown }),
-                                        children: (0, r.jsx)(s.Text, {
+                                        className: i()(x.moreButton, { [x.active]: n.isShown }),
+                                        children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: E.intl.string(E.t.UKOtz8),
+                                            children: p.intl.string(p.t.UKOtz8),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -145,10 +145,10 @@ function v() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(o)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                                       }),
-                                i),
+                                l),
                             );
                         },
                     }),

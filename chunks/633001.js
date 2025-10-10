@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eN }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => eS }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -21,10 +21,10 @@ var a = n(951288),
     y = n(837268),
     C = n(371651),
     E = n(829907),
-    N = n(610394),
-    S = n(556809),
-    T = n(886118),
-    O = n(301801),
+    S = n(610394),
+    T = n(556809),
+    O = n(886118),
+    N = n(301801),
     P = n(352527),
     I = n(355863),
     k = n(449224),
@@ -38,12 +38,12 @@ var a = n(951288),
     U = n(257785),
     F = n(484036),
     G = n(681619),
-    B = n(621060),
-    z = n(981631),
+    z = n(621060),
+    B = n(981631),
     V = n(757744),
-    H = n(388032),
-    W = n(312079),
-    K = n(866403);
+    W = n(388032),
+    H = n(454741),
+    K = n(451429);
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,11 +88,11 @@ function Y(e, t) {
     );
 }
 let X = {
-        [z.Odu.CLICK_ZONE_DEBUG]: (e) =>
+        [B.Odu.CLICK_ZONE_DEBUG]: (e) =>
             Y(
                 q(
                     {
-                        type: z.Odu.CLICK_ZONE_DEBUG,
+                        type: B.Odu.CLICK_ZONE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -104,15 +104,15 @@ let X = {
                             height: 100,
                         },
                     },
-                    I.Z.getWidgetDefaultSettings(z.Odu.CLICK_ZONE_DEBUG),
+                    I.Z.getWidgetDefaultSettings(B.Odu.CLICK_ZONE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
-        [z.Odu.PERFORMANCE_DEBUG]: (e) =>
+        [B.Odu.PERFORMANCE_DEBUG]: (e) =>
             Y(
                 q(
                     {
-                        type: z.Odu.PERFORMANCE_DEBUG,
+                        type: B.Odu.PERFORMANCE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -125,7 +125,7 @@ let X = {
                             height: "auto",
                         },
                     },
-                    I.Z.getWidgetDefaultSettings(z.Odu.PERFORMANCE_DEBUG),
+                    I.Z.getWidgetDefaultSettings(B.Odu.PERFORMANCE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
@@ -154,8 +154,8 @@ function Q(e) {
             onClick: function () {
                 (0, R.JG)(t, () => i(!0));
             },
-            className: W.copyId,
-            children: ["Application Id: ", t, " ", n ? H.intl.string(H.t["t5VZ8/"]) : null],
+            className: H.copyId,
+            children: ["Application Id: ", t, " ", n ? W.intl.string(W.t["t5VZ8/"]) : null],
         })
     );
 }
@@ -165,7 +165,7 @@ let $ = r.memo(function (e) {
             r = (0, d.e7)([k.Z], () => k.Z.getGameForPID(t.pid)),
             i = (0, d.e7)([v.ZP], () => (null == n ? null : v.ZP.getGameOverlayStatus(n)));
         return (0, a.jsxs)("div", {
-            className: W.panelGroup,
+            className: H.panelGroup,
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/bold",
@@ -209,7 +209,7 @@ let $ = r.memo(function (e) {
                     children: ["successfullyShown: ", t.successfullyShown ? "Yes" : "No"],
                 }),
                 (0, a.jsxs)("div", {
-                    className: W.panelGroup,
+                    className: H.panelGroup,
                     children: [
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
@@ -235,7 +235,7 @@ let $ = r.memo(function (e) {
                 }),
                 null != i &&
                     (0, a.jsxs)("div", {
-                        className: W.panelGroup,
+                        className: H.panelGroup,
                         children: [
                             (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
@@ -302,7 +302,7 @@ let $ = r.memo(function (e) {
             s = (0, d.e7)([w.default], () => w.default.DEV_isInputLocked(t), [t]),
             o = (0, d.e7)([w.default], () => w.default.isReady(t), [t]);
         return (0, a.jsxs)("div", {
-            className: W.panelGroup,
+            className: H.panelGroup,
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/semibold",
@@ -444,26 +444,26 @@ let ea = r.memo(function (e) {
     );
 });
 function er() {
-    let e = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([C.default], () => C.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
-        className: W.panelGroup,
+        className: H.panelGroup,
         children: [
             (0, a.jsxs)("div", {
-                className: W.panelHeader,
+                className: H.panelHeader,
                 children: [
                     (0, a.jsx)(m.XZJ, {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !N.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs),
+                                !S.ZP.hasRenderDebugMode(y.GO.TrackFocusPIDs),
                                 y.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
                         labelType: "secondary",
                     }),
                     (0, a.jsx)(m.P3F, {
-                        className: W.panelButton,
+                        className: H.panelButton,
                         onClick: () => x.Z.clearTrackedPids(),
                         children: (0, a.jsx)(m.XHJ, {
                             size: "md",
@@ -473,7 +473,7 @@ function er() {
                 ],
             }),
             (0, a.jsxs)(m.zJl, {
-                className: l()(W.panelGroup, W.scroller),
+                className: l()(H.panelGroup, H.scroller),
                 children: [
                     0 === t.length &&
                         (0, a.jsx)(m.Text, {
@@ -588,7 +588,7 @@ let ei = r.memo(function (e) {
                         "div",
                         Y(q({}, n), {
                             children: (0, a.jsxs)(m.zJl, {
-                                className: l()(W.panelGroup, W.scroller),
+                                className: l()(H.panelGroup, H.scroller),
                                 children: [
                                     0 === Object.keys(e).length &&
                                         (0, a.jsx)(m.Text, {
@@ -643,7 +643,7 @@ let ei = r.memo(function (e) {
             o = (0, d.e7)([w.default], () => w.default.getFocusedPID()),
             c = (0, d.e7)([w.default], () => w.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
-            className: W.panelGroup,
+            className: H.panelGroup,
             children: [
                 0 === Object.keys(n).length &&
                     (0, a.jsx)(m.Text, {
@@ -690,16 +690,16 @@ let ei = r.memo(function (e) {
         });
     }),
     eo = r.memo(function () {
-        let [e, t] = et(z.Odu.CLICK_ZONE_DEBUG),
-            [n, i] = et(z.Odu.PERFORMANCE_DEBUG),
-            l = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.ClickZones)),
-            s = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.WidgetAreas)),
-            o = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.WindowContainer)),
-            c = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.DisabledGPUBoost)),
-            u = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.ForceGPUBoost)),
-            p = (0, d.e7)([N.ZP], () => N.ZP.hasRenderDebugMode(y.GO.OverlayRafManagerForceEnabled)),
+        let [e, t] = et(B.Odu.CLICK_ZONE_DEBUG),
+            [n, i] = et(B.Odu.PERFORMANCE_DEBUG),
+            l = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.ClickZones)),
+            s = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.WidgetAreas)),
+            o = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.WindowContainer)),
+            c = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.DisabledGPUBoost)),
+            u = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.ForceGPUBoost)),
+            p = (0, d.e7)([S.ZP], () => S.ZP.hasRenderDebugMode(y.GO.OverlayRafManagerForceEnabled)),
             h = (e) => {
-                x.Z.setRenderDebugMode(!N.ZP.hasRenderDebugMode(e), e);
+                x.Z.setRenderDebugMode(!S.ZP.hasRenderDebugMode(e), e);
             },
             [f, b] = r.useState({});
         return (
@@ -710,7 +710,7 @@ let ei = r.memo(function (e) {
                 return () => clearInterval(e);
             }, []),
             (0, a.jsxs)("div", {
-                className: W.panelGroup,
+                className: H.panelGroup,
                 children: [
                     (0, a.jsx)(m.ua7, {
                         position: "left",
@@ -828,7 +828,7 @@ let ei = r.memo(function (e) {
                     (0, a.jsx)(m.XZJ, {
                         checked: p,
                         onChange: () => void h(y.GO.OverlayRafManagerForceEnabled),
-                        label: "Overlay SmartRAF (".concat(S.Z.getLastRAFCallbackReason(), ")"),
+                        label: "Overlay SmartRAF (".concat(T.Z.getLastRAFCallbackReason(), ")"),
                         labelType: "secondary",
                     }),
                 ],
@@ -849,7 +849,7 @@ let ei = r.memo(function (e) {
                                 "div",
                                 Y(q({}, e), {
                                     children: (0, a.jsxs)("div", {
-                                        className: W.panelGroup,
+                                        className: H.panelGroup,
                                         children: [
                                             (0, a.jsx)(m.Text, {
                                                 variant: "text-md/bold",
@@ -888,7 +888,7 @@ let ei = r.memo(function (e) {
                             "div",
                             Y(q({}, t), {
                                 children: (0, a.jsxs)("div", {
-                                    className: W.panelGroup,
+                                    className: H.panelGroup,
                                     children: [
                                         0 === Object.keys(e).length &&
                                             (0, a.jsx)(m.Text, {
@@ -936,7 +936,7 @@ let ei = r.memo(function (e) {
                 (0, a.jsx)(
                     "div",
                     Y(q({}, e), {
-                        className: W.panelGroup,
+                        className: H.panelGroup,
                         children: (0, a.jsx)(m.PhF, {
                             serialize: (e) => e,
                             isSelected: (e) => e === t,
@@ -982,7 +982,7 @@ function eu(e) {
                     }),
                     (0, a.jsx)(m.hzk, {
                         children: (0, a.jsx)("div", {
-                            className: W.panelGroup,
+                            className: H.panelGroup,
                             children: (0, a.jsx)(m.Kx8, {
                                 label: "Paste JSON Here",
                                 onChange: l,
@@ -1056,13 +1056,13 @@ function ep(e) {
 let eh = [
     {
         key: "type",
-        cellClassName: W.tableBarColumn,
+        cellClassName: H.tableBarColumn,
         renderHeader: () => null,
         render(e) {
             let { type: t, logType: n } = e,
                 r = ex(t);
             return (0, a.jsx)("div", {
-                className: W.tableBar,
+                className: H.tableBar,
                 style: { color: ep(t, n) },
                 children: (0, a.jsx)(r, {
                     color: "currentColor",
@@ -1073,7 +1073,7 @@ let eh = [
     },
     {
         key: "name",
-        cellClassName: W.nameColumn,
+        cellClassName: H.nameColumn,
         render(e) {
             let { name: t, type: n, logType: r } = e;
             return (0, a.jsxs)(a.Fragment, {
@@ -1105,7 +1105,7 @@ let eh = [
     },
     {
         key: "timestamp",
-        cellClassName: W.rightColumn,
+        cellClassName: H.rightColumn,
         render(e) {
             let { timestamp: t } = e;
             return (0, A.vc)(o()(t), "h:mm:ss.SSS");
@@ -1138,7 +1138,7 @@ let eb = ["__webpack_require__", "fn"],
         {
             id: "details",
             name: "Details",
-            group: B.v0.NONE,
+            group: z.v0.NONE,
             render: (e) => {
                 var t, n, r, i;
                 let { breadcrumb: s, onClose: c } = e,
@@ -1146,21 +1146,21 @@ let eb = ["__webpack_require__", "fn"],
                     v = o()(b),
                     _ = ex(u);
                 return (0, a.jsxs)(m.w0Z, {
-                    className: W.subPanelScroller,
+                    className: H.subPanelScroller,
                     children: [
                         (0, a.jsxs)(j.Z, {
-                            className: l()(K.headerBar, W.subPanelHeaderBar),
+                            className: l()(K.headerBar, H.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)("div", {
                                     style: { color: ep(u, p) },
-                                    className: W.headerIcon,
+                                    className: H.headerIcon,
                                     children: (0, a.jsx)(_, {
                                         color: "currentColor",
                                         size: "sm",
                                     }),
                                 }),
                                 (0, a.jsxs)(j.Z.Title, {
-                                    wrapperClassName: W.headerTitle,
+                                    wrapperClassName: H.headerTitle,
                                     children: [
                                         d,
                                         " (",
@@ -1168,7 +1168,7 @@ let eb = ["__webpack_require__", "fn"],
                                         ")",
                                         (0, a.jsx)(m.P3F, {
                                             tag: "span",
-                                            className: W.copyEventButton,
+                                            className: H.copyEventButton,
                                             onClick: () => (0, R.JG)(d),
                                             children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
@@ -1192,7 +1192,7 @@ let eb = ["__webpack_require__", "fn"],
                             ],
                         }),
                         (0, a.jsxs)(U.E, {
-                            className: W.commonProperties,
+                            className: H.commonProperties,
                             children: [
                                 (0, a.jsx)(U.Z9, {
                                     name: "Timestamp",
@@ -1244,7 +1244,7 @@ let eb = ["__webpack_require__", "fn"],
                                                               {
                                                                   children: [
                                                                       (0, a.jsx)("span", {
-                                                                          className: W.stackTraceFunction,
+                                                                          className: H.stackTraceFunction,
                                                                           children: e.trim(),
                                                                       }),
                                                                       !eg.includes(null != s ? s : "") &&
@@ -1252,7 +1252,7 @@ let eb = ["__webpack_require__", "fn"],
                                                                               children: [
                                                                                   " (",
                                                                                   (0, a.jsxs)("span", {
-                                                                                      className: W.stackTraceLocation,
+                                                                                      className: H.stackTraceLocation,
                                                                                       title: r,
                                                                                       children: [s, ":", i, ":", l],
                                                                                   }),
@@ -1276,7 +1276,7 @@ let eb = ["__webpack_require__", "fn"],
         },
     ],
     ej = {
-        searchType: T.S.REGEX,
+        searchType: O.S.REGEX,
         searchStringGenerator: (e) => {
             let { name: t, type: n, stack: a, data: r } = e,
                 i = [t, n, JSON.stringify(r)];
@@ -1286,12 +1286,12 @@ let eb = ["__webpack_require__", "fn"],
     };
 function e_() {
     let { ref: e, height: t } = (0, b.ZP)(),
-        n = (0, d.e7)([N.ZP], () => N.ZP.DEV_isOverlayModuleLoggingEnabled()),
+        n = (0, d.e7)([S.ZP], () => S.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [i, s] = r.useState(n),
         [o, c] = r.useState(!1),
         [u, p] = r.useState(null),
         [h, f] = r.useState(Object.keys(em)),
-        [g, v] = (0, d.e7)([N.ZP], () => N.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], D.Q),
+        [g, v] = (0, d.e7)([S.ZP], () => S.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], D.Q),
         [j, _] = r.useState(null),
         y = null != j ? j : g,
         C = null != j ? -1 : v;
@@ -1301,8 +1301,8 @@ function e_() {
                 ? p(y.reduce((e, t) => ("game_tracking_starting" === t.name ? Math.max(e, t.timestamp) : e), 0))
                 : p(null));
     }, [o, y, C]);
-    let [E, S] = r.useState(""),
-        T = r.useMemo(
+    let [E, T] = r.useState(""),
+        O = r.useMemo(
             () =>
                 0 === C
                     ? []
@@ -1316,27 +1316,27 @@ function e_() {
                       }),
             [y, h, u, o, C],
         ),
-        [P, I] = r.useState(T),
+        [P, I] = r.useState(O),
         [k, w] = r.useState(null),
         A = r.useMemo(() => y.find((e) => e.key === k), [y, k]),
         Z = r.useCallback((e) => {
             I(e);
         }, []),
-        { renderSelectedTab: L } = (0, B.ZP)({ tabs: ev }, []);
-    (0, O.BO)(E, T, Z, ej, [y]);
+        { renderSelectedTab: L } = (0, z.ZP)({ tabs: ev }, []);
+    (0, N.BO)(E, O, Z, ej, [y]);
     let M = r.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
-        [U, z] = r.useState(!1),
+        [U, B] = r.useState(!1),
         V = r.useRef(null),
-        H = r.useCallback(() => {
-            (0, R.JG)(JSON.stringify(T)), z(!0);
-        }, [T]);
+        W = r.useCallback(() => {
+            (0, R.JG)(JSON.stringify(O)), B(!0);
+        }, [O]);
     r.useEffect(() => {
         if (U)
             return (
                 (V.current = setTimeout(() => {
-                    z(!1);
+                    B(!1);
                 }, 4000)),
                 () => {
                     null != V.current && clearTimeout(V.current);
@@ -1365,17 +1365,17 @@ function e_() {
         );
     return (0, a.jsxs)("div", {
         ref: e,
-        className: W.panelContainer,
+        className: H.panelContainer,
         children: [
             (0, a.jsxs)("div", {
-                className: W.panelGroup,
+                className: H.panelGroup,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: l()(W.toolbar, W.filtersToolbar),
+                        className: l()(H.toolbar, H.filtersToolbar),
                         children: [
                             (0, a.jsxs)("div", {
                                 title: "Toggles the Polling of Native",
-                                className: W.pollBreadcrumbs,
+                                className: H.pollBreadcrumbs,
                                 children: [
                                     (0, a.jsx)(m.XZJ, {
                                         checked: i,
@@ -1390,7 +1390,7 @@ function e_() {
                             }),
                             (0, a.jsxs)("div", {
                                 title: "Only show breadcrumbs for active games",
-                                className: W.pollBreadcrumbs,
+                                className: H.pollBreadcrumbs,
                                 children: [
                                     (0, a.jsx)(m.XZJ, {
                                         checked: o,
@@ -1404,8 +1404,8 @@ function e_() {
                                 ],
                             }),
                             (0, a.jsxs)(m.P3F, {
-                                className: W.copyAll,
-                                onClick: H,
+                                className: H.copyAll,
+                                onClick: W,
                                 children: [
                                     (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
@@ -1424,7 +1424,7 @@ function e_() {
                                 ],
                             }),
                             (0, a.jsx)(m.P3F, {
-                                className: W.copyAll,
+                                className: H.copyAll,
                                 onClick: () => q(null != j),
                                 children: (0, a.jsx)(m.Text, {
                                     variant: "text-sm/normal",
@@ -1435,13 +1435,13 @@ function e_() {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: l()(W.toolbar, W.filtersToolbar),
+                        className: l()(H.toolbar, H.filtersToolbar),
                         children: Object.entries(em).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 m.P3F,
                                 {
-                                    className: l()(W.filter, h.includes(t) && W.activeFilter),
+                                    className: l()(H.filter, h.includes(t) && H.activeFilter),
                                     onClick: () => {
                                         f((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -1456,18 +1456,18 @@ function e_() {
                         }),
                     }),
                     (0, a.jsx)("div", {
-                        className: W.toolbar,
+                        className: H.toolbar,
                         children: (0, a.jsx)(m.E1j, {
                             query: E,
-                            onChange: S,
-                            onClear: () => S(""),
+                            onChange: T,
+                            onClear: () => T(""),
                             placeholder: "Regex search by breadcrumb name and data",
                         }),
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: l()(W.panelGroup, W.tableContainer),
+                className: l()(H.panelGroup, H.tableContainer),
                 children: (0, a.jsx)(G.Z, {
                     columns: eh,
                     data: P,
@@ -1477,7 +1477,7 @@ function e_() {
             }),
             null != A &&
                 (0, a.jsx)(F.Z, {
-                    className: l()(W.panelGroup, W.subPanel),
+                    className: l()(H.panelGroup, H.subPanel),
                     minHeight: 100,
                     initialHeight: null != t ? t / 3 : 300,
                     children: L({
@@ -1489,12 +1489,12 @@ function e_() {
     });
 }
 let ey = r.memo(function () {
-        let e = (0, d.e7)([N.ZP], () => N.ZP.getInitializationStages());
+        let e = (0, d.e7)([S.ZP], () => S.ZP.getInitializationStages());
         return (0, a.jsxs)("div", {
-            className: W.panelGroup,
+            className: H.panelGroup,
             children: [
                 (0, a.jsx)("div", {
-                    className: W.panelHeader,
+                    className: H.panelHeader,
                     children: (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
                         color: "text-primary",
@@ -1510,8 +1510,8 @@ let ey = r.memo(function () {
         });
     }),
     eC = r.memo(function () {
-        let e = (0, d.e7)([N.ZP], () => N.ZP.DEV_isStateDebuggingEnabled()),
-            t = (0, d.e7)([N.ZP], () => N.ZP.DEV_getDebuggingState());
+        let e = (0, d.e7)([S.ZP], () => S.ZP.DEV_isStateDebuggingEnabled()),
+            t = (0, d.e7)([S.ZP], () => S.ZP.DEV_getDebuggingState());
         return (
             r.useEffect(
                 () => (
@@ -1523,10 +1523,10 @@ let ey = r.memo(function () {
                 [],
             ),
             (0, a.jsxs)("div", {
-                className: W.panelGroup,
+                className: H.panelGroup,
                 children: [
                     (0, a.jsx)("div", {
-                        className: W.panelHeader,
+                        className: H.panelHeader,
                         children: (0, a.jsx)(m.XZJ, {
                             checked: e,
                             onChange: () => x.Z.setStateDebugging(!e),
@@ -1546,7 +1546,7 @@ let ey = r.memo(function () {
 function eE() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsxs)("div", {
-            className: l()(K.panel, W.subPanel),
+            className: l()(K.panel, H.subPanel),
             children: [
                 (0, a.jsx)(eo, {}),
                 (0, a.jsx)(ed, {}),
@@ -1560,7 +1560,7 @@ function eE() {
         }),
     });
 }
-function eN() {
+function eS() {
     let [e, t] = r.useState("state");
     return (
         r.useEffect(
@@ -1579,13 +1579,13 @@ function eN() {
             [],
         ),
         (0, a.jsxs)("div", {
-            className: l()(K.panel, W.panel),
+            className: l()(K.panel, H.panel),
             children: [
                 (0, a.jsxs)("div", {
-                    className: W.toolbar,
+                    className: H.toolbar,
                     children: [
                         (0, a.jsx)(m.P3F, {
-                            className: l()(W.paneOption, "state" === e && W.activePaneOption),
+                            className: l()(H.paneOption, "state" === e && H.activePaneOption),
                             onClick: () => t("state"),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-md/medium",
@@ -1594,7 +1594,7 @@ function eN() {
                             }),
                         }),
                         (0, a.jsx)(m.P3F, {
-                            className: l()(W.paneOption, "logging" === e && W.activePaneOption),
+                            className: l()(H.paneOption, "logging" === e && H.activePaneOption),
                             onClick: () => t("logging"),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-md/medium",

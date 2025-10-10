@@ -319,22 +319,22 @@ e.exports = function (e) {
             },
         ],
         D = "([0-9]_*)+",
-        x = "([0-9a-fA-F]_*)+",
-        L = {
+        L = "([0-9a-fA-F]_*)+",
+        x = {
             className: "number",
             relevance: 0,
             variants: [
                 { match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` },
-                { match: `\\b0x(${x})(\\.(${x}))?([pP][+-]?(${D}))?\\b` },
+                { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${D}))?\\b` },
                 { match: /\b0o([0-7]_*)+\b/ },
                 { match: /\b0b([01]_*)+\b/ },
             ],
         },
-        j = (e = "") => ({
+        M = (e = "") => ({
             className: "subst",
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
         }),
-        M = (e = "") => ({
+        j = (e = "") => ({
             className: "subst",
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/),
         }),
@@ -347,12 +347,12 @@ e.exports = function (e) {
         U = (e = "") => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [j(e), M(e), k(e)],
+            contains: [M(e), j(e), k(e)],
         }),
         G = (e = "") => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [j(e), k(e)],
+            contains: [M(e), k(e)],
         }),
         B = {
             className: "string",
@@ -367,12 +367,12 @@ e.exports = function (e) {
                 contains: [e.BACKSLASH_ESCAPE],
             },
         ],
-        V = {
+        F = {
             begin: /\/[^\s](?=[^/\n]*\/)/,
             end: /\//,
             contains: Z,
         },
-        F = (e) => {
+        V = (e) => {
             let t = r(e, /\//),
                 n = r(/\//, e);
             return {
@@ -390,7 +390,7 @@ e.exports = function (e) {
         },
         H = {
             scope: "regexp",
-            variants: [F("###"), F("##"), F("#"), V],
+            variants: [V("###"), V("##"), V("#"), F],
         },
         Y = { match: r(/`/, y, /`/) },
         W = [
@@ -414,7 +414,7 @@ e.exports = function (e) {
                             begin: /\(/,
                             end: /\)/,
                             keywords: I,
-                            contains: [...w, L, B],
+                            contains: [...w, x, B],
                         },
                     ],
                 },
@@ -479,7 +479,7 @@ e.exports = function (e) {
                 ...N,
                 ...R,
                 ...w,
-                L,
+                x,
                 B,
                 ...W,
                 ...K,
@@ -515,7 +515,7 @@ e.exports = function (e) {
                 ...h,
                 ...N,
                 ...w,
-                L,
+                x,
                 B,
                 ...K,
                 z,
@@ -599,7 +599,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => "interpol" === e.label);
         t.keywords = C;
-        let n = [...N, ...R, ...w, L, B, ...W];
+        let n = [...N, ...R, ...w, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -631,7 +631,7 @@ e.exports = function (e) {
             ...N,
             ...R,
             ...w,
-            L,
+            x,
             B,
             ...W,
             ...K,

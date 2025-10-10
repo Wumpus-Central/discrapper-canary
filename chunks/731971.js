@@ -1,18 +1,18 @@
 n.d(t, {
     NQ: () => b,
-    U1: () => _,
+    U1: () => O,
     XW: () => d,
     _J: () => m,
-    aP: () => h,
+    aP: () => f,
     e7: () => g,
-    h6: () => O,
-    oE: () => f,
+    h6: () => _,
+    oE: () => h,
     pB: () => p,
     y: () => y,
     yr: () => v,
 }),
     n(781311);
-var r = n(879690),
+var r = n(191336),
     i = n(524437),
     l = n(695346),
     o = n(594174);
@@ -134,19 +134,19 @@ let d = (0, r.U)((e) => ({
     p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    f = () => {
+    h = () => {
         d.getState().reset();
     },
-    h = () => {
+    f = () => {
         let e = d.getState();
         return e.nickname !== c.nickname || e.dmsAllowed !== c.dmsAllowed || e.showActivity !== u(e.guildSize);
     },
     g = () => d.getState().inviteCode,
     m = () => d.getState().guildId,
     b = () => d.getState().touched,
-    O = () => d.getState().dmsAllowed,
+    _ = () => d.getState().dmsAllowed,
     y = () => d.getState().nickname,
-    _ = () => d.getState().showActivity,
+    O = () => d.getState().showActivity,
     v = () => {
         var e, t;
         let { nickname: n } = d();

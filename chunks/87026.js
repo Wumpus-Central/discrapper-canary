@@ -14,8 +14,8 @@ var n = i(951288),
     h = i(933557),
     f = i(313201),
     b = i(434404),
-    v = i(999382),
-    g = i(84058),
+    g = i(999382),
+    v = i(84058),
     N = i(422559),
     j = i(210887),
     _ = i(984933),
@@ -80,7 +80,7 @@ let U = (e) => {
                 }),
                 (0, n.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.NIc, {
+                    children: (0, n.jsx)(x.gNt, {
                         label: R.intl.string(R.t.x4hbeX),
                         description: p ? R.intl.string(R.t.k5crqq) : R.intl.string(R.t.fHiGAw),
                         children: (0, n.jsx)(m.$q, {
@@ -97,7 +97,7 @@ let U = (e) => {
                 }),
                 (0, n.jsx)("div", {
                     className: A.form,
-                    children: (0, n.jsx)(x.NIc, {
+                    children: (0, n.jsx)(x.gNt, {
                         label: R.intl.string(R.t.COu4bm),
                         description: h ? R.intl.string(R.t.qgQLpq) : R.intl.string(R.t.b0MaDQ),
                         children: (0, n.jsx)(m.$q, {
@@ -198,7 +198,7 @@ let U = (e) => {
                 headerId: f,
                 theme: b,
             } = e,
-            v = (0, u.wj)(b) ? G : Z;
+            g = (0, u.wj)(b) ? G : Z;
         return (
             l.useEffect(() => {
                 (0, L.BF)({
@@ -215,7 +215,7 @@ let U = (e) => {
                         children: [
                             (0, n.jsx)("img", {
                                 alt: "",
-                                src: v,
+                                src: g,
                                 width: 80,
                             }),
                             (0, n.jsx)(x.X6q, {
@@ -294,7 +294,7 @@ let U = (e) => {
                     }),
                     (0, n.jsx)("div", {
                         className: A.form,
-                        children: (0, n.jsx)(x.NIc, {
+                        children: (0, n.jsx)(x.gNt, {
                             label: R.intl.string(R.t["k+b2CQ"]),
                             description: R.intl.format(R.t["BwbW/f"], {
                                 communityGuidelines: w.Z.getArticleURL(P.BhN.PUBLIC_GUILD_GUILDLINES),
@@ -486,7 +486,7 @@ let $ = (e) => {
                 }),
                 (0, n.jsx)("div", {
                     className: A.updatedForm,
-                    children: (0, n.jsxs)(x.NIc, {
+                    children: (0, n.jsxs)(x.gNt, {
                         label: R.intl.string(R.t["0q344e"]),
                         children: [
                             (0, n.jsxs)("div", {
@@ -537,7 +537,7 @@ let $ = (e) => {
                 }),
                 (0, n.jsx)("div", {
                     className: A.updatedForm,
-                    children: (0, n.jsx)(x.NIc, {
+                    children: (0, n.jsx)(x.gNt, {
                         label: R.intl.string(R.t["k+b2CQ"]),
                         description: R.intl.format(R.t["BwbW/f"], {
                             communityGuidelines: w.Z.getArticleURL(P.BhN.PUBLIC_GUILD_GUILDLINES),
@@ -565,7 +565,7 @@ let $ = (e) => {
         l.useEffect(() => {
             O.default.track(P.rMx.OPEN_MODAL, { type: T.tA });
         }, []);
-        let { guild: a } = (0, o.cj)([v.Z], () => v.Z.getProps()),
+        let { guild: a } = (0, o.cj)([g.Z], () => g.Z.getProps()),
             c = (0, o.e7)([j.Z], () => j.Z.theme),
             [d, u] = l.useState(!1),
             [m, x] = l.useState(!T.$X.some((e) => M.oz(e, a))),
@@ -643,7 +643,7 @@ let $ = (e) => {
                                   Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
                               }),
                         e);
-                n !== q.permissions && (await (0, g.Gf)(a.id, [l])),
+                n !== q.permissions && (await (0, v.Gf)(a.id, [l])),
                     b.Z.updateGuild({
                         features: i,
                         rulesChannelId: N,

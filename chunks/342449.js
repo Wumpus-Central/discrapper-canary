@@ -19,9 +19,9 @@ function m(e) {
             loading: b,
             loadMore: Z,
         } = (0, i.qQ)(t, s.z.LATEST_ACTIVITY, g, a.z.MATCH_SOME),
-        y = l.useRef(null);
+        w = l.useRef(null);
     (0, i.r7)();
-    let O = l.useCallback(
+    let y = l.useCallback(
             (e) => {
                 let t = 0 === e.section ? j : 1 === e.section ? v : x;
                 return (0, r.jsx)(
@@ -35,7 +35,7 @@ function m(e) {
             },
             [x, j, v, m],
         ),
-        w = l.useCallback(
+        O = l.useCallback(
             (e) =>
                 0 === e.section
                     ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t["4E27f3"], { count: j.length }) }, e.section)
@@ -44,13 +44,13 @@ function m(e) {
                       : (0, r.jsx)(f, { text: u.intl.string(u.t["wUNQ+/"]) }, e.section),
             [j.length, v.length],
         ),
-        N = l.useCallback(
+        S = l.useCallback(
             (e) => ((1 === e && j.length > 0) || (2 === e && (j.length > 0 || v.length > 0)) ? 64 : 32),
             [j.length, v.length],
         ),
-        S = l.useCallback(() => {
+        N = l.useCallback(() => {
             var e;
-            let t = null == (e = y.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = w.current) ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = t.scrollTop + t.offsetHeight;
             t.scrollHeight - n < 200 && Z();
@@ -71,16 +71,16 @@ function m(e) {
                 }),
             });
     return (0, r.jsx)(o.aVo, {
-        ref: y,
+        ref: w,
         className: h.list,
         fade: !0,
         sections: [j.length, v.length, x.length],
-        sectionHeight: N,
+        sectionHeight: S,
         rowHeight: 80,
-        renderRow: O,
-        renderSection: w,
+        renderRow: y,
+        renderSection: O,
         chunkSize: 20,
-        onScroll: p ? S : void 0,
+        onScroll: p ? N : void 0,
     });
 }
 function f(e) {

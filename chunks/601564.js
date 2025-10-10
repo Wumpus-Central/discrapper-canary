@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => x,
-        getPageSize: () => P,
+        getPageSize: () => j,
     }),
     n(388685),
     n(35282);
@@ -26,9 +26,9 @@ var r = n(951288),
     y = n(429899),
     v = n(843445),
     I = n(981631),
-    C = n(388032),
-    S = n(430355);
-function N(e, t, n) {
+    S = n(388032),
+    C = n(430355);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,15 +41,15 @@ function N(e, t, n) {
         e
     );
 }
-let T = (0, m.Un)({
+let N = (0, m.Un)({
     createPromise: () => Promise.all([n.e("68264"), n.e("87626")]).then(n.bind(n, 496691)),
     webpackId: 496691,
 });
-function P(e) {
+function j(e) {
     return e < v.x ? v.b.SMALL : v.b.LARGE;
 }
 o.ZP.initialize();
-class j extends i.PureComponent {
+class P extends i.PureComponent {
     componentDidMount() {
         (0, s.Y)(this.props.location),
             (this.stopListeningToHistory = (0, _.s1)().listen((e) => {
@@ -70,8 +70,8 @@ class j extends i.PureComponent {
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)("p", { children: C.intl.string(C.t["1PZdFx"]) }),
-                (0, r.jsx)("p", { children: C.intl.string(C.t.CvQlAA) }),
+                (0, r.jsx)("p", { children: S.intl.string(S.t["1PZdFx"]) }),
+                (0, r.jsx)("p", { children: S.intl.string(S.t.CvQlAA) }),
             ],
         });
     }
@@ -79,11 +79,11 @@ class j extends i.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, r.jsx)("div", {
-                      className: S.applicationStore,
+                      className: C.applicationStore,
                       children: this.renderContent(),
                   })
-                : (0, r.jsx)(T, {
-                      className: S.applicationStore,
+                : (0, r.jsx)(N, {
+                      className: C.applicationStore,
                       location: t,
                       render: this.renderContent,
                   });
@@ -94,8 +94,8 @@ class j extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, "stopListeningToHistory", void 0),
-            N(this, "renderStoreListing", (e) => {
+            T(this, "stopListeningToHistory", void 0),
+            T(this, "renderStoreListing", (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: i },
@@ -113,11 +113,11 @@ class j extends i.PureComponent {
                         slug: i,
                         location: a,
                         storeListingId: s.store_listing_id,
-                        pageSize: P(o),
+                        pageSize: j(o),
                     }),
                 });
             }),
-            N(this, "renderContent", () =>
+            T(this, "renderContent", () =>
                 (0, r.jsxs)(a.rs, {
                     children: [
                         (0, r.jsx)(a.AW, {
@@ -152,4 +152,4 @@ class j extends i.PureComponent {
             );
     }
 }
-let x = (0, a.EN)((0, d.Z)((0, p.Z)(j)));
+let x = (0, a.EN)((0, d.Z)((0, p.Z)(P)));

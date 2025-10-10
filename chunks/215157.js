@@ -1,51 +1,51 @@
-r.d(t, { Q: () => b }), r(781311), r(413496), r(433524), r(35282);
-var n = r(647438),
-    l = r(442837),
-    o = r(794433),
-    i = r(271383),
-    s = r(485386),
-    a = r(892880),
-    c = r(226951),
-    u = r(605436),
-    d = r(71080);
-function m(e) {
+n.d(t, { Q: () => f }), n(781311), n(413496), n(433524), n(35282);
+var i = n(647438),
+    r = n(442837),
+    l = n(794433),
+    a = n(271383),
+    o = n(485386),
+    s = n(892880),
+    c = n(226951),
+    u = n(605436),
+    d = n(71080);
+function p(e) {
     let t = e.trim();
     return "@" === t[0] ? t.slice(1) : t;
 }
-function x(e, t) {
-    let r = m(e);
-    return RegExp("".concat(c.Z.escape(r)), "i").test(t);
+function h(e, t) {
+    let n = p(e);
+    return RegExp("".concat(c.Z.escape(n)), "i").test(t);
 }
-function b(e, t, r, c) {
-    let b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
-        h = (0, l.e7)([s.Z], () => (null != e ? s.Z.getSortedRoles(e.id) : [])),
-        f = (0, l.Wu)([i.ZP], () => (null != e ? i.ZP.getMemberIds(e.id) : [])),
-        y = n.useMemo(() => {
+function f(e, t, n, c) {
+    let f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
+        m = (0, r.e7)([o.Z], () => (null != e ? o.Z.getSortedRoles(e.id) : [])),
+        g = (0, r.Wu)([a.ZP], () => (null != e ? a.ZP.getMemberIds(e.id) : [])),
+        b = i.useMemo(() => {
             if (null == e || "@" === c[0]) return [];
-            if (b) return u.Wx(e, h, null != t ? t : null, r, (e) => x(c, e));
-            let n = u.ik(e, h, null != t ? t : null, r, (e) => x(c, e));
-            return 0 === n.length && "" === c.trim() && 1 === h.length && (n = u.aq()), n;
-        }, [h, c, e, t, r, b]),
-        g = n.useMemo(() => (null == e ? [] : u.iI(f, null != t ? t : null, e, r, (e) => x(c, e))), [f, c, e, t, r]);
+            if (f) return u.Wx(e, m, null != t ? t : null, n, (e) => h(c, e));
+            let i = u.ik(e, m, null != t ? t : null, n, (e) => h(c, e));
+            return 0 === i.length && "" === c.trim() && 1 === m.length && (i = u.aq()), i;
+        }, [m, c, e, t, n, f]),
+        C = i.useMemo(() => (null == e ? [] : u.iI(g, null != t ? t : null, e, n, (e) => h(c, e))), [g, c, e, t, n]);
     return (
-        n.useEffect(() => {
-            null != e && a.Z.requestMembers(e.id, m(c), d.EQ);
+        i.useEffect(() => {
+            null != e && s.Z.requestMembers(e.id, p(c), d.EQ);
         }, [c, e]),
         {
-            roles: y,
-            members: g,
-            getRichTag: n.useCallback((e) => {
+            roles: b,
+            members: C,
+            getRichTag: i.useCallback((e) => {
                 let t = null;
                 return (
                     e.rowType === d.aC.ROLE || e.rowType === d.aC.ADMINISTRATOR
                         ? (t = {
-                              type: o.F.ROLE,
+                              type: l.F.ROLE,
                               label: e.name,
                               color: e.colorString,
                           })
                         : (e.rowType === d.aC.MEMBER || e.rowType === d.aC.OWNER) &&
                           (t = {
-                              type: o.F.MEMBER,
+                              type: l.F.MEMBER,
                               label: e.name,
                               avatar: e.avatarURL,
                           }),

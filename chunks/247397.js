@@ -7,7 +7,7 @@ n.d(t, {
 var r = n(296009),
     i = n(812206),
     a = n(388032);
-let o = [r.l.FAVORITE_GAMES, r.l.CURRENT_GAMES, r.l.WANT_TO_PLAY_GAMES, r.l.PLAYED_GAMES, r.l.APPLICATION],
+let o = [r.l.APPLICATION, r.l.FAVORITE_GAMES, r.l.PLAYED_GAMES, r.l.CURRENT_GAMES, r.l.WANT_TO_PLAY_GAMES],
     s = {
         [r.l.FAVORITE_GAMES]: () => a.intl.string(a.t.sUQar6),
         [r.l.CURRENT_GAMES]: () => a.intl.string(a.t.SqNnur),

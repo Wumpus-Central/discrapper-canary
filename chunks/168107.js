@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(704454),
-    o = n(429142),
+    a = n(429142),
+    o = n(128064),
     s = n(81643),
     l = n(469775);
 function c(e, t, n) {
@@ -84,13 +84,13 @@ function h(e) {
 }
 let m = {
     showAgeVerification: (e) => {
-        var { onClose: t, entryPoint: a, shouldShowExpressiveModal: s = !1 } = e,
+        var { onClose: t, entryPoint: o, shouldShowExpressiveModal: s = !1 } = e,
             c = _(e, ["onClose", "entryPoint", "shouldShowExpressiveModal"]);
         let d = {
             modalKey: l.zJ,
             onCloseCallback: t,
-            backdropStyle: h(a),
-            Layer: o.ZP,
+            backdropStyle: h(o),
+            Layer: a.ZP,
         };
         s
             ? (0, i.ZDy)(async () => {
@@ -104,7 +104,7 @@ let m = {
     },
     showAgeVerificationGetStartedModal: (e) => {
         let { onClose: t, entryPoint: c } = e;
-        if ((0, s.kJ)() && (0, a.G7)("age_verification_utils"))
+        if ((0, s.kJ)() && (0, o.c_)("age_verification_utils"))
             return void (0, i.ZDy)(
                 async () => {
                     let { default: e } = await n.e("22447").then(n.bind(n, 686768));
@@ -113,7 +113,7 @@ let m = {
                 {
                     modalKey: l.ux,
                     backdropStyle: h(c),
-                    Layer: o.ZP,
+                    Layer: a.ZP,
                     onCloseCallback: t,
                 },
             );
@@ -125,7 +125,7 @@ let m = {
             {
                 modalKey: l.ux,
                 backdropStyle: h(c),
-                Layer: o.ZP,
+                Layer: a.ZP,
                 onCloseCallback: t,
             },
         );

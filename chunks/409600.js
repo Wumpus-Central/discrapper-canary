@@ -10,8 +10,8 @@ var l = n(100527),
     u = n(961830),
     d = n(382263),
     f = n(137440),
-    h = n(231338);
-let g = (e, t, n) =>
+    g = n(231338);
+let h = (e, t, n) =>
     (0, i.jsx)(f.Z, {
         step: n,
         onClose: () => t(!1),
@@ -25,7 +25,7 @@ function p(e) {
         onComplete: n,
         applicationId: r,
         skuId: u,
-        renderHeader: g,
+        renderHeader: h,
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
@@ -33,7 +33,7 @@ function p(e) {
     });
 }
 function m(e) {
-    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: f, isGift: g = !1 } = e,
+    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: f, isGift: h = !1 } = e,
         { analyticsLocations: m } = (0, a.ZP)(f, l.Z.PREMIUM_PAYMENT_MODAL);
     return (0, i.jsx)(a.Gt, {
         value: m,
@@ -42,15 +42,15 @@ function m(e) {
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return [u.WA, ...(e ? [d.PT] : []), u.s2, ...u.yp, u.wo, u.F7];
-            })(g),
+            })(h),
             applicationId: n,
             skuIDs: [c],
             activeSubscription: null,
-            purchaseType: h.GZ.ONE_TIME,
-            isGift: g,
+            purchaseType: g.GZ.ONE_TIME,
+            isGift: h,
             children: (0, i.jsx)(o.c1, {
                 children: (0, i.jsx)(r.KB, {
-                    isGift: g,
+                    isGift: h,
                     children: (0, i.jsx)(
                         p,
                         (function (e) {

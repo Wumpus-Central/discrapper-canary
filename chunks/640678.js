@@ -1,13 +1,13 @@
 n.d(t, { t: () => o });
 var i = n(163400),
     r = n(995532),
-    l = n(496675),
-    s = n(896007);
+    s = n(496675),
+    l = n(896007);
 function o(e) {
     var t, n;
-    let o = l.Z.getGuildPermissionProps(e),
-        a = (0, i.p)(e.id).length > 0;
-    return s.ZP.generateSections(
+    let o = s.Z.getGuildPermissionProps(e),
+        c = (0, i.p)(e.id).length > 0;
+    return l.ZP.generateSections(
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function o(e) {
         })({ showDirtyGuildTemplateIndicator: !1 }, o)),
         (n = n =
             {
-                canUnlinkChannels: a,
+                canUnlinkChannels: c,
                 welcomeScreenEmpty: r.Z.isEmpty(e.id),
             }),
         Object.getOwnPropertyDescriptors

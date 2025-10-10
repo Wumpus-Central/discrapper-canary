@@ -21,37 +21,37 @@ function g(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: g, onChannelPromptCompleted: x, isSlideReady: T } = t,
         [E, h] = l.useState(""),
         [I, G] = l.useState(null),
-        [y, D] = l.useState(!1),
-        z = (0, m.Dt)(),
-        U = (0, a.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        N = l.useRef(null);
+        [D, y] = l.useState(!1),
+        U = (0, m.Dt)(),
+        z = (0, a.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        f = l.useRef(null);
     l.useEffect(() => {
         var t;
-        T && (null == (t = N.current) || t.focus());
+        T && (null == (t = f.current) || t.focus());
     }, [T]);
     let j = l.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == U)) return;
-                D(!0), G(null);
-                let n = p.ZP.getDefaultChannel(U.id);
+                if ((t.preventDefault(), null == z)) return;
+                y(!0), G(null);
+                let n = p.ZP.getDefaultChannel(z.id);
                 try {
                     let t = _.intl.formatToPlainString(_.t.V4lepK, { topic: E });
-                    await d.Z.createTextChannel(U.id, E, null == n ? void 0 : n.parent_id, t), x();
+                    await d.Z.createTextChannel(z.id, E, null == n ? void 0 : n.parent_id, t), x();
                 } catch (t) {
                     G(new c.yZ(t));
                 }
-                D(!1);
+                y(!1);
             },
-            [U, E, x],
+            [z, E, x],
         ),
-        f = (0, i.jsxs)(i.Fragment, {
+        N = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.zxk, {
                     variant: "primary",
                     text: _.intl.string(_.t.i4jeWV),
                     onClick: j,
                     disabled: 0 === E.length,
-                    loading: y,
+                    loading: D,
                 }),
                 (0, i.jsx)(s.zx, {
                     className: L.skipButton,
@@ -70,12 +70,12 @@ function g(t) {
                     direction: o.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != U && (0, i.jsx)(C.Z, { guild: U }),
+                        null != z && (0, i.jsx)(C.Z, { guild: z }),
                         (0, i.jsx)(r.Text, {
                             className: L.guildName,
                             color: "header-primary",
                             variant: "text-sm/semibold",
-                            children: null == U ? void 0 : U.name,
+                            children: null == z ? void 0 : z.name,
                         }),
                         (0, i.jsx)(r.X6q, {
                             className: L.title,
@@ -105,10 +105,10 @@ function g(t) {
                                 error: null == I ? void 0 : I.getFieldMessage("name"),
                                 type: "text",
                                 value: E,
-                                id: z,
+                                id: U,
                                 onChange: h,
                                 placeholder: _.intl.string(_.t.xGOYAw),
-                                inputRef: N,
+                                inputRef: f,
                             }),
                         }),
                         null != I &&
@@ -120,10 +120,10 @@ function g(t) {
                             }),
                     ],
                 }),
-                e && (0, i.jsx)(r.mzw, { children: f }),
+                e && (0, i.jsx)(r.mzw, { children: N }),
             ],
         }),
-        footer: f,
+        footer: N,
     };
 }
 function x(t) {

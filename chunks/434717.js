@@ -6,8 +6,8 @@ var r = n(951288),
     s = n(410030),
     l = n(624138),
     c = n(617136),
-    u = n(915750),
-    d = n(509212),
+    d = n(915750),
+    u = n(509212),
     m = n(113434),
     p = n(497505),
     C = n(475595),
@@ -23,13 +23,13 @@ function b(e) {
         _ = (0, s.ZP)(),
         w = (0, o.wjy)(_) ? x.BR.DARK : x.BR.LIGHT,
         O = (0, m.ly)(t),
-        P = (0, u.aM)(),
-        N = a.useMemo(() => {
+        N = (0, d.aM)(),
+        P = a.useMemo(() => {
             let e = f.r.build(t.config),
                 n = e.defaultWatchVideoTask,
                 r = null == n ? void 0 : n.messages.videoEndCtaSubtitle;
             return (0, l.Ew)(r)
-                ? e.questType !== i.W.GAMEPLAY || t.config.features.includes(y.S7.NON_GAMING_PLAY_QUEST) || (0, d.Pb)(t)
+                ? e.questType !== i.W.GAMEPLAY || t.config.features.includes(y.S7.NON_GAMING_PLAY_QUEST) || (0, u.Pb)(t)
                     ? v.intl.string(v.t.y8Xf3t)
                     : v.intl.string(v.t.wirwNz)
                 : r;
@@ -84,7 +84,7 @@ function b(e) {
                                 (0, r.jsx)(o.xvT, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: N,
+                                    children: P,
                                 }),
                             ],
                         }),
@@ -107,10 +107,10 @@ function b(e) {
                         size: "sm",
                         text: O,
                         onClick: () => {
-                            (0, d.nc)(t, {
+                            (0, u.nc)(t, {
                                 content: p.jn.REWARD_MODAL,
                                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                                impressionId: P,
+                                impressionId: N,
                                 sourceQuestContent: n,
                             });
                         },

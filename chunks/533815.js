@@ -2,8 +2,8 @@ r.d(t, { Z: () => f });
 var n = r(951288);
 r(647438);
 var i = r(120356),
-    a = r.n(i),
-    o = r(28664),
+    o = r.n(i),
+    a = r(28664),
     l = r(481060),
     c = r(785717),
     s = r(86419),
@@ -12,7 +12,7 @@ var i = r(120356),
 function f(e) {
     let { game: t, widgetType: r, iconSize: i = "refresh_sm", className: f } = e,
         { trackUserProfileEditAction: g } = (0, c.KZ)();
-    return (0, n.jsx)(o.u, {
+    return (0, n.jsx)(a.u, {
         text: u.intl.string(u.t.HUvyDQ),
         children: (0, n.jsx)(l.kL8, {
             onClick: () => {
@@ -25,7 +25,7 @@ function f(e) {
                     });
             },
             "aria-label": u.intl.string(u.t.HUvyDQ),
-            className: a()(f, d.clickable),
+            className: o()(f, d.clickable),
             children: (0, n.jsx)(l.XHJ, {
                 size: i,
                 className: d.icon,

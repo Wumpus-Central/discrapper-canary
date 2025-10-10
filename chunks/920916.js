@@ -11,8 +11,8 @@ var a = t(951288),
     m = t(607070),
     _ = t(235400),
     p = t(204418),
-    x = t(975298),
-    f = t(583434),
+    f = t(975298),
+    x = t(583434),
     g = t(530618),
     h = t(454585),
     C = t(732389),
@@ -51,8 +51,8 @@ function U(e) {
             location: u,
             reward: _,
             decoration: p,
-            onUseNow: x,
-            preview: f,
+            onUseNow: f,
+            preview: x,
         } = e,
         h = o.useRef(null),
         [C, v] = o.useState(null),
@@ -60,16 +60,16 @@ function U(e) {
         w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         N = (0, d.e7)([I.default], () => I.default.getCurrentUser()),
         b = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
-        [T, R] = o.useState(!0 === f || b ? "claimed" : "loading");
+        [T, R] = o.useState(!0 === x || b ? "claimed" : "loading");
     o.useEffect(() => {
         b ||
-            !0 === f ||
+            !0 === x ||
             (0, P.QB)(s.id, y.y$.CROSS_PLATFORM, u)
                 .then(() => R("claimed"))
                 .catch(() => R("error"));
-    }, [s, u, b, f]);
-    let S = !0 === f && null === p && (null == _ ? void 0 : _.skuId) !== "",
-        A = null == N || (null == p && !0 !== f) || S || "loading" === T;
+    }, [s, u, b, x]);
+    let S = !0 === x && null === p && (null == _ ? void 0 : _.skuId) !== "",
+        A = null == N || (null == p && !0 !== x) || S || "loading" === T;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(l.O_, {
@@ -101,7 +101,7 @@ function U(e) {
                                     isSaving: "applying" === T,
                                     onClose: r,
                                     onConfirm: () => {
-                                        R("applying"), x().finally(r);
+                                        R("applying"), f().finally(r);
                                     },
                                 }),
                 }),
@@ -142,7 +142,7 @@ function W(e) {
     let { quest: n, user: t, decoration: o, isSaving: r, onClose: i, onConfirm: l } = e,
         s = (0, A.fh)(n, A.eC.REWARD).url,
         d = (0, R.f$)(n.config),
-        { fractionalState: u } = (0, x.Z)(),
+        { fractionalState: u } = (0, f.Z)(),
         m = u === Z.a$.FP_ONLY,
         _ = (0, S.Qy)(n.config);
     return (0, a.jsxs)("div", {
@@ -226,8 +226,8 @@ function G(e) {
     var n, t;
     let { quest: r, location: i, onClose: l, transitionState: d, preview: c } = e,
         m = o.useMemo(() => (0, R.xn)(r.config), [r]),
-        [p, x] = (function (e) {
-            let { product: n, isFetching: t } = (0, f.T)(e),
+        [p, f] = (function (e) {
+            let { product: n, isFetching: t } = (0, x.T)(e),
                 {} = (0, j.Z)({}),
                 a = o.useMemo(() => {
                     if (null == n || t) return null;
@@ -260,7 +260,7 @@ function G(e) {
                 location: i,
                 reward: m,
                 decoration: p,
-                onUseNow: x,
+                onUseNow: f,
                 preview: c,
             });
 }

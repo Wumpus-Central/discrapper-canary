@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Z,
+    ZP: () => R,
     av: () => T,
     bL: () => y,
     kA: () => N,
@@ -15,8 +15,8 @@ var r = n(951288),
     c = n(442837),
     d = n(28664),
     u = n(481060),
-    m = n(167533),
-    g = n(766434),
+    g = n(167533),
+    m = n(766434),
     p = n(937615),
     f = n(289393),
     h = n(264451),
@@ -104,7 +104,7 @@ let y = (e) => {
             children: [C.intl.string(C.t.oypxx8), " ", e],
         });
     },
-    R = [
+    Z = [
         {
             key: "dropdown",
             cellClassName: O.toggleExpandColumn,
@@ -154,7 +154,7 @@ let y = (e) => {
             cellClassName: s()(O.statusColumn, O.cellAlignRight),
             renderHeader: () => (0, r.jsx)(w, {}),
             render(e) {
-                let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: i, periodEndDate: l } = (0, g.j0)(e);
+                let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: i, periodEndDate: l } = (0, m.j0)(e);
                 return (0, r.jsx)(E, {
                     children: ((e, t, n, i) => {
                         let l = null != i ? o()(i).add(15, "days").toISOString() : void 0,
@@ -248,13 +248,13 @@ let y = (e) => {
             },
         },
     ],
-    Z = (e) => {
+    R = (e) => {
         let { payoutsByPeriod: t } = e,
             [n, l] = i.useState(new Set());
         return (0, r.jsx)("div", {
             className: O.tableContainer,
-            children: (0, r.jsx)(m.Z, {
-                columns: R,
+            children: (0, r.jsx)(g.Z, {
+                columns: Z,
                 data: t,
                 className: O.table,
                 rowClassName: O.row,

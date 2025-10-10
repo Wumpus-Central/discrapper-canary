@@ -1,12 +1,12 @@
-f(347105);
-var n = f(98405),
-    r = f(674371);
-n(
+n(347105);
+var r = n(98405),
+    i = n(674371);
+r(
     {
         target: "String",
         proto: !0,
         name: "trimStart",
-        forced: "".trimStart !== r,
+        forced: "".trimStart !== i,
     },
-    { trimStart: r },
+    { trimStart: i },
 );

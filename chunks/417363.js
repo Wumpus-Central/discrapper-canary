@@ -77,10 +77,10 @@ let T = 200,
     P = !1,
     w = 0,
     D = 0,
-    x = 0,
-    L = [],
-    j = [],
+    L = 0,
+    x = [],
     M = [],
+    j = [],
     k = !1;
 function U() {
     P = !1;
@@ -212,34 +212,34 @@ function Z(e) {
         ? e.networkProgress
         : null;
 }
-function V(e) {
+function F(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
         ? e.diskProgress
         : null;
 }
-function F(e) {
+function V(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
         ? e.readerProgress
         : null;
 }
 function H(e) {
-    j = (j = [
+    M = (M = [
         {
             bytes: e,
             timestamp: Date.now(),
         },
-        ...j,
+        ...M,
     ]).slice(0, S);
 }
 function Y(e) {
     let t = Date.now(),
         n = t - A;
-    L = (L = [
+    x = (x = [
         {
             bytes: e,
             timestamp: t,
         },
-        ...L,
+        ...x,
     ])
         .slice(0, S)
         .filter((e) => {
@@ -248,12 +248,12 @@ function Y(e) {
         });
 }
 function W(e) {
-    M = (M = [
+    j = (j = [
         {
             bytes: e,
             timestamp: Date.now(),
         },
-        ...M,
+        ...j,
     ]).slice(0, S);
 }
 let K = a().throttle(H, T),
@@ -277,10 +277,10 @@ function Q(e) {
             if (((n[o] = B(r[e][t])), null != C[o])) {
                 let e = X(n, o, Z);
                 e > 0 && K((w += e));
-                let r = X(n, o, V);
+                let r = X(n, o, F);
                 r > 0 && q((D += r));
-                let s = X(n, o, F);
-                if ((s > 0 && z((x += s)), i === t)) {
+                let s = X(n, o, V);
+                if ((s > 0 && z((L += s)), i === t)) {
                     let e = n[o];
                     if (
                         !0 !== e.paused &&
@@ -366,13 +366,13 @@ class J extends (r = o.ZP.Store) {
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {
-        return L;
+        return x;
     }
     getHistoricalTotalBytesDownloaded() {
-        return j;
+        return M;
     }
     getHistoricalTotalBytesWritten() {
-        return M;
+        return j;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

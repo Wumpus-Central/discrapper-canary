@@ -98,7 +98,7 @@ function N() {
                                 ],
                             }),
                             n.length > 0
-                                ? (0, r.jsx)(d.NIc, {
+                                ? (0, r.jsx)(d.gNt, {
                                       label: O.size > 0 ? A.intl.string(A.t.mMEmRE) : A.intl.string(A.t.Vij32N),
                                       description: A.intl.string(A.t.OTXyaW),
                                       children: (0, r.jsx)("div", {

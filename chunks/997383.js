@@ -14,8 +14,8 @@ n.d(t, { Z: () => S }),
     n(642613);
 var r = n(392711),
     i = n.n(r),
-    o = n(159635),
-    a = n.n(o),
+    a = n(159635),
+    o = n.n(a),
     s = n(159299),
     l = n(675478),
     c = n(709302),
@@ -162,14 +162,14 @@ class S {
         if (!this._include(E.h8.TEXT_CHANNEL)) return [];
         let n = T(E.h8.TEXT_CHANNEL, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
-            o = null != i ? (e) => !i.has("channel:".concat(e.id)) : void 0;
+            a = null != i ? (e) => !i.has("channel:".concat(e.id)) : void 0;
         return _.ZP.queryChannels({
             query: e,
             guildId: null,
             limit: t,
             fuzzy: !0,
             allowSnowflake: r,
-            filter: o,
+            filter: a,
             boosters: n,
         });
     }
@@ -191,12 +191,12 @@ class S {
         if (!this._include(E.h8.GUILD)) return [];
         let n = T(E.h8.GUILD, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
-            o = null != i ? (e) => !i.has("guild:".concat(e.id)) : void 0;
+            a = null != i ? (e) => !i.has("guild:".concat(e.id)) : void 0;
         return _.ZP.queryGuilds({
             query: e,
             limit: t,
             fuzzy: !0,
-            filter: o,
+            filter: a,
             boosters: n,
             allowSnowflake: r,
         });
@@ -204,16 +204,16 @@ class S {
     queryUsers(e, t, n) {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(E.h8.USER)) return;
-        let { allowSnowflake: i, userFilters: o } = this.options,
-            a = T(E.h8.USER, this.options);
-        if ((null == o ? void 0 : o.thread) != null) {
-            let t = s.Z.getMemberListSections(o.thread),
+        let { allowSnowflake: i, userFilters: a } = this.options,
+            o = T(E.h8.USER, this.options);
+        if ((null == a ? void 0 : a.thread) != null) {
+            let t = s.Z.getMemberListSections(a.thread),
                 r = [];
             for (let e in t) {
                 let n = t[e];
                 for (let e of n.userIds) {
                     var l, c, u;
-                    (null == o || !o.friends || d.Z.isFriend(e)) &&
+                    (null == a || !a.friends || d.Z.isFriend(e)) &&
                         ((null != (u = null == (l = this._userBlacklist) ? void 0 : l.includes(e)) && u) ||
                             r.push({
                                 userId: e,
@@ -225,7 +225,7 @@ class S {
                 query: e,
                 users: r,
                 limit: n,
-                boosters: a,
+                boosters: o,
                 allowSnowflake: i,
             });
             return;
@@ -234,9 +234,9 @@ class S {
             r.setLimit(n),
             r.setQuery({
                 query: e,
-                filters: o,
+                filters: a,
                 blacklist: this._userBlacklist,
-                boosters: a,
+                boosters: o,
             });
     }
     queryGroupDMs(e, t) {
@@ -264,14 +264,14 @@ class S {
     queryLink(e, t) {
         let n;
         if (!this._include(E.h8.LINK)) return [];
-        let r = a().sanitizeUrl(e);
+        let r = o().sanitizeUrl(e);
         try {
             n = new URL(r);
         } catch (e) {
             return [];
         }
-        let { pathname: i, hostname: o = "", host: s } = n,
-            l = h.Z.isDiscordHostname(o) || window.location.host === s;
+        let { pathname: i, hostname: a = "", host: s } = n,
+            l = h.Z.isDiscordHostname(a) || window.location.host === s;
         return null !== i && l && h.Z.isAppRoute(i)
             ? [
                   {

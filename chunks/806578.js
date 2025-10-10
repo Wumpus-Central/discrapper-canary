@@ -1,7 +1,7 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => o });
 var a = r(760919),
     n = r(341901);
-let s = new a.Z({
+let o = new a.Z({
     id: "prophoto-linear",
     cssId: "--prophoto-rgb-linear",
     name: "Linear ProPhoto",

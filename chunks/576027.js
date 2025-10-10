@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => S });
 var r = n(894959),
     i = n(624714),
     l = n(906228),
@@ -20,7 +20,7 @@ var r = n(894959),
     y = n(905534),
     v = n(273487),
     I = n(543815);
-let C = (function (e) {
+let S = (function (e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);

@@ -85,7 +85,7 @@ function f(e) {
             },
             [t, h, w],
         ),
-        x = r.useCallback(
+        L = r.useCallback(
             function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     [n, r] = null != m ? m(f, _) : [f, _];
@@ -104,18 +104,18 @@ function f(e) {
             },
             [g, f, _, m, t, w],
         ),
-        [L, j] = r.useState(!1);
+        [x, M] = r.useState(!1);
     r.useEffect(() => {
-        if (!L || !T) return;
-        j(!1);
+        if (!x || !T) return;
+        M(!1);
         let e = u(c(t, f, _));
         if (null != e) return void w(e);
         S(!1);
         let n = u(c(t));
         null != n && w(n);
-    }, [t, L, T, w, f, _]);
-    let M = r.useCallback((e) => {
-        v.current && null == e && j(!0);
+    }, [t, x, T, w, f, _]);
+    let j = r.useCallback((e) => {
+        v.current && null == e && M(!0);
     }, []);
     r.useEffect(() => {
         T && A && null != I && (w(I), C(!1));
@@ -132,7 +132,7 @@ function f(e) {
                     !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                     e.currentTarget === e.target
                 ) {
-                    e.preventDefault(), e.stopPropagation(), x();
+                    e.preventDefault(), e.stopPropagation(), L();
                     return;
                 }
                 let t = l(e);
@@ -158,16 +158,16 @@ function f(e) {
                             null != p ? p(f, _, e) : null != I && I.click();
                 }
             },
-            [x, g, y, I, p, f, _],
+            [L, g, y, I, p, f, _],
         ),
         U = r.useCallback(
             (e) =>
                 e.currentTarget !== e.target
                     ? (T || (S(!0), R(!0)), !1)
                     : T
-                      ? (x(!1), !1)
-                      : void (E && null != I ? D(f, _) : x(!0)),
-            [T, E, I, x, D, f, _],
+                      ? (L(!1), !1)
+                      : void (E && null != I ? D(f, _) : L(!0)),
+            [T, E, I, L, D, f, _],
         ),
         G = r.useCallback((e) => {
             if (e.target !== e.currentTarget) {
@@ -189,7 +189,7 @@ function f(e) {
             }),
             [n.length, B, T, E, t, k, U, G],
         ),
-        V = r.useCallback(
+        F = r.useCallback(
             (e, n) => {
                 let r = {
                     role: "gridcell",
@@ -199,11 +199,11 @@ function f(e) {
                     tabIndex: E && e === f && n === _ ? 0 : -1,
                     onFocus: P.get("".concat(e, ",").concat(n)),
                 };
-                return e === f && n === _ && (r.ref = M), r;
+                return e === f && n === _ && (r.ref = j), r;
             },
-            [t, E, f, _, P, M],
+            [t, E, f, _, P, j],
         ),
-        F = r.useCallback(
+        V = r.useCallback(
             (e) => ({
                 role: "row",
                 "aria-rowindex": e + 1,
@@ -214,10 +214,10 @@ function f(e) {
         () => ({
             dispatch: g,
             getContainerProps: Z,
-            getItemProps: V,
-            getRowProps: F,
+            getItemProps: F,
+            getRowProps: V,
         }),
-        [g, Z, V, F],
+        [g, Z, F, V],
     );
 }
 function _(e) {

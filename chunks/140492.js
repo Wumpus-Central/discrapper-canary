@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(290780);
+n.d(t, { Z: () => S }), n(388685), n(290780);
 var r = n(358230),
     i = n(931261),
     a = n(355298),
@@ -48,15 +48,15 @@ function I(e) {
     let s = a[o];
     E().includes(s) ? v(s) : O(h.ME, s);
 }
-function S(e, t) {
+function T(e, t) {
     let n = l.Z.getState().channelId,
         a = (0, r.Z)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
     (0, i.s)(t) && a.unshift(m.oC.GUILD_HOME);
     let o = b((null != n ? a.indexOf(n) : -1) + e, a.length);
     O(t, a[o]);
 }
-function T() {
+function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
         t = l.Z.getState().guildId;
-    null == t ? I(e) : S(e, t);
+    null == t ? I(e) : T(e, t);
 }

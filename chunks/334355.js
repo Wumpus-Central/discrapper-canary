@@ -268,7 +268,7 @@ e.exports = function (e) {
             keywords: E,
             contains: w,
         },
-        x = {
+        L = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, "(", c.concat(/\./, d), ")*")],
@@ -288,7 +288,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        L = {
+        x = {
             relevance: 0,
             match: c.either(
                 /\bJSON/,
@@ -301,13 +301,13 @@ e.exports = function (e) {
                 _: [...i, ...a],
             },
         },
-        j = {
+        M = {
             label: "use_strict",
             className: "meta",
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/,
         },
-        M = {
+        j = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/],
@@ -353,9 +353,9 @@ e.exports = function (e) {
             },
             contains: [{ begin: /\(\)/ }, D],
         },
-        V = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        F = {
-            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(V)],
+        F = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        V = {
+            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
             keywords: "async",
             className: {
                 1: "keyword",
@@ -369,7 +369,7 @@ e.exports = function (e) {
         keywords: E,
         exports: {
             PARAMS_CONTAINS: w,
-            CLASS_REFERENCE: L,
+            CLASS_REFERENCE: x,
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -378,7 +378,7 @@ e.exports = function (e) {
                 binary: "node",
                 relevance: 5,
             }),
-            j,
+            M,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             T,
@@ -388,13 +388,13 @@ e.exports = function (e) {
             N,
             { match: /\$\d+/ },
             v,
-            L,
+            x,
             {
                 scope: "attr",
                 match: d + c.lookahead(":"),
                 relevance: 0,
             },
-            F,
+            V,
             {
                 begin: "(" + e.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
                 keywords: "return throw case",
@@ -404,7 +404,7 @@ e.exports = function (e) {
                     e.REGEXP_MODE,
                     {
                         className: "function",
-                        begin: V,
+                        begin: F,
                         returnBegin: !0,
                         end: "\\s*=>",
                         contains: [
@@ -465,7 +465,7 @@ e.exports = function (e) {
                     },
                 ],
             },
-            M,
+            j,
             { beginKeywords: "while if switch catch for" },
             {
                 begin:
@@ -498,7 +498,7 @@ e.exports = function (e) {
             },
             G,
             k,
-            x,
+            L,
             Z,
             { match: /\$[(.]/ },
         ],

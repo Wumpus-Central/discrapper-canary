@@ -3,8 +3,8 @@ var r = n(951288),
     o = n(647438),
     a = n(625651),
     i = n(744993),
-    c = n(943970),
-    l = n(401561),
+    l = n(943970),
+    c = n(401561),
     s = n(388032),
     u = n(775488);
 function d(e) {
@@ -32,7 +32,7 @@ function d(e) {
         })(e, ["guildId", "gameInstance"]);
     let [f, m] = o.useState(!1),
         [b, p] = o.useState(void 0),
-        g = (0, c.Z)(n.gameId, "cover");
+        g = (0, l.Z)(n.gameId, "cover");
     return (0, r.jsx)(
         a.f,
         (function (e) {
@@ -71,8 +71,8 @@ function d(e) {
                         className: u.image,
                     }),
                 }),
-                warningText: s.intl.string(l.default.oHNuWl),
-                acknowledgementText: s.intl.string(l.default.dXQR1t),
+                warningText: s.intl.string(c.default.oHNuWl),
+                acknowledgementText: s.intl.string(c.default.dXQR1t),
                 isLoading: f,
                 error: b,
                 onDeactivate: () => {

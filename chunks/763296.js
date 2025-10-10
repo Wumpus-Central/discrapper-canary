@@ -67,20 +67,20 @@ function D(e) {
     let { guildId: t, soundboardSounds: n } = e;
     E.set(t, n);
 }
-function x(e) {
+function L(e) {
     let { soundId: t, guildId: n } = e,
         r = E.get(n),
         i = null == r ? void 0 : r.findIndex((e) => e.soundId === t);
     null == r || null == i || i < 0 || (r.splice(i, 1), E.set(n, [...r]));
 }
-function L() {
+function x() {
     O = 1;
 }
-function j(e) {
+function M(e) {
     let { soundboardSounds: t } = e;
     E.set(p.X8, t), (O = 2);
 }
-function M(e) {
+function j(e) {
     var t, n, r;
     let { soundId: i, userId: a } = e,
         o = (null != (n = b.get(i)) ? n : 0) + 1,
@@ -119,11 +119,11 @@ function Z(e) {
         I = new Set(null != (a = null == r || null == (i = r.favoriteSoundboardSounds) ? void 0 : i.soundIds) ? a : []);
     } else n === m.yP.PRELOADED_USER_SETTINGS && B(r);
 }
-function V(e) {
+function F(e) {
     let { userId: t } = e;
     y.has(t) ? y.delete(t) : y.add(t);
 }
-function F(e) {
+function V(e) {
     let { soundboardStoreState: t } = e;
     (E = new Map(_.default.entries(t.soundboardSounds))),
         (I = new Set(t.favoritedSoundIds)),
@@ -199,17 +199,17 @@ let Y = new H(s.Z, {
     GUILD_SOUNDBOARD_FETCH: N,
     GUILD_SOUNDBOARD_SOUND_CREATE: w,
     GUILD_SOUNDBOARD_SOUND_UPDATE: w,
-    GUILD_SOUNDBOARD_SOUND_DELETE: x,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: M,
+    GUILD_SOUNDBOARD_SOUND_DELETE: L,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: j,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: k,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: D,
     USER_SOUNDBOARD_SET_VOLUME: G,
     VOICE_CHANNEL_SELECT: C,
     USER_SETTINGS_PROTO_UPDATE: Z,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: L,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: j,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: x,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: M,
     SOUNDBOARD_SOUNDS_RECEIVED: R,
     GUILD_DELETE: P,
-    AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V,
-    OVERLAY_INITIALIZE: F,
+    AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F,
+    OVERLAY_INITIALIZE: V,
 });

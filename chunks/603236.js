@@ -1,13 +1,13 @@
 n.d(t, {
-    I: () => j,
+    I: () => S,
     S: () => N,
 }),
     n(997841);
 var l = n(951288),
     i = n(647438),
-    r = n(533800),
-    a = n(442837),
-    s = n(755721),
+    s = n(533800),
+    r = n(442837),
+    a = n(755721),
     o = n(481060),
     u = n(484614),
     d = n(914010),
@@ -19,62 +19,62 @@ var l = n(951288),
     v = n(245335),
     I = n(981631),
     x = n(388032),
-    f = n(869306);
-let N = a.ZP.connectStores([c.Z], () => ({ hideValue: c.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: a } = e;
+    f = n(451964);
+let N = r.ZP.connectStores([c.Z], () => ({ hideValue: c.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: i, onCopy: s, disabled: r } = e;
         return (0, l.jsx)(u.Z, {
             value: t,
             hideMessage: i ? x.intl.string(x.t["6HzNgY"]) : null,
-            buttonColor: s.zx.Colors.BRAND,
-            onCopy: r,
+            buttonColor: a.zx.Colors.BRAND,
+            onCopy: s,
             autoFocus: n,
-            disabled: a,
+            disabled: r,
         });
     }),
-    j = (e) => {
+    S = (e) => {
         let {
                 guild: t,
                 noInvitesAvailable: n,
-                showFriends: a,
-                onClose: s,
+                showFriends: r,
+                onClose: a,
                 modalState: u,
                 isApplicationBypassToggleEnabled: c,
-                setInviteFlags: j,
+                setInviteFlags: S,
                 copyValue: _,
-                changePage: S,
-                inviteChannel: E,
-                source: b,
-                code: T,
-                guildScheduledEvent: O,
-                disabled: y,
+                changePage: j,
+                inviteChannel: b,
+                source: E,
+                code: y,
+                guildScheduledEvent: T,
+                disabled: O,
                 application: C,
             } = e,
             { maxAge: P, maxUses: Z, networkError: A, showVanityURL: M, flags: w } = u,
             R = i.useCallback(() => {
                 g.default.track(I.rMx.COPY_INSTANT_INVITE, {
                     server: d.Z.getGuildId(),
-                    channel: null == E ? void 0 : E.id,
-                    channel_type: null == E ? void 0 : E.type,
-                    location: b,
-                    code: T,
-                    guild_scheduled_event_id: null == O ? void 0 : O.id,
+                    channel: null == b ? void 0 : b.id,
+                    channel_type: null == b ? void 0 : b.type,
+                    location: E,
+                    code: y,
+                    guild_scheduled_event_id: null == T ? void 0 : T.id,
                     application_id: null == C ? void 0 : C.id,
                 });
-            }, [null == C ? void 0 : C.id, E, b, T, O]);
+            }, [null == C ? void 0 : C.id, b, E, y, T]);
         return (0, l.jsxs)(o.Kqy, {
             gap: 16,
             children: [
                 (0, l.jsx)(N, {
                     value: _,
-                    autoFocus: a,
+                    autoFocus: r,
                     onCopy: R,
-                    disabled: y,
+                    disabled: O,
                 }),
                 c &&
                     (0, l.jsx)(o.rsf, {
-                        checked: (0, h.yE)(w, r.$.IS_APPLICATION_BYPASS),
-                        onChange: (e) => j((0, h.mB)(w, r.$.IS_APPLICATION_BYPASS, e)),
-                        disabled: y,
+                        checked: (0, h.yE)(w, s.$.IS_APPLICATION_BYPASS),
+                        onChange: (e) => S((0, h.mB)(w, s.$.IS_APPLICATION_BYPASS, e)),
+                        disabled: O,
                         label: x.intl.string(x.t["1i1bUl"]),
                         description: x.intl.string(x.t["jvd/LC"]),
                     }),
@@ -86,15 +86,15 @@ let N = a.ZP.connectStores([c.Z], () => ({ hideValue: c.Z.hideInstantInvites }))
                           children: [
                               (0, m.Vg)(P, Z),
                               " ",
-                              a
+                              r
                                   ? (0, l.jsx)(o.eee, {
-                                        onClick: () => S(v.RV.SETTINGS),
+                                        onClick: () => j(v.RV.SETTINGS),
                                         children: x.intl.string(x.t.VNe8Pz),
                                     })
                                   : null,
                           ],
                       }),
-                !n && a && M
+                !n && r && M
                     ? (0, l.jsxs)(o.Text, {
                           variant: "text-xs/normal",
                           className: f.footerText,
@@ -105,7 +105,7 @@ let N = a.ZP.connectStores([c.Z], () => ({ hideValue: c.Z.hideInstantInvites }))
                     ? (0, l.jsx)(p.W, {
                           guild: t,
                           error: A,
-                          onClose: s,
+                          onClose: a,
                       })
                     : null,
             ],

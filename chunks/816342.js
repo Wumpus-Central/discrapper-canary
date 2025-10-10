@@ -1,36 +1,36 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(194359),
-    s = n(367907),
-    o = n(681678),
+    o = n(367907),
+    s = n(681678),
     c = n(138201),
     d = n(592125),
     u = n(699516),
-    m = n(5192),
-    p = n(981631),
-    g = n(388032);
-let x = (e) => {
-    let { user: t, channelId: n, reportId: x, reportType: h } = e,
+    _ = n(5192),
+    m = n(981631),
+    p = n(388032);
+let g = (e) => {
+    let { user: t, channelId: n, reportId: g, reportType: f } = e,
         b = (0, l.e7)([u.Z], () => u.Z.isBlocked(t.id), [t.id]),
-        _ = (0, l.e7)([d.Z], () => d.Z.getChannel(n), [n]),
-        f = i.useMemo(() => m.ZP.getName(null == _ ? void 0 : _.guild_id, null == _ ? void 0 : _.id, t), [_, t]),
+        h = (0, l.e7)([d.Z], () => d.Z.getChannel(n), [n]),
+        x = i.useMemo(() => _.ZP.getName(null == h ? void 0 : h.guild_id, null == h ? void 0 : h.id, t), [h, t]),
         v = i.useCallback(() => {
-            s.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
+            o.ZP.trackWithMetadata(m.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: x,
+                report_id: g,
             }),
                 a.Z.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
-                    o.Z.showBlockSuccessToast(t.id, n);
+                    s.Z.showBlockSuccessToast(t.id, n);
                 });
-        }, [t, x, n]);
+        }, [t, g, n]);
     return (0, r.jsx)(c.JZ, {
-        title: g.intl.formatToPlainString(g.t["Q1o/f3"], { username: f }),
-        description: g.intl.string(g.t.G08MKi),
-        buttonText: b ? g.intl.string(g.t.ot2tSk) : g.intl.string(g.t["l+7PZW"]),
+        title: p.intl.formatToPlainString(p.t["Q1o/f3"], { username: x }),
+        description: p.intl.string(p.t.G08MKi),
+        buttonText: b ? p.intl.string(p.t.ot2tSk) : p.intl.string(p.t["l+7PZW"]),
         buttonDisabled: b,
         onButtonPress: v,
-        buttonVariant: "application" === h.name && b ? "secondary" : "critical-primary",
+        buttonVariant: "application" === f.name && b ? "secondary" : "critical-primary",
     });
 };

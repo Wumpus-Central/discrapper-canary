@@ -1,4 +1,4 @@
-n.d(t, { default: () => C });
+n.d(t, { default: () => N });
 var l = n(951288),
     r = n(647438),
     i = n(442837),
@@ -24,8 +24,8 @@ var l = n(951288),
     _ = n(37258),
     S = n(931617),
     M = n(981631),
-    N = n(388032);
-let C = (0, c.Z)(
+    C = n(388032);
+let N = (0, c.Z)(
     (0, u.Z)(
         function (e) {
             var t;
@@ -34,7 +34,7 @@ let C = (0, c.Z)(
                     guildId: u,
                     channelId: c,
                     context: M,
-                    onSelect: C,
+                    onSelect: N,
                     moderationAlertId: I,
                     analyticsLocation: A,
                     analyticsLocations: T,
@@ -87,7 +87,7 @@ let C = (0, c.Z)(
                 X = (0, S.Z)(n.id, u, !1, R),
                 z = (0, b.Z)({
                     id: n.id,
-                    label: N.intl.string(N.t["/AXYnJ"]),
+                    label: C.intl.string(C.t["/AXYnJ"]),
                     onSuccess: q,
                 }),
                 J = (0, m.Z)(n, u),
@@ -97,8 +97,8 @@ let C = (0, c.Z)(
                 onClose: () => {
                     (0, o.Zy)(), null == D || D();
                 },
-                "aria-label": N.intl.string(N.t.liqwPD),
-                onSelect: C,
+                "aria-label": C.intl.string(C.t.liqwPD),
+                onSelect: N,
                 children: [
                     !$ &&
                         (0, l.jsxs)(l.Fragment, {

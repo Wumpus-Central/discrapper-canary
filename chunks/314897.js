@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => ex }), n(539854), n(358797), n(415506);
+n.r(t), n.d(t, { default: () => eL }), n(539854), n(358797), n(415506);
 var a,
     o = n(213919),
     s = n(756647),
@@ -40,10 +40,10 @@ let N = new g.Z("AuthenticationStore"),
     P = "user_id_cache",
     w = null,
     D = null,
-    x = null,
     L = null,
-    j = null,
+    x = null,
     M = null,
+    j = null,
     k = null,
     U = S.u34.NONE,
     G = !1,
@@ -68,8 +68,8 @@ function Q(e) {
 }
 function J() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((j = u.K.get(R)), null != W)) return W;
-    let t = null != j ? j : o.getToken();
+    if (((M = u.K.get(R)), null != W)) return W;
+    let t = null != M ? M : o.getToken();
     !(0, E.m1)() || (!e && null != t) || I.Z.isHandoffAvailable() || $({ withGuildExperiments: !0 });
 }
 function $(e) {
@@ -77,7 +77,7 @@ function $(e) {
         n = {},
         r = y.default.getSuperPropertiesBase64();
     null != r && (n["X-Super-Properties"] = r),
-        null != j && (n["X-Fingerprint"] = j),
+        null != M && (n["X-Fingerprint"] = M),
         (W = c.tn
             .get({
                 url: S.ANM.EXPERIMENTS,
@@ -111,7 +111,7 @@ function $(e) {
             ));
 }
 function ee() {
-    (M = j), (j = null), u.K.remove(R);
+    (j = M), (M = null), u.K.remove(R);
 }
 function et(e, t) {
     Q("setAuthToken called."), (null == t || t !== w) && o.removeAnalyticsToken(), o.setToken(e, t);
@@ -195,20 +195,20 @@ function eg(e) {
 }
 function eE(e) {
     let t = e.fingerprint;
-    null == j
+    null == M
         ? null != t
             ? (y.default.track(S.rMx.USER_FINGERPRINT_CHANGED, {
-                  old_fingerprint: null != M ? (0, s.s)(M) : null,
+                  old_fingerprint: null != j ? (0, s.s)(j) : null,
                   new_fingerprint: (0, s.s)(t),
               }),
-              (j = t),
               (M = t),
-              u.K.set(R, j))
+              (j = t),
+              u.K.set(R, M))
             : J()
         : null != t &&
-          j !== t &&
+          M !== t &&
           y.default.track(S.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
-              fingerprint: (0, s.s)(j),
+              fingerprint: (0, s.s)(M),
               dropped_fingerprint: (0, s.s)(t),
           });
 }
@@ -222,8 +222,8 @@ function ey(e) {
     Q("handleConnectionOpen called"),
         v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, b.Z)(n)),
         (D = r),
-        (x = i),
-        (L = s),
+        (L = i),
+        (x = s),
         en(a),
         (w = n.id),
         void 0 !== o && (B = o.authenticator_types),
@@ -258,7 +258,7 @@ function eI(e) {
 }
 function eT(e) {
     let { authSessionIdHash: t } = e;
-    null != t && (x = t);
+    null != t && (L = t);
 }
 function eS() {
     (G = !0),
@@ -333,10 +333,10 @@ class eD extends (a = l.ZP.Store) {
         return D;
     }
     getAuthSessionIdHash() {
-        return x;
+        return L;
     }
     getStaticAuthSessionId() {
-        return L;
+        return x;
     }
     getToken() {
         return (0, O.LP)();
@@ -345,7 +345,7 @@ class eD extends (a = l.ZP.Store) {
         return (0, O.$8)();
     }
     getFingerprint() {
-        return j;
+        return M;
     }
     getAnalyticsToken() {
         return null != k ? k : o.getAnalyticsToken();
@@ -380,7 +380,7 @@ class eD extends (a = l.ZP.Store) {
     }
 }
 C(eD, "displayName", "AuthenticationStore");
-let ex = new eD(
+let eL = new eD(
     d.Z,
     {
         CONNECTION_OPEN: ey,

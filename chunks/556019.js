@@ -1,7 +1,7 @@
 n.d(t, { qt: () => c });
 var r = n(203311),
     i = n(818083);
-let o = (0, i.B)({
+let a = (0, i.B)({
         kind: "user",
         id: "2025-04_emoji_studio",
         label: "Emoji Studio",
@@ -36,7 +36,7 @@ let o = (0, i.B)({
             },
         ],
     }),
-    a = (0, i.B)({
+    o = (0, i.B)({
         kind: "user",
         id: "2025-07_emoji_studio_mobile",
         label: "Emoji Studio (Mobile)",
@@ -64,7 +64,7 @@ let o = (0, i.B)({
     }),
     l = (0, i.B)({
         kind: "user",
-        id: "2025-08-emoji_studio_speedrun",
+        id: "2025-08_emoji_studio_speedrun",
         label: "Emoji Studio V2 Speedrun",
         defaultConfig: {
             isEmojiEditingExperimentEnabled: !1,
@@ -92,14 +92,14 @@ let o = (0, i.B)({
 function c(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
         c = (0, r.$u)(t),
-        { enabled: u, showExpressionPickerButton: d } = o.useExperiment(
+        { enabled: u, showExpressionPickerButton: d } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: c || i,
             },
         ),
-        { enabled: f } = a.useExperiment(
+        { enabled: f } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,

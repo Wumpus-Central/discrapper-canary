@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => j });
 var r,
     i = n(442837),
     a = n(780384),
@@ -119,13 +119,13 @@ function w(e) {
 function D(e) {
     return (O = g({}, O, e.preferences)), A();
 }
-function x(e) {
+function L(e) {
     return (T = e.theme), A();
 }
-function L() {
+function x() {
     return (T = null), A();
 }
-function j() {
+function M() {
     return A();
 }
 m(C, "displayName", "ThemeStore"),
@@ -137,7 +137,7 @@ m(C, "displayName", "ThemeStore"),
         },
         (e) => e,
     ]);
-let M = new C(o.Z, {
+let j = new C(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: N,
     LOGOUT: P,
@@ -149,7 +149,7 @@ let M = new C(o.Z, {
     SYSTEM_THEME_CHANGE: w,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
     UPDATE_THEME_PREFERENCES: D,
-    SET_THEME_OVERRIDE: x,
-    CLEAR_THEME_OVERRIDE: L,
-    REFRESH_THEME: j,
+    SET_THEME_OVERRIDE: L,
+    CLEAR_THEME_OVERRIDE: x,
+    REFRESH_THEME: M,
 });

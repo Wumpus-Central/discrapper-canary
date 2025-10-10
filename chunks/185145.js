@@ -1,7 +1,7 @@
 n.d(t, { T: () => g }), n(388685);
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(346486),
     o = n(545594),
@@ -16,19 +16,19 @@ var i = n(442837),
 function g(e) {
     let { guild: t, disabledUntil: n } = e,
         [g, b] = (0, d.i)(t.id),
-        _ = (0, i.e7)([c.ZP, s.default], () => c.ZP.getMember(t.id, s.default.getId()), [t.id]);
+        C = (0, r.e7)([c.ZP, s.default], () => c.ZP.getMember(t.id, s.default.getId()), [t.id]);
     return (
-        (0, u.$)(_),
-        (0, r.jsxs)("div", {
+        (0, u.$)(C),
+        (0, i.jsxs)("div", {
             children: [
                 g
-                    ? (0, r.jsx)(p.Z, {
+                    ? (0, i.jsx)(p.Z, {
                           onClose: () => b(t.id),
                           guildName: t.name,
                       })
                     : null,
-                (0, r.jsx)(o.i, {
-                    bannerIcon: (0, r.jsx)(l.YlB, {
+                (0, i.jsx)(o.i, {
+                    bannerIcon: (0, i.jsx)(l.YlB, {
                         size: "md",
                         color: "currentColor",
                         className: m.bannerIcon,
@@ -37,9 +37,9 @@ function g(e) {
                     bannerSubtext: f.intl.format(f.t["4ZwD5O"], { link: h.cu }),
                     textStyles: m.bannerContainer,
                     headerStyles: m.bannerHeader,
-                    children: (0, r.jsx)(l.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: "text-sm/semibold",
-                        children: (0, r.jsx)(a.Z, {
+                        children: (0, i.jsx)(a.Z, {
                             deadline: new Date(n),
                             showUnits: !0,
                             stopAtOneSec: !0,

@@ -23,7 +23,7 @@ function b(e) {
         n = c.Z.getChannel(t);
     return null != n && !!(0, a.hv)(n.type) && g();
 }
-class O extends (r = l.ZP.Store) {
+class _ extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, c.Z, d.Z, u.ZP);
     }
@@ -31,15 +31,15 @@ class O extends (r = l.ZP.Store) {
         return h;
     }
 }
-(i = "displayName") in O
-    ? Object.defineProperty(O, i, {
+(i = "displayName") in _
+    ? Object.defineProperty(_, i, {
           value: "PrivateChannelReadStateStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (O[i] = "PrivateChannelReadStateStore");
-let y = new O(o.Z, {
+    : (_[i] = "PrivateChannelReadStateStore");
+let y = new _(o.Z, {
     CONNECTION_OPEN: m,
     OVERLAY_INITIALIZE: m,
     MESSAGE_CREATE: b,

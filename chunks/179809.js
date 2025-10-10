@@ -1,32 +1,32 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
     a = n(100568),
-    s = n(786920),
+    s = n(137317),
     c = n(91192),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    f = n(153867),
-    h = n(591146),
+    h = n(153867),
+    f = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
     _ = n(276952),
-    O = n(199540),
-    y = n(40153),
+    y = n(199540),
+    O = n(40153),
     v = n(252686),
     j = n(682662),
     x = n(662146),
     C = n(981631),
     E = n(388032),
     S = n(106663),
-    P = n(534175);
-let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    I = n(534175);
+let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(p.Kqy),
-    w = i.memo(function (e) {
+    Z = i.memo(function (e) {
         let {
                 folderNode: t,
                 setNodeRef: n,
@@ -34,14 +34,14 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 expanded: s,
                 mediaState: d,
                 mentionCount: m = 0,
-                isMentionLowImportance: w,
-                unread: Z = !1,
+                isMentionLowImportance: Z,
+                unread: w = !1,
                 defaultFolderName: T,
                 draggable: A = !1,
                 sorting: R = !1,
                 onDragStart: D,
-                onDragEnd: M,
-                onExpandCollapse: L,
+                onDragEnd: L,
+                onExpandCollapse: M,
                 onContextMenu: k,
                 renderChildNode: U,
                 folderButtonSize: G,
@@ -53,7 +53,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, h.Ml)("FolderItem");
+            J = (0, f.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == M || M(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -76,9 +76,9 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && L();
+                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && M();
                 },
-                [L, s],
+                [M, s],
             ),
             er = null != z && "" !== z ? z : null != T && "" !== T ? T : E.intl.string(E.t.xV9hVl),
             ei = (0, c.Ie)("".concat(H)),
@@ -93,7 +93,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
-                config: { duration: I },
+                config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
             ec = (0, r.jsxs)(j.H, {
@@ -102,8 +102,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         disabled: $ || s,
                         hovered: K,
                         selected: l,
-                        unread: Z,
-                        className: P.pill,
+                        unread: w,
+                        className: I.pill,
                     }),
                     (0, r.jsx)(x.Z, {
                         text: er,
@@ -118,21 +118,21 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 : void 0,
                             className: o()(S.folderHeader, {
                                 [S.folderHeaderSmall]: "icon" === G || J,
-                                [P.wobble]: !$ && q && !s,
+                                [I.wobble]: !$ && q && !s,
                             }),
                             "data-dnd-name": er,
                             children: $
                                 ? (0, r.jsx)(v.Z, { isFolder: !0 })
-                                : (0, r.jsx)(O.Z, {
+                                : (0, r.jsx)(y.Z, {
                                       folderNode: t,
                                       expanded: s,
                                       sorting: R,
                                       mediaState: d,
                                       mentionCount: m,
-                                      isMentionLowImportance: w,
+                                      isMentionLowImportance: Z,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: L,
+                                      onClick: M,
                                       onContextMenu: k,
                                       onHoverChange: Y,
                                       onKeyDown: en,
@@ -144,7 +144,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         }),
                     }),
                     A
-                        ? (0, r.jsx)(y.ZP, {
+                        ? (0, r.jsx)(O.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et,
@@ -186,7 +186,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     );
                 }),
                 A && s
-                    ? (0, r.jsx)(y.Zu, {
+                    ? (0, r.jsx)(O.Zu, {
                           name: er,
                           targetNode: t,
                       })

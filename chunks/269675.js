@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => P });
 var r = n(951288),
     i = n(647438),
     l = n(873546),
@@ -20,32 +20,32 @@ var r = n(951288),
     y = n(293423),
     v = n(20967),
     I = n(504762),
-    C = n(807152),
-    S = n(176505),
-    N = n(388032),
-    T = n(183261);
-function P(e) {
+    S = n(807152),
+    C = n(176505),
+    T = n(388032),
+    N = n(183261);
+function j(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        P = (0, a.e7)([h.Z], () => h.Z.isConnected()),
-        j = (0, p.Z)(t),
+        j = (0, a.e7)([h.Z], () => h.Z.isConnected()),
+        P = (0, p.Z)(t),
         x = (0, O.Z)(t),
         A = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
         Z = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, f.uP)(t),
         R = null == n || !Z || A || L;
     (0, u.Tt)({
-        subsection: N.intl.string(N.t["KzCF//"]),
+        subsection: T.intl.string(T.t["KzCF//"]),
         location: null == n ? void 0 : n.name,
     }),
         (0, c.Z)(l.tq ? "role-subscriptions-overview" : void 0);
-    let D = P && (null == n || !(j || x) || (w && !L));
+    let D = j && (null == n || !(P || x) || (w && !L));
     if (
         (i.useEffect(() => {
             s.jg();
         }, []),
         i.useEffect(() => {
-            D && !l.tq && (0, d.M)(t, S.oC.ROLE_SUBSCRIPTIONS);
+            D && !l.tq && (0, d.M)(t, C.oC.ROLE_SUBSCRIPTIONS);
         }, [t, D]),
         l.tq && D)
     ) {
@@ -53,27 +53,27 @@ function P(e) {
         return (0, r.jsx)(v.z, { errorType: e });
     }
     return (0, r.jsxs)("div", {
-        className: T.container,
+        className: N.container,
         children: [
             (0, r.jsxs)(g.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
-                className: T.headerBar,
+                className: N.headerBar,
                 children: [
                     (0, r.jsx)(g.Z.Icon, {
                         icon: (0, o.GSL)(E.Z),
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t["KzCF//"]) }),
+                    (0, r.jsx)(g.Z.Title, { children: T.intl.string(T.t["KzCF//"]) }),
                 ],
             }),
-            (0, r.jsx)("div", { id: C.v }),
+            (0, r.jsx)("div", { id: S.v }),
             (0, r.jsx)("div", {
-                className: T.content,
-                children: j
+                className: N.content,
+                children: P
                     ? (0, r.jsx)(o.u2D, {
-                          className: T.scroller,
+                          className: N.scroller,
                           children: (0, r.jsx)("div", {
-                              className: T.scrollerContent,
+                              className: N.scrollerContent,
                               children: R ? (0, r.jsx)(o.$jN, {}) : (0, r.jsx)(y.Z, { guild: n }),
                           }),
                       })
@@ -82,11 +82,11 @@ function P(e) {
         ],
     });
 }
-function j(e) {
+function P(e) {
     let { guildId: t } = e;
     return (0, r.jsx)(_.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, r.jsx)(P, { guildId: t }),
+        children: (0, r.jsx)(j, { guildId: t }),
     });
 }

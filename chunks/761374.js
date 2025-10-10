@@ -8,27 +8,27 @@ var i = n(951288),
     u = n(358221),
     c = n(569545),
     d = n(522474),
-    p = n(199902),
-    h = n(314897),
+    h = n(199902),
+    p = n(314897),
     f = n(592125),
     m = n(355863),
     g = n(944486),
-    O = n(837268),
-    y = n(804570),
-    E = n(350663),
-    v = n(752802),
-    b = n(68286),
-    S = n(340101),
+    y = n(837268),
+    O = n(804570),
+    v = n(350663),
+    E = n(752802),
+    S = n(68286),
+    b = n(340101),
     x = n(501787),
     j = n(388032),
-    I = n(491426);
+    I = n(965365);
 function C(e) {
     var t, n;
     let {
             id: C,
             widget: Z,
-            size: w,
-            locked: N,
+            size: N,
+            locked: w,
             padding: T,
             borderWidth: _,
             opacity: P,
@@ -38,13 +38,13 @@ function C(e) {
             anchorLeft: k,
             showEmpty: L = !0,
         } = e,
-        M = D ? S.C5.HORIZONTAL : S.C5.VERTICAL,
-        V = M === S.C5.VERTICAL,
+        M = D ? b.C5.HORIZONTAL : b.C5.VERTICAL,
+        V = M === b.C5.VERTICAL,
         z = (0, l.e7)([m.Z], () => {
             var e;
             let t = m.Z.getWidget(C);
-            return !!(0, S.ZL)(t) && !N && (null == (e = t.meta.showAllStreams) || e);
-        }, [C, N]),
+            return !!(0, b.ZL)(t) && !w && (null == (e = t.meta.showAllStreams) || e);
+        }, [C, w]),
         U = (0, l.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         W = (0, l.e7)([f.Z], () => f.Z.getChannel(U)),
         {
@@ -52,19 +52,19 @@ function C(e) {
             activeStreams: F,
             participantsVersion: H,
         } = (function (e, t, n, i, o) {
-            let a = (0, l.Wu)([p.Z], () => (null == e ? [] : p.Z.getAllActiveStreamsForChannel(e))),
+            let a = (0, l.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e))),
                 s = r.useMemo(() => new Set(a.map((e) => (0, c.V9)(e))), [a]),
                 d = (0, l.e7)([u.Z], () => (null == e ? -1 : u.Z.getParticipantsVersion(e)));
             return {
-                streamParticipants: (0, l.Wu)([u.Z, p.Z], () => {
+                streamParticipants: (0, l.Wu)([u.Z, h.Z], () => {
                     if (null == e) return [];
                     function r(e) {
                         return s.has((0, c.V9)(e.stream));
                     }
                     let l = u.Z.getStreamParticipants(e).filter((e) => {
                         if (e.user.id === t) return !1;
-                        let i = p.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
-                        return !(null != i && v.q.has(i.state)) && (!!n || r(e));
+                        let i = h.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
+                        return !(null != i && E.q.has(i.state)) && (!!n || r(e));
                     });
                     return (
                         l.sort((e, t) => {
@@ -85,26 +85,26 @@ function C(e) {
             };
         })(
             U,
-            (0, l.e7)([h.default], () => h.default.getId()),
+            (0, l.e7)([p.default], () => p.default.getId()),
             z,
             (R && V) || (k && D),
             (!R && V) || (!k && D),
         ),
-        Y = G.length,
-        B = (0, l.e7)([d.Z], () => d.Z.getWindowState(x.$J), []),
+        B = G.length,
+        Y = (0, l.e7)([d.Z], () => d.Z.getWindowState(x.$J), []),
         {
             tileWidth: Q,
-            tileHeight: X,
-            widgetWidth: K,
+            tileHeight: K,
+            widgetWidth: X,
             widgetHeight: J,
             containerRef: q,
             containerMinMaxSizes: $,
-        } = (0, b.Bz)({
-            tileCount: Y,
+        } = (0, S.Bz)({
+            tileCount: B,
             padding: T,
             borderWidth: _,
             isVertical: V,
-            widgetSize: w,
+            widgetSize: N,
         }),
         ee = {
             id: C,
@@ -115,37 +115,37 @@ function C(e) {
             borderWidth: _,
             widgetMinMaxSizes: $,
             containerSize: {
-                width: K,
+                width: X,
                 height: J,
             },
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (t = null == B ? void 0 : B.height) ? t : J,
-                right: null != (n = null == B ? void 0 : B.width) ? n : K,
+                bottom: null != (t = null == Y ? void 0 : Y.height) ? t : J,
+                right: null != (n = null == Y ? void 0 : Y.width) ? n : X,
             },
-            locked: N,
+            locked: w,
         };
-    (0, b.Dl)({
+    (0, S.Dl)({
         id: C,
         streamParticipants: G,
         layout: M,
         widgetLayoutSpecs: ee,
     });
-    let et = null == W || (0 === F.size && N) || (0 === Y && !N);
+    let et = null == W || (0 === F.size && w) || (0 === B && !w);
     return (r.useEffect(() => {
-        a.Z.setGpuBoostRequested(O.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
+        a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
     }, [et]),
     (0, s.ZP)(() => () => {
-        a.Z.setGpuBoostRequested(O.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
-    (et || !A) && N)
+    (et || !A) && w)
         ? null
-        : et && !N
+        : et && !w
           ? L
-              ? N
+              ? w
                   ? null
-                  : (0, i.jsx)(y.E, {
+                  : (0, i.jsx)(O.E, {
                         emptyText: j.intl.string(j.t["T6+rX1"]),
                         icon: o.hGI,
                         absolute: !0,
@@ -155,11 +155,11 @@ function C(e) {
                 className: I.goLiveGridContainer,
                 style: { opacity: P },
                 ref: q,
-                children: (0, i.jsx)(E.Z, {
+                children: (0, i.jsx)(v.Z, {
                     widgetId: C,
                     tileWidth: Q,
-                    tileHeight: X,
-                    locked: N,
+                    tileHeight: K,
+                    locked: w,
                     layout: M,
                     activeStreams: F,
                     streamParticipants: G,

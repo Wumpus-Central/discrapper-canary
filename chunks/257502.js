@@ -1,6 +1,6 @@
 n.d(t, { _: () => o });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(709014);
 let a = {
         click: {
@@ -15,41 +15,41 @@ let a = {
         },
     },
     o = () => {
-        let e = i.useRef(null),
-            t = i.useCallback(() => {
+        let e = r.useRef(null),
+            t = r.useCallback(() => {
                 null != e.current && e.current.play("click");
             }, []),
-            o = i.useCallback(() => {
+            o = r.useCallback(() => {
                 null != e.current && e.current.play("hover");
             }, []),
-            s = i.useCallback(() => {
+            s = r.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying("hover");
             }, []),
-            c = i.useCallback((t) => {
-                var i, o;
-                return (0, r.jsx)(
+            c = r.useCallback((t) => {
+                var r, o;
+                return (0, i.jsx)(
                     l.L,
-                    ((i = (function (e) {
+                    ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -61,18 +61,18 @@ let a = {
                             markers: a,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                           }),
-                    i),
+                    r),
                 );
             }, []);
         return {
@@ -81,11 +81,11 @@ let a = {
                 onMouseLeave: s,
             },
             play: t,
-            getDuration: i.useCallback(() => {
+            getDuration: r.useCallback(() => {
                 var t;
                 return null == (t = e.current) ? void 0 : t.getDuration();
             }, []),
-            getCurrentFrame: i.useCallback(() => {
+            getCurrentFrame: r.useCallback(() => {
                 var t, n;
                 return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),

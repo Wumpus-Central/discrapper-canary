@@ -1,40 +1,40 @@
 n.d(t, { Z: () => a }), n(539854);
 var r = n(88315),
-    l = n(199766),
-    i = n(813900);
+    i = n(199766),
+    l = n(813900);
 function a(e) {
     let {
         line: t,
         context: n,
         canvasWidth: a,
         canvasHeight: o,
-        fallbackColor: u,
+        fallbackColor: c,
         outlineColorDark: s,
-        outlineColorLight: c,
+        outlineColorLight: u,
         linesDrawnAt: d,
         deadDrawables: f,
     } = e;
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = "round"), (n.lineJoin = "round");
     let p = t.points.map((e) => (0, r.RR)(e, a, o)),
-        m = d.current[t.id],
-        E = (e) => m + e.deltaTime + 1500 >= Date.now(),
-        g = (e) => m + e.deltaTime <= Date.now() && E(e),
-        b = p.find(g);
-    if (null == b) {
-        E(t.points[t.points.length - 1]) || f.push(t);
+        _ = d.current[t.id],
+        m = (e) => _ + e.deltaTime + 1500 >= Date.now(),
+        b = (e) => _ + e.deltaTime <= Date.now() && m(e),
+        E = p.find(b);
+    if (null == E) {
+        m(t.points[t.points.length - 1]) || f.push(t);
         return;
     }
-    let S = (e, t) => {
+    let g = (e, t) => {
             let r = null;
-            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(b.x, b.y);
+            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(E.x, E.y);
             for (let e = 1; e < p.length; e++) {
                 let t = p[e];
-                g(t) && (n.lineTo(t.x, t.y), (r = t));
+                b(t) && (n.lineTo(t.x, t.y), (r = t));
             }
             return n.stroke(), r;
         },
-        { fillColor: v, outlineColor: h } = (0, r.bg)(t.userId, s, c, u),
-        O = S(h, 6 + i.q2),
-        y = null != O && g(O);
-    y && (0, l.I)(n, O.x, O.y, h, i.q2), S(v, 6), y && (0, l.T)(n, O.x, O.y, t.userId);
+        { fillColor: v, outlineColor: h } = (0, r.bg)(t.userId, s, u, c),
+        S = g(h, 6 + l.q2),
+        y = null != S && b(S);
+    y && (0, i.I)(n, S.x, S.y, h, l.q2), g(v, 6), y && (0, i.T)(n, S.x, S.y, t.userId);
 }

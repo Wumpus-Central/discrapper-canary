@@ -16,8 +16,8 @@ var r = n(951288),
     x = n(451478),
     _ = n(617136),
     b = n(509212),
-    j = n(272008),
-    v = n(113434),
+    v = n(272008),
+    j = n(113434),
     C = n(569984),
     y = n(497505),
     E = n(184299),
@@ -27,8 +27,8 @@ var r = n(951288),
     w = n(475595),
     P = n(720293),
     N = n(644646),
-    R = n(110560),
-    A = n(78826),
+    A = n(110560),
+    R = n(78826),
     B = n(693900),
     k = n(164495),
     I = n(759853),
@@ -52,9 +52,9 @@ function H(e) {
     s.useEffect(() => {
         null != f.current && (d && (!l || p) ? ((f.current.currentTime = 0), f.current.play()) : f.current.pause());
     }, [f, p, l, d]);
-    let j = b(o.id),
-        v = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null && j === E.iw.COMPLETED,
-        C = !v && (!l || p);
+    let v = b(o.id),
+        j = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null && v === E.iw.COMPLETED,
+        C = !j && (!l || p);
     return (0, r.jsxs)(m.P3F, {
         className: U.videoQuestPreviewCont,
         onClick: i,
@@ -89,7 +89,7 @@ function H(e) {
                 : null,
             (0, r.jsx)("div", {
                 className: U.previewPlayButtonCont,
-                children: v
+                children: j
                     ? (0, r.jsx)(m.Oe7, {
                           color: u.Z.colors.WHITE,
                           className: U.previewPlayButton,
@@ -113,7 +113,7 @@ function F(e) {
         sourceQuestContent: y.jn.QUEST_BAR_V2,
     });
 }
-function X(e) {
+function z(e) {
     return (0, r.jsx)(m.Text, {
         className: U.description,
         variant: "text-xs/normal",
@@ -129,7 +129,7 @@ function X(e) {
         }),
     });
 }
-function z(e) {
+function X(e) {
     let {
             quest: t,
             taskDetails: n,
@@ -140,9 +140,9 @@ function z(e) {
             isExpanded: h,
             onAcceptQuest: _,
             onGameSheetOpened: b,
-            onGameSheetClosed: j,
+            onGameSheetClosed: v,
         } = e,
-        v = s.useRef(null),
+        j = s.useRef(null),
         y = (0, d.e7)([C.Z], () => C.Z.isEnrolling(t.id), [t]),
         E = s.useMemo(() => (0, w.fh)(t, w.eC.QUEST_BAR_HERO), [t]),
         S = (0, T.CR)({ quest: t }),
@@ -150,8 +150,8 @@ function z(e) {
             location: M.dr.QUESTS_BAR,
             questConfig: t.config,
         }),
-        R = s.useMemo(() => (0, w.fh)(t, w.eC.HERO_IMAGE), [t]),
-        B = s.useMemo(() => (null == R ? {} : { backgroundImage: "url(".concat(R.url, ")") }), [R]),
+        A = s.useMemo(() => (0, w.fh)(t, w.eC.HERO_IMAGE), [t]),
+        B = s.useMemo(() => (null == A ? {} : { backgroundImage: "url(".concat(A.url, ")") }), [A]),
         k = (0, g.ZP)(),
         I = (0, p.wj)(k),
         q = (0, d.e7)([x.Z], () => x.Z.isFocused()),
@@ -159,7 +159,7 @@ function z(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                ref: v,
+                ref: j,
                 children: (0, r.jsxs)("div", {
                     className: U.questPromoContent,
                     ref: u,
@@ -174,12 +174,12 @@ function z(e) {
                                     variant: "heading-md/medium",
                                     children: Z.intl.format(Z.t.EQa7oq, { questName: t.config.messages.questName }),
                                 }),
-                                (0, r.jsx)(X, {
+                                (0, r.jsx)(z, {
                                     quest: t,
                                     taskDetails: n,
-                                    popoutTargetElementRef: v,
+                                    popoutTargetElementRef: j,
                                     onGameSheetOpened: b,
-                                    onGameSheetClosed: j,
+                                    onGameSheetClosed: v,
                                 }),
                             ],
                         }),
@@ -199,7 +199,7 @@ function z(e) {
                 }),
             }),
             P &&
-                null != R &&
+                null != A &&
                 (0, r.jsxs)(i.animated.div, {
                     className: U.contentCollapsedBackgroundWrapper,
                     style: {
@@ -266,7 +266,7 @@ function z(e) {
                             ],
                         }),
                     E.isAnimated
-                        ? (0, r.jsx)(A.Fl, {
+                        ? (0, r.jsx)(R.Fl, {
                               id: "QuestBarV2ContentExpanded_heroAnimated",
                               children: (e) =>
                                   (0, r.jsx)(G, {
@@ -276,7 +276,7 @@ function z(e) {
                                       reducedMotion: c,
                                   }),
                           })
-                        : (0, r.jsx)(A.Fl, {
+                        : (0, r.jsx)(R.Fl, {
                               id: "QuestBarV2ContentExpanded_heroStatic",
                               children: (e) =>
                                   (0, r.jsx)("img", {
@@ -334,26 +334,26 @@ function K(e) {
             onCtxMenuClose: f,
             onCtxMenuSelect: h,
             onGameSheetOpened: x,
-            onGameSheetClosed: j,
+            onGameSheetClosed: v,
         } = e,
         C = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         E = o.percentComplete > 0,
-        O = (0, v.z)(n),
-        [S, T, w] = (0, v.me)(n, o),
+        O = (0, j.z)(n),
+        [S, T, w] = (0, j.me)(n, o),
         P = s.useRef(null),
         N = s.useRef(null),
-        A = (0, v._s)({ quest: n }),
+        R = (0, j._s)({ quest: n }),
         Z = (0, b.q8)(n),
-        F = (0, v.Jf)(n),
-        X = s.useCallback(() => {
-            (0, R.openVideoQuestModal)({
+        F = (0, j.Jf)(n),
+        z = s.useCallback(() => {
+            (0, A.openVideoQuestModal)({
                 quest: n,
                 questContent: y.jn.QUEST_BAR_V2,
                 sourceQuestContent: y.jn.QUEST_BAR_V2,
                 sourceQuestContentCTA: _.jZ.QUEST_BAR_VIDEO_QUEST_PREVIEW,
             });
         }, [n]),
-        z = null != F ? F.percentComplete : o.percentComplete;
+        X = null != F ? F.percentComplete : o.percentComplete;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.animated.div, {
@@ -392,11 +392,11 @@ function K(e) {
                         quest: n,
                         progressBarRef: P,
                         isExpanded: !0,
-                        percentComplete: z,
+                        percentComplete: X,
                         activeScreen: S,
                         popoutTargetElementRef: N,
                         onGameSheetOpened: x,
-                        onGameSheetClosed: j,
+                        onGameSheetClosed: v,
                     }),
                     (0, r.jsx)(B.n, {
                         children:
@@ -424,14 +424,14 @@ function K(e) {
                                 (0, r.jsx)(H, {
                                     isExpanded: u,
                                     quest: n,
-                                    onClick: X,
+                                    onClick: z,
                                     reducedMotion: p,
                                 }),
                             (0, r.jsx)(k.y, {
                                 quest: n,
                                 useReducedMotion: p,
                                 isExpanded: u,
-                                awaitingConsoleConnections: A,
+                                awaitingConsoleConnections: R,
                                 hasMadeProgress: E,
                                 isProgressing: O,
                                 activeScreen: S,
@@ -440,7 +440,7 @@ function K(e) {
                                 taskDetails: o,
                                 sourceQuestContent: y.jn.QUEST_BAR_V2,
                                 onGameSheetOpened: x,
-                                onGameSheetClosed: j,
+                                onGameSheetClosed: v,
                             }),
                         ],
                     }),
@@ -456,25 +456,25 @@ function K(e) {
 async function Y(e, t, n, r) {
     let s = (0, b.q8)(e);
     return s && (0, S.R)(M.dr.QUESTS_BAR)
-        ? void (await (0, R.enrollAndStartVideoQuestWithErrorHandling)(e, {
+        ? void (await (0, A.enrollAndStartVideoQuestWithErrorHandling)(e, {
               questContent: t,
               questContentCTA: n,
               sourceQuestContent: r,
               sourceQuestContentCTA: n,
           }))
         : (0, b.Rt)(e) && (0, S.R)(M.dr.QUESTS_BAR)
-          ? void (await (0, j.AH)(e.id, {
+          ? void (await (0, v.AH)(e.id, {
                 questContent: t,
                 questContentCTA: n,
                 sourceQuestContent: r,
             }))
-          : void ((0, j.AH)(e.id, {
+          : void ((0, v.AH)(e.id, {
                 questContent: t,
                 questContentCTA: n,
                 sourceQuestContent: r,
             }),
             s &&
-                (0, R.openVideoQuestModal)({
+                (0, A.openVideoQuestModal)({
                     quest: e,
                     questContent: t,
                     sourceQuestContent: r,
@@ -495,12 +495,12 @@ let J = s.forwardRef(function (e, t) {
             onCtxMenuSelect: f,
             onGameSheetOpened: h,
             onGameSheetClosed: x,
-            overlayRef: j,
+            overlayRef: v,
             quest: C,
             useReducedMotion: E,
             taskDetails: O,
         } = e,
-        { launchInGameActivity: S } = (0, v.zB)(C),
+        { launchInGameActivity: S } = (0, j.zB)(C),
         T = (0, b.Rt)(C),
         w = s.useCallback(async () => {
             let e = T ? _.jZ.START_QUEST : _.jZ.ACCEPT_QUEST;
@@ -538,7 +538,7 @@ let J = s.forwardRef(function (e, t) {
                           quest: C,
                           taskDetails: O,
                           expansionSpring: p,
-                          overlayRef: j,
+                          overlayRef: v,
                           isExpanded: d,
                           reducedMotion: E,
                           onCtxMenuOpen: m,
@@ -548,7 +548,7 @@ let J = s.forwardRef(function (e, t) {
                           onGameSheetOpened: h,
                           onGameSheetClosed: x,
                       })
-                    : (0, r.jsx)(z, {
+                    : (0, r.jsx)(X, {
                           quest: C,
                           taskDetails: O,
                           expansionSpring: p,

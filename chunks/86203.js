@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c });
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(481060),
+var r = n(481060),
     l = n(493683),
     a = n(726521),
     o = n(868807),
@@ -13,7 +13,7 @@ function c(e) {
     let m = () => {
         null == c || c(), l.Z.closePrivateChannel(t.id);
     };
-    return (0, r.jsx)(i.zxk, {
+    return (0, i.jsx)(r.zxk, {
         variant: "critical-primary",
         size: "sm",
         disabled: null == f,

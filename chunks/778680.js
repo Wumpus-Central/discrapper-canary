@@ -4,7 +4,7 @@ var r = n(951288),
     l = n(481060),
     a = n(751586),
     o = n(388032),
-    s = n(807231);
+    s = n(473846);
 function c(e) {
     let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
         d = (0, a.Ui)(),

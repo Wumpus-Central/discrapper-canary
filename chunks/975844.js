@@ -1,7 +1,7 @@
 var a = r(98405),
     n = r(209957),
-    s = r(146063),
-    o = r(967333),
+    o = r(146063),
+    s = r(967333),
     i = Array;
 a(
     {
@@ -10,8 +10,8 @@ a(
     },
     {
         toReversed: function () {
-            return n(s(this), i);
+            return n(o(this), i);
         },
     },
 ),
-    o("toReversed");
+    s("toReversed");

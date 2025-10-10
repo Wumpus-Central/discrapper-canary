@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => P }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -19,7 +19,7 @@ var r = n(951288),
     E = n(981631),
     y = n(921944),
     v = n(388032),
-    I = n(808578);
+    I = n(188784);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ let T = [],
             text: t,
         });
     },
-    P = (e) => {
+    j = (e) => {
         let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: o } = e;
         return (0, r.jsxs)("div", {
             className: a()(I.featureCard, { [I.wideStyle]: o }),
@@ -105,13 +105,13 @@ let T = [],
             ],
         });
     };
-function j(e) {
+function P(e) {
     let {
             className: t,
             renderModalProps: n,
             heroArt: l,
             heroArtClassName: N,
-            modalDismissibleContent: j,
+            modalDismissibleContent: P,
             modalTopExtra: x,
             header: A,
             headerClassName: Z,
@@ -124,16 +124,16 @@ function j(e) {
         } = e,
         { onClose: U, transitionState: G } = n,
         B = (0, f.Dt)(),
-        V = R.length % 2 == 0,
-        H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        H = R.length % 2 == 0,
+        V = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         [F, z] = i.useState(Date.now()),
-        [W, Y] = i.useState(0),
-        [K, q] = i.useState(0),
+        [W, q] = i.useState(0),
+        [Y, K] = i.useState(0),
         [Q, X] = i.useState(!1),
         [J, $] = i.useState(!0),
         ee = i.useRef(F),
         et = i.useRef(W),
-        en = i.useRef(K),
+        en = i.useRef(Y),
         er = i.useRef(Q),
         ei = i.useRef(J),
         [el, ea] = i.useState(T),
@@ -143,7 +143,7 @@ function j(e) {
             t = e - ee.current,
             n = et.current,
             r = en.current;
-        return er.current && (Y((n += t)), ei.current || q((r += t))), z(e), [n, r];
+        return er.current && (q((n += t)), ei.current || K((r += t))), z(e), [n, r];
     }
     return (
         i.useEffect(() => {
@@ -179,8 +179,8 @@ function j(e) {
             [el],
         ),
         i.useEffect(() => {
-            (ee.current = F), (et.current = W), (en.current = K), (er.current = Q), (ei.current = J);
-        }, [F, W, K, Q, J]),
+            (ee.current = F), (et.current = W), (en.current = Y), (er.current = Q), (ei.current = J);
+        }, [F, W, Y, Q, J]),
         i.useEffect(
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
@@ -198,7 +198,7 @@ function j(e) {
             [D, l.type],
         ),
         i.useEffect(() => {
-            null != j && (0, m.kk)(j);
+            null != P && (0, m.kk)(P);
             let e = Date.now();
             return (
                 _.default.track(E.rMx.CHANGE_LOG_OPENED, { change_log_id: D }),
@@ -207,10 +207,10 @@ function j(e) {
                         change_log_id: D,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != j && (0, g.Q3)(j, { dismissAction: y.L.DISMISS });
+                        null != P && (0, g.Q3)(P, { dismissAction: y.L.DISMISS });
                 }
             );
-        }, [j, D]),
+        }, [P, D]),
         (0, r.jsx)(c.Y0X, {
             "data-migration-pending": !0,
             className: a()(I.root, I.largeBorderRadius, t),
@@ -240,7 +240,7 @@ function j(e) {
                             "video" === l.type
                                 ? (0, r.jsx)(h.Z, {
                                       className: a()(I.video, N),
-                                      autoPlay: !H,
+                                      autoPlay: !V,
                                       loop: !0,
                                       muted: !0,
                                       controls: !0,
@@ -322,11 +322,11 @@ function j(e) {
                                 }),
                             R.length > 0 &&
                                 (0, r.jsx)("div", {
-                                    className: a()(I.featureCardGroup, { [I.wideStyle]: V }),
+                                    className: a()(I.featureCardGroup, { [I.wideStyle]: H }),
                                     children: R.map((e, t) =>
                                         (0, r.jsx)(
-                                            P,
-                                            C(S({}, e), { wideStyle: V }),
+                                            j,
+                                            C(S({}, e), { wideStyle: H }),
                                             "".concat(e.header, "_").concat(t),
                                         ),
                                     ),

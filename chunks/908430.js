@@ -1,11 +1,11 @@
 n.d(t, { f: () => i }), n(388685), n(539854);
 var r = n(647438),
     l = n(399606),
-    a = n(570140),
-    s = n(615006);
+    s = n(570140),
+    a = n(615006);
 function i() {
     let e = r.useRef(new Map()),
-        t = (0, l.e7)([s.Z], () => s.Z.getUserDiscounts());
+        t = (0, l.e7)([a.Z], () => a.Z.getUserDiscounts());
     r.useEffect(() => {
         let n = e.current,
             r = Date.now(),
@@ -17,7 +17,7 @@ function i() {
                 if (t <= 0) l.push(e.discountId);
                 else {
                     let r = setTimeout(() => {
-                        a.Z.dispatch({
+                        s.Z.dispatch({
                             type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED",
                             discountIds: [e.discountId],
                         }),
@@ -27,7 +27,7 @@ function i() {
                 }
             }),
             l.length > 0 &&
-                a.Z.dispatch({
+                s.Z.dispatch({
                     type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED",
                     discountIds: l,
                 }),

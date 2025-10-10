@@ -1,9 +1,9 @@
 n.d(t, { A: () => b });
 var r = n(951288);
 n(647438);
-var i = n(793030),
-    a = n(442837),
-    o = n(312568),
+var i = n(374481),
+    a = n(793030),
+    o = n(442837),
     s = n(481060),
     l = n(812206),
     c = n(370210),
@@ -18,7 +18,7 @@ var i = n(793030),
     E = n(325380);
 function b(e) {
     let { appId: t, skuId: n, transitionState: b, onClose: y, children: O, footer: v } = e,
-        I = (0, a.e7)([l.Z, c.Z], () => {
+        I = (0, o.e7)([l.Z, c.Z], () => {
             var e;
             return null != (e = l.Z.getApplication(t)) ? e : c.Z.getApplicationRecord(t);
         }, [t]),
@@ -27,7 +27,7 @@ function b(e) {
     let S = (0, f.y)(I, 25),
         { termsOfServiceUrl: A, privacyPolicyUrl: C } = I;
     if ((null == T ? void 0 : T.applicationId) !== t)
-        return (0, r.jsx)(i.Modal, {
+        return (0, r.jsx)(a.Modal, {
             actions: [
                 {
                     onClick: y,
@@ -54,22 +54,22 @@ function b(e) {
                   className: g.appIcon,
               })
             : void 0;
-    return (0, r.jsxs)(i.IX, {
+    return (0, r.jsxs)(a.IX, {
         onClose: y,
         size: "lg",
         transitionState: b,
         children: [
-            (0, r.jsx)(i.xBx, {
+            (0, r.jsx)(a.xBx, {
                 leading: N,
                 title: I.name,
             }),
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(i.Z, {
                 children: (0, r.jsx)("main", {
                     className: E.bodyInner,
                     children: O,
                 }),
             }),
-            (0, r.jsx)(i.mzw, {
+            (0, r.jsx)(a.mzw, {
                 children: (0, r.jsxs)("div", {
                     className: g.footer,
                     children: [

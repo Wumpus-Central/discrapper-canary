@@ -3,17 +3,17 @@ n.d(t, {
     LO: () => D,
     TQ: () => w,
     UB: () => H,
-    ZU: () => x,
-    Zn: () => L,
+    ZU: () => L,
+    Zn: () => x,
     aZ: () => R,
-    bo: () => j,
+    bo: () => M,
     fz: () => W,
-    kK: () => M,
+    kK: () => j,
     lg: () => Y,
-    om: () => V,
+    om: () => F,
     pL: () => P,
     uV: () => N,
-    uX: () => F,
+    uX: () => V,
 }),
     n(410992),
     n(227481),
@@ -76,7 +76,7 @@ function D(e, t, n) {
         O.Z.deleteSecureFramesVerifiedKey(e, n);
     } else O.Z.deleteSecureFramesTransientKey(e);
 }
-function x(e, t) {
+function L(e, t) {
     I.Z.openSecureFramesUpdateConfirmation({
         title: C.intl.string(C.t["hdL15+"]),
         subtitle: C.intl.string(C.t["8VGYKi"]),
@@ -85,7 +85,7 @@ function x(e, t) {
         },
     });
 }
-function L(e) {
+function x(e) {
     let t = h.default.getUser(e),
         n = y.ZP.getName(t);
     I.Z.openSecureFramesUpdateConfirmation({
@@ -96,7 +96,7 @@ function L(e) {
         },
     });
 }
-function j(e) {
+function M(e) {
     let t = s()(e),
         n = s()().diff(t, "s");
     if (n > 12 * m.Z.Seconds.DAYS_30) {
@@ -124,7 +124,7 @@ function j(e) {
         return C.intl.formatToPlainString(C.t.ws6rWl, { count: e });
     }
 }
-function M(e) {
+function j(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
         ? C.intl.format(C.t["FJN+kp"], { helpArticle: N() })
@@ -181,10 +181,10 @@ async function B(e) {
 function Z(e) {
     return v.Z.getUploadedKeyVersionsCached().includes(e);
 }
-async function V(e) {
+async function F(e) {
     Z(e) || (await B(e));
 }
-async function F(e) {
+async function V(e) {
     if (!Z(e)) return await B(e), !0;
     let t = d.default.getId(),
         { key: n } = await k(e),

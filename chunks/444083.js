@@ -2,15 +2,15 @@ t.d(n, { Z: () => x });
 var r = t(951288),
     a = t(647438),
     i = t(481060),
-    o = t(239091),
-    s = t(100527),
-    l = t(49012),
+    s = t(239091),
+    l = t(100527),
+    o = t(49012),
     c = t(639777),
     d = t(809741),
     u = t(473682),
-    m = t(440589),
-    b = t(388032),
-    g = t(412247);
+    m = t(401561),
+    g = t(388032),
+    b = t(587983);
 let f = {
     steps: {
         [u.Vb.SERVER_SETTINGS]: {
@@ -34,9 +34,9 @@ function x(e) {
                   return (0, r.jsx)(i.v2r, {
                       navId: "portkey-popout-context-menu",
                       onClose: () => {
-                          (0, o.Zy)(), a();
+                          (0, s.Zy)(), a();
                       },
-                      "aria-label": b.intl.string(m.default.xCq1DA),
+                      "aria-label": g.intl.string(m.default.xCq1DA),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
@@ -44,21 +44,21 @@ function x(e) {
                                   (0, r.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
-                                      label: b.intl.string(m.default["TciV8/"]),
+                                      label: g.intl.string(m.default["TciV8/"]),
                                       action: () => {
-                                          (0, l.q)({ href: u.BH[t.providerType] });
+                                          (0, o.q)({ href: u.BH[t.providerType] });
                                       },
                                   }),
                               (0, r.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
-                                  label: b.intl.string(m.default.NUTl4u),
+                                  label: g.intl.string(m.default.NUTl4u),
                                   action: () => {
                                       (0, d.Z)({
                                           guildId: n,
                                           stepConfig: f,
                                           initialPortkeyInstance: t,
-                                          analyticsLocation: s.Z.PORTKEY_OVERVIEW,
+                                          analyticsLocation: l.Z.PORTKEY_OVERVIEW,
                                       });
                                   },
                               }),
@@ -96,8 +96,8 @@ function x(e) {
                           return e;
                       })(
                           {
-                              "aria-label": b.intl.string(b.t.UKOtz8),
-                              className: g.clickable,
+                              "aria-label": g.intl.string(g.t.UKOtz8),
+                              className: b.clickable,
                           },
                           e,
                       )),

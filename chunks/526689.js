@@ -1,10 +1,10 @@
 n.d(t, { d: () => c }), n(388685);
-var a = n(951288),
-    l = n(647438),
-    s = n(757853),
-    r = n(72214),
-    o = n(135102),
-    i = n(924585);
+var r = n(951288),
+    a = n(647438),
+    o = n(757853),
+    l = n(72214),
+    s = n(135102),
+    i = n(475495);
 let c = () => {
     let {
             selectedDestinations: e,
@@ -13,19 +13,19 @@ let c = () => {
             message: c,
             channel: u,
             updateSelectShareDestinations: d,
-        } = (0, o.C$)(),
-        { results: _, updateSearchText: f } = (0, r.s)({
+        } = (0, s.C$)(),
+        { results: f, updateSearchText: b } = (0, l.s)({
             selectedDestinations: e,
             includeMissingDMs: !0,
         });
-    (0, l.useEffect)(() => {
-        f(n);
-    }, [f, n]);
-    let b = (0, l.useCallback)(
+    (0, a.useEffect)(() => {
+        b(n);
+    }, [b, n]);
+    let p = (0, a.useCallback)(
             (t) => {
                 let n = e.findIndex((e) => {
-                    let { type: n, id: a } = e;
-                    return n === t.type && a === t.id;
+                    let { type: n, id: r } = e;
+                    return n === t.type && r === t.id;
                 });
                 if (-1 !== n) {
                     let t = [...e];
@@ -36,16 +36,16 @@ let c = () => {
             },
             [e, d],
         ),
-        p = e.length >= t;
-    return (0, a.jsx)(s.F, {
+        g = e.length >= t;
+    return (0, r.jsx)(o.F, {
         paddingBottom: 16,
         paddingTop: 16,
-        rowData: _,
+        rowData: f,
         message: c,
         originChannel: u,
-        handleToggleDestination: b,
+        handleToggleDestination: p,
         selectedDestinations: e,
-        disableSelection: p,
+        disableSelection: g,
         rowClassName: i.rowContainer,
     });
 };

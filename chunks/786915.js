@@ -1,8 +1,8 @@
-n.d(t, { Z: () => C });
-var r = n(951288);
+n.d(t, { Z: () => y });
+var i = n(951288);
 n(647438);
-var i = n(512722),
-    l = n.n(i),
+var r = n(512722),
+    l = n.n(r),
     a = n(442837),
     o = n(481060),
     s = n(24124),
@@ -15,36 +15,36 @@ var i = n(512722),
     m = n(871499),
     g = n(981631),
     b = n(388032);
-function y(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function C(e) {
+function y(e) {
     var {
             applicationId: t,
-            stream: i,
-            channel: C,
+            stream: r,
+            channel: y,
             exitFullScreen: _,
             appContext: v,
             analyticsLocation: x,
@@ -60,23 +60,23 @@ function C(e) {
         N = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "applicationId",
             "stream",
@@ -95,13 +95,13 @@ function C(e) {
         ]);
     let A = (0, d.bp)(),
         { parentAnalyticsLocation: w } = (0, c.ZP)(),
-        M = null == C ? void 0 : C.getGuildId(),
+        M = null == y ? void 0 : y.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
         k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
         L = null == t || j ? o.ejJ : o.gQj,
         D = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
     return null != k && E
-        ? (0, r.jsx)(m.Z, {
+        ? (0, i.jsx)(m.Z, {
               onClick: () => {
                   null != w && (0, u.v)(w, u.d.INVITE), s.h7(k, !1, A);
               },
@@ -113,19 +113,19 @@ function C(e) {
               buttonText: Z,
               color: null != T ? T : void 0,
           })
-        : null != R && null != C && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, C)
-          ? (0, r.jsx)(
+        : null != R && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
+          ? (0, i.jsx)(
                 m.Z,
-                y(
+                C(
                     {
                         onClick: () => {
                             l()(null != R, "guild cannot be null"),
-                                l()(null != C, "channel cannot be null"),
+                                l()(null != y, "channel cannot be null"),
                                 null != w && (0, u.v)(w, u.d.INVITE),
                                 (function (e) {
                                     let {
                                         guild: t,
-                                        channel: i,
+                                        channel: r,
                                         streamUserId: l,
                                         applicationId: a,
                                         appContext: s,
@@ -143,17 +143,17 @@ function C(e) {
                                                 ]).then(n.bind(n, 560114));
                                                 return (n) => {
                                                     var o, s;
-                                                    return (0, r.jsx)(
+                                                    return (0, i.jsx)(
                                                         e,
-                                                        ((o = y({}, n)),
+                                                        ((o = C({}, n)),
                                                         (s = s =
                                                             {
                                                                 guild: t,
-                                                                channel: i,
+                                                                channel: r,
                                                                 streamUserId: l,
                                                                 applicationId: a,
                                                                 analyticsLocation: u,
-                                                                source: i.isGuildStageVoice()
+                                                                source: r.isGuildStageVoice()
                                                                     ? g.t4x.STAGE_CHANNEL
                                                                     : g.t4x.STREAM_INVITE,
                                                                 guildScheduledEvent: d,
@@ -166,8 +166,8 @@ function C(e) {
                                                             : (function (e, t) {
                                                                   var n = Object.keys(e);
                                                                   if (Object.getOwnPropertySymbols) {
-                                                                      var r = Object.getOwnPropertySymbols(e);
-                                                                      n.push.apply(n, r);
+                                                                      var i = Object.getOwnPropertySymbols(e);
+                                                                      n.push.apply(n, i);
                                                                   }
                                                                   return n;
                                                               })(Object(s)).forEach(function (e) {
@@ -188,8 +188,8 @@ function C(e) {
                                         );
                                 })({
                                     guild: R,
-                                    channel: C,
-                                    streamUserId: null == i ? void 0 : i.ownerId,
+                                    channel: y,
+                                    streamUserId: null == r ? void 0 : r.ownerId,
                                     applicationId: t,
                                     appContext: null != v ? v : A,
                                     exitFullScreen: _,

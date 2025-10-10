@@ -70,15 +70,15 @@ var c = n(901607),
     P = n(467159),
     w = v.isBrowser("IE"),
     D = !w,
-    x = {
+    L = {
         edit: p,
         composite: d,
         drag: _,
         cut: null,
         render: null,
     },
-    L = !1,
-    j = (function (e) {
+    x = !1,
+    M = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -101,7 +101,7 @@ var c = n(901607),
             t
         );
     })(b.Component),
-    M = (function (e) {
+    j = (function (e) {
         function t(t) {
             var n;
             return (
@@ -175,11 +175,11 @@ var c = n(901607),
                         r = t.onPaste,
                         i = t.onCut,
                         o = t.onCopy,
-                        s = a({}, x.edit);
+                        s = a({}, L.edit);
                     r && (s.onPaste = r),
                         i && (s.onCut = i),
                         o && (s.onCopy = o),
-                        (n._handler = a({}, x, { edit: s })[e]);
+                        (n._handler = a({}, L, { edit: s })[e]);
                 }),
                 s(o(n), "exitCurrentMode", function () {
                     n.setMode("edit");
@@ -371,7 +371,7 @@ var c = n(901607),
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex,
                             },
-                            b.createElement(j, {
+                            b.createElement(M, {
                                 editor: this,
                                 editorState: l,
                             }),
@@ -382,7 +382,7 @@ var c = n(901607),
             }),
             (r.componentDidMount = function () {
                 (this._blockSelectEvents = !1),
-                    !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
+                    !x && C("draft_ods_enabled") && ((x = !0), g.initODS()),
                     this.setMode("edit"),
                     w &&
                         (this.editor
@@ -397,7 +397,7 @@ var c = n(901607),
             t
         );
     })(b.Component);
-s(M, "defaultProps", {
+s(j, "defaultProps", {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -410,4 +410,4 @@ s(M, "defaultProps", {
     spellCheck: !1,
     stripPastedStyles: !1,
 }),
-    (e.exports = M);
+    (e.exports = j);

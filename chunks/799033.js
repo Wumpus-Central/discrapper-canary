@@ -11,14 +11,14 @@ var r = a(157079),
     E = a(152228),
     s = a(988097),
     l = a(789112),
-    u = a(263449),
-    I = a(305625),
+    I = a(263449),
+    u = a(305625),
     R = a(64685),
     d = a(873567),
     N = a(101284),
     A = a(886115),
-    f = a(370541),
-    T = a(285883),
+    T = a(370541),
+    f = a(285883),
     L = a(163162);
 let p = new WeakMap(),
     h = new Map(),
@@ -58,7 +58,7 @@ function P(t, e) {
                     return e ? (0, A.U0)(t, e) : a;
                 }
             })(t, D),
-        y = {};
+        S = {};
     a &&
         (t.addEventProcessor(
             (t) => (
@@ -80,7 +80,7 @@ function P(t, e) {
             }
         }),
         (0, R.Uf)((t) => {
-            let e = (0, n.m)(t, m, v, y);
+            let e = (0, n.m)(t, m, v, S);
             if ((t.response && t.fetchData.__span && p.set(t.response, t.fetchData.__span), e)) {
                 let a = C(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
@@ -124,33 +124,33 @@ function P(t, e) {
                                   })
                                 : new l.b();
                     (n.__sentry_xhr_span_id__ = h.spanContext().spanId), (_[n.__sentry_xhr_span_id__] = h);
-                    let O = (0, u.s3)();
+                    let O = (0, I.s3)();
                     return (
                         n.setRequestHeader &&
                             a(R.url) &&
                             O &&
                             (function (t, e, a) {
-                                let r = (0, u.nZ)(),
+                                let r = (0, I.nZ)(),
                                     {
                                         traceId: _,
                                         spanId: n,
                                         sampled: c,
                                         dsc: E,
                                     } = {
-                                        ...(0, u.aF)().getPropagationContext(),
+                                        ...(0, I.aF)().getPropagationContext(),
                                         ...r.getPropagationContext(),
                                     },
-                                    s = a && (0, i.z)() ? (0, o.Hb)(a) : (0, f.$p)(_, n, c);
+                                    s = a && (0, i.z)() ? (0, o.Hb)(a) : (0, T.$p)(_, n, c);
                                 var l = t,
                                     R = s,
-                                    d = (0, T.IQ)(E || (a ? (0, I.jC)(a) : (0, I._l)(_, e)));
+                                    d = (0, f.IQ)(E || (a ? (0, u.jC)(a) : (0, u._l)(_, e)));
                                 try {
-                                    l.setRequestHeader("sentry-trace", R), d && l.setRequestHeader(T.bU, d);
+                                    l.setRequestHeader("sentry-trace", R), d && l.setRequestHeader(f.bU, d);
                                 } catch (t) {}
                             })(n, O, (0, i.z)() && p ? h : void 0),
                         h
                     );
-                })(t, m, v, y);
+                })(t, m, v, S);
                 P && e && g(e);
             });
 }

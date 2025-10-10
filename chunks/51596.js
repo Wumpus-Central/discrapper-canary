@@ -1,6 +1,6 @@
 n.d(t, {
-    $Z: () => j,
-    Cp: () => M,
+    $Z: () => M,
+    Cp: () => j,
     F_: () => w,
     Se: () => B,
     ZN: () => k,
@@ -108,7 +108,7 @@ function D(e) {
         current_channel_type: t,
     });
 }
-function x(e, t) {
+function L(e, t) {
     let { results: n, queryMode: r, query: i, maxQueryLength: a } = v.Z.getProps(),
         o = b.Z.getGuildId(),
         s = E.Z.getChannelId(o),
@@ -162,20 +162,20 @@ function x(e, t) {
     }
     y.default.track(e, g);
 }
-function L() {
+function x() {
     i.Z.dispatch({ type: "QUICKSWITCHER_HIDE" });
 }
-function j() {
+function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
     D(e), i.Z.dispatch(A({ type: "QUICKSWITCHER_SHOW" }, w(t)));
 }
-function M() {
-    x(I.rMx.QUICKSWITCHER_CLOSED), L();
+function j() {
+    L(I.rMx.QUICKSWITCHER_CLOSED), x();
 }
 function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
-    v.Z.isOpen() ? M() : j(e);
+    v.Z.isOpen() ? j() : M(e);
 }
 function U(e) {
     i.Z.dispatch(A({ type: "QUICKSWITCHER_SEARCH" }, w(e)));
@@ -189,7 +189,7 @@ function G(e) {
 function B(e) {
     let t,
         h = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    L(), (0, r.pTH)(), x(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
+    x(), (0, r.pTH)(), L(I.rMx.QUICKSWITCHER_RESULT_SELECTED, e);
     let { type: E, record: b } = e,
         y = { page: I.ZY5.QUICK_SWITCHER };
     switch (E) {

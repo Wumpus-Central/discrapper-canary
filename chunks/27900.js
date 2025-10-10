@@ -15,14 +15,14 @@ var r = n(481060),
     O = n(389052),
     y = n(24311),
     Z = n(158508),
-    j = n(710631),
-    v = n(494439),
+    v = n(710631),
+    j = n(494439),
     m = n(991307),
     E = n(700994),
     p = n(332031),
     S = n(981631),
-    _ = n(388032);
-function h(e) {
+    h = n(388032);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -65,7 +65,7 @@ function P(e, t) {
         e
     );
 }
-function I(e) {
+function A(e) {
     let {
             user: t,
             guildId: n,
@@ -73,15 +73,15 @@ function I(e) {
             mediaEngineContext: a,
             onSelect: c,
             onShowProfile: S,
-            onWatchStream: h,
+            onWatchStream: _,
             appContext: P,
         } = e,
-        I = (0, v.Z)({
+        A = (0, j.Z)({
             onAction: () => {
                 null == S || S();
             },
         }),
-        A = (0, y.Z)({
+        I = (0, y.Z)({
             user: t,
             context: P,
         }),
@@ -89,10 +89,10 @@ function I(e) {
             user: t,
             appContext: P,
         }),
-        x = (0, p.Z)(t.id, h),
+        x = (0, p.Z)(t.id, _),
         C = (0, E.Z)(t.id),
         D = (0, m.Z)(t.id, a),
-        w = (0, j.Z)({ user: t }),
+        w = (0, v.Z)({ user: t }),
         N = (0, u.Z)(null, t),
         T = (0, f.Z)({
             user: t,
@@ -108,7 +108,7 @@ function I(e) {
         }),
         L = (0, s.Z)({
             id: t.id,
-            label: _.intl.string(_.t["/AXYnJ"]),
+            label: h.intl.string(h.t["/AXYnJ"]),
         }),
         R = (0, d.Z)(t),
         B = (0, g.Z)(t, n, o),
@@ -116,7 +116,7 @@ function I(e) {
     return (0, l.jsxs)(r.v2r, {
         navId: "user-context",
         onClose: i.Zy,
-        "aria-label": _.intl.string(_.t.liqwPD),
+        "aria-label": h.intl.string(h.t.liqwPD),
         onSelect: c,
         children: [
             !V &&
@@ -124,7 +124,7 @@ function I(e) {
                     children: [
                         (0, l.jsx)(r.kSQ, { children: R }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [I, A, M, x],
+                            children: [A, I, M, x],
                         }),
                         (0, l.jsx)(r.kSQ, { children: C }),
                         (0, l.jsx)(r.kSQ, { children: N }),
@@ -138,14 +138,14 @@ function I(e) {
         ],
     });
 }
-function A(e) {
+function I(e) {
     let { user: t, mediaEngineContext: n, onSelect: o, onShowProfile: a, onWatchStream: c, appContext: g } = e,
-        S = (0, v.Z)({
+        S = (0, j.Z)({
             onAction: () => {
                 null == a || a();
             },
         }),
-        h = (0, y.Z)({
+        _ = (0, y.Z)({
             user: t,
             context: g,
         }),
@@ -153,10 +153,10 @@ function A(e) {
             user: t,
             appContext: g,
         }),
-        I = (0, p.Z)(t.id, c),
-        A = (0, E.Z)(t.id),
+        A = (0, p.Z)(t.id, c),
+        I = (0, E.Z)(t.id),
         M = (0, m.Z)(t.id, n),
-        x = (0, j.Z)({ user: t }),
+        x = (0, v.Z)({ user: t }),
         C = (0, u.Z)(null, t),
         D = (0, f.Z)({
             user: t,
@@ -172,14 +172,14 @@ function A(e) {
         }),
         T = (0, s.Z)({
             id: t.id,
-            label: _.intl.string(_.t["/AXYnJ"]),
+            label: h.intl.string(h.t["/AXYnJ"]),
         }),
         U = (0, d.Z)(t),
         k = t.isNonUserBot();
     return (0, l.jsxs)(r.v2r, {
         navId: "user-context",
         onClose: i.Zy,
-        "aria-label": _.intl.string(_.t.liqwPD),
+        "aria-label": h.intl.string(h.t.liqwPD),
         onSelect: o,
         children: [
             !k &&
@@ -187,9 +187,9 @@ function A(e) {
                     children: [
                         (0, l.jsx)(r.kSQ, { children: U }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [S, h, P, I],
+                            children: [S, _, P, A],
                         }),
-                        (0, l.jsx)(r.kSQ, { children: A }),
+                        (0, l.jsx)(r.kSQ, { children: I }),
                         (0, l.jsx)(r.kSQ, { children: C }),
                         (0, l.jsxs)(r.kSQ, {
                             children: [M, x, D, N, w],
@@ -229,15 +229,15 @@ let M = (0, a.Z)(
                 })(e, ["guildId", "channelId"]);
             return null != t && null != n
                 ? (0, l.jsx)(
-                      I,
-                      P(h({}, r), {
+                      A,
+                      P(_({}, r), {
                           guildId: t,
                           channelId: n,
                       }),
                   )
                 : (0, l.jsx)(
-                      A,
-                      P(h({}, r), {
+                      I,
+                      P(_({}, r), {
                           guildId: t,
                           channelId: n,
                       }),

@@ -12,13 +12,13 @@ var s = n(913527),
     h = n(423589),
     g = n(969943),
     m = n(388032),
-    x = n(367883);
+    x = n(565375);
 function p(e) {
     var t, n;
     let { guildId: s } = e,
         p = (0, r.e7)([d.Z], () => d.Z.getGuild(s)),
-        j = (0, r.e7)([c.ZP], () => c.ZP.isMuted(s)),
-        v = (0, r.e7)([c.ZP], () => c.ZP.getMuteConfig(s));
+        v = (0, r.e7)([c.ZP], () => c.ZP.isMuted(s)),
+        j = (0, r.e7)([c.ZP], () => c.ZP.getMuteConfig(s));
     return null == p
         ? null
         : (0, i.jsxs)(a.xJW, {
@@ -26,12 +26,12 @@ function p(e) {
                   (0, i.jsx)(a.rsf, {
                       label: m.intl.format(m.t["J+7D9P"], { name: p.name }),
                       description: m.intl.string(m.t.IngcUl),
-                      checked: j,
+                      checked: v,
                       onChange: (e) => {
                           o.Z.updateGuildNotificationSettings(s, { muted: e }, u.UE.muted(e));
                       },
                   }),
-                  j &&
+                  v &&
                       (0, i.jsxs)("div", {
                           className: x.mutedConfig,
                           children: [
@@ -45,7 +45,7 @@ function p(e) {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           children:
-                                              null == (n = v) || null == n.end_time
+                                              null == (n = j) || null == n.end_time
                                                   ? null
                                                   : m.intl.formatToPlainString(m.t.j7h4AA, {
                                                         endTime: new Date(n.end_time).toLocaleString(
@@ -77,7 +77,7 @@ function p(e) {
                                       );
                                   },
                                   options: (0, h.W9)(),
-                                  value: null != (t = null == v ? void 0 : v.selected_time_window) ? t : g.Oe.ALWAYS,
+                                  value: null != (t = null == j ? void 0 : j.selected_time_window) ? t : g.Oe.ALWAYS,
                               }),
                           ],
                       }),

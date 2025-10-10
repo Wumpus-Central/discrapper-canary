@@ -167,19 +167,19 @@ function D(e) {
     let t = T(e);
     return null != t ? C(t) : null;
 }
-let x = new Map();
-function L(e) {
-    let t = x.get(e);
+let L = new Map();
+function x(e) {
+    let t = L.get(e);
     if (null == t) {
         let n = b[e];
-        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), x.set(e, t);
+        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), L.set(e, t);
     }
     return t;
 }
-function j(e) {
+function M(e) {
     return m.test(e);
 }
-function M(e) {
+function j(e) {
     return e.replace(_, (e, t) => H(t, e));
 }
 function k(e) {
@@ -201,7 +201,7 @@ let U = String.fromCodePoint(917631),
     B = RegExp("^[\\u{E0061}-\\u{E007A}]$", "u");
 function Z(e, t) {
     var n;
-    if (!0 !== t && !j(e))
+    if (!0 !== t && !M(e))
         return [
             {
                 type: "text",
@@ -235,13 +235,13 @@ function Z(e, t) {
     }
     return null != r && "" !== r && i.push(k(r)), i;
 }
-function V(e) {
+function F(e) {
     return Z(e)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
 }
-function F(e) {
-    if (!j(e)) return null;
+function V(e) {
+    if (!M(e)) return null;
     let t = Z(e, !0)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
@@ -272,12 +272,12 @@ let K = {
     setDefaultDiversitySurrogate: R,
     getCategories: w,
     getByName: D,
-    getByCategory: L,
-    contentHasUnicodeOrEmoji: j,
-    translateInlineEmojiToSurrogates: M,
-    maybeTranslateSurrogatesToInlineEmoji: F,
+    getByCategory: x,
+    contentHasUnicodeOrEmoji: M,
+    translateInlineEmojiToSurrogates: j,
+    maybeTranslateSurrogatesToInlineEmoji: V,
     findInlineEmojisFromSurrogates: Z,
-    translateSurrogatesToInlineEmoji: V,
+    translateSurrogatesToInlineEmoji: F,
     convertNameToSurrogate: H,
     convertSurrogateToName: Y,
     convertShortcutToName: function e(e) {

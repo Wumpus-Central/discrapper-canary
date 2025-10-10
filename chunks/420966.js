@@ -1,21 +1,21 @@
 n.d(t, {
-    V: () => h,
-    Z: () => f,
+    V: () => f,
+    Z: () => h,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(239091),
+    s = n(481060),
+    a = n(239091),
     o = n(741247),
     c = n(345162),
     d = n(243730),
     u = n(852898),
-    m = n(203377),
-    g = n(388032),
+    g = n(203377),
+    m = n(388032),
     p = n(345987);
-function h() {
+function f() {
     let [e, t] = i.useState(!0);
     return {
         scrolledToTop: e,
@@ -24,40 +24,40 @@ function h() {
         },
     };
 }
-function f(e) {
-    let { guild: t, role: h, selectedSection: f, setSelectedSection: b } = e,
-        x = i.useCallback(
+function h(e) {
+    let { guild: t, role: f, selectedSection: h, setSelectedSection: x } = e,
+        b = i.useCallback(
             (e) => {
-                b(e);
+                x(e);
             },
-            [b],
+            [x],
         ),
         j = (0, l.e7)([d.Z], () => {
             var e;
-            return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[h.id];
-        }, [h.id, t.id]),
-        v = (0, c.fI)(h),
-        _ = (0, u.Z)(t.id, h);
+            return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[f.id];
+        }, [f.id, t.id]),
+        _ = (0, c.fI)(f),
+        v = (0, u.Z)(t.id, f);
     i.useEffect(() => {
-        v && b(m.ZI.PERMISSIONS);
-    }, [v, b]);
-    let O = (0, o.e)(t, h);
+        _ && x(g.ZI.PERMISSIONS);
+    }, [_, x]);
+    let C = (0, o.e)(t, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: p.titleContainer,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         className: p.titleText,
                         color: "header-primary",
                         variant: "text-md/semibold",
-                        children: g.intl.format(g.t.BUdGkJ, { roleName: h.name }),
+                        children: m.intl.format(m.t.BUdGkJ, { roleName: f.name }),
                     }),
-                    O
-                        ? (0, r.jsx)(a.P3F, {
+                    C
+                        ? (0, r.jsx)(s.P3F, {
                               className: p.menu,
                               onClick: function (e) {
-                                  (0, s.jW)(e, async () => {
+                                  (0, a.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                                       return (n) => {
                                           var i, l;
@@ -92,7 +92,7 @@ function f(e) {
                                               (l = l =
                                                   {
                                                       guild: t,
-                                                      role: h,
+                                                      role: f,
                                                   }),
                                               Object.getOwnPropertyDescriptors
                                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -115,8 +115,8 @@ function f(e) {
                                       };
                                   });
                               },
-                              "aria-label": g.intl.string(g.t.PdRCRk),
-                              children: (0, r.jsx)(a.xhG, {
+                              "aria-label": m.intl.string(m.t.PdRCRk),
+                              children: (0, r.jsx)(s.xhG, {
                                   size: "md",
                                   color: "currentColor",
                               }),
@@ -124,44 +124,44 @@ function f(e) {
                         : null,
                 ],
             }),
-            null != _
-                ? (0, r.jsx)(a.Wn, {
-                      messageType: a.QYI.WARNING,
-                      children: _,
+            null != v
+                ? (0, r.jsx)(s.Wn, {
+                      messageType: s.QYI.WARNING,
+                      children: v,
                   })
                 : null,
-            (0, r.jsxs)(a.njP, {
+            (0, r.jsxs)(s.njP, {
                 className: p.tabBar,
-                "aria-label": g.intl.string(g.t["+1H47u"]),
-                selectedItem: f,
+                "aria-label": m.intl.string(m.t["+1H47u"]),
+                selectedItem: h,
                 type: "top",
                 look: "brand",
-                onItemSelect: x,
+                onItemSelect: b,
                 children: [
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
-                        id: m.ZI.DISPLAY,
-                        disabled: v,
-                        children: g.intl.string(g.t.hmdom5),
+                        id: g.ZI.DISPLAY,
+                        disabled: _,
+                        children: m.intl.string(m.t.hmdom5),
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
-                        id: m.ZI.PERMISSIONS,
-                        children: g.intl.string(g.t.WIDE1N),
+                        id: g.ZI.PERMISSIONS,
+                        children: m.intl.string(m.t.WIDE1N),
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
-                        id: m.ZI.VERIFICATIONS,
-                        disabled: v,
-                        children: g.intl.string(g.t["5//Mur"]),
+                        id: g.ZI.VERIFICATIONS,
+                        disabled: _,
+                        children: m.intl.string(m.t["5//Mur"]),
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(s.njP.Item, {
                         className: p.tabBarItem,
-                        id: m.ZI.MEMBERS,
-                        disabled: v,
-                        children: v
-                            ? g.intl.string(g.t["kg//+/"])
-                            : g.intl.formatToPlainString(g.t.bHnZWV, { numMembers: String(j) }),
+                        id: g.ZI.MEMBERS,
+                        disabled: _,
+                        children: _
+                            ? m.intl.string(m.t["kg//+/"])
+                            : m.intl.formatToPlainString(m.t.bHnZWV, { numMembers: String(j) }),
                     }),
                 ],
             }),

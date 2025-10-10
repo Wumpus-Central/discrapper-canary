@@ -1,35 +1,35 @@
-n.d(t, { p: () => o });
+n.d(t, { p: () => l });
 var r = n(573654),
     i = n(647438);
-function o(e) {
+function l(e) {
     var t = {};
     return (
         Object.keys(e).forEach(function (n) {
-            var o = e[n];
+            var l = e[n];
             if (n.endsWith("Ref")) t[n] = e[n];
             else {
-                var u = function () {
+                var s = function () {
                     var e,
                         t,
                         n,
-                        u = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                        c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, i.isValidElement)(u)) return o(u, c), u;
-                    if ("string" != typeof u.type) {
-                        var s = u.type.displayName || u.type.name || "the component";
+                        s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (!(0, i.isValidElement)(s)) return l(s, o), s;
+                    if ("string" != typeof s.type) {
+                        var c = s.type.displayName || s.type.name || "the component";
                         throw Error(
                             "Only native element nodes can now be passed to React DnD connectors." +
-                                "You can either wrap ".concat(s, " into a <div>, or turn it into a ") +
+                                "You can either wrap ".concat(c, " into a <div>, or turn it into a ") +
                                 "drag source or a drop target itself.",
                         );
                     }
                     return (
-                        (e = u),
-                        (t = c
+                        (e = s),
+                        (t = o
                             ? function (e) {
-                                  return o(e, c);
+                                  return l(e, o);
                               }
-                            : o),
+                            : l),
                         (n = e.ref),
                         ((0, r.k)(
                             "string" != typeof n,
@@ -45,7 +45,7 @@ function o(e) {
                     );
                 };
                 t[n] = function () {
-                    return u;
+                    return s;
                 };
             }
         }),

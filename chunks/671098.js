@@ -1,19 +1,19 @@
-t.d(e, { n: () => a });
-var n = t(835913),
-    r = t(570140),
-    l = t(675478),
-    i = t(626135),
-    s = t(981631);
-async function a(A, e) {
-    await (0, l.PS)(
-        A,
-        (A) => ((A.guildRecentsDismissedAt = n.E.fromDate(new Date())), !0),
-        l.fy.INFREQUENT_USER_ACTION,
+n.d(t, { n: () => o });
+var r = n(835913),
+    l = n(570140),
+    i = n(675478),
+    a = n(626135),
+    s = n(981631);
+async function o(e, t) {
+    await (0, i.PS)(
+        e,
+        (e) => ((e.guildRecentsDismissedAt = r.E.fromDate(new Date())), !0),
+        i.fy.INFREQUENT_USER_ACTION,
     ),
-        r.Z.dispatch({
+        l.Z.dispatch({
             type: "BULK_CLEAR_RECENTS",
-            guildId: A,
-            channelIds: e,
+            guildId: e,
+            channelIds: t,
         }),
-        i.default.track(s.rMx.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+        a.default.track(s.rMx.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
 }

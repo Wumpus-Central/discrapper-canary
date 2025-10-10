@@ -1,10 +1,10 @@
 n.d(t, { Y: () => _ }), n(388685);
-var r,
-    i = n(951288),
+var i,
+    r = n(951288),
     l = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -14,17 +14,17 @@ var r,
     m = n(388032),
     g = n(748788);
 let b = ["embedded_cover"],
-    y = {
+    C = {
         tension: 800,
         friction: 24,
     };
-var C =
-    (((r = C || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
-    (r[(r.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
-    r);
+var y =
+    (((i = y || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
+    i);
 function _(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: C = 0, animatedDivClass: _, commandOrigin: v } = e,
+    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: _, commandOrigin: v } = e,
         {
             onActivityItemSelected: x,
             imageBackground: O,
@@ -32,7 +32,7 @@ function _(e) {
             labelType: E,
         } = (0, u.ZP)({
             context: n,
-            activityItem: r,
+            activityItem: i,
             guildId: null != (t = n.channel.getGuildId()) ? t : void 0,
             locationObject: {},
             onActivityItemSelected: a,
@@ -49,11 +49,11 @@ function _(e) {
         }, [P]),
         T = l.useMemo(
             () =>
-                (0, i.jsx)("div", {
+                (0, r.jsx)("div", {
                     className: g.overlayBadge,
-                    children: (0, i.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                         className: g.badgeContainer,
-                        children: (0, i.jsx)(p.Z, { labelType: E }),
+                        children: (0, r.jsx)(p.Z, { labelType: E }),
                     }),
                 }),
             [E],
@@ -61,11 +61,11 @@ function _(e) {
         N = l.useMemo(() => {
             switch (j) {
                 case u.JS.JOIN:
-                    return (0, i.jsx)("div", {
+                    return (0, r.jsx)("div", {
                         className: g.activityAction,
-                        children: (0, i.jsx)("div", {
+                        children: (0, r.jsx)("div", {
                             className: g.activityActionButton,
-                            children: (0, i.jsx)(c.Text, {
+                            children: (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children: m.intl.string(m.t.VJlc0d),
@@ -73,11 +73,11 @@ function _(e) {
                         }),
                     });
                 case u.JS.LEAVE:
-                    return (0, i.jsx)("div", {
+                    return (0, r.jsx)("div", {
                         className: g.activityAction,
-                        children: (0, i.jsx)("div", {
+                        children: (0, r.jsx)("div", {
                             className: o()(g.activityActionButton, g.activityActionButtonDanger),
-                            children: (0, i.jsx)(c.Text, {
+                            children: (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children: m.intl.string(m.t["wH/wDA"]),
@@ -89,34 +89,34 @@ function _(e) {
                     return null;
             }
         }, [j]);
-    return (0, i.jsx)(c.P3F, {
+    return (0, r.jsx)(c.P3F, {
         onClick: x,
         onFocus: I,
         onBlur: Z,
         onMouseEnter: I,
         onMouseLeave: Z,
         className: g.activityItemButtonInnerClass,
-        children: (0, i.jsx)(c.AMe, {
-            config: y,
+        children: (0, r.jsx)(c.AMe, {
+            config: C,
             from: { value: 0 },
             to: { value: +!!S },
             children: (e) => {
                 let { value: t } = e;
-                return (0, i.jsx)(c.f6W, {
+                return (0, r.jsx)(c.f6W, {
                     theme: f.BRd.DARK,
                     children: (e) =>
-                        (0, i.jsxs)(s.animated.div, {
+                        (0, r.jsxs)(s.animated.div, {
                             className: o()(e, g.activityItem, _, {
-                                [g.activityItem_13_11]: 0 === C,
-                                [g.activityItem_16_9]: 1 === C,
+                                [g.activityItem_13_11]: 0 === y,
+                                [g.activityItem_16_9]: 1 === y,
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
                             },
                             children: [
-                                (0, i.jsx)(d.Z, {
+                                (0, r.jsx)(d.Z, {
                                     imageBackground: O,
-                                    applicationName: r.application.name,
+                                    applicationName: i.application.name,
                                     imageClassName: g.activitySuggestionImage,
                                     imageNotFoundClassName: g.brokenImageIconWrapper,
                                 }),
@@ -129,4 +129,4 @@ function _(e) {
         }),
     });
 }
-_.AspectRatio = C;
+_.AspectRatio = y;

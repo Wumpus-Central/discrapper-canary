@@ -123,7 +123,7 @@ function O(e) {
             null == T || T();
         }, [T]);
     if (!A || null == P) return null;
-    let j = m(
+    let M = m(
         {
             text:
                 null != (a = null == (t = P.action) ? void 0 : t.text)
@@ -178,7 +178,7 @@ function O(e) {
                                         totalSteps: y.length,
                                     }),
                                 }),
-                                (0, r.jsx)(l.zxk, m({ size: "sm" }, j)),
+                                (0, r.jsx)(l.zxk, m({ size: "sm" }, M)),
                             ],
                         }),
                     }),

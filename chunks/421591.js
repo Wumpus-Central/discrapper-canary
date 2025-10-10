@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(482853);
+n.d(t, { Z: () => g }), n(388685), n(482853);
 var l = n(951288),
     i = n(647438),
     r = n(481060),
@@ -13,12 +13,12 @@ var l = n(951288),
     f = n(314734),
     h = n(981631),
     v = n(487303);
-let y = {
+let x = {
         width: f.Gy,
         height: f.lv,
     },
-    x = { height: f.lv },
-    b = i.memo(
+    y = { height: f.lv },
+    g = i.memo(
         i.forwardRef(function (e, t) {
             let { context: n, entrypoint: r, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_LAUNCHER);
@@ -42,14 +42,14 @@ let y = {
                 (0, l.jsx)("div", {
                     className: v.drawerSizingWrapper,
                     ref: t,
-                    style: y,
+                    style: x,
                     children: (0, l.jsx)("div", {
                         className: v.contentWrapper,
                         children: (0, l.jsx)(s.Gt, {
                             value: d,
-                            children: (0, l.jsx)(g, {
+                            children: (0, l.jsx)(b, {
                                 initHistory: u,
-                                children: (0, l.jsx)(j, {
+                                children: (0, l.jsx)(N, {
                                     context: n,
                                     entrypoint: r,
                                 }),
@@ -60,7 +60,7 @@ let y = {
             );
         }),
     );
-function g(e) {
+function b(e) {
     let { initHistory: t, children: n } = e,
         [r, a] = i.useState(null != t ? t : [{ type: u.gc.HOME }]),
         [o, s] = i.useState({}),
@@ -138,7 +138,7 @@ function g(e) {
         children: n,
     });
 }
-function j(e) {
+function N(e) {
     let { context: t, entrypoint: n } = e,
         [a, o] = i.useState(""),
         { setScroller: s, isCloseToBottom: c } = (function (e) {
@@ -170,26 +170,26 @@ function j(e) {
                 }
             );
         })(a),
-        { currentView: h, getMostRecentHistoryItemByType: y, setSlideReady: b } = (0, u.hH)();
+        { currentView: h, getMostRecentHistoryItemByType: x, setSlideReady: g } = (0, u.hH)();
     i.useEffect(() => {
-        b(!1);
-    }, [null == h ? void 0 : h.type, b]);
-    let g = i.useCallback(() => {
-        b(!0);
-    }, [b]);
+        g(!1);
+    }, [null == h ? void 0 : h.type, g]);
+    let b = i.useCallback(() => {
+        g(!0);
+    }, [g]);
     if (null == h) return null;
-    let j = y(u.gc.LIST),
-        N = y(u.gc.APPLICATION);
+    let N = x(u.gc.LIST),
+        j = x(u.gc.APPLICATION);
     return (0, l.jsxs)(r.MyZ, {
         activeSlide: h.type,
         width: f.Gy,
-        onSlideReady: g,
+        onSlideReady: b,
         children: [
             (0, l.jsx)(r.Mi4, {
                 id: u.gc.HOME,
                 children: (0, l.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: y,
                     children: (0, l.jsx)(p.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
@@ -204,17 +204,17 @@ function j(e) {
                 id: u.gc.LIST,
                 children: (0, l.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: y,
                     children:
-                        null != j &&
+                        null != N &&
                         (0, l.jsx)(m.Z, {
                             context: t,
                             entrypoint: n,
-                            title: j.title,
-                            look: j.look,
-                            items: j.items,
-                            sectionName: j.sectionName,
-                            sectionOverallPosition: j.sectionOverallPosition,
+                            title: N.title,
+                            look: N.look,
+                            items: N.items,
+                            sectionName: N.sectionName,
+                            sectionOverallPosition: N.sectionOverallPosition,
                         }),
                 }),
             }),
@@ -222,13 +222,13 @@ function j(e) {
                 id: u.gc.APPLICATION,
                 children: (0, l.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: y,
                     children:
-                        null != N &&
+                        null != j &&
                         (0, l.jsx)(d.Z, {
                             context: t,
-                            application: N.application,
-                            sectionName: N.sectionName,
+                            application: j.application,
+                            sectionName: j.sectionName,
                         }),
                 }),
             }),

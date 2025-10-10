@@ -35,17 +35,17 @@ function O(e) {
             purchaseErrorBlockRef: P,
             planError: w,
             onScroll: D,
-            scrollerClassName: x,
-            hasCurrencies: L = !1,
+            scrollerClassName: L,
+            hasCurrencies: x = !1,
         } = e,
-        j = null;
-    null != v && null == (0, p.ly)(v) ? (j = v) : null != R ? (j = R) : null != w && (j = w);
-    let M = null != j ? j.message : "";
-    null != j &&
-        j instanceof d.HF &&
-        (j.code === f.SM.CARD_DECLINED && L && (M += " ".concat(E.intl.string(E.t.iWvwQU))),
-        j.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)),
-        j.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
+        M = null;
+    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
+    let j = null != M ? M.message : "";
+    null != M &&
+        M instanceof d.HF &&
+        (M.code === f.SM.CARD_DECLINED && x && (j += " ".concat(E.intl.string(E.t.iWvwQU))),
+        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd3)),
+        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWF)));
     let { stripe: k } = (0, _.JL)();
     N = N || null == k;
     let U = i.useRef(new l.V7());
@@ -98,13 +98,13 @@ function O(e) {
                     (0, r.jsxs)("div", {
                         className: b.bodyWrapper,
                         children: [
-                            null == j
+                            null == M
                                 ? null
                                 : (0, r.jsx)("div", {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: P,
-                                          children: M,
+                                          children: j,
                                       }),
                                   }),
                             N
@@ -120,7 +120,7 @@ function O(e) {
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: D,
-                                          className: s()(b.scroller, x),
+                                          className: s()(b.scroller, L),
                                           children: o,
                                       }),
                                   }),

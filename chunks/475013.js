@@ -12,19 +12,19 @@ var r = n(951288),
     c = n(852860),
     d = n(493773),
     u = n(345162),
-    m = n(650774),
-    g = n(823379),
+    g = n(650774),
+    m = n(823379),
     p = n(434404),
     f = n(999382),
     h = n(84058),
     x = n(103576),
     b = n(130341),
     j = n(853813),
-    v = n(163249),
-    _ = n(150689),
-    O = n(203377),
-    y = n(981631);
-function C(e) {
+    _ = n(163249),
+    v = n(150689),
+    C = n(203377),
+    O = n(981631);
+function y(e) {
     p.Z.selectRole(e);
 }
 let N = () => {
@@ -36,7 +36,7 @@ let N = () => {
         onSave: () => {
             if (null == e) return;
             let { id: t } = e,
-                n = x.Z.editedRoleIds.map((e) => x.Z.getRole(e)).filter(g.lm),
+                n = x.Z.editedRoleIds.map((e) => x.Z.getRole(e)).filter(m.lm),
                 r = x.Z.getSortDeltas(),
                 i = null,
                 l = null;
@@ -44,7 +44,7 @@ let N = () => {
                 ((l = x.Z.editedRoleIdsForConfigurations), (i = x.Z.getEditedRoleConnectionConfigurationsMap())),
                 (0, h.Gf)(t, n, r, l, i);
         },
-        submitting: t === y.QZA.SUBMITTING,
+        submitting: t === O.QZA.SUBMITTING,
         onReset: h.S1,
     });
 };
@@ -61,39 +61,39 @@ function E(e) {
     s()(null != n, "Guild cannot be null here");
     let c = i.useMemo(() => l.find((e) => (0, u.fI)(e)), [l]);
     s()(null != c, "Guild must have an everyone role");
-    let g = i.useMemo(() => l.filter((e) => !(0, u.fI)(e)), [l]),
+    let m = i.useMemo(() => l.filter((e) => !(0, u.fI)(e)), [l]),
         p = (0, a.e7)([f.Z], () => f.Z.getSelectedRoleId()),
-        [h, y] = i.useState(g.length > 0);
+        [h, O] = i.useState(m.length > 0);
     i.useEffect(() => {
-        y(h || g.length > 0);
-    }, [h, g.length]),
+        O(h || m.length > 0);
+    }, [h, m.length]),
         (0, d.ZP)(() => {
-            let e = m.Z.getMemberCount(n.id);
+            let e = g.Z.getMemberCount(n.id);
             null != e && e <= b.cm && o.Z.requestMembers(n.id, "", 0, !1);
         });
-    let [N, E] = i.useState(O.ZI.DISPLAY);
+    let [N, E] = i.useState(C.ZI.DISPLAY);
     return (i.useEffect(() => {
-        null == p && E(O.ZI.DISPLAY);
+        null == p && E(C.ZI.DISPLAY);
     }, [p]),
     null != p)
         ? (0, r.jsx)(j.Z, {
               editRoleId: p,
-              setEditRoleId: C,
+              setEditRoleId: y,
               selectedSection: N,
               setSelectedSection: E,
           })
         : h
-          ? (0, r.jsx)(_.Z, {
-                setEditRoleId: C,
+          ? (0, r.jsx)(v.Z, {
+                setEditRoleId: y,
                 guild: n,
                 everyoneRole: c,
-                otherRoles: g,
+                otherRoles: m,
                 setSelectedSection: E,
                 refToScroller: t,
             })
-          : (0, r.jsx)(v.Z, {
+          : (0, r.jsx)(_.Z, {
                 guild: n,
                 everyoneRole: c,
-                setEditRoleId: C,
+                setEditRoleId: y,
             });
 }

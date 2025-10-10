@@ -1,10 +1,10 @@
-t.d(n, { Z: () => d }), t(388685);
-var r = t(647438);
-let i = new Map(),
+n.d(t, { Z: () => u }), n(388685);
+var i = n(647438);
+let r = new Map(),
     l = new Map(),
     a = new Map();
 function o(e) {
-    return i.has(e) || i.set(e, !1), i.get(e);
+    return r.has(e) || r.set(e, !1), r.get(e);
 }
 function s(e) {
     return (
@@ -13,28 +13,28 @@ function s(e) {
             a.set(
                 e,
                 (function (e) {
-                    let n = (n) => {
-                            c(n.shiftKey, e);
+                    let t = (t) => {
+                            c(t.shiftKey, e);
                         },
-                        t = (n) => {
-                            c(n.shiftKey, e);
+                        n = (t) => {
+                            c(t.shiftKey, e);
                         },
-                        r = (n) => {
-                            c(n.shiftKey, e);
+                        i = (t) => {
+                            c(t.shiftKey, e);
                         },
-                        i = () => {
+                        r = () => {
                             c(!1, e);
                         };
                     return (
-                        e.addEventListener("keydown", n),
-                        e.addEventListener("keyup", t),
-                        e.addEventListener("mousemove", r),
-                        e.addEventListener("blur", i),
+                        e.addEventListener("keydown", t),
+                        e.addEventListener("keyup", n),
+                        e.addEventListener("mousemove", i),
+                        e.addEventListener("blur", r),
                         () => {
-                            e.removeEventListener("keydown", n),
-                                e.removeEventListener("keyup", t),
-                                e.removeEventListener("mousemove", r),
-                                e.removeEventListener("blur", i);
+                            e.removeEventListener("keydown", t),
+                                e.removeEventListener("keyup", n),
+                                e.removeEventListener("mousemove", i),
+                                e.removeEventListener("blur", r);
                         }
                     );
                 })(e),
@@ -42,26 +42,26 @@ function s(e) {
         l.get(e)
     );
 }
-function c(e, n) {
-    e !== o(n) && (i.set(n, e), s(n).forEach((n) => n(e)));
+function c(e, t) {
+    e !== o(t) && (r.set(t, e), s(t).forEach((t) => t(e)));
 }
-function d() {
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        [n, t] = r.useState(o(e));
+        [t, n] = i.useState(o(e));
     return (
-        r.useEffect(() => {
-            let n = (e) => {
-                t(e);
+        i.useEffect(() => {
+            let t = (e) => {
+                n(e);
             };
             return (
-                s(e).add(n),
+                s(e).add(t),
                 () => {
-                    var t;
-                    s(e).delete(n),
-                        0 === s(e).size && (null == (t = a.get(e)) || t(), a.delete(e), l.delete(e), i.delete(e));
+                    var n;
+                    s(e).delete(t),
+                        0 === s(e).size && (null == (n = a.get(e)) || n(), a.delete(e), l.delete(e), r.delete(e));
                 }
             );
         }, [e]),
-        n
+        t
     );
 }

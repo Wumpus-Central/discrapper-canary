@@ -9,8 +9,8 @@ var a = n(951288),
     d = n(191767),
     u = n(595925),
     m = n(451429),
-    h = n(226800);
-let p = [
+    p = n(226800);
+let h = [
         {
             id: "virtual-currency",
             name: "Virtual Current (Orb) Components",
@@ -33,16 +33,16 @@ function f() {
     let [e, t] = r.useState("virtual-currency"),
         n = r.useMemo(() => x[e], [e]);
     return (0, a.jsxs)("div", {
-        className: l()(m.panel, h.container),
+        className: l()(m.panel, p.container),
         children: [
             (0, a.jsx)(o.njP, {
-                className: h.tabBar,
+                className: p.tabBar,
                 selectedItem: e,
                 onItemSelect: t,
                 look: "brand",
                 type: "top",
                 orientation: "horizontal",
-                children: p.map((e) =>
+                children: h.map((e) =>
                     (0, a.jsx)(
                         o.njP.Item,
                         {
@@ -55,7 +55,7 @@ function f() {
             }),
             (0, a.jsx)(s.w0Z, {
                 children: (0, a.jsx)("div", {
-                    className: h.content,
+                    className: p.content,
                     children: (0, a.jsx)(n, {}),
                 }),
             }),

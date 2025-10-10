@@ -1,21 +1,21 @@
 n.d(t, { Z: () => l }), n(388685);
-var r = n(647438),
-    i = n(846519);
+var i = n(647438),
+    r = n(846519);
 function l(e, t) {
-    let [n, l] = r.useState(!1),
-        a = r.useRef(new i.sW(t, () => l(!1))),
-        o = r.useRef(new i.sW(e, () => l(!0))),
-        s = r.useCallback(() => {
+    let [n, l] = i.useState(!1),
+        a = i.useRef(new r.sW(t, () => l(!1))),
+        o = i.useRef(new r.sW(e, () => l(!0))),
+        s = i.useCallback(() => {
             a.current.cancel(), o.current.cancel();
         }, []);
-    r.useEffect(() => s, [s]);
-    let c = r.useCallback(() => {
+    i.useEffect(() => s, [s]);
+    let c = i.useCallback(() => {
         s(), a.current.delay();
     }, [s]);
     return {
         isHovered: n,
         setIsHovered: l,
-        onMouseEnter: r.useCallback(() => {
+        onMouseEnter: i.useCallback(() => {
             s(), o.current.delay();
         }, [s]),
         onMouseLeave: c,

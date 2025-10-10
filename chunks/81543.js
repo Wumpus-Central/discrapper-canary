@@ -1,12 +1,12 @@
 n.d(t, {
-    Z: () => f,
-    n: () => g,
+    Z: () => h,
+    n: () => m,
 });
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(748780),
     c = n(215569),
     d = n(248881);
@@ -23,7 +23,7 @@ function u(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,18 +39,18 @@ function m(e) {
     }
     return e;
 }
-var g = (((r = {})[(r.RIGHT = -1)] = "RIGHT"), (r[(r.LEFT = 1)] = "LEFT"), r);
+var m = (((r = {})[(r.RIGHT = -1)] = "RIGHT"), (r[(r.LEFT = 1)] = "LEFT"), r);
 let p = {
     friction: 10,
     tension: 40,
     overshootClamping: !0,
 };
-class h extends l.PureComponent {
+class f extends l.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
             this._animated.setValue(-this.props.direction),
-            o.Z.spring(this._animated, m({ toValue: 0 }, p)).start(() => {
+            o.Z.spring(this._animated, g({ toValue: 0 }, p)).start(() => {
                 var t, n;
                 e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n);
             });
@@ -59,7 +59,7 @@ class h extends l.PureComponent {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        o.Z.spring(this._animated, m({ toValue: this.props.direction }, p)).start(e);
+        o.Z.spring(this._animated, g({ toValue: this.props.direction }, p)).start(e);
     }
     getStyle() {
         return o.Z.accelerate({
@@ -84,16 +84,16 @@ class h extends l.PureComponent {
         super(e), u(this, "_animated", void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let f = (e) => {
-    let { children: t, step: n, direction: r, className: l, onAnimationStart: a, onAnimationEnd: o } = e;
+let h = (e) => {
+    let { children: t, step: n, direction: r, className: l, onAnimationStart: s, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: "div",
-        className: s()(d.animator, l),
+        className: a()(d.animator, l),
         children: (0, i.jsx)(
-            h,
+            f,
             {
                 direction: r,
-                onAnimationStart: a,
+                onAnimationStart: s,
                 onAnimationEnd: o,
                 children: t,
             },

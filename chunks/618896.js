@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(939863),
     a = n(353808);
-function o(e) {
+function s(e) {
     let { className: t } = e;
     return (0, r.jsx)(l.Z, {
         className: t,

@@ -1,21 +1,21 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(399606),
     l = n(481060),
-    a = n(674180),
-    s = n(267101),
+    s = n(674180),
+    a = n(267101),
     o = n(430824),
     c = n(584825),
     d = n(198139),
     u = n(388032);
-function m(e) {
-    let { guildId: t, allPeriods: m } = e,
-        g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
+function g(e) {
+    let { guildId: t, allPeriods: g } = e,
+        m = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        h = (0, s.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: f } = (0, a.gX)(t),
-        b = m.filter((e) => {
+        f = (0, a.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: h } = (0, s.gX)(t),
+        x = g.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (
@@ -23,22 +23,22 @@ function m(e) {
                 (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED
             );
         }),
-        x = p.length > 0,
-        j = h.length > 0,
-        v = b.length > 0;
-    return null == g
+        b = p.length > 0,
+        j = f.length > 0,
+        _ = x.length > 0;
+    return null == m
         ? null
         : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(l.R94, {
                       type: l.R94.Types.DESCRIPTION,
-                      children: u.intl.format(u.t.fvOn6O, { guildName: g.name }),
+                      children: u.intl.format(u.t.fvOn6O, { guildName: m.name }),
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.zxk, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSk),
-                      disabled: !f || x || j || v,
+                      disabled: !h || b || j || _,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e("35282").then(n.bind(n, 157429));
@@ -71,7 +71,7 @@ function m(e) {
                                           }
                                           return e;
                                       })({}, t)),
-                                      (i = i = { guild: g }),
+                                      (i = i = { guild: m }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                           : (function (e, t) {

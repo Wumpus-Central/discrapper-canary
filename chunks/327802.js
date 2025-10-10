@@ -1,78 +1,78 @@
-r.d(e, {
+n.d(t, {
     X: () => c,
-    Z: () => u,
+    Z: () => d,
 }),
-    r(415506);
-var n = r(951288);
-r(647438);
-var i = r(481060),
-    l = r(372129),
-    o = r(205822),
-    a = r(731994),
-    s = r(388032);
-let c = (t) => {
-        let { className: e, onSuccess: c, onError: u } = t,
-            f = async (t) => {
+    n(415506);
+var r = n(951288);
+n(647438);
+var i = n(481060),
+    l = n(372129),
+    s = n(205822),
+    a = n(731994),
+    o = n(388032);
+let c = (e) => {
+        let { className: t, onSuccess: c, onError: d } = e,
+            u = async (e) => {
                 try {
-                    let { dataURI: e } = await (0, l.po)(t);
+                    let { dataURI: t } = await (0, l.po)(e);
                     c({
-                        file: t,
-                        data: e,
+                        file: e,
+                        data: t,
                     });
-                } catch (t) {
-                    u(Error("Failed to read file", { cause: t }));
+                } catch (e) {
+                    d(Error("Failed to read file", { cause: e }));
                 }
             };
-        return (0, n.jsx)(o.Z, {
-            className: e,
-            title: s.intl.string(s.t.DU0dy8),
-            description: s.intl.string(s.t.bpycfH),
+        return (0, r.jsx)(s.Z, {
+            className: t,
+            title: o.intl.string(o.t.DU0dy8),
+            description: o.intl.string(o.t.bpycfH),
             icons: a.pA,
-            onDrop: (t) => {
-                let e = null == t ? void 0 : t[0];
-                null != e &&
+            onDrop: (e) => {
+                let t = null == e ? void 0 : e[0];
+                null != t &&
                     (0, i.ZDy)(async () => {
-                        let { default: t } = await r.e("16169").then(r.bind(r, 935333));
-                        return (r) =>
-                            (0, n.jsx)(
-                                t,
-                                (function (t) {
-                                    for (var e = 1; e < arguments.length; e++) {
-                                        var r = null != arguments[e] ? arguments[e] : {},
-                                            n = Object.keys(r);
+                        let { default: e } = await n.e("16169").then(n.bind(n, 935333));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (n = n.concat(
-                                                Object.getOwnPropertySymbols(r).filter(function (t) {
-                                                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            n.forEach(function (e) {
-                                                var n;
-                                                (n = r[e]),
-                                                    e in t
-                                                        ? Object.defineProperty(t, e, {
-                                                              value: n,
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (t[e] = n);
+                                                        : (e[t] = r);
                                             });
                                     }
-                                    return t;
-                                })({ processFiles: () => f(e) }, r),
+                                    return e;
+                                })({ processFiles: () => u(t) }, n),
                             );
                     });
             },
         });
     },
-    u = function (t) {
-        let { className: e, style: r, onDrop: i } = t;
-        return (0, n.jsx)(o.Z, {
-            className: e,
-            style: r,
-            title: s.intl.string(s.t.DU0dy8),
-            description: s.intl.string(s.t.bpycfH),
+    d = function (e) {
+        let { className: t, style: n, onDrop: i } = e;
+        return (0, r.jsx)(s.Z, {
+            className: t,
+            style: n,
+            title: o.intl.string(o.t.DU0dy8),
+            description: o.intl.string(o.t.bpycfH),
             icons: a.pA,
             onDrop: i,
         });

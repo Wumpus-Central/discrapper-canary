@@ -109,11 +109,11 @@ let O = function (e) {
             hasThread: P,
             isSystemMessage: w,
             hasReply: D,
-            author: x,
-            onMouseEnter: L,
-            onMouseLeave: j,
+            author: L,
+            onMouseEnter: x,
+            onMouseLeave: M,
         } = e,
-        M = b(e, [
+        j = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -137,25 +137,25 @@ let O = function (e) {
             "onMouseLeave",
         ]);
     let k = (0, s.e7)([_.Z], () =>
-            (null == x ? void 0 : x.guildId) == null || (null == x ? void 0 : x.colorRoleId) == null
+            (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
                 ? null
-                : _.Z.getRole(x.guildId, x.colorRoleId),
+                : _.Z.getRole(L.guildId, L.colorRoleId),
         ),
-        U = (0, f.yH)(null == x ? void 0 : x.guildId, k) && (0, d.S2)(x),
+        U = (0, f.yH)(null == L ? void 0 : L.guildId, k) && (0, d.S2)(L),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
-                B(!0), null == L || L(e);
+                B(!0), null == x || x(e);
             },
-            [L],
+            [x],
         ),
-        V = i.useCallback(
+        F = i.useCallback(
             (e) => {
-                B(!1), null == j || j(e);
+                B(!1), null == M || M(e);
             },
-            [j],
+            [M],
         ),
-        F = (0, u.Y)({ location: "BaseMessage" }),
+        V = (0, u.Y)({ location: "BaseMessage" }),
         H = (0, r.jsx)(l.d.Provider, {
             value: {
                 animate: G,
@@ -172,9 +172,9 @@ let O = function (e) {
                                     className: o()(t, {
                                         [p.gradient]: U,
                                         [p.withDisplayNameStyles]:
-                                            F &&
-                                            (null == x ? void 0 : x.displayNameStyles) != null &&
-                                            (null == x ? void 0 : x.guildId) == null,
+                                            V &&
+                                            (null == L ? void 0 : L.displayNameStyles) != null &&
+                                            (null == L ? void 0 : L.guildId) == null,
                                         [p.wrapper]: !0,
                                         [p.contentOnly]: a,
                                         [p.compact]: n,
@@ -187,12 +187,12 @@ let O = function (e) {
                                     }),
                                     ref: N,
                                 },
-                                M,
+                                j,
                             ),
                             {
                                 role: "article",
                                 onMouseEnter: Z,
-                                onMouseLeave: V,
+                                onMouseLeave: F,
                                 children: [
                                     O,
                                     v,

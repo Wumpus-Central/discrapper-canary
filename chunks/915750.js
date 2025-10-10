@@ -1,5 +1,5 @@
 n.d(t, {
-    B5: () => j,
+    B5: () => M,
     PI: () => w,
     WD: () => U,
     aM: () => G,
@@ -31,8 +31,8 @@ var r = n(951288),
     O = n(569984),
     v = n(811399),
     I = n(882198),
-    S = n(5881),
-    T = n(981631);
+    T = n(5881),
+    S = n(981631);
 function A(e, t, n) {
     return (
         t in e
@@ -67,10 +67,10 @@ let N = 100,
     P = 1,
     w = 0.5,
     D = new Set();
-function x(e, t) {
+function L(e, t) {
     return "".concat(e, "_").concat(t);
 }
-class L {
+class x {
     getId() {
         return this.id;
     }
@@ -183,7 +183,7 @@ class L {
             A(this, "isRunning", !1),
             A(this, "onMinViewTimeReached", () => {
                 this.quests.forEach((e) => {
-                    (0, S.T)().info(
+                    (0, T.T)().info(
                         ""
                             .concat(e.config.messages.questName, " Quest viewed for at least ")
                             .concat(this.minViewTimeSeconds, "s at ")
@@ -193,14 +193,14 @@ class L {
                     let t = !1,
                         n = (0, y.Zp)(this.questContent);
                     if (null != n) {
-                        let r = x(e.id, n);
+                        let r = L(e.id, n);
                         (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
-                            event: T.rMx.QUEST_CONTENT_VIEWED,
+                            event: S.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                             properties: C(
                                 {
@@ -226,7 +226,7 @@ class L {
                 p.quests.forEach((t) => {
                     if (null != p.lastBeatTime) {
                         let n = Math.round(Date.now() - p.lastBeatTime);
-                        (0, S.T)().info(
+                        (0, T.T)().info(
                             ""
                                 .concat(t.config.messages.questName, " Quest impression ")
                                 .concat(e ? "terminal " : "", "heartbeat: ")
@@ -235,7 +235,7 @@ class L {
                         ),
                             (0, b.dA)({
                                 questId: t.id,
-                                event: T.rMx.QUEST_CONTENT_VIEW_TIME,
+                                event: S.rMx.QUEST_CONTENT_VIEW_TIME,
                                 properties: C(
                                     {
                                         is_termination_beat: e,
@@ -265,7 +265,7 @@ class L {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new L({
+                    new x({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -286,7 +286,7 @@ class L {
                         1000 * this.minViewTimeSeconds,
                     )),
                     this.quests.forEach((e) => {
-                        (0, S.T)().info(
+                        (0, T.T)().info(
                             ""
                                 .concat(e.config.messages.questName, " Quest became visible at ")
                                 .concat((0, b._b)(this.questContent)),
@@ -294,7 +294,7 @@ class L {
                         ),
                             (0, b.dA)({
                                 questId: e.id,
-                                event: T.rMx.QUEST_CONTENT_LOADED,
+                                event: S.rMx.QUEST_CONTENT_LOADED,
                                 properties: C(
                                     { triggered_by_status_change: this.triggeredByStatusChange },
                                     this.commonProperties(e),
@@ -331,7 +331,7 @@ class L {
             (this.sourceQuestContent = f);
     }
 }
-let j = (e, t) => {
+let M = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -340,7 +340,7 @@ let j = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    M = (e) => {
+    j = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
@@ -356,7 +356,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = M(e.questOrQuests),
+        d = j(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -369,7 +369,7 @@ function B(e) {
                 o = ((n || c) && !r) || d;
             (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((f.current = new L({
+                    ((f.current = new x({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,

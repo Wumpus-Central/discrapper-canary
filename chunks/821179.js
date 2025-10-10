@@ -12,15 +12,15 @@ var i = n(780384),
     p = n(228168),
     h = n(981631),
     f = n(671955),
-    g = n(163514);
+    g = n(323759);
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
-    let { user: t, guild: b, nick: _, onSelect: O } = e,
-        { theme: y, themeType: j } = (0, d.z)(),
-        v = t.hasAvatarForGuild(b.id);
+    let { user: t, guild: b, nick: _, onSelect: y } = e,
+        { theme: O, themeType: v } = (0, d.z)(),
+        j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            j === f.l.MODAL_V2
+            v === f.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -30,7 +30,7 @@ function b(e) {
                   }
                 : { offset: { right: 8 } },
         className: g.row,
-        onClick: O,
+        onClick: y,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -39,21 +39,21 @@ function b(e) {
                     n.e("36599"),
                     n.e("7654"),
                     n.e("58175"),
-                    n.e("48776"),
+                    n.e("76692"),
                     n.e("8271"),
                     n.e("15851"),
                     n.e("51453"),
                     n.e("845"),
                     n.e("49049"),
                     n.e("63575"),
-                    n.e("98039"),
+                    n.e("58511"),
                     n.e("6850"),
                     n.e("58227"),
                     n.e("62856"),
                     n.e("44686"),
                     n.e("38697"),
                     n.e("30378"),
-                    n.e("29679"),
+                    n.e("64982"),
                     n.e("66201"),
                     n.e("93375"),
                     n.e("39206"),
@@ -61,7 +61,7 @@ function b(e) {
                     n.e("89442"),
                     n.e("87154"),
                     n.e("33213"),
-                    n.e("66697"),
+                    n.e("74124"),
                 ]).then(n.bind(n, 545135));
                 return (t) => {
                     var n, i;
@@ -116,7 +116,7 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
+                badgeStrokeColor: (0, a.Lq)((0, i.wj)(O) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
                 badgeTooltipColor: l.FGA.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,
@@ -129,7 +129,7 @@ function b(e) {
                         className: g.name,
                         children: b.name,
                     }),
-                    v &&
+                    j &&
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
@@ -148,7 +148,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                    !v &&
+                    !j &&
                         null != _ &&
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/medium",

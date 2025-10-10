@@ -1,5 +1,5 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, "494452b9cf7b5949", {
+e.exports = n.v(t, e.id, "4bfc2e091c88373d", {
     "./libdiscore_wasm_bg.js": {
         __wbindgen_string_new: r.h4,
         __wbindgen_is_undefined: r.XP,

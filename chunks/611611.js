@@ -17,7 +17,7 @@ var r = n(951288),
     O = n(489887),
     y = n(20281),
     h = n(388032),
-    v = n(931975);
+    v = n(520317);
 function P(e) {
     let { question: t, onChange: n, error: l, inputRef: a } = e;
     return (0, r.jsx)(s.Kx8, {
@@ -247,7 +247,7 @@ function x(e) {
                     inputRef: E,
                 }),
                 (0, r.jsx)(s.LZC, { size: 26 }),
-                (0, r.jsxs)(s.NIc, {
+                (0, r.jsxs)(s.gNt, {
                     role: "group",
                     label: h.intl.string(h.t.oMBfeX),
                     children: [

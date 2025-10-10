@@ -29,10 +29,10 @@ var r = n(951288),
     P = n(314910),
     w = n(84615),
     D = n(429142),
-    x = n(728285),
-    L = n(813744),
-    j = n(746106),
-    M = n(526665),
+    L = n(728285),
+    x = n(813744),
+    M = n(746106),
+    j = n(526665),
     k = n(314897),
     U = n(819640),
     G = n(358085),
@@ -74,7 +74,7 @@ let q = (0, B.Un)({
     }),
     Q = i.memo(function () {
         let e = (0, c.e7)([U.Z], () => U.Z.hasLayers()),
-            t = (0, M.wy)("AppSkeleton"),
+            t = (0, j.wy)("AppSkeleton"),
             n = (0, c.e7)([U.Z], () => U.Z.getLayers().includes(K.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL),
             a = (0, c.e7)([k.default], () => k.default.isAuthenticated());
@@ -89,13 +89,13 @@ let q = (0, B.Un)({
             a = (0, G.getPlatform)(),
             u = s.tq || s.Em,
             m = (0, c.e7)([g.Z], () => (g.Z.useForcedColors ? "yes" : "no")),
-            M = i.useRef(document.body),
+            j = i.useRef(document.body),
             k = "".concat(m);
         return (
             (0, C.G)(),
             (0, R.G)("AppSkeleton"),
             (0, r.jsx)(
-                j.w,
+                M.w,
                 {
                     children: (0, r.jsxs)(E.Z, {
                         children: [
@@ -103,12 +103,12 @@ let q = (0, B.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(V.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
-                                        containerRef: M,
+                                        containerRef: j,
                                         children: [
                                             (0, r.jsx)(Y.Co, {}),
                                             (0, r.jsx)(H.ZP, {}),
                                             (0, r.jsx)(l.OUJ, {}),
-                                            (0, r.jsx)(x.Wu, {
+                                            (0, r.jsx)(L.Wu, {
                                                 appContext: K.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(P.yP, {
@@ -148,7 +148,7 @@ let q = (0, B.Un)({
                                                                                             appContext: K.IlC.APP,
                                                                                         }),
                                                                                         (0, r.jsx)(O.Z, {}),
-                                                                                        (0, r.jsx)(L.Z, {}),
+                                                                                        (0, r.jsx)(x.Z, {}),
                                                                                         (0, r.jsx)(q, {}),
                                                                                         (0, r.jsx)(X, {}),
                                                                                     ],

@@ -1,84 +1,84 @@
 n.d(t, {
     L: () => p,
-    Z: () => m,
+    Z: () => _,
 }),
     n(388685);
 var r,
-    l = n(951288),
-    i = n(647438),
+    i = n(951288),
+    l = n(647438),
     a = n(120356),
     o = n.n(a),
-    u = n(481060),
+    c = n(481060),
     s = n(885524),
-    c = n(38755),
+    u = n(38755),
     d = n(153066),
     f = n(412418),
     p = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
-let m = i.memo(function (e) {
+let _ = l.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
             wrapperClassName: r,
             videoComponent: a,
             className: p,
-            fit: m = "contain",
-            mirror: E = !1,
-            paused: g = !1,
-            streamPreviewURL: b,
-            videoSpinnerContext: S,
+            fit: _ = "contain",
+            mirror: m = !1,
+            paused: b = !1,
+            streamPreviewURL: E,
+            videoSpinnerContext: g,
             userId: v,
             streamKey: h,
         } = e,
-        [O, y] = i.useState(!0);
-    (0, c.Z)({
+        [S, y] = l.useState(!0);
+    (0, u.Z)({
         location: "VideoStream",
-        videoSpinnerContext: S,
+        videoSpinnerContext: g,
         userId: v,
         streamId: t,
-        loading: O,
-        paused: g,
+        loading: S,
+        paused: b,
     });
-    let { onReady: _ } = (0, s.Z)({
+    let { onReady: O } = (0, s.Z)({
             streamId: t,
             userId: v,
-            loading: O,
-            videoSpinnerContext: S,
+            loading: S,
+            videoSpinnerContext: g,
             streamKey: h,
-            paused: g,
+            paused: b,
         }),
-        j = i.useCallback(() => {
-            y(!1), _();
-        }, [_]);
-    return (0, l.jsxs)("div", {
+        I = l.useCallback(() => {
+            y(!1), O();
+        }, [O]);
+    return (0, i.jsxs)("div", {
         className: o()(f.wrapper, r),
         children: [
             null != t &&
-                (0, l.jsx)(a, {
-                    className: o()(f.video, (0, d.l)(f, "video", m), { [f.mirror]: E }, p),
+                (0, i.jsx)(a, {
+                    className: o()(f.video, (0, d.l)(f, "video", _), { [f.mirror]: m }, p),
                     streamId: t,
                     onResize: n,
-                    onReady: j,
-                    paused: g,
+                    onReady: I,
+                    paused: b,
                 }),
-            g
+            b
                 ? null
-                : (0, l.jsx)("div", {
-                      className: o()(f.previewWrapper, { [f.loading]: O }),
+                : (0, i.jsx)("div", {
+                      className: o()(f.previewWrapper, { [f.loading]: S }),
                       children:
-                          O &&
-                          (0, l.jsxs)(i.Fragment, {
+                          S &&
+                          (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  null != b
-                                      ? (0, l.jsx)("img", {
-                                            src: b,
+                                  null != E
+                                      ? (0, i.jsx)("img", {
+                                            src: E,
                                             alt: "",
                                             className: f.previewImage,
                                         })
-                                      : (0, l.jsx)("div", {
+                                      : (0, i.jsx)("div", {
                                             className: f.emptyPreviewWrapper,
-                                            children: (0, l.jsx)("div", { className: f.emptyPreview }),
+                                            children: (0, i.jsx)("div", { className: f.emptyPreview }),
                                         }),
-                                  (0, l.jsx)(u.$jN, { className: f.spinner }),
+                                  (0, i.jsx)(c.$jN, { className: f.spinner }),
                               ],
                           }),
                   }),

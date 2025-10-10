@@ -96,16 +96,16 @@ function D(e) {
     for (let [e, n] of t)
         if (f.Z.isMember(e) && !N.has(e)) {
             let t = _.Z.getGuild(e);
-            for (let e of n) x(e, !0, t);
+            for (let e of n) L(e, !0, t);
             R(e, n);
         }
 }
-let x = function (e) {
+let L = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        I.set(e.id, e), t && L(e, n);
+        I.set(e.id, e), t && x(e, n);
     },
-    L = function (e) {
+    x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         if (null == T) return;
         let { tags: n } = e,
@@ -160,22 +160,22 @@ let x = function (e) {
                 T.set(e.id, a);
         }
     },
-    j = (e, t, n) => {
+    M = (e, t, n) => {
         v.set(e.id, e);
         let r = [...S];
         if (t) {
             let t = r.findIndex((t) => t.id === e.id);
             -1 !== t ? (r[t] = e) : r.push(e), (S = r);
         }
-        (t || n) && e.stickers.forEach((e) => x(e));
+        (t || n) && e.stickers.forEach((e) => L(e));
     },
-    M = () => {
+    j = () => {
         N.forEach((e, t) => {
             let n = _.Z.getGuild(t);
-            null != n && e.forEach((e) => L(e, n));
+            null != n && e.forEach((e) => x(e, n));
         }),
             S.forEach((e) => {
-                e.stickers.forEach((e) => L(e));
+                e.stickers.forEach((e) => x(e));
             });
     },
     k = (e) => {
@@ -187,7 +187,7 @@ let x = function (e) {
     };
 function G(e) {
     let t = _.Z.getGuild(e.id);
-    null != t && null != e.stickers.items && (e.stickers.items.forEach((e) => x(e, !0, t)), R(t.id, e.stickers.items));
+    null != t && null != e.stickers.items && (e.stickers.items.forEach((e) => L(e, !0, t)), R(t.id, e.stickers.items));
 }
 function B(e) {
     let { guild: t } = e;
@@ -202,33 +202,33 @@ function Z(e) {
         N.delete(n.id),
         (N = new Map(N));
 }
-let V = () => {
+let F = () => {
         (O = 0), (S = []), I.clear(), v.clear(), (T = null), N.clear(), (N = new Map(N)), (C = !1), (A = null);
     },
-    F = () => {
+    V = () => {
         C = !0;
     },
     H = (e) => {
         let { packs: t } = e;
-        t.forEach((e) => j(e, !0)), (A = Date.now()), (C = !1);
+        t.forEach((e) => M(e, !0)), (A = Date.now()), (C = !1);
     },
     Y = (e) => {
         let { pack: t, ingestStickers: n } = e;
-        j(t, !1, n);
+        M(t, !1, n);
     },
     W = (e) => {
         let { guildId: t, stickers: n } = e;
-        n.forEach((e) => x(e)), R(t, n);
+        n.forEach((e) => L(e)), R(t, n);
     },
     K = (e) => {
         var t, n;
         let { guildId: r, sticker: i } = e,
             a = null != (t = N.get(r)) ? t : [];
-        R(r, [...(null != (n = a.filter((e) => e.id !== i.id)) ? n : []), i]), x(i);
+        R(r, [...(null != (n = a.filter((e) => e.id !== i.id)) ? n : []), i]), L(i);
     },
     z = (e) => {
         let { sticker: t } = e;
-        x(t, !1);
+        L(t, !1);
     },
     q = (e) => {
         var t;
@@ -244,7 +244,7 @@ let V = () => {
                 I.delete(e.id), null != T && T.delete(e.id);
             });
         let a = r.map((e) => i(e));
-        a.forEach((e) => x(e)), R(n, a);
+        a.forEach((e) => L(e)), R(n, a);
     };
 class X extends (r = a.ZP.Store) {
     initialize() {
@@ -257,7 +257,7 @@ class X extends (r = a.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return w(), null == T && ((T = new Map()), M()), T;
+        return w(), null == T && ((T = new Map()), j()), T;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();
@@ -296,8 +296,8 @@ let Q = new X(o.Z, {
     CONNECTION_OPEN: k,
     GUILD_CREATE: B,
     GUILD_DELETE: Z,
-    LOGOUT: V,
-    STICKER_PACKS_FETCH_START: F,
+    LOGOUT: F,
+    STICKER_PACKS_FETCH_START: V,
     STICKER_PACKS_FETCH_SUCCESS: H,
     STICKER_PACK_FETCH_SUCCESS: Y,
     GUILD_STICKERS_FETCH_SUCCESS: W,

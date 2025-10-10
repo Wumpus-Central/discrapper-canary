@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -20,9 +20,9 @@ var r = n(951288),
     y = n(390500),
     v = n(981631),
     I = n(898625),
-    C = n(388032),
-    S = n(555562);
-function N(e) {
+    S = n(388032),
+    C = n(555562);
+function T(e) {
     let { guild: t, width: n, height: l } = e,
         a = i.useMemo(
             () =>
@@ -36,45 +36,45 @@ function N(e) {
         ),
         o = (0, u.N)(a);
     return null == a
-        ? (0, r.jsx)("div", { className: S.defaultGradient })
+        ? (0, r.jsx)("div", { className: C.defaultGradient })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(c.Z, {
-                      className: S.splash,
+                      className: C.splash,
                       src: a,
-                      imageClassName: S.cover,
+                      imageClassName: C.cover,
                       width: n,
                       height: l,
                   }),
                   null != o &&
                       (0, r.jsx)("div", {
-                          className: S.splashGradient,
+                          className: C.splashGradient,
                           style: {
                               background: "linear-gradient(180deg, "
                                   .concat((0, h.aD)(o, 0.16), " 0%, ")
                                   .concat((0, h.aD)(o, 1), " 100%)"),
                           },
                       }),
-                  (0, r.jsx)("div", { className: S.splashGradient }),
+                  (0, r.jsx)("div", { className: C.splashGradient }),
               ],
           });
 }
-let T = (e) => {
+let N = (e) => {
     let { guildId: t } = e,
         { ref: n, width: c, height: u } = (0, s.ZP)(),
         [f, h] = i.useState(I.hO.INITIAL),
-        T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
-        P = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
-        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
+        N = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
+        j = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
+        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: x } = (0, l.cj)([_.Z], () => ({
             hasFetchedRequestToJoinGuilds: _.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: _.Z.getJoinRequestGuild(t),
         }));
     i.useEffect(() => {
-        null != P && (0, d.uL)(v.Z5c.CHANNEL(t));
-    }, [P, t]),
+        null != j && (0, d.uL)(v.Z5c.CHANNEL(t));
+    }, [j, t]),
         i.useEffect(() => {
-            j || g.Z.fetchRequestToJoinGuilds();
-        }, [j]);
+            P || g.Z.fetchRequestToJoinGuilds();
+        }, [P]);
     let A = i.useCallback(() => {
             h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
         }, [t, f]),
@@ -109,10 +109,10 @@ let T = (e) => {
                         return e;
                     })(
                         {
-                            header: C.intl.string(C.t.y0CVen),
-                            cancelText: C.intl.string(C.t.oEAioK),
+                            header: S.intl.string(S.t.y0CVen),
+                            cancelText: S.intl.string(S.t.oEAioK),
                             onConfirm: t,
-                            confirmText: C.intl.string(C.t.p89ACg),
+                            confirmText: S.intl.string(S.t.p89ACg),
                             confirmButtonColor: a.zx.Colors.RED,
                         },
                         n,
@@ -144,22 +144,22 @@ let T = (e) => {
         w = async () => {
             await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t);
         },
-        L = Z(C.intl.format(C.t["9ZezpK"], { name: null == x ? void 0 : x.name }), A),
-        R = Z(C.intl.format(C.t.fJwWVl, { name: null == x ? void 0 : x.name }), A);
+        L = Z(S.intl.format(S.t["9ZezpK"], { name: null == x ? void 0 : x.name }), A),
+        R = Z(S.intl.format(S.t.fJwWVl, { name: null == x ? void 0 : x.name }), A);
     return (0, r.jsxs)("div", {
-        className: S.page,
+        className: C.page,
         ref: n,
         children: [
-            (0, r.jsx)(N, {
+            (0, r.jsx)(T, {
                 guild: x,
                 height: u,
                 width: c,
             }),
             (0, r.jsx)("div", {
-                className: S.contentWrapper,
+                className: C.contentWrapper,
                 children: (() => {
-                    if (null == T) return null;
-                    switch (T.applicationStatus) {
+                    if (null == N) return null;
+                    switch (N.applicationStatus) {
                         case b.wB.SUBMITTED:
                             return (0, r.jsx)(y.Z, {
                                 onWithdrawApplication: L,
@@ -167,11 +167,11 @@ let T = (e) => {
                             });
                         case b.wB.REJECTED:
                             return (0, r.jsx)(E.Z, {
-                                reapplyText: C.intl.string(C.t.I1LYVl),
+                                reapplyText: S.intl.string(S.t.I1LYVl),
                                 onReapply: w,
-                                confirmText: C.intl.string(C.t.g9tK0t),
+                                confirmText: S.intl.string(S.t.g9tK0t),
                                 onWithdrawApplication: L,
-                                rejectionReason: T.rejectionReason,
+                                rejectionReason: N.rejectionReason,
                                 guild: x,
                             });
                         default:
@@ -183,7 +183,7 @@ let T = (e) => {
                     }
                 })(),
             }),
-            (0, r.jsx)("div", { className: S.dragRegion }),
+            (0, r.jsx)("div", { className: C.dragRegion }),
         ],
     });
 };

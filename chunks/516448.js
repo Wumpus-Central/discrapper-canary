@@ -28,7 +28,7 @@ function b(e) {
         children: (0, r.jsxs)(l.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsxs)(l.NIc, {
+                (0, r.jsxs)(l.gNt, {
                     disabled: N,
                     label: x.intl.string(x.t.DFlDaG),
                     description: x.intl.string(x.t.kHalVF),
@@ -66,7 +66,7 @@ function b(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(l.NIc, {
+                (0, r.jsx)(l.gNt, {
                     label: x.intl.string(x.t.S2kKzM),
                     description: x.intl.string(x.t["5a4Axc"]),
                     disabled: N,
@@ -87,7 +87,7 @@ function b(e) {
                             ],
                         }),
                 }),
-                (0, r.jsx)(l.NIc, {
+                (0, r.jsx)(l.gNt, {
                     label: x.intl.string(x.t.RdwKw8),
                     description: x.intl.string(x.t.zAww7e),
                     disabled: N,

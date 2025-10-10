@@ -70,8 +70,8 @@ function v(e, t, n) {
     var E, y, v, I, T, S, A, C, N, R, P;
     let { channel: w, type: D } = e,
         [L, x] = r.useState(() => (0, p.PA)()),
-        j = (0, i.Z)(),
-        M = (0, a.e7)([u.ZP, _.default], () => {
+        M = (0, i.Z)(),
+        j = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return (
@@ -87,10 +87,10 @@ function v(e, t, n) {
         { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: w.isPrivate() || M || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
+                canMentionEveryone: w.isPrivate() || j || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [w, D, M],
+            [w, D, j],
         ),
         { activeCommand: G, activeCommandOption: B } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(w.id),
@@ -143,12 +143,12 @@ function v(e, t, n) {
             let e = (e) => x(e);
             return (
                 W.on("change", e),
-                W.on("update", j),
+                W.on("update", M),
                 () => {
-                    W.off("change", e), W.off("update", j);
+                    W.off("change", e), W.off("update", M);
                 }
             );
-        }, [j, W]),
+        }, [M, W]),
         r.useEffect(() => {
             var e;
             let t = null == (e = L.query) ? void 0 : e.typeInfo.stores;

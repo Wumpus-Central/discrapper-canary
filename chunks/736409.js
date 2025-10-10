@@ -1,4 +1,4 @@
-n.d(t, { j: () => O });
+n.d(t, { j: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,23 +9,23 @@ var r = n(951288),
     u = n(695346),
     d = n(819640),
     p = n(885110),
-    f = n(626135),
-    h = n(316496),
+    h = n(626135),
+    f = n(316496),
     g = n(55185),
     m = n(981631),
     b = n(921944),
     _ = n(46140);
-let O = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: O, popoutTargetRef: y } = e,
+let y = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: y, popoutTargetRef: O } = e,
         v = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, h.D)("SharingPrivacyPopout"),
+                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, f.D)("SharingPrivacyPopout"),
                 { isQuestBarEmpty: i, hasLoadedQuestBar: o } = (0, c.Ws)({ location: _.dr.CONFLICT_CHECKS }),
                 a = u.G6.useSetting(),
-                f = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+                h = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
                 b = (0, l.e7)([p.Z], () => p.Z.getStatus()),
-                { isOpen: O } = (0, s.Z)();
-            if (((i && o) || t) && !f && !O && !__OVERLAY__ && n) {
+                { isOpen: y } = (0, s.Z)();
+            if (((i && o) || t) && !h && !y && !__OVERLAY__ && n) {
                 if (r && a && b !== m.Skl.INVISIBLE) return t ? g.NK.Activity : null;
                 if (!a && b === m.Skl.INVISIBLE) return t ? g.NK.ActivityAndStatus : g.NK.ActivityAndStatusNux;
                 if (!a) return t ? g.NK.Activity : g.NK.ActivityNux;
@@ -34,7 +34,7 @@ let O = (e) => {
             return null;
         })({ isForceShowSharingPopout: n });
     (0, i.useEffect)(() => {
-        n && f.default.track(m.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
+        n && h.default.track(m.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
     let j = n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2];
     return (0, r.jsx)(a.ZP, {
@@ -46,9 +46,9 @@ let O = (e) => {
                 showPopout: a,
                 popoutState: v,
                 handleClose: () => {
-                    l(b.L.USER_DISMISS), O(!1);
+                    l(b.L.USER_DISMISS), y(!1);
                 },
-                popoutTargetRef: y,
+                popoutTargetRef: O,
                 children: t,
             });
         },

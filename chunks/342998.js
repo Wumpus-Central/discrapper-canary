@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(879690),
+    a = n(191336),
     o = n(990547),
     s = n(704215),
     l = n(907862),
@@ -38,7 +38,7 @@ let y = (0, a.U)((e) => ({
         i.useEffect(() => {
             S && null === A && C(t.id);
         }, [A, S, t.id, C]);
-        let x = () => {
+        let L = () => {
             null == I || I();
         };
         i.useEffect(
@@ -47,20 +47,20 @@ let y = (0, a.U)((e) => ({
             },
             [D, w, C],
         );
-        let [L, j] = i.useState(!1);
+        let [x, M] = i.useState(!1);
         i.useEffect(() => {
-            D && !L && j(!0);
-        }, [D, L]),
+            D && !x && M(!0);
+        }, [D, x]),
             (0, _.Z)(
                 {
                     name: o.ImpressionNames.CLOUD_PLAY_CTA,
                     type: o.ImpressionTypes.VIEW,
                     properties: { location_stack: v },
                 },
-                { disableTrack: !L },
-                [L],
+                { disableTrack: !x },
+                [x],
             );
-        let M = () => {
+        let j = () => {
             w(g.L.USER_DISMISS), C(null);
         };
         return (0, r.jsx)(l.J2, {
@@ -79,10 +79,10 @@ let y = (0, a.U)((e) => ({
                 {
                     icon: c.v3n,
                     text: E.intl.string(E.t["jaYS/v"]),
-                    onClick: x,
+                    onClick: L,
                 },
             ],
-            onRequestClose: M,
+            onRequestClose: j,
         });
     },
     v = (e) => {

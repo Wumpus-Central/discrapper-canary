@@ -8,8 +8,8 @@ var r = a(157079),
     E = a(694043),
     s = a(64685),
     l = a(899517),
-    u = a(394798),
-    I = a(454463);
+    I = a(394798),
+    u = a(454463);
 let R = (0, _._I)((t = {}) => {
     let e = {
         failedRequestStatusCodes: [[500, 599]],
@@ -19,7 +19,7 @@ let R = (0, _._I)((t = {}) => {
     return {
         name: "HttpClient",
         setup(t) {
-            var a, _, i, u;
+            var a, _, i, I;
             (a = t),
                 (_ = e),
                 (0, E.t$)() &&
@@ -40,8 +40,8 @@ let R = (0, _._I)((t = {}) => {
                                             (!(o = r) && _ instanceof Request) || (_ instanceof Request && _.bodyUsed)
                                                 ? _
                                                 : new Request(_, o));
-                                    T() && (([t, c] = d("Cookie", s)), ([i, E] = d("Set-Cookie", a)));
-                                    let l = f({
+                                    f() && (([t, c] = d("Cookie", s)), ([i, E] = d("Set-Cookie", a)));
+                                    let l = T({
                                         url: s.url,
                                         method: s.method,
                                         status: a.status,
@@ -55,7 +55,7 @@ let R = (0, _._I)((t = {}) => {
                             })(_, i, e, c);
                     }),
                 (i = t),
-                (u = e),
+                (I = e),
                 "XMLHttpRequest" in l.n &&
                     (0, r.UK)((t) => {
                         if ((0, o.s3)() !== i) return;
@@ -67,7 +67,7 @@ let R = (0, _._I)((t = {}) => {
                             !(function (t, e, a, r) {
                                 if (A(t, e.status, e.responseURL)) {
                                     let t, _, o;
-                                    if (T()) {
+                                    if (f()) {
                                         try {
                                             let t =
                                                 e.getResponseHeader("Set-Cookie") ||
@@ -75,7 +75,7 @@ let R = (0, _._I)((t = {}) => {
                                                 void 0;
                                             t && (_ = N(t));
                                         } catch (t) {
-                                            I.X && c.kg.log("Could not extract cookies from response headers");
+                                            u.X && c.kg.log("Could not extract cookies from response headers");
                                         }
                                         try {
                                             o = (function (t) {
@@ -88,11 +88,11 @@ let R = (0, _._I)((t = {}) => {
                                                     : {};
                                             })(e);
                                         } catch (t) {
-                                            I.X && c.kg.log("Could not extract headers from response");
+                                            u.X && c.kg.log("Could not extract headers from response");
                                         }
                                         t = r;
                                     }
-                                    let i = f({
+                                    let i = T({
                                         url: e.responseURL,
                                         method: a,
                                         status: e.status,
@@ -102,9 +102,9 @@ let R = (0, _._I)((t = {}) => {
                                     });
                                     (0, n.eN)(i);
                                 }
-                            })(u, e, _, E);
+                            })(I, e, _, E);
                         } catch (t) {
-                            I.X && c.kg.warn("Error while extracting response event form XHR response", t);
+                            u.X && c.kg.warn("Error while extracting response event form XHR response", t);
                         }
                     });
         },
@@ -125,7 +125,7 @@ function d(t, e) {
         let e = r[t] || r[t.toLowerCase()] || void 0;
         e && (a = N(e));
     } catch (e) {
-        I.X && c.kg.log(`Could not extract cookies from header ${t}`);
+        u.X && c.kg.log(`Could not extract cookies from header ${t}`);
     }
     return [r, a];
 }
@@ -144,7 +144,7 @@ function A(t, e, a) {
             !(0, i.W)(a, (0, o.s3)())
     );
 }
-function f(t) {
+function T(t) {
     let e = `HTTP Client Error with status code: ${t.status}`,
         a = {
             message: e,
@@ -177,14 +177,14 @@ function f(t) {
             },
         };
     return (
-        (0, u.EG)(a, {
+        (0, I.EG)(a, {
             type: "http.client",
             handled: !1,
         }),
         a
     );
 }
-function T() {
+function f() {
     let t = (0, o.s3)();
     return !!t && !!t.getOptions().sendDefaultPii;
 }

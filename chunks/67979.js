@@ -110,7 +110,7 @@ function b(e) {
             var { onClick: n } = e,
                 i = m(e, ["onClick"]);
             return (0, r.jsx)(
-                a.NIc,
+                a.gNt,
                 h(_({}, y), {
                     children: (e) =>
                         (0, r.jsxs)(

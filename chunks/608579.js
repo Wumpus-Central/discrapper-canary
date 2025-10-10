@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,34 +68,34 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e) {
+function M(e) {
     var t;
     let {
             onClose: n,
             onComplete: a,
             onStepChange: w,
-            transitionState: x,
-            loadId: j,
-            skuId: M,
+            transitionState: L,
+            loadId: M,
+            skuId: j,
             isGift: k = !1,
             giftRecipient: U,
             giftMessage: G,
             giftingOrigin: B,
             analyticsLocations: Z,
-            returnRef: V,
+            returnRef: F,
         } = e,
-        { analyticsLocations: F } = (0, d.ZP)([...Z, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        { analyticsLocations: V } = (0, d.ZP)([...Z, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
         [K, z] = i.useState(!1),
@@ -103,14 +103,14 @@ function j(e) {
             () =>
                 (0, C.UY)({
                     purchaseType: N.o8.FIAT,
-                    skuId: M,
+                    skuId: j,
                 }),
-            [M],
+            [j],
         ),
         X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        Q = null != M ? [M] : X,
+        Q = null != j ? [j] : X,
         J = null != (t = Q[0]) ? t : null,
-        $ = null != M && p.Rm.has(M),
+        $ = null != j && p.Rm.has(j),
         ee = i.useCallback(() => {
             z(!0), null == a || a();
         }, [a]),
@@ -148,9 +148,9 @@ function j(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             I.x,
-                            L(D({}, e), {
+                            x(D({}, e), {
                                 confettiCanvas: Y,
-                                analyticsLocations: F,
+                                analyticsLocations: V,
                                 hideConfetti: null != q,
                             }),
                         ),
@@ -160,10 +160,10 @@ function j(e) {
                     },
                 },
             ],
-            [F, Y, q, k],
+            [V, Y, q, k],
         );
     return (0, r.jsxs)(d.Gt, {
-        value: F,
+        value: V,
         children: [
             (0, r.jsx)(s.O_, {
                 ref: W,
@@ -175,7 +175,7 @@ function j(e) {
                 className: o()(P.customConfetti, { [P.hidden]: !K }),
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
-                loadId: j,
+                loadId: M,
                 stepConfigs: er,
                 applicationId: A.XAJ,
                 skuIDs: Q,
@@ -195,10 +195,10 @@ function j(e) {
                             applicationId: A.XAJ,
                             skuId: J,
                             initialPlanId: null,
-                            analyticsLocations: F,
-                            transitionState: x,
+                            analyticsLocations: V,
+                            transitionState: L,
                             renderHeader: en,
-                            returnRef: V,
+                            returnRef: F,
                             onStepChange: w,
                             skipConfirm: $,
                             hideShadow: !0,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(374470),
-    a = n(481060),
-    s = n(239091),
+    s = n(481060),
+    a = n(239091),
     o = n(294218),
     u = n(592125),
     c = n(388032),
@@ -58,10 +58,10 @@ function A(e, t) {
 class T extends l.PureComponent {
     render() {
         let { message: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
-            s = u.Z.getChannel(e.channel_id);
-        if (null == s) return null;
+            a = u.Z.getChannel(e.channel_id);
+        if (null == a) return null;
         let d = "search-result-".concat(e.id);
-        return (0, r.jsx)(a.tEY, {
+        return (0, r.jsx)(s.tEY, {
             ringTarget: this.hitRef,
             ringClassName: E.__invalid_searchResultFocusRing,
             offset: 4,
@@ -72,7 +72,7 @@ class T extends l.PureComponent {
                     "aria-setsize": i,
                     "aria-labelledby": d,
                     children: [
-                        (0, r.jsx)(a.P3F, {
+                        (0, r.jsx)(s.P3F, {
                             tabIndex: -1,
                             onClick: this.handleMessageClick,
                             innerRef: this.containerRef,
@@ -86,7 +86,7 @@ class T extends l.PureComponent {
                                     children: (0, r.jsx)(o.Z, {
                                         id: d,
                                         message: e,
-                                        channel: s,
+                                        channel: a,
                                         onContextMenu: (t) => this.handleContextMenu(t, e),
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
@@ -100,7 +100,7 @@ class T extends l.PureComponent {
                         (0, r.jsx)("div", {
                             className: E.buttonsContainer,
                             "aria-hidden": !0,
-                            children: (0, r.jsx)(a.P3F, {
+                            children: (0, r.jsx)(s.P3F, {
                                 className: E.button,
                                 onClick: this.jumpTo,
                                 children: c.intl.string(c.t.k5WiPT),
@@ -119,8 +119,8 @@ class T extends l.PureComponent {
                 let l = u.Z.getChannel(t.channel_id);
                 null != l &&
                     (e.stopPropagation(),
-                    (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("76676"), n.e("93077"), n.e("69363")]).then(
+                    (0, a.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("38342"), n.e("93077"), n.e("58627")]).then(
                             n.bind(n, 858341),
                         );
                         return (n) =>

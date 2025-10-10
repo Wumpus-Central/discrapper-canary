@@ -1,94 +1,94 @@
-t.d(e, { Z: () => q });
-var n = t(951288),
-    r = t(647438),
-    a = t(512722),
-    l = t.n(a),
-    i = t(866442),
-    o = t(481060),
-    s = t(313201),
-    d = t(916001),
-    c = t(981631),
-    u = t(388032),
-    g = t(744422);
-function f(A) {
-    for (var e = 1; e < arguments.length; e++) {
-        var t = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(t);
+A.d(t, { Z: () => h });
+var r = A(951288),
+    n = A(647438),
+    a = A(512722),
+    l = A.n(a),
+    i = A(866442),
+    o = A(481060),
+    s = A(313201),
+    d = A(916001),
+    c = A(981631),
+    u = A(388032),
+    g = A(744422);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var A = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(A);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(t).filter(function (A) {
-                    return Object.getOwnPropertyDescriptor(t, A).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(A).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(A, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                var n;
-                (n = t[e]),
-                    e in A
-                        ? Object.defineProperty(A, e, {
-                              value: n,
+            r.forEach(function (t) {
+                var r;
+                (r = A[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (A[e] = n);
+                        : (e[t] = r);
             });
     }
-    return A;
+    return e;
 }
-function p(A, e) {
+function p(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(A, Object.getOwnPropertyDescriptors(e))
-            : (function (A, e) {
-                  var t = Object.keys(A);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var A = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(A);
-                      t.push.apply(t, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      A.push.apply(A, r);
                   }
-                  return t;
-              })(Object(e)).forEach(function (t) {
-                  Object.defineProperty(A, t, Object.getOwnPropertyDescriptor(e, t));
+                  return A;
+              })(Object(t)).forEach(function (A) {
+                  Object.defineProperty(e, A, Object.getOwnPropertyDescriptor(t, A));
               }),
-        A
+        e
     );
 }
 let m = (0, s.hQ)();
-function q(A) {
-    let { newRoleParams: e, setNewRoleParams: t } = A,
-        a = r.useRef(null),
-        { name: s, color: q } = e,
-        h = (A) => t((e) => (l()(null != e, "newRoleParams should be defined"), p(f({}, e), { color: A })));
-    return (0, n.jsxs)("div", {
+function h(e) {
+    let { newRoleParams: t, setNewRoleParams: A } = e,
+        a = n.useRef(null),
+        { name: s, color: h } = t,
+        v = (e) => A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { color: e })));
+    return (0, r.jsxs)("div", {
         className: g.roleInputContainer,
         children: [
-            (0, n.jsx)(o.oil, {
+            (0, r.jsx)(o.oil, {
                 autoFocus: !0,
                 value: s,
-                onChange: (A) =>
-                    t((e) => (l()(null != e, "newRoleParams should be defined"), p(f({}, e), { name: A }))),
+                onChange: (e) =>
+                    A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { name: e }))),
                 id: m,
                 placeholder: u.intl.string(u.t.oNauur),
                 maxLength: c.VKK,
             }),
-            (0, n.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: g.roleColorContainer,
                 children: [
-                    (0, n.jsx)(o.nn4, { children: u.intl.format(u.t["Vlq/pK"], { color: (0, i.Rf)(q) }) }),
-                    (0, n.jsx)(o.yRy, {
+                    (0, r.jsx)(o.nn4, { children: u.intl.format(u.t["Vlq/pK"], { color: (0, i.Rf)(h) }) }),
+                    (0, r.jsx)(o.yRy, {
                         targetElementRef: a,
-                        renderPopout: (A) =>
-                            (0, n.jsx)(
+                        renderPopout: (e) =>
+                            (0, r.jsx)(
                                 o.Z$W,
-                                p(f({}, A), {
-                                    value: q,
-                                    onChange: h,
+                                p(f({}, e), {
+                                    value: h,
+                                    onChange: v,
                                 }),
                             ),
-                        children: (A) =>
-                            (0, n.jsx)(
+                        children: (e) =>
+                            (0, r.jsx)(
                                 o.hU,
-                                p(f({}, A), {
+                                p(f({}, e), {
                                     variant: "secondary",
                                     icon: o.ilE,
                                     buttonRef: a,
@@ -98,7 +98,7 @@ function q(A) {
                     }),
                 ],
             }),
-            (0, n.jsx)(d.Z, { role: e }),
+            (0, r.jsx)(d.Z, { role: t }),
         ],
     });
 }

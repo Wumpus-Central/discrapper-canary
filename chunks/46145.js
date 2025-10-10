@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(388685), n(290780);
+n.d(t, { Z: () => p }), n(388685), n(290780);
 var i,
     r = n(442837),
     l = n(570140),
-    s = n(592125),
-    a = n(271383),
+    a = n(592125),
+    s = n(271383),
     o = n(430824);
 function c(e, t, n) {
     return (
@@ -20,10 +20,10 @@ function c(e, t, n) {
 }
 let u = [],
     d = new Set();
-class p extends (i = r.ZP.PersistedStore) {
+class f extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(a.ZP, o.Z, s.Z),
+        this.waitFor(s.ZP, o.Z, a.Z),
             (d = new Set([...(u = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
     }
     getState() {
@@ -33,8 +33,8 @@ class p extends (i = r.ZP.PersistedStore) {
         return u;
     }
 }
-c(p, "displayName", "RecentVoiceChannelStore"), c(p, "persistKey", "RecentVoiceChannelStore");
-let f = new p(l.Z, {
+c(f, "displayName", "RecentVoiceChannelStore"), c(f, "persistKey", "RecentVoiceChannelStore");
+let p = new f(l.Z, {
     POST_CONNECTION_OPEN: function () {
         d = new Set([...u]);
     },
@@ -43,7 +43,7 @@ let f = new p(l.Z, {
         let { channelId: i } = e;
         return (
             null != i &&
-            !!(null != (n = null == (t = s.Z.getChannel(i)) ? void 0 : t.isVocal()) && n) &&
+            !!(null != (n = null == (t = a.Z.getChannel(i)) ? void 0 : t.isVocal()) && n) &&
             (d.has(i) ? ((u = u.filter((e) => e !== i)).unshift(i), (d = new Set([...u]))) : (u.unshift(i), d.add(i)),
             u.length > 10 && ((u.length = 10), (d = new Set([...u]))),
             !0)

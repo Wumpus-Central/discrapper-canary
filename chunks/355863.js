@@ -426,7 +426,7 @@ function N(e, t) {
 function R(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a, defaultSize: o } = e;
     return N(t, (e, t) =>
-        j({
+        M({
             widget: e,
             anchor: n,
             size: r,
@@ -465,7 +465,7 @@ function x(e) {
         V(e, n);
     });
 }
-function j(e) {
+function M(e) {
     let { widget: t, anchor: n, size: r, opacity: a, minSize: o, defaultSize: s } = e;
     if (
         ((i = O(b({}, i), {
@@ -482,13 +482,13 @@ function j(e) {
         null != e && (e.defaultSettings.size = b({ fixed: e.defaultSettings.size.fixed }, s));
     }
 }
-function M(e) {
+function j(e) {
     i = O(b({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
 }
 function k(e) {
     let { widgetId: t } = e;
     return N(t, (e, t) => {
-        M(e);
+        j(e);
     });
 }
 function U(e) {

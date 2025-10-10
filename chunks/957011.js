@@ -2,34 +2,34 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(647438),
     i = n(442837),
     l = n(479531),
-    a = n(601964),
-    s = n(430824),
+    s = n(601964),
+    a = n(430824),
     o = n(594174),
     c = n(53365),
     d = n(223892);
 function u(e, t) {
-    let n = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
-        [u, m] = r.useState(),
-        [g, p] = r.useState(!1),
-        h = (0, d.Ob)(n);
+    let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
+        [u, g] = r.useState(),
+        [m, p] = r.useState(!1),
+        f = (0, d.Ob)(n);
     return {
         canSubmitAcceptance: (0, i.e7)([o.default], () => {
             let e = o.default.getCurrentUser();
-            return null != n && (0, a.eM)(n, e);
+            return null != n && (0, s.eM)(n, e);
         }, [n]),
         error: u,
-        loading: g,
+        loading: m,
         submitAcceptTermsRequest: r.useCallback(async () => {
-            if (null != e && (h || null != t)) {
-                p(!0), m(void 0);
+            if (null != e && (f || null != t)) {
+                p(!0), g(void 0);
                 try {
                     null != t ? await c.wE(e, t) : await c.zo(e);
                 } catch (e) {
-                    m(new l.Z(e));
+                    g(new l.Z(e));
                 } finally {
                     p(!1);
                 }
             }
-        }, [e, t, h]),
+        }, [e, t, f]),
     };
 }

@@ -38,17 +38,17 @@ try {
 let y = p.ZP.requireModule("discord_rpc").RPCWebSocket,
     v = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     I = new c.Z("RPCServer:WSS"),
-    C = [];
-function S(e) {
+    S = [];
+function C(e) {
     return "function" == typeof e ? e() : e;
 }
-function N() {
+function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
                 ? void 0
                 : () => {
-                      if (!S(i.listening)) return;
+                      if (!C(i.listening)) return;
                       let e = i.address().port;
                       I.info("Starting on ".concat(e)),
                           s.Z.dispatch({
@@ -58,13 +58,13 @@ function N() {
                   };
     i.listen(_.V6Z + (e % _.frH), "127.0.0.1", t);
 }
-function T(e, t, n) {
+function N(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         l =
-            null != S(e.headers).origin
+            null != C(e.headers).origin
                 ? {
-                      "Access-Control-Allow-Origin": S(e.headers).origin,
+                      "Access-Control-Allow-Origin": C(e.headers).origin,
                       "Access-Control-Allow-Credentials": "true",
                       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
                       "Access-Control-Allow-Headers": "Content-Type, Authorization",
@@ -95,9 +95,9 @@ function T(e, t, n) {
         ),
         t.end(n);
 }
-function P(e, t, n, r) {
+function j(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    T(
+    N(
         e,
         t,
         {
@@ -107,7 +107,7 @@ function P(e, t, n, r) {
         n,
     );
 }
-class j extends g.Z {
+class P extends g.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== _.Etm.OVERLAY && e.evt !== _.zMe.OVERLAY)) &&
             I.info("Socket Emit: ".concat(this.id), (0, h.Z)(e)),
@@ -142,13 +142,13 @@ class x extends g.Z {
 }
 class A extends l.EventEmitter {
     handleRequest(e, t) {
-        let [n, r] = S(e.url).split("?"),
-            i = S(e.method);
-        if ("/rpc" === n && "OPTIONS" === i) return void T(e, t, { body: "" });
+        let [n, r] = C(e.url).split("?"),
+            i = C(e.method);
+        if ("/rpc" === n && "OPTIONS" === i) return void N(e, t, { body: "" });
         let l = "POST" === i;
         if ("/rpc" === n && ("GET" === i || l)) {
             let n = new URLSearchParams(r),
-                i = l ? S(e.headers)["content-type"].split("/")[1] : "json",
+                i = l ? C(e.headers)["content-type"].split("/")[1] : "json",
                 o = function () {
                     var e, r;
                     let { protocol: i, host: l } =
@@ -159,13 +159,13 @@ class A extends l.EventEmitter {
                         t.writeHead(301),
                         t.end();
                 },
-                s = new x(!l ? o : T.bind(null, e, t), !l ? o : P.bind(null, e, t, 400), Number(n.get("v")), i);
+                s = new x(!l ? o : N.bind(null, e, t), !l ? o : j.bind(null, e, t, 400), Number(n.get("v")), i);
             if (l)
-                (0, m.em)(s, S(e.headers).origin, n.get("client_id"))
+                (0, m.em)(s, C(e.headers).origin, n.get("client_id"))
                     .then(() => {
                         let n = "";
                         e.on("data", (e) => (n += e)),
-                            e.on("error", () => P(e, t, 500, "Internal Server Error")),
+                            e.on("error", () => j(e, t, 500, "Internal Server Error")),
                             e.on("end", () => this.handleMessage(s, n));
                     })
                     .catch((e) => {
@@ -179,15 +179,15 @@ class A extends l.EventEmitter {
             }
             return;
         }
-        P(e, t, 404, "Not Found");
+        j(e, t, 404, "Not Found");
     }
     handleConnection(e) {
         var t, n;
         let r,
-            i = new URLSearchParams(S(e.upgradeReq).url.split("?")[1]),
-            l = null != (t = S(e.upgradeReq).headers.origin) ? t : "";
+            i = new URLSearchParams(C(e.upgradeReq).url.split("?")[1]),
+            l = null != (t = C(e.upgradeReq).headers.origin) ? t : "";
         try {
-            r = new j(e, Number(i.get("v")), null != (n = i.get("encoding")) ? n : "json");
+            r = new P(e, Number(i.get("v")), null != (n = i.get("encoding")) ? n : "json");
         } catch (t) {
             e.close(t.code, t.message);
             return;
@@ -196,12 +196,12 @@ class A extends l.EventEmitter {
             e.on("error", (e) => I.error("WS Error: ".concat(e.message))),
             e.on("close", (e, t) => {
                 I.info("Socket Closed: ".concat(r.id, ", code ").concat(e, ", message ").concat(t)),
-                    o().remove(C, (e) => e === r),
+                    o().remove(S, (e) => e === r),
                     this.emit("disconnect", r);
             }),
             (0, m.em)(r, l, i.get("client_id"))
                 .then(() => {
-                    C.push(r), e.on("message", (e) => this.handleMessage(r, e)), this.emit("connect", r);
+                    S.push(r), e.on("message", (e) => this.handleMessage(r, e)), this.emit("connect", r);
                 })
                 .catch((e) => {
                     let { code: t, message: n } = e;
@@ -228,10 +228,10 @@ class A extends l.EventEmitter {
         let t = 0;
         (i = y.http.createServer()).on("error", (e) => {
             I.error("Error: ".concat(e.message)),
-                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => N(++t), 1000);
+                ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => T(++t), 1000);
         }),
             i.on("request", this.handleRequest.bind(this)),
-            N(t);
+            T(t);
         let n = {
             instanceId: null != (e = i.instanceId) ? e : 0,
             server: i,

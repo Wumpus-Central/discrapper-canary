@@ -1,12 +1,12 @@
 n.d(t, { Z: () => N });
 var r = n(951288),
     l = n(647438),
-    i = n(786920),
-    s = n(442837),
-    a = n(481060),
-    o = n(110924),
-    u = n(714338),
-    c = n(237617),
+    i = n(137317),
+    s = n(872175),
+    a = n(442837),
+    o = n(481060),
+    u = n(110924),
+    c = n(714338),
     E = n(433355),
     d = n(189432),
     _ = n(727381),
@@ -31,13 +31,13 @@ function g(e, t) {
 }
 function N(e) {
     var t;
-    let { userId: n, guildId: N, onClose: O, analyticsLocation: h, className: f } = e,
-        R = (0, s.e7)([E.ZP], () => E.ZP.getGuildSidebarState(N), [N]),
+    let { userId: n, guildId: N, onClose: h, analyticsLocation: O, className: f } = e,
+        R = (0, a.e7)([E.ZP], () => E.ZP.getGuildSidebarState(N), [N]),
         S = null != (t = null == R ? void 0 : R.details.modViewPanel) ? t : I.k.INFO,
-        p = (0, o.Z)(n),
-        C = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
-        D = (0, c.Z)(C),
-        { reducedMotion: L } = l.useContext(a.Sfi),
+        C = (0, u.Z)(n),
+        p = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
+        D = (0, s.Z)(p),
+        { reducedMotion: L } = l.useContext(o.Sfi),
         U = l.useCallback(
             (e) => {
                 null != R && (0, d.r)(N, n, R.baseChannelId, { modViewPanel: e });
@@ -49,13 +49,13 @@ function N(e) {
                 [m.EkH.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (S === I.k.INFO ? O() : U(I.k.INFO)),
+                    action: () => (S === I.k.INFO ? h() : U(I.k.INFO)),
                 },
             }),
-            [O, S, U],
+            [h, S, U],
         );
-    l.useEffect(() => (u.Z.enable(), u.Z.enableTemp(M), () => u.Z.disableTemp()), [M]);
-    let b = (0, a.Yzy)(
+    l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(M), () => c.Z.disableTemp()), [M]);
+    let x = (0, o.Yzy)(
         S,
         {
             value: 0,
@@ -63,7 +63,7 @@ function N(e) {
             enter: { value: 0 },
             leave: { value: -1 },
         },
-        p !== n ? "animate-never" : "animate-always",
+        C !== n ? "animate-never" : "animate-always",
     );
     return (0, r.jsx)(i.animated.div, {
         style: {
@@ -72,7 +72,7 @@ function N(e) {
             flex: 1,
             overflow: "hidden",
         },
-        children: b((e, t, l) => {
+        children: x((e, t, l) => {
             var s, a, o;
             let { key: u } = l;
             return (0, r.jsx)(

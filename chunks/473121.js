@@ -3,17 +3,17 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(454585),
-    s = n(273744),
-    o = n(388032),
+    o = n(273744),
+    s = n(388032),
     c = n(204800);
 let d = (e) => {
     var t, n;
     let {
-            node: { header: d, subheader: u, button: m },
-            isModeratorReport: p,
+            node: { header: d, subheader: u, button: _ },
+            isModeratorReport: m,
         } = e,
-        g = (null == m ? void 0 : m.type) === "submit",
-        x = i.useRef(
+        p = (null == _ ? void 0 : _.type) === "submit",
+        g = i.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -40,7 +40,7 @@ let d = (e) => {
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
-                (n = n = { link: s.s }),
+                (n = n = { link: o.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -70,14 +70,14 @@ let d = (e) => {
                 ? (0, r.jsx)(l.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: x.current(u),
+                      children: g.current(u),
                   })
                 : null,
-            g &&
-                !p &&
+            p &&
+                !m &&
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: o.intl.format(o.t.Q0tSKS, {}),
+                    children: s.intl.format(s.t.Q0tSKS, {}),
                 }),
         ],
     });

@@ -5,10 +5,10 @@ n.d(t, {
 });
 var l = n(399606),
     i = n(818083),
-    r = n(430824),
-    s = n(971130),
+    s = n(430824),
+    r = n(971130),
     a = n(981631);
-let o = s.ZP.INVITE_OPTIONS_7_DAYS.value,
+let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
     u = (0, i.B)({
         kind: "guild",
         id: "2025-08_default_invite_expiration_guild",
@@ -38,13 +38,13 @@ function d(e) {
             guildId: null != t ? t : a.lds,
             location: n,
         }),
-        d = (0, l.e7)([r.Z], () => r.Z.getGuild(t));
+        d = (0, l.e7)([s.Z], () => s.Z.getGuild(t));
     return null == t
         ? null
         : (function (e) {
               var t;
               let { guild: n, experimentConfig: l } = e;
-              if (null == n ? void 0 : n.features.has(a.oNc.HUB)) return s.ZP.INVITE_OPTIONS_FOREVER.value;
+              if (null == n ? void 0 : n.features.has(a.oNc.HUB)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
               let { defaultMaxAge: i } =
                   null != l
                       ? l
@@ -64,5 +64,5 @@ function c(e) {
             guildId: null != t ? t : a.lds,
             location: n,
         });
-    return s.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge] });
+    return r.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == l ? void 0 : l.defaultMaxAge] });
 }

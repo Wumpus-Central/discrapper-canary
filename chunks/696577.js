@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -89,7 +89,7 @@ function I(e) {
         shouldHighlight: a,
     });
 }
-function C(e) {
+function S(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: s } = e,
         p = i.useMemo(() => (t ? E.intl.string(E.t["Uv/eT0"]) : a), [t, a]),
         f = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
@@ -124,7 +124,7 @@ function C(e) {
         ],
     });
 }
-function S(e) {
+function C(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
         o = h.ZP.useUserTag(t);
     return (0, r.jsx)(_.Z, {
@@ -132,7 +132,7 @@ function S(e) {
         hovered: n,
         status: i,
         showAccountIdentifier: !l && !t.isProvisional,
-        subText: (0, r.jsx)(C, {
+        subText: (0, r.jsx)(S, {
             isGameRelationship: l,
             isProvisional: t.isProvisional,
             applicationId: a,
@@ -140,7 +140,7 @@ function S(e) {
         }),
     });
 }
-function N(e) {
+function T(e) {
     let { user: t, type: n, status: l, isFocused: a, applicationId: o, isGameRelationship: c } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
         d = l === O.Skl.OFFLINE ? O.Skl.UNKNOWN : l,
@@ -160,7 +160,7 @@ function N(e) {
             (0, r.jsxs)("div", {
                 className: y.listItemContents,
                 children: [
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(C, {
                         user: t,
                         hovered: e,
                         status: d,

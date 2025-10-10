@@ -14,14 +14,14 @@ var r = a(263449),
 let E = n.n,
     s = E.document,
     l = E.navigator,
-    u = "Report a Bug",
-    I = "Cancel",
+    I = "Report a Bug",
+    u = "Cancel",
     R = "Send Bug Report",
     d = "Confirm",
     N = "Report a Bug",
     A = "your.email@example.org",
-    f = "Email",
-    T = "What's the bug? What did you expect?",
+    T = "Email",
+    f = "What's the bug? What did you expect?",
     L = "Description",
     p = "Your Name",
     h = "Name",
@@ -93,7 +93,7 @@ function v(t, e) {
         },
     };
 }
-function y(t, e) {
+function S(t, e) {
     return (
         Object.entries(e).forEach(([e, a]) => {
             t.setAttributeNS(null, e, a);
@@ -101,12 +101,12 @@ function y(t, e) {
         t
     );
 }
-let S = "rgba(88, 74, 192, 1)",
+let y = "rgba(88, 74, 192, 1)",
     U = {
         foreground: "#2b2233",
         background: "#ffffff",
         accentForeground: "white",
-        accentBackground: S,
+        accentBackground: y,
         successColor: "#268d75",
         errorColor: "#df3338",
         border: "1.5px solid rgba(41, 35, 47, 0.13)",
@@ -118,7 +118,7 @@ let S = "rgba(88, 74, 192, 1)",
         foreground: "#ebe6ef",
         background: "#29232f",
         accentForeground: "white",
-        accentBackground: S,
+        accentBackground: y,
         successColor: "#2da98c",
         errorColor: "#f55459",
         border: "1.5px solid rgba(235, 230, 239, 0.15)",
@@ -146,7 +146,7 @@ let W =
         id: _ = "sentry-feedback",
         autoInject: n = !0,
         showBranding: o = !0,
-        isEmailRequired: S = !1,
+        isEmailRequired: y = !1,
         isNameRequired: W = !1,
         showEmail: w = !0,
         showName: M = !0,
@@ -160,20 +160,20 @@ let W =
         themeLight: k = {},
         themeDark: x = {},
         addScreenshotButtonLabel: F = g,
-        cancelButtonLabel: V = I,
+        cancelButtonLabel: V = u,
         confirmButtonLabel: j = d,
-        emailLabel: X = f,
+        emailLabel: X = T,
         emailPlaceholder: $ = A,
         formTitle: q = N,
         isRequiredLabel: z = P,
         messageLabel: J = L,
-        messagePlaceholder: Z = T,
+        messagePlaceholder: Z = f,
         nameLabel: Q = h,
         namePlaceholder: tt = p,
         removeScreenshotButtonLabel: te = D,
         submitButtonLabel: ta = R,
         successMessageText: tr = O,
-        triggerLabel: t_ = u,
+        triggerLabel: t_ = I,
         triggerAriaLabel: tn = "",
         onFormOpen: to,
         onFormClose: ti,
@@ -185,7 +185,7 @@ let W =
                 id: _,
                 autoInject: n,
                 showBranding: o,
-                isEmailRequired: S,
+                isEmailRequired: y,
                 isNameRequired: W,
                 showEmail: w,
                 showName: M,
@@ -217,14 +217,14 @@ let W =
                 onSubmitSuccess: tc,
                 onFormSubmitted: ts,
             },
-            tu = null,
-            tI = [],
+            tI = null,
+            tu = [],
             tR = (t) => {
-                if (!tu) {
+                if (!tI) {
                     let e = s.createElement("div");
                     (e.id = String(t.id)),
                         s.body.appendChild(e),
-                        (tu = e.attachShadow({ mode: "open" })).appendChild(
+                        (tI = e.attachShadow({ mode: "open" })).appendChild(
                             (function ({ colorScheme: t, themeDark: e, themeLight: a }) {
                                 let r = s.createElement("style");
                                 return (
@@ -276,7 +276,7 @@ ${
                             })(t),
                         );
                 }
-                return tu;
+                return tI;
             },
             td = async (e, a, _) => {
                 let n = (0, r.s3)(),
@@ -345,14 +345,14 @@ ${
                     };
                 r.addEventListener("click", n);
                 let o = () => {
-                    (tI = tI.filter((t) => t !== o)),
+                    (tu = tu.filter((t) => t !== o)),
                         _ && _.removeFromDom(),
                         (_ = null),
                         r.removeEventListener("click", n);
                 };
-                return tI.push(o), o;
+                return tu.push(o), o;
             },
-            tf = (t = {}) => {
+            tT = (t = {}) => {
                 let e = v(tl, t),
                     a = tR(e),
                     r = (function ({ triggerLabel: t, triggerAriaLabel: e, shadow: a }) {
@@ -361,26 +361,26 @@ ${
                             ((r.type = "button"),
                             (r.className = "widget__actor"),
                             (r.ariaHidden = "false"),
-                            (r.ariaLabel = e || t || u),
+                            (r.ariaLabel = e || t || I),
                             r.appendChild(
                                 (function () {
                                     let t = (t) => E.document.createElementNS("http://www.w3.org/2000/svg", t),
-                                        e = y(t("svg"), {
+                                        e = S(t("svg"), {
                                             width: "20",
                                             height: "20",
                                             viewBox: "0 0 20 20",
                                             fill: "var(--foreground)",
                                         }),
-                                        a = y(t("g"), { clipPath: "url(#clip0_57_80)" }),
-                                        r = y(t("path"), {
+                                        a = S(t("g"), { clipPath: "url(#clip0_57_80)" }),
+                                        r = S(t("path"), {
                                             "fill-rule": "evenodd",
                                             "clip-rule": "evenodd",
                                             d: "M15.6622 15H12.3997C12.2129 14.9959 12.031 14.9396 11.8747 14.8375L8.04965 12.2H7.49956V19.1C7.4875 19.3348 7.3888 19.5568 7.22256 19.723C7.05632 19.8892 6.83435 19.9879 6.59956 20H2.04956C1.80193 19.9968 1.56535 19.8969 1.39023 19.7218C1.21511 19.5467 1.1153 19.3101 1.11206 19.0625V12.2H0.949652C0.824431 12.2017 0.700142 12.1783 0.584123 12.1311C0.468104 12.084 0.362708 12.014 0.274155 11.9255C0.185602 11.8369 0.115689 11.7315 0.0685419 11.6155C0.0213952 11.4995 -0.00202913 11.3752 -0.00034808 11.25V3.75C-0.00900498 3.62067 0.0092504 3.49095 0.0532651 3.36904C0.0972798 3.24712 0.166097 3.13566 0.255372 3.04168C0.344646 2.94771 0.452437 2.87327 0.571937 2.82307C0.691437 2.77286 0.82005 2.74798 0.949652 2.75H8.04965L11.8747 0.1625C12.031 0.0603649 12.2129 0.00407221 12.3997 0H15.6622C15.9098 0.00323746 16.1464 0.103049 16.3215 0.278167C16.4966 0.453286 16.5964 0.689866 16.5997 0.9375V3.25269C17.3969 3.42959 18.1345 3.83026 18.7211 4.41679C19.5322 5.22788 19.9878 6.32796 19.9878 7.47502C19.9878 8.62209 19.5322 9.72217 18.7211 10.5333C18.1345 11.1198 17.3969 11.5205 16.5997 11.6974V14.0125C16.6047 14.1393 16.5842 14.2659 16.5395 14.3847C16.4948 14.5035 16.4268 14.6121 16.3394 14.7042C16.252 14.7962 16.147 14.8698 16.0307 14.9206C15.9144 14.9714 15.7891 14.9984 15.6622 15ZM1.89695 10.325H1.88715V4.625H8.33715C8.52423 4.62301 8.70666 4.56654 8.86215 4.4625L12.6872 1.875H14.7247V13.125H12.6872L8.86215 10.4875C8.70666 10.3835 8.52423 10.327 8.33715 10.325H2.20217C2.15205 10.3167 2.10102 10.3125 2.04956 10.3125C1.9981 10.3125 1.94708 10.3167 1.89695 10.325ZM2.98706 12.2V18.1625H5.66206V12.2H2.98706ZM16.5997 9.93612V5.01393C16.6536 5.02355 16.7072 5.03495 16.7605 5.04814C17.1202 5.13709 17.4556 5.30487 17.7425 5.53934C18.0293 5.77381 18.2605 6.06912 18.4192 6.40389C18.578 6.73866 18.6603 7.10452 18.6603 7.47502C18.6603 7.84552 18.578 8.21139 18.4192 8.54616C18.2605 8.88093 18.0293 9.17624 17.7425 9.41071C17.4556 9.64518 17.1202 9.81296 16.7605 9.90191C16.7072 9.91509 16.6536 9.9265 16.5997 9.93612Z",
                                         });
                                     e.appendChild(a).appendChild(r);
                                     let _ = t("defs"),
-                                        n = y(t("clipPath"), { id: "clip0_57_80" }),
-                                        o = y(t("rect"), {
+                                        n = S(t("clipPath"), { id: "clip0_57_80" }),
+                                        o = S(t("rect"), {
                                             width: "20",
                                             height: "20",
                                             fill: "white",
@@ -498,17 +498,17 @@ ${
                 (0, c.j)() &&
                     tl.autoInject &&
                     ("loading" === s.readyState
-                        ? s.addEventListener("DOMContentLoaded", () => tf().appendToDom())
-                        : tf().appendToDom());
+                        ? s.addEventListener("DOMContentLoaded", () => tT().appendToDom())
+                        : tT().appendToDom());
             },
             attachTo: tA,
             createWidget(t = {}) {
-                let e = tf(v(tl, t));
+                let e = tT(v(tl, t));
                 return e.appendToDom(), e;
             },
             createForm: async (t = {}) => tN(v(tl, t)),
             remove() {
-                tu && (tu.parentElement && tu.parentElement.remove(), (tu = null)), tI.forEach((t) => t()), (tI = []);
+                tI && (tI.parentElement && tI.parentElement.remove(), (tI = null)), tu.forEach((t) => t()), (tu = []);
             },
         };
     };
@@ -637,8 +637,8 @@ function ta() {
 }
 function tr(t, e, a, r, _, n, o, i, c, E, s) {
     var l,
-        u,
         I,
+        u,
         R,
         d,
         N = (r && r.__k) || V,
@@ -721,16 +721,16 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
         l < A;
         l++
     )
-        null != (I = a.__k[l]) &&
-            "boolean" != typeof I &&
-            "function" != typeof I &&
-            ((u = -1 === I.__i ? F : N[I.__i] || F),
-            (I.__i = l),
-            tc(t, I, u, _, n, o, i, c, E, s),
-            (R = I.__e),
-            I.ref && u.ref != I.ref && (u.ref && ts(u.ref, null, I), s.push(I.ref, I.__c || R, I)),
+        null != (u = a.__k[l]) &&
+            "boolean" != typeof u &&
+            "function" != typeof u &&
+            ((I = -1 === u.__i ? F : N[u.__i] || F),
+            (u.__i = l),
+            tc(t, u, I, _, n, o, i, c, E, s),
+            (R = u.__e),
+            u.ref && I.ref != u.ref && (I.ref && ts(I.ref, null, u), s.push(u.ref, u.__c || R, u)),
             null == d && null != R && (d = R),
-            65536 & I.__u || u.__k === I.__k
+            65536 & u.__u || I.__k === u.__k
                 ? (c = (function t(e, a, r) {
                       var _, n;
                       if ("function" == typeof e.type) {
@@ -741,12 +741,12 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
                       do a = a && a.nextSibling;
                       while (null != a && 8 === a.nodeType);
                       return a;
-                  })(I, c, t))
-                : "function" == typeof I.type && void 0 !== I.__d
-                  ? (c = I.__d)
+                  })(u, c, t))
+                : "function" == typeof u.type && void 0 !== u.__d
+                  ? (c = u.__d)
                   : R && (c = R.nextSibling),
-            (I.__d = void 0),
-            (I.__u &= -196609));
+            (u.__d = void 0),
+            (u.__u &= -196609));
     (a.__d = c), (a.__e = d);
 }
 function t_(t, e, a) {
@@ -811,14 +811,14 @@ function ti(t) {
 function tc(t, e, a, r, _, n, o, i, c, E) {
     var s,
         l,
-        u,
         I,
+        u,
         R,
         d,
         N,
         A,
-        f,
         T,
+        f,
         L,
         p,
         h,
@@ -831,39 +831,39 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
         try {
             if (
                 ((A = e.props),
-                (f = (s = g.contextType) && r[s.__c]),
-                (T = s ? (f ? f.props.value : s.__) : r),
+                (T = (s = g.contextType) && r[s.__c]),
+                (f = s ? (T ? T.props.value : s.__) : r),
                 a.__c
                     ? (N = (l = e.__c = a.__c).__ = l.__E)
                     : ("prototype" in g && g.prototype.render
-                          ? (e.__c = l = new g(A, T))
-                          : ((e.__c = l = new Q(A, T)), (l.constructor = g), (l.render = tu)),
-                      f && f.sub(l),
+                          ? (e.__c = l = new g(A, f))
+                          : ((e.__c = l = new Q(A, f)), (l.constructor = g), (l.render = tI)),
+                      T && T.sub(l),
                       (l.props = A),
                       l.state || (l.state = {}),
-                      (l.context = T),
+                      (l.context = f),
                       (l.__n = r),
-                      (u = l.__d = !0),
+                      (I = l.__d = !0),
                       (l.__h = []),
                       (l._sb = [])),
                 null == l.__s && (l.__s = l.state),
                 null != g.getDerivedStateFromProps &&
                     (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(A, l.__s))),
-                (I = l.props),
+                (u = l.props),
                 (R = l.state),
                 (l.__v = e),
-                u)
+                I)
             )
                 null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(),
                     null != l.componentDidMount && l.__h.push(l.componentDidMount);
             else {
                 if (
                     (null == g.getDerivedStateFromProps &&
-                        A !== I &&
+                        A !== u &&
                         null != l.componentWillReceiveProps &&
-                        l.componentWillReceiveProps(A, T),
+                        l.componentWillReceiveProps(A, f),
                     !l.__e &&
-                        ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(A, l.__s, T)) ||
+                        ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(A, l.__s, f)) ||
                             e.__v === a.__v))
                 ) {
                     for (
@@ -881,14 +881,14 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                     (l._sb = []), l.__h.length && o.push(l);
                     break e;
                 }
-                null != l.componentWillUpdate && l.componentWillUpdate(A, l.__s, T),
+                null != l.componentWillUpdate && l.componentWillUpdate(A, l.__s, f),
                     null != l.componentDidUpdate &&
                         l.__h.push(function () {
-                            l.componentDidUpdate(I, R, d);
+                            l.componentDidUpdate(u, R, d);
                         });
             }
             if (
-                ((l.context = T),
+                ((l.context = f),
                 (l.props = A),
                 (l.__P = t),
                 (l.__e = !1),
@@ -908,7 +908,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                 while (l.__d && ++h < 25);
             (l.state = l.__s),
                 null != l.getChildContext && (r = $($({}, r), l.getChildContext())),
-                u || null == l.getSnapshotBeforeUpdate || (d = l.getSnapshotBeforeUpdate(I, R)),
+                I || null == l.getSnapshotBeforeUpdate || (d = l.getSnapshotBeforeUpdate(u, R)),
                 tr(
                     t,
                     X((P = null != s && s.type === Z && null == s.key ? s.props.children : s)) ? P : [P],
@@ -940,52 +940,52 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                   var E,
                       s,
                       l,
-                      u,
                       I,
+                      u,
                       R,
                       d,
                       N = a.props,
                       A = e.props,
-                      f = e.type;
-                  if (("svg" === f && (_ = !0), null != n)) {
+                      T = e.type;
+                  if (("svg" === T && (_ = !0), null != n)) {
                       for (E = 0; E < n.length; E++)
-                          if ((I = n[E]) && "setAttribute" in I == !!f && (f ? I.localName === f : 3 === I.nodeType)) {
-                              (t = I), (n[E] = null);
+                          if ((u = n[E]) && "setAttribute" in u == !!T && (T ? u.localName === T : 3 === u.nodeType)) {
+                              (t = u), (n[E] = null);
                               break;
                           }
                   }
                   if (null == t) {
-                      if (null === f) return document.createTextNode(A);
+                      if (null === T) return document.createTextNode(A);
                       (t = _
-                          ? document.createElementNS("http://www.w3.org/2000/svg", f)
-                          : document.createElement(f, A.is && A)),
+                          ? document.createElementNS("http://www.w3.org/2000/svg", T)
+                          : document.createElement(T, A.is && A)),
                           (n = null),
                           (i = !1);
                   }
-                  if (null === f) N === A || (i && t.data === A) || (t.data = A);
+                  if (null === T) N === A || (i && t.data === A) || (t.data = A);
                   else {
                       if (((n = n && M.call(t.childNodes)), (N = a.props || F), !i && null != n))
-                          for (N = {}, E = 0; E < t.attributes.length; E++) N[(I = t.attributes[E]).name] = I.value;
+                          for (N = {}, E = 0; E < t.attributes.length; E++) N[(u = t.attributes[E]).name] = u.value;
                       for (E in N)
-                          (I = N[E]),
+                          (u = N[E]),
                               "children" == E ||
                                   ("dangerouslySetInnerHTML" == E
-                                      ? (l = I)
-                                      : "key" === E || E in A || tn(t, E, null, I, _));
+                                      ? (l = u)
+                                      : "key" === E || E in A || tn(t, E, null, u, _));
                       for (E in A)
-                          (I = A[E]),
+                          (u = A[E]),
                               "children" == E
-                                  ? (u = I)
+                                  ? (I = u)
                                   : "dangerouslySetInnerHTML" == E
-                                    ? (s = I)
+                                    ? (s = u)
                                     : "value" == E
-                                      ? (R = I)
+                                      ? (R = u)
                                       : "checked" == E
-                                        ? (d = I)
+                                        ? (d = u)
                                         : "key" === E ||
-                                          (i && "function" != typeof I) ||
-                                          N[E] === I ||
-                                          tn(t, E, I, N[E], _);
+                                          (i && "function" != typeof u) ||
+                                          N[E] === u ||
+                                          tn(t, E, u, N[E], _);
                       if (s)
                           i || (l && (s.__html === l.__html || s.__html === t.innerHTML)) || (t.innerHTML = s.__html),
                               (e.__k = []);
@@ -993,11 +993,11 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                           (l && (t.innerHTML = ""),
                           tr(
                               t,
-                              X(u) ? u : [u],
+                              X(I) ? I : [I],
                               e,
                               a,
                               r,
-                              _ && "foreignObject" !== f,
+                              _ && "foreignObject" !== T,
                               n,
                               o,
                               n ? n[0] : a.__k && tt(a, 0),
@@ -1010,7 +1010,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                       i ||
                           ((E = "value"),
                           void 0 === R ||
-                              (R === t[E] && ("progress" !== f || R) && ("option" !== f || R === N[E])) ||
+                              (R === t[E] && ("progress" !== T || R) && ("option" !== T || R === N[E])) ||
                               tn(t, E, R, N[E], !1),
                           (E = "checked"),
                           void 0 !== d && d !== t[E] && tn(t, E, d, N[E], !1));
@@ -1059,7 +1059,7 @@ function tl(t, e, a) {
     if ((r = t.__k)) for (_ = 0; _ < r.length; _++) r[_] && tl(r[_], e, a || "function" != typeof t.type);
     a || null == t.__e || q(t.__e), (t.__ = t.__e = t.__d = void 0);
 }
-function tu(t, e, a) {
+function tI(t, e, a) {
     return this.constructor(t, a);
 }
 (M = V.slice),
@@ -1100,13 +1100,13 @@ function tu(t, e, a) {
         return t.__v.__b - e.__v.__b;
     }),
     (ta.__r = 0);
-var tI,
+var tu,
     tR,
     td,
     tN,
     tA = 0,
-    tf = [],
     tT = [],
+    tf = [],
     tL = B,
     tp = tL.__b,
     th = tL.__r,
@@ -1122,13 +1122,13 @@ function tC(t, e) {
             __: [],
             __h: [],
         });
-    return t >= a.__.length && a.__.push({ __V: tT }), a.__[t];
+    return t >= a.__.length && a.__.push({ __V: tf }), a.__[t];
 }
 function tm(t) {
     return (tA = 1), tv(tB, t);
 }
 function tv(t, e, a) {
-    var r = tC(tI++, 2);
+    var r = tC(tu++, 2);
     if (
         ((r.t = t),
         !r.__c &&
@@ -1179,24 +1179,24 @@ function tv(t, e, a) {
     }
     return r.__N || r.__;
 }
-function ty(t, e) {
-    var a = tC(tI++, 4);
+function tS(t, e) {
+    var a = tC(tu++, 4);
     !tL.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
 }
-function tS(t, e) {
-    var a = tC(tI++, 7);
+function ty(t, e) {
+    var a = tC(tu++, 7);
     return tM(a.__H, e) ? ((a.__V = t()), (a.i = e), (a.__h = t), a.__V) : a.__;
 }
 function tU(t, e) {
     return (
         (tA = 8),
-        tS(function () {
+        ty(function () {
             return t;
         }, e)
     );
 }
 function tb() {
-    for (var t; (t = tf.shift()); )
+    for (var t; (t = tT.shift()); )
         if (t.__P && t.__H)
             try {
                 t.__H.__h.forEach(tW), t.__H.__h.forEach(tw), (t.__H.__h = []);
@@ -1211,16 +1211,16 @@ function tb() {
         e.__k && e.__k.__m && (t.__m = e.__k.__m), tD && tD(t, e);
     }),
     (tL.__r = function (t) {
-        th && th(t), (tI = 0);
+        th && th(t), (tu = 0);
         var e = (tR = t.__c).__H;
         e &&
             (td === tR
                 ? ((e.__h = []),
                   (tR.__h = []),
                   e.__.forEach(function (t) {
-                      t.__N && (t.__ = t.__N), (t.__V = tT), (t.__N = t.i = void 0);
+                      t.__N && (t.__ = t.__N), (t.__V = tf), (t.__N = t.i = void 0);
                   }))
-                : (e.__h.forEach(tW), e.__h.forEach(tw), (e.__h = []), (tI = 0))),
+                : (e.__h.forEach(tW), e.__h.forEach(tw), (e.__h = []), (tu = 0))),
             (td = tR);
     }),
     (tL.diffed = function (t) {
@@ -1229,7 +1229,7 @@ function tb() {
         e &&
             e.__H &&
             (e.__H.__h.length &&
-                ((1 !== tf.push(e) && tN === tL.requestAnimationFrame) ||
+                ((1 !== tT.push(e) && tN === tL.requestAnimationFrame) ||
                     (
                         (tN = tL.requestAnimationFrame) ||
                         function (t) {
@@ -1242,7 +1242,7 @@ function tb() {
                         }
                     )(tb)),
             e.__H.__.forEach(function (t) {
-                t.i && (t.__H = t.i), t.__V !== tT && (t.__ = t.__V), (t.i = void 0), (t.__V = tT);
+                t.i && (t.__H = t.i), t.__V !== tf && (t.__ = t.__V), (t.i = void 0), (t.__V = tf);
             })),
             (td = tR = null);
     }),
@@ -1306,18 +1306,18 @@ let tY = {
         useCallback: tU,
         useContext: function (t) {
             var e = tR.context[t.__c],
-                a = tC(tI++, 9);
+                a = tC(tu++, 9);
             return (a.c = t), e ? (null == a.__ && ((a.__ = !0), e.sub(tR)), e.props.value) : t.__;
         },
         useDebugValue: function (t, e) {
             tL.useDebugValue && tL.useDebugValue(e ? e(t) : t);
         },
         useEffect: function (t, e) {
-            var a = tC(tI++, 3);
+            var a = tC(tu++, 3);
             !tL.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
         },
         useErrorBoundary: function (t) {
-            var e = tC(tI++, 10),
+            var e = tC(tu++, 10),
                 a = tm();
             return (
                 (e.__ = t),
@@ -1334,7 +1334,7 @@ let tY = {
             );
         },
         useId: function () {
-            var t = tC(tI++, 11);
+            var t = tC(tu++, 11);
             if (!t.__) {
                 for (var e = tR.__v; null !== e && !e.__m && null !== e.__; ) e = e.__;
                 var a = e.__m || (e.__m = [0, 0]);
@@ -1344,7 +1344,7 @@ let tY = {
         },
         useImperativeHandle: function (t, e, a) {
             (tA = 6),
-                ty(
+                tS(
                     function () {
                         return "function" == typeof t
                             ? (t(e()),
@@ -1361,13 +1361,13 @@ let tY = {
                     null == a ? a : a.concat(t),
                 );
         },
-        useLayoutEffect: ty,
-        useMemo: tS,
+        useLayoutEffect: tS,
+        useMemo: ty,
         useReducer: tv,
         useRef: function (t) {
             return (
                 (tA = 5),
-                tS(function () {
+                ty(function () {
                     return { current: t };
                 }, [])
             );
@@ -1377,17 +1377,17 @@ let tY = {
     tH =
         "/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx";
 function tK({ options: t }) {
-    let e = tS(
+    let e = ty(
         () => ({
             __html: (function () {
                 let t = (t) => s.createElementNS("http://www.w3.org/2000/svg", t),
-                    e = y(t("svg"), {
+                    e = S(t("svg"), {
                         width: "32",
                         height: "30",
                         viewBox: "0 0 72 66",
                         fill: "inherit",
                     }),
-                    a = y(t("path"), {
+                    a = S(t("path"), {
                         transform: "translate(11, 11)",
                         d: "M29,2.26a4.67,4.67,0,0,0-8,0L14.42,13.53A32.21,32.21,0,0,1,32.17,40.19H27.55A27.68,27.68,0,0,0,12.09,17.47L6,28a15.92,15.92,0,0,1,9.23,12.17H4.62A.76.76,0,0,1,4,39.06l2.94-5a10.74,10.74,0,0,0-3.36-1.9l-2.91,5a4.54,4.54,0,0,0,1.69,6.24A4.66,4.66,0,0,0,4.62,44H19.15a19.4,19.4,0,0,0-8-17.31l2.31-4A23.87,23.87,0,0,1,23.76,44H36.07a35.88,35.88,0,0,0-16.41-31.8l4.67-8a.77.77,0,0,1,1.05-.27c.53.29,20.29,34.77,20.66,35.17a.76.76,0,0,1-.68,1.13H40.6q.09,1.91,0,3.81h4.78A4.59,4.59,0,0,0,50,39.43a4.49,4.49,0,0,0-.62-2.28Z",
                     });
@@ -1443,14 +1443,14 @@ function tF({
 }) {
     let {
             tags: l,
-            addScreenshotButtonLabel: u,
-            removeScreenshotButtonLabel: I,
+            addScreenshotButtonLabel: I,
+            removeScreenshotButtonLabel: u,
             cancelButtonLabel: R,
             emailLabel: d,
             emailPlaceholder: N,
             isEmailRequired: A,
-            isNameRequired: f,
-            messageLabel: T,
+            isNameRequired: T,
+            messageLabel: f,
             messagePlaceholder: L,
             nameLabel: p,
             namePlaceholder: h,
@@ -1459,8 +1459,8 @@ function tF({
         } = t,
         [g, D] = tm(null),
         [C, v] = tm(!1),
-        y = s && s.input,
-        [S, U] = tm(null),
+        S = s && s.input,
+        [y, U] = tm(null),
         b = tU((t) => {
             U(t), v(!1);
         }, []),
@@ -1477,8 +1477,8 @@ function tF({
                 })(t, {
                     emailLabel: d,
                     isEmailRequired: A,
-                    isNameRequired: f,
-                    messageLabel: T,
+                    isNameRequired: T,
+                    messageLabel: f,
                     nameLabel: p,
                 });
                 return (
@@ -1486,7 +1486,7 @@ function tF({
                     0 === e.length
                 );
             },
-            [d, A, f, T, p],
+            [d, A, T, f, p],
         );
     return z(
         "form",
@@ -1530,8 +1530,8 @@ function tF({
                 lineNumber: 144,
             },
         },
-        y && C
-            ? z(y, {
+        S && C
+            ? z(S, {
                   onError: b,
                   __self: this,
                   __source: {
@@ -1590,7 +1590,7 @@ function tF({
                           z(tV, {
                               label: p,
                               isRequiredLabel: P,
-                              isRequired: f,
+                              isRequired: T,
                               __self: this,
                               __source: {
                                   fileName: tk,
@@ -1603,7 +1603,7 @@ function tF({
                               id: "name",
                               name: "name",
                               placeholder: h,
-                              required: f,
+                              required: T,
                               type: "text",
                               __self: this,
                               __source: {
@@ -1683,7 +1683,7 @@ function tF({
                         },
                     },
                     z(tV, {
-                        label: T,
+                        label: f,
                         isRequiredLabel: P,
                         isRequired: !0,
                         __self: this,
@@ -1707,7 +1707,7 @@ function tF({
                         },
                     }),
                 ),
-                y
+                S
                     ? z(
                           "label",
                           {
@@ -1733,9 +1733,9 @@ function tF({
                                       lineNumber: 202,
                                   },
                               },
-                              C ? I : u,
+                              C ? u : I,
                           ),
-                          S
+                          y
                               ? z(
                                     "div",
                                     {
@@ -1746,7 +1746,7 @@ function tF({
                                             lineNumber: 212,
                                         },
                                     },
-                                    S.message,
+                                    y.message,
                                 )
                               : null,
                       )
@@ -1823,29 +1823,29 @@ function tV({ label: t, isRequired: e, isRequiredLabel: a }) {
 let tj = "/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Dialog.tsx";
 function tX({ open: t, onFormSubmitted: e, ...a }) {
     let r = a.options,
-        _ = tS(
+        _ = ty(
             () => ({
                 __html: (function () {
                     let t = (t) => E.document.createElementNS("http://www.w3.org/2000/svg", t),
-                        e = y(t("svg"), {
+                        e = S(t("svg"), {
                             width: "16",
                             height: "17",
                             viewBox: "0 0 16 17",
                             fill: "inherit",
                         }),
-                        a = y(t("g"), { clipPath: "url(#clip0_57_156)" }),
-                        r = y(t("path"), {
+                        a = S(t("g"), { clipPath: "url(#clip0_57_156)" }),
+                        r = S(t("path"), {
                             "fill-rule": "evenodd",
                             "clip-rule": "evenodd",
                             d: "M3.55544 15.1518C4.87103 16.0308 6.41775 16.5 8 16.5C10.1217 16.5 12.1566 15.6571 13.6569 14.1569C15.1571 12.6566 16 10.6217 16 8.5C16 6.91775 15.5308 5.37103 14.6518 4.05544C13.7727 2.73985 12.5233 1.71447 11.0615 1.10897C9.59966 0.503466 7.99113 0.34504 6.43928 0.653721C4.88743 0.962403 3.46197 1.72433 2.34315 2.84315C1.22433 3.96197 0.462403 5.38743 0.153721 6.93928C-0.15496 8.49113 0.00346625 10.0997 0.608967 11.5615C1.21447 13.0233 2.23985 14.2727 3.55544 15.1518ZM4.40546 3.1204C5.46945 2.40946 6.72036 2.03 8 2.03C9.71595 2.03 11.3616 2.71166 12.575 3.92502C13.7883 5.13838 14.47 6.78405 14.47 8.5C14.47 9.77965 14.0905 11.0306 13.3796 12.0945C12.6687 13.1585 11.6582 13.9878 10.476 14.4775C9.29373 14.9672 7.99283 15.0953 6.73777 14.8457C5.48271 14.596 4.32987 13.9798 3.42502 13.075C2.52018 12.1701 1.90397 11.0173 1.65432 9.76224C1.40468 8.50718 1.5328 7.20628 2.0225 6.02404C2.5122 4.8418 3.34148 3.83133 4.40546 3.1204Z",
                         }),
-                        _ = y(t("path"), {
+                        _ = S(t("path"), {
                             d: "M6.68775 12.4297C6.78586 12.4745 6.89218 12.4984 7 12.5C7.11275 12.4955 7.22315 12.4664 7.32337 12.4145C7.4236 12.3627 7.51121 12.2894 7.58 12.2L12 5.63999C12.0848 5.47724 12.1071 5.28902 12.0625 5.11098C12.0178 4.93294 11.9095 4.77744 11.7579 4.67392C11.6064 4.57041 11.4221 4.52608 11.24 4.54931C11.0579 4.57254 10.8907 4.66173 10.77 4.79999L6.88 10.57L5.13 8.56999C5.06508 8.49566 4.98613 8.43488 4.89768 8.39111C4.80922 8.34735 4.713 8.32148 4.61453 8.31498C4.51605 8.30847 4.41727 8.32147 4.32382 8.35322C4.23038 8.38497 4.14413 8.43484 4.07 8.49999C3.92511 8.63217 3.83692 8.81523 3.82387 9.01092C3.81083 9.2066 3.87393 9.39976 4 9.54999L6.43 12.24C6.50187 12.3204 6.58964 12.385 6.68775 12.4297Z",
                         });
                     e.appendChild(a).append(_, r);
                     let n = t("defs"),
-                        o = y(t("clipPath"), { id: "clip0_57_156" }),
-                        i = y(t("rect"), {
+                        o = S(t("clipPath"), { id: "clip0_57_156" }),
+                        i = S(t("rect"), {
                             width: "16",
                             height: "16",
                             fill: "white",
@@ -2277,16 +2277,16 @@ ${tZ}
                         _.removeChild(i), _.removeChild(c), (s.body.style.overflow = E);
                     },
                     open() {
-                        I(!0),
+                        u(!0),
                             t.onFormOpen && t.onFormOpen(),
                             (E = s.body.style.overflow),
                             (s.body.style.overflow = "hidden");
                     },
                     close() {
-                        I(!1), (s.body.style.overflow = E);
+                        u(!1), (s.body.style.overflow = E);
                     },
                 },
-                u =
+                I =
                     e &&
                     e.createInput({
                         h: z,
@@ -2294,21 +2294,21 @@ ${tZ}
                         dialog: l,
                         options: t,
                     }),
-                I = (e) => {
+                u = (e) => {
                     var r, _, c, E, s;
                     (r = z(tX, {
                         options: t,
-                        screenshotInput: u,
+                        screenshotInput: I,
                         showName: t.showName || t.isNameRequired,
                         showEmail: t.showEmail || t.isEmailRequired,
                         defaultName: (n && o && o[n.name]) || "",
                         defaultEmail: (n && o && o[n.email]) || "",
                         onFormClose: () => {
-                            I(!1), t.onFormClose && t.onFormClose();
+                            u(!1), t.onFormClose && t.onFormClose();
                         },
                         onSubmit: a,
                         onSubmitSuccess: (e) => {
-                            I(!1), t.onSubmitSuccess && t.onSubmitSuccess(e);
+                            u(!1), t.onSubmitSuccess && t.onSubmitSuccess(e);
                         },
                         onSubmitError: (e) => {
                             t.onSubmitError && t.onSubmitError(e);
@@ -2521,8 +2521,8 @@ ${tZ}
                                 };
                             })({ h: t }),
                             l = e.useRef(null),
-                            u = e.useRef(null),
                             I = e.useRef(null),
+                            u = e.useRef(null),
                             [R, d] = e.useState({
                                 startX: 0,
                                 startY: 0,
@@ -2530,9 +2530,9 @@ ${tZ}
                                 endY: 0,
                             }),
                             [N, A] = e.useState(!1),
-                            [f, T] = e.useState(!1);
+                            [T, f] = e.useState(!1);
                         function L() {
-                            let t = I.current,
+                            let t = u.current,
                                 e = t2(t3(a));
                             if (t) {
                                 (t.width = e.width * t1),
@@ -2542,7 +2542,7 @@ ${tZ}
                                 let a = t.getContext("2d");
                                 a && a.scale(t1, t1);
                             }
-                            let r = u.current;
+                            let r = I.current;
                             r && ((r.style.width = `${e.width}px`), (r.style.height = `${e.height}px`)),
                                 d({
                                     startX: 0,
@@ -2552,13 +2552,13 @@ ${tZ}
                                 });
                         }
                         function p(t, e) {
-                            A(!1), T(!0);
+                            A(!1), f(!0);
                             let a = h(e),
                                 r = () => {
                                     s.removeEventListener("mousemove", a),
                                         s.removeEventListener("mouseup", r),
                                         A(!0),
-                                        T(!1);
+                                        f(!1);
                                 };
                             s.addEventListener("mouseup", r), s.addEventListener("mousemove", a);
                         }
@@ -2566,7 +2566,7 @@ ${tZ}
                             E.addEventListener("resize", L, !1);
                         }, []),
                             e.useEffect(() => {
-                                let t = I.current;
+                                let t = u.current;
                                 if (!t) return;
                                 let e = t.getContext("2d");
                                 if (!e) return;
@@ -2586,8 +2586,8 @@ ${tZ}
                         let h = e.useCallback(
                                 (t) =>
                                     function (e) {
-                                        if (!I.current) return;
-                                        let a = I.current,
+                                        if (!u.current) return;
+                                        let a = u.current,
                                             r = a.getBoundingClientRect(),
                                             _ = e.clientX - r.x,
                                             n = e.clientY - r.y;
@@ -2690,7 +2690,7 @@ ${tZ}
                                                 position: "absolute",
                                                 zIndex: 1,
                                             },
-                                            ref: u,
+                                            ref: I,
                                             __self: this,
                                             __source: {
                                                 fileName: t0,
@@ -2699,13 +2699,13 @@ ${tZ}
                                         },
                                         t("canvas", {
                                             onMouseDown: function (t) {
-                                                if (f) return;
+                                                if (T) return;
                                                 O.current = {
                                                     initialX: t.clientX,
                                                     initialY: t.clientY,
                                                 };
                                                 let e = (t) => {
-                                                        let e = I.current;
+                                                        let e = u.current;
                                                         if (!e) return;
                                                         let a = t.clientX - O.current.initialX,
                                                             r = t.clientY - O.current.initialY;
@@ -2748,7 +2748,7 @@ ${tZ}
                                                 position: "absolute",
                                                 cursor: N ? "move" : "auto",
                                             },
-                                            ref: I,
+                                            ref: u,
                                             __self: this,
                                             __source: {
                                                 fileName: t0,
@@ -2819,12 +2819,12 @@ ${tZ}
                                                 {
                                                     onClick: (t) => {
                                                         t.preventDefault(),
-                                                            I.current &&
+                                                            u.current &&
                                                                 d({
                                                                     startX: 0,
                                                                     startY: 0,
-                                                                    endX: I.current.width / t1,
-                                                                    endY: I.current.height / t1,
+                                                                    endX: u.current.width / t1,
+                                                                    endY: u.current.height / t1,
                                                                 }),
                                                             A(!1);
                                                     },

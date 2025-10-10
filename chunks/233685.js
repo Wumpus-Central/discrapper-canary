@@ -14,7 +14,7 @@ function u() {
             });
             e.length > 0 && l.T1(e[0]);
         };
-    return (0, r.jsx)(a.NIc, {
+    return (0, r.jsx)(a.gNt, {
         label: c.intl.string(c.t.s4773N),
         description: c.intl.string(c.t.svjwGh),
         layout: "horizontal",

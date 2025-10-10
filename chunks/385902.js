@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => y,
-    _: () => O,
+    _: () => _,
 });
 var r = n(647438),
     i = n(494497),
@@ -12,12 +12,12 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    f = n(279604),
-    h = n(535396),
+    h = n(279604),
+    f = n(535396),
     g = n(981631),
-    m = n(258640),
+    m = n(989308),
     b = n(388032);
-function O(e, t) {
+function _(e, t) {
     var n;
     let r = (0, l.e7)([o.Z], () => {
             var t;
@@ -25,11 +25,11 @@ function O(e, t) {
         }),
         a = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         u = null == a ? void 0 : a.allPowerups[i.A$],
-        f = (0, d.ZP)(e, u),
-        O = (0, c.q8)(e, t),
+        h = (0, d.ZP)(e, u),
+        _ = (0, c.q8)(e, t),
         y = null == u ? void 0 : u.storeRemovalDate,
-        _ = null != (n = null == r ? void 0 : r.has(g.oNc.PARTNERED)) && n,
-        v = O && null != y && !_ && f.type === h.A3.POWERUP_ACTIVATED,
+        O = null != (n = null == r ? void 0 : r.has(g.oNc.PARTNERED)) && n,
+        v = _ && null != y && !O && h.type === f.A3.POWERUP_ACTIVATED,
         j = v
             ? {
                   title: b.intl.formatToPlainString(m.default.mgoPkZ, { perkName: null == u ? void 0 : u.title }),
@@ -42,23 +42,23 @@ function O(e, t) {
     };
 }
 function y(e, t) {
-    var n, O, y, _;
+    var n, _, y, O;
     let v = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
         j = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
         x = null != (y = (0, u.Z)(e)) && y,
         C = (0, c.q8)(e, t),
         E = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         S = null == E || null == (n = E.allPowerups) ? void 0 : n[i.A$],
-        P = (0, d.ZP)(e, S),
-        I = null == S ? void 0 : S.storeRemovalDate,
-        N = null == E || null == (O = E.allPowerups) ? void 0 : O[i.XW],
+        I = (0, d.ZP)(e, S),
+        P = null == S ? void 0 : S.storeRemovalDate,
+        N = null == E || null == (_ = E.allPowerups) ? void 0 : _[i.XW],
         Z = (0, l.e7)([o.Z], () => {
             var t;
             return null == (t = o.Z.getGuild(e)) ? void 0 : t.features;
         }),
-        w = null != (_ = null == Z ? void 0 : Z.has(g.oNc.PARTNERED)) && _,
-        { onActivate: T } = (0, f._C)(e, N),
-        A = !j && x && C && null != S && !w && P.type === h.A3.POWERUP_ACTIVATED && null != I && null != N && null != v,
+        w = null != (O = null == Z ? void 0 : Z.has(g.oNc.PARTNERED)) && O,
+        { onActivate: T } = (0, h._C)(e, N),
+        A = !j && x && C && null != S && !w && I.type === f.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
         R = r.useCallback(
             (e) => {
                 T(e);
@@ -67,7 +67,7 @@ function y(e, t) {
         ),
         D = r.useMemo(() => {
             if (!A) return null;
-            let e = (0, p.Z)(I),
+            let e = (0, p.Z)(P),
                 t = v.premiumTier === g.Eu4.TIER_2 ? b.intl.string(m.default["0uo/LC"]) : void 0;
             return {
                 firstHeader: S.title,
@@ -81,7 +81,7 @@ function y(e, t) {
                 primaryButtonText: t,
                 onPrimaryClick: null != t ? R : void 0,
             };
-        }, [A, S, I, v, R]);
+        }, [A, S, P, v, R]);
     return {
         shouldShow: A,
         modalConfig: D,

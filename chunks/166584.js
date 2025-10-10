@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854), n(642613);
+n.d(t, { Z: () => j }), n(388685), n(539854), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(772848),
@@ -96,13 +96,13 @@ function P(e, t) {
 }
 let w = 4,
     D = 268,
-    x = 2,
-    L = (e) => {
+    L = 2,
+    x = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
         return t > 0 ? t + w : 0;
     };
-function j(e) {
+function M(e) {
     let {
             user: t,
             currentUser: n,
@@ -118,8 +118,8 @@ function j(e) {
         C = (e, t) => {
             null != t ? (S.current[e] = t) : delete S.current[e];
         },
-        [P, j] = i.useState(f),
-        [M, k] = i.useState(D),
+        [P, M] = i.useState(f),
+        [j, k] = i.useState(D),
         [U, G] = i.useState(!1),
         B = i.useRef(null),
         Z = i.useRef(null),
@@ -129,12 +129,12 @@ function j(e) {
     }, [f]),
         i.useLayoutEffect(() => {
             if (U) return;
-            let e = L(B.current),
-                t = L(Z.current),
+            let e = x(B.current),
+                t = x(Z.current),
                 n = [],
                 r = D - e - t;
-            for (let e = 0; e < x; e++) {
-                let t = e === x - 1 ? r : D;
+            for (let e = 0; e < L; e++) {
+                let t = e === L - 1 ? r : D;
                 for (let e = 0, r = n.length; r < f.length; r++) {
                     let i = f[r],
                         a = S.current[i.id];
@@ -147,7 +147,7 @@ function j(e) {
                     (e += o + w), n.push(i);
                 }
             }
-            j(n.length === P.length ? P : n), k(r), F.current++;
+            M(n.length === P.length ? P : n), k(r), F.current++;
         }, [f, P, U]);
     let V = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
         H = (0, o.ZP)({
@@ -166,7 +166,7 @@ function j(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== P.length - 1 ? D : M },
+                    style: { maxWidth: U || i !== P.length - 1 ? D : j },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => b(e),
@@ -252,7 +252,7 @@ function j(e) {
         }),
     });
 }
-function M(e) {
+function j(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, E.KZ)(),
         s = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
@@ -281,7 +281,7 @@ function M(e) {
         ),
         T = y && null != s;
     return 0 !== u.length || T
-        ? (0, r.jsx)(j, {
+        ? (0, r.jsx)(M, {
               user: t,
               currentUser: n,
               guild: a,

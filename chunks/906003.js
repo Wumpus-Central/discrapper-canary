@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(551488),
     h = n(131573),
     m = n(777207),
-    g = n(332103);
+    g = n(577650);
 function E(e, t, n) {
     return (
         t in e
@@ -118,10 +118,10 @@ function C(e) {
             loading: C,
             loadingStartedLabel: w,
             loadingFinishedLabel: D,
-            rounded: x = !1,
-            type: L = "button",
-            rel: j,
-            onClick: M,
+            rounded: L = !1,
+            type: x = "button",
+            rel: M,
+            onClick: j,
             onDoubleClick: k,
             onMouseEnter: U,
             onMouseLeave: G,
@@ -220,12 +220,12 @@ function C(e) {
                             className: o()(g.button, g[X], g[f], {
                                 [g.hasText]: J,
                                 [g.fullWidth]: Q,
-                                [g.rounded]: x,
+                                [g.rounded]: L,
                             }),
                             ref: ee,
-                            rel: j,
-                            type: L,
-                            onClick: ec ? (e) => e.preventDefault() : M,
+                            rel: M,
+                            type: x,
+                            onClick: ec ? (e) => e.preventDefault() : j,
                             onDoubleClick: ec ? (e) => e.preventDefault() : k,
                             onMouseUp: ec ? void 0 : B,
                             onMouseDown: ec ? void 0 : Z,

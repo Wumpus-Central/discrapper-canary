@@ -105,16 +105,16 @@ function I(e) {
         P = (0, l.Rf)(a),
         w = P === C ? N : P,
         D = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        x = (0, d.Z)(I),
-        L = (0, d.Z)(T),
-        [j, M] = i.useState((0, s.Z)());
+        L = (0, d.Z)(I),
+        x = (0, d.Z)(T),
+        [M, j] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (x !== I || L !== T) && M((0, s.Z)());
-        }, [T, I, L, x]),
+            (L !== I || x !== T) && j((0, s.Z)());
+        }, [T, I, x, L]),
         (0, r.jsx)(u.yRy, {
             targetElementRef: A,
-            positionKey: j,
+            positionKey: M,
             renderPopout: (e) =>
                 (0, r.jsx)(
                     u.Z$W,

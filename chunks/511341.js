@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(652853),
     h = n(228168),
     m = n(185923),
-    g = n(420212),
-    E = n(231338),
+    g = n(231338),
+    E = n(295907),
     b = n(388032),
     y = n(396579);
 let O = (e) => {
@@ -61,7 +61,7 @@ function v(e) {
     }, [P, v]),
         i.useEffect(() => {
             let e = (e) => {
-                e.key === g.vn.ESCAPE && (e.stopPropagation(), S());
+                e.key === E.vn.ESCAPE && (e.stopPropagation(), S());
             };
             return (
                 document.addEventListener("keydown", e),
@@ -99,7 +99,7 @@ function v(e) {
     return (0, r.jsx)(s.Z, {
         headerClassName: R ? y.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
-        closePopout: E.dG,
+        closePopout: g.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
             await w(t), n && (S(), null == T || T());

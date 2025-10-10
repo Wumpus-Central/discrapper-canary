@@ -28,17 +28,17 @@ var r = n(127849),
     P = "prototype",
     w = "Wrong length",
     D = "Wrong index",
-    x = S.getterFor(N),
-    L = S.getterFor(R),
-    j = S.set,
-    M = r[N],
-    k = M,
+    L = S.getterFor(N),
+    x = S.getterFor(R),
+    M = S.set,
+    j = r[N],
+    k = j,
     U = k && k[P],
     G = r[R],
     B = G && G[P],
     Z = Object.prototype,
-    V = r.Array,
-    F = r.RangeError,
+    F = r.Array,
+    V = r.RangeError,
     H = i(y),
     Y = i([].reverse),
     W = g.pack,
@@ -70,40 +70,40 @@ var r = n(127849),
         });
     },
     et = function (e, t, n, r) {
-        var i = L(e),
+        var i = x(e),
             a = h(n),
             o = !!r;
-        if (a + t > i.byteLength) throw new F(D);
+        if (a + t > i.byteLength) throw new V(D);
         var s = i.bytes,
             l = a + i.byteOffset,
             c = O(s, l, l + t);
         return o ? c : Y(c);
     },
     en = function (e, t, n, r, i, a) {
-        var o = L(e),
+        var o = x(e),
             s = h(n),
             l = r(+i),
             c = !!a;
-        if (s + t > o.byteLength) throw new F(D);
+        if (s + t > o.byteLength) throw new V(D);
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
-    var er = A && M.name !== N;
+    var er = A && j.name !== N;
     !d(function () {
-        M(1);
+        j(1);
     }) ||
     !d(function () {
-        new M(-1);
+        new j(-1);
     }) ||
     d(function () {
-        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !C);
+        return new j(), new j(1.5), new j(NaN), 1 !== j.length || (er && !C);
     })
         ? (((k = function (e) {
-              return f(this, U), v(new M(h(e)), this, k);
+              return f(this, U), v(new j(h(e)), this, k);
           })[P] = U),
           (U.constructor = k),
-          I(k, M))
-        : er && C && l(M, "name", N),
+          I(k, j))
+        : er && C && l(j, "name", N),
         b && E(B) !== Z && b(B, Z);
     var ei = new G(new k(2)),
         ea = i(B.setInt8);
@@ -126,21 +126,21 @@ if (o) {
     (U = (k = function (e) {
         f(this, U);
         var t = h(e);
-        j(this, {
+        M(this, {
             type: N,
-            bytes: H(V(t), 0),
+            bytes: H(F(t), 0),
             byteLength: t,
         }),
             a || ((this.byteLength = t), (this.detached = !1));
     })[P]),
         (B = (G = function (e, t, n) {
             f(this, B), f(e, U);
-            var r = x(e),
+            var r = L(e),
                 i = r.byteLength,
                 o = _(t);
-            if (o < 0 || o > i) throw new F("Wrong offset");
-            if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new F(w);
-            j(this, {
+            if (o < 0 || o > i) throw new V("Wrong offset");
+            if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new V(w);
+            M(this, {
                 type: R,
                 buffer: e,
                 byteLength: n,
@@ -149,7 +149,7 @@ if (o) {
             }),
                 a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o));
         })[P]),
-        a && (ee(k, "byteLength", x), ee(G, "buffer", L), ee(G, "byteLength", L), ee(G, "byteOffset", L)),
+        a && (ee(k, "byteLength", L), ee(G, "buffer", x), ee(G, "byteLength", x), ee(G, "byteOffset", x)),
         u(B, {
             getInt8: function (e) {
                 return (et(this, 1, e)[0] << 24) >> 24;

@@ -94,7 +94,7 @@ function D(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function x(e) {
+function L(e) {
     let { guildId: t, addedMembers: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -104,7 +104,7 @@ function x(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function L(e) {
+function x(e) {
     let { guildId: t, members: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -114,7 +114,7 @@ function L(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function j(e) {
+function M(e) {
     let { guildId: t, threads: n } = e,
         r = Object.values(n);
     if (0 === r.length) return !1;
@@ -128,7 +128,7 @@ function j(e) {
         }, []);
     return i.updateMembersByMemberIds(a);
 }
-function M(e) {
+function j(e) {
     let { guildId: t, guildMember: n } = e;
     return y(t).updateMembersByMemberIds([n.user.id]);
 }
@@ -180,7 +180,7 @@ function Z(e) {
         n
     );
 }
-function V(e) {
+function F(e) {
     let { guildId: t, members: n } = e;
     if (null == t || null == l.Z.getGuild(t)) return !1;
     E = !0;
@@ -189,7 +189,7 @@ function V(e) {
     for (let e of n) null == r.getMember(e.userId) && i.push(e);
     return i.length > 0 && r.updateClientMembers(i);
 }
-function F(e) {
+function V(e) {
     let { members: t, guildId: n } = e;
     return t.length > 0 && y(n).updateServerMembers(t);
 }
@@ -336,9 +336,9 @@ g(Q, "displayName", "MemberSafetyStore");
 let J = new Q(a.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: B,
-    LOCAL_MESSAGES_LOADED: V,
+    LOCAL_MESSAGES_LOADED: F,
     CACHE_LOADED: Z,
-    PASSIVE_UPDATE_V2: F,
+    PASSIVE_UPDATE_V2: V,
     GUILD_CREATE: I,
     GUILD_DELETE: T,
     GUILD_MEMBERS_CHUNK_BATCH: C,
@@ -348,13 +348,13 @@ let J = new Q(a.Z, {
     GUILD_MEMBER_REMOVE: R,
     GUILD_ROLE_UPDATE: P,
     GUILD_ROLE_DELETE: P,
-    GUILD_MEMBER_PROFILE_UPDATE: M,
+    GUILD_MEMBER_PROFILE_UPDATE: j,
     GUILD_ROLE_MEMBER_REMOVE: w,
     GUILD_ROLE_MEMBER_ADD: w,
     THREAD_MEMBER_LIST_UPDATE: D,
-    THREAD_MEMBERS_UPDATE: x,
-    LOAD_ARCHIVED_THREADS_SUCCESS: L,
-    LOAD_FORUM_POSTS: j,
+    THREAD_MEMBERS_UPDATE: L,
+    LOAD_ARCHIVED_THREADS_SUCCESS: x,
+    LOAD_FORUM_POSTS: M,
     INITIALIZE_MEMBER_SAFETY_STORE: H,
     MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: Y,
     MEMBER_SAFETY_PAGINATION_UPDATE: W,

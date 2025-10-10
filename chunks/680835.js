@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { Z: () => r });
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2025-07_announcement_composer",
     label: "announcement composer",
@@ -12,6 +12,6 @@ let r = (0, n(818083).B)({
         },
     ],
 });
-function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).announcementComposer;
+function r(e) {
+    return i.useExperiment({ location: e }, { autoTrackExposure: !0 }).announcementComposer;
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => M,
+    Z: () => j,
     d: () => k,
 });
 var r = n(951288),
@@ -44,14 +44,14 @@ function D(e) {
         children: i,
     });
 }
-function x(e) {
+function L(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(D, {
         onClick: t,
         children: P.intl.string(P.t.R9GHyc),
     });
 }
-function L(e) {
+function x(e) {
     switch (e) {
         case A.pNK.INTEGRATIONS:
             return P.intl.string(P.t.k7LGdn);
@@ -63,10 +63,10 @@ function L(e) {
             return P.intl.string(P.t.MTIXho);
     }
 }
-function j(e) {
+function M(e) {
     return e === A.pNK.ROLE_SUBSCRIPTIONS ? P.intl.string(P.t.hZUCzc) : P.intl.string(P.t["/djIh4"]);
 }
-function M() {
+function j() {
     let e = i.useRef(null),
         t = (0, s.e7)([b.Z], () => b.Z.getGuildId()),
         n = (0, s.e7)([E.Z], () => E.Z.getChannelId(t)),
@@ -82,8 +82,8 @@ function M() {
             isServerShopPreview: null != t && T.Z.isViewingServerShop(t),
         }));
     if (null == a || null == t) return null;
-    let M = L(o),
-        k = j(o),
+    let j = x(o),
+        k = M(o),
         U = n === C.oC.GUILD_ONBOARDING,
         G = (e) => {
             let { backToSettings: n } = e;
@@ -108,7 +108,7 @@ function M() {
                         direction: y.Z.Directions.LEFT,
                         className: w.backArrow,
                     }),
-                    M,
+                    j,
                 ],
             }),
             U && u
@@ -172,7 +172,7 @@ function M() {
                               }),
                       ],
                   }),
-            u || o === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(x, { onClick: () => G({ backToSettings: !1 }) }),
+            u || o === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(L, { onClick: () => G({ backToSettings: !1 }) }),
         ],
     });
 }
@@ -184,7 +184,7 @@ function k(e) {
                   [w.windows]: (0, v.isWindows)(),
                   [w.osx]: (0, v.isMac)(),
               }),
-              children: (0, r.jsx)(M, {}),
+              children: (0, r.jsx)(j, {}),
           })
         : null;
 }

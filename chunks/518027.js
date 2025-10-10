@@ -1,58 +1,58 @@
 n.d(t, { J: () => p }), n(388685);
-var a = n(951288),
-    r = n(647438),
+var r = n(951288),
+    a = n(647438),
     o = n(442837),
-    s = n(430742),
-    l = n(541716),
+    l = n(430742),
+    s = n(541716),
     i = n(752305),
-    u = n(893718),
-    c = n(703558),
+    c = n(893718),
+    u = n(703558),
     d = n(135102),
-    _ = n(388032),
-    f = n(784562);
+    f = n(388032),
+    b = n(784562);
 let p = () => {
     let { message: e, channel: t, updateMessageText: n } = (0, d.C$)(),
-        p = (0, o.e7)([c.Z], () => c.Z.getDraft(e.channel_id, c.d.ChannelMessage)),
-        [h, b] = r.useState(() => (0, i.eK)(p)),
-        { textValue: g, richValue: m } = h;
-    (0, r.useEffect)(() => {
-        n(g);
-    }, [n, g]);
-    let C = r.useCallback(
-            (t, n, a) => {
-                b({
+        p = (0, o.e7)([u.Z], () => u.Z.getDraft(e.channel_id, u.d.ChannelMessage)),
+        [g, h] = a.useState(() => (0, i.eK)(p)),
+        { textValue: _, richValue: m } = g;
+    (0, a.useEffect)(() => {
+        n(_);
+    }, [n, _]);
+    let y = a.useCallback(
+            (t, n, r) => {
+                h({
                     textValue: n,
-                    richValue: a,
+                    richValue: r,
                 }),
-                    s.Z.saveDraft(e.channel_id, n, c.d.ChannelMessage);
+                    l.Z.saveDraft(e.channel_id, n, u.d.ChannelMessage);
             },
             [e],
         ),
-        [y, M] = r.useState(!1),
-        w = r.useCallback(() => M(!0), []),
-        x = r.useCallback(() => M(!1), []);
-    (0, r.useEffect)(
+        [O, j] = a.useState(!1),
+        C = a.useCallback(() => j(!0), []),
+        w = a.useCallback(() => j(!1), []);
+    (0, a.useEffect)(
         () => () => {
-            s.Z.clearDraft(e.channel_id, c.d.ChannelMessage);
+            l.Z.clearDraft(e.channel_id, u.d.ChannelMessage);
         },
         [e],
     );
-    let I = async () => ({
+    let v = async () => ({
         shouldClear: !0,
         shouldRefocus: !1,
     });
-    return (0, a.jsx)(u.ZP, {
-        innerClassName: f.messageInput,
-        onChange: C,
-        placeholder: _.intl.string(_.t.ZroO3N),
+    return (0, r.jsx)(c.ZP, {
+        innerClassName: b.messageInput,
+        onChange: y,
+        placeholder: f.intl.string(f.t.ZroO3N),
         channel: t,
-        textValue: g,
+        textValue: _,
         richValue: m,
-        type: l.Ie.SHARE_CUSTOM_CLIENT_THEME_INPUT,
-        onBlur: x,
-        onFocus: w,
-        focused: y,
-        onSubmit: I,
+        type: s.Ie.SHARE_CUSTOM_CLIENT_THEME_INPUT,
+        onBlur: w,
+        onFocus: C,
+        focused: O,
+        onSubmit: v,
         parentModalKey: d.tj,
         autoCompletePosition: "bottom",
         emojiPickerCloseOnModalOuterClick: !0,

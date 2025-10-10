@@ -1,29 +1,29 @@
 n.d(t, {
     S: () => a,
-    z: () => i,
+    z: () => o,
 }),
     n(388685),
     n(539854);
 var r = n(494497),
-    o = n(535396);
-let i = {
+    i = n(535396);
+let o = {
         guildTagsBadgePacks: [r.MB, r.Vk],
     },
-    l = Object.entries(i).reduce((e, t) => {
+    l = Object.entries(o).reduce((e, t) => {
         let [n, r] = t;
         for (let t of r) e[t] = n;
         return e;
     }, {});
 function a(e, t, n) {
-    let i = [],
+    let o = [],
         a = t.reduce((e, t) => {
-            if (t.type !== o.Us.PERK) return e;
+            if (t.type !== i.Us.PERK) return e;
             let n = l[t.skuId];
             return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
         }, {});
     for (let e of t) {
-        if (e.type === o.Us.LEVEL) {
-            i.push({
+        if (e.type === i.Us.LEVEL) {
+            o.push({
                 type: "singleLevel",
                 powerup: e,
             });
@@ -33,7 +33,7 @@ function a(e, t, n) {
         if (null != t) {
             let e = a[t];
             void 0 !== e &&
-                (i.push({
+                (o.push({
                     type: "multiPerk",
                     group: t,
                     powerups: e,
@@ -41,23 +41,23 @@ function a(e, t, n) {
                 (a[t] = void 0));
             continue;
         }
-        i.push({
+        o.push({
             type: "singlePerk",
             powerup: e,
         });
     }
     return (
-        n && e === o.Us.PERK && i.push({ type: "portkey" }),
+        n && e === i.Us.PERK && o.push({ type: "portkey" }),
         (function (e) {
             let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN),
                 n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);
             if (-1 !== t && -1 !== n && n !== t + 1) {
                 let t = [...e],
-                    [o] = t.splice(n, 1),
-                    i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
-                return t.splice(i + 1, 0, o), t;
+                    [i] = t.splice(n, 1),
+                    o = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
+                return t.splice(o + 1, 0, i), t;
             }
             return e;
-        })(i)
+        })(o)
     );
 }

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => i });
 var r = n(544891),
     l = n(981631);
-let o = {
+let i = {
     async updateEstimate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             n = arguments.length > 2 ? arguments[2] : void 0;

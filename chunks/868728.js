@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var l = n(951288),
     i = n(647438),
-    r = n(780384),
-    s = n(755721),
+    s = n(780384),
+    r = n(755721),
     a = n(481060),
     o = n(388032);
 function u(e) {
@@ -14,9 +14,9 @@ function u(e) {
                 text: o.intl.string(o.t.pz1lRE),
                 onClick: t,
             }),
-            (0, l.jsx)(s.zx, {
-                look: s.zx.Looks.LINK,
-                color: (0, r.ap)(u) ? s.zx.Colors.PRIMARY : s.zx.Colors.WHITE,
+            (0, l.jsx)(r.zx, {
+                look: r.zx.Looks.LINK,
+                color: (0, s.ap)(u) ? r.zx.Colors.PRIMARY : r.zx.Colors.WHITE,
                 onClick: n,
                 children: o.intl.string(o.t["ETE/oK"]),
             }),

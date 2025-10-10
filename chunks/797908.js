@@ -6,13 +6,13 @@ var r = n(951288),
     s = n(783097),
     o = n(66637),
     c = n(768581),
-    d = n(423864),
+    d = n(956965),
     u = n(388032),
     p = n(401346);
 let m = function (e) {
     var t, n, m;
-    let { application: h, onSelectApplication: g, showCategory: f = !1 } = e,
-        _ = a.useRef(null),
+    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
+        f = a.useRef(null),
         b = null == (t = h.categories) ? void 0 : t[0],
         [x, v] = a.useState(!1),
         C = a.useCallback((e) => {
@@ -33,13 +33,13 @@ let m = function (e) {
                     : void 0,
             [x, h],
         ),
-        O = f && null != b;
+        S = _ && null != b;
     return (0, r.jsx)(i.$, {
-        innerRef: _,
+        innerRef: f,
         onChange: C,
         active: !x,
         children: (0, r.jsx)("div", {
-            ref: _,
+            ref: f,
             className: p.container,
             children: (0, r.jsxs)(o.Z, {
                 className: p.card,
@@ -98,11 +98,11 @@ let m = function (e) {
                                     }),
                                 }),
                             }),
-                            O || j
+                            S || j
                                 ? (0, r.jsxs)("div", {
                                       className: p.infoContainer,
                                       children: [
-                                          O
+                                          S
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: "text-xs/medium",
@@ -110,7 +110,7 @@ let m = function (e) {
                                                     children: b.name,
                                                 })
                                               : null,
-                                          O && j
+                                          S && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-secondary",
@@ -131,7 +131,7 @@ let m = function (e) {
                                 className: p.description,
                                 variant: "text-sm/medium",
                                 color: "header-secondary",
-                                lineClamp: O || j ? 2 : 3,
+                                lineClamp: S || j ? 2 : 3,
                                 children:
                                     null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description)
                                         ? m

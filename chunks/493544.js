@@ -10,7 +10,7 @@ var r,
     a = n(647438),
     o = n(120356),
     s = n.n(o),
-    l = n(786920),
+    l = n(137317),
     c = n(608863),
     u = n(873546),
     d = n(215569),
@@ -321,7 +321,7 @@ let P = function (e) {
             ],
         });
     }
-    function x() {
+    function L() {
         return null == t
             ? null
             : (0, i.jsx)(f.f6W, {
@@ -355,7 +355,7 @@ let P = function (e) {
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: m.standardSidebarView,
-                children: [!t && x(), D()],
+                children: [!t && L(), D()],
             }),
         ),
     });

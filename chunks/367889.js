@@ -19,7 +19,7 @@ let I = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [I],
     }),
     A = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
-        icon: l.SrA,
+        icon: l.XOf,
         useTitle: () => T.intl.string(T.t.trSpHR),
         legacySearchKey: d.s6.SUBSCRIPTIONS,
         buildLayout: () => [O],

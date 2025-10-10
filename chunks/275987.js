@@ -117,22 +117,22 @@ e.exports = (function (e) {
                     P = N.getType(),
                     w = n(N),
                     D = void 0,
-                    x = void 0,
-                    L = void 0;
-                w && ((D = w.component), (x = w.props), (L = w.editable));
-                var j = g || v.get(R),
-                    M = c.encode(R, 0, 0),
+                    L = void 0,
+                    x = void 0;
+                w && ((D = w.component), (L = w.props), (x = w.editable));
+                var M = g || v.get(R),
+                    j = c.encode(R, 0, 0),
                     k = {
                         contentState: E,
                         block: N,
-                        blockProps: x,
+                        blockProps: L,
                         blockStyleFn: r,
                         customStyleMap: o,
                         customStyleFn: s,
                         decorator: O,
-                        direction: j,
+                        direction: M,
                         forceSelection: y,
-                        offsetKey: M,
+                        offsetKey: j,
                         preventScroll: m,
                         selection: b,
                         tree: d.getBlockTree(R),
@@ -141,22 +141,22 @@ e.exports = (function (e) {
                     G = U.wrapper,
                     B = U.element || t.get("unstyled").element,
                     Z = N.getDepth(),
-                    V = "";
-                if ((r && (V = r(N)), "li" === B)) {
-                    var F = A !== G || null === S || Z > S;
-                    V = f(V, p(P, Z, F, j));
+                    F = "";
+                if ((r && (F = r(N)), "li" === B)) {
+                    var V = A !== G || null === S || Z > S;
+                    F = f(F, p(P, Z, V, M));
                 }
                 var H = D || l,
                     Y = {
-                        className: V,
+                        className: F,
                         "data-block": !0,
                         "data-editor": h,
-                        "data-offset-key": M,
+                        "data-offset-key": j,
                         key: R,
                     };
-                void 0 !== L &&
+                void 0 !== x &&
                     (Y = a({}, Y, {
-                        contentEditable: L,
+                        contentEditable: x,
                         suppressContentEditableWarning: !0,
                     }));
                 var W = u.createElement(B, Y, u.createElement(H, i({}, k, { key: R })));
@@ -164,7 +164,7 @@ e.exports = (function (e) {
                     block: W,
                     wrapperTemplate: G,
                     key: R,
-                    offsetKey: M,
+                    offsetKey: j,
                 }),
                     (S = G ? N.getDepth() : null),
                     (A = G);

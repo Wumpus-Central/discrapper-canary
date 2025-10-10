@@ -14,10 +14,10 @@ var r = n(951288),
     g = n(496675),
     m = n(98597),
     b = n(473403),
-    O = n(981631),
+    _ = n(981631),
     y = n(490897),
-    _ = n(55940);
-function j(e, t, n) {
+    O = n(55940);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function j(e, t, n) {
         e
     );
 }
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -62,10 +62,10 @@ class C extends m.ZP {
                 canReorderChannel: a,
             } = this.props,
             s = (0, r.jsx)("li", {
-                className: o()(this.getClassName(), { [_.disabled]: this.isDisabled() }),
+                className: o()(this.getClassName(), { [O.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: (0, r.jsxs)(b.ZP, {
-                    className: _.iconVisibility,
+                    className: O.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
@@ -81,7 +81,7 @@ class C extends m.ZP {
     }
     constructor(...e) {
         super(...e),
-            j(this, "handleContextMenu", (e) => {
+            v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
                     i = f.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -107,23 +107,23 @@ class C extends m.ZP {
                                               }),
                                         e
                                     );
-                                })(v({}, n), {
+                                })(j({}, n), {
                                     channel: t,
                                     guild: i,
                                 }),
                             );
                     });
             }),
-            j(this, "handleClick", (e) => {
+            v(this, "handleClick", (e) => {
                 !(function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
-                    (0, p.uL)(O.Z5c.CHANNEL(t, e.id), {
+                    (0, p.uL)(_.Z5c.CHANNEL(t, e.id), {
                         state: {
                             analyticsSource: {
-                                page: O.ZY5.GUILD_CHANNEL,
-                                section: O.jXE.CHANNEL_LIST,
-                                object: O.qAy.CHANNEL,
+                                page: _.ZY5.GUILD_CHANNEL,
+                                section: _.jXE.CHANNEL_LIST,
+                                object: _.qAy.CHANNEL,
                             },
                         },
                     });
@@ -137,10 +137,10 @@ let E = (0, u.B)(C),
             l = (0, a.cj)([h.Z, g.Z], () => {
                 let e = h.Z.getChannel(t.parent_id);
                 return {
-                    canManageChannel: g.Z.can(O.Plq.MANAGE_CHANNELS, t),
+                    canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),
                     canReorderChannel:
-                        !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n),
+                        !0 !== i && null != e ? g.Z.can(_.Plq.MANAGE_CHANNELS, e) : g.Z.can(_.Plq.MANAGE_CHANNELS, n),
                 };
             });
-        return (0, r.jsx)(E, v({}, l, e));
+        return (0, r.jsx)(E, j({}, l, e));
     });

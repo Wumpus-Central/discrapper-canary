@@ -44,7 +44,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,18 +72,18 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -122,7 +122,7 @@ function B(e) {
             message: a,
             channel: h,
             userOverride: D,
-            compact: L = !1,
+            compact: x = !1,
             withMentionPrefix: k = !1,
             showPopout: U = !1,
             hideGuildTag: B = !1,
@@ -173,7 +173,7 @@ function B(e) {
             if (el) {
                 if (eE && null != ei) {
                     var e;
-                    return j(x({}, ey), {
+                    return M(L({}, ey), {
                         textDecorationColor: null != (e = null == ei ? void 0 : ei.primaryColor) ? e : void 0,
                     });
                 }
@@ -202,7 +202,7 @@ function B(e) {
         },
         eS = i.useMemo(
             () =>
-                L && !B
+                x && !B
                     ? (0, r.jsx)(y.ZP, {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
@@ -211,7 +211,7 @@ function B(e) {
                           badgeSize: P.Gg.SIZE_12,
                       })
                     : null,
-            [L, n.primaryGuild, $, a.author.id, B],
+            [x, n.primaryGuild, $, a.author.id, B],
         ),
         eA = null != D ? D : a.author,
         eC =
@@ -236,13 +236,13 @@ function B(e) {
                       clickTrap: U,
                       children: (e) => {
                           var { onClick: t } = e,
-                              n = M(e, ["onClick"]);
+                              n = j(e, ["onClick"]);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(
                                       d.P3F,
-                                      j(
-                                          x(
+                                      M(
+                                          L(
                                               {
                                                   tag: "span",
                                                   innerRef: Q,
@@ -259,14 +259,14 @@ function B(e) {
                       },
                   })
                 : (0, r.jsxs)(r.Fragment, {
-                      children: [(0, r.jsx)(d.P3F, j(x({}, eT), { className: o()(eT.className, F) })), eS],
+                      children: [(0, r.jsx)(d.P3F, M(L({}, eT), { className: o()(eT.className, F) })), eS],
                   }),
         eN = null != z ? z[0] : null,
         eR = null != z ? z[1] : null;
     return (0, r.jsxs)(p.Gt, {
         value: ee,
         children: [
-            null != eN && !Z && L
+            null != eN && !Z && x
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [" ", eN, " "],
                   })
@@ -281,7 +281,7 @@ function B(e) {
                   })
                 : null,
             eC,
-            !L &&
+            !x &&
                 !B &&
                 (0, r.jsx)(y.ZP, {
                     primaryGuild: n.primaryGuild,
@@ -290,7 +290,7 @@ function B(e) {
                     className: w.clanTagChiplet,
                 }),
             null != eR ? eR : null,
-            null == eN || Z || L ? null : eN,
+            null == eN || Z || x ? null : eN,
             null != a && (0, C.f)(a) && eu && K ? (0, r.jsx)(G, {}) : null,
         ],
     });

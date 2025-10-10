@@ -1,7 +1,7 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(786920),
+    l = n(137317),
     a = n(442837),
     o = n(481060),
     c = n(596454),
@@ -10,15 +10,15 @@ var r = n(951288),
     d = n(456631),
     f = n(181201);
 let p = 6 * u.Z.Millis.SECOND,
-    m = 2 * u.Z.Millis.SECOND,
     _ = 2 * u.Z.Millis.SECOND,
-    g = (e) => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
-function b(e) {
+    m = 2 * u.Z.Millis.SECOND,
+    b = (e) => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
+function E(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: u } = e,
-        { emoji: b, sentAt: v } = n,
-        E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [h, y] = i.useState(!0),
-        S = !E,
+        { emoji: E, sentAt: g } = n,
+        v = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [h, S] = i.useState(!0),
+        y = !v,
         O = (0, o.Yzy)(h, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
@@ -32,20 +32,20 @@ function b(e) {
     return (i.useEffect(() => {
         let e;
         return (
-            Date.now() - v >= _
+            Date.now() - g >= m
                 ? (0, d.H)(t)
                 : (e = setTimeout(
                       () => {
-                          y(!1), S && (0, d.H)(t);
+                          S(!1), y && (0, d.H)(t);
                       },
-                      S ? m : p,
+                      y ? _ : p,
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [v, t, S]),
-    S)
+    }, [g, t, y]),
+    y)
         ? null
         : O((e, t) => {
               var n;
@@ -54,12 +54,12 @@ function b(e) {
                   t &&
                   (0, r.jsx)(l.animated.div, {
                       className: f.voiceChannelEffectEmojiContainer,
-                      style: { transform: i.to(g) },
+                      style: { transform: i.to(b) },
                       children: (0, r.jsx)(c.Z, {
                           className: f.voiceChannelEffectEmoji,
-                          emojiId: b.id,
-                          emojiName: b.name,
-                          animated: null != (n = b.animated) && n,
+                          emojiId: E.id,
+                          emojiName: E.name,
+                          animated: null != (n = E.animated) && n,
                       }),
                   })
               );

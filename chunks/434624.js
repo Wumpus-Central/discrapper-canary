@@ -3,9 +3,9 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(866442),
-    l = n(596454),
-    c = n(434650),
+    s = n(907331),
+    l = n(866442),
+    c = n(596454),
     u = n(446489),
     d = n(56314),
     f = n(566006),
@@ -91,7 +91,7 @@ let v = i.memo(function (e) {
         {
             useChatFontScaling: i,
             hideEmoji: a,
-            emoji: c,
+            emoji: s,
             className: m,
             count: g,
             me: E,
@@ -110,16 +110,16 @@ let v = i.memo(function (e) {
         P = (0, d.v)(N && null != O ? O : []),
         w = i ? h : p,
         D = N ? y : g,
-        x = (0, u.y)(D, _.aO),
-        L = {};
+        L = (0, u.y)(D, _.aO),
+        x = {};
     if (N && null != P) {
-        var j;
+        var M;
         let { accentColor: e, backgroundColor: r, opacity: i } = P,
-            a = null != (j = (0, s.wK)(null != r ? r : "", i)) ? j : "";
-        R && (L.borderColor = r), (L.background = a), (t = e), (n = e);
+            a = null != (M = (0, l.wK)(null != r ? r : "", i)) ? M : "";
+        R && (x.borderColor = r), (x.background = a), (t = e), (n = e);
     }
-    let M = {
-        minWidth: x,
+    let j = {
+        minWidth: L,
         color: t,
         borderColor: n,
     };
@@ -128,18 +128,18 @@ let v = i.memo(function (e) {
             [w.reactionMe]: R,
             [w.reactionReadOnly]: v && !I && !S && !T,
         }),
-        style: L,
+        style: x,
         children: [
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(c.Z, {
                 className: o()({ [w.hideEmoji]: a }),
-                emojiId: c.id,
-                emojiName: c.name,
+                emojiId: s.id,
+                emojiName: s.name,
                 size: C,
-                animated: N && c.animated,
+                animated: N && s.animated,
             }),
             (0, r.jsx)("div", {
                 className: w.reactionCount,
-                style: M,
+                style: j,
                 children: D,
             }),
         ],
@@ -155,21 +155,21 @@ function I(e) {
 let T = i.memo(function (e) {
     var { showImmediate: t, reactions: n } = e,
         a = y(e, ["showImmediate", "reactions"]);
-    let [o, s] = i.useState(!1),
-        [l, u] = i.useTransition(),
+    let [o, l] = i.useState(!1),
+        [c, u] = i.useTransition(),
         d = i.useCallback(
             (e) => {
                 !e ||
                     o ||
-                    l ||
+                    c ||
                     u(() => {
-                        s(!0);
+                        l(!0);
                     });
             },
-            [o, l],
+            [o, c],
         ),
-        f = (0, c.O)(d),
-        p = (o && !l) || t ? _.le : v;
+        f = (0, s.O)(d),
+        p = (o && !c) || t ? _.le : v;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", { ref: f }),

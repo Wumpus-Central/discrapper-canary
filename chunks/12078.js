@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(481060),
     d = n(220250),
     u = n(813197),
-    m = n(430824),
-    g = n(768581),
+    g = n(430824),
+    m = n(768581),
     p = n(921948),
     f = n(434404),
     h = n(981631),
@@ -44,16 +44,16 @@ function v(e) {
         d = i.useMemo(() => {
             if (null == n.customBanner) return null;
             let e = n.customBanner;
-            return g.ff.test(e)
+            return m.ff.test(e)
                 ? e
-                : g.ZP.getGuildDiscoverySplashURL({
+                : m.ZP.getGuildDiscoverySplashURL({
                       id: n.id,
                       splash: n.customBanner,
                       size: 300 * (0, p.Z)(),
                   });
         }, [n]);
     if (!t) return null;
-    let m =
+    let g =
         null != d
             ? (0, r.jsx)("img", {
                   className: j.uploadedImage,
@@ -71,7 +71,7 @@ function v(e) {
                 children: (0, r.jsxs)("div", {
                     className: s()(j.uploadItem, { [j.disabled]: !a }),
                     children: [
-                        m,
+                        g,
                         (0, r.jsx)("div", { className: j.overlay }),
                         (0, r.jsx)(c.vdY, {
                             size: "custom",
@@ -95,8 +95,8 @@ function v(e) {
 function C(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
-        g = (0, a.e7)([m.Z], () => m.Z.getGuild(n.id)),
-        p = null != (t = null == g ? void 0 : g.features.has(h.oNc.DISCOVERABLE)) && t,
+        m = (0, a.e7)([g.Z], () => g.Z.getGuild(n.id)),
+        p = null != (t = null == m ? void 0 : m.features.has(h.oNc.DISCOVERABLE)) && t,
         C = n.id,
         O = i.useCallback(
             (e) => () => {

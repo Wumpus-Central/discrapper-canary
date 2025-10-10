@@ -1,6 +1,6 @@
-n.d(t, { Z: () => _ }), n(704826), n(35282), n(388685);
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => y }), n(704826), n(35282), n(388685);
+var i = n(951288),
+    r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -29,29 +29,29 @@ let m = {
     },
     g = (e) => {
         let { region: t, className: n = h.regionSelectName } = e,
-            i = t.name.replace(/ \(VIP\)$/, "");
-        return (0, r.jsx)("div", {
+            r = t.name.replace(/ \(VIP\)$/, "");
+        return (0, i.jsx)("div", {
             className: n,
-            children: i,
+            children: r,
         });
     };
-class b extends i.PureComponent {
+class b extends r.PureComponent {
     render() {
         let { region: e, selected: t } = this.props;
-        return (0, r.jsxs)(u.Z, {
+        return (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
             className: a()({ selected: t }),
             children: [
-                (0, r.jsx)(g, {
+                (0, i.jsx)(g, {
                     region: e,
                     className: h.regionSelectName,
                 }),
-                t ? (0, r.jsx)("i", { className: h.check }) : null,
+                t ? (0, i.jsx)("i", { className: h.check }) : null,
             ],
         });
     }
 }
-class y extends i.PureComponent {
+class C extends r.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -63,17 +63,17 @@ class y extends i.PureComponent {
                 label: t.name,
                 value: t,
             },
-            i = e
+            r = e
                 .filter((e) => !e.deprecated && !e.hidden)
                 .map((e) => ({
                     label: e.name,
                     value: e,
                     key: e.id,
                 }));
-        return (0, r.jsx)(s.nsm, {
+        return (0, i.jsx)(s.nsm, {
             className: h.root,
             label: p.intl.string(p.t.w8gMqq),
-            options: i,
+            options: r,
             value: n,
             onChange: this.handleChangeVoiceRegion,
             renderOption: this.renderOption,
@@ -84,7 +84,7 @@ class y extends i.PureComponent {
     constructor(...e) {
         super(...e),
             f(this, "renderOption", (e, t) =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     b,
                     {
                         region: e.value,
@@ -122,4 +122,4 @@ class y extends i.PureComponent {
             });
     }
 }
-let _ = o.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(y);
+let y = o.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(C);

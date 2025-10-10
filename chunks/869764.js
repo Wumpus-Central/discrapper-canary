@@ -1,80 +1,80 @@
 n.d(t, {
-    Z: () => b,
+    Z: () => D,
     k: () => v,
 }),
     n(997841);
 var l = n(951288),
-    i = n(647438),
-    r = n(120356),
-    s = n.n(r),
-    a = n(442837),
+    r = n(647438),
+    i = n(120356),
+    a = n.n(i),
+    s = n(442837),
     o = n(481060),
     c = n(933557),
     d = n(471445),
     u = n(592125),
     m = n(271383),
-    h = n(430824),
-    I = n(496675),
-    g = n(186523),
-    N = n(768581),
-    S = n(630388),
-    f = n(526120),
-    p = n(563534),
-    E = n(846121),
-    T = n(216701),
-    O = n(981631),
-    x = n(372897),
+    g = n(430824),
+    h = n(496675),
+    f = n(186523),
+    I = n(768581),
+    p = n(630388),
+    N = n(526120),
+    O = n(563534),
+    S = n(846121),
+    E = n(216701),
+    x = n(981631),
+    T = n(372897),
     _ = n(388032),
     j = n(371882);
 function v(e) {
-    var { title: t, emojiId: n, emojiName: i, icon: r, completed: a, Icon: c, onClick: d } = e,
+    var { title: t, emojiId: n, emojiName: r, icon: i, completed: s, Icon: c, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
-                i = (function (e, t) {
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         l,
-                        i = {},
-                        r = Object.keys(e);
-                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        r = {},
+                        i = Object.keys(e);
+                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var r = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < r.length; l++)
-                    (n = r[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < i.length; l++)
+                    (n = i[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, ["title", "emojiId", "emojiName", "icon", "completed", "Icon", "onClick"]);
     let m = "channel" === u.variant ? u.channelId : null,
-        h = "static" === u.variant ? u.subtitle : u.channelName,
-        I =
+        g = "static" === u.variant ? u.subtitle : u.channelName,
+        h =
             null != m
-                ? N.ZP.getNewMemberActionIconURL({
+                ? I.ZP.getNewMemberActionIconURL({
                       channelId: m,
-                      icon: r,
+                      icon: i,
                   })
                 : null;
     return (0, l.jsxs)(o.Zbd, {
-        className: s()(j.action, { [j.clickableAction]: null != d }),
+        className: a()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
-            null != I
+            null != h
                 ? (0, l.jsx)("img", {
-                      src: I,
+                      src: h,
                       className: j.icon,
                       width: 32,
                       height: 32,
                       alt: "",
                       "aria-hidden": !0,
                   })
-                : (0, l.jsx)(T.Z, {
+                : (0, l.jsx)(E.Z, {
                       emojiId: n,
-                      emojiName: i,
-                      size: T.R.LARGE,
+                      emojiName: r,
+                      size: E.R.LARGE,
                       defaultComponent: (0, l.jsx)("div", {
                           className: j.channelIconContainer,
                           children: (0, l.jsx)(c, {
@@ -91,23 +91,23 @@ function v(e) {
                         color: "header-primary",
                         children: t,
                     }),
-                    null != h
+                    null != g
                         ? (0, l.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: h,
+                              children: g,
                           })
                         : null,
                 ],
             }),
-            a
+            s
                 ? (0, l.jsx)(o.owK, {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: "#fff",
                       className: j.checkCircleCompleted,
                   })
-                : (0, l.jsx)(g.Z, {
+                : (0, l.jsx)(f.Z, {
                       className: j.checkCircle,
                       width: 24,
                       height: 24,
@@ -115,47 +115,47 @@ function v(e) {
         ],
     });
 }
-function D(e) {
+function b(e) {
     var t;
-    let { action: n, completed: r } = e,
-        { channelId: s, title: m, emoji: h, icon: g } = n,
-        { id: N, name: S } = null != h ? h : {},
-        p = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
-        E = (0, c.ZP)(p, !0),
-        T = (0, a.e7)([I.Z], () => I.Z.can(O.Plq.VIEW_CHANNEL, p)),
-        x = i.useMemo(() => {
-            if (null != p) return () => (0, f.gp)(p.guild_id, p.id);
-        }, [p]);
-    if (null == p || !T) return null;
-    let _ = null != (t = (0, d.KS)(p)) ? t : o.VL1;
+    let { action: n, completed: i } = e,
+        { channelId: a, title: m, emoji: g, icon: f } = n,
+        { id: I, name: p } = null != g ? g : {},
+        O = (0, s.e7)([u.Z], () => u.Z.getChannel(a)),
+        S = (0, c.ZP)(O, !0),
+        E = (0, s.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
+        T = r.useMemo(() => {
+            if (null != O) return () => (0, N.gp)(O.guild_id, O.id);
+        }, [O]);
+    if (null == O || !E) return null;
+    let _ = null != (t = (0, d.KS)(O)) ? t : o.VL1;
     return (0, l.jsx)(v, {
         variant: "channel",
-        channelId: s,
+        channelId: a,
         title: m,
-        channelName: E,
-        emojiId: N,
-        emojiName: S,
-        icon: g,
-        completed: r,
+        channelName: S,
+        emojiId: I,
+        emojiName: p,
+        icon: f,
+        completed: i,
         Icon: _,
-        onClick: x,
+        onClick: T,
     });
 }
-function b(e) {
+function D(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getNewMemberActions(t), [t]),
-        r = (0, a.e7)([E.Z], () => E.Z.getCompletedActions(t)),
-        c = (0, a.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
-        d = (0, a.e7)([h.Z], () => h.Z.getGuild(t));
-    i.useEffect(() => {
+        n = (0, s.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
+        i = (0, s.e7)([S.Z], () => S.Z.getCompletedActions(t)),
+        c = (0, s.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
+        d = (0, s.e7)([g.Z], () => g.Z.getGuild(t));
+    r.useEffect(() => {
         var e;
-        null == r &&
+        null == i &&
             (null == c ? void 0 : c.flags) != null &&
-            (0, S.yE)(null != (e = c.flags) ? e : 0, x.q.STARTED_HOME_ACTIONS) &&
-            (0, f.Fg)(t);
-    }, [r, t, null == c ? void 0 : c.flags]);
-    let u = i.useCallback(() => {
-        null != d && null != d.rulesChannelId && (0, f.gp)(d.id, d.rulesChannelId);
+            (0, p.yE)(null != (e = c.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
+            (0, N.Fg)(t);
+    }, [i, t, null == c ? void 0 : c.flags]);
+    let u = r.useCallback(() => {
+        null != d && null != d.rulesChannelId && (0, N.gp)(d.id, d.rulesChannelId);
     }, [d]);
     return null == c || null == n || 0 === n.length
         ? null
@@ -169,10 +169,10 @@ function b(e) {
                   }),
                   n.map((e) =>
                       (0, l.jsx)(
-                          D,
+                          b,
                           {
                               action: e,
-                              completed: (null == r ? void 0 : r[e.channelId]) === !0,
+                              completed: (null == i ? void 0 : i[e.channelId]) === !0,
                               guildId: t,
                           },
                           e.channelId,
@@ -180,7 +180,7 @@ function b(e) {
                   ),
                   (null == d ? void 0 : d.rulesChannelId) != null &&
                       (0, l.jsxs)(o.Zbd, {
-                          className: s()(j.action, j.clickableAction),
+                          className: a()(j.action, j.clickableAction),
                           onClick: u,
                           children: [
                               (0, l.jsx)("div", {

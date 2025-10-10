@@ -4,7 +4,7 @@ n.d(t, {
     H9: () => A,
     Kd: () => k,
     UR: () => v,
-    d2: () => M,
+    d2: () => j,
     dU: () => T,
 }),
     n(388685),
@@ -222,14 +222,14 @@ let P = [
         for (let [t, n] of P) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    x = /shift|meta|ctrl|alt$/;
-function L(e) {
+    L = /shift|meta|ctrl|alt$/;
+function x(e) {
     return "meta" === e || "shift" === e || "alt" === e || "ctrl" === e;
 }
-function j(e) {
+function M(e) {
     return e + "Key";
 }
-function M(e) {
+function j(e) {
     let t = {
         keyCode: 0,
         key: "",
@@ -245,7 +245,7 @@ function M(e) {
               let r = A(n),
                   i = _({}, t);
               if (null == r) return e.push(h(_({}, i), { combo: n })), e;
-              if (x.test(r) && L(r)) return (t[j(r)] = !0), e.map((e) => ((e[j(r)] = !0), e));
+              if (L.test(r) && x(r)) return (t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e));
               {
                   let t = C(r, d.Cg.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;

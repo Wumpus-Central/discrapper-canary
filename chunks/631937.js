@@ -1,6 +1,6 @@
 n.d(t, { Z: () => h });
-var r = n(647438),
-    i = n(442837),
+var i = n(647438),
+    r = n(442837),
     l = n(661111),
     a = n(706454),
     o = n(306680),
@@ -11,22 +11,22 @@ var r = n(647438),
     p = n(981631);
 function h(e) {
     let t = (0, u.Z)(e),
-        n = (0, i.e7)([a.default], () => a.default.locale),
-        h = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : "", n), [t, n]),
+        n = (0, r.e7)([a.default], () => a.default.locale),
+        h = (0, r.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : "", n), [t, n]),
         f = (0, d.Z)(e),
-        m = r.useRef(f ? Date.now() : null),
-        g = (0, i.e7)([o.ZP], () => o.ZP.getUnreadCount(e), [e]),
-        b = r.useRef(g);
-    r.useEffect(() => {
+        m = i.useRef(f ? Date.now() : null),
+        g = (0, r.e7)([o.ZP], () => o.ZP.getUnreadCount(e), [e]),
+        b = i.useRef(g);
+    i.useEffect(() => {
         b.current = g;
     }),
-        r.useEffect(() => {
+        i.useEffect(() => {
             m.current = Date.now();
         }, [f]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             f && null != t && l.Z.fetchChangelog(t, n, !0);
         }, [t, n, f]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             f &&
                 null != h &&
                 s.default.track(p.rMx.CHANGE_LOG_OPENED, {
@@ -34,7 +34,7 @@ function h(e) {
                     unread_count: b.current,
                 });
         }, [f, h]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = m.current;
             return () => {
                 f &&

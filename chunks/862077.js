@@ -62,7 +62,7 @@ function T(e) {
         } = e,
         w = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
         { analyticsLocations: D } = (0, l.ZP)([...R, w ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
-        x = (0, d.ZB)({
+        L = (0, d.ZB)({
             layout: "POPOUT",
             userId: t.id,
             guildId: n,
@@ -70,27 +70,27 @@ function T(e) {
             messageId: S,
             roleId: A,
         }),
-        L = i.useRef(null),
-        j = (0, _.ZP)(t.id, n);
+        x = i.useRef(null),
+        M = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
-        null == v || v(null == L ? void 0 : L.current);
-    }, [L, v]);
-    let M = w ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        null == v || v(null == x ? void 0 : x.current);
+    }, [x, v]);
+    let j = w ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
         k = P ? "div" : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: D,
         children: (0, r.jsx)(d.Mt, {
-            value: x,
+            value: L,
             openedAt: C,
-            fetchStartedAt: null == j ? void 0 : j.fetchStartedAt,
-            fetchEndedAt: null == j ? void 0 : j.fetchEndedAt,
-            isLoaded: null == j ? void 0 : j.isLoaded,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(k, {
-                ref: L,
+                ref: x,
                 "aria-label": t.username,
                 children: (0, r.jsx)(h.Z, {
                     user: t,
-                    displayProfile: j,
+                    displayProfile: M,
                     themeType: E.l.POPOUT,
                     children: (0, r.jsxs)("div", {
                         className: y.container,
@@ -133,10 +133,10 @@ function T(e) {
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
-                                                                    action: M,
+                                                                    action: j,
                                                                     analyticsLocations: D,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },
@@ -151,7 +151,7 @@ function T(e) {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                     analyticsLocations: D,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },

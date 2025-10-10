@@ -31,8 +31,8 @@ var r = n(664751),
     D = n(388032);
 let L = 3,
     x = 20,
-    j = new f.Z("GamesActionCreators");
-function M(e) {
+    M = new f.Z("GamesActionCreators");
+function j(e) {
     let {
         applicationId: t,
         secret: n,
@@ -52,12 +52,12 @@ function M(e) {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
-                        (j.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
+                        (M.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
                         (window.location.href = r));
                 } else window.location.href = r;
                 return Promise.resolve();
             } catch (e) {
-                j.warn("Failed to open deep link, falling back to desktop launch", {
+                M.warn("Failed to open deep link, falling back to desktop launch", {
                     applicationId: t,
                     error: e.message,
                 });
@@ -259,7 +259,7 @@ let B = {
                 new Promise((n, r) => {
                     if (null == t) return void r(Error("Game utils module not loaded"));
                     t.identifyGame(e, (t, i) =>
-                        (j.log("Identified game: ", {
+                        (M.log("Identified game: ", {
                             status: t,
                             name: i.name,
                             iconHash: i.iconHash,
@@ -359,7 +359,7 @@ let B = {
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: s } = e,
             c = (0, d.F)(s);
-        j.log("Reporting unverified game: ", {
+        M.log("Reporting unverified game: ", {
             name: t,
             executableName: s,
             iconHash: n,
@@ -453,7 +453,7 @@ let B = {
                 l = await C.Z.getJoinSecret(t, n, r, i, a);
             return (
                 null == f &&
-                    M({
+                    j({
                         applicationId: r,
                         secret: l,
                         channelId: i,
@@ -476,5 +476,5 @@ let B = {
             );
         }
     },
-    joinWithSecret: M,
+    joinWithSecret: j,
 };

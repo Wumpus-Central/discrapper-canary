@@ -39,10 +39,10 @@ function h(e, t) {
         D = f.Z.getMutualFriends(e),
         L = f.Z.getMutualFriendsCount(e),
         x = null == D && O,
-        j = null == L && y,
-        M = (null == w && b) || x || j,
+        M = null == L && y,
+        j = (null == w && b) || x || M,
         k = null == T ? null == N : null == P,
-        U = !k && (R || M);
+        U = !k && (R || j);
     if (!k && !U) return Promise.resolve();
     let G = null != T ? (null == P ? void 0 : P.profileEffect) : null == N ? void 0 : N.profileEffect;
     null != G && ((0, s.c)("maybeFetchUserProfile") ? (0, o.lW)(G.skuId) : (0, c.t)()), null != t && (0, a.vM)(t);

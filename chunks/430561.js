@@ -1,10 +1,10 @@
 n.d(t, {
-    GY: () => L,
+    GY: () => x,
     PI: () => A,
-    RT: () => j,
+    RT: () => M,
     XM: () => D,
     bc: () => C,
-    ls: () => x,
+    ls: () => L,
     xZ: () => N,
 }),
     n(388685);
@@ -26,7 +26,7 @@ var r = n(951288),
     E = n(618373),
     b = n(620954),
     y = n(388032),
-    O = n(246722);
+    O = n(962967);
 function v(e, t, n) {
     return (
         t in e
@@ -175,7 +175,7 @@ function D(e) {
               }),
           });
 }
-function x(e) {
+function L(e) {
     let { onClick: t } = e;
     if ((0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()))) return null;
     let n = y.intl.string(y.t["3D5yo6"]);
@@ -196,7 +196,7 @@ function x(e) {
             ),
     });
 }
-function L(e) {
+function x(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? y.intl.string(y.t.q2B3rq) : y.intl.string(y.t.JKGi6u),
         a = () => {
@@ -221,7 +221,7 @@ function L(e) {
                   ),
           });
 }
-function j(e) {
+function M(e) {
     let { id: t, pinned: n } = e,
         i = n ? y.intl.string(y.t.cSu80t) : y.intl.string(y.t.cM8Vnp),
         a = (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()));

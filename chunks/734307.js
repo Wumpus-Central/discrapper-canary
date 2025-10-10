@@ -45,19 +45,19 @@ function D() {
         t = v.Z.getVoiceChannelId();
     return (R = e), (P = t), w.clear();
 }
-function x(e) {
+function L(e) {
     let {
         guild: { id: t },
     } = e;
     return w.clearGuildId(t);
 }
-function L(e) {
+function x(e) {
     let {
         channel: { guild_id: t },
     } = e;
     return w.clearGuildId(t);
 }
-function j(e) {
+function M(e) {
     let { channels: t } = e,
         n = !1;
     return (
@@ -70,7 +70,7 @@ function j(e) {
         n
     );
 }
-function M(e) {
+function j(e) {
     return w.nonPositionalChannelIdUpdate(e.id);
 }
 function k(e) {
@@ -97,12 +97,12 @@ function Z(e) {
         return w.clearGuildId(t);
     });
 }
-function V(e) {
+function F(e) {
     var t;
     let { channelId: n } = e;
     return w.clearGuildId(null == (t = g.Z.getChannel(n)) ? void 0 : t.guild_id);
 }
-function F(e) {
+function V(e) {
     let { channelId: t } = e;
     return w.nonPositionalChannelIdUpdate(t);
 }
@@ -265,15 +265,15 @@ let eu = new ec(s.Z, {
     CATEGORY_EXPAND_ALL: B,
     CATEGORY_EXPAND: ee,
     CHANNEL_ACK: Y,
-    CHANNEL_COLLAPSE: V,
-    CHANNEL_CREATE: L,
-    CHANNEL_DELETE: L,
+    CHANNEL_COLLAPSE: F,
+    CHANNEL_CREATE: x,
+    CHANNEL_DELETE: x,
     CHANNEL_LOCAL_ACK: Y,
     CHANNEL_MUTE_EXPIRED: B,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: Y,
     CHANNEL_SELECT: J,
     CHANNEL_STATUSES: k,
-    CHANNEL_UPDATES: j,
+    CHANNEL_UPDATES: M,
     CONNECTION_OPEN_SUPPLEMENTAL: ei,
     CONNECTION_OPEN: D,
     CURRENT_USER_UPDATE: D,
@@ -290,8 +290,8 @@ let eu = new ec(s.Z, {
     GAMES_DATABASE_FETCH: ei,
     GAMES_DATABASE_UPDATE: ei,
     GUILD_APPLICATIONS_FETCH_SUCCESS: ei,
-    GUILD_CREATE: x,
-    GUILD_DELETE: x,
+    GUILD_CREATE: L,
+    GUILD_DELETE: L,
     GUILD_MEMBER_UPDATE: U,
     GUILD_MUTE_EXPIRED: B,
     GUILD_ROLE_CREATE: B,
@@ -303,13 +303,13 @@ let eu = new ec(s.Z, {
     GUILD_SCHEDULED_EVENT_DELETE: eo,
     GUILD_SCHEDULED_EVENT_UPDATE: eo,
     GUILD_TOGGLE_COLLAPSE_MUTED: B,
-    GUILD_UPDATE: x,
+    GUILD_UPDATE: L,
     IMPERSONATE_STOP: B,
     IMPERSONATE_UPDATE: B,
     LOAD_CHANNELS: Z,
     LOAD_MESSAGES_SUCCESS: Y,
     MESSAGE_ACK: Y,
-    MESSAGE_CREATE: F,
+    MESSAGE_CREATE: V,
     MESSAGE_DELETE_BULK: Y,
     MESSAGE_DELETE: Y,
     NOTIFICATION_SETTINGS_UPDATE: D,
@@ -336,7 +336,7 @@ let eu = new ec(s.Z, {
     VOICE_CATEGORY_COLLAPSE: et,
     VOICE_CATEGORY_EXPAND: et,
     VOICE_CHANNEL_SELECT: J,
-    VOICE_CHANNEL_STATUS_UPDATE: M,
+    VOICE_CHANNEL_STATUS_UPDATE: j,
     VOICE_STATE_UPDATES: $,
     WINDOW_FOCUS: W,
 });

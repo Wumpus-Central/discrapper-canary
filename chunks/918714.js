@@ -1,70 +1,70 @@
-n.d(t, { Z: () => j }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(481060),
-    a = n(493773),
-    o = n(480916),
-    c = n(17597),
-    s = n(624138),
-    u = n(845077),
-    d = n(132392),
-    f = n(118589),
+n.d(t, { Z: () => y }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    i = n(481060),
+    l = n(493773),
+    s = n(480916),
+    o = n(17597),
+    c = n(624138),
+    d = n(845077),
+    u = n(132392),
+    m = n(118589),
     p = n(210825),
     h = n(535188),
-    m = n(856597),
-    y = n(231338),
-    g = n(241945),
-    b = n(388032),
-    E = n(104940);
-let x = n(575703);
-function v(e) {
-    let { task: t, handleSubmit: n, disabled: l } = e,
-        [a, o] = i.useState(t),
-        c = i.useMemo(
+    x = n(856597),
+    f = n(231338),
+    b = n(241945),
+    g = n(388032),
+    v = n(104940);
+let j = n(575703);
+function _(e) {
+    let { task: t, handleSubmit: n, disabled: i } = e,
+        [l, s] = r.useState(t),
+        o = r.useMemo(
             () => ({
-                task: a,
-                setTask: o,
+                task: l,
+                setTask: s,
             }),
-            [a, o],
+            [l, s],
         );
     return (
-        i.useEffect(() => {
-            o(t);
+        r.useEffect(() => {
+            s(t);
         }, [t]),
-        (0, r.jsxs)(d.y.Provider, {
-            value: c,
+        (0, a.jsxs)(u.y.Provider, {
+            value: o,
             children: [
-                (0, r.jsx)(m.Z, {}),
-                (0, r.jsx)(h.Z, {
+                (0, a.jsx)(x.Z, {}),
+                (0, a.jsx)(h.Z, {
                     onSubmit: n,
-                    disabled: l,
+                    disabled: i,
                 }),
             ],
         })
     );
 }
-let j = function (e) {
+let y = function (e) {
     let { onClose: t } = e,
-        [n, d] = i.useState(null),
-        [h, m] = i.useState(!0),
-        [j, _] = i.useState(null),
-        [O, A] = i.useState(!1),
-        S = i.useCallback(async () => {
-            m(!0), _(null);
+        [n, u] = r.useState(null),
+        [h, x] = r.useState(!0),
+        [y, C] = r.useState(null),
+        [E, S] = r.useState(!1),
+        T = r.useCallback(async () => {
+            x(!0), C(null);
             try {
                 var e;
-                let n = await (0, u.PA)();
+                let n = await (0, d.PA)();
                 if (null == n) return void t();
-                !(0, s.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
-                f.VZ.has(n.ui_component.component.type)
-                    ? d(n)
-                    : d({
+                !(0, c.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
+                m.VZ.has(n.ui_component.component.type)
+                    ? u(n)
+                    : u({
                           task_id: n.task_id,
-                          task_type: f.UA.REFRESH_APP,
+                          task_type: m.UA.REFRESH_APP,
                           assignment_id: n.assignment_id,
                           ui_component: {
                               component: {
-                                  type: f.NS.REFRESH_APP,
+                                  type: m.NS.REFRESH_APP,
                                   data: {},
                               },
                           },
@@ -74,117 +74,117 @@ let j = function (e) {
                           },
                       });
             } catch (e) {
-                _(b.intl.string(g.default["/f++3t"]));
+                C(g.intl.string(b.default["/f++3t"]));
             } finally {
-                m(!1);
+                x(!1);
             }
         }, [t]),
-        I = i.useCallback(
+        O = r.useCallback(
             async (e) => {
                 if (null !== n) {
-                    A(!0);
+                    S(!0);
                     try {
                         let t = {
                             task_id: n.task_id,
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, u.Wl)(t), S();
+                        await (0, d.Wl)(t), T();
                     } catch (e) {
-                        _(b.intl.string(g.default["+QRSxc"]));
+                        C(g.intl.string(b.default["+QRSxc"]));
                     } finally {
-                        A(!1);
+                        S(!1);
                     }
                 }
             },
-            [n, S],
+            [n, T],
         );
-    (0, a.ZP)(() => {
-        S();
+    (0, l.ZP)(() => {
+        T();
     });
-    let R = i.useMemo(() => (null == n ? void 0 : n.task_type) === f.UA.AGE_VERIFICATION, [n]);
-    return (0, r.jsxs)("div", {
-        className: E.background,
+    let N = r.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
+    return (0, a.jsxs)("div", {
+        className: v.background,
         children: [
-            (0, r.jsx)("img", {
-                className: E.artwork,
-                src: x,
+            (0, a.jsx)("img", {
+                className: v.artwork,
+                src: j,
                 alt: "",
             }),
-            R
-                ? (0, r.jsx)(c.Z, {
-                      transitionState: l.Dvm.ENTERED,
-                      entryPoint: o.cU.SAFETY_FLOWS,
-                      onClose: y.dG,
+            N
+                ? (0, a.jsx)(o.Z, {
+                      transitionState: i.Dvm.ENTERED,
+                      entryPoint: s.cU.SAFETY_FLOWS,
+                      onClose: f.dG,
                       onComplete: async () => {
-                          await I({ type: f.rY.Empty });
+                          await O({ type: m.rY.Empty });
                       },
                       dismissable: !1,
                   })
-                : (0, r.jsx)("div", {
-                      className: E.safetyFlow,
+                : (0, a.jsx)("div", {
+                      className: v.safetyFlow,
                       children: h
-                          ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
-                          : (0, r.jsx)("div", {
-                                className: E.container,
-                                children: (0, r.jsxs)(l.Kqy, {
+                          ? (0, a.jsx)(i.$jN, { type: i.$jN.Type.SPINNING_CIRCLE })
+                          : (0, a.jsx)("div", {
+                                className: v.container,
+                                children: (0, a.jsxs)(i.Kqy, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: E.body,
+                                    className: v.body,
                                     children: [
-                                        null !== j &&
-                                            (0, r.jsxs)(l.Kqy, {
+                                        null !== y &&
+                                            (0, a.jsxs)(i.Kqy, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: E.interimBody,
+                                                className: v.interimBody,
                                                 padding: 16,
                                                 children: [
-                                                    (0, r.jsxs)(l.Kqy, {
+                                                    (0, a.jsxs)(i.Kqy, {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, r.jsx)(l.X6q, {
+                                                            (0, a.jsx)(i.X6q, {
                                                                 variant: "heading-xl/semibold",
-                                                                children: b.intl.string(b.t.c6kn6O),
+                                                                children: g.intl.string(g.t.c6kn6O),
                                                             }),
-                                                            (0, r.jsx)(l.Text, {
+                                                            (0, a.jsx)(i.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
-                                                                children: b.intl.string(b.t.ZUEGFh),
+                                                                children: g.intl.string(g.t.ZUEGFh),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, r.jsxs)(l.Kqy, {
+                                                    (0, a.jsxs)(i.Kqy, {
                                                         direction: "horizontal",
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, r.jsx)(l.zxk, {
+                                                            (0, a.jsx)(i.zxk, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
-                                                                text: b.intl.string(b.t["2jxGen"]),
+                                                                text: g.intl.string(g.t["2jxGen"]),
                                                                 onClick: () => {
                                                                     (0, p.R)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, r.jsx)(l.zxk, {
+                                                            (0, a.jsx)(i.zxk, {
                                                                 fullWidth: !0,
-                                                                text: b.intl.string(b.t["7NqTJi"]),
+                                                                text: g.intl.string(g.t["7NqTJi"]),
                                                                 onClick: () => {
-                                                                    S();
+                                                                    T();
                                                                 },
                                                             }),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                        null === j &&
+                                        null === y &&
                                             null != n &&
-                                            (0, r.jsx)(v, {
+                                            (0, a.jsx)(_, {
                                                 task: n,
-                                                handleSubmit: I,
-                                                disabled: O,
+                                                handleSubmit: O,
+                                                disabled: E,
                                             }),
                                     ],
                                 }),

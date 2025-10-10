@@ -8,7 +8,7 @@ var i = n(442837),
     l = n(803038),
     c = n(662975),
     u = n(724145),
-    d = n(507962),
+    d = n(771934),
     f = n(726034),
     _ = n(884134),
     p = n(266454),
@@ -24,25 +24,25 @@ let I = function (e) {
     let { mobile: t } = e,
         n = (0, i.e7)([m.Z], () => m.Z.getLayers().includes(y.S9g.USER_SETTINGS)),
         I = (0, i.e7)([g.default], () => E.ZP.canUseClientThemes(g.default.getCurrentUser())),
-        S = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
-        T = (0, c.g)(),
+        T = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
+        S = (0, c.g)(),
         { v2EditorEnabled: A } = l.Mc.useExperiment({ location: "AppRightSidePanel" }),
         { activePanel: C, metadata: N } = (0, b.oq)(),
         R = [];
-    !n && null == C && (S && !I && R.push(a.z.CLIENT_THEMES_COACHMARK), T && R.push(a.z.CUSTOM_THEME_COACHMARK));
+    !n && null == C && (T && !I && R.push(a.z.CLIENT_THEMES_COACHMARK), S && R.push(a.z.CUSTOM_THEME_COACHMARK));
     let [P, w] = (0, h.US)(R, O.R.SIDEBAR, !0),
         D = P === a.z.CLIENT_THEMES_COACHMARK,
-        x = P === a.z.CUSTOM_THEME_COACHMARK;
-    if (((0, d.HA)(T, P), n)) return null;
-    let L = A ? _.Z : f.Z,
-        j = C === b.wh.CLIENT_THEMES || D,
-        M = C === b.wh.APP_ICON,
-        k = C === b.wh.CUSTOM_THEME || x;
-    if (!(j || M || k)) return null;
+        L = P === a.z.CUSTOM_THEME_COACHMARK;
+    if (((0, d.HA)(S, P), n)) return null;
+    let x = A ? _.Z : f.Z,
+        M = C === b.wh.CLIENT_THEMES || D,
+        j = C === b.wh.APP_ICON,
+        k = C === b.wh.CUSTOM_THEME || L;
+    if (!(M || j || k)) return null;
     let U = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                j &&
+                M &&
                     (0, r.jsx)(u.Z, {
                         markAsDismissed: D
                             ? w
@@ -54,16 +54,16 @@ let I = function (e) {
                               },
                         showClientThemesCoachmark: D,
                     }),
-                M &&
+                j &&
                     (0, r.jsx)(o.Z, {
                         isCoachmark: !1,
                         markAsDismissed: w,
                     }),
                 k &&
-                    (0, r.jsx)(L, {
+                    (0, r.jsx)(x, {
                         metadata: null != N ? N : {},
                         markAsDismissed: w,
-                        isCoachmark: x,
+                        isCoachmark: L,
                         isMobile: t,
                     }),
             ],

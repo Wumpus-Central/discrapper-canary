@@ -1,9 +1,9 @@
 n.d(t, {
     Gf: () => x,
-    Jf: () => g,
+    Jf: () => m,
     OW: () => u,
     S1: () => a,
-    TW: () => m,
+    TW: () => g,
     TY: () => c,
     Uv: () => d,
     _l: () => f,
@@ -54,7 +54,7 @@ function u(e, t) {
         color: t,
     });
 }
-function m(e, t, n) {
+function g(e, t, n) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS",
         id: e,
@@ -62,7 +62,7 @@ function m(e, t, n) {
         currentStyle: n,
     });
 }
-function g(e, t) {
+function m(e, t) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE",
         id: e,

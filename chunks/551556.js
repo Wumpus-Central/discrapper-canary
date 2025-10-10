@@ -1,13 +1,13 @@
-r.d(t, { Z: () => o });
+r.d(t, { Z: () => a });
 var n = r(951288);
 r(647438);
 var i = r(692547),
-    a = r(325767);
-function o(e) {
+    o = r(325767);
+function a(e) {
     var t,
         r,
         {
-            width: o = 24,
+            width: a = 24,
             height: s = 24,
             color: l = i.Z.unsafe_rawColors.WHITE_500.css,
             backgroundColor: c = i.Z.unsafe_rawColors.BRAND_500.css,
@@ -21,14 +21,14 @@ function o(e) {
                     var r,
                         n,
                         i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
@@ -59,10 +59,10 @@ function o(e) {
                     });
             }
             return e;
-        })({}, (0, a.Z)(u))),
+        })({}, (0, o.Z)(u))),
         (r = r =
             {
-                width: o,
+                width: a,
                 height: s,
                 viewBox: "0 0 14 14",
                 children: [

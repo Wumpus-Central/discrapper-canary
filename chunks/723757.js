@@ -1,7 +1,7 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => o });
 var a = r(760919),
     n = r(365938);
-let s = new a.Z({
+let o = new a.Z({
     id: "rec2020",
     name: "REC.2020",
     base: n.Z,

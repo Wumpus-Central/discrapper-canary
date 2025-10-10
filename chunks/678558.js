@@ -104,11 +104,11 @@ let R = (e) => {
             pauseAnimation: P = !1,
             applicationId: w,
             handleSubscribeModalClose: D,
-            withHighlight: x = !1,
-            icon: L,
-            intent: j,
+            withHighlight: L = !1,
+            icon: x,
+            intent: M,
         } = e,
-        M = C(e, [
+        j = C(e, [
             "analyticsLocation",
             "analyticsSourceLocation",
             "guild",
@@ -147,14 +147,14 @@ let R = (e) => {
                     inPopout: U,
                     applicationId: w,
                     handleSubscribeModalClose: D,
-                    intent: j,
+                    intent: M,
                 }),
                 B(!1);
         },
         K = m.Z.getPremiumTypeSubscription(),
         z = (0, r.jsxs)("div", {
             className: v.button,
-            children: [L, null != I ? I : O.intl.string(O.t.gKmQ1N)],
+            children: [x, null != I ? I : O.intl.string(O.t.gKmQ1N)],
         }),
         q = !1;
     return ((q = null !== K && !(V.length > 0) && (null == K ? void 0 : K.isPausedOrPausePending) && Z === y.a$.NONE) &&
@@ -169,7 +169,7 @@ let R = (e) => {
                 z,
             ],
         })),
-        (M.disabled = !0)),
+        (j.disabled = !0)),
     null != Y)
         ? (0, r.jsx)(_.Z, {
               text: Y,
@@ -184,7 +184,7 @@ let R = (e) => {
                                   size: l.zx.Sizes.SMALL,
                                   pauseAnimation: P,
                               }),
-                              M,
+                              j,
                           ),
                           { children: z },
                       ),
@@ -198,10 +198,10 @@ let R = (e) => {
                           "data-migration-pending": !0,
                           size: l.zx.Sizes.SMALL,
                       },
-                      M,
+                      j,
                   ),
                   {
-                      className: o()(M.className, { [v.buttonHighlighted]: x }),
+                      className: o()(j.className, { [v.buttonHighlighted]: L }),
                       submitting: G,
                       onClick: W,
                       pauseAnimation: P,

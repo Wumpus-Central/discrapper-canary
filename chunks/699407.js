@@ -84,22 +84,22 @@ let m = "x-science-test",
     P = 0,
     w = null,
     D = 0,
-    x = Number.MAX_SAFE_INTEGER,
-    L = 0,
-    j = 0,
-    M = null,
+    L = Number.MAX_SAFE_INTEGER,
+    x = 0,
+    M = 0,
+    j = null,
     k = !1,
     U = null,
     G = null;
 function B() {
-    (C = 0), (N = 0), (R = 0), (D = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (w = Date.now()), (P = A);
+    (C = 0), (N = 0), (R = 0), (D = 0), (L = Number.MAX_SAFE_INTEGER), (x = 0), (M = 0), (w = Date.now()), (P = A);
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
 }
-let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
-    F = new u.R(),
+let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
+    V = new u.R(),
     H = {
         handleConnectionOpen: () => {},
         handleConnectionClosed: () => {},
@@ -119,7 +119,7 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             TRACKING_URL: b,
             drainTimeoutOverride: y,
             waitFor: O,
-            scheduleWhenIdle: z = V,
+            scheduleWhenIdle: z = F,
             getLaunchSignature: q = () => null,
         } = e;
         function X(e) {
@@ -140,7 +140,7 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             let e = Y.slice();
             (Y = []), (D = Z(D));
             let t = e.length;
-            (x = Math.min(x, t)), (L = Math.max(L, t)), (j = Z(j, t));
+            (L = Math.min(L, t)), (x = Math.max(x, t)), (M = Z(M, t));
             let n = ee(e);
             return (
                 n.then(
@@ -200,9 +200,9 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     telemetry_period_end_timestamp: Date.now(),
                     event_queue_rejection_count: C,
                     event_queue_batch_count: D,
-                    event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
-                    event_queue_batch_max_size: L,
-                    event_queue_batch_avg_size: D > 0 ? j / D : 0,
+                    event_queue_batch_min_size: L === Number.MAX_SAFE_INTEGER ? 0 : L,
+                    event_queue_batch_max_size: x,
+                    event_queue_batch_avg_size: D > 0 ? M / D : 0,
                     science_request_id: G,
                     science_response: U,
                     launch_signature: q(),
@@ -211,24 +211,24 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             return B(), ee([e], d.tx.CLIENT_TELEMETRY);
         }
         function en() {
-            if (null == M) return !1;
-            switch (M.type) {
+            if (null == j) return !1;
+            switch (j.type) {
                 case "timeout":
-                    clearTimeout(M.id);
+                    clearTimeout(j.id);
                     break;
                 case "interval":
-                    clearInterval(M.id);
+                    clearInterval(j.id);
                     break;
                 default:
-                    M.type;
+                    j.type;
             }
-            return (M = null), !0;
+            return (j = null), !0;
         }
         function er() {
-            if (null != M) return;
+            if (null != j) return;
             let e = () => {
                 let t = 0.1 * v;
-                M = {
+                j = {
                     type: "timeout",
                     id: setTimeout(
                         () => {
@@ -238,7 +238,7 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     ),
                 };
             };
-            M = {
+            j = {
                 type: "timeout",
                 id: setTimeout(
                     () => {
@@ -281,7 +281,7 @@ let V = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                                 resolve: a,
                             },
                             l = X(s);
-                        if ((null != l && (s.properties.client_uuid = F.generate(l)), Y.push(s), Y.length > E)) {
+                        if ((null != l && (s.properties.client_uuid = V.generate(l)), Y.push(s), Y.length > E)) {
                             let e = Y.length - E;
                             (C = Z(C, e)), (Y = Y.slice(-E));
                         }

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        default: () => ek,
-        openDevToolsPopout: () => eN,
+        default: () => eI,
+        openDevToolsPopout: () => eT,
         useDevToolsTabConfig: () => eE,
     }),
     n(539854),
@@ -30,12 +30,12 @@ var a = n(951288),
     E = n(432877);
 n(381996);
 var S = n(392750),
-    N = n(926976),
-    T = n(789654),
-    O = n(866730),
+    T = n(926976),
+    O = n(789654),
+    N = n(866730),
     P = n(582344),
-    k = n(691867),
-    I = n(916790),
+    I = n(691867),
+    k = n(916790),
     w = n(645973),
     R = n(903502),
     A = n(604776),
@@ -46,11 +46,11 @@ var S = n(392750),
     U = n(735959),
     F = n(572444),
     G = n(636500),
-    B = n(246992),
-    z = n(484662),
+    z = n(246992),
+    B = n(484662),
     V = n(546895),
-    H = n(496025),
-    W = n(442954),
+    W = n(496025),
+    H = n(442954),
     K = n(925124),
     q = n(633001),
     Y = n(778648),
@@ -89,7 +89,7 @@ function eE() {
                 id: "analytics",
                 name: "Analytics",
                 group: eg.v0.EXPERIMENTS,
-                render: () => (0, a.jsx)(N.Z, {}),
+                render: () => (0, a.jsx)(T.Z, {}),
             },
             {
                 id: "triggers",
@@ -107,7 +107,7 @@ function eE() {
                 id: "dispatcher",
                 name: "Dispatcher",
                 group: eg.v0.EVENTS,
-                render: () => (0, a.jsx)(I.Z, {}),
+                render: () => (0, a.jsx)(k.Z, {}),
             },
         ];
         return (
@@ -194,13 +194,13 @@ function eE() {
                 id: "colors",
                 name: "Colors",
                 group: eg.v0.UI,
-                render: () => (0, a.jsx)(T.Z, {}),
+                render: () => (0, a.jsx)(O.Z, {}),
             }),
             e.push({
                 id: "design_toggles",
                 name: "Design Toggles",
                 group: eg.v0.UI,
-                render: () => (0, a.jsx)(k.Z, {}),
+                render: () => (0, a.jsx)(I.Z, {}),
             }),
             e.push({
                 id: "appearance_randomizer",
@@ -218,7 +218,7 @@ function eE() {
                 id: "messaging",
                 name: "Messaging",
                 group: eg.v0.USERS,
-                render: () => (0, a.jsx)(H.Z, {}),
+                render: () => (0, a.jsx)(W.Z, {}),
             }),
             e.push({
                 id: "reporting",
@@ -236,13 +236,13 @@ function eE() {
                 id: "modals",
                 name: "Modals",
                 group: eg.v0.UI,
-                render: () => (0, a.jsx)(W.Z, {}),
+                render: () => (0, a.jsx)(H.Z, {}),
             }),
             e.push({
                 id: "layers",
                 name: "Layers",
                 group: eg.v0.UI,
-                render: () => (0, a.jsx)(z.Z, {}),
+                render: () => (0, a.jsx)(B.Z, {}),
             }),
             e.push({
                 id: "affinity",
@@ -279,7 +279,7 @@ function eE() {
                 id: "dcf",
                 name: "DCF Events",
                 group: eg.v0.DISMISSIBLE_CONTENT,
-                render: () => (0, a.jsx)(O.Z, {}),
+                render: () => (0, a.jsx)(N.Z, {}),
             }),
             e.push({
                 id: "hotspots",
@@ -415,7 +415,7 @@ function eS(e) {
         className: ey.resizeHandle,
     });
 }
-function eN() {
+function eT() {
     (0, b.bA)(
         ev.KJ3.DEVTOOLS_POPOUT,
         () =>
@@ -423,7 +423,7 @@ function eN() {
                 windowKey: ev.KJ3.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, a.jsx)(ek, {
+                children: (0, a.jsx)(eI, {
                     mobile: !1,
                     isPopout: !0,
                 }),
@@ -434,7 +434,7 @@ function eN() {
         },
     );
 }
-function eT(e) {
+function eO(e) {
     var t;
     let { isPopout: n = !1 } = e,
         r = eE(),
@@ -458,7 +458,7 @@ function eT(e) {
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: o },
         }),
-        (0, a.jsxs)(B.Gk, {
+        (0, a.jsxs)(z.Gk, {
             children: [
                 (0, a.jsxs)(h.ZP, {
                     className: eC.headerBar,
@@ -469,7 +469,7 @@ function eT(e) {
                                   (0, a.jsx)(h.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
-                                      onClick: eN,
+                                      onClick: eT,
                                   }),
                                   (0, a.jsx)(h.ZP.Icon, {
                                       icon: c.Dio,
@@ -488,12 +488,12 @@ function eT(e) {
                 }),
                 (0, a.jsx)(i, {}),
                 l(),
-                (0, a.jsx)(B.Br, { className: ey.layerContainer }),
+                (0, a.jsx)(z.Br, { className: ey.layerContainer }),
             ],
         })
     );
 }
-function eO() {
+function eN() {
     let e = r.useRef(null),
         t = (0, o.e7)([C.Z], () => C.Z.sidebarWidth),
         [n, i] = r.useState(null),
@@ -519,7 +519,7 @@ function eO() {
                   }),
                   (0, a.jsx)("div", {
                       className: ey.sidebarContent,
-                      children: (0, a.jsx)(eT, {}),
+                      children: (0, a.jsx)(eO, {}),
                   }),
               ],
           });
@@ -530,7 +530,7 @@ function eP() {
               className: l()(ey.container, ey.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
                   className: ey.sidebarContent,
-                  children: (0, a.jsx)(eT, {}),
+                  children: (0, a.jsx)(eO, {}),
               }),
           })
         : (0, a.jsx)("div", {
@@ -551,14 +551,14 @@ function eP() {
               }),
           });
 }
-function ek(e) {
+function eI(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
         ? (0, a.jsx)(eP, {})
         : n
           ? (0, a.jsx)("div", {
                 className: ey.popoutContainer,
-                children: (0, a.jsx)(eT, { isPopout: !0 }),
+                children: (0, a.jsx)(eO, { isPopout: !0 }),
             })
-          : (0, a.jsx)(eO, {});
+          : (0, a.jsx)(eN, {});
 }

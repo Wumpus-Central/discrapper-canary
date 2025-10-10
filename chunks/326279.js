@@ -1,5 +1,5 @@
 n.d(t, {
-    Gl: () => o,
+    Gl: () => r,
     Wz: () => l,
     mo: () => i,
 });
@@ -18,7 +18,7 @@ function l(e) {
         displayName: e,
     });
 }
-function o(e) {
+function r(e) {
     a.Z.dispatch({
         type: "CONNECTED_DEVICE_IGNORE",
         displayName: e,

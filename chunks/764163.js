@@ -227,7 +227,7 @@ function y(e) {
                             onChange: b,
                             "aria-labelledby": h,
                         }),
-                        (0, r.jsx)(a.NIc, {
+                        (0, r.jsx)(a.gNt, {
                             label: j.intl.string(j.t.sMOuub),
                             children: (0, r.jsx)(O, {
                                 guildId: n,

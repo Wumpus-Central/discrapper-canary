@@ -1,31 +1,31 @@
-n.d(t, { Z: () => d });
-var a,
-    r,
-    l = n(442837),
-    i = n(570140);
-let s = !1,
-    o = !1;
-class c extends (r = l.ZP.Store) {
+n.d(t, { Z: () => c });
+var l,
+    i,
+    r = n(442837),
+    a = n(570140);
+let o = !1,
+    s = !1;
+class u extends (i = r.ZP.Store) {
     get keepOpen() {
-        return o;
-    }
-    get enabled() {
         return s;
     }
+    get enabled() {
+        return o;
+    }
 }
-(a = "displayName") in c
-    ? Object.defineProperty(c, a, {
+(l = "displayName") in u
+    ? Object.defineProperty(u, l, {
           value: "SoundboardOverlayStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (c[a] = "SoundboardOverlayStore");
-let d = new c(i.Z, {
+    : (u[l] = "SoundboardOverlayStore");
+let c = new u(a.Z, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
-        if (((s = e.enabled), e.enabled)) {
+        if (((o = e.enabled), e.enabled)) {
             var t;
-            o = null != (t = e.keepOpen) && t;
+            s = null != (t = e.keepOpen) && t;
         }
     },
 });

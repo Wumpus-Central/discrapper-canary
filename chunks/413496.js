@@ -28,11 +28,11 @@ var r = n(507604),
     P = a("".charAt),
     w = a("".replace),
     D = a("".indexOf),
-    x = a("".slice),
-    L = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
-    j = /a/g,
+    L = a("".slice),
+    x = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
     M = /a/g,
-    k = new A(j) !== j,
+    j = /a/g,
+    k = new A(M) !== M,
     U = h.MISSED_STICKY,
     G = h.UNSUPPORTED_Y,
     B =
@@ -42,7 +42,7 @@ var r = n(507604),
             I ||
             T ||
             E(function () {
-                return (M[S] = !1), A(j) !== j || A(M) === M || "/a/i" !== String(A(j, "i"));
+                return (j[S] = !1), A(M) !== M || A(j) === j || "/a/i" !== String(A(M, "i"));
             })),
     Z = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = !1; r <= n; r++) {
@@ -54,7 +54,7 @@ var r = n(507604),
         }
         return i;
     },
-    V = function (e) {
+    F = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = [], o = c(null), s = !1, l = !1, u = 0, d = ""; r <= n; r++) {
             if ("\\" === (t = P(e, r))) t += P(e, ++r);
             else if ("]" === t) s = !1;
@@ -64,8 +64,8 @@ var r = n(507604),
                         s = !0;
                         break;
                     case "(" === t:
-                        if (((i += t), "?:" === x(e, r + 1, r + 3))) continue;
-                        R(L, x(e, r + 1)) && ((r += 2), (l = !0)), u++;
+                        if (((i += t), "?:" === L(e, r + 1, r + 3))) continue;
+                        R(x, L(e, r + 1)) && ((r += 2), (l = !0)), u++;
                         continue;
                     case ">" === t && l:
                         if ("" === d || b(o, d)) throw new N("Invalid capture group name");
@@ -78,7 +78,7 @@ var r = n(507604),
     };
 if (o("RegExp", B)) {
     for (
-        var F = function (e, t) {
+        var V = function (e, t) {
                 var n,
                     r,
                     i,
@@ -90,20 +90,20 @@ if (o("RegExp", B)) {
                     m = void 0 === t,
                     g = [],
                     E = e;
-                if (!u && h && m && e.constructor === F) return e;
+                if (!u && h && m && e.constructor === V) return e;
                 if (
                     ((h || d(C, e)) && ((e = e.source), m && (t = p(E))),
                     (e = void 0 === e ? "" : _(e)),
                     (t = void 0 === t ? "" : _(t)),
                     (E = e),
-                    I && "dotAll" in j && (r = !!t && D(t, "s") > -1) && (t = w(t, /s/g, "")),
+                    I && "dotAll" in M && (r = !!t && D(t, "s") > -1) && (t = w(t, /s/g, "")),
                     (n = t),
-                    U && "sticky" in j && (i = !!t && D(t, "y") > -1) && G && (t = w(t, /y/g, "")),
-                    T && ((e = (a = V(e))[0]), (g = a[1])),
-                    (o = s(A(e, t), u ? this : C, F)),
+                    U && "sticky" in M && (i = !!t && D(t, "y") > -1) && G && (t = w(t, /y/g, "")),
+                    T && ((e = (a = F(e))[0]), (g = a[1])),
+                    (o = s(A(e, t), u ? this : C, V)),
                     (r || i || g.length) &&
                         ((c = y(o)),
-                        r && ((c.dotAll = !0), (c.raw = F(Z(e), n))),
+                        r && ((c.dotAll = !0), (c.raw = V(Z(e), n))),
                         i && (c.sticky = !0),
                         g.length && (c.groups = g)),
                     e !== E)
@@ -117,7 +117,7 @@ if (o("RegExp", B)) {
             Y = 0;
         H.length > Y;
     )
-        m(F, A, H[Y++]);
-    (C.constructor = F), (F.prototype = C), g(i, "RegExp", F, { constructor: !0 });
+        m(V, A, H[Y++]);
+    (C.constructor = V), (V.prototype = C), g(i, "RegExp", V, { constructor: !0 });
 }
 O("RegExp");

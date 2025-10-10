@@ -1,38 +1,38 @@
-n.d(t, { Z: () => o }), n(415506), n(388685);
+n.d(t, { Z: () => a }), n(415506), n(388685);
 var r = n(141795),
     i = n(981631);
-async function o(e) {
+async function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
-        o = e.map(
+        a = e.map(
             (e) =>
-                new Promise((o, a) => {
+                new Promise((a, o) => {
                     switch (e.status) {
                         case r.mw.NOT_STARTED:
                             e.upload();
                             break;
                         case r.mw.COMPLETED:
-                            o("complete");
+                            a("complete");
                             break;
                         case r.mw.ERROR:
-                            t && e.error !== i.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error("File failed to upload"));
+                            t && e.error !== i.evJ.ENTITY_TOO_LARGE ? e.upload() : o(Error("File failed to upload"));
                             break;
                         case r.mw.CANCELED:
-                            a(Error("Upload is canceled"));
+                            o(Error("Upload is canceled"));
                             break;
                         case r.mw.REMOVED_FROM_MSG_DRAFT:
-                            a(Error("Upload is removed from draft"));
+                            o(Error("Upload is removed from draft"));
                     }
                     e.on("complete", () => {
-                        o("complete");
+                        a("complete");
                     }),
                         e.on("error", () => {
-                            a(Error("File ".concat(e.id, " failed to upload")));
+                            o(Error("File ".concat(e.id, " failed to upload")));
                         }),
                         e.on("progress", (e, t) => {
                             null == n || n(e, t);
                         });
                 }),
         );
-    await Promise.all(o);
+    await Promise.all(a);
 }

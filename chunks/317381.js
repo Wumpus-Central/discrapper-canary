@@ -88,10 +88,10 @@ let N = {
     P = [],
     w = "0",
     D = new Map(),
-    x = new Map(),
     L = new Map(),
-    j = new Map(),
-    M = new Map();
+    x = new Map(),
+    M = new Map(),
+    j = new Map();
 function k(e, t) {
     return "".concat(t, ":").concat(e);
 }
@@ -117,15 +117,15 @@ function J(e) {
         b = (0, m.ZP)(d);
     if (null == b) return;
     let y = (0, E.p)(u),
-        O = null != y && null != (n = L.get(y)) ? n : R,
+        O = null != y && null != (n = x.get(y)) ? n : R,
         v = null != O && 0 === O.length,
-        I = null != (r = M.get(u.id)) ? r : R,
+        I = null != (r = j.get(u.id)) ? r : R,
         T = I.find((e) => e.applicationId === d),
         A = p.map((e) => e.userId),
         N = c.default.getId(),
         P = A.some((e) => e === N),
         w = null == (t = p.find((e) => e.userId === N)) ? void 0 : t.sessionId,
-        j = p.some((e) => (0, g.J)(e)),
+        M = p.some((e) => (0, g.J)(e)),
         G = D.get(d),
         B = U.get(k(null != y ? y : null, d)),
         Z = null == B ? void 0 : B.launchParams,
@@ -144,7 +144,7 @@ function J(e) {
     P &&
         null != G &&
         D.set(G.applicationId, C(S({}, G, F), { proxyTicket: null != (o = F.proxyTicket) ? o : G.proxyTicket }));
-    let V = !j;
+    let V = !M;
     null != G &&
     u.id === G.location.id &&
     d === G.applicationId &&
@@ -171,11 +171,11 @@ function J(e) {
               applicationId: d,
           }));
     let H = I.filter((e) => e.applicationId !== d);
-    if ((A.length > 0 && H.push(F), M.set(u.id, H), null != y)) {
-        let e = (null != (s = L.get(y)) ? s : []).filter((e) => e.applicationId !== d),
+    if ((A.length > 0 && H.push(F), j.set(u.id, H), null != y)) {
+        let e = (null != (s = x.get(y)) ? s : []).filter((e) => e.applicationId !== d),
             t = Q((0, E.j)(u)),
-            n = (null != (l = x.get(t)) ? l : []).filter((e) => e.applicationId !== d || e.location.id !== u.id);
-        A.length > 0 && (e.push(F), n.push(F)), L.set(y, e), x.set(t, n);
+            n = (null != (l = L.get(t)) ? l : []).filter((e) => e.applicationId !== d || e.location.id !== u.id);
+        A.length > 0 && (e.push(F), n.push(F)), x.set(y, e), L.set(t, n);
     }
 }
 function $(e) {
@@ -201,7 +201,7 @@ function ee(e) {
 }
 function et(e) {
     let { guilds: t } = e;
-    L.clear(), x.clear(), M.clear(), j.clear(), t.forEach((e) => $(e));
+    x.clear(), L.clear(), j.clear(), M.clear(), t.forEach((e) => $(e));
     let n = c.default.getId();
     for (let e of Array.from(D.values()))
         eP
@@ -215,15 +215,15 @@ function en(e) {
 function er(e) {
     var t, n;
     let { channel: r } = e,
-        i = null != (t = L.get(r.id)) ? t : [];
-    L.set(r.id, []);
+        i = null != (t = x.get(r.id)) ? t : [];
+    x.set(r.id, []);
     let a = Q(r.guild_id),
-        o = (null != (n = x.get(a)) ? n : []).filter((e) => (0, E.p)(e.location) !== r.id);
-    x.set(a, o),
+        o = (null != (n = L.get(a)) ? n : []).filter((e) => (0, E.p)(e.location) !== r.id);
+    L.set(a, o),
         i.forEach((e) => {
-            M.delete(e.location.id);
+            j.delete(e.location.id);
         }),
-        j.set(r.id, []);
+        M.set(r.id, []);
 }
 function ei(e) {
     let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e,
@@ -266,7 +266,7 @@ function ea(e) {
     if (null == f.default.getCurrentUser() || (null == w && !(null != (n = null == P ? void 0 : P.isPrivate()) && n)))
         return !1;
     r = l;
-    let x = {
+    let L = {
         applicationId: i,
         url: C,
         userIds: new Set(p.map((e) => e.userId)),
@@ -279,14 +279,14 @@ function ea(e) {
         customId: T,
         proxyTicket: A,
     };
-    D.set(i, x),
+    D.set(i, L),
         _.S.dispatch(I.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: i,
             isFirstActivityInChannel: g,
             isStart: b,
             participants: p,
-            embeddedActivity: x,
+            embeddedActivity: L,
             inviterUserId: S,
         }),
         (0, h.R)()
@@ -485,22 +485,22 @@ class eR extends (i = a.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
-        return null != (t = x.get(e)) ? t : R;
+        return null != (t = L.get(e)) ? t : R;
     }
     getEmbeddedActivitiesForChannel(e) {
         var t;
-        return null != (t = L.get(e)) ? t : R;
+        return null != (t = x.get(e)) ? t : R;
     }
     getEmbeddedActivitiesForLocation(e) {
         var t;
-        return null != (t = M.get(e.id)) ? t : R;
+        return null != (t = j.get(e.id)) ? t : R;
     }
     getEmbeddedActivitiesForStartingChannel(e) {
         var t;
-        return null != (t = j.get(e)) ? t : R;
+        return null != (t = M.get(e)) ? t : R;
     }
     getEmbeddedActivitiesByChannel() {
-        return L;
+        return x;
     }
     getEmbeddedActivityDurationMs(e, t) {
         let n = K.get(eC(e, t));
@@ -562,7 +562,7 @@ class eR extends (i = a.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            l: for (let [r, i] of M)
+            l: for (let [r, i] of j)
                 for (let r of i)
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;

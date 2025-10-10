@@ -8092,7 +8092,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.0784313725490196,
                 },
                 [r.LIGHT]: {
-                    raw: "OPACITY_WHITE_4",
+                    raw: "OPACITY_BLACK_4",
                     opacity: 0.0392156862745098,
                 },
                 [r.MIDNIGHT]: {

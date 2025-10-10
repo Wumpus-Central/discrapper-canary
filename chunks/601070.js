@@ -79,14 +79,14 @@ function w() {
     for (let e in ((I = {}), (C = {}), (T = {}), (S = {}), (A = {}), (R = _.Z.getChannelId()), P)) clearTimeout(P[e]);
     (P = {}),
         h.Z.forEachGuild((e) => {
-            x(e);
+            L(e);
         }),
-        L();
+        x();
 }
 function D(e) {
-    for (let t in (delete I[e], delete C[e], delete T[e], delete S[e], delete A[e], x(e), S[e])) M(e, t);
+    for (let t in (delete I[e], delete C[e], delete T[e], delete S[e], delete A[e], L(e), S[e])) j(e, t);
 }
-function x(e) {
+function L(e) {
     let t = h.Z.getThreadsForGuild(e);
     for (let e in t)
         for (let n in t[e]) {
@@ -108,14 +108,14 @@ function x(e) {
             }
         }
 }
-function L() {
-    for (let e in ((N = {}), S)) for (let t in S[e]) M(e, t);
+function x() {
+    for (let e in ((N = {}), S)) for (let t in S[e]) j(e, t);
 }
-function j(e) {
+function M(e) {
     let t = u.Z.getBasicChannel(e);
-    null != t && c.uC.has(t.type) && M(t.guild_id, t.id);
+    null != t && c.uC.has(t.type) && j(t.guild_id, t.id);
 }
-function M(e, t) {
+function j(e, t) {
     let n = u.Z.getChannel(t);
     if (
         null == n ||
@@ -165,15 +165,15 @@ function k(e, t, n) {
                 ee(A, r, e ? r : null, !0),
                 $(r.id);
         }
-        M(e, t);
-    } else et(I, e, t, n), et(C, e, t, n), et(T, e, t, n), et(S, e, t, n), et(A, e, t, n), $(n), M(e, t);
+        j(e, t);
+    } else et(I, e, t, n), et(C, e, t, n), et(T, e, t, n), et(S, e, t, n), et(A, e, t, n), $(n), j(e, t);
 }
 function U(e) {
     return k(e.channel.guild_id, e.channel.parent_id, e.channel.id);
 }
 function G(e) {
     let { channels: t } = e;
-    for (let e of t) if ((0, l.aC)(e) !== B(e.guild_id, e.parent_id)) return void w();
+    for (let e of t) if ((0, l.Y3)(e) !== B(e.guild_id, e.parent_id)) return void w();
     return !1;
 }
 function B(e, t) {
@@ -181,12 +181,12 @@ function B(e, t) {
     let n = I[e],
         r = null == n ? null : n[t];
     if (null != r) {
-        for (let e in r) if ((0, l.aC)(r[e].channel)) return !0;
+        for (let e in r) if ((0, l.Y3)(r[e].channel)) return !0;
     }
     let i = S[e],
         a = null == i ? null : i[t];
     if (null != a) {
-        for (let e in a) if ((0, l.aC)(a[e])) return !0;
+        for (let e in a) if ((0, l.Y3)(a[e])) return !0;
     }
     return !1;
 }
@@ -203,22 +203,22 @@ function Z(e) {
                 (p.default.keys(C[t.guild_id][t.parent_id]).forEach($), delete C[t.guild_id][t.parent_id], (n = !0)),
             t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)),
             t.guild_id in A && t.parent_id in A[t.guild_id] && (delete A[t.guild_id][t.parent_id], (n = !0)),
-            n && M(t.guild_id, t.parent_id)),
+            n && j(t.guild_id, t.parent_id)),
         n
     );
 }
-function V(e) {
+function F(e) {
     let t = u.Z.getChannel(e.id);
     return null != t && !!h.Z.isActive(e.guildId, t.parent_id, e.id) && k(t.guild_id, t.parent_id, t.id);
 }
-function F(e) {
+function V(e) {
     let t = u.Z.getChannel(e.channelId);
     if (null == t) H();
     else {
         let { guild_id: e, parent_id: r } = t;
         if (!c.Ec.has(t.type)) {
             var n;
-            return Number(null == (n = N[e]) ? void 0 : n[t.id]) > 0 && (M(e, t.id), !0);
+            return Number(null == (n = N[e]) ? void 0 : n[t.id]) > 0 && (j(e, t.id), !0);
         }
         if (null == r) return !1;
         if (en(I, t)) {
@@ -230,7 +230,7 @@ function F(e) {
             let l = I[e][r][t.id],
                 c = n ? l : null,
                 u = i ? l : null;
-            ee(T, t, c, !0), ee(C, t, u, !0), M(e, r);
+            ee(T, t, c, !0), ee(C, t, u, !0), j(e, r);
         } else {
             let e = en(A, t),
                 n = f.ZP.isForumPostUnread(t.id);
@@ -253,7 +253,7 @@ function H() {
                 let r = S[e][t][n];
                 f.ZP.isForumPostUnread(n) && ee(A, r, r, !1);
             }
-    L();
+    x();
 }
 function Y(e) {
     if (e.channels.length > 0) return D(e.guildId);
@@ -267,12 +267,12 @@ function K(e) {
     return D(t);
 }
 function z(e) {
-    F(e), q();
+    V(e), q();
 }
 function q() {
     let e = R;
     if ((R = _.Z.getChannelId()) === e) return !1;
-    j(e), j(R);
+    M(e), M(R);
 }
 function X(e) {
     let t = f.ZP.getMentionCount(e.id) > 0,
@@ -422,15 +422,15 @@ let eu = new ec(s.Z, {
     THREAD_DELETE: U,
     CHANNEL_UPDATES: G,
     CHANNEL_DELETE: Z,
-    THREAD_MEMBER_UPDATE: V,
-    THREAD_MEMBERS_UPDATE: V,
-    LOAD_MESSAGES_SUCCESS: F,
-    MESSAGE_CREATE: F,
-    MESSAGE_DELETE: F,
-    MESSAGE_DELETE_BULK: F,
-    MESSAGE_ACK: F,
-    CHANNEL_ACK: F,
-    CHANNEL_LOCAL_ACK: F,
+    THREAD_MEMBER_UPDATE: F,
+    THREAD_MEMBERS_UPDATE: F,
+    LOAD_MESSAGES_SUCCESS: V,
+    MESSAGE_CREATE: V,
+    MESSAGE_DELETE: V,
+    MESSAGE_DELETE_BULK: V,
+    MESSAGE_ACK: V,
+    CHANNEL_ACK: V,
+    CHANNEL_LOCAL_ACK: V,
     CHANNEL_SELECT: z,
     PASSIVE_UPDATE_V2: Y,
     WINDOW_FOCUS: H,

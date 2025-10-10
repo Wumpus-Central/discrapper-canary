@@ -69,7 +69,7 @@ function g(e) {
         _ = f.size > 0,
         C = b || p,
         y = !_ && p && !j,
-        w = i.useCallback(
+        T = i.useCallback(
             () => (y ? v() : b ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)()),
             [v, y, b],
         );
@@ -95,7 +95,7 @@ function g(e) {
                         (0, r.jsx)(a.zxk, {
                             text: y ? m.intl.string(m.t.DgatTU) : m.intl.string(m.t.wOKE8P),
                             variant: "secondary",
-                            onClick: w,
+                            onClick: T,
                         }),
                     ],
                 }),

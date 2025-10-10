@@ -1,30 +1,30 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => l });
 var r = n(44136),
-    l = n(354459);
-function i(e, t) {
-    var n, i;
+    i = n(354459);
+function l(e, t) {
+    var n, l;
     let a = null,
         o = null,
-        u = null,
+        c = null,
         s = !1,
-        c = !1;
+        u = !1;
     switch (e.type) {
-        case l.fO.ACTIVITY:
+        case i.fO.ACTIVITY:
             break;
-        case l.fO.USER:
-            (a = e.streamId), (u = e.voiceState), (s = e.speaking), (c = e.ringing);
+        case i.fO.USER:
+            (a = e.streamId), (c = e.voiceState), (s = e.speaking), (u = e.ringing);
             break;
-        case l.fO.STREAM:
+        case i.fO.STREAM:
             (a = e.streamId), (o = e.stream);
     }
     return {
         streamId: a,
         stream: o,
         speaking: s,
-        ringing: c,
-        muted: null != (n = null == u ? void 0 : u.isVoiceMuted()) && n,
-        deafen: null != (i = null == u ? void 0 : u.isVoiceDeafened()) && i,
-        mirror: e.type === l.fO.USER && e.user.id === t,
+        ringing: u,
+        muted: null != (n = null == c ? void 0 : c.isVoiceMuted()) && n,
+        deafen: null != (l = null == c ? void 0 : c.isVoiceDeafened()) && l,
+        mirror: e.type === i.fO.USER && e.user.id === t,
         hasVideo: (0, r.ZP)(e),
     };
 }

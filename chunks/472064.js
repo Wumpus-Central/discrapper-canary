@@ -20,8 +20,8 @@ var l = s(951288),
     T = s(94692),
     C = s(981631),
     Z = s(388032),
-    L = s(912278);
-function S(t, e, s) {
+    b = s(912278);
+function L(t, e, s) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -34,7 +34,7 @@ function S(t, e, s) {
         t
     );
 }
-class b extends n.Component {
+class S extends n.Component {
     fetchInstallSize() {
         let { applicationId: t, branchId: e, buildId: s, manifestIds: l, buildSizeKB: n } = this.props;
         null != s &&
@@ -76,7 +76,7 @@ class b extends n.Component {
             children: [
                 null != r
                     ? (0, l.jsx)("div", {
-                          className: L.splash,
+                          className: b.splash,
                           style: { backgroundImage: "url(".concat(r, ")") },
                       })
                     : null,
@@ -104,24 +104,24 @@ class b extends n.Component {
                                 (0, l.jsx)(m.Z, {
                                     game: t,
                                     size: m.A.MEDIUM,
-                                    className: L.gameIcon,
+                                    className: b.gameIcon,
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: L.gameName,
+                                    className: b.gameName,
                                     children: null != t && t.name,
                                 }),
                                 null != e
                                     ? (0, l.jsx)("div", {
-                                          className: L.installSize,
+                                          className: b.installSize,
                                           children: (0, A.BU)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", { className: L.divider }),
+                        (0, l.jsx)("div", { className: b.divider }),
                         (0, l.jsx)(T.Z, {
                             autoFocus: !0,
-                            className: L.selector,
+                            className: b.selector,
                             value: n,
                             requiredDiskKB: e,
                             onChange: this.handleChangePath,
@@ -131,7 +131,7 @@ class b extends n.Component {
                             applicationName: t.name,
                             disabled: a,
                             onChange: this.handlePurchaseTermsChange,
-                            className: L.terms,
+                            className: b.terms,
                         }),
                     ],
                 }),
@@ -141,20 +141,20 @@ class b extends n.Component {
     }
     constructor(...t) {
         super(...t),
-            S(this, "state", {
+            L(this, "state", {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
                 isInstalling: !1,
                 hasAcceptedNeccessaryTerms: !1,
             }),
-            S(this, "isUnmounted", !1),
-            S(this, "handleChangePath", (t, e) => {
+            L(this, "isUnmounted", !1),
+            L(this, "handleChangePath", (t, e) => {
                 this.setState({
                     selectedInstallationPath: t,
                     hasError: e,
                 });
             }),
-            S(this, "install", (t, e) => {
+            L(this, "install", (t, e) => {
                 let { application: s, branchId: l, analyticsLocation: n } = this.props;
                 if (null == s) return null;
                 (0, u.LO)({
@@ -168,16 +168,16 @@ class b extends n.Component {
                     (0, g.uL)(C.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
-            S(this, "handleInstall", () => {
+            L(this, "handleInstall", () => {
                 let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
                 if (null != e && null != s)
                     l || (0, d.B)(), null != t && null != t.eulaId && (0, d.D)(t.eulaId), this.install(e, s);
                 else throw Error("Unexpected missing build info for non-premium product");
             }),
-            S(this, "handlePurchaseTermsChange", (t) => {
+            L(this, "handlePurchaseTermsChange", (t) => {
                 this.setState({ hasAcceptedNeccessaryTerms: t });
             }),
-            S(this, "close", () => {
+            L(this, "close", () => {
                 this.props.onClose();
             });
     }
@@ -193,4 +193,4 @@ let N = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {
         buildSizeKB: null != l ? f.Z.getBuildSize(l) : null,
         hasPreviouslyAcceptedStoreTerms: P.Z.hasAcceptedStoreTerms,
     };
-})(b);
+})(S);

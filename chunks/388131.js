@@ -18,9 +18,9 @@ var r = n(951288),
     g = n(430824),
     m = n(700785),
     C = n(146085),
-    x = n(71080),
-    N = n(388032),
-    b = n(878713);
+    b = n(71080),
+    x = n(388032),
+    N = n(878713);
 function f(e, t) {
     return {
         id: e,
@@ -61,13 +61,13 @@ function E(e) {
         [A, _] = i.useState(!1),
         [D, P] = i.useState(null),
         L = i.useRef(null),
-        { roles: w, members: G, getRichTag: U } = (0, u.Q)(I, j, C.yP, v),
-        R = h.Z.useSections({
-            roles: w,
-            members: G,
+        { roles: G, members: w, getRichTag: U } = (0, u.Q)(I, j, C.yP, v),
+        Z = h.Z.useSections({
+            roles: G,
+            members: w,
         });
     if (null == j || null == I) return null;
-    let Z = async () => {
+    let M = async () => {
         _(!0);
         try {
             await (function (e, t) {
@@ -78,7 +78,7 @@ function E(e) {
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === x.aC.ROLE ? f(t.id, d.BN.ROLE) : f(t.id, d.BN.MEMBER);
+                        return t.rowType === b.aC.ROLE ? f(t.id, d.BN.ROLE) : f(t.id, d.BN.MEMBER);
                     });
                 return (0, o.hw)(e.id, n, !0);
             })(j, S),
@@ -94,8 +94,8 @@ function E(e) {
         setQuery: y,
         pendingAdditions: S,
         setPendingAdditions: T,
-        roles: w,
-        members: G,
+        roles: G,
+        members: w,
         getRichTag: U,
         children: (0, r.jsx)(
             s.Modal,
@@ -126,17 +126,17 @@ function E(e) {
             })({}, O)),
             (n = n =
                 {
-                    title: N.intl.string(N.t.dMJ3Y2),
+                    title: x.intl.string(x.t.dMJ3Y2),
                     onClose: E,
                     input: (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)(a.Text, {
-                                className: b.channelName,
+                                className: N.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
                                     (0, r.jsx)(a.ewx, {
-                                        className: b.channelIcon,
+                                        className: N.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -146,19 +146,19 @@ function E(e) {
                             j.isGuildStageVoice() &&
                                 (0, r.jsx)(a.Text, {
                                     color: "header-secondary",
-                                    className: b.description,
+                                    className: N.description,
                                     variant: "text-sm/normal",
-                                    children: N.intl.string(N.t.f7VbhI),
+                                    children: x.intl.string(x.t.f7VbhI),
                                 }),
-                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: N.intl.string(N.t.iezLLi) }),
+                            (0, r.jsx)(h.Z.SearchBox, { placeholderText: x.intl.string(x.t.iezLLi) }),
                             (0, r.jsx)(a.Text, {
-                                className: b.subtext,
+                                className: N.subtext,
                                 variant: "text-xs/normal",
-                                children: N.intl.string(N.t["rwFx8/"]),
+                                children: x.intl.string(x.t["rwFx8/"]),
                             }),
                             null != D
                                 ? (0, r.jsx)(a.Text, {
-                                      className: b.subtext,
+                                      className: N.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
                                       children: D.getAnyErrorMessage(),
@@ -172,18 +172,18 @@ function E(e) {
                         renderSection: h.Z.renderSection,
                         rowHeight: h.Z.ROW_HEIGHT,
                         renderRow: h.Z.renderRow,
-                        sections: R,
+                        sections: Z,
                     },
                     actions: [
                         {
                             variant: "secondary",
-                            text: N.intl.string(N.t["ETE/oK"]),
+                            text: x.intl.string(x.t["ETE/oK"]),
                             onClick: E,
                         },
                         {
                             variant: "primary",
-                            text: N.intl.string(N.t.OYkgVl),
-                            onClick: Z,
+                            text: x.intl.string(x.t.OYkgVl),
+                            onClick: M,
                             loading: A,
                         },
                     ],

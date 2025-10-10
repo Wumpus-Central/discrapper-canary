@@ -1,27 +1,27 @@
-e.d(n, { V: () => u });
-var i = e(951288);
-e(647438);
-var r = e(442837),
-    l = e(481060),
-    s = e(823162),
-    a = e(594174),
-    d = e(388032);
-function u(t) {
-    let n = (0, r.e7)([a.default], () => a.default.getCurrentUser());
+t.d(n, { V: () => d });
+var i = t(951288);
+t(647438);
+var r = t(442837),
+    l = t(481060),
+    a = t(823162),
+    s = t(594174),
+    o = t(388032);
+function d(e) {
+    let n = (0, r.e7)([s.default], () => s.default.getCurrentUser());
     return (null == n ? void 0 : n.isStaff()) !== !0
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  !t.isMessageRequest &&
+                  !e.isMessageRequest &&
                       (0, i.jsx)(l.sNh, {
                           id: "mark-as-message-request",
-                          label: d.intl.string(d.t.L6623t),
-                          action: () => (0, s.Xy)(t.id),
+                          label: o.intl.string(o.t.L6623t),
+                          action: () => (0, a.Xy)(e.id),
                       }),
                   (0, i.jsx)(l.sNh, {
                       id: "clear-message-request",
-                      label: d.intl.string(d.t["85YWlZ"]),
-                      action: () => (0, s.qR)(t.id),
+                      label: o.intl.string(o.t["85YWlZ"]),
+                      action: () => (0, a.qR)(e.id),
                   }),
               ],
           });

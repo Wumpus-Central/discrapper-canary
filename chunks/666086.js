@@ -43,7 +43,7 @@ class v extends o.Z {
                     null != r &&
                     r <= y &&
                     (null == n ? void 0 : n.rulesChannelId) !== e.id &&
-                    !(0, s.aC)(e) &&
+                    !(0, s.Y3)(e) &&
                     !(0, l.Z)(e) &&
                     null == e.linkedLobby
                 );

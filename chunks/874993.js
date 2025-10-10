@@ -1,44 +1,44 @@
-n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529);
+n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(692547),
-    s = n(481060),
+    s = n(692547),
+    a = n(481060),
     o = n(999382),
-    c = n(279542),
+    c = n(450377),
     d = n(823379),
     u = n(63063),
-    m = n(426563),
-    g = n(727072),
+    g = n(426563),
+    m = n(727072),
     p = n(85960),
-    h = n(577330),
-    f = n(65912),
-    b = n(51248),
-    x = n(546513),
+    f = n(577330),
+    h = n(65912),
+    x = n(51248),
+    b = n(546513),
     j = n(572456),
-    v = n(273504),
-    _ = n(981631),
-    O = n(388032),
-    y = n(894780);
-function C(e) {
+    _ = n(273504),
+    v = n(981631),
+    C = n(388032),
+    O = n(894780);
+function y(e) {
     var t, n;
-    let { guildId: C, setPreventNavigation: N = () => {} } = e,
-        { editingRule: E, setEditingRule: I } = (0, f.V)(),
+    let { guildId: y, setPreventNavigation: N = () => {} } = e,
+        { editingRule: E, setEditingRule: I } = (0, h.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : C) ? n : _.lds,
+        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : v.lds,
         w = null != E,
-        [R] = (0, g.RD)(P),
-        { rulesByTriggerType: Z } = (0, g.pH)(P),
+        [Z] = (0, m.RD)(P),
+        { rulesByTriggerType: R } = (0, m.pH)(P),
         D = {
-            [p.vh.MEMBERS]: O.intl.string(O.t.sx4E5u),
-            [p.vh.CONTENT]: O.intl.string(O.t.fphZb2),
+            [p.vh.MEMBERS]: C.intl.string(C.t.sx4E5u),
+            [p.vh.CONTENT]: C.intl.string(C.t.fphZb2),
         },
         A = i.useMemo(
             () =>
-                Object.values(null != Z ? Z : {})
+                Object.values(null != R ? R : {})
                     .flat()
                     .filter(d.lm),
-            [Z],
+            [R],
         ),
         L = {
             isInEditMode: w,
@@ -52,7 +52,7 @@ function C(e) {
             let { isInEditMode: e, setEditingRule: t } = k.current;
             e && t(null);
         }, [P]);
-    let M = i.useCallback(
+    let G = i.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, r;
@@ -72,85 +72,85 @@ function C(e) {
             },
             [A],
         ),
-        G = i.useMemo(() => {
+        M = i.useMemo(() => {
             var e, t;
-            return M(
+            return G(
                 null != (e = null == E ? void 0 : E.id) ? e : null,
                 null != (t = null == E ? void 0 : E.triggerType) ? t : null,
             );
-        }, [M, E]);
+        }, [G, E]);
     i.useEffect(() => {
-        N(w, (0, j.af)(G));
-    }, [N, w, G]);
+        N(w, (0, j.af)(M));
+    }, [N, w, M]);
     let U = (0, p.Z6)(P);
-    return (0, r.jsxs)(s.hjN, {
-        title: O.intl.string(O.t.uRelg4),
+    return (0, r.jsxs)(a.hjN, {
+        title: C.intl.string(C.t.uRelg4),
         tag: "h1",
         children: [
             (0, r.jsxs)("div", {
-                className: y.descriptionContainer,
+                className: O.descriptionContainer,
                 children: [
-                    (0, r.jsxs)(s.hjN, {
+                    (0, r.jsxs)(a.hjN, {
                         tag: "h3",
-                        className: y.description,
-                        titleClassName: y.descriptionHeader,
+                        className: O.description,
+                        titleClassName: O.descriptionHeader,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 color: "header-secondary",
-                                children: O.intl.string(O.t.EwuSCQ),
+                                children: C.intl.string(C.t.EwuSCQ),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
-                                className: y.helpUrl,
-                                children: O.intl.format(O.t["B+sgGh"], {
-                                    helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                className: O.helpUrl,
+                                children: C.intl.format(C.t["B+sgGh"], {
+                                    helpUrl: u.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                                 }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: y.descriptionAvatarContainer,
+                        className: O.descriptionAvatarContainer,
                         children: [
-                            (0, r.jsx)(s.qEK, {
-                                src: (0, m.j)(),
-                                size: s.EFr.SIZE_80,
-                                "aria-label": O.intl.string(O.t.hG1StL),
+                            (0, r.jsx)(a.qEK, {
+                                src: (0, g.j)(),
+                                size: a.EFr.SIZE_80,
+                                "aria-label": C.intl.string(C.t.hG1StL),
                             }),
-                            (0, r.jsx)(s.IGR, {
+                            (0, r.jsx)(a.IGR, {
                                 text: (0, r.jsxs)("div", {
-                                    className: y.automodBadgeText,
+                                    className: O.automodBadgeText,
                                     children: [
-                                        (0, r.jsx)(s.sV5, {
+                                        (0, r.jsx)(a.sV5, {
                                             size: "xxs",
                                             color: "currentColor",
-                                            className: y.checkmarkIcon,
+                                            className: O.checkmarkIcon,
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             variant: "text-xs/bold",
-                                            className: y.automodText,
-                                            children: O.intl.string(O.t.hG1StL),
+                                            className: O.automodText,
+                                            children: C.intl.string(C.t.hG1StL),
                                         }),
                                     ],
                                 }),
-                                color: a.Z.unsafe_rawColors.BRAND_500.css,
-                                className: y.textBadge,
+                                color: s.Z.unsafe_rawColors.BRAND_500.css,
+                                className: O.textBadge,
                             }),
                         ],
                     }),
                 ],
             }),
-            R
-                ? (0, r.jsx)(h.Z, {})
+            Z
+                ? (0, r.jsx)(f.Z, {})
                 : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
                       let l =
                           null != D[t]
-                              ? (0, r.jsx)(s.hjN, {
+                              ? (0, r.jsx)(a.hjN, {
                                     tag: "h3",
-                                    className: y.categoryHeader,
-                                    children: (0, r.jsx)(s.Text, {
+                                    className: O.categoryHeader,
+                                    children: (0, r.jsx)(a.Text, {
                                         variant: "text-lg/normal",
                                         color: "header-primary",
                                         children: D[t],
@@ -160,20 +160,20 @@ function C(e) {
                       return (0, r.jsxs)(
                           "div",
                           {
-                              className: y.categoryContainer,
+                              className: O.categoryContainer,
                               children: [
                                   l,
                                   (0, r.jsx)(r.Fragment, {
                                       children: n.map((e) => {
                                           var t;
                                           return (0, r.jsx)(
-                                              x.Z,
+                                              b.Z,
                                               {
                                                   guildId: P,
                                                   triggerType: e,
-                                                  rules: null != (t = Z[e]) ? t : [],
+                                                  rules: null != (t = R[e]) ? t : [],
                                                   initWithEdit:
-                                                      T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM,
+                                                      T === v.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM,
                                               },
                                               e,
                                           );
@@ -188,13 +188,13 @@ function C(e) {
                 (0, r.jsx)(c.k0, {
                     guild: S,
                     withDivider: !1,
-                    className: y.explicitContentFilterSection,
+                    className: O.explicitContentFilterSection,
                 }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(x.Z, {
                 guildId: P,
                 existingRules: A,
             }),
-            w && (0, r.jsx)("div", { className: y.endSpacer }),
+            w && (0, r.jsx)("div", { className: O.endSpacer }),
         ],
     });
 }

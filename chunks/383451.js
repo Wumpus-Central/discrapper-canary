@@ -3,7 +3,7 @@ n.d(t, {
     f: () => o,
 });
 var r = n(818083),
-    i = n(984134);
+    i = n(751823);
 let a = (0, r.B)({
     kind: "user",
     id: "2025-05_push_to_talk_latching",
@@ -19,7 +19,7 @@ let a = (0, r.B)({
 });
 function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.L.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return a.getCurrentConfig(
         { location: t },
         {
@@ -30,7 +30,7 @@ function o(e) {
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = i.L.useExperiment({ location: t }, { autoTrackExposure: n });
     return a.useExperiment(
         { location: t },
         {

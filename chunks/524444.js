@@ -48,14 +48,14 @@ var r = n(951288),
     P = n(306680),
     w = n(594174),
     D = n(259580),
-    x = n(626135),
-    L = n(823379),
-    j = n(589530),
-    M = n(709054),
+    L = n(626135),
+    x = n(823379),
+    M = n(589530),
+    j = n(709054),
     k = n(217702),
     U = n(981631),
-    G = n(420212),
-    B = n(814249),
+    G = n(814249),
+    B = n(295907),
     Z = n(388032),
     F = n(180376);
 function V(e, t, n) {
@@ -136,10 +136,10 @@ let q = {
         position: "top",
     },
     X = (e) => (t) => {
-        null == e || e(t), (0, j.jA)(t);
+        null == e || e(t), (0, M.jA)(t);
     },
     Q = (e) => (t) => {
-        null == e || e(t), (0, j.Zj)(t);
+        null == e || e(t), (0, M.Zj)(t);
     };
 function J(e) {
     var {
@@ -172,7 +172,7 @@ function J(e) {
         ]);
     let E = X(t),
         b = Q(n);
-    (a = null == a ? j.FC : a), (s = null == s ? j.rs : s);
+    (a = null == a ? M.FC : a), (s = null == s ? M.rs : s);
     let [y, O] = i.useState(!0),
         [v, T] = i.useState(!1),
         S = h === k.hV.MOSAIC || !0 === p,
@@ -183,7 +183,7 @@ function J(e) {
                 "aria-label": Z.intl.string(Z.t.fSiQ3N),
                 className: F.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
-                    e.key === G.mR.Escape &&
+                    e.key === B.mR.Escape &&
                         setTimeout(() => {
                             var e;
                             return null == (e = R.current) ? void 0 : e.focus();
@@ -266,7 +266,7 @@ function ee(e) {
         c = K(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]);
     let u = X(t),
         d = Q(a);
-    n = null == n ? j.FC : n;
+    n = null == n ? M.FC : n;
     let f = () => !1;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -292,7 +292,7 @@ function et(e) {
     let o = X(t),
         s = Q(i);
     return (
-        (n = null == n ? j.FC : n),
+        (n = null == n ? M.FC : n),
         (0, r.jsx)(
             R.Z,
             W(H({}, a), {
@@ -324,7 +324,7 @@ function en(e) {
                 "aria-label": Z.intl.string(Z.t.fSiQ3N),
                 className: F.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
-                    e.key === G.mR.Escape &&
+                    e.key === B.mR.Escape &&
                         setTimeout(() => {
                             var e;
                             return null == (e = b.current) ? void 0 : e.focus();
@@ -407,7 +407,7 @@ function es(e) {
         case 1:
             return Z.intl.string(Z.t["1J6Xq6"]);
         default:
-            return (0, L.vE)(e);
+            return (0, x.vE)(e);
     }
 }
 function el(e) {
@@ -417,7 +417,7 @@ function el(e) {
         case 1:
             return Z.intl.string(Z.t["k3RM8/"]);
         default:
-            return (0, L.vE)(e);
+            return (0, x.vE)(e);
     }
 }
 let ec = (e) => {
@@ -503,7 +503,7 @@ function ed(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: n,
-                      messageId: M.default.castChannelIdAsMessageId(n),
+                      messageId: j.default.castChannelIdAsMessageId(n),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -563,33 +563,33 @@ function ef(e) {
         I = i.useRef(null),
         [T, N] = i.useState(null),
         R = i.useRef(null),
-        j = (0, u.Wu)([A.Z], () => {
+        M = (0, u.Wu)([A.Z], () => {
             var e;
             return null != (e = A.Z.summaries(s.id)) ? e : [];
         }, [s]),
-        k = (0, g.Z)(j);
+        k = (0, g.Z)(M);
     i.useEffect(() => {
-        l().isEqual(k, j) ||
-            x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: j.length,
-                message_counts: j.map((e) => e.count),
-                start_message_ids: j.map((e) => e.startId),
-                end_message_ids: j.map((e) => e.endId),
-                num_participants: j.map((e) => e.people.length),
+        l().isEqual(k, M) ||
+            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+                num_summaries: M.length,
+                message_counts: M.map((e) => e.count),
+                start_message_ids: M.map((e) => e.startId),
+                end_message_ids: M.map((e) => e.endId),
+                num_participants: M.map((e) => e.people.length),
                 guild_id: s.guild_id,
                 channel_id: s.id,
                 channel_type: s.type,
             });
-    }, [j, k, s.guild_id, s.id, s.type]);
-    let G = (0, u.e7)(
+    }, [M, k, s.guild_id, s.id, s.type]);
+    let B = (0, u.e7)(
             [w.default],
             () => {
                 var e;
                 return null !=
                     (e =
-                        null == j
+                        null == M
                             ? void 0
-                            : j.map((e) => {
+                            : M.map((e) => {
                                   var t;
                                   return null == (t = e.people)
                                       ? void 0
@@ -598,17 +598,17 @@ function ef(e) {
                                                 var t;
                                                 return null != (t = w.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(L.lm);
+                                            .filter(x.lm);
                               }))
                     ? e
                     : [];
             },
-            [j],
+            [M],
             ep,
         ),
         V = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
-        H = null == j || null == (t = j[V]) ? void 0 : t.topic;
-    null == H && null == y && (null == j ? void 0 : j.length) >= 1 && (H = null == (a = j[0]) ? void 0 : a.topic);
+        H = null == M || null == (t = M[V]) ? void 0 : t.topic;
+    null == H && null == y && (null == M ? void 0 : M.length) >= 1 && (H = null == (a = M[0]) ? void 0 : a.topic);
     let Y = i.useMemo(
             () =>
                 l().debounce((e) => {
@@ -636,23 +636,23 @@ function ef(e) {
         ),
         [z, q] = i.useState(!1),
         X = i.useCallback(() => {
-            x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
-                num_summaries: j.length,
-                message_counts: j.map((e) => e.count),
-                start_message_ids: j.map((e) => e.startId),
-                end_message_ids: j.map((e) => e.endId),
-                num_participants: j.map((e) => e.people.length),
+                num_summaries: M.length,
+                message_counts: M.map((e) => e.count),
+                start_message_ids: M.map((e) => e.startId),
+                end_message_ids: M.map((e) => e.endId),
+                num_participants: M.map((e) => e.people.length),
                 guild_id: s.guild_id,
                 channel_id: s.id,
                 channel_type: s.type,
             }),
                 q(!z);
-        }, [z, j, q, s]),
+        }, [z, M, q, s]),
         Q = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : B.DZ.PILL_DROPDOWN,
-                    n = j[e];
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G.DZ.PILL_DROPDOWN,
+                    n = M[e];
                 if (null == n) return;
                 (0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id);
                 let r = () => {
@@ -663,7 +663,7 @@ function ef(e) {
                 };
                 h.removeAutomaticAnchorCallback(K),
                     h.addScrollCompleteCallback(r),
-                    x.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    L.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: s.guild_id,
@@ -679,7 +679,7 @@ function ef(e) {
                         context: "Summary Jump",
                     });
             },
-            [j, s, K, h],
+            [M, s, K, h],
         ),
         J = i.useCallback((e) => {
             var t;
@@ -698,20 +698,20 @@ function ef(e) {
             var t;
             ((0, c.kK)(e.target) && (null == (t = I.current) ? void 0 : t.contains(e.target))) ||
                 (z &&
-                    x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: j.length,
-                        message_counts: j.map((e) => e.count),
-                        start_message_ids: j.map((e) => e.startId),
-                        end_message_ids: j.map((e) => e.endId),
-                        num_participants: j.map((e) => e.people.length),
+                        num_summaries: M.length,
+                        message_counts: M.map((e) => e.count),
+                        start_message_ids: M.map((e) => e.startId),
+                        end_message_ids: M.map((e) => e.endId),
+                        num_participants: M.map((e) => e.people.length),
                         guild_id: s.guild_id,
                         channel_id: s.id,
                         channel_type: s.type,
                     }),
                 J(!1));
         },
-        [z, j, s, J],
+        [z, M, s, J],
     );
     i.useEffect(
         () => (
@@ -738,12 +738,12 @@ function ef(e) {
             () =>
                 (0, r.jsx)(C.Z, {
                     channel: s,
-                    summaries: j,
-                    summariesMembers: G,
+                    summaries: M,
+                    summariesMembers: B,
                     selectTopic: Q,
                     setOpen: J,
                 }),
-            [j, G, Q, J, s],
+            [M, B, Q, J, s],
         ),
         et = i.useCallback(() => {
             let e = P.ZP.ackMessageId(s.id);
@@ -756,7 +756,7 @@ function ef(e) {
                   })
                 : f.Z.jumpToMessage({
                       channelId: s.id,
-                      messageId: M.default.castChannelIdAsMessageId(s.id),
+                      messageId: j.default.castChannelIdAsMessageId(s.id),
                       offset: 1,
                       context: "Mark As Read",
                   });
@@ -770,7 +770,7 @@ function ef(e) {
         }, [s.id]),
         er = Z.intl.string(Z.t["38qwgI"]);
     return (
-        j.length > 0 && (er = "" === H || null == H ? Z.intl.string(Z.t.DwnFuL) : H),
+        M.length > 0 && (er = "" === H || null == H ? Z.intl.string(Z.t.DwnFuL) : H),
         E
             ? null
             : (0, r.jsxs)("div", {
@@ -899,7 +899,7 @@ function eh(e) {
         R = (0, g.Z)(N);
     i.useEffect(() => {
         l().isEqual(R, N) ||
-            x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: N.length,
                 message_counts: N.map((e) => e.count),
                 start_message_ids: N.map((e) => e.startId),
@@ -927,7 +927,7 @@ function eh(e) {
                                                 var t;
                                                 return null != (t = w.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(L.lm);
+                                            .filter(x.lm);
                               }))
                     ? e
                     : [];
@@ -935,11 +935,11 @@ function eh(e) {
             [N],
             ep,
         ),
-        j = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
-        M = null == N || null == (t = N[j]) ? void 0 : t.topic;
-    null == M && null == h && (null == N ? void 0 : N.length) >= 1 && (M = null == (a = N[0]) ? void 0 : a.topic);
-    let k = i.useMemo(() => l().get(N, j - 1), [j, N]),
-        G = i.useMemo(() => l().get(N, j + 1), [j, N]),
+        M = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
+        j = null == N || null == (t = N[M]) ? void 0 : t.topic;
+    null == j && null == h && (null == N ? void 0 : N.length) >= 1 && (j = null == (a = N[0]) ? void 0 : a.topic);
+    let k = i.useMemo(() => l().get(N, M - 1), [M, N]),
+        B = i.useMemo(() => l().get(N, M + 1), [M, N]),
         V = i.useMemo(
             () =>
                 l().debounce((e) => {
@@ -967,7 +967,7 @@ function eh(e) {
         ),
         [W, K] = i.useState(!1),
         z = i.useCallback(() => {
-            x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
                 num_summaries: N.length,
                 message_counts: N.map((e) => e.count),
@@ -982,7 +982,7 @@ function eh(e) {
         }, [W, N, K, s]),
         q = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : B.DZ.PILL_DROPDOWN,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G.DZ.PILL_DROPDOWN,
                     n = N[e];
                 if (null == n) return;
                 (0, S.wv)(s.id, n.id), (0, S.yK)(s.id, n.id);
@@ -994,7 +994,7 @@ function eh(e) {
                 };
                 _.removeAutomaticAnchorCallback(Y),
                     _.addScrollCompleteCallback(r),
-                    x.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    L.default.track(U.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: s.guild_id,
@@ -1013,11 +1013,11 @@ function eh(e) {
             [N, s, Y, _],
         ),
         X = i.useCallback(() => {
-            q(j - 1, B.DZ.PILL_NEXT_ARROW);
-        }, [q, j]),
+            q(M - 1, G.DZ.PILL_NEXT_ARROW);
+        }, [q, M]),
         Q = i.useCallback(() => {
-            q(j + 1, B.DZ.PILL_PREVIOUS_ARROW);
-        }, [j, q]),
+            q(M + 1, G.DZ.PILL_PREVIOUS_ARROW);
+        }, [M, q]),
         J = i.useCallback((e) => {
             var t;
             K(e);
@@ -1035,7 +1035,7 @@ function eh(e) {
             var t;
             ((0, c.kK)(e.target) && (null == (t = y.current) ? void 0 : t.contains(e.target))) ||
                 (W &&
-                    x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    L.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: N.length,
                         message_counts: N.map((e) => e.count),
@@ -1085,7 +1085,7 @@ function eh(e) {
     if (!(0, u.e7)([A.Z], () => A.Z.shouldShowTopicsBar())) return null;
     let et = Z.intl.string(Z.t["38qwgI"]);
     return (
-        N.length > 0 && (et = "" === M || null == M ? Z.intl.string(Z.t.DwnFuL) : M),
+        N.length > 0 && (et = "" === j || null == j ? Z.intl.string(Z.t.DwnFuL) : j),
         p
             ? null
             : (0, r.jsxs)("div", {
@@ -1131,7 +1131,7 @@ function eh(e) {
                                           "aria-label": Z.intl.string(Z.t["4huCnJ"]),
                                           onClick: Q,
                                           className: o()(F.topicsPillCaret, F.topicsCaretLeft, {
-                                              [F.topicsPillCaretDisabled]: null == G,
+                                              [F.topicsPillCaretDisabled]: null == B,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
                                               width: 16,

@@ -96,9 +96,9 @@ function P(e) {
             messageId: S,
             parentOptionKey: w,
             commandOptionSpec: D,
-            sourceAnalyticsLocations: x,
+            sourceAnalyticsLocations: L,
         } = e,
-        L = null != w ? w + " " + g.name : g.name;
+        x = null != w ? w + " " + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
@@ -114,7 +114,7 @@ function P(e) {
                             ),
                         ],
                     },
-                    L,
+                    x,
                 ),
             ],
             s = Object.fromEntries(
@@ -129,14 +129,14 @@ function P(e) {
                     channel: v,
                     guild: I,
                     messageId: S,
-                    parentOptionKey: L,
+                    parentOptionKey: x,
                     commandOptionSpec: s[t.name],
-                    sourceAnalyticsLocations: x,
+                    sourceAnalyticsLocations: L,
                 }),
             );
         return e;
     }
-    let j = g.value;
+    let M = g.value;
     if (null != g.value)
         switch (g.type) {
             case c.jw.USER: {
@@ -153,7 +153,7 @@ function P(e) {
                                     guildId: v.guild_id,
                                     channelId: v.id,
                                     messageId: S,
-                                    sourceAnalyticsLocations: x,
+                                    sourceAnalyticsLocations: L,
                                 }),
                             children: [y.ME, e.nick],
                         }),
@@ -203,7 +203,7 @@ function P(e) {
                                     (0, p.openUserProfileModal)({
                                         userId: t.id,
                                         guildId: v.guild_id,
-                                        sourceAnalyticsLocations: x,
+                                        sourceAnalyticsLocations: L,
                                     }),
                                 children: [y.ME, e.nick],
                             }),
@@ -217,11 +217,11 @@ function P(e) {
                 break;
             default: {
                 let e = null == D || null == (s = D.choices) ? void 0 : s.find((e) => e.value === g.value);
-                null != e && (j = null != (u = e.name_localized) ? u : e.name);
+                null != e && (M = null != (u = e.name_localized) ? u : e.name);
             }
         }
     return (
-        null == f && (f = R(null == j ? void 0 : j.toString())),
+        null == f && (f = R(null == M ? void 0 : M.toString())),
         [
             (0, r.jsxs)(
                 i.Fragment,
@@ -236,7 +236,7 @@ function P(e) {
                         f,
                     ],
                 },
-                L,
+                x,
             ),
         ]
     );

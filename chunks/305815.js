@@ -11,29 +11,29 @@ var r = t(951288),
     m = t(25990),
     p = t(594174),
     f = t(960048),
-    g = t(509212),
-    C = t(272008),
-    x = t(113434),
+    x = t(509212),
+    g = t(272008),
+    C = t(113434),
     v = t(497505),
     h = t(475595),
     j = t(515108),
     _ = t(291967),
     y = t(46140),
-    b = t(388032),
-    N = t(129034);
+    N = t(388032),
+    b = t(129034);
 function w(e) {
     var n;
     let { quest: t, avatarDeco: a, onUseNow: i, user: l, mode: o } = e,
         d = (0, h.fh)(t, h.eC.REWARD).url,
-        u = (0, x.Qy)(t.config),
+        u = (0, C.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
             l.avatarDecoration.skuId === (null == a ? void 0 : a.skuId);
     return (0, r.jsxs)("div", {
-        className: N.contentContainer,
+        className: b.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: N.previewContainer,
+                className: b.previewContainer,
                 children: (0, r.jsx)(c.Z, {
                     user: l,
                     guildId: null,
@@ -43,13 +43,13 @@ function w(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: N.copyContainer,
+                className: b.copyContainer,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: N.heading,
-                        children: b.intl.string(b.t["0/Yz+f"]),
+                        className: b.heading,
+                        children: N.intl.string(N.t["0/Yz+f"]),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -61,7 +61,7 @@ function w(e) {
             (0, r.jsx)(s.zxk, {
                 variant: "secondary",
                 size: "sm",
-                text: m ? b.intl.string(b.t.hjaYYm) : b.intl.string(b.t.MAS7uL),
+                text: m ? N.intl.string(N.t.hjaYYm) : N.intl.string(N.t.MAS7uL),
                 loading: "applying" === o,
                 disabled: "claimed" !== o || m,
                 onClick: i,
@@ -72,8 +72,8 @@ function w(e) {
 }
 function T(e) {
     var n, t;
-    let { quest: s, onClose: c, transitionState: x, preview: h, location: b, sourceQuestContent: N } = e,
-        T = a.useMemo(() => (0, g.xn)(s.config), [s]),
+    let { quest: s, onClose: c, transitionState: C, preview: h, location: N, sourceQuestContent: b } = e,
+        T = a.useMemo(() => (0, x.xn)(s.config), [s]),
         E = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         [A, P] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
@@ -98,10 +98,10 @@ function T(e) {
         [L, S] = a.useState(O ? "loading" : "claimed");
     a.useEffect(() => {
         O &&
-            (0, C.QB)(s.id, v.y$.CROSS_PLATFORM, b)
+            (0, g.QB)(s.id, v.y$.CROSS_PLATFORM, N)
                 .then(() => S("claimed"))
                 .catch(() => S("error"));
-    }, [s.id, b, O]);
+    }, [s.id, N, O]);
     let R = !0 === h && null === A && (null == T ? void 0 : T.skuId) !== "",
         k = null == E,
         I = k || (null == A && !0 !== h) || R || "loading" === L,
@@ -111,9 +111,9 @@ function T(e) {
         };
     return (0, r.jsx)(j.Z, {
         onClose: c,
-        transitionState: x,
+        transitionState: C,
         quest: s,
-        sourceQuestContent: N,
+        sourceQuestContent: b,
         location: y.dr.COLLECTIBLE_REWARD_MODAL,
         isRewardContentLoading: I,
         rewardContentHasError: M,

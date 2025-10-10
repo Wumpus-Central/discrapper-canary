@@ -14,11 +14,11 @@ var r = n(951288),
     g = n(594174),
     m = n(40153),
     b = n(603592),
-    O = n(981631),
+    _ = n(981631),
     y = n(675999),
-    _ = n(388032),
-    j = n(816827);
-let v = {
+    O = n(388032),
+    v = n(816827);
+let j = {
     origin: {
         x: -16,
         y: 0,
@@ -70,40 +70,40 @@ function C(e) {
         C = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         E = i.useMemo(() => a.some((e) => (0, h.eM)(e, C)), [a, C]),
         S = (0, o.s9z)((e) => (0, o.DEQ)(e, y.PU)),
-        { analyticsLocations: P } = (0, s.ZP)(),
-        I = (0, r.jsx)(b.Z, {
+        { analyticsLocations: I } = (0, s.ZP)(),
+        P = (0, r.jsx)(b.Z, {
             showPill: !1,
             id: "create-join-button",
             onClick: () => {
                 (0, u.yU)()
                     ? (0, d.Z)({
-                          analyticsSource: { page: O.Sbl.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: _.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: O.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: O.jXE.GUILD_CAP_UPSELL_MODAL,
+                              page: _.Sbl.CREATE_JOIN_GUILD_MODAL,
+                              section: _.jXE.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: P,
+                          analyticsLocations: I,
                       })
                     : c.Z.openCreateGuildModal({ location: "Guild List" });
             },
             selected: S,
             onContextMenu: x,
-            tooltip: _.intl.string(_.t.l5WIbW),
+            tooltip: O.intl.string(O.t.l5WIbW),
             icon: o.oFk,
         });
     return t
-        ? I
+        ? P
         : (0, r.jsx)("div", {
-              className: j.tutorialContainer,
+              className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
                   tutorialId: E ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: v,
+                  inlineSpecs: j,
                   position: "right",
                   children: [
-                      I,
+                      P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: _.intl.string(_.t["45xjMz"]),
+                              name: O.intl.string(O.t["45xjMz"]),
                               targetNode: n,
                               below: !0,
                               noCombine: !0,

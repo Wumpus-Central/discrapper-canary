@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(481060),
     a = n(287734),
     o = n(305325),
@@ -15,19 +15,19 @@ let m = function (e) {
     let { participants: t, channel: n, hasConnectPermission: m } = e,
         g = t.filter(p.Io),
         b = (0, s.J)(n.guild_id),
-        _ = i.useCallback(() => {
+        C = r.useCallback(() => {
             b ? (0, o.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, b]),
         y = 4 === g.length ? 2 : 3;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)(d.Z, {}),
-            (0, r.jsx)("div", {
+            (0, i.jsx)(d.Z, {}),
+            (0, i.jsx)("div", {
                 className: f.tiles,
                 style: { maxWidth: 168 * y },
                 children: g.slice(0, 5).map((e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         u.ZP,
                         {
                             participant: e,
@@ -42,14 +42,14 @@ let m = function (e) {
                     ),
                 ),
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, i.jsx)(l.X6q, {
                 className: f.channelName,
                 variant: "heading-xxl/semibold",
                 children: n.name,
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: f.participantsRow,
-                children: (0, r.jsx)(l.Text, {
+                children: (0, i.jsx)(l.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
                     children:
@@ -71,12 +71,12 @@ let m = function (e) {
                                   : void 0,
                 }),
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: f.joinButton,
-                children: (0, r.jsx)(l.zxk, {
+                children: (0, i.jsx)(l.zxk, {
                     variant: "overlay-primary",
                     text: m ? h.intl.string(h.t["96ANUF"]) : h.intl.string(h.t.TVBCKS),
-                    onClick: _,
+                    onClick: C,
                     disabled: !m,
                 }),
             }),

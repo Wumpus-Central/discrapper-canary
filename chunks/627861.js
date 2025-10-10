@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(831506),
     L = n(293273),
     x = n(158776),
-    j = n(885110),
-    M = n(594174),
+    M = n(885110),
+    j = n(594174),
     k = n(181106),
     U = n(81063),
     G = n(768581),
@@ -58,7 +58,7 @@ var r = n(951288),
     ea = n(967249),
     eo = n(616922),
     es = n(388032),
-    el = n(463736);
+    el = n(723295);
 let ec = 8;
 function eu(e) {
     let { partyMembers: t, partySize: n, maxPartySize: i, guildId: a, activityActionType: o } = e,
@@ -330,8 +330,8 @@ function em(e) {
             partyStatusElement: L,
             presenceActivity: x,
         } = e,
-        j = (0, v.A)(A),
-        M = (0, p.ye)(A),
+        M = (0, v.A)(A),
+        j = (0, p.ye)(A),
         { bot: B } = A,
         Z = G.ZP.getApplicationIconURL({
             id: A.id,
@@ -377,8 +377,8 @@ function em(e) {
             currentUserId: N,
             message: w,
             application: A,
-            isEmbeddedApplication: M,
-            isFrameApplication: j,
+            isEmbeddedApplication: j,
+            isFrameApplication: M,
             isGameLaunchable: em,
         }),
         eO = ef(x, R, w, A),
@@ -468,17 +468,17 @@ function em(e) {
                           onClick: () => {
                               d.Z.launch({
                                   applicationId: e_,
-                                  embedded: M,
+                                  embedded: j,
                               });
                           },
                       }
                     : null != eE
                       ? eE
                       : void 0,
-            [M, em, e_, eE],
+            [j, em, e_, eE],
         ),
         eC = (0, b.G)(A),
-        eN = i.useMemo(() => (null != ed ? ed : null != eC && M ? eC : void 0), [M, ed, eC]),
+        eN = i.useMemo(() => (null != ed ? ed : null != eC && j ? eC : void 0), [j, ed, eC]),
         eR = i.useMemo(() => {
             let e = [];
             return ec || null == eS ? ec && null != eA && e.push(eA) : e.push(eS), e;
@@ -546,7 +546,7 @@ function em(e) {
                 : null == x
                   ? void 0
                   : x.created_at,
-        ej =
+        eM =
             null != ex
                 ? (0, r.jsxs)("div", {
                       className: el.timestampContainer,
@@ -567,16 +567,16 @@ function em(e) {
                       ],
                   })
                 : null,
-        eM = (0, r.jsxs)(c.Text, {
+        ej = (0, r.jsxs)(c.Text, {
             variant: "text-xs/normal",
             className: el.tagline,
             color: "none",
             lineClamp: 2,
-            children: [eu ? (0, V.$v)(w, A, C, N, ec) : ej, eu ? null : eD],
+            children: [eu ? (0, V.$v)(w, A, C, N, ec) : eM, eu ? null : eD],
         }),
         ek = (0, r.jsxs)("div", {
             className: el.info,
-            children: [eM, P || eu ? null : L],
+            children: [ej, P || eu ? null : L],
         });
     return (0, r.jsx)(h.W, {
         header: ew,
@@ -616,9 +616,9 @@ function eg(e) {
                 );
             }
         }, [c, s, _]),
-        h = (0, l.e7)([L.Z, j.Z], () => {
+        h = (0, l.e7)([L.Z, M.Z], () => {
             var e;
-            return null != (e = L.Z.getApplicationActivity(f.id)) ? e : j.Z.getApplicationActivity(f.id, !0);
+            return null != (e = L.Z.getApplicationActivity(f.id)) ? e : M.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
         m = (0, l.Wu)([D.Z], () => {
             var e;
@@ -628,7 +628,7 @@ function eg(e) {
         y = i.useMemo(
             () =>
                 m.map((e) => {
-                    let t = M.default.getUser(e);
+                    let t = j.default.getUser(e);
                     return null != t ? t : en.ag;
                 }),
             [m],

@@ -37,8 +37,8 @@ function T(e) {
                 : (0, x._W)(d.cover_image_asset.application_id, d.cover_image_asset, S);
         }, [d]),
         [T, P] = i.useState(a),
-        [w, R] = i.useState(null != (t = null == d ? void 0 : d.description) ? t : ""),
-        [Z, D] = i.useState(b),
+        [w, Z] = i.useState(null != (t = null == d ? void 0 : d.description) ? t : ""),
+        [R, D] = i.useState(b),
         [A, L] = i.useState(null == d ? void 0 : d.store_page_guild_products_default_sort),
         [k, G] = i.useState(null == d ? void 0 : d.server_shop_tab_order),
         { loading: M, error: U, updateSubscriptionsSettings: B } = (0, j.QV)(),
@@ -51,13 +51,13 @@ function T(e) {
             var e;
             return (
                 (null != w && w !== (null != (e = null == d ? void 0 : d.description) ? e : "")) ||
-                (null == Z ? void 0 : Z.startsWith("data:")) === !0 ||
+                (null == R ? void 0 : R.startsWith("data:")) === !0 ||
                 T !== a ||
                 (null == d ? void 0 : d.store_page_guild_products_default_sort) !== A ||
                 (null == d ? void 0 : d.server_shop_tab_order) !== k
             );
-        }, [Z, a, w, d, T, A, k]),
-        Y = null != w && "" !== w && null != Z;
+        }, [R, a, w, d, T, A, k]),
+        Y = null != w && "" !== w && null != R;
     i.useEffect(() => {
         var e;
         (null == d || null == (e = d.cover_image_asset) ? void 0 : e.application_id) != null &&
@@ -189,17 +189,17 @@ function T(e) {
                 maxLength: 1500,
                 value: w,
                 autosize: !0,
-                onChange: R,
+                onChange: Z,
                 "aria-labelledby": W,
                 disabled: q,
             }),
             (0, r.jsx)(g.izJ, { className: I.divider }),
-            (0, r.jsxs)(g.NIc, {
+            (0, r.jsxs)(g.gNt, {
                 label: E.intl.string(E.t["0kpTpK"]),
                 description: E.intl.string(E.t.i2rCwc),
                 children: [
                     (0, r.jsx)(h.Z, {
-                        image: Z,
+                        image: R,
                         hint: F,
                         showIcon: !0,
                         showRemoveButton: !1,
@@ -263,7 +263,7 @@ function T(e) {
                             onReset: () => {
                                 var e;
                                 P(a),
-                                    R(null != (e = null == d ? void 0 : d.description) ? e : ""),
+                                    Z(null != (e = null == d ? void 0 : d.description) ? e : ""),
                                     D(b),
                                     L(null == d ? void 0 : d.store_page_guild_products_default_sort),
                                     G(null == d ? void 0 : d.server_shop_tab_order);
@@ -272,7 +272,7 @@ function T(e) {
                                 s()(null != d, "Settings must be defined");
                                 let e = {};
                                 w !== d.description && (e.description = w),
-                                    null != Z && Z.startsWith("data:") && (e.cover_image = Z),
+                                    null != R && R.startsWith("data:") && (e.cover_image = R),
                                     T !== a && (e.full_server_gate = T === y.e3.ALL_CHANNELS),
                                     A !== d.store_page_guild_products_default_sort &&
                                         (e.store_page_guild_products_default_sort = A),

@@ -47,11 +47,11 @@ let x = {
         [N.NYg.ACTIVITY]: d.Z,
         [N.NYg.FRAME]: h.Z,
     },
-    j = {
+    M = {
         minWidth: P.Rv[P.cL.VIDEO],
         maxWidth: P.$i[P.cL.VIDEO],
     },
-    M = [];
+    j = [];
 class k extends i.PureComponent {
     render() {
         let {
@@ -91,7 +91,7 @@ class k extends i.PureComponent {
                     onWindowResize: this.handleWindowResize,
                     appContext: l,
                     roundCorners: c,
-                    resizeConfig: j,
+                    resizeConfig: M,
                     getDockedRectPositionY: u,
                 }),
                 (0, r.jsx)(g.mK, { className: v ? D.belowSidebar : void 0 }),
@@ -116,9 +116,9 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         D = b.Z.getWindowOpen(N.KJ3.ACTIVITY_POPOUT),
         L = s.ZP.getCurrentEmbeddedActivity(),
         x = (0, c.p)(null == L ? void 0 : L.location),
-        j = null != L && !(0, u.Z)(x, I.Z, S.Z),
+        M = null != L && !(0, u.Z)(x, I.Z, S.Z),
         k = s.ZP.getActivityPanelMode(),
-        U = j && k === R.Ez.PANEL,
+        U = M && k === R.Ez.PANEL,
         G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
         Z = p.Z.getFrameLayoutMode() === w.U.FOCUSED,
@@ -144,9 +144,9 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
                 ? e - (0, _.Y7)({ isPopoutWindow: F })
                 : e;
     h =
-        (null != L && D) || (F && j) || (F && null != B)
+        (null != L && D) || (F && M) || (F && null != B)
             ? null
-            : F || !v || j || null != B
+            : F || !v || M || null != B
               ? null != L && U
                   ? null != (n = T.Z.pipActivityWindow)
                       ? n
@@ -173,7 +173,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         ea = !er && null != h && et && en;
     return {
         selectedPIPWindow: h,
-        pipWindows: 0 === J.length ? M : J,
+        pipWindows: 0 === J.length ? j : J,
         pipWidth: q,
         maxX: Y.width - (ea ? $ : 0),
         maxY: Y.height,

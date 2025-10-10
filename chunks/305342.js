@@ -33,14 +33,14 @@ var r = n(951288),
     P = n(981631),
     w = n(388032),
     D = n(126683);
-let x = 24,
-    L = 5,
-    j = (e) => {
+let L = 24,
+    x = 5,
+    M = (e) => {
         let { benefits: t, header: n, guildId: a } = e,
             [o, s] = i.useState(!1),
-            l = o ? t : t.slice(0, L),
-            u = t.length > L,
-            f = t.length - L,
+            l = o ? t : t.slice(0, x),
+            u = t.length > x,
+            f = t.length - x,
             _ = w.intl.formatToPlainString(w.t["XSdy7+"], { numTruncated: f }),
             p = () => s((e) => !e),
             m = (0, d.Dt)();
@@ -86,7 +86,7 @@ let x = 24,
                   ],
               });
     },
-    M = (e) => {
+    j = (e) => {
         let { guildId: t, listingId: n } = e,
             i = (0, y.Z)(t),
             [a] = g.XZ(n, t),
@@ -95,7 +95,7 @@ let x = 24,
             return p.ZP.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
-                size: x,
+                size: L,
             });
         }
         return 0 === o.length
@@ -122,8 +122,8 @@ let x = 24,
                                       children: (0, r.jsx)("img", {
                                           className: D.emojiListEmoji,
                                           src: s(e),
-                                          width: x,
-                                          height: x,
+                                          width: L,
+                                          height: L,
                                           alt: e.name,
                                       }),
                                   },
@@ -164,17 +164,17 @@ let x = 24,
                                   }),
                               ],
                           }),
-                      (0, r.jsx)(j, {
+                      (0, r.jsx)(M, {
                           header: w.intl.string(w.t.LtfhAg),
                           benefits: l,
                           guildId: n,
                       }),
-                      (0, r.jsx)(j, {
+                      (0, r.jsx)(M, {
                           header: w.intl.string(w.t["8oxWpK"]),
                           benefits: u,
                           guildId: n,
                       }),
-                      (0, r.jsx)(M, {
+                      (0, r.jsx)(j, {
                           guildId: n,
                           listingId: t,
                       }),
@@ -201,9 +201,9 @@ let x = 24,
                 isCheckingTrialEligibility: I,
             } = (0, N.Z)(p, n, a, d),
             S = (0, s.e7)([_.Z], () => _.Z.isSyncing),
-            { activeSubscription: x, activeSubscriptionListing: L } = (0, E.Z)(a),
-            j = (null == L ? void 0 : L.id) === t,
-            M = (null == x ? void 0 : x.status) === P.O0b.CANCELED,
+            { activeSubscription: L, activeSubscriptionListing: x } = (0, E.Z)(a),
+            M = (null == x ? void 0 : x.id) === t,
+            j = (null == L ? void 0 : L.status) === P.O0b.CANCELED,
             [G, B] = i.useState(!1),
             [Z, F] = i.useState(!1),
             V = i.useCallback((e) => {
@@ -215,7 +215,7 @@ let x = 24,
             [W] = g.TT(t),
             [K] = g.F2(t),
             z = (0, b.Z)(n, t),
-            q = null != W && null == x && z,
+            q = null != W && null == L && z,
             X = () => B((e) => !e),
             Q = (0, u.Z)(R.iP),
             [J, $] = i.useState(!1),
@@ -274,12 +274,12 @@ let x = 24,
                                               gap: 16,
                                               children: [
                                                   Q && (0, r.jsx)("div", { className: D.divider }),
-                                                  j
+                                                  M
                                                       ? (0, r.jsx)(c.zxk, {
                                                             disabled: !0,
                                                             fullWidth: !0,
-                                                            variant: M ? "secondary" : "primary",
-                                                            text: M
+                                                            variant: j ? "secondary" : "primary",
+                                                            text: j
                                                                 ? w.intl.string(w.t.iKHmu7)
                                                                 : w.intl.string(w.t.XvAuMj),
                                                         })

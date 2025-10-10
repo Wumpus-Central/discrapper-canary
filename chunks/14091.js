@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(607802),
     _ = n(375123),
     j = n(56522),
-    O = n(759209),
-    x = n(532428),
+    x = n(759209),
+    O = n(532428),
     v = n(406326),
     C = n(994463),
     I = n(991896),
@@ -33,7 +33,7 @@ var r = n(951288),
     A = n(981631),
     D = n(531578),
     L = n(388032),
-    M = n(254321);
+    M = n(669922);
 class k extends i.Component {
     componentDidMount() {
         this.autoAnalytics();
@@ -137,8 +137,8 @@ function H(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         } = e,
-        { totalResults: y, isSearching: _, isIndexing: j, hasError: O } = l;
-    if (O)
+        { totalResults: y, isSearching: _, isIndexing: j, hasError: x } = l;
+    if (x)
         return (0, r.jsxs)(U, {
             children: [
                 (0, r.jsx)("div", { className: M.errorImage }),
@@ -178,13 +178,13 @@ function H(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         });
-    let { showNoResultsAlt: x } = l,
-        v = x ? L.intl.string(L.t["VrK/2d"]) : L.intl.string(L.t.V6nAfH);
+    let { showNoResultsAlt: O } = l,
+        v = O ? L.intl.string(L.t["VrK/2d"]) : L.intl.string(L.t.V6nAfH);
     return (0, r.jsxs)(U, {
         children: [
-            (0, r.jsx)("div", { className: a()(M.noResultsImage, { [M.alt]: x }) }),
+            (0, r.jsx)("div", { className: a()(M.noResultsImage, { [M.alt]: O }) }),
             (0, r.jsx)("div", {
-                className: a()(M.emptyResultsText, M.noResults, { [M.alt]: x }),
+                className: a()(M.emptyResultsText, M.noResults, { [M.alt]: O }),
                 children: v,
             }),
         ],
@@ -202,7 +202,7 @@ let F = [],
                 ignoreCount: f,
                 isFeedbackVisible: b,
                 dismissFeedbackEntrypoint: j,
-                onSearchModeChange: O,
+                onSearchModeChange: x,
                 onPageChange: C,
                 searchMode: I,
                 onBlockedResultsClick: S,
@@ -272,9 +272,9 @@ let F = [],
                             searchRequestAnalyticsId: a,
                             mode: e,
                         }),
-                        O(e));
+                        x(e));
                 },
-                [O, n.isSearching, t, I, a],
+                [x, n.isSearching, t, I, a],
             ),
             q = i.useCallback(
                 (e, r) => {
@@ -336,7 +336,7 @@ let F = [],
             [et, en] = (0, p.US)(ee),
             er = et === o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             ei = i.useCallback(() => {
-                let e = "".concat(x.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4u)) + " ";
+                let e = "".concat(O.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4u)) + " ";
                 E.Z.appendTextToSearchInput(t, e);
             }, [t]);
         return (0, r.jsxs)("section", {
@@ -401,7 +401,7 @@ function z(e) {
         { isFeedbackVisible: n, dismissFeedbackEntrypoint: l } = (function (e) {
             let [t, n] = i.useState(!1),
                 r = (0, j.M)({ location: "SearchResults" }),
-                { enabled: l, force: a } = (0, O.f)({ location: "SearchResults" }),
+                { enabled: l, force: a } = (0, x.f)({ location: "SearchResults" }),
                 s = e.type === A.aib.DMS || e.type === A.aib.CHANNEL,
                 o = (r && s) || l;
             return (
@@ -470,7 +470,7 @@ function z(e) {
             },
             [o.isSearching, t],
         ),
-        x = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 if (o.isSearching) return;
                 let n = E.Z.getSearchInputText(t),
@@ -514,7 +514,7 @@ function z(e) {
                 renderEmbeds: f.NA.useSetting(),
                 isFeedbackVisible: n,
                 dismissFeedbackEntrypoint: l,
-                onPageChange: x,
+                onPageChange: O,
                 onSearchModeChange: _,
                 searchMode: m,
                 onBlockedResultsClick: S,

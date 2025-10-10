@@ -1,8 +1,8 @@
-n.d(t, { y: () => l });
+n.d(t, { y: () => o });
 var r = n(427164),
     i = n(46841),
     a = n(47280);
-let o = (0, r.le)({
+let l = (0, r.le)({
     name: "2025-09-wishlist-in-dm-gifting-flow",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -11,10 +11,10 @@ let o = (0, r.le)({
         1: { enabled: !0 },
     },
 });
-function l(e) {
+function o(e) {
     let { location: t } = e,
-        n = o.useConfig({ location: t }).enabled,
+        n = l.useConfig({ location: t }).enabled,
         r = (0, a.ZP)({ location: t }),
-        l = (0, i.S)({ location: t });
-    return n && r && l;
+        o = (0, i.S)({ location: t });
+    return n && r && o;
 }

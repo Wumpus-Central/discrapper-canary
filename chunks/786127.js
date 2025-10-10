@@ -1,37 +1,37 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var i = n(707592),
     l = n(137158),
-    a = n(388032);
-let s = function (e) {
+    s = n(388032);
+let a = function (e) {
     let {
             formField: t,
             index: n,
-            isDragEnabled: s,
+            isDragEnabled: a,
             isDropHovered: o,
             onDrop: c,
             onEdit: d,
             onRemove: u,
-            canRemove: m,
-            actionsLocation: g,
+            canRemove: g,
+            actionsLocation: m,
             fieldStyle: p,
         } = e,
-        { label: h, placeholder: f } = t;
+        { label: f, placeholder: h } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
-        isDragEnabled: s,
+        isDragEnabled: a,
         isDropHovered: o,
         onDrop: c,
         onEdit: d,
         onRemove: u,
-        title: h,
-        canRemove: m,
-        actionsLocation: g,
+        title: f,
+        canRemove: g,
+        actionsLocation: m,
         fieldStyle: p,
         children: (0, r.jsx)(i.Gi, {
-            placeholder: null != f ? f : a.intl.string(a.t["Sqn+Wl"]),
+            placeholder: null != h ? h : s.intl.string(s.t["Sqn+Wl"]),
             disabled: !0,
         }),
     });

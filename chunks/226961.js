@@ -131,16 +131,16 @@ function w() {
 function D(e) {
     null != e.channelId && (N(), g.clear());
 }
-function x(e) {
+function L(e) {
     if (null === e.streamId) {
         let t = O(e.userId, e.context);
         g.set(t, d.Z.NO_OVERRIDE);
     }
 }
-function L(e) {
+function x(e) {
     h = e.section;
 }
-function j(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -153,12 +153,12 @@ function j(e) {
                 for (let e = 0; e < a.length; e++) {
                     let r = t[e],
                         i = "object" == typeof r ? r : {};
-                    o.push(j(a[e], i, n));
+                    o.push(M(a[e], i, n));
                 }
             } else r[i] = a;
         else if ("object" == typeof a && null !== a) {
             let t = "object" == typeof e && null !== e ? e : {};
-            r[i] = j(a, t, n);
+            r[i] = M(a, t, n);
         } else if (i in E && "number" == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             t.push({
@@ -170,7 +170,7 @@ function j(e) {
     }
     return r;
 }
-function M(e) {
+function j(e) {
     let { connectionStats: t } = e;
     Object.values(d.Yn).forEach((e) => {
         t.filter((t) => {
@@ -196,7 +196,7 @@ function k(e) {
             } = n;
             Object.keys(e).includes(a) || (h = p);
         }
-        i[r] = j(n, i[r]);
+        i[r] = M(n, i[r]);
     } else delete i[r];
 }
 function U(e) {
@@ -227,12 +227,12 @@ function Z(e) {
     let { value: t } = e;
     T = t;
 }
-function V(e) {
+function F(e) {
     let { userId: t, context: n, quality: r } = e;
     g.set(O(t, n), r);
 }
 N();
-class F extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     getSection() {
         return h;
     }
@@ -279,17 +279,17 @@ class F extends (r = i.ZP.Store) {
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-f(F, "displayName", "RTCDebugStore");
-let H = new F(o.Z, {
+f(V, "displayName", "RTCDebugStore");
+let H = new V(o.Z, {
     RTC_DEBUG_MODAL_OPEN: P,
     RTC_DEBUG_MODAL_CLOSE: w,
-    RTC_DEBUG_MODAL_SET_SECTION: L,
+    RTC_DEBUG_MODAL_SET_SECTION: x,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: B,
     RTC_DEBUG_SET_RECORDING_FLAG: Z,
-    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: V,
+    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
-    RTC_CONNECTION_VIDEO: x,
-    MEDIA_ENGINE_CONNECTION_STATS: M,
+    RTC_CONNECTION_VIDEO: L,
+    MEDIA_ENGINE_CONNECTION_STATS: j,
 });

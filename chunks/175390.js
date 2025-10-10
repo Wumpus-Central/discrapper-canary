@@ -1,4 +1,4 @@
-r.d(t, { Z: () => x });
+r.d(t, { Z: () => O });
 var n = r(951288);
 r(647438);
 var i = r(399606),
@@ -70,7 +70,7 @@ function h() {
         ],
     });
 }
-function x(e) {
+function O(e) {
     let { guildId: t } = e;
     return (0, n.jsxs)("div", {
         className: j.previewContentContainer,

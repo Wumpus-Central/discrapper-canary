@@ -16,8 +16,8 @@ var r,
     a = n(658666),
     o = n(384632),
     c = n(430824),
-    d = n(411198),
-    u = n(863249),
+    u = n(411198),
+    d = n(863249),
     m = n(944163),
     f = n(246364),
     h = n(983736),
@@ -31,18 +31,18 @@ var r,
 function v(e, t, n) {
     let [r, s] = l.useState(!1),
         c = (0, i.e7)([m.Z], () => m.Z.get(e)),
-        d = (0, i.e7)([a.Z], () => a.Z.pendingState);
+        u = (0, i.e7)([a.Z], () => a.Z.pendingState);
     l.useEffect(() => {
-        t || u.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
+        t || d.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
     }, [e, n, t]);
     let h = l.useMemo(() => {
         var e, n;
         let r;
-        if (!t || null == d) return null;
-        if (d.joinType === o.A.APPLY)
-            r = null != d.pendingVerificationFields ? [...d.pendingVerificationFields] : void 0;
-        else if (null != d.termRules) {
-            let e = d.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
+        if (!t || null == u) return null;
+        if (u.joinType === o.A.APPLY)
+            r = null != u.pendingVerificationFields ? [...u.pendingVerificationFields] : void 0;
+        else if (null != u.termRules) {
+            let e = u.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
             r = [
                 {
                     field_type: f.QJ.TERMS,
@@ -60,7 +60,7 @@ function v(e, t, n) {
                   formFields: r,
                   guild: null == c ? void 0 : c.guild,
               };
-    }, [t, d, c]);
+    }, [t, u, c]);
     return {
         hasFetched: r,
         verificationForm: null != h ? h : c,
@@ -70,7 +70,7 @@ function b(e, t, n) {
     let r = (0, i.e7)([c.Z], () => c.Z.getGuild(e)),
         a = (0, i.e7)([s.Z], () => s.Z.getGuild());
     return l.useMemo(
-        () => (n && (null == a ? void 0 : a.id) === e ? a : null != r ? r : null != t ? (0, d.Rj)(t) : null),
+        () => (n && (null == a ? void 0 : a.id) === e ? a : null != r ? r : null != t ? (0, u.Rj)(t) : null),
         [n, a, e, r, t],
     );
 }

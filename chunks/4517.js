@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function L(e) {
+function x(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
         className: o()(C.referenceContainer, n),
@@ -110,7 +110,7 @@ function L(e) {
         }),
     });
 }
-let j = i.forwardRef(function (e, t) {
+let M = i.forwardRef(function (e, t) {
         let { onCloseProfile: i, prompt: a } = e,
             { analyticsLocations: s } = (0, p.ZP)(),
             { trackUserProfileAction: l } = (0, b.KZ)(),
@@ -147,7 +147,7 @@ let j = i.forwardRef(function (e, t) {
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L, { children: f }),
+                (0, r.jsx)(x, { children: f }),
                 (0, r.jsx)(u.tEY, {
                     ringClassName: C.ring,
                     children: (0, r.jsx)("div", {
@@ -179,7 +179,7 @@ let j = i.forwardRef(function (e, t) {
             ],
         });
     }),
-    M = i.forwardRef(function (e, t) {
+    j = i.forwardRef(function (e, t) {
         var n, a;
         let {
                 emoji: _,
@@ -196,12 +196,12 @@ let j = i.forwardRef(function (e, t) {
             P = (0, h.p)({ location: "CustomStatusBubble" }),
             w = null != _ ? S.Hp : 0,
             D = S.hT + w,
-            x = S.YF + w,
-            j = i.useRef(null),
+            L = S.YF + w,
             M = i.useRef(null),
+            j = i.useRef(null),
             k = i.useRef(null),
             U = i.useRef(D),
-            G = i.useRef(x),
+            G = i.useRef(L),
             B = null != _ && null == p,
             [Z, F] = i.useState(!1),
             [V, H] = i.useState(!0),
@@ -211,7 +211,7 @@ let j = i.forwardRef(function (e, t) {
             [q] = i.useState(() => new c.V7());
         i.useEffect(() => () => q.stop(), [q]),
             i.useEffect(() => {
-                null == N || N.onInteractionPopoutTargetRefChange(j);
+                null == N || N.onInteractionPopoutTargetRefChange(M);
             }, [N]);
         let [X, Q] = (0, u.q_F)(() => ({
             maxHeight: "".concat(U.current, "px"),
@@ -221,19 +221,19 @@ let j = i.forwardRef(function (e, t) {
             },
         }));
         i.useLayoutEffect(() => {
-            if ((F(!0), null == M.current || null == k.current || !K)) return;
-            let e = M.current.getBoundingClientRect().height,
+            if ((F(!0), null == j.current || null == k.current || !K)) return;
+            let e = j.current.getBoundingClientRect().height,
                 t = k.current.getBoundingClientRect().height;
             W(t > e),
                 (U.current = e),
                 (G.current = t),
-                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : x), "px") });
-        }, [K, p, _, Q, V, D, x]);
+                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : L), "px") });
+        }, [K, p, _, Q, V, D, L]);
         let J = (e) => {
                 Y &&
                     (e
                         ? Q({
-                              maxHeight: "".concat(Math.min(G.current, x), "px"),
+                              maxHeight: "".concat(Math.min(G.current, L), "px"),
                               delay: z ? 0 : S.zS,
                               config: {
                                   clamp: !0,
@@ -276,7 +276,7 @@ let j = i.forwardRef(function (e, t) {
                       }),
             en = null == ee || "" === p ? et : ee,
             er = (0, r.jsxs)("div", {
-                ref: M,
+                ref: j,
                 className: C.content,
                 children: [$, en],
             }),
@@ -297,7 +297,7 @@ let j = i.forwardRef(function (e, t) {
                     }),
                 }),
             }),
-            eo = (0, r.jsxs)(L, {
+            eo = (0, r.jsxs)(x, {
                 children: [er, ei],
             });
         return null == O
@@ -307,7 +307,7 @@ let j = i.forwardRef(function (e, t) {
                       (0, r.jsx)(u.tEY, {
                           ringClassName: C.ring,
                           children: (0, r.jsxs)("div", {
-                              ref: j,
+                              ref: M,
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(C.container, g),
@@ -335,7 +335,7 @@ let j = i.forwardRef(function (e, t) {
                       (0, r.jsx)(u.tEY, {
                           ringClassName: C.ring,
                           children: (0, r.jsxs)("div", {
-                              ref: j,
+                              ref: M,
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(C.container, g),
@@ -349,7 +349,7 @@ let j = i.forwardRef(function (e, t) {
                               },
                               onBlur: (e) => {
                                   var t;
-                                  (null == (t = j.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), J(!1));
+                                  (null == (t = M.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), J(!1));
                               },
                               onMouseEnter: () => {
                                   R({ action: "HOVER_CUSTOM_STATUS" }), O(!0), J(!0);
@@ -368,7 +368,7 @@ let j = i.forwardRef(function (e, t) {
             s = D(e, ["emoji", "text", "onCloseProfile"]);
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
-            M,
+            j,
             w(R({}, s), {
                 ref: t,
                 emoji: n,
@@ -405,29 +405,29 @@ function U(e) {
             },
             [m],
         ),
-        x = (e) =>
+        L = (e) =>
             null == e
                 ? null
                 : null != e.id
                   ? "`" + ":".concat(e.name, ":") + "`"
                   : g.ZP.translateSurrogatesToInlineEmoji(e.name),
-        L = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
-        j = () => {
-            let e = x(t);
-            return null == n ? e : L(e, n);
+        x = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
+        M = () => {
+            let e = L(t);
+            return null == n ? e : x(e, n);
         };
     return (0, r.jsx)(O.Z, {
         user: a,
         guildId: o,
         channelId: s,
         themeType: l,
-        sourceDetails: j(),
+        sourceDetails: M(),
         sourceType: T.n_.STATUS,
         onAction: u,
         onClose: () => N(!1),
         children: () =>
             (0, r.jsx)(
-                M,
+                j,
                 w(R({}, c), {
                     ref: E,
                     emoji: t,
@@ -479,7 +479,7 @@ let G = i.forwardRef(function (e, t) {
         return (0, r.jsx)(p.Gt, {
             value: b,
             children: (0, r.jsx)(
-                M,
+                j,
                 R(
                     {
                         emoji: e,
@@ -500,7 +500,7 @@ let G = i.forwardRef(function (e, t) {
             ? (0, r.jsx)(p.Gt, {
                   value: b,
                   children: (0, r.jsx)(
-                      j,
+                      M,
                       R(
                           {
                               onCloseProfile: o,
@@ -545,7 +545,7 @@ let G = i.forwardRef(function (e, t) {
                 : (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          M,
+                          j,
                           R(
                               {
                                   emoji: I,

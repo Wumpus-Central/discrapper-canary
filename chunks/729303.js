@@ -13,11 +13,11 @@ n.d(t, { Z: () => s }),
     n(644351),
     n(146733);
 var r,
-    l,
-    i = n(442837),
+    i,
+    l = n(442837),
     a = n(570140);
 let o = new Map();
-class u extends (r = i.ZP.Store) {
+class c extends (r = l.ZP.Store) {
     getUsers() {
         return o;
     }
@@ -28,15 +28,15 @@ class u extends (r = i.ZP.Store) {
         return !0;
     }
 }
-(l = "displayName") in u
-    ? Object.defineProperty(u, l, {
+(i = "displayName") in c
+    ? Object.defineProperty(c, i, {
           value: "TransientKeyStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (u[l] = "TransientKeyStore");
-let s = new u(a.Z, {
+    : (c[i] = "TransientKeyStore");
+let s = new c(a.Z, {
     CONNECTION_OPEN: function () {
         o.clear();
     },

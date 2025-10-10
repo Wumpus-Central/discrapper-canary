@@ -2,22 +2,22 @@ n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(279881),
-    s = n(383124),
+    s = n(279881),
+    a = n(383124),
     o = n(388032),
     c = n(661656);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: m, tryFetchTopGames: g } = (0, a.I)(),
-        p = m.get(t),
-        [h, f] = i.useState(!1);
+        { topGames: g, tryFetchTopGames: m } = (0, s.I)(),
+        p = g.get(t),
+        [f, h] = i.useState(!1);
     i.useEffect(() => {
-        f(!0),
-            g(t).finally(() => {
-                f(!1);
+        h(!0),
+            m(t).finally(() => {
+                h(!1);
             });
-    }, [t, g]);
-    let b = i.useMemo(
+    }, [t, m]);
+    let x = i.useMemo(
             () =>
                 null == p
                     ? []
@@ -26,15 +26,15 @@ function d(e) {
                           .sort((e, t) => p[t].score - p[e].score),
             [p, n],
         ),
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
             [d, n],
         );
-    return h && null == p
+    return f && null == p
         ? (0, r.jsx)(l.$jN, {})
-        : null == b || 0 === b.length
+        : null == x || 0 === x.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,13 +49,13 @@ function d(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: c.gamesList,
-                                children: b.map((e) =>
+                                children: x.map((e) =>
                                     (0, r.jsx)(
-                                        s.Z,
+                                        a.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,
-                                            onClick: x,
+                                            onClick: b,
                                             disabled: u,
                                         },
                                         e,

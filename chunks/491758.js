@@ -267,7 +267,7 @@ function D() {
                             value: P.frameRate,
                             options: B,
                         }),
-                        (0, r.jsx)(l.NIc, {
+                        (0, r.jsx)(l.gNt, {
                             label: A.intl.string(A.t.pf54ER),
                             description: A.intl.string(A.t["QyB/jI"]),
                             layout: "horizontal",

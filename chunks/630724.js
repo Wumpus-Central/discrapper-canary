@@ -1,16 +1,16 @@
 n.d(t, {
     EW: () => h,
     FF: () => c,
-    MK: () => a,
+    MK: () => o,
     X2: () => d,
     mx: () => u,
 });
 var r,
     i,
     l,
-    o,
     s,
-    a =
+    a,
+    o =
         (((r = {}).UNKNOWN = "unknown"),
         (r.ANY = "any"),
         (r.INVITE = "invite"),
@@ -22,16 +22,16 @@ var r,
     c = (((i = {}).AGE_GATE = "age_gate"), (i.AGE_GATE_UNDERAGE = "age_gate_underage"), i),
     u = (((l = {}).CLAIM_ACCOUNT = "claim_account"), (l.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), l),
     d =
-        (((o = {}).GUILD_TEMPLATES = "guild_templates"),
-        (o.GUILD_CREATE = "guild_create"),
-        (o.CREATION_INTENT = "creation_intent"),
-        (o.CHANNEL_PROMPT = "channel_prompt"),
-        (o.JOIN_GUILD = "join_guild"),
-        (o.SUCCESS = "create_success"),
-        o),
+        (((s = {}).GUILD_TEMPLATES = "guild_templates"),
+        (s.GUILD_CREATE = "guild_create"),
+        (s.CREATION_INTENT = "creation_intent"),
+        (s.CHANNEL_PROMPT = "channel_prompt"),
+        (s.JOIN_GUILD = "join_guild"),
+        (s.SUCCESS = "create_success"),
+        s),
     h =
-        (((s = {}).NUF_STARTED = "nuf_started"),
-        (s.AGE_GATE = "age_gate"),
-        (s.NUF_COMPLETE = "nuf_complete"),
-        (s.HUB_CONNECTION = "hub_connection"),
-        s);
+        (((a = {}).NUF_STARTED = "nuf_started"),
+        (a.AGE_GATE = "age_gate"),
+        (a.NUF_COMPLETE = "nuf_complete"),
+        (a.HUB_CONNECTION = "hub_connection"),
+        a);

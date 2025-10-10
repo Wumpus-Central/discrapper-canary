@@ -1,28 +1,28 @@
 n.d(t, { Z: () => o });
 var l = n(592125),
-    r = n(430824),
-    a = n(594174),
-    s = n(981631);
-function i(e) {
+    a = n(430824),
+    r = n(594174),
+    i = n(981631);
+function s(e) {
     if (!e.isPrivate()) {
-        let t = r.Z.getGuild(e.guild_id);
-        return null != t && t.features.has(s.oNc.INTERNAL_EMPLOYEE_ONLY);
+        let t = a.Z.getGuild(e.guild_id);
+        return null != t && t.features.has(i.oNc.INTERNAL_EMPLOYEE_ONLY);
     }
     return e.recipients.every((e) => {
-        let t = a.default.getUser(e);
+        let t = r.default.getUser(e);
         return null != t && t.isStaff();
     });
 }
 function o(e, t) {
     var n;
-    if (!(null == (n = a.default.getCurrentUser()) ? void 0 : n.isStaff())) return !1;
-    let r = l.Z.getChannel(e.channel_id);
+    if (!(null == (n = r.default.getCurrentUser()) ? void 0 : n.isStaff())) return !1;
+    let a = l.Z.getChannel(e.channel_id);
     return (
-        null != r &&
-        !!i(r) &&
+        null != a &&
+        !!s(a) &&
         t.some((e) => {
             let t = l.Z.getChannel(e);
-            return !(null == t || t.isPrivate()) && !i(t);
+            return !(null == t || t.isPrivate()) && !s(t);
         })
     );
 }

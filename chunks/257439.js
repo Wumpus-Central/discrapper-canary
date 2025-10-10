@@ -1,34 +1,34 @@
-n.d(t, { Y: () => u });
-var r = n(521548),
-    i = n(476098),
-    o = n(156755);
-function a(e, t, n) {
+e.d(n, { Y: () => u });
+var r = e(521548),
+    o = e(476098),
+    i = e(156755);
+function a(t, n, e) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in t
+            ? Object.defineProperty(t, n, {
+                  value: e,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
-        e
+            : (t[n] = e),
+        t
     );
 }
 var u = (function () {
-    var e;
-    function t(e) {
-        var n = this;
-        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+    var t;
+    function n(t) {
+        var e = this;
+        if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
         a(
             this,
             "hooks",
-            (0, i.p)({
-                dropTarget: function (e, t) {
-                    n.clearDropTarget(),
-                        (n.dropTargetOptions = t),
-                        (0, o.d)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e),
-                        n.reconnect();
+            (0, o.p)({
+                dropTarget: function (t, n) {
+                    e.clearDropTarget(),
+                        (e.dropTargetOptions = n),
+                        (0, i.d)(t) ? (e.dropTargetRef = t) : (e.dropTargetNode = t),
+                        e.reconnect();
                 },
             }),
         ),
@@ -41,10 +41,10 @@ var u = (function () {
             a(this, "lastConnectedDropTarget", null),
             a(this, "lastConnectedDropTargetOptions", null),
             a(this, "backend", void 0),
-            (this.backend = e);
+            (this.backend = t);
     }
     return (
-        (e = [
+        (t = [
             {
                 key: "connectTarget",
                 get: function () {
@@ -54,21 +54,21 @@ var u = (function () {
             {
                 key: "reconnect",
                 value: function () {
-                    var e = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
-                    e && this.disconnectDropTarget();
-                    var t = this.dropTarget;
+                    var t = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
+                    t && this.disconnectDropTarget();
+                    var n = this.dropTarget;
                     if (this.handlerId) {
-                        if (!t) {
-                            this.lastConnectedDropTarget = t;
+                        if (!n) {
+                            this.lastConnectedDropTarget = n;
                             return;
                         }
-                        e &&
+                        t &&
                             ((this.lastConnectedHandlerId = this.handlerId),
-                            (this.lastConnectedDropTarget = t),
+                            (this.lastConnectedDropTarget = n),
                             (this.lastConnectedDropTargetOptions = this.dropTargetOptions),
                             (this.unsubscribeDropTarget = this.backend.connectDropTarget(
                                 this.handlerId,
-                                t,
+                                n,
                                 this.dropTargetOptions,
                             )));
                     }
@@ -76,8 +76,8 @@ var u = (function () {
             },
             {
                 key: "receiveHandlerId",
-                value: function (e) {
-                    e !== this.handlerId && ((this.handlerId = e), this.reconnect());
+                value: function (t) {
+                    t !== this.handlerId && ((this.handlerId = t), this.reconnect());
                 },
             },
             {
@@ -85,8 +85,8 @@ var u = (function () {
                 get: function () {
                     return this.dropTargetOptionsInternal;
                 },
-                set: function (e) {
-                    this.dropTargetOptionsInternal = e;
+                set: function (t) {
+                    this.dropTargetOptionsInternal = t;
                 },
             },
             {
@@ -126,15 +126,15 @@ var u = (function () {
                 },
             },
         ]),
-        (function (e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
+        (function (t, n) {
+            for (var e = 0; e < n.length; e++) {
+                var r = n[e];
                 (r.enumerable = r.enumerable || !1),
                     (r.configurable = !0),
                     "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                    Object.defineProperty(t, r.key, r);
             }
-        })(t.prototype, e),
-        t
+        })(n.prototype, t),
+        n
     );
 })();

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(28664),
     d = n(481060),
     u = n(142497),
-    m = n(338327),
-    g = n(496675),
+    g = n(338327),
+    m = n(496675),
     p = n(63063),
     f = n(981631),
     h = n(190378),
@@ -141,7 +141,7 @@ let N = [
             [n, l] = i.useState(0),
             [s, v] = i.useState(0),
             [C, O] = i.useState(),
-            S = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.ADMINISTRATOR, t)),
+            S = (0, a.e7)([m.Z], () => m.Z.can(f.Plq.ADMINISTRATOR, t)),
             T = null == C ? void 0 : C.offsetWidth,
             P = null == C ? void 0 : C.offsetHeight;
         return (
@@ -218,7 +218,7 @@ let N = [
                                 variant: "primary",
                                 text: x.intl.string(x.t.LhlgY2),
                                 onClick: () => {
-                                    m.Z.open();
+                                    g.Z.open();
                                 },
                                 disabled: !S,
                             }),

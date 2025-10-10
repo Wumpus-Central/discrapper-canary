@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     var { id: t, label: n, selected: a, handleTransition: i } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -79,7 +79,7 @@ function _(e) {
         })(e, ["id", "label", "selected", "handleTransition"]);
     return (0, r.jsx)(
         d.Z.Title,
-        f(g({}, s), {
+        _(g({}, s), {
             onClick: () => i(t),
             wrapperClassName: h.tabWrapper,
             className: l()(h.tab, { [h.selected]: a }),
@@ -107,7 +107,7 @@ function b(e) {
             let { isShown: n } = t;
             return (0, r.jsxs)(
                 d.Z.Title,
-                f(g({}, e), {
+                _(g({}, e), {
                     ref: c,
                     wrapperClassName: h.tabWrapper,
                     className: l()(h.tab, h.more, { [h.selected]: s }),
@@ -128,7 +128,7 @@ function x(e) {
         m = a.useRef(u),
         {
             lastVisibleIndex: g,
-            onItemLayout: f,
+            onItemLayout: _,
             overflowItemsRef: x,
             itemWidthsRef: v,
         } = (0, s.zP)({
@@ -151,8 +151,8 @@ function x(e) {
             [v, d],
         );
     (0, c.s)(y, I);
-    let O = 0 !== u,
-        S = j.some((e) => e.id === n);
+    let S = 0 !== u,
+        P = j.some((e) => e.id === n);
     return (0, r.jsxs)("div", {
         className: l()(h.container, t),
         ref: y,
@@ -165,9 +165,9 @@ function x(e) {
                             s.AJ,
                             {
                                 index: t,
-                                onItemLayout: f,
+                                onItemLayout: _,
                                 children: (0, r.jsx)(
-                                    _,
+                                    f,
                                     {
                                         id: e.id,
                                         label: e.label,
@@ -186,18 +186,18 @@ function x(e) {
                             tabs: j,
                             onTabSelect: o,
                             selectedTab: n,
-                            selected: S,
+                            selected: P,
                         }),
                     }),
                 ],
             }),
-            O &&
+            S &&
                 (0, r.jsxs)("div", {
                     className: h.tabs,
                     children: [
                         C.map((e) =>
                             (0, r.jsx)(
-                                _,
+                                f,
                                 {
                                     id: e.id,
                                     label: e.label,
@@ -212,7 +212,7 @@ function x(e) {
                                   tabs: j,
                                   onTabSelect: o,
                                   selectedTab: n,
-                                  selected: S,
+                                  selected: P,
                               })
                             : null,
                     ],

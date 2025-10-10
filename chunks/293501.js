@@ -62,8 +62,8 @@ let f = (function (e) {
 function m(e, n, t) {
     let [i, u] = a.useState(null),
         [c, d] = a.useState(null),
-        [m, h] = a.useState(1),
-        { setMaxVolume: g } = (0, r.p)(),
+        [m, g] = a.useState(1),
+        { setMaxVolume: h } = (0, r.p)(),
         p = a.useCallback(
             (e, n) => {
                 var a;
@@ -75,7 +75,7 @@ function m(e, n, t) {
                                 let {
                                     data: { waveform: t, id: a, normalizedVolumeMultipler: l },
                                 } = e;
-                                i === a && (n(t), h(l)), null == s || s.removeEventListener("message", r);
+                                i === a && (n(t), g(l)), null == s || s.removeEventListener("message", r);
                             };
                         null == s || s.addEventListener("message", r),
                             null == s ||
@@ -97,8 +97,8 @@ function m(e, n, t) {
             i !== a && (u(a), p(e, n));
         }, [e, p, n, t, i]),
         a.useEffect(() => {
-            g(m);
-        }, [m, g]),
+            h(m);
+        }, [m, h]),
         c
     );
 }

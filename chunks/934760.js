@@ -1,17 +1,17 @@
 n.d(t, { Z: () => i });
 var r = n(647438),
     l = n(557816),
-    a = n.n(l),
-    s = n(597688);
+    s = n.n(l),
+    a = n(597688);
 function i() {
     return (0, r.useCallback)(
         (e) =>
-            a()(
+            s()(
                 e
                     .map((e) => {
-                        let t = s.Z.getProduct(e);
+                        let t = a.Z.getProduct(e);
                         return null != t && null != t.variantGroupStoreListingId
-                            ? s.Z.getProductByStoreListingId(t.variantGroupStoreListingId)
+                            ? a.Z.getProductByStoreListingId(t.variantGroupStoreListingId)
                             : t;
                     })
                     .filter((e) => null != e),

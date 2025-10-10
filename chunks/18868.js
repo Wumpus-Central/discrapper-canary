@@ -1,8 +1,8 @@
 n.d(t, { L: () => h }), n(388685);
 var a = n(951288),
     r = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(310752),
     c = n(897842),
@@ -51,22 +51,22 @@ let m = () => {
             { modalKey: c.A },
         );
     },
-    x = (e) => {
+    p = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
     h = (e) => {
         let { className: t, onDrop: n } = e,
-            [l, h] = r.useState(!1),
-            p = r.useRef(null),
+            [i, h] = r.useState(!1),
+            x = r.useRef(null),
             f = r.useCallback((e) => {
-                x(e), h(!0), (0, s.Mr3)(c.A);
+                p(e), h(!0), (0, s.Mr3)(c.A);
             }, []),
-            v = r.useCallback((e) => {
-                x(e), h(!1);
+            b = r.useCallback((e) => {
+                p(e), h(!1);
             }, []),
-            b = r.useCallback(
+            g = r.useCallback(
                 async (e) => {
-                    x(e), h(!1);
+                    p(e), h(!1);
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let a = await Promise.all(
@@ -80,13 +80,13 @@ let m = () => {
                 [n],
             );
         return (0, a.jsx)("div", {
-            ref: p,
-            className: i()(t, u.uploadArea),
+            ref: x,
+            className: l()(t, u.uploadArea),
             onDragEnter: f,
-            onDragLeave: v,
-            onDrop: b,
+            onDragLeave: b,
+            onDrop: g,
             children: (0, a.jsx)("div", {
-                className: i()(u.uploadModal, { [u.droppable]: l }),
+                className: l()(u.uploadModal, { [u.droppable]: i }),
                 children: (0, a.jsxs)("div", {
                     className: u.inner,
                     children: [

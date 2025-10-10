@@ -1,18 +1,18 @@
 n.d(t, {
-    Nd: () => a,
+    Nd: () => o,
     ni: () => s,
 });
 var r = n(951288),
-    l = n(647438);
-let i = l.createContext(null);
-function a() {
-    return l.useContext(i);
+    i = n(647438);
+let a = i.createContext(null);
+function o() {
+    return i.useContext(a);
 }
 function s(e) {
     let { tab: t, children: n } = e,
-        a = l.useMemo(() => ({ tab: t }), [t]);
-    return (0, r.jsx)(i.Provider, {
-        value: a,
+        o = i.useMemo(() => ({ tab: t }), [t]);
+    return (0, r.jsx)(a.Provider, {
+        value: o,
         children: n,
     });
 }

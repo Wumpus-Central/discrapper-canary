@@ -18,7 +18,7 @@ var i = n(120356),
     E = n(981631),
     b = n(671955),
     y = n(388032),
-    O = n(670563);
+    O = n(448239);
 function v(e) {
     let {
             user: t,
@@ -37,8 +37,8 @@ function v(e) {
             pendingProfileEffect: D,
             pendingLegacyUsernameDisabled: L,
             pendingDisplayNameStyles: x,
-            avatarClassName: j,
-            containerClassName: M,
+            avatarClassName: M,
+            containerClassName: j,
             isTryItOutFlow: k = !1,
             disabledInputs: U = !1,
             hideCustomStatus: G = !1,
@@ -73,7 +73,7 @@ function v(e) {
             displayProfile: W,
             themeType: b.l.POPOUT,
             pendingThemeColors: w,
-            className: a()(O.container, M),
+            className: a()(O.container, j),
             forceShowPremium: i,
             children: [
                 (0, r.jsxs)("div", {
@@ -99,7 +99,7 @@ function v(e) {
                             previewAvatarDecoration: z,
                             previewTheme: X,
                             previewPrimaryColor: Q,
-                            className: j,
+                            className: M,
                             disabledInputs: U,
                             isTryItOutFlow: k,
                             onUpsellClick: () => (null == v ? void 0 : v({ object: E.qAy.AVATAR })),

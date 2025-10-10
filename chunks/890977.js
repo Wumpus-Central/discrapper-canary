@@ -1,6 +1,6 @@
 n.d(t, { b: () => y }), n(49124);
-var r,
-    i,
+var i,
+    r,
     l = n(951288),
     a = n(647438),
     o = n(120356),
@@ -17,10 +17,10 @@ function g(e) {
         n = a.useRef(null);
     return (
         a.useEffect(() => {
-            let r;
+            let i;
             return (
                 null != n.current &&
-                    (r = u().loadAnimation({
+                    (i = u().loadAnimation({
                         container: n.current,
                         renderer: "svg",
                         loop: !0,
@@ -28,7 +28,7 @@ function g(e) {
                         animationData: JSON.parse(JSON.stringify(e)),
                     })),
                 () => {
-                    null == r || r.destroy();
+                    null == i || i.destroy();
                 }
             );
         }, [n, t, e]),
@@ -38,19 +38,19 @@ function g(e) {
 function b(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
-        ref: g(r || (r = n.t(h, 2))),
+        ref: g(i || (i = n.t(h, 2))),
         className: s()(m.glow, t),
     });
 }
-function _(e) {
+function C(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
-        ref: g(i || (i = n.t(f, 2))),
+        ref: g(r || (r = n.t(f, 2))),
         className: s()(m.trinkets, t),
     });
 }
 let y = (e) => {
-    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: o } = e;
+    let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: r, onMount: o } = e;
     return (
         a.useEffect(() => {
             o();
@@ -58,13 +58,13 @@ let y = (e) => {
         (0, l.jsxs)("div", {
             className: n,
             children: [
-                (0, l.jsx)(b, { className: r }),
+                (0, l.jsx)(b, { className: i }),
                 (0, l.jsx)("div", { className: m.circleLayer }),
                 (0, l.jsx)("div", {
                     className: m.entrypoint,
                     children: t,
                 }),
-                (0, l.jsx)(_, { className: i }),
+                (0, l.jsx)(C, { className: r }),
             ],
         })
     );

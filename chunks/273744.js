@@ -4,8 +4,8 @@ var r,
     l = n(951288);
 n(647438);
 var a = n(159635),
-    s = n.n(a),
-    o = n(481060);
+    o = n.n(a),
+    s = n(481060);
 let c =
     ((r = (function (e) {
         for (var t = 1; t < arguments.length; t++) {
@@ -31,11 +31,11 @@ let c =
                 });
         }
         return e;
-    })({}, s().defaultRules.link)),
+    })({}, o().defaultRules.link)),
     (i = i =
         {
             react: function (e, t, n) {
-                return (0, l.jsx)(o.eee, {
+                return (0, l.jsx)(s.eee, {
                     href: e.target,
                     target: "_blank",
                     children: t(e.content, n),

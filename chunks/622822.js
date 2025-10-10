@@ -6,11 +6,11 @@ n.d(t, {
     RW: () => H,
     Y3: () => q,
     Yt: () => R,
-    _I: () => x,
+    _I: () => L,
     _t: () => K,
     a1: () => G,
     bN: () => N,
-    dl: () => M,
+    dl: () => j,
     ft: () => z,
     hO: () => P,
     kH: () => U,
@@ -23,7 +23,7 @@ var r = n(442837),
     i = n(480916),
     a = n(453679),
     o = n(81643),
-    s = n(500496),
+    s = n(888429),
     l = n(128064),
     c = n(601964),
     u = n(592125),
@@ -117,10 +117,10 @@ function D(e) {
         n = (0, o.Jm)();
     return t && n && (null == e ? void 0 : e.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD));
 }
-function x(e) {
-    return null != e && L(f.Z.getGuild(e));
-}
 function L(e) {
+    return null != e && x(f.Z.getGuild(e));
+}
+function x(e) {
     return (
         null != e &&
         (0, a.u)("age_verification_utils") &&
@@ -128,13 +128,13 @@ function L(e) {
         e.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD)
     );
 }
-function j(e) {
+function M(e) {
     let t = (0, r.e7)([f.Z], () => f.Z.getGuild(e)),
         n = (0, a.z)("age_verification_utils"),
         i = (0, o.L5)();
     return null != t && n && i && t.features.has(E.oNc.AGE_VERIFICATION_LARGE_GUILD);
 }
-function M() {
+function j() {
     let e = (0, l.c_)("age-gate-utils"),
         t = (0, a.u)("age-gate-utils"),
         n = (0, o.sf)();
@@ -149,7 +149,7 @@ function k() {
 function U(e) {
     let t = (0, o.l6)(),
         n = (0, c.Y2)(e),
-        a = j(null == e ? void 0 : e.id),
+        a = M(null == e ? void 0 : e.id),
         s = (0, r.e7)([_.default], () => {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
@@ -243,7 +243,7 @@ function G(e) {
 let B = () => {
         let e = _.default.getCurrentUser();
         if (null == e) return !1;
-        let t = M();
+        let t = j();
         return !0 !== e.nsfwAllowed || t;
     },
     Z = (e) => {
@@ -259,7 +259,7 @@ let B = () => {
         );
     },
     F = (e) => !!B() && null != e && q(u.Z.getChannel(e)),
-    V = (e) => M() && F(e),
+    V = (e) => j() && F(e),
     H = (e) => !!V(e) && ((0, m.mN)(g.L0.NSFW_VOICE_CHANNEL), !0);
 function Y(e, t, n) {
     if (P(e)) return void (0, m.mN)(g.L0.ACCESS_LARGE_GUILD_UNDERAGE);
@@ -268,7 +268,7 @@ function Y(e, t, n) {
         (0, m.mN)(e);
         return;
     }
-    return x(e)
+    return L(e)
         ? void (0, m.mN)(g.L0.LARGE_GUILD)
         : Q() && F(t)
           ? void (0, m.mN)(null != n ? n : g.L0.NSFW_CHANNEL)
@@ -305,7 +305,7 @@ function q(e) {
         }) &&
             (0, c.Y2)(h) &&
             u) ||
-            (L(h) && a))
+            (x(h) && a))
     );
 }
 function X(e) {
@@ -315,7 +315,7 @@ function X(e) {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        a = j(null == e ? void 0 : e.guild_id),
+        a = M(null == e ? void 0 : e.guild_id),
         u = (0, l.pY)("age-gate-utils"),
         p = (0, s.j0)({
             guildId: null == e ? void 0 : e.guild_id,

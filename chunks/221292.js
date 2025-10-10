@@ -1,5 +1,5 @@
 n.d(t, {
-    Er: () => j,
+    Er: () => M,
     NE: () => P,
     Of: () => L,
     QN: () => A,
@@ -355,7 +355,7 @@ let v = (e) => {
                 }),
             );
     },
-    j = (e) => {
+    M = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, wishlistId: o, skuId: s } = e;
         C(O(b({}, e), { action: a })),
             u.default.track(

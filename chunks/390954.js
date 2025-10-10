@@ -97,7 +97,7 @@ class I extends (r = a.PureComponent) {
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      r > 0 && !a ? (0, i.jsx)(c.$i$, { className: E.__invalid_sourceDivider }) : null,
+                      r > 0 && !a ? (0, i.jsx)(c.izJ, { className: E.__invalid_sourceDivider }) : null,
                       (0, i.jsxs)("div", {
                           className: E.paymentSourceRow,
                           children: [
@@ -226,7 +226,7 @@ class T extends a.PureComponent {
                     }),
                 }),
                 f,
-                d !== l.length - 1 ? (0, i.jsx)(c.$i$, { className: E.__invalid_sourceDivider }) : null,
+                d !== l.length - 1 ? (0, i.jsx)(c.izJ, { className: E.__invalid_sourceDivider }) : null,
                 this.renderFooter(),
             ],
         });

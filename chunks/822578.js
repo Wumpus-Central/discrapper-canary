@@ -1,5 +1,5 @@
 a.d(e, {
-    R: () => I,
+    R: () => u,
     U0: () => d,
 });
 var r = a(394798),
@@ -11,10 +11,10 @@ var r = a(394798),
     E = a(263449),
     s = a(574054),
     l = a(307854),
-    u = a(396234);
-function I(t, e, a, I, d, N) {
-    var A, f;
-    let { normalizeDepth: T = 3, normalizeMaxBreadth: L = 1000 } = t,
+    I = a(396234);
+function u(t, e, a, u, d, N) {
+    var A, T;
+    let { normalizeDepth: f = 3, normalizeMaxBreadth: L = 1000 } = t,
         p = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
@@ -33,7 +33,7 @@ function I(t, e, a, I, d, N) {
         E && E.url && (E.url = (0, n.$G)(E.url, o));
     })(p, t),
         (A = p),
-        (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
+        (T = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...T])),
         d && d.emit("applyFrameMetadata", e),
         void 0 === e.type &&
             (function (t, e) {
@@ -67,20 +67,20 @@ function I(t, e, a, I, d, N) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
         return a.update(e), a;
-    })(I, a.captureContext);
+    })(u, a.captureContext);
     a.mechanism && (0, r.EG)(p, a.mechanism);
     let P = d ? d.getEventProcessors() : [],
         g = (0, E.lW)().getScopeData();
     if (N) {
         let t = N.getScopeData();
-        (0, u.yo)(g, t);
+        (0, I.yo)(g, t);
     }
     if (O) {
         let t = O.getScopeData();
-        (0, u.yo)(g, t);
+        (0, I.yo)(g, t);
     }
     let D = [...(a.attachments || []), ...g.attachments];
-    D.length && (a.attachments = D), (0, u.gi)(p, g);
+    D.length && (a.attachments = D), (0, I.gi)(p, g);
     let C = [...P, ...g.eventProcessors];
     return (0, s.R)(C, p, a).then((t) =>
         (t &&
@@ -106,7 +106,7 @@ function I(t, e, a, I, d, N) {
                     });
                 });
             })(t),
-        "number" == typeof T && T > 0)
+        "number" == typeof f && f > 0)
             ? (function (t, e, a) {
                   if (!t) return null;
                   let r = {
@@ -134,7 +134,7 @@ function I(t, e, a, I, d, N) {
                           }))),
                       r
                   );
-              })(t, T, L)
+              })(t, f, L)
             : t,
     );
 }

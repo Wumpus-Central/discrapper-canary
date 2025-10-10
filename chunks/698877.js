@@ -1,6 +1,6 @@
 n.d(t, { O: () => s });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(864094),
     a = n(871499),
     o = n(388032);
@@ -19,23 +19,23 @@ function s(e) {
         g = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, [
             "hasPermission",
             "streamActive",
@@ -54,32 +54,32 @@ function s(e) {
         : s
           ? o.intl.string(o.t.fjBNo6)
           : o.intl.string(o.t.uQn9Bw);
-    let { Component: _, events: y, play: C } = (0, l.P)(c ? "disable" : "enable");
+    let { Component: C, events: y, play: _ } = (0, l.P)(c ? "disable" : "enable");
     return (
-        i.useEffect(() => () => C(), [c, C]),
-        (0, r.jsx)(
+        r.useEffect(() => () => _(), [c, _]),
+        (0, i.jsx)(
             b,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
@@ -89,7 +89,7 @@ function s(e) {
                     isTrayButton: !0,
                     label: t,
                     disabled: !s,
-                    iconComponent: _,
+                    iconComponent: C,
                     isActive: c,
                     color: (f ? (n = "premiumGradient") : c && (n = "green"), n),
                     onMouseEnter: (e) => {

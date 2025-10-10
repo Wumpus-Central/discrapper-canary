@@ -1,25 +1,25 @@
-t.d(n, { Z: () => c });
-var r,
-    i,
-    a = t(442837),
-    s = t(570140);
-let l = {};
-class o extends (i = a.ZP.Store) {
+r.d(t, { Z: () => s });
+var n,
+    l,
+    a = r(442837),
+    o = r(570140);
+let c = {};
+class i extends (l = a.ZP.Store) {
     getEULA(e) {
-        return l[e];
+        return c[e];
     }
 }
-(r = "displayName") in o
-    ? Object.defineProperty(o, r, {
+(n = "displayName") in i
+    ? Object.defineProperty(i, n, {
           value: "EULAStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (o[r] = "EULAStore");
-let c = new o(s.Z, {
+    : (i[n] = "EULAStore");
+let s = new i(o.Z, {
     EULA_FETCH_SUCCESS: function (e) {
-        let { eula: n } = e;
-        l[n.id] = n;
+        let { eula: t } = e;
+        c[t.id] = t;
     },
 });

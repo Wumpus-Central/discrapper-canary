@@ -1,28 +1,28 @@
 n.d(t, { Z: () => b });
 var l = n(951288),
-    i = n(647438),
-    a = n(442837),
+    a = n(647438),
+    i = n(442837),
     r = n(481060),
     s = n(838968),
     o = n(880419),
-    u = n(693587),
-    c = n(943970),
+    c = n(693587),
+    u = n(943970),
     d = n(967647),
     m = n(989308),
     v = n(388032),
     g = n(961820);
 function f(e) {
-    let { guildId: t, gameInstance: n, cost: i } = e;
+    let { guildId: t, gameInstance: n, cost: a } = e;
     return (0, l.jsx)(r.ua7, {
         "aria-label": v.intl.string(m.default.TZsu1d),
-        text: (0, l.jsx)(o.Po, { cost: i }),
+        text: (0, l.jsx)(o.Po, { cost: a }),
         children: (e) => {
-            var a, s;
+            var i, s;
             return (0, l.jsx)("div", {
                 className: g.disableButton,
                 children: (0, l.jsx)(
                     r.zxk,
-                    ((a = (function (e) {
+                    ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 l = Object.keys(n);
@@ -53,7 +53,7 @@ function f(e) {
                                 type: "icon",
                                 asset: r.mTd,
                             },
-                            text: i.toString(),
+                            text: a.toString(),
                             variant: "secondary",
                             size: "sm",
                             "aria-label": v.intl.string(m.default.TZsu1d),
@@ -62,7 +62,7 @@ function f(e) {
                             },
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -71,9 +71,9 @@ function f(e) {
                               }
                               return n;
                           })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    a),
+                    i),
                 ),
             });
         },
@@ -82,13 +82,13 @@ function f(e) {
 function b(e) {
     var t, n, o, d;
     let { guildId: b, gameInstance: p, onClick: j } = e,
-        x = (0, a.e7)([u.Z], () => u.Z.getStateForGuild(b)),
-        y = i.useMemo(() => {
+        x = (0, i.e7)([c.Z], () => c.Z.getStateForGuild(b)),
+        y = a.useMemo(() => {
             var e;
             return null == x || null == (e = x.entitlements) ? void 0 : e[p.entitlementId];
         }, [null == x ? void 0 : x.entitlements, p.entitlementId]),
-        h = (null == y ? void 0 : y.ends_at) != null,
-        O =
+        O = (null == y ? void 0 : y.ends_at) != null,
+        h =
             null == y ||
             null == (d = y.sku) ||
             null == (o = d.tenant_metadata) ||
@@ -96,8 +96,8 @@ function b(e) {
             null == (t = n.game_server)
                 ? void 0
                 : t.boost_price,
-        P = (0, c.Z)(p.gameId, "icon");
-    return null == O
+        P = (0, u.Z)(p.gameId, "icon");
+    return null == h
         ? null
         : (0, l.jsxs)(r.P3F, {
               className: g.game,
@@ -115,7 +115,7 @@ function b(e) {
                               variant: "heading-sm/semibold",
                               children: p.name,
                           }),
-                          h
+                          O
                               ? (0, l.jsx)(s.rL, { dateString: y.ends_at })
                               : (0, l.jsx)(s.P2, { text: v.intl.string(m.default.FFLkm5) }),
                       ],
@@ -123,7 +123,7 @@ function b(e) {
                   (0, l.jsx)(f, {
                       guildId: b,
                       gameInstance: p,
-                      cost: O,
+                      cost: h,
                   }),
               ],
           });

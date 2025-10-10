@@ -1,7 +1,7 @@
-var n;
+var r;
 function i() {
     return (
-        n || ((n = new Image()).src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="), n
+        r || ((r = new Image()).src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="), r
     );
 }
-r.d(t, { r: () => i });
+n.d(t, { r: () => i });

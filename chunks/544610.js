@@ -1,6 +1,6 @@
-let r;
+let i;
 n.d(t, { Z: () => U }), n(388685), n(781311), n(539854), n(642613);
-var i,
+var r,
     l,
     a = n(442837),
     o = n(570140),
@@ -14,42 +14,42 @@ var i,
     m = n(480294),
     g = n(580005),
     b = n(699516),
-    _ = n(594174),
+    C = n(594174),
     y = n(981631);
-let C = !1,
-    x = "",
-    v = 0,
+let _ = !1,
+    v = "",
+    x = 0,
     O = [],
     j = !1,
     E = new Set(),
     S = null;
-function I() {
-    (x = ""), (v = 0), (O = []), (E = new Set()), (C = !1), (S = null);
+function P() {
+    (v = ""), (x = 0), (O = []), (E = new Set()), (_ = !1), (S = null);
 }
-function P(e) {
-    (x = e), (v = 0), Z();
+function I(e) {
+    (v = e), (x = 0), Z();
 }
 function Z() {
-    if (!C) return !1;
+    if (!_) return !1;
     let e = f.Z.getChannel(S);
-    if (0 === x.trim().length)
+    if (0 === v.trim().length)
         return (
-            null != r && r.clearQuery(),
+            null != i && i.clearQuery(),
             (O = (function (e) {
                 let t = b.Z.getFriendIDs(),
-                    n = _.default.getCurrentUser();
+                    n = C.default.getCurrentUser();
                 return (
                     (null == n ? void 0 : n.isStaff()) &&
                         (t = Array.from(
                             new Set([
                                 ...t,
-                                ..._.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
+                                ...C.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
                             ]),
                         )),
                     (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
                     t
                         .reduce((e, t) => {
-                            let n = _.default.getUser(t);
+                            let n = C.default.getUser(t);
                             return (
                                 null == n ||
                                     n.isProvisional ||
@@ -66,15 +66,15 @@ function Z() {
             !0
         );
     let t = null != e ? e.recipients : [];
-    if (null != r) {
+    if (null != i) {
         var n;
-        let e = _.default.getCurrentUser(),
-            i = null != (n = null == e ? void 0 : e.isStaff()) && n;
-        r.setQuery({
-            query: x,
+        let e = C.default.getCurrentUser(),
+            r = null != (n = null == e ? void 0 : e.isStaff()) && n;
+        i.setQuery({
+            query: v,
             filters: {
                 friends: !0,
-                staff: i,
+                staff: r,
                 provisional: !1,
             },
             blacklist: t,
@@ -89,11 +89,11 @@ function Z() {
                     n = {};
                 return (
                     e.forEach((e) => {
-                        let r = g.Z.getScoreWithoutFetchingLatest(e.id),
-                            i = e.getRecipientId(),
-                            l = 0.2 * !!b.Z.isFriend(i),
-                            a = 0.1 * (null != f.Z.getDMFromUserId(i));
-                        n[i] = 1 + r / t + l + a;
+                        let i = g.Z.getScoreWithoutFetchingLatest(e.id),
+                            r = e.getRecipientId(),
+                            l = 0.2 * !!b.Z.isFriend(r),
+                            a = 0.1 * (null != f.Z.getDMFromUserId(r));
+                        n[r] = 1 + i / t + l + a;
                     }),
                     n
                 );
@@ -103,19 +103,19 @@ function Z() {
     return !1;
 }
 function T() {
-    if (!C) return !1;
+    if (!_) return !1;
     let e = j;
     return (j = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
     if (m.Z.hasConsented(y.pjP.PERSONALIZATION)) {
-        var n, r, i, l;
+        var n, i, r, l;
         let a =
-                null != (i = null == (n = u.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability)
-                    ? i
+                null != (r = null == (n = u.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability)
+                    ? r
                     : 0,
             o =
-                null != (l = null == (r = u.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability)
+                null != (l = null == (i = u.Z.getUserAffinity(t.user.id)) ? void 0 : i.communicationProbability)
                     ? l
                     : 0;
         if (a !== o) return o - a;
@@ -126,35 +126,35 @@ function N(e, t) {
 }
 function A(e) {
     let { results: t } = e;
-    if (!C || "" === x) return;
+    if (!_ || "" === v) return;
     let n = [];
-    for (let { id: e, comparator: r } of t) {
-        let t = _.default.getUser(e);
+    for (let { id: e, comparator: i } of t) {
+        let t = C.default.getUser(e);
         null != t &&
             n.push({
                 user: t,
-                comparator: r,
+                comparator: i,
             });
     }
-    (O = n), k.emitChange();
+    (O = n), D.emitChange();
 }
 function w() {
-    return null != r && (r.destroy(), (r = null)), s.Z.getUserSearchContext(A, 1000);
-}
-function R(e) {
-    if (e.key !== y.vTt) return !1;
-    (C = !0), T(), (r = w()), (S = null), P("");
+    return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
 }
 function M(e) {
     if (e.key !== y.vTt) return !1;
-    D();
+    (_ = !0), T(), (i = w()), (S = null), I("");
 }
-function D() {
-    null != r && (r.destroy(), (r = null)), I();
+function R(e) {
+    if (e.key !== y.vTt) return !1;
+    k();
 }
-class L extends (i = a.ZP.Store) {
+function k() {
+    null != i && (i.destroy(), (i = null)), P();
+}
+class L extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.default, f.Z, b.Z, c.Z, m.Z), this.syncWith([_.default, f.Z], Z), this.syncWith([b.Z], T);
+        this.waitFor(C.default, f.Z, b.Z, c.Z, m.Z), this.syncWith([C.default, f.Z], Z), this.syncWith([b.Z], T);
     }
     getResults() {
         return O;
@@ -166,12 +166,12 @@ class L extends (i = a.ZP.Store) {
         return E;
     }
     getQuery() {
-        return x;
+        return v;
     }
     getState() {
         return {
-            query: x,
-            selectedRow: v,
+            query: v,
+            selectedRow: x,
             selectedUsers: E,
             results: O,
             hasFriends: j,
@@ -186,29 +186,29 @@ class L extends (i = a.ZP.Store) {
           writable: !0,
       })
     : (L[l] = "PrivateChannelRecipientsInviteStore");
-let k = new L(o.Z, {
+let D = new L(o.Z, {
         CONNECTION_OPEN: function () {
-            I();
+            P();
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
-            let r = C;
-            return I(), (C = r), (S = n), Z();
+            let i = _;
+            return P(), (_ = i), (S = n), Z();
         },
-        MODAL_PUSH: R,
-        SHOW_ACTION_SHEET: R,
+        MODAL_PUSH: M,
+        SHOW_ACTION_SHEET: M,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (C = !0), T(), (r = w()), (S = e.channelId), P("");
+            (_ = !0), T(), (i = w()), (S = e.channelId), I("");
         },
-        MODAL_POP: M,
-        HIDE_ACTION_SHEET: M,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: D,
+        MODAL_POP: R,
+        HIDE_ACTION_SHEET: R,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (S = e.channelId), P(e.query);
+            (S = e.channelId), I(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-            v = e.row;
+            x = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
@@ -219,4 +219,4 @@ let k = new L(o.Z, {
             E.delete(t), (E = new Set(E));
         },
     }),
-    U = k;
+    U = D;

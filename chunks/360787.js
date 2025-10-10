@@ -1,6 +1,6 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
-var r,
-    i,
+n.d(t, { Z: () => C }), n(388685), n(539854);
+var i,
+    r,
     l = n(442837),
     a = n(846519),
     o = n(570140),
@@ -24,7 +24,7 @@ function m(e) {
 function g() {
     (p = {}), (h = {});
 }
-class b extends (r = l.ZP.Store) {
+class b extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -32,32 +32,32 @@ class b extends (r = l.ZP.Store) {
         return m(e);
     }
 }
-(i = "displayName") in b
-    ? Object.defineProperty(b, i, {
+(r = "displayName") in b
+    ? Object.defineProperty(b, r, {
           value: "PresenceSubscriptionsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (b[i] = "PresenceSubscriptionsStore");
-let _ = new b(o.Z, {
+    : (b[r] = "PresenceSubscriptionsStore");
+let C = new b(o.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
                 let e = !1,
                     t = Date.now();
-                for (let [n, r] of Object.entries(p)) r.expiresAt < t && (delete p[n], (e = !0));
-                for (let [n, r] of Object.entries(h)) r.expiresAt < t && (delete h[n], (e = !0));
+                for (let [n, i] of Object.entries(p)) i.expiresAt < t && (delete p[n], (e = !0));
+                for (let [n, i] of Object.entries(h)) i.expiresAt < t && (delete h[n], (e = !0));
                 return e;
             })(),
-            { userId: r, applicationId: i, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
+            { userId: i, applicationId: r, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
         if (m(t) || s + u.$y < Date.now()) return n;
-        let c = d(i, l),
+        let c = d(r, l),
             g = u.$y + Date.now();
         return (
             (h[c] = {
-                userId: r,
-                applicationId: i,
+                userId: i,
+                applicationId: r,
                 partyId: l,
                 messageId: a,
                 channelId: o,

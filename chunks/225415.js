@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(470167),
     i = n(904245),
-    o = n(911969),
-    a = n(147913),
+    a = n(911969),
+    o = n(147913),
     s = n(89892),
     l = n(710845),
     c = n(109590),
@@ -32,8 +32,8 @@ function y(e, t, n) {
 let O = new l.Z("AgeVerificationManager");
 function v(e) {
     var t, n, i;
-    let { channelId: o, message: a } = e,
-        s = _.Z.getMessage(o, a.id);
+    let { channelId: a, message: o } = e,
+        s = _.Z.getMessage(a, o.id);
     if (
         (null == s || null == (n = s.embeds) || null == (t = n[0]) ? void 0 : t.type) ===
         r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION
@@ -58,7 +58,7 @@ function T(e) {
     ((null == t ? void 0 : t.type) === E.d4z.GUILD_FORUM || (null == t ? void 0 : t.type) === E.d4z.GUILD_MEDIA) &&
         (0, c.EB)(t);
 }
-class S extends a.Z {
+class S extends o.Z {
     constructor(...e) {
         super(...e),
             y(this, "_previousAgeVerificationStatus", null),
@@ -75,7 +75,7 @@ class S extends a.Z {
                     r = null != (t = (0, h.transformUser)(n).ageVerificationStatus) ? t : null,
                     i =
                         this._previousAgeVerificationStatus !== r &&
-                        r === o.F$.VERIFIED_ADULT &&
+                        r === a.F$.VERIFIED_ADULT &&
                         (0, d.c_)("age-verification-manager");
                 try {
                     if (i) {

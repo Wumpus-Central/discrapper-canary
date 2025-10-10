@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(35282), n(388685), n(539854);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-function S(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function S(e, t) {
         e
     );
 }
-function Z(e, t) {
+function S(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -73,21 +73,21 @@ function Z(e, t) {
               discriminator: O.fo$,
           });
 }
-function w(e) {
+function P(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
             channelOptions: h,
-            isExpanded: w,
+            isExpanded: P,
             isNew: I,
-            errors: P,
-            onToggleExpand: T,
+            errors: Z,
+            onToggleExpand: E,
         } = e,
-        [E, k] = r.useState(!1),
+        [T, k] = r.useState(!1),
         [A] = r.useState(new s.V7());
     r.useEffect(() => () => A.stop(), [A]);
-    let D = r.useMemo(() => Z(n, n.avatar), [n]),
+    let D = r.useMemo(() => S(n, n.avatar), [n]),
         R = r.useCallback(() => {
             let e = "".concat((0, o.K0)(!1)).concat(O.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -96,7 +96,7 @@ function w(e) {
             (0, c.h7j)((e) =>
                 (0, i.jsx)(
                     c.ConfirmModal,
-                    S(N({}, e), {
+                    w(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
                         confirmText: _.intl.string(_.t["W+K1Fh"]),
                         cancelText: _.intl.string(_.t.xNhj0N),
@@ -139,14 +139,14 @@ function w(e) {
               icon: c.T39,
               text: _.intl.formatToPlainString(_.t["7mv59P"], { timestamp: j.default.extractTimestamp(n.id) }),
           });
-    let B = null;
+    let U = null;
     return (
-        w &&
+        P &&
             null != l &&
-            (B = (0, i.jsxs)("div", {
+            (U = (0, i.jsxs)("div", {
                 className: C.body,
                 children: [
-                    (0, i.jsx)(c.$i$, { className: C.topDivider }),
+                    (0, i.jsx)(c.izJ, { className: C.topDivider }),
                     (0, i.jsxs)(m.Z, {
                         children: [
                             (0, i.jsx)(m.Z.Child, {
@@ -161,15 +161,15 @@ function w(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => Z(n, e),
+                                            makeURL: (e) => S(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != P.avatar && "" !== P.avatar
+                                        null != Z.avatar && "" !== Z.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: P.avatar,
+                                                  children: Z.avatar,
                                               })
                                             : null,
                                     ],
@@ -190,7 +190,7 @@ function w(e) {
                                                         u.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: P.name,
+                                                    error: Z.name,
                                                 }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
@@ -209,12 +209,12 @@ function w(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(c.$i$, { className: C.bottomDivider }),
+                                    (0, i.jsx)(c.izJ, { className: C.bottomDivider }),
                                     (0, i.jsxs)(m.Z, {
                                         children: [
                                             (0, i.jsx)(c.ua7, {
                                                 text: _.intl.string(_.t.wwdb3t),
-                                                forceOpen: E,
+                                                forceOpen: T,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
@@ -263,7 +263,7 @@ function w(e) {
                                                         className: C.copyButton,
                                                         children: (0, i.jsx)(
                                                             c.zxk,
-                                                            S(
+                                                            w(
                                                                 N(
                                                                     {
                                                                         variant: "secondary",
@@ -311,8 +311,8 @@ function w(e) {
                 children: [
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
-                        "aria-expanded": w,
-                        onClick: T,
+                        "aria-expanded": P,
+                        onClick: E,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
@@ -323,13 +323,13 @@ function w(e) {
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     className: C.expandIcon,
-                                    expanded: w,
+                                    expanded: P,
                                     "aria-hidden": !0,
                                 }),
                             ],
                         }),
                     }),
-                    B,
+                    U,
                 ],
             }),
         })

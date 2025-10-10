@@ -66,10 +66,10 @@ function E(e) {
         S(null);
     }, [O, S]),
         l()(null != D, "Unknown step for current payment flow.");
-    let x = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
-        L = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
-        j = null == D || null == (a = D.options) ? void 0 : a.sliderBodyClassName;
-    switch ((void 0 !== b && b && (j = p.sliderBodyLarge), O)) {
+    let L = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
+        x = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
+        M = null == D || null == (a = D.options) ? void 0 : a.sliderBodyClassName;
+    switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
         case f.h8.ADD_PAYMENT_STEPS:
             m = 408;
             break;
@@ -83,13 +83,13 @@ function E(e) {
         children: [
             null == (h = null == D || null == (s = D.options) ? void 0 : s.renderHeader) || h ? E : null,
             D.renderStep(y),
-            null == O || x
+            null == O || L
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(u.hzk, {
                               "data-migration-pending": !0,
-                              className: o()(L, p.body, C, {
+                              className: o()(x, p.body, C, {
                                   [p.reviewStep]: O === f.h8.REVIEW,
                                   [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && w,
                               }),
@@ -99,7 +99,7 @@ function E(e) {
                                   onSlideReady: (e) => A(e),
                                   width: m,
                                   overflow: R ? "visible" : void 0,
-                                  shouldUseMediaQueryToSetHeight: !0,
+                                  shouldUseMediaQueriesForSizing: !0,
                                   children: v
                                       .filter((e) => null != e.key)
                                       .map((e) =>
@@ -108,7 +108,7 @@ function E(e) {
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)("form", {
-                                                      className: o()(p.sliderBody, j),
+                                                      className: o()(p.sliderBody, M),
                                                       ref: (e) => {
                                                           I(e);
                                                       },

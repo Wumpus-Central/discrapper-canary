@@ -32,7 +32,7 @@ function u(e) {
                                   command: e,
                                   guildId: p,
                               }),
-                              a < m.length - 1 ? (0, i.jsx)(l.$i$, {}) : null,
+                              a < m.length - 1 ? (0, i.jsx)(l.izJ, {}) : null,
                           ],
                       },
                       e.id,

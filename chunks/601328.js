@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(981631),
     d = n(176505),
     p = n(921944),
-    f = n(401561),
-    h = n(388032),
+    h = n(401561),
+    f = n(388032),
     g = n(958901);
 let m = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
@@ -26,14 +26,14 @@ let m = i.memo(function (e) {
                 className: e,
                 color: "currentColor",
             }),
-        text: h.intl.string(f.default.lH9Dio),
+        text: f.intl.string(h.default.lH9Dio),
         selected: n,
         onClick: _,
         trailing:
             m === l.z.GAME_SERVER_HOSTING_NEW_BADGE
                 ? (0, r.jsx)(o.IGR, {
                       disableColor: !0,
-                      text: h.intl.string(h.t.y2b7CA),
+                      text: f.intl.string(f.t.y2b7CA),
                       className: g.badge,
                   })
                 : null,

@@ -14,28 +14,28 @@ function c(e) {
         highlightColor: c = a.q.NONE,
         selected: d = !1,
         subsection: u = null,
-        onClick: m,
-        className: g,
+        onClick: g,
+        className: m,
         disabled: p,
     } = e;
     return (0, r.jsxs)("div", {
-        className: l()(o.container, g),
+        className: l()(o.container, m),
         children: [
             (0, r.jsx)(s.P3F, {
                 className: l()(
                     o.clickableContainer,
                     {
-                        [o.noAction]: null == m,
+                        [o.noAction]: null == g,
                         [o.disabled]: p,
                     },
-                    g,
+                    m,
                 ),
-                onClick: p ? void 0 : m,
+                onClick: p ? void 0 : g,
                 children: (0, r.jsxs)("div", {
                     className: l()(o.backgroundModifierContainer, o[c], {
                         [o.selected]: d,
                         [o.disabled]: p,
-                        [o.noAction]: null == m,
+                        [o.noAction]: null == g,
                     }),
                     children: [
                         (0, r.jsxs)("div", {

@@ -1,11 +1,11 @@
 n.d(t, {
     Cg: () => C,
     Y0: () => P,
-    YA: () => M,
+    YA: () => j,
     fM: () => R,
     hz: () => L,
     mz: () => x,
-    ol: () => j,
+    ol: () => M,
     xB: () => w,
 });
 var r = n(951288),
@@ -161,15 +161,15 @@ function P(e) {
         ),
         L = i.useRef(null),
         x = null != R["aria-label"],
-        j = null != R["aria-labelledby"],
-        M = i.useId(),
-        k = null != (t = R["aria-labelledby"]) ? t : M,
+        M = null != R["aria-labelledby"],
+        j = i.useId(),
+        k = null != (t = R["aria-labelledby"]) ? t : j,
         U = i.useMemo(
             () => ({
                 headerId: k,
-                headerIdIsManaged: j,
+                headerIdIsManaged: M,
             }),
-            [k, j],
+            [k, M],
         );
     return (0, r.jsx)(g.zM.Provider, {
         value: U,
@@ -261,7 +261,7 @@ function x(e) {
         children: (0, r.jsx)(p.y5t, { children: e.children }),
     });
 }
-function j(e) {
+function M(e) {
     return (0, r.jsx)(f.zx, {
         "data-migration-pending": !0,
         focusProps: e.focusProps,
@@ -281,7 +281,7 @@ function j(e) {
         }),
     });
 }
-function M(e) {
+function j(e) {
     var { className: t, scrollerRef: n } = e,
         i = S(e, ["className", "scrollerRef"]);
     return (0, r.jsx)(

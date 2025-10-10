@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(35282), n(997841), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => j }), n(35282), n(997841), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(664751),
     i = n(373793),
     l = n(243814),
@@ -44,7 +44,7 @@ function I(e) {
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,8 +62,8 @@ function C(e, t) {
         e
     );
 }
-let S = "CachedTokens";
-async function N(e, t, n) {
+let C = "CachedTokens";
+async function T(e, t, n) {
     let r,
         l,
         o,
@@ -73,12 +73,12 @@ async function N(e, t, n) {
             client_id: u,
             response_type: y = "code",
             redirect_uri: I,
-            code_challenge: C,
-            code_challenge_method: S,
-            state: N,
-            nonce: T,
-            scope: P,
-            permissions: j,
+            code_challenge: S,
+            code_challenge_method: C,
+            state: T,
+            nonce: N,
+            scope: j,
+            permissions: P,
             guild_id: x,
             channel_id: A,
             prompt: Z,
@@ -97,7 +97,7 @@ async function N(e, t, n) {
         );
     let M = [];
     if (
-        ("string" == typeof P ? (M = P.split(" ").filter((e) => e.length > 0)) : Array.isArray(P) && (M = P),
+        ("string" == typeof j ? (M = j.split(" ").filter((e) => e.length > 0)) : Array.isArray(j) && (M = j),
         null == b.default.getCurrentUser())
     )
         throw new E.Z({ errorCode: v.lTL.OAUTH2_ERROR }, "Client is not logged in");
@@ -121,9 +121,9 @@ async function N(e, t, n) {
                 scopes: M,
                 responseType: y,
                 redirectUri: I,
-                codeChallenge: C,
-                codeChallengeMethod: S,
-                state: N,
+                codeChallenge: S,
+                codeChallengeMethod: C,
+                state: T,
                 integrationType: l,
                 signal: D,
             }),
@@ -145,10 +145,10 @@ async function N(e, t, n) {
                     scopes: M,
                     responseType: y,
                     redirectUri: I,
-                    codeChallenge: C,
-                    codeChallengeMethod: S,
-                    state: N,
-                    nonce: T,
+                    codeChallenge: S,
+                    codeChallengeMethod: C,
+                    state: T,
+                    nonce: N,
                     integrationType: l,
                 })
             ).location;
@@ -162,7 +162,7 @@ async function N(e, t, n) {
     null == n || n(o.application, A, R);
     let U = O.Hn;
     try {
-        U = a.vB(null != j ? j : 0);
+        U = a.vB(null != P ? P : 0);
     } catch (e) {}
     return (
         null != o.integration_type &&
@@ -175,9 +175,9 @@ async function N(e, t, n) {
             parsedPermissions: U,
             responseType: y,
             redirectUri: I,
-            codeChallenge: C,
-            codeChallengeMethod: S,
-            state: N,
+            codeChallenge: S,
+            codeChallengeMethod: C,
+            state: T,
             guildId: x,
             channelId: A,
             prompt: Z,
@@ -189,7 +189,7 @@ async function N(e, t, n) {
         })
     );
 }
-function T(e, t) {
+function N(e, t) {
     if (e.authorization.accessToken) throw new E.Z({ errorCode: v.lTL.INVALID_COMMAND }, "Already authenticated");
     if (e.authorization.authing) throw new E.Z({ errorCode: v.lTL.INVALID_COMMAND }, "Already authenticating");
     return (
@@ -222,7 +222,7 @@ function T(e, t) {
                             socketId: e.id,
                             application: e.application,
                         }),
-                        C(I({}, n.body), { access_token: t })
+                        S(I({}, n.body), { access_token: t })
                     );
                 },
                 () => {
@@ -234,7 +234,7 @@ function T(e, t) {
             })
     );
 }
-function P(e, t) {
+function j(e, t) {
     return {
         [v.Etm.AUTHENTICATE]: (0, s.S)(v.Etm.AUTHENTICATE, {
             handler(n) {
@@ -248,7 +248,7 @@ function P(e, t) {
                     if (null == n) throw new E.Z({ errorCode: v.lTL.INVALID_COMMAND }, "No application.");
                     let s = l.x.IDENTIFY,
                         u = () =>
-                            N(
+                            T(
                                 {
                                     client_id: n,
                                     scope: s,
@@ -275,35 +275,35 @@ function P(e, t) {
                                 return (
                                     !(function (e, t, n, r) {
                                         var i;
-                                        let l = null != (i = c.K.get(S)) ? i : {};
+                                        let l = null != (i = c.K.get(C)) ? i : {};
                                         (l[e] = {
                                             accessToken: t,
                                             scope: n,
                                             expires: Date.now() + r,
                                         }),
-                                            c.K.set(S, l);
+                                            c.K.set(C, l);
                                     })(n, l.access_token, l.scope, l.expires_in),
-                                    T(i, l.access_token)
+                                    N(i, l.access_token)
                                 );
                             });
                     return null !=
                         (o = (function (e, t) {
-                            let n = c.K.get(S);
+                            let n = c.K.get(C);
                             if (null != n && null != n[e]) {
                                 let r = n[e];
                                 if (!(r.scope !== t || r.expires <= Date.now())) return r.accessToken;
-                                delete n[e], c.K.set(S, n);
+                                delete n[e], c.K.set(C, n);
                             }
                         })(n, s))
-                        ? T(i, o).catch(() => {
+                        ? N(i, o).catch(() => {
                               var e;
-                              let t = null != (e = c.K.get(S)) ? e : {};
-                              return delete t[n], c.K.set(S, t), u();
+                              let t = null != (e = c.K.get(C)) ? e : {};
+                              return delete t[n], c.K.set(C, t), u();
                           })
                         : u();
                 }
                 if (null == o) throw new E.Z({ errorCode: v.lTL.INVALID_TOKEN }, "No access token provided");
-                return T(i, o);
+                return N(i, o);
             },
         }),
         [v.Etm.AUTHORIZE]: {
@@ -331,8 +331,8 @@ function P(e, t) {
                 let s = l.scopes || l.scope;
                 return (
                     delete l.scopes,
-                    N(
-                        C(I({}, l), {
+                    T(
+                        S(I({}, l), {
                             scope: s,
                             signal: i,
                             isSocketRpcPrivateScope: o,

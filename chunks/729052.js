@@ -1,7 +1,7 @@
-n.d(e, { p2: () => r });
-var i = n(818083),
-    l = n(981631);
-let a = (0, i.B)({
+e.d(i, { p2: () => r });
+var n = e(818083),
+    l = e(981631);
+let s = (0, n.B)({
         kind: "user",
         id: "2023-11_voice_activity_notification_user",
         label: "Voice Activity Notifications for User",
@@ -19,7 +19,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    s = (0, i.B)({
+    a = (0, n.B)({
         kind: "guild",
         id: "2023-11_voice_activity_notification_guild",
         label: "General Voice Channel Notifications for Guild",
@@ -33,23 +33,23 @@ let a = (0, i.B)({
         ],
     });
 function r(t) {
-    var e;
-    let { voiceChannelActivityNotifsEnabled: n } = s.useExperiment(
+    var i;
+    let { voiceChannelActivityNotifsEnabled: e } = a.useExperiment(
             {
                 location: "useVoiceActivityNotificationSettingsExperiment",
-                guildId: null != (e = null == t ? void 0 : t.getGuildId()) ? e : l.lds,
+                guildId: null != (i = null == t ? void 0 : t.getGuildId()) ? i : l.lds,
             },
             {
                 disable: (null == t ? void 0 : t.type) !== l.d4z.GUILD_VOICE,
                 autoTrackExposure: !1,
             },
         ),
-        { enabled: i } = a.useExperiment(
+        { enabled: n } = s.useExperiment(
             { location: "useVoiceActivityNotificationSettingsExperiment" },
             {
-                disable: (null == t ? void 0 : t.type) !== l.d4z.GUILD_VOICE || !n,
+                disable: (null == t ? void 0 : t.type) !== l.d4z.GUILD_VOICE || !e,
                 autoTrackExposure: !0,
             },
         );
-    return (null == t ? void 0 : t.type) === l.d4z.GUILD_VOICE && n && i;
+    return (null == t ? void 0 : t.type) === l.d4z.GUILD_VOICE && e && n;
 }

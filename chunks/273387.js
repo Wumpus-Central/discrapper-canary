@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(975984),
-    o = n(75666);
-function s(e, t, n) {
+    s = n(75666);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,12 +28,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,12 +51,12 @@ function u(e, t) {
         e
     );
 }
-let d = Object.freeze({}),
+let u = Object.freeze({}),
     p = !1,
     h = {},
     f = {},
-    m = {},
     g = {},
+    m = {},
     b = {};
 class y extends (r = i.ZP.Store) {
     isFetching() {
@@ -64,11 +64,11 @@ class y extends (r = i.ZP.Store) {
     }
     getCurrentCategoryId(e) {
         var t;
-        return null != (t = f[e]) ? t : o.AR.ALL;
+        return null != (t = f[e]) ? t : s.AR.ALL;
     }
     getDirectoryEntries(e, t) {
         var n;
-        return null != t ? (null == (n = m[e]) ? void 0 : n[t]) : h[e];
+        return null != t ? (null == (n = g[e]) ? void 0 : n[t]) : h[e];
     }
     getDirectoryEntry(e, t) {
         var n;
@@ -80,13 +80,13 @@ class y extends (r = i.ZP.Store) {
     }
     getDirectoryCategoryCounts(e) {
         var t;
-        return null != (t = g[e]) ? t : d;
+        return null != (t = m[e]) ? t : u;
     }
     getAdminGuildEntryIds(e) {
         return b[e];
     }
 }
-s(y, "displayName", "GuildDirectoryStore");
+o(y, "displayName", "GuildDirectoryStore");
 let _ = new y(l.Z, {
     GUILD_DIRECTORY_FETCH_START: function () {
         p = !0;
@@ -104,24 +104,24 @@ let _ = new y(l.Z, {
                     : (i[t.primaryCategoryId] = { [t.guildId]: t });
         }),
             (h[t] = r),
-            (m[t] = i);
+            (g[t] = i);
     },
     GUILD_DIRECTORY_FETCH_FAILURE: function () {
         p = !1;
     },
     GUILD_DIRECTORY_ENTRY_CREATE: function (e) {
         var t, n, r, i, l;
-        let { channelId: s, entry: d } = e,
-            p = (0, a.MQ)(d);
-        if (null == p || (null == (t = h[s]) ? void 0 : t[p.guildId]) != null) return;
-        h[s] = u(c({}, h[s]), { [p.guildId]: p });
-        let f = null != (r = p.primaryCategoryId) ? r : o.AR.UNCATEGORIZED;
+        let { channelId: o, entry: u } = e,
+            p = (0, a.MQ)(u);
+        if (null == p || (null == (t = h[o]) ? void 0 : t[p.guildId]) != null) return;
+        h[o] = d(c({}, h[o]), { [p.guildId]: p });
+        let f = null != (r = p.primaryCategoryId) ? r : s.AR.UNCATEGORIZED;
         if (
-            ((m[s] = u(c({}, m[s]), { [f]: u(c({}, null == (n = m[s]) ? void 0 : n[f]), { [p.guildId]: p }) })),
-            null != g[s])
+            ((g[o] = d(c({}, g[o]), { [f]: d(c({}, null == (n = g[o]) ? void 0 : n[f]), { [p.guildId]: p }) })),
+            null != m[o])
         ) {
-            let e = null != (l = null == (i = g[s]) ? void 0 : i[f]) ? l : 0;
-            g[s] = u(c({}, g[s]), { [f]: e + 1 });
+            let e = null != (l = null == (i = m[o]) ? void 0 : i[f]) ? l : 0;
+            m[o] = d(c({}, m[o]), { [f]: e + 1 });
         }
     },
     GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
@@ -130,33 +130,33 @@ let _ = new y(l.Z, {
             l = null == (t = h[r]) ? void 0 : t[i];
         if (null == l) return;
         let a = l.primaryCategoryId,
-            o = Object.assign({}, h[r]);
-        delete o[i], null == (n = b[r]) || n.delete(i), (b[r] = new Set(b[r])), (h[r] = o);
-        let s = Object.assign({}, m[r][a]);
-        if ((delete s[i], (m[r] = u(c({}, m[r]), { [a]: s })), null != g[r])) {
-            let e = g[r][a] - 1;
-            g[r] = u(c({}, g[r]), { [a]: e >= 0 ? e : 0 });
+            s = Object.assign({}, h[r]);
+        delete s[i], null == (n = b[r]) || n.delete(i), (b[r] = new Set(b[r])), (h[r] = s);
+        let o = Object.assign({}, g[r][a]);
+        if ((delete o[i], (g[r] = d(c({}, g[r]), { [a]: o })), null != m[r])) {
+            let e = m[r][a] - 1;
+            m[r] = d(c({}, m[r]), { [a]: e >= 0 ? e : 0 });
         }
     },
     GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
-        var t, n, r, i, l, s, d, p, f;
+        var t, n, r, i, l, o, u, p, f;
         let { channelId: b, entry: y } = e,
             _ = (0, a.MQ)(y),
-            C = null == (t = h[b]) ? void 0 : t[_.guildId];
-        h[b] = u(c({}, h[b]), { [_.guildId]: c({}, C, _) });
-        let v = null != (i = null == C ? void 0 : C.primaryCategoryId) ? i : o.AR.UNCATEGORIZED,
-            x = null != (l = _.primaryCategoryId) ? l : o.AR.UNCATEGORIZED,
-            O = Object.assign({}, null == (n = m[b]) ? void 0 : n[v]);
-        null != C && v !== x && delete O[_.guildId],
-            (m[b] = u(c({}, m[b]), {
-                [v]: O,
-                [x]: u(c({}, null == (r = m[b]) ? void 0 : r[x]), { [_.guildId]: c({}, C, _) }),
+            j = null == (t = h[b]) ? void 0 : t[_.guildId];
+        h[b] = d(c({}, h[b]), { [_.guildId]: c({}, j, _) });
+        let x = null != (i = null == j ? void 0 : j.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
+            O = null != (l = _.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
+            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[x]);
+        null != j && x !== O && delete v[_.guildId],
+            (g[b] = d(c({}, g[b]), {
+                [x]: v,
+                [O]: d(c({}, null == (r = g[b]) ? void 0 : r[O]), { [_.guildId]: c({}, j, _) }),
             })),
-            x !== v &&
-                null != g[b] &&
-                (g[b] = u(c({}, g[b]), {
-                    [v]: (null == (s = g[b]) ? void 0 : s[v]) > 0 ? (null == (d = g[b]) ? void 0 : d[v]) - 1 : 0,
-                    [x]: (null != (f = null == (p = g[b]) ? void 0 : p[x]) ? f : 0) + 1,
+            O !== x &&
+                null != m[b] &&
+                (m[b] = d(c({}, m[b]), {
+                    [x]: (null == (o = m[b]) ? void 0 : o[x]) > 0 ? (null == (u = m[b]) ? void 0 : u[x]) - 1 : 0,
+                    [O]: (null != (f = null == (p = m[b]) ? void 0 : p[O]) ? f : 0) + 1,
                 }));
     },
     GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {
@@ -165,7 +165,7 @@ let _ = new y(l.Z, {
     },
     GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS: function (e) {
         let { channelId: t, counts: n } = e;
-        g[t] = n;
+        m[t] = n;
     },
     GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function (e) {
         let { channelId: t, entries: n } = e,

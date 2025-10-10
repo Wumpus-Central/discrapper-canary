@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(19780),
     d = n(979651),
     f = n(626135),
-    _ = n(475413),
+    _ = n(732380),
     p = n(981631),
     h = n(388032);
 function m(e, t, n) {
@@ -75,7 +75,7 @@ function y(e) {
         v = (0, i.e7)([u.Z], () => u.Z.getChannelId() === (null == O ? void 0 : O.id));
     return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == O
         ? null
-        : (0, r.jsx)(_.tG, {
+        : (0, r.jsx)(_.O1, {
               text: v ? h.intl.string(h.t.BXxdl5) : h.intl.string(h.t["9C444u"]),
               fullWidth: !0,
               onClick: (e) => {

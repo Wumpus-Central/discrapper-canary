@@ -82,7 +82,7 @@ function R(e) {
         P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
         w = (0, s.Z)(P),
         D = t.id,
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             if (null != R)
                 if (w) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
@@ -97,11 +97,11 @@ function R(e) {
                         m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
                 } else (0, b.L)(A({ applicationId: R.id }, R));
         }, [R, w, D, null == P ? void 0 : P.guild_id, n]),
-        L = w ? T.intl.string(T.t["Cia+Aw"]) : T.intl.string(T.t.NgXl3N);
+        x = w ? T.intl.string(T.t["Cia+Aw"]) : T.intl.string(T.t.NgXl3N);
     if (null == R || !(0, d.Eb)(R)) return null;
-    let { customInstallUrl: j } = R,
-        M = null == j || E.Z.isDiscordUrl(j) ? o.qJs : o.Gr1,
-        k = w ? void 0 : M;
+    let { customInstallUrl: M } = R,
+        j = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
+        k = w ? void 0 : j;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: N,
@@ -130,10 +130,10 @@ function R(e) {
                           {
                               buttonRef: N,
                               action: "PRESS_ADD_APP",
-                              text: L,
+                              text: x,
                               icon: k,
                               onContextMenu: t,
-                              onClick: x,
+                              onClick: L,
                           },
                           n,
                           S,
@@ -146,9 +146,9 @@ function R(e) {
               A(
                   {
                       action: "PRESS_ADD_APP",
-                      text: L,
+                      text: x,
                       icon: k,
-                      onClick: x,
+                      onClick: L,
                       variant: "primary",
                   },
                   S,

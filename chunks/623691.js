@@ -8,20 +8,20 @@ var r = n(951288),
     c = n(704215),
     d = n(481060),
     u = n(668781),
-    m = n(749210),
-    g = n(266454),
+    g = n(749210),
+    m = n(266454),
     p = n(494620),
     f = n(496675),
     h = n(55935),
     x = n(63063),
     b = n(434404),
     j = n(714939),
-    v = n(494831),
-    _ = n(981631),
-    O = n(921944),
-    y = n(231338),
-    C = n(388032),
-    N = n(804306);
+    _ = n(494831),
+    v = n(981631),
+    C = n(921944),
+    O = n(231338),
+    y = n(388032),
+    N = n(297827);
 function E(e) {
     let {
             guild: t,
@@ -35,9 +35,9 @@ function E(e) {
         u = i.useRef(null);
     i.useEffect(() => {
         var e, t;
-        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : v.Cl);
+        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : _.Cl);
     }, [c]);
-    let m = i.useCallback(() => {
+    let g = i.useCallback(() => {
         s(n.id);
     }, [s, n.id]);
     return (0, r.jsxs)("div", {
@@ -45,13 +45,13 @@ function E(e) {
         children: [
             (0, r.jsx)(d.vwX, {
                 tag: d.RB0.H1,
-                children: C.intl.string(C.t.LPJmLy),
+                children: y.intl.string(y.t.LPJmLy),
             }),
             (0, r.jsx)(d.Text, {
                 className: N.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: C.intl.string(C.t["1ydhVl"]),
+                children: y.intl.string(y.t["1ydhVl"]),
             }),
             (0, r.jsx)(I, { guild: t }),
             (0, r.jsx)(S, {
@@ -60,7 +60,7 @@ function E(e) {
                 filteredRoles: l,
                 query: a,
                 setQuery: o,
-                onEveryoneRoleClick: m,
+                onEveryoneRoleClick: g,
             }),
         ],
     });
@@ -68,28 +68,28 @@ function E(e) {
 function I(e) {
     let { guild: t } = e;
     i.useEffect(() => {
-        (0, g.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
-            dismissAction: O.L.INDIRECT_ACTION,
+        (0, m.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
+            dismissAction: C.L.INDIRECT_ACTION,
             guildId: t.id,
             forceTrack: !0,
         });
     }, [t]);
-    let n = (0, h.vc)(o()(_.zQD), "LL"),
-        l = t.features.has(_.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
+    let n = (0, h.vc)(o()(v.zQD), "LL"),
+        l = t.features.has(v.oNc.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
-                  children: C.intl.format(C.t.Vg2oTE, { breakingChangeDate: n }),
+                  children: y.intl.format(y.t.Vg2oTE, { breakingChangeDate: n }),
               })
-            : f.Z.can(y.Pl.ADMINISTRATOR, t)
+            : f.Z.can(O.Pl.ADMINISTRATOR, t)
               ? (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: C.intl.format(C.t.HYM8OD, {
+                    children: y.intl.format(y.t.HYM8OD, {
                         onClickMigrate: () => {
                             u.Z.show({
-                                title: C.intl.string(C.t.nFE8dH),
-                                body: C.intl.format(C.t["1PAzQ0"], { guildName: t.name }),
-                                cancelText: C.intl.string(C.t["ETE/oK"]),
-                                confirmText: C.intl.string(C.t["cY+Ooa"]),
+                                title: y.intl.string(y.t.nFE8dH),
+                                body: y.intl.format(y.t["1PAzQ0"], { guildName: t.name }),
+                                cancelText: y.intl.string(y.t["ETE/oK"]),
+                                confirmText: y.intl.string(y.t["cY+Ooa"]),
                                 onConfirm: () => {
                                     b.Z.migratePinPermission(t.id);
                                 },
@@ -100,7 +100,7 @@ function I(e) {
                 })
               : (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: C.intl.format(C.t.cAuU1d, { breakingChangeDate: n }),
+                    children: y.intl.format(y.t.cAuU1d, { breakingChangeDate: n }),
                 });
     return (0, r.jsx)(p.Z, {
         look: p.z.WARNING,
@@ -125,7 +125,7 @@ function S(e) {
                 className: N.helpText,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: C.intl.format(C.t.xkC3YW, { articleURL: x.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
+                children: y.intl.format(y.t.xkC3YW, { articleURL: x.Z.getArticleURL(v.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
                 className: N.rolesTable,
@@ -136,12 +136,12 @@ function S(e) {
                         (0, r.jsx)(d.Text, {
                             className: s()(N.tableTitle, N.roleNameSpacing),
                             variant: "text-sm/normal",
-                            children: C.intl.format(C.t["38N3V1"], { numRoles: String(i.length) }),
+                            children: y.intl.format(y.t["38N3V1"], { numRoles: String(i.length) }),
                         }),
                         (0, r.jsx)(d.Text, {
                             className: s()(N.tableTitle, N.memberSpacing),
                             variant: "text-sm/normal",
-                            children: C.intl.string(C.t["9Oq93t"]),
+                            children: y.intl.string(y.t["9Oq93t"]),
                         }),
                         (0, r.jsx)("div", { className: N.buttonsSpacing }),
                     ],
@@ -163,7 +163,7 @@ function T(e) {
             l("");
         }, [l]),
         u = async () => {
-            a(!0), await m.Z.createRole(t.id), a(!1);
+            a(!0), await g.Z.createRole(t.id), a(!1);
         };
     return (0, r.jsx)("div", {
         className: N.__invalid_rolesList,
@@ -174,14 +174,14 @@ function T(e) {
                     query: n,
                     onChange: o,
                     onClear: c,
-                    placeholder: C.intl.string(C.t.Sojqsr),
-                    "aria-label": C.intl.string(C.t.Sojqsr),
+                    placeholder: y.intl.string(y.t.Sojqsr),
+                    "aria-label": y.intl.string(y.t.Sojqsr),
                 }),
                 (0, r.jsx)(d.zxk, {
                     size: "sm",
                     onClick: u,
                     loading: s,
-                    text: C.intl.string(C.t.JZZjQE),
+                    text: y.intl.string(y.t.JZZjQE),
                 }),
             ],
         }),

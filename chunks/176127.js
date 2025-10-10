@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(583741);
-var r = n(951288);
+var i = n(951288);
 n(647438);
-var i = n(120356),
-    l = n.n(i),
+var r = n(120356),
+    l = n.n(r),
     a = n(442837),
     o = n(435064),
     s = n(538454);
@@ -17,7 +17,7 @@ function c() {
                   .slice(0, 4)
                   .filter((e) => t.includes(e.id));
     });
-    return (0, r.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: l()(s.thumbnailStack, {
             [s["height-1"]]: 1 === n.length,
             [s["height-2"]]: 2 === n.length,
@@ -28,24 +28,24 @@ function c() {
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
@@ -56,8 +56,8 @@ function c() {
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
                   })(Object(t)).forEach(function (n) {
@@ -67,7 +67,7 @@ function c() {
         )
             .map((e, t) =>
                 null != e
-                    ? (0, r.jsx)(
+                    ? (0, i.jsx)(
                           "img",
                           {
                               alt: "",
@@ -76,7 +76,7 @@ function c() {
                           },
                           e.id,
                       )
-                    : (0, r.jsx)("div", {}, "placeholder-".concat(t)),
+                    : (0, i.jsx)("div", {}, "placeholder-".concat(t)),
             )
             .reverse(),
     });

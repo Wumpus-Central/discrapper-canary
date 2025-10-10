@@ -12,14 +12,14 @@ var r = a(650665),
     E = a(263449),
     s = a(696486),
     l = a(305625),
-    u = a(622916),
-    I = a(370541),
+    I = a(622916),
+    u = a(370541),
     R = a(101284),
     d = a(731889),
     N = a(467510),
     A = a(454463),
-    f = a(163162),
-    T = a(119128),
+    T = a(163162),
+    f = a(119128),
     L = a(799033);
 let p = {
         ...o.A,
@@ -44,8 +44,8 @@ let p = {
                 finalTimeout: C,
                 childSpanTimeout: m,
                 markBackgroundSpan: v,
-                traceFetch: y,
-                traceXHR: S,
+                traceFetch: S,
+                traceXHR: y,
                 shouldCreateSpanForRequest: U,
                 enableHTTPTimings: b,
                 instrumentPageLoad: G,
@@ -79,12 +79,12 @@ let p = {
                 },
             });
             function E() {
-                ["interactive", "complete"].includes(f.m9.document.readyState) && t.emit("idleSpanEnableAutoFinish", i);
+                ["interactive", "complete"].includes(T.m9.document.readyState) && t.emit("idleSpanEnableAutoFinish", i);
             }
             return (
                 a &&
-                    f.m9.document &&
-                    (f.m9.document.addEventListener("readystatechange", () => {
+                    T.m9.document &&
+                    (T.m9.document.addEventListener("readystatechange", () => {
                         E();
                     }),
                     E()),
@@ -97,12 +97,12 @@ let p = {
                 var a, r, i, d;
                 let p,
                     h,
-                    w = f.m9.location && f.m9.location.href;
+                    w = T.m9.location && T.m9.location.href;
                 t.on("startNavigationSpan", (e) => {
                     (0, E.s3)() === t &&
                         (h &&
                             !(0, s.XU)(h).timestamp &&
-                            (A.X && u.kg.log(`[Tracing] Finishing current root span with op: ${((0, s.XU))(h).op}`),
+                            (A.X && I.kg.log(`[Tracing] Finishing current root span with op: ${((0, s.XU))(h).op}`),
                             h.end()),
                         (h = B(t, {
                             op: "navigation",
@@ -113,11 +113,11 @@ let p = {
                         if ((0, E.s3)() !== t) return;
                         h &&
                             !(0, s.XU)(h).timestamp &&
-                            (A.X && u.kg.log(`[Tracing] Finishing current root span with op: ${((0, s.XU))(h).op}`),
+                            (A.X && I.kg.log(`[Tracing] Finishing current root span with op: ${((0, s.XU))(h).op}`),
                             h.end());
                         let r = a.sentryTrace || g("sentry-trace"),
                             _ = a.baggage || g("baggage"),
-                            n = (0, I.pT)(r, _);
+                            n = (0, u.pT)(r, _);
                         (0, E.nZ)().setPropagationContext(n),
                             (h = B(t, {
                                 op: "pageload",
@@ -135,10 +135,10 @@ let p = {
                             dsc: r.dsc || (0, l.jC)(t),
                         });
                     }),
-                    f.m9.location &&
+                    T.m9.location &&
                         (G &&
                             O(t, {
-                                name: f.m9.location.pathname,
+                                name: T.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
                                 attributes: {
                                     [c.Zj]: "url",
@@ -154,20 +154,20 @@ let p = {
                                 a !== e &&
                                     ((w = void 0),
                                     P(t, {
-                                        name: f.m9.location.pathname,
+                                        name: T.m9.location.pathname,
                                         attributes: {
                                             [c.Zj]: "url",
                                             [c.S3]: "auto.navigation.browser",
                                         },
                                     }));
                             })),
-                    v && (0, T.j)(),
+                    v && (0, f.j)(),
                     N &&
                         ((a = D),
                         (r = C),
                         (i = m),
                         (d = M),
-                        f.m9.document &&
+                        T.m9.document &&
                             addEventListener(
                                 "click",
                                 () => {
@@ -176,7 +176,7 @@ let p = {
                                         _ = e && (0, s.Gx)(e);
                                     if (_ && ["navigation", "pageload"].includes((0, s.XU)(_).op)) {
                                         A.X &&
-                                            u.kg.warn(
+                                            I.kg.warn(
                                                 `[Tracing] Did not create ${t} span because a pageload or navigation span is in progress.`,
                                             );
                                         return;
@@ -186,7 +186,7 @@ let p = {
                                         !d.name)
                                     ) {
                                         A.X &&
-                                            u.kg.warn(
+                                            I.kg.warn(
                                                 `[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`,
                                             );
                                         return;
@@ -211,8 +211,8 @@ let p = {
                             )),
                     e && (0, _.D)(),
                     (0, L.L7)(t, {
-                        traceFetch: y,
-                        traceXHR: S,
+                        traceFetch: S,
+                        traceXHR: y,
                         tracePropagationTargets: t.getOptions().tracePropagationTargets,
                         shouldCreateSpanForRequest: U,
                         enableHTTPTimings: b,

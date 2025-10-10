@@ -94,7 +94,7 @@ let g = [
             getName: () => p.intl.string(p.t.MJQOuL),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("54833")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,

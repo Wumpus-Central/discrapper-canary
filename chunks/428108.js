@@ -1,41 +1,41 @@
-n.d(t, { default: () => y });
+n.d(t, { default: () => O });
 var r = n(951288);
 n(647438);
-var c = n(481060),
+var i = n(481060),
     l = n(239091),
-    i = n(108843),
+    c = n(108843),
     o = n(100527),
     a = n(299206),
     u = n(398048),
     s = n(3689),
     b = n(323597),
     p = n(852245),
-    O = n(367722),
+    d = n(367722),
     f = n(388032);
-let y = (0, i.Z)(
+let O = (0, c.Z)(
     function (e) {
-        let { channel: t, guild: n, onSelect: i } = e,
+        let { channel: t, guild: n, onSelect: c } = e,
             o = (0, p.Z)(t),
-            y = (0, O.Z)(t, n),
-            d = (0, u.Z)(t, n),
+            O = (0, d.Z)(t, n),
+            y = (0, u.Z)(t, n),
             j = (0, s.Z)(t, n),
-            g = (0, b.Z)(t),
-            P = (0, a.Z)({
+            E = (0, b.Z)(t),
+            g = (0, a.Z)({
                 id: t.id,
                 label: f.intl.string(f.t.gFHI3t),
             });
-        return (0, r.jsxs)(c.v2r, {
+        return (0, r.jsxs)(i.v2r, {
             navId: "channel-context",
             onClose: l.Zy,
             "aria-label": f.intl.string(f.t.Xm41aW),
-            onSelect: i,
+            onSelect: c,
             children: [
-                (0, r.jsx)(c.kSQ, { children: o }),
-                (0, r.jsxs)(c.kSQ, {
-                    children: [y, d, j],
+                (0, r.jsx)(i.kSQ, { children: o }),
+                (0, r.jsxs)(i.kSQ, {
+                    children: [O, y, j],
                 }),
-                (0, r.jsx)(c.kSQ, { children: g }),
-                (0, r.jsx)(c.kSQ, { children: P }),
+                (0, r.jsx)(i.kSQ, { children: E }),
+                (0, r.jsx)(i.kSQ, { children: g }),
             ],
         });
     },

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(793030),
     o = n(442837),
-    s = n(481060),
-    l = n(111028),
-    a = n(834129),
+    l = n(481060),
+    a = n(111028),
+    s = n(834129),
     c = n(271383),
     u = n(709054),
     d = n(884902),
     p = n(989308),
-    m = n(388032),
-    g = n(238937);
-function f(e) {
+    f = n(388032),
+    m = n(238937);
+function g(e) {
     let { boost: t } = e,
         n = new Date(u.default.extractTimestamp(t.id)),
         {
-            username: f,
+            username: g,
             roleColor: v,
-            roleColorStrings: _,
+            roleColorStrings: x,
         } = (0, o.cj)([c.ZP], () => {
             var e, n, r, i;
             let o = c.ZP.getMember(t.guildId, t.userId);
@@ -29,34 +29,34 @@ function f(e) {
                 roleColorStrings: null != (i = null == o ? void 0 : o.colorStrings) ? i : null,
             };
         }, [t]),
-        x = (0, d.X7)(t.guildId, t.userId, null != _ ? _ : null);
-    return (0, r.jsx)(a.Z, {
-        className: g.systemMessageContainer,
-        contentClassName: g.systemMessageContent,
-        iconNode: (0, r.jsx)(s.$Eu, {
-            className: g.icon,
+        _ = (0, d.X7)(t.guildId, t.userId, null != x ? x : null);
+    return (0, r.jsx)(s.Z, {
+        className: m.systemMessageContainer,
+        contentClassName: m.systemMessageContent,
+        iconNode: (0, r.jsx)(l.$Eu, {
+            className: m.icon,
             color: "currentColor",
             size: "sm",
         }),
-        iconContainerClassName: g.iconContainer,
-        timestampClassName: g.timestamp,
+        iconContainerClassName: m.iconContainer,
+        timestampClassName: m.timestamp,
         timestamp: n,
         timestampFormat: "L",
         compact: !0,
         children: (0, r.jsxs)("span", {
-            className: g.boostMessage,
+            className: m.boostMessage,
             children: [
-                (0, r.jsx)(s.PUh, {
-                    className: g.boostMessageUser,
+                (0, r.jsx)(l.PUh, {
+                    className: m.boostMessageUser,
                     variant: "text-md/semibold",
-                    name: f,
+                    name: g,
                     colorString: null != v ? v : null,
-                    colorStrings: x,
+                    colorStrings: _,
                 }),
                 (0, r.jsx)(i.xvT, {
                     variant: "text-md/medium",
                     lineClamp: 1,
-                    children: (0, r.jsx)(l.Z, { children: m.intl.string(p.default.plwH8f) }),
+                    children: (0, r.jsx)(a.Z, { children: f.intl.string(p.default.plwH8f) }),
                 }),
             ],
         }),

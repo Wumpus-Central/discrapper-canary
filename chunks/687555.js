@@ -5,14 +5,14 @@ var a = r(951288),
     n = r.n(s),
     l = r(512722),
     o = r.n(l),
-    C = r(793030),
-    d = r(442837),
-    c = r(755721),
-    x = r(481060),
-    p = r(232567),
-    h = r(794433),
-    f = r(480466),
-    u = r(434650),
+    C = r(907331),
+    d = r(793030),
+    c = r(442837),
+    x = r(755721),
+    p = r(481060),
+    h = r(232567),
+    f = r(794433),
+    u = r(480466),
     m = r(210887),
     j = r(51144),
     _ = r(281494),
@@ -37,14 +37,14 @@ function O(e) {
             (0, a.jsxs)("div", {
                 className: b.title,
                 children: [
-                    (0, a.jsx)(B, { className: b.titleImage }),
-                    (0, a.jsx)(x.X6q, {
+                    (0, a.jsx)(M, { className: b.titleImage }),
+                    (0, a.jsx)(p.X6q, {
                         variant: "heading-xl/bold",
                         children: S.intl.string(S.t.Lm2nFR),
                     }),
                 ],
             }),
-            (0, a.jsx)(x.Text, {
+            (0, a.jsx)(p.Text, {
                 className: b.description,
                 variant: "text-md/medium",
                 color: "header-secondary",
@@ -53,17 +53,17 @@ function O(e) {
         ],
     });
 }
-function E() {
+function U() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
                 className: b.title,
-                children: (0, a.jsx)(x.X6q, {
+                children: (0, a.jsx)(p.X6q, {
                     variant: "heading-xl/bold",
                     children: S.intl.string(S.t["PFp+aG"]),
                 }),
             }),
-            (0, a.jsx)(x.Text, {
+            (0, a.jsx)(p.Text, {
                 className: b.description,
                 variant: "text-md/medium",
                 color: "header-secondary",
@@ -72,10 +72,10 @@ function E() {
         ],
     });
 }
-function U() {
+function E() {
     return (0, a.jsx)("div", {
         className: b.erroredContent,
-        children: (0, a.jsx)(x.Eep, {
+        children: (0, a.jsx)(p.Eep, {
             src: Z,
             width: 225,
             height: 160,
@@ -92,12 +92,12 @@ function R(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: b.title,
-                        children: (0, a.jsx)(x.X6q, {
+                        children: (0, a.jsx)(p.X6q, {
                             variant: "heading-xl/bold",
                             children: S.intl.string(S.t.a9HOKi),
                         }),
                     }),
-                    (0, a.jsx)(x.Text, {
+                    (0, a.jsx)(p.Text, {
                         className: b.description,
                         variant: "text-md/medium",
                         color: "header-secondary",
@@ -107,7 +107,7 @@ function R(e) {
             }),
             (0, a.jsx)("div", {
                 className: b.erroredContent,
-                children: (0, a.jsx)(x.Eep, {
+                children: (0, a.jsx)(p.Eep, {
                     src: N,
                     width: 178,
                     height: 190,
@@ -115,7 +115,7 @@ function R(e) {
             }),
             (0, a.jsx)("div", {
                 className: n()(b.footer, b.footerSeparator),
-                children: (0, a.jsx)(c.zx, {
+                children: (0, a.jsx)(x.zx, {
                     "data-migration-pending": !0,
                     className: b.submit,
                     onClick: () => t(),
@@ -125,19 +125,19 @@ function R(e) {
         ],
     });
 }
-function M(e) {
+function B(e) {
     let { onShare: t } = e,
-        r = (0, d.e7)([g.Z], () => g.Z.getRecipientStatus()),
+        r = (0, c.e7)([g.Z], () => g.Z.getRecipientStatus()),
         [s, l] = i.useState([]),
         [o, C] = i.useState(new Set()),
-        [h, f] = i.useState(!1);
+        [d, f] = i.useState(!1);
     return (
         i.useEffect(() => {
             (async () => {
                 let e = [];
                 for (let [t, a] of r)
                     if (a === _.Fe.PENDING) {
-                        let r = await (0, p.PR)(t);
+                        let r = await (0, h.PR)(t);
                         e.push(r);
                     }
                 l(e);
@@ -152,14 +152,14 @@ function M(e) {
                         (0, a.jsxs)("div", {
                             className: b.title,
                             children: [
-                                (0, a.jsx)(B, { className: b.titleImage }),
-                                (0, a.jsx)(x.X6q, {
+                                (0, a.jsx)(M, { className: b.titleImage }),
+                                (0, a.jsx)(p.X6q, {
                                     variant: "heading-xl/bold",
                                     children: S.intl.string(S.t.SY9tyM),
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(x.Text, {
+                        (0, a.jsx)(p.Text, {
                             className: b.description,
                             variant: "text-md/medium",
                             color: "header-secondary",
@@ -188,10 +188,10 @@ function M(e) {
                 }),
                 (0, a.jsx)("div", {
                     className: n()(b.footer, b.footerSeparator),
-                    children: (0, a.jsx)(c.zx, {
+                    children: (0, a.jsx)(x.zx, {
                         "data-migration-pending": !0,
                         className: b.submit,
-                        disabled: h,
+                        disabled: d,
                         onClick: async () => {
                             f(!0), await t([...o.values()]), f(!1);
                         },
@@ -202,16 +202,16 @@ function M(e) {
         })
     );
 }
-function B(e) {
+function M(e) {
     let { className: t } = e;
-    return "light" === (0, d.e7)([m.Z], () => m.Z.theme)
-        ? (0, a.jsx)(x.Eep, {
+    return "light" === (0, c.e7)([m.Z], () => m.Z.theme)
+        ? (0, a.jsx)(p.Eep, {
               className: t,
               src: w,
               width: 55,
               height: 38,
           })
-        : (0, a.jsx)(x.Eep, {
+        : (0, a.jsx)(p.Eep, {
               className: t,
               src: F,
               width: 55,
@@ -220,15 +220,15 @@ function B(e) {
 }
 let k = function (e) {
     let { onClose: t, onShare: r } = e,
-        s = (0, d.e7)([g.Z], () => g.Z.getReferralsRemaining()),
-        [l, p] = i.useState(""),
-        m = (0, f.Z)(l, 400),
+        s = (0, c.e7)([g.Z], () => g.Z.getReferralsRemaining()),
+        [l, h] = i.useState(""),
+        m = (0, u.Z)(l, 400),
         [_, y] = i.useState(new Map()),
         [w, N] = i.useState(!1),
         {
             eligibleUsers: Z,
             fetchUsers: F,
-            hasError: B,
+            hasError: M,
             isFetching: k,
             resendUsers: A,
         } = (0, L.q)({
@@ -237,11 +237,11 @@ let k = function (e) {
         }),
         P = i.useMemo(() => [..._.keys()].filter((e) => !A.has(e)), [_, A]);
     o()(null != s, "Referrals remaining should not be null");
-    let G = (0, u.O)((e) => {
+    let G = (0, C.O)((e) => {
         e && !k && F();
     });
-    if (B) return (0, a.jsx)(R, { onClose: t });
-    if (0 === s) return (0, a.jsx)(M, { onShare: r });
+    if (M) return (0, a.jsx)(R, { onClose: t });
+    if (0 === s) return (0, a.jsx)(B, { onShare: r });
     let I = m.length > 0 && 0 === Z.length;
     return (0, a.jsxs)("div", {
         children: [
@@ -249,14 +249,14 @@ let k = function (e) {
                 className: n()(b.header, b.headerSeparator),
                 children: [
                     I
-                        ? (0, a.jsx)(E, {})
+                        ? (0, a.jsx)(U, {})
                         : (0, a.jsx)(O, {
                               numOfSelectedUsers: P.length,
                               anySelected: _.size > 0,
                           }),
-                    (0, a.jsx)(h.Z, {
+                    (0, a.jsx)(f.Z, {
                         className: b.searchbar,
-                        size: h.Z.Sizes.MEDIUM,
+                        size: f.Z.Sizes.MEDIUM,
                         tags: [..._.values()].map((e) => j.ZP.getName(e)),
                         placeholder: S.intl.string(S.t.Kd5RaG),
                         query: l,
@@ -267,13 +267,13 @@ let k = function (e) {
                                 return a.delete(r.id), a;
                             });
                         },
-                        onQueryChange: p,
+                        onQueryChange: h,
                     }),
                 ],
             }),
             I
-                ? (0, a.jsx)(U, {})
-                : (0, a.jsxs)(C.w0Z, {
+                ? (0, a.jsx)(E, {})
+                : (0, a.jsxs)(d.w0Z, {
                       className: b.list,
                       children: [
                           Z.map((e) =>
@@ -296,13 +296,13 @@ let k = function (e) {
                                   e.id,
                               ),
                           ),
-                          k && (0, a.jsx)(x.$jN, {}),
+                          k && (0, a.jsx)(p.$jN, {}),
                           (0, a.jsx)("div", { ref: G }),
                       ],
                   }),
             (0, a.jsx)("div", {
                 className: n()(b.footer, b.footerSeparator),
-                children: (0, a.jsx)(c.zx, {
+                children: (0, a.jsx)(x.zx, {
                     "data-migration-pending": !0,
                     className: b.submit,
                     disabled: (0 === _.size && !I) || w,

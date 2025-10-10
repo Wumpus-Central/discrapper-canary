@@ -1,15 +1,15 @@
-n.d(t, { Q: () => m });
+n.d(t, { Q: () => g });
 var r = n(951288);
 n(647438);
 var i = n(740903),
     l = n(426434),
-    a = n(112824),
-    s = n(181339),
+    s = n(112824),
+    a = n(181339),
     o = n(195189),
     c = n(3896),
     d = n(981631),
     u = n(388032);
-let m = (e) => {
+let g = (e) => {
     let t = [
         {
             renderComponent: () => (0, r.jsx)(c.Z, { guild: e }, "verification-level"),
@@ -51,7 +51,7 @@ let m = (e) => {
     return {
         [i.u.CAPTCHA_AND_RAID_PROTECTION]: [
             {
-                renderComponent: () => (0, r.jsx)(s.Z, { guild: e }, "raid-alerts"),
+                renderComponent: () => (0, r.jsx)(a.Z, { guild: e }, "raid-alerts"),
                 enabled: !e.features.has(d.oNc.RAID_ALERTS_DISABLED),
             },
             {
@@ -71,8 +71,8 @@ let m = (e) => {
                 enabled: e.mfaLevel === d.BpS.ELEVATED,
             },
             {
-                renderComponent: () => (0, r.jsx)(a.Z, { guild: e }, "disable-risky-perms"),
-                enabled: 0 === (0, a.R)(e).length,
+                renderComponent: () => (0, r.jsx)(s.Z, { guild: e }, "disable-risky-perms"),
+                enabled: 0 === (0, s.R)(e).length,
             },
         ],
     };

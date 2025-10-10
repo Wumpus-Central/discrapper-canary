@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u }), n(388685), n(35282);
+n.d(t, { Z: () => o }), n(388685), n(35282);
 var r = n(485589),
     a = n(14160),
     l = n(247123),
     i = n(207662);
-let u = {
+let o = {
     id: "aria-attribute-valid-value",
     selector: i.J8,
     tags: [],
@@ -22,10 +22,10 @@ let u = {
                             return l.w;
                         case "id":
                             return (
-                                (u = k),
-                                (o = i),
-                                null == document.getElementById(o)
-                                    ? "".concat(u, " references #").concat(o, " which does not exist")
+                                (o = k),
+                                (u = i),
+                                null == document.getElementById(u)
+                                    ? "".concat(o, " references #").concat(u, " which does not exist")
                                     : l.w
                             );
                         case "idlist":
@@ -85,8 +85,8 @@ let u = {
                                           .concat(null == (a = n.values) ? void 0 : a.join(", "));
                             })(k, i, I);
                         case "tokenlist":
-                            var u,
-                                o,
+                            var o,
+                                u,
                                 c,
                                 s,
                                 d,

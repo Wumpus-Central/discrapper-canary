@@ -1,10 +1,10 @@
-t.d(n, { Z: () => o });
-var r = t(544891),
-    l = t(981631);
-let o = {
+t.d(n, { Z: () => r });
+var l = t(544891),
+    i = t(981631);
+let r = {
     updateNote(e, n) {
-        r.tn.put({
-            url: l.ANM.NOTE(e),
+        l.tn.put({
+            url: i.ANM.NOTE(e),
             body: { note: n },
             oldFormErrors: !0,
             rejectWithError: !0,

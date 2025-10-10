@@ -1,10 +1,10 @@
 n.d(t, { Z: () => a });
-var r = n(544891),
-    i = n(570140),
+var i = n(544891),
+    r = n(570140),
     l = n(981631);
 let a = {
     fetchRegions(e) {
-        r.tn
+        i.tn
             .get({
                 url: l.ANM.REGIONS(e),
                 retries: 1,
@@ -13,13 +13,13 @@ let a = {
             })
             .then(
                 (t) =>
-                    i.Z.dispatch({
+                    r.Z.dispatch({
                         type: "LOAD_REGIONS",
                         regions: t.body,
                         guildId: e,
                     }),
                 () =>
-                    i.Z.dispatch({
+                    r.Z.dispatch({
                         type: "LOAD_REGIONS",
                         regions: [],
                         guildId: e,
@@ -27,7 +27,7 @@ let a = {
             );
     },
     changeCallRegion(e, t) {
-        r.tn.patch({
+        i.tn.patch({
             url: l.ANM.CALL(e),
             body: { region: t },
             oldFormErrors: !0,

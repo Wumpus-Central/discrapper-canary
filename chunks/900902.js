@@ -1,6 +1,6 @@
 n.d(t, { Z: () => f });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(901461),
     a = n(453687),
     o = n(464891),
@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(507418),
     u = n(348238),
     d = n(981631);
-let p = i.memo(function (e) {
+let p = r.memo(function (e) {
         let {
                 message: t,
                 channel: n,
@@ -22,17 +22,17 @@ let p = i.memo(function (e) {
                 repliedMessage: g,
                 roleIcon: b,
             } = e,
-            _ = (0, u.wq)(t.author.id, n.id),
+            C = (0, u.wq)(t.author.id, n.id),
             y = (0, u.XO)(t, n, p, f),
-            C = (0, u.R9)(h, f),
-            x = i.useCallback(() => {
+            _ = (0, u.R9)(h, f),
+            v = r.useCallback(() => {
                 f({
                     usernameProfile: !1,
                     avatarProfile: !1,
                     referencedUsernameProfile: !1,
                 });
             }, [f]);
-        return (0, r.jsx)(o.ZP, {
+        return (0, i.jsx)(o.ZP, {
             guildId: n.guild_id,
             message: t,
             channel: n,
@@ -44,30 +44,30 @@ let p = i.memo(function (e) {
             renderPopout: c.Z,
             showAvatarPopout: h,
             showUsernamePopout: p,
-            onClickAvatar: C,
+            onClickAvatar: _,
             onClickUsername: y,
-            onContextMenu: _,
-            onPopoutRequestClose: x,
+            onContextMenu: C,
+            onPopoutRequestClose: v,
             roleIcon: b,
         });
     }),
-    h = i.memo(s.Z);
+    h = r.memo(s.Z);
 function f(e) {
     let {
             messageProps: t,
             setPopout: n,
-            messagePopouts: i,
+            messagePopouts: r,
             replyReference: o,
             author: s,
             repliedMessage: c,
             roleIcon: u,
         } = e,
         { message: d, compact: f, channel: m, groupId: g } = t,
-        { usernameProfile: b, avatarProfile: _ } = i;
+        { usernameProfile: b, avatarProfile: C } = r;
     if ((0, l.Z)(d)) return null;
     let y = d.id === g;
     return y || f || null != o
-        ? (0, r.jsx)(p, {
+        ? (0, i.jsx)(p, {
               message: d,
               channel: m,
               compact: f,
@@ -76,12 +76,12 @@ function f(e) {
               groupId: g,
               setPopout: n,
               usernameProfile: b,
-              avatarProfile: _,
+              avatarProfile: C,
               author: s,
               repliedMessage: c,
               roleIcon: u,
           })
-        : (0, r.jsx)(h, {
+        : (0, i.jsx)(h, {
               compact: !0,
               timestamp: d.timestamp,
               isInline: !1,

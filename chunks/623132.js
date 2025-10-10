@@ -1,48 +1,48 @@
-n.d(t, { Z: () => k }), n(781311), n(388685);
-var r = n(951288),
-    i = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    l = n(624238),
-    c = n(296009),
-    s = n(481060),
-    u = n(313201),
-    d = n(810568),
-    f = n(168524),
-    g = n(594174),
-    p = n(5192),
-    b = n(785717),
-    m = n(86419),
-    O = n(747101),
-    y = n(817053),
-    j = n(248554),
-    v = n(879877),
-    h = n(533815),
-    x = n(919498),
-    P = n(388032),
-    _ = n(932366),
-    w = n(776385);
+r.d(t, { Z: () => C }), r(781311), r(388685);
+var n = r(951288),
+    i = r(647438),
+    o = r(120356),
+    a = r.n(o),
+    l = r(624238),
+    c = r(296009),
+    s = r(481060),
+    u = r(313201),
+    d = r(810568),
+    f = r(168524),
+    g = r(594174),
+    p = r(5192),
+    b = r(785717),
+    m = r(86419),
+    O = r(747101),
+    y = r(817053),
+    j = r(248554),
+    x = r(879877),
+    h = r(533815),
+    v = r(919498),
+    _ = r(388032),
+    w = r(932366),
+    P = r(776385);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
@@ -53,38 +53,38 @@ function I(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
 function S(e) {
-    var { applicationId: t, userId: n, gameName: i } = e,
+    var { applicationId: t, userId: r, gameName: i } = e,
         o = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         i = {},
                         o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["applicationId", "userId", "gameName"]);
@@ -92,72 +92,72 @@ function S(e) {
         location: "UserProfileWidgetGameDetailsCard",
         applicationId: t,
         source: d.m1.UserProfile,
-        sourceUserId: n,
+        sourceUserId: r,
         trackEntryPointImpression: !0,
     });
     return null == a
-        ? (0, r.jsx)(s.X6q, I(E({}, o), { children: i }))
-        : (0, r.jsx)(
+        ? (0, n.jsx)(s.X6q, I(E({}, o), { children: i }))
+        : (0, n.jsx)(
               s.X6q,
               I(E({}, o), {
-                  children: (0, r.jsx)(s.P3F, {
+                  children: (0, n.jsx)(s.P3F, {
                       onClick: a,
-                      className: w.clickableText,
+                      className: P.clickableText,
                       children: i,
                   }),
               }),
           );
 }
 function T(e) {
-    let { user: t, guildId: n, channelId: i, id: o } = e;
-    return (0, r.jsx)(s.nn4, {
+    let { user: t, guildId: r, channelId: i, id: o } = e;
+    return (0, n.jsx)(s.nn4, {
         id: o,
-        children: P.intl.format(P.t.TM0XDQ, { name: p.ZP.getName(n, i, t) }),
+        children: _.intl.format(_.t.TM0XDQ, { name: p.ZP.getName(r, i, t) }),
     });
 }
 function D(e) {
-    let { text: t, className: n } = e;
-    return (0, r.jsx)(s.Text, {
+    let { text: t, className: r } = e;
+    return (0, n.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "text-tertiary",
-        className: n,
+        className: r,
         children: t,
     });
 }
 function N(e) {
-    let { text: t, user: n, guildId: i, channelId: o } = e,
+    let { text: t, user: r, guildId: i, channelId: o } = e,
         a = (0, u.Dt)();
     return null == t || "" === t.trim()
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               role: "group",
               "aria-labelledby": a,
               children: [
-                  (0, r.jsx)(s.PEf, {
+                  (0, n.jsx)(s.PEf, {
                       size: "xxs",
                       color: s.TVs.colors.ICON_TERTIARY,
-                      className: w.commentIcon,
+                      className: P.commentIcon,
                   }),
-                  (0, r.jsx)(T, {
-                      user: n,
+                  (0, n.jsx)(T, {
+                      user: r,
                       guildId: i,
                       channelId: o,
                       id: a,
                   }),
-                  (0, r.jsx)(D, { text: t }),
+                  (0, n.jsx)(D, { text: t }),
               ],
           });
 }
-function A(e) {
-    let { text: t, user: n, guildId: o, channelId: c, widgetType: d, applicationId: f } = e,
+function k(e) {
+    let { text: t, user: r, guildId: o, channelId: c, widgetType: d, applicationId: f } = e,
         g = (0, u.Dt)(),
         p = (0, u.Dt)(),
         { trackUserProfileEditAction: O } = (0, b.KZ)(),
         [y, j] = i.useState("idle"),
-        [v, h] = i.useState(null != t ? t : ""),
-        x = i.useRef(null),
-        _ = i.useRef(null),
-        E = P.intl.string(P.t.xKSfBQ),
+        [x, h] = i.useState(null != t ? t : ""),
+        v = i.useRef(null),
+        w = i.useRef(null),
+        E = _.intl.string(_.t.xKSfBQ),
         I = null != t && "" !== t.trim(),
         S = i.useCallback(() => {
             O({
@@ -167,18 +167,18 @@ function A(e) {
                 j("editing");
         }, [d, O]),
         N = i.useCallback(() => {
-            let e = v.trim(),
-                n = e !== (null != t ? t : "").trim();
+            let e = x.trim(),
+                r = e !== (null != t ? t : "").trim();
             (0, m.Bu)(d, f, "" !== e ? e : void 0),
                 j("completed"),
-                n &&
+                r &&
                     O({
                         action: "COMMENTARY_EDITED",
                         widgetEdited: d,
                         gameId: f,
                     });
-        }, [d, f, v, t, O]),
-        A = i.useCallback((e) => {
+        }, [d, f, x, t, O]),
+        k = i.useCallback((e) => {
             h(e);
         }, []);
     return (
@@ -188,23 +188,23 @@ function A(e) {
         i.useEffect(() => {
             if ("completed" === y) {
                 var e;
-                null == (e = x.current) || e.focus();
+                null == (e = v.current) || e.focus();
             }
         }, [y]),
         "editing" === y
-            ? (0, r.jsxs)("div", {
-                  className: w.textAreaContainer,
+            ? (0, n.jsxs)("div", {
+                  className: P.textAreaContainer,
                   children: [
-                      (0, r.jsx)(s.nn4, {
+                      (0, n.jsx)(s.nn4, {
                           tag: "label",
                           htmlFor: g,
-                          children: P.intl.string(P.t.JxKXeX),
+                          children: _.intl.string(_.t.JxKXeX),
                       }),
-                      (0, r.jsx)(s.Kx8, {
+                      (0, n.jsx)(s.Kx8, {
                           id: g,
-                          value: v,
+                          value: x,
                           placeholder: E,
-                          onChange: A,
+                          onChange: k,
                           onBlur: N,
                           rows: 3,
                           autoFocus: "editing" === y,
@@ -215,57 +215,57 @@ function A(e) {
                       }),
                   ],
               })
-            : (0, r.jsxs)("div", {
-                  ref: _,
+            : (0, n.jsxs)("div", {
+                  ref: w,
                   role: "group",
                   "aria-labelledby": p,
                   onClick: S,
-                  className: w.editableCommentContainer,
+                  className: P.editableCommentContainer,
                   children: [
-                      (0, r.jsx)(s.vdY, {
+                      (0, n.jsx)(s.vdY, {
                           size: "xxs",
                           color: s.TVs.colors.ICON_TERTIARY,
-                          className: w.commentIcon,
+                          className: P.commentIcon,
                       }),
-                      (0, r.jsx)(T, {
-                          user: n,
+                      (0, n.jsx)(T, {
+                          user: r,
                           guildId: o,
                           channelId: c,
                           id: p,
                       }),
-                      (0, r.jsx)(D, {
+                      (0, n.jsx)(D, {
                           text: null != t ? t : E,
-                          className: a()(w.editableCommentText, !I && w.placeholder),
+                          className: a()(P.editableCommentText, !I && P.placeholder),
                       }),
-                      (0, r.jsx)(s.P3F, {
-                          innerRef: x,
-                          "aria-label": P.intl.string(P.t.ppb9MD),
+                      (0, n.jsx)(s.P3F, {
+                          innerRef: v,
+                          "aria-label": _.intl.string(_.t.ppb9MD),
                           onClick: (e) => {
                               e.stopPropagation(), S();
                           },
-                          focusProps: { ringTarget: _ },
+                          focusProps: { ringTarget: w },
                       }),
                   ],
               })
     );
 }
-function k(e) {
-    let { user: t, guildId: n, channelId: i, game: o, widgetType: a, disableInteraction: l = !1 } = e,
-        { gameName: u = P.intl.string(P.t.GIWFlJ), imageSrc: d, applicationId: f, comment: p, tags: b } = o,
+function C(e) {
+    let { user: t, guildId: r, channelId: i, game: o, widgetType: a, disableInteraction: l = !1 } = e,
+        { gameName: u = _.intl.string(_.t.GIWFlJ), imageSrc: d, applicationId: f, comment: p, tags: b } = o,
         m = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
         T = g.default.getCurrentUser(),
         D = (null == T ? void 0 : T.id) === t.id,
-        k = !l && D && a === c.l.FAVORITE_GAMES;
+        C = !l && D && a === c.l.FAVORITE_GAMES;
     return (0, O.kO)(f)
-        ? (0, r.jsx)(j.i, {})
-        : (0, r.jsxs)("div", {
-              className: w.card,
+        ? (0, n.jsx)(j.i, {})
+        : (0, n.jsxs)("div", {
+              className: P.card,
               children: [
-                  (0, r.jsx)(y.Z, {
-                      className: null == d || l ? void 0 : _.hoverActiveEffect,
+                  (0, n.jsx)(y.Z, {
+                      className: null == d || l ? void 0 : w.hoverActiveEffect,
                       imageSrc: d,
                       gameName: u,
                       applicationId: f,
@@ -273,12 +273,12 @@ function k(e) {
                       disableInteraction: l,
                       hideTooltip: !0,
                   }),
-                  (0, r.jsxs)("div", {
-                      className: w.details,
+                  (0, n.jsxs)("div", {
+                      className: P.details,
                       children: [
                           l
-                              ? (0, r.jsx)(s.X6q, I(E({}, m), { children: u }))
-                              : (0, r.jsx)(
+                              ? (0, n.jsx)(s.X6q, I(E({}, m), { children: u }))
+                              : (0, n.jsx)(
                                     S,
                                     E(
                                         {
@@ -289,44 +289,44 @@ function k(e) {
                                         m,
                                     ),
                                 ),
-                          k
-                              ? (0, r.jsx)(A, {
+                          C
+                              ? (0, n.jsx)(k, {
                                     text: p,
                                     user: t,
-                                    guildId: n,
+                                    guildId: r,
                                     channelId: i,
                                     widgetType: a,
                                     applicationId: f,
                                 })
-                              : (0, r.jsx)(N, {
+                              : (0, n.jsx)(N, {
                                     text: p,
                                     user: t,
-                                    guildId: n,
+                                    guildId: r,
                                     channelId: i,
                                 }),
-                          (0, r.jsx)(v.Z, {
+                          (0, n.jsx)(x.Z, {
                               tags: b,
                               isCurrentUser: D,
                               widgetType: a,
                               applicationId: f,
                               disableInteraction: l,
-                              className: w.tags,
+                              className: P.tags,
                           }),
                           !l &&
-                              (0, r.jsx)(x.Z, {
-                                  className: w.socialProof,
+                              (0, n.jsx)(v.Z, {
+                                  className: P.socialProof,
                                   applicationId: f,
-                                  guildId: n,
+                                  guildId: r,
                                   channelId: i,
                               }),
                       ],
                   }),
                   !l &&
                       D &&
-                      (0, r.jsx)(h.Z, {
+                      (0, n.jsx)(h.Z, {
                           game: o,
                           widgetType: a,
-                          className: w.removeGameButton,
+                          className: P.removeGameButton,
                       }),
               ],
           });

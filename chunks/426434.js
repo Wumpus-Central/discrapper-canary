@@ -9,8 +9,8 @@ var i = n(392711),
     c = n(518596),
     d = n(601964),
     u = n(496675),
-    m = n(594174),
-    g = n(434404),
+    g = n(594174),
+    m = n(434404),
     p = n(449226),
     f = n(981631),
     h = n(388032),
@@ -20,14 +20,14 @@ function b(e) {
         { guild: n } = e,
         b = n.mfaLevel,
         j = (0, l.e7)([u.Z], () => null != n && u.Z.can(f.Plq.MANAGE_GUILD, n), [n]),
-        _ = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         v = (0, d.eM)(n, _),
         C = null == _ ? void 0 : _.mfaEnabled,
         O = b === f.BpS.ELEVATED,
         y = v && C,
         N = (0, i.throttle)(async (e) => {
             y &&
-                (await g.Z.updateMFALevel({
+                (await m.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? f.BpS.ELEVATED : f.BpS.NONE,
                     isEnabled: !e,

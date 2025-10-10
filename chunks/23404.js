@@ -24,7 +24,7 @@ var r = n(951288),
     C = n(46140),
     T = n(981631),
     N = n(388032),
-    j = n(123611);
+    j = n(408228);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -139,16 +139,16 @@ function A(e) {
         U = (null == (t = b.userStatus) ? void 0 : t.enrolledAt) != null,
         G = (null == (n = b.userStatus) ? void 0 : n.completedAt) != null,
         B = (0, f.Rf)(b),
-        V = (0, m.DD)({
+        H = (0, m.DD)({
             quest: b,
             taskDetails: B,
             location: C.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
         }),
-        H = (0, d.Rt)(b),
+        V = (0, d.Rt)(b),
         F = (0, m.CR)({ quest: b }),
-        z = H ? F : N.intl.string(N.t.l7E81t);
+        z = V ? F : N.intl.string(N.t.l7E81t);
     return (0, r.jsxs)("div", {
         ref: (e) => {
             c.current = e;
@@ -212,7 +212,7 @@ function A(e) {
                             children: (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: V,
+                                children: H,
                             }),
                         }),
                     ],
@@ -234,7 +234,7 @@ function A(e) {
                     !U &&
                         (0, r.jsxs)(s.hE2, {
                             size: "sm",
-                            direction: H ? "vertical" : "horizontal",
+                            direction: V ? "vertical" : "horizontal",
                             fullWidth: !0,
                             children: [
                                 (0, r.jsx)(s.zxk, {

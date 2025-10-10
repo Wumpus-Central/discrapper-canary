@@ -11,7 +11,7 @@ n.d(t, {
     G6: () => e_,
     H1: () => L,
     HV: () => e1,
-    I0: () => M,
+    I0: () => j,
     JG: () => eZ,
     JN: () => er,
     JT: () => ea,
@@ -61,7 +61,7 @@ n.d(t, {
     h2: () => X,
     hg: () => eX,
     iG: () => z,
-    iH: () => eM,
+    iH: () => ej,
     j7: () => ez,
     jU: () => ee,
     kJ: () => K,
@@ -72,7 +72,7 @@ n.d(t, {
     nc: () => eI,
     nh: () => eH,
     no: () => ek,
-    qF: () => j,
+    qF: () => M,
     rN: () => eT,
     tU: () => eb,
     uL: () => U,
@@ -237,7 +237,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    j = (0, f.Zc)(
+    M = (0, f.Zc)(
         "voiceAndVideo",
         "alwaysPreviewVideo",
         (e) => {
@@ -246,7 +246,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    M = (0, f.Zc)(
+    j = (0, f.Zc)(
         "voiceAndVideo",
         "disableStreamPreviews",
         (e) => (null == e ? void 0 : e.value),
@@ -823,11 +823,11 @@ let eC = (0, f.KM)(
         (e) => e,
         { delay: h.fy.FREQUENT_USER_ACTION },
     ),
-    ej = [],
-    eM = (0, f.Zc)(
+    eM = [],
+    ej = (0, f.Zc)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => (null != e ? e : ej),
+        (e) => (null != e ? e : eM),
         (e) => e,
     );
 (0, f.TG)({

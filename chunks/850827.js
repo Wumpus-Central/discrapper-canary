@@ -16,7 +16,7 @@ var i = n(120356),
     m = n(979651),
     g = n(503438),
     E = n(802856),
-    b = n(387903),
+    b = n(942596),
     y = n(606925),
     O = n(719216),
     v = n(429589),
@@ -37,17 +37,17 @@ let D = (0, u.Z)((e) => {
             applicationStream: o,
             className: u,
             guildId: D,
-            channelId: x,
-            source: L,
-            buttonVariant: j,
-            type: M,
+            channelId: L,
+            source: x,
+            buttonVariant: M,
+            type: j,
             onAction: k,
         } = e,
         U = (0, l.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
         }),
-        G = M === b.Y.STREAM_PREVIEW || null != o,
+        G = j === b.Y.STREAM_PREVIEW || null != o,
         B = (0, g.Z)(t),
         Z = B || G ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL,
         F = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
@@ -59,13 +59,13 @@ let D = (0, u.Z)((e) => {
             if ((0, E.Z)(t))
                 return (0, r.jsx)(y.Z, {
                     platform: d.Z.get(P.ABu.XBOX),
-                    variant: j,
+                    variant: M,
                     onAction: k,
                     icon: c.Mko,
                 });
             if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
                 return (0, r.jsx)(y.Z, {
-                    variant: j,
+                    variant: M,
                     platform: d.Z.get(P.ABu.PLAYSTATION),
                     onAction: k,
                     icon: c.Tsp,
@@ -75,14 +75,14 @@ let D = (0, u.Z)((e) => {
                         activity: t,
                         user: i,
                         guildId: D,
-                        channelId: x,
-                        source: L,
+                        channelId: L,
+                        source: x,
                         onAction: k,
                     }),
                     n = (0, r.jsx)(A.Z, {
                         activity: t,
                         user: i,
-                        source: L,
+                        source: x,
                         onAction: k,
                     });
                 return (0, r.jsxs)(c.hE2, {
@@ -98,7 +98,7 @@ let D = (0, u.Z)((e) => {
                     : (0, r.jsx)(T.Z, {
                           guildId: e.guildId,
                           channelId: e.channelId,
-                          variant: j,
+                          variant: M,
                           onAction: k,
                       });
             }
@@ -111,7 +111,7 @@ let D = (0, u.Z)((e) => {
                 : F && null != V
                   ? (0, r.jsx)(I.Z, {
                         userId: i.id,
-                        variant: j,
+                        variant: M,
                         hangStatusChannel: V,
                         onAction: k,
                     })
@@ -119,26 +119,26 @@ let D = (0, u.Z)((e) => {
                         children: [
                             (0, r.jsx)(N.Z, {
                                 activity: t,
-                                variant: j,
+                                variant: M,
                                 onAction: k,
                             }),
                             (0, r.jsx)(v.Z, {
                                 activity: t,
                                 embeddedActivity: n,
                                 user: i,
-                                variant: j,
+                                variant: M,
                                 onAction: k,
                             }),
                             (0, r.jsx)(S.Z, {
                                 activity: t,
                                 user: i,
-                                variant: j,
+                                variant: M,
                                 onAction: k,
                             }),
                             (0, r.jsx)(O.Z, {
                                 user: i,
                                 activity: t,
-                                variant: j,
+                                variant: M,
                                 onAction: k,
                             }),
                         ],

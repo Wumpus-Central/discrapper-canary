@@ -1,4 +1,4 @@
-n.d(t, { r: () => v });
+n.d(t, { r: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(580685),
@@ -8,13 +8,13 @@ var r = n(951288),
     c = n(944163),
     d = n(65361),
     u = n(798476),
-    m = n(434404),
-    g = n(999382),
+    g = n(434404),
+    m = n(999382),
     p = n(548522),
     f = n(651390),
     h = n(981631),
-    b = n(388032),
-    x = n(928913);
+    x = n(388032),
+    b = n(556955);
 let j = {
     id: "0",
     name: "",
@@ -34,49 +34,49 @@ let j = {
     badgeColorPrimary: null,
     badgeColorSecondary: null,
 };
-function v(e) {
+function _(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: v } = (0, a.cj)([g.Z], () => ({
-            guild: g.Z.getGuild(),
-            guildProfile: g.Z.getGuildProfile(),
+        { guild: n, guildProfile: _ } = (0, a.cj)([m.Z], () => ({
+            guild: m.Z.getGuild(),
+            guildProfile: m.Z.getGuildProfile(),
         })),
-        _ = null == n ? void 0 : n.id,
-        O = (0, a.e7)([c.Z], () => c.Z.get(_)),
-        { fetchGuildProfile: y } = (0, d.u)(_),
-        C = (null == v ? void 0 : v.visibility) == null || !l.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
-        N = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        v = null == n ? void 0 : n.id,
+        C = (0, a.e7)([c.Z], () => c.Z.get(v)),
+        { fetchGuildProfile: O } = (0, d.u)(v),
+        y = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
+        N = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
-        null != _ && y();
-    }, [_, y]);
-    let E = i.useMemo(() => (null == n || null == v ? j : v), [n, v]),
+        null != v && O();
+    }, [v, O]);
+    let E = i.useMemo(() => (null == n || null == _ ? j : _), [n, _]),
         I = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
                 (N
-                    ? m.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
-                    : m.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
+                    ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
+                    : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
         }, [null == n ? void 0 : n.id, N]),
         S = i.useCallback(() => {
-            m.Z.setSection(h.pNK.PROFILE);
+            g.Z.setSection(h.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let T = null != t ? t : null == O ? void 0 : O.formFields;
+    let T = null != t ? t : null == C ? void 0 : C.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.X6q, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: b.intl.string(b.t.AHJddH),
+                children: x.intl.string(x.t.AHJddH),
             }),
             (0, r.jsx)(s.xvT, {
                 tag: "p",
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: x.applicationBody,
-                children: b.intl.string(b.t.Z7TCtb),
+                className: b.applicationBody,
+                children: x.intl.string(x.t.Z7TCtb),
             }),
             (0, r.jsx)(f.c, { guildId: n.id }),
             (0, r.jsx)("div", {
-                className: x.form,
+                className: b.form,
                 children:
                     null != T
                         ? (0, r.jsx)(p.y, {
@@ -85,29 +85,29 @@ function v(e) {
                           })
                         : (0, r.jsx)(o.$jN, {}),
             }),
-            (0, r.jsx)("div", { className: x.divider }),
+            (0, r.jsx)("div", { className: b.divider }),
             (0, r.jsxs)(o.hjN, {
-                className: x.twoColumnContainer,
+                className: b.twoColumnContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: x.column,
+                        className: b.column,
                         children: [
                             (0, r.jsx)(o.rsf, {
-                                label: b.intl.string(b.t["N/0239"]),
+                                label: x.intl.string(x.t["N/0239"]),
                                 checked: N,
                                 onChange: I,
-                                disabled: C,
+                                disabled: y,
                             }),
                             (0, r.jsx)(s.xvT, {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
-                                children: b.intl.string(b.t["3TSZYG"]),
+                                children: x.intl.string(x.t["3TSZYG"]),
                             }),
-                            C &&
+                            y &&
                                 (0, r.jsx)(s.xvT, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: b.intl.format(b.t.Bk0VOj, {
+                                    children: x.intl.format(x.t.Bk0VOj, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
                                                 o.eee,
@@ -122,18 +122,18 @@ function v(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: x.column,
+                        className: b.column,
                         children: (0, r.jsxs)("div", {
-                            className: x.previewWrapper,
+                            className: b.previewWrapper,
                             children: [
-                                (0, r.jsx)("div", { className: x.gradient }),
+                                (0, r.jsx)("div", { className: b.gradient }),
                                 (0, r.jsx)(u.ZP, {
-                                    className: x.preview,
+                                    className: b.preview,
                                     profile: E,
                                     CTAOverride: (0, r.jsx)(s.zxk, {
                                         variant: "active",
                                         size: "sm",
-                                        text: b.intl.string(b.t["7XdMW1"]),
+                                        text: x.intl.string(x.t["7XdMW1"]),
                                         fullWidth: !0,
                                     }),
                                     disableGuildNameClick: !0,

@@ -1,28 +1,28 @@
-n.d(t, { Z: () => m }), n(953529);
+n.d(t, { Z: () => g }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(293810),
-    a = n(388032),
-    s = n(964269),
+    s = n(388032),
+    a = n(964269),
     o = n(961618),
     c = n(217684),
     d = n(174618);
 function u(e) {
     let { imageSrc: t, description: n } = e;
     return (0, r.jsxs)("div", {
-        className: s.howItWorksCard,
+        className: a.howItWorksCard,
         children: [
             (0, r.jsx)("div", {
-                className: s.howItWorksImageContainer,
+                className: a.howItWorksImageContainer,
                 children: (0, r.jsx)("img", {
-                    className: s.howItWorksImage,
+                    className: a.howItWorksImage,
                     src: t,
                     alt: "",
                 }),
             }),
             (0, r.jsx)("div", {
-                className: s.howItWorksDescription,
+                className: a.howItWorksDescription,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "header-primary",
@@ -32,19 +32,19 @@ function u(e) {
         ],
     });
 }
-function m() {
+function g() {
     let e = [
         {
             imageSrc: d,
-            description: a.intl.string(a.t.lT0ZNT),
+            description: s.intl.string(s.t.lT0ZNT),
         },
         {
             imageSrc: o,
-            description: a.intl.string(a.t.ihN2WV),
+            description: s.intl.string(s.t.ihN2WV),
         },
         {
             imageSrc: c,
-            description: a.intl.string(a.t.c8krDQ),
+            description: s.intl.string(s.t.c8krDQ),
         },
     ];
     return (0, r.jsxs)("div", {
@@ -52,11 +52,11 @@ function m() {
             (0, r.jsx)(i.X6q, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: a.intl.string(a.t.R9rNIi),
+                children: s.intl.string(s.t.R9rNIi),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)("div", {
-                className: s.howItWorksContainer,
+                className: a.howItWorksContainer,
                 children: e.map((e) =>
                     (0, r.jsx)(
                         u,
@@ -72,7 +72,7 @@ function m() {
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: a.intl.format(a.t.oxW30N, { creatorPortalUrl: l.C5 }),
+                children: s.intl.format(s.t.oxW30N, { creatorPortalUrl: l.C5 }),
             }),
         ],
     });

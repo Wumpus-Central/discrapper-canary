@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(953529);
+n.d(t, { Z: () => m }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -9,16 +9,16 @@ var i = n(120356),
     c = n(267642),
     d = n(981631),
     u = n(388032),
-    m = n(552461);
-let g = (e) => {
+    g = n(552461);
+let m = (e) => {
     let t,
         n,
         i,
-        { guildFeature: g, guild: p, className: f, hideTooltip: h = !1, tooltipPosition: x = "left", onClick: b } = e,
-        j = p.features.has(g),
+        { guildFeature: m, guild: p, className: f, hideTooltip: h = !1, tooltipPosition: x = "left", onClick: b } = e,
+        j = p.features.has(m),
         _ = (0, o.AR)(p.id, "GuildSettingsBoostPerks"),
-        v = (0, c._p)(g);
-    return !j && g === d.oNc.VANITY_URL && _
+        v = (0, c._p)(m);
+    return !j && m === d.oNc.VANITY_URL && _
         ? null
         : (j
                 ? (null != v && (i = u.intl.string(u.t.hUgjyM)),
@@ -26,11 +26,11 @@ let g = (e) => {
                       children: [
                           (0, r.jsx)(a.$Eu, {
                               color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: m.unlockedIcon,
+                              className: g.unlockedIcon,
                           }),
                           (0, r.jsx)(a.X6q, {
                               variant: "eyebrow",
-                              className: m.description,
+                              className: g.description,
                               children: u.intl.string(u.t["0O+87u"]),
                           }),
                       ],
@@ -40,11 +40,11 @@ let g = (e) => {
                       children: [
                           (0, r.jsx)(a.$Eu, {
                               color: "currentColor",
-                              className: m.icon,
+                              className: g.icon,
                           }),
                           (0, r.jsx)(a.X6q, {
                               variant: "eyebrow",
-                              className: m.description,
+                              className: g.description,
                               children: null != v && (0, c.e9)(v),
                           }),
                       ],
@@ -52,14 +52,14 @@ let g = (e) => {
             (n =
                 h || null == i
                     ? (0, r.jsx)("div", {
-                          className: l()(m.availabilityIndicator, f),
+                          className: l()(g.availabilityIndicator, f),
                           children: t,
                       })
                     : (0, r.jsx)(s.u, {
                           position: x,
                           text: i,
                           children: (0, r.jsx)("div", {
-                              className: l()(m.availabilityIndicator, f),
+                              className: l()(g.availabilityIndicator, f),
                               children: t,
                           }),
                       })),
@@ -67,7 +67,7 @@ let g = (e) => {
           ? n
           : (0, r.jsx)(a.P3F, {
                 onClick: b,
-                className: m.clickable,
+                className: g.clickable,
                 children: n,
             });
 };

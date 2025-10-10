@@ -1,4 +1,4 @@
-var r = n(309943),
+var r = n(441710),
     i = n(654530),
     a = n(102736),
     o = n(169774),
@@ -44,15 +44,15 @@ e.exports = function (e, t) {
             w = P.getBlockForKey(T),
             D = w.getText().slice(N, R);
         if ((y.endsWith(f) && (y = y.slice(0, -1)), y === D)) {
-            var x = t.nativeEvent.inputType;
-            if (x) {
-                var L = _(x, O);
-                L !== O && (e.restoreEditorDOM(), e.update(L));
+            var L = t.nativeEvent.inputType;
+            if (L) {
+                var x = _(L, O);
+                x !== O && (e.restoreEditorDOM(), e.update(x));
             }
             return;
         }
-        var j = O.getSelection(),
-            M = j.merge({
+        var M = O.getSelection(),
+            j = M.merge({
                 anchorOffset: N,
                 focusOffset: R,
                 isBackward: !1,
@@ -62,16 +62,16 @@ e.exports = function (e, t) {
             G = null != U ? U.getMutability() : null,
             B = "MUTABLE" === G,
             Z = B ? "spellcheck-change" : "apply-entity",
-            V = r.replaceText(P, M, y, w.getInlineStyleAt(N), B ? w.getEntityAt(N) : null);
+            F = r.replaceText(P, j, y, w.getInlineStyleAt(N), B ? w.getEntityAt(N) : null);
         if (d)
             (n = h.anchorOffset), (p = (c = N + Math.min(n, (o = h.focusOffset))) + Math.abs(n - o)), (n = c), (o = p);
         else {
-            var F = y.length - D.length;
-            (c = j.getStartOffset()), (p = j.getEndOffset()), (n = g ? p + F : c), (o = p + F);
+            var V = y.length - D.length;
+            (c = M.getStartOffset()), (p = M.getEndOffset()), (n = g ? p + V : c), (o = p + V);
         }
-        var H = V.merge({
+        var H = F.merge({
             selectionBefore: P.getSelectionAfter(),
-            selectionAfter: j.merge({
+            selectionAfter: M.merge({
                 anchorOffset: n,
                 focusOffset: o,
             }),

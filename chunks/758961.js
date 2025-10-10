@@ -27,14 +27,14 @@ let _ = [
 ];
 function N(e) {
     var n, t, i, N;
-    let { guildId: C, sourceFile: S, existingSound: O, onClose: E, transitionState: I, showGuildPicker: P = !1 } = e,
+    let { guildId: C, sourceFile: S, existingSound: O, onClose: E, transitionState: P, showGuildPicker: I = !1 } = e,
         [Z, k] = l.useState(
             null != (t = null != (n = null == S ? void 0 : S.name) ? n : null == O ? void 0 : O.name) ? t : "",
         ),
         [M, T] = l.useState(null != (i = null == O ? void 0 : O.volume) ? i : 1),
         [F, D] = l.useState(null == O ? void 0 : O.emojiId),
         [R, B] = l.useState(null == O ? void 0 : O.emojiName),
-        { file: H, loadAudioFromFile: U, maxVolume: A, setMaxVolume: z } = (0, p.p)(),
+        { file: H, loadAudioFromFile: A, maxVolume: U, setMaxVolume: z } = (0, p.p)(),
         [L, G] = l.useState(!1),
         [q, V] = l.useState(null),
         [W, Y] = l.useState(null),
@@ -42,7 +42,7 @@ function N(e) {
         [X, Q] = l.useState(C);
     async function $(e) {
         try {
-            await U(null != e ? e : null), K("ready"), V(null);
+            await A(null != e ? e : null), K("ready"), V(null);
         } catch (e) {
             ee(e);
         }
@@ -61,12 +61,12 @@ function N(e) {
         (null == S ? void 0 : S.file) != null && e(S.file);
         async function e(e) {
             try {
-                await U(e), K("ready"), V(null);
+                await A(e), K("ready"), V(null);
             } catch (e) {
                 ee(e);
             }
         }
-    }, [null == S ? void 0 : S.file, U]);
+    }, [null == S ? void 0 : S.file, A]);
     let en = (function (e) {
             switch (e) {
                 case "encoding":
@@ -145,15 +145,15 @@ function N(e) {
             }
         }, [ea, E, X, O, Z, M, F, R, er, z]);
     (0, c.ZP)(() => {
-        U(null),
+        A(null),
             m.default.track(x.rMx.OPEN_MODAL, {
                 type: "Soundboard Upload Sound",
                 guild_id: X,
             });
     }),
         l.useEffect(() => {
-            T(Math.min(M, A));
-        }, [M, T, A]);
+            T(Math.min(M, U));
+        }, [M, T, U]);
     let es = (0, a.jsx)(d.Z, {
             guildId: X,
             emojiId: F,
@@ -183,7 +183,7 @@ function N(e) {
         );
     return (0, a.jsxs)(o.Modal, {
         onClose: E,
-        transitionState: I,
+        transitionState: P,
         title: ea ? j.intl.string(j.t.HmsZGR) : j.intl.string(j.t["ioD/9P"]),
         actions: eu,
         children: [
@@ -193,7 +193,7 @@ function N(e) {
                     className: w.section,
                     children: q.message,
                 }),
-            P
+            I
                 ? (0, a.jsx)(s.xJW, {
                       required: !0,
                       className: w.section,
@@ -249,7 +249,7 @@ function N(e) {
                     initialValue: M,
                     onValueChange: (e) => T(e),
                     minValue: 0,
-                    maxValue: A,
+                    maxValue: U,
                 }),
             }),
             null != en &&

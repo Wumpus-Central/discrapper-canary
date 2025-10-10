@@ -1,31 +1,31 @@
-n.d(t, { H: () => a });
-var r = n(573654);
-function i(e, t, n) {
+e.d(n, { H: () => a });
+var r = e(573654);
+function o(t, n, e) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in t
+            ? Object.defineProperty(t, n, {
+                  value: e,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
-        e
+            : (t[n] = e),
+        t
     );
 }
-var o = !1,
+var i = !1,
     a = (function () {
-        var e;
-        function t(e) {
-            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            i(this, "internalMonitor", void 0), i(this, "targetId", null), (this.internalMonitor = e.getMonitor());
+        var t;
+        function n(t) {
+            if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
+            o(this, "internalMonitor", void 0), o(this, "targetId", null), (this.internalMonitor = t.getMonitor());
         }
         return (
-            (e = [
+            (t = [
                 {
                     key: "receiveHandlerId",
-                    value: function (e) {
-                        this.targetId = e;
+                    value: function (t) {
+                        this.targetId = t;
                     },
                 },
                 {
@@ -36,8 +36,8 @@ var o = !1,
                 },
                 {
                     key: "subscribeToStateChange",
-                    value: function (e, t) {
-                        return this.internalMonitor.subscribeToStateChange(e, t);
+                    value: function (t, n) {
+                        return this.internalMonitor.subscribeToStateChange(t, n);
                     },
                 },
                 {
@@ -45,20 +45,20 @@ var o = !1,
                     value: function () {
                         if (!this.targetId) return !1;
                         (0, r.k)(
-                            !o,
+                            !i,
                             "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor",
                         );
                         try {
-                            return (o = !0), this.internalMonitor.canDropOnTarget(this.targetId);
+                            return (i = !0), this.internalMonitor.canDropOnTarget(this.targetId);
                         } finally {
-                            o = !1;
+                            i = !1;
                         }
                     },
                 },
                 {
                     key: "isOver",
-                    value: function (e) {
-                        return !!this.targetId && this.internalMonitor.isOverTarget(this.targetId, e);
+                    value: function (t) {
+                        return !!this.targetId && this.internalMonitor.isOverTarget(this.targetId, t);
                     },
                 },
                 {
@@ -116,15 +116,15 @@ var o = !1,
                     },
                 },
             ]),
-            (function (e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var r = t[n];
+            (function (t, n) {
+                for (var e = 0; e < n.length; e++) {
+                    var r = n[e];
                     (r.enumerable = r.enumerable || !1),
                         (r.configurable = !0),
                         "value" in r && (r.writable = !0),
-                        Object.defineProperty(e, r.key, r);
+                        Object.defineProperty(t, r.key, r);
                 }
-            })(t.prototype, e),
-            t
+            })(n.prototype, t),
+            n
         );
     })();

@@ -11,7 +11,7 @@ var a = n(951288),
     m = n(709999),
     p = n(832149),
     h = n(215023),
-    x = n(958675);
+    x = n(277790);
 let f = (e) => {
         let [t, n] = r.useState(0);
         return (
@@ -71,16 +71,16 @@ let f = (e) => {
             j = b ? t : v,
             _ = b || (!g && j.size > 0),
             [y, C] = r.useState(""),
-            [E, N] = r.useState(null),
-            [T, S] = r.useState(null);
+            [E, S] = r.useState(null),
+            [T, O] = r.useState(null);
         return (r.useEffect(() => {
             if ("" === y.trim() || !_) {
-                N(null), S(null);
+                S(null), O(null);
                 return;
             }
             let e = c.Z.getProduct(y),
                 t = c.Z.getCategoryForProduct(y);
-            null != e && null != t ? (N(e), S(t)) : (N(null), S(null));
+            null != e && null != t ? (S(e), O(t)) : (S(null), O(null));
         }, [y, _]),
         g)
             ? (0, a.jsx)(l.Text, {

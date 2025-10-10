@@ -8,37 +8,37 @@ var i = n(951288),
     d = n(5036),
     s = n(553385),
     u = n(52011),
-    b = n(890477),
-    g = n(458034),
+    g = n(890477),
+    b = n(458034),
     f = n(362658),
-    h = n(294978),
-    p = n(513102),
+    p = n(294978),
+    h = n(513102),
     y = n(976192),
     j = n(887904),
     O = n(429824),
-    x = n(466330),
+    P = n(466330),
     v = n(191471),
-    P = n(162157),
+    x = n(162157),
     m = n(623624),
     Z = n(894059),
-    w = n(434404),
-    S = n(978946),
-    D = n(731722),
-    E = n(172751),
-    N = n(343056),
-    I = n(41776),
-    k = n(190263),
-    _ = n(837949),
+    D = n(434404),
+    I = n(978946),
+    N = n(731722),
+    w = n(172751),
+    S = n(343056),
+    E = n(41776),
+    _ = n(190263),
+    k = n(837949),
     G = n(601964),
     A = n(271383),
-    C = n(496675),
-    T = n(9156),
+    T = n(496675),
+    C = n(9156),
     U = n(594174),
-    L = n(626135),
-    B = n(981631),
-    M = n(647086),
-    F = n(388032),
-    R = n(899926),
+    M = n(626135),
+    L = n(981631),
+    R = n(647086),
+    B = n(388032),
+    F = n(659854),
     H = n(617575);
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ function Q(e) {
     }
     return e;
 }
-function W(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,55 +85,55 @@ function W(e, t) {
 }
 let Y = r.memo(function (e) {
     let { guild: t, onClose: l, onSelect: Y } = e,
-        q = (0, o.e7)([U.default], () => U.default.getCurrentUser());
-    a()(null != q, "GuildHeaderPopout: user cannot be undefined"),
+        V = (0, o.e7)([U.default], () => U.default.getCurrentUser());
+    a()(null != V, "GuildHeaderPopout: user cannot be undefined"),
         r.useEffect(() => {
-            L.default.track(B.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
+            M.default.track(L.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
         });
-    let V = (0, o.e7)([T.ZP], () => T.ZP.isGuildCollapsed(t.id), [t.id]),
+    let W = (0, o.e7)([C.ZP], () => C.ZP.isGuildCollapsed(t.id), [t.id]),
         {
             canAccessSettings: J,
             canManageChannels: z,
             showGuildAnalytics: X,
         } = (0, o.cj)(
-            [C.Z],
+            [T.Z],
             () => ({
-                canAccessSettings: C.Z.canAccessGuildSettings(t),
-                canManageChannels: C.Z.can(B.Plq.MANAGE_CHANNELS, t),
-                showGuildAnalytics: C.Z.can(B.Plq.VIEW_GUILD_ANALYTICS, t) && t.features.has(B.oNc.COMMUNITY),
+                canAccessSettings: T.Z.canAccessGuildSettings(t),
+                canManageChannels: T.Z.can(L.Plq.MANAGE_CHANNELS, t),
+                showGuildAnalytics: T.Z.can(L.Plq.VIEW_GUILD_ANALYTICS, t) && t.features.has(L.oNc.COMMUNITY),
             }),
             [t],
         ),
-        K = (0, P.N8)(t),
-        $ = (0, G.eM)(t, q),
-        ee = (0, o.e7)([I.Z], () => I.Z.isLurking(t.id), [t.id]),
+        K = (0, x.N8)(t),
+        $ = (0, G.eM)(t, V),
+        ee = (0, o.e7)([E.Z], () => E.Z.isLurking(t.id), [t.id]),
         et = (0, o.e7)([A.ZP], () => A.ZP.isCurrentUserGuest(t.id)),
         en = (0, Z.Z)(t.id, !0),
-        ei = (0, g.ZP)(t),
-        er = (0, x.Z)({
-            source: B.t4x.GUILD_HEADER,
+        ei = (0, b.ZP)(t),
+        er = (0, P.Z)({
+            source: L.t4x.GUILD_HEADER,
             guild: t,
         }),
         el = (0, y.Z)({
             guildId: t.id,
-            userId: q.id,
+            userId: V.id,
             analyticsLocation: {
-                page: B.ZY5.GUILD_CHANNEL,
-                section: B.jXE.GUILD_DROPDOWN_MENU,
+                page: L.ZY5.GUILD_CHANNEL,
+                section: L.jXE.GUILD_DROPDOWN_MENU,
             },
             icon: c.vdY,
         }),
-        ea = t.features.has(B.oNc.HUB),
-        eo = t.id === M._,
-        ec = t.id === B.STv,
-        ed = (0, _.Z)(t.id),
-        es = (0, h.Z)(t),
-        eu = (0, p.Z)(t),
-        eb = (0, O.Z)(t, !0),
-        eg = (0, j.Z)(t),
+        ea = t.features.has(L.oNc.HUB),
+        eo = t.id === R._,
+        ec = t.id === L.STv,
+        ed = (0, k.Z)(t.id),
+        es = (0, p.Z)(t),
+        eu = (0, h.Z)(t),
+        eg = (0, O.Z)(t, !0),
+        eb = (0, j.Z)(t),
         { isFavoritesPerk: ef } = (0, f.z)("GuildHeaderPopout"),
-        eh = (0, k.o)(t),
-        { triggerDeadchat: ep } = b.Z.useExperiment(
+        ep = (0, _.D)(t),
+        { triggerDeadchat: eh } = g.Z.useExperiment(
             {
                 guildId: t.id,
                 location: "guild header",
@@ -150,7 +150,7 @@ let Y = r.memo(function (e) {
         ej = r.useCallback(() => {
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e("53961").then(n.bind(n, 402979));
-                return (n) => (0, i.jsx)(e, W(Q({}, n), { guild: t }));
+                return (n) => (0, i.jsx)(e, q(Q({}, n), { guild: t }));
             });
         }, [t]);
     return ee || et
@@ -159,13 +159,13 @@ let Y = r.memo(function (e) {
               navId: "guild-header-popout",
               variant: "fixed",
               onClose: l,
-              "aria-label": F.intl.string(F.t.HpQykZ),
+              "aria-label": B.intl.string(B.t.HpQykZ),
               children: (0, i.jsx)(c.sNh, {
                   id: "leave-guild",
-                  label: F.intl.string(F.t.J2TBi4),
+                  label: B.intl.string(B.t.J2TBi4),
                   icon: c.PBZ,
                   action: () => {
-                      w.Z.leaveGuild(t.id, !0);
+                      D.Z.leaveGuild(t.id, !0);
                   },
               }),
           })
@@ -175,14 +175,14 @@ let Y = r.memo(function (e) {
                 navId: "favorites-header-popout",
                 variant: "fixed",
                 onClose: l,
-                "aria-label": F.intl.string(F.t.HpQykZ),
+                "aria-label": B.intl.string(B.t.HpQykZ),
                 children: [
                     (0, i.jsxs)(c.kSQ, {
                         children: [
                             ef &&
                                 (0, i.jsx)(c.sNh, {
                                     id: "add-channel",
-                                    label: F.intl.string(F.t["6uDHk5"]),
+                                    label: B.intl.string(B.t["6uDHk5"]),
                                     color: "brand",
                                     icon: c.oFk,
                                     action: () =>
@@ -193,7 +193,7 @@ let Y = r.memo(function (e) {
                                 }),
                             (0, i.jsx)(c.sNh, {
                                 id: "create-category",
-                                label: F.intl.string(F.t["ISN+ND"]),
+                                label: B.intl.string(B.t["ISN+ND"]),
                                 icon: c.f1I,
                                 action: () =>
                                     (0, c.ZDy)(async () => {
@@ -206,8 +206,8 @@ let Y = r.memo(function (e) {
                     (0, i.jsx)(c.kSQ, {
                         children: (0, i.jsx)(c.S89, {
                             id: "hide-muted-channels",
-                            label: F.intl.string(F.t.UwOLJC),
-                            checked: V,
+                            label: B.intl.string(B.t.UwOLJC),
+                            checked: W,
                             action: () => d.Z.toggleCollapseGuild(t.id),
                         }),
                     }),
@@ -219,29 +219,29 @@ let Y = r.memo(function (e) {
                   navId: "guild-header-popout",
                   variant: "fixed",
                   onClose: l,
-                  "aria-label": F.intl.string(F.t.HpQykZ),
+                  "aria-label": B.intl.string(B.t.HpQykZ),
                   children: [
                       (0, i.jsxs)(c.kSQ, {
                           children: [
                               J
                                   ? (0, i.jsx)(c.sNh, {
                                         id: "settings",
-                                        label: F.intl.string(F.t["154/bG"]),
-                                        icon: eh ? c.Ncx : c.ewm,
+                                        label: B.intl.string(B.t["154/bG"]),
+                                        icon: ep ? c.Ncx : c.ewm,
                                         action: () => {
-                                            w.Z.open(t.id, (0, S.r)());
+                                            D.Z.open(t.id, (0, I.r)());
                                         },
                                     })
                                   : null,
                               er,
                               (0, i.jsx)(c.sNh, {
                                   id: "privacy",
-                                  label: F.intl.string(F.t.BayiAg),
+                                  label: B.intl.string(B.t.BayiAg),
                                   icon: c.b7C,
                                   action: () =>
                                       (0, c.ZDy)(async () => {
                                           let { default: e } = await n.e("59500").then(n.bind(n, 241420));
-                                          return (n) => (0, i.jsx)(e, W(Q({}, n), { guild: t }));
+                                          return (n) => (0, i.jsx)(e, q(Q({}, n), { guild: t }));
                                       }),
                               }),
                               el,
@@ -252,7 +252,7 @@ let Y = r.memo(function (e) {
                           : (0, i.jsx)(c.kSQ, {
                                 children: (0, i.jsx)(c.sNh, {
                                     id: "leave",
-                                    label: F.intl.string(F.t.Dv8gFR),
+                                    label: B.intl.string(B.t.Dv8gFR),
                                     icon: c.PBZ,
                                     color: "danger",
                                     action: ej,
@@ -267,55 +267,55 @@ let Y = r.memo(function (e) {
                     navId: "guild-header-popout",
                     variant: "fixed",
                     onClose: l,
-                    "aria-label": F.intl.string(F.t.HpQykZ),
+                    "aria-label": B.intl.string(B.t.HpQykZ),
                     children: [
                         (0, i.jsxs)(c.kSQ, {
                             children: [
                                 (0, i.jsx)(c.sNh, {
                                     id: "premium-subscribe",
-                                    label: F.intl.string(F.t.VJEVbm),
+                                    label: B.intl.string(B.t.VJEVbm),
                                     icon: c.$Eu,
                                     action: () => {
                                         (0, m.f)({
                                             guildId: t.id,
-                                            location: { section: B.jXE.GUILD_HEADER_POPOUT },
+                                            location: { section: L.jXE.GUILD_HEADER_POPOUT },
                                         });
                                     },
                                 }),
-                                (0, D.up)(t) &&
-                                    (0, D.jq)(t) &&
+                                (0, N.up)(t) &&
+                                    (0, N.jq)(t) &&
                                     (0, i.jsx)(c.sNh, {
                                         id: "guild-tag",
-                                        label: F.intl.string(R.default.mf2OwM),
-                                        icon: (0, i.jsx)(E.m0, {
+                                        label: B.intl.string(F.default.mf2OwM),
+                                        icon: (0, i.jsx)(w.m0, {
                                             guildId: t.id,
                                             guildBadge: t.profile.badge,
                                             guildTag: t.profile.tag,
                                             inline: !1,
                                         }),
-                                        action: () => (0, N.Z)(t.id),
+                                        action: () => (0, S.Z)(t.id),
                                     }),
                             ],
                         }),
                         (0, i.jsxs)(c.kSQ, {
                             children: [
-                                $ && q.isStaff() && ep
+                                $ && V.isStaff() && eh
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "create-deadchat",
                                           label: "Deadchat Ping",
                                           icon: c.eQA,
                                           action: () => {
-                                              (0, s.j8)(t.id, B.uaV.GUILD_DEADCHAT_REVIVE_PROMPT);
+                                              (0, s.j8)(t.id, L.uaV.GUILD_DEADCHAT_REVIVE_PROMPT);
                                           },
                                       })
                                     : null,
-                                $ && q.isStaff() && ey
+                                $ && V.isStaff() && ey
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "create-gaming-ping",
                                           label: "Gaming Stats Ping",
                                           icon: c.eQA,
                                           action: () => {
-                                              (0, s.j8)(t.id, B.uaV.GUILD_GAMING_STATS_PROMPT);
+                                              (0, s.j8)(t.id, L.uaV.GUILD_GAMING_STATS_PROMPT);
                                           },
                                       })
                                     : null,
@@ -323,19 +323,19 @@ let Y = r.memo(function (e) {
                                 J
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "settings",
-                                          label: F.intl.string(F.t["154/bG"]),
-                                          icon: eh ? c.Ncx : c.ewm,
+                                          label: B.intl.string(B.t["154/bG"]),
+                                          icon: ep ? c.Ncx : c.ewm,
                                           action: () => {
-                                              w.Z.open(t.id, (0, S.r)());
+                                              D.Z.open(t.id, (0, I.r)());
                                           },
                                       })
                                     : null,
                                 X
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "insights",
-                                          label: F.intl.string(F.t["0wWfUF"]),
+                                          label: B.intl.string(B.t["0wWfUF"]),
                                           icon: c.IeX,
-                                          action: () => w.Z.open(t.id, B.pNK.ANALYTICS),
+                                          action: () => D.Z.open(t.id, L.pNK.ANALYTICS),
                                       })
                                     : null,
                                 z
@@ -343,7 +343,7 @@ let Y = r.memo(function (e) {
                                           children: [
                                               (0, i.jsx)(c.sNh, {
                                                   id: "create-channel",
-                                                  label: F.intl.string(F.t["fUYU+v"]),
+                                                  label: B.intl.string(B.t["fUYU+v"]),
                                                   icon: c.oFk,
                                                   action: () =>
                                                       (0, c.ZDy)(async () => {
@@ -354,8 +354,8 @@ let Y = r.memo(function (e) {
                                                           return (n) =>
                                                               (0, i.jsx)(
                                                                   e,
-                                                                  W(Q({}, n), {
-                                                                      channelType: B.d4z.GUILD_TEXT,
+                                                                  q(Q({}, n), {
+                                                                      channelType: L.d4z.GUILD_TEXT,
                                                                       guildId: t.id,
                                                                   }),
                                                               );
@@ -363,7 +363,7 @@ let Y = r.memo(function (e) {
                                               }),
                                               (0, i.jsx)(c.sNh, {
                                                   id: "create-category",
-                                                  label: F.intl.string(F.t["ISN+ND"]),
+                                                  label: B.intl.string(B.t["ISN+ND"]),
                                                   icon: c.f1I,
                                                   action: () =>
                                                       (0, c.ZDy)(async () => {
@@ -374,8 +374,8 @@ let Y = r.memo(function (e) {
                                                           return (n) =>
                                                               (0, i.jsx)(
                                                                   e,
-                                                                  W(Q({}, n), {
-                                                                      channelType: B.d4z.GUILD_CATEGORY,
+                                                                  q(Q({}, n), {
+                                                                      channelType: L.d4z.GUILD_CATEGORY,
                                                                       guildId: t.id,
                                                                   }),
                                                               );
@@ -388,7 +388,7 @@ let Y = r.memo(function (e) {
                                 es,
                                 eu,
                                 ei,
-                                eg,
+                                eb,
                             ],
                         }),
                         (0, i.jsxs)(c.kSQ, {
@@ -398,25 +398,25 @@ let Y = r.memo(function (e) {
                                     id: "notifications",
                                     label: (0, i.jsx)("div", {
                                         className: H.newBadgeRow,
-                                        children: F.intl.string(F.t.h850Sk),
+                                        children: B.intl.string(B.t.h850Sk),
                                     }),
                                     icon: c.Dkj,
                                     action: () =>
                                         (0, c.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("15076"), n.e("79692")]).then(
+                                            let { default: e } = await Promise.all([n.e("15076"), n.e("90564")]).then(
                                                 n.bind(n, 907941),
                                             );
-                                            return (n) => (0, i.jsx)(e, W(Q({}, n), { guildId: t.id }));
+                                            return (n) => (0, i.jsx)(e, q(Q({}, n), { guildId: t.id }));
                                         }),
                                 }),
                                 (0, i.jsx)(c.sNh, {
                                     id: "privacy",
-                                    label: F.intl.string(F.t.BayiAg),
+                                    label: B.intl.string(B.t.BayiAg),
                                     icon: c.b7C,
                                     action: () =>
                                         (0, c.ZDy)(async () => {
                                             let { default: e } = await n.e("59500").then(n.bind(n, 241420));
-                                            return (n) => (0, i.jsx)(e, W(Q({}, n), { guild: t }));
+                                            return (n) => (0, i.jsx)(e, q(Q({}, n), { guild: t }));
                                         }),
                                 }),
                             ],
@@ -426,19 +426,19 @@ let Y = r.memo(function (e) {
                                 el,
                                 (0, i.jsx)(c.S89, {
                                     id: "hide-muted-channels",
-                                    label: F.intl.string(F.t.UwOLJC),
-                                    checked: V,
+                                    label: B.intl.string(B.t.UwOLJC),
+                                    checked: W,
                                     action: () => d.Z.toggleCollapseGuild(t.id),
                                 }),
                             ],
                         }),
                         (0, i.jsxs)(c.kSQ, {
                             children: [
-                                eb,
-                                K && t.features.has(B.oNc.COMMUNITY)
+                                eg,
+                                K && t.features.has(L.oNc.COMMUNITY)
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "report-raid",
-                                          label: F.intl.string(F.t.cswId3),
+                                          label: B.intl.string(B.t.cswId3),
                                           icon: c.b7C,
                                           color: "danger",
                                           action: () => (0, v.J)(t.id),
@@ -448,7 +448,7 @@ let Y = r.memo(function (e) {
                                     ? null
                                     : (0, i.jsx)(c.sNh, {
                                           id: "leave",
-                                          label: F.intl.string(F.t.J2TBi4),
+                                          label: B.intl.string(B.t.J2TBi4),
                                           icon: c.PBZ,
                                           color: "danger",
                                           action: ej,

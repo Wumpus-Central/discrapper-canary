@@ -47,10 +47,10 @@ let S = function (e) {
             location: w,
         } = e,
         D = (0, _.O5)(),
-        x = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        L = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
-        M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
+        L = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
+        j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
         k = i.useCallback(
             (t) => {
                 var n;
@@ -76,7 +76,7 @@ let S = function (e) {
     return (
         i.useEffect(() => {
             if (null != U.current) {
-                if (!j.isAnimated || L) {
+                if (!M.isAnimated || x) {
                     (U.current.currentTime = 0), U.current.pause();
                     return;
                 }
@@ -85,7 +85,7 @@ let S = function (e) {
                     : !h && G.current && ((U.current.currentTime = 0), U.current.pause()),
                     (G.current = h);
             }
-        }, [h, j, L]),
+        }, [h, M, x]),
         (t = B
             ? (0, r.jsx)(O.Fl, {
                   id: "QuestRewardTile_rewardTileNitro",
@@ -99,22 +99,22 @@ let S = function (e) {
               ? (0, r.jsx)(E.K, {
                     showVideo: h,
                     imageAsset:
-                        null != M
+                        null != j
                             ? {
-                                  asset: M,
+                                  asset: j,
                                   assetId: "QuestRewardTile_rewardTileStatic",
                                   className: I.imageVideoOverlay,
                                   alt: v.intl.string(v.t.UMclVF),
                               }
                             : void 0,
                     videoAsset: {
-                        asset: j,
+                        asset: M,
                         assetId: "QuestRewardTile_rewardTileAnimated",
                         className: o()(I.questRewardTileAsset, I.questRewardTileAssetLazyVideo),
                     },
                     onLoadComplete: e.onLoadComplete,
                 })
-              : j.isAnimated
+              : M.isAnimated
                 ? (0, r.jsx)(O.Fl, {
                       id: "QuestRewardTile_rewardTileAnimated",
                       children: (t) => {
@@ -123,7 +123,7 @@ let S = function (e) {
                               ref: (e) => {
                                   (t.current = e), (U.current = e);
                               },
-                              autoPlay: !L && h,
+                              autoPlay: !x && h,
                               loop: !0,
                               muted: !0,
                               playsInline: !0,
@@ -131,8 +131,8 @@ let S = function (e) {
                               controls: !1,
                               onProgress: e.onLoadComplete,
                               children: (0, r.jsx)("source", {
-                                  src: j.url,
-                                  type: null != (n = j.mimetype) ? n : void 0,
+                                  src: M.url,
+                                  type: null != (n = M.mimetype) ? n : void 0,
                               }),
                           });
                       },
@@ -144,7 +144,7 @@ let S = function (e) {
                               ref: t,
                               alt: g.r.build(a.config).defaultRewardName,
                               className: o()(I.questRewardTileAsset, I.questRewardTileAssetStatic),
-                              src: j.url,
+                              src: M.url,
                               onLoad: e.onLoadComplete,
                           }),
                   })),
@@ -161,9 +161,9 @@ let S = function (e) {
                   children: [
                       t,
                       P &&
-                          !L &&
+                          !x &&
                           (0, r.jsx)(T, {
-                              appFocused: x,
+                              appFocused: L,
                               location: w,
                           }),
                       "text" === S &&

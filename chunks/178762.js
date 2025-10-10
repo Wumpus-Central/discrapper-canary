@@ -1,7 +1,7 @@
 n.d(t, {
     Ir: () => H,
-    J: () => F,
-    YN: () => M,
+    J: () => V,
+    YN: () => k,
     ZP: () => W,
     iZ: () => G,
 }),
@@ -63,7 +63,7 @@ function D(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,22 +75,22 @@ function x(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -98,7 +98,7 @@ function j(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -107,27 +107,27 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let M = 72,
+let k = 72,
     U = 2000;
 function G(e) {
-    return (null == e ? void 0 : e.type) === _.so.CONTENT_INVENTORY ? M : 0;
+    return (null == e ? void 0 : e.type) === _.so.CONTENT_INVENTORY ? k : 0;
 }
 let B = (e) => {
         var { entry: t } = e,
-            n = j(e, ["entry"]);
+            n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(E.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(E.Z, x(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(C.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, x(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(S.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, x(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(I.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(I.ZP, x(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(O.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(O.ZP, x(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(m.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(m.Z, x(D({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -135,7 +135,7 @@ let B = (e) => {
     Z = (e) => {
         var t,
             { entry: n, targetElementRef: i } = e,
-            a = j(e, ["entry", "targetElementRef"]);
+            a = M(e, ["entry", "targetElementRef"]);
         return n.content_type === l.s.PLAYED_GAME
             ? (0, r.jsx)(y.Z, {
                   entry: n,
@@ -144,11 +144,11 @@ let B = (e) => {
               })
             : null;
     },
-    V = (e) => {
+    F = (e) => {
         var { closePopout: t } = e,
-            n = j(e, ["closePopout"]);
+            n = M(e, ["closePopout"]);
         return (0, r.jsx)(
-            F,
+            V,
             D(
                 {
                     onReaction: (e, r) => {
@@ -170,22 +170,22 @@ let B = (e) => {
             ),
         );
     },
-    F = (e) => {
+    V = (e) => {
         var { entry: t } = e,
-            n = j(e, ["entry"]);
+            n = M(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(b.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(b.Z, x(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(N.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(N.Z, x(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(A.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, x(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(T.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(T.Z, x(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(v.Z, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(v.Z, x(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.ZP, L(D({}, n), { entry: t }));
+                return (0, r.jsx)(g.ZP, x(D({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -194,7 +194,7 @@ let B = (e) => {
     Y = (e) => {
         var t,
             { index: a, ref: l } = e,
-            _ = j(e, ["index", "ref"]);
+            _ = M(e, ["index", "ref"]);
         let m = i.useRef(null),
             [g, E] = i.useState("default"),
             [b, y] = i.useState(!1),
@@ -213,15 +213,15 @@ let B = (e) => {
             ),
             A = i.useRef(!1),
             [C, N] = i.useState(!1),
-            [w, x] = i.useState(!1),
-            k = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
+            [w, L] = i.useState(!1),
+            j = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && k && x(!0);
-        }, [C, k]),
+            C && j && L(!0);
+        }, [C, j]),
             i.useLayoutEffect(() => {
                 null != m.current && y(!0);
             }, []);
-        let M = i.useCallback(
+        let k = i.useCallback(
                 (e) => {
                     v &&
                         (0, d.jW)(e, async () => {
@@ -238,7 +238,7 @@ let B = (e) => {
             G = i.useCallback(() => {
                 E(String(Date.now()));
             }, []),
-            F = i.useCallback(
+            V = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     (0, h.L)(e, D({}, S, t));
@@ -262,12 +262,12 @@ let B = (e) => {
             W = () => {
                 (A.current = !1),
                     setTimeout(() => {
-                        A.current || (N(!1), x(k));
+                        A.current || (N(!1), L(j));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(Z, L(D({}, _), { targetElementRef: m })),
+                b && (0, r.jsx)(Z, x(D({}, _), { targetElementRef: m })),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
@@ -284,12 +284,12 @@ let B = (e) => {
                             return (0, r.jsx)(H.Provider, {
                                 value: W,
                                 children: (0, r.jsx)(
-                                    V,
+                                    F,
                                     D(
                                         {
                                             closePopout: t,
                                             updatePopoutPosition: G,
-                                            trackRankingItemInteraction: F,
+                                            trackRankingItemInteraction: V,
                                         },
                                         _,
                                     ),
@@ -308,7 +308,7 @@ let B = (e) => {
                             let { isShown: n } = t;
                             return (0, r.jsx)(
                                 u.P3F,
-                                L(D({}, e, O), {
+                                x(D({}, e, O), {
                                     innerRef: m,
                                     focusProps: {
                                         offset: {
@@ -321,10 +321,10 @@ let B = (e) => {
                                     onClick: () => {
                                         C || N(!0);
                                     },
-                                    onContextMenu: M,
+                                    onContextMenu: k,
                                     children: (0, r.jsx)(
                                         B,
-                                        L(D({}, _), {
+                                        x(D({}, _), {
                                             selected: n,
                                             hovered: A.current,
                                         }),

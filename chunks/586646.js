@@ -1,78 +1,78 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    l = n(647438),
-    s = n(442837),
-    i = n(481060),
-    a = n(19780),
-    o = n(571826),
-    c = n(630759),
-    u = n(301107),
+n.d(t, { Z: () => E });
+var l = n(951288),
+    i = n(647438),
+    r = n(442837),
+    a = n(481060),
+    o = n(19780),
+    s = n(571826),
+    u = n(630759),
+    c = n(301107),
     d = n(785792),
-    h = n(190054),
-    f = n(760373),
-    g = n(388032),
+    f = n(190054),
+    g = n(760373),
+    h = n(388032),
     p = n(506317);
-function O(e) {
+function E(e) {
     let { channelId: t } = e,
-        n = (0, s.e7)([a.Z], () => {
+        n = (0, r.e7)([o.Z], () => {
             var e;
-            return null == (e = a.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
+            return null == (e = o.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
         }),
-        O = (0, u.W)({
+        E = (0, c.W)({
             fingerprintBase64: n,
-            chunkSize: f.y6,
-            desiredLength: f.YP,
+            chunkSize: g.y6,
+            desiredLength: g.YP,
         }),
-        y = l.useCallback(() => {
-            (0, o.PM)({ channelId: t });
+        N = i.useCallback(() => {
+            (0, s.PM)({ channelId: t });
         }, [t]);
-    return (0, r.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: p.container,
         children: [
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: p.tag,
                 children: [
-                    (0, r.jsx)(i.mBM, {
+                    (0, l.jsx)(a.mBM, {
                         size: "xxs",
-                        color: i.TVs.colors.TEXT_FEEDBACK_POSITIVE,
+                        color: a.TVs.colors.TEXT_FEEDBACK_POSITIVE,
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, l.jsx)(a.Text, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",
-                        children: g.intl.string(g.t["3BogKS"]),
+                        children: h.intl.string(h.t["3BogKS"]),
                     }),
                 ],
             }),
-            (0, r.jsx)(i.Text, {
+            (0, l.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-secondary",
-                children: g.intl.string(g.t.B9JNsr),
+                children: h.intl.string(h.t.B9JNsr),
             }),
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: p.header,
                 children: [
-                    (0, r.jsx)(i.X6q, {
+                    (0, l.jsx)(a.X6q, {
                         variant: "text-sm/bold",
                         color: "header-primary",
-                        children: g.intl.string(g.t.cTQI5u),
+                        children: h.intl.string(h.t.cTQI5u),
                     }),
-                    null != O &&
-                        (0, r.jsx)(h.H, {
-                            chunks: O,
-                            color: i.TVs.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: y,
+                    null != E &&
+                        (0, l.jsx)(f.H, {
+                            chunks: E,
+                            color: a.TVs.colors.INTERACTIVE_NORMAL.css,
+                            onCopy: N,
                         }),
                 ],
             }),
-            (0, r.jsx)(d.b, {
+            (0, l.jsx)(d.b, {
                 className: p.code,
-                chunks: O,
-                columns: f.WK,
+                chunks: E,
+                columns: g.WK,
             }),
-            (0, r.jsx)(i.Text, {
+            (0, l.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-secondary",
-                children: g.intl.format(g.t.wKxADQ, { helpArticle: (0, c.uV)() }),
+                children: h.intl.format(h.t.wKxADQ, { helpArticle: (0, u.uV)() }),
             }),
         ],
     });

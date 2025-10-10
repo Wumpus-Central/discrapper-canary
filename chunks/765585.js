@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(428967),
     d = n(266454),
     p = n(605236),
-    f = n(279745),
-    h = n(921944),
+    h = n(279745),
+    f = n(921944),
     g = n(388032),
     m = n(882482);
 let b = i.forwardRef(function (e, t) {
@@ -18,17 +18,17 @@ let b = i.forwardRef(function (e, t) {
             body: n,
             header: l,
             artClassName: b,
-            headerClassName: O,
+            headerClassName: _,
             contentClassName: y,
-            tryItText: _,
-            dismissText: j,
-            onTryFeature: v,
+            tryItText: O,
+            dismissText: v,
+            onTryFeature: j,
             onClose: x,
             className: C,
             inlineArt: E = !1,
             isPremiumFeature: S = !1,
-            shouldUseHorizontalButtons: P = !1,
-            showGIFTag: I = !1,
+            shouldUseHorizontalButtons: I = !1,
+            showGIFTag: P = !1,
             dismissibleContent: N,
             position: Z = "top",
             align: w = "center",
@@ -42,8 +42,8 @@ let b = i.forwardRef(function (e, t) {
             onDismissIconClick: U,
             tryItButtonColor: G,
         } = e,
-        B = P ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
-        [V, F] = i.useState(!1),
+        B = I ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
+        [F, V] = i.useState(!1),
         { ref: H, width: z } = (0, c.ZP)();
     function W(e) {
         if ((0, u.lg)(N)) return void (0, p.bj)(N, { dismissAction: e });
@@ -53,8 +53,8 @@ let b = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             var e, t;
             let n = (null != (t = null == (e = H.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-            !V && n > R && F(!0);
-        }, [V, z, H, R]),
+            !F && n > R && V(!0);
+        }, [F, z, H, R]),
         i.useEffect(() => {
             (0, p.kk)(N);
         }, [N]),
@@ -75,13 +75,13 @@ let b = i.forwardRef(function (e, t) {
                         }),
                     (0, r.jsxs)("div", {
                         className: o()(b, E ? m.artInline : m.artAbsolute),
-                        children: [I && (0, r.jsx)(f.Z, { className: m.gifTag }), T],
+                        children: [P && (0, r.jsx)(h.Z, { className: m.gifTag }), T],
                     }),
                     (0, r.jsxs)("div", {
                         className: m.body,
                         children: [
                             (0, r.jsxs)(s.X6q, {
-                                className: o()(S ? m.headerWithPremiumIcon : m.header, O),
+                                className: o()(S ? m.headerWithPremiumIcon : m.header, _),
                                 variant: "heading-md/bold",
                                 color: "always-white",
                                 children: [
@@ -126,16 +126,16 @@ let b = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsx)("div", {
                         ref: H,
-                        className: V || !P ? m.buttonContainerVertical : m.buttonContainerHorizontal,
+                        className: F || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
                         children:
-                            null != v
+                            null != j
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(a.zx, {
                                               className: m.button,
                                               size: B,
                                               onClick: (e) => {
-                                                  null == x || x(e), v(e), W(h.L.PRIMARY);
+                                                  null == x || x(e), j(e), W(f.L.PRIMARY);
                                               },
                                               color:
                                                   null != G
@@ -143,18 +143,18 @@ let b = i.forwardRef(function (e, t) {
                                                       : S || A
                                                         ? a.zx.Colors.BRAND_INVERTED
                                                         : a.zx.Colors.WHITE,
-                                              children: null != _ ? _ : g.intl.string(g.t.IHf1RE),
+                                              children: null != O ? O : g.intl.string(g.t.IHf1RE),
                                           }),
                                           !D &&
                                               (0, r.jsx)(a.zx, {
                                                   className: m.button,
                                                   size: B,
                                                   onClick: (e) => {
-                                                      null == x || x(e), W(h.L.DISMISS);
+                                                      null == x || x(e), W(f.L.DISMISS);
                                                   },
                                                   color: S || A ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
                                                   look: S || A ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
-                                                  children: null != j ? j : g.intl.string(g.t.om7Ovr),
+                                                  children: null != v ? v : g.intl.string(g.t.om7Ovr),
                                               }),
                                       ],
                                   })
@@ -162,7 +162,7 @@ let b = i.forwardRef(function (e, t) {
                                       className: m.button,
                                       size: a.zx.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == x || x(e), W(h.L.PRIMARY);
+                                          null == x || x(e), W(f.L.PRIMARY);
                                       },
                                       color: a.zx.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR0),

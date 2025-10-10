@@ -3,9 +3,9 @@ n.d(t, {
     Z: () => x,
 });
 var l = n(951288),
-    i = n(647438),
-    a = n(120356),
-    r = n.n(a),
+    a = n(647438),
+    i = n(120356),
+    r = n.n(i),
     s = n(481060),
     o = n(494620),
     c = n(748745),
@@ -13,16 +13,16 @@ var l = n(951288),
     d = n(535895),
     m = n(183369),
     v = n(422663),
-    f = n(473682),
-    g = n(440589),
+    g = n(473682),
+    f = n(401561),
     b = n(388032),
-    p = n(555574);
+    p = n(782991);
 function j() {
     return (0, l.jsx)(o.Z, {
         className: p.maxInstancesWarning,
         children: (0, l.jsx)(s.Text, {
             variant: "text-sm/medium",
-            children: b.intl.formatToPlainString(g.default.kUNv8P, { maxInstances: f.zI }),
+            children: b.intl.formatToPlainString(f.default.kUNv8P, { maxInstances: g.zI }),
         }),
     });
 }
@@ -31,23 +31,23 @@ function x() {
             guildId: e,
             portkeyGames: t,
             instances: n,
-            setPortkeyInstance: a,
+            setPortkeyInstance: i,
             setCurrentGame: o,
             onNext: x,
         } = (0, m.aj)(),
-        y = i.useCallback(
+        y = a.useCallback(
             (e) => {
                 o(e), x();
             },
             [o, x],
         ),
-        O = i.useCallback(
+        O = a.useCallback(
             (e) => {
-                a(e), x();
+                i(e), x();
             },
-            [a, x],
+            [i, x],
         ),
-        h = n.length >= f.zI,
+        h = n.length >= g.zI,
         P = n.length > 0;
     return 0 === Object.values(t).length
         ? (0, l.jsx)("div", {
@@ -62,7 +62,7 @@ function x() {
                           children: [
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(g.default.wzC4ws),
+                                  children: b.intl.string(f.default.wzC4ws),
                               }),
                               (0, l.jsx)("div", {
                                   className: p.gameInstanceContainer,
@@ -87,7 +87,7 @@ function x() {
                           P &&
                               (0, l.jsx)(s.X6q, {
                                   variant: "heading-md/semibold",
-                                  children: b.intl.string(g.default.l4UdiY),
+                                  children: b.intl.string(f.default.l4UdiY),
                               }),
                           (0, l.jsx)("div", {
                               className: p.gameContainer,
@@ -106,7 +106,7 @@ function x() {
                       ],
                   }),
                   (0, l.jsxs)(v.ok, {
-                      step: f.Vb.SELECT_GAME,
+                      step: g.Vb.SELECT_GAME,
                       className: p.footerContainer,
                       children: [
                           (0, l.jsxs)("div", {
@@ -115,7 +115,7 @@ function x() {
                                   (0, l.jsx)(s.d3s, { size: "sm" }),
                                   (0, l.jsx)(s.Text, {
                                       variant: "text-sm/medium",
-                                      children: b.intl.string(g.default.RBv43d),
+                                      children: b.intl.string(f.default.RBv43d),
                                   }),
                               ],
                           }),

@@ -1,15 +1,15 @@
 n.d(t, {
     G6: () => d,
     JC: () => c,
-    qP: () => f,
+    qP: () => m,
     yv: () => u,
 }),
     n(388685);
 var r = n(647438),
-    o = n(447543),
-    l = n(960904),
-    a = n(830121),
-    i = n(701190),
+    l = n(447543),
+    o = n(960904),
+    i = n(830121),
+    a = n(701190),
     s = n(771845);
 let c = (e) => null != e.text;
 function u(e) {
@@ -19,35 +19,35 @@ function u(e) {
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
-        [o, l] = (0, r.useState)(e),
-        a = (0, r.useRef)(null);
+        [l, o] = (0, r.useState)(e),
+        i = (0, r.useRef)(null);
     return (
         (0, r.useEffect)(
             () => () => {
-                null != a.current && clearTimeout(a.current);
+                null != i.current && clearTimeout(i.current);
             },
             [e],
         ),
         [
-            o,
+            l,
             () => {
-                l(t),
-                    null != a.current && clearTimeout(a.current),
-                    (a.current = setTimeout(() => {
-                        l(e);
+                o(t),
+                    null != i.current && clearTimeout(i.current),
+                    (i.current = setTimeout(() => {
+                        o(e);
                     }, n));
             },
         ]
     );
 }
-async function f(e) {
+async function m(e) {
     try {
         var t;
-        let n = (0, a.zO)(e);
-        if (null == n || n.type !== l.g.INVITE) return !1;
-        let r = i.Z.getInvite(n.code);
+        let n = (0, i.zO)(e);
+        if (null == n || n.type !== o.g.INVITE) return !1;
+        let r = a.Z.getInvite(n.code);
         if (null == r) {
-            let { invite: e } = await o.ZP.resolveInvite(n.code, "Markdown Link");
+            let { invite: e } = await l.ZP.resolveInvite(n.code, "Markdown Link");
             r = e;
         }
         if (null == r) return !1;

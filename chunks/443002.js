@@ -29,7 +29,7 @@ let T = function (e) {
         P = i.useRef(null),
         w = i.useRef(null),
         D = i.useRef(null),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null != D.current &&
                 null != w.current &&
                 w.current.scrollTo({
@@ -37,7 +37,7 @@ let T = function (e) {
                     animate: !0,
                 });
         }, []),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             null == T || T(),
                 f.default.track(O.rMx.MODAL_DISMISSED, {
                     type: O.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -48,7 +48,7 @@ let T = function (e) {
                     duration_open_ms: Date.now() - N,
                 });
         }, [T, t, R, N, n.id]),
-        j = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 e &&
                     !C.current &&
@@ -75,7 +75,7 @@ let T = function (e) {
         }, [n.id, t, R]),
         i.useEffect(() => {
             function e(e) {
-                "Escape" === e.key && L();
+                "Escape" === e.key && x();
             }
             return (
                 window.addEventListener("keydown", e),
@@ -83,7 +83,7 @@ let T = function (e) {
                     window.removeEventListener("keydown", e);
                 }
             );
-        }, [L]),
+        }, [x]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != T &&
@@ -91,7 +91,7 @@ let T = function (e) {
                         className: I.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: I.closeIcon,
-                            closeAction: L,
+                            closeAction: x,
                             keybind: "ESC",
                             variant: s.Z.Variants.BOLD,
                         }),
@@ -109,7 +109,7 @@ let T = function (e) {
                                         (0, r.jsx)(u.Z, {
                                             guild: e.guild,
                                             themeResponsive: !1,
-                                            onButtonClick: x,
+                                            onButtonClick: L,
                                         }),
                                         (0, r.jsx)(o.X6q, {
                                             className: I.heading,
@@ -119,7 +119,7 @@ let T = function (e) {
                                         }),
                                         (0, r.jsx)(p.Z, {
                                             guild: n,
-                                            closeLayer: L,
+                                            closeLayer: x,
                                             onCtaVisibilityChange: A,
                                         }),
                                         (0, r.jsx)(g.Z, { guild: n }),
@@ -134,7 +134,7 @@ let T = function (e) {
                             children: (0, r.jsx)(d.Z, {
                                 ref: D,
                                 guild: e.guild,
-                                onClose: L,
+                                onClose: x,
                             }),
                         }),
                         (0, r.jsxs)("div", {
@@ -157,7 +157,7 @@ let T = function (e) {
                         }),
                         (0, r.jsx)(a.$, {
                             innerRef: P,
-                            onChange: j,
+                            onChange: M,
                             children: (0, r.jsx)("div", {
                                 ref: P,
                                 className: I.persistentCtaSpacer,
@@ -168,7 +168,7 @@ let T = function (e) {
                 (0, r.jsx)(m.Z, {
                     guild: n,
                     isVisible: !S,
-                    closeLayer: L,
+                    closeLayer: x,
                 }),
             ],
         })

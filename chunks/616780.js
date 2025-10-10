@@ -1,9 +1,9 @@
 n.d(t, { $: () => f }), n(951288);
 var r = n(647438),
     i = n(392711),
-    o = n.n(i);
+    a = n.n(i);
 n(902704);
-var a = n(941028),
+var o = n(941028),
     s = n(960048);
 function l(e, t, n) {
     return (
@@ -35,15 +35,15 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let d = !1;
 function f(e, t) {
     r.useEffect(
         () => (
-            o().forEach(e, (e, n) => {
+            a().forEach(e, (e, n) => {
                 !d &&
                     e.length > 50 &&
                     ((d = !0),
@@ -54,10 +54,10 @@ function f(e, t) {
                             reason: t,
                         },
                     })),
-                    (0, a.ym)(n, e);
+                    (0, o.ym)(n, e);
             }),
             () => {
-                o().forEach(e, (e, t) => (0, a.w5)(t, e));
+                a().forEach(e, (e, t) => (0, o.w5)(t, e));
             }
         ),
         [e, t],

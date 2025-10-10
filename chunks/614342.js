@@ -2,14 +2,14 @@ n.d(t, { Z: () => d });
 var r = n(512722),
     i = n.n(r),
     l = n(782568),
-    a = n(434404),
-    s = n(144507),
+    s = n(434404),
+    a = n(144507),
     o = n(981631),
     c = n(388032);
 function d(e) {
-    let t = (0, s.MO)(e);
+    let t = (0, a.MO)(e);
     switch (t) {
-        case s.d5.NEEDS_COMMUNITY:
+        case a.d5.NEEDS_COMMUNITY:
             return {
                 visibility: t,
                 noticeText: c.intl.string(c.t["0Z2Qxs"]),
@@ -18,10 +18,10 @@ function d(e) {
                 onCtaClicked() {
                     var t;
                     i()(null != e, "Guild must be not null open COMMUNITY settings"),
-                        a.Z.open(null != (t = null == e ? void 0 : e.id) ? t : "", o.pNK.COMMUNITY);
+                        s.Z.open(null != (t = null == e ? void 0 : e.id) ? t : "", o.pNK.COMMUNITY);
                 },
             };
-        case s.d5.WAITLIST_ONLY:
+        case a.d5.WAITLIST_ONLY:
             return {
                 visibility: t,
                 noticeText: c.intl.string(c.t["5vz88P"]),

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
     o = n.n(a),
-    s = n(786920),
+    s = n(137317),
     l = n(818405),
     c = n(587158),
     u = n(286379),
@@ -53,8 +53,8 @@ let D = o().throttle(
         100,
         { trailing: !1 },
     ),
-    x = 10 * y.Z.Millis.SECOND;
-function L(e) {
+    L = 10 * y.Z.Millis.SECOND;
+function x(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         _ = i.useMemo(() => new s.SpringValue(1), []),
@@ -64,7 +64,7 @@ function L(e) {
         I = (0, d.e7)([E.default], () => E.default.getCurrentUser());
     (0, h.ZP)(
         () => (
-            (m.current = setTimeout(T, x)),
+            (m.current = setTimeout(T, L)),
             p.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed }),
             () => {
                 null != m.current && clearTimeout(m.current);
@@ -102,14 +102,14 @@ function L(e) {
             },
             [y],
         ),
-        L = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == o || o(), null == c || c();
             },
             [c, o],
         ),
-        j = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
-        M = g
+        M = (0, d.e7)([S.ZP], () => S.ZP.getFocusedRunningGame()),
+        j = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -144,10 +144,10 @@ function L(e) {
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(A.Y, {
         title: R.intl.string(R.t.U38qZm),
-        body: M,
+        body: j,
         hint: U ? k : void 0,
         confirmText: R.intl.string(R.t.a3HlgI),
-        cancelText: null != j ? R.intl.string(R.t.qIYnPj) : void 0,
+        cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
         icon: (0, r.jsx)(b.Z, {
             width: 40,
             height: 40,
@@ -155,7 +155,7 @@ function L(e) {
         }),
         onNotificationClick: D,
         onConfirmClick: w,
-        onCancelClick: null != j ? L : void 0,
+        onCancelClick: null != M ? x : void 0,
         onDismissClick: o,
         expand: !0,
         locked: !0,
@@ -168,7 +168,7 @@ function L(e) {
         wrapperClassName: P.errorNotificationWrapper,
     });
 }
-class j extends i.PureComponent {
+class M extends i.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, g.s1)().location;
         this.setState({
@@ -201,7 +201,7 @@ class j extends i.PureComponent {
             ? i
                 ? (0, r.jsx)(T.Z, {
                       className: P.errorClickNotification,
-                      children: (0, r.jsx)(L, {
+                      children: (0, r.jsx)(x, {
                           error: n,
                           onLock: () => {
                               var e;
@@ -239,4 +239,4 @@ class j extends i.PureComponent {
             w(this, "pid", null);
     }
 }
-let M = j;
+let j = M;

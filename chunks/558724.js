@@ -100,13 +100,13 @@ let w = new Set(Object.values(P));
 function D() {
     return null == v.lastFetched || Date.now() - v.lastFetched >= N;
 }
-function x() {
+function L() {
     !C && (D() || null != v.surveyOverride) && ((C = !0), (0, u.wk)(v.surveyOverride, !0));
 }
-function L(e) {
-    return M(e) && j(e);
+function x(e) {
+    return j(e) && M(e);
 }
-function j(e) {
+function M(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
     if (0 === t.length) return !0;
     for (let e of t) if (!w.has(e)) return !1;
@@ -149,7 +149,7 @@ function j(e) {
     }
     return !!i && !!a;
 }
-function M(e) {
+function j(e) {
     return !0;
 }
 function k(e) {
@@ -161,7 +161,7 @@ function U(e) {
     (C = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {});
     let n = null != t,
         r = n && null == v.hiddenSurveys[t.key],
-        i = n && L(t);
+        i = n && x(t);
     k(R);
     let a = !1;
     A = r && i && !a ? t : null;
@@ -176,19 +176,19 @@ function B() {
 function Z() {
     T = !0;
 }
-function V(e) {
+function F(e) {
     let { key: t } = e;
     (v.hiddenSurveys[t] = !0), (A = null), (S = null != S ? S : {}), delete S[t];
 }
-function F() {
+function V() {
     v.hiddenSurveys = {};
 }
 function H(e) {
-    return !!L(e) || ((A = null), !1);
+    return !!x(e) || ((A = null), !1);
 }
 function Y() {
     let e = Object.values((S = null != S ? S : {}))[0];
-    return null != e && L(e)
+    return null != e && x(e)
         ? void U({
               type: "SURVEY_FETCHED",
               survey: e,
@@ -243,13 +243,13 @@ g(z, "displayName", "SurveyStore"),
         },
     ]);
 let q = new z(c.Z, {
-    CONNECTION_OPEN: x,
-    CONNECTION_RESUMED: x,
+    CONNECTION_OPEN: L,
+    CONNECTION_RESUMED: L,
     SURVEY_FETCHED: U,
-    SURVEY_HIDE: V,
+    SURVEY_HIDE: F,
     SURVEY_OVERRIDE: G,
     PUSH_NOTIFICATION_CLICK: B,
     DISPLAYED_INVITE_SHOW: Z,
-    LOGOUT: F,
+    LOGOUT: V,
     SURVEY_SEEN: K,
 });

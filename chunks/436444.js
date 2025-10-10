@@ -7,7 +7,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(786920),
+    o = n(137317),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -106,10 +106,10 @@ let T = {
             P = (0, c.Z)(),
             w = p.oCV[A],
             D = w - N,
-            x = A <= C || b,
-            L = x && A <= i.premiumTier,
-            j = x && A < i.premiumTier,
-            M = x && A === i.premiumTier,
+            L = A <= C || b,
+            x = L && A <= i.premiumTier,
+            M = L && A < i.premiumTier,
+            j = L && A === i.premiumTier,
             k = i.premiumTier < A && N >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
@@ -141,7 +141,7 @@ let T = {
                 ],
             });
         function B() {
-            x &&
+            L &&
                 (k ||
                     (0, f.u)({
                         analyticsLocations: R,
@@ -155,12 +155,12 @@ let T = {
                         guild: i,
                     }));
         }
-        let Z = !L && P.fractionalState === h.a$.NONE,
+        let Z = !x && P.fractionalState === h.a$.NONE,
             F = Z ? s.P3F : "div",
             V = Z ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {
             tooltipClassName: E.tooltip,
-            text: L
+            text: x
                 ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
                 : k
                   ? m.intl.formatToPlainString(g.default["9CtPjo"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
@@ -176,10 +176,10 @@ let T = {
                         y(
                             {
                                 className: a()(E.progressBarMarker, {
-                                    [E.progressBarMarkerUnlocked]: L,
+                                    [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: Z,
-                                    [E.progressBarMarkerLower]: j,
-                                    [E.progressBarMarkerCurrent]: M,
+                                    [E.progressBarMarkerLower]: M,
+                                    [E.progressBarMarkerCurrent]: j,
                                 }),
                                 style: { left: "".concat(100 * T[A], "%") },
                             },
@@ -188,8 +188,8 @@ let T = {
                         ),
                         {
                             children: [
-                                !L && (0, r.jsx)("div", { className: E.boostedTierIconBackground }),
-                                L && A === p.Eu4.TIER_3
+                                !x && (0, r.jsx)("div", { className: E.boostedTierIconBackground }),
+                                x && A === p.Eu4.TIER_3
                                     ? (0, r.jsx)(_.m, {
                                           confettiTriggerRef: n,
                                           setConfettiCount: O,
@@ -201,7 +201,7 @@ let T = {
                                     className: E.progressBarMarkerLabel,
                                     variant: "text-md/normal",
                                     children: [
-                                        L &&
+                                        x &&
                                             A !== p.Eu4.NONE &&
                                             (0, r.jsx)(s.dz2, {
                                                 size: "md",

@@ -1,49 +1,49 @@
-n.d(t, { default: () => T }), n(388685);
+n.d(t, { default: () => w }), n(388685);
 var r = n(951288),
     a = n(647438),
-    i = n(120356),
-    l = n.n(i),
-    c = n(786920),
+    o = n(120356),
+    c = n.n(o),
+    i = n(137317),
     s = n(442837),
-    o = n(481060),
+    l = n(481060),
     d = n(110924),
     u = n(410030),
-    h = n(607070),
-    _ = n(100527),
-    b = n(335131),
-    f = n(70097),
-    C = n(507808),
-    m = n(43747),
-    p = n(82856),
-    R = n(960919),
-    E = n(272008),
-    g = n(497505),
-    y = n(46140),
-    O = n(981631),
-    A = n(215023),
-    S = n(388032),
-    N = n(378658),
-    v = n(557256),
-    L = n(582425),
-    I = n(345554),
-    B = n(88490),
-    j = n(466674);
-function x() {
-    let e = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+    f = n(607070),
+    b = n(100527),
+    p = n(335131),
+    _ = n(70097),
+    m = n(507808),
+    h = n(43747),
+    C = n(82856),
+    y = n(960919),
+    g = n(272008),
+    E = n(497505),
+    x = n(46140),
+    v = n(981631),
+    j = n(215023),
+    R = n(388032),
+    O = n(378658),
+    A = n(557256),
+    S = n(582425),
+    N = n(345554),
+    I = n(88490),
+    L = n(466674);
+function Z() {
+    let e = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         [t, n] = a.useState(!e),
-        [i, d] = a.useState(!1),
-        _ = a.useRef(null),
-        b = (0, u.ZP)(),
-        C = (0, o.apv)(b),
-        m = C ? I.Z : L.Z,
-        p = C ? j.Z : B.Z;
+        [o, d] = a.useState(!1),
+        b = a.useRef(null),
+        p = (0, u.ZP)(),
+        m = (0, l.apv)(p),
+        h = m ? N.Z : S.Z,
+        C = m ? L.Z : I.Z;
     a.useEffect(() => {
         if (!t && !e) {
             var n;
-            null == (n = _.current) || n.play();
+            null == (n = b.current) || n.play();
         }
     }, [t, e]);
-    let R = (0, o.q_F)({
+    let y = (0, l.q_F)({
         from: { y: 50 },
         to: { y: 0 },
         config: {
@@ -51,142 +51,142 @@ function x() {
             friction: 26,
         },
     });
-    return (0, r.jsxs)(c.animated.div, {
-        className: N.videoLayers,
-        style: R,
+    return (0, r.jsxs)(i.animated.div, {
+        className: O.videoLayers,
+        style: y,
         children: [
-            !i && (0, r.jsx)("div", { className: N.videoPlaceholder }),
-            (0, r.jsx)(f.Z, {
-                ref: _,
+            !o && (0, r.jsx)("div", { className: O.videoPlaceholder }),
+            (0, r.jsx)(_.Z, {
+                ref: b,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: l()(N.videoAsset, { [N.hidden]: t }),
+                className: c()(O.videoAsset, { [O.hidden]: t }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
-                    src: p,
+                    src: C,
                     type: "video/webm",
                 }),
             }),
-            (0, r.jsx)(f.Z, {
+            (0, r.jsx)(_.Z, {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: l()(N.videoAsset, { [N.hidden]: !t }),
+                className: c()(O.videoAsset, { [O.hidden]: !t }),
                 controls: !1,
                 onLoadedData: () => d(!0),
                 onEnded: () => {
                     n(!1);
                 },
                 children: (0, r.jsx)("source", {
-                    src: m,
+                    src: h,
                     type: "video/webm",
                 }),
             }),
         ],
     });
 }
-function U(e) {
-    let { transitionState: t, balance: n, onSubmit: a, onClose: i, state: l } = e;
-    return (0, r.jsxs)(o.Y0X, {
+function T(e) {
+    let { transitionState: t, balance: n, onSubmit: a, onClose: o, state: c } = e;
+    return (0, r.jsxs)(l.Y0X, {
         "data-migration-pending": !0,
         transitionState: t,
-        size: o.CgR.DYNAMIC,
-        className: N.modal,
+        size: l.CgR.DYNAMIC,
+        className: O.modal,
         parentComponent: "QuestsOrbsRewardModal",
         children: [
             (0, r.jsx)("div", {
-                className: N.header,
-                children: (0, r.jsx)(o.olH, {
+                className: O.header,
+                children: (0, r.jsx)(l.olH, {
                     "data-migration-pending": !0,
-                    className: N.closeBtn,
-                    onClick: i,
+                    className: O.closeBtn,
+                    onClick: o,
                 }),
             }),
-            "loading" === l
+            "loading" === c
                 ? (0, r.jsx)("div", {
-                      className: N.spinnerContainer,
-                      children: (0, r.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
+                      className: O.spinnerContainer,
+                      children: (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }),
                   })
-                : "success" === l
+                : "success" === c
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(x, {}),
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(Z, {}),
+                            (0, r.jsx)(l.X6q, {
                                 variant: "heading-lg/medium",
-                                className: N.title,
-                                children: S.intl.format(S.t["8l9H0t"], {
+                                className: O.title,
+                                children: R.intl.format(R.t["8l9H0t"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
-                                            className: N.orbsBalance,
+                                            className: O.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(R.Z, {
+                                                (0, r.jsx)(y.Z, {
                                                     shouldUseThemeColor: !0,
-                                                    className: N.orbsBalanceIcon,
+                                                    className: O.orbsBalanceIcon,
                                                 }),
                                                 n,
                                             ],
                                         }),
                                 }),
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                className: N.subtext,
-                                children: S.intl.string(S.t.EDUOIC),
+                                className: O.subtext,
+                                children: R.intl.string(R.t.EDUOIC),
                             }),
-                            (0, r.jsxs)(o.hE2, {
-                                className: N.buttonContainer,
+                            (0, r.jsxs)(l.hE2, {
+                                className: O.buttonContainer,
                                 fullWidthContainer: !0,
                                 fullWidth: !0,
                                 direction: "vertical",
                                 children: [
-                                    (0, r.jsx)(o.zxk, {
+                                    (0, r.jsx)(l.zxk, {
                                         variant: "primary",
                                         fullWidth: !0,
-                                        text: S.intl.string(S.t.WYchdX),
+                                        text: R.intl.string(R.t.WYchdX),
                                         onClick: a,
                                     }),
-                                    (0, r.jsx)(o.zxk, {
+                                    (0, r.jsx)(l.zxk, {
                                         variant: "secondary",
                                         fullWidth: !0,
-                                        text: S.intl.string(S.t["7kTAgI"]),
-                                        onClick: () => window.open(O.EYA.PAID_TERMS_ORBS),
+                                        text: R.intl.string(R.t["7kTAgI"]),
+                                        onClick: () => window.open(v.EYA.PAID_TERMS_ORBS),
                                     }),
                                 ],
                             }),
                         ],
                     })
                   : (0, r.jsxs)("div", {
-                        className: N.errorContainer,
+                        className: O.errorContainer,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                className: N.errorImage,
-                                src: v,
+                                className: O.errorImage,
+                                src: A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.errorContentContainer,
+                                className: O.errorContentContainer,
                                 children: [
-                                    (0, r.jsx)(o.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: "heading-xl/medium",
-                                        className: N.errorHeader,
-                                        children: S.intl.string(S.t.tWYWJy),
+                                        className: O.errorHeader,
+                                        children: R.intl.string(R.t.tWYWJy),
                                     }),
-                                    (0, r.jsx)(o.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: S.intl.string(S.t.JNQRU1),
+                                        children: R.intl.string(R.t.JNQRU1),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: N.buttonContainer,
-                                children: (0, r.jsx)(o.zxk, {
+                                className: O.buttonContainer,
+                                children: (0, r.jsx)(l.zxk, {
                                     variant: "primary",
                                     fullWidth: !0,
-                                    text: S.intl.string(S.t.cpT0Cg),
-                                    onClick: i,
+                                    text: R.intl.string(R.t.cpT0Cg),
+                                    onClick: o,
                                 }),
                             }),
                         ],
@@ -194,11 +194,11 @@ function U(e) {
         ],
     });
 }
-function T(e) {
+function w(e) {
     var t,
         n,
-        { quest: i, onClose: l } = e,
-        c = (function (e, t) {
+        { quest: o, onClose: c } = e,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -207,32 +207,32 @@ function T(e) {
                     var n,
                         r,
                         a = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
             return a;
         })(e, ["quest", "onClose"]);
-    let { balance: s } = (0, m.A)(),
-        o = (function (e, t, n) {
-            let [r, i] = a.useState("loading"),
-                [l, c] = a.useState(!1),
-                { balance: s } = (0, m.A)(),
-                o = (0, d.Z)(s),
-                [u, h] = a.useState(!1);
+    let { balance: s } = (0, h.A)(),
+        l = (function (e, t, n) {
+            let [r, o] = a.useState("loading"),
+                [c, i] = a.useState(!1),
+                { balance: s } = (0, h.A)(),
+                l = (0, d.Z)(s),
+                [u, f] = a.useState(!1);
             return (a.useEffect(() => {
                 let e = null;
                 return (
                     "success" === r &&
                         t &&
                         (e = setTimeout(() => {
-                            h(!0);
+                            f(!0);
                         }, 1000)),
                     () => {
                         null != e && clearTimeout(e);
@@ -240,43 +240,43 @@ function T(e) {
                 );
             }, [r, t]),
             a.useEffect(() => {
-                !l && null != s && null != o && s > o && c(!0);
-            }, [s, o, l]),
+                !c && null != s && null != l && s > l && i(!0);
+            }, [s, l, c]),
             a.useEffect(() => {
-                (0, E.QB)(e, g.y$.CROSS_PLATFORM, n)
+                (0, g.QB)(e, E.y$.CROSS_PLATFORM, n)
                     .then((e) => {
-                        if ((null == e ? void 0 : e.claimedAt) != null) return void i("success");
-                        i("error");
+                        if ((null == e ? void 0 : e.claimedAt) != null) return void o("success");
+                        o("error");
                     })
                     .catch(() => {
-                        i("error");
+                        o("error");
                     });
             }, [e, n]),
             "error" === r)
                 ? r
-                : "success" === r && (l || u)
+                : "success" === r && (c || u)
                   ? "success"
                   : "loading";
-        })(i.id, i.preview, c.location),
+        })(o.id, o.preview, i.location),
         u = a.useCallback(() => {
-            l(),
-                (0, C.Y)({
-                    pageType: O.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                    sectionType: O.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: O.qAy.CTA_TO_ORBS_SHOP,
+            c(),
+                (0, m.Y)({
+                    pageType: v.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                    sectionType: v.jXE.ORBS_REWARD_MODAL,
+                    ctaObject: v.qAy.CTA_TO_ORBS_SHOP,
                 }),
-                (0, b.mK)({
+                (0, p.mK)({
                     openInLayer: !1,
-                    tab: A.AW.ORBS,
+                    tab: j.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: i.id === y.V6 ? _.Z.INTRO_TO_ORBS_QUEST : _.Z.QUEST_HOME_PAGE,
+                    analyticsSource: o.id === x.V6 ? b.Z.INTRO_TO_ORBS_QUEST : b.Z.QUEST_HOME_PAGE,
                 });
-        }, [l, i.id]);
+        }, [c, o.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(p.o, {}),
+            (0, r.jsx)(C.o, {}),
             (0, r.jsx)(
-                U,
+                T,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -301,13 +301,13 @@ function T(e) {
                             });
                     }
                     return e;
-                })({}, c)),
+                })({}, i)),
                 (n = n =
                     {
                         balance: s,
-                        onClose: l,
+                        onClose: c,
                         onSubmit: u,
-                        state: o,
+                        state: l,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

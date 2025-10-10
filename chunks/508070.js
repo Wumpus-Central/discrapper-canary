@@ -42,7 +42,7 @@ function _(e, t) {
                                     className: c.timeBoxOutline,
                                     children: (0, r.jsx)(o.Text, {
                                         variant: "text-md/medium",
-                                        color: "text-default",
+                                        color: "always-white",
                                         children: n,
                                     }),
                                 }),
@@ -50,7 +50,7 @@ function _(e, t) {
                                     className: c.timeBoxOutline,
                                     children: (0, r.jsx)(o.Text, {
                                         variant: "text-md/medium",
-                                        color: "text-default",
+                                        color: "always-white",
                                         children: i,
                                     }),
                                 }),
@@ -58,7 +58,7 @@ function _(e, t) {
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
-                            color: "text-default",
+                            color: "always-white",
                             children: f(e.unitType),
                         }),
                     ],
@@ -69,7 +69,7 @@ function _(e, t) {
                 (0, r.jsx)(o.Text, {
                     className: c.unitDivider,
                     variant: "text-lg/normal",
-                    color: "text-default",
+                    color: "always-white",
                     children: ":",
                 }),
         ],
@@ -103,7 +103,7 @@ let p = (e) => {
         children: [
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/semibold",
-                color: "text-default",
+                color: "always-white",
                 children: l.intl.string(l.t["/ARFVF"]),
             }),
             (0, r.jsx)("div", {

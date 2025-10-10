@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(899007),
     _ = n(648052),
     j = n(867176),
-    O = n(280885),
-    x = n(900927),
+    x = n(280885),
+    O = n(900927),
     v = n(678738),
     C = n(502762),
     I = n(530),
@@ -136,7 +136,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: T.intl.string(T.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(O.Z, {
+                                                children: (0, r.jsx)(x.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
@@ -146,7 +146,7 @@ function w(e) {
                                             (0, r.jsx)(v.Z, {
                                                 heading: T.intl.string(T.t["A//N4u"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(x.Z, { userId: n.id }),
+                                                children: (0, r.jsx)(O.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),

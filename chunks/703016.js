@@ -20,12 +20,12 @@ var r = n(913527),
     y = n(699516),
     v = n(944486),
     I = n(9156),
-    C = n(594174),
-    S = n(51144),
-    N = n(196051),
-    T = n(441729),
-    P = n(653477),
-    j = n(981631),
+    S = n(594174),
+    C = n(51144),
+    T = n(196051),
+    N = n(441729),
+    j = n(653477),
+    P = n(981631),
     x = n(388032);
 let A = [],
     Z = null,
@@ -38,8 +38,8 @@ function D(e, t, n, r) {
             .replace(R, x.intl.string(x.t["F+x38P"]))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
-                let i = C.default.getUser(t);
-                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : S.ZP.getName(i);
+                let i = S.default.getUser(t);
+                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : C.ZP.getName(i);
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
                 let n = null != l ? b.Z.getRole(l.id, t) : null;
@@ -47,7 +47,7 @@ function D(e, t, n, r) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, s.F6)(n, C.default, y.Z);
+                return null == n ? e : (0, s.F6)(n, S.default, y.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(x.intl.string(x.t.sMOuub), " ").concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t))
@@ -82,8 +82,8 @@ async function M(e, t, n, r, i) {
     let l = o.e6(e, n);
     null !== l &&
         (null == w && k(),
-        t ? await (0, N.NB)() : null == Z || Z.removeEventListener("end", N.NB),
-        l.addEventListener("end", N.NB),
+        t ? await (0, T.NB)() : null == Z || Z.removeEventListener("end", T.NB),
+        l.addEventListener("end", T.NB),
         null != r && l.addEventListener("start", r),
         null != i && l.addEventListener("end", i),
         (Z = l),
@@ -91,7 +91,7 @@ async function M(e, t, n, r, i) {
 }
 function U(e, t, n, r, i) {
     M(e, t, i, () => {
-        (0, N.Bo)(n, r);
+        (0, T.Bo)(n, r);
     });
 }
 function G(e) {
@@ -99,12 +99,12 @@ function G(e) {
     M(t, n, r, i, l);
 }
 function B() {
-    return null !== Z && Z.removeEventListener("end", N.NB), o.M9(), (Z = null), !0;
+    return null !== Z && Z.removeEventListener("end", T.NB), o.M9(), (Z = null), !0;
 }
-function V(e) {
+function H(e) {
     var t, n, r;
     let { message: i, channel: l } = e,
-        a = i.type === j.uaV.REPLY ? u.Z.getMessageByReference(i.messageReference) : null,
+        a = i.type === P.uaV.REPLY ? u.Z.getMessageByReference(i.messageReference) : null,
         o =
             (null == a ? void 0 : a.state) === u.Y.LOADED
                 ? null == a || null == (t = a.message)
@@ -115,13 +115,13 @@ function V(e) {
             null != o
                 ? null != (n = m.ZP.getNick(l.guild_id, null == o ? void 0 : o.id))
                     ? n
-                    : S.ZP.getName(o)
+                    : C.ZP.getName(o)
                 : null,
         c = l.getGuildId(),
-        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : S.ZP.getName(i.author);
+        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : C.ZP.getName(i.author);
     return U(D(i.content, d, c, s), !0, l.id, i.id), !0;
 }
-function H(e) {
+function V(e) {
     var t, n, r, i, l, a;
     let { channelId: o, message: s, optimistic: c } = e;
     if (c || O.Z.isSelfDeaf()) return !1;
@@ -130,31 +130,31 @@ function H(e) {
     let d = v.Z.getChannelId(),
         b = h.ZP.getCurrentSidebarChannelId(d),
         _ = o === d || o === b,
-        C = p.OW.getSetting() && s.tts && _,
-        N = E.Z.getTTSType(),
-        T =
+        S = p.OW.getSetting() && s.tts && _,
+        T = E.Z.getTTSType(),
+        N =
             (null == (t = s.author) ? void 0 : t.id) !== f.default.getId() &&
-            (N === j.PrB.ALL_CHANNELS || (N === j.PrB.SELECTED_CHANNEL && _));
-    if ((C || T) && !y.Z.isBlockedOrIgnoredForMessage(s)) {
+            (T === P.PrB.ALL_CHANNELS || (T === P.PrB.SELECTED_CHANNEL && _));
+    if ((S || N) && !y.Z.isBlockedOrIgnoredForMessage(s)) {
         if (A.indexOf(s.id) >= 0) return !1;
         A.unshift(s.id) > 10 && A.pop();
         let e = u.getGuildId();
         if (null != e && I.ZP.getMutedChannels(e).has(o)) return !1;
         let t =
                 null !=
-                (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : S.ZP.getName(s.author))
+                (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : C.ZP.getName(s.author))
                     ? l
                     : "",
-            c = s.type === j.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
-            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : S.ZP.getName(c)) : null;
-        U(D(s.content, t, e, d), !1, u.id, s.id, P.f);
+            c = s.type === P.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
+            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : C.ZP.getName(c)) : null;
+        U(D(s.content, t, e, d), !1, u.id, s.id, j.f);
     }
     return !1;
 }
 function F(e) {
     let { id: t, channelId: n } = e,
-        r = T.Z.currentMessage;
-    return null != r && t === r.messageId && n === r.channelId && ((0, N.NB)(), !0);
+        r = N.Z.currentMessage;
+    return null != r && t === r.messageId && n === r.channelId && ((0, T.NB)(), !0);
 }
 function z() {
     O.Z.isSelfDeaf() && o.M9();
@@ -162,9 +162,9 @@ function z() {
 let W = {
     init() {
         l.Z.subscribe("SPEAK_TEXT", G),
-            l.Z.subscribe("SPEAK_MESSAGE", V),
+            l.Z.subscribe("SPEAK_MESSAGE", H),
             l.Z.subscribe("STOP_SPEAKING", B),
-            l.Z.subscribe("MESSAGE_CREATE", H),
+            l.Z.subscribe("MESSAGE_CREATE", V),
             l.Z.subscribe("MESSAGE_DELETE", F),
             l.Z.subscribe("AUDIO_TOGGLE_SELF_DEAF", z),
             l.Z.subscribe("USER_SETTINGS_PROTO_UPDATE", k),

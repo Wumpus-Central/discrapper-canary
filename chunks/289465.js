@@ -21,7 +21,7 @@ function s(e) {
                     (0, i.jsx)("div", { children: t }),
                 ],
             }),
-            s ? (0, i.jsx)(a.$i$, {}) : null,
+            s ? (0, i.jsx)(a.izJ, {}) : null,
             n,
         ],
     });

@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(488290),
+    u = n(137317),
     d = n(374470),
     f = n(793030),
     _ = n(981729),
@@ -160,8 +160,8 @@ class I extends (r = a.PureComponent) {
                 getAriaValueText: D,
                 barClassName: L,
                 grabberClassName: x,
-                grabberStyles: j = {},
-                markerPosition: M = 0,
+                grabberStyles: M = {},
+                markerPosition: j = 0,
                 "aria-hidden": k,
                 "aria-label": U,
                 "aria-labelledby": G,
@@ -187,8 +187,8 @@ class I extends (r = a.PureComponent) {
                               {
                                   className: s()(h.mark, {
                                       [h.defaultValue]: r,
-                                      [h.markAbove]: 0 === M,
-                                      [h.markBelow]: 1 === M,
+                                      [h.markAbove]: 0 === j,
+                                      [h.markBelow]: 1 === j,
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
@@ -212,7 +212,7 @@ class I extends (r = a.PureComponent) {
                     : null,
             X = null != P ? P(t) : "".concat(K.toFixed(0), "%"),
             Q = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
-        return (0, i.jsx)(f.NIc, {
+        return (0, i.jsx)(f.gNt, {
             label: Z,
             hideLabel: F,
             description: V,
@@ -287,7 +287,7 @@ class I extends (r = a.PureComponent) {
                                                     "div",
                                                     b(g({}, e), {
                                                         className: s()(h.grabber, x),
-                                                        style: b(g({}, j), { left: z }),
+                                                        style: b(g({}, M), { left: z }),
                                                         onMouseDown: this.handleMouseDown,
                                                         ref: this.grabberRef,
                                                     }),

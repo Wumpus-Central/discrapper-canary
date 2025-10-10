@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(962086),
-    a = n(225675),
-    s = n(434404),
+    s = n(225675),
+    a = n(434404),
     o = n(981631),
     c = n(388032),
     d = n(666921);
@@ -23,9 +23,9 @@ function u(e) {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    s.Z.close(),
+                    a.Z.close(),
                         (0, l.iD)(t, {
-                            type: a.z.ROLES,
+                            type: s.z.ROLES,
                             roles: { [n.id]: n },
                             returnToSection: o.pNK.ROLES,
                         });

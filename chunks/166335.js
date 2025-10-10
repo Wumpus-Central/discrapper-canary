@@ -3,9 +3,9 @@ var n = r(951288);
 r(647438);
 var o = r(174609),
     a = r(703656),
-    c = r(626135),
-    l = r(790527),
-    s = r(474936),
+    s = r(626135),
+    c = r(790527),
+    l = r(474936),
     i = r(981631),
     u = r(388032),
     b = r(468424);
@@ -38,7 +38,7 @@ function d(t) {
         alt: "",
     });
     return (0, n.jsx)(
-        l.Z,
+        c.Z,
         (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -70,14 +70,14 @@ function d(t) {
                 body: u.intl.string(u.t["3hj4kZ"]),
                 artElement: f,
                 artContainerClassName: b.artContainer,
-                type: s.cd.VOICE_FILTERS_UPSELL,
+                type: l.cd.VOICE_FILTERS_UPSELL,
                 onClose: e,
                 onSubscribeClick: o.Z,
                 secondaryCTA: u.intl.string(u.t.ZnqyZ2),
                 onSecondaryClick: function () {
                     (0, o.Z)(),
                         e(),
-                        c.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
+                        s.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_section: i.jXE.VOICE_FILTERS_UPSELL_MODAL,
                             location_object: i.qAy.NAVIGATION_LINK,
                         }),

@@ -140,16 +140,16 @@ function P(e, t) {
         P = N || h || y,
         w = _ && T && (!C || b || P),
         D = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
-        x = null != D ? d.ZP.getSelfMember(D) : null,
-        L = (0, l.EY)(x),
-        j = (0, c.b)(x),
-        M = !E && A && !N && _ && !L && !j;
+        L = null != D ? d.ZP.getSelfMember(D) : null,
+        x = (0, l.EY)(L),
+        M = (0, c.b)(L),
+        j = !E && A && !N && _ && !x && !M;
     return {
         poll: s,
         canTapAnswers: w,
         canRemoveVote: N && _ && !h,
         canShowVoteCounts: P,
-        canSubmitVote: M,
+        canSubmitVote: j,
         expirationLabel: p,
         hasSelectedAnswer: A,
         hasVoted: N,
@@ -187,17 +187,17 @@ function w(e, t) {
             canTapAnswers: R,
             canRemoveVote: w,
             canShowVoteCounts: D,
-            canSubmitVote: x,
-            expirationLabel: L = T.intl.string(T.t["e+J3JS"]),
-            hasSelectedAnswer: j,
-            hasVoted: M,
+            canSubmitVote: L,
+            expirationLabel: x = T.intl.string(T.t["e+J3JS"]),
+            hasSelectedAnswer: M,
+            hasVoted: j,
             isEditingVote: k,
             isExpired: U,
             isInteractive: G,
             reactions: B,
             selectedAnswerIds: Z,
-            submitting: V,
-            tapShouldOpenVotersModal: F,
+            submitting: F,
+            tapShouldOpenVotersModal: V,
             showResults: H,
         } = S,
         Y = (0, E.cZ)(B),
@@ -217,10 +217,10 @@ function w(e, t) {
                 u = 0 === Y ? 0 : c / Y,
                 d = Z.has(o),
                 f = c >= K && 0 !== c,
-                _ = M && null != (a = null == l ? void 0 : l.me_vote) && a,
+                _ = j && null != (a = null == l ? void 0 : l.me_vote) && a,
                 h = C({
                     didSelfVote: _,
-                    hasVoted: M,
+                    hasVoted: j,
                     isExpired: U,
                     isSelected: d,
                     isLeader: f,
@@ -238,7 +238,7 @@ function w(e, t) {
                 isVictor: U && f,
                 didSelfVote: _,
                 style: h,
-                shouldAnimateTransition: V && !p,
+                shouldAnimateTransition: F && !p,
                 votesPercentage: Math.round(100 * u),
                 votes: (0, r.EQ)(I)
                     .with(i.C.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")"))
@@ -247,8 +247,8 @@ function w(e, t) {
         }),
         q = (0, r.EQ)({
             isExpired: U,
-            canSubmitVote: x,
-            hasVoted: M,
+            canSubmitVote: L,
+            hasVoted: j,
             isEditingVote: k,
             canRemoveVote: w,
             isInteractive: G,
@@ -259,7 +259,7 @@ function w(e, t) {
             .with({ isEditingVote: !0 }, () => ({
                 label: T.intl.string(T.t.JwkNU1),
                 presentation: "button",
-                enabled: j,
+                enabled: M,
                 type: "submit",
             }))
             .with({ canRemoveVote: !0 }, () => ({
@@ -283,7 +283,7 @@ function w(e, t) {
             .otherwise(() => ({
                 label: T.intl.string(T.t.JwkNU1),
                 presentation: "button",
-                enabled: x,
+                enabled: L,
                 type: "submit",
             })),
         X = (0, m.isIOS)() ? T.intl.string(T.t.PVATMz) : T.intl.string(T.t.cHfFqq),
@@ -311,14 +311,14 @@ function w(e, t) {
             }))
             .otherwise(() => ({
                 label: W,
-                secondaryLabel: L,
+                secondaryLabel: x,
                 accessibilityHint: X,
                 presentation: "text",
                 enabled: !0,
                 type: "showVoterDetails",
             })),
         J =
-            !G || U || M || H
+            !G || U || j || H
                 ? void 0
                 : {
                       label: T.intl.string(T.t["/KHAUF"]),
@@ -341,7 +341,7 @@ function w(e, t) {
         promptLabel: ee,
         answers: z,
         answersInteraction: (0, r.EQ)({
-            tapShouldOpenVotersModal: F,
+            tapShouldOpenVotersModal: V,
             canTapAnswers: R,
             canSelectMultipleAnswers: $,
         })
@@ -350,7 +350,7 @@ function w(e, t) {
             .with({ canSelectMultipleAnswers: !1 }, () => b.Y7.RADIO_BUTTONS)
             .with({ canSelectMultipleAnswers: !0 }, () => b.Y7.CHECKBOXES)
             .exhaustive(),
-        answerTapAccessibilityLabel: F ? X : void 0,
+        answerTapAccessibilityLabel: V ? X : void 0,
         layoutType: I,
         resources: (0, O.Z)({
             theme: l,
@@ -361,9 +361,9 @@ function w(e, t) {
         isInteractive: G,
         canTapAnswers: R,
         canSelectMultipleAnswers: $,
-        hasSelectedAnswer: j,
+        hasSelectedAnswer: M,
         canShowVoteCounts: D,
-        hasVoted: M,
+        hasVoted: j,
         isExpired: U,
         myAvatarUrl: g,
         secondaryAction: Q,

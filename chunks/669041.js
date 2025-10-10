@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(667202),
+    a = n(793030),
+    o = n(442837),
     s = n(481060),
     l = n(893776),
     c = n(594174),
@@ -45,7 +45,7 @@ function h(e) {
 }
 function m(e) {
     let { transitionState: t, onClose: n } = e,
-        p = (0, a.e7)([c.default], () => {
+        p = (0, o.e7)([c.default], () => {
             var e;
             return null == (e = c.default.getCurrentUser()) ? void 0 : e.email;
         }),
@@ -68,7 +68,7 @@ function m(e) {
                     emailAddressLink: "mailto:".concat(p),
                 })
               : void 0;
-    return (0, r.jsxs)(o.ExpressiveModal, {
+    return (0, r.jsxs)(a.ExpressiveModal, {
         transitionState: t,
         onClose: n,
         graphic:

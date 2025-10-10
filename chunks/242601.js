@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(786920),
-    s = n(524825),
+    o = n(137317),
+    s = n(574583),
     c = n(442837),
     u = n(704215),
     d = n(846519),
@@ -24,8 +24,8 @@ var r = n(951288),
     C = n(43740),
     T = n(596557),
     N = n(817520),
-    P = n(999309),
-    j = n(408987),
+    j = n(999309),
+    P = n(408987),
     x = n(130734),
     A = n(499137),
     Z = n(258871),
@@ -38,14 +38,14 @@ var r = n(951288),
     U = n(10401),
     G = n(592125),
     B = n(796974),
-    V = n(486472),
-    H = n(984933),
+    H = n(486472),
+    V = n(984933),
     F = n(430824),
     z = n(819640),
     W = n(496675),
-    Y = n(878884),
-    K = n(19780),
-    q = n(594174),
+    q = n(878884),
+    Y = n(19780),
+    K = n(594174),
     Q = n(74538),
     X = n(374023),
     J = n(598056),
@@ -318,7 +318,7 @@ class em extends i.PureComponent {
                     className: ec.hubContainer,
                     children: (0, r.jsx)(Z.Z, {
                         guild: n,
-                        channel: null != i ? i : H.ZP.getDefaultChannel(n.id),
+                        channel: null != i ? i : V.ZP.getDefaultChannel(n.id),
                     }),
                 });
             let e = n.id === eo._ ? $.j : $.E;
@@ -408,7 +408,7 @@ class em extends i.PureComponent {
                             n.e("58227"),
                             n.e("44686"),
                             n.e("30378"),
-                            n.e("49236"),
+                            n.e("64982"),
                             n.e("87154"),
                             n.e("33213"),
                             n.e("1289"),
@@ -433,7 +433,7 @@ class em extends i.PureComponent {
             }),
             eu(this, "handleCloseTemplateDirtyTooltip", () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
-                null != e && t && j.Z.hideGuildTemplateDirtyTooltip(e.id);
+                null != e && t && P.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             eu(this, "renderMenuPopout", async () => {
                 let { default: e } = await Promise.all([n.e("87154"), n.e("45141")]).then(n.bind(n, 859432));
@@ -530,18 +530,18 @@ function eb(e) {
     (0, b.J_)(n);
     let d = (0, S.Z)(n),
         p = (0, c.e7)([B.Z], () => B.Z.getGuildDimensions(n).scrollTo),
-        h = (0, c.e7)([K.Z], () => K.Z.getChannelId()),
+        h = (0, c.e7)([Y.Z], () => Y.Z.getChannelId()),
         g = (0, c.e7)([W.Z], () => W.Z.can(ei.Plq.MANAGE_GUILD, o)),
-        m = (0, c.e7)([V.Z], () => V.Z.isUnavailable(n)),
-        j = (0, c.e7)([q.default], () => q.default.getCurrentUser()),
+        m = (0, c.e7)([H.Z], () => H.Z.isUnavailable(n)),
+        P = (0, c.e7)([K.default], () => K.default.getCurrentUser()),
         { enableStudyGroup: Z } = (0, A.s)(o),
         w = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [k, M] = i.useState(!w),
-        H = (0, _.Z)(n),
+        V = (0, _.Z)(n),
         { analyticsLocations: J } = (0, E.ZP)(O.Z.GUILD_HEADER);
     i.useEffect(() => {
-        n !== H && M(!w);
-    }, [n, H, w]);
+        n !== V && M(!w);
+    }, [n, V, w]);
     let [$, ee] = (0, v.ZP)(
             (e) => [
                 el.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
@@ -558,24 +558,24 @@ function eb(e) {
             g &&
             (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 &&
             !X.s.isDisallowPopupsSet(),
-        ec = (0, P.Z)(n),
+        ec = (0, j.Z)(n),
         eu = (null == o ? void 0 : o.features.has(ei.oNc.HUB)) === !0,
         ed = g && (null == o ? void 0 : o.features.has(ei.oNc.DISCOVERABLE)) === !0,
         ep = (0, c.e7)(
             [x.Z, z.Z],
-            () => null != o && null != j && g && !z.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
+            () => null != o && null != P && g && !z.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         ef = (0, c.e7)([G.Z], () => G.Z.getChannel(a)),
         { isPopoutOpen: eg } = (0, C.y)(),
         eb = null != (t = null == o ? void 0 : o.features.has(ei.oNc.COMMUNITY)) && t,
-        e_ = Q.ZP.isNewUser(j),
+        e_ = Q.ZP.isNewUser(P),
         eO = k && !e_;
     (0, T.Z)(o);
     let eE = (0, I.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ey = (0, L.Z)(n),
         ev = (0, N.Z)(n),
-        eI = (0, c.e7)([K.Z], () => K.Z.getChannelId()),
-        eS = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
+        eI = (0, c.e7)([Y.Z], () => Y.Z.getChannelId()),
+        eS = (0, c.e7)([q.Z], () => q.Z.desyncedVoiceStatesCount),
         eC = (0, D.Z)(n);
     return (0, r.jsx)(em, {
         guildId: n,
@@ -589,7 +589,7 @@ function eb(e) {
         rtcConnectedChannelId: eI,
         rtcDesyncedVoiceStatesCount: eS,
         isUnavailable: m,
-        user: j,
+        user: P,
         hasChannelNotice: null != et || $,
         anyLayerOpen: en || er,
         showGuildPowerupProgressBarUpsell: es,

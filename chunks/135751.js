@@ -1,9 +1,9 @@
 n.d(t, { c: () => c });
 var r = n(745200),
-    o = n(579092),
-    a = n(82328),
-    l = n(869950);
-function i(e, t, n) {
+    l = n(579092),
+    o = n(82328),
+    i = n(869950);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function i(e, t, n) {
         e
     );
 }
-let s = new o.Yd("SimpleMuxWrapper");
+let s = new l.Yd("SimpleMuxWrapper");
 class c {
     initialize() {
         var e;
@@ -24,7 +24,7 @@ class c {
             debug: null != (e = this.config.debug) && e,
             disableCookies: !0,
             respectDoNotTrack: !0,
-            data: a.v.mapDiscordToMuxMetadata(this.config, this.sessionId),
+            data: o.v.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
         null != this.hlsInstance && ((t.hlsjs = this.hlsInstance), (t.Hls = this.hlsInstance.constructor));
         try {
@@ -55,14 +55,14 @@ class c {
         return this.sessionId;
     }
     constructor(e) {
-        i(this, "isMonitoring", !1),
-            i(this, "videoElement", void 0),
-            i(this, "config", void 0),
-            i(this, "sessionId", void 0),
-            i(this, "hlsInstance", void 0),
+        a(this, "isMonitoring", !1),
+            a(this, "videoElement", void 0),
+            a(this, "config", void 0),
+            a(this, "sessionId", void 0),
+            a(this, "hlsInstance", void 0),
             (this.config = e),
             (this.videoElement = e.videoElement),
-            (this.sessionId = l.S.generateSessionId()),
+            (this.sessionId = i.S.generateSessionId()),
             (this.hlsInstance = e.hlsInstance);
     }
 }

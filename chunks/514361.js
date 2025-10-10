@@ -64,12 +64,12 @@ let A = !0,
 function D() {
     A && (r = void 0), (C = !1);
 }
-let x = () => {
+let L = () => {
         let e = !b.ZP.canUseClientThemes(E.default.getCurrentUser());
         if (e === A) return !1;
         A = e;
     },
-    L = () => {
+    x = () => {
         if (!u.Z.shouldSync("appearance")) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if (null == e) {
@@ -81,7 +81,7 @@ let x = () => {
             r = t;
         }
     },
-    j = () => {
+    M = () => {
         if (!u.Z.shouldSync("appearance") || (0, v.zu)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
@@ -92,12 +92,12 @@ let x = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class M extends (a = o.ZP.PersistedStore) {
+class j extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0),
             this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z),
-            this.syncWith([E.default], x),
-            this.syncWith([u.Z], L);
+            this.syncWith([E.default], L),
+            this.syncWith([u.Z], x);
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -127,18 +127,18 @@ class M extends (a = o.ZP.PersistedStore) {
             ]);
     }
 }
-S(M, "displayName", "ClientThemesBackgroundStore"), S(M, "persistKey", "ClientThemesBackgroundStore");
-let k = new M(l.Z, {
+S(j, "displayName", "ClientThemesBackgroundStore"), S(j, "persistKey", "ClientThemesBackgroundStore");
+let k = new j(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: N,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,
     CLIENT_THEMES_EDITOR_CLOSE: D,
     CHANNEL_SELECT: w,
     LOGOUT: D,
-    CACHE_LOADED: j,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: j,
-    UNSYNCED_USER_SETTINGS_UPDATE: j,
-    USER_SETTINGS_PROTO_UPDATE: j,
+    CACHE_LOADED: M,
+    CONNECTION_OPEN: M,
+    OVERLAY_INITIALIZE: M,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: M,
+    UNSYNCED_USER_SETTINGS_UPDATE: M,
+    USER_SETTINGS_PROTO_UPDATE: M,
 });

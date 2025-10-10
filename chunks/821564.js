@@ -2,24 +2,24 @@ n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(481060),
-    o = n(846027),
-    s = n(131951),
-    l = n(358085),
+    o = n(481060),
+    l = n(846027),
+    a = n(131951),
+    s = n(358085),
     c = n(981631),
     u = n(388032);
 function d(e) {
-    let t = !l.isPlatformEmbedded,
-        n = (0, i.e7)([s.Z], () => s.Z.getMode()),
+    let t = !s.isPlatformEmbedded,
+        n = (0, i.e7)([a.Z], () => a.Z.getMode()),
         d = (t, i) =>
             (0, r.jsx)(
-                a.k5B,
+                o.k5B,
                 {
                     id: t,
                     group: "input-modes",
                     label: i,
                     checked: n === t,
-                    action: () => o.Z.setMode(t, void 0, void 0, { analyticsLocations: e }),
+                    action: () => l.Z.setMode(t, void 0, void 0, { analyticsLocations: e }),
                 },
                 t,
             );

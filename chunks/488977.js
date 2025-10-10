@@ -13,18 +13,18 @@ var l = n(951288),
     f = n(299206),
     h = n(726521),
     v = n(973616),
-    y = n(914010),
-    x = n(594174),
-    b = n(626135),
-    g = n(572004),
-    j = n(630388),
-    N = n(135431),
+    x = n(914010),
+    y = n(594174),
+    g = n(626135),
+    b = n(572004),
+    N = n(630388),
+    j = n(135431),
     C = n(541099),
     E = n(783097),
     P = n(570949),
-    O = n(314734),
-    A = n(981631),
-    _ = n(388032),
+    A = n(314734),
+    _ = n(981631),
+    O = n(388032),
     I = n(820607);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -77,9 +77,9 @@ function L(e) {
         M = (0, E.L1)(r),
         U = (0, m.Eb)(M),
         D = (0, d.R)(r.id),
-        H = (0, o.e7)([y.Z], () => {
+        H = (0, o.e7)([x.Z], () => {
             var e;
-            return null != (e = y.Z.getGuildId()) ? e : void 0;
+            return null != (e = x.Z.getGuildId()) ? e : void 0;
         }, []),
         V = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
@@ -87,14 +87,14 @@ function L(e) {
             section_name: Z,
             source: C.Z.lastShownEntrypoint(),
         },
-        B = x.default.getCurrentUser(),
+        B = y.default.getCurrentUser(),
         W = (0, f.Z)({
             id: r.id,
-            label: _.intl.string(_.t["+NP/b2"]),
+            label: O.intl.string(O.t["+NP/b2"]),
         }),
         F = (0, P.P)({ application: r }),
-        G = (0, j.yE)(null != (t = r.flags) ? t : 0, A.udG.EMBEDDED),
-        z = "channel" === L.type ? L.channel : void 0;
+        G = (0, N.yE)(null != (t = r.flags) ? t : 0, _.udG.EMBEDDED),
+        q = "channel" === L.type ? L.channel : void 0;
     return (0, l.jsxs)("div", {
         className: I.container,
         children: [
@@ -106,16 +106,16 @@ function L(e) {
                               referrerId: null == B ? void 0 : B.id,
                           })
                         : (0, p.J)(S({ id: r.id }, M));
-                    (0, g.JG)(e, () =>
-                        (0, s.showToast)((0, s.createToast)(_.intl.string(_.t["L/PwZW"]), s.ToastType.SUCCESS)),
+                    (0, b.JG)(e, () =>
+                        (0, s.showToast)((0, s.createToast)(O.intl.string(O.t["L/PwZW"]), s.ToastType.SUCCESS)),
                     ),
-                        b.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        g.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: r.id,
                             source: k,
                         });
                 },
                 className: a()(I.clickable, R),
-                "aria-label": _.intl.string(_.t.WqhZsr),
+                "aria-label": O.intl.string(O.t.WqhZsr),
                 children: (0, l.jsx)(s.xPt, {
                     size: "sm",
                     color: s.TVs.colors.INTERACTIVE_ACTIVE,
@@ -126,10 +126,10 @@ function L(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsxs)(s.v2r, {
-                        className: O.NN,
+                        className: A.NN,
                         navId: "app-details-more-menu",
                         onClose: t,
-                        "aria-label": _.intl.string(_.t.AXIHpa),
+                        "aria-label": O.intl.string(O.t.AXIHpa),
                         onSelect: void 0,
                         children: [
                             (0, l.jsxs)(s.kSQ, {
@@ -137,12 +137,12 @@ function L(e) {
                                     D &&
                                         (0, l.jsx)(s.sNh, {
                                             id: "open-storefront",
-                                            label: _.intl.string(_.t.kRvlKC),
+                                            label: O.intl.string(O.t.kRvlKC),
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("77803"),
-                                                        n.e("62199"),
+                                                        n.e("42124"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, l.jsx)(e, {
@@ -157,17 +157,17 @@ function L(e) {
                                     U
                                         ? (0, l.jsx)(s.sNh, {
                                               id: "add-app",
-                                              label: _.intl.string(_.t.NgXl3N),
+                                              label: O.intl.string(O.t.NgXl3N),
                                               action: () => {
                                                   null == M.customInstallUrl &&
-                                                      (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
-                                                      (0, N.L)(
+                                                      (0, c.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
+                                                      (0, j.L)(
                                                           T(S({}, M), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
                                                                       (0, c.yw)(
-                                                                          A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
+                                                                          _.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
                                                                           V,
                                                                       );
                                                               },
@@ -181,17 +181,17 @@ function L(e) {
                                         ? (0, l.jsx)(s.sNh, {
                                               id: "report-app",
                                               color: "danger",
-                                              label: _.intl.string(_.t.jhJze3),
+                                              label: O.intl.string(O.t.jhJze3),
                                               action: () => {
                                                   var e;
                                                   (0, h.uu)({
                                                       application: r,
                                                       entrypoint: "app_launcher",
                                                       contextualGuildId:
-                                                          null != (e = null == z ? void 0 : z.getGuildId())
+                                                          null != (e = null == q ? void 0 : q.getGuildId())
                                                               ? e
                                                               : void 0,
-                                                      contextualChannelId: null == z ? void 0 : z.id,
+                                                      contextualChannelId: null == q ? void 0 : q.id,
                                                   });
                                               },
                                           })
@@ -211,7 +211,7 @@ function L(e) {
                         T(S({ innerRef: w }, e), {
                             onClick: e.onClick,
                             className: a()(I.clickable, R),
-                            "aria-label": _.intl.string(_.t.UKOtz8),
+                            "aria-label": O.intl.string(O.t.UKOtz8),
                             children: (0, l.jsx)(s.xhG, {
                                 size: "sm",
                                 color: s.TVs.colors.INTERACTIVE_ACTIVE,

@@ -29,17 +29,17 @@ var r = n(951288),
     P = n(890410),
     w = n(464891),
     D = n(507418),
-    x = n(348238),
-    L = n(38267),
-    j = n(83561),
-    M = n(834129),
+    L = n(348238),
+    x = n(38267),
+    M = n(83561),
+    j = n(834129),
     k = n(959517),
     U = n(981631),
     G = n(674563),
     B = n(590433),
     Z = n(388032),
-    V = n(545869);
-function F(e, t, n) {
+    F = n(545869);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -113,17 +113,17 @@ function z(e, t) {
     return i;
 }
 function q(e, t) {
-    let { popouts: n, selected: r, setPopout: a } = (0, L.Z)(e.id, k.d$),
+    let { popouts: n, selected: r, setPopout: a } = (0, x.Z)(e.id, k.d$),
         { usernameProfile: o, avatarProfile: s } = n,
-        l = (0, x.wq)(e.author.id, t.id),
-        c = (0, x.RN)(e.author.id, t.id, e.id),
-        u = (0, x.XO)(e, t, o, a);
+        l = (0, L.wq)(e.author.id, t.id),
+        c = (0, L.RN)(e.author.id, t.id, e.id),
+        u = (0, L.XO)(e, t, o, a);
     return {
         selected: r,
         onContextMenu: l,
         onContextMenuModerateUser: c,
         onClickUsername: u,
-        onClickAvatar: (0, x.R9)(s, a),
+        onClickAvatar: (0, L.R9)(s, a),
         onPopoutRequestClose: i.useCallback(
             () =>
                 a({
@@ -156,14 +156,14 @@ function X(e, t, n) {
 function Q(e) {
     let { children: t, className: n, compact: i } = e;
     return (0, r.jsx)("div", {
-        className: o()(V.footerContainer, n, { [V.compact]: i }),
+        className: o()(F.footerContainer, n, { [F.compact]: i }),
         children: t,
     });
 }
 function J(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
-        className: o()(V.annotationRow, n),
+        className: o()(F.annotationRow, n),
         children: t,
     });
 }
@@ -176,7 +176,7 @@ function $(e, t) {
                     {
                         size: "xs",
                         color: "currentColor",
-                        className: V.alertActionIcon,
+                        className: F.alertActionIcon,
                     },
                     t,
                 ),
@@ -188,7 +188,7 @@ function $(e, t) {
                     {
                         size: "xs",
                         color: "currentColor",
-                        className: o()(V.alertActionIcon, V.alertActionSetCompletedIcon),
+                        className: o()(F.alertActionIcon, F.alertActionSetCompletedIcon),
                     },
                     t,
                 ),
@@ -200,7 +200,7 @@ function $(e, t) {
                     {
                         size: "xs",
                         color: "currentColor",
-                        className: V.alertActionIcon,
+                        className: F.alertActionIcon,
                     },
                     t,
                 ),
@@ -257,7 +257,7 @@ function en(e) {
     let { alertActionsExecution: t, guildId: n } = e,
         i = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
     return (0, r.jsx)("div", {
-        className: V.alertActionsIconContainer,
+        className: F.alertActionsIconContainer,
         children: i.map((e) =>
             (0, r.jsx)(
                 et,
@@ -312,10 +312,10 @@ let er = i.memo(function (e) {
     }
     let E = () =>
         (0, r.jsx)("div", {
-            className: V.channelNameContainer,
+            className: F.channelNameContainer,
             children: (0, r.jsx)(R.Z, {
                 channel: a,
-                className: V.channelName,
+                className: F.channelName,
                 openChatWithoutConnecting: !0,
             }),
         });
@@ -323,7 +323,7 @@ let er = i.memo(function (e) {
         variant: "text-md/normal",
         color: "header-primary",
         tag: "span",
-        className: V.spanCorrection,
+        className: F.spanCorrection,
         children: (0, g.Mq)(n, a, E, _, t),
     });
 });
@@ -333,12 +333,12 @@ function ei(e) {
         {
             avatarSrc: v,
             eventHandlers: { onMouseEnter: T, onMouseLeave: S },
-        } = (0, j.m)(!0),
+        } = (0, M.m)(!0),
         A = (0, c.JA)(null != n ? n : ""),
         { onFocus: N } = A,
         R = K(A, ["onFocus"]),
-        { isFocused: D, handleFocus: L, handleBlur: k } = (0, x.bb)(N),
-        F = (0, d.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        { isFocused: D, handleFocus: x, handleBlur: k } = (0, L.bb)(N),
+        V = (0, d.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         Y = (0, d.e7)([I.Z], () => I.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]),
         {
             ruleName: z,
@@ -358,7 +358,7 @@ function ei(e) {
         ef = q(s, l),
         { selected: e_ } = ef,
         ep = K(ef, ["selected"]),
-        eh = e_ || (F && D),
+        eh = e_ || (V && D),
         em = (e) => {
             var t;
             null == (t = ep.onContextMenuModerateUser) || t.call(ep, e);
@@ -404,31 +404,31 @@ function ei(e) {
     return (0, r.jsx)("div", {
         onMouseEnter: T,
         onMouseLeave: S,
-        children: (0, r.jsx)(M.Z, {
-            className: o()(V.mainContainer, { [V.compact]: a }),
-            iconNode: a ? null : (0, r.jsx)(j.S, { src: v }),
-            iconContainerClassName: V.iconContainer,
+        children: (0, r.jsx)(j.Z, {
+            className: o()(F.mainContainer, { [F.compact]: a }),
+            iconNode: a ? null : (0, r.jsx)(M.S, { src: v }),
+            iconContainerClassName: F.iconContainer,
             compact: a,
             children: (0, r.jsxs)("div", {
-                className: o()(V.content, { [V.compact]: a }),
+                className: o()(F.content, { [F.compact]: a }),
                 children: [
                     (0, r.jsx)(w.nD, {
                         message: s,
-                        messageClassname: V.spanCorrection,
-                        className: o()(V.usernameContainer, V.spanCorrection, { [V.compact]: a }),
+                        messageClassname: F.spanCorrection,
+                        className: o()(F.usernameContainer, F.spanCorrection, { [F.compact]: a }),
                         username: (0, r.jsxs)("div", {
-                            className: V.spanCorrection,
+                            className: F.spanCorrection,
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
-                                    className: V.username,
+                                    className: F.username,
                                     children: Z.intl.string(Z.t.hG1StL),
                                 }),
                                 (0, r.jsx)(h.Z, {
                                     type: G.Hb.SYSTEM_DM,
-                                    className: V.systemTag,
+                                    className: F.systemTag,
                                 }),
                                 (0, r.jsx)(er, {
                                     message: s,
@@ -443,7 +443,7 @@ function ei(e) {
                         showTimestamp: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: o()(V.messageContent, { [V.compact]: a }),
+                        className: o()(F.messageContent, { [F.compact]: a }),
                         children: (0, r.jsx)(
                             P.Z,
                             W(H({}, R), {
@@ -453,15 +453,15 @@ function ei(e) {
                                 compact: a,
                                 withFooter: !0,
                                 hideTimestamp: !0,
-                                className: o()(V.embedCard, {
-                                    [V.compact]: a,
-                                    [V.selected]: eh,
-                                    [V.isClickable]: null != ea && null != X,
+                                className: o()(F.embedCard, {
+                                    [F.compact]: a,
+                                    [F.selected]: eh,
+                                    [F.isClickable]: null != ea && null != X,
                                 }),
                                 childrenAccessories: (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: V.centeredRowContainer,
+                                            className: F.centeredRowContainer,
                                             children: [
                                                 null != et &&
                                                     (0, r.jsxs)(r.Fragment, {
@@ -472,7 +472,7 @@ function ei(e) {
                                                                 tag: "span",
                                                                 children: Z.intl.format(Z.t.SYIUTU, { keyword: et }),
                                                             }),
-                                                            (0, r.jsx)("div", { className: o()(V.dot, V.dotMargin) }),
+                                                            (0, r.jsx)("div", { className: o()(F.dot, F.dotMargin) }),
                                                         ],
                                                     }),
                                                 null != z &&
@@ -485,12 +485,12 @@ function ei(e) {
                                                 null != eO &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)("div", { className: o()(V.dot, V.dotMargin) }),
+                                                            (0, r.jsx)("div", { className: o()(F.dot, F.dotMargin) }),
                                                             (0, r.jsx)(f.Text, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
                                                                 tag: "span",
-                                                                className: V.__invalid_footerText,
+                                                                className: F.__invalid_footerText,
                                                                 children: Z.intl.format(Z.t["3LYql5"], {
                                                                     duration: eO,
                                                                 }),
@@ -500,12 +500,12 @@ function ei(e) {
                                                 null != ec &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)("div", { className: o()(V.dot, V.dotMargin) }),
+                                                            (0, r.jsx)("div", { className: o()(F.dot, F.dotMargin) }),
                                                             (0, r.jsx)(f.Text, {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
                                                                 tag: "span",
-                                                                className: V.titleCase,
+                                                                className: F.titleCase,
                                                                 children: Z.intl.format(Z.t["26bB2N"], {
                                                                     reason: (0, g.hU)(ec),
                                                                 }),
@@ -528,7 +528,7 @@ function ei(e) {
                                 }),
                                 popoutProps: ep,
                                 zalgo: !0,
-                                onFocus: L,
+                                onFocus: x,
                                 onBlur: k,
                                 onClick: eE,
                             }),
@@ -537,15 +537,15 @@ function ei(e) {
                     (0, r.jsx)(Q, {
                         compact: a,
                         children: (0, r.jsxs)("div", {
-                            className: o()(V.centeredRowContainer, V.buttonContainer, { [V.compact]: a }),
+                            className: o()(F.centeredRowContainer, F.buttonContainer, { [F.compact]: a }),
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: V.footerAction,
+                                    className: F.footerAction,
                                     children: [
                                         (0, r.jsx)(f.b7C, {
                                             size: "xs",
                                             color: u.Z.BRAND,
-                                            className: V.footerIcon,
+                                            className: F.footerIcon,
                                         }),
                                         (0, r.jsx)(f.Avr, {
                                             variant: "primary",
@@ -559,9 +559,9 @@ function ei(e) {
                                 eS
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: V.dot }),
+                                              (0, r.jsx)("div", { className: F.dot }),
                                               (0, r.jsx)("div", {
-                                                  className: V.footerAction,
+                                                  className: F.footerAction,
                                                   children: (0, r.jsx)(f.Avr, {
                                                       onClick: () => eb(eT),
                                                       variant: "primary",
@@ -573,9 +573,9 @@ function ei(e) {
                                           ],
                                       })
                                     : null,
-                                (0, r.jsx)("div", { className: V.dot }),
+                                (0, r.jsx)("div", { className: F.dot }),
                                 (0, r.jsx)("div", {
-                                    className: V.footerAction,
+                                    className: F.footerAction,
                                     children: (0, r.jsx)(f.Avr, {
                                         onClick: eg,
                                         variant: "primary",
@@ -587,9 +587,9 @@ function ei(e) {
                                 eI
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)("div", { className: V.dot }),
+                                              (0, r.jsx)("div", { className: F.dot }),
                                               (0, r.jsx)("div", {
-                                                  className: V.footerAction,
+                                                  className: F.footerAction,
                                                   children: (0, r.jsx)(f.Avr, {
                                                       onClick: ey,
                                                       variant: "primary",

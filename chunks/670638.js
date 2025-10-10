@@ -1,4 +1,4 @@
-n.d(t, { r: () => j });
+n.d(t, { r: () => M });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function L(e) {
+function x(e) {
     var t;
     let n = (0, a.e7)([b.Z], () => b.Z.questDeliveryOverride, []),
         u = (0, m.GN)(e.questContent),
@@ -107,14 +107,14 @@ function L(e) {
         w = (0, E.ly)(e.quest),
         D = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
-            handleComplete: x,
-            handleProgress: L,
-            handleResetDismissibilityClick: j,
-            handleResetStatusClick: M,
+            handleComplete: L,
+            handleProgress: x,
+            handleResetDismissibilityClick: M,
+            handleResetStatusClick: j,
             handleOverrideDeliveryClick: k,
         } = (0, E.kJ)(e.quest.id),
         U = () => {
-            L(0.9 * Math.random() + 0.03);
+            x(0.9 * Math.random() + 0.03);
         },
         G = i.useCallback(() => {
             if (e.quest.id === T.V6) return void window.open(_.Z.getArticleURL(S.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
@@ -176,7 +176,7 @@ function L(e) {
         W = () => (0, g.CS)(e.quest.id, !0).catch(Y),
         K = () => (0, g.is)(e.quest.id).catch(Y),
         z = () => {
-            M(), K();
+            j(), K();
         },
         q = !1,
         X = i.useMemo(() => {
@@ -265,7 +265,7 @@ function L(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "dismiss",
                                 label: C.intl.string(C.t["JF6W6+"]),
-                                action: j,
+                                action: M,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
@@ -280,7 +280,7 @@ function L(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
                                 label: C.intl.string(C.t.jQEfRU),
-                                action: x,
+                                action: L,
                             }),
                             (0, m.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
@@ -324,7 +324,7 @@ function L(e) {
         ],
     });
 }
-function j(e) {
+function M(e) {
     let {
             children: t,
             onOpen: n,
@@ -366,7 +366,7 @@ function j(e) {
             return s
                 ? (0, r.jsx)(u.Z, {
                       children: (0, r.jsx)(
-                          L,
+                          x,
                           w(R({}, _), {
                               quest: l,
                               questContent: c,
@@ -377,7 +377,7 @@ function j(e) {
                       ),
                   })
                 : (0, r.jsx)(
-                      L,
+                      x,
                       w(R({}, _), {
                           quest: l,
                           questContent: c,

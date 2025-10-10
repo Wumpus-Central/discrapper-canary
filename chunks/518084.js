@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => Z,
-    wB: () => O,
+    wB: () => _,
 }),
     n(415506);
 var i,
@@ -12,8 +12,8 @@ var i,
     c = n.n(a),
     d = n(28664),
     u = n(755721),
-    h = n(481060),
-    p = n(981631),
+    p = n(481060),
+    h = n(981631),
     f = n(881266),
     g = n(149715);
 function m(e, t, n) {
@@ -29,14 +29,14 @@ function m(e, t, n) {
         e
     );
 }
-let y = p.t_t.DEFAULT,
-    O = 1,
-    b = s.createContext({
+let y = h.t_t.DEFAULT,
+    _ = 1,
+    O = s.createContext({
         type: y,
-        opacity: O,
+        opacity: _,
     }),
-    v = s.createContext(void 0),
-    _ = (e) => {
+    b = s.createContext(void 0),
+    v = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -59,10 +59,10 @@ let y = p.t_t.DEFAULT,
                 }
                 return r;
             })(e, ["children", "className"]);
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(O.Consumer, {
             children: (e) => {
                 let { type: s } = e;
-                return (0, r.jsx)(v.Consumer, {
+                return (0, r.jsx)(b.Consumer, {
                     children: (e) => {
                         var o, a;
                         return (0, r.jsx)(
@@ -112,9 +112,9 @@ let y = p.t_t.DEFAULT,
 class E extends (i = s.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(b.Consumer, {
             children: (i) =>
-                (0, r.jsx)(b.Consumer, {
+                (0, r.jsx)(O.Consumer, {
                     children: (s) => {
                         let o = l()(f.body, f[c()(s.type)], n);
                         return e
@@ -123,7 +123,7 @@ class E extends (i = s.PureComponent) {
                                   style: i,
                                   children: t,
                               })
-                            : (0, r.jsx)(h.Ttm, {
+                            : (0, r.jsx)(p.Ttm, {
                                   fade: !0,
                                   className: o,
                                   children: t,
@@ -135,8 +135,8 @@ class E extends (i = s.PureComponent) {
 }
 m(E, "defaultProps", { disableScroll: !1 });
 let x = (e) => {
-        let { type: t = y, width: n, height: i, children: s, className: o, opacity: a = O, onClick: d } = e;
-        return (0, r.jsx)(b.Provider, {
+        let { type: t = y, width: n, height: i, children: s, className: o, opacity: a = _, onClick: d } = e;
+        return (0, r.jsx)(O.Provider, {
             value: {
                 type: t,
                 opacity: a,
@@ -154,7 +154,7 @@ let x = (e) => {
     },
     S = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(b.Consumer, {
             children: (e) =>
                 (0, r.jsx)("div", {
                     className: l()(f.content, { [f.staticSize]: !i }, n),
@@ -166,15 +166,15 @@ let x = (e) => {
 (x.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [_, E, S];
-    return (0, r.jsx)(b.Consumer, {
+    let i = [v, E, S];
+    return (0, r.jsx)(O.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
                 l = { backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : o), ")") };
             if ("string" == typeof t.type) return s.cloneElement(t, { style: l });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(v.Provider, {
+                    return (0, r.jsx)(b.Provider, {
                         value: l,
                         children: t,
                     });
@@ -199,10 +199,10 @@ let x = (e) => {
             isActive: o,
             tooltipPosition: a = "top",
             size: c = 20,
-            isTutorial: h = !1,
+            isTutorial: p = !1,
         } = e;
         return (0, r.jsx)(d.u, {
-            __unsupportedReactNodeAsText: h
+            __unsupportedReactNodeAsText: p
                 ? (0, r.jsx)("div", {
                       className: f.tutorialTip,
                       children: i,
@@ -210,7 +210,7 @@ let x = (e) => {
                 : i,
             "aria-label": i,
             position: a,
-            forceOpen: h,
+            forceOpen: p,
             children: (0, r.jsx)(u.zx, {
                 buttonRef: t,
                 look: u.zx.Looks.BLANK,
@@ -229,5 +229,5 @@ let x = (e) => {
             }),
         });
     }),
-    (x.Bar = _);
+    (x.Bar = v);
 let Z = x;

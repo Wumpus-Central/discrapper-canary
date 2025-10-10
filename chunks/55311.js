@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
-var r = n(846027),
-    i = n(240872),
-    a = n(388032);
-function o(e, t) {
+r.d(t, { Z: () => l });
+var n = r(846027),
+    a = r(240872),
+    c = r(388032);
+function l(e, t) {
     if (e)
-        return void i.Z.show({
-            title: a.intl.string(a.t.QZ7WSU),
-            body: a.intl.string(a.t.Tl9JpK),
+        return void a.Z.show({
+            title: c.intl.string(c.t.QZ7WSU),
+            body: c.intl.string(c.t.Tl9JpK),
         });
-    r.Z.toggleSelfDeaf({ location: t });
+    n.Z.toggleSelfDeaf({ location: t });
 }

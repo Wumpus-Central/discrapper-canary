@@ -1,6 +1,6 @@
-n.d(t, { Z: () => _ });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { Z: () => C });
+var i = n(951288),
+    r = n(647438),
     l = n(112724),
     a = n(413458),
     o = n(351248),
@@ -14,85 +14,85 @@ var r = n(951288),
     m = n(981631),
     g = n(354459),
     b = n(394024);
-let _ = (0, l.Z)((e) => {
+let C = (0, l.Z)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: l,
-        participantsVersion: _,
+        participantsVersion: C,
         layout: y,
-        onSelectParticipant: C,
-        onContextMenuParticipant: x,
-        onFullscreenParticipant: v,
+        onSelectParticipant: _,
+        onContextMenuParticipant: v,
+        onFullscreenParticipant: x,
         channel: O,
         hasConnectPermission: j,
         className: E,
         inCall: S,
-        showParticipants: I = !0,
-        width: P,
+        showParticipants: P = !0,
+        width: I,
         height: Z,
         idle: T,
         mode: N,
         popoutWindow: A,
         awaitingRemoteSessionInfo: w,
-        callContainerDimensions: R,
+        callContainerDimensions: M,
     } = e;
-    i.useEffect(() => {
+    r.useEffect(() => {
         c.S.dispatch(m.CkL.REMEASURE_TARGET);
-    }, [P, Z, R.width, R.height]);
-    let M = i.useMemo(
+    }, [I, Z, M.width, M.height]);
+    let R = r.useMemo(
         () => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, a.J)(e))),
-        [n, _],
+        [n, C],
     );
     return (null == w ? void 0 : w.channelId) === O.id
-        ? (0, r.jsx)(d.Z, { height: Z })
+        ? (0, i.jsx)(d.Z, { height: Z })
         : (null == O ? void 0 : O.isGuildVocal()) && !S
-          ? (0, r.jsx)(u.Z, {
+          ? (0, i.jsx)(u.Z, {
                 channel: O,
                 participants: t,
                 hasConnectPermission: j,
             })
           : N === m.WtW.VOICE
-            ? (0, r.jsx)(o.Z, {
+            ? (0, i.jsx)(o.Z, {
                   guildId: O.guild_id,
-                  width: P,
+                  width: I,
                   className: b.voiceCallWrapper,
                   participants: t,
-                  onContextMenu: x,
+                  onContextMenu: v,
               })
             : ((n = S ? n : t), null == l)
               ? 0 === n.length
-                  ? (0, r.jsx)(f.Z, { channelId: O.id })
-                  : (0, r.jsx)(s.Z, {
+                  ? (0, i.jsx)(f.Z, { channelId: O.id })
+                  : (0, i.jsx)(s.Z, {
                         className: b.videoGridWrapper,
                         justify: s.Z.Justify.CENTER,
                         align: s.Z.Align.CENTER,
-                        children: (0, r.jsx)(p.Z, {
+                        children: (0, i.jsx)(p.Z, {
                             channel: O,
                             className: b.videoGrid,
-                            participants: M,
+                            participants: R,
                             totalNumberOfParticipants: t.length,
-                            onClick: C,
-                            onDoubleClick: v,
-                            onContextMenu: x,
+                            onClick: _,
+                            onDoubleClick: x,
+                            onContextMenu: v,
                             inCall: S,
                         }),
                     })
-              : (0, r.jsx)(h.Z, {
-                    onFullscreenParticipant: v,
-                    onContextMenuParticipant: x,
-                    onSelectParticipant: C,
+              : (0, i.jsx)(h.Z, {
+                    onFullscreenParticipant: x,
+                    onContextMenuParticipant: v,
+                    onSelectParticipant: _,
                     selectedParticipant: l,
-                    filteredParticipants: M,
+                    filteredParticipants: R,
                     participants: t,
                     popoutWindow: A,
                     className: E,
                     idle: T,
                     height: Z,
-                    width: P,
+                    width: I,
                     layout: y,
                     inCall: S,
                     channel: O,
-                    showParticipants: I,
+                    showParticipants: P,
                 });
 });

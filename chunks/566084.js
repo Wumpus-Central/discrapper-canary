@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r,
     i,
     l = n(442837),
@@ -8,7 +8,7 @@ let a = null,
     c = null,
     d = null,
     u = !1;
-class m extends (i = l.ZP.Store) {
+class g extends (i = l.ZP.Store) {
     hasChanges() {
         return a !== c;
     }
@@ -34,15 +34,15 @@ class m extends (i = l.ZP.Store) {
         return u;
     }
 }
-(r = "displayName") in m
-    ? Object.defineProperty(m, r, {
+(r = "displayName") in g
+    ? Object.defineProperty(g, r, {
           value: "GuildSettingsVanityURLStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (m[r] = "GuildSettingsVanityURLStore");
-let g = new m(s.Z, {
+    : (g[r] = "GuildSettingsVanityURLStore");
+let m = new g(s.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
         (c = a = null != (t = e.code) ? t : ""), (o = e.uses), (d = null != (n = e.error) ? n : null), (u = !0);

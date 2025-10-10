@@ -1,8 +1,8 @@
 t.d(n, { Z: () => _ });
 var i = t(951288);
 t(647438);
-var r = t(120356),
-    a = t.n(r),
+var a = t(120356),
+    r = t.n(a),
     l = t(481060),
     o = t(709054),
     c = t(7697),
@@ -13,13 +13,13 @@ function _(e) {
     let {
             guildId: n,
             recurrenceRule: t,
-            guildEventId: r,
+            guildEventId: a,
             onRecurrenceClick: _,
-            hideScroller: b = !1,
-            activeRecurrenceId: p,
+            hideScroller: p = !1,
+            activeRecurrenceId: b,
         } = e,
-        { recurrenceStartTimes: h, canViewMoreRecurrences: f, updateRecurrenceStartTimes: g } = (0, c.Z)(r, n, t),
-        m = b ? "div" : l.Ttm;
+        { recurrenceStartTimes: g, canViewMoreRecurrences: h, updateRecurrenceStartTimes: m } = (0, c.Z)(a, n, t),
+        f = p ? "div" : l.Ttm;
     return (0, i.jsxs)("div", {
         className: u.recurrences,
         children: [
@@ -28,29 +28,29 @@ function _(e) {
                 className: u.heading,
                 children: d.intl.string(d.t["D/jjoa"]),
             }),
-            (0, i.jsxs)(m, {
-                className: a()(u.scroller, { [u.showScroller]: !b }),
+            (0, i.jsxs)(f, {
+                className: r()(u.scroller, { [u.showScroller]: !p }),
                 children: [
-                    h.map((e) => {
+                    g.map((e) => {
                         let n = o.default.fromTimestamp(e.getTime());
                         return (0, i.jsx)(
                             s.Z,
                             {
                                 recurrenceId: n,
                                 originalScheduledStartTime: e,
-                                guildEventId: r,
+                                guildEventId: a,
                                 onClick: _,
-                                isActive: n === p,
+                                isActive: n === b,
                             },
                             n,
                         );
                     }),
-                    f &&
+                    h &&
                         (0, i.jsx)("div", {
                             className: u.buttonContainer,
                             children: (0, i.jsx)(l.Avr, {
                                 onClick: (e) => {
-                                    e.stopPropagation(), g();
+                                    e.stopPropagation(), m();
                                 },
                                 text: d.intl.string(d.t["8O7Hp6"]),
                                 size: "sm",

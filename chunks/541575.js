@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(518738),
     d = n(26323),
     u = n(84058),
-    m = n(981631),
-    g = n(30513),
+    g = n(981631),
+    m = n(30513),
     p = n(388032),
     f = n(155470);
 function h(e) {
@@ -58,37 +58,37 @@ function x(e, t) {
 }
 let b = function (e) {
     let { guild: t, disabled: b, role: j } = e,
-        v = (0, c.oC)(t.id, j),
-        { analyticsLocations: _ } = (0, s.ZP)(),
-        O = t.features.has(m.oNc.ROLE_ICONS),
-        y = (e) => {
-            O ||
-                ((0, l.yw)(m.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: x(h({}, e), { section: m.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+        _ = (0, c.oC)(t.id, j),
+        { analyticsLocations: v } = (0, s.ZP)(),
+        C = t.features.has(g.oNc.ROLE_ICONS),
+        O = (e) => {
+            C ||
+                ((0, l.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    location: x(h({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: _,
+                    location_stack: v,
                 }),
                 (0, d.Z)({
-                    analyticsLocations: _,
+                    analyticsLocations: v,
                     analyticsSourceLocation: {
-                        page: m.ZY5.GUILD_SETTINGS,
-                        section: m.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
-                        object: m.qAy.BADGE,
+                        page: g.ZY5.GUILD_SETTINGS,
+                        section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
+                        object: g.qAy.BADGE,
                     },
                     guild: t,
-                    perks: (0, g.Yp)(),
+                    perks: (0, m.Yp)(),
                 }));
         },
-        C = (0, r.jsx)(o.Z, {
+        y = (0, r.jsx)(o.Z, {
             className: f.availabilityIndicator,
             guild: t,
-            guildFeature: m.oNc.ROLE_ICONS,
+            guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: "top",
-            hideTooltip: O,
+            hideTooltip: C,
             onClick: () =>
-                y({
-                    object: m.qAy.LEARN_MORE,
-                    objectType: m.Qqv.TIER_2,
+                O({
+                    object: g.qAy.LEARN_MORE,
+                    objectType: g.Qqv.TIER_2,
                 }),
         });
     return (0, r.jsxs)("div", {
@@ -96,7 +96,7 @@ let b = function (e) {
         children: [
             (0, r.jsxs)(i.vwX, {
                 className: f.formTitle,
-                children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJy) }), C],
+                children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJy) }), y],
             }),
             (0, r.jsx)(i.R94, {
                 className: f.description,
@@ -108,10 +108,10 @@ let b = function (e) {
                     (0, r.jsx)("div", {
                         className: f.previewContainer,
                         children:
-                            null != v
+                            null != _
                                 ? (0, r.jsx)(
                                       a.Z,
-                                      x(h({}, v), {
+                                      x(h({}, _), {
                                           className: f.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
@@ -126,7 +126,7 @@ let b = function (e) {
                     }),
                     (0, r.jsx)(i.zxk, {
                         onClick: () =>
-                            t.features.has(m.oNc.ROLE_ICONS)
+                            t.features.has(g.oNc.ROLE_ICONS)
                                 ? void (0, i.ZDy)(async () => {
                                       let { default: e } = await n.e("22942").then(n.bind(n, 660727));
                                       return (n) =>
@@ -139,12 +139,12 @@ let b = function (e) {
                                               }),
                                           );
                                   })
-                                : y({ object: m.qAy.UPLOAD_IMAGE }),
+                                : O({ object: g.qAy.UPLOAD_IMAGE }),
                         variant: "primary",
                         disabled: b,
                         text: p.intl.string(p.t.mD1oGB),
                     }),
-                    null != v
+                    null != _
                         ? (0, r.jsx)(i.zxk, {
                               onClick: () => {
                                   (0, u._l)(j.id, null, null);

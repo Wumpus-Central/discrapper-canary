@@ -28,8 +28,8 @@ var i = t(120356),
     Z = t(981631),
     O = t(856651),
     N = t(49898),
-    T = t(388032),
-    P = t(455392);
+    P = t(388032),
+    T = t(455392);
 function A(e) {
     var n, t;
     let i,
@@ -48,7 +48,7 @@ function A(e) {
     let C = null != (t = v.metadata) ? t : {},
         _ = E ? (0, f.FI)(C[O.PC.CREATED_AT], I) : null,
         w = (0, c.dQu)(o.Z.unsafe_rawColors.TWITTER).hex(),
-        D = T.intl.string(T.t["6H6h1t"]);
+        D = P.intl.string(P.t["6H6h1t"]);
     if (E)
         switch (v.type) {
             case Z.ABu.REDDIT:
@@ -60,7 +60,7 @@ function A(e) {
             case Z.ABu.BLUESKY:
             case Z.ABu.MASTODON:
             case Z.ABu.TWITTER:
-                (i = (0, h.rJ)(C)), "1" === C[O.PC.TWITTER_VERIFIED] && ((d = w), (D = T.intl.string(T.t.Jebrw8)));
+                (i = (0, h.rJ)(C)), "1" === C[O.PC.TWITTER_VERIFIED] && ((d = w), (D = P.intl.string(P.t.Jebrw8)));
                 break;
             case Z.ABu.PAYPAL:
                 i = (0, h.li)(C);
@@ -77,15 +77,15 @@ function A(e) {
         ? (j = (0, l.jsx)(c.kZF, {
               size: "md",
               color: "currentColor",
-              className: r()(P.__invalid_connectedAccountOpenIconContainer, P.connectedAccountHideIcon),
+              className: r()(T.__invalid_connectedAccountOpenIconContainer, T.connectedAccountHideIcon),
           }))
         : null != L &&
           (j = (0, l.jsx)(c.eee, {
               href: L,
               "aria-label":
                   (null == R ? void 0 : R.name) != null
-                      ? "".concat(R.name, ", ").concat(v.name, ", ").concat(T.intl.string(T.t.q5jLJC))
-                      : "".concat(v.name, ", ").concat(T.intl.string(T.t.q5jLJC)),
+                      ? "".concat(R.name, ", ").concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJC))
+                      : "".concat(v.name, ", ").concat(P.intl.string(P.t.q5jLJC)),
               onClick: (e) => {
                   var n;
                   (n = v.type),
@@ -102,7 +102,7 @@ function A(e) {
                       );
               },
               children: (0, l.jsx)(b.Z, {
-                  className: P.connectedAccountOpenIcon,
+                  className: T.connectedAccountOpenIcon,
                   direction: b.Z.Directions.RIGHT,
               }),
           }));
@@ -110,7 +110,7 @@ function A(e) {
         U = (0, c.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
         k = v.verified
             ? (0, l.jsx)(x.Z, {
-                  className: P.connectedAccountVerifiedIcon,
+                  className: T.connectedAccountVerifiedIcon,
                   color: null != d ? d : M,
                   forcedIconColor: U,
                   size: 16,
@@ -119,19 +119,19 @@ function A(e) {
             : null;
     return (0, l.jsxs)("li", {
         className: r()(
-            P.connectedAccountContainer,
-            (null != i && i.length > 0) || null != _ ? P.connectedAccountContainerWithMetadata : null,
+            T.connectedAccountContainer,
+            (null != i && i.length > 0) || null != _ ? T.connectedAccountContainerWithMetadata : null,
             A,
         ),
         children: [
             (0, l.jsxs)("div", {
-                className: P.connectedAccount,
+                className: T.connectedAccount,
                 children: [
                     (0, l.jsx)(s.u, {
                         __unsupportedReactNodeAsText: null == R ? void 0 : R.name,
                         children: (0, l.jsx)("img", {
-                            alt: T.intl.formatToPlainString(T.t.rtm15O, { name: null == R ? void 0 : R.name }),
-                            className: P.connectedAccountIcon,
+                            alt: P.intl.formatToPlainString(P.t.rtm15O, { name: null == R ? void 0 : R.name }),
+                            className: T.connectedAccountIcon,
                             src: (0, a.wj)(g)
                                 ? null == R
                                     ? void 0
@@ -142,13 +142,13 @@ function A(e) {
                         }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: P.connectedAccountNameContainer,
+                        className: T.connectedAccountNameContainer,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: P.connectedAccountName,
+                                className: T.connectedAccountName,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: P.connectedAccountNameTextContainer,
+                                        className: T.connectedAccountNameTextContainer,
                                         children: [
                                             (0, l.jsx)(s.u, {
                                                 overflowOnly: !0,
@@ -156,7 +156,7 @@ function A(e) {
                                                 children: (0, l.jsx)(c.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "interactive-active",
-                                                    className: P.connectedAccountNameText,
+                                                    className: T.connectedAccountNameText,
                                                     children: v.name,
                                                 }),
                                             }),
@@ -170,7 +170,7 @@ function A(e) {
                                 ? (0, l.jsx)(c.Text, {
                                       variant: "text-xs/normal",
                                       color: "header-secondary",
-                                      children: T.intl.format(T.t["9rfonp"], { date: _ }),
+                                      children: P.intl.format(P.t["9rfonp"], { date: _ }),
                                   })
                                 : null,
                         ],
@@ -179,7 +179,7 @@ function A(e) {
             }),
             null != i && i.length > 0
                 ? (0, l.jsx)("div", {
-                      className: P.connectedAccountChildren,
+                      className: T.connectedAccountChildren,
                       children: i,
                   })
                 : null,
@@ -202,15 +202,15 @@ function E(e) {
         };
     return (0, l.jsxs)("li", {
         className: r()(
-            P.connectedAccountContainer,
-            null != a && a.length > 0 ? P.connectedAccountContainerWithMetadata : null,
+            T.connectedAccountContainer,
+            null != a && a.length > 0 ? T.connectedAccountContainerWithMetadata : null,
             t,
         ),
         children: [
             (0, l.jsx)("div", {
-                className: P.connectedAccount,
+                className: T.connectedAccount,
                 children: (0, l.jsxs)(c.P3F, {
-                    className: r()(P.connectedAccountNameContainer, P.connectedAccountNameContainerClickable),
+                    className: r()(T.connectedAccountNameContainer, T.connectedAccountNameContainerClickable),
                     onClick: u,
                     children: [
                         null != n.platform_name
@@ -222,13 +222,13 @@ function E(e) {
                             : null,
                         null != n.platform_username
                             ? (0, l.jsx)("div", {
-                                  className: P.connectedAccountName,
+                                  className: T.connectedAccountName,
                                   children: (0, l.jsx)("div", {
-                                      className: P.connectedAccountNameTextContainer,
+                                      className: T.connectedAccountNameTextContainer,
                                       children: (0, l.jsx)(c.Text, {
                                           variant: "text-sm/medium",
                                           color: "interactive-active",
-                                          className: P.connectedAccountNameText,
+                                          className: T.connectedAccountNameText,
                                           children: n.platform_username,
                                       }),
                                   }),
@@ -239,21 +239,21 @@ function E(e) {
             }),
             null != a && a.length > 0
                 ? (0, l.jsx)("div", {
-                      className: r()(P.connectedAccountChildren, P.connectedAccountChildrenNoIcon),
+                      className: r()(T.connectedAccountChildren, T.connectedAccountChildrenNoIcon),
                       children: a,
                   })
                 : null,
             (0, l.jsx)("div", {
                 children: (0, l.jsx)(c.P3F, {
-                    className: P.connectedAccountPoweredBy,
+                    className: T.connectedAccountPoweredBy,
                     onClick: u,
                     children: (0, l.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: T.intl.format(T.t.zIT9YG, {
+                        children: P.intl.format(P.t.zIT9YG, {
                             applicationHook: () =>
                                 (0, l.jsxs)("div", {
-                                    className: P.connectedAccountPoweredByText,
+                                    className: T.connectedAccountPoweredByText,
                                     children: [
                                         null != n.application.bot
                                             ? (0, l.jsx)(d.Z, {
@@ -298,14 +298,14 @@ function S(e) {
         e % 2 == 0 ? c.push(n) : d.push(n);
     }
     return (0, l.jsxs)("ul", {
-        className: r()(P.connectedAccounts, i),
+        className: r()(T.connectedAccounts, i),
         children: [
             (0, l.jsx)("div", {
-                className: P.connectedAccountsColumn,
+                className: T.connectedAccountsColumn,
                 children: c,
             }),
             (0, l.jsx)("div", {
-                className: P.connectedAccountsColumn,
+                className: T.connectedAccountsColumn,
                 children: d,
             }),
         ],

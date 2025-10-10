@@ -3,32 +3,32 @@ var r = n(951288);
 n(647438);
 var i = n(990547),
     l = n(481060),
-    o = n(213609),
-    s = n(388905),
-    a = n(760213),
+    s = n(213609),
+    a = n(388905),
+    o = n(760213),
     c = n(388032),
     u = n(307847);
 function d(e) {
     let { onDismiss: t } = e;
     return (
-        (0, o.Z)({
+        (0, s.Z)({
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
-        (0, r.jsxs)(s.ZP, {
+        (0, r.jsxs)(a.ZP, {
             className: u.chooseAccountAuthBox,
             children: [
-                (0, r.jsx)(s.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
+                (0, r.jsx)(a.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
                 (0, r.jsx)(l.Text, {
                     className: u.chooseAccountHelpText,
                     variant: "text-md/normal",
                     color: "header-secondary",
                     children: c.intl.string(c.t["0M5fNz"]),
                 }),
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(o.Z, {
                     actionText: c.intl.string(c.t["DSN+h4"]),
                     onAction: (e) => {
-                        e === a.W.LOGIN_REQUIRED && t();
+                        e === o.W.LOGIN_REQUIRED && t();
                     },
                 }),
                 (0, r.jsx)("div", {

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u });
-var r = n(951288),
-    i = n(755721),
+var i = n(951288),
+    r = n(755721),
     l = n(481060),
     a = n(475179),
     o = n(841397),
@@ -8,20 +8,20 @@ var r = n(951288),
     c = n(427538);
 function u(e) {
     let { channelId: t } = e;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: c.container,
         children: [
-            (0, r.jsx)(o.Z, {}),
-            (0, r.jsxs)("div", {
+            (0, i.jsx)(o.Z, {}),
+            (0, i.jsxs)("div", {
                 className: c.content,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, i.jsx)(l.X6q, {
                         variant: "heading-lg/normal",
                         children: s.intl.format(s.t.ilLVLi, {}),
                     }),
-                    (0, r.jsx)(i.zx, {
-                        size: i.zx.Sizes.LARGE,
-                        color: i.zx.Colors.PRIMARY,
+                    (0, i.jsx)(r.zx, {
+                        size: r.zx.Sizes.LARGE,
+                        color: r.zx.Colors.PRIMARY,
                         onClick: (e) => {
                             e.stopPropagation(), a.Z.toggleVoiceParticipantsHidden(t, !1);
                         },

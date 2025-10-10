@@ -1,29 +1,29 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(481060),
-    a = n(740492),
-    o = n(27584),
-    s = n(295510),
-    c = n(394059),
+var l = n(442837),
+    i = n(481060),
+    o = n(740492),
+    c = n(27584),
+    a = n(295510),
+    s = n(394059),
     u = n(65154),
     d = n(388032);
-function p(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Yn.DEFAULT,
-        [n, p, h] = (0, o.Z)(e, t),
-        f = (0, i.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+        [n, f, p] = (0, c.Z)(e, t),
+        b = (0, l.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, r.jsx)(l.S89, {
+        ? (0, r.jsx)(i.S89, {
               id: "self-video-hide",
               label: d.intl.string(d.t.MH8ESU),
-              checked: !p,
+              checked: !f,
               action: () => {
-                  if (f || p) return h(!p);
-                  (0, l.h7j)((e) => {
+                  if (b || f) return p(!f);
+                  (0, i.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          s.Z,
+                          a.Z,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -51,8 +51,8 @@ function p(e) {
                           })({}, e)),
                           (n = n =
                               {
-                                  type: c.K.VIDEO,
-                                  onConfirm: () => h(!p),
+                                  type: s.K.VIDEO,
+                                  onConfirm: () => p(!f),
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

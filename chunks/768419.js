@@ -39,7 +39,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,25 +67,25 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let M = h.Z.get(w.ABu.SPOTIFY),
+let j = h.Z.get(w.ABu.SPOTIFY),
     k = "wss://dealer.spotify.com/?access_token=",
     U = "hm://pusher/v1/connections/",
     G = 30 * C.Z.Millis.SECOND,
     B = 30 * C.Z.Millis.SECOND,
     Z = 100,
-    V = 5 * C.Z.Millis.MINUTE,
-    F = 5 * C.Z.Millis.SECOND,
+    F = 5 * C.Z.Millis.MINUTE,
+    V = 5 * C.Z.Millis.SECOND,
     H = 1.5 * C.Z.Millis.SECOND,
     Y = "Computer",
     W = 5,
@@ -370,15 +370,15 @@ function eT(e) {
             .values(es)
             .find((e) => null != e)),
         eD(b.default.getId()),
-        null == o || E ? er.stop() : er.start(o.duration - s + F, () => ef(p.id)),
+        null == o || E ? er.stop() : er.start(o.duration - s + V, () => ef(p.id)),
         null != i && ((!n && s > 0) || null == c || (null != g && i.trackId !== g.track.id))
             ? ($.info(
                   "Listen along active but playback stopped or track changed. Stopping listen along in ".concat(
-                      F,
+                      V,
                       "ms",
                   ),
               ),
-              ei.start(F, () => {
+              ei.start(V, () => {
                   $.info("Stopping listening along"), (0, m.Z)(), ef(p.id);
               }))
             : ei.isStarted() && ($.info("Listen along stop cancelled as playback of track resumed"), ei.stop()),
@@ -449,7 +449,7 @@ function eP() {
         t = e_(e);
     if (null == t)
         return (
-            en.start(V, () => {
+            en.start(F, () => {
                 null != i && i.userId === e && (0, m.Z)();
             }),
             !1
@@ -482,29 +482,29 @@ function eD(e) {
     }
     return !1;
 }
-function ex(e) {
+function eL(e) {
     let { userId: t } = e;
     return eD(t);
 }
-function eL(e) {
+function ex(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n } = t;
         return eD(n) || e;
     }, !1);
 }
-function ej(e) {
+function eM(e) {
     let { accountId: t, isPremium: n } = e,
         r = ea[t];
     if (null == r) return !1;
     (r.isPremium = n), $.info("Profile updated for ".concat(t, ": isPremium = ").concat(n));
 }
-function eM(e) {
+function ej(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == ec || ec.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === M.name && n
+        null != e && E.ZP.getObservedAppNameForWindow(e) === j.name && n
             ? (ec = new f.Xp()).start(B, ew)
             : (null == ec || ec.stop(), (ec = null));
     } else null == t && (null == ec || ec.stop(), (ec = null));
@@ -549,7 +549,7 @@ function ek(e, t, n) {
                 isLocal: !1,
             });
     if (
-        (null != y && !0 !== y.is_active && (y = j(x({}, y), { is_active: !0 })),
+        (null != y && !0 !== y.is_active && (y = M(L({}, y), { is_active: !0 })),
         null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))
     ) {
         let n = eB.getPlayerState(e);
@@ -677,7 +677,7 @@ class eG extends (o = u.ZP.Store) {
                 button_urls: [],
             },
             y = {
-                name: M.name,
+                name: j.name,
                 assets: h,
                 details: g,
                 state: e,
@@ -696,7 +696,7 @@ let eB = new eG(_.Z, {
         CONNECTION_OPEN: eO,
         SPOTIFY_ACCOUNT_ACCESS_TOKEN: ev,
         SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: eI,
-        SPOTIFY_PROFILE_UPDATE: ej,
+        SPOTIFY_PROFILE_UPDATE: eM,
         SPOTIFY_PLAYER_STATE: eT,
         SPOTIFY_PLAYER_PLAY: eS,
         ACTIVITY_PLAY: eN,
@@ -704,8 +704,8 @@ let eB = new eG(_.Z, {
         ACTIVITY_SYNC_STOP: ey,
         SPOTIFY_SET_DEVICES: eA,
         SPOTIFY_SET_ACTIVE_DEVICE: eC,
-        SPEAKING: ex,
-        VOICE_STATE_UPDATES: eL,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eM,
+        SPEAKING: eL,
+        VOICE_STATE_UPDATES: ex,
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ej,
     }),
     eZ = eB;

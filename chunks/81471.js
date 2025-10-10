@@ -22,8 +22,8 @@ var r = n(951288),
 let I = i.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: I } = (0, b.a)(t),
-        C = (0, u.p)(),
-        { isBlocked: S, isIgnored: N } = (0, o.cj)(
+        S = (0, u.p)(),
+        { isBlocked: C, isIgnored: T } = (0, o.cj)(
             [m.Z],
             () => ({
                 isBlocked: null != I && m.Z.isBlockedForMessage(I),
@@ -31,18 +31,18 @@ let I = i.memo(function (e) {
             }),
             [I],
         ),
-        T = (0, o.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
-        P = h.cC.useSetting(),
-        { content: j } = i.useMemo(
+        N = (0, o.e7)([g.Z], () => g.Z.can(_.Plq.MANAGE_MESSAGES, t)),
+        j = h.cC.useSetting(),
+        { content: P } = i.useMemo(
             () =>
                 (null == I ? void 0 : I.content) != null && "" !== I.content
                     ? (0, p.ZP)(I, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: C,
+                          shouldFilterKeywords: S,
                       })
                     : { content: null },
-            [I, C],
+            [I, S],
         ),
         x = null;
     if (l)
@@ -53,14 +53,14 @@ let I = i.memo(function (e) {
             children: E.intl.string(E.t.BZHld3),
         });
     else if (n)
-        if (null != I && S)
+        if (null != I && C)
             x = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: E.intl.string(E.t["WPe+xM"]),
             });
-        else if (null != I && N)
+        else if (null != I && T)
             x = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: "text-sm/normal",
@@ -70,9 +70,9 @@ let I = i.memo(function (e) {
         else if (null != I) {
             let { contentPlaceholder: e, renderedContent: t } = (0, f.f)(
                 I,
-                j,
-                S,
-                N,
+                P,
+                C,
+                T,
                 a()(y.messageContent, v.inlineFormat),
                 {
                     leadingIconClass: y.messageContentIcon,
@@ -104,7 +104,7 @@ let I = i.memo(function (e) {
             });
     else x = null;
     return (0, r.jsx)(c.aQ.Provider, {
-        value: (0, d.Z)(P, T),
+        value: (0, d.Z)(j, N),
         children: (0, r.jsx)(s.Rny, {
             className: y.messageFocusBlock,
             children: x,

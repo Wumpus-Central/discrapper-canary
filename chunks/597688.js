@@ -39,16 +39,16 @@ let m = new Map(),
     P = new Map(),
     w = new Map(),
     D = {},
-    x = 0,
-    L = (e) => {
+    L = 0,
+    x = (e) => {
         let { skuId: t } = e;
         (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
-    j = (e) => {
+    M = (e) => {
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
-    M = (e) => {
+    j = (e) => {
         let { skuId: t, product: n } = e;
         v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
@@ -77,15 +77,15 @@ let m = new Map(),
                 (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
                 (T = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
-        F(e, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        V(e, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
-    V = (e) => {
+    F = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
         (S = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))),
             (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
-    F = (e, t) => {
+    V = (e, t) => {
         if (0 === e.length) {
             A = y;
             return;
@@ -112,7 +112,7 @@ let m = new Map(),
             (r = void 0),
             (a = void 0),
             (D = {}),
-            (x = 0);
+            (L = 0);
     },
     Y = () => {
         if (!u.Z.hasLoadedExperiments) return;
@@ -123,7 +123,7 @@ let m = new Map(),
         e !== C && (i = void 0), (C = e);
     },
     W = (e) => {
-        x = e.skipNumCategories;
+        L = e.skipNumCategories;
     };
 class K extends (o = l.ZP.Store) {
     initialize() {
@@ -160,7 +160,7 @@ class K extends (o = l.ZP.Store) {
         return A;
     }
     get skipNumCategories() {
-        return x;
+        return L;
     }
     getCategory(e) {
         return null != e ? O.get(e) : void 0;
@@ -194,10 +194,10 @@ let z = new K(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
     COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: B,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
-    COLLECTIBLES_PRODUCT_FETCH: L,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: M,
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: j,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: V,
+    COLLECTIBLES_PRODUCT_FETCH: x,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: j,
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: F,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: W,
     LOGOUT: H,
 });

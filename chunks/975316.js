@@ -20,8 +20,8 @@ function u(e) {
             sectionId: u,
             webhooks: h,
             editedWebhook: g,
-            isFetching: m,
-            errors: p,
+            isFetching: p,
+            errors: m,
         } = (0, l.cj)([o.Z], () => o.Z.getProps(), []);
     return null == r || null == n
         ? null
@@ -32,9 +32,9 @@ function u(e) {
               sectionId: u,
               webhooks: h,
               editedWebhook: g,
-              isFetchingWebhooks: m,
+              isFetchingWebhooks: p,
               hasChanges: o.Z.hasChanges,
-              errors: p,
+              errors: m,
               refToScroller: t,
           });
 }

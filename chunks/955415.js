@@ -253,7 +253,7 @@ let C = (e) => {
                   ],
               });
     },
-    x = (e) => {
+    L = (e) => {
         var { children: t, onClick: n, className: i, isDisabled: a } = e,
             l = S(e, ["children", "onClick", "className", "isDisabled"]);
         return (0, r.jsx)(
@@ -267,13 +267,13 @@ let C = (e) => {
             }),
         );
     };
-(x.Colors = s.zx.Colors),
-    (x.Looks = s.zx.Looks),
-    (x.defaultProps = {
+(L.Colors = s.zx.Colors),
+    (L.Looks = s.zx.Looks),
+    (L.defaultProps = {
         className: null,
         isDisabled: !1,
     });
-let L = (e) => {
+let x = (e) => {
         let { children: t, className: n, containerRef: i } = e;
         return (0, r.jsx)("div", {
             ref: i,
@@ -281,7 +281,7 @@ let L = (e) => {
             children: t,
         });
     },
-    j = (e) => {
+    M = (e) => {
         let { guild: t } = e,
             [n, a] = i.useState(!1),
             s = g.ZP.getGuildSplashURL({
@@ -301,7 +301,7 @@ let L = (e) => {
                   }),
               });
     },
-    M = (e) => {
+    j = (e) => {
         let { guild: t, ref: n } = e;
         return (0, r.jsx)("div", {
             className: y.guildNameWrapper,
@@ -322,24 +322,24 @@ let L = (e) => {
             }),
         });
     };
-(L.Header = C),
-    (L.Body = N),
-    (L.Icon = R),
-    (L.Info = P),
-    (L.Data = w),
-    (L.Channel = D),
-    (L.Button = x),
-    (L.GuildSplash = j),
-    (L.GuildName = M),
-    (L.GuildTemplateName = k),
+(x.Header = C),
+    (x.Body = N),
+    (x.Icon = R),
+    (x.Info = P),
+    (x.Data = w),
+    (x.Channel = D),
+    (x.Button = L),
+    (x.GuildSplash = M),
+    (x.GuildName = j),
+    (x.GuildTemplateName = k),
     (C.displayName = "InviteButton.Header"),
     (N.displayName = "InviteButton.Body"),
     (R.displayName = "InviteButton.Icon"),
     (P.displayName = "InviteButton.Info"),
     (w.displayName = "InviteButton.Data"),
     (D.displayName = "InviteButton.Channel"),
-    (x.displayName = "InviteButton.Button"),
-    (j.displayName = "InviteButton.GuildSplash"),
-    (M.displayName = "InviteButton.GuildName"),
+    (L.displayName = "InviteButton.Button"),
+    (M.displayName = "InviteButton.GuildSplash"),
+    (j.displayName = "InviteButton.GuildName"),
     (k.displayName = "InviteButton.GuildTemplateName");
-let U = L;
+let U = x;

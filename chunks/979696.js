@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u });
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     l = n(570140);
 function a(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function a(e, t, n) {
 }
 let o = { toastsEnabledForChannel: {} },
     s = o;
-class c extends (r = i.ZP.PersistedStore) {
+class c extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         s = null != e ? e : o;
     }

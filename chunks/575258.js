@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => h }), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
-    a = n(430824),
-    s = n(981631);
+    s = n(430824),
+    a = n(981631);
 function o(e, t, n) {
     return (
         t in e
@@ -24,53 +24,53 @@ let c = {
     },
     d = c,
     u = !1,
-    m = !1,
-    g = c;
+    g = !1,
+    m = c;
 function p(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        r = a.Z.getGuild(n);
+        r = s.Z.getGuild(n);
     if (null != t) {
         var i, l;
-        g = d = {
+        m = d = {
             description: null != (i = t.description) ? i : "",
             channels: null != (l = t.welcome_channels) ? l : [],
-            enabled: null == r ? void 0 : r.features.has(s.oNc.WELCOME_SCREEN_ENABLED),
+            enabled: null == r ? void 0 : r.features.has(a.oNc.WELCOME_SCREEN_ENABLED),
         };
-    } else g = d = c;
-    m = !1;
+    } else m = d = c;
+    g = !1;
 }
-class h extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(s.Z);
     }
     get() {
-        return g;
+        return m;
     }
     showNotice() {
-        return m;
+        return g;
     }
     getSettingsProps() {
         return {
             submitting: u,
-            hasErrors: m,
-            welcomeSettings: g,
+            hasErrors: g,
+            welcomeSettings: m,
             originalWelcomeSettings: d,
         };
     }
 }
-o(h, "displayName", "WelcomeScreenSettingsStore");
-let f = new h(l.Z, {
+o(f, "displayName", "WelcomeScreenSettingsStore");
+let h = new f(l.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (g = d), (m = !1);
+        (m = d), (g = !1);
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (g = c), (d = c);
+        (m = c), (d = c);
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        g = (function (e) {
+        m = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -85,7 +85,7 @@ let f = new h(l.Z, {
                     });
             }
             return e;
-        })({}, g, t);
+        })({}, m, t);
     },
     WELCOME_SCREEN_SUBMIT: function () {
         u = !0;
@@ -94,6 +94,6 @@ let f = new h(l.Z, {
         p(e), (u = !1);
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        (m = !0), (u = !1);
+        (g = !0), (u = !1);
     },
 });

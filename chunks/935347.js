@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854);
+n.d(t, { Z: () => P }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(905656),
     S = n(981631),
     C = n(388032),
-    T = n(818312);
+    T = n(744749);
 function N(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-class P extends i.PureComponent {
+class j extends i.PureComponent {
     createSound() {
         let { soundpack: e } = this.props,
             t = (0, m.uk)("discodo", e);
@@ -382,7 +382,7 @@ class P extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let j = c.ZP.connectStores([h.Z, O.Z, b.Z, f.Z], () => ({
+let P = c.ZP.connectStores([h.Z, O.Z, b.Z, f.Z], () => ({
     isTryingToConnect: h.Z.isTryingToConnect(),
     connected: h.Z.isConnected(),
     incident: O.Z.getIncident(),
@@ -391,7 +391,7 @@ let j = c.ZP.connectStores([h.Z, O.Z, b.Z, f.Z], () => ({
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: l, reducedMotion: a } = e;
     return t
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(j, {
               reducedMotion: a,
               soundpack: l,
               connected: n,

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r,
     i,
     l = n(973361),
-    o = n(442837),
-    s = n(570140),
-    a = n(358085),
+    s = n(442837),
+    a = n(570140),
+    o = n(358085),
     c = n(723359);
 let u = null,
     d = "underage";
-class h extends (i = o.ZP.Store) {
+class h extends (i = s.ZP.Store) {
     isUnderageAnonymous() {
-        if (a.isPlatformEmbedded && 1) {
+        if (o.isPlatformEmbedded && 1) {
             if (null != u && u + c.k0 > Date.now()) return !0;
         } else if (1) return null != l.parse(document.cookie)[d];
         return !1;
@@ -24,7 +24,7 @@ class h extends (i = o.ZP.Store) {
           writable: !0,
       })
     : (h[r] = "AgeGateStore");
-let f = new h(s.Z, {
+let g = new h(a.Z, {
     AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
         (u = Date.now()), (document.cookie = "".concat(d, "=1;path=/"));
     },

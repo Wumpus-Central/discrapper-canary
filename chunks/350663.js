@@ -3,19 +3,19 @@ var i = n(951288),
     r = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(786920),
+    a = n(137317),
     s = n(481060),
     u = n(110924),
     c = n(569545),
     d = n(237997),
-    p = n(444295),
-    h = n(752802),
+    h = n(444295),
+    p = n(752802),
     f = n(68286),
     m = n(461393),
     g = n(340101),
     y = n(981631),
     O = n(339882);
-function E(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -40,7 +40,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,9 +75,9 @@ let S = {
                 streamParticipants: I,
                 participantsVersion: C,
                 pinned: Z,
-                padding: w,
+                padding: N,
             } = e,
-            N = I.map((e) => ({
+            w = I.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
@@ -94,29 +94,29 @@ let S = {
                 let e = 0,
                     t = 0;
                 return P
-                    ? N.map((t, n) =>
-                          v(E({}, t), {
-                              y: (e += t.height + (n > 0 ? w : 0)) - t.height,
+                    ? w.map((t, n) =>
+                          E(v({}, t), {
+                              y: (e += t.height + (n > 0 ? N : 0)) - t.height,
                               x: 0,
                           }),
                       )
-                    : N.map((e, n) =>
-                          v(E({}, e), {
-                              x: (t += e.width + (n > 0 ? w : 0)) - e.width,
+                    : w.map((e, n) =>
+                          E(v({}, e), {
+                              x: (t += e.width + (n > 0 ? N : 0)) - e.width,
                               y: 0,
                           }),
                       );
-            }, [N, w, P]),
+            }, [w, N, P]),
             R = r.useMemo(
                 () =>
                     0 === A.length
                         ? (0, m.MH)(f.bt)
-                        : A.reduce((e, t) => e + t.height, 0) + (P ? w * (A.length - 1) : 0),
-                [A, P, w],
+                        : A.reduce((e, t) => e + t.height, 0) + (P ? N * (A.length - 1) : 0),
+                [A, P, N],
             ),
             k = r.useMemo(
-                () => (0 === A.length ? f.bt : A.reduce((e, t) => e + t.width, 0) + (P ? 0 : w * (A.length - 1))),
-                [A, P, w],
+                () => (0 === A.length ? f.bt : A.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (A.length - 1))),
+                [A, P, N],
             ),
             L = (0, s.Yzy)(
                 A,
@@ -154,12 +154,12 @@ let S = {
                 },
                 D ? "animate-never" : "respect-motion-settings",
             ),
-            M = (0, p.ee)(() => new Set(I.map((e) => e.user.id)), [I, C]),
-            V = (0, p.ee)(() => new Set(I.filter((e) => j.has((0, c.V9)(e.stream))).map((e) => e.user.id)), [I, j, C]);
+            M = (0, h.ee)(() => new Set(I.map((e) => e.user.id)), [I, C]),
+            V = (0, h.ee)(() => new Set(I.filter((e) => j.has((0, c.V9)(e.stream))).map((e) => e.user.id)), [I, j, C]);
         return (
             r.useEffect(() => {
                 0 !== M.size &&
-                    (0, p.zi)(y.Odu.GO_LIVE, {
+                    (0, h.zi)(y.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
                         shownUserIds: Array.from(M),
                         liveUserIds: Array.from(V),
@@ -179,14 +179,14 @@ let S = {
                         style: Object.assign({}, e, {
                             width: n,
                             height: l,
-                            zIndex: N.length - o,
+                            zIndex: w.length - o,
                         }),
                         children: ((e) => {
                             let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e;
                             return (0, i.jsx)("div", {
                                 className: O.tileContainer,
                                 children: (0, i.jsx)(
-                                    h.Z,
+                                    p.Z,
                                     {
                                         participant: t,
                                         width: n,

@@ -2,8 +2,8 @@ e.d(t, { default: () => k }), e(953529);
 var a = e(951288),
     s = e(647438),
     i = e(286379),
-    c = e(399606),
-    o = e(667202),
+    c = e(793030),
+    o = e(399606),
     r = e(481060),
     l = e(797614),
     d = e(819557),
@@ -26,7 +26,7 @@ function k(n) {
             actionRows: j,
             learnMore: N,
         } = n,
-        f = (0, c.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(k, p));
+        f = (0, o.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(k, p));
     return (
         s.useEffect(() => {
             (0, _.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
@@ -37,7 +37,7 @@ function k(n) {
             }),
                 l.Z.increment({ name: i.V.SAFETY_WARNING_MODAL_VIEW });
         }, [k, p, y, f]),
-        (0, a.jsx)(o.ExpressiveModal, {
+        (0, a.jsx)(c.ExpressiveModal, {
             onClose: e,
             transitionState: t,
             graphic: {

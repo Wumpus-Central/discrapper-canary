@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(572995),
     g = n(981631),
     E = n(869783),
-    b = n(885257),
-    y = n(411200);
+    b = n(642650),
+    y = n(595475);
 function O(e, t, n) {
     return (
         t in e
@@ -145,18 +145,18 @@ let A = (e) => {
                 size: w,
                 enablePremiumBrandRefreshDesign: D,
             } = e,
-            x = (0, h.rO)(),
-            L = i.useRef(null),
-            j = i.useRef(0),
-            M = S(n),
+            L = (0, h.rO)(),
+            x = i.useRef(null),
+            M = i.useRef(0),
+            j = S(n),
             k = (0, s.debounce)(() => {
                 p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
             }, 800),
             U = () => {
-                null == L.current || N || ((L.current.currentTime = j.current), L.current.play());
+                null == x.current || N || ((x.current.currentTime = M.current), x.current.play());
             },
             G = () => {
-                null == L.current || N || ((j.current = L.current.currentTime), L.current.pause());
+                null == x.current || N || ((M.current = x.current.currentTime), x.current.pause());
             },
             B = D ? y : b;
         t = D
@@ -217,10 +217,10 @@ let A = (e) => {
                             poster: u,
                             loop: !0,
                             className: o()(B.boxVideo, { [C]: null != C }),
-                            ref: L,
+                            ref: x,
                             children: (0, r.jsx)("source", {
                                 src: f,
-                                type: x ? E.m.MP4 : E.m.WEBM,
+                                type: L ? E.m.MP4 : E.m.WEBM,
                             }),
                         },
                         f,
@@ -236,7 +236,7 @@ let A = (e) => {
                           children: [(0, r.jsx)(F, {}), (0, r.jsx)(Z, {})],
                       }),
             Y = {
-                className: o()(D ? y.backgroundColor : M, B.boxContainer, B["".concat(w)], D && y.gradientBackground),
+                className: o()(D ? y.backgroundColor : j, B.boxContainer, B["".concat(w)], D && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,

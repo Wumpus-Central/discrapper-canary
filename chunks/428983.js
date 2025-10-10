@@ -8,8 +8,8 @@ var r = a(395848),
     E = a(433691),
     s = a(135813),
     l = a(662355);
-let u = [2500, 4000],
-    I = {},
+let I = [2500, 4000],
+    u = {},
     R = (t, e = {}) => {
         (0, l.A)(() => {
             let a,
@@ -23,9 +23,9 @@ let u = [2500, 4000],
                 },
                 N = (0, c.N)("largest-contentful-paint", d);
             if (N) {
-                a = (0, _._)(t, R, u, e.reportAllChanges);
+                a = (0, _._)(t, R, I, e.reportAllChanges);
                 let n = (0, s.R)(() => {
-                    I[R.id] || (d(N.takeRecords()), N.disconnect(), (I[R.id] = !0), a(!0));
+                    u[R.id] || (d(N.takeRecords()), N.disconnect(), (u[R.id] = !0), a(!0));
                 });
                 ["keydown", "click"].forEach((t) => {
                     r.m.document && addEventListener(t, () => setTimeout(n, 0), !0);

@@ -6,9 +6,9 @@ n.d(t, {
     wW: () => h,
 }),
     n(539854);
-var r = n(951288),
-    i = n(913527),
-    l = n.n(i),
+var i = n(951288),
+    r = n(913527),
+    l = n.n(r),
     a = n(481060),
     o = n(710845),
     s = n(45251),
@@ -27,7 +27,7 @@ function h(e) {
 function f(e) {
     let { channel: t } = e,
         n = l()().add(1, "day").startOf("day").set("hours", 9),
-        i = l()().add(1, "day").startOf("day").set("hours", 13),
+        r = l()().add(1, "day").startOf("day").set("hours", 13),
         o = l()().startOf("isoWeek").add(1, "week").set("hours", 9),
         c = [
             {
@@ -36,14 +36,14 @@ function f(e) {
             },
             {
                 display: u.intl.string(u.t.EMRZyc),
-                value: i,
+                value: r,
             },
             {
                 display: u.intl.string(u.t["+P5MmJ"]),
                 value: o,
             },
         ].map((e) =>
-            (0, r.jsx)(
+            (0, i.jsx)(
                 a.sNh,
                 {
                     id: e.display,
@@ -59,10 +59,10 @@ function f(e) {
         );
     return (
         c.push(
-            (0, r.jsxs)(r.Fragment, {
+            (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(a.Clw, {}),
-                    (0, r.jsx)(
+                    (0, i.jsx)(a.Clw, {}),
+                    (0, i.jsx)(
                         a.sNh,
                         {
                             id: "custom-time",
@@ -78,35 +78,35 @@ function f(e) {
     );
 }
 function m(e) {
-    let { channel: t, prefilledTime: i } = e;
+    let { channel: t, prefilledTime: r } = e;
     (0, a.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 538084));
             return (n) => {
                 var a, o;
-                return (0, r.jsx)(
+                return (0, i.jsx)(
                     e,
                     ((a = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -114,15 +114,15 @@ function m(e) {
                     (o = o =
                         {
                             channel: t,
-                            prefilledTime: null != i ? i : l()().startOf("hour").add(1, "hour").toISOString(),
+                            prefilledTime: null != r ? r : l()().startOf("hour").add(1, "hour").toISOString(),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(o)).forEach(function (e) {

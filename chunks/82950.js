@@ -60,11 +60,11 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                 guild_id: t.id,
             });
         }, [t.id, d]);
-        let C = null;
+        let S = null;
         "function" == typeof v
-            ? (C = v())
+            ? (S = v())
             : null != v &&
-              (C = (0, r.jsx)(o.zx, {
+              (S = (0, r.jsx)(o.zx, {
                   className: g.btn,
                   size: o.zx.Sizes.SMALL,
                   onClick: () => {
@@ -80,7 +80,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                   color: I,
                   children: v,
               }));
-        let S = null != p ? "".concat(p, "px") : "16px";
+        let C = null != p ? "".concat(p, "px") : "16px";
         return (0, r.jsxs)("div", {
             className: g.channelNotice,
             children: [
@@ -102,8 +102,8 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                     className: g.imageContainer,
                     style: {
                         marginTop: "".concat(m, "px"),
-                        marginLeft: S,
-                        marginRight: S,
+                        marginLeft: C,
+                        marginRight: C,
                     },
                     children: (0, r.jsx)("img", {
                         className: g.image,
@@ -125,7 +125,7 @@ let b = a().debounce(c.ZP.trackWithMetadata, 500),
                             variant: "text-sm/normal",
                             children: l,
                         }),
-                        C,
+                        S,
                     ],
                 }),
             ],

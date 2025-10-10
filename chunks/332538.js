@@ -1,6 +1,6 @@
 n.d(t, {
     Wj: () => N,
-    ZP: () => I,
+    ZP: () => P,
 }),
     n(388685),
     n(361932),
@@ -15,25 +15,25 @@ var r = n(951288),
     u = n(605236),
     d = n(243778),
     p = n(645041),
-    f = n(430824),
-    h = n(823379),
+    h = n(430824),
+    f = n(823379),
     g = n(267642),
     m = n(713081),
     b = n(608949),
     _ = n(905128),
-    O = n(326660),
-    y = n(158638),
+    y = n(326660),
+    O = n(158638),
     v = n(10765),
     j = n(317169),
     x = n(19394),
     C = n(385902),
     E = n(535396),
     S = n(981631),
-    P = n(921944);
-function I(e) {
+    I = n(921944);
+function P(e) {
     let t = (0, o.e7)([b.Z], () => b.Z.getNotificationStateForGuild(e), [e]),
         n = (0, o.e7)([_.Z], () => _.Z.getStateForGuild(e)),
-        { trailing: m, showUnread: P } = (function (e, t, n) {
+        { trailing: m, showUnread: I } = (function (e, t, n) {
             let l = (0, j.Z)(e).available,
                 { shouldShow: o } = (0, C._)(e, "useGuildPowerupsChannelListIndicators"),
                 d = (0, u.OA)(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
@@ -48,9 +48,9 @@ function I(e) {
                 let { unlockedPowerups: a } = t,
                     u = (0, x.h)(Object.values(a)),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
-                    f = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
-                    h = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
-                return (u.length > 0 && d < f) || p
+                    h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
+                    f = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
+                return (u.length > 0 && d < h) || p
                     ? {
                           trailing: (0, r.jsx)(s.Mgn, {
                               color: s.TVs.colors.STATUS_WARNING,
@@ -58,10 +58,10 @@ function I(e) {
                           }),
                           showUnread: !0,
                       }
-                    : l !== h && l - h > 0
+                    : l !== f && l - f > 0
                       ? {
                             trailing: (0, r.jsx)(s.mAB, {
-                                count: l - h,
+                                count: l - f,
                                 color: c.Z.BACKGROUND_ACCENT,
                             }),
                             showUnread: !0,
@@ -72,12 +72,12 @@ function I(e) {
                         };
             }, [l, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t, p]);
         })(e, n, t),
-        I = (function (e, t) {
+        P = (function (e, t) {
             let [n, r] = (0, d.US)(null != t ? [a.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 o = n === a.z.GUILD_POWERUP_PERKS_COACHMARK,
                 { available: s } = (0, j.Z)(e),
                 c = (function (e, t) {
-                    let n = (0, y.qI)(e, "GuildPowerupsChannelRow");
+                    let n = (0, O.qI)(e, "GuildPowerupsChannelRow");
                     return i.useMemo(() => {
                         if (
                             !Array.from(E.os[E.Du.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((e) => {
@@ -115,7 +115,7 @@ function I(e) {
                             l = null != i ? t.allPowerups[i] : void 0;
                         if (null != l)
                             return {
-                                type: O.J.LEVEL_REACHED,
+                                type: y.J.LEVEL_REACHED,
                                 powerup: l,
                                 markAsDismissed: (t) => {
                                     (0, p.Qd)(r, e, !0, t);
@@ -125,7 +125,7 @@ function I(e) {
                     if (null != n) return n;
                     let r = (function (e, t, n) {
                         var r, i;
-                        let l = null != (i = null == (r = f.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : S.Eu4.NONE,
+                        let l = null != (i = null == (r = h.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : S.Eu4.NONE,
                             o = Array.from(E.Tg.values())
                                 .flatMap((r) =>
                                     r.length <= 0 ||
@@ -144,11 +144,11 @@ function I(e) {
                                                   : i;
                                           }),
                                 )
-                                .filter(h.lm);
+                                .filter(f.lm);
                         if (0 !== o.length) {
                             if (1 === o.length && !(0, p.OY)(a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
-                                    type: O.J.PERKS_PURCHASABLE,
+                                    type: y.J.PERKS_PURCHASABLE,
                                     powerups: o,
                                     markAsDismissed: (t) => {
                                         (0, p.Qd)(a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e, !0, t);
@@ -156,7 +156,7 @@ function I(e) {
                                 };
                             if (o.length > 1 && !(0, p.OY)(a.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e))
                                 return {
-                                    type: O.J.PERKS_PURCHASABLE,
+                                    type: y.J.PERKS_PURCHASABLE,
                                     powerups: o,
                                     markAsDismissed: (t) => {
                                         (0, p.Qd)(a.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e, !0, t);
@@ -166,12 +166,12 @@ function I(e) {
                     })(e, t, s);
                     if (null != r) return r;
                 }, [e, t, o, b, s]),
-                [x, C] = (0, d.bf)(null != _ ? a.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: O.d });
+                [x, C] = (0, d.bf)(null != _ ? a.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: y.d });
             return i.useMemo(() => {
                 if (null != t) {
                     if (o)
                         return {
-                            type: O.J.PERKS_AVAILABLE,
+                            type: y.J.PERKS_AVAILABLE,
                             markAsDismissed: r,
                         };
                     if (b) {
@@ -180,7 +180,7 @@ function I(e) {
                         if (0 === n.length) return;
                         return {
                             powerups: n,
-                            type: O.J.NEW_PERK_AVAILABLE,
+                            type: y.J.NEW_PERK_AVAILABLE,
                             markAsDismissed: m,
                         };
                     }
@@ -236,22 +236,22 @@ function I(e) {
                 }
             }, [t, o, r, _, x, C, b, m, c]);
         })(e, n);
-    if (null !== n && (null != m || P || null != I))
+    if (null !== n && (null != m || I || null != P))
         return {
             trailing: m,
-            showUnread: P,
-            popout: I,
+            showUnread: I,
+            popout: P,
         };
 }
 function N(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getStateForGuild(e)),
-        n = I(e);
+        n = P(e);
     i.useEffect(() => {
         (0, m.jd)(e);
     }, [e]),
         i.useEffect(() => {
             var e;
-            null == n || null == (e = n.popout) || e.markAsDismissed(P.L.AUTO_DISMISS);
+            null == n || null == (e = n.popout) || e.markAsDismissed(I.L.AUTO_DISMISS);
         }, [n]),
         i.useEffect(() => {
             null != t &&
@@ -259,7 +259,7 @@ function N(e) {
                     let r = E.Cp[n];
                     if (null == r || null == t.unlockedPowerups[r]) return;
                     let i = E.Q1[n];
-                    null != i && (0, p.Qd)(i, e, !1, P.L.AUTO_DISMISS);
+                    null != i && (0, p.Qd)(i, e, !1, I.L.AUTO_DISMISS);
                 });
         }, [e, t]);
 }

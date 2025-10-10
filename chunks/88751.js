@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => j }), n(388685);
+n.d(t, { ZP: () => M }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -108,14 +108,14 @@ function w(e) {
 function D() {
     E = {};
 }
-function x(e) {
+function L(e) {
     let { guild: t } = e;
     for (let e in E) {
         let n = l.Z.getBasicChannel(e);
         (null == n || n.guild_id === t.id) && delete E[e];
     }
 }
-class L extends (r = o.ZP.Store) {
+class x extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.ZP, l.Z, d.Z, f.default, _.Z, u.Z);
     }
@@ -141,8 +141,8 @@ class L extends (r = o.ZP.Store) {
         return I(e, t, r);
     }
 }
-g(L, "displayName", "StageChannelRoleStore");
-let j = new L(s.Z, {
+g(x, "displayName", "StageChannelRoleStore");
+let M = new x(s.Z, {
     CHANNEL_UPDATES: C,
     CONNECTION_OPEN: D,
     GUILD_MEMBER_REMOVE: R,
@@ -150,6 +150,6 @@ let j = new L(s.Z, {
     GUILD_ROLE_UPDATE: N,
     PASSIVE_UPDATE_V2: w,
     VOICE_STATE_UPDATES: P,
-    GUILD_CREATE: x,
-    GUILD_DELETE: x,
+    GUILD_CREATE: L,
+    GUILD_DELETE: L,
 });

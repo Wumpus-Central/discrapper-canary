@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(179809),
     m = n(588275),
     b = n(388032),
-    O = n(264096);
+    _ = n(264096);
 function y(e) {
     let { onActivate: t, children: n } = e,
         s = i.useRef(null),
@@ -38,7 +38,7 @@ function y(e) {
             }
         }, [f, d, h, t]),
         (0, r.jsxs)("div", {
-            className: O.container,
+            className: _.container,
             children: [
                 (0, r.jsx)(o.yRy, {
                     ref: f,
@@ -46,13 +46,13 @@ function y(e) {
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
-                            className: O.popoutContainer,
+                            className: _.popoutContainer,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: O.popoutContent,
+                                    className: _.popoutContent,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: O.coachmarkTextContainer,
+                                            className: _.coachmarkTextContainer,
                                             children: [
                                                 (0, r.jsx)(o.X6q, {
                                                     variant: "heading-md/medium",
@@ -74,7 +74,7 @@ function y(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: O.popoutCaretLeft }),
+                                (0, r.jsx)("div", { className: _.popoutCaretLeft }),
                             ],
                         }),
                     position: "right",
@@ -112,7 +112,7 @@ function y(e) {
                             })({}, e)),
                             (n = n =
                                 {
-                                    className: O.popoutAnchor,
+                                    className: _.popoutAnchor,
                                     ref: s,
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -136,13 +136,13 @@ function y(e) {
         })
     );
 }
-function _(e) {
+function O(e) {
     let { onActivate: t } = e,
-        [n, _] = i.useState(!1),
-        j = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        v = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        [n, O] = i.useState(!1),
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         x = (0, f.Z)(),
-        C = (0, a.Z)(j),
+        C = (0, a.Z)(v),
         E = i.useMemo(() => {
             let e = (0, h.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -154,12 +154,12 @@ function _(e) {
             return e;
         }, [x, n]);
     i.useEffect(() => {
-        n && !v && s.Z.fetchRequestToJoinGuilds();
-    }, [n, v]);
-    let S = null != j && x.includes(j);
+        n && !j && s.Z.fetchRequestToJoinGuilds();
+    }, [n, j]);
+    let S = null != v && x.includes(v);
     return (i.useEffect(() => {
-        !n && S && C !== j && _(!0);
-    }, [n, S, C, j]),
+        !n && S && C !== v && O(!0);
+    }, [n, S, C, v]),
     0 === x.length)
         ? null
         : (0, r.jsx)(y, {
@@ -171,11 +171,11 @@ function _(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      _(!n), c.ZP.clearCoachmark();
+                      O(!n), c.ZP.clearCoachmark();
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
-                      className: O.pendingFolderButtonIcon,
+                      className: _.pendingFolderButtonIcon,
                       children: (0, r.jsx)(o.wGF, {
                           size: "sm",
                           color: "currentColor",

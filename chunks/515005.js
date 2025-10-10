@@ -104,17 +104,17 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 gutterWidth: S,
                 inspectedStickerPosition: N,
                 isScrolling: D,
-                isUsingKeyboardNavigation: x,
-                onInspect: L,
-                onSelect: j,
-                rowIndex: M,
+                isUsingKeyboardNavigation: L,
+                onInspect: x,
+                onSelect: M,
+                rowIndex: j,
                 stickerClassName: k,
                 stickerDescriptors: U,
                 stickerPadding: G = P,
                 stickerSize: B = R,
                 ownedStickerPacks: Z,
-                enlargeOnInteraction: V = !1,
-                channel: F,
+                enlargeOnInteraction: F = !1,
+                channel: V,
                 currentUser: H,
                 checkSendability: Y = !0,
             } = e,
@@ -146,7 +146,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         className: v.row,
                         style: z,
                     },
-                    null == I ? void 0 : I(M),
+                    null == I ? void 0 : I(j),
                 ),
                 {
                     children: U.map((e) => {
@@ -154,20 +154,20 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         let f =
                                 e.visibleRowIndex === (null == N ? void 0 : N.rowIndex) &&
                                 e.columnIndex === (null == N ? void 0 : N.columnIndex),
-                            I = e.type === m.al.STICKER && V && f,
+                            I = e.type === m.al.STICKER && F && f,
                             S = (t) => {
-                                if ((null == D ? void 0 : D.current) === !0 || (null == x ? void 0 : x.current) === !0)
+                                if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0)
                                     return;
                                 let n = t.altKey;
                                 n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id),
-                                    null == j || j(e, n);
+                                    null == M || M(e, n);
                             },
                             R = (0, s.throttle)(() => {
                                 (null == D ? void 0 : D.current) === !0 ||
-                                    (null == x ? void 0 : x.current) === !0 ||
+                                    (null == L ? void 0 : L.current) === !0 ||
                                     f ||
-                                    null == L ||
-                                    L(e);
+                                    null == x ||
+                                    x(e);
                             }, w),
                             P = () => {
                                 e.type === m.al.CREATE_STICKER &&
@@ -176,13 +176,13 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("93626"), n.e("24291")]).then(
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
                                             n.bind(n, 136735),
                                         );
                                         return (n) => (0, r.jsx)(t, T({ guildId: e.guild_id }, n));
                                     }));
                             },
-                            U = null != (d = null == l ? void 0 : l(e.columnIndex, M)) ? d : {},
+                            U = null != (d = null == l ? void 0 : l(e.columnIndex, j)) ? d : {},
                             { ref: G, tabIndex: K, onFocus: z } = U,
                             J = C(U, ["ref", "tabIndex", "onFocus"]);
                         switch (e.type) {
@@ -200,7 +200,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             onClick: P,
                                             style: q,
                                             children: [
-                                                !V && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                 (0, r.jsx)("div", {
                                                     className: v.iconWrapper,
                                                     children: (0, r.jsx)(c.qJs, {
@@ -249,20 +249,20 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             (0, r.jsxs)("div", {
                                                 "aria-hidden": !0,
                                                 children: [
-                                                    !V && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                    !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                     (0, r.jsx)(E.Z, {
                                                         className: o()(v.stickerNode, {
                                                             [v.stickerNodeDimmed]:
-                                                                V &&
+                                                                F &&
                                                                 !f &&
                                                                 null != N &&
                                                                 -1 !== N.rowIndex &&
                                                                 -1 !== N.columnIndex,
                                                             [v.stickerNodeHidden]: I,
-                                                            [v.stickerUnsendable]: Y && !(0, h.kl)(e.sticker, H, F),
+                                                            [v.stickerUnsendable]: Y && !(0, h.kl)(e.sticker, H, V),
                                                         }),
                                                         disableAnimation: !f && !a,
-                                                        enlargeOnInteraction: V,
+                                                        enlargeOnInteraction: F,
                                                         isInteracting: f,
                                                         maskAsset: f,
                                                         sticker: e.sticker,

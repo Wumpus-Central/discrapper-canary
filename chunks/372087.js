@@ -88,8 +88,8 @@ var w = /\/+/g;
 function D(e, t) {
     return "object" == typeof e && null !== e && null != e.key ? P("" + e.key) : t.toString(36);
 }
-function x() {}
-function L(e) {
+function L() {}
+function x(e) {
     switch (e.status) {
         case "fulfilled":
             return e.value;
@@ -98,7 +98,7 @@ function L(e) {
         default:
             switch (
                 ("string" == typeof e.status
-                    ? e.then(x, x)
+                    ? e.then(L, L)
                     : ((e.status = "pending"),
                       e.then(
                           function (t) {
@@ -118,7 +118,7 @@ function L(e) {
     }
     throw e;
 }
-function j(e, t, n, r, o) {
+function M(e, t, n, r, o) {
     var s = typeof e;
     ("undefined" === s || "boolean" === s) && (e = null);
     var l = !1;
@@ -137,7 +137,7 @@ function j(e, t, n, r, o) {
                         l = !0;
                         break;
                     case p:
-                        return j((l = e._init)(e._payload), t, n, r, o);
+                        return M((l = e._init)(e._payload), t, n, r, o);
                 }
         }
     if (l)
@@ -147,7 +147,7 @@ function j(e, t, n, r, o) {
             T(o)
                 ? ((n = ""),
                   null != l && (n = l.replace(w, "$&/") + "/"),
-                  j(o, t, n, "", function (e) {
+                  M(o, t, n, "", function (e) {
                       return e;
                   }))
                 : null != o &&
@@ -161,11 +161,11 @@ function j(e, t, n, r, o) {
         );
     l = 0;
     var c = "" === r ? "." : r + ":";
-    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += j(r, t, n, s, o));
+    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += M(r, t, n, s, o));
     else if ("function" == typeof (u = m(e)))
-        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += j(r, t, n, s, o));
+        for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += M(r, t, n, s, o));
     else if ("object" === s) {
-        if ("function" == typeof e.then) return j(L(e), t, n, r, o);
+        if ("function" == typeof e.then) return M(x(e), t, n, r, o);
         throw Error(
             "Objects are not valid as a React child (found: " +
                 ("[object Object]" === (t = String(e)) ? "object with keys {" + Object.keys(e).join(", ") + "}" : t) +
@@ -174,12 +174,12 @@ function j(e, t, n, r, o) {
     }
     return l;
 }
-function M(e, t, n) {
+function j(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
     return (
-        j(e, r, "", "", function (e) {
+        M(e, r, "", "", function (e) {
             return t.call(n, e, i++);
         }),
         r
@@ -222,9 +222,9 @@ var U =
           };
 function G() {}
 (t.Children = {
-    map: M,
+    map: j,
     forEach: function (e, t, n) {
-        M(
+        j(
             e,
             function () {
                 t.apply(this, arguments);
@@ -235,7 +235,7 @@ function G() {}
     count: function (e) {
         var t = 0;
         return (
-            M(e, function () {
+            j(e, function () {
                 t++;
             }),
             t
@@ -243,7 +243,7 @@ function G() {}
     },
     toArray: function (e) {
         return (
-            M(e, function (e) {
+            j(e, function (e) {
                 return e;
             }) || []
         );

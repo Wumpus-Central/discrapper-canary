@@ -34,8 +34,8 @@ var r = n(951288),
     D = n(591853),
     L = n(410441),
     x = n(797342),
-    j = n(981631),
-    M = n(388032);
+    M = n(981631),
+    j = n(388032);
 let k = {
         [a.z.DESKTOP]: null,
         [a.z.LINUX]: null,
@@ -65,7 +65,7 @@ let k = {
             { displayParticipants: ee, participant1: et, participant2: en, numOtherParticipants: er } = (0, I.Z)(y, 3),
             ei = y.extra.platform,
             ea = null != ei ? k[ei] : null,
-            eo = ei === a.z.XBOX ? j.ABu.XBOX : ei === a.z.PLAYSTATION ? j.ABu.PLAYSTATION : void 0,
+            eo = ei === a.z.XBOX ? M.ABu.XBOX : ei === a.z.PLAYSTATION ? M.ABu.PLAYSTATION : void 0,
             es = (0, N.Z)(eo),
             { data: el } = (0, m.IX)(y.extra.application_id),
             ec = (0, d.q)(el, "MemberListGamingContentPopout"),
@@ -116,9 +116,9 @@ let k = {
                                   : (0, r.jsx)(L.Z, {
                                         onClick: es,
                                         Icon: ea,
-                                        "aria-label": M.intl.string(M.t.YR4cHB),
+                                        "aria-label": j.intl.string(j.t.YR4cHB),
                                     }),
-                          userDescription: (0, S.kr)(y) ? M.t.vPg1JS : M.t.rPqqtr,
+                          userDescription: (0, S.kr)(y) ? j.t.vPg1JS : j.t.rPqqtr,
                           title: W,
                           subtitle: Y,
                           badges: ef,
@@ -132,7 +132,7 @@ let k = {
                           title: y.extra.game_name,
                           subtitle: Y,
                           badges: ef,
-                          userDescription: M.t["6oWFUF"],
+                          userDescription: j.t["6oWFUF"],
                           entry: y,
                           stream: $,
                           onUserPopoutClosed: Z,
@@ -150,7 +150,7 @@ let k = {
                       )
                     : null,
             eh = [
-                null == ep && ((0, l.Z)(K, j.xjy.JOIN) || (0, c.Z)(K))
+                null == ep && ((0, l.Z)(K, M.xjy.JOIN) || (0, c.Z)(K))
                     ? (0, r.jsx)(
                           _.Z,
                           {

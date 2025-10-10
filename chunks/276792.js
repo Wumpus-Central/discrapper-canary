@@ -14,7 +14,7 @@ var i = n(657707),
     h = n(474936),
     g = n(981631),
     m = n(388032),
-    b = n(570656);
+    b = n(605548);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,9 +61,9 @@ function O(e, t) {
 function E(e) {
     var t, n, E, y;
     let v,
-        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
-        P = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: j } = C,
+        { content: I, renderModalProps: S, analyticsLocations: C, analyticsLocation: T, isLightTheme: N } = e,
+        j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
+        { onClose: P } = S,
         x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
         A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
@@ -72,20 +72,20 @@ function E(e) {
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), j();
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), P();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
             v = () =>
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_1,
-                    analyticsLocations: S,
+                    analyticsLocations: C,
                     analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
             break;
@@ -95,13 +95,13 @@ function E(e) {
             v = () =>
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_2,
-                    analyticsLocations: S,
+                    analyticsLocations: C,
                     analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
     }
@@ -143,7 +143,7 @@ function E(e) {
                   })
             : void 0;
     return {
-        renderModalProps: C,
+        renderModalProps: S,
         header: I.header,
         modalTopExtra: L,
         subHeader: I.subheader,
@@ -156,7 +156,7 @@ function E(e) {
             imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: P,
+        changeLogId: j,
         button: () => {
             let e = Date.now();
             return (0, r.jsx)(o.zxk, {
@@ -164,10 +164,10 @@ function E(e) {
                 size: "md",
                 onClick: () => {
                     d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: P,
+                        change_log_id: j,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: P,
+                        target: j,
                     }),
                         v();
                 },

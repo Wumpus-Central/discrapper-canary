@@ -25,8 +25,8 @@ var i = n(243814),
     C = n(630388),
     T = n(823379),
     N = n(709054),
-    P = n(591759),
-    j = n(228488),
+    j = n(591759),
+    P = n(228488),
     x = n(996106),
     A = n(914946),
     Z = n(452426),
@@ -179,7 +179,7 @@ let G = {
                 d = null != u ? O.Z.getWindow(u) : void 0;
             (null == d ? void 0 : d.closed) && (d = void 0);
             let p = null != d ? k.IlC.POPOUT : k.IlC.APP;
-            if (((0, j.Pr)({}, null == d ? void 0 : d.document), null != c)) {
+            if (((0, P.Pr)({}, null == d ? void 0 : d.document), null != c)) {
                 if (c.applicationId !== i.id)
                     throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "Application is not currently mounted.");
                 let e = v.Z.getApplicationActivity(i.id);
@@ -320,7 +320,7 @@ let G = {
             if (!(0, C.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED))
                 throw new x.Z({ errorCode: k.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let l = (0, w.Z)();
-            if (!P.Z.isDiscordCdnUrl(r))
+            if (!j.Z.isDiscordCdnUrl(r))
                 throw new x.Z({ errorCode: k.lTL.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
             (0, m.Z)({
                 applicationId: i,

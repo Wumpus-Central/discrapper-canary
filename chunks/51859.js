@@ -1,7 +1,7 @@
-n.d(t, { Z: () => v }), n(388685), n(953529);
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(951288),
-    o = n(647438),
-    i = n(494497),
+    i = n(647438),
+    o = n(494497),
     l = n(481060),
     a = n(158638),
     s = n(973772),
@@ -9,40 +9,40 @@ var r = n(951288),
     u = n(262212),
     d = n(795338),
     p = n(226278),
-    m = n(279604),
-    g = n(279475),
-    f = n(535396),
-    _ = n(237522);
-function v(e) {
+    f = n(279604),
+    m = n(279475),
+    g = n(535396),
+    v = n(237522);
+function x(e) {
     let { guildId: t, powerup: n } = e,
-        [v, x] = o.useState(void 0);
-    (0, m.KT)(v);
-    let [C, h] = o.useState(!1),
-        b = (0, s.ZP)(t, n).type !== f.A3.INACTIVE,
-        E = (0, g.d)(b),
-        T = (0, a.g1)(t, "GuildPowerupPerkCard"),
-        I = n.skuId === i.A$;
+        [x, _] = i.useState(void 0);
+    (0, f.KT)(x);
+    let [b, h] = i.useState(!1),
+        j = (0, s.ZP)(t, n).type !== g.A3.INACTIVE,
+        C = (0, m.d)(j),
+        E = (0, a.g1)(t, "GuildPowerupPerkCard"),
+        I = n.skuId === o.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => h(e),
         guildId: t,
         powerup: n,
-        badge: I && T ? "beta" : void 0,
+        badge: I && E ? "beta" : void 0,
         children: [
             (0, r.jsx)(d.m, {
-                className: _.image,
+                className: v.image,
                 powerup: n,
-                isHovering: C,
+                isHovering: b,
             }),
             (0, r.jsx)(c.Q9, {
                 title: n.title,
-                textColor: E,
+                textColor: C,
                 footer: (0, r.jsx)(p.g, {
                     guildId: t,
                     powerup: n,
                 }),
                 children: (0, r.jsx)(l.Text, {
-                    className: _.description,
-                    color: E,
+                    className: v.description,
+                    color: C,
                     variant: "text-sm/medium",
                     children: n.description,
                 }),
@@ -51,7 +51,7 @@ function v(e) {
                 children: (0, r.jsx)(u.ZP, {
                     guildId: t,
                     powerup: n,
-                    onError: x,
+                    onError: _,
                 }),
             }),
         ],

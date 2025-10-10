@@ -1,23 +1,23 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(700582),
     c = n(330726),
     d = n(51144),
     u = n(268350),
-    m = n(419922),
-    g = n(388032),
+    g = n(419922),
+    m = n(388032),
     p = n(539437);
-let h = (e) => {
-    let { className: t, isDisabled: l, sticker: h, canManageSticker: f } = e,
-        [b, x] = i.useState(!1),
-        [j, v] = (0, c.Z)(null, 4000),
-        _ = () => {
-            (0, s.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("93626"), n.e("74395")]).then(n.bind(n, 136735));
+let f = (e) => {
+    let { className: t, isDisabled: l, sticker: f, canManageSticker: h } = e,
+        [x, b] = i.useState(!1),
+        [j, _] = (0, c.Z)(null, 4000),
+        v = () => {
+            (0, a.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e("93626"), n.e("34765")]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -47,84 +47,84 @@ let h = (e) => {
                             return e;
                         })(
                             {
-                                sticker: h,
-                                guildId: h.guild_id,
+                                sticker: f,
+                                guildId: f.guild_id,
                             },
                             t,
                         ),
                     );
             });
         },
-        O = async () => {
-            v(null), x(!0);
+        C = async () => {
+            _(null), b(!0);
             try {
-                await (0, u.Um)(h);
+                await (0, u.Um)(f);
             } catch (e) {
-                v(e.body.message), x(!1);
+                _(e.body.message), b(!1);
             }
         },
-        y = d.ZP.useUserTag(h.user);
-    return (0, r.jsx)(s.ua7, {
-        color: s.ua7.Colors.RED,
+        O = d.ZP.useUserTag(f.user);
+    return (0, r.jsx)(a.ua7, {
+        color: a.ua7.Colors.RED,
         forceOpen: null != j,
         text: j,
         children: () =>
             (0, r.jsxs)("div", {
-                className: a()(p.wrapper, t, { [p.wrapperDisabled]: l }),
+                className: s()(p.wrapper, t, { [p.wrapperDisabled]: l }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(p.content, { [p.contentRemoving]: b }),
+                        className: s()(p.content, { [p.contentRemoving]: x }),
                         children: [
-                            (0, r.jsx)(m.Z, {
+                            (0, r.jsx)(g.Z, {
                                 className: p.sticker,
                                 size: 72,
-                                sticker: h,
+                                sticker: f,
                             }),
                             (0, r.jsxs)("div", {
                                 children: [
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         color: "header-primary",
                                         variant: "text-xs/semibold",
                                         className: p.stickerName,
-                                        children: h.name,
+                                        children: f.name,
                                     }),
-                                    null != h.user &&
+                                    null != f.user &&
                                         (0, r.jsxs)("div", {
                                             className: p.user,
                                             children: [
                                                 (0, r.jsx)(o.Z, {
                                                     className: p.userAvatar,
-                                                    size: s.EFr.SIZE_16,
-                                                    user: h.user,
+                                                    size: a.EFr.SIZE_16,
+                                                    user: f.user,
                                                 }),
-                                                (0, r.jsx)(s.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     color: "header-secondary",
                                                     variant: "text-xs/normal",
-                                                    children: y,
+                                                    children: O,
                                                 }),
                                             ],
                                         }),
                                 ],
                             }),
-                            f
+                            h
                                 ? (0, r.jsxs)("div", {
                                       className: p.actions,
                                       children: [
-                                          (0, r.jsx)(s.P3F, {
+                                          (0, r.jsx)(a.P3F, {
                                               className: p.action,
-                                              onClick: _,
-                                              "aria-label": g.intl.string(g.t.bt75u7),
-                                              children: (0, r.jsx)(s.vdY, {
+                                              onClick: v,
+                                              "aria-label": m.intl.string(m.t.bt75u7),
+                                              children: (0, r.jsx)(a.vdY, {
                                                   size: "xs",
                                                   color: "currentColor",
                                                   className: p.icon,
                                               }),
                                           }),
-                                          (0, r.jsx)(s.P3F, {
-                                              className: a()(p.action, p.actionRemove),
-                                              onClick: O,
-                                              "aria-label": g.intl.string(g.t.N86XcH),
-                                              children: (0, r.jsx)(s.Dio, {
+                                          (0, r.jsx)(a.P3F, {
+                                              className: s()(p.action, p.actionRemove),
+                                              onClick: C,
+                                              "aria-label": m.intl.string(m.t.N86XcH),
+                                              children: (0, r.jsx)(a.Dio, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: p.icon,
@@ -135,7 +135,7 @@ let h = (e) => {
                                 : null,
                         ],
                     }),
-                    b && (0, r.jsx)(s.$jN, { className: p.spinner }),
+                    x && (0, r.jsx)(a.$jN, { className: p.spinner }),
                 ],
             }),
     });

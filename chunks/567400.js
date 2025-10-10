@@ -1,5 +1,5 @@
-r.d(t, { Y: () => l });
-let n = (0, r(427164).le)({
+n.d(t, { Y: () => l });
+let r = (0, n(427164).le)({
     name: "2025-09-user-profile-wishlist-editing",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -10,5 +10,5 @@ let n = (0, r(427164).le)({
 });
 function l(e) {
     let { location: t } = e;
-    return n.useConfig({ location: t }).enabled;
+    return r.useConfig({ location: t }).enabled;
 }

@@ -72,7 +72,7 @@ let C = v.QZA.CLOSED,
     P = !1,
     w = !1,
     D = null,
-    x = [
+    L = [
         "name",
         "type",
         "topic_",
@@ -96,7 +96,7 @@ let C = v.QZA.CLOSED,
         "iconEmoji",
         "themeColor",
     ];
-function L(e) {
+function x(e) {
     if (null == a || a.id !== e) return !1;
     if (a === o) {
         let t = O.Z.getChannel(e);
@@ -111,7 +111,7 @@ function L(e) {
     }
     return !0;
 }
-function j(e) {
+function M(e) {
     let t = O.Z.getChannel(e.channelId);
     if (null == t) return k();
     (C = v.QZA.OPEN),
@@ -124,7 +124,7 @@ function j(e) {
     let n = o.isModeratorReportChannel() ? v.CoT.PERMISSIONS : v.CoT.OVERVIEW;
     return (
         (N = {}),
-        M({
+        j({
             type: "CHANNEL_SETTINGS_SET_SECTION",
             section: null != r ? r : n,
             subsection: i,
@@ -132,7 +132,7 @@ function j(e) {
         !0
     );
 }
-function M(e) {
+function j(e) {
     (r = e.section),
         (i = e.subsection),
         null != o &&
@@ -176,9 +176,9 @@ let Z = d().debounce(() => {
     if (null == o || null == a) return !1;
     let e = o.toJS(),
         t = a.toJS();
-    x.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
+    L.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
 }, 500);
-function V(e) {
+function F(e) {
     let {
         name: t,
         channelType: n,
@@ -230,7 +230,7 @@ function V(e) {
         null != S && (o = o.set("themeColor", S)),
         Z();
 }
-function F(e) {
+function V(e) {
     return new E.Z({
         code: e.code,
         temporary: e.temporary,
@@ -248,17 +248,17 @@ function F(e) {
 function H(e) {
     (R = {}),
         e.invites.forEach((e) => {
-            R[e.code] = F(e);
+            R[e.code] = V(e);
         });
 }
 function Y(e) {
     (R = T({}, R)), delete R[e.code];
 }
 function W(e) {
-    R = A(T({}, R), { [e.invite.code]: F(e.invite) });
+    R = A(T({}, R), { [e.invite.code]: V(e.invite) });
 }
 function K(e) {
-    return !!L(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
+    return !!x(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
 }
 function z(e) {
     let { channels: t } = e;
@@ -329,7 +329,7 @@ class J extends (c = p.ZP.Store) {
 }
 I(J, "displayName", "ChannelSettingsStore");
 let $ = new J(m.Z, {
-        CHANNEL_SETTINGS_INIT: j,
+        CHANNEL_SETTINGS_INIT: M,
         CHANNEL_SETTINGS_SUBMIT: U,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: G,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: B,
@@ -337,8 +337,8 @@ let $ = new J(m.Z, {
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: Q,
-        CHANNEL_SETTINGS_UPDATE: V,
-        CHANNEL_SETTINGS_SET_SECTION: M,
+        CHANNEL_SETTINGS_UPDATE: F,
+        CHANNEL_SETTINGS_SET_SECTION: j,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,
         CHANNEL_DELETE: X,

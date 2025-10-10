@@ -1,16 +1,16 @@
 n.d(t, { x: () => a }), n(388685);
-var r = n(647438);
+var l = n(647438);
 function a(e, t, n) {
-    let a = r.useRef(null),
-        [s, l] = r.useState(!1),
-        i = r.useCallback(() => {
+    let a = l.useRef(null),
+        [s, r] = l.useState(!1),
+        i = l.useCallback(() => {
             if (e && null !== a.current) {
                 var n;
-                l((null == (n = a.current) ? void 0 : n.offsetHeight) > 2.5 * t);
+                r((null == (n = a.current) ? void 0 : n.offsetHeight) > 2.5 * t);
             }
-        }, [l, e, t]);
+        }, [r, e, t]);
     return (
-        r.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             i();
         }, [i, e, n]),
         {

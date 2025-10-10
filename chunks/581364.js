@@ -2,18 +2,18 @@ n.d(t, {
     $z: () => R,
     BH: () => C,
     BO: () => w,
-    D7: () => L,
+    D7: () => x,
     Dd: () => N,
     Ft: () => D,
     TK: () => B,
-    X0: () => M,
+    X0: () => j,
     XA: () => k,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
     qJ: () => U,
     t0: () => G,
-    tI: () => j,
+    tI: () => M,
 }),
     n(388685),
     n(953529),
@@ -301,13 +301,13 @@ function D(e) {
     if (n.ownerId === r.userId || t.can(g.Pl.ADMINISTRATOR, n)) return !0;
     let s = n.id;
     if (null != a) {
-        let e = x(r, s, a);
+        let e = L(r, s, a);
         if ("boolean" == typeof e) return e;
     }
-    let l = x(r, s, i);
+    let l = L(r, s, i);
     return ("boolean" != typeof l || !!l) && (null == o || (!c.fS(o, w) && t.can(o, n)));
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
@@ -319,7 +319,7 @@ function x(e, t, n) {
     let a = n[(0, f.rE)(t, p.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
-function L(e) {
+function x(e) {
     switch (e) {
         case p.bB.CHAT:
         case p.bB.APPLICATION_LAUNCHER:
@@ -341,13 +341,13 @@ function L(e) {
             return _.d.SlashCommand;
     }
 }
-function j(e) {
+function M(e) {
     if (null != e)
         if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function M(e, t) {
+function j(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,

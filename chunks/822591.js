@@ -1,5 +1,5 @@
 n.d(t, {
-    X: () => Z,
+    X: () => R,
     Z: () => L,
 }),
     n(953529),
@@ -75,8 +75,8 @@ function w(e, t) {
         e
     );
 }
-let R = "dismissedCommunityFeaturesUpsell",
-    Z = () => {
+let Z = "dismissedCommunityFeaturesUpsell",
+    R = () => {
         let e,
             {
                 guild: t,
@@ -113,7 +113,7 @@ let R = "dismissedCommunityFeaturesUpsell",
     },
     D = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [c, g] = i.useState(!0 === o.K.get(R)),
+            [c, g] = i.useState(!0 === o.K.get(Z)),
             p = (0, s.e7)([x.Z], () => {
                 var e;
                 return null != (e = x.Z.getMemberCount(l.id)) ? e : 0;
@@ -178,7 +178,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                           size: d.zx.Sizes.NONE,
                           className: S.upsellClose,
                           onClick: () => {
-                              o.K.set(R, !0), g(!0);
+                              o.K.set(Z, !0), g(!0);
                           },
                           children: (0, r.jsx)(u.Dio, {
                               size: "md",
@@ -252,7 +252,7 @@ let R = "dismissedCommunityFeaturesUpsell",
             })),
             a = (0, s.e7)([h.ZP], () => (null != e ? h.ZP.getChannels(e.id) : null)),
             d = i.useMemo(N.jb, []),
-            g = !0 !== o.K.get(R);
+            g = !0 !== o.K.get(Z);
         if (null == e) return null;
         let m = [];
         null != a &&
@@ -352,7 +352,7 @@ let R = "dismissedCommunityFeaturesUpsell",
                         });
                 })(),
                 (0, r.jsx)(u.izJ, { className: S.divider }),
-                (0, r.jsx)(u.NIc, {
+                (0, r.jsx)(u.gNt, {
                     label: I.intl.string(I.t.c1BmbG),
                     description: I.intl.string(I.t.aQzVFx),
                     layout: "horizontal",

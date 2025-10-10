@@ -77,7 +77,7 @@ function R(e, t, n) {
 function P(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        let [n, r, a] = x(t.guildId, t);
+        let [n, r, a] = L(t.guildId, t);
         return n
             ? (t.sessionId === i && null != r && null != a && a.channelId !== r.channelId && (p += 1), h++, !0)
             : e;
@@ -86,7 +86,7 @@ function P(e) {
 function w(e) {
     let t = !1;
     for (let n of e.voiceStates) {
-        let [r] = x(e.guildId, n);
+        let [r] = L(e.guildId, n);
         t = t || r;
     }
     for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
@@ -96,7 +96,7 @@ function D(e) {
     let { userId: t, channelId: n, platform: r } = e;
     v[I(t, n)] = r;
 }
-function x(e, t) {
+function L(e, t) {
     return R(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
@@ -118,17 +118,17 @@ function x(e, t) {
         }
     });
 }
-function L(e) {
+function x(e) {
     let { guildId: t, channelId: n } = e,
         [i] = R(t, r, (e) => (null == e ? void 0 : e.set("channelId", n)));
     return i;
 }
-function j(e) {
+function M(e) {
     let { user: t, sessionId: n } = e,
         a = null != r && r !== t.id;
     return a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a;
 }
-function M() {
+function j() {
     (m = {}), (b = {}), (O = {}), (y = {}), E.clear();
 }
 function k(e) {
@@ -226,10 +226,10 @@ class Z extends (a = l.ZP.Store) {
 }
 _(Z, "displayName", "VoiceStateStore");
 let F = new Z(c.Z, {
-    CONNECTION_OPEN: j,
-    CONNECTION_OPEN_SUPPLEMENTAL: M,
+    CONNECTION_OPEN: M,
+    CONNECTION_OPEN_SUPPLEMENTAL: j,
     OVERLAY_INITIALIZE: k,
-    VOICE_CHANNEL_SELECT: L,
+    VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: P,
     GUILD_DELETE: U,
     GUILD_CREATE: U,

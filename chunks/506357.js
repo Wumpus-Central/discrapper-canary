@@ -78,10 +78,10 @@ function S(e) {
         N = (0, a.e7)([u.Z], () => (null != C ? u.Z.getGuild(C) : null), [C]),
         { shouldShowIncidentActions: R, incidentData: P, isUnderLockdown: w } = (0, p.mI)(C),
         D = (0, l.n2)(null != (t = null == N ? void 0 : N.id) ? t : g.lds),
-        x = i.useCallback(() => null != N && (0, c._X)(N.id), [N]);
+        L = i.useCallback(() => null != N && (0, c._X)(N.id), [N]);
     if (null == N || null == P || !R) return null;
-    let L = (e) => {
-            if (e && D && A !== E.oC.MEMBER_SAFETY && x())
+    let x = (e) => {
+            if (e && D && A !== E.oC.MEMBER_SAFETY && L())
                 return void _.default.track(g.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: g.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: N.id,
@@ -102,12 +102,12 @@ function S(e) {
                     );
             });
         },
-        j = (0, r.jsx)(s.Z, {
+        M = (0, r.jsx)(s.Z, {
             className: y.guildIcon,
             guild: N,
             size: s.Z.Sizes.MINI,
         }),
-        M = (0, m.OY)(P, N.name);
+        j = (0, m.OY)(P, N.name);
     if (null != (null != (O = P.dmsDisabledUntil) ? O : P.invitesDisabledUntil) && w)
         return (0, r.jsxs)(o.qXd, {
             className: y.notice,
@@ -117,11 +117,11 @@ function S(e) {
                     onClick: I,
                     noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
                 }),
-                j,
                 M,
+                j,
                 (0, r.jsx)(o.EyT, {
                     className: y.actionButton,
-                    onClick: () => L(!1),
+                    onClick: () => x(!1),
                     children: (0, r.jsxs)("div", {
                         className: y.actionButtonInner,
                         children: [
@@ -149,12 +149,12 @@ function S(e) {
                 onClick: I,
                 noticeType: g.kVF.GUILD_RAID_NOTIFICATION,
             }),
-            j,
+            M,
             k,
             !U &&
                 (0, r.jsx)(o.EyT, {
                     className: y.actionButton,
-                    onClick: () => L(!0),
+                    onClick: () => x(!0),
                     children: (0, r.jsx)("div", {
                         className: y.actionButtonInner,
                         children: (0, r.jsx)("span", { children: b.intl.string(b.t.zDJDho) }),

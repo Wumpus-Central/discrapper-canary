@@ -56,41 +56,41 @@ let d = {
                     P = new Map(),
                     w = !0,
                     D = C[0],
-                    x = 0;
-                x < C.length;
-                x++
+                    L = 0;
+                L < C.length;
+                L++
             ) {
-                var L = C[x],
-                    j = (0, i.Z)(L),
-                    M = (0, c.Z)(L) === l.BL,
-                    k = [l.we, l.I].indexOf(j) >= 0,
+                var x = C[L],
+                    M = (0, i.Z)(x),
+                    j = (0, c.Z)(x) === l.BL,
+                    k = [l.we, l.I].indexOf(M) >= 0,
                     U = k ? "width" : "height",
                     G = (0, o.Z)(t, {
-                        placement: L,
+                        placement: x,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: b,
                         padding: m,
                     }),
-                    B = k ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
+                    B = k ? (j ? l.F2 : l.t$) : j ? l.I : l.we;
                 N[U] > R[U] && (B = (0, r.Z)(B));
                 var Z = (0, r.Z)(B),
-                    V = [];
+                    F = [];
                 if (
-                    (f && V.push(G[j] <= 0),
-                    p && V.push(G[B] <= 0, G[Z] <= 0),
-                    V.every(function (e) {
+                    (f && F.push(G[M] <= 0),
+                    p && F.push(G[B] <= 0, G[Z] <= 0),
+                    F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (D = L), (w = !1);
+                    (D = x), (w = !1);
                     break;
                 }
-                P.set(L, V);
+                P.set(x, F);
             }
             if (w)
                 for (
-                    var F = O ? 3 : 1,
+                    var V = O ? 3 : 1,
                         H = function (e) {
                             var t = C.find(function (t) {
                                 var n = P.get(t);
@@ -101,7 +101,7 @@ let d = {
                             });
                             if (t) return (D = t), "break";
                         },
-                        Y = F;
+                        Y = V;
                     Y > 0 && "break" !== H(Y);
                     Y--
                 );

@@ -1,10 +1,10 @@
 n.d(t, {
-    P: () => s,
-    _: () => o,
+    P: () => o,
+    _: () => a,
 });
 var r = n(818083),
     i = n(751823);
-let a = (0, r.B)({
+let l = (0, r.B)({
     kind: "user",
     id: "2025-08_device_changed_notification",
     label: "Device-changed notification experiment",
@@ -17,10 +17,10 @@ let a = (0, r.B)({
         },
     ],
 });
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.L.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return a.getCurrentConfig(
+    return l.getCurrentConfig(
         { location: t },
         {
             disable: r,
@@ -28,10 +28,10 @@ function o(e) {
         },
     );
 }
-function s(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.L.useExperiment({ location: t }, { autoTrackExposure: n });
-    return a.useExperiment(
+    return l.useExperiment(
         { location: t },
         {
             disable: r,

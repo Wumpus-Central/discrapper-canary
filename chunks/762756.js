@@ -1,18 +1,18 @@
-n.d(t, { Z: () => j }), n(388685);
-var r,
-    i = n(951288),
-    a = n(647438),
+n.d(t, { Z: () => v }), n(388685);
+var a,
+    r = n(951288),
+    i = n(647438),
     l = n(120356),
-    c = n.n(l),
+    s = n.n(l),
     o = n(873546),
-    s = n(481060),
-    u = n(599857),
-    d = n(63063),
-    f = n(1964),
+    c = n(481060),
+    d = n(599857),
+    u = n(63063),
+    m = n(1964),
     p = n(981631),
-    y = n(388032),
-    m = n(222198);
-function h(e, t, n) {
+    h = n(388032),
+    x = n(222198);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,26 +25,26 @@ function h(e, t, n) {
         e
     );
 }
-let g = d.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class b extends (r = a.PureComponent) {
+let b = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class g extends (a = i.PureComponent) {
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
-        return (0, i.jsx)(i.Fragment, {
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
+        return (0, r.jsx)(r.Fragment, {
             children: e.map((e) =>
                 e === p.PUi.CAPTCHA
-                    ? (0, i.jsx)(
-                          u.Z,
+                    ? (0, r.jsx)(
+                          d.Z,
                           {
-                              onVerify: r,
+                              onVerify: a,
                               theme: n,
                           },
                           t,
                       )
-                    : (0, i.jsx)(
-                          s.zxk,
+                    : (0, r.jsx)(
+                          c.zxk,
                           {
                               onClick: () => this.handleClick(e),
-                              text: f.Z.getButtonTitle(e),
+                              text: m.Z.getButtonTitle(e),
                           },
                           e,
                       ),
@@ -52,48 +52,48 @@ class b extends (r = a.PureComponent) {
         });
     }
     render() {
-        return (0, i.jsxs)(s.Kqy, {
+        return (0, r.jsxs)(c.Kqy, {
             gap: 16,
-            className: m.verification,
+            className: x.verification,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(s.Kqy, {
+                (0, r.jsxs)(c.Kqy, {
                     gap: 16,
                     fullWidth: !1,
-                    className: c()(m.container, { [m.isMobile]: o.tq }),
+                    className: s()(x.container, { [x.isMobile]: o.tq }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(s.Kqy, {
+                        (0, r.jsxs)(c.Kqy, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: m.image }),
-                                (0, i.jsxs)(s.Kqy, {
-                                    className: m.textContainer,
+                                (0, r.jsx)("div", { className: x.image }),
+                                (0, r.jsxs)(c.Kqy, {
+                                    className: x.textContainer,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(s.X6q, {
+                                        (0, r.jsx)(c.X6q, {
                                             variant: "heading-xl/normal",
-                                            children: y.intl.string(y.t.Iz0kDg),
+                                            children: h.intl.string(h.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(s.Text, {
+                                        (0, r.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: y.intl.format(y.t["0rqMV1"], { helpCenterURL: g }),
+                                            children: h.intl.format(h.t["0rqMV1"], { helpCenterURL: b }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(s.Kqy, {
+                        (0, r.jsx)(c.Kqy, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -102,36 +102,36 @@ class b extends (r = a.PureComponent) {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(s.Kqy, {
+                (0, r.jsxs)(c.Kqy, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            className: m.footer,
-                            children: y.intl.string(y.t.qqYun5),
+                            className: x.footer,
+                            children: h.intl.string(h.t.qqYun5),
                         }),
-                        (0, i.jsxs)(s.Kqy, {
+                        (0, r.jsxs)(c.Kqy, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
-                                    className: m.footer,
-                                    children: y.intl.format(y.t.WL51ZW, { supportURL: d.Z.getSubmitRequestURL() }),
+                                    className: x.footer,
+                                    children: h.intl.format(h.t.WL51ZW, { supportURL: u.Z.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", {
-                                    className: c()(m.footer, m.footerBullet),
+                                (0, r.jsx)("div", {
+                                    className: s()(x.footer, x.footerBullet),
                                     children: "\u2022",
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
-                                    className: m.footer,
-                                    children: y.intl.format(y.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
+                                    className: x.footer,
+                                    children: h.intl.format(h.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -142,15 +142,15 @@ class b extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, "handleClick", (e) => {
+            f(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-h(b, "defaultProps", {
+f(g, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,
 });
-let j = b;
+let v = g;

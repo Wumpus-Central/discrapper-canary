@@ -1,39 +1,39 @@
-r.d(t, { Z: () => h });
-var n = r(951288),
-    i = r(647438),
-    a = r(442837),
-    l = r(481060),
-    o = r(239091),
-    s = r(129861),
-    c = r(138182),
-    u = r(956221),
-    d = r(747017),
-    m = r(140701),
-    p = r(545957),
-    b = r(158776),
-    f = r(652853),
-    j = r(981631),
-    v = r(671955),
-    x = r(777267);
-let y = l.EFr.SIZE_40,
-    O = (0, l.pxk)(y);
-function h(e) {
-    let { user: t, status: h, guildId: g, channelId: P, onSelect: w } = e,
-        { theme: Z, themeType: N } = (0, f.z)(),
-        S = i.useMemo(() => t.isNonUserBot() || (0, m.W)(t, P), [t, P]),
-        { activities: k, isMobileOnline: C } = (0, a.cj)([b.Z], () => ({
-            activities: b.Z.getActivities(t.id),
-            isMobileOnline: b.Z.isMobileOnline(t.id),
+n.d(t, { Z: () => v });
+var r = n(951288),
+    i = n(647438),
+    l = n(442837),
+    o = n(481060),
+    a = n(239091),
+    s = n(129861),
+    c = n(138182),
+    u = n(956221),
+    d = n(747017),
+    p = n(140701),
+    h = n(545957),
+    f = n(158776),
+    g = n(652853),
+    m = n(981631),
+    b = n(671955),
+    _ = n(777267);
+let y = o.EFr.SIZE_40,
+    O = (0, o.pxk)(y);
+function v(e) {
+    let { user: t, status: v, guildId: j, channelId: x, onSelect: C } = e,
+        { theme: E, themeType: S } = (0, g.z)(),
+        I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, x), [t, x]),
+        { activities: P, isMobileOnline: N } = (0, l.cj)([f.Z], () => ({
+            activities: f.Z.getActivities(t.id),
+            isMobileOnline: f.Z.isMobileOnline(t.id),
         })),
-        E = (0, p.Z)(t.id),
-        { voiceActivityStatusEnabled: M } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
-        { voiceChannel: I } = (0, u.Z)({
-            userId: M ? t.id : void 0,
-            guildId: g,
+        Z = (0, h.Z)(t.id),
+        { voiceActivityStatusEnabled: w } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
+        { voiceChannel: T } = (0, u.Z)({
+            userId: w ? t.id : void 0,
+            guildId: j,
         });
-    return (0, n.jsxs)(l.P3F, {
+    return (0, r.jsxs)(o.P3F, {
         focusProps:
-            N === v.l.MODAL_V2
+            S === b.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -42,52 +42,52 @@ function h(e) {
                       },
                   }
                 : { offset: { right: 8 } },
-        className: x.row,
-        onClick: w,
+        className: _.row,
+        onClick: C,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([r.e("79695"), r.e("69220")]).then(r.bind(r, 881351));
-                return (r) => {
-                    var i, a;
-                    return (0, n.jsx)(
+            (0, a.jW)(e, async () => {
+                let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
+                return (n) => {
+                    var i, l;
+                    return (0, r.jsx)(
                         e,
                         ((i = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = r);
                                     });
                             }
                             return e;
-                        })({}, r)),
-                        (a = a = { user: t }),
+                        })({}, n)),
+                        (l = l = { user: t }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
-                                  var r = Object.keys(e);
+                                  var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      r.push.apply(r, n);
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
                                   }
-                                  return r;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
                         i),
                     );
@@ -95,28 +95,28 @@ function h(e) {
             });
         },
         children: [
-            (0, n.jsx)(l.qEK, {
-                src: t.getAvatarURL(g, O),
+            (0, r.jsx)(o.qEK, {
+                src: t.getAvatarURL(j, O),
                 "aria-label": t.username,
                 size: y,
-                status: S ? j.Skl.UNKNOWN : h,
-                statusBackdropColor: S ? void 0 : (0, l.QFD)(Z),
-                isMobile: C,
-                className: x.avatar,
+                status: I ? m.Skl.UNKNOWN : v,
+                statusBackdropColor: I ? void 0 : (0, o.QFD)(E),
+                isMobile: N,
+                className: _.avatar,
             }),
-            (0, n.jsxs)("div", {
-                className: x.details,
+            (0, r.jsxs)("div", {
+                className: _.details,
                 children: [
-                    (0, n.jsx)(s.Z, {
+                    (0, r.jsx)(s.Z, {
                         user: t,
-                        className: x.tag,
-                        discriminatorClass: x.discriminator,
+                        className: _.tag,
+                        discriminatorClass: _.discriminator,
                     }),
-                    (0, n.jsx)(d.Z, {
+                    (0, r.jsx)(d.Z, {
                         user: t,
-                        activities: k,
-                        applicationStream: E,
-                        voiceChannel: I,
+                        activities: P,
+                        applicationStream: Z,
+                        voiceChannel: T,
                     }),
                 ],
             }),

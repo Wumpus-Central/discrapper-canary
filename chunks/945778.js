@@ -1,15 +1,15 @@
-r.r(t), r.d(t, { default: () => o });
-var n = r(951288);
-r(647438);
-var a = r(238246),
-    i = r(153731),
-    l = r(388032);
+n.r(t), n.d(t, { default: () => o });
+var r = n(951288);
+n(647438);
+var a = n(238246),
+    i = n(153731),
+    l = n(388032);
 function o(e) {
     let { windowKey: t } = e;
-    return (0, n.jsx)(a.Z, {
+    return (0, r.jsx)(a.Z, {
         withTitleBar: !0,
         windowKey: t,
         title: l.intl.string(l.t["5I/1fn"]),
-        children: (0, n.jsx)(i.Z, {}),
+        children: (0, r.jsx)(i.Z, {}),
     });
 }

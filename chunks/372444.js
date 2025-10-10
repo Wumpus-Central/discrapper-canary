@@ -3,27 +3,27 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(755721),
-    s = n(481060),
+    s = n(755721),
+    a = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(678558),
     u = n(388032),
-    m = n(736692);
-let g = (e) => {
+    g = n(736692);
+let m = (e) => {
     let {
             guild: t,
             analyticsLocation: n,
             className: i,
             buttonProps: l = {
-                color: a.Tt.BRAND_INVERTED,
+                color: s.Tt.BRAND_INVERTED,
                 text: u.intl.string(u.t.oqweNz),
             },
         } = e,
-        { color: s, text: o } = l,
+        { color: a, text: o } = l,
         c = t.premiumTier + 1;
     return (0, r.jsx)(d.Z, {
-        color: s,
+        color: a,
         analyticsLocation: n,
         guild: t,
         buttonText: o,
@@ -35,34 +35,34 @@ function p(e) {
     let {
             header: t,
             text: i,
-            analyticsLocation: a,
+            analyticsLocation: s,
             guild: d,
             className: u,
             textColor: p,
-            headerColor: h,
-            buttonProps: f,
+            headerColor: f,
+            buttonProps: h,
         } = e,
-        { analyticsLocations: b } = (0, c.ZP)(o.Z.GUILD_BOOSTING_UPSELL_BANNER);
+        { analyticsLocations: x } = (0, c.ZP)(o.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, r.jsx)(c.Gt, {
-        value: b,
+        value: x,
         children: (0, r.jsxs)("div", {
-            className: l()(m.banner, u),
+            className: l()(g.banner, u),
             children: [
                 (0, r.jsx)("img", {
-                    className: m.__invalid_headerGraphic,
+                    className: g.__invalid_headerGraphic,
                     alt: "",
                     src: n(322393),
                 }),
                 (0, r.jsxs)("div", {
-                    className: m.content,
+                    className: g.content,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-lg/semibold",
-                            color: null != h ? h : "always-white",
-                            className: m.header,
+                            color: null != f ? f : "always-white",
+                            className: g.header,
                             children: t,
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: null != p ? p : "always-white",
                             children: i,
@@ -70,12 +70,12 @@ function p(e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: m.ctaContainer,
-                    children: (0, r.jsx)(g, {
+                    className: g.ctaContainer,
+                    children: (0, r.jsx)(m, {
                         guild: d,
-                        analyticsLocation: a,
-                        className: m.button,
-                        buttonProps: f,
+                        analyticsLocation: s,
+                        className: g.button,
+                        buttonProps: h,
                     }),
                 }),
             ],

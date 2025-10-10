@@ -1,6 +1,6 @@
 n.d(t, {
     PH: () => R,
-    ZP: () => V,
+    ZP: () => F,
     sQ: () => C,
 }),
     n(388685);
@@ -235,14 +235,14 @@ function w() {
 function D() {
     B();
 }
-function x(e) {
+function L(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { guildId: n, userId: r } = t;
         return T(null != n ? n : g.ME).updateVoiceState(r) || e;
     }, !1);
 }
-function L(e) {
+function x(e) {
     var t, n;
     let r = !1,
         i = new Set(null == (t = I[e.guildId]) ? void 0 : t.getUserIds()),
@@ -252,12 +252,12 @@ function L(e) {
     for (let t of i) o.has(t) || (r = T(e.guildId).updateMember(t) || r);
     return r;
 }
-function j(e) {
+function M(e) {
     let { guildId: t } = e,
         n = u.default.getId();
     return null != n && T(null != t ? t : g.ME).updateVoiceState(n);
 }
-function M() {
+function j() {
     return a().reduce(I, (e, t) => t.updateUsers() || e, !1);
 }
 function k(e) {
@@ -283,7 +283,7 @@ function B() {
 }
 class Z extends (r = o.ZP.Store) {
     initialize() {
-        B(), this.waitFor(u.default, _.default, f.ZP, p.Z), this.syncWith([_.default], M);
+        B(), this.waitFor(u.default, _.default, f.ZP, p.Z), this.syncWith([_.default], j);
     }
     getVoiceStates(e) {
         return T(null != e ? e : g.ME).getVoiceStates();
@@ -310,13 +310,13 @@ class Z extends (r = o.ZP.Store) {
     }
 }
 E(Z, "displayName", "SortedVoiceStateStore");
-let V = new Z(l.Z, {
+let F = new Z(l.Z, {
     CONNECTION_OPEN: w,
     OVERLAY_INITIALIZE: D,
-    VOICE_CHANNEL_SELECT: j,
-    VOICE_STATE_UPDATES: x,
+    VOICE_CHANNEL_SELECT: M,
+    VOICE_STATE_UPDATES: L,
     GUILD_MEMBER_UPDATE: k,
     GUILD_CREATE: U,
     GUILD_DELETE: G,
-    PASSIVE_UPDATE_V2: L,
+    PASSIVE_UPDATE_V2: x,
 });

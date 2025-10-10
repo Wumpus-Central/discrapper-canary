@@ -66,7 +66,7 @@ function f(e) {
     return Z && e instanceof Map;
 }
 function _(e) {
-    return V && e instanceof Set;
+    return F && e instanceof Set;
 }
 function p(e) {
     return e.o || e.t;
@@ -218,13 +218,13 @@ function D(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function x(e) {
-    e.P || ((e.P = !0), e.l && x(e.l));
-}
 function L(e) {
+    e.P || ((e.P = !0), e.l && L(e.l));
+}
+function x(e) {
     e.o || (e.o = h(e.t));
 }
-function j(e, t, n) {
+function M(e, t, n) {
     var r = f(t)
         ? b("MapSet").F(t, n)
         : _(t)
@@ -256,7 +256,7 @@ function j(e, t, n) {
             : b("ES5").J(t, n);
     return (n ? n.A : O()).p.push(r), r;
 }
-function M(e) {
+function j(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
@@ -296,8 +296,8 @@ var U,
     G,
     B = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
     Z = "undefined" != typeof Map,
-    V = "undefined" != typeof Set,
-    F = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
+    F = "undefined" != typeof Set,
+    V = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
     H = B ? Symbol.for("immer-nothing") : (((U = {})["immer-nothing"] = !0), U),
     Y = B ? Symbol.for("immer-draftable") : "__$immer_draftable",
     W = B ? Symbol.for("immer-state") : "__$immer_state",
@@ -334,7 +334,7 @@ var U,
                     return i ? ("value" in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === w(e.t, t) ? (L(e), (e.o[t] = j(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in p(e);
@@ -350,7 +350,7 @@ var U,
                     a = null == i ? void 0 : i[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
-                L(e), x(e);
+                x(e), L(e);
             }
             return (
                 (e.o[t] === n && (void 0 !== n || t in e.o)) ||
@@ -361,7 +361,7 @@ var U,
         },
         deleteProperty: function (e, t) {
             return (
-                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), x(e), L(e)) : delete e.R[t], e.o && delete e.o[t], !0
             );
         },
         getOwnPropertyDescriptor: function (e, t) {
@@ -401,7 +401,7 @@ o(J, function (e, t) {
 var ee = new ((function () {
         function e(e) {
             var t = this;
-            (this.O = F),
+            (this.O = V),
                 (this.D = !0),
                 (this.produce = function (e, n, i) {
                     if ("function" == typeof e && "function" != typeof n) {
@@ -422,7 +422,7 @@ var ee = new ((function () {
                     }
                     if (("function" != typeof n && r(6), void 0 !== i && "function" != typeof i && r(7), a(e))) {
                         var c = S(t),
-                            u = j(t, e, void 0),
+                            u = M(t, e, void 0),
                             d = !0;
                         try {
                             (o = n(u)), (d = !1);
@@ -476,9 +476,9 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                a(e) || r(8), i(e) && (e = M(e));
+                a(e) || r(8), i(e) && (e = j(e));
                 var t = S(this),
-                    n = j(this, e, void 0);
+                    n = M(this, e, void 0);
                 return (n[W].C = !0), T(t), n;
             }),
             (t.finishDraft = function (e, t) {
@@ -489,7 +489,7 @@ var ee = new ((function () {
                 this.D = e;
             }),
             (t.setUseProxies = function (e) {
-                e && !F && r(20), (this.O = e);
+                e && !V && r(20), (this.O = e);
             }),
             (t.applyPatches = function (e, t) {
                 for (n = t.length - 1; n >= 0; n--) {

@@ -1,7 +1,7 @@
 n.d(t, { l: () => o });
 var r = n(647438),
-    a = n(263568),
-    l = n(367907),
+    l = n(263568),
+    a = n(367907),
     i = n(981631);
 function o(e, t) {
     return {
@@ -18,13 +18,13 @@ function o(e, t) {
                           ? (o += 1)
                           : null != t.mediaAttachmentState && (n += 1));
             }),
-                l.ZP.trackWithMetadata(i.rMx.POLL_CREATION_CANCELLED, {
+                a.ZP.trackWithMetadata(i.rMx.POLL_CREATION_CANCELLED, {
                     answers_count: e.length,
                     attachments_count: n,
                     emojis_count: r,
                     stickers_count: o,
                     allow_multiselect: t,
-                    layout_type: a.C.DEFAULT,
+                    layout_type: l.C.DEFAULT,
                 });
         }, [e, t]),
     };

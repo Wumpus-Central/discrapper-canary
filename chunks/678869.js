@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(804061), n(704826), n(35282), n(539854);
+n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(423875),
@@ -45,7 +45,7 @@ let D = (e, t, n) => {
         })
         .replaceAll("*", "");
 };
-function x(e) {
+function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
         { now: a } = (0, T.tS)(),
@@ -84,47 +84,47 @@ function x(e) {
               ],
           });
 }
-function L(e) {
+function x(e) {
     var t;
     let n,
         m,
         T,
-        { channel: R, entry: L, closePopout: j, onReaction: M, onVoiceChannelPreview: k } = e,
-        { largeImage: U } = (0, g.rv)({ entry: L }),
-        { activity: G, currentEntry: B, artist: Z, title: V, user: F } = (0, v.pi)(L),
+        { channel: R, entry: x, closePopout: M, onReaction: j, onVoiceChannelPreview: k } = e,
+        { largeImage: U } = (0, g.rv)({ entry: x }),
+        { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
         K = (0, o.e7)(
             [u.Z, p.default],
             () =>
-                (null == G ? void 0 : G.type) === A.IIU.LISTENING && null != F
-                    ? (0, f.Z)(u.Z, p.default, F, G)
+                (null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V
+                    ? (0, f.Z)(u.Z, p.default, V, G)
                     : void 0,
-            [G, F],
+            [G, V],
             s.Z,
         ),
         z = i.useCallback(() => {
             var e;
-            if (null == R || null == F) return;
+            if (null == R || null == V) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
-                n = (0, E.T_)(null != t ? { start: t } : L, Date.now());
+                n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
-                user: F,
+                user: V,
                 channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: Z,
                 description: D(
                     {
                         artist: Z,
-                        media: V,
+                        media: F,
                     },
                     R,
-                    F,
+                    V,
                 ),
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n }),
             });
-        }, [G, Z, R, L, null == U ? void 0 : U.src, H, Y, V, F]);
+        }, [G, Z, R, x, null == U ? void 0 : U.src, H, Y, F, V]);
     if (null == G || null == B) return null;
     let q = Z,
         X = [];
@@ -133,14 +133,14 @@ function L(e) {
             (0, c.aG)(G);
         }),
             (T = () => {
-                (0, c.Z5)(G, F.id);
+                (0, c.Z5)(G, V.id);
             }),
             (n = () => {
                 var e;
                 null != (e = null == W ? void 0 : W()) || (0, c.aG)(G);
             });
         let e = (e) => {
-            (0, c.d$)(G, F.id, e);
+            (0, c.d$)(G, V.id, e);
         };
         if (
             ((q = (0, r.jsx)(d.Z, {
@@ -152,7 +152,7 @@ function L(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, _.Z)(K, C.kG.USER_ACTIVITY_SYNC), j();
+                (0, _.Z)(K, C.kG.USER_ACTIVITY_SYNC), M();
             };
             X.push(
                 (0, r.jsx)(
@@ -173,7 +173,7 @@ function L(e) {
     let Q = (0, r.jsx)(I.wG, {
         onClickThumbnail: T,
         channel: R,
-        entry: L,
+        entry: x,
         headerIcons:
             B.media.provider === a.p.SPOTIFY
                 ? (0, r.jsx)(S.Z, {
@@ -182,25 +182,25 @@ function L(e) {
                       Icon: h.Z,
                   })
                 : null,
-        userDescription: (0, E.kr)(L) ? N.t.Tzx5Dw : N.t.CcVI1d,
-        title: V,
+        userDescription: (0, E.kr)(x) ? N.t.Tzx5Dw : N.t.CcVI1d,
+        title: F,
         onClickTitle: m,
         subtitle: q,
         badges: null,
-        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(x, { activity: G }),
+        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G }),
     });
     return (0, r.jsxs)(I.yR, {
         children: [
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: M,
+                    onReaction: j,
                     onVoiceChannelPreview: k,
-                    user: F,
+                    user: V,
                     channel: R,
                     generateReactionImage: z,
-                    reactionImageAltText: w(Z, F),
-                    entry: L,
+                    reactionImageAltText: w(Z, V),
+                    entry: x,
                     buttons: X,
                 }),
             }),

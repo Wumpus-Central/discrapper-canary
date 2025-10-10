@@ -6,8 +6,8 @@ var r = n(951288),
     s = n(442837),
     l = n(481060),
     c = n(596454),
-    u = n(727637),
-    d = n(607070),
+    u = n(607070),
+    d = n(104505),
     f = n(176354),
     _ = n(300849);
 function p(e) {
@@ -25,8 +25,8 @@ function p(e) {
 function h(e) {
     let { trait: t, ellipsize: n } = e,
         a = i.useRef(null),
-        c = (0, u.Z)(a),
-        f = !(0, s.e7)([d.Z], () => d.Z.useReducedMotion) && c;
+        c = (0, d.X)(a),
+        f = !(0, s.e7)([u.Z], () => u.Z.useReducedMotion) && c;
     return null == t.label || t.label.length <= 0
         ? null
         : (0, r.jsxs)("div", {

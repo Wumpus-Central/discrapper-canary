@@ -27,8 +27,8 @@ var i,
     I = n(292959),
     P = n(158776),
     w = n(944486),
-    N = n(885110),
-    T = n(246946),
+    T = n(885110),
+    N = n(246946),
     D = n(594174),
     k = n(974180),
     R = n(808506),
@@ -53,7 +53,7 @@ function B(e, t, n) {
         e
     );
 }
-function H(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +69,7 @@ function H(e) {
     }
     return e;
 }
-function F(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -107,7 +107,7 @@ function $(e) {
     let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = q[n];
-    clearTimeout(i.timerId), (q = [...q]), t === W._1z.DISMISSED ? q.splice(n, 1) : (q[n] = F(H({}, i), { status: t }));
+    clearTimeout(i.timerId), (q = [...q]), t === W._1z.DISMISSED ? q.splice(n, 1) : (q[n] = H(F({}, i), { status: t }));
 }
 function ee(e) {
     let t = q.length;
@@ -118,10 +118,10 @@ function et(e) {
     return null != t ? t.id : null;
 }
 function en(e, t) {
-    let n = H({}, J, t);
+    let n = F({}, J, t);
     if (2 !== n.priority && !A.default.isInstanceFocused()) return null;
     let i = (0, o.Z)(),
-        r = H(
+        r = F(
             {
                 id: i,
                 status: W._1z.ACTIVE,
@@ -147,7 +147,7 @@ function ei(e) {
                 guildId: e.guildId,
                 location: "OverlayStartRinging",
             }).enabled) ||
-        N.Z.getStatus() === W.Skl.DND ||
+        T.Z.getStatus() === W.Skl.DND ||
         S.QZ.getSetting()
     )
         return !1;
@@ -208,7 +208,7 @@ let es = new er(
                   if (t) return !1;
                   q = q.map((e) =>
                       e.status === W._1z.ACTIVE
-                          ? (clearTimeout(e.timerId), F(H({}, e), { timerId: Q(e.id, e.expirationExternallyManaged) }))
+                          ? (clearTimeout(e.timerId), H(F({}, e), { timerId: Q(e.id, e.expirationExternallyManaged) }))
                           : e,
                   );
               },
@@ -241,7 +241,7 @@ let es = new er(
                                   break;
                               case W.mFx.JOIN_REQUEST:
                                   if (
-                                      null == (i = N.Z.getApplicationActivity(o.id)) ||
+                                      null == (i = T.Z.getApplicationActivity(o.id)) ||
                                       null == i.party ||
                                       i.party.id !== t.activity.party_id
                                   )
@@ -261,7 +261,7 @@ let es = new er(
                   if (
                       ((!A.default.isInstanceLocked() || A.default.isPinned(W.Odu.TEXT)) && r === w.Z.getChannelId()) ||
                       x.Z.isNotificationDisabled(U.n0.TextChat) ||
-                      T.Z.disableNotifications ||
+                      N.Z.disableNotifications ||
                       !(0, b.eF)(o, r)
                   )
                       return !1;

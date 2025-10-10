@@ -17,9 +17,9 @@ var i = n(951288),
 function O(e) {
     let { locked: t, pinned: n, anchorLeft: l } = e,
         O = (0, a.e7)([h.Z], () => h.Z.getSocket()),
-        E = (0, a.e7)([m.ZP], () => m.ZP.isGPUBoosted());
+        v = (0, a.e7)([m.ZP], () => m.ZP.isGPUBoosted());
     (0, d.nU)();
-    let v = (0, a.e7)([p.Z], () => p.Z.getWindow(g.$J)),
+    let E = (0, a.e7)([p.Z], () => p.Z.getWindow(g.$J)),
         [S, b] = (0, d.m8)(O),
         {
             currentFPS: x,
@@ -32,7 +32,7 @@ function O(e) {
             frameCheckerEffect: T,
         } = (0, d.d6)(!0, S, !0),
         [_, P, D] = (0, d.ZF)(O),
-        [A, R] = (0, d.Y5)(_, T, v),
+        [A, R] = (0, d.Y5)(_, T, E),
         k = performance.now() - b.current < d.MC,
         L = P(j, w.current);
     (0, c.ZP)(
@@ -233,7 +233,7 @@ function O(e) {
                               }),
                           }),
                       }),
-                  E &&
+                  v &&
                       (0, i.jsx)(u.Text, {
                           tag: "span",
                           variant: "code",

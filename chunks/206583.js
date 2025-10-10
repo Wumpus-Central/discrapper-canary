@@ -3,9 +3,9 @@ n.d(t, {
     G: () => s,
     Kd: () => i,
     YN: () => r,
-    k4: () => a,
+    k4: () => o,
     kG: () => c,
-    xP: () => o,
+    xP: () => a,
 });
 var r = (function (e) {
         return (e.GLOBAL_FEED = "global feed"), (e.GAME_PROFILE_FEED = "game profile feed"), e;
@@ -13,7 +13,7 @@ var r = (function (e) {
     i = (function (e) {
         return (e[(e.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.CARD_POPOUT_OPEN = 2)] = "CARD_POPOUT_OPEN"),
             (e[(e.REACTION_EMOJI_REACT_SENT = 3)] = "REACTION_EMOJI_REACT_SENT"),
@@ -26,7 +26,7 @@ var r = (function (e) {
             e
         );
     })({});
-let a = 10000,
+let o = 10000,
     s = 7,
     l = "https://www.igdb.com/about";
 var c = (function (e) {

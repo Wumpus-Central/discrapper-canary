@@ -99,7 +99,7 @@ function A(e) {
 }
 function C(e) {
     let { nonce: t } = e;
-    M(t);
+    j(t);
 }
 function N(e) {
     let { message: t } = e;
@@ -133,20 +133,20 @@ function P(e) {
 }
 function w(e) {
     let { nonce: t } = e;
-    M(t);
+    j(t);
 }
 function D(e) {
     let { application: t, nonce: n } = e;
-    (i = t.id), M(n);
+    (i = t.id), j(n);
 }
-function x() {
+function L() {
     (r = void 0), (i = void 0);
 }
-function L(e) {
+function x(e) {
     let { modalKey: t } = e;
     r = t;
 }
-function j(e) {
+function M(e) {
     let t,
         n,
         { participants: r } = e,
@@ -160,7 +160,7 @@ function j(e) {
             null != t &&
             (k(o.nonce), null != t && "channelId" in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
-function M(e) {
+function j(e) {
     var t;
     if (null == e) return !1;
     let n = y[e];
@@ -215,8 +215,8 @@ let G = new U(s.Z, {
     MESSAGE_CREATE: N,
     CHANNEL_SELECT: P,
     INTERACTION_IFRAME_MODAL_CREATE: D,
-    INTERACTION_IFRAME_MODAL_CLOSE: x,
-    INTERACTION_IFRAME_MODAL_KEY_CREATE: L,
+    INTERACTION_IFRAME_MODAL_CLOSE: L,
+    INTERACTION_IFRAME_MODAL_KEY_CREATE: x,
     INTERACTION_MODAL_CREATE: w,
-    EMBEDDED_ACTIVITY_UPDATE_V2: j,
+    EMBEDDED_ACTIVITY_UPDATE_V2: M,
 });

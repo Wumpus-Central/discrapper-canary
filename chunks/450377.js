@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => A,
-    fp: () => R,
+    fp: () => Z,
     k0: () => w,
 }),
     n(388685);
@@ -13,22 +13,22 @@ var r = n(951288),
     c = n(481060),
     d = n(497321),
     u = n(241559),
-    m = n(313789),
-    g = n(518596),
+    g = n(313789),
+    m = n(518596),
     p = n(601964),
     f = n(496675),
     h = n(246946),
-    b = n(594174),
-    x = n(63063),
+    x = n(594174),
+    b = n(63063),
     j = n(78451),
-    v = n(434404),
-    _ = n(999382),
-    O = n(723136),
-    y = n(532804),
-    C = n(181339),
+    _ = n(434404),
+    v = n(999382),
+    C = n(723136),
+    O = n(532804),
+    y = n(181339),
     N = n(981631),
     E = n(388032),
-    I = n(984734);
+    I = n(776853);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,7 +79,7 @@ function P(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
+                    await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
@@ -111,7 +111,7 @@ function P(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(O.Z, {
                 changeTitle: E.intl.string(E.t.TxESJC),
                 value: null == a ? void 0 : a.value,
                 options: s,
@@ -128,8 +128,8 @@ function w(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }),
-                        v.Z.updateGuild({ explicitContentFilter: n });
+                    await _.Z.saveGuild(t.id, { explicitContentFilter: n }),
+                        _.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(E.intl.string(E.t["46Rs3t"]), c.ToastType.FAILURE));
                 }
@@ -142,7 +142,7 @@ function w(e) {
             );
             return (0, j.LJ)(e);
         }, [t]),
-        m = i.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
+        g = i.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             l && (0, r.jsx)(c.izJ, { className: I.divider }),
@@ -161,14 +161,14 @@ function w(e) {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 children: E.intl.format(E.t.BI4ukJ, {
-                                    helpdeskArticle: x.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
+                                    helpdeskArticle: b.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(O.Z, {
                         changeTitle: E.intl.string(E.t["eBd+Ul"]),
-                        value: null == m ? void 0 : m.value,
+                        value: null == g ? void 0 : g.value,
                         options: u,
                         disabled: !a,
                         onChange: d,
@@ -178,25 +178,25 @@ function w(e) {
         ],
     });
 }
-async function R(e, t) {
+async function Z(e, t) {
     if (e.features.has(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
     return (
         t
             ? n.add(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
             : n.delete(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        await v.Z.saveGuild(e.id, { features: n })
+        await _.Z.saveGuild(e.id, { features: n })
     );
 }
-function Z(e) {
+function R(e) {
     let { guild: t } = e,
         n = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(N.oNc.COMMUNITY),
         s = (0, u.n2)(t.id),
         [a, d] = i.useState(t.features.has(N.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        m = i.useCallback(
+        g = i.useCallback(
             async (e) => {
-                d(e), await R(t, e);
+                d(e), await Z(t, e);
             },
             [t],
         );
@@ -212,7 +212,7 @@ function Z(e) {
                               description: E.intl.string(E.t["/ee7yM"]),
                               badge: "beta",
                               checked: a,
-                              onChange: m,
+                              onChange: g,
                               disabled: !n,
                           }),
                           (0, r.jsx)(c.Wn, {
@@ -229,7 +229,7 @@ function Z(e) {
 function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
-        s = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
+        s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
         { isGuildOwnerWithMFA: d, showMFAUserTooltip: u } = i.useMemo(
             () =>
                 null == s
@@ -244,10 +244,10 @@ function D(e) {
             [s, t],
         ),
         h = n === N.BpS.ELEVATED,
-        x = (0, a.throttle)(async (e) => {
+        b = (0, a.throttle)(async (e) => {
             d &&
                 (u ||
-                    (await v.Z.updateMFALevel({
+                    (await _.Z.updateMFALevel({
                         guildId: t.id,
                         level: e ? N.BpS.ELEVATED : N.BpS.NONE,
                         isEnabled: !e,
@@ -264,7 +264,7 @@ function D(e) {
                               label: E.intl.string(E.t.lbBfER),
                               description: E.intl.string(E.t.REr5AA),
                               checked: h,
-                              onChange: x,
+                              onChange: b,
                               disabled: !d,
                           }),
                           u &&
@@ -273,7 +273,7 @@ function D(e) {
                                   textVariant: "text-xs/normal",
                                   children: E.intl.format(E.t.Xz1O0d, {
                                       onClick: function () {
-                                          (0, g.openUserSettings)(m.n.ACCOUNT_PANEL, { section: N.oAB.ACCOUNT });
+                                          (0, m.openUserSettings)(g.n.ACCOUNT_PANEL, { section: N.oAB.ACCOUNT });
                                       },
                                   }),
                               }),
@@ -284,7 +284,7 @@ function D(e) {
         : null;
 }
 function A() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([v.Z], () => v.Z.getProps(), []),
         n = (0, o.e7)([h.Z], () => h.Z.enabled, []);
     return null == e
         ? null
@@ -295,8 +295,8 @@ function A() {
                 tag: c.RB0.H1,
                 titleClassName: I.headerContainer,
                 children: [
-                    (0, r.jsx)(O.z, { guild: e }),
-                    (0, r.jsx)(Z, { guild: e }),
+                    (0, r.jsx)(C.z, { guild: e }),
+                    (0, r.jsx)(R, { guild: e }),
                     (0, r.jsx)(P, { guild: e }),
                     (0, r.jsx)(D, {
                         guild: e,
@@ -306,7 +306,7 @@ function A() {
                     (0, r.jsx)(c.izJ, { className: I.divider }),
                     (0, r.jsx)("div", {
                         className: I.setupContainer,
-                        children: (0, r.jsx)(C.w, { guild: e }),
+                        children: (0, r.jsx)(y.w, { guild: e }),
                     }),
                 ],
             });

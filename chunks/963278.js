@@ -1,10 +1,10 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var l = n(120356),
-    i = n.n(l),
+    s = n.n(l),
     a = n(442837),
-    s = n(481060),
+    i = n(481060),
     o = n(594174),
     c = n(381585),
     u = n(597688),
@@ -12,24 +12,24 @@ var l = n(120356),
     g = n(709999),
     p = n(653126),
     f = n(388032),
-    h = n(310582);
-let C = (e) => {
+    C = n(310582);
+let h = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        C = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
+        h = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
         _ = d.Z.useConfig({ location: "ShelfBlock" }).showCardsV2;
-    return null == C
+    return null == h
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(h.shelfBlockContainer, h.centeredSection),
+              className: s()(C.shelfBlockContainer, C.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: h.blockHeader,
+                      className: C.blockHeader,
                       children: [
-                          (0, r.jsx)(s.X6q, {
+                          (0, r.jsx)(i.X6q, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(s.zxk, {
+                          (0, r.jsx)(i.zxk, {
                               variant: "secondary",
                               text: f.intl.formatToPlainString(f.t.bc9RBA, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId),
@@ -37,12 +37,12 @@ let C = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: h.feed,
+                      className: C.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
-                              let i = u.Z.getCategoryForProduct(e),
+                              let s = u.Z.getCategoryForProduct(e),
                                   a = u.Z.getProduct(e);
-                              return null == i || null == a
+                              return null == s || null == a
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -58,8 +58,8 @@ let C = (e) => {
                                                       g.Z,
                                                       {
                                                           product: a,
-                                                          category: i,
-                                                          user: C,
+                                                          category: s,
+                                                          user: h,
                                                           tab: l,
                                                       },
                                                       e,

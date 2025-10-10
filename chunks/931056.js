@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d }), n(539854), n(388685);
-var r = n(647438),
-    i = n(442837),
+var i = n(647438),
+    r = n(442837),
     l = n(417438),
     a = n(360787),
     o = n(158776);
@@ -9,7 +9,7 @@ let s = [],
     u = [];
 function d(e, t) {
     let [n, d] = (function (e, t) {
-        let [n, l] = r.useMemo(
+        let [n, l] = i.useMemo(
                 () =>
                     (function (e, t) {
                         if (!t.isPrivate()) return [u, c];
@@ -20,12 +20,12 @@ function d(e, t) {
                                     (null == (n = e.activity) ? void 0 : n.party_id) != null
                                 );
                             }),
-                            r = n.map((e) => e.id);
-                        return [n, r];
+                            i = n.map((e) => e.id);
+                        return [n, i];
                     })(e, t),
                 [e, t],
             ),
-            a = (0, i.Wu)([o.Z], () => {
+            a = (0, r.Wu)([o.Z], () => {
                 let e = [];
                 return (
                     n.forEach((t) => {
@@ -33,11 +33,11 @@ function d(e, t) {
                             o.Z.findActivity(
                                 t.author.id,
                                 (e) => {
-                                    var n, r, i;
+                                    var n, i, r;
                                     return (
                                         e.application_id === (null == (n = t.application) ? void 0 : n.id) &&
-                                        (null == (r = e.party) ? void 0 : r.id) ===
-                                            (null == (i = t.activity) ? void 0 : i.party_id)
+                                        (null == (i = e.party) ? void 0 : i.id) ===
+                                            (null == (r = t.activity) ? void 0 : r.party_id)
                                     );
                                 },
                                 null,
@@ -49,16 +49,16 @@ function d(e, t) {
             }, [n]);
         return [
             l,
-            r.useMemo(
+            i.useMemo(
                 () =>
                     (function (e, t) {
                         if (0 === e.length) return s;
                         let n = [];
                         return (
                             e.forEach((e) => {
-                                var r, i;
-                                let l = null == (r = e.application) ? void 0 : r.id,
-                                    a = null == (i = e.activity) ? void 0 : i.party_id;
+                                var i, r;
+                                let l = null == (i = e.application) ? void 0 : i.id,
+                                    a = null == (r = e.activity) ? void 0 : r.party_id;
                                 if (e.id in t || null == l || null == a) return;
                                 let o = e.timestamp.getTime(),
                                     s = {
@@ -79,7 +79,7 @@ function d(e, t) {
         ];
     })(e, t);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             for (let e of d) a.Z.isSubscribed(e) || (0, l.L)(e);
         }, [d]),
         [n, d]

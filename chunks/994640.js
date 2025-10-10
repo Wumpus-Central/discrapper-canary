@@ -10,9 +10,9 @@ var r = n(951288),
     u = n(592125),
     m = n(888592),
     f = n(981631),
-    h = n(388032),
-    g = n(162985);
-let p = (0, d.hQ)(),
+    p = n(388032),
+    h = n(330966);
+let g = (0, d.hQ)(),
     v = (e) => {
         let {
                 setStep: t,
@@ -24,10 +24,10 @@ let p = (0, d.hQ)(),
                 onClose: x,
                 isNUXFlow: N,
             } = e,
-            [y, E] = l.useState(null),
+            [E, y] = l.useState(null),
             [S, j] = l.useState(!1),
             I = async (e) => {
-                e.preventDefault(), E(null), j(!0);
+                e.preventDefault(), y(null), j(!0);
                 try {
                     var r, l, a, s, d;
                     let e =
@@ -51,91 +51,91 @@ let p = (0, d.hQ)(),
                             ? (v(f[0].id), await o.Z.sendVerificationEmail(i, !0, f[0].id), t(m.tF.VERIFY_PIN))
                             : (n(f), t(m.tF.SELECT_SCHOOL));
                 } catch (e) {
-                    E(new c.Hx(e));
+                    y(new c.Hx(e));
                 } finally {
                     j(!1);
                 }
             },
-            b = h.intl.string(h.t.H1jCHB),
-            O = h.intl.string(h.t.YfeHRE);
-        if (N) (b = h.intl.string(h.t.LVyxND)), (O = h.intl.string(h.t.ECd7Rk));
+            b = p.intl.string(p.t.H1jCHB),
+            O = p.intl.string(p.t.YfeHRE);
+        if (N) (b = p.intl.string(p.t.LVyxND)), (O = p.intl.string(p.t.ECd7Rk));
         else if (
             (null == _ ? void 0 : _.guild) != null &&
             _.guild.id !== m.fQ &&
             (null == _ ? void 0 : _.approximate_member_count) != null
         ) {
             let { name: e } = _.guild;
-            b = h.intl.formatToPlainString(h.t["4T4+p6"], {
+            b = p.intl.formatToPlainString(p.t["4T4+p6"], {
                 guildName: e,
                 count: _.approximate_member_count,
             });
         }
         return (0, r.jsxs)("div", {
-            className: g.container,
+            className: h.container,
             children: [
-                (0, r.jsx)("div", { className: g.topImage }),
+                (0, r.jsx)("div", { className: h.topImage }),
                 (0, r.jsx)(s.X6q, {
-                    className: a()(g.centerText, g.header),
+                    className: a()(h.centerText, h.header),
                     variant: "heading-xl/semibold",
                     children: b,
                 }),
                 (0, r.jsx)("div", {
-                    className: g.descriptionWidth,
+                    className: h.descriptionWidth,
                     children: (0, r.jsx)(s.Text, {
-                        className: g.centerText,
+                        className: h.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: O,
                     }),
                 }),
                 (0, r.jsxs)("form", {
-                    className: g.formContent,
+                    className: h.formContent,
                     onSubmit: I,
                     children: [
                         (0, r.jsxs)(s.xJW, {
                             children: [
                                 (0, r.jsx)(s.vwX, {
-                                    id: p,
-                                    children: h.intl.string(h.t.kmCxkZ),
+                                    id: g,
+                                    children: p.intl.string(p.t.kmCxkZ),
                                 }),
                                 (0, r.jsx)(s.oil, {
-                                    placeholder: h.intl.string(h.t.ImAOh4),
+                                    placeholder: p.intl.string(p.t.ImAOh4),
                                     onChange: (e) => {
                                         d(e);
                                     },
-                                    error: null == y ? void 0 : y.getAnyErrorMessage(),
-                                    "aria-labelledby": p,
+                                    error: null == E ? void 0 : E.getAnyErrorMessage(),
+                                    "aria-labelledby": g,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(s.Text, {
                             color: "header-secondary",
-                            className: g.formDescription,
+                            className: h.formDescription,
                             variant: "text-sm/normal",
-                            children: h.intl.string(h.t.Cv7mmJ),
+                            children: p.intl.string(p.t.Cv7mmJ),
                         }),
                         (0, r.jsx)(s.zxk, {
                             type: "submit",
                             variant: "primary",
                             loading: S,
-                            text: h.intl.string(h.t["8vmKOz"]),
+                            text: p.intl.string(p.t["8vmKOz"]),
                             fullWidth: !0,
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: g.termsPhrase,
+                            className: h.termsPhrase,
                             color: "header-secondary",
                             variant: "text-xs/normal",
-                            children: h.intl.format(h.t.RPT0vr, {
+                            children: p.intl.format(p.t.RPT0vr, {
                                 termsURL: f.EYA.TERMS,
                                 privacyURL: f.EYA.PRIVACY,
                             }),
                         }),
                         N &&
                             (0, r.jsx)("div", {
-                                className: g.cancelButton,
+                                className: h.cancelButton,
                                 children: (0, r.jsx)(s.Avr, {
                                     onClick: x,
-                                    text: h.intl.string(h.t.hO6qJy),
+                                    text: p.intl.string(p.t.hO6qJy),
                                 }),
                             }),
                     ],

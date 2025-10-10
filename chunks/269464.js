@@ -8,23 +8,23 @@ var r = n(951288),
     c = n(821458),
     d = n(981631),
     u = n(30513),
-    m = n(486324),
-    g = n(200299),
+    g = n(486324),
+    m = n(200299),
     p = n(388032),
-    f = n(903102);
+    f = n(747530);
 function h(e) {
     let { guild: t, canManageGuild: n } = e,
         h = t.features.has(d.oNc.BANNER),
-        b = t.features.has(d.oNc.ANIMATED_BANNER),
-        x = h && n,
+        x = t.features.has(d.oNc.ANIMATED_BANNER),
+        b = h && n,
         { analyticsLocations: j } = (0, s.ZP)(),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t],
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function h(e) {
             },
             [j, t],
         ),
-        O = (0, r.jsx)(a.Z, {
+        C = (0, r.jsx)(a.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -47,19 +47,19 @@ function h(e) {
                               id: t.id,
                               banner: e,
                           },
-                          b,
+                          x,
                       )
                     : null,
-            disabled: !x,
-            onChange: v,
+            disabled: !b,
+            onChange: _,
             hint: p.intl.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
-                    uploadType: m.pC.GUILD_BANNER,
-                    maxFileSizeBytes: g.B,
+                    uploadType: g.pC.GUILD_BANNER,
+                    maxFileSizeBytes: m.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return v(t, n);
+                        return _(t, n);
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
@@ -67,15 +67,15 @@ function h(e) {
                     },
                     analyticsLocations: j,
                 }),
-            enabled: x,
+            enabled: b,
         });
     return h
-        ? O
+        ? C
         : (0, r.jsx)(l.P3F, {
               "aria-hidden": !0,
               tabIndex: -1,
               className: f.upsell,
-              onClick: _,
-              children: O,
+              onClick: v,
+              children: C,
           });
 }

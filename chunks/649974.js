@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var i,
     r = n(442837),
     l = n(570140),
-    s = n(656063),
-    a = n(752048),
+    a = n(656063),
+    s = n(752048),
     o = n(158776),
     c = n(594174),
     u = n(981631);
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -36,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,8 +56,8 @@ function f(e, t) {
 }
 let g = !1,
     h = {},
-    m = {};
-function y(e) {
+    y = {};
+function m(e) {
     let t = !1;
     return (
         e.forEach((e) => {
@@ -67,13 +67,13 @@ function y(e) {
     );
 }
 function O(e) {
-    let t = m[e];
+    let t = y[e];
     if (null == t) return !1;
     let n = t.gameId;
     return (
-        null != h[n] && ((h = p({}, h)), delete h[n][e], 0 === Object.values(h[n]).length && delete h[n]),
-        (m = p({}, m)),
-        delete m[e],
+        null != h[n] && ((h = f({}, h)), delete h[n][e], 0 === Object.values(h[n]).length && delete h[n]),
+        (y = f({}, y)),
+        delete y[e],
         !0
     );
 }
@@ -87,19 +87,19 @@ function N(e) {
         i.forEach((e) => {
             (function (e, t) {
                 var n, i;
-                let r = (0, s.Z)(e);
+                let r = (0, a.Z)(e);
                 if (null == r) return O(t.id);
-                let l = m[t.id];
+                let l = y[t.id];
                 null != l && l.gameId !== r && O(t.id);
-                let a = null != (i = null == (n = e.timestamps) ? void 0 : n.start) ? i : Date.now(),
+                let s = null != (i = null == (n = e.timestamps) ? void 0 : n.start) ? i : Date.now(),
                     o = {
                         userId: t.id,
                         activity: e,
-                        startedPlaying: a,
+                        startedPlaying: s,
                     };
                 return (
-                    (h = f(p({}, h), { [r]: f(p({}, h[r]), { [o.userId]: o }) })),
-                    (m = f(p({}, m), {
+                    (h = p(f({}, h), { [r]: p(f({}, h[r]), { [o.userId]: o }) })),
+                    (y = p(f({}, y), {
                         [o.userId]: {
                             gameId: r,
                             startedPlaying: o.startedPlaying,
@@ -116,10 +116,10 @@ function b() {
     let e,
         t = !1;
     return (
-        a.Z.shouldFetch() ||
+        s.Z.shouldFetch() ||
             g ||
             ((h = {}),
-            (m = {}),
+            (y = {}),
             (e = !1),
             o.Z.getUserIds().forEach((t) => {
                 let n = c.default.getUser(t);
@@ -131,19 +131,19 @@ function b() {
                         }) || e);
             }),
             (t = e)),
-        (g = !a.Z.shouldFetch()),
+        (g = !s.Z.shouldFetch()),
         t
     );
 }
 class v extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z), this.syncWith([a.Z], b);
+        this.waitFor(s.Z), this.syncWith([s.Z], b);
     }
     get games() {
         return h;
     }
     get usersPlaying() {
-        return m;
+        return y;
     }
     get gameIds() {
         return Object.keys(h);
@@ -152,27 +152,27 @@ class v extends (i = r.ZP.Store) {
         return h[e];
     }
     getUserGame(e) {
-        return m[e];
+        return y[e];
     }
 }
 d(v, "displayName", "NowPlayingStore");
 let _ = new v(l.Z, {
     CONNECTION_OPEN: function () {
-        (h = {}), (m = {});
+        (h = {}), (y = {});
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
         return (
             t.forEach((e) => {
-                y(e.presences) && (i = !0);
+                m(e.presences) && (i = !0);
             }),
-            y(n) && (i = !0),
+            m(n) && (i = !0),
             i
         );
     },
     LOGOUT: function () {
-        (h = {}), (m = {});
+        (h = {}), (y = {});
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
@@ -180,6 +180,6 @@ let _ = new v(l.Z, {
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;
-        return y(t);
+        return m(t);
     },
 });

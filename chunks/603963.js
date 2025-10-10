@@ -35,7 +35,7 @@ function s(e) {
                 className: o.categoryContent,
                 children: t,
             }),
-            (0, r.jsx)(i.$i$, { className: o.categoryDivider }),
+            (0, r.jsx)(i.izJ, { className: o.categoryDivider }),
         ],
     });
 }

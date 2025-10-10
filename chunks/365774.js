@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(388032),
     l = n(916982);
-function a(e) {
+function s(e) {
     let { showDirtyIndicator: t } = e;
     return t
         ? (0, r.jsxs)("div", {

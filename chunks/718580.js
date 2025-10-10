@@ -8,15 +8,15 @@ var r = n(951288),
     o = n.n(a),
     s = n(137317),
     l = n(990547),
-    c = n(873546),
-    u = n(793030),
-    d = n(481060),
-    f = n(393238),
-    _ = n(699682),
-    p = n(793903),
-    h = n(906732),
-    m = n(237617),
-    g = n(827221);
+    c = n(872175),
+    u = n(873546),
+    d = n(793030),
+    f = n(481060),
+    _ = n(393238),
+    p = n(699682),
+    h = n(793903),
+    m = n(906732),
+    g = n(430723);
 function E(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ function N(e) {
         { contentDisplay: E, fadeInOut: y = !1 } = e,
         I = v(e, ["contentDisplay", "fadeInOut"]);
     let C = {},
-        { analyticsLocations: N } = (0, h.ZP)();
+        { analyticsLocations: N } = (0, m.ZP)();
     i.Children.forEach(I.children, (e, t) => {
         C[e.props.id] = {
             children: e.props.children,
@@ -134,21 +134,21 @@ function N(e) {
         };
     });
     let R = I.activeSlide,
-        P = (0, _.Z)(I.activeSlide),
+        P = (0, p.Z)(I.activeSlide),
         w = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
-        { reducedMotion: D } = i.useContext(u.Sfi),
-        L = i.useContext(p.Z),
+        { reducedMotion: D } = i.useContext(d.Sfi),
+        L = i.useContext(h.Z),
         x = C[R].impressionName,
-        j = O(b({}, C[R].impressionProperties), { location_stack: N });
+        M = O(b({}, C[R].impressionProperties), { location_stack: N });
     L({
         type: l.ImpressionTypes.MODAL,
         name: x,
-        properties: j,
+        properties: M,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: M, width: k = 0, height: U = 0 } = (0, f.ZP)(R),
+    let { ref: j, width: k = 0, height: U = 0 } = (0, _.ZP)(R),
         G = b({}, T, I.springConfig, D.enabled ? { clamp: !0 } : null),
-        B = (0, d.q_F)(
+        B = (0, f.q_F)(
             {
                 width: null != (n = I.width) ? n : k,
                 height: U,
@@ -156,7 +156,7 @@ function N(e) {
             },
             null == P ? "animate-never" : "respect-motion-settings",
         ),
-        Z = (0, d.Yzy)(
+        Z = (0, f.Yzy)(
             R,
             {
                 value: 0,
@@ -171,14 +171,14 @@ function N(e) {
             },
             null == P ? "animate-never" : "respect-motion-settings",
         ),
-        F = (0, m.Z)(w),
+        F = (0, c.Z)(w),
         { width: V, centered: H = !0 } = I,
         Y =
-            c.tq && !I.shouldUseMediaQueriesForSizing
+            u.tq && !I.shouldUseMediaQueriesForSizing
                 ? "100%"
                 : B.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        W = c.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : B.height.to((e) => Math.round(e)),
-        K = c.tq
+        W = u.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : B.height.to((e) => Math.round(e)),
+        K = u.tq
             ? {}
             : H
               ? {
@@ -186,9 +186,9 @@ function N(e) {
                     top: "50%",
                 }
               : { transform: "scale(1.0, 1.0)" },
-        z = c.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" },
+        z = u.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" },
         q = i.useMemo(
-            () => ({ width: c.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : V }),
+            () => ({ width: u.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : V }),
             [I.shouldUseMediaQueriesForSizing, V],
         );
     return (0, r.jsx)(s.animated.div, {
@@ -207,7 +207,7 @@ function N(e) {
             return (0, r.jsx)(
                 s.animated.div,
                 {
-                    ref: t === R ? M : null,
+                    ref: t === R ? j : null,
                     style: b(
                         {
                             position: "absolute",

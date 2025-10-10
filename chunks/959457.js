@@ -41,7 +41,7 @@ let S = {},
     P = {},
     w = v.hVg.THEATRE,
     D = {};
-function x(e, t, n, i) {
+function L(e, t, n, i) {
     return (
         o()(null != r, "Creating RTCConnection without session."),
         new _.Z({
@@ -56,16 +56,16 @@ function x(e, t, n, i) {
         })
     );
 }
-function L() {
+function x() {
     l().forEach(D, (e, t) => {
         e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete D[t], delete P[t];
     });
 }
-function j(e) {
-    (r = e.sessionId), L();
+function M(e) {
+    (r = e.sessionId), x();
 }
-function M() {
-    (r = null), L();
+function j() {
+    (r = null), x();
 }
 function k(e) {
     let {
@@ -141,7 +141,7 @@ function G(e) {
             goLiveModalDurationMs: R[t],
             analyticsLocations: null == (c = S[t]) ? void 0 : c.analyticsLocations,
         });
-        (o = x(t, n, r, e)), (D[t] = o);
+        (o = L(t, n, r, e)), (D[t] = o);
     }
     delete P[t],
         d.Z.dispatch({
@@ -305,8 +305,8 @@ let J = new Q(
     !b.Z.isSupported() || __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: j,
-              CONNECTION_CLOSED: M,
+              CONNECTION_OPEN: M,
+              CONNECTION_CLOSED: j,
               RTC_CONNECTION_STATE: Y,
               RTC_CONNECTION_PING: Y,
               RTC_CONNECTION_LOSS_RATE: Y,

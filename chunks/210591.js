@@ -3,22 +3,22 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    a = n(786920),
+    a = n(137317),
     o = n(692547),
     c = n(481060),
     d = n(259580),
     u = n(293810),
-    m = n(388032),
-    g = n(937028);
+    g = n(388032),
+    m = n(937028);
 function p(e) {
     let { checked: t, children: n } = e;
     return (0, r.jsxs)("div", {
-        className: g.row,
+        className: m.row,
         children: [
             (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
                 color: "interactive-active",
-                className: g.rowText,
+                className: m.rowText,
                 children: n,
             }),
             t
@@ -26,9 +26,9 @@ function p(e) {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(g.rowIcon, g.rowIconChecked),
+                      className: s()(m.rowIcon, m.rowIconChecked),
                   })
-                : (0, r.jsx)("div", { className: s()(g.rowIcon, g.rowIconEmpty) }),
+                : (0, r.jsx)("div", { className: s()(m.rowIcon, m.rowIconEmpty) }),
         ],
     });
 }
@@ -39,13 +39,13 @@ function f(e) {
         o = s.filter((e) => e).length / s.length,
         f = 1 === o,
         h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
-        b = [
-            m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
-            m.intl.format(m.t["0Fo0wc"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
-            m.intl.format(m.t["7JdzjI"], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }),
-            m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE }),
+        x = [
+            g.intl.format(g.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
+            g.intl.format(g.t["0Fo0wc"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
+            g.intl.format(g.t["7JdzjI"], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }),
+            g.intl.format(g.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE }),
         ],
-        x = n
+        b = n
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -56,9 +56,9 @@ function f(e) {
                                   i.Fragment,
                                   {
                                       children: [
-                                          t > 0 && (0, r.jsx)(c.$i$, { className: g.divider }),
+                                          t > 0 && (0, r.jsx)(c.izJ, { className: m.divider }),
                                           (0, r.jsx)(c.vwX, {
-                                              className: g.categoryTitle,
+                                              className: m.categoryTitle,
                                               children: n,
                                           }),
                                           l.map((e, t) =>
@@ -76,16 +76,16 @@ function f(e) {
                                   t,
                               );
                           }),
-                      (0, r.jsx)(c.$i$, { className: g.divider }),
+                      (0, r.jsx)(c.izJ, { className: m.divider }),
                       (0, r.jsx)(c.vwX, {
-                          className: g.categoryTitle,
-                          children: m.intl.string(m.t.FO0AIS),
+                          className: m.categoryTitle,
+                          children: g.intl.string(g.t.FO0AIS),
                       }),
-                      b.map((e, t) =>
+                      x.map((e, t) =>
                           (0, r.jsx)(
                               "div",
                               {
-                                  className: g.row,
+                                  className: m.row,
                                   children: (0, r.jsx)(c.Text, {
                                       variant: "text-md/normal",
                                       children: e,
@@ -97,34 +97,34 @@ function f(e) {
                   ],
               });
     return (0, r.jsx)("div", {
-        className: g.checklist,
+        className: m.checklist,
         children: (0, r.jsxs)("div", {
-            className: g.container,
+            className: m.container,
             children: [
                 (0, r.jsxs)(c.P3F, {
-                    className: g.headerBar,
+                    className: m.headerBar,
                     onClick: () => l((e) => !e),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: "heading-md/semibold",
-                            className: g.headerText,
-                            children: m.intl.string(m.t["2Xbd/P"]),
+                            className: m.headerText,
+                            children: g.intl.string(g.t["2Xbd/P"]),
                         }),
                         (0, r.jsx)(d.Z, {
                             direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
-                            className: g.headerCaret,
+                            className: m.headerCaret,
                         }),
                     ],
                 }),
                 !f &&
                     (0, r.jsx)("div", {
-                        className: g.progressBarOuter,
+                        className: m.progressBarOuter,
                         children: (0, r.jsx)(a.animated.div, {
-                            className: g.progressBarInner,
+                            className: m.progressBarInner,
                             style: h,
                         }),
                     }),
-                x,
+                b,
             ],
         }),
     });
