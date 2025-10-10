@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     modalRoot: "modalRoot__38ccf",
     modalContent: "modalContent__38ccf",
     infoContainer: "infoContainer__38ccf",

@@ -1,35 +1,35 @@
-t.d(n, { P: () => i });
-var l = t(951288),
-    a = t(481060);
-function i(e, n) {
-    let { isGift: i } = n;
-    (0, a.ZDy)(
+n.d(t, { P: () => l });
+var a = n(951288),
+    r = n(481060);
+function l(e, t) {
+    let { isGift: l } = t;
+    (0, r.ZDy)(
         async () => {
-            let { default: n } = await t.e("45227").then(t.bind(t, 556266));
-            return (t) =>
-                (0, l.jsx)(
-                    n,
+            let { default: t } = await n.e("45227").then(n.bind(n, 556266));
+            return (n) =>
+                (0, a.jsx)(
+                    t,
                     (function (e) {
-                        for (var n = 1; n < arguments.length; n++) {
-                            var t = null != arguments[n] ? arguments[n] : {},
-                                l = Object.keys(t);
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                a = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (l = l.concat(
-                                    Object.getOwnPropertySymbols(t).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                (a = a.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                l.forEach(function (n) {
-                                    var l;
-                                    (l = t[n]),
-                                        n in e
-                                            ? Object.defineProperty(e, n, {
-                                                  value: l,
+                                a.forEach(function (t) {
+                                    var a;
+                                    (a = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: a,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[n] = l);
+                                            : (e[t] = a);
                                 });
                         }
                         return e;
@@ -38,9 +38,9 @@ function i(e, n) {
                             skuId: e.id,
                             applicationId: e.applicationId,
                             analyticsLocations: [],
-                            isGift: i,
+                            isGift: l,
                         },
-                        t,
+                        n,
                     ),
                 );
         },

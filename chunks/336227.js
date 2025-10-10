@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s }), n(539854);
-var r = n(647438),
-    o = n(823379),
-    a = n(267642),
-    i = n(535396),
-    l = n(989308),
-    c = n(388032);
-function s(e) {
+o.d(t, { Z: () => l }), o(539854);
+var n = o(647438),
+    r = o(823379),
+    a = o(267642),
+    c = o(535396),
+    s = o(989308),
+    i = o(388032);
+function l(e) {
     let {
         includeEmojis: t,
-        includeStickers: n,
-        includeSoundboards: s,
+        includeStickers: o,
+        includeSoundboards: l,
     } = arguments.length > 1 && void 0 !== arguments[1]
         ? arguments[1]
         : {
@@ -17,35 +17,35 @@ function s(e) {
               includeStickers: !0,
               includeSoundboards: !0,
           };
-    return r.useMemo(() => {
-        let r = [],
-            u = (0, i.d5)();
+    return n.useMemo(() => {
+        let n = [],
+            d = (0, c.d5)();
         return (
             t &&
-                r.push({
+                n.push({
                     perkIcon: a.Ro.EMOJI,
-                    description: c.intl.formatToPlainString(l.default.NXvV09, {
+                    description: i.intl.formatToPlainString(s.default.NXvV09, {
                         totalEmojis: e.features.total_emoji_slots,
                         additionalEmojis: e.features.additional_emoji_slots,
                     }),
                 }),
-            n &&
-                r.push({
+            o &&
+                n.push({
                     perkIcon: a.Ro.STICKER,
-                    description: c.intl.formatToPlainString(l.default.ZEvvPz, {
+                    description: i.intl.formatToPlainString(s.default.ZEvvPz, {
                         totalStickers: e.features.total_sticker_slots,
                         additionalStickers: e.features.additional_sticker_slots,
                     }),
                 }),
-            s &&
-                r.push({
+            l &&
+                n.push({
                     perkIcon: a.Ro.SOUNDBOARD,
-                    description: c.intl.formatToPlainString(l.default["s9u/Ex"], {
+                    description: i.intl.formatToPlainString(s.default["s9u/Ex"], {
                         totalSoundboards: e.features.total_sound_slots,
                         additionalSoundboards: e.features.additional_sound_slots,
                     }),
                 }),
-            r.concat(e.features.features.map((e) => u[e]).filter(o.lm))
+            n.concat(e.features.features.map((e) => d[e]).filter(r.lm))
         );
-    }, [e, t, n, s]);
+    }, [e, t, o, l]);
 }

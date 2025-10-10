@@ -15,8 +15,8 @@ function m(e) {
     var t, n, l;
     let { guildId: m, initialPageIndex: b = 0 } = e,
         v = (0, o.e7)([s.Z], () => s.Z.getStorefrontData(m)),
-        _ = (0, o.e7)([s.Z], () => s.Z.getStorefrontState(m)),
-        I =
+        I = (0, o.e7)([s.Z], () => s.Z.getStorefrontState(m)),
+        _ =
             ((null == v ? void 0 : v.storefront) != null || (null == v ? void 0 : v.error)) &&
             !(null == v ? void 0 : v.loading);
     if (
@@ -26,13 +26,13 @@ function m(e) {
         r.useEffect(() => {
             (0, c.K)(m, b);
         }, [m, b]),
-        !I || (null == v ? void 0 : v.storefront) == null)
+        !_ || (null == v ? void 0 : v.storefront) == null)
     )
         return (0, a.jsx)("div", {
             className: i()(p.spinner, p.container),
             children: (0, a.jsx)(d.$jN, {}),
         });
-    let h = null != (l = null == _ ? void 0 : _.activePage) ? l : b;
+    let h = null != (l = null == I ? void 0 : I.activePage) ? l : b;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
