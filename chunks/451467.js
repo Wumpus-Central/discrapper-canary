@@ -1,9 +1,11 @@
-n.d(t, { Z: () => a }), n(388685);
-var r = n(280098),
-    i = n(37113);
-function a(e, t, n, a, o, s) {
-    for (let l of i.ND)
-        if ((null == l.preset || e === l.preset) && t === l.resolution && n === l.fps && (0, r.Z)(l, a, o, s))
+n.d(t, { Z: () => o }), n(388685);
+var r = n(580991),
+    i = n(280098),
+    a = n(37113);
+function o(e, t, n, o, s, l) {
+    if (e === a.tI.PRESET_AUTO) return (0, r.I)({ location: "canStreamWithSettings" }).allowAutoQuality;
+    for (let r of a.ND)
+        if ((null == r.preset || e === r.preset) && t === r.resolution && n === r.fps && (0, i.Z)(r, o, s, l))
             return !0;
     return !1;
 }

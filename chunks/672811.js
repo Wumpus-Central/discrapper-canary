@@ -10,6 +10,8 @@ function s(e) {
             return l.intl.string(l.t["rCa/jI"]);
         case r.tI.PRESET_VIDEO:
             return l.intl.string(i.default["G+k1q6"]);
+        case r.tI.PRESET_AUTO:
+            return l.intl.string(i.default.VQ3gwc);
         default:
             throw Error("Not case implemented for ".concat(e));
     }

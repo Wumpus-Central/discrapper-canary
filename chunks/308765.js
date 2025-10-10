@@ -811,5 +811,9 @@ let i = {
         actions: ["USER_APPLICATION_IDENTITY_UPDATE", "USER_APPLICATION_IDENTITY_REMOVE"],
         inlineRequire: () => n(473288).Z,
     },
+    AutoQualityStreamingManager: {
+        actions: ["MEDIA_ENGINE_CONNECTION_STATS"],
+        inlineRequire: () => n(216405).Z,
+    },
 };
 (0, r.j)(i);
