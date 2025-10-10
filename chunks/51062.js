@@ -69,9 +69,9 @@ function O(e, t) {
 function v(e, t, n) {
     var E, y, v, I, T, S, A, C, N, R, P;
     let { channel: w, type: D } = e,
-        [L, x] = r.useState(() => (0, p.PA)()),
+        [x, L] = r.useState(() => (0, p.PA)()),
         M = (0, i.Z)(),
-        j = (0, a.e7)([u.ZP, _.default], () => {
+        k = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return (
@@ -84,13 +84,13 @@ function v(e, t, n) {
                             : null) && t
             );
         }),
-        { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cj)(
+        { canMentionEveryone: j, hidePersonalInformation: U } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: w.isPrivate() || j || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
+                canMentionEveryone: w.isPrivate() || k || D === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, w),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [w, D, j],
+            [w, D, k],
         ),
         { activeCommand: G, activeCommandOption: B } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(w.id),
@@ -99,7 +99,7 @@ function v(e, t, n) {
         Z = (0, h.Z)({
             navId: "channel-autocomplete",
             scrollerRef: n,
-            state: L,
+            state: x,
             onFocus: (e) => W.setSelectedIndex(e),
         }),
         F = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
@@ -112,13 +112,13 @@ function v(e, t, n) {
             activeCommandOption: B,
             activeInlineAutocompleteInput: H,
             canMentionUsers: null != (C = null == (v = D.users) ? void 0 : v.allowMentioning) && C,
-            canMentionEveryone: k,
+            canMentionEveryone: j,
             hidePersonalInformation: U,
             hideMentionDescription: D === l.Ie.RULES_INPUT,
             emojiIntention: D === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
             currentWord: null != (N = null == F ? void 0 : F.word) ? N : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
-            fullWord: null != (R = null == F ? void 0 : F.fullWord) ? R : "",
+            currentFullWord: null != (R = null == F ? void 0 : F.fullWord) ? R : "",
             optionText:
                 null != B
                     ? (0, o.KF)(
@@ -140,7 +140,7 @@ function v(e, t, n) {
         }),
         r.useImperativeHandle(t, () => W, [W]),
         r.useEffect(() => {
-            let e = (e) => x(e);
+            let e = (e) => L(e);
             return (
                 W.on("change", e),
                 W.on("update", M),
@@ -151,7 +151,7 @@ function v(e, t, n) {
         }, [M, W]),
         r.useEffect(() => {
             var e;
-            let t = null == (e = L.query) ? void 0 : e.typeInfo.stores;
+            let t = null == (e = x.query) ? void 0 : e.typeInfo.stores;
             if (null != t) {
                 let e = () => W.queryResults();
                 for (let n of t) n.addChangeListener(e);
@@ -159,7 +159,7 @@ function v(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [W, null == (T = L.query) ? void 0 : T.typeInfo]),
-        [L, W, Z]
+        }, [W, null == (T = x.query) ? void 0 : T.typeInfo]),
+        [x, W, Z]
     );
 }

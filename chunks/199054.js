@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(35282);
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     a = n(998698),
@@ -11,27 +11,29 @@ var r = n(951288),
     f = n(65090);
 let _ = {
     selectMode: d.W7.TAB_ONLY,
-    useFullWord: !0,
     stores: [u.ZP],
     matches(e, t, n, r, i) {
         var o;
-        let { enabled: l } = (0, s.kB)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 });
+        let { enabled: u } = (0, s.kB)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 });
         return (
-            !(
-                !l ||
-                !c.HV.getSetting() ||
-                !(null == (o = i.chatInputType.autocomplete) ? void 0 : o.mentionSuggestions) ||
-                i.mentions.user === d.h3.DENY ||
-                n.length < 2 ||
-                /^\W/.test(n)
-            ) && null == a.Z.getActiveCommand(e.id)
+            !!u &&
+            !!c.HV.getSetting() &&
+            !!(null == (o = i.chatInputType.autocomplete) ? void 0 : o.mentionSuggestions) &&
+            i.mentions.user !== d.h3.DENY &&
+            null != i.currentFullWord &&
+            !(i.currentFullWord.length < l.Q) &&
+            null == a.Z.getActiveCommand(e.id) &&
+            !0
         );
     },
-    queryResults: (e, t, n, r) =>
-        (0, l.r)(e, n, {
+    queryResults(e, t, n, r) {
+        var i;
+        let a = n.length;
+        return (0, l.r)(e, null != (i = r.currentFullWord) ? i : "", a, {
             isIdle: r.isEditorIdle,
-            isVisible: r.isVisible,
-        }),
+            currentAutocompleteType: r.currentAutocompleteType,
+        });
+    },
     renderResults(e) {
         let {
                 results: { suggestions: t },
@@ -65,15 +67,18 @@ let _ = {
     },
     onSelect(e) {
         let {
-                results: { suggestions: t, trailingPunctuation: n },
-                index: r,
-                options: i,
-                channel: a,
+                results: {
+                    suggestions: t,
+                    queryInfo: { prefix: n, suffix: r },
+                },
+                index: i,
+                options: a,
+                channel: o,
             } = e,
-            o = t[r];
+            s = t[i];
         return (
-            null != o &&
-                i.insertText((0, f.BL)(o.user, a, i.hidePersonalInformation) + n, (0, f.m1)(o.user) + n, {
+            null != s &&
+                a.insertText(n + (0, f.BL)(s.user, o, a.hidePersonalInformation) + r, n + (0, f.m1)(s.user) + r, {
                     replaceFullWord: !0,
                 }),
             { type: d.z2.MENTION }

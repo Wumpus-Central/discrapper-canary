@@ -318,7 +318,7 @@ let ei = r.memo(
             })(e$, eA, eF),
             { expressionPickerView: e5, shouldHideExpressionPicker: e9, handleOuterClick: te } = (0, F.iV)(D, ew),
             tt = (0, F.aT)(p),
-            { isAutocompleteVisible: tn, handleAutocompleteVisibilityChange: ti } = (0, F.vB)(),
+            { currentAutocompleteType: tn, handleAutocompleteVisibilityChange: ti } = (0, F.vB)(),
             tr = (0, F.ae)(ew),
             tl = (0, F.Sg)(eJ, D, ew),
             ta = (0, F.O1)({
@@ -460,7 +460,7 @@ let ei = r.memo(
                                                             spellcheckEnabled: eW,
                                                             canOnlyUseTextCommands: !1,
                                                             isEditorIdle: tt,
-                                                            isAutocompleteVisible: tn,
+                                                            currentAutocompleteType: tn,
                                                             "aria-labelledby": eC,
                                                         }),
                                                     }),
