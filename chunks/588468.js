@@ -297,7 +297,14 @@ class X extends H {
                 (0, i.jsxs)("div", {
                     className: x.autocompleteContentWrapper,
                     children: [
-                        (0, i.jsx)(P.z5, { children: (0, i.jsx)(P.BR, { children: _ }) }),
+                        (0, i.jsx)(P.z5, {
+                            children: (0, i.jsx)(f.Text, {
+                                className: x.autocompleteRowHeading,
+                                color: "interactive-active",
+                                variant: "text-sm/medium",
+                                children: _,
+                            }),
+                        }),
                         (0, i.jsx)(P.dY, {
                             children:
                                 null == r || r === _.toLocaleLowerCase() || r === t.username.toLocaleLowerCase()
