@@ -18,9 +18,13 @@ var r = n(951288),
 function b(e) {
     switch (e) {
         case _.BRd.DARK:
+        case _.BRd.DARKER:
+        case _.BRd.MIDNIGHT:
             return g;
         case _.BRd.LIGHT:
             return E;
+        default:
+            return g;
     }
 }
 function y(e) {
