@@ -1,4 +1,4 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,71 +6,71 @@ var r = n(951288),
     o = n(979554),
     s = n(780384),
     d = n(481060),
-    C = n(410030),
-    c = n(104505),
+    c = n(410030),
+    C = n(104505),
     u = n(699758),
     p = n(616066),
     _ = n(388032),
-    f = n(632939);
-let h = (e) => {
+    h = n(632939);
+let f = (e) => {
     let {
             skuId: t,
             assetId: n,
             user: a,
-            claimed: h,
+            claimed: f,
             onSelect: m,
             productName: x,
-            a11yLabel: j,
-            selectedSkuId: g,
+            a11yLabel: g,
+            selectedSkuId: j,
             category: b,
         } = e,
-        y = i.useRef(null),
-        { isHoveringOrFocusing: L } = (0, c.Z)(y),
-        v = !h && L,
-        S = (0, C.ZP)(),
-        O = (0, s.wj)(S),
-        P = {
+        v = i.useRef(null),
+        { isHoveringOrFocusing: y } = (0, C.Z)(v),
+        S = !f && y,
+        L = (0, c.ZP)(),
+        I = (0, s.wj)(L),
+        w = {
             type: o.Z.AVATAR_DECORATION,
-            label: j,
+            label: g,
             asset: n,
         };
     return (0, r.jsx)(d.tEY, {
         children: (0, r.jsxs)(d.kL8, {
-            ref: y,
+            ref: v,
             "aria-label": null != x ? x : "",
             onClick: () => {
-                null == t || null == m || h || m(t);
+                null == t || null == m || f || m(t);
             },
-            className: l()(O ? f.shopCardDark : f.shopCard, {
-                [f.shopCardAnimation]: !h,
-                [O ? f.shopCardDarkHighlighted : f.shopCardHighlighted]: v,
-                [f.shopCardSelected]: g === t,
+            className: l()(I ? h.shopCardDark : h.shopCard, {
+                [h.shopCardAnimation]: !f,
+                [I ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: S,
+                [h.shopCardSelected]: j === t,
             }),
             children: [
                 (0, r.jsx)("div", {
-                    className: l()(f.preview, {
-                        [f.previewTrick]: b === u.KN.Trick,
-                        [f.previewTreat]: b === u.KN.Treat,
-                        [f.shopCardClaimed]: h,
+                    className: l()(h.preview, {
+                        [h.previewTrick]: b === u.KN.Trick,
+                        [h.previewTreat]: b === u.KN.Treat,
+                        [h.shopCardClaimed]: f,
                     }),
                     children: (0, r.jsx)(p.R, {
-                        item: P,
+                        item: w,
                         user: a,
-                        isHighlighted: v,
+                        isHighlighted: S,
                         avatarSize: d.EFr.SIZE_120,
-                        isPurchased: h,
+                        isPurchased: f,
                     }),
                 }),
-                h &&
+                f &&
                     (0, r.jsx)(d.dz2, {
                         size: "custom",
                         width: 48,
                         height: 48,
                         color: d.TVs.colors.WHITE,
-                        className: f.claimedIcon,
+                        className: h.claimedIcon,
                     }),
                 (0, r.jsxs)("div", {
-                    className: f.productName,
+                    className: h.productName,
                     children: [
                         (0, r.jsx)(d.X6q, {
                             variant: "text-md/bold",
@@ -78,7 +78,7 @@ let h = (e) => {
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/normal",
-                            children: h ? _.intl.string(_.t["6cfuDg"]) : _.intl.string(_.t.QQsaCQ),
+                            children: f ? _.intl.string(_.t["6cfuDg"]) : _.intl.string(_.t.QQsaCQ),
                         }),
                     ],
                 }),

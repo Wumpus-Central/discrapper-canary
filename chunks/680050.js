@@ -35,14 +35,14 @@ let _ = (e) => {
                 });
         }, [_]);
     if (0 === _.length || !m) return null;
-    let b = u.intl.formatToPlainString(u.t.HqyWeH, {
+    let h = u.intl.formatToPlainString(u.t.HqyWeH, {
         count: _.length,
         parent1: _[0].username,
         parent2: null == (t = _[1]) ? void 0 : t.username,
         parent3: null == (n = _[2]) ? void 0 : n.username,
     });
     return (0, r.jsx)(d.JZ, {
-        title: b,
+        title: h,
         description: u.intl.string(u.t["5l/hlp"]),
         buttonText: p ? u.intl.string(u.t.ntuuk5) : u.intl.string(u.t["sYdX/P"]),
         buttonDisabled: p,

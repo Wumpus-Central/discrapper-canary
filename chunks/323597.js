@@ -1,47 +1,47 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(951288);
 n(647438);
-var a = n(442837),
+var r = n(442837),
     l = n(481060),
-    r = n(787014),
-    o = n(904245),
-    s = n(787263),
-    u = n(660189),
-    c = n(216572),
+    a = n(787014),
+    u = n(904245),
+    o = n(787263),
+    c = n(660189),
+    s = n(216572),
     d = n(144140),
     f = n(314897),
-    g = n(496675),
-    O = n(709054),
-    p = n(981631),
+    E = n(496675),
+    g = n(709054),
+    O = n(981631),
     v = n(388032);
-function h(e) {
+function p(e) {
     let t = e.isForumPost(),
-        n = (0, a.e7)([f.default], () => e.isOwner(f.default.getId()), [e]),
-        h = (0, c.HL)(e),
-        { canManageChannel: E, canAccessChannel: _ } = (0, a.cj)(
-            [g.Z],
+        n = (0, r.e7)([f.default], () => e.isOwner(f.default.getId()), [e]),
+        p = (0, s.HL)(e),
+        { canManageChannel: Z, canAccessChannel: N } = (0, r.cj)(
+            [E.Z],
             () => ({
-                canAccessChannel: g.Z.can(e.accessPermissions, e),
-                canManageChannel: g.Z.can(e.isThread() ? p.Plq.MANAGE_THREADS : p.Plq.MANAGE_CHANNELS, e),
+                canAccessChannel: E.Z.can(e.accessPermissions, e),
+                canManageChannel: E.Z.can(e.isThread() ? O.Plq.MANAGE_THREADS : O.Plq.MANAGE_CHANNELS, e),
             }),
             [e],
         ),
-        b = (0, a.e7)([d.Z], () => {
+        _ = (0, r.e7)([d.Z], () => {
             var t;
             return null != (t = d.Z.getCount(e.id)) ? t : 0;
         }, [e.id]),
-        { firstMessage: C } = (0, a.e7)([u.Z], () => u.Z.getMessage(e.id), [e.id]),
-        y = h && E && null == C,
-        N = t && (E || (n && b < 1) || y),
-        A = t && n && !E && b > 0 && null != C;
-    return _ && (!h || y) && (E || N || A)
+        { firstMessage: b } = (0, r.e7)([c.Z], () => c.Z.getMessage(e.id), [e.id]),
+        h = p && Z && null == b,
+        y = t && (Z || (n && _ < 1) || h),
+        P = t && n && !Z && _ > 0 && null != b;
+    return N && (!p || h) && (Z || y || P)
         ? (0, i.jsx)(l.sNh, {
               id: "delete-channel",
               label:
-                  e.type === p.d4z.GUILD_CATEGORY
+                  e.type === O.d4z.GUILD_CATEGORY
                       ? v.intl.string(v.t.ifbXnJ)
                       : e.isForumPost()
-                        ? N
+                        ? y
                             ? v.intl.string(v.t.nEOg1N)
                             : v.intl.string(v.t.xwMqDw)
                         : e.isThread()
@@ -49,8 +49,8 @@ function h(e) {
                           : v.intl.string(v.t["8D8Rsb"]),
               color: "danger",
               action: () => {
-                  (0, s.w)(e, function () {
-                      A ? o.Z.deleteMessage(e.id, O.default.castChannelIdAsMessageId(e.id)) : r.ZP.deleteChannel(e.id);
+                  (0, o.w)(e, function () {
+                      P ? u.Z.deleteMessage(e.id, g.default.castChannelIdAsMessageId(e.id)) : a.ZP.deleteChannel(e.id);
                   });
               },
           })

@@ -18,8 +18,8 @@ let c = (e) => {
         } = e,
         g = i.useRef(null),
         f = null != n && "cancel" !== n.type,
-        b = _ && (null == n ? void 0 : n.type) !== "done",
-        h = f || b;
+        h = _ && (null == n ? void 0 : n.type) !== "done",
+        b = f || h;
     if (
         (i.useEffect(() => {
             if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
@@ -27,7 +27,7 @@ let c = (e) => {
                 null == (e = g.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !h)
+        !b)
     )
         return null;
     let x = o.intl.string(o.t.i4jeWV);
@@ -41,9 +41,9 @@ let c = (e) => {
             "data-migration-pending": !0,
             direction: a.Z.Direction.HORIZONTAL,
             children: (0, r.jsxs)(l.hE2, {
-                fullWidth: b && f,
+                fullWidth: h && f,
                 children: [
-                    b &&
+                    h &&
                         (0, r.jsx)(l.zxk, {
                             onClick: m,
                             variant: "secondary",

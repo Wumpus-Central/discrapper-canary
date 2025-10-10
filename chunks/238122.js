@@ -11,8 +11,8 @@ let u = (e) => {
         var t, n;
         let {
                 data: { title: u, subtitle: _, placeholder: m, rows: p, character_limit: g, pattern: f },
-                onChange: b,
-                initialText: h,
+                onChange: h,
+                initialText: b,
                 isRequired: x,
             } = e,
             v = i.useRef(
@@ -59,29 +59,29 @@ let u = (e) => {
                 ),
             ),
             [j, y] = i.useState(""),
-            [O, I] = i.useState(null);
+            [O, C] = i.useState(null);
         i.useEffect(() => {
             var e;
-            y(null != (e = null == h ? void 0 : h.value) ? e : "");
-        }, [h]);
-        let C = i.useCallback(
+            y(null != (e = null == b ? void 0 : b.value) ? e : "");
+        }, [b]);
+        let I = i.useCallback(
             (e) => {
                 let t = null != f ? new RegExp(f) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (I(null),
+                      (C(null),
                       y(e),
-                      b({
+                      h({
                           value: e,
                           isValid: !0,
                       }))
-                    : (I(s.intl.string(s.t["24xrGR"])),
-                      b({
+                    : (C(s.intl.string(s.t["24xrGR"])),
+                      h({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [b, f],
+            [h, f],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -103,7 +103,7 @@ let u = (e) => {
                     }),
                 (0, r.jsx)(l.Kx8, {
                     maxLength: g,
-                    onChange: C,
+                    onChange: I,
                     value: j,
                     error: O,
                     rows: p,

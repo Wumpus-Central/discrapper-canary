@@ -20,8 +20,8 @@ let p = (e) => {
             }),
             [t],
         ),
-        b = (0, l.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        h = i.useMemo(() => u.ZP.getName(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, t), [b, t]),
+        h = (0, l.e7)([c.Z], () => c.Z.getChannel(n), [n]),
+        b = i.useMemo(() => u.ZP.getName(null == h ? void 0 : h.guild_id, null == h ? void 0 : h.id, t), [h, t]),
         x = i.useCallback(() => {
             o.ZP.trackWithMetadata(_.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
@@ -31,7 +31,7 @@ let p = (e) => {
         }, [t, p, n]),
         v = i.useMemo(() => g || f, [g, f]);
     return (0, r.jsx)(s.JZ, {
-        title: m.intl.formatToPlainString(m.t.U3yyFh, { username: h }),
+        title: m.intl.formatToPlainString(m.t.U3yyFh, { username: b }),
         description: m.intl.string(m.t.naWE6e),
         buttonText: v ? m.intl.string(m.t.nDdxOD) : m.intl.string(m.t.ICYEfX),
         buttonDisabled: v,

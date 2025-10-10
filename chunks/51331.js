@@ -69,6 +69,11 @@ function d(e) {
     return (0, r.jsx)(i.u, {
         text: t,
         asContainer: !0,
+        align: "right",
+        caretConfig: {
+            position: "bottom",
+            align: "end",
+        },
         children: (0, r.jsx)(u, s({}, n)),
     });
 }

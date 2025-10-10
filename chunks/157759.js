@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(944486),
     g = n(981631),
     f = n(388032);
-let b = (e) => {
+let h = (e) => {
     let { application: t, reportId: n } = e,
-        [b, h] = i.useState(!1),
+        [h, b] = i.useState(!1),
         [x, v] = i.useState(!1),
         j = (0, l.e7)([p.Z, u.Z], () => {
             var e;
@@ -23,7 +23,7 @@ let b = (e) => {
         }),
         [y, O] = i.useState(null);
     i.useEffect(() => {
-        null != y && (h(!0), v(!0));
+        null != y && (b(!0), v(!0));
     }, [y]),
         i.useEffect(() => {
             if (null == j) return;
@@ -46,7 +46,7 @@ let b = (e) => {
                 }
             );
         }, [j, t.id]);
-    let I = i.useCallback(() => {
+    let C = i.useCallback(() => {
             v(!1),
                 o.ZP.trackWithMetadata(g.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: j,
@@ -62,20 +62,20 @@ let b = (e) => {
                         });
                     });
         }, [t.id, j, y, n]),
-        C = (0, l.e7)([m.Z, _.Z], () => {
+        I = (0, l.e7)([m.Z, _.Z], () => {
             let e = _.Z.getGuild(j);
             if (null == e) return !1;
             let n = m.Z.can(g.Plq.MANAGE_GUILD, e),
                 r = null == t.bot || m.Z.canManageUser(g.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
-    return null != t && null != j && b && C
+    return null != t && null != j && h && I
         ? (0, r.jsx)(d.JZ, {
               title: f.intl.string(f.t["WV/CsL"]),
               description: f.intl.string(f.t["FlcC+/"]),
               buttonText: x ? f.intl.string(f.t.aCJlq6) : f.intl.string(f.t["6I1F3t"]),
               buttonDisabled: !x,
-              onButtonPress: I,
+              onButtonPress: C,
               buttonVariant: x ? "critical-primary" : "secondary",
           })
         : null;

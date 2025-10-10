@@ -1,8 +1,8 @@
 r.d(t, { Z: () => x });
 var n = r(951288),
     i = r(296009),
-    o = r(442837),
-    a = r(314897),
+    a = r(442837),
+    o = r(314897),
     l = r(86419),
     c = r(747101),
     s = r(556045),
@@ -47,14 +47,14 @@ function y(e, t) {
             var r,
                 n,
                 i = {},
-                o = Object.keys(e);
-            for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                a = Object.keys(e);
+            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < o.length; n++)
-            (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < a.length; n++)
+            (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
@@ -79,9 +79,9 @@ let j = (e) => {
             d = y(e, ["widget", "user", "disableInteraction"]);
         let f = (0, c.FX)(t),
             { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
-            x = (0, o.e7)([a.default], () => a.default.getId() === r.id),
-            h = x && !i && g,
-            v = (0, l.mR)(f),
+            x = (0, a.e7)([o.default], () => o.default.getId() === r.id),
+            v = x && !i && g,
+            h = (0, l.mR)(f),
             _ = (0, l.Hy)(f, { isCurrentUser: x }),
             w = (0, l.kQ)(f);
         return (0, n.jsx)(
@@ -91,7 +91,7 @@ let j = (e) => {
                     widget: f,
                     user: r,
                     disableInteraction: i,
-                    headerTitle: v,
+                    headerTitle: h,
                     headerSubtitle: _,
                     headerActionButtons: x
                         ? [
@@ -107,7 +107,7 @@ let j = (e) => {
                           ]
                         : void 0,
                     trailingContent:
-                        h &&
+                        v &&
                         (0, n.jsx)(b.Z, {
                             userId: r.id,
                             widgetType: f.type,

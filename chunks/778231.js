@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -13,13 +13,13 @@ var r = n(951288),
     p = n(388032),
     g = n(719706),
     f = n(970952);
-let b = (e) => {
+let h = (e) => {
     var t, n;
-    let { entry: b } = e,
-        { name: h } = b,
-        x = (0, l.e7)([_.Z], () => _.Z.getNewestTokenForApplication(b.id)),
-        v = null != (n = b.getIconURL(40)) ? n : f,
-        j = (0, d.Z)({ application: b }),
+    let { entry: h } = e,
+        { name: b } = h,
+        x = (0, l.e7)([_.Z], () => _.Z.getNewestTokenForApplication(h.id)),
+        v = null != (n = h.getIconURL(40)) ? n : f,
+        j = (0, d.Z)({ application: h }),
         y = i.useRef(!1);
     i.useEffect(() => {
         y.current || (o.Z.fetch(), (y.current = !0));
@@ -55,7 +55,7 @@ let b = (e) => {
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",
                                     variant: "text-md/medium",
-                                    children: h,
+                                    children: b,
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -77,7 +77,7 @@ let b = (e) => {
                                               (0, r.jsx)(a.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: null == (t = b.bot) ? void 0 : t.tag,
+                                                  children: null == (t = h.bot) ? void 0 : t.tag,
                                               }),
                                               null != O &&
                                                   (0, r.jsx)(a.Text, {

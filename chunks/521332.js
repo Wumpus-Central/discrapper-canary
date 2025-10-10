@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(185625),
     g = n(981631),
     f = n(388032),
-    b = n(769450);
-function h(e) {
+    h = n(769450);
+function b(e) {
     let { title: t, description: n, onButtonClick: l, trackSettingsUpsellsAction: a } = e,
         [s, d] = i.useState(!1);
     return (
@@ -40,19 +40,19 @@ function x(e) {
     return 0 === j.length
         ? null
         : (0, r.jsxs)("div", {
-              className: b.container,
+              className: h.container,
               children: [
                   (0, r.jsx)(a.X6q, {
                       variant: "text-sm/semibold",
-                      className: b.header,
+                      className: h.header,
                       children: f.intl.string(f.t["1yxTIC"]),
                   }),
                   (0, r.jsx)("div", {
-                      className: b.upsellsContainer,
+                      className: h.upsellsContainer,
                       children: j.map((e, n) => {
                           let { getTitle: i, getDescription: l, onApply: a } = e;
                           return (0, r.jsx)(
-                              h,
+                              b,
                               {
                                   title: i(),
                                   description: l(),

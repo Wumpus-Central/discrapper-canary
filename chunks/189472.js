@@ -14,21 +14,21 @@ var r = n(951288),
     g = n(388032);
 let f = (e) => {
     let { user: t, channelId: n, reportId: f } = e,
-        b = d.Z.getDMFromUserId(t.id),
-        h = (0, l.e7)([d.Z], () => d.Z.getChannel(n), [n]),
-        x = i.useMemo(() => _.ZP.getName(null == h ? void 0 : h.guild_id, null == h ? void 0 : h.id, t), [h, t]),
-        v = (0, l.e7)([u.ZP], () => (null == b ? null : u.ZP.isChannelMuted(null, b))),
+        h = d.Z.getDMFromUserId(t.id),
+        b = (0, l.e7)([d.Z], () => d.Z.getChannel(n), [n]),
+        x = i.useMemo(() => _.ZP.getName(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, t), [b, t]),
+        v = (0, l.e7)([u.ZP], () => (null == h ? null : u.ZP.isChannelMuted(null, h))),
         [j, y] = i.useState(null != v && v),
         O = i.useCallback(() => {
-            null != b &&
+            null != h &&
                 (y(!0),
                 o.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
                     report_id: f,
                 }),
-                a.Z.updateChannelOverrideSettings(null, b, { muted: !0 }, m.ZB.Muted),
+                a.Z.updateChannelOverrideSettings(null, h, { muted: !0 }, m.ZB.Muted),
                 s.Z.showMuteSuccessToast(t.id, n));
-        }, [b, n, t, f]);
+        }, [h, n, t, f]);
     return (0, r.jsx)(c.JZ, {
         title: g.intl.formatToPlainString(g.t.TRp5wc, { username: x }),
         description: g.intl.string(g.t["yM/+AA"]),

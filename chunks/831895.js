@@ -6,66 +6,66 @@ var r = n(951288),
     o = n(481060),
     s = n(347896),
     d = n(699758),
-    C = n(913338),
-    c = n(388032),
+    c = n(913338),
+    C = n(388032),
     u = n(807276);
 function p(e) {
     var t, n, a, p;
-    let { defaultCategory: _, onCategoryChange: f, className: h } = e,
+    let { defaultCategory: _, onCategoryChange: h, className: f } = e,
         [m, x] = i.useState(_),
-        [j, g] = i.useState(null),
+        [g, j] = i.useState(null),
         b = (0, s.Z)(),
-        y = i.useMemo(
+        v = i.useMemo(
             () => [
                 {
-                    name: c.intl.string(c.t["6Zuiv7"]),
+                    name: C.intl.string(C.t["6Zuiv7"]),
                     value: d.KN.Trick,
                     key: "Trick",
                     icon: (0, r.jsx)(o.yDF, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => g(d.KN.Trick),
-                    onMouseLeave: () => g(null),
+                    onMouseEnter: () => j(d.KN.Trick),
+                    onMouseLeave: () => j(null),
                 },
                 {
-                    name: c.intl.string(c.t["2UeOlZ"]),
+                    name: C.intl.string(C.t["2UeOlZ"]),
                     value: d.KN.Treat,
                     key: "Treat",
                     icon: (0, r.jsx)(o.sq, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => g(d.KN.Treat),
-                    onMouseLeave: () => g(null),
+                    onMouseEnter: () => j(d.KN.Treat),
+                    onMouseLeave: () => j(null),
                 },
             ],
             [],
         ),
-        L = i.useCallback(
+        y = i.useCallback(
             (e) => {
-                x(e.value), f(e.value);
+                x(e.value), h(e.value);
             },
-            [f],
+            [h],
         ),
-        v =
+        S =
             null == b || null == (n = b.segmentedControlAnimations) || null == (t = n.trick)
                 ? void 0
                 : t.getAnimationData,
-        S =
+        L =
             null == b || null == (p = b.segmentedControlAnimations) || null == (a = p.treat)
                 ? void 0
                 : a.getAnimationData;
     return (0, r.jsxs)("div", {
-        className: l()(u.container, h),
+        className: l()(u.container, f),
         children: [
-            (0, r.jsx)(C.w, {
-                options: y,
+            (0, r.jsx)(c.w, {
+                options: v,
                 value: m,
-                onChange: L,
+                onChange: y,
             }),
-            j === d.KN.Trick &&
-                null != v &&
+            g === d.KN.Trick &&
+                null != S &&
                 (0, r.jsx)("div", {
                     className: l()(u.animationOverlay, u.trickAnimation),
                     children: (0, r.jsx)(o.Fmz, {
@@ -73,13 +73,13 @@ function p(e) {
                         loop: !0,
                         autoplay: !0,
                         className: u.lottieAnimation,
-                        importData: v,
+                        importData: S,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(j === d.KN.Trick),
+                        versionKey: +(g === d.KN.Trick),
                     }),
                 }),
-            j === d.KN.Treat &&
-                null != S &&
+            g === d.KN.Treat &&
+                null != L &&
                 (0, r.jsx)("div", {
                     className: l()(u.animationOverlay, u.treatAnimation),
                     children: (0, r.jsx)(o.Fmz, {
@@ -87,9 +87,9 @@ function p(e) {
                         loop: !0,
                         autoplay: !0,
                         className: u.lottieAnimation,
-                        importData: S,
+                        importData: L,
                         renderer: o.Fmz.Renderers.SVG,
-                        versionKey: +(j === d.KN.Treat),
+                        versionKey: +(g === d.KN.Treat),
                     }),
                 }),
         ],

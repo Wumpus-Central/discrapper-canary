@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(780384),
@@ -7,22 +7,22 @@ var i = n(780384),
     o = n(518950),
     s = n(51144),
     d = n(105759),
-    C = n(898969),
-    c = n(703614),
+    c = n(898969),
+    C = n(703614),
     u = n(268685),
     p = n(388032),
     _ = n(908780);
-let f = () => {
+let h = () => {
     let e = (0, d.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, o.Z)({
             userId: null == e ? void 0 : e.id,
             size: u.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        f = (0, l.Fg)(),
-        h = (0, i.ap)(f),
+        h = (0, l.Fg)(),
+        f = (0, i.ap)(h),
         m = s.ZP.getName(e),
-        x = h ? C.Z : c.Z;
+        x = f ? c.Z : C.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {

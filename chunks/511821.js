@@ -1,7 +1,7 @@
-n.d(t, { jM: () => O });
+n.d(t, { jM: () => E });
 var i = n(951288),
-    a = n(647438),
-    l = n(442837),
+    l = n(647438),
+    a = n(442837),
     r = n(481060),
     s = n(728345),
     o = n(225657),
@@ -13,23 +13,26 @@ var i = n(951288),
     m = n(614277),
     p = n(927699),
     v = n(96848),
-    h = n(311821),
-    b = n(321051),
-    x = n(430824),
-    C = n(594174),
-    j = n(55563),
-    _ = n(937615),
-    I = n(73346),
-    P = n(591759),
-    y = n(474936),
-    w = n(231338),
-    N = n(388032),
-    T = n(397263);
-let O = {
+    x = n(311821),
+    h = n(703656),
+    C = n(321051),
+    b = n(430824),
+    j = n(594174),
+    _ = n(55563),
+    I = n(937615),
+    P = n(73346),
+    w = n(591759),
+    y = n(981631),
+    N = n(176505),
+    T = n(474936),
+    S = n(231338),
+    O = n(388032),
+    k = n(397263);
+let E = {
     key: f.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
-            E,
+            Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -58,57 +61,57 @@ let O = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => N.intl.string(N.t["W685+f"]),
+        useBreadcrumbLabel: () => O.intl.string(O.t["W685+f"]),
     },
 };
-function S(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: l = !1, loading: s = !1 } = e,
+function M(e) {
+    let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: a = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, g.JL)(),
         d = o ? f.h8.REVIEW : f.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.zxk, {
                 onClick: () => t(d),
-                disabled: l,
+                disabled: a,
                 loading: s,
-                text: N.intl.string(N.t.XiOHRU),
+                text: O.intl.string(O.t.XiOHRU),
             }),
-            a ? (0, i.jsx)(h.Z, { onClick: n }) : null,
+            l ? (0, i.jsx)(x.Z, { onClick: n }) : null,
         ],
     });
 }
-function E(e) {
-    var t, n, f, h, O;
-    let { handleStepChange: E, handleClose: k } = e,
+function Z(e) {
+    var t, n, f, x, h;
+    let { handleStepChange: y, handleClose: N } = e,
         {
-            customGiftMessage: M = "",
+            customGiftMessage: E = "",
             setCustomGiftMessage: Z,
-            giftRecipient: G,
-            emojiConfetti: A,
+            giftRecipient: A,
+            emojiConfetti: B,
             soundEffect: L,
-            setEmojiConfetti: B,
-            setSoundEffect: W,
+            setEmojiConfetti: W,
+            setSoundEffect: R,
         } = (0, u.wD)(),
-        { selectedSkuId: R, application: D } = (0, g.JL)(),
-        U = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
-        F = (0, l.e7)([j.Z], () => (null != R ? j.Z.get(R) : null), [R]),
-        J = null == D ? void 0 : D.guildId,
-        z = (0, l.e7)([x.Z], () => (null != J ? x.Z.getGuild(J) : null), [J]);
-    a.useEffect(() => {
-        null == z && null != F && s.ZP.fetchApplication(F.applicationId, !0);
-    }, [z, F]);
-    let H =
-            (null == F || null == (n = F.tenantMetadata) || null == (t = n.socialLayer)
+        { selectedSkuId: D, application: U } = (0, g.JL)(),
+        F = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
+        H = (0, a.e7)([_.Z], () => (null != D ? _.Z.get(D) : null), [D]),
+        J = null == U ? void 0 : U.guildId,
+        z = (0, a.e7)([b.Z], () => (null != J ? b.Z.getGuild(J) : null), [J]);
+    l.useEffect(() => {
+        null == z && null != H && s.ZP.fetchApplication(H.applicationId, !0);
+    }, [z, H]);
+    let K =
+            (null == H || null == (n = H.tenantMetadata) || null == (t = n.socialLayer)
                 ? void 0
-                : t.cardImageAssetId) != null && (null == F ? void 0 : F.applicationId) != null
-                ? P.Z.toURLSafe((0, I._W)(F.applicationId, F.tenantMetadata.socialLayer.cardImageAssetId, 512, "png"))
+                : t.cardImageAssetId) != null && (null == H ? void 0 : H.applicationId) != null
+                ? w.Z.toURLSafe((0, P._W)(H.applicationId, H.tenantMetadata.socialLayer.cardImageAssetId, 512, "png"))
                 : void 0,
-        K =
-            (null == F || null == (h = F.tenantMetadata) || null == (f = h.socialLayer)
+        V =
+            (null == H || null == (x = H.tenantMetadata) || null == (f = x.socialLayer)
                 ? void 0
-                : f.cardBackgroundImageAssetId) != null && (null == F ? void 0 : F.applicationId) != null
-                ? P.Z.toURLSafe(
-                      (0, I._W)(F.applicationId, F.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
+                : f.cardBackgroundImageAssetId) != null && (null == H ? void 0 : H.applicationId) != null
+                ? w.Z.toURLSafe(
+                      (0, P._W)(H.applicationId, H.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
                   )
                 : void 0,
         X = async (e, t) => {};
@@ -116,101 +119,101 @@ function E(e) {
         children: [
             (0, i.jsx)(m.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: T.stepBody,
+                    className: k.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: T.bodyColumnLeft,
+                            className: k.bodyColumnLeft,
                             children: [
-                                null != H &&
+                                null != K &&
                                     (0, i.jsx)("div", {
-                                        className: T.cardContainer,
+                                        className: k.cardContainer,
                                         style:
-                                            null != K ? { backgroundImage: "url(".concat(K.toString(), ")") } : void 0,
+                                            null != V ? { backgroundImage: "url(".concat(V.toString(), ")") } : void 0,
                                         children: (0, i.jsx)("img", {
-                                            src: H.toString(),
-                                            alt: null != (O = null == F ? void 0 : F.name) ? O : "",
-                                            className: T.skuImage,
+                                            src: K.toString(),
+                                            alt: null != (h = null == H ? void 0 : H.name) ? h : "",
+                                            className: k.skuImage,
                                         }),
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: T.giftEffectsContainer,
+                                    className: k.giftEffectsContainer,
                                     children: [
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(C.Z, {
                                             sound: L,
                                             onSelect: (e) => {
-                                                null != W && W(null == e ? void 0 : e);
+                                                null != R && R(null == e ? void 0 : e);
                                             },
                                         }),
                                         (0, i.jsx)(v.Z, {
-                                            setEmojiConfetti: B,
-                                            emojiConfetti: null == A ? void 0 : A,
+                                            setEmojiConfetti: W,
+                                            emojiConfetti: null == B ? void 0 : B,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: T.bodyColumnRight,
+                            className: k.bodyColumnRight,
                             children: [
                                 (0, i.jsx)(o.Z, {
-                                    selectedSkuId: R,
+                                    selectedSkuId: D,
                                     validateSelectedGift: X,
-                                    searchableSelectWrapperClassName: T.recipientPickerSelectWrapper,
+                                    searchableSelectWrapperClassName: k.recipientPickerSelectWrapper,
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    sectionTitle: N.intl.string(N.t.B3miEx),
+                                    sectionTitle: O.intl.string(O.t.B3miEx),
                                     onTextChange: (e) => (null == Z ? void 0 : Z(e)),
-                                    pendingText: M,
-                                    currentText: M,
+                                    pendingText: E,
+                                    currentText: E,
                                     disableThemedBackground: !0,
-                                    className: T.customGiftMessageWrapper,
-                                    innerClassName: T.customGiftMessage,
+                                    className: k.customGiftMessageWrapper,
+                                    innerClassName: k.customGiftMessage,
                                 }),
                                 (() => {
-                                    var e, t, n, a;
-                                    if (null == F) return null;
-                                    let l = (0, _.T4)(
-                                        null != (n = null == (e = F.price) ? void 0 : e.amount) ? n : 0,
-                                        null != (a = null == (t = F.price) ? void 0 : t.currency) ? a : w.pK.USD,
+                                    var e, t, n, l;
+                                    if (null == H) return null;
+                                    let a = (0, I.T4)(
+                                        null != (n = null == (e = H.price) ? void 0 : e.amount) ? n : 0,
+                                        null != (l = null == (t = H.price) ? void 0 : t.currency) ? l : S.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
-                                        className: T.giftPreviewContainer,
+                                        className: k.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(r.vwX, {
-                                                className: T.giftPreviewTitle,
-                                                children: N.intl.string(N.t.PpoJzs),
+                                                className: k.giftPreviewTitle,
+                                                children: O.intl.string(O.t.PpoJzs),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: T.giftPreviewContent,
+                                                className: k.giftPreviewContent,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: T.giftPreviewImageContainer,
+                                                        className: k.giftPreviewImageContainer,
                                                         children:
-                                                            null != H &&
+                                                            null != K &&
                                                             (0, i.jsx)("div", {
-                                                                className: T.giftPreviewCardContainer,
+                                                                className: k.giftPreviewCardContainer,
                                                                 style:
-                                                                    null != K
+                                                                    null != V
                                                                         ? {
                                                                               backgroundImage: "url(".concat(
-                                                                                  K.toString(),
+                                                                                  V.toString(),
                                                                                   ")",
                                                                               ),
                                                                           }
                                                                         : void 0,
                                                                 children: (0, i.jsx)("img", {
-                                                                    src: H.toString(),
-                                                                    alt: F.name,
-                                                                    className: T.giftPreviewImage,
+                                                                    src: K.toString(),
+                                                                    alt: H.name,
+                                                                    className: k.giftPreviewImage,
                                                                 }),
                                                             }),
                                                     }),
                                                     (0, i.jsxs)("div", {
-                                                        className: T.giftPreviewTextContainer,
+                                                        className: k.giftPreviewTextContainer,
                                                         children: [
                                                             null != z &&
                                                                 (0, i.jsxs)("div", {
-                                                                    className: T.guildNameContainer,
+                                                                    className: k.guildNameContainer,
                                                                     children: [
                                                                         (0, i.jsx)(c.Z, {
                                                                             guild: z,
@@ -227,19 +230,25 @@ function E(e) {
                                                                 }),
                                                             (0, i.jsx)(r.Text, {
                                                                 variant: "text-md/semibold",
-                                                                children: F.name,
+                                                                children: H.name,
                                                             }),
                                                         ],
                                                     }),
                                                     (0, i.jsx)(r.Text, {
                                                         variant: "text-md/semibold",
-                                                        children: l,
+                                                        children: a,
                                                     }),
                                                 ],
                                             }),
                                         ],
                                     });
                                 })(),
+                                null != z &&
+                                    (0, i.jsx)(G, {
+                                        handleClose: N,
+                                        selectedSkuId: D,
+                                        guild: z,
+                                    }),
                             ],
                         }),
                     ],
@@ -250,14 +259,28 @@ function E(e) {
                     "data-migration-pending": !0,
                     justify: d.Z.Justify.BETWEEN,
                     align: d.Z.Align.CENTER,
-                    className: T.footer,
-                    children: (0, i.jsx)(S, {
-                        onStepChange: E,
-                        onBackClick: k,
-                        disabled: null == G || G.id === (null == U ? void 0 : U.id) || M.length > y.$n,
+                    className: k.footer,
+                    children: (0, i.jsx)(M, {
+                        onStepChange: y,
+                        onBackClick: N,
+                        disabled: null == A || A.id === (null == F ? void 0 : F.id) || E.length > T.$n,
                     }),
                 }),
             }),
         ],
+    });
+}
+function G(e) {
+    let { handleClose: t, guild: n } = e;
+    return (0, i.jsx)("div", {
+        className: k.viewItemButton,
+        children: (0, i.jsx)(r.Avr, {
+            text: O.intl.string(O.t.ImioFB),
+            onClick: function () {
+                t(), (0, r.pTH)(), (0, h.uL)(y.Z5c.CHANNEL(n.id, N.oC.GUILD_SHOP));
+            },
+            textVariant: "text-sm/medium",
+            lineClamp: void 0,
+        }),
     });
 }

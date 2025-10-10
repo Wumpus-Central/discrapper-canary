@@ -2,8 +2,8 @@ r.d(t, { S: () => p });
 var n = r(951288);
 r(647438);
 var i = r(120356),
-    o = r.n(i),
-    a = r(594174),
+    a = r.n(i),
+    o = r(594174),
     l = r(747101),
     c = r(817053),
     s = r(533815),
@@ -14,7 +14,7 @@ var i = r(120356),
 function p(e) {
     let { game: t, userId: r, widgetType: i, guildId: p, channelId: b, disableInteraction: m = !1 } = e,
         O = (0, d.Z)(t.applicationId).length > 0,
-        y = a.default.getCurrentUser(),
+        y = o.default.getCurrentUser(),
         j = (null == y ? void 0 : y.id) === r;
     return (0, l.kO)(t.applicationId)
         ? (0, n.jsx)("div", { className: f.loadingCover })
@@ -27,7 +27,7 @@ function p(e) {
                       applicationId: t.applicationId,
                       userId: r,
                       disableInteraction: m,
-                      className: o()(
+                      className: a()(
                           O ? g.socialProofBackdrop : void 0,
                           (null == t ? void 0 : t.imageSrc) == null || m ? void 0 : f.hoverActiveEffect,
                       ),

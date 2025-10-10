@@ -17,11 +17,11 @@ let p = (e) => {
     i.useEffect(() => {
         null != f && g(!0);
     }, [f]);
-    let b = i.useRef(!1);
+    let h = i.useRef(!1);
     i.useEffect(() => {
-        b.current || (a.Z.fetch(), (b.current = !0));
+        h.current || (a.Z.fetch(), (h.current = !0));
     }, []);
-    let h = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities()),
+    let b = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities()),
         x = i.useCallback(() => {
             if (
                 (g(!1),
@@ -33,14 +33,14 @@ let p = (e) => {
             )
                 return;
             a.Z.delete(f.id);
-            let e = h.get(t.id);
+            let e = b.get(t.id);
             null != e &&
                 s.Z.leaveActivity({
                     location: e.location,
                     applicationId: t.id,
                     showFeedback: !1,
                 });
-        }, [t.id, f, h, n]);
+        }, [t.id, f, b, n]);
     return null == t
         ? null
         : (0, r.jsx)(d.JZ, {

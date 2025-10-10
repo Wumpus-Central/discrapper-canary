@@ -1,8 +1,8 @@
 r.d(t, { q: () => u }), r(388685);
 var n = r(647438),
     i = r(79116),
-    o = r(100568),
-    a = r(417865),
+    a = r(100568),
+    o = r(417865),
     l = r(665379),
     c = r(592183),
     s = r(517157);
@@ -21,7 +21,7 @@ function u(e) {
             },
             [p],
         ),
-        [, y, j] = (0, o.c)({
+        [, y, j] = (0, a.c)({
             type: "WIDGET",
             item: {
                 widgetType: d.type,
@@ -39,7 +39,7 @@ function u(e) {
     (0, n.useEffect)(() => {
         j((0, l.r)(), { captureDraggingState: !0 });
     }, [j]);
-    let [{ dragSourcePosition: x }, h] = (0, a.L)({
+    let [{ dragSourcePosition: x }, v] = (0, o.L)({
         accept: "WIDGET",
         canDrop: () => !g,
         collect: (e) => {
@@ -64,7 +64,7 @@ function u(e) {
               dragSourcePosition: null,
           }
         : (y(r),
-          h(t),
+          v(t),
           {
               isDragging: b && (null == m ? void 0 : m.widgetType) === d.type,
               dragSourcePosition: x,

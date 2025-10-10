@@ -8,8 +8,8 @@ r.d(t, {
     r(388685);
 var n = r(647438),
     i = r(442837),
-    o = r(224706),
-    a = r(669764),
+    a = r(224706),
+    o = r(669764),
     l = r(77498),
     c = r(836197);
 function s(e) {
@@ -56,13 +56,13 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return (0, i.e7)([a.Z], () => a.Z.isFetching(e));
+    return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
 }
 function f(e) {
     n.useEffect(() => {
         if (e.length > 0) {
-            let t = e.filter((e) => a.Z.canFetch(e));
-            t.length > 0 && o.Z.getDetectableGamesSupplemental(t);
+            let t = e.filter((e) => o.Z.canFetch(e));
+            t.length > 0 && a.Z.getDetectableGamesSupplemental(t);
         }
     }, [e]);
 }
@@ -86,12 +86,12 @@ function g(e) {
     );
 }
 function p(e) {
-    let [t, r] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]);
+    let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
     return n.useMemo(() => {
         let t = {};
         return (
             e.forEach((e) => {
-                t[e] = a.Z.getGame(e);
+                t[e] = o.Z.getGame(e);
             }),
             t
         );

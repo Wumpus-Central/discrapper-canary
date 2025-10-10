@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => c,
-    j8: () => C,
+    ZP: () => C,
+    j8: () => c,
     jB: () => d,
 });
 var r = n(951288);
@@ -11,8 +11,8 @@ var i = n(481060),
     o = n(474936),
     s = n(402450);
 function d(e) {
-    let { onClick: t, isGift: n, priceOptions: o, showPromotionalGiftBanner: d, enablePremiumBrandRefresh: C } = e;
-    return C
+    let { onClick: t, isGift: n, priceOptions: o, showPromotionalGiftBanner: d, enablePremiumBrandRefresh: c } = e;
+    return c
         ? (0, r.jsx)(i.P3F, {
               onClick: t,
               style: { cursor: "pointer" },
@@ -40,7 +40,7 @@ function d(e) {
               }),
           });
 }
-function C(e) {
+function c(e) {
     let { onClick: t, isGift: n, priceOptions: o, enablePremiumBrandRefresh: d } = e;
     return d
         ? (0, r.jsx)(i.P3F, {
@@ -67,7 +67,7 @@ function C(e) {
               }),
           });
 }
-let c = function (e) {
+let C = function (e) {
     let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: a, enablePremiumBrandRefresh: l } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -78,7 +78,7 @@ let c = function (e) {
                 showPromotionalGiftBanner: a,
                 enablePremiumBrandRefresh: l,
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(c, {
                 onClick: () => t(o.Si.TIER_0),
                 isGift: n,
                 priceOptions: i,

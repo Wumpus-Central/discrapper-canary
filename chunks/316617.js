@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(695346),
     g = n(592125),
     f = n(217702),
-    b = n(388032),
-    h = n(492402);
+    h = n(388032),
+    b = n(492402);
 let x = (e) => {
     let { message: t } = e,
         n = (0, s.ZP)(t),
@@ -24,12 +24,12 @@ let x = (e) => {
         y = p.jU.useSetting(),
         O = i.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, _.f)(t, j, !1, !1, "", {
-                leadingIconClass: h.attachmentIcon,
-                trailingIconClass: h.attachmentIcon,
+                leadingIconClass: b.attachmentIcon,
+                trailingIconClass: b.attachmentIcon,
                 iconSize: f.WW,
             });
             return (0, r.jsxs)("div", {
-                className: h.contentContainer,
+                className: b.contentContainer,
                 children: [
                     e,
                     (0, r.jsx)(d.ZP, {
@@ -44,15 +44,15 @@ let x = (e) => {
     return null == x
         ? null
         : (0, r.jsxs)("div", {
-              className: h.container,
+              className: b.container,
               children: [
                   (0, r.jsx)(a.X6q, {
-                      className: h.header,
+                      className: b.header,
                       variant: "heading-sm/semibold",
-                      children: b.intl.string(b.t.iouM3d),
+                      children: h.intl.string(h.t.iouM3d),
                   }),
                   (0, r.jsx)(a.Ttm, {
-                      className: h.messagePreviewContainer,
+                      className: b.messagePreviewContainer,
                       children: (0, r.jsx)(c.Z, {
                           childrenMessageContent: O(),
                           childrenHeader: (0, r.jsx)(u.ZP, {
